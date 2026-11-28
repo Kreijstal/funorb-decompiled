@@ -252,7 +252,7 @@ final class ri {
         int var7 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           ii.field_D = new PcmResampler(22050, AudioOutput.field_i);
-          wd.field_i = new ud(param2, param3);
+          wd.field_i = new SoundCache(param2, param3);
           WeightedObjectCache.field_i = IterableNodeHashTable.a(2570, "music/Monkey Puzzle Panic", "", wd.field_i, param0);
           uh.field_e = IterableNodeHashTable.a(2570, "music/Monkey Puzzle TitleScreen", "", wd.field_i, param0);
           ah.field_g[0] = IterableNodeHashTable.a(2570, "music/Monkey Puzzle countryside", "", wd.field_i, param0);
@@ -266,7 +266,7 @@ final class ri {
           var8 = new String[]{"menu_select", "MP_throw_coconut", "MP_deflect3", "MP_deflect_ceiling", "MP_monkeyhit", "MP_coconut_hit", "MP_coconut_fall", "MP_monkeyfall", "MP_splash_2", "MP_splash_3", "MP_splash_4", "MP_splash_5", "MP_intro_screen_appear", "MP_intro_screen_close", "MP_intro_screen_monkey_fall", "MP_intro_screen_rain", "MP_intro_screen_ambience_1", "MP_intro_screen_ambience_2", "MP_lvl_end_vine", "MP_lvl_end_climb", "MP_monkey_amb1", "MP_monkey_amb2", "MP_monkey_amb3", "MP_monkey_amb4", "MP_monkey_amb5", "MP_monkey_laugh1", "MP_monkey_laugh2", "MP_monkey_laugh3", "MP_lvl_end_climb_step1", "MP_lvl_end_climb_step2", "MP_lvl_end_climb_step3", "mp_level_complete"};
           String[] var4 = var8;
           for (var5 = param1; var5 < 32; var5++) {
-            var6 = wd.field_i.a(var8[var5], (byte) -77);
+            var6 = wd.field_i.getSoundEffectByName(var8[var5], (byte) -77);
             if (var6 == null) {
               System.out.println(var8[var5]);
             }

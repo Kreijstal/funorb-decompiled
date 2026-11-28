@@ -91,8 +91,8 @@ final class BlastEffectRenderer {
             this.field_j[var7_int][1] = param3 << 4;
             this.field_j[var7_int][2] = param1 << 4;
             var9 = var7_int * 2048 / 100;
-            this.field_a[var7_int][0] = oo.field_h[var9];
-            this.field_a[var7_int][1] = oo.field_j[var9];
+            this.field_a[var7_int][0] = TriangleRasterizer.field_h[var9];
+            this.field_a[var7_int][1] = TriangleRasterizer.field_j[var9];
             var7_int++;
           }
           this.field_k = param5;

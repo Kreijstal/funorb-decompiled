@@ -575,7 +575,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             }
           }
           ri.field_a = oa.field_b + (var3_intLifetime1 - (var3_intLifetime1 >> 1));
-          gp.field_a = (field_a + bn.field_c << 1) * DefaultTextWidgetRenderer.field_l.field_b;
+          gp.field_a = (field_a + SoundCache.field_c << 1) * DefaultTextWidgetRenderer.field_l.field_b;
           FullscreenNoticeType.field_c = -(var3_intLifetime1 >> 1) + oa.field_b;
           for (var4Lifetime2 = 0; var4Lifetime2 < je.field_i.length; var4Lifetime2++) {
             stackIn_115_0 = gp.field_a;
@@ -603,8 +603,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               cd.field_z[var4Lifetime3][0] = var8Lifetime1 - to.field_d;
               cd.field_z[var4Lifetime3][1] = var5Lifetime3;
               cd.field_z[var4Lifetime3][2] = var7Lifetime2 + (to.field_d << 1);
-              var5Lifetime3 = var5Lifetime3 + (field_a + (bn.field_c << 1) + gh.field_w);
-              cd.field_z[var4Lifetime3][3] = gh.field_w + (bn.field_c << 1);
+              var5Lifetime3 = var5Lifetime3 + (field_a + (SoundCache.field_c << 1) + gh.field_w);
+              cd.field_z[var4Lifetime3][3] = gh.field_w + (SoundCache.field_c << 1);
             } else {
               var5Lifetime3 = var5Lifetime3 + io.field_O;
             }

@@ -5,7 +5,7 @@ class ei extends DualLinkNode {
     static String field_r;
     static int field_u;
     static em[] field_v;
-    static dd field_q;
+    static SoftwareModelMesh field_q;
     static String field_s;
     static ug field_t;
     private static String field_z;

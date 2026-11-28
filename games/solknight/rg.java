@@ -140,7 +140,7 @@ final class rg {
         if (!td.field_h.a(false)) {
           return uh.field_r;
         }
-        return me.field_h;
+        return SoundCache.field_h;
     }
 
     static {

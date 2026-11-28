@@ -80,7 +80,7 @@ final class SoundFilter {
         field_a = (int[][]) null;
     }
 
-    final void decode(PacketBuffer param0, ih param1) {
+    final void decode(PacketBuffer param0, SoundEnvelope param1) {
         int var3;
         int var4;
         int var5;

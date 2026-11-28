@@ -163,7 +163,7 @@ final class th {
         try {
           var1 = new Sprite(540, 140);
           hj.a(var1, 1);
-          cc.a();
+          TriangleRasterizer.useRasterClip();
           int var2 = 104 / ((param0 + 41) / 39);
           SoftwareRasterizer.clearRaster();
           ni.field_d = 0;

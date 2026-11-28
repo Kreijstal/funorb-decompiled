@@ -212,7 +212,7 @@ public final class stellarshard extends rb implements cf {
         int var32Lifetime1;
         var42 = field_B;
         try {
-          cc.a();
+          TriangleRasterizer.useRasterClip();
           this.field_H.writeRotationMatrix(sk.field_a, 8);
           var2_double = sk.field_a[3];
           var4 = sk.field_a[4];
@@ -529,9 +529,9 @@ public final class stellarshard extends rb implements cf {
         var12 = field_B;
         try {
           this.a(8, 0, 10, 6, false, 10, (byte) -7, 9);
-          cc.b(0.800000011920929f);
-          cc.a();
-          cc.field_f = false;
+          TriangleRasterizer.rebuildPaletteWithGamma(0.800000011920929f);
+          TriangleRasterizer.useRasterClip();
+          TriangleRasterizer.field_f = false;
           eh.field_e = new int[256];
           var2 = new int[256];
           var3 = new int[256];
@@ -668,7 +668,7 @@ public final class stellarshard extends rb implements cf {
             ll.a(16);
             tc.field_r = 0;
             qi.level = 0;
-            cc.a((cf) (this));
+            TriangleRasterizer.setTextureProvider((cf) (this));
             this.a(true, -113, false, false, true);
             return;
           }
@@ -2893,7 +2893,7 @@ public final class stellarshard extends rb implements cf {
           jf.a(-15917);
           ha.clearStaticReferences(param0 + 244);
           pk.a((byte) 96);
-          cc.clearStaticReferences();
+          TriangleRasterizer.clearStaticReferences();
           SpriteState.resetStaticState(-28692);
           DualLinkNode.clearStaticReferences((byte) -31);
           ra.clearStaticReferences(-14755);
@@ -2921,10 +2921,10 @@ public final class stellarshard extends rb implements cf {
           GzipDecompressor.clearStaticReferences(-127);
           wf.clearStaticReferences(param0 + 227);
           PcmResampler.clearStaticReferences(param0 - 15392);
-          tj.clearStaticReferences();
+          SynthesizerVoice.clearStaticReferences();
           VorbisSample.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
-          gk.resetStaticState(param0 + 129);
+          SoundCache.resetStaticState(param0 + 129);
           fc.clearStaticReferences((byte) 86);
           tf.clearStaticReferences(param0 + 22);
           l.clearStaticReferences(0);
@@ -3002,7 +3002,7 @@ public final class stellarshard extends rb implements cf {
           SocketConnector.clearStaticReferences((byte) 64);
           NanoFrameTimer.d(23805);
           ImageProducerRasterBuffer.clearStaticReferences(2188);
-          sc.clearStaticReferences();
+          SoftwareModelMesh.clearStaticReferences();
           gh.clearStaticReferences((byte) 125);
           we.clearStaticReferences((byte) 116);
           ValidatedTextField.clearStaticReferences(0);
@@ -3110,7 +3110,7 @@ public final class stellarshard extends rb implements cf {
         int var4_int = 0;
         ek[] var4_array = null;
         Sprite var4_ref = null;
-        gk var4_ref2 = null;
+        SoundCache var4_ref2 = null;
         int var5 = 0;
         int[] var5_ref_int__ = null;
         int var6_int = 0;
@@ -3164,70 +3164,70 @@ public final class stellarshard extends rb implements cf {
                           } else {
                             sb.field_e = new PcmSample[61];
                           }
-                          sb.field_e[0] = kj.a(wk.field_a, "", "afterburner").a().resample((PcmResampler) (var3));
-                          sb.field_e[1] = kj.a(wk.field_a, "", "bounce-gun").a().resample((PcmResampler) (var3));
-                          sb.field_e[2] = kj.a(wk.field_a, "", "collision_asteroid").a().resample((PcmResampler) (var3));
-                          sb.field_e[3] = kj.a(wk.field_a, "", "collision_ice").a().resample((PcmResampler) (var3));
-                          sb.field_e[4] = kj.a(wk.field_a, "", "collision_iron").a().resample((PcmResampler) (var3));
-                          sb.field_e[5] = kj.a(wk.field_a, "", "combined-homer_loop_1000ms").a().resample((PcmResampler) (var3));
-                          sb.field_e[6] = kj.a(wk.field_a, "", "combined-shooter_loop_1000ms").a().resample((PcmResampler) (var3));
-                          sb.field_e[7] = kj.a(wk.field_a, "", "dual-laser_loop_100ms").a().resample((PcmResampler) (var3));
-                          sb.field_e[8] = kj.a(wk.field_a, "", "enemy_shoot").a().resample((PcmResampler) (var3));
-                          sb.field_e[9] = kj.a(wk.field_a, "", "explosion_asteroid_large").a().resample((PcmResampler) (var3));
-                          sb.field_e[10] = kj.a(wk.field_a, "", "explosion_asteroid_medium").a().resample((PcmResampler) (var3));
-                          sb.field_e[11] = kj.a(wk.field_a, "", "explosion_asteroid_small").a().resample((PcmResampler) (var3));
-                          sb.field_e[12] = kj.a(wk.field_a, "", "explosion_enemy").a().resample((PcmResampler) (var3));
-                          sb.field_e[13] = kj.a(wk.field_a, "", "explosion_ice_large").a().resample((PcmResampler) (var3));
-                          sb.field_e[14] = kj.a(wk.field_a, "", "explosion_ice_medium").a().resample((PcmResampler) (var3));
-                          sb.field_e[15] = kj.a(wk.field_a, "", "explosion_ice_small").a().resample((PcmResampler) (var3));
-                          sb.field_e[16] = kj.a(wk.field_a, "", "explosion_iron_large").a().resample((PcmResampler) (var3));
-                          sb.field_e[17] = kj.a(wk.field_a, "", "explosion_iron_medium").a().resample((PcmResampler) (var3));
-                          sb.field_e[18] = kj.a(wk.field_a, "", "explosion_iron_small").a().resample((PcmResampler) (var3));
-                          sb.field_e[19] = kj.a(wk.field_a, "", "explosion_player").a().resample((PcmResampler) (var3));
-                          sb.field_e[20] = kj.a(wk.field_a, "", "flame-cannon_loop_300-500ms").a().resample((PcmResampler) (var3));
-                          sb.field_e[21] = kj.a(wk.field_a, "", "heavy-cannon").a().resample((PcmResampler) (var3));
-                          sb.field_e[22] = kj.a(wk.field_a, "", "hex-cannon_70ms_loop").a().resample((PcmResampler) (var3));
-                          sb.field_e[23] = kj.a(wk.field_a, "", "homing_loop_200ms").a().resample((PcmResampler) (var3));
-                          sb.field_e[24] = kj.a(wk.field_a, "", "laser_70ms_loop").a().resample((PcmResampler) (var3));
-                          sb.field_e[25] = kj.a(wk.field_a, "", "mega-laser_loop_500ms").a().resample((PcmResampler) (var3));
-                          sb.field_e[26] = kj.a(wk.field_a, "", "mine_loop_200ms").a().resample((PcmResampler) (var3));
-                          sb.field_e[27] = kj.a(wk.field_a, "", "narrowgun").a().resample((PcmResampler) (var3));
-                          sb.field_e[28] = kj.a(wk.field_a, "", "nuke_explosion").a().resample((PcmResampler) (var3));
-                          sb.field_e[29] = kj.a(wk.field_a, "", "powerup_invulnerability").a().resample((PcmResampler) (var3));
-                          sb.field_e[30] = kj.a(wk.field_a, "", "powerup_phase_shield").a().resample((PcmResampler) (var3));
-                          sb.field_e[31] = kj.a(wk.field_a, "", "powerup_shield").a().resample((PcmResampler) (var3));
-                          sb.field_e[32] = kj.a(wk.field_a, "", "powerup_weapon").a().resample((PcmResampler) (var3));
-                          sb.field_e[33] = kj.a(wk.field_a, "", "quad-cannon").a().resample((PcmResampler) (var3));
-                          sb.field_e[34] = kj.a(wk.field_a, "", "super-cannon").a().resample((PcmResampler) (var3));
-                          sb.field_e[35] = kj.a(wk.field_a, "", "thruster").a().resample((PcmResampler) (var3));
-                          sb.field_e[36] = kj.a(wk.field_a, "", "title_explosion").a().resample((PcmResampler) (var3));
-                          sb.field_e[37] = kj.a(wk.field_a, "", "title_shinesound").a().resample((PcmResampler) (var3));
-                          sb.field_e[38] = kj.a(wk.field_a, "", "trigun").a().resample((PcmResampler) (var3));
-                          sb.field_e[39] = kj.a(wk.field_a, "", "wavegun").a().resample((PcmResampler) (var3));
-                          sb.field_e[40] = kj.a(wk.field_a, "", "hit").a().resample((PcmResampler) (var3));
+                          sb.field_e[0] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "afterburner").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[1] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "bounce-gun").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[2] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "collision_asteroid").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[3] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "collision_ice").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[4] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "collision_iron").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[5] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "combined-homer_loop_1000ms").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[6] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "combined-shooter_loop_1000ms").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[7] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "dual-laser_loop_100ms").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[8] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "enemy_shoot").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[9] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "explosion_asteroid_large").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[10] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "explosion_asteroid_medium").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[11] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "explosion_asteroid_small").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[12] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "explosion_enemy").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[13] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "explosion_ice_large").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[14] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "explosion_ice_medium").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[15] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "explosion_ice_small").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[16] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "explosion_iron_large").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[17] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "explosion_iron_medium").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[18] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "explosion_iron_small").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[19] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "explosion_player").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[20] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "flame-cannon_loop_300-500ms").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[21] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "heavy-cannon").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[22] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "hex-cannon_70ms_loop").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[23] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "homing_loop_200ms").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[24] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "laser_70ms_loop").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[25] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "mega-laser_loop_500ms").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[26] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "mine_loop_200ms").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[27] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "narrowgun").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[28] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "nuke_explosion").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[29] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "powerup_invulnerability").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[30] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "powerup_phase_shield").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[31] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "powerup_shield").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[32] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "powerup_weapon").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[33] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "quad-cannon").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[34] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "super-cannon").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[35] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "thruster").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[36] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "title_explosion").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[37] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "title_shinesound").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[38] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "trigun").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[39] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "wavegun").toPcmSample().resample((PcmResampler) (var3));
+                          sb.field_e[40] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "hit").toPcmSample().resample((PcmResampler) (var3));
                           if (pk.a(-12663, 0)) {
-                            sb.field_e[41] = kj.a(wk.field_a, "", "collect_ghost").a().resample((PcmResampler) (var3));
-                            sb.field_e[42] = kj.a(wk.field_a, "", "eerie_creak1").a().resample((PcmResampler) (var3));
-                            sb.field_e[43] = kj.a(wk.field_a, "", "eerie_creak2").a().resample((PcmResampler) (var3));
-                            sb.field_e[44] = kj.a(wk.field_a, "", "eerie_creak3").a().resample((PcmResampler) (var3));
-                            sb.field_e[45] = kj.a(wk.field_a, "", "eerie_creak4").a().resample((PcmResampler) (var3));
+                            sb.field_e[41] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "collect_ghost").toPcmSample().resample((PcmResampler) (var3));
+                            sb.field_e[42] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "eerie_creak1").toPcmSample().resample((PcmResampler) (var3));
+                            sb.field_e[43] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "eerie_creak2").toPcmSample().resample((PcmResampler) (var3));
+                            sb.field_e[44] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "eerie_creak3").toPcmSample().resample((PcmResampler) (var3));
+                            sb.field_e[45] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "eerie_creak4").toPcmSample().resample((PcmResampler) (var3));
                             sb.field_e[46] = VorbisSample.loadByName(mf.field_b, "", "heartbeat").decodeAllToPcm().resample((PcmResampler) (var3));
-                            sb.field_e[47] = kj.a(wk.field_a, "", "howling1").a().resample((PcmResampler) (var3));
-                            sb.field_e[48] = kj.a(wk.field_a, "", "howling2").a().resample((PcmResampler) (var3));
-                            sb.field_e[49] = kj.a(wk.field_a, "", "howling3").a().resample((PcmResampler) (var3));
-                            sb.field_e[50] = kj.a(wk.field_a, "", "howling4").a().resample((PcmResampler) (var3));
-                            sb.field_e[51] = kj.a(wk.field_a, "", "static2").a().resample((PcmResampler) (var3));
-                            sb.field_e[52] = kj.a(wk.field_a, "", "static3").a().resample((PcmResampler) (var3));
-                            sb.field_e[53] = kj.a(wk.field_a, "", "static4").a().resample((PcmResampler) (var3));
-                            sb.field_e[54] = kj.a(wk.field_a, "", "trans1").a().resample((PcmResampler) (var3));
-                            sb.field_e[55] = kj.a(wk.field_a, "", "trans2").a().resample((PcmResampler) (var3));
-                            sb.field_e[56] = kj.a(wk.field_a, "", "trans3").a().resample((PcmResampler) (var3));
+                            sb.field_e[47] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "howling1").toPcmSample().resample((PcmResampler) (var3));
+                            sb.field_e[48] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "howling2").toPcmSample().resample((PcmResampler) (var3));
+                            sb.field_e[49] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "howling3").toPcmSample().resample((PcmResampler) (var3));
+                            sb.field_e[50] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "howling4").toPcmSample().resample((PcmResampler) (var3));
+                            sb.field_e[51] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "static2").toPcmSample().resample((PcmResampler) (var3));
+                            sb.field_e[52] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "static3").toPcmSample().resample((PcmResampler) (var3));
+                            sb.field_e[53] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "static4").toPcmSample().resample((PcmResampler) (var3));
+                            sb.field_e[54] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "trans1").toPcmSample().resample((PcmResampler) (var3));
+                            sb.field_e[55] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "trans2").toPcmSample().resample((PcmResampler) (var3));
+                            sb.field_e[56] = SynthesizedSoundEffect.loadByName(wk.field_a, "", "trans3").toPcmSample().resample((PcmResampler) (var3));
                             sb.field_e[57] = VorbisSample.loadByName(mf.field_b, "", "cyber_laugh1").decodeAllToPcm().resample((PcmResampler) (var3));
                             sb.field_e[58] = VorbisSample.loadByName(mf.field_b, "", "cyber_laugh2").decodeAllToPcm().resample((PcmResampler) (var3));
                             sb.field_e[59] = VorbisSample.loadByName(mf.field_b, "", "cyber_laugh4").decodeAllToPcm().resample((PcmResampler) (var3));
                             sb.field_e[60] = VorbisSample.loadByName(mf.field_b, "", "cyber_laugh5_rev").decodeAllToPcm().resample((PcmResampler) (var3));
                           }
-                          var4_ref2 = new gk(wk.field_a, mf.field_b);
+                          var4_ref2 = new SoundCache(wk.field_a, mf.field_b);
                           wk.field_a = null;
                           mf.field_b = null;
                           if (pk.a(-12663, 0)) {
@@ -3432,16 +3432,16 @@ public final class stellarshard extends rb implements cf {
                   MouseWheelInput.field_d[cg.field_c][var6_int] = new Sprite(96, 96);
                   MouseWheelInput.field_d[cg.field_c][var6_int].bindAsRenderTarget();
                   SoftwareRasterizer.fillRectangle(0, 0, 96, 96, 0);
-                  cc.a();
-                  var10_ref_bj.a(0, 0, 0, 0, 0, 0, var5, -1L);
+                  TriangleRasterizer.useRasterClip();
+                  var10_ref_bj.drawPerspective(0, 0, 0, 0, 0, 0, var5, -1L);
                   MouseWheelInput.field_d[cg.field_c][var6_int].trimTransparentBorders();
                 }
                 if (0 == var4_int) {
                   MouseWheelInput.field_d[cg.field_c][var6_int] = new Sprite(96, 96);
                   MouseWheelInput.field_d[cg.field_c][var6_int].bindAsRenderTarget();
                   SoftwareRasterizer.fillRectangle(0, 0, 96, 96, 0);
-                  cc.a();
-                  var10_ref_bj.a(0, 0, 0, 0, 0, 0, var5, -1L);
+                  TriangleRasterizer.useRasterClip();
+                  var10_ref_bj.drawPerspective(0, 0, 0, 0, 0, 0, var5, -1L);
                   MouseWheelInput.field_d[cg.field_c][var6_int].trimTransparentBorders();
                 }
                 if (var4_int == 2 ||
@@ -3449,16 +3449,16 @@ public final class stellarshard extends rb implements cf {
                   rd.field_a[cg.field_c - 8][var6_int >> 2] = new Sprite(96, 96);
                   rd.field_a[-8 + cg.field_c][var6_int >> 2].bindAsRenderTarget();
                   SoftwareRasterizer.fillRectangle(0, 0, 96, 96, 0);
-                  cc.a();
-                  var10_ref_bj.a(0, 0, 0, 0, 0, 0, var5, -1L);
+                  TriangleRasterizer.useRasterClip();
+                  var10_ref_bj.drawPerspective(0, 0, 0, 0, 0, 0, var5, -1L);
                   rd.field_a[-8 + cg.field_c][var6_int >> 2].trimTransparentBorders();
                 }
                 if (var4_int == 3) {
                   cm.field_d[var6_int >> 1] = new Sprite(96, 96);
                   cm.field_d[var6_int >> 1].bindAsRenderTarget();
                   SoftwareRasterizer.fillRectangle(0, 0, 96, 96, 0);
-                  cc.a();
-                  var10_ref_bj.a(0, 0, 0, 0, 0, 0, 2500, -1L);
+                  TriangleRasterizer.useRasterClip();
+                  var10_ref_bj.drawPerspective(0, 0, 0, 0, 0, 0, 2500, -1L);
                   cm.field_d[var6_int >> 1].trimTransparentBorders();
                 }
                 var6_int++;

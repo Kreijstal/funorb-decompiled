@@ -4,7 +4,7 @@
 final class bd extends wj {
     static String field_s;
     static String field_v;
-    static pl[] field_u;
+    static MusicTrack[] field_u;
     static String field_r;
     static int field_t;
     static String[] field_p;

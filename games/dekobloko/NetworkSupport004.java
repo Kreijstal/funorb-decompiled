@@ -48,7 +48,7 @@ final class NetworkSupport004 {
             !MixedSupport124.stringState0543.equals(appletArgument3.getParameter("session"))) {
             objectLocal11 = MixedSupport124.stringState0543;
           }
-          stackURLLocal4 = NetworkSupport011.computeURL1263((String) (objectLocal11), (String) (objectLocal1), false, uRLArgument1, -1);
+          stackURLLocal4 = SoundCache.rewriteClientUrlParameters((String) (objectLocal11), (String) (objectLocal1), false, uRLArgument1, -1);
           return stackURLLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal13) {
           caughtExceptionLocal10 = caughtParameterLocal13;

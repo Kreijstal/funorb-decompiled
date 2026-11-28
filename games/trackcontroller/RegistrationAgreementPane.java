@@ -180,7 +180,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
         int var7 = 0;
         var7 = TrackController.field_F ? 1 : 0;
         try {
-          if (jc.field_a != ka.field_b) {
+          if (SoundCache.field_a != ka.field_b) {
             return false;
           }
           var2_long = qg.correctedCurrentTimeMillis(param1);

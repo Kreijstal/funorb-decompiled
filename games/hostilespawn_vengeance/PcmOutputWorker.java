@@ -6,7 +6,7 @@ final class PcmOutputWorker implements Runnable {
     volatile boolean field_d;
     volatile AudioOutput[] field_g;
     PlatformTaskDispatcher field_b;
-    static ji field_f;
+    static MusicTrack field_f;
     static String field_a;
     static PcmSample[] field_c;
 

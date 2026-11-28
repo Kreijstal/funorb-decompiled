@@ -83,7 +83,7 @@ final class ri extends DefaultTextWidgetRenderer {
         this.field_w = param2;
         this.field_j = rg.field_o;
         this.field_v = param1;
-        this.field_t = ng.field_h;
+        this.field_t = SoundCache.field_h;
         this.field_y = param0;
     }
 

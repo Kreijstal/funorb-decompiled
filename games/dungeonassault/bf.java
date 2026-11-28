@@ -275,7 +275,7 @@ final class bf {
             kj.a(var5, 0);
             var6 = new String[2][var5];
             var19 = new int[2][var5 * 4];
-            var8 = lc.field_d;
+            var8 = SoundCache.field_d;
             var9 = 0;
             var10 = 0;
             while (var8 > var9) {

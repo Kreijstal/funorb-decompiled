@@ -135,7 +135,7 @@ final class bb extends pj {
     }
 
     final m a(int param0, int param1, int param2, int param3, int param4) {
-        return (m) ((Object) new ik(this, param0, param1, param2, param3, param4));
+        return (m) ((Object) new SoftwareModelMesh(this, param0, param1, param2, param3, param4));
     }
 
     final byte a(short param0, short param1, short param2) {

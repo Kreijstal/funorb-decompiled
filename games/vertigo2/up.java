@@ -7,7 +7,7 @@ final class up extends TextureOperator {
     private int field_C;
     static String field_D;
     static String field_y;
-    static si[] field_B;
+    static MusicTrack[] field_B;
     private int field_A;
 
     final void a(byte param0, int param1, PacketBuffer param2) {
@@ -138,6 +138,6 @@ final class up extends TextureOperator {
     static {
         field_D = "Message game";
         field_y = "Unrated game";
-        field_B = new si[3];
+        field_B = new MusicTrack[3];
     }
 }

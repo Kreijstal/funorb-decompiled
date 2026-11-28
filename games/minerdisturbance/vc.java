@@ -38,11 +38,11 @@ final class vc extends IntrusiveNode {
         this.field_n = null;
         if (param0 != 12361) {
           int[] var3 = (int[]) null;
-          this.a((ri) null, (byte) -77, (byte[]) null, (int[]) null);
+          this.a((SoundCache) null, (byte) -77, (byte[]) null, (int[]) null);
         }
     }
 
-    final boolean a(ri param0, byte param1, byte[] param2, int[] param3) {
+    final boolean a(SoundCache param0, byte param1, byte[] param2, int[] param3) {
         int var8 = 0;
         int stackIn_24_0 = 0;
         RuntimeException stackIn_27_0 = null;
@@ -73,9 +73,9 @@ final class vc extends IntrusiveNode {
                   var6 = var9;
                   var9--;
                   if ((1 & var9) == 0) {
-                    var7 = param0.a(var9 >> 2, param3, (byte) 112);
+                    var7 = param0.loadSoundEffectById(var9 >> 2, param3, (byte) 112);
                   } else {
-                    var7 = param0.a(-26575, param3, var9 >> 2);
+                    var7 = param0.loadMusicSampleById(-26575, param3, var9 >> 2);
                   }
                   if (var7 == null) {
                     var5_int = 0;

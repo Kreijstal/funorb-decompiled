@@ -3681,7 +3681,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_active_ability", param1);
                 if (null != var2) {
-                  lc.field_g = dj.a(var2, param1);
+                  SoundCache.field_g = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_activeraider", param1);
                 if (var2 != null) {

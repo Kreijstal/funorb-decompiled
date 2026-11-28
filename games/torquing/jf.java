@@ -43,7 +43,7 @@ final class jf {
           var5 = (-SingleChildWidgetContainer.field_z + 250 << 8) / 50;
         }
         GzipDecompressor.a((byte) -106, field_a);
-        be.a();
+        TriangleRasterizer.useRasterClip();
         SoftwareRasterizer.clearRaster();
         so.b(122);
         if (var5 < 256) {

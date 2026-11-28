@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ub {
-    static u field_d;
+    static SoundCache field_d;
     private static int[] field_b;
     static int field_h;
     static Sprite[] field_f;

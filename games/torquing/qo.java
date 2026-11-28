@@ -42,7 +42,7 @@ final class qo extends am {
         qh.field_b = null;
         if (param0 != -68) {
           ResourceArchive var2 = (ResourceArchive) null;
-          qo.a(47, -32, -37, (fi) null, (ResourceArchive) null);
+          qo.a(47, -32, -37, (SoundCache) null, (ResourceArchive) null);
         }
         ArchiveIndex.field_k = null;
     }
@@ -199,7 +199,7 @@ final class qo extends am {
         this.field_s = 0;
     }
 
-    final static lh a(int param0, int param1, int param2, fi param3, ResourceArchive param4) {
+    final static lh a(int param0, int param1, int param2, SoundCache param3, ResourceArchive param4) {
         byte[] var5 = null;
         RuntimeException var5_ref = null;
         byte[] var6 = null;

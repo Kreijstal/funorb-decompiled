@@ -15,7 +15,7 @@ final class MidiPcmStream extends PcmStream {
     private int[] field_t;
     private int[] field_p;
     int[] field_y;
-    private pc field_P;
+    private MidiFileReader field_P;
     static LoginPanel field_O;
     private int[] field_L;
     private int[] field_D;
@@ -31,7 +31,7 @@ final class MidiPcmStream extends PcmStream {
     private int field_K;
     private long field_x;
     private int field_M;
-    private ej field_C;
+    private MusicTrack field_C;
     private boolean field_Q;
     private int field_z;
 
@@ -46,7 +46,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0, ej param1, boolean param2) {
+    final synchronized void a(int param0, MusicTrack param1, boolean param2) {
         try {
           if (param0 != -8126) {
             this.field_I = (MusicPatchPcmStream) null;
@@ -168,7 +168,7 @@ final class MidiPcmStream extends PcmStream {
     }
 
     private final synchronized void clearMidiPlayback(int param0, boolean param1) {
-        this.field_P.e();
+        this.field_P.release();
         this.field_C = null;
         this.resetPlaybackChannels(param0 - 1863961209, param1);
         if (param0 != 256) {
@@ -414,8 +414,8 @@ final class MidiPcmStream extends PcmStream {
           }
         }
         if (param1 != -870) {
-          ej var5 = (ej) null;
-          this.a(true, false, (ej) null, 51);
+          MusicTrack var5 = (MusicTrack) null;
+          this.a(true, false, (MusicTrack) null, 51);
         }
     }
 
@@ -491,27 +491,27 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final synchronized void a(boolean param0, boolean param1, ej param2, int param3) {
+    private final synchronized void a(boolean param0, boolean param1, MusicTrack param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = TorChallenge.field_F ? 1 : 0;
         try {
           this.clearMidiPlayback(256, param0);
-          this.field_P.a(param2.field_i);
+          this.field_P.parse(param2.field_i);
           this.field_H = 0L;
           this.field_B = param1 ? true : false;
           if (param3 != 28050) {
             this.removeChannelVoices(true, 42);
           }
-          var5_int = this.field_P.f();
+          var5_int = this.field_P.trackCount();
           for (var6 = 0; var6 < var5_int; var6++) {
-            this.field_P.e(var6);
-            this.field_P.c(var6);
-            this.field_P.f(var6);
+            this.field_P.seekTrack(var6);
+            this.field_P.readDelta(var6);
+            this.field_P.saveTrackPosition(var6);
           }
-          this.field_M = this.field_P.c();
+          this.field_M = this.field_P.nextTrack();
           this.field_K = this.field_P.field_f[this.field_M];
-          this.field_x = this.field_P.b(this.field_K);
+          this.field_x = this.field_P.tickTime(this.field_K);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "kb.SA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -549,8 +549,8 @@ final class MidiPcmStream extends PcmStream {
         int var4 = TorChallenge.field_F ? 1 : 0;
         dl var3 = (dl) (this.field_I.field_o.first((byte) -83));
         if (!param0) {
-          ej var5 = (ej) null;
-          this.a(-128, (ej) null, true);
+          MusicTrack var5 = (MusicTrack) null;
+          this.a(-128, (MusicTrack) null, true);
         }
         while (var3 != null) {
           if (param1 < 0 ||
@@ -603,25 +603,25 @@ final class MidiPcmStream extends PcmStream {
               if (stackIn_24_0 > stackIn_24_1) {
                 this.field_K = this.field_z;
                 this.field_M = -1;
-                this.field_x = this.field_P.b(this.field_K);
+                this.field_x = this.field_P.tickTime(this.field_K);
               }
             }
             return;
           }
           while (var3 == this.field_P.field_f[var2]) {
-            this.field_P.e(var2);
-            var6 = this.field_P.a(var2);
+            this.field_P.seekTrack(var2);
+            var6 = this.field_P.readMessage(var2);
             if (var6 != 1) {
               if ((var6 & 128) != 0) {
                 this.handleMidiMessage(var6, 109);
               }
-              this.field_P.c(var2);
-              this.field_P.f(var2);
+              this.field_P.readDelta(var2);
+              this.field_P.saveTrackPosition(var2);
               continue;
             }
-            this.field_P.g();
-            this.field_P.f(var2);
-            if (this.field_P.a()) {
+            this.field_P.markTrackDone();
+            this.field_P.saveTrackPosition(var2);
+            if (this.field_P.isDone()) {
               if (this.field_C != null) {
                 this.a(-8126, this.field_C, this.field_B);
                 this.advanceMidiEvents(true);
@@ -629,18 +629,18 @@ final class MidiPcmStream extends PcmStream {
               }
               if (this.field_B &&
                 var3 != 0) {
-                this.field_P.a(var4);
+                this.field_P.reset(var4);
               } else {
                 this.resetPlaybackChannels(-1863960953, true);
-                this.field_P.e();
+                this.field_P.release();
                 return;
               }
             }
             break;
           }
-          var2 = this.field_P.c();
+          var2 = this.field_P.nextTrack();
           var3 = this.field_P.field_f[var2];
-          var4 = this.field_P.b(var3);
+          var4 = this.field_P.tickTime(var3);
         }
     }
 
@@ -744,7 +744,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean a(boolean param0, u param1, ej param2, ResourceArchive param3, int param4) {
+    final synchronized boolean a(boolean param0, SoundCache param1, MusicTrack param2, ResourceArchive param3, int param4) {
         int stackIn_13_0 = 0;
         ResourceArchive stackIn_13_1 = null;
         boolean stackIn_14_2 = false;
@@ -767,7 +767,7 @@ final class MidiPcmStream extends PcmStream {
         fb var13 = null;
         var11 = TorChallenge.field_F ? 1 : 0;
         try {
-          param2.a();
+          param2.buildPatchUsage();
           if (param0) {
             this.field_I = (MusicPatchPcmStream) null;
           }
@@ -803,7 +803,7 @@ final class MidiPcmStream extends PcmStream {
             var8 = (s) (param2.field_j.a(-27377));
           }
           if (var6_int != 0) {
-            param2.b();
+            param2.releasePatchUsage();
           }
           stackIn_23_0 = var6_int;
           return stackIn_23_0 != 0;
@@ -1318,7 +1318,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_u = new int[16];
         this.field_R = new int[16];
         this.field_o = new int[16];
-        this.field_P = new pc();
+        this.field_P = new MidiFileReader();
         this.field_I = new MusicPatchPcmStream(this);
         this.field_A = new ha(128);
         this.a(-3262, 256, -1);

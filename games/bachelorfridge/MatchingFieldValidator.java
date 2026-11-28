@@ -141,7 +141,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
         var14 = BachelorFridge.field_y;
         try {
           var6_int = param1 + 8 + (487 + param5 + 8);
-          DefaultWidgetRenderer.field_d.a(i.field_a.field_p - 6, 31407, -6 + var6_int, 3, 3);
+          DefaultWidgetRenderer.field_d.a(SoundCache.field_a.field_p - 6, 31407, -6 + var6_int, 3, 3);
           var7 = DefaultWidgetRenderer.field_d.field_p - 5;
           ResetAnimation.field_w.a(param3, 31407, 2 + param1 - (-485 - param5), 5, -param3 + var7);
           HailAnimation.field_A.a(param3, 31407, -DisableSpecial.field_r.field_sb + (ResetAnimation.field_w.field_sb - param1), param1, 0);
@@ -151,16 +151,16 @@ final class MatchingFieldValidator extends TextFieldValidator {
           if (ao.field_d != null) {
             ao.field_d.setBounds(AccountRequestState.field_b.field_kb, AccountRequestState.field_b.field_p, (byte) 59, AccountRequestState.field_b.field_sb, AccountRequestState.field_b.field_rb);
           }
-          var8 = -var6_int - param1 + i.field_a.field_sb;
+          var8 = -var6_int - param1 + SoundCache.field_a.field_sb;
           var9 = var8 / 2;
           var10 = param0 + var9 + param1;
           var11 = 0;
           for (var12 = 0; 6 > var12; var12++) {
             if (var12 >= 5 ||
               null != r.field_l[var12]) {
-              var13 = (-6 + i.field_a.field_p + 2) * var11 / (ArchiveIndex.field_k + 1) + 3;
+              var13 = (-6 + SoundCache.field_a.field_p + 2) * var11 / (ArchiveIndex.field_k + 1) + 3;
               var11++;
-              var7Lifetime1 = -var13 + (3 + ((2 + (-6 + i.field_a.field_p)) * var11 / (ArchiveIndex.field_k + 1) - 2));
+              var7Lifetime1 = -var13 + (3 + ((2 + (-6 + SoundCache.field_a.field_p)) * var11 / (ArchiveIndex.field_k + 1) - 2));
               if (var12 < 5) {
                 r.field_l[var12].a(var7Lifetime1, 31407, var8, var6_int, var13);
                 cb.field_o[var12].a(var7Lifetime1, 31407, var9 - param1, param1, 0);

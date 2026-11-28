@@ -469,7 +469,7 @@ class EditableTextField extends InteractiveWidget {
           if (11 == q.field_Jb) {
             ta.a(54);
           }
-          pg.a(ed.field_d, da.field_f, TutorialController.field_e, 101);
+          pg.a(ed.field_d, SoundCache.field_f, TutorialController.field_e, 101);
           AccountNameAvailabilityValidator.a(0, param1, 0, (byte) 116);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "ej.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

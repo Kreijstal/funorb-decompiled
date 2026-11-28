@@ -26,7 +26,7 @@ abstract class lo {
         sm var6 = null;
         int var6_int = 0;
         int var7 = 0;
-        vh var8 = null;
+        MusicTrack var8 = null;
         var7 = DungeonAssault.field_K;
         try {
           var2_int = param0.j(76, 8);
@@ -37,8 +37,8 @@ abstract class lo {
           var3 = param0.j(-80, 12);
           var4 = new sm[var3];
           if (param1 >= -109) {
-            var8 = (vh) null;
-            lo.a(-66, true, (vh) null, -109, 2);
+            var8 = (MusicTrack) null;
+            lo.a(-66, true, (MusicTrack) null, -109, 2);
           }
           for (var5 = 0; var3 > var5; var5++) {
             if (jl.a(param0, -125)) {
@@ -133,14 +133,14 @@ abstract class lo {
         field_c = (byte[][][]) null;
     }
 
-    final static void a(int param0, boolean param1, vh param2, int param3, int param4) {
+    final static void a(int param0, boolean param1, MusicTrack param2, int param3, int param4) {
         RuntimeException var5 = null;
         CipherPacketBuffer var6 = null;
         CrossfadingMidiPcmStream stackIn_2_0;
         int stackIn_2_1;
         int stackIn_2_2;
         int stackIn_2_3;
-        vh stackIn_2_4;
+        MusicTrack stackIn_2_4;
         int stackIn_2_5;
         boolean stackIn_3_6 = false;
         RuntimeException stackIn_8_0 = null;
@@ -152,7 +152,7 @@ abstract class lo {
           stackIn_2_1 = 22199;
           stackIn_2_2 = 1000000;
           stackIn_2_3 = param3;
-          stackIn_2_4 = (vh) (param2);
+          stackIn_2_4 = (MusicTrack) (param2);
           stackIn_2_5 = param4;
           stackIn_3_6 = !(param1);
           ((CrossfadingMidiPcmStream) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, stackIn_2_5, stackIn_3_6);

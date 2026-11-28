@@ -133,7 +133,7 @@ final class WhirlpoolDigest {
         he.field_a = dupTemp$2;
         if (IterableNodeHashTable.field_d.status != 1) {
         }
-        jc.field_a = oc.field_m;
+        SoundCache.field_a = oc.field_m;
         if (param1 < 31) {
           field_a = (int[]) null;
         }

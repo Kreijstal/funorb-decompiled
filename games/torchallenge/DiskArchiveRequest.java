@@ -4,7 +4,7 @@
 final class DiskArchiveRequest extends ArchiveRequest {
     int field_C;
     SectorCacheStore field_D;
-    static ej[] field_x;
+    static MusicTrack[] field_x;
     static int[][] field_A;
     byte[] field_y;
     static int field_z;
@@ -44,7 +44,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
     final static void b(int param0, boolean param1) {
         cj.field_i = 1000000000L / (long)param0;
         if (!param1) {
-          field_x = (ej[]) null;
+          field_x = (MusicTrack[]) null;
         }
     }
 
@@ -109,7 +109,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
 
     static {
         field_A = new int[][]{new int[]{31}, new int[]{1984}, new int[]{126976}, new int[]{8126464}, new int[]{520093696}, new int[]{-1073741824, 7}};
-        field_x = new ej[14];
+        field_x = new MusicTrack[14];
         field_z = -2;
     }
 }

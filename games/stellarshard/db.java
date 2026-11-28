@@ -150,7 +150,7 @@ final class db {
         ii.field_F = null;
         ProgressMessageDialog.field_db = false;
         var1 = -66 % ((74 - param0) / 34);
-        if (gk.field_a) {
+        if (SoundCache.field_a) {
           ModalDialogHost.field_G.showConnectionFailure((byte) 52);
         } else {
           var2 = ag.field_c;

@@ -37,7 +37,7 @@ final class ob {
                 field_a = (String[]) null;
               }
               var3 = mc.a(var3, param2 ^ -44, param1);
-              u.a(param1, true, -107, var3.toString());
+              SoundCache.openExternalUrl(param1, true, -107, var3.toString());
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

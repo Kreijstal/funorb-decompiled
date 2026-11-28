@@ -645,7 +645,7 @@ class LevelTile extends LevelRenderable {
         try {
           this.field_g = param2;
           if (HuffmanCodec.field_e == null) {
-            HuffmanCodec.field_e = new int[]{0, 0, 0, oo.field_h[0], 0, -oo.field_j[0], 0, 65536, 0, oo.field_j[0], 0, oo.field_h[0]};
+            HuffmanCodec.field_e = new int[]{0, 0, 0, TriangleRasterizer.field_h[0], 0, -TriangleRasterizer.field_j[0], 0, 65536, 0, TriangleRasterizer.field_j[0], 0, TriangleRasterizer.field_h[0]};
           }
           this.field_l = param1;
           this.field_s = param3;

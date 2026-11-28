@@ -27,7 +27,7 @@ final class ca extends IntrusiveNode {
 
     final static void c(int param0) {
         if (da.field_h > 0) {
-          ti.c(nl.field_c, nl.field_c + 64);
+          TriangleRasterizer.buildColorPaletteRange(nl.field_c, nl.field_c + 64);
           nl.field_c = 64 + nl.field_c & 511;
           da.field_h = da.field_h - 64;
         }

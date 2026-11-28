@@ -145,7 +145,7 @@ final class pr {
         int var1_intLifetime1;
         var4 = BachelorFridge.field_y;
         try {
-          TriangleRasterizer.d();
+          TriangleRasterizer.useRasterClip();
           TeleportEvent.field_s = 11;
           qk.field_m = new int[260];
           if (param0 > -21) {

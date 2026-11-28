@@ -135,7 +135,7 @@ final class nb extends TextureOperator {
         if (param1 <= 32) {
           field_A = (String) null;
         }
-        var8 = id.field_f;
+        var8 = SoundCache.field_f;
         var2 = var8;
         var3 = var8.readUnsignedByte(-11);
         ln.field_c = 127 & var3;

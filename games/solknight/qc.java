@@ -7,7 +7,7 @@ final class qc extends IntrusiveNode {
     int field_k;
     int field_p;
     int field_j;
-    static me field_s;
+    static SoundCache field_s;
     static kb field_i;
     static int[] field_o;
     static int[] field_l;

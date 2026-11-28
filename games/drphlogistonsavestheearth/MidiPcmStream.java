@@ -5,7 +5,7 @@ import java.util.*;
 
 final class MidiPcmStream extends PcmStream {
     private int[] field_n;
-    private rl field_R;
+    private MidiFileReader field_R;
     private int[] field_z;
     private cc[][] field_s;
     private int[] field_q;
@@ -37,7 +37,7 @@ final class MidiPcmStream extends PcmStream {
     private long field_J;
     private MusicPatchPcmStream field_H;
     private int field_N;
-    private ok field_K;
+    private MusicTrack field_K;
     private int field_L;
     private boolean field_l;
 
@@ -316,7 +316,7 @@ final class MidiPcmStream extends PcmStream {
     }
 
     private final synchronized void a(boolean param0, int param1) {
-        this.field_R.a();
+        this.field_R.release();
         if (param1 > -113) {
           return;
         }
@@ -554,7 +554,7 @@ final class MidiPcmStream extends PcmStream {
         this.b(8192, -1, param1);
     }
 
-    private final synchronized void a(boolean param0, boolean param1, ok param2, int param3) {
+    private final synchronized void a(boolean param0, boolean param1, MusicTrack param2, int param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
@@ -567,27 +567,27 @@ final class MidiPcmStream extends PcmStream {
         var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           this.a(param0, -115);
-          this.field_R.a(param2.field_h);
+          this.field_R.parse(param2.field_h);
           stackIn_4_1 = (param1);
           this.field_w = stackIn_4_1;
           this.field_J = 0L;
-          var5_int = this.field_R.c();
+          var5_int = this.field_R.trackCount();
           if (param3 != -1) {
             this.b(42, 33);
           }
           var6 = 0;
           while (var6 < var5_int) {
-            this.field_R.f(var6);
-            this.field_R.e(var6);
-            this.field_R.c(var6);
+            this.field_R.seekTrack(var6);
+            this.field_R.readDelta(var6);
+            this.field_R.saveTrackPosition(var6);
             var6++;
             if (var7 != 0) {
               return;
             }
           }
-          this.field_N = this.field_R.d();
+          this.field_N = this.field_R.nextTrack();
           this.field_v = this.field_R.field_h[this.field_N];
-          this.field_P = this.field_R.d(this.field_v);
+          this.field_P = this.field_R.tickTime(this.field_v);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -662,14 +662,14 @@ final class MidiPcmStream extends PcmStream {
                   break regionExit1;
                 }
                 if (stackIn_28_0 == stackIn_28_1) {
-                  this.field_R.f(var2);
-                  var6 = this.field_R.b(var2);
+                  this.field_R.seekTrack(var2);
+                  var6 = this.field_R.readMessage(var2);
                   stackIn_5_0 = 1;
                   stackIn_5_1 = var6;
                   if (stackIn_5_0 == stackIn_5_1) {
-                    this.field_R.b();
-                    this.field_R.c(var2);
-                    if (!this.field_R.e() &&
+                    this.field_R.markTrackDone();
+                    this.field_R.saveTrackPosition(var2);
+                    if (!this.field_R.isDone() &&
                       var7 == 0) {
                       break scanLoop2;
                     }
@@ -680,25 +680,25 @@ final class MidiPcmStream extends PcmStream {
                     }
                     if (this.field_w &&
                       var3 != 0) {
-                      this.field_R.a(var4);
+                      this.field_R.reset(var4);
                       break scanLoop2;
                     }
                     this.resetPlaybackChannels(false, true);
-                    this.field_R.a();
+                    this.field_R.release();
                     return;
                   }
                   if (0 != (128 & var6)) {
                     this.handleMidiMessage(var6, 32696);
                   }
-                  this.field_R.e(var2);
-                  this.field_R.c(var2);
+                  this.field_R.readDelta(var2);
+                  this.field_R.saveTrackPosition(var2);
                   continue;
                 }
                 break;
               }
-              var2 = this.field_R.d();
+              var2 = this.field_R.nextTrack();
               var3 = this.field_R.field_h[var2];
-              var4 = this.field_R.d(var3);
+              var4 = this.field_R.tickTime(var3);
               continue;
             }
             stackIn_28_0 = param0;
@@ -714,7 +714,7 @@ final class MidiPcmStream extends PcmStream {
             this.field_L < var3) {
             this.field_N = -1;
             this.field_v = this.field_L;
-            this.field_P = this.field_R.d(this.field_v);
+            this.field_P = this.field_R.tickTime(this.field_v);
           }
           return;
         }
@@ -1239,7 +1239,7 @@ final class MidiPcmStream extends PcmStream {
 
     }
 
-    final synchronized void a(ok param0, boolean param1, byte param2) {
+    final synchronized void a(MusicTrack param0, boolean param1, byte param2) {
         if (param2 <= 77) {
           return;
         }
@@ -1432,7 +1432,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean a(int param0, ResourceArchive param1, int param2, ok param3, cf param4) {
+    final synchronized boolean a(int param0, ResourceArchive param1, int param2, MusicTrack param3, SoundCache param4) {
         int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -1451,7 +1451,7 @@ final class MidiPcmStream extends PcmStream {
         int var11 = 0;
         var11 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          param3.a();
+          param3.buildPatchUsage();
           var6_int = 1;
           var7 = null;
           if (param2 < param0) {
@@ -1486,7 +1486,7 @@ final class MidiPcmStream extends PcmStream {
                 break scanLoop1;
               }
             }
-            param3.b();
+            param3.releasePatchUsage();
             break;
           }
           stackIn_20_0 = var6_int;
@@ -1562,7 +1562,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_G = new cc[16][128];
         this.field_o = new int[16];
         this.field_M = 1000000;
-        this.field_R = new rl();
+        this.field_R = new MidiFileReader();
         this.field_H = new MusicPatchPcmStream(this);
         this.field_O = new tg(128);
         this.a(-1, (byte) 70, 256);

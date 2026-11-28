@@ -104,7 +104,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
             var3_int = 1;
             if (8 != param0) {
             } else {
-              if (gk.field_a) {
+              if (SoundCache.field_a) {
                 param2 = ce.field_g;
               } else {
                 param2 = dd.field_f;
@@ -127,7 +127,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
             }
             if (param0 != 256 &&
               param0 != 10) {
-              if (gk.field_a) {
+              if (SoundCache.field_a) {
                 return;
               }
               af.field_r.e((byte) 41);

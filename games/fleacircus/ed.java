@@ -125,7 +125,7 @@ final class ed {
             var2Lifetime1 = SoftwareRasterizer.field_d;
             var3Lifetime1 = SoftwareRasterizer.field_k;
             SoftwareRasterizer.saveClip(ab.field_c);
-            var14 = ModalDialog.a(hb.field_q, new String[]{ng.field_g[di.field_d]}, true);
+            var14 = ModalDialog.a(hb.field_q, new String[]{SoundCache.field_g[di.field_d]}, true);
             var5 = ql.field_k.maxLineWidth(var14, wa.field_m);
             var6Lifetime1 = ql.field_k.textHeight(var14, wa.field_m, ql.field_k.field_K + ql.field_k.field_H);
             var7Lifetime1 = MidiPcmStream.field_V + (wa.field_m - var5) / 2;

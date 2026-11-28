@@ -484,7 +484,7 @@ final class ul extends IntrusiveNode {
             }
           }
           var9Lifetime1 = var18.field_u;
-          ja.b((byte) -116);
+          SoundCache.pushRasterState((byte) -116);
           var18.bindAsRenderTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_a);
           var16 = new RgbSprite(var9Lifetime1, var9Lifetime1);

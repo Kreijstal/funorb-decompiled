@@ -437,8 +437,8 @@ final class NanoFrameTimer extends FrameTimer {
           }
           qd.field_u = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 ^ -105);
           PacketBuffer.field_n = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-107);
-          for (var3Lifetime3 = 0; var3Lifetime3 < fe.field_d.length; var3Lifetime3++) {
-            fe.field_d[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).readByte(0);
+          for (var3Lifetime3 = 0; var3Lifetime3 < SoundCache.field_d.length; var3Lifetime3++) {
+            SoundCache.field_d[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).readByte(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

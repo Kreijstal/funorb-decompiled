@@ -11,7 +11,7 @@ final class GzipInflater {
     static int[] field_f;
     private java.util.zip.Inflater field_a;
     static pc field_h;
-    static dd[] field_c;
+    static SoftwareModelMesh[] field_c;
 
     final static void b(int param0, int param1) {
         BitPacketBuffer var2 = EditableTextField.field_U;
@@ -192,6 +192,6 @@ final class GzipInflater {
         field_b = new int[]{4096, 0, 4096, 0, 4096, 0, 4096, 0, 0, 4096, 0, 4096, 0, 4096, 0, 4096, 4096, 0, 4096, 0, 4096, 0, 4096, 0, 0, 4096, 0, 4096, 0, 4096, 0, 4096, 4096, 0, 4096, 0, 4096, 0, 4096, 0, 0, 4096, 0, 4096, 0, 4096, 0, 4096, 4096, 0, 4096, 0, 4096, 0, 4096, 0, 0, 4096, 0, 4096, 0, 4096, 0, 4096};
         field_g = 0L;
         field_d = 3;
-        field_c = new dd[7];
+        field_c = new SoftwareModelMesh[7];
     }
 }

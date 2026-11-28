@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class am {
-    static dd[] field_c;
+    static SoftwareModelMesh[] field_c;
     static String field_d;
     static String field_a;
     static String field_b;
@@ -143,7 +143,7 @@ final class am {
           field_a = null;
           field_c = null;
           if (param0 < 2) {
-            field_c = (dd[]) null;
+            field_c = (SoftwareModelMesh[]) null;
           }
           field_b = null;
           return;

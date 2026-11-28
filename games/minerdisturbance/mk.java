@@ -96,7 +96,7 @@ final class mk implements WidgetRenderer {
         return hb.field_b;
     }
 
-    final static void a(boolean param0, wh param1, int param2) {
+    final static void a(boolean param0, MusicTrack param1, int param2) {
         try {
           ValidatedTextField.a(param1, param0, 256, false);
           if (param2 != 0) {

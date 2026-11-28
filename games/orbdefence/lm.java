@@ -1319,7 +1319,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create");
                 if (var2 != null) {
-                  vd.field_f = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  SoundCache.field_f = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_pleasechooseapassword");
                 if (null != var2) {

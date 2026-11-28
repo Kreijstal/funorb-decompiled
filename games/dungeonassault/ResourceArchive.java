@@ -634,7 +634,7 @@ final class ResourceArchive {
             var9 = LoginPanel.extractBytes(this.field_j[param2], false, (byte) 48);
           }
           try {
-            var36 = lc.a(var9, 50166);
+            var36 = SoundCache.decompressArchiveContainer(var9, 50166);
             var27 = var36;
             var23 = var27;
             var43 = var23;

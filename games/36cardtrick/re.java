@@ -472,7 +472,7 @@ final class re {
         if (param0 != 3) {
           return;
         }
-        da.field_c = null;
+        SoundCache.field_c = null;
         ia.field_d = null;
     }
 

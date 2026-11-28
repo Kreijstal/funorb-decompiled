@@ -426,7 +426,7 @@ abstract class GameShell extends GameApplet {
         }
         if (0 == IntrusiveDeque.field_f &&
           !FullscreenNoticeType.a((byte) 106)) {
-          da.field_f = false;
+          SoundCache.field_f = false;
         }
         if (0 == LoginPanel.field_H &&
           vb.a(-353)) {

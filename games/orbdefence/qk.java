@@ -10,7 +10,7 @@ final class qk {
         try {
           StandardContentDialog.a(param0, true);
           int var2_int = 12 % ((26 - param1) / 62);
-          vd.a(false, -536866817, ResourceArchive.field_d);
+          SoundCache.a(false, -536866817, ResourceArchive.field_d);
         } catch (RuntimeException runtimeException) {
           throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "qk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

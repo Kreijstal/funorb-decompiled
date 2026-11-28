@@ -99,7 +99,7 @@ public final class Torquing extends NetworkGameClient {
     final void releaseGameResources(int param0) {
         try {
           Torquing.clearTorquingGlobals(29165);
-          be.clearStaticReferences();
+          TriangleRasterizer.clearStaticReferences();
           tj.clearStaticReferences(-36);
           IntrusiveDeque.clearStaticReferences(79);
           cl.a(-11784);
@@ -136,7 +136,7 @@ public final class Torquing extends NetworkGameClient {
           m.clearStaticReferences(8192);
           AudioOutput.clearStaticReferences();
           wl.clearStaticReferences();
-          fi.a(108);
+          SoundCache.clearStaticReferences(108);
           Level.clearLevelGlobals((byte) -113);
           MenuScreen.clearStaticReferences(32);
           FramedPanelLayer.clearStaticReferences(88);
@@ -210,7 +210,7 @@ public final class Torquing extends NetworkGameClient {
           cf.clearStaticReferences(1);
           un.clearStaticReferences(-13524);
           wd.clearStaticReferences(0);
-          ma.clearStaticReferences();
+          SynthesizerVoice.clearStaticReferences();
           VorbisSample.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
           lh.clearStaticReferences(param0 - 128);
@@ -789,14 +789,14 @@ public final class Torquing extends NetworkGameClient {
               return false;
             }
             if (vb.field_c[3] == null) {
-              vb.field_c[3] = (pj) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_block").a(80, 1365, -1, -12, 12));
-              vb.field_c[25] = (pj) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_can").a(80, 1365, -1, -12, 12));
-              vb.field_c[26] = (pj) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_grave").a(80, 1365, -1, -12, 12));
-              vb.field_c[27] = (pj) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_roundtree").a(80, 1365, -1, -12, 12));
-              vb.field_c[28] = (pj) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_squaretree").a(80, 1365, -1, -12, 12));
-              vb.field_c[29] = (pj) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_statue").a(80, 1365, -1, -12, 12));
-              vb.field_c[30] = (pj) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_cone").a(80, 1365, -1, -12, 12));
-              vb.field_c[31] = (pj) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_lights_tall_nopost").a(80, 1365, -1, -12, 12));
+              vb.field_c[3] = (LitModelMesh) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_block").a(80, 1365, -1, -12, 12));
+              vb.field_c[25] = (LitModelMesh) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_can").a(80, 1365, -1, -12, 12));
+              vb.field_c[26] = (LitModelMesh) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_grave").a(80, 1365, -1, -12, 12));
+              vb.field_c[27] = (LitModelMesh) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_roundtree").a(80, 1365, -1, -12, 12));
+              vb.field_c[28] = (LitModelMesh) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_squaretree").a(80, 1365, -1, -12, 12));
+              vb.field_c[29] = (LitModelMesh) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_statue").a(80, 1365, -1, -12, 12));
+              vb.field_c[30] = (LitModelMesh) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_cone").a(80, 1365, -1, -12, 12));
+              vb.field_c[31] = (LitModelMesh) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_lights_tall_nopost").a(80, 1365, -1, -12, 12));
               ka.field_n[31][0] = 0;
               ka.field_n[31][4] = 0;
               ka.field_n[31][1] = 16;
@@ -961,7 +961,7 @@ public final class Torquing extends NetworkGameClient {
             qd.field_c[2] = vo.a(-194, -1, GameKeyHandler.field_a[6], -34);
             DelayedPcmStream.field_p = ProgressMessageDialog.a(rg.field_v, "", "scrolled_instructions_keys", param1 + 186);
             AccountRequestState.field_a = ip.a(rg.field_v, -116, "", "mb_screenshots");
-            be.a(new op(NameSuggestionsPanel.field_D, n.field_q, rg.field_v, 6, false));
+            TriangleRasterizer.setTextureProvider(new op(NameSuggestionsPanel.field_D, n.field_q, rg.field_v, 6, false));
             tj.field_n = SectorCacheStore.a("achievements_lrg", param1 + 101, "", rg.field_v);
             var46 = ProgressMessageDialog.a(rg.field_v, "", "glass", 89);
             var46.normalizeCanvas();
@@ -996,26 +996,26 @@ public final class Torquing extends NetworkGameClient {
           if (null != bp.field_c) {
             IsaacPacketBuffer.a(35.0f, param1 ^ -29, jo.field_a);
             this.renderFrame((byte) 73);
-            LoginRequestBuilder.field_a = new fi(bp.field_c, vd.field_e);
-            DisplayNameSelectionPanel.field_F[26] = cg.a(bp.field_c, "", "torq_bounce").b();
-            DisplayNameSelectionPanel.field_F[19] = cg.a(bp.field_c, "", "torq_collect").b();
-            DisplayNameSelectionPanel.field_F[12] = cg.a(bp.field_c, "", "torq_equip_shield").b();
-            DisplayNameSelectionPanel.field_F[9] = cg.a(bp.field_c, "", "torq_equip_spikes").b();
-            DisplayNameSelectionPanel.field_F[13] = cg.a(bp.field_c, "", "torq_explode").b();
-            DisplayNameSelectionPanel.field_F[10] = cg.a(bp.field_c, "", "torq_gyroscope").b();
-            DisplayNameSelectionPanel.field_F[25] = cg.a(bp.field_c, "", "torq_land_hard").b();
-            DisplayNameSelectionPanel.field_F[27] = cg.a(bp.field_c, "", "torq_playfield_tilts").b();
-            DisplayNameSelectionPanel.field_F[6] = cg.a(bp.field_c, "", "torq_powerup").b();
-            DisplayNameSelectionPanel.field_F[0] = cg.a(bp.field_c, "", "torq_roll_normal_1").b();
-            DisplayNameSelectionPanel.field_F[1] = cg.a(bp.field_c, "", "torq_roll_spiky_1").b();
-            DisplayNameSelectionPanel.field_F[23] = cg.a(bp.field_c, "", "torq_select").b();
-            DisplayNameSelectionPanel.field_F[16] = cg.a(bp.field_c, "", "torq_shieldhit").b();
-            DisplayNameSelectionPanel.field_F[11] = cg.a(bp.field_c, "", "torq_skid_alt").b();
-            DisplayNameSelectionPanel.field_F[15] = cg.a(bp.field_c, "", "torq_squash").b();
-            DisplayNameSelectionPanel.field_F[20] = cg.a(bp.field_c, "", "torq_tick").b();
-            DisplayNameSelectionPanel.field_F[28] = cg.a(bp.field_c, "", "torq_jump2").b();
+            LoginRequestBuilder.field_a = new SoundCache(bp.field_c, vd.field_e);
+            DisplayNameSelectionPanel.field_F[26] = SynthesizedSoundEffect.loadByName(bp.field_c, "", "torq_bounce").toPcmSample();
+            DisplayNameSelectionPanel.field_F[19] = SynthesizedSoundEffect.loadByName(bp.field_c, "", "torq_collect").toPcmSample();
+            DisplayNameSelectionPanel.field_F[12] = SynthesizedSoundEffect.loadByName(bp.field_c, "", "torq_equip_shield").toPcmSample();
+            DisplayNameSelectionPanel.field_F[9] = SynthesizedSoundEffect.loadByName(bp.field_c, "", "torq_equip_spikes").toPcmSample();
+            DisplayNameSelectionPanel.field_F[13] = SynthesizedSoundEffect.loadByName(bp.field_c, "", "torq_explode").toPcmSample();
+            DisplayNameSelectionPanel.field_F[10] = SynthesizedSoundEffect.loadByName(bp.field_c, "", "torq_gyroscope").toPcmSample();
+            DisplayNameSelectionPanel.field_F[25] = SynthesizedSoundEffect.loadByName(bp.field_c, "", "torq_land_hard").toPcmSample();
+            DisplayNameSelectionPanel.field_F[27] = SynthesizedSoundEffect.loadByName(bp.field_c, "", "torq_playfield_tilts").toPcmSample();
+            DisplayNameSelectionPanel.field_F[6] = SynthesizedSoundEffect.loadByName(bp.field_c, "", "torq_powerup").toPcmSample();
+            DisplayNameSelectionPanel.field_F[0] = SynthesizedSoundEffect.loadByName(bp.field_c, "", "torq_roll_normal_1").toPcmSample();
+            DisplayNameSelectionPanel.field_F[1] = SynthesizedSoundEffect.loadByName(bp.field_c, "", "torq_roll_spiky_1").toPcmSample();
+            DisplayNameSelectionPanel.field_F[23] = SynthesizedSoundEffect.loadByName(bp.field_c, "", "torq_select").toPcmSample();
+            DisplayNameSelectionPanel.field_F[16] = SynthesizedSoundEffect.loadByName(bp.field_c, "", "torq_shieldhit").toPcmSample();
+            DisplayNameSelectionPanel.field_F[11] = SynthesizedSoundEffect.loadByName(bp.field_c, "", "torq_skid_alt").toPcmSample();
+            DisplayNameSelectionPanel.field_F[15] = SynthesizedSoundEffect.loadByName(bp.field_c, "", "torq_squash").toPcmSample();
+            DisplayNameSelectionPanel.field_F[20] = SynthesizedSoundEffect.loadByName(bp.field_c, "", "torq_tick").toPcmSample();
+            DisplayNameSelectionPanel.field_F[28] = SynthesizedSoundEffect.loadByName(bp.field_c, "", "torq_jump2").toPcmSample();
             var3_intLifetime1 = bp.field_c.getGroupIdByName(-1, "");
-            var50 = LoginRequestBuilder.field_a.a(bp.field_c.getFileIdByName("torq_whistle", -107, var3_intLifetime1), var3_intLifetime1, (byte) -84);
+            var50 = LoginRequestBuilder.field_a.getSoundEffectByGroup(bp.field_c.getFileIdByName("torq_whistle", -107, var3_intLifetime1), var3_intLifetime1, (byte) -84);
             var63 = new byte[var50.data.length];
             var51 = var63;
             var5_ref_byte__ = var51;
@@ -1035,7 +1035,7 @@ public final class Torquing extends NetworkGameClient {
             DisplayNameSelectionPanel.field_F[22] = VorbisSample.loadByName(vd.field_e, "", "laura_aaahhh").decodeAllToPcm();
             DisplayNameSelectionPanel.field_F[14] = VorbisSample.loadByName(vd.field_e, "", "laura_ow").decodeAllToPcm();
             DisplayNameSelectionPanel.field_F[18] = VorbisSample.loadByName(vd.field_e, "", "laura_woohoo").decodeAllToPcm();
-            DisplayNameSelectionPanel.field_F[17] = LoginRequestBuilder.field_a.a("laura_yeah", -114, "");
+            DisplayNameSelectionPanel.field_F[17] = LoginRequestBuilder.field_a.getMusicSampleByName("laura_yeah", -114, "");
             DisplayNameSelectionPanel.field_F[4] = VorbisSample.loadByName(vd.field_e, "", "laura_1").decodeAllToPcm();
             DisplayNameSelectionPanel.field_F[3] = VorbisSample.loadByName(vd.field_e, "", "laura_2").decodeAllToPcm();
             DisplayNameSelectionPanel.field_F[2] = VorbisSample.loadByName(vd.field_e, "", "laura_3").decodeAllToPcm();
@@ -1230,9 +1230,9 @@ public final class Torquing extends NetworkGameClient {
               ol.field_f[incrementValue$5] = var4_refLifetime1;
               var4_refLifetime1 = var4_refLifetime1.field_m;
             }
-            if (be.field_a[0] == 0) {
-              be.a();
-              be.a(1.0f);
+            if (TriangleRasterizer.field_a[0] == 0) {
+              TriangleRasterizer.useRasterClip();
+              TriangleRasterizer.rebuildPaletteWithGamma(1.0f);
             }
             lp.field_f = true;
             cf.a(param1 ^ -6539);

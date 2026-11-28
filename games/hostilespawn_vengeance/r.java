@@ -8,11 +8,11 @@ final class r {
     static int[] field_d;
     static RgbSprite field_e;
 
-    final static void a(int param0, int param1, ji param2, int param3, boolean param4) {
+    final static void a(int param0, int param1, MusicTrack param2, int param3, boolean param4) {
         try {
           if (param1 != 14654) {
-            ji var6 = (ji) null;
-            r.a(-25, -74, (ji) null, -65, false);
+            MusicTrack var6 = (MusicTrack) null;
+            r.a(-25, -74, (MusicTrack) null, -65, false);
           }
           ha.field_w.a(param0, (byte) -4, !param4 ? true : false, param3, param2, 1000000);
         } catch (RuntimeException runtimeException) {
@@ -151,8 +151,8 @@ final class r {
     final static void a(String param0, String param1, int param2) {
         try {
           if (param2 >= -20) {
-            ji var4 = (ji) null;
-            r.a(60, -88, (ji) null, 75, false);
+            MusicTrack var4 = (MusicTrack) null;
+            r.a(60, -88, (MusicTrack) null, 75, false);
           }
           ri.a((byte) 115, false, param1, param0);
         } catch (RuntimeException runtimeException) {

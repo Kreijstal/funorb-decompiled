@@ -83,7 +83,7 @@ abstract class TunnelEntity extends DualLinkNode {
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
-        sk var12 = null;
+        SoftwareModelMesh var12 = null;
         RuntimeException var12_ref = null;
         double var13_double = 0.0;
         int[] var13 = null;
@@ -114,7 +114,7 @@ abstract class TunnelEntity extends DualLinkNode {
             } else {
               stackIn_7_1 = (int)(16.0 * var13_double);
             }
-            var12 = (sk) (((od) (Object) stackIn_6_0).a(stackIn_7_1, 65536, 0, 0, -256));
+            var12 = (SoftwareModelMesh) (((od) (Object) stackIn_6_0).a(stackIn_7_1, 65536, 0, 0, -256));
           }
           var27 = new int[12];
           var25 = var27;
@@ -128,9 +128,9 @@ abstract class TunnelEntity extends DualLinkNode {
           param5.a(var27, -99);
           var14 = SoftwareRasterizer.field_h;
           SoftwareRasterizer.field_h = fd.field_e.field_z;
-          var12.a(param6.getFixedPointViewTransform(param0, false), var27);
+          var12.projectAndDrawWithTransforms(param6.getFixedPointViewTransform(param0, false), var27);
           SoftwareRasterizer.field_h = var14;
-          var12.a();
+          var12.updateProjectedBounds();
           if (param1) {
             var15 = -param6.field_T + this.field_E;
             var17 = -param6.field_L + this.field_t;
@@ -145,7 +145,7 @@ abstract class TunnelEntity extends DualLinkNode {
             }
             TunnelEntity.b((int)qn.field_v.attenuateBrightnessToDepth((double)param9, param3 ^ 44, this.field_D) >> 2, var23);
           }
-          SoftwareRasterizer.setClip(sk.field_u, sk.field_j, sk.field_h, sk.field_G);
+          SoftwareRasterizer.setClip(SoftwareModelMesh.field_u, SoftwareModelMesh.field_j, SoftwareModelMesh.field_h, SoftwareModelMesh.field_G);
           fd.field_e.drawWithOpacity(0, 0, -(param9 >> 1) + 256);
           SoftwareRasterizer.field_h = fd.field_e.field_z;
           SoftwareRasterizer.fillRectangle(0, 0, 640, 376, 0);
@@ -216,10 +216,10 @@ abstract class TunnelEntity extends DualLinkNode {
         int var10Lifetime2;
         int var10Lifetime3;
         int var11Lifetime1;
-        if (sk.field_u >= sk.field_h) {
+        if (SoftwareModelMesh.field_u >= SoftwareModelMesh.field_h) {
           return;
         }
-        if (sk.field_j >= sk.field_G) {
+        if (SoftwareModelMesh.field_j >= SoftwareModelMesh.field_G) {
           return;
         }
         wb.field_b = param0;
@@ -228,10 +228,10 @@ abstract class TunnelEntity extends DualLinkNode {
         var17 = var19;
         var2 = var17;
         var22 = wm.field_gb;
-        var4 = sk.field_u - 1;
-        var5 = sk.field_j - 1;
-        var6 = sk.field_h + 1;
-        var7 = sk.field_G + 1;
+        var4 = SoftwareModelMesh.field_u - 1;
+        var5 = SoftwareModelMesh.field_j - 1;
+        var6 = SoftwareModelMesh.field_h + 1;
+        var7 = SoftwareModelMesh.field_G + 1;
         if (var4 < 0) {
           var4 = 0;
         }
@@ -564,7 +564,7 @@ abstract class TunnelEntity extends DualLinkNode {
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        sk var10 = null;
+        SoftwareModelMesh var10 = null;
         RuntimeException var10_ref = null;
         int[] var13 = null;
         int[] var15 = null;
@@ -584,7 +584,7 @@ abstract class TunnelEntity extends DualLinkNode {
           var13[1] = (int)((double)param7 * this.field_t);
           var13[2] = (int)(this.field_D * (double)param7);
           param1.a(var17, -127);
-          var10.a(param6.getFixedPointViewTransform(param7, false), var17);
+          var10.projectAndDrawWithTransforms(param6.getFixedPointViewTransform(param7, false), var17);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -668,11 +668,11 @@ abstract class TunnelEntity extends DualLinkNode {
         }
     }
 
-    private final sk a(double param0, od param1, double[] param2, int param3, TunnelCamera param4, double param5, DynamicLight param6, PrimaryNodeDeque param7) {
+    private final SoftwareModelMesh a(double param0, od param1, double[] param2, int param3, TunnelCamera param4, double param5, DynamicLight param6, PrimaryNodeDeque param7) {
         double localTemp$0 = 0.0;
-        sk stackIn_20_0 = null;
-        sk stackIn_25_0 = null;
-        sk stackIn_27_0 = null;
+        SoftwareModelMesh stackIn_20_0 = null;
+        SoftwareModelMesh stackIn_25_0 = null;
+        SoftwareModelMesh stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -718,7 +718,7 @@ abstract class TunnelEntity extends DualLinkNode {
           var11_double = -((this.field_D - param4.field_O) / param5) + 1.0;
           var11_double = qn.field_v.attenuateBrightnessToDepth(var11_double, param3 ^ param3, this.field_D);
           if (!(0.0 < var11_double)) {
-            stackIn_27_0 = (sk) (param1.a(0, 65536, 0, 0, -256));
+            stackIn_27_0 = (SoftwareModelMesh) (param1.a(0, 65536, 0, 0, -256));
             return stackIn_27_0;
           }
           var13 = 4.0;
@@ -781,7 +781,7 @@ abstract class TunnelEntity extends DualLinkNode {
             var24 = (var27 - var26_int) / 2;
           }
           if (var24 <= 0) {
-            stackIn_20_0 = (sk) (param1.a(var25, 65536, 0, 0, -256));
+            stackIn_20_0 = (SoftwareModelMesh) (param1.a(var25, 65536, 0, 0, -256));
             return stackIn_20_0;
           }
           if (var24 > 1024) {
@@ -793,7 +793,7 @@ abstract class TunnelEntity extends DualLinkNode {
           var17Lifetime1 = var30;
           var15Lifetime1 = var28;
           var26 = 256.0 / var22;
-          stackIn_25_0 = (sk) (param1.a(var25, 131072 / (3 * var24), (int)(var26 * var15Lifetime1), (int)(var26 * var17Lifetime1), (int)(var19 * var26)));
+          stackIn_25_0 = (SoftwareModelMesh) (param1.a(var25, 131072 / (3 * var24), (int)(var26 * var15Lifetime1), (int)(var26 * var17Lifetime1), (int)(var19 * var26)));
           return stackIn_25_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -838,7 +838,7 @@ abstract class TunnelEntity extends DualLinkNode {
     abstract void onPowerUpContact(PowerUpPickup param0, byte param1);
 
     final ka a(int param0, PcmSample param1, double param2, double param3, double param4) {
-        sk discarded$1 = null;
+        SoftwareModelMesh discarded$1 = null;
         ShockwaveBlast var9 = null;
         RuntimeException var9_ref = null;
         ShockwaveBlast stackIn_3_0 = null;
@@ -877,9 +877,9 @@ abstract class TunnelEntity extends DualLinkNode {
         }
     }
 
-    private final sk a(PrimaryNodeDeque param0, DynamicLight param1, TunnelCamera param2, od param3, double[] param4, int param5, double param6) {
+    private final SoftwareModelMesh a(PrimaryNodeDeque param0, DynamicLight param1, TunnelCamera param2, od param3, double[] param4, int param5, double param6) {
         RuntimeException var9 = null;
-        sk stackIn_3_0 = null;
+        SoftwareModelMesh stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

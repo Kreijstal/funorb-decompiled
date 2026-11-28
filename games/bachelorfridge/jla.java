@@ -1421,8 +1421,8 @@ class jla {
           }
           BoardChange.field_i = new lna(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
           BoardChange.field_i.a(false, 1, 1, true, 0);
-          i.field_d = new lna(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-          i.field_d.a(false, 1, 1, true, 0);
+          SoundCache.field_d = new lna(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+          SoundCache.field_d.a(false, 1, 1, true, 0);
         }
         var2 = 590;
         LinkTextWidget.field_D.drawText(EventAnimation.field_k[0], 25, 30, FullHealAnimation.field_v, -1);
@@ -1432,10 +1432,10 @@ class jla {
         var4 = 35 + g.field_g.field_u * var3 + eea.field_a.field_p / 4;
         bh.field_r.draw(25, var4 - bh.field_r.field_p / 2);
         BoardChange.field_i.c(11);
-        i.field_d.c(11);
+        SoundCache.field_d.c(11);
         BoardChange.field_i.a(false, false, 2048, 2048, 0, -121, 256, bh.field_r.field_q + 45, -(3 * bd.field_i.field_p / 8) + var4);
         eea.field_a.drawScaled(615 - eea.field_a.field_q / 2, -(eea.field_a.field_p / 4) + var4, eea.field_a.field_q / 2, eea.field_a.field_p / 2);
-        i.field_d.a(false, false, 2048, 2048, 0, -46, 256, 615 - eea.field_a.field_q * 15 / 32, var4 - bd.field_i.field_p * 29 / 64);
+        SoundCache.field_d.a(false, false, 2048, 2048, 0, -46, 256, 615 - eea.field_a.field_q * 15 / 32, var4 - bd.field_i.field_p * 29 / 64);
         SoftwareRasterizer.fillRectangle(45 + bh.field_r.field_q, var4 - 5, 20, 4, 3518976);
         SoftwareRasterizer.fillRectangle(53 + bh.field_r.field_q, var4 - 13, 4, 20, 3518976);
         SoftwareRasterizer.fillRectangle(163 + bh.field_r.field_q, -8 + var4, 20, 4, 3518976);
@@ -2150,7 +2150,7 @@ class jla {
         vla.field_r = null;
         vu.field_k = null;
         BoardChange.field_i = null;
-        i.field_d = null;
+        SoundCache.field_d = null;
         SuperSpeedAllAnimation.field_z = null;
         AttackUpAllAnimation.field_y = null;
     }

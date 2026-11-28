@@ -526,7 +526,7 @@ final class od extends on {
     }
 
     final wj a(int param0, int param1, int param2, int param3, int param4) {
-        return (wj) ((Object) new sk(this, param0, param1, param2, param3, param4));
+        return (wj) ((Object) new SoftwareModelMesh(this, param0, param1, param2, param3, param4));
     }
 
     final void b() {
@@ -1365,7 +1365,7 @@ final class od extends on {
     }
 
     static {
-        field_D = ti.field_j;
-        field_E = ti.field_m;
+        field_D = TriangleRasterizer.field_j;
+        field_E = TriangleRasterizer.field_m;
     }
 }

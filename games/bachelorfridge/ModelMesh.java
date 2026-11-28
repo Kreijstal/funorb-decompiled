@@ -354,9 +354,9 @@ final class ModelMesh extends ModelMeshBase {
               var19 = var7;
             }
             if (this.field_L[param0] != -1) {
-              TriangleRasterizer.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_V[0], field_V[1], field_V[2], field_H[var17], field_H[var18], field_H[var19], field_B[var17], field_B[var18], field_B[var19], field_y[var17], field_y[var18], field_y[var19], (int) this.field_P[param0]);
+              TriangleRasterizer.drawTexturedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_V[0], field_V[1], field_V[2], field_H[var17], field_H[var18], field_H[var19], field_B[var17], field_B[var18], field_B[var19], field_y[var17], field_y[var18], field_y[var19], (int) this.field_P[param0]);
             } else {
-              TriangleRasterizer.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, this.field_r[param0], this.field_r[param0], this.field_r[param0], field_H[var17], field_H[var18], field_H[var19], field_B[var17], field_B[var18], field_B[var19], field_y[var17], field_y[var18], field_y[var19], (int) this.field_P[param0]);
+              TriangleRasterizer.drawTexturedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, this.field_r[param0], this.field_r[param0], this.field_r[param0], field_H[var17], field_H[var18], field_H[var19], field_B[var17], field_B[var18], field_B[var19], field_y[var17], field_y[var18], field_y[var19], (int) this.field_P[param0]);
             }
             decompiledFrameRemainder0 = false;
           }
@@ -396,11 +396,11 @@ final class ModelMesh extends ModelMeshBase {
           }
           var20Lifetime1Lifetime1 = this.field_P[param0];
           if (this.field_L[param0] != -1) {
-            TriangleRasterizer.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_V[0], field_V[1], field_V[2], field_H[var17Lifetime1], field_H[var18Lifetime1], field_H[var19Lifetime1], field_B[var17Lifetime1], field_B[var18Lifetime1], field_B[var19Lifetime1], field_y[var17Lifetime1], field_y[var18Lifetime1], field_y[var19Lifetime1], var20Lifetime1Lifetime1);
-            TriangleRasterizer.a(var14Lifetime3, var16, field_u[3], var11Lifetime3, var13Lifetime3, field_q[3], field_V[0], field_V[2], field_V[3], field_H[var17Lifetime1], field_H[var18Lifetime1], field_H[var19Lifetime1], field_B[var17Lifetime1], field_B[var18Lifetime1], field_B[var19Lifetime1], field_y[var17Lifetime1], field_y[var18Lifetime1], field_y[var19Lifetime1], var20Lifetime1Lifetime1);
+            TriangleRasterizer.drawTexturedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_V[0], field_V[1], field_V[2], field_H[var17Lifetime1], field_H[var18Lifetime1], field_H[var19Lifetime1], field_B[var17Lifetime1], field_B[var18Lifetime1], field_B[var19Lifetime1], field_y[var17Lifetime1], field_y[var18Lifetime1], field_y[var19Lifetime1], var20Lifetime1Lifetime1);
+            TriangleRasterizer.drawTexturedTriangle(var14Lifetime3, var16, field_u[3], var11Lifetime3, var13Lifetime3, field_q[3], field_V[0], field_V[2], field_V[3], field_H[var17Lifetime1], field_H[var18Lifetime1], field_H[var19Lifetime1], field_B[var17Lifetime1], field_B[var18Lifetime1], field_B[var19Lifetime1], field_y[var17Lifetime1], field_y[var18Lifetime1], field_y[var19Lifetime1], var20Lifetime1Lifetime1);
           } else {
-            TriangleRasterizer.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, this.field_r[param0], this.field_r[param0], this.field_r[param0], field_H[var17Lifetime1], field_H[var18Lifetime1], field_H[var19Lifetime1], field_B[var17Lifetime1], field_B[var18Lifetime1], field_B[var19Lifetime1], field_y[var17Lifetime1], field_y[var18Lifetime1], field_y[var19Lifetime1], var20Lifetime1Lifetime1);
-            TriangleRasterizer.a(var14Lifetime3, var16, field_u[3], var11Lifetime3, var13Lifetime3, field_q[3], this.field_r[param0], this.field_r[param0], this.field_r[param0], field_H[var17Lifetime1], field_H[var18Lifetime1], field_H[var19Lifetime1], field_B[var17Lifetime1], field_B[var18Lifetime1], field_B[var19Lifetime1], field_y[var17Lifetime1], field_y[var18Lifetime1], field_y[var19Lifetime1], var20Lifetime1Lifetime1);
+            TriangleRasterizer.drawTexturedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, this.field_r[param0], this.field_r[param0], this.field_r[param0], field_H[var17Lifetime1], field_H[var18Lifetime1], field_H[var19Lifetime1], field_B[var17Lifetime1], field_B[var18Lifetime1], field_B[var19Lifetime1], field_y[var17Lifetime1], field_y[var18Lifetime1], field_y[var19Lifetime1], var20Lifetime1Lifetime1);
+            TriangleRasterizer.drawTexturedTriangle(var14Lifetime3, var16, field_u[3], var11Lifetime3, var13Lifetime3, field_q[3], this.field_r[param0], this.field_r[param0], this.field_r[param0], field_H[var17Lifetime1], field_H[var18Lifetime1], field_H[var19Lifetime1], field_B[var17Lifetime1], field_B[var18Lifetime1], field_B[var19Lifetime1], field_y[var17Lifetime1], field_y[var18Lifetime1], field_y[var19Lifetime1], var20Lifetime1Lifetime1);
           }
         } else {
           if (this.field_L[param0] != -1) {
@@ -1028,9 +1028,9 @@ final class ModelMesh extends ModelMeshBase {
             var7 = var4;
           }
           if (this.field_L[param0] != -1) {
-            TriangleRasterizer.a(field_F[var2], field_F[var3], field_F[var4], field_p[var2], field_p[var3], field_p[var4], this.field_r[param0], this.field_i[param0], this.field_L[param0], field_H[var5], field_H[var6], field_H[var7], field_B[var5], field_B[var6], field_B[var7], field_y[var5], field_y[var6], field_y[var7], (int) this.field_P[param0]);
+            TriangleRasterizer.drawTexturedTriangle(field_F[var2], field_F[var3], field_F[var4], field_p[var2], field_p[var3], field_p[var4], this.field_r[param0], this.field_i[param0], this.field_L[param0], field_H[var5], field_H[var6], field_H[var7], field_B[var5], field_B[var6], field_B[var7], field_y[var5], field_y[var6], field_y[var7], (int) this.field_P[param0]);
           } else {
-            TriangleRasterizer.a(field_F[var2], field_F[var3], field_F[var4], field_p[var2], field_p[var3], field_p[var4], this.field_r[param0], this.field_r[param0], this.field_r[param0], field_H[var5], field_H[var6], field_H[var7], field_B[var5], field_B[var6], field_B[var7], field_y[var5], field_y[var6], field_y[var7], (int) this.field_P[param0]);
+            TriangleRasterizer.drawTexturedTriangle(field_F[var2], field_F[var3], field_F[var4], field_p[var2], field_p[var3], field_p[var4], this.field_r[param0], this.field_r[param0], this.field_r[param0], field_H[var5], field_H[var6], field_H[var7], field_B[var5], field_B[var6], field_B[var7], field_y[var5], field_y[var6], field_y[var7], (int) this.field_P[param0]);
           }
         } else {
           if (this.field_L[param0] != -1) {

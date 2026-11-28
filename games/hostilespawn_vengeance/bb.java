@@ -3,11 +3,11 @@
  */
 final class bb {
     static int field_d;
-    static ji field_b;
+    static MusicTrack field_b;
     static RgbSprite field_a;
     static long field_c;
     static PacketBuffer field_f;
-    static ji field_e;
+    static MusicTrack field_e;
 
     final static String b(byte param0) {
         if (param0 != 99) {
@@ -25,7 +25,7 @@ final class bb {
           field_a = null;
           return;
         }
-        field_e = (ji) null;
+        field_e = (MusicTrack) null;
         field_e = null;
         field_b = null;
         field_f = null;

@@ -79,7 +79,7 @@ final class tj {
     }
 
     final static void a(byte param0) {
-        ud.field_e = null;
+        SoundCache.field_e = null;
         DiskCacheWorker.field_c = null;
         re.field_a = null;
         wi.field_b = null;

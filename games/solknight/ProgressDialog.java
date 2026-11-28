@@ -71,7 +71,7 @@ final class ProgressDialog extends ResizableModalDialog {
           RuntimeException var2_ref2 = null;
           var7 = SolKnight.field_L ? 1 : 0;
           try {
-            if (me.field_g) {
+            if (SoundCache.field_g) {
               return true;
             }
             if (param1 != 6669) {

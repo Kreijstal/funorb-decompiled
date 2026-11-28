@@ -59,7 +59,7 @@ final class hg {
             var10_int = var10_int + (wk.field_e[var11] & 255);
           }
           var10_int = (var10_int + 7) / 8;
-          fe.field_d = new byte[var10_int];
+          SoundCache.field_d = new byte[var10_int];
           if (null == param2.field_I) {
             param2.field_I = new IntrusiveDeque();
           }

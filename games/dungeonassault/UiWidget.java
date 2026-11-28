@@ -731,7 +731,7 @@ class UiWidget extends IntrusiveNode {
               this.handleWheel(param2, param0, hj.field_S, CombatState.field_r, eh.field_h, this, (byte) -84);
             }
             if (no.field_d != 0) {
-              if (!this.pointerPressed(this, no.field_d, AchievementIconEntry.field_k, param2, lc.field_c, (byte) 0, param0)) {
+              if (!this.pointerPressed(this, no.field_d, AchievementIconEntry.field_k, param2, SoundCache.field_c, (byte) 0, param0)) {
                 if (var5 != 0) {
                   this.blur(127);
                   if (var7 != 0) {
@@ -785,7 +785,7 @@ class UiWidget extends IntrusiveNode {
             if (var5 == 0) {
               boolean decompiledFrameRemainder0 = true;
               if (no.field_d != 0) {
-                if ((!this.pointerPressed(this, no.field_d, AchievementIconEntry.field_k, param2, lc.field_c, (byte) 0, param0)) &&
+                if ((!this.pointerPressed(this, no.field_d, AchievementIconEntry.field_k, param2, SoundCache.field_c, (byte) 0, param0)) &&
                   (decompiledFrameRemainder0 = (var5 != 0))) {
                   this.blur(127);
                 }
@@ -818,7 +818,7 @@ class UiWidget extends IntrusiveNode {
             this.handleWheel(param2, param0, hj.field_S, CombatState.field_r, eh.field_h, this, (byte) -84);
           }
           if (no.field_d != 0) {
-            if (this.pointerPressed(this, no.field_d, AchievementIconEntry.field_k, param2, lc.field_c, (byte) 0, param0)) {
+            if (this.pointerPressed(this, no.field_d, AchievementIconEntry.field_k, param2, SoundCache.field_c, (byte) 0, param0)) {
               param3 = false;
             } else {
               this.blur(127);
@@ -874,7 +874,7 @@ class UiWidget extends IntrusiveNode {
           if (0 != CombatState.field_r) {
             if (var5Lifetime1 == 0) {
               if (no.field_d != 0) {
-                if (this.pointerPressed(this, no.field_d, AchievementIconEntry.field_k, param2, lc.field_c, (byte) 0, param0)) {
+                if (this.pointerPressed(this, no.field_d, AchievementIconEntry.field_k, param2, SoundCache.field_c, (byte) 0, param0)) {
                   param3 = false;
                 } else {
                 }
@@ -898,7 +898,7 @@ class UiWidget extends IntrusiveNode {
           }
           regionExit1: {
             if (no.field_d != 0) {
-              if (this.pointerPressed(this, no.field_d, AchievementIconEntry.field_k, param2, lc.field_c, (byte) 0, param0)) {
+              if (this.pointerPressed(this, no.field_d, AchievementIconEntry.field_k, param2, SoundCache.field_c, (byte) 0, param0)) {
                 param3 = false;
               } else {
                 if (var5Lifetime1 != 0) {
@@ -957,7 +957,7 @@ class UiWidget extends IntrusiveNode {
           this.handleWheel(param2, param0, hj.field_S, CombatState.field_r, eh.field_h, this, (byte) -84);
         }
         if (no.field_d != 0) {
-          if (this.pointerPressed(this, no.field_d, AchievementIconEntry.field_k, param2, lc.field_c, (byte) 0, param0)) {
+          if (this.pointerPressed(this, no.field_d, AchievementIconEntry.field_k, param2, SoundCache.field_c, (byte) 0, param0)) {
             param3 = false;
           } else {
             this.blur(127);

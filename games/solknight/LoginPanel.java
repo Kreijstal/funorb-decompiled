@@ -323,7 +323,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
 
     final static void a(byte param0, int param1, int param2) {
         h.field_g = param1;
-        me.field_b = param2;
+        SoundCache.field_b = param2;
         je.field_d = 1;
         if (param0 != -14) {
           LoginPanel.clearStaticReferences((byte) -52);

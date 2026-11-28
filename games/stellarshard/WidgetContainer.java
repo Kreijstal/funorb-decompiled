@@ -1915,7 +1915,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
                 }
                 var2 = ca.a(120, "create_createanaccount");
                 if (null != var2) {
-                  gk.field_g = GuestPlayConfirmationForm.a(0, var2);
+                  SoundCache.field_g = GuestPlayConfirmationForm.a(0, var2);
                 }
                 var2 = ca.a(120, "create_username");
                 if (null != var2) {

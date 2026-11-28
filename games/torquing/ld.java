@@ -207,7 +207,7 @@ final class ld implements WidgetRenderer {
             break;
           }
           if (var7_ref != null) {
-            fi.a(var6_ref, var7_ref, -1240266932);
+            SoundCache.insertNodeAfter(var6_ref, var7_ref, -1240266932);
             if (var8 == 0) {
               return;
             }

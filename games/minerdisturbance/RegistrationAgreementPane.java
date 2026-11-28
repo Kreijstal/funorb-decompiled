@@ -183,16 +183,16 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        ri var6 = null;
+        SoundCache var6 = null;
         try {
-          ph.field_a = wh.a(param4, "", "md_title_music");
-          h.field_d = wh.a(param4, "", "md_game_music");
-          df.field_b = wh.a(param4, "", "md_volcano_music");
-          DefaultTextWidgetRenderer.field_p = wh.a(param4, "", "md_ice_music");
-          hl.field_a = wh.a(param4, "", "md_ice_panic_music");
-          DualLinkNode.field_s = wh.a(param4, "", "md_win");
-          aa.field_e = wh.a(param4, "", "md_lose");
-          var6 = new ri(param0, param1);
+          ph.field_a = MusicTrack.load(param4, "", "md_title_music");
+          h.field_d = MusicTrack.load(param4, "", "md_game_music");
+          df.field_b = MusicTrack.load(param4, "", "md_volcano_music");
+          DefaultTextWidgetRenderer.field_p = MusicTrack.load(param4, "", "md_ice_music");
+          hl.field_a = MusicTrack.load(param4, "", "md_ice_panic_music");
+          DualLinkNode.field_s = MusicTrack.load(param4, "", "md_win");
+          aa.field_e = MusicTrack.load(param4, "", "md_lose");
+          var6 = new SoundCache(param0, param1);
           km.field_a.a(false, ph.field_a, var6, 0, param2);
           if (!param3) {
             return;

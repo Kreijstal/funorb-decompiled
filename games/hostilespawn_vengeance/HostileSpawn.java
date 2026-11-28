@@ -460,7 +460,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[50] = DebouncedFieldValidator.field_j;
           ia.field_l[71] = EditableTextField.field_S;
           ia.field_l[46] = ng.field_v;
-          ia.field_l[45] = rd.field_a;
+          ia.field_l[45] = SoundCache.field_a;
           ia.field_l[101] = ProxySocketFactory.field_l;
           ia.field_l[151] = wh.field_e;
           ia.field_l[179] = DualLinkNode.field_n;
@@ -778,30 +778,30 @@ public final class HostileSpawn extends NetworkGameClient {
         try {
           gj.a(20, ac.field_e, 56.0f);
           this.renderFrame((byte) -80);
-          nd.field_e = new rd(ModalDialog.field_P, InteractiveWidget.field_F);
+          nd.field_e = new SoundCache(ModalDialog.field_P, InteractiveWidget.field_F);
           var2 = new PcmResampler(22050, AudioOutput.field_g);
-          em.field_a[10] = va.a(ModalDialog.field_P, "", "flamethrower_all").a().resample(var2);
-          em.field_a[11] = va.a(ModalDialog.field_P, "", "footstep1").a().resample(var2);
-          em.field_a[12] = va.a(ModalDialog.field_P, "", "footstep2").a().resample(var2);
-          em.field_a[19] = va.a(ModalDialog.field_P, "", "slidingdoor_close").a().resample(var2);
-          em.field_a[20] = va.a(ModalDialog.field_P, "", "slidingdoor_open").a().resample(var2);
-          em.field_a[22] = va.a(ModalDialog.field_P, "", "spawn_kill").a().resample(var2);
-          em.field_a[23] = va.a(ModalDialog.field_P, "", "spawnhurt_splat").a().resample(var2);
-          NetworkArchiveRequest.field_A[1] = va.a(ModalDialog.field_P, "", "acid_spit").a().resample(var2);
-          NetworkArchiveRequest.field_A[3] = va.a(ModalDialog.field_P, "", "menu_beep").a().resample(var2);
-          NetworkArchiveRequest.field_A[4] = va.a(ModalDialog.field_P, "", "menu_click").a().resample(var2);
-          NetworkArchiveRequest.field_A[5] = va.a(ModalDialog.field_P, "", "burning_fire_loop").a().resample(var2);
-          NetworkArchiveRequest.field_A[6] = va.a(ModalDialog.field_P, "", "queen_spawn").a().resample(var2);
-          NetworkArchiveRequest.field_A[7] = va.a(ModalDialog.field_P, "", "fast_spawn").a().resample(var2);
-          NetworkArchiveRequest.field_A[8] = va.a(ModalDialog.field_P, "", "final_explosion").a().resample(var2);
-          NetworkArchiveRequest.field_A[9] = va.a(ModalDialog.field_P, "", "baby_spawn").a().resample(var2);
-          NetworkArchiveRequest.field_A[14] = va.a(ModalDialog.field_P, "", "crate_explode").a().resample(var2);
+          em.field_a[10] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "flamethrower_all").toPcmSample().resample(var2);
+          em.field_a[11] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "footstep1").toPcmSample().resample(var2);
+          em.field_a[12] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "footstep2").toPcmSample().resample(var2);
+          em.field_a[19] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "slidingdoor_close").toPcmSample().resample(var2);
+          em.field_a[20] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "slidingdoor_open").toPcmSample().resample(var2);
+          em.field_a[22] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "spawn_kill").toPcmSample().resample(var2);
+          em.field_a[23] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "spawnhurt_splat").toPcmSample().resample(var2);
+          NetworkArchiveRequest.field_A[1] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "acid_spit").toPcmSample().resample(var2);
+          NetworkArchiveRequest.field_A[3] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "menu_beep").toPcmSample().resample(var2);
+          NetworkArchiveRequest.field_A[4] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "menu_click").toPcmSample().resample(var2);
+          NetworkArchiveRequest.field_A[5] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "burning_fire_loop").toPcmSample().resample(var2);
+          NetworkArchiveRequest.field_A[6] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "queen_spawn").toPcmSample().resample(var2);
+          NetworkArchiveRequest.field_A[7] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "fast_spawn").toPcmSample().resample(var2);
+          NetworkArchiveRequest.field_A[8] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "final_explosion").toPcmSample().resample(var2);
+          NetworkArchiveRequest.field_A[9] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "baby_spawn").toPcmSample().resample(var2);
+          NetworkArchiveRequest.field_A[14] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "crate_explode").toPcmSample().resample(var2);
           NetworkArchiveRequest.field_A[13] = em.field_a[14];
-          NetworkArchiveRequest.field_A[17] = va.a(ModalDialog.field_P, "", "explode").a().resample(var2);
-          NetworkArchiveRequest.field_A[20] = va.a(ModalDialog.field_P, "", "normal_alien_attack").a().resample(var2);
-          NetworkArchiveRequest.field_A[21] = va.a(ModalDialog.field_P, "", "lift_up").a().resample(var2);
-          NetworkArchiveRequest.field_A[22] = va.a(ModalDialog.field_P, "", "lift_down").a().resample(var2);
-          NetworkArchiveRequest.field_A[23] = va.a(ModalDialog.field_P, "", "trigger_reactor").a().resample(var2);
+          NetworkArchiveRequest.field_A[17] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "explode").toPcmSample().resample(var2);
+          NetworkArchiveRequest.field_A[20] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "normal_alien_attack").toPcmSample().resample(var2);
+          NetworkArchiveRequest.field_A[21] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "lift_up").toPcmSample().resample(var2);
+          NetworkArchiveRequest.field_A[22] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "lift_down").toPcmSample().resample(var2);
+          NetworkArchiveRequest.field_A[23] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "trigger_reactor").toPcmSample().resample(var2);
           PcmOutputWorker.field_c = new PcmSample[]{NetworkArchiveRequest.field_A[24], NetworkArchiveRequest.field_A[5]};
           var3 = 0;
           do {
@@ -809,8 +809,8 @@ public final class HostileSpawn extends NetworkGameClient {
               var3 = 0;
               break;
             }
-            TextInputField.field_V[var3 + 5] = va.a(ModalDialog.field_P, "", "HS_machine_gun_0" + (var3 + 1) + "_tail").a().resample(var2);
-            TextInputField.field_V[0 + var3] = va.a(ModalDialog.field_P, "", "HS_machine_gun_0" + (var3 + 1) + "_no_tail").a().resample(var2);
+            TextInputField.field_V[var3 + 5] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_machine_gun_0" + (var3 + 1) + "_tail").toPcmSample().resample(var2);
+            TextInputField.field_V[0 + var3] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_machine_gun_0" + (var3 + 1) + "_no_tail").toPcmSample().resample(var2);
             var3++;
           } while (var4 == 0);
           do {
@@ -818,22 +818,22 @@ public final class HostileSpawn extends NetworkGameClient {
               var3 = 0;
               break;
             }
-            TextInputField.field_V[var3 + 10] = va.a(ModalDialog.field_P, "", "HS_machine_gun_cartridge_drop_0" + (1 + var3)).a().resample(var2);
+            TextInputField.field_V[var3 + 10] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_machine_gun_cartridge_drop_0" + (1 + var3)).toPcmSample().resample(var2);
             var3++;
           } while (var4 == 0);
           do {
             if (var3 >= 3) {
-              TextInputField.field_V[15] = va.a(ModalDialog.field_P, "", "HS_pistol_equip_01").a().resample(var2);
-              TextInputField.field_V[16] = va.a(ModalDialog.field_P, "", "HS_machine_gun_equip_01").a().resample(var2);
-              TextInputField.field_V[17] = va.a(ModalDialog.field_P, "", "HS_shotgun_equip_01").a().resample(var2);
-              TextInputField.field_V[18] = va.a(ModalDialog.field_P, "", "HS_flamethrower_equip").a().resample(var2);
-              TextInputField.field_V[19] = va.a(ModalDialog.field_P, "", "HS_railgun_equip").a().resample(var2);
-              TextInputField.field_V[20] = va.a(ModalDialog.field_P, "", "HS_rocket_equip").a().resample(var2);
-              TextInputField.field_V[21] = va.a(ModalDialog.field_P, "", "HS_plasma_equip_01").a().resample(var2);
-              TextInputField.field_V[22] = va.a(ModalDialog.field_P, "", "HS_grenade_equip").a().resample(var2);
+              TextInputField.field_V[15] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_pistol_equip_01").toPcmSample().resample(var2);
+              TextInputField.field_V[16] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_machine_gun_equip_01").toPcmSample().resample(var2);
+              TextInputField.field_V[17] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_shotgun_equip_01").toPcmSample().resample(var2);
+              TextInputField.field_V[18] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_flamethrower_equip").toPcmSample().resample(var2);
+              TextInputField.field_V[19] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_railgun_equip").toPcmSample().resample(var2);
+              TextInputField.field_V[20] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_rocket_equip").toPcmSample().resample(var2);
+              TextInputField.field_V[21] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_plasma_equip_01").toPcmSample().resample(var2);
+              TextInputField.field_V[22] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_grenade_equip").toPcmSample().resample(var2);
               break;
             }
-            TextInputField.field_V[var3 + 12] = va.a(ModalDialog.field_P, "", "HS_pistol_0" + (1 + var3)).a().resample(var2);
+            TextInputField.field_V[var3 + 12] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_pistol_0" + (1 + var3)).toPcmSample().resample(var2);
             var3++;
           } while (var4 == 0);
           var3 = 0;
@@ -842,7 +842,7 @@ public final class HostileSpawn extends NetworkGameClient {
               var3 = 0;
               break;
             }
-            TextInputField.field_V[23 + var3] = va.a(ModalDialog.field_P, "", "HS_shotgun_0" + (1 + var3)).a().resample(var2);
+            TextInputField.field_V[23 + var3] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_shotgun_0" + (1 + var3)).toPcmSample().resample(var2);
             var3++;
           } while (var4 == 0);
           do {
@@ -850,22 +850,22 @@ public final class HostileSpawn extends NetworkGameClient {
               var3 = 0;
               break;
             }
-            TextInputField.field_V[var3 + 28] = va.a(ModalDialog.field_P, "", "HS_plasma_0" + (1 + var3)).a().resample(var2);
+            TextInputField.field_V[var3 + 28] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_plasma_0" + (1 + var3)).toPcmSample().resample(var2);
             var3++;
           } while (var4 == 0);
           do {
             if (4 <= var3) {
-              TextInputField.field_V[35] = va.a(ModalDialog.field_P, "", "HS_flamethrower_all").a().resample(var2);
-              TextInputField.field_V[36] = va.a(ModalDialog.field_P, "", "HS_flamethrower_end").a().resample(var2);
-              TextInputField.field_V[37] = va.a(ModalDialog.field_P, "", "HS_rocket_fire_02").a().resample(var2);
-              TextInputField.field_V[38] = va.a(ModalDialog.field_P, "", "HS_plasma_impact_01").a().resample(var2);
-              TextInputField.field_V[39] = va.a(ModalDialog.field_P, "", "HS_grenade_fire_01").a().resample(var2);
-              fg.field_b[23] = va.a(ModalDialog.field_P, "", "HS_collect_charge_01").a().resample(var2);
-              fg.field_b[25] = va.a(ModalDialog.field_P, "", "HS_force_field_01").a().resample(var2);
-              fg.field_b[26] = va.a(ModalDialog.field_P, "", "HS_rumble_bgsound").a().resample(var2);
+              TextInputField.field_V[35] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_flamethrower_all").toPcmSample().resample(var2);
+              TextInputField.field_V[36] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_flamethrower_end").toPcmSample().resample(var2);
+              TextInputField.field_V[37] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_rocket_fire_02").toPcmSample().resample(var2);
+              TextInputField.field_V[38] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_plasma_impact_01").toPcmSample().resample(var2);
+              TextInputField.field_V[39] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_grenade_fire_01").toPcmSample().resample(var2);
+              fg.field_b[23] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_collect_charge_01").toPcmSample().resample(var2);
+              fg.field_b[25] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_force_field_01").toPcmSample().resample(var2);
+              fg.field_b[26] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_rumble_bgsound").toPcmSample().resample(var2);
               break;
             }
-            TextInputField.field_V[var3 + 31] = va.a(ModalDialog.field_P, "", "HS_railgun_0" + (var3 + 1)).a().resample(var2);
+            TextInputField.field_V[var3 + 31] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_railgun_0" + (var3 + 1)).toPcmSample().resample(var2);
             var3++;
           } while (var4 == 0);
           var3 = 0;
@@ -876,8 +876,8 @@ public final class HostileSpawn extends NetworkGameClient {
               }
               break;
             }
-            TextInputField.field_V[var3 + 41] = va.a(ModalDialog.field_P, "", "HS_crag_turret_0" + (var3 + 1)).a().resample(var2);
-            TextInputField.field_V[46 + var3] = va.a(ModalDialog.field_P, "", "HS_turret_0" + (1 + var3)).a().resample(var2);
+            TextInputField.field_V[var3 + 41] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_crag_turret_0" + (var3 + 1)).toPcmSample().resample(var2);
+            TextInputField.field_V[46 + var3] = SynthesizedSoundEffect.loadByName(ModalDialog.field_P, "", "HS_turret_0" + (1 + var3)).toPcmSample().resample(var2);
             var3++;
           } while (var4 == 0);
           stackIn_57_0 = var2;
@@ -1041,17 +1041,17 @@ public final class HostileSpawn extends NetworkGameClient {
         try {
           gj.a(20, wh.field_a, 70.0f);
           this.renderFrame((byte) -124);
-          vg.field_h = ji.a(tk.field_a, "", "hostilespawntitle");
-          rb.field_s = ji.a(tk.field_a, "", "hostilespawninstructions");
-          ProgressMessageDialog.field_tb = ji.a(tk.field_a, "", "hostilespawnmissioncomplete");
-          ProgressDialog.field_ab = ji.a(tk.field_a, "", "hostilespawngameover");
-          cl.field_o = ji.a(tk.field_a, "", "Hostilespawnloop");
-          bb.field_b = ji.a(tk.field_a, "", "Hostilespawnloop_planet");
-          ArchiveProvider.field_d = ji.a(tk.field_a, "", "Hostilespawnloop_goo");
-          bb.field_e = ji.a(tk.field_a, "", "Hostilespawnthreat");
+          vg.field_h = MusicTrack.load(tk.field_a, "", "hostilespawntitle");
+          rb.field_s = MusicTrack.load(tk.field_a, "", "hostilespawninstructions");
+          ProgressMessageDialog.field_tb = MusicTrack.load(tk.field_a, "", "hostilespawnmissioncomplete");
+          ProgressDialog.field_ab = MusicTrack.load(tk.field_a, "", "hostilespawngameover");
+          cl.field_o = MusicTrack.load(tk.field_a, "", "Hostilespawnloop");
+          bb.field_b = MusicTrack.load(tk.field_a, "", "Hostilespawnloop_planet");
+          ArchiveProvider.field_d = MusicTrack.load(tk.field_a, "", "Hostilespawnloop_goo");
+          bb.field_e = MusicTrack.load(tk.field_a, "", "Hostilespawnthreat");
           int var2_int = -11 % ((57 - param0) / 52);
-          CipherPacketBuffer.field_u = ji.a(tk.field_a, "", "hostilespawnloop_vengeance");
-          PcmOutputWorker.field_f = ji.a(tk.field_a, "", "hostilespawnthreat_vengeance");
+          CipherPacketBuffer.field_u = MusicTrack.load(tk.field_a, "", "hostilespawnloop_vengeance");
+          PcmOutputWorker.field_f = MusicTrack.load(tk.field_a, "", "hostilespawnthreat_vengeance");
           InteractiveWidget.field_F = null;
           ModalDialog.field_P = null;
           tk.field_a = null;
@@ -1149,12 +1149,12 @@ public final class HostileSpawn extends NetworkGameClient {
           qm.clearDeclaredStaticReferences(-13);
           id.clearStaticReferences((byte) 21);
           ia.clearStaticReferences((byte) -8);
-          rd.clearStaticReferences(1);
+          SoundCache.clearStaticReferences(1);
           og.resetStaticState((byte) -50);
           MidiPcmStream.a(false);
           jm.a(true);
           tm.clearStaticReferences(true);
-          gh.clearStaticReferences();
+          MidiFileReader.clearStaticReferences();
           MusicPatchPcmStream.d(-1);
           AudioOutput.clearStaticReferences();
           ch.clearStaticReferences(false);
@@ -1204,7 +1204,7 @@ public final class HostileSpawn extends NetworkGameClient {
           SpriteGeometry.a(true);
           VorbisSample.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
-          ok.clearStaticReferences();
+          SynthesizerVoice.clearStaticReferences();
           aa.clearStaticReferences((byte) -104);
           wl.clearStaticReferences(110);
           eb.b(param0 + 32);
@@ -1929,10 +1929,10 @@ public final class HostileSpawn extends NetworkGameClient {
                   gj.a(20, DirectByteStorage.a(lj.field_r, DequeWidgetContainer.field_C, cl.field_h, (byte) -88), 25.0f);
                   return false;
                 }
-                gj.a(param0 ^ 16, DirectByteStorage.a(GzipDecompressor.field_i, tk.field_a, rd.field_g, (byte) 79), 20.0f);
+                gj.a(param0 ^ 16, DirectByteStorage.a(GzipDecompressor.field_i, tk.field_a, SoundCache.field_g, (byte) 79), 20.0f);
                 return false;
               }
-              gj.a(20, DirectByteStorage.a(GzipDecompressor.field_i, ej.field_h, rd.field_g, (byte) 102), 15.0f);
+              gj.a(20, DirectByteStorage.a(GzipDecompressor.field_i, ej.field_h, SoundCache.field_g, (byte) 102), 15.0f);
               return false;
             }
             gj.a(param0 ^ 16, DirectByteStorage.a(sd.field_v, InteractiveWidget.field_F, hn.field_c, (byte) 84), 10.0f);
@@ -2073,7 +2073,7 @@ public final class HostileSpawn extends NetworkGameClient {
                   }
                 }
                 ContentTransitionDialog.b(105, var3);
-                rd.a(false);
+                SoundCache.a(false);
               }
             }
           }
@@ -2420,7 +2420,7 @@ public final class HostileSpawn extends NetworkGameClient {
           r.field_e = fg.a("", "Scenery_11", DequeWidgetContainer.field_C, false);
           r.field_b = fg.a("", "Scenery_12", DequeWidgetContainer.field_C, false);
           NodeHashTableIterator.field_g = MouseInput.a("", -74, "Scenery_13", DequeWidgetContainer.field_C);
-          rd.field_a = fg.a("", "Scenery_14", DequeWidgetContainer.field_C, false);
+          SoundCache.field_a = fg.a("", "Scenery_14", DequeWidgetContainer.field_C, false);
           ng.field_v = fg.a("", "Scenery_15", DequeWidgetContainer.field_C, false);
           re.field_q = fg.a("", "Scenery_16", DequeWidgetContainer.field_C, false);
           hf.field_b = fg.a("", "Scenery_17", DequeWidgetContainer.field_C, false);

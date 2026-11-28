@@ -81,7 +81,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         }
     }
 
-    final static void a(wh param0, boolean param1, int param2, boolean param3) {
+    final static void a(MusicTrack param0, boolean param1, int param2, boolean param3) {
         Object var4 = null;
         RuntimeException var4_ref = null;
         Throwable var5 = null;

@@ -88,8 +88,8 @@ final class SectorCacheStore {
                     return false;
                   }
                   this.field_d.seek((byte) 120, (long)(6 * param2));
-                  this.field_d.readFully(ri.field_c, 0, 6, -1);
-                  var7_int = (255 & ri.field_c[5]) + (((255 & ri.field_c[4]) << 8) + (ri.field_c[3] << 16 & 16711680));
+                  this.field_d.readFully(SoundCache.field_c, 0, 6, -1);
+                  var7_int = (255 & SoundCache.field_c[5]) + (((255 & SoundCache.field_c[4]) << 8) + (SoundCache.field_c[3] << 16 & 16711680));
                   if (var7_int <= 0 ||
                     !((long)var7_int <= (this.field_b.length((byte) -96) / 520L))) {
                     return false;
@@ -100,14 +100,14 @@ final class SectorCacheStore {
                     var7_int = 1;
                   }
                 }
-                ri.field_c[2] = (byte)param0;
-                ri.field_c[4] = (byte)(var7_int >> 8);
-                ri.field_c[3] = (byte)(var7_int >> 16);
-                ri.field_c[5] = (byte)var7_int;
-                ri.field_c[1] = (byte)(param0 >> 8);
-                ri.field_c[0] = (byte)(param0 >> 16);
+                SoundCache.field_c[2] = (byte)param0;
+                SoundCache.field_c[4] = (byte)(var7_int >> 8);
+                SoundCache.field_c[3] = (byte)(var7_int >> 16);
+                SoundCache.field_c[5] = (byte)var7_int;
+                SoundCache.field_c[1] = (byte)(param0 >> 8);
+                SoundCache.field_c[0] = (byte)(param0 >> 16);
                 this.field_d.seek((byte) 116, (long)(6 * param2));
-                this.field_d.write(ri.field_c, 6, 0, true);
+                this.field_d.write(SoundCache.field_c, 6, 0, true);
                 var8 = 0;
                 if (param3 >= -35) {
                   SectorCacheStore.a((byte) -43);
@@ -121,7 +121,7 @@ final class SectorCacheStore {
                       this.field_b.seek((byte) 125, (long)(520 * var7_int));
                       if (65535 >= param2) {
                         try {
-                          this.field_b.readFully(ri.field_c, 0, 8, -1);
+                          this.field_b.readFully(SoundCache.field_c, 0, 8, -1);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -131,13 +131,13 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector0 != 0) {
                           break scanLoop1;
                         }
-                        var13 = ri.field_c[7] & 255;
-                        var12 = (65280 & ri.field_c[2] << 8) + (255 & ri.field_c[3]);
-                        var10 = (ri.field_c[4] << 16 & 16711680) - (-((255 & ri.field_c[5]) << 8) - (ri.field_c[6] & 255));
-                        var11 = (ri.field_c[1] & 255) + ((ri.field_c[0] & 255) << 8);
+                        var13 = SoundCache.field_c[7] & 255;
+                        var12 = (65280 & SoundCache.field_c[2] << 8) + (255 & SoundCache.field_c[3]);
+                        var10 = (SoundCache.field_c[4] << 16 & 16711680) - (-((255 & SoundCache.field_c[5]) << 8) - (SoundCache.field_c[6] & 255));
+                        var11 = (SoundCache.field_c[1] & 255) + ((SoundCache.field_c[0] & 255) << 8);
                       } else {
                         try {
-                          this.field_b.readFully(ri.field_c, 0, 10, -1);
+                          this.field_b.readFully(SoundCache.field_c, 0, 10, -1);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -147,10 +147,10 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector1 != 0) {
                           break scanLoop1;
                         }
-                        var11 = (ri.field_c[3] & 255) + ((ri.field_c[0] & 255) << 24) + ((ri.field_c[1] << 16 & 16711680) + ((255 & ri.field_c[2]) << 8));
-                        var12 = ((ri.field_c[4] & 255) << 8) + (255 & ri.field_c[5]);
-                        var10 = (ri.field_c[8] & 255) + (ri.field_c[6] << 16 & 16711680) + ((255 & ri.field_c[7]) << 8);
-                        var13 = 255 & ri.field_c[9];
+                        var11 = (SoundCache.field_c[3] & 255) + ((SoundCache.field_c[0] & 255) << 24) + ((SoundCache.field_c[1] << 16 & 16711680) + ((255 & SoundCache.field_c[2]) << 8));
+                        var12 = ((SoundCache.field_c[4] & 255) << 8) + (255 & SoundCache.field_c[5]);
+                        var10 = (SoundCache.field_c[8] & 255) + (SoundCache.field_c[6] << 16 & 16711680) + ((255 & SoundCache.field_c[7]) << 8);
+                        var13 = 255 & SoundCache.field_c[9];
                       }
                       if ((param2 == var11 &&
                         var12 == var9 &&
@@ -177,16 +177,16 @@ final class SectorCacheStore {
                       var10 = 0;
                     }
                     if (param2 <= 65535) {
-                      ri.field_c[0] = (byte)(param2 >> 8);
-                      ri.field_c[4] = (byte)(var10 >> 16);
-                      ri.field_c[1] = (byte)param2;
-                      ri.field_c[5] = (byte)(var10 >> 8);
-                      ri.field_c[6] = (byte)var10;
-                      ri.field_c[7] = (byte)this.field_a;
-                      ri.field_c[3] = (byte)var9;
-                      ri.field_c[2] = (byte)(var9 >> 8);
+                      SoundCache.field_c[0] = (byte)(param2 >> 8);
+                      SoundCache.field_c[4] = (byte)(var10 >> 16);
+                      SoundCache.field_c[1] = (byte)param2;
+                      SoundCache.field_c[5] = (byte)(var10 >> 8);
+                      SoundCache.field_c[6] = (byte)var10;
+                      SoundCache.field_c[7] = (byte)this.field_a;
+                      SoundCache.field_c[3] = (byte)var9;
+                      SoundCache.field_c[2] = (byte)(var9 >> 8);
                       this.field_b.seek((byte) 111, (long)(var7_int * 520));
-                      this.field_b.write(ri.field_c, 8, 0, true);
+                      this.field_b.write(SoundCache.field_c, 8, 0, true);
                       var11 = -var8 + param0;
                       if (var11 > 512) {
                         var11 = 512;
@@ -194,18 +194,18 @@ final class SectorCacheStore {
                       this.field_b.write(param4, var11, var8, true);
                       var8 = var8 + var11;
                     } else {
-                      ri.field_c[8] = (byte)var10;
-                      ri.field_c[4] = (byte)(var9 >> 8);
-                      ri.field_c[0] = (byte)(param2 >> 24);
-                      ri.field_c[3] = (byte)param2;
-                      ri.field_c[7] = (byte)(var10 >> 8);
-                      ri.field_c[9] = (byte)this.field_a;
-                      ri.field_c[5] = (byte)var9;
-                      ri.field_c[6] = (byte)(var10 >> 16);
-                      ri.field_c[1] = (byte)(param2 >> 16);
-                      ri.field_c[2] = (byte)(param2 >> 8);
+                      SoundCache.field_c[8] = (byte)var10;
+                      SoundCache.field_c[4] = (byte)(var9 >> 8);
+                      SoundCache.field_c[0] = (byte)(param2 >> 24);
+                      SoundCache.field_c[3] = (byte)param2;
+                      SoundCache.field_c[7] = (byte)(var10 >> 8);
+                      SoundCache.field_c[9] = (byte)this.field_a;
+                      SoundCache.field_c[5] = (byte)var9;
+                      SoundCache.field_c[6] = (byte)(var10 >> 16);
+                      SoundCache.field_c[1] = (byte)(param2 >> 16);
+                      SoundCache.field_c[2] = (byte)(param2 >> 8);
                       this.field_b.seek((byte) 123, (long)(520 * var7_int));
-                      this.field_b.write(ri.field_c, 10, 0, true);
+                      this.field_b.write(SoundCache.field_c, 10, 0, true);
                       var11 = -var8 + param0;
                       if (var11 > 510) {
                         var11 = 510;
@@ -279,9 +279,9 @@ final class SectorCacheStore {
                 return null;
               }
               this.field_d.seek((byte) 126, (long)(6 * param1));
-              this.field_d.readFully(ri.field_c, 0, 6, -1);
-              var4_int = (param0 & ri.field_c[2]) + ((ri.field_c[1] & 255) << 8) + ((ri.field_c[0] & 255) << 16);
-              var5 = (65280 & ri.field_c[4] << 8) + (((255 & ri.field_c[3]) << 16) + (ri.field_c[5] & 255));
+              this.field_d.readFully(SoundCache.field_c, 0, 6, -1);
+              var4_int = (param0 & SoundCache.field_c[2]) + ((SoundCache.field_c[1] & 255) << 8) + ((SoundCache.field_c[0] & 255) << 16);
+              var5 = (65280 & SoundCache.field_c[4] << 8) + (((255 & SoundCache.field_c[3]) << 16) + (SoundCache.field_c[5] & 255));
               if (var4_int < 0) {
                 return null;
               }
@@ -310,21 +310,21 @@ final class SectorCacheStore {
                     var9 = 512;
                   }
                   var14 = 8;
-                  this.field_b.readFully(ri.field_c, 0, var14 + var9, -1);
-                  var11 = ((255 & ri.field_c[2]) << 8) + (ri.field_c[3] & 255);
-                  var10 = (255 & ri.field_c[1]) + ((255 & ri.field_c[0]) << 8);
-                  var12 = (255 & ri.field_c[6]) + (16711680 & ri.field_c[4] << 16) + (ri.field_c[5] << 8 & 65280);
-                  var13 = ri.field_c[7] & 255;
+                  this.field_b.readFully(SoundCache.field_c, 0, var14 + var9, -1);
+                  var11 = ((255 & SoundCache.field_c[2]) << 8) + (SoundCache.field_c[3] & 255);
+                  var10 = (255 & SoundCache.field_c[1]) + ((255 & SoundCache.field_c[0]) << 8);
+                  var12 = (255 & SoundCache.field_c[6]) + (16711680 & SoundCache.field_c[4] << 16) + (SoundCache.field_c[5] << 8 & 65280);
+                  var13 = SoundCache.field_c[7] & 255;
                 } else {
                   if (510 < var9) {
                     var9 = 510;
                   }
                   var14 = 10;
-                  this.field_b.readFully(ri.field_c, 0, var14 + var9, param0 - 256);
-                  var12 = (ri.field_c[8] & 255) + ((ri.field_c[7] & 255) << 8) + (16711680 & ri.field_c[6] << 16);
-                  var13 = ri.field_c[9] & 255;
-                  var10 = (ri.field_c[2] << 8 & 65280) + (ri.field_c[1] << 16 & 16711680) + (((ri.field_c[0] & 255) << 24) + (255 & ri.field_c[3]));
-                  var11 = (255 & ri.field_c[5]) + (ri.field_c[4] << 8 & 65280);
+                  this.field_b.readFully(SoundCache.field_c, 0, var14 + var9, param0 - 256);
+                  var12 = (SoundCache.field_c[8] & 255) + ((SoundCache.field_c[7] & 255) << 8) + (16711680 & SoundCache.field_c[6] << 16);
+                  var13 = SoundCache.field_c[9] & 255;
+                  var10 = (SoundCache.field_c[2] << 8 & 65280) + (SoundCache.field_c[1] << 16 & 16711680) + (((SoundCache.field_c[0] & 255) << 24) + (255 & SoundCache.field_c[3]));
+                  var11 = (255 & SoundCache.field_c[5]) + (SoundCache.field_c[4] << 8 & 65280);
                 }
                 if (param1 != var10) {
                   return null;
@@ -348,7 +348,7 @@ final class SectorCacheStore {
                 for (var16 = var14; var16 < var15; var16++) {
                   incrementValue$2 = var7;
                   var7++;
-                  var6[incrementValue$2] = ri.field_c[var16];
+                  var6[incrementValue$2] = SoundCache.field_c[var16];
                 }
               }
               stackIn_48_0 = var6;

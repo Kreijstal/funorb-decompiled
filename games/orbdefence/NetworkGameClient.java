@@ -107,8 +107,8 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var4 == 1) {
             var5_int = ik.a(lm.c(32018), fb.b((byte) -128), ~param1);
             if (var5_int != -1) {
-              FullscreenNoticeType.a(-35, kk.field_Y, vd.field_e, var5_int);
-              vd.field_e = null;
+              FullscreenNoticeType.a(-35, kk.field_Y, SoundCache.field_e, var5_int);
+              SoundCache.field_e = null;
               kk.field_Y = null;
             }
             var11 = k.b((byte) 126);
@@ -119,9 +119,9 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var4 == 2) {
             var5_intLifetime1 = kg.a(am.b(-28), uh.b(param1 ^ -5), this.field_o, na.a((byte) -105), KeyboardListener.a(-42), 200, jf.j(989270945));
             if (-1 != var5_intLifetime1) {
-              fa.a(-111, var5_intLifetime1, vd.field_e, kk.field_Y);
+              fa.a(-111, var5_intLifetime1, SoundCache.field_e, kk.field_Y);
               kk.field_Y = null;
-              vd.field_e = null;
+              SoundCache.field_e = null;
             }
           }
           if (param1 != -1) {
@@ -576,7 +576,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               if (lf.field_a.tryLoadGroupByName((byte) -61, "")) {
                 lm.a((byte) 116, lf.field_a);
                 lf.field_a = null;
-                vd.a(42);
+                SoundCache.resetFrameTiming(42);
               }
             }
           }
@@ -612,7 +612,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           DebouncedFieldValidator.field_b = null;
           am.field_b = null;
           UiWidget.a(127, (java.applet.Applet) (this));
-          vd.a(99);
+          SoundCache.resetFrameTiming(99);
           vh.field_n = 10;
         }
         if (vh.field_n == 10) {

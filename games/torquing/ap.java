@@ -192,12 +192,12 @@ final class ap {
         param1 = b.e(2048, param1, -25034);
         param2 = b.e(2048, param2, -25034);
         param3 = b.e(2048, param3, -25034);
-        int var4 = be.field_l[param1];
-        int var5 = be.field_o[param1];
-        int var6 = be.field_l[param2];
-        int var7 = be.field_o[param2];
-        int var8 = be.field_l[param3];
-        int var9 = be.field_o[param3];
+        int var4 = TriangleRasterizer.field_l[param1];
+        int var5 = TriangleRasterizer.field_o[param1];
+        int var6 = TriangleRasterizer.field_l[param2];
+        int var7 = TriangleRasterizer.field_o[param2];
+        int var8 = TriangleRasterizer.field_l[param3];
+        int var9 = TriangleRasterizer.field_o[param3];
         ap.a(param0, 3, 65536, 0, 0, param1, param2, param3, var4, var5, var6, var7, var8, var9);
         ap.a(param0, 6, 0, 65536, 0, param1, param2, param3, var4, var5, var6, var7, var8, var9);
         ap.a(param0, 9, 0, 0, 65536, param1, param2, param3, var4, var5, var6, var7, var8, var9);

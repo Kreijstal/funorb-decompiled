@@ -39,7 +39,7 @@ final class pa extends tf {
     int[] field_G;
 
     final bj a(int param0, int param1, int param2, int param3, int param4) {
-        return (bj) ((Object) new sc(this, param0, param1, param2, param3, param4));
+        return (bj) ((Object) new SoftwareModelMesh(this, param0, param1, param2, param3, param4));
     }
 
     private final void a(byte[] param0) {

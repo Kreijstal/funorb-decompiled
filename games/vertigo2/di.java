@@ -30,8 +30,8 @@ final class di extends TextureOperator {
           if (!param1) {
             field_y = (String) null;
           }
-          var3 = id.a(param0, -31980) ? 1 : 0;
-          var4 = id.a(param0, -31980) ? 1 : 0;
+          var3 = SoundCache.readBitFlag(param0, -31980) ? 1 : 0;
+          var4 = SoundCache.readBitFlag(param0, -31980) ? 1 : 0;
           var5 = new jp();
           var5.field_F = (short)param0.readBits((byte) -96, 16);
           var5.field_I = AccountRequestState.a(param0, -126, 16, var5.field_I);
@@ -58,10 +58,10 @@ final class di extends TextureOperator {
             var5.field_q = AccountRequestState.a(param0, -26, 16, var5.field_q);
             var5.field_e = AccountRequestState.a(param0, -122, 16, var5.field_e);
           }
-          if (id.a(param0, -31980)) {
+          if (SoundCache.readBitFlag(param0, -31980)) {
             var5.field_J = AccountRequestState.a(param0, -42, 16, var5.field_J);
           }
-          if (id.a(param0, -31980)) {
+          if (SoundCache.readBitFlag(param0, -31980)) {
             var5.field_x = AccountCreationResultPanel.a(12635, var5.field_x, 16, param0);
             var6 = 0;
             for (var7 = 0; var5.field_x.length > var7; var7++) {

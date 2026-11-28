@@ -299,14 +299,14 @@ final class sc {
           field_e = null;
           return;
         }
-        ok var2 = (ok) null;
-        sc.a(-96, false, (ok) null);
+        MusicTrack var2 = (MusicTrack) null;
+        sc.a(-96, false, (MusicTrack) null);
         field_b = null;
         field_a = null;
         field_e = null;
     }
 
-    final static void a(int param0, boolean param1, ok param2) {
+    final static void a(int param0, boolean param1, MusicTrack param2) {
         if (param2 == null ||
           param2 == hj.field_g) {
           return;

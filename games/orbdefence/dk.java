@@ -34,7 +34,7 @@ final class dk {
         vh.field_j = true;
         IntrusiveNode.field_b = true;
         bm.field_d.closeAllDialogs(7920);
-        vd.a(false, -536866817, TextFieldValidator.field_f);
+        SoundCache.a(false, -536866817, TextFieldValidator.field_f);
     }
 
     public static void resetStaticState(int param0) {

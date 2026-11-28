@@ -27,7 +27,7 @@ final class id implements Serializable {
     static RgbSprite[] field_p;
     int[] field_f;
     int[] field_o;
-    static ji field_t;
+    static MusicTrack field_t;
     static String field_l;
     boolean[] field_B;
     static RgbSprite field_w;

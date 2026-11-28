@@ -161,14 +161,14 @@ final class ar {
         WidgetWrapper.field_F = false;
         if (param0 != 115) {
           this.field_k = -0.6264674663543701f;
-          var2 = id.a(0, 0, (byte) 94, this.field_g, gi.field_s, this.field_o);
+          var2 = SoundCache.createFullscreenFocusCanvas(0, 0, (byte) 94, this.field_g, gi.field_s, this.field_o);
           if (var2 == null) {
             this.b((byte) 118);
             return var2;
           }
           return var2;
         }
-        var2Lifetime1 = id.a(0, 0, (byte) 94, this.field_g, gi.field_s, this.field_o);
+        var2Lifetime1 = SoundCache.createFullscreenFocusCanvas(0, 0, (byte) 94, this.field_g, gi.field_s, this.field_o);
         if (var2Lifetime1 != null) {
           return var2Lifetime1;
         }

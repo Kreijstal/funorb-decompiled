@@ -64,7 +64,7 @@ final class vf extends IntrusiveNode {
         RgbSprite var2 = new RgbSprite(param1.getFileByName((byte) 127, "", "final_frame.jpg"), (java.awt.Component) ((Object) ug.field_y));
         int var3 = var2.field_p;
         int var4 = var2.field_u;
-        ja.b((byte) -126);
+        SoundCache.pushRasterState((byte) -126);
         nc.field_n = new RgbSprite(var3, var4 * 3 / 4);
         if (param0) {
           return;

@@ -217,12 +217,12 @@ final class ChangeCreatureStatOrHealthEffect extends EventEffect {
           var15[8] = 7368816;
           var16 = new Sprite[9];
           var16[4] = var12;
-          i.field_a = new UiComponent(0L, param10);
+          SoundCache.field_a = new UiComponent(0L, param10);
           DefaultWidgetRenderer.field_d = new UiComponent(0L, param7);
           if (param9 != -30803) {
             field_k = (UiComponent) null;
           }
-          i.field_a.a(-1, DefaultWidgetRenderer.field_d);
+          SoundCache.field_a.a(-1, DefaultWidgetRenderer.field_d);
           var17 = new UiComponent(0L, (UiComponent) null);
           var17.children = new IntrusiveDeque();
           AccountRequestState.field_b = new sga(0L, var17, param5, param2);
@@ -275,7 +275,7 @@ final class ChangeCreatureStatOrHealthEffect extends EventEffect {
                 r.field_l[var18].a(-1, PasswordValidator.field_i[var18]);
                 r.field_l[var18].a(-1, bda.field_m[var18]);
                 r.field_l[var18].d((byte) 126);
-                i.field_a.a(param9 ^ 30802, r.field_l[var18]);
+                SoundCache.field_a.a(param9 ^ 30802, r.field_l[var18]);
                 ArchiveIndex.field_k = ArchiveIndex.field_k + 1;
               }
               var18++;
@@ -286,7 +286,7 @@ final class ChangeCreatureStatOrHealthEffect extends EventEffect {
           if (decompiledNaturalLoopExit0) {
             FullscreenFocusCanvas.field_a = new UiComponent(0L, param1);
             FullscreenFocusCanvas.field_a.field_Z = sv.field_b;
-            i.field_a.a(-1, FullscreenFocusCanvas.field_a);
+            SoundCache.field_a.a(-1, FullscreenFocusCanvas.field_a);
             stackIn_31_0 = cia.a(0) ? 1 : 0;
           }
           if (stackIn_31_0 != 0 &&

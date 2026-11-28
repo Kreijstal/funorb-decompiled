@@ -524,12 +524,12 @@ class ok extends ko {
         if (!ti.field_i &&
           param4 &&
           no.field_d != 0 &&
-          SoftwareRasterizer.field_j <= lc.field_c &&
-          lc.field_c < SoftwareRasterizer.field_h &&
+          SoftwareRasterizer.field_j <= SoundCache.field_c &&
+          SoundCache.field_c < SoftwareRasterizer.field_h &&
           AchievementIconEntry.field_k >= SoftwareRasterizer.field_f &&
           SoftwareRasterizer.field_e > AchievementIconEntry.field_k) {
           var12 = 1;
-          this.field_db = lc.field_c - this.field_zb;
+          this.field_db = SoundCache.field_c - this.field_zb;
           this.field_I = no.field_d;
           this.field_G = no.field_d;
           this.field_N = -this.field_ub + AchievementIconEntry.field_k;

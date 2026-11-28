@@ -103,8 +103,8 @@ final class ia extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
-        pl var2 = null;
-        pl var3 = null;
+        MusicTrack var2 = null;
+        MusicTrack var3 = null;
         int var4 = 0;
         LetterTile var4_ref_sj = null;
         TileRack var4_ref_j = null;

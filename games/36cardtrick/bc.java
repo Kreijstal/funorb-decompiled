@@ -6,7 +6,7 @@ final class bc {
     static String field_b;
 
     final static void a(int param0) {
-        da.field_b = false;
+        SoundCache.field_b = false;
         if (param0 != -464379825) {
           field_a = 5;
         }

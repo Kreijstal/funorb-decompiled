@@ -68,7 +68,7 @@ final class ik extends AcceleratingProjectile {
             return stackIn_5_0;
           }
           if (var2_int > 63) {
-            stackIn_8_0 = m.field_g;
+            stackIn_8_0 = SoundCache.field_g;
             return stackIn_8_0;
           }
           for (var3 = 0; var2_int > var3; var3++) {

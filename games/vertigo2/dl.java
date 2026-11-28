@@ -133,8 +133,8 @@ final class dl {
           if (!c.a(1, (byte) -104)) {
             return false;
           }
-          ca.field_b = id.field_f.readUnsignedByte(-11);
-          id.field_f.position = 0;
+          ca.field_b = SoundCache.field_f.readUnsignedByte(-11);
+          SoundCache.field_f.position = 0;
         }
         if (ca.field_b != -2) {
           var1 = -112 % ((param0 - 11) / 52);
@@ -143,8 +143,8 @@ final class dl {
         if (!c.a(2, (byte) -104)) {
           return false;
         }
-        ca.field_b = id.field_f.readUnsignedShort((byte) -11);
-        id.field_f.position = 0;
+        ca.field_b = SoundCache.field_f.readUnsignedShort((byte) -11);
+        SoundCache.field_f.position = 0;
         var1Lifetime1 = -112 % ((param0 - 11) / 52);
         return c.a(ca.field_b, (byte) -104);
     }

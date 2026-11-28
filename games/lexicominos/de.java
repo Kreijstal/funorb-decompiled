@@ -11,7 +11,7 @@ final class de extends RuntimeException {
           if (param1 != 6) {
             field_b = (PcmStreamMixer) null;
           }
-          ja.b((byte) -111);
+          SoundCache.pushRasterState((byte) -111);
           SoftwareRasterizer.setRasterBuffer(param0.field_y, param0.field_r, param0.field_x);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "de.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

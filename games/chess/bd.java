@@ -4,7 +4,7 @@
 final class bd {
     static String[] field_e;
     static String field_c;
-    static dd field_b;
+    static SoftwareModelMesh field_b;
     static cf field_a;
     static int field_d;
     private static String field_z;
@@ -14,7 +14,7 @@ final class bd {
         field_e = null;
         field_c = null;
         if (param0 >= -2) {
-          field_b = (dd) null;
+          field_b = (SoftwareModelMesh) null;
           field_b = null;
           return;
         }

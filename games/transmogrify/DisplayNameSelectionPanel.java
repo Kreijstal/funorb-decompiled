@@ -114,7 +114,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
             discarded$1 = this.a(21, 119, (String) null, (UiWidget) null, (String) null, (byte) 74);
           }
           if (param0 == this.field_w) {
-            bl.a(param1 + 841);
+            SoundCache.a(param1 + 841);
             return;
           }
           if (this.field_x != param0) {

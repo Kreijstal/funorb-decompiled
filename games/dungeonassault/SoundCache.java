@@ -1,0 +1,606 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class SoundCache {
+    static String[] field_k;
+    static String field_g;
+    private ResourceArchive field_i;
+    static int field_j;
+    static int field_d;
+    static int field_c;
+    static int[] field_h;
+    static float field_e;
+    private wa field_a;
+    private ResourceArchive field_b;
+    private wa field_f;
+
+    private final PcmSample loadSoundEffect(int[] param0, int param1, int param2, int param3) {
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        long var6 = 0L;
+        PcmSample var8 = null;
+        SynthesizedSoundEffect var9 = null;
+        int[] var10 = null;
+        PcmSample var11 = null;
+        PcmSample stackIn_4_0 = null;
+        Object stackIn_8_0 = null;
+        PcmSample stackIn_15_0 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        PcmSample var8Lifetime1;
+        try {
+          var5_int = ((-1073737729 & param2) << 4 | param2 >>> 12) ^ param3;
+          var5_int = var5_int | param2 << 16;
+          var6 = (long)var5_int;
+          if (param1 >= -8) {
+            var10 = (int[]) null;
+            this.loadMusicSampleById((int[]) null, (byte) -121, -3);
+          }
+          var8 = (PcmSample) (this.field_f.a(var6, 8));
+          if (var8 != null) {
+            stackIn_4_0 = var8;
+            return stackIn_4_0;
+          }
+          if (param0 != null &&
+            0 >= param0[0]) {
+            stackIn_8_0 = null;
+            return (PcmSample) (stackIn_8_0);
+          }
+          var9 = SynthesizedSoundEffect.load(this.field_i, param2, param3);
+          if (var9 == null) {
+            return null;
+          }
+          var11 = var9.toPcmSample();
+          var8Lifetime1 = var11;
+          this.field_f.a(var8Lifetime1, 12460, var6);
+          if (param0 != null) {
+            param0[0] = param0[0] - var11.data.length;
+          }
+          stackIn_15_0 = var8Lifetime1;
+          return stackIn_15_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_18_0 = var5;
+          stackIn_18_1 = new StringBuilder().append("lc.I(");
+          if (param0 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
+          }
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final PcmSample getMusicSampleByName(String param0, byte param1, String param2) {
+        RuntimeException var4 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 > 101) {
+            stackIn_4_0 = this.loadMusicSampleByName((int[]) null, param2, 48117, param0);
+            return stackIn_4_0;
+          }
+          stackIn_2_0 = (PcmSample) null;
+          return stackIn_2_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_7_0 = var4;
+          stackIn_7_1 = new StringBuilder().append("lc.F(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+        }
+    }
+
+    final PcmSample getSoundEffectByName(String param0, String param1, int param2) {
+        RuntimeException var4 = null;
+        PcmSample stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param2 != 37316) {
+            field_g = (String) null;
+          }
+          stackIn_3_0 = this.loadSoundEffectByName(param1, (int[]) null, (byte) 118, param0);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_6_0 = var4;
+          stackIn_6_1 = new StringBuilder().append("lc.J(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    final PcmSample loadSoundEffectById(int[] param0, int param1, int param2) {
+        RuntimeException var4 = null;
+        PcmSample stackIn_3_0 = null;
+        PcmSample stackIn_6_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (1 == this.field_i.getGroupCapacity(true)) {
+            stackIn_3_0 = this.loadSoundEffect(param0, -15, 0, param1);
+            return stackIn_3_0;
+          }
+          if (1 != this.field_i.getFileCapacity(param1, param2 ^ param2)) {
+            throw new RuntimeException();
+          }
+          stackIn_6_0 = this.loadSoundEffect(param0, param2 ^ 31216, param1, 0);
+          return stackIn_6_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_10_0 = var4;
+          stackIn_10_1 = new StringBuilder().append("lc.E(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    final PcmSample loadMusicSampleById(int[] param0, byte param1, int param2) {
+        RuntimeException var4 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_7_0 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (this.field_b.getGroupCapacity(true) == 1) {
+            stackIn_2_0 = this.loadMusicSample(-126, param2, 0, param0);
+            return stackIn_2_0;
+          }
+          if (param1 >= -61) {
+            this.field_f = (wa) null;
+          }
+          if (this.field_b.getFileCapacity(param2, 0) != 1) {
+            throw new RuntimeException();
+          }
+          stackIn_7_0 = this.loadMusicSample(-123, 0, param2, param0);
+          return stackIn_7_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_11_0 = var4;
+          stackIn_11_1 = new StringBuilder().append("lc.B(");
+          if (param0 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    final static int findAchievementIconAt(int param0, byte param1, int param2) {
+        int var3_int = 0;
+        AchievementIconEntry var3 = null;
+        RuntimeException var3_ref = null;
+        int var4 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_17_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int var3_intLifetime1;
+        var4 = DungeonAssault.field_K;
+        try {
+          if (nj.field_f != null &&
+            94 < param0 &&
+            546 > param0 &&
+            param2 >= 90) {
+            if (param2 > 184) {
+              var3_int = 65 % ((47 - param1) / 58);
+              return -1;
+            }
+            param0 = param0 + (ig.b(31131) - 94);
+            var3 = (AchievementIconEntry) (nj.field_f.beginBackward(-24172));
+            while (var3 != null) {
+              if (var3.field_o <= param0 &&
+                32 + var3.field_o >= param0 &&
+                param2 >= var3.field_p &&
+                param2 <= 32 + var3.field_p) {
+                stackIn_14_0 = var3.field_i;
+                return stackIn_14_0;
+              }
+              var3 = (AchievementIconEntry) (nj.field_f.nextBackward(4));
+            }
+          }
+          var3_intLifetime1 = 65 % ((47 - param1) / 58);
+          stackIn_17_0 = -1;
+          return stackIn_17_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var3_ref), "lc.G(" + param0 + ',' + param1 + ',' + param2 + ')');
+        }
+    }
+
+    final static byte[] decompressArchiveContainer(byte[] param0, int param1) {
+        byte[] stackIn_9_0 = null;
+        byte[] stackIn_23_0 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_27_2 = null;
+        Throwable decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        byte[] var5_ref_byte__ = null;
+        byte[] var6 = null;
+        Object var7 = null;
+        PacketBuffer var9 = null;
+        byte[] var10 = null;
+        byte[] var11 = null;
+        byte[] var12 = null;
+        byte[] var13 = null;
+        try {
+          var9 = new PacketBuffer(param0);
+          var3 = var9.readUnsignedByte(true);
+          var4 = var9.readInt(-116);
+          if (param1 != 50166) {
+            field_h = (int[]) null;
+          }
+          if (var4 >= 0 && (DelegatingCanvas.field_j == 0 ||
+            !(var4 > DelegatingCanvas.field_j))) {
+            if (var3 == 0) {
+              var12 = new byte[var4];
+              var10 = var12;
+              var5_ref_byte__ = var10;
+              var9.readBytes((byte) -95, 0, var4, var12);
+              stackIn_9_0 = var5_ref_byte__;
+              return stackIn_9_0;
+            }
+            var5 = var9.readInt(-69);
+            if (var5 >= 0 && (DelegatingCanvas.field_j == 0 ||
+              !(DelegatingCanvas.field_j < var5))) {
+              var13 = new byte[var5];
+              var11 = var13;
+              var6 = var11;
+              if (1 == var3) {
+                Bzip2Decompressor.decompress(var13, var5, param0, var4, 9);
+              } else {
+                var7 = FullscreenFocusCanvas.field_f;
+                synchronized (var7) {
+                  FullscreenFocusCanvas.field_f.decompress(-109, var13, var9);
+                }
+              }
+              stackIn_23_0 = var6;
+              return stackIn_23_0;
+            }
+            throw new RuntimeException();
+          }
+          throw new RuntimeException();
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_26_0 = var2;
+          stackIn_26_1 = new StringBuilder().append("lc.H(");
+          if (param0 == null) {
+            stackIn_27_2 = "null";
+          } else {
+            stackIn_27_2 = "{...}";
+          }
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final static RgbSprite resizeSprite(int param0, RgbSprite param1, int param2, int param3) {
+        RgbSprite var5 = null;
+        RgbSprite stackIn_11_0 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var4 = null;
+        try {
+          if (param1 == null) {
+            return null;
+          }
+          var5 = new RgbSprite(param2, param3);
+          if (param0 > -114) {
+            SoundCache.clearStaticReferences(true);
+          }
+          jh.a(var5);
+          if (param2 < param1.field_y &&
+            param1.field_v > param3) {
+            param1.drawDownscaledAreaBlended(0, 0, param2, param3);
+          } else {
+            param1.drawRotated(param2 >> 1, param3 >> 1, 0, (param2 << 12) / param1.field_y);
+          }
+          jh.b();
+          stackIn_11_0 = var5;
+          return stackIn_11_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_14_0 = var4;
+          stackIn_14_1 = new StringBuilder().append("lc.L(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final static gn[] a(int param0, String[][] param1) {
+        int var4 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        gn[] var3 = null;
+        int var5 = 0;
+        gn[] stackIn_7_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var5 = DungeonAssault.field_K;
+        try {
+          var2_int = param1.length;
+          var3 = new gn[var2_int];
+          for (var4 = 0; var2_int > var4; var4++) {
+            var3[var4] = new gn(param1[var4][0], param1[var4][1]);
+          }
+          if (param0 != -27711) {
+            field_h = (int[]) null;
+          }
+          stackIn_7_0 = var3;
+          return stackIn_7_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_10_0 = var2;
+          stackIn_10_1 = new StringBuilder().append("lc.K(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+        }
+    }
+
+    public static void clearStaticReferences(boolean param0) {
+        if (param0) {
+          field_h = null;
+          field_k = null;
+          field_g = null;
+          return;
+        }
+        field_h = (int[]) null;
+        field_h = null;
+        field_k = null;
+        field_g = null;
+    }
+
+    private final PcmSample loadMusicSample(int param0, int param1, int param2, int[] param3) {
+        PcmSample stackIn_3_0 = null;
+        Object stackIn_13_0 = null;
+        PcmSample stackIn_19_0 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_23_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        long var6 = 0L;
+        PcmSample var8 = null;
+        VorbisSample var9 = null;
+        PcmSample var8Lifetime1;
+        try {
+          var5_int = param1 ^ (param2 >>> 12 | (param2 & -268431361) << 4);
+          var5_int = var5_int | param2 << 16;
+          var6 = 4294967296L ^ (long)var5_int;
+          var8 = (PcmSample) (this.field_f.a(var6, 8));
+          if (var8 != null) {
+            stackIn_3_0 = var8;
+            return stackIn_3_0;
+          }
+          if (param3 != null &&
+            param3[0] <= 0) {
+            return null;
+          }
+          var9 = (VorbisSample) (this.field_a.a(var6, 8));
+          if (param0 >= -101) {
+            field_g = (String) null;
+          }
+          if (var9 == null) {
+            var9 = VorbisSample.load(this.field_b, param2, param1);
+            if (var9 == null) {
+              stackIn_13_0 = null;
+              return (PcmSample) (stackIn_13_0);
+            }
+            this.field_a.a(var9, 12460, var6);
+          }
+          var8Lifetime1 = var9.decodeToPcm(param3);
+          if (var8Lifetime1 == null) {
+            return null;
+          }
+          var9.unlink(false);
+          this.field_f.a(var8Lifetime1, 12460, var6);
+          stackIn_19_0 = var8Lifetime1;
+          return stackIn_19_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_22_0 = var5;
+          stackIn_22_1 = new StringBuilder().append("lc.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_23_2 = "null";
+          } else {
+            stackIn_23_2 = "{...}";
+          }
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+        }
+    }
+
+    private final PcmSample loadSoundEffectByName(String param0, int[] param1, byte param2, String param3) {
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int[] var7 = null;
+        Object stackIn_7_0 = null;
+        PcmSample stackIn_9_0 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_16_2 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var5_int = this.field_i.getGroupIdByName(param0, 1000);
+          if (var5_int < 0) {
+            return null;
+          }
+          var6 = this.field_i.getFileIdByName(0, param3, var5_int);
+          if (param2 < 85) {
+            var7 = (int[]) null;
+            this.loadMusicSampleById((int[]) null, (byte) 102, -108);
+          }
+          if (var6 >= 0) {
+            stackIn_9_0 = this.loadSoundEffect(param1, -100, var5_int, var6);
+            return stackIn_9_0;
+          }
+          stackIn_7_0 = null;
+          return (PcmSample) (stackIn_7_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_12_0 = var5;
+          stackIn_12_1 = new StringBuilder().append("lc.A(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
+          if (param1 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
+          }
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+        }
+    }
+
+    private final PcmSample loadMusicSampleByName(int[] param0, String param1, int param2, String param3) {
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        PcmSample stackIn_9_0 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_16_2 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var5_int = this.field_b.getGroupIdByName(param1, param2 ^ 47133);
+          if (var5_int < 0) {
+            return null;
+          }
+          if (param2 != 48117) {
+            field_k = (String[]) null;
+          }
+          var6 = this.field_b.getFileIdByName(0, param3, var5_int);
+          if (0 > var6) {
+            return null;
+          }
+          stackIn_9_0 = this.loadMusicSample(-107, var6, var5_int, param0);
+          return stackIn_9_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_12_0 = var5;
+          stackIn_12_1 = new StringBuilder().append("lc.D(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
+          if (param1 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
+          }
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+        }
+    }
+
+    SoundCache(ResourceArchive param0, ResourceArchive param1) {
+        this.field_a = new wa(256);
+        this.field_f = new wa(256);
+        try {
+          this.field_i = param0;
+          this.field_b = param1;
+        } catch (RuntimeException runtimeException) {
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "lc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_k = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
+        field_h = new int[]{0, 4096, 5793, 7094, 8192, 9159, 10033, 10837, 11585, 12288, 12953, 13585, 14189, 14768, 15326, 15864, 16384, 16888, 17378, 17854, 18318, 18770, 19212, 19644, 20066, 20480, 20886, 21283, 21674, 22058, 22435, 22806, 23170, 23530, 23884, 24232, 24576, 24915, 25249, 25580, 25905, 26227, 26545, 26859, 27170, 27477, 27780, 28081, 28378, 28672, 28963, 29251, 29537, 29819, 30099, 30377, 30652, 30924, 31194, 31462, 31727, 31991, 32252, 32511, 32768, 33023, 33276, 33527, 33776, 34024, 34270, 34514, 34756, 34996, 35235, 35472, 35708, 35942, 36175, 36406, 36636, 36864, 37091, 37316, 37540, 37763, 37985, 38205, 38424, 38642, 38858, 39073, 39287, 39500, 39712, 39923, 40132, 40341, 40548, 40755, 40960, 41164, 41368, 41570, 41771, 41972, 42171, 42369, 42567, 42763, 42959, 43154, 43348, 43541, 43733, 43925, 44115, 44305, 44494, 44682, 44869, 45056, 45242, 45427, 45611, 45795, 45977, 46160, 46341, 46522, 46702, 46881, 47059, 47237, 47415, 47591, 47767, 47942, 48117, 48291, 48465, 48637, 48809, 48981, 49152, 49322, 49492, 49661, 49830, 49998, 50166, 50332, 50499, 50665, 50830, 50995, 51159, 51323, 51486, 51649, 51811, 51972, 52134, 52294, 52454, 52614, 52773, 52932, 53090, 53248, 53405, 53562, 53719, 53874, 54030, 54185, 54340, 54494, 54647, 54801, 54954, 55106, 55258, 55410, 55561, 55712, 55862, 56012, 56162, 56311, 56459, 56608, 56756, 56903, 57051, 57198, 57344, 57490, 57636, 57781, 57926, 58071, 58215, 58359, 58503, 58646, 58789, 58931, 59073, 59215, 59357, 59498, 59639, 59779, 59919, 60059, 60199, 60338, 60477, 60615, 60753, 60891, 61029, 61166, 61303, 61440, 61576, 61712, 61848, 61984, 62119, 62254, 62388, 62523, 62657, 62790, 62924, 63057, 63190, 63323, 63455, 63587, 63719, 63850, 63982, 64113, 64243, 64374, 64504, 64634, 64763, 64893, 65022, 65151, 65279, 65408};
+        field_c = 0;
+        field_g = "Active ability - <%0>";
+    }
+}

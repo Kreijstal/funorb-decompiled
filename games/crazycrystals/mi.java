@@ -610,7 +610,7 @@ final class mi extends ea implements Cloneable {
               stackIn_19_0 = (PuzzleTile) null;
               return stackIn_19_0;
             }
-            bn.field_h.a(192, this.field_o * this.field_m + 12 * param4, 12 * param1 + this.field_s * this.field_m, 0, (byte) -111);
+            SoundCache.field_h.a(192, this.field_o * this.field_m + 12 * param4, 12 * param1 + this.field_s * this.field_m, 0, (byte) -111);
             if ((this.field_s | this.field_o) == 0) {
               stackIn_29_0 = new ji(this.field_l, 0, 0);
               return (PuzzleTile) ((Object) stackIn_29_0);

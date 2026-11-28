@@ -193,7 +193,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
           stackIn_5_0 = fg.field_d.field_Kb;
           stackIn_6_1 = (fg.field_d.field_Kb == ud.field_d);
-          var3_int = ((nb) (Object) stackIn_5_0).a(stackIn_6_1, param1, 2, param2 * (6 + 3 * fe.field_g), 2 + fe.field_g, param0 ^ 68) ? 1 : 0;
+          var3_int = ((nb) (Object) stackIn_5_0).a(stackIn_6_1, param1, 2, param2 * (6 + 3 * SoundCache.field_g), 2 + SoundCache.field_g, param0 ^ 68) ? 1 : 0;
           var4 = fg.field_d.field_Fb.field_I;
           if (2 != ld.field_g &&
             ld.field_g != 1) {
@@ -217,14 +217,14 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var6.h(0);
             }
             var6.field_M = fg.field_d.field_Fb.field_M;
-            var6.field_Mb.a(0, var6.field_M, -2147483648, fe.field_g, 0);
+            var6.field_Mb.a(0, var6.field_M, -2147483648, SoundCache.field_g, 0);
             var8 = 0;
             if (null != var6.field_Ob &&
               !var6.field_Ob.equals("")) {
               var6.field_Eb.field_jb = wk.field_g;
               var6.field_Eb.field_O = 16737894;
               var8 = 1;
-              var6.field_Eb.a(0, 3 + wk.field_g.field_v, -2147483648, fe.field_g, 0);
+              var6.field_Eb.a(0, 3 + wk.field_g.field_v, -2147483648, SoundCache.field_g, 0);
             }
             var9 = 0;
             var10 = var6.field_M;
@@ -241,9 +241,9 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
             stackIn_22_0.field_db = stackIn_23_1;
             stackIn_26_0 = (var6.field_Mb.field_db.equals(var6.field_Fb)) ? 0 : 1;
             var11 = stackIn_26_0;
-            var6.field_Mb.a(var9, var10, -2147483648, fe.field_g, 0);
+            var6.field_Mb.a(var9, var10, -2147483648, SoundCache.field_g, 0);
             if (var3_int == 0) {
-              var6.field_N = -var6.field_pb + fe.field_g;
+              var6.field_N = -var6.field_pb + SoundCache.field_g;
             }
             if (var7 != 0) {
               fg.field_d.field_Fb.a(true, (ci) (var5), 2, var6);

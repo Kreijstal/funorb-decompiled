@@ -328,21 +328,21 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         }
     }
 
-    final static rm a(boolean param0, String param1, byte param2) {
+    final static MusicTrack a(boolean param0, String param1, byte param2) {
         long var3_long = 0L;
         RuntimeException var3 = null;
-        rm var5 = null;
+        MusicTrack var5 = null;
         int var6 = 0;
         CharSequence var7 = null;
         Object stackIn_4_0 = null;
         Object stackIn_6_0 = null;
         MidiPcmStream stackIn_9_0;
         ResourceArchive stackIn_9_1;
-        bn stackIn_9_2;
-        rm stackIn_9_3;
+        SoundCache stackIn_9_2;
+        MusicTrack stackIn_9_3;
         int stackIn_9_4;
         int stackIn_10_5 = 0;
-        rm stackIn_15_0 = null;
+        MusicTrack stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -350,18 +350,18 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         try {
           var7 = (CharSequence) ((Object) param1);
           var3_long = DualLinkNode.a(true, var7);
-          var5 = (rm) (ra.field_d.a(var3_long, 0));
+          var5 = (MusicTrack) (ra.field_d.a(var3_long, 0));
           if (var5 == null) {
-            var5 = (rm) (ah.field_a.a(var3_long, 0));
+            var5 = (MusicTrack) (ah.field_a.a(var3_long, 0));
             if (var5 == null) {
-              var5 = rm.a(mg.field_c, param1, "");
+              var5 = MusicTrack.load(mg.field_c, param1, "");
               if (var5 == null) {
                 stackIn_4_0 = null;
-                return (rm) (stackIn_4_0);
+                return (MusicTrack) (stackIn_4_0);
               }
               ah.field_a.a(-22072, var3_long, var5);
               stackIn_6_0 = null;
-              return (rm) (stackIn_6_0);
+              return (MusicTrack) (stackIn_6_0);
             }
             stackIn_9_0 = fq.field_x;
             stackIn_9_1 = rl.field_i;

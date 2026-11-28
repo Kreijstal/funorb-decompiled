@@ -505,7 +505,7 @@ final class MoveInfoPanel {
                   50 < var8.field_vb) {
                   var28 = al.a(117, var8.field_zb);
                   var12 = 620;
-                  var13 = i.field_a.field_rb;
+                  var13 = SoundCache.field_a.field_rb;
                   var14_int = 4 + mk.field_p;
                   var15_int = gd.field_m + 4;
                   if (!var8.field_yb) {
@@ -540,8 +540,8 @@ final class MoveInfoPanel {
                   var13 = var13 + (-20 - var15_int - (var13 - 640));
                 }
                 var16 = CreatureActor.field_h.measureWrappedHeight(var29, 200, 0) + (CreatureActor.field_h.field_F << 1);
-                if (var16 + var14_int > i.field_a.field_rb) {
-                  var14_int = var14_int + (-var14_int - var16 + i.field_a.field_rb);
+                if (var16 + var14_int > SoundCache.field_a.field_rb) {
+                  var14_int = var14_int + (-var14_int - var16 + SoundCache.field_a.field_rb);
                 }
                 SoftwareRasterizer.fillRoundedRectangleAlpha(13 + var13, var14_int, var15_int + 6, var16, 10, 65793, 128);
                 CreatureActor.field_h.drawText(var30, var13 + 20, var14_int + 16, 0, -1);
@@ -569,8 +569,8 @@ final class MoveInfoPanel {
                   stackIn_204_2 = 2;
                 }
                 var18 = stackIn_203_0 + (stackIn_203_1 << stackIn_204_2);
-                if (i.field_a.field_rb < var13 + var18) {
-                  var13 = var13 + (i.field_a.field_rb - var13 - var18);
+                if (SoundCache.field_a.field_rb < var13 + var18) {
+                  var13 = var13 + (SoundCache.field_a.field_rb - var13 - var18);
                 }
                 SoftwareRasterizer.fillRoundedRectangleAlpha(var12 + 13, var13, 6 + var17, var18, 10, 65793, 164);
                 CreatureActor.field_h.drawText(var14, 20 + var12, var13 + 20, 0, -1);

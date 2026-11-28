@@ -23,7 +23,7 @@ final class rj {
     byte[][] field_s;
     static int field_p;
     int[] field_I;
-    private da field_l;
+    private SoundCache field_l;
     int[] field_q;
     int[][] field_B;
     int[] field_f;
@@ -57,9 +57,9 @@ final class rj {
         for (var3 = 0; this.field_D.length > var3; var3++) {
           if (null == this.field_D[var3]) {
             if (this.field_z[var3] >> 4 != 0) {
-              var4 = this.field_l.b(this.field_t[var3], this.field_G[var3], -14888);
+              var4 = this.field_l.getMusicSampleByGroup(this.field_t[var3], this.field_G[var3], -14888);
             } else {
-              var4 = this.field_l.a(this.field_G[var3], -1703274388, this.field_t[var3]);
+              var4 = this.field_l.getSoundEffectByGroup(this.field_G[var3], -1703274388, this.field_t[var3]);
             }
             if (var4 != null) {
               this.field_z[var3] = bc.a(this.field_z[var3], 15);
@@ -76,7 +76,7 @@ final class rj {
         }
     }
 
-    rj(PacketBuffer param0, da param1) {
+    rj(PacketBuffer param0, SoundCache param1) {
         int var3_int = 0;
         int var4 = 0;
         int dupTemp$0 = 0;

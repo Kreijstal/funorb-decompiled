@@ -29,7 +29,7 @@ final class gh implements WidgetRenderer {
         if (null == r.field_i) {
           return false;
         }
-        if (ka.field_b != jc.field_a) {
+        if (ka.field_b != SoundCache.field_a) {
           return false;
         }
         return true;

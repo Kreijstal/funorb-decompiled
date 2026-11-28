@@ -192,7 +192,7 @@ final class re {
         this.field_j = LoginPanel.field_L[param0];
         this.field_k = ImageProducerRasterBuffer.field_h[param0];
         this.field_e = i.field_b[param0];
-        this.field_i = da.field_i[param0];
+        this.field_i = SoundCache.field_i[param0];
         var2 = param0;
         if (var2 == 0) {
           this.field_l = 16;

@@ -3,7 +3,7 @@
  */
 final class Model extends IntrusiveNode {
     static int[] field_p;
-    pj field_k;
+    LitModelMesh field_k;
     static int[] field_m;
     static AccountRequestState field_o;
     mp field_q;

@@ -221,7 +221,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final static void a(pf param0, int param1) {
+    final static void a(MusicTrack param0, int param1) {
         try {
           ka.field_a.a(false, param0, param1 + 113);
           if (param1 != 0) {
@@ -543,8 +543,8 @@ class UiWidget extends IntrusiveNode {
     final static void e(int param0) {
         ld.a("", (String) null, 0);
         if (param0 < 76) {
-          pf var2 = (pf) null;
-          UiWidget.a((pf) null, 89);
+          MusicTrack var2 = (MusicTrack) null;
+          UiWidget.a((MusicTrack) null, 89);
         }
     }
 

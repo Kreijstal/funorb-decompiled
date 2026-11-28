@@ -4,7 +4,7 @@
 final class mm {
     static ResourceArchive field_d;
     static String field_c;
-    static dd field_a;
+    static SoftwareModelMesh field_a;
     static String field_b;
     static String field_e;
 
@@ -50,15 +50,15 @@ final class mm {
         var20 = Chess.field_G;
         try {
           if (0 <= param1 &&
-            nh.field_l > param5) {
+            TriangleRasterizer.field_l > param5) {
             if (param7 < 0 &&
               0 > param6 &&
               param3 < 0) {
               return;
             }
-            if (nh.field_o <= param7 &&
-              param6 >= nh.field_o &&
-              nh.field_o <= param3) {
+            if (TriangleRasterizer.field_o <= param7 &&
+              param6 >= TriangleRasterizer.field_o &&
+              TriangleRasterizer.field_o <= param3) {
               return;
             }
             var9_int = -124 / ((29 - param0) / 63);
@@ -94,19 +94,19 @@ final class mm {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var17Lifetime2 = nh.field_p[param5];
+                var17Lifetime2 = TriangleRasterizer.field_p[param5];
                 while (param8 > param5) {
                   var18 = var10 >> 16;
-                  if (nh.field_o > var18) {
+                  if (TriangleRasterizer.field_o > var18) {
                     var19 = -(var10 >> 16) + (var11 >> 16);
                     if (var19 == 0) {
                       if (var18 >= 0 &&
-                        var18 < nh.field_o) {
+                        var18 < TriangleRasterizer.field_o) {
                         SpriteGeometry.a(0, var19, param4, param2, var17Lifetime2 + var18);
                       }
                     } else {
-                      if (var19 + var18 >= nh.field_o) {
-                        var19 = nh.field_o - var18 - 1;
+                      if (var19 + var18 >= TriangleRasterizer.field_o) {
+                        var19 = TriangleRasterizer.field_o - var18 - 1;
                       }
                       if (0 > var18) {
                         SpriteGeometry.a(0, var18 + var19, param4, param2, var17Lifetime2);
@@ -116,7 +116,7 @@ final class mm {
                     }
                   }
                   param5++;
-                  if (nh.field_l <= param5) {
+                  if (TriangleRasterizer.field_l <= param5) {
                     return;
                   }
                   var11 = var11 + var13;
@@ -172,14 +172,14 @@ final class mm {
               var10 = var10 + var12 * param5;
               param5 = 0;
             }
-            var16Lifetime1 = nh.field_p[param5];
+            var16Lifetime1 = TriangleRasterizer.field_p[param5];
             while (param1 > param5) {
               var17Lifetime1 = var10 >> 16;
-              if (var17Lifetime1 < nh.field_o) {
+              if (var17Lifetime1 < TriangleRasterizer.field_o) {
                 var18Lifetime1 = (var11 >> 16) - (var10 >> 16);
                 if (var18Lifetime1 != 0) {
-                  if (var17Lifetime1 + var18Lifetime1 >= nh.field_o) {
-                    var18Lifetime1 = -1 + (-var17Lifetime1 + nh.field_o);
+                  if (var17Lifetime1 + var18Lifetime1 >= TriangleRasterizer.field_o) {
+                    var18Lifetime1 = -1 + (-var17Lifetime1 + TriangleRasterizer.field_o);
                   }
                   if (var17Lifetime1 >= 0) {
                     SpriteGeometry.a(0, var18Lifetime1, param4, param2, var17Lifetime1 + var16Lifetime1);
@@ -188,13 +188,13 @@ final class mm {
                   }
                 } else {
                   if (0 <= var17Lifetime1 &&
-                    var17Lifetime1 < nh.field_o) {
+                    var17Lifetime1 < TriangleRasterizer.field_o) {
                     SpriteGeometry.a(0, var18Lifetime1, param4, param2, var16Lifetime1 + var17Lifetime1);
                   }
                 }
               }
               param5++;
-              if (nh.field_l <= param5) {
+              if (TriangleRasterizer.field_l <= param5) {
                 return;
               }
               var10 = var10 + var12;

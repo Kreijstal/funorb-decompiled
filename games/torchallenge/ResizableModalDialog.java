@@ -420,7 +420,7 @@ abstract class ResizableModalDialog extends ModalDialog {
           vk.field_h = param2 * ol.b(-128) / 1000;
           GameApplet.a(0, param3);
           wl.a(-2681, param3);
-          u.a(true, param3);
+          SoundCache.splitSpriteIntoVerticalPanels(true, param3);
           AccountRegistrationPanel.k(-50);
           td.b((byte) 112);
           if (param0 != 127) {

@@ -293,16 +293,16 @@ final class pc extends ci {
             this.field_Nb.a(0, 13 + (var19 + 13), -2147483648, 24, 0);
             this.field_Fb.a(-20 + this.field_Nb.field_M, 15, -2147483648, 15, 5);
             var21 = 10;
-            this.field_Hb.a(13, var19, -2147483648, fe.field_g * 2, var21);
-            var21 = var21 + 2 * fe.field_g;
-            this.field_Ob.a(13, var19, -2147483648, fe.field_g * 2, var21);
-            var21 = var21 + (fe.field_g * 2 + 10);
-            this.field_Ib.a(0, 0, -2147483648, fe.field_g, var21);
-            var21 = var21 + (10 + fe.field_g);
+            this.field_Hb.a(13, var19, -2147483648, SoundCache.field_g * 2, var21);
+            var21 = var21 + 2 * SoundCache.field_g;
+            this.field_Ob.a(13, var19, -2147483648, SoundCache.field_g * 2, var21);
+            var21 = var21 + (SoundCache.field_g * 2 + 10);
+            this.field_Ib.a(0, 0, -2147483648, SoundCache.field_g, var21);
+            var21 = var21 + (10 + SoundCache.field_g);
             if (this.field_Kb != null) {
               var20Lifetime3 = this.field_Kb.a((byte) 123, 4);
-              this.field_Kb.a(fe.field_g, 13 + (-var20Lifetime3 + var19) / 2, (byte) 127, 4, var20Lifetime3, var21);
-              var21 = var21 + (fe.field_g + 10);
+              this.field_Kb.a(SoundCache.field_g, 13 + (-var20Lifetime3 + var19) / 2, (byte) 127, 4, var20Lifetime3, var21);
+              var21 = var21 + (SoundCache.field_g + 10);
             }
             var28[0].a(13, var16Lifetime2, -2147483648, var17Lifetime4, var21);
             var28[1].a(26 + var16Lifetime2, var16Lifetime2, -2147483648, var17Lifetime4, var21);
@@ -326,8 +326,8 @@ final class pc extends ci {
           var15_int = 226;
           var16Lifetime1 = 10;
           var17Lifetime1 = this.field_Hb.field_xb.lineCount(this.field_Hb.field_db, var15_int);
-          this.field_Hb.a(13, var15_int, -2147483648, fe.field_g * var17Lifetime1, var16Lifetime1);
-          var16Lifetime1 = var16Lifetime1 + fe.field_g * var17Lifetime1;
+          this.field_Hb.a(13, var15_int, -2147483648, SoundCache.field_g * var17Lifetime1, var16Lifetime1);
+          var16Lifetime1 = var16Lifetime1 + SoundCache.field_g * var17Lifetime1;
           this.field_Eb.a(0, 13 + var15_int + 13, -2147483648, var16Lifetime1 + 10, 24);
           this.field_Eb.field_Ab = wh.a(93, this.field_Eb.field_pb, 3, 11579568, 8421504, 2105376);
           var18Lifetime1 = 26 + var15_int;

@@ -293,7 +293,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    final static vk a(byte param0, int param1, ResourceArchive param2, int param3, m param4) {
+    final static vk a(byte param0, int param1, ResourceArchive param2, int param3, SoundCache param4) {
         byte[] var5 = null;
         RuntimeException var5_ref = null;
         Object stackIn_5_0 = null;

@@ -89,7 +89,7 @@ final class kc {
             return;
           }
           if (var2 != 2) {
-            hb.reportClientError((Throwable) null, 0, "A1: " + jc.b(96));
+            hb.reportClientError((Throwable) null, 0, "A1: " + SoundCache.formatInboundPacketDebug(96));
             GameKeyHandler.a((byte) 120);
             return;
           }

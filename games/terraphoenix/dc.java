@@ -126,7 +126,7 @@ final class dc {
           this.field_i = AdminCheatOverlay.field_e;
         }
         this.field_g = ng.field_s;
-        this.field_m = da.field_d;
+        this.field_m = SoundCache.field_d;
         this.field_l = im.field_c;
     }
 

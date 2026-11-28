@@ -118,7 +118,7 @@ final class NetworkSupport008 implements Runnable {
         try {
           if (integerArgument2 != -15192) {
             stringLocal2 = (String) null;
-            NetworkSupport008.computeMusicTrack1173((ResourceArchive) null, -55, (String) null, (NetworkSupport011) null, (String) null);
+            NetworkSupport008.computeMusicTrack1173((ResourceArchive) null, -55, (String) null, (SoundCache) null, (String) null);
           }
           stackByteArrayLocal3 = Sprite.resourceArchiveState0010.getFileByName(0, stringArgument1, "");
           return stackByteArrayLocal3;
@@ -227,7 +227,7 @@ final class NetworkSupport008 implements Runnable {
         this.asyncTaskState0007 = null;
     }
 
-    final static MusicTrack computeMusicTrack1173(ResourceArchive resourceArchiveArgument1, int integerArgument2, String stringArgument3, NetworkSupport011 networkSupport011Argument4, String stringArgument5) {
+    final static MusicTrack computeMusicTrack1173(ResourceArchive resourceArchiveArgument1, int integerArgument2, String stringArgument3, SoundCache networkSupport011Argument4, String stringArgument5) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;

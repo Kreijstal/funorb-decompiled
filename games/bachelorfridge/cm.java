@@ -50,7 +50,7 @@ final class cm extends oka {
           var3 = var2 - FishRainSpecial.field_t * FishRainSpecial.field_t;
           param0 = param0 + (pda.field_p - param0) * var3 / var2;
         }
-        i.field_a.a(120, 31407, 640, ce.field_t, param0);
+        SoundCache.field_a.a(120, 31407, 640, ce.field_t, param0);
         if (param1 == -111) {
           ActorAnimation.a(5, gba.field_Bb, 115, -24 + pda.field_p, lm.field_d, 0, 640);
           return;

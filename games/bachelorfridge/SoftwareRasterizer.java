@@ -1337,8 +1337,8 @@ final class SoftwareRasterizer {
         var14 = param5 * var12 + 1 >> 17;
         var15 = param5 * var11 >> 17;
         var16 = param5 * var11 + 1 >> 17;
-        param0 = param0 - TriangleRasterizer.a();
-        param1 = param1 - TriangleRasterizer.c();
+        param0 = param0 - TriangleRasterizer.getClipLeft();
+        param1 = param1 - TriangleRasterizer.getClipTop();
         var17 = param0 + var13;
         var18 = param0 - var14;
         var19 = param0 + var6 - var14;
@@ -1347,9 +1347,9 @@ final class SoftwareRasterizer {
         var22 = param1 - var16;
         var23 = param1 + var7 - var16;
         var24 = param1 + var7 + var15;
-        TriangleRasterizer.a(var17, var18, var19);
+        TriangleRasterizer.setHorizontalClippingForTriangle(var17, var18, var19);
         TriangleRasterizer.drawFlatTriangle(var21, var22, var23, var17, var18, var19, param4);
-        TriangleRasterizer.a(var17, var19, var20);
+        TriangleRasterizer.setHorizontalClippingForTriangle(var17, var19, var20);
         TriangleRasterizer.drawFlatTriangle(var21, var23, var24, var17, var19, var20, param4);
         return;
     }

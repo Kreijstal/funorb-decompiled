@@ -21,7 +21,7 @@ final class MidiPcmStream extends PcmStream {
     static String field_n;
     private hg[][] field_O;
     private int field_M;
-    private oi field_H;
+    private MidiFileReader field_H;
     private int[] field_N;
     private int[] field_I;
     private int[] field_t;
@@ -38,10 +38,10 @@ final class MidiPcmStream extends PcmStream {
     private MusicPatchPcmStream field_Q;
     private long field_s;
     private int field_L;
-    private rl field_m;
+    private MusicTrack field_m;
     private boolean field_V;
 
-    final synchronized boolean a(int param0, rl param1, me param2, Archive param3, int param4) {
+    final synchronized boolean a(int param0, MusicTrack param1, SoundCache param2, Archive param3, int param4) {
         int stackIn_18_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -62,7 +62,7 @@ final class MidiPcmStream extends PcmStream {
         fc var13 = null;
         var11 = SolKnight.field_L ? 1 : 0;
         try {
-          param1.a();
+          param1.buildPatchUsage();
           var6_int = 1;
           var7 = null;
           if (param0 > 0) {
@@ -93,7 +93,7 @@ final class MidiPcmStream extends PcmStream {
           }
           var8 = 25 / ((param4 + 49) / 43);
           if (var6_int != 0) {
-            param1.b();
+            param1.releasePatchUsage();
           }
           stackIn_18_0 = var6_int;
           return stackIn_18_0 != 0;
@@ -919,25 +919,25 @@ final class MidiPcmStream extends PcmStream {
               if (stackIn_26_0 > stackIn_26_1) {
                 this.field_u = -1;
                 this.field_G = this.field_L;
-                this.field_E = this.field_H.c(this.field_G);
+                this.field_E = this.field_H.tickTime(this.field_G);
               }
             }
             return;
           }
           while (var3 == this.field_H.field_h[var2]) {
-            this.field_H.d(var2);
-            var6 = this.field_H.e(var2);
+            this.field_H.seekTrack(var2);
+            var6 = this.field_H.readMessage(var2);
             if (var6 != 1) {
               if ((128 & var6) != 0) {
                 this.handleMidiMessage(var6, 85);
               }
-              this.field_H.a(var2);
-              this.field_H.b(var2);
+              this.field_H.readDelta(var2);
+              this.field_H.saveTrackPosition(var2);
               continue;
             }
-            this.field_H.b();
-            this.field_H.b(var2);
-            if (this.field_H.g()) {
+            this.field_H.markTrackDone();
+            this.field_H.saveTrackPosition(var2);
+            if (this.field_H.isDone()) {
               if (null != this.field_m) {
                 this.a(this.field_R, this.field_m, true);
                 this.advanceMidiEvents(false);
@@ -945,18 +945,18 @@ final class MidiPcmStream extends PcmStream {
               }
               if (this.field_R &&
                 0 != var3) {
-                this.field_H.a(var4);
+                this.field_H.reset(var4);
               } else {
                 this.resetPlaybackChannels(128, true);
-                this.field_H.a();
+                this.field_H.release();
                 return;
               }
             }
             break;
           }
-          var2 = this.field_H.f();
+          var2 = this.field_H.nextTrack();
           var3 = this.field_H.field_h[var2];
-          var4 = this.field_H.c(var3);
+          var4 = this.field_H.tickTime(var3);
         }
     }
 
@@ -1059,7 +1059,7 @@ final class MidiPcmStream extends PcmStream {
     }
 
     private final synchronized void clearMidiPlayback(int param0, boolean param1) {
-        this.field_H.a();
+        this.field_H.release();
         this.field_m = null;
         this.resetPlaybackChannels(param0 ^ 0, param1);
         if (param0 != 128) {
@@ -1159,7 +1159,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final synchronized void a(int param0, boolean param1, boolean param2, rl param3) {
+    private final synchronized void a(int param0, boolean param1, boolean param2, MusicTrack param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = SolKnight.field_L ? 1 : 0;
@@ -1168,24 +1168,24 @@ final class MidiPcmStream extends PcmStream {
             field_A = 42;
           }
           this.clearMidiPlayback(128, param1);
-          this.field_H.a(param3.field_i);
+          this.field_H.parse(param3.field_i);
           this.field_s = 0L;
           this.field_R = param2 ? true : false;
-          var5_int = this.field_H.e();
+          var5_int = this.field_H.trackCount();
           for (var6 = 0; var6 < var5_int; var6++) {
-            this.field_H.d(var6);
-            this.field_H.a(var6);
-            this.field_H.b(var6);
+            this.field_H.seekTrack(var6);
+            this.field_H.readDelta(var6);
+            this.field_H.saveTrackPosition(var6);
           }
-          this.field_u = this.field_H.f();
+          this.field_u = this.field_H.nextTrack();
           this.field_G = this.field_H.field_h[this.field_u];
-          this.field_E = this.field_H.c(this.field_G);
+          this.field_E = this.field_H.tickTime(this.field_G);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "mf.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final synchronized void a(boolean param0, rl param1, boolean param2) {
+    final synchronized void a(boolean param0, MusicTrack param1, boolean param2) {
         try {
           this.a(113, param2, param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -1330,7 +1330,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_p = new hg[16][128];
         this.field_D = new int[16];
         this.field_q = 256;
-        this.field_H = new oi();
+        this.field_H = new MidiFileReader();
         this.field_Q = new MusicPatchPcmStream(this);
         this.field_C = new qd(128);
         this.b(256, -1, -129);

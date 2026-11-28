@@ -294,13 +294,13 @@ final class lc extends ro {
           var1Lifetime2 = var33;
           ModalDialogHost.a(0, dd.field_c.field_x, var33, (byte) -58);
           FullscreenNoticeType.field_e = new Sprite[m.field_n.length];
-          be.field_g = 30;
+          TriangleRasterizer.field_g = 30;
           var34 = var2;
           for (var9 = 0; var34.length > var9; var9++) {
             var10 = var34[var9];
             if (m.field_n[var10] != null) {
-              var11_int = be.field_l[200];
-              var12 = be.field_o[200];
+              var11_int = TriangleRasterizer.field_l[200];
+              var12 = TriangleRasterizer.field_o[200];
               var13_ref_rm = MouseWheelInput.field_c[var10].field_l;
               var14 = 99999;
               var15_int = -99999;
@@ -321,7 +321,7 @@ final class lc extends ro {
               var16_ref_t = var35;
               FullscreenNoticeType.field_e[var10] = var35;
               var35.bindAsRenderTarget();
-              be.a();
+              TriangleRasterizer.useRasterClip();
               var17_ref_kh = MouseWheelInput.field_c[var10];
               var18 = new SceneMeshBatch(1);
               var18.a(0, var17_ref_kh);
@@ -342,7 +342,7 @@ final class lc extends ro {
               }
               var18.a(var17_ref_kh, var19);
               SceneMeshBatch.a(var17_ref_kh, 80, 1365, -1, -12, 12);
-              be.field_b = -var14;
+              TriangleRasterizer.field_b = -var14;
               var18.a(new int[]{0, 0, -1024, 65535, 0, 0, 0, 65535, 0, 0, 0, 65535});
               if (var10 == 0) {
                 var36 = new Sprite(60, var15_int - (var14 + 31));
@@ -373,9 +373,9 @@ final class lc extends ro {
           var40.field_l.a(60, 60, 0);
           oj.a(3, (short) 0, 0, false, true, 1, 0, (short) -1, 2, var40);
           oj.a(1, (short) 0, 3, false, true, 2, 3, (short) -1, 1, var40);
-          var9 = be.field_l[1664];
-          var10 = be.field_o[1664];
-          be.field_g = 40;
+          var9 = TriangleRasterizer.field_l[1664];
+          var10 = TriangleRasterizer.field_o[1664];
+          TriangleRasterizer.field_g = 40;
           var11 = new SceneMeshBatch(1);
           var11.a(0, var40);
           var11.a(var40, new int[]{0, 0, 0, 65535, 0, 0, 0, var10, var9, 0, -var9, var10});
@@ -397,13 +397,13 @@ final class lc extends ro {
           for (var14Lifetime2 = 0; ClientException.field_d.length > var14Lifetime2; var14Lifetime2++) {
             var15 = new Sprite(80, var13 + 1 - var12);
             var15.bindAsRenderTarget();
-            be.a();
+            TriangleRasterizer.useRasterClip();
             var40.field_l.field_A[0] = var3[var14Lifetime2];
-            var40.field_l.field_m[1] = (short)be.field_c.b((int) var3[var14Lifetime2]);
+            var40.field_l.field_m[1] = (short)TriangleRasterizer.field_c.b((int) var3[var14Lifetime2]);
             var40.field_q.field_v = null;
             var40.field_k = null;
             var11.a(0, 80, 1365, 0, -1, 0);
-            be.field_b = -var12;
+            TriangleRasterizer.field_b = -var12;
             var11.a(new int[]{0, 0, -1024, 65535, 0, 0, 0, 65535, 0, 0, 0, 65535});
             var41 = rh.a((byte) 120, var1Lifetime3, var15, ClientException.field_d[var3[var14Lifetime2]]);
             var1Lifetime3 = var41;
@@ -412,7 +412,7 @@ final class lc extends ro {
           var1Lifetime3[var1Lifetime3.length - 1].justifyPanelContents(0);
           hg.field_b = var1Lifetime3;
           SoftwareRasterizer.setRasterBuffer(var45, var6, var7);
-          be.a();
+          TriangleRasterizer.useRasterClip();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

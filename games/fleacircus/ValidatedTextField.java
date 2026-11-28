@@ -72,14 +72,14 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
             var8 = -61 % ((13 - param3) / 44);
             param0[0].draw(param2, param1);
             param0[2].draw(-var6 + param4 + param2, param1);
-            SoftwareRasterizer.saveClip(ng.field_a);
+            SoftwareRasterizer.saveClip(SoundCache.field_a);
             SoftwareRasterizer.intersectClip(param2 + var5_int, param1, param4 + param2 - var6, param0[1].field_r + param1);
             var9 = param2 + var5_int;
             var10 = param2 + param4 - var6;
             for (param2 = var9; var10 > param2; param2 = param2 + var7) {
               param0[1].draw(param2, param1);
             }
-            SoftwareRasterizer.restoreClip(ng.field_a);
+            SoftwareRasterizer.restoreClip(SoundCache.field_a);
             return;
           }
           return;

@@ -337,10 +337,10 @@ final class kd extends ci {
           this.field_Fb.field_S = "|";
           this.field_Jb = new StringBuilder(12);
           var9_int = this.field_Ib.e((byte) 94);
-          this.field_Ib.a(5, var9_int, -2147483648, fe.field_g, 3);
-          this.field_Fb.a(5, var9_int, -2147483648, fe.field_g, 3 + fe.field_g);
+          this.field_Ib.a(5, var9_int, -2147483648, SoundCache.field_g, 3);
+          this.field_Fb.a(5, var9_int, -2147483648, SoundCache.field_g, 3 + SoundCache.field_g);
           var10 = 5 + var9_int + 5;
-          var11 = 3 + fe.field_g * 2 + 3;
+          var11 = 3 + SoundCache.field_g * 2 + 3;
           var12 = ao.a(var10, true, param0, param2);
           var13 = sg.a(param1, var11, param3, 0);
           this.a(var12, var10, -2147483648, var11, var13);

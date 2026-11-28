@@ -5,7 +5,7 @@ final class fo {
     static UiPanel field_f;
     private int field_b;
     static boolean field_d;
-    static si field_e;
+    static MusicTrack field_e;
     private MenuSelectionCursor field_a;
     static UiPanel field_c;
 
@@ -936,7 +936,7 @@ final class fo {
 
     private final int b(int param0, int param1) {
         if (param1 < 1) {
-          field_e = (si) null;
+          field_e = (MusicTrack) null;
         }
         if (!NameSuggestionsPanel.field_Q[this.field_b]) {
           return NameSuggestionsPanel.field_M[this.field_b];
@@ -1028,7 +1028,7 @@ final class fo {
         }
         this.a(var3, var7, param0 ^ 27767);
         if (param0 != 97) {
-          field_e = (si) null;
+          field_e = (MusicTrack) null;
         }
         DefaultTextWidgetRenderer.field_s.a(Vertigo2.a(new String[]{Integer.toString(var7.field_f), Integer.toString(var7.field_g)}, hd.field_c, -127), 16777215, -1, 320, 140, param0 - 95);
         this.a((byte) 7, var7);
@@ -1291,7 +1291,7 @@ final class fo {
                 if (32 == var8) {
                   if (!(!this.field_a.a(84))) {
                     if (ag.b(49)) {
-                      id.a(23);
+                      SoundCache.a(23);
                     } else {
                       jm.field_E = new PlayerState[1];
                       jm.field_E[0] = new PlayerState(0, false, 0, false, false, false);
@@ -1768,20 +1768,20 @@ final class fo {
                 if (13 == this.field_b) {
                   if (tf.field_l != null &&
                     lb.field_d != null) {
-                    oo.a(450, 240);
+                    TriangleRasterizer.setProjectionCenter(450, 240);
                     tf.field_l.drawLevelSelectionPreview(0, param0 + 223, lb.field_d);
                   }
-                  oo.b();
+                  TriangleRasterizer.centerProjection();
                   MusicPatchPcmStream.a(320, 280, 100, 30, 86, 150);
                   FullscreenFocusCanvas.field_d.b(param0 + 116);
                 } else {
                   if (19 == this.field_b) {
                     if (null != tf.field_l &&
                       null != TextLineMetrics.field_b) {
-                      oo.a(545, 160);
+                      TriangleRasterizer.setProjectionCenter(545, 160);
                       tf.field_l.drawAlternateLevelPreview(false, 0, TextLineMetrics.field_b, (byte) 119);
                     }
-                    oo.b();
+                    TriangleRasterizer.centerProjection();
                     MusicPatchPcmStream.a(320, 280, 100, 30, 75, 150);
                     ap.field_d.b(2);
                     MusicPatchPcmStream.a(160, 148, 100, 330, 91, 150);
@@ -1859,7 +1859,7 @@ final class fo {
                       var2 += 80;
                       stackIn_38_0 = DefaultTextWidgetRenderer.field_s;
                       stackIn_39_1 = (jq.field_e != 0);
-                      ((wn) (Object) stackIn_38_0).a(id.a(stackIn_39_1, 1342181375, true, true), 16777215, -1, 320, var2, 2);
+                      ((wn) (Object) stackIn_38_0).a(SoundCache.a(stackIn_39_1, 1342181375, true, true), 16777215, -1, 320, var2, 2);
                     }
                   }
                 }

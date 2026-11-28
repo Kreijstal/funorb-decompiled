@@ -334,7 +334,7 @@ final class AgeValidator extends TextFieldValidator {
           int stackIn_12_0 = 0;
           Throwable decompiledCaughtException = null;
           if (null == bd.field_k) {
-            bd.field_k = da.field_g.requestDirectSocket(sb.field_i, wa.field_t, (byte) 60);
+            bd.field_k = SoundCache.field_g.requestDirectSocket(sb.field_i, wa.field_t, (byte) 60);
           }
           if (param1 <= 82) {
             AgeValidator.a(false);
@@ -349,7 +349,7 @@ final class AgeValidator extends TextFieldValidator {
             mh.field_a = ba.field_b;
           } else {
             try {
-              ig.field_e = new BufferedSocket((java.net.Socket) (bd.field_k.result), da.field_g);
+              ig.field_e = new BufferedSocket((java.net.Socket) (bd.field_k.result), SoundCache.field_g);
               TextFieldValidator.field_l.position = 0;
               var4 = LevelEditor.field_j;
               var5 = var4;

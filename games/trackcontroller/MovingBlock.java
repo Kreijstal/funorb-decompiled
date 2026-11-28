@@ -41,7 +41,7 @@ final class MovingBlock extends IntrusiveNode {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
           if (r.field_i != null && (param1 < 0 ||
-            jc.field_a == ka.field_b)) {
+            SoundCache.field_a == ka.field_b)) {
             if (param0 != -1) {
               return;
             }
@@ -159,7 +159,7 @@ final class MovingBlock extends IntrusiveNode {
             stackIn_5_0 = -1;
             return stackIn_5_0;
           }
-          if (jc.field_a == gk.field_a) {
+          if (SoundCache.field_a == gk.field_a) {
             qi.field_c = null;
             LevelView.field_C.position = 0;
             if (param0 == null) {
@@ -212,16 +212,16 @@ final class MovingBlock extends IntrusiveNode {
               LevelView.field_C.backpatchShortLength(-var10 + LevelView.field_C.position, (byte) -96);
             }
             MovingBlock.a(-1, -1);
-            jc.field_a = EmailFormatValidator.field_m;
+            SoundCache.field_a = EmailFormatValidator.field_m;
           }
-          if (jc.field_a == EmailFormatValidator.field_m &&
+          if (SoundCache.field_a == EmailFormatValidator.field_m &&
             DiskArchiveStore.a(1, false)) {
             var9Lifetime1 = ne.field_a.readUnsignedByte(16383);
             ne.field_a.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               ca.field_a = new String[var9Lifetime1 - 100];
-              jc.field_a = kl.field_a;
+              SoundCache.field_a = kl.field_a;
             } else {
               if (var9Lifetime1 == 248) {
                 ob.a(209, CachedArchiveSource.b((byte) 77));
@@ -237,12 +237,12 @@ final class MovingBlock extends IntrusiveNode {
                 ne.field_a.position = 0;
               } else {
                 uk.field_c = var9Lifetime1;
-                jc.field_a = GuestPlayConfirmationForm.field_D;
+                SoundCache.field_a = GuestPlayConfirmationForm.field_D;
                 ConfirmedEmailAvailabilityValidator.field_o = -1;
               }
             }
           }
-          if (kl.field_a == jc.field_a) {
+          if (kl.field_a == SoundCache.field_a) {
             var9Lifetime2 = 2;
             if (DiskArchiveStore.a(var9Lifetime2, false)) {
               var10Lifetime1 = ne.field_a.readUnsignedShort((byte) -94);
@@ -260,7 +260,7 @@ final class MovingBlock extends IntrusiveNode {
             }
           }
           var9Lifetime3 = 77 / ((param5 - 31) / 47);
-          if (jc.field_a == GuestPlayConfirmationForm.field_D &&
+          if (SoundCache.field_a == GuestPlayConfirmationForm.field_D &&
             ByteStorage.a(520)) {
             if (255 == uk.field_c) {
               var10_ref_String = ne.field_a.readOptionalString(19016);

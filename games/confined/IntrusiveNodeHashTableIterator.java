@@ -12,7 +12,7 @@ final class IntrusiveNodeHashTableIterator implements Iterator {
     private IntrusiveNodeHashTable field_a;
 
     final static void b(byte param0) {
-        ti.a(ua.a(true));
+        TriangleRasterizer.setRandomizedGamma(ua.a(true));
         if (param0 >= -104) {
           IntrusiveNodeHashTableIterator.clearStaticReferences((byte) -125);
           da.field_h = 512;

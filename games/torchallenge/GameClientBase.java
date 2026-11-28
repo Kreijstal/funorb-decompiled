@@ -488,7 +488,7 @@ abstract class GameClientBase extends GameApplet {
         int var4 = -1 + PcmOutputWorker.field_i;
         byte[] var5 = new byte[var4];
         id.field_b.a(-25038, var4, 0, var5);
-        u.a(gi.b(12476), var3 != 0, -127, re.a(18990, var5));
+        SoundCache.openExternalUrl(gi.b(12476), var3 != 0, -127, re.a(18990, var5));
     }
 
     private final int a(boolean param0, byte param1, boolean param2) {

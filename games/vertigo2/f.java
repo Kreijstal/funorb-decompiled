@@ -25,7 +25,7 @@ final class f extends TextureOperator {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            id.field_f = new BitPacketBuffer(param12);
+            SoundCache.field_f = new BitPacketBuffer(param12);
             uh.field_Wb = new BitPacketBuffer(param2);
             kr.field_g = param3;
             cl.field_d = param6;

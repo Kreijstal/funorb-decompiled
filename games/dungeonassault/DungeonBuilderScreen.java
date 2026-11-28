@@ -771,7 +771,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
                       if (decompiledFrameRemainder1) {
                         if ((!(DefaultTextWidgetRenderer.field_s instanceof cp)) &&
                           (decompiledFrameRemainder1 = (0 != no.field_d))) {
-                          var2 = this.findDungeonTileAt(lc.field_c, AchievementIconEntry.field_k, param0 + 1380862337);
+                          var2 = this.findDungeonTileAt(SoundCache.field_c, AchievementIconEntry.field_k, param0 + 1380862337);
                           if (var2 != -1 &&
                             var2 != 0 &&
                             var2 != 6 &&

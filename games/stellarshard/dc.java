@@ -117,7 +117,7 @@ final class dc {
             return stackIn_2_0;
           }
           var4 = (String) null;
-          stackIn_4_0 = gk.a(0, false, param2, (String) null, 0, param0, false);
+          stackIn_4_0 = SoundCache.a(0, false, param2, (String) null, 0, param0, false);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -83,7 +83,7 @@ final class or {
           var1Lifetime3 = var15 + ":";
           for (var2 = 0; ca.field_b > var2; var2++) {
             var16 = var1Lifetime3 + ' ';
-            var3 = 255 & id.field_f.payload[var2];
+            var3 = 255 & SoundCache.field_f.payload[var2];
             var4 = var3 >> 4;
             if (10 > var4) {
               var4 += 48;
@@ -110,7 +110,7 @@ final class or {
         var1Lifetime2 = var9 + ":";
         for (var2Lifetime1 = 0; ca.field_b > var2Lifetime1; var2Lifetime1++) {
           var13 = var1Lifetime2 + ' ';
-          var3Lifetime1 = 255 & id.field_f.payload[var2Lifetime1];
+          var3Lifetime1 = 255 & SoundCache.field_f.payload[var2Lifetime1];
           var4Lifetime1 = var3Lifetime1 >> 4;
           if (10 > var4Lifetime1) {
             var4Lifetime1 += 48;

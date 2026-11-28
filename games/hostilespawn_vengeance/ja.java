@@ -19,11 +19,11 @@ final class ja {
         if (param0 == 26) {
           return;
         }
-        ji var2 = (ji) null;
-        ja.a((byte) -91, (ji) null, false);
+        MusicTrack var2 = (MusicTrack) null;
+        ja.a((byte) -91, (MusicTrack) null, false);
     }
 
-    final static void a(byte param0, ji param1, boolean param2) {
+    final static void a(byte param0, MusicTrack param1, boolean param2) {
         try {
           if (ha.field_w.field_p == param1) {
             ha.field_w.field_p = null;

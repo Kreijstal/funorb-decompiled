@@ -750,7 +750,7 @@ abstract class ob extends GameAppletShell {
                                 return;
                               }
                               if (18 == var2) {
-                                ri.a(true);
+                                SoundCache.a(true);
                                 return;
                               }
                               MidiPcmStream.a((Throwable) null, 1, "MGS1: " + hj.a((byte) 86));

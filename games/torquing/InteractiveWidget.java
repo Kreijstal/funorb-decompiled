@@ -266,7 +266,7 @@ class InteractiveWidget extends UiWidget {
             var5 = 15 / ((param1 - 64) / 33);
             var6 = ka.a(var3, (byte) -10);
             if (var6 == null) {
-              return fi.a((byte) -97, var4);
+              return SoundCache.a((byte) -97, var4);
             }
             stackIn_11_0 = var6;
             return stackIn_11_0;

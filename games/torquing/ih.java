@@ -16,7 +16,7 @@ class ih extends qf {
         field_b = null;
     }
 
-    final static lh a(int param0, String param1, fi param2, ResourceArchive param3, String param4) {
+    final static lh a(int param0, String param1, SoundCache param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -35,7 +35,7 @@ class ih extends qf {
         try {
           if (param0 != 7828) {
             var7 = (String) null;
-            ih.a(-20, (String) null, (fi) null, (ResourceArchive) null, (String) null);
+            ih.a(-20, (String) null, (SoundCache) null, (ResourceArchive) null, (String) null);
           }
           var5_int = param3.getGroupIdByName(-1, param1);
           var6 = param3.getFileIdByName(param4, -124, var5_int);

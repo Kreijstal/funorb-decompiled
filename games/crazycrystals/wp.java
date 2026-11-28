@@ -56,10 +56,10 @@ final class wp {
             stackIn_11_3 = null;
             stackIn_11_4 = WallTile.field_w.getCodeBase();
             stackIn_11_5 = new StringBuilder().append("clienterror.ws?c=").append(me.field_e).append("&u=");
-            if (bn.field_f != null) {
+            if (SoundCache.field_f != null) {
               stackIn_12_2 = null;
               stackIn_12_3 = null;
-              stackIn_12_6 = bn.field_f;
+              stackIn_12_6 = SoundCache.field_f;
             } else {
               stackIn_12_2 = null;
               stackIn_12_3 = null;
@@ -186,16 +186,16 @@ final class wp {
               var9 = stackIn_44_0;
               var1_int = var1_int + MouseInputHandler.field_a;
               if (var9 != null) {
-                var9.a(-to.field_d + var8Lifetime1, 2, var1_int, (bn.field_c << 1) + gh.field_w, var7Lifetime1 + (to.field_d << 1));
+                var9.a(-to.field_d + var8Lifetime1, 2, var1_int, (SoundCache.field_c << 1) + gh.field_w, var7Lifetime1 + (to.field_d << 1));
               }
-              var1_int = var1_int + bn.field_c;
+              var1_int = var1_int + SoundCache.field_c;
             }
             if (var4 < 0) {
               ec.field_m.drawString(var6, var8Lifetime1, sc.field_g + var1_int, var5, -1);
               var1_int = var1_int + io.field_O;
             } else {
               gh.field_F.drawString(var6, var8Lifetime1, var1_int + kb.field_h, var5, -1);
-              var1_int = var1_int + (MouseInputHandler.field_a + bn.field_c + gh.field_w);
+              var1_int = var1_int + (MouseInputHandler.field_a + SoundCache.field_c + gh.field_w);
             }
           }
           return;

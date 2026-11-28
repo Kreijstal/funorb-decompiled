@@ -23,7 +23,7 @@ final class ShockwaveBlast extends ka {
           }
           long dupTemp$0 = ri.correctedCurrentTimeMillis(param1 - 20);
           DiskCacheWorker.field_a = dupTemp$0;
-          m.field_b = dupTemp$0;
+          SoundCache.field_b = dupTemp$0;
           if (mg.field_a.status != 1) {
             lk.field_d = i.field_q;
           } else {
@@ -325,15 +325,15 @@ final class ShockwaveBlast extends ka {
             field_H = (String) null;
           }
           if (0 <= param0 &&
-            ti.field_g > param3) {
+            TriangleRasterizer.field_g > param3) {
             if (param4 < 0 &&
               0 > param7 &&
               param6 < 0) {
               return;
             }
-            if (param4 >= ti.field_e &&
-              ti.field_e <= param7 &&
-              param6 >= ti.field_e) {
+            if (param4 >= TriangleRasterizer.field_e &&
+              TriangleRasterizer.field_e <= param7 &&
+              param6 >= TriangleRasterizer.field_e) {
               return;
             }
             var14 = -param3 + param0;
@@ -395,19 +395,19 @@ final class ShockwaveBlast extends ka {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var16Lifetime2 = ti.field_l[param3];
+                var16Lifetime2 = TriangleRasterizer.field_l[param3];
                 while (param3 < param2) {
                   var17 = var9_int >> 16;
-                  if (var17 < ti.field_e) {
+                  if (var17 < TriangleRasterizer.field_e) {
                     var18 = (var10 >> 16) - (var9_int >> 16);
                     if (var18 == 0) {
                       if (var17 >= 0 &&
-                        var17 < ti.field_e) {
+                        var17 < TriangleRasterizer.field_e) {
                         DiskArchiveRequest.a(param5, param1, var16Lifetime2 + var17, var18, 87);
                       }
                     } else {
-                      if (var17 + var18 >= ti.field_e) {
-                        var18 = ti.field_e - (var17 + 1);
+                      if (var17 + var18 >= TriangleRasterizer.field_e) {
+                        var18 = TriangleRasterizer.field_e - (var17 + 1);
                       }
                       if (0 > var17) {
                         DiskArchiveRequest.a(param5, param1, var16Lifetime2, var18 + var17, 87);
@@ -417,7 +417,7 @@ final class ShockwaveBlast extends ka {
                     }
                   }
                   param3++;
-                  if (ti.field_g <= param3) {
+                  if (TriangleRasterizer.field_g <= param3) {
                     return;
                   }
                   var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_g;
@@ -446,19 +446,19 @@ final class ShockwaveBlast extends ka {
               var9_int = var9_int + var11 * param3;
               param3 = 0;
             }
-            var15Lifetime1 = ti.field_l[param3];
+            var15Lifetime1 = TriangleRasterizer.field_l[param3];
             while (param0 > param3) {
               var16Lifetime1 = var9_int >> 16;
-              if (var16Lifetime1 < ti.field_e) {
+              if (var16Lifetime1 < TriangleRasterizer.field_e) {
                 var17Lifetime1 = (var10 >> 16) - (var9_int >> 16);
                 if (0 == var17Lifetime1) {
                   if (0 <= var16Lifetime1 &&
-                    ti.field_e > var16Lifetime1) {
+                    TriangleRasterizer.field_e > var16Lifetime1) {
                     DiskArchiveRequest.a(param5, param1, var15Lifetime1 + var16Lifetime1, var17Lifetime1, 87);
                   }
                 } else {
-                  if (ti.field_e <= var17Lifetime1 + var16Lifetime1) {
-                    var17Lifetime1 = ti.field_e - var16Lifetime1 - 1;
+                  if (TriangleRasterizer.field_e <= var17Lifetime1 + var16Lifetime1) {
+                    var17Lifetime1 = TriangleRasterizer.field_e - var16Lifetime1 - 1;
                   }
                   if (var16Lifetime1 < 0) {
                     DiskArchiveRequest.a(param5, param1, var15Lifetime1, var17Lifetime1 + var16Lifetime1, 87);
@@ -468,7 +468,7 @@ final class ShockwaveBlast extends ka {
                 }
               }
               param3++;
-              if (param3 >= ti.field_g) {
+              if (param3 >= TriangleRasterizer.field_g) {
                 return;
               }
               var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_g;

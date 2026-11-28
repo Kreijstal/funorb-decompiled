@@ -4,7 +4,7 @@
 final class df {
     static RawPcmStream field_a;
     static String field_c;
-    static wh field_b;
+    static MusicTrack field_b;
 
     final static void a(int param0, int param1, int param2) {
         nb.field_i[param0].c(param1 ^ -5495, param2);

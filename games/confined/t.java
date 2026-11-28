@@ -65,8 +65,8 @@ final class t {
         int var9Lifetime4;
         int var9Lifetime1Lifetime1;
         int var9Lifetime2Lifetime1;
-        var0 = ti.field_k;
-        var1 = ti.field_f;
+        var0 = TriangleRasterizer.field_k;
+        var1 = TriangleRasterizer.field_f;
         var2 = 0;
         var3 = field_u[0];
         var4 = field_u[1];
@@ -158,64 +158,64 @@ final class t {
         var9Lifetime3 = field_q[0];
         var10 = field_q[1];
         var11 = field_q[2];
-        ti.field_c = false;
+        TriangleRasterizer.field_c = false;
         if (var2 == 3) {
           if (var6Lifetime3 < 0 ||
             var7Lifetime3 < 0 ||
             var8Lifetime3 < 0 ||
-            !(var6Lifetime3 <= ti.field_e) ||
-            !(var7Lifetime3 <= ti.field_e) ||
-            !(var8Lifetime3 <= ti.field_e)) {
-            ti.field_c = true;
+            !(var6Lifetime3 <= TriangleRasterizer.field_e) ||
+            !(var7Lifetime3 <= TriangleRasterizer.field_e) ||
+            !(var8Lifetime3 <= TriangleRasterizer.field_e)) {
+            TriangleRasterizer.field_c = true;
           }
           var12 = field_i & 3;
           if (var12 != 0) {
             if (var12 != 1) {
               if (var12 != 2) {
                 if (var12 == 3) {
-                  ti.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_k, field_k, field_k, field_h[0], field_h[1], field_h[2], field_g[0], field_g[1], field_g[2], field_o[0], field_o[1], field_o[2], field_e);
+                  TriangleRasterizer.drawTexturedTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_k, field_k, field_k, field_h[0], field_h[1], field_h[2], field_g[0], field_g[1], field_g[2], field_o[0], field_o[1], field_o[2], field_e);
                 }
               } else {
-                ti.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_l[0], field_l[1], field_l[2], field_h[0], field_h[1], field_h[2], field_g[0], field_g[1], field_g[2], field_o[0], field_o[1], field_o[2], field_e);
+                TriangleRasterizer.drawTexturedTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_l[0], field_l[1], field_l[2], field_h[0], field_h[1], field_h[2], field_g[0], field_g[1], field_g[2], field_o[0], field_o[1], field_o[2], field_e);
               }
             } else {
-              ti.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_v[field_k]);
+              TriangleRasterizer.drawFlatTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_v[field_k]);
             }
           } else {
-            ti.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_l[0], field_l[1], field_l[2]);
+            TriangleRasterizer.drawShadedTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_l[0], field_l[1], field_l[2]);
           }
         }
         if (var2 == 4) {
           if (var6Lifetime3 < 0 ||
             var7Lifetime3 < 0 ||
             var8Lifetime3 < 0 ||
-            !(var6Lifetime3 <= ti.field_e) ||
-            !(var7Lifetime3 <= ti.field_e) ||
-            !(var8Lifetime3 <= ti.field_e) ||
+            !(var6Lifetime3 <= TriangleRasterizer.field_e) ||
+            !(var7Lifetime3 <= TriangleRasterizer.field_e) ||
+            !(var8Lifetime3 <= TriangleRasterizer.field_e) ||
             !(field_b[3] >= 0) ||
-            !(field_b[3] <= ti.field_e)) {
-            ti.field_c = true;
+            !(field_b[3] <= TriangleRasterizer.field_e)) {
+            TriangleRasterizer.field_c = true;
           }
           var12Lifetime1 = field_i & 3;
           if (var12Lifetime1 != 0) {
             if (var12Lifetime1 != 1) {
               if (var12Lifetime1 != 2) {
                 if (var12Lifetime1 == 3) {
-                  ti.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_k, field_k, field_k, field_h[0], field_h[1], field_h[2], field_g[0], field_g[1], field_g[2], field_o[0], field_o[1], field_o[2], field_e);
-                  ti.a(var9Lifetime3, var11, field_q[3], var6Lifetime3, var8Lifetime3, field_b[3], field_k, field_k, field_k, field_h[0], field_h[1], field_h[2], field_g[0], field_g[1], field_g[2], field_o[0], field_o[1], field_o[2], field_e);
+                  TriangleRasterizer.drawTexturedTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_k, field_k, field_k, field_h[0], field_h[1], field_h[2], field_g[0], field_g[1], field_g[2], field_o[0], field_o[1], field_o[2], field_e);
+                  TriangleRasterizer.drawTexturedTriangle(var9Lifetime3, var11, field_q[3], var6Lifetime3, var8Lifetime3, field_b[3], field_k, field_k, field_k, field_h[0], field_h[1], field_h[2], field_g[0], field_g[1], field_g[2], field_o[0], field_o[1], field_o[2], field_e);
                 }
               } else {
-                ti.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_l[0], field_l[1], field_l[2], field_h[0], field_h[1], field_h[2], field_g[0], field_g[1], field_g[2], field_o[0], field_o[1], field_o[2], field_e);
-                ti.a(var9Lifetime3, var11, field_q[3], var6Lifetime3, var8Lifetime3, field_b[3], field_l[0], field_l[2], field_l[3], field_h[0], field_h[1], field_h[2], field_g[0], field_g[1], field_g[2], field_o[0], field_o[1], field_o[2], field_e);
+                TriangleRasterizer.drawTexturedTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_l[0], field_l[1], field_l[2], field_h[0], field_h[1], field_h[2], field_g[0], field_g[1], field_g[2], field_o[0], field_o[1], field_o[2], field_e);
+                TriangleRasterizer.drawTexturedTriangle(var9Lifetime3, var11, field_q[3], var6Lifetime3, var8Lifetime3, field_b[3], field_l[0], field_l[2], field_l[3], field_h[0], field_h[1], field_h[2], field_g[0], field_g[1], field_g[2], field_o[0], field_o[1], field_o[2], field_e);
               }
             } else {
               var13 = field_v[field_k];
-              ti.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, var13);
-              ti.a(var9Lifetime3, var11, field_q[3], var6Lifetime3, var8Lifetime3, field_b[3], var13);
+              TriangleRasterizer.drawFlatTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, var13);
+              TriangleRasterizer.drawFlatTriangle(var9Lifetime3, var11, field_q[3], var6Lifetime3, var8Lifetime3, field_b[3], var13);
             }
           } else {
-            ti.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_l[0], field_l[1], field_l[2]);
-            ti.a(var9Lifetime3, var11, field_q[3], var6Lifetime3, var8Lifetime3, field_b[3], field_l[0], field_l[2], field_l[3]);
+            TriangleRasterizer.drawShadedTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_l[0], field_l[1], field_l[2]);
+            TriangleRasterizer.drawShadedTriangle(var9Lifetime3, var11, field_q[3], var6Lifetime3, var8Lifetime3, field_b[3], field_l[0], field_l[2], field_l[3]);
           }
         }
     }
@@ -241,20 +241,20 @@ final class t {
           t.c();
           return;
         }
-        ti.field_c = field_a;
-        ti.field_h = field_j;
+        TriangleRasterizer.field_c = field_a;
+        TriangleRasterizer.field_h = field_j;
         int var0 = field_i & 3;
         if (var0 == 0) {
-          ti.a(field_d[0], field_d[1], field_d[2], field_r[0], field_r[1], field_r[2], field_k, field_t, field_s);
+          TriangleRasterizer.drawShadedTriangle(field_d[0], field_d[1], field_d[2], field_r[0], field_r[1], field_r[2], field_k, field_t, field_s);
         } else {
           if (var0 == 1) {
-            ti.a(field_d[0], field_d[1], field_d[2], field_r[0], field_r[1], field_r[2], field_v[field_k]);
+            TriangleRasterizer.drawFlatTriangle(field_d[0], field_d[1], field_d[2], field_r[0], field_r[1], field_r[2], field_v[field_k]);
           } else {
             if (var0 == 2) {
-              ti.a(field_d[0], field_d[1], field_d[2], field_r[0], field_r[1], field_r[2], field_k, field_t, field_s, field_h[0], field_h[1], field_h[2], field_g[0], field_g[1], field_g[2], field_o[0], field_o[1], field_o[2], field_e);
+              TriangleRasterizer.drawTexturedTriangle(field_d[0], field_d[1], field_d[2], field_r[0], field_r[1], field_r[2], field_k, field_t, field_s, field_h[0], field_h[1], field_h[2], field_g[0], field_g[1], field_g[2], field_o[0], field_o[1], field_o[2], field_e);
             } else {
               if (var0 == 3) {
-                ti.a(field_d[0], field_d[1], field_d[2], field_r[0], field_r[1], field_r[2], field_k, field_k, field_k, field_h[0], field_h[1], field_h[2], field_g[0], field_g[1], field_g[2], field_o[0], field_o[1], field_o[2], field_e);
+                TriangleRasterizer.drawTexturedTriangle(field_d[0], field_d[1], field_d[2], field_r[0], field_r[1], field_r[2], field_k, field_k, field_k, field_h[0], field_h[1], field_h[2], field_g[0], field_g[1], field_g[2], field_o[0], field_o[1], field_o[2], field_e);
               }
             }
           }
@@ -277,8 +277,8 @@ final class t {
         field_k = param6;
         field_t = param7;
         field_s = param8;
-        var9 = ti.field_k;
-        var10 = ti.field_f;
+        var9 = TriangleRasterizer.field_k;
+        var10 = TriangleRasterizer.field_f;
         var11 = 0;
         for (var12_int = 0; var12_int < 3; var12_int++) {
           var13 = param3[var12_int];
@@ -361,9 +361,9 @@ final class t {
           if (var3 >= 0 &&
             var4 >= 0 &&
             var5 >= 0 &&
-            var3 <= ti.field_e &&
-            var4 <= ti.field_e &&
-            var5 <= ti.field_e) {
+            var3 <= TriangleRasterizer.field_e &&
+            var4 <= TriangleRasterizer.field_e &&
+            var5 <= TriangleRasterizer.field_e) {
             field_a = false;
           } else {
             field_a = true;
@@ -375,14 +375,14 @@ final class t {
     static {
         field_d = new int[3];
         field_u = new int[3];
-        field_n = ti.field_i;
+        field_n = TriangleRasterizer.field_i;
         field_h = new int[3];
         field_m = new int[3];
         field_c = 50;
         field_r = new int[3];
         field_q = new int[10];
         field_l = new int[10];
-        field_v = ti.field_o;
+        field_v = TriangleRasterizer.field_o;
         field_o = new int[3];
         field_g = new int[3];
         field_f = new int[3];

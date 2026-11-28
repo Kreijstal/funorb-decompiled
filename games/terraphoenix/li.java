@@ -37,7 +37,7 @@ final class li {
             }
           }
           me.field_k = param4;
-          da.field_b = param2;
+          SoundCache.field_b = param2;
           PacketBuffer.field_h = param3;
           if (param0 != 22957) {
             field_a = true;

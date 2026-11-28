@@ -978,7 +978,7 @@ final class MenuScreen extends DungeonAssaultScreen {
             gd.a(g.field_Hb, 0, g.field_Hb, false);
           }
           if (!this.dispatchModalOrPointerInput()) {
-            this.field_x.a(-7734, this.a(AchievementIconEntry.field_k, true, lc.field_c), this.a(eh.field_h, true, hj.field_S));
+            this.field_x.a(-7734, this.a(AchievementIconEntry.field_k, true, SoundCache.field_c), this.a(eh.field_h, true, hj.field_S));
             if (this.field_x.field_b != -1) {
               this.a((byte) -112, this.field_x.field_b, true);
             }

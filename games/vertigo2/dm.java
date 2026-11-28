@@ -94,7 +94,7 @@ final class dm extends UiPanel {
           if (param0 != 0) {
             dm.a(-79, 39, -11, -30);
           }
-          var27 = id.field_f;
+          var27 = SoundCache.field_f;
           var2 = var27.readUnsignedByte(-11);
           if (var2 == 0) {
             var3 = var27.readUnsignedShort((byte) -11);

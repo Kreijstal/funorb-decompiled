@@ -1146,7 +1146,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 109, "quittowebsite");
                 if (var2 != null) {
-                  i.field_g = c.a(0, var2);
+                  SoundCache.field_g = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 96, "connectionrestored");
                 if (null != var2) {

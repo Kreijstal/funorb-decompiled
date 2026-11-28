@@ -3,7 +3,7 @@
  */
 final class BitPacketBuffer extends PacketBuffer {
     static int[] field_n;
-    static ok field_l;
+    static MusicTrack field_l;
     private IsaacRandom field_o;
     static int field_m;
     static RgbSprite field_p;
@@ -151,7 +151,7 @@ final class BitPacketBuffer extends PacketBuffer {
         if (param0 <= -107) {
           return;
         }
-        field_l = (ok) null;
+        field_l = (MusicTrack) null;
     }
 
     final void beginBitAccess(byte param0) {

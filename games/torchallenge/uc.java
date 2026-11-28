@@ -14,9 +14,9 @@ final class uc extends InteractiveWidget {
     int field_W;
     static int field_U;
 
-    final static void a(ej param0, int param1, boolean param2, int param3) {
+    final static void a(MusicTrack param0, int param1, boolean param2, int param3) {
         Object var4 = null;
-        ej var6 = null;
+        MusicTrack var6 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -42,8 +42,8 @@ final class uc extends InteractiveWidget {
             }
           }
           if (param1 != -3560) {
-            var6 = (ej) null;
-            uc.a((ej) null, 88, true, 73);
+            var6 = (MusicTrack) null;
+            uc.a((MusicTrack) null, 88, true, 73);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

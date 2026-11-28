@@ -16,7 +16,7 @@ final class nb extends am {
         int var1_intLifetime1;
         var5 = Torquing.field_u;
         try {
-          be.a();
+          TriangleRasterizer.useRasterClip();
           LoginRequestBuilder.field_c = new int[260];
           oe.field_b = 11;
           var2 = 90 % ((param0 + 4) / 60);

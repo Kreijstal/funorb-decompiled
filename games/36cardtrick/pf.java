@@ -20,7 +20,7 @@ final class pf extends IntrusiveNode {
         int var1_intLifetime1;
         var4 = Main.field_T;
         try {
-          jb.b();
+          TriangleRasterizer.useRasterClip();
           th.field_a = 11;
           sh.field_l = new int[param0];
           for (var1_int = 0; var1_int < 256; var1_int++) {

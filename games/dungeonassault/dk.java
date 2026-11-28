@@ -61,7 +61,7 @@ final class dk implements WidgetRenderer {
     }
 
     final static wh a(int param0, int param1, String param2) {
-        vh var3 = null;
+        MusicTrack var3 = null;
         RuntimeException var3_ref = null;
         wh stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -69,7 +69,7 @@ final class dk implements WidgetRenderer {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = vh.a(bl.field_t, "", param2);
+          var3 = MusicTrack.load(bl.field_t, "", param2);
           DungeonTileState.preloadMusicTrackSamples(param1 ^ param1, var3);
           stackIn_1_0 = new wh(var3, param0);
           return stackIn_1_0;

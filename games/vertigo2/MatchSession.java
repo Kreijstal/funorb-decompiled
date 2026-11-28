@@ -442,7 +442,7 @@ final class MatchSession {
             }
             stackIn_8_0[stackIn_8_1] = new PlayerState(stackIn_9_4, stackIn_11_5, stackIn_11_6, stackIn_12_7, stackIn_15_8, false);
           }
-          oo.field_i = false;
+          TriangleRasterizer.field_i = false;
           this.field_r = new LevelSimulation(this.field_j, this.field_l, this.field_B, param7);
           this.advanceOrReloadLevel(30113, true);
           return;

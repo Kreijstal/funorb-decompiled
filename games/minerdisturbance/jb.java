@@ -255,7 +255,7 @@ final class jb extends IntrusiveNode {
                   var25_ref = oa.a((byte) -83, en.field_a[var15], new String[]{"" + IntrusiveNode.field_a * 100 / 2800});
                 }
                 if (33 == var15) {
-                  var25_ref = oa.a((byte) -121, en.field_a[var15], new String[]{ri.a((byte) 115)});
+                  var25_ref = oa.a((byte) -121, en.field_a[var15], new String[]{SoundCache.formatElapsedTime((byte) 115)});
                 }
                 if (var25_ref != null) {
                   ce.field_d.drawParagraph((String) (var25_ref), 290 + param3, -var20 + var24, 215, 480, 8947848, -1, 0, 0, var20);
@@ -542,7 +542,7 @@ final class jb extends IntrusiveNode {
                   var25_ref = oa.a((byte) -83, en.field_a[var15], new String[]{"" + IntrusiveNode.field_a * 100 / 2800});
                 }
                 if (33 == var15) {
-                  var25_ref = oa.a((byte) -121, en.field_a[var15], new String[]{ri.a((byte) 115)});
+                  var25_ref = oa.a((byte) -121, en.field_a[var15], new String[]{SoundCache.formatElapsedTime((byte) 115)});
                 }
                 if (var25_ref != null) {
                   ce.field_d.drawParagraph((String) (var25_ref), 290 + param3, -var20 + var24, 215, 480, 8947848, -1, 0, 0, var20);

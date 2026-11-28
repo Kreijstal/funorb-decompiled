@@ -149,8 +149,8 @@ public final class Chess extends NetworkGameClient {
         b.field_e.a(66, 0, 66);
         b.field_e.a(0, 1, 2, (byte) 1, (byte) -1, (short) 127, (short) -1);
         b.field_e.a(3, 2, 1, (byte) 1, (byte) -1, (short) 127, (short) -1);
-        StripedProgressWidget.field_H = (dd) (b.field_e.a(100, 131072, 0, -10, 0));
-        bd.field_b = (dd) (b.field_e.a(8, 131072, 0, -10, 0));
+        StripedProgressWidget.field_H = (SoftwareModelMesh) (b.field_e.a(100, 131072, 0, -10, 0));
+        bd.field_b = (SoftwareModelMesh) (b.field_e.a(8, 131072, 0, -10, 0));
         ea.field_cb = new bn(4, 2, 1);
         ea.field_cb.a(-344, 0, -344);
         ea.field_cb.a(344, 0, -344);
@@ -160,7 +160,7 @@ public final class Chess extends NetworkGameClient {
         ea.field_cb.a(3, 2, 1, (byte) 1, (byte) -1, NodeHashTableIterator.field_g[qm.field_g], (short) -1);
         ea.field_cb.field_j[0] = NodeHashTableIterator.field_g[qm.field_g];
         ea.field_cb.field_j[1] = NodeHashTableIterator.field_g[qm.field_g];
-        ei.field_q = (dd) (ea.field_cb.a(100, 131072, 0, -10, 0));
+        ei.field_q = (SoftwareModelMesh) (ea.field_cb.a(100, 131072, 0, -10, 0));
         ArchiveIndex.field_i = new bn(4, 2, 1);
         ArchiveIndex.field_i.a(-66, 0, -66);
         ArchiveIndex.field_i.a(66, 0, -66);
@@ -170,7 +170,7 @@ public final class Chess extends NetworkGameClient {
         ArchiveIndex.field_i.a(3, 2, 1, (byte) 1, (byte) -1, (short) 960, (short) -1);
         ArchiveIndex.field_i.field_j[0] = (short)960;
         ArchiveIndex.field_i.field_j[1] = (short)960;
-        mm.field_a = (dd) (ArchiveIndex.field_i.a(100, 131072, 0, -10, 0));
+        mm.field_a = (SoftwareModelMesh) (ArchiveIndex.field_i.a(100, 131072, 0, -10, 0));
         tk.field_i = new bn(4, 2, 1);
         tk.field_i.a(-66, 0, -66);
         tk.field_i.a(66, 0, -66);
@@ -180,7 +180,7 @@ public final class Chess extends NetworkGameClient {
         tk.field_i.a(3, 2, 1, (byte) 1, (byte) -1, (short) 960, (short) -1);
         tk.field_i.field_j[1] = (short)960;
         tk.field_i.field_j[0] = (short)960;
-        mh.field_f = (dd) (tk.field_i.a(16, 131072, 0, -10, 0));
+        mh.field_f = (SoftwareModelMesh) (tk.field_i.a(16, 131072, 0, -10, 0));
     }
 
     final static int getRegistrationAge(int param0) {
@@ -264,8 +264,8 @@ public final class Chess extends NetworkGameClient {
           qh.field_b.field_J == null) {
           df.a(qh.field_b, 0);
         }
-        nh.a();
-        nh.c(370, ec.c((byte) -63) + 240);
+        TriangleRasterizer.useRasterClip();
+        TriangleRasterizer.setProjectionCenter(370, ec.c((byte) -63) + 240);
         if (PasswordValidator.h(30065)) {
           this.m(-122);
           if (PasswordValidator.h(30065)) {
@@ -592,8 +592,8 @@ public final class Chess extends NetworkGameClient {
             pd.field_Lb = var8;
             MatchingFieldValidator.field_p = null;
             DefaultTextWidgetRenderer.field_h = true;
-            nh.a();
-            nh.c(370, 240 + ec.c((byte) -63));
+            TriangleRasterizer.useRasterClip();
+            TriangleRasterizer.setProjectionCenter(370, 240 + ec.c((byte) -63));
             var10 = BoundedRandomAccessFile.a(var8.field_B.field_f, 0, var8.field_B.field_k);
             if (var10 != -2) {
               qk.field_h = 3;
@@ -756,19 +756,19 @@ public final class Chess extends NetworkGameClient {
         int var2Lifetime1;
         var8 = field_G;
         m.field_a = bn.a(lg.field_b, "", "chess_board2");
-        sl.field_g = (dd) (m.field_a.a(96, 1365, 5, -10, 5));
+        sl.field_g = (SoftwareModelMesh) (m.field_a.a(96, 1365, 5, -10, 5));
         j.field_v = bn.a(lg.field_b, "", "coin");
-        DebouncedFieldValidator.field_e = (dd) (j.field_v.a(96, 1365, 5, -10, 5));
+        DebouncedFieldValidator.field_e = (SoftwareModelMesh) (j.field_v.a(96, 1365, 5, -10, 5));
         var2 = qm.field_g;
         if (var2 != 1 &&
           var2 != 0) {
         }
         stackIn_7_0 = (1 != qm.field_g) ? 14 : 28;
         var2Lifetime1 = stackIn_7_0;
-        am.field_c = new dd[var2Lifetime1];
+        am.field_c = new SoftwareModelMesh[var2Lifetime1];
         da.field_w = new bn[var2Lifetime1];
         tf.field_l = new bn[var2Lifetime1];
-        ChessBoardRenderer.field_u = new dd[var2Lifetime1];
+        ChessBoardRenderer.field_u = new SoftwareModelMesh[var2Lifetime1];
         var3 = qm.field_g;
         if (var3 == 1) {
           for (var3 = 1; var3 < var2Lifetime1; var3++) {
@@ -776,8 +776,8 @@ public final class Chess extends NetworkGameClient {
               this.loadPieceModelVariant(2, "halloween_backgrounds", AccountNameAvailabilityValidator.field_u[var3], true, var3, AccountNameAvailabilityValidator.field_w[var3]);
             }
             if (null != tf.field_l[var3]) {
-              ChessBoardRenderer.field_u[var3] = (dd) (tf.field_l[var3].a(96, 1365, 5, -10, 5));
-              am.field_c[var3] = (dd) (da.field_w[var3].a(96, 1365, 5, -10, 5));
+              ChessBoardRenderer.field_u[var3] = (SoftwareModelMesh) (tf.field_l[var3].a(96, 1365, 5, -10, 5));
+              am.field_c[var3] = (SoftwareModelMesh) (da.field_w[var3].a(96, 1365, 5, -10, 5));
             }
           }
         } else {
@@ -806,8 +806,8 @@ public final class Chess extends NetworkGameClient {
                   var4_ref_short__[var5] = (short)(16296 - ModalDialog.a(28207, sk.field_n, 16));
                 }
               }
-              ChessBoardRenderer.field_u[var3] = (dd) (tf.field_l[var3].a(96, 1365, 5, -10, 5));
-              am.field_c[var3] = (dd) (da.field_w[var3].a(96, 1365, 5, -10, 5));
+              ChessBoardRenderer.field_u[var3] = (SoftwareModelMesh) (tf.field_l[var3].a(96, 1365, 5, -10, 5));
+              am.field_c[var3] = (SoftwareModelMesh) (da.field_w[var3].a(96, 1365, 5, -10, 5));
             }
           }
         }
@@ -833,7 +833,7 @@ public final class Chess extends NetworkGameClient {
         }
         RichTextWidget.field_N[0] = null;
         for (var3 = 1; var3 <= 6; var3++) {
-          RichTextWidget.field_N[var3] = (dd) (kl.field_k[var3].a(NameSuggestionsPanel.field_P[qm.field_g], ProgressMessageDialog.field_sb[qm.field_g], 5, -10, 5));
+          RichTextWidget.field_N[var3] = (SoftwareModelMesh) (kl.field_k[var3].a(NameSuggestionsPanel.field_P[qm.field_g], ProgressMessageDialog.field_sb[qm.field_g], 5, -10, 5));
           n.field_b[var3] = new bn(new bn[]{kl.field_k[var3]}, 1);
           dupTemp$0 = n.field_b[var3].field_j;
           var10 = dupTemp$0;
@@ -842,7 +842,7 @@ public final class Chess extends NetworkGameClient {
             var10[var5] = (short)0;
           }
           n.field_b[var3].a(this.field_H);
-          jj.field_c[var3] = (dd) (n.field_b[var3].a(NameSuggestionsPanel.field_P[qm.field_g], ProgressMessageDialog.field_sb[qm.field_g], 5, -10, 5));
+          jj.field_c[var3] = (SoftwareModelMesh) (n.field_b[var3].a(NameSuggestionsPanel.field_P[qm.field_g], ProgressMessageDialog.field_sb[qm.field_g], 5, -10, 5));
           dl.field_c[var3] = new bn(new bn[]{kl.field_k[var3]}, 1);
           for (var5 = dl.field_c[var3].field_h - 1; var5 >= 0; var5--) {
             dl.field_c[var3].field_C[var5] = -dl.field_c[var3].field_C[var5];
@@ -850,7 +850,7 @@ public final class Chess extends NetworkGameClient {
           var5_ref_int__ = dl.field_c[var3].field_O;
           dl.field_c[var3].field_O = dl.field_c[var3].field_P;
           dl.field_c[var3].field_P = var5_ref_int__;
-          q.field_b[var3] = (dd) (dl.field_c[var3].a(NameSuggestionsPanel.field_P[qm.field_g], ProgressMessageDialog.field_sb[qm.field_g], 5, 10, 5));
+          q.field_b[var3] = (SoftwareModelMesh) (dl.field_c[var3].a(NameSuggestionsPanel.field_P[qm.field_g], ProgressMessageDialog.field_sb[qm.field_g], 5, 10, 5));
         }
         var3 = qm.field_g;
         if (var3 != 1) {
@@ -875,14 +875,14 @@ public final class Chess extends NetworkGameClient {
         var3 = NameSuggestionsPanel.field_P[qm.field_g];
         var4 = ProgressMessageDialog.field_sb[qm.field_g];
         for (var5 = 1; var5 <= 6; var5++) {
-          ad.field_f[var5] = (dd) (kl.field_k[var5].a(var3, var4, 5, -10, 5));
+          ad.field_f[var5] = (SoftwareModelMesh) (kl.field_k[var5].a(var3, var4, 5, -10, 5));
           n.field_b[var5] = new bn(new bn[]{kl.field_k[var5]}, 1);
           var6 = n.field_b[var5].field_j;
           for (var7_int = n.field_b[var5].field_j.length - 1; var7_int >= 0; var7_int--) {
             var6[var7_int] = (short)0;
           }
           n.field_b[var5].a(this.field_H);
-          ig.field_f[var5] = (dd) (n.field_b[var5].a(var3, var4, 5, -10, 5));
+          ig.field_f[var5] = (SoftwareModelMesh) (n.field_b[var5].a(var3, var4, 5, -10, 5));
           dl.field_c[var5] = new bn(new bn[]{kl.field_k[var5]}, 1);
           var11 = -1 + dl.field_c[var5].field_h;
           var7_intLifetime1 = var11;
@@ -893,7 +893,7 @@ public final class Chess extends NetworkGameClient {
           var7 = dl.field_c[var5].field_O;
           dl.field_c[var5].field_O = dl.field_c[var5].field_P;
           dl.field_c[var5].field_P = var7;
-          GzipInflater.field_c[var5] = (dd) (dl.field_c[var5].a(var3 * 4, var4 / 4, 5, 10, 5));
+          GzipInflater.field_c[var5] = (SoftwareModelMesh) (dl.field_c[var5].a(var3 * 4, var4 / 4, 5, 10, 5));
         }
         for (var5 = -1 + kl.field_k.length; 0 <= var5; var5--) {
           kl.field_k[var5] = null;
@@ -903,9 +903,9 @@ public final class Chess extends NetworkGameClient {
         }
         jj.field_c[0] = null;
         ig.field_f[0] = null;
-        nh.a(0.6000000238418579f);
-        nh.a();
-        nh.c(370, ec.c((byte) -63) + 240);
+        TriangleRasterizer.rebuildPaletteWithGamma(0.6000000238418579f);
+        TriangleRasterizer.useRasterClip();
+        TriangleRasterizer.setProjectionCenter(370, ec.c((byte) -63) + 240);
         this.generatePieceSprites(true);
     }
 
@@ -1035,7 +1035,7 @@ public final class Chess extends NetworkGameClient {
     private final void generatePieceSprites(boolean param0) {
         int var12 = 0;
         int var13 = 0;
-        dd[] stackIn_5_0 = null;
+        SoftwareModelMesh[] stackIn_5_0 = null;
         int[] var2;
         int[] var3;
         int[] var4;
@@ -1045,7 +1045,7 @@ public final class Chess extends NetworkGameClient {
         int var8_int;
         RgbSprite var8;
         int var9;
-        dd[] var9_ref_dd__;
+        SoftwareModelMesh[] var9_ref_dd__;
         int var10;
         int var11;
         int[] var11_ref_int__;
@@ -1084,7 +1084,7 @@ public final class Chess extends NetworkGameClient {
           for (var10 = 1; 7 > var10; var10++) {
             TextLayout.field_d[var8_int][var10] = new RgbSprite(180, 180);
             TextLayout.field_d[var8_int][var10].bindAsRenderTarget();
-            nh.a();
+            TriangleRasterizer.useRasterClip();
             if (var10 == 2) {
               var11_ref_int__ = var4;
             } else {
@@ -1094,14 +1094,14 @@ public final class Chess extends NetworkGameClient {
                 var11_ref_int__ = var7;
               }
             }
-            var9_ref_dd__[var10].a(var15, var11_ref_int__);
+            var9_ref_dd__[var10].projectAndDrawWithTransforms(var15, var11_ref_int__);
             rl.field_d[var8_int][var10] = tg.field_r[-var10 + 6 + 6 * var8_int];
           }
         }
         dj.field_t = TextLayout.field_d[1][1].copy();
         ph.field_j.setAsRasterTarget(48);
-        nh.a();
-        nh.c(370, ec.c((byte) -63) + 240);
+        TriangleRasterizer.useRasterClip();
+        TriangleRasterizer.setProjectionCenter(370, ec.c((byte) -63) + 240);
         for (var8_intLifetime1 = 0; 2 > var8_intLifetime1; var8_intLifetime1++) {
           dj.field_t.addOutline(1);
         }
@@ -1282,7 +1282,7 @@ public final class Chess extends NetworkGameClient {
     final void initializeGame(int param0) {
         this.a(14, 12, 0, 11, 14, false, -4, 10);
         aa.field_f = ug.field_b;
-        nh.field_m = false;
+        TriangleRasterizer.field_m = false;
         MidiPcmStream var4 = new MidiPcmStream();
         var4.b(128, 16383, 9);
         MidiPcmStream var3 = new MidiPcmStream();
@@ -1444,7 +1444,7 @@ public final class Chess extends NetworkGameClient {
               NumericDateInputWidget.a(var7, 65);
             } else {
               aa.field_f = aa.field_f + 1;
-              nh.c(370, 240 + ec.c((byte) -63));
+              TriangleRasterizer.setProjectionCenter(370, 240 + ec.c((byte) -63));
               vk.field_e = true;
               NameSuggestionsPanel.field_Q = true;
               var5 = ug.field_b * ug.field_b;
@@ -1455,7 +1455,7 @@ public final class Chess extends NetworkGameClient {
           } else {
             if (aa.field_f > 0) {
               aa.field_f = aa.field_f - 1;
-              nh.c(370, ec.c((byte) -63) + 240);
+              TriangleRasterizer.setProjectionCenter(370, ec.c((byte) -63) + 240);
               NameSuggestionsPanel.field_Q = true;
               vk.field_e = true;
             }
@@ -1549,8 +1549,8 @@ public final class Chess extends NetworkGameClient {
         ic.clearStaticReferences(false);
         dn.clearStaticReferences(82);
         me.a(18854);
-        dd.clearStaticReferences();
-        nh.clearStaticReferences();
+        SoftwareModelMesh.clearStaticReferences();
+        TriangleRasterizer.clearStaticReferences();
         vc.a(0);
         fi.clearStaticReferences(124);
         q.a(5);
@@ -1585,7 +1585,7 @@ public final class Chess extends NetworkGameClient {
         rh.a(104);
         FullscreenFocusCanvas.a(-9);
         gg.c(0);
-        fe.a((byte) 106);
+        SoundCache.clearStaticReferences((byte) 106);
         aa.clearStaticReferences(0);
         ChessMatchSession.a((byte) 123);
         oh.clearStaticReferences(-16534);
@@ -1614,7 +1614,7 @@ public final class Chess extends NetworkGameClient {
         r.clearDeclaredStaticReferences(92);
         kl.a((byte) -66);
         qd.a(27265);
-        al.clearStaticReferences();
+        MidiFileReader.clearStaticReferences();
         MusicPatchPcmStream.c((byte) 124);
         sh.c(-119);
         of.clearStaticReferences(false);
@@ -1742,7 +1742,7 @@ public final class Chess extends NetworkGameClient {
         ImageProducerRasterBuffer.clearDeclaredStaticReferences(23);
         de.clearStaticReferences((byte) -120);
         tm.resetStaticState((byte) 76);
-        og.clearStaticReferences();
+        SynthesizerVoice.clearStaticReferences();
         td.resetStaticState(5239);
         cl.clearStaticReferences(12);
         df.clearStaticReferences(-6);
@@ -1861,12 +1861,12 @@ public final class Chess extends NetworkGameClient {
             nj.a(param0 ^ -19745, ChessBoardRenderer.field_O, 75.0f);
             this.renderFrame(true);
             for (var3 = 0; 7 > var3; var3++) {
-              el.field_y[var3] = pf.a(li.field_g, "", "chess" + (1 + var3));
+              el.field_y[var3] = MusicTrack.load(li.field_g, "", "chess" + (1 + var3));
               if (null != el.field_y[var3]) {
                 SpriteGeometry.field_q.a(pg.field_o, param0 ^ -19794, 0, el.field_y[var3], DisplayNameSelectionPanel.field_S);
               }
             }
-            gl.field_b = pf.a(li.field_g, "", "fanfare");
+            gl.field_b = MusicTrack.load(li.field_g, "", "fanfare");
             if (null != gl.field_b) {
               ka.field_a.a(pg.field_o, param0 - 19887, 0, gl.field_b, DisplayNameSelectionPanel.field_S);
             }
@@ -1978,7 +1978,7 @@ public final class Chess extends NetworkGameClient {
                                       dn.a(true);
                                       nj.a(-20, ae.field_a, 70.0f);
                                       this.renderFrame(true);
-                                      DisplayNameSelectionPanel.field_S = new fe(BufferedRandomAccessFile.field_m, tk.field_g);
+                                      DisplayNameSelectionPanel.field_S = new SoundCache(BufferedRandomAccessFile.field_m, tk.field_g);
                                       BufferedRandomAccessFile.field_m = null;
                                       ob.f(0);
                                       return false;
@@ -2081,9 +2081,9 @@ public final class Chess extends NetworkGameClient {
         ResourceArchive.field_l[0] = DelegatingCanvas.a((byte) -34, param0);
         for (var2 = 1; var2 < 13; var2++) {
           if (ic.field_a[var2]) {
-            ResourceArchive.field_l[var2] = DisplayNameSelectionPanel.field_S.a(va.field_c[var2], "", -12983);
+            ResourceArchive.field_l[var2] = DisplayNameSelectionPanel.field_S.getSoundEffectByName(va.field_c[var2], "", -12983);
           } else {
-            ResourceArchive.field_l[var2] = DisplayNameSelectionPanel.field_S.a(va.field_c[var2], false, "");
+            ResourceArchive.field_l[var2] = DisplayNameSelectionPanel.field_S.getMusicSampleByName(va.field_c[var2], false, "");
           }
         }
     }

@@ -45,7 +45,7 @@ final class ra {
         int var3;
         var3 = DungeonAssault.field_K;
         jj.b((byte) -103);
-        var1 = lc.findAchievementIconAt(hj.field_S, (byte) -98, eh.field_h);
+        var1 = SoundCache.findAchievementIconAt(hj.field_S, (byte) -98, eh.field_h);
         if (var1 != ak.field_n) {
           ak.field_n = var1;
           if (var1 == -1) {
@@ -58,7 +58,7 @@ final class ra {
           ra.b(-102);
         }
         if (1 == no.field_d) {
-          var2 = lc.findAchievementIconAt(lc.field_c, (byte) -94, AchievementIconEntry.field_k);
+          var2 = SoundCache.findAchievementIconAt(SoundCache.field_c, (byte) -94, AchievementIconEntry.field_k);
           if (var2 == GameAppletShell.field_f) {
             um.field_g = null;
             GameAppletShell.field_f = -1;
@@ -175,7 +175,7 @@ final class ra {
     }
 
     final static void b(int param0) {
-        ha.field_k = new lc(GuestPlayConfirmationForm.field_W, DualLinkNode.field_r);
+        ha.field_k = new SoundCache(GuestPlayConfirmationForm.field_W, DualLinkNode.field_r);
         BufferedRandomAccessFile.a(false, 30, "menu_select");
         sa.field_v = sh.a(-77, "da_ambience_drip", new int[]{110, 110, 110, 110, 140});
         hp.field_c = sh.a(-95, "da_ambience_insect", new int[]{256, 256, 168});

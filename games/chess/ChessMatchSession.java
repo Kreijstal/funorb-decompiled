@@ -153,10 +153,10 @@ final class ChessMatchSession {
         var7 = new int[]{0, 0, -1000, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
         var8 = (int)(Math.sin(var4) * 32768.0);
         var9 = (int)(32768.0 * Math.cos(var4));
-        nh.a();
+        TriangleRasterizer.useRasterClip();
         var10 = new int[]{0, 0, 0, var9, 0, var8, 0, 32768, 0, -var8, 0, var9};
-        nh.c(370, 240 + ec.c((byte) -63));
-        DebouncedFieldValidator.field_e.a(var7, var10);
+        TriangleRasterizer.setProjectionCenter(370, 240 + ec.c((byte) -63));
+        DebouncedFieldValidator.field_e.projectAndDrawWithTransforms(var7, var10);
         if (qb.field_a >= 200) {
           array$0 = new String[1];
           stackIn_6_0 = IsaacCipher.field_e;

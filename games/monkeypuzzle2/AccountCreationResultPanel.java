@@ -125,7 +125,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
           return;
         }
         try {
-          ud.a(49);
+          SoundCache.a(49);
           this.closeDialog((byte) -75);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "jg.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');

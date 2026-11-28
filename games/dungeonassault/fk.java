@@ -99,7 +99,7 @@ final class fk extends kl {
 
     final static void a(byte param0, wh param1) {
         if (param1 == null) {
-          lo.a(param0 ^ 13, true, (vh) null, 64, 0);
+          lo.a(param0 ^ 13, true, (MusicTrack) null, 64, 0);
           return;
         }
         try {
@@ -179,7 +179,7 @@ final class fk extends kl {
         } else {
           if (DefaultTextWidgetRenderer.field_s != this.field_o) {
             if (no.field_d != 0) {
-              var2 = this.b(lc.field_c, 27403, AchievementIconEntry.field_k);
+              var2 = this.b(SoundCache.field_c, 27403, AchievementIconEntry.field_k);
               if (-1 != var2) {
                 var3 = gm.field_d.field_a[var2];
                 if (var3 != null &&

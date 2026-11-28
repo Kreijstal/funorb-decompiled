@@ -201,7 +201,7 @@ final class TextHotspotBounds extends IntrusiveNode {
 
     final static void a(int param0) {
         int var1_int = 0;
-        rm var1 = null;
+        MusicTrack var1 = null;
         int var4 = 0;
         Throwable decompiledCaughtException = null;
         RuntimeException var1_ref = null;

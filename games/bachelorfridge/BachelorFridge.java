@@ -620,7 +620,7 @@ public final class BachelorFridge extends NetworkGameClient {
         SoftwareRasterizer.releaseRasterStorage();
         gr.b(12653);
         AudioOutput.releaseStatics();
-        i.releaseStatics((byte) -122);
+        SoundCache.releaseStatics((byte) -122);
         au.resetStaticState(-31824);
         NetworkGameClient.clearStaticReferences((byte) 109);
         ClientException.releaseStatics(101);
@@ -1599,7 +1599,7 @@ public final class BachelorFridge extends NetworkGameClient {
           rc.field_l = hca.a("basic", ScavengerSpecial.field_p, 84, "orbcoin");
           FullHealSpecial.a((byte) -33, ona.field_yb);
           FullHealSpecial.a((byte) -33, rc.field_l);
-          TriangleRasterizer.a(new wi(WidgetContainer.field_y, fw.field_j, ContentTransitionDialog.field_U, 32, false));
+          TriangleRasterizer.setTextureProvider(new wi(WidgetContainer.field_y, fw.field_j, ContentTransitionDialog.field_U, 32, false));
           SleepSpecial.field_p = new Sprite(32, 32);
           SleepSpecial.field_p.bindAsRenderTarget();
           rc.field_l.drawScaledAveraged(0, 0, 32, 32);

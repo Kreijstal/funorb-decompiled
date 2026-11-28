@@ -1147,8 +1147,8 @@ final class jl {
           DropTargetWidgetContainer.field_y.drawString(ma.field_f + s.field_b[var6] * 100, 276, var10, 65535, -1);
           var10 = var10 + ((var8 >> 1) + var8);
           var3Lifetime1 = 276;
-          DropTargetWidgetContainer.field_y.drawString(ja.field_g, var3Lifetime1, var10, 65535, -1);
-          var3Lifetime1 = var3Lifetime1 + DropTargetWidgetContainer.field_y.stringWidth(ja.field_g);
+          DropTargetWidgetContainer.field_y.drawString(SoundCache.field_g, var3Lifetime1, var10, 65535, -1);
+          var3Lifetime1 = var3Lifetime1 + DropTargetWidgetContainer.field_y.stringWidth(SoundCache.field_g);
           for (var11 = 0; var11 < s.field_b[var6]; var11++) {
             el.field_J.draw(var3Lifetime1, -DropTargetWidgetContainer.field_y.field_p + var10);
             var3Lifetime1 = var3Lifetime1 + el.field_J.field_u / 3;

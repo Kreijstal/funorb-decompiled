@@ -13,11 +13,11 @@ final class bc {
         }
         int var3 = 19 % ((-39 - param1) / 53);
         if (param0 % 10L != 0L) {
-          fe.sleepIgnoringInterrupts(param0, -74);
+          SoundCache.sleepIgnoringInterrupts(param0, -74);
           return;
         }
-        fe.sleepIgnoringInterrupts(-1L + param0, -95);
-        fe.sleepIgnoringInterrupts(1L, -120);
+        SoundCache.sleepIgnoringInterrupts(-1L + param0, -95);
+        SoundCache.sleepIgnoringInterrupts(1L, -120);
     }
 
     public static void a(int param0) {

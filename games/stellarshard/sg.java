@@ -18,7 +18,7 @@ final class sg {
         if (param0 < 18) {
           return false;
         }
-        return gk.field_a;
+        return SoundCache.field_a;
     }
 
     final static AccountServiceResult pollAccountNameCheck(byte param0, String param1) {
@@ -38,13 +38,13 @@ final class sg {
             return (AccountServiceResult) (stackIn_2_0);
           }
           if (ta.field_m == DiskArchiveRequest.field_E &&
-            param1.equals(gk.field_c)) {
+            param1.equals(SoundCache.field_c)) {
             DiskArchiveRequest.field_E = ok.field_a;
             stackIn_9_0 = ed.field_d;
             return stackIn_9_0;
           }
           DiskArchiveRequest.field_E = dj.field_a;
-          gk.field_c = param1;
+          SoundCache.field_c = param1;
           ed.field_d = null;
           stackIn_7_0 = null;
           return (AccountServiceResult) (stackIn_7_0);

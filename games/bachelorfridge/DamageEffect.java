@@ -509,7 +509,7 @@ final class DamageEffect extends EventEffect {
         int var1 = saa.field_b * saa.field_b;
         int var2 = -(FishRainSpecial.field_t * FishRainSpecial.field_t) + var1;
         int var3 = fs.field_f + (pda.field_p - fs.field_f) * var2 / var1;
-        i.field_a.a(120, 31407, 640, ce.field_t, var3);
+        SoundCache.field_a.a(120, 31407, 640, ce.field_t, var3);
         ActorAnimation.a(5, gba.field_Bb, 91, -24 + pda.field_p, lm.field_d, 0, 640);
     }
 

@@ -326,24 +326,24 @@ final class MidiPcmStream extends PcmStream {
               if (stackIn_23_0 > stackIn_23_1) {
                 this.field_o = this.field_G;
                 this.field_l = -1;
-                this.field_K = this.field_z.b(this.field_o);
+                this.field_K = this.field_z.tickTime(this.field_o);
               }
             }
             return;
           }
           while (var3 == this.field_z.field_i[var2]) {
-            this.field_z.c(var2);
-            var6 = this.field_z.a(var2);
+            this.field_z.seekTrack(var2);
+            var6 = this.field_z.readMessage(var2);
             if (1 != var6) {
               if ((128 & var6) != 0) {
                 this.handleMidiMessage(var6, 15);
               }
-              this.field_z.e(var2);
-              this.field_z.f(var2);
+              this.field_z.readDelta(var2);
+              this.field_z.saveTrackPosition(var2);
               continue;
             }
-            this.field_z.d();
-            this.field_z.f(var2);
+            this.field_z.markTrackDone();
+            this.field_z.saveTrackPosition(var2);
             if (this.field_z.isDone()) {
               if (this.field_E != null) {
                 this.a(this.field_E, (byte) -110, this.field_j);
@@ -352,7 +352,7 @@ final class MidiPcmStream extends PcmStream {
               }
               if (this.field_j &&
                 var3 != 0) {
-                this.field_z.a(var4);
+                this.field_z.reset(var4);
               } else {
                 this.resetPlaybackChannels(true, 122);
                 this.field_z.release();
@@ -363,7 +363,7 @@ final class MidiPcmStream extends PcmStream {
           }
           var2 = this.field_z.nextTrack();
           var3 = this.field_z.field_i[var2];
-          var4 = this.field_z.b(var3);
+          var4 = this.field_z.tickTime(var3);
         }
     }
 
@@ -1001,21 +1001,21 @@ final class MidiPcmStream extends PcmStream {
         int var7 = BachelorFridge.field_y;
         try {
           this.clearMidiPlayback(param1, true);
-          this.field_z.a(param2.field_g);
+          this.field_z.parse(param2.field_g);
           this.field_q = 0L;
           this.field_j = param0 ? true : false;
-          var5_int = this.field_z.c();
+          var5_int = this.field_z.trackCount();
           for (var6 = 0; var6 < var5_int; var6++) {
-            this.field_z.c(var6);
-            this.field_z.e(var6);
-            this.field_z.f(var6);
+            this.field_z.seekTrack(var6);
+            this.field_z.readDelta(var6);
+            this.field_z.saveTrackPosition(var6);
           }
           if (param3 != 23721) {
             this.onChannelPressure(-121, (byte) -69, 4);
           }
           this.field_l = this.field_z.nextTrack();
           this.field_o = this.field_z.field_i[this.field_l];
-          this.field_K = this.field_z.b(this.field_o);
+          this.field_K = this.field_z.tickTime(this.field_o);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "jp.Q(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -1186,7 +1186,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean a(ResourceArchive param0, MusicTrack param1, i param2, byte param3, int param4) {
+    final synchronized boolean a(ResourceArchive param0, MusicTrack param1, SoundCache param2, byte param3, int param4) {
         int stackIn_17_0 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -1206,7 +1206,7 @@ final class MidiPcmStream extends PcmStream {
         int var12 = 0;
         var12 = BachelorFridge.field_y;
         try {
-          param1.a();
+          param1.buildPatchUsage();
           var6_int = 1;
           var7 = null;
           if (param4 > 0) {
@@ -1237,7 +1237,7 @@ final class MidiPcmStream extends PcmStream {
             var8 = (g) (param1.field_f.next(-21446));
           }
           if (var6_int != 0) {
-            param1.b();
+            param1.releasePatchUsage();
           }
           stackIn_17_0 = var6_int;
           return stackIn_17_0 != 0;

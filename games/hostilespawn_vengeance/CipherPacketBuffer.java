@@ -8,7 +8,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     private int field_x;
     static RgbSprite field_y;
     static RgbSprite field_t;
-    static ji field_u;
+    static MusicTrack field_u;
     static int field_s;
     static String field_z;
     static RgbSprite field_w;

@@ -9,7 +9,7 @@ final class ChessBoardRenderer extends ChessBoardState {
     private double field_w;
     private int[] field_r;
     private double field_t;
-    static dd[] field_u;
+    static SoftwareModelMesh[] field_u;
     private int field_C;
     private double field_s;
     static java.applet.Applet field_B;
@@ -19,7 +19,7 @@ final class ChessBoardRenderer extends ChessBoardState {
     private RgbSprite field_M;
     private RgbSprite field_A;
     private RgbSprite field_S;
-    private dd field_v;
+    private SoftwareModelMesh field_v;
     private RgbSprite field_F;
     private RgbSprite field_p;
     private double[] field_D;
@@ -49,9 +49,9 @@ final class ChessBoardRenderer extends ChessBoardState {
         int var17;
         int var18;
         int var19;
-        dd var20;
-        dd var21;
-        dd var22;
+        SoftwareModelMesh var20;
+        SoftwareModelMesh var21;
+        SoftwareModelMesh var22;
         int[] var23;
         int var7Lifetime1;
         int var9Lifetime1;
@@ -122,14 +122,14 @@ final class ChessBoardRenderer extends ChessBoardState {
               NameSuggestionsPanel.field_Q &&
               var16 != var8) {
               this.field_A.bindAsRenderTarget();
-              var21.a(param3, var23);
+              var21.projectAndDrawWithTransforms(param3, var23);
               this.field_M.bindAsRenderTarget();
-              var22.a(param3, var23);
-              var22.a();
-              var11 = dd.field_x;
-              var13 = dd.field_D;
-              var10 = dd.field_Z;
-              var12 = dd.field_eb;
+              var22.projectAndDrawWithTransforms(param3, var23);
+              var22.updateProjectedBounds();
+              var11 = SoftwareModelMesh.field_x;
+              var13 = SoftwareModelMesh.field_D;
+              var10 = SoftwareModelMesh.field_Z;
+              var12 = SoftwareModelMesh.field_eb;
               if (var14[0] > var11) {
                 var14[0] = var11;
               }
@@ -154,12 +154,12 @@ final class ChessBoardRenderer extends ChessBoardState {
             }
             if (NameSuggestionsPanel.field_Q) {
               this.field_M.bindAsRenderTarget();
-              var20.a(param3, var23);
-              var20.a();
-              var10Lifetime1 = dd.field_Z;
-              var11Lifetime1 = dd.field_x;
-              var12Lifetime1 = dd.field_eb;
-              var13Lifetime1 = dd.field_D;
+              var20.projectAndDrawWithTransforms(param3, var23);
+              var20.updateProjectedBounds();
+              var10Lifetime1 = SoftwareModelMesh.field_Z;
+              var11Lifetime1 = SoftwareModelMesh.field_x;
+              var12Lifetime1 = SoftwareModelMesh.field_eb;
+              var13Lifetime1 = SoftwareModelMesh.field_D;
               this.field_z[var7Lifetime1] = new RgbSprite(var10Lifetime1 - var11Lifetime1 + 2, var12Lifetime1 - var13Lifetime1 + 2);
               this.field_z[var7Lifetime1].bindAsRenderTarget();
               this.field_M.draw(1 - var11Lifetime1, 1 - var13Lifetime1);
@@ -355,9 +355,9 @@ final class ChessBoardRenderer extends ChessBoardState {
               for (var12_intLifetime1 = 0; var11.field_D.length > var12_intLifetime1; var12_intLifetime1++) {
                 var11.field_D[var12_intLifetime1] = (byte)var9;
               }
-              this.field_v = (dd) (var11.a(100, 131072, 10, 10, 10));
+              this.field_v = (SoftwareModelMesh) (var11.a(100, 131072, 10, 10, 10));
               var12 = new int[]{param3, param2 << 7, param3, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
-              this.field_v.a(param0, var12);
+              this.field_v.projectAndDrawWithTransforms(param0, var12);
             }
           }
           if (param1 >= -85) {
@@ -470,7 +470,7 @@ final class ChessBoardRenderer extends ChessBoardState {
         int var9 = 0;
         int var10 = 0;
         int[] var12 = null;
-        dd var13 = null;
+        SoftwareModelMesh var13 = null;
         int var14 = 0;
         int var15 = 0;
         int[] var19 = null;
@@ -514,7 +514,7 @@ final class ChessBoardRenderer extends ChessBoardState {
                 var13 = mh.field_f;
               }
             }
-            var13.a(param0, var12);
+            var13.projectAndDrawWithTransforms(param0, var12);
             if (IntrusiveDeque.field_f == -1 &&
               this.field_j == -1 &&
               this.field_S.isOpaqueAtScreenPosition(0, 0, BufferedSocket.field_k, rf.field_b)) {
@@ -603,10 +603,10 @@ final class ChessBoardRenderer extends ChessBoardState {
         int var9 = 0;
         int[] var11 = null;
         int var12 = 0;
-        dd var13 = null;
-        dd var14 = null;
-        dd var14Lifetime1;
-        dd var14Lifetime2;
+        SoftwareModelMesh var13 = null;
+        SoftwareModelMesh var14 = null;
+        SoftwareModelMesh var14Lifetime1;
+        SoftwareModelMesh var14Lifetime2;
         var12 = Chess.field_G;
         try {
           qk.field_k.field_t = SoftwareRasterizer.field_c;
@@ -636,7 +636,7 @@ final class ChessBoardRenderer extends ChessBoardState {
             for (var6_int = -16; var6_int <= 16; var6_int += 4) {
               for (var7 = -16; var7 <= 16; var7 += 4) {
                 var8_ref_int__ = new int[]{var7 + param1 << 7, 42, var6_int + param3 << 7, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
-                ei.field_q.a(param0, var8_ref_int__);
+                ei.field_q.projectAndDrawWithTransforms(param0, var8_ref_int__);
               }
             }
           }
@@ -656,11 +656,11 @@ final class ChessBoardRenderer extends ChessBoardState {
                       var14Lifetime1 = var13;
                       var11 = new int[]{var8 + param1 << 7, 42, var7 + param3 << 7, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
                       if (var13 != null) {
-                        var13.a(param0, var11);
+                        var13.projectAndDrawWithTransforms(param0, var11);
                       }
                       var14Lifetime2 = field_u[var9];
                       if (var14Lifetime2 != null) {
-                        var14Lifetime2.a(param0, var11);
+                        var14Lifetime2.projectAndDrawWithTransforms(param0, var11);
                       }
                     }
                   }
@@ -670,7 +670,7 @@ final class ChessBoardRenderer extends ChessBoardState {
           }
           var6 = new int[]{param2, -6, 0, 63488, 0, 0, 0, 63488, 0, 0, 0, 63488};
           if (rn.field_b != 0) {
-            sl.field_g.a(param0, var6);
+            sl.field_g.projectAndDrawWithTransforms(param0, var6);
           }
           qk.field_k.bindAsRenderTarget();
           return;

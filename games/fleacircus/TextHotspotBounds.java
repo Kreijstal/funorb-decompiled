@@ -61,7 +61,7 @@ final class TextHotspotBounds extends IntrusiveNode {
         return ll.field_n;
     }
 
-    final static void a(byte param0, int param1, boolean param2, wk param3) {
+    final static void a(byte param0, int param1, boolean param2, MusicTrack param3) {
         Object var4 = null;
         RuntimeException var4_ref = null;
         Throwable var5 = null;

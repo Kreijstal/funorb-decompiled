@@ -18,7 +18,7 @@ final class wd extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, boolean param1, pl param2) {
+    final static void a(int param0, boolean param1, MusicTrack param2) {
         try {
           if (param0 != 17099) {
             field_j = -73;

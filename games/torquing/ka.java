@@ -151,7 +151,7 @@ final class ka extends IntrusiveNode {
               IndexedSpriteLayer.field_e[1] = 5;
             }
           } else {
-            var3_int = rf.a(dd.field_e, bo.field_e, field_j, 99, ff.a(new String[]{"<br><%0><br>"}, 0, fi.field_c));
+            var3_int = rf.a(dd.field_e, bo.field_e, field_j, 99, ff.a(new String[]{"<br><%0><br>"}, 0, SoundCache.field_c));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(dd.field_e[var5])) {

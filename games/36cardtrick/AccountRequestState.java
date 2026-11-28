@@ -165,8 +165,8 @@ final class AccountRequestState {
             }
             ia.field_d = new String[var4];
             og.a(ij.field_a, 0, ia.field_d, 0, var4);
-            da.field_c = new String[-1 + (var3_int - var4)];
-            og.a(ij.field_a, 1 + var4, da.field_c, 0, -1 + (var3_int - var4));
+            SoundCache.field_c = new String[-1 + (var3_int - var4)];
+            og.a(ij.field_a, 1 + var4, SoundCache.field_c, 0, -1 + (var3_int - var4));
             var3_int = mh.a(false, rc.field_o, mb.field_a, re.a(bf.field_b, new String[]{"<br><%0><br>"}, (byte) -50), ij.field_a);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -189,10 +189,10 @@ final class AccountRequestState {
               stackIn_31_0 = tf.field_p.length;
             }
             var5 = stackIn_31_0;
-            if (da.field_c.length < gl.field_G.length) {
+            if (SoundCache.field_c.length < gl.field_G.length) {
               stackIn_34_0 = gl.field_G.length;
             } else {
-              stackIn_34_0 = da.field_c.length;
+              stackIn_34_0 = SoundCache.field_c.length;
             }
             var6 = stackIn_34_0;
             var7 = var6 + var5 + 7;
@@ -258,7 +258,7 @@ final class AccountRequestState {
                 var3_intLifetime1 = var7Lifetime1;
               }
             }
-            var4_ref_String__Lifetime1 = da.field_c;
+            var4_ref_String__Lifetime1 = SoundCache.field_c;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var13 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
               var7Lifetime1Lifetime1 = AccountNameAvailabilityValidator.a(false, false, var13);

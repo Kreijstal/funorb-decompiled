@@ -121,8 +121,8 @@ final class aa {
             b.field_a = new RgbSprite(SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
           }
           b.field_a.bindAsRenderTarget();
-          nh.a();
-          nh.c(370, 240 + ec.c((byte) -63));
+          TriangleRasterizer.useRasterClip();
+          TriangleRasterizer.setProjectionCenter(370, 240 + ec.c((byte) -63));
         }
         boolean decompiledFrameRemainder1 = true;
         if (var3 == 0 ||

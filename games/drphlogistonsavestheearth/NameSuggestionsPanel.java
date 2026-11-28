@@ -1409,7 +1409,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
                 var2 = wg.a("create_password_confirm", 0);
                 if (null != var2) {
-                  cf.field_a = mj.a((byte) -111, var2);
+                  SoundCache.field_a = mj.a((byte) -111, var2);
                 }
                 var2 = wg.a("create_email", 0);
                 if (var2 != null) {

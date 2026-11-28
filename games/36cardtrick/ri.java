@@ -25,7 +25,7 @@ final class ri {
         try {
           var1 = new RgbSprite(540, 140);
           dl.a(-78, var1);
-          jb.b();
+          TriangleRasterizer.useRasterClip();
           SoftwareRasterizer.clearRaster();
           h.field_F = 0;
           de.b(30);

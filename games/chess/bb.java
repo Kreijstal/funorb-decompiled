@@ -103,7 +103,7 @@ final class bb {
           DiskCacheWorker.field_e = 2;
           BirthDateValidator.field_g = 4;
           BirthDateChatEnableForm.field_I = 11;
-          fe.field_g = 15;
+          SoundCache.field_g = 15;
           qc.field_e = 2;
           var7 = dm.a(0, param0, "largefont", param2, "lobby");
           v.field_k = dm.a(0, param0, "generalfont", param2, "lobby");
@@ -113,7 +113,7 @@ final class bb {
           pk.field_a.setInlineSprites(var5, var24);
           var8 = new ci(0L, (ci) null);
           var8.field_xb = (BitmapFont) ((Object) var7);
-          var8.field_K = fe.field_g;
+          var8.field_K = SoundCache.field_g;
           var8.field_ib = 16777215;
           if (param3 != -105) {
             return;
@@ -124,7 +124,7 @@ final class bb {
           var10 = new ci(0L, (ci) null);
           var10.field_ib = 16777215;
           var10.field_xb = (BitmapFont) ((Object) v.field_k);
-          var10.field_K = fe.field_g;
+          var10.field_K = SoundCache.field_g;
           var11 = var10;
           var10.field_cb = 1;
           var11.field_fb = 1;
@@ -159,7 +159,7 @@ final class bb {
           EditableTextField.field_P.field_cb = 1;
           EditableTextField.field_P.field_xb = (BitmapFont) ((Object) v.field_k);
           EditableTextField.field_P.field_ib = 13421772;
-          EditableTextField.field_P.field_K = fe.field_g;
+          EditableTextField.field_P.field_K = SoundCache.field_g;
           sj.field_k = new ci(0L, EditableTextField.field_P);
           sj.field_k.field_P = 16777215;
           sj.field_k.field_T = 16777215;
@@ -167,7 +167,7 @@ final class bb {
           sj.field_k.field_O = 16777215;
           sj.field_k.field_ib = 16764006;
           var15 = new ci(0L, sj.field_k);
-          var15.field_K = fe.field_g;
+          var15.field_K = SoundCache.field_g;
           var15.field_ib = 16777215;
           var15.field_xb = (BitmapFont) ((Object) var7);
           ic.field_c = new ci(0L, EditableTextField.field_P);
@@ -181,7 +181,7 @@ final class bb {
           hg.field_f = new ci(0L, r.field_Tb);
           hg.field_f.a(sj.field_k, param3 ^ 2147483543);
           var16 = ao.a(param0, "button_mouseover", 2993, "lobby");
-          bd.field_a = new cf(od.field_V, var12, EditableTextField.field_P, sj.field_k, 3, 2, qc.field_e, 3, fe.field_g);
+          bd.field_a = new cf(od.field_V, var12, EditableTextField.field_P, sj.field_k, 3, 2, qc.field_e, 3, SoundCache.field_g);
           ml.field_f = new ci(0L, sj.field_k);
           ml.field_f.field_G = 1;
           ml.field_f.field_Q = var16;

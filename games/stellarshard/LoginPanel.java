@@ -70,7 +70,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
             }
             this.field_J = new InteractiveWidget(stackIn_19_3, (WidgetEventListener) null);
             if (this.field_M) {
-              this.field_E = new InteractiveWidget(gk.field_g, (WidgetEventListener) (this));
+              this.field_E = new InteractiveWidget(SoundCache.field_g, (WidgetEventListener) (this));
             }
           } else {
             this.field_D = new InteractiveWidget(EmailFormatValidator.field_l, (WidgetEventListener) null);

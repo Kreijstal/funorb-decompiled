@@ -38,7 +38,7 @@ final class of {
             }
             var2 = 1;
           }
-          ij.field_q.a(true, ab.a(0, wm.field_hb, m.field_a), ab.a(param0 ^ param0, ld.field_l, jh.field_R));
+          ij.field_q.a(true, ab.a(0, wm.field_hb, SoundCache.field_a), ab.a(param0 ^ param0, ld.field_l, jh.field_R));
           if (ij.field_q.d((byte) 55)) {
             var1_int = 1;
           }

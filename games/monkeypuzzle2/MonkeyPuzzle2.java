@@ -139,7 +139,7 @@ public final class MonkeyPuzzle2 extends bi {
           qd.clearStaticReferences(false);
           kd.clearStaticReferences((byte) 91);
           PcmResampler.clearStaticReferences((byte) 112);
-          ud.clearStaticReferences(-93);
+          SoundCache.clearStaticReferences(-93);
           ma.clearStaticReferences((byte) 94);
           e.clearStaticReferences((byte) 31);
           cl.clearStaticReferences(52);
@@ -245,7 +245,7 @@ public final class MonkeyPuzzle2 extends bi {
           RegistrationAgreementPane.clearStaticReferences(false);
           fj.c((byte) 62);
           qj.clearDeclaredStaticReferences(4201);
-          dm.clearStaticReferences();
+          SynthesizerVoice.clearStaticReferences();
           bb.clearStaticReferences(true);
           RichTextLayout.clearStaticReferences(12817);
           oi.a((byte) -90);

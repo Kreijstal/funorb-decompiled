@@ -666,7 +666,7 @@ class UiWidget extends IntrusiveNode {
             q.field_Jb = 11;
           }
         }
-        da.field_f = true;
+        SoundCache.field_f = true;
         if (param0 > 107) {
           return;
         }

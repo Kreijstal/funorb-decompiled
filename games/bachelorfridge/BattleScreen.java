@@ -360,7 +360,7 @@ final class BattleScreen extends dfa {
         int var4Lifetime2;
         var6 = BachelorFridge.field_y;
         SoftwareRasterizer.clear();
-        SoftwareRasterizer.setClip(0, 0, 640, i.field_a.field_rb);
+        SoftwareRasterizer.setClip(0, 0, 640, SoundCache.field_a.field_rb);
         if (param0 < 29) {
           var7 = (BattleCreature) null;
           this.a((BattleCreature) null, -122);
@@ -420,7 +420,7 @@ final class BattleScreen extends dfa {
             this.b(-92);
           }
           this.g((byte) -63);
-          SoftwareRasterizer.setClip(0, 0, 640, i.field_a.field_rb);
+          SoftwareRasterizer.setClip(0, 0, 640, SoundCache.field_a.field_rb);
           if (this.field_eb) {
             this.field_O.a(true, 7802);
           }
@@ -435,13 +435,13 @@ final class BattleScreen extends dfa {
             var8 = (vca) (this.field_S.nextForward(0));
           }
           if (this.field_e.field_a) {
-            ShieldAnimation.field_w.draw(0, -ShieldAnimation.field_w.field_p + i.field_a.field_rb);
+            ShieldAnimation.field_w.draw(0, -ShieldAnimation.field_w.field_p + SoundCache.field_a.field_rb);
             var4Lifetime2 = 16776960;
             if (DualLinkNodeHashTable.field_b > 0 &&
               this.field_L % 40 > 20) {
               var4Lifetime2 = 16711680;
             }
-            ej.a(38, var4Lifetime2, ArenaTheme.field_e, true, 12 + (-ShieldAnimation.field_w.field_p + i.field_a.field_rb + jha.field_g.field_u), -100);
+            ej.a(38, var4Lifetime2, ArenaTheme.field_e, true, 12 + (-ShieldAnimation.field_w.field_p + SoundCache.field_a.field_rb + jha.field_g.field_u), -100);
           }
         }
         if (BananarangSpecial.field_r >= 2) {
@@ -659,52 +659,52 @@ final class BattleScreen extends dfa {
         } else {
           var2Lifetime1 = Math.max(CreatureActor.field_h.stringWidth(cd.field_o[this.field_h.field_o - 1]), CreatureActor.field_h.stringWidth(tw.field_b));
         }
-        SoftwareRasterizer.fillRoundedRectangleAlpha(635 + (-var2Lifetime1 - 10), -ScavengerAnimation.field_w.field_p + i.field_a.field_rb - 26, var2Lifetime1 + 20, 32, 7, 65793, 128);
+        SoftwareRasterizer.fillRoundedRectangleAlpha(635 + (-var2Lifetime1 - 10), -ScavengerAnimation.field_w.field_p + SoundCache.field_a.field_rb - 26, var2Lifetime1 + 20, 32, 7, 65793, 128);
         if (this.field_h.field_J <= this.field_h.field_A) {
-          CreatureActor.field_h.drawRightAligned(tw.field_b, 630, i.field_a.field_rb - ScavengerAnimation.field_w.field_p - 12, 0, -1);
+          CreatureActor.field_h.drawRightAligned(tw.field_b, 630, SoundCache.field_a.field_rb - ScavengerAnimation.field_w.field_p - 12, 0, -1);
         } else {
-          CreatureActor.field_h.drawRightAligned(lga.a(true, new String[]{Integer.toString((this.field_h.field_A - 1) / 2 + 1), Integer.toString(this.field_h.field_J / 2)}, FishRainSpecial.field_q), 630, -12 + i.field_a.field_rb - ScavengerAnimation.field_w.field_p, 0, -1);
+          CreatureActor.field_h.drawRightAligned(lga.a(true, new String[]{Integer.toString((this.field_h.field_A - 1) / 2 + 1), Integer.toString(this.field_h.field_J / 2)}, FishRainSpecial.field_q), 630, -12 + SoundCache.field_a.field_rb - ScavengerAnimation.field_w.field_p, 0, -1);
         }
         if (param0 > -61) {
           var8 = (CreatureActor) null;
           this.b((CreatureActor) null, true);
         }
-        CreatureActor.field_h.drawRightAligned(cd.field_o[-1 + this.field_h.field_o], 630, -ScavengerAnimation.field_w.field_p + i.field_a.field_rb, 0, -1);
+        CreatureActor.field_h.drawRightAligned(cd.field_o[-1 + this.field_h.field_o], 630, -ScavengerAnimation.field_w.field_p + SoundCache.field_a.field_rb, 0, -1);
         var3 = -(this.field_h.playerCount * 132) + 592;
-        ScavengerAnimation.field_w.draw(var3, 4 - ScavengerAnimation.field_w.field_p + i.field_a.field_rb);
+        ScavengerAnimation.field_w.draw(var3, 4 - ScavengerAnimation.field_w.field_p + SoundCache.field_a.field_rb);
         for (var4 = 0; var4 < this.field_h.playerCount; var4++) {
           var5 = var4 * 132 + 40;
-          b.field_t.drawCentred(this.field_h.field_y[var4], var3 + (var5 + 67), 10 - ScavengerAnimation.field_w.field_p + (i.field_a.field_rb + 12), var4 + 2, -1);
-          SoftwareRasterizer.fillRoundedRectangleAlpha(7 + (var3 + var5), 14 - ScavengerAnimation.field_w.field_p + i.field_a.field_rb + 10, 130, 16, 7, 65793, 128);
+          b.field_t.drawCentred(this.field_h.field_y[var4], var3 + (var5 + 67), 10 - ScavengerAnimation.field_w.field_p + (SoundCache.field_a.field_rb + 12), var4 + 2, -1);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(7 + (var3 + var5), 14 - ScavengerAnimation.field_w.field_p + SoundCache.field_a.field_rb + 10, 130, 16, 7, 65793, 128);
           if (this.field_h.field_o == 1) {
             for (var6 = 0; 7 > var6; var6++) {
               if (this.field_h.rosters[var4].field_b[var6] != null) {
                 if (this.field_h.rosters[var4].field_b[var6].isDown(-124)) {
-                  CurryArenaTheme.field_g.drawScaledAlpha(18 * var6 + (var3 + var5 + 12), 27 - ScavengerAnimation.field_w.field_p + i.field_a.field_rb, CurryArenaTheme.field_g.field_q >> 1, CurryArenaTheme.field_g.field_p >> 1, 192);
+                  CurryArenaTheme.field_g.drawScaledAlpha(18 * var6 + (var3 + var5 + 12), 27 - ScavengerAnimation.field_w.field_p + SoundCache.field_a.field_rb, CurryArenaTheme.field_g.field_q >> 1, CurryArenaTheme.field_g.field_p >> 1, 192);
                 } else {
-                  this.field_o[var4][var6].field_f.a(1024, 10 + (-ScavengerAnimation.field_w.field_p + i.field_a.field_rb - 12), 256, 8, 1024, 18 * var6 + var3 + var5 - 20);
+                  this.field_o[var4][var6].field_f.a(1024, 10 + (-ScavengerAnimation.field_w.field_p + SoundCache.field_a.field_rb - 12), 256, 8, 1024, 18 * var6 + var3 + var5 - 20);
                 }
               }
             }
           } else if (this.field_h.field_o == 2) {
             for (var6 = 0; var6 < this.field_T[var4]; var6++) {
-              sj.field_k[0].draw(10 + var5 + var3 + var6 * 14, -ScavengerAnimation.field_w.field_p + i.field_a.field_rb + 22);
+              sj.field_k[0].draw(10 + var5 + var3 + var6 * 14, -ScavengerAnimation.field_w.field_p + SoundCache.field_a.field_rb + 22);
             }
           } else {
             if (3 == this.field_h.field_o) {
               for (var6 = 0; var6 < this.field_h.field_C[var4]; var6++) {
-                DisableMoveSlotEffect.field_j[0].draw(var6 * 14 + var3 + (var5 + 10), 12 + i.field_a.field_rb + (-ScavengerAnimation.field_w.field_p + 10));
+                DisableMoveSlotEffect.field_j[0].draw(var6 * 14 + var3 + (var5 + 10), 12 + SoundCache.field_a.field_rb + (-ScavengerAnimation.field_w.field_p + 10));
               }
             }
           }
           if (this.field_h.hasPlayerOfferedDraw((byte) -60, var4)) {
-            b.field_t.drawCentred(lga.a(true, new String[]{this.field_h.field_y[var4]}, DisableSpecial.field_p), 72 + var3 + (var5 - 5), 50 + i.field_a.field_rb - ScavengerAnimation.field_w.field_p, 0, -1);
+            b.field_t.drawCentred(lga.a(true, new String[]{this.field_h.field_y[var4]}, DisableSpecial.field_p), 72 + var3 + (var5 - 5), 50 + SoundCache.field_a.field_rb - ScavengerAnimation.field_w.field_p, 0, -1);
           } else {
             if (this.field_h.hasPlayerResigned((byte) 106, var4)) {
-              b.field_t.drawCentred(ZombiesAnimation.field_w, 72 + (-5 + var5 + var3), 26 + (-ScavengerAnimation.field_w.field_p + (i.field_a.field_rb + 24)), 0, -1);
+              b.field_t.drawCentred(ZombiesAnimation.field_w, 72 + (-5 + var5 + var3), 26 + (-ScavengerAnimation.field_w.field_p + (SoundCache.field_a.field_rb + 24)), 0, -1);
             } else {
               if (this.field_h.rosters[var4].field_c) {
-                b.field_t.drawCentred(cf.field_a, 72 + (-5 + var3 + var5), 50 + (i.field_a.field_rb - ScavengerAnimation.field_w.field_p), 0, -1);
+                b.field_t.drawCentred(cf.field_a, 72 + (-5 + var3 + var5), 50 + (SoundCache.field_a.field_rb - ScavengerAnimation.field_w.field_p), 0, -1);
               }
             }
           }
@@ -829,8 +829,8 @@ final class BattleScreen extends dfa {
               !InvincibleAnimation.g((byte) -59)) {
               if (!(mk.field_p <= 0) &&
                 !(mk.field_p >= ShieldAnimation.field_w.field_q) &&
-                !(i.field_a.field_rb - ShieldAnimation.field_w.field_p >= gd.field_m) &&
-                !(i.field_a.field_rb <= gd.field_m) &&
+                !(SoundCache.field_a.field_rb - ShieldAnimation.field_w.field_p >= gd.field_m) &&
+                !(SoundCache.field_a.field_rb <= gd.field_m) &&
                 lf.field_c == 1) {
                 stackIn_51_0 = !(UiWidget.field_g);
                 UiWidget.field_g = stackIn_51_0;
@@ -1149,8 +1149,8 @@ final class BattleScreen extends dfa {
             var2 = var2 + (640 - var2 - var5);
           }
           var7 = 20 + CreatureActor.field_h.measureWrappedHeight(BuffVendorAnimation.field_w[this.a(-18254, this.field_s.field_r, this.field_s.field_q)].field_d, 100, 12) + CreatureActor.field_h.measureWrappedHeight(BuffVendorAnimation.field_w[this.a(-18254, this.field_s.field_r, this.field_s.field_q)].field_a, 100, 12);
-          if (i.field_a.field_rb < var7 + var3) {
-            var3 = var3 + (i.field_a.field_rb - var3 - var7);
+          if (SoundCache.field_a.field_rb < var7 + var3) {
+            var3 = var3 + (SoundCache.field_a.field_rb - var3 - var7);
           }
           SoftwareRasterizer.fillRoundedRectangleAlpha(var2, var3, var5, var7, 5, 65793, 192);
           CreatureActor.field_h.drawCentred(BuffVendorAnimation.field_w[var4].field_a, var2 + (var5 >> 1), var3 + 15, 0, -1);

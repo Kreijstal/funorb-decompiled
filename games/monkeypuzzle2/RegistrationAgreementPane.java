@@ -131,7 +131,7 @@ final class RegistrationAgreementPane extends WidgetContainer implements TextHot
         RuntimeException var6 = null;
         try {
           if (this.field_D == param4) {
-            ud.a(108);
+            SoundCache.a(108);
             this.field_C.closeDialog((byte) -75);
           }
           if (param3 != 7) {

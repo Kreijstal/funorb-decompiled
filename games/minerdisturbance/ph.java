@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ph {
-    static wh field_a;
+    static MusicTrack field_a;
     static java.math.BigInteger field_g;
     static int field_f;
     static Sprite[] field_e;

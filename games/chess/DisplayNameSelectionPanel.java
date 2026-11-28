@@ -10,7 +10,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
     NameSuggestionsPanel field_Q;
     static int field_O;
     private InteractiveWidget field_P;
-    static fe field_S;
+    static SoundCache field_S;
 
     public final void onNameSuggestionsRefreshRequested(int param0) {
         if (param0 != 120) {
@@ -330,7 +330,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
           }
           stackIn_40_0 = (nb) (param1);
           stackIn_41_1 = (ud.field_d == param1);
-          stackIn_44_0 = (!((nb) (Object) stackIn_40_0).a(stackIn_41_1, param2, 2, (4 * fe.field_g + 8) * param4, (2 + fe.field_g) * 2, 0)) ? 0 : 1;
+          stackIn_44_0 = (!((nb) (Object) stackIn_40_0).a(stackIn_41_1, param2, 2, (4 * SoundCache.field_g + 8) * param4, (2 + SoundCache.field_g) * 2, 0)) ? 0 : 1;
           var9Lifetime1 = stackIn_44_0;
           var10 = param1.field_Kb.field_I;
           var11 = null;
@@ -448,7 +448,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
                 ~var12.field_Yb != ~NetworkGameClient.field_t) {
                 if (null != var12.field_Gb.field_db) {
                   var26 = var12.field_Gb.e((byte) 113) + 2 * BirthDateValidator.field_g;
-                  var12.field_Gb.a(var25_int, var26, param0 ^ -2147462161, fe.field_g, var19);
+                  var12.field_Gb.a(var25_int, var26, param0 ^ -2147462161, SoundCache.field_g, var19);
                   var25_int = var25_int + var26;
                 }
                 if (var12.field_Ub.field_db != null) {
@@ -457,7 +457,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
                   } else {
                     var26Lifetime2 = var12.field_Ub.e((byte) 39) + BirthDateValidator.field_g * 2;
                   }
-                  var12.field_Ub.a(var25_int, var26Lifetime2, -2147483648, fe.field_g, var19);
+                  var12.field_Ub.a(var25_int, var26Lifetime2, -2147483648, SoundCache.field_g, var19);
                   var25_int = var25_int + var26Lifetime2;
                 }
               }
@@ -469,10 +469,10 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
               } else {
                 stackIn_94_3 = 42;
               }
-              ((ci) (Object) stackIn_93_0).a(stackIn_93_1, stackIn_93_2 - stackIn_94_3 - var25_int, -2147483648, fe.field_g, var19);
+              ((ci) (Object) stackIn_93_0).a(stackIn_93_1, stackIn_93_2 - stackIn_94_3 - var25_int, -2147483648, SoundCache.field_g, var19);
               var12.field_Kb.field_db = Integer.toString(var12.field_Pb);
-              var12.field_Kb.a(-40 + var12.field_M, 40, -2147483648, fe.field_g, var19);
-              var19 = var19 + fe.field_g;
+              var12.field_Kb.a(-40 + var12.field_M, 40, -2147483648, SoundCache.field_g, var19);
+              var19 = var19 + SoundCache.field_g;
               if (var12.field_Ob.field_F &&
                 var22 != 0) {
                 pc.field_Mb = var12.field_Lb;
@@ -495,8 +495,8 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
               var24_intLifetime1 = var12.field_Xb.field_xb.lineCount(var23, var12.field_M - BirthDateValidator.field_g - BirthDateValidator.field_g);
               var12.field_Xb.field_eb = var12.field_Sb * 256 / ig.field_g;
               var12.field_Xb.field_db = var23;
-              var12.field_Xb.a(BirthDateValidator.field_g, -(BirthDateValidator.field_g * 2) + var12.field_M, param0 + 2147462161, fe.field_g * var24_intLifetime1, var19);
-              var19 = var19 + fe.field_g * var24_intLifetime1;
+              var12.field_Xb.a(BirthDateValidator.field_g, -(BirthDateValidator.field_g * 2) + var12.field_M, param0 + 2147462161, SoundCache.field_g * var24_intLifetime1, var19);
+              var19 = var19 + SoundCache.field_g * var24_intLifetime1;
             }
             if (var9Lifetime1 == 0) {
               var12.field_N = var19 - var12.field_pb;

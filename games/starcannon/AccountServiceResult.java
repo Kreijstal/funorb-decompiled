@@ -240,7 +240,7 @@ final class AccountServiceResult {
             }
             DropTargetWidgetContainer.field_x = dd.correctedCurrentTimeMillis(124);
           }
-          ja.field_c.field_b = od.field_h.length;
+          SoundCache.field_c.field_b = od.field_h.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; DualLinkNode.field_h.length > var4Lifetime1; var4Lifetime1++) {
             stackIn_88_0 = DualLinkNode.field_h[var4Lifetime1];
@@ -270,7 +270,7 @@ final class AccountServiceResult {
             }
           }
           kl.field_d = ee.field_b + var3_intLifetime1 - (var3_intLifetime1 >> 1);
-          DiskCacheWorker.field_b = ja.field_c.field_b * (mc.field_h + ResizableModalDialog.field_S << 1);
+          DiskCacheWorker.field_b = SoundCache.field_c.field_b * (mc.field_h + ResizableModalDialog.field_S << 1);
           p.field_g = -(var3_intLifetime1 >> 1) + ee.field_b;
           for (var4Lifetime2 = 0; var4Lifetime2 < DualLinkNode.field_h.length; var4Lifetime2++) {
             stackIn_113_0 = DiskCacheWorker.field_b;
@@ -303,9 +303,9 @@ final class AccountServiceResult {
             var4Lifetime3++;
           }
           if (SecondaryNodeDeque.field_a != 2) {
-            ja.field_c.a(false, param2, 0, ja.a(la.field_c, pe.field_d, 95));
+            SoundCache.field_c.a(false, param2, 0, SoundCache.findMenuActionAt(la.field_c, pe.field_d, 95));
           } else {
-            ja.field_c.a(false, param2, -1, -1);
+            SoundCache.field_c.a(false, param2, -1, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

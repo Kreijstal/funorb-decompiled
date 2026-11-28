@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class StripedProgressWidget extends UiWidget {
-    static dd field_H;
+    static SoftwareModelMesh field_H;
     static tk field_J;
     static int field_S;
     static PcmStreamMixer field_M;

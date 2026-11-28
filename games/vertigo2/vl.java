@@ -152,7 +152,7 @@ final class vl {
                 }
               }
             }
-            id.field_d = -2147483648;
+            SoundCache.field_d = -2147483648;
             FrameTimer.field_b = -2147483648;
             BlastEffectRenderer.field_i = 0;
             q.field_x = 2147483647;
@@ -251,7 +251,7 @@ final class vl {
                   }
                 }
               }
-              id.field_d = -2147483648;
+              SoundCache.field_d = -2147483648;
               FrameTimer.field_b = -2147483648;
               BlastEffectRenderer.field_i = 0;
               q.field_x = 2147483647;
@@ -361,7 +361,7 @@ final class vl {
                   }
                 }
               }
-              id.field_d = -2147483648;
+              SoundCache.field_d = -2147483648;
               FrameTimer.field_b = -2147483648;
               BlastEffectRenderer.field_i = 0;
               q.field_x = 2147483647;
@@ -383,7 +383,7 @@ final class vl {
             }
             if (null != RichTextLayout.field_m &&
               param1 <= RichTextLayout.field_m.length) {
-              id.field_d = -2147483648;
+              SoundCache.field_d = -2147483648;
               FrameTimer.field_b = -2147483648;
               BlastEffectRenderer.field_i = 0;
               q.field_x = 2147483647;
@@ -393,7 +393,7 @@ final class vl {
             RichTextLayout.field_m = new boolean[2 * param1];
           }
         }
-        id.field_d = -2147483648;
+        SoundCache.field_d = -2147483648;
         FrameTimer.field_b = -2147483648;
         BlastEffectRenderer.field_i = 0;
         q.field_x = 2147483647;

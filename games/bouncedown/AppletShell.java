@@ -100,7 +100,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
 
     public final java.net.URL getCodeBase() {
         RuntimeException var1;
-        if (i.field_h != null) {
+        if (SoundCache.field_h != null) {
           return null;
         }
         if (null != a.field_c &&
@@ -257,8 +257,8 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
             decompiledFrameRemainder0 = (var4 != 0);
           }
           if (decompiledFrameRemainder0) {
-            if (i.field_h != null) {
-              var2 = i.field_h;
+            if (SoundCache.field_h != null) {
+              var2 = SoundCache.field_h;
               if (var4 != 0) {
                 if (a.field_c == null) {
                   var2 = og.field_c;
@@ -286,13 +286,13 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) ch.field_h));
           ch.field_h.setSize(kj.field_i, jc.field_i);
           ch.field_h.setVisible(true);
-          boolean decompiledSharedTail0 = (var2 == i.field_h);
+          boolean decompiledSharedTail0 = (var2 == SoundCache.field_h);
           if (!decompiledSharedTail0) {
             ch.field_h.setLocation(NanoFrameTimer.field_e, ob.field_d);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
-            var3 = i.field_h.getInsets();
+            var3 = SoundCache.field_h.getInsets();
             ch.field_h.setLocation(var3.left + NanoFrameTimer.field_e, ob.field_d + var3.top);
           }
           ch.field_h.addFocusListener((java.awt.event.FocusListener) (this));
@@ -366,7 +366,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         java.net.URL stackIn_14_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != i.field_h) {
+          if (null != SoundCache.field_h) {
             stackIn_4_0 = null;
             return (java.net.URL) (stackIn_4_0);
           }
@@ -391,7 +391,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         java.applet.AppletContext stackIn_10_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (i.field_h != null) {
+          if (SoundCache.field_h != null) {
             stackIn_2_0 = null;
             return (java.applet.AppletContext) (stackIn_2_0);
           }
@@ -796,7 +796,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
             }
           }
           this.clearClientResources((byte) -124);
-          if (i.field_h != null) {
+          if (SoundCache.field_h != null) {
             try {
               System.exit(0);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {
@@ -847,14 +847,14 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
             fl.field_a = fl.field_a - 50;
             ch.field_h.setSize(kj.field_i, jc.field_i);
             ch.field_h.setVisible(true);
-            boolean decompiledSharedTail0 = (null != i.field_h &&
+            boolean decompiledSharedTail0 = (null != SoundCache.field_h &&
               null == IntrusiveNode.field_b);
             if (!decompiledSharedTail0) {
               ch.field_h.setLocation(NanoFrameTimer.field_e, ob.field_d);
               decompiledSharedTail0 = (Bounce.field_N != 0);
             }
             if (decompiledSharedTail0) {
-              var6 = i.field_h.getInsets();
+              var6 = SoundCache.field_h.getInsets();
               ch.field_h.setLocation(var6.left + NanoFrameTimer.field_e, ob.field_d + var6.top);
             }
           }
@@ -901,7 +901,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != i.field_h) {
+          if (null != SoundCache.field_h) {
             stackIn_4_0 = null;
             return (String) (stackIn_4_0);
           }

@@ -42,7 +42,7 @@ final class ke extends IntrusiveNode {
             return;
           }
           if (ContentTransitionDialog.field_U != 0) {
-            i.a(param0, 0);
+            SoundCache.a(param0, 0);
             return;
           }
           of.a(false, param1, (byte) -48);

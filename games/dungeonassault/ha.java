@@ -9,7 +9,7 @@ final class ha extends um {
     static String[] field_j;
     private java.net.ProxySelector field_m;
     static String field_o;
-    static lc field_k;
+    static SoundCache field_k;
     static String[] field_l;
 
     final static void d(int param0) {

@@ -142,7 +142,7 @@ final class LevelLostEntrancePhase extends ResultScenePhase {
         } else {
           var5 = var9.readUnsignedShort((byte) -7);
           try {
-            var10 = bn.field_g.a(127, var5);
+            var10 = SoundCache.field_g.a(127, var5);
             fb.field_b = var10.e(60);
             if (CipherPacketBuffer.field_s.equals(je.field_g)) {
               stackIn_24_0 = null;

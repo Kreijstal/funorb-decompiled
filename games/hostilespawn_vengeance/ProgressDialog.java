@@ -5,7 +5,7 @@ final class ProgressDialog extends ResizableModalDialog {
     static String field_gb;
     private boolean field_jb;
     private String field_cb;
-    static ji field_ab;
+    static MusicTrack field_ab;
     private String field_bb;
     static RgbSprite field_hb;
     static char[] field_db;

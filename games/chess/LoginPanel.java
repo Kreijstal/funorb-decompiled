@@ -7,7 +7,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
     private EditableTextField field_N;
     private boolean field_Y;
     private InteractiveWidget field_M;
-    static pf field_R;
+    static MusicTrack field_R;
     private InteractiveWidget field_L;
     private boolean field_T;
     static String field_X;
@@ -424,7 +424,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             }
             var2 = 1;
           }
-          AccountRegistrationPanel.field_R.a(fe.a(TextHotspotBounds.field_m, 1, ag.field_f), 99, fe.a(BufferedSocket.field_k, 1, rf.field_b));
+          AccountRegistrationPanel.field_R.a(SoundCache.findMenuActionAt(TextHotspotBounds.field_m, 1, ag.field_f), 99, SoundCache.findMenuActionAt(BufferedSocket.field_k, 1, rf.field_b));
           if (AccountRegistrationPanel.field_R.d((byte) 124)) {
             var1_int = 1;
           }

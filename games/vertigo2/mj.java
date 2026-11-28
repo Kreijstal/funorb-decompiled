@@ -263,10 +263,10 @@ final class mj {
         int var13 = 0;
         int var14 = 0;
         try {
-          var7_int = oo.field_j[param2];
-          var8 = oo.field_h[param2];
-          var9 = oo.field_j[param3];
-          var10 = oo.field_h[param3];
+          var7_int = TriangleRasterizer.field_j[param2];
+          var8 = TriangleRasterizer.field_h[param2];
+          var9 = TriangleRasterizer.field_j[param3];
+          var10 = TriangleRasterizer.field_h[param3];
           var11 = (var7_int >> 1) * (var9 >> 1) >> 14;
           var12 = (var9 >> 1) * (var8 >> 1) >> 14;
           if (param5 >= -13) {

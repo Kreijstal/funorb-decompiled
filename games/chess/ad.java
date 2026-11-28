@@ -8,14 +8,14 @@ final class ad {
     static boolean field_b;
     private DualLinkNode field_e;
     static int field_a;
-    static dd[] field_f;
+    static SoftwareModelMesh[] field_f;
 
     final int c(int param0) {
         int var4 = Chess.field_G;
         int var2 = 0;
         DualLinkNode var3 = this.field_g.secondaryNext;
         if (param0 != -19099) {
-          field_f = (dd[]) null;
+          field_f = (SoftwareModelMesh[]) null;
           while (var3 != this.field_g) {
             var2++;
             var3 = var3.secondaryNext;
@@ -280,6 +280,6 @@ final class ad {
 
     static {
         field_b = true;
-        field_f = new dd[7];
+        field_f = new SoftwareModelMesh[7];
     }
 }

@@ -67,7 +67,7 @@ final class sg {
           try {
             var3 = new java.net.URL(param0.getCodeBase(), param2);
             var3 = rh.a(var3, param0, (byte) -87);
-            fe.a(var3.toString(), true, (byte) 112, param0);
+            SoundCache.openExternalUrl(var3.toString(), true, (byte) 112, param0);
           } catch (Exception exception) {
             exception.printStackTrace();
           }

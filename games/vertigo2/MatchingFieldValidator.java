@@ -4,7 +4,7 @@
 final class MatchingFieldValidator extends TextFieldValidator {
     static int field_l;
     static AccountServiceResult field_p;
-    static si field_o;
+    static MusicTrack field_o;
     private EditableTextField field_r;
     static tq field_n;
     static int field_q;

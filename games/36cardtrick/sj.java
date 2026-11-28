@@ -166,10 +166,10 @@ final class sj {
                 stackIn_19_0 = tf.field_p.length;
               }
               var7 = stackIn_19_0;
-              if (gl.field_G.length > da.field_c.length) {
+              if (gl.field_G.length > SoundCache.field_c.length) {
                 stackIn_22_0 = gl.field_G.length;
               } else {
-                stackIn_22_0 = da.field_c.length;
+                stackIn_22_0 = SoundCache.field_c.length;
               }
               var8 = stackIn_22_0;
               if (var3 >= 6 &&
@@ -183,10 +183,10 @@ final class sj {
               }
               if (var3 >= var7 + 7 &&
                 var3 < 7 - (-var7 - var8)) {
-                if (-7 + (var3 - var7) >= da.field_c.length) {
+                if (-7 + (var3 - var7) >= SoundCache.field_c.length) {
                   stackIn_35_0 = "";
                 } else {
-                  stackIn_35_0 = da.field_c[-7 + var3 - var7];
+                  stackIn_35_0 = SoundCache.field_c[-7 + var3 - var7];
                 }
                 var6 = stackIn_35_0;
               }

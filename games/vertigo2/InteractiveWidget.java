@@ -261,7 +261,7 @@ class InteractiveWidget extends UiWidget {
           if (param0 <= 10) {
             return;
           }
-          var1 = id.field_f;
+          var1 = SoundCache.field_f;
           var2 = var1.readUnsignedByte(-11);
           if (var2 == 0) {
             if (null == jn.field_g) {

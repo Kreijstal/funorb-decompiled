@@ -2725,7 +2725,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(91, "fs_focus");
                 if (null != var2) {
-                  ri.field_f = FullscreenStatusDialog.a(var2, -122);
+                  SoundCache.field_f = FullscreenStatusDialog.a(var2, -122);
                 }
                 var2 = PasswordValidator.a(param0 ^ -9294, "fs_focus_or_resolution");
                 if (null != var2) {

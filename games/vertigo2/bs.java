@@ -166,7 +166,7 @@ final class bs extends UiPanel {
           }
           var1 = new Sprite(540, 140);
           TextLineMetrics.a(var1, (byte) -94);
-          oo.c();
+          TriangleRasterizer.useRasterClip();
           SoftwareRasterizer.clearRaster();
           hm.field_F = 0;
           bq.h(-105);

@@ -138,15 +138,15 @@ final class DungeonTileState {
         try {
           pd.field_E = param0;
           if (param1 != 14) {
-            vh var3 = (vh) null;
-            DungeonTileState.preloadMusicTrackSamples(38, (vh) null);
+            MusicTrack var3 = (MusicTrack) null;
+            DungeonTileState.preloadMusicTrackSamples(38, (MusicTrack) null);
           }
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ai.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static void preloadMusicTrackSamples(int param0, vh param1) {
+    final static void preloadMusicTrackSamples(int param0, MusicTrack param1) {
         try {
           FullscreenFocusCanvas.field_b.field_A.a(false, ha.field_k, tl.field_k, param0, param1);
         } catch (RuntimeException runtimeException) {

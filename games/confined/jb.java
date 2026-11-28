@@ -58,7 +58,7 @@ final class jb {
           }
           return;
         }
-        this.field_p.a(true, this.a((byte) -118, wm.field_hb, m.field_a), this.a((byte) -118, ld.field_l, jh.field_R));
+        this.field_p.a(true, this.a((byte) -118, wm.field_hb, SoundCache.field_a), this.a((byte) -118, ld.field_l, jh.field_R));
         var2 = this.b(param0 ^ -22, true) ? 1 : 0;
         if (param0 != 118) {
           discarded$2 = this.d(-22, true);
@@ -108,7 +108,7 @@ final class jb {
         if (param0 != 68) {
           this.field_q = -126;
         }
-        this.field_p.a(true, this.a((byte) -118, wm.field_hb, m.field_a), this.a((byte) -118, ld.field_l, jh.field_R));
+        this.field_p.a(true, this.a((byte) -118, wm.field_hb, SoundCache.field_a), this.a((byte) -118, ld.field_l, jh.field_R));
         if (!this.d(param0 - 150, true)) {
         }
     }
@@ -366,7 +366,7 @@ final class jb {
             if (param0 != -1) {
               discarded$2 = this.a(true, (byte) -54);
             }
-            this.field_p.a(true, this.a((byte) -118, wm.field_hb, m.field_a), this.a((byte) -118, ld.field_l, jh.field_R));
+            this.field_p.a(true, this.a((byte) -118, wm.field_hb, SoundCache.field_a), this.a((byte) -118, ld.field_l, jh.field_R));
             discarded$3 = this.a(0, true);
             return;
           }
@@ -409,7 +409,7 @@ final class jb {
         ClientException.a(this, 0);
         do {
           if (!nm.e((byte) -96)) {
-            this.field_p.a(true, this.a((byte) -118, wm.field_hb, m.field_a), this.a((byte) -118, ld.field_l, jh.field_R));
+            this.field_p.a(true, this.a((byte) -118, wm.field_hb, SoundCache.field_a), this.a((byte) -118, ld.field_l, jh.field_R));
             discarded$0 = this.c(param0 - 3795, true);
             return;
           }
@@ -771,8 +771,8 @@ final class jb {
               } else {
                 if (wm.field_hb >= var5 &&
                   32 + var5 > wm.field_hb &&
-                  var6 <= m.field_a &&
-                  var6 + 32 > m.field_a) {
+                  var6 <= SoundCache.field_a &&
+                  var6 + 32 > SoundCache.field_a) {
                   if (var10 != this.field_j) {
                     this.field_j = var10;
                   } else {
@@ -972,7 +972,7 @@ final class jb {
                 if (var3.field_d != 9) {
                   throw new IllegalStateException();
                 }
-                var11 = 128 * m.field_l / 128;
+                var11 = 128 * SoundCache.field_l / 128;
               } else {
                 var11 = 128 * hd.field_f / 128;
               }
@@ -1029,7 +1029,7 @@ final class jb {
         ClientException.a(this, param0);
         do {
           if (!nm.e((byte) -96)) {
-            this.field_p.a(true, this.a((byte) -118, wm.field_hb, m.field_a), this.a((byte) -118, ld.field_l, jh.field_R));
+            this.field_p.a(true, this.a((byte) -118, wm.field_hb, SoundCache.field_a), this.a((byte) -118, ld.field_l, jh.field_R));
             discarded$1 = this.a(true, 34);
             return;
           }
@@ -1327,35 +1327,35 @@ final class jb {
                 var8Lifetime2 = 128;
               }
             }
-            if (var8Lifetime2 != m.field_l) {
-              m.field_l = var8Lifetime2;
+            if (var8Lifetime2 != SoundCache.field_l) {
+              SoundCache.field_l = var8Lifetime2;
               IntrusiveNodeHashTableIterator.b((byte) -106);
             }
           }
           if (this.field_p.a(0)) {
-            if (m.field_l != 0) {
-              m.field_l = 0;
+            if (SoundCache.field_l != 0) {
+              SoundCache.field_l = 0;
               IntrusiveNodeHashTableIterator.b((byte) -123);
             }
             this.e((byte) -127);
           }
           if (this.field_p.c((byte) -120)) {
-            if (m.field_l != 128) {
-              m.field_l = 128;
+            if (SoundCache.field_l != 128) {
+              SoundCache.field_l = 128;
               IntrusiveNodeHashTableIterator.b((byte) -125);
             }
             this.e((byte) -122);
           }
           if (this.field_p.e((byte) 105)) {
-            if (m.field_l > 0) {
-              m.field_l = -16 & m.field_l - 1;
+            if (SoundCache.field_l > 0) {
+              SoundCache.field_l = -16 & SoundCache.field_l - 1;
               IntrusiveNodeHashTableIterator.b((byte) -117);
             }
             this.e((byte) -127);
           }
           if (this.field_p.b(124)) {
-            if (m.field_l < 128) {
-              m.field_l = -16 & 16 + m.field_l;
+            if (SoundCache.field_l < 128) {
+              SoundCache.field_l = -16 & 16 + SoundCache.field_l;
               IntrusiveNodeHashTableIterator.b((byte) -127);
             }
             this.e((byte) -121);

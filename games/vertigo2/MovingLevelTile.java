@@ -437,11 +437,11 @@ final class MovingLevelTile extends LevelTile {
         return var2 != 0;
     }
 
-    final static void playMusicTrackLooped(int param0, si param1) {
+    final static void playMusicTrackLooped(int param0, MusicTrack param1) {
         try {
           if (param0 <= 33) {
-            si var3 = (si) null;
-            MovingLevelTile.playMusicTrackLooped(9, (si) null);
+            MusicTrack var3 = (MusicTrack) null;
+            MovingLevelTile.playMusicTrackLooped(9, (MusicTrack) null);
           }
           bm.a(param1, true, 4);
         } catch (RuntimeException runtimeException) {

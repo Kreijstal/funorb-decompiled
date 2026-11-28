@@ -13,7 +13,7 @@ final class ca {
         }
     }
 
-    final static jj a(int param0, int param1, int param2, ResourceArchive param3, gk param4) {
+    final static jj a(int param0, int param1, int param2, ResourceArchive param3, SoundCache param4) {
         byte[] var5 = null;
         RuntimeException var5_ref = null;
         byte[] var6 = null;

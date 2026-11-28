@@ -43,7 +43,7 @@ final class lh {
     int[] field_E;
     int[] field_c;
     int[] field_P;
-    private ja field_y;
+    private SoundCache field_y;
     static String field_n;
     int field_m;
 
@@ -137,9 +137,9 @@ final class lh {
         for (var3 = 0; var3 < this.field_L.length; var3++) {
           if (null == this.field_L[var3]) {
             if (this.field_B[var3] >> 4 == 0) {
-              var5 = this.field_y.b(this.field_t[var3], this.field_x[var3], 91);
+              var5 = this.field_y.getSoundEffectByGroup(this.field_t[var3], this.field_x[var3], 91);
             } else {
-              var5 = this.field_y.a(this.field_x[var3], this.field_t[var3], (byte) 41);
+              var5 = this.field_y.getMusicSampleByGroup(this.field_x[var3], this.field_t[var3], (byte) 41);
             }
             if (var5 != null) {
               this.field_B[var3] = w.a(this.field_B[var3], 15);
@@ -193,7 +193,7 @@ final class lh {
         }
     }
 
-    lh(PacketBuffer param0, ja param1) {
+    lh(PacketBuffer param0, SoundCache param1) {
         int var3_int = 0;
         int var4 = 0;
         int dupTemp$0 = 0;

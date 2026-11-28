@@ -150,7 +150,7 @@ final class tq {
         var17 = null;
         var11 = Vertigo2.field_L ? 1 : 0;
         try {
-          var1 = id.field_f;
+          var1 = SoundCache.field_f;
           if (param0 != -66) {
             return;
           }

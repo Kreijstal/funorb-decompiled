@@ -8,7 +8,7 @@ final class tk {
 
     final static void a(int param0) {
         String var1 = null;
-        if (gk.field_a) {
+        if (SoundCache.field_a) {
           if (ModalDialogHost.field_G != null) {
             ModalDialogHost.field_G.closeDialog(3);
           }

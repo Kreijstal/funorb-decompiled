@@ -104,7 +104,7 @@ class EditableTextField extends InteractiveWidget {
         var19 = Torquing.field_u;
         try {
           if (param1 >= 0 &&
-            param3 < be.field_f) {
+            param3 < TriangleRasterizer.field_f) {
             if (param8 < 113) {
               return;
             }
@@ -113,9 +113,9 @@ class EditableTextField extends InteractiveWidget {
               0 > param7) {
               return;
             }
-            if (be.field_p <= param0 &&
-              be.field_p <= param4 &&
-              be.field_p <= param7) {
+            if (TriangleRasterizer.field_p <= param0 &&
+              TriangleRasterizer.field_p <= param4 &&
+              TriangleRasterizer.field_p <= param7) {
               return;
             }
             var14 = -param3 + param1;
@@ -150,14 +150,14 @@ class EditableTextField extends InteractiveWidget {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var16Lifetime2 = be.field_n[param3];
+                var16Lifetime2 = TriangleRasterizer.field_n[param3];
                 while (param3 < param5) {
                   var17 = var9_int >> 16;
-                  if (be.field_p > var17) {
+                  if (TriangleRasterizer.field_p > var17) {
                     var18 = -(var9_int >> 16) + (var10 >> 16);
                     if (0 != var18) {
-                      if (be.field_p <= var17 + var18) {
-                        var18 = -1 + (be.field_p - var17);
+                      if (TriangleRasterizer.field_p <= var17 + var18) {
+                        var18 = -1 + (TriangleRasterizer.field_p - var17);
                       }
                       if (var17 >= 0) {
                         GzipDecompressor.a(var18, var16Lifetime2 + var17, -98, param6, param2);
@@ -166,13 +166,13 @@ class EditableTextField extends InteractiveWidget {
                       }
                     } else {
                       if (var17 >= 0 &&
-                        var17 < be.field_p) {
+                        var17 < TriangleRasterizer.field_p) {
                         GzipDecompressor.a(var18, var17 + var16Lifetime2, -104, param6, param2);
                       }
                     }
                   }
                   param3++;
-                  if (be.field_f <= param3) {
+                  if (TriangleRasterizer.field_f <= param3) {
                     return;
                   }
                   var9_int = var9_int + var11;
@@ -228,19 +228,19 @@ class EditableTextField extends InteractiveWidget {
               var10 = var10 + param3 * var12;
               param3 = 0;
             }
-            var15Lifetime1 = be.field_n[param3];
+            var15Lifetime1 = TriangleRasterizer.field_n[param3];
             while (param1 > param3) {
               var16Lifetime1 = var9_int >> 16;
-              if (be.field_p > var16Lifetime1) {
+              if (TriangleRasterizer.field_p > var16Lifetime1) {
                 var17Lifetime1 = (var10 >> 16) - (var9_int >> 16);
                 if (0 == var17Lifetime1) {
                   if (var16Lifetime1 >= 0 &&
-                    var16Lifetime1 < be.field_p) {
+                    var16Lifetime1 < TriangleRasterizer.field_p) {
                     GzipDecompressor.a(var17Lifetime1, var16Lifetime1 + var15Lifetime1, -98, param6, param2);
                   }
                 } else {
-                  if (var17Lifetime1 + var16Lifetime1 >= be.field_p) {
-                    var17Lifetime1 = be.field_p - var16Lifetime1 - 1;
+                  if (var17Lifetime1 + var16Lifetime1 >= TriangleRasterizer.field_p) {
+                    var17Lifetime1 = TriangleRasterizer.field_p - var16Lifetime1 - 1;
                   }
                   if (0 <= var16Lifetime1) {
                     GzipDecompressor.a(var17Lifetime1, var16Lifetime1 + var15Lifetime1, -114, param6, param2);
@@ -250,7 +250,7 @@ class EditableTextField extends InteractiveWidget {
                 }
               }
               param3++;
-              if (param3 >= be.field_f) {
+              if (param3 >= TriangleRasterizer.field_f) {
                 return;
               }
               var9_int = var9_int + var11;

@@ -335,7 +335,7 @@ final class MusicPatchPcmStream extends PcmStream {
         if (param0 != 31751) {
           MusicPatchPcmStream.a(59, -22, 8);
         }
-        lc.field_d = 0;
+        SoundCache.field_d = 0;
     }
 
     private final void skipVoiceFrames(int param0, lp param1, int param2) {

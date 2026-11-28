@@ -3,11 +3,11 @@
  */
 final class CrossfadingMidiPcmStream extends PcmStream {
     private boolean field_o;
-    private fj field_w;
-    private fj field_l;
+    private MusicTrack field_w;
+    private MusicTrack field_l;
     private int field_n;
     static IntrusiveDeque field_q;
-    private fj field_z;
+    private MusicTrack field_z;
     private int field_m;
     private MidiPcmStream field_t;
     private int[] field_y;

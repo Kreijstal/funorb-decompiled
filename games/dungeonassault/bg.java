@@ -805,7 +805,7 @@ final class bg extends DungeonAssaultScreen {
         var2 = this.b(-73, eh.field_h, hj.field_S);
         var3 = -1;
         if (no.field_d == 1) {
-          var3 = this.b(-119, AchievementIconEntry.field_k, lc.field_c);
+          var3 = this.b(-119, AchievementIconEntry.field_k, SoundCache.field_c);
         }
         if (DefaultTextWidgetRenderer.field_s == le.field_g) {
           gd.a(Bzip2State.field_z, 0, 0, true);

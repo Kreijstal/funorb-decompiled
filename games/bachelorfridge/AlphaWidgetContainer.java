@@ -207,13 +207,13 @@ final class AlphaWidgetContainer extends WidgetWrapper {
     }
 
     final static void a(int param0, boolean param1) {
-        i.field_a.a(param1, 7802);
+        SoundCache.field_a.a(param1, 7802);
         if (param0 != 0) {
           return;
         }
         BirthDateChatEnableForm var2 = ao.field_d;
         if (var2 != null) {
-          var2.drawAllLayers(i.field_a.field_D, i.field_a.field_M, 20077);
+          var2.drawAllLayers(SoundCache.field_a.field_D, SoundCache.field_a.field_M, 20077);
         }
     }
 

@@ -36,7 +36,7 @@ abstract class SocketConnector {
             return;
           }
           if (null == DiskCacheWorker.field_m) {
-            dc.field_L = id.a(0, 0, (byte) 94, 640, gi.field_s, 480);
+            dc.field_L = SoundCache.createFullscreenFocusCanvas(0, 0, (byte) 94, 640, gi.field_s, 480);
             if (null == dc.field_L) {
               var2 = 3;
             } else {
@@ -74,7 +74,7 @@ abstract class SocketConnector {
             }
           } else {
             if (null == DiskCacheWorker.field_m) {
-              dc.field_L = id.a(0, 0, (byte) 94, 640, gi.field_s, 480);
+              dc.field_L = SoundCache.createFullscreenFocusCanvas(0, 0, (byte) 94, 640, gi.field_s, 480);
               if (null == dc.field_L) {
                 var2 = 3;
               } else {

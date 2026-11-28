@@ -111,15 +111,15 @@ final class hm extends TextureOperator {
         var19 = Vertigo2.field_L ? 1 : 0;
         try {
           if (param3 >= 0 &&
-            param1 < oo.field_b) {
+            param1 < TriangleRasterizer.field_b) {
             if (param8 < 0 &&
               param2 < 0 &&
               param4 < 0) {
               return;
             }
-            if (oo.field_q <= param8 &&
-              param2 >= oo.field_q &&
-              oo.field_q <= param4) {
+            if (TriangleRasterizer.field_q <= param8 &&
+              param2 >= TriangleRasterizer.field_q &&
+              TriangleRasterizer.field_q <= param4) {
               return;
             }
             if (param5 > -21) {
@@ -168,14 +168,14 @@ final class hm extends TextureOperator {
                 var13 = 1;
               }
               if (param1 >= 0) {
-                var16Lifetime2 = oo.field_a[param1];
+                var16Lifetime2 = TriangleRasterizer.field_a[param1];
                 while (param6 > param1) {
                   var17 = var9_int >> 16;
-                  if (oo.field_q > var17) {
+                  if (TriangleRasterizer.field_q > var17) {
                     var18 = -(var9_int >> 16) + (var10 >> 16);
                     if (0 != var18) {
-                      if (oo.field_q <= var18 + var17) {
-                        var18 = -1 + oo.field_q - var17;
+                      if (TriangleRasterizer.field_q <= var18 + var17) {
+                        var18 = -1 + TriangleRasterizer.field_q - var17;
                       }
                       if (var17 >= 0) {
                         md.a(-95, var17 + var16Lifetime2, param0, var18, param7);
@@ -184,13 +184,13 @@ final class hm extends TextureOperator {
                       }
                     } else {
                       if (0 <= var17 &&
-                        var17 < oo.field_q) {
+                        var17 < TriangleRasterizer.field_q) {
                         md.a(32, var17 + var16Lifetime2, param0, var18, param7);
                       }
                     }
                   }
                   param1++;
-                  if (param1 >= oo.field_b) {
+                  if (param1 >= TriangleRasterizer.field_b) {
                     return;
                   }
                   var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_e;
@@ -202,14 +202,14 @@ final class hm extends TextureOperator {
                 var10 = var10 + param1 * var12;
                 var9_int = var9_int + var11 * param1;
                 param1 = 0;
-                var16Lifetime2 = oo.field_a[param1];
+                var16Lifetime2 = TriangleRasterizer.field_a[param1];
                 while (param6 > param1) {
                   var17 = var9_int >> 16;
-                  if (oo.field_q > var17) {
+                  if (TriangleRasterizer.field_q > var17) {
                     var18 = -(var9_int >> 16) + (var10 >> 16);
                     if (0 != var18) {
-                      if (oo.field_q <= var18 + var17) {
-                        var18 = -1 + oo.field_q - var17;
+                      if (TriangleRasterizer.field_q <= var18 + var17) {
+                        var18 = -1 + TriangleRasterizer.field_q - var17;
                       }
                       if (var17 >= 0) {
                         md.a(-95, var17 + var16Lifetime2, param0, var18, param7);
@@ -218,13 +218,13 @@ final class hm extends TextureOperator {
                       }
                     } else {
                       if (0 <= var17 &&
-                        var17 < oo.field_q) {
+                        var17 < TriangleRasterizer.field_q) {
                         md.a(32, var17 + var16Lifetime2, param0, var18, param7);
                       }
                     }
                   }
                   param1++;
-                  if (param1 >= oo.field_b) {
+                  if (param1 >= TriangleRasterizer.field_b) {
                     return;
                   }
                   var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_e;
@@ -258,14 +258,14 @@ final class hm extends TextureOperator {
               var10 = var10 + var12 * param1;
               param1 = 0;
             }
-            var15Lifetime1 = oo.field_a[param1];
+            var15Lifetime1 = TriangleRasterizer.field_a[param1];
             while (param1 < param3) {
               var16Lifetime1 = var9_int >> 16;
-              if (oo.field_q > var16Lifetime1) {
+              if (TriangleRasterizer.field_q > var16Lifetime1) {
                 var17Lifetime1 = (var10 >> 16) - (var9_int >> 16);
                 if (var17Lifetime1 != 0) {
-                  if (var17Lifetime1 + var16Lifetime1 >= oo.field_q) {
-                    var17Lifetime1 = -var16Lifetime1 + (oo.field_q - 1);
+                  if (var17Lifetime1 + var16Lifetime1 >= TriangleRasterizer.field_q) {
+                    var17Lifetime1 = -var16Lifetime1 + (TriangleRasterizer.field_q - 1);
                   }
                   if (var16Lifetime1 >= 0) {
                     md.a(58, var15Lifetime1 + var16Lifetime1, param0, var17Lifetime1, param7);
@@ -274,13 +274,13 @@ final class hm extends TextureOperator {
                   }
                 } else {
                   if (var16Lifetime1 >= 0 &&
-                    var16Lifetime1 < oo.field_q) {
+                    var16Lifetime1 < TriangleRasterizer.field_q) {
                     md.a(-115, var15Lifetime1 + var16Lifetime1, param0, var17Lifetime1, param7);
                   }
                 }
               }
               param1++;
-              if (param1 >= oo.field_b) {
+              if (param1 >= TriangleRasterizer.field_b) {
                 return;
               }
               var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_e;

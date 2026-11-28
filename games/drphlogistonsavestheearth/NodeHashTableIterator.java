@@ -79,7 +79,7 @@ final class NodeHashTableIterator implements Iterator {
     }
 
     final static void a(boolean param0) {
-        cf.a((byte) -107);
+        SoundCache.a((byte) -107);
         sg.field_a = param0 ? true : false;
         DequeWidgetContainer.field_F = true;
         PcmResampler.field_c.closeAllDialogs(300);

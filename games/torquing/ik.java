@@ -197,8 +197,8 @@ final class ik extends IntrusiveNode {
           } else {
             var11 += 1280;
           }
-          var12 = var10 * be.field_l[var11] >> 16;
-          var13 = var10 * be.field_o[var11] >> 16;
+          var12 = var10 * TriangleRasterizer.field_l[var11] >> 16;
+          var13 = var10 * TriangleRasterizer.field_o[var11] >> 16;
           this.field_s[var5] = var12 + this.field_s[var6];
           this.field_m[var5] = var13 + this.field_m[var6];
         }

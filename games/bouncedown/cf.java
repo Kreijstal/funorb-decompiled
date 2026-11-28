@@ -5,7 +5,7 @@ final class cf {
     static RgbSprite field_c;
     static oh field_g;
     static mi field_f;
-    static i field_d;
+    static SoundCache field_d;
     static int field_a;
     static IntrusiveDeque field_b;
     static int field_e;

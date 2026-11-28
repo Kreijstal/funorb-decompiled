@@ -1364,31 +1364,31 @@ final class GameplayScreen {
                 stackIn_214_0 = !(gi.field_r);
                 gi.field_r = stackIn_214_0;
                 var2_float = 1.399999976158142f;
-                oo.b(var2_float);
+                TriangleRasterizer.rebuildPaletteWithGamma(var2_float);
                 if (gi.field_r) {
                   var3 = 0;
                   scanLoop2: while (true) {
-                    if (oo.field_c.length > var3) {
-                      var4 = (oo.field_c[var3] & 16711680) >> 16;
-                      var5 = (65280 & oo.field_c[var3]) >> 8;
-                      var6 = oo.field_c[var3] & 255;
+                    if (TriangleRasterizer.field_c.length > var3) {
+                      var4 = (TriangleRasterizer.field_c[var3] & 16711680) >> 16;
+                      var5 = (65280 & TriangleRasterizer.field_c[var3]) >> 8;
+                      var6 = TriangleRasterizer.field_c[var3] & 255;
                       var7 = (var5 + (var6 + var4)) / 3;
                       stackIn_235_0 = var7;
                       stackIn_235_1 = 79;
                       if (var8 != 0) {
                         if (stackIn_235_0 > stackIn_235_1) {
-                          qq.a(oo.field_c, 0, Vertigo2.field_J[var3], 0, oo.field_c.length);
+                          qq.a(TriangleRasterizer.field_c, 0, Vertigo2.field_J[var3], 0, TriangleRasterizer.field_c.length);
                           var3++;
                           break regionExit1;
                         }
                         break scanLoop2;
                       }
                       if (stackIn_235_0 < stackIn_235_1) {
-                        oo.field_c[var3] = 0;
+                        TriangleRasterizer.field_c[var3] = 0;
                       } else if (var7 < 90) {
-                        oo.field_c[var3] = om.a(var7, om.a(var7 << 8, var7 << 16));
+                        TriangleRasterizer.field_c[var3] = om.a(var7, om.a(var7 << 8, var7 << 16));
                       } else {
-                        oo.field_c[var3] = 16777215;
+                        TriangleRasterizer.field_c[var3] = 16777215;
                       }
                       var3++;
                       continue;
@@ -1400,7 +1400,7 @@ final class GameplayScreen {
                       if (stackIn_235_0 <= stackIn_235_1) {
                         break;
                       }
-                      qq.a(oo.field_c, 0, Vertigo2.field_J[var3], 0, oo.field_c.length);
+                      qq.a(TriangleRasterizer.field_c, 0, Vertigo2.field_J[var3], 0, TriangleRasterizer.field_c.length);
                       var3++;
                       if (var8 != 0) {
                         break regionExit1;

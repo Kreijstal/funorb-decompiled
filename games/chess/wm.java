@@ -124,8 +124,8 @@ abstract class wm {
           var23 = ib.field_c.field_Jb;
           var24 = var23;
           var24.field_fb = 1;
-          fe.field_h = new ci(0L, EditableTextField.field_P);
-          fe.field_h.field_fb = 1;
+          SoundCache.field_h = new ci(0L, EditableTextField.field_P);
+          SoundCache.field_h.field_fb = 1;
           ln.field_cc = new ci(0L, sc.field_h, qf.field_h.toUpperCase());
           he.field_Hb = new ci((long)param2, DequeWidgetContainer.field_G, em.field_M.toUpperCase());
           oh.field_a = new ci(0L, DefaultTextWidgetRenderer.field_d);

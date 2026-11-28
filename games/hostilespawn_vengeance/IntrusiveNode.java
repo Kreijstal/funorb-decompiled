@@ -110,7 +110,7 @@ class IntrusiveNode {
             return;
           }
           if (re.field_k &&
-            rd.field_h == fb.field_l) {
+            SoundCache.field_h == fb.field_l) {
             fb.field_l = 0;
             re.field_k = false;
           }

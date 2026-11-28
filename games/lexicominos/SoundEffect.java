@@ -6,7 +6,7 @@ final class SoundEffect {
     private int field_b;
     private int field_c;
 
-    final static SoundEffect a(ResourceArchive param0, String param1, String param2) {
+    final static SoundEffect loadByName(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.getFileByName((byte) 127, param2, param1);
         if (var3 == null) {
           return null;
@@ -14,12 +14,12 @@ final class SoundEffect {
         return new SoundEffect(new PacketBuffer(var3));
     }
 
-    final PcmSample a() {
-        byte[] var1 = this.b();
+    final PcmSample toPcmSample() {
+        byte[] var1 = this.synthesize();
         return new PcmSample(22050, var1, 22050 * this.field_b / 1000, 22050 * this.field_c / 1000);
     }
 
-    final static SoundEffect a(ResourceArchive param0, int param1, int param2) {
+    final static SoundEffect load(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = param0.getFile(param1, -27493, param2);
         if (var3 == null) {
           return null;
@@ -27,7 +27,7 @@ final class SoundEffect {
         return new SoundEffect(new PacketBuffer(var3));
     }
 
-    private final byte[] b() {
+    private final byte[] synthesize() {
         int var4 = 0;
         int var8 = 0;
         int var1;
@@ -54,7 +54,7 @@ final class SoundEffect {
           if (this.field_a[var4] != null) {
             var5 = this.field_a[var4].field_r * 22050 / 1000;
             var6 = this.field_a[var4].field_o * 22050 / 1000;
-            var13 = this.field_a[var4].a(var5, this.field_a[var4].field_r);
+            var13 = this.field_a[var4].synthesize(var5, this.field_a[var4].field_r);
             for (var8 = 0; var8 < var5; var8++) {
               var9 = var3[var8 + var6] + (var13[var8] >> 8);
               if ((var9 + 128 & -256) != 0) {
@@ -76,7 +76,7 @@ final class SoundEffect {
           if (var3 != 0) {
             param0.position = param0.position - 1;
             this.field_a[var2] = new SynthInstrument();
-            this.field_a[var2].a(param0);
+            this.field_a[var2].decode(param0);
           }
         }
         this.field_b = param0.readUnsignedShort(-1698573656);

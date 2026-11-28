@@ -428,7 +428,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             this.field_n = false;
             ImageProducerRasterBuffer.d(65280);
             dh.c(12);
-            IntrusiveDeque.a(2, fe.field_e, (byte) 97);
+            IntrusiveDeque.a(2, SoundCache.field_e, (byte) 97);
             Bzip2State.a((byte) -121);
             ValidatedTextField.field_ab = true;
             DequeWidgetContainer.field_E = 15000L + ud.correctedCurrentTimeMillis(2);
@@ -808,7 +808,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           this.field_p = 64L;
         }
         tk.field_h.readCipheredBytes(var4, var5, false, 0);
-        fe.a(ad.a(-29410, var5), var3 != 0, (byte) 16, ArrayWidgetContainer.i(81));
+        SoundCache.openExternalUrl(ad.a(-29410, var5), var3 != 0, (byte) 16, ArrayWidgetContainer.i(81));
     }
 
     private final void g(int param0) {

@@ -29,7 +29,7 @@ final class bl {
         var2 = 35 % ((-36 - param0) / 53);
         if (!this.field_d && (this.field_h != 2 ||
           this.field_j <= 0)) {
-          if (i.field_c == this.field_g) {
+          if (SoundCache.field_c == this.field_g) {
             return 1;
           }
           if (ProgressDialog.field_V != 2) {

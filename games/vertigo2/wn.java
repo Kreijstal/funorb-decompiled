@@ -492,8 +492,8 @@ final class wn {
           }
           if (SecondaryNodeHashTable.field_b == ProxyAuthenticationRequiredException.field_d &&
             c.a(1, (byte) -104)) {
-            var9Lifetime1 = id.field_f.readUnsignedByte(-11);
-            id.field_f.position = 0;
+            var9Lifetime1 = SoundCache.field_f.readUnsignedByte(-11);
+            SoundCache.field_f.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               ProxyAuthenticationRequiredException.field_d = RandomAccessCacheFile.field_f;
@@ -513,20 +513,20 @@ final class wn {
                 ca.field_b = -1;
               } else {
                 c.a(tk.c(1), (byte) -104);
-                mr.field_a = new Boolean(nr.a(id.field_f, 67));
-                id.field_f.position = 0;
+                mr.field_a = new Boolean(nr.a(SoundCache.field_f, 67));
+                SoundCache.field_f.position = 0;
               }
             }
           }
           if (ProxyAuthenticationRequiredException.field_d == RandomAccessCacheFile.field_f) {
             var9Lifetime2 = 2;
             if (c.a(var9Lifetime2, (byte) -104)) {
-              var10Lifetime1 = id.field_f.readUnsignedShort((byte) -11);
-              id.field_f.position = 0;
+              var10Lifetime1 = SoundCache.field_f.readUnsignedShort((byte) -11);
+              SoundCache.field_f.position = 0;
               if (c.a(var10Lifetime1, (byte) -104)) {
                 var11 = AgeValidator.field_m.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  AgeValidator.field_m[var12] = id.field_f.c(true);
+                  AgeValidator.field_m[var12] = SoundCache.field_f.c(true);
                 }
                 rm.b((byte) -106);
                 gn.field_d = false;
@@ -538,9 +538,9 @@ final class wn {
           if (ProxyAuthenticationRequiredException.field_d == NumericDateInputWidget.field_O &&
             dl.b((byte) -72)) {
             if (255 != lc.field_f) {
-              nk.field_Kb = id.field_f.readString(128);
+              nk.field_Kb = SoundCache.field_f.readString(128);
             } else {
-              var9_ref_String = id.field_f.readNullableString(-116);
+              var9_ref_String = SoundCache.field_f.readNullableString(-116);
               if (var9_ref_String != null) {
                 be.a(var9_ref_String, -1, LoginPanel.e((byte) 106));
               }

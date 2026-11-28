@@ -49,11 +49,11 @@ final class e {
           return;
         }
         try {
-          rh.field_g = ha.a(param1, "initialset", "fall-into-hole").b();
+          rh.field_g = SynthesizedSoundEffect.loadByName(param1, "initialset", "fall-into-hole").toPcmSample();
           mo.field_i = VorbisSample.loadByName(param2, "initialset", "got-by-spider").decodeAllToPcm();
           pl.field_h = VorbisSample.loadByName(param2, "initialset", "blown-up").decodeAllToPcm();
           sj.field_d = VorbisSample.loadByName(param2, "initialset", "electrocuted-buzz").decodeAllToPcm();
-          PasswordValidator.field_m = ha.a(param1, "initialset", "electrocuted-end").b();
+          PasswordValidator.field_m = SynthesizedSoundEffect.loadByName(param1, "initialset", "electrocuted-end").toPcmSample();
           RockTile.field_x = VorbisSample.loadByName(param2, "initialset", "explode-into-sparks").decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "e.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

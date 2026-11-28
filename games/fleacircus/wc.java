@@ -15,7 +15,7 @@ final class wc extends IntrusiveNode {
     byte[] field_n;
     static int field_q;
 
-    final boolean a(ng param0, byte[] param1, boolean param2, int[] param3) {
+    final boolean a(SoundCache param0, byte[] param1, boolean param2, int[] param3) {
         int var8 = 0;
         int stackIn_22_0 = 0;
         RuntimeException stackIn_25_0 = null;
@@ -37,7 +37,7 @@ final class wc extends IntrusiveNode {
         try {
           if (param2) {
             var11 = (int[]) null;
-            this.a((ng) null, (byte[]) null, false, (int[]) null);
+            this.a((SoundCache) null, (byte[]) null, false, (int[]) null);
           }
           var5_int = 1;
           var6 = 0;
@@ -51,9 +51,9 @@ final class wc extends IntrusiveNode {
                   var6 = var9;
                   var9--;
                   if ((1 & var9) == 0) {
-                    var7 = param0.a(param3, var9 >> 2, 29037);
+                    var7 = param0.loadSoundEffectById(param3, var9 >> 2, 29037);
                   } else {
-                    var7 = param0.a(var9 >> 2, true, param3);
+                    var7 = param0.loadMusicSampleById(var9 >> 2, true, param3);
                   }
                   if (var7 == null) {
                     var5_int = 0;

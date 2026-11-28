@@ -678,7 +678,7 @@ public final class DungeonAssault extends NetworkGameClient {
           IntrusiveNode.clearStaticReferences(-18880);
           qj.a(-2418);
           bc.clearStaticReferences(24740);
-          lc.clearStaticReferences(true);
+          SoundCache.clearStaticReferences(true);
           HuffmanDecoder.clearStaticReferences(param0);
           lg.clearStaticReferences(true);
           eh.a(73);
@@ -694,7 +694,7 @@ public final class DungeonAssault extends NetworkGameClient {
           MidiPcmStream.e(0);
           wa.c(23413);
           lp.clearStaticReferences((byte) 16);
-          vm.clearStaticReferences();
+          MidiFileReader.clearStaticReferences();
           MusicPatchPcmStream.resetStaticState(26609);
           AudioOutput.clearStaticReferences();
           cb.clearStaticReferences(27525);
@@ -848,7 +848,7 @@ public final class DungeonAssault extends NetworkGameClient {
           mf.clearStaticReferences(5);
           RegistrationAgreementPane.clearDeclaredStaticReferences(-119);
           mk.clearStaticReferences(false);
-          wg.clearStaticReferences();
+          SynthesizerVoice.clearStaticReferences();
           kk.clearDeclaredStaticReferences(0);
           of.clearStaticReferences((byte) 65);
           ah.clearStaticReferences(-37);

@@ -36,7 +36,7 @@ final class StandardContentDialog extends ContentTransitionDialog {
         try {
           vh.field_k = param1;
           wd.field_p = param2;
-          vd.a(param3, -536866817, ResourceArchive.field_d);
+          SoundCache.a(param3, -536866817, ResourceArchive.field_d);
           if (param0 != -1) {
             String var5 = (String) null;
             StandardContentDialog.a((String) null, false);

@@ -13,7 +13,7 @@ final class uw extends DualLinkNode {
         try {
           var1 = new Sprite(540, 140);
           bu.a(0, var1);
-          TriangleRasterizer.d();
+          TriangleRasterizer.useRasterClip();
           SoftwareRasterizer.clear();
           WhirlpoolDigest.field_d = 0;
           tc.b(-8144);
@@ -42,11 +42,11 @@ final class uw extends DualLinkNode {
 
     final static void g(int param0) {
         TriangleRasterizer.field_d = false;
-        TriangleRasterizer.b(1.0f);
+        TriangleRasterizer.rebuildPaletteWithGamma(1.0f);
         if (param0 > -127) {
           field_o = (MusicTrack) null;
         } else {
-          TriangleRasterizer.d();
+          TriangleRasterizer.useRasterClip();
           mu.field_j = new int[]{0, 0, -270, 65536, 0, 0, 0, 69632, 0, 0, 0, 65536};
           TextInputWidget.field_G = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
           via.a(6144, (byte) 71);
@@ -56,7 +56,7 @@ final class uw extends DualLinkNode {
           TriangleRasterizer.setProjectionCenter(320, 240);
           return;
         }
-        TriangleRasterizer.d();
+        TriangleRasterizer.useRasterClip();
         mu.field_j = new int[]{0, 0, -270, 65536, 0, 0, 0, 69632, 0, 0, 0, 65536};
         TextInputWidget.field_G = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
         via.a(6144, (byte) 71);

@@ -3006,55 +3006,55 @@ final class je extends InteractiveWidget {
                 }
                 var2 = ad.a("subscription_cost_monthly,0", 0);
                 if (null != var2) {
-                  ng.field_g[0] = ab.a(0, var2);
+                  SoundCache.field_g[0] = ab.a(0, var2);
                 }
                 var2 = ad.a("subscription_cost_monthly,1", 0);
                 if (var2 != null) {
-                  ng.field_g[1] = ab.a(0, var2);
+                  SoundCache.field_g[1] = ab.a(0, var2);
                 }
                 var2 = ad.a("subscription_cost_monthly,2", 0);
                 if (var2 != null) {
-                  ng.field_g[2] = ab.a(0, var2);
+                  SoundCache.field_g[2] = ab.a(0, var2);
                 }
                 var2 = ad.a("subscription_cost_monthly,3", 0);
                 if (var2 != null) {
-                  ng.field_g[3] = ab.a(0, var2);
+                  SoundCache.field_g[3] = ab.a(0, var2);
                 }
                 var2 = ad.a("subscription_cost_monthly,4", 0);
                 if (var2 != null) {
-                  ng.field_g[4] = ab.a(0, var2);
+                  SoundCache.field_g[4] = ab.a(0, var2);
                 }
                 var2 = ad.a("subscription_cost_monthly,5", 0);
                 if (null != var2) {
-                  ng.field_g[5] = ab.a(0, var2);
+                  SoundCache.field_g[5] = ab.a(0, var2);
                 }
                 var2 = ad.a("subscription_cost_monthly,6", 0);
                 if (var2 != null) {
-                  ng.field_g[6] = ab.a(0, var2);
+                  SoundCache.field_g[6] = ab.a(0, var2);
                 }
                 var2 = ad.a("subscription_cost_monthly,7", 0);
                 if (var2 != null) {
-                  ng.field_g[7] = ab.a(0, var2);
+                  SoundCache.field_g[7] = ab.a(0, var2);
                 }
                 var2 = ad.a("subscription_cost_monthly,8", 0);
                 if (null != var2) {
-                  ng.field_g[8] = ab.a(0, var2);
+                  SoundCache.field_g[8] = ab.a(0, var2);
                 }
                 var2 = ad.a("subscription_cost_monthly,9", 0);
                 if (null != var2) {
-                  ng.field_g[9] = ab.a(0, var2);
+                  SoundCache.field_g[9] = ab.a(0, var2);
                 }
                 var2 = ad.a("subscription_cost_monthly,10", 0);
                 if (var2 != null) {
-                  ng.field_g[10] = ab.a(0, var2);
+                  SoundCache.field_g[10] = ab.a(0, var2);
                 }
                 var2 = ad.a("subscription_cost_monthly,11", 0);
                 if (var2 != null) {
-                  ng.field_g[11] = ab.a(0, var2);
+                  SoundCache.field_g[11] = ab.a(0, var2);
                 }
                 var2 = ad.a("subscription_cost_monthly,12", 0);
                 if (null != var2) {
-                  ng.field_g[12] = ab.a(0, var2);
+                  SoundCache.field_g[12] = ab.a(0, var2);
                 }
                 var2 = ad.a("sentence_separator", 0);
                 if (var2 != null) {

@@ -314,7 +314,7 @@ final class BufferedCacheFile {
                   lk.field_e = lk.field_e + 5000;
                   NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t - 5000;
                 }
-                me.a(false);
+                SoundCache.a(false);
                 PacketBuffer.a(true, 6, -128);
                 pk.a((byte) -96, 5, false);
               }
@@ -354,7 +354,7 @@ final class BufferedCacheFile {
             NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t - pl.field_a;
             lk.field_e = lk.field_e + pl.field_a;
             pl.field_a = 0;
-            me.a(false);
+            SoundCache.a(false);
           }
           ProgressMessageDialog.field_ib = 15 * ProgressMessageDialog.field_ib / 16 - 1;
           if (ProgressMessageDialog.field_ib < 0) {
@@ -628,7 +628,7 @@ final class BufferedCacheFile {
               lk.field_e = lk.field_e + ImageProducerRasterBuffer.field_m * 100;
               NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t - (ImageProducerRasterBuffer.field_m * 100 + 5000);
               lk.field_e = lk.field_e + 5000;
-              me.a(false);
+              SoundCache.a(false);
               if (!il.b(507)) {
                 ah.b(param0);
                 kh.field_c = null;

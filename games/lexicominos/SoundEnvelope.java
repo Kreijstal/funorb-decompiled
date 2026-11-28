@@ -14,7 +14,7 @@ final class SoundEnvelope {
     private int field_b;
     private int field_d;
 
-    final int a(int param0) {
+    final int step(int param0) {
         int fieldTemp$0 = 0;
         if (this.field_i >= this.field_g) {
           fieldTemp$0 = this.field_h;
@@ -33,14 +33,14 @@ final class SoundEnvelope {
         return this.field_k - this.field_d >> 15;
     }
 
-    final void b(PacketBuffer param0) {
+    final void decode(PacketBuffer param0) {
         this.field_a = param0.readUnsignedByte(true);
         this.field_e = param0.readInt((byte) 19);
         this.field_c = param0.readInt((byte) 19);
-        this.a(param0);
+        this.decodeSegments(param0);
     }
 
-    final void a() {
+    final void reset() {
         this.field_g = 0;
         this.field_h = 0;
         this.field_d = 0;
@@ -48,7 +48,7 @@ final class SoundEnvelope {
         this.field_i = 0;
     }
 
-    final void a(PacketBuffer param0) {
+    final void decodeSegments(PacketBuffer param0) {
         int var2 = 0;
         this.field_b = param0.readUnsignedByte(true);
         this.field_f = new int[this.field_b];

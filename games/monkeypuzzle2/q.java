@@ -120,12 +120,12 @@ final class q {
             if (var5 >= 0) {
               var6 = AccountNameAvailabilityValidator.$cfr$intArgs$a$590e95718a07(74, BoundedRandomAccessFile.field_k[var3_int], true);
               var7 = jc.field_b - (var6 >> 1);
-              var4 = var4 + ud.field_a;
+              var4 = var4 + SoundCache.field_a;
               if (lf.a(param1 - 19828, param2, param0, hb.field_n + (vf.field_b << 1), (BoundedRandomAccessFile.field_h << 1) + var6, -BoundedRandomAccessFile.field_h + var7, var4)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
-              var4 = var4 + (hb.field_n + ud.field_a + (vf.field_b << 1));
+              var4 = var4 + (hb.field_n + SoundCache.field_a + (vf.field_b << 1));
             } else {
               var4 = var4 + gi.field_a;
             }

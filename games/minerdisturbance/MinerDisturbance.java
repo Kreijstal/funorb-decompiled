@@ -4752,9 +4752,9 @@ public final class MinerDisturbance extends ob {
           ak.clearStaticReferences(false);
           q.a(20);
           cg.clearDeclaredStaticReferences(param0 ^ 1);
-          nl.clearStaticReferences();
+          MidiFileReader.clearStaticReferences();
           MusicPatchPcmStream.clearStaticReferences((byte) -114);
-          ri.b((byte) -25);
+          SoundCache.clearStaticReferences((byte) -25);
           AudioOutput.clearStaticReferences();
           CrossfadingMidiPcmStream.clearDeclaredStaticReferences(98);
           qk.clearStaticReferences(-1003);
@@ -4882,7 +4882,7 @@ public final class MinerDisturbance extends ob {
           o.clearStaticReferences(param0 - 23642);
           vk.clearStaticReferences(119);
           tm.a((byte) -107);
-          ve.clearStaticReferences();
+          SynthesizerVoice.clearStaticReferences();
           qm.clearStaticReferences(-31434);
           s.clearDeclaredStaticReferences(param0 - 117);
           ne.a(2);

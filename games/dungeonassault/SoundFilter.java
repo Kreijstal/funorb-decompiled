@@ -86,7 +86,7 @@ final class SoundFilter {
         return SoundFilter.normalizeFrequency(var4);
     }
 
-    final void decode(PacketBuffer param0, fh param1) {
+    final void decode(PacketBuffer param0, SoundEnvelope param1) {
         int var3;
         int var4;
         int var5;

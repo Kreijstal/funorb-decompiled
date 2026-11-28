@@ -470,7 +470,7 @@ abstract class rb extends GameApplet {
           ni.a(wf.field_e, am.field_g, TextFieldValidator.field_i, (byte) -104) &&
           dj.a(am.field_g, (byte) -126)) {
           ol.b(-114);
-          gk.a(false);
+          SoundCache.a(false);
           am.field_i = fl.field_c;
           PcmResampler.field_d = false;
           hc.a(am.field_g, TextFieldValidator.field_i, wf.field_e, TextLineMetrics.field_f, (byte) -88);

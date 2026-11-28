@@ -3,7 +3,7 @@
  */
 final class od {
     static ki field_a;
-    static jc field_d;
+    static SoundCache field_d;
     static String field_b;
     static int[] field_c;
 

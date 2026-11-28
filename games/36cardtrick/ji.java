@@ -60,9 +60,9 @@ final class ji {
         int var18 = 0;
         try {
           DiskArchiveRequest.field_p = new cf(param1);
-          jb.b();
-          jb.a(DiskArchiveRequest.field_p);
-          jb.b(1.0f);
+          TriangleRasterizer.useRasterClip();
+          TriangleRasterizer.setTextureProvider(DiskArchiveRequest.field_p);
+          TriangleRasterizer.rebuildPaletteWithGamma(1.0f);
           var19 = new bb(16, 8, 4);
           var3 = FullscreenNoticeType.a(var19, 0, 0, 0, (byte) -72);
           var4 = FullscreenNoticeType.a(var19, 0, 1, 0, (byte) -93);
@@ -95,7 +95,7 @@ final class ji {
           od.field_a = var19.a(var7, var5, var9, (byte) 1, cf.field_d, (short) 0, (short) 0);
           eb.field_d = var19.a(var4, var10, var6, (byte) 1, db.field_p, (short) 1, (short) 1);
           oj.field_c = var19.a(var8, var10, var4, (byte) 1, db.field_p, (short) 1, (short) 1);
-          ResizableModalDialog.field_O = (ik) (var19.a(127, 65535, -1, 0, 0));
+          ResizableModalDialog.field_O = (SoftwareModelMesh) (var19.a(127, 65535, -1, 0, 0));
           ResizableModalDialog.field_O.field_h = qa.a(-100, var19.field_d);
           ResizableModalDialog.field_O.field_u = qa.a(-36, var19.field_B);
           ResizableModalDialog.field_O.field_U = qa.a(-107, var19.field_z);

@@ -8,7 +8,7 @@ final class aa {
     private int field_a;
     private boolean field_k;
     private int field_g;
-    static wh field_e;
+    static MusicTrack field_e;
     static String field_f;
     static BufferedRandomAccessFile[] field_h;
     private int[] field_c;

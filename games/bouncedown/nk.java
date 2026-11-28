@@ -79,7 +79,7 @@ final class nk {
         boolean stackIn_89_0 = false;
         boolean stackIn_99_0 = false;
         MidiPcmStream stackIn_103_0 = null;
-        be stackIn_104_1 = null;
+        MusicTrack stackIn_104_1 = null;
         mj stackIn_129_0 = null;
         int stackIn_130_1 = 0;
         mj stackIn_147_0 = null;

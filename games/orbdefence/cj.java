@@ -4,7 +4,7 @@
 final class cj {
     static ba field_a;
     static String field_c;
-    static vd field_b;
+    static SoundCache field_b;
 
     final static mi a(byte param0, String param1) {
         RuntimeException var2 = null;
@@ -105,7 +105,7 @@ final class cj {
         hg.field_ab.drawHalfSize(100, 60);
         BufferedSocket.field_a.a(-40);
         if (param0 <= 51) {
-          field_b = (vd) null;
+          field_b = (SoundCache) null;
         }
     }
 

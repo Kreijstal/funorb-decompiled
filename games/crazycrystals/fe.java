@@ -162,7 +162,7 @@ final class fe extends ResultScenePhase {
           AwtRasterBuffer.field_a = new am(RawPcmStream.createForPlaybackRate(mg.field_d, 100, 0));
           dn.field_d = new am(RawPcmStream.createForPlaybackRate(io.field_H, 100, 0));
           wp.field_b = new am(RawPcmStream.createForPlaybackRate(cf.field_f, 100, 0));
-          bn.field_h = new am(RawPcmStream.createForPlaybackRate(lm.field_a, 100, 0));
+          SoundCache.field_h = new am(RawPcmStream.createForPlaybackRate(lm.field_a, 100, 0));
           pm.field_b = new am(RawPcmStream.createForPlaybackRate(jc.field_a, 100, 0));
           so.field_g = new am(RawPcmStream.createForPlaybackRate(oa.field_e, 100, 0));
           fn.field_h = new am(RawPcmStream.createForPlaybackRate(gk.field_j, 100, 0));

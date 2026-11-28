@@ -5,10 +5,10 @@ final class MidiFile extends IntrusiveNode {
     byte[] field_j;
     NodeHashTable field_i;
 
-    final void a() {
+    final void buildPatchUsage() {
         int[] var1;
         int[] var2;
-        fa var4;
+        MidiFileReader var4;
         int var5;
         int var6;
         int var7;
@@ -44,26 +44,26 @@ final class MidiFile extends IntrusiveNode {
         var23 = var1;
         var19[9] = 128;
         var23[9] = 128;
-        var4 = new fa(this.field_j);
-        var5 = var4.d();
+        var4 = new MidiFileReader(this.field_j);
+        var5 = var4.trackCount();
         for (var6 = 0; var6 < var5; var6++) {
-          var4.d(var6);
-          var4.c(var6);
-          var4.e(var6);
+          var4.seekTrack(var6);
+          var4.readDelta(var6);
+          var4.saveTrackPosition(var6);
         }
         while (true) {
-          var6Lifetime1 = var4.g();
+          var6Lifetime1 = var4.nextTrack();
           var7 = var4.field_b[var6Lifetime1];
           while (true) {
             if (var4.field_b[var6Lifetime1] != var7) {
               break;
             }
-            var4.d(var6Lifetime1);
-            var8 = var4.a(var6Lifetime1);
+            var4.seekTrack(var6Lifetime1);
+            var8 = var4.readMessage(var6Lifetime1);
             if (var8 == 1) {
-              var4.f();
-              var4.e(var6Lifetime1);
-              if (var4.e()) {
+              var4.markTrackDone();
+              var4.saveTrackPosition(var6Lifetime1);
+              if (var4.isDone()) {
                 return;
               }
               break;
@@ -100,13 +100,13 @@ final class MidiFile extends IntrusiveNode {
                 var14.field_k[var11Lifetime2] = (byte) 1;
               }
             }
-            var4.c(var6Lifetime1);
-            var4.e(var6Lifetime1);
+            var4.readDelta(var6Lifetime1);
+            var4.saveTrackPosition(var6Lifetime1);
           }
         }
     }
 
-    final static MidiFile a(Archive param0, String param1, String param2) {
+    final static MidiFile load(Archive param0, String param1, String param2) {
         byte[] var3 = param0.getFileByName(param1, -1, param2);
         if (var3 == null) {
           return null;
@@ -114,7 +114,7 @@ final class MidiFile extends IntrusiveNode {
         return new MidiFile(new PacketBuffer(var3));
     }
 
-    final void b() {
+    final void releasePatchUsage() {
         this.field_i = null;
     }
 

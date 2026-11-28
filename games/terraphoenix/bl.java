@@ -954,87 +954,87 @@ final class bl {
                 }
                 var2 = il.a((byte) 103, "weaponresearchdescriptions,0");
                 if (null != var2) {
-                  da.field_i[0] = ll.a(0, var2);
+                  SoundCache.field_i[0] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 86, "weaponresearchdescriptions,1");
                 if (null != var2) {
-                  da.field_i[1] = ll.a(param0 - 96, var2);
+                  SoundCache.field_i[1] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 100, "weaponresearchdescriptions,2");
                 if (null != var2) {
-                  da.field_i[2] = ll.a(0, var2);
+                  SoundCache.field_i[2] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 127, "weaponresearchdescriptions,3");
                 if (null != var2) {
-                  da.field_i[3] = ll.a(0, var2);
+                  SoundCache.field_i[3] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 98, "weaponresearchdescriptions,4");
                 if (null != var2) {
-                  da.field_i[4] = ll.a(sl.a((int) param0, 96), var2);
+                  SoundCache.field_i[4] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 72, "weaponresearchdescriptions,5");
                 if (var2 != null) {
-                  da.field_i[5] = ll.a(0, var2);
+                  SoundCache.field_i[5] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 91, "weaponresearchdescriptions,6");
                 if (null != var2) {
-                  da.field_i[6] = ll.a(0, var2);
+                  SoundCache.field_i[6] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 72, "weaponresearchdescriptions,7");
                 if (null != var2) {
-                  da.field_i[7] = ll.a(0, var2);
+                  SoundCache.field_i[7] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 101, "weaponresearchdescriptions,8");
                 if (var2 != null) {
-                  da.field_i[8] = ll.a(0, var2);
+                  SoundCache.field_i[8] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 103, "weaponresearchdescriptions,9");
                 if (null != var2) {
-                  da.field_i[9] = ll.a(sl.a((int) param0, 96), var2);
+                  SoundCache.field_i[9] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 76, "weaponresearchdescriptions,10");
                 if (var2 != null) {
-                  da.field_i[10] = ll.a(param0 - 96, var2);
+                  SoundCache.field_i[10] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 78, "weaponresearchdescriptions,11");
                 if (var2 != null) {
-                  da.field_i[11] = ll.a(sl.a((int) param0, 96), var2);
+                  SoundCache.field_i[11] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 109, "weaponresearchdescriptions,12");
                 if (var2 != null) {
-                  da.field_i[12] = ll.a(0, var2);
+                  SoundCache.field_i[12] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 121, "weaponresearchdescriptions,13");
                 if (null != var2) {
-                  da.field_i[13] = ll.a(0, var2);
+                  SoundCache.field_i[13] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 87, "weaponresearchdescriptions,14");
                 if (null != var2) {
-                  da.field_i[14] = ll.a(0, var2);
+                  SoundCache.field_i[14] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 105, "weaponresearchdescriptions,15");
                 if (var2 != null) {
-                  da.field_i[15] = ll.a(0, var2);
+                  SoundCache.field_i[15] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 83, "weaponresearchdescriptions,16");
                 if (null != var2) {
-                  da.field_i[16] = ll.a(0, var2);
+                  SoundCache.field_i[16] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 88, "weaponresearchdescriptions,17");
                 if (null != var2) {
-                  da.field_i[17] = ll.a(param0 - 96, var2);
+                  SoundCache.field_i[17] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 118, "weaponresearchdescriptions,18");
                 if (null != var2) {
-                  da.field_i[18] = ll.a(0, var2);
+                  SoundCache.field_i[18] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 110, "weaponresearchdescriptions,19");
                 if (var2 != null) {
-                  da.field_i[19] = ll.a(0, var2);
+                  SoundCache.field_i[19] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 123, "weaponresearchdescriptions,20");
                 if (var2 != null) {
-                  da.field_i[20] = ll.a(0, var2);
+                  SoundCache.field_i[20] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 93, "alliedsoldier");
                 if (var2 != null) {

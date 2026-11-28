@@ -17,13 +17,13 @@ final class tc extends DefaultTextWidgetRenderer {
           return PasswordValidator.field_p;
         }
         if (dj.field_a == DiskArchiveRequest.field_E) {
-          return gk.field_c;
+          return SoundCache.field_c;
         }
         if (param0 != -5) {
           field_p = -104;
         }
         if (!al.field_f.a(true)) {
-          return gk.field_c;
+          return SoundCache.field_c;
         }
         return FullscreenFocusCanvas.field_a;
     }

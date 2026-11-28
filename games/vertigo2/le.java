@@ -54,7 +54,7 @@ final class le {
           if (param0 >= -80) {
             return;
           }
-          var9 = id.field_f;
+          var9 = SoundCache.field_f;
           var2 = var9.readUnsignedByte(-11);
           var3 = var9.readUnsignedByte(-11);
           if (var2 == 0) {

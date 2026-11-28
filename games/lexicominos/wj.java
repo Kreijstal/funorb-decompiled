@@ -22,7 +22,7 @@ final class wj extends IntrusiveNode {
         this.field_i = null;
     }
 
-    final boolean a(byte[] param0, ja param1, byte param2, int[] param3) {
+    final boolean a(byte[] param0, SoundCache param1, byte param2, int[] param3) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -53,9 +53,9 @@ final class wj extends IntrusiveNode {
                   var6 = var9;
                   var9--;
                   if ((1 & var9) == 0) {
-                    var7 = param1.a(-1, param3, var9 >> 2);
+                    var7 = param1.loadSoundEffectById(-1, param3, var9 >> 2);
                   } else {
-                    var7 = param1.a(var9 >> 2, param3, true);
+                    var7 = param1.loadMusicSampleById(var9 >> 2, param3, true);
                   }
                   if (var7 == null) {
                     var5_int = 0;

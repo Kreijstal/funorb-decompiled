@@ -19,7 +19,7 @@ final class vk {
     int[] field_s;
     int[] field_d;
     int[] field_I;
-    private m field_h;
+    private SoundCache field_h;
     int field_q;
     private int[] field_v;
     int[][] field_A;
@@ -56,9 +56,9 @@ final class vk {
         for (var3 = 0; var3 < this.field_e.length; var3++) {
           if (null == this.field_e[var3]) {
             if (this.field_C[var3] >> 4 != 0) {
-              var4 = this.field_h.a(this.field_v[var3], (byte) 76, this.field_m[var3]);
+              var4 = this.field_h.getMusicSampleByGroup(this.field_v[var3], (byte) 76, this.field_m[var3]);
             } else {
-              var4 = this.field_h.a(this.field_m[var3], this.field_v[var3], 256);
+              var4 = this.field_h.getSoundEffectByGroup(this.field_m[var3], this.field_v[var3], 256);
             }
             if (var4 != null) {
               this.field_C[var3] = va.a(this.field_C[var3], 15);
@@ -159,7 +159,7 @@ final class vk {
         }
     }
 
-    vk(PacketBuffer param0, m param1) {
+    vk(PacketBuffer param0, SoundCache param1) {
         int var3_int = 0;
         int var4 = 0;
         int dupTemp$0 = 0;

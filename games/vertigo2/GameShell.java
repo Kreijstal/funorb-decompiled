@@ -568,7 +568,7 @@ abstract class GameShell extends GameApplet {
                             bb.a(false, var3);
                           }
                         } else {
-                          DualLinkNode.a(gi.field_s, -121, id.field_f, ca.field_b);
+                          DualLinkNode.a(gi.field_s, -121, SoundCache.field_f, ca.field_b);
                         }
                       } else {
                         this.f((byte) -117);
@@ -660,11 +660,11 @@ abstract class GameShell extends GameApplet {
     }
 
     private final void i(int param0) {
-        int var2 = id.field_f.readUnsignedByte(-11);
+        int var2 = SoundCache.field_f.readUnsignedByte(-11);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var4 = param0 + ca.field_b;
         byte[] var5 = new byte[var4];
-        id.field_f.a((byte) 82, var4, var5, 0);
+        SoundCache.field_f.a((byte) 82, var4, var5, 0);
         hc.a(in.a(0, var5), param0 + 16012, var3 != 0, LoginPanel.e((byte) 81));
     }
 

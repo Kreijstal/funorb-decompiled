@@ -235,7 +235,7 @@ final class gg {
                   var24Lifetime1Lifetime1 = param4.field_D[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param4.field_E[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_m[var23Lifetime2];
-                  bl.field_d[var23Lifetime2] = (var15 * var25Lifetime1Lifetime1 + var12 * var24Lifetime1Lifetime1 + var18 * var26Lifetime1Lifetime1 >> 16) + var9;
+                  SoundCache.field_d[var23Lifetime2] = (var15 * var25Lifetime1Lifetime1 + var12 * var24Lifetime1Lifetime1 + var18 * var26Lifetime1Lifetime1 >> 16) + var9;
                   rl.field_d[var23Lifetime2] = var10 + (var19 * var26Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var16 + var13 * var24Lifetime1Lifetime1) >> 16);
                   NanoFrameTimer.field_g[var23Lifetime2] = (var14 * var24Lifetime1Lifetime1 + var17 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var20 >> 16) + var11;
                   var23Lifetime2++;

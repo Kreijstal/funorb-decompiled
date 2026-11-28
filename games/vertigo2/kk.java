@@ -110,7 +110,7 @@ final class kk {
     }
 
     final static void a(byte param0) {
-        id.field_a = gk.correctedCurrentTimeMillis(53);
+        SoundCache.field_a = gk.correctedCurrentTimeMillis(53);
         if (param0 != 43) {
           kk.a(-94, (byte) -26);
         }

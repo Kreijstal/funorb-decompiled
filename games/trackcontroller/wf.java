@@ -89,7 +89,7 @@ final class wf {
           if (r.field_i == null) {
             return false;
           }
-          if (jc.field_a.a(0)) {
+          if (SoundCache.field_a.a(0)) {
             return true;
           }
           return false;
@@ -97,7 +97,7 @@ final class wf {
         if (r.field_i == null) {
           return false;
         }
-        if (jc.field_a.a(0)) {
+        if (SoundCache.field_a.a(0)) {
           return true;
         }
         return false;

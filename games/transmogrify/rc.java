@@ -4,14 +4,14 @@
 final class rc {
     static String field_b;
     static int field_c;
-    static bl field_a;
+    static SoundCache field_a;
 
     final static int[] a(int param0, int param1, int param2) {
         int var3 = pe.a(4096, param0);
         int var4 = DualLinkNode.a(98, param0);
         int var5 = pe.a(4096, param2);
         if (param1 > -44) {
-          field_a = (bl) null;
+          field_a = (SoundCache) null;
         }
         int var6 = DualLinkNode.a(-120, param2);
         int var7 = (int)((long)var5 * (long)var3 >> 16);

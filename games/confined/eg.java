@@ -69,7 +69,7 @@ final class eg {
           if (1 != param1) {
             if (2 != param1) {
               if (param1 == 3) {
-                var6 = ij.a(0, '#', m.field_h);
+                var6 = ij.a(0, '#', SoundCache.field_h);
                 this.a(240, var6[4], 632, var6[5], ". . . " + var6[3], 0, -116);
                 this.a(0, var6[1], 8, var6[2] + " . . .", var6[0], 1, -83);
                 this.a(396, 550, new RgbSprite(64, 64), 0, 278);
@@ -792,8 +792,8 @@ final class eg {
         Object var37 = null;
         Object var38 = null;
         int[] var39 = null;
-        sk var40 = null;
-        sk var41 = null;
+        SoftwareModelMesh var40 = null;
+        SoftwareModelMesh var41 = null;
         int var9_intLifetime1;
         int var13_intLifetime1;
         double var13Lifetime1;
@@ -837,7 +837,7 @@ final class eg {
         SoftwareRasterizer.field_h = this.field_f.field_z;
         SoftwareRasterizer.field_l = this.field_f.field_w;
         SoftwareRasterizer.resetClip();
-        ti.b();
+        TriangleRasterizer.useRasterClip();
         if (this.field_h != 1) {
           if (this.field_h != 3) {
             if (4 == this.field_h) {
@@ -851,8 +851,8 @@ final class eg {
                 var14_double = Math.sin(var12_double);
                 var16_double = Math.cos(var12_double);
                 var18_ref_int__ = new int[]{0, var11_int, var10, -65536, 0, 0, 0, (int)(65536.0 * var16_double), -(int)(var14_double * 65536.0), 0, (int)(var14_double * 65536.0), (int)(-65536.0 * var16_double)};
-                var40 = (sk) (IsaacRandom.field_d.a(96, 1365, 0, 0, -256, var18_ref_int__));
-                var40.a(var9_ref_int__, var18_ref_int__);
+                var40 = (SoftwareModelMesh) (IsaacRandom.field_d.a(96, 1365, 0, 0, -256, var18_ref_int__));
+                var40.projectAndDrawWithTransforms(var9_ref_int__, var18_ref_int__);
                 decompiledSharedTail0 = (var35 != 0);
               }
               if (decompiledSharedTail0) {
@@ -922,8 +922,8 @@ final class eg {
                 var15 = Math.sin(var13);
                 var17 = Math.cos(var13);
                 var39 = new int[]{0, var12, var11_int, -65536, 0, 0, 0, (int)(65536.0 * var17), -(int)(65536.0 * var15), 0, (int)(65536.0 * var15), (int)(-65536.0 * var17)};
-                var41 = (sk) (IsaacRandom.field_d.a(96, 1365, 0, 0, -256, var39));
-                var41.a(var9_ref_int__, var39);
+                var41 = (SoftwareModelMesh) (IsaacRandom.field_d.a(96, 1365, 0, 0, -256, var39));
+                var41.projectAndDrawWithTransforms(var9_ref_int__, var39);
               }
               decompiledFrameRemainder1 = (var35 != 0);
             }
@@ -934,7 +934,7 @@ final class eg {
                   SoftwareRasterizer.clearRaster();
                   var10 = (int)(0.5 + 64.0 * uh.field_e[var9_int]);
                   var11_int = 64 - var10 >> 1;
-                  m.field_i[var9_int].drawScaled(var11_int, var11_int, var10, var10);
+                  SoundCache.field_i[var9_int].drawScaled(var11_int, var11_int, var10, var10);
                   TunnelEntity.field_w[15 & this.field_a >> 1].drawAdditive(0, 0, 256);
                   decompiledFrameRemainder1 = (var35 != 0);
                 }
@@ -996,11 +996,11 @@ final class eg {
             var20Lifetime1 = -var14Lifetime1 + 64 >> 1;
             SoftwareRasterizer.fillCircle(31, 31, 31, 1);
             if (var11_int == 0) {
-              m.field_i[var12].drawScaled(var19_intLifetime1, var20Lifetime1, var13_intLifetime1, var14Lifetime1);
+              SoundCache.field_i[var12].drawScaled(var19_intLifetime1, var20Lifetime1, var13_intLifetime1, var14Lifetime1);
             }
             if (var11_int != 0 ||
               var35 != 0) {
-              m.field_i[var12].drawScaledWithIntensity(var19_intLifetime1, var20Lifetime1, var13_intLifetime1, var14Lifetime1, 160);
+              SoundCache.field_i[var12].drawScaledWithIntensity(var19_intLifetime1, var20Lifetime1, var13_intLifetime1, var14Lifetime1, 160);
             }
             TunnelEntity.field_w[15 & this.field_a >> 1].drawAdditive(0, 0, 256);
             decompiledFrameRemainder1 = (var35 != 0);
@@ -1111,7 +1111,7 @@ final class eg {
           stackIn_98_0 = 0;
           stackIn_98_1 = 0;
         }
-        ti.a(stackIn_98_0, stackIn_98_1, 640, 376);
+        TriangleRasterizer.setClip(stackIn_98_0, stackIn_98_1, 640, 376);
         return;
     }
 

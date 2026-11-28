@@ -32,7 +32,7 @@ final class al extends IntrusiveNode {
         return 0 <= param0 ? true : false;
     }
 
-    final boolean a(int param0, byte[] param1, id param2, int[] param3) {
+    final boolean a(int param0, byte[] param1, SoundCache param2, int[] param3) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -63,9 +63,9 @@ final class al extends IntrusiveNode {
                   var6 = var9;
                   var9--;
                   if (0 != (var9 & 1)) {
-                    var7 = param2.a(param3, 64, var9 >> 2);
+                    var7 = param2.loadMusicSampleById(param3, 64, var9 >> 2);
                   } else {
-                    var7 = param2.a(false, param3, var9 >> 2);
+                    var7 = param2.loadSoundEffectById(false, param3, var9 >> 2);
                   }
                   if (var7 == null) {
                     var5_int = 0;

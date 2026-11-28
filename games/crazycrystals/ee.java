@@ -578,7 +578,7 @@ final class ee extends lk {
           var2_long = lo.correctedCurrentTimeMillis((byte) -98);
           if (0 != IntrusiveDeque.field_d &&
             sm.field_i < 0) {
-            var4_ref_mo = (mo) (bn.field_i.beginForward(32073));
+            var4_ref_mo = (mo) (SoundCache.field_i.beginForward(32073));
             if (var4_ref_mo != null &&
               var4_ref_mo.field_k < var2_long) {
               var4_ref_mo.unlink(false);
@@ -640,7 +640,7 @@ final class ee extends lk {
             for (var6 = 0; var6 < rk.field_b; var6++) {
               var5.field_g[var6] = ConfirmedEmailAvailabilityValidator.field_n.payload[var6];
             }
-            bn.field_i.addLast(param1 ^ 64, var5);
+            SoundCache.field_i.addLast(param1 ^ 64, var5);
             sm.field_i = -1;
             stackIn_21_0 = sm.field_i;
           }

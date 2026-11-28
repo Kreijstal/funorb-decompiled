@@ -3,7 +3,7 @@
  */
 final class AccountRequestState {
     static fh field_d;
-    static wk field_b;
+    static MusicTrack field_b;
     static int field_c;
     static int field_e;
     static ih field_a;

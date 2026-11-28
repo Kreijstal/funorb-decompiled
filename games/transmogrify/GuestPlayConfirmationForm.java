@@ -36,7 +36,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
         var7 = Transmogrify.field_A ? 1 : 0;
         try {
           if (param0 == this.field_z) {
-            bl.a(858);
+            SoundCache.a(858);
           } else {
             if (param0 != this.field_w) {
               if (this.field_C == param0) {

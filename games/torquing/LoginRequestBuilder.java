@@ -3,7 +3,7 @@
  */
 final class LoginRequestBuilder {
     static int[] field_c;
-    static fi field_a;
+    static SoundCache field_a;
     static fn field_b;
 
     final static void buildLoginRequest(bc param0, int param1, boolean param2, int param3, boolean param4) {

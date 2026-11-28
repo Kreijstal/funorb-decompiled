@@ -49,36 +49,36 @@ final class SynthInstrument {
         return 0;
     }
 
-    final void a(PacketBuffer param0) {
+    final void decode(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_i = new SoundEnvelope();
-        this.field_i.b(param0);
+        this.field_i.decode(param0);
         this.field_d = new SoundEnvelope();
-        this.field_d.b(param0);
+        this.field_d.decode(param0);
         int var2 = param0.readUnsignedByte(16711935);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_x = new SoundEnvelope();
-          this.field_x.b(param0);
+          this.field_x.decode(param0);
           this.field_r = new SoundEnvelope();
-          this.field_r.b(param0);
+          this.field_r.decode(param0);
         }
         var2 = param0.readUnsignedByte(16711935);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_n = new SoundEnvelope();
-          this.field_n.b(param0);
+          this.field_n.decode(param0);
           this.field_y = new SoundEnvelope();
-          this.field_y.b(param0);
+          this.field_y.decode(param0);
         }
         var2 = param0.readUnsignedByte(16711935);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_u = new SoundEnvelope();
-          this.field_u.b(param0);
+          this.field_u.decode(param0);
           this.field_a = new SoundEnvelope();
-          this.field_a.b(param0);
+          this.field_a.decode(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
           var4 = param0.readUnsignedSmart(16711935);
@@ -109,7 +109,7 @@ final class SynthInstrument {
         field_f = null;
     }
 
-    final int[] a(int param0, int param1) {
+    final int[] synthesize(int param0, int param1) {
         int stackIn_41_0 = 0;
         double var3;
         int var5;

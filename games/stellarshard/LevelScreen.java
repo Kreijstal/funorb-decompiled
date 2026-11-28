@@ -1144,7 +1144,7 @@ final class LevelScreen extends ib {
         }
     }
 
-    final static jj a(int param0, gk param1, String param2, ResourceArchive param3, String param4) {
+    final static jj a(int param0, SoundCache param1, String param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -1162,7 +1162,7 @@ final class LevelScreen extends ib {
         try {
           var5_int = param3.getGroupIdByName(param4, (byte) -118);
           if (param0 != 576) {
-            LevelScreen.a(-91, (gk) null, (String) null, (ResourceArchive) null, (String) null);
+            LevelScreen.a(-91, (SoundCache) null, (String) null, (ResourceArchive) null, (String) null);
           }
           var6 = param3.getFileIdByName(var5_int, param2, (byte) -11);
           stackIn_4_0 = ca.a(var5_int, 24325, var6, param3, param1);
@@ -1347,7 +1347,7 @@ final class LevelScreen extends ib {
                 var10_ref_pa.a(new int[]{0, 0, 0, var11, 0, -var12_int, 0, 65536, 0, var12_int, 0, var11});
                 var10_ref_pa.a(new int[]{0, 0, 0, var11, -var12_int, 0, var12_int, var11, 0, 0, 0, 65536});
                 var13_ref_bj = var10_ref_pa.a(32, 346, 50, 50, -50);
-                var13_ref_bj.a(0, 0, 0, 0, 0, 0, 1000, -1L);
+                var13_ref_bj.drawPerspective(0, 0, 0, 0, 0, 0, 1000, -1L);
                 RichTextLayout.field_h.a((byte) -107);
               }
               var4_double = (double)(var9 + 1) * 3.141592653589793 / 25.0;

@@ -181,67 +181,67 @@ abstract class dl extends DualLinkNode {
           }
           var2Lifetime17 = GzipDecompressor.a(10, "achievement_criteria,0");
           if (var2Lifetime17 != null) {
-            bl.achievementDescriptions[0] = eg.a(109, var2Lifetime17);
+            SoundCache.achievementDescriptions[0] = eg.a(109, var2Lifetime17);
           }
           var2Lifetime18 = GzipDecompressor.a(10, "achievement_criteria,1");
           if (var2Lifetime18 != null) {
-            bl.achievementDescriptions[1] = eg.a(85, var2Lifetime18);
+            SoundCache.achievementDescriptions[1] = eg.a(85, var2Lifetime18);
           }
           var2Lifetime19 = GzipDecompressor.a(10, "achievement_criteria,2");
           if (null != var2Lifetime19) {
-            bl.achievementDescriptions[2] = eg.a(106, var2Lifetime19);
+            SoundCache.achievementDescriptions[2] = eg.a(106, var2Lifetime19);
           }
           var2Lifetime20 = GzipDecompressor.a(10, "achievement_criteria,3");
           if (var2Lifetime20 != null) {
-            bl.achievementDescriptions[3] = eg.a(86, var2Lifetime20);
+            SoundCache.achievementDescriptions[3] = eg.a(86, var2Lifetime20);
           }
           var2Lifetime21 = GzipDecompressor.a(10, "achievement_criteria,4");
           if (null != var2Lifetime21) {
-            bl.achievementDescriptions[4] = eg.a(125, var2Lifetime21);
+            SoundCache.achievementDescriptions[4] = eg.a(125, var2Lifetime21);
           }
           var2Lifetime22 = GzipDecompressor.a(10, "achievement_criteria,5");
           if (null != var2Lifetime22) {
-            bl.achievementDescriptions[5] = eg.a(124, var2Lifetime22);
+            SoundCache.achievementDescriptions[5] = eg.a(124, var2Lifetime22);
           }
           var2Lifetime23 = GzipDecompressor.a(10, "achievement_criteria,6");
           if (null != var2Lifetime23) {
-            bl.achievementDescriptions[6] = eg.a(95, var2Lifetime23);
+            SoundCache.achievementDescriptions[6] = eg.a(95, var2Lifetime23);
           }
           var2Lifetime24 = GzipDecompressor.a(10, "achievement_criteria,7");
           if (var2Lifetime24 != null) {
-            bl.achievementDescriptions[7] = eg.a(102, var2Lifetime24);
+            SoundCache.achievementDescriptions[7] = eg.a(102, var2Lifetime24);
           }
           var2Lifetime25 = GzipDecompressor.a(10, "achievement_criteria,8");
           if (null != var2Lifetime25) {
-            bl.achievementDescriptions[8] = eg.a(112, var2Lifetime25);
+            SoundCache.achievementDescriptions[8] = eg.a(112, var2Lifetime25);
           }
           var2Lifetime26 = GzipDecompressor.a(10, "achievement_criteria,9");
           if (null != var2Lifetime26) {
-            bl.achievementDescriptions[9] = eg.a(124, var2Lifetime26);
+            SoundCache.achievementDescriptions[9] = eg.a(124, var2Lifetime26);
           }
           var2Lifetime27 = GzipDecompressor.a(10, "achievement_criteria,10");
           if (var2Lifetime27 != null) {
-            bl.achievementDescriptions[10] = eg.a(118, var2Lifetime27);
+            SoundCache.achievementDescriptions[10] = eg.a(118, var2Lifetime27);
           }
           var2Lifetime28 = GzipDecompressor.a(10, "achievement_criteria,11");
           if (null != var2Lifetime28) {
-            bl.achievementDescriptions[11] = eg.a(88, var2Lifetime28);
+            SoundCache.achievementDescriptions[11] = eg.a(88, var2Lifetime28);
           }
           var2Lifetime29 = GzipDecompressor.a(10, "achievement_criteria,12");
           if (var2Lifetime29 != null) {
-            bl.achievementDescriptions[12] = eg.a(92, var2Lifetime29);
+            SoundCache.achievementDescriptions[12] = eg.a(92, var2Lifetime29);
           }
           var2Lifetime30 = GzipDecompressor.a(10, "achievement_criteria,13");
           if (var2Lifetime30 != null) {
-            bl.achievementDescriptions[13] = eg.a(111, var2Lifetime30);
+            SoundCache.achievementDescriptions[13] = eg.a(111, var2Lifetime30);
           }
           var2Lifetime31 = GzipDecompressor.a(10, "achievement_criteria,14");
           if (null != var2Lifetime31) {
-            bl.achievementDescriptions[14] = eg.a(118, var2Lifetime31);
+            SoundCache.achievementDescriptions[14] = eg.a(118, var2Lifetime31);
           }
           var2Lifetime32 = GzipDecompressor.a(10, "achievement_criteria,15");
           if (null != var2Lifetime32) {
-            bl.achievementDescriptions[15] = eg.a(112, var2Lifetime32);
+            SoundCache.achievementDescriptions[15] = eg.a(112, var2Lifetime32);
           }
           var2Lifetime33 = GzipDecompressor.a(10, "submit_for_space");
           var3 = 66 % ((param1 - 46) / 51);

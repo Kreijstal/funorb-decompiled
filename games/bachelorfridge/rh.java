@@ -115,10 +115,10 @@ final class rh {
             var8 = (IntrusiveDeque) null;
             rh.a(true, (IntrusiveDeque) null);
           }
-          i.field_a.a(19842, param2);
+          SoundCache.field_a.a(19842, param2);
           if (ao.field_d != null) {
             if (AlphaWidgetContainer.field_I) {
-              ao.field_d.processInput(param2, i.field_a.field_D, i.field_a.field_M, 6381);
+              ao.field_d.processInput(param2, SoundCache.field_a.field_D, SoundCache.field_a.field_M, 6381);
             } else {
               ao.field_d = null;
             }

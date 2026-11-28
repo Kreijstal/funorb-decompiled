@@ -8,8 +8,8 @@ final class CrossfadingMidiPcmStream extends PcmStream {
     private boolean field_B;
     private int field_u;
     private MidiPcmStream field_C;
-    private wk field_y;
-    private wk field_F;
+    private MusicTrack field_y;
+    private MusicTrack field_F;
     static int field_n;
     private MidiPcmStream field_t;
     private int field_E;
@@ -17,7 +17,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
     private int field_A;
     private int field_x;
     private int[] field_p;
-    private wk field_r;
+    private MusicTrack field_r;
     static mf field_z;
     private int[] field_q;
     static RgbSprite[] field_v;
@@ -35,7 +35,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void a(wk param0, int param1, int param2, boolean param3, int param4, int param5) {
+    final synchronized void a(MusicTrack param0, int param1, int param2, boolean param3, int param4, int param5) {
         boolean stackIn_19_1 = false;
         int stackIn_33_0 = 0;
         MidiPcmStream stackIn_42_0 = null;
@@ -87,7 +87,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             return;
           }
           if (param2 != -524289) {
-            this.field_r = (wk) null;
+            this.field_r = (MusicTrack) null;
           }
           if (null != this.field_F) {
             if (this.field_r == null) {

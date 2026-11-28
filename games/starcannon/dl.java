@@ -45,7 +45,7 @@ final class dl {
         return DefaultTextWidgetRenderer.field_g[var4];
     }
 
-    final static lh a(ja param0, byte param1, String param2, String param3, ResourceArchive param4) {
+    final static lh a(SoundCache param0, byte param1, String param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

@@ -67,7 +67,7 @@ abstract class GameShell extends GameApplet {
                                 AccountCreationResultPanel.f((byte) -83);
                                 return;
                               }
-                              hb.reportClientError((Throwable) null, 0, "MGS1: " + jc.b(100));
+                              hb.reportClientError((Throwable) null, 0, "MGS1: " + SoundCache.formatInboundPacketDebug(100));
                               GameKeyHandler.a((byte) 119);
                               return;
                             }
@@ -91,7 +91,7 @@ abstract class GameShell extends GameApplet {
           }
           return;
         }
-        hb.reportClientError((Throwable) null, 0, "MGS2: " + jc.b(90));
+        hb.reportClientError((Throwable) null, 0, "MGS2: " + SoundCache.formatInboundPacketDebug(90));
         GameKeyHandler.a((byte) 123);
     }
 

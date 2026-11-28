@@ -518,7 +518,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           FullscreenFocusCanvas.a(25270);
           wg.clearStaticReferences(2);
           PcmResampler.clearStaticReferences(0);
-          cf.clearStaticReferences(-127);
+          SoundCache.clearStaticReferences(-127);
           mk.clearStaticReferences(0);
           LevelSession.clearStaticReferences(24342);
           nb.clearStaticReferences((byte) 76);
@@ -539,7 +539,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           MidiPcmStream.clearDeclaredStaticReferences(-921185753);
           tg.clearStaticReferences(0);
           cc.clearStaticReferences((byte) -8);
-          rl.clearStaticReferences();
+          MidiFileReader.clearStaticReferences();
           MusicPatchPcmStream.clearDeclaredStaticReferences(-112);
           ml.clearStaticReferences(!param0);
           AudioOutput.clearStaticReferences();
@@ -577,7 +577,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           DualLinkNode.d(-24338);
           BitPacketBuffer.releaseDeclaredStaticReferences(0);
           jj.resetStaticState(111);
-          nk.clearStaticReferences();
+          SynthesizerVoice.clearStaticReferences();
           sg.clearStaticReferences((byte) -57);
           VorbisSample.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
@@ -1276,295 +1276,295 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
 
     private final void j(byte param0) {
         RuntimeException decompiledCaughtException = null;
-        kb var2 = null;
+        SynthesizedSoundEffect var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        kb var2Lifetime1;
-        kb var2Lifetime2;
-        kb var2Lifetime3;
-        kb var2Lifetime4;
-        kb var2Lifetime5;
-        kb var2Lifetime6;
-        kb var2Lifetime7;
-        kb var2Lifetime8;
-        kb var2Lifetime9;
-        kb var2Lifetime10;
-        kb var2Lifetime11;
-        kb var2Lifetime12;
-        kb var2Lifetime13;
-        kb var2Lifetime14;
-        kb var2Lifetime15;
-        kb var2Lifetime16;
-        kb var2Lifetime17;
-        kb var2Lifetime18;
-        kb var2Lifetime19;
-        kb var2Lifetime20;
-        kb var2Lifetime21;
-        kb var2Lifetime22;
-        kb var2Lifetime23;
-        kb var2Lifetime24;
-        kb var2Lifetime25;
-        kb var2Lifetime26;
-        kb var2Lifetime27;
-        kb var2Lifetime28;
-        kb var2Lifetime29;
-        kb var2Lifetime30;
-        kb var2Lifetime31;
-        kb var2Lifetime32;
-        kb var2Lifetime33;
-        kb var2Lifetime34;
-        kb var2Lifetime35;
-        kb var2Lifetime36;
-        kb var2Lifetime37;
-        kb var2Lifetime38;
-        kb var2Lifetime39;
-        kb var2Lifetime40;
-        kb var2Lifetime41;
-        kb var2Lifetime42;
-        kb var2Lifetime43;
-        kb var2Lifetime44;
-        kb var2Lifetime45;
-        kb var2Lifetime46;
-        kb var2Lifetime47;
-        kb var2Lifetime48;
-        kb var2Lifetime49;
-        kb var2Lifetime50;
-        kb var2Lifetime51;
+        SynthesizedSoundEffect var2Lifetime1;
+        SynthesizedSoundEffect var2Lifetime2;
+        SynthesizedSoundEffect var2Lifetime3;
+        SynthesizedSoundEffect var2Lifetime4;
+        SynthesizedSoundEffect var2Lifetime5;
+        SynthesizedSoundEffect var2Lifetime6;
+        SynthesizedSoundEffect var2Lifetime7;
+        SynthesizedSoundEffect var2Lifetime8;
+        SynthesizedSoundEffect var2Lifetime9;
+        SynthesizedSoundEffect var2Lifetime10;
+        SynthesizedSoundEffect var2Lifetime11;
+        SynthesizedSoundEffect var2Lifetime12;
+        SynthesizedSoundEffect var2Lifetime13;
+        SynthesizedSoundEffect var2Lifetime14;
+        SynthesizedSoundEffect var2Lifetime15;
+        SynthesizedSoundEffect var2Lifetime16;
+        SynthesizedSoundEffect var2Lifetime17;
+        SynthesizedSoundEffect var2Lifetime18;
+        SynthesizedSoundEffect var2Lifetime19;
+        SynthesizedSoundEffect var2Lifetime20;
+        SynthesizedSoundEffect var2Lifetime21;
+        SynthesizedSoundEffect var2Lifetime22;
+        SynthesizedSoundEffect var2Lifetime23;
+        SynthesizedSoundEffect var2Lifetime24;
+        SynthesizedSoundEffect var2Lifetime25;
+        SynthesizedSoundEffect var2Lifetime26;
+        SynthesizedSoundEffect var2Lifetime27;
+        SynthesizedSoundEffect var2Lifetime28;
+        SynthesizedSoundEffect var2Lifetime29;
+        SynthesizedSoundEffect var2Lifetime30;
+        SynthesizedSoundEffect var2Lifetime31;
+        SynthesizedSoundEffect var2Lifetime32;
+        SynthesizedSoundEffect var2Lifetime33;
+        SynthesizedSoundEffect var2Lifetime34;
+        SynthesizedSoundEffect var2Lifetime35;
+        SynthesizedSoundEffect var2Lifetime36;
+        SynthesizedSoundEffect var2Lifetime37;
+        SynthesizedSoundEffect var2Lifetime38;
+        SynthesizedSoundEffect var2Lifetime39;
+        SynthesizedSoundEffect var2Lifetime40;
+        SynthesizedSoundEffect var2Lifetime41;
+        SynthesizedSoundEffect var2Lifetime42;
+        SynthesizedSoundEffect var2Lifetime43;
+        SynthesizedSoundEffect var2Lifetime44;
+        SynthesizedSoundEffect var2Lifetime45;
+        SynthesizedSoundEffect var2Lifetime46;
+        SynthesizedSoundEffect var2Lifetime47;
+        SynthesizedSoundEffect var2Lifetime48;
+        SynthesizedSoundEffect var2Lifetime49;
+        SynthesizedSoundEffect var2Lifetime50;
+        SynthesizedSoundEffect var2Lifetime51;
         try {
           we.a(GameClientShell.field_s, -79, 50.0f);
           this.renderClientFrame(0);
-          nl.field_r[0] = kb.a(aa.field_b, "", "menu_select").a().resample(ProxyAuthenticationRequiredException.field_g);
-          var2 = kb.a(aa.field_b, "", "DrP_1_gatling_gun_fire");
+          nl.field_r[0] = SynthesizedSoundEffect.loadByName(aa.field_b, "", "menu_select").toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
+          var2 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_1_gatling_gun_fire");
           if (null != var2) {
-            nl.field_r[1] = var2.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[1] = var2.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime1 = kb.a(aa.field_b, "", "DrP_2_drop_bomb");
+          var2Lifetime1 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_2_drop_bomb");
           if (var2Lifetime1 != null) {
-            nl.field_r[2] = var2Lifetime1.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[2] = var2Lifetime1.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime2 = kb.a(aa.field_b, "", "DrP_3_sonic_canon_fire");
+          var2Lifetime2 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_3_sonic_canon_fire");
           if (null != var2Lifetime2) {
-            nl.field_r[3] = var2Lifetime2.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[3] = var2Lifetime2.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime3 = kb.a(aa.field_b, "", "DrP_4_homing_missile_fire");
+          var2Lifetime3 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_4_homing_missile_fire");
           if (var2Lifetime3 != null) {
-            nl.field_r[4] = var2Lifetime3.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[4] = var2Lifetime3.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
           nl.field_r[5] = wi.a(2205, 100, 100);
-          var2Lifetime4 = kb.a(aa.field_b, "", "DrP_6_mega_canon_fire");
+          var2Lifetime4 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_6_mega_canon_fire");
           if (var2Lifetime4 != null) {
-            nl.field_r[6] = var2Lifetime4.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[6] = var2Lifetime4.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime5 = kb.a(aa.field_b, "", "DrP_7_loose_life");
+          var2Lifetime5 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_7_loose_life");
           if (var2Lifetime5 != null) {
-            nl.field_r[7] = var2Lifetime5.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[7] = var2Lifetime5.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
           nl.field_r[8] = VorbisSample.loadByName(DelegatingCanvas.field_b, "", "DrP_8_respawn").decodeAllToPcm().resample(ProxyAuthenticationRequiredException.field_g);
-          var2Lifetime6 = kb.a(aa.field_b, "", "DrP_9_final_death");
+          var2Lifetime6 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_9_final_death");
           if (null != var2Lifetime6) {
-            nl.field_r[9] = var2Lifetime6.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[9] = var2Lifetime6.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime7 = kb.a(aa.field_b, "", "DrP_10_tripod_hit");
+          var2Lifetime7 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_10_tripod_hit");
           if (null != var2Lifetime7) {
-            nl.field_r[10] = var2Lifetime7.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[10] = var2Lifetime7.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime8 = kb.a(aa.field_b, "", "DrP_11_tripod_fire");
+          var2Lifetime8 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_11_tripod_fire");
           if (var2Lifetime8 != null) {
-            nl.field_r[11] = var2Lifetime8.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[11] = var2Lifetime8.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime9 = kb.a(aa.field_b, "", "DrP_12_probes_hit");
+          var2Lifetime9 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_12_probes_hit");
           if (var2Lifetime9 != null) {
-            nl.field_r[12] = var2Lifetime9.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[12] = var2Lifetime9.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
           nl.field_r[13] = VorbisSample.loadByName(DelegatingCanvas.field_b, "", "DrP_13_probes_die").decodeAllToPcm().resample(ProxyAuthenticationRequiredException.field_g);
-          var2Lifetime10 = kb.a(aa.field_b, "", "DrP_14_glider_fire");
+          var2Lifetime10 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_14_glider_fire");
           if (null != var2Lifetime10) {
-            nl.field_r[14] = var2Lifetime10.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[14] = var2Lifetime10.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime11 = kb.a(aa.field_b, "", "DrP_15_glider_die");
+          var2Lifetime11 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_15_glider_die");
           if (var2Lifetime11 != null) {
-            nl.field_r[15] = var2Lifetime11.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[15] = var2Lifetime11.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime12 = kb.a(aa.field_b, "", "DrP_16_shredder_hit");
+          var2Lifetime12 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_16_shredder_hit");
           if (null != var2Lifetime12) {
-            nl.field_r[16] = var2Lifetime12.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[16] = var2Lifetime12.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime13 = kb.a(aa.field_b, "", "DrP_17_shredder_die");
+          var2Lifetime13 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_17_shredder_die");
           if (var2Lifetime13 != null) {
-            nl.field_r[17] = var2Lifetime13.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[17] = var2Lifetime13.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime14 = kb.a(aa.field_b, "", "DrP_18_as_bot_hit");
+          var2Lifetime14 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_18_as_bot_hit");
           if (var2Lifetime14 != null) {
-            nl.field_r[18] = var2Lifetime14.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[18] = var2Lifetime14.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime15 = kb.a(aa.field_b, "", "DrP_19_as_bot_fire");
+          var2Lifetime15 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_19_as_bot_fire");
           if (null != var2Lifetime15) {
-            nl.field_r[19] = var2Lifetime15.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[19] = var2Lifetime15.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
           nl.field_r[20] = VorbisSample.loadByName(DelegatingCanvas.field_b, "", "DrP_20_as_bot_die").decodeAllToPcm().resample(ProxyAuthenticationRequiredException.field_g);
           nl.field_r[21] = VorbisSample.loadByName(DelegatingCanvas.field_b, "", "DrP_21_dropship_move").decodeAllToPcm().resample(ProxyAuthenticationRequiredException.field_g);
           nl.field_r[22] = VorbisSample.loadByName(DelegatingCanvas.field_b, "", "DrP_22_dropship_chrg").decodeAllToPcm().resample(ProxyAuthenticationRequiredException.field_g);
-          var2Lifetime16 = kb.a(aa.field_b, "", "DrP_23_dropship_spawn");
+          var2Lifetime16 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_23_dropship_spawn");
           if (var2Lifetime16 != null) {
-            nl.field_r[23] = var2Lifetime16.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[23] = var2Lifetime16.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime17 = kb.a(aa.field_b, "", "DrP_24_dropship_fire");
+          var2Lifetime17 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_24_dropship_fire");
           if (var2Lifetime17 != null) {
-            nl.field_r[24] = var2Lifetime17.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[24] = var2Lifetime17.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime18 = kb.a(aa.field_b, "", "DrP_25_dropship_hit");
+          var2Lifetime18 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_25_dropship_hit");
           if (null != var2Lifetime18) {
-            nl.field_r[25] = var2Lifetime18.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[25] = var2Lifetime18.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
           nl.field_r[26] = VorbisSample.loadByName(DelegatingCanvas.field_b, "", "DrP_26_dropship_die").decodeAllToPcm().resample(ProxyAuthenticationRequiredException.field_g);
-          var2Lifetime19 = kb.a(aa.field_b, "", "DrP_27_spacemine_exp");
+          var2Lifetime19 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_27_spacemine_exp");
           if (null != var2Lifetime19) {
-            nl.field_r[27] = var2Lifetime19.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[27] = var2Lifetime19.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime20 = kb.a(aa.field_b, "", "DrP_28_miner_hit");
+          var2Lifetime20 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_28_miner_hit");
           if (var2Lifetime20 != null) {
-            nl.field_r[28] = var2Lifetime20.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[28] = var2Lifetime20.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
           nl.field_r[29] = VorbisSample.loadByName(DelegatingCanvas.field_b, "", "DrP_29_miner_move").decodeAllToPcm().resample(ProxyAuthenticationRequiredException.field_g);
-          var2Lifetime21 = kb.a(aa.field_b, "", "DrP_30_miner_die");
+          var2Lifetime21 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_30_miner_die");
           if (null != var2Lifetime21) {
-            nl.field_r[30] = var2Lifetime21.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[30] = var2Lifetime21.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime22 = kb.a(aa.field_b, "", "DrP_31_asteroid_hit");
+          var2Lifetime22 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_31_asteroid_hit");
           if (var2Lifetime22 != null) {
-            nl.field_r[31] = var2Lifetime22.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[31] = var2Lifetime22.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime23 = kb.a(aa.field_b, "", "DrP_32b_asteroid_dest");
+          var2Lifetime23 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_32b_asteroid_dest");
           if (null != var2Lifetime23) {
-            nl.field_r[32] = var2Lifetime23.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[32] = var2Lifetime23.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
           nl.field_r[33] = VorbisSample.loadByName(DelegatingCanvas.field_b, "", "DrP_33_battlecarr_move").decodeAllToPcm().resample(ProxyAuthenticationRequiredException.field_g);
           nl.field_r[34] = VorbisSample.loadByName(DelegatingCanvas.field_b, "", "DrP_34_battlecarr_charge").decodeAllToPcm().resample(ProxyAuthenticationRequiredException.field_g);
-          var2Lifetime24 = kb.a(aa.field_b, "", "DrP_35_battlecarr_fire");
+          var2Lifetime24 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_35_battlecarr_fire");
           if (var2Lifetime24 != null) {
-            nl.field_r[35] = var2Lifetime24.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[35] = var2Lifetime24.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime25 = kb.a(aa.field_b, "", "DrP_36_battlecarr_spawn");
+          var2Lifetime25 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_36_battlecarr_spawn");
           if (null != var2Lifetime25) {
-            nl.field_r[36] = var2Lifetime25.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[36] = var2Lifetime25.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime26 = kb.a(aa.field_b, "", "DrP_37_battlecarr_hit");
+          var2Lifetime26 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_37_battlecarr_hit");
           if (var2Lifetime26 != null) {
-            nl.field_r[37] = var2Lifetime26.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[37] = var2Lifetime26.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
           nl.field_r[38] = VorbisSample.loadByName(DelegatingCanvas.field_b, "", "DrP_38_battlecarr_die").decodeAllToPcm().resample(ProxyAuthenticationRequiredException.field_g);
           nl.field_r[39] = VorbisSample.loadByName(DelegatingCanvas.field_b, "", "DrP_39_bunkers_hit").decodeAllToPcm().resample(ProxyAuthenticationRequiredException.field_g);
-          var2Lifetime27 = kb.a(aa.field_b, "", "DrP_40_bunkers_die");
+          var2Lifetime27 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_40_bunkers_die");
           if (null != var2Lifetime27) {
-            nl.field_r[40] = var2Lifetime27.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[40] = var2Lifetime27.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime28 = kb.a(aa.field_b, "", "DrP_41_combtank_fire");
+          var2Lifetime28 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_41_combtank_fire");
           if (var2Lifetime28 != null) {
-            nl.field_r[41] = var2Lifetime28.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[41] = var2Lifetime28.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime29 = kb.a(aa.field_b, "", "DrP_42_combtank_hit");
+          var2Lifetime29 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_42_combtank_hit");
           if (var2Lifetime29 != null) {
-            nl.field_r[42] = var2Lifetime29.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[42] = var2Lifetime29.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime30 = kb.a(aa.field_b, "", "DrP_43_combtank_die");
+          var2Lifetime30 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_43_combtank_die");
           if (var2Lifetime30 != null) {
-            nl.field_r[43] = var2Lifetime30.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[43] = var2Lifetime30.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime31 = kb.a(aa.field_b, "", "DrP_44_battank_fire");
+          var2Lifetime31 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_44_battank_fire");
           if (var2Lifetime31 != null) {
-            nl.field_r[44] = var2Lifetime31.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[44] = var2Lifetime31.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime32 = kb.a(aa.field_b, "", "DrP_45_battank_hit");
+          var2Lifetime32 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_45_battank_hit");
           if (var2Lifetime32 != null) {
-            nl.field_r[45] = var2Lifetime32.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[45] = var2Lifetime32.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime33 = kb.a(aa.field_b, "", "DrP_46_battank_die");
+          var2Lifetime33 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_46_battank_die");
           if (var2Lifetime33 != null) {
-            nl.field_r[46] = var2Lifetime33.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[46] = var2Lifetime33.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
           nl.field_r[47] = VorbisSample.loadByName(DelegatingCanvas.field_b, "", "DrP_47_attackcop_move").decodeAllToPcm().resample(ProxyAuthenticationRequiredException.field_g);
-          var2Lifetime34 = kb.a(aa.field_b, "", "DrP_48_attackcop_fire");
+          var2Lifetime34 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_48_attackcop_fire");
           if (null != var2Lifetime34) {
-            nl.field_r[48] = var2Lifetime34.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[48] = var2Lifetime34.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime35 = kb.a(aa.field_b, "", "DrP_49_attackcop_hit");
+          var2Lifetime35 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_49_attackcop_hit");
           if (var2Lifetime35 != null) {
-            nl.field_r[49] = var2Lifetime35.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[49] = var2Lifetime35.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
           nl.field_r[50] = VorbisSample.loadByName(DelegatingCanvas.field_b, "", "DrP_50_attackcop_die").decodeAllToPcm().resample(ProxyAuthenticationRequiredException.field_g);
           nl.field_r[51] = VorbisSample.loadByName(DelegatingCanvas.field_b, "", "DrP_51_doomcop_move").decodeAllToPcm().resample(ProxyAuthenticationRequiredException.field_g);
-          var2Lifetime36 = kb.a(aa.field_b, "", "DrP_52_doomcop_fire");
+          var2Lifetime36 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_52_doomcop_fire");
           if (var2Lifetime36 != null) {
-            nl.field_r[52] = var2Lifetime36.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[52] = var2Lifetime36.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime37 = kb.a(aa.field_b, "", "DrP_53_doomcop_hit");
+          var2Lifetime37 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_53_doomcop_hit");
           if (null != var2Lifetime37) {
-            nl.field_r[53] = var2Lifetime37.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[53] = var2Lifetime37.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
           nl.field_r[54] = VorbisSample.loadByName(DelegatingCanvas.field_b, "", "DrP_54_doomcop_die").decodeAllToPcm().resample(ProxyAuthenticationRequiredException.field_g);
-          var2Lifetime38 = kb.a(aa.field_b, "", "DrP_55_floatbat_move");
+          var2Lifetime38 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_55_floatbat_move");
           if (null != var2Lifetime38) {
-            nl.field_r[55] = var2Lifetime38.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[55] = var2Lifetime38.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
           nl.field_r[56] = VorbisSample.loadByName(DelegatingCanvas.field_b, "", "DrP_56_floatbat_chrg").decodeAllToPcm().resample(ProxyAuthenticationRequiredException.field_g);
-          var2Lifetime39 = kb.a(aa.field_b, "", "DrP_57_floatbat_fire");
+          var2Lifetime39 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_57_floatbat_fire");
           if (null != var2Lifetime39) {
-            nl.field_r[57] = var2Lifetime39.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[57] = var2Lifetime39.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime40 = kb.a(aa.field_b, "", "DrP_58_floatbat_spawn");
+          var2Lifetime40 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_58_floatbat_spawn");
           if (null != var2Lifetime40) {
-            nl.field_r[58] = var2Lifetime40.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[58] = var2Lifetime40.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime41 = kb.a(aa.field_b, "", "DrP_59_floatbat_hit");
+          var2Lifetime41 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_59_floatbat_hit");
           if (null != var2Lifetime41) {
-            nl.field_r[59] = var2Lifetime41.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[59] = var2Lifetime41.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
           nl.field_r[60] = VorbisSample.loadByName(DelegatingCanvas.field_b, "", "DrP_60_floatbat_die").decodeAllToPcm().resample(ProxyAuthenticationRequiredException.field_g);
-          var2Lifetime42 = kb.a(aa.field_b, "", "DrP_61_alcomship_move");
+          var2Lifetime42 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_61_alcomship_move");
           if (var2Lifetime42 != null) {
-            nl.field_r[61] = var2Lifetime42.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[61] = var2Lifetime42.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
           nl.field_r[62] = VorbisSample.loadByName(DelegatingCanvas.field_b, "", "DrP_62_alcomship_chrg").decodeAllToPcm().resample(ProxyAuthenticationRequiredException.field_g);
-          var2Lifetime43 = kb.a(aa.field_b, "", "DrP_63_alcomship_fire");
+          var2Lifetime43 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_63_alcomship_fire");
           if (null != var2Lifetime43) {
-            nl.field_r[63] = var2Lifetime43.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[63] = var2Lifetime43.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime44 = kb.a(aa.field_b, "", "DrP_64_alcomship_spawn");
+          var2Lifetime44 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_64_alcomship_spawn");
           if (null != var2Lifetime44) {
-            nl.field_r[64] = var2Lifetime44.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[64] = var2Lifetime44.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime45 = kb.a(aa.field_b, "", "DrP_65_alcomship_fire2");
+          var2Lifetime45 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_65_alcomship_fire2");
           if (var2Lifetime45 != null) {
-            nl.field_r[65] = var2Lifetime45.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[65] = var2Lifetime45.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime46 = kb.a(aa.field_b, "", "DrP_66_alcomship_hit");
+          var2Lifetime46 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_66_alcomship_hit");
           if (null != var2Lifetime46) {
-            nl.field_r[66] = var2Lifetime46.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[66] = var2Lifetime46.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
           nl.field_r[67] = VorbisSample.loadByName(DelegatingCanvas.field_b, "", "DrP_67_alcomship_die").decodeAllToPcm().resample(ProxyAuthenticationRequiredException.field_g);
-          var2Lifetime47 = kb.a(aa.field_b, "", "DrP_68_humbuild_hit");
+          var2Lifetime47 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_68_humbuild_hit");
           if (var2Lifetime47 != null) {
-            nl.field_r[68] = var2Lifetime47.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[68] = var2Lifetime47.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
           if (var2Lifetime47 != null) {
-            nl.field_r[69] = var2Lifetime47.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[69] = var2Lifetime47.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime48 = kb.a(aa.field_b, "", "DrP_70_allpowerups");
+          var2Lifetime48 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_70_allpowerups");
           if (var2Lifetime48 != null) {
-            nl.field_r[70] = var2Lifetime48.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[70] = var2Lifetime48.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime49 = kb.a(aa.field_b, "", "DrP_32c_asteroid_dest");
+          var2Lifetime49 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_32c_asteroid_dest");
           var3 = 47 / ((param0 - 19) / 45);
           if (var2Lifetime49 != null) {
-            nl.field_r[71] = var2Lifetime49.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[71] = var2Lifetime49.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime50 = kb.a(aa.field_b, "", "DrP_32a_asteroid_dest");
+          var2Lifetime50 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "DrP_32a_asteroid_dest");
           if (var2Lifetime50 != null) {
-            nl.field_r[72] = var2Lifetime50.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[72] = var2Lifetime50.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          var2Lifetime51 = kb.a(aa.field_b, "", "drp_71_tesla_coil");
+          var2Lifetime51 = SynthesizedSoundEffect.loadByName(aa.field_b, "", "drp_71_tesla_coil");
           if (var2Lifetime51 != null) {
-            nl.field_r[73] = var2Lifetime51.a().resample(ProxyAuthenticationRequiredException.field_g);
+            nl.field_r[73] = var2Lifetime51.toPcmSample().resample(ProxyAuthenticationRequiredException.field_g);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2061,7 +2061,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
                               return false;
                             }
                             ByteStorage.b(77);
-                            cf.field_c = new cf(aa.field_b, DelegatingCanvas.field_b);
+                            SoundCache.field_c = new SoundCache(aa.field_b, DelegatingCanvas.field_b);
                             ProxyAuthenticationRequiredException.field_g = new PcmResampler(22050, AudioOutput.field_d);
                             this.j((byte) -30);
                             aa.field_b = null;
@@ -2100,21 +2100,21 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           if (null != df.field_a) {
             we.a(ai.field_x, -83, 55.0f);
             this.renderClientFrame(0);
-            PasswordValidator.field_q = ok.a(df.field_a, "", "Dr_Phlogiston_Title");
-            s.field_a.a(0, ui.field_a, 0, PasswordValidator.field_q, cf.field_c);
-            ki.field_c = ok.a(df.field_a, "", "Dr_Phlogiston_Earth");
-            s.field_a.a(0, ui.field_a, 0, ki.field_c, cf.field_c);
-            hi.field_l = ok.a(df.field_a, "", "Dr_Phlogiston_Space");
-            s.field_a.a(0, ui.field_a, 0, hi.field_l, cf.field_c);
-            le.field_e = ok.a(df.field_a, "", "Dr_Phlogiston_Alien");
-            s.field_a.a(0, ui.field_a, 0, le.field_e, cf.field_c);
-            BitPacketBuffer.field_l = ok.a(df.field_a, "", "Dr_Phlogiston_Boss_Break");
-            dm.field_x = ok.a(df.field_a, "", "Dr_Phlogiston_GameOver_jingle");
-            s.field_a.a(0, ui.field_a, 0, dm.field_x, cf.field_c);
-            ml.field_l = ok.a(df.field_a, "", "Dr_Phlogiston_GameComplete_jingle");
-            s.field_a.a(0, ui.field_a, 0, ml.field_l, cf.field_c);
+            PasswordValidator.field_q = MusicTrack.load(df.field_a, "", "Dr_Phlogiston_Title");
+            s.field_a.a(0, ui.field_a, 0, PasswordValidator.field_q, SoundCache.field_c);
+            ki.field_c = MusicTrack.load(df.field_a, "", "Dr_Phlogiston_Earth");
+            s.field_a.a(0, ui.field_a, 0, ki.field_c, SoundCache.field_c);
+            hi.field_l = MusicTrack.load(df.field_a, "", "Dr_Phlogiston_Space");
+            s.field_a.a(0, ui.field_a, 0, hi.field_l, SoundCache.field_c);
+            le.field_e = MusicTrack.load(df.field_a, "", "Dr_Phlogiston_Alien");
+            s.field_a.a(0, ui.field_a, 0, le.field_e, SoundCache.field_c);
+            BitPacketBuffer.field_l = MusicTrack.load(df.field_a, "", "Dr_Phlogiston_Boss_Break");
+            dm.field_x = MusicTrack.load(df.field_a, "", "Dr_Phlogiston_GameOver_jingle");
+            s.field_a.a(0, ui.field_a, 0, dm.field_x, SoundCache.field_c);
+            ml.field_l = MusicTrack.load(df.field_a, "", "Dr_Phlogiston_GameComplete_jingle");
+            s.field_a.a(0, ui.field_a, 0, ml.field_l, SoundCache.field_c);
             s.field_a.b((byte) 47);
-            cf.field_c = null;
+            SoundCache.field_c = null;
             df.field_a = null;
             ui.field_a = null;
             IterableNodeHashTable.a((byte) 86);
@@ -2400,8 +2400,8 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           oj.field_f[0].c();
           ld.field_f = ij.a("scenery_tile_earth_bath_06_fire_mask", (byte) 60, kf.field_d, "");
           ld.field_f[0].c();
-          cf.field_g = this.a(eh.a("", (byte) -48, kf.field_d, "scenery_tile_earth_bath_07_fire_mask"), (byte) 101);
-          cf.field_g[0].c();
+          SoundCache.field_g = this.a(eh.a("", (byte) -48, kf.field_d, "scenery_tile_earth_bath_07_fire_mask"), (byte) 101);
+          SoundCache.field_g[0].c();
           ri.field_r = ij.a("scenery_tile_earth_bath_08_fire_mask", (byte) 62, kf.field_d, "");
           ri.field_r[0].c();
           cl.field_n = ij.a("scenery_tile_earth_bath_09_fire_mask", (byte) 102, kf.field_d, "");

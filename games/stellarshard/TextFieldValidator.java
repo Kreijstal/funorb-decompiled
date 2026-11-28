@@ -131,7 +131,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
         int var1_intLifetime1;
         var4 = stellarshard.field_B;
         try {
-          cc.a();
+          TriangleRasterizer.useRasterClip();
           fc.field_e = 11;
           ol.field_g = new int[260];
           if (param0 != 25536) {

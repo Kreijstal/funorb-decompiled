@@ -113,7 +113,7 @@ final class StripedProgressWidget extends UiWidget {
         }
         SoftwareRasterizer.setClip(var1.field_t, var1.field_n, var1.field_r, var1.field_p);
         var1.field_s = null;
-        m.field_d.addLast((IntrusiveNode) (var1), (byte) -108);
+        SoundCache.field_d.addLast((IntrusiveNode) (var1), (byte) -108);
     }
 
     final void setColours(int param0, boolean param1, int param2) {

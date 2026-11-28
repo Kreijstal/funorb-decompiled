@@ -13,7 +13,7 @@ final class rb extends ArchiveProvider {
     static int field_m;
     private ArchiveRequest field_j;
     private SectorCacheStore field_q;
-    static ji field_s;
+    static MusicTrack field_s;
     static RgbSprite field_y;
     private int field_g;
     private ej field_h;

@@ -72,7 +72,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           if (0 == var2) {
             if (ug.field_cb == null) {
               ug.field_cb = new bj(128);
-              jc.field_c = 0;
+              SoundCache.field_c = 0;
             }
             stackIn_15_0 = (var1.readUnsignedByte(16383) != 1) ? 0 : 1;
             var3_int = stackIn_15_0;
@@ -95,8 +95,8 @@ final class SecondaryNodeDequeIterator implements Iterator {
             if (var5_ref == null) {
               var5_ref = new ve();
               ug.field_cb.a(var5_ref, (long)var7_ref.hashCode(), param0 ^ 240);
-              fieldTemp$1 = jc.field_c;
-              jc.field_c = jc.field_c + 1;
+              fieldTemp$1 = SoundCache.field_c;
+              SoundCache.field_c = SoundCache.field_c + 1;
               var5_ref.field_R = fieldTemp$1;
               pb.field_d.addLast((byte) -111, var5_ref);
             }
@@ -117,7 +117,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
               return;
             }
             if (var2 != 4) {
-              hb.reportClientError((Throwable) null, 0, "F1: " + jc.b(77));
+              hb.reportClientError((Throwable) null, 0, "F1: " + SoundCache.formatInboundPacketDebug(77));
               GameKeyHandler.a((byte) 118);
               return;
             }

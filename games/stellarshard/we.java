@@ -187,7 +187,7 @@ final class we {
         try {
           ProgressMessageDialog.field_db = true;
           ak.field_a = param0 ? true : false;
-          ModalDialogHost.field_G = new ProgressMessageDialog(IsaacRandom.field_d, DualLinkDequeIterator.field_c, param2, gk.field_a, ak.field_a);
+          ModalDialogHost.field_G = new ProgressMessageDialog(IsaacRandom.field_d, DualLinkDequeIterator.field_c, param2, SoundCache.field_a, ak.field_a);
           if (param1 != 12757) {
             field_e = (String) null;
           }

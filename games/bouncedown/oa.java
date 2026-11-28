@@ -30,8 +30,8 @@ abstract class oa {
 
     final static java.awt.Container a(byte param0) {
         int var1 = -65 % ((69 - param0) / 53);
-        if (null != i.field_h) {
-          return (java.awt.Container) ((Object) i.field_h);
+        if (null != SoundCache.field_h) {
+          return (java.awt.Container) ((Object) SoundCache.field_h);
         }
         return (java.awt.Container) ((Object) DiskCacheWorker.b(0));
     }

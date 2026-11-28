@@ -406,7 +406,7 @@ final class kc {
         int var4 = (int)(uh.field_e[param2] * 48.0 + 0.5);
         int var5 = -var4 + 48 >> 1;
         if ((1 << param2 & 50087) != 0) {
-          m.field_i[param2].drawScaledAdditive(param3 + var5, param1 + var5, var4, var4, 256);
+          SoundCache.field_i[param2].drawScaledAdditive(param3 + var5, param1 + var5, var4, var4, 256);
           TunnelEntity.field_w[qn.field_r >> 1 & 15].drawScaledAdditive(param3, param1, 48, 48, 256);
           if (param0) {
             field_k = (java.applet.Applet) null;
@@ -414,7 +414,7 @@ final class kc {
           }
           return;
         }
-        m.field_i[param2].drawScaled(param3 + var5, param1 + var5, var4, var4);
+        SoundCache.field_i[param2].drawScaled(param3 + var5, param1 + var5, var4, var4);
         TunnelEntity.field_w[qn.field_r >> 1 & 15].drawScaledAdditive(param3, param1, 48, 48, 256);
         if (param0) {
           field_k = (java.applet.Applet) null;

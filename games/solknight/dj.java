@@ -5,7 +5,7 @@ final class dj extends IntrusiveNode {
     int field_h;
     int field_i;
     static FullscreenFocusCanvas field_k;
-    static rl field_j;
+    static MusicTrack field_j;
 
     private dj() throws Throwable {
         throw new Error();

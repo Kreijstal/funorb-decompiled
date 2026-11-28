@@ -18,7 +18,7 @@ final class vd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 4) {
-            stackIn_4_0 = me.field_e.getFileByName(4, "", param0);
+            stackIn_4_0 = SoundCache.field_e.getFileByName(4, "", param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;

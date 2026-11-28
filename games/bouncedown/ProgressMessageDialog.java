@@ -36,7 +36,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           var6 = new DialogMessagePane(this, this.field_bb, param0);
           if (5 == param2) {
             var6.addActionButton(ta.field_e, 11, (byte) 116);
-            var6.addActionButton(i.field_g, 17, (byte) 123);
+            var6.addActionButton(SoundCache.field_g, 17, (byte) 123);
           } else {
             if (param2 == 256) {
               var6.addListenerButton(ContentTransitionDialog.field_W, (WidgetEventListener) (this), -4);

@@ -98,7 +98,7 @@ final class nf extends IntrusiveNode {
         }
     }
 
-    final boolean a(int[] param0, byte[] param1, rd param2, int param3) {
+    final boolean a(int[] param0, byte[] param1, SoundCache param2, int param3) {
         int var8 = 0;
         int stackIn_21_0 = 0;
         RuntimeException stackIn_24_0 = null;
@@ -132,9 +132,9 @@ final class nf extends IntrusiveNode {
                   var6 = var9;
                   var9--;
                   if ((var9 & 1) == 0) {
-                    var7 = param2.a(param0, param3 + 20880, var9 >> 2);
+                    var7 = param2.loadSoundEffectById(param0, param3 + 20880, var9 >> 2);
                   } else {
-                    var7 = param2.a((byte) -93, param0, var9 >> 2);
+                    var7 = param2.loadMusicSampleById((byte) -93, param0, var9 >> 2);
                   }
                   if (var7 == null) {
                     var5_int = 0;

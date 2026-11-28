@@ -217,7 +217,7 @@ final class vg {
           }
           var11 = 4 + (IntrusiveNode.field_d.field_y * 2 + (206 + param2));
           var12 = new String[16];
-          var13 = IntrusiveNode.field_d.wrapText(bl.achievementDescriptions[var8], new int[]{219}, var12);
+          var13 = IntrusiveNode.field_d.wrapText(SoundCache.achievementDescriptions[var8], new int[]{219}, var12);
           var11 = var11 + ((-var13 + 4) * var9Lifetime1 >> 1);
           for (var14 = 0; var14 < var13; var14++) {
             IntrusiveNode.field_d.drawString(var12[var14], 394, var11, 0, -1);

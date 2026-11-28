@@ -30,7 +30,7 @@ final class jj {
     byte[][] field_y;
     int[][] field_x;
     int[] field_o;
-    private gk field_u;
+    private SoundCache field_u;
     int[] field_t;
     int[] field_e;
     int[][] field_L;
@@ -98,9 +98,9 @@ final class jj {
         for (var3 = 0; this.field_j.length > var3; var3++) {
           if (null == this.field_j[var3]) {
             if (this.field_c[var3] >> 4 == 0) {
-              var4 = this.field_u.a(this.field_i[var3], this.field_G[var3], false);
+              var4 = this.field_u.getSoundEffectByGroup(this.field_i[var3], this.field_G[var3], false);
             } else {
-              var4 = this.field_u.a((byte) -65, this.field_G[var3], this.field_i[var3]);
+              var4 = this.field_u.getMusicSampleByGroup((byte) -65, this.field_G[var3], this.field_i[var3]);
             }
             if (var4 != null) {
               this.field_c[var3] = DirectByteStorage.a(this.field_c[var3], 15);
@@ -151,7 +151,7 @@ final class jj {
         return new bh[]{AgeValidator.field_k, ak.field_d, ma.field_m};
     }
 
-    jj(PacketBuffer param0, gk param1) {
+    jj(PacketBuffer param0, SoundCache param1) {
         int var3_int = 0;
         int var4 = 0;
         int dupTemp$0 = 0;

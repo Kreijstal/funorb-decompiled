@@ -20,7 +20,7 @@ final class BufferedSocket implements Runnable {
     static RgbSprite field_m;
     static PcmStreamMixer field_g;
     static w field_k;
-    static wk field_j;
+    static MusicTrack field_j;
     private java.net.Socket field_o;
 
     final static int a(boolean param0) {
@@ -246,7 +246,7 @@ final class BufferedSocket implements Runnable {
     final static boolean d(int param0) {
         boolean stackIn_9_0 = false;
         if (param0 >= -79) {
-          field_j = (wk) null;
+          field_j = (MusicTrack) null;
         }
         stackIn_9_0 = ((IntrusiveDeque.field_b &&
           mf.field_a == null) ||

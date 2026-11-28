@@ -7,7 +7,7 @@ final class wh {
     static boolean field_d;
     static long field_e;
     static int field_a;
-    vh field_b;
+    MusicTrack field_b;
     int field_f;
 
     final static void a(int param0) {
@@ -36,7 +36,7 @@ final class wh {
         field_g = null;
     }
 
-    wh(vh param0, int param1) {
+    wh(MusicTrack param0, int param1) {
         try {
           this.field_f = param1;
           this.field_b = param0;

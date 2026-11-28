@@ -297,7 +297,7 @@ final class jd {
         }
     }
 
-    final static void a(boolean param0, int param1, byte param2, wk param3, int param4) {
+    final static void a(boolean param0, int param1, byte param2, MusicTrack param3, int param4) {
         try {
           hh.field_b.a(param3, 1000000, -524289, !param0 ? true : false, param1, param4);
           int var5_int = -72 % ((param2 - 58) / 33);

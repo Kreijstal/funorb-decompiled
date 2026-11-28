@@ -213,11 +213,11 @@ final class ti {
           var9 = var23 * param5[5] + param5[3] * var21 + var22 * param5[4] >> -BlastDebrisModel.field_j + 16;
           var10 = param5[8] * var23 + (param5[6] * var21 + var22 * param5[7]) >> -BlastDebrisModel.field_j + 16;
           var11 = param5[11] * var23 + param5[9] * var21 + var22 * param5[10] >> 16;
-          var21 = oo.field_l;
+          var21 = TriangleRasterizer.field_l;
           if (param1 != -53) {
             return;
           }
-          var22 = oo.field_e;
+          var22 = TriangleRasterizer.field_e;
           var23 = 0;
           scanLoop1: while (true) {
             if (var23 < param6.field_F) {

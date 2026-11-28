@@ -59,7 +59,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    final static void a(rl param0, int param1, boolean param2) {
+    final static void a(MusicTrack param0, int param1, boolean param2) {
         try {
           int var3_int = -44 / ((param1 - 35) / 40);
           uf.a(param2, 123, 256, param0);

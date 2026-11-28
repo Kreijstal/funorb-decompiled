@@ -13,7 +13,7 @@ final class wb {
     }
 
     final static void a(java.applet.Applet param0, byte param1) {
-        me.field_g = true;
+        SoundCache.field_g = true;
         String var2 = "tuhstatbut";
         String var3 = "rvnadlm";
         long var4 = -1L;

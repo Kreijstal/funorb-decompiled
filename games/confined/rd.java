@@ -92,7 +92,7 @@ final class rd extends id {
         int var16 = 0;
         Object var17 = null;
         int var18 = 0;
-        sk var19 = null;
+        SoftwareModelMesh var19 = null;
         var17 = null;
         var18 = Confined.field_J ? 1 : 0;
         try {
@@ -132,11 +132,11 @@ final class rd extends id {
               }
               var15 = 320 + (int)Math.floor(var9 + 0.5);
               var16 = 188 + (int)Math.floor(0.5 + var11);
-              ti.a(var15, var16);
-              var19 = (sk) (jk.field_c[this.field_Sb].a(96, 455, 0, 0, 256));
+              TriangleRasterizer.setProjectionCenter(var15, var16);
+              var19 = (SoftwareModelMesh) (jk.field_c[this.field_Sb].a(96, 455, 0, 0, 256));
               jc.field_f[2] = (int)(8192.0 * this.field_C);
-              var19.a(tj.field_A, jc.field_f);
-              ti.a();
+              var19.projectAndDrawWithTransforms(tj.field_A, jc.field_f);
+              TriangleRasterizer.centerProjection();
             }
           }
           if (param1) {

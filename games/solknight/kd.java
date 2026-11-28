@@ -15,7 +15,7 @@ final class kd {
         field_b = null;
     }
 
-    final static void a(int param0, byte param1, rl param2, int param3, boolean param4) {
+    final static void a(int param0, byte param1, MusicTrack param2, int param3, boolean param4) {
         RuntimeException var5 = null;
         CrossfadingMidiPcmStream stackIn_2_0 = null;
         int stackIn_2_1 = 0;

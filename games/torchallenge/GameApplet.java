@@ -550,7 +550,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               NameSuggestionsPanel.field_O = gi.b(12476);
               dupTemp$0 = new PlatformTaskDispatcher(param4, param1, param6, true);
               ArchiveRequest.field_u = dupTemp$0;
-              u.field_a = dupTemp$0;
+              SoundCache.field_a = dupTemp$0;
               var9 = ArchiveRequest.field_u.requestThread((Runnable) (this), true, 1);
               while (true) {
                 if (var9.status == 0) {
@@ -943,7 +943,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !StandardContentDialog.field_rb) {
             vd.field_a = ol.correctedCurrentTimeMillis(256);
             c.sleepMillis(79, 5000L);
-            u.field_a = null;
+            SoundCache.field_a = null;
             this.shutdownApplet(0, false);
             return;
           }

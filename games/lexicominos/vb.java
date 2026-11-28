@@ -5,7 +5,7 @@ final class vb extends IntrusiveNode {
     int field_h;
     int field_o;
     int field_q;
-    static ja field_r;
+    static SoundCache field_r;
     int field_n;
     static IntrusiveDeque field_m;
     int field_p;

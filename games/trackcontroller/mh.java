@@ -20,7 +20,7 @@ final class mh extends IntrusiveNode {
         this.field_n = null;
     }
 
-    final boolean a(byte[] param0, int[] param1, byte param2, jc param3) {
+    final boolean a(byte[] param0, int[] param1, byte param2, SoundCache param3) {
         int var8 = 0;
         int stackIn_24_0 = 0;
         RuntimeException stackIn_27_0 = null;
@@ -54,9 +54,9 @@ final class mh extends IntrusiveNode {
                   var6 = var9;
                   var9--;
                   if ((var9 & 1) == 0) {
-                    var7 = param3.a(param1, false, var9 >> 2);
+                    var7 = param3.loadSoundEffectById(param1, false, var9 >> 2);
                   } else {
-                    var7 = param3.a(param1, -2059411540, var9 >> 2);
+                    var7 = param3.loadMusicSampleById(param1, -2059411540, var9 >> 2);
                   }
                   if (var7 == null) {
                     var5_int = 0;

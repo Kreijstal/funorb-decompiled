@@ -6,7 +6,7 @@ import java.util.*;
 final class kc {
     static java.util.zip.CRC32 field_d;
     static String field_c;
-    static si field_b;
+    static MusicTrack field_b;
     static volatile int field_a;
     static int[] field_e;
     private static String field_z;

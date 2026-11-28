@@ -181,13 +181,13 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
     final static void g(int param0) {
         CharSequence var3 = null;
         if (param0 == 3) {
-          qe.field_V = id.field_f.readString(param0 ^ 131);
+          qe.field_V = SoundCache.field_f.readString(param0 ^ 131);
           var3 = (CharSequence) ((Object) qe.field_V);
           Vertigo2.field_F = rc.a(var3, param0 + 317);
           return;
         }
         field_m = -23;
-        qe.field_V = id.field_f.readString(param0 ^ 131);
+        qe.field_V = SoundCache.field_f.readString(param0 ^ 131);
         CharSequence var2 = (CharSequence) ((Object) qe.field_V);
         Vertigo2.field_F = rc.a(var2, param0 + 317);
     }

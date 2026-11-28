@@ -49,7 +49,7 @@ final class ng {
           }
           var4 = new uq[var3];
           for (var5 = 0; var5 < var3; var5++) {
-            if (id.a(param1, -31980)) {
+            if (SoundCache.readBitFlag(param1, -31980)) {
               var6 = new uq();
               param1.readBits((byte) -124, 24);
               param1.readBits((byte) -121, 24);

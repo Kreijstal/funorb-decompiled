@@ -1832,7 +1832,7 @@ final class Model extends sb {
     }
 
     static {
-        field_C = oo.field_j;
-        field_s = oo.field_h;
+        field_C = TriangleRasterizer.field_j;
+        field_s = TriangleRasterizer.field_h;
     }
 }

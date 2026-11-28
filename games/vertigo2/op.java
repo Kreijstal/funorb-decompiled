@@ -5,7 +5,7 @@ final class op {
     static String field_a;
     static int field_c;
     static String field_b;
-    static si field_d;
+    static MusicTrack field_d;
 
     final static void a(int param0, int[] param1, int param2, byte[] param3, boolean param4) {
         int incrementValue$0 = 0;

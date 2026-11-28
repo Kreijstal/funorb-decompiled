@@ -86,7 +86,7 @@ class uf extends DefaultTextWidgetRenderer {
         return null;
     }
 
-    final static void a(boolean param0, int param1, int param2, rl param3) {
+    final static void a(boolean param0, int param1, int param2, MusicTrack param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object var5 = null;

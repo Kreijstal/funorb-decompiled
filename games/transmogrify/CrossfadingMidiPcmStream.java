@@ -9,15 +9,15 @@ final class CrossfadingMidiPcmStream extends PcmStream {
     private MidiPcmStream field_s;
     private int[] field_r;
     private int field_o;
-    private pl field_w;
+    private MusicTrack field_w;
     private int field_x;
     static tf field_m;
     private int[] field_q;
     private boolean field_t;
     private int field_z;
     static IntrusiveDeque field_u;
-    private pl field_y;
-    private pl field_n;
+    private MusicTrack field_y;
+    private MusicTrack field_n;
 
     final void mixInto(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
@@ -193,7 +193,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0, boolean param1, int param2, int param3, pl param4, int param5) {
+    final synchronized void a(int param0, boolean param1, int param2, int param3, MusicTrack param4, int param5) {
         boolean stackIn_19_1 = false;
         int stackIn_31_0 = 0;
         MidiPcmStream stackIn_40_0 = null;

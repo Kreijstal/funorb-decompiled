@@ -350,7 +350,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("add_x_to_friends", -15192);
                 if (byteArrayState0015 != null) {
-                  NetworkSupport011.stringState0431 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  SoundCache.stringState0431 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("add_x_to_ignore", -15192);
                 if (null != byteArrayState0015) {
@@ -794,7 +794,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("gameopt_1moreratedgame", -15192);
                 if (null != byteArrayState0015) {
-                  NetworkSupport011.stringState0432 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  SoundCache.stringState0432 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("gameopt_moreratedgames", -15192);
                 if (null != byteArrayState0015) {
@@ -1998,7 +1998,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("newgame", -15192);
                 if (byteArrayState0015 != null) {
-                  NetworkSupport011.stringState0430 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  SoundCache.stringState0430 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("resumegame", -15192);
                 if (null != byteArrayState0015) {

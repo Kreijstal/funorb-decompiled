@@ -75,7 +75,7 @@ final class mf {
             return;
           }
           if (var2 != 1) {
-            hb.reportClientError((Throwable) null, 0, "LR1: " + jc.b(96));
+            hb.reportClientError((Throwable) null, 0, "LR1: " + SoundCache.formatInboundPacketDebug(96));
             GameKeyHandler.a((byte) 126);
             return;
           }

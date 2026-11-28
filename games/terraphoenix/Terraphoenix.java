@@ -1604,7 +1604,7 @@ public final class Terraphoenix extends GameShell {
 
     private final void b(boolean param0, byte param1) {
         RuntimeException decompiledCaughtException = null;
-        da var3 = null;
+        SoundCache var3 = null;
         Object var3_ref = null;
         int var3_int = 0;
         RuntimeException var3_ref2 = null;
@@ -1696,15 +1696,15 @@ public final class Terraphoenix extends GameShell {
           if (h.field_j != null) {
             DualLinkNode.a(IndexedSpriteState.field_e, (byte) -119, 70.0f);
             this.renderClientFrame((byte) -89);
-            ca.field_a = new tk[8];
-            ca.field_a[7] = tk.a(h.field_j, "", "terraphoenix_music_title");
-            ca.field_a[0] = tk.a(h.field_j, "", "terraphoenix_music_title(no voices)");
-            ca.field_a[1] = tk.a(h.field_j, "", "terraphoenix_music_ingame_rural");
-            ca.field_a[2] = tk.a(h.field_j, "", "terraphoenix_music_ingame_urban");
-            ca.field_a[3] = tk.a(h.field_j, "", "terraphoenix_music_ingame_alienbase");
-            ca.field_a[4] = tk.a(h.field_j, "", "terraphoenix_jingle_success_high_scores");
-            ca.field_a[5] = tk.a(h.field_j, "", "terraphoenix_jingle_fail_high_scores");
-            ca.field_a[6] = tk.a(h.field_j, "", "terraphoenix_jingle_mission_completed");
+            ca.field_a = new MusicTrack[8];
+            ca.field_a[7] = MusicTrack.load(h.field_j, "", "terraphoenix_music_title");
+            ca.field_a[0] = MusicTrack.load(h.field_j, "", "terraphoenix_music_title(no voices)");
+            ca.field_a[1] = MusicTrack.load(h.field_j, "", "terraphoenix_music_ingame_rural");
+            ca.field_a[2] = MusicTrack.load(h.field_j, "", "terraphoenix_music_ingame_urban");
+            ca.field_a[3] = MusicTrack.load(h.field_j, "", "terraphoenix_music_ingame_alienbase");
+            ca.field_a[4] = MusicTrack.load(h.field_j, "", "terraphoenix_jingle_success_high_scores");
+            ca.field_a[5] = MusicTrack.load(h.field_j, "", "terraphoenix_jingle_fail_high_scores");
+            ca.field_a[6] = MusicTrack.load(h.field_j, "", "terraphoenix_jingle_mission_completed");
             h.field_j = null;
             ea.a((byte) 47);
             return;
@@ -1746,7 +1746,7 @@ public final class Terraphoenix extends GameShell {
           }
           DualLinkNode.a(AccountNameAvailabilityValidator.field_q, (byte) -74, 80.0f);
           this.renderClientFrame((byte) -89);
-          var3 = new da(ee.field_G, mi.field_h);
+          var3 = new SoundCache(ee.field_G, mi.field_h);
           var4 = new PcmResampler(22050, PcmPlayerService.field_u);
           mi.field_h = null;
           ee.field_G = null;
@@ -1767,13 +1767,13 @@ public final class Terraphoenix extends GameShell {
               var5 > 21) &&
               (var5 != 82 &&
               83 != var5)) {
-              GameApplet.field_g[var5] = var3.a(sk.field_b[var5], param1 + 107).resample(var4);
+              GameApplet.field_g[var5] = var3.getSoundEffectByName(sk.field_b[var5], param1 + 107).resample(var4);
             }
             if (var5 >= 1 &&
               var5 <= 21 ||
               (var5 == 82 ||
               83 == var5) || var6 != 0) {
-              GameApplet.field_g[var5] = var3.a(-1, sk.field_b[var5]).resample(var4);
+              GameApplet.field_g[var5] = var3.getMusicSampleByName(-1, sk.field_b[var5]).resample(var4);
             }
             var5++;
             if (var6 == 0) {
@@ -4261,7 +4261,7 @@ public final class Terraphoenix extends GameShell {
           MidiPcmStream.c((byte) 107);
           PcmResampler.clearStaticReferences((byte) 89);
           PcmPlayerService.clearStaticReferences();
-          da.a(18210);
+          SoundCache.clearStaticReferences(18210);
           qa.clearStaticReferences(-79);
           ta.clearStaticReferences(false);
           bi.clearStaticReferences(-89);
@@ -4322,7 +4322,7 @@ public final class Terraphoenix extends GameShell {
           PcmPlayerPump.clearStaticReferences((byte) -120);
           il.clearStaticReferences((byte) 113);
           sh.clearStaticReferences(-96);
-          fk.clearStaticReferences();
+          MidiFileReader.clearStaticReferences();
           MusicPatchPcmStream.clearStaticReferences((byte) 41);
           p.clearStaticReferences(-24869);
           mh.clearStaticReferences(1);
@@ -4370,7 +4370,7 @@ public final class Terraphoenix extends GameShell {
           gm.clearStaticReferences(8192);
           TutorialText.clearStaticReferences(true);
           RandomAccessCacheFile.clearStaticReferences(1);
-          pi.clearStaticReferences();
+          SynthesizerVoice.clearStaticReferences();
           VorbisDecoder.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
           kg.clearStaticReferences(7087);

@@ -24,7 +24,7 @@ final class p {
         int[] var16 = null;
         var8 = Vertigo2.field_L ? 1 : 0;
         try {
-          var12 = id.field_f;
+          var12 = SoundCache.field_f;
           var2 = var12.readUnsignedByte(-11);
           if (param0 > -108) {
             field_a = (String) null;

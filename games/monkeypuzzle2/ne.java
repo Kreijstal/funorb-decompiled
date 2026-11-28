@@ -96,7 +96,7 @@ final class ne {
         try {
           var1_int = ArchiveRequest.field_k;
           var2 = 0;
-          if (ud.field_b == 2) {
+          if (SoundCache.field_b == 2) {
             var3_long = -ArchiveRequest.field_n + pf.correctedCurrentTimeMillis(0);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
@@ -118,7 +118,7 @@ final class ne {
               }
             }
             var6 = BoundedRandomAccessFile.field_k[var3];
-            if (ud.field_b == 2 &&
+            if (SoundCache.field_b == 2 &&
               var2 == 1) {
               if (DiskCacheWorker.field_c.length <= wi.field_b.length) {
                 stackIn_19_0 = wi.field_b.length;
@@ -126,8 +126,8 @@ final class ne {
                 stackIn_19_0 = DiskCacheWorker.field_c.length;
               }
               var7 = stackIn_19_0;
-              if (re.field_a.length <= ud.field_e.length) {
-                stackIn_22_0 = ud.field_e.length;
+              if (re.field_a.length <= SoundCache.field_e.length) {
+                stackIn_22_0 = SoundCache.field_e.length;
               } else {
                 stackIn_22_0 = re.field_a.length;
               }
@@ -143,8 +143,8 @@ final class ne {
               }
               if (var7 + 7 <= var3 &&
                 7 + (var7 + var8) > var3) {
-                if (ud.field_e.length > -var7 - 7 + var3) {
-                  stackIn_33_0 = ud.field_e[-var7 + (var3 - 7)];
+                if (SoundCache.field_e.length > -var7 - 7 + var3) {
+                  stackIn_33_0 = SoundCache.field_e[-var7 + (var3 - 7)];
                 } else {
                   stackIn_33_0 = "";
                 }
@@ -166,7 +166,7 @@ final class ne {
                 stackIn_44_0 = de.field_j;
               }
               var9 = stackIn_44_0;
-              var1_int = var1_int + ud.field_a;
+              var1_int = var1_int + SoundCache.field_a;
               if (var9 != null) {
                 var9.a(var7Lifetime1 + (BoundedRandomAccessFile.field_h << 1), var8Lifetime1 - BoundedRandomAccessFile.field_h, false, var1_int, hb.field_n + (vf.field_b << 1));
               }
@@ -174,7 +174,7 @@ final class ne {
             }
             if (var4 >= 0) {
               ImageProducerRasterBuffer.field_o.drawString(var6, var8Lifetime1, da.field_a + var1_int, var5, -1);
-              var1_int = var1_int + (hb.field_n + vf.field_b + ud.field_a);
+              var1_int = var1_int + (hb.field_n + vf.field_b + SoundCache.field_a);
             } else {
               fe.field_a.drawString(var6, var8Lifetime1, ResizableModalDialog.field_M + var1_int, var5, -1);
               var1_int = var1_int + gi.field_a;

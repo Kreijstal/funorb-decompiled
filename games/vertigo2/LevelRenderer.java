@@ -421,12 +421,12 @@ final class LevelRenderer {
             return;
           }
           var16 = var14Lifetime3 * 24 / 50;
-          var17 = oo.field_c;
+          var17 = TriangleRasterizer.field_c;
           var18Lifetime1 = var16;
           if (12 <= var18Lifetime1) {
             var18Lifetime1 = 11;
           }
-          oo.field_c = bm.field_G[var18Lifetime1];
+          TriangleRasterizer.field_c = bm.field_G[var18Lifetime1];
           var19 = null;
           var16 -= 12;
           if (var16 >= 0) {
@@ -443,16 +443,16 @@ final class LevelRenderer {
               stackIn_87_3 = (2 == param2.field_w);
               ((LevelRenderable) (Object) stackIn_86_0).drawWithFaceAlpha(stackIn_86_1, stackIn_86_2, stackIn_87_3, (byte[]) (var19), this.field_s.field_o);
             } else {
-              oo.field_c = var17;
+              TriangleRasterizer.field_c = var17;
               stackIn_82_0 = this.field_a[var20];
               stackIn_82_1 = -30;
               stackIn_82_2 = this.field_s.field_e;
               stackIn_83_3 = (param2.field_w == 2);
               ((LevelRenderable) (Object) stackIn_82_0).drawWithFaceAlpha(stackIn_82_1, stackIn_82_2, stackIn_83_3, (byte[]) null, this.field_s.field_o);
-              oo.field_c = bm.field_G[var18Lifetime1];
+              TriangleRasterizer.field_c = bm.field_G[var18Lifetime1];
             }
           }
-          oo.field_c = var17;
+          TriangleRasterizer.field_c = var17;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -913,7 +913,7 @@ final class LevelRenderer {
             var13Lifetime1 != 7) {
             for (var24 = var19Lifetime1 - 1; 0 <= var24; var24--) {
               if (!(this.field_a[var24] instanceof PlayerAvatarRenderer)) {
-                var25_ref_int__ = oo.field_c;
+                var25_ref_int__ = TriangleRasterizer.field_c;
                 var26Lifetime1 = this.field_a[var24].getRenderHeight(5) - var33[param8].field_k;
                 if (var26Lifetime1 > 0 &&
                   !this.field_s.field_o) {
@@ -922,17 +922,17 @@ final class LevelRenderer {
                   } else {
                     var27_int = 15;
                   }
-                  oo.field_c = Vertigo2.field_J[var27_int];
+                  TriangleRasterizer.field_c = Vertigo2.field_J[var27_int];
                 }
                 if (var23Lifetime1 != 0) {
                   if (this.field_a[var24].getRenderHeight(5) < -16 + var33[param8].field_k) {
                     var27_int = 24;
-                    var28_ref = oo.field_c;
+                    var28_ref = TriangleRasterizer.field_c;
                     var29 = var27_int;
                     if (12 <= var29) {
                       var29 = 11;
                     }
-                    oo.field_c = bm.field_G[var29];
+                    TriangleRasterizer.field_c = bm.field_G[var29];
                     var27_int -= 12;
                     var30_ref = null;
                     if (var27_int >= 0) {
@@ -946,7 +946,7 @@ final class LevelRenderer {
                     stackIn_172_2 = this.field_s.field_e;
                     stackIn_173_3 = (param4.field_w == 2);
                     ((LevelRenderable) (Object) stackIn_172_0).drawWithFaceAlpha(stackIn_172_1, stackIn_172_2, stackIn_173_3, (byte[]) (var30_ref), this.field_s.field_o);
-                    oo.field_c = (int[]) (var28_ref);
+                    TriangleRasterizer.field_c = (int[]) (var28_ref);
                   } else {
                     stackIn_157_0 = this.field_a[var24];
                     stackIn_158_1 = !(param3);
@@ -961,7 +961,7 @@ final class LevelRenderer {
                   stackIn_153_3 = (param4.field_w == 2);
                   ((LevelRenderable) (Object) stackIn_152_0).drawRenderable(stackIn_152_1, stackIn_152_2, stackIn_153_3, this.field_s.field_o);
                 }
-                oo.field_c = var25_ref_int__;
+                TriangleRasterizer.field_c = var25_ref_int__;
               } else {
                 var34_ref = (PlayerAvatarRenderer) (this.field_a[var24]);
                 if (var34_ref.getPlayerSlot(100) != param8) {
@@ -1015,12 +1015,12 @@ final class LevelRenderer {
               }
             } else {
               var25 = var22Lifetime5 * 24 / 50;
-              var26_ref_int__ = oo.field_c;
+              var26_ref_int__ = TriangleRasterizer.field_c;
               var27_int = var25;
               if (12 <= var27_int) {
                 var27_int = 11;
               }
-              oo.field_c = bm.field_G[var27_int];
+              TriangleRasterizer.field_c = bm.field_G[var27_int];
               var28_ref = null;
               var25 -= 12;
               if (0 <= var25) {
@@ -1032,7 +1032,7 @@ final class LevelRenderer {
               for (var29 = var19Lifetime1 - 1; var29 >= 0; var29--) {
                 if (this.field_a[var29] instanceof PlayerAvatarRenderer) {
                   var37_ref = (PlayerAvatarRenderer) (this.field_a[var29]);
-                  oo.field_c = var26_ref_int__;
+                  TriangleRasterizer.field_c = var26_ref_int__;
                   if (var37_ref.getPlayerSlot(108) != param8) {
                     stackIn_212_0 = this.field_a[var29];
                     stackIn_212_1 = -30;
@@ -1042,12 +1042,12 @@ final class LevelRenderer {
                   } else {
                     var37_ref.drawRenderable(false, this.field_s.field_e, var11 != 0, this.field_s.field_o);
                   }
-                  oo.field_c = bm.field_G[var27_int];
+                  TriangleRasterizer.field_c = bm.field_G[var27_int];
                 } else {
                   this.field_a[var29].drawWithFaceAlpha(-30, this.field_s.field_e, var11 != 0, (byte[]) (var28_ref), this.field_s.field_o);
                 }
               }
-              oo.field_c = var26_ref_int__;
+              TriangleRasterizer.field_c = var26_ref_int__;
             }
           }
           for (var24 = 0; var24 < this.field_g.length; var24++) {
@@ -1584,12 +1584,12 @@ final class LevelRenderer {
               }
             } else {
               var18 = var16Lifetime3 * 24 / 50;
-              var19 = oo.field_c;
+              var19 = TriangleRasterizer.field_c;
               var20Lifetime1 = var18;
               if (var20Lifetime1 >= 12) {
                 var20Lifetime1 = 11;
               }
-              oo.field_c = bm.field_G[var20Lifetime1];
+              TriangleRasterizer.field_c = bm.field_G[var20Lifetime1];
               var21 = null;
               var18 -= 12;
               if (0 <= var18) {
@@ -1606,16 +1606,16 @@ final class LevelRenderer {
                   stackIn_96_3 = (param2.field_w == 2);
                   ((LevelRenderable) (Object) stackIn_95_0).drawWithFaceAlpha(stackIn_95_1, stackIn_95_2, stackIn_96_3, (byte[]) (var21), this.field_s.field_o);
                 } else {
-                  oo.field_c = var19;
+                  TriangleRasterizer.field_c = var19;
                   stackIn_91_0 = this.field_a[var22];
                   stackIn_91_1 = -30;
                   stackIn_91_2 = this.field_s.field_e;
                   stackIn_92_3 = (param2.field_w == 2);
                   ((LevelRenderable) (Object) stackIn_91_0).drawWithFaceAlpha(stackIn_91_1, stackIn_91_2, stackIn_92_3, (byte[]) null, this.field_s.field_o);
-                  oo.field_c = bm.field_G[var20Lifetime1];
+                  TriangleRasterizer.field_c = bm.field_G[var20Lifetime1];
                 }
               }
-              oo.field_c = var19;
+              TriangleRasterizer.field_c = var19;
               return;
             }
           }

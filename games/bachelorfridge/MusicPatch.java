@@ -27,7 +27,7 @@ final class MusicPatch extends IntrusiveNode {
         field_o = null;
     }
 
-    final boolean a(byte[] param0, int param1, i param2, int[] param3) {
+    final boolean a(byte[] param0, int param1, SoundCache param2, int[] param3) {
         int var8 = 0;
         int stackIn_21_0 = 0;
         RuntimeException stackIn_24_0 = null;
@@ -61,9 +61,9 @@ final class MusicPatch extends IntrusiveNode {
                   var6 = var9;
                   var9--;
                   if (0 != (var9 & 1)) {
-                    var7 = param2.a(var9 >> 2, (byte) 15, param3);
+                    var7 = param2.loadMusicSampleById(var9 >> 2, (byte) 15, param3);
                   } else {
-                    var7 = param2.a(-52, param3, var9 >> 2);
+                    var7 = param2.loadSoundEffectById(-52, param3, var9 >> 2);
                   }
                   if (var7 == null) {
                     var5_int = 0;

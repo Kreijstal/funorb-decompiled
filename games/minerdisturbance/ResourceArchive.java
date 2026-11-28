@@ -661,7 +661,7 @@ final class ResourceArchive {
     final boolean tryLoadGroupByName(boolean param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        wh var4 = null;
+        MusicTrack var4 = null;
         CharSequence var5 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -674,8 +674,8 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           if (param0) {
-            var4 = (wh) null;
-            ResourceArchive.playMusicTrack(22, (wh) null);
+            var4 = (MusicTrack) null;
+            ResourceArchive.playMusicTrack(22, (MusicTrack) null);
           }
           var5 = (CharSequence) ((Object) param1);
           var3_int = this.field_f.field_s.a((byte) -71, jh.a(var5, 0));
@@ -835,7 +835,7 @@ final class ResourceArchive {
         return this.field_f.field_f[param0];
     }
 
-    final static void playMusicTrack(int param0, wh param1) {
+    final static void playMusicTrack(int param0, MusicTrack param1) {
         try {
           mk.a(true, param1, 0);
           if (param0 != -6358) {

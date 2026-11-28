@@ -71,7 +71,7 @@ final class n {
             var5 = (250 - ni.field_d << 8) / 50;
           }
           hj.a(u.field_m, 1);
-          cc.a();
+          TriangleRasterizer.useRasterClip();
           SoftwareRasterizer.clearRaster();
           TextHotspotBounds.a(param1 + 45);
           if (var5 < 256) {

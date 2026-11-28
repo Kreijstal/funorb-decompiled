@@ -57,9 +57,9 @@ final class j extends IntrusiveNode {
               var2_long > var4_ref_hl.field_p) {
               var4_ref_hl.unlink(2);
               ca.field_b = var4_ref_hl.field_n.length;
-              id.field_f.position = 0;
+              SoundCache.field_f.position = 0;
               for (var5_int = 0; ca.field_b > var5_int; var5_int++) {
-                id.field_f.payload[var5_int] = var4_ref_hl.field_n[var5_int];
+                SoundCache.field_f.payload[var5_int] = var4_ref_hl.field_n[var5_int];
               }
               NodeHashTableIterator.field_d = jb.field_G;
               jb.field_G = cp.field_c;
@@ -70,12 +70,12 @@ final class j extends IntrusiveNode {
           }
           while (true) {
             if (0 > m.field_A) {
-              id.field_f.position = 0;
+              SoundCache.field_f.position = 0;
               if (!c.a(1, (byte) -104)) {
                 return false;
               }
-              m.field_A = id.field_f.readCipheredByte((byte) 35);
-              id.field_f.position = 0;
+              m.field_A = SoundCache.field_f.readCipheredByte((byte) 35);
+              SoundCache.field_f.position = 0;
               ca.field_b = param1[m.field_A];
             }
             if (!dl.b((byte) 113)) {
@@ -98,7 +98,7 @@ final class j extends IntrusiveNode {
             }
             var5 = new hl((long)var4 + var2_long, m.field_A, new byte[ca.field_b]);
             for (var6 = 0; ca.field_b > var6; var6++) {
-              var5.field_n[var6] = id.field_f.payload[var6];
+              var5.field_n[var6] = SoundCache.field_f.payload[var6];
             }
             s.field_t.addFirst(var5, false);
             m.field_A = -1;

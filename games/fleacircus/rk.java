@@ -17,7 +17,7 @@ final class rk extends wi {
         if (param0 != 24089) {
           return 10;
         }
-        return ng.field_c;
+        return SoundCache.field_c;
     }
 
     public static void clearStaticReferences(int param0) {

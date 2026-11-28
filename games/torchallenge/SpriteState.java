@@ -7,7 +7,7 @@ abstract class SpriteState extends DualLinkNode {
     int offsetX;
     static int[][][][] field_w;
     int storedWidth;
-    static ej field_t;
+    static MusicTrack field_t;
     int offsetY;
     int fullHeight;
     int storedHeight;

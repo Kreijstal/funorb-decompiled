@@ -367,7 +367,7 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
                           stackIn_49_0 = no.field_d;
                           if (stackIn_49_0 != 1) {
                             if (2 == no.field_d) {
-                              var2 = this.a(-1, AchievementIconEntry.field_k, lc.field_c);
+                              var2 = this.a(-1, AchievementIconEntry.field_k, SoundCache.field_c);
                               if (var2 != -1) {
                                 um.field_i[var2] = gm.field_d.field_a[var2];
                                 if (null != um.field_i[var2] &&
@@ -381,7 +381,7 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
                               op.field_d.a((byte) 80);
                             }
                           } else {
-                            var2 = this.a(-1, AchievementIconEntry.field_k, lc.field_c);
+                            var2 = this.a(-1, AchievementIconEntry.field_k, SoundCache.field_c);
                             if (-1 != var2) {
                               if (op.field_d.field_l == null) {
                                 if (um.field_i[var2] != null) {

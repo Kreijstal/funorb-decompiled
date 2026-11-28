@@ -69,7 +69,7 @@ final class tm {
         int var13Lifetime1Lifetime1;
         var16 = DungeonAssault.field_K;
         try {
-          var17 = new PacketBuffer(lc.a(param0, 50166));
+          var17 = new PacketBuffer(SoundCache.decompressArchiveContainer(param0, 50166));
           var4 = var17.readUnsignedByte(true);
           if (5 <= var4 &&
             7 >= var4) {

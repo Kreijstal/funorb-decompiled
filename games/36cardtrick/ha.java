@@ -166,8 +166,8 @@ final class ha {
                 stackIn_43_0 = ((var7 & 4) != 0);
                 bi.field_c = stackIn_43_0;
                 stackIn_46_0 = ((8 & var7) != 0);
-                da.field_b = stackIn_46_0;
-                if (da.field_b) {
+                SoundCache.field_b = stackIn_46_0;
+                if (SoundCache.field_b) {
                 }
               }
               if (bj.field_m) {

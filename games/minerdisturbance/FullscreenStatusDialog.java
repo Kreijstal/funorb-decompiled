@@ -251,7 +251,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
                 this.field_q = this.field_q + 30;
               }
             } else {
-              var3 = ri.field_f;
+              var3 = SoundCache.field_f;
               this.field_q = this.field_q + 10;
               if (BoundedRandomAccessFile.c(0)) {
                 this.field_q = this.field_q + 20;

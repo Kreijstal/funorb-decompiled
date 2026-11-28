@@ -133,9 +133,9 @@ final class fc extends IntrusiveNode {
                 AlphaWidgetContainer.field_N.readUnsignedByte(255);
                 AlphaWidgetContainer.field_N.readUnsignedByte(255);
                 AlphaWidgetContainer.field_N.readInt(true);
-                me.field_d = AlphaWidgetContainer.field_N.readUnsignedShort(param5 - 105);
-                NanoFrameTimer.field_l = new byte[me.field_d];
-                for (var8 = 0; var8 < me.field_d; var8++) {
+                SoundCache.field_d = AlphaWidgetContainer.field_N.readUnsignedShort(param5 - 105);
+                NanoFrameTimer.field_l = new byte[SoundCache.field_d];
+                for (var8 = 0; var8 < SoundCache.field_d; var8++) {
                   NanoFrameTimer.field_l[var8] = AlphaWidgetContainer.field_N.readByte((byte) -14);
                 }
               }
@@ -262,7 +262,7 @@ final class fc extends IntrusiveNode {
         }
     }
 
-    final boolean a(me param0, int[] param1, byte[] param2, int param3) {
+    final boolean a(SoundCache param0, int[] param1, byte[] param2, int param3) {
         int var9 = 0;
         int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -295,9 +295,9 @@ final class fc extends IntrusiveNode {
                   var7 = var10;
                   var10--;
                   if (0 == (var10 & 1)) {
-                    var8 = param0.a(0, var10 >> 2, param1);
+                    var8 = param0.loadSoundEffectById(0, var10 >> 2, param1);
                   } else {
-                    var8 = param0.a(param1, -2, var10 >> 2);
+                    var8 = param0.loadMusicSampleById(param1, -2, var10 >> 2);
                   }
                   if (var8 == null) {
                     var5_int = 0;

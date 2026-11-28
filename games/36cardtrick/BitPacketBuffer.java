@@ -101,15 +101,15 @@ final class BitPacketBuffer extends PacketBuffer {
         var19 = Main.field_T;
         try {
           if (param8 >= 0 &&
-            param7 < jb.field_c) {
+            param7 < TriangleRasterizer.field_c) {
             if (param3 < 0 &&
               param5 < 0 &&
               param6 < 0) {
               return;
             }
-            if (jb.field_i <= param3 &&
-              jb.field_i <= param5 &&
-              param6 >= jb.field_i) {
+            if (TriangleRasterizer.field_i <= param3 &&
+              TriangleRasterizer.field_i <= param5 &&
+              param6 >= TriangleRasterizer.field_i) {
               return;
             }
             var14 = -param7 + param8;
@@ -144,14 +144,14 @@ final class BitPacketBuffer extends PacketBuffer {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var16Lifetime2 = jb.field_e[param7];
+                var16Lifetime2 = TriangleRasterizer.field_e[param7];
                 while (param2 > param7) {
                   var17 = var9_int >> 16;
-                  if (jb.field_i > var17) {
+                  if (TriangleRasterizer.field_i > var17) {
                     var18 = (var10 >> 16) - (var9_int >> 16);
                     if (0 != var18) {
-                      if (jb.field_i <= var18 + var17) {
-                        var18 = -var17 + (jb.field_i - 1);
+                      if (TriangleRasterizer.field_i <= var18 + var17) {
+                        var18 = -var17 + (TriangleRasterizer.field_i - 1);
                       }
                       if (var17 >= 0) {
                         a.a(var16Lifetime2 + var17, param1, var18, param0, -1483723263);
@@ -160,13 +160,13 @@ final class BitPacketBuffer extends PacketBuffer {
                       }
                     } else {
                       if (var17 >= 0 &&
-                        var17 < jb.field_i) {
+                        var17 < TriangleRasterizer.field_i) {
                         a.a(var16Lifetime2 + var17, param1, var18, param0, -1483723263);
                       }
                     }
                   }
                   param7++;
-                  if (param7 >= jb.field_c) {
+                  if (param7 >= TriangleRasterizer.field_c) {
                     return;
                   }
                   var9_int = var9_int + var11;
@@ -222,17 +222,17 @@ final class BitPacketBuffer extends PacketBuffer {
               var9_int = var9_int + param7 * var11;
               param7 = 0;
             }
-            var15Lifetime1 = jb.field_e[param7];
+            var15Lifetime1 = TriangleRasterizer.field_e[param7];
             if (!param4) {
               return;
             }
             while (param7 < param8) {
               var16Lifetime1 = var9_int >> 16;
-              if (jb.field_i > var16Lifetime1) {
+              if (TriangleRasterizer.field_i > var16Lifetime1) {
                 var17Lifetime1 = (var10 >> 16) - (var9_int >> 16);
                 if (var17Lifetime1 != 0) {
-                  if (jb.field_i <= var17Lifetime1 + var16Lifetime1) {
-                    var17Lifetime1 = -1 + (jb.field_i - var16Lifetime1);
+                  if (TriangleRasterizer.field_i <= var17Lifetime1 + var16Lifetime1) {
+                    var17Lifetime1 = -1 + (TriangleRasterizer.field_i - var16Lifetime1);
                   }
                   if (0 <= var16Lifetime1) {
                     a.a(var15Lifetime1 + var16Lifetime1, param1, var17Lifetime1, param0, -1483723263);
@@ -241,13 +241,13 @@ final class BitPacketBuffer extends PacketBuffer {
                   }
                 } else {
                   if (var16Lifetime1 >= 0 &&
-                    var16Lifetime1 < jb.field_i) {
+                    var16Lifetime1 < TriangleRasterizer.field_i) {
                     a.a(var16Lifetime1 + var15Lifetime1, param1, var17Lifetime1, param0, -1483723263);
                   }
                 }
               }
               param7++;
-              if (param7 >= jb.field_c) {
+              if (param7 >= TriangleRasterizer.field_c) {
                 return;
               }
               var9_int = var9_int + var11;

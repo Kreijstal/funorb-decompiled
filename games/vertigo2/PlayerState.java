@@ -717,7 +717,7 @@ final class PlayerState {
         DropTargetWidgetContainer.field_I[BlastEffectRenderer.field_i] = BlastEffectRenderer.field_i;
         on.field_e[BlastEffectRenderer.field_i] = param0;
         if (!(param0 <= FrameTimer.field_b)) {
-          id.field_d = param0;
+          SoundCache.field_d = param0;
         }
         if (!(param0 >= q.field_x)) {
           f.field_y = param0;
@@ -734,8 +734,8 @@ final class PlayerState {
         if (!(f.field_y <= var7)) {
           f.field_y = var7;
         }
-        if (!(var7 <= id.field_d)) {
-          id.field_d = var7;
+        if (!(var7 <= SoundCache.field_d)) {
+          SoundCache.field_d = var7;
         }
         BlastEffectRenderer.field_i = BlastEffectRenderer.field_i + 1;
     }

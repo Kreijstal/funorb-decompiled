@@ -41,7 +41,7 @@ final class MusicTrack {
     int[] integerArrayState0232;
     int integerState0809;
     RawSound[] rawSoundArrayState0003;
-    private NetworkSupport011 networkSupport011State0002;
+    private SoundCache networkSupport011State0002;
     static String stringState0561;
 
     final static MixedSupport119 computeMixedSupport1191663(int integerArgument1, String stringArgument2) {
@@ -105,9 +105,9 @@ final class MusicTrack {
         for (integerLocal1 = 0; integerLocal1 < this.rawSoundArrayState0003.length; integerLocal1++) {
           if (this.rawSoundArrayState0003[integerLocal1] == null) {
             if (this.integerArrayState0213[integerLocal1] >> 4 == 0) {
-              rawSoundLocal4 = this.networkSupport011State0002.computeRawSound1259(-62, this.integerArrayState0224[integerLocal1], this.integerArrayState0221[integerLocal1]);
+              rawSoundLocal4 = this.networkSupport011State0002.getSoundEffectByGroup(-62, this.integerArrayState0224[integerLocal1], this.integerArrayState0221[integerLocal1]);
             } else {
-              rawSoundLocal4 = this.networkSupport011State0002.computeRawSound1267(this.integerArrayState0224[integerLocal1], this.integerArrayState0221[integerLocal1], -1);
+              rawSoundLocal4 = this.networkSupport011State0002.getMusicSampleByGroup(this.integerArrayState0224[integerLocal1], this.integerArrayState0221[integerLocal1], -1);
             }
             if (rawSoundLocal4 != null) {
               this.integerArrayState0213[integerLocal1] = PlayerBoardUpdateQueue.bitwiseAnd(this.integerArrayState0213[integerLocal1], 15);
@@ -124,7 +124,7 @@ final class MusicTrack {
         }
     }
 
-    MusicTrack(PacketBuffer packetBufferArgument1, NetworkSupport011 networkSupport011Argument2) {
+    MusicTrack(PacketBuffer packetBufferArgument1, SoundCache networkSupport011Argument2) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int cachedIntegerLocal3 = 0;

@@ -91,7 +91,7 @@ final class Level {
         double[] var55 = null;
         double[] var56 = null;
         tl var57 = null;
-        pj var58 = null;
+        LitModelMesh var58 = null;
         double[] var65 = null;
         double[] var66 = null;
         double[] var67 = null;
@@ -260,7 +260,7 @@ final class Level {
                 var25 = -var57.field_g[0] + param1[0];
                 var27 = param1[1] - var57.field_g[1];
                 var29 = -var57.field_g[2] + param1[2];
-                var31 = var58.a();
+                var31 = var58.getBoundingRadius();
                 if (var29 * var29 + (var27 * var27 + var25 * var25) < (double)(var31 * var31)) {
                   var92 = var58.field_j;
                   var93 = var58.field_y;
@@ -803,7 +803,7 @@ final class Level {
         Model var3;
         MeshGeometry var4;
         Model var5;
-        pj var6;
+        LitModelMesh var6;
         int var7;
         int var8;
         int[] var10;
@@ -1026,7 +1026,7 @@ final class Level {
           }
           Model.trimToUsedCounts(var3, (byte) -126);
           this.field_t = new Model(var29);
-          this.field_t.field_k = (pj) (var29.a(80, 1365, -1, -12, 12));
+          this.field_t.field_k = (LitModelMesh) (var29.a(80, 1365, -1, -12, 12));
           this.field_t.field_q = var3.field_q;
         }
         return this.field_t;
@@ -1144,7 +1144,7 @@ final class Level {
                 var10 = var16.a(100 * var9 + 100, this.field_x[var9 + 1][var6], var6 * 100);
                 var11 = var16.a((1 + var9) * 100, this.field_x[var9 + 1][1 + var6], 100 + var6 * 100);
                 var12 = 3;
-                var13 = (short)be.field_c.b((int) this.field_o[var9][var6]);
+                var13 = (short)TriangleRasterizer.field_c.b((int) this.field_o[var9][var6]);
                 var14 = (short)mo.field_C[this.field_o[var9][var6]];
                 if (param1 &&
                   this.field_x[var9][1 + var6] - this.field_x[var9 + 1][1 + var6] == this.field_x[var9][var6] - this.field_x[1 + var9][var6] &&
@@ -1166,7 +1166,7 @@ final class Level {
           }
           Model.trimToUsedCounts(var4, (byte) -102);
           this.field_y = var4;
-          this.field_y.field_k = (pj) (var16.a(80, 1365, -1, -12, 12));
+          this.field_y.field_k = (LitModelMesh) (var16.a(80, 1365, -1, -12, 12));
           this.field_y.field_k.field_i = new int[var16.field_k];
           this.field_y.field_k.field_g = new int[var16.field_k];
           this.field_y.field_k.field_m = var16.field_k;

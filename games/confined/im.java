@@ -61,7 +61,7 @@ final class im {
         try {
           var1 = new RgbSprite(540, 140);
           vm.a(var1, -8409);
-          ti.b();
+          TriangleRasterizer.useRasterClip();
           int var2 = -113 / ((param0 - 32) / 49);
           SoftwareRasterizer.clearRaster();
           GuestPlayConfirmationForm.field_H = 0;

@@ -277,7 +277,7 @@ final class tm extends IntrusiveNode {
             stackIn_70_1 = var7_int;
             break;
           }
-          ri.a(stackIn_70_0 != 0, stackIn_70_1, var8, param0, 0);
+          SoundCache.a(stackIn_70_0 != 0, stackIn_70_1, var8, param0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -10,7 +10,7 @@ final class gi extends AcceleratingProjectile {
     static byte[] field_db;
     static PcmSample field_eb;
 
-    final static vk a(m param0, byte param1, ResourceArchive param2, String param3, String param4) {
+    final static vk a(SoundCache param0, byte param1, ResourceArchive param2, String param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -188,7 +188,7 @@ final class gi extends AcceleratingProjectile {
         field_eb = null;
         if (param0 != -11008) {
           String var2 = (String) null;
-          gi.a((m) null, (byte) 3, (ResourceArchive) null, (String) null, (String) null);
+          gi.a((SoundCache) null, (byte) 3, (ResourceArchive) null, (String) null, (String) null);
         }
     }
 

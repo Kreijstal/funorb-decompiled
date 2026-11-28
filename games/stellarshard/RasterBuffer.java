@@ -94,8 +94,8 @@ abstract class RasterBuffer {
           var10 = param5[3] * var22Lifetime1 + (param5[4] * var23Lifetime1 + param5[5] * var24Lifetime1) >> 16 - fc.field_e;
           var12 = var23Lifetime1 * param5[10] + (param5[9] * var22Lifetime1 + var24Lifetime1 * param5[11]) >> 16;
           var11 = param5[8] * var24Lifetime1 + param5[7] * var23Lifetime1 + param5[6] * var22Lifetime1 >> 16 - fc.field_e;
-          var22Lifetime2 = cc.field_n;
-          var23Lifetime2 = cc.field_p;
+          var22Lifetime2 = TriangleRasterizer.field_n;
+          var23Lifetime2 = TriangleRasterizer.field_p;
           var24Lifetime2 = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;

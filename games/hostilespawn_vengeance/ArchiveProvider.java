@@ -3,7 +3,7 @@
  */
 abstract class ArchiveProvider {
     static int[] field_c;
-    static ji field_d;
+    static MusicTrack field_d;
     static bl field_a;
     static int field_e;
     static String field_b;

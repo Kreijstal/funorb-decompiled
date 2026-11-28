@@ -17,7 +17,7 @@ final class wd {
     private int field_k;
     byte[][] field_n;
     int[] field_j;
-    static ud field_i;
+    static SoundCache field_i;
     int field_l;
     private int[][] field_o;
     ie field_b;
@@ -262,7 +262,7 @@ final class wd {
             var4 = (mk) (DisplayNameSelectionPanel.field_C.nextBackward((byte) 63));
           }
           if (!param1) {
-            field_i = (ud) null;
+            field_i = (SoundCache) null;
           }
           var2 = ButtonWidget.field_v.beginBackward((byte) -117);
           while (var2 != null) {

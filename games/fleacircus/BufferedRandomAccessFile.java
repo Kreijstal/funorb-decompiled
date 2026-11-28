@@ -395,7 +395,7 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final static void a(int param0, wk param1) {
+    final static void a(int param0, MusicTrack param1) {
         try {
           AwtRasterBuffer.a((byte) 5, true, param1);
           if (param0 != 0) {

@@ -126,7 +126,7 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
         if (param0 <= 110) {
           LabeledWidgetContainer.j(13);
         }
-        return -m.field_b + ri.correctedCurrentTimeMillis(-3);
+        return -SoundCache.field_b + ri.correctedCurrentTimeMillis(-3);
     }
 
     static {

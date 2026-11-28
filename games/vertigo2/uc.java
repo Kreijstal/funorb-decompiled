@@ -67,7 +67,7 @@ final class uc {
         int var1_intLifetime1;
         var4 = Vertigo2.field_L ? 1 : 0;
         try {
-          oo.c();
+          TriangleRasterizer.useRasterClip();
           bl.field_r = new int[260];
           BlastDebrisModel.field_j = 11;
           if (param0 != 73) {

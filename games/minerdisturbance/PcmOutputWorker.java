@@ -127,7 +127,7 @@ final class PcmOutputWorker implements Runnable {
               vh.field_i = new String[var9Lifetime1 - 100];
             } else {
               if (248 == var9Lifetime1) {
-                ri.a((byte) -125, RichTextLayout.c(-99));
+                SoundCache.a((byte) -125, RichTextLayout.c(-99));
                 TextLayout.field_g = d.field_a;
                 si.a(-98);
                 FrameTimer.field_c = false;

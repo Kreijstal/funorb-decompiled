@@ -26,7 +26,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
           return;
         }
         if (param0 < -19) {
-          this.field_cb = id.field_g;
+          this.field_cb = SoundCache.field_g;
           this.field_eb = 0;
           this.installContent(13693, this.field_Z);
           this.field_Z = null;
@@ -34,7 +34,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
           return;
         }
         this.field_W = 26;
-        this.field_cb = id.field_g;
+        this.field_cb = SoundCache.field_g;
         this.field_eb = 0;
         this.installContent(13693, this.field_Z);
         this.field_Z = null;
@@ -165,7 +165,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
             }
             return super.advanceDialogAnimation(17);
           }
-          if (this.field_cb != id.field_g) {
+          if (this.field_cb != SoundCache.field_g) {
             if (param0 == 17) {
               return super.advanceDialogAnimation(17);
             }
@@ -276,7 +276,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
           super.finishResize(param0);
           return;
         }
-        if (id.field_g != this.field_cb) {
+        if (SoundCache.field_g != this.field_cb) {
           this.setCenteredSize(-1535749535, this.field_Z.width + 12, 12 + this.field_W + this.field_Z.height);
           this.installContent(param0 + 13716, this.field_Z);
         } else {

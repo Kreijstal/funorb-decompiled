@@ -64,7 +64,7 @@ final class of extends InteractiveWidget {
             DraggableWidgetContainer.field_L[var3_intLifetime1] = VorbisSample.loadByName(param2, "initialset", "bonus" + var3_intLifetime1 + "-disappear").decodeAllToPcm();
           }
           bp.field_a = VorbisSample.loadByName(param2, "initialset", "penalty-disappear").decodeAllToPcm();
-          je.field_f = ha.a(param0, "initialset", "score-count").b();
+          je.field_f = SynthesizedSoundEffect.loadByName(param0, "initialset", "score-count").toPcmSample();
           dn.field_e = VorbisSample.loadByName(param2, "initialset", "score-end").decodeAllToPcm();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

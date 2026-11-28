@@ -11,7 +11,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
     private boolean field_kb;
     private boolean field_mb;
     static String field_nb;
-    static ji field_tb;
+    static MusicTrack field_tb;
     private boolean field_pb;
 
     final void closeDialog(byte param0) {

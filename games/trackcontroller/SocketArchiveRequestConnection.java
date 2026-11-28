@@ -87,7 +87,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               stackIn_9_0 = 76;
               return stackIn_9_0;
             }
-            if (jc.field_a == gk.field_a) {
+            if (SoundCache.field_a == gk.field_a) {
               if (param1) {
                 var10 = (String) null;
                 AccountNameAvailabilityValidator.field_o = ie.a(ClientException.field_e, param3, false, (String) null, (byte) -119);
@@ -98,29 +98,29 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               LevelView.field_C.writeByte(14, (byte) -72);
               LevelView.field_C.writeByte(AccountNameAvailabilityValidator.field_o.a(false).field_b, (byte) -100);
               MovingBlock.a(-1, -1);
-              jc.field_a = sg.field_d;
+              SoundCache.field_a = sg.field_d;
             }
-            if (jc.field_a == sg.field_d &&
+            if (SoundCache.field_a == sg.field_d &&
               DiskArchiveStore.a(1, false)) {
               var6_int = ne.field_a.readUnsignedByte(16383);
               if (var6_int == 0) {
-                jc.field_a = md.field_e;
+                SoundCache.field_a = md.field_e;
               } else {
                 ConfirmedEmailAvailabilityValidator.field_o = -1;
                 uk.field_c = var6_int;
-                jc.field_a = ij.field_j;
+                SoundCache.field_a = ij.field_j;
               }
               ne.field_a.position = 0;
             }
-            if (jc.field_a == md.field_e &&
+            if (SoundCache.field_a == md.field_e &&
               DiskArchiveStore.a(8, false)) {
               MouseWheelInput.field_d = ne.field_a.readLong((byte) 110);
               ne.field_a.position = 0;
               md.a(AccountNameAvailabilityValidator.field_o, param5, param1, -1, param0);
-              jc.field_a = ca.field_b;
+              SoundCache.field_a = ca.field_b;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (ca.field_b == jc.field_a &&
+            if (ca.field_b == SoundCache.field_a &&
               DiskArchiveStore.a(1, false)) {
               var6_intLifetime1 = ne.field_a.readUnsignedByte(16383);
               kg.field_a = null;
@@ -129,7 +129,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (8 != var6_intLifetime1) {
-                  jc.field_a = ij.field_j;
+                  SoundCache.field_a = ij.field_j;
                   ConfirmedEmailAvailabilityValidator.field_o = -1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -142,10 +142,10 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               }
               if (decompiledFrameRemainder0) {
                 ConfirmedEmailAvailabilityValidator.field_o = -1;
-                jc.field_a = CrossfadingMidiPcmStream.field_C;
+                SoundCache.field_a = CrossfadingMidiPcmStream.field_C;
               }
             }
-            if (jc.field_a == CrossfadingMidiPcmStream.field_C &&
+            if (SoundCache.field_a == CrossfadingMidiPcmStream.field_C &&
               ByteStorage.a(520)) {
               ClientException.field_e = ne.field_a.readLong((byte) 28);
               LevelGrid.field_j = ne.field_a.readUnsignedByte(16383);
@@ -178,7 +178,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               var11 = (CharSequence) ((Object) IntrusiveDequeCursor.field_a);
               dd.field_p = r.a(var11, -11133);
               si.field_d = ne.field_a.readUnsignedByte(16383);
-              jc.field_a = ka.field_b;
+              SoundCache.field_a = ka.field_b;
               if (AccountNameAvailabilityValidator.field_o.a(false) != NameSuggestionsPanel.field_M) {
                 if (AccountNameAvailabilityValidator.field_o.a(false) == ji.field_a) {
                   qi.field_f.a(CachedArchiveSource.b((byte) 77), -4);
@@ -217,7 +217,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               stackIn_79_0 = uk.field_c;
               return stackIn_79_0;
             }
-            if (jc.field_a == ij.field_j &&
+            if (SoundCache.field_a == ij.field_j &&
               ByteStorage.a(520)) {
               GameKeyHandler.a((byte) 124);
               if (uk.field_c == 7 &&

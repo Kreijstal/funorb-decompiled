@@ -2122,7 +2122,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "create_alert_passcontainsemail");
                 if (var2 != null) {
-                  fi.field_f = SecondaryNodeDeque.a(var2, false);
+                  SoundCache.field_f = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "create_alert_passcontainsname_partial");
                 if (var2 != null) {
@@ -3168,7 +3168,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "fs_accept_countdown_sing");
                 if (null != var2) {
-                  fi.field_c = SecondaryNodeDeque.a(var2, false);
+                  SoundCache.field_c = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "fs_accept_countdown_pl");
                 if (var2 != null) {

@@ -14,7 +14,7 @@ public final class fleas extends NetworkGameClient {
     private RgbSprite[] field_N;
     static int field_L;
     private static int[][] field_G;
-    private static ng field_K;
+    private static SoundCache field_K;
     static PacketBuffer field_B;
     static String field_I;
     public static boolean field_A;
@@ -248,7 +248,7 @@ public final class fleas extends NetworkGameClient {
             fh.$cfr$intArgs$a$cb0bc10e6b69(102, nb.field_f, 100, 63);
           }
           if (!param1) {
-            field_K = (ng) null;
+            field_K = (SoundCache) null;
           }
           if (fl.field_c[param3][param0] == 19 &&
             we.field_c == 0) {
@@ -985,7 +985,7 @@ public final class fleas extends NetworkGameClient {
           of.clearStaticReferences(71);
           FullscreenFocusCanvas.a(-29039);
           va.b((byte) 126);
-          ng.clearStaticReferences(0);
+          SoundCache.clearStaticReferences(0);
           w.clearStaticReferences(5);
           DiskCacheWorker.a(105);
           uf.resetStaticState(true);
@@ -1004,7 +1004,7 @@ public final class fleas extends NetworkGameClient {
           IntrusiveNode.clearStaticReferences(1);
           hc.clearStaticReferences((byte) 87);
           tk.clearDeclaredStaticReferences(param0 ^ 93);
-          fd.clearStaticReferences();
+          MidiFileReader.clearStaticReferences();
           MusicPatchPcmStream.a((byte) 112);
           AudioOutput.clearStaticReferences();
           CrossfadingMidiPcmStream.resetStaticState(false);
@@ -1032,7 +1032,7 @@ public final class fleas extends NetworkGameClient {
           ad.clearStaticReferences((byte) 42);
           jd.a((byte) 72);
           ff.clearStaticReferences((byte) 92);
-          cc.clearStaticReferences();
+          SynthesizerVoice.clearStaticReferences();
           ti.clearStaticReferences(-23740);
           nc.clearStaticReferences(param0 ^ -99);
           DualLinkNode.clearDeclaredStaticReferences(-6);
@@ -1293,8 +1293,8 @@ public final class fleas extends NetworkGameClient {
                               }
                               wh.a(-128);
                               this.renderClientFrame(true);
-                              field_K = new ng(pb.field_a, ib.field_f);
-                              FrameTimer.field_b[0] = qf.a(pb.field_a, "", "menu_select").b();
+                              field_K = new SoundCache(pb.field_a, ib.field_f);
+                              FrameTimer.field_b[0] = SynthesizedSoundEffect.loadByName(pb.field_a, "", "menu_select").toPcmSample();
                               FrameTimer.field_b[1] = ia.a(882, 2500, 1);
                               this.j((byte) 87);
                               pb.field_a = null;
@@ -1339,11 +1339,11 @@ public final class fleas extends NetworkGameClient {
           if (jc.field_e != null) {
             ResizableModalDialog.a(65.0f, cb.field_q, true);
             this.renderClientFrame(true);
-            BufferedSocket.field_j = wk.a(jc.field_e, "", "Flea Circus Titlescreen");
+            BufferedSocket.field_j = MusicTrack.load(jc.field_e, "", "Flea Circus Titlescreen");
             DebouncedFieldValidator.field_h.a(field_K, ob.field_d, 11498, 0, BufferedSocket.field_j);
-            hf.field_e[0] = wk.a(jc.field_e, "", "Flea Circus 1");
-            hf.field_e[1] = wk.a(jc.field_e, "", "Flea Circus 2");
-            hf.field_e[2] = wk.a(jc.field_e, "", "Flea Circus 3");
+            hf.field_e[0] = MusicTrack.load(jc.field_e, "", "Flea Circus 1");
+            hf.field_e[1] = MusicTrack.load(jc.field_e, "", "Flea Circus 2");
+            hf.field_e[2] = MusicTrack.load(jc.field_e, "", "Flea Circus 3");
             var3_int = 0;
             do {
               if (var3_int >= 3) {
@@ -1893,28 +1893,28 @@ public final class fleas extends NetworkGameClient {
         PcmResampler var2 = null;
         try {
           var2 = new PcmResampler(22050, AudioOutput.field_a);
-          FullscreenStatusDialog.field_ab = qf.a(pb.field_a, "", "FLEA_drops").b().resample(var2);
-          fi.field_n = qf.a(pb.field_a, "", "FLEA_flea_die").b().resample(var2);
-          nb.field_f = qf.a(pb.field_a, "", "FLEA_escape").b().resample(var2);
-          BoundedRandomAccessFile.field_g = qf.a(pb.field_a, "", "FLEA_placeblock").b().resample(var2);
-          el.field_C = qf.a(pb.field_a, "", "FLEA_placeramp").b().resample(var2);
-          ih.field_l = qf.a(pb.field_a, "", "FLEA_balloon").b().resample(var2);
+          FullscreenStatusDialog.field_ab = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_drops").toPcmSample().resample(var2);
+          fi.field_n = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_flea_die").toPcmSample().resample(var2);
+          nb.field_f = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_escape").toPcmSample().resample(var2);
+          BoundedRandomAccessFile.field_g = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_placeblock").toPcmSample().resample(var2);
+          el.field_C = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_placeramp").toPcmSample().resample(var2);
+          ih.field_l = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_balloon").toPcmSample().resample(var2);
           int var3 = 36 / ((-23 - param0) / 33);
-          hg.field_n = qf.a(pb.field_a, "", "FLEA_land").b().resample(var2);
-          me.field_k = qf.a(pb.field_a, "", "FLEA_spring").b().resample(var2);
-          bf.field_d = qf.a(pb.field_a, "", "FLEA_spinplatform").b().resample(var2);
-          ab.field_a = qf.a(pb.field_a, "", "FLEA_bomb").b().resample(var2);
-          SectorCacheStore.field_a = qf.a(pb.field_a, "", "FLEA_drowning").b().resample(var2);
-          ResourceArchive.field_n = qf.a(pb.field_a, "", "FLEA_fanloop").b().resample(var2);
-          hi.field_p = qf.a(pb.field_a, "", "FLEA_spider").b().resample(var2);
-          uh.field_s = qf.a(pb.field_a, "", "FLEA_teleport_in").b().resample(var2);
-          gi.field_d = qf.a(pb.field_a, "", "FLEA_noplace").b().resample(var2);
-          hg.field_k = qf.a(pb.field_a, "", "FLEA_gravity_up").b().resample(var2);
-          ha.field_o = qf.a(pb.field_a, "", "FLEA_gravity_down").b().resample(var2);
-          gf.field_g = qf.a(pb.field_a, "", "FLEA_switch").b().resample(var2);
-          fg.field_l = qf.a(pb.field_a, "", "FLEA_crumble").b().resample(var2);
-          hf.field_g = qf.a(pb.field_a, "", "FLEA_bridgecollapse").b().resample(var2);
-          kc.field_e = qf.a(pb.field_a, "", "FLEA_death").b().resample(var2);
+          hg.field_n = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_land").toPcmSample().resample(var2);
+          me.field_k = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_spring").toPcmSample().resample(var2);
+          bf.field_d = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_spinplatform").toPcmSample().resample(var2);
+          ab.field_a = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_bomb").toPcmSample().resample(var2);
+          SectorCacheStore.field_a = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_drowning").toPcmSample().resample(var2);
+          ResourceArchive.field_n = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_fanloop").toPcmSample().resample(var2);
+          hi.field_p = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_spider").toPcmSample().resample(var2);
+          uh.field_s = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_teleport_in").toPcmSample().resample(var2);
+          gi.field_d = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_noplace").toPcmSample().resample(var2);
+          hg.field_k = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_gravity_up").toPcmSample().resample(var2);
+          ha.field_o = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_gravity_down").toPcmSample().resample(var2);
+          gf.field_g = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_switch").toPcmSample().resample(var2);
+          fg.field_l = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_crumble").toPcmSample().resample(var2);
+          hf.field_g = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_bridgecollapse").toPcmSample().resample(var2);
+          kc.field_e = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_death").toPcmSample().resample(var2);
           pb.field_a = null;
           oj.field_i = RawPcmStream.createForPlaybackRate(ResourceArchive.field_n, 100, 0);
           oj.field_i.setLoopCount(-1);

@@ -41,7 +41,7 @@ final class GameEntity {
             GameEntity.a(-90, (String) null, (Throwable) null);
           }
           var8 = new am(param3);
-          stackIn_3_0 = gk.a(param4, param1, var7, param5, param6, var8, false);
+          stackIn_3_0 = SoundCache.a(param4, param1, var7, param5, param6, var8, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1293,8 +1293,8 @@ final class GameEntity {
           var9_ref_bj = vl.field_r[var8];
           this.currentSprite(640).bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(0, 0, 96, 96, 0);
-          cc.a();
-          var9_ref_bj.a(var4, var5, var6, var7, 0, 0, 3000, -1L);
+          TriangleRasterizer.useRasterClip();
+          var9_ref_bj.drawPerspective(var4, var5, var6, var7, 0, 0, 3000, -1L);
           RichTextLayout.field_h.a((byte) -107);
           if (0 == StripedProgressWidget.field_H) {
             if (DiskArchiveRequest.field_I > 0 &&

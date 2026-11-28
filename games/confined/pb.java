@@ -118,7 +118,7 @@ final class pb {
         int var1_intLifetime1;
         var4 = Confined.field_J ? 1 : 0;
         try {
-          ti.b();
+          TriangleRasterizer.useRasterClip();
           oj.field_D = new int[260];
           DiskCacheWorker.field_h = 11;
           for (var1_int = 0; 256 > var1_int; var1_int++) {

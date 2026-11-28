@@ -330,7 +330,7 @@ final class td {
             if (param2 >= -48) {
               td.c(-88);
             }
-            stackIn_16_0 = u.field_a;
+            stackIn_16_0 = SoundCache.field_a;
             stackIn_16_1 = null;
             stackIn_16_2 = null;
             stackIn_16_3 = NameSuggestionsPanel.field_O.getCodeBase();

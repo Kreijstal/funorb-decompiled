@@ -38,7 +38,7 @@ final class SceneMeshBatch {
 
     final static void initializeEmptyMesh() {
         field_b = new Model();
-        field_b.field_k = (pj) (new MeshGeometry(0, 0, 0).a(0, 0, 1, 0, 0));
+        field_b.field_k = (LitModelMesh) (new MeshGeometry(0, 0, 0).a(0, 0, 1, 0, 0));
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -88,7 +88,7 @@ final class SceneMeshBatch {
         int stackIn_57_0 = 0;
         int stackIn_58_1 = 0;
         int stackIn_59_0 = 0;
-        pj var3;
+        LitModelMesh var3;
         mp var4;
         int var5;
         int var6;
@@ -158,14 +158,14 @@ final class SceneMeshBatch {
           g.field_a[1] = this.field_u[param0][var15];
           g.field_a[2] = this.field_u[param0][var16_int];
         }
-        var14 = be.field_c;
+        var14 = TriangleRasterizer.field_c;
         var15Lifetime1 = 0;
         if ((!(field_f > 0) ||
           var7 == -1) && var5 != -1) {
           var16_intLifetime1 = var14.b(var7);
-          var11 = be.a(var16_intLifetime1, var11);
-          var12 = be.a(var16_intLifetime1, var12);
-          var13 = be.a(var16_intLifetime1, var13);
+          var11 = TriangleRasterizer.modulateHslLightness(var16_intLifetime1, var11);
+          var12 = TriangleRasterizer.modulateHslLightness(var16_intLifetime1, var12);
+          var13 = TriangleRasterizer.modulateHslLightness(var16_intLifetime1, var13);
           var5 = -1;
           var15Lifetime1 = 1;
         }
@@ -208,7 +208,7 @@ final class SceneMeshBatch {
             } else {
               if (var5 == -1 &&
                 var6 == 0) {
-                be.field_c = var16.a(var11, -114);
+                TriangleRasterizer.field_c = var16.a(var11, -114);
                 var11 = 128;
                 if (var15Lifetime1 == 0) {
                   g.a(field_k, field_n, field_d, new int[]{415, 415, 3680}, new int[]{415, 3680, 3680});
@@ -216,7 +216,7 @@ final class SceneMeshBatch {
                   decompiledFrameRemainder0 = false;
                 }
               } else {
-                be.field_c = var16.a(122, var7, var14);
+                TriangleRasterizer.field_c = var16.a(122, var7, var14);
               }
               if (decompiledFrameRemainder0) {
                 var5 = 0;
@@ -233,7 +233,7 @@ final class SceneMeshBatch {
         }
         var17Lifetime1 = stackIn_59_0;
         nf.a(var17Lifetime1, var7, field_k, field_n, field_d, var11, var12, var13);
-        be.field_c = var14;
+        TriangleRasterizer.field_c = var14;
     }
 
     private final void c(int param0) {
@@ -254,8 +254,8 @@ final class SceneMeshBatch {
         if (var2 < 50) {
           return;
         }
-        var3 = be.field_g + (field_k[0] << 9) / var2;
-        var4 = be.field_b + (field_n[0] << 9) / var2;
+        var3 = TriangleRasterizer.field_g + (field_k[0] << 9) / var2;
+        var4 = TriangleRasterizer.field_b + (field_n[0] << 9) / var2;
         if (param0 != -32768) {
           var5 = field_e[param0];
           var5.draw(var3 - (var5.field_w >> 1), var4 - (var5.field_u >> 1));
@@ -298,7 +298,7 @@ final class SceneMeshBatch {
     }
 
     private final ti extractMeshTriangle(int param0) {
-        pj var2 = this.field_g[0].field_k;
+        LitModelMesh var2 = this.field_g[0].field_k;
         int var3 = var2.field_p[param0];
         int var4 = var2.field_u[param0];
         int var5 = var2.field_t[param0];
@@ -315,9 +315,9 @@ final class SceneMeshBatch {
 
     private final static int a(int param0, int param1, boolean param2) {
         if (param2) {
-          return pj.a(param1);
+          return LitModelMesh.clampHslLightness(param1);
         }
-        return pj.a(param0, param1);
+        return LitModelMesh.scaleHslLightness(param0, param1);
     }
 
     final void b(lm param0) {
@@ -356,7 +356,7 @@ final class SceneMeshBatch {
         boolean stackIn_3_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var14 = null;
-        pj var15 = null;
+        LitModelMesh var15 = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -367,7 +367,7 @@ final class SceneMeshBatch {
         int var14_intLifetime1;
         int var16Lifetime1;
         stackIn_3_0 = !(field_f > 1);
-        be.field_m = stackIn_3_0;
+        TriangleRasterizer.field_m = stackIn_3_0;
         var5 = param0[3];
         var6 = param0[6];
         var7 = param0[9];
@@ -524,7 +524,7 @@ final class SceneMeshBatch {
     }
 
     private final int b(int param0, int param1) {
-        pj var3 = this.field_g[param0].field_k;
+        LitModelMesh var3 = this.field_g[param0].field_k;
         int var4 = var3.field_p[param1];
         int var5 = var3.field_u[param1];
         int var6 = var3.field_t[param1];
@@ -545,7 +545,7 @@ final class SceneMeshBatch {
         boolean[] stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         boolean stackIn_11_2 = false;
-        pj var2;
+        LitModelMesh var2;
         mp var3;
         int var10;
         int var11;
@@ -649,7 +649,7 @@ final class SceneMeshBatch {
         return var3;
     }
 
-    private final boolean a(int param0, pj param1, int param2) {
+    private final boolean a(int param0, LitModelMesh param1, int param2) {
         boolean stackIn_8_0 = false;
         int var4;
         int var5;
@@ -687,18 +687,18 @@ final class SceneMeshBatch {
         field_t[2] = -5000;
         var10 = var31[var4];
         if (var10 >= 50) {
-          field_t[0] = be.field_g + (var32[var4] << 9) / var10;
-          field_l[0] = be.field_b + (var33[var4] << 9) / var10;
+          field_t[0] = TriangleRasterizer.field_g + (var32[var4] << 9) / var10;
+          field_l[0] = TriangleRasterizer.field_b + (var33[var4] << 9) / var10;
         }
         var11 = var31[var5];
         if (var11 >= 50) {
-          field_t[1] = be.field_g + (var32[var5] << 9) / var11;
-          field_l[1] = be.field_b + (var33[var5] << 9) / var11;
+          field_t[1] = TriangleRasterizer.field_g + (var32[var5] << 9) / var11;
+          field_l[1] = TriangleRasterizer.field_b + (var33[var5] << 9) / var11;
         }
         var12 = var31[var6];
         if (var12 >= 50) {
-          field_t[2] = be.field_g + (var32[var6] << 9) / var12;
-          field_l[2] = be.field_b + (var33[var6] << 9) / var12;
+          field_t[2] = TriangleRasterizer.field_g + (var32[var6] << 9) / var12;
+          field_l[2] = TriangleRasterizer.field_b + (var33[var6] << 9) / var12;
         }
         if (field_t[0] != -5000 &&
           field_t[1] != -5000 &&
@@ -746,15 +746,15 @@ final class SceneMeshBatch {
           field_t[2] != -5000 && (field_t[0] < 0 &&
           field_t[1] < 0 &&
           field_t[2] < 0 ||
-          field_t[0] > be.field_p &&
-          field_t[1] > be.field_p &&
-          field_t[2] > be.field_p ||
+          field_t[0] > TriangleRasterizer.field_p &&
+          field_t[1] > TriangleRasterizer.field_p &&
+          field_t[2] > TriangleRasterizer.field_p ||
           field_l[0] < 0 &&
           field_l[1] < 0 &&
           field_l[2] < 0 ||
-          !(field_l[0] <= be.field_f) &&
-          !(field_l[1] <= be.field_f) &&
-          !(field_l[2] <= be.field_f))) {
+          !(field_l[0] <= TriangleRasterizer.field_f) &&
+          !(field_l[1] <= TriangleRasterizer.field_f) &&
+          !(field_l[2] <= TriangleRasterizer.field_f))) {
           return true;
         }
         return false;
@@ -907,7 +907,7 @@ final class SceneMeshBatch {
         short[] arrayValue$3 = null;
         int incrementValue$1 = 0;
         int incrementValue$0 = 0;
-        pj var2;
+        LitModelMesh var2;
         int var3;
         int var4_int;
         int[] var4;
@@ -1039,7 +1039,7 @@ final class SceneMeshBatch {
         int var12;
         int var13;
         int var14;
-        pj var15;
+        LitModelMesh var15;
         int var19;
         int var20;
         int var21;
@@ -1058,7 +1058,7 @@ final class SceneMeshBatch {
         dd var34_ref_dd;
         int var34;
         int var35;
-        pj var39;
+        LitModelMesh var39;
         dd var43;
         dd var44;
         dd var45;
@@ -1129,7 +1129,7 @@ final class SceneMeshBatch {
         if (param0.field_k != null) {
           var15 = param0.field_k;
         } else {
-          var39 = new pj(new pj[]{}, 0);
+          var39 = new LitModelMesh(new LitModelMesh[]{}, 0);
           var15 = var39;
           var39.field_k = var6.field_f;
           var39.field_x = var6.vertexCount;

@@ -56,7 +56,7 @@ class c extends v {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
-          if (id.field_f.position >= param0) {
+          if (SoundCache.field_f.position >= param0) {
             return true;
           }
           if (lo.field_k == null) {
@@ -65,16 +65,16 @@ class c extends v {
           try {
             var2_int = lo.field_k.a(15166);
             if (var2_int > 0) {
-              if (param0 - id.field_f.position < var2_int) {
-                var2_int = -id.field_f.position + param0;
+              if (param0 - SoundCache.field_f.position < var2_int) {
+                var2_int = -SoundCache.field_f.position + param0;
               }
-              lo.field_k.a(id.field_f.payload, false, var2_int, id.field_f.position);
+              lo.field_k.a(SoundCache.field_f.payload, false, var2_int, SoundCache.field_f.position);
               gn.field_b = gk.correctedCurrentTimeMillis(89);
-              id.field_f.position = id.field_f.position + var2_int;
-              if (param0 > id.field_f.position) {
+              SoundCache.field_f.position = SoundCache.field_f.position + var2_int;
+              if (param0 > SoundCache.field_f.position) {
                 return false;
               }
-              id.field_f.position = 0;
+              SoundCache.field_f.position = 0;
               return true;
             }
             if (var2_int < 0) {
@@ -279,7 +279,7 @@ class c extends v {
         int var11Lifetime1;
         var12 = Vertigo2.field_L ? 1 : 0;
         try {
-          var13 = id.field_f;
+          var13 = SoundCache.field_f;
           var15 = var13;
           var2 = var15.readUnsignedByte(-11);
           if (param0 != 4) {

@@ -6,7 +6,7 @@ final class hf {
     int field_a;
     int field_j;
     int field_i;
-    static wk[] field_e;
+    static MusicTrack[] field_e;
     static String field_f;
     int field_c;
     static int[] field_d;
@@ -106,7 +106,7 @@ final class hf {
     }
 
     static {
-        field_e = new wk[3];
+        field_e = new MusicTrack[3];
         field_f = "At the bottom of the screen, there are counters showing how many fleas are currently in the level, and how many you need to save. On some levels, you must save all the fleas; on other levels, only some must be saved.";
         field_h = new fh(7, 0, 1, 1);
         field_d = new int[40];

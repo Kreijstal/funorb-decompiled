@@ -3,7 +3,7 @@
  */
 final class de {
     static String field_c;
-    static wh field_b;
+    static MusicTrack field_b;
     static StandardContentDialog field_a;
     private static String field_z;
 

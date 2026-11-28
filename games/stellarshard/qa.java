@@ -46,8 +46,8 @@ final class qa {
         field_n = param9;
         field_g = param10;
         field_b = param11;
-        var12 = cc.field_n;
-        var13 = cc.field_p;
+        var12 = TriangleRasterizer.field_n;
+        var13 = TriangleRasterizer.field_p;
         var14 = 0;
         var15 = param3[param6];
         var16 = param4[param6];
@@ -99,20 +99,20 @@ final class qa {
     private final static void a() {
         int var0 = 0;
         if (!field_i) {
-          cc.field_q = field_l;
-          cc.field_d = field_s;
+          TriangleRasterizer.field_q = field_l;
+          TriangleRasterizer.field_d = field_s;
           var0 = field_m & 3;
           if (var0 == 0) {
-            cc.a(field_a[0], field_a[1], field_a[2], field_q[0], field_q[1], field_q[2], field_n, field_g, field_b);
+            TriangleRasterizer.drawShadedTriangle(field_a[0], field_a[1], field_a[2], field_q[0], field_q[1], field_q[2], field_n, field_g, field_b);
           } else {
             if (var0 == 1) {
-              cc.a(field_a[0], field_a[1], field_a[2], field_q[0], field_q[1], field_q[2], field_t[field_n]);
+              TriangleRasterizer.drawFlatTriangle(field_a[0], field_a[1], field_a[2], field_q[0], field_q[1], field_q[2], field_t[field_n]);
             } else {
               if (var0 == 2) {
-                cc.a(field_a[0], field_a[1], field_a[2], field_q[0], field_q[1], field_q[2], field_n, field_g, field_b, field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
+                TriangleRasterizer.drawTexturedTriangle(field_a[0], field_a[1], field_a[2], field_q[0], field_q[1], field_q[2], field_n, field_g, field_b, field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
               } else {
                 if (var0 == 3) {
-                  cc.a(field_a[0], field_a[1], field_a[2], field_q[0], field_q[1], field_q[2], field_n, field_n, field_n, field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
+                  TriangleRasterizer.drawTexturedTriangle(field_a[0], field_a[1], field_a[2], field_q[0], field_q[1], field_q[2], field_n, field_n, field_n, field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
                 }
               }
             }
@@ -227,8 +227,8 @@ final class qa {
         int var9Lifetime4;
         int var9Lifetime1Lifetime1;
         int var9Lifetime2Lifetime1;
-        var0 = cc.field_n;
-        var1 = cc.field_p;
+        var0 = TriangleRasterizer.field_n;
+        var1 = TriangleRasterizer.field_p;
         var2 = 0;
         var3 = field_u[0];
         var4 = field_u[1];
@@ -320,64 +320,64 @@ final class qa {
         var9Lifetime3 = field_e[0];
         var10 = field_e[1];
         var11 = field_e[2];
-        cc.field_q = false;
+        TriangleRasterizer.field_q = false;
         if (var2 == 3) {
           if (var6Lifetime3 < 0 ||
             var7Lifetime3 < 0 ||
             var8Lifetime3 < 0 ||
-            !(var6Lifetime3 <= cc.field_m) ||
-            !(var7Lifetime3 <= cc.field_m) ||
-            !(var8Lifetime3 <= cc.field_m)) {
-            cc.field_q = true;
+            !(var6Lifetime3 <= TriangleRasterizer.field_m) ||
+            !(var7Lifetime3 <= TriangleRasterizer.field_m) ||
+            !(var8Lifetime3 <= TriangleRasterizer.field_m)) {
+            TriangleRasterizer.field_q = true;
           }
           var12 = field_m & 3;
           if (var12 != 0) {
             if (var12 != 1) {
               if (var12 != 2) {
                 if (var12 == 3) {
-                  cc.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_n, field_n, field_n, field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
+                  TriangleRasterizer.drawTexturedTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_n, field_n, field_n, field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
                 }
               } else {
-                cc.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_d[0], field_d[1], field_d[2], field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
+                TriangleRasterizer.drawTexturedTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_d[0], field_d[1], field_d[2], field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
               }
             } else {
-              cc.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_t[field_n]);
+              TriangleRasterizer.drawFlatTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_t[field_n]);
             }
           } else {
-            cc.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_d[0], field_d[1], field_d[2]);
+            TriangleRasterizer.drawShadedTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_d[0], field_d[1], field_d[2]);
           }
         }
         if (var2 == 4) {
           if (var6Lifetime3 < 0 ||
             var7Lifetime3 < 0 ||
             var8Lifetime3 < 0 ||
-            !(var6Lifetime3 <= cc.field_m) ||
-            !(var7Lifetime3 <= cc.field_m) ||
-            !(var8Lifetime3 <= cc.field_m) ||
+            !(var6Lifetime3 <= TriangleRasterizer.field_m) ||
+            !(var7Lifetime3 <= TriangleRasterizer.field_m) ||
+            !(var8Lifetime3 <= TriangleRasterizer.field_m) ||
             !(field_h[3] >= 0) ||
-            !(field_h[3] <= cc.field_m)) {
-            cc.field_q = true;
+            !(field_h[3] <= TriangleRasterizer.field_m)) {
+            TriangleRasterizer.field_q = true;
           }
           var12Lifetime1 = field_m & 3;
           if (var12Lifetime1 != 0) {
             if (var12Lifetime1 != 1) {
               if (var12Lifetime1 != 2) {
                 if (var12Lifetime1 == 3) {
-                  cc.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_n, field_n, field_n, field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
-                  cc.a(var9Lifetime3, var11, field_e[3], var6Lifetime3, var8Lifetime3, field_h[3], field_n, field_n, field_n, field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
+                  TriangleRasterizer.drawTexturedTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_n, field_n, field_n, field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
+                  TriangleRasterizer.drawTexturedTriangle(var9Lifetime3, var11, field_e[3], var6Lifetime3, var8Lifetime3, field_h[3], field_n, field_n, field_n, field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
                 }
               } else {
-                cc.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_d[0], field_d[1], field_d[2], field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
-                cc.a(var9Lifetime3, var11, field_e[3], var6Lifetime3, var8Lifetime3, field_h[3], field_d[0], field_d[2], field_d[3], field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
+                TriangleRasterizer.drawTexturedTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_d[0], field_d[1], field_d[2], field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
+                TriangleRasterizer.drawTexturedTriangle(var9Lifetime3, var11, field_e[3], var6Lifetime3, var8Lifetime3, field_h[3], field_d[0], field_d[2], field_d[3], field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
               }
             } else {
               var13 = field_t[field_n];
-              cc.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, var13);
-              cc.a(var9Lifetime3, var11, field_e[3], var6Lifetime3, var8Lifetime3, field_h[3], var13);
+              TriangleRasterizer.drawFlatTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, var13);
+              TriangleRasterizer.drawFlatTriangle(var9Lifetime3, var11, field_e[3], var6Lifetime3, var8Lifetime3, field_h[3], var13);
             }
           } else {
-            cc.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_d[0], field_d[1], field_d[2]);
-            cc.a(var9Lifetime3, var11, field_e[3], var6Lifetime3, var8Lifetime3, field_h[3], field_d[0], field_d[2], field_d[3]);
+            TriangleRasterizer.drawShadedTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_d[0], field_d[1], field_d[2]);
+            TriangleRasterizer.drawShadedTriangle(var9Lifetime3, var11, field_e[3], var6Lifetime3, var8Lifetime3, field_h[3], field_d[0], field_d[2], field_d[3]);
           }
         }
     }
@@ -439,9 +439,9 @@ final class qa {
         if (var3 >= 0 &&
           var4 >= 0 &&
           var5 >= 0 &&
-          var3 <= cc.field_m &&
-          var4 <= cc.field_m &&
-          var5 <= cc.field_m) {
+          var3 <= TriangleRasterizer.field_m &&
+          var4 <= TriangleRasterizer.field_m &&
+          var5 <= TriangleRasterizer.field_m) {
           field_l = false;
         } else {
           field_l = true;
@@ -450,7 +450,7 @@ final class qa {
     }
 
     static {
-        field_p = cc.field_l;
+        field_p = TriangleRasterizer.field_l;
         field_o = new int[3];
         field_v = new int[3];
         field_e = new int[10];
@@ -463,6 +463,6 @@ final class qa {
         field_j = new int[3];
         field_u = new int[3];
         field_c = new int[3];
-        field_t = cc.field_e;
+        field_t = TriangleRasterizer.field_e;
     }
 }

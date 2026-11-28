@@ -194,7 +194,7 @@ final class BoundedRandomAccessFile {
               hh.field_p.position = 0;
               stackIn_13_0 = (!param0) ? -1 : -2;
               SingleChildWidgetContainer.field_z = stackIn_13_0;
-              i.field_f = stackIn_13_0;
+              SoundCache.field_f = stackIn_13_0;
               DebouncedFieldValidator.field_b = stackIn_13_0;
               pj.field_a = ClientException.field_c;
               var5.position = 0;

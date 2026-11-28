@@ -103,7 +103,7 @@ final class ui {
           int var4_int = 17 / ((28 - param1) / 32);
           UiWidget.a(param3, false);
           ea.a(0, param3);
-          cf.a(false);
+          SoundCache.a(false);
           s.b((byte) 104);
           vb.field_n = -wk.field_i + 0;
         } catch (RuntimeException runtimeException) {

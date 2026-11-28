@@ -8,7 +8,7 @@ final class ModalDialogHost extends ComponentDecorator {
     private NodeDeque nodeDequeState0012;
     static String stringState0297;
     static MixedSupport004 mixedSupport004State0001;
-    static NetworkSupport011 networkSupport011State0001;
+    static SoundCache networkSupport011State0001;
 
     final ModalDialog getTopOpenDialog(byte byteArgument1) {
         MixedSupport108 mixedSupport108Local1;
@@ -62,7 +62,7 @@ final class ModalDialogHost extends ComponentDecorator {
             return stackIntegerLocal4;
           }
           if (byteArgument1 < 42) {
-            networkSupport011State0001 = (NetworkSupport011) null;
+            networkSupport011State0001 = (SoundCache) null;
           }
           integerLocal1 = -(int)(4294967296L % (long)integerArgument2) + -2147483648;
           do {

@@ -56,13 +56,13 @@ final class qs extends pu {
         RuntimeException var1 = null;
         var2 = BachelorFridge.field_y;
         try {
-          i.field_h = new IntrusiveNodeHashTable(16);
+          SoundCache.field_h = new IntrusiveNodeHashTable(16);
           var1_int = 0;
           if (param0) {
             field_l = (Sprite[][]) null;
           }
           while (StampedeAnimation.field_C.length > var1_int) {
-            i.field_h.put((long)StampedeAnimation.field_C[var1_int].toLowerCase().hashCode(), (byte) 127, new ji(var1_int));
+            SoundCache.field_h.put((long)StampedeAnimation.field_C[var1_int].toLowerCase().hashCode(), (byte) 127, new ji(var1_int));
             var1_int++;
           }
           return;

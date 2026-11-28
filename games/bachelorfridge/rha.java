@@ -80,7 +80,7 @@ final class rha {
           var5 = (250 - WhirlpoolDigest.field_d << 8) / 50;
         }
         bu.a(0, BuffVendorSpecial.field_r);
-        TriangleRasterizer.d();
+        TriangleRasterizer.useRasterClip();
         SoftwareRasterizer.clear();
         tc.b(-8144);
         if (var5 < 256) {

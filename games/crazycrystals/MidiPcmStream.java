@@ -16,7 +16,7 @@ final class MidiPcmStream extends PcmStream {
     private int[] field_C;
     private fc field_D;
     private int[] field_M;
-    private ic field_u;
+    private MidiFileReader field_u;
     private int[] field_J;
     private int[] field_I;
     private int[] field_r;
@@ -33,7 +33,7 @@ final class MidiPcmStream extends PcmStream {
     private MusicPatchPcmStream field_m;
     private boolean field_k;
     private long field_A;
-    private rm field_x;
+    private MusicTrack field_x;
     private boolean field_s;
     private int field_t;
 
@@ -351,25 +351,25 @@ final class MidiPcmStream extends PcmStream {
               if (stackIn_23_0 < stackIn_23_1) {
                 this.field_o = this.field_t;
                 this.field_H = -1;
-                this.field_A = this.field_u.b(this.field_o);
+                this.field_A = this.field_u.tickTime(this.field_o);
               }
             }
             return;
           }
           while (var3 == this.field_u.field_h[var2]) {
-            this.field_u.c(var2);
-            var6 = this.field_u.f(var2);
+            this.field_u.seekTrack(var2);
+            var6 = this.field_u.readMessage(var2);
             if (var6 != 1) {
               if ((var6 & 128) != 0) {
                 this.handleMidiMessage((byte) 63, var6);
               }
-              this.field_u.d(var2);
-              this.field_u.e(var2);
+              this.field_u.readDelta(var2);
+              this.field_u.saveTrackPosition(var2);
               continue;
             }
-            this.field_u.c();
-            this.field_u.e(var2);
-            if (this.field_u.f()) {
+            this.field_u.markTrackDone();
+            this.field_u.saveTrackPosition(var2);
+            if (this.field_u.isDone()) {
               if (this.field_x != null) {
                 this.a(115, this.field_x, this.field_k);
                 this.advanceMidiEvents(param0 + 0);
@@ -377,18 +377,18 @@ final class MidiPcmStream extends PcmStream {
               }
               if (this.field_k &&
                 var3 != 0) {
-                this.field_u.a(var4);
+                this.field_u.reset(var4);
               } else {
                 this.resetPlaybackChannels(true, 13396);
-                this.field_u.e();
+                this.field_u.release();
                 return;
               }
             }
             break;
           }
-          var2 = this.field_u.b();
+          var2 = this.field_u.nextTrack();
           var3 = this.field_u.field_h[var2];
-          var4 = this.field_u.b(var3);
+          var4 = this.field_u.tickTime(var3);
         }
     }
 
@@ -546,7 +546,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0, rm param1, boolean param2) {
+    final synchronized void a(int param0, MusicTrack param1, boolean param2) {
         try {
           this.a(true, 8192, param1, param2);
           int var4_int = -66 / ((param0 - 12) / 63);
@@ -651,7 +651,7 @@ final class MidiPcmStream extends PcmStream {
     }
 
     private final synchronized void b(boolean param0, int param1) {
-        this.field_u.e();
+        this.field_u.release();
         this.field_x = null;
         this.resetPlaybackChannels(param0, 13396);
         if (param1 >= -82) {
@@ -663,27 +663,27 @@ final class MidiPcmStream extends PcmStream {
         return (PcmStream) ((Object) this.field_m);
     }
 
-    private final synchronized void a(boolean param0, int param1, rm param2, boolean param3) {
+    private final synchronized void a(boolean param0, int param1, MusicTrack param2, boolean param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = CrazyCrystals.field_B;
         try {
           this.b(param0, param1 - 8306);
-          this.field_u.a(param2.field_g);
+          this.field_u.parse(param2.field_g);
           this.field_B = 0L;
           this.field_k = param3 ? true : false;
-          var5_int = this.field_u.a();
+          var5_int = this.field_u.trackCount();
           if (param1 != 8192) {
             this.field_m = (MusicPatchPcmStream) null;
           }
           for (var6 = 0; var5_int > var6; var6++) {
-            this.field_u.c(var6);
-            this.field_u.d(var6);
-            this.field_u.e(var6);
+            this.field_u.seekTrack(var6);
+            this.field_u.readDelta(var6);
+            this.field_u.saveTrackPosition(var6);
           }
-          this.field_H = this.field_u.b();
+          this.field_H = this.field_u.nextTrack();
           this.field_o = this.field_u.field_h[this.field_H];
-          this.field_A = this.field_u.b(this.field_o);
+          this.field_A = this.field_u.tickTime(this.field_o);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "wg.BA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -836,7 +836,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean a(ResourceArchive param0, bn param1, rm param2, int param3, int param4) {
+    final synchronized boolean a(ResourceArchive param0, SoundCache param1, MusicTrack param2, int param3, int param4) {
         int stackIn_21_0 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -855,7 +855,7 @@ final class MidiPcmStream extends PcmStream {
         int var11 = 0;
         var11 = CrazyCrystals.field_B;
         try {
-          param2.b();
+          param2.buildPatchUsage();
           if (param3 != -128) {
             return false;
           }
@@ -883,7 +883,7 @@ final class MidiPcmStream extends PcmStream {
             var8 = (dm) (param2.field_f.a(88));
           }
           if (var6_int != 0) {
-            param2.a();
+            param2.releasePatchUsage();
           }
           stackIn_21_0 = var6_int;
           return stackIn_21_0 != 0;
@@ -1226,7 +1226,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_L = new int[16];
         this.field_Q = new int[16];
         this.field_j = new int[16];
-        this.field_u = new ic();
+        this.field_u = new MidiFileReader();
         this.field_m = new MusicPatchPcmStream(this);
         this.field_D = new fc(128);
         this.b(-1, 0, 256);

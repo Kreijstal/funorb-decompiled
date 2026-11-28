@@ -15,7 +15,7 @@ final class gg {
         }
     }
 
-    final static rj a(String param0, da param1, ResourceArchive param2, int param3, String param4) {
+    final static rj a(String param0, SoundCache param1, ResourceArchive param2, int param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

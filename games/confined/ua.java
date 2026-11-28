@@ -68,7 +68,7 @@ final class ua {
         if (!param0) {
           return 0.5023189783096313f;
         }
-        return 0.800000011920929f - 0.0015625000232830644f * (float)m.field_l;
+        return 0.800000011920929f - 0.0015625000232830644f * (float)SoundCache.field_l;
     }
 
     public static void a(int param0) {

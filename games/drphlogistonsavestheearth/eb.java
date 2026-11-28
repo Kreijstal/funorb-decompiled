@@ -25,7 +25,7 @@ final class eb {
     }
 
     final static void a(String param0, boolean param1, boolean param2, int param3) {
-        cf.a((byte) -107);
+        SoundCache.a((byte) -107);
         PcmResampler.field_c.closeAllDialogs(300);
         DraggableWidgetContainer.field_O = new LoginPanel(qf.field_c, (String) null, sg.field_a, param1, param2);
         PcmOutputWorker.field_e = new StandardContentDialog(PcmResampler.field_c, DraggableWidgetContainer.field_O);

@@ -87,7 +87,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         this.field_E = new ValidatedTextField("", (WidgetEventListener) null, 3);
         int var1 = 1;
         this.field_P = new of("", (WidgetEventListener) null, var1 != 0);
-        this.field_K = new InteractiveWidget(vd.field_f, (WidgetEventListener) null);
+        this.field_K = new InteractiveWidget(SoundCache.field_f, (WidgetEventListener) null);
         this.field_F = new InteractiveWidget(bi.field_b, (WidgetEventListener) null);
         this.field_B.field_i = bg.field_b;
         this.field_O.field_i = ce.field_b;

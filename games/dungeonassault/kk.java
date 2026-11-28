@@ -22,7 +22,7 @@ final class kk extends IntrusiveNode {
         return sl.b(15000);
     }
 
-    final boolean a(byte param0, lc param1, int[] param2, byte[] param3) {
+    final boolean a(byte param0, SoundCache param1, int[] param2, byte[] param3) {
         int var8 = 0;
         int stackIn_23_0 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -56,9 +56,9 @@ final class kk extends IntrusiveNode {
                   var6 = var9;
                   var9--;
                   if ((1 & var9) == 0) {
-                    var7 = param1.a(param2, var9 >> 2, -31164);
+                    var7 = param1.loadSoundEffectById(param2, var9 >> 2, -31164);
                   } else {
-                    var7 = param1.a(param2, (byte) -97, var9 >> 2);
+                    var7 = param1.loadMusicSampleById(param2, (byte) -97, var9 >> 2);
                   }
                   if (var7 == null) {
                     var5_int = 0;

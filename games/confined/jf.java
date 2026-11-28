@@ -157,7 +157,7 @@ abstract class jf {
           var5 = (-GuestPlayConfirmationForm.field_H + 250 << 8) / 50;
         }
         vm.a(ResourceArchive.field_a, -8409);
-        ti.b();
+        TriangleRasterizer.useRasterClip();
         SoftwareRasterizer.clearRaster();
         of.a(false);
         if (var5 < 256) {

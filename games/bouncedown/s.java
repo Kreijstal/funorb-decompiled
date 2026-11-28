@@ -112,8 +112,8 @@ final class s extends RichTextWidget {
               for (var5_int = 0; pe.field_d > var5_int; var5_int++) {
                 jc.field_g.payload[var5_int] = var4_ref_j.field_i[var5_int];
               }
-              SingleChildWidgetContainer.field_z = i.field_f;
-              i.field_f = DebouncedFieldValidator.field_b;
+              SingleChildWidgetContainer.field_z = SoundCache.field_f;
+              SoundCache.field_f = DebouncedFieldValidator.field_b;
               DebouncedFieldValidator.field_b = wa.field_d;
               wa.field_d = var4_ref_j.field_g;
               return true;
@@ -136,8 +136,8 @@ final class s extends RichTextWidget {
               return false;
             }
             if (DiskCacheWorker.field_c == 0) {
-              SingleChildWidgetContainer.field_z = i.field_f;
-              i.field_f = DebouncedFieldValidator.field_b;
+              SingleChildWidgetContainer.field_z = SoundCache.field_f;
+              SoundCache.field_f = DebouncedFieldValidator.field_b;
               DebouncedFieldValidator.field_b = wa.field_d;
               wa.field_d = TextLineMetrics.field_c;
               TextLineMetrics.field_c = -1;

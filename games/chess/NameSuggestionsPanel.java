@@ -417,16 +417,16 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 } else {
                   if (var9 == -1) {
                     for (var18 = var6Lifetime4; var18 < var30.length + var6Lifetime4 - 1; var18++) {
-                      fe.field_d[var18 / 8] = (byte)ce.a((int) fe.field_d[var18 / 8], ~(1 << ce.a(var18, 7)));
+                      SoundCache.field_d[var18 / 8] = (byte)ce.a((int) SoundCache.field_d[var18 / 8], ~(1 << ce.a(var18, 7)));
                     }
                   } else {
-                    fe.field_d[(var9 + var6Lifetime4) / 8] = (byte)dm.a((int) fe.field_d[(var9 + var6Lifetime4) / 8], 1 << ce.a(var9 + var6Lifetime4, 7));
+                    SoundCache.field_d[(var9 + var6Lifetime4) / 8] = (byte)dm.a((int) SoundCache.field_d[(var9 + var6Lifetime4) / 8], 1 << ce.a(var9 + var6Lifetime4, 7));
                   }
                 }
               }
               if (param1 &&
                 var16Lifetime1 != 0) {
-                fe.field_d[(var9 + var6Lifetime4) / 8] = (byte)ce.a((int) fe.field_d[(var9 + var6Lifetime4) / 8], ~(1 << ce.a(var6Lifetime4 + var9, 7)));
+                SoundCache.field_d[(var9 + var6Lifetime4) / 8] = (byte)ce.a((int) SoundCache.field_d[(var9 + var6Lifetime4) / 8], ~(1 << ce.a(var6Lifetime4 + var9, 7)));
               }
               if (var9 >= 0 &&
                 var17.field_Db) {
@@ -561,14 +561,14 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                   while (var27 < var30.length + (var6Lifetime4 - 1)) {
                     stackIn_318_0 = var17;
                     stackIn_318_1 = var17.field_gb;
-                    stackIn_319_2 = ((fe.field_d[var27 / 8] & 1 << (7 & var27)) == 0);
+                    stackIn_319_2 = ((SoundCache.field_d[var27 / 8] & 1 << (7 & var27)) == 0);
                     stackIn_318_0.field_gb = stackIn_318_1 & stackIn_319_2;
                     var27++;
                   }
                 } else {
                   stackIn_321_0 = var17;
                   stackIn_321_1 = 0;
-                  stackIn_321_2 = fe.field_d[(var6Lifetime4 + var9) / 8];
+                  stackIn_321_2 = SoundCache.field_d[(var6Lifetime4 + var9) / 8];
                   stackIn_321_3 = 1 << (var6Lifetime4 + var9 & 7);
                   stackIn_324_1 = (stackIn_321_1 != (stackIn_321_2 & stackIn_321_3));
                   stackIn_321_0.field_gb = stackIn_324_1;

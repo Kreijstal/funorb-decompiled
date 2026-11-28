@@ -3,7 +3,7 @@
  */
 final class q {
     static String field_c;
-    static dd[] field_b;
+    static SoftwareModelMesh[] field_b;
     static String field_a;
 
     final static void a(int param0, ResourceArchive param1) {
@@ -675,7 +675,7 @@ final class q {
           if (stackIn_36_0.field_L != 0) {
             GzipInflater.field_h = new pc(ContentTransitionDialog.field_jb.field_U, ContentTransitionDialog.field_jb.field_wb, ContentTransitionDialog.field_jb.field_M, ContentTransitionDialog.field_jb.field_pb, param3, ki.field_P, dc.field_s, SectorCacheStore.field_b, EditableTextField.field_P, kj.field_g, sj.field_k, (String) null, 0L);
           }
-          var4 = TextLineMetrics.a(BirthDateValidator.field_g, param1, fe.field_g, param0 ^ -6836);
+          var4 = TextLineMetrics.a(BirthDateValidator.field_g, param1, SoundCache.field_g, param0 ^ -6836);
           if (var4 != null) {
             ce.a(var4, -90);
           }
@@ -692,7 +692,7 @@ final class q {
     }
 
     static {
-        field_b = new dd[7];
+        field_b = new SoftwareModelMesh[7];
         field_a = "Passwords can only contain letters and numbers";
         field_c = "Unpacking models";
     }

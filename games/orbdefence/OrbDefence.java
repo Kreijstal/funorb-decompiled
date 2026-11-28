@@ -160,7 +160,7 @@ public final class OrbDefence extends NetworkGameClient {
         if (eg.field_x != null) {
           AccountRequestState.a(eg.field_x, (byte) 63);
           eg.field_x = null;
-          vd.a(113);
+          SoundCache.resetFrameTiming(113);
         }
         bh.field_d = qk.a(4, -32585);
         pd.field_r = qk.a(5, -32585);
@@ -406,7 +406,7 @@ public final class OrbDefence extends NetworkGameClient {
         l.clearStaticReferences(124);
         FullscreenFocusCanvas.clearStaticReferences(29967);
         jk.clearStaticReferences((byte) 65);
-        vd.b(13461);
+        SoundCache.clearStaticReferences(13461);
         ja.clearStaticReferences(-92);
         nk.clearStaticReferences((byte) 15);
         ql.clearStaticReferences((byte) 50);
@@ -419,7 +419,7 @@ public final class OrbDefence extends NetworkGameClient {
         MidiPcmStream.resetStaticState(116);
         mh.clearStaticReferences(1);
         he.resetStaticState(22);
-        qi.clearStaticReferences();
+        MidiFileReader.clearStaticReferences();
         MusicPatchPcmStream.clearDeclaredStaticReferences(79);
         AudioOutput.clearStaticReferences();
         CrossfadingMidiPcmStream.clearStaticReferences(true);
@@ -447,7 +447,7 @@ public final class OrbDefence extends NetworkGameClient {
         ee.clearStaticReferences((byte) 107);
         bl.clearStaticReferences(13756);
         ne.clearStaticReferences(-1459);
-        kh.clearStaticReferences();
+        SynthesizerVoice.clearStaticReferences();
         VorbisSample.clearStaticReferences();
         VorbisFloor.clearStaticReferences();
         sd.resetStaticState((byte) -30);
@@ -797,52 +797,52 @@ public final class OrbDefence extends NetworkGameClient {
                             }
                             mh.field_a = new PcmSample[60];
                             bg.a(param1 - 2027485875);
-                            cj.field_b = new vd(kd.field_q, AccountCreationResultPanel.field_hb);
-                            mh.field_a[0] = cm.a(kd.field_q, "", "Orb_defence_select_menu_item").a();
-                            mh.field_a[30] = cm.a(kd.field_q, "", "Orb_defence_mouseover_options").a();
-                            mh.field_a[1] = cm.a(kd.field_q, "", "Orb_defence_place_turret_2").a();
-                            mh.field_a[2] = cm.a(kd.field_q, "", "Orb_defence_select_turret").a();
-                            mh.field_a[3] = cm.a(kd.field_q, "", "Orb_defence_upgrade_turret").a();
-                            mh.field_a[5] = cm.a(kd.field_q, "", "Orb_defence_fast_blast_1").a();
-                            mh.field_a[10] = cm.a(kd.field_q, "", "Orb_defence_chain_shot_1").a();
-                            mh.field_a[15] = cm.a(kd.field_q, "", "Orb_defence_big_shot_1").a();
-                            mh.field_a[20] = cm.a(kd.field_q, "", "Orb_defence_ice_shot_1").a();
-                            mh.field_a[25] = cm.a(kd.field_q, "", "Orb_defence_beam_blast_1").a();
-                            mh.field_a[6] = cm.a(kd.field_q, "", "Orb_defence_fast_blast_2").a();
-                            mh.field_a[11] = cm.a(kd.field_q, "", "Orb_defence_chain_shot_2").a();
-                            mh.field_a[16] = cm.a(kd.field_q, "", "Orb_defence_big_shot_2").a();
-                            mh.field_a[21] = cm.a(kd.field_q, "", "Orb_defence_ice_shot_2").a();
-                            mh.field_a[26] = cm.a(kd.field_q, "", "Orb_defence_beam_blast_2").a();
-                            mh.field_a[7] = cm.a(kd.field_q, "", "Orb_defence_fast_blast_3").a();
-                            mh.field_a[12] = cm.a(kd.field_q, "", "Orb_defence_chain_shot_3").a();
-                            mh.field_a[17] = cm.a(kd.field_q, "", "Orb_defence_big_shot_3").a();
-                            mh.field_a[22] = cm.a(kd.field_q, "", "Orb_defence_ice_shot_3").a();
-                            mh.field_a[27] = cm.a(kd.field_q, "", "Orb_defence_beam_blast_3").a();
-                            mh.field_a[8] = cm.a(kd.field_q, "", "Orb_defence_fast_blast_4").a();
-                            mh.field_a[13] = cm.a(kd.field_q, "", "Orb_defence_chain_shot_4").a();
-                            mh.field_a[18] = cm.a(kd.field_q, "", "Orb_defence_big_shot_4").a();
-                            mh.field_a[23] = cm.a(kd.field_q, "", "Orb_defence_ice_shot_4").a();
-                            mh.field_a[28] = cm.a(kd.field_q, "", "Orb_defence_beam_blast_4").a();
-                            mh.field_a[9] = cm.a(kd.field_q, "", "Orb_defence_fast_blast_5").a();
-                            mh.field_a[14] = cm.a(kd.field_q, "", "Orb_defence_chain_shot_5").a();
-                            mh.field_a[19] = cm.a(kd.field_q, "", "Orb_defence_big_shot_5").a();
-                            mh.field_a[24] = cm.a(kd.field_q, "", "Orb_defence_ice_shot_5").a();
-                            mh.field_a[29] = cm.a(kd.field_q, "", "Orb_defence_beam_blast_5").a();
-                            mh.field_a[44] = cm.a(kd.field_q, "", "orb_defence_start_game").a();
-                            mh.field_a[45] = cm.a(kd.field_q, "", "orb_defence_end_game").a();
-                            mh.field_a[46] = cm.a(kd.field_q, "", "orb_defence_display_wave_message").a();
-                            mh.field_a[47] = cm.a(kd.field_q, "", "orb_defence_remove_wave_message").a();
-                            mh.field_a[49] = cm.a(kd.field_q, "", "Orb_defence_norb_death_1").a();
-                            mh.field_a[50] = cm.a(kd.field_q, "", "Orb_defence_norb_death_2").a();
-                            mh.field_a[51] = cm.a(kd.field_q, "", "Orb_defence_norb_death_3").a();
-                            mh.field_a[52] = cm.a(kd.field_q, "", "Orb_defence_norb_death_4").a();
-                            mh.field_a[53] = cm.a(kd.field_q, "", "Orb_defence_norb_death_5").a();
-                            mh.field_a[54] = cm.a(kd.field_q, "", "Orb_defence_norb_boss_death").a();
-                            mh.field_a[55] = cm.a(kd.field_q, "", "orb_defence_destroy_orb").a();
-                            mh.field_a[56] = cm.a(kd.field_q, "", "orb_defence_barrier_initialise").a();
-                            mh.field_a[59] = cm.a(kd.field_q, "", "orb_defence_barrier_explode").a();
+                            cj.field_b = new SoundCache(kd.field_q, AccountCreationResultPanel.field_hb);
+                            mh.field_a[0] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_select_menu_item").toPcmSample();
+                            mh.field_a[30] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_mouseover_options").toPcmSample();
+                            mh.field_a[1] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_place_turret_2").toPcmSample();
+                            mh.field_a[2] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_select_turret").toPcmSample();
+                            mh.field_a[3] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_upgrade_turret").toPcmSample();
+                            mh.field_a[5] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_fast_blast_1").toPcmSample();
+                            mh.field_a[10] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_chain_shot_1").toPcmSample();
+                            mh.field_a[15] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_big_shot_1").toPcmSample();
+                            mh.field_a[20] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_ice_shot_1").toPcmSample();
+                            mh.field_a[25] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_beam_blast_1").toPcmSample();
+                            mh.field_a[6] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_fast_blast_2").toPcmSample();
+                            mh.field_a[11] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_chain_shot_2").toPcmSample();
+                            mh.field_a[16] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_big_shot_2").toPcmSample();
+                            mh.field_a[21] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_ice_shot_2").toPcmSample();
+                            mh.field_a[26] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_beam_blast_2").toPcmSample();
+                            mh.field_a[7] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_fast_blast_3").toPcmSample();
+                            mh.field_a[12] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_chain_shot_3").toPcmSample();
+                            mh.field_a[17] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_big_shot_3").toPcmSample();
+                            mh.field_a[22] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_ice_shot_3").toPcmSample();
+                            mh.field_a[27] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_beam_blast_3").toPcmSample();
+                            mh.field_a[8] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_fast_blast_4").toPcmSample();
+                            mh.field_a[13] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_chain_shot_4").toPcmSample();
+                            mh.field_a[18] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_big_shot_4").toPcmSample();
+                            mh.field_a[23] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_ice_shot_4").toPcmSample();
+                            mh.field_a[28] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_beam_blast_4").toPcmSample();
+                            mh.field_a[9] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_fast_blast_5").toPcmSample();
+                            mh.field_a[14] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_chain_shot_5").toPcmSample();
+                            mh.field_a[19] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_big_shot_5").toPcmSample();
+                            mh.field_a[24] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_ice_shot_5").toPcmSample();
+                            mh.field_a[29] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_beam_blast_5").toPcmSample();
+                            mh.field_a[44] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "orb_defence_start_game").toPcmSample();
+                            mh.field_a[45] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "orb_defence_end_game").toPcmSample();
+                            mh.field_a[46] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "orb_defence_display_wave_message").toPcmSample();
+                            mh.field_a[47] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "orb_defence_remove_wave_message").toPcmSample();
+                            mh.field_a[49] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_norb_death_1").toPcmSample();
+                            mh.field_a[50] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_norb_death_2").toPcmSample();
+                            mh.field_a[51] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_norb_death_3").toPcmSample();
+                            mh.field_a[52] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_norb_death_4").toPcmSample();
+                            mh.field_a[53] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_norb_death_5").toPcmSample();
+                            mh.field_a[54] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "Orb_defence_norb_boss_death").toPcmSample();
+                            mh.field_a[55] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "orb_defence_destroy_orb").toPcmSample();
+                            mh.field_a[56] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "orb_defence_barrier_initialise").toPcmSample();
+                            mh.field_a[59] = SynthesizedSoundEffect.loadByName(kd.field_q, "", "orb_defence_barrier_explode").toPcmSample();
                             kd.field_q = null;
-                            vd.a(39);
+                            SoundCache.resetFrameTiming(39);
                             return false;
                           }
                           j.a(55.0f, TextLineMetrics.a(TextFieldValidator.field_e, pd.field_r, param1 ^ -14383, ProxyAuthenticationRequiredException.field_a, ""), (byte) 105);
@@ -889,43 +889,43 @@ public final class OrbDefence extends NetworkGameClient {
           mh.field_a[57] = VorbisSample.loadByName(AccountCreationResultPanel.field_hb, "", "orb_defence_Barrier_Norb_Electrocute").decodeAllToPcm();
           mh.field_a[58] = VorbisSample.loadByName(AccountCreationResultPanel.field_hb, "", "orb_defence_Electro_Turret_shoot").decodeAllToPcm();
           AccountCreationResultPanel.field_hb = null;
-          vd.a(param1 - 8);
+          SoundCache.resetFrameTiming(param1 - 8);
           return false;
         }
         if (lg.field_c != null) {
-          ee.field_b = new fj[15];
+          ee.field_b = new MusicTrack[15];
           j.a(75.0f, m.field_e, (byte) 125);
           this.renderClientFrame((byte) -116);
-          ee.field_b[0] = fj.a(lg.field_c, "", "Orb_defence_level_1_construction");
-          ee.field_b[1] = fj.a(lg.field_c, "", "Orb_defence_level_1_waves");
-          ee.field_b[2] = fj.a(lg.field_c, "", "Orb_defence_level_1_boss");
-          ee.field_b[3] = fj.a(lg.field_c, "", "Orb_defence_level_2_construction");
-          ee.field_b[4] = fj.a(lg.field_c, "", "Orb_defence_level_2_waves");
-          ee.field_b[5] = fj.a(lg.field_c, "", "Orb_defence_level_2_boss");
-          ee.field_b[6] = fj.a(lg.field_c, "", "Orb_defence_level_3_construction");
-          ee.field_b[7] = fj.a(lg.field_c, "", "Orb_defence_level_3_waves");
-          ee.field_b[8] = fj.a(lg.field_c, "", "Orb_defence_level_3_boss");
-          ee.field_b[9] = fj.a(lg.field_c, "", "Orb_defence_level_4_construction");
-          ee.field_b[10] = fj.a(lg.field_c, "", "Orb_defence_level_4_waves");
-          ee.field_b[11] = fj.a(lg.field_c, "", "Orb_defence_level_4_boss");
-          ee.field_b[12] = fj.a(lg.field_c, "", "Orb_defence_titlescreen_1");
-          ee.field_b[14] = fj.a(lg.field_c, "", "Orb_defence_gameover");
+          ee.field_b[0] = MusicTrack.load(lg.field_c, "", "Orb_defence_level_1_construction");
+          ee.field_b[1] = MusicTrack.load(lg.field_c, "", "Orb_defence_level_1_waves");
+          ee.field_b[2] = MusicTrack.load(lg.field_c, "", "Orb_defence_level_1_boss");
+          ee.field_b[3] = MusicTrack.load(lg.field_c, "", "Orb_defence_level_2_construction");
+          ee.field_b[4] = MusicTrack.load(lg.field_c, "", "Orb_defence_level_2_waves");
+          ee.field_b[5] = MusicTrack.load(lg.field_c, "", "Orb_defence_level_2_boss");
+          ee.field_b[6] = MusicTrack.load(lg.field_c, "", "Orb_defence_level_3_construction");
+          ee.field_b[7] = MusicTrack.load(lg.field_c, "", "Orb_defence_level_3_waves");
+          ee.field_b[8] = MusicTrack.load(lg.field_c, "", "Orb_defence_level_3_boss");
+          ee.field_b[9] = MusicTrack.load(lg.field_c, "", "Orb_defence_level_4_construction");
+          ee.field_b[10] = MusicTrack.load(lg.field_c, "", "Orb_defence_level_4_waves");
+          ee.field_b[11] = MusicTrack.load(lg.field_c, "", "Orb_defence_level_4_boss");
+          ee.field_b[12] = MusicTrack.load(lg.field_c, "", "Orb_defence_titlescreen_1");
+          ee.field_b[14] = MusicTrack.load(lg.field_c, "", "Orb_defence_gameover");
           lg.field_c = null;
-          vd.a(param1 - 71);
+          SoundCache.resetFrameTiming(param1 - 71);
           return false;
         }
         if (ContentTransitionDialog.field_N != null) {
           for (var3 = 0; 15 > var3; var3++) {
             if (null != ee.field_b[var3] &&
               !ml.field_c.a(ContentTransitionDialog.field_N, cj.field_b, (byte) 31, ee.field_b[var3], 176400)) {
-              vd.a(param1 ^ 0);
+              SoundCache.resetFrameTiming(param1 ^ 0);
               return false;
             }
           }
           ml.field_c.b((byte) 27);
           ContentTransitionDialog.field_N = null;
           cj.field_b = null;
-          vd.a(64);
+          SoundCache.resetFrameTiming(64);
           return false;
         }
         if (null != j.field_b) {
@@ -941,7 +941,7 @@ public final class OrbDefence extends NetworkGameClient {
           jd.field_c = ConfirmedEmailAvailabilityValidator.a("", "arial13", 90, GameAppletShell.field_d, j.field_b);
           GameAppletShell.field_d = null;
           j.field_b = null;
-          vd.a(param1 ^ 59);
+          SoundCache.resetFrameTiming(param1 ^ 59);
           return false;
         }
         if (null == bh.field_d) {
@@ -1066,7 +1066,7 @@ public final class OrbDefence extends NetworkGameClient {
         SingleChildWidgetContainer.a(var13, 80, (byte) 45, 10, 10, 10, 140, 1500, 10);
         bh.field_d = null;
         pd.field_r = null;
-        vd.a(70);
+        SoundCache.resetFrameTiming(70);
         return false;
     }
 

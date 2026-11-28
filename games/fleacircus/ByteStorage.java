@@ -191,7 +191,7 @@ abstract class ByteStorage {
         try {
           tg.field_i = AudioOutput.createOutput(param5, param6, 1, param0);
           qg.field_f = new PcmStreamMixer();
-          ng.field_c = param0 * 1000 / param4;
+          SoundCache.field_c = param0 * 1000 / param4;
           tg.field_i.setRootStream(qg.field_f);
           DebouncedFieldValidator.field_h = param1;
           DebouncedFieldValidator.field_h.b(17, CrossfadingMidiPcmStream.field_D);

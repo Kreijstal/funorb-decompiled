@@ -1970,7 +1970,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("waitingfor_music", 24);
                 if (var2 != null) {
-                  rd.field_g = PcmResampler.a(123, var2);
+                  SoundCache.field_g = PcmResampler.a(123, var2);
                 }
                 var2 = vj.a("waitingfor_instruments", 24);
                 if (var2 != null) {

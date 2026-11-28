@@ -249,7 +249,7 @@ public final class Vertigo2 extends GameShell {
                 SocketConnector.field_c = new short[50];
               }
               for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 50; var3Lifetime1Lifetime1++) {
-                SocketConnector.field_c[var3Lifetime1Lifetime1] = (short)id.field_f.readUnsignedShort((byte) -11);
+                SocketConnector.field_c[var3Lifetime1Lifetime1] = (short)SoundCache.field_f.readUnsignedShort((byte) -11);
                 if (0 == SocketConnector.field_c[var3Lifetime1Lifetime1]) {
                   SocketConnector.field_c[var3Lifetime1Lifetime1] = (short)30000;
                 }
@@ -262,7 +262,7 @@ public final class Vertigo2 extends GameShell {
               LevelRenderer.field_n = 11;
               kj.field_C = false;
               ProxyAuthenticationRequiredException.field_b = false;
-              HuffmanCodec.field_i = id.field_f.readString(128);
+              HuffmanCodec.field_i = SoundCache.field_f.readString(128);
               continue;
             }
             if (lc.field_f == 14) {
@@ -298,7 +298,7 @@ public final class Vertigo2 extends GameShell {
               continue;
             }
             if (lc.field_f == 67) {
-              var3Lifetime1Lifetime2 = id.field_f.readInt(true);
+              var3Lifetime1Lifetime2 = SoundCache.field_f.readInt(true);
               var3Lifetime1Lifetime2 = var3Lifetime1Lifetime2 & ~ml.field_z;
               if (ResizableModalDialog.field_V) {
                 for (var4Lifetime1 = 0; BlastDebrisModel.field_i.length > var4Lifetime1; var4Lifetime1++) {
@@ -343,14 +343,14 @@ public final class Vertigo2 extends GameShell {
               if (var3_ref != null) {
                 if (lc.field_f == 70) {
                   var4_ref_pp = new pp(((GameplayScreen) (var3_ref)).field_D.field_z);
-                  var4_ref_pp.a((byte) -8, ((GameplayScreen) (var3_ref)).field_B, id.field_f);
+                  var4_ref_pp.a((byte) -8, ((GameplayScreen) (var3_ref)).field_B, SoundCache.field_f);
                   ((GameplayScreen) (var3_ref)).a(10, var4_ref_pp);
                   continue;
                 }
                 if (lc.field_f == 62) {
-                  var4Lifetime2 = id.field_f.readSignedByte(88);
-                  var5 = id.field_f.readUnsignedByte(-11);
-                  var6 = id.field_f.readUnsignedByte(-11);
+                  var4Lifetime2 = SoundCache.field_f.readSignedByte(88);
+                  var5 = SoundCache.field_f.readUnsignedByte(-11);
+                  var6 = SoundCache.field_f.readUnsignedByte(-11);
                   ((GameplayScreen) (var3_ref)).field_D.finishMatch((byte) 2, var4Lifetime2);
                   ((GameplayScreen) (var3_ref)).field_D.field_g = var6;
                   ((GameplayScreen) (var3_ref)).field_D.field_f = var5;
@@ -363,7 +363,7 @@ public final class Vertigo2 extends GameShell {
                   continue;
                 }
                 if (lc.field_f == 63) {
-                  ((GameplayScreen) (var3_ref)).field_D.field_d = id.field_f.readUnsignedByte(-11);
+                  ((GameplayScreen) (var3_ref)).field_D.field_d = SoundCache.field_f.readUnsignedByte(-11);
                   if (ln.field_d == null) {
                     continue;
                   }
@@ -371,11 +371,11 @@ public final class Vertigo2 extends GameShell {
                   continue;
                 }
                 if (lc.field_f == 64) {
-                  ((GameplayScreen) (var3_ref)).field_D.field_u = id.field_f.readUnsignedByte(-11);
+                  ((GameplayScreen) (var3_ref)).field_D.field_u = SoundCache.field_f.readUnsignedByte(-11);
                   continue;
                 }
                 if (lc.field_f == 65) {
-                  ((GameplayScreen) (var3_ref)).field_D.field_t = id.field_f.readUnsignedByte(-11);
+                  ((GameplayScreen) (var3_ref)).field_D.field_t = SoundCache.field_f.readUnsignedByte(-11);
                   if (ln.field_d == null) {
                     continue;
                   }
@@ -383,7 +383,7 @@ public final class Vertigo2 extends GameShell {
                   continue;
                 }
                 if (lc.field_f == 66) {
-                  ((GameplayScreen) (var3_ref)).field_h = id.field_f.readUnsignedByte(-11);
+                  ((GameplayScreen) (var3_ref)).field_h = SoundCache.field_f.readUnsignedByte(-11);
                   if (null == ln.field_d) {
                     continue;
                   }
@@ -395,29 +395,29 @@ public final class Vertigo2 extends GameShell {
               continue;
             }
             g.b(7);
-            var3Lifetime1Lifetime3 = id.field_f.readUnsignedByte(-11);
-            var4Lifetime3 = id.field_f.readUnsignedByte(-11);
-            var5Lifetime1 = id.field_f.readUnsignedByte(-11);
-            var6Lifetime1 = id.field_f.readUnsignedByte(-11);
-            var7_int = id.field_f.readUnsignedShort((byte) -11);
-            var8 = id.field_f.readUnsignedShort((byte) -11);
-            stackIn_125_0 = (id.field_f.readUnsignedByte(-11) == 0) ? 0 : 1;
+            var3Lifetime1Lifetime3 = SoundCache.field_f.readUnsignedByte(-11);
+            var4Lifetime3 = SoundCache.field_f.readUnsignedByte(-11);
+            var5Lifetime1 = SoundCache.field_f.readUnsignedByte(-11);
+            var6Lifetime1 = SoundCache.field_f.readUnsignedByte(-11);
+            var7_int = SoundCache.field_f.readUnsignedShort((byte) -11);
+            var8 = SoundCache.field_f.readUnsignedShort((byte) -11);
+            stackIn_125_0 = (SoundCache.field_f.readUnsignedByte(-11) == 0) ? 0 : 1;
             var9 = stackIn_125_0;
-            var10 = -2 + id.field_f.readUnsignedByte(-11);
-            var11 = new String[id.field_f.readUnsignedByte(-11)];
+            var10 = -2 + SoundCache.field_f.readUnsignedByte(-11);
+            var11 = new String[SoundCache.field_f.readUnsignedByte(-11)];
             for (var12_int = 0; var12_int < var11.length; var12_int++) {
-              var11[var12_int] = id.field_f.readString(128);
+              var11[var12_int] = SoundCache.field_f.readString(128);
             }
             uh.field_Xb = null;
             j.field_n = null;
             var12 = new GameplayScreen(true, var11, var10, var9 != 0, var3Lifetime1Lifetime3, var4Lifetime3, var5Lifetime1, var6Lifetime1);
             var12.field_D.field_f = var7_int;
             var12.field_D.field_g = var8;
-            var13 = id.field_f.readUnsignedByte(-11);
+            var13 = SoundCache.field_f.readUnsignedByte(-11);
             if (var13 == 1) {
-              var12.a(16, id.field_f.readUnsignedByte(-11));
-              var12.field_D.field_q = id.field_f.readInt(true);
-              var12.a(id.field_f, 101);
+              var12.a(16, SoundCache.field_f.readUnsignedByte(-11));
+              var12.field_D.field_q = SoundCache.field_f.readInt(true);
+              var12.a(SoundCache.field_f, 101);
             }
             if (an.field_c) {
               ln.field_d = null;
@@ -499,65 +499,65 @@ public final class Vertigo2 extends GameShell {
         RuntimeException var2 = null;
         var3 = field_L ? 1 : 0;
         try {
-          on.field_b[0][0] = hp.a(DualLinkNode.field_s, "", "v_menu_select").a();
-          on.field_b[1][0] = hp.a(DualLinkNode.field_s, "", "v_explode").a();
+          on.field_b[0][0] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_menu_select").toPcmSample();
+          on.field_b[1][0] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_explode").toPcmSample();
           if (param0 != 19804) {
             return;
           }
-          on.field_b[2][0] = hp.a(DualLinkNode.field_s, "", "v_deflate").a();
+          on.field_b[2][0] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_deflate").toPcmSample();
           on.field_b[3] = new PcmSample[2];
-          on.field_b[3][0] = hp.a(DualLinkNode.field_s, "", "v_teleport").a();
-          on.field_b[3][1] = hp.a(DualLinkNode.field_s, "", "v_teleport_2").a();
+          on.field_b[3][0] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_teleport").toPcmSample();
+          on.field_b[3][1] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_teleport_2").toPcmSample();
           on.field_b[5][0] = VorbisSample.loadByName(mj.field_b, "", "whee").decodeAllToPcm();
           on.field_b[6][0] = VorbisSample.loadByName(mj.field_b, "", "v_fall").decodeAllToPcm();
           on.field_b[7][0] = VorbisSample.loadByName(mj.field_b, "", "v_extra_life").decodeAllToPcm();
-          on.field_b[8][0] = hp.a(DualLinkNode.field_s, "", "v_paint_collect").a();
+          on.field_b[8][0] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_paint_collect").toPcmSample();
           this.loadSoundEffectVariants(1, "v_brush", 4, 9);
           on.field_b[10] = new PcmSample[4];
-          on.field_b[10][0] = hp.a(DualLinkNode.field_s, "", "v_rocket_pack_start").a();
-          on.field_b[10][1] = hp.a(DualLinkNode.field_s, "", "v_rocket_pack_end").a();
-          on.field_b[10][2] = hp.a(DualLinkNode.field_s, "", "v_rocket_pack_ready").a();
-          on.field_b[10][3] = hp.a(DualLinkNode.field_s, "", "v_rocket_pack_loop").a();
+          on.field_b[10][0] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_rocket_pack_start").toPcmSample();
+          on.field_b[10][1] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_rocket_pack_end").toPcmSample();
+          on.field_b[10][2] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_rocket_pack_ready").toPcmSample();
+          on.field_b[10][3] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_rocket_pack_loop").toPcmSample();
           this.loadSoundEffectVariants(1, "v_jump", 3, 11);
-          on.field_b[12][0] = hp.a(DualLinkNode.field_s, "", "v_sticky_block").a();
+          on.field_b[12][0] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_sticky_block").toPcmSample();
           this.loadSoundEffectVariants(1, "v_land", 2, 13);
-          on.field_b[14][0] = hp.a(DualLinkNode.field_s, "", "v_trampoline_jump").a();
-          on.field_b[15][0] = hp.a(DualLinkNode.field_s, "", "v_spring_jump").a();
-          on.field_b[16][0] = hp.a(DualLinkNode.field_s, "", "v_flip_brush").a();
-          on.field_b[17][0] = hp.a(DualLinkNode.field_s, "", "v_coin_collect").a();
+          on.field_b[14][0] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_trampoline_jump").toPcmSample();
+          on.field_b[15][0] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_spring_jump").toPcmSample();
+          on.field_b[16][0] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_flip_brush").toPcmSample();
+          on.field_b[17][0] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_coin_collect").toPcmSample();
           on.field_b[18][0] = on.field_b[5][0];
-          on.field_b[19][0] = hp.a(DualLinkNode.field_s, "", "v_spring_jump_power_up").a();
-          on.field_b[20][0] = hp.a(DualLinkNode.field_s, "", "v_dynamite_collect").a();
-          on.field_b[21][0] = hp.a(DualLinkNode.field_s, "", "v_crumble_platform").a();
-          on.field_b[22][0] = hp.a(DualLinkNode.field_s, "", "v_teleporter_loop").a();
-          on.field_b[23][0] = hp.a(DualLinkNode.field_s, "", "v_fan_loop").a();
-          on.field_b[24][0] = hp.a(DualLinkNode.field_s, "", "v_spikes").a();
+          on.field_b[19][0] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_spring_jump_power_up").toPcmSample();
+          on.field_b[20][0] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_dynamite_collect").toPcmSample();
+          on.field_b[21][0] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_crumble_platform").toPcmSample();
+          on.field_b[22][0] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_teleporter_loop").toPcmSample();
+          on.field_b[23][0] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_fan_loop").toPcmSample();
+          on.field_b[24][0] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_spikes").toPcmSample();
           on.field_b[25] = new PcmSample[3];
           on.field_b[25][0] = VorbisSample.loadByName(mj.field_b, "", "v_hmm_easy").decodeAllToPcm();
           on.field_b[25][1] = VorbisSample.loadByName(mj.field_b, "", "v_yeah").decodeAllToPcm();
           on.field_b[25][2] = VorbisSample.loadByName(mj.field_b, "", "v_phew").decodeAllToPcm();
-          on.field_b[26][0] = hp.a(DualLinkNode.field_s, "", "v_paint_runout").a();
+          on.field_b[26][0] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_paint_runout").toPcmSample();
           on.field_b[27] = new PcmSample[3];
           on.field_b[27][0] = VorbisSample.loadByName(mj.field_b, "", "v_near_edge_1").decodeAllToPcm();
           on.field_b[27][1] = VorbisSample.loadByName(mj.field_b, "", "v_near_edge_2").decodeAllToPcm();
           on.field_b[27][2] = VorbisSample.loadByName(mj.field_b, "", "v_near_edge_3").decodeAllToPcm();
-          on.field_b[28][0] = hp.a(DualLinkNode.field_s, "", "v_last_block").a();
-          on.field_b[29][0] = hp.a(DualLinkNode.field_s, "", "v_level_select").a();
+          on.field_b[28][0] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_last_block").toPcmSample();
+          on.field_b[29][0] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", "v_level_select").toPcmSample();
           rr.field_B[0] = SamplePlaybackStream.createForPlaybackRate(on.field_b[23][0], 100, 96);
           rr.field_B[1] = SamplePlaybackStream.createForPlaybackRate(on.field_b[22][0], 100, 96);
           rr.field_B[0].setLoopCount(-1);
           rr.field_B[1].setLoopCount(-1);
           rr.field_B[2] = SamplePlaybackStream.createForPlaybackRate(on.field_b[10][3], 100, 96);
           rr.field_B[2].setLoopCount(-1);
-          op.field_d = si.a(le.field_f, "", "vertigo2_theme");
-          up.field_B[0] = si.a(le.field_f, "", "vertigo2_level_1");
-          up.field_B[1] = si.a(le.field_f, "", "vertigo2_level_2");
-          up.field_B[2] = si.a(le.field_f, "", "vertigo2_level_3");
-          kc.field_b = si.a(le.field_f, "", "vertigo2_lvl_complete_jingle");
-          MatchingFieldValidator.field_o = si.a(le.field_f, "", "vertigo2_lvl_start_jingle");
-          DiskArchiveRequest.field_D = si.a(le.field_f, "", "vertigo2_game_over_jingle");
-          si.a(le.field_f, "", "vertigo2_multiplayer_lvl_lost_jingle");
-          si.a(le.field_f, "", "vertigo2_time_running_out_jingle");
+          op.field_d = MusicTrack.load(le.field_f, "", "vertigo2_theme");
+          up.field_B[0] = MusicTrack.load(le.field_f, "", "vertigo2_level_1");
+          up.field_B[1] = MusicTrack.load(le.field_f, "", "vertigo2_level_2");
+          up.field_B[2] = MusicTrack.load(le.field_f, "", "vertigo2_level_3");
+          kc.field_b = MusicTrack.load(le.field_f, "", "vertigo2_lvl_complete_jingle");
+          MatchingFieldValidator.field_o = MusicTrack.load(le.field_f, "", "vertigo2_lvl_start_jingle");
+          DiskArchiveRequest.field_D = MusicTrack.load(le.field_f, "", "vertigo2_game_over_jingle");
+          MusicTrack.load(le.field_f, "", "vertigo2_multiplayer_lvl_lost_jingle");
+          MusicTrack.load(le.field_f, "", "vertigo2_time_running_out_jingle");
           qc.field_v.a(0, jk.field_b, op.field_d, re.field_d, (byte) 75);
           for (var2_int = 0; var2_int < up.field_B.length; var2_int++) {
             qc.field_v.a(0, jk.field_b, up.field_B[var2_int], re.field_d, (byte) 56);
@@ -802,7 +802,7 @@ public final class Vertigo2 extends GameShell {
           rc.clearStaticReferences(true);
           GameApplet.c((byte) 26);
           MouseInputHandler.clearStaticReferences(-31417);
-          oo.clearStaticReferences();
+          TriangleRasterizer.clearStaticReferences();
           nr.b((byte) 120);
           fa.clearStaticReferences((byte) -128);
           IntrusiveDeque.clearStaticReferences(0);
@@ -814,7 +814,7 @@ public final class Vertigo2 extends GameShell {
           MidiPcmStream.clearStaticReferences(97);
           mh.clearStaticReferences(-1);
           VorbisSample.clearStaticReferences();
-          id.clearStaticReferences((byte) 76);
+          SoundCache.clearStaticReferences((byte) 76);
           HuffmanCodec.clearStaticReferences((byte) -125);
           n.clearStaticReferences(69);
           ib.resetStaticState((byte) -35);
@@ -864,7 +864,7 @@ public final class Vertigo2 extends GameShell {
           IntrusiveNode.clearDeclaredStaticReferences(55);
           jl.clearStaticReferences(6);
           pe.clearStaticReferences(true);
-          qd.clearStaticReferences();
+          MidiFileReader.clearStaticReferences();
           MusicPatchPcmStream.resetStaticState(0);
           AudioOutput.clearStaticReferences();
           CrossfadingMidiPcmStream.e(-257);
@@ -911,7 +911,7 @@ public final class Vertigo2 extends GameShell {
           MatchSession.clearStaticReferences(1);
           me.clearStaticReferences(6457);
           or.clearStaticReferences((byte) 87);
-          dn.clearStaticReferences();
+          SynthesizerVoice.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
           DualLinkNode.releaseDeclaredStaticReferences(52);
           fq.clearStaticReferences(-126);
@@ -1439,9 +1439,9 @@ public final class Vertigo2 extends GameShell {
         try {
           array$1 = new PcmSample[param0 + param2];
           on.field_b[param3] = array$1;
-          on.field_b[param3][0] = hp.a(DualLinkNode.field_s, "", param1).a();
+          on.field_b[param3][0] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", param1).toPcmSample();
           for (var5_int = 1; param2 >= var5_int; var5_int++) {
-            on.field_b[param3][var5_int] = hp.a(DualLinkNode.field_s, "", param1 + var5_int).a();
+            on.field_b[param3][var5_int] = SynthesizedSoundEffect.loadByName(DualLinkNode.field_s, "", param1 + var5_int).toPcmSample();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1471,7 +1471,7 @@ public final class Vertigo2 extends GameShell {
             if (null != MovingLevelTile.field_u) {
               ProxySocketConnector.a(false, 86.0f, nh.field_p);
               this.renderClientFrame(-17);
-              oo.a(new nr(BlastDebrisModel.field_o, ii.field_C, MovingLevelTile.field_u, 13, false));
+              TriangleRasterizer.setTextureProvider(new nr(BlastDebrisModel.field_o, ii.field_C, MovingLevelTile.field_u, 13, false));
               ii.field_C = null;
               this.loadFonts((byte) 31);
             }
@@ -1581,7 +1581,7 @@ public final class Vertigo2 extends GameShell {
                                                     }
                                                     le.a(468713154);
                                                     this.renderClientFrame(-17);
-                                                    jk.field_b = new id(DualLinkNode.field_s, mj.field_b);
+                                                    jk.field_b = new SoundCache(DualLinkNode.field_s, mj.field_b);
                                                     this.loadSoundEffects(19804);
                                                     DualLinkNode.field_s = null;
                                                     di.b((byte) 109);
@@ -1695,7 +1695,7 @@ public final class Vertigo2 extends GameShell {
               ok.field_c = ok.field_c + 1;
               if (16 == ok.field_c) {
                 if (!jo.field_d) {
-                  id.a(-5);
+                  SoundCache.a(-5);
                 } else {
                   BlastDebrisBatch.openStartupLogin(-106);
                 }

@@ -11,7 +11,7 @@ final class IterableNodeHashTable implements Iterable {
     static String field_b;
     static int field_c;
 
-    final static lg a(int param0, String param1, String param2, ud param3, ResourceArchive param4) {
+    final static lg a(int param0, String param1, String param2, SoundCache param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -79,7 +79,7 @@ final class IterableNodeHashTable implements Iterable {
           return;
         }
         ResourceArchive var2 = (ResourceArchive) null;
-        IterableNodeHashTable.a(54, (String) null, (String) null, (ud) null, (ResourceArchive) null);
+        IterableNodeHashTable.a(54, (String) null, (String) null, (SoundCache) null, (ResourceArchive) null);
         StripedProgressWidget.field_C.replaceContent((byte) 121, ResizableModalDialog.field_F);
     }
 

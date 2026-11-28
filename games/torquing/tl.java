@@ -231,8 +231,8 @@ final class tl extends eh {
           var4 = (-var13[2] + this.field_j) * var13[5] + var13[3] * (-var13[0] + this.field_m) + (-var13[1] + this.field_o) * var13[4] >> 16;
           var5 = (this.field_j - var13[2]) * var13[8] + ((-var13[1] + this.field_o) * var13[7] + var13[6] * (this.field_m - var13[0])) >> 16;
           var6 = var13[9] * (-var13[0] + this.field_m) + var13[10] * (this.field_o - var13[1]) + var13[11] * (this.field_j - var13[2]) >> 16;
-          var7 = (var4 << 9) / var6 + be.field_g;
-          var8 = (var5 << 9) / var6 + be.field_b;
+          var7 = (var4 << 9) / var6 + TriangleRasterizer.field_g;
+          var8 = (var5 << 9) / var6 + TriangleRasterizer.field_b;
           var9 = this.field_r;
           if (0 == var9) {
             param0.completeLevelRun(param1 ^ 111);

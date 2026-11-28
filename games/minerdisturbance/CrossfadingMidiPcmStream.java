@@ -4,7 +4,7 @@
 final class CrossfadingMidiPcmStream extends PcmStream {
     private MidiPcmStream field_A;
     private int field_C;
-    private wh field_F;
+    private MusicTrack field_F;
     static String field_r;
     private int field_D;
     static String field_x;
@@ -13,16 +13,16 @@ final class CrossfadingMidiPcmStream extends PcmStream {
     private int[] field_G;
     static int field_y;
     private boolean field_v;
-    private wh field_u;
+    private MusicTrack field_u;
     private int field_B;
     private MidiPcmStream field_w;
     private int field_t;
     static int field_z;
     private int[] field_H;
     static boolean[] field_s;
-    private wh field_E;
+    private MusicTrack field_E;
 
-    final synchronized void a(boolean param0, wh param1, boolean param2, int param3, int param4, int param5) {
+    final synchronized void a(boolean param0, MusicTrack param1, boolean param2, int param3, int param4, int param5) {
         boolean stackIn_19_1 = false;
         int stackIn_30_0 = 0;
         MidiPcmStream stackIn_39_0 = null;

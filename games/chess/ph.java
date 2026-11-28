@@ -182,25 +182,25 @@ class ph extends dm {
           String var3 = (String) null;
           ph.a((byte) -38, (String) null);
           if (qk.field_h == 0) {
-            nh.field_m = true;
+            TriangleRasterizer.field_m = true;
             return;
           }
           if (rn.field_b == 2) {
-            nh.field_m = false;
+            TriangleRasterizer.field_m = false;
             return;
           }
-          nh.field_m = true;
+          TriangleRasterizer.field_m = true;
           return;
         }
         if (qk.field_h == 0) {
-          nh.field_m = true;
+          TriangleRasterizer.field_m = true;
           return;
         }
         if (rn.field_b == 2) {
-          nh.field_m = false;
+          TriangleRasterizer.field_m = false;
           return;
         }
-        nh.field_m = true;
+        TriangleRasterizer.field_m = true;
     }
 
     static {

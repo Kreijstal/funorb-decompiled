@@ -98,7 +98,7 @@ final class fc extends en {
         if (this.field_k.field_s != -1) {
           var14_ref_String = StandardContentDialog.a(new String[]{this.field_k.field_F.toUpperCase()}, "<col=178B8B><%0></col>", 30496);
           var22 = this.field_k.field_d;
-          var16_ref_String = StandardContentDialog.a(new String[]{var22[0]}, lc.field_g, 30496);
+          var16_ref_String = StandardContentDialog.a(new String[]{var22[0]}, SoundCache.field_g, 30496);
           var17_ref_String = InteractiveWidget.field_H.a(StandardContentDialog.a(new String[]{var14_ref_String}, var22[1], 30496), (byte) -48);
           var24 = jn.a(var16_ref_String, new int[]{param1}, -118, la.field_b);
           var4 = var24;

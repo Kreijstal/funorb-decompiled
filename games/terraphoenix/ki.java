@@ -228,8 +228,8 @@ final class ki extends RichTextWidget {
             vi.field_h = null;
           }
           SoftwareRasterizer.saveClip(rb.field_a);
-          SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, PacketBuffer.field_h, da.field_b);
-          SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, PacketBuffer.field_h, da.field_b);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, PacketBuffer.field_h, SoundCache.field_b);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, PacketBuffer.field_h, SoundCache.field_b);
           if (dg.field_a != null) {
             dg.field_a.draw(0, 0);
           }

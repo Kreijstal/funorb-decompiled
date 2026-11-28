@@ -24,7 +24,7 @@ final class jd {
         if (lfa.field_q <= 0) {
           if (ld.field_p > 0) {
             if (w.field_e) {
-              SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, i.field_a.field_M);
+              SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, SoundCache.field_a.field_M);
               qw.field_b.a(param0, 7802);
             }
             if (param1 < 67) {
@@ -39,35 +39,35 @@ final class jd {
             return;
           }
           if (w.field_e) {
-            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, i.field_a.field_M);
+            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, SoundCache.field_a.field_M);
             qw.field_b.a(param0, 7802);
           }
         } else {
           if (!eda.field_j) {
             if (ld.field_p > 0) {
               if (w.field_e) {
-                SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, i.field_a.field_M);
+                SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, SoundCache.field_a.field_M);
                 qw.field_b.a(param0, 7802);
               }
             } else {
               if (dja.field_m > 0 &&
                 w.field_e) {
-                SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, i.field_a.field_M);
+                SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, SoundCache.field_a.field_M);
                 qw.field_b.a(param0, 7802);
               }
             }
           } else {
-            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, i.field_a.field_M);
+            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, SoundCache.field_a.field_M);
             sb.field_n.a(param0, 7802);
             if (ld.field_p > 0) {
               if (w.field_e) {
-                SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, i.field_a.field_M);
+                SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, SoundCache.field_a.field_M);
                 qw.field_b.a(param0, 7802);
               }
             } else {
               if (dja.field_m > 0) {
                 if (w.field_e) {
-                  SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, i.field_a.field_M);
+                  SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, SoundCache.field_a.field_M);
                   qw.field_b.a(param0, 7802);
                 }
                 if (param1 < 67) {

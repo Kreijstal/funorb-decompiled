@@ -51,9 +51,9 @@ final class PowerUpPickup extends MovingTunnelEntity {
           var7_double = this.field_C;
           this.field_C = this.field_C * uh.field_e[this.field_T];
           if ((1 << this.field_T & 50087) == 0) {
-            this.a(m.field_i[this.field_T], true, param1, param3);
+            this.a(SoundCache.field_i[this.field_T], true, param1, param3);
           } else {
-            this.a(-124, m.field_i[this.field_T], param1, param3);
+            this.a(-124, SoundCache.field_i[this.field_T], param1, param3);
           }
           this.field_C = var7_double;
           this.a(123, TunnelEntity.field_w[(31 & this.field_V) >> 1], param1, param3);

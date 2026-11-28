@@ -116,9 +116,9 @@ final class DialogMessagePane extends DequeWidgetContainer implements WidgetActi
         fn.field_c = SoftwareRasterizer.field_c;
         tf.a(90);
         LoginPanel.field_W.a(ql.field_d.field_M, 0, 0, -2 + (ql.field_d.field_pb - 40), true);
-        fe.field_h.a(0, dc.field_q.field_M, -2147483648, fe.field_g, 0);
+        SoundCache.field_h.a(0, dc.field_q.field_M, -2147483648, SoundCache.field_g, 0);
         if (param0 <= -124) {
-          var1 = fe.field_g + 2;
+          var1 = SoundCache.field_g + 2;
           ArrayWidgetContainer.field_G.a(0, dc.field_q.field_M, -2147483648, dc.field_q.field_pb - (bo.field_c ? var1 : 0), bo.field_c ? var1 : 0);
           dj.g(2);
           ln.field_cc.a(0, ql.field_d.field_M, -2147483648, 40, ql.field_d.field_pb - 40);
@@ -141,7 +141,7 @@ final class DialogMessagePane extends DequeWidgetContainer implements WidgetActi
           return;
         }
         field_M = (ci) null;
-        var1Lifetime1 = fe.field_g + 2;
+        var1Lifetime1 = SoundCache.field_g + 2;
         ArrayWidgetContainer.field_G.a(0, dc.field_q.field_M, -2147483648, dc.field_q.field_pb - (bo.field_c ? var1Lifetime1 : 0), bo.field_c ? var1Lifetime1 : 0);
         dj.g(2);
         ln.field_cc.a(0, ql.field_d.field_M, -2147483648, 40, ql.field_d.field_pb - 40);

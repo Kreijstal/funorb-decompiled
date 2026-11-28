@@ -687,10 +687,10 @@ abstract class NetworkGameClient extends GameAppletShell {
           wi.field_c = l.field_e;
           EmailFormatValidator.field_r = false;
           lc.a(ArchiveIndex.field_g, ll.field_b, im.field_c, 12789, RichTextLayout.field_m);
-          if (rd.field_d ||
+          if (SoundCache.field_d ||
             ti.field_d != null) {
-            stackIn_102_0 = !(rd.field_d);
-            stackIn_105_1 = !(rd.field_d);
+            stackIn_102_0 = !(SoundCache.field_d);
+            stackIn_105_1 = !(SoundCache.field_d);
             ac.a(stackIn_102_0, stackIn_105_1, -1, ti.field_d);
           }
           if (SecondaryNodeDequeIterator.field_b) {

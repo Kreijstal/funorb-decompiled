@@ -25,16 +25,16 @@ final class nf {
         if ((param3 >= 0 ||
           param4 >= 0 ||
           param5 >= 0) &&
-          (!(param3 > be.field_p) ||
-          !(param4 > be.field_p) ||
-          !(param5 > be.field_p)) &&
+          (!(param3 > TriangleRasterizer.field_p) ||
+          !(param4 > TriangleRasterizer.field_p) ||
+          !(param5 > TriangleRasterizer.field_p)) &&
           (param0 >= 0 ||
           param1 >= 0 ||
           param2 >= 0) &&
-          (!(param0 > be.field_f) ||
-          !(param1 > be.field_f) ||
-          !(param2 > be.field_f))) {
-          be.a(param0, param1, param2, param3, param4, param5, param6);
+          (!(param0 > TriangleRasterizer.field_f) ||
+          !(param1 > TriangleRasterizer.field_f) ||
+          !(param2 > TriangleRasterizer.field_f))) {
+          TriangleRasterizer.drawFlatTriangle(param0, param1, param2, param3, param4, param5, param6);
           return;
         }
     }
@@ -45,8 +45,8 @@ final class nf {
           nf.b();
           return;
         }
-        be.field_q = field_m;
-        be.field_h = 0;
+        TriangleRasterizer.field_q = field_m;
+        TriangleRasterizer.field_h = 0;
         var0 = field_r & 3;
         if (var0 != 0) {
           if (var0 != 1) {
@@ -58,7 +58,7 @@ final class nf {
               nf.a(field_j[0], field_j[1], field_j[2], field_q[0], field_q[1], field_q[2], field_f, field_i, field_d, field_e[0], field_e[1], field_e[2], field_n[0], field_n[1], field_n[2], field_k[0], field_k[1], field_k[2], field_l);
             }
           } else {
-            nf.a(field_j[0], field_j[1], field_j[2], field_q[0], field_q[1], field_q[2], be.field_a[field_f]);
+            nf.a(field_j[0], field_j[1], field_j[2], field_q[0], field_q[1], field_q[2], TriangleRasterizer.field_a[field_f]);
           }
         } else {
           nf.a(field_j[0], field_j[1], field_j[2], field_q[0], field_q[1], field_q[2], field_f, field_i, field_d);
@@ -108,8 +108,8 @@ final class nf {
         int var9Lifetime4;
         int var9Lifetime1Lifetime1;
         int var9Lifetime2Lifetime1;
-        var0 = be.field_g;
-        var1 = be.field_b;
+        var0 = TriangleRasterizer.field_g;
+        var1 = TriangleRasterizer.field_b;
         var2 = 0;
         var3 = field_c[0];
         var4 = field_c[1];
@@ -119,7 +119,7 @@ final class nf {
           var7 = field_b[0];
           var8 = field_f;
           if (var5 >= 50) {
-            var9 = (50 - var3) * be.field_e[var5 - var3];
+            var9 = (50 - var3) * TriangleRasterizer.field_e[var5 - var3];
             field_g[var2] = var0 + (var6 + ((field_p[2] - var6) * var9 >> 16) << 9) / 50;
             field_o[var2] = var1 + (var7 + ((field_b[2] - var7) * var9 >> 16) << 9) / 50;
             incrementValue$0 = var2;
@@ -127,7 +127,7 @@ final class nf {
             field_a[incrementValue$0] = var8 + ((field_d - var8) * var9 >> 16);
           }
           if (var4 >= 50) {
-            var9Lifetime4 = (50 - var3) * be.field_e[var4 - var3];
+            var9Lifetime4 = (50 - var3) * TriangleRasterizer.field_e[var4 - var3];
             field_g[var2] = var0 + (var6 + ((field_p[1] - var6) * var9Lifetime4 >> 16) << 9) / 50;
             field_o[var2] = var1 + (var7 + ((field_b[1] - var7) * var9Lifetime4 >> 16) << 9) / 50;
             incrementValue$1 = var2;
@@ -146,7 +146,7 @@ final class nf {
           var7Lifetime1 = field_b[1];
           var8Lifetime1 = field_i;
           if (var3 >= 50) {
-            var9Lifetime1 = (50 - var4) * be.field_e[var3 - var4];
+            var9Lifetime1 = (50 - var4) * TriangleRasterizer.field_e[var3 - var4];
             field_g[var2] = var0 + (var6Lifetime1 + ((field_p[0] - var6Lifetime1) * var9Lifetime1 >> 16) << 9) / 50;
             field_o[var2] = var1 + (var7Lifetime1 + ((field_b[0] - var7Lifetime1) * var9Lifetime1 >> 16) << 9) / 50;
             incrementValue$3 = var2;
@@ -154,7 +154,7 @@ final class nf {
             field_a[incrementValue$3] = var8Lifetime1 + ((field_f - var8Lifetime1) * var9Lifetime1 >> 16);
           }
           if (var5 >= 50) {
-            var9Lifetime1Lifetime1 = (50 - var4) * be.field_e[var5 - var4];
+            var9Lifetime1Lifetime1 = (50 - var4) * TriangleRasterizer.field_e[var5 - var4];
             field_g[var2] = var0 + (var6Lifetime1 + ((field_p[2] - var6Lifetime1) * var9Lifetime1Lifetime1 >> 16) << 9) / 50;
             field_o[var2] = var1 + (var7Lifetime1 + ((field_b[2] - var7Lifetime1) * var9Lifetime1Lifetime1 >> 16) << 9) / 50;
             incrementValue$4 = var2;
@@ -173,7 +173,7 @@ final class nf {
           var7Lifetime2 = field_b[2];
           var8Lifetime2 = field_d;
           if (var4 >= 50) {
-            var9Lifetime2 = (50 - var5) * be.field_e[var4 - var5];
+            var9Lifetime2 = (50 - var5) * TriangleRasterizer.field_e[var4 - var5];
             field_g[var2] = var0 + (var6Lifetime2 + ((field_p[1] - var6Lifetime2) * var9Lifetime2 >> 16) << 9) / 50;
             field_o[var2] = var1 + (var7Lifetime2 + ((field_b[1] - var7Lifetime2) * var9Lifetime2 >> 16) << 9) / 50;
             incrementValue$6 = var2;
@@ -181,7 +181,7 @@ final class nf {
             field_a[incrementValue$6] = var8Lifetime2 + ((field_i - var8Lifetime2) * var9Lifetime2 >> 16);
           }
           if (var3 >= 50) {
-            var9Lifetime2Lifetime1 = (50 - var5) * be.field_e[var3 - var5];
+            var9Lifetime2Lifetime1 = (50 - var5) * TriangleRasterizer.field_e[var3 - var5];
             field_g[var2] = var0 + (var6Lifetime2 + ((field_p[0] - var6Lifetime2) * var9Lifetime2Lifetime1 >> 16) << 9) / 50;
             field_o[var2] = var1 + (var7Lifetime2 + ((field_b[0] - var7Lifetime2) * var9Lifetime2Lifetime1 >> 16) << 9) / 50;
             incrementValue$7 = var2;
@@ -203,7 +203,7 @@ final class nf {
         var11 = field_o[2];
         if (var2 == 3) {
           stackIn_28_0 = !(var6Lifetime3 >= SoftwareRasterizer.field_k) || !(var7Lifetime3 >= SoftwareRasterizer.field_k) || !(var8Lifetime3 >= SoftwareRasterizer.field_k) || !(var6Lifetime3 <= SoftwareRasterizer.field_a) || !(var7Lifetime3 <= SoftwareRasterizer.field_a) || !(var8Lifetime3 <= SoftwareRasterizer.field_a);
-          be.field_q = stackIn_28_0;
+          TriangleRasterizer.field_q = stackIn_28_0;
           var12 = field_r & 3;
           if (var12 != 0) {
             if (var12 != 1) {
@@ -215,7 +215,7 @@ final class nf {
                 nf.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_a[0], field_a[1], field_a[2], field_e[0], field_e[1], field_e[2], field_n[0], field_n[1], field_n[2], field_k[0], field_k[1], field_k[2], field_l);
               }
             } else {
-              nf.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, be.field_a[field_f]);
+              nf.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, TriangleRasterizer.field_a[field_f]);
             }
           } else {
             nf.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_a[0], field_a[1], field_a[2]);
@@ -223,7 +223,7 @@ final class nf {
         }
         if (var2 == 4) {
           stackIn_48_0 = !(var6Lifetime3 >= SoftwareRasterizer.field_k) || !(var7Lifetime3 >= SoftwareRasterizer.field_k) || !(var8Lifetime3 >= SoftwareRasterizer.field_k) || !(var6Lifetime3 <= SoftwareRasterizer.field_a) || !(var7Lifetime3 <= SoftwareRasterizer.field_a) || !(var8Lifetime3 <= SoftwareRasterizer.field_a) || !(field_g[3] >= 0) || !(field_g[3] <= SoftwareRasterizer.field_a);
-          be.field_q = stackIn_48_0;
+          TriangleRasterizer.field_q = stackIn_48_0;
           var12Lifetime1 = field_r & 3;
           if (var12Lifetime1 != 0) {
             if (var12Lifetime1 != 1) {
@@ -237,7 +237,7 @@ final class nf {
                 nf.a(var9Lifetime3, var11, field_o[3], var6Lifetime3, var8Lifetime3, field_g[3], field_a[0], field_a[2], field_a[3], field_e[0], field_e[1], field_e[2], field_n[0], field_n[1], field_n[2], field_k[0], field_k[1], field_k[2], field_l);
               }
             } else {
-              var13 = be.field_a[field_f];
+              var13 = TriangleRasterizer.field_a[field_f];
               nf.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, var13);
               nf.a(var9Lifetime3, var11, field_o[3], var6Lifetime3, var8Lifetime3, field_g[3], var13);
             }
@@ -252,16 +252,16 @@ final class nf {
         if ((param3 >= 0 ||
           param4 >= 0 ||
           param5 >= 0) &&
-          (!(param3 > be.field_p) ||
-          !(param4 > be.field_p) ||
-          !(param5 > be.field_p)) &&
+          (!(param3 > TriangleRasterizer.field_p) ||
+          !(param4 > TriangleRasterizer.field_p) ||
+          !(param5 > TriangleRasterizer.field_p)) &&
           (param0 >= 0 ||
           param1 >= 0 ||
           param2 >= 0) &&
-          (!(param0 > be.field_f) ||
-          !(param1 > be.field_f) ||
-          !(param2 > be.field_f))) {
-          be.a(param0, param1, param2, param3, param4, param5, param6, param7, param8);
+          (!(param0 > TriangleRasterizer.field_f) ||
+          !(param1 > TriangleRasterizer.field_f) ||
+          !(param2 > TriangleRasterizer.field_f))) {
+          TriangleRasterizer.drawShadedTriangle(param0, param1, param2, param3, param4, param5, param6, param7, param8);
           return;
         }
     }
@@ -284,8 +284,8 @@ final class nf {
         field_f = param5 & 65535;
         field_i = param6;
         field_d = param7;
-        var8 = be.field_g;
-        var9 = be.field_b;
+        var8 = TriangleRasterizer.field_g;
+        var9 = TriangleRasterizer.field_b;
         field_h = false;
         for (var10_int = 0; var10_int < 3; var10_int++) {
           var11 = param2[var10_int];
@@ -335,16 +335,16 @@ final class nf {
         if ((param3 >= 0 ||
           param4 >= 0 ||
           param5 >= 0) &&
-          (!(param3 > be.field_p) ||
-          !(param4 > be.field_p) ||
-          !(param5 > be.field_p)) &&
+          (!(param3 > TriangleRasterizer.field_p) ||
+          !(param4 > TriangleRasterizer.field_p) ||
+          !(param5 > TriangleRasterizer.field_p)) &&
           (param0 >= 0 ||
           param1 >= 0 ||
           param2 >= 0) &&
-          (!(param0 > be.field_f) ||
-          !(param1 > be.field_f) ||
-          !(param2 > be.field_f))) {
-          be.a(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11, param12, param13, param14, param15, param16, param17, param18);
+          (!(param0 > TriangleRasterizer.field_f) ||
+          !(param1 > TriangleRasterizer.field_f) ||
+          !(param2 > TriangleRasterizer.field_f))) {
+          TriangleRasterizer.drawTexturedTriangle(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11, param12, param13, param14, param15, param16, param17, param18);
           return;
         }
     }

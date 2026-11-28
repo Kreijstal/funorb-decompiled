@@ -8,7 +8,7 @@ final class ee {
     static java.util.zip.CRC32 field_f;
     static String[] field_d;
     private String field_e;
-    static fj[] field_b;
+    static MusicTrack[] field_b;
     static int[] field_g;
     static String field_c;
 

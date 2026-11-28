@@ -6,16 +6,16 @@ final class CrossfadingMidiPcmStream extends PcmStream {
     private int field_y;
     private int field_E;
     private int[] field_t;
-    private si field_D;
+    private MusicTrack field_D;
     private MidiPcmStream field_z;
     private boolean field_w;
-    private si field_B;
+    private MusicTrack field_B;
     static String field_G;
     private MidiPcmStream field_H;
     private int[] field_F;
     static int field_x;
     private boolean field_C;
-    private si field_u;
+    private MusicTrack field_u;
     private MidiPcmStream field_v;
     private int field_r;
     private int field_s;
@@ -103,16 +103,16 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         return null;
     }
 
-    final synchronized void a(si param0, int param1, int param2, boolean param3, byte param4, int param5) {
+    final synchronized void a(MusicTrack param0, int param1, int param2, boolean param3, byte param4, int param5) {
         boolean stackIn_20_1 = false;
         int stackIn_35_0 = 0;
         MidiPcmStream stackIn_45_0 = null;
         int stackIn_45_1 = 0;
-        si stackIn_45_2 = null;
+        MusicTrack stackIn_45_2 = null;
         boolean stackIn_46_3;
         MidiPcmStream stackIn_55_0 = null;
         int stackIn_55_1 = 0;
-        si stackIn_55_2 = null;
+        MusicTrack stackIn_55_2 = null;
         boolean stackIn_56_3;
         RuntimeException stackIn_61_0 = null;
         StringBuilder stackIn_61_1 = null;
@@ -159,7 +159,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             return;
           }
           if (param4 <= 56) {
-            this.field_B = (si) null;
+            this.field_B = (MusicTrack) null;
           }
           if (null == this.field_B) {
             var7_int = 1;
@@ -179,7 +179,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             if (param0 != null) {
               stackIn_55_0 = this.field_H;
               stackIn_55_1 = -34;
-              stackIn_55_2 = (si) (param0);
+              stackIn_55_2 = (MusicTrack) (param0);
               stackIn_56_3 = !(param3);
               ((MidiPcmStream) (Object) stackIn_55_0).a(stackIn_55_1, stackIn_55_2, stackIn_56_3);
               this.a(-1, param5, this.field_H, param2);
@@ -193,7 +193,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             if (param0 != null) {
               stackIn_45_0 = this.field_v;
               stackIn_45_1 = -82;
-              stackIn_45_2 = (si) (param0);
+              stackIn_45_2 = (MusicTrack) (param0);
               stackIn_46_3 = !(param3);
               ((MidiPcmStream) (Object) stackIn_45_0).a(stackIn_45_1, stackIn_45_2, stackIn_46_3);
               this.a(-1, param5, this.field_v, param2);

@@ -63,13 +63,13 @@ final class kj extends IntrusiveNode {
         RuntimeException var2 = null;
         var3 = DungeonAssault.field_K;
         try {
-          DequeWidgetContainer.a(SectorCacheStore.field_d, (byte) 93, ib.field_e, param1, param0, lc.field_d, true);
-          for (var2_int = 0; var2_int < lc.field_d; var2_int++) {
+          DequeWidgetContainer.a(SectorCacheStore.field_d, (byte) 93, ib.field_e, param1, param0, SoundCache.field_d, true);
+          for (var2_int = 0; var2_int < SoundCache.field_d; var2_int++) {
             ol.field_k[param0 + var2_int] = var2_int;
           }
-          DequeWidgetContainer.a(n.field_d, (byte) -65, SingleChildWidgetContainer.field_B, param0, param0 + param0, lc.field_d + param0, false);
-          if (param0 < lc.field_d) {
-            lc.field_d = param0;
+          DequeWidgetContainer.a(n.field_d, (byte) -65, SingleChildWidgetContainer.field_B, param0, param0 + param0, SoundCache.field_d + param0, false);
+          if (param0 < SoundCache.field_d) {
+            SoundCache.field_d = param0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

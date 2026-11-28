@@ -12,7 +12,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
     static int[] field_i;
     static int field_m;
 
-    final static void a(fj param0, int param1, boolean param2, int param3, boolean param4, int param5) {
+    final static void a(MusicTrack param0, int param1, boolean param2, int param3, boolean param4, int param5) {
         Object var6 = null;
         RuntimeException var6_ref = null;
         Throwable var7 = null;

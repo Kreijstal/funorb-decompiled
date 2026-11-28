@@ -2694,19 +2694,19 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "reconnect_lost_seq,0");
                 if (null != var2) {
-                  i.field_e[0] = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  SoundCache.field_e[0] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "reconnect_lost_seq,1");
                 if (var2 != null) {
-                  i.field_e[1] = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  SoundCache.field_e[1] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "reconnect_lost_seq,2");
                 if (var2 != null) {
-                  i.field_e[2] = ChangeCreatureStatOrHealthEffect.a(var2, param0);
+                  SoundCache.field_e[2] = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "reconnect_lost_seq,3");
                 if (var2 != null) {
-                  i.field_e[3] = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  SoundCache.field_e[3] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "reconnect_lost");
                 if (null != var2) {

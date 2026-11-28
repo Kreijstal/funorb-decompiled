@@ -447,8 +447,8 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
         var9 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           wd.field_g = true;
-          ud.field_b = param2;
-          if (0 == ud.field_b) {
+          SoundCache.field_b = param2;
+          if (0 == SoundCache.field_b) {
             var3_int = TextLayout.a(fe.field_a, rk.field_h, ContentTransitionDialog.field_P, true, vi.field_b);
             var4 = 3 + var3_int;
             gh.field_a = new int[var4];
@@ -467,7 +467,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
             BoundedRandomAccessFile.field_k[-1 + var4] = db.field_e;
             gh.field_a[-1 + var4] = 1;
             bi.field_B[1] = 5;
-          } else if (ud.field_b == 1) {
+          } else if (SoundCache.field_b == 1) {
             var3_int = TextLayout.a(fe.field_a, rk.field_h, ContentTransitionDialog.field_P, true, vi.field_b);
             var4 = var3_int + 2;
             BoundedRandomAccessFile.field_k = new String[var4];
@@ -483,8 +483,8 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
             BoundedRandomAccessFile.field_k[-1 + var4] = db.field_e;
             gh.field_a[var4 - 1] = 0;
             bi.field_B[0] = 5;
-          } else if (ud.field_b != 2) {
-            if (ud.field_b == 3) {
+          } else if (SoundCache.field_b != 2) {
+            if (SoundCache.field_b == 3) {
               if (rc.field_k.privilegedTasksEnabled) {
                 var3_int = TextLayout.a(fe.field_a, rk.field_h, uc.field_d, true, vi.field_b);
               } else {
@@ -504,7 +504,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
               BoundedRandomAccessFile.field_k[var4 - 1] = db.field_e;
               gh.field_a[-1 + var4] = 0;
               bi.field_B[0] = 5;
-            } else if (ud.field_b == 4) {
+            } else if (SoundCache.field_b == 4) {
               var3_int = TextLayout.a(fe.field_a, rk.field_h, pd.field_e, true, vi.field_b);
               var4 = var3_int + 2;
               BoundedRandomAccessFile.field_k = new String[var4];
@@ -521,7 +521,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
               gh.field_a[-1 + var4] = 0;
               bi.field_B[0] = 5;
             } else {
-              if (ud.field_b != 5) {
+              if (SoundCache.field_b != 5) {
                 throw new IllegalArgumentException();
               }
               var3_int = TextLayout.a(fe.field_a, rk.field_h, mg.field_r, true, vi.field_b);
@@ -558,8 +558,8 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
             }
             wi.field_b = new String[var4];
             gl.a(vi.field_b, 0, wi.field_b, 0, var4);
-            ud.field_e = new String[-1 + var3_int - var4];
-            gl.a(vi.field_b, 1 + var4, ud.field_e, 0, var3_int - var4 - 1);
+            SoundCache.field_e = new String[-1 + var3_int - var4];
+            gl.a(vi.field_b, 1 + var4, SoundCache.field_e, 0, var3_int - var4 - 1);
             var3_int = TextLayout.a(fe.field_a, rk.field_h, gg.a(new String[]{"<br><%0><br>"}, wa.field_d, true), true, vi.field_b);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
@@ -582,8 +582,8 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
               stackIn_67_0 = wi.field_b.length;
             }
             var5 = stackIn_67_0;
-            if (ud.field_e.length >= re.field_a.length) {
-              stackIn_70_0 = ud.field_e.length;
+            if (SoundCache.field_e.length >= re.field_a.length) {
+              stackIn_70_0 = SoundCache.field_e.length;
             } else {
               stackIn_70_0 = re.field_a.length;
             }
@@ -642,7 +642,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (ud.field_b == 2) {
+          if (SoundCache.field_b == 2) {
             var10 = wi.field_b;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
@@ -652,7 +652,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
                 var3_intLifetime1 = var7Lifetime1;
               }
             }
-            var4_ref_String__Lifetime1 = ud.field_e;
+            var4_ref_String__Lifetime1 = SoundCache.field_e;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
               var7Lifetime1Lifetime1 = AccountNameAvailabilityValidator.$cfr$intArgs$a$590e95718a07(-126, var12, false);
@@ -663,7 +663,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
           }
           h.field_b = -(var3_intLifetime1 >> 1) + (jc.field_b + var3_intLifetime1);
           sc.field_g = jc.field_b - (var3_intLifetime1 >> 1);
-          ConfirmedEmailAvailabilityValidator.field_s = (ud.field_a + vf.field_b << 1) * sj.field_f.field_i;
+          ConfirmedEmailAvailabilityValidator.field_s = (SoundCache.field_a + vf.field_b << 1) * sj.field_f.field_i;
           if (param0 >= -92) {
             return;
           }
@@ -687,17 +687,17 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
             } else {
               var7Lifetime2 = AccountNameAvailabilityValidator.$cfr$intArgs$a$590e95718a07(-115, BoundedRandomAccessFile.field_k[var4Lifetime3], true);
               var8Lifetime1 = jc.field_b - (var7Lifetime2 >> 1);
-              var5Lifetime3 = var5Lifetime3 + ud.field_a;
+              var5Lifetime3 = var5Lifetime3 + SoundCache.field_a;
               RegistrationAgreementPane.field_A[var4Lifetime3] = new int[4];
               RegistrationAgreementPane.field_A[var4Lifetime3][0] = -BoundedRandomAccessFile.field_h + var8Lifetime1;
               RegistrationAgreementPane.field_A[var4Lifetime3][1] = var5Lifetime3;
               RegistrationAgreementPane.field_A[var4Lifetime3][2] = (BoundedRandomAccessFile.field_h << 1) + var7Lifetime2;
-              var5Lifetime3 = var5Lifetime3 + ((vf.field_b << 1) + (ud.field_a + hb.field_n));
+              var5Lifetime3 = var5Lifetime3 + ((vf.field_b << 1) + (SoundCache.field_a + hb.field_n));
               RegistrationAgreementPane.field_A[var4Lifetime3][3] = hb.field_n + (vf.field_b << 1);
             }
             var4Lifetime3++;
           }
-          if (ud.field_b == 2) {
+          if (SoundCache.field_b == 2) {
             sj.field_f.a(-1, -1, 0, param1);
           } else {
             sj.field_f.a(0, q.a(p.field_a, (byte) -36, ei.field_a), 0, param1);

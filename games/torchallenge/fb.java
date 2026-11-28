@@ -19,7 +19,7 @@ final class fb extends IntrusiveNode {
         field_i = null;
     }
 
-    final boolean a(u param0, int[] param1, byte param2, byte[] param3) {
+    final boolean a(SoundCache param0, int[] param1, byte param2, byte[] param3) {
         int var8 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -53,9 +53,9 @@ final class fb extends IntrusiveNode {
                   var6 = var9;
                   var9--;
                   if ((1 & var9) != 0) {
-                    var7 = param0.a(107, var9 >> 2, param1);
+                    var7 = param0.loadMusicSampleById(107, var9 >> 2, param1);
                   } else {
-                    var7 = param0.a(-1, param1, var9 >> 2);
+                    var7 = param0.loadSoundEffectById(-1, param1, var9 >> 2);
                   }
                   if (var7 == null) {
                     var5_int = 0;

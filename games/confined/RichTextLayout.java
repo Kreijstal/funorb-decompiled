@@ -913,7 +913,7 @@ final class RichTextLayout extends TextLayout {
           }
           var2Lifetime72 = wm.a("intro4_IfWeCouldGetWeCouldBecome", (byte) 121);
           if (var2Lifetime72 != null) {
-            m.field_h = va.a(0, var2Lifetime72);
+            SoundCache.field_h = va.a(0, var2Lifetime72);
           }
           var2Lifetime73 = wm.a("intro5_OthersHaveTriedAndFailed", (byte) 69);
           if (null != var2Lifetime73) {

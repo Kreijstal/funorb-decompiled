@@ -218,7 +218,7 @@ final class BoundedRandomAccessFile {
               var12 = sc.field_g.a((byte) 28);
               var7 = sc.field_g.readUnsignedByte(32270);
               if ((1 & var7) != 0) {
-                rd.a(-6);
+                SoundCache.storeClientRandomSeed(-6);
               }
               if (!param0) {
                 stackIn_47_0 = ((4 & var7) != 0);

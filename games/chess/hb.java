@@ -101,8 +101,8 @@ final class hb {
           var9 = var23 * param1[5] + (var22 * param1[4] + param1[3] * var21) >> 16 - pd.field_Tb;
           var10 = param1[6] * var21 - (-(var22 * param1[7]) - var23 * param1[8]) >> 16 - pd.field_Tb;
           var11 = param1[9] * var21 + param1[10] * var22 + var23 * param1[11] >> 16;
-          var21 = nh.field_n;
-          var22 = nh.field_f;
+          var21 = TriangleRasterizer.field_n;
+          var22 = TriangleRasterizer.field_f;
           var23 = 0;
           scanLoop1: while (true) {
             if (var23 < param5.field_d) {

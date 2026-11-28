@@ -8,7 +8,7 @@ final class AchievementNotification extends IntrusiveNode {
     static IntrusiveDeque field_n;
     static String field_m;
 
-    final static void setBackgroundMusicTrack(pf param0, int param1) {
+    final static void setBackgroundMusicTrack(MusicTrack param0, int param1) {
         if (LoginPanel.field_R == param0) {
           return;
         }
@@ -37,8 +37,8 @@ final class AchievementNotification extends IntrusiveNode {
           field_m = null;
           return;
         }
-        pf var2 = (pf) null;
-        AchievementNotification.setBackgroundMusicTrack((pf) null, -119);
+        MusicTrack var2 = (MusicTrack) null;
+        AchievementNotification.setBackgroundMusicTrack((MusicTrack) null, -119);
         field_l = null;
         field_m = null;
     }

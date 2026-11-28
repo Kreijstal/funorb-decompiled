@@ -8,11 +8,11 @@ class DualLinkNode extends IntrusiveNode {
     static String field_o;
     static volatile int field_n;
     DualLinkNode field_t;
-    static wh field_s;
+    static MusicTrack field_s;
 
     final void unlinkSecondary(byte param0) {
         if (param0 > -90) {
-          field_s = (wh) null;
+          field_s = (MusicTrack) null;
           if (null != this.field_q) {
             this.field_q.field_t = this.field_t;
             this.field_t.field_q = this.field_q;

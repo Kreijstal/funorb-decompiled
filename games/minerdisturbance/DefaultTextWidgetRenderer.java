@@ -11,7 +11,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
     int field_i;
     private int field_o;
     private boolean field_f;
-    static wh field_p;
+    static MusicTrack field_p;
     int field_d;
     int field_a;
     int field_q;

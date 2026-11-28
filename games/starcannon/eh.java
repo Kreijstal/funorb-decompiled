@@ -2378,7 +2378,7 @@ abstract class eh {
                 }
                 var2 = rd.a("orbcoins", -42);
                 if (null != var2) {
-                  ja.field_g = DualLinkNode.a(120, var2);
+                  SoundCache.field_g = DualLinkNode.a(120, var2);
                 }
                 var2 = rd.a("orbpoints_colon", -70);
                 if (var2 != null) {

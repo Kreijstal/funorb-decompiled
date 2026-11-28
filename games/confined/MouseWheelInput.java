@@ -23,12 +23,12 @@ abstract class MouseWheelInput {
           var9 = (int)(param3 * 325.94932345220167);
           var10 = 1;
           while (var10 < 4) {
-            MouseInput.field_b[-1 + var10] = ti.field_m[va.a(2047, (var10 * 4 + 3) * var7_int)] >> 2;
-            MouseInput.field_b[2 + var10] = ti.field_m[va.a((3 + var10 * 4) * var8, 2047)] >> 2;
-            MouseInput.field_b[5 + var10] = ti.field_m[va.a(2047, var9 * (3 + 4 * var10))] >> 2;
-            MouseInput.field_b[8 + var10] = ti.field_j[va.a(2047, var7_int * (3 + var10 * 4))] >> 2;
-            MouseInput.field_b[var10 + 11] = ti.field_j[va.a(2047, var8 * (var10 * 4 + 3))] >> 2;
-            MouseInput.field_b[var10 + 14] = ti.field_j[va.a(var9 * (var10 * 4 + 3), 2047)] >> 2;
+            MouseInput.field_b[-1 + var10] = TriangleRasterizer.field_m[va.a(2047, (var10 * 4 + 3) * var7_int)] >> 2;
+            MouseInput.field_b[2 + var10] = TriangleRasterizer.field_m[va.a((3 + var10 * 4) * var8, 2047)] >> 2;
+            MouseInput.field_b[5 + var10] = TriangleRasterizer.field_m[va.a(2047, var9 * (3 + 4 * var10))] >> 2;
+            MouseInput.field_b[8 + var10] = TriangleRasterizer.field_j[va.a(2047, var7_int * (3 + var10 * 4))] >> 2;
+            MouseInput.field_b[var10 + 11] = TriangleRasterizer.field_j[va.a(2047, var8 * (var10 * 4 + 3))] >> 2;
+            MouseInput.field_b[var10 + 14] = TriangleRasterizer.field_j[va.a(var9 * (var10 * 4 + 3), 2047)] >> 2;
             var10++;
             if (var11 != 0) {
               return;
@@ -127,8 +127,8 @@ abstract class MouseWheelInput {
           var9 = var22Lifetime1 * param0[4] + var21Lifetime1 * param0[3] + param0[5] * var23Lifetime1 >> 16 - DiskCacheWorker.field_h;
           var10 = var23Lifetime1 * param0[8] + var21Lifetime1 * param0[6] + param0[7] * var22Lifetime1 >> -DiskCacheWorker.field_h + 16;
           var11 = param0[10] * var22Lifetime1 + (var21Lifetime1 * param0[9] + param0[11] * var23Lifetime1) >> 16;
-          var21Lifetime2 = ti.field_k;
-          var22Lifetime2 = ti.field_f;
+          var21Lifetime2 = TriangleRasterizer.field_k;
+          var22Lifetime2 = TriangleRasterizer.field_f;
           var23Lifetime2 = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;

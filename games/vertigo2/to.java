@@ -26,7 +26,7 @@ final class to {
           if (param0 > -40) {
             return;
           }
-          var8 = id.field_f;
+          var8 = SoundCache.field_f;
           var2 = var8.readUnsignedByte(-11);
           if (var2 == 0) {
             var3_ref_j = (j) (vf.field_C.beginBackward((byte) 100));

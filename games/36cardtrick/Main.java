@@ -1507,7 +1507,7 @@ public final class Main extends c {
         int stackIn_106_0 = 0;
         int stackIn_115_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        da var3_ref3 = null;
+        SoundCache var3_ref3 = null;
         byte[] var3_array = null;
         wb[] var4_ref_wb__ = null;
         wb var6_ref = null;
@@ -1586,9 +1586,9 @@ public final class Main extends c {
                         ok.b(69);
                         ug.a(80.0f, 122, AccountRequestState.field_c);
                         this.renderClientFrame((byte) 59);
-                        BufferedSocket.field_c[0] = uj.a(sh.field_g, "", "turnover_card").a();
-                        BufferedSocket.field_c[1] = uj.a(sh.field_g, "", "revolver_cocking").a();
-                        BufferedSocket.field_c[2] = uj.a(sh.field_g, "", "revolver_decocking").a();
+                        BufferedSocket.field_c[0] = SynthesizedSoundEffect.loadByName(sh.field_g, "", "turnover_card").toPcmSample();
+                        BufferedSocket.field_c[1] = SynthesizedSoundEffect.loadByName(sh.field_g, "", "revolver_cocking").toPcmSample();
+                        BufferedSocket.field_c[2] = SynthesizedSoundEffect.loadByName(sh.field_g, "", "revolver_decocking").toPcmSample();
                         BufferedSocket.field_c[3] = VorbisSample.loadByName(fb.field_a, "", "gunshot").decodeAllToPcm();
                         BufferedSocket.field_c[4] = VorbisSample.loadByName(fb.field_a, "", "crow").decodeAllToPcm();
                         BufferedSocket.field_c[5] = VorbisSample.loadByName(fb.field_a, "", "pesky varment").decodeAllToPcm();
@@ -1596,15 +1596,15 @@ public final class Main extends c {
                         ca.field_c[6] = 112;
                         BufferedSocket.field_c[7] = VorbisSample.loadByName(fb.field_a, "", "dont try that again").decodeAllToPcm();
                         BufferedSocket.field_c[8] = VorbisSample.loadByName(fb.field_a, "", "didnt see that one comin").decodeAllToPcm();
-                        BufferedSocket.field_c[9] = uj.a(sh.field_g, "", "swap_cards").a();
+                        BufferedSocket.field_c[9] = SynthesizedSoundEffect.loadByName(sh.field_g, "", "swap_cards").toPcmSample();
                         BufferedSocket.field_c[10] = VorbisSample.loadByName(fb.field_a, "", "yeeehaaa").decodeAllToPcm();
                         BufferedSocket.field_c[11] = VorbisSample.loadByName(fb.field_a, "", "yeeehaaa2").decodeAllToPcm();
                         BufferedSocket.field_c[12] = VorbisSample.loadByName(fb.field_a, "", "yeeehaaa3").decodeAllToPcm();
                         BufferedSocket.field_c[13] = VorbisSample.loadByName(fb.field_a, "", "are you a mexican").decodeAllToPcm();
                         ca.field_c[13] = 120;
                         BufferedSocket.field_c[14] = VorbisSample.loadByName(fb.field_a, "", "chicken").decodeAllToPcm();
-                        BufferedSocket.field_c[15] = uj.a(sh.field_g, "", "menu_click").a();
-                        var3 = uj.a(sh.field_g, "", "score-count").a();
+                        BufferedSocket.field_c[15] = SynthesizedSoundEffect.loadByName(sh.field_g, "", "menu_click").toPcmSample();
+                        var3 = SynthesizedSoundEffect.loadByName(sh.field_g, "", "score-count").toPcmSample();
                         var3.field_k = var3.field_h.length;
                         ve.field_c = RawPcmStream.createForPlaybackRate(var3, 100, 30);
                         ve.field_c.setLoopCount(-1);
@@ -1663,7 +1663,7 @@ public final class Main extends c {
           if (null != ll.field_e) {
             ug.a(85.0f, 105, ModalDialogHost.field_A);
             this.renderClientFrame((byte) 59);
-            var3_ref3 = new da(sh.field_g, fb.field_a);
+            var3_ref3 = new SoundCache(sh.field_g, fb.field_a);
             sh.field_g = null;
             fb.field_a = null;
             lc.field_a[0] = new uf(gg.a("music/36 Card Trick - Title Screen Music", var3_ref3, ll.field_e, -16351, ""));
@@ -2130,10 +2130,10 @@ public final class Main extends c {
           jk.clearStaticReferences((byte) -63);
           aj.clearStaticReferences(83);
           th.resetStaticState(true);
-          hd.clearStaticReferences();
+          SynthesizerVoice.clearStaticReferences();
           VorbisSample.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
-          da.clearStaticReferences(-1703274388);
+          SoundCache.clearStaticReferences(-1703274388);
           vb.clearStaticReferences(-1);
           rj.resetStaticState(param0 ^ 72);
           me.a((byte) -128);
@@ -2142,7 +2142,7 @@ public final class Main extends c {
           SpriteGeometry.clearStaticReferences(-11);
           sj.clearStaticReferences(0);
           cf.clearStaticReferences((byte) 72);
-          ik.clearStaticReferences();
+          SoftwareModelMesh.clearStaticReferences();
           oa.clearStaticReferences((byte) 109);
           nl.a(10000);
           od.clearStaticReferences(-28178);
@@ -2166,7 +2166,7 @@ public final class Main extends c {
           kk.clearStaticReferences(false);
           eg.clearStaticReferences((byte) 38);
           DefaultTextWidgetRenderer.clearStaticReferences((byte) 61);
-          jb.clearStaticReferences();
+          TriangleRasterizer.clearStaticReferences();
           ok.clearStaticReferences(93);
           ha.clearStaticReferences(-124);
           mg.clearStaticReferences(40);

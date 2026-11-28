@@ -42,7 +42,7 @@ final class mm implements uj {
         }
     }
 
-    final static void a(boolean param0, wh param1, int param2, int param3, boolean param4, int param5) {
+    final static void a(boolean param0, MusicTrack param1, int param2, int param3, boolean param4, int param5) {
         Object var6 = null;
         Throwable var7 = null;
         Object stackIn_16_0 = null;

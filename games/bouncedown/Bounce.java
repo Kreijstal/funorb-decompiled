@@ -136,7 +136,7 @@ public final class Bounce extends GameClient {
           Platform.clearStaticReferences((byte) 64);
           Slime.clearStaticReferences(100);
           qf.clearStaticReferences(-107);
-          i.clearStaticReferences(118);
+          SoundCache.clearStaticReferences(118);
           AudioOutput.clearStaticReferences();
           mj.c(4);
           IntrusiveNode.a((byte) 110);
@@ -145,7 +145,7 @@ public final class Bounce extends GameClient {
           f.clearStaticReferences(-7355);
           uk.clearStaticReferences(113);
           kl.resetStaticState(0);
-          oe.clearStaticReferences();
+          MidiFileReader.clearStaticReferences();
           MusicPatchPcmStream.resetStaticState(0);
           nl.clearStaticReferences((byte) 94);
           hf.clearStaticReferences((byte) 124);
@@ -165,7 +165,7 @@ public final class Bounce extends GameClient {
           g.a(6623);
           GzipDecompressor.clearStaticReferences(-112);
           PcmResampler.clearStaticReferences(0);
-          gg.clearStaticReferences();
+          SynthesizerVoice.clearStaticReferences();
           VorbisSample.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
           wa.clearStaticReferences(-13268);
@@ -348,7 +348,7 @@ public final class Bounce extends GameClient {
         boolean stackIn_225_0 = false;
         boolean stackIn_233_0 = false;
         MidiPcmStream stackIn_241_0 = null;
-        be stackIn_242_1 = null;
+        MusicTrack stackIn_242_1 = null;
         int stackIn_307_0 = 0;
         int stackIn_307_1 = 0;
         int stackIn_464_0 = 0;
@@ -449,10 +449,10 @@ public final class Bounce extends GameClient {
             ff.field_C = ff.field_C - 256.0;
           }
           eg.field_n = -16 + (int)(16.0 * Math.sin(ff.field_C));
-          i.field_a = i.field_a + 1;
+          SoundCache.field_a = SoundCache.field_a + 1;
           qa.field_h = qa.field_h + 1;
-          if (i.field_a >= 256) {
-            i.field_a = i.field_a - 256;
+          if (SoundCache.field_a >= 256) {
+            SoundCache.field_a = SoundCache.field_a - 256;
           }
           if (256 < qa.field_h) {
             qa.field_h = 0;
@@ -1236,14 +1236,14 @@ public final class Bounce extends GameClient {
             AgeValidator.a(SecondaryNodeDequeIterator.field_a, param1 - 3248, 85.0f);
             this.renderClientFrame(4);
             var3 = new PcmResampler(22050, AudioOutput.field_r);
-            il.field_a[0] = ei.a(pa.field_c, "", "dissolve1").b().resample(var3);
-            il.field_a[3] = ei.a(pa.field_c, "", "slime_grows").b().resample(var3);
-            il.field_a[4] = ei.a(pa.field_c, "", "slime_jump").b().resample(var3);
-            il.field_a[5] = ei.a(pa.field_c, "", "slime_jump_large").b().resample(var3);
-            il.field_a[6] = ei.a(pa.field_c, "", "slime_jump_small").b().resample(var3);
-            il.field_a[7] = ei.a(pa.field_c, "", "slime_land").b().resample(var3);
-            il.field_a[8] = ei.a(pa.field_c, "", "slime_reduces").b().resample(var3);
-            il.field_a[9] = ei.a(pa.field_c, "", "squish").b().resample(var3);
+            il.field_a[0] = SynthesizedSoundEffect.loadByName(pa.field_c, "", "dissolve1").toPcmSample().resample(var3);
+            il.field_a[3] = SynthesizedSoundEffect.loadByName(pa.field_c, "", "slime_grows").toPcmSample().resample(var3);
+            il.field_a[4] = SynthesizedSoundEffect.loadByName(pa.field_c, "", "slime_jump").toPcmSample().resample(var3);
+            il.field_a[5] = SynthesizedSoundEffect.loadByName(pa.field_c, "", "slime_jump_large").toPcmSample().resample(var3);
+            il.field_a[6] = SynthesizedSoundEffect.loadByName(pa.field_c, "", "slime_jump_small").toPcmSample().resample(var3);
+            il.field_a[7] = SynthesizedSoundEffect.loadByName(pa.field_c, "", "slime_land").toPcmSample().resample(var3);
+            il.field_a[8] = SynthesizedSoundEffect.loadByName(pa.field_c, "", "slime_reduces").toPcmSample().resample(var3);
+            il.field_a[9] = SynthesizedSoundEffect.loadByName(pa.field_c, "", "squish").toPcmSample().resample(var3);
             AgeValidator.a(SecondaryNodeDequeIterator.field_a, -21, 90.0f);
             this.renderClientFrame(4);
             il.field_a[11] = VorbisSample.loadByName(IntrusiveNode.field_e, "", "slime_eek").decodeAllToPcm().resample(var3);
@@ -1254,10 +1254,10 @@ public final class Bounce extends GameClient {
             AgeValidator.a(va.field_g, -125, 95.0f);
             var3_ref = null;
             this.renderClientFrame(4);
-            AccountCreationResultPanel.field_mb = be.a(ca.field_e, "", "bounce down title screen");
-            wj.field_c = be.a(ca.field_e, "", "bounce");
+            AccountCreationResultPanel.field_mb = MusicTrack.load(ca.field_e, "", "bounce down title screen");
+            wj.field_c = MusicTrack.load(ca.field_e, "", "bounce");
             ca.field_e = null;
-            cf.field_d = new i(pa.field_c, IntrusiveNode.field_e);
+            cf.field_d = new SoundCache(pa.field_c, IntrusiveNode.field_e);
             IntrusiveNode.field_e = null;
             pa.field_c = null;
             RichTextWidget.e((byte) -44);
@@ -1518,11 +1518,11 @@ public final class Bounce extends GameClient {
             return;
           }
           if (!AwtRasterBuffer.field_c) {
-            i.a((java.awt.Canvas) (var2), 0);
+            SoundCache.a((java.awt.Canvas) (var2), 0);
             return;
           }
           if (null != TextLineMetrics.field_d) {
-            i.a((java.awt.Canvas) (var2), 0);
+            SoundCache.a((java.awt.Canvas) (var2), 0);
             return;
           }
           if (param0 != 4) {
@@ -1535,7 +1535,7 @@ public final class Bounce extends GameClient {
           PacketBuffer.field_j.draw(128 + var3, eg.field_n);
           PacketBuffer.field_j.draw(var3 + 256, eg.field_n);
           PacketBuffer.field_j.draw(384 + var3, eg.field_n);
-          var4 = i.field_a / 8 % 8;
+          var4 = SoundCache.field_a / 8 % 8;
           var5_int = 0;
           do {
             if (640 <= var5_int) {

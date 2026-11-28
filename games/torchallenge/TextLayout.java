@@ -222,8 +222,8 @@ abstract class TextLayout {
         field_d = (int[][]) null;
         field_e = null;
         if (param0 != -27840) {
-          ej var2 = (ej) null;
-          TextLayout.a(true, (byte) -97, (ej) null);
+          MusicTrack var2 = (MusicTrack) null;
+          TextLayout.a(true, (byte) -97, (MusicTrack) null);
         }
     }
 
@@ -273,7 +273,7 @@ abstract class TextLayout {
         return 0;
     }
 
-    final static void a(boolean param0, byte param1, ej param2) {
+    final static void a(boolean param0, byte param1, MusicTrack param2) {
         try {
           if (param1 != -79) {
             field_e = (int[]) null;

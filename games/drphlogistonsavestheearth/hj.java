@@ -7,7 +7,7 @@ abstract class hj {
     static int field_f;
     static String field_h;
     int field_d;
-    static ok field_g;
+    static MusicTrack field_g;
     String field_b;
     static String field_a;
     static RgbSprite field_e;
@@ -41,7 +41,7 @@ abstract class hj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 12286) {
-            field_g = (ok) null;
+            field_g = (MusicTrack) null;
           }
           if (param1) {
             stackIn_6_0 = GameClientShell.field_o.stringWidth(param2);

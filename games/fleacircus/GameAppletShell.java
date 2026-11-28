@@ -147,7 +147,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               stackIn_40_0 = compareLongs(param1.field_k, param0.field_u[param3][var6]);
               if (var8 == 0) {
                 if (stackIn_40_0 == 0 &&
-                  ng.a(param0.field_i[param3][var6], (byte) 7)) {
+                  SoundCache.a(param0.field_i[param3][var6], (byte) 7)) {
                   var7 = 0;
                   while (true) {
                     if (var4_int > var7) {

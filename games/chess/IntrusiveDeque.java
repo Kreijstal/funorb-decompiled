@@ -272,7 +272,7 @@ final class IntrusiveDeque {
           var5 = (-sl.field_a + 250 << 8) / 50;
         }
         tl.a((byte) -67, gf.field_f);
-        nh.a();
+        TriangleRasterizer.useRasterClip();
         SoftwareRasterizer.clearRaster();
         di.k(9);
         if (var5 < 256) {

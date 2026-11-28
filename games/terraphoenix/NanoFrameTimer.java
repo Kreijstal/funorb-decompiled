@@ -89,7 +89,7 @@ final class NanoFrameTimer extends FrameTimer {
           } while (var3 == 0);
           var2 = qc.field_a.beginBackward(9272);
           while (var2 != null) {
-            da.a(0, param1);
+            SoundCache.a(0, param1);
             var2 = qc.field_a.nextBackward((byte) -119);
             if (var3 != 0) {
               return;

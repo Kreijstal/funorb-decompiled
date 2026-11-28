@@ -104,7 +104,7 @@ final class dd {
                 param1 = ah.field_h;
               }
               param2 = 2;
-              ClientException.field_a.a(25, me.field_h);
+              ClientException.field_a.a(25, SoundCache.field_h);
             }
             var4 = 1;
             if (10 == param2) {

@@ -6,10 +6,10 @@ final class pd {
     static int[] field_a;
     static kr field_c;
 
-    final static void a(int param0, int param1, int param2, boolean param3, si param4) {
+    final static void a(int param0, int param1, int param2, boolean param3, MusicTrack param4) {
         RuntimeException var5 = null;
         CrossfadingMidiPcmStream stackIn_2_0;
-        si stackIn_2_1;
+        MusicTrack stackIn_2_1;
         int stackIn_2_2;
         int stackIn_2_3;
         boolean stackIn_3_4 = false;
@@ -19,7 +19,7 @@ final class pd {
         RuntimeException decompiledCaughtException = null;
         try {
           stackIn_2_0 = jp.field_n;
-          stackIn_2_1 = (si) (param4);
+          stackIn_2_1 = (MusicTrack) (param4);
           stackIn_2_2 = param2;
           stackIn_2_3 = 1000000;
           stackIn_3_4 = !(param3);

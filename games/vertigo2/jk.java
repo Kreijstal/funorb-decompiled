@@ -3,7 +3,7 @@
  */
 final class jk {
     static String field_c;
-    static id field_b;
+    static SoundCache field_b;
     static String field_a;
 
     final static String a(int param0, String param1) {
@@ -54,7 +54,7 @@ final class jk {
         if (param0 == 2) {
           return;
         }
-        field_b = (id) null;
+        field_b = (SoundCache) null;
     }
 
     final static void a(int param0, byte param1, ub param2) {

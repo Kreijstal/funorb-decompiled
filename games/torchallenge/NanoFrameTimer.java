@@ -56,7 +56,7 @@ final class NanoFrameTimer extends FrameTimer {
     }
 
     final static void d(int param0) {
-        qa.a(param0 ^ 120, (ej) null);
+        qa.a(param0 ^ 120, (MusicTrack) null);
         if (param0 != 1) {
           field_k = (Boolean) null;
         }

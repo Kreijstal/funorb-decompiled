@@ -531,7 +531,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
             for (var8Lifetime1 = param0; var7_intLifetime1 > var8Lifetime1; var8Lifetime1++) {
               var9Lifetime1 = BoundedRandomAccessFile.field_a[var8Lifetime1];
               var10Lifetime1 = BoundedRandomAccessFile.field_a[1 + var8Lifetime1];
-              if (ri.a(20021, param4, var9Lifetime1, var10Lifetime1)) {
+              if (SoundCache.a(20021, param4, var9Lifetime1, var10Lifetime1)) {
                 BoundedRandomAccessFile.field_a[var8Lifetime1] = var10Lifetime1;
                 BoundedRandomAccessFile.field_a[1 + var8Lifetime1] = var9Lifetime1;
               }

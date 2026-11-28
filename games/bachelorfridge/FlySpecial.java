@@ -146,7 +146,7 @@ final class FlySpecial extends SpecialOrder {
           MoveInfoPanel.field_f = null;
           cw.field_zb = null;
           DualLinkNode.field_f = null;
-          i.field_h = null;
+          SoundCache.field_h = null;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "nw.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

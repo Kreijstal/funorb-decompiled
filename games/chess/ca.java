@@ -131,7 +131,7 @@ final class ca {
         try {
           stackIn_4_0 = ea.field_bb.field_Kb;
           stackIn_5_1 = (ud.field_d == ea.field_bb.field_Kb);
-          var3_int = ((nb) (Object) stackIn_4_0).a(stackIn_5_1, param0, 2, param1 * (fe.field_g + 2) * 3, 2 + fe.field_g, 0) ? 1 : 0;
+          var3_int = ((nb) (Object) stackIn_4_0).a(stackIn_5_1, param0, 2, param1 * (SoundCache.field_g + 2) * 3, 2 + SoundCache.field_g, 0) ? 1 : 0;
           var4 = ea.field_bb.field_Fb.field_I;
           var5 = null;
           if (param2 > -94) {
@@ -194,7 +194,7 @@ final class ca {
                     var7.field_Eb.field_jb = wk.field_g;
                     var7.field_Eb.field_O = var11;
                     var12 = 1;
-                    var7.field_Eb.a(0, 3 + wk.field_g.field_v, -2147483648, fe.field_g, var9);
+                    var7.field_Eb.a(0, 3 + wk.field_g.field_v, -2147483648, SoundCache.field_g, var9);
                   }
                   var7.field_Jb.field_ib = var10;
                   var7.field_Mb.field_ib = var10;
@@ -217,7 +217,7 @@ final class ca {
                     stackIn_47_1 = var7.field_Fb;
                   }
                   stackIn_46_0.field_db = stackIn_47_1;
-                  var7.field_Mb.a(var13, var14, -2147483648, fe.field_g, var9);
+                  var7.field_Mb.a(var13, var14, -2147483648, SoundCache.field_g, var9);
                   stackIn_50_0 = var7.field_Jb;
                   if (var7.field_Lb == null) {
                     stackIn_51_1 = RegistrationAgreementPane.field_M;
@@ -225,10 +225,10 @@ final class ca {
                     stackIn_51_1 = var7.field_Lb;
                   }
                   stackIn_50_0.field_db = stackIn_51_1;
-                  var7.field_Jb.a(var7.field_M - 80, 80, -2147483648, fe.field_g, var9);
+                  var7.field_Jb.a(var7.field_M - 80, 80, -2147483648, SoundCache.field_g, var9);
                   stackIn_55_0 = (var7.field_Mb.field_db.equals(var7.field_Fb)) ? 0 : 1;
                   var15 = stackIn_55_0;
-                  var9 = var9 + fe.field_g;
+                  var9 = var9 + SoundCache.field_g;
                   if (var3_int == 0) {
                     var7.field_N = var9 - var7.field_pb;
                   }

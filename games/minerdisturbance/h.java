@@ -5,7 +5,7 @@ final class h {
     static Sprite field_c;
     static int field_b;
     static int[] field_a;
-    static wh field_d;
+    static MusicTrack field_d;
 
     final static String[] a(char param0, boolean param1, String param2) {
         int var7 = 0;
@@ -68,7 +68,7 @@ final class h {
     }
 
     final static void a(boolean param0) {
-        ri.a((byte) -112, RichTextLayout.c(-125));
+        SoundCache.a((byte) -112, RichTextLayout.c(-125));
         if (param0) {
           h.b(true);
         }

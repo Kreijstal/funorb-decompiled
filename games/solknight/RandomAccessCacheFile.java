@@ -23,7 +23,7 @@ final class RandomAccessCacheFile {
         if (ContentTransitionDialog.field_Z == PacketBuffer.field_i) {
           return td.field_h.b(28903);
         }
-        return me.field_h;
+        return SoundCache.field_h;
     }
 
     protected final void finalize() throws Throwable {

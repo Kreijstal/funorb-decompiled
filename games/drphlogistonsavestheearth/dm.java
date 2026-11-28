@@ -3,7 +3,7 @@
  */
 final class dm extends mj {
     static he[] field_z;
-    static ok field_x;
+    static MusicTrack field_x;
     static ej[] field_B;
     static vi field_A;
     static he[] field_y;

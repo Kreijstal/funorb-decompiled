@@ -106,10 +106,10 @@ final class lb extends DualLinkNode {
     }
 
     final static void a(int param0, int param1, int param2, int param3, double param4, od param5) {
-        ti.a(param3 + 24, param0 + 24);
+        TriangleRasterizer.setProjectionCenter(param3 + 24, param0 + 24);
         int var7_int = (int)(Math.cos((double)(qn.field_r & 511) * 0.03681553890925539) * 65536.0);
         int var8 = (int)(65536.0 * Math.sin(0.03681553890925539 * (double)(511 & qn.field_r)));
-        sk var9 = (sk) (param5.a(96, 455, -var8 / 256, -192, var7_int / 256));
+        SoftwareModelMesh var9 = (SoftwareModelMesh) (param5.a(96, 455, -var8 / 256, -192, var7_int / 256));
         ArchiveRequest.field_u[11] = -var7_int;
         ArchiveRequest.field_u[9] = -var8;
         if (param1 < 32) {
@@ -119,8 +119,8 @@ final class lb extends DualLinkNode {
           ArchiveRequest.field_u[2] = (int)(param4 * (16.666666666666668 * (double)param2));
           ArchiveRequest.field_u[3] = -var7_int;
           ArchiveRequest.field_u[5] = var8;
-          var9.a(tj.field_A, ArchiveRequest.field_u);
-          ti.a();
+          var9.projectAndDrawWithTransforms(tj.field_A, ArchiveRequest.field_u);
+          TriangleRasterizer.centerProjection();
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "lb.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

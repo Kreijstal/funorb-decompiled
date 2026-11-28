@@ -57,7 +57,7 @@ final class rj extends IntrusiveNode {
         }
     }
 
-    final boolean a(byte param0, byte[] param1, int[] param2, i param3) {
+    final boolean a(byte param0, byte[] param1, int[] param2, SoundCache param3) {
         int var8 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -91,9 +91,9 @@ final class rj extends IntrusiveNode {
                   var6 = var9;
                   var9--;
                   if ((1 & var9) != 0) {
-                    var7 = param3.a(param2, 0, var9 >> 2);
+                    var7 = param3.loadMusicSampleById(param2, 0, var9 >> 2);
                   } else {
-                    var7 = param3.a(25910, var9 >> 2, param2);
+                    var7 = param3.loadSoundEffectById(25910, var9 >> 2, param2);
                   }
                   if (var7 == null) {
                     var5_int = 0;

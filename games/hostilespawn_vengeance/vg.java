@@ -5,7 +5,7 @@ final class vg {
     static RgbSprite field_d;
     static String field_f;
     static String field_g;
-    static ji field_h;
+    static MusicTrack field_h;
     static IndexedSprite field_c;
     static int[] field_a;
     static String field_b;

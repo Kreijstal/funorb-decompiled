@@ -96,7 +96,7 @@ final class mg {
           var5 = (-h.field_F + 250 << 8) / 50;
         }
         dl.a(88, id.field_e);
-        jb.b();
+        TriangleRasterizer.useRasterClip();
         SoftwareRasterizer.clearRaster();
         de.b(33);
         if (var5 < 256) {

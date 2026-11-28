@@ -106,15 +106,15 @@ final class lg {
         var42 = Chess.field_G;
         try {
           if (param6 >= 0 &&
-            nh.field_l > param3) {
+            TriangleRasterizer.field_l > param3) {
             if (param2 < 0 &&
               param14 < 0 &&
               param15 < 0) {
               return;
             }
-            if (nh.field_o <= param2 &&
-              param14 >= nh.field_o &&
-              nh.field_o <= param15) {
+            if (TriangleRasterizer.field_o <= param2 &&
+              param14 >= TriangleRasterizer.field_o &&
+              TriangleRasterizer.field_o <= param15) {
               return;
             }
             if (param1) {
@@ -182,22 +182,22 @@ final class lg {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var36Lifetime2 = nh.field_p[param3];
+                var36Lifetime2 = TriangleRasterizer.field_p[param3];
                 while (param3 < param12) {
                   var37 = var17_int >> 16;
-                  if (nh.field_o > var37) {
+                  if (TriangleRasterizer.field_o > var37) {
                     var38 = (var18 >> 16) - (var17_int >> 16);
                     if (var38 == 0) {
                       if (var37 >= 0 &&
-                        var37 < nh.field_o) {
+                        var37 < TriangleRasterizer.field_o) {
                         pi.a(0, 0, var25, param0, 0, var38, var29, var36Lifetime2 + var37, var21, -127);
                       }
                     } else {
                       var39 = (-var21 + var22) / var38;
                       var40 = (var26 - var25) / var38;
                       var41 = (var30 - var29) / var38;
-                      if (nh.field_o <= var37 + var38) {
-                        var38 = -1 - var37 + nh.field_o;
+                      if (TriangleRasterizer.field_o <= var37 + var38) {
+                        var38 = -1 - var37 + TriangleRasterizer.field_o;
                       }
                       if (var37 >= 0) {
                         pi.a(var41, var40, var25, param0, var39, var38, var29, var36Lifetime2 + var37, var21, 56);
@@ -207,7 +207,7 @@ final class lg {
                     }
                   }
                   param3++;
-                  if (nh.field_l <= param3) {
+                  if (TriangleRasterizer.field_l <= param3) {
                     return;
                   }
                   var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_h;
@@ -338,17 +338,17 @@ final class lg {
               var25 = var25 + var27 * param3;
               param3 = 0;
             }
-            var35Lifetime1 = nh.field_p[param3];
+            var35Lifetime1 = TriangleRasterizer.field_p[param3];
             while (param6 > param3) {
               var36Lifetime1 = var17_int >> 16;
-              if (nh.field_o > var36Lifetime1) {
+              if (TriangleRasterizer.field_o > var36Lifetime1) {
                 var37Lifetime1 = -(var17_int >> 16) + (var18 >> 16);
                 if (var37Lifetime1 != 0) {
                   var38Lifetime1 = (var22 - var21) / var37Lifetime1;
                   var39Lifetime1 = (-var25 + var26) / var37Lifetime1;
                   var40Lifetime1 = (var30 - var29) / var37Lifetime1;
-                  if (nh.field_o <= var37Lifetime1 + var36Lifetime1) {
-                    var37Lifetime1 = -1 + nh.field_o - var36Lifetime1;
+                  if (TriangleRasterizer.field_o <= var37Lifetime1 + var36Lifetime1) {
+                    var37Lifetime1 = -1 + TriangleRasterizer.field_o - var36Lifetime1;
                   }
                   if (var36Lifetime1 < 0) {
                     pi.a(var40Lifetime1, var39Lifetime1, var25 - var36Lifetime1 * var39Lifetime1, param0, var38Lifetime1, var37Lifetime1 + var36Lifetime1, -(var40Lifetime1 * var36Lifetime1) + var29, var35Lifetime1, var21 - var36Lifetime1 * var38Lifetime1, 4);
@@ -357,13 +357,13 @@ final class lg {
                   }
                 } else {
                   if (var36Lifetime1 >= 0 &&
-                    var36Lifetime1 < nh.field_o) {
+                    var36Lifetime1 < TriangleRasterizer.field_o) {
                     pi.a(0, 0, var25, param0, 0, var37Lifetime1, var29, var36Lifetime1 + var35Lifetime1, var21, 8);
                   }
                 }
               }
               param3++;
-              if (nh.field_l <= param3) {
+              if (TriangleRasterizer.field_l <= param3) {
                 return;
               }
               var26 = var26 + var28;

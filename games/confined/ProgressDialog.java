@@ -130,7 +130,7 @@ final class ProgressDialog extends ResizableModalDialog {
               var3_int = param0 - e.field_c.position;
             }
             kl.field_G.readFully(e.field_c.payload, -77, var3_int, e.field_c.position);
-            m.field_b = ri.correctedCurrentTimeMillis(-3);
+            SoundCache.field_b = ri.correctedCurrentTimeMillis(-3);
             e.field_c.position = e.field_c.position + var3_int;
             if (param0 > e.field_c.position) {
               return false;

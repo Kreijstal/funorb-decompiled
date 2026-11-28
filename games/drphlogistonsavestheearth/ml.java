@@ -5,7 +5,7 @@ final class ml extends IntrusiveNode {
     PcmSampleStream field_i;
     static String field_n;
     static String field_h;
-    static ok field_l;
+    static MusicTrack field_l;
     static String field_m;
     int field_k;
     IntrusiveNode field_o;

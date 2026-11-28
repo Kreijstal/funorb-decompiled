@@ -591,13 +591,13 @@ public final class CrazyCrystals extends NetworkGameClient {
           pk.clearStaticReferences(120);
           BufferedRandomAccessFile.a(param0 - 6231);
           BufferedSocket.clearStaticReferences((byte) 45);
-          bn.clearStaticReferences((byte) -3);
+          SoundCache.clearStaticReferences((byte) -3);
           kp.resetStaticState(false);
           LaserTraceCursor.clearLaserCursorGlobals((byte) -64);
           ea.clearStaticReferences(-1);
           IntrusiveNode.clearStaticReferences(-24894);
           pl.clearDeclaredStaticReferences(-124);
-          ic.clearStaticReferences();
+          MidiFileReader.clearStaticReferences();
           MusicPatchPcmStream.clearStaticReferences((byte) 120);
           to.clearStaticReferences((byte) -109);
           PcmOutputWorker.clearStaticReferences(2);
@@ -654,7 +654,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           SpriteGeometry.clearStaticReferences((byte) 126);
           VorbisSample.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
-          nm.clearStaticReferences();
+          SynthesizerVoice.clearStaticReferences();
           LevelLostScene.clearStaticReferences(27);
           AnimatedResultScene.clearDeclaredStaticReferences(param0 ^ -18779);
           LevelCompleteScene.clearStaticReferences(27348);
@@ -1157,7 +1157,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                             fq.field_x = new MidiPcmStream();
                             fq.field_x.a(128, 9, (byte) -103);
                             gf.field_c.setRootStream(fq.field_x);
-                            aa.field_b = new bn(vm.field_k, ma.field_p);
+                            aa.field_b = new SoundCache(vm.field_k, ma.field_p);
                             decompiledFrameRemainder0 = false;
                           }
                           else {
@@ -1560,16 +1560,16 @@ public final class CrazyCrystals extends NetworkGameClient {
             fk.field_x = new PcmSample[2];
             fk.field_x[0] = VorbisSample.loadByName(ma.field_p, "initialset", "crystal1").decodeAllToPcm();
             fk.field_x[1] = VorbisSample.loadByName(ma.field_p, "initialset", "crystal2").decodeAllToPcm();
-            nk.field_j = ha.a(vm.field_k, "initialset", "ball-bounce").b();
-            wm.field_a = ha.a(vm.field_k, "initialset", "ball-rolling").b();
+            nk.field_j = SynthesizedSoundEffect.loadByName(vm.field_k, "initialset", "ball-bounce").toPcmSample();
+            wm.field_a = SynthesizedSoundEffect.loadByName(vm.field_k, "initialset", "ball-rolling").toPcmSample();
             uk.field_i = VorbisSample.loadByName(ma.field_p, "initialset", "ball-into-hole").decodeAllToPcm();
             aq.field_t = VorbisSample.loadByName(ma.field_p, "initialset", "ball-punch").decodeAllToPcm();
-            qf.field_w = ha.a(vm.field_k, "initialset", "dig-through-earth").b();
+            qf.field_w = SynthesizedSoundEffect.loadByName(vm.field_k, "initialset", "dig-through-earth").toPcmSample();
             fb.field_c = VorbisSample.loadByName(ma.field_p, "initialset", "laser-humming").decodeAllToPcm();
             ti.field_l = VorbisSample.loadByName(ma.field_p, "initialset", "rock-push").decodeAllToPcm();
             pe.field_h = VorbisSample.loadByName(ma.field_p, "initialset", "rock-falling").decodeAllToPcm();
-            mg.field_d = ha.a(vm.field_k, "initialset", "rock_land").b();
-            io.field_H = ha.a(vm.field_k, "initialset", "bomb-push").b();
+            mg.field_d = SynthesizedSoundEffect.loadByName(vm.field_k, "initialset", "rock_land").toPcmSample();
+            io.field_H = SynthesizedSoundEffect.loadByName(vm.field_k, "initialset", "bomb-push").toPcmSample();
             vp.a(103);
             return;
           }
@@ -1577,19 +1577,19 @@ public final class CrazyCrystals extends NetworkGameClient {
             td.a(76.0f, BoundedRandomAccessFile.field_l, false);
             this.renderClientFrame(-124);
             TextHotspotBounds.field_i = new PcmSample[4];
-            TextHotspotBounds.field_i[0] = ha.a(vm.field_k, "initialset", "footstep-rocky").b();
-            TextHotspotBounds.field_i[1] = ha.a(vm.field_k, "initialset", "footstep-grass").b();
-            TextHotspotBounds.field_i[2] = ha.a(vm.field_k, "initialset", "footstep-metal").b();
-            TextHotspotBounds.field_i[3] = ha.a(vm.field_k, "initialset", "footstep-tiles").b();
-            rn.field_p = ha.a(vm.field_k, "initialset", "footstep-ball").b();
+            TextHotspotBounds.field_i[0] = SynthesizedSoundEffect.loadByName(vm.field_k, "initialset", "footstep-rocky").toPcmSample();
+            TextHotspotBounds.field_i[1] = SynthesizedSoundEffect.loadByName(vm.field_k, "initialset", "footstep-grass").toPcmSample();
+            TextHotspotBounds.field_i[2] = SynthesizedSoundEffect.loadByName(vm.field_k, "initialset", "footstep-metal").toPcmSample();
+            TextHotspotBounds.field_i[3] = SynthesizedSoundEffect.loadByName(vm.field_k, "initialset", "footstep-tiles").toPcmSample();
+            rn.field_p = SynthesizedSoundEffect.loadByName(vm.field_k, "initialset", "footstep-ball").toPcmSample();
             nj.field_c = VorbisSample.loadByName(ma.field_p, "initialset", "spider-advancing").decodeAllToPcm();
             cf.field_f = VorbisSample.loadByName(ma.field_p, "initialset", "spider-crushed").decodeAllToPcm();
             lm.field_a = VorbisSample.loadByName(ma.field_p, "initialset", "spider-explode-into-sparks").decodeAllToPcm();
             jc.field_a = VorbisSample.loadByName(ma.field_p, "initialset", "safes-open").decodeAllToPcm();
             oa.field_e = VorbisSample.loadByName(ma.field_p, "initialset", "key").decodeAllToPcm();
             gk.field_j = VorbisSample.loadByName(ma.field_p, "initialset", "break-ledge").decodeAllToPcm();
-            MouseWheelInput.field_k = ha.a(vm.field_k, "initialset", "bomb-explode").b();
-            DefaultTextWidgetRenderer.field_d = ha.a(vm.field_k, "initialset", "tile-explode").b();
+            MouseWheelInput.field_k = SynthesizedSoundEffect.loadByName(vm.field_k, "initialset", "bomb-explode").toPcmSample();
+            DefaultTextWidgetRenderer.field_d = SynthesizedSoundEffect.loadByName(vm.field_k, "initialset", "tile-explode").toPcmSample();
             vp.a(119);
             return;
           }
@@ -1598,7 +1598,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             this.renderClientFrame(-120);
             an.field_s = VorbisSample.loadByName(ma.field_p, "initialset", "mirror-start-bending").decodeAllToPcm();
             cl.field_m = VorbisSample.loadByName(ma.field_p, "initialset", "mirror-ping").decodeAllToPcm();
-            ModalDialog.field_z = ha.a(vm.field_k, "initialset", "teleport").b();
+            ModalDialog.field_z = SynthesizedSoundEffect.loadByName(vm.field_k, "initialset", "teleport").toPcmSample();
             AccountCreationResultPanel.field_nb = VorbisSample.loadByName(ma.field_p, "initialset", "player-push-upwards").decodeAllToPcm();
             tg.field_c = VorbisSample.loadByName(ma.field_p, "initialset", "player-sticky-feet").decodeAllToPcm();
             ProxyAuthenticationRequiredException.field_b = VorbisSample.loadByName(ma.field_p, "initialset", "player-prod-spider").decodeAllToPcm();

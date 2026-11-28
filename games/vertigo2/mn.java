@@ -153,7 +153,7 @@ final class mn extends IntrusiveNode {
         var31 = Vertigo2.field_L ? 1 : 0;
         try {
           var1_float = 1.399999976158142f;
-          oo.b(var1_float);
+          TriangleRasterizer.rebuildPaletteWithGamma(var1_float);
           for (var2 = 0; var2 < bm.field_G.length; var2++) {
             var32 = bm.field_G[var2];
             var4 = 0;
@@ -326,7 +326,7 @@ final class mn extends IntrusiveNode {
           if (param0) {
             mn.b(false, 65);
           }
-          oo.c();
+          TriangleRasterizer.useRasterClip();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -38,7 +38,7 @@ final class ll {
             return stackIn_5_0;
           }
           if (var2_int > 255) {
-            stackIn_9_0 = m.field_g;
+            stackIn_9_0 = SoundCache.field_g;
             return stackIn_9_0;
           }
           var3 = ij.a(0, '.', param1);
@@ -155,7 +155,7 @@ final class ll {
             return stackIn_6_0;
           }
           if (var2_int > 64) {
-            stackIn_10_0 = m.field_g;
+            stackIn_10_0 = SoundCache.field_g;
             return stackIn_10_0;
           }
           if (param0.charAt(0) == 34) {

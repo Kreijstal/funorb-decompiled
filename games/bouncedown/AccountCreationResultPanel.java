@@ -5,7 +5,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
     private boolean field_ob;
     private boolean field_nb;
     static int field_lb;
-    static be field_mb;
+    static MusicTrack field_mb;
     static ResourceArchive field_pb;
     private AccountRegistrationPanel field_kb;
 
@@ -118,7 +118,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
             } else {
               if (param2.statusCode == 5) {
                 var5.addActionButton(ta.field_e, 11, (byte) 114);
-                var5.addActionButton(i.field_g, 17, (byte) 85);
+                var5.addActionButton(SoundCache.field_g, 17, (byte) 85);
               } else {
                 var5.addActionButton(pe.field_h, -1, (byte) 124);
               }

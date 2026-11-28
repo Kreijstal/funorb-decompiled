@@ -622,7 +622,7 @@ final class db extends DungeonAssaultScreen {
         if (super.dispatchModalOrPointerInput()) {
           return;
         }
-        this.field_w.a(-7734, this.a(AchievementIconEntry.field_k, lc.field_c, (byte) -117), this.a(eh.field_h, hj.field_S, (byte) -117));
+        this.field_w.a(-7734, this.a(AchievementIconEntry.field_k, SoundCache.field_c, (byte) -117), this.a(eh.field_h, hj.field_S, (byte) -117));
         if (param0 != -50) {
           this.field_w = (ae) null;
         }

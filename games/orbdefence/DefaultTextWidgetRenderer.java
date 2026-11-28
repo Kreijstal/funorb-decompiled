@@ -191,21 +191,21 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           if (param1 < 24) {
             return;
           }
-          if (vd.field_a == null ||
-            !(vd.field_a.payload.length >= 100)) {
-            vd.field_a = new PacketBuffer(100);
+          if (SoundCache.field_a == null ||
+            !(SoundCache.field_a.payload.length >= 100)) {
+            SoundCache.field_a = new PacketBuffer(100);
           }
-          vd.field_a.position = 0;
-          vd.field_a.writeByte(10, -64);
+          SoundCache.field_a.position = 0;
+          SoundCache.field_a.writeByte(10, -64);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            vd.field_a.writeInt(var13[var11], -1);
+            SoundCache.field_a.writeInt(var13[var11], -1);
             var11++;
           }
-          vd.field_a.writeShort((byte) -60, param4);
-          vd.field_a.applyRsa(param5, param6, 27551);
-          param0.writeBytes(0, vd.field_a.position, (byte) -11, vd.field_a.payload);
+          SoundCache.field_a.writeShort((byte) -60, param4);
+          SoundCache.field_a.applyRsa(param5, param6, 27551);
+          param0.writeBytes(0, SoundCache.field_a.position, (byte) -11, SoundCache.field_a.payload);
           param0.writeBytes(0, InteractiveWidget.field_C.position, (byte) -11, InteractiveWidget.field_C.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

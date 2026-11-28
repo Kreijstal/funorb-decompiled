@@ -86,8 +86,8 @@ final class me {
           var9 = var21Lifetime1 * param5[3] + (param5[4] * var22Lifetime1 + var23Lifetime1 * param5[5]) >> -th.field_a + 16;
           var11 = param5[9] * var21Lifetime1 + var22Lifetime1 * param5[10] + param5[11] * var23Lifetime1 >> 16;
           var10 = param5[7] * var22Lifetime1 + (param5[6] * var21Lifetime1 + var23Lifetime1 * param5[8]) >> 16 - th.field_a;
-          var21Lifetime2 = jb.field_m;
-          var22Lifetime2 = jb.field_g;
+          var21Lifetime2 = TriangleRasterizer.field_m;
+          var22Lifetime2 = TriangleRasterizer.field_g;
           var23Lifetime2 = 0;
           scanLoop1: while (true) {
             if (param4.field_C > var23Lifetime2) {

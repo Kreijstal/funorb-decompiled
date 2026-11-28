@@ -259,7 +259,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(boolean param0, int param1, ji param2) {
+    final static void a(boolean param0, int param1, MusicTrack param2) {
         try {
           VolumeRampingMidiPcmStream.a(param2, param1, (byte) -105, param0);
         } catch (RuntimeException runtimeException) {

@@ -46,7 +46,7 @@ final class pe {
           return;
         }
         try {
-          da.field_h = param1;
+          SoundCache.field_h = param1;
           qk.field_a = param3;
           ch.field_c = param0;
           tb.a(SoftwareRasterizer.field_k / 2, 21361, SoftwareRasterizer.field_j / 2);

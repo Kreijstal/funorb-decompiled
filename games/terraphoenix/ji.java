@@ -117,13 +117,13 @@ final class ji extends IntrusiveNode {
             var15_int = 61 % ((-9 - param4) / 59);
             MessageKeys.field_d = param12;
             wa.field_t = param5;
-            da.field_g = param7;
+            SoundCache.field_g = param7;
             hb.field_i = param10;
-            if (null == da.field_g.field_m) {
+            if (null == SoundCache.field_g.field_m) {
               return;
             }
             try {
-              mh.field_b = new BufferedRandomAccessFile(da.field_g.field_m, 64, 0);
+              mh.field_b = new BufferedRandomAccessFile(SoundCache.field_g.field_m, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

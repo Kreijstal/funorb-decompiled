@@ -81,7 +81,7 @@ final class tl extends ci {
         int var1_intLifetime1;
         var4 = Chess.field_G;
         try {
-          nh.a();
+          TriangleRasterizer.useRasterClip();
           pd.field_Tb = 11;
           gf.field_b = new int[260];
           for (var1_int = 0; var1_int < 256; var1_int++) {

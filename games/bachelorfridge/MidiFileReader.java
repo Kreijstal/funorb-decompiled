@@ -16,11 +16,11 @@ final class MidiFileReader {
         field_f = null;
     }
 
-    final int c() {
+    final int trackCount() {
         return this.field_b.length;
     }
 
-    private final int a(int param0, int param1) {
+    private final int decodeMessagePayload(int param0, int param1) {
         int var5 = 0;
         int var6 = 0;
         int var3 = 0;
@@ -57,7 +57,7 @@ final class MidiFileReader {
         return var4Lifetime1;
     }
 
-    final void c(int param0) {
+    final void seekTrack(int param0) {
         this.field_g.position = this.field_b[param0];
     }
 
@@ -69,7 +69,7 @@ final class MidiFileReader {
         this.field_d = null;
     }
 
-    final void a(byte[] param0) {
+    final void parse(byte[] param0) {
         int var4 = 0;
         int var5 = 0;
         int var3Lifetime1;
@@ -101,7 +101,7 @@ final class MidiFileReader {
         this.field_d = new int[var2];
     }
 
-    private final int d(int param0) {
+    private final int readNextMessage(int param0) {
         int var2;
         int var3;
         int var4;
@@ -115,7 +115,7 @@ final class MidiFileReader {
         }
         if (var2 != 240 &&
           var2 != 247) {
-          return this.a(param0, var2);
+          return this.decodeMessagePayload(param0, var2);
         }
         var3 = this.field_g.readVarInt(-1);
         if (var2 == 247 &&
@@ -127,14 +127,14 @@ final class MidiFileReader {
             !(var4 > 252) || var4 == 254) {
             this.field_g.position = this.field_g.position + 1;
             this.field_d[param0] = var4;
-            return this.a(param0, var4);
+            return this.decodeMessagePayload(param0, var4);
           }
         }
         this.field_g.position = this.field_g.position + var3;
         return 0;
     }
 
-    final void e(int param0) {
+    final void readDelta(int param0) {
         int var2 = this.field_g.readVarInt(-1);
         this.field_i[param0] = this.field_i[param0] + var2;
     }
@@ -154,15 +154,15 @@ final class MidiFileReader {
         return this.field_g.payload != null;
     }
 
-    final void f(int param0) {
+    final void saveTrackPosition(int param0) {
         this.field_b[param0] = this.field_g.position;
     }
 
-    final void d() {
+    final void markTrackDone() {
         this.field_g.position = -1;
     }
 
-    final long b(int param0) {
+    final long tickTime(int param0) {
         return this.field_e + (long)param0 * (long)this.field_h;
     }
 
@@ -184,7 +184,7 @@ final class MidiFileReader {
         return var2;
     }
 
-    final void a(long param0) {
+    final void reset(long param0) {
         int var4 = 0;
         this.field_e = param0;
         int var3 = this.field_b.length;
@@ -192,13 +192,13 @@ final class MidiFileReader {
           this.field_i[var4] = 0;
           this.field_d[var4] = 0;
           this.field_g.position = this.field_c[var4];
-          this.e(var4);
+          this.readDelta(var4);
           this.field_b[var4] = this.field_g.position;
         }
     }
 
-    final int a(int param0) {
-        int var2 = this.d(param0);
+    final int readMessage(int param0) {
+        int var2 = this.readNextMessage(param0);
         return var2;
     }
 
@@ -208,7 +208,7 @@ final class MidiFileReader {
 
     MidiFileReader(byte[] param0) {
         this.field_g = new PacketBuffer((byte[]) null);
-        this.a(param0);
+        this.parse(param0);
     }
 
     static {

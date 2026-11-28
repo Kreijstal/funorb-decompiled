@@ -23,7 +23,7 @@ final class ni {
         field_b = null;
     }
 
-    final static rj a(byte param0, int param1, ResourceArchive param2, int param3, da param4) {
+    final static rj a(byte param0, int param1, ResourceArchive param2, int param3, SoundCache param4) {
         byte[] var5 = null;
         RuntimeException var5_ref = null;
         byte[] var6 = null;

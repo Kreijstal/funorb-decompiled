@@ -59,7 +59,7 @@ class fk extends kb {
 
     final static gb a(int param0) {
         int var1 = -90 % ((35 - param0) / 37);
-        return new gb(TextLayout.b(25594), ja.a(-2116060060));
+        return new gb(TextLayout.b(25594), SoundCache.a(-2116060060));
     }
 
     fk(long param0, String param1) {

@@ -819,7 +819,7 @@ final class MenuScreen {
         } else {
           hi.field_h[var12].drawScaled(0, 0, 160, 120);
         }
-        be.a(0, 0, 160, 120);
+        TriangleRasterizer.setClip(0, 0, 160, 120);
         var8.a(ne.field_a);
         if (var7.field_k != null) {
           var18 = var7.field_k;
@@ -847,7 +847,7 @@ final class MenuScreen {
             wk.field_a.addLast((byte) 68, var6);
             SoftwareRasterizer.setRasterBuffer(var22, var4, var5);
             SoftwareRasterizer.resetClip();
-            be.a(0, 0, param0, 480);
+            TriangleRasterizer.setClip(0, 0, param0, 480);
             break;
           }
           var15 = var20[var14];

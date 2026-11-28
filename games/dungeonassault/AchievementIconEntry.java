@@ -278,14 +278,14 @@ final class AchievementIconEntry extends IntrusiveNode {
             if (no.field_d != 0 &&
               field_k > var3 &&
               field_k < var3 + DelegatingCanvas.field_c.field_v) {
-              if (-DelegatingCanvas.field_c.field_y + 269 < lc.field_c &&
-                lc.field_c < 269) {
+              if (-DelegatingCanvas.field_c.field_y + 269 < SoundCache.field_c &&
+                SoundCache.field_c < 269) {
                 wf.field_x = am.field_c;
                 oo.field_a = false;
                 var4 = 1;
               }
-              if (586 < lc.field_c &&
-                DelegatingCanvas.field_c.field_y + 586 > lc.field_c) {
+              if (586 < SoundCache.field_c &&
+                DelegatingCanvas.field_c.field_y + 586 > SoundCache.field_c) {
                 oo.field_a = true;
                 wf.field_x = am.field_c;
                 var4 = 1;
@@ -308,7 +308,7 @@ final class AchievementIconEntry extends IntrusiveNode {
           if (!param0) {
             return 0;
           }
-          o.field_i.a(param1 ^ 7718, f.a(lc.field_c, field_k, param1 ^ -19), f.a(hj.field_S, eh.field_h, 1));
+          o.field_i.a(param1 ^ 7718, f.a(SoundCache.field_c, field_k, param1 ^ -19), f.a(hj.field_S, eh.field_h, 1));
           if (o.field_i.c(50)) {
             if (o.field_i.field_b == 0) {
               stackIn_64_0 = 3;

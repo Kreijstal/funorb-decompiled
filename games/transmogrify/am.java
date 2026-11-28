@@ -14,7 +14,7 @@ final class am extends IntrusiveNode {
     int field_h;
     int field_j;
 
-    final static void a(boolean param0, int param1, pl param2, byte param3) {
+    final static void a(boolean param0, int param1, MusicTrack param2, byte param3) {
         Object var4 = null;
         int var4_int = 0;
         RuntimeException stackIn_19_0 = null;

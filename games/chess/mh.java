@@ -9,7 +9,7 @@ final class mh {
     static String field_e;
     private boolean field_c;
     static String field_g;
-    static dd field_f;
+    static SoftwareModelMesh field_f;
 
     final static void b(int param0) {
         if (param0 == 13) {

@@ -26,9 +26,9 @@ final class oc extends kl {
     private boolean field_x;
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5) {
-        DialogMessagePane.field_Q[lc.field_d] = param0;
-        ol.field_k[lc.field_d] = lc.field_d;
-        i.field_t[lc.field_d] = param5;
+        DialogMessagePane.field_Q[SoundCache.field_d] = param0;
+        ol.field_k[SoundCache.field_d] = SoundCache.field_d;
+        i.field_t[SoundCache.field_d] = param5;
         if (!(param5 <= SectorCacheStore.field_d)) {
           n.field_d = param5;
         }
@@ -38,16 +38,16 @@ final class oc extends kl {
         if (!(param5 >= ib.field_e)) {
           SingleChildWidgetContainer.field_B = param5;
         }
-        mf.field_d[lc.field_d] = param2;
-        wa.field_m[lc.field_d] = param3;
-        CrossfadingMidiPcmStream.field_w[lc.field_d] = param4;
+        mf.field_d[SoundCache.field_d] = param2;
+        wa.field_m[SoundCache.field_d] = param3;
+        CrossfadingMidiPcmStream.field_w[SoundCache.field_d] = param4;
         int var6 = param4 + param2 + param3;
         int var7 = var6 == 0 ? 0 : 1000 * param2 / var6;
-        TextHotspotBounds.field_n[lc.field_d] = var7;
+        TextHotspotBounds.field_n[SoundCache.field_d] = var7;
         if (!(var7 >= SingleChildWidgetContainer.field_B)) {
           SingleChildWidgetContainer.field_B = var7;
         }
-        lc.field_d = lc.field_d + 1;
+        SoundCache.field_d = SoundCache.field_d + 1;
         if (var7 > n.field_d) {
           n.field_d = var7;
         }

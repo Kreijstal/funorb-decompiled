@@ -180,7 +180,7 @@ final class mi extends RichTextWidget {
     }
 
     mi(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, jc.a((byte) 97));
+        super(param1, SoundCache.getDefaultTextRenderer((byte) 97));
         try {
           this.field_S = param0;
           this.field_R = param1;

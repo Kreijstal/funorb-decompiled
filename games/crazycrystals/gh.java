@@ -850,8 +850,8 @@ final class gh extends ea implements Cloneable {
           dn.field_d = null;
           wp.field_b.a((byte) -91);
           wp.field_b = null;
-          bn.field_h.a((byte) -91);
-          bn.field_h = null;
+          SoundCache.field_h.a((byte) -91);
+          SoundCache.field_h = null;
           pm.field_b.a((byte) -87);
           pm.field_b = null;
           so.field_g.a((byte) -118);

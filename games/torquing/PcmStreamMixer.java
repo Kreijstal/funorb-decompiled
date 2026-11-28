@@ -23,7 +23,7 @@ final class PcmStreamMixer extends PcmStream {
     private final void insertListenerByDeadline(IntrusiveNode param0, PcmMixerListener param1) {
         while (true) {
           if (param0 == this.field_q.sentinel) {
-            fi.a(param1, param0, -1240266932);
+            SoundCache.insertNodeAfter(param1, param0, -1240266932);
             this.field_o = ((PcmMixerListener) (this.field_q.sentinel.previous)).field_k;
             return;
           }
@@ -33,7 +33,7 @@ final class PcmStreamMixer extends PcmStream {
           }
           break;
         }
-        fi.a(param1, param0, -1240266932);
+        SoundCache.insertNodeAfter(param1, param0, -1240266932);
         this.field_o = ((PcmMixerListener) (this.field_q.sentinel.previous)).field_k;
         return;
     }

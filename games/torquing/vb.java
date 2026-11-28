@@ -4,7 +4,7 @@
 final class vb {
     static IntrusiveDeque field_f;
     static java.awt.Font field_d;
-    static pj[] field_c;
+    static LitModelMesh[] field_c;
     private int[] field_a;
     static String field_e;
     static String field_b;
@@ -413,8 +413,8 @@ final class vb {
           if (param1 != -77) {
             vb.a(96);
           }
-          var21 = be.field_g;
-          var22 = be.field_b;
+          var21 = TriangleRasterizer.field_g;
+          var22 = TriangleRasterizer.field_b;
           var23 = 0;
           scanLoop1: while (true) {
             if (param0.vertexCount > var23) {
@@ -825,7 +825,7 @@ final class vb {
     }
 
     static {
-        field_c = new pj[32];
+        field_c = new LitModelMesh[32];
         field_f = new IntrusiveDeque();
         field_e = "SOUND:";
         field_b = "Click";

@@ -243,7 +243,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         return stackIn_45_0;
     }
 
-    final static lh a(int param0, int param1, ja param2, byte param3, ResourceArchive param4) {
+    final static lh a(int param0, int param1, SoundCache param2, byte param3, ResourceArchive param4) {
         byte[] var5 = null;
         RuntimeException var5_ref = null;
         byte[] var6 = null;

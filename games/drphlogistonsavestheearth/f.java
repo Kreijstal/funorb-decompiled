@@ -138,9 +138,9 @@ final class f extends IntrusiveNode {
                 LabeledWidgetContainer.field_N.readUnsignedByte(31760);
                 LabeledWidgetContainer.field_N.readInt(-108);
                 ka.field_n = LabeledWidgetContainer.field_N.readUnsignedShort(-788751192);
-                cf.field_b = new byte[ka.field_n];
+                SoundCache.field_b = new byte[ka.field_n];
                 for (var9 = 0; var9 < ka.field_n; var9++) {
-                  cf.field_b[var9] = LabeledWidgetContainer.field_N.readByte(-82);
+                  SoundCache.field_b[var9] = LabeledWidgetContainer.field_N.readByte(-82);
                 }
               }
               SecondaryNodeDequeIterator.field_d = LabeledWidgetContainer.field_N.readString((byte) -64);

@@ -136,7 +136,7 @@ final class b {
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameCompleted0)) {
                 for (var10Lifetime2 = 0; var16.length - 1 > var10Lifetime2; var10Lifetime2++) {
-                  if (0 == (fe.field_d[(var10Lifetime2 + param2) / 8] & 1 << (var10Lifetime2 + param2 & 7))) {
+                  if (0 == (SoundCache.field_d[(var10Lifetime2 + param2) / 8] & 1 << (var10Lifetime2 + param2 & 7))) {
                     continue;
                   }
                   var9 = 0;

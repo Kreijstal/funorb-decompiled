@@ -194,14 +194,14 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
             var8 = param2[1].field_x;
             param2[0].drawTintedGray(param0, param3, param5);
             param2[2].drawTintedGray(-var7 + param0 + param4, param3, param5);
-            SoftwareRasterizer.saveClip(ng.field_a);
+            SoftwareRasterizer.saveClip(SoundCache.field_a);
             SoftwareRasterizer.intersectClip(param0 + var6_int, param3, param0 - (-param4 + var7), param3 + param2[param1].field_r);
             var9 = var6_int + param0;
             var10 = param0 + param4 - var7;
             for (param0 = var9; var10 > param0; param0 = param0 + var8) {
               param2[1].drawTintedGray(param0, param3, param5);
             }
-            SoftwareRasterizer.restoreClip(ng.field_a);
+            SoftwareRasterizer.restoreClip(SoundCache.field_a);
             return;
           }
           return;

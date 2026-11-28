@@ -1646,7 +1646,7 @@ public final class StarCannon extends ag {
         int var8 = 0;
         int var7 = 0;
         Object var3;
-        ja var3_ref;
+        SoundCache var3_ref;
         int var4_int;
         Sprite[] var4;
         id[] var4_array;
@@ -1704,40 +1704,40 @@ public final class StarCannon extends ag {
                       }
                       RegistrationAgreementPane.i(param1 ^ -1478);
                       gf.field_c = new PcmSample[48];
-                      gf.field_c[0] = aj.a(lj.field_h, "", "SC_bossdamage").a();
-                      gf.field_c[1] = aj.a(lj.field_h, "", "SC_bossdestroy").a();
-                      gf.field_c[2] = aj.a(lj.field_h, "", "SC_collect1").a();
-                      gf.field_c[7] = aj.a(lj.field_h, "", "SC_enemydamage2").a();
-                      gf.field_c[8] = aj.a(lj.field_h, "", "SC_enemydamage3").a();
-                      gf.field_c[9] = aj.a(lj.field_h, "", "SC_enemydestroy3").a();
-                      gf.field_c[10] = aj.a(lj.field_h, "", "SC_enemydestroy4").a();
-                      gf.field_c[3] = aj.a(lj.field_h, "", "SC_enemyfire1").a();
-                      gf.field_c[4] = aj.a(lj.field_h, "", "SC_enemyfire2").a();
-                      gf.field_c[5] = aj.a(lj.field_h, "", "SC_enemyfire3").a();
-                      gf.field_c[6] = aj.a(lj.field_h, "", "SC_enemyfire4").a();
-                      gf.field_c[19] = aj.a(lj.field_h, "", "SC_playerdestroy").a();
-                      gf.field_c[20] = aj.a(lj.field_h, "", "SC_backcannon").a();
-                      gf.field_c[21] = aj.a(lj.field_h, "", "SC_FOLLOWERFIRE").a();
-                      gf.field_c[11] = aj.a(lj.field_h, "", "SC_playerfire1").a();
-                      gf.field_c[12] = aj.a(lj.field_h, "", "SC_playerfire2").a();
-                      gf.field_c[13] = aj.a(lj.field_h, "", "SC_helix_1").a();
-                      gf.field_c[14] = aj.a(lj.field_h, "", "SC_helix_2").a();
-                      gf.field_c[15] = aj.a(lj.field_h, "", "SC_helix_3").a();
-                      gf.field_c[16] = aj.a(lj.field_h, "", "SC_lance_1").a();
-                      gf.field_c[17] = aj.a(lj.field_h, "", "SC_lance_2").a();
-                      gf.field_c[18] = aj.a(lj.field_h, "", "SC_lance_3").a();
-                      gf.field_c[22] = aj.a(lj.field_h, "", "SC_rewind_activated_part1").a();
-                      gf.field_c[23] = aj.a(lj.field_h, "", "SC_rewind_installed").a();
-                      gf.field_c[24] = aj.a(lj.field_h, "", "SC_seekermine_explode").a();
-                      gf.field_c[25] = aj.a(lj.field_h, "", "SC_shield_discharged").a();
-                      gf.field_c[26] = aj.a(lj.field_h, "", "SC_shield_rearm").a();
-                      gf.field_c[27] = aj.a(lj.field_h, "", "SC_shieldburst").a();
-                      gf.field_c[28] = aj.a(lj.field_h, "", "SC_thruster_upgrade").a();
-                      gf.field_c[29] = aj.a(lj.field_h, "", "SC_rearcannon_upgrade").a();
-                      gf.field_c[30] = aj.a(lj.field_h, "", "SC_shield_upgraded").a();
-                      gf.field_c[31] = aj.a(lj.field_h, "", "SC_sidecannons_upgrade").a();
-                      gf.field_c[46] = aj.a(lj.field_h, "", "SC_xenon_operational").a();
-                      gf.field_c[47] = aj.a(lj.field_h, "", "SC_xenonbeamshot").a();
+                      gf.field_c[0] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_bossdamage").toPcmSample();
+                      gf.field_c[1] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_bossdestroy").toPcmSample();
+                      gf.field_c[2] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_collect1").toPcmSample();
+                      gf.field_c[7] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_enemydamage2").toPcmSample();
+                      gf.field_c[8] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_enemydamage3").toPcmSample();
+                      gf.field_c[9] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_enemydestroy3").toPcmSample();
+                      gf.field_c[10] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_enemydestroy4").toPcmSample();
+                      gf.field_c[3] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_enemyfire1").toPcmSample();
+                      gf.field_c[4] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_enemyfire2").toPcmSample();
+                      gf.field_c[5] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_enemyfire3").toPcmSample();
+                      gf.field_c[6] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_enemyfire4").toPcmSample();
+                      gf.field_c[19] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_playerdestroy").toPcmSample();
+                      gf.field_c[20] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_backcannon").toPcmSample();
+                      gf.field_c[21] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_FOLLOWERFIRE").toPcmSample();
+                      gf.field_c[11] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_playerfire1").toPcmSample();
+                      gf.field_c[12] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_playerfire2").toPcmSample();
+                      gf.field_c[13] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_helix_1").toPcmSample();
+                      gf.field_c[14] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_helix_2").toPcmSample();
+                      gf.field_c[15] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_helix_3").toPcmSample();
+                      gf.field_c[16] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_lance_1").toPcmSample();
+                      gf.field_c[17] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_lance_2").toPcmSample();
+                      gf.field_c[18] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_lance_3").toPcmSample();
+                      gf.field_c[22] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_rewind_activated_part1").toPcmSample();
+                      gf.field_c[23] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_rewind_installed").toPcmSample();
+                      gf.field_c[24] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_seekermine_explode").toPcmSample();
+                      gf.field_c[25] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_shield_discharged").toPcmSample();
+                      gf.field_c[26] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_shield_rearm").toPcmSample();
+                      gf.field_c[27] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_shieldburst").toPcmSample();
+                      gf.field_c[28] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_thruster_upgrade").toPcmSample();
+                      gf.field_c[29] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_rearcannon_upgrade").toPcmSample();
+                      gf.field_c[30] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_shield_upgraded").toPcmSample();
+                      gf.field_c[31] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_sidecannons_upgrade").toPcmSample();
+                      gf.field_c[46] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_xenon_operational").toPcmSample();
+                      gf.field_c[47] = SynthesizedSoundEffect.loadByName(lj.field_h, "", "SC_xenonbeamshot").toPcmSample();
                       gf.field_c[32] = VorbisSample.loadByName(AccountNameAvailabilityValidator.field_p, "", "SC_systems malfunction").decodeAllToPcm();
                       gf.field_c[39] = VorbisSample.loadByName(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_54321").decodeAllToPcm();
                       gf.field_c[40] = VorbisSample.loadByName(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_back cannons upgraded").decodeAllToPcm();
@@ -1782,7 +1782,7 @@ public final class StarCannon extends ag {
         if (null != RichTextLayout.field_l) {
           ma.a(GzipDecompressor.field_d, -13923, 75.0f);
           this.renderClientFrame((byte) 22);
-          var3_ref = new ja(lj.field_h, AccountNameAvailabilityValidator.field_p);
+          var3_ref = new SoundCache(lj.field_h, AccountNameAvailabilityValidator.field_p);
           fb.field_t = dl.a(var3_ref, (byte) 84, "music/star cannon level 1 final", "", RichTextLayout.field_l);
           TextFieldValidator.field_i = dl.a(var3_ref, (byte) 66, "music/star cannon level 2 final", "", RichTextLayout.field_l);
           r.field_b = dl.a(var3_ref, (byte) -82, "music/star cannon boss final", "", RichTextLayout.field_l);
@@ -3263,10 +3263,10 @@ public final class StarCannon extends ag {
         ak.clearStaticReferences((byte) 94);
         GzipDecompressor.clearStaticReferences((byte) 59);
         ti.a((byte) 13);
-        je.clearStaticReferences();
+        SynthesizerVoice.clearStaticReferences();
         VorbisSample.clearStaticReferences();
         VorbisFloor.clearStaticReferences();
-        ja.clearStaticReferences((byte) 80);
+        SoundCache.clearStaticReferences((byte) 80);
         ih.clearStaticReferences((byte) -125);
         jf.a(true);
         ua.clearStaticReferences(128);
@@ -3649,17 +3649,17 @@ public final class StarCannon extends ag {
         int var3;
         var3 = field_A;
         oe.field_a = oe.field_a - 1;
-        ja.field_d = ja.field_d + 1;
+        SoundCache.field_d = SoundCache.field_d + 1;
         if (kg.field_a != 0) {
           na.field_d = na.field_d + fc.field_e;
           il.field_i = il.field_i + 2;
           oe.field_a = oe.field_a + 1;
-          ja.field_d = ja.field_d + 1;
+          SoundCache.field_d = SoundCache.field_d + 1;
           fc.field_e = fc.field_e - jl.field_d * fc.field_e;
         }
         if (wc.field_c[98]) {
           jl.field_d = jl.field_d + pe.field_d;
-          ja.field_d = ja.field_d + 5;
+          SoundCache.field_d = SoundCache.field_d + 5;
           oe.field_a = oe.field_a + 5;
           il.field_i = il.field_i + 10;
           fc.field_e = fc.field_e - pe.field_d * na.field_d;
@@ -3668,14 +3668,14 @@ public final class StarCannon extends ag {
           oe.field_a = oe.field_a + 3;
           na.field_d = na.field_d - ResizableModalDialog.field_Q;
           fc.field_e = fc.field_e + jl.field_d * ResizableModalDialog.field_Q;
-          ja.field_d = ja.field_d + 7;
+          SoundCache.field_d = SoundCache.field_d + 7;
           il.field_i = il.field_i + 10;
         }
         if (wc.field_c[84]) {
           fc.field_e = fc.field_e - na.field_d;
           jl.field_d = jl.field_d + 1;
           oe.field_a = oe.field_a + 10;
-          ja.field_d = ja.field_d - 10;
+          SoundCache.field_d = SoundCache.field_d - 10;
         }
         va.field_f = va.field_f + 1;
         RichTextLayout.field_u = 256;

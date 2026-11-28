@@ -365,9 +365,9 @@ final class eg {
           if ((decompiledFrameRemainder0) &&
             (decompiledSharedTail0)) {
             um.field_h = 0;
-            kp.field_c = lc.field_c;
+            kp.field_c = SoundCache.field_c;
             rn.field_a = AchievementIconEntry.field_k;
-            pa.field_c = to.a(lc.field_c, AchievementIconEntry.field_k, param0, 0);
+            pa.field_c = to.a(SoundCache.field_c, AchievementIconEntry.field_k, param0, 0);
           }
           if (CombatState.field_r != 0 &&
             null != ProgressDialog.field_ob) {

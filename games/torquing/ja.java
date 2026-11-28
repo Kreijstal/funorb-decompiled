@@ -25,10 +25,10 @@ final class ja extends DualLinkNode implements ec {
         if (var4 != null) {
           return var4;
         }
-        int[] var13 = param0.a(param1, be.field_d);
+        int[] var13 = param0.a(param1, TriangleRasterizer.field_d);
         int[] var12 = var13;
         int[] var5 = var12;
-        int var6 = pj.a(param0.b(param1), 64);
+        int var6 = LitModelMesh.scaleHslLightness(param0.b(param1), 64);
         if (var5 != null) {
           var7 = param0.a(param1) ? 64 : 128;
           var8 = var7 * var7;
@@ -52,14 +52,14 @@ final class ja extends DualLinkNode implements ec {
     final static ja a(long[] param0, int param1) {
         long var8 = 0L;
         int var10 = 0;
-        int var2 = be.field_a[param1];
+        int var2 = TriangleRasterizer.field_a[param1];
         ja var3 = (ja) (field_t.removeLast((byte) -114));
         if (var3 == null) {
           var3 = new ja(var2, new int[4096]);
         } else {
           var3.field_q = var2;
         }
-        int var4 = be.field_a[pj.a(param1, 64)];
+        int var4 = TriangleRasterizer.field_a[LitModelMesh.scaleHslLightness(param1, 64)];
         int[] var5 = var3.field_s;
         int var6 = 63;
         int var7 = 4096;
@@ -120,7 +120,7 @@ final class ja extends DualLinkNode implements ec {
         int var12Lifetime1;
         long var10Lifetime1Lifetime1;
         int var12Lifetime1Lifetime1;
-        var15 = param1.a(param2, be.field_d);
+        var15 = param1.a(param2, TriangleRasterizer.field_d);
         var14 = var15;
         var3 = var14;
         if (var3 == null) {

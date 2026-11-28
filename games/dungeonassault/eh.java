@@ -144,7 +144,7 @@ final class eh {
           var6 = var5.field_k[param1].a(param3 ^ 16);
         }
         if (var6 == null) {
-          var8 = lc.a(-121, this.a((byte) -105, param1), param0, param2);
+          var8 = SoundCache.resizeSprite(-121, this.a((byte) -105, param1), param0, param2);
           var6 = var8;
           var5.field_k[param1] = new il(var8);
         }

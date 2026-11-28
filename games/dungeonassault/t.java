@@ -9,8 +9,8 @@ final class t {
 
     final static void a(int param0, wh param1, boolean param2, boolean param3) {
         if (param1 == null) {
-          vh var5 = (vh) null;
-          lo.a(86, param2, (vh) null, param0, 0);
+          MusicTrack var5 = (MusicTrack) null;
+          lo.a(86, param2, (MusicTrack) null, param0, 0);
           return;
         }
         if (!param3) {

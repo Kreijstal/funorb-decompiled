@@ -14,16 +14,16 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
     static IntrusiveDeque field_H;
 
     final static void l(int param0) {
-        ji var2 = null;
-        ji var2Lifetime1;
+        MusicTrack var2 = null;
+        MusicTrack var2Lifetime1;
         if (param0 != 0) {
           AlphaWidgetContainer.k(83);
-          var2 = (ji) null;
-          DisplayNameSelectionPanel.a((byte) -17, (ji) null);
+          var2 = (MusicTrack) null;
+          DisplayNameSelectionPanel.a((byte) -17, (MusicTrack) null);
           return;
         }
-        var2Lifetime1 = (ji) null;
-        DisplayNameSelectionPanel.a((byte) -17, (ji) null);
+        var2Lifetime1 = (MusicTrack) null;
+        DisplayNameSelectionPanel.a((byte) -17, (MusicTrack) null);
     }
 
     public AlphaWidgetContainer() {

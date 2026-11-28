@@ -8,7 +8,7 @@ final class ig {
     static int field_c;
     static RgbSprite field_h;
     static ci[] field_i;
-    static dd[] field_f;
+    static SoftwareModelMesh[] field_f;
     static int field_g;
     static String field_a;
 
@@ -65,7 +65,7 @@ final class ig {
     static {
         field_e = "Accept unrated rematch";
         field_c = 5;
-        field_f = new dd[7];
+        field_f = new SoftwareModelMesh[7];
         field_a = "<%0> has resigned.";
         field_d = new hg(1, 2, 2, 0);
     }

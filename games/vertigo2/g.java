@@ -29,23 +29,23 @@ final class g {
           if (null != as.field_d) {
             try {
               as.field_d.seek(-23669, 0L);
-              as.field_d.write(param0 ^ 0, 24, id.field_f.position, id.field_f.payload);
+              as.field_d.write(param0 ^ 0, 24, SoundCache.field_f.position, SoundCache.field_f.payload);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
               if (param0 == 0) {
-                id.field_f.position = id.field_f.position + 24;
+                SoundCache.field_f.position = SoundCache.field_f.position + 24;
                 return;
               }
               g.b(11);
-              id.field_f.position = id.field_f.position + 24;
+              SoundCache.field_f.position = SoundCache.field_f.position + 24;
               return;
             }
           }
           if (param0 != 0) {
             g.b(11);
           }
-          id.field_f.position = id.field_f.position + 24;
+          SoundCache.field_f.position = SoundCache.field_f.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -59,7 +59,7 @@ final class g {
           rm.b((byte) 85);
           return;
         }
-        BitPacketBuffer var2 = id.field_f;
+        BitPacketBuffer var2 = SoundCache.field_f;
         var2.readInt(true);
         var2.readInt(!param0 ? true : false);
         var2.readInt(true);

@@ -125,7 +125,7 @@ final class rc {
             var7 = rb.$cfr$intArgs$a$62abead39cee(stackIn_10_0, stackIn_11_1, var6);
             var8 = -(var7 >> 1) + tm.field_e;
             if (var4 >= 0) {
-              var2 = var2 + lc.field_j;
+              var2 = var2 + SoundCache.field_j;
               if (var4 != RaiderDefinition.field_h.field_b) {
                 stackIn_16_0 = (qk) (field_a);
               } else {
@@ -139,7 +139,7 @@ final class rc {
             }
             if (var4 >= 0) {
               mp.field_a.drawString(var6, var8, AccountServiceResult.field_e + var2, var5, -1);
-              var2 = var2 + (cd.field_e + (i.field_o + lc.field_j));
+              var2 = var2 + (cd.field_e + (i.field_o + SoundCache.field_j));
             } else {
               hc.field_e.drawString(var6, var8, var2 + SingleChildWidgetContainer.field_C, var5, -1);
               var2 = var2 + gb.field_a;

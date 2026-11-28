@@ -495,7 +495,7 @@ final class MixedSupport099 {
             integerLocal8 = MixedSupport062.computeBoolean0736(this.stringState0418, (byte) -118) ? 1 : 0;
             if (sceneWidgetPart014Local7 == null &&
               integerLocal8 == 0) {
-              this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(93, NetworkSupport011.stringState0431, new String[]{stringLocal10}), 4, byteArgument2 - 60);
+              this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(93, SoundCache.stringState0431, new String[]{stringLocal10}), 4, byteArgument2 - 60);
               this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(122, ResourceSupport004.stringState0427, new String[]{stringLocal10}), 6, byteArgument2 ^ 12);
               if (integerArrayArgument3 != null &&
                 integerArgument1 != 2 &&

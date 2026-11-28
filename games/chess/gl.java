@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gl {
-    static pf field_b;
+    static MusicTrack field_b;
     static String field_a;
 
     final static String[] a(byte param0, char param1, String param2) {
@@ -75,7 +75,7 @@ final class gl {
               return true;
             }
             if (param0 != 0) {
-              field_b = (pf) null;
+              field_b = (MusicTrack) null;
             }
             return false;
           }

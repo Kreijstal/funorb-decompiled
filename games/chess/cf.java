@@ -81,7 +81,7 @@ final class cf extends ci {
           }
           ByteStorage.a(stackIn_4_0, true);
           qa.field_f.a(ModalDialogHost.field_T.field_M, 0, 0, -2 + (-40 + ModalDialogHost.field_T.field_pb), true);
-          ec.field_j.a(0, de.field_d.field_M, -2147483648, fe.field_g, 0);
+          ec.field_j.a(0, de.field_d.field_M, -2147483648, SoundCache.field_g, 0);
           stackIn_6_0 = ln.field_vc;
           stackIn_6_1 = 0;
           if (bo.field_c) {
@@ -89,9 +89,9 @@ final class cf extends ci {
           } else {
             stackIn_7_2 = 0;
           }
-          ((ci) (Object) stackIn_6_0).a(stackIn_6_1, -stackIn_7_2 + de.field_d.field_M, -2147483648, 18, fe.field_g + 2);
-          nb.field_Ib.a(-2 + (de.field_d.field_M - sc.field_e - 40), 42 + sc.field_e, -2147483648, 18, 2 + fe.field_g);
-          RichTextWidget.field_S.a(2, -20 + (de.field_d.field_pb - fe.field_g) - 2, 20 + (fe.field_g + 2), -3, sc.field_e, 0, de.field_d.field_M);
+          ((ci) (Object) stackIn_6_0).a(stackIn_6_1, -stackIn_7_2 + de.field_d.field_M, -2147483648, 18, SoundCache.field_g + 2);
+          nb.field_Ib.a(-2 + (de.field_d.field_M - sc.field_e - 40), 42 + sc.field_e, -2147483648, 18, 2 + SoundCache.field_g);
+          RichTextWidget.field_S.a(2, -20 + (de.field_d.field_pb - SoundCache.field_g) - 2, 20 + (SoundCache.field_g + 2), -3, sc.field_e, 0, de.field_d.field_M);
           sc.field_d.a(0, ModalDialogHost.field_T.field_M, -2147483648, 40, ModalDialogHost.field_T.field_pb - 40);
           sc.field_f.a(0, BirthDateValidator.field_k.field_M, -2147483648, 30, 0);
           ce.field_d.a(0, BirthDateValidator.field_k.field_M, -2147483648, -2 + (-40 + BirthDateValidator.field_k.field_pb - 30), 30);

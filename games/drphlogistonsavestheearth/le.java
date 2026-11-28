@@ -3,7 +3,7 @@
  */
 final class le {
     static RgbSprite field_d;
-    static ok field_e;
+    static MusicTrack field_e;
     static String[] field_a;
     static he field_c;
     static he[] field_b;
@@ -12,7 +12,7 @@ final class le {
         field_b = null;
         field_a = null;
         if (param0) {
-          field_e = (ok) null;
+          field_e = (MusicTrack) null;
         }
         field_e = null;
         field_c = null;

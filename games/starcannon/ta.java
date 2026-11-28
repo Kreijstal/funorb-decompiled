@@ -51,7 +51,7 @@ final class ta {
 
     final static void a(Sprite param0, int param1) {
         try {
-          ja.field_e = param0;
+          SoundCache.field_e = param0;
           int var2_int = -12 / ((-36 - param1) / 50);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "ta.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -16,7 +16,7 @@ final class hc {
           if (param1) {
             field_d = 99;
           }
-          me.field_h = param2;
+          SoundCache.field_h = param2;
           DualLinkNode.field_j = param0;
           FullscreenStatusDialog.a(param3, ab.field_p, -119);
         } catch (RuntimeException runtimeException) {

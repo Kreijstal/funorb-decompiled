@@ -12,7 +12,7 @@ final class ih {
         if (param1 != 64763) {
           return 81;
         }
-        return cc.field_g[param0 & 2047];
+        return TriangleRasterizer.field_g[param0 & 2047];
     }
 
     final synchronized static long correctedCurrentTimeMillis(byte param0) {

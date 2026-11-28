@@ -4,7 +4,7 @@
 final class PasswordValidator extends TextFieldValidator {
     static String field_r;
     static RgbSprite field_t;
-    static ok field_q;
+    static MusicTrack field_q;
     static String field_p;
     private EditableTextField field_u;
     private EditableTextField field_w;
@@ -97,7 +97,7 @@ final class PasswordValidator extends TextFieldValidator {
         try {
           var6 = this.field_u.field_p.toLowerCase();
           if (param0 <= 47) {
-            field_q = (ok) null;
+            field_q = (MusicTrack) null;
           }
           var4 = param1.toLowerCase();
           if (var4.length() == 0) {

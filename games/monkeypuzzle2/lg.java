@@ -19,7 +19,7 @@ final class lg {
     int[] field_x;
     private int field_G;
     int[] field_c;
-    private ud field_i;
+    private SoundCache field_i;
     int[][] field_t;
     static lg field_M;
     int[][] field_y;
@@ -79,9 +79,9 @@ final class lg {
         for (var3 = 0; var3 < this.field_h.length; var3++) {
           if (this.field_h[var3] == null) {
             if (this.field_c[var3] >> 4 != 0) {
-              var4 = this.field_i.a(this.field_p[var3], this.field_l[var3], true);
+              var4 = this.field_i.getMusicSampleByGroup(this.field_p[var3], this.field_l[var3], true);
             } else {
-              var4 = this.field_i.a(param0 - 18479, this.field_l[var3], this.field_p[var3]);
+              var4 = this.field_i.getSoundEffectByGroup(param0 - 18479, this.field_l[var3], this.field_p[var3]);
             }
             if (var4 == null) {
               var2 = 0;
@@ -98,7 +98,7 @@ final class lg {
         }
     }
 
-    lg(PacketBuffer param0, ud param1) {
+    lg(PacketBuffer param0, SoundCache param1) {
         int var3_int = 0;
         int var4 = 0;
         int dupTemp$0 = 0;

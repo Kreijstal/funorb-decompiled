@@ -41,12 +41,12 @@ final class ProgressDialog extends ResizableModalDialog {
             } else {
               var6 = rb.$cfr$intArgs$a$62abead39cee(120, true, StripedProgressWidget.field_K[var3_int]);
               var7 = -(var6 >> 1) + tm.field_e;
-              var4 = var4 + lc.field_j;
+              var4 = var4 + SoundCache.field_j;
               if (PacketBuffer.a(var4, (i.field_o << 1) + cd.field_e, param2, (an.field_w << 1) + var6, -an.field_w + var7, param0, param1 - 2113557)) {
                 stackIn_8_0 = var5;
                 return stackIn_8_0;
               }
-              var4 = var4 + (cd.field_e + (lc.field_j + (i.field_o << 1)));
+              var4 = var4 + (cd.field_e + (SoundCache.field_j + (i.field_o << 1)));
             }
             var3_int++;
           }

@@ -86,7 +86,7 @@ final class SoundFilter {
         return this.field_d[param0] * 2;
     }
 
-    final void decode(PacketBuffer param0, ah param1) {
+    final void decode(PacketBuffer param0, SoundEnvelope param1) {
         int var3;
         int var4;
         int var5;

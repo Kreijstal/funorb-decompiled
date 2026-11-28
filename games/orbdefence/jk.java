@@ -285,7 +285,7 @@ final class jk {
             NetworkArchiveRequest.field_t.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              vd.field_e = new String[var9Lifetime1 - 100];
+              SoundCache.field_e = new String[var9Lifetime1 - 100];
               ProgressMessageDialog.field_bb = fd.field_h;
             } else {
               if (var9Lifetime1 == 248) {
@@ -313,9 +313,9 @@ final class jk {
               var10Lifetime1 = NetworkArchiveRequest.field_t.readUnsignedShort(98203176);
               NetworkArchiveRequest.field_t.position = 0;
               if (AccountRequestState.a(true, var10Lifetime1)) {
-                var11 = vd.field_e.length;
+                var11 = SoundCache.field_e.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  vd.field_e[var12] = NetworkArchiveRequest.field_t.readPrefixedString(gi.a(param6, -23760));
+                  SoundCache.field_e[var12] = NetworkArchiveRequest.field_t.readPrefixedString(gi.a(param6, -23760));
                 }
                 th.a(108);
                 FullscreenFocusCanvas.field_a = false;

@@ -127,9 +127,9 @@ final class cd {
     final static int a(int param0, int param1) {
         if (param0 > -100) {
           cd.clearStaticReferences((byte) 111);
-          return be.field_l[param1 & 2047];
+          return TriangleRasterizer.field_l[param1 & 2047];
         }
-        return be.field_l[param1 & 2047];
+        return TriangleRasterizer.field_l[param1 & 2047];
     }
 
     static {

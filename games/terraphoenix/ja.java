@@ -123,7 +123,7 @@ final class ja extends IntrusiveNode {
           var3_int = -105 % ((72 - param0) / 48);
           pe.field_e = param2;
           if (0 == pe.field_e) {
-            var4 = DebouncedFieldValidator.a(DelegatingCanvas.field_d, da.field_h, -3, ModalDialog.field_F, ch.field_c);
+            var4 = DebouncedFieldValidator.a(DelegatingCanvas.field_d, SoundCache.field_h, -3, ModalDialog.field_F, ch.field_c);
             var5 = var4 + 3;
             rb.field_d = new String[var5];
             f.field_a = new int[var5];
@@ -142,7 +142,7 @@ final class ja extends IntrusiveNode {
             f.field_a[var5 - 1] = 1;
             pj.field_l[1] = 5;
           } else if (pe.field_e == 1) {
-            var4 = DebouncedFieldValidator.a(DelegatingCanvas.field_d, da.field_h, -3, ModalDialog.field_F, ch.field_c);
+            var4 = DebouncedFieldValidator.a(DelegatingCanvas.field_d, SoundCache.field_h, -3, ModalDialog.field_F, ch.field_c);
             var5 = 2 + var4;
             f.field_a = new int[var5];
             rb.field_d = new String[var5];
@@ -160,9 +160,9 @@ final class ja extends IntrusiveNode {
           } else if (2 != pe.field_e) {
             if (3 == pe.field_e) {
               if (DirectByteStorage.field_l.privilegedTasksEnabled) {
-                var4 = DebouncedFieldValidator.a(SecondaryNodeDeque.field_d, da.field_h, -3, ModalDialog.field_F, ch.field_c);
+                var4 = DebouncedFieldValidator.a(SecondaryNodeDeque.field_d, SoundCache.field_h, -3, ModalDialog.field_F, ch.field_c);
               } else {
-                var4 = DebouncedFieldValidator.a(ra.field_h, da.field_h, -3, ModalDialog.field_F, ch.field_c);
+                var4 = DebouncedFieldValidator.a(ra.field_h, SoundCache.field_h, -3, ModalDialog.field_F, ch.field_c);
               }
               var5 = 2 + var4;
               rb.field_d = new String[var5];
@@ -179,7 +179,7 @@ final class ja extends IntrusiveNode {
               f.field_a[var5 - 1] = 0;
               pj.field_l[0] = 5;
             } else if (pe.field_e == 4) {
-              var4 = DebouncedFieldValidator.a(tb.field_i, da.field_h, -3, ModalDialog.field_F, ch.field_c);
+              var4 = DebouncedFieldValidator.a(tb.field_i, SoundCache.field_h, -3, ModalDialog.field_F, ch.field_c);
               var5 = var4 + 2;
               f.field_a = new int[var5];
               rb.field_d = new String[var5];
@@ -198,7 +198,7 @@ final class ja extends IntrusiveNode {
               if (5 != pe.field_e) {
                 throw new IllegalArgumentException();
               }
-              var4 = DebouncedFieldValidator.a(va.field_a, da.field_h, -3, ModalDialog.field_F, ch.field_c);
+              var4 = DebouncedFieldValidator.a(va.field_a, SoundCache.field_h, -3, ModalDialog.field_F, ch.field_c);
               var5 = 3 + var4;
               rb.field_d = new String[var5];
               f.field_a = new int[var5];
@@ -218,7 +218,7 @@ final class ja extends IntrusiveNode {
               pj.field_l[1] = 5;
             }
           } else {
-            var4 = DebouncedFieldValidator.a(MessageKeys.a(new String[]{"<br><%0><br>"}, -1, DropTargetWidgetContainer.field_H), da.field_h, -3, ModalDialog.field_F, ch.field_c);
+            var4 = DebouncedFieldValidator.a(MessageKeys.a(new String[]{"<br><%0><br>"}, -1, DropTargetWidgetContainer.field_H), SoundCache.field_h, -3, ModalDialog.field_F, ch.field_c);
             var5 = -1;
             for (var6 = 0; var4 > var6; var6++) {
               if (!"<%0>".equals(ModalDialog.field_F[var6])) {
@@ -234,7 +234,7 @@ final class ja extends IntrusiveNode {
             ka.a(ModalDialog.field_F, 0, AccountNameAvailabilityValidator.field_r, 0, var5);
             kj.field_c = new String[-1 + (var4 - var5)];
             ka.a(ModalDialog.field_F, 1 + var5, kj.field_c, 0, -1 + var4 - var5);
-            var4 = DebouncedFieldValidator.a(MessageKeys.a(new String[]{"<br><%0><br>"}, -1, wj.field_b), da.field_h, -3, ModalDialog.field_F, ch.field_c);
+            var4 = DebouncedFieldValidator.a(MessageKeys.a(new String[]{"<br><%0><br>"}, -1, wj.field_b), SoundCache.field_h, -3, ModalDialog.field_F, ch.field_c);
             var5 = -1;
             for (var6 = 0; var4 > var6; var6++) {
               if (!"<%0>".equals(ModalDialog.field_F[var6])) {

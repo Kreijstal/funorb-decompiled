@@ -689,11 +689,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 != 57) {
             this.run();
           }
-          fieldTemp$1 = ud.field_d;
-          ud.field_d = ud.field_d + 1;
+          fieldTemp$1 = SoundCache.field_d;
+          SoundCache.field_d = SoundCache.field_d + 1;
           if (fieldTemp$1 > 50) {
             gb.field_j = true;
-            ud.field_d = ud.field_d - 50;
+            SoundCache.field_d = SoundCache.field_d - 50;
             ie.field_e.setSize(ub.field_b, GuestPlayConfirmationForm.field_z);
             ie.field_e.setVisible(true);
             if (hk.field_e != null &&

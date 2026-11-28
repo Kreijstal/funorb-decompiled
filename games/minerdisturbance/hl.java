@@ -4,11 +4,11 @@
 final class hl implements uj {
     static String field_c;
     static int field_b;
-    static wh field_a;
+    static MusicTrack field_a;
 
     public final void a(boolean param0) {
         if (param0) {
-          field_a = (wh) null;
+          field_a = (MusicTrack) null;
           SecondaryNodeDequeIterator.field_a = 4;
           tb.field_a = 2;
           return;

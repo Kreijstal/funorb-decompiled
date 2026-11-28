@@ -5,7 +5,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
     static String field_c;
     static String field_d;
     static int field_b;
-    static dd field_e;
+    static SoftwareModelMesh field_e;
     private long field_a;
     static int field_f;
 
@@ -126,7 +126,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
         if (param0 == 21314) {
           return this.evaluateValidationStatus(param0 - 21310);
         }
-        field_e = (dd) null;
+        field_e = (SoftwareModelMesh) null;
         return this.evaluateValidationStatus(param0 - 21310);
     }
 

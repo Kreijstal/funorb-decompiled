@@ -40,39 +40,39 @@ final class lha {
         var1 = 1;
         var2 = kca.field_a;
         if (0 == var2) {
-          HazmatSpecial.field_p = MusicTrack.a(oaa.field_b, "", "bf_titlescreen_version2");
+          HazmatSpecial.field_p = MusicTrack.load(oaa.field_b, "", "bf_titlescreen_version2");
           stackIn_32_0 = (HazmatSpecial.field_p == null) ? 0 : 1;
           var1Lifetime1 = stackIn_32_0;
         } else {
           if (var2 == 1) {
-            PizzaPartyAnimation.field_z = MusicTrack.a(oaa.field_b, "", "bf_shopping_screen");
+            PizzaPartyAnimation.field_z = MusicTrack.load(oaa.field_b, "", "bf_shopping_screen");
             stackIn_36_0 = (null == PizzaPartyAnimation.field_z) ? 0 : 1;
             var1Lifetime1 = stackIn_36_0;
           } else {
             if (var2 != 2) {
               if (var2 == 3) {
-                IncomingAnimation.field_z = MusicTrack.a(oaa.field_b, "", "bf_main_view2");
+                IncomingAnimation.field_z = MusicTrack.load(oaa.field_b, "", "bf_main_view2");
                 stackIn_44_0 = (IncomingAnimation.field_z == null) ? 0 : 1;
                 var1Lifetime1 = stackIn_44_0;
               } else {
                 if (var2 != 4) {
                   if (5 == var2) {
-                    wba.field_e[1] = MusicTrack.a(oaa.field_b, "", "bf_new_battle3");
+                    wba.field_e[1] = MusicTrack.load(oaa.field_b, "", "bf_new_battle3");
                     stackIn_52_0 = (null == wba.field_e[1]) ? 0 : 1;
                     var1Lifetime1 = stackIn_52_0;
                   } else {
                     if (var2 == 6) {
-                      wba.field_e[2] = MusicTrack.a(oaa.field_b, "", "bf_new_battle2");
+                      wba.field_e[2] = MusicTrack.load(oaa.field_b, "", "bf_new_battle2");
                       stackIn_56_0 = (wba.field_e[2] == null) ? 0 : 1;
                       var1Lifetime1 = stackIn_56_0;
                     } else {
                       if (var2 == 7) {
-                        iq.field_m = MusicTrack.a(oaa.field_b, "", "bf_competition_arena_intro_jingle");
+                        iq.field_m = MusicTrack.load(oaa.field_b, "", "bf_competition_arena_intro_jingle");
                         stackIn_60_0 = (null == iq.field_m) ? 0 : 1;
                         var1Lifetime1 = stackIn_60_0;
                       } else {
                         if (var2 == 8) {
-                          ByteStorage.field_h = MusicTrack.a(oaa.field_b, "", "bf_competition_lose_jingle");
+                          ByteStorage.field_h = MusicTrack.load(oaa.field_b, "", "bf_competition_lose_jingle");
                           stackIn_64_0 = (null == ByteStorage.field_h) ? 0 : 1;
                           var1Lifetime1 = stackIn_64_0;
                         } else {
@@ -130,12 +130,12 @@ final class lha {
                                 }
                               }
                             } else {
-                              rba.field_c = MusicTrack.a(oaa.field_b, "", "bf_combat_arena");
+                              rba.field_c = MusicTrack.load(oaa.field_b, "", "bf_combat_arena");
                               stackIn_72_0 = (null == rba.field_c) ? 0 : 1;
                               var1Lifetime1 = stackIn_72_0;
                             }
                           } else {
-                            mu.field_d = MusicTrack.a(oaa.field_b, "", "bf_competition_victory_jingle");
+                            mu.field_d = MusicTrack.load(oaa.field_b, "", "bf_competition_victory_jingle");
                             stackIn_68_0 = (null == mu.field_d) ? 0 : 1;
                             var1Lifetime1 = stackIn_68_0;
                           }
@@ -144,13 +144,13 @@ final class lha {
                     }
                   }
                 } else {
-                  wba.field_e[0] = MusicTrack.a(oaa.field_b, "", "bf_new_battle1");
+                  wba.field_e[0] = MusicTrack.load(oaa.field_b, "", "bf_new_battle1");
                   stackIn_48_0 = (wba.field_e[0] == null) ? 0 : 1;
                   var1Lifetime1 = stackIn_48_0;
                 }
               }
             } else {
-              eda.field_i = MusicTrack.a(oaa.field_b, "", "bf_main_view1");
+              eda.field_i = MusicTrack.load(oaa.field_b, "", "bf_main_view1");
               stackIn_40_0 = (eda.field_i == null) ? 0 : 1;
               var1Lifetime1 = stackIn_40_0;
             }

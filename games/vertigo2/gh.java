@@ -189,7 +189,7 @@ final class gh {
         }
     }
 
-    final static void a(si param0, byte param1, boolean param2, int param3) {
+    final static void a(MusicTrack param0, byte param1, boolean param2, int param3) {
         Object var4 = null;
         int var4_int = 0;
         RuntimeException stackIn_18_0 = null;

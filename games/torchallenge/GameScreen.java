@@ -2586,7 +2586,7 @@ final class GameScreen {
             var20Lifetime1 = 450;
             var5Lifetime2 = -1;
             var30 = p.field_a;
-            var17Lifetime2 = u.field_c;
+            var17Lifetime2 = SoundCache.field_c;
             var15 = 2;
             if (gh.field_x) {
               var2_intLifetime2 = var2_intLifetime2 - 6 << 1;
@@ -2603,7 +2603,7 @@ final class GameScreen {
           var9Lifetime1 = 50;
           var11Lifetime1 = RandomAccessCacheFile.field_e;
           var13Lifetime1 = je.field_h[ok.field_b];
-          var17Lifetime1 = u.field_c;
+          var17Lifetime1 = SoundCache.field_c;
           var12Lifetime1 = ArchiveRequest.field_q;
           var10Lifetime1 = 100;
           var6Lifetime1 = we.field_m[ok.field_b + 1];

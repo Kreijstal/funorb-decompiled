@@ -143,7 +143,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("idlemessage20min", -108);
                 if (null != var2) {
-                  fe.field_e = ad.a(-29410, var2);
+                  SoundCache.field_e = ad.a(-29410, var2);
                 }
                 var2 = cd.a("error_js5crc", -98);
                 if (var2 != null) {

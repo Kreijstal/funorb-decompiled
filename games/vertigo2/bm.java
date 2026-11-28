@@ -151,7 +151,7 @@ final class bm extends TextureOperator {
         FullscreenStatusDialog.field_Y = 0;
     }
 
-    final static void a(si param0, boolean param1, int param2) {
+    final static void a(MusicTrack param0, boolean param1, int param2) {
         try {
           gh.a(param0, (byte) -123, param1, 256);
           if (param2 != 4) {

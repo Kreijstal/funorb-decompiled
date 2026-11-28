@@ -322,7 +322,7 @@ final class tp extends bb {
           if (param0 != 10) {
             tp.clearStaticReferences(-5);
           }
-          lc.field_e = param1;
+          SoundCache.field_e = param1;
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "tp.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -12,8 +12,8 @@ final class ac {
         try {
           lc.a(0, param4, 0, param2.payload, param2.position, param3, param0);
           if (param1 != -105) {
-            ej var6 = (ej) null;
-            ac.a(true, 15, (ej) null, true, -63);
+            MusicTrack var6 = (MusicTrack) null;
+            ac.a(true, 15, (MusicTrack) null, true, -63);
           }
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "ac.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
@@ -35,7 +35,7 @@ final class ac {
         gb.field_d.field_b = 0;
     }
 
-    final static void a(boolean param0, int param1, ej param2, boolean param3, int param4) {
+    final static void a(boolean param0, int param1, MusicTrack param2, boolean param3, int param4) {
         RuntimeException var5 = null;
         CrossfadingMidiPcmStream stackIn_2_0;
         int stackIn_2_1;
@@ -79,8 +79,8 @@ final class ac {
           field_a = null;
           return;
         }
-        ej var2 = (ej) null;
-        ac.a(true, -1, (ej) null, true, -127);
+        MusicTrack var2 = (MusicTrack) null;
+        ac.a(true, -1, (MusicTrack) null, true, -127);
         field_c = null;
         field_a = null;
     }

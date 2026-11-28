@@ -6,7 +6,7 @@ import java.util.*;
 
 final class d {
     static Random field_c;
-    static pl field_e;
+    static MusicTrack field_e;
     static int[] field_a;
     static PacketBuffer field_d;
     static int[] field_b;

@@ -3,7 +3,7 @@
  */
 final class jj {
     static ci field_f;
-    static dd[] field_c;
+    static SoftwareModelMesh[] field_c;
     static BinaryBitmapFont field_d;
     static BinaryBitmapFont field_b;
     static ResourceArchive field_e;
@@ -52,7 +52,7 @@ final class jj {
 
     final static boolean b(int param0) {
         if (param0 != 7) {
-          field_c = (dd[]) null;
+          field_c = (SoftwareModelMesh[]) null;
           if (cd.field_x == null) {
             return an.field_c ? true : false;
           }
@@ -79,6 +79,6 @@ final class jj {
     }
 
     static {
-        field_c = new dd[7];
+        field_c = new SoftwareModelMesh[7];
     }
 }

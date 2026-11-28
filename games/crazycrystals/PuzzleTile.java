@@ -637,7 +637,7 @@ abstract class PuzzleTile {
     final static void a(int param0, hj param1, int param2, hj param3, int param4, byte param5) {
         try {
           int var6_int = -80 % ((param5 - 59) / 44);
-          bn.field_c = param4;
+          SoundCache.field_c = param4;
           qo.field_k = param3;
           qh.field_h = param1;
           MouseInputHandler.field_a = param2;

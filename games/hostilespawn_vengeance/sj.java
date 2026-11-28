@@ -120,8 +120,8 @@ final class sj {
 
     final static void b(boolean param0) {
         int var3 = 0;
-        ji var1 = null;
-        ji var2 = null;
+        MusicTrack var1 = null;
+        MusicTrack var2 = null;
         int var4 = 0;
         ql stackIn_9_0 = null;
         CrossfadingMidiPcmStream stackIn_11_0 = null;

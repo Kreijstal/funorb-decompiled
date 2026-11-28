@@ -35,7 +35,7 @@ final class ie {
         try {
           var1 = new RgbSprite(param0, 140);
           tl.a((byte) -67, var1);
-          nh.a();
+          TriangleRasterizer.useRasterClip();
           SoftwareRasterizer.clearRaster();
           sl.field_a = 0;
           di.k(9);

@@ -62,10 +62,10 @@ final class mf {
         var6 = Vertigo2.field_L ? 1 : 0;
         if (param0 == -6390) {
           var1 = gk.correctedCurrentTimeMillis(param0 ^ -6287);
-          var3 = -id.field_a + var1;
+          var3 = -SoundCache.field_a + var1;
           if (var3 > 30000L) {
             IntrusiveDeque.field_d = 0;
-            id.field_a = var1;
+            SoundCache.field_a = var1;
             return true;
           }
           var5 = 3000;
@@ -83,16 +83,16 @@ final class mf {
           if ((long)var5 >= var3) {
             return false;
           }
-          id.field_a = var1;
+          SoundCache.field_a = var1;
           IntrusiveDeque.field_d = IntrusiveDeque.field_d + 1;
           return true;
         }
         field_b = -111;
         var1Lifetime1 = gk.correctedCurrentTimeMillis(param0 ^ -6287);
-        var3Lifetime1 = -id.field_a + var1Lifetime1;
+        var3Lifetime1 = -SoundCache.field_a + var1Lifetime1;
         if (var3Lifetime1 > 30000L) {
           IntrusiveDeque.field_d = 0;
-          id.field_a = var1Lifetime1;
+          SoundCache.field_a = var1Lifetime1;
           return true;
         }
         var5Lifetime1 = 3000;
@@ -110,7 +110,7 @@ final class mf {
         if ((long)var5Lifetime1 >= var3Lifetime1) {
           return false;
         }
-        id.field_a = var1Lifetime1;
+        SoundCache.field_a = var1Lifetime1;
         IntrusiveDeque.field_d = IntrusiveDeque.field_d + 1;
         return true;
     }

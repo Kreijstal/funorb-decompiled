@@ -70,12 +70,12 @@ final class j {
             }
           } else {
             if (var2 != 0 &&
-              ud.field_b != 2) {
+              SoundCache.field_b != 2) {
               tj.a((byte) -96);
             }
           }
           if (var3 == 0 &&
-            ud.field_b == 2) {
+            SoundCache.field_b == 2) {
             var4 = pf.correctedCurrentTimeMillis(0) - ArchiveRequest.field_n;
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (0 >= var6) {

@@ -132,7 +132,7 @@ final class mk {
         try {
           stackIn_3_0 = ci.field_zb;
           stackIn_4_1 = (ci.field_zb == ud.field_d);
-          var7_int = ((nb) (Object) stackIn_3_0).a(stackIn_4_1, param2, 2, param5 * (fe.field_g + 2) * 4, 2 * (fe.field_g + 2), 0) ? 1 : 0;
+          var7_int = ((nb) (Object) stackIn_3_0).a(stackIn_4_1, param2, 2, param5 * (SoundCache.field_g + 2) * 4, 2 * (SoundCache.field_g + 2), 0) ? 1 : 0;
           var8 = ci.field_zb.field_Kb.field_I;
           var9 = ud.correctedCurrentTimeMillis(2);
           if (param3 >= -63) {
@@ -343,12 +343,12 @@ final class mk {
                 }
               }
               if (null != var12.field_Rb.field_db) {
-                var12.field_Rb.a(0, 68, -2147483648, fe.field_g, var31);
+                var12.field_Rb.a(0, 68, -2147483648, SoundCache.field_g, var31);
               } else {
-                var12.field_Qb.a(0, 68, -2147483648, fe.field_g, var31);
+                var12.field_Qb.a(0, 68, -2147483648, SoundCache.field_g, var31);
               }
               var12.field_uc.field_db = BitmapFont.truncateWithEllipsis(var12.field_uc.field_xb, var32, 78);
-              var12.field_uc.a(70, 78, -2147483648, fe.field_g, var31);
+              var12.field_uc.a(70, 78, -2147483648, SoundCache.field_g, var31);
               if (var12.field_uc.field_F &&
                 !var12.field_uc.field_db.equals(var32)) {
                 pc.field_Mb = var32;
@@ -356,19 +356,19 @@ final class mk {
               var12.field_Zb.field_db = Integer.toString(var12.field_Xb);
               if (!var12.field_ac) {
                 var12.field_Zb.field_fb = 1;
-                var12.field_Zb.a(150, 48, -2147483648, fe.field_g, var31);
+                var12.field_Zb.a(150, 48, -2147483648, SoundCache.field_g, var31);
               } else {
                 var12.field_Zb.field_fb = 2;
                 var12.field_nc.field_db = "/" + var12.field_hc;
                 var33_int = (-var12.field_nc.field_xb.stringWidth("/") + 348) / 2;
-                var12.field_Zb.a(150, var33_int - 150, -2147483648, fe.field_g, var31);
-                var12.field_nc.a(var33_int, -var33_int + 198, -2147483648, fe.field_g, var31);
+                var12.field_Zb.a(150, var33_int - 150, -2147483648, SoundCache.field_g, var31);
+                var12.field_nc.a(var33_int, -var33_int + 198, -2147483648, SoundCache.field_g, var31);
               }
               var12.field_tc.field_db = Integer.toString(var12.field_Ub);
-              var12.field_tc.a(200, 48, -2147483648, fe.field_g, var31);
+              var12.field_tc.a(200, 48, -2147483648, SoundCache.field_g, var31);
               stackIn_72_0 = (bo.field_c) ? 250 : 200;
               var33_intLifetime1 = stackIn_72_0;
-              var12.field_fc.a(var33_intLifetime1, -var33_intLifetime1 + 365 - 2, -2147483648, fe.field_g, var31);
+              var12.field_fc.a(var33_intLifetime1, -var33_intLifetime1 + 365 - 2, -2147483648, SoundCache.field_g, var31);
               var34_int = qc.field_e;
               if ((var14Lifetime1 & 1 << BufferedSocket.field_p) != 0) {
                 var50_ref = sh.field_b[var12.field_ic];
@@ -451,8 +451,8 @@ final class mk {
                   var12.field_gc.field_db = var39 + ":" + var38_int / 10 + var38_int % 10;
                 }
               }
-              var12.field_gc.a(365, -365 + var12.field_M, -2147483648, fe.field_g, var31);
-              var31 = var31 + fe.field_g;
+              var12.field_gc.a(365, -365 + var12.field_M, -2147483648, SoundCache.field_g, var31);
+              var31 = var31 + SoundCache.field_g;
               if (var12.field_ec != null) {
                 var31 += 2;
                 var37 = new StringBuilder(64);
@@ -465,18 +465,18 @@ final class mk {
                 var38 = var37.toString();
                 var12.field_Nb.field_db = var38;
                 var39Lifetime1 = var12.field_Nb.field_xb.lineCount(var38, var12.field_M - 2 * var12.field_Nb.field_z);
-                var12.field_Nb.a(0, var12.field_M, -2147483648, var39Lifetime1 * fe.field_g, var31);
-                var31 = var31 + fe.field_g * var39Lifetime1;
+                var12.field_Nb.a(0, var12.field_M, -2147483648, var39Lifetime1 * SoundCache.field_g, var31);
+                var31 = var31 + SoundCache.field_g * var39Lifetime1;
               }
               if (var12.field_dc) {
                 var12.field_mc.field_db = MatchingFieldValidator.a(FullscreenFocusCanvas.field_j, new String[]{var32}, (byte) -53);
-                var12.field_mc.a(BirthDateValidator.field_g, -(2 * BirthDateValidator.field_g) + var12.field_M, -2147483648, fe.field_g, var31);
-                var31 = var31 + fe.field_g;
+                var12.field_mc.a(BirthDateValidator.field_g, -(2 * BirthDateValidator.field_g) + var12.field_M, -2147483648, SoundCache.field_g, var31);
+                var31 = var31 + SoundCache.field_g;
               }
               if (var12.field_Tb) {
                 var12.field_Lb.field_db = MatchingFieldValidator.a(w.field_Hb, new String[]{var32}, (byte) -105);
-                var12.field_Lb.a(BirthDateValidator.field_g, -(2 * BirthDateValidator.field_g) + var12.field_M, -2147483648, fe.field_g, var31);
-                var31 = var31 + fe.field_g;
+                var12.field_Lb.a(BirthDateValidator.field_g, -(2 * BirthDateValidator.field_g) + var12.field_M, -2147483648, SoundCache.field_g, var31);
+                var31 = var31 + SoundCache.field_g;
               }
             }
             var33 = FullscreenFocusCanvas.a(var12.field_jc, var32, -3);
@@ -484,8 +484,8 @@ final class mk {
               var34_intLifetime1 = var12.field_Sb.field_xb.lineCount(var33, var12.field_M - BirthDateValidator.field_g - BirthDateValidator.field_g);
               var12.field_Sb.field_db = var33;
               var12.field_Sb.field_eb = var12.field_Hb * 256 / ig.field_g;
-              var12.field_Sb.a(BirthDateValidator.field_g, -(BirthDateValidator.field_g * 2) + var12.field_M, -2147483648, var34_intLifetime1 * fe.field_g, var31);
-              var31 = var31 + fe.field_g * var34_intLifetime1;
+              var12.field_Sb.a(BirthDateValidator.field_g, -(BirthDateValidator.field_g * 2) + var12.field_M, -2147483648, var34_intLifetime1 * SoundCache.field_g, var31);
+              var31 = var31 + SoundCache.field_g * var34_intLifetime1;
             }
             if (var7_int == 0) {
               var12.field_N = var31 - var12.field_pb;

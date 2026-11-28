@@ -64,7 +64,7 @@ final class LoginCredentials {
         }
     }
 
-    final static MusicTrack computeMusicTrack0793(boolean booleanArgument1, NetworkSupport011 networkSupport011Argument2, int integerArgument3, int integerArgument4, ResourceArchive resourceArchiveArgument5) {
+    final static MusicTrack computeMusicTrack0793(boolean booleanArgument1, SoundCache networkSupport011Argument2, int integerArgument3, int integerArgument4, ResourceArchive resourceArchiveArgument5) {
         byte[] byteArrayLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         String stringLocal3 = null;
@@ -113,7 +113,7 @@ final class LoginCredentials {
           return MixedSupport047.sceneWidgetPart008State0003.sceneWidgetState0090;
         }
         ResourceArchive resourceArchiveLocal1 = (ResourceArchive) null;
-        LoginCredentials.computeMusicTrack0793(true, (NetworkSupport011) null, 58, 53, (ResourceArchive) null);
+        LoginCredentials.computeMusicTrack0793(true, (SoundCache) null, 58, 53, (ResourceArchive) null);
         return MixedSupport047.sceneWidgetPart008State0003.sceneWidgetState0090;
     }
 
@@ -159,7 +159,7 @@ final class LoginCredentials {
           return this.stringState0281;
         }
         ResourceArchive resourceArchiveLocal1 = (ResourceArchive) null;
-        LoginCredentials.computeMusicTrack0793(true, (NetworkSupport011) null, -94, -75, (ResourceArchive) null);
+        LoginCredentials.computeMusicTrack0793(true, (SoundCache) null, -94, -75, (ResourceArchive) null);
         return this.stringState0281;
     }
 
@@ -168,7 +168,7 @@ final class LoginCredentials {
     }
 
     final static void performAction0788(int integerArgument1) {
-        NetworkSupport011.performAction1258(3970);
+        SoundCache.performAction1258(3970);
         if (integerArgument1 >= -38) {
           integerArrayState0116 = (int[]) null;
         }

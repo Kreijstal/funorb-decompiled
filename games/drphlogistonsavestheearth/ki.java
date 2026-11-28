@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ki {
-    static ok field_c;
+    static MusicTrack field_c;
     static he field_b;
     static he[] field_a;
 

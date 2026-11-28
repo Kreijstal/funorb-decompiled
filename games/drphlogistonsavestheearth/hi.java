@@ -5,7 +5,7 @@ import java.util.*;
 
 final class hi {
     private double[] field_c;
-    static ok field_l;
+    static MusicTrack field_l;
     static String field_i;
     static int field_g;
     private double[] field_b;
@@ -61,7 +61,7 @@ final class hi {
             }
           }
         } else {
-          field_l = (ok) null;
+          field_l = (MusicTrack) null;
           for (var15 = 0; var15 < 29; var15++) {
             this.field_c[var15] = this.field_c[var15 + 1] + (double)this.field_d * Math.random();
             this.field_k[var15] = this.field_k[1 + var15] - this.field_d * 4;

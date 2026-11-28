@@ -886,7 +886,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
         var2 = null;
         var3 = -1;
         if (no.field_d == 1) {
-          var3 = this.field_R.b(lc.field_c, 19091, AchievementIconEntry.field_k);
+          var3 = this.field_R.b(SoundCache.field_c, 19091, AchievementIconEntry.field_k);
           if (-1 != var3) {
             this.field_u = var3;
           }

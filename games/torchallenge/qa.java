@@ -63,7 +63,7 @@ final class qa {
 
     final static String a(int param0, CharSequence[] param1) {
         RuntimeException var2 = null;
-        ej var3 = null;
+        MusicTrack var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -71,8 +71,8 @@ final class qa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 110) {
-            var3 = (ej) null;
-            qa.a(-22, (ej) null);
+            var3 = (MusicTrack) null;
+            qa.a(-22, (MusicTrack) null);
           }
           stackIn_3_0 = qa.a(param1.length, 0, param1, 0);
           return stackIn_3_0;
@@ -90,7 +90,7 @@ final class qa {
         }
     }
 
-    final static void a(int param0, ej param1) {
+    final static void a(int param0, MusicTrack param1) {
         try {
           TextLayout.a(true, (byte) -79, param1);
           if (param0 <= 44) {

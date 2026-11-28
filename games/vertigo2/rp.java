@@ -107,10 +107,10 @@ final class rp implements ef {
           var5 = new int[6];
           int[] var3 = var5;
           this.field_h = EmailFormatValidator.a(var5, true, param1);
-          var4 = oo.field_o;
-          oo.a((ef) (this));
+          var4 = TriangleRasterizer.field_o;
+          TriangleRasterizer.setTextureProvider((ef) (this));
           this.field_g = (fc) (th.a(param0, var5, -27911));
-          oo.a(var4);
+          TriangleRasterizer.setTextureProvider(var4);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "rp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -137,20 +137,20 @@ final class rp implements ef {
           param0[1] = 0;
           var5 = param0[2];
           param0[2] = 0;
-          var6 = oo.field_o;
-          oo.a((ef) (this));
+          var6 = TriangleRasterizer.field_o;
+          TriangleRasterizer.setTextureProvider((ef) (this));
           try {
             this.field_g.a(param0, mb.field_w);
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var7 = decompiledCaughtException;
-            oo.a(var6);
+            TriangleRasterizer.setTextureProvider(var6);
             param0[0] = var3_int;
             param0[1] = var4;
             param0[2] = var5;
             throw rp.<RuntimeException>throwUnchecked(var7);
           }
-          oo.a(var6);
+          TriangleRasterizer.setTextureProvider(var6);
           param0[0] = var3_int;
           param0[1] = var4;
           param0[2] = var5;

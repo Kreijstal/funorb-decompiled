@@ -217,7 +217,7 @@ final class BirthDateChatEnableForm extends ArrayWidgetContainer implements Widg
           } else {
             stackSceneWidgetLocal9 = null;
             stackSceneWidgetLocal10 = null;
-            stackStringLocal11 = NetworkSupport011.stringState0430;
+            stackStringLocal11 = SoundCache.stringState0430;
           }
           DraggableWidgetContainer.sceneWidgetState0109 = new SceneWidget(stackLongLocal7, stackSceneWidgetLocal8, ((String) (Object) stackStringLocal11).toUpperCase());
           TextFieldValidator.sceneWidgetState0151 = new SceneWidget(0L, (SceneWidget) null);

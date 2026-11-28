@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class CrossfadingMidiPcmStream extends PcmStream {
-    private vh field_z;
+    private MusicTrack field_z;
     MidiPcmStream field_A;
     private int field_p;
     static int[] field_w;
     private int[] field_s;
-    private vh field_o;
+    private MusicTrack field_o;
     private boolean field_n;
     private int field_r;
     static String field_u;
     private int[] field_y;
-    private vh field_x;
+    private MusicTrack field_x;
     private boolean field_q;
     private MidiPcmStream field_C;
     static int[] field_m;
@@ -197,15 +197,15 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0, int param1, int param2, vh param3, int param4, boolean param5) {
+    final synchronized void a(int param0, int param1, int param2, MusicTrack param3, int param4, boolean param5) {
         boolean stackIn_19_1 = false;
         int stackIn_30_0 = 0;
         MidiPcmStream stackIn_40_0 = null;
-        vh stackIn_40_1 = null;
+        MusicTrack stackIn_40_1 = null;
         int stackIn_40_2 = 0;
         boolean stackIn_41_3;
         MidiPcmStream stackIn_49_0 = null;
-        vh stackIn_49_1 = null;
+        MusicTrack stackIn_49_1 = null;
         int stackIn_49_2 = 0;
         boolean stackIn_50_3;
         RuntimeException stackIn_57_0 = null;
@@ -269,7 +269,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             this.field_x = param3;
             if (param3 != null) {
               stackIn_49_0 = this.field_B;
-              stackIn_49_1 = (vh) (param3);
+              stackIn_49_1 = (MusicTrack) (param3);
               stackIn_49_2 = 20938;
               stackIn_50_3 = !(param5);
               ((MidiPcmStream) (Object) stackIn_49_0).a(stackIn_49_1, stackIn_49_2, stackIn_50_3);
@@ -283,7 +283,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             this.field_o = param3;
             if (param3 != null) {
               stackIn_40_0 = this.field_A;
-              stackIn_40_1 = (vh) (param3);
+              stackIn_40_1 = (MusicTrack) (param3);
               stackIn_40_2 = param0 - 1261;
               stackIn_41_3 = !(param5);
               ((MidiPcmStream) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_40_2, stackIn_41_3);

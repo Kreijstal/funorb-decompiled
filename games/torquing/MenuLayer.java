@@ -13,7 +13,7 @@ abstract class MenuLayer {
         try {
           var1 = new Sprite(540, 140);
           GzipDecompressor.a((byte) -121, var1);
-          be.a();
+          TriangleRasterizer.useRasterClip();
           SoftwareRasterizer.clearRaster();
           SingleChildWidgetContainer.field_z = 0;
           so.b(119);

@@ -570,7 +570,7 @@ class UiWidget extends IntrusiveNode {
             this.handleWheel(ld.field_l, param3, (byte) 36, this, param2, ExpandingPulseProjectile.field_cb, jh.field_R);
           }
           if (rh.field_X != 0) {
-            if (!this.pointerPressed(param3, wm.field_hb, (byte) 91, param2, this, m.field_a, rh.field_X)) {
+            if (!this.pointerPressed(param3, wm.field_hb, (byte) 91, param2, this, SoundCache.field_a, rh.field_X)) {
               if (var5 != 0) {
                 this.blur(84);
                 if (var7 != 0) {

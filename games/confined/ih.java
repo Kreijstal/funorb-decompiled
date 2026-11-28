@@ -140,15 +140,15 @@ final class ih {
         var42 = Confined.field_J ? 1 : 0;
         try {
           if (0 <= param6 &&
-            ti.field_g > param2) {
+            TriangleRasterizer.field_g > param2) {
             if (param8 < 0 &&
               param14 < 0 &&
               param12 < 0) {
               return;
             }
-            if (ti.field_e <= param8 &&
-              ti.field_e <= param14 &&
-              param12 >= ti.field_e) {
+            if (TriangleRasterizer.field_e <= param8 &&
+              TriangleRasterizer.field_e <= param14 &&
+              param12 >= TriangleRasterizer.field_e) {
               return;
             }
             var34 = -param2 + param6;
@@ -213,17 +213,17 @@ final class ih {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var36Lifetime2 = ti.field_l[param2];
+                var36Lifetime2 = TriangleRasterizer.field_l[param2];
                 while (param10 > param2) {
                   var37 = var17_int >> 16;
-                  if (ti.field_e > var37) {
+                  if (TriangleRasterizer.field_e > var37) {
                     var38 = (var18 >> 16) - (var17_int >> 16);
                     if (var38 != 0) {
                       var39 = (var22 - var21) / var38;
                       var40 = (-var25 + var26) / var38;
                       var41 = (var30 - var29) / var38;
-                      if (ti.field_e <= var38 + var37) {
-                        var38 = -1 - var37 + ti.field_e;
+                      if (TriangleRasterizer.field_e <= var38 + var37) {
+                        var38 = -1 - var37 + TriangleRasterizer.field_e;
                       }
                       if (0 > var37) {
                         oc.a(var36Lifetime2, param1, 104, var21 - var39 * var37, -(var37 * var40) + var25, var29 - var41 * var37, var41, var39, var38 + var37, var40);
@@ -232,13 +232,13 @@ final class ih {
                       }
                     } else {
                       if (var37 >= 0 &&
-                        var37 < ti.field_e) {
+                        var37 < TriangleRasterizer.field_e) {
                         oc.a(var37 + var36Lifetime2, param1, 67, var21, var25, var29, 0, 0, var38, 0);
                       }
                     }
                   }
                   param2++;
-                  if (param2 >= ti.field_g) {
+                  if (param2 >= TriangleRasterizer.field_g) {
                     return;
                   }
                   var26 = var26 + var28;
@@ -372,17 +372,17 @@ final class ih {
             if (!param0) {
               field_d = (ResourceArchive) null;
             }
-            var35Lifetime1 = ti.field_l[param2];
+            var35Lifetime1 = TriangleRasterizer.field_l[param2];
             while (param6 > param2) {
               var36Lifetime1 = var17_int >> 16;
-              if (var36Lifetime1 < ti.field_e) {
+              if (var36Lifetime1 < TriangleRasterizer.field_e) {
                 var37Lifetime1 = -(var17_int >> 16) + (var18 >> 16);
                 if (var37Lifetime1 != 0) {
                   var38Lifetime1 = (-var21 + var22) / var37Lifetime1;
                   var39Lifetime1 = (-var25 + var26) / var37Lifetime1;
                   var40Lifetime1 = (var30 - var29) / var37Lifetime1;
-                  if (var36Lifetime1 + var37Lifetime1 >= ti.field_e) {
-                    var37Lifetime1 = -1 + (-var36Lifetime1 + ti.field_e);
+                  if (var36Lifetime1 + var37Lifetime1 >= TriangleRasterizer.field_e) {
+                    var37Lifetime1 = -1 + (-var36Lifetime1 + TriangleRasterizer.field_e);
                   }
                   if (var36Lifetime1 >= 0) {
                     oc.a(var35Lifetime1 + var36Lifetime1, param1, 57, var21, var25, var29, var40Lifetime1, var38Lifetime1, var37Lifetime1, var39Lifetime1);
@@ -391,13 +391,13 @@ final class ih {
                   }
                 } else {
                   if (var36Lifetime1 >= 0 &&
-                    var36Lifetime1 < ti.field_e) {
+                    var36Lifetime1 < TriangleRasterizer.field_e) {
                     oc.a(var36Lifetime1 + var35Lifetime1, param1, 73, var21, var25, var29, 0, 0, var37Lifetime1, 0);
                   }
                 }
               }
               param2++;
-              if (param2 >= ti.field_g) {
+              if (param2 >= TriangleRasterizer.field_g) {
                 return;
               }
               var29 = var29 + var31;

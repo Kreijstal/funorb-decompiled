@@ -329,7 +329,7 @@ public final class TrackController extends GameShell {
         FrameTimer.clearStaticReferences(param0 ^ -6527);
         sk.clearStaticReferences((byte) 111);
         gf.resetStaticState((byte) 46);
-        jc.clearStaticReferences(-79);
+        SoundCache.clearStaticReferences(-79);
         ActiveLevel.resetStaticState(-107);
         GameScreen.clearStaticReferences(-8381);
         gj.clearStaticReferences((byte) -103);
@@ -343,7 +343,7 @@ public final class TrackController extends GameShell {
         MidiPlayer.clearStaticReferences((byte) 84);
         NodeHashTable.clearStaticReferences(param0 - 104);
         ha.resetStaticState(4);
-        fa.clearStaticReferences();
+        MidiFileReader.clearStaticReferences();
         MusicPatchPcmStream.clearStaticReferences(param0 ^ -109);
         AudioOutput.clearStaticReferences();
         CrossfadingMidiPcmStream.clearStaticReferences(1048576);
@@ -380,7 +380,7 @@ public final class TrackController extends GameShell {
         LevelGrid.a((byte) 107);
         MovingBlock.clearStaticReferences((byte) 41);
         u.clearStaticReferences((byte) 105);
-        pg.clearStaticReferences();
+        SynthesizerVoice.clearStaticReferences();
         c.a((byte) 107);
         PcmOutputWorker.clearStaticReferences(param0 ^ -3863);
         BitPacketBuffer.clearStaticReferences(false);
@@ -891,21 +891,21 @@ public final class TrackController extends GameShell {
             if (null != j.field_h) {
               ud.a(param0 ^ 339, 75.0f, ld.field_a);
               this.drawFrame(160);
-              od.field_d = new jc(j.field_h, DiskArchiveRequest.field_C);
-              TextLineMetrics.field_d[0] = cc.a(j.field_h, "", "track_wrong_password").b();
-              TextLineMetrics.field_d[1] = cc.a(j.field_h, "", "track_correct_password").b();
-              TextLineMetrics.field_d[2] = cc.a(j.field_h, "", "track_train_loop").b();
-              TextLineMetrics.field_d[3] = cc.a(j.field_h, "", "track_train_whistle").b();
-              TextLineMetrics.field_d[4] = cc.a(j.field_h, "", "track_train_fade").b();
-              TextLineMetrics.field_d[6] = cc.a(j.field_h, "", "track_blockpush_1").b();
-              TextLineMetrics.field_d[7] = cc.a(j.field_h, "", "track_blockconnect").b();
+              od.field_d = new SoundCache(j.field_h, DiskArchiveRequest.field_C);
+              TextLineMetrics.field_d[0] = SynthesizedSoundEffect.loadByName(j.field_h, "", "track_wrong_password").toPcmSample();
+              TextLineMetrics.field_d[1] = SynthesizedSoundEffect.loadByName(j.field_h, "", "track_correct_password").toPcmSample();
+              TextLineMetrics.field_d[2] = SynthesizedSoundEffect.loadByName(j.field_h, "", "track_train_loop").toPcmSample();
+              TextLineMetrics.field_d[3] = SynthesizedSoundEffect.loadByName(j.field_h, "", "track_train_whistle").toPcmSample();
+              TextLineMetrics.field_d[4] = SynthesizedSoundEffect.loadByName(j.field_h, "", "track_train_fade").toPcmSample();
+              TextLineMetrics.field_d[6] = SynthesizedSoundEffect.loadByName(j.field_h, "", "track_blockpush_1").toPcmSample();
+              TextLineMetrics.field_d[7] = SynthesizedSoundEffect.loadByName(j.field_h, "", "track_blockconnect").toPcmSample();
               TextLineMetrics.field_d[5] = TextLineMetrics.field_d[7];
-              TextLineMetrics.field_d[8] = cc.a(j.field_h, "", "track_footstep_1_and_2").b();
-              TextLineMetrics.field_d[9] = cc.a(j.field_h, "", "track_slide_4").b();
-              TextLineMetrics.field_d[10] = cc.a(j.field_h, "", "score_count").b();
+              TextLineMetrics.field_d[8] = SynthesizedSoundEffect.loadByName(j.field_h, "", "track_footstep_1_and_2").toPcmSample();
+              TextLineMetrics.field_d[9] = SynthesizedSoundEffect.loadByName(j.field_h, "", "track_slide_4").toPcmSample();
+              TextLineMetrics.field_d[10] = SynthesizedSoundEffect.loadByName(j.field_h, "", "score_count").toPcmSample();
               NameSuggestionsPanel.field_G[10] = 48;
-              TextLineMetrics.field_d[11] = cc.a(j.field_h, "", "block_disconnect_placeholder").b();
-              TextLineMetrics.field_d[12] = cc.a(j.field_h, "", "cannot_push_placeholder").b();
+              TextLineMetrics.field_d[11] = SynthesizedSoundEffect.loadByName(j.field_h, "", "block_disconnect_placeholder").toPcmSample();
+              TextLineMetrics.field_d[12] = SynthesizedSoundEffect.loadByName(j.field_h, "", "cannot_push_placeholder").toPcmSample();
               var39 = TextLineMetrics.field_d[10].field_j;
               var35 = new byte[AudioOutput.field_h * 5 / 50];
               var30 = var35;
@@ -926,10 +926,10 @@ public final class TrackController extends GameShell {
             if (sk.field_j != null) {
               ud.a(128, 80.0f, ji.field_e);
               this.drawFrame(160);
-              Model.field_P[0] = MidiFile.a(sk.field_j, "", "track controller titlescreen");
-              Model.field_P[1] = MidiFile.a(sk.field_j, "", "track controller new");
-              Model.field_P[2] = MidiFile.a(sk.field_j, "", "track controller level complete");
-              Model.field_P[3] = MidiFile.a(sk.field_j, "", "track controller game over");
+              Model.field_P[0] = MidiFile.load(sk.field_j, "", "track controller titlescreen");
+              Model.field_P[1] = MidiFile.load(sk.field_j, "", "track controller new");
+              Model.field_P[2] = MidiFile.load(sk.field_j, "", "track controller level complete");
+              Model.field_P[3] = MidiFile.load(sk.field_j, "", "track controller game over");
               sk.field_j = null;
               qi.d(param0 - 359);
               return false;

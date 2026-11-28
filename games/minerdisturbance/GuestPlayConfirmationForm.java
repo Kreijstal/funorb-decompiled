@@ -237,7 +237,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
               IsaacRandom.field_m[-1 + var4] = 0;
               ResizableModalDialog.field_P[0] = 5;
             } else if (ti.field_M == 4) {
-              var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, w.field_S, ri.field_f);
+              var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, w.field_S, SoundCache.field_f);
               var4 = var3_int + 2;
               IsaacRandom.field_m = new int[var4];
               ne.field_K = new String[var4];
@@ -501,7 +501,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
         GameAppletShell.field_g[21] = md.field_a;
         GameAppletShell.field_g[19] = MusicPatchPcmStream.field_t;
         GameAppletShell.field_g[18] = NetworkArchiveRequest.field_H;
-        GameAppletShell.field_g[20] = ri.field_b;
+        GameAppletShell.field_g[20] = SoundCache.field_b;
         GameAppletShell.field_g[16] = dn.field_n;
         GameAppletShell.field_g[13] = te.field_a;
         GameAppletShell.field_g[17] = de.field_c;

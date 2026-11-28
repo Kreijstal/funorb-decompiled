@@ -58,7 +58,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_15_0;
           }
           if (this.b((byte) -6, param1)) {
-            stackIn_18_0 = fi.field_f;
+            stackIn_18_0 = SoundCache.field_f;
             return stackIn_18_0;
           }
           if (var6.length() <= 0) {

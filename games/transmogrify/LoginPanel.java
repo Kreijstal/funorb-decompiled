@@ -280,7 +280,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
         }
     }
 
-    final static void a(pl param0, boolean param1, int param2, int param3, byte param4) {
+    final static void a(MusicTrack param0, boolean param1, int param2, int param3, byte param4) {
         if (param4 < 0) {
           return;
         }

@@ -380,6 +380,22 @@
       "renamedSymbol": "C:PasswordValidator"
     },
     {
+      "symbol": "C:dg",
+      "originalName": "dg",
+      "to": "SoundEnvelope",
+      "evidence": "Decodes timed amplitude segments and interpolates the current value as synthesis advances.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:SoundEnvelope"
+    },
+    {
+      "symbol": "C:dm",
+      "originalName": "dm",
+      "to": "SynthesizerVoice",
+      "evidence": "Decodes one instrument voice and generates samples from its oscillators, envelopes and filter.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:SynthesizerVoice"
+    },
+    {
       "symbol": "C:eb",
       "originalName": "eb",
       "to": "DisplayNameSelectionPanel",
@@ -450,6 +466,14 @@
       "evidence": "Abstract IntrusiveNode defining sample fill, skip and a sibling substream link.",
       "confidence": "reviewed",
       "renamedSymbol": "C:PcmStream"
+    },
+    {
+      "symbol": "C:g",
+      "originalName": "g",
+      "to": "SynthesizedSoundEffect",
+      "evidence": "Loads an archived sound effect, mixes its instrument voices and converts its samples to PCM.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:SynthesizedSoundEffect"
     },
     {
       "symbol": "C:ga",
@@ -1106,6 +1130,14 @@
       "evidence": "UiWidget owning an IntrusiveDeque of children and forwarding draw/focus/input to them.",
       "confidence": "reviewed",
       "renamedSymbol": "C:WidgetContainer"
+    },
+    {
+      "symbol": "C:ud",
+      "originalName": "ud",
+      "to": "SoundCache",
+      "evidence": "Caches decoded PCM and resumes decoding in-progress Vorbis samples from a separate music archive.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:SoundCache"
     },
     {
       "symbol": "C:ue",
@@ -2636,12 +2668,36 @@
       "renamedSymbol": "M:PasswordValidator.clearDeclaredStaticReferences(I)V"
     },
     {
+      "symbol": "M:dg.a()V",
+      "originalName": "a",
+      "to": "reset",
+      "evidence": "Source-purpose review: Resets the envelope segment cursor and interpolation state.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundEnvelope.reset()V"
+    },
+    {
+      "symbol": "M:dg.a(I)I",
+      "originalName": "a",
+      "to": "step",
+      "evidence": "Source-purpose review: Advances the envelope interpolation by one sample and returns the next value.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundEnvelope.step(I)I"
+    },
+    {
       "symbol": "M:dg.a(Lgk;)V",
       "originalName": "a",
       "to": "decodeSegments",
       "evidence": "Read the envelope segment count,allocate the two retained segment arrays,and read paired unsigned16-bit values per segment. Preserve every actual packet-reader argument,allocation/write order and partial state. Pre-rename body SHA256 87c5b89d3eddc7afa25fd65f4455797717955f378c944a7eaf3407936f108d08. Complete method bodies and their variants reviewed with exact original descriptors,own-field accesses and bound audio caller contexts. Identifier-only naming;preserve argument widths,guards,signed overflow,FP evaluation,shared aliases,all partial writes,call/allocation/exception order,modifiers and override/native bindings. Existing meaningful names remain unchanged;no whole-runtime equivalence claim.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:dg.decodeSegments(LPacketBuffer;)V"
+      "renamedSymbol": "M:SoundEnvelope.decodeSegments(LPacketBuffer;)V"
+    },
+    {
+      "symbol": "M:dg.b(Lgk;)V",
+      "originalName": "b",
+      "to": "decode",
+      "evidence": "Source-purpose review: Reads the encoded instrument voice or complete envelope from the packet.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundEnvelope.decode(LPacketBuffer;)V"
     },
     {
       "symbol": "M:dh.a(I)V",
@@ -2697,7 +2753,31 @@
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 8 null writes to 8 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish each target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 224f41d77f88862ad0cc7eb641f3649514ba29544c1c968aa3d561bbe6b1de43.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:dm.clearStaticReferences()V"
+      "renamedSymbol": "M:SynthesizerVoice.clearStaticReferences()V"
+    },
+    {
+      "symbol": "M:dm.a(II)[I",
+      "originalName": "a",
+      "to": "synthesize",
+      "evidence": "Source-purpose review: Generates the rendered samples for the effect or instrument voice.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SynthesizerVoice.synthesize(II)[I"
+    },
+    {
+      "symbol": "M:dm.a(III)I",
+      "originalName": "a",
+      "to": "evaluateWaveform",
+      "evidence": "Source-purpose review: Evaluates the selected oscillator waveform at the supplied phase and amplitude.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SynthesizerVoice.evaluateWaveform(III)I"
+    },
+    {
+      "symbol": "M:dm.a(Lgk;)V",
+      "originalName": "a",
+      "to": "decode",
+      "evidence": "Source-purpose review: Reads the encoded instrument voice or complete envelope from the packet.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SynthesizerVoice.decode(LPacketBuffer;)V"
     },
     {
       "symbol": "M:e.a(B)V",
@@ -3202,6 +3282,30 @@
       "evidence": "Source-purpose review: Clears 2 owned static reference fields by null assignment. Full source-bound restricted-effect parse permits only these null stores, primitive guard/local expressions, conditional returns, and direct self calls (1 sites). No external calls or foreign field/array effects. Preserve modifiers,full primitive domains,casts,sentinel control flow,self recursion/overflow,division exceptions and original write/evaluation order. Effect parser passed7positive/14hostile fixtures;representative bodies/callers separately reviewed;all original caller bindings retained. Cleanup synonym selected to avoid inherited or same-signature name collisions;all unselected meaningful names preserved.",
       "confidence": "reviewed",
       "renamedSymbol": "M:fl.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:g.a()[B",
+      "originalName": "a",
+      "to": "synthesize",
+      "evidence": "Source-purpose review: Generates the rendered samples for the effect or instrument voice.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SynthesizedSoundEffect.synthesize()[B"
+    },
+    {
+      "symbol": "M:g.a(Lad;II)Lg;",
+      "originalName": "a",
+      "to": "load",
+      "evidence": "Source-purpose review: Reads and decodes the indexed sound effect from its archive.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SynthesizedSoundEffect.load(LResourceArchive;II)LSynthesizedSoundEffect;"
+    },
+    {
+      "symbol": "M:g.b()Ltd;",
+      "originalName": "b",
+      "to": "toPcmSample",
+      "evidence": "Source-purpose review: Mixes the effect and packages its PCM bytes and loop positions at 22,050 samples per second.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SynthesizedSoundEffect.toPcmSample()LPcmSample;"
     },
     {
       "symbol": "M:gd.a(I)V",
@@ -5585,7 +5689,7 @@
       "to": "decode",
       "evidence": "Read pair counts from packed nibbles,two gain endpoints,per-pair first-state phase/magnitude and masked second-state overrides;copy unchanged pairs,conditionally decode the envelope segments,or reset both gains for zero counts. Preserve every original reader/envelope guard and read/allocation/write/failure order. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 94d40f721f950436e480494621a4d8b2fad38dd4db195e1060552e997a2e0aeb. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:SoundFilter.decode(LPacketBuffer;Ldg;)V"
+      "renamedSymbol": "M:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V"
     },
     {
       "symbol": "M:lj.b(IIF)F",
@@ -8164,12 +8268,68 @@
       "renamedSymbol": "M:uc.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:ud.a(BI[II)Ltd;",
+      "originalName": "a",
+      "to": "loadSoundEffect",
+      "evidence": "Source-purpose review: Synthesizes an archived sound effect by group and file ID and caches the resulting PCM.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundCache.loadSoundEffect(BI[II)LPcmSample;"
+    },
+    {
+      "symbol": "M:ud.a(III)Ltd;",
+      "originalName": "a",
+      "to": "getSoundEffectByGroup",
+      "evidence": "Source-purpose review: Retrieves a synthesized effect by archive group and file ID with an unlimited sample budget.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundCache.getSoundEffectByGroup(III)LPcmSample;"
+    },
+    {
+      "symbol": "M:ud.a(IIZ)Ltd;",
+      "originalName": "a",
+      "to": "getMusicSampleByGroup",
+      "evidence": "Source-purpose review: Retrieves music PCM by archive group and file ID with an unlimited sample budget.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundCache.getMusicSampleByGroup(IIZ)LPcmSample;"
+    },
+    {
+      "symbol": "M:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;",
+      "originalName": "a",
+      "to": "loadSoundEffectByName",
+      "evidence": "Source-purpose review: Resolves names in the effect archive and loads the PCM with a sample budget.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundCache.loadSoundEffectByName(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;"
+    },
+    {
+      "symbol": "M:ud.a(I[ILjava/lang/String;)Ltd;",
+      "originalName": "a",
+      "to": "loadSoundEffectByName",
+      "evidence": "Source-purpose review: Resolves names in the effect archive and loads the PCM with a sample budget.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundCache.loadSoundEffectByName(I[ILjava/lang/String;)LPcmSample;"
+    },
+    {
+      "symbol": "M:ud.a(Ljava/lang/String;B)Ltd;",
+      "originalName": "a",
+      "to": "getSoundEffectByName",
+      "evidence": "Source-purpose review: Retrieves a synthesized effect by archive name with an unlimited sample budget.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundCache.getSoundEffectByName(Ljava/lang/String;B)LPcmSample;"
+    },
+    {
+      "symbol": "M:ud.a([IIII)Ltd;",
+      "originalName": "a",
+      "to": "loadMusicSample",
+      "evidence": "Source-purpose review: Loads or resumes a compressed music sample by archive group and file ID and caches the decoded PCM.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundCache.loadMusicSample([IIII)LPcmSample;"
+    },
+    {
       "symbol": "M:ud.b(I)V",
       "originalName": "b",
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 1 null writes to 1 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish each target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 30846b163fa4989d6cfb79402d3953dd2e8f78af7627208590a5e09bc4f811b8.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ud.clearStaticReferences(I)V"
+      "renamedSymbol": "M:SoundCache.clearStaticReferences(I)V"
     },
     {
       "symbol": "M:ue.a(IIII)V",
@@ -9995,9 +10155,9 @@
     },
     {
       "symbol": "C:dg",
-      "renamedSymbol": "C:dg",
+      "renamedSymbol": "C:SoundEnvelope",
       "originalName": "dg",
-      "renamedName": "dg",
+      "renamedName": "SoundEnvelope",
       "declaration": {
         "file": "dg.java",
         "start": 50,
@@ -10061,9 +10221,9 @@
     },
     {
       "symbol": "C:dm",
-      "renamedSymbol": "C:dm",
+      "renamedSymbol": "C:SynthesizerVoice",
       "originalName": "dm",
-      "renamedName": "dm",
+      "renamedName": "SynthesizerVoice",
       "declaration": {
         "file": "dm.java",
         "start": 71,
@@ -10369,9 +10529,9 @@
     },
     {
       "symbol": "C:g",
-      "renamedSymbol": "C:g",
+      "renamedSymbol": "C:SynthesizedSoundEffect",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "SynthesizedSoundEffect",
       "declaration": {
         "file": "g.java",
         "start": 50,
@@ -12404,9 +12564,9 @@
     },
     {
       "symbol": "C:ud",
-      "renamedSymbol": "C:ud",
+      "renamedSymbol": "C:SoundCache",
       "originalName": "ud",
-      "renamedName": "ud",
+      "renamedName": "SoundCache",
       "declaration": {
         "file": "ud.java",
         "start": 50,
@@ -16320,7 +16480,7 @@
     },
     {
       "symbol": "F:dg.field_a:I",
-      "renamedSymbol": "F:dg.field_a:I",
+      "renamedSymbol": "F:SoundEnvelope.field_a:I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -16331,7 +16491,7 @@
     },
     {
       "symbol": "F:dg.field_b:I",
-      "renamedSymbol": "F:dg.field_b:I",
+      "renamedSymbol": "F:SoundEnvelope.field_b:I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -16342,7 +16502,7 @@
     },
     {
       "symbol": "F:dg.field_c:[I",
-      "renamedSymbol": "F:dg.field_c:[I",
+      "renamedSymbol": "F:SoundEnvelope.field_c:[I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -16353,7 +16513,7 @@
     },
     {
       "symbol": "F:dg.field_d:I",
-      "renamedSymbol": "F:dg.field_d:I",
+      "renamedSymbol": "F:SoundEnvelope.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -16364,7 +16524,7 @@
     },
     {
       "symbol": "F:dg.field_e:I",
-      "renamedSymbol": "F:dg.field_e:I",
+      "renamedSymbol": "F:SoundEnvelope.field_e:I",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -16375,7 +16535,7 @@
     },
     {
       "symbol": "F:dg.field_f:I",
-      "renamedSymbol": "F:dg.field_f:I",
+      "renamedSymbol": "F:SoundEnvelope.field_f:I",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -16386,7 +16546,7 @@
     },
     {
       "symbol": "F:dg.field_g:I",
-      "renamedSymbol": "F:dg.field_g:I",
+      "renamedSymbol": "F:SoundEnvelope.field_g:I",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -16397,7 +16557,7 @@
     },
     {
       "symbol": "F:dg.field_h:[I",
-      "renamedSymbol": "F:dg.field_h:[I",
+      "renamedSymbol": "F:SoundEnvelope.field_h:[I",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -16408,7 +16568,7 @@
     },
     {
       "symbol": "F:dg.field_i:I",
-      "renamedSymbol": "F:dg.field_i:I",
+      "renamedSymbol": "F:SoundEnvelope.field_i:I",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -16419,7 +16579,7 @@
     },
     {
       "symbol": "F:dg.field_j:I",
-      "renamedSymbol": "F:dg.field_j:I",
+      "renamedSymbol": "F:SoundEnvelope.field_j:I",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -16430,7 +16590,7 @@
     },
     {
       "symbol": "F:dg.field_k:I",
-      "renamedSymbol": "F:dg.field_k:I",
+      "renamedSymbol": "F:SoundEnvelope.field_k:I",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -16837,7 +16997,7 @@
     },
     {
       "symbol": "F:dm.field_a:Ldg;",
-      "renamedSymbol": "F:dm.field_a:Ldg;",
+      "renamedSymbol": "F:SynthesizerVoice.field_a:LSoundEnvelope;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -16848,7 +17008,7 @@
     },
     {
       "symbol": "F:dm.field_b:[I",
-      "renamedSymbol": "F:dm.field_b:[I",
+      "renamedSymbol": "F:SynthesizerVoice.field_b:[I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -16859,7 +17019,7 @@
     },
     {
       "symbol": "F:dm.field_c:Ldg;",
-      "renamedSymbol": "F:dm.field_c:Ldg;",
+      "renamedSymbol": "F:SynthesizerVoice.field_c:LSoundEnvelope;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -16870,7 +17030,7 @@
     },
     {
       "symbol": "F:dm.field_d:I",
-      "renamedSymbol": "F:dm.field_d:I",
+      "renamedSymbol": "F:SynthesizerVoice.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -16881,7 +17041,7 @@
     },
     {
       "symbol": "F:dm.field_e:Ldg;",
-      "renamedSymbol": "F:dm.field_e:Ldg;",
+      "renamedSymbol": "F:SynthesizerVoice.field_e:LSoundEnvelope;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -16892,7 +17052,7 @@
     },
     {
       "symbol": "F:dm.field_f:Ldg;",
-      "renamedSymbol": "F:dm.field_f:Ldg;",
+      "renamedSymbol": "F:SynthesizerVoice.field_f:LSoundEnvelope;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -16903,7 +17063,7 @@
     },
     {
       "symbol": "F:dm.field_g:[I",
-      "renamedSymbol": "F:dm.field_g:[I",
+      "renamedSymbol": "F:SynthesizerVoice.field_g:[I",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -16914,7 +17074,7 @@
     },
     {
       "symbol": "F:dm.field_h:I",
-      "renamedSymbol": "F:dm.field_h:I",
+      "renamedSymbol": "F:SynthesizerVoice.field_h:I",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -16925,7 +17085,7 @@
     },
     {
       "symbol": "F:dm.field_i:I",
-      "renamedSymbol": "F:dm.field_i:I",
+      "renamedSymbol": "F:SynthesizerVoice.field_i:I",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -16936,7 +17096,7 @@
     },
     {
       "symbol": "F:dm.field_j:Llj;",
-      "renamedSymbol": "F:dm.field_j:LSoundFilter;",
+      "renamedSymbol": "F:SynthesizerVoice.field_j:LSoundFilter;",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -16947,7 +17107,7 @@
     },
     {
       "symbol": "F:dm.field_k:Ldg;",
-      "renamedSymbol": "F:dm.field_k:Ldg;",
+      "renamedSymbol": "F:SynthesizerVoice.field_k:LSoundEnvelope;",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -16958,7 +17118,7 @@
     },
     {
       "symbol": "F:dm.field_l:Ldg;",
-      "renamedSymbol": "F:dm.field_l:Ldg;",
+      "renamedSymbol": "F:SynthesizerVoice.field_l:LSoundEnvelope;",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -16969,7 +17129,7 @@
     },
     {
       "symbol": "F:dm.field_m:I",
-      "renamedSymbol": "F:dm.field_m:I",
+      "renamedSymbol": "F:SynthesizerVoice.field_m:I",
       "originalName": "field_m",
       "renamedName": "field_m",
       "declaration": {
@@ -16980,7 +17140,7 @@
     },
     {
       "symbol": "F:dm.field_n:Ldg;",
-      "renamedSymbol": "F:dm.field_n:Ldg;",
+      "renamedSymbol": "F:SynthesizerVoice.field_n:LSoundEnvelope;",
       "originalName": "field_n",
       "renamedName": "field_n",
       "declaration": {
@@ -16991,7 +17151,7 @@
     },
     {
       "symbol": "F:dm.field_o:[I",
-      "renamedSymbol": "F:dm.field_o:[I",
+      "renamedSymbol": "F:SynthesizerVoice.field_o:[I",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -17002,7 +17162,7 @@
     },
     {
       "symbol": "F:dm.field_p:[I",
-      "renamedSymbol": "F:dm.field_p:[I",
+      "renamedSymbol": "F:SynthesizerVoice.field_p:[I",
       "originalName": "field_p",
       "renamedName": "field_p",
       "declaration": {
@@ -17013,7 +17173,7 @@
     },
     {
       "symbol": "F:dm.field_q:[I",
-      "renamedSymbol": "F:dm.field_q:[I",
+      "renamedSymbol": "F:SynthesizerVoice.field_q:[I",
       "originalName": "field_q",
       "renamedName": "field_q",
       "declaration": {
@@ -17024,7 +17184,7 @@
     },
     {
       "symbol": "F:dm.field_r:[I",
-      "renamedSymbol": "F:dm.field_r:[I",
+      "renamedSymbol": "F:SynthesizerVoice.field_r:[I",
       "originalName": "field_r",
       "renamedName": "field_r",
       "declaration": {
@@ -17035,7 +17195,7 @@
     },
     {
       "symbol": "F:dm.field_s:[I",
-      "renamedSymbol": "F:dm.field_s:[I",
+      "renamedSymbol": "F:SynthesizerVoice.field_s:[I",
       "originalName": "field_s",
       "renamedName": "field_s",
       "declaration": {
@@ -17046,7 +17206,7 @@
     },
     {
       "symbol": "F:dm.field_t:[I",
-      "renamedSymbol": "F:dm.field_t:[I",
+      "renamedSymbol": "F:SynthesizerVoice.field_t:[I",
       "originalName": "field_t",
       "renamedName": "field_t",
       "declaration": {
@@ -17057,7 +17217,7 @@
     },
     {
       "symbol": "F:dm.field_u:[I",
-      "renamedSymbol": "F:dm.field_u:[I",
+      "renamedSymbol": "F:SynthesizerVoice.field_u:[I",
       "originalName": "field_u",
       "renamedName": "field_u",
       "declaration": {
@@ -17068,7 +17228,7 @@
     },
     {
       "symbol": "F:dm.field_v:[I",
-      "renamedSymbol": "F:dm.field_v:[I",
+      "renamedSymbol": "F:SynthesizerVoice.field_v:[I",
       "originalName": "field_v",
       "renamedName": "field_v",
       "declaration": {
@@ -17079,7 +17239,7 @@
     },
     {
       "symbol": "F:dm.field_w:[I",
-      "renamedSymbol": "F:dm.field_w:[I",
+      "renamedSymbol": "F:SynthesizerVoice.field_w:[I",
       "originalName": "field_w",
       "renamedName": "field_w",
       "declaration": {
@@ -17090,7 +17250,7 @@
     },
     {
       "symbol": "F:dm.field_x:Ldg;",
-      "renamedSymbol": "F:dm.field_x:Ldg;",
+      "renamedSymbol": "F:SynthesizerVoice.field_x:LSoundEnvelope;",
       "originalName": "field_x",
       "renamedName": "field_x",
       "declaration": {
@@ -17101,7 +17261,7 @@
     },
     {
       "symbol": "F:dm.field_y:Ldg;",
-      "renamedSymbol": "F:dm.field_y:Ldg;",
+      "renamedSymbol": "F:SynthesizerVoice.field_y:LSoundEnvelope;",
       "originalName": "field_y",
       "renamedName": "field_y",
       "declaration": {
@@ -18707,7 +18867,7 @@
     },
     {
       "symbol": "F:g.field_a:I",
-      "renamedSymbol": "F:g.field_a:I",
+      "renamedSymbol": "F:SynthesizedSoundEffect.field_a:I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -18718,7 +18878,7 @@
     },
     {
       "symbol": "F:g.field_b:[Ldm;",
-      "renamedSymbol": "F:g.field_b:[Ldm;",
+      "renamedSymbol": "F:SynthesizedSoundEffect.field_b:[LSynthesizerVoice;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -18729,7 +18889,7 @@
     },
     {
       "symbol": "F:g.field_c:I",
-      "renamedSymbol": "F:g.field_c:I",
+      "renamedSymbol": "F:SynthesizedSoundEffect.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -24999,7 +25159,7 @@
     },
     {
       "symbol": "F:lg.field_i:Lud;",
-      "renamedSymbol": "F:lg.field_i:Lud;",
+      "renamedSymbol": "F:lg.field_i:LSoundCache;",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -33634,7 +33794,7 @@
     },
     {
       "symbol": "F:ud.field_a:I",
-      "renamedSymbol": "F:ud.field_a:I",
+      "renamedSymbol": "F:SoundCache.field_a:I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -33645,7 +33805,7 @@
     },
     {
       "symbol": "F:ud.field_b:I",
-      "renamedSymbol": "F:ud.field_b:I",
+      "renamedSymbol": "F:SoundCache.field_b:I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -33656,7 +33816,7 @@
     },
     {
       "symbol": "F:ud.field_c:Lad;",
-      "renamedSymbol": "F:ud.field_c:LResourceArchive;",
+      "renamedSymbol": "F:SoundCache.field_c:LResourceArchive;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -33667,7 +33827,7 @@
     },
     {
       "symbol": "F:ud.field_d:I",
-      "renamedSymbol": "F:ud.field_d:I",
+      "renamedSymbol": "F:SoundCache.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -33678,7 +33838,7 @@
     },
     {
       "symbol": "F:ud.field_e:[Ljava/lang/String;",
-      "renamedSymbol": "F:ud.field_e:[Ljava/lang/String;",
+      "renamedSymbol": "F:SoundCache.field_e:[Ljava/lang/String;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -33689,7 +33849,7 @@
     },
     {
       "symbol": "F:ud.field_f:Lcg;",
-      "renamedSymbol": "F:ud.field_f:Lcg;",
+      "renamedSymbol": "F:SoundCache.field_f:Lcg;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -33700,7 +33860,7 @@
     },
     {
       "symbol": "F:ud.field_g:Lcg;",
-      "renamedSymbol": "F:ud.field_g:Lcg;",
+      "renamedSymbol": "F:SoundCache.field_g:Lcg;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -33711,7 +33871,7 @@
     },
     {
       "symbol": "F:ud.field_h:Lad;",
-      "renamedSymbol": "F:ud.field_h:LResourceArchive;",
+      "renamedSymbol": "F:SoundCache.field_h:LResourceArchive;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -35328,7 +35488,7 @@
     },
     {
       "symbol": "F:wd.field_i:Lud;",
-      "renamedSymbol": "F:wd.field_i:Lud;",
+      "renamedSymbol": "F:wd.field_i:LSoundCache;",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -57097,7 +57257,7 @@
     },
     {
       "symbol": "L:dc.a(ILjava/lang/String;Ljava/lang/String;Lud;Lad;)Llg;#0",
-      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;Lud;LResourceArchive;)Llg;#0",
+      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;LSoundCache;LResourceArchive;)Llg;#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -57108,7 +57268,7 @@
     },
     {
       "symbol": "L:dc.a(ILjava/lang/String;Ljava/lang/String;Lud;Lad;)Llg;#1",
-      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;Lud;LResourceArchive;)Llg;#1",
+      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;LSoundCache;LResourceArchive;)Llg;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -57119,7 +57279,7 @@
     },
     {
       "symbol": "L:dc.a(ILjava/lang/String;Ljava/lang/String;Lud;Lad;)Llg;#10",
-      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;Lud;LResourceArchive;)Llg;#10",
+      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;LSoundCache;LResourceArchive;)Llg;#10",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -57130,7 +57290,7 @@
     },
     {
       "symbol": "L:dc.a(ILjava/lang/String;Ljava/lang/String;Lud;Lad;)Llg;#11",
-      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;Lud;LResourceArchive;)Llg;#11",
+      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;LSoundCache;LResourceArchive;)Llg;#11",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -57141,7 +57301,7 @@
     },
     {
       "symbol": "L:dc.a(ILjava/lang/String;Ljava/lang/String;Lud;Lad;)Llg;#12",
-      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;Lud;LResourceArchive;)Llg;#12",
+      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;LSoundCache;LResourceArchive;)Llg;#12",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -57152,7 +57312,7 @@
     },
     {
       "symbol": "L:dc.a(ILjava/lang/String;Ljava/lang/String;Lud;Lad;)Llg;#13",
-      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;Lud;LResourceArchive;)Llg;#13",
+      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;LSoundCache;LResourceArchive;)Llg;#13",
       "originalName": "stackIn_17_2",
       "renamedName": "stackIn_17_2",
       "declaration": {
@@ -57163,7 +57323,7 @@
     },
     {
       "symbol": "L:dc.a(ILjava/lang/String;Ljava/lang/String;Lud;Lad;)Llg;#14",
-      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;Lud;LResourceArchive;)Llg;#14",
+      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;LSoundCache;LResourceArchive;)Llg;#14",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -57174,7 +57334,7 @@
     },
     {
       "symbol": "L:dc.a(ILjava/lang/String;Ljava/lang/String;Lud;Lad;)Llg;#15",
-      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;Lud;LResourceArchive;)Llg;#15",
+      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;LSoundCache;LResourceArchive;)Llg;#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -57185,7 +57345,7 @@
     },
     {
       "symbol": "L:dc.a(ILjava/lang/String;Ljava/lang/String;Lud;Lad;)Llg;#2",
-      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;Lud;LResourceArchive;)Llg;#2",
+      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;LSoundCache;LResourceArchive;)Llg;#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -57196,7 +57356,7 @@
     },
     {
       "symbol": "L:dc.a(ILjava/lang/String;Ljava/lang/String;Lud;Lad;)Llg;#3",
-      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;Lud;LResourceArchive;)Llg;#3",
+      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;LSoundCache;LResourceArchive;)Llg;#3",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -57207,7 +57367,7 @@
     },
     {
       "symbol": "L:dc.a(ILjava/lang/String;Ljava/lang/String;Lud;Lad;)Llg;#4",
-      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;Lud;LResourceArchive;)Llg;#4",
+      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;LSoundCache;LResourceArchive;)Llg;#4",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -57218,7 +57378,7 @@
     },
     {
       "symbol": "L:dc.a(ILjava/lang/String;Ljava/lang/String;Lud;Lad;)Llg;#5",
-      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;Lud;LResourceArchive;)Llg;#5",
+      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;LSoundCache;LResourceArchive;)Llg;#5",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -57229,7 +57389,7 @@
     },
     {
       "symbol": "L:dc.a(ILjava/lang/String;Ljava/lang/String;Lud;Lad;)Llg;#6",
-      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;Lud;LResourceArchive;)Llg;#6",
+      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;LSoundCache;LResourceArchive;)Llg;#6",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -57240,7 +57400,7 @@
     },
     {
       "symbol": "L:dc.a(ILjava/lang/String;Ljava/lang/String;Lud;Lad;)Llg;#7",
-      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;Lud;LResourceArchive;)Llg;#7",
+      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;LSoundCache;LResourceArchive;)Llg;#7",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -57251,7 +57411,7 @@
     },
     {
       "symbol": "L:dc.a(ILjava/lang/String;Ljava/lang/String;Lud;Lad;)Llg;#8",
-      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;Lud;LResourceArchive;)Llg;#8",
+      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;LSoundCache;LResourceArchive;)Llg;#8",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -57262,7 +57422,7 @@
     },
     {
       "symbol": "L:dc.a(ILjava/lang/String;Ljava/lang/String;Lud;Lad;)Llg;#9",
-      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;Lud;LResourceArchive;)Llg;#9",
+      "renamedSymbol": "L:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;LSoundCache;LResourceArchive;)Llg;#9",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -58461,7 +58621,7 @@
     },
     {
       "symbol": "L:dg.a(I)I#0",
-      "renamedSymbol": "L:dg.a(I)I#0",
+      "renamedSymbol": "L:SoundEnvelope.step(I)I#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -58472,7 +58632,7 @@
     },
     {
       "symbol": "L:dg.a(Lgk;)V#0",
-      "renamedSymbol": "L:dg.decodeSegments(LPacketBuffer;)V#0",
+      "renamedSymbol": "L:SoundEnvelope.decodeSegments(LPacketBuffer;)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -60419,7 +60579,7 @@
     },
     {
       "symbol": "L:dm.<initializer>()V#0",
-      "renamedSymbol": "L:dm.<initializer>()V#0",
+      "renamedSymbol": "L:SynthesizerVoice.<initializer>()V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -60430,7 +60590,7 @@
     },
     {
       "symbol": "L:dm.<initializer>()V#1",
-      "renamedSymbol": "L:dm.<initializer>()V#1",
+      "renamedSymbol": "L:SynthesizerVoice.<initializer>()V#1",
       "originalName": "var1Lifetime1",
       "renamedName": "var1Lifetime1",
       "declaration": {
@@ -60441,7 +60601,7 @@
     },
     {
       "symbol": "L:dm.<initializer>()V#2",
-      "renamedSymbol": "L:dm.<initializer>()V#2",
+      "renamedSymbol": "L:SynthesizerVoice.<initializer>()V#2",
       "originalName": "var0",
       "renamedName": "var0",
       "declaration": {
@@ -60452,7 +60612,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#0",
-      "renamedSymbol": "L:dm.a(II)[I#0",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#0",
       "originalName": "stackIn_41_0",
       "renamedName": "stackIn_41_0",
       "declaration": {
@@ -60463,7 +60623,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#1",
-      "renamedSymbol": "L:dm.a(II)[I#1",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -60474,7 +60634,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#10",
-      "renamedSymbol": "L:dm.a(II)[I#10",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#10",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -60485,7 +60645,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#11",
-      "renamedSymbol": "L:dm.a(II)[I#11",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#11",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -60496,7 +60656,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#12",
-      "renamedSymbol": "L:dm.a(II)[I#12",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#12",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -60507,7 +60667,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#13",
-      "renamedSymbol": "L:dm.a(II)[I#13",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#13",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -60518,7 +60678,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#14",
-      "renamedSymbol": "L:dm.a(II)[I#14",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#14",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -60529,7 +60689,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#15",
-      "renamedSymbol": "L:dm.a(II)[I#15",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#15",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -60540,7 +60700,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#16",
-      "renamedSymbol": "L:dm.a(II)[I#16",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#16",
       "originalName": "var11Lifetime2",
       "renamedName": "var11Lifetime2",
       "declaration": {
@@ -60551,7 +60711,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#17",
-      "renamedSymbol": "L:dm.a(II)[I#17",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#17",
       "originalName": "var11Lifetime3",
       "renamedName": "var11Lifetime3",
       "declaration": {
@@ -60562,7 +60722,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#18",
-      "renamedSymbol": "L:dm.a(II)[I#18",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#18",
       "originalName": "var11Lifetime4",
       "renamedName": "var11Lifetime4",
       "declaration": {
@@ -60573,7 +60733,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#19",
-      "renamedSymbol": "L:dm.a(II)[I#19",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#19",
       "originalName": "var11Lifetime5",
       "renamedName": "var11Lifetime5",
       "declaration": {
@@ -60584,7 +60744,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#2",
-      "renamedSymbol": "L:dm.a(II)[I#2",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -60595,7 +60755,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#20",
-      "renamedSymbol": "L:dm.a(II)[I#20",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#20",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -60606,7 +60766,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#21",
-      "renamedSymbol": "L:dm.a(II)[I#21",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#21",
       "originalName": "var12Lifetime2",
       "renamedName": "var12Lifetime2",
       "declaration": {
@@ -60617,7 +60777,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#22",
-      "renamedSymbol": "L:dm.a(II)[I#22",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#22",
       "originalName": "var12Lifetime3",
       "renamedName": "var12Lifetime3",
       "declaration": {
@@ -60628,7 +60788,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#23",
-      "renamedSymbol": "L:dm.a(II)[I#23",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#23",
       "originalName": "var13Lifetime1",
       "renamedName": "var13Lifetime1",
       "declaration": {
@@ -60639,7 +60799,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#24",
-      "renamedSymbol": "L:dm.a(II)[I#24",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#24",
       "originalName": "var13Lifetime2",
       "renamedName": "var13Lifetime2",
       "declaration": {
@@ -60650,7 +60810,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#25",
-      "renamedSymbol": "L:dm.a(II)[I#25",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#25",
       "originalName": "var14Lifetime1",
       "renamedName": "var14Lifetime1",
       "declaration": {
@@ -60661,7 +60821,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#26",
-      "renamedSymbol": "L:dm.a(II)[I#26",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#26",
       "originalName": "var14Lifetime2",
       "renamedName": "var14Lifetime2",
       "declaration": {
@@ -60672,7 +60832,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#27",
-      "renamedSymbol": "L:dm.a(II)[I#27",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#27",
       "originalName": "var15Lifetime1",
       "renamedName": "var15Lifetime1",
       "declaration": {
@@ -60683,7 +60843,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#28",
-      "renamedSymbol": "L:dm.a(II)[I#28",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#28",
       "originalName": "var15Lifetime2",
       "renamedName": "var15Lifetime2",
       "declaration": {
@@ -60694,7 +60854,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#29",
-      "renamedSymbol": "L:dm.a(II)[I#29",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#29",
       "originalName": "var16Lifetime1",
       "renamedName": "var16Lifetime1",
       "declaration": {
@@ -60705,7 +60865,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#3",
-      "renamedSymbol": "L:dm.a(II)[I#3",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -60716,7 +60876,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#30",
-      "renamedSymbol": "L:dm.a(II)[I#30",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#30",
       "originalName": "var14Lifetime3",
       "renamedName": "var14Lifetime3",
       "declaration": {
@@ -60727,7 +60887,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#31",
-      "renamedSymbol": "L:dm.a(II)[I#31",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#31",
       "originalName": "var14Lifetime4",
       "renamedName": "var14Lifetime4",
       "declaration": {
@@ -60738,7 +60898,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#32",
-      "renamedSymbol": "L:dm.a(II)[I#32",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#32",
       "originalName": "var15Lifetime3",
       "renamedName": "var15Lifetime3",
       "declaration": {
@@ -60749,7 +60909,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#33",
-      "renamedSymbol": "L:dm.a(II)[I#33",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#33",
       "originalName": "var15Lifetime4",
       "renamedName": "var15Lifetime4",
       "declaration": {
@@ -60760,7 +60920,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#34",
-      "renamedSymbol": "L:dm.a(II)[I#34",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#34",
       "originalName": "var17Lifetime1",
       "renamedName": "var17Lifetime1",
       "declaration": {
@@ -60771,7 +60931,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#35",
-      "renamedSymbol": "L:dm.a(II)[I#35",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#35",
       "originalName": "var17Lifetime2",
       "renamedName": "var17Lifetime2",
       "declaration": {
@@ -60782,7 +60942,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#36",
-      "renamedSymbol": "L:dm.a(II)[I#36",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#36",
       "originalName": "var12Lifetime1Lifetime1",
       "renamedName": "var12Lifetime1Lifetime1",
       "declaration": {
@@ -60793,7 +60953,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#37",
-      "renamedSymbol": "L:dm.a(II)[I#37",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#37",
       "originalName": "var15Lifetime2Lifetime1",
       "renamedName": "var15Lifetime2Lifetime1",
       "declaration": {
@@ -60804,7 +60964,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#38",
-      "renamedSymbol": "L:dm.a(II)[I#38",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#38",
       "originalName": "var16Lifetime1Lifetime1",
       "renamedName": "var16Lifetime1Lifetime1",
       "declaration": {
@@ -60815,7 +60975,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#39",
-      "renamedSymbol": "L:dm.a(II)[I#39",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#39",
       "originalName": "var16Lifetime1Lifetime2",
       "renamedName": "var16Lifetime1Lifetime2",
       "declaration": {
@@ -60826,7 +60986,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#4",
-      "renamedSymbol": "L:dm.a(II)[I#4",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -60837,7 +60997,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#40",
-      "renamedSymbol": "L:dm.a(II)[I#40",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#40",
       "originalName": "var17Lifetime3",
       "renamedName": "var17Lifetime3",
       "declaration": {
@@ -60848,7 +61008,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#41",
-      "renamedSymbol": "L:dm.a(II)[I#41",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#41",
       "originalName": "var17Lifetime1Lifetime1",
       "renamedName": "var17Lifetime1Lifetime1",
       "declaration": {
@@ -60859,7 +61019,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#42",
-      "renamedSymbol": "L:dm.a(II)[I#42",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#42",
       "originalName": "var17Lifetime2Lifetime1",
       "renamedName": "var17Lifetime2Lifetime1",
       "declaration": {
@@ -60870,7 +61030,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#5",
-      "renamedSymbol": "L:dm.a(II)[I#5",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -60881,7 +61041,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#6",
-      "renamedSymbol": "L:dm.a(II)[I#6",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -60892,7 +61052,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#7",
-      "renamedSymbol": "L:dm.a(II)[I#7",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#7",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -60903,7 +61063,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#8",
-      "renamedSymbol": "L:dm.a(II)[I#8",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#8",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -60914,7 +61074,7 @@
     },
     {
       "symbol": "L:dm.a(II)[I#9",
-      "renamedSymbol": "L:dm.a(II)[I#9",
+      "renamedSymbol": "L:SynthesizerVoice.synthesize(II)[I#9",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -60925,7 +61085,7 @@
     },
     {
       "symbol": "L:dm.a(Lgk;)V#0",
-      "renamedSymbol": "L:dm.a(LPacketBuffer;)V#0",
+      "renamedSymbol": "L:SynthesizerVoice.decode(LPacketBuffer;)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -60936,7 +61096,7 @@
     },
     {
       "symbol": "L:dm.a(Lgk;)V#1",
-      "renamedSymbol": "L:dm.a(LPacketBuffer;)V#1",
+      "renamedSymbol": "L:SynthesizerVoice.decode(LPacketBuffer;)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -60947,7 +61107,7 @@
     },
     {
       "symbol": "L:dm.a(Lgk;)V#2",
-      "renamedSymbol": "L:dm.a(LPacketBuffer;)V#2",
+      "renamedSymbol": "L:SynthesizerVoice.decode(LPacketBuffer;)V#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -64489,7 +64649,7 @@
     },
     {
       "symbol": "L:ei.a(Lad;BLud;II)Llg;#0",
-      "renamedSymbol": "L:ei.a(LResourceArchive;BLud;II)Llg;#0",
+      "renamedSymbol": "L:ei.a(LResourceArchive;BLSoundCache;II)Llg;#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -64500,7 +64660,7 @@
     },
     {
       "symbol": "L:ei.a(Lad;BLud;II)Llg;#1",
-      "renamedSymbol": "L:ei.a(LResourceArchive;BLud;II)Llg;#1",
+      "renamedSymbol": "L:ei.a(LResourceArchive;BLSoundCache;II)Llg;#1",
       "originalName": "var5_ref",
       "renamedName": "var5_ref",
       "declaration": {
@@ -64511,7 +64671,7 @@
     },
     {
       "symbol": "L:ei.a(Lad;BLud;II)Llg;#10",
-      "renamedSymbol": "L:ei.a(LResourceArchive;BLud;II)Llg;#10",
+      "renamedSymbol": "L:ei.a(LResourceArchive;BLSoundCache;II)Llg;#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -64522,7 +64682,7 @@
     },
     {
       "symbol": "L:ei.a(Lad;BLud;II)Llg;#11",
-      "renamedSymbol": "L:ei.a(LResourceArchive;BLud;II)Llg;#11",
+      "renamedSymbol": "L:ei.a(LResourceArchive;BLSoundCache;II)Llg;#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -64533,7 +64693,7 @@
     },
     {
       "symbol": "L:ei.a(Lad;BLud;II)Llg;#2",
-      "renamedSymbol": "L:ei.a(LResourceArchive;BLud;II)Llg;#2",
+      "renamedSymbol": "L:ei.a(LResourceArchive;BLSoundCache;II)Llg;#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -64544,7 +64704,7 @@
     },
     {
       "symbol": "L:ei.a(Lad;BLud;II)Llg;#3",
-      "renamedSymbol": "L:ei.a(LResourceArchive;BLud;II)Llg;#3",
+      "renamedSymbol": "L:ei.a(LResourceArchive;BLSoundCache;II)Llg;#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -64555,7 +64715,7 @@
     },
     {
       "symbol": "L:ei.a(Lad;BLud;II)Llg;#4",
-      "renamedSymbol": "L:ei.a(LResourceArchive;BLud;II)Llg;#4",
+      "renamedSymbol": "L:ei.a(LResourceArchive;BLSoundCache;II)Llg;#4",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -64566,7 +64726,7 @@
     },
     {
       "symbol": "L:ei.a(Lad;BLud;II)Llg;#5",
-      "renamedSymbol": "L:ei.a(LResourceArchive;BLud;II)Llg;#5",
+      "renamedSymbol": "L:ei.a(LResourceArchive;BLSoundCache;II)Llg;#5",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -64577,7 +64737,7 @@
     },
     {
       "symbol": "L:ei.a(Lad;BLud;II)Llg;#6",
-      "renamedSymbol": "L:ei.a(LResourceArchive;BLud;II)Llg;#6",
+      "renamedSymbol": "L:ei.a(LResourceArchive;BLSoundCache;II)Llg;#6",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -64588,7 +64748,7 @@
     },
     {
       "symbol": "L:ei.a(Lad;BLud;II)Llg;#7",
-      "renamedSymbol": "L:ei.a(LResourceArchive;BLud;II)Llg;#7",
+      "renamedSymbol": "L:ei.a(LResourceArchive;BLSoundCache;II)Llg;#7",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -64599,7 +64759,7 @@
     },
     {
       "symbol": "L:ei.a(Lad;BLud;II)Llg;#8",
-      "renamedSymbol": "L:ei.a(LResourceArchive;BLud;II)Llg;#8",
+      "renamedSymbol": "L:ei.a(LResourceArchive;BLSoundCache;II)Llg;#8",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -64610,7 +64770,7 @@
     },
     {
       "symbol": "L:ei.a(Lad;BLud;II)Llg;#9",
-      "renamedSymbol": "L:ei.a(LResourceArchive;BLud;II)Llg;#9",
+      "renamedSymbol": "L:ei.a(LResourceArchive;BLSoundCache;II)Llg;#9",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -69560,7 +69720,7 @@
     },
     {
       "symbol": "L:g.<init>(Lgk;)V#0",
-      "renamedSymbol": "L:g.<init>(LPacketBuffer;)V#0",
+      "renamedSymbol": "L:SynthesizedSoundEffect.<init>(LPacketBuffer;)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -69571,7 +69731,7 @@
     },
     {
       "symbol": "L:g.<init>(Lgk;)V#1",
-      "renamedSymbol": "L:g.<init>(LPacketBuffer;)V#1",
+      "renamedSymbol": "L:SynthesizedSoundEffect.<init>(LPacketBuffer;)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -69582,7 +69742,7 @@
     },
     {
       "symbol": "L:g.a()[B#0",
-      "renamedSymbol": "L:g.a()[B#0",
+      "renamedSymbol": "L:SynthesizedSoundEffect.synthesize()[B#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -69593,7 +69753,7 @@
     },
     {
       "symbol": "L:g.a()[B#1",
-      "renamedSymbol": "L:g.a()[B#1",
+      "renamedSymbol": "L:SynthesizedSoundEffect.synthesize()[B#1",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -69604,7 +69764,7 @@
     },
     {
       "symbol": "L:g.a()[B#2",
-      "renamedSymbol": "L:g.a()[B#2",
+      "renamedSymbol": "L:SynthesizedSoundEffect.synthesize()[B#2",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -69615,7 +69775,7 @@
     },
     {
       "symbol": "L:g.a()[B#3",
-      "renamedSymbol": "L:g.a()[B#3",
+      "renamedSymbol": "L:SynthesizedSoundEffect.synthesize()[B#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -69626,7 +69786,7 @@
     },
     {
       "symbol": "L:g.a()[B#4",
-      "renamedSymbol": "L:g.a()[B#4",
+      "renamedSymbol": "L:SynthesizedSoundEffect.synthesize()[B#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -69637,7 +69797,7 @@
     },
     {
       "symbol": "L:g.a()[B#5",
-      "renamedSymbol": "L:g.a()[B#5",
+      "renamedSymbol": "L:SynthesizedSoundEffect.synthesize()[B#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -69648,7 +69808,7 @@
     },
     {
       "symbol": "L:g.a()[B#6",
-      "renamedSymbol": "L:g.a()[B#6",
+      "renamedSymbol": "L:SynthesizedSoundEffect.synthesize()[B#6",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -69659,7 +69819,7 @@
     },
     {
       "symbol": "L:g.a()[B#7",
-      "renamedSymbol": "L:g.a()[B#7",
+      "renamedSymbol": "L:SynthesizedSoundEffect.synthesize()[B#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -69670,7 +69830,7 @@
     },
     {
       "symbol": "L:g.a()[B#8",
-      "renamedSymbol": "L:g.a()[B#8",
+      "renamedSymbol": "L:SynthesizedSoundEffect.synthesize()[B#8",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -69681,7 +69841,7 @@
     },
     {
       "symbol": "L:g.a()[B#9",
-      "renamedSymbol": "L:g.a()[B#9",
+      "renamedSymbol": "L:SynthesizedSoundEffect.synthesize()[B#9",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -69692,7 +69852,7 @@
     },
     {
       "symbol": "L:g.a(Lad;II)Lg;#0",
-      "renamedSymbol": "L:g.a(LResourceArchive;II)Lg;#0",
+      "renamedSymbol": "L:SynthesizedSoundEffect.load(LResourceArchive;II)LSynthesizedSoundEffect;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -69703,7 +69863,7 @@
     },
     {
       "symbol": "L:g.b()Ltd;#0",
-      "renamedSymbol": "L:g.b()LPcmSample;#0",
+      "renamedSymbol": "L:SynthesizedSoundEffect.toPcmSample()LPcmSample;#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -103341,7 +103501,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#0",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#0",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -103352,7 +103512,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#1",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#1",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -103363,7 +103523,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#10",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#10",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#10",
       "originalName": "localTemp$4",
       "renamedName": "localTemp$4",
       "declaration": {
@@ -103374,7 +103534,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#11",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#11",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#11",
       "originalName": "array$5",
       "renamedName": "array$5",
       "declaration": {
@@ -103385,7 +103545,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#12",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#12",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#12",
       "originalName": "dupTemp$6",
       "renamedName": "dupTemp$6",
       "declaration": {
@@ -103396,7 +103556,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#13",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#13",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#13",
       "originalName": "array$7",
       "renamedName": "array$7",
       "declaration": {
@@ -103407,7 +103567,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#14",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#14",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#14",
       "originalName": "dupTemp$8",
       "renamedName": "dupTemp$8",
       "declaration": {
@@ -103418,7 +103578,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#15",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#15",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#15",
       "originalName": "localTemp$9",
       "renamedName": "localTemp$9",
       "declaration": {
@@ -103429,7 +103589,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#16",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#16",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#16",
       "originalName": "array$10",
       "renamedName": "array$10",
       "declaration": {
@@ -103440,7 +103600,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#17",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#17",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#17",
       "originalName": "dupTemp$11",
       "renamedName": "dupTemp$11",
       "declaration": {
@@ -103451,7 +103611,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#18",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#18",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#18",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -103462,7 +103622,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#19",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#19",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#19",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -103473,7 +103633,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#2",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#2",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#2",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -103484,7 +103644,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#20",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#20",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#20",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -103495,7 +103655,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#21",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#21",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#21",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -103506,7 +103666,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#22",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#22",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#22",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -103517,7 +103677,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#23",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#23",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#23",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -103528,7 +103688,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#24",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#24",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#24",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -103539,7 +103699,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#25",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#25",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#25",
       "originalName": "var11Lifetime2",
       "renamedName": "var11Lifetime2",
       "declaration": {
@@ -103550,7 +103710,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#26",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#26",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#26",
       "originalName": "var11Lifetime3",
       "renamedName": "var11Lifetime3",
       "declaration": {
@@ -103561,7 +103721,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#27",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#27",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#27",
       "originalName": "var11Lifetime4",
       "renamedName": "var11Lifetime4",
       "declaration": {
@@ -103572,7 +103732,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#28",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#28",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#28",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -103583,7 +103743,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#29",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#29",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#29",
       "originalName": "var5Lifetime2",
       "renamedName": "var5Lifetime2",
       "declaration": {
@@ -103594,7 +103754,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#3",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#3",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#3",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -103605,7 +103765,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#30",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#30",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#30",
       "originalName": "var5Lifetime3",
       "renamedName": "var5Lifetime3",
       "declaration": {
@@ -103616,7 +103776,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#31",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#31",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#31",
       "originalName": "var5Lifetime4",
       "renamedName": "var5Lifetime4",
       "declaration": {
@@ -103627,7 +103787,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#32",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#32",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#32",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -103638,7 +103798,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#33",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#33",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#33",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -103649,7 +103809,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#34",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#34",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#34",
       "originalName": "var4Lifetime1Lifetime1",
       "renamedName": "var4Lifetime1Lifetime1",
       "declaration": {
@@ -103660,7 +103820,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#35",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#35",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#35",
       "originalName": "var4Lifetime1Lifetime2",
       "renamedName": "var4Lifetime1Lifetime2",
       "declaration": {
@@ -103671,7 +103831,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#36",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#36",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#36",
       "originalName": "var4Lifetime1Lifetime3",
       "renamedName": "var4Lifetime1Lifetime3",
       "declaration": {
@@ -103682,7 +103842,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#37",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#37",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#37",
       "originalName": "var4Lifetime1Lifetime4",
       "renamedName": "var4Lifetime1Lifetime4",
       "declaration": {
@@ -103693,7 +103853,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#38",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#38",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#38",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -103704,7 +103864,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#4",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#4",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -103715,7 +103875,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#5",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#5",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#5",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -103726,7 +103886,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#6",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#6",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -103737,7 +103897,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#7",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#7",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#7",
       "originalName": "array$2",
       "renamedName": "array$2",
       "declaration": {
@@ -103748,7 +103908,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#8",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#8",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#8",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -103759,7 +103919,7 @@
     },
     {
       "symbol": "L:lg.<init>(Lgk;Lud;)V#9",
-      "renamedSymbol": "L:lg.<init>(LPacketBuffer;Lud;)V#9",
+      "renamedSymbol": "L:lg.<init>(LPacketBuffer;LSoundCache;)V#9",
       "originalName": "dupTemp$3",
       "renamedName": "dupTemp$3",
       "declaration": {
@@ -105849,7 +106009,7 @@
     },
     {
       "symbol": "L:lj.a(Lgk;Ldg;)V#0",
-      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;Ldg;)V#0",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -105860,7 +106020,7 @@
     },
     {
       "symbol": "L:lj.a(Lgk;Ldg;)V#1",
-      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;Ldg;)V#1",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -105871,7 +106031,7 @@
     },
     {
       "symbol": "L:lj.a(Lgk;Ldg;)V#2",
-      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;Ldg;)V#2",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -105882,7 +106042,7 @@
     },
     {
       "symbol": "L:lj.a(Lgk;Ldg;)V#3",
-      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;Ldg;)V#3",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -105893,7 +106053,7 @@
     },
     {
       "symbol": "L:lj.a(Lgk;Ldg;)V#4",
-      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;Ldg;)V#4",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -105904,7 +106064,7 @@
     },
     {
       "symbol": "L:lj.a(Lgk;Ldg;)V#5",
-      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;Ldg;)V#5",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#5",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -105915,7 +106075,7 @@
     },
     {
       "symbol": "L:lj.a(Lgk;Ldg;)V#6",
-      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;Ldg;)V#6",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#6",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -105926,7 +106086,7 @@
     },
     {
       "symbol": "L:lj.a(Lgk;Ldg;)V#7",
-      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;Ldg;)V#7",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#7",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -143865,7 +144025,7 @@
     },
     {
       "symbol": "L:ud.<init>(Lad;Lad;)V#0",
-      "renamedSymbol": "L:ud.<init>(LResourceArchive;LResourceArchive;)V#0",
+      "renamedSymbol": "L:SoundCache.<init>(LResourceArchive;LResourceArchive;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -143876,7 +144036,7 @@
     },
     {
       "symbol": "L:ud.a(BI[II)Ltd;#0",
-      "renamedSymbol": "L:ud.a(BI[II)LPcmSample;#0",
+      "renamedSymbol": "L:SoundCache.loadSoundEffect(BI[II)LPcmSample;#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -143887,7 +144047,7 @@
     },
     {
       "symbol": "L:ud.a(BI[II)Ltd;#1",
-      "renamedSymbol": "L:ud.a(BI[II)LPcmSample;#1",
+      "renamedSymbol": "L:SoundCache.loadSoundEffect(BI[II)LPcmSample;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -143898,7 +144058,7 @@
     },
     {
       "symbol": "L:ud.a(BI[II)Ltd;#10",
-      "renamedSymbol": "L:ud.a(BI[II)LPcmSample;#10",
+      "renamedSymbol": "L:SoundCache.loadSoundEffect(BI[II)LPcmSample;#10",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -143909,7 +144069,7 @@
     },
     {
       "symbol": "L:ud.a(BI[II)Ltd;#11",
-      "renamedSymbol": "L:ud.a(BI[II)LPcmSample;#11",
+      "renamedSymbol": "L:SoundCache.loadSoundEffect(BI[II)LPcmSample;#11",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -143920,7 +144080,7 @@
     },
     {
       "symbol": "L:ud.a(BI[II)Ltd;#12",
-      "renamedSymbol": "L:ud.a(BI[II)LPcmSample;#12",
+      "renamedSymbol": "L:SoundCache.loadSoundEffect(BI[II)LPcmSample;#12",
       "originalName": "stackIn_18_2",
       "renamedName": "stackIn_18_2",
       "declaration": {
@@ -143931,7 +144091,7 @@
     },
     {
       "symbol": "L:ud.a(BI[II)Ltd;#13",
-      "renamedSymbol": "L:ud.a(BI[II)LPcmSample;#13",
+      "renamedSymbol": "L:SoundCache.loadSoundEffect(BI[II)LPcmSample;#13",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -143942,7 +144102,7 @@
     },
     {
       "symbol": "L:ud.a(BI[II)Ltd;#14",
-      "renamedSymbol": "L:ud.a(BI[II)LPcmSample;#14",
+      "renamedSymbol": "L:SoundCache.loadSoundEffect(BI[II)LPcmSample;#14",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -143953,7 +144113,7 @@
     },
     {
       "symbol": "L:ud.a(BI[II)Ltd;#15",
-      "renamedSymbol": "L:ud.a(BI[II)LPcmSample;#15",
+      "renamedSymbol": "L:SoundCache.loadSoundEffect(BI[II)LPcmSample;#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -143964,7 +144124,7 @@
     },
     {
       "symbol": "L:ud.a(BI[II)Ltd;#2",
-      "renamedSymbol": "L:ud.a(BI[II)LPcmSample;#2",
+      "renamedSymbol": "L:SoundCache.loadSoundEffect(BI[II)LPcmSample;#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -143975,7 +144135,7 @@
     },
     {
       "symbol": "L:ud.a(BI[II)Ltd;#3",
-      "renamedSymbol": "L:ud.a(BI[II)LPcmSample;#3",
+      "renamedSymbol": "L:SoundCache.loadSoundEffect(BI[II)LPcmSample;#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -143986,7 +144146,7 @@
     },
     {
       "symbol": "L:ud.a(BI[II)Ltd;#4",
-      "renamedSymbol": "L:ud.a(BI[II)LPcmSample;#4",
+      "renamedSymbol": "L:SoundCache.loadSoundEffect(BI[II)LPcmSample;#4",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -143997,7 +144157,7 @@
     },
     {
       "symbol": "L:ud.a(BI[II)Ltd;#5",
-      "renamedSymbol": "L:ud.a(BI[II)LPcmSample;#5",
+      "renamedSymbol": "L:SoundCache.loadSoundEffect(BI[II)LPcmSample;#5",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -144008,7 +144168,7 @@
     },
     {
       "symbol": "L:ud.a(BI[II)Ltd;#6",
-      "renamedSymbol": "L:ud.a(BI[II)LPcmSample;#6",
+      "renamedSymbol": "L:SoundCache.loadSoundEffect(BI[II)LPcmSample;#6",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -144019,7 +144179,7 @@
     },
     {
       "symbol": "L:ud.a(BI[II)Ltd;#7",
-      "renamedSymbol": "L:ud.a(BI[II)LPcmSample;#7",
+      "renamedSymbol": "L:SoundCache.loadSoundEffect(BI[II)LPcmSample;#7",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -144030,7 +144190,7 @@
     },
     {
       "symbol": "L:ud.a(BI[II)Ltd;#8",
-      "renamedSymbol": "L:ud.a(BI[II)LPcmSample;#8",
+      "renamedSymbol": "L:SoundCache.loadSoundEffect(BI[II)LPcmSample;#8",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -144041,7 +144201,7 @@
     },
     {
       "symbol": "L:ud.a(BI[II)Ltd;#9",
-      "renamedSymbol": "L:ud.a(BI[II)LPcmSample;#9",
+      "renamedSymbol": "L:SoundCache.loadSoundEffect(BI[II)LPcmSample;#9",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -144052,7 +144212,7 @@
     },
     {
       "symbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;#0",
-      "renamedSymbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#0",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -144063,7 +144223,7 @@
     },
     {
       "symbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;#1",
-      "renamedSymbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#1",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -144074,7 +144234,7 @@
     },
     {
       "symbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;#10",
-      "renamedSymbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#10",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#10",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -144085,7 +144245,7 @@
     },
     {
       "symbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;#11",
-      "renamedSymbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#11",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#11",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -144096,7 +144256,7 @@
     },
     {
       "symbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;#12",
-      "renamedSymbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#12",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#12",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -144107,7 +144267,7 @@
     },
     {
       "symbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;#13",
-      "renamedSymbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#13",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#13",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -144118,7 +144278,7 @@
     },
     {
       "symbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;#14",
-      "renamedSymbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#14",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#14",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -144129,7 +144289,7 @@
     },
     {
       "symbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;#2",
-      "renamedSymbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#2",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -144140,7 +144300,7 @@
     },
     {
       "symbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;#3",
-      "renamedSymbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#3",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#3",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -144151,7 +144311,7 @@
     },
     {
       "symbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;#4",
-      "renamedSymbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#4",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#4",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -144162,7 +144322,7 @@
     },
     {
       "symbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;#5",
-      "renamedSymbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#5",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#5",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -144173,7 +144333,7 @@
     },
     {
       "symbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;#6",
-      "renamedSymbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#6",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#6",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -144184,7 +144344,7 @@
     },
     {
       "symbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;#7",
-      "renamedSymbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#7",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#7",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -144195,7 +144355,7 @@
     },
     {
       "symbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;#8",
-      "renamedSymbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#8",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#8",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -144206,7 +144366,7 @@
     },
     {
       "symbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;#9",
-      "renamedSymbol": "L:ud.a(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#9",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#9",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -144217,7 +144377,7 @@
     },
     {
       "symbol": "L:ud.a(I[ILjava/lang/String;)Ltd;#0",
-      "renamedSymbol": "L:ud.a(I[ILjava/lang/String;)LPcmSample;#0",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(I[ILjava/lang/String;)LPcmSample;#0",
       "originalName": "discarded$1",
       "renamedName": "discarded$1",
       "declaration": {
@@ -144228,7 +144388,7 @@
     },
     {
       "symbol": "L:ud.a(I[ILjava/lang/String;)Ltd;#1",
-      "renamedSymbol": "L:ud.a(I[ILjava/lang/String;)LPcmSample;#1",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(I[ILjava/lang/String;)LPcmSample;#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -144239,7 +144399,7 @@
     },
     {
       "symbol": "L:ud.a(I[ILjava/lang/String;)Ltd;#10",
-      "renamedSymbol": "L:ud.a(I[ILjava/lang/String;)LPcmSample;#10",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(I[ILjava/lang/String;)LPcmSample;#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -144250,7 +144410,7 @@
     },
     {
       "symbol": "L:ud.a(I[ILjava/lang/String;)Ltd;#11",
-      "renamedSymbol": "L:ud.a(I[ILjava/lang/String;)LPcmSample;#11",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(I[ILjava/lang/String;)LPcmSample;#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -144261,7 +144421,7 @@
     },
     {
       "symbol": "L:ud.a(I[ILjava/lang/String;)Ltd;#2",
-      "renamedSymbol": "L:ud.a(I[ILjava/lang/String;)LPcmSample;#2",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(I[ILjava/lang/String;)LPcmSample;#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -144272,7 +144432,7 @@
     },
     {
       "symbol": "L:ud.a(I[ILjava/lang/String;)Ltd;#3",
-      "renamedSymbol": "L:ud.a(I[ILjava/lang/String;)LPcmSample;#3",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(I[ILjava/lang/String;)LPcmSample;#3",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -144283,7 +144443,7 @@
     },
     {
       "symbol": "L:ud.a(I[ILjava/lang/String;)Ltd;#4",
-      "renamedSymbol": "L:ud.a(I[ILjava/lang/String;)LPcmSample;#4",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(I[ILjava/lang/String;)LPcmSample;#4",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -144294,7 +144454,7 @@
     },
     {
       "symbol": "L:ud.a(I[ILjava/lang/String;)Ltd;#5",
-      "renamedSymbol": "L:ud.a(I[ILjava/lang/String;)LPcmSample;#5",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(I[ILjava/lang/String;)LPcmSample;#5",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -144305,7 +144465,7 @@
     },
     {
       "symbol": "L:ud.a(I[ILjava/lang/String;)Ltd;#6",
-      "renamedSymbol": "L:ud.a(I[ILjava/lang/String;)LPcmSample;#6",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(I[ILjava/lang/String;)LPcmSample;#6",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -144316,7 +144476,7 @@
     },
     {
       "symbol": "L:ud.a(I[ILjava/lang/String;)Ltd;#7",
-      "renamedSymbol": "L:ud.a(I[ILjava/lang/String;)LPcmSample;#7",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(I[ILjava/lang/String;)LPcmSample;#7",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -144327,7 +144487,7 @@
     },
     {
       "symbol": "L:ud.a(I[ILjava/lang/String;)Ltd;#8",
-      "renamedSymbol": "L:ud.a(I[ILjava/lang/String;)LPcmSample;#8",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(I[ILjava/lang/String;)LPcmSample;#8",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -144338,7 +144498,7 @@
     },
     {
       "symbol": "L:ud.a(I[ILjava/lang/String;)Ltd;#9",
-      "renamedSymbol": "L:ud.a(I[ILjava/lang/String;)LPcmSample;#9",
+      "renamedSymbol": "L:SoundCache.loadSoundEffectByName(I[ILjava/lang/String;)LPcmSample;#9",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -144349,7 +144509,7 @@
     },
     {
       "symbol": "L:ud.a(Ljava/lang/String;B)Ltd;#0",
-      "renamedSymbol": "L:ud.a(Ljava/lang/String;B)LPcmSample;#0",
+      "renamedSymbol": "L:SoundCache.getSoundEffectByName(Ljava/lang/String;B)LPcmSample;#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -144360,7 +144520,7 @@
     },
     {
       "symbol": "L:ud.a(Ljava/lang/String;B)Ltd;#1",
-      "renamedSymbol": "L:ud.a(Ljava/lang/String;B)LPcmSample;#1",
+      "renamedSymbol": "L:SoundCache.getSoundEffectByName(Ljava/lang/String;B)LPcmSample;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -144371,7 +144531,7 @@
     },
     {
       "symbol": "L:ud.a(Ljava/lang/String;B)Ltd;#2",
-      "renamedSymbol": "L:ud.a(Ljava/lang/String;B)LPcmSample;#2",
+      "renamedSymbol": "L:SoundCache.getSoundEffectByName(Ljava/lang/String;B)LPcmSample;#2",
       "originalName": "stackIn_1_0",
       "renamedName": "stackIn_1_0",
       "declaration": {
@@ -144382,7 +144542,7 @@
     },
     {
       "symbol": "L:ud.a(Ljava/lang/String;B)Ltd;#3",
-      "renamedSymbol": "L:ud.a(Ljava/lang/String;B)LPcmSample;#3",
+      "renamedSymbol": "L:SoundCache.getSoundEffectByName(Ljava/lang/String;B)LPcmSample;#3",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -144393,7 +144553,7 @@
     },
     {
       "symbol": "L:ud.a(Ljava/lang/String;B)Ltd;#4",
-      "renamedSymbol": "L:ud.a(Ljava/lang/String;B)LPcmSample;#4",
+      "renamedSymbol": "L:SoundCache.getSoundEffectByName(Ljava/lang/String;B)LPcmSample;#4",
       "originalName": "stackIn_4_1",
       "renamedName": "stackIn_4_1",
       "declaration": {
@@ -144404,7 +144564,7 @@
     },
     {
       "symbol": "L:ud.a(Ljava/lang/String;B)Ltd;#5",
-      "renamedSymbol": "L:ud.a(Ljava/lang/String;B)LPcmSample;#5",
+      "renamedSymbol": "L:SoundCache.getSoundEffectByName(Ljava/lang/String;B)LPcmSample;#5",
       "originalName": "stackIn_5_2",
       "renamedName": "stackIn_5_2",
       "declaration": {
@@ -144415,7 +144575,7 @@
     },
     {
       "symbol": "L:ud.a(Ljava/lang/String;B)Ltd;#6",
-      "renamedSymbol": "L:ud.a(Ljava/lang/String;B)LPcmSample;#6",
+      "renamedSymbol": "L:SoundCache.getSoundEffectByName(Ljava/lang/String;B)LPcmSample;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -144426,7 +144586,7 @@
     },
     {
       "symbol": "L:ud.a(Ljava/lang/String;B)Ltd;#7",
-      "renamedSymbol": "L:ud.a(Ljava/lang/String;B)LPcmSample;#7",
+      "renamedSymbol": "L:SoundCache.getSoundEffectByName(Ljava/lang/String;B)LPcmSample;#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -144437,7 +144597,7 @@
     },
     {
       "symbol": "L:ud.a([IIII)Ltd;#0",
-      "renamedSymbol": "L:ud.a([IIII)LPcmSample;#0",
+      "renamedSymbol": "L:SoundCache.loadMusicSample([IIII)LPcmSample;#0",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -144448,7 +144608,7 @@
     },
     {
       "symbol": "L:ud.a([IIII)Ltd;#1",
-      "renamedSymbol": "L:ud.a([IIII)LPcmSample;#1",
+      "renamedSymbol": "L:SoundCache.loadMusicSample([IIII)LPcmSample;#1",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -144459,7 +144619,7 @@
     },
     {
       "symbol": "L:ud.a([IIII)Ltd;#10",
-      "renamedSymbol": "L:ud.a([IIII)LPcmSample;#10",
+      "renamedSymbol": "L:SoundCache.loadMusicSample([IIII)LPcmSample;#10",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -144470,7 +144630,7 @@
     },
     {
       "symbol": "L:ud.a([IIII)Ltd;#11",
-      "renamedSymbol": "L:ud.a([IIII)LPcmSample;#11",
+      "renamedSymbol": "L:SoundCache.loadMusicSample([IIII)LPcmSample;#11",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -144481,7 +144641,7 @@
     },
     {
       "symbol": "L:ud.a([IIII)Ltd;#12",
-      "renamedSymbol": "L:ud.a([IIII)LPcmSample;#12",
+      "renamedSymbol": "L:SoundCache.loadMusicSample([IIII)LPcmSample;#12",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -144492,7 +144652,7 @@
     },
     {
       "symbol": "L:ud.a([IIII)Ltd;#2",
-      "renamedSymbol": "L:ud.a([IIII)LPcmSample;#2",
+      "renamedSymbol": "L:SoundCache.loadMusicSample([IIII)LPcmSample;#2",
       "originalName": "stackIn_22_0",
       "renamedName": "stackIn_22_0",
       "declaration": {
@@ -144503,7 +144663,7 @@
     },
     {
       "symbol": "L:ud.a([IIII)Ltd;#3",
-      "renamedSymbol": "L:ud.a([IIII)LPcmSample;#3",
+      "renamedSymbol": "L:SoundCache.loadMusicSample([IIII)LPcmSample;#3",
       "originalName": "stackIn_22_1",
       "renamedName": "stackIn_22_1",
       "declaration": {
@@ -144514,7 +144674,7 @@
     },
     {
       "symbol": "L:ud.a([IIII)Ltd;#4",
-      "renamedSymbol": "L:ud.a([IIII)LPcmSample;#4",
+      "renamedSymbol": "L:SoundCache.loadMusicSample([IIII)LPcmSample;#4",
       "originalName": "stackIn_23_2",
       "renamedName": "stackIn_23_2",
       "declaration": {
@@ -144525,7 +144685,7 @@
     },
     {
       "symbol": "L:ud.a([IIII)Ltd;#5",
-      "renamedSymbol": "L:ud.a([IIII)LPcmSample;#5",
+      "renamedSymbol": "L:SoundCache.loadMusicSample([IIII)LPcmSample;#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -144536,7 +144696,7 @@
     },
     {
       "symbol": "L:ud.a([IIII)Ltd;#6",
-      "renamedSymbol": "L:ud.a([IIII)LPcmSample;#6",
+      "renamedSymbol": "L:SoundCache.loadMusicSample([IIII)LPcmSample;#6",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -144547,7 +144707,7 @@
     },
     {
       "symbol": "L:ud.a([IIII)Ltd;#7",
-      "renamedSymbol": "L:ud.a([IIII)LPcmSample;#7",
+      "renamedSymbol": "L:SoundCache.loadMusicSample([IIII)LPcmSample;#7",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -144558,7 +144718,7 @@
     },
     {
       "symbol": "L:ud.a([IIII)Ltd;#8",
-      "renamedSymbol": "L:ud.a([IIII)LPcmSample;#8",
+      "renamedSymbol": "L:SoundCache.loadMusicSample([IIII)LPcmSample;#8",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -144569,7 +144729,7 @@
     },
     {
       "symbol": "L:ud.a([IIII)Ltd;#9",
-      "renamedSymbol": "L:ud.a([IIII)LPcmSample;#9",
+      "renamedSymbol": "L:SoundCache.loadMusicSample([IIII)LPcmSample;#9",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -158209,7 +158369,7 @@
     },
     {
       "symbol": "M:dc.a(ILjava/lang/String;Ljava/lang/String;Lud;Lad;)Llg;",
-      "renamedSymbol": "M:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;Lud;LResourceArchive;)Llg;",
+      "renamedSymbol": "M:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;LSoundCache;LResourceArchive;)Llg;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -158440,9 +158600,9 @@
     },
     {
       "symbol": "M:dg.<init>()V",
-      "renamedSymbol": "M:dg.<init>()V",
+      "renamedSymbol": "M:SoundEnvelope.<init>()V",
       "originalName": "dg",
-      "renamedName": "dg",
+      "renamedName": "SoundEnvelope",
       "declaration": {
         "file": "dg.java",
         "start": 1778,
@@ -158451,9 +158611,9 @@
     },
     {
       "symbol": "M:dg.a()V",
-      "renamedSymbol": "M:dg.a()V",
+      "renamedSymbol": "M:SoundEnvelope.reset()V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reset",
       "declaration": {
         "file": "dg.java",
         "start": 326,
@@ -158462,9 +158622,9 @@
     },
     {
       "symbol": "M:dg.a(I)I",
-      "renamedSymbol": "M:dg.a(I)I",
+      "renamedSymbol": "M:SoundEnvelope.step(I)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "step",
       "declaration": {
         "file": "dg.java",
         "start": 483,
@@ -158473,7 +158633,7 @@
     },
     {
       "symbol": "M:dg.a(Lgk;)V",
-      "renamedSymbol": "M:dg.decodeSegments(LPacketBuffer;)V",
+      "renamedSymbol": "M:SoundEnvelope.decodeSegments(LPacketBuffer;)V",
       "originalName": "a",
       "renamedName": "decodeSegments",
       "declaration": {
@@ -158484,9 +158644,9 @@
     },
     {
       "symbol": "M:dg.b(Lgk;)V",
-      "renamedSymbol": "M:dg.b(LPacketBuffer;)V",
+      "renamedSymbol": "M:SoundEnvelope.decode(LPacketBuffer;)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "decode",
       "declaration": {
         "file": "dg.java",
         "start": 1609,
@@ -158858,9 +159018,9 @@
     },
     {
       "symbol": "M:dm.<init>()V",
-      "renamedSymbol": "M:dm.<init>()V",
+      "renamedSymbol": "M:SynthesizerVoice.<init>()V",
       "originalName": "dm",
-      "renamedName": "dm",
+      "renamedName": "SynthesizerVoice",
       "declaration": {
         "file": "dm.java",
         "start": 12638,
@@ -158869,7 +159029,7 @@
     },
     {
       "symbol": "M:dm.a()V",
-      "renamedSymbol": "M:dm.clearStaticReferences()V",
+      "renamedSymbol": "M:SynthesizerVoice.clearStaticReferences()V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -158880,9 +159040,9 @@
     },
     {
       "symbol": "M:dm.a(II)[I",
-      "renamedSymbol": "M:dm.a(II)[I",
+      "renamedSymbol": "M:SynthesizerVoice.synthesize(II)[I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "synthesize",
       "declaration": {
         "file": "dm.java",
         "start": 3040,
@@ -158891,9 +159051,9 @@
     },
     {
       "symbol": "M:dm.a(III)I",
-      "renamedSymbol": "M:dm.a(III)I",
+      "renamedSymbol": "M:SynthesizerVoice.evaluateWaveform(III)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "evaluateWaveform",
       "declaration": {
         "file": "dm.java",
         "start": 1004,
@@ -158902,9 +159062,9 @@
     },
     {
       "symbol": "M:dm.a(Lgk;)V",
-      "renamedSymbol": "M:dm.a(LPacketBuffer;)V",
+      "renamedSymbol": "M:SynthesizerVoice.decode(LPacketBuffer;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "decode",
       "declaration": {
         "file": "dm.java",
         "start": 1515,
@@ -159452,7 +159612,7 @@
     },
     {
       "symbol": "M:ei.a(Lad;BLud;II)Llg;",
-      "renamedSymbol": "M:ei.a(LResourceArchive;BLud;II)Llg;",
+      "renamedSymbol": "M:ei.a(LResourceArchive;BLSoundCache;II)Llg;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -160717,9 +160877,9 @@
     },
     {
       "symbol": "M:g.<init>(Lgk;)V",
-      "renamedSymbol": "M:g.<init>(LPacketBuffer;)V",
+      "renamedSymbol": "M:SynthesizedSoundEffect.<init>(LPacketBuffer;)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "SynthesizedSoundEffect",
       "declaration": {
         "file": "g.java",
         "start": 1789,
@@ -160728,9 +160888,9 @@
     },
     {
       "symbol": "M:g.a()[B",
-      "renamedSymbol": "M:g.a()[B",
+      "renamedSymbol": "M:SynthesizedSoundEffect.synthesize()[B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "synthesize",
       "declaration": {
         "file": "g.java",
         "start": 156,
@@ -160739,9 +160899,9 @@
     },
     {
       "symbol": "M:g.a(Lad;II)Lg;",
-      "renamedSymbol": "M:g.a(LResourceArchive;II)Lg;",
+      "renamedSymbol": "M:SynthesizedSoundEffect.load(LResourceArchive;II)LSynthesizedSoundEffect;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "load",
       "declaration": {
         "file": "g.java",
         "start": 1581,
@@ -160750,9 +160910,9 @@
     },
     {
       "symbol": "M:g.b()Ltd;",
-      "renamedSymbol": "M:g.b()LPcmSample;",
+      "renamedSymbol": "M:SynthesizedSoundEffect.toPcmSample()LPcmSample;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "toPcmSample",
       "declaration": {
         "file": "g.java",
         "start": 1423,
@@ -166734,7 +166894,7 @@
     },
     {
       "symbol": "M:lg.<init>(Lgk;Lud;)V",
-      "renamedSymbol": "M:lg.<init>(LPacketBuffer;Lud;)V",
+      "renamedSymbol": "M:lg.<init>(LPacketBuffer;LSoundCache;)V",
       "originalName": "lg",
       "renamedName": "lg",
       "declaration": {
@@ -167383,7 +167543,7 @@
     },
     {
       "symbol": "M:lj.a(Lgk;Ldg;)V",
-      "renamedSymbol": "M:SoundFilter.decode(LPacketBuffer;Ldg;)V",
+      "renamedSymbol": "M:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V",
       "originalName": "a",
       "renamedName": "decode",
       "declaration": {
@@ -175171,9 +175331,9 @@
     },
     {
       "symbol": "M:ud.<init>(Lad;Lad;)V",
-      "renamedSymbol": "M:ud.<init>(LResourceArchive;LResourceArchive;)V",
+      "renamedSymbol": "M:SoundCache.<init>(LResourceArchive;LResourceArchive;)V",
       "originalName": "ud",
-      "renamedName": "ud",
+      "renamedName": "SoundCache",
       "declaration": {
         "file": "ud.java",
         "start": 10454,
@@ -175182,9 +175342,9 @@
     },
     {
       "symbol": "M:ud.a(BI[II)Ltd;",
-      "renamedSymbol": "M:ud.a(BI[II)LPcmSample;",
+      "renamedSymbol": "M:SoundCache.loadSoundEffect(BI[II)LPcmSample;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "loadSoundEffect",
       "declaration": {
         "file": "ud.java",
         "start": 2401,
@@ -175193,7 +175353,7 @@
     },
     {
       "symbol": "M:ud.a(I)V",
-      "renamedSymbol": "M:ud.a(I)V",
+      "renamedSymbol": "M:SoundCache.a(I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -175204,9 +175364,9 @@
     },
     {
       "symbol": "M:ud.a(III)Ltd;",
-      "renamedSymbol": "M:ud.a(III)LPcmSample;",
+      "renamedSymbol": "M:SoundCache.getSoundEffectByGroup(III)LPcmSample;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getSoundEffectByGroup",
       "declaration": {
         "file": "ud.java",
         "start": 266,
@@ -175215,9 +175375,9 @@
     },
     {
       "symbol": "M:ud.a(IIZ)Ltd;",
-      "renamedSymbol": "M:ud.a(IIZ)LPcmSample;",
+      "renamedSymbol": "M:SoundCache.getMusicSampleByGroup(IIZ)LPcmSample;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getMusicSampleByGroup",
       "declaration": {
         "file": "ud.java",
         "start": 5612,
@@ -175226,9 +175386,9 @@
     },
     {
       "symbol": "M:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;",
-      "renamedSymbol": "M:ud.a(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;",
+      "renamedSymbol": "M:SoundCache.loadSoundEffectByName(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "loadSoundEffectByName",
       "declaration": {
         "file": "ud.java",
         "start": 8258,
@@ -175237,9 +175397,9 @@
     },
     {
       "symbol": "M:ud.a(I[ILjava/lang/String;)Ltd;",
-      "renamedSymbol": "M:ud.a(I[ILjava/lang/String;)LPcmSample;",
+      "renamedSymbol": "M:SoundCache.loadSoundEffectByName(I[ILjava/lang/String;)LPcmSample;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "loadSoundEffectByName",
       "declaration": {
         "file": "ud.java",
         "start": 670,
@@ -175248,9 +175408,9 @@
     },
     {
       "symbol": "M:ud.a(Ljava/lang/String;B)Ltd;",
-      "renamedSymbol": "M:ud.a(Ljava/lang/String;B)LPcmSample;",
+      "renamedSymbol": "M:SoundCache.getSoundEffectByName(Ljava/lang/String;B)LPcmSample;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getSoundEffectByName",
       "declaration": {
         "file": "ud.java",
         "start": 4545,
@@ -175259,9 +175419,9 @@
     },
     {
       "symbol": "M:ud.a([IIII)Ltd;",
-      "renamedSymbol": "M:ud.a([IIII)LPcmSample;",
+      "renamedSymbol": "M:SoundCache.loadMusicSample([IIII)LPcmSample;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "loadMusicSample",
       "declaration": {
         "file": "ud.java",
         "start": 6049,
@@ -175270,7 +175430,7 @@
     },
     {
       "symbol": "M:ud.b(I)V",
-      "renamedSymbol": "M:ud.clearStaticReferences(I)V",
+      "renamedSymbol": "M:SoundCache.clearStaticReferences(I)V",
       "originalName": "b",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -187403,7 +187563,7 @@
     },
     {
       "symbol": "P:dc.a(ILjava/lang/String;Ljava/lang/String;Lud;Lad;)Llg;#0",
-      "renamedSymbol": "P:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;Lud;LResourceArchive;)Llg;#0",
+      "renamedSymbol": "P:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;LSoundCache;LResourceArchive;)Llg;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187414,7 +187574,7 @@
     },
     {
       "symbol": "P:dc.a(ILjava/lang/String;Ljava/lang/String;Lud;Lad;)Llg;#1",
-      "renamedSymbol": "P:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;Lud;LResourceArchive;)Llg;#1",
+      "renamedSymbol": "P:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;LSoundCache;LResourceArchive;)Llg;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187425,7 +187585,7 @@
     },
     {
       "symbol": "P:dc.a(ILjava/lang/String;Ljava/lang/String;Lud;Lad;)Llg;#2",
-      "renamedSymbol": "P:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;Lud;LResourceArchive;)Llg;#2",
+      "renamedSymbol": "P:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;LSoundCache;LResourceArchive;)Llg;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -187436,7 +187596,7 @@
     },
     {
       "symbol": "P:dc.a(ILjava/lang/String;Ljava/lang/String;Lud;Lad;)Llg;#3",
-      "renamedSymbol": "P:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;Lud;LResourceArchive;)Llg;#3",
+      "renamedSymbol": "P:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;LSoundCache;LResourceArchive;)Llg;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -187447,7 +187607,7 @@
     },
     {
       "symbol": "P:dc.a(ILjava/lang/String;Ljava/lang/String;Lud;Lad;)Llg;#4",
-      "renamedSymbol": "P:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;Lud;LResourceArchive;)Llg;#4",
+      "renamedSymbol": "P:IterableNodeHashTable.a(ILjava/lang/String;Ljava/lang/String;LSoundCache;LResourceArchive;)Llg;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -187799,7 +187959,7 @@
     },
     {
       "symbol": "P:dg.a(I)I#0",
-      "renamedSymbol": "P:dg.a(I)I#0",
+      "renamedSymbol": "P:SoundEnvelope.step(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187810,7 +187970,7 @@
     },
     {
       "symbol": "P:dg.a(Lgk;)V#0",
-      "renamedSymbol": "P:dg.decodeSegments(LPacketBuffer;)V#0",
+      "renamedSymbol": "P:SoundEnvelope.decodeSegments(LPacketBuffer;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187821,7 +187981,7 @@
     },
     {
       "symbol": "P:dg.b(Lgk;)V#0",
-      "renamedSymbol": "P:dg.b(LPacketBuffer;)V#0",
+      "renamedSymbol": "P:SoundEnvelope.decode(LPacketBuffer;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -188690,7 +188850,7 @@
     },
     {
       "symbol": "P:dm.a(II)[I#0",
-      "renamedSymbol": "P:dm.a(II)[I#0",
+      "renamedSymbol": "P:SynthesizerVoice.synthesize(II)[I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -188701,7 +188861,7 @@
     },
     {
       "symbol": "P:dm.a(II)[I#1",
-      "renamedSymbol": "P:dm.a(II)[I#1",
+      "renamedSymbol": "P:SynthesizerVoice.synthesize(II)[I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -188712,7 +188872,7 @@
     },
     {
       "symbol": "P:dm.a(III)I#0",
-      "renamedSymbol": "P:dm.a(III)I#0",
+      "renamedSymbol": "P:SynthesizerVoice.evaluateWaveform(III)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -188723,7 +188883,7 @@
     },
     {
       "symbol": "P:dm.a(III)I#1",
-      "renamedSymbol": "P:dm.a(III)I#1",
+      "renamedSymbol": "P:SynthesizerVoice.evaluateWaveform(III)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -188734,7 +188894,7 @@
     },
     {
       "symbol": "P:dm.a(III)I#2",
-      "renamedSymbol": "P:dm.a(III)I#2",
+      "renamedSymbol": "P:SynthesizerVoice.evaluateWaveform(III)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -188745,7 +188905,7 @@
     },
     {
       "symbol": "P:dm.a(Lgk;)V#0",
-      "renamedSymbol": "P:dm.a(LPacketBuffer;)V#0",
+      "renamedSymbol": "P:SynthesizerVoice.decode(LPacketBuffer;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -190230,7 +190390,7 @@
     },
     {
       "symbol": "P:ei.a(Lad;BLud;II)Llg;#0",
-      "renamedSymbol": "P:ei.a(LResourceArchive;BLud;II)Llg;#0",
+      "renamedSymbol": "P:ei.a(LResourceArchive;BLSoundCache;II)Llg;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -190241,7 +190401,7 @@
     },
     {
       "symbol": "P:ei.a(Lad;BLud;II)Llg;#1",
-      "renamedSymbol": "P:ei.a(LResourceArchive;BLud;II)Llg;#1",
+      "renamedSymbol": "P:ei.a(LResourceArchive;BLSoundCache;II)Llg;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -190252,7 +190412,7 @@
     },
     {
       "symbol": "P:ei.a(Lad;BLud;II)Llg;#2",
-      "renamedSymbol": "P:ei.a(LResourceArchive;BLud;II)Llg;#2",
+      "renamedSymbol": "P:ei.a(LResourceArchive;BLSoundCache;II)Llg;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -190263,7 +190423,7 @@
     },
     {
       "symbol": "P:ei.a(Lad;BLud;II)Llg;#3",
-      "renamedSymbol": "P:ei.a(LResourceArchive;BLud;II)Llg;#3",
+      "renamedSymbol": "P:ei.a(LResourceArchive;BLSoundCache;II)Llg;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -190274,7 +190434,7 @@
     },
     {
       "symbol": "P:ei.a(Lad;BLud;II)Llg;#4",
-      "renamedSymbol": "P:ei.a(LResourceArchive;BLud;II)Llg;#4",
+      "renamedSymbol": "P:ei.a(LResourceArchive;BLSoundCache;II)Llg;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -192287,7 +192447,7 @@
     },
     {
       "symbol": "P:g.<init>(Lgk;)V#0",
-      "renamedSymbol": "P:g.<init>(LPacketBuffer;)V#0",
+      "renamedSymbol": "P:SynthesizedSoundEffect.<init>(LPacketBuffer;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -192298,7 +192458,7 @@
     },
     {
       "symbol": "P:g.a(Lad;II)Lg;#0",
-      "renamedSymbol": "P:g.a(LResourceArchive;II)Lg;#0",
+      "renamedSymbol": "P:SynthesizedSoundEffect.load(LResourceArchive;II)LSynthesizedSoundEffect;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -192309,7 +192469,7 @@
     },
     {
       "symbol": "P:g.a(Lad;II)Lg;#1",
-      "renamedSymbol": "P:g.a(LResourceArchive;II)Lg;#1",
+      "renamedSymbol": "P:SynthesizedSoundEffect.load(LResourceArchive;II)LSynthesizedSoundEffect;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -192320,7 +192480,7 @@
     },
     {
       "symbol": "P:g.a(Lad;II)Lg;#2",
-      "renamedSymbol": "P:g.a(LResourceArchive;II)Lg;#2",
+      "renamedSymbol": "P:SynthesizedSoundEffect.load(LResourceArchive;II)LSynthesizedSoundEffect;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -207830,7 +207990,7 @@
     },
     {
       "symbol": "P:lg.<init>(Lgk;Lud;)V#0",
-      "renamedSymbol": "P:lg.<init>(LPacketBuffer;Lud;)V#0",
+      "renamedSymbol": "P:lg.<init>(LPacketBuffer;LSoundCache;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -207841,7 +208001,7 @@
     },
     {
       "symbol": "P:lg.<init>(Lgk;Lud;)V#1",
-      "renamedSymbol": "P:lg.<init>(LPacketBuffer;Lud;)V#1",
+      "renamedSymbol": "P:lg.<init>(LPacketBuffer;LSoundCache;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -210778,7 +210938,7 @@
     },
     {
       "symbol": "P:lj.a(Lgk;Ldg;)V#0",
-      "renamedSymbol": "P:SoundFilter.decode(LPacketBuffer;Ldg;)V#0",
+      "renamedSymbol": "P:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -210789,7 +210949,7 @@
     },
     {
       "symbol": "P:lj.a(Lgk;Ldg;)V#1",
-      "renamedSymbol": "P:SoundFilter.decode(LPacketBuffer;Ldg;)V#1",
+      "renamedSymbol": "P:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -228059,7 +228219,7 @@
     },
     {
       "symbol": "P:ud.<init>(Lad;Lad;)V#0",
-      "renamedSymbol": "P:ud.<init>(LResourceArchive;LResourceArchive;)V#0",
+      "renamedSymbol": "P:SoundCache.<init>(LResourceArchive;LResourceArchive;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -228070,7 +228230,7 @@
     },
     {
       "symbol": "P:ud.<init>(Lad;Lad;)V#1",
-      "renamedSymbol": "P:ud.<init>(LResourceArchive;LResourceArchive;)V#1",
+      "renamedSymbol": "P:SoundCache.<init>(LResourceArchive;LResourceArchive;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -228081,7 +228241,7 @@
     },
     {
       "symbol": "P:ud.a(BI[II)Ltd;#0",
-      "renamedSymbol": "P:ud.a(BI[II)LPcmSample;#0",
+      "renamedSymbol": "P:SoundCache.loadSoundEffect(BI[II)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -228092,7 +228252,7 @@
     },
     {
       "symbol": "P:ud.a(BI[II)Ltd;#1",
-      "renamedSymbol": "P:ud.a(BI[II)LPcmSample;#1",
+      "renamedSymbol": "P:SoundCache.loadSoundEffect(BI[II)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -228103,7 +228263,7 @@
     },
     {
       "symbol": "P:ud.a(BI[II)Ltd;#2",
-      "renamedSymbol": "P:ud.a(BI[II)LPcmSample;#2",
+      "renamedSymbol": "P:SoundCache.loadSoundEffect(BI[II)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -228114,7 +228274,7 @@
     },
     {
       "symbol": "P:ud.a(BI[II)Ltd;#3",
-      "renamedSymbol": "P:ud.a(BI[II)LPcmSample;#3",
+      "renamedSymbol": "P:SoundCache.loadSoundEffect(BI[II)LPcmSample;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -228125,7 +228285,7 @@
     },
     {
       "symbol": "P:ud.a(I)V#0",
-      "renamedSymbol": "P:ud.a(I)V#0",
+      "renamedSymbol": "P:SoundCache.a(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -228136,7 +228296,7 @@
     },
     {
       "symbol": "P:ud.a(III)Ltd;#0",
-      "renamedSymbol": "P:ud.a(III)LPcmSample;#0",
+      "renamedSymbol": "P:SoundCache.getSoundEffectByGroup(III)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -228147,7 +228307,7 @@
     },
     {
       "symbol": "P:ud.a(III)Ltd;#1",
-      "renamedSymbol": "P:ud.a(III)LPcmSample;#1",
+      "renamedSymbol": "P:SoundCache.getSoundEffectByGroup(III)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -228158,7 +228318,7 @@
     },
     {
       "symbol": "P:ud.a(III)Ltd;#2",
-      "renamedSymbol": "P:ud.a(III)LPcmSample;#2",
+      "renamedSymbol": "P:SoundCache.getSoundEffectByGroup(III)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -228169,7 +228329,7 @@
     },
     {
       "symbol": "P:ud.a(IIZ)Ltd;#0",
-      "renamedSymbol": "P:ud.a(IIZ)LPcmSample;#0",
+      "renamedSymbol": "P:SoundCache.getMusicSampleByGroup(IIZ)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -228180,7 +228340,7 @@
     },
     {
       "symbol": "P:ud.a(IIZ)Ltd;#1",
-      "renamedSymbol": "P:ud.a(IIZ)LPcmSample;#1",
+      "renamedSymbol": "P:SoundCache.getMusicSampleByGroup(IIZ)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -228191,7 +228351,7 @@
     },
     {
       "symbol": "P:ud.a(IIZ)Ltd;#2",
-      "renamedSymbol": "P:ud.a(IIZ)LPcmSample;#2",
+      "renamedSymbol": "P:SoundCache.getMusicSampleByGroup(IIZ)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -228202,7 +228362,7 @@
     },
     {
       "symbol": "P:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;#0",
-      "renamedSymbol": "P:ud.a(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#0",
+      "renamedSymbol": "P:SoundCache.loadSoundEffectByName(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -228213,7 +228373,7 @@
     },
     {
       "symbol": "P:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;#1",
-      "renamedSymbol": "P:ud.a(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#1",
+      "renamedSymbol": "P:SoundCache.loadSoundEffectByName(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -228224,7 +228384,7 @@
     },
     {
       "symbol": "P:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;#2",
-      "renamedSymbol": "P:ud.a(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#2",
+      "renamedSymbol": "P:SoundCache.loadSoundEffectByName(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -228235,7 +228395,7 @@
     },
     {
       "symbol": "P:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;#3",
-      "renamedSymbol": "P:ud.a(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#3",
+      "renamedSymbol": "P:SoundCache.loadSoundEffectByName(ILjava/lang/String;[ILjava/lang/String;)LPcmSample;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -228246,7 +228406,7 @@
     },
     {
       "symbol": "P:ud.a(I[ILjava/lang/String;)Ltd;#0",
-      "renamedSymbol": "P:ud.a(I[ILjava/lang/String;)LPcmSample;#0",
+      "renamedSymbol": "P:SoundCache.loadSoundEffectByName(I[ILjava/lang/String;)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -228257,7 +228417,7 @@
     },
     {
       "symbol": "P:ud.a(I[ILjava/lang/String;)Ltd;#1",
-      "renamedSymbol": "P:ud.a(I[ILjava/lang/String;)LPcmSample;#1",
+      "renamedSymbol": "P:SoundCache.loadSoundEffectByName(I[ILjava/lang/String;)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -228268,7 +228428,7 @@
     },
     {
       "symbol": "P:ud.a(I[ILjava/lang/String;)Ltd;#2",
-      "renamedSymbol": "P:ud.a(I[ILjava/lang/String;)LPcmSample;#2",
+      "renamedSymbol": "P:SoundCache.loadSoundEffectByName(I[ILjava/lang/String;)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -228279,7 +228439,7 @@
     },
     {
       "symbol": "P:ud.a(Ljava/lang/String;B)Ltd;#0",
-      "renamedSymbol": "P:ud.a(Ljava/lang/String;B)LPcmSample;#0",
+      "renamedSymbol": "P:SoundCache.getSoundEffectByName(Ljava/lang/String;B)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -228290,7 +228450,7 @@
     },
     {
       "symbol": "P:ud.a(Ljava/lang/String;B)Ltd;#1",
-      "renamedSymbol": "P:ud.a(Ljava/lang/String;B)LPcmSample;#1",
+      "renamedSymbol": "P:SoundCache.getSoundEffectByName(Ljava/lang/String;B)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -228301,7 +228461,7 @@
     },
     {
       "symbol": "P:ud.a([IIII)Ltd;#0",
-      "renamedSymbol": "P:ud.a([IIII)LPcmSample;#0",
+      "renamedSymbol": "P:SoundCache.loadMusicSample([IIII)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -228312,7 +228472,7 @@
     },
     {
       "symbol": "P:ud.a([IIII)Ltd;#1",
-      "renamedSymbol": "P:ud.a([IIII)LPcmSample;#1",
+      "renamedSymbol": "P:SoundCache.loadMusicSample([IIII)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -228323,7 +228483,7 @@
     },
     {
       "symbol": "P:ud.a([IIII)Ltd;#2",
-      "renamedSymbol": "P:ud.a([IIII)LPcmSample;#2",
+      "renamedSymbol": "P:SoundCache.loadMusicSample([IIII)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -228334,7 +228494,7 @@
     },
     {
       "symbol": "P:ud.a([IIII)Ltd;#3",
-      "renamedSymbol": "P:ud.a([IIII)LPcmSample;#3",
+      "renamedSymbol": "P:SoundCache.loadMusicSample([IIII)LPcmSample;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -228345,7 +228505,7 @@
     },
     {
       "symbol": "P:ud.b(I)V#0",
-      "renamedSymbol": "P:ud.clearStaticReferences(I)V#0",
+      "renamedSymbol": "P:SoundCache.clearStaticReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -234135,7 +234295,7 @@
       "original": "MonkeyPuzzle2.java",
       "renamed": "MonkeyPuzzle2.java",
       "inputSha256": "305709b718cd67b5c463c11029c13ce2793c4f288f94d74f0d4a9a23b54aed15",
-      "outputSha256": "c81b0400cbf8f841596019e1a6d5c9e1fd94c3bf75ad38093ade05e1fba985c0",
+      "outputSha256": "fe6468afa647381e9ad8502c534f955341d8932dcf1b536952196bd3c6146b91",
       "edits": [
         {
           "start": 141,
@@ -234857,6 +235017,13 @@
           "symbol": "M:o.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 3810,
+          "end": 3812,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
         },
         {
           "start": 3813,
@@ -235676,6 +235843,13 @@
           "symbol": "M:qj.a(I)V",
           "original": "a",
           "renamed": "clearDeclaredStaticReferences"
+        },
+        {
+          "start": 6298,
+          "end": 6300,
+          "symbol": "C:dm",
+          "original": "dm",
+          "renamed": "SynthesizerVoice"
         },
         {
           "start": 6301,
@@ -250134,7 +250308,7 @@
       "original": "dc.java",
       "renamed": "IterableNodeHashTable.java",
       "inputSha256": "db9fd87c07a1ea2e0588df10e4fccc8a639c42f0e3bbb99a1c83cc5c98e4a698",
-      "outputSha256": "a0a53f22349e4bd27880e89de5e910c9e11359a934d778985906c7349d053391",
+      "outputSha256": "1b2ad563d04987f2c195ea197777d32c92a61083808c6ae60812a1a849afd058",
       "edits": [
         {
           "start": 71,
@@ -250156,6 +250330,13 @@
           "symbol": "C:ug",
           "original": "ug",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 295,
+          "end": 297,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
         },
         {
           "start": 306,
@@ -250240,6 +250421,13 @@
           "symbol": "C:dc",
           "original": "dc",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 2858,
+          "end": 2860,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
         },
         {
           "start": 2869,
@@ -250990,10 +251178,31 @@
     },
     {
       "original": "dg.java",
-      "renamed": "dg.java",
+      "renamed": "SoundEnvelope.java",
       "inputSha256": "f5154a4618930168a098069f516f181d1ab9f4e0348e9f469adf8bac10095d46",
-      "outputSha256": "b986e0be161fa3eb1d3c843b4e3bcfd80a224cc0c082204fe48103f5bb496cfa",
+      "outputSha256": "5aed3279436396d93abdcb0aff80d7c3b477895852db9759d08869164e283ba1",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "SoundEnvelope"
+        },
+        {
+          "start": 326,
+          "end": 327,
+          "symbol": "M:dg.a()V",
+          "original": "a",
+          "renamed": "reset"
+        },
+        {
+          "start": 483,
+          "end": 484,
+          "symbol": "M:dg.a(I)I",
+          "original": "a",
+          "renamed": "step"
+        },
         {
           "start": 1253,
           "end": 1254,
@@ -251030,6 +251239,13 @@
           "renamed": "readUnsignedShort"
         },
         {
+          "start": 1609,
+          "end": 1610,
+          "symbol": "M:dg.b(Lgk;)V",
+          "original": "b",
+          "renamed": "decode"
+        },
+        {
           "start": 1611,
           "end": 1613,
           "symbol": "C:gk",
@@ -251063,6 +251279,13 @@
           "symbol": "M:dg.a(Lgk;)V",
           "original": "a",
           "renamed": "decodeSegments"
+        },
+        {
+          "start": 1778,
+          "end": 1780,
+          "symbol": "M:dg.<init>()V",
+          "original": "dg",
+          "renamed": "SoundEnvelope"
         }
       ]
     },
@@ -252179,16 +252402,86 @@
     },
     {
       "original": "dm.java",
-      "renamed": "dm.java",
+      "renamed": "SynthesizerVoice.java",
       "inputSha256": "6ded58d452d4e938f02d01cc11b186deaf9c8b3cad42aa10bcbbe073fa345658",
-      "outputSha256": "4f111475e5dc2abcb02ec3ab20b9bf8116d143b6f8ee90c8e9b50f74cc265eca",
+      "outputSha256": "7d8304bfc55d81fa4b95d4c2b9387c9a73548454da173e229b58e00c2abcee21",
       "edits": [
+        {
+          "start": 71,
+          "end": 73,
+          "symbol": "C:dm",
+          "original": "dm",
+          "renamed": "SynthesizerVoice"
+        },
         {
           "start": 130,
           "end": 132,
           "symbol": "C:lj",
           "original": "lj",
           "renamed": "SoundFilter"
+        },
+        {
+          "start": 154,
+          "end": 156,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "SoundEnvelope"
+        },
+        {
+          "start": 263,
+          "end": 265,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "SoundEnvelope"
+        },
+        {
+          "start": 346,
+          "end": 348,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "SoundEnvelope"
+        },
+        {
+          "start": 370,
+          "end": 372,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "SoundEnvelope"
+        },
+        {
+          "start": 394,
+          "end": 396,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "SoundEnvelope"
+        },
+        {
+          "start": 418,
+          "end": 420,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "SoundEnvelope"
+        },
+        {
+          "start": 503,
+          "end": 505,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "SoundEnvelope"
+        },
+        {
+          "start": 527,
+          "end": 529,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "SoundEnvelope"
+        },
+        {
+          "start": 653,
+          "end": 655,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "SoundEnvelope"
         },
         {
           "start": 777,
@@ -252198,11 +252491,53 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 1004,
+          "end": 1005,
+          "symbol": "M:dm.a(III)I",
+          "original": "a",
+          "renamed": "evaluateWaveform"
+        },
+        {
+          "start": 1515,
+          "end": 1516,
+          "symbol": "M:dm.a(Lgk;)V",
+          "original": "a",
+          "renamed": "decode"
+        },
+        {
           "start": 1517,
           "end": 1519,
           "symbol": "C:gk",
           "original": "gk",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 1601,
+          "end": 1603,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "SoundEnvelope"
+        },
+        {
+          "start": 1628,
+          "end": 1629,
+          "symbol": "M:dg.b(Lgk;)V",
+          "original": "b",
+          "renamed": "decode"
+        },
+        {
+          "start": 1666,
+          "end": 1668,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "SoundEnvelope"
+        },
+        {
+          "start": 1693,
+          "end": 1694,
+          "symbol": "M:dg.b(Lgk;)V",
+          "original": "b",
+          "renamed": "decode"
         },
         {
           "start": 1730,
@@ -252226,6 +252561,34 @@
           "renamed": "position"
         },
         {
+          "start": 1846,
+          "end": 1848,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "SoundEnvelope"
+        },
+        {
+          "start": 1875,
+          "end": 1876,
+          "symbol": "M:dg.b(Lgk;)V",
+          "original": "b",
+          "renamed": "decode"
+        },
+        {
+          "start": 1915,
+          "end": 1917,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "SoundEnvelope"
+        },
+        {
+          "start": 1944,
+          "end": 1945,
+          "symbol": "M:dg.b(Lgk;)V",
+          "original": "b",
+          "renamed": "decode"
+        },
+        {
           "start": 1987,
           "end": 1988,
           "symbol": "M:gk.a(B)I",
@@ -252247,6 +252610,34 @@
           "renamed": "position"
         },
         {
+          "start": 2103,
+          "end": 2105,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "SoundEnvelope"
+        },
+        {
+          "start": 2132,
+          "end": 2133,
+          "symbol": "M:dg.b(Lgk;)V",
+          "original": "b",
+          "renamed": "decode"
+        },
+        {
+          "start": 2172,
+          "end": 2174,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "SoundEnvelope"
+        },
+        {
+          "start": 2201,
+          "end": 2202,
+          "symbol": "M:dg.b(Lgk;)V",
+          "original": "b",
+          "renamed": "decode"
+        },
+        {
           "start": 2244,
           "end": 2245,
           "symbol": "M:gk.a(B)I",
@@ -252266,6 +252657,34 @@
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 2360,
+          "end": 2362,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "SoundEnvelope"
+        },
+        {
+          "start": 2389,
+          "end": 2390,
+          "symbol": "M:dg.b(Lgk;)V",
+          "original": "b",
+          "renamed": "decode"
+        },
+        {
+          "start": 2429,
+          "end": 2431,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "SoundEnvelope"
+        },
+        {
+          "start": 2458,
+          "end": 2459,
+          "symbol": "M:dg.b(Lgk;)V",
+          "original": "b",
+          "renamed": "decode"
         },
         {
           "start": 2547,
@@ -252324,6 +252743,13 @@
           "renamed": "SoundFilter"
         },
         {
+          "start": 2965,
+          "end": 2967,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "SoundEnvelope"
+        },
+        {
           "start": 2992,
           "end": 2993,
           "symbol": "M:lj.a(Lgk;Ldg;)V",
@@ -252331,11 +252757,165 @@
           "renamed": "decode"
         },
         {
+          "start": 3040,
+          "end": 3041,
+          "symbol": "M:dm.a(II)[I",
+          "original": "a",
+          "renamed": "synthesize"
+        },
+        {
           "start": 4210,
           "end": 4211,
           "symbol": "M:gl.a([III)V",
           "original": "a",
           "renamed": "clearInts"
+        },
+        {
+          "start": 4373,
+          "end": 4374,
+          "symbol": "M:dg.a()V",
+          "original": "a",
+          "renamed": "reset"
+        },
+        {
+          "start": 4399,
+          "end": 4400,
+          "symbol": "M:dg.a()V",
+          "original": "a",
+          "renamed": "reset"
+        },
+        {
+          "start": 4517,
+          "end": 4518,
+          "symbol": "M:dg.a()V",
+          "original": "a",
+          "renamed": "reset"
+        },
+        {
+          "start": 4545,
+          "end": 4546,
+          "symbol": "M:dg.a()V",
+          "original": "a",
+          "renamed": "reset"
+        },
+        {
+          "start": 4839,
+          "end": 4840,
+          "symbol": "M:dg.a()V",
+          "original": "a",
+          "renamed": "reset"
+        },
+        {
+          "start": 4867,
+          "end": 4868,
+          "symbol": "M:dg.a()V",
+          "original": "a",
+          "renamed": "reset"
+        },
+        {
+          "start": 5683,
+          "end": 5684,
+          "symbol": "M:dg.a(I)I",
+          "original": "a",
+          "renamed": "step"
+        },
+        {
+          "start": 5725,
+          "end": 5726,
+          "symbol": "M:dg.a(I)I",
+          "original": "a",
+          "renamed": "step"
+        },
+        {
+          "start": 5807,
+          "end": 5808,
+          "symbol": "M:dg.a(I)I",
+          "original": "a",
+          "renamed": "step"
+        },
+        {
+          "start": 5851,
+          "end": 5852,
+          "symbol": "M:dg.a(I)I",
+          "original": "a",
+          "renamed": "step"
+        },
+        {
+          "start": 5896,
+          "end": 5897,
+          "symbol": "M:dm.a(III)I",
+          "original": "a",
+          "renamed": "evaluateWaveform"
+        },
+        {
+          "start": 6089,
+          "end": 6090,
+          "symbol": "M:dg.a(I)I",
+          "original": "a",
+          "renamed": "step"
+        },
+        {
+          "start": 6142,
+          "end": 6143,
+          "symbol": "M:dg.a(I)I",
+          "original": "a",
+          "renamed": "step"
+        },
+        {
+          "start": 6188,
+          "end": 6189,
+          "symbol": "M:dm.a(III)I",
+          "original": "a",
+          "renamed": "evaluateWaveform"
+        },
+        {
+          "start": 6656,
+          "end": 6657,
+          "symbol": "M:dm.a(III)I",
+          "original": "a",
+          "renamed": "evaluateWaveform"
+        },
+        {
+          "start": 6993,
+          "end": 6994,
+          "symbol": "M:dg.a()V",
+          "original": "a",
+          "renamed": "reset"
+        },
+        {
+          "start": 7021,
+          "end": 7022,
+          "symbol": "M:dg.a()V",
+          "original": "a",
+          "renamed": "reset"
+        },
+        {
+          "start": 7238,
+          "end": 7239,
+          "symbol": "M:dg.a(I)I",
+          "original": "a",
+          "renamed": "step"
+        },
+        {
+          "start": 7282,
+          "end": 7283,
+          "symbol": "M:dg.a(I)I",
+          "original": "a",
+          "renamed": "step"
+        },
+        {
+          "start": 8475,
+          "end": 8476,
+          "symbol": "M:dg.a()V",
+          "original": "a",
+          "renamed": "reset"
+        },
+        {
+          "start": 8520,
+          "end": 8521,
+          "symbol": "M:dg.a(I)I",
+          "original": "a",
+          "renamed": "step"
         },
         {
           "start": 8575,
@@ -252373,6 +252953,13 @@
           "renamed": "SoundFilter"
         },
         {
+          "start": 9720,
+          "end": 9721,
+          "symbol": "M:dg.a(I)I",
+          "original": "a",
+          "renamed": "step"
+        },
+        {
           "start": 10173,
           "end": 10175,
           "symbol": "C:lj",
@@ -252392,6 +252979,13 @@
           "symbol": "C:lj",
           "original": "lj",
           "renamed": "SoundFilter"
+        },
+        {
+          "start": 10937,
+          "end": 10938,
+          "symbol": "M:dg.a(I)I",
+          "original": "a",
+          "renamed": "step"
         },
         {
           "start": 11110,
@@ -252420,6 +253014,20 @@
           "symbol": "C:lj",
           "original": "lj",
           "renamed": "SoundFilter"
+        },
+        {
+          "start": 12218,
+          "end": 12219,
+          "symbol": "M:dg.a(I)I",
+          "original": "a",
+          "renamed": "step"
+        },
+        {
+          "start": 12638,
+          "end": 12640,
+          "symbol": "M:dm.<init>()V",
+          "original": "dm",
+          "renamed": "SynthesizerVoice"
         }
       ]
     },
@@ -252427,7 +253035,7 @@
       "original": "e.java",
       "renamed": "e.java",
       "inputSha256": "f97eb4cef14e3c8a3a32de08b5aca55b298b30c0b3850297aa19dbca87a6ad2d",
-      "outputSha256": "d682cfc00c4c1c1f758b3e025da48bc67d7976426b16d87f8b027226de36f8e7",
+      "outputSha256": "84c355b3aaccddefd2774f1c8058eae025198e926e474673706809d44a0bcdb7",
       "edits": [
         {
           "start": 575,
@@ -252834,6 +253442,13 @@
           "symbol": "C:pl",
           "original": "pl",
           "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 7640,
+          "end": 7642,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
         },
         {
           "start": 8083,
@@ -254948,7 +255563,7 @@
       "original": "ei.java",
       "renamed": "ei.java",
       "inputSha256": "493c8418d536339c930d436e7ae72e8f51a866bd10944ead627d01527b09afea",
-      "outputSha256": "6d7a3edaae9ad570a28941c81c07a1dec3a782cf0fa5c99fd79f3d55c8e418bb",
+      "outputSha256": "431b5fd456ee9d42c362366b40eaa9c746edfe2e95156aacc6d5d887c7f8862e",
       "edits": [
         {
           "start": 942,
@@ -254958,11 +255573,32 @@
           "renamed": "DiskArchiveRequest"
         },
         {
+          "start": 1925,
+          "end": 1927,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
+          "start": 1936,
+          "end": 1938,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
           "start": 1962,
           "end": 1964,
           "symbol": "C:ad",
           "original": "ad",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 1984,
+          "end": 1986,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
         },
         {
           "start": 2425,
@@ -255033,6 +255669,13 @@
           "symbol": "C:ad",
           "original": "ad",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 3071,
+          "end": 3073,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
         },
         {
           "start": 3557,
@@ -256286,7 +256929,7 @@
       "original": "fc.java",
       "renamed": "GameApplet.java",
       "inputSha256": "ff7c2bd985bcfcb7fc0c41086883c3e29ac23849212378debb6461dab5dc2004",
-      "outputSha256": "9ca075a9e1a057fa0ff0919aac1ea22345d14613c2b98eeff62791d4205e84bc",
+      "outputSha256": "e3416fa1e6d50e3abee3bf656ea5dd93d90c95954d7579e3abf1e016e111b37f",
       "edits": [
         {
           "start": 60,
@@ -256546,6 +257189,41 @@
           "symbol": "C:s",
           "original": "s",
           "renamed": "FullscreenStatusDialog"
+        },
+        {
+          "start": 26831,
+          "end": 26833,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
+          "start": 26853,
+          "end": 26855,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
+          "start": 26866,
+          "end": 26868,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
+          "start": 26959,
+          "end": 26961,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
+          "start": 26972,
+          "end": 26974,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
         },
         {
           "start": 27032,
@@ -258093,10 +258771,38 @@
     },
     {
       "original": "g.java",
-      "renamed": "g.java",
+      "renamed": "SynthesizedSoundEffect.java",
       "inputSha256": "0c74369f102a0c30fddc69c3d699e12eb7d81a6e3a6a8694896536396f540892",
-      "outputSha256": "2b1859e1fddc46e447026fc3648a053e07cd07dd037d3353504ab3a3b039a3eb",
+      "outputSha256": "b4c8e1a85763a7fac0029300724b5e0a9fd9399b7d482c16e4b325834692f0a7",
       "edits": [
+        {
+          "start": 50,
+          "end": 51,
+          "symbol": "C:g",
+          "original": "g",
+          "renamed": "SynthesizedSoundEffect"
+        },
+        {
+          "start": 91,
+          "end": 93,
+          "symbol": "C:dm",
+          "original": "dm",
+          "renamed": "SynthesizerVoice"
+        },
+        {
+          "start": 156,
+          "end": 157,
+          "symbol": "M:g.a()[B",
+          "original": "a",
+          "renamed": "synthesize"
+        },
+        {
+          "start": 1049,
+          "end": 1050,
+          "symbol": "M:dm.a(II)[I",
+          "original": "a",
+          "renamed": "synthesize"
+        },
         {
           "start": 1420,
           "end": 1422,
@@ -258105,11 +258811,39 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 1423,
+          "end": 1424,
+          "symbol": "M:g.b()Ltd;",
+          "original": "b",
+          "renamed": "toPcmSample"
+        },
+        {
+          "start": 1456,
+          "end": 1457,
+          "symbol": "M:g.a()[B",
+          "original": "a",
+          "renamed": "synthesize"
+        },
+        {
           "start": 1480,
           "end": 1482,
           "symbol": "C:td",
           "original": "td",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 1579,
+          "end": 1580,
+          "symbol": "C:g",
+          "original": "g",
+          "renamed": "SynthesizedSoundEffect"
+        },
+        {
+          "start": 1581,
+          "end": 1582,
+          "symbol": "M:g.a(Lad;II)Lg;",
+          "original": "a",
+          "renamed": "load"
         },
         {
           "start": 1583,
@@ -258126,6 +258860,13 @@
           "renamed": "getFile"
         },
         {
+          "start": 1753,
+          "end": 1754,
+          "symbol": "C:g",
+          "original": "g",
+          "renamed": "SynthesizedSoundEffect"
+        },
+        {
           "start": 1759,
           "end": 1761,
           "symbol": "C:gk",
@@ -258133,11 +258874,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 1789,
+          "end": 1790,
+          "symbol": "M:g.<init>(Lgk;)V",
+          "original": "g",
+          "renamed": "SynthesizedSoundEffect"
+        },
+        {
           "start": 1791,
           "end": 1793,
           "symbol": "C:gk",
           "original": "gk",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 1871,
+          "end": 1873,
+          "symbol": "C:dm",
+          "original": "dm",
+          "renamed": "SynthesizerVoice"
         },
         {
           "start": 1947,
@@ -258159,6 +258914,20 @@
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 2075,
+          "end": 2077,
+          "symbol": "C:dm",
+          "original": "dm",
+          "renamed": "SynthesizerVoice"
+        },
+        {
+          "start": 2112,
+          "end": 2113,
+          "symbol": "M:dm.a(Lgk;)V",
+          "original": "a",
+          "renamed": "decode"
         },
         {
           "start": 2175,
@@ -269441,7 +270210,7 @@
       "original": "j.java",
       "renamed": "j.java",
       "inputSha256": "2bd9e0814219f80fee4e0a0d9197f1919bfc044a212cf7084eff20850645cfb8",
-      "outputSha256": "b8a293aaab8c9da5355fc64f9fdbe096f49f0eb89d1ad86a8b870225cc62edd6",
+      "outputSha256": "4ea7fdefef8a6e12037f0dad8ede771236e4c179f77dacb0bf00fe26319e868e",
       "edits": [
         {
           "start": 65,
@@ -269493,6 +270262,20 @@
           "renamed": "DirectByteStorage"
         },
         {
+          "start": 1903,
+          "end": 1905,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
+          "start": 2019,
+          "end": 2021,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
           "start": 2060,
           "end": 2061,
           "symbol": "M:pf.a(I)J",
@@ -269519,7 +270302,7 @@
       "original": "ja.java",
       "renamed": "RegistrationAgreementPane.java",
       "inputSha256": "4ed7512c376d87c16ce8795b495be1ddb3aa6672a411a68ea2853cb29a9ac5d2",
-      "outputSha256": "4bf78fd36fb4423b7a5492c4315e8a9af7e6d1aa3083966e647ad516ff159cf6",
+      "outputSha256": "3e781a15f7b9deab40beefb03e2cd57a771711287d596eecee31a5c4faac034e",
       "edits": [
         {
           "start": 50,
@@ -269716,6 +270499,13 @@
           "symbol": "C:jj",
           "original": "jj",
           "renamed": "RichTextWidget"
+        },
+        {
+          "start": 4594,
+          "end": 4596,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
         },
         {
           "start": 4630,
@@ -270442,7 +271232,7 @@
       "original": "jg.java",
       "renamed": "AccountCreationResultPanel.java",
       "inputSha256": "bdba6c2b5ef74180e90329ba118d97002ee534556b6d5e20988d8b81f4f734fe",
-      "outputSha256": "a51d8adce1410dd7617b8dc148e44e63afd0f86737a1ebd6d44ab0bd93f9ffdb",
+      "outputSha256": "4301e2a4f611d78a3763fbc5ac327cf82aa756fbf1a96af8d4e66950b71ae31e",
       "edits": [
         {
           "start": 71,
@@ -270814,6 +271604,13 @@
           "symbol": "C:t",
           "original": "t",
           "renamed": "ButtonWidget"
+        },
+        {
+          "start": 4067,
+          "end": 4069,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
         },
         {
           "start": 4092,
@@ -272266,7 +273063,7 @@
       "original": "jk.java",
       "renamed": "SingleChildWidgetContainer.java",
       "inputSha256": "7ebf771b8d1dd357a900988c768fd4a59df20c391e229fe7622bffef99a889e4",
-      "outputSha256": "9ecdf08442d3d2380bd221c79412a38c24a85813b452fba0c78e4a261db3576a",
+      "outputSha256": "b2a14763a27bedd1e8560541cf860fadff9af228a8eec68d0481627e1f16bde6",
       "edits": [
         {
           "start": 74,
@@ -272836,6 +273633,20 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 16475,
+          "end": 16477,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
+          "start": 16515,
+          "end": 16517,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
           "start": 16552,
           "end": 16554,
           "symbol": "C:aa",
@@ -272885,6 +273696,13 @@
           "renamed": "BoundedRandomAccessFile"
         },
         {
+          "start": 17281,
+          "end": 17283,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
           "start": 17323,
           "end": 17325,
           "symbol": "C:aa",
@@ -272925,6 +273743,20 @@
           "symbol": "C:pl",
           "original": "pl",
           "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 17934,
+          "end": 17936,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
+          "start": 17969,
+          "end": 17971,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
         },
         {
           "start": 18017,
@@ -272976,6 +273808,13 @@
           "renamed": "BoundedRandomAccessFile"
         },
         {
+          "start": 18821,
+          "end": 18823,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
           "start": 18865,
           "end": 18867,
           "symbol": "C:aa",
@@ -273009,6 +273848,13 @@
           "symbol": "C:pl",
           "original": "pl",
           "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 19523,
+          "end": 19525,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
         },
         {
           "start": 19637,
@@ -273060,6 +273906,20 @@
           "renamed": "TextLayout"
         },
         {
+          "start": 20970,
+          "end": 20972,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
+          "start": 21056,
+          "end": 21058,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
           "start": 21116,
           "end": 21118,
           "symbol": "C:aa",
@@ -273093,6 +273953,20 @@
           "symbol": "C:uj",
           "original": "uj",
           "renamed": "DiskCacheWorker"
+        },
+        {
+          "start": 22017,
+          "end": 22019,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
+          "start": 22088,
+          "end": 22090,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
         },
         {
           "start": 22313,
@@ -273242,11 +274116,25 @@
           "renamed": "AccountNameAvailabilityValidator"
         },
         {
+          "start": 24509,
+          "end": 24511,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
           "start": 24758,
           "end": 24760,
           "symbol": "C:hh",
           "original": "hh",
           "renamed": "AccountNameAvailabilityValidator"
+        },
+        {
+          "start": 24987,
+          "end": 24989,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
         },
         {
           "start": 25245,
@@ -273261,6 +274149,13 @@
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "ConfirmedEmailAvailabilityValidator"
+        },
+        {
+          "start": 25633,
+          "end": 25635,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
         },
         {
           "start": 25782,
@@ -273340,6 +274235,13 @@
           "renamed": "BoundedRandomAccessFile"
         },
         {
+          "start": 26726,
+          "end": 26728,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
           "start": 26752,
           "end": 26754,
           "symbol": "C:ja",
@@ -273382,11 +274284,25 @@
           "renamed": "BoundedRandomAccessFile"
         },
         {
+          "start": 27074,
+          "end": 27076,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
           "start": 27115,
           "end": 27117,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "RegistrationAgreementPane"
+        },
+        {
+          "start": 27247,
+          "end": 27249,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
         },
         {
           "start": 27764,
@@ -280990,7 +281906,7 @@
       "original": "lg.java",
       "renamed": "lg.java",
       "inputSha256": "baa019c4ade14ffc43fd7af7703cf9e2b88e35072a08e5214510836d1f9a287f",
-      "outputSha256": "13447b1f2cf3cf1a6c71090929a02c9754afacbc19b332c50fd0dc32bee29012",
+      "outputSha256": "e57cc58c4235ff0ba6990690ec988755b1c53ab8567b17ed6013003ffbf7840a",
       "edits": [
         {
           "start": 82,
@@ -280998,6 +281914,13 @@
           "symbol": "C:td",
           "original": "td",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 400,
+          "end": 402,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
         },
         {
           "start": 1252,
@@ -281028,6 +281951,20 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 1872,
+          "end": 1873,
+          "symbol": "M:ud.a(IIZ)Ltd;",
+          "original": "a",
+          "renamed": "getMusicSampleByGroup"
+        },
+        {
+          "start": 1976,
+          "end": 1977,
+          "symbol": "M:ud.a(III)Ltd;",
+          "original": "a",
+          "renamed": "getSoundEffectByGroup"
+        },
+        {
           "start": 2161,
           "end": 2163,
           "symbol": "C:ch",
@@ -281040,6 +281977,13 @@
           "symbol": "C:gk",
           "original": "gk",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 2421,
+          "end": 2423,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
         },
         {
           "start": 3565,
@@ -283107,7 +284051,7 @@
       "original": "lj.java",
       "renamed": "SoundFilter.java",
       "inputSha256": "78be12ba7a18fb03516b881801164c368437082fd098d8094951c13587c34cbd",
-      "outputSha256": "d378d426c1a864a4392a1c8a6b4305f51ccb6e91bc585575f469dcdb32d7618d",
+      "outputSha256": "bc4cbc8925df9a1e6f904adf6e2a8974d740de66612289026f81f64a3c365b55",
       "edits": [
         {
           "start": 50,
@@ -283178,6 +284122,13 @@
           "symbol": "C:gk",
           "original": "gk",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 3134,
+          "end": 3136,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "SoundEnvelope"
         },
         {
           "start": 3334,
@@ -293546,7 +294497,7 @@
       "original": "ne.java",
       "renamed": "ne.java",
       "inputSha256": "cb300390ef3374ad53c4201a81e245a2a2c98e4fb389f5e1896354bf023ca6c0",
-      "outputSha256": "e4b934fb61814bd34016449ae459cfd42f295eacd44a6316dfdad4fbd78358f9",
+      "outputSha256": "d4232846048257684f2859de64c605f71ff6970ccf3ee7ed931e06fb7f475512",
       "edits": [
         {
           "start": 91,
@@ -293577,6 +294528,13 @@
           "renamed": "ArchiveRequest"
         },
         {
+          "start": 3113,
+          "end": 3115,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
           "start": 3157,
           "end": 3159,
           "symbol": "C:fb",
@@ -293605,6 +294563,13 @@
           "renamed": "BoundedRandomAccessFile"
         },
         {
+          "start": 3785,
+          "end": 3787,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
           "start": 3849,
           "end": 3851,
           "symbol": "C:uj",
@@ -293619,11 +294584,46 @@
           "renamed": "DiskCacheWorker"
         },
         {
+          "start": 4104,
+          "end": 4106,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
+          "start": 4156,
+          "end": 4158,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
+          "start": 4751,
+          "end": 4753,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
+          "start": 4824,
+          "end": 4826,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
           "start": 5224,
           "end": 5226,
           "symbol": "C:hh",
           "original": "hh",
           "renamed": "AccountNameAvailabilityValidator"
+        },
+        {
+          "start": 5635,
+          "end": 5637,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
         },
         {
           "start": 5721,
@@ -293652,6 +294652,13 @@
           "symbol": "M:ta.b(Ljava/lang/String;IIII)V",
           "original": "b",
           "renamed": "drawString"
+        },
+        {
+          "start": 6069,
+          "end": 6071,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
         },
         {
           "start": 6128,
@@ -300347,7 +301354,7 @@
       "original": "q.java",
       "renamed": "q.java",
       "inputSha256": "15313a42997f9f7a58d72820af49ba7becfbeee23268848a9ff8daa68ff318b5",
-      "outputSha256": "1f7ea448a27ce5f4e022b913f04fd99815e284e03dddcfb841d09ee386e5859d",
+      "outputSha256": "2808941c6e55a4b86b78e995b637c9516263ced3d0aa17900f4f1fbbf9d10fba",
       "edits": [
         {
           "start": 152,
@@ -300392,6 +301399,13 @@
           "renamed": "BoundedRandomAccessFile"
         },
         {
+          "start": 4136,
+          "end": 4138,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
           "start": 4236,
           "end": 4238,
           "symbol": "C:pl",
@@ -300404,6 +301418,13 @@
           "symbol": "C:pl",
           "original": "pl",
           "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 4422,
+          "end": 4424,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
         }
       ]
     },
@@ -305519,7 +306540,7 @@
       "original": "ri.java",
       "renamed": "ri.java",
       "inputSha256": "dbb5aacefb1f9236b8c104f8bc58b2fd3ffb3dc6610ebf4de89212eb7df797db",
-      "outputSha256": "e8aa669d828a2f0ff3c5a94f6be5a91a0acf8a5de9516ba92bad3815eb5675fd",
+      "outputSha256": "052bbb28707b7621e3f44d54e85307ebff17a0b0ec68a3d08adc2e311d02b8b7",
       "edits": [
         {
           "start": 118,
@@ -306005,6 +307026,13 @@
           "renamed": "AudioOutput"
         },
         {
+          "start": 9449,
+          "end": 9451,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
+        {
           "start": 9479,
           "end": 9481,
           "symbol": "C:je",
@@ -306087,6 +307115,13 @@
           "symbol": "C:dc",
           "original": "dc",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 11240,
+          "end": 11241,
+          "symbol": "M:ud.a(Ljava/lang/String;B)Ltd;",
+          "original": "a",
+          "renamed": "getSoundEffectByName"
         },
         {
           "start": 11395,
@@ -313815,7 +314850,7 @@
       "original": "tj.java",
       "renamed": "tj.java",
       "inputSha256": "6690065565e2b42613dcb00e18bd46a70ea337c4a3d10df1fd39b841c982e49b",
-      "outputSha256": "6db780aebbde8df83fbfb0e4f1e02e0b80d7298215fe26566c240ac572b3abc9",
+      "outputSha256": "2a46de60ca22f169326f22373ee1197d760814dfaedc19d6fe1661e23b8c7085",
       "edits": [
         {
           "start": 66,
@@ -313991,6 +315026,13 @@
           "symbol": "C:ad",
           "original": "ad",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 2654,
+          "end": 2656,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
         },
         {
           "start": 2681,
@@ -315900,10 +316942,17 @@
     },
     {
       "original": "ud.java",
-      "renamed": "ud.java",
+      "renamed": "SoundCache.java",
       "inputSha256": "1dbc4d852886a0e0984d5cee454f99c161323567dffbeb56f6182b405aa007fa",
-      "outputSha256": "79e1edf15daeed653fcde6d7b44c6c48af404c7f24abd304c1bd7f722f670e54",
+      "outputSha256": "1a64832422d3232108a3d482dd74d302a0b2fcfd23583bc38821ca6be11444d7",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
+        },
         {
           "start": 67,
           "end": 69,
@@ -315926,6 +316975,27 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 266,
+          "end": 267,
+          "symbol": "M:ud.a(III)Ltd;",
+          "original": "a",
+          "renamed": "getSoundEffectByGroup"
+        },
+        {
+          "start": 360,
+          "end": 361,
+          "symbol": "M:ud.a(BI[II)Ltd;",
+          "original": "a",
+          "renamed": "loadSoundEffect"
+        },
+        {
+          "start": 470,
+          "end": 471,
+          "symbol": "M:ud.a(BI[II)Ltd;",
+          "original": "a",
+          "renamed": "loadSoundEffect"
+        },
+        {
           "start": 546,
           "end": 547,
           "symbol": "M:ud.b(I)V",
@@ -315938,6 +317008,13 @@
           "symbol": "C:td",
           "original": "td",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 670,
+          "end": 671,
+          "symbol": "M:ud.a(I[ILjava/lang/String;)Ltd;",
+          "original": "a",
+          "renamed": "loadSoundEffectByName"
         },
         {
           "start": 723,
@@ -315968,6 +317045,27 @@
           "renamed": "hasGroupName"
         },
         {
+          "start": 1228,
+          "end": 1229,
+          "symbol": "M:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;",
+          "original": "a",
+          "renamed": "loadSoundEffectByName"
+        },
+        {
+          "start": 1405,
+          "end": 1406,
+          "symbol": "M:ud.a(I[ILjava/lang/String;)Ltd;",
+          "original": "a",
+          "renamed": "loadSoundEffectByName"
+        },
+        {
+          "start": 1483,
+          "end": 1484,
+          "symbol": "M:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;",
+          "original": "a",
+          "renamed": "loadSoundEffectByName"
+        },
+        {
           "start": 2398,
           "end": 2400,
           "symbol": "C:td",
@@ -315975,11 +317073,25 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 2401,
+          "end": 2402,
+          "symbol": "M:ud.a(BI[II)Ltd;",
+          "original": "a",
+          "renamed": "loadSoundEffect"
+        },
+        {
           "start": 2552,
           "end": 2554,
           "symbol": "C:td",
           "original": "td",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 2576,
+          "end": 2577,
+          "symbol": "C:g",
+          "original": "g",
+          "renamed": "SynthesizedSoundEffect"
         },
         {
           "start": 2622,
@@ -316017,11 +317129,32 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 3390,
+          "end": 3391,
+          "symbol": "C:g",
+          "original": "g",
+          "renamed": "SynthesizedSoundEffect"
+        },
+        {
+          "start": 3392,
+          "end": 3393,
+          "symbol": "M:g.a(Lad;II)Lg;",
+          "original": "a",
+          "renamed": "load"
+        },
+        {
           "start": 3508,
           "end": 3510,
           "symbol": "C:td",
           "original": "td",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 3563,
+          "end": 3564,
+          "symbol": "M:g.b()Ltd;",
+          "original": "b",
+          "renamed": "toPcmSample"
         },
         {
           "start": 4542,
@@ -316031,6 +317164,13 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 4545,
+          "end": 4546,
+          "symbol": "M:ud.a(Ljava/lang/String;B)Ltd;",
+          "original": "a",
+          "renamed": "getSoundEffectByName"
+        },
+        {
           "start": 4649,
           "end": 4651,
           "symbol": "C:td",
@@ -316038,11 +317178,46 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 4945,
+          "end": 4946,
+          "symbol": "M:ud.a(I[ILjava/lang/String;)Ltd;",
+          "original": "a",
+          "renamed": "loadSoundEffectByName"
+        },
+        {
           "start": 5609,
           "end": 5611,
           "symbol": "C:td",
           "original": "td",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 5612,
+          "end": 5613,
+          "symbol": "M:ud.a(IIZ)Ltd;",
+          "original": "a",
+          "renamed": "getMusicSampleByGroup"
+        },
+        {
+          "start": 5700,
+          "end": 5701,
+          "symbol": "M:ud.a([IIII)Ltd;",
+          "original": "a",
+          "renamed": "loadMusicSample"
+        },
+        {
+          "start": 5760,
+          "end": 5761,
+          "symbol": "M:ud.a(IIZ)Ltd;",
+          "original": "a",
+          "renamed": "getMusicSampleByGroup"
+        },
+        {
+          "start": 5801,
+          "end": 5802,
+          "symbol": "M:ud.a([IIII)Ltd;",
+          "original": "a",
+          "renamed": "loadMusicSample"
         },
         {
           "start": 5891,
@@ -316064,6 +317239,13 @@
           "symbol": "C:td",
           "original": "td",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 6049,
+          "end": 6050,
+          "symbol": "M:ud.a([IIII)Ltd;",
+          "original": "a",
+          "renamed": "loadMusicSample"
         },
         {
           "start": 6111,
@@ -316157,6 +317339,13 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 8258,
+          "end": 8259,
+          "symbol": "M:ud.a(ILjava/lang/String;[ILjava/lang/String;)Ltd;",
+          "original": "a",
+          "renamed": "loadSoundEffectByName"
+        },
+        {
           "start": 8482,
           "end": 8484,
           "symbol": "C:td",
@@ -316190,6 +317379,20 @@
           "symbol": "C:td",
           "original": "td",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 9317,
+          "end": 9318,
+          "symbol": "M:ud.a(BI[II)Ltd;",
+          "original": "a",
+          "renamed": "loadSoundEffect"
+        },
+        {
+          "start": 10454,
+          "end": 10456,
+          "symbol": "M:ud.<init>(Lad;Lad;)V",
+          "original": "ud",
+          "renamed": "SoundCache"
         },
         {
           "start": 10457,
@@ -322386,7 +323589,7 @@
       "original": "wd.java",
       "renamed": "wd.java",
       "inputSha256": "0a1d04d5010ec0a4a11b445fa3c11974d60c8fae3645493b972e2bbc82ed70a4",
-      "outputSha256": "2983aa1456cc09e42d74fbebe7a345d5e35f46c2849172cc78b4b6a3d82275e4",
+      "outputSha256": "3b7470c95586560e6c51a90974d9f65867d10ac8ad148c2125ef0a464d9aac14",
       "edits": [
         {
           "start": 281,
@@ -322394,6 +323597,13 @@
           "symbol": "C:pj",
           "original": "pj",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 387,
+          "end": 389,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
         },
         {
           "start": 1391,
@@ -322569,6 +323779,13 @@
           "symbol": "M:pj.d(B)Lug;",
           "original": "d",
           "renamed": "nextBackward"
+        },
+        {
+          "start": 9971,
+          "end": 9973,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "SoundCache"
         },
         {
           "start": 10010,
@@ -325836,10 +327053,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/monkeypuzzle2"
     },
-    "rulesSha256": "08c18528b38db2b1fdcaa8d2c73039d7b6483abc5ae70611b5e9b9477c8be1b5",
+    "rulesSha256": "95d10239d5a8c352462fe6e9886372092224c886ee887afc2585b02ea05bc13c",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "93725a16c404bfa404f75b5318d7a2eb01b9193f74e7452660d253489b58f680",
-    "outputTreeSha256": "92365754736bf2a3257dbdc38f24e2648d440484349d71f12a593bd3607c740b",
+    "outputTreeSha256": "4a4fba5ce56d36961a6dcb2148a4da51d9790f27a83b3394dd0a288b6f3a77e3",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

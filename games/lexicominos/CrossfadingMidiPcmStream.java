@@ -6,13 +6,13 @@ import java.util.*;
 final class CrossfadingMidiPcmStream extends PcmStream {
     MidiPcmStream field_s;
     int field_u;
-    private ih field_t;
+    private MusicTrack field_t;
     private int field_w;
     MidiPcmStream field_A;
     private int[] field_r;
-    private ih field_m;
+    private MusicTrack field_m;
     private int field_x;
-    private ih field_B;
+    private MusicTrack field_B;
     private int[] field_y;
     private MidiPcmStream field_z;
     static java.util.zip.CRC32 field_v;
@@ -24,7 +24,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
     static CrossfadingMidiPcmStream field_n;
     static int[] field_C;
 
-    final synchronized void a(byte param0, int param1, ih param2, int param3) {
+    final synchronized void a(byte param0, int param1, MusicTrack param2, int param3) {
         try {
           this.a(256, param3, false, param2, param1, (byte) 91);
           int var5_int = 83 / ((param0 + 55) / 51);
@@ -324,7 +324,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         }
     }
 
-    private final synchronized void a(int param0, int param1, boolean param2, ih param3, int param4, byte param5) {
+    private final synchronized void a(int param0, int param1, boolean param2, MusicTrack param3, int param4, byte param5) {
         boolean stackIn_18_1 = false;
         int stackIn_30_0 = 0;
         MidiPcmStream stackIn_41_0 = null;

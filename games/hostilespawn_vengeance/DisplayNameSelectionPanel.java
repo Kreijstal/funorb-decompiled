@@ -292,7 +292,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         }
     }
 
-    final static void a(byte param0, ji param1) {
+    final static void a(byte param0, MusicTrack param1) {
         try {
           PasswordValidator.a(true, 256, param1);
           if (param0 != -17) {

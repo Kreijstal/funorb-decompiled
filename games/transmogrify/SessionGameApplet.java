@@ -301,7 +301,7 @@ abstract class SessionGameApplet extends GameApplet {
         if (var2 == 0 ||
           var2 == 1) {
           if (c.field_e[1]) {
-            bl.a(false, 2);
+            SoundCache.a(false, 2);
           }
           if (c.field_e[2]) {
             tf.a(3, false);

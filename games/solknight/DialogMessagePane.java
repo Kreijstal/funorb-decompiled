@@ -168,7 +168,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
                 this.var3 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                me.field_e = param1;
+                SoundCache.field_e = param1;
                 var2 = vd.a("loginm3", param0 ^ 26704);
                 if (null != var2) {
                   il.field_d = Archive.decodeCp1252(true, var2);
@@ -3152,7 +3152,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
                 if (var2 != null) {
                   Archive.decodeCp1252(true, var2);
                 }
-                me.field_e = null;
+                SoundCache.field_e = null;
             }
             void run() {
                 var3 = SolKnight.field_L ? 1 : 0;

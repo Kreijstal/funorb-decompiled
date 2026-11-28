@@ -145,7 +145,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
             }
             this.b(false, 240, ProgressMessageDialog.field_Jb.field_b);
           }
-          ProgressMessageDialog.field_Jb.a(-7734, this.findInstructionsMenuItemAt(AchievementIconEntry.field_k, (byte) 116, lc.field_c), this.findInstructionsMenuItemAt(eh.field_h, (byte) 116, hj.field_S));
+          ProgressMessageDialog.field_Jb.a(-7734, this.findInstructionsMenuItemAt(AchievementIconEntry.field_k, (byte) 116, SoundCache.field_c), this.findInstructionsMenuItemAt(eh.field_h, (byte) 116, hj.field_S));
           if (-1 != ProgressMessageDialog.field_Jb.field_b) {
             this.b(true, 240, ProgressMessageDialog.field_Jb.field_b);
           }

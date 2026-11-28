@@ -15,7 +15,7 @@ final class dk extends IntrusiveNode {
     static AwtRasterBuffer field_o;
     int field_g;
 
-    final boolean a(boolean param0, bn param1, int[] param2, byte[] param3) {
+    final boolean a(boolean param0, SoundCache param1, int[] param2, byte[] param3) {
         int var8 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -46,9 +46,9 @@ final class dk extends IntrusiveNode {
                   var6 = var9;
                   var9--;
                   if (0 == (1 & var9)) {
-                    var7 = param1.a(param2, false, var9 >> 2);
+                    var7 = param1.loadSoundEffectById(param2, false, var9 >> 2);
                   } else {
-                    var7 = param1.a(var9 >> 2, false, param2);
+                    var7 = param1.loadMusicSampleById(var9 >> 2, false, param2);
                   }
                   if (var7 == null) {
                     var5_int = 0;

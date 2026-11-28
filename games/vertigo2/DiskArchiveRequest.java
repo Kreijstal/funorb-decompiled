@@ -8,7 +8,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
     static String[] field_J;
     SectorCacheStore field_F;
     static String field_I;
-    static si field_D;
+    static MusicTrack field_D;
     byte[] field_L;
     static String field_K;
 

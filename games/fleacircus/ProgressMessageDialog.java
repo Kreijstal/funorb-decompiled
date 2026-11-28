@@ -233,7 +233,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
                     }
                   }
                   if (var21 != null &&
-                    ng.a(var21, (byte) 7)) {
+                    SoundCache.a(var21, (byte) 7)) {
                     var8[1][var13] = b.field_e;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;

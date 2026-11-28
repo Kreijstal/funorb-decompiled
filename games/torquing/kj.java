@@ -85,15 +85,15 @@ abstract class kj {
         var42 = Torquing.field_u;
         try {
           if (param16 >= 0 &&
-            param15 < be.field_f) {
+            param15 < TriangleRasterizer.field_f) {
             if (param2 < 0 &&
               param4 < 0 &&
               param9 < 0) {
               return;
             }
-            if (be.field_p <= param2 &&
-              param4 >= be.field_p &&
-              be.field_p <= param9) {
+            if (TriangleRasterizer.field_p <= param2 &&
+              param4 >= TriangleRasterizer.field_p &&
+              TriangleRasterizer.field_p <= param9) {
               return;
             }
             if (param7 != 388870384) {
@@ -230,22 +230,22 @@ abstract class kj {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var36Lifetime2 = be.field_n[param15];
+                var36Lifetime2 = TriangleRasterizer.field_n[param15];
                 while (param11 > param15) {
                   var37 = var17_int >> 16;
-                  if (be.field_p > var37) {
+                  if (TriangleRasterizer.field_p > var37) {
                     var38 = (var18 >> 16) - (var17_int >> 16);
                     if (var38 == 0) {
                       if (var37 >= 0 &&
-                        be.field_p > var37) {
+                        TriangleRasterizer.field_p > var37) {
                         SocketJs5Transport.a(-1709787119, var21, var38, var29, var25, 0, 0, var37 + var36Lifetime2, 0, param5);
                       }
                     } else {
                       var39 = (-var21 + var22) / var38;
                       var40 = (-var25 + var26) / var38;
                       var41 = (var30 - var29) / var38;
-                      if (var38 + var37 >= be.field_p) {
-                        var38 = be.field_p - var37 - 1;
+                      if (var38 + var37 >= TriangleRasterizer.field_p) {
+                        var38 = TriangleRasterizer.field_p - var37 - 1;
                       }
                       if (var37 < 0) {
                         SocketJs5Transport.a(-1709787119, var21 - var39 * var37, var37 + var38, -(var41 * var37) + var29, var25 - var37 * var40, var40, var41, var36Lifetime2, var39, param5);
@@ -255,7 +255,7 @@ abstract class kj {
                     }
                   }
                   param15++;
-                  if (be.field_f <= param15) {
+                  if (TriangleRasterizer.field_f <= param15) {
                     return;
                   }
                   var29 = var29 + var31;
@@ -317,22 +317,22 @@ abstract class kj {
               var25 = var25 + param15 * var27;
               param15 = 0;
             }
-            var35Lifetime1 = be.field_n[param15];
+            var35Lifetime1 = TriangleRasterizer.field_n[param15];
             while (param16 > param15) {
               var36Lifetime1 = var17_int >> 16;
-              if (var36Lifetime1 < be.field_p) {
+              if (var36Lifetime1 < TriangleRasterizer.field_p) {
                 var37Lifetime1 = -(var17_int >> 16) + (var18 >> 16);
                 if (0 == var37Lifetime1) {
                   if (var36Lifetime1 >= 0 &&
-                    be.field_p > var36Lifetime1) {
+                    TriangleRasterizer.field_p > var36Lifetime1) {
                     SocketJs5Transport.a(param7 - 2098657503, var21, var37Lifetime1, var29, var25, 0, 0, var36Lifetime1 + var35Lifetime1, 0, param5);
                   }
                 } else {
                   var38Lifetime1 = (-var21 + var22) / var37Lifetime1;
                   var39Lifetime1 = (-var25 + var26) / var37Lifetime1;
                   var40Lifetime1 = (var30 - var29) / var37Lifetime1;
-                  if (var37Lifetime1 + var36Lifetime1 >= be.field_p) {
-                    var37Lifetime1 = be.field_p - var36Lifetime1 - 1;
+                  if (var37Lifetime1 + var36Lifetime1 >= TriangleRasterizer.field_p) {
+                    var37Lifetime1 = TriangleRasterizer.field_p - var36Lifetime1 - 1;
                   }
                   if (var36Lifetime1 < 0) {
                     SocketJs5Transport.a(-1709787119, -(var36Lifetime1 * var38Lifetime1) + var21, var37Lifetime1 + var36Lifetime1, -(var36Lifetime1 * var40Lifetime1) + var29, -(var39Lifetime1 * var36Lifetime1) + var25, var39Lifetime1, var40Lifetime1, var35Lifetime1, var38Lifetime1, param5);
@@ -342,7 +342,7 @@ abstract class kj {
                 }
               }
               param15++;
-              if (param15 >= be.field_f) {
+              if (param15 >= TriangleRasterizer.field_f) {
                 return;
               }
               var25 = var25 + var27;

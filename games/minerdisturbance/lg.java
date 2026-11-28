@@ -1865,7 +1865,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "optionsPlayVolcano");
                 if (null != var2) {
-                  ri.field_b = FullscreenStatusDialog.a(var2, 124);
+                  SoundCache.field_b = FullscreenStatusDialog.a(var2, 124);
                 }
                 var2 = lh.b(-1, "optionsPlaySuperVolcano");
                 if (null != var2) {

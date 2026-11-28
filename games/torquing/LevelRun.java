@@ -59,7 +59,7 @@ final class LevelRun {
         int var4_int = 0;
         int[] var4 = null;
         int var5_int = 0;
-        pj var5 = null;
+        LitModelMesh var5 = null;
         Model[] var6_ref_kh__ = null;
         Model var8 = null;
         int var9 = 0;
@@ -570,7 +570,7 @@ final class LevelRun {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        pj var6 = null;
+        LitModelMesh var6 = null;
         var7 = Torquing.field_u;
         try {
           var3 = this.field_D;
@@ -1085,7 +1085,7 @@ final class LevelRun {
         int var7_int = 0;
         double[] var7 = null;
         int var8 = 0;
-        pj var8_ref_pj = null;
+        LitModelMesh var8_ref_pj = null;
         int var9_int = 0;
         double var9_double = 0.0;
         Object var9 = null;
@@ -1277,8 +1277,8 @@ final class LevelRun {
             return;
           }
           var7_int = this.field_a[0];
-          var8 = be.field_o[var7_int * 32 & 2047];
-          var9_int = be.field_l[32 * var7_int & 2047];
+          var8 = TriangleRasterizer.field_o[var7_int * 32 & 2047];
+          var9_int = TriangleRasterizer.field_l[32 * var7_int & 2047];
           this.field_a[0] = 0;
           this.field_a[11] = var8;
           this.field_a[3] = var8;
@@ -1351,8 +1351,8 @@ final class LevelRun {
             var25.a(0.0, 0.0, 1.0, (byte) 87, 3.141592653589793 * (double)(2 * -this.field_x) / 2048.0);
             bc.field_a.a(var25, 65536);
             bc.field_a.a(ProxySocketConnector.field_i, (byte) 113);
-            re.field_d[0] = 80.0 * (double)be.field_l[this.field_x] / 65535.0;
-            re.field_d[1] = (double)be.field_o[this.field_x] * 80.0 / 65535.0;
+            re.field_d[0] = 80.0 * (double)TriangleRasterizer.field_l[this.field_x] / 65535.0;
+            re.field_d[1] = (double)TriangleRasterizer.field_o[this.field_x] * 80.0 / 65535.0;
             this.field_h = Double.NEGATIVE_INFINITY;
             var8_ref_pj = this.field_d.getTerrainModel(-100, false).field_k;
             for (var9_int = -1 + var8_ref_pj.field_k; var9_int >= 0; var9_int--) {
@@ -1361,8 +1361,8 @@ final class LevelRun {
           }
           var3 = Math.min(Math.max(var3, -10), 10);
           var7 = new double[3];
-          var7[0] = 2670.0 * (double)(be.field_o[this.field_x] * var3) / 65535.0;
-          var7[1] = 2670.0 * (double)(-be.field_l[this.field_x] * var3) / 65535.0;
+          var7[0] = 2670.0 * (double)(TriangleRasterizer.field_o[this.field_x] * var3) / 65535.0;
+          var7[1] = 2670.0 * (double)(-TriangleRasterizer.field_l[this.field_x] * var3) / 65535.0;
           var7[2] = (double)Math.min(Math.max(var4, -10), 10) * 2670.0;
           if (this.field_c >= 0 &&
             !UrlRequest.field_h &&

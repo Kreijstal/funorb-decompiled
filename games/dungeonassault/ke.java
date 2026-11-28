@@ -31,7 +31,7 @@ final class ke {
           cp.field_U = lj.field_g;
           lj.field_g = false;
           no.field_d = PackedBitSet.field_g;
-          lc.field_c = ak.field_k;
+          SoundCache.field_c = ak.field_k;
           AchievementIconEntry.field_k = NetworkArchiveRequest.field_C;
           PackedBitSet.field_g = param0;
         }

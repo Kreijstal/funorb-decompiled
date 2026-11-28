@@ -5,7 +5,7 @@ final class StripedProgressWidget extends UiWidget {
     private Sprite field_A;
     private Sprite[] field_S;
     private int field_O;
-    static rl[] field_M;
+    static MusicTrack[] field_M;
     int field_R;
     private int field_I;
     private int field_F;
@@ -288,7 +288,7 @@ final class StripedProgressWidget extends UiWidget {
     }
 
     static {
-        field_M = new rl[6];
+        field_M = new MusicTrack[6];
         field_E = "A large asteroid field is heading for earth and the only hope are the eight Sol-Knights.  Earth must survive!  Each Sol-Knight is equipped with a different weapon to combat the threat.<br><br>Your planet's shields can only withstand 2 hits before they fall,<br>so stay vigilant.<br><br>Combos are the key to victory. They are gained by destroying asteroids accurately. If you miss a shot you will lose your combo, and any upgrades you collected will be removed unless you quickly restore the combo.<br><br>Maintaining accuracy will unlock weapon upgrades, such as rapid fire or multiple shots, at x10 and x25 combos.";
         field_J = -1;
         field_L = "Log in / Create account";

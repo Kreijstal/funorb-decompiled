@@ -54,8 +54,8 @@ final class ei {
 
     public static void a(int param0) {
         if (param0 != -22787) {
-          ud var2 = (ud) null;
-          ei.a((ResourceArchive) null, (byte) 11, (ud) null, 44, -94);
+          SoundCache var2 = (SoundCache) null;
+          ei.a((ResourceArchive) null, (byte) 11, (SoundCache) null, 44, -94);
         }
         field_b = null;
     }
@@ -89,7 +89,7 @@ final class ei {
         }
     }
 
-    final static lg a(ResourceArchive param0, byte param1, ud param2, int param3, int param4) {
+    final static lg a(ResourceArchive param0, byte param1, SoundCache param2, int param3, int param4) {
         byte[] var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;

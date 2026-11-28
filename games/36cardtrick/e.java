@@ -80,15 +80,15 @@ final class e {
         var42 = Main.field_T;
         try {
           if (param11 >= 0 &&
-            jb.field_c > param0) {
+            TriangleRasterizer.field_c > param0) {
             if (param2 < 0 &&
               param5 < 0 &&
               param9 < 0) {
               return;
             }
-            if (param2 >= jb.field_i &&
-              jb.field_i <= param5 &&
-              param9 >= jb.field_i) {
+            if (param2 >= TriangleRasterizer.field_i &&
+              TriangleRasterizer.field_i <= param5 &&
+              param9 >= TriangleRasterizer.field_i) {
               return;
             }
             if (param12 <= 12) {
@@ -225,22 +225,22 @@ final class e {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var36Lifetime2 = jb.field_e[param0];
+                var36Lifetime2 = TriangleRasterizer.field_e[param0];
                 while (param8 > param0) {
                   var37 = var17_int >> 16;
-                  if (var37 < jb.field_i) {
+                  if (var37 < TriangleRasterizer.field_i) {
                     var38 = -(var17_int >> 16) + (var18 >> 16);
                     if (var38 == 0) {
                       if (var37 >= 0 &&
-                        jb.field_i > var37) {
+                        TriangleRasterizer.field_i > var37) {
                         gi.a(var36Lifetime2 + var37, var25, var21, 8355711, var29, 0, param7, var38, 0, 0);
                       }
                     } else {
                       var39 = (-var21 + var22) / var38;
                       var40 = (var26 - var25) / var38;
                       var41 = (var30 - var29) / var38;
-                      if (jb.field_i <= var37 + var38) {
-                        var38 = jb.field_i - var37 - 1;
+                      if (TriangleRasterizer.field_i <= var37 + var38) {
+                        var38 = TriangleRasterizer.field_i - var37 - 1;
                       }
                       if (var37 < 0) {
                         gi.a(var36Lifetime2, -(var37 * var40) + var25, var21 - var39 * var37, 8355711, -(var37 * var41) + var29, var40, param7, var37 + var38, var39, var41);
@@ -250,7 +250,7 @@ final class e {
                     }
                   }
                   param0++;
-                  if (param0 >= jb.field_c) {
+                  if (param0 >= TriangleRasterizer.field_c) {
                     return;
                   }
                   var29 = var29 + var31;
@@ -312,17 +312,17 @@ final class e {
               var29 = var29 + var31 * param0;
               param0 = 0;
             }
-            var35Lifetime1 = jb.field_e[param0];
+            var35Lifetime1 = TriangleRasterizer.field_e[param0];
             while (param11 > param0) {
               var36Lifetime1 = var17_int >> 16;
-              if (var36Lifetime1 < jb.field_i) {
+              if (var36Lifetime1 < TriangleRasterizer.field_i) {
                 var37Lifetime1 = (var18 >> 16) - (var17_int >> 16);
                 if (0 != var37Lifetime1) {
                   var38Lifetime1 = (var22 - var21) / var37Lifetime1;
                   var39Lifetime1 = (-var25 + var26) / var37Lifetime1;
                   var40Lifetime1 = (-var29 + var30) / var37Lifetime1;
-                  if (var36Lifetime1 + var37Lifetime1 >= jb.field_i) {
-                    var37Lifetime1 = -var36Lifetime1 + (jb.field_i - 1);
+                  if (var36Lifetime1 + var37Lifetime1 >= TriangleRasterizer.field_i) {
+                    var37Lifetime1 = -var36Lifetime1 + (TriangleRasterizer.field_i - 1);
                   }
                   if (var36Lifetime1 < 0) {
                     gi.a(var35Lifetime1, var25 - var36Lifetime1 * var39Lifetime1, var21 - var36Lifetime1 * var38Lifetime1, 8355711, -(var40Lifetime1 * var36Lifetime1) + var29, var39Lifetime1, param7, var36Lifetime1 + var37Lifetime1, var38Lifetime1, var40Lifetime1);
@@ -331,13 +331,13 @@ final class e {
                   }
                 } else {
                   if (var36Lifetime1 >= 0 &&
-                    jb.field_i > var36Lifetime1) {
+                    TriangleRasterizer.field_i > var36Lifetime1) {
                     gi.a(var35Lifetime1 + var36Lifetime1, var25, var21, 8355711, var29, 0, param7, var37Lifetime1, 0, 0);
                   }
                 }
               }
               param0++;
-              if (jb.field_c <= param0) {
+              if (TriangleRasterizer.field_c <= param0) {
                 return;
               }
               var21 = var21 + var23;

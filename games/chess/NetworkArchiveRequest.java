@@ -21,7 +21,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           var2.writeBytes(DelegatingCanvas.field_f, (byte) -45, 0, DelegatingCanvas.field_f.length);
           var2.writeByte(qd.field_u, (byte) -69);
           var2.writeByte(PacketBuffer.field_n, (byte) 107);
-          var2.writeBytes(fe.field_d, (byte) -45, 0, fe.field_d.length);
+          var2.writeBytes(SoundCache.field_d, (byte) -45, 0, SoundCache.field_d.length);
           var2.backpatchByteLength(var2.position - var3, -1);
           return;
         }

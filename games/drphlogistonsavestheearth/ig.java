@@ -16,7 +16,7 @@ final class ig extends IntrusiveNode {
     static String field_i;
     byte[] field_n;
 
-    final boolean a(int[] param0, int param1, cf param2, byte[] param3) {
+    final boolean a(int[] param0, int param1, SoundCache param2, byte[] param3) {
         int var8 = 0;
         int stackIn_22_0 = 0;
         RuntimeException stackIn_25_0 = null;
@@ -50,9 +50,9 @@ final class ig extends IntrusiveNode {
                   var6 = var9;
                   var9--;
                   if ((1 & var9) != 0) {
-                    var7 = param2.a(256, var9 >> 2, param0);
+                    var7 = param2.loadMusicSampleById(256, var9 >> 2, param0);
                   } else {
-                    var7 = param2.a(param0, var9 >> 2, 1);
+                    var7 = param2.loadSoundEffectById(param0, var9 >> 2, 1);
                   }
                   if (var7 == null) {
                     var5_int = 0;

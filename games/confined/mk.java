@@ -50,7 +50,7 @@ final class mk extends ai {
         ud var1 = null;
         ud var1Lifetime1;
         if (param0 == 128) {
-          var1 = (ud) (m.field_d.removeLast((byte) 87));
+          var1 = (ud) (SoundCache.field_d.removeLast((byte) 87));
           if (var1 == null) {
             var1 = new ud();
           }
@@ -59,7 +59,7 @@ final class mk extends ai {
           return;
         }
         field_m = (String) null;
-        var1Lifetime1 = (ud) (m.field_d.removeLast((byte) 87));
+        var1Lifetime1 = (ud) (SoundCache.field_d.removeLast((byte) 87));
         if (var1Lifetime1 == null) {
           var1Lifetime1 = new ud();
         }

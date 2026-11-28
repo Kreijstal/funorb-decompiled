@@ -20,7 +20,7 @@ abstract class AwtRasterBuffer {
 
     abstract void initialize(java.awt.Component param0, int param1, int param2, int param3);
 
-    final static void a(byte param0, boolean param1, wk param2) {
+    final static void a(byte param0, boolean param1, MusicTrack param2) {
         try {
           TextHotspotBounds.a((byte) 12, 256, param1, param2);
           if (param0 != 5) {

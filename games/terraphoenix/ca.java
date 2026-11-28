@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ca {
-    static tk[] field_a;
+    static MusicTrack[] field_a;
     private static String field_z;
 
     public static void clearStaticReferences(int param0) {

@@ -17,7 +17,7 @@ abstract class ArchiveRequest extends DualLinkNode {
 
     final static void f(int param0) {
         jf.d(-1);
-        gk.field_a = true;
+        SoundCache.field_a = true;
         SpriteState.field_r = true;
         IsaacRandom.field_d.closeAllDialogs((byte) 67);
         if (param0 >= 57) {

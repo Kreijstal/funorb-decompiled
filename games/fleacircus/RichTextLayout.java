@@ -127,7 +127,7 @@ final class RichTextLayout extends TextLayout {
         }
         try {
           ha.field_i = kl.a(252, param0, "commonui", "jagex_logo_grey");
-          ng.field_h = of.a("button", "commonui", param0, 61);
+          SoundCache.field_h = of.a("button", "commonui", param0, 61);
           t.field_h = bg.a("validation", param0, (byte) 7, "commonui");
           nb.field_c = (BitmapFont) ((Object) fi.a(param0, param1, "commonui", "arezzo12", (byte) 82));
           ug.field_e = (BitmapFont) ((Object) fi.a(param0, param1, "commonui", "arezzo14", (byte) 82));
@@ -172,7 +172,7 @@ final class RichTextLayout extends TextLayout {
           var12.bindAsRenderTarget();
           var17.drawOpaque(-var9Lifetime1, 0);
           ia.a(-125);
-          ng.field_h = new RgbSprite[]{var15, var12, var11};
+          SoundCache.field_h = new RgbSprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "j.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

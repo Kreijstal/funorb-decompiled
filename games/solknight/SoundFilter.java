@@ -11,7 +11,7 @@ final class SoundFilter {
     private int[][][] field_h;
     private static float field_c;
 
-    final void decode(PacketBuffer param0, vi param1) {
+    final void decode(PacketBuffer param0, SoundEnvelope param1) {
         int var3;
         int var4;
         int var5;

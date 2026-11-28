@@ -4,7 +4,7 @@
 final class cl extends IntrusiveNode {
     static RgbSprite field_j;
     static String field_h;
-    static ji field_o;
+    static MusicTrack field_o;
     static int field_l;
     int field_m;
     static String field_k;

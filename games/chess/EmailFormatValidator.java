@@ -21,7 +21,7 @@ final class EmailFormatValidator extends TextFieldValidator {
         int var1 = -45 % ((param0 + 50) / 58);
         dc.field_q = new ci(0L, (ci) null);
         if (bo.field_c) {
-          dc.field_q.a((byte) 127, fe.field_h);
+          dc.field_q.a((byte) 127, SoundCache.field_h);
         }
         dc.field_q.a((byte) 124, ArrayWidgetContainer.field_G);
         LoginPanel.field_W = new id(DirectByteStorage.field_c, dc.field_q);

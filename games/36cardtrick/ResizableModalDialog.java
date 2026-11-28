@@ -4,7 +4,7 @@
 abstract class ResizableModalDialog extends ModalDialog {
     static String[] field_L;
     static AccountRequestState field_P;
-    static ik field_O;
+    static SoftwareModelMesh field_O;
     private int field_T;
     private int field_M;
     private int field_K;
@@ -304,7 +304,7 @@ abstract class ResizableModalDialog extends ModalDialog {
           var8Lifetime1++;
         }
         if (param1 != -77) {
-          field_O = (ik) null;
+          field_O = (SoftwareModelMesh) null;
         }
         PacketBuffer.field_k.draw(-90 + (param0 + this.field_h), 10 + param2);
         cd.a(se.field_G, this.field_h - 10, (byte) -94, param0 + 5, param2 + 35);

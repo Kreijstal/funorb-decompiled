@@ -6,7 +6,7 @@ class RichTextWidget extends InteractiveWidget {
     static String field_U;
     private String[] field_Q;
     static java.math.BigInteger field_M;
-    static dd[] field_N;
+    static SoftwareModelMesh[] field_N;
     static String field_W;
     static boolean field_X;
     static String field_Z;
@@ -424,7 +424,7 @@ class RichTextWidget extends InteractiveWidget {
     static {
         field_Z = "Knight";
         field_U = "Inviting <%0>";
-        field_N = new dd[7];
+        field_N = new SoftwareModelMesh[7];
         field_ab = new int[]{2, 1, 2, 5, 5, 1, 2, 2, 3, 5, 1};
         field_W = "Report abuse";
         field_M = new java.math.BigInteger("65537");

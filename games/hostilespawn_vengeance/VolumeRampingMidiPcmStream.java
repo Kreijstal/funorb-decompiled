@@ -19,7 +19,7 @@ final class VolumeRampingMidiPcmStream extends MidiPcmStream {
     static String field_V;
     static char[] field_hb;
 
-    final static void a(ji param0, int param1, byte param2, boolean param3) {
+    final static void a(MusicTrack param0, int param1, byte param2, boolean param3) {
         Object var4 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -71,8 +71,8 @@ final class VolumeRampingMidiPcmStream extends MidiPcmStream {
         }
         super.setChannelVolumeScale(param0, param1, (byte) -113);
         if (param2 >= -47) {
-          ji var5 = (ji) null;
-          VolumeRampingMidiPcmStream.a((ji) null, 55, (byte) -98, false);
+          MusicTrack var5 = (MusicTrack) null;
+          VolumeRampingMidiPcmStream.a((MusicTrack) null, 55, (byte) -98, false);
         }
         this.field_db[param1] = param0 << 12;
     }
@@ -163,8 +163,8 @@ final class VolumeRampingMidiPcmStream extends MidiPcmStream {
         int var4_int = 0;
         try {
           if (param2 != -1702) {
-            ji var5 = (ji) null;
-            this.a(false, (byte) 48, false, (ji) null);
+            MusicTrack var5 = (MusicTrack) null;
+            this.a(false, (byte) 48, false, (MusicTrack) null);
           }
           var4_int = param1 * AudioOutput.field_g / 1000;
           this.a(var4_int, -17, param0);
@@ -212,7 +212,7 @@ final class VolumeRampingMidiPcmStream extends MidiPcmStream {
     private final synchronized void a(int param0, int param1, mn param2) {
         int var4_int = 0;
         int var5 = 0;
-        ji var6 = null;
+        MusicTrack var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -225,8 +225,8 @@ final class VolumeRampingMidiPcmStream extends MidiPcmStream {
             this.b(var4_int, param0, param1 ^ -128, this.field_gb.field_d[var4_int]);
           }
           if (param1 != -17) {
-            var6 = (ji) null;
-            VolumeRampingMidiPcmStream.a((ji) null, -104, (byte) -19, false);
+            var6 = (MusicTrack) null;
+            VolumeRampingMidiPcmStream.a((MusicTrack) null, -104, (byte) -19, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -255,11 +255,11 @@ final class VolumeRampingMidiPcmStream extends MidiPcmStream {
         }
     }
 
-    final synchronized void a(boolean param0, byte param1, boolean param2, ji param3) {
+    final synchronized void a(boolean param0, byte param1, boolean param2, MusicTrack param3) {
         try {
           if (param1 < 123) {
-            ji var6 = (ji) null;
-            VolumeRampingMidiPcmStream.a((ji) null, -112, (byte) 83, true);
+            MusicTrack var6 = (MusicTrack) null;
+            VolumeRampingMidiPcmStream.a((MusicTrack) null, -112, (byte) 83, true);
           }
           this.h(381);
           super.a(param0, (byte) 125, param2, param3);

@@ -62,7 +62,7 @@ final class kf extends IntrusiveNode {
         field_t = null;
     }
 
-    final boolean a(int[] param0, fe param1, byte param2, byte[] param3) {
+    final boolean a(int[] param0, SoundCache param1, byte param2, byte[] param3) {
         int var8 = 0;
         int stackIn_23_0 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -87,7 +87,7 @@ final class kf extends IntrusiveNode {
           var7 = null;
           if (param2 != -73) {
             var11 = (byte[]) null;
-            this.a((int[]) null, (fe) null, (byte) -119, (byte[]) null);
+            this.a((int[]) null, (SoundCache) null, (byte) -119, (byte[]) null);
           }
           for (var8 = 0; var8 < 128; var8++) {
             if (param3 == null ||
@@ -98,9 +98,9 @@ final class kf extends IntrusiveNode {
                   var6 = var9;
                   var9--;
                   if (0 == (1 & var9)) {
-                    var7 = param1.a(param0, var9 >> 2, param2 + 968449273);
+                    var7 = param1.loadSoundEffectById(param0, var9 >> 2, param2 + 968449273);
                   } else {
-                    var7 = param1.a(var9 >> 2, param0, (byte) -48);
+                    var7 = param1.loadMusicSampleById(var9 >> 2, param0, (byte) -48);
                   }
                   if (var7 == null) {
                     var5_int = 0;
@@ -145,7 +145,7 @@ final class kf extends IntrusiveNode {
         this.field_o = null;
         if (param0 <= 45) {
           byte[] var3 = (byte[]) null;
-          this.a((int[]) null, (fe) null, (byte) 87, (byte[]) null);
+          this.a((int[]) null, (SoundCache) null, (byte) 87, (byte[]) null);
         }
     }
 

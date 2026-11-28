@@ -5,7 +5,7 @@ final class sl {
     static int field_a;
     static int field_c;
     static String field_f;
-    static dd field_g;
+    static SoftwareModelMesh field_g;
     static int field_e;
     static String field_h;
     static String field_b;

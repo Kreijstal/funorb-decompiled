@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ai {
-    static i field_d;
+    static SoundCache field_d;
     static boolean field_c;
     int field_b;
     static Sprite field_a;

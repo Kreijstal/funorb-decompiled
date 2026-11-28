@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wj {
-    static be field_c;
+    static MusicTrack field_c;
     static RgbSprite[] field_d;
     static String field_b;
     static int field_e;

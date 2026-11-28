@@ -4,7 +4,7 @@
 final class el extends cm {
     static RgbSprite[] field_z;
     static String field_x;
-    static pf[] field_y;
+    static MusicTrack[] field_y;
     private Object field_A;
 
     el(Object param0, int param1) {
@@ -24,7 +24,7 @@ final class el extends cm {
           var2.writeByte(2, (byte) -56);
           return;
         }
-        field_y = (pf[]) null;
+        field_y = (MusicTrack[]) null;
         var2.writeByte(1, (byte) -95);
         var2.writeByte(2, (byte) -56);
     }
@@ -59,6 +59,6 @@ final class el extends cm {
 
     static {
         field_x = "You cannot chat to <%0> because <%0> is offline in your friend list.";
-        field_y = new pf[7];
+        field_y = new MusicTrack[7];
     }
 }

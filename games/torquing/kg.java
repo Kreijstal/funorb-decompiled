@@ -5,7 +5,7 @@ final class kg {
     private SceneMeshBatch field_d;
     private int field_b;
     static nh field_c;
-    pj field_a;
+    LitModelMesh field_a;
 
     final static boolean a(int[] param0, byte param1) {
         int var5_int = 0;
@@ -143,7 +143,7 @@ final class kg {
           var4 = new MeshGeometry(1, 1, 0);
           var4.a(0, 0, 0);
           var4.addVertex(0, 0, 0, (byte) 0, (byte) 0, (short)param2, (short) -1);
-          this.field_a = (pj) (var4.a(80, 1365, -1, -12, 12));
+          this.field_a = (LitModelMesh) (var4.a(80, 1365, -1, -12, 12));
           this.field_a.field_z[0] = (short)param2;
           var5 = new Model();
           var5.field_k = this.field_a;

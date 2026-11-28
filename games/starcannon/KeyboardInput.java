@@ -200,7 +200,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
           for (var3 = 0; DualLinkNode.field_h.length > var3; var3++) {
             var4 = eg.field_a[var3];
             if (var4 >= 0) {
-              if (ja.field_c.field_k == var4) {
+              if (SoundCache.field_c.field_k == var4) {
                 var5 = AccountServiceResult.field_b;
               } else {
                 var5 = sd.field_a;
@@ -251,7 +251,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             var7Lifetime1 = fb.$cfr$intArgs$a$1694234bddb3(stackIn_40_0, stackIn_40_1, stackIn_41_2);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + ee.field_b;
             if (var4 >= 0) {
-              if (var4 == ja.field_c.field_k) {
+              if (var4 == SoundCache.field_c.field_k) {
                 stackIn_45_0 = AlphaWidgetContainer.field_y;
               } else {
                 stackIn_45_0 = wj.field_d;

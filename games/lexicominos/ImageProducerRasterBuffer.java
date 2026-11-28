@@ -5,7 +5,7 @@ import java.util.*;
 
 final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ColorModel field_k;
-    static ih[] field_i;
+    static MusicTrack[] field_i;
     static qa field_g;
     private java.awt.image.ImageConsumer field_h;
     static int field_j;
@@ -49,7 +49,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
         field_g = null;
         field_i = null;
         if (param0 > -125) {
-          field_i = (ih[]) null;
+          field_i = (MusicTrack[]) null;
         }
     }
 
@@ -74,7 +74,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 >= -41) {
-            field_i = (ih[]) null;
+            field_i = (MusicTrack[]) null;
           }
           stackIn_3_0 = param0.b(param1, -118);
           return stackIn_3_0;
@@ -267,6 +267,6 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
     }
 
     static {
-        field_i = new ih[8];
+        field_i = new MusicTrack[8];
     }
 }

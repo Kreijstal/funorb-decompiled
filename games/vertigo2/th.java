@@ -108,7 +108,7 @@ final class th {
                       var16 = var22.a(var10, var14, var12);
                       var17 = var22.a(var9, var14, var11);
                       var18 = var22.a(var10, var14, var11);
-                      var19 = id.a(param1[var4], (short)var18, (short)var17, var22, false, (short)var15);
+                      var19 = SoundCache.addScaledTriangle(param1[var4], (short)var18, (short)var17, var22, false, (short)var15);
                     } else {
                       if (var20 != 3) {
                         if (4 != var20) {
@@ -117,21 +117,21 @@ final class th {
                             var16 = var22.a(var14, var9, var12);
                             var17 = var22.a(var14, var10, var11);
                             var18 = var22.a(var14, var9, var11);
-                            var19 = id.a(param1[var4], (short)var17, (short)var18, var22, false, (short)var16);
+                            var19 = SoundCache.addScaledTriangle(param1[var4], (short)var17, (short)var18, var22, false, (short)var16);
                           }
                         } else {
                           var15 = var22.a(var13, var9, var12);
                           var16 = var22.a(var13, var10, var12);
                           var17 = var22.a(var13, var9, var11);
                           var18 = var22.a(var13, var10, var11);
-                          var19 = id.a(param1[var4], (short)var18, (short)var17, var22, false, (short)var15);
+                          var19 = SoundCache.addScaledTriangle(param1[var4], (short)var18, (short)var17, var22, false, (short)var15);
                         }
                       } else {
                         var15 = var22.a(var10, var13, var12);
                         var16 = var22.a(var9, var13, var12);
                         var17 = var22.a(var10, var13, var11);
                         var18 = var22.a(var9, var13, var11);
-                        var19 = id.a(param1[var4], (short)var17, (short)var18, var22, false, (short)var16);
+                        var19 = SoundCache.addScaledTriangle(param1[var4], (short)var17, (short)var18, var22, false, (short)var16);
                       }
                     }
                   } else {
@@ -139,14 +139,14 @@ final class th {
                     var16 = var22.a(var9, var12, var14);
                     var17 = var22.a(var10, var11, var14);
                     var18 = var22.a(var9, var11, var14);
-                    var19 = id.a(param1[var4], (short)var17, (short)var18, var22, false, (short)var16);
+                    var19 = SoundCache.addScaledTriangle(param1[var4], (short)var17, (short)var18, var22, false, (short)var16);
                   }
                 } else {
                   var15 = var22.a(var9, var12, var13);
                   var16 = var22.a(var10, var12, var13);
                   var17 = var22.a(var9, var11, var13);
                   var18 = var22.a(var10, var11, var13);
-                  var19 = id.a(param1[var4], (short)var18, (short)var17, var22, false, (short)var15);
+                  var19 = SoundCache.addScaledTriangle(param1[var4], (short)var18, (short)var17, var22, false, (short)var15);
                 }
                 var22.a(var15, var17, var16, (byte) 1, (byte)var19, (short) 128, (short)(4 * (var4 * 4 + var5) + var6));
                 var22.a(var18, var16, var17, (byte) 1, (byte)var19, (short) 128, (short)((var5 + var4 * 4) * 4 + var6));

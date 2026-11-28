@@ -9,7 +9,7 @@ final class dl {
     static String field_f;
     static String field_a;
 
-    final static void a(boolean param0, wh param1, int param2, int param3, int param4) {
+    final static void a(boolean param0, MusicTrack param1, int param2, int param3, int param4) {
         if (param2 != -32532) {
           return;
         }
@@ -123,12 +123,12 @@ final class dl {
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
-        wh var8 = null;
+        MusicTrack var8 = null;
         var7 = MinerDisturbance.field_ab;
         try {
           if (param0 > -69) {
-            var8 = (wh) null;
-            dl.a(false, (wh) null, -17, -116, -117);
+            var8 = (MusicTrack) null;
+            dl.a(false, (MusicTrack) null, -17, -116, -117);
           }
           var1_int = 0;
           var2 = 0;

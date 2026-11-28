@@ -269,7 +269,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           return;
         }
         try {
-          gk.field_h = 0L;
+          SoundCache.field_h = 0L;
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ac.start()");
         }
@@ -497,8 +497,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 rb.field_u = EmailFormatValidator.f(-17887);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (gk.field_h != 0L) {
-                    stackIn_96_0 = compareLongs(ih.correctedCurrentTimeMillis((byte) -98), gk.field_h);
+                  if (SoundCache.field_h != 0L) {
+                    stackIn_96_0 = compareLongs(ih.correctedCurrentTimeMillis((byte) -98), SoundCache.field_h);
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_96_0 >= 0)) {
@@ -866,7 +866,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (this == ProxySocketConnector.field_j &&
             !qc.field_b) {
-            gk.field_h = ih.correctedCurrentTimeMillis((byte) -98);
+            SoundCache.field_h = ih.correctedCurrentTimeMillis((byte) -98);
             jj.sleepMillis((byte) -127, 5000L);
             fb.field_d = null;
             this.shutdownApplet(-1, false);
@@ -886,7 +886,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           return;
         }
         try {
-          gk.field_h = 4000L + ih.correctedCurrentTimeMillis((byte) -98);
+          SoundCache.field_h = 4000L + ih.correctedCurrentTimeMillis((byte) -98);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ac.stop()");
         }

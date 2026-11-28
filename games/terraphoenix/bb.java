@@ -29,7 +29,7 @@ final class bb {
             stackIn_7_0 = qk.field_a.stringWidth(param2);
             return stackIn_7_0;
           }
-          stackIn_5_0 = da.field_h.stringWidth(param2);
+          stackIn_5_0 = SoundCache.field_h.stringWidth(param2);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -198,7 +198,7 @@ final class bb {
             stackIn_7_0 = qk.field_a.stringWidth(param2);
             return stackIn_7_0;
           }
-          stackIn_5_0 = da.field_h.stringWidth(param2);
+          stackIn_5_0 = SoundCache.field_h.stringWidth(param2);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

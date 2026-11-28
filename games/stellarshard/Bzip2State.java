@@ -73,15 +73,15 @@ final class Bzip2State {
         var19 = stellarshard.field_B;
         try {
           if (param0 >= 0 &&
-            param4 < cc.field_c) {
+            param4 < TriangleRasterizer.field_c) {
             if (param3 < 0 &&
               param7 < 0 &&
               param1 < 0) {
               return;
             }
-            if (param3 >= cc.field_m &&
-              param7 >= cc.field_m &&
-              param1 >= cc.field_m) {
+            if (param3 >= TriangleRasterizer.field_m &&
+              param7 >= TriangleRasterizer.field_m &&
+              param1 >= TriangleRasterizer.field_m) {
               return;
             }
             if (param6 != -445834032) {
@@ -146,19 +146,19 @@ final class Bzip2State {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var16Lifetime2 = cc.field_i[param4];
+                var16Lifetime2 = TriangleRasterizer.field_i[param4];
                 while (param8 > param4) {
                   var17 = var9_int >> 16;
-                  if (var17 < cc.field_m) {
+                  if (var17 < TriangleRasterizer.field_m) {
                     var18 = -(var9_int >> 16) + (var10 >> 16);
                     if (var18 == 0) {
                       if (var17 >= 0 &&
-                        var17 < cc.field_m) {
+                        var17 < TriangleRasterizer.field_m) {
                         aj.a(param5, true, var18, param2, var17 + var16Lifetime2);
                       }
                     } else {
-                      if (var18 + var17 >= cc.field_m) {
-                        var18 = -var17 + cc.field_m - 1;
+                      if (var18 + var17 >= TriangleRasterizer.field_m) {
+                        var18 = -var17 + TriangleRasterizer.field_m - 1;
                       }
                       if (var17 >= 0) {
                         aj.a(param5, true, var18, param2, var17 + var16Lifetime2);
@@ -168,7 +168,7 @@ final class Bzip2State {
                     }
                   }
                   param4++;
-                  if (param4 >= cc.field_c) {
+                  if (param4 >= TriangleRasterizer.field_c) {
                     return;
                   }
                   var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_i;
@@ -197,19 +197,19 @@ final class Bzip2State {
               var10 = var10 + var12 * param4;
               param4 = 0;
             }
-            var15Lifetime1 = cc.field_i[param4];
+            var15Lifetime1 = TriangleRasterizer.field_i[param4];
             while (param0 > param4) {
               var16Lifetime1 = var9_int >> 16;
-              if (var16Lifetime1 < cc.field_m) {
+              if (var16Lifetime1 < TriangleRasterizer.field_m) {
                 var17Lifetime1 = -(var9_int >> 16) + (var10 >> 16);
                 if (0 == var17Lifetime1) {
                   if (var16Lifetime1 >= 0 &&
-                    cc.field_m > var16Lifetime1) {
+                    TriangleRasterizer.field_m > var16Lifetime1) {
                     aj.a(param5, true, var17Lifetime1, param2, var16Lifetime1 + var15Lifetime1);
                   }
                 } else {
-                  if (var17Lifetime1 + var16Lifetime1 >= cc.field_m) {
-                    var17Lifetime1 = -var16Lifetime1 + (cc.field_m - 1);
+                  if (var17Lifetime1 + var16Lifetime1 >= TriangleRasterizer.field_m) {
+                    var17Lifetime1 = -var16Lifetime1 + (TriangleRasterizer.field_m - 1);
                   }
                   if (var16Lifetime1 < 0) {
                     aj.a(param5, true, var16Lifetime1 + var17Lifetime1, param2, var15Lifetime1);
@@ -219,7 +219,7 @@ final class Bzip2State {
                 }
               }
               param4++;
-              if (cc.field_c <= param4) {
+              if (TriangleRasterizer.field_c <= param4) {
                 return;
               }
               var9_int = var9_int + var11;

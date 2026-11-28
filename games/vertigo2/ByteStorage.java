@@ -144,8 +144,8 @@ abstract class ByteStorage {
             }
             if (ProxyAuthenticationRequiredException.field_d == vi.field_D &&
               c.a(1, (byte) -104)) {
-              var6_int = id.field_f.readUnsignedByte(-11);
-              id.field_f.position = 0;
+              var6_int = SoundCache.field_f.readUnsignedByte(-11);
+              SoundCache.field_f.position = 0;
               if (var6_int != 0) {
                 lc.field_f = var6_int;
                 ca.field_b = -1;
@@ -156,17 +156,17 @@ abstract class ByteStorage {
             }
             if (gd.field_l == ProxyAuthenticationRequiredException.field_d &&
               c.a(8, (byte) -104)) {
-              dc.field_F = id.field_f.readLong(-31016);
-              id.field_f.position = 0;
+              dc.field_F = SoundCache.field_f.readLong(-31016);
+              SoundCache.field_f.position = 0;
               wl.a(param5, param1, (byte) 101, param4, qn.field_y);
               ProxyAuthenticationRequiredException.field_d = ir.field_c;
             }
             boolean decompiledFrameRemainder0 = true;
             if (ir.field_c == ProxyAuthenticationRequiredException.field_d &&
               c.a(1, (byte) -104)) {
-              var6_intLifetime1 = id.field_f.readUnsignedByte(-11);
+              var6_intLifetime1 = SoundCache.field_f.readUnsignedByte(-11);
               lc.field_f = var6_intLifetime1;
-              id.field_f.position = 0;
+              SoundCache.field_f.position = 0;
               go.field_g = null;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
@@ -189,13 +189,13 @@ abstract class ByteStorage {
             }
             if (ProxyAuthenticationRequiredException.field_d == Vertigo2.field_E &&
               dl.b((byte) -126)) {
-              tn.field_p = id.field_f.readLong(-31016);
+              tn.field_p = SoundCache.field_f.readLong(-31016);
               nb.field_A = param2;
-              fn.field_z = id.field_f.readUnsignedByte(-11);
-              uh.field_oc = id.field_f.readUnsignedByte(param0 - 24440);
-              q.field_y = id.field_f.readUnsignedShort((byte) -11);
-              var6 = id.field_f.readNullableString(param0 - 24553);
-              var7 = id.field_f.readUnsignedByte(-11);
+              fn.field_z = SoundCache.field_f.readUnsignedByte(-11);
+              uh.field_oc = SoundCache.field_f.readUnsignedByte(param0 - 24440);
+              q.field_y = SoundCache.field_f.readUnsignedShort((byte) -11);
+              var6 = SoundCache.field_f.readNullableString(param0 - 24553);
+              var7 = SoundCache.field_f.readUnsignedByte(-11);
               if (0 != (var7 & 1)) {
                 g.a(param0 ^ 24429);
               }
@@ -213,19 +213,19 @@ abstract class ByteStorage {
                 }
               }
               if (lm.field_G) {
-                id.field_f.readUnsignedByte(param0 - 24440);
-                id.field_f.readUnsignedByte(-11);
-                id.field_f.readInt(true);
-                ao.field_H = id.field_f.readUnsignedShort((byte) -11);
+                SoundCache.field_f.readUnsignedByte(param0 - 24440);
+                SoundCache.field_f.readUnsignedByte(-11);
+                SoundCache.field_f.readInt(true);
+                ao.field_H = SoundCache.field_f.readUnsignedShort((byte) -11);
                 SectorCacheStore.field_d = new byte[ao.field_H];
                 for (var8 = 0; var8 < ao.field_H; var8++) {
-                  SectorCacheStore.field_d[var8] = id.field_f.readSignedByte(96);
+                  SectorCacheStore.field_d[var8] = SoundCache.field_f.readSignedByte(96);
                 }
               }
-              qe.field_V = id.field_f.readString(128);
+              qe.field_V = SoundCache.field_f.readString(128);
               var12 = (CharSequence) ((Object) qe.field_V);
               Vertigo2.field_F = rc.a(var12, 320);
-              rc.field_b = id.field_f.readUnsignedByte(-11);
+              rc.field_b = SoundCache.field_f.readUnsignedByte(-11);
               ProxyAuthenticationRequiredException.field_d = bm.field_I;
               if (qn.field_y.a((byte) -83) == lb.field_e) {
                 IntrusiveNode.field_j.a(LoginPanel.e((byte) -93), (byte) -121);
@@ -261,7 +261,7 @@ abstract class ByteStorage {
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 he.field_u[var8Lifetime1] = he.field_u[var8Lifetime1] + 50;
               }
-              id.field_f.setCipherSeed(he.field_u, 61);
+              SoundCache.field_f.setCipherSeed(he.field_u, 61);
               stackIn_81_0 = lc.field_f;
               return stackIn_81_0;
             }
@@ -281,7 +281,7 @@ abstract class ByteStorage {
               if (7 == lc.field_f) {
                 lc.field_f = 3;
               }
-              nk.field_Kb = id.field_f.readString(128);
+              nk.field_Kb = SoundCache.field_f.readString(128);
               gn.field_d = false;
               stackIn_93_0 = lc.field_f;
               return stackIn_93_0;

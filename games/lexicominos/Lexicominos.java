@@ -125,9 +125,9 @@ public final class Lexicominos extends nk {
                                 var4_ref_ke = VorbisSample.loadByName(gl.field_a, "", "score_increase_stop").decodeAllToPcm();
                                 kc.field_m[2] = aj.a((byte) -42, var4_ref_ke, var3_ref);
                                 BitPacketBuffer.field_o[2] = PcmSampleStream.createForPlaybackRate(kc.field_m[2], 100, 128);
-                                kc.field_m[8] = SoundEffect.a(hc.field_gb, "", "lexi_block_stop").a();
-                                vb.field_r = new ja(hc.field_gb, gl.field_a);
-                                kc.field_m[9] = vb.field_r.a((byte) -80, "drum_075_claves");
+                                kc.field_m[8] = SoundEffect.loadByName(hc.field_gb, "", "lexi_block_stop").toPcmSample();
+                                vb.field_r = new SoundCache(hc.field_gb, gl.field_a);
+                                kc.field_m[9] = vb.field_r.getMusicSampleByName((byte) -80, "drum_075_claves");
                                 BitPacketBuffer.field_o[9] = PcmSampleStream.createForPlaybackRate(kc.field_m[9], 100, 128);
                                 SectorCacheStore.b(5);
                                 return false;
@@ -167,14 +167,14 @@ public final class Lexicominos extends nk {
             this.renderClientFrame(param0 + 18466);
             hc.field_gb = null;
             gl.field_a = null;
-            ImageProducerRasterBuffer.field_i[0] = ih.a(SecondaryNodeDequeIterator.field_b, "", "game");
-            ImageProducerRasterBuffer.field_i[1] = ih.a(SecondaryNodeDequeIterator.field_b, "", "game2");
-            ImageProducerRasterBuffer.field_i[2] = ih.a(SecondaryNodeDequeIterator.field_b, "", "game3");
-            ImageProducerRasterBuffer.field_i[3] = ih.a(SecondaryNodeDequeIterator.field_b, "", "game4");
-            ImageProducerRasterBuffer.field_i[4] = ih.a(SecondaryNodeDequeIterator.field_b, "", "game5");
-            ImageProducerRasterBuffer.field_i[5] = ih.a(SecondaryNodeDequeIterator.field_b, "", "panic");
-            ImageProducerRasterBuffer.field_i[6] = ih.a(SecondaryNodeDequeIterator.field_b, "", "titlescreen");
-            ImageProducerRasterBuffer.field_i[7] = ih.a(SecondaryNodeDequeIterator.field_b, "", "gameover");
+            ImageProducerRasterBuffer.field_i[0] = MusicTrack.load(SecondaryNodeDequeIterator.field_b, "", "game");
+            ImageProducerRasterBuffer.field_i[1] = MusicTrack.load(SecondaryNodeDequeIterator.field_b, "", "game2");
+            ImageProducerRasterBuffer.field_i[2] = MusicTrack.load(SecondaryNodeDequeIterator.field_b, "", "game3");
+            ImageProducerRasterBuffer.field_i[3] = MusicTrack.load(SecondaryNodeDequeIterator.field_b, "", "game4");
+            ImageProducerRasterBuffer.field_i[4] = MusicTrack.load(SecondaryNodeDequeIterator.field_b, "", "game5");
+            ImageProducerRasterBuffer.field_i[5] = MusicTrack.load(SecondaryNodeDequeIterator.field_b, "", "panic");
+            ImageProducerRasterBuffer.field_i[6] = MusicTrack.load(SecondaryNodeDequeIterator.field_b, "", "titlescreen");
+            ImageProducerRasterBuffer.field_i[7] = MusicTrack.load(SecondaryNodeDequeIterator.field_b, "", "gameover");
             var3_int = 0;
             boolean decompiledNaturalLoopExit4 = false;
             while (!(decompiledNaturalLoopExit4 = (!(ImageProducerRasterBuffer.field_i.length > var3_int)))) {
@@ -953,7 +953,7 @@ public final class Lexicominos extends nk {
           gf.clearStaticReferences(-78);
           qk.a(false);
           AudioOutput.clearStaticReferences();
-          ja.a((byte) -36);
+          SoundCache.clearStaticReferences((byte) -36);
           oj.b((byte) -26);
           fc.clearStaticReferences(-265);
           sg.b(0);
@@ -2192,7 +2192,7 @@ public final class Lexicominos extends nk {
           if (param2 >= 0) {
             vg.field_d[param2].field_g = param3;
           }
-          if (ja.field_b[BitPacketBuffer.field_r + 2] > ja.field_b[2 + ImageProducerRasterBuffer.field_j]) {
+          if (SoundCache.field_b[BitPacketBuffer.field_r + 2] > SoundCache.field_b[2 + ImageProducerRasterBuffer.field_j]) {
             cg.field_j = 1;
             SpriteGeometry.field_v = 0;
             if (var8 != 0) {

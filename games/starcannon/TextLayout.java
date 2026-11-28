@@ -69,8 +69,8 @@ abstract class TextLayout {
           }
           var2 = 0;
           while (LabeledWidgetContainer.e((byte) -115)) {
-            ja.field_c.a(0);
-            if (ja.field_c.g(param0 - 31380)) {
+            SoundCache.field_c.a(0);
+            if (SoundCache.field_c.g(param0 - 31380)) {
               var1_int = 1;
             }
             if (13 != lb.field_B) {
@@ -78,14 +78,14 @@ abstract class TextLayout {
             }
             var2 = 1;
           }
-          ja.field_c.a(ja.a(ResizableModalDialog.field_Q, LoginPanel.field_B, 100), ja.a(la.field_c, pe.field_d, param0 - 31284), -113);
-          if (ja.field_c.g(0)) {
+          SoundCache.field_c.a(SoundCache.findMenuActionAt(ResizableModalDialog.field_Q, LoginPanel.field_B, 100), SoundCache.findMenuActionAt(la.field_c, pe.field_d, param0 - 31284), -113);
+          if (SoundCache.field_c.g(0)) {
             var1_int = 1;
           }
           var3 = 0;
           if (var1_int != 0 &&
-            ja.field_c.field_k >= 0) {
-            var3 = od.field_h[ja.field_c.field_k];
+            SoundCache.field_c.field_k >= 0) {
+            var3 = od.field_h[SoundCache.field_c.field_k];
             if (var3 == 2 ||
               var3 == 5) {
               od.c((byte) 104);

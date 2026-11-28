@@ -166,13 +166,13 @@ final class sj implements WidgetRenderer {
           var3 = rf.field_b;
           var4 = EditableTextField.field_P.field_xb.lineCount(param0, 500);
           var5 = EditableTextField.field_P.field_xb.maxLineWidth(param0, 500) + 6;
-          var6 = var4 * fe.field_g + 2;
+          var6 = var4 * SoundCache.field_g + 2;
           var7 = ao.a(var5, true, var2_int, 12);
           var8 = sg.a(var3, var6, 20, 0);
           int var9 = -59 / ((param1 + 64) / 37);
           SoftwareRasterizer.drawRectangleOutline(var7, var8, var5, var6, 0);
           SoftwareRasterizer.fillRectangle(1 + var7, var8 + 1, -2 + var5, -2 + var6, 16777088);
-          EditableTextField.field_P.field_xb.drawParagraph(param0, 3 + var7, -EditableTextField.field_P.field_xb.field_C + BirthDateChatEnableForm.field_I + (var8 + 1), 500, 1000, 0, -1, 0, 0, fe.field_g);
+          EditableTextField.field_P.field_xb.drawParagraph(param0, 3 + var7, -EditableTextField.field_P.field_xb.field_C + BirthDateChatEnableForm.field_I + (var8 + 1), 500, 1000, 0, -1, 0, 0, SoundCache.field_g);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "sj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

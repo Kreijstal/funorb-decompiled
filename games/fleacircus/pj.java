@@ -87,7 +87,7 @@ final class pj extends cb {
               var19[0][1 + var10 * 4] = kk.field_b[var11];
               var19[0][4 * var10 + 2] = hg.field_q[var11];
               var19[0][4 * var10 + 3] = vh.field_i[var11];
-              if (ng.a(hm.field_c[var11], (byte) 7) &&
+              if (SoundCache.a(hm.field_c[var11], (byte) 7) &&
                 kk.field_b[var11] + hg.field_q[var11] + vh.field_i[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -105,7 +105,7 @@ final class pj extends cb {
               var19[1][var14 * 4 + 1] = kk.field_b[var11Lifetime1];
               var19[1][4 * var14 + 2] = hg.field_q[var11Lifetime1];
               var19[1][3 + 4 * var14] = vh.field_i[var11Lifetime1];
-              if (ng.a(hm.field_c[var11Lifetime1], (byte) 7) &&
+              if (SoundCache.a(hm.field_c[var11Lifetime1], (byte) 7) &&
                 0 == vh.field_i[var11Lifetime1] + (hg.field_q[var11Lifetime1] + kk.field_b[var11Lifetime1])) {
                 var6[1][var14] = null;
                 var14--;

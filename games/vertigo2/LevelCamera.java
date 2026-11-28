@@ -265,23 +265,23 @@ final class LevelCamera {
           var11 = 0;
           var12 = param5;
           if (param1 != 0) {
-            var13 = oo.field_j[param1];
-            var14 = oo.field_h[param1];
+            var13 = TriangleRasterizer.field_j[param1];
+            var14 = TriangleRasterizer.field_h[param1];
             var15 = var14 * var11 - var12 * var13 >> 16;
             var12 = var11 * var13 + var14 * var12 >> 16;
             var11 = var15;
           }
           if (param6 != 0) {
-            var13 = oo.field_j[param6];
-            var14 = oo.field_h[param6];
+            var13 = TriangleRasterizer.field_j[param6];
+            var14 = TriangleRasterizer.field_h[param6];
             var15 = var10 * var14 + var13 * var12 >> 16;
             var12 = var12 * var14 - var13 * var10 >> 16;
             var10 = var15;
           }
-          var16 = oo.field_j[var9];
-          var17 = oo.field_h[var9];
-          var18 = oo.field_j[var8];
-          var19 = oo.field_h[var8];
+          var16 = TriangleRasterizer.field_j[var9];
+          var17 = TriangleRasterizer.field_h[var9];
+          var18 = TriangleRasterizer.field_j[var8];
+          var19 = TriangleRasterizer.field_h[var8];
           var20 = (var16 >> 1) * (var18 >> 1) >> 14;
           var21 = (var19 >> 1) * (var16 >> 1) >> 14;
           var22 = (var17 >> 1) * (var18 >> 1) >> 14;
@@ -425,8 +425,8 @@ final class LevelCamera {
             var2 = 3;
           }
           this.field_A = this.field_A + this.field_p * var2;
-          this.field_a = (oo.field_h[this.field_j % 2048] * 640 / 2 >> 16) + 160;
-          this.field_s = (oo.field_j[this.field_j % 2048] * 640 / 2 >> 16) + 160;
+          this.field_a = (TriangleRasterizer.field_h[this.field_j % 2048] * 640 / 2 >> 16) + 160;
+          this.field_s = (TriangleRasterizer.field_j[this.field_j % 2048] * 640 / 2 >> 16) + 160;
         }
         var2Lifetime1 = this.field_w - this.field_t;
         if (var2Lifetime1 * var2Lifetime1 < 25) {

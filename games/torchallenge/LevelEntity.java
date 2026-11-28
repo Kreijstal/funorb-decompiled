@@ -7415,7 +7415,7 @@ final class LevelEntity {
           var5 = ImageProducerRasterBuffer.field_l[fh.field_e][var3_int][this.field_kb] ? 1 : 0;
           var7 = cb.field_b[fh.field_e][var3_int][this.field_kb] ? 1 : 0;
           if (var5 != 0) {
-            var8 = u.field_b[fh.field_e][var3_int][this.field_kb];
+            var8 = SoundCache.field_b[fh.field_e][var3_int][this.field_kb];
             if (var8 >= 0) {
               jc.b(fh.field_e, 1, var8);
             }
@@ -8989,7 +8989,7 @@ final class LevelEntity {
           }
           if (stackIn_131_0 <= stackIn_131_1 &&
             var2_int < 13) {
-            u.a(12604, var2_int);
+            SoundCache.a(12604, var2_int);
             return;
           }
           return;

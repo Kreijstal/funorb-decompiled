@@ -60,7 +60,7 @@ final class ae {
         if (param1 != -5) {
           return;
         }
-        PacketBuffer.field_r = lc.field_k[param0];
+        PacketBuffer.field_r = SoundCache.field_k[param0];
         ki.field_c = qh.field_R[param0];
     }
 

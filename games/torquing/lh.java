@@ -6,7 +6,7 @@ final class lh {
     int[][] field_e;
     static boolean field_J;
     int[] field_h;
-    private fi field_a;
+    private SoundCache field_a;
     int field_c;
     int[] field_C;
     int field_k;
@@ -71,9 +71,9 @@ final class lh {
         for (var3 = 0; var3 < this.field_o.length; var3++) {
           if (this.field_o[var3] == null) {
             if (this.field_y[var3] >> 4 == 0) {
-              var4 = this.field_a.a(this.field_s[var3], this.field_n[var3], (byte) -84);
+              var4 = this.field_a.getSoundEffectByGroup(this.field_s[var3], this.field_n[var3], (byte) -84);
             } else {
-              var4 = this.field_a.b(this.field_s[var3], this.field_n[var3], (byte) 122);
+              var4 = this.field_a.getMusicSampleByGroup(this.field_s[var3], this.field_n[var3], (byte) 122);
             }
             if (var4 == null) {
               var2 = 0;
@@ -90,7 +90,7 @@ final class lh {
         }
     }
 
-    lh(PacketBuffer param0, fi param1) {
+    lh(PacketBuffer param0, SoundCache param1) {
         int var3_int = 0;
         int var4 = 0;
         int dupTemp$0 = 0;

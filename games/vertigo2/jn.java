@@ -171,8 +171,8 @@ final class jn {
           }
           var10 = (param8 << 16) / var9_int;
           var11 = (param5 << 16) / var9_int;
-          var12 = -(var10 >> 1) + ((param0[5] * param1 + param3 * param0[4] + param0[3] * param6) / var9_int + SoftwareRasterizer.field_d + oo.field_l);
-          var13 = oo.field_e + SoftwareRasterizer.field_f + (param6 * param0[6] + param3 * param0[7] + param1 * param0[8]) / var9_int - (var11 >> 1);
+          var12 = -(var10 >> 1) + ((param0[5] * param1 + param3 * param0[4] + param0[3] * param6) / var9_int + SoftwareRasterizer.field_d + TriangleRasterizer.field_l);
+          var13 = TriangleRasterizer.field_e + SoftwareRasterizer.field_f + (param6 * param0[6] + param3 * param0[7] + param1 * param0[8]) / var9_int - (var11 >> 1);
           if (param4 != 256) {
             param2.drawScaledAlpha(var12, var13, var10, var11, param4);
             return;
