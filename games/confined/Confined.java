@@ -21,7 +21,7 @@ public final class Confined extends i {
           KeyboardInput.a((byte) -108);
           jc.clearStaticReferences((byte) -92);
           MouseInput.clearStaticReferences(param0 ^ 4891);
-          mi.clearStaticReferences((byte) -63);
+          ResourceArchive.clearStaticReferences((byte) -63);
           dn.clearStaticReferences(-89);
           ua.a(7526);
           i.b((byte) 82);
@@ -984,17 +984,17 @@ public final class Confined extends i {
                 }
                 var5 = stackIn_64_0;
                 while (tf.field_b[var2_int] > var5) {
-                  var6Lifetime1 = GameCanvas.field_a.a(0, si.field_e[var2_int] + "attack" + (var5 + 1), param0 ^ 19);
+                  var6Lifetime1 = GameCanvas.field_a.getFileIdByName(0, si.field_e[var2_int] + "attack" + (var5 + 1), param0 ^ 19);
                   tf.field_n[var2_int][var5] = var6Lifetime1;
-                  tf.field_c[var2_int][var5] = va.a((int) i.field_u.a((byte) -2, 0, var6Lifetime1)[0], 255);
+                  tf.field_c[var2_int][var5] = va.a((int) i.field_u.getFile((byte) -2, 0, var6Lifetime1)[0], 255);
                   li.field_m.a(var4Lifetime2, 61, var6Lifetime1, 192);
                   var5++;
                 }
                 var5Lifetime1 = 0;
                 while (ee.field_I[var2_int] > var5Lifetime1) {
-                  var6Lifetime1Lifetime1 = GameCanvas.field_a.a(0, si.field_e[var2_int] + "ready" + (var5Lifetime1 + 1), -114);
+                  var6Lifetime1Lifetime1 = GameCanvas.field_a.getFileIdByName(0, si.field_e[var2_int] + "ready" + (var5Lifetime1 + 1), -114);
                   ee.field_H[var2_int][var5Lifetime1] = var6Lifetime1Lifetime1;
-                  ee.field_O[var2_int][var5Lifetime1] = va.a((int) i.field_u.a((byte) -2, 0, var6Lifetime1Lifetime1)[0], 255);
+                  ee.field_O[var2_int][var5Lifetime1] = va.a((int) i.field_u.getFile((byte) -2, 0, var6Lifetime1Lifetime1)[0], 255);
                   li.field_m.a(var4Lifetime2, 61, var6Lifetime1Lifetime1, 192);
                   var5Lifetime1++;
                 }
@@ -1074,7 +1074,7 @@ public final class Confined extends i {
             } while (var7 == 0);
             var3 = 0;
             while (6 > var3) {
-              rc.field_b[var3] = oj.field_C.a(0, Integer.toString(var3), -126);
+              rc.field_b[var3] = oj.field_C.getFileIdByName(0, Integer.toString(var3), -126);
               var3++;
               if (var7 != 0) {
                 return;
@@ -1180,10 +1180,10 @@ public final class Confined extends i {
           if (ol.field_c == null) {
             jc.a(jb.field_r, 10265, 90.0f);
             this.h(51200);
-            mi.field_b[0] = fk.a(jd.field_b, "", "boss-sphere-ambient").a();
-            mi.field_b[1] = ph.a(AccountCreationResultPanel.field_Bb, "", "boss-cube-ambient").b();
-            mi.field_b[2] = fk.a(jd.field_b, "", "boss-bird-ambient").a();
-            mi.field_b[3] = fk.a(jd.field_b, "", "boss-humanoid-ambient").a();
+            ResourceArchive.field_b[0] = fk.a(jd.field_b, "", "boss-sphere-ambient").a();
+            ResourceArchive.field_b[1] = ph.a(AccountCreationResultPanel.field_Bb, "", "boss-cube-ambient").b();
+            ResourceArchive.field_b[2] = fk.a(jd.field_b, "", "boss-bird-ambient").a();
+            ResourceArchive.field_b[3] = fk.a(jd.field_b, "", "boss-humanoid-ambient").a();
             ja.field_b[0] = ph.a(AccountCreationResultPanel.field_Bb, "", "boss-sphere-breakdown").b();
             ja.field_b[1] = ph.a(AccountCreationResultPanel.field_Bb, "", "boss-cube-breakdown").b();
             ja.field_b[2] = fk.a(jd.field_b, "", "boss-bird-breakdown").a();

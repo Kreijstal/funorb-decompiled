@@ -164,7 +164,7 @@ final class re {
           if (!param1) {
             field_c = 47;
           }
-          var17 = new Sprite(param2.a(-126, "", "button.gif"), (java.awt.Component) ((Object) k.field_d));
+          var17 = new Sprite(param2.getFileByName(-126, "", "button.gif"), (java.awt.Component) ((Object) k.field_d));
           DelegatingCanvas.a("dropdown", 31094, param3, "commonui");
           var5 = ip.a(param3, -126, "commonui", "screen_options");
           jn.field_c = new sm[4];

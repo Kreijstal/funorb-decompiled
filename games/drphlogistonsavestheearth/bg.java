@@ -74,10 +74,10 @@ final class bg extends IntrusiveNode {
         var10 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           if (null != ce.field_a &&
-            ce.field_a.a(0) &&
+            ce.field_a.ensureIndexLoaded(0) &&
             ce.field_a.a(param0 ^ -11140, "benefits") &&
             null != sb.field_g &&
-            sb.field_g.a(0) &&
+            sb.field_g.ensureIndexLoaded(0) &&
             sb.field_g.a(param0 ^ -11140, "benefits")) {
             DelegatingCanvas.field_c = ProxyAuthenticationRequiredException.a("benefits", ce.field_a, "headline", true);
             t.field_d = ProxyAuthenticationRequiredException.a("benefits", ce.field_a, "blurbpane", true);

@@ -17,10 +17,10 @@ abstract class ch {
 
     abstract void c(byte param0);
 
-    final static void a(int param0, qk param1) {
+    final static void a(int param0, ResourceArchive param1) {
         ig var2 = null;
         try {
-          ig.a(param1.a((byte) 7, "", "headers.packvorbis"));
+          ig.a(param1.getFileByName((byte) 7, "", "headers.packvorbis"));
           var2 = ig.a(param1, "jagex logo2.packvorbis", "");
           int var3 = -108 / ((param0 + 29) / 58);
           var2.c();

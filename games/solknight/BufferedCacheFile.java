@@ -553,7 +553,7 @@ final class BufferedCacheFile {
             if (DirectByteStorage.field_d > 0) {
               DirectByteStorage.field_d = DirectByteStorage.field_d - 1;
             }
-            vk.b((byte) -126);
+            vk.updateAsteroidsAndDestructionProgress((byte) -126);
             if (pg.field_e &&
               DirectByteStorage.field_d > 0) {
               pg.field_e = false;

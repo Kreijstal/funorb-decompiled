@@ -25,12 +25,12 @@ final class qo {
         String stackIn_18_2 = null;
         String stackIn_21_2 = null;
         try {
-          if (!param2.b((byte) -105)) {
+          if (!param2.ensureIndexLoaded((byte) -105)) {
             String stackIn_3_0 = (String) (param0);
             return stackIn_3_0;
           }
           if (param3 == 13525) {
-            String stackIn_8_0 = param4 + " - " + param2.a(param1, (byte) -79) + "%";
+            String stackIn_8_0 = param4 + " - " + param2.getGroupLoadPercentByName(param1, (byte) -79) + "%";
             return stackIn_8_0;
           }
           String stackIn_6_0 = (String) null;

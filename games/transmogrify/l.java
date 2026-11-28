@@ -5,7 +5,7 @@ final class l {
     static PlatformTaskDispatcher field_b;
     static rf field_d;
     static String field_c;
-    static ci field_a;
+    static ResourceArchive field_a;
 
     final static void a(int param0, int param1) {
         int var2;
@@ -329,7 +329,7 @@ final class l {
           Bzip2State.a(param0 - 10, param1);
           return var2;
         }
-        field_a = (ci) null;
+        field_a = (ResourceArchive) null;
         oc.field_G.addLast(var2, -103);
         Bzip2State.a(param0 - 10, param1);
         return var2;

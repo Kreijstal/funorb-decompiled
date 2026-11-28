@@ -185,9 +185,9 @@ final class NetworkSupport012 {
           return networkSupport007Local2;
         }
         if (integerArgument2 < 32768) {
-          byteArrayLocal1 = this.resourceArchiveState0022.computeByteArray0805(integerArgument2, 88, 1);
+          byteArrayLocal1 = this.resourceArchiveState0022.getFile(integerArgument2, 88, 1);
         } else {
-          byteArrayLocal1 = this.resourceArchiveState0023.computeByteArray0805(32767 & integerArgument2, -112, 1);
+          byteArrayLocal1 = this.resourceArchiveState0023.getFile(32767 & integerArgument2, -112, 1);
         }
         networkSupport007Local2 = new NetworkSupport007();
         if (byteArrayLocal1 != null) {

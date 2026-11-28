@@ -32,7 +32,7 @@ final class iu extends AnimationNode {
         String var11;
         int var12;
         int var13;
-        vr var14;
+        ResourceArchive var14;
         gs var15;
         gs var16;
         int var7Lifetime1;
@@ -84,8 +84,8 @@ final class iu extends AnimationNode {
           }
         }
         if (param1 != 114) {
-          var14 = (vr) null;
-          iu.a(-40, (vr) null);
+          var14 = (ResourceArchive) null;
+          iu.a(-40, (ResourceArchive) null);
           var7Lifetime1 = 0;
           for (var8 = 0; qs.field_n > var8; var8++) {
             var15 = kw.field_k[var8];
@@ -264,8 +264,8 @@ final class iu extends AnimationNode {
     public static void e(int param0) {
         field_l = null;
         if (param0 != -15434) {
-          vr var2 = (vr) null;
-          iu.a(-126, (vr) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          iu.a(-126, (ResourceArchive) null);
         }
     }
 
@@ -281,9 +281,9 @@ final class iu extends AnimationNode {
         RasterBuffer.field_d.a(0, 155, false, 19, 298, 20, 406);
     }
 
-    final static void a(int param0, vr param1) {
+    final static void a(int param0, ResourceArchive param1) {
         try {
-          fi.field_p = param1.a((byte) 123, "minimal/fridge-view-bg.jpg", "");
+          fi.field_p = param1.getFileByName((byte) 123, "minimal/fridge-view-bg.jpg", "");
           DirectByteStorage.field_j = new Sprite(fi.field_p, (java.awt.Component) ((Object) TBomberAnimation.field_y));
           if (param0 != -1638641311) {
             iu.d(-98);

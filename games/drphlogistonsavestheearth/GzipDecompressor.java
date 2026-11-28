@@ -15,27 +15,27 @@ final class GzipDecompressor {
           return 0;
         }
         if (ob.field_c == 0) {
-          if (!AccountCreationResultPanel.field_Jb.a(0)) {
+          if (!AccountCreationResultPanel.field_Jb.ensureIndexLoaded(0)) {
             return 20;
           }
           if (!AccountCreationResultPanel.field_Jb.a(255, "commonui")) {
             return 40;
           }
-          if (!sb.field_i.a(0)) {
+          if (!sb.field_i.ensureIndexLoaded(0)) {
             return 50;
           }
           if (!sb.field_i.a(255, "commonui")) {
             return 60;
           }
-          if (!ig.field_t.a(0)) {
+          if (!ig.field_t.ensureIndexLoaded(0)) {
             return 70;
           }
-          if (!ig.field_t.c((byte) 54)) {
+          if (!ig.field_t.tryLoadAllGroups((byte) 54)) {
             return 80;
           }
         } else {
           if (DiskArchiveRequest.field_I != null) {
-            if (!DiskArchiveRequest.field_I.a(0)) {
+            if (!DiskArchiveRequest.field_I.ensureIndexLoaded(0)) {
               return 14;
             }
             if (!DiskArchiveRequest.field_I.a((byte) 12, "")) {
@@ -45,22 +45,22 @@ final class GzipDecompressor {
               return 29;
             }
           }
-          if (!AccountCreationResultPanel.field_Jb.a(0)) {
+          if (!AccountCreationResultPanel.field_Jb.ensureIndexLoaded(0)) {
             return 43;
           }
           if (!AccountCreationResultPanel.field_Jb.a(255, "commonui")) {
             return 57;
           }
-          if (!sb.field_i.a(0)) {
+          if (!sb.field_i.ensureIndexLoaded(0)) {
             return 71;
           }
           if (!sb.field_i.a(255, "commonui")) {
             return 80;
           }
-          if (!ig.field_t.a(0)) {
+          if (!ig.field_t.ensureIndexLoaded(0)) {
             return 82;
           }
-          if (!ig.field_t.c((byte) 22)) {
+          if (!ig.field_t.tryLoadAllGroups((byte) 22)) {
             return 86;
           }
         }

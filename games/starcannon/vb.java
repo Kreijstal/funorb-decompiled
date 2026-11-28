@@ -89,7 +89,7 @@ final class vb extends qf {
         }
     }
 
-    final static void a(ue param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         RuntimeException stackIn_373_0 = null;
         StringBuilder stackIn_373_1 = null;
         String stackIn_374_2 = null;

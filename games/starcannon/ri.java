@@ -5,7 +5,7 @@ import java.io.*;
 
 final class ri {
     static String[] field_b;
-    static ue field_c;
+    static ResourceArchive field_c;
     static int[] field_a;
 
     public static void clearStaticReferences(int param0) {
@@ -17,13 +17,13 @@ final class ri {
         field_b = null;
     }
 
-    final static ue a(boolean param0, boolean param1, int param2, int param3, boolean param4, boolean param5) {
+    final static ResourceArchive a(boolean param0, boolean param1, int param2, int param3, boolean param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           t var8 = null;
-          ue stackIn_11_0 = null;
-          ue stackIn_15_0 = null;
+          ResourceArchive stackIn_11_0 = null;
+          ResourceArchive stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
@@ -44,14 +44,14 @@ final class ri {
               var7 = new SectorCacheStore(param3, ne.field_l, fe.field_J[param3], 2097152);
             }
             if (!param0) {
-              stackIn_11_0 = (ue) null;
+              stackIn_11_0 = (ResourceArchive) null;
               return stackIn_11_0;
             }
             var8 = bl.field_b.a(param4, -72, (SectorCacheStore) (var7), param3, (SectorCacheStore) (var6));
             if (param1) {
               var8.a(-126);
             }
-            stackIn_15_0 = new ue(var8, param5, param2);
+            stackIn_15_0 = new ResourceArchive(var8, param5, param2);
             return stackIn_15_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

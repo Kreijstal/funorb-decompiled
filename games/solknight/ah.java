@@ -264,15 +264,15 @@ final class ah {
     }
 
     final static void a(boolean param0, int param1, qc param2) {
-        jd var7 = null;
-        jd var8 = null;
+        BitPacketBuffer var7 = null;
+        BitPacketBuffer var8 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = SolKnight.field_L ? 1 : 0;
         try {
           var7 = id.field_c;
           var8 = var7;
-          var8.e(param1, -2147483648);
+          var8.writeCipheredByte(param1, -2147483648);
           var8.position = var8.position + 1;
           var4 = var8.position;
           var8.writeByte(-118, 1);

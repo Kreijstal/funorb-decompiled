@@ -118,14 +118,14 @@ final class wf {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param3.c(-113)) {
+          if (!param3.ensureIndexLoaded(-113)) {
             stackIn_2_0 = (String) (param1);
             return stackIn_2_0;
           }
           if (param4 < 3) {
             wf.a(121);
           }
-          stackIn_6_0 = param2 + " - " + param3.a(param0, 0) + "%";
+          stackIn_6_0 = param2 + " - " + param3.getGroupLoadPercentByName(param0, 0) + "%";
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

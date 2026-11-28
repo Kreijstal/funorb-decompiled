@@ -10,7 +10,7 @@ abstract class ArchiveSource {
     final static void b(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        jd var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -21,7 +21,7 @@ abstract class ArchiveSource {
           }
           var1 = id.field_c;
           while (DualLinkNode.e(param0 ^ 7697789)) {
-            var1.e(8, -2147483648);
+            var1.writeCipheredByte(8, -2147483648);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
@@ -138,7 +138,7 @@ abstract class ArchiveSource {
         field_a = -50;
     }
 
-    abstract int a(int param0, byte param1);
+    abstract int getGroupRequestProgressPercent(int param0, byte param1);
 
     static {
         field_d = 0;

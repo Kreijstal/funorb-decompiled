@@ -23,7 +23,7 @@ final class ni {
         field_b = null;
     }
 
-    final static rj a(byte param0, int param1, qk param2, int param3, da param4) {
+    final static rj a(byte param0, int param1, ResourceArchive param2, int param3, da param4) {
         byte[] var5 = null;
         RuntimeException var5_ref = null;
         byte[] var6 = null;
@@ -35,7 +35,7 @@ final class ni {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = param2.a(param3, (byte) -115, param1);
+          var6 = param2.getFile(param3, (byte) -115, param1);
           var5 = var6;
           if (param0 != 65) {
             ni.clearStaticReferences((byte) -2);

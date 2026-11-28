@@ -47,7 +47,7 @@ final class va {
     }
 
     final static va a(ResourceArchive param0, String param1, String param2) {
-        byte[] var3 = param0.a(param2, param1, 0);
+        byte[] var3 = param0.getFileByName(param2, param1, 0);
         if (var3 == null) {
           return null;
         }
@@ -55,7 +55,7 @@ final class va {
     }
 
     final static va a(ResourceArchive param0, int param1, int param2) {
-        byte[] var3 = param0.a(false, param2, param1);
+        byte[] var3 = param0.getFile(false, param2, param1);
         if (var3 == null) {
           return null;
         }

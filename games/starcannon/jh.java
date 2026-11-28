@@ -60,8 +60,8 @@ final class jh {
         try {
           long dupTemp$1 = 0L;
           IOException var2 = null;
-          ia var4 = null;
-          ia var5 = null;
+          BitPacketBuffer var4 = null;
+          BitPacketBuffer var5 = null;
           int stackIn_11_0 = 0;
           Throwable decompiledCaughtException = null;
           if (null == ah.field_e) {

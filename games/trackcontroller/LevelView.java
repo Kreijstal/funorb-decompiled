@@ -8,7 +8,7 @@ final class LevelView extends LevelGrid {
     static int field_v;
     private int field_D;
     private int field_u;
-    static la field_C;
+    static BitPacketBuffer field_C;
     private int field_s;
     private int field_F;
     static rl field_y;

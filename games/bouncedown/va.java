@@ -6,7 +6,7 @@ final class va {
     static int field_b;
     static String field_g;
     static boolean field_f;
-    static gk field_c;
+    static ResourceArchive field_c;
     static RgbSprite[] field_d;
     static int field_a;
 

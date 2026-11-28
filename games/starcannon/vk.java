@@ -89,7 +89,7 @@ class vk extends UiWidget implements ch {
 
     final static void f(int param0) {
         RuntimeException decompiledCaughtException = null;
-        ia var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         rj var3 = null;
@@ -97,7 +97,7 @@ class vk extends UiWidget implements ch {
         int[] var3_array = null;
         int[] var4 = null;
         rj var4_ref = null;
-        ia var5 = null;
+        BitPacketBuffer var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -165,7 +165,7 @@ class vk extends UiWidget implements ch {
             }
           }
           if (param0 >= -25) {
-            vk.a((String) null, -7, (String) null, (ue) null);
+            vk.a((String) null, -7, (String) null, (ResourceArchive) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -175,7 +175,7 @@ class vk extends UiWidget implements ch {
         }
     }
 
-    final static Sprite a(String param0, int param1, String param2, ue param3) {
+    final static Sprite a(String param0, int param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -189,8 +189,8 @@ class vk extends UiWidget implements ch {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.a(param0, false);
-          var5 = param3.a(param2, true, var4_int);
+          var4_int = param3.getGroupIdByName(param0, false);
+          var5 = param3.getFileIdByName(param2, true, var4_int);
           if (param1 <= 9) {
             field_x = (String) null;
           }
@@ -1087,7 +1087,7 @@ class vk extends UiWidget implements ch {
         int fieldTemp$1 = 0;
         int stackIn_11_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ia var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;

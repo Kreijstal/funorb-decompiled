@@ -93,8 +93,8 @@ final class lc extends IntrusiveNode {
           if (param1 != 1) {
             lc.a(113);
           }
-          var5_int = param0.c(74, param3);
-          var6 = param0.a(param2, -1, var5_int);
+          var5_int = param0.getGroupIdByName(74, param3);
+          var6 = param0.getFileIdByName(param2, -1, var5_int);
           stackIn_3_0 = ArchiveRequest.a((byte) -105, param0, var6, var5_int, param4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

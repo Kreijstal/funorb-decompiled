@@ -31,7 +31,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
           if (param0 != 15136) {
             field_j = (RgbSprite) null;
           }
-          stackIn_3_0 = ak.field_y.a(param1, 1, "");
+          stackIn_3_0 = ak.field_y.getFileByName(param1, 1, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -173,7 +173,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         return 2;
     }
 
-    final static RgbSprite[] a(String param0, ki param1, String param2, int param3) {
+    final static RgbSprite[] a(String param0, ResourceArchive param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -187,11 +187,11 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.a(param0, 0);
+          var4_int = param1.getGroupIdByName(param0, 0);
           if (param3 > -59) {
             field_q = (IntrusiveDeque) null;
           }
-          var5 = param1.a(param2, 5187, var4_int);
+          var5 = param1.getFileIdByName(param2, 5187, var4_int);
           stackIn_3_0 = ua.a(param1, var4_int, 91, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

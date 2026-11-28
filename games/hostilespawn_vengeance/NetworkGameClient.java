@@ -372,7 +372,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                 if (var11 == null) {
                   wj.b((String) null, param1 ^ 10602);
                 } else {
-                  var7 = db.a(var11.field_n, 0, (byte) -120, var11.field_i);
+                  var7 = db.decodeCp1252String(var11.field_n, 0, (byte) -120, var11.field_i);
                   wj.b(var7, -10603);
                 }
                 eb.field_c = null;
@@ -664,7 +664,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (pb.field_Kb == 2) {
           if (GameCanvas.field_d != null &&
-            GameCanvas.field_d.a(-15879)) {
+            GameCanvas.field_d.ensureIndexLoaded(-15879)) {
             if (GameCanvas.field_d.a("", (byte) 124)) {
               if (GameCanvas.field_d.a(param1 ^ -14784, "")) {
                 MusicPatchPcmStream.a(param1 - 9839, GameCanvas.field_d);
@@ -716,8 +716,8 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         boolean decompiledFrameRemainder0 = true;
         if (11 == pb.field_Kb) {
-          if (uh.field_m != null && (!uh.field_m.a(-15879) ||
-            !uh.field_m.e(param1 - 9768))) {
+          if (uh.field_m != null && (!uh.field_m.ensureIndexLoaded(-15879) ||
+            !uh.field_m.tryLoadAllGroups(param1 - 9768))) {
             gj.a(param1 ^ 9788, DirectByteStorage.a(ad.field_b, uh.field_m, u.field_j, (byte) -69), 0.0f);
             decompiledFrameRemainder0 = false;
           }

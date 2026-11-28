@@ -306,9 +306,9 @@ final class AccountNameAvailabilityValidator extends di {
 
     final static void a(int param0, cc param1, int param2) {
         int var4 = 0;
-        uc var5 = di.field_l;
-        uc var3 = var5;
-        var5.k(-17410, param0);
+        BitPacketBuffer var5 = di.field_l;
+        BitPacketBuffer var3 = var5;
+        var5.writeCipheredByte(-17410, param0);
         var5.position = var5.position + 1;
         if (param2 > -51) {
           return;

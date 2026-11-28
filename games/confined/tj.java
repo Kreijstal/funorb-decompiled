@@ -28,7 +28,7 @@ final class tj extends tk {
     private long field_t;
     private boolean field_w;
 
-    final int a(int param0, boolean param1) {
+    final int getGroupRequestProgressPercent(int param0, boolean param1) {
         ArchiveRequest var3 = (ArchiveRequest) (this.field_i.a(1, (long)param0));
         if (!param1) {
           String var4 = (String) null;

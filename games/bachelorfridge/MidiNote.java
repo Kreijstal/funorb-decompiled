@@ -43,7 +43,7 @@ final class MidiNote extends IntrusiveNode {
         this.field_z = null;
     }
 
-    final static Sprite[] a(String param0, vr param1, String param2, int param3) {
+    final static Sprite[] a(String param0, ResourceArchive param1, String param2, int param3) {
         Sprite[] var4 = null;
         RuntimeException var4_ref = null;
         Sprite[] var5 = null;

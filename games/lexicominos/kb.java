@@ -21,7 +21,7 @@ abstract class kb {
         }
     }
 
-    final static void a(int param0, sh param1) {
+    final static void a(int param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2609_0;
             StringBuilder stackIn_2609_1;
@@ -33,9 +33,9 @@ abstract class kb {
             int var3;
             int var4;
             int param0;
-            sh param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, sh initialParam1) {
+            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2609_0 = null;
@@ -2533,7 +2533,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "keychar_the_character_under_questionmark");
                 if (null != var2) {
-                  el.a(var2[0], (byte) 26);
+                  el.decodeCp1252Byte(var2[0], (byte) 26);
                 }
                 var2 = qj.a(33, "rating_noratings");
                 if (null != var2) {
@@ -3161,7 +3161,7 @@ abstract class kb {
             param0 = param0 >>> 2;
           }
           if (param1 != 16) {
-            kb.a(17, (sh) null);
+            kb.a(17, (ResourceArchive) null);
           }
           if (param0 >= 1) {
             var2_int++;

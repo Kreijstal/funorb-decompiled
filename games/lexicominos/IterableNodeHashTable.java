@@ -47,7 +47,7 @@ final class IterableNodeHashTable implements Iterable {
         Throwable decompiledCaughtException = null;
         var1_ref = AccountNameAvailabilityValidator.field_l;
         synchronized (var1_ref) {
-          if (tj.field_h == sh.field_f) {
+          if (tj.field_h == ResourceArchive.field_f) {
             return false;
           }
           if (param0 != -72) {

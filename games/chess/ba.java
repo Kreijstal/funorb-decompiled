@@ -141,7 +141,7 @@ final class ba extends ma implements nn, mj {
           return true;
         }
         var5 = d.field_Ib;
-        if (!sj.a((byte) -122, (char) var5)) {
+        if (!sj.isAcceptedTextInputCharacter((byte) -122, (char) var5)) {
           return false;
         }
         if (var3 == 0) {

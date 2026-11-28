@@ -9,7 +9,7 @@ final class hm extends ta implements ai {
 
     public hm() {
         super(0, 0, 476, 225, (td) null);
-        this.field_D = new s(ki.field_h, (ag) null);
+        this.field_D = new s(ResourceArchive.field_h, (ag) null);
         this.field_B = new s(bi.field_b, (ag) null);
         this.field_E = new s(BoundedRandomAccessFile.field_k, (ag) null);
         vk var1 = new vk();
@@ -39,7 +39,7 @@ final class hm extends ta implements ai {
         super.a(param0, param1, param2, param3);
     }
 
-    final static ki a(int param0, boolean param1, boolean param2, int param3, int param4) {
+    final static ResourceArchive a(int param0, boolean param1, boolean param2, int param3, int param4) {
         if (param0 == 48) {
           return DelegatingCanvas.a(param1, 5200, param3, param4, param2, false);
         }

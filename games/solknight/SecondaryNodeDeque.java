@@ -39,8 +39,8 @@ final class SecondaryNodeDeque implements Iterable {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.c(91, param3);
-          var5 = param0.a(param2, -1, var4_int);
+          var4_int = param0.getGroupIdByName(91, param3);
+          var5 = param0.getFileIdByName(param2, -1, var4_int);
           if (param1 != -18362) {
             SecondaryNodeDeque.clearStaticReferences((byte) -114);
           }

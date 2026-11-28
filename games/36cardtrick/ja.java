@@ -4,10 +4,10 @@
 final class ja {
     static eb field_b;
     static String field_d;
-    private qk field_e;
+    private ResourceArchive field_e;
     static String field_a;
     static String field_c;
-    private qk field_g;
+    private ResourceArchive field_g;
     private pg field_f;
 
     final static String a(int param0) {
@@ -44,9 +44,9 @@ final class ja {
           return var3;
         }
         if (param1 >= ~param0) {
-          var4 = this.field_e.a(param0 & 32767, (byte) -115, 1);
+          var4 = this.field_e.getFile(param0 & 32767, (byte) -115, 1);
         } else {
-          var4 = this.field_g.a(param0, (byte) -115, 1);
+          var4 = this.field_g.getFile(param0, (byte) -115, 1);
         }
         var3 = new vd();
         if (var4 != null) {

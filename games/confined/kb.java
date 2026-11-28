@@ -5,7 +5,7 @@ final class kb {
     static int field_a;
     static int field_b;
 
-    final static bm a(mi param0, byte param1, int param2) {
+    final static bm a(ResourceArchive param0, byte param1, int param2) {
         RuntimeException var3 = null;
         Object stackIn_2_0 = null;
         bm stackIn_5_0 = null;

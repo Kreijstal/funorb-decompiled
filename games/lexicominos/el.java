@@ -7,7 +7,7 @@ final class el {
     static String field_d;
     static fc field_c;
 
-    final static char a(byte param0, byte param1) {
+    final static char decodeCp1252Byte(byte param0, byte param1) {
         int var3 = 0;
         if (param1 != 26) {
           field_b = (m) null;

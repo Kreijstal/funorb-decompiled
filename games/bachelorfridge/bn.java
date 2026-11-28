@@ -91,7 +91,7 @@ final class bn extends TileEffect {
         rea.a(this.field_g, 65280, param2, (byte) 118, 10, param0);
     }
 
-    final static Sprite a(vr param0, byte param1, int param2, int param3) {
+    final static Sprite a(ResourceArchive param0, byte param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;

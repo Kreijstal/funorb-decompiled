@@ -7,9 +7,9 @@ final class lh {
     String field_d;
     static int field_f;
     String field_b;
-    gk field_c;
+    ResourceArchive field_c;
 
-    final static String a(int param0, int param1, int param2, byte[] param3) {
+    final static String decodeCp1252String(int param0, int param1, int param2, byte[] param3) {
         int incrementValue$1 = 0;
         char[] var4 = null;
         RuntimeException var4_ref = null;

@@ -106,7 +106,7 @@ abstract class wl {
         }
     }
 
-    final static tb a(ad param0, int param1, ad param2, int param3, int param4) {
+    final static tb a(ResourceArchive param0, int param1, ResourceArchive param2, int param3, int param4) {
         RuntimeException var5 = null;
         tb stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -122,7 +122,7 @@ abstract class wl {
           if (param1 != -26348) {
             field_f = (Sprite[]) null;
           }
-          stackIn_6_0 = rl.a(param1 - 6118, param0.b(255, param3, param4));
+          stackIn_6_0 = rl.a(param1 - 6118, param0.getFile(255, param3, param4));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

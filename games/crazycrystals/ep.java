@@ -59,7 +59,7 @@ final class ep extends f implements Cloneable {
         return 0;
     }
 
-    final static wj[] a(db param0, String param1, String param2, boolean param3) {
+    final static wj[] a(ResourceArchive param0, String param1, String param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -73,11 +73,11 @@ final class ep extends f implements Cloneable {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.a(param2, -1);
+          var4_int = param0.getGroupIdByName(param2, -1);
           if (param3) {
             ep.c((byte) -89);
           }
-          var5 = param0.a(-2862, param1, var4_int);
+          var5 = param0.getFileIdByName(-2862, param1, var4_int);
           stackIn_3_0 = qk.a(false, var4_int, param0, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

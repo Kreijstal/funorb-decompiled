@@ -96,7 +96,7 @@ final class AccountNameAvailabilityValidator extends ei {
             AccountNameAvailabilityValidator.d((byte) -100);
           }
           var5 = (CharSequence) ((Object) param1);
-          var3 = vj.a(true, var5);
+          var3 = ResourceArchive.a(true, var5);
           if (var3 != null) {
             stackIn_4_0 = var3;
             return stackIn_4_0;

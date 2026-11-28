@@ -240,8 +240,8 @@ final class BufferedSocket implements Runnable {
     }
 
     final static void a(byte param0, cf param1, int param2) {
-        hj var3 = ff.field_D;
-        var3.a(false, param2);
+        BitPacketBuffer var3 = ff.field_D;
+        var3.writeCipheredByte(false, param2);
         var3.writeByte(param0 + 6306, param1.field_g);
         if (param0 != 83) {
           return;
@@ -496,7 +496,7 @@ final class BufferedSocket implements Runnable {
               if (!ue.a(1, 0)) {
                 return false;
               }
-              md.field_k = WordLanguage.field_l.l(-12135);
+              md.field_k = WordLanguage.field_l.readCipheredByte(-12135);
               WordLanguage.field_l.position = 0;
               tg.field_a = param0[md.field_k];
             }

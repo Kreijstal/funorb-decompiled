@@ -6,7 +6,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     java.awt.Frame fullscreenFrame;
     static am field_c;
     static int field_b;
-    static db field_a;
+    static ResourceArchive field_a;
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {

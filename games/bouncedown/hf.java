@@ -173,7 +173,7 @@ final class hf {
           ((pf) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, true, ee.field_b);
           q.field_N.d((byte) 111);
           while (q.g((byte) -15)) {
-            q.field_N.a((byte) -109, lh.field_f, gk.field_d);
+            q.field_N.a((byte) -109, lh.field_f, ResourceArchive.field_d);
           }
           if (IterableNodeHashTable.field_g != -1) {
             var1_int = IterableNodeHashTable.field_g;

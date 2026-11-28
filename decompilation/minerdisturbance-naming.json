@@ -1460,12 +1460,132 @@
       "renamedSymbol": "M:bh.releaseDeclaredStaticReferences(B)V"
     },
     {
+      "symbol": "M:bj.a(B)Z",
+      "originalName": "a",
+      "to": "ensureIndexLoaded",
+      "evidence": "Source-purpose review: Loads the archive index when needed and allocates the packed group cache and per-group file table. After successful index access, the byte below 81 branch sets field_j to -108.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.ensureIndexLoaded(B)Z"
+    },
+    {
+      "symbol": "M:bj.a(II)Z",
+      "originalName": "a",
+      "to": "validateGroupId",
+      "evidence": "Source-purpose review: Validates a populated archive group index with the original load, bounds and strict-mode exception branches. The second int is the actual lower bound for the first int.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.validateGroupId(II)Z"
+    },
+    {
+      "symbol": "M:bj.a(III)Z",
+      "originalName": "a",
+      "to": "tryLoadFile",
+      "evidence": "Source-purpose review: Validates the file ID within its group, accepts an already decoded file or cached packed group, and otherwise requests the packed group and rechecks availability. A middle int other than 4397 clears a static string after a decoded-file miss and before the packed group lookup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.tryLoadFile(III)Z"
+    },
+    {
+      "symbol": "M:bj.a(III[I)Z",
+      "originalName": "a",
+      "to": "unpackGroupFiles",
+      "evidence": "Source-purpose review: Unpacks a packed archive group into its per-file cache. Bound calls confirm the group decoder and the separate single-file and all-files chunk copies. Preserve the supplied key path, original cache mutations, the exact byte-copy calls, chunk-table arithmetic, guard behavior, exceptions and return order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.unpackGroupFiles(III[I)Z"
+    },
+    {
+      "symbol": "M:bj.a(ILjava/lang/String;)I",
+      "originalName": "a",
+      "to": "getGroupIdByName",
+      "evidence": "Source-purpose review: Loads the index, lowercases and hashes a group name, then returns the validated group ID or the original missing-ID value. Preserves the remainder after checking index readiness and before lowercasing.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.getGroupIdByName(ILjava/lang/String;)I"
+    },
+    {
+      "symbol": "M:bj.a(IZ)I",
+      "originalName": "a",
+      "to": "getGroupLoadPercent",
+      "evidence": "Source-purpose review: Returns zero for invalid group IDs, 100 for cached packed groups, or the archive provider’s request progress for this group. After a packed-cache miss, false returns -119 before the provider call.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.getGroupLoadPercent(IZ)I"
+    },
+    {
+      "symbol": "M:bj.a(Ljava/lang/String;I)I",
+      "originalName": "a",
+      "to": "getGroupLoadPercentByName",
+      "evidence": "Source-purpose review: Loads the index, lowercases and hashes a group name, then returns the numeric group load progress for the looked-up ID. A final int at least -117 writes 121L into a nested packed-cache slot before checking the index.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.getGroupLoadPercentByName(Ljava/lang/String;I)I"
+    },
+    {
+      "symbol": "M:bj.a(Ljava/lang/String;II)I",
+      "originalName": "a",
+      "to": "getFileIdByName",
+      "evidence": "Source-purpose review: Validates the group, lowercases and hashes a file name, then returns the validated file ID from that group’s name table or the original missing-ID value. A final int above -46 clears an instance boolean after validating the group.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.getFileIdByName(Ljava/lang/String;II)I"
+    },
+    {
+      "symbol": "M:bj.a(Ljava/lang/String;ILjava/lang/String;)[B",
+      "originalName": "a",
+      "to": "getFileByName",
+      "evidence": "Source-purpose review: Ensures the archive index is ready, lowercases both names, hashes the group name and validates the looked-up ID, then looks up the file name within that group and returns bytes from the unkeyed reader. The middle int is forwarded in the original validation and file-name hash calls.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.getFileByName(Ljava/lang/String;ILjava/lang/String;)[B"
+    },
+    {
+      "symbol": "M:bj.a(ZII)[B",
+      "originalName": "a",
+      "to": "getFile",
+      "evidence": "Source-purpose review: Retrieves a file by group and file ID through the bound keyed reader using null keys. True calls the original helper before delegation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.getFile(ZII)[B"
+    },
+    {
+      "symbol": "M:bj.a([IIII)[B",
+      "originalName": "a",
+      "to": "getFileWithKeys",
+      "evidence": "Source-purpose review: Retrieves the decoded file by group and file ID, optionally unpacking with the supplied keys and retrying after a group request. Preserves the existing cache modes, absent-group handling, and exception diagnostics. Group ID is second and file ID third. Adjust the final int for the first unpack. Int other than -21331 invokes the string helper after both unpack attempts and before file conversion.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.getFileWithKeys([IIII)[B"
+    },
+    {
+      "symbol": "M:bj.b(I)Z",
+      "originalName": "b",
+      "to": "tryLoadAllGroups",
+      "evidence": "Source-purpose review: Ensures the index is ready and iterates the indexed group IDs, requesting each missing packed group. The accumulated flag reports whether the checked groups became available. A guard other than -1 calls the original string helper with null before index loading.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.tryLoadAllGroups(I)Z"
+    },
+    {
+      "symbol": "M:bj.b(III)Z",
+      "originalName": "b",
+      "to": "validateFileId",
+      "evidence": "Source-purpose review: Validates the archive group and file-slot index with the original load, bounds and strict-mode exception branches. Third int is the actual lower bound for the group ID.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.validateFileId(III)Z"
+    },
+    {
       "symbol": "M:bj.c(B)V",
       "originalName": "c",
       "to": "clearStaticReferences",
       "evidence": "Source-purpose review: Clears 3 owned static reference fields by null assignment. Full source-bound restricted-effect parse permits only these null stores, primitive guard/local expressions, conditional returns, and direct self calls (0 sites). No external calls or foreign field/array effects. Preserve modifiers,full primitive domains,casts,sentinel control flow,self recursion/overflow,division exceptions and original write/evaluation order. Effect parser passed7positive/14hostile fixtures;representative bodies/callers separately reviewed;all original caller bindings retained. Cleanup synonym selected to avoid inherited or same-signature name collisions;all unselected meaningful names preserved.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ResourceArchive.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:bj.c(II)V",
+      "originalName": "c",
+      "to": "loadPackedGroup",
+      "evidence": "Source-purpose review: Fetches a packed group from its archive provider and stores raw or wrapped bytes according to the supplied cache policy. First int other than -31132 returns before fetching. Preserve the different provider guard arguments for direct and wrapped bytes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.loadPackedGroup(II)V"
+    },
+    {
+      "symbol": "M:bj.d(II)Z",
+      "originalName": "d",
+      "to": "tryLoadGroup",
+      "evidence": "Source-purpose review: Validates the group ID, returns true if packed bytes are cached, or requests the group and checks whether packed bytes arrived. Forwards both original ints to group validation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.tryLoadGroup(II)Z"
     },
     {
       "symbol": "M:bk.b(B)V",
@@ -1490,6 +1610,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 5 null writes to 4 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 bb9c83dead59e6f972193031d9d8adb384ba08e6966f44c3a40b253b564fc7eb.",
       "confidence": "reviewed",
       "renamedSymbol": "M:bm.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:bn.a(IC)Z",
+      "originalName": "a",
+      "to": "isSupportedCp1252KeyCharacter",
+      "evidence": "Source-purpose review: Filters typed characters for the keyboard event buffer using direct ranges and a linear lookup of the CP1252 extension characters. Outside the direct ranges, evaluate -111 / ((param0 - 28) / 63) before testing zero or scanning.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:bn.isSupportedCp1252KeyCharacter(IC)Z"
     },
     {
       "symbol": "M:c.b(B)V",
@@ -3004,6 +3132,14 @@
       "renamedSymbol": "M:ic.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
     },
     {
+      "symbol": "M:ic.a(ZLjava/lang/CharSequence;)[B",
+      "originalName": "a",
+      "to": "encodeCp1252Bytes",
+      "evidence": "Source-purpose review: Encodes a character sequence into a newly allocated CP1252 byte array used by text and stream writers. After length and allocation,boolean true nulls static field_l before the loop. Retain the empty-input clear and failures that happen before it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ic.encodeCp1252Bytes(ZLjava/lang/CharSequence;)[B"
+    },
+    {
       "symbol": "M:id.b(I)V",
       "originalName": "b",
       "to": "clearStaticReferences",
@@ -3018,6 +3154,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 3 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 15d5714443b5f8d7bc5740005119d16651c26cf2e3084ed575dc1e8204874cbb.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ii.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:ij.a(BI)I",
+      "originalName": "a",
+      "to": "getGroupRequestProgressPercent",
+      "evidence": "Source-purpose review: Looks up the pending request by group ID and returns its progress, or zero when absent. A first byte below 62 calls the original helper before lookup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ij.getGroupRequestProgressPercent(BI)I"
     },
     {
       "symbol": "M:ij.a(ILjava/lang/String;Z)Led;",
@@ -3210,6 +3354,14 @@
       "evidence": "Complete byte[] allocation/copy wrapper and called primitive range copy reviewed. Preserve caller offsets, guards, returns, arithmetic and side effects before/after partial or full copying. Wrapper may mutate static int before null check. Extraction null case precedes boolean static mutation. Clone byte guard-16 returns null before input dereference.",
       "confidence": "reviewed",
       "renamedSymbol": "M:kh.copyBytes([BB)[B"
+    },
+    {
+      "symbol": "M:kj.a(CI)B",
+      "originalName": "a",
+      "to": "encodeCp1252Character",
+      "evidence": "Source-purpose review: Encodes a UTF-16 code unit as a signed CP1252 byte for text hashes and byte-indexed glyph lookup. Miner Disturbance reads the flag and returns -81 before mapping for int other than -8251.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:kj.encodeCp1252Character(CI)B"
     },
     {
       "symbol": "M:km.a(Z)V",
@@ -3482,6 +3634,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 6 null writes to 4 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 b3c3eb14938139c4722ec3ff6dcbe4b5a79efa351efff2525f4ef3a453deab77.",
       "confidence": "reviewed",
       "renamedSymbol": "M:mb.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:mb.a(ZB)C",
+      "originalName": "a",
+      "to": "decodeCp1252Byte",
+      "evidence": "Source-purpose review: Converts a byte to a character, using the CP1252 extension table for values 128 through 159 and 63 for undefined entries. True calls mb.a((byte) 124) before masking, the zero check and the separate mapping branch.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:mb.decodeCp1252Byte(ZB)C"
     },
     {
       "symbol": "M:mc.a(B)V",
@@ -4228,6 +4388,14 @@
       "renamedSymbol": "M:VorbisFloor.findLowNeighbor([II)I"
     },
     {
+      "symbol": "M:ph.a(BI[BI)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "decodeCp1252String",
+      "evidence": "Source-purpose review: Decodes a supplied byte span using the CP1252 extension table and compacts the output by skipping zero bytes on the normal path. Byte at most 13 clears field_e before allocation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ph.decodeCp1252String(BI[BI)Ljava/lang/String;"
+    },
+    {
       "symbol": "M:pi.b(I)V",
       "originalName": "b",
       "to": "unlink",
@@ -4410,6 +4578,14 @@
       "evidence": "Complete helper/table initialization reviewed:256entries, eight reflected shifts with polynomial-306674912; seed-1, table[(crc XOR byte)&255] XOR crc>>>8 and complemented result. Preserve caller range, guard helper calls/recursive failures/arithmetic, exception wrappers and all global behavior. ",
       "confidence": "reviewed",
       "renamedSymbol": "M:qn.computeCrc32(III[B)I"
+    },
+    {
+      "symbol": "M:r.a(Ljava/lang/CharSequence;[BIIII)I",
+      "originalName": "a",
+      "to": "encodeCp1252Subsequence",
+      "evidence": "Source-purpose review: Encodes a range of a character sequence into a supplied byte array at its destination offset. After subtraction, wrong int writes -5 to field_c before the loop.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:r.encodeCp1252Subsequence(Ljava/lang/CharSequence;[BIIII)I"
     },
     {
       "symbol": "M:r.b(B)V",
@@ -5490,6 +5666,14 @@
       "evidence": "Source-purpose review: Exact source/body and compiler-bound caller review: Bzip2 readBit. {\"behavior\":\"Call the bound bit reader with width 1 and cast its result to byte.\",\"preserve\":\"Preserve the call and cast for the full supplied state domain, including null or malformed state; add no validation.\"} Identifier-only change; retain modifiers, primitive types, class initialization, all literals, aliasing, partial effects and original exceptions.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Bzip2Decompressor.readBit(LBzip2State;)B"
+    },
+    {
+      "symbol": "M:vb.a(BI)I",
+      "originalName": "a",
+      "to": "getGroupRequestProgressPercent",
+      "evidence": "Source-purpose review: Gets the progress of the pending request for an archive group.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveProvider.getGroupRequestProgressPercent(BI)I"
     },
     {
       "symbol": "M:vb.a(I)V",
@@ -50490,7 +50674,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#0",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#0",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#0",
       "originalName": "array$0",
       "renamedName": "array$0",
       "declaration": {
@@ -50501,7 +50685,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#1",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#1",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#1",
       "originalName": "var9_int",
       "renamedName": "var9_int",
       "declaration": {
@@ -50512,7 +50696,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#10",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#10",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -50523,7 +50707,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#11",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#11",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#11",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -50534,7 +50718,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#12",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#12",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#12",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -50545,7 +50729,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#13",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#13",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#13",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -50556,7 +50740,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#14",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#14",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#14",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -50567,7 +50751,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#15",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#15",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#15",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -50578,7 +50762,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#16",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#16",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#16",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -50589,7 +50773,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#17",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#17",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#17",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -50600,7 +50784,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#18",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#18",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#18",
       "originalName": "var11_ref_RuntimeException",
       "renamedName": "var11_ref_RuntimeException",
       "declaration": {
@@ -50611,7 +50795,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#19",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#19",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#19",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -50622,7 +50806,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#2",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#2",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#2",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -50633,7 +50817,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#20",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#20",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#20",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -50644,7 +50828,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#21",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#21",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#21",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -50655,7 +50839,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#22",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#22",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#22",
       "originalName": "var14_int",
       "renamedName": "var14_int",
       "declaration": {
@@ -50666,7 +50850,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#23",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#23",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#23",
       "originalName": "var15_int",
       "renamedName": "var15_int",
       "declaration": {
@@ -50677,7 +50861,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#24",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#24",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#24",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -50688,7 +50872,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#25",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#25",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#25",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -50699,7 +50883,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#26",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#26",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#26",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -50710,7 +50894,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#27",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#27",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#27",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -50721,7 +50905,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#28",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#28",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#28",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -50732,7 +50916,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#29",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#29",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#29",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -50743,7 +50927,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#3",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#3",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#3",
       "originalName": "array$1",
       "renamedName": "array$1",
       "declaration": {
@@ -50754,7 +50938,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#30",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#30",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#30",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -50765,7 +50949,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#31",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#31",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#31",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -50776,7 +50960,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#32",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#32",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#32",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -50787,7 +50971,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#33",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#33",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#33",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -50798,7 +50982,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#34",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#34",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#34",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -50809,7 +50993,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#35",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#35",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#35",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -50820,7 +51004,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#36",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#36",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#36",
       "originalName": "var29",
       "renamedName": "var29",
       "declaration": {
@@ -50831,7 +51015,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#37",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#37",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#37",
       "originalName": "var31",
       "renamedName": "var31",
       "declaration": {
@@ -50842,7 +51026,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#38",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#38",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#38",
       "originalName": "var32",
       "renamedName": "var32",
       "declaration": {
@@ -50853,7 +51037,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#39",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#39",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#39",
       "originalName": "var33",
       "renamedName": "var33",
       "declaration": {
@@ -50864,7 +51048,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#4",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#4",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#4",
       "originalName": "stackIn_37_0",
       "renamedName": "stackIn_37_0",
       "declaration": {
@@ -50875,7 +51059,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#40",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#40",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#40",
       "originalName": "var34",
       "renamedName": "var34",
       "declaration": {
@@ -50886,7 +51070,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#41",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#41",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#41",
       "originalName": "var35",
       "renamedName": "var35",
       "declaration": {
@@ -50897,7 +51081,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#42",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#42",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#42",
       "originalName": "var36",
       "renamedName": "var36",
       "declaration": {
@@ -50908,7 +51092,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#43",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#43",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#43",
       "originalName": "var39",
       "renamedName": "var39",
       "declaration": {
@@ -50919,7 +51103,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#44",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#44",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#44",
       "originalName": "var40",
       "renamedName": "var40",
       "declaration": {
@@ -50930,7 +51114,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#45",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#45",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#45",
       "originalName": "var43",
       "renamedName": "var43",
       "declaration": {
@@ -50941,7 +51125,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#46",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#46",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#46",
       "originalName": "var44",
       "renamedName": "var44",
       "declaration": {
@@ -50952,7 +51136,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#47",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#47",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#47",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -50963,7 +51147,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#48",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#48",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#48",
       "originalName": "var15_intLifetime1",
       "renamedName": "var15_intLifetime1",
       "declaration": {
@@ -50974,7 +51158,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#49",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#49",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#49",
       "originalName": "var17Lifetime1",
       "renamedName": "var17Lifetime1",
       "declaration": {
@@ -50985,7 +51169,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#5",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#5",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#5",
       "originalName": "stackIn_37_1",
       "renamedName": "stackIn_37_1",
       "declaration": {
@@ -50996,7 +51180,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#50",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#50",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#50",
       "originalName": "var17Lifetime2",
       "renamedName": "var17Lifetime2",
       "declaration": {
@@ -51007,7 +51191,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#51",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#51",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#51",
       "originalName": "var17Lifetime3",
       "renamedName": "var17Lifetime3",
       "declaration": {
@@ -51018,7 +51202,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#52",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#52",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#52",
       "originalName": "var18Lifetime1",
       "renamedName": "var18Lifetime1",
       "declaration": {
@@ -51029,7 +51213,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#53",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#53",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#53",
       "originalName": "var18Lifetime2",
       "renamedName": "var18Lifetime2",
       "declaration": {
@@ -51040,7 +51224,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#54",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#54",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#54",
       "originalName": "var19Lifetime1",
       "renamedName": "var19Lifetime1",
       "declaration": {
@@ -51051,7 +51235,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#55",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#55",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#55",
       "originalName": "var14_intLifetime1",
       "renamedName": "var14_intLifetime1",
       "declaration": {
@@ -51062,7 +51246,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#56",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#56",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#56",
       "originalName": "var16Lifetime1",
       "renamedName": "var16Lifetime1",
       "declaration": {
@@ -51073,7 +51257,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#57",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#57",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#57",
       "originalName": "var16Lifetime2",
       "renamedName": "var16Lifetime2",
       "declaration": {
@@ -51084,7 +51268,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#58",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#58",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#58",
       "originalName": "var16Lifetime3",
       "renamedName": "var16Lifetime3",
       "declaration": {
@@ -51095,7 +51279,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#59",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#59",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#59",
       "originalName": "var17Lifetime4",
       "renamedName": "var17Lifetime4",
       "declaration": {
@@ -51106,7 +51290,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#6",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#6",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#6",
       "originalName": "stackIn_38_2",
       "renamedName": "stackIn_38_2",
       "declaration": {
@@ -51117,7 +51301,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#60",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#60",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#60",
       "originalName": "var18Lifetime3",
       "renamedName": "var18Lifetime3",
       "declaration": {
@@ -51128,7 +51312,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#61",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#61",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#61",
       "originalName": "var19Lifetime2",
       "renamedName": "var19Lifetime2",
       "declaration": {
@@ -51139,7 +51323,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#62",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#62",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#62",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -51150,7 +51334,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#63",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#63",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#63",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -51161,7 +51345,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#64",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#64",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#64",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -51172,7 +51356,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#7",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#7",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#7",
       "originalName": "stackIn_106_0",
       "renamedName": "stackIn_106_0",
       "declaration": {
@@ -51183,7 +51367,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#8",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#8",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#8",
       "originalName": "stackIn_106_1",
       "renamedName": "stackIn_106_1",
       "declaration": {
@@ -51194,7 +51378,7 @@
     },
     {
       "symbol": "L:bj.a(III[I)Z#9",
-      "renamedSymbol": "L:ResourceArchive.a(III[I)Z#9",
+      "renamedSymbol": "L:ResourceArchive.unpackGroupFiles(III[I)Z#9",
       "originalName": "stackIn_107_2",
       "renamedName": "stackIn_107_2",
       "declaration": {
@@ -51216,7 +51400,7 @@
     },
     {
       "symbol": "L:bj.a(ILjava/lang/String;)I#0",
-      "renamedSymbol": "L:ResourceArchive.a(ILjava/lang/String;)I#0",
+      "renamedSymbol": "L:ResourceArchive.getGroupIdByName(ILjava/lang/String;)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -51227,7 +51411,7 @@
     },
     {
       "symbol": "L:bj.a(ILjava/lang/String;)I#1",
-      "renamedSymbol": "L:ResourceArchive.a(ILjava/lang/String;)I#1",
+      "renamedSymbol": "L:ResourceArchive.getGroupIdByName(ILjava/lang/String;)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -51238,7 +51422,7 @@
     },
     {
       "symbol": "L:bj.a(ILjava/lang/String;)I#10",
-      "renamedSymbol": "L:ResourceArchive.a(ILjava/lang/String;)I#10",
+      "renamedSymbol": "L:ResourceArchive.getGroupIdByName(ILjava/lang/String;)I#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -51249,7 +51433,7 @@
     },
     {
       "symbol": "L:bj.a(ILjava/lang/String;)I#2",
-      "renamedSymbol": "L:ResourceArchive.a(ILjava/lang/String;)I#2",
+      "renamedSymbol": "L:ResourceArchive.getGroupIdByName(ILjava/lang/String;)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -51260,7 +51444,7 @@
     },
     {
       "symbol": "L:bj.a(ILjava/lang/String;)I#3",
-      "renamedSymbol": "L:ResourceArchive.a(ILjava/lang/String;)I#3",
+      "renamedSymbol": "L:ResourceArchive.getGroupIdByName(ILjava/lang/String;)I#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -51271,7 +51455,7 @@
     },
     {
       "symbol": "L:bj.a(ILjava/lang/String;)I#4",
-      "renamedSymbol": "L:ResourceArchive.a(ILjava/lang/String;)I#4",
+      "renamedSymbol": "L:ResourceArchive.getGroupIdByName(ILjava/lang/String;)I#4",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -51282,7 +51466,7 @@
     },
     {
       "symbol": "L:bj.a(ILjava/lang/String;)I#5",
-      "renamedSymbol": "L:ResourceArchive.a(ILjava/lang/String;)I#5",
+      "renamedSymbol": "L:ResourceArchive.getGroupIdByName(ILjava/lang/String;)I#5",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -51293,7 +51477,7 @@
     },
     {
       "symbol": "L:bj.a(ILjava/lang/String;)I#6",
-      "renamedSymbol": "L:ResourceArchive.a(ILjava/lang/String;)I#6",
+      "renamedSymbol": "L:ResourceArchive.getGroupIdByName(ILjava/lang/String;)I#6",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -51304,7 +51488,7 @@
     },
     {
       "symbol": "L:bj.a(ILjava/lang/String;)I#7",
-      "renamedSymbol": "L:ResourceArchive.a(ILjava/lang/String;)I#7",
+      "renamedSymbol": "L:ResourceArchive.getGroupIdByName(ILjava/lang/String;)I#7",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -51315,7 +51499,7 @@
     },
     {
       "symbol": "L:bj.a(ILjava/lang/String;)I#8",
-      "renamedSymbol": "L:ResourceArchive.a(ILjava/lang/String;)I#8",
+      "renamedSymbol": "L:ResourceArchive.getGroupIdByName(ILjava/lang/String;)I#8",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -51326,7 +51510,7 @@
     },
     {
       "symbol": "L:bj.a(ILjava/lang/String;)I#9",
-      "renamedSymbol": "L:ResourceArchive.a(ILjava/lang/String;)I#9",
+      "renamedSymbol": "L:ResourceArchive.getGroupIdByName(ILjava/lang/String;)I#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -51348,7 +51532,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;I)I#0",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;I)I#0",
+      "renamedSymbol": "L:ResourceArchive.getGroupLoadPercentByName(Ljava/lang/String;I)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -51359,7 +51543,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;I)I#1",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;I)I#1",
+      "renamedSymbol": "L:ResourceArchive.getGroupLoadPercentByName(Ljava/lang/String;I)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -51370,7 +51554,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;I)I#2",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;I)I#2",
+      "renamedSymbol": "L:ResourceArchive.getGroupLoadPercentByName(Ljava/lang/String;I)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -51381,7 +51565,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;I)I#3",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;I)I#3",
+      "renamedSymbol": "L:ResourceArchive.getGroupLoadPercentByName(Ljava/lang/String;I)I#3",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -51392,7 +51576,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;I)I#4",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;I)I#4",
+      "renamedSymbol": "L:ResourceArchive.getGroupLoadPercentByName(Ljava/lang/String;I)I#4",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -51403,7 +51587,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;I)I#5",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;I)I#5",
+      "renamedSymbol": "L:ResourceArchive.getGroupLoadPercentByName(Ljava/lang/String;I)I#5",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -51414,7 +51598,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;I)I#6",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;I)I#6",
+      "renamedSymbol": "L:ResourceArchive.getGroupLoadPercentByName(Ljava/lang/String;I)I#6",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -51425,7 +51609,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;I)I#7",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;I)I#7",
+      "renamedSymbol": "L:ResourceArchive.getGroupLoadPercentByName(Ljava/lang/String;I)I#7",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -51436,7 +51620,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;I)I#8",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;I)I#8",
+      "renamedSymbol": "L:ResourceArchive.getGroupLoadPercentByName(Ljava/lang/String;I)I#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -51447,7 +51631,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;I)I#9",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;I)I#9",
+      "renamedSymbol": "L:ResourceArchive.getGroupLoadPercentByName(Ljava/lang/String;I)I#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -51458,7 +51642,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;II)I#0",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;II)I#0",
+      "renamedSymbol": "L:ResourceArchive.getFileIdByName(Ljava/lang/String;II)I#0",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -51469,7 +51653,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;II)I#1",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;II)I#1",
+      "renamedSymbol": "L:ResourceArchive.getFileIdByName(Ljava/lang/String;II)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -51480,7 +51664,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;II)I#10",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;II)I#10",
+      "renamedSymbol": "L:ResourceArchive.getFileIdByName(Ljava/lang/String;II)I#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -51491,7 +51675,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;II)I#2",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;II)I#2",
+      "renamedSymbol": "L:ResourceArchive.getFileIdByName(Ljava/lang/String;II)I#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -51502,7 +51686,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;II)I#3",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;II)I#3",
+      "renamedSymbol": "L:ResourceArchive.getFileIdByName(Ljava/lang/String;II)I#3",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -51513,7 +51697,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;II)I#4",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;II)I#4",
+      "renamedSymbol": "L:ResourceArchive.getFileIdByName(Ljava/lang/String;II)I#4",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -51524,7 +51708,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;II)I#5",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;II)I#5",
+      "renamedSymbol": "L:ResourceArchive.getFileIdByName(Ljava/lang/String;II)I#5",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -51535,7 +51719,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;II)I#6",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;II)I#6",
+      "renamedSymbol": "L:ResourceArchive.getFileIdByName(Ljava/lang/String;II)I#6",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -51546,7 +51730,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;II)I#7",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;II)I#7",
+      "renamedSymbol": "L:ResourceArchive.getFileIdByName(Ljava/lang/String;II)I#7",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -51557,7 +51741,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;II)I#8",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;II)I#8",
+      "renamedSymbol": "L:ResourceArchive.getFileIdByName(Ljava/lang/String;II)I#8",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -51568,7 +51752,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;II)I#9",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;II)I#9",
+      "renamedSymbol": "L:ResourceArchive.getFileIdByName(Ljava/lang/String;II)I#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -51579,7 +51763,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;ILjava/lang/String;)[B#0",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;ILjava/lang/String;)[B#0",
+      "renamedSymbol": "L:ResourceArchive.getFileByName(Ljava/lang/String;ILjava/lang/String;)[B#0",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -51590,7 +51774,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;ILjava/lang/String;)[B#1",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;ILjava/lang/String;)[B#1",
+      "renamedSymbol": "L:ResourceArchive.getFileByName(Ljava/lang/String;ILjava/lang/String;)[B#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -51601,7 +51785,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;ILjava/lang/String;)[B#10",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;ILjava/lang/String;)[B#10",
+      "renamedSymbol": "L:ResourceArchive.getFileByName(Ljava/lang/String;ILjava/lang/String;)[B#10",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -51612,7 +51796,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;ILjava/lang/String;)[B#11",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;ILjava/lang/String;)[B#11",
+      "renamedSymbol": "L:ResourceArchive.getFileByName(Ljava/lang/String;ILjava/lang/String;)[B#11",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -51623,7 +51807,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;ILjava/lang/String;)[B#12",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;ILjava/lang/String;)[B#12",
+      "renamedSymbol": "L:ResourceArchive.getFileByName(Ljava/lang/String;ILjava/lang/String;)[B#12",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -51634,7 +51818,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;ILjava/lang/String;)[B#13",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;ILjava/lang/String;)[B#13",
+      "renamedSymbol": "L:ResourceArchive.getFileByName(Ljava/lang/String;ILjava/lang/String;)[B#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -51645,7 +51829,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;ILjava/lang/String;)[B#2",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;ILjava/lang/String;)[B#2",
+      "renamedSymbol": "L:ResourceArchive.getFileByName(Ljava/lang/String;ILjava/lang/String;)[B#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -51656,7 +51840,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;ILjava/lang/String;)[B#3",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;ILjava/lang/String;)[B#3",
+      "renamedSymbol": "L:ResourceArchive.getFileByName(Ljava/lang/String;ILjava/lang/String;)[B#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -51667,7 +51851,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;ILjava/lang/String;)[B#4",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;ILjava/lang/String;)[B#4",
+      "renamedSymbol": "L:ResourceArchive.getFileByName(Ljava/lang/String;ILjava/lang/String;)[B#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -51678,7 +51862,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;ILjava/lang/String;)[B#5",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;ILjava/lang/String;)[B#5",
+      "renamedSymbol": "L:ResourceArchive.getFileByName(Ljava/lang/String;ILjava/lang/String;)[B#5",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -51689,7 +51873,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;ILjava/lang/String;)[B#6",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;ILjava/lang/String;)[B#6",
+      "renamedSymbol": "L:ResourceArchive.getFileByName(Ljava/lang/String;ILjava/lang/String;)[B#6",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -51700,7 +51884,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;ILjava/lang/String;)[B#7",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;ILjava/lang/String;)[B#7",
+      "renamedSymbol": "L:ResourceArchive.getFileByName(Ljava/lang/String;ILjava/lang/String;)[B#7",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -51711,7 +51895,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;ILjava/lang/String;)[B#8",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;ILjava/lang/String;)[B#8",
+      "renamedSymbol": "L:ResourceArchive.getFileByName(Ljava/lang/String;ILjava/lang/String;)[B#8",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -51722,7 +51906,7 @@
     },
     {
       "symbol": "L:bj.a(Ljava/lang/String;ILjava/lang/String;)[B#9",
-      "renamedSymbol": "L:ResourceArchive.a(Ljava/lang/String;ILjava/lang/String;)[B#9",
+      "renamedSymbol": "L:ResourceArchive.getFileByName(Ljava/lang/String;ILjava/lang/String;)[B#9",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -51986,7 +52170,7 @@
     },
     {
       "symbol": "L:bj.a([IIII)[B#0",
-      "renamedSymbol": "L:ResourceArchive.a([IIII)[B#0",
+      "renamedSymbol": "L:ResourceArchive.getFileWithKeys([IIII)[B#0",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -51997,7 +52181,7 @@
     },
     {
       "symbol": "L:bj.a([IIII)[B#1",
-      "renamedSymbol": "L:ResourceArchive.a([IIII)[B#1",
+      "renamedSymbol": "L:ResourceArchive.getFileWithKeys([IIII)[B#1",
       "originalName": "stackIn_26_0",
       "renamedName": "stackIn_26_0",
       "declaration": {
@@ -52008,7 +52192,7 @@
     },
     {
       "symbol": "L:bj.a([IIII)[B#2",
-      "renamedSymbol": "L:ResourceArchive.a([IIII)[B#2",
+      "renamedSymbol": "L:ResourceArchive.getFileWithKeys([IIII)[B#2",
       "originalName": "stackIn_29_0",
       "renamedName": "stackIn_29_0",
       "declaration": {
@@ -52019,7 +52203,7 @@
     },
     {
       "symbol": "L:bj.a([IIII)[B#3",
-      "renamedSymbol": "L:ResourceArchive.a([IIII)[B#3",
+      "renamedSymbol": "L:ResourceArchive.getFileWithKeys([IIII)[B#3",
       "originalName": "stackIn_29_1",
       "renamedName": "stackIn_29_1",
       "declaration": {
@@ -52030,7 +52214,7 @@
     },
     {
       "symbol": "L:bj.a([IIII)[B#4",
-      "renamedSymbol": "L:ResourceArchive.a([IIII)[B#4",
+      "renamedSymbol": "L:ResourceArchive.getFileWithKeys([IIII)[B#4",
       "originalName": "stackIn_30_2",
       "renamedName": "stackIn_30_2",
       "declaration": {
@@ -52041,7 +52225,7 @@
     },
     {
       "symbol": "L:bj.a([IIII)[B#5",
-      "renamedSymbol": "L:ResourceArchive.a([IIII)[B#5",
+      "renamedSymbol": "L:ResourceArchive.getFileWithKeys([IIII)[B#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -52052,7 +52236,7 @@
     },
     {
       "symbol": "L:bj.a([IIII)[B#6",
-      "renamedSymbol": "L:ResourceArchive.a([IIII)[B#6",
+      "renamedSymbol": "L:ResourceArchive.getFileWithKeys([IIII)[B#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -52063,7 +52247,7 @@
     },
     {
       "symbol": "L:bj.a([IIII)[B#7",
-      "renamedSymbol": "L:ResourceArchive.a([IIII)[B#7",
+      "renamedSymbol": "L:ResourceArchive.getFileWithKeys([IIII)[B#7",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -52074,7 +52258,7 @@
     },
     {
       "symbol": "L:bj.a([IIII)[B#8",
-      "renamedSymbol": "L:ResourceArchive.a([IIII)[B#8",
+      "renamedSymbol": "L:ResourceArchive.getFileWithKeys([IIII)[B#8",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -52085,7 +52269,7 @@
     },
     {
       "symbol": "L:bj.a([IIII)[B#9",
-      "renamedSymbol": "L:ResourceArchive.a([IIII)[B#9",
+      "renamedSymbol": "L:ResourceArchive.getFileWithKeys([IIII)[B#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -52096,7 +52280,7 @@
     },
     {
       "symbol": "L:bj.b(I)Z#0",
-      "renamedSymbol": "L:ResourceArchive.b(I)Z#0",
+      "renamedSymbol": "L:ResourceArchive.tryLoadAllGroups(I)Z#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -52107,7 +52291,7 @@
     },
     {
       "symbol": "L:bj.b(I)Z#1",
-      "renamedSymbol": "L:ResourceArchive.b(I)Z#1",
+      "renamedSymbol": "L:ResourceArchive.tryLoadAllGroups(I)Z#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -52118,7 +52302,7 @@
     },
     {
       "symbol": "L:bj.b(I)Z#2",
-      "renamedSymbol": "L:ResourceArchive.b(I)Z#2",
+      "renamedSymbol": "L:ResourceArchive.tryLoadAllGroups(I)Z#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -52129,7 +52313,7 @@
     },
     {
       "symbol": "L:bj.b(I)Z#3",
-      "renamedSymbol": "L:ResourceArchive.b(I)Z#3",
+      "renamedSymbol": "L:ResourceArchive.tryLoadAllGroups(I)Z#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -52140,7 +52324,7 @@
     },
     {
       "symbol": "L:bj.b(I)Z#4",
-      "renamedSymbol": "L:ResourceArchive.b(I)Z#4",
+      "renamedSymbol": "L:ResourceArchive.tryLoadAllGroups(I)Z#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -53493,7 +53677,7 @@
     },
     {
       "symbol": "L:bn.a(IC)Z#0",
-      "renamedSymbol": "L:bn.a(IC)Z#0",
+      "renamedSymbol": "L:bn.isSupportedCp1252KeyCharacter(IC)Z#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -53504,7 +53688,7 @@
     },
     {
       "symbol": "L:bn.a(IC)Z#1",
-      "renamedSymbol": "L:bn.a(IC)Z#1",
+      "renamedSymbol": "L:bn.isSupportedCp1252KeyCharacter(IC)Z#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -53515,7 +53699,7 @@
     },
     {
       "symbol": "L:bn.a(IC)Z#2",
-      "renamedSymbol": "L:bn.a(IC)Z#2",
+      "renamedSymbol": "L:bn.isSupportedCp1252KeyCharacter(IC)Z#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -53526,7 +53710,7 @@
     },
     {
       "symbol": "L:bn.a(IC)Z#3",
-      "renamedSymbol": "L:bn.a(IC)Z#3",
+      "renamedSymbol": "L:bn.isSupportedCp1252KeyCharacter(IC)Z#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -53537,7 +53721,7 @@
     },
     {
       "symbol": "L:bn.a(IC)Z#4",
-      "renamedSymbol": "L:bn.a(IC)Z#4",
+      "renamedSymbol": "L:bn.isSupportedCp1252KeyCharacter(IC)Z#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -53548,7 +53732,7 @@
     },
     {
       "symbol": "L:bn.a(IC)Z#5",
-      "renamedSymbol": "L:bn.a(IC)Z#5",
+      "renamedSymbol": "L:bn.isSupportedCp1252KeyCharacter(IC)Z#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -53559,7 +53743,7 @@
     },
     {
       "symbol": "L:bn.a(IC)Z#6",
-      "renamedSymbol": "L:bn.a(IC)Z#6",
+      "renamedSymbol": "L:bn.isSupportedCp1252KeyCharacter(IC)Z#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -53570,7 +53754,7 @@
     },
     {
       "symbol": "L:bn.a(IC)Z#7",
-      "renamedSymbol": "L:bn.a(IC)Z#7",
+      "renamedSymbol": "L:bn.isSupportedCp1252KeyCharacter(IC)Z#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -88693,7 +88877,7 @@
     },
     {
       "symbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#0",
-      "renamedSymbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#0",
+      "renamedSymbol": "L:ic.encodeCp1252Bytes(ZLjava/lang/CharSequence;)[B#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -88704,7 +88888,7 @@
     },
     {
       "symbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#1",
-      "renamedSymbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#1",
+      "renamedSymbol": "L:ic.encodeCp1252Bytes(ZLjava/lang/CharSequence;)[B#1",
       "originalName": "stackIn_69_0",
       "renamedName": "stackIn_69_0",
       "declaration": {
@@ -88715,7 +88899,7 @@
     },
     {
       "symbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#10",
-      "renamedSymbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#10",
+      "renamedSymbol": "L:ic.encodeCp1252Bytes(ZLjava/lang/CharSequence;)[B#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -88726,7 +88910,7 @@
     },
     {
       "symbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#11",
-      "renamedSymbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#11",
+      "renamedSymbol": "L:ic.encodeCp1252Bytes(ZLjava/lang/CharSequence;)[B#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -88737,7 +88921,7 @@
     },
     {
       "symbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#2",
-      "renamedSymbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#2",
+      "renamedSymbol": "L:ic.encodeCp1252Bytes(ZLjava/lang/CharSequence;)[B#2",
       "originalName": "stackIn_72_0",
       "renamedName": "stackIn_72_0",
       "declaration": {
@@ -88748,7 +88932,7 @@
     },
     {
       "symbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#3",
-      "renamedSymbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#3",
+      "renamedSymbol": "L:ic.encodeCp1252Bytes(ZLjava/lang/CharSequence;)[B#3",
       "originalName": "stackIn_72_1",
       "renamedName": "stackIn_72_1",
       "declaration": {
@@ -88759,7 +88943,7 @@
     },
     {
       "symbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#4",
-      "renamedSymbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#4",
+      "renamedSymbol": "L:ic.encodeCp1252Bytes(ZLjava/lang/CharSequence;)[B#4",
       "originalName": "stackIn_73_2",
       "renamedName": "stackIn_73_2",
       "declaration": {
@@ -88770,7 +88954,7 @@
     },
     {
       "symbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#5",
-      "renamedSymbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#5",
+      "renamedSymbol": "L:ic.encodeCp1252Bytes(ZLjava/lang/CharSequence;)[B#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -88781,7 +88965,7 @@
     },
     {
       "symbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#6",
-      "renamedSymbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#6",
+      "renamedSymbol": "L:ic.encodeCp1252Bytes(ZLjava/lang/CharSequence;)[B#6",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -88792,7 +88976,7 @@
     },
     {
       "symbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#7",
-      "renamedSymbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#7",
+      "renamedSymbol": "L:ic.encodeCp1252Bytes(ZLjava/lang/CharSequence;)[B#7",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -88803,7 +88987,7 @@
     },
     {
       "symbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#8",
-      "renamedSymbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#8",
+      "renamedSymbol": "L:ic.encodeCp1252Bytes(ZLjava/lang/CharSequence;)[B#8",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -88814,7 +88998,7 @@
     },
     {
       "symbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#9",
-      "renamedSymbol": "L:ic.a(ZLjava/lang/CharSequence;)[B#9",
+      "renamedSymbol": "L:ic.encodeCp1252Bytes(ZLjava/lang/CharSequence;)[B#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -90178,7 +90362,7 @@
     },
     {
       "symbol": "L:ij.a(BI)I#0",
-      "renamedSymbol": "L:ij.a(BI)I#0",
+      "renamedSymbol": "L:ij.getGroupRequestProgressPercent(BI)I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -105204,7 +105388,7 @@
     },
     {
       "symbol": "L:kj.a(CI)B#0",
-      "renamedSymbol": "L:kj.a(CI)B#0",
+      "renamedSymbol": "L:kj.encodeCp1252Character(CI)B#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -105215,7 +105399,7 @@
     },
     {
       "symbol": "L:kj.a(CI)B#1",
-      "renamedSymbol": "L:kj.a(CI)B#1",
+      "renamedSymbol": "L:kj.encodeCp1252Character(CI)B#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -105226,7 +105410,7 @@
     },
     {
       "symbol": "L:kj.a(CI)B#2",
-      "renamedSymbol": "L:kj.a(CI)B#2",
+      "renamedSymbol": "L:kj.encodeCp1252Character(CI)B#2",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -105237,7 +105421,7 @@
     },
     {
       "symbol": "L:kj.a(CI)B#3",
-      "renamedSymbol": "L:kj.a(CI)B#3",
+      "renamedSymbol": "L:kj.encodeCp1252Character(CI)B#3",
       "originalName": "var2Lifetime2",
       "renamedName": "var2Lifetime2",
       "declaration": {
@@ -105248,7 +105432,7 @@
     },
     {
       "symbol": "L:kj.a(CI)B#4",
-      "renamedSymbol": "L:kj.a(CI)B#4",
+      "renamedSymbol": "L:kj.encodeCp1252Character(CI)B#4",
       "originalName": "var2Lifetime3",
       "renamedName": "var2Lifetime3",
       "declaration": {
@@ -114543,7 +114727,7 @@
     },
     {
       "symbol": "L:mb.a(ZB)C#0",
-      "renamedSymbol": "L:mb.a(ZB)C#0",
+      "renamedSymbol": "L:mb.decodeCp1252Byte(ZB)C#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -114554,7 +114738,7 @@
     },
     {
       "symbol": "L:mb.a(ZB)C#1",
-      "renamedSymbol": "L:mb.a(ZB)C#1",
+      "renamedSymbol": "L:mb.decodeCp1252Byte(ZB)C#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -114565,7 +114749,7 @@
     },
     {
       "symbol": "L:mb.a(ZB)C#2",
-      "renamedSymbol": "L:mb.a(ZB)C#2",
+      "renamedSymbol": "L:mb.decodeCp1252Byte(ZB)C#2",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -114576,7 +114760,7 @@
     },
     {
       "symbol": "L:mb.a(ZB)C#3",
-      "renamedSymbol": "L:mb.a(ZB)C#3",
+      "renamedSymbol": "L:mb.decodeCp1252Byte(ZB)C#3",
       "originalName": "var2Lifetime2",
       "renamedName": "var2Lifetime2",
       "declaration": {
@@ -114587,7 +114771,7 @@
     },
     {
       "symbol": "L:mb.a(ZB)C#4",
-      "renamedSymbol": "L:mb.a(ZB)C#4",
+      "renamedSymbol": "L:mb.decodeCp1252Byte(ZB)C#4",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -137544,7 +137728,7 @@
     },
     {
       "symbol": "L:ph.a(BI[BI)Ljava/lang/String;#0",
-      "renamedSymbol": "L:ph.a(BI[BI)Ljava/lang/String;#0",
+      "renamedSymbol": "L:ph.decodeCp1252String(BI[BI)Ljava/lang/String;#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -137555,7 +137739,7 @@
     },
     {
       "symbol": "L:ph.a(BI[BI)Ljava/lang/String;#1",
-      "renamedSymbol": "L:ph.a(BI[BI)Ljava/lang/String;#1",
+      "renamedSymbol": "L:ph.decodeCp1252String(BI[BI)Ljava/lang/String;#1",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -137566,7 +137750,7 @@
     },
     {
       "symbol": "L:ph.a(BI[BI)Ljava/lang/String;#10",
-      "renamedSymbol": "L:ph.a(BI[BI)Ljava/lang/String;#10",
+      "renamedSymbol": "L:ph.decodeCp1252String(BI[BI)Ljava/lang/String;#10",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -137577,7 +137761,7 @@
     },
     {
       "symbol": "L:ph.a(BI[BI)Ljava/lang/String;#11",
-      "renamedSymbol": "L:ph.a(BI[BI)Ljava/lang/String;#11",
+      "renamedSymbol": "L:ph.decodeCp1252String(BI[BI)Ljava/lang/String;#11",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -137588,7 +137772,7 @@
     },
     {
       "symbol": "L:ph.a(BI[BI)Ljava/lang/String;#12",
-      "renamedSymbol": "L:ph.a(BI[BI)Ljava/lang/String;#12",
+      "renamedSymbol": "L:ph.decodeCp1252String(BI[BI)Ljava/lang/String;#12",
       "originalName": "stackIn_19_1",
       "renamedName": "stackIn_19_1",
       "declaration": {
@@ -137599,7 +137783,7 @@
     },
     {
       "symbol": "L:ph.a(BI[BI)Ljava/lang/String;#13",
-      "renamedSymbol": "L:ph.a(BI[BI)Ljava/lang/String;#13",
+      "renamedSymbol": "L:ph.decodeCp1252String(BI[BI)Ljava/lang/String;#13",
       "originalName": "stackIn_20_2",
       "renamedName": "stackIn_20_2",
       "declaration": {
@@ -137610,7 +137794,7 @@
     },
     {
       "symbol": "L:ph.a(BI[BI)Ljava/lang/String;#14",
-      "renamedSymbol": "L:ph.a(BI[BI)Ljava/lang/String;#14",
+      "renamedSymbol": "L:ph.decodeCp1252String(BI[BI)Ljava/lang/String;#14",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -137621,7 +137805,7 @@
     },
     {
       "symbol": "L:ph.a(BI[BI)Ljava/lang/String;#15",
-      "renamedSymbol": "L:ph.a(BI[BI)Ljava/lang/String;#15",
+      "renamedSymbol": "L:ph.decodeCp1252String(BI[BI)Ljava/lang/String;#15",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -137632,7 +137816,7 @@
     },
     {
       "symbol": "L:ph.a(BI[BI)Ljava/lang/String;#16",
-      "renamedSymbol": "L:ph.a(BI[BI)Ljava/lang/String;#16",
+      "renamedSymbol": "L:ph.decodeCp1252String(BI[BI)Ljava/lang/String;#16",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -137643,7 +137827,7 @@
     },
     {
       "symbol": "L:ph.a(BI[BI)Ljava/lang/String;#2",
-      "renamedSymbol": "L:ph.a(BI[BI)Ljava/lang/String;#2",
+      "renamedSymbol": "L:ph.decodeCp1252String(BI[BI)Ljava/lang/String;#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -137654,7 +137838,7 @@
     },
     {
       "symbol": "L:ph.a(BI[BI)Ljava/lang/String;#3",
-      "renamedSymbol": "L:ph.a(BI[BI)Ljava/lang/String;#3",
+      "renamedSymbol": "L:ph.decodeCp1252String(BI[BI)Ljava/lang/String;#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -137665,7 +137849,7 @@
     },
     {
       "symbol": "L:ph.a(BI[BI)Ljava/lang/String;#4",
-      "renamedSymbol": "L:ph.a(BI[BI)Ljava/lang/String;#4",
+      "renamedSymbol": "L:ph.decodeCp1252String(BI[BI)Ljava/lang/String;#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -137676,7 +137860,7 @@
     },
     {
       "symbol": "L:ph.a(BI[BI)Ljava/lang/String;#5",
-      "renamedSymbol": "L:ph.a(BI[BI)Ljava/lang/String;#5",
+      "renamedSymbol": "L:ph.decodeCp1252String(BI[BI)Ljava/lang/String;#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -137687,7 +137871,7 @@
     },
     {
       "symbol": "L:ph.a(BI[BI)Ljava/lang/String;#6",
-      "renamedSymbol": "L:ph.a(BI[BI)Ljava/lang/String;#6",
+      "renamedSymbol": "L:ph.decodeCp1252String(BI[BI)Ljava/lang/String;#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -137698,7 +137882,7 @@
     },
     {
       "symbol": "L:ph.a(BI[BI)Ljava/lang/String;#7",
-      "renamedSymbol": "L:ph.a(BI[BI)Ljava/lang/String;#7",
+      "renamedSymbol": "L:ph.decodeCp1252String(BI[BI)Ljava/lang/String;#7",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -137709,7 +137893,7 @@
     },
     {
       "symbol": "L:ph.a(BI[BI)Ljava/lang/String;#8",
-      "renamedSymbol": "L:ph.a(BI[BI)Ljava/lang/String;#8",
+      "renamedSymbol": "L:ph.decodeCp1252String(BI[BI)Ljava/lang/String;#8",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -137720,7 +137904,7 @@
     },
     {
       "symbol": "L:ph.a(BI[BI)Ljava/lang/String;#9",
-      "renamedSymbol": "L:ph.a(BI[BI)Ljava/lang/String;#9",
+      "renamedSymbol": "L:ph.decodeCp1252String(BI[BI)Ljava/lang/String;#9",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -143385,7 +143569,7 @@
     },
     {
       "symbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#0",
-      "renamedSymbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#0",
+      "renamedSymbol": "L:r.encodeCp1252Subsequence(Ljava/lang/CharSequence;[BIIII)I#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -143396,7 +143580,7 @@
     },
     {
       "symbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#1",
-      "renamedSymbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#1",
+      "renamedSymbol": "L:r.encodeCp1252Subsequence(Ljava/lang/CharSequence;[BIIII)I#1",
       "originalName": "stackIn_69_0",
       "renamedName": "stackIn_69_0",
       "declaration": {
@@ -143407,7 +143591,7 @@
     },
     {
       "symbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#10",
-      "renamedSymbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#10",
+      "renamedSymbol": "L:r.encodeCp1252Subsequence(Ljava/lang/CharSequence;[BIIII)I#10",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -143418,7 +143602,7 @@
     },
     {
       "symbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#11",
-      "renamedSymbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#11",
+      "renamedSymbol": "L:r.encodeCp1252Subsequence(Ljava/lang/CharSequence;[BIIII)I#11",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -143429,7 +143613,7 @@
     },
     {
       "symbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#12",
-      "renamedSymbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#12",
+      "renamedSymbol": "L:r.encodeCp1252Subsequence(Ljava/lang/CharSequence;[BIIII)I#12",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -143440,7 +143624,7 @@
     },
     {
       "symbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#2",
-      "renamedSymbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#2",
+      "renamedSymbol": "L:r.encodeCp1252Subsequence(Ljava/lang/CharSequence;[BIIII)I#2",
       "originalName": "stackIn_72_0",
       "renamedName": "stackIn_72_0",
       "declaration": {
@@ -143451,7 +143635,7 @@
     },
     {
       "symbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#3",
-      "renamedSymbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#3",
+      "renamedSymbol": "L:r.encodeCp1252Subsequence(Ljava/lang/CharSequence;[BIIII)I#3",
       "originalName": "stackIn_72_1",
       "renamedName": "stackIn_72_1",
       "declaration": {
@@ -143462,7 +143646,7 @@
     },
     {
       "symbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#4",
-      "renamedSymbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#4",
+      "renamedSymbol": "L:r.encodeCp1252Subsequence(Ljava/lang/CharSequence;[BIIII)I#4",
       "originalName": "stackIn_73_2",
       "renamedName": "stackIn_73_2",
       "declaration": {
@@ -143473,7 +143657,7 @@
     },
     {
       "symbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#5",
-      "renamedSymbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#5",
+      "renamedSymbol": "L:r.encodeCp1252Subsequence(Ljava/lang/CharSequence;[BIIII)I#5",
       "originalName": "stackIn_75_1",
       "renamedName": "stackIn_75_1",
       "declaration": {
@@ -143484,7 +143668,7 @@
     },
     {
       "symbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#6",
-      "renamedSymbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#6",
+      "renamedSymbol": "L:r.encodeCp1252Subsequence(Ljava/lang/CharSequence;[BIIII)I#6",
       "originalName": "stackIn_76_2",
       "renamedName": "stackIn_76_2",
       "declaration": {
@@ -143495,7 +143679,7 @@
     },
     {
       "symbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#7",
-      "renamedSymbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#7",
+      "renamedSymbol": "L:r.encodeCp1252Subsequence(Ljava/lang/CharSequence;[BIIII)I#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -143506,7 +143690,7 @@
     },
     {
       "symbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#8",
-      "renamedSymbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#8",
+      "renamedSymbol": "L:r.encodeCp1252Subsequence(Ljava/lang/CharSequence;[BIIII)I#8",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -143517,7 +143701,7 @@
     },
     {
       "symbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#9",
-      "renamedSymbol": "L:r.a(Ljava/lang/CharSequence;[BIIII)I#9",
+      "renamedSymbol": "L:r.encodeCp1252Subsequence(Ljava/lang/CharSequence;[BIIII)I#9",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -178673,9 +178857,9 @@
     },
     {
       "symbol": "M:bj.a(B)Z",
-      "renamedSymbol": "M:ResourceArchive.a(B)Z",
+      "renamedSymbol": "M:ResourceArchive.ensureIndexLoaded(B)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "ensureIndexLoaded",
       "declaration": {
         "file": "bj.java",
         "start": 348,
@@ -178695,9 +178879,9 @@
     },
     {
       "symbol": "M:bj.a(II)Z",
-      "renamedSymbol": "M:ResourceArchive.a(II)Z",
+      "renamedSymbol": "M:ResourceArchive.validateGroupId(II)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "validateGroupId",
       "declaration": {
         "file": "bj.java",
         "start": 1153,
@@ -178706,9 +178890,9 @@
     },
     {
       "symbol": "M:bj.a(III)Z",
-      "renamedSymbol": "M:ResourceArchive.a(III)Z",
+      "renamedSymbol": "M:ResourceArchive.tryLoadFile(III)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "tryLoadFile",
       "declaration": {
         "file": "bj.java",
         "start": 3655,
@@ -178717,9 +178901,9 @@
     },
     {
       "symbol": "M:bj.a(III[I)Z",
-      "renamedSymbol": "M:ResourceArchive.a(III[I)Z",
+      "renamedSymbol": "M:ResourceArchive.unpackGroupFiles(III[I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "unpackGroupFiles",
       "declaration": {
         "file": "bj.java",
         "start": 5655,
@@ -178739,9 +178923,9 @@
     },
     {
       "symbol": "M:bj.a(ILjava/lang/String;)I",
-      "renamedSymbol": "M:ResourceArchive.a(ILjava/lang/String;)I",
+      "renamedSymbol": "M:ResourceArchive.getGroupIdByName(ILjava/lang/String;)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getGroupIdByName",
       "declaration": {
         "file": "bj.java",
         "start": 1564,
@@ -178761,9 +178945,9 @@
     },
     {
       "symbol": "M:bj.a(IZ)I",
-      "renamedSymbol": "M:ResourceArchive.a(IZ)I",
+      "renamedSymbol": "M:ResourceArchive.getGroupLoadPercent(IZ)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getGroupLoadPercent",
       "declaration": {
         "file": "bj.java",
         "start": 28768,
@@ -178772,9 +178956,9 @@
     },
     {
       "symbol": "M:bj.a(Ljava/lang/String;I)I",
-      "renamedSymbol": "M:ResourceArchive.a(Ljava/lang/String;I)I",
+      "renamedSymbol": "M:ResourceArchive.getGroupLoadPercentByName(Ljava/lang/String;I)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getGroupLoadPercentByName",
       "declaration": {
         "file": "bj.java",
         "start": 24711,
@@ -178783,9 +178967,9 @@
     },
     {
       "symbol": "M:bj.a(Ljava/lang/String;II)I",
-      "renamedSymbol": "M:ResourceArchive.a(Ljava/lang/String;II)I",
+      "renamedSymbol": "M:ResourceArchive.getFileIdByName(Ljava/lang/String;II)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getFileIdByName",
       "declaration": {
         "file": "bj.java",
         "start": 17781,
@@ -178794,9 +178978,9 @@
     },
     {
       "symbol": "M:bj.a(Ljava/lang/String;ILjava/lang/String;)[B",
-      "renamedSymbol": "M:ResourceArchive.a(Ljava/lang/String;ILjava/lang/String;)[B",
+      "renamedSymbol": "M:ResourceArchive.getFileByName(Ljava/lang/String;ILjava/lang/String;)[B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getFileByName",
       "declaration": {
         "file": "bj.java",
         "start": 26185,
@@ -178816,9 +179000,9 @@
     },
     {
       "symbol": "M:bj.a(ZII)[B",
-      "renamedSymbol": "M:ResourceArchive.a(ZII)[B",
+      "renamedSymbol": "M:ResourceArchive.getFile(ZII)[B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getFile",
       "declaration": {
         "file": "bj.java",
         "start": 19738,
@@ -178838,9 +179022,9 @@
     },
     {
       "symbol": "M:bj.a([IIII)[B",
-      "renamedSymbol": "M:ResourceArchive.a([IIII)[B",
+      "renamedSymbol": "M:ResourceArchive.getFileWithKeys([IIII)[B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getFileWithKeys",
       "declaration": {
         "file": "bj.java",
         "start": 15345,
@@ -178860,9 +179044,9 @@
     },
     {
       "symbol": "M:bj.b(I)Z",
-      "renamedSymbol": "M:ResourceArchive.b(I)Z",
+      "renamedSymbol": "M:ResourceArchive.tryLoadAllGroups(I)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "tryLoadAllGroups",
       "declaration": {
         "file": "bj.java",
         "start": 22595,
@@ -178882,9 +179066,9 @@
     },
     {
       "symbol": "M:bj.b(III)Z",
-      "renamedSymbol": "M:ResourceArchive.b(III)Z",
+      "renamedSymbol": "M:ResourceArchive.validateFileId(III)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "validateFileId",
       "declaration": {
         "file": "bj.java",
         "start": 22130,
@@ -178926,9 +179110,9 @@
     },
     {
       "symbol": "M:bj.c(II)V",
-      "renamedSymbol": "M:ResourceArchive.c(II)V",
+      "renamedSymbol": "M:ResourceArchive.loadPackedGroup(II)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "loadPackedGroup",
       "declaration": {
         "file": "bj.java",
         "start": 814,
@@ -178937,9 +179121,9 @@
     },
     {
       "symbol": "M:bj.d(II)Z",
-      "renamedSymbol": "M:ResourceArchive.d(II)Z",
+      "renamedSymbol": "M:ResourceArchive.tryLoadGroup(II)Z",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "tryLoadGroup",
       "declaration": {
         "file": "bj.java",
         "start": 19405,
@@ -179223,9 +179407,9 @@
     },
     {
       "symbol": "M:bn.a(IC)Z",
-      "renamedSymbol": "M:bn.a(IC)Z",
+      "renamedSymbol": "M:bn.isSupportedCp1252KeyCharacter(IC)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isSupportedCp1252KeyCharacter",
       "declaration": {
         "file": "bn.java",
         "start": 640,
@@ -186703,9 +186887,9 @@
     },
     {
       "symbol": "M:ic.a(ZLjava/lang/CharSequence;)[B",
-      "renamedSymbol": "M:ic.a(ZLjava/lang/CharSequence;)[B",
+      "renamedSymbol": "M:ic.encodeCp1252Bytes(ZLjava/lang/CharSequence;)[B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "encodeCp1252Bytes",
       "declaration": {
         "file": "ic.java",
         "start": 13037,
@@ -187033,9 +187217,9 @@
     },
     {
       "symbol": "M:ij.a(BI)I",
-      "renamedSymbol": "M:ij.a(BI)I",
+      "renamedSymbol": "M:ij.getGroupRequestProgressPercent(BI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getGroupRequestProgressPercent",
       "declaration": {
         "file": "ij.java",
         "start": 19989,
@@ -189563,9 +189747,9 @@
     },
     {
       "symbol": "M:kj.a(CI)B",
-      "renamedSymbol": "M:kj.a(CI)B",
+      "renamedSymbol": "M:kj.encodeCp1252Character(CI)B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "encodeCp1252Character",
       "declaration": {
         "file": "kj.java",
         "start": 2863,
@@ -191818,9 +192002,9 @@
     },
     {
       "symbol": "M:mb.a(ZB)C",
-      "renamedSymbol": "M:mb.a(ZB)C",
+      "renamedSymbol": "M:mb.decodeCp1252Byte(ZB)C",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "decodeCp1252Byte",
       "declaration": {
         "file": "mb.java",
         "start": 176,
@@ -196108,9 +196292,9 @@
     },
     {
       "symbol": "M:ph.a(BI[BI)Ljava/lang/String;",
-      "renamedSymbol": "M:ph.a(BI[BI)Ljava/lang/String;",
+      "renamedSymbol": "M:ph.decodeCp1252String(BI[BI)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "decodeCp1252String",
       "declaration": {
         "file": "ph.java",
         "start": 551,
@@ -197263,9 +197447,9 @@
     },
     {
       "symbol": "M:r.a(Ljava/lang/CharSequence;[BIIII)I",
-      "renamedSymbol": "M:r.a(Ljava/lang/CharSequence;[BIIII)I",
+      "renamedSymbol": "M:r.encodeCp1252Subsequence(Ljava/lang/CharSequence;[BIIII)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "encodeCp1252Subsequence",
       "declaration": {
         "file": "r.java",
         "start": 637,
@@ -201894,9 +202078,9 @@
     },
     {
       "symbol": "M:vb.a(BI)I",
-      "renamedSymbol": "M:ArchiveProvider.a(BI)I",
+      "renamedSymbol": "M:ArchiveProvider.getGroupRequestProgressPercent(BI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getGroupRequestProgressPercent",
       "declaration": {
         "file": "vb.java",
         "start": 507,
@@ -207130,7 +207314,7 @@
     },
     {
       "symbol": "P:bj.a(B)Z#0",
-      "renamedSymbol": "P:ResourceArchive.a(B)Z#0",
+      "renamedSymbol": "P:ResourceArchive.ensureIndexLoaded(B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -207152,7 +207336,7 @@
     },
     {
       "symbol": "P:bj.a(II)Z#0",
-      "renamedSymbol": "P:ResourceArchive.a(II)Z#0",
+      "renamedSymbol": "P:ResourceArchive.validateGroupId(II)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -207163,7 +207347,7 @@
     },
     {
       "symbol": "P:bj.a(II)Z#1",
-      "renamedSymbol": "P:ResourceArchive.a(II)Z#1",
+      "renamedSymbol": "P:ResourceArchive.validateGroupId(II)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -207174,7 +207358,7 @@
     },
     {
       "symbol": "P:bj.a(III)Z#0",
-      "renamedSymbol": "P:ResourceArchive.a(III)Z#0",
+      "renamedSymbol": "P:ResourceArchive.tryLoadFile(III)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -207185,7 +207369,7 @@
     },
     {
       "symbol": "P:bj.a(III)Z#1",
-      "renamedSymbol": "P:ResourceArchive.a(III)Z#1",
+      "renamedSymbol": "P:ResourceArchive.tryLoadFile(III)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -207196,7 +207380,7 @@
     },
     {
       "symbol": "P:bj.a(III)Z#2",
-      "renamedSymbol": "P:ResourceArchive.a(III)Z#2",
+      "renamedSymbol": "P:ResourceArchive.tryLoadFile(III)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -207207,7 +207391,7 @@
     },
     {
       "symbol": "P:bj.a(III[I)Z#0",
-      "renamedSymbol": "P:ResourceArchive.a(III[I)Z#0",
+      "renamedSymbol": "P:ResourceArchive.unpackGroupFiles(III[I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -207218,7 +207402,7 @@
     },
     {
       "symbol": "P:bj.a(III[I)Z#1",
-      "renamedSymbol": "P:ResourceArchive.a(III[I)Z#1",
+      "renamedSymbol": "P:ResourceArchive.unpackGroupFiles(III[I)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -207229,7 +207413,7 @@
     },
     {
       "symbol": "P:bj.a(III[I)Z#2",
-      "renamedSymbol": "P:ResourceArchive.a(III[I)Z#2",
+      "renamedSymbol": "P:ResourceArchive.unpackGroupFiles(III[I)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -207240,7 +207424,7 @@
     },
     {
       "symbol": "P:bj.a(III[I)Z#3",
-      "renamedSymbol": "P:ResourceArchive.a(III[I)Z#3",
+      "renamedSymbol": "P:ResourceArchive.unpackGroupFiles(III[I)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -207295,7 +207479,7 @@
     },
     {
       "symbol": "P:bj.a(ILjava/lang/String;)I#0",
-      "renamedSymbol": "P:ResourceArchive.a(ILjava/lang/String;)I#0",
+      "renamedSymbol": "P:ResourceArchive.getGroupIdByName(ILjava/lang/String;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -207306,7 +207490,7 @@
     },
     {
       "symbol": "P:bj.a(ILjava/lang/String;)I#1",
-      "renamedSymbol": "P:ResourceArchive.a(ILjava/lang/String;)I#1",
+      "renamedSymbol": "P:ResourceArchive.getGroupIdByName(ILjava/lang/String;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -207339,7 +207523,7 @@
     },
     {
       "symbol": "P:bj.a(IZ)I#0",
-      "renamedSymbol": "P:ResourceArchive.a(IZ)I#0",
+      "renamedSymbol": "P:ResourceArchive.getGroupLoadPercent(IZ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -207350,7 +207534,7 @@
     },
     {
       "symbol": "P:bj.a(IZ)I#1",
-      "renamedSymbol": "P:ResourceArchive.a(IZ)I#1",
+      "renamedSymbol": "P:ResourceArchive.getGroupLoadPercent(IZ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -207361,7 +207545,7 @@
     },
     {
       "symbol": "P:bj.a(Ljava/lang/String;I)I#0",
-      "renamedSymbol": "P:ResourceArchive.a(Ljava/lang/String;I)I#0",
+      "renamedSymbol": "P:ResourceArchive.getGroupLoadPercentByName(Ljava/lang/String;I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -207372,7 +207556,7 @@
     },
     {
       "symbol": "P:bj.a(Ljava/lang/String;I)I#1",
-      "renamedSymbol": "P:ResourceArchive.a(Ljava/lang/String;I)I#1",
+      "renamedSymbol": "P:ResourceArchive.getGroupLoadPercentByName(Ljava/lang/String;I)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -207383,7 +207567,7 @@
     },
     {
       "symbol": "P:bj.a(Ljava/lang/String;II)I#0",
-      "renamedSymbol": "P:ResourceArchive.a(Ljava/lang/String;II)I#0",
+      "renamedSymbol": "P:ResourceArchive.getFileIdByName(Ljava/lang/String;II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -207394,7 +207578,7 @@
     },
     {
       "symbol": "P:bj.a(Ljava/lang/String;II)I#1",
-      "renamedSymbol": "P:ResourceArchive.a(Ljava/lang/String;II)I#1",
+      "renamedSymbol": "P:ResourceArchive.getFileIdByName(Ljava/lang/String;II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -207405,7 +207589,7 @@
     },
     {
       "symbol": "P:bj.a(Ljava/lang/String;II)I#2",
-      "renamedSymbol": "P:ResourceArchive.a(Ljava/lang/String;II)I#2",
+      "renamedSymbol": "P:ResourceArchive.getFileIdByName(Ljava/lang/String;II)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -207416,7 +207600,7 @@
     },
     {
       "symbol": "P:bj.a(Ljava/lang/String;ILjava/lang/String;)[B#0",
-      "renamedSymbol": "P:ResourceArchive.a(Ljava/lang/String;ILjava/lang/String;)[B#0",
+      "renamedSymbol": "P:ResourceArchive.getFileByName(Ljava/lang/String;ILjava/lang/String;)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -207427,7 +207611,7 @@
     },
     {
       "symbol": "P:bj.a(Ljava/lang/String;ILjava/lang/String;)[B#1",
-      "renamedSymbol": "P:ResourceArchive.a(Ljava/lang/String;ILjava/lang/String;)[B#1",
+      "renamedSymbol": "P:ResourceArchive.getFileByName(Ljava/lang/String;ILjava/lang/String;)[B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -207438,7 +207622,7 @@
     },
     {
       "symbol": "P:bj.a(Ljava/lang/String;ILjava/lang/String;)[B#2",
-      "renamedSymbol": "P:ResourceArchive.a(Ljava/lang/String;ILjava/lang/String;)[B#2",
+      "renamedSymbol": "P:ResourceArchive.getFileByName(Ljava/lang/String;ILjava/lang/String;)[B#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -207482,7 +207666,7 @@
     },
     {
       "symbol": "P:bj.a(ZII)[B#0",
-      "renamedSymbol": "P:ResourceArchive.a(ZII)[B#0",
+      "renamedSymbol": "P:ResourceArchive.getFile(ZII)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -207493,7 +207677,7 @@
     },
     {
       "symbol": "P:bj.a(ZII)[B#1",
-      "renamedSymbol": "P:ResourceArchive.a(ZII)[B#1",
+      "renamedSymbol": "P:ResourceArchive.getFile(ZII)[B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -207504,7 +207688,7 @@
     },
     {
       "symbol": "P:bj.a(ZII)[B#2",
-      "renamedSymbol": "P:ResourceArchive.a(ZII)[B#2",
+      "renamedSymbol": "P:ResourceArchive.getFile(ZII)[B#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -207537,7 +207721,7 @@
     },
     {
       "symbol": "P:bj.a([IIII)[B#0",
-      "renamedSymbol": "P:ResourceArchive.a([IIII)[B#0",
+      "renamedSymbol": "P:ResourceArchive.getFileWithKeys([IIII)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -207548,7 +207732,7 @@
     },
     {
       "symbol": "P:bj.a([IIII)[B#1",
-      "renamedSymbol": "P:ResourceArchive.a([IIII)[B#1",
+      "renamedSymbol": "P:ResourceArchive.getFileWithKeys([IIII)[B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -207559,7 +207743,7 @@
     },
     {
       "symbol": "P:bj.a([IIII)[B#2",
-      "renamedSymbol": "P:ResourceArchive.a([IIII)[B#2",
+      "renamedSymbol": "P:ResourceArchive.getFileWithKeys([IIII)[B#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -207570,7 +207754,7 @@
     },
     {
       "symbol": "P:bj.a([IIII)[B#3",
-      "renamedSymbol": "P:ResourceArchive.a([IIII)[B#3",
+      "renamedSymbol": "P:ResourceArchive.getFileWithKeys([IIII)[B#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -207592,7 +207776,7 @@
     },
     {
       "symbol": "P:bj.b(I)Z#0",
-      "renamedSymbol": "P:ResourceArchive.b(I)Z#0",
+      "renamedSymbol": "P:ResourceArchive.tryLoadAllGroups(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -207625,7 +207809,7 @@
     },
     {
       "symbol": "P:bj.b(III)Z#0",
-      "renamedSymbol": "P:ResourceArchive.b(III)Z#0",
+      "renamedSymbol": "P:ResourceArchive.validateFileId(III)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -207636,7 +207820,7 @@
     },
     {
       "symbol": "P:bj.b(III)Z#1",
-      "renamedSymbol": "P:ResourceArchive.b(III)Z#1",
+      "renamedSymbol": "P:ResourceArchive.validateFileId(III)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -207647,7 +207831,7 @@
     },
     {
       "symbol": "P:bj.b(III)Z#2",
-      "renamedSymbol": "P:ResourceArchive.b(III)Z#2",
+      "renamedSymbol": "P:ResourceArchive.validateFileId(III)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -207702,7 +207886,7 @@
     },
     {
       "symbol": "P:bj.c(II)V#0",
-      "renamedSymbol": "P:ResourceArchive.c(II)V#0",
+      "renamedSymbol": "P:ResourceArchive.loadPackedGroup(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -207713,7 +207897,7 @@
     },
     {
       "symbol": "P:bj.c(II)V#1",
-      "renamedSymbol": "P:ResourceArchive.c(II)V#1",
+      "renamedSymbol": "P:ResourceArchive.loadPackedGroup(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -207724,7 +207908,7 @@
     },
     {
       "symbol": "P:bj.d(II)Z#0",
-      "renamedSymbol": "P:ResourceArchive.d(II)Z#0",
+      "renamedSymbol": "P:ResourceArchive.tryLoadGroup(II)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -207735,7 +207919,7 @@
     },
     {
       "symbol": "P:bj.d(II)Z#1",
-      "renamedSymbol": "P:ResourceArchive.d(II)Z#1",
+      "renamedSymbol": "P:ResourceArchive.tryLoadGroup(II)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -208395,7 +208579,7 @@
     },
     {
       "symbol": "P:bn.a(IC)Z#0",
-      "renamedSymbol": "P:bn.a(IC)Z#0",
+      "renamedSymbol": "P:bn.isSupportedCp1252KeyCharacter(IC)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -208406,7 +208590,7 @@
     },
     {
       "symbol": "P:bn.a(IC)Z#1",
-      "renamedSymbol": "P:bn.a(IC)Z#1",
+      "renamedSymbol": "P:bn.isSupportedCp1252KeyCharacter(IC)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -226017,7 +226201,7 @@
     },
     {
       "symbol": "P:ic.a(ZLjava/lang/CharSequence;)[B#0",
-      "renamedSymbol": "P:ic.a(ZLjava/lang/CharSequence;)[B#0",
+      "renamedSymbol": "P:ic.encodeCp1252Bytes(ZLjava/lang/CharSequence;)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -226028,7 +226212,7 @@
     },
     {
       "symbol": "P:ic.a(ZLjava/lang/CharSequence;)[B#1",
-      "renamedSymbol": "P:ic.a(ZLjava/lang/CharSequence;)[B#1",
+      "renamedSymbol": "P:ic.encodeCp1252Bytes(ZLjava/lang/CharSequence;)[B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -227007,7 +227191,7 @@
     },
     {
       "symbol": "P:ij.a(BI)I#0",
-      "renamedSymbol": "P:ij.a(BI)I#0",
+      "renamedSymbol": "P:ij.getGroupRequestProgressPercent(BI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -227018,7 +227202,7 @@
     },
     {
       "symbol": "P:ij.a(BI)I#1",
-      "renamedSymbol": "P:ij.a(BI)I#1",
+      "renamedSymbol": "P:ij.getGroupRequestProgressPercent(BI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -232452,7 +232636,7 @@
     },
     {
       "symbol": "P:kj.a(CI)B#0",
-      "renamedSymbol": "P:kj.a(CI)B#0",
+      "renamedSymbol": "P:kj.encodeCp1252Character(CI)B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -232463,7 +232647,7 @@
     },
     {
       "symbol": "P:kj.a(CI)B#1",
-      "renamedSymbol": "P:kj.a(CI)B#1",
+      "renamedSymbol": "P:kj.encodeCp1252Character(CI)B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -236984,7 +237168,7 @@
     },
     {
       "symbol": "P:mb.a(ZB)C#0",
-      "renamedSymbol": "P:mb.a(ZB)C#0",
+      "renamedSymbol": "P:mb.decodeCp1252Byte(ZB)C#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -236995,7 +237179,7 @@
     },
     {
       "symbol": "P:mb.a(ZB)C#1",
-      "renamedSymbol": "P:mb.a(ZB)C#1",
+      "renamedSymbol": "P:mb.decodeCp1252Byte(ZB)C#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -247731,7 +247915,7 @@
     },
     {
       "symbol": "P:ph.a(BI[BI)Ljava/lang/String;#0",
-      "renamedSymbol": "P:ph.a(BI[BI)Ljava/lang/String;#0",
+      "renamedSymbol": "P:ph.decodeCp1252String(BI[BI)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -247742,7 +247926,7 @@
     },
     {
       "symbol": "P:ph.a(BI[BI)Ljava/lang/String;#1",
-      "renamedSymbol": "P:ph.a(BI[BI)Ljava/lang/String;#1",
+      "renamedSymbol": "P:ph.decodeCp1252String(BI[BI)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -247753,7 +247937,7 @@
     },
     {
       "symbol": "P:ph.a(BI[BI)Ljava/lang/String;#2",
-      "renamedSymbol": "P:ph.a(BI[BI)Ljava/lang/String;#2",
+      "renamedSymbol": "P:ph.decodeCp1252String(BI[BI)Ljava/lang/String;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -247764,7 +247948,7 @@
     },
     {
       "symbol": "P:ph.a(BI[BI)Ljava/lang/String;#3",
-      "renamedSymbol": "P:ph.a(BI[BI)Ljava/lang/String;#3",
+      "renamedSymbol": "P:ph.decodeCp1252String(BI[BI)Ljava/lang/String;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -250437,7 +250621,7 @@
     },
     {
       "symbol": "P:r.a(Ljava/lang/CharSequence;[BIIII)I#0",
-      "renamedSymbol": "P:r.a(Ljava/lang/CharSequence;[BIIII)I#0",
+      "renamedSymbol": "P:r.encodeCp1252Subsequence(Ljava/lang/CharSequence;[BIIII)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -250448,7 +250632,7 @@
     },
     {
       "symbol": "P:r.a(Ljava/lang/CharSequence;[BIIII)I#1",
-      "renamedSymbol": "P:r.a(Ljava/lang/CharSequence;[BIIII)I#1",
+      "renamedSymbol": "P:r.encodeCp1252Subsequence(Ljava/lang/CharSequence;[BIIII)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -250459,7 +250643,7 @@
     },
     {
       "symbol": "P:r.a(Ljava/lang/CharSequence;[BIIII)I#2",
-      "renamedSymbol": "P:r.a(Ljava/lang/CharSequence;[BIIII)I#2",
+      "renamedSymbol": "P:r.encodeCp1252Subsequence(Ljava/lang/CharSequence;[BIIII)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -250470,7 +250654,7 @@
     },
     {
       "symbol": "P:r.a(Ljava/lang/CharSequence;[BIIII)I#3",
-      "renamedSymbol": "P:r.a(Ljava/lang/CharSequence;[BIIII)I#3",
+      "renamedSymbol": "P:r.encodeCp1252Subsequence(Ljava/lang/CharSequence;[BIIII)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -250481,7 +250665,7 @@
     },
     {
       "symbol": "P:r.a(Ljava/lang/CharSequence;[BIIII)I#4",
-      "renamedSymbol": "P:r.a(Ljava/lang/CharSequence;[BIIII)I#4",
+      "renamedSymbol": "P:r.encodeCp1252Subsequence(Ljava/lang/CharSequence;[BIIII)I#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -250492,7 +250676,7 @@
     },
     {
       "symbol": "P:r.a(Ljava/lang/CharSequence;[BIIII)I#5",
-      "renamedSymbol": "P:r.a(Ljava/lang/CharSequence;[BIIII)I#5",
+      "renamedSymbol": "P:r.encodeCp1252Subsequence(Ljava/lang/CharSequence;[BIIII)I#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -261690,7 +261874,7 @@
     },
     {
       "symbol": "P:vb.a(BI)I#0",
-      "renamedSymbol": "P:ArchiveProvider.a(BI)I#0",
+      "renamedSymbol": "P:ArchiveProvider.getGroupRequestProgressPercent(BI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -261701,7 +261885,7 @@
     },
     {
       "symbol": "P:vb.a(BI)I#1",
-      "renamedSymbol": "P:ArchiveProvider.a(BI)I#1",
+      "renamedSymbol": "P:ArchiveProvider.getGroupRequestProgressPercent(BI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -266424,7 +266608,7 @@
       "original": "MinerDisturbance.java",
       "renamed": "MinerDisturbance.java",
       "inputSha256": "4658ac9113fe2f4fb9901c9545f1c453e90e3e918a8266a9803dfa7b5853d04f",
-      "outputSha256": "856583e56f06e9d6f5957362e373d7f8f99dcc314ee675903cdcd45c5c7066ee",
+      "outputSha256": "f3547223b9825ab001db478ffc794917676e0e51424f096562d05e5de86ab6f8",
       "edits": [
         {
           "start": 4839,
@@ -275712,6 +275896,118 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 241935,
+          "end": 241936,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 241975,
+          "end": 241976,
+          "symbol": "M:bj.b(I)Z",
+          "original": "b",
+          "renamed": "tryLoadAllGroups"
+        },
+        {
+          "start": 242011,
+          "end": 242012,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 242053,
+          "end": 242054,
+          "symbol": "M:bj.b(I)Z",
+          "original": "b",
+          "renamed": "tryLoadAllGroups"
+        },
+        {
+          "start": 242091,
+          "end": 242092,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 242134,
+          "end": 242135,
+          "symbol": "M:bj.b(I)Z",
+          "original": "b",
+          "renamed": "tryLoadAllGroups"
+        },
+        {
+          "start": 242174,
+          "end": 242175,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 242220,
+          "end": 242221,
+          "symbol": "M:bj.b(I)Z",
+          "original": "b",
+          "renamed": "tryLoadAllGroups"
+        },
+        {
+          "start": 242262,
+          "end": 242263,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 242360,
+          "end": 242361,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 242487,
+          "end": 242488,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 242776,
+          "end": 242777,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 242828,
+          "end": 242829,
+          "symbol": "M:bj.b(I)Z",
+          "original": "b",
+          "renamed": "tryLoadAllGroups"
+        },
+        {
+          "start": 242876,
+          "end": 242877,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 242991,
+          "end": 242992,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 243047,
+          "end": 243048,
+          "symbol": "M:bj.b(I)Z",
+          "original": "b",
+          "renamed": "tryLoadAllGroups"
+        },
+        {
           "start": 244323,
           "end": 244325,
           "symbol": "C:sb",
@@ -275719,11 +276015,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 244337,
+          "end": 244338,
+          "symbol": "M:bj.a(Ljava/lang/String;ILjava/lang/String;)[B",
+          "original": "a",
+          "renamed": "getFileByName"
+        },
+        {
           "start": 244402,
           "end": 244404,
           "symbol": "C:sb",
           "original": "sb",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 244416,
+          "end": 244417,
+          "symbol": "M:bj.a(Ljava/lang/String;ILjava/lang/String;)[B",
+          "original": "a",
+          "renamed": "getFileByName"
         },
         {
           "start": 244578,
@@ -275766,6 +276076,13 @@
           "symbol": "C:dc",
           "original": "dc",
           "renamed": "GameCanvas"
+        },
+        {
+          "start": 246911,
+          "end": 246912,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
         },
         {
           "start": 247632,
@@ -278411,7 +278728,7 @@
       "original": "b.java",
       "renamed": "b.java",
       "inputSha256": "4494f35c5a80499c781d668df00e838d6cc532d309d4efea19915f02a045e5ae",
-      "outputSha256": "5f8419f4df80f02cd8d3c99b20c0eb6d3c815736ad111cf6f7873385d641bf73",
+      "outputSha256": "0298421eea351a8d7292fee16689f32504560160c99c5f7a72395aa2e1448777",
       "edits": [
         {
           "start": 79,
@@ -278461,6 +278778,13 @@
           "symbol": "C:bj",
           "original": "bj",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 3573,
+          "end": 3574,
+          "symbol": "M:bj.a(ZII)[B",
+          "original": "a",
+          "renamed": "getFile"
         },
         {
           "start": 3726,
@@ -278638,11 +278962,32 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 10193,
+          "end": 10194,
+          "symbol": "M:bj.a(Ljava/lang/String;ILjava/lang/String;)[B",
+          "original": "a",
+          "renamed": "getFileByName"
+        },
+        {
           "start": 10773,
           "end": 10775,
           "symbol": "C:bj",
           "original": "bj",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 10902,
+          "end": 10903,
+          "symbol": "M:bj.a(III)Z",
+          "original": "a",
+          "renamed": "tryLoadFile"
+        },
+        {
+          "start": 10995,
+          "end": 10996,
+          "symbol": "M:bj.a(ZII)[B",
+          "original": "a",
+          "renamed": "getFile"
         },
         {
           "start": 14653,
@@ -278896,7 +279241,7 @@
       "original": "bb.java",
       "renamed": "bb.java",
       "inputSha256": "24a43a2144f79324b823be6def4fe9bfb6e0e8da42df494d3fa0df2f17789350",
-      "outputSha256": "3e8fe4684d8c6f34d500130788d5980b6e4e5355abd28745652d699243f6a699",
+      "outputSha256": "0a8a7ab9f4e655c2d02ade976c2dfa18a0510bf931eebb2d863c3abfbaa0080a",
       "edits": [
         {
           "start": 93,
@@ -278995,6 +279340,20 @@
           "symbol": "C:ea",
           "original": "ea",
           "renamed": "Sprite"
+        },
+        {
+          "start": 2821,
+          "end": 2822,
+          "symbol": "M:bj.a(ILjava/lang/String;)I",
+          "original": "a",
+          "renamed": "getGroupIdByName"
+        },
+        {
+          "start": 2861,
+          "end": 2862,
+          "symbol": "M:bj.a(Ljava/lang/String;II)I",
+          "original": "a",
+          "renamed": "getFileIdByName"
         },
         {
           "start": 2940,
@@ -279818,7 +280177,7 @@
       "original": "bh.java",
       "renamed": "bh.java",
       "inputSha256": "ea5a071c11a44d38ed2c9a0d622e6822e24f99b08dd49af4b249f5f7ed184ef4",
-      "outputSha256": "694f1d00451c85e3b8d29da76b19fc9ad2c65f069635b0a0d2bb2ecf423c49ee",
+      "outputSha256": "9c2b5bfd596371a01199b71c98b92906dd71bba1aa49b37e57f47ab946e13e66",
       "edits": [
         {
           "start": 1222,
@@ -279854,6 +280213,13 @@
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 5760,
+          "end": 5761,
+          "symbol": "M:ph.a(BI[BI)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "decodeCp1252String"
         },
         {
           "start": 6256,
@@ -280002,7 +280368,7 @@
       "original": "bj.java",
       "renamed": "ResourceArchive.java",
       "inputSha256": "fe6eca7a4add18629eac00b1dfdc019cfc1a8472a0c9cbfcb6a44bc330b19f25",
-      "outputSha256": "e60a574fd67ccee37ff8a522358ea88cd88c75eefa9d021fed193dd317f7de8a",
+      "outputSha256": "8a5ead7c4a7d525d73a59d7eab7af5deed1e2ed69f447880374f223fa8358ebc",
       "edits": [
         {
           "start": 50,
@@ -280033,11 +280399,39 @@
           "renamed": "AwtRasterBuffer"
         },
         {
+          "start": 348,
+          "end": 349,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 814,
+          "end": 815,
+          "symbol": "M:bj.c(II)V",
+          "original": "c",
+          "renamed": "loadPackedGroup"
+        },
+        {
           "start": 1045,
           "end": 1046,
           "symbol": "M:qh.a(BZ[B)Ljava/lang/Object;",
           "original": "a",
           "renamed": "storeBytes"
+        },
+        {
+          "start": 1153,
+          "end": 1154,
+          "symbol": "M:bj.a(II)Z",
+          "original": "a",
+          "renamed": "validateGroupId"
+        },
+        {
+          "start": 1199,
+          "end": 1200,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
         },
         {
           "start": 1425,
@@ -280047,6 +280441,27 @@
           "renamed": "ArchiveRequest"
         },
         {
+          "start": 1564,
+          "end": 1565,
+          "symbol": "M:bj.a(ILjava/lang/String;)I",
+          "original": "a",
+          "renamed": "getGroupIdByName"
+        },
+        {
+          "start": 1989,
+          "end": 1990,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 2307,
+          "end": 2308,
+          "symbol": "M:bj.a(II)Z",
+          "original": "a",
+          "renamed": "validateGroupId"
+        },
+        {
           "start": 2879,
           "end": 2880,
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
@@ -280054,11 +280469,81 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 3254,
+          "end": 3255,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 3374,
+          "end": 3375,
+          "symbol": "M:bj.a(ZII)[B",
+          "original": "a",
+          "renamed": "getFile"
+        },
+        {
+          "start": 3423,
+          "end": 3424,
+          "symbol": "M:bj.a(II)Z",
+          "original": "a",
+          "renamed": "validateGroupId"
+        },
+        {
+          "start": 3548,
+          "end": 3549,
+          "symbol": "M:bj.a(ZII)[B",
+          "original": "a",
+          "renamed": "getFile"
+        },
+        {
+          "start": 3655,
+          "end": 3656,
+          "symbol": "M:bj.a(III)Z",
+          "original": "a",
+          "renamed": "tryLoadFile"
+        },
+        {
+          "start": 3713,
+          "end": 3714,
+          "symbol": "M:bj.b(III)Z",
+          "original": "b",
+          "renamed": "validateFileId"
+        },
+        {
+          "start": 4075,
+          "end": 4076,
+          "symbol": "M:bj.c(II)V",
+          "original": "c",
+          "renamed": "loadPackedGroup"
+        },
+        {
+          "start": 4597,
+          "end": 4598,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 4890,
+          "end": 4891,
+          "symbol": "M:bj.a(ILjava/lang/String;)I",
+          "original": "a",
+          "renamed": "getGroupIdByName"
+        },
+        {
           "start": 5474,
           "end": 5475,
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 5655,
+          "end": 5656,
+          "symbol": "M:bj.a(III[I)Z",
+          "original": "a",
+          "renamed": "unpackGroupFiles"
         },
         {
           "start": 6781,
@@ -280080,6 +280565,13 @@
           "symbol": "C:sb",
           "original": "sb",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 7644,
+          "end": 7645,
+          "symbol": "M:bj.a(II)Z",
+          "original": "a",
+          "renamed": "validateGroupId"
         },
         {
           "start": 8836,
@@ -280229,6 +280721,48 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 15345,
+          "end": 15346,
+          "symbol": "M:bj.a([IIII)[B",
+          "original": "a",
+          "renamed": "getFileWithKeys"
+        },
+        {
+          "start": 15762,
+          "end": 15763,
+          "symbol": "M:bj.b(III)Z",
+          "original": "b",
+          "renamed": "validateFileId"
+        },
+        {
+          "start": 15952,
+          "end": 15953,
+          "symbol": "M:bj.a(III[I)Z",
+          "original": "a",
+          "renamed": "unpackGroupFiles"
+        },
+        {
+          "start": 16014,
+          "end": 16015,
+          "symbol": "M:bj.c(II)V",
+          "original": "c",
+          "renamed": "loadPackedGroup"
+        },
+        {
+          "start": 16055,
+          "end": 16056,
+          "symbol": "M:bj.a(III[I)Z",
+          "original": "a",
+          "renamed": "unpackGroupFiles"
+        },
+        {
+          "start": 16280,
+          "end": 16281,
+          "symbol": "M:bj.a(ILjava/lang/String;)I",
+          "original": "a",
+          "renamed": "getGroupIdByName"
+        },
+        {
           "start": 16494,
           "end": 16495,
           "symbol": "M:sc.a(ZZLjava/lang/Object;)[B",
@@ -280243,11 +280777,88 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 17781,
+          "end": 17782,
+          "symbol": "M:bj.a(Ljava/lang/String;II)I",
+          "original": "a",
+          "renamed": "getFileIdByName"
+        },
+        {
+          "start": 18227,
+          "end": 18228,
+          "symbol": "M:bj.a(II)Z",
+          "original": "a",
+          "renamed": "validateGroupId"
+        },
+        {
+          "start": 18584,
+          "end": 18585,
+          "symbol": "M:bj.b(III)Z",
+          "original": "b",
+          "renamed": "validateFileId"
+        },
+        {
           "start": 19178,
           "end": 19179,
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 19405,
+          "end": 19406,
+          "symbol": "M:bj.d(II)Z",
+          "original": "d",
+          "renamed": "tryLoadGroup"
+        },
+        {
+          "start": 19451,
+          "end": 19452,
+          "symbol": "M:bj.a(II)Z",
+          "original": "a",
+          "renamed": "validateGroupId"
+        },
+        {
+          "start": 19596,
+          "end": 19597,
+          "symbol": "M:bj.c(II)V",
+          "original": "c",
+          "renamed": "loadPackedGroup"
+        },
+        {
+          "start": 19738,
+          "end": 19739,
+          "symbol": "M:bj.a(ZII)[B",
+          "original": "a",
+          "renamed": "getFile"
+        },
+        {
+          "start": 19862,
+          "end": 19863,
+          "symbol": "M:bj.a([IIII)[B",
+          "original": "a",
+          "renamed": "getFileWithKeys"
+        },
+        {
+          "start": 20462,
+          "end": 20463,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 20756,
+          "end": 20757,
+          "symbol": "M:bj.a(II)Z",
+          "original": "a",
+          "renamed": "validateGroupId"
+        },
+        {
+          "start": 20996,
+          "end": 20997,
+          "symbol": "M:bj.a(III)Z",
+          "original": "a",
+          "renamed": "tryLoadFile"
         },
         {
           "start": 21714,
@@ -280257,11 +280868,32 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 21932,
+          "end": 21933,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
           "start": 22019,
           "end": 22021,
           "symbol": "C:bj",
           "original": "bj",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 22130,
+          "end": 22131,
+          "symbol": "M:bj.b(III)Z",
+          "original": "b",
+          "renamed": "validateFileId"
+        },
+        {
+          "start": 22188,
+          "end": 22189,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
         },
         {
           "start": 22442,
@@ -280271,11 +280903,53 @@
           "renamed": "ArchiveRequest"
         },
         {
+          "start": 22595,
+          "end": 22596,
+          "symbol": "M:bj.b(I)Z",
+          "original": "b",
+          "renamed": "tryLoadAllGroups"
+        },
+        {
+          "start": 22825,
+          "end": 22826,
+          "symbol": "M:bj.a(ILjava/lang/String;)I",
+          "original": "a",
+          "renamed": "getGroupIdByName"
+        },
+        {
+          "start": 22876,
+          "end": 22877,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 23119,
+          "end": 23120,
+          "symbol": "M:bj.c(II)V",
+          "original": "c",
+          "renamed": "loadPackedGroup"
+        },
+        {
+          "start": 23705,
+          "end": 23706,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
           "start": 23867,
           "end": 23869,
           "symbol": "C:bj",
           "original": "bj",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 24052,
+          "end": 24053,
+          "symbol": "M:bj.d(II)Z",
+          "original": "d",
+          "renamed": "tryLoadGroup"
         },
         {
           "start": 24555,
@@ -280285,11 +280959,60 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 24711,
+          "end": 24712,
+          "symbol": "M:bj.a(Ljava/lang/String;I)I",
+          "original": "a",
+          "renamed": "getGroupLoadPercentByName"
+        },
+        {
+          "start": 25229,
+          "end": 25230,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 25511,
+          "end": 25512,
+          "symbol": "M:bj.a(IZ)I",
+          "original": "a",
+          "renamed": "getGroupLoadPercent"
+        },
+        {
           "start": 25988,
           "end": 25989,
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 26185,
+          "end": 26186,
+          "symbol": "M:bj.a(Ljava/lang/String;ILjava/lang/String;)[B",
+          "original": "a",
+          "renamed": "getFileByName"
+        },
+        {
+          "start": 26752,
+          "end": 26753,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 27031,
+          "end": 27032,
+          "symbol": "M:bj.a(II)Z",
+          "original": "a",
+          "renamed": "validateGroupId"
+        },
+        {
+          "start": 27308,
+          "end": 27309,
+          "symbol": "M:bj.a(ZII)[B",
+          "original": "a",
+          "renamed": "getFile"
         },
         {
           "start": 28054,
@@ -280320,6 +281043,27 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 28768,
+          "end": 28769,
+          "symbol": "M:bj.a(IZ)I",
+          "original": "a",
+          "renamed": "getGroupLoadPercent"
+        },
+        {
+          "start": 28818,
+          "end": 28819,
+          "symbol": "M:bj.a(II)Z",
+          "original": "a",
+          "renamed": "validateGroupId"
+        },
+        {
+          "start": 29024,
+          "end": 29025,
+          "symbol": "M:vb.a(BI)I",
+          "original": "a",
+          "renamed": "getGroupRequestProgressPercent"
+        },
+        {
           "start": 29077,
           "end": 29078,
           "symbol": "M:bj.c(B)V",
@@ -280327,11 +281071,32 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 29541,
+          "end": 29542,
+          "symbol": "M:bj.a(II)Z",
+          "original": "a",
+          "renamed": "validateGroupId"
+        },
+        {
           "start": 29904,
           "end": 29905,
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 30235,
+          "end": 30236,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 30458,
+          "end": 30459,
+          "symbol": "M:bj.a(IZ)I",
+          "original": "a",
+          "renamed": "getGroupLoadPercent"
         },
         {
           "start": 30578,
@@ -280986,8 +281751,29 @@
       "original": "bn.java",
       "renamed": "bn.java",
       "inputSha256": "36194733a2623ea856fba9c8c11b1f70613d5f74017df46148b6f14abd88f856",
-      "outputSha256": "9b2d9bded90cf6616127c27b4c6e3e36e8b60af64369a836b50fb50a0eebb99b",
+      "outputSha256": "88c8d1635902948c84d7cdaa2faead0424d2a646ed5aa5144573327dd8a50f6e",
       "edits": [
+        {
+          "start": 402,
+          "end": 403,
+          "symbol": "M:bn.a(IC)Z",
+          "original": "a",
+          "renamed": "isSupportedCp1252KeyCharacter"
+        },
+        {
+          "start": 585,
+          "end": 586,
+          "symbol": "M:bn.a(IC)Z",
+          "original": "a",
+          "renamed": "isSupportedCp1252KeyCharacter"
+        },
+        {
+          "start": 640,
+          "end": 641,
+          "symbol": "M:bn.a(IC)Z",
+          "original": "a",
+          "renamed": "isSupportedCp1252KeyCharacter"
+        },
         {
           "start": 1785,
           "end": 1786,
@@ -282710,7 +283496,7 @@
       "original": "cn.java",
       "renamed": "Bzip2State.java",
       "inputSha256": "058cc67a2608ca4fd53a0022e6d64c06823ee56f4c3ae45e3a457b3c9a192456",
-      "outputSha256": "09b7bcafd92b36b1a12c2505c0a1329f29e715b43d43457fbfaa9cb18aaff2e6",
+      "outputSha256": "7d530ddb588ef1e2fd77bd323f818fc43a604ef22c8bfc6167473fb233ff8f0b",
       "edits": [
         {
           "start": 50,
@@ -282725,6 +283511,13 @@
           "symbol": "C:bj",
           "original": "bj",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 1204,
+          "end": 1205,
+          "symbol": "M:bj.a(ZII)[B",
+          "original": "a",
+          "renamed": "getFile"
         },
         {
           "start": 1435,
@@ -284122,7 +284915,7 @@
       "original": "dl.java",
       "renamed": "dl.java",
       "inputSha256": "79d4129dd0225fa222fa02cfcdc5fb8b7d7f74c019ad0ba9c172e4f2f3d5fa14",
-      "outputSha256": "b88cf4d1ff64167c376730d0ffbf521706299bc26923b06c1e4278ff79dd57de",
+      "outputSha256": "bae87f8fb8e0eef12c3b7df76e73603e66f562bd646df8b67dedc9a378e238ab",
       "edits": [
         {
           "start": 140,
@@ -284181,6 +284974,13 @@
           "renamed": "payload"
         },
         {
+          "start": 1702,
+          "end": 1703,
+          "symbol": "M:ph.a(BI[BI)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "decodeCp1252String"
+        },
+        {
           "start": 2624,
           "end": 2625,
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
@@ -284207,6 +285007,13 @@
           "symbol": "C:cn",
           "original": "cn",
           "renamed": "Bzip2State"
+        },
+        {
+          "start": 3537,
+          "end": 3538,
+          "symbol": "M:bj.a(ZII)[B",
+          "original": "a",
+          "renamed": "getFile"
         },
         {
           "start": 4332,
@@ -284284,7 +285091,7 @@
       "original": "dm.java",
       "renamed": "dm.java",
       "inputSha256": "f25ef383f65ff3b120e6a1887b971c03eb3d2bde1fdfa3e40c0b4280d3d7cfac",
-      "outputSha256": "c432de9ae5bbcb79e5966ea14a097e2021b60b0beb7bfb984df8aa620fd76b7e",
+      "outputSha256": "eaaa86d0b6d03f2cd28558193a445e2fcc749e37e4aed18d4c87998068ebd99a",
       "edits": [
         {
           "start": 1402,
@@ -284306,6 +285113,41 @@
           "symbol": "M:dm.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 2151,
+          "end": 2152,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 2301,
+          "end": 2302,
+          "symbol": "M:bj.d(II)Z",
+          "original": "d",
+          "renamed": "tryLoadGroup"
+        },
+        {
+          "start": 2366,
+          "end": 2367,
+          "symbol": "M:bj.a(IZ)I",
+          "original": "a",
+          "renamed": "getGroupLoadPercent"
+        },
+        {
+          "start": 2561,
+          "end": 2562,
+          "symbol": "M:bj.a(Ljava/lang/String;I)I",
+          "original": "a",
+          "renamed": "getGroupLoadPercentByName"
+        },
+        {
+          "start": 2755,
+          "end": 2756,
+          "symbol": "M:bj.b(I)Z",
+          "original": "b",
+          "renamed": "tryLoadAllGroups"
         }
       ]
     },
@@ -284313,7 +285155,7 @@
       "original": "dn.java",
       "renamed": "dn.java",
       "inputSha256": "148477a6e0627eb95f441fcc714bf2f20bcca08588c56467488737c4157762cd",
-      "outputSha256": "81d24cea1101245bcec4d3743eeb5a05323761c6964c36fa878bafc6931a2f09",
+      "outputSha256": "c2adeb2e80826d1feed9a545ebd23eef111a54b805917ed79f6a6f437797ee0d",
       "edits": [
         {
           "start": 61,
@@ -284386,6 +285228,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 3772,
+          "end": 3773,
+          "symbol": "M:bj.a(Ljava/lang/String;ILjava/lang/String;)[B",
+          "original": "a",
+          "renamed": "getFileByName"
+        },
+        {
           "start": 3962,
           "end": 3964,
           "symbol": "C:ea",
@@ -284440,8 +285289,15 @@
       "original": "e.java",
       "renamed": "e.java",
       "inputSha256": "4d1289cea1e1d3248f5df827d90b0f40f572aa4124b825442b2502afd2533aa4",
-      "outputSha256": "606a068f6a1f35d6ddd7216f59eca0b2c5e06dc263c7ec7e09981e5e1998987a",
+      "outputSha256": "3cd2aaf8e8b1261ecaeaada88ee86887dafff9e2c79547a69fa69202e5f59850",
       "edits": [
+        {
+          "start": 600,
+          "end": 601,
+          "symbol": "M:bj.a(Ljava/lang/String;ILjava/lang/String;)[B",
+          "original": "a",
+          "renamed": "getFileByName"
+        },
         {
           "start": 1100,
           "end": 1101,
@@ -287145,7 +288001,7 @@
       "original": "eb.java",
       "renamed": "eb.java",
       "inputSha256": "86123bc7ef8924e71466fe8a4bb0de5898f6134c19e09691f3ec3bbee0e53c9b",
-      "outputSha256": "b2d3d5cad834d63e2599c9f90f8c9a75e46ed7c2d2114c749e946cc10bce5066",
+      "outputSha256": "4adde7f7dd168fc2a007c68391a9387c594d852b4b866e7f7a86f3bead781b21",
       "edits": [
         {
           "start": 66,
@@ -287202,6 +288058,13 @@
           "symbol": "M:eb.b(B)V",
           "original": "b",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 1594,
+          "end": 1595,
+          "symbol": "M:bj.b(I)Z",
+          "original": "b",
+          "renamed": "tryLoadAllGroups"
         },
         {
           "start": 2057,
@@ -287710,7 +288573,7 @@
       "original": "eg.java",
       "renamed": "eg.java",
       "inputSha256": "094e1277d65fc9141dcaddbd70cebd2fcb6c2b18c561ac4e0c99802af4e69a32",
-      "outputSha256": "53f0282046d473e660d7d9b6e28e3732bee841febd8e579ebb79a814f6effdeb",
+      "outputSha256": "675ac896e0ed8efd2f016b6346c6554c40760a6ad0874e68da41fb5a2100ee45",
       "edits": [
         {
           "start": 131,
@@ -287907,6 +288770,27 @@
           "symbol": "C:bj",
           "original": "bj",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 17779,
+          "end": 17780,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 17862,
+          "end": 17863,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 18027,
+          "end": 18028,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
         },
         {
           "start": 19164,
@@ -294726,7 +295610,7 @@
       "original": "gi.java",
       "renamed": "gi.java",
       "inputSha256": "4f9211643fe97a7387deac8d78d04a1e4d74687d36c5914543c573f4c30da2c0",
-      "outputSha256": "26ccc1e344d6453dc6acd933b884464eb10a2045ce4c90b38837674d451d9309",
+      "outputSha256": "814bbcb38e82269fd64a237af5263d7a72d42ab578249fcc3042532671316049",
       "edits": [
         {
           "start": 185,
@@ -294825,6 +295709,13 @@
           "symbol": "C:di",
           "original": "di",
           "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 3636,
+          "end": 3637,
+          "symbol": "M:bn.a(IC)Z",
+          "original": "a",
+          "renamed": "isSupportedCp1252KeyCharacter"
         },
         {
           "start": 4026,
@@ -295025,7 +295916,7 @@
       "original": "gn.java",
       "renamed": "gn.java",
       "inputSha256": "5acd8bf810f02cad7f8eeab9ab7ee35523906061a368a92a774c0a8fdb3670b4",
-      "outputSha256": "8cfe49e0d52837730946554b24df590ee2db9e092c6215bf7ca97f9227d7352e",
+      "outputSha256": "caadd22aed9bccfab769ba3738293662f589569ade87809c91f886ac61e1fd9d",
       "edits": [
         {
           "start": 552,
@@ -295138,6 +296029,13 @@
           "symbol": "C:bj",
           "original": "bj",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 4075,
+          "end": 4076,
+          "symbol": "M:bj.a(Ljava/lang/String;ILjava/lang/String;)[B",
+          "original": "a",
+          "renamed": "getFileByName"
         },
         {
           "start": 4261,
@@ -295364,7 +296262,7 @@
       "original": "hb.java",
       "renamed": "hb.java",
       "inputSha256": "28ac75bdbfdbf7d53bb5d50952e19c50b7482c8a1a32f66aa0a957e5d76300e0",
-      "outputSha256": "5e7ab5e67788c8edb678aa173c3b27844621fb634e688f7951504a7482c091db",
+      "outputSha256": "83d3c8012b4cf5e8c78dcb8f366b4dabb8419dafcb508e0935c07eb88f956653",
       "edits": [
         {
           "start": 100,
@@ -295386,6 +296284,20 @@
           "symbol": "C:bj",
           "original": "bj",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 441,
+          "end": 442,
+          "symbol": "M:bj.a(ZII)[B",
+          "original": "a",
+          "renamed": "getFile"
+        },
+        {
+          "start": 517,
+          "end": 518,
+          "symbol": "M:bj.a(ZII)[B",
+          "original": "a",
+          "renamed": "getFile"
         },
         {
           "start": 637,
@@ -296478,7 +297390,7 @@
       "original": "hj.java",
       "renamed": "hj.java",
       "inputSha256": "32b09e7b6cd5feb8b061e2fff4d18405c14fa2044bfc18a436b54c53d75394fd",
-      "outputSha256": "d971256bf77e85eac74229b10e8f8631521bcaeb9600a917b778dc57c8a0ade0",
+      "outputSha256": "a1f2c6cc428e4be6ebe8837329a369033ee3d73bcb097a240f6cba7949ddd6ae",
       "edits": [
         {
           "start": 139,
@@ -296563,6 +297475,13 @@
           "symbol": "C:ld",
           "original": "ld",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 2103,
+          "end": 2104,
+          "symbol": "M:bj.a(Ljava/lang/String;ILjava/lang/String;)[B",
+          "original": "a",
+          "renamed": "getFileByName"
         },
         {
           "start": 2174,
@@ -297305,7 +298224,7 @@
       "original": "ic.java",
       "renamed": "ic.java",
       "inputSha256": "78b4e354a64d100a5e8c0234904e40cee3c198880a377077308b51d519ce3d1e",
-      "outputSha256": "fad7bb698a9200837e44709db583b1d2e30237813278d76013eaeabb94880e45",
+      "outputSha256": "4d2cf906515ad12561c6206fb490c28b0af9f18739d2c72ae4f0d1899708be2f",
       "edits": [
         {
           "start": 289,
@@ -297350,11 +298269,25 @@
           "renamed": "throwUnchecked"
         },
         {
+          "start": 6389,
+          "end": 6390,
+          "symbol": "M:ic.a(ZLjava/lang/CharSequence;)[B",
+          "original": "a",
+          "renamed": "encodeCp1252Bytes"
+        },
+        {
           "start": 8531,
           "end": 8532,
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 9080,
+          "end": 9081,
+          "symbol": "M:ic.a(ZLjava/lang/CharSequence;)[B",
+          "original": "a",
+          "renamed": "encodeCp1252Bytes"
         },
         {
           "start": 11677,
@@ -297376,6 +298309,13 @@
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 13037,
+          "end": 13038,
+          "symbol": "M:ic.a(ZLjava/lang/CharSequence;)[B",
+          "original": "a",
+          "renamed": "encodeCp1252Bytes"
         },
         {
           "start": 13634,
@@ -298130,7 +299070,7 @@
       "original": "ij.java",
       "renamed": "ij.java",
       "inputSha256": "bb8274b86247e01d7c1d39b5b6e40f79c5d63aaf32903a75074a942b98eede97",
-      "outputSha256": "72767a502859054d40ba9744e83721c00d696b1d258ce59c38a567ea54941591",
+      "outputSha256": "eda217e5367b0c34bfb5438c30b0652beb2fcd426ffea3d1bf9079028c899efb",
       "edits": [
         {
           "start": 80,
@@ -298852,6 +299792,13 @@
           "symbol": "C:ea",
           "original": "ea",
           "renamed": "Sprite"
+        },
+        {
+          "start": 19989,
+          "end": 19990,
+          "symbol": "M:ij.a(BI)I",
+          "original": "a",
+          "renamed": "getGroupRequestProgressPercent"
         },
         {
           "start": 20085,
@@ -300904,7 +301851,7 @@
       "original": "jd.java",
       "renamed": "jd.java",
       "inputSha256": "788df20a12ff1caf923ef7e34b5afebb755d12864a035f8d98b5baf62b9957e3",
-      "outputSha256": "ccdae7a10e316bd7b492d09de337d466d13077cacaaa3172d94ecf0eb6b691a6",
+      "outputSha256": "658af18cba05187b92f622ab2809050e03bc85b9f1e3ae6bf02148cf668d87f2",
       "edits": [
         {
           "start": 142,
@@ -300928,6 +301875,13 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 378,
+          "end": 379,
+          "symbol": "M:bj.a(Ljava/lang/String;ILjava/lang/String;)[B",
+          "original": "a",
+          "renamed": "getFileByName"
+        },
+        {
           "start": 487,
           "end": 489,
           "symbol": "C:sb",
@@ -300940,6 +301894,13 @@
           "symbol": "C:bj",
           "original": "bj",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 593,
+          "end": 594,
+          "symbol": "M:bj.a(ZII)[B",
+          "original": "a",
+          "renamed": "getFile"
         },
         {
           "start": 706,
@@ -303300,7 +304261,7 @@
       "original": "jf.java",
       "renamed": "jf.java",
       "inputSha256": "af0445ed72297c15726ebb57fc135b8fe646ec05d75ac7a9f81236839f333cb4",
-      "outputSha256": "d4fac147be220ffb75a18d4d7fc6b4ce7a721e2ca6a7bfb59a92f0e4423e739e",
+      "outputSha256": "04846f0ea59efac51514e44dcbf8fec590c2666864203c60c6952a31a5ef5244",
       "edits": [
         {
           "start": 217,
@@ -303350,6 +304311,13 @@
           "symbol": "C:ea",
           "original": "ea",
           "renamed": "Sprite"
+        },
+        {
+          "start": 1147,
+          "end": 1148,
+          "symbol": "M:bj.a(Ljava/lang/String;ILjava/lang/String;)[B",
+          "original": "a",
+          "renamed": "getFileByName"
         },
         {
           "start": 2154,
@@ -303617,7 +304585,7 @@
       "original": "jh.java",
       "renamed": "jh.java",
       "inputSha256": "f93dc016e5c0b5f923d3eb9bda75881821c869aae7048959dd322a6a9d056e39",
-      "outputSha256": "49c2269053a131eba8cd7de50d7201ed145585a5e78b8ecbcdbbe33a228b8ddf",
+      "outputSha256": "ea418939bcc12f57a65f54ed5e7ec64d81bf483bd6715a7d934da226400f69e6",
       "edits": [
         {
           "start": 251,
@@ -303625,6 +304593,13 @@
           "symbol": "M:jh.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 1062,
+          "end": 1063,
+          "symbol": "M:kj.a(CI)B",
+          "original": "a",
+          "renamed": "encodeCp1252Character"
         },
         {
           "start": 1600,
@@ -303922,7 +304897,7 @@
       "original": "jn.java",
       "renamed": "jn.java",
       "inputSha256": "47fe0dbd1640694fe6746d4d949eca613338734a5f5126d1770464b6d268ac58",
-      "outputSha256": "59fd40db9c0c77c17875d5e960ad2b5fe092431cf45ffd2906f8b7022706e597",
+      "outputSha256": "51832c985ceff3239f106b8776d5671026aee7eeb517413cc1d0f0e019f90156",
       "edits": [
         {
           "start": 61,
@@ -304100,6 +305075,20 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 5098,
+          "end": 5099,
+          "symbol": "M:bj.a(ILjava/lang/String;)I",
+          "original": "a",
+          "renamed": "getGroupIdByName"
+        },
+        {
+          "start": 5139,
+          "end": 5140,
+          "symbol": "M:bj.a(Ljava/lang/String;II)I",
+          "original": "a",
+          "renamed": "getFileIdByName"
+        },
+        {
           "start": 6178,
           "end": 6179,
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
@@ -304126,7 +305115,7 @@
       "original": "k.java",
       "renamed": "k.java",
       "inputSha256": "0d2cc739729db1d40654aafb0dd89c9e8afc76c6016001b385b949594be7f49c",
-      "outputSha256": "7640cd310aad0d2c6d4301c43936c43b63348ec19218a3c3897be20c3160c590",
+      "outputSha256": "b62a61711e6883f3dc493b5f1574d5fb1a1e365179f72e8757184bc9e6603712",
       "edits": [
         {
           "start": 1167,
@@ -304206,6 +305195,34 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 2156,
+          "end": 2157,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 2279,
+          "end": 2280,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 2432,
+          "end": 2433,
+          "symbol": "M:bj.a(Ljava/lang/String;I)I",
+          "original": "a",
+          "renamed": "getGroupLoadPercentByName"
+        },
+        {
+          "start": 2503,
+          "end": 2504,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
           "start": 2536,
           "end": 2538,
           "symbol": "C:dc",
@@ -304213,11 +305230,32 @@
           "renamed": "GameCanvas"
         },
         {
+          "start": 2655,
+          "end": 2656,
+          "symbol": "M:bj.a(Ljava/lang/String;I)I",
+          "original": "a",
+          "renamed": "getGroupLoadPercentByName"
+        },
+        {
+          "start": 2716,
+          "end": 2717,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
           "start": 2749,
           "end": 2750,
           "symbol": "C:l",
           "original": "l",
           "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 2794,
+          "end": 2795,
+          "symbol": "M:bj.b(I)Z",
+          "original": "b",
+          "renamed": "tryLoadAllGroups"
         },
         {
           "start": 4176,
@@ -304298,7 +305336,7 @@
       "original": "kd.java",
       "renamed": "kd.java",
       "inputSha256": "a669ea547d662632669a1e19b9e018028e8ea3c14c7da4b0c5fd3ab57814bb07",
-      "outputSha256": "23098d262bbdfdf03bcf6244a15b520ab811bacc2c90d72f433458e50d1f1db3",
+      "outputSha256": "fa0f80e1c289a6a7467af59bd91801c664fa2fd2cadd3912ae81f405251467a4",
       "edits": [
         {
           "start": 116,
@@ -304651,6 +305689,13 @@
           "renamed": "fillRectangle"
         },
         {
+          "start": 9201,
+          "end": 9202,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
           "start": 9387,
           "end": 9389,
           "symbol": "C:uk",
@@ -304663,6 +305708,13 @@
           "symbol": "C:uk",
           "original": "uk",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 9424,
+          "end": 9425,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
         },
         {
           "start": 9450,
@@ -305563,7 +306615,7 @@
       "original": "kj.java",
       "renamed": "kj.java",
       "inputSha256": "e8a98451fee7bdcdf6edc2b131c1e5e6521ca34a0b939c4e7876e4bfcf2fc756",
-      "outputSha256": "9d081cf505f319726d4af4a9561b14e6839dd00411d235fa4846051d5003f983",
+      "outputSha256": "a453cac1eab2ddb4267a371f0b9d38d5e0d7fb1106dc51a543f64513fd72cb56",
       "edits": [
         {
           "start": 90,
@@ -305685,6 +306737,13 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 2660,
+          "end": 2661,
+          "symbol": "M:kj.a(CI)B",
+          "original": "a",
+          "renamed": "encodeCp1252Character"
+        },
+        {
           "start": 2785,
           "end": 2787,
           "symbol": "C:qc",
@@ -305697,6 +306756,13 @@
           "symbol": "C:qc",
           "original": "qc",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 2863,
+          "end": 2864,
+          "symbol": "M:kj.a(CI)B",
+          "original": "a",
+          "renamed": "encodeCp1252Character"
         }
       ]
     },
@@ -307303,7 +308369,7 @@
       "original": "lf.java",
       "renamed": "lf.java",
       "inputSha256": "e791e3298c8a8ac01aae7d6873f24567f36b2e0ea5f1ac0cd907b7f483aa4e9f",
-      "outputSha256": "16aab4c56ee2f5aca932f61bb5438809826685e276821f20c9e1818150b904e9",
+      "outputSha256": "8860ace1c3306dd5d7573758fb1de1b57d449fcca8ecc4b9d42e0c4104dd4779",
       "edits": [
         {
           "start": 163,
@@ -307507,6 +308573,13 @@
           "symbol": "F:ia.field_a:Ljava/lang/Object;",
           "original": "field_a",
           "renamed": "result"
+        },
+        {
+          "start": 4723,
+          "end": 4724,
+          "symbol": "M:ic.a(ZLjava/lang/CharSequence;)[B",
+          "original": "a",
+          "renamed": "encodeCp1252Bytes"
         },
         {
           "start": 4858,
@@ -308103,7 +309176,7 @@
       "original": "lh.java",
       "renamed": "lh.java",
       "inputSha256": "ed37a9fd833392201e131b7d34a0490460d6f96fb66f4d8a2bbbe1609c2dc13b",
-      "outputSha256": "efc833ec9caf02840a510443456d486c865ab059553c86a57402c06a7dcf4bdc",
+      "outputSha256": "0319f66598983c781415cf7c2aa656b30866e09323a82789b8f613a119ce9fbd",
       "edits": [
         {
           "start": 3950,
@@ -308118,6 +309191,13 @@
           "symbol": "C:oe",
           "original": "oe",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 7811,
+          "end": 7812,
+          "symbol": "M:bj.a(Ljava/lang/String;ILjava/lang/String;)[B",
+          "original": "a",
+          "renamed": "getFileByName"
         },
         {
           "start": 8318,
@@ -308139,7 +309219,7 @@
       "original": "li.java",
       "renamed": "li.java",
       "inputSha256": "d08489e3dcbfdeb1e4b87e70dfd127449fc2c709d676abd4af7c02dfbeec1db5",
-      "outputSha256": "a1531021eafd409d65bc324a1e18cc6e1546d719b7577262f25b964cccbc89f0",
+      "outputSha256": "8abb0f8fc69280a19911909aebe47bbaf9cf9773be544edf8df7c9af180cb216",
       "edits": [
         {
           "start": 386,
@@ -308329,6 +309409,13 @@
           "symbol": "C:ee",
           "original": "ee",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 97070,
+          "end": 97071,
+          "symbol": "M:mb.a(ZB)C",
+          "original": "a",
+          "renamed": "decodeCp1252Byte"
         },
         {
           "start": 101893,
@@ -310548,7 +311635,7 @@
       "original": "mb.java",
       "renamed": "mb.java",
       "inputSha256": "88ea4534c6c092aa60d168b94aa4bbd18a364a6a1bdaaeba8210d673c51a350e",
-      "outputSha256": "54ef24ccadfb9dc9d593dfd0dc1a7de7c465b3456247e083354e9e8413e893cf",
+      "outputSha256": "ffac7e00508cd90141c4e004dd69c6398c55ad5189660520260abeeef3480568",
       "edits": [
         {
           "start": 66,
@@ -310563,6 +311650,13 @@
           "symbol": "C:ea",
           "original": "ea",
           "renamed": "Sprite"
+        },
+        {
+          "start": 176,
+          "end": 177,
+          "symbol": "M:mb.a(ZB)C",
+          "original": "a",
+          "renamed": "decodeCp1252Byte"
         },
         {
           "start": 1477,
@@ -311009,7 +312103,7 @@
       "original": "md.java",
       "renamed": "md.java",
       "inputSha256": "9787078257ecb54151cad6b6298ac7df20af9fe02d6e68728a2541e789c3ba12",
-      "outputSha256": "5452959bd7c27352b60f357cb4ee20bb7745bea77943f2cb73a7a4fd5cd30670",
+      "outputSha256": "9361606fb185ff8bb90fab7441a00a183710be0098842e2793924fbff8414a0b",
       "edits": [
         {
           "start": 486,
@@ -311073,6 +312167,20 @@
           "symbol": "C:ea",
           "original": "ea",
           "renamed": "Sprite"
+        },
+        {
+          "start": 2078,
+          "end": 2079,
+          "symbol": "M:bj.a(ILjava/lang/String;)I",
+          "original": "a",
+          "renamed": "getGroupIdByName"
+        },
+        {
+          "start": 2118,
+          "end": 2119,
+          "symbol": "M:bj.a(Ljava/lang/String;II)I",
+          "original": "a",
+          "renamed": "getFileIdByName"
         },
         {
           "start": 3167,
@@ -314867,7 +315975,7 @@
       "original": "ob.java",
       "renamed": "ob.java",
       "inputSha256": "566b695c9f332eb03ffc659f0633ac9fea2452115d0d70359625c0bf23f04015",
-      "outputSha256": "da2157a0dd28cf4050c29431180421330d25db84fc466a4651a3122ba92f3955",
+      "outputSha256": "ca7d21e46e1ad6b9f78868565ae6e9ce42dc33733738cb09e2c5a2d728274566",
       "edits": [
         {
           "start": 64,
@@ -315017,6 +316125,13 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 6930,
+          "end": 6931,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
           "start": 6962,
           "end": 6964,
           "symbol": "C:sb",
@@ -315085,6 +316200,20 @@
           "symbol": "C:bd",
           "original": "bd",
           "renamed": "AccountRequestState"
+        },
+        {
+          "start": 8723,
+          "end": 8724,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 8763,
+          "end": 8764,
+          "symbol": "M:bj.b(I)Z",
+          "original": "b",
+          "renamed": "tryLoadAllGroups"
         },
         {
           "start": 8940,
@@ -315262,6 +316391,13 @@
           "renamed": "SecondaryNodeDeque"
         },
         {
+          "start": 20896,
+          "end": 20897,
+          "symbol": "M:ph.a(BI[BI)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "decodeCp1252String"
+        },
+        {
           "start": 20915,
           "end": 20922,
           "symbol": "F:sb.field_o:I",
@@ -315323,7 +316459,7 @@
       "original": "oc.java",
       "renamed": "oc.java",
       "inputSha256": "372ad3931451d7bfcb43efa3cd58c68617324cee3bec746dd9c6e5af03aecfa1",
-      "outputSha256": "4d8cbb345b4b3613a55d09c350ff03d150f9cdd5d7593891c633f28bb462aac8",
+      "outputSha256": "ab8ef584818e1e58fa57a8548ba2dfa2d5f35b029707c32822ffc5a1fd669136",
       "edits": [
         {
           "start": 1659,
@@ -315394,6 +316530,20 @@
           "symbol": "C:bj",
           "original": "bj",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 7476,
+          "end": 7477,
+          "symbol": "M:bj.a(ILjava/lang/String;)I",
+          "original": "a",
+          "renamed": "getGroupIdByName"
+        },
+        {
+          "start": 7628,
+          "end": 7629,
+          "symbol": "M:bj.a(Ljava/lang/String;II)I",
+          "original": "a",
+          "renamed": "getFileIdByName"
         },
         {
           "start": 8908,
@@ -318775,7 +319925,7 @@
       "original": "pb.java",
       "renamed": "pb.java",
       "inputSha256": "a6f33323955f1342395f957e4db5666d5caa94871f0e1e70d6af36d05fea8779",
-      "outputSha256": "324c13898d05776e2c7c0bad01d6d598fba4780caced3aa69867e52df6c726e3",
+      "outputSha256": "30220d267080e60ba871d56718bd4e4110bd3524f18839e25d5dbd274af2ee6e",
       "edits": [
         {
           "start": 973,
@@ -318804,6 +319954,20 @@
           "symbol": "C:bj",
           "original": "bj",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 2237,
+          "end": 2238,
+          "symbol": "M:bj.a(ILjava/lang/String;)I",
+          "original": "a",
+          "renamed": "getGroupIdByName"
+        },
+        {
+          "start": 2286,
+          "end": 2287,
+          "symbol": "M:bj.a(Ljava/lang/String;II)I",
+          "original": "a",
+          "renamed": "getFileIdByName"
         },
         {
           "start": 3291,
@@ -319698,7 +320862,7 @@
       "original": "ph.java",
       "renamed": "ph.java",
       "inputSha256": "e9ececf4ce325462b9c7f098529adbc5615b576ff02dc98bf86ca05ea29d51ce",
-      "outputSha256": "6ecce7b6b2a94575df62e1b765e5e8e9c8b49a76640ca72f3dc58a8b3a451cf5",
+      "outputSha256": "8dff57ad89d3d3fb3ba0188ae710bb67f468716b1897574b07ea479e538dbf0e",
       "edits": [
         {
           "start": 154,
@@ -319706,6 +320870,20 @@
           "symbol": "C:ea",
           "original": "ea",
           "renamed": "Sprite"
+        },
+        {
+          "start": 457,
+          "end": 458,
+          "symbol": "M:ph.a(BI[BI)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "decodeCp1252String"
+        },
+        {
+          "start": 551,
+          "end": 552,
+          "symbol": "M:ph.a(BI[BI)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "decodeCp1252String"
         },
         {
           "start": 1237,
@@ -319826,7 +321004,7 @@
       "original": "pj.java",
       "renamed": "pj.java",
       "inputSha256": "ad7d762a075f0a885e9a2d6e707f8e4c991e4800c67084f7eb8484f4bbde96d6",
-      "outputSha256": "b156caedee649a49114800e9e7b9ba5f5619371032cc8b1c5500dd47622e2e8b",
+      "outputSha256": "eddaf33aa001ab9d05bd0f2a21f99667c68aa0144380f9fabb6133118d02a29f",
       "edits": [
         {
           "start": 174,
@@ -320200,6 +321378,13 @@
           "renamed": "Bzip2State"
         },
         {
+          "start": 12154,
+          "end": 12155,
+          "symbol": "M:bj.a(ZII)[B",
+          "original": "a",
+          "renamed": "getFile"
+        },
+        {
           "start": 12967,
           "end": 12968,
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
@@ -320212,7 +321397,7 @@
       "original": "pk.java",
       "renamed": "pk.java",
       "inputSha256": "1988b08e32158d22435be48e7ae028fea6b084252de9ffa6275127add6cc67f7",
-      "outputSha256": "94119698cf199d5f1ed5052072d8e8d6813ae4b0b3e2ff967714221e3c5f6d0f",
+      "outputSha256": "e8eb5524c3d32bd4bb722570264906d898773eacd89d74eba46b57ede48ced74",
       "edits": [
         {
           "start": 89,
@@ -320332,6 +321517,13 @@
           "symbol": "C:bj",
           "original": "bj",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 3309,
+          "end": 3310,
+          "symbol": "M:bj.a(ZII)[B",
+          "original": "a",
+          "renamed": "getFile"
         },
         {
           "start": 4113,
@@ -322993,7 +324185,7 @@
       "original": "qn.java",
       "renamed": "qn.java",
       "inputSha256": "a485906d2c81b19cd275735578a0c0ccc11702f2bdb842de6e002073d3812214",
-      "outputSha256": "04c4799f7d7233c5184881d4c78417de56706a1f1a6546c12247d12c916a20cf",
+      "outputSha256": "f3efef07bdb19e5f0171f752fcacec486005587e327efc1052731b68a152885e",
       "edits": [
         {
           "start": 150,
@@ -323318,6 +324510,13 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 8501,
+          "end": 8502,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
           "start": 9622,
           "end": 9623,
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
@@ -323330,7 +324529,7 @@
       "original": "r.java",
       "renamed": "r.java",
       "inputSha256": "2ab88770a48617ecf7d6a2554dc8664dec129cad2346cf4755d41caf4ec844c8",
-      "outputSha256": "e60daf0fc86554969c14f911bc45265f853123381be0805958c29bec8b0382e8",
+      "outputSha256": "7b669aedcba535838dc4c3832c9f5a7d1d5722a8083609cdb24d46b4af1f6ffe",
       "edits": [
         {
           "start": 92,
@@ -323359,6 +324558,13 @@
           "symbol": "M:r.b(B)V",
           "original": "b",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 637,
+          "end": 638,
+          "symbol": "M:r.a(Ljava/lang/CharSequence;[BIIII)I",
+          "original": "a",
+          "renamed": "encodeCp1252Subsequence"
         },
         {
           "start": 5555,
@@ -324937,7 +326143,7 @@
       "original": "rd.java",
       "renamed": "rd.java",
       "inputSha256": "4c2cc5c83c76f9787ef534edbc1ee2c6845672a5df907c6cee29de8459c90390",
-      "outputSha256": "e02ed9a42f8abbef7c968b4980559030fcdf7d0d70f2dd3803a747406888c051",
+      "outputSha256": "2c24e7c06d7314ebec366065a65ac9ec30d14512d826661b1fa5d46499c3b436",
       "edits": [
         {
           "start": 66,
@@ -324987,6 +326193,20 @@
           "symbol": "C:bj",
           "original": "bj",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 3618,
+          "end": 3619,
+          "symbol": "M:bj.a(ILjava/lang/String;)I",
+          "original": "a",
+          "renamed": "getGroupIdByName"
+        },
+        {
+          "start": 3658,
+          "end": 3659,
+          "symbol": "M:bj.a(Ljava/lang/String;II)I",
+          "original": "a",
+          "renamed": "getFileIdByName"
         },
         {
           "start": 3730,
@@ -326495,7 +327715,7 @@
       "original": "sb.java",
       "renamed": "PacketBuffer.java",
       "inputSha256": "52a6c27a73d902a33ee2c9d8b2d0fc6a2d5450a81c8e07585ddd3384f05acb30",
-      "outputSha256": "647ef752f75fd0b8ec5b892438bfc441f5c694d874709cb48d399117760d011d",
+      "outputSha256": "93397cf02f2b5e0cd4c8d3b73f536afa3e9d60f2b7a2fb142175f6d3dbdd4fd3",
       "edits": [
         {
           "start": 65,
@@ -327077,6 +328297,13 @@
           "symbol": "F:sb.field_o:I",
           "original": "field_o",
           "renamed": "position"
+        },
+        {
+          "start": 7353,
+          "end": 7354,
+          "symbol": "M:r.a(Ljava/lang/CharSequence;[BIIII)I",
+          "original": "a",
+          "renamed": "encodeCp1252Subsequence"
         },
         {
           "start": 7366,
@@ -327800,6 +329027,13 @@
           "renamed": "position"
         },
         {
+          "start": 15182,
+          "end": 15183,
+          "symbol": "M:ph.a(BI[BI)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "decodeCp1252String"
+        },
+        {
           "start": 15206,
           "end": 15213,
           "symbol": "F:sb.field_u:[B",
@@ -328269,6 +329503,13 @@
           "renamed": "position"
         },
         {
+          "start": 18209,
+          "end": 18210,
+          "symbol": "M:ph.a(BI[BI)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "decodeCp1252String"
+        },
+        {
           "start": 18234,
           "end": 18241,
           "symbol": "F:sb.field_u:[B",
@@ -328624,6 +329865,13 @@
           "symbol": "F:sb.field_o:I",
           "original": "field_o",
           "renamed": "position"
+        },
+        {
+          "start": 20914,
+          "end": 20915,
+          "symbol": "M:r.a(Ljava/lang/CharSequence;[BIIII)I",
+          "original": "a",
+          "renamed": "encodeCp1252Subsequence"
         },
         {
           "start": 20927,
@@ -331254,7 +332502,7 @@
       "original": "tb.java",
       "renamed": "tb.java",
       "inputSha256": "4a0e2080f393a2cdba913ec1eb75fdf63cea1e29c7d429e016a81fc11b119648",
-      "outputSha256": "ec86cd8e660cbe5d21a043167fc12679bb5f8002235744d86aa02babb38b8fbb",
+      "outputSha256": "0989574a585b2ccff9408799f265135001cbe7780ce35ba94e03b19b55d2877c",
       "edits": [
         {
           "start": 376,
@@ -331432,6 +332680,20 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 3584,
+          "end": 3585,
+          "symbol": "M:bj.a(ILjava/lang/String;)I",
+          "original": "a",
+          "renamed": "getGroupIdByName"
+        },
+        {
+          "start": 3736,
+          "end": 3737,
+          "symbol": "M:bj.a(Ljava/lang/String;II)I",
+          "original": "a",
+          "renamed": "getFileIdByName"
+        },
+        {
           "start": 3787,
           "end": 3789,
           "symbol": "C:ek",
@@ -331515,7 +332777,7 @@
       "original": "td.java",
       "renamed": "td.java",
       "inputSha256": "7daa740ada68a4aa668447ae05efc2d0fa3bcb1a602ff27c85211fe5a59cab7a",
-      "outputSha256": "5dc5c6bfdeb6ef92d94d4aec446c28f3bec8bdded51ca41916835d3276306889",
+      "outputSha256": "420e2c6178dc21f8283777b83115ee2917ba282ca80d522939060efde436905f",
       "edits": [
         {
           "start": 635,
@@ -331560,6 +332822,20 @@
           "renamed": "Sprite"
         },
         {
+          "start": 2706,
+          "end": 2707,
+          "symbol": "M:bj.a(ILjava/lang/String;)I",
+          "original": "a",
+          "renamed": "getGroupIdByName"
+        },
+        {
+          "start": 2824,
+          "end": 2825,
+          "symbol": "M:bj.a(Ljava/lang/String;II)I",
+          "original": "a",
+          "renamed": "getFileIdByName"
+        },
+        {
           "start": 3833,
           "end": 3834,
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
@@ -331572,7 +332848,7 @@
       "original": "te.java",
       "renamed": "te.java",
       "inputSha256": "3af02738dc619ba04b6d474647ed3bd25d847c52bc861fb98298f5d7a3c4b650",
-      "outputSha256": "92bd952af6e8e56cb61a144e3fb2bf756b0338bc232810379d4cb452c30f1524",
+      "outputSha256": "bf630ca4d15e610d2b1fab07a2e5ea4f78652dbc8e31ef172f289e59c1537886",
       "edits": [
         {
           "start": 80,
@@ -331610,6 +332886,34 @@
           "renamed": "Sprite"
         },
         {
+          "start": 1007,
+          "end": 1008,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 1170,
+          "end": 1171,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 1332,
+          "end": 1333,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 1408,
+          "end": 1409,
+          "symbol": "M:bj.b(I)Z",
+          "original": "b",
+          "renamed": "tryLoadAllGroups"
+        },
+        {
           "start": 1504,
           "end": 1506,
           "symbol": "C:sb",
@@ -331624,6 +332928,13 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 1544,
+          "end": 1545,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
           "start": 1611,
           "end": 1613,
           "symbol": "C:sb",
@@ -331636,6 +332947,34 @@
           "symbol": "C:sb",
           "original": "sb",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 1784,
+          "end": 1785,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 1934,
+          "end": 1935,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 2085,
+          "end": 2086,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 2156,
+          "end": 2157,
+          "symbol": "M:bj.b(I)Z",
+          "original": "b",
+          "renamed": "tryLoadAllGroups"
         },
         {
           "start": 2258,
@@ -332461,7 +333800,7 @@
       "original": "tl.java",
       "renamed": "tl.java",
       "inputSha256": "0e0757c1265f7bae46ec66865dbc87de911ff7f7ac9568287bb302ade0bc69c6",
-      "outputSha256": "e54d252371deb123906aa9426b27a909ae162a2f2a7fae5febf537d7f6b82bb9",
+      "outputSha256": "9f267238b233f3f955f4681f0682027f340fc7021f31ebf4bb4df526bdac2279",
       "edits": [
         {
           "start": 257,
@@ -332476,6 +333815,20 @@
           "symbol": "C:bj",
           "original": "bj",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 1023,
+          "end": 1024,
+          "symbol": "M:bj.a(ILjava/lang/String;)I",
+          "original": "a",
+          "renamed": "getGroupIdByName"
+        },
+        {
+          "start": 1063,
+          "end": 1064,
+          "symbol": "M:bj.a(Ljava/lang/String;II)I",
+          "original": "a",
+          "renamed": "getFileIdByName"
         },
         {
           "start": 2345,
@@ -332985,7 +334338,7 @@
       "original": "u.java",
       "renamed": "u.java",
       "inputSha256": "523406b8e8422fd3766caaffd5205fb6e12770182273c41b5e4543d416f2d4f3",
-      "outputSha256": "08c3bee6836fdaab2b6b9da38b9bcbcd4bfe4194296713f87fb7a1f940f08364",
+      "outputSha256": "e87503ac35412af08499cf465967c256df20a13974bcfabc681b823633e8f76e",
       "edits": [
         {
           "start": 150,
@@ -332993,6 +334346,20 @@
           "symbol": "C:bj",
           "original": "bj",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 768,
+          "end": 769,
+          "symbol": "M:bj.a(B)Z",
+          "original": "a",
+          "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 988,
+          "end": 989,
+          "symbol": "M:bj.a(Ljava/lang/String;I)I",
+          "original": "a",
+          "renamed": "getGroupLoadPercentByName"
         },
         {
           "start": 2193,
@@ -335659,7 +337026,7 @@
       "original": "vb.java",
       "renamed": "ArchiveProvider.java",
       "inputSha256": "109891d0a182179ef655a2da1f084d581249b5d4c863148e2dbb932478a3fc4d",
-      "outputSha256": "0d7cd5e090ae0af5beb0f97243a51ce94b5344aa6c82ac0d55ddb6c3f4bf782c",
+      "outputSha256": "b1c0c28dee379c2f1dfbc6814d18e2ebfebd17af0f6de28a1da820b4a9225cb3",
       "edits": [
         {
           "start": 53,
@@ -335702,6 +337069,13 @@
           "symbol": "M:vb.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 507,
+          "end": 508,
+          "symbol": "M:vb.a(BI)I",
+          "original": "a",
+          "renamed": "getGroupRequestProgressPercent"
         },
         {
           "start": 560,
@@ -340569,7 +341943,7 @@
       "original": "we.java",
       "renamed": "we.java",
       "inputSha256": "d2a219ef59fd20e22b2210d0a831508e9010bb350e1d196add69b960e949e543",
-      "outputSha256": "d1025e79f619ae28532a74f1cd2661b75da46029d2fc9f6199836087a0efb8f5",
+      "outputSha256": "3998a8373f498a6ec0dcca20c1e5830b40610dc876b30c11276278fe01313d3a",
       "edits": [
         {
           "start": 64,
@@ -340577,6 +341951,27 @@
           "symbol": "C:al",
           "original": "al",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 4726,
+          "end": 4727,
+          "symbol": "M:kj.a(CI)B",
+          "original": "a",
+          "renamed": "encodeCp1252Character"
+        },
+        {
+          "start": 18137,
+          "end": 18138,
+          "symbol": "M:kj.a(CI)B",
+          "original": "a",
+          "renamed": "encodeCp1252Character"
+        },
+        {
+          "start": 24155,
+          "end": 24156,
+          "symbol": "M:kj.a(CI)B",
+          "original": "a",
+          "renamed": "encodeCp1252Character"
         },
         {
           "start": 25533,
@@ -340605,6 +342000,13 @@
           "symbol": "M:eh.e(IIII)V",
           "original": "e",
           "renamed": "drawHorizontalLine"
+        },
+        {
+          "start": 25939,
+          "end": 25940,
+          "symbol": "M:kj.a(CI)B",
+          "original": "a",
+          "renamed": "encodeCp1252Character"
         },
         {
           "start": 30386,
@@ -340809,7 +342211,7 @@
       "original": "wh.java",
       "renamed": "wh.java",
       "inputSha256": "7dfd7be0fee6004a155486213eeaa18da0b0605e68c3dc997c6190d4578fff91",
-      "outputSha256": "48fa2d29319fe4b97db6d018f369a18de084c03e48da9649396eff7271e4d64c",
+      "outputSha256": "03fa749320e2b80d2374e29d05009f66500f0546997053644b63e0ab06784633",
       "edits": [
         {
           "start": 61,
@@ -340824,6 +342226,13 @@
           "symbol": "C:bj",
           "original": "bj",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 254,
+          "end": 255,
+          "symbol": "M:bj.a(Ljava/lang/String;ILjava/lang/String;)[B",
+          "original": "a",
+          "renamed": "getFileByName"
         },
         {
           "start": 363,
@@ -342128,10 +343537,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/minerdisturbance"
     },
-    "rulesSha256": "71838f4998b379bbc1d4a4609543bb4a5f7e31c81ec51968040f2d1692bdf6a6",
+    "rulesSha256": "b6e8766c2ca9304dc75910bac8fe6a00f6ccb9793c97fd596825c07240ecb681",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "ff6d9362791f2ad19a9e37d017e10388ebbd0b667d416d672c04c59a0a462cbf",
-    "outputTreeSha256": "dd8de29893003c86f98ab1e5ace6e7e1175315128c855f63c1a9cd1521b09362",
+    "outputTreeSha256": "b851b2d29147de27232a68f52852c7cb2da3e4e0ec0261df70f7f871d3e0141b",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

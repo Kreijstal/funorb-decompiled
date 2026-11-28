@@ -26,7 +26,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (0 != this.payload[fieldTemp$0]);
         var3 = -1 + (this.position - var2);
         if (var3 != param0) {
-          return pg.a(var3, var2, this.payload, 0);
+          return pg.decodeCp1252String(var3, var2, this.payload, 0);
         }
         return "";
     }
@@ -96,7 +96,7 @@ class PacketBuffer extends IntrusiveNode {
           if (param1 != -2974) {
             field_j = 12;
           }
-          stackIn_6_0 = bk.a(-26395, param2.a(param4, (byte) 121, param0));
+          stackIn_6_0 = bk.a(-26395, param2.getFile(param4, (byte) 121, param0));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -228,7 +228,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (this.payload[fieldTemp$1] != 0);
         var4 = -1 + this.position - var3;
         if (var4 != 0) {
-          return pg.a(var4, var3, this.payload, 0);
+          return pg.decodeCp1252String(var4, var3, this.payload, 0);
         }
         return "";
     }
@@ -306,7 +306,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var5 = (CharSequence) ((Object) param1);
-          this.position = this.position + DiskCacheWorker.a(0, this.payload, param1.length(), var5, -109, this.position);
+          this.position = this.position + DiskCacheWorker.encodeCp1252Subsequence(0, this.payload, param1.length(), var5, -109, this.position);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -500,7 +500,7 @@ class PacketBuffer extends IntrusiveNode {
           this.payload[fieldTemp$0] = (byte) 0;
           int var4 = -40 % ((-3 - param1) / 39);
           var5 = (CharSequence) ((Object) param0);
-          this.position = this.position + DiskCacheWorker.a(0, this.payload, param0.length(), var5, -111, this.position);
+          this.position = this.position + DiskCacheWorker.encodeCp1252Subsequence(0, this.payload, param0.length(), var5, -111, this.position);
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;

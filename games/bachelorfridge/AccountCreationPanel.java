@@ -207,7 +207,7 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
         var3 = var3 + this.a(var3, 170, MassPoisonSpecial.field_r, this.field_G, 120);
         var3 = var3 + (this.a(-20199, var3, this.field_F, ug.field_m, hm.field_a, 170) + 5);
         var3 = var3 + (this.a(-20199, var3, this.field_C, saa.field_u, DreamsAnimation.field_v, 170) + 5);
-        var3 = var3 + this.a(vr.field_h, var3, 170, (byte) -32, this.field_D);
+        var3 = var3 + this.a(ResourceArchive.field_h, var3, 170, (byte) -32, this.field_D);
         ge var4 = new ge(46, var3, -90 + this.width, 25, this.field_H, true, this.width - 120, 5, oc.field_l, 11579568, ona.field_vb);
         this.c(var4, 38);
         var3 = var3 + var4.height;

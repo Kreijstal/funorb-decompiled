@@ -6,7 +6,7 @@ final class vb extends vo {
     private int field_m;
     static int[] field_h;
     static java.lang.reflect.Constructor field_g;
-    static vr field_j;
+    static ResourceArchive field_j;
     static java.lang.reflect.Method field_n;
     private int field_i;
     private int field_l;

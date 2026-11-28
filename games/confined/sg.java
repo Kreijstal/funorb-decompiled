@@ -43,13 +43,13 @@ final class sg extends DualLinkNode {
           return true;
         }
         if (this.field_v == null) {
-          if (!rn.field_f.a(this.field_w, 0)) {
+          if (!rn.field_f.tryLoadGroup(this.field_w, 0)) {
             return false;
           }
           var26 = rn.field_f.a((byte) -112, this.field_w);
           this.field_v = new byte[var26.length][];
           for (var3_int = 0; var26.length > var3_int; var3_int++) {
-            this.field_v[var3_int] = rn.field_f.a((byte) -2, this.field_w, var26[var3_int]);
+            this.field_v[var3_int] = rn.field_f.getFile((byte) -2, this.field_w, var26[var3_int]);
           }
         }
         var2 = 1;

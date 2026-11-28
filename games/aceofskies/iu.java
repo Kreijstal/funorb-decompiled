@@ -26,8 +26,8 @@ final class iu extends ao {
             String var6 = (String) null;
             iu.a((ResourceArchive) null, (String) null, (byte) 65, (String) null);
           }
-          int var4_int = param0.b(param1, 0);
-          int var5 = param0.a(-67, var4_int, param3);
+          int var4_int = param0.getGroupIdByName(param1, 0);
+          int var5 = param0.getFileIdByName(-67, var4_int, param3);
           IndexedSprite[] stackIn_3_0 = ur.a(101, var4_int, var5, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

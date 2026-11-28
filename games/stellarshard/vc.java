@@ -13,7 +13,7 @@ final class vc {
     String field_d;
     int field_i;
     static int[] field_f;
-    pf field_e;
+    ResourceArchive field_e;
 
     public static void clearStaticReferences(int param0) {
         if (param0 != -1) {
@@ -25,7 +25,7 @@ final class vc {
         field_f = null;
     }
 
-    final static Sprite a(pf param0, int param1, int param2, int param3) {
+    final static Sprite a(ResourceArchive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

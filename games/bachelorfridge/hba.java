@@ -46,7 +46,7 @@ final class hba extends AttackEvent {
         }
     }
 
-    final static void a(boolean param0, vr param1) {
+    final static void a(boolean param0, ResourceArchive param1) {
         IndexedSprite[] var10 = null;
         IndexedSprite dupTemp$0 = null;
         IndexedSprite[] var11 = null;

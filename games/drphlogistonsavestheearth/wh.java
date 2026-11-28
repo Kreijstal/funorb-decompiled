@@ -290,7 +290,7 @@ abstract class wh extends DualLinkNode {
         }
     }
 
-    final static void a(int param0, vj param1, vj param2, vj param3, boolean param4) {
+    final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3, boolean param4) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

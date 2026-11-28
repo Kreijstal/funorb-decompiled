@@ -81,11 +81,11 @@ final class ji extends kn {
             var6 = (String) null;
             ji.a(74, true, (String) null, (String) null, (byte) 108, true);
           }
-          if (!param3.c((byte) 125)) {
+          if (!param3.ensureIndexLoaded((byte) 125)) {
             stackIn_5_0 = (String) (param0);
             return stackIn_5_0;
           }
-          stackIn_7_0 = param2 + " - " + param3.c(param1, 0) + "%";
+          stackIn_7_0 = param2 + " - " + param3.getGroupLoadPercentByName(param1, 0) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -161,7 +161,7 @@ final class ji extends kn {
             }
             if (tb.field_f == ca.field_h) {
               if (!param1) {
-                eh.field_K = nk.a(false, param2, param3, true);
+                eh.field_K = BitPacketBuffer.createLoginRequest(false, param2, param3, true);
               } else {
                 var11 = (String) null;
                 eh.field_K = DualLinkNode.a(false, param2, (byte) 118, (String) null, sj.field_i);
@@ -287,11 +287,11 @@ final class ji extends kn {
               if (cl.field_d > 0) {
                 ln.field_Kb = true;
               }
-              qn.field_U.a(ol.field_S, (byte) -92);
+              qn.field_U.setCipherSeed(ol.field_S, (byte) -92);
               for (var9Lifetime1 = 0; var9Lifetime1 < 4; var9Lifetime1++) {
                 ol.field_S[var9Lifetime1] = ol.field_S[var9Lifetime1] + 50;
               }
-              tk.field_h.a(ol.field_S, (byte) -92);
+              tk.field_h.setCipherSeed(ol.field_S, (byte) -92);
               stackIn_82_0 = wg.field_B;
               return stackIn_82_0;
             }

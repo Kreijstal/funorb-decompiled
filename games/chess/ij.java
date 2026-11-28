@@ -13,13 +13,13 @@ final class ij {
         try {
           da.a(fi.field_b, r.field_Tb, ic.field_c, bj.field_eb, Bzip2State.field_o, qn.field_P, af.field_o, tk.field_d, param1, false, sj.field_k, pk.field_a);
           el.field_z = ao.a(param2, "chatfilter", 2993, "lobby");
-          nk.field_x[2] = ii.field_K;
-          nk.field_x[1] = gg.field_g;
+          BitPacketBuffer.field_x[2] = ii.field_K;
+          BitPacketBuffer.field_x[1] = gg.field_g;
           if (param3 <= 70) {
             ResourceArchive var5 = (ResourceArchive) null;
             ij.a((ResourceArchive) null, false, (ResourceArchive) null, (byte) 17);
           }
-          nk.field_x[0] = fm.field_Q;
+          BitPacketBuffer.field_x[0] = fm.field_Q;
           dm.a(v.field_k, param0, 1513239);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ij.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

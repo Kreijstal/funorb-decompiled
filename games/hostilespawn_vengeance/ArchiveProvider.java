@@ -8,7 +8,7 @@ abstract class ArchiveProvider {
     static int field_e;
     static String field_b;
 
-    abstract int b(int param0, int param1);
+    abstract int getGroupRequestProgressPercent(int param0, int param1);
 
     abstract ArchiveIndex c(int param0);
 

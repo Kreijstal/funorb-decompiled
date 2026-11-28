@@ -3,8 +3,8 @@
  */
 final class kh {
     private od field_a;
-    private gk field_c;
-    private gk field_b;
+    private ResourceArchive field_c;
+    private ResourceArchive field_b;
 
     final ne a(int param0, byte param1) {
         byte[] var4 = null;
@@ -13,9 +13,9 @@ final class kh {
           return var3;
         }
         if (param0 >= 32768) {
-          var4 = this.field_c.b(92, 32767 & param0, 1);
+          var4 = this.field_c.getFile(92, 32767 & param0, 1);
         } else {
-          var4 = this.field_b.b(114, param0, 1);
+          var4 = this.field_b.getFile(114, param0, 1);
         }
         var3 = new ne();
         if (param1 > -88) {

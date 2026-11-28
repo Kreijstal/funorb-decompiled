@@ -223,7 +223,7 @@ final class wm extends hf {
           if (param1 <= 27) {
             field_hb = -83;
           }
-          stackIn_3_0 = PrimaryNodeDeque.field_e.a(-98, "", param0);
+          stackIn_3_0 = PrimaryNodeDeque.field_e.getFileByName(-98, "", param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

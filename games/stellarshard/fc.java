@@ -5,10 +5,10 @@ final class fc {
     static String field_d;
     static String field_c;
     static int field_e;
-    static pf field_a;
+    static ResourceArchive field_a;
     static String[] field_b;
 
-    final static ek a(int param0, pf param1, int param2, boolean param3) {
+    final static ek a(int param0, ResourceArchive param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         ek stackIn_6_0 = null;

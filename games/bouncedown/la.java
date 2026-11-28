@@ -5,7 +5,7 @@ import java.util.*;
 
 final class la extends wd {
     private uh field_B;
-    static gk field_D;
+    static ResourceArchive field_D;
     private int field_F;
     static Random field_C;
     static RgbSprite[] field_E;
@@ -161,7 +161,7 @@ final class la extends wd {
         int var3;
         int var4;
         int var5;
-        gk var6;
+        ResourceArchive var6;
         String var7;
         String var16;
         String var17;
@@ -199,8 +199,8 @@ final class la extends wd {
           }
           return var1;
         }
-        var6 = (gk) null;
-        la.a(-118, -34, (gk) null, (byte) -39);
+        var6 = (ResourceArchive) null;
+        la.a(-118, -34, (ResourceArchive) null, (byte) -39);
         if (pe.field_d <= 0) {
           return var1;
         }
@@ -336,7 +336,7 @@ final class la extends wd {
         nj.a(param1, -25698, var2);
     }
 
-    final static we[] a(int param0, int param1, gk param2, byte param3) {
+    final static we[] a(int param0, int param1, ResourceArchive param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         we[] stackIn_4_0 = null;

@@ -32,11 +32,11 @@ final class DualLinkDequeIterator implements Iterator {
     }
 
     final static void a(int param0, qf param1, int param2) {
-        se var6 = null;
+        BitPacketBuffer var6 = null;
         int var4 = 0;
         try {
           var6 = uk.field_b;
-          var6.i(param2, 112);
+          var6.writeCipheredByte(param2, 112);
           var6.position = var6.position + 1;
           var4 = var6.position;
           var6.writeByte(1, param0 ^ 30243);

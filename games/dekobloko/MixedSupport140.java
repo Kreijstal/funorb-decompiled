@@ -40,9 +40,9 @@ abstract class MixedSupport140 extends DualNode {
         String stackStringLocal14 = null;
         RuntimeException caughtExceptionLocal15 = null;
         try {
-          integerLocal1 = resourceArchiveArgument2.computeInteger0819(-1, stringArgument3);
+          integerLocal1 = resourceArchiveArgument2.getGroupIdByName(-1, stringArgument3);
           integerLocal4 = -37 % ((byteArgument4 - 39) / 44);
-          integerLocal3 = resourceArchiveArgument2.computeInteger0806(integerLocal1, 13030, stringArgument5);
+          integerLocal3 = resourceArchiveArgument2.getFileIdByName(integerLocal1, 13030, stringArgument5);
           stackRenderingSupport011Local5 = MixedSupport027.computeRenderingSupport0110388(resourceArchiveArgument1, integerLocal1, integerLocal3, (byte) -75, resourceArchiveArgument2);
           return stackRenderingSupport011Local5;
         } catch (java.lang.RuntimeException caughtParameterLocal16) {

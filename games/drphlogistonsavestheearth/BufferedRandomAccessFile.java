@@ -222,7 +222,7 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final static int a(byte[] param0, int param1, int param2, int param3, CharSequence param4, int param5) {
+    final static int encodeCp1252Subsequence(byte[] param0, int param1, int param2, int param3, CharSequence param4, int param5) {
         int var7 = 0;
         int stackIn_69_0 = 0;
         RuntimeException stackIn_72_0 = null;
@@ -241,7 +241,7 @@ final class BufferedRandomAccessFile {
           var6_int = param3 - param2;
           if (param5 > -123) {
             var10 = (CharSequence) null;
-            BufferedRandomAccessFile.a((byte[]) null, 67, 112, -126, (CharSequence) null, 48);
+            BufferedRandomAccessFile.encodeCp1252Subsequence((byte[]) null, 67, 112, -126, (CharSequence) null, 48);
           }
           for (var7 = 0; var7 < var6_int; var7++) {
             {
@@ -416,7 +416,7 @@ final class BufferedRandomAccessFile {
         var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (param0 != 0) {
           var8 = (CharSequence) null;
-          BufferedRandomAccessFile.a((byte[]) null, 111, 53, 38, (CharSequence) null, -38);
+          BufferedRandomAccessFile.encodeCp1252Subsequence((byte[]) null, 111, 53, 38, (CharSequence) null, -38);
         }
         boolean decompiledFrameRemainder0 = true;
         if (-1L != this.field_k) {

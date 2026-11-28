@@ -98,15 +98,15 @@ final class DirectByteStorage extends ByteStorage {
     }
 
     final static void a(int param0, bg param1, int param2) {
-        lh var7 = null;
-        lh var8 = null;
+        BitPacketBuffer var7 = null;
+        BitPacketBuffer var8 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           var7 = nj.field_p;
           var8 = var7;
-          var8.d(param0, -18392);
+          var8.writeCipheredByte(param0, -18392);
           var8.position = var8.position + 1;
           var4 = var8.position;
           var8.writeByte(1, (byte) -93);

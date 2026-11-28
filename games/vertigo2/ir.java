@@ -33,16 +33,16 @@ final class ir {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param2.b(0)) {
+          if (!param2.ensureIndexLoaded(0)) {
             return false;
           }
           if (!param2.c("commonui", 0)) {
             return false;
           }
-          if (param1.b(0) &&
+          if (param1.ensureIndexLoaded(0) &&
             param1.c("commonui", 0)) {
             var4_int = -20 % ((param0 - 12) / 63);
-            if (param3.b(0) &&
+            if (param3.ensureIndexLoaded(0) &&
               param3.c("button.gif", 0)) {
               return true;
             }

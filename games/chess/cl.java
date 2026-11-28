@@ -16,8 +16,8 @@ final class cl {
           pi.field_c.a(param1, -1730123902);
           return;
         }
-        nk var3 = (nk) null;
-        cl.a(-24, (nk) null);
+        BitPacketBuffer var3 = (BitPacketBuffer) null;
+        cl.a(-24, (BitPacketBuffer) null);
         pi.field_c.a(param1, -1730123902);
     }
 
@@ -48,7 +48,7 @@ final class cl {
         field_e = null;
     }
 
-    final static fn[] a(int param0, nk param1) {
+    final static fn[] a(int param0, BitPacketBuffer param1) {
         int var5 = 0;
         Object stackIn_5_0 = null;
         fn[] stackIn_14_0 = null;
@@ -68,26 +68,26 @@ final class cl {
           if (param0 != -4974) {
             field_g = (RgbSprite) null;
           }
-          var2_int = param1.e(-16, 8);
+          var2_int = param1.readBits(-16, 8);
           if (var2_int > 0) {
             stackIn_5_0 = null;
             return (fn[]) (stackIn_5_0);
           }
-          var3 = param1.e(param0 + 5082, 12);
+          var3 = param1.readBits(param0 + 5082, 12);
           var4 = new fn[var3];
           for (var5 = 0; var3 > var5; var5++) {
             if (!r.a(true, param1)) {
-              var6 = param1.e(-63, kb.a(-1 + var5, param0 ^ -4904));
+              var6 = param1.readBits(-63, kb.a(-1 + var5, param0 ^ -4904));
               var4[var5] = var4[var6];
             } else {
               var6_ref_fn = new fn();
-              param1.e(param0 + 5096, 24);
-              param1.e(-33, 24);
-              var6_ref_fn.field_g = param1.e(-94, 24);
-              param1.e(123, 9);
-              param1.e(-18, 12);
-              param1.e(110, 12);
-              param1.e(105, 12);
+              param1.readBits(param0 + 5096, 24);
+              param1.readBits(-33, 24);
+              var6_ref_fn.field_g = param1.readBits(-94, 24);
+              param1.readBits(123, 9);
+              param1.readBits(-18, 12);
+              param1.readBits(110, 12);
+              param1.readBits(105, 12);
               var4[var5] = var6_ref_fn;
             }
           }

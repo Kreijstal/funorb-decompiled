@@ -128,7 +128,7 @@ final class wg {
           if (param1 != 0) {
             field_u = (AccountRequestState) null;
           }
-          stackIn_3_0 = fk.field_h.a("", param0, 24874);
+          stackIn_3_0 = fk.field_h.getFileByName("", param0, 24874);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

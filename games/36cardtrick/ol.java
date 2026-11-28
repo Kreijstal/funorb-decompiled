@@ -6,7 +6,7 @@ final class ol extends jc implements qh {
     private hl field_Y;
     static int field_X;
 
-    final static wb[] a(int param0, qk param1, int param2, int param3) {
+    final static wb[] a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         wb[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -67,7 +67,7 @@ final class ol extends jc implements qh {
         hl var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        qk var6 = null;
+        ResourceArchive var6 = null;
         hl stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -78,8 +78,8 @@ final class ol extends jc implements qh {
         try {
           var4 = new hl(param0, param2);
           if (param1 != -29995) {
-            var6 = (qk) null;
-            ol.a(76, (qk) null, 39, 118);
+            var6 = (ResourceArchive) null;
+            ol.a(76, (ResourceArchive) null, 39, 118);
           }
           var4.field_v = (ci) ((Object) new ki());
           var5 = -6 + this.field_q;

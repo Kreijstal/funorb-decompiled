@@ -22,10 +22,10 @@ final class de {
     }
 
     final static void a(oi param0, int param1, int param2) {
-        hj var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           var3 = ff.field_D;
-          var3.a(false, param1);
+          var3.writeCipheredByte(false, param1);
           var3.writeByte(6389, param2);
           var3.writeByte(6389, 0);
           var3.writeByte(param2 + 6387, param0.field_h);
@@ -45,7 +45,7 @@ final class de {
         return var2;
     }
 
-    final static byte a(int param0, char param1) {
+    final static byte encodeCp1252Character(int param0, char param1) {
         int var2;
         int var3;
         int var2Lifetime1;

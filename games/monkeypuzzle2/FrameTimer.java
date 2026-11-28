@@ -28,14 +28,14 @@ abstract class FrameTimer {
 
     abstract void resetTiming(boolean param0);
 
-    final static char a(int param0, byte param1) {
+    final static char decodeCp1252Byte(int param0, byte param1) {
         int var2;
         int var3;
         int var2Lifetime1;
         int var3Lifetime1;
         var2 = param1 & 255;
         if (param0 != 16) {
-          FrameTimer.a(-100, (byte) -72);
+          FrameTimer.decodeCp1252Byte(-100, (byte) -72);
           if (var2 == 0) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
           }

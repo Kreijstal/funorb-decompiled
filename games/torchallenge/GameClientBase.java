@@ -195,7 +195,7 @@ abstract class GameClientBase extends GameApplet {
         }
         if (li.field_K == 2) {
           if (rj.field_f != null &&
-            rj.field_f.b(-7957)) {
+            rj.field_f.ensureIndexLoaded(-7957)) {
             if (rj.field_f.a((byte) -39, "")) {
               if (rj.field_f.b(5, "")) {
                 oj.a(-3798, rj.field_f);
@@ -248,8 +248,8 @@ abstract class GameClientBase extends GameApplet {
         }
         boolean decompiledFrameRemainder0 = true;
         if (li.field_K == 11) {
-          if (ClientException.field_e != null && (!ClientException.field_e.b(-7957) ||
-            !ClientException.field_e.b((byte) 79))) {
+          if (ClientException.field_e != null && (!ClientException.field_e.ensureIndexLoaded(-7957) ||
+            !ClientException.field_e.tryLoadAllGroups((byte) 79))) {
             mh.a(tk.a(ol.field_f, ClientException.field_e, sd.field_g, 256), (byte) -125, 0.0f);
             decompiledFrameRemainder0 = false;
           }
@@ -598,7 +598,7 @@ abstract class GameClientBase extends GameApplet {
                 if (var11 == null) {
                   ti.a((String) null, param1 - 84);
                 } else {
-                  var7 = r.a(var11.position, 0, var11.payload, (byte) 8);
+                  var7 = r.decodeCp1252String(var11.position, 0, var11.payload, (byte) 8);
                   ti.a(var7, -122);
                 }
                 tc.field_o = null;

@@ -28,7 +28,7 @@ abstract class ri extends lc {
         }
     }
 
-    final static RgbSprite[] a(String param0, gk param1, boolean param2, String param3) {
+    final static RgbSprite[] a(String param0, ResourceArchive param1, boolean param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -42,8 +42,8 @@ abstract class ri extends lc {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.a(param0, param2);
-          var5 = param1.a(var4_int, param3, 125);
+          var4_int = param1.getGroupIdByName(param0, param2);
+          var5 = param1.getFileIdByName(var4_int, param3, 125);
           stackIn_1_0 = fl.a(-69, var4_int, param1, var5);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -187,7 +187,7 @@ abstract class ri extends lc {
           return;
         }
         String var2 = (String) null;
-        ri.a((String) null, (gk) null, true, (String) null);
+        ri.a((String) null, (ResourceArchive) null, true, (String) null);
         field_C = null;
     }
 

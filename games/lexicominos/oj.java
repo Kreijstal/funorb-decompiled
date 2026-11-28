@@ -51,7 +51,7 @@ final class oj {
         }
     }
 
-    final static sh a(boolean param0, int param1) {
+    final static ResourceArchive a(boolean param0, int param1) {
         if (param0) {
           oj.a(false, 68);
         }
@@ -237,7 +237,7 @@ final class oj {
         }
     }
 
-    oj(sh param0, sh param1, eb param2) {
+    oj(ResourceArchive param0, ResourceArchive param1, eb param2) {
         int stackIn_11_0 = 0;
         boolean stackIn_18_1 = false;
         BinaryBitmapFont stackIn_21_1 = null;

@@ -56,7 +56,7 @@ final class ContextualRuntimeException extends RuntimeException {
         }
     }
 
-    final static void a(int param0, ci param1) {
+    final static void a(int param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2625_0;
             StringBuilder stackIn_2625_1;
@@ -67,9 +67,9 @@ final class ContextualRuntimeException extends RuntimeException {
             RuntimeException var2_ref;
             int var3;
             int param0;
-            ci param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, ci initialParam1) {
+            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2625_0 = null;
@@ -113,7 +113,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("error_js5connect", (byte) 105);
                 if (null != var2) {
-                  hj.field_o = eg.a(102, var2);
+                  BitPacketBuffer.field_o = eg.a(102, var2);
                 }
                 var2 = kb.a("login_gameupdated", (byte) 120);
                 if (var2 != null) {
@@ -2568,7 +2568,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("keychar_the_character_under_questionmark", (byte) 105);
                 if (var2 != null) {
-                  BoundedRandomAccessFile.a(97, var2[0]);
+                  BoundedRandomAccessFile.decodeCp1252Byte(97, var2[0]);
                 }
                 var2 = kb.a("rating_noratings", (byte) 105);
                 if (var2 != null) {
@@ -3106,7 +3106,7 @@ final class ContextualRuntimeException extends RuntimeException {
     public static void a(int param0) {
         field_e = null;
         if (param0 != 6) {
-          ContextualRuntimeException.a((ci) null, (byte) -102, (String) null, (String) null);
+          ContextualRuntimeException.a((ResourceArchive) null, (byte) -102, (String) null, (String) null);
         }
         field_d = null;
     }
@@ -3213,7 +3213,7 @@ final class ContextualRuntimeException extends RuntimeException {
         this.field_b = param0;
     }
 
-    final static Sprite[] a(ci param0, byte param1, String param2, String param3) {
+    final static Sprite[] a(ResourceArchive param0, byte param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -3230,8 +3230,8 @@ final class ContextualRuntimeException extends RuntimeException {
           if (param1 < 120) {
             field_c = -113;
           }
-          var4_int = param0.b(65, param2);
-          var5 = param0.a(-1, param3, var4_int);
+          var4_int = param0.getGroupIdByName(65, param2);
+          var5 = param0.getFileIdByName(-1, param3, var4_int);
           stackIn_4_0 = IntrusiveDeque.a(var4_int, var5, param0, (byte) -57);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3260,7 +3260,7 @@ final class ContextualRuntimeException extends RuntimeException {
         }
     }
 
-    final static WordDictionary[] b(int param0, ci param1) {
+    final static WordDictionary[] b(int param0, ResourceArchive param1) {
         int stackIn_13_0 = 0;
         WordDictionary[] stackIn_14_0 = null;
         RuntimeException stackIn_18_0 = null;
@@ -3280,7 +3280,7 @@ final class ContextualRuntimeException extends RuntimeException {
         var9 = Transmogrify.field_A ? 1 : 0;
         try {
           var2 = new WordDictionary[64];
-          var3 = new PacketBuffer(param1.a("", (byte) 92, "index"));
+          var3 = new PacketBuffer(param1.getFileByName("", (byte) 92, "index"));
           scanLoop1: while (true) {
             if (var3.position < var3.payload.length) {
               var4 = var3.readUnsignedByte((byte) 89);
@@ -3298,7 +3298,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 var7.field_c[var8][1] = var3.readString(12248);
                 var8++;
               }
-              var7.a(new PacketBuffer(param1.a((byte) -93, var6, var5)), 1);
+              var7.a(new PacketBuffer(param1.getFile((byte) -93, var6, var5)), 1);
               continue scanLoop1;
             }
             stackIn_13_0 = 102 / ((param0 - 30) / 63);

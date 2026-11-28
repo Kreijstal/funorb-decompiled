@@ -102,9 +102,9 @@ final class fe extends ButtonWidget {
         int[] var6 = null;
         int var7 = 0;
         MidiFile var8 = null;
-        la var9 = null;
+        BitPacketBuffer var9 = null;
         int var10 = 0;
-        la var11 = null;
+        BitPacketBuffer var11 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -113,10 +113,10 @@ final class fe extends ButtonWidget {
         int var4Lifetime1;
         var7 = TrackController.field_F ? 1 : 0;
         try {
-          var9 = new la(param1.a("logo.fo3d", -1, ""));
+          var9 = new BitPacketBuffer(param1.getFileByName("logo.fo3d", -1, ""));
           var11 = var9;
           var3 = var11.readUnsignedByte(param0 - 13961);
-          var11.h((byte) 31);
+          var11.beginBitAccess((byte) 31);
           lg.field_d = hb.a(12, var11);
           if (param0 != 30344) {
             var8 = (MidiFile) null;
@@ -127,7 +127,7 @@ final class fe extends ButtonWidget {
           for (var4 = 0; var4 < var3; var4++) {
             ef.field_a[var4] = sf.a(var9, false);
           }
-          var11.g((byte) -106);
+          var11.endBitAccess((byte) -106);
           var10 = 0;
           var4Lifetime1 = var10;
           while (var10 < var3) {

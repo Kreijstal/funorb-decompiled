@@ -2561,7 +2561,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("keychar_the_character_under_questionmark", 0);
                 if (null != var2) {
-                  vi.a(var2[0], 115);
+                  vi.decodeCp1252Byte(var2[0], 115);
                 }
                 var2 = ad.a("rating_noratings", 0);
                 if (null != var2) {

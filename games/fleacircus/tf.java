@@ -43,7 +43,7 @@ final class tf extends dk {
             }
             var4 = new byte[var3_int];
             param0.position = param0.position + qg.field_e.a(param0.payload, param0.position, 0, var3_int, var4, param1 - 1);
-            var5 = pg.a(var3_int, 0, var4, param1);
+            var5 = pg.decodeCp1252String(var3_int, 0, var4, param1);
             stackIn_3_0 = var5;
             return stackIn_3_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -109,7 +109,7 @@ final class tf extends dk {
           if (param0 != 0) {
             field_G = (ob) null;
           }
-          stackIn_3_0 = ProxyAuthenticationRequiredException.field_c.a(0, param1, "");
+          stackIn_3_0 = ProxyAuthenticationRequiredException.field_c.getFileByName(0, param1, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

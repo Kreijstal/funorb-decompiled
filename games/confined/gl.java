@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gl extends mf {
-    static mi field_j;
+    static ResourceArchive field_j;
     static String field_k;
     private ul field_l;
     static double field_m;

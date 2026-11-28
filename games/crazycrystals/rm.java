@@ -5,8 +5,8 @@ final class rm extends IntrusiveNode {
     byte[] field_g;
     fc field_f;
 
-    final static rm a(db param0, String param1, String param2) {
-        byte[] var3 = param0.a(7693, param2, param1);
+    final static rm a(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.getFileByName(7693, param2, param1);
         if (var3 == null) {
           return null;
         }

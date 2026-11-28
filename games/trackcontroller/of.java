@@ -67,7 +67,7 @@ final class of extends ec {
             var3 = (java.net.URL) null;
             of.a((java.applet.Applet) null, (java.net.URL) null, false);
           }
-          kf.mouseX = la.liveMouseX;
+          kf.mouseX = BitPacketBuffer.liveMouseX;
           fg.mouseY = ArchiveSource.liveMouseY;
           GameScreen.mouseMoved = hd.inputPending;
           hd.inputPending = false;

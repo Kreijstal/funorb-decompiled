@@ -9,7 +9,7 @@ final class p {
     static he field_e;
     static int field_f;
 
-    final static String a(int param0, byte param1, byte[] param2, int param3) {
+    final static String decodeCp1252String(int param0, byte param1, byte[] param2, int param3) {
         int incrementValue$1 = 0;
         char[] var4 = null;
         RuntimeException var4_ref = null;

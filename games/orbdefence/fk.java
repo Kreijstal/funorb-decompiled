@@ -35,7 +35,7 @@ final class fk {
         return tl.a(uj.b((byte) -120), 61);
     }
 
-    final static RgbSprite a(ki param0, String param1, int param2, String param3) {
+    final static RgbSprite a(ResourceArchive param0, String param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -51,8 +51,8 @@ final class fk {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = 122 % ((param2 + 6) / 44);
-          var5 = param0.a(param3, 0);
-          var6 = param0.a(param1, 5187, var5);
+          var5 = param0.getGroupIdByName(param3, 0);
+          var6 = param0.getFileIdByName(param1, 5187, var5);
           stackIn_1_0 = AccountRequestState.a(var5, var6, param0, (byte) -127);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

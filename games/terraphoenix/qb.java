@@ -28,8 +28,8 @@ final class qb {
           if (param1 != -36) {
             qb.a('ﾓ', (byte) -10);
           }
-          var4_int = param3.c(-1, param2);
-          var5 = param3.a(param1 - 90, var4_int, param0);
+          var4_int = param3.getGroupIdByName(-1, param2);
+          var5 = param3.getFileIdByName(param1 - 90, var4_int, param0);
           stackIn_3_0 = IntrusiveDeque.a(param3, var5, (byte) 18, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -102,9 +102,9 @@ final class qb {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        uc var13 = null;
+        BitPacketBuffer var13 = null;
         int var14 = 0;
-        uc var15 = null;
+        BitPacketBuffer var15 = null;
         int[][] var19 = null;
         int var6_intLifetime1;
         int var9Lifetime1;

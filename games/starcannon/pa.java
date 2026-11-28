@@ -21,7 +21,7 @@ final class pa extends ab {
         }
     }
 
-    final static boolean a(ue param0, int param1) {
+    final static boolean a(ResourceArchive param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -32,7 +32,7 @@ final class pa extends ab {
           if (param1 != -206) {
             field_J = (String) null;
           }
-          stackIn_3_0 = param0.a(29741);
+          stackIn_3_0 = param0.tryLoadAllGroups(29741);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -54,8 +54,8 @@ final class pa extends ab {
           field_J = null;
           return;
         }
-        ue var2 = (ue) null;
-        pa.a((ue) null, 119);
+        ResourceArchive var2 = (ResourceArchive) null;
+        pa.a((ResourceArchive) null, 119);
         field_I = null;
         field_J = null;
     }

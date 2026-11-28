@@ -3,7 +3,7 @@
  */
 final class SplitEvent extends SpecialEvent {
     static String field_s;
-    static vr field_r;
+    static ResourceArchive field_r;
     static String field_q;
 
     final void a(BattleState param0, int param1) {

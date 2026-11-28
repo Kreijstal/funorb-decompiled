@@ -542,7 +542,7 @@ final class uk extends ab {
         }
     }
 
-    final int b(int param0, int param1) {
+    final int getGroupRequestProgressPercent(int param0, int param1) {
         if (param1 != 57) {
           return 100;
         }

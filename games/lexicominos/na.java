@@ -13,7 +13,7 @@ final class na {
         PcmSampleStream var2;
         PcmSampleStream stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
-        var2 = th.field_o[param0];
+        var2 = BitPacketBuffer.field_o[param0];
         if (!param1) {
           return;
         }
@@ -149,7 +149,7 @@ final class na {
             field_a = (RgbSprite[]) null;
           }
           for (var4 = 0; var2_int > var4; var4++) {
-            var3 = -var3 + (var3 << 5) + ua.a(true, param1.charAt(var4));
+            var3 = -var3 + (var3 << 5) + ua.encodeCp1252Character(true, param1.charAt(var4));
           }
           stackIn_7_0 = var3;
           return stackIn_7_0;
@@ -254,8 +254,8 @@ final class na {
 
     final static void a(byte param0, wa param1, int param2) {
         int var4 = 0;
-        th var5 = SpriteGeometry.field_q;
-        var5.h(param2, 0);
+        BitPacketBuffer var5 = SpriteGeometry.field_q;
+        var5.writeCipheredByte(param2, 0);
         if (param0 > -77) {
           return;
         }

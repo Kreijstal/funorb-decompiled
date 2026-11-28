@@ -78,7 +78,7 @@ final class NetworkSupport008 implements Runnable {
                 outputStreamLocal3 = socketLocal4.getOutputStream();
                 outputStreamLocal3.write(17);
                 charSequenceLocal5 = (CharSequence) ((Object) ("JAGGRAB " + this.uRLState0001.getFile() + "\n\n"));
-                outputStreamLocal3.write(SceneWidgetNode.computeByteArray0915(6216, charSequenceLocal5));
+                outputStreamLocal3.write(SceneWidgetNode.encodeCp1252Bytes(6216, charSequenceLocal5));
                 this.dataInputStreamState0001 = new DataInputStream(socketLocal4.getInputStream());
               }
               this.packetBufferState0006.position = 0;
@@ -120,7 +120,7 @@ final class NetworkSupport008 implements Runnable {
             stringLocal2 = (String) null;
             NetworkSupport008.computeMusicTrack1173((ResourceArchive) null, -55, (String) null, (NetworkSupport011) null, (String) null);
           }
-          stackByteArrayLocal3 = Sprite.resourceArchiveState0010.computeByteArray0809(0, stringArgument1, "");
+          stackByteArrayLocal3 = Sprite.resourceArchiveState0010.getFileByName(0, stringArgument1, "");
           return stackByteArrayLocal3;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
           caughtExceptionLocal7 = caughtParameterLocal8;
@@ -248,8 +248,8 @@ final class NetworkSupport008 implements Runnable {
             stackMusicTrackLocal4 = (MusicTrack) null;
             return stackMusicTrackLocal4;
           }
-          integerLocal1 = resourceArchiveArgument1.computeInteger0819(integerArgument2 - 92, stringArgument3);
-          integerLocal3 = resourceArchiveArgument1.computeInteger0806(integerLocal1, integerArgument2 + 12939, stringArgument5);
+          integerLocal1 = resourceArchiveArgument1.getGroupIdByName(integerArgument2 - 92, stringArgument3);
+          integerLocal3 = resourceArchiveArgument1.getFileIdByName(integerLocal1, integerArgument2 + 12939, stringArgument5);
           stackMusicTrackLocal5 = LoginCredentials.computeMusicTrack0793(true, networkSupport011Argument4, integerLocal3, integerLocal1, resourceArchiveArgument1);
           return stackMusicTrackLocal5;
         } catch (java.lang.RuntimeException caughtParameterLocal16) {

@@ -41,7 +41,7 @@ final class ge {
         cg.field_j[59] = 57;
     }
 
-    final static Sprite[] a(int param0, int param1, ue param2, int param3) {
+    final static Sprite[] a(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         Sprite[] stackIn_5_0 = null;

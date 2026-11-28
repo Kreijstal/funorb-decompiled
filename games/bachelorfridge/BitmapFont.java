@@ -224,7 +224,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(aca.a((char) var8, 8220) & 255);
+              var8 = (char)(aca.encodeCp1252Character((char) var8, 8220) & 255);
               if (this.field_s != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_s[(var5 << 8) + var8];
@@ -683,7 +683,7 @@ abstract class BitmapFont extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_A.append((char) var14);
-                var14 = (char)(aca.a((char) var14, 8220) & 255);
+                var14 = (char)(aca.encodeCp1252Character((char) var14, 8220) & 255);
                 var4 = var4 + this.field_o[var14];
                 if (this.field_s != null &&
                   var10 != 0) {
@@ -883,7 +883,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(aca.a((char) var7, 8220) & 255);
+              var7 = (char)(aca.encodeCp1252Character((char) var7, 8220) & 255);
               var4 = var4 + this.field_o[var7];
               if (this.field_s != null &&
                 var3 != 0) {
@@ -983,7 +983,7 @@ abstract class BitmapFont extends DualLinkNode {
     }
 
     final int a(char param0) {
-        return this.field_o[aca.a(param0, 8220) & 255];
+        return this.field_o[aca.encodeCp1252Character(param0, 8220) & 255];
     }
 
     static {

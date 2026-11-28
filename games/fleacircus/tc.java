@@ -31,8 +31,8 @@ final class tc {
           if (param3 <= 88) {
             tc.clearStaticReferences((byte) 1);
           }
-          var5_int = param2.a(param4, (byte) -100);
-          var6 = param2.a(param1, (byte) -15, var5_int);
+          var5_int = param2.getGroupIdByName(param4, (byte) -100);
+          var6 = param2.getFileIdByName(param1, (byte) -15, var5_int);
           stackIn_3_0 = PacketBuffer.a(var6, -2974, param0, param2, var5_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

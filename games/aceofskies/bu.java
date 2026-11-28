@@ -7,14 +7,14 @@ final class bu {
         String stackIn_24_2 = null;
         String stackIn_27_2 = null;
         try {
-          if (param2.b((byte) 102) &&
+          if (param2.ensureIndexLoaded((byte) 102) &&
             param2.c("commonui", -14012)) {
             if (param3) {
               return true;
             }
-            if (param0.b((byte) -81) &&
+            if (param0.ensureIndexLoaded((byte) -81) &&
               param0.c("commonui", -14012)) {
-              if (param1.b((byte) -91) &&
+              if (param1.ensureIndexLoaded((byte) -91) &&
                 param1.c("button.gif", -14012)) {
                 return true;
               }

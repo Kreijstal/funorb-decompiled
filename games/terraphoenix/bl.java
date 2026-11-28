@@ -256,7 +256,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 78, "makeanaccounttosave");
                 if (null != var2) {
-                  uc.field_q = ll.a(param0 - 96, var2);
+                  BitPacketBuffer.field_q = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 123, "ifyoudontwanttosave");
                 if (var2 != null) {

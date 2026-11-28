@@ -662,7 +662,7 @@ final class q {
                 }
                 var6 = lg.a(99, var4_int);
                 ig.field_i[var4_int].field_jb = el.field_z[var6];
-                mf.field_l[var4_int].field_db = nk.field_x[var6];
+                mf.field_l[var4_int].field_db = BitPacketBuffer.field_x[var6];
               }
               var4_int++;
               continue;

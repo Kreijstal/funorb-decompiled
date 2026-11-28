@@ -3,7 +3,7 @@
  */
 final class oaa {
     static IndexedSprite field_a;
-    static vr field_b;
+    static ResourceArchive field_b;
 
     final static void a(int param0, byte param1, int param2, int param3) {
         int var4_int = 0;
@@ -39,7 +39,7 @@ final class oaa {
     public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != -3681) {
-          field_b = (vr) null;
+          field_b = (ResourceArchive) null;
           field_a = null;
           return;
         }

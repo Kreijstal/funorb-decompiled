@@ -194,7 +194,7 @@ class ik extends a implements df {
         }
     }
 
-    final static Sprite[] a(String param0, ci param1, byte param2, String param3) {
+    final static Sprite[] a(String param0, ResourceArchive param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -211,8 +211,8 @@ class ik extends a implements df {
           if (param2 > -15) {
             field_cb = (tf) null;
           }
-          var4_int = param1.b(81, param0);
-          var5 = param1.a(-1, param3, var4_int);
+          var4_int = param1.getGroupIdByName(81, param0);
+          var5 = param1.getFileIdByName(-1, param3, var4_int);
           stackIn_3_0 = cc.a(var5, param1, -42, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

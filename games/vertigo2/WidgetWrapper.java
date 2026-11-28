@@ -437,8 +437,8 @@ abstract class WidgetWrapper extends UiWidget implements dq {
             var6 = (byte[]) null;
             WidgetWrapper.storeBytes(true, true, (byte[]) null);
           }
-          var4_int = param3.a((byte) 123, param2);
-          var5 = param3.a(var4_int, param1, 101);
+          var4_int = param3.getGroupIdByName((byte) 123, param2);
+          var5 = param3.getFileIdByName(var4_int, param1, 101);
           stackIn_3_0 = an.a(var5, param3, var4_int, (byte) 120);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

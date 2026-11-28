@@ -17,7 +17,7 @@ final class uk {
         Object var5 = null;
         int var6 = 0;
         byte[] var7 = null;
-        uc var8 = null;
+        BitPacketBuffer var8 = null;
         byte[] var9 = null;
         byte[] var10 = null;
         var6 = Terraphoenix.field_V;

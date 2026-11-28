@@ -24,7 +24,7 @@ final class we {
         }
     }
 
-    final static void a(boolean param0, PcmSample param1) {
+    final static void playPcmSample(boolean param0, PcmSample param1) {
         if (param1 == null) {
           return;
         }

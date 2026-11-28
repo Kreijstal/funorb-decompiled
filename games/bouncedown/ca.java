@@ -3,7 +3,7 @@
  */
 final class ca {
     static int[] field_a;
-    static gk field_e;
+    static ResourceArchive field_e;
     static int[] field_c;
     static fe field_b;
     static AwtRasterBuffer field_d;

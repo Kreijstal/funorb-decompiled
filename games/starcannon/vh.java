@@ -9,7 +9,7 @@ final class vh extends eh {
     static int field_q;
     private BufferedSocket field_r;
 
-    final static lb a(ia param0, int param1) {
+    final static lb a(BitPacketBuffer param0, int param1) {
         int stackIn_31_0 = 0;
         int stackIn_31_1 = 0;
         lb stackIn_38_0 = null;
@@ -27,7 +27,7 @@ final class vh extends eh {
         int var8 = 0;
         var8 = StarCannon.field_A;
         try {
-          var2_int = param0.e(8, 8);
+          var2_int = param0.readBits(8, 8);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
@@ -37,16 +37,16 @@ final class vh extends eh {
           var3 = od.a(-2, param0) ? 1 : 0;
           var4 = od.a(-2, param0) ? 1 : 0;
           var5 = new lb();
-          var5.field_R = (short)param0.e(8, 16);
+          var5.field_R = (short)param0.readBits(8, 16);
           var5.field_J = fd.a(16, var5.field_J, -39, param0);
           var5.field_x = fd.a(16, var5.field_x, -118, param0);
           var5.field_q = fd.a(16, var5.field_q, 110, param0);
-          var5.field_P = (short)param0.e(8, 16);
+          var5.field_P = (short)param0.readBits(8, 16);
           var5.field_z = fd.a(16, var5.field_z, 117, param0);
           var5.field_c = fd.a(16, var5.field_c, 123, param0);
           var5.field_y = fd.a(16, var5.field_y, -108, param0);
           if (var3 != 0) {
-            var5.field_s = (short)param0.e(8, 16);
+            var5.field_s = (short)param0.readBits(8, 16);
             var5.field_N = fd.a(16, var5.field_N, -56, param0);
             var5.field_a = fd.a(16, var5.field_a, -97, param0);
             var5.field_o = fd.a(16, var5.field_o, 89, param0);
@@ -55,7 +55,7 @@ final class vh extends eh {
             var5.field_m = fd.a(16, var5.field_m, -25, param0);
           }
           if (var4 != 0) {
-            param0.e(8, 16);
+            param0.readBits(8, 16);
             var5.field_A = fd.a(16, var5.field_A, 116, param0);
             var5.field_b = fd.a(16, var5.field_b, 104, param0);
             var5.field_D = fd.a(16, var5.field_D, -45, param0);
@@ -167,7 +167,7 @@ final class vh extends eh {
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ia var3 = null;
+        BitPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
@@ -175,7 +175,7 @@ final class vh extends eh {
         var6 = StarCannon.field_A;
         try {
           var3 = d.field_b;
-          var3.d((byte) 81, param0);
+          var3.writeCipheredByte((byte) 81, param0);
           var3.position = var3.position + 1;
           var4 = var3.position;
           var3.writeByte(1, -65);
@@ -390,7 +390,7 @@ final class vh extends eh {
         try {
           var5_int = BufferedRandomAccessFile.bitLength(3 * (-param0 + param4), (byte) 41);
           if (param3 != -6787) {
-            vh.a((ia) null, -87);
+            vh.a((BitPacketBuffer) null, -87);
           }
           var6 = 3 * param0;
           var7 = var5_int - 10;

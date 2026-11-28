@@ -150,7 +150,7 @@ final class ak extends g implements pi, qh {
           }
           if (!this.field_G) {
             if (this.field_E) {
-              this.field_H.field_n = w.field_m;
+              this.field_H.field_n = BitPacketBuffer.field_m;
               this.field_H.field_v = (ci) ((Object) new nb());
             } else {
               this.field_H.field_v = (ci) ((Object) new nb());

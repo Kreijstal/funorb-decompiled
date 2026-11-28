@@ -15,7 +15,7 @@ final class ff extends aj implements fb, df {
     private boolean field_K;
     private lj field_A;
     private String field_B;
-    static hj field_D;
+    static BitPacketBuffer field_D;
 
     public final void a(lj param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
@@ -101,7 +101,7 @@ final class ff extends aj implements fb, df {
           hd.a(this.field_G.field_k, this.field_L.field_k, -4776);
         }
         if (param0 != -123) {
-          field_D = (hj) null;
+          field_D = (BitPacketBuffer) null;
         }
     }
 

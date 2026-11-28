@@ -6,7 +6,7 @@ final class pj implements fc {
     static int field_b;
     static PlatformTaskDispatcher field_c;
 
-    final static void a(gk param0, int param1, boolean param2, PcmStreamMixer param3) {
+    final static void a(ResourceArchive param0, int param1, boolean param2, PcmStreamMixer param3) {
         try {
           fe.field_i = param1 * AccountNameAvailabilityValidator.f(66) / 1000;
           fd.a(param0, -1);

@@ -48,7 +48,7 @@ final class hb {
         qf var5_ref_qf = null;
         int[] var6 = null;
         int var8 = 0;
-        se var9 = null;
+        BitPacketBuffer var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var8 = OrbDefence.field_D ? 1 : 0;

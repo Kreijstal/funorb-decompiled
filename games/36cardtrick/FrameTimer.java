@@ -3,7 +3,7 @@
  */
 abstract class FrameTimer {
     static int field_a;
-    static qk field_d;
+    static ResourceArchive field_d;
     static String field_e;
     static String field_c;
     static volatile int field_b;

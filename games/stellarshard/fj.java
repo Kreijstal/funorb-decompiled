@@ -55,24 +55,24 @@ final class fj {
         var3 = stellarshard.field_B;
         while (this.field_c > this.field_h) {
           var4 = this.field_d[this.field_h];
-          if (!var4.field_e.a((byte) -36)) {
+          if (!var4.field_e.ensureIndexLoaded((byte) -36)) {
             this.a(0, var4, (byte) -68);
             return false;
           }
           if (0 <= var4.field_i &&
-            !var4.field_e.a(var4.field_i, (byte) 123)) {
-            this.a(var4.field_e.a(var4.field_i, 0), var4, (byte) -106);
+            !var4.field_e.tryLoadGroup(var4.field_i, (byte) 123)) {
+            this.a(var4.field_e.getGroupLoadPercent(var4.field_i, 0), var4, (byte) -106);
             return false;
           }
           if (var4.field_j != null &&
             !var4.field_e.a(var4.field_j, (byte) -109)) {
-            this.a(var4.field_e.b(0, var4.field_j), var4, (byte) 60);
+            this.a(var4.field_e.getGroupLoadPercentByName(0, var4.field_j), var4, (byte) 60);
             return false;
           }
           if (var4.field_i < 0 &&
             var4.field_j == null &&
             null != var4.field_c &&
-            !var4.field_e.c((byte) -111)) {
+            !var4.field_e.tryLoadAllGroups((byte) -111)) {
             this.a(var4.field_e.b((byte) 1), var4, (byte) 68);
             return false;
           }

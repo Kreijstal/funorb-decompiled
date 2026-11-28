@@ -31,7 +31,7 @@ abstract class ok extends DualLinkNode {
         int var6 = 0;
         if (param0 != 32) {
           param2 = param2 - this.field_v;
-          var6 = f.a(param0, -8483) & 255;
+          var6 = f.encodeCp1252Character(param0, -8483) & 255;
           this.a(var6, param1 + this.field_w[var6], param2 + this.field_z[var6], this.field_H[var6], this.field_K[var6], param3, param4, false);
         }
     }
@@ -216,7 +216,7 @@ abstract class ok extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(f.a((char) var8, -8483) & 255);
+              var8 = (char)(f.encodeCp1252Character((char) var8, -8483) & 255);
               if (this.field_x != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_x[(var5 << 8) + var8];
@@ -333,7 +333,7 @@ abstract class ok extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(f.a((char) var7, -8483) & 255);
+              var7 = (char)(f.encodeCp1252Character((char) var7, -8483) & 255);
               var4 = var4 + this.field_Q[var7];
               if (this.field_x != null &&
                 var3 != 0) {
@@ -353,7 +353,7 @@ abstract class ok extends DualLinkNode {
     }
 
     final int a(char param0) {
-        return this.field_Q[f.a(param0, -8483) & 255];
+        return this.field_Q[f.encodeCp1252Character(param0, -8483) & 255];
     }
 
     final int b(String param0, int param1, int param2) {
@@ -798,7 +798,7 @@ abstract class ok extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_s.append((char) var14);
-                var14 = (char)(f.a((char) var14, -8483) & 255);
+                var14 = (char)(f.encodeCp1252Character((char) var14, -8483) & 255);
                 var4 = var4 + this.field_Q[var14];
                 if (this.field_x != null &&
                   var10 != 0) {

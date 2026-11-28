@@ -13,7 +13,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         super(param0);
     }
 
-    final static boolean a(pf param0, byte param1, int param2, int param3) {
+    final static boolean a(ResourceArchive param0, byte param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -22,7 +22,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = param0.a(param3, 16, param2);
+          var5 = param0.getFile(param3, 16, param2);
           var4 = var5;
           if (param1 != -5) {
             return true;

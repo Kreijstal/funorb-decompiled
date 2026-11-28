@@ -79,9 +79,9 @@ final class pa {
         field_e = null;
     }
 
-    final static boolean a(byte param0, vj param1) {
+    final static boolean a(byte param0, ResourceArchive param1) {
         RuntimeException var2 = null;
-        vj var3 = null;
+        ResourceArchive var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -89,10 +89,10 @@ final class pa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 64) {
-            var3 = (vj) null;
-            pa.a((byte) -21, (vj) null);
+            var3 = (ResourceArchive) null;
+            pa.a((byte) -21, (ResourceArchive) null);
           }
-          stackIn_3_0 = param1.c((byte) 18);
+          stackIn_3_0 = param1.tryLoadAllGroups((byte) 18);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -109,7 +109,7 @@ final class pa {
     }
 
     final static boolean a(byte param0, char param1) {
-        vj var3;
+        ResourceArchive var3;
         if (param0 > 35) {
           if (Character.isISOControl(param1)) {
             return false;
@@ -125,8 +125,8 @@ final class pa {
           }
           return true;
         }
-        var3 = (vj) null;
-        pa.a((byte) -44, (vj) null);
+        var3 = (ResourceArchive) null;
+        pa.a((byte) -44, (ResourceArchive) null);
         if (Character.isISOControl(param1)) {
           return false;
         }

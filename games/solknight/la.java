@@ -249,8 +249,8 @@ final class la extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1, bl param2) {
-        jd var5 = id.field_c;
-        var5.e(param1, -2147483648);
+        BitPacketBuffer var5 = id.field_c;
+        var5.writeCipheredByte(param1, -2147483648);
         var5.position = var5.position + 1;
         int var4 = var5.position;
         var5.writeByte(20, 1);

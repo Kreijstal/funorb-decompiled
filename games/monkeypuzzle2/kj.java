@@ -45,9 +45,9 @@ final class kj extends jk {
         }
     }
 
-    final static Sprite a(int param0, ad param1, int param2, int param3) {
+    final static Sprite a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
-        ad var5 = null;
+        ResourceArchive var5 = null;
         Sprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -55,8 +55,8 @@ final class kj extends jk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 17196) {
-            var5 = (ad) null;
-            kj.a(4, (ad) null, 48, 57);
+            var5 = (ResourceArchive) null;
+            kj.a(4, (ResourceArchive) null, 48, 57);
           }
           if (!wg.a(param3, param0, param1, -3)) {
             return null;

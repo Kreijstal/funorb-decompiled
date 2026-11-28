@@ -32,7 +32,7 @@ final class IntrusiveDeque {
         return;
     }
 
-    final static byte[] a(int param0, CharSequence param1) {
+    final static byte[] encodeCp1252Bytes(int param0, CharSequence param1) {
         byte[] stackIn_68_0 = null;
         RuntimeException stackIn_71_0 = null;
         StringBuilder stackIn_71_1 = null;

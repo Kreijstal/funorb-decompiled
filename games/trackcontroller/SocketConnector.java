@@ -25,7 +25,7 @@ abstract class SocketConnector {
           var2_int = param0.length();
           var3 = param1;
           for (var4 = 0; var2_int > var4; var4++) {
-            var3 = PcmOutputWorker.a(param0.charAt(var4), (byte) -124) + (-var3 + (var3 << 5));
+            var3 = PcmOutputWorker.encodeCp1252Character(param0.charAt(var4), (byte) -124) + (-var3 + (var3 << 5));
           }
           stackIn_5_0 = var3;
           return stackIn_5_0;

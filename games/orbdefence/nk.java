@@ -3048,10 +3048,10 @@ final class nk {
     }
 
     final static void a(int param0, mj param1, int param2) {
-        se var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           var3 = uk.field_b;
-          var3.i(param0, param2 ^ 108);
+          var3.writeCipheredByte(param0, param2 ^ 108);
           if (param2 != 14) {
             field_r = (char[]) null;
           }

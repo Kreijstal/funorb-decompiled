@@ -21,7 +21,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         int var4_int = 0;
         Object var5 = null;
         int var6 = 0;
-        hj var8 = null;
+        BitPacketBuffer var8 = null;
         byte[] var12 = null;
         var6 = Transmogrify.field_A ? 1 : 0;
         try {

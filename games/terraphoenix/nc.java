@@ -76,7 +76,7 @@ final class nc {
     }
 
     final static void a(ji param0, int param1, int param2) {
-        uc var3 = null;
+        BitPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -84,7 +84,7 @@ final class nc {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = di.field_l;
-          var3.k(-17410, param2);
+          var3.writeCipheredByte(-17410, param2);
           var3.writeByte(param0.field_i, 0);
           var3.writeShort(-1564407352, param0.field_h);
           if (param1 >= 36) {

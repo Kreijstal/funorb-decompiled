@@ -58,7 +58,7 @@ final class ad {
           if (param0 != -29410) {
             field_a = 13;
           }
-          stackIn_3_0 = gh.a(param1, 0, param0 + 29249, param1.length);
+          stackIn_3_0 = gh.decodeCp1252String(param1, 0, param0 + 29249, param1.length);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -204,7 +204,7 @@ abstract class tk {
           if (param1) {
             field_p = (String) null;
           }
-          stackIn_3_0 = re.field_a.a("", param0, 0);
+          stackIn_3_0 = re.field_a.getFileByName("", param0, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

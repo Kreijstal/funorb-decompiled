@@ -23,7 +23,7 @@ final class uk implements cg {
         nl var5_ref_nl = null;
         int[] var6 = null;
         int var8 = 0;
-        lh var9 = null;
+        BitPacketBuffer var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;

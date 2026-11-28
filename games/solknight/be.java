@@ -323,7 +323,7 @@ final class be extends pj {
         }
     }
 
-    final static byte[] a(byte param0, byte[] param1, jd param2, int param3) {
+    final static byte[] a(byte param0, byte[] param1, BitPacketBuffer param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -339,7 +339,7 @@ final class be extends pj {
         RuntimeException var4 = null;
         var8 = SolKnight.field_L ? 1 : 0;
         try {
-          var4_int = param2.d((byte) 48, param3);
+          var4_int = param2.readBits((byte) 48, param3);
           if (var4_int == 0) {
             return null;
           }
@@ -347,11 +347,11 @@ final class be extends pj {
             var4_int != param1.length) {
             param1 = new byte[var4_int];
           }
-          var5 = param2.d((byte) 48, 3);
-          var6 = (byte)param2.d((byte) 48, 8);
+          var5 = param2.readBits((byte) 48, 3);
+          var6 = (byte)param2.readBits((byte) 48, 8);
           if (var5 > 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param1[var7] = (byte)(var6 + param2.d((byte) 48, var5));
+              param1[var7] = (byte)(var6 + param2.readBits((byte) 48, var5));
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {
@@ -422,8 +422,8 @@ final class be extends pj {
     public static void a(int param0) {
         field_J = null;
         if (param0 != -3) {
-          jd var2 = (jd) null;
-          be.a((byte) -106, (byte[]) null, (jd) null, 51);
+          BitPacketBuffer var2 = (BitPacketBuffer) null;
+          be.a((byte) -106, (byte[]) null, (BitPacketBuffer) null, 51);
         }
     }
 

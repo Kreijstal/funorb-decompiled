@@ -119,7 +119,7 @@ final class pk implements Runnable {
             var3 = var4.getOutputStream();
             var3.write(17);
             var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_g.getFile() + "\n\n"));
-            var3.write(ta.a((byte) -126, var5));
+            var3.write(ta.encodeCp1252Bytes((byte) -126, var5));
             this.field_h = new DataInputStream(var4.getInputStream());
           }
           this.field_d.position = 0;

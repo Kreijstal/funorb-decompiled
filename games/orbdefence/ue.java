@@ -101,7 +101,7 @@ final class ue extends s {
         return 1;
     }
 
-    final static int a(int param0, CharSequence param1, byte param2, int param3, byte[] param4, int param5) {
+    final static int encodeCp1252Subsequence(int param0, CharSequence param1, byte param2, int param3, byte[] param4, int param5) {
         int var7 = 0;
         int stackIn_3_0 = 0;
         int stackIn_70_0 = 0;

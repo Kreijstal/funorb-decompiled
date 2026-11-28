@@ -12,7 +12,7 @@ final class r {
     private int field_b;
     private ni[] field_e;
 
-    final static String a(int param0, int param1, byte[] param2, byte param3) {
+    final static String decodeCp1252String(int param0, int param1, byte[] param2, byte param3) {
         int var6 = 0;
         int incrementValue$0 = 0;
         char[] var4 = null;
@@ -53,7 +53,7 @@ final class r {
           }
           if (param3 != 8) {
             var10 = (byte[]) null;
-            r.a(-89, -120, (byte[]) null, (byte) -36);
+            r.decodeCp1252String(-89, -120, (byte[]) null, (byte) -36);
           }
           stackIn_16_0 = new String(var12, 0, var5);
           return stackIn_16_0;
@@ -101,24 +101,24 @@ final class r {
         var3 = TorChallenge.field_F ? 1 : 0;
         while (this.field_b < this.field_g) {
           var4 = this.field_e[this.field_b];
-          if (!var4.field_a.b(-7957)) {
+          if (!var4.field_a.ensureIndexLoaded(-7957)) {
             this.a(0, 1, var4);
             return false;
           }
           if (0 <= var4.field_c &&
-            !var4.field_a.a(true, var4.field_c)) {
-            this.a(var4.field_a.a(var4.field_c, (byte) 12), 1, var4);
+            !var4.field_a.tryLoadGroup(true, var4.field_c)) {
+            this.a(var4.field_a.getGroupLoadPercent(var4.field_c, (byte) 12), 1, var4);
             return false;
           }
           if (null != var4.field_e &&
             !var4.field_a.b(5, var4.field_e)) {
-            this.a(var4.field_a.a(118, var4.field_e), param0 ^ 1, var4);
+            this.a(var4.field_a.getGroupLoadPercentByName(118, var4.field_e), param0 ^ 1, var4);
             return false;
           }
           if (var4.field_c < 0 &&
             var4.field_e == null &&
             var4.field_j != null &&
-            !var4.field_a.b((byte) 79)) {
+            !var4.field_a.tryLoadAllGroups((byte) 79)) {
             this.a(var4.field_a.c(53), 1, var4);
             return false;
           }

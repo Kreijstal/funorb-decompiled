@@ -31,7 +31,7 @@ public final class Torquing extends tg {
             }
             var4 = new byte[var3_int];
             param2.position = param2.position + lh.field_u.a(var4, true, param2.position, param2.payload, 0, var3_int);
-            var5 = GameApplet.a(var3_int, true, 0, var4);
+            var5 = GameApplet.decodeCp1252String(var3_int, true, 0, var4);
             stackIn_5_0 = var5;
             return stackIn_5_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -627,7 +627,7 @@ public final class Torquing extends tg {
           nn.a(-98);
           if (rl.field_a != null) {
             if (tp.field_a == null) {
-              if (rp.field_d.a(-12749) &&
+              if (rp.field_d.ensureIndexLoaded(-12749) &&
                 rp.field_d.a(true, "basic")) {
                 if (!rp.field_d.a(true, "benefits")) {
                   IsaacPacketBuffer.a(1.0f, -93, c.a(param1 ^ -117, bo.field_i, "basic", db.field_d, rp.field_d));
@@ -637,28 +637,28 @@ public final class Torquing extends tg {
                   IsaacPacketBuffer.a(2.0f, 117, c.a(17, ol.field_e, "kartika13", l.field_c, rp.field_d));
                   return false;
                 }
-                if (e.field_b.a(-12749) &&
+                if (e.field_b.ensureIndexLoaded(-12749) &&
                   e.field_b.a(true, "kartika13")) {
-                  if (rl.field_a.a(param1 - 12647) &&
-                    rl.field_a.c(-19375)) {
-                    if (rg.field_v.a(-12749) &&
-                      rg.field_v.c(-19375)) {
-                      if (TooltipPanel.field_l.a(-12749) &&
-                        TooltipPanel.field_l.c(-19375)) {
-                        if (vp.field_D.a(-12749) &&
-                          vp.field_D.c(-19375)) {
-                          if (n.field_q.a(-12749) &&
-                            n.field_q.c(-19375)) {
-                            if (bp.field_c.a(-12749) &&
-                              bp.field_c.c(param1 ^ 19403)) {
-                              if (vd.field_e.a(-12749) &&
-                                vd.field_e.c(param1 - 19273)) {
-                                if (th.field_C.a(-12749) &&
-                                  th.field_C.c(param1 ^ 19403)) {
-                                  if (he.field_b.a(-12749) &&
-                                    he.field_b.c(-19375)) {
-                                    if (wp.field_w > 0 && (!eg.field_t.a(-12749) ||
-                                      !eg.field_t.c(param1 - 19273))) {
+                  if (rl.field_a.ensureIndexLoaded(param1 - 12647) &&
+                    rl.field_a.tryLoadAllGroups(-19375)) {
+                    if (rg.field_v.ensureIndexLoaded(-12749) &&
+                      rg.field_v.tryLoadAllGroups(-19375)) {
+                      if (TooltipPanel.field_l.ensureIndexLoaded(-12749) &&
+                        TooltipPanel.field_l.tryLoadAllGroups(-19375)) {
+                        if (vp.field_D.ensureIndexLoaded(-12749) &&
+                          vp.field_D.tryLoadAllGroups(-19375)) {
+                          if (n.field_q.ensureIndexLoaded(-12749) &&
+                            n.field_q.tryLoadAllGroups(-19375)) {
+                            if (bp.field_c.ensureIndexLoaded(-12749) &&
+                              bp.field_c.tryLoadAllGroups(param1 ^ 19403)) {
+                              if (vd.field_e.ensureIndexLoaded(-12749) &&
+                                vd.field_e.tryLoadAllGroups(param1 - 19273)) {
+                                if (th.field_C.ensureIndexLoaded(-12749) &&
+                                  th.field_C.tryLoadAllGroups(param1 ^ 19403)) {
+                                  if (he.field_b.ensureIndexLoaded(-12749) &&
+                                    he.field_b.tryLoadAllGroups(-19375)) {
+                                    if (wp.field_w > 0 && (!eg.field_t.ensureIndexLoaded(-12749) ||
+                                      !eg.field_t.tryLoadAllGroups(param1 - 19273))) {
                                       IsaacPacketBuffer.a(29.0f, -63, c.a(17, pa.field_a, "", pd.field_a, eg.field_t));
                                       return false;
                                     }
@@ -1014,8 +1014,8 @@ public final class Torquing extends tg {
             th.field_F[15] = cg.a(bp.field_c, "", "torq_squash").b();
             th.field_F[20] = cg.a(bp.field_c, "", "torq_tick").b();
             th.field_F[28] = cg.a(bp.field_c, "", "torq_jump2").b();
-            var3_intLifetime1 = bp.field_c.a(-1, "");
-            var50 = id.field_a.a(bp.field_c.a("torq_whistle", -107, var3_intLifetime1), var3_intLifetime1, (byte) -84);
+            var3_intLifetime1 = bp.field_c.getGroupIdByName(-1, "");
+            var50 = id.field_a.a(bp.field_c.getFileIdByName("torq_whistle", -107, var3_intLifetime1), var3_intLifetime1, (byte) -84);
             var63 = new byte[var50.data.length];
             var51 = var63;
             var5_ref_byte__ = var51;
@@ -1067,7 +1067,7 @@ public final class Torquing extends tg {
           }
           if (null != he.field_b) {
             IsaacPacketBuffer.a(40.0f, 34, kf.field_D + " - 0%");
-            var52 = new PacketBuffer(he.field_b.a(param1 - 18, "levels.tql", ""));
+            var52 = new PacketBuffer(he.field_b.getFileByName(param1 - 18, "levels.tql", ""));
             var53 = var52.readString((byte) 126);
             var5Lifetime1 = 0;
             var6 = 1;
@@ -1137,7 +1137,7 @@ public final class Torquing extends tg {
             if (var3_array == null) {
               return false;
             }
-            var64 = eg.field_t.a(var3_array, (byte) -97, "", "levels.tql");
+            var64 = eg.field_t.getFileByNameWithKeys(var3_array, (byte) -97, "", "levels.tql");
             var56 = var64;
             var4 = var56;
             if (var4 == null) {
@@ -2247,7 +2247,7 @@ public final class Torquing extends tg {
         try {
           nl.field_s = qg.a(e.field_b, rp.field_d, "kartika13", "", 255);
           var9 = ip.a(rg.field_v, -119, "", "smallfont");
-          var20 = TooltipPanel.field_l.a(param0 - 116, "smallfont", "");
+          var20 = TooltipPanel.field_l.getFileByName(param0 - 116, "smallfont", "");
           i.field_N = ok.a(var9, 256, var20);
           um.field_m = io.a(var9, -1, var20);
           i.field_Q = ob.a(1579032, new int[]{4473924, 12632256, 13421772}, var20, true, var9);
@@ -2283,7 +2283,7 @@ public final class Torquing extends tg {
           i.field_Q.field_O[10][4] = 4473924;
           i.field_Q.field_O[10][1] = 16750848;
           var5 = ip.a(rg.field_v, -121, "", "minifont");
-          var21 = TooltipPanel.field_l.a(-114, "minifont", "");
+          var21 = TooltipPanel.field_l.getFileByName(-114, "minifont", "");
           dd.field_c = ok.a(var5, 256, var21);
           qh.field_c = ob.a(1579032, new int[]{4473924, 8421504}, var21, true, var5);
           qh.field_c.field_x = qh.field_c.field_x - 1;

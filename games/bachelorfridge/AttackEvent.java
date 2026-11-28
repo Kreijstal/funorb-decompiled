@@ -56,7 +56,7 @@ class AttackEvent extends CreatureEvent {
         }
     }
 
-    final static char a(byte param0, byte param1) {
+    final static char decodeCp1252Byte(byte param0, byte param1) {
         int var2;
         int var3;
         var2 = 255 & param0;

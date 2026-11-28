@@ -325,7 +325,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           var4 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var2_int <= var4))) {
-            stackIn_9_0 = (var3 << 5) - var3 + HuffmanCodec.a(param0.charAt(var4), (byte) -120);
+            stackIn_9_0 = (var3 << 5) - var3 + HuffmanCodec.encodeCp1252Character(param0.charAt(var4), (byte) -120);
             if (var5 == 0) {
               var3 = stackIn_9_0;
               var4++;

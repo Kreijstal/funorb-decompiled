@@ -49,7 +49,7 @@ final class fg {
           if (param0 < 73) {
             field_b = -54;
           }
-          jd.a("jagex-last-login-method", 31536000L, param1, 1000, this.field_d);
+          BitPacketBuffer.setBrowserCookie("jagex-last-login-method", 31536000L, param1, 1000, this.field_d);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "fg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

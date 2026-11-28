@@ -79,30 +79,30 @@ final class ei extends IntrusiveNode {
           return NodeHashTableIterator.field_f;
         }
         if (null != ff.field_b) {
-          if (!ff.field_b.c(96)) {
+          if (!ff.field_b.ensureIndexLoaded(96)) {
             return ArchiveIndex.field_t;
           }
           return jb.field_c;
         }
-        if (!field_i.c(-97)) {
+        if (!field_i.ensureIndexLoaded(-97)) {
           return sa.field_K;
         }
         if (!field_i.b("commonui", (byte) -3)) {
-          return gj.field_e + " - " + field_i.a("commonui", 0) + "%";
+          return gj.field_e + " - " + field_i.getGroupLoadPercentByName("commonui", 0) + "%";
         }
-        if (!ha.field_x.c(-50)) {
+        if (!ha.field_x.ensureIndexLoaded(-50)) {
           return IndexedSpriteState.field_f;
         }
         if (!ha.field_x.b("commonui", (byte) -3)) {
-          return v.field_c + " - " + ha.field_x.a("commonui", 0) + "%";
+          return v.field_c + " - " + ha.field_x.getGroupLoadPercentByName("commonui", 0) + "%";
         }
-        if (!ok.field_G.c(117)) {
+        if (!ok.field_G.ensureIndexLoaded(117)) {
           return LevelView.field_w;
         }
         if (param0 <= 96) {
           return (String) null;
         }
-        if (!ok.field_G.a((byte) 48)) {
+        if (!ok.field_G.tryLoadAllGroups((byte) 48)) {
           return ug.field_t + " - " + ok.field_G.a(true) + "%";
         }
         return f.field_d;
@@ -164,7 +164,7 @@ final class ei extends IntrusiveNode {
         ij.a(13809);
         mi.k(10228);
         if (wf.a(-28510)) {
-          LevelView.field_C.c(1, 7);
+          LevelView.field_C.writeCipheredByte(1, 7);
           MovingBlock.a(param0 + 18600, 0);
         }
         if (param0 != -18601) {

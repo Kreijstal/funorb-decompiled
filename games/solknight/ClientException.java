@@ -21,11 +21,11 @@ final class ClientException extends RuntimeException {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.c(103, param3);
+          var4_int = param0.getGroupIdByName(103, param3);
           if (param1 >= -62) {
             ClientException.resetStaticState((byte) -74);
           }
-          var5 = param0.a(param2, -1, var4_int);
+          var5 = param0.getFileIdByName(param2, -1, var4_int);
           stackIn_3_0 = AccountServiceResult.a((byte) 47, param0, var4_int, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -70,7 +70,7 @@ final class ClientException extends RuntimeException {
           if (param3 != -94) {
             field_b = 25;
           }
-          if (!param2.c((byte) -121)) {
+          if (!param2.ensureIndexLoaded((byte) -121)) {
             stackIn_5_0 = (String) (param1);
             return stackIn_5_0;
           }

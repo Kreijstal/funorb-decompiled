@@ -18,7 +18,7 @@ final class pi {
           return;
         }
         CharSequence var2 = (CharSequence) null;
-        pi.a((CharSequence) null, -85);
+        pi.encodeCp1252Bytes((CharSequence) null, -85);
         field_d = (int[][]) null;
     }
 
@@ -31,7 +31,7 @@ final class pi {
         }
     }
 
-    final static byte[] a(CharSequence param0, int param1) {
+    final static byte[] encodeCp1252Bytes(CharSequence param0, int param1) {
         int var4 = 0;
         byte[] stackIn_69_0 = null;
         RuntimeException stackIn_72_0 = null;

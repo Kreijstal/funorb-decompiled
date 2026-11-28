@@ -119,7 +119,7 @@ final class tj extends vm {
             var5 = (int[]) null;
             tj.a((byte) -103, (int[]) null);
           }
-          var6 = param2.a(param0, param1, param3 + 5764);
+          var6 = param2.getFile(param0, param1, param3 + 5764);
           var4 = var6;
           if (var6 == null) {
             return false;
@@ -201,7 +201,7 @@ final class tj extends vm {
               if (!tk.a(param0 - 222, 1)) {
                 return false;
               }
-              da.field_p = tk.field_h.n(param0 ^ -31);
+              da.field_p = tk.field_h.readCipheredByte(param0 ^ -31);
               tk.field_h.position = 0;
               sb.field_sb = param1[da.field_p];
             }

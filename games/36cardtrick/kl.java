@@ -501,7 +501,7 @@ final class kl extends g implements cl, qh, wi {
         this.field_I = new v("", (pl) null, 3);
         int var1 = 1;
         this.field_N = new ua("", (pl) null, var1 != 0);
-        this.field_O = new hl(qk.field_h, (pl) null);
+        this.field_O = new hl(ResourceArchive.field_h, (pl) null);
         this.field_F = new hl(dl.field_j, (pl) null);
         this.field_D.field_n = re.field_h;
         this.field_M.field_n = pf.field_g;

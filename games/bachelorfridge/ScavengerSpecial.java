@@ -6,7 +6,7 @@ final class ScavengerSpecial extends SpecialOrder {
     static UiComponent field_q;
     static String field_t;
     static int[] field_u;
-    static vr field_p;
+    static ResourceArchive field_p;
     static int field_s;
     static int field_r;
 

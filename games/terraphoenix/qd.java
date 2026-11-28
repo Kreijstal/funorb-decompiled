@@ -24,11 +24,11 @@ final class qd extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1, vi param2) {
-        uc var5 = null;
+        BitPacketBuffer var5 = null;
         int var4 = 0;
         try {
           var5 = di.field_l;
-          var5.k(-17410, param0);
+          var5.writeCipheredByte(-17410, param0);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(1, -95);

@@ -7,7 +7,7 @@ final class hk extends IntrusiveNode {
     IntrusiveNode field_h;
     static byte[][] field_f;
     static int field_l;
-    static ad field_k;
+    static ResourceArchive field_k;
     static java.awt.Frame field_e;
     static Sprite[] field_i;
 
@@ -475,7 +475,7 @@ final class hk extends IntrusiveNode {
     public static void clearStaticReferences(byte param0) {
         field_k = null;
         if (param0 != 85) {
-          field_k = (ad) null;
+          field_k = (ResourceArchive) null;
         }
         field_i = null;
         field_f = (byte[][]) null;

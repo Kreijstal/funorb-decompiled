@@ -114,7 +114,7 @@ final class tl extends hf {
         return this.field_N;
     }
 
-    final static ja a(lh param0, byte param1) {
+    final static ja a(BitPacketBuffer param0, byte param1) {
         int var7 = 0;
         ja stackIn_25_0 = null;
         RuntimeException stackIn_28_0 = null;
@@ -130,18 +130,18 @@ final class tl extends hf {
         int var8 = 0;
         var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          var2_int = param0.e(8, (byte) -110);
+          var2_int = param0.readBits(8, (byte) -110);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
           var3 = ti.a(param0, false) ? 1 : 0;
           var4 = ti.a(param0, false) ? 1 : 0;
           var5 = new ja();
-          var5.field_q = (short)param0.e(16, (byte) -99);
+          var5.field_q = (short)param0.readBits(16, (byte) -99);
           var5.field_J = uj.a(param0, (byte) 45, 16, var5.field_J);
           var5.field_w = uj.a(param0, (byte) -122, 16, var5.field_w);
           var5.field_P = uj.a(param0, (byte) -112, 16, var5.field_P);
-          var5.field_m = (short)param0.e(16, (byte) 78);
+          var5.field_m = (short)param0.readBits(16, (byte) 78);
           var5.field_h = uj.a(param0, (byte) 39, 16, var5.field_h);
           var5.field_a = uj.a(param0, (byte) 70, 16, var5.field_a);
           var5.field_K = uj.a(param0, (byte) 71, 16, var5.field_K);
@@ -149,7 +149,7 @@ final class tl extends hf {
             tl.clearStaticReferences((byte) -124);
           }
           if (var3 != 0) {
-            var5.field_H = (short)param0.e(16, (byte) -112);
+            var5.field_H = (short)param0.readBits(16, (byte) -112);
             var5.field_k = uj.a(param0, (byte) 108, 16, var5.field_k);
             var5.field_B = uj.a(param0, (byte) -110, 16, var5.field_B);
             var5.field_E = uj.a(param0, (byte) 24, 16, var5.field_E);
@@ -158,7 +158,7 @@ final class tl extends hf {
             var5.field_e = uj.a(param0, (byte) -100, 16, var5.field_e);
           }
           if (var4 != 0) {
-            param0.e(16, (byte) 82);
+            param0.readBits(16, (byte) 82);
             var5.field_z = uj.a(param0, (byte) 44, 16, var5.field_z);
             var5.field_v = uj.a(param0, (byte) -116, 16, var5.field_v);
             var5.field_R = uj.a(param0, (byte) 63, 16, var5.field_R);

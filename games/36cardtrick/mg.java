@@ -232,7 +232,7 @@ final class mg {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        w var27 = null;
+        BitPacketBuffer var27 = null;
         int var3Lifetime1;
         int var25Lifetime1;
         int var25Lifetime2;

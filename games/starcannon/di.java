@@ -13,7 +13,7 @@ final class di extends qf {
         super(param0);
     }
 
-    final static Sprite a(int param0, int param1, ue param2, int param3) {
+    final static Sprite a(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         String var5 = null;
         Sprite stackIn_6_0 = null;

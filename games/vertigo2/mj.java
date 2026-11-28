@@ -154,7 +154,7 @@ final class mj {
         }
     }
 
-    final static String a(int param0, byte[] param1, int param2, int param3) {
+    final static String decodeCp1252String(int param0, byte[] param1, int param2, int param3) {
         int incrementValue$0 = 0;
         char[] var4 = null;
         int var5 = 0;
@@ -304,7 +304,7 @@ final class mj {
         ui.field_g = 0;
         if (param0 != 4) {
           byte[] var2 = (byte[]) null;
-          mj.a(31, (byte[]) null, -75, 56);
+          mj.decodeCp1252String(31, (byte[]) null, -75, 56);
         }
         MouseWheelInput.field_a = true;
     }

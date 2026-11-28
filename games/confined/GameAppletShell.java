@@ -293,7 +293,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    final static vk a(byte param0, int param1, mi param2, int param3, m param4) {
+    final static vk a(byte param0, int param1, ResourceArchive param2, int param3, m param4) {
         byte[] var5 = null;
         RuntimeException var5_ref = null;
         Object stackIn_5_0 = null;
@@ -308,7 +308,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (param0 != -89) {
             field_i = (String) null;
           }
-          var5 = param2.a((byte) -2, param3, param1);
+          var5 = param2.getFile((byte) -2, param3, param1);
           if (null != var5) {
             stackIn_7_0 = new vk(new PacketBuffer(var5), param4);
             return stackIn_7_0;
@@ -830,7 +830,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    final static l a(mi param0, int param1, int param2, mi param3, int param4) {
+    final static l a(ResourceArchive param0, int param1, int param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         l stackIn_7_0 = null;
@@ -848,7 +848,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (param1 != 10) {
             field_c = (vk) null;
           }
-          stackIn_7_0 = h.a(false, param0.a((byte) -2, param4, param2));
+          stackIn_7_0 = h.a(false, param0.getFile((byte) -2, param4, param2));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -76,7 +76,7 @@ final class vf {
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (this.field_k >= this.field_c))) {
             var2 = this.field_f[this.field_k];
-            stackOut_2_0 = var2.field_a.a(-12749);
+            stackOut_2_0 = var2.field_a.ensureIndexLoaded(-12749);
             stackIn_38_0 = stackOut_2_0 ? 1 : 0;
             stackIn_3_0 = stackOut_2_0;
             if (var3 == 0) {
@@ -85,19 +85,19 @@ final class vf {
                 return false;
               }
               if (var2.field_g >= 0 &&
-                !var2.field_a.a((byte) 101, var2.field_g)) {
-                this.a(var2, var2.field_a.a(true, var2.field_g), -20);
+                !var2.field_a.tryLoadGroup((byte) 101, var2.field_g)) {
+                this.a(var2, var2.field_a.getGroupLoadPercent(true, var2.field_g), -20);
                 return false;
               }
               if (var2.field_c != null &&
                 !var2.field_a.a(true, var2.field_c)) {
-                this.a(var2, var2.field_a.a((byte) 97, var2.field_c), -93);
+                this.a(var2, var2.field_a.getGroupLoadPercentByName((byte) 97, var2.field_c), -93);
                 return false;
               }
               if (0 > var2.field_g &&
                 null == var2.field_c &&
                 var2.field_f != null &&
-                !var2.field_a.c(param0 - 19375)) {
+                !var2.field_a.tryLoadAllGroups(param0 - 19375)) {
                 this.a(var2, var2.field_a.a((byte) -32), -100);
                 return false;
               }

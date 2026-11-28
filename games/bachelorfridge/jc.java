@@ -47,7 +47,7 @@ final class jc extends DualLinkNode {
                 stackIn_19_0 = this.field_p;
                 stackIn_19_1 = var5;
                 if (var6 != 0) {
-                  stackIn_20_2 = AttackEvent.a((byte) var6, (byte) -93);
+                  stackIn_20_2 = AttackEvent.decodeCp1252Byte((byte) var6, (byte) -93);
                 } else {
                   stackIn_20_2 = 0;
                 }
@@ -70,7 +70,7 @@ final class jc extends DualLinkNode {
                 stackIn_13_0 = this.field_o;
                 stackIn_13_1 = var5;
                 if (var6 != 0) {
-                  stackIn_14_2 = AttackEvent.a((byte) var6, (byte) -46);
+                  stackIn_14_2 = AttackEvent.decodeCp1252Byte((byte) var6, (byte) -46);
                 } else {
                   stackIn_14_2 = 0;
                 }
@@ -129,7 +129,7 @@ final class jc extends DualLinkNode {
         }
     }
 
-    final static BinaryBitmapFont a(vr param0, int param1, boolean param2, vr param3, int param4) {
+    final static BinaryBitmapFont a(ResourceArchive param0, int param1, boolean param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         BinaryBitmapFont stackIn_5_0 = null;
@@ -146,7 +146,7 @@ final class jc extends DualLinkNode {
             return (BinaryBitmapFont) (stackIn_2_0);
           }
           if (!param2) {
-            stackIn_7_0 = AirstrikeSpecial.a((byte) -3, param0.b(-26, param4, param1));
+            stackIn_7_0 = AirstrikeSpecial.a((byte) -3, param0.getFile(-26, param4, param1));
             return stackIn_7_0;
           }
           stackIn_5_0 = (BinaryBitmapFont) null;

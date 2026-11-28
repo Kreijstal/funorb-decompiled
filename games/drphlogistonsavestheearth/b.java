@@ -65,7 +65,7 @@ final class b extends IntrusiveNode {
         return param1 == (param1 & -param1) ? true : false;
     }
 
-    final static byte[] a(byte param0, CharSequence param1) {
+    final static byte[] encodeCp1252Bytes(byte param0, CharSequence param1) {
         int var4 = 0;
         byte[] stackIn_3_0 = null;
         byte[] stackIn_70_0 = null;

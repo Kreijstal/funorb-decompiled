@@ -5,7 +5,7 @@ final class ge {
     static int field_c;
     static RgbSprite field_d;
     static String field_a;
-    static db field_b;
+    static ResourceArchive field_b;
 
     public static void clearStaticReferences(int param0) {
         field_d = null;

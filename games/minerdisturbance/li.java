@@ -2553,7 +2553,7 @@ final class li implements uj {
                 }
                 var2 = e.a(param0 ^ 9269, "keychar_the_character_under_questionmark");
                 if (var2 != null) {
-                  mb.a(false, var2[0]);
+                  mb.decodeCp1252Byte(false, var2[0]);
                 }
                 var2 = e.a(113, "rating_noratings");
                 if (var2 != null) {

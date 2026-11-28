@@ -62,7 +62,7 @@ final class kg {
           oi.field_c = (BitmapFont) ((Object) as.a(param3, -119, param1, "arezzo12", "commonui"));
           qo.field_b = (BitmapFont) ((Object) as.a(param3, -104, param1, "arezzo14", "commonui"));
           b.field_c = (BitmapFont) ((Object) as.a(param3, param0 ^ -112, param1, "arezzo14bold", "commonui"));
-          Sprite var17 = new Sprite(param2.a("button.gif", (byte) -71, ""), (java.awt.Component) ((Object) ci.field_f));
+          Sprite var17 = new Sprite(param2.getFileByName("button.gif", (byte) -71, ""), (java.awt.Component) ((Object) ci.field_f));
           cd.a(param1, "commonui", "dropdown", param0 - 116);
           IndexedSprite[] var5 = iu.a(param1, "commonui", (byte) -86, "screen_options");
           MenuInputState.field_i = new IndexedSprite[param0];

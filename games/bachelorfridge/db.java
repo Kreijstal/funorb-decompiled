@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class db {
-    static vr field_a;
+    static ResourceArchive field_a;
     static String[] field_b;
 
     final static EventEffect a(PacketBuffer param0, int param1) {
@@ -20,7 +20,7 @@ final class db {
           var3 = param0.readByte(true);
           var4 = param0.readSignedShort((byte) -85);
           if (param1 != 95) {
-            field_a = (vr) null;
+            field_a = (ResourceArchive) null;
           }
           stackIn_3_0 = new qq(var2, var3, var4);
           return (EventEffect) ((Object) stackIn_3_0);

@@ -604,7 +604,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     (var2.startsWith("1.6.0_"))) {
                     var3 = 6;
                     while (var3 < var2.length()) {
-                      stackIn_70_0 = ne.a((byte) 56, var2.charAt(var3));
+                      stackIn_70_0 = ne.isAsciiDigit((byte) 56, var2.charAt(var3));
                       if (var5 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;

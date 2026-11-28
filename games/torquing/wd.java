@@ -198,7 +198,7 @@ final class wd extends DualLinkNode {
         try {
           if (po.field_u >= 0) {
             for (var4_int = 0; var4_int < this.field_q.length; var4_int++) {
-              if (!param1.a(po.field_u, this.field_q[var4_int], (byte) -123)) {
+              if (!param1.tryLoadFile(po.field_u, this.field_q[var4_int], (byte) -123)) {
                 return false;
               }
             }

@@ -25,7 +25,7 @@ final class aja extends pv {
         if (!gja.b(param0 - 16114)) {
           return false;
         }
-        if ((vr.field_b & 8) == 0) {
+        if ((ResourceArchive.field_b & 8) == 0) {
           return true;
         }
         return false;

@@ -79,7 +79,7 @@ final class kc extends IntrusiveNode {
         field_p = null;
     }
 
-    final static jb a(vj param0, vj param1, String param2, int param3, String param4) {
+    final static jb a(ResourceArchive param0, ResourceArchive param1, String param2, int param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -96,9 +96,9 @@ final class kc extends IntrusiveNode {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param1.a(param2, (byte) -114);
+          var5_int = param1.getGroupIdByName(param2, (byte) -114);
           var6 = -24 % ((param3 + 39) / 54);
-          var7 = param1.a((byte) -105, param4, var5_int);
+          var7 = param1.getFileIdByName((byte) -105, param4, var5_int);
           stackIn_1_0 = oj.a(var5_int, var7, param1, param0, 15619);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

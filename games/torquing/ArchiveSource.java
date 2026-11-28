@@ -6,7 +6,7 @@ abstract class ArchiveSource {
 
     abstract ArchiveIndex b(byte param0);
 
-    abstract int a(int param0, int param1);
+    abstract int getGroupRequestProgressPercent(int param0, int param1);
 
     final static String a(int param0) {
         int var2 = 0;

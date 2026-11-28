@@ -97,7 +97,7 @@ final class nia extends lw {
     }
 
     final void a(byte param0) {
-        int var2 = (int)((1.0 - Math.cos((double)(4 * vr.field_b) * 3.141592653589793 / 100.0)) * 256.0);
+        int var2 = (int)((1.0 - Math.cos((double)(4 * ResourceArchive.field_b) * 3.141592653589793 / 100.0)) * 256.0);
         if (this.field_e == 1) {
           vg.a(sia.field_j, 9280, 22997, 37000, var2 + 4096, 1760, var2 + 4096, sia.field_j.field_o << 3, sia.field_j.field_n << 3);
         }

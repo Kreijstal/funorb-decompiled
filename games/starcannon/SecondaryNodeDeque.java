@@ -33,7 +33,7 @@ final class SecondaryNodeDeque implements Iterable {
         return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
-    final static String a(String param0, ue param1, byte param2, String param3, String param4) {
+    final static String a(String param0, ResourceArchive param1, byte param2, String param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_4_0 = null;
         String stackIn_6_0 = null;
@@ -51,8 +51,8 @@ final class SecondaryNodeDeque implements Iterable {
           if (param2 != -38) {
             field_a = -82;
           }
-          if (param1.b((byte) 93)) {
-            stackIn_6_0 = param3 + " - " + param1.a(param4, (byte) 75) + "%";
+          if (param1.ensureIndexLoaded((byte) 93)) {
+            stackIn_6_0 = param3 + " - " + param1.getGroupLoadPercentByName(param4, (byte) 75) + "%";
             return stackIn_6_0;
           }
           stackIn_4_0 = (String) (param0);

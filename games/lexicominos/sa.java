@@ -8,7 +8,7 @@ final class sa {
     String field_f;
     String field_b;
     String field_e;
-    sh field_d;
+    ResourceArchive field_d;
     static String field_h;
     static int field_c;
 

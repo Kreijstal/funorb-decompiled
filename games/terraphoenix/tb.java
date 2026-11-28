@@ -650,7 +650,7 @@ final class tb extends uj {
         return (ArchiveRequest) (var4);
     }
 
-    final int b(int param0, int param1) {
+    final int getGroupRequestProgressPercent(int param0, int param1) {
         ArchiveRequest var3 = (ArchiveRequest) (this.field_q.a((byte) 46, (long)param1));
         if (param0 != 0) {
           return -22;

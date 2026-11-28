@@ -23,7 +23,7 @@ final class go extends ln {
           if (param1 != 240) {
             return;
           }
-          pj.a(db.field_i, param0 + param0, SecondaryNodeDeque.field_c + param0, false, em.field_i, (byte) 119, param0);
+          pj.a(ResourceArchive.field_i, param0 + param0, SecondaryNodeDeque.field_c + param0, false, em.field_i, (byte) 119, param0);
           if (param0 < SecondaryNodeDeque.field_c) {
             SecondaryNodeDeque.field_c = param0;
           }

@@ -103,11 +103,11 @@ final class fi {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = 59 / ((param3 - 53) / 36);
-          var5_int = this.field_a.a(-1, param1);
+          var5_int = this.field_a.getGroupIdByName(-1, param1);
           if (var5_int < 0) {
             return null;
           }
-          var7 = this.field_a.a(param0, -115, var5_int);
+          var7 = this.field_a.getFileIdByName(param0, -115, var5_int);
           if (0 <= var7) {
             stackIn_7_0 = this.a(var5_int, var7, param2, (byte) 77);
             return stackIn_7_0;

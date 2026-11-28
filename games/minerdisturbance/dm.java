@@ -65,24 +65,24 @@ final class dm {
         while (this.field_e < this.field_i) {
           var4 = this.field_h[this.field_e];
           var2 = var4;
-          if (!var4.field_j.a((byte) 102)) {
+          if (!var4.field_j.ensureIndexLoaded((byte) 102)) {
             this.a(var4, 100, 0);
             return false;
           }
           if (0 <= var4.field_d &&
-            !var4.field_j.d(var4.field_d, 0)) {
-            this.a(var2, 100, var4.field_j.a(var4.field_d, true));
+            !var4.field_j.tryLoadGroup(var4.field_d, 0)) {
+            this.a(var2, 100, var4.field_j.getGroupLoadPercent(var4.field_d, true));
             return false;
           }
           if (null != var4.field_g &&
             !var4.field_j.a(false, var4.field_g)) {
-            this.a(var2, 100, var4.field_j.a(var4.field_g, -128));
+            this.a(var2, 100, var4.field_j.getGroupLoadPercentByName(var4.field_g, -128));
             return false;
           }
           if (var4.field_d < 0 &&
             var4.field_g == null &&
             var4.field_l != null &&
-            !var4.field_j.b(-1)) {
+            !var4.field_j.tryLoadAllGroups(-1)) {
             this.a(var2, 100, var4.field_j.c(-14858));
             return false;
           }

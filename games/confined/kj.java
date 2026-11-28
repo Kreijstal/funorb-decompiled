@@ -39,7 +39,7 @@ final class kj {
         return false;
     }
 
-    final static bm[] a(mi param0, int param1, int param2, boolean param3) {
+    final static bm[] a(ResourceArchive param0, int param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

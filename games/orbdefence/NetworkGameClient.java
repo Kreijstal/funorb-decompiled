@@ -73,7 +73,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         int var4 = GameAppletShell.field_c - 1;
         byte[] var5 = new byte[var4];
-        NetworkArchiveRequest.field_t.a(-29, 0, var5, var4);
+        NetworkArchiveRequest.field_t.readCipheredBytes(-29, 0, var5, var4);
         ke.a(ProxyAuthenticationRequiredException.a(var5, -12465), var3 != 0, (byte) -94, uj.b((byte) -120));
     }
 
@@ -139,7 +139,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               var5_intLifetime2 = vc.a(this.field_z, this.field_o, param1 ^ 77, am.b(param1 ^ 60), false, uh.b(4));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
-                  se.a(kk.field_Y, (byte) -115, var5_intLifetime2);
+                  BitPacketBuffer.showLobbyDialog(kk.field_Y, (byte) -115, var5_intLifetime2);
                   kk.field_Y = null;
                 } else {
                   el.field_F = p.field_c;
@@ -175,7 +175,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             ka.a(uj.b((byte) -120), 1);
           }
           if (var4 == 10) {
-            uk.field_b.i(17, 89);
+            uk.field_b.writeCipheredByte(17, 89);
           }
           if (var4 == 11) {
             bm.a(param1 + 12980, uj.b((byte) -120));
@@ -194,7 +194,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   var9 = (String) null;
                   li.a(-1, (String) null);
                 } else {
-                  var7 = tj.a(var12.position, 0, 0, var12.payload);
+                  var7 = tj.decodeCp1252String(var12.position, 0, 0, var12.payload);
                   li.a(param1 + 0, var7);
                 }
                 ml.field_e = null;
@@ -471,7 +471,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             this.field_r = false;
             th.a(111);
             md.b((byte) 42);
-            se.a(oe.field_m, (byte) -79, 2);
+            BitPacketBuffer.showLobbyDialog(oe.field_m, (byte) -79, 2);
             ke.a(-92);
             fa.field_a = true;
             lm.field_c = 15000L + ji.correctedCurrentTimeMillis(-103);
@@ -500,20 +500,20 @@ abstract class NetworkGameClient extends GameAppletShell {
               md.b((byte) -86);
               if (DualLinkNode.field_j != 3) {
                 if (DualLinkNode.field_j == 4) {
-                  se.a(cg.field_h, (byte) 109, 256);
+                  BitPacketBuffer.showLobbyDialog(cg.field_h, (byte) 109, 256);
                 } else {
                   if (DualLinkNode.field_j == 2) {
-                    se.a(ql.field_a, (byte) -118, 256);
+                    BitPacketBuffer.showLobbyDialog(ql.field_a, (byte) -118, 256);
                   } else {
                     if (DualLinkNode.field_j != 5) {
-                      se.a(NodeHashTableIterator.field_h, (byte) 63, 256);
+                      BitPacketBuffer.showLobbyDialog(NodeHashTableIterator.field_h, (byte) 63, 256);
                     } else {
-                      se.a(nf.field_k, (byte) -82, 5);
+                      BitPacketBuffer.showLobbyDialog(nf.field_k, (byte) -82, 5);
                     }
                   }
                 }
               } else {
-                se.a(DualLinkNode.field_i, (byte) -127, 256);
+                BitPacketBuffer.showLobbyDialog(DualLinkNode.field_i, (byte) -127, 256);
               }
               fa.field_a = true;
             }
@@ -569,7 +569,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (vh.field_n == 2) {
           if (null != lf.field_a &&
-            lf.field_a.b(-1)) {
+            lf.field_a.ensureIndexLoaded(-1)) {
             if (!lf.field_a.c((byte) -84, "")) {
               lf.field_a = null;
             } else {
@@ -623,8 +623,8 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         boolean decompiledFrameRemainder0 = true;
         if (vh.field_n == 11) {
-          if (null != eg.field_x && (!eg.field_x.b(-1) ||
-            !eg.field_x.c(7715))) {
+          if (null != eg.field_x && (!eg.field_x.ensureIndexLoaded(-1) ||
+            !eg.field_x.tryLoadAllGroups(7715))) {
             j.a(0.0f, ql.a(eg.field_x, mi.field_e, de.field_b, (byte) 32), (byte) 105);
             decompiledFrameRemainder0 = false;
           }
@@ -782,7 +782,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               this.a(111, "reconnect");
             }
             md.b((byte) -111);
-            se.a(kk.field_Y, (byte) -81, var2);
+            BitPacketBuffer.showLobbyDialog(kk.field_Y, (byte) -81, var2);
             fa.field_a = true;
             if (param0 != -10125) {
               this.n(-13);

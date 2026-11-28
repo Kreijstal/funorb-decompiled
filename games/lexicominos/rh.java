@@ -40,7 +40,7 @@ abstract class rh extends DualLinkNode {
           var3_int = -(int)(4294967296L % (long)param2) + -2147483648;
           if (param0 != 14817) {
             var5 = (String) null;
-            rh.a((sh) null, (byte) -41, (String) null, (String) null, (String) null);
+            rh.a((ResourceArchive) null, (byte) -41, (String) null, (String) null, (String) null);
           }
           do {
             var4 = param1.nextInt();
@@ -65,7 +65,7 @@ abstract class rh extends DualLinkNode {
 
     abstract boolean d(byte param0);
 
-    final static String a(sh param0, byte param1, String param2, String param3, String param4) {
+    final static String a(ResourceArchive param0, byte param1, String param2, String param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -85,11 +85,11 @@ abstract class rh extends DualLinkNode {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          if (!param0.c(90)) {
+          if (!param0.ensureIndexLoaded(90)) {
             stackIn_6_0 = (String) (param4);
             return stackIn_6_0;
           }
-          stackIn_8_0 = param3 + " - " + param0.b(param2, (byte) 115) + "%";
+          stackIn_8_0 = param3 + " - " + param0.getGroupLoadPercentByName(param2, (byte) 115) + "%";
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

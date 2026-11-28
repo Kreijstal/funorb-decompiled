@@ -113,14 +113,14 @@ final class ph extends IntrusiveNode {
         return var0;
     }
 
-    final static ph a(mi param0, String param1, String param2) {
+    final static ph a(ResourceArchive param0, String param1, String param2) {
         try {
           ph var4_ref = null;
           if (!ph.a(param0)) {
             param0.a(param1, param2, 255);
             return null;
           }
-          byte[] var3 = param0.a(-51, param1, param2);
+          byte[] var3 = param0.getFileByName(-51, param1, param2);
           if (var3 == null) {
             return null;
           }
@@ -273,14 +273,14 @@ final class ph extends IntrusiveNode {
         field_y = true;
     }
 
-    final static ph a(mi param0, int param1, int param2) {
+    final static ph a(ResourceArchive param0, int param1, int param2) {
         try {
           ph var4_ref = null;
           if (!ph.a(param0)) {
-            param0.a(param1, param2, 0);
+            param0.tryLoadFile(param1, param2, 0);
             return null;
           }
-          byte[] var3 = param0.a((byte) -2, param1, param2);
+          byte[] var3 = param0.getFile((byte) -2, param1, param2);
           if (var3 == null) {
             return null;
           }
@@ -693,10 +693,10 @@ final class ph extends IntrusiveNode {
         return (float[]) (var17);
     }
 
-    private final static boolean a(mi param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_y) {
-          var1 = param0.a((byte) -2, 0, 0);
+          var1 = param0.getFile((byte) -2, 0, 0);
           if (var1 == null) {
             return false;
           }

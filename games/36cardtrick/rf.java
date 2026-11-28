@@ -125,7 +125,7 @@ final class rf implements Runnable {
               var3 = var4.getOutputStream();
               var3.write(17);
               var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_a.getFile() + "\n\n"));
-              var3.write(dd.a(var5, (byte) -127));
+              var3.write(dd.encodeCp1252Bytes(var5, (byte) -127));
               this.field_h = new DataInputStream(var4.getInputStream());
             }
             this.field_c.position = 0;

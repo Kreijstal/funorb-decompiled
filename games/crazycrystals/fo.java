@@ -50,7 +50,7 @@ final class fo extends IntrusiveNode {
         field_m = null;
     }
 
-    final static int a(int param0, byte[] param1, int param2, CharSequence param3, byte param4, int param5) {
+    final static int encodeCp1252Subsequence(int param0, byte[] param1, int param2, CharSequence param3, byte param4, int param5) {
         int var7 = 0;
         int stackIn_69_0 = 0;
         RuntimeException stackIn_72_0 = null;
@@ -68,7 +68,7 @@ final class fo extends IntrusiveNode {
         try {
           if (param4 < 112) {
             var10 = (CharSequence) null;
-            fo.a(-11, (byte[]) null, 31, (CharSequence) null, (byte) -124, 11);
+            fo.encodeCp1252Subsequence(-11, (byte[]) null, 31, (CharSequence) null, (byte) -124, 11);
           }
           var6_int = -param5 + param2;
           for (var7 = 0; var6_int > var7; var7++) {

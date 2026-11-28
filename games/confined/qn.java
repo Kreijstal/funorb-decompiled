@@ -24,7 +24,7 @@ final class qn extends IntrusiveNode {
         field_v = null;
     }
 
-    final static boolean a(mi param0, int param1) {
+    final static boolean a(ResourceArchive param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -33,7 +33,7 @@ final class qn extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == -1) {
-            stackIn_4_0 = param0.a(25057);
+            stackIn_4_0 = param0.tryLoadAllGroups(25057);
             return stackIn_4_0;
           }
           return true;

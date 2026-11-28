@@ -22,8 +22,8 @@ final class dc {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param1.a(-1, param0);
-          var6 = param1.a(param4, -107, var5_int);
+          var5_int = param1.getGroupIdByName(-1, param0);
+          var6 = param1.getFileIdByName(param4, -107, var5_int);
           if (param3) {
             field_b = (String) null;
           }

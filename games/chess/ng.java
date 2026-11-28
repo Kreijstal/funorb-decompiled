@@ -10,7 +10,7 @@ final class ng {
     final static void a(int param0, boolean param1, long param2, int param3, String param4, int param5) {
         int var7_int = 0;
         try {
-          qn.field_U.f(param0, -60);
+          qn.field_U.writeCipheredByte(param0, -60);
           if (param5 < 23) {
             field_d = (String) null;
           }

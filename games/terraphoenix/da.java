@@ -133,7 +133,7 @@ final class da {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_a.c(param1 + 28, param3);
+          var5_int = this.field_a.getGroupIdByName(param1 + 28, param3);
           if (param1 != -29) {
             stackIn_2_0 = (PcmSample) null;
             return stackIn_2_0;
@@ -141,7 +141,7 @@ final class da {
           if (var5_int < 0) {
             return null;
           }
-          var6 = this.field_a.a(-88, var5_int, param0);
+          var6 = this.field_a.getFileIdByName(-88, var5_int, param0);
           if (var6 < 0) {
             return null;
           }
@@ -204,8 +204,8 @@ final class da {
     }
 
     final static void a(int param0, int param1) {
-        uc var2 = di.field_l;
-        var2.k(-17410, param1);
+        BitPacketBuffer var2 = di.field_l;
+        var2.writeCipheredByte(-17410, param1);
         var2.writeByte(1, 24);
         var2.writeByte(param0, -123);
     }
@@ -225,11 +225,11 @@ final class da {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_c.c(-1, param1);
+          var5_int = this.field_c.getGroupIdByName(-1, param1);
           if (var5_int < 0) {
             return null;
           }
-          var6 = this.field_c.a(-124, var5_int, param0);
+          var6 = this.field_c.getFileIdByName(-124, var5_int, param0);
           if (0 > var6) {
             return null;
           }

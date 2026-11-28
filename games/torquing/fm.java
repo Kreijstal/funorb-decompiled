@@ -91,7 +91,7 @@ final class fm extends WidgetContainer implements ng {
         }
     }
 
-    final static boolean a(byte param0, char param1) {
+    final static boolean isSupportedCp1252KeyCharacter(byte param0, char param1) {
         int var3 = 0;
         char[] var2 = null;
         RuntimeException var2_ref = null;
@@ -206,7 +206,7 @@ final class fm extends WidgetContainer implements ng {
 
     public static void h(int param0) {
         if (param0 >= -11) {
-          fm.a((byte) -83, 'K');
+          fm.isSupportedCp1252KeyCharacter((byte) -83, 'K');
         }
         field_F = null;
     }

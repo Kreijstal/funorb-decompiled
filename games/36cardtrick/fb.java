@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fb {
-    static qk field_a;
+    static ResourceArchive field_a;
     static int[] field_c;
     static byte[] field_e;
     static byte[] field_d;

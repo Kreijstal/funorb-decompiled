@@ -79,8 +79,8 @@ final class od extends on {
         return this.a(param0, param1, param2 * param5[3] + param3 * param5[4] + param4 * param5[5] >> 16, param2 * param5[6] + param3 * param5[7] + param4 * param5[8] >> 16, param2 * param5[9] + param3 * param5[10] + param4 * param5[11] >> 16);
     }
 
-    final static od a(mi param0, String param1, String param2) {
-        byte[] var3 = param0.a(81, param1, param2);
+    final static od a(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.getFileByName(81, param1, param2);
         if (var3 == null) {
           return null;
         }

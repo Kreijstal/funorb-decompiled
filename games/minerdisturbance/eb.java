@@ -58,7 +58,7 @@ final class eb {
           if (param1 <= 122) {
             eb.clearStaticReferences((byte) 53);
           }
-          stackIn_3_0 = param0.b(-1);
+          stackIn_3_0 = param0.tryLoadAllGroups(-1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

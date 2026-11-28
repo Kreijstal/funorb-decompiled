@@ -6,7 +6,7 @@ class qn extends fb {
     private int field_T;
     static ci field_P;
     static int field_M;
-    static nk field_U;
+    static BitPacketBuffer field_U;
     private int field_Q;
     private int field_X;
     private int field_N;
@@ -338,7 +338,7 @@ class qn extends fb {
 
     final static double a(int param0, double param1) {
         if (param0 != -17513) {
-          field_U = (nk) null;
+          field_U = (BitPacketBuffer) null;
         }
         return li.field_e[65535 & (int)(param1 * 32768.0 / 3.141592653589793)];
     }

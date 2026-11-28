@@ -55,7 +55,7 @@ final class ei {
     public static void a(int param0) {
         if (param0 != -22787) {
           ud var2 = (ud) null;
-          ei.a((ad) null, (byte) 11, (ud) null, 44, -94);
+          ei.a((ResourceArchive) null, (byte) 11, (ud) null, 44, -94);
         }
         field_b = null;
     }
@@ -89,7 +89,7 @@ final class ei {
         }
     }
 
-    final static lg a(ad param0, byte param1, ud param2, int param3, int param4) {
+    final static lg a(ResourceArchive param0, byte param1, ud param2, int param3, int param4) {
         byte[] var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -102,7 +102,7 @@ final class ei {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = param0.b(255, param3, param4);
+          var7 = param0.getFile(255, param3, param4);
           var5 = var7;
           var6 = 16 / ((param1 - 67) / 42);
           if (var7 == null) {

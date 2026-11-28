@@ -96,7 +96,7 @@ final class dm extends mj {
           return -62;
         }
         if (!p.field_a.b(false)) {
-          return vj.e((byte) -95);
+          return ResourceArchive.e((byte) -95);
         }
         return 0;
     }

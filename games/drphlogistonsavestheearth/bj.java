@@ -57,13 +57,13 @@ final class bj {
     }
 
     final static void a(int param0, int param1, h param2) {
-        lh var3 = null;
+        BitPacketBuffer var3 = null;
         if (param1 > -15) {
           return;
         }
         try {
           var3 = nj.field_p;
-          var3.d(param0, -18392);
+          var3.writeCipheredByte(param0, -18392);
           var3.writeByte(2, (byte) -126);
           var3.writeByte(0, (byte) -128);
           var3.writeByte(param2.field_h, (byte) -127);
@@ -73,8 +73,8 @@ final class bj {
     }
 
     final static void a(int param0, int param1) {
-        lh var2 = nj.field_p;
-        var2.d(param1, -18392);
+        BitPacketBuffer var2 = nj.field_p;
+        var2.writeCipheredByte(param1, -18392);
         var2.writeByte(1, (byte) -117);
         var2.writeByte(2, (byte) -115);
         if (param0 == 2591) {

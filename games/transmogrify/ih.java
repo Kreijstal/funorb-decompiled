@@ -20,7 +20,7 @@ abstract class ih {
 
     abstract byte[] a(int param0, int param1);
 
-    abstract int b(int param0, int param1);
+    abstract int getGroupRequestProgressPercent(int param0, int param1);
 
     static {
         field_z = "ih.C(";

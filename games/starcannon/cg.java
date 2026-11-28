@@ -24,24 +24,24 @@ final class cg {
         while (this.field_c < this.field_f) {
           var4 = this.field_d[this.field_c];
           var2 = var4;
-          if (!var4.field_b.b((byte) 99)) {
+          if (!var4.field_b.ensureIndexLoaded((byte) 99)) {
             this.a((byte) 49, var4, 0);
             return false;
           }
           if (var4.field_j >= 0 &&
-            !var4.field_b.c(var4.field_j, -31)) {
-            this.a((byte) 75, var2, var4.field_b.a(100, var4.field_j));
+            !var4.field_b.tryLoadGroup(var4.field_j, -31)) {
+            this.a((byte) 75, var2, var4.field_b.getGroupLoadPercent(100, var4.field_j));
             return false;
           }
           if (null != var4.field_g &&
             !var4.field_b.a(var4.field_g, -9883)) {
-            this.a((byte) -121, var2, var4.field_b.a(var4.field_g, (byte) 96));
+            this.a((byte) -121, var2, var4.field_b.getGroupLoadPercentByName(var4.field_g, (byte) 96));
             return false;
           }
           if (0 > var4.field_j &&
             null == var4.field_g &&
             null != var4.field_k &&
-            !var4.field_b.a(29741)) {
+            !var4.field_b.tryLoadAllGroups(29741)) {
             this.a((byte) 27, var2, var4.field_b.a((byte) 62));
             return false;
           }

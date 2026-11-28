@@ -324,7 +324,7 @@ final class gg {
         Object var5 = null;
         int var6 = 0;
         uj var8 = null;
-        nk var9 = null;
+        BitPacketBuffer var9 = null;
         byte[] var13 = null;
         var6 = Chess.field_G;
         try {

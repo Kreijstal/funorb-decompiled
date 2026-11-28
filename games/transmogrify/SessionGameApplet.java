@@ -6,7 +6,7 @@ abstract class SessionGameApplet extends GameApplet {
     private int field_u;
     private int field_n;
     static int field_l;
-    static ci field_y;
+    static ResourceArchive field_y;
     String field_q;
     private int field_w;
     private int field_s;
@@ -476,7 +476,7 @@ abstract class SessionGameApplet extends GameApplet {
                 } else {
                   if (2 != tb.field_a) {
                     if (5 != tb.field_a) {
-                      gb.a(256, -89, hj.field_o);
+                      gb.a(256, -89, BitPacketBuffer.field_o);
                     } else {
                       gb.a(5, -115, ta.field_g);
                     }
@@ -539,7 +539,7 @@ abstract class SessionGameApplet extends GameApplet {
         }
         if (2 == bi.field_L) {
           if (null != hg.field_a &&
-            hg.field_a.a((byte) -117)) {
+            hg.field_a.ensureIndexLoaded((byte) -117)) {
             if (hg.field_a.b((byte) -120, "")) {
               if (hg.field_a.a((byte) 117, "")) {
                 ContextualRuntimeException.a(7, hg.field_a);
@@ -593,8 +593,8 @@ abstract class SessionGameApplet extends GameApplet {
         }
         boolean decompiledFrameRemainder0 = true;
         if (bi.field_L == 11) {
-          if (null != nk.field_d && (!nk.field_d.a((byte) -122) ||
-            !nk.field_d.c(32031))) {
+          if (null != nk.field_d && (!nk.field_d.ensureIndexLoaded((byte) -122) ||
+            !nk.field_d.tryLoadAllGroups(32031))) {
             vf.a((byte) -122, 0.0f, u.a(ByteStorage.field_c, od.field_h, nk.field_d, true));
             decompiledFrameRemainder0 = false;
           }
@@ -739,7 +739,7 @@ abstract class SessionGameApplet extends GameApplet {
             v.a((byte) -67, ha.b(87));
           }
           if (var4 == 10) {
-            ff.field_D.a(false, 17);
+            ff.field_D.writeCipheredByte(false, 17);
           }
           if (var4 == 11) {
             ol.a(ha.b(param0 ^ 2581), param0 + 27569);
@@ -755,7 +755,7 @@ abstract class SessionGameApplet extends GameApplet {
               if (field_m.a(0)) {
                 var12 = field_m.b(113);
                 if (var12 != null) {
-                  var7 = cc.a(0, param0 + 13298, var12.position, var12.payload);
+                  var7 = cc.decodeCp1252String(0, param0 + 13298, var12.position, var12.payload);
                   bg.a((byte) -120, var7);
                 } else {
                   var9 = (String) null;
@@ -815,7 +815,7 @@ abstract class SessionGameApplet extends GameApplet {
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = tg.field_a - 1;
         byte[] var5 = new byte[var4];
-        WordLanguage.field_l.a(var5, var4, 0, 18570);
+        WordLanguage.field_l.readCipheredBytes(var5, var4, 0, 18570);
         ea.a((byte) 68, ha.b(127), var3 != 0, eg.a(106, var5));
     }
 

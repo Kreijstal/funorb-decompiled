@@ -78,7 +78,7 @@ class LinkTextWidget extends InteractiveWidget {
         }
     }
 
-    final static void a(byte param0, vr param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2085_0;
             StringBuilder stackIn_2085_1;
@@ -88,9 +88,9 @@ class LinkTextWidget extends InteractiveWidget {
             RuntimeException var2_ref;
             int var3;
             byte param0;
-            vr param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(byte initialParam0, vr initialParam1) {
+            $CfrPartitionedBody(byte initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2085_0 = null;
@@ -1546,7 +1546,7 @@ class LinkTextWidget extends InteractiveWidget {
                   c.field_k[9] = qq.a(var2, false);
                 }
                 if (param0 < 15) {
-                  LinkTextWidget.a((byte) 51, (vr) null);
+                  LinkTextWidget.a((byte) 51, (ResourceArchive) null);
                 }
                 var2 = BuffVendorAnimation.a("STATUS_EFFECTS_DESC,10", (byte) 82);
                 if (null != var2) {
@@ -2840,7 +2840,7 @@ class LinkTextWidget extends InteractiveWidget {
           field_A = (int[][]) null;
           field_H = null;
           if (!param0) {
-            LinkTextWidget.a((byte) 76, (vr) null);
+            LinkTextWidget.a((byte) 76, (ResourceArchive) null);
           }
           field_F = null;
           field_D = null;

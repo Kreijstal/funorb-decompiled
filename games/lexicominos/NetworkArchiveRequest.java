@@ -107,7 +107,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         field_z = null;
     }
 
-    final static String a(int param0, byte[] param1, byte param2, int param3) {
+    final static String decodeCp1252String(int param0, byte[] param1, byte param2, int param3) {
         int var6 = 0;
         int incrementValue$0 = 0;
         char[] var4 = null;

@@ -105,7 +105,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
           if (null != MidiPcmStream.field_O) {
             var2_int = param0.getKeyChar();
             if (0 != var2_int && var2_int != 65535 &&
-              bn.a(93, (char) var2_int)) {
+              bn.isSupportedCp1252KeyCharacter(93, (char) var2_int)) {
               var3 = 127 & 1 + qf.field_n;
               if (var3 != dn.field_w) {
                 jk.field_ib[qf.field_n] = -1;

@@ -46,16 +46,16 @@ final class ha {
         return var3;
     }
 
-    final static ha a(db param0, int param1, int param2) {
-        byte[] var3 = param0.b(param2, 0, param1);
+    final static ha a(ResourceArchive param0, int param1, int param2) {
+        byte[] var3 = param0.getFile(param2, 0, param1);
         if (var3 == null) {
           return null;
         }
         return new ha(new PacketBuffer(var3));
     }
 
-    final static ha a(db param0, String param1, String param2) {
-        byte[] var3 = param0.a(7693, param2, param1);
+    final static ha a(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.getFileByName(7693, param2, param1);
         if (var3 == null) {
           return null;
         }

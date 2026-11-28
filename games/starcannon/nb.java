@@ -10,15 +10,15 @@ final class nb {
     static int field_g;
     static PlatformTaskDispatcher field_e;
 
-    final static void a(ue param0, byte param1) {
+    final static void a(ResourceArchive param0, byte param1) {
         int var3 = 0;
         int var4 = 0;
         lb var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        ia var8 = null;
+        BitPacketBuffer var8 = null;
         int var9 = 0;
-        ia var10 = null;
+        BitPacketBuffer var10 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -27,17 +27,17 @@ final class nb {
         int var4Lifetime1;
         var7 = StarCannon.field_A;
         try {
-          var8 = new ia(param0.a("logo.fo3d", (byte) -119, ""));
+          var8 = new BitPacketBuffer(param0.getFileByName("logo.fo3d", (byte) -119, ""));
           var10 = var8;
           var3 = var10.readUnsignedByte(7909);
-          var10.c(true);
+          var10.beginBitAccess(true);
           uc.field_d = BufferedSocket.a(var10, (byte) 107);
           ci.field_g = new lb[var3];
           PcmOutputWorker.field_h = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
             ci.field_g[var4] = vh.a(var8, 102);
           }
-          var10.l(118);
+          var10.endBitAccess(118);
           if (param1 <= 87) {
             nb.clearStaticReferences(-75);
           }

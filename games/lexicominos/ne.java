@@ -8,7 +8,7 @@ final class ne {
     static boolean field_e;
     static boolean field_c;
 
-    final static boolean a(byte param0, char param1) {
+    final static boolean isAsciiDigit(byte param0, char param1) {
         if (param0 < 31) {
           field_d = (char[]) null;
           if (param1 < 48) {

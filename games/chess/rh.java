@@ -72,24 +72,24 @@ final class rh {
         while (this.field_b < this.field_h) {
           var4 = this.field_f[this.field_b];
           var2 = var4;
-          if (!var4.field_c.c((byte) 123)) {
+          if (!var4.field_c.ensureIndexLoaded((byte) 123)) {
             this.a(var4, 0, param0 ^ 48);
             return false;
           }
           if (var4.field_f >= 0 &&
-            !var4.field_c.a(var4.field_f, (byte) -72)) {
-            this.a(var2, var4.field_c.c(var4.field_f, -85), 118);
+            !var4.field_c.tryLoadGroup(var4.field_f, (byte) -72)) {
+            this.a(var2, var4.field_c.getGroupLoadPercent(var4.field_f, -85), 118);
             return false;
           }
           if (var4.field_e != null &&
             !var4.field_c.b(var4.field_e, param0 ^ -101)) {
-            this.a(var2, var4.field_c.c(var4.field_e, 0), param0 ^ 25);
+            this.a(var2, var4.field_c.getGroupLoadPercentByName(var4.field_e, 0), param0 ^ 25);
             return false;
           }
           if (var4.field_f < 0 &&
             null == var4.field_e &&
             var4.field_d != null &&
-            !var4.field_c.b((byte) -40)) {
+            !var4.field_c.tryLoadAllGroups((byte) -40)) {
             this.a(var2, var4.field_c.a((byte) -72), 119);
             return false;
           }
@@ -101,8 +101,8 @@ final class rh {
     }
 
     final static void a(int param0, int param1) {
-        nk var2 = qn.field_U;
-        var2.f(param1, param0 ^ -117);
+        BitPacketBuffer var2 = qn.field_U;
+        var2.writeCipheredByte(param1, param0 ^ -117);
         var2.writeByte(1, (byte) 86);
         var2.writeByte(param0, (byte) 45);
     }

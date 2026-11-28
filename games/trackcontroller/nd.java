@@ -35,7 +35,7 @@ final class nd extends td implements ButtonListener {
             }
             var4 = new byte[var3_int];
             param1.position = param1.position + MidiPlayer.field_v.a(param1.payload, param1.position, 0, 0, var3_int, var4);
-            var5 = ka.a(0, -129, var4, var3_int);
+            var5 = ka.decodeCp1252String(0, -129, var4, var3_int);
             stackIn_6_0 = var5;
             return stackIn_6_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -135,7 +135,7 @@ final class nd extends td implements ButtonListener {
         }
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isSupportedCp1252KeyCharacter(int param0, char param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

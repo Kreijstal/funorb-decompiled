@@ -258,7 +258,7 @@ final class na implements Runnable {
               var3 = var4.getOutputStream();
               var3.write(17);
               var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_e.getFile() + "\n\n"));
-              var3.write(wb.a(65, var5));
+              var3.write(wb.encodeCp1252Bytes(65, var5));
               this.field_d = new DataInputStream(var4.getInputStream());
             }
             this.field_g.position = 0;

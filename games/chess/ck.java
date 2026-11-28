@@ -12,7 +12,7 @@ final class ck {
     }
 
     final static ck a(ResourceArchive param0, int param1, int param2) {
-        byte[] var3 = param0.a(param1, param2, 5847);
+        byte[] var3 = param0.getFile(param1, param2, 5847);
         if (var3 == null) {
           return null;
         }

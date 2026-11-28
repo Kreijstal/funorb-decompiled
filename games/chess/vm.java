@@ -319,7 +319,7 @@ abstract class vm extends jb implements ha {
         return stackIn_7_0;
     }
 
-    final static char a(int param0, byte param1) {
+    final static char decodeCp1252Byte(int param0, byte param1) {
         int var3 = 0;
         if (param0 <= 98) {
           field_k = 71;

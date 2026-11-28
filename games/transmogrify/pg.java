@@ -14,8 +14,8 @@ final class pg {
     final static void a(int param0) {
         if (param0 != 0) {
           pg.clearStaticReferences((byte) -65);
-          if (null != ci.field_f) {
-            ci.field_f.j(param0 + 127);
+          if (null != ResourceArchive.field_f) {
+            ResourceArchive.field_f.j(param0 + 127);
             if (gh.field_m != null) {
               gh.field_m.r(-96);
             }
@@ -28,14 +28,14 @@ final class pg {
           FullscreenFocusCanvas.c(-1);
           return;
         }
-        if (null == ci.field_f) {
+        if (null == ResourceArchive.field_f) {
           if (gh.field_m != null) {
             gh.field_m.r(-96);
           }
           FullscreenFocusCanvas.c(-1);
           return;
         }
-        ci.field_f.j(param0 + 127);
+        ResourceArchive.field_f.j(param0 + 127);
         if (gh.field_m != null) {
           gh.field_m.r(-96);
         }

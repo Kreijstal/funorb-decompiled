@@ -185,7 +185,7 @@ final class sk extends kj {
           var2_int = param1.length();
           var3 = 0;
           for (var4 = 0; var4 < var2_int; var4++) {
-            var3 = -var3 + (var3 << 5) + oc.a(-109, param1.charAt(var4));
+            var3 = -var3 + (var3 << 5) + oc.encodeCp1252Character(-109, param1.charAt(var4));
           }
           stackIn_7_0 = var3;
           return stackIn_7_0;

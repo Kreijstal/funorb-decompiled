@@ -10,7 +10,7 @@ final class qk {
         try {
           pc.a(param0, true);
           int var2_int = 12 % ((26 - param1) / 62);
-          vd.a(false, -536866817, ki.field_d);
+          vd.a(false, -536866817, ResourceArchive.field_d);
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "qk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -25,7 +25,7 @@ final class qk {
         }
     }
 
-    final static ki a(int param0, int param1) {
+    final static ResourceArchive a(int param0, int param1) {
         if (param1 == -32585) {
           return DelegatingCanvas.a(true, 5200, param0, 1, false, false);
         }

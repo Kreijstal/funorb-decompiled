@@ -260,7 +260,7 @@ class jd implements fc, sf {
         }
     }
 
-    final static we a(int param0, gk param1, int param2, int param3) {
+    final static we a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         byte[] var5 = null;
         Object stackIn_4_0 = null;

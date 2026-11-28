@@ -5,14 +5,14 @@ abstract class lk extends ic implements ec {
     static String field_g;
     static dl field_e;
     private ae field_f;
-    static pf field_i;
+    static ResourceArchive field_i;
     static int field_h;
     static int field_j;
 
     public final void b(ae param0, int param1) {
         try {
           if (param1 != 0) {
-            field_i = (pf) null;
+            field_i = (ResourceArchive) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "lk.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

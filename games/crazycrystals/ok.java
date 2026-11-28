@@ -9,7 +9,7 @@ final class ok implements wo {
     static oj field_e;
     private vc field_h;
     static MouseWheelInput field_g;
-    static db field_c;
+    static ResourceArchive field_c;
     static IntrusiveDeque field_a;
 
     final static void a(int param0) {

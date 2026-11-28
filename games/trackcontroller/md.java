@@ -82,11 +82,11 @@ final class md {
     }
 
     final static void a(int param0, cf param1, int param2) {
-        la var6 = null;
+        BitPacketBuffer var6 = null;
         int var5 = 0;
         try {
           var6 = LevelView.field_C;
-          var6.c(param0, 7);
+          var6.writeCipheredByte(param0, 7);
           int var4 = 81 / ((-12 - param2) / 48);
           var6.position = var6.position + 1;
           var5 = var6.position;

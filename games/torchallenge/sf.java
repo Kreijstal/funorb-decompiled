@@ -26,9 +26,9 @@ final class sf {
             return stackIn_2_0;
           }
           if (param0 >= 32768) {
-            var4 = this.field_g.c(1, param0 & 32767, 0);
+            var4 = this.field_g.getFile(1, param0 & 32767, 0);
           } else {
-            var4 = this.field_f.c(1, param0, 0);
+            var4 = this.field_f.getFile(1, param0, 0);
           }
           var3Lifetime1 = new lh();
           if (var4 != null) {

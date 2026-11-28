@@ -321,7 +321,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (param0 != 95) {
             field_b = (int[]) null;
           }
-          stackIn_3_0 = dj.field_cb.a(-2, param1, "");
+          stackIn_3_0 = dj.field_cb.getFileByName(-2, param1, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

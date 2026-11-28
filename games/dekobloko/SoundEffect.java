@@ -68,7 +68,7 @@ final class SoundEffect {
     }
 
     final static SoundEffect computeSoundEffect0152(ResourceArchive resourceArchiveArgument1, int integerArgument2, int integerArgument3) {
-        byte[] byteArrayLocal1 = resourceArchiveArgument1.computeByteArray0805(integerArgument3, 76, integerArgument2);
+        byte[] byteArrayLocal1 = resourceArchiveArgument1.getFile(integerArgument3, 76, integerArgument2);
         if (byteArrayLocal1 == null) {
           return null;
         }

@@ -77,7 +77,7 @@ final class uk extends nf {
                 uk.releaseDeclaredStaticReferences(-48);
               }
               if (null == ol.field_z[0]) {
-                ol.field_z[0] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(ba.field_k.a(7693, "tutorial.ccl", ""))), qp.field_g);
+                ol.field_z[0] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(ba.field_k.getFileByName(7693, "tutorial.ccl", ""))), qp.field_g);
                 vp.a(125);
               }
               if (mo.field_l > 0) {
@@ -92,17 +92,17 @@ final class uk extends nf {
                   if (var1 == null) {
                     return;
                   }
-                  ol.field_z[1] = b.a(oe.a(param0, -9762), (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.a(false, var7, "puzzle1p.ccl", ""))), ro.field_r);
-                  ol.field_z[2] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.a(false, var7, "puzzle2p.ccl", ""))), GameCanvas.field_e);
-                  ol.field_z[3] = b.a(param0 + 9762, (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.a(false, var7, "puzzle3p.ccl", ""))), qg.field_c);
-                  ol.field_z[4] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.a(false, var7, "arcade1p.ccl", ""))), kk.field_k);
+                  ol.field_z[1] = b.a(oe.a(param0, -9762), (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.getFileByNameWithKeys(false, var7, "puzzle1p.ccl", ""))), ro.field_r);
+                  ol.field_z[2] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.getFileByNameWithKeys(false, var7, "puzzle2p.ccl", ""))), GameCanvas.field_e);
+                  ol.field_z[3] = b.a(param0 + 9762, (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.getFileByNameWithKeys(false, var7, "puzzle3p.ccl", ""))), qg.field_c);
+                  ol.field_z[4] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.getFileByNameWithKeys(false, var7, "arcade1p.ccl", ""))), kk.field_k);
                   pd.field_f = null;
                   mg.field_g = null;
                   vp.a(105);
                 }
               } else {
                 if (ol.field_z[1] == null) {
-                  ol.field_z[1] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(ba.field_k.a(7693, "puzzle1p.ccl", ""))), ro.field_r);
+                  ol.field_z[1] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(ba.field_k.getFileByName(7693, "puzzle1p.ccl", ""))), ro.field_r);
                   vp.a(param0 ^ -9800);
                 }
               }

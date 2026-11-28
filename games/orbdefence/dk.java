@@ -45,7 +45,7 @@ final class dk {
         }
     }
 
-    final static void a(byte param0, se param1) {
+    final static void a(byte param0, BitPacketBuffer param1) {
         try {
           int var6 = 0;
           int var11_int = 0;
@@ -281,7 +281,7 @@ final class dk {
         }
     }
 
-    final static boolean a(int param0, ki param1, ki param2, ki param3) {
+    final static boolean a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -292,14 +292,14 @@ final class dk {
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1.b(-1) &&
+          if (param1.ensureIndexLoaded(-1) &&
             param1.b((byte) 104, "commonui")) {
             if (param0 != 1) {
               field_a = -12;
             }
-            if (param3.b(-1) &&
+            if (param3.ensureIndexLoaded(-1) &&
               param3.b((byte) 92, "commonui")) {
-              if (!param2.b(param0 - 2)) {
+              if (!param2.ensureIndexLoaded(param0 - 2)) {
                 return false;
               }
               if (!param2.b((byte) -110, "button.gif")) {

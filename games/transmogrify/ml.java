@@ -47,14 +47,14 @@ final class ml extends IntrusiveNode {
         return var0;
     }
 
-    final static ml a(ci param0, int param1, int param2) {
+    final static ml a(ResourceArchive param0, int param1, int param2) {
         try {
           ml var4_ref = null;
           if (!ml.a(param0)) {
-            param0.a(param2, 0, param1);
+            param0.tryLoadFile(param2, 0, param1);
             return null;
           }
-          byte[] var3 = param0.a((byte) -93, param2, param1);
+          byte[] var3 = param0.getFile((byte) -93, param2, param1);
           if (var3 == null) {
             return null;
           }
@@ -126,10 +126,10 @@ final class ml extends IntrusiveNode {
         field_B = null;
     }
 
-    private final static boolean a(ci param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_x) {
-          var1 = param0.a((byte) -93, 0, 0);
+          var1 = param0.getFile((byte) -93, 0, 0);
           if (var1 == null) {
             return false;
           }
@@ -729,14 +729,14 @@ final class ml extends IntrusiveNode {
         }
     }
 
-    final static ml a(ci param0, String param1, String param2) {
+    final static ml a(ResourceArchive param0, String param1, String param2) {
         try {
           ml var4_ref = null;
           if (!ml.a(param0)) {
             param0.a((byte) 35, param2, param1);
             return null;
           }
-          byte[] var3 = param0.a(param2, (byte) 72, param1);
+          byte[] var3 = param0.getFileByName(param2, (byte) 72, param1);
           if (var3 == null) {
             return null;
           }

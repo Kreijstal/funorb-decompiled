@@ -71,9 +71,9 @@ class id extends ik {
         int var8Lifetime1Lifetime1;
         var10 = Lexicominos.field_L ? 1 : 0;
         try {
-          sh.field_a = param0;
+          ResourceArchive.field_a = param0;
           sc.field_e = true;
-          if (sh.field_a == 0) {
+          if (ResourceArchive.field_a == 0) {
             var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, pc.field_m, nb.field_x);
             var4 = 3 + var3_int;
             ni.field_a = new int[var4];
@@ -92,7 +92,7 @@ class id extends ik {
             MouseWheelInput.field_g[var4 - 1] = NodeHashTableIterator.field_d;
             ni.field_a[-1 + var4] = 1;
             ik.field_g[1] = 5;
-          } else if (sh.field_a == 1) {
+          } else if (ResourceArchive.field_a == 1) {
             var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, pc.field_m, nb.field_x);
             var4 = var3_int + 2;
             ni.field_a = new int[var4];
@@ -108,8 +108,8 @@ class id extends ik {
             MouseWheelInput.field_g[-1 + var4] = NodeHashTableIterator.field_d;
             ni.field_a[-1 + var4] = 0;
             ik.field_g[0] = 5;
-          } else if (sh.field_a != 2) {
-            if (sh.field_a == 3) {
+          } else if (ResourceArchive.field_a != 2) {
+            if (ResourceArchive.field_a == 3) {
               if (jh.field_a.privilegedTasksEnabled) {
                 var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, GameAppletShell.field_m, nb.field_x);
               } else {
@@ -129,7 +129,7 @@ class id extends ik {
               MouseWheelInput.field_g[-1 + var4] = NodeHashTableIterator.field_d;
               ni.field_a[var4 - 1] = 0;
               ik.field_g[0] = 5;
-            } else if (sh.field_a == 4) {
+            } else if (ResourceArchive.field_a == 4) {
               var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, pj.field_B, nb.field_x);
               var4 = var3_int + 2;
               ni.field_a = new int[var4];
@@ -146,7 +146,7 @@ class id extends ik {
               ni.field_a[var4 - 1] = 0;
               ik.field_g[0] = 5;
             } else {
-              if (sh.field_a != 5) {
+              if (ResourceArchive.field_a != 5) {
                 throw new IllegalArgumentException();
               }
               var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, qj.field_db, nb.field_x);
@@ -265,7 +265,7 @@ class id extends ik {
               var3_intLifetime1 = var6Lifetime1;
             }
           }
-          if (sh.field_a == 2) {
+          if (ResourceArchive.field_a == 2) {
             var11 = SpriteGeometry.field_t;
             var5_ref_String__ = var11;
             for (var6Lifetime2 = 0; var11.length > var6Lifetime2; var6Lifetime2++) {
@@ -317,10 +317,10 @@ class id extends ik {
             }
             var5Lifetime3++;
           }
-          if (sh.field_a == 2) {
+          if (ResourceArchive.field_a == 2) {
             bc.field_H.a(0, param1, -1, -1);
           } else {
-            bc.field_H.a(0, param1, rc.a(bk.field_b, 29532, sh.field_e), 0);
+            bc.field_H.a(0, param1, rc.a(bk.field_b, 29532, ResourceArchive.field_e), 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

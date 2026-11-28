@@ -7,7 +7,7 @@ final class an extends qb {
     static int field_t;
     static IndexedSprite field_r;
 
-    final static Sprite[] a(byte param0, vr param1, String param2, String param3) {
+    final static Sprite[] a(byte param0, ResourceArchive param1, String param2, String param3) {
         Sprite[] var4 = null;
         RuntimeException var4_ref = null;
         Sprite[] var5 = null;
@@ -142,7 +142,7 @@ final class an extends qb {
         field_s = null;
         if (param0 != 86) {
           String var2 = (String) null;
-          an.a((byte) 1, (vr) null, (String) null, (String) null);
+          an.a((byte) 1, (ResourceArchive) null, (String) null, (String) null);
         }
         field_r = null;
     }

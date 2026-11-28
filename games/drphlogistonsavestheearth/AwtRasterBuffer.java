@@ -74,12 +74,12 @@ abstract class AwtRasterBuffer {
 
     abstract void drawImage(java.awt.Graphics param0, int param1, int param2, int param3);
 
-    final static vj a(boolean param0, int param1, boolean param2, boolean param3, boolean param4, int param5) {
+    final static ResourceArchive a(boolean param0, int param1, boolean param2, boolean param3, boolean param4, int param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           de var8 = null;
-          vj stackIn_13_0 = null;
+          ResourceArchive stackIn_13_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
@@ -106,7 +106,7 @@ abstract class AwtRasterBuffer {
             if (param3) {
               var8.f(107);
             }
-            stackIn_13_0 = new vj(var8, param0, param5);
+            stackIn_13_0 = new ResourceArchive(var8, param0, param5);
             return stackIn_13_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

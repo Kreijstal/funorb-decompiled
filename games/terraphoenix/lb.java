@@ -37,7 +37,7 @@ final class lb {
             return stackIn_3_0;
           }
           for (var4 = 0; var2_int > var4; var4++) {
-            var3 = (var3 << 5) - var3 + vb.a((byte) -128, param0.charAt(var4));
+            var3 = (var3 << 5) - var3 + vb.encodeCp1252Character((byte) -128, param0.charAt(var4));
           }
           stackIn_8_0 = var3;
           return stackIn_8_0;

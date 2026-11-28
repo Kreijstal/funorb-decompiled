@@ -114,7 +114,7 @@ abstract class eh {
 
     abstract void a(int param0);
 
-    final static void a(byte param0, ue param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2625_0;
             StringBuilder stackIn_2625_1;
@@ -125,9 +125,9 @@ abstract class eh {
             RuntimeException var2_ref;
             int var3;
             byte param0;
-            ue param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(byte initialParam0, ue initialParam1) {
+            $CfrPartitionedBody(byte initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2625_0 = null;
@@ -1924,7 +1924,7 @@ abstract class eh {
                 }
                 var2 = rd.a("loading_music", -101);
                 if (null != var2) {
-                  ia.field_l = DualLinkNode.a(116, var2);
+                  BitPacketBuffer.field_l = DualLinkNode.a(116, var2);
                 }
                 var2 = rd.a("loading_instruments", param0 ^ 72);
                 if (var2 != null) {
@@ -2626,7 +2626,7 @@ abstract class eh {
                 }
                 var2 = rd.a("keychar_the_character_under_questionmark", param0 - 137);
                 if (var2 != null) {
-                  kb.a(-55, var2[0]);
+                  kb.decodeCp1252Byte(-55, var2[0]);
                 }
                 var2 = rd.a("rating_noratings", param0 ^ -125);
                 if (var2 != null) {

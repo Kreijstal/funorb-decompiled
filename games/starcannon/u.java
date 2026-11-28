@@ -82,8 +82,8 @@ final class u {
     }
 
     final static void a(int param0, int param1) {
-        ia var2 = d.field_b;
-        var2.d((byte) 61, param0);
+        BitPacketBuffer var2 = d.field_b;
+        var2.writeCipheredByte((byte) 61, param0);
         var2.writeByte(param1, -109);
         var2.writeByte(2, -120);
     }

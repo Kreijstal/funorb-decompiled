@@ -8,7 +8,7 @@ final class oj {
     static int field_c;
     static String field_b;
 
-    final static wb a(int param0, qk param1, int param2, int param3) {
+    final static wb a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         wb stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;

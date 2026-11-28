@@ -23,32 +23,32 @@ public final class AceOfSkies extends NetworkGameClient {
           int var3_int = -35 / ((obfuscationGuard - 1) / 48);
           qq.a((byte) -100);
           if (jk.synthesizedSoundArchive != null) {
-            if (hg.sharedSpriteArchive.b((byte) 95) &&
+            if (hg.sharedSpriteArchive.ensureIndexLoaded((byte) 95) &&
               hg.sharedSpriteArchive.c("basic", -14012)) {
               if (!hg.sharedSpriteArchive.c("arialbold14", -14012)) {
                 fh.setLoadingProgress(-124, 4.0f, qo.a(bk.field_g, "arialbold14", hg.sharedSpriteArchive, 13525, ks.field_c));
                 return false;
               }
-              if (CachedArchiveProvider.sharedFontMetricsArchive.b((byte) -119) &&
+              if (CachedArchiveProvider.sharedFontMetricsArchive.ensureIndexLoaded((byte) -119) &&
                 CachedArchiveProvider.sharedFontMetricsArchive.c("arialbold14", -14012)) {
                 if (!hg.sharedSpriteArchive.c("arial13", -14012)) {
                   fh.setLoadingProgress(-65, 4.0f, qo.a(bk.field_g, "arial13", hg.sharedSpriteArchive, 13525, ks.field_c));
                   return false;
                 }
-                if (CachedArchiveProvider.sharedFontMetricsArchive.b((byte) -127) &&
+                if (CachedArchiveProvider.sharedFontMetricsArchive.ensureIndexLoaded((byte) -127) &&
                   CachedArchiveProvider.sharedFontMetricsArchive.c("arial13", -14012)) {
-                  if (jk.synthesizedSoundArchive.b((byte) 100) &&
-                    jk.synthesizedSoundArchive.b(0)) {
-                    if (ub.vorbisSoundArchive.b((byte) -73) &&
-                      ub.vorbisSoundArchive.b(0)) {
-                      if (ot.musicPatchArchive.b((byte) 87) &&
-                        ot.musicPatchArchive.b(0)) {
-                        if (od.musicTrackArchive.b((byte) -57) &&
-                          od.musicTrackArchive.b(0)) {
-                          if (wi.gameSpriteArchive.b((byte) 92) &&
-                            wi.gameSpriteArchive.b(0)) {
-                            if (iq.gameFontMetricsArchive.b((byte) -111) &&
-                              iq.gameFontMetricsArchive.b(0)) {
+                  if (jk.synthesizedSoundArchive.ensureIndexLoaded((byte) 100) &&
+                    jk.synthesizedSoundArchive.tryLoadAllGroups(0)) {
+                    if (ub.vorbisSoundArchive.ensureIndexLoaded((byte) -73) &&
+                      ub.vorbisSoundArchive.tryLoadAllGroups(0)) {
+                      if (ot.musicPatchArchive.ensureIndexLoaded((byte) 87) &&
+                        ot.musicPatchArchive.tryLoadAllGroups(0)) {
+                        if (od.musicTrackArchive.ensureIndexLoaded((byte) -57) &&
+                          od.musicTrackArchive.tryLoadAllGroups(0)) {
+                          if (wi.gameSpriteArchive.ensureIndexLoaded((byte) 92) &&
+                            wi.gameSpriteArchive.tryLoadAllGroups(0)) {
+                            if (iq.gameFontMetricsArchive.ensureIndexLoaded((byte) -111) &&
+                              iq.gameFontMetricsArchive.tryLoadAllGroups(0)) {
                               fh.setLoadingProgress(-112, 65.0f, SecondaryNodeDeque.field_c);
                               this.renderGame(150);
                               decompiledFrameRemainder0 = !(initializeAfterDownload);

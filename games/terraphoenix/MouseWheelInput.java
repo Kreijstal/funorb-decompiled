@@ -91,7 +91,7 @@ abstract class MouseWheelInput {
     }
 
     final static void a(byte param0) {
-        uc var2 = null;
+        BitPacketBuffer var2 = null;
         ji var1 = (ji) (FrameTimer.field_d.beginBackward(9272));
         if (var1 == null) {
           WidgetContainer.g(-17464);

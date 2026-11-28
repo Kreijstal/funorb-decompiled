@@ -63,7 +63,7 @@ abstract class hj {
         }
     }
 
-    final static String a(String param0, vj param1, String param2, int param3, int param4) {
+    final static String a(String param0, ResourceArchive param1, String param2, int param3, int param4) {
         RuntimeException var5 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
@@ -79,11 +79,11 @@ abstract class hj {
           if (param4 != 17733) {
             field_h = (String) null;
           }
-          if (!param1.a(0)) {
+          if (!param1.ensureIndexLoaded(0)) {
             stackIn_5_0 = (String) (param0);
             return stackIn_5_0;
           }
-          stackIn_7_0 = param2 + " - " + param1.a(71, param3) + "%";
+          stackIn_7_0 = param2 + " - " + param1.getGroupLoadPercent(71, param3) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

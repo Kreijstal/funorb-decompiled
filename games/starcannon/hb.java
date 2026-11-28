@@ -11,11 +11,11 @@ final class hb extends IntrusiveNode {
     static String field_g;
 
     final static void a(int param0, int param1, hb param2) {
-        ia var6 = null;
+        BitPacketBuffer var6 = null;
         int var4 = 0;
         try {
           var6 = d.field_b;
-          var6.d((byte) 52, param1);
+          var6.writeCipheredByte((byte) 52, param1);
           var6.position = var6.position + 1;
           var4 = var6.position;
           var6.writeByte(1, -84);
@@ -33,7 +33,7 @@ final class hb extends IntrusiveNode {
         }
     }
 
-    final static Sprite[] a(int param0, String param1, ue param2, String param3) {
+    final static Sprite[] a(int param0, String param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -50,8 +50,8 @@ final class hb extends IntrusiveNode {
           if (param0 != -990) {
             field_g = (String) null;
           }
-          var4_int = param2.a(param1, false);
-          var5 = param2.a(param3, true, var4_int);
+          var4_int = param2.getGroupIdByName(param1, false);
+          var5 = param2.getFileIdByName(param3, true, var4_int);
           stackIn_3_0 = ge.a(9, var4_int, param2, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -147,7 +147,7 @@ final class op extends wk implements ec {
         }
         if (param1 != -61) {
           field_k = -28;
-          var4 = this.field_m.a(param0, param1 + 161, 0);
+          var4 = this.field_m.getFile(param0, param1 + 161, 0);
           if (var4 != null) {
             var3 = new vm(new PacketBuffer(var4));
             this.field_l.a((long)param0, var3, 0);
@@ -155,7 +155,7 @@ final class op extends wk implements ec {
           }
           return null;
         }
-        var4Lifetime1 = this.field_m.a(param0, param1 + 161, 0);
+        var4Lifetime1 = this.field_m.getFile(param0, param1 + 161, 0);
         if (var4Lifetime1 != null) {
           var3 = new vm(new PacketBuffer(var4Lifetime1));
           this.field_l.a((long)param0, var3, 0);

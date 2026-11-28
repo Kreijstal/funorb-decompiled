@@ -6,7 +6,7 @@ final class am {
     static int field_f;
     static PlatformTask field_c;
     static int[] field_d;
-    static pf field_g;
+    static ResourceArchive field_g;
     static String field_b;
     private boolean field_a;
     private String field_h;
@@ -39,7 +39,7 @@ final class am {
           field_e = null;
           return;
         }
-        field_g = (pf) null;
+        field_g = (ResourceArchive) null;
         field_c = null;
         field_b = null;
         field_i = null;
@@ -50,7 +50,7 @@ final class am {
 
     final boolean a(int param0) {
         if (param0 != 5) {
-          field_g = (pf) null;
+          field_g = (ResourceArchive) null;
           return this.field_a;
         }
         return this.field_a;

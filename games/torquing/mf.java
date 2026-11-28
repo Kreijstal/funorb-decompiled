@@ -137,7 +137,7 @@ final class mf extends am {
         return var3;
     }
 
-    final static char b(byte param0, int param1) {
+    final static char decodeCp1252Byte(byte param0, int param1) {
         int var3 = 0;
         int var2 = param0 & param1;
         if (0 == var2) {

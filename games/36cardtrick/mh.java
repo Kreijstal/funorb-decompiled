@@ -3,7 +3,7 @@
  */
 class mh {
     static AccountServiceResult field_a;
-    static qk field_c;
+    static ResourceArchive field_c;
     static ja field_d;
     static volatile int field_b;
 

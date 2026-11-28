@@ -91,7 +91,7 @@ final class gm extends hf {
             var4 = new byte[var3_int];
             param1.position = param1.position + pa.field_e.a(var3_int, param1.payload, 0, param1.position, 0, var4);
             var6 = 88 / ((param0 - 18) / 39);
-            var5 = p.a(var3_int, (byte) 79, var4, 0);
+            var5 = p.decodeCp1252String(var3_int, (byte) 79, var4, 0);
             stackIn_3_0 = var5;
             return stackIn_3_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

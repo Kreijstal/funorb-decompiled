@@ -315,28 +315,28 @@ final class lf extends kn {
           lf.a(40, (em) null, 32, -29, 40, -127, 89, -102);
         }
         if (se.field_V == 0) {
-          if (!fl.field_m.c((byte) 123)) {
+          if (!fl.field_m.ensureIndexLoaded((byte) 123)) {
             return 20;
           }
           if (!fl.field_m.b("commonui", 100)) {
             return 40;
           }
-          if (!Chess.field_B.c((byte) 127)) {
+          if (!Chess.field_B.ensureIndexLoaded((byte) 127)) {
             return 50;
           }
           if (!Chess.field_B.b("commonui", 100)) {
             return 60;
           }
-          if (!bi.field_a.c((byte) 121)) {
+          if (!bi.field_a.ensureIndexLoaded((byte) 121)) {
             return 70;
           }
-          if (!bi.field_a.b((byte) -40)) {
+          if (!bi.field_a.tryLoadAllGroups((byte) -40)) {
             return 80;
           }
           return 100;
         }
         if (null != qa.field_c) {
-          if (!qa.field_c.c((byte) 124)) {
+          if (!qa.field_c.ensureIndexLoaded((byte) 124)) {
             return 14;
           }
           if (!qa.field_c.a(4, "")) {
@@ -346,22 +346,22 @@ final class lf extends kn {
             return 29;
           }
         }
-        if (!fl.field_m.c((byte) 124)) {
+        if (!fl.field_m.ensureIndexLoaded((byte) 124)) {
           return 43;
         }
         if (!fl.field_m.b("commonui", 100)) {
           return 57;
         }
-        if (!Chess.field_B.c((byte) 126)) {
+        if (!Chess.field_B.ensureIndexLoaded((byte) 126)) {
           return 71;
         }
         if (!Chess.field_B.b("commonui", 100)) {
           return 80;
         }
-        if (!bi.field_a.c((byte) 125)) {
+        if (!bi.field_a.ensureIndexLoaded((byte) 125)) {
           return 82;
         }
-        if (!bi.field_a.b((byte) -40)) {
+        if (!bi.field_a.tryLoadAllGroups((byte) -40)) {
           return 86;
         }
         return 100;

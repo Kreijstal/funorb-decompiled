@@ -12,8 +12,8 @@ final class uh {
     private int field_h;
     private int[] field_e;
 
-    final static uh a(vr param0, int param1, int param2) {
-        byte[] var3 = param0.b(57, param1, param2);
+    final static uh a(ResourceArchive param0, int param1, int param2) {
+        byte[] var3 = param0.getFile(57, param1, param2);
         if (var3 == null) {
           return null;
         }
@@ -271,8 +271,8 @@ final class uh {
         return this.field_a + this.field_h + this.field_c;
     }
 
-    final static uh a(vr param0, int param1) {
-        byte[] var2 = param0.b(param1, 0);
+    final static uh a(ResourceArchive param0, int param1) {
+        byte[] var2 = param0.getSingleFile(param1, 0);
         if (var2 == null) {
           return null;
         }

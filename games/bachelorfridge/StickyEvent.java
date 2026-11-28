@@ -122,7 +122,7 @@ final class StickyEvent extends SpecialEvent {
         }
     }
 
-    final static void a(boolean param0, vr param1) {
+    final static void a(boolean param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2618_0;
             StringBuilder stackIn_2618_1;
@@ -133,9 +133,9 @@ final class StickyEvent extends SpecialEvent {
             int var3;
             int var4;
             boolean param0;
-            vr param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(boolean initialParam0, vr initialParam1) {
+            $CfrPartitionedBody(boolean initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2618_0 = null;
@@ -1529,7 +1529,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "create_age");
                 if (null != var2) {
-                  vr.field_h = qq.a(var2, false);
+                  ResourceArchive.field_h = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_u13_email");
                 if (null != var2) {
@@ -2567,7 +2567,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "click_to_quickchat");
                 if (param0) {
-                  StickyEvent.a(true, (vr) null);
+                  StickyEvent.a(true, (ResourceArchive) null);
                 }
                 if (var2 != null) {
                   qca.field_m = qq.a(var2, param0);
@@ -2634,7 +2634,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "keychar_the_character_under_questionmark");
                 if (var2 != null) {
-                  gja.field_l = AttackEvent.a(var2[0], (byte) -80);
+                  gja.field_l = AttackEvent.decodeCp1252Byte(var2[0], (byte) -80);
                 }
                 var2 = qba.a(17602, "rating_noratings");
                 if (null != var2) {

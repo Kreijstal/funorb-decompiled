@@ -14,28 +14,28 @@ final class tj {
           return nc.field_Z;
         }
         if (null != lf.field_a) {
-          if (!lf.field_a.b(-1)) {
+          if (!lf.field_a.ensureIndexLoaded(-1)) {
             return de.field_b;
           }
           return mi.field_e;
         }
-        if (!og.field_g.b(-1)) {
+        if (!og.field_g.ensureIndexLoaded(-1)) {
           return jj.field_B;
         }
         if (!og.field_g.b((byte) 91, "commonui")) {
-          return kj.field_z + " - " + og.field_g.a((byte) -41, "commonui") + "%";
+          return kj.field_z + " - " + og.field_g.getGroupLoadPercentByName((byte) -41, "commonui") + "%";
         }
-        if (!am.field_b.b(-1)) {
+        if (!am.field_b.ensureIndexLoaded(-1)) {
           return ProxyAuthenticationRequiredException.field_a;
         }
         if (!am.field_b.b((byte) -103, "commonui")) {
-          return hi.field_e + " - " + am.field_b.a((byte) -97, "commonui") + "%";
+          return hi.field_e + " - " + am.field_b.getGroupLoadPercentByName((byte) -97, "commonui") + "%";
         }
         int var1 = 87 % ((param0 + 3) / 57);
-        if (!wb.field_b.b(-1)) {
+        if (!wb.field_b.ensureIndexLoaded(-1)) {
           return ge.field_i;
         }
-        if (!wb.field_b.c(7715)) {
+        if (!wb.field_b.tryLoadAllGroups(7715)) {
           return fa.field_c + " - " + wb.field_b.a(20147) + "%";
         }
         return ql.field_f;
@@ -179,7 +179,7 @@ final class tj {
         }
     }
 
-    final static String a(int param0, int param1, int param2, byte[] param3) {
+    final static String decodeCp1252String(int param0, int param1, int param2, byte[] param3) {
         int var6 = 0;
         int incrementValue$1 = 0;
         char[] var4 = null;

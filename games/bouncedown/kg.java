@@ -7,7 +7,7 @@ final class kg {
     static int field_f;
     private int field_a;
     private boolean field_c;
-    static gk field_b;
+    static ResourceArchive field_b;
     RgbSprite field_o;
     static String field_d;
     RgbSprite[] field_n;
@@ -63,7 +63,7 @@ final class kg {
         this.field_o = null;
         this.field_a = 0;
         if (param0 != -29776) {
-          field_b = (gk) null;
+          field_b = (ResourceArchive) null;
         }
         this.field_n = null;
         this.field_h = -1;

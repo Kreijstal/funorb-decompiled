@@ -170,7 +170,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           if (MixedSupport033.keyboardInputHandlerState0001 != null) {
             integerLocal1 = keyEventArgument1.getKeyChar();
             if (integerLocal1 != 0 && 65535 != integerLocal1 &&
-              UiComponentPart013.computeBoolean0625(-97, (char) integerLocal1)) {
+              UiComponentPart013.isSupportedCp1252KeyCharacter(-97, (char) integerLocal1)) {
               integerLocal2 = 1 + GameDomainSupport004.integerState0349 & 127;
               if (integerLocal2 != MixedSupport115.integerState0746) {
                 MixedSupport099.integerArrayState0182[GameDomainSupport004.integerState0349] = -1;

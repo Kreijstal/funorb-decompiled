@@ -6,7 +6,7 @@ import java.util.*;
 final class ha extends tia {
     static int field_n;
     private IntrusiveDeque field_j;
-    static vr field_i;
+    static ResourceArchive field_i;
     static int field_l;
     static int[] field_m;
     static int field_k;

@@ -6,7 +6,7 @@ final class rd extends wj {
     static te field_o;
     private rj field_n;
 
-    final static Sprite[] a(String param0, ad param1, int param2, String param3) {
+    final static Sprite[] a(String param0, ResourceArchive param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -23,8 +23,8 @@ final class rd extends wj {
           if (param2 != 0) {
             rd.c(false);
           }
-          var4_int = param1.c(param3, (byte) -105);
-          var5 = param1.a(param0, var4_int, -28459);
+          var4_int = param1.getGroupIdByName(param3, (byte) -105);
+          var5 = param1.getFileIdByName(param0, var4_int, -28459);
           stackIn_3_0 = tj.a(var5, param1, var4_int, (byte) -126);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -62,7 +62,7 @@ final class rd extends wj {
         field_o = null;
     }
 
-    final static ai a(int param0, ad param1, int param2, int param3) {
+    final static ai a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         ai stackIn_5_0 = null;
@@ -119,14 +119,14 @@ final class rd extends wj {
         try {
           if (param0 != 1) {
             var4 = (String) null;
-            rd.a((String) null, (ad) null, 78, (String) null);
+            rd.a((String) null, (ResourceArchive) null, 78, (String) null);
           }
           if (this.field_n instanceof ag) {
             var3 = ((ag) ((Object) this.field_n)).a(-105);
             if (var3 != null) {
               if (var3.b(false) == wj.field_i &&
                 !param1.equals(this.field_n.field_s)) {
-                stackIn_7_0 = ad.field_k;
+                stackIn_7_0 = ResourceArchive.field_k;
                 return stackIn_7_0;
               }
               stackIn_9_0 = var3.b((byte) 66);
@@ -136,7 +136,7 @@ final class rd extends wj {
           if (param1.equals(this.field_n.field_s)) {
             return null;
           }
-          stackIn_13_0 = ad.field_k;
+          stackIn_13_0 = ResourceArchive.field_k;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -163,7 +163,7 @@ final class rd extends wj {
             return;
           }
           var3 = (String) null;
-          rd.a((String) null, (ad) null, -96, (String) null);
+          rd.a((String) null, (ResourceArchive) null, -96, (String) null);
           return;
         }
         var1 = UiWidget.field_n;
@@ -172,7 +172,7 @@ final class rd extends wj {
         }
         if (param0) {
           var3Lifetime1 = (String) null;
-          rd.a((String) null, (ad) null, -96, (String) null);
+          rd.a((String) null, (ResourceArchive) null, -96, (String) null);
         }
     }
 

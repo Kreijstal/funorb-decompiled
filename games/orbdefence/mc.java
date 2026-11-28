@@ -8,7 +8,7 @@ final class mc extends IntrusiveNode {
     static String field_f;
     static int field_i;
 
-    final static fa[] a(int param0, se param1) {
+    final static fa[] a(int param0, BitPacketBuffer param1) {
         Object stackIn_3_0 = null;
         fa[] stackIn_11_0 = null;
         RuntimeException stackIn_15_0 = null;
@@ -25,30 +25,30 @@ final class mc extends IntrusiveNode {
         int var7 = 0;
         var7 = OrbDefence.field_D ? 1 : 0;
         try {
-          var2_int = param1.h(8, 8);
+          var2_int = param1.readBits(8, 8);
           if (var2_int > 0) {
             stackIn_3_0 = null;
             return (fa[]) (stackIn_3_0);
           }
-          var3 = param1.h(param0, 8);
+          var3 = param1.readBits(param0, 8);
           var4 = new fa[var3];
           var5 = 0;
           while (var5 < var3) {
             boolean decompiledFrameRemainder0 = true;
             if (!eg.a(param1, 26678)) {
-              var6_int = param1.h(ge.a(false, var5 - 1), 8);
+              var6_int = param1.readBits(ge.a(false, var5 - 1), 8);
               var4[var5] = var4[var6_int];
               decompiledFrameRemainder0 = (var7 != 0);
             }
             if (decompiledFrameRemainder0) {
               var6 = new fa();
-              param1.h(24, param0 - 4);
-              param1.h(24, 8);
-              var6.field_d = param1.h(24, 8);
-              param1.h(9, param0 - 4);
-              param1.h(12, 8);
-              param1.h(12, param0 - 4);
-              param1.h(12, 8);
+              param1.readBits(24, param0 - 4);
+              param1.readBits(24, 8);
+              var6.field_d = param1.readBits(24, 8);
+              param1.readBits(9, param0 - 4);
+              param1.readBits(12, 8);
+              param1.readBits(12, param0 - 4);
+              param1.readBits(12, 8);
               var4[var5] = var6;
             }
             var5++;
@@ -73,7 +73,7 @@ final class mc extends IntrusiveNode {
         }
     }
 
-    final static void a(ki param0, int param1, ki param2) {
+    final static void a(ResourceArchive param0, int param1, ResourceArchive param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -136,7 +136,7 @@ final class mc extends IntrusiveNode {
         RuntimeException var1 = null;
         try {
           if (param0 != 12) {
-            mc.a((ki) null, (String) null, (String) null, 2, -19);
+            mc.a((ResourceArchive) null, (String) null, (String) null, 2, -19);
           }
           field_f = null;
           return;
@@ -300,7 +300,7 @@ final class mc extends IntrusiveNode {
         }
     }
 
-    final static String a(ki param0, String param1, String param2, int param3, int param4) {
+    final static String a(ResourceArchive param0, String param1, String param2, int param3, int param4) {
         RuntimeException var5 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
@@ -314,10 +314,10 @@ final class mc extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 >= -56) {
-            mc.a((ki) null, (String) null, (String) null, -91, -6);
+            mc.a((ResourceArchive) null, (String) null, (String) null, -91, -6);
           }
-          if (param0.b(-1)) {
-            stackIn_7_0 = param1 + " - " + param0.b((byte) -97, param3) + "%";
+          if (param0.ensureIndexLoaded(-1)) {
+            stackIn_7_0 = param1 + " - " + param0.getGroupLoadPercent((byte) -97, param3) + "%";
             return stackIn_7_0;
           }
           stackIn_5_0 = (String) (param2);

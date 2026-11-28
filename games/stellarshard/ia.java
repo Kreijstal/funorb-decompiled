@@ -67,27 +67,27 @@ final class ia extends tb implements oi {
           return 0;
         }
         if (bb.field_d == 0) {
-          if (!lk.field_i.a((byte) -36)) {
+          if (!lk.field_i.ensureIndexLoaded((byte) -36)) {
             return 20;
           }
           if (!lk.field_i.a("commonui", (byte) -109)) {
             return 40;
           }
-          if (!wf.field_e.a((byte) -36)) {
+          if (!wf.field_e.ensureIndexLoaded((byte) -36)) {
             return 50;
           }
           if (!wf.field_e.a("commonui", (byte) -109)) {
             return 60;
           }
-          if (!am.field_g.a((byte) -36)) {
+          if (!am.field_g.ensureIndexLoaded((byte) -36)) {
             return 70;
           }
-          if (!am.field_g.c((byte) -111)) {
+          if (!am.field_g.tryLoadAllGroups((byte) -111)) {
             return 80;
           }
         } else {
           if (null != pg.field_db) {
-            if (!pg.field_db.a((byte) -36)) {
+            if (!pg.field_db.ensureIndexLoaded((byte) -36)) {
               return 14;
             }
             if (!pg.field_db.c("", (byte) -116)) {
@@ -97,22 +97,22 @@ final class ia extends tb implements oi {
               return 29;
             }
           }
-          if (!lk.field_i.a((byte) -36)) {
+          if (!lk.field_i.ensureIndexLoaded((byte) -36)) {
             return 43;
           }
           if (!lk.field_i.a("commonui", (byte) -109)) {
             return 57;
           }
-          if (!wf.field_e.a((byte) -36)) {
+          if (!wf.field_e.ensureIndexLoaded((byte) -36)) {
             return 71;
           }
           if (!wf.field_e.a("commonui", (byte) -109)) {
             return 80;
           }
-          if (!am.field_g.a((byte) -36)) {
+          if (!am.field_g.ensureIndexLoaded((byte) -36)) {
             return 82;
           }
-          if (!am.field_g.c((byte) -111)) {
+          if (!am.field_g.tryLoadAllGroups((byte) -111)) {
             return 86;
           }
         }

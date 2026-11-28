@@ -145,7 +145,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               65535 != var2_int &&
-              j.a(false, (char) var2_int)) {
+              j.isSupportedCp1252KeyCharacter(false, (char) var2_int)) {
               var3 = 1 + oa.field_a & 127;
               if (BoundedRandomAccessFile.field_e != var3) {
                 cm.field_a[oa.field_a] = -1;

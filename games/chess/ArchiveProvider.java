@@ -21,7 +21,7 @@ abstract class ArchiveProvider {
         field_a = null;
     }
 
-    abstract int b(int param0, int param1);
+    abstract int getGroupRequestProgressPercent(int param0, int param1);
 
     abstract ArchiveIndex b(int param0);
 

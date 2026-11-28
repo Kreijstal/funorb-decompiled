@@ -55,7 +55,7 @@ final class Slime {
             var4 = param2 / 2;
             SoftwareRasterizer.fillRectangle(2, -32 + (2 + var5), -4 + param2, 156, 0);
             ve.a(160, var5 - 32, cl.field_p, (byte) -99, param2, 0);
-            gk.field_e.a(PcmResampler.field_f, var4, var5 + 64, 16777215, -1);
+            ResourceArchive.field_e.a(PcmResampler.field_f, var4, var5 + 64, 16777215, -1);
             jh.field_s.a(gd.field_b[nj.field_m] + "<lt> <gt>" + gd.field_b[ee.field_a], var4, 24 + var5 + 64, 11579647, -1);
           }
           if (param0 == 1) {
@@ -63,13 +63,13 @@ final class Slime {
             var5 = param2 / 2 + 32;
             SoftwareRasterizer.fillRectangle(640 - param2 + 2, var5 - 30, param2 - 4, 156, 0);
             ve.a(160, -32 + var5, cl.field_p, (byte) -116, param2, 640 - param2);
-            gk.field_e.a(c.field_a, var4, var5 + 64, 16777215, -1);
+            ResourceArchive.field_e.a(c.field_a, var4, var5 + 64, 16777215, -1);
             if (2 != field_a) {
               jh.field_s.a(wa.field_a, var4, var5 + 64 + 24, 16744576, -1);
               jh.field_s.a(MusicPatchPcmStream.field_k, var4, 20 + var5 + 64 + 24, 16744576, -1);
             } else {
-              gk.field_e.a(wa.field_a, var4, 18 + (var5 + 64), 16744576, -1);
-              gk.field_e.a(MusicPatchPcmStream.field_k, var4, 14 + (var5 + 64) + 18, 16744576, -1);
+              ResourceArchive.field_e.a(wa.field_a, var4, 18 + (var5 + 64), 16744576, -1);
+              ResourceArchive.field_e.a(MusicPatchPcmStream.field_k, var4, 14 + (var5 + 64) + 18, 16744576, -1);
             }
           }
           if (param0 == 2) {
@@ -77,7 +77,7 @@ final class Slime {
             var4 = param2 / 2;
             SoftwareRasterizer.fillRectangle(2, 2 + (var5 - 32), param2 - 4, 156, 0);
             ve.a(160, -32 + var5, cl.field_p, (byte) -112, param2, 0);
-            gk.field_e.a(bk.field_b, var4, var5 + 64, 16777215, -1);
+            ResourceArchive.field_e.a(bk.field_b, var4, var5 + 64, 16777215, -1);
             jh.field_s.a(gd.field_b[nb.field_g] + "<lt> <gt>" + gd.field_b[db.field_S], var4, var5 + 64 + 24, 8454016, -1);
           }
         }

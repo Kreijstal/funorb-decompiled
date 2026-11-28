@@ -143,7 +143,7 @@ final class vk extends jf {
         }
     }
 
-    final static void b(byte param0) {
+    final static void updateAsteroidsAndDestructionProgress(byte param0) {
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -251,13 +251,13 @@ final class vk extends jf {
         if (!ImageProducerRasterBuffer.field_n) {
           w.field_a.addFirst(new bl(param2, param0, SectorCacheStore.field_i, NetworkArchiveRequest.field_t, lc.field_h, lk.field_e), -7044);
           if (param1 != 89) {
-            vk.b((byte) 46);
+            vk.updateAsteroidsAndDestructionProgress((byte) 46);
             return;
           }
           return;
         }
         if (param1 != 89) {
-          vk.b((byte) 46);
+          vk.updateAsteroidsAndDestructionProgress((byte) 46);
           return;
         }
     }

@@ -9,7 +9,7 @@ final class oj extends nd {
     static int[] field_D;
     static int field_B;
     private Object field_v;
-    static mi field_C;
+    static ResourceArchive field_C;
     static int field_x;
 
     public static void resetStaticState(int param0) {

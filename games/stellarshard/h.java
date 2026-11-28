@@ -59,7 +59,7 @@ final class h {
                 continue;
               }
               var5++;
-              var8 = pf.a((CharSequence) ((Object) var7_ref_String), (byte) 125);
+              var8 = ResourceArchive.a((CharSequence) ((Object) var7_ref_String), (byte) 125);
               var4 = var4 + (param2[var8].length() - (var5 - var6_int));
               continue;
             }
@@ -92,7 +92,7 @@ final class h {
               continue;
             }
             var5Lifetime1++;
-            var10 = pf.a((CharSequence) ((Object) var9), (byte) 125);
+            var10 = ResourceArchive.a((CharSequence) ((Object) var9), (byte) 125);
             discarded$1 = var6.append(param0.substring(var7, var8Lifetime1));
             var7 = var5Lifetime1;
             discarded$2 = var6.append(param2[var10]);

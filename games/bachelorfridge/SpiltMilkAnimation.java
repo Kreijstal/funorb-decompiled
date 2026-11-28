@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SpiltMilkAnimation extends EventAnimation {
-    static vr field_v;
+    static ResourceArchive field_v;
     private SpiltMilkEvent field_x;
     static String field_w;
 

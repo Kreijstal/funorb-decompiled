@@ -15,9 +15,9 @@ final class hb {
           return var3;
         }
         if (param1 >= 32768) {
-          var4 = this.field_d.a(false, 1, 32767 & param1);
+          var4 = this.field_d.getFile(false, 1, 32767 & param1);
         } else {
-          var4 = this.field_a.a(false, 1, param1);
+          var4 = this.field_a.getFile(false, 1, param1);
         }
         var3 = new fc();
         if (var4 != null) {

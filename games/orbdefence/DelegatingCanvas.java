@@ -227,12 +227,12 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    final static ki a(boolean param0, int param1, int param2, int param3, boolean param4, boolean param5) {
+    final static ResourceArchive a(boolean param0, int param1, int param2, int param3, boolean param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           ak var8 = null;
-          ki stackIn_17_0 = null;
+          ResourceArchive stackIn_17_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param1 != 5200) {
@@ -259,7 +259,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             if (param4) {
               var8.d((byte) 111);
             }
-            stackIn_17_0 = new ki(var8, param0, param3);
+            stackIn_17_0 = new ResourceArchive(var8, param0, param3);
             return stackIn_17_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

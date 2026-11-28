@@ -564,7 +564,7 @@ public final class StarCannon extends ag {
                     }
                 }
                 case 79: {
-                    var9 = 10 * ia.field_k;
+                    var9 = 10 * BitPacketBuffer.field_k;
                     if (nf.field_l == 0) {
                         /* Inlined CFG state: 81. */
                         {
@@ -1122,11 +1122,11 @@ public final class StarCannon extends ag {
 
     final void q(int param0) {
         int var3;
-        ue var4;
+        ResourceArchive var4;
         var3 = field_A;
         if (param0 != -19049) {
-          var4 = (ue) null;
-          StarCannon.a((ue) null, false, 0, (ue) null, (ue) null);
+          var4 = (ResourceArchive) null;
+          StarCannon.a((ResourceArchive) null, false, 0, (ResourceArchive) null, (ResourceArchive) null);
         }
         if (bf.field_w != 0) {
           if (bf.field_w != 1) {
@@ -1190,9 +1190,9 @@ public final class StarCannon extends ag {
         bf var7_ref_bfLifetime1;
         var9 = field_A;
         var2 = ua.field_c + 5;
-        if ((5 + ue.field_c[rj.field_h]) < var2 &&
-          ue.field_c[rj.field_h] >= ua.field_c) {
-          var2 = 5 + ue.field_c[rj.field_h];
+        if ((5 + ResourceArchive.field_c[rj.field_h]) < var2 &&
+          ResourceArchive.field_c[rj.field_h] >= ua.field_c) {
+          var2 = 5 + ResourceArchive.field_c[rj.field_h];
         }
         regionExit1: {
           var3 = sh.b(-126, 640);
@@ -1269,7 +1269,7 @@ public final class StarCannon extends ag {
                       var6 = new bf(320, -256, var4, 16);
                       kh.field_y.addLast(97, var6);
                       tj.field_C = var6.field_k;
-                      ua.field_c = 1 + ue.field_c[rj.field_h];
+                      ua.field_c = 1 + ResourceArchive.field_c[rj.field_h];
                       dg.field_l = 0;
                       AccountRequestState.field_d = AccountRequestState.field_d + 1;
                       mj.a(255, param0 ^ -244, 0, 41, 100);
@@ -1346,9 +1346,9 @@ public final class StarCannon extends ag {
         bf var8Lifetime2;
         var10 = field_A;
         var2 = sh.b(-128, 3) + ua.field_c;
-        if (ue.field_c[rj.field_h] < var2 &&
-          ue.field_c[rj.field_h] >= ua.field_c) {
-          var2 = ue.field_c[rj.field_h];
+        if (ResourceArchive.field_c[rj.field_h] < var2 &&
+          ResourceArchive.field_c[rj.field_h] >= ua.field_c) {
+          var2 = ResourceArchive.field_c[rj.field_h];
         }
         if (param0 != 0) {
           field_C = (String) null;
@@ -1414,7 +1414,7 @@ public final class StarCannon extends ag {
                             var6 = new bf(320, -256, var4, 11);
                             kh.field_y.addLast(101, var6);
                             tj.field_C = var6.field_k;
-                            ua.field_c = 1 + ue.field_c[rj.field_h];
+                            ua.field_c = 1 + ResourceArchive.field_c[rj.field_h];
                             AccountRequestState.field_d = AccountRequestState.field_d + 1;
                             dg.field_l = 0;
                             mj.a(255, 12, 0, 41, 100);
@@ -1685,17 +1685,17 @@ public final class StarCannon extends ag {
           ne.b(lh.field_I, 150);
         }
         if (null == gf.field_c) {
-          if (lj.field_h.b((byte) 118) &&
-            lj.field_h.a(param1 + 31185)) {
-            if (AccountNameAvailabilityValidator.field_p.b((byte) 95) &&
-              AccountNameAvailabilityValidator.field_p.a(29741)) {
-              if (se.field_l.b((byte) 109) &&
-                se.field_l.a(29741)) {
-                if (jg.field_F.b((byte) 119) &&
-                  jg.field_F.a(29741)) {
-                  if (BoundedRandomAccessFile.field_c.b((byte) 127) &&
-                    BoundedRandomAccessFile.field_c.a(29741)) {
-                    if (FrameTimer.field_f.b((byte) 103) &&
+          if (lj.field_h.ensureIndexLoaded((byte) 118) &&
+            lj.field_h.tryLoadAllGroups(param1 + 31185)) {
+            if (AccountNameAvailabilityValidator.field_p.ensureIndexLoaded((byte) 95) &&
+              AccountNameAvailabilityValidator.field_p.tryLoadAllGroups(29741)) {
+              if (se.field_l.ensureIndexLoaded((byte) 109) &&
+                se.field_l.tryLoadAllGroups(29741)) {
+                if (jg.field_F.ensureIndexLoaded((byte) 119) &&
+                  jg.field_F.tryLoadAllGroups(29741)) {
+                  if (BoundedRandomAccessFile.field_c.ensureIndexLoaded((byte) 127) &&
+                    BoundedRandomAccessFile.field_c.tryLoadAllGroups(29741)) {
+                    if (FrameTimer.field_f.ensureIndexLoaded((byte) 103) &&
                       FrameTimer.field_f.a("basic", -9883)) {
                       ma.a(fa.field_z, -13923, 70.0f);
                       this.d((byte) 22);
@@ -1770,7 +1770,7 @@ public final class StarCannon extends ag {
                 ma.a(SecondaryNodeDeque.a(n.field_f, jg.field_F, (byte) -38, ae.field_a, ""), param1 - 12479, 40.0f);
                 return;
               }
-              ma.a(SecondaryNodeDeque.a(kc.field_U, se.field_l, (byte) -38, ia.field_l, ""), -13923, 30.0f);
+              ma.a(SecondaryNodeDeque.a(kc.field_U, se.field_l, (byte) -38, BitPacketBuffer.field_l, ""), -13923, 30.0f);
               return;
             }
             ma.a(SecondaryNodeDeque.a(lc.field_ib, AccountNameAvailabilityValidator.field_p, (byte) -38, bd.field_g, ""), -13923, 20.0f);
@@ -1959,7 +1959,7 @@ public final class StarCannon extends ag {
         hg.field_y.setAsRasterTarget(-83);
         jl.field_j = 5;
         FrameTimer.field_f = null;
-        ia.field_k = 0;
+        BitPacketBuffer.field_k = 0;
         jg.field_F = null;
         DiskArchiveRequest.field_y = 10;
         tj.field_G = 0;
@@ -2109,7 +2109,7 @@ public final class StarCannon extends ag {
         }
         if (MouseWheelSource.field_c == -1) {
           var2_int = 0;
-          if (0 == ia.field_k &&
+          if (0 == BitPacketBuffer.field_k &&
             0 != jg.field_H) {
           }
           if (!MouseInput.a(86)) {
@@ -2121,7 +2121,7 @@ public final class StarCannon extends ag {
               var2_int = 5;
             }
           } else {
-            if (!(ia.field_k <= 0) ||
+            if (!(BitPacketBuffer.field_k <= 0) ||
               !(jg.field_H <= 0)) {
               var2_int = 6;
             }
@@ -2157,7 +2157,7 @@ public final class StarCannon extends ag {
           if (gi.field_g &&
             2 <= ua.field_c &&
             rj.field_h == 0) {
-            ia.field_k = ia.field_k + 1;
+            BitPacketBuffer.field_k = BitPacketBuffer.field_k + 1;
             fc.field_e = fc.field_e + 2;
           }
           if (SpriteState.field_p > 0) {
@@ -2303,7 +2303,7 @@ public final class StarCannon extends ag {
           }
         }
         if (DelayedPcmStream.field_n > 1028) {
-          if (ua.field_c < ue.field_c[rj.field_h]) {
+          if (ua.field_c < ResourceArchive.field_c[rj.field_h]) {
             ua.field_c = ua.field_c + 1;
             if (ua.field_c == 9) {
               var3_ref_bf = new bf(FrameTimer.field_e.field_f, -32, FrameTimer.field_e.field_f, 10);
@@ -2571,7 +2571,7 @@ public final class StarCannon extends ag {
             kh.field_y.addLast(69, var3_ref_bfLifetime1);
           }
         }
-        if (ia.field_k >= DiskArchiveRequest.field_y) {
+        if (BitPacketBuffer.field_k >= DiskArchiveRequest.field_y) {
           if (DiskArchiveRequest.field_y < 1000) {
             if (DiskArchiveRequest.field_y <= 0) {
               var3Lifetime2 = DiskArchiveRequest.field_y + 10;
@@ -2596,7 +2596,7 @@ public final class StarCannon extends ag {
           il.field_i = il.field_i + (-4 + rj.field_h);
           rj.field_h = 4;
         }
-        if (ua.field_c <= ue.field_c[rj.field_h] &&
+        if (ua.field_c <= ResourceArchive.field_c[rj.field_h] &&
           FrameTimer.field_e.field_k > 0) {
           nf.field_e = nf.field_e + 2;
         }
@@ -2748,8 +2748,8 @@ public final class StarCannon extends ag {
                 } else {
                   pg.a(true, (byte) -121);
                   sa.a(nf.field_l + na.field_a * 3, 23820);
-                  fc.field_e = fc.field_e - (ia.field_k << 1);
-                  ia.field_k = 0;
+                  fc.field_e = fc.field_e - (BitPacketBuffer.field_k << 1);
+                  BitPacketBuffer.field_k = 0;
                   if (jg.field_H <= 0) {
                     if (kd.field_C > 0) {
                       var3Lifetime5Lifetime1 = 2;
@@ -2793,7 +2793,7 @@ public final class StarCannon extends ag {
                 a.field_a = true;
               }
               if (hc.field_e.equalsIgnoreCase("diewell")) {
-                ua.field_c = -1 + ue.field_c[rj.field_h];
+                ua.field_c = -1 + ResourceArchive.field_c[rj.field_h];
                 a.field_a = true;
                 hc.field_e = "hahahah";
               }
@@ -2986,9 +2986,9 @@ public final class StarCannon extends ag {
         bf var15;
         var12 = field_A;
         var2 = sh.b(param0 - 31, 3) + ua.field_c;
-        if (var2 > ue.field_c[rj.field_h] &&
-          ua.field_c <= ue.field_c[rj.field_h]) {
-          var2 = ue.field_c[rj.field_h];
+        if (var2 > ResourceArchive.field_c[rj.field_h] &&
+          ua.field_c <= ResourceArchive.field_c[rj.field_h]) {
+          var2 = ResourceArchive.field_c[rj.field_h];
         }
         if (param0 != 91) {
           this.l((byte) 51);
@@ -3076,7 +3076,7 @@ public final class StarCannon extends ag {
                               var9 = new bf(320, -256, var4, 15);
                               kh.field_y.addLast(param0 - 7, var9);
                               tj.field_C = var9.field_k;
-                              ua.field_c = ue.field_c[rj.field_h] + 1;
+                              ua.field_c = ResourceArchive.field_c[rj.field_h] + 1;
                               AccountRequestState.field_d = AccountRequestState.field_d + 1;
                               dg.field_l = 0;
                               mj.a(255, 12, 0, 41, 100);
@@ -3198,7 +3198,7 @@ public final class StarCannon extends ag {
         MouseInput.clearStaticReferences(true);
         MouseWheelSource.clearStaticReferences(15686);
         SoftwareRasterizer.clearStaticReferences();
-        ue.clearStaticReferences(0);
+        ResourceArchive.clearStaticReferences(0);
         qe.clearStaticReferences();
         oh.clearStaticReferences(-1);
         ec.clearStaticReferences(82);
@@ -3271,7 +3271,7 @@ public final class StarCannon extends ag {
         jf.a(true);
         ua.clearStaticReferences(128);
         ne.a(-109);
-        ia.k(36);
+        BitPacketBuffer.clearStaticReferences(36);
         fc.resetStaticState(20811);
         u.resetStaticState(2);
         hc.a(false);
@@ -3754,7 +3754,7 @@ public final class StarCannon extends ag {
         this.field_B = 0;
     }
 
-    final static void a(ue param0, boolean param1, int param2, ue param3, ue param4) {
+    final static void a(ResourceArchive param0, boolean param1, int param2, ResourceArchive param3, ResourceArchive param4) {
         try {
           qa.field_a = SectorCacheStore.a("", 15);
           if (param2 != -20169) {
@@ -3796,9 +3796,9 @@ public final class StarCannon extends ag {
         int var8Lifetime1Lifetime1;
         var12 = field_A;
         var2 = sh.b(-127, 3) + ua.field_c;
-        if (ue.field_c[rj.field_h] < var2 &&
-          ua.field_c <= ue.field_c[rj.field_h]) {
-          var2 = ue.field_c[rj.field_h];
+        if (ResourceArchive.field_c[rj.field_h] < var2 &&
+          ua.field_c <= ResourceArchive.field_c[rj.field_h]) {
+          var2 = ResourceArchive.field_c[rj.field_h];
         }
         boolean decompiledFrameRemainder0 = true;
         boolean decompiledFrameCompleted2 = true;
@@ -3887,7 +3887,7 @@ public final class StarCannon extends ag {
                                 var6 = new bf(320, -256, var4, 16);
                                 kh.field_y.addLast(88, var6);
                                 tj.field_C = var6.field_k;
-                                ua.field_c = 1 + ue.field_c[rj.field_h];
+                                ua.field_c = 1 + ResourceArchive.field_c[rj.field_h];
                                 AccountRequestState.field_d = AccountRequestState.field_d + 1;
                                 dg.field_l = 0;
                                 mj.a(255, 12, 0, 41, 100);

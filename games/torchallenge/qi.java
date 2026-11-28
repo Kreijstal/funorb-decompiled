@@ -81,12 +81,12 @@ final class qi {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param2.a(param1, -89);
+          var5_int = param2.getGroupIdByName(param1, -89);
           if (param4 != 0) {
             var7 = (String) null;
             qi.a((ResourceArchive) null, (String) null, (ResourceArchive) null, (String) null, 9);
           }
-          var6 = param2.a(var5_int, param3, (byte) 123);
+          var6 = param2.getFileIdByName(var5_int, param3, (byte) 123);
           stackIn_3_0 = dg.a(var5_int, param2, var6, param0, (byte) 69);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

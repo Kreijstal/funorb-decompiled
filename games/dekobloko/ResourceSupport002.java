@@ -29,7 +29,7 @@ abstract class ResourceSupport002 implements CallbackContract011 {
           if (integerArgument2 != -2147483648) {
             mixedSupport132State0001 = (MixedSupport132) null;
           }
-          stackBooleanLocal2 = resourceArchiveArgument1.computeBoolean0814(false);
+          stackBooleanLocal2 = resourceArchiveArgument1.tryLoadAllGroups(false);
           return stackBooleanLocal2;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal6 = caughtParameterLocal7;

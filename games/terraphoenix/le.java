@@ -301,7 +301,7 @@ final class le extends di {
           ArchiveRequest.d((byte) 93);
           lf.a(param0);
           if (od.b(255)) {
-            di.field_l.k(-17410, 1);
+            di.field_l.writeCipheredByte(-17410, 1);
             bc.a(0, 0);
             WidgetContainer.g(-17464);
             return;
@@ -320,7 +320,7 @@ final class le extends di {
           WidgetContainer.g(-17464);
           return;
         }
-        di.field_l.k(-17410, 1);
+        di.field_l.writeCipheredByte(-17410, 1);
         bc.a(0, 0);
         WidgetContainer.g(-17464);
     }
@@ -329,8 +329,8 @@ final class le extends di {
         try {
           long dupTemp$1 = 0L;
           IOException var2 = null;
-          uc var4 = null;
-          uc var5 = null;
+          BitPacketBuffer var4 = null;
+          BitPacketBuffer var5 = null;
           int stackIn_12_0 = 0;
           Throwable decompiledCaughtException = null;
           if (null == bd.field_k) {
@@ -357,7 +357,7 @@ final class le extends di {
               stackIn_12_0 = (!param0) ? -1 : -2;
               wc.field_r = stackIn_12_0;
               wf.field_n = stackIn_12_0;
-              uc.field_r = stackIn_12_0;
+              BitPacketBuffer.field_r = stackIn_12_0;
               var5.position = 0;
               ej.a(gi.field_v, -25563, di.field_l, MessageKeys.field_d, hb.field_i);
               bc.a(-1, 0);

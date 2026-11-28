@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ld extends gj {
-    static pf field_G;
+    static ResourceArchive field_G;
     static String[] field_x;
     static qc field_y;
     static int field_A;

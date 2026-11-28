@@ -7,7 +7,7 @@ final class ra {
     private int field_b;
 
     final static ra a(Archive param0, int param1, int param2) {
-        byte[] var3 = param0.b(param1, 12257, param2);
+        byte[] var3 = param0.getFile(param1, 12257, param2);
         if (var3 == null) {
           return null;
         }
@@ -60,7 +60,7 @@ final class ra {
     }
 
     final static ra a(Archive param0, String param1, String param2) {
-        byte[] var3 = param0.a(4, param1, param2);
+        byte[] var3 = param0.getFileByName(4, param1, param2);
         if (var3 == null) {
           return null;
         }

@@ -494,7 +494,7 @@ abstract class ByteStorage {
 
     abstract void setBytes(byte[] param0, int param1);
 
-    final static void a(db param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2590_0;
             StringBuilder stackIn_2590_1;
@@ -504,10 +504,10 @@ abstract class ByteStorage {
             RuntimeException var2_ref;
             int var3;
             int var4;
-            db param0;
+            ResourceArchive param0;
             int param1;
             boolean finished;
-            $CfrPartitionedBody(db initialParam0, int initialParam1) {
+            $CfrPartitionedBody(ResourceArchive initialParam0, int initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2590_0 = null;
@@ -2061,7 +2061,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("create_username_unavailable", 5236);
                 if (var2 != null) {
-                  db.field_f = fa.a((byte) -66, var2);
+                  ResourceArchive.field_f = fa.a((byte) -66, var2);
                 }
                 var2 = ah.a("create_username_available", 5236);
                 if (null != var2) {
@@ -3003,7 +3003,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("keychar_the_character_under_questionmark", 5236);
                 if (null != var2) {
-                  NetworkArchiveRequest.a(-35, var2[0]);
+                  NetworkArchiveRequest.decodeCp1252Byte(-35, var2[0]);
                 }
                 var2 = ah.a("rating_noratings", 5236);
                 if (null != var2) {

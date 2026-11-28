@@ -155,7 +155,7 @@ final class BitmapFontMetrics {
                 }
                 if (decompiledFrameRemainder0 &&
                   var4_int == -1) {
-                  var6 = var6 + (this.glyphAdvances[255 & ae.a((char) var9, obfuscationGuard ^ 1)] & 255);
+                  var6 = var6 + (this.glyphAdvances[255 & ae.encodeCp1252Character((char) var9, obfuscationGuard ^ 1)] & 255);
                   if (this.pairKerning != null &&
                     var5 != -1) {
                     var6 = var6 + this.pairKerning[var5][var9];
@@ -283,7 +283,7 @@ final class BitmapFontMetrics {
                 }
                 if (decompiledFrameRemainder0 &&
                   var5_int == -1) {
-                  var7 = var7 + (255 & this.glyphAdvances[ae.a((char) var11, -128) & 255]);
+                  var7 = var7 + (255 & this.glyphAdvances[ae.encodeCp1252Character((char) var11, -128) & 255]);
                   if (null != this.pairKerning &&
                     var6 != -1) {
                     var7 = var7 + this.pairKerning[var6][var11];
@@ -377,7 +377,7 @@ final class BitmapFontMetrics {
           int var16 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var15 <= var16))) {
-            int var17 = ae.a(text.charAt(var16), 102) & 255;
+            int var17 = ae.encodeCp1252Character(text.charAt(var16), 102) & 255;
             int var18 = 0;
             stackIn_153_0 = -61;
             stackIn_153_1 = ~var17;

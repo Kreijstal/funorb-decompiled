@@ -4,7 +4,7 @@
 final class AccountNameAvailabilityValidator extends qf {
     static Sprite[] field_j;
     static String field_l;
-    static ue field_p;
+    static ResourceArchive field_p;
     static int field_k;
     private String checkedName;
     static int field_m;
@@ -110,7 +110,7 @@ final class AccountNameAvailabilityValidator extends qf {
 
     final void f(int param0) {
         if (param0 != -18507) {
-          field_p = (ue) null;
+          field_p = (ResourceArchive) null;
           this.checkedName = null;
           return;
         }
@@ -213,7 +213,7 @@ final class AccountNameAvailabilityValidator extends qf {
         var3 = StarCannon.field_A;
         try {
           if (param1 != -66) {
-            field_p = (ue) null;
+            field_p = (ResourceArchive) null;
           }
           var4 = (of) (FrameTimer.field_c.beginForward(param1 - 3839));
           while (var4 != null) {

@@ -21,8 +21,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
 
     public static void a(byte param0) {
         if (param0 != 36) {
-          vr var2 = (vr) null;
-          FullscreenFocusCanvas.a((vr) null, -47);
+          ResourceArchive var2 = (ResourceArchive) null;
+          FullscreenFocusCanvas.a((ResourceArchive) null, -47);
         }
         field_d = null;
         field_c = null;
@@ -60,7 +60,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     FullscreenFocusCanvas() {
     }
 
-    final static void a(vr param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         ma var5 = null;
@@ -77,7 +77,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         int var4Lifetime1;
         var7 = BachelorFridge.field_y;
         try {
-          var8 = new BitPacketBuffer(param0.a((byte) 123, "", "logo.fo3d"));
+          var8 = new BitPacketBuffer(param0.getFileByName((byte) 123, "", "logo.fo3d"));
           var10 = var8;
           var3 = var10.readUnsignedByte(16711935);
           var10.startBitAccess(1);

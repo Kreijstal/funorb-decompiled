@@ -13,7 +13,7 @@ final class we {
     static int field_l;
     static String field_c;
     static boolean field_d;
-    static sh field_h;
+    static ResourceArchive field_h;
 
     final static void a(byte param0, boolean param1) {
         if (param0 != -65) {
@@ -32,7 +32,7 @@ final class we {
           field_i = null;
           return;
         }
-        field_h = (sh) null;
+        field_h = (ResourceArchive) null;
         field_j = null;
         field_c = null;
         field_h = null;

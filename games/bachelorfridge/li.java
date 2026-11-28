@@ -81,7 +81,7 @@ final class li extends lw {
     }
 
     final void a(byte param0) {
-        int var2 = (int)((-Math.cos((double)(vr.field_b * 4) * 3.141592653589793 / 100.0) + 1.0) * 256.0);
+        int var2 = (int)((-Math.cos((double)(ResourceArchive.field_b * 4) * 3.141592653589793 / 100.0) + 1.0) * 256.0);
         if (param0 > 103) {
           if (this.field_e == 0) {
             vg.a(sia.field_j, 3360, 22997, 16000, 4096 + var2, 3520, 4096 + var2, sia.field_j.field_o << 3, sia.field_j.field_n << 3);

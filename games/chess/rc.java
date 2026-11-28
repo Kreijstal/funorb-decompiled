@@ -144,8 +144,8 @@ final class rc {
             stackIn_2_0 = (pm) null;
             return stackIn_2_0;
           }
-          var5_int = param3.a(param0, 0);
-          var6 = param3.a(param2, 7, var5_int);
+          var5_int = param3.getGroupIdByName(param0, 0);
+          var6 = param3.getFileIdByName(param2, 7, var5_int);
           stackIn_4_0 = dn.a(var6, var5_int, (byte) 124, param3, param4);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

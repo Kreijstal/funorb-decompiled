@@ -109,7 +109,7 @@ final class vh extends IntrusiveNode {
     }
 
     final static vh a(ResourceArchive param0, String param1, String param2) {
-        byte[] var3 = param0.a(param1, param2, (byte) -122);
+        byte[] var3 = param0.getFileByName(param1, param2, (byte) -122);
         if (var3 == null) {
           return null;
         }

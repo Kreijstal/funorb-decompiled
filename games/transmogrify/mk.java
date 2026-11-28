@@ -86,14 +86,14 @@ abstract class mk extends aj {
             return null;
           }
           var7 = (CharSequence) ((Object) param1);
-          var3 = hj.a((byte) -126, var7);
+          var3 = BitPacketBuffer.normalizePlayerName((byte) -126, var7);
           if (var3 == null) {
             return null;
           }
           var4 = (uk) (LetterTile.field_u.a((long)var3.hashCode(), (byte) -72));
           while (var4 != null) {
             var8 = (CharSequence) ((Object) var4.field_eb);
-            var5 = hj.a((byte) -128, var8);
+            var5 = BitPacketBuffer.normalizePlayerName((byte) -128, var8);
             if (var5.equals(var3)) {
               stackIn_17_0 = var4;
               return stackIn_17_0;

@@ -273,7 +273,7 @@ abstract class fi extends UiWidget implements pb {
             return null;
           }
           var6 = (CharSequence) ((Object) param0);
-          var2 = hj.a((byte) -126, var6);
+          var2 = BitPacketBuffer.normalizePlayerName((byte) -126, var6);
           if (param1 != 51) {
             field_t = (int[]) null;
           }
@@ -286,7 +286,7 @@ abstract class fi extends UiWidget implements pb {
               return null;
             }
             var7 = (CharSequence) ((Object) var3.field_eb);
-            var4 = hj.a((byte) -126, var7);
+            var4 = BitPacketBuffer.normalizePlayerName((byte) -126, var7);
             if (var4 == null) {
               var4 = var3.field_eb;
             }

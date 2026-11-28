@@ -337,7 +337,7 @@ final class dc extends og implements im, vd, fd {
         Object stackIn_4_0 = null;
         Object stackIn_6_0 = null;
         MidiPcmStream stackIn_9_0;
-        db stackIn_9_1;
+        ResourceArchive stackIn_9_1;
         bn stackIn_9_2;
         rm stackIn_9_3;
         int stackIn_9_4;

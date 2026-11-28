@@ -80,9 +80,9 @@ final class gk {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        la var13 = null;
+        BitPacketBuffer var13 = null;
         int var14 = 0;
-        la var15 = null;
+        BitPacketBuffer var15 = null;
         int[][] var19 = null;
         int var6_intLifetime1;
         int var9Lifetime1;

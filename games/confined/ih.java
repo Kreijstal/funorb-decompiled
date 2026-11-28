@@ -4,7 +4,7 @@
 final class ih {
     static String field_c;
     static int field_b;
-    static mi field_d;
+    static ResourceArchive field_d;
     static PcmSample field_e;
     static int field_a;
 
@@ -370,7 +370,7 @@ final class ih {
               param2 = 0;
             }
             if (!param0) {
-              field_d = (mi) null;
+              field_d = (ResourceArchive) null;
             }
             var35Lifetime1 = ti.field_l[param2];
             while (param6 > param2) {

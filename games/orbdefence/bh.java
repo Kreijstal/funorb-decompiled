@@ -8,7 +8,7 @@ final class bh {
     static String field_a;
     static String field_f;
     static String field_e;
-    static ki field_d;
+    static ResourceArchive field_d;
     static int field_c;
 
     final static void a(int param0, int param1) {
@@ -19,7 +19,7 @@ final class bh {
             Bzip2State.field_r == dh.field_bb)) {
             if (uk.field_b.position == 0 &&
               (10000L + p.field_a) < ji.correctedCurrentTimeMillis(param1 ^ -123)) {
-              uk.field_b.i(param0, 120);
+              uk.field_b.writeCipheredByte(param0, 120);
             }
             if (param1 > ~uk.field_b.position) {
               try {

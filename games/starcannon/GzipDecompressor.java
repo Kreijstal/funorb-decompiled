@@ -77,7 +77,7 @@ final class GzipDecompressor {
           var6Lifetime1 = qb.field_h << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = qf.a(var6Lifetime1, (byte) -112) >> 8;
-          var9Lifetime1 = ue.b(var6Lifetime1, param0 ^ -1196777089) >> 8;
+          var9Lifetime1 = ResourceArchive.b(var6Lifetime1, param0 ^ -1196777089) >> 8;
           if (pe.field_d != -1 &&
             la.field_c != -1) {
             var9Lifetime1 = -128;

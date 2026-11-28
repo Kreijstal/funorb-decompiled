@@ -392,9 +392,9 @@ final class nk {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          gk.field_e.a(param6, param8 + param2, param9, param1, param0, 0, 0, param7, param3, param4);
-          gk.field_e.a(param6, param8, -1 + param9, param1, param0, 0, 0, param7, param3, param4);
-          stackIn_1_0 = gk.field_e.a(param6, param8, param9, param1, param0, param5, -1, param7, param3, param4);
+          ResourceArchive.field_e.a(param6, param8 + param2, param9, param1, param0, 0, 0, param7, param3, param4);
+          ResourceArchive.field_e.a(param6, param8, -1 + param9, param1, param0, 0, 0, param7, param3, param4);
+          stackIn_1_0 = ResourceArchive.field_e.a(param6, param8, param9, param1, param0, param5, -1, param7, param3, param4);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -538,7 +538,7 @@ final class nk {
           var10 = 120 + (320 - kc.field_c.field_t / 2);
           this.field_l = this.field_l + 8;
           kc.field_c.a(var10, var9 + this.field_l);
-          this.field_l = this.field_l + this.a(60 + (var4 - gk.field_e.b(Bounce.field_A[4]) / 2), 16741888, 480, 1, Bounce.field_A[4], this.field_l, 0, var5, param1 - 16721822, 20) * 20;
+          this.field_l = this.field_l + this.a(60 + (var4 - ResourceArchive.field_e.b(Bounce.field_A[4]) / 2), 16741888, 480, 1, Bounce.field_A[4], this.field_l, 0, var5, param1 - 16721822, 20) * 20;
           if (Slime.field_a == 3) {
             this.field_l = this.field_l - 6;
           }
@@ -549,7 +549,7 @@ final class nk {
           } else {
             re.field_a.a(var10, var9 + this.field_l);
           }
-          this.field_l = this.field_l + this.a(-(gk.field_e.b(Bounce.field_A[5]) / 2) + var4 + 60, 16741888, 480, 1, Bounce.field_A[5], this.field_l, 0, var5, 20066, 20) * 20;
+          this.field_l = this.field_l + this.a(-(ResourceArchive.field_e.b(Bounce.field_A[5]) / 2) + var4 + 60, 16741888, 480, 1, Bounce.field_A[5], this.field_l, 0, var5, 20066, 20) * 20;
           this.field_l = this.field_l + 8;
           this.field_l = this.field_l + 12 * this.a(480, 480, -1, 0, 12, 16777215, Bounce.field_A[6], 1, 80, this.field_l);
           if (Slime.field_a == 3) {
@@ -557,7 +557,7 @@ final class nk {
           }
           this.field_l = this.field_l + 22;
           q.field_F.d(var10, var9 + this.field_l, (int)(128.0 + 128.0 * Math.sin((double)(ae.field_f / 4))));
-          this.field_l = this.field_l + 20 * this.a(var4 + 60 - gk.field_e.b(Bounce.field_A[7]) / 2, 16741888, 480, 1, Bounce.field_A[7], this.field_l, 0, var5, 20066, 20);
+          this.field_l = this.field_l + 20 * this.a(var4 + 60 - ResourceArchive.field_e.b(Bounce.field_A[7]) / 2, 16741888, 480, 1, Bounce.field_A[7], this.field_l, 0, var5, 20066, 20);
           this.field_l = this.field_l + 8;
           this.field_l = this.field_l + this.a(480, 480, -1, 0, 12, 16777215, Bounce.field_A[8], 1, 80, this.field_l) * 12;
           if (Slime.field_a == 3) {
@@ -565,7 +565,7 @@ final class nk {
           }
           this.field_l = this.field_l + 22;
           fd.field_n[ae.field_f / 8 % 6].a(var10, var9 + this.field_l);
-          this.field_l = this.field_l + 20 * this.a(57 + (var4 - gk.field_e.b(Bounce.field_A[9]) / 2), 16741888, 480, 1, Bounce.field_A[9], this.field_l, 0, var5, param1 - 16721822, 20);
+          this.field_l = this.field_l + 20 * this.a(57 + (var4 - ResourceArchive.field_e.b(Bounce.field_A[9]) / 2), 16741888, 480, 1, Bounce.field_A[9], this.field_l, 0, var5, param1 - 16721822, 20);
           this.field_l = this.field_l + 8;
           this.field_l = this.field_l + this.a(480, 480, -1, 0, 12, 16777215, Bounce.field_A[10], 1, 80, this.field_l) * 12;
           if (Slime.field_a == 3) {
@@ -573,18 +573,18 @@ final class nk {
           }
           this.field_l = this.field_l + 26;
           bd.field_j[ae.field_f / 8 % 3].a(var10, this.field_l + var9);
-          this.field_l = this.field_l + 20 * this.a(-(gk.field_e.b(Bounce.field_A[11]) / 2) + (60 + var4), 16741888, 480, 1, Bounce.field_A[11], this.field_l, 0, var5, 20066, 20);
+          this.field_l = this.field_l + 20 * this.a(-(ResourceArchive.field_e.b(Bounce.field_A[11]) / 2) + (60 + var4), 16741888, 480, 1, Bounce.field_A[11], this.field_l, 0, var5, 20066, 20);
           this.field_l = this.field_l + 8;
           this.field_l = this.field_l + this.a(480, 480, param1 - 16741889, 0, 12, 16777215, Bounce.field_A[12], 1, 80, this.field_l) * 12;
           this.field_l = this.field_l + 22;
           wb.field_e[ae.field_f / 8 % 3].a(var10, this.field_l + var9);
-          this.field_l = this.field_l + 20 * this.a(-(gk.field_e.b(Bounce.field_A[13]) / 2) + 60 + var4, 16741888, 480, 1, Bounce.field_A[13], this.field_l, 0, var5, 20066, 20);
+          this.field_l = this.field_l + 20 * this.a(-(ResourceArchive.field_e.b(Bounce.field_A[13]) / 2) + 60 + var4, 16741888, 480, 1, Bounce.field_A[13], this.field_l, 0, var5, 20066, 20);
           this.field_l = this.field_l + 8;
           this.field_l = this.field_l + 12 * this.a(480, 480, param1 - 16741889, 0, 12, 16777215, Bounce.field_A[14], 1, 80, this.field_l);
           this.field_l = this.field_l + 22;
           field_h[ae.field_f / 8 % 4].a(var10, var9 + this.field_l);
           nl.field_d[0].a(var10, this.field_l + var9 - nl.field_d[0].field_q);
-          this.field_l = this.field_l + 20 * this.a(-(gk.field_e.b(Bounce.field_A[15]) / 2) + (var4 + 60), 16741888, 480, 1, Bounce.field_A[15], this.field_l, 0, var5, param1 ^ 16726114, 20);
+          this.field_l = this.field_l + 20 * this.a(-(ResourceArchive.field_e.b(Bounce.field_A[15]) / 2) + (var4 + 60), 16741888, 480, 1, Bounce.field_A[15], this.field_l, 0, var5, param1 ^ 16726114, 20);
           this.field_l = this.field_l + 8;
           this.field_l = this.field_l + this.a(480, 480, param1 ^ -16741889, 0, 12, 16777215, Bounce.field_A[16], 1, 80, this.field_l) * 12;
           this.field_l = this.field_l + 12 * this.a(480, 480, param1 - 16741889, 0, 12, 16777215, Bounce.field_A[17], 1, 80, this.field_l);
@@ -643,9 +643,9 @@ final class nk {
           var19Lifetime1 = jc.field_m;
           var6Lifetime1 = var19Lifetime1;
           var6Lifetime1 = var19Lifetime1;
-          gk.field_e.a(var19Lifetime1, -1 + var4Lifetime1, -70 + this.field_g, 0, 0);
-          gk.field_e.a(var19Lifetime1, var4Lifetime1, this.field_g - 1 - 70, 0, 0);
-          gk.field_e.a(var19Lifetime1, var4Lifetime1, -70 + this.field_g, 16777215, -1);
+          ResourceArchive.field_e.a(var19Lifetime1, -1 + var4Lifetime1, -70 + this.field_g, 0, 0);
+          ResourceArchive.field_e.a(var19Lifetime1, var4Lifetime1, this.field_g - 1 - 70, 0, 0);
+          ResourceArchive.field_e.a(var19Lifetime1, var4Lifetime1, -70 + this.field_g, 16777215, -1);
         }
         if (7 == this.field_i) {
           if (null != sj.field_f) {

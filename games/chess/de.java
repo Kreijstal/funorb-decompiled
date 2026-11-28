@@ -9,7 +9,7 @@ final class de {
     static le field_c;
     static String field_b;
 
-    final static void a(nk param0, byte param1) {
+    final static void a(BitPacketBuffer param0, byte param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -38,7 +38,7 @@ final class de {
           Object var10 = null;
           ObjectInputStream var11 = null;
           int var12 = 0;
-          nk var13 = null;
+          BitPacketBuffer var13 = null;
           fl var14 = null;
           Object var17 = null;
           java.lang.reflect.Field var17_ref = null;
@@ -196,8 +196,8 @@ final class de {
               }
             }
             if (param1 != 67) {
-              var13 = (nk) null;
-              de.a((nk) null, (byte) -43);
+              var13 = (BitPacketBuffer) null;
+              de.a((BitPacketBuffer) null, (byte) -43);
             }
             param0.appendCrc32(var4, (byte) -126);
             var18.unlink(-2193);
@@ -233,8 +233,8 @@ final class de {
 
     final static void a(int param0, boolean param1) {
         if (param0 != 0) {
-          nk var3 = (nk) null;
-          de.a((nk) null, (byte) -114);
+          BitPacketBuffer var3 = (BitPacketBuffer) null;
+          de.a((BitPacketBuffer) null, (byte) -114);
         }
         if (pc.field_Mb != null) {
           sj.a(pc.field_Mb, (byte) 85);

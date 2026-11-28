@@ -3,8 +3,8 @@
  */
 final class bn {
     static am field_h;
-    private db field_d;
-    private db field_e;
+    private ResourceArchive field_d;
+    private ResourceArchive field_e;
     static String field_f;
     private fc field_b;
     static IntrusiveDeque field_i;
@@ -238,7 +238,7 @@ final class bn {
         }
     }
 
-    bn(db param0, db param1) {
+    bn(ResourceArchive param0, ResourceArchive param1) {
         this.field_b = new fc(256);
         this.field_a = new fc(256);
         try {

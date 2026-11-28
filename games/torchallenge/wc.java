@@ -101,7 +101,7 @@ final class wc {
         field_f = null;
     }
 
-    final static int a(byte param0, int param1, CharSequence param2, byte[] param3, int param4, int param5) {
+    final static int encodeCp1252Subsequence(byte param0, int param1, CharSequence param2, byte[] param3, int param4, int param5) {
         int var7 = 0;
         int stackIn_69_0 = 0;
         RuntimeException stackIn_72_0 = null;
@@ -217,7 +217,7 @@ final class wc {
           }
           if (param0 >= -1) {
             var10 = (byte[]) null;
-            wc.a((byte) -48, 61, (CharSequence) null, (byte[]) null, -43, 68);
+            wc.encodeCp1252Subsequence((byte) -48, 61, (CharSequence) null, (byte[]) null, -43, 68);
           }
           stackIn_69_0 = var6_int;
           return stackIn_69_0;

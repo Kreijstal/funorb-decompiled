@@ -26,7 +26,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         field_w = null;
     }
 
-    final static char a(int param0, byte param1) {
+    final static char decodeCp1252Byte(int param0, byte param1) {
         int var3 = 0;
         if (param0 > -15) {
           return '￸';

@@ -14,53 +14,53 @@ final class wea extends AnimationNode {
           return 0;
         }
         if (kt.field_k == 0) {
-          if (!Bzip2State.field_B.a(0)) {
+          if (!Bzip2State.field_B.ensureIndexLoaded(0)) {
             return 20;
           }
-          if (!Bzip2State.field_B.a("commonui", 20637)) {
+          if (!Bzip2State.field_B.tryLoadGroupByName("commonui", 20637)) {
             return 40;
           }
-          if (!fi.field_n.a(0)) {
+          if (!fi.field_n.ensureIndexLoaded(0)) {
             return 50;
           }
-          if (!fi.field_n.a("commonui", 20637)) {
+          if (!fi.field_n.tryLoadGroupByName("commonui", 20637)) {
             return 60;
           }
-          if (!em.field_T.a(0)) {
+          if (!em.field_T.ensureIndexLoaded(0)) {
             return 70;
           }
-          if (em.field_T.b((byte) 114)) {
+          if (em.field_T.tryLoadAllGroups((byte) 114)) {
             return 100;
           }
           return 80;
         }
         if (null != lh.field_s) {
-          if (!lh.field_s.a(0)) {
+          if (!lh.field_s.ensureIndexLoaded(0)) {
             return 14;
           }
-          if (!lh.field_s.b("", false)) {
+          if (!lh.field_s.hasGroupName("", false)) {
             return 29;
           }
-          if (!lh.field_s.a("", 20637)) {
+          if (!lh.field_s.tryLoadGroupByName("", 20637)) {
             return 29;
           }
         }
-        if (!Bzip2State.field_B.a(0)) {
+        if (!Bzip2State.field_B.ensureIndexLoaded(0)) {
           return 43;
         }
-        if (!Bzip2State.field_B.a("commonui", 20637)) {
+        if (!Bzip2State.field_B.tryLoadGroupByName("commonui", 20637)) {
           return 57;
         }
-        if (!fi.field_n.a(0)) {
+        if (!fi.field_n.ensureIndexLoaded(0)) {
           return 71;
         }
-        if (!fi.field_n.a("commonui", 20637)) {
+        if (!fi.field_n.tryLoadGroupByName("commonui", 20637)) {
           return 80;
         }
-        if (!em.field_T.a(0)) {
+        if (!em.field_T.ensureIndexLoaded(0)) {
           return 82;
         }
-        if (!em.field_T.b((byte) 120)) {
+        if (!em.field_T.tryLoadAllGroups((byte) 120)) {
           return 86;
         }
         return 100;

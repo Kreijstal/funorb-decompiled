@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lh extends cia {
-    static vr field_s;
+    static ResourceArchive field_s;
     double field_r;
     static String field_t;
     private static String field_z;

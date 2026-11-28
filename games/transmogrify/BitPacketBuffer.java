@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hj extends PacketBuffer {
+final class BitPacketBuffer extends PacketBuffer {
     private IsaacRandom field_p;
     private int field_n;
     static String field_o;
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void attachKeyboardListeners(java.awt.Component param0, int param1) {
         try {
           if (param1 != -2) {
-            hj.clearStaticReferences(75);
+            BitPacketBuffer.clearStaticReferences(75);
           }
           param0.setFocusTraversalKeysEnabled(false);
           param0.addKeyListener(el.field_n);
@@ -19,7 +19,7 @@ final class hj extends PacketBuffer {
         }
     }
 
-    final void a(byte[] param0, int param1, int param2, int param3) {
+    final void readCipheredBytes(byte[] param0, int param1, int param2, int param3) {
         int var5_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -53,15 +53,15 @@ final class hj extends PacketBuffer {
         }
     }
 
-    hj(byte[] param0) {
+    BitPacketBuffer(byte[] param0) {
         super(param0);
     }
 
-    hj(int param0) {
+    BitPacketBuffer(int param0) {
         super(param0);
     }
 
-    final int l(int param0) {
+    final int readCipheredByte(int param0) {
         if (param0 != -12135) {
           return 41;
         }
@@ -70,7 +70,7 @@ final class hj extends PacketBuffer {
         return 255 & this.payload[fieldTemp$0] - this.field_p.nextInt(-108);
     }
 
-    final static String a(byte param0, CharSequence param1) {
+    final static String normalizePlayerName(byte param0, CharSequence param1) {
         int var6 = 0;
         StringBuilder discarded$0 = null;
         RuntimeException stackIn_32_0 = null;
@@ -85,7 +85,7 @@ final class hj extends PacketBuffer {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        ci var10 = null;
+        ResourceArchive var10 = null;
         var9 = Transmogrify.field_A ? 1 : 0;
         try {
           if (param1 == null) {
@@ -117,7 +117,7 @@ final class hj extends PacketBuffer {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var3 > var6; var6++) {
             var7 = param1.charAt(var6);
-            if (ci.a((char) var7, 0)) {
+            if (ResourceArchive.a((char) var7, 0)) {
               var8 = jk.a((char) var7, false);
               if (0 != var8) {
                 discarded$0 = var5.append((char) var8);
@@ -125,8 +125,8 @@ final class hj extends PacketBuffer {
             }
           }
           if (param0 > -124) {
-            var10 = (ci) null;
-            hj.a((ci) null, (byte) 75, -121, -92);
+            var10 = (ResourceArchive) null;
+            BitPacketBuffer.loadIndexedSprites((ResourceArchive) null, (byte) 75, -121, -92);
           }
           if (var5.length() != 0) {
             return var5.toString();
@@ -146,7 +146,7 @@ final class hj extends PacketBuffer {
         }
     }
 
-    final static IndexedSprite[] a(ci param0, byte param1, int param2, int param3) {
+    final static IndexedSprite[] loadIndexedSprites(ResourceArchive param0, byte param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
         IndexedSprite[] stackIn_6_0 = null;
@@ -156,7 +156,7 @@ final class hj extends PacketBuffer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -62) {
-            hj.clearStaticReferences(-31);
+            BitPacketBuffer.clearStaticReferences(-31);
           }
           if (rl.a(param2, 0, param3, param0)) {
             stackIn_6_0 = AccountRequestState.a((byte) 113);
@@ -178,7 +178,7 @@ final class hj extends PacketBuffer {
         }
     }
 
-    final void a(byte param0, int[] param1) {
+    final void setCipherSeed(byte param0, int[] param1) {
         try {
           int var3_int = 113 % ((-12 - param0) / 36);
           this.field_p = new IsaacRandom(param1);
@@ -187,7 +187,7 @@ final class hj extends PacketBuffer {
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void writeCipheredByte(boolean param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)(this.field_p.nextInt(-50) + param1);
@@ -196,14 +196,14 @@ final class hj extends PacketBuffer {
         }
     }
 
-    final void n(int param0) {
+    final void endBitAccess(int param0) {
         if (param0 != 0) {
           return;
         }
         this.position = (7 + this.field_n) / 8;
     }
 
-    final int k(int param0, int param1) {
+    final int readBits(int param0, int param1) {
         int incrementValue$0 = 0;
         int var6 = Transmogrify.field_A ? 1 : 0;
         int var3 = this.field_n >> 3;
@@ -223,7 +223,7 @@ final class hj extends PacketBuffer {
           var5 = var5 + (kb.field_m[var4] & this.payload[var3]);
         }
         if (param1 != 1522829539) {
-          this.h((byte) -80);
+          this.beginBitAccess((byte) -80);
         }
         return var5;
     }
@@ -235,7 +235,7 @@ final class hj extends PacketBuffer {
         }
     }
 
-    final void h(byte param0) {
+    final void beginBitAccess(byte param0) {
         this.field_n = 8 * this.position;
         if (param0 < 53) {
           this.field_n = 54;

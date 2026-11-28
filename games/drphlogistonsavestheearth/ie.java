@@ -87,7 +87,7 @@ final class ie extends l {
           var7 = stackIn_15_0;
           stackIn_18_0 = (!param0) ? 7105644 : 16777215;
           var8 = stackIn_18_0;
-          lh.a(this.field_t, (byte) 121, param2.field_w, var7, param4 + param2.field_o, param3 + param2.field_m + (param2.field_k - this.field_t[0].field_C >> 1));
+          BitPacketBuffer.drawTiledSpriteStrip(this.field_t, (byte) 121, param2.field_w, var7, param4 + param2.field_o, param3 + param2.field_m + (param2.field_k - this.field_t[0].field_C >> 1));
           this.field_g.a(param2.field_p, param2.field_o + param4, param2.field_m + (param3 - 2), param2.field_w, param2.field_k, var8, -1, 1, 1, this.field_g.field_x);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

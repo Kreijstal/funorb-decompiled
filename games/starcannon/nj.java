@@ -45,10 +45,10 @@ final class nj extends IntrusiveNode {
         field_o = 0;
     }
 
-    private final static boolean a(ue param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_j) {
-          var1 = param0.a(0, true, 0);
+          var1 = param0.getFile(0, true, 0);
           if (var1 == null) {
             return false;
           }
@@ -475,14 +475,14 @@ final class nj extends IntrusiveNode {
         return var1;
     }
 
-    final static nj a(ue param0, int param1, int param2) {
+    final static nj a(ResourceArchive param0, int param1, int param2) {
         try {
           nj var4_ref = null;
           if (!nj.a(param0)) {
-            param0.a((byte) -93, param1, param2);
+            param0.tryLoadFile((byte) -93, param1, param2);
             return null;
           }
-          byte[] var3 = param0.a(param1, true, param2);
+          byte[] var3 = param0.getFile(param1, true, param2);
           if (var3 == null) {
             return null;
           }
@@ -594,14 +594,14 @@ final class nj extends IntrusiveNode {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    final static nj a(ue param0, String param1, String param2) {
+    final static nj a(ResourceArchive param0, String param1, String param2) {
         try {
           nj var4_ref = null;
           if (!nj.a(param0)) {
             param0.a(param1, param2, (byte) -17);
             return null;
           }
-          byte[] var3 = param0.a(param1, (byte) -118, param2);
+          byte[] var3 = param0.getFileByName(param1, (byte) -118, param2);
           if (var3 == null) {
             return null;
           }

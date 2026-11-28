@@ -81,7 +81,7 @@ final class sj {
         this.a((byte) -119);
     }
 
-    final static void a(ad param0, ad param1, ad param2, ad param3, int param4) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3, int param4) {
         ai[] var13 = null;
         Sprite var14 = null;
         Sprite[] var6 = null;

@@ -81,14 +81,14 @@ final class dl extends si {
         int stackIn_9_0 = 0;
         int[] stackIn_22_0 = null;
         Throwable decompiledCaughtException = null;
-        lh var2 = null;
+        BitPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         Exception var7 = null;
         int var8 = 0;
-        lh var9 = null;
+        BitPacketBuffer var9 = null;
         ai var10 = null;
         var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var9 = dh.field_N;

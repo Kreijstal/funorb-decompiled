@@ -163,7 +163,7 @@ final class jl {
                 stackIn_68_1 = false;
                 stackIn_69_2 = (jg.field_H != 0);
                 stackIn_71_3 = false;
-                stackIn_72_4 = (ia.field_k != 0);
+                stackIn_72_4 = (BitPacketBuffer.field_k != 0);
                 var8Lifetime1 = ((lk) (Object) stackIn_68_0).a(StarCannon.a(stackIn_68_1, stackIn_69_2, stackIn_71_3, stackIn_72_4)) + 10;
                 if (var5 < (320 + var8Lifetime1 - (var8Lifetime1 >> 1))) {
                   var5 = -(var8Lifetime1 >> 1) + (320 + var8Lifetime1);
@@ -175,7 +175,7 @@ final class jl {
                 stackIn_79_1 = af.field_y;
                 stackIn_79_2 = false;
                 stackIn_79_3 = true;
-                stackIn_80_4 = (ia.field_k != 0);
+                stackIn_80_4 = (BitPacketBuffer.field_k != 0);
                 stackIn_83_5 = (0 != jg.field_H);
                 var8Lifetime1 = stackIn_79_0 + ((lk) (Object) stackIn_79_1).a(dl.b(stackIn_79_2, stackIn_79_3, stackIn_80_4, stackIn_83_5));
                 if (var4Lifetime1 > -(var8Lifetime1 >> 1) + 320) {
@@ -186,7 +186,7 @@ final class jl {
                 }
                 stackIn_89_0 = af.field_y;
                 stackIn_89_1 = false;
-                stackIn_90_2 = (ia.field_k != 0);
+                stackIn_90_2 = (BitPacketBuffer.field_k != 0);
                 stackIn_93_3 = (jg.field_H != 0);
                 var8Lifetime1 = ((lk) (Object) stackIn_89_0).a(dl.a(stackIn_89_1, stackIn_90_2, stackIn_93_3, false)) + 10;
                 if ((320 - (var8Lifetime1 >> 1)) < var4Lifetime1) {
@@ -263,17 +263,17 @@ final class jl {
                 stackIn_107_1 = false;
                 stackIn_108_2 = (jg.field_H != 0);
                 stackIn_110_3 = false;
-                stackIn_111_4 = (0 != ia.field_k);
+                stackIn_111_4 = (0 != BitPacketBuffer.field_k);
                 ((lk) (Object) stackIn_107_0).b(StarCannon.a(stackIn_107_1, stackIn_108_2, stackIn_110_3, stackIn_111_4), 320, var12Lifetime1 + var11Lifetime1, 65535, -1);
                 stackIn_113_0 = af.field_y;
                 stackIn_113_1 = false;
                 stackIn_113_2 = true;
-                stackIn_114_3 = (ia.field_k != 0);
+                stackIn_114_3 = (BitPacketBuffer.field_k != 0);
                 stackIn_117_4 = (0 != jg.field_H);
                 ((lk) (Object) stackIn_113_0).b(dl.b(stackIn_113_1, stackIn_113_2, stackIn_114_3, stackIn_117_4), 320, 24 + (var12Lifetime1 * 3 + var11Lifetime1), 65535, -1);
                 stackIn_119_0 = af.field_y;
                 stackIn_119_1 = false;
-                stackIn_120_2 = (ia.field_k != 0);
+                stackIn_120_2 = (BitPacketBuffer.field_k != 0);
                 stackIn_123_3 = (jg.field_H != 0);
                 ((lk) (Object) stackIn_119_0).b(dl.a(stackIn_119_1, stackIn_120_2, stackIn_123_3, false), 320, var12Lifetime1 * 4 + var11Lifetime1 + 48, 65535, -1);
               }
@@ -640,11 +640,11 @@ final class jl {
         int var7;
         int var8;
         int var9;
-        ue var10;
+        ResourceArchive var10;
         var9 = StarCannon.field_A;
         if (!param2) {
-          var10 = (ue) null;
-          jl.a(37, (ue) null, (byte) 99, -66);
+          var10 = (ResourceArchive) null;
+          jl.a(37, (ResourceArchive) null, (byte) 99, -66);
         }
         regionExit1: {
           var4 = jh.field_c[this.field_f][param0];
@@ -955,12 +955,12 @@ final class jl {
               if (nf.field_l == 2) {
                 jk.field_j = 1;
               }
-              fc.field_e = fc.field_e - (ia.field_k << 1);
+              fc.field_e = fc.field_e - (BitPacketBuffer.field_k << 1);
               vb.field_m = 1;
               sd.field_c = 0;
               MouseWheelSource.field_c = 2;
               qb.field_e = 0;
-              ia.field_k = 0;
+              BitPacketBuffer.field_k = 0;
               ua.field_c = -3;
               field_j = 5;
               DiskArchiveRequest.field_y = 10;
@@ -1227,7 +1227,7 @@ final class jl {
         return 630 - bj.field_c[this.field_f] - a.field_b.a(mj.field_c[jh.field_c[this.field_f][param1]]);
     }
 
-    final static id a(int param0, ue param1, byte param2, int param3) {
+    final static id a(int param0, ResourceArchive param1, byte param2, int param3) {
         RuntimeException var4 = null;
         id stackIn_5_0 = null;
         id stackIn_7_0 = null;

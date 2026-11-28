@@ -163,7 +163,7 @@ final class sc implements Runnable {
                 var3 = var4.getOutputStream();
                 var3.write(17);
                 var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_o.getFile() + "\n\n"));
-                var3.write(lf.a((byte) 113, var5));
+                var3.write(lf.encodeCp1252Bytes((byte) 113, var5));
                 this.field_d = new DataInputStream(var4.getInputStream());
               }
               this.field_m.field_i = 0;

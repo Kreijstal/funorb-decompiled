@@ -12,7 +12,7 @@ final class hh extends mg {
     static da field_M;
     private boolean field_F;
     static sj field_N;
-    static sh field_L;
+    static ResourceArchive field_L;
     private int field_E;
     private boolean field_D;
 
@@ -369,7 +369,7 @@ final class hh extends mg {
             ((kf) (this.field_A)).field_D) &&
             this.field_h == 1) {
             var5_int = -param3 + (-this.field_C + bk.field_b);
-            var6 = -param2 + sh.field_e - this.field_K;
+            var6 = -param2 + ResourceArchive.field_e - this.field_K;
             if (var5_int != this.field_t ||
               var6 != this.field_o) {
               this.field_o = var6;

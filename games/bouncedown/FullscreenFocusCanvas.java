@@ -3,7 +3,7 @@
  */
 final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
     volatile boolean focusLost;
-    static gk field_a;
+    static ResourceArchive field_a;
     static String field_b;
     java.awt.Frame fullscreenFrame;
     static lg field_c;

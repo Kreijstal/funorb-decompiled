@@ -334,7 +334,7 @@ final class BufferedRandomAccessFile {
             ResourceArchive var3 = (ResourceArchive) null;
             BufferedRandomAccessFile.a((byte) 52, (ResourceArchive) null);
           }
-          boolean stackIn_3_0 = param1.b(0);
+          boolean stackIn_3_0 = param1.tryLoadAllGroups(0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

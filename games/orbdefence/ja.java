@@ -340,7 +340,7 @@ final class ja {
           lc.field_o = lc.field_o + 1;
         }
         if (this.field_a == 7) {
-          stackIn_13_0 = !(ki.d(-116));
+          stackIn_13_0 = !(ResourceArchive.d(-116));
           var2 = wd.updateMembershipSlides(stackIn_13_0, false);
           if (var2 == 3) {
             if (PacketBuffer.field_k != null) {
@@ -2316,7 +2316,7 @@ final class ja {
                     hf.field_g[2].a(-89, 20 + var14Lifetime1Lifetime1, 12 + var15Lifetime1Lifetime1, 10000, 2048);
                     hf.field_g[1].d(var14Lifetime1Lifetime1, var15Lifetime1Lifetime1);
                     var16Lifetime1 = (int)(Math.sin((double)var12_long * 0.01) * 48.0) + 64;
-                    SoftwareRasterizer.addRadialGlow(15 + var14Lifetime1Lifetime1 << 4, 2 + var15Lifetime1Lifetime1 << 4, var16Lifetime1, 255, ki.field_f);
+                    SoftwareRasterizer.addRadialGlow(15 + var14Lifetime1Lifetime1 << 4, 2 + var15Lifetime1Lifetime1 << 4, var16Lifetime1, 255, ResourceArchive.field_f);
                     var14Lifetime1Lifetime1 = 85 + (int)(Math.sin(0.003 * (double)var12_long) * 8.0);
                     var15Lifetime1Lifetime2 = 312 - Math.abs((int)(4.0 * Math.sin(0.0065 * (double)var12_long)));
                     ab.field_g[0].a(var14Lifetime1Lifetime1, var15Lifetime1Lifetime2);
@@ -2706,7 +2706,7 @@ final class ja {
                 (var22 + 32) >= ua.field_a &&
                 DiskCacheWorker.field_d >= var23 &&
                 DiskCacheWorker.field_d <= (32 + var23)) {
-                SoftwareRasterizer.addRadialGlow(var22 + 16 << 4, 16 + var23 << 4, 384, 255, ki.field_f);
+                SoftwareRasterizer.addRadialGlow(var22 + 16 << 4, 16 + var23 << 4, 384, 255, ResourceArchive.field_f);
                 var17 = var20_int;
               }
               var21_ref_hj.a(var22, var23);
@@ -2722,7 +2722,7 @@ final class ja {
                 this.field_i = -1;
               }
               if (this.field_h == var20_int) {
-                SoftwareRasterizer.addRadialGlow(16 + var22 << 4, 16 + var23 << 4, 384, 255, ki.field_f);
+                SoftwareRasterizer.addRadialGlow(16 + var22 << 4, 16 + var23 << 4, 384, 255, ResourceArchive.field_f);
               }
               if (!var12[var20_int]) {
                 var5Lifetime1 += 38;

@@ -301,7 +301,7 @@ class wk implements si {
         try {
           this.field_c = param2;
           this.field_f = param1;
-          var7 = new PacketBuffer(param0.a(0, 100, 0));
+          var7 = new PacketBuffer(param0.getFile(0, 100, 0));
           this.field_g = var7.readUnsignedShort(7088);
           this.field_b = new un[this.field_g];
           for (var5 = 0; var5 < this.field_g; var5++) {

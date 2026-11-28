@@ -259,7 +259,7 @@ abstract class GameClient extends AppletShell {
           ProxyAuthenticationRequiredException.field_a = false;
         }
         if (sa.field_k == 0 &&
-          gk.b(116)) {
+          ResourceArchive.b(116)) {
           sa.field_k = 1;
         }
         if (1 == sa.field_k) {
@@ -274,7 +274,7 @@ abstract class GameClient extends AppletShell {
         }
         if (sa.field_k == 2) {
           if (FullscreenFocusCanvas.field_a != null &&
-            FullscreenFocusCanvas.field_a.c(-114)) {
+            FullscreenFocusCanvas.field_a.ensureIndexLoaded(-114)) {
             if (FullscreenFocusCanvas.field_a.a("", (byte) -16)) {
               if (FullscreenFocusCanvas.field_a.b("", false)) {
                 cg.a((byte) -99, FullscreenFocusCanvas.field_a);
@@ -328,8 +328,8 @@ abstract class GameClient extends AppletShell {
         }
         boolean decompiledFrameRemainder0 = true;
         if (sa.field_k == 11) {
-          if (null != AccountCreationResultPanel.field_pb && (!AccountCreationResultPanel.field_pb.c(-121) ||
-            !AccountCreationResultPanel.field_pb.a((byte) -62))) {
+          if (null != AccountCreationResultPanel.field_pb && (!AccountCreationResultPanel.field_pb.ensureIndexLoaded(-121) ||
+            !AccountCreationResultPanel.field_pb.tryLoadAllGroups((byte) -62))) {
             hg.a(hg.a(BufferedSocket.field_p, AccountCreationResultPanel.field_pb, 130, CipherPacketBuffer.field_l), -66, 0.0f);
             decompiledFrameRemainder0 = false;
           }
@@ -585,7 +585,7 @@ abstract class GameClient extends AppletShell {
               if (Bzip2State.field_v.a((byte) -53)) {
                 var12 = Bzip2State.field_v.a(11951);
                 if (var12 != null) {
-                  var7 = lh.a(0, -3789, var12.position, var12.payload);
+                  var7 = lh.decodeCp1252String(0, -3789, var12.position, var12.payload);
                   MidiPcmStream.a((byte) 5, var7);
                 } else {
                   var9 = (String) null;

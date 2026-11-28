@@ -20,7 +20,7 @@ final class ld extends ca {
         field_jb = null;
     }
 
-    final static byte[] a(byte param0, CharSequence param1) {
+    final static byte[] encodeCp1252Bytes(byte param0, CharSequence param1) {
         int var4 = 0;
         byte[] stackIn_2_0 = null;
         byte[] stackIn_69_0 = null;

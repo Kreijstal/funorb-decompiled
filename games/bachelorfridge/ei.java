@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ei {
-    final static void a(IndexedSprite[] param0, int param1, vr param2, String[][] param3, String[] param4, String[][] param5, boolean param6, Sprite[][] param7, String[] param8, boolean param9, vr param10, int[] param11, int param12, byte[] param13, int[] param14, String[] param15, vr param16, Sprite[][] param17, byte[] param18, int param19) {
+    final static void a(IndexedSprite[] param0, int param1, ResourceArchive param2, String[][] param3, String[] param4, String[][] param5, boolean param6, Sprite[][] param7, String[] param8, boolean param9, ResourceArchive param10, int[] param11, int param12, byte[] param13, int[] param14, String[] param15, ResourceArchive param16, Sprite[][] param17, byte[] param18, int param19) {
         Sprite[][] stackIn_4_0;
         int stackIn_4_1;
-        vr stackIn_4_2;
+        ResourceArchive stackIn_4_2;
         int stackIn_4_3;
         String[] stackIn_4_4;
         byte[] stackIn_4_5;
@@ -54,7 +54,7 @@ final class ei {
           }
           stackIn_4_0 = (Sprite[][]) (param17);
           stackIn_4_1 = param1;
-          stackIn_4_2 = (vr) (param16);
+          stackIn_4_2 = (ResourceArchive) (param16);
           stackIn_4_3 = param12;
           stackIn_4_4 = (String[]) (param8);
           stackIn_4_5 = (byte[]) (param13);

@@ -15,7 +15,7 @@ abstract class nd extends DualLinkNode {
 
     abstract boolean f(byte param0);
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean isSupportedCp1252KeyCharacter(char param0, byte param1) {
         int var3 = 0;
         char[] var2 = null;
         RuntimeException var2_ref = null;

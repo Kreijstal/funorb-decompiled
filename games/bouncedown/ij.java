@@ -30,7 +30,7 @@ final class ij {
         }
     }
 
-    final static void a(gk param0, byte param1) {
+    final static void a(ResourceArchive param0, byte param1) {
         RuntimeException stackIn_231_0 = null;
         StringBuilder stackIn_231_1 = null;
         String stackIn_232_2 = null;
@@ -424,7 +424,7 @@ final class ij {
             uc.field_A = param2;
           }
           nh.field_S[q.field_M] = param0;
-          gk.field_i[q.field_M] = param5;
+          ResourceArchive.field_i[q.field_M] = param5;
           DelegatingCanvas.field_c[q.field_M] = param4;
           var6_int = param5 + (param0 + param4);
           if (param3 != var6_int) {

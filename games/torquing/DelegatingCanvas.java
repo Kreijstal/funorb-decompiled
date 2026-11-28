@@ -49,11 +49,11 @@ final class DelegatingCanvas extends java.awt.Canvas {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.a(param1 ^ -31095, param3);
+          var4_int = param2.getGroupIdByName(param1 ^ -31095, param3);
           if (param1 != 31094) {
             field_b = (String) null;
           }
-          var5 = param2.a(param0, param1 ^ -30987, var4_int);
+          var5 = param2.getFileIdByName(param0, param1 ^ -30987, var4_int);
           stackIn_3_0 = bf.a(var4_int, var5, param2, (byte) -44);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

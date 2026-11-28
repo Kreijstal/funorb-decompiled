@@ -208,7 +208,7 @@ final class ma {
         return qh.field_c[var4];
     }
 
-    final static Sprite a(ad param0, String param1, int param2, String param3) {
+    final static Sprite a(ResourceArchive param0, String param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -227,8 +227,8 @@ final class ma {
             stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
-          var4_int = param0.c(param3, (byte) -105);
-          var5 = param0.a(param1, var4_int, -28459);
+          var4_int = param0.getGroupIdByName(param3, (byte) -105);
+          var5 = param0.getFileIdByName(param1, var4_int, -28459);
           stackIn_4_0 = kj.a(var5, param0, 17196, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

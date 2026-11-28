@@ -79,11 +79,11 @@ final class BitPacketBuffer extends PacketBuffer {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.a((byte) 126, param3);
+          var4_int = param1.getGroupIdByName((byte) 126, param3);
           if (param2 != 34) {
             BitPacketBuffer.releaseDeclaredStaticReferences(66);
           }
-          var5 = param1.a(var4_int, param0, 94);
+          var5 = param1.getFileIdByName(var4_int, param0, 94);
           stackIn_3_0 = bk.a(var4_int, var5, param1, -2724);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

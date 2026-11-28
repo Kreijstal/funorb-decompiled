@@ -237,7 +237,7 @@ final class re extends lb {
           if (param0 != 18990) {
             re.a(-67, -69, 50, -31);
           }
-          stackIn_3_0 = r.a(param1.length, 0, param1, (byte) 8);
+          stackIn_3_0 = r.decodeCp1252String(param1.length, 0, param1, (byte) 8);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

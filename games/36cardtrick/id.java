@@ -7,7 +7,7 @@ final class id {
     static String field_d;
     static RgbSprite field_e;
     static int field_b;
-    static qk field_a;
+    static ResourceArchive field_a;
 
     public static void a(boolean param0) {
         field_c = null;

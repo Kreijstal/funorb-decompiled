@@ -495,7 +495,7 @@ final class tp extends bb {
           var13.field_i = param1;
           var13.field_b = param2;
           var13.field_d = param0;
-          var16 = param0.a("config", param2 + "/" + param1, (byte) -128);
+          var16 = param0.getFileByName("config", param2 + "/" + param1, (byte) -128);
           var6 = new PacketBuffer(var16);
           var13.field_c = (var16.length - 4) / 2;
           var13.field_j = new int[var13.field_c];

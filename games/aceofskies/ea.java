@@ -207,7 +207,7 @@ class ea extends IntrusiveNode {
         String stackIn_8_2 = null;
         try {
           if (param0 == 0) {
-            String stackIn_4_0 = SocketArchiveNetworkClient.a(51, param1.length, 0, param1);
+            String stackIn_4_0 = SocketArchiveNetworkClient.decodeCp1252String(51, param1.length, 0, param1);
             return stackIn_4_0;
           }
           String stackIn_2_0 = (String) null;

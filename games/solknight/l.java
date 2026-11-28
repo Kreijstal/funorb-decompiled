@@ -17,7 +17,7 @@ final class l {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = param3.b(param2, 12257, param1);
+          var6 = param3.getFile(param2, 12257, param1);
           var4 = var6;
           if (var6 == null) {
             return false;
@@ -40,11 +40,11 @@ final class l {
     }
 
     final static void a(int param0, int param1, m param2) {
-        jd var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           int var4 = 89 / ((-22 - param1) / 49);
           var3 = id.field_c;
-          var3.e(param0, -2147483648);
+          var3.writeCipheredByte(param0, -2147483648);
           var3.writeByte(109, param2.field_j);
           var3.writeShort(true, param2.field_i);
         } catch (RuntimeException runtimeException) {

@@ -177,7 +177,7 @@ class wc extends hl {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        nk var27 = null;
+        BitPacketBuffer var27 = null;
         long[][] var34 = null;
         int[][] var35 = null;
         int var25Lifetime1;

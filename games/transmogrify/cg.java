@@ -98,7 +98,7 @@ final class cg extends me {
         }
     }
 
-    final static ci a(byte param0, int param1) {
+    final static ResourceArchive a(byte param0, int param1) {
         if (param0 == -82) {
           return mh.a(-26159, false, true, false, 1, param1);
         }

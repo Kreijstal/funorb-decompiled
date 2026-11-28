@@ -10,7 +10,7 @@ final class eh {
     static int[] field_e;
     static boolean field_d;
 
-    final static bm a(String param0, String param1, pf param2, pf param3, byte param4) {
+    final static bm a(String param0, String param1, ResourceArchive param2, ResourceArchive param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -26,8 +26,8 @@ final class eh {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param3.b(param1, (byte) -118);
-          var6 = param3.a(var5_int, param0, (byte) -11);
+          var5_int = param3.getGroupIdByName(param1, (byte) -118);
+          var6 = param3.getFileIdByName(var5_int, param0, (byte) -11);
           if (param4 != 63) {
             field_a = (qc) null;
           }

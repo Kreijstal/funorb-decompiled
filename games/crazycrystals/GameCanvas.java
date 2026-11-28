@@ -13,8 +13,8 @@ final class GameCanvas extends java.awt.Canvas {
         field_a = null;
         field_b = null;
         if (param0 > -104) {
-          db var2 = (db) null;
-          GameCanvas.a((byte) 1, (db) null, false, (db) null, (db) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          GameCanvas.a((byte) 1, (ResourceArchive) null, false, (ResourceArchive) null, (ResourceArchive) null);
         }
         field_e = null;
     }
@@ -52,11 +52,11 @@ final class GameCanvas extends java.awt.Canvas {
         }
     }
 
-    final static void a(byte param0, db param1, boolean param2, db param3, db param4) {
+    final static void a(byte param0, ResourceArchive param1, boolean param2, ResourceArchive param3, ResourceArchive param4) {
         try {
           if (param0 >= -96) {
-            db var6 = (db) null;
-            GameCanvas.a((byte) 43, (db) null, false, (db) null, (db) null);
+            ResourceArchive var6 = (ResourceArchive) null;
+            GameCanvas.a((byte) 43, (ResourceArchive) null, false, (ResourceArchive) null, (ResourceArchive) null);
           }
           gk.field_e = lc.a("", (byte) 51);
           gk.field_e.a(106, false);

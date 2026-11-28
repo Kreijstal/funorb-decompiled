@@ -135,12 +135,12 @@ final class dc extends a {
     }
 
     final static void a(dj param0, int param1, byte param2) {
-        jd var3 = id.field_c;
+        BitPacketBuffer var3 = id.field_c;
         if (param2 != 46) {
           return;
         }
         try {
-          var3.e(param1, -2147483648);
+          var3.writeCipheredByte(param1, -2147483648);
           var3.writeByte(36, param0.field_i);
           var3.writeByte(108, param0.field_h);
         } catch (RuntimeException runtimeException) {

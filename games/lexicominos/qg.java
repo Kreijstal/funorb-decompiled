@@ -47,7 +47,7 @@ final class qg {
         }
     }
 
-    final static String a(byte param0, sh param1, String param2, int param3, String param4) {
+    final static String a(byte param0, ResourceArchive param1, String param2, int param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
@@ -63,11 +63,11 @@ final class qg {
           if (param0 != 100) {
             field_a = (oc) null;
           }
-          if (!param1.c(127)) {
+          if (!param1.ensureIndexLoaded(127)) {
             stackIn_5_0 = (String) (param4);
             return stackIn_5_0;
           }
-          stackIn_7_0 = param2 + " - " + param1.b((byte) -102, param3) + "%";
+          stackIn_7_0 = param2 + " - " + param1.getGroupLoadPercent((byte) -102, param3) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

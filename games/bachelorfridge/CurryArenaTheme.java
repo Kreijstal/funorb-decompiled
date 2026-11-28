@@ -5,7 +5,7 @@ final class CurryArenaTheme extends ArenaTheme {
     static int field_h;
     static Sprite field_g;
 
-    final static IndexedSprite[] a(int param0, vr param1, int param2, int param3) {
+    final static IndexedSprite[] a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         IndexedSprite[] stackIn_6_0 = null;
@@ -171,7 +171,7 @@ final class CurryArenaTheme extends ArenaTheme {
         }
     }
 
-    CurryArenaTheme(vr param0) {
+    CurryArenaTheme(ResourceArchive param0) {
         try {
           this.field_b = RageSpecial.a(29611, "basic", "tiles_curry", param0);
           this.b((byte) -5);

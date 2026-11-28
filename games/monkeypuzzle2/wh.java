@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wh {
-    private ad field_c;
+    private ResourceArchive field_c;
     static ib field_b;
     private WeightedObjectCache field_a;
-    private ad field_d;
+    private ResourceArchive field_d;
     static int[] field_e;
 
     public static void clearStaticReferences(int param0) {
@@ -58,9 +58,9 @@ final class wh {
           return var3;
         }
         if (param1 >= ~param0) {
-          var4 = this.field_c.b(255, 32767 & param0, 1);
+          var4 = this.field_c.getFile(255, 32767 & param0, 1);
         } else {
-          var4 = this.field_d.b(255, param0, 1);
+          var4 = this.field_d.getFile(255, param0, 1);
         }
         var3 = new pi();
         if (var4 != null) {

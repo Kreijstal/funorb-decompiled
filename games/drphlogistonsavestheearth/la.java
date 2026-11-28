@@ -5,7 +5,7 @@ final class la {
     static he field_a;
     static int field_b;
 
-    final static RgbSprite[] a(String param0, vj param1, String param2, int param3) {
+    final static RgbSprite[] a(String param0, ResourceArchive param1, String param2, int param3) {
         RgbSprite[] var4 = null;
         RuntimeException var4_ref = null;
         RgbSprite[] stackIn_4_0 = null;
@@ -185,7 +185,7 @@ final class la {
         int stackIn_58_1 = 0;
         hg stackIn_58_2 = null;
         RuntimeException decompiledCaughtException = null;
-        lh var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3_int = 0;

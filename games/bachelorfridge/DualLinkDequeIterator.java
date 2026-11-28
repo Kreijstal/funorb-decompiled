@@ -42,7 +42,7 @@ final class DualLinkDequeIterator implements Iterator {
         return this.field_b.field_a != this.field_c;
     }
 
-    final static AntialiasedBitmapFont a(int param0, int param1, vr param2, vr param3, int param4) {
+    final static AntialiasedBitmapFont a(int param0, int param1, ResourceArchive param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
         AntialiasedBitmapFont stackIn_2_0 = null;
         AntialiasedBitmapFont stackIn_7_0 = null;
@@ -60,7 +60,7 @@ final class DualLinkDequeIterator implements Iterator {
           if (!g.a(param4, param1, -30744, param2)) {
             return null;
           }
-          stackIn_7_0 = wa.a(param0 - 21359, param3.b(-38, param4, param1));
+          stackIn_7_0 = wa.a(param0 - 21359, param3.getFile(-38, param4, param1));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

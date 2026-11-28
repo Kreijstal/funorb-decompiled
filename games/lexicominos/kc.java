@@ -26,7 +26,7 @@ final class kc {
             gg.field_b == uf.field_m)) {
             if (SpriteGeometry.field_q.position == 0 &&
               rf.correctedCurrentTimeMillis(0) > p.field_c + 10000L) {
-              SpriteGeometry.field_q.h(param0, ~param1);
+              SpriteGeometry.field_q.writeCipheredByte(param0, ~param1);
             }
             if (~SpriteGeometry.field_q.position < param1) {
               try {

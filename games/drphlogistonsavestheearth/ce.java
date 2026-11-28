@@ -5,7 +5,7 @@ final class ce {
     static he field_b;
     static String field_d;
     static String field_c;
-    static vj field_a;
+    static ResourceArchive field_a;
     static long field_f;
     static vh field_e;
 
@@ -179,7 +179,7 @@ final class ce {
           field_e = null;
           return;
         }
-        field_a = (vj) null;
+        field_a = (ResourceArchive) null;
         field_c = null;
         field_b = null;
         field_a = null;

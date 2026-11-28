@@ -19,9 +19,9 @@ final class jn {
           return var3;
         }
         if (32768 <= param1) {
-          var4 = this.field_a.a(1, param1 & 32767, (byte) -93);
+          var4 = this.field_a.getFile(1, param1 & 32767, (byte) -93);
         } else {
-          var4 = this.field_f.a(1, param1, (byte) -22);
+          var4 = this.field_f.getFile(1, param1, (byte) -22);
         }
         var3Lifetime1 = new q();
         if (param0 != 1) {

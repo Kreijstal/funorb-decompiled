@@ -79,7 +79,7 @@ final class e {
         }
     }
 
-    final static qg a(int param0, int param1, ki param2, int param3) {
+    final static qg a(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

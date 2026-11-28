@@ -9,8 +9,8 @@ final class jo extends pn implements Cloneable {
 
     final void c(boolean param0, boolean param1) {
         if (!param0) {
-          db var4 = (db) null;
-          jo.a(false, -77, (db) null, -90);
+          ResourceArchive var4 = (ResourceArchive) null;
+          jo.a(false, -77, (ResourceArchive) null, -90);
           if (!param1) {
             fn.field_j = fn.field_j - ob.field_l;
             wd.field_j = wd.field_j + 1;
@@ -27,7 +27,7 @@ final class jo extends pn implements Cloneable {
         }
     }
 
-    final static RgbSprite[] a(boolean param0, int param1, db param2, int param3) {
+    final static RgbSprite[] a(boolean param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         RgbSprite[] stackIn_4_0 = null;

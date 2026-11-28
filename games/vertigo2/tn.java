@@ -37,8 +37,8 @@ final class tn {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.a((byte) 118, param3);
-          var5 = param1.a(var4_int, param0, 98);
+          var4_int = param1.getGroupIdByName((byte) 118, param3);
+          var5 = param1.getFileIdByName(var4_int, param0, 98);
           if (param2 <= -70) {
             stackIn_4_0 = UiPanel.a(var5, param1, (byte) -117, var4_int);
             return stackIn_4_0;

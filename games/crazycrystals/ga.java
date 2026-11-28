@@ -8,7 +8,7 @@ class ga extends pc {
     private int field_N;
     private int field_O;
     private boolean field_G;
-    static db field_L;
+    static ResourceArchive field_L;
     private int field_I;
     private boolean field_M;
     private long field_K;
@@ -34,7 +34,7 @@ class ga extends pc {
           }
           return;
         }
-        field_L = (db) null;
+        field_L = (ResourceArchive) null;
         if (this.field_N != this.field_D) {
           var2Lifetime1 = this.field_D < this.field_N ? this.field_D : this.field_N;
           var3Lifetime1 = this.field_N <= this.field_D ? this.field_D : this.field_N;
@@ -209,7 +209,7 @@ class ga extends pc {
             param0 = param0.substring(0, var3_int);
           }
           if (param1 != -1) {
-            field_L = (db) null;
+            field_L = (ResourceArchive) null;
           }
           if (this.field_N != this.field_o.length()) {
             this.field_o = this.field_o.substring(0, this.field_N) + param0 + this.field_o.substring(this.field_N, this.field_o.length());

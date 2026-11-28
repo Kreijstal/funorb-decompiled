@@ -11,7 +11,7 @@ final class ResourceArchive {
     private Object[] objectArrayState0001;
     boolean booleanState0088;
 
-    private final synchronized void performAction0803(int integerArgument1, int integerArgument2) {
+    private final synchronized void loadPackedGroup(int integerArgument1, int integerArgument2) {
         if (this.booleanState0088) {
           this.objectArrayState0001[integerArgument2] = this.resourceSupport003State0001.computeByteArray0946(integerArgument2, (byte) 91);
         } else {
@@ -22,8 +22,8 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized boolean computeBoolean0817(int integerArgument1, byte byteArgument2) {
-        if (!this.computeBoolean0802(integerArgument1, (byte) -83)) {
+    final synchronized boolean tryLoadGroup(int integerArgument1, byte byteArgument2) {
+        if (!this.validateGroupId(integerArgument1, (byte) -83)) {
           return false;
         }
         if (this.objectArrayState0001[integerArgument1] != null) {
@@ -32,14 +32,14 @@ final class ResourceArchive {
         if (byteArgument2 != -106) {
           return ((boolean[]) (this.objectArrayState0001[0]))[0];
         }
-        this.performAction0803(20351, integerArgument1);
+        this.loadPackedGroup(20351, integerArgument1);
         if (null != this.objectArrayState0001[integerArgument1]) {
           return true;
         }
         return false;
     }
 
-    final int computeInteger0819(int integerArgument1, String stringArgument2) {
+    final int getGroupIdByName(int integerArgument1, String stringArgument2) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         CharSequence charSequenceLocal3 = null;
@@ -50,7 +50,7 @@ final class ResourceArchive {
         String stackStringLocal8 = null;
         RuntimeException caughtExceptionLocal9 = null;
         try {
-          if (!this.computeBoolean0798((byte) 121)) {
+          if (!this.ensureIndexLoaded((byte) 121)) {
             stackIntegerLocal4 = -1;
             return stackIntegerLocal4;
           }
@@ -60,7 +60,7 @@ final class ResourceArchive {
           stringArgument2 = stringArgument2.toLowerCase();
           charSequenceLocal3 = (CharSequence) ((Object) stringArgument2);
           integerLocal1 = this.resourceSupport001State0001.mixedSupport091State0001.computeInteger1148((byte) -68, MixedSupport119.computeInteger1563(charSequenceLocal3, 90));
-          if (this.computeBoolean0802(integerLocal1, (byte) -83)) {
+          if (this.validateGroupId(integerLocal1, (byte) -83)) {
             return integerLocal1;
           }
           stackIntegerLocal5 = -1;
@@ -96,19 +96,19 @@ final class ResourceArchive {
           if (!booleanArgument2) {
             return true;
           }
-          if (!this.computeBoolean0798((byte) 121)) {
+          if (!this.ensureIndexLoaded((byte) 121)) {
             return false;
           }
           stringArgument3 = stringArgument3.toLowerCase();
           stringArgument1 = stringArgument1.toLowerCase();
           charSequenceLocal4 = (CharSequence) ((Object) stringArgument3);
           integerLocal1 = this.resourceSupport001State0001.mixedSupport091State0001.computeInteger1148((byte) -68, MixedSupport119.computeInteger1563(charSequenceLocal4, -10));
-          if (!this.computeBoolean0802(integerLocal1, (byte) -83)) {
+          if (!this.validateGroupId(integerLocal1, (byte) -83)) {
             return false;
           }
           charSequenceLocal5 = (CharSequence) ((Object) stringArgument1);
           integerLocal3 = this.resourceSupport001State0001.mixedSupport091ArrayState0001[integerLocal1].computeInteger1148((byte) -68, MixedSupport119.computeInteger1563(charSequenceLocal5, 11));
-          stackBooleanLocal6 = this.computeBoolean0800((byte) -84, integerLocal3, integerLocal1);
+          stackBooleanLocal6 = this.tryLoadFile((byte) -84, integerLocal3, integerLocal1);
           return stackBooleanLocal6;
         } catch (java.lang.RuntimeException caughtParameterLocal13) {
           caughtExceptionLocal12 = caughtParameterLocal13;
@@ -134,7 +134,7 @@ final class ResourceArchive {
         if (integerArgument1 != -5228) {
           return -48;
         }
-        if (!this.computeBoolean0802(integerArgument2, (byte) -83)) {
+        if (!this.validateGroupId(integerArgument2, (byte) -83)) {
           return 0;
         }
         return this.resourceSupport001State0001.integerArrayState0006[integerArgument2];
@@ -159,14 +159,14 @@ final class ResourceArchive {
         String stackStringLocal8 = null;
         RuntimeException caughtExceptionLocal9 = null;
         try {
-          if (!this.computeBoolean0798((byte) 121)) {
+          if (!this.ensureIndexLoaded((byte) 121)) {
             return false;
           }
           stringArgument1 = stringArgument1.toLowerCase();
           integerLocal1 = -49 / ((byteArgument2 - 13) / 42);
           charSequenceLocal4 = (CharSequence) ((Object) stringArgument1);
           integerLocal3 = this.resourceSupport001State0001.mixedSupport091State0001.computeInteger1148((byte) -68, MixedSupport119.computeInteger1563(charSequenceLocal4, -112));
-          stackBooleanLocal5 = this.computeBoolean0817(integerLocal3, (byte) -106);
+          stackBooleanLocal5 = this.tryLoadGroup(integerLocal3, (byte) -106);
           return stackBooleanLocal5;
         } catch (java.lang.RuntimeException caughtParameterLocal10) {
           caughtExceptionLocal9 = caughtParameterLocal10;
@@ -191,7 +191,7 @@ final class ResourceArchive {
         String stackStringLocal6 = null;
         RuntimeException caughtExceptionLocal7 = null;
         try {
-          if (!this.computeBoolean0798((byte) 121)) {
+          if (!this.ensureIndexLoaded((byte) 121)) {
             return false;
           }
           stringArgument1 = stringArgument1.toLowerCase();
@@ -215,7 +215,7 @@ final class ResourceArchive {
         }
     }
 
-    private final synchronized boolean computeBoolean0815(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    private final synchronized boolean unpackGroupFiles(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         Object[] objectArrayLocal1 = null;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -281,7 +281,7 @@ final class ResourceArchive {
         int integerLocal63;
         integerLocal32 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          if (!this.computeBoolean0802(integerArgument2, (byte) -83)) {
+          if (!this.validateGroupId(integerArgument2, (byte) -83)) {
             return false;
           }
           if (null == this.objectArrayState0001[integerArgument2]) {
@@ -479,17 +479,17 @@ final class ResourceArchive {
         int integerLocal4;
         int integerLocal5;
         integerLocal4 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        if (!this.computeBoolean0798((byte) 121)) {
+        if (!this.ensureIndexLoaded((byte) 121)) {
           return 0;
         }
         if (byteArgument1 > -44) {
-          this.performAction0803(91, ((int[]) (((Object[]) (this.objectArrayState0001[2]))[0]))[0]);
+          this.loadPackedGroup(91, ((int[]) (((Object[]) (this.objectArrayState0001[2]))[0]))[0]);
         }
         integerLocal1 = 0;
         integerLocal2 = 0;
         for (integerLocal3 = 0; this.objectArrayState0001.length > integerLocal3; integerLocal3++) {
           if (this.resourceSupport001State0001.integerArrayState0011[integerLocal3] > 0) {
-            integerLocal2 = integerLocal2 + this.computeInteger0799((byte) 34, integerLocal3);
+            integerLocal2 = integerLocal2 + this.getGroupLoadPercent((byte) 34, integerLocal3);
             integerLocal1 += 100;
           }
         }
@@ -500,7 +500,7 @@ final class ResourceArchive {
         return integerLocal5;
     }
 
-    final synchronized boolean computeBoolean0798(byte byteArgument1) {
+    final synchronized boolean ensureIndexLoaded(byte byteArgument1) {
         if (this.resourceSupport001State0001 == null) {
           this.resourceSupport001State0001 = this.resourceSupport003State0001.computeResourceSupport0010949(true);
           if (null == this.resourceSupport001State0001) {
@@ -515,7 +515,7 @@ final class ResourceArchive {
         return true;
     }
 
-    final synchronized byte[] computeByteArray0809(int integerArgument1, String stringArgument2, String stringArgument3) {
+    final synchronized byte[] getFileByName(int integerArgument1, String stringArgument2, String stringArgument3) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -531,7 +531,7 @@ final class ResourceArchive {
         String stackStringLocal13 = null;
         RuntimeException caughtExceptionLocal14 = null;
         try {
-          if (!this.computeBoolean0798((byte) 121)) {
+          if (!this.ensureIndexLoaded((byte) 121)) {
             stackObjectLocal6 = null;
             return (byte[]) (stackObjectLocal6);
           }
@@ -539,7 +539,7 @@ final class ResourceArchive {
           stringArgument2 = stringArgument2.toLowerCase();
           charSequenceLocal4 = (CharSequence) ((Object) stringArgument3);
           integerLocal1 = this.resourceSupport001State0001.mixedSupport091State0001.computeInteger1148((byte) -68, MixedSupport119.computeInteger1563(charSequenceLocal4, 79));
-          if (!this.computeBoolean0802(integerLocal1, (byte) -83)) {
+          if (!this.validateGroupId(integerLocal1, (byte) -83)) {
             return null;
           }
           if (integerArgument1 != 0) {
@@ -548,7 +548,7 @@ final class ResourceArchive {
           }
           charSequenceLocal5 = (CharSequence) ((Object) stringArgument2);
           integerLocal3 = this.resourceSupport001State0001.mixedSupport091ArrayState0001[integerLocal1].computeInteger1148((byte) -68, MixedSupport119.computeInteger1563(charSequenceLocal5, -112));
-          stackByteArrayLocal8 = this.computeByteArray0805(integerLocal3, 32, integerLocal1);
+          stackByteArrayLocal8 = this.getFile(integerLocal3, 32, integerLocal1);
           return stackByteArrayLocal8;
         } catch (java.lang.RuntimeException caughtParameterLocal15) {
           caughtExceptionLocal14 = caughtParameterLocal15;
@@ -570,12 +570,12 @@ final class ResourceArchive {
         }
     }
 
-    private final synchronized boolean computeBoolean0804(int integerArgument1, int integerArgument2, byte byteArgument3) {
-        if (!this.computeBoolean0798((byte) 121)) {
+    private final synchronized boolean validateFileId(int integerArgument1, int integerArgument2, byte byteArgument3) {
+        if (!this.ensureIndexLoaded((byte) 121)) {
           return false;
         }
         if (byteArgument3 != -33) {
-          this.computeInteger0799((byte) 6, ((int[]) (this.objectArrayState0001[0]))[26]);
+          this.getGroupLoadPercent((byte) 6, ((int[]) (this.objectArrayState0001[0]))[26]);
         }
         if (integerArgument1 >= 0 &&
           integerArgument2 >= 0 &&
@@ -589,9 +589,9 @@ final class ResourceArchive {
         return false;
     }
 
-    final byte[] computeByteArray0805(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final byte[] getFile(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 118 / ((integerArgument2 + 44) / 62);
-        return this.computeByteArray0810(integerArgument1, (int[]) null, integerArgument3, (byte) -33);
+        return this.getFileWithKeys(integerArgument1, (int[]) null, integerArgument3, (byte) -33);
     }
 
     final static String[] computeStringArray0801(char characterArgument1, byte byteArgument2, String stringArgument3) {
@@ -647,11 +647,11 @@ final class ResourceArchive {
         }
     }
 
-    private final synchronized boolean computeBoolean0802(int integerArgument1, byte byteArgument2) {
+    private final synchronized boolean validateGroupId(int integerArgument1, byte byteArgument2) {
         if (byteArgument2 != -83) {
           this.resourceSupport003State0001 = (ResourceSupport003) (this.objectArrayState0001[0]);
         }
-        if (!this.computeBoolean0798((byte) 121)) {
+        if (!this.ensureIndexLoaded((byte) 121)) {
           return false;
         }
         if (integerArgument1 < 0 ||
@@ -684,7 +684,7 @@ final class ResourceArchive {
         }
     }
 
-    final int computeInteger0806(int integerArgument1, int integerArgument2, String stringArgument3) {
+    final int getFileIdByName(int integerArgument1, int integerArgument2, String stringArgument3) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         CharSequence charSequenceLocal3 = null;
@@ -696,7 +696,7 @@ final class ResourceArchive {
         String stackStringLocal9 = null;
         RuntimeException caughtExceptionLocal10 = null;
         try {
-          if (!this.computeBoolean0802(integerArgument1, (byte) -83)) {
+          if (!this.validateGroupId(integerArgument1, (byte) -83)) {
             stackIntegerLocal4 = -1;
             return stackIntegerLocal4;
           }
@@ -706,7 +706,7 @@ final class ResourceArchive {
           stringArgument3 = stringArgument3.toLowerCase();
           charSequenceLocal3 = (CharSequence) ((Object) stringArgument3);
           integerLocal1 = this.resourceSupport001State0001.mixedSupport091ArrayState0001[integerArgument1].computeInteger1148((byte) -68, MixedSupport119.computeInteger1563(charSequenceLocal3, -127));
-          if (this.computeBoolean0804(integerArgument1, integerLocal1, (byte) -33)) {
+          if (this.validateFileId(integerArgument1, integerLocal1, (byte) -33)) {
             stackIntegerLocal6 = integerLocal1;
             return stackIntegerLocal6;
           }
@@ -733,8 +733,8 @@ final class ResourceArchive {
         cipherPacketBufferLocal1.writeByte(true, 3);
     }
 
-    final synchronized int computeInteger0799(byte byteArgument1, int integerArgument2) {
-        if (!this.computeBoolean0802(integerArgument2, (byte) -83)) {
+    final synchronized int getGroupLoadPercent(byte byteArgument1, int integerArgument2) {
+        if (!this.validateGroupId(integerArgument2, (byte) -83)) {
           return 0;
         }
         if (byteArgument1 != 34) {
@@ -743,10 +743,10 @@ final class ResourceArchive {
         if (this.objectArrayState0001[integerArgument2] != null) {
           return 100;
         }
-        return this.resourceSupport003State0001.computeInteger0947(integerArgument2, byteArgument1 ^ -102);
+        return this.resourceSupport003State0001.getGroupRequestProgressPercent(integerArgument2, byteArgument1 ^ -102);
     }
 
-    final int computeInteger0808(int integerArgument1, String stringArgument2) {
+    final int getGroupLoadPercentByName(int integerArgument1, String stringArgument2) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -758,7 +758,7 @@ final class ResourceArchive {
         String stackStringLocal9 = null;
         RuntimeException caughtExceptionLocal10 = null;
         try {
-          if (!this.computeBoolean0798((byte) 121)) {
+          if (!this.ensureIndexLoaded((byte) 121)) {
             stackIntegerLocal5 = 0;
             return stackIntegerLocal5;
           }
@@ -766,7 +766,7 @@ final class ResourceArchive {
           charSequenceLocal4 = (CharSequence) ((Object) stringArgument2);
           integerLocal1 = this.resourceSupport001State0001.mixedSupport091State0001.computeInteger1148((byte) -68, MixedSupport119.computeInteger1563(charSequenceLocal4, -128));
           integerLocal3 = 39 / ((integerArgument1 + 55) / 53);
-          stackIntegerLocal6 = this.computeInteger0799((byte) 34, integerLocal1);
+          stackIntegerLocal6 = this.getGroupLoadPercent((byte) 34, integerLocal1);
           return stackIntegerLocal6;
         } catch (java.lang.RuntimeException caughtParameterLocal11) {
           caughtExceptionLocal10 = caughtParameterLocal11;
@@ -782,7 +782,7 @@ final class ResourceArchive {
         }
     }
 
-    private final synchronized byte[] computeByteArray0810(int integerArgument1, int[] integerArrayArgument2, int integerArgument3, byte byteArgument4) {
+    private final synchronized byte[] getFileWithKeys(int integerArgument1, int[] integerArrayArgument2, int integerArgument3, byte byteArgument4) {
         Object stackObjectLocal1 = null;
         Object stackObjectLocal2 = null;
         Object stackObjectLocal3 = null;
@@ -792,15 +792,15 @@ final class ResourceArchive {
         Object objectLocal7 = null;
         byte[] byteArrayLocal8 = null;
         try {
-          if (!this.computeBoolean0804(integerArgument3, integerArgument1, byteArgument4)) {
+          if (!this.validateFileId(integerArgument3, integerArgument1, byteArgument4)) {
             stackObjectLocal1 = null;
             return (byte[]) (stackObjectLocal1);
           }
           objectLocal7 = null;
           if ((this.objectArrayArrayState0001[integerArgument3] == null ||
-            this.objectArrayArrayState0001[integerArgument3][integerArgument1] == null) && !this.computeBoolean0815(integerArrayArgument2, integerArgument3, integerArgument1, 26687)) {
-            this.performAction0803(20351, integerArgument3);
-            if (!this.computeBoolean0815(integerArrayArgument2, integerArgument3, integerArgument1, byteArgument4 + 26720)) {
+            this.objectArrayArrayState0001[integerArgument3][integerArgument1] == null) && !this.unpackGroupFiles(integerArrayArgument2, integerArgument3, integerArgument1, 26687)) {
+            this.loadPackedGroup(20351, integerArgument3);
+            if (!this.unpackGroupFiles(integerArrayArgument2, integerArgument3, integerArgument1, byteArgument4 + 26720)) {
               return null;
             }
           }
@@ -842,13 +842,13 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized boolean computeBoolean0814(boolean booleanArgument1) {
+    final synchronized boolean tryLoadAllGroups(boolean booleanArgument1) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
         int integerLocal4;
         integerLocal4 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        if (!this.computeBoolean0798((byte) 121)) {
+        if (!this.ensureIndexLoaded((byte) 121)) {
           return false;
         }
         if (booleanArgument1) {
@@ -858,7 +858,7 @@ final class ResourceArchive {
         for (integerLocal1 = 0; integerLocal1 < this.resourceSupport001State0001.integerArrayState0008.length; integerLocal1++) {
           integerLocal3 = this.resourceSupport001State0001.integerArrayState0008[integerLocal1];
           if (this.objectArrayState0001[integerLocal3] == null) {
-            this.performAction0803(20351, integerLocal3);
+            this.loadPackedGroup(20351, integerLocal3);
             if (null == this.objectArrayState0001[integerLocal3]) {
               integerLocal2 = 0;
             }
@@ -867,8 +867,8 @@ final class ResourceArchive {
         return integerLocal2 != 0;
     }
 
-    final synchronized boolean computeBoolean0800(byte byteArgument1, int integerArgument2, int integerArgument3) {
-        if (!this.computeBoolean0804(integerArgument3, integerArgument2, (byte) -33)) {
+    final synchronized boolean tryLoadFile(byte byteArgument1, int integerArgument2, int integerArgument3) {
+        if (!this.validateFileId(integerArgument3, integerArgument2, (byte) -33)) {
           return false;
         }
         if (null != this.objectArrayArrayState0001[integerArgument3] &&
@@ -878,12 +878,12 @@ final class ResourceArchive {
         if (null != this.objectArrayState0001[integerArgument3]) {
           return true;
         }
-        this.performAction0803(20351, integerArgument3);
+        this.loadPackedGroup(20351, integerArgument3);
         if (null != this.objectArrayState0001[integerArgument3]) {
           return true;
         }
         if (byteArgument1 >= -59) {
-          this.computeBoolean0814(false);
+          this.tryLoadAllGroups(false);
           return false;
         }
         return false;

@@ -7,7 +7,7 @@ final class ap {
     String field_f;
     int field_d;
     String field_a;
-    vr field_e;
+    ResourceArchive field_e;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         if (param3 > 50) {

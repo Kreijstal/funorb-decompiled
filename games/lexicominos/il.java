@@ -55,12 +55,12 @@ final class il {
         }
     }
 
-    final static sh a(boolean param0, int param1, boolean param2, int param3, boolean param4, int param5) {
+    final static ResourceArchive a(boolean param0, int param1, boolean param2, int param3, boolean param4, int param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           ug var8 = null;
-          sh stackIn_15_0 = null;
+          ResourceArchive stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
@@ -87,7 +87,7 @@ final class il {
             if (param4) {
               var8.c(11002);
             }
-            stackIn_15_0 = new sh(var8, param0, param5);
+            stackIn_15_0 = new ResourceArchive(var8, param0, param5);
             return stackIn_15_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

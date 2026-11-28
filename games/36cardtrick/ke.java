@@ -111,11 +111,11 @@ final class ke {
     }
 
     final static void a(dh param0, int param1, int param2) {
-        w var5 = null;
+        BitPacketBuffer var5 = null;
         int var4 = 0;
         try {
           var5 = NetworkArchiveRequest.field_r;
-          var5.h(param1, 0);
+          var5.writeCipheredByte(param1, 0);
           var5.position = var5.position + 1;
           var4 = var5.position;
           if (param2 != 21719) {

@@ -14,7 +14,7 @@ final class ei {
 
     final static void a(boolean param0, int param1, am param2) {
         int var5 = 0;
-        hj stackIn_3_0 = null;
+        BitPacketBuffer stackIn_3_0 = null;
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -23,15 +23,15 @@ final class ei {
         RuntimeException var3 = null;
         int var4 = 0;
         int var6 = 0;
-        hj var7 = null;
-        hj var8 = null;
+        BitPacketBuffer var7 = null;
+        BitPacketBuffer var8 = null;
         var6 = Transmogrify.field_A ? 1 : 0;
         try {
           var7 = ff.field_D;
           var8 = var7;
           stackIn_3_0 = var8;
           stackIn_4_1 = !(param0);
-          ((hj) (Object) stackIn_3_0).a(stackIn_4_1, param1);
+          ((BitPacketBuffer) (Object) stackIn_3_0).writeCipheredByte(stackIn_4_1, param1);
           var8.position = var8.position + 1;
           var4 = var8.position;
           var8.writeByte(6389, 1);

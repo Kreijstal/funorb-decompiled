@@ -4883,16 +4883,16 @@ final class re {
         }
         if (ib.a((byte) -72) &&
           null != IsaacGenerator.field_h) {
-          oc.field_h[1][0] = IsaacGenerator.field_h.a("level_01.dat", "", 0);
-          oc.field_h[1][1] = IsaacGenerator.field_h.a("level_02.dat", "", 0);
-          oc.field_h[1][2] = IsaacGenerator.field_h.a("level_03.dat", "", 0);
-          oc.field_h[1][3] = IsaacGenerator.field_h.a("level_04.dat", "", 0);
-          oc.field_h[1][4] = IsaacGenerator.field_h.a("level_05.dat", "", 0);
-          oc.field_h[1][5] = IsaacGenerator.field_h.a("level_06.dat", "", 0);
-          oc.field_h[1][6] = IsaacGenerator.field_h.a("level_07.dat", "", 0);
-          oc.field_h[1][7] = IsaacGenerator.field_h.a("level_08.dat", "", 0);
-          oc.field_h[1][8] = IsaacGenerator.field_h.a("level_09.dat", "", 0);
-          oc.field_h[1][9] = IsaacGenerator.field_h.a("level_10.dat", "", 0);
+          oc.field_h[1][0] = IsaacGenerator.field_h.getFileByName("level_01.dat", "", 0);
+          oc.field_h[1][1] = IsaacGenerator.field_h.getFileByName("level_02.dat", "", 0);
+          oc.field_h[1][2] = IsaacGenerator.field_h.getFileByName("level_03.dat", "", 0);
+          oc.field_h[1][3] = IsaacGenerator.field_h.getFileByName("level_04.dat", "", 0);
+          oc.field_h[1][4] = IsaacGenerator.field_h.getFileByName("level_05.dat", "", 0);
+          oc.field_h[1][5] = IsaacGenerator.field_h.getFileByName("level_06.dat", "", 0);
+          oc.field_h[1][6] = IsaacGenerator.field_h.getFileByName("level_07.dat", "", 0);
+          oc.field_h[1][7] = IsaacGenerator.field_h.getFileByName("level_08.dat", "", 0);
+          oc.field_h[1][8] = IsaacGenerator.field_h.getFileByName("level_09.dat", "", 0);
+          oc.field_h[1][9] = IsaacGenerator.field_h.getFileByName("level_10.dat", "", 0);
           IsaacGenerator.field_h = null;
         }
         dd.field_o[4] = bh.field_j;

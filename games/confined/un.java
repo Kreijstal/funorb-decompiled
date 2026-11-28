@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class un {
-    static mi field_a;
+    static ResourceArchive field_a;
     static PcmSample field_h;
     static byte[][] field_i;
     static String field_b;

@@ -21,13 +21,13 @@ final class wb {
           return;
         }
         try {
-          jd.a(var2, var4, param0, 1000, var3);
+          BitPacketBuffer.setBrowserCookie(var2, var4, param0, 1000, var3);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "wb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static byte[] a(int param0, CharSequence param1) {
+    final static byte[] encodeCp1252Bytes(int param0, CharSequence param1) {
         int var4 = 0;
         byte[] stackIn_69_0 = null;
         RuntimeException stackIn_72_0 = null;

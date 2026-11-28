@@ -16,11 +16,11 @@ final class ij {
         field_b = null;
         if (param0 != 15596) {
           String var2 = (String) null;
-          ij.a((String) null, (byte) -61, (vj) null, (String) null);
+          ij.a((String) null, (byte) -61, (ResourceArchive) null, (String) null);
         }
     }
 
-    final static he[] a(String param0, byte param1, vj param2, String param3) {
+    final static he[] a(String param0, byte param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -34,11 +34,11 @@ final class ij {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.a(param3, (byte) -126);
+          var4_int = param2.getGroupIdByName(param3, (byte) -126);
           if (param1 < 52) {
             ij.a(-72);
           }
-          var5 = param2.a((byte) -86, param0, var4_int);
+          var5 = param2.getFileIdByName((byte) -86, param0, var4_int);
           stackIn_3_0 = rd.a(var5, true, var4_int, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

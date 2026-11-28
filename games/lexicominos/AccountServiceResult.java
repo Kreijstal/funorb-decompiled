@@ -60,7 +60,7 @@ final class AccountServiceResult {
             stackIn_7_0 = !(cg.field_l >= 13);
             n.field_k = mc.createAccountSuccessResult(stackIn_7_0, 102);
             var7 = (String[]) null;
-            th.a((byte) 83, (String[]) null);
+            BitPacketBuffer.updateOptionLists((byte) 83, (String[]) null);
             return;
           }
           if (100 > param1) {
@@ -72,7 +72,7 @@ final class AccountServiceResult {
             return;
           }
           var8 = param3;
-          th.a((byte) 85, var8);
+          BitPacketBuffer.updateOptionLists((byte) 85, var8);
           n.field_k = oe.createAccountSuggestionsResult(-118, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

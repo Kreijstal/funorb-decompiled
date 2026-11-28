@@ -342,7 +342,7 @@ abstract class BitmapFont extends DualNode {
             if (integerLocal15 == -1) {
               if (integerLocal19 != 0) {
                 discarded$3 = stringBuilderState0005.append((char) integerLocal19);
-                integerLocal19 = (char)(MixedSupport063.computeByte0751((char) integerLocal19, (byte) 28) & 255);
+                integerLocal19 = (char)(MixedSupport063.encodeCp1252Character((char) integerLocal19, (byte) 28) & 255);
                 integerLocal10 = integerLocal10 + this.integerArrayState0160[integerLocal19];
                 if (this.byteArrayState0016 != null &&
                   integerLocal16 != 0) {
@@ -480,7 +480,7 @@ abstract class BitmapFont extends DualNode {
             }
             if ((frameRemainderLocal16) &&
               (integerLocal4 == -1)) {
-              integerLocal7 = (char)(MixedSupport063.computeByte0751((char) integerLocal7, (byte) 28) & 255);
+              integerLocal7 = (char)(MixedSupport063.encodeCp1252Character((char) integerLocal7, (byte) 28) & 255);
               if (this.byteArrayState0016 != null &&
                 integerLocal5 != 0) {
                 integerArgument2 = integerArgument2 + this.byteArrayState0016[(integerLocal5 << 8) + integerLocal7];
@@ -523,7 +523,7 @@ abstract class BitmapFont extends DualNode {
     }
 
     final int computeInteger1064(char characterArgument1) {
-        return this.integerArrayState0160[MixedSupport063.computeByte0751(characterArgument1, (byte) 28) & 255];
+        return this.integerArrayState0160[MixedSupport063.encodeCp1252Character(characterArgument1, (byte) 28) & 255];
     }
 
     final int computeInteger1066(String stringArgument1) {
@@ -601,7 +601,7 @@ abstract class BitmapFont extends DualNode {
             }
             if ((frameRemainderLocal12) &&
               (integerLocal3 == -1)) {
-              integerLocal7 = (char)(MixedSupport063.computeByte0751((char) integerLocal7, (byte) 28) & 255);
+              integerLocal7 = (char)(MixedSupport063.encodeCp1252Character((char) integerLocal7, (byte) 28) & 255);
               integerLocal5 = integerLocal5 + this.integerArrayState0160[integerLocal7];
               if (this.byteArrayState0016 != null &&
                 integerLocal4 != 0) {

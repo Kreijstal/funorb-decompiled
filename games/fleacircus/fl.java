@@ -31,7 +31,7 @@ final class fl {
             ResourceArchive var3 = (ResourceArchive) null;
             fl.a((byte) 103, (ResourceArchive) null);
           }
-          hk.b(param1.a(0, "", "headers.packvorbis"));
+          hk.b(param1.getFileByName(0, "", "headers.packvorbis"));
           var2 = hk.a(param1, "jagex logo2.packvorbis", "");
           var2.b();
         } catch (RuntimeException runtimeException) {

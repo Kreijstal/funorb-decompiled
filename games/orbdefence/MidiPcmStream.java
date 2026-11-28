@@ -274,7 +274,7 @@ final class MidiPcmStream extends PcmStream {
     final synchronized void b(int param0, int param1) {
         if (param1 < 103) {
           fj var4 = (fj) null;
-          this.a((ki) null, (vd) null, (byte) -88, (fj) null, 47);
+          this.a((ResourceArchive) null, (vd) null, (byte) -88, (fj) null, 47);
         }
         this.field_k = param0;
     }
@@ -1351,7 +1351,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean a(ki param0, vd param1, byte param2, fj param3, int param4) {
+    final synchronized boolean a(ResourceArchive param0, vd param1, byte param2, fj param3, int param4) {
         int stackIn_21_0 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;

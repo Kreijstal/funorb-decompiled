@@ -8,24 +8,24 @@ final class mc {
     static boolean[] field_e;
     static double[] field_b;
 
-    final static boolean a(int param0, int param1, mi param2, byte param3) {
+    final static boolean a(int param0, int param1, ResourceArchive param2, byte param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
-        mi var5 = null;
+        ResourceArchive var5 = null;
         byte[] var6 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = param2.a((byte) -2, param1, param0);
+          var6 = param2.getFile((byte) -2, param1, param0);
           var4 = var6;
           if (var6 == null) {
             return false;
           }
           if (param3 != 119) {
-            var5 = (mi) null;
-            mc.a(68, 108, (mi) null, (byte) -5);
+            var5 = (ResourceArchive) null;
+            mc.a(68, 108, (ResourceArchive) null, (byte) -5);
           }
           lc.a(false, var6);
           return true;

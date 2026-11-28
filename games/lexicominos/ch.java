@@ -11,14 +11,14 @@ final class ch extends lg {
     static int field_e;
 
     final static void a(int param0, int param1, f param2) {
-        th var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           if (param0 != 18391) {
             f var4 = (f) null;
             ch.a(91, -91, (f) null);
           }
           var3 = SpriteGeometry.field_q;
-          var3.h(param1, 0);
+          var3.writeCipheredByte(param1, 0);
           var3.writeByte(param2.field_k, param0 - 18392);
           var3.writeByte(param2.field_j, -1);
         } catch (RuntimeException runtimeException) {

@@ -188,15 +188,15 @@ final class kk {
         field_a = null;
     }
 
-    final static void a(int param0, qk param1) {
+    final static void a(int param0, ResourceArchive param1) {
         int var3 = 0;
         int var4 = 0;
         mg var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        w var8 = null;
+        BitPacketBuffer var8 = null;
         int var9 = 0;
-        w var10 = null;
+        BitPacketBuffer var10 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -205,10 +205,10 @@ final class kk {
         int var4Lifetime1;
         var7 = Main.field_T;
         try {
-          var8 = new w(param1.a((byte) 7, "", "logo.fo3d"));
+          var8 = new BitPacketBuffer(param1.getFileByName((byte) 7, "", "logo.fo3d"));
           var10 = var8;
           var3 = var10.readUnsignedByte(param0 ^ -16903);
-          var10.f(true);
+          var10.beginBitAccess(true);
           PcmOutputWorker.field_b = hk.a(param0 + 17076, var10);
           NodeHashTableIterator.field_a = new mg[var3];
           sk.field_b = new int[var3][];
@@ -220,7 +220,7 @@ final class kk {
             NodeHashTableIterator.field_a[var4] = nb.a((byte) 119, var8);
             var4++;
           }
-          var10.g(8);
+          var10.endBitAccess(8);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var9 < var3) {

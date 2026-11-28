@@ -88,7 +88,7 @@ final class fl implements wo {
         vk.a(param1 ^ -39, false, param0);
     }
 
-    final static String a(int param0, String param1, db param2, String param3) {
+    final static String a(int param0, String param1, ResourceArchive param2, String param3) {
         RuntimeException var4 = null;
         String var5 = null;
         String stackIn_3_0 = null;
@@ -102,13 +102,13 @@ final class fl implements wo {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param2.a((byte) 102)) {
+          if (!param2.ensureIndexLoaded((byte) 102)) {
             stackIn_3_0 = (String) (param1);
             return stackIn_3_0;
           }
           if (param0 < 36) {
             var5 = (String) null;
-            fl.a(-14, (String) null, (db) null, (String) null);
+            fl.a(-14, (String) null, (ResourceArchive) null, (String) null);
           }
           stackIn_7_0 = param3 + " - " + param2.b(3492) + "%";
           return stackIn_7_0;

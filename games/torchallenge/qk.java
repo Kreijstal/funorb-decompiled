@@ -92,11 +92,11 @@ final class qk extends kg {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.a(param0, param3 ^ -117);
+          var4_int = param2.getGroupIdByName(param0, param3 ^ -117);
           if (param3 != 0) {
             qk.d((byte) -119);
           }
-          var5 = param2.a(var4_int, param1, (byte) 115);
+          var5 = param2.getFileIdByName(var4_int, param1, (byte) 115);
           stackIn_3_0 = jj.a((byte) 62, param2, var4_int, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

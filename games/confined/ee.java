@@ -585,12 +585,12 @@ abstract class ee extends pm {
         }
     }
 
-    final static void a(mi param0, byte param1) {
+    final static void a(ResourceArchive param0, byte param1) {
         RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new RgbSprite(param0.a(-75, "final_frame.jpg", ""), (java.awt.Component) ((Object) fb.field_b));
+          var2 = new RgbSprite(param0.getFileByName(-75, "final_frame.jpg", ""), (java.awt.Component) ((Object) fb.field_b));
           var3 = var2.field_u;
           var4 = var2.field_w;
           mk.b(param1 ^ 198);

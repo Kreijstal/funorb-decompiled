@@ -21,7 +21,7 @@ final class gm {
             var3 = (String) null;
             gm.a((String) null, true);
           }
-          stackIn_3_0 = d.field_d.a("", param0, (byte) -128);
+          stackIn_3_0 = d.field_d.getFileByName("", param0, (byte) -128);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

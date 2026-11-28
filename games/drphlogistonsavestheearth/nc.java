@@ -44,7 +44,7 @@ final class nc extends hf {
         }
     }
 
-    final static void a(byte param0, lh param1) {
+    final static void a(byte param0, BitPacketBuffer param1) {
         try {
           int var6 = 0;
           int var11_int = 0;

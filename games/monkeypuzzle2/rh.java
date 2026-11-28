@@ -170,7 +170,7 @@ abstract class rh extends WidgetContainer {
         }
     }
 
-    final static void a(int param0, ad param1) {
+    final static void a(int param0, ResourceArchive param1) {
         RuntimeException stackIn_144_0 = null;
         StringBuilder stackIn_144_1 = null;
         String stackIn_145_2 = null;

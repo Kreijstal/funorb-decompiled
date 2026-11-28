@@ -30,7 +30,7 @@ class SceneWidgetNode extends DualNode {
         pcmPlayerState0002 = null;
     }
 
-    final static byte[] computeByteArray0915(int integerArgument1, CharSequence charSequenceArgument2) {
+    final static byte[] encodeCp1252Bytes(int integerArgument1, CharSequence charSequenceArgument2) {
         int integerLocal1 = 0;
         byte[] stackByteArrayLocal2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;

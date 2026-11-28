@@ -77,7 +77,7 @@ final class LoginCredentials {
         String stackStringLocal10 = null;
         RuntimeException caughtExceptionLocal11 = null;
         try {
-          byteArrayLocal4 = resourceArchiveArgument5.computeByteArray0805(integerArgument3, 108, integerArgument4);
+          byteArrayLocal4 = resourceArchiveArgument5.getFile(integerArgument3, 108, integerArgument4);
           byteArrayLocal1 = byteArrayLocal4;
           if (!booleanArgument1) {
             stringLocal3 = (String) null;

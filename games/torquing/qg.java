@@ -53,8 +53,8 @@ final class qg extends am {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param1.a(param4 ^ -256, param2);
-          var6 = param1.a(param3, -112, var5_int);
+          var5_int = param1.getGroupIdByName(param4 ^ -256, param2);
+          var6 = param1.getFileIdByName(param3, -112, var5_int);
           if (param4 == 255) {
             stackIn_4_0 = AccountRequestState.a(param1, var5_int, param0, var6, param4 ^ 237);
             return stackIn_4_0;

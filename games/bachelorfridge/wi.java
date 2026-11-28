@@ -6,11 +6,11 @@ final class wi extends w implements oh {
     static int[] field_o;
     private boolean field_k;
     private vi field_n;
-    private vr field_j;
+    private ResourceArchive field_j;
     private int field_l;
-    private vr field_m;
+    private ResourceArchive field_m;
 
-    wi(vr param0, vr param1, vr param2, int param3, boolean param4) {
+    wi(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3, boolean param4) {
         super(param1, param0, param2);
         this.field_k = false;
         this.field_l = 50;
@@ -29,7 +29,7 @@ final class wi extends w implements oh {
         cg var4;
         cg stackIn_6_0;
         Object stackIn_6_1;
-        vr stackIn_6_2;
+        ResourceArchive stackIn_6_2;
         float stackIn_6_3;
         Object stackIn_7_1;
         boolean stackIn_8_4 = false;
@@ -80,7 +80,7 @@ final class wi extends w implements oh {
         if (var3 != null) {
           return var3;
         }
-        byte[] var4 = this.field_j.b(-54, param1, 0);
+        byte[] var4 = this.field_j.getFile(-54, param1, 0);
         if (var4 != null) {
           var3 = new cg(new PacketBuffer(var4));
           this.field_n.a(var3, (long)param1, 83);

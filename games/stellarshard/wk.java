@@ -4,15 +4,15 @@
 final class wk {
     static String field_g;
     static boolean field_c;
-    static pf field_a;
-    private pf field_d;
+    static ResourceArchive field_a;
+    private ResourceArchive field_d;
     static vl[] field_b;
-    private pf field_f;
+    private ResourceArchive field_f;
     private wa field_e;
 
     final static boolean a(int param0) {
         if (param0 < 74) {
-          field_a = (pf) null;
+          field_a = (ResourceArchive) null;
         }
         return id.b(-4);
     }
@@ -68,9 +68,9 @@ final class wk {
           return var3;
         }
         if (param1 < 32768) {
-          var4 = this.field_f.a(param1, 16, 1);
+          var4 = this.field_f.getFile(param1, 16, 1);
         } else {
-          var4 = this.field_d.a(32767 & param1, 16, 1);
+          var4 = this.field_d.getFile(32767 & param1, 16, 1);
         }
         var3 = new od();
         if (var4 != null) {
@@ -81,7 +81,7 @@ final class wk {
         }
         this.field_e.a(var3, (long)param1, -22424);
         if (param0 != 32767) {
-          field_a = (pf) null;
+          field_a = (ResourceArchive) null;
         }
         return var3;
     }

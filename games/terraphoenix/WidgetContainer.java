@@ -124,10 +124,10 @@ class WidgetContainer extends UiWidget implements sf {
     }
 
     final static void a(byte param0, nd param1, int param2) {
-        uc var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           var3 = di.field_l;
-          var3.k(-17410, param2);
+          var3.writeCipheredByte(-17410, param2);
           var3.writeByte(5, 3);
           if (param0 != 15) {
             field_A = (String) null;

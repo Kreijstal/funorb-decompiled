@@ -110,7 +110,7 @@ final class OpenGlTransparentWaterEffect extends RenderEffect {
           if (param1 != null &&
             this.field_g.b(false) &&
             this.field_f.field_Vc) {
-            this.field_h = SoftwareDepthBuffer.createAssemblyProgram(true, 34336, param1.a("gl", (byte) -71, "transparent_water"), this.field_f);
+            this.field_h = SoftwareDepthBuffer.createAssemblyProgram(true, 34336, param1.getFileByName("gl", (byte) -71, "transparent_water"), this.field_f);
             return;
           }
           this.field_h = null;

@@ -166,7 +166,7 @@ final class be {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -122 % ((18 - param1) / 45);
-          stackIn_1_0 = sc.a(param0, param0.length, 94, 0);
+          stackIn_1_0 = sc.decodeCp1252String(param0, param0.length, 94, 0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -182,7 +182,7 @@ final class be {
         }
     }
 
-    final static ad a(boolean param0, boolean param1, int param2, int param3, boolean param4) {
+    final static ResourceArchive a(boolean param0, boolean param1, int param2, int param3, boolean param4) {
         if (param2 != 13271) {
           byte[] var6 = (byte[]) null;
           be.a((PacketBuffer) null, (java.math.BigInteger) null, -19, 70, -21, (java.math.BigInteger) null, (byte[]) null);

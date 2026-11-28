@@ -105,7 +105,7 @@ final class NodeHashTableIterator implements Iterator {
           if (param1 < 121) {
             NodeHashTableIterator.a(true);
           }
-          stackIn_3_0 = o.field_l.a("", param0, 24874);
+          stackIn_3_0 = o.field_l.getFileByName("", param0, 24874);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

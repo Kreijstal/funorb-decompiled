@@ -29,7 +29,7 @@ abstract class nk extends GameAppletShell {
         li.g(false);
         NanoFrameTimer.field_c = bl.createMouseWheelInput(115);
         ha.a(ug.field_y, (byte) 76);
-        th.field_m = param6;
+        BitPacketBuffer.field_m = param6;
         BoundedRandomAccessFile.field_d = param0;
         ll.field_f = param1;
         ij.field_l = param3;
@@ -255,18 +255,18 @@ abstract class nk extends GameAppletShell {
         }
         if (1 == PacketBuffer.field_i) {
           if (ri.field_e != 0) {
-            eh.field_d = oj.a(false, th.field_m);
+            eh.field_d = oj.a(false, BitPacketBuffer.field_m);
           }
           we.field_h = cl.a(true, (byte) -98, false, gf.field_e, 1);
           GzipDecompressor.field_a = cl.a(true, (byte) -15, false, ij.field_l, 1);
           ej.field_d = cl.a(true, (byte) -37, false, ll.field_f, 1);
           PacketBuffer.field_i = 2;
           gg.field_d = GzipDecompressor.field_a;
-          th.field_p = we.field_h;
+          BitPacketBuffer.field_p = we.field_h;
         }
         if (PacketBuffer.field_i == 2) {
           if (eh.field_d != null &&
-            eh.field_d.c(92)) {
+            eh.field_d.ensureIndexLoaded(92)) {
             if (!eh.field_d.a("", (byte) -114)) {
               eh.field_d = null;
             } else {
@@ -319,8 +319,8 @@ abstract class nk extends GameAppletShell {
         }
         boolean decompiledFrameRemainder0 = true;
         if (11 == PacketBuffer.field_i) {
-          if (null != eg.field_C && (!eg.field_C.c(param1 - 104) ||
-            !eg.field_C.a((byte) 60))) {
+          if (null != eg.field_C && (!eg.field_C.ensureIndexLoaded(param1 - 104) ||
+            !eg.field_C.tryLoadAllGroups((byte) 60))) {
             al.a(16, MouseWheelInput.a((byte) 126, oh.field_a, we.field_c, eg.field_C), 0.0f);
             decompiledFrameRemainder0 = false;
           }
@@ -611,7 +611,7 @@ abstract class nk extends GameAppletShell {
             la.a(kk.c(-14047), true);
           }
           if (var4 == 10) {
-            SpriteGeometry.field_q.h(17, 0);
+            SpriteGeometry.field_q.writeCipheredByte(17, 0);
           }
           if (var4 == 11) {
             rf.a(20104, kk.c(-14047));
@@ -627,7 +627,7 @@ abstract class nk extends GameAppletShell {
               if (g.field_m.a(74)) {
                 var12 = g.field_m.a((byte) -65);
                 if (var12 != null) {
-                  var7 = NetworkArchiveRequest.a(var12.position, var12.payload, (byte) 16, 0);
+                  var7 = NetworkArchiveRequest.decodeCp1252String(var12.position, var12.payload, (byte) 16, 0);
                   hf.a(var7, (byte) 110);
                 } else {
                   var9 = (String) null;
@@ -758,7 +758,7 @@ abstract class nk extends GameAppletShell {
         if (param0 > 125) {
           var4 = -1 + a.field_c;
           var5 = new byte[var4];
-          ig.field_a.b(var4, 0, 55, var5);
+          ig.field_a.readCipheredBytes(var4, 0, 55, var5);
           m.a(var3 != 0, true, ni.a((byte) -55, var5), kk.c(-14047));
           return;
         }

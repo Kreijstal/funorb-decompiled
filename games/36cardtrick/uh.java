@@ -57,7 +57,7 @@ final class uh extends IntrusiveNode {
         }
     }
 
-    final static RgbSprite[] a(int param0, qk param1, int param2, byte param3) {
+    final static RgbSprite[] a(int param0, ResourceArchive param1, int param2, byte param3) {
         RuntimeException var4 = null;
         RgbSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -87,7 +87,7 @@ final class uh extends IntrusiveNode {
         }
     }
 
-    final static boolean a(qk param0, qk param1, qk param2, int param3) {
+    final static boolean a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -98,11 +98,11 @@ final class uh extends IntrusiveNode {
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0.b(param3 ^ 6) &&
+          if (param0.ensureIndexLoaded(param3 ^ 6) &&
             param0.b(4, "commonui")) {
-            if (param2.b(4) &&
+            if (param2.ensureIndexLoaded(4) &&
               param2.b(param3 ^ 6, "commonui")) {
-              if (param1.b(param3 + param3) &&
+              if (param1.ensureIndexLoaded(param3 + param3) &&
                 param1.b(4, "button.gif")) {
                 return true;
               }

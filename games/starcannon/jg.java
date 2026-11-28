@@ -6,7 +6,7 @@ final class jg extends dk {
     static int field_A;
     static String field_I;
     static int field_H;
-    static ue field_F;
+    static ResourceArchive field_F;
     private he field_D;
     static Sprite[] field_C;
 
@@ -158,7 +158,7 @@ final class jg extends dk {
 
     final static void clearStaticReferences(byte param0) {
         if (param0 < 99) {
-          field_F = (ue) null;
+          field_F = (ResourceArchive) null;
         }
     }
 

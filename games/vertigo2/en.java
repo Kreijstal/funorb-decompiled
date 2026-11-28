@@ -29,12 +29,12 @@ final class en {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param2.b(0)) {
+          if (!param2.ensureIndexLoaded(0)) {
             stackIn_3_0 = (String) (param1);
             return stackIn_3_0;
           }
           if (!param0) {
-            stackIn_8_0 = param4 + " - " + param2.b(param3, 100) + "%";
+            stackIn_8_0 = param4 + " - " + param2.getGroupLoadPercent(param3, 100) + "%";
             return stackIn_8_0;
           }
           stackIn_6_0 = (String) null;
@@ -76,7 +76,7 @@ final class en {
           if (param0 > -6) {
             en.clearStaticReferences(25);
           }
-          stackIn_3_0 = po.field_e.a("", param1, 0);
+          stackIn_3_0 = po.field_e.getFileByName("", param1, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

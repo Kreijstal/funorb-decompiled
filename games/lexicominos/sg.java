@@ -425,7 +425,7 @@ final class sg {
                                 }
                               }
                               var8 = vg.field_d[-1 + this.field_d];
-                              var8.field_c.a(0, param1, var8.a(bk.field_b, sh.field_e, 640), var4_int);
+                              var8.field_c.a(0, param1, var8.a(bk.field_b, ResourceArchive.field_e, 640), var4_int);
                             }
                           } else {
                             this.field_k.a((byte) 120, param1, 12, this.field_g);
@@ -466,7 +466,7 @@ final class sg {
                                               g.a(256, 92);
                                             }
                                             if (this.field_c.c(-1)) {
-                                              var4_int = this.a(bk.field_b, sh.field_e, (byte) 95);
+                                              var4_int = this.a(bk.field_b, ResourceArchive.field_e, (byte) 95);
                                               if (0 <= var4_int) {
                                                 g.a(var4_int, 107);
                                               }
@@ -556,7 +556,7 @@ final class sg {
                                                 CrossfadingMidiPcmStream.field_n.a(0, 256);
                                               }
                                               if (this.field_c.c(-1)) {
-                                                var4_int = this.a(bk.field_b, sh.field_e, (byte) 95);
+                                                var4_int = this.a(bk.field_b, ResourceArchive.field_e, (byte) 95);
                                                 if (var4_int >= 0) {
                                                   CrossfadingMidiPcmStream.field_n.a(0, var4_int);
                                                 }
@@ -591,7 +591,7 @@ final class sg {
                                     } else {
                                       if (this.field_c.d(0)) {
                                         el.field_c.a((byte) 99, 4);
-                                        th.field_o[2].e(0);
+                                        BitPacketBuffer.field_o[2].e(0);
                                         if (!AccountRequestState.a((byte) -118)) {
                                           stackIn_191_0 = this.field_k;
                                           stackIn_191_1 = -52;
@@ -674,7 +674,7 @@ final class sg {
                               }
                             }
                             var7 = vg.field_d[this.field_d + 1];
-                            var7.field_c.a(0, param1, var7.a(bk.field_b, sh.field_e, 640), var4_int);
+                            var7.field_c.a(0, param1, var7.a(bk.field_b, ResourceArchive.field_e, 640), var4_int);
                           }
                         } else {
                           this.field_k.a((byte) 119, param1, 13, this.field_g);
@@ -831,7 +831,7 @@ final class sg {
         var15 = Lexicominos.field_L ? 1 : 0;
         try {
           if (bk.field_b != -1) {
-            stackIn_5_0 = GameAppletShell.field_b[sh.field_e * 640 + bk.field_b];
+            stackIn_5_0 = GameAppletShell.field_b[ResourceArchive.field_e * 640 + bk.field_b];
           } else {
             stackIn_5_0 = 0;
           }
@@ -1097,7 +1097,7 @@ final class sg {
           if (this.field_d == 3) {
             var3_int = 1;
           }
-          this.field_c.a(0, param0, this.a(bk.field_b, sh.field_e, 640), var3_int);
+          this.field_c.a(0, param0, this.a(bk.field_b, ResourceArchive.field_e, 640), var3_int);
           this.field_h = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1765,7 +1765,7 @@ final class sg {
           var4_int = this.b((byte) -19, param1);
           var5 = qc.field_a[this.field_d][param1];
           if (var5 == 21) {
-            var6_int = this.a(true, sh.field_e, bk.field_b, -107);
+            var6_int = this.a(true, ResourceArchive.field_e, bk.field_b, -107);
             for (var7 = 0; 4 > var7; var7++) {
               hi.field_b[var7].d(95 * var7, var4_int);
               stackIn_10_0 = (var7 == 3) ? 2 : var7;
@@ -1880,7 +1880,7 @@ final class sg {
                 return stackIn_19_0;
               }
             }
-            var5_intLifetime1 = GameAppletShell.field_b[bk.field_b + sh.field_e * 640];
+            var5_intLifetime1 = GameAppletShell.field_b[bk.field_b + ResourceArchive.field_e * 640];
             if (var5_intLifetime1 >= -1) {
               stackIn_23_0 = -1;
               return stackIn_23_0;
@@ -2007,7 +2007,7 @@ final class sg {
             }
             vg.field_d[14].field_g = this.field_d;
           }
-          this.field_c.a(this.a(ef.field_a, ProxyAuthenticationRequiredException.field_a, 640), this.a(bk.field_b, sh.field_e, 640), param0 ^ 49);
+          this.field_c.a(this.a(ef.field_a, ProxyAuthenticationRequiredException.field_a, 640), this.a(bk.field_b, ResourceArchive.field_e, 640), param0 ^ 49);
           if (param0 != -88) {
             var4 = (java.awt.Component) null;
             sg.a((java.awt.Component) null, -97);

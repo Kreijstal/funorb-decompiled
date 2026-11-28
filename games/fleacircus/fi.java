@@ -107,12 +107,12 @@ final class fi extends IntrusiveNode {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param0.a(param2, (byte) -100);
+          var5_int = param0.getGroupIdByName(param2, (byte) -100);
           if (param4 != 82) {
             var7 = (String) null;
             fi.a((ResourceArchive) null, (ResourceArchive) null, (String) null, (String) null, (byte) 26);
           }
-          var6 = param0.a(param3, (byte) -15, var5_int);
+          var6 = param0.getFileIdByName(param3, (byte) -15, var5_int);
           stackIn_3_0 = ArchiveRequest.a(var6, 2, var5_int, param1, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

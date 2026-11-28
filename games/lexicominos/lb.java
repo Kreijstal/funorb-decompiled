@@ -29,7 +29,7 @@ final class lb {
             }
             var2 = 1;
           }
-          bc.field_H.a(rc.a(ef.field_a, param0 + 59719, ProxyAuthenticationRequiredException.field_a), rc.a(bk.field_b, 29532, sh.field_e), param0 ^ -30202);
+          bc.field_H.a(rc.a(ef.field_a, param0 + 59719, ProxyAuthenticationRequiredException.field_a), rc.a(bk.field_b, 29532, ResourceArchive.field_e), param0 ^ -30202);
           if (bc.field_H.b(true)) {
             var1_int = 1;
           }
@@ -44,7 +44,7 @@ final class lb {
             }
           } else {
             if (var2 != 0 &&
-              2 != sh.field_a) {
+              2 != ResourceArchive.field_a) {
               aj.a((byte) 9);
             }
           }
@@ -52,7 +52,7 @@ final class lb {
             field_b = (String) null;
           }
           if (var3 == 0 &&
-            sh.field_a == 2) {
+            ResourceArchive.field_a == 2) {
             var4 = -ug.field_x + rf.correctedCurrentTimeMillis(0);
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {

@@ -60,8 +60,8 @@ final class vf extends IntrusiveNode {
         field_s = null;
     }
 
-    final static void a(boolean param0, sh param1) {
-        RgbSprite var2 = new RgbSprite(param1.a((byte) 127, "", "final_frame.jpg"), (java.awt.Component) ((Object) ug.field_y));
+    final static void a(boolean param0, ResourceArchive param1) {
+        RgbSprite var2 = new RgbSprite(param1.getFileByName((byte) 127, "", "final_frame.jpg"), (java.awt.Component) ((Object) ug.field_y));
         int var3 = var2.field_p;
         int var4 = var2.field_u;
         ja.b((byte) -126);

@@ -42,13 +42,13 @@ final class bka implements WidgetRenderer {
         }
     }
 
-    final static void a(vr param0, boolean param1) {
+    final static void a(ResourceArchive param0, boolean param1) {
         try {
-          to.field_b = new Sprite(param0.a((byte) 123, "dirty-floor.jpg", ""), (java.awt.Component) ((Object) TBomberAnimation.field_y));
+          to.field_b = new Sprite(param0.getFileByName((byte) 123, "dirty-floor.jpg", ""), (java.awt.Component) ((Object) TBomberAnimation.field_y));
           if (!param1) {
             field_h = true;
           }
-          r.field_n = new Sprite(param0.a((byte) 123, "instr_fridge_view.jpg", ""), (java.awt.Component) ((Object) TBomberAnimation.field_y));
+          r.field_n = new Sprite(param0.getFileByName((byte) 123, "instr_fridge_view.jpg", ""), (java.awt.Component) ((Object) TBomberAnimation.field_y));
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "bka.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

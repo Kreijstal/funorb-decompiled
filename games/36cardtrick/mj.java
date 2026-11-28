@@ -35,27 +35,27 @@ abstract class mj {
           mj.a(30);
         }
         if (lb.field_a != null) {
-          if (!lb.field_a.b(4)) {
+          if (!lb.field_a.ensureIndexLoaded(4)) {
             return FullscreenFocusCanvas.field_d;
           }
           return fg.field_j;
         }
-        if (!jk.field_c.b(4)) {
+        if (!jk.field_c.ensureIndexLoaded(4)) {
           return kf.field_j;
         }
         if (!jk.field_c.b(4, "commonui")) {
-          return IntrusiveDeque.field_f + " - " + jk.field_c.a("commonui", 0) + "%";
+          return IntrusiveDeque.field_f + " - " + jk.field_c.getGroupLoadPercentByName("commonui", 0) + "%";
         }
-        if (!aa.field_db.b(4)) {
+        if (!aa.field_db.ensureIndexLoaded(4)) {
           return ak.field_L;
         }
         if (!aa.field_db.b(4, "commonui")) {
-          return nc.field_b + " - " + aa.field_db.a("commonui", 0) + "%";
+          return nc.field_b + " - " + aa.field_db.getGroupLoadPercentByName("commonui", 0) + "%";
         }
-        if (!sg.field_a.b(4)) {
+        if (!sg.field_a.ensureIndexLoaded(4)) {
           return tb.field_e;
         }
-        if (!sg.field_a.a((byte) 88)) {
+        if (!sg.field_a.tryLoadAllGroups((byte) 88)) {
           return rj.field_w + " - " + sg.field_a.a(2) + "%";
         }
         return tj.field_H;

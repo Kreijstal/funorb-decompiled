@@ -65,7 +65,7 @@ final class kd {
           if (param0 != 31913) {
             field_b = (String) null;
           }
-          var8 = new CipherPacketBuffer(param1.a("logo.fo3d", "", (byte) -113));
+          var8 = new CipherPacketBuffer(param1.getFileByName("logo.fo3d", "", (byte) -113));
           var10 = var8;
           var3 = var10.readUnsignedByte(true);
           var10.e(false);

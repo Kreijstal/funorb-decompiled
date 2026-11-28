@@ -190,7 +190,7 @@ final class in {
           if (param0 != 0) {
             field_d = (String) null;
           }
-          stackIn_3_0 = mj.a(-106, param1, 0, param1.length);
+          stackIn_3_0 = mj.decodeCp1252String(-106, param1, 0, param1.length);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -268,7 +268,7 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final static ub a(int param0, pf param1, pf param2, byte param3, int param4) {
+    final static ub a(int param0, ResourceArchive param1, ResourceArchive param2, byte param3, int param4) {
         RuntimeException var5 = null;
         ub stackIn_2_0 = null;
         Object stackIn_5_0 = null;
@@ -285,7 +285,7 @@ final class BufferedRandomAccessFile {
             return stackIn_2_0;
           }
           if (ProxyAuthenticationRequiredException.a(param2, (byte) -5, param0, param4)) {
-            stackIn_7_0 = we.a(param1.a(param4, 16, param0), 1);
+            stackIn_7_0 = we.a(param1.getFile(param4, 16, param0), 1);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;

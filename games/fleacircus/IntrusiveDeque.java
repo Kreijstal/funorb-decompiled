@@ -101,7 +101,7 @@ final class IntrusiveDeque {
         int var4Lifetime1;
         var8 = fleas.field_A ? 1 : 0;
         try {
-          var9 = new ih(param1.a(0, "", "logo.fo3d"));
+          var9 = new ih(param1.getFileByName(0, "", "logo.fo3d"));
           var10 = var9;
           var3 = var10.readUnsignedByte(false);
           var10.k(8);

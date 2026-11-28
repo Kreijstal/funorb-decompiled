@@ -1313,8 +1313,8 @@ final class Asteroid {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.c(91, param1);
-          var5 = param2.a(param0, -1, var4_int);
+          var4_int = param2.getGroupIdByName(91, param1);
+          var5 = param2.getFileIdByName(param0, -1, var4_int);
           if (param3 >= -108) {
             field_f = 75;
           }

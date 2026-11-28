@@ -38,7 +38,7 @@ class rd extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 45 / ((12 - param1) / 44);
-          stackIn_1_0 = tf.field_a.a("", (byte) -105, param0);
+          stackIn_1_0 = tf.field_a.getFileByName("", (byte) -105, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

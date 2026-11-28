@@ -9,7 +9,7 @@ final class jr {
         int var1 = 33 % ((-32 - param0) / 54);
     }
 
-    final static PalettedBitmapFont a(String param0, byte param1, vr param2, String param3, vr param4) {
+    final static PalettedBitmapFont a(String param0, byte param1, ResourceArchive param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -26,12 +26,12 @@ final class jr {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param2.a(param0, false);
+          var5_int = param2.getGroupId(param0, false);
           if (param1 < 101) {
             stackIn_2_0 = (PalettedBitmapFont) null;
             return stackIn_2_0;
           }
-          var6 = param2.a((byte) 6, var5_int, param3);
+          var6 = param2.getFileId((byte) 6, var5_int, param3);
           stackIn_4_0 = AirstrikeAnimation.a((byte) -105, var6, var5_int, param4, param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

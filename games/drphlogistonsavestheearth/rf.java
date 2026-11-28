@@ -130,7 +130,7 @@ abstract class rf extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(oj.a((byte) 124, (char) var8) & 255);
+              var8 = (char)(oj.encodeCp1252Character((byte) 124, (char) var8) & 255);
               if (this.field_A != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_A[(var5 << 8) + var8];
@@ -360,7 +360,7 @@ abstract class rf extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_Q.append((char) var14);
-                var14 = (char)(oj.a((byte) 127, (char) var14) & 255);
+                var14 = (char)(oj.encodeCp1252Character((byte) 127, (char) var14) & 255);
                 var4 = var4 + this.field_u[var14];
                 if (this.field_A != null &&
                   var10 != 0) {
@@ -434,7 +434,7 @@ abstract class rf extends DualLinkNode {
     }
 
     final int a(char param0) {
-        return this.field_u[oj.a((byte) 127, param0) & 255];
+        return this.field_u[oj.encodeCp1252Character((byte) 127, param0) & 255];
     }
 
     private final static int a(byte[][] param0, byte[][] param1, int[] param2, int[] param3, int[] param4, int param5, int param6) {
@@ -788,7 +788,7 @@ abstract class rf extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(oj.a((byte) 125, (char) var7) & 255);
+              var7 = (char)(oj.encodeCp1252Character((byte) 125, (char) var7) & 255);
               var4 = var4 + this.field_u[var7];
               if (this.field_A != null &&
                 var3 != 0) {

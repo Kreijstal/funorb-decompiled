@@ -62,10 +62,10 @@ final class eb {
         var10 = StarCannon.field_A;
         try {
           if (g.field_a != null &&
-            g.field_a.b((byte) 106) &&
+            g.field_a.ensureIndexLoaded((byte) 106) &&
             g.field_a.a("benefits", -9883) &&
             null != AccountRequestState.field_a &&
-            AccountRequestState.field_a.b((byte) 110) &&
+            AccountRequestState.field_a.ensureIndexLoaded((byte) 110) &&
             AccountRequestState.field_a.a("benefits", -9883)) {
             DelayedPcmStream.field_k = vk.a("benefits", 32, "headline", g.field_a);
             cf.field_q = vk.a("benefits", 86, "blurbpane", g.field_a);
@@ -130,7 +130,7 @@ final class eb {
             var7Lifetime1 = BoundedRandomAccessFile.field_f + (AccountNameAvailabilityValidator.field_k - var5) / 2;
             var5 += 6;
             var7Lifetime1 -= 3;
-            var8 = ue.field_e + (BufferedRandomAccessFile.field_p - var6Lifetime1) / 2;
+            var8 = ResourceArchive.field_e + (BufferedRandomAccessFile.field_p - var6Lifetime1) / 2;
             var6Lifetime1 += 6;
             if (var7Lifetime1 < 0) {
               var9_int = -var7Lifetime1;
@@ -153,7 +153,7 @@ final class eb {
             }
             if (var8 < 0) {
               var9_intLifetime2 = -var8;
-              ue.field_e = ue.field_e + var9_intLifetime2;
+              ResourceArchive.field_e = ResourceArchive.field_e + var9_intLifetime2;
               re.field_l.field_y = re.field_l.field_y + var9_intLifetime2;
               var8 = var8 + var9_intLifetime2;
               re.field_l.field_q = re.field_l.field_q + 2 * var9_intLifetime2;
@@ -166,13 +166,13 @@ final class eb {
               var6Lifetime1 = var6Lifetime1 + var9_intLifetime3 * 2;
               re.field_l.field_y = re.field_l.field_y + var9_intLifetime3;
               re.field_l.field_q = re.field_l.field_q + 2 * var9_intLifetime3;
-              ue.field_e = ue.field_e + var9_intLifetime3;
+              ResourceArchive.field_e = ResourceArchive.field_e + var9_intLifetime3;
               gi.field_e = gi.field_e - var9_intLifetime3;
             }
             re.field_l.f();
             var9 = new Sprite(re.field_l.field_x, re.field_l.field_q);
             var9.e();
-            gi.field_b.a(var14, BoundedRandomAccessFile.field_f, ue.field_e, AccountNameAvailabilityValidator.field_k, BufferedRandomAccessFile.field_p, 16777215, -1, 1, 1, gi.field_b.field_q + gi.field_b.field_p);
+            gi.field_b.a(var14, BoundedRandomAccessFile.field_f, ResourceArchive.field_e, AccountNameAvailabilityValidator.field_k, BufferedRandomAccessFile.field_p, 16777215, -1, 1, 1, gi.field_b.field_q + gi.field_b.field_p);
             hh.a(0, 0, 3, var9.field_q, false, 1, var9, var9.field_x);
             re.field_l.e();
             var9.e(0, 0);

@@ -38,12 +38,12 @@ final class e {
         field_a = null;
         field_b = null;
         if (param0) {
-          db var2 = (db) null;
-          e.a(-15, (db) null, (db) null, (db) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          e.a(-15, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null);
         }
     }
 
-    final static void a(int param0, db param1, db param2) {
+    final static void a(int param0, ResourceArchive param1, ResourceArchive param2) {
         hk.field_e = bl.a(param2, "initialset", "crushed").a();
         if (param0 != 0) {
           return;
@@ -67,7 +67,7 @@ final class e {
         return this.field_d;
     }
 
-    final static void a(int param0, db param1, db param2, db param3) {
+    final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
         RgbSprite var17 = null;
         wj[] var5 = null;
         wj[][] var6 = null;
@@ -94,13 +94,13 @@ final class e {
           ba.field_i = (vc) ((Object) lj.a(param2, "commonui", param3, "arezzo12", 17153));
           ai.field_h = (vc) ((Object) lj.a(param2, "commonui", param3, "arezzo14", 17153));
           mo.field_m = (vc) ((Object) lj.a(param2, "commonui", param3, "arezzo14bold", 17153));
-          var17 = new RgbSprite(param1.a(7693, "", "button.gif"), (java.awt.Component) ((Object) jd.field_D));
+          var17 = new RgbSprite(param1.getFileByName(7693, "", "button.gif"), (java.awt.Component) ((Object) jd.field_D));
           ee.a(param2, "commonui", (byte) -92, "dropdown");
           var5 = ep.a(param2, "screen_options", "commonui", false);
           ik.field_g = new wj[param0];
           pn.field_i = new wj[4];
-          db.field_a = new wj[4];
-          var6 = new wj[][]{db.field_a, ik.field_g, pn.field_i};
+          ResourceArchive.field_a = new wj[4];
+          var6 = new wj[][]{ResourceArchive.field_a, ik.field_g, pn.field_i};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;

@@ -77,7 +77,7 @@ final class tn extends ab implements dn {
     final static boolean a(ResourceArchive param0, byte param1, int param2, int param3) {
         String stackIn_11_2 = null;
         try {
-          byte[] var6 = param0.a(param3, -10470, param2);
+          byte[] var6 = param0.getFile(param3, -10470, param2);
           byte[] var4 = var6;
           if (param1 != -127) {
             CipherPacketBuffer var5 = (CipherPacketBuffer) null;

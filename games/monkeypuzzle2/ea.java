@@ -30,7 +30,7 @@ final class ea {
               ea.resetStaticState(-85);
             }
             param1.position = param1.position + jc.field_d.a(-1, 0, param1.position, var3_int, var4, param1.payload);
-            var5 = sc.a(var4, var3_int, param0 ^ -106, 0);
+            var5 = sc.decodeCp1252String(var4, var3_int, param0 ^ -106, 0);
             stackIn_6_0 = var5;
             return stackIn_6_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

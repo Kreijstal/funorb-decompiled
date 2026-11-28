@@ -27,7 +27,7 @@ final class ea {
         Object var5 = null;
         int var6 = 0;
         pg var8 = null;
-        ia var9 = null;
+        BitPacketBuffer var9 = null;
         byte[] var13 = null;
         var6 = StarCannon.field_A;
         try {
@@ -96,13 +96,13 @@ final class ea {
     }
 
     final static void a(byte param0, vc param1, int param2) {
-        ia var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           if (param0 < 39) {
             field_b = (Sprite[]) null;
           }
           var3 = d.field_b;
-          var3.d((byte) 74, param2);
+          var3.writeCipheredByte((byte) 74, param2);
           var3.writeByte(5, -70);
           var3.writeByte(0, -120);
           var3.writeShort(param1.field_i, -306);

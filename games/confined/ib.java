@@ -50,27 +50,27 @@ final class ib extends fj {
           return 0;
         }
         if (hc.field_m == 0) {
-          if (!wc.field_Wb.b(0)) {
+          if (!wc.field_Wb.ensureIndexLoaded(0)) {
             return 20;
           }
           if (!wc.field_Wb.a("commonui", 0)) {
             return 40;
           }
-          if (!i.field_r.b(param0 ^ 109)) {
+          if (!i.field_r.ensureIndexLoaded(param0 ^ 109)) {
             return 50;
           }
           if (!i.field_r.a("commonui", 0)) {
             return 60;
           }
-          if (!tf.field_k.b(0)) {
+          if (!tf.field_k.ensureIndexLoaded(0)) {
             return 70;
           }
-          if (!tf.field_k.a(25057)) {
+          if (!tf.field_k.tryLoadAllGroups(25057)) {
             return 80;
           }
         } else {
           if (null != IntrusiveNodeHashTableIterator.field_f) {
-            if (!IntrusiveNodeHashTableIterator.field_f.b(param0 ^ 109)) {
+            if (!IntrusiveNodeHashTableIterator.field_f.ensureIndexLoaded(param0 ^ 109)) {
               return 14;
             }
             if (!IntrusiveNodeHashTableIterator.field_f.b("", -4308)) {
@@ -80,22 +80,22 @@ final class ib extends fj {
               return 29;
             }
           }
-          if (!wc.field_Wb.b(param0 - 109)) {
+          if (!wc.field_Wb.ensureIndexLoaded(param0 - 109)) {
             return 43;
           }
           if (!wc.field_Wb.a("commonui", 0)) {
             return 57;
           }
-          if (!i.field_r.b(0)) {
+          if (!i.field_r.ensureIndexLoaded(0)) {
             return 71;
           }
           if (!i.field_r.a("commonui", 0)) {
             return 80;
           }
-          if (!tf.field_k.b(0)) {
+          if (!tf.field_k.ensureIndexLoaded(0)) {
             return 82;
           }
-          if (!tf.field_k.a(param0 + 24948)) {
+          if (!tf.field_k.tryLoadAllGroups(param0 + 24948)) {
             return 86;
           }
         }

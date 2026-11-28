@@ -6,7 +6,7 @@ import java.io.*;
 final class ej {
     static bj field_a;
     static RgbSprite[] field_b;
-    static sh field_d;
+    static ResourceArchive field_d;
     static int[] field_c;
 
     public static void clearStaticReferences(int param0) {
@@ -19,7 +19,7 @@ final class ej {
         field_d = null;
     }
 
-    final static void a(int param0, th param1) {
+    final static void a(int param0, BitPacketBuffer param1) {
         try {
           int var5 = 0;
           int var10_int = 0;

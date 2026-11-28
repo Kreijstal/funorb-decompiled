@@ -68,24 +68,24 @@ final class MixedSupport014 {
         while (this.integerState0097 < this.integerState0098) {
           gameDomainSupport005Local3 = this.gameDomainSupport005ArrayState0001[this.integerState0097];
           gameDomainSupport005Local1 = gameDomainSupport005Local3;
-          if (!gameDomainSupport005Local3.resourceArchiveState0013.computeBoolean0798((byte) 121)) {
+          if (!gameDomainSupport005Local3.resourceArchiveState0013.ensureIndexLoaded((byte) 121)) {
             this.performAction0197(gameDomainSupport005Local3, 30993, 0);
             return false;
           }
           if (gameDomainSupport005Local3.integerState0577 >= 0 &&
-            !gameDomainSupport005Local3.resourceArchiveState0013.computeBoolean0817(gameDomainSupport005Local3.integerState0577, (byte) -106)) {
-            this.performAction0197(gameDomainSupport005Local1, 30993, gameDomainSupport005Local3.resourceArchiveState0013.computeInteger0799((byte) 34, gameDomainSupport005Local3.integerState0577));
+            !gameDomainSupport005Local3.resourceArchiveState0013.tryLoadGroup(gameDomainSupport005Local3.integerState0577, (byte) -106)) {
+            this.performAction0197(gameDomainSupport005Local1, 30993, gameDomainSupport005Local3.resourceArchiveState0013.getGroupLoadPercent((byte) 34, gameDomainSupport005Local3.integerState0577));
             return false;
           }
           if (null != gameDomainSupport005Local3.stringState0402 &&
             !gameDomainSupport005Local3.resourceArchiveState0013.computeBoolean0811(gameDomainSupport005Local3.stringState0402, (byte) -103)) {
-            this.performAction0197(gameDomainSupport005Local1, 30993, gameDomainSupport005Local3.resourceArchiveState0013.computeInteger0808(20, gameDomainSupport005Local3.stringState0402));
+            this.performAction0197(gameDomainSupport005Local1, 30993, gameDomainSupport005Local3.resourceArchiveState0013.getGroupLoadPercentByName(20, gameDomainSupport005Local3.stringState0402));
             return false;
           }
           if (gameDomainSupport005Local3.integerState0577 < 0 &&
             gameDomainSupport005Local3.stringState0402 == null &&
             null != gameDomainSupport005Local3.stringState0404 &&
-            !gameDomainSupport005Local3.resourceArchiveState0013.computeBoolean0814(false)) {
+            !gameDomainSupport005Local3.resourceArchiveState0013.tryLoadAllGroups(false)) {
             this.performAction0197(gameDomainSupport005Local1, 30993, gameDomainSupport005Local3.resourceArchiveState0013.computeInteger0816((byte) -100));
             return false;
           }

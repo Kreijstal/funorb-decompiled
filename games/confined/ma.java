@@ -24,7 +24,7 @@ final class ma extends IntrusiveNode {
         return (var3 << 16) + (var4 << 8) + var5;
     }
 
-    final boolean a(float param0, int param1, mi param2) {
+    final boolean a(float param0, int param1, ResourceArchive param2) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;

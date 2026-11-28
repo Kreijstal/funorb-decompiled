@@ -30,11 +30,11 @@ final class sc {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          if (!param1.c((byte) 121)) {
+          if (!param1.ensureIndexLoaded((byte) 121)) {
             stackIn_6_0 = (String) (param3);
             return stackIn_6_0;
           }
-          stackIn_8_0 = param0 + " - " + param1.c(param2, -77) + "%";
+          stackIn_8_0 = param0 + " - " + param1.getGroupLoadPercent(param2, -77) + "%";
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

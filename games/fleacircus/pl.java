@@ -527,9 +527,9 @@ final class pl {
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0.b((byte) -121) &&
+          if (param0.ensureIndexLoaded((byte) -121) &&
             param0.a("commonui", -95)) {
-            if (!param1.b((byte) -126)) {
+            if (!param1.ensureIndexLoaded((byte) -126)) {
               return false;
             }
             if (!param1.a("commonui", -109)) {
@@ -538,7 +538,7 @@ final class pl {
             if (!param3) {
               pl.f(-93);
             }
-            if (param2.b((byte) -125) &&
+            if (param2.ensureIndexLoaded((byte) -125) &&
               param2.a("button.gif", -101)) {
               return true;
             }

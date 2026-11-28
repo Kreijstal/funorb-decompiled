@@ -45,7 +45,7 @@ abstract class kl {
 
     abstract tf b(int param0);
 
-    abstract int a(int param0, int param1);
+    abstract int getGroupRequestProgressPercent(int param0, int param1);
 
     static {
         field_z = "kl.J(";

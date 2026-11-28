@@ -33,12 +33,12 @@ final class we {
         }
     }
 
-    final static mi a(int param0, boolean param1, byte param2, boolean param3, int param4, boolean param5) {
+    final static ResourceArchive a(int param0, boolean param1, byte param2, boolean param3, int param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           tj var8 = null;
-          mi stackIn_15_0 = null;
+          ResourceArchive stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param2 >= -44) {
@@ -65,7 +65,7 @@ final class we {
             if (param5) {
               var8.b(-2);
             }
-            stackIn_15_0 = new mi(var8, param3, param4);
+            stackIn_15_0 = new ResourceArchive(var8, param3, param4);
             return stackIn_15_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

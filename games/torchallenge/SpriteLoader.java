@@ -19,7 +19,7 @@ final class SpriteLoader {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = param1.c(param2, param3, param0 ^ param0);
+          var5 = param1.getFile(param2, param3, param0 ^ param0);
           var4 = var5;
           if (var5 == null) {
             return false;
@@ -57,8 +57,8 @@ final class SpriteLoader {
           if (param0 > -126) {
             field_a = (k) null;
           }
-          var4_int = param3.a(param2, 115);
-          var5 = param3.a(var4_int, param1, (byte) 82);
+          var4_int = param3.getGroupIdByName(param2, 115);
+          var5 = param3.getFileIdByName(var4_int, param1, (byte) 82);
           stackIn_3_0 = rl.a(var5, var4_int, param3, (byte) 17);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

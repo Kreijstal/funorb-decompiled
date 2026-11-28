@@ -60,10 +60,10 @@ final class fm {
         var10 = OrbDefence.field_D ? 1 : 0;
         try {
           if (null != me.field_g &&
-            me.field_g.b(-1) &&
+            me.field_g.ensureIndexLoaded(-1) &&
             me.field_g.b((byte) 70, "benefits") &&
             null != sf.field_q &&
-            sf.field_q.b(param0 - 242) &&
+            sf.field_q.ensureIndexLoaded(param0 - 242) &&
             sf.field_q.b((byte) -100, "benefits")) {
             vg.field_i = fk.a(me.field_g, "headline", -114, "benefits");
             nl.field_e = fk.a(me.field_g, "blurbpane", -63, "benefits");
@@ -122,7 +122,7 @@ final class fm {
             var2Lifetime1 = SoftwareRasterizer.field_f;
             var3Lifetime1 = SoftwareRasterizer.field_l;
             SoftwareRasterizer.saveClip(rh.field_e);
-            var14 = CrossfadingMidiPcmStream.a(-415993727, new String[]{li.field_b[ml.field_j]}, se.field_n);
+            var14 = CrossfadingMidiPcmStream.a(-415993727, new String[]{li.field_b[ml.field_j]}, BitPacketBuffer.field_n);
             var5 = MidiPcmStream.field_m.c(var14, vg.field_l);
             var6Lifetime1 = MidiPcmStream.field_m.a(var14, vg.field_l, MidiPcmStream.field_m.field_H + MidiPcmStream.field_m.field_B);
             var7Lifetime1 = (vg.field_l - var5) / 2 + ok.field_f;

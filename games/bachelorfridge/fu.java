@@ -32,8 +32,8 @@ final class fu extends AnimationNode {
             kw.field_k[var1_int] = null;
           }
           if (param0 != 13042) {
-            vr var3 = (vr) null;
-            fu.a((vr) null, false);
+            ResourceArchive var3 = (ResourceArchive) null;
+            fu.a((ResourceArchive) null, false);
           }
           qs.field_n = 0;
         } catch (RuntimeException runtimeException) {
@@ -62,7 +62,7 @@ final class fu extends AnimationNode {
         return false;
     }
 
-    final static void a(vr param0, boolean param1) {
+    final static void a(ResourceArchive param0, boolean param1) {
         Sprite[] dupTemp$0 = null;
         Sprite[] dupTemp$1 = null;
         Sprite[] dupTemp$2 = null;

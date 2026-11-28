@@ -98,9 +98,9 @@ final class ProxyAuthenticationRequiredException extends IOException {
     final static void a(boolean param0, int param1, vg param2) {
         int var5 = 0;
         int var6 = OrbDefence.field_D ? 1 : 0;
-        se var7 = uk.field_b;
-        se var8 = var7;
-        var8.i(param1, -41);
+        BitPacketBuffer var7 = uk.field_b;
+        BitPacketBuffer var8 = var7;
+        var8.writeCipheredByte(param1, -41);
         var8.position = var8.position + 1;
         int var4 = var8.position;
         if (!param0) {
@@ -214,7 +214,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
             var3 = (vg) null;
             ProxyAuthenticationRequiredException.a(true, 92, (vg) null);
           }
-          stackIn_3_0 = tj.a(param0.length, 0, 0, param0);
+          stackIn_3_0 = tj.decodeCp1252String(param0.length, 0, 0, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

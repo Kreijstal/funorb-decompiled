@@ -7,7 +7,7 @@ abstract class FrameTimer {
     static nh field_d;
     static String field_a;
 
-    final static byte[] a(se param0, byte[] param1, int param2, int param3) {
+    final static byte[] a(BitPacketBuffer param0, byte[] param1, int param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -23,7 +23,7 @@ abstract class FrameTimer {
         RuntimeException var4 = null;
         var8 = OrbDefence.field_D ? 1 : 0;
         try {
-          var4_int = param0.h(param2, 8);
+          var4_int = param0.readBits(param2, 8);
           if (var4_int == 0) {
             return null;
           }
@@ -34,15 +34,15 @@ abstract class FrameTimer {
           if (param3 != 20783) {
             field_b = (String) null;
           }
-          var5 = param0.h(3, 8);
-          var6 = (byte)param0.h(8, param3 ^ 20775);
+          var5 = param0.readBits(3, 8);
+          var6 = (byte)param0.readBits(8, param3 ^ 20775);
           if (var5 <= 0) {
             for (var7 = 0; var4_int > var7; var7++) {
               param1[var7] = (byte)var6;
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param1[var7] = (byte)(param0.h(var5, 8) + var6);
+              param1[var7] = (byte)(param0.readBits(var5, 8) + var6);
             }
           }
           stackIn_18_0 = (byte[]) (param1);

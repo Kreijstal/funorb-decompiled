@@ -40,7 +40,7 @@ final class lm {
         }
     }
 
-    final static void a(byte param0, ki param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2616_0;
             StringBuilder stackIn_2616_1;
@@ -51,9 +51,9 @@ final class lm {
             RuntimeException var2_ref;
             int var3;
             byte param0;
-            ki param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(byte initialParam0, ki initialParam1) {
+            $CfrPartitionedBody(byte initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2616_0 = null;
@@ -1119,7 +1119,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "logging_in");
                 if (var2 != null) {
-                  ki.field_d = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  ResourceArchive.field_d = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "reconnect");
                 if (null != var2) {
@@ -1422,7 +1422,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_createanaccount");
                 if (var2 != null) {
-                  ki.field_h = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  ResourceArchive.field_h = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_username");
                 if (var2 != null) {
@@ -2552,7 +2552,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "keychar_the_character_under_questionmark");
                 if (null != var2) {
-                  l.a(91, var2[0]);
+                  l.decodeCp1252Byte(91, var2[0]);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "rating_noratings");
                 if (null != var2) {
@@ -2588,7 +2588,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "benefits_price");
                 if (var2 != null) {
-                  se.field_n = ProxyAuthenticationRequiredException.a(var2, param0 - 12581);
+                  BitPacketBuffer.field_n = ProxyAuthenticationRequiredException.a(var2, param0 - 12581);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "members_expansion_benefits,0");
                 if (var2 != null) {

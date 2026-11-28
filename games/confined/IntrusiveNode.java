@@ -30,7 +30,7 @@ class IntrusiveNode {
         oj.field_B = 0;
     }
 
-    final static void a(mi param0, int param1, mi param2, mi param3) {
+    final static void a(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3) {
         RgbSprite var5 = null;
         bm[] var6 = null;
         bm[][] var7 = null;
@@ -58,7 +58,7 @@ class IntrusiveNode {
           gm.field_cb = (ok) ((Object) ej.a("arezzo14", param3, param2, "commonui", 0));
           int var4_int = -4 % ((68 - param1) / 50);
           fd.field_k = (ok) ((Object) ej.a("arezzo14bold", param3, param2, "commonui", 0));
-          var5 = new RgbSprite(param0.a(110, "button.gif", ""), (java.awt.Component) ((Object) fb.field_b));
+          var5 = new RgbSprite(param0.getFileByName(110, "button.gif", ""), (java.awt.Component) ((Object) fb.field_b));
           pm.a(param3, "commonui", "dropdown", (byte) 112);
           var6 = ql.a("commonui", (byte) 90, "screen_options", param3);
           qm.field_B = new bm[4];

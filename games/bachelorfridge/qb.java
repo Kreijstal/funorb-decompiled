@@ -3,7 +3,7 @@
  */
 class qb extends k {
     static int[] field_m;
-    static vr field_l;
+    static ResourceArchive field_l;
     int field_o;
     int[] field_n;
     int field_p;

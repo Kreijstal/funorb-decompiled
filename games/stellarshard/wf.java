@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class wf {
-    static pf field_e;
+    static ResourceArchive field_e;
     static String field_c;
     static int[] field_d;
     static String field_b;
@@ -58,9 +58,9 @@ abstract class wf {
 
     abstract byte[] a(byte param0, int param1);
 
-    abstract int a(int param0, int param1);
+    abstract int getGroupRequestProgressPercent(int param0, int param1);
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 >= 72) {
           field_e = null;

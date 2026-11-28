@@ -74,7 +74,7 @@ final class AccountServiceResult {
         field_c = null;
     }
 
-    final static Sprite[] a(String param0, byte param1, pf param2, String param3) {
+    final static Sprite[] a(String param0, byte param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -89,9 +89,9 @@ final class AccountServiceResult {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.b(param0, (byte) -118);
+          var4_int = param2.getGroupIdByName(param0, (byte) -118);
           var5 = 102 / ((31 - param1) / 48);
-          var6 = param2.a(var4_int, param3, (byte) -11);
+          var6 = param2.getFileIdByName(var4_int, param3, (byte) -11);
           stackIn_1_0 = wb.a(var6, var4_int, param2, 55);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -9,7 +9,7 @@ final class PizzaArenaTheme extends ArenaTheme {
     static String field_j;
     static IntrusiveNodeHashTable field_i;
 
-    PizzaArenaTheme(vr param0) {
+    PizzaArenaTheme(ResourceArchive param0) {
         try {
           this.field_b = RageSpecial.a(29611, "basic", "tiles_pizza", param0);
           this.a(128);
@@ -87,10 +87,10 @@ final class PizzaArenaTheme extends ArenaTheme {
         field_j = null;
     }
 
-    final static void a(vr param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         VorbisSample var2 = null;
         try {
-          VorbisSample.b(param0.a((byte) 123, "", "headers.packvorbis"));
+          VorbisSample.b(param0.getFileByName((byte) 123, "", "headers.packvorbis"));
           if (param1 != 64) {
             PizzaArenaTheme.releaseStatics(-45);
           }

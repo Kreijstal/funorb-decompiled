@@ -161,7 +161,7 @@ final class GzipDecompressor {
           return true;
         }
         var4 = dla.field_j;
-        if (!hs.a((char) var4, 376)) {
+        if (!hs.isAcceptedTextInputCharacter((char) var4, 376)) {
           return false;
         }
         if (var3 == 0) {

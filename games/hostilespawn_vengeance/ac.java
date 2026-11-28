@@ -20,9 +20,9 @@ final class ac {
           return var3;
         }
         if (param0 < 32768) {
-          var4 = this.field_h.a(false, param0, 1);
+          var4 = this.field_h.getFile(false, param0, 1);
         } else {
-          var4 = this.field_b.a(false, param0 & 32767, 1);
+          var4 = this.field_b.getFile(false, param0 & 32767, 1);
         }
         if (param1 != 1) {
           field_g = 52;

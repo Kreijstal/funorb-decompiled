@@ -108,8 +108,8 @@ final class vd extends DualLinkNode {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            rd.field_j = new w(param11);
-            NetworkArchiveRequest.field_r = new w(param7);
+            rd.field_j = new BitPacketBuffer(param11);
+            NetworkArchiveRequest.field_r = new BitPacketBuffer(param7);
             AccountNameAvailabilityValidator.field_l = param8;
             MouseInputHandler.field_e = param10;
             MouseInputHandler.field_d = param4;

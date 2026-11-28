@@ -87,7 +87,7 @@ abstract class BitmapFont extends DualLinkNode {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_C = pf.a(var4, (byte) 125);
+                field_C = ResourceArchive.a(var4, (byte) 125);
               }
             } else {
               field_E = field_J;
@@ -279,7 +279,7 @@ abstract class BitmapFont extends DualLinkNode {
     }
 
     final int a(char param0) {
-        return this.field_B[bf.a(-8250, param0) & 255];
+        return this.field_B[bf.encodeCp1252Character(-8250, param0) & 255];
     }
 
     final void b(String param0, int param1, int param2, int param3, int param4) {
@@ -331,7 +331,7 @@ abstract class BitmapFont extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = pf.a(var13, (byte) 125);
+                                  var10 = ResourceArchive.a(var13, (byte) 125);
                                   var11_ref_o = this.field_s[var10];
                                   if (this.field_G == null) {
                                     stackIn_27_0 = var11_ref_o.field_d;
@@ -380,7 +380,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(bf.a(-8250, (char) var8) & 255);
+              var8 = (char)(bf.encodeCp1252Character(-8250, (char) var8) & 255);
               if (this.field_O != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_O[(var5 << 8) + var8];
@@ -483,7 +483,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = pf.a(var18, (byte) 125);
+                                    var16_int = ResourceArchive.a(var18, (byte) 125);
                                     var4 = var4 + this.field_s[var16_int].field_k;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -568,7 +568,7 @@ abstract class BitmapFont extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_u.append((char) var14);
-                var14 = (char)(bf.a(-8250, (char) var14) & 255);
+                var14 = (char)(bf.encodeCp1252Character(-8250, (char) var14) & 255);
                 var4 = var4 + this.field_B[var14];
                 if (this.field_O != null &&
                   var10 != 0) {
@@ -676,7 +676,7 @@ abstract class BitmapFont extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = pf.a(var10, (byte) 125);
+                                  var9_int = ResourceArchive.a(var10, (byte) 125);
                                   var4 = var4 + this.field_s[var9_int].field_k;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -713,7 +713,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(bf.a(-8250, (char) var7) & 255);
+              var7 = (char)(bf.encodeCp1252Character(-8250, (char) var7) & 255);
               var4 = var4 + this.field_B[var7];
               if (this.field_O != null &&
                 var3 != 0) {

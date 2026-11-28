@@ -72,9 +72,9 @@ final class km {
           return var3;
         }
         if (param0 >= 32768) {
-          var5 = this.field_c.a(1, -10470, param0 & 32767);
+          var5 = this.field_c.getFile(1, -10470, param0 & 32767);
         } else {
-          var5 = this.field_d.a(1, -10470, param0);
+          var5 = this.field_d.getFile(1, -10470, param0);
         }
         jr var3Lifetime1 = new jr();
         if (var5 != null) {

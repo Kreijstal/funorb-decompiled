@@ -551,7 +551,7 @@ final class saa {
             this.field_d.field_c.e((byte) 46);
           }
           if (this.field_e != pha.field_g &&
-            vr.field_b % this.field_e == 0) {
+            ResourceArchive.field_b % this.field_e == 0) {
             this.a(-91);
           }
           if (!this.field_i) {
@@ -615,7 +615,7 @@ final class saa {
         var5 = BachelorFridge.field_y;
         try {
           DirectByteStorage.field_j.c(param1, 0);
-          Math.sin(0.5 * ((double)vr.field_b / 10.0));
+          Math.sin(0.5 * ((double)ResourceArchive.field_b / 10.0));
           if (!this.field_p) {
             if (sn.field_m.field_T &&
               this.field_d.field_c.field_k.field_a != 0) {

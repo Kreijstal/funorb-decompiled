@@ -50,7 +50,7 @@ final class ed {
         field_d = null;
         if (param0 != -1) {
           String var2 = (String) null;
-          ed.a((String) null, (ki) null, -31, (String) null, (String) null);
+          ed.a((String) null, (ResourceArchive) null, -31, (String) null, (String) null);
         }
     }
 
@@ -82,7 +82,7 @@ final class ed {
         return -1 + this.field_g.length;
     }
 
-    final static String a(String param0, ki param1, int param2, String param3, String param4) {
+    final static String a(String param0, ResourceArchive param1, int param2, String param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_4_0 = null;
         String stackIn_6_0 = null;
@@ -100,8 +100,8 @@ final class ed {
           if (param2 != -14416) {
             field_d = (String) null;
           }
-          if (param1.b(param2 ^ 14415)) {
-            stackIn_6_0 = param0 + " - " + param1.a((byte) 102, param4) + "%";
+          if (param1.ensureIndexLoaded(param2 ^ 14415)) {
+            stackIn_6_0 = param0 + " - " + param1.getGroupLoadPercentByName((byte) 102, param4) + "%";
             return stackIn_6_0;
           }
           stackIn_4_0 = (String) (param3);

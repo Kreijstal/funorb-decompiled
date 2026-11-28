@@ -6,7 +6,7 @@ final class pe {
     static String field_a;
     static int[] field_b;
 
-    final static hh a(byte param0, ci param1, int param2, ci param3, int param4) {
+    final static hh a(byte param0, ResourceArchive param1, int param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
         hh stackIn_2_0 = null;
         Object stackIn_5_0 = null;
@@ -23,7 +23,7 @@ final class pe {
             return stackIn_2_0;
           }
           if (rl.a(param4, 0, param2, param1)) {
-            stackIn_7_0 = SectorCacheStore.a(param3.a((byte) -93, param4, param2), 21725);
+            stackIn_7_0 = SectorCacheStore.a(param3.getFile((byte) -93, param4, param2), 21725);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;

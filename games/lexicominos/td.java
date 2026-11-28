@@ -11,7 +11,7 @@ final class td {
     private int field_e;
     float field_c;
 
-    final static RgbSprite[] a(String param0, String param1, sh param2, int param3) {
+    final static RgbSprite[] a(String param0, String param1, ResourceArchive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -30,8 +30,8 @@ final class td {
             var6 = (int[]) null;
             td.a((int[]) null, false);
           }
-          var4_int = param2.c(param0, (byte) -89);
-          var5 = param2.a(param1, -27964, var4_int);
+          var4_int = param2.getGroupIdByName(param0, (byte) -89);
+          var5 = param2.getFileIdByName(param1, -27964, var4_int);
           stackIn_3_0 = ij.a(var5, (byte) -117, param2, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -110,7 +110,7 @@ final class td {
               if (!a.b(1, 10343)) {
                 return false;
               }
-              kk.field_r = ig.field_a.i((byte) -76);
+              kk.field_r = ig.field_a.readCipheredByte((byte) -76);
               ig.field_a.position = 0;
               a.field_c = param0[kk.field_r];
             }
@@ -257,24 +257,24 @@ final class td {
         while (this.field_e > this.field_h) {
           var4 = this.field_a[this.field_h];
           var2 = var4;
-          if (!var4.field_d.c(88)) {
+          if (!var4.field_d.ensureIndexLoaded(88)) {
             this.a((byte) 37, var4, 0);
             return false;
           }
           if (var4.field_i >= 0 &&
-            !var4.field_d.c(5, var4.field_i)) {
-            this.a((byte) 37, var2, var4.field_d.b((byte) -91, var4.field_i));
+            !var4.field_d.tryLoadGroup(5, var4.field_i)) {
+            this.a((byte) 37, var2, var4.field_d.getGroupLoadPercent((byte) -91, var4.field_i));
             return false;
           }
           if (var4.field_f != null &&
             !var4.field_d.a(var4.field_f, 10762)) {
-            this.a((byte) 37, var2, var4.field_d.b(var4.field_f, (byte) 121));
+            this.a((byte) 37, var2, var4.field_d.getGroupLoadPercentByName(var4.field_f, (byte) 121));
             return false;
           }
           if (var4.field_i < 0 &&
             var4.field_f == null &&
             var4.field_e != null &&
-            !var4.field_d.a((byte) -126)) {
+            !var4.field_d.tryLoadAllGroups((byte) -126)) {
             this.a((byte) 37, var2, var4.field_d.a(false));
             return false;
           }

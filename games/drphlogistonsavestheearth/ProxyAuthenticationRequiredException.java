@@ -20,7 +20,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         return param0 ^ param1;
     }
 
-    final static RgbSprite a(String param0, vj param1, String param2, boolean param3) {
+    final static RgbSprite a(String param0, ResourceArchive param1, String param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -34,11 +34,11 @@ final class ProxyAuthenticationRequiredException extends IOException {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.a(param0, (byte) -122);
+          var4_int = param1.getGroupIdByName(param0, (byte) -122);
           if (!param3) {
             ProxyAuthenticationRequiredException.a(false);
           }
-          var5 = param1.a((byte) -91, param2, var4_int);
+          var5 = param1.getFileIdByName((byte) -91, param2, var4_int);
           stackIn_3_0 = fk.a(var4_int, param1, var5, 16711680);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -3,8 +3,8 @@
  */
 final class cc {
     static String field_a;
-    private vr field_c;
-    private vr field_f;
+    private ResourceArchive field_c;
+    private ResourceArchive field_f;
     private pha field_g;
     static String[] field_d;
     static UiComponent field_b;
@@ -18,9 +18,9 @@ final class cc {
         }
         int var5 = -115 % ((-69 - param0) / 38);
         if (param1 >= 32768) {
-          var4 = this.field_f.b(88, 0, param1 & 32767);
+          var4 = this.field_f.getFile(88, 0, param1 & 32767);
         } else {
-          var4 = this.field_c.b(121, 0, param1);
+          var4 = this.field_c.getFile(121, 0, param1);
         }
         var3 = new jc();
         if (var4 != null) {
@@ -44,7 +44,7 @@ final class cc {
         field_a = null;
     }
 
-    cc(int param0, vr param1, vr param2) {
+    cc(int param0, ResourceArchive param1, ResourceArchive param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -57,10 +57,10 @@ final class cc {
           this.field_c = param1;
           this.field_f = param2;
           if (null != this.field_c) {
-            this.field_c.d(0, 0);
+            this.field_c.getGroupFileSlotCount(0, 0);
           }
           if (null != this.field_f) {
-            this.field_f.d(0, 0);
+            this.field_f.getGroupFileSlotCount(0, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -11,9 +11,9 @@ final class c {
         field_a = null;
     }
 
-    final static void a(boolean param0, vj param1) {
+    final static void a(boolean param0, ResourceArchive param1) {
         tk var2 = null;
-        tk.b(param1.a("headers.packvorbis", "", 24874));
+        tk.b(param1.getFileByName("headers.packvorbis", "", 24874));
         if (param0) {
           return;
         }

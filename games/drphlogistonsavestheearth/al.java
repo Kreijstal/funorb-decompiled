@@ -10,9 +10,9 @@ final class al {
     static int[] field_g;
     static int field_f;
 
-    final static vj a(int param0, int param1) {
+    final static ResourceArchive a(int param0, int param1) {
         if (param0 != 3) {
-          return (vj) null;
+          return (ResourceArchive) null;
         }
         return AwtRasterBuffer.a(true, param1, false, false, true, 1);
     }

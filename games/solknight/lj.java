@@ -2654,7 +2654,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("keychar_the_character_under_questionmark", param0 ^ 26704);
                 if (var2 != null) {
-                  SpriteState.a(var2[0], false);
+                  SpriteState.decodeCp1252Byte(var2[0], false);
                 }
                 var2 = vd.a("rating_noratings", 4);
                 if (var2 != null) {

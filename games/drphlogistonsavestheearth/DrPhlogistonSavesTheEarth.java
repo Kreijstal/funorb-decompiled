@@ -64,7 +64,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           bd.field_P = ProxyAuthenticationRequiredException.a("", kf.field_d, "weapongattlinggun", true);
           le.field_d = ProxyAuthenticationRequiredException.a("", kf.field_d, "weapongattlinggun2", true);
           qf.field_b = ProxyAuthenticationRequiredException.a("", kf.field_d, "weapongattlinggun3", param0);
-          lh.field_p = ProxyAuthenticationRequiredException.a("", kf.field_d, "weaponhomingmissile", true);
+          BitPacketBuffer.field_p = ProxyAuthenticationRequiredException.a("", kf.field_d, "weaponhomingmissile", true);
           nc.field_K = ProxyAuthenticationRequiredException.a("", kf.field_d, "weaponbomb", true);
           f.field_i = cl.a("", kf.field_d, -116, "weaponmegacannonshot");
           oj.field_c = ij.a("bulletspark", (byte) 96, kf.field_d, "");
@@ -227,7 +227,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           if (df.field_l != null &&
             df.field_l.focusLost) {
             ProxyAuthenticationRequiredException.a(true);
-            vj.b((byte) 72);
+            ResourceArchive.b((byte) 72);
           }
           if (param0 != 35) {
             this.a((he[]) null, 93, (he[]) null);
@@ -496,7 +496,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           MouseInput.clearStaticReferences(45);
           MouseWheelInput.clearStaticReferences((byte) 86);
           SoftwareRasterizer.clearStaticReferences();
-          vj.clearStaticReferences(0);
+          ResourceArchive.clearStaticReferences(0);
           pc.clearStaticReferences(13302);
           bc.clearStaticReferences(66);
           PacketBuffer.clearDeclaredStaticReferences(4);
@@ -575,7 +575,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           cb.clearStaticReferences((byte) 122);
           SpriteGeometry.g(-62);
           DualLinkNode.d(-24338);
-          lh.releaseDeclaredStaticReferences(0);
+          BitPacketBuffer.releaseDeclaredStaticReferences(0);
           jj.resetStaticState(111);
           nk.clearStaticReferences();
           sg.clearStaticReferences((byte) -57);
@@ -2041,21 +2041,21 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         var10 = field_D ? 1 : 0;
         try {
           if (null != aa.field_b) {
-            if (aa.field_b.a(0) &&
-              aa.field_b.c((byte) 79)) {
-              if (DelegatingCanvas.field_b.a(0) &&
-                DelegatingCanvas.field_b.c((byte) 21)) {
-                if (ui.field_a.a(0) &&
-                  ui.field_a.c((byte) 56)) {
-                  if (df.field_a.a(0) &&
-                    df.field_a.c((byte) 53)) {
-                    if (kf.field_d.a(0) &&
-                      kf.field_d.c((byte) 84)) {
-                      if (mh.field_a.a(0) &&
-                        mh.field_a.c((byte) 64)) {
-                        if (ff.field_P.a(0) &&
-                          ff.field_P.c((byte) 109)) {
-                          if (ph.field_b.a(0) &&
+            if (aa.field_b.ensureIndexLoaded(0) &&
+              aa.field_b.tryLoadAllGroups((byte) 79)) {
+              if (DelegatingCanvas.field_b.ensureIndexLoaded(0) &&
+                DelegatingCanvas.field_b.tryLoadAllGroups((byte) 21)) {
+                if (ui.field_a.ensureIndexLoaded(0) &&
+                  ui.field_a.tryLoadAllGroups((byte) 56)) {
+                  if (df.field_a.ensureIndexLoaded(0) &&
+                    df.field_a.tryLoadAllGroups((byte) 53)) {
+                    if (kf.field_d.ensureIndexLoaded(0) &&
+                      kf.field_d.tryLoadAllGroups((byte) 84)) {
+                      if (mh.field_a.ensureIndexLoaded(0) &&
+                        mh.field_a.tryLoadAllGroups((byte) 64)) {
+                        if (ff.field_P.ensureIndexLoaded(0) &&
+                          ff.field_P.tryLoadAllGroups((byte) 109)) {
+                          if (ph.field_b.ensureIndexLoaded(0) &&
                             ph.field_b.a(255, "basic")) {
                             if (!param0) {
                               return false;
@@ -2108,7 +2108,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             s.field_a.a(0, ui.field_a, 0, hi.field_l, cf.field_c);
             le.field_e = ok.a(df.field_a, "", "Dr_Phlogiston_Alien");
             s.field_a.a(0, ui.field_a, 0, le.field_e, cf.field_c);
-            lh.field_l = ok.a(df.field_a, "", "Dr_Phlogiston_Boss_Break");
+            BitPacketBuffer.field_l = ok.a(df.field_a, "", "Dr_Phlogiston_Boss_Break");
             dm.field_x = ok.a(df.field_a, "", "Dr_Phlogiston_GameOver_jingle");
             s.field_a.a(0, ui.field_a, 0, dm.field_x, cf.field_c);
             ml.field_l = ok.a(df.field_a, "", "Dr_Phlogiston_GameComplete_jingle");
@@ -2160,7 +2160,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
                 IterableNodeHashTable.a((byte) 86);
                 break;
               }
-              DiskArchiveRequest.field_K[var3_int] = new mk(mh.field_a.a("", "AchirdAttacks_level_" + (1 + var3_int) + ".lvl", 24874), var3_int % 3 + 1);
+              DiskArchiveRequest.field_K[var3_int] = new mk(mh.field_a.getFileByName("", "AchirdAttacks_level_" + (1 + var3_int) + ".lvl", 24874), var3_int % 3 + 1);
               var3_int++;
             } while (var10 == 0);
             return false;

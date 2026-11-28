@@ -16,7 +16,7 @@ final class oj extends om {
     static am field_E;
     static RgbSprite field_B;
     private boolean field_J;
-    static db field_H;
+    static ResourceArchive field_H;
 
     final void a(int param0, int param1, int param2, int param3, qm param4, int param5) {
         try {

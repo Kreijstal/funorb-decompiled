@@ -39,8 +39,8 @@ final class wk {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.a(param3, 0);
-          var5 = param0.a(param2, 7, var4_int);
+          var4_int = param0.getGroupIdByName(param3, 0);
+          var5 = param0.getFileIdByName(param2, 7, var4_int);
           if (param1 == 1) {
             stackIn_4_0 = li.a(var5, (byte) -2, param0, var4_int);
             return stackIn_4_0;

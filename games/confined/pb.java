@@ -6,7 +6,7 @@ final class pb {
     private long field_c;
     private int field_f;
     private DualLinkNode[] field_b;
-    static mi field_e;
+    static ResourceArchive field_e;
     static String field_a;
 
     final void a(long param0, DualLinkNode param1, int param2) {
@@ -50,7 +50,7 @@ final class pb {
     public static void clearStaticReferences(byte param0) {
         field_e = null;
         if (param0 <= 14) {
-          field_e = (mi) null;
+          field_e = (ResourceArchive) null;
           field_a = null;
           return;
         }

@@ -22,7 +22,7 @@ abstract class tk {
 
     abstract we a(byte param0);
 
-    abstract int a(int param0, boolean param1);
+    abstract int getGroupRequestProgressPercent(int param0, boolean param1);
 
     abstract byte[] a(int param0, int param1);
 

@@ -74,8 +74,8 @@ final class pa {
           if (param0 >= -78) {
             field_b = (String) null;
           }
-          var4_int = param1.a(param2, 1000);
-          var5 = param1.a(0, param3, var4_int);
+          var4_int = param1.getGroupIdByName(param2, 1000);
+          var5 = param1.getFileIdByName(0, param3, var4_int);
           stackIn_3_0 = fl.a(-1, param1, var5, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -85,7 +85,7 @@ final class kc {
             }
             var1[var2] = new RgbSprite(se.field_C, fk.field_e, cl.field_n[var2], ae.field_c[var2], ih.field_V[var2], qh.field_i[var2], var22);
           } else {
-            var16 = gk.field_g[var2];
+            var16 = ResourceArchive.field_g[var2];
             var12 = var16;
             var9 = var12;
             var5 = var9;

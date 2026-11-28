@@ -193,7 +193,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
         }
         if (ri.field_e != 0) {
           if (eh.field_d != null) {
-            if (!eh.field_d.c(-43)) {
+            if (!eh.field_d.ensureIndexLoaded(-43)) {
               return 14;
             }
             if (!eh.field_d.a("", (byte) -124)) {
@@ -203,41 +203,41 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
               return 29;
             }
           }
-          if (!we.field_h.c(-52)) {
+          if (!we.field_h.ensureIndexLoaded(-52)) {
             return 43;
           }
           if (!we.field_h.a("commonui", 10762)) {
             return 57;
           }
-          if (!GzipDecompressor.field_a.c(-91)) {
+          if (!GzipDecompressor.field_a.ensureIndexLoaded(-91)) {
             return 71;
           }
           if (!GzipDecompressor.field_a.a("commonui", 10762)) {
             return 80;
           }
-          if (!ej.field_d.c(108)) {
+          if (!ej.field_d.ensureIndexLoaded(108)) {
             return 82;
           }
-          if (!ej.field_d.a((byte) 119)) {
+          if (!ej.field_d.tryLoadAllGroups((byte) 119)) {
             return 86;
           }
         } else {
-          if (!we.field_h.c(94)) {
+          if (!we.field_h.ensureIndexLoaded(94)) {
             return 20;
           }
           if (!we.field_h.a("commonui", 10762)) {
             return 40;
           }
-          if (!GzipDecompressor.field_a.c(76)) {
+          if (!GzipDecompressor.field_a.ensureIndexLoaded(76)) {
             return 50;
           }
           if (!GzipDecompressor.field_a.a("commonui", 10762)) {
             return 60;
           }
-          if (!ej.field_d.c(-84)) {
+          if (!ej.field_d.ensureIndexLoaded(-84)) {
             return 70;
           }
-          if (!ej.field_d.a((byte) 23)) {
+          if (!ej.field_d.tryLoadAllGroups((byte) 23)) {
             return 80;
           }
         }

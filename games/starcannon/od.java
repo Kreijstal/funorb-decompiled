@@ -8,7 +8,7 @@ class od extends hh {
     static ge field_f;
     static int[] field_h;
 
-    final static boolean a(int param0, ia param1) {
+    final static boolean a(int param0, BitPacketBuffer param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -19,7 +19,7 @@ class od extends hh {
           if (param0 != -2) {
             od.c((byte) -112);
           }
-          stackIn_5_0 = (1 == param1.e(8, 1));
+          stackIn_5_0 = (1 == param1.readBits(8, 1));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -35,7 +35,7 @@ class od extends hh {
         }
     }
 
-    final static lk a(String param0, ue param1, String param2, int param3, ue param4) {
+    final static lk a(String param0, ResourceArchive param1, String param2, int param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -54,8 +54,8 @@ class od extends hh {
           if (param3 != -1) {
             field_h = (int[]) null;
           }
-          var5_int = param1.a(param0, false);
-          var6 = param1.a(param2, true, var5_int);
+          var5_int = param1.getGroupIdByName(param0, false);
+          var6 = param1.getFileIdByName(param2, true, var5_int);
           stackIn_3_0 = jj.a(var5_int, param1, var6, (byte) -124, param4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

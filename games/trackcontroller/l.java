@@ -120,15 +120,15 @@ final class l extends di {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0.c(90) &&
+          if (param0.ensureIndexLoaded(90) &&
             param0.b("commonui", (byte) -3)) {
-            if (!param1.c(-83)) {
+            if (!param1.ensureIndexLoaded(-83)) {
               return false;
             }
             if (!param1.b("commonui", (byte) -3)) {
               return false;
             }
-            if (param3.c(88) &&
+            if (param3.ensureIndexLoaded(88) &&
               param3.b("button.gif", (byte) -3)) {
               var4_int = 71 / ((param2 + 69) / 32);
               return true;

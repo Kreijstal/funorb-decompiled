@@ -17,7 +17,7 @@ final class tf {
     static int[] field_m;
     static KeyboardInput field_p;
     static String field_g;
-    static mi field_k;
+    static ResourceArchive field_k;
     static double field_e;
 
     public static void clearStaticReferences(int param0) {

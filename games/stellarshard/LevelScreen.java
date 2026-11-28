@@ -1144,7 +1144,7 @@ final class LevelScreen extends ib {
         }
     }
 
-    final static jj a(int param0, gk param1, String param2, pf param3, String param4) {
+    final static jj a(int param0, gk param1, String param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -1160,11 +1160,11 @@ final class LevelScreen extends ib {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param3.b(param4, (byte) -118);
+          var5_int = param3.getGroupIdByName(param4, (byte) -118);
           if (param0 != 576) {
-            LevelScreen.a(-91, (gk) null, (String) null, (pf) null, (String) null);
+            LevelScreen.a(-91, (gk) null, (String) null, (ResourceArchive) null, (String) null);
           }
-          var6 = param3.a(var5_int, param2, (byte) -11);
+          var6 = param3.getFileIdByName(var5_int, param2, (byte) -11);
           stackIn_4_0 = ca.a(var5_int, 24325, var6, param3, param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

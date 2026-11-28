@@ -15,7 +15,7 @@ final class Vector2 {
             String stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          if (param2.b((byte) -127)) {
+          if (param2.ensureIndexLoaded((byte) -127)) {
             String stackIn_7_0 = param0 + " - " + param2.a(-85) + "%";
             return stackIn_7_0;
           }

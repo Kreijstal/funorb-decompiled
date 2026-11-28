@@ -76,8 +76,8 @@ final class hg {
           if (param8.field_I == null) {
             param8.field_I = new IntrusiveDeque();
           }
-          nk.field_t = param8.field_I;
-          nk.field_t.clear(-31023);
+          BitPacketBuffer.field_t = param8.field_I;
+          BitPacketBuffer.field_t.clear(-31023);
           ae.field_f = new SecondaryNodeHashTable(param1);
           if (param4.field_I == null) {
             param4.field_I = new IntrusiveDeque();

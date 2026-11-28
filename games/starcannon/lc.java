@@ -26,13 +26,13 @@ final class lc extends qj {
           field_hb = null;
           return;
         }
-        ue var2 = (ue) null;
-        lc.a(true, (ue) null);
+        ResourceArchive var2 = (ResourceArchive) null;
+        lc.a(true, (ResourceArchive) null);
         field_ib = null;
         field_hb = null;
     }
 
-    final static void a(boolean param0, ue param1) {
+    final static void a(boolean param0, ResourceArchive param1) {
         Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -40,7 +40,7 @@ final class lc extends qj {
           if (param0) {
             field_ib = (String) null;
           }
-          var2 = new Sprite(param1.a("final_frame.jpg", (byte) -76, ""), (java.awt.Component) ((Object) kj.field_E));
+          var2 = new Sprite(param1.getFileByName("final_frame.jpg", (byte) -76, ""), (java.awt.Component) ((Object) kj.field_E));
           var3 = var2.field_u;
           var4 = var2.field_v;
           wj.b(true);

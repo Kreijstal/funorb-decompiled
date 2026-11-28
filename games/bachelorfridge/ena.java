@@ -18,7 +18,7 @@ final class ena extends pu {
         field_m = null;
     }
 
-    final static void a(byte param0, vr param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         int var3 = 0;
         int var2_int = 0;
         int var4 = BachelorFridge.field_y;

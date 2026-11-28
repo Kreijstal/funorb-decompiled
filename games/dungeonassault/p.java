@@ -577,7 +577,7 @@ final class p extends qe {
           ta.field_e = (se) ((Object) kk.a(param2, param3, "arezzo12", 0, "commonui"));
           lp.field_C = (se) ((Object) kk.a(param2, param3, "arezzo14", 0, "commonui"));
           hc.field_f = (se) ((Object) kk.a(param2, param3, "arezzo14bold", 0, "commonui"));
-          var17 = new RgbSprite(param0.a("button.gif", "", (byte) -116), (java.awt.Component) ((Object) AwtRasterBuffer.field_h));
+          var17 = new RgbSprite(param0.getFileByName("button.gif", "", (byte) -116), (java.awt.Component) ((Object) AwtRasterBuffer.field_h));
           pa.a((byte) -94, param3, "commonui", "dropdown");
           var5 = qa.a(15322, "screen_options", "commonui", param3);
           d.field_c = new q[4];

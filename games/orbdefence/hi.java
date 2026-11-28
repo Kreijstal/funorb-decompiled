@@ -157,7 +157,7 @@ abstract class hi extends wb implements jb {
             }
             var4 = new byte[var3_int];
             param2.position = param2.position + cc.field_k.a(param2.position, var4, -1, 0, param2.payload, var3_int);
-            var5 = tj.a(var3_int, 0, 0, var4);
+            var5 = tj.decodeCp1252String(var3_int, 0, 0, var4);
             var6 = 44 / ((-38 - param1) / 47);
             stackIn_3_0 = var5;
             return stackIn_3_0;

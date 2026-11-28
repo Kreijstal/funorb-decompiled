@@ -2537,7 +2537,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("keychar_the_character_under_questionmark", -15192);
                 if (byteArrayState0015 != null) {
-                  MixedSupport002.characterState0001 = DiagnosticSupport002.computeCharacter0762(byteArrayState0015[0], (byte) 96);
+                  MixedSupport002.characterState0001 = DiagnosticSupport002.decodeCp1252Byte(byteArrayState0015[0], (byte) 96);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("rating_noratings", -15192);
                 if (byteArrayState0015 != null) {

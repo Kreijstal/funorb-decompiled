@@ -7,8 +7,8 @@ final class gk {
     private uh field_e;
     static String field_g;
     static String field_c;
-    private pf field_b;
-    private pf field_d;
+    private ResourceArchive field_b;
+    private ResourceArchive field_d;
     private uh field_f;
 
     final PcmSample a(byte param0, int param1, int param2) {
@@ -381,7 +381,7 @@ final class gk {
         return this.a(param0, (int[]) null, -26190, param1);
     }
 
-    gk(pf param0, pf param1) {
+    gk(ResourceArchive param0, ResourceArchive param1) {
         this.field_e = new uh(256);
         this.field_f = new uh(256);
         try {

@@ -3,9 +3,9 @@
  */
 final class bl {
     static int[] field_d;
-    private ci field_f;
+    private ResourceArchive field_f;
     static String[] achievementDescriptions;
-    private ci field_c;
+    private ResourceArchive field_c;
     private fl field_a;
     private fl field_e;
 
@@ -240,7 +240,7 @@ final class bl {
         }
     }
 
-    bl(ci param0, ci param1) {
+    bl(ResourceArchive param0, ResourceArchive param1) {
         this.field_a = new fl(256);
         this.field_e = new fl(256);
         try {

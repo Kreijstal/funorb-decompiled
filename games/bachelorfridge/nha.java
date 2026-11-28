@@ -4,7 +4,7 @@
 final class nha {
     static IndexedSprite field_a;
     static String field_d;
-    static vr field_c;
+    static ResourceArchive field_c;
     static String field_b;
     static gba field_e;
 

@@ -100,7 +100,7 @@ abstract class ByteArrayStore {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        w var14 = null;
+        BitPacketBuffer var14 = null;
         int[][] var18 = null;
         int var6_intLifetime1;
         int var9Lifetime1;

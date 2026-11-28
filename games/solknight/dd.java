@@ -29,7 +29,7 @@ final class dd {
         Object var5 = null;
         int var6 = 0;
         String var7 = null;
-        jd var9 = null;
+        BitPacketBuffer var9 = null;
         byte[] var13 = null;
         var6 = SolKnight.field_L ? 1 : 0;
         try {

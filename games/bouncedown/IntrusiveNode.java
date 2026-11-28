@@ -3,7 +3,7 @@
  */
 class IntrusiveNode {
     static java.awt.Frame field_b;
-    static gk field_e;
+    static ResourceArchive field_e;
     long field_d;
     IntrusiveNode field_c;
     IntrusiveNode field_f;

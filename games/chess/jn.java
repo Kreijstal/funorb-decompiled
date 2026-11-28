@@ -57,12 +57,12 @@ final class jn extends fb {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.a(param2, 0);
+          var4_int = param3.getGroupIdByName(param2, 0);
           if (param1 != 8221) {
             stackIn_2_0 = (rk) null;
             return stackIn_2_0;
           }
-          var5 = param3.a(param0, 7, var4_int);
+          var5 = param3.getFileIdByName(param0, 7, var4_int);
           stackIn_4_0 = gi.a(var5, param1 - 4414, var4_int, param3);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -248,7 +248,7 @@ final class jn extends fb {
         ca.field_a.d(var5Lifetime1 - var19.field_v, var6Lifetime1 - var19.field_u, 256);
     }
 
-    final static void a(boolean param0, PlatformTaskDispatcher param1, String param2, int param3, int param4, int param5, int param6, long param7, byte param8, int param9, boolean param10, int param11, int param12, int param13) {
+    final static void initializeNetworkState(boolean param0, PlatformTaskDispatcher param1, String param2, int param3, int param4, int param5, int param6, long param7, byte param8, int param9, boolean param10, int param11, int param12, int param13) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;
@@ -259,8 +259,8 @@ final class jn extends fb {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            tk.field_h = new nk(param5);
-            qn.field_U = new nk(param9);
+            tk.field_h = new BitPacketBuffer(param5);
+            qn.field_U = new BitPacketBuffer(param9);
             qh.field_a = param4;
             if (param8 > -91) {
               field_M = (char[]) null;

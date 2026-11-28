@@ -6,7 +6,7 @@ import java.util.*;
 final class ec {
     static String field_c;
     static qa field_e;
-    static ad field_a;
+    static ResourceArchive field_a;
     static Calendar field_b;
     static int field_d;
 
@@ -183,7 +183,7 @@ final class ec {
         }
     }
 
-    final static String a(ad param0, String param1, String param2, int param3) {
+    final static String a(ResourceArchive param0, String param1, String param2, int param3) {
         RuntimeException var4 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -196,7 +196,7 @@ final class ec {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0.a(param3 ^ 65)) {
+          if (!param0.ensureIndexLoaded(param3 ^ 65)) {
             stackIn_2_0 = (String) (param1);
             return stackIn_2_0;
           }

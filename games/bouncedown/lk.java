@@ -308,7 +308,7 @@ class lk extends IntrusiveNode {
                 if (!param1) {
                   return false;
                 }
-                gk.a(73, this.d(0));
+                ResourceArchive.a(73, this.d(0));
                 return param2;
               }
               if (0 == d.field_B) {
@@ -316,7 +316,7 @@ class lk extends IntrusiveNode {
                 if (!param1) {
                   return false;
                 }
-                gk.a(73, this.d(0));
+                ResourceArchive.a(73, this.d(0));
                 return param2;
               }
               this.a(ll.field_y, param0, this, param3, 34, uc.field_C);
@@ -331,7 +331,7 @@ class lk extends IntrusiveNode {
               if (!param1) {
                 return false;
               }
-              gk.a(73, this.d(0));
+              ResourceArchive.a(73, this.d(0));
               return param2;
             }
             this.a(param0, ll.field_y, va.field_a, uc.field_C, param3, this, true);
@@ -358,14 +358,14 @@ class lk extends IntrusiveNode {
                     if (!param1) {
                       return false;
                     }
-                    gk.a(73, this.d(0));
+                    ResourceArchive.a(73, this.d(0));
                     return param2;
                   }
                   d.field_B = n.field_m;
                   if (!param1) {
                     return false;
                   }
-                  gk.a(73, this.d(0));
+                  ResourceArchive.a(73, this.d(0));
                   return param2;
                 }
               }
@@ -385,7 +385,7 @@ class lk extends IntrusiveNode {
             if (!param1) {
               return false;
             }
-            gk.a(73, this.d(0));
+            ResourceArchive.a(73, this.d(0));
             return param2;
           }
         }
@@ -393,7 +393,7 @@ class lk extends IntrusiveNode {
         if (!param1) {
           return false;
         }
-        gk.a(73, this.d(0));
+        ResourceArchive.a(73, this.d(0));
         return param2;
     }
 

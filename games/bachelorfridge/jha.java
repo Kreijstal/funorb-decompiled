@@ -40,7 +40,7 @@ final class jha extends TileEffect {
         }
     }
 
-    final static Sprite a(vr param0, byte param1, int param2, int param3) {
+    final static Sprite a(ResourceArchive param0, byte param1, int param2, int param3) {
         RuntimeException var4 = null;
         Sprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;

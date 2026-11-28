@@ -124,7 +124,7 @@ final class FridgeCreature extends IntrusiveNode {
         var2 = 84 / ((57 - param0) / 36);
     }
 
-    final static Sprite[] a(vr param0, int param1, String param2) {
+    final static Sprite[] a(ResourceArchive param0, int param1, String param2) {
         int var4 = 0;
         int var6 = 0;
         Sprite[] stackIn_16_0 = null;
@@ -145,7 +145,7 @@ final class FridgeCreature extends IntrusiveNode {
           var3 = new Sprite[50];
           if (param1 != 4) {
             var8 = (String) null;
-            FridgeCreature.a((vr) null, -103, (String) null);
+            FridgeCreature.a((ResourceArchive) null, -103, (String) null);
           }
           for (var4 = 0; var4 < 5; var4++) {
             var5 = null;

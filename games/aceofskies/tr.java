@@ -65,7 +65,7 @@ final class tr {
     }
 
     final static void a(ResourceArchive param0, byte param1) {
-        Sprite var2 = new Sprite(param0.a("final_frame.jpg", (byte) -71, ""), (java.awt.Component) ((Object) ci.field_f));
+        Sprite var2 = new Sprite(param0.getFileByName("final_frame.jpg", (byte) -71, ""), (java.awt.Component) ((Object) ci.field_f));
         int var3 = var2.width;
         int var4 = var2.height;
         qk.a((byte) -92);

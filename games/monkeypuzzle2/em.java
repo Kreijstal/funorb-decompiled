@@ -34,13 +34,13 @@ final class em extends ButtonWidget {
         }
     }
 
-    final static ad a(boolean param0, int param1, boolean param2, boolean param3, int param4, int param5) {
+    final static ResourceArchive a(boolean param0, int param1, boolean param2, boolean param3, int param4, int param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           ca var8 = null;
-          ad stackIn_12_0 = null;
-          ad stackIn_16_0 = null;
+          ResourceArchive stackIn_12_0 = null;
+          ResourceArchive stackIn_16_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
@@ -62,13 +62,13 @@ final class em extends ButtonWidget {
             }
             var8 = c.field_h.a(-24559, (SectorCacheStore) (var6), param1, (SectorCacheStore) (var7), param0);
             if (param5 != 50) {
-              stackIn_12_0 = (ad) null;
+              stackIn_12_0 = (ResourceArchive) null;
               return stackIn_12_0;
             }
             if (param2) {
               var8.a(-1);
             }
-            stackIn_16_0 = new ad(var8, param3, param4);
+            stackIn_16_0 = new ResourceArchive(var8, param3, param4);
             return stackIn_16_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

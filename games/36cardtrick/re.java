@@ -1155,7 +1155,7 @@ final class re {
                     if ((db.field_m & 1 << var12) == 0) {
                       vb.field_k.a(var9, var5);
                     } else {
-                      qk.field_a[var12].a(var9, var5);
+                      ResourceArchive.field_a[var12].a(var9, var5);
                     }
                     if (eg.field_b >= var9 &&
                       eg.field_b <= 32 + var9 &&
@@ -1194,7 +1194,7 @@ final class re {
                   if (var8 == 0) {
                     vb.field_k.d(248, var7Lifetime2 - qa.field_b.field_s);
                   } else {
-                    qk.field_a[var4Lifetime1].d(248, var7Lifetime2 - qa.field_b.field_s);
+                    ResourceArchive.field_a[var4Lifetime1].d(248, var7Lifetime2 - qa.field_b.field_s);
                   }
                   var7Lifetime2 = var7Lifetime2 + var6;
                   stackIn_62_0 = qa.field_b;
@@ -1269,7 +1269,7 @@ final class re {
                 if (1 < var7Lifetime1) {
                   var8Lifetime1 = -1;
                   var9Lifetime1 = 0;
-                  for (var10Lifetime1 = 0; var10Lifetime1 < qk.field_a.length; var10Lifetime1++) {
+                  for (var10Lifetime1 = 0; var10Lifetime1 < ResourceArchive.field_a.length; var10Lifetime1++) {
                     if ((var4Lifetime1Lifetime1 & 1 << var10Lifetime1) != 0 &&
                       var5Lifetime1 != 0) {
                       if (var10Lifetime1 >= 5) {
@@ -1300,7 +1300,7 @@ final class re {
                 var10Lifetime1Lifetime1 = -1;
                 var11Lifetime1Lifetime1 = -1;
                 var12Lifetime1 = -1;
-                for (var13 = 0; var13 < qk.field_a.length; var13++) {
+                for (var13 = 0; var13 < ResourceArchive.field_a.length; var13++) {
                   if (0 != (var4Lifetime1Lifetime1 & 1 << var13)) {
                     if (var5Lifetime1 != 0) {
                       if (var13 >= 5) {
@@ -1347,7 +1347,7 @@ final class re {
                 }
                 this.field_a = -1;
                 var8Lifetime1Lifetime2 = 170;
-                for (var13Lifetime1 = 0; qk.field_a.length > var13Lifetime1; var13Lifetime1++) {
+                for (var13Lifetime1 = 0; ResourceArchive.field_a.length > var13Lifetime1; var13Lifetime1++) {
                   if ((1 << var13Lifetime1 & var4Lifetime1Lifetime1) != 0) {
                     if (var5Lifetime1 != 0) {
                       if (var13Lifetime1 >= 5) {
@@ -1371,7 +1371,7 @@ final class re {
                     } else {
                       var8Lifetime1Lifetime2 = var8Lifetime1Lifetime2 + var6Lifetime1;
                     }
-                    qk.field_a[var13Lifetime1].a(var8Lifetime1Lifetime2, var9Lifetime1Lifetime1);
+                    ResourceArchive.field_a[var13Lifetime1].a(var8Lifetime1Lifetime2, var9Lifetime1Lifetime1);
                     if (this.field_g == var13Lifetime1) {
                       db.field_o.c(-5 + var8Lifetime1Lifetime2, -5 + var9Lifetime1Lifetime1, 16711680);
                     } else {
@@ -1391,7 +1391,7 @@ final class re {
                   var14Lifetime2 = 239;
                   var15 = 363;
                   qa.field_b.b(GzipInflater.field_b[var10Lifetime1Lifetime1], var15, var14Lifetime2, 0, -1);
-                  qk.field_a[var10Lifetime1Lifetime1].d(223, -qa.field_b.field_s + var14Lifetime2);
+                  ResourceArchive.field_a[var10Lifetime1Lifetime1].d(223, -qa.field_b.field_s + var14Lifetime2);
                   var14Lifetime2 = var14Lifetime2 + var13Lifetime2;
                   qa.field_b.b(pk.field_b, var15, var14Lifetime2, 16711680, -1);
                   var14Lifetime2 = var14Lifetime2 + (5 + var13Lifetime2);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gl {
-    static sh field_a;
+    static ResourceArchive field_a;
     static int[] field_e;
     private int field_g;
     private int field_f;

@@ -64,7 +64,7 @@ final class uj implements Runnable {
         km.b(-100);
         af.a(109);
         if (uj.a((byte) -36)) {
-          uk.field_b.i(1, -53);
+          uk.field_b.writeCipheredByte(1, -53);
           bh.a(0, -1);
         }
         th.a(106);
@@ -170,7 +170,7 @@ final class uj implements Runnable {
               if (!AccountRequestState.a(true, 1)) {
                 return false;
               }
-              vb.field_i = NetworkArchiveRequest.field_t.o(-75);
+              vb.field_i = NetworkArchiveRequest.field_t.readCipheredByte(-75);
               NetworkArchiveRequest.field_t.position = 0;
               GameAppletShell.field_c = param0[vb.field_i];
             }
@@ -319,7 +319,7 @@ final class uj implements Runnable {
                   var3 = var4.getOutputStream();
                   var3.write(17);
                   var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_c.getFile() + "\n\n"));
-                  var3.write(oc.a(true, var5));
+                  var3.write(oc.encodeCp1252Bytes(true, var5));
                   this.field_g = new DataInputStream(var4.getInputStream());
                 }
                 this.field_e.position = 0;

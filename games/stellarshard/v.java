@@ -145,7 +145,7 @@ final class v implements Runnable {
               var3 = var4.getOutputStream();
               var3.write(17);
               var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_f.getFile() + "\n\n"));
-              var3.write(kl.a(var5, -20650));
+              var3.write(kl.encodeCp1252Bytes(var5, -20650));
               this.field_i = new DataInputStream(var4.getInputStream());
             }
             this.field_h.position = 0;
@@ -199,7 +199,7 @@ final class v implements Runnable {
           var2 = var10.readUnsignedByte(4);
           var3 = var10.readUnsignedByte(4);
           if (var2 == 0) {
-            var4 = (af) (pf.field_b.beginForward(-79));
+            var4 = (af) (ResourceArchive.field_b.beginForward(-79));
             if (var4 == null) {
               IntrusiveDeque.c(-2290);
               return;

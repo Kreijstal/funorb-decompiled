@@ -29,8 +29,8 @@ final class ab {
           if (param1 != -15383) {
             field_a = -117;
           }
-          var4_int = param3.a(true, param0);
-          var5 = param3.a(param2, var4_int, param1 ^ 15382);
+          var4_int = param3.getGroupIdByName(true, param0);
+          var5 = param3.getFileIdByName(param2, var4_int, param1 ^ 15382);
           stackIn_3_0 = kh.a(false, var4_int, var5, param3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -180,9 +180,9 @@ final class th extends le {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param0.a((byte) -2, param4);
+          var5_int = param0.getGroupIdByName((byte) -2, param4);
           var6 = -53 / ((param1 + 52) / 49);
-          var7 = param0.a(var5_int, param2, -1);
+          var7 = param0.getFileIdByName(var5_int, param2, -1);
           stackIn_1_0 = cj.a(param3, 7844, var7, param0, var5_int);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -11,10 +11,10 @@ final class se extends bd {
     static String[] field_n;
     private int field_q;
     private boolean field_k;
-    static ue field_l;
+    static ResourceArchive field_l;
     private qe field_h;
     private int field_j;
-    static ia field_p;
+    static BitPacketBuffer field_p;
     static int[] field_o;
     static int field_m;
 

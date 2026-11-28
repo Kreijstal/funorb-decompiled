@@ -16,7 +16,7 @@ final class na {
         field_d = null;
     }
 
-    final static byte[] a(int param0, la param1, byte[] param2, int param3) {
+    final static byte[] a(int param0, BitPacketBuffer param1, byte[] param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -33,7 +33,7 @@ final class na {
         RuntimeException var4 = null;
         var8 = TrackController.field_F ? 1 : 0;
         try {
-          var4_int = param1.d(0, param3);
+          var4_int = param1.readBits(0, param3);
           if (var4_int == 0) {
             stackIn_3_0 = null;
             return (byte[]) (stackIn_3_0);
@@ -42,18 +42,18 @@ final class na {
             var4_int != param2.length) {
             param2 = new byte[var4_int];
           }
-          var5 = param1.d(0, 3);
+          var5 = param1.readBits(0, 3);
           if (param0 != -26947) {
             field_b = -9;
           }
-          var6 = (byte)param1.d(param0 + 26947, 8);
+          var6 = (byte)param1.readBits(param0 + 26947, 8);
           if (0 >= var5) {
             for (var7 = 0; var4_int > var7; var7++) {
               param2[var7] = (byte)var6;
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {
-              param2[var7] = (byte)(var6 + param1.d(0, var5));
+              param2[var7] = (byte)(var6 + param1.readBits(0, var5));
             }
           }
           stackIn_18_0 = (byte[]) (param2);

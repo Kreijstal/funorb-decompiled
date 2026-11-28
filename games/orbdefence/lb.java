@@ -51,13 +51,13 @@ final class lb {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        se var5 = null;
+        BitPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
         ha var11 = null;
-        se var12 = null;
+        BitPacketBuffer var12 = null;
         int[] var13 = null;
         dc var14 = null;
         dc var15 = null;

@@ -62,7 +62,7 @@ final class AccountNameAvailabilityValidator extends se {
             stackIn_14_0 = ao.field_c;
             return stackIn_14_0;
           }
-          stackIn_12_0 = db.field_f;
+          stackIn_12_0 = ResourceArchive.field_f;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

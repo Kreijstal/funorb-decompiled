@@ -26,7 +26,7 @@ final class on extends DualLinkNode {
         field_s = null;
     }
 
-    final boolean a(q param0, vr param1, int param2) {
+    final boolean a(q param0, ResourceArchive param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_27_0 = null;
@@ -41,14 +41,14 @@ final class on extends DualLinkNode {
         try {
           if (sp.field_l < 0) {
             for (var4_int = 0; this.field_o.length > var4_int; var4_int++) {
-              if (!param1.a(0, this.field_o[var4_int])) {
+              if (!param1.tryLoadSingleFile(0, this.field_o[var4_int])) {
                 return false;
               }
             }
           } else {
             var4_int = 0;
             while (var4_int < this.field_o.length) {
-              if (param1.a(-122, this.field_o[var4_int], sp.field_l)) {
+              if (param1.tryLoadFile(-122, this.field_o[var4_int], sp.field_l)) {
                 var4_int++;
                 continue;
               }
@@ -183,7 +183,7 @@ final class on extends DualLinkNode {
         }
     }
 
-    final int[] a(double param0, boolean param1, q param2, int param3, int param4, vr param5, boolean param6, int param7) {
+    final int[] a(double param0, boolean param1, q param2, int param3, int param4, ResourceArchive param5, boolean param6, int param7) {
         int var10_int = 0;
         int var19 = 0;
         int[] stackIn_9_0 = null;

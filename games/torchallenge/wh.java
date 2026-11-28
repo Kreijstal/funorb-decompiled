@@ -44,7 +44,7 @@ final class wh {
           var2_int = param1.length();
           var3 = 0;
           for (var4 = 0; var4 < var2_int; var4++) {
-            var3 = (var3 << 5) - var3 + wf.a((byte) -126, param1.charAt(var4));
+            var3 = (var3 << 5) - var3 + wf.encodeCp1252Character((byte) -126, param1.charAt(var4));
           }
           if (param0 != 68) {
             var6 = (CharSequence) null;

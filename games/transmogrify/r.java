@@ -51,16 +51,16 @@ final class r {
         return var3;
     }
 
-    final static r a(ci param0, String param1, String param2) {
-        byte[] var3 = param0.a(param2, (byte) 109, param1);
+    final static r a(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.getFileByName(param2, (byte) 109, param1);
         if (var3 == null) {
           return null;
         }
         return new r(new PacketBuffer(var3));
     }
 
-    final static r a(ci param0, int param1, int param2) {
-        byte[] var3 = param0.a((byte) -93, param2, param1);
+    final static r a(ResourceArchive param0, int param1, int param2) {
+        byte[] var3 = param0.getFile((byte) -93, param2, param1);
         if (var3 == null) {
           return null;
         }

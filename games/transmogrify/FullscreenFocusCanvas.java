@@ -43,23 +43,23 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     }
 
     final static void b(int param0) {
-        ci.field_f.k(31410);
+        ResourceArchive.field_f.k(31410);
         if (null == gh.field_m) {
-          gh.field_m = new sd(ci.field_f, tg.field_c);
+          gh.field_m = new sd(ResourceArchive.field_f, tg.field_c);
           if (param0 >= -9) {
             FullscreenFocusCanvas.a(54);
-            ci.field_f.b((UiWidget) (gh.field_m), (byte) -71);
+            ResourceArchive.field_f.b((UiWidget) (gh.field_m), (byte) -71);
             return;
           }
-          ci.field_f.b((UiWidget) (gh.field_m), (byte) -71);
+          ResourceArchive.field_f.b((UiWidget) (gh.field_m), (byte) -71);
           return;
         }
         if (param0 < -9) {
-          ci.field_f.b((UiWidget) (gh.field_m), (byte) -71);
+          ResourceArchive.field_f.b((UiWidget) (gh.field_m), (byte) -71);
           return;
         }
         FullscreenFocusCanvas.a(54);
-        ci.field_f.b((UiWidget) (gh.field_m), (byte) -71);
+        ResourceArchive.field_f.b((UiWidget) (gh.field_m), (byte) -71);
     }
 
     public final void paint(java.awt.Graphics param0) {

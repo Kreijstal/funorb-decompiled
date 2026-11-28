@@ -23,7 +23,7 @@ abstract class ArchiveProvider {
 
     abstract byte[] a(int param0, int param1);
 
-    abstract int a(byte param0, int param1);
+    abstract int getGroupRequestProgressPercent(byte param0, int param1);
 
     final static void a(Sprite param0, int param1) {
         try {

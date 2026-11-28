@@ -15,14 +15,14 @@ class fd extends DualLinkNode {
         }
     }
 
-    final static void a(gk param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         te var2 = null;
         try {
           if (param1 != -1) {
-            gk var3 = (gk) null;
-            fd.a((gk) null, 94);
+            ResourceArchive var3 = (ResourceArchive) null;
+            fd.a((ResourceArchive) null, 94);
           }
-          te.b(param0.b("headers.packvorbis", "", param1 - 72));
+          te.b(param0.getFileByName("headers.packvorbis", "", param1 - 72));
           var2 = te.a(param0, "jagex logo2.packvorbis", "");
           var2.a();
         } catch (RuntimeException runtimeException) {

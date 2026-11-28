@@ -113,7 +113,7 @@ final class oj {
                 if (param6) {
                   bg.field_a[var23Lifetime2] = var27Lifetime1 >> ArchiveSource.field_b;
                   pl.field_c[var23Lifetime2] = var28Lifetime1 >> ArchiveSource.field_b;
-                  la.field_p[var23Lifetime2] = var29Lifetime1;
+                  BitPacketBuffer.field_p[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
                 continue;

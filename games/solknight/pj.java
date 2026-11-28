@@ -108,15 +108,15 @@ class pj extends UiWidget {
             var5 = (Archive) null;
             pj.a(-17, (Archive) null);
           }
-          if (!param2.c((byte) -121)) {
+          if (!param2.ensureIndexLoaded((byte) -121)) {
             return false;
           }
           if (!param2.a(param1 + 16927, "commonui")) {
             return false;
           }
-          if (param0.c((byte) -121) &&
+          if (param0.ensureIndexLoaded((byte) -121) &&
             param0.a(2, "commonui")) {
-            if (param3.c((byte) -121) &&
+            if (param3.ensureIndexLoaded((byte) -121) &&
               param3.a(2, "button.gif")) {
               return true;
             }
@@ -277,7 +277,7 @@ class pj extends UiWidget {
         }
     }
 
-    final static short[] a(int param0, jd param1, int param2, short[] param3) {
+    final static short[] a(int param0, BitPacketBuffer param1, int param2, short[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -294,7 +294,7 @@ class pj extends UiWidget {
         RuntimeException var4 = null;
         var8 = SolKnight.field_L ? 1 : 0;
         try {
-          var4_int = param1.d((byte) 48, param2);
+          var4_int = param1.readBits((byte) 48, param2);
           if (var4_int == 0) {
             stackIn_3_0 = null;
             return (short[]) (stackIn_3_0);
@@ -303,11 +303,11 @@ class pj extends UiWidget {
             var4_int != param3.length) {
             param3 = new short[var4_int];
           }
-          var5 = param1.d((byte) 48, 4);
-          var6 = (short)param1.d((byte) 48, 16);
+          var5 = param1.readBits((byte) 48, 4);
+          var6 = (short)param1.readBits((byte) 48, 16);
           if (~var5 < param0) {
             for (var7 = 0; var4_int > var7; var7++) {
-              param3[var7] = (short)(param1.d((byte) 48, var5) + var6);
+              param3[var7] = (short)(param1.readBits((byte) 48, var5) + var6);
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
@@ -346,7 +346,7 @@ class pj extends UiWidget {
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new Sprite(param1.a(4, "final_frame.jpg", ""), (java.awt.Component) ((Object) dc.field_q));
+          var2 = new Sprite(param1.getFileByName(4, "final_frame.jpg", ""), (java.awt.Component) ((Object) dc.field_q));
           var3 = var2.field_p;
           var4 = var2.field_t;
           fl.b((byte) 91);

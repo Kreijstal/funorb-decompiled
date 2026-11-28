@@ -31,8 +31,8 @@ final class ai {
         try {
           long dupTemp$1 = 0L;
           IOException var2 = null;
-          jd var4 = null;
-          jd var5 = null;
+          BitPacketBuffer var4 = null;
+          BitPacketBuffer var5 = null;
           int stackIn_11_0 = 0;
           Throwable decompiledCaughtException = null;
           if (param1 != -37) {

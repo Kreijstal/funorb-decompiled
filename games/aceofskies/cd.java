@@ -54,8 +54,8 @@ final class cd {
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
         try {
-          int var4_int = param0.b(param1, 0);
-          int var5 = param0.a(-125, var4_int, param2);
+          int var4_int = param0.getGroupIdByName(param1, 0);
+          int var5 = param0.getFileIdByName(-125, var4_int, param2);
           if (param3 >= -43) {
             String var6 = (String) null;
             cd.a((ResourceArchive) null, (String) null, (String) null, -13);

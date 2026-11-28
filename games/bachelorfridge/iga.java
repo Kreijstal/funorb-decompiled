@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class iga {
-    static vr field_d;
+    static ResourceArchive field_d;
     static DualLinkNodeHashTable field_c;
     static String field_b;
     static Sprite[] field_a;

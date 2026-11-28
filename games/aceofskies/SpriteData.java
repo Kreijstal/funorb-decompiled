@@ -109,7 +109,7 @@ final class SpriteData {
     }
 
     final static SpriteData[] loadFrames(ResourceArchive archive, String groupName, String fileName) {
-        byte[] var3 = archive.a(groupName, (byte) -71, fileName);
+        byte[] var3 = archive.getFileByName(groupName, (byte) -71, fileName);
         if (var3 == null) {
           return null;
         }
@@ -117,7 +117,7 @@ final class SpriteData {
     }
 
     final static SpriteData loadFirstFrame(ResourceArchive archive, String groupName, String fileName) {
-        byte[] var3 = archive.a(groupName, (byte) -71, fileName);
+        byte[] var3 = archive.getFileByName(groupName, (byte) -71, fileName);
         if (var3 == null) {
           return null;
         }

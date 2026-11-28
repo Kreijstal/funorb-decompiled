@@ -5,7 +5,7 @@ final class eh {
     static String field_c;
     static int field_b;
     static boolean field_a;
-    static sh field_d;
+    static ResourceArchive field_d;
 
     final static void a(int param0, RgbSprite param1, int param2, int param3, String param4, int param5) {
         int var7 = 0;

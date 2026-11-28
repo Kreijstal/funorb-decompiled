@@ -4,7 +4,7 @@
 final class aa {
     static String[] field_a;
     static IntrusiveDeque field_e;
-    static vj field_b;
+    static ResourceArchive field_b;
     static double[] field_c;
     static long field_d;
     private static String field_z;
@@ -17,7 +17,7 @@ final class aa {
           field_a = null;
           return;
         }
-        field_b = (vj) null;
+        field_b = (ResourceArchive) null;
         field_c = null;
         field_a = null;
     }

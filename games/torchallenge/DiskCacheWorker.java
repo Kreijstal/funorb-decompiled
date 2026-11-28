@@ -243,8 +243,8 @@ final class DiskCacheWorker implements Runnable {
           if (param2 >= -110) {
             field_c = (int[]) null;
           }
-          var4_int = param0.a(param1, 50);
-          var5 = param0.a(var4_int, param3, (byte) 86);
+          var4_int = param0.getGroupIdByName(param1, 50);
+          var5 = param0.getFileIdByName(var4_int, param3, (byte) 86);
           stackIn_3_0 = DualLinkNode.a((byte) 61, var4_int, var5, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

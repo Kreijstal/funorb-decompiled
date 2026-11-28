@@ -90,7 +90,7 @@ final class af {
           eg.a((byte) 126);
           return;
         }
-        lh var2 = dh.field_N;
+        BitPacketBuffer var2 = dh.field_N;
         var2.readInt(23);
         var2.readInt(97);
         var2.readInt(-104);

@@ -5,11 +5,11 @@ final class RageSpecial extends SpecialOrder {
     static Sprite[] field_p;
     static String field_q;
 
-    final static IndexedSprite[] a(int param0, String param1, String param2, vr param3) {
+    final static IndexedSprite[] a(int param0, String param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        vr var6 = null;
+        ResourceArchive var6 = null;
         IndexedSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -20,11 +20,11 @@ final class RageSpecial extends SpecialOrder {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.a(param1, false);
-          var5 = param3.a((byte) 6, var4_int, param2);
+          var4_int = param3.getGroupId(param1, false);
+          var5 = param3.getFileId((byte) 6, var4_int, param2);
           if (param0 != 29611) {
-            var6 = (vr) null;
-            RageSpecial.a(39, (String) null, (String) null, (vr) null);
+            var6 = (ResourceArchive) null;
+            RageSpecial.a(39, (String) null, (String) null, (ResourceArchive) null);
           }
           stackIn_3_0 = CurryArenaTheme.a(-7726, param3, var5, var4_int);
           return stackIn_3_0;
@@ -125,8 +125,8 @@ final class RageSpecial extends SpecialOrder {
           field_q = null;
           return;
         }
-        vr var2 = (vr) null;
-        RageSpecial.a(30, (String) null, (String) null, (vr) null);
+        ResourceArchive var2 = (ResourceArchive) null;
+        RageSpecial.a(30, (String) null, (String) null, (ResourceArchive) null);
         field_q = null;
     }
 

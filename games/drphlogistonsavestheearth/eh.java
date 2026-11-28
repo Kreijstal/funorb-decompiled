@@ -18,7 +18,7 @@ final class eh {
         return bb.a((byte) -103);
     }
 
-    final static he a(String param0, byte param1, vj param2, String param3) {
+    final static he a(String param0, byte param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -35,10 +35,10 @@ final class eh {
         try {
           if (param1 >= -21) {
             var6 = (String) null;
-            eh.a((String) null, (byte) 119, (vj) null, (String) null);
+            eh.a((String) null, (byte) 119, (ResourceArchive) null, (String) null);
           }
-          var4_int = param2.a(param0, (byte) -104);
-          var5 = param2.a((byte) -109, param3, var4_int);
+          var4_int = param2.getGroupIdByName(param0, (byte) -104);
+          var5 = param2.getFileIdByName((byte) -109, param3, var4_int);
           stackIn_3_0 = cc.a(var4_int, -9671, param2, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

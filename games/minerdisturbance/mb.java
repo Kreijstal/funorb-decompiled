@@ -7,7 +7,7 @@ final class mb {
     static hm field_b;
     static String field_a;
 
-    final static char a(boolean param0, byte param1) {
+    final static char decodeCp1252Byte(boolean param0, byte param1) {
         int var2;
         int var3;
         int var2Lifetime1;

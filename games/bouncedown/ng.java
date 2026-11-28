@@ -56,9 +56,9 @@ abstract class ng {
         if (param0 != -15936) {
           ng.a((byte) -73);
         }
-        if (gk.field_i == null ||
-          !(gk.field_i.length >= param2)) {
-          gk.field_i = new int[2 * param2];
+        if (ResourceArchive.field_i == null ||
+          !(ResourceArchive.field_i.length >= param2)) {
+          ResourceArchive.field_i = new int[2 * param2];
         }
         if (DelegatingCanvas.field_c == null ||
           !(DelegatingCanvas.field_c.length >= param2)) {

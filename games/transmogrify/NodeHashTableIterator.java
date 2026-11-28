@@ -183,7 +183,7 @@ final class NodeHashTableIterator implements Iterator {
         return null;
     }
 
-    final static boolean a(int param0, hj param1) {
+    final static boolean a(int param0, BitPacketBuffer param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -194,7 +194,7 @@ final class NodeHashTableIterator implements Iterator {
           if (param0 != -1) {
             field_f = -99;
           }
-          stackIn_5_0 = (param1.k(1, 1522829539) == 1);
+          stackIn_5_0 = (param1.readBits(1, 1522829539) == 1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

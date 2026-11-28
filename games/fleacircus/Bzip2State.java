@@ -75,30 +75,30 @@ final class Bzip2State {
           return cl.field_a;
         }
         if (il.field_a != null) {
-          if (!il.field_a.b((byte) -98)) {
+          if (!il.field_a.ensureIndexLoaded((byte) -98)) {
             return sg.field_a;
           }
           return AccountServiceResult.field_a;
         }
-        if (!BoundedRandomAccessFile.field_d.b((byte) -117)) {
+        if (!BoundedRandomAccessFile.field_d.ensureIndexLoaded((byte) -117)) {
           return bf.field_f;
         }
         if (!BoundedRandomAccessFile.field_d.a("commonui", -114)) {
-          return IterableNodeHashTable.field_e + " - " + BoundedRandomAccessFile.field_d.a(param0 + 1851, "commonui") + "%";
+          return IterableNodeHashTable.field_e + " - " + BoundedRandomAccessFile.field_d.getGroupLoadPercentByName(param0 + 1851, "commonui") + "%";
         }
         if (param0 != -1917) {
           return (String) null;
         }
-        if (!oa.field_l.b((byte) -100)) {
+        if (!oa.field_l.ensureIndexLoaded((byte) -100)) {
           return de.field_j;
         }
         if (!oa.field_l.a("commonui", param0 + 1793)) {
-          return rg.field_q + " - " + oa.field_l.a(param0 ^ 1851, "commonui") + "%";
+          return rg.field_q + " - " + oa.field_l.getGroupLoadPercentByName(param0 ^ 1851, "commonui") + "%";
         }
-        if (!kc.field_d.b((byte) -108)) {
+        if (!kc.field_d.ensureIndexLoaded((byte) -108)) {
           return IterableNodeHashTable.field_h;
         }
-        if (!kc.field_d.a(-75)) {
+        if (!kc.field_d.tryLoadAllGroups(-75)) {
           return ob.field_b + " - " + kc.field_d.a((byte) -43) + "%";
         }
         return ja.field_L;

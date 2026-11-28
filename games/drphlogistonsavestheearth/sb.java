@@ -6,9 +6,9 @@ final class sb {
     private int field_b;
     private uf[] field_j;
     static PlatformTaskDispatcher field_d;
-    static vj field_g;
+    static ResourceArchive field_g;
     float field_a;
-    static vj field_i;
+    static ResourceArchive field_i;
     private int field_e;
     String field_h;
     private static long[] field_c;
@@ -37,24 +37,24 @@ final class sb {
         while (this.field_e < this.field_f) {
           var4 = this.field_j[this.field_e];
           var2 = var4;
-          if (!var4.field_b.a(0)) {
+          if (!var4.field_b.ensureIndexLoaded(0)) {
             this.a(var4, 0, (byte) 52);
             return false;
           }
           if (var4.field_l >= 0 &&
-            !var4.field_b.c(var4.field_l, 29691)) {
-            this.a(var2, var4.field_b.a(24, var4.field_l), (byte) 52);
+            !var4.field_b.tryLoadGroup(var4.field_l, 29691)) {
+            this.a(var2, var4.field_b.getGroupLoadPercent(24, var4.field_l), (byte) 52);
             return false;
           }
           if (var4.field_h != null &&
             !var4.field_b.a(255, var4.field_h)) {
-            this.a(var2, var4.field_b.b(10461, var4.field_h), (byte) 52);
+            this.a(var2, var4.field_b.getGroupLoadPercentByName(10461, var4.field_h), (byte) 52);
             return false;
           }
           if (0 > var4.field_l &&
             var4.field_h == null &&
             null != var4.field_g &&
-            !var4.field_b.c((byte) 66)) {
+            !var4.field_b.tryLoadAllGroups((byte) 66)) {
             this.a(var2, var4.field_b.d((byte) 95), (byte) 52);
             return false;
           }
@@ -81,7 +81,7 @@ final class sb {
           if (param2 == 52) {
             return;
           }
-          field_i = (vj) null;
+          field_i = (ResourceArchive) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -125,14 +125,14 @@ final class sb {
           if (param0 != 67) {
             field_d = (PlatformTaskDispatcher) null;
             if (DrPhlogistonSavesTheEarth.t(18137)) {
-              nj.field_p.d(1, param0 - 18459);
+              nj.field_p.writeCipheredByte(1, param0 - 18459);
               qj.a(0, param0 + 14589);
             }
             eg.a((byte) 126);
             return;
           }
           if (DrPhlogistonSavesTheEarth.t(18137)) {
-            nj.field_p.d(1, param0 - 18459);
+            nj.field_p.writeCipheredByte(1, param0 - 18459);
             qj.a(0, param0 + 14589);
           }
           eg.a((byte) 126);
@@ -143,7 +143,7 @@ final class sb {
         MouseWheelInput.b((byte) -120);
         if (param0 == 67) {
           if (DrPhlogistonSavesTheEarth.t(18137)) {
-            nj.field_p.d(1, param0 - 18459);
+            nj.field_p.writeCipheredByte(1, param0 - 18459);
             qj.a(0, param0 + 14589);
           }
           eg.a((byte) 126);
@@ -151,7 +151,7 @@ final class sb {
         }
         field_d = (PlatformTaskDispatcher) null;
         if (DrPhlogistonSavesTheEarth.t(18137)) {
-          nj.field_p.d(1, param0 - 18459);
+          nj.field_p.writeCipheredByte(1, param0 - 18459);
           qj.a(0, param0 + 14589);
         }
         eg.a((byte) 126);

@@ -7,7 +7,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
     static String field_f;
     static int[] field_b;
     static String field_a;
-    static pf field_d;
+    static ResourceArchive field_d;
     static he field_g;
 
     public static void clearStaticReferences(byte param0) {

@@ -317,8 +317,8 @@ abstract class si extends UiWidget implements oh {
             stackIn_2_0 = (ol) null;
             return stackIn_2_0;
           }
-          var5_int = param4.c(91, param1);
-          var6 = param4.a(param3, -1, var5_int);
+          var5_int = param4.getGroupIdByName(91, param1);
+          var6 = param4.getFileIdByName(param3, -1, var5_int);
           stackIn_4_0 = cd.a(param4, var6, var5_int, true, param0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

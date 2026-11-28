@@ -135,7 +135,7 @@ final class am {
         return stackIn_9_0;
     }
 
-    final static void a(db param0, db param1, int param2) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, int param2) {
         int var5_int = 0;
         int[] stackIn_29_0 = null;
         RuntimeException stackIn_34_0 = null;
@@ -190,7 +190,7 @@ final class am {
           }
           kf.field_c = kf.field_c + ee.field_m.field_v;
           me.field_b = me.field_b + ee.field_m.field_v;
-          var5 = new PacketBuffer(param1.b(0, 0, 0));
+          var5 = new PacketBuffer(param1.getFile(0, 0, 0));
           mi.field_A = new int[480];
           var6 = 0;
           var7 = 0;
@@ -244,7 +244,7 @@ final class am {
         }
     }
 
-    final static void a(PcmStreamMixer param0, int param1, db param2, int param3) {
+    final static void a(PcmStreamMixer param0, int param1, ResourceArchive param2, int param3) {
         try {
           lc.field_a = param3 * sm.d((byte) -104) / 1000;
           nl.a(param2, 640);

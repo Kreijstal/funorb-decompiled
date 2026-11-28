@@ -47,7 +47,7 @@ final class lb {
     static String field_L;
     int field_k;
 
-    final static String a(ue param0, String param1, String param2, byte param3) {
+    final static String a(ResourceArchive param0, String param1, String param2, byte param3) {
         RuntimeException var4 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
@@ -63,7 +63,7 @@ final class lb {
           if (param3 >= -102) {
             field_d = (String[]) null;
           }
-          if (!param0.b((byte) 96)) {
+          if (!param0.ensureIndexLoaded((byte) 96)) {
             stackIn_5_0 = (String) (param2);
             return stackIn_5_0;
           }

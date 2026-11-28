@@ -58,7 +58,7 @@ final class oc extends vi implements ib {
             var4_int = param2.field_o.length;
             var5 = param3.field_l[param0].length / var4_int;
             if (param1 != -1) {
-              oc.a('o', -125);
+              oc.isSupportedCp1252KeyCharacter('o', -125);
             }
             for (var6 = 0; var6 < var5; var6++) {
               boolean decompiledFrameCompleted0 = true;
@@ -101,7 +101,7 @@ final class oc extends vi implements ib {
         }
     }
 
-    final static byte a(int param0, char param1) {
+    final static byte encodeCp1252Character(int param0, char param1) {
         int var2;
         int var3;
         var3 = OrbDefence.field_D ? 1 : 0;
@@ -182,7 +182,7 @@ final class oc extends vi implements ib {
         return this.field_S;
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isSupportedCp1252KeyCharacter(char param0, int param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -223,7 +223,7 @@ final class oc extends vi implements ib {
 
     final void c(byte param0) {
         if (param0 > -120) {
-          oc.a(93, '￭');
+          oc.encodeCp1252Character(93, '￭');
         }
         super.c((byte) -127);
         if (this.field_S != null) {
@@ -267,7 +267,7 @@ final class oc extends vi implements ib {
         field_M = null;
     }
 
-    final static byte[] a(boolean param0, CharSequence param1) {
+    final static byte[] encodeCp1252Bytes(boolean param0, CharSequence param1) {
         byte[] stackIn_3_0 = null;
         byte[] stackIn_69_0 = null;
         RuntimeException stackIn_72_0 = null;

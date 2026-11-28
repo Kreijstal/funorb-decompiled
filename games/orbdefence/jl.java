@@ -16,7 +16,7 @@ abstract class jl {
         return new ba[]{rc.field_m, fb.field_i, ia.field_a, cj.field_a, aj.field_a, tl.field_c, hd.field_q, BoundedRandomAccessFile.field_j, id.field_a, jd.field_d, DualLinkDequeIterator.field_f, ue.field_G, nd.field_e, bd.field_q};
     }
 
-    abstract int b(int param0, int param1);
+    abstract int getGroupRequestProgressPercent(int param0, int param1);
 
     abstract hd a(int param0);
 

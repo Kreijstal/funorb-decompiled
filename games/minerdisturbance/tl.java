@@ -30,8 +30,8 @@ final class tl extends pc {
             stackIn_2_0 = (p) null;
             return stackIn_2_0;
           }
-          var5_int = param1.a(-39, param3);
-          var6 = param1.a(param0, var5_int, param2 - 121);
+          var5_int = param1.getGroupIdByName(-39, param3);
+          var6 = param1.getFileIdByName(param0, var5_int, param2 - 121);
           stackIn_4_0 = pj.a(-10, var5_int, param1, var6, param4);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

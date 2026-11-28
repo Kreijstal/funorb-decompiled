@@ -16,7 +16,7 @@ final class d {
     private int field_j;
     int field_p;
     int field_h;
-    static ia field_b;
+    static BitPacketBuffer field_b;
     static String field_n;
     int field_d;
 

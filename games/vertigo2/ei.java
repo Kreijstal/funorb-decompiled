@@ -31,13 +31,13 @@ final class ei extends DualLinkNode {
           return true;
         }
         if (null == this.field_u) {
-          if (!oc.field_r.c(11321, this.field_v)) {
+          if (!oc.field_r.tryLoadGroup(11321, this.field_v)) {
             return false;
           }
           var28 = oc.field_r.a(0, this.field_v);
           this.field_u = new byte[var28.length][];
           for (var3_int = 0; var28.length > var3_int; var3_int++) {
-            this.field_u[var3_int] = oc.field_r.a(this.field_v, var28[var3_int], (byte) -107);
+            this.field_u[var3_int] = oc.field_r.getFile(this.field_v, var28[var3_int], (byte) -107);
           }
         }
         var2 = 1;

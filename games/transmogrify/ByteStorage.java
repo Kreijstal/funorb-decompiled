@@ -125,7 +125,7 @@ abstract class ByteStorage {
         ByteStorage.b(1);
     }
 
-    final static byte[] a(int param0, hj param1, byte[] param2, int param3) {
+    final static byte[] a(int param0, BitPacketBuffer param1, byte[] param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -143,7 +143,7 @@ abstract class ByteStorage {
         RuntimeException var4 = null;
         var8 = Transmogrify.field_A ? 1 : 0;
         try {
-          var4_int = param1.k(param3, 1522829539);
+          var4_int = param1.readBits(param3, 1522829539);
           if (param0 != -39) {
             stackIn_3_0 = (byte[]) null;
             return stackIn_3_0;
@@ -156,11 +156,11 @@ abstract class ByteStorage {
             var4_int != param2.length) {
             param2 = new byte[var4_int];
           }
-          var5 = param1.k(3, 1522829539);
-          var6 = (byte)param1.k(8, 1522829539);
+          var5 = param1.readBits(3, 1522829539);
+          var6 = (byte)param1.readBits(8, 1522829539);
           if (var5 > 0) {
             for (var7 = 0; var4_int > var7; var7++) {
-              param2[var7] = (byte)(param1.k(var5, SectorCacheStore.a(param0, -1522829510)) + var6);
+              param2[var7] = (byte)(param1.readBits(var5, SectorCacheStore.a(param0, -1522829510)) + var6);
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {

@@ -37,8 +37,8 @@ final class ec {
             stackIn_2_0 = (qj) null;
             return stackIn_2_0;
           }
-          var5_int = param3.c(param1 ^ -8193, param0);
-          var6 = param3.a(-94, var5_int, param4);
+          var5_int = param3.getGroupIdByName(param1 ^ -8193, param0);
+          var6 = param3.getFileIdByName(-94, var5_int, param4);
           stackIn_4_0 = nl.a(param2, param3, (byte) 90, var6, var5_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

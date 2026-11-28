@@ -971,8 +971,8 @@ final class pa extends tf {
         }
     }
 
-    final static pa a(pf param0, String param1, String param2) {
-        byte[] var3 = param0.a(param1, param2, (byte) -12);
+    final static pa a(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.getFileByName(param1, param2, (byte) -12);
         if (var3 == null) {
           return null;
         }

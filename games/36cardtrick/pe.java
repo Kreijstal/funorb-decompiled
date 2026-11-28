@@ -20,7 +20,7 @@ abstract class pe {
 
     abstract d b(byte param0);
 
-    abstract int a(int param0, int param1);
+    abstract int getGroupRequestProgressPercent(int param0, int param1);
 
     static {
         field_z = "pe.A(";

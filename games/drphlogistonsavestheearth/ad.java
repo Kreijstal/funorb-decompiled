@@ -11,7 +11,7 @@ final class ad extends ei {
     static he[] field_v;
     static he[] field_s;
 
-    final static boolean a(vj param0, byte param1, vj param2, vj param3) {
+    final static boolean a(ResourceArchive param0, byte param1, ResourceArchive param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -22,14 +22,14 @@ final class ad extends ei {
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3.a(0) &&
+          if (param3.ensureIndexLoaded(0) &&
             param3.a(255, "commonui")) {
             if (param1 > -53) {
               field_v = (he[]) null;
             }
-            if (param2.a(0) &&
+            if (param2.ensureIndexLoaded(0) &&
               param2.a(255, "commonui")) {
-              if (!param0.a(0)) {
+              if (!param0.ensureIndexLoaded(0)) {
                 return false;
               }
               if (!param0.a(255, "button.gif")) {
@@ -215,7 +215,7 @@ final class ad extends ei {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
-        vj var5 = null;
+        ResourceArchive var5 = null;
         vh stackIn_4_0 = null;
         vh stackIn_7_0 = null;
         vh stackIn_11_0 = null;
@@ -225,8 +225,8 @@ final class ad extends ei {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 8192) {
-            var5 = (vj) null;
-            ad.a((vj) null, (byte) -70, (vj) null, (vj) null);
+            var5 = (ResourceArchive) null;
+            ad.a((ResourceArchive) null, (byte) -70, (ResourceArchive) null, (ResourceArchive) null);
           }
           var3 = this.field_u.field_p.toLowerCase();
           var4 = param1.toLowerCase();

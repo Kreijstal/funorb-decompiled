@@ -96,8 +96,8 @@ final class IsaacCipher {
 
     final static void a(int param0, int param1, String param2, int param3, int param4, String param5) {
         int var7 = 0;
-        nk var8 = qn.field_U;
-        var8.f(param3, param0 ^ -9832);
+        BitPacketBuffer var8 = qn.field_U;
+        var8.writeCipheredByte(param3, param0 ^ -9832);
         var8.position = var8.position + 1;
         if (param0 != 9822) {
           return;

@@ -40,7 +40,7 @@ final class ig {
             return null;
           }
           var5_int = 9 % ((param2 - 19) / 53);
-          stackIn_4_0 = sh.a(-1, param1.a(param3, param0, 5847));
+          stackIn_4_0 = sh.a(-1, param1.getFile(param3, param0, 5847));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

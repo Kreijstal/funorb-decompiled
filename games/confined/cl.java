@@ -235,7 +235,7 @@ final class cl extends ee {
         sj.field_rb[mc.field_c] = mc.field_c;
         an.field_n[mc.field_c] = param3;
         if (cg.field_f > param3) {
-          mi.field_f = param3;
+          ResourceArchive.field_f = param3;
         }
         if (param3 > hj.field_j) {
           ka.field_P = param3;
@@ -246,8 +246,8 @@ final class cl extends ee {
         int var6 = param0 + (param1 + param5);
         int var7 = 0 != var6 ? 1000 * param1 / var6 : 0;
         ik.field_cb[mc.field_c] = var7;
-        if (var7 < mi.field_f) {
-          mi.field_f = var7;
+        if (var7 < ResourceArchive.field_f) {
+          ResourceArchive.field_f = var7;
         }
         if (ka.field_P < var7) {
           ka.field_P = var7;

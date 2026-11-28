@@ -1432,7 +1432,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean a(int param0, vj param1, int param2, ok param3, cf param4) {
+    final synchronized boolean a(int param0, ResourceArchive param1, int param2, ok param3, cf param4) {
         int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -1528,7 +1528,7 @@ final class MidiPcmStream extends PcmStream {
         if (param0 != -23) {
           field_m = (Random) null;
         }
-        return new sa[]{oh.field_c, ei.field_n, cd.field_c, pi.field_N, vb.field_q, qj.field_b, db.field_d, b.field_i, wd.field_d, sc.field_d, NetworkArchiveRequest.field_P, ArchiveRequest.field_z, bc.field_a, vj.field_d};
+        return new sa[]{oh.field_c, ei.field_n, cd.field_c, pi.field_N, vb.field_q, qj.field_b, db.field_d, b.field_i, wd.field_d, sc.field_d, NetworkArchiveRequest.field_P, ArchiveRequest.field_z, bc.field_a, ResourceArchive.field_d};
     }
 
     public static void clearDeclaredStaticReferences(int param0) {

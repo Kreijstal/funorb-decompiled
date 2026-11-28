@@ -23,8 +23,8 @@ final class vi extends IntrusiveNode {
         int[] var5 = null;
         int var6 = 0;
         int var7 = Lexicominos.field_L ? 1 : 0;
-        RgbSprite[] var1 = new RgbSprite[th.field_t];
-        for (var2 = 0; var2 < th.field_t; var2++) {
+        RgbSprite[] var1 = new RgbSprite[BitPacketBuffer.field_t];
+        for (var2 = 0; var2 < BitPacketBuffer.field_t; var2++) {
           var3 = pb.field_h[var2] * bd.field_m[var2];
           var4 = BufferedRandomAccessFile.field_f[var2];
           var5 = new int[var3];
@@ -41,11 +41,11 @@ final class vi extends IntrusiveNode {
     }
 
     final static void a(int param0, vb param1, int param2) {
-        th var5 = null;
+        BitPacketBuffer var5 = null;
         int var4 = 0;
         try {
           var5 = SpriteGeometry.field_q;
-          var5.h(param0, 0);
+          var5.writeCipheredByte(param0, 0);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(param2, param2 - 2);

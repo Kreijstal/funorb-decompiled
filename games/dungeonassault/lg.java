@@ -62,7 +62,7 @@ final class lg {
         }
     }
 
-    final static char a(byte param0, int param1) {
+    final static char decodeCp1252Byte(byte param0, int param1) {
         int var3 = 0;
         int var2 = param0 & 255;
         if (var2 == 0) {
@@ -158,7 +158,7 @@ final class lg {
     final static void a(int param0, int param1, String param2, int param3) {
         cf dupTemp$0 = null;
         if (param0 != 63) {
-          lg.a((byte) 23, 52);
+          lg.decodeCp1252Byte((byte) 23, 52);
         }
         ac var4 = gh.field_i[param3];
         if (var4 == null) {

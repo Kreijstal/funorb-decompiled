@@ -6,7 +6,7 @@ import java.util.*;
 final class ria extends gca {
     private IntrusiveDeque field_j;
     private Sprite field_l;
-    static vr field_i;
+    static ResourceArchive field_i;
     static UiComponent field_k;
 
     final boolean a(boolean param0, boolean param1) {
@@ -22,7 +22,7 @@ final class ria extends gca {
             var3.b(!param0 ? true : false);
             var3 = (cia) (this.field_j.nextForward(0));
           }
-          var4 = vr.field_b & 127;
+          var4 = ResourceArchive.field_b & 127;
           if (var4 > 32) {
             return !this.field_j.isEmpty(12917) ? true : false;
           }
@@ -37,7 +37,7 @@ final class ria extends gca {
           var3Lifetime1.b(!param0 ? true : false);
           var3Lifetime1 = (cia) (this.field_j.nextForward(0));
         }
-        var4Lifetime1 = vr.field_b & 127;
+        var4Lifetime1 = ResourceArchive.field_b & 127;
         if (var4Lifetime1 <= 32 &&
           0 == (var4Lifetime1 & 15)) {
           this.e((byte) -104);

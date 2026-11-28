@@ -9,12 +9,12 @@ final class nb {
     int field_d;
 
     final static void a(int param0, gh param1, int param2) {
-        hj var6 = null;
+        BitPacketBuffer var6 = null;
         int var4 = 0;
         try {
           var6 = ff.field_D;
-          hj var3 = var6;
-          var6.a(false, param0);
+          BitPacketBuffer var3 = var6;
+          var6.writeCipheredByte(false, param0);
           var6.position = var6.position + 1;
           var4 = var6.position;
           var6.writeByte(6389, 1);
@@ -42,7 +42,7 @@ final class nb {
         field_c = null;
     }
 
-    final static e a(boolean param0, hj param1) {
+    final static e a(boolean param0, BitPacketBuffer param1) {
         int var7 = 0;
         e stackIn_24_0 = null;
         RuntimeException stackIn_27_0 = null;
@@ -58,7 +58,7 @@ final class nb {
         int var8 = 0;
         var8 = Transmogrify.field_A ? 1 : 0;
         try {
-          var2_int = param1.k(8, 1522829539);
+          var2_int = param1.readBits(8, 1522829539);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
@@ -68,16 +68,16 @@ final class nb {
           var3 = NodeHashTableIterator.a(-1, param1) ? 1 : 0;
           var4 = NodeHashTableIterator.a(-1, param1) ? 1 : 0;
           var5 = new e();
-          var5.field_M = (short)param1.k(16, 1522829539);
+          var5.field_M = (short)param1.readBits(16, 1522829539);
           var5.field_v = lb.a(var5.field_v, 256, 16, param1);
           var5.field_d = lb.a(var5.field_d, 256, 16, param1);
           var5.field_B = lb.a(var5.field_B, 256, 16, param1);
-          var5.field_C = (short)param1.k(16, 1522829539);
+          var5.field_C = (short)param1.readBits(16, 1522829539);
           var5.field_o = lb.a(var5.field_o, 256, 16, param1);
           var5.field_s = lb.a(var5.field_s, 256, 16, param1);
           var5.field_G = lb.a(var5.field_G, 256, 16, param1);
           if (var3 != 0) {
-            var5.field_l = (short)param1.k(16, 1522829539);
+            var5.field_l = (short)param1.readBits(16, 1522829539);
             var5.field_e = lb.a(var5.field_e, 256, 16, param1);
             var5.field_F = lb.a(var5.field_F, 256, 16, param1);
             var5.field_L = lb.a(var5.field_L, 256, 16, param1);
@@ -86,7 +86,7 @@ final class nb {
             var5.field_J = lb.a(var5.field_J, 256, 16, param1);
           }
           if (var4 != 0) {
-            param1.k(16, 1522829539);
+            param1.readBits(16, 1522829539);
             var5.field_N = lb.a(var5.field_N, 256, 16, param1);
             var5.field_H = lb.a(var5.field_H, 256, 16, param1);
             var5.field_h = lb.a(var5.field_h, 256, 16, param1);

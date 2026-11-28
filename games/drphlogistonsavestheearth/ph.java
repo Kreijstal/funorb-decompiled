@@ -6,7 +6,7 @@ final class ph {
     static he field_h;
     static String[] field_f;
     static String field_d;
-    static vj field_b;
+    static ResourceArchive field_b;
     static long[] field_g;
     static he[][] field_c;
     static int field_e;

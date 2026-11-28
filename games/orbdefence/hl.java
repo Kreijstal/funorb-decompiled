@@ -5,7 +5,7 @@ abstract class hl extends ej {
     private int field_S;
     private int field_T;
     private li field_R;
-    static ki field_N;
+    static ResourceArchive field_N;
     private int field_P;
     private pj field_V;
     private jj field_Q;
@@ -264,7 +264,7 @@ abstract class hl extends ej {
         try {
           fg.a((byte) 51, (java.awt.Component) ((Object) param0));
           if (param1 < 104) {
-            field_N = (ki) null;
+            field_N = (ResourceArchive) null;
           }
           BufferedSocket.a(5000, (java.awt.Component) ((Object) param0));
           if (mj.field_i == null) {

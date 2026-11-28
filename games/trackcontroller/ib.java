@@ -124,8 +124,8 @@ final class ib {
             var6 = (String) null;
             ib.a(false, -91, (String) null);
           }
-          var4_int = param2.a(true, param1);
-          var5 = param2.a(param3, var4_int, param0 - 11);
+          var4_int = param2.getGroupIdByName(true, param1);
+          var5 = param2.getFileIdByName(param3, var4_int, param0 - 11);
           stackIn_3_0 = dg.a(false, var4_int, var5, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

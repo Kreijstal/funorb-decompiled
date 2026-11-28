@@ -9,7 +9,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
     int field_H;
     byte[] field_G;
 
-    final static boolean a(uc param0, byte param1) {
+    final static boolean a(BitPacketBuffer param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -20,7 +20,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
           if (param1 != 98) {
             field_J = 47;
           }
-          stackIn_5_0 = (param0.a(false, 1) == 1);
+          stackIn_5_0 = (param0.readBits(false, 1) == 1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -56,7 +56,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
         return this.field_G;
     }
 
-    final static byte[] a(int param0, CharSequence param1) {
+    final static byte[] encodeCp1252Bytes(int param0, CharSequence param1) {
         int var4 = 0;
         byte[] stackIn_69_0 = null;
         RuntimeException stackIn_72_0 = null;
@@ -68,12 +68,12 @@ final class DiskArchiveRequest extends ArchiveRequest {
         byte[] var3 = null;
         int var5 = 0;
         int var6 = 0;
-        uc var7 = null;
+        BitPacketBuffer var7 = null;
         var6 = Terraphoenix.field_V;
         try {
           if (param0 != -32396) {
-            var7 = (uc) null;
-            DiskArchiveRequest.a((uc) null, (byte) -48);
+            var7 = (BitPacketBuffer) null;
+            DiskArchiveRequest.a((BitPacketBuffer) null, (byte) -48);
           }
           var2_int = param1.length();
           var3 = new byte[var2_int];

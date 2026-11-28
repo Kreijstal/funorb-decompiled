@@ -87,7 +87,7 @@ final class vf {
 
     final static void a(String param0, int param1) {
         try {
-          uc.b(121, param0);
+          BitPacketBuffer.setLoginRequestToken(121, param0);
           ta.a(fh.field_x, false, 10);
           if (param1 < 7) {
             field_a = 60;
@@ -112,11 +112,11 @@ final class vf {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param2.a(param4 ^ param4)) {
+          if (!param2.ensureIndexLoaded(param4 ^ param4)) {
             stackIn_3_0 = (String) (param3);
             return stackIn_3_0;
           }
-          stackIn_5_0 = param1 + " - " + param2.b(param4 - 4708, param0) + "%";
+          stackIn_5_0 = param1 + " - " + param2.getGroupLoadPercentByName(param4 - 4708, param0) + "%";
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

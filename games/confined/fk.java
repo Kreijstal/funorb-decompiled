@@ -11,8 +11,8 @@ final class fk {
         return new PcmSample(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_b / 1000);
     }
 
-    final static fk a(mi param0, int param1, int param2) {
-        byte[] var3 = param0.a((byte) -2, param1, param2);
+    final static fk a(ResourceArchive param0, int param1, int param2) {
+        byte[] var3 = param0.getFile((byte) -2, param1, param2);
         if (var3 == null) {
           return null;
         }
@@ -59,8 +59,8 @@ final class fk {
         return var3;
     }
 
-    final static fk a(mi param0, String param1, String param2) {
-        byte[] var3 = param0.a(-37, param1, param2);
+    final static fk a(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.getFileByName(-37, param1, param2);
         if (var3 == null) {
           return null;
         }

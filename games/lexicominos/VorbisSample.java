@@ -49,14 +49,14 @@ final class VorbisSample extends IntrusiveNode {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    final static VorbisSample a(sh param0, String param1, String param2) {
+    final static VorbisSample a(ResourceArchive param0, String param1, String param2) {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.a(param0)) {
             param0.a(param2, param1, -1);
             return null;
           }
-          byte[] var3 = param0.a((byte) 127, param2, param1);
+          byte[] var3 = param0.getFileByName((byte) 127, param2, param1);
           if (var3 == null) {
             return null;
           }
@@ -80,10 +80,10 @@ final class VorbisSample extends IntrusiveNode {
         field_J = 0;
     }
 
-    private final static boolean a(sh param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_m) {
-          var1 = param0.a(0, -27493, 0);
+          var1 = param0.getFile(0, -27493, 0);
           if (var1 == null) {
             return false;
           }
@@ -614,14 +614,14 @@ final class VorbisSample extends IntrusiveNode {
         field_m = true;
     }
 
-    final static VorbisSample a(sh param0, int param1, int param2) {
+    final static VorbisSample a(ResourceArchive param0, int param1, int param2) {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.a(param0)) {
-            param0.a(param1, (byte) 78, param2);
+            param0.tryLoadFile(param1, (byte) 78, param2);
             return null;
           }
-          byte[] var3 = param0.a(param1, -27493, param2);
+          byte[] var3 = param0.getFile(param1, -27493, param2);
           if (var3 == null) {
             return null;
           }

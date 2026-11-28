@@ -6,7 +6,7 @@ import java.io.*;
 final class tk {
     static bn field_i;
     static String field_c;
-    static nk field_h;
+    static BitPacketBuffer field_h;
     static String field_f;
     static int field_b;
     static lh field_a;

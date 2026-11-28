@@ -165,7 +165,7 @@ final class ge extends WidgetWrapper {
 
     final static void a(int param0, int param1, boolean param2, BitmapFont param3, int param4, int param5, int param6, Sprite[] param7, int param8, byte param9, int param10, Sprite[] param11) {
         try {
-          vr.a(param8, param3, param6, param6, param10, param7, param0, param3, param4, param5, param2, param11, param1, param8, 480);
+          ResourceArchive.configureClientUi(param8, param3, param6, param6, param10, param7, param0, param3, param4, param5, param2, param11, param1, param8, 480);
           int var12_int = 3 / ((param9 + 6) / 43);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ge.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ',' + param10 + ',' + (param11 != null ? "{...}" : "null") + ')');

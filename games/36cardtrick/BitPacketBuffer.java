@@ -1,47 +1,47 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class w extends PacketBuffer {
+final class BitPacketBuffer extends PacketBuffer {
     private int field_o;
     private IsaacRandom field_l;
     static String field_m;
     static int field_n;
 
-    w(int param0) {
+    BitPacketBuffer(int param0) {
         super(param0);
     }
 
-    final void b(int[] param0, int param1) {
+    final void setCipherSeed(int[] param0, int param1) {
         try {
           this.field_l = new IsaacRandom(param0);
           if (param1 != 8) {
             int[] var4 = (int[]) null;
-            this.b((int[]) null, 66);
+            this.setCipherSeed((int[]) null, 66);
           }
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "w.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void g(int param0) {
+    final void endBitAccess(int param0) {
         this.position = (7 + this.field_o) / param0;
     }
 
-    final void f(boolean param0) {
+    final void beginBitAccess(boolean param0) {
         if (!param0) {
           field_m = (String) null;
         }
         this.field_o = this.position * 8;
     }
 
-    final int g(byte param0) {
+    final int readCipheredByte(byte param0) {
         int var2 = 118 % ((39 - param0) / 51);
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         return this.payload[fieldTemp$0] - this.field_l.nextInt(-1427) & 255;
     }
 
-    final void b(int param0, byte[] param1, int param2, int param3) {
+    final void readCipheredBytes(int param0, byte[] param1, int param2, int param3) {
         int var5_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -75,7 +75,7 @@ final class w extends PacketBuffer {
         }
     }
 
-    final static void a(int[] param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7, int param8) {
+    final static void rasterizeClippedTriangle(int[] param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7, int param8) {
         RuntimeException stackIn_77_0 = null;
         StringBuilder stackIn_77_1 = null;
         String stackIn_78_2 = null;
@@ -271,7 +271,7 @@ final class w extends PacketBuffer {
         }
     }
 
-    final void h(int param0, int param1) {
+    final void writeCipheredByte(int param0, int param1) {
         if (param1 != 0) {
           return;
         }
@@ -280,18 +280,18 @@ final class w extends PacketBuffer {
         this.payload[fieldTemp$0] = (byte)(param0 + this.field_l.nextInt(-1427));
     }
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_m = null;
         if (param0 <= 18) {
-          w.a((int[]) null, -109, -96, -41, true, 32, 55, -64, -115);
+          BitPacketBuffer.rasterizeClippedTriangle((int[]) null, -109, -96, -41, true, 32, 55, -64, -115);
         }
     }
 
-    w(byte[] param0) {
+    BitPacketBuffer(byte[] param0) {
         super(param0);
     }
 
-    final int g(int param0, int param1) {
+    final int readBits(int param0, int param1) {
         int incrementValue$0 = 0;
         int var6 = Main.field_T;
         if (param1 != -1) {

@@ -78,7 +78,7 @@ final class DiagnosticSupport002 extends RuntimeException {
         }
     }
 
-    final static char computeCharacter0762(byte byteArgument1, byte byteArgument2) {
+    final static char decodeCp1252Byte(byte byteArgument1, byte byteArgument2) {
         int integerLocal1 = 0;
         int integerLocal2 = byteArgument1 & 255;
         int integerLocal3;

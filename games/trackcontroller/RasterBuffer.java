@@ -11,7 +11,7 @@ abstract class RasterBuffer {
 
     abstract void a(int param0, int param1, java.awt.Component param2, int param3);
 
-    final static void a(int param0, la param1) {
+    final static void a(int param0, BitPacketBuffer param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -40,7 +40,7 @@ abstract class RasterBuffer {
           Object var10 = null;
           ObjectInputStream var11 = null;
           int var12 = 0;
-          la var13 = null;
+          BitPacketBuffer var13 = null;
           kj var14 = null;
           Object var17 = null;
           java.lang.reflect.Field var17_ref = null;
@@ -91,8 +91,8 @@ abstract class RasterBuffer {
               return;
             }
             if (param0 < 45) {
-              var13 = (la) null;
-              RasterBuffer.a(92, (la) null);
+              var13 = (BitPacketBuffer) null;
+              RasterBuffer.a(92, (BitPacketBuffer) null);
             }
             var4 = param1.position;
             param1.writeInt(false, var18.field_w);
@@ -242,7 +242,7 @@ abstract class RasterBuffer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= -23) {
-            stackIn_4_0 = param1.a((byte) 48);
+            stackIn_4_0 = param1.tryLoadAllGroups((byte) 48);
             return stackIn_4_0;
           }
           return true;

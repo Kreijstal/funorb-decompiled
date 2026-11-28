@@ -3,7 +3,7 @@
  */
 final class jk {
     static td field_b;
-    static qk field_c;
+    static ResourceArchive field_c;
     private boolean field_f;
     private String field_e;
     static PlatformTaskDispatcher field_a;

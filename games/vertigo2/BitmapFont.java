@@ -46,7 +46,7 @@ abstract class BitmapFont extends DualLinkNode {
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
 
     final int a(char param0) {
-        return this.field_B[HuffmanCodec.a(param0, (byte) -119) & 255];
+        return this.field_B[HuffmanCodec.encodeCp1252Character(param0, (byte) -119) & 255];
     }
 
     final void a(String param0, int param1, int param2, int param3, int param4, int param5) {
@@ -276,7 +276,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(HuffmanCodec.a((char) var8, (byte) -118) & 255);
+              var8 = (char)(HuffmanCodec.encodeCp1252Character((char) var8, (byte) -118) & 255);
               if (this.field_E != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_E[(var5 << 8) + var8];
@@ -634,7 +634,7 @@ abstract class BitmapFont extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_y.append((char) var14);
-                var14 = (char)(HuffmanCodec.a((char) var14, (byte) -117) & 255);
+                var14 = (char)(HuffmanCodec.encodeCp1252Character((char) var14, (byte) -117) & 255);
                 var4 = var4 + this.field_B[var14];
                 if (this.field_E != null &&
                   var10 != 0) {
@@ -791,7 +791,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(HuffmanCodec.a((char) var7, (byte) -121) & 255);
+              var7 = (char)(HuffmanCodec.encodeCp1252Character((char) var7, (byte) -121) & 255);
               var4 = var4 + this.field_B[var7];
               if (this.field_E != null &&
                 var3 != 0) {

@@ -170,7 +170,7 @@ final class oh implements ca {
           }
           SoftwareRasterizer.fillRectangle(param1.field_q + param2, param1.field_v + param3, param1.field_x, param1.field_s, this.field_g);
           if (param0 != 34) {
-            oh.a(32, '￴');
+            oh.isSupportedCp1252KeyCharacter(32, '￴');
           }
           var8 = param2 + param1.field_q + this.field_d;
           var9 = param3 + (param1.field_v + this.field_h);
@@ -218,8 +218,8 @@ final class oh implements ca {
             var6 = (String) null;
             oh.a((String) null, -24);
           }
-          var4_int = param0.a(param1, 1000);
-          var5 = param0.a(0, param3, var4_int);
+          var4_int = param0.getGroupIdByName(param1, 1000);
+          var5 = param0.getFileIdByName(0, param3, var4_int);
           stackIn_3_0 = jf.a(var5, param0, var4_int, (byte) 41);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -248,7 +248,7 @@ final class oh implements ca {
         }
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isSupportedCp1252KeyCharacter(int param0, char param1) {
         int var3 = 0;
         char[] var2 = null;
         int var4 = 0;

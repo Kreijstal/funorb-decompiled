@@ -17,7 +17,7 @@ final class ad {
           if (param1 != 0) {
             ad.clearStaticReferences((byte) -106);
           }
-          stackIn_3_0 = wh.field_e.a(0, param0, "");
+          stackIn_3_0 = wh.field_e.getFileByName(0, param0, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

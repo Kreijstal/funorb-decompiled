@@ -81,7 +81,7 @@ final class eo {
             return (MonochromeBitmapFont) (stackIn_2_0);
           }
           int var5_int = 53 / ((param2 + 57) / 33);
-          MonochromeBitmapFont stackIn_4_0 = HighscoreNameEntry.a(param4.a(param3, -10470, param1), 544);
+          MonochromeBitmapFont stackIn_4_0 = HighscoreNameEntry.a(param4.getFile(param3, -10470, param1), 544);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

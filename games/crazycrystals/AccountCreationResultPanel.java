@@ -120,7 +120,7 @@ final class AccountCreationResultPanel extends na implements vd {
                 var4 = on.field_c;
               }
             } else {
-              var4 = db.field_f;
+              var4 = ResourceArchive.field_f;
               if (this.field_pb != null) {
                 this.field_pb.a(param0 ^ -21);
               }

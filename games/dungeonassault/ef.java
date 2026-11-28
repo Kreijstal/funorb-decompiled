@@ -49,7 +49,7 @@ final class ef {
         try {
           var5_int = -125 % ((param0 + 63) / 57);
           if (kk.a(param2, 1, param1, param3)) {
-            stackIn_4_0 = rj.a(param4.b(5, param1, param3), 18118);
+            stackIn_4_0 = rj.a(param4.getFile(5, param1, param3), 18118);
             return stackIn_4_0;
           }
           stackIn_2_0 = null;

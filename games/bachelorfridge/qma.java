@@ -6,10 +6,10 @@ import java.io.*;
 final class qma extends pu {
     private static String field_z;
 
-    final static vr a(boolean param0, int param1, boolean param2, int param3, boolean param4, int param5) {
+    final static ResourceArchive a(boolean param0, int param1, boolean param2, int param3, boolean param4, int param5) {
         try {
-          vr stackIn_5_0 = null;
-          vr stackIn_16_0 = null;
+          ResourceArchive stackIn_5_0 = null;
+          ResourceArchive stackIn_16_0 = null;
           Throwable decompiledCaughtException = null;
           Object var6 = null;
           Object var7 = null;
@@ -24,7 +24,7 @@ final class qma extends pu {
                 var6 = new SectorCacheStore(255, f.field_a, new BufferedCacheFile(mh.field_l.field_n, 12000, 0), 2097152);
               }
               if (param1 != 2097152) {
-                stackIn_5_0 = (vr) null;
+                stackIn_5_0 = (ResourceArchive) null;
                 return stackIn_5_0;
               }
               if (f.field_a != null) {
@@ -41,7 +41,7 @@ final class qma extends pu {
               if (param4) {
                 var8.a((byte) 90);
               }
-              stackIn_16_0 = new vr(var8, param0, param3);
+              stackIn_16_0 = new ResourceArchive(var8, param0, param3);
               return stackIn_16_0;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

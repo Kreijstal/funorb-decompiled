@@ -24,7 +24,7 @@ final class jc extends IntrusiveNode {
         field_g = null;
     }
 
-    final static gk a(int param0, boolean param1, int param2, int param3, boolean param4) {
+    final static ResourceArchive a(int param0, boolean param1, int param2, int param3, boolean param4) {
         if (param3 == 0) {
           return j.a(param1, (byte) -104, false, param0, param4, param2);
         }

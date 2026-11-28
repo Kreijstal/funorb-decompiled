@@ -56,27 +56,27 @@ final class vb {
           vb.a(-69);
         }
         if (bl.field_a != null) {
-          if (!bl.field_a.a(0)) {
+          if (!bl.field_a.ensureIndexLoaded(0)) {
             return si.field_hb;
           }
           return qb.field_e;
         }
-        if (!bi.field_d.a(0)) {
+        if (!bi.field_d.ensureIndexLoaded(0)) {
           return be.field_w;
         }
         if (!bi.field_d.a(-3, "commonui")) {
-          return bl.field_d + " - " + bi.field_d.b(-120, "commonui") + "%";
+          return bl.field_d + " - " + bi.field_d.getGroupLoadPercentByName(-120, "commonui") + "%";
         }
-        if (!ph.field_q.a(0)) {
+        if (!ph.field_q.ensureIndexLoaded(0)) {
           return field_a;
         }
         if (!ph.field_q.a(-3, "commonui")) {
-          return ki.field_S + " - " + ph.field_q.b(param0 ^ 120, "commonui") + "%";
+          return ki.field_S + " - " + ph.field_q.getGroupLoadPercentByName(param0 ^ 120, "commonui") + "%";
         }
-        if (!ch.field_g.a(param0 ^ -27)) {
+        if (!ch.field_g.ensureIndexLoaded(param0 ^ -27)) {
           return IntrusiveDeque.field_d;
         }
-        if (ch.field_g.b((byte) -128)) {
+        if (ch.field_g.tryLoadAllGroups((byte) -128)) {
           return MusicPatchPcmStream.field_o;
         }
         return li.field_b + " - " + ch.field_g.a((byte) 127) + "%";
@@ -161,7 +161,7 @@ final class vb {
         field_a = null;
     }
 
-    final static byte a(byte param0, char param1) {
+    final static byte encodeCp1252Character(byte param0, char param1) {
         int var2;
         int var3;
         int var2Lifetime1;

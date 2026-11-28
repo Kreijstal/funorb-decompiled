@@ -86,7 +86,7 @@ final class DiskCacheWorker implements Runnable {
           ec.a((byte) 27);
           return;
         }
-        ia var2 = se.field_p;
+        BitPacketBuffer var2 = se.field_p;
         var2.readInt((byte) -118);
         var2.readInt((byte) -93);
         var2.readInt((byte) -104);

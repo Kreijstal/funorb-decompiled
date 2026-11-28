@@ -14,7 +14,7 @@ final class og {
     private String field_h;
     int field_d;
     private int field_e;
-    static ki field_g;
+    static ResourceArchive field_g;
     private long field_m;
     static String field_j;
 

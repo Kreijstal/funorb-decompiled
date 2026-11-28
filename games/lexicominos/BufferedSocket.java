@@ -85,9 +85,9 @@ final class BufferedSocket implements Runnable {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        th var13 = null;
+        BitPacketBuffer var13 = null;
         int var14 = 0;
-        th var15 = null;
+        BitPacketBuffer var15 = null;
         int[][] var19 = null;
         int var6_intLifetime1;
         int var9Lifetime1;
@@ -124,9 +124,9 @@ final class BufferedSocket implements Runnable {
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               lh.a(var15, -95);
               if (var6_intLifetime1 == 0) {
-                FullscreenFocusCanvas.a(sg.field_a, 0, th.field_s, hh.field_I, var6_intLifetime1, AccountRequestState.field_g);
+                FullscreenFocusCanvas.a(sg.field_a, 0, BitPacketBuffer.field_s, hh.field_I, var6_intLifetime1, AccountRequestState.field_g);
               } else {
-                FullscreenFocusCanvas.a(sg.field_a, 0, th.field_s, hh.field_I, var6_intLifetime1, AccountRequestState.field_g);
+                FullscreenFocusCanvas.a(sg.field_a, 0, BitPacketBuffer.field_s, hh.field_I, var6_intLifetime1, AccountRequestState.field_g);
               }
             }
             DirectByteStorage.b((byte) 83, var5);

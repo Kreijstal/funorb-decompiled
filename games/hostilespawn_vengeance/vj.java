@@ -163,7 +163,7 @@ final class vj extends ql {
           if (param1 != 24) {
             field_s = -91;
           }
-          stackIn_3_0 = i.field_b.a(param0, "", param1 ^ 24);
+          stackIn_3_0 = i.field_b.getFileByName(param0, "", param1 ^ 24);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

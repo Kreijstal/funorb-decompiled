@@ -74,8 +74,8 @@ final class bb {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.a(-43, param3);
-          var5 = param1.a(param0, var4_int, -81);
+          var4_int = param1.getGroupIdByName(-43, param3);
+          var5 = param1.getFileIdByName(param0, var4_int, -81);
           if (param2 > -92) {
             field_a = (IntrusiveDeque) null;
           }

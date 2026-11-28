@@ -74,7 +74,7 @@ final class j extends DualLinkNode {
                 if (0 == var6) {
                   stackIn_20_2 = (char)0;
                 } else {
-                  stackIn_20_2 = vm.a(123, (byte) var6);
+                  stackIn_20_2 = vm.decodeCp1252Byte(123, (byte) var6);
                 }
                 stackIn_19_0[stackIn_19_1] = stackIn_20_2;
               }
@@ -90,7 +90,7 @@ final class j extends DualLinkNode {
                 if (var6 == 0) {
                   stackIn_12_2 = (char)0;
                 } else {
-                  stackIn_12_2 = vm.a(117, (byte) var6);
+                  stackIn_12_2 = vm.decodeCp1252Byte(117, (byte) var6);
                 }
                 stackIn_11_0[stackIn_11_1] = stackIn_12_2;
               }

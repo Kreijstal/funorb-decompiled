@@ -82,7 +82,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
             return (nf) (stackIn_2_0);
           }
           var5_int = 69 / ((param4 + 78) / 40);
-          stackIn_4_0 = SocketConnector.a(param3.c(param2, param1, 0), (byte) 110);
+          stackIn_4_0 = SocketConnector.a(param3.getFile(param2, param1, 0), (byte) 110);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

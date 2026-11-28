@@ -16,7 +16,7 @@ final class gh extends IntrusiveNode {
           pc.a(1);
           return;
         }
-        hj var2 = WordLanguage.field_l;
+        BitPacketBuffer var2 = WordLanguage.field_l;
         var2.readInt((byte) -126);
         if (param0 == 0) {
           var2.readInt((byte) -108);

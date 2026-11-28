@@ -18,7 +18,7 @@ final class WordLanguage {
     String field_j;
     String field_n;
     int field_o;
-    static hj field_l;
+    static BitPacketBuffer field_l;
     String field_b;
     static int field_k;
 
@@ -55,7 +55,7 @@ final class WordLanguage {
         try {
           var3_int = 0;
           if (param0 != -1) {
-            field_l = (hj) null;
+            field_l = (BitPacketBuffer) null;
           }
           while (param1.length > var3_int) {
             if (null != param1[var3_int]) {
@@ -140,7 +140,7 @@ final class WordLanguage {
         }
     }
 
-    WordLanguage(ci param0, ci param1, WordDictionary param2) {
+    WordLanguage(ResourceArchive param0, ResourceArchive param1, WordDictionary param2) {
         int var12_int = 0;
         int var18 = 0;
         int stackIn_39_0 = 0;

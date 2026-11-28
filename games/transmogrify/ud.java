@@ -5,7 +5,7 @@ final class ud {
     static boolean field_a;
     static int field_b;
 
-    final static boolean a(ci param0, boolean param1, ci param2, ci param3) {
+    final static boolean a(ResourceArchive param0, boolean param1, ResourceArchive param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -16,18 +16,18 @@ final class ud {
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param2.a((byte) -119)) {
+          if (!param2.ensureIndexLoaded((byte) -119)) {
             return false;
           }
           if (!param2.a((byte) 120, "commonui")) {
             return false;
           }
-          if (param3.a((byte) -117) &&
+          if (param3.ensureIndexLoaded((byte) -117) &&
             param3.a((byte) -79, "commonui")) {
             if (!param1) {
               field_a = false;
             }
-            if (param0.a((byte) -118) &&
+            if (param0.ensureIndexLoaded((byte) -118) &&
               param0.a((byte) 127, "button.gif")) {
               return true;
             }

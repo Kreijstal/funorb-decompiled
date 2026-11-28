@@ -12,7 +12,7 @@ final class jj {
     final static void c(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        nk var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -23,7 +23,7 @@ final class jj {
           }
           var1 = qn.field_U;
           while (ci.g(param0 + 2147483639)) {
-            var1.f(8, -65);
+            var1.writeCipheredByte(8, -65);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;

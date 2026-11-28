@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tf implements de {
-    static ue field_a;
+    static ResourceArchive field_a;
 
     public final void a(int param0, boolean param1, int param2, int param3, UiWidget param4) {
         int var6_int = 0;

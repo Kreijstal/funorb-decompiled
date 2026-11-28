@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ui {
-    static vj field_a;
+    static ResourceArchive field_a;
 
     final static void a(int param0, int param1) {
         wi.b(-1);
         if (param1 != 1) {
-          vj var3 = (vj) null;
-          ui.a((PcmStreamMixer) null, (byte) 78, 8, (vj) null);
+          ResourceArchive var3 = (ResourceArchive) null;
+          ui.a((PcmStreamMixer) null, (byte) 78, 8, (ResourceArchive) null);
         }
     }
 
@@ -96,7 +96,7 @@ final class ui {
         }
     }
 
-    final static void a(PcmStreamMixer param0, byte param1, int param2, vj param3) {
+    final static void a(PcmStreamMixer param0, byte param1, int param2, ResourceArchive param3) {
         try {
           wk.field_i = AccountNameAvailabilityValidator.d((byte) 9) * param2 / 1000;
           c.a(false, param3);

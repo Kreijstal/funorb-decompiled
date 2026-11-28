@@ -527,7 +527,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("mu_chat_game_friends_only", -105);
                 if (var2 != null) {
-                  nk.field_v = ad.a(-29410, var2);
+                  BitPacketBuffer.field_v = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_chat_game_friends", -95);
                 if (null != var2) {
@@ -599,7 +599,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("rated_game_tips_setup_plural", -80);
                 if (var2 != null) {
-                  nk.field_u = ad.a(-29410, var2);
+                  BitPacketBuffer.field_u = ad.a(-29410, var2);
                 }
                 var2 = cd.a("waiting_to_start_hint", -93);
                 if (null != var2) {
@@ -2614,7 +2614,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("keychar_the_character_under_questionmark", -124);
                 if (var2 != null) {
-                  ql.field_f = vm.a(103, var2[0]);
+                  ql.field_f = vm.decodeCp1252Byte(103, var2[0]);
                 }
                 var2 = cd.a("rating_noratings", -94);
                 if (null != var2) {

@@ -21,8 +21,8 @@ final class md {
         try {
           long dupTemp$1 = 0L;
           IOException var2 = null;
-          w var4 = null;
-          w var5 = null;
+          BitPacketBuffer var4 = null;
+          BitPacketBuffer var5 = null;
           int stackIn_13_0 = 0;
           Throwable decompiledCaughtException = null;
           if (null == fe.field_c) {

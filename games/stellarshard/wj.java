@@ -712,10 +712,10 @@ final class wj extends fb {
         var10 = stellarshard.field_B;
         try {
           if (nh.field_g != null &&
-            nh.field_g.a((byte) -36) &&
+            nh.field_g.ensureIndexLoaded((byte) -36) &&
             nh.field_g.a("benefits", (byte) -109) &&
             vf.field_E != null &&
-            vf.field_E.a((byte) -36) &&
+            vf.field_E.ensureIndexLoaded((byte) -36) &&
             vf.field_E.a("benefits", (byte) -109)) {
             tk.field_c = qd.a(nh.field_g, "headline", "benefits", (byte) 81);
             pl.field_T = qd.a(nh.field_g, "blurbpane", "benefits", (byte) 78);

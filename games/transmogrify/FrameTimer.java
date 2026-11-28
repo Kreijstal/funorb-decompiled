@@ -34,10 +34,10 @@ abstract class FrameTimer {
     final static void a(int param0, boolean param1, String param2, boolean param3) {
         try {
           he.b((byte) -87);
-          ci.field_f.k(31410);
+          ResourceArchive.field_f.k(31410);
           ok.field_a = new ff(ob.field_F, (String) null, lb.field_d, param3, param1);
-          l.field_d = new rf(ci.field_f, ok.field_a);
-          ci.field_f.b((UiWidget) (l.field_d), (byte) -71);
+          l.field_d = new rf(ResourceArchive.field_f, ok.field_a);
+          ResourceArchive.field_f.b((UiWidget) (l.field_d), (byte) -71);
           int var4_int = 70 % ((param0 - 41) / 32);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "td.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

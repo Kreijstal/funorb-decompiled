@@ -371,7 +371,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (0 != this.payload[fieldTemp$0]);
         var3 = -1 + (this.position - var2);
         if (var3 != 0) {
-          return va.a(var2, 105, this.payload, var3);
+          return va.decodeCp1252String(var2, 105, this.payload, var3);
         }
         return "";
     }
@@ -445,7 +445,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (0 != this.payload[fieldTemp$1]);
         var4 = -1 + (-var3 + this.position);
         if (var4 != 0) {
-          return va.a(var3, param0 + 12372, this.payload, var4);
+          return va.decodeCp1252String(var3, param0 + 12372, this.payload, var4);
         }
         return "";
     }
@@ -520,7 +520,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + o.a(this.position, param1.length(), var4, 0, (byte) -80, this.payload);
+          this.position = this.position + o.encodeCp1252Subsequence(this.position, param1.length(), var4, 0, (byte) -80, this.payload);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -639,7 +639,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + o.a(this.position, param1.length(), var4, 0, (byte) -84, this.payload);
+          this.position = this.position + o.encodeCp1252Subsequence(this.position, param1.length(), var4, 0, (byte) -84, this.payload);
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;

@@ -6,14 +6,14 @@ final class FullHealAnimation extends EventAnimation {
     private FullHealEvent field_z;
     static int field_y;
     static Sprite field_C;
-    static vr field_B;
+    static ResourceArchive field_B;
     static int field_v;
     static String field_w;
     static int field_x;
 
     final static boolean e(int param0) {
         if (param0 != 37) {
-          field_B = (vr) null;
+          field_B = (ResourceArchive) null;
           return true;
         }
         return true;

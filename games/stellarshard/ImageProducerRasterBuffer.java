@@ -232,7 +232,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            stackIn_4_0 = b.field_u.a("", param1, (byte) -12);
+            stackIn_4_0 = b.field_u.getFileByName("", param1, (byte) -12);
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;

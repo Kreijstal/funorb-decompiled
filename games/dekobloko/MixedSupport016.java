@@ -36,8 +36,8 @@ final class MixedSupport016 {
           if (byteArgument4 <= 86) {
             integerArrayState0021 = (int[]) null;
           }
-          integerLocal1 = resourceArchiveArgument3.computeInteger0819(-1, stringArgument5);
-          integerLocal3 = resourceArchiveArgument3.computeInteger0806(integerLocal1, 13030, stringArgument1);
+          integerLocal1 = resourceArchiveArgument3.getGroupIdByName(-1, stringArgument5);
+          integerLocal3 = resourceArchiveArgument3.getFileIdByName(integerLocal1, 13030, stringArgument1);
           stackRenderingSupport009Local4 = FullscreenCanvas.computeRenderingSupport0091382(resourceArchiveArgument3, (byte) 41, integerLocal3, integerLocal1, resourceArchiveArgument2);
           return stackRenderingSupport009Local4;
         } catch (java.lang.RuntimeException caughtParameterLocal15) {

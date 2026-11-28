@@ -19,7 +19,7 @@ final class RefreshingAnimation extends EventAnimation {
         return paa.a(15000);
     }
 
-    final static void a(vr param0, boolean param1, boolean param2, vr param3) {
+    final static void a(ResourceArchive param0, boolean param1, boolean param2, ResourceArchive param3) {
         try {
           if (!param1) {
             RefreshingAnimation.d(126);
@@ -86,8 +86,8 @@ final class RefreshingAnimation extends EventAnimation {
 
     public static void d(int param0) {
         if (param0 != -1) {
-          vr var2 = (vr) null;
-          RefreshingAnimation.a((vr) null, true, true, (vr) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          RefreshingAnimation.a((ResourceArchive) null, true, true, (ResourceArchive) null);
           field_v = null;
           return;
         }

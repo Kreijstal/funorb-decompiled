@@ -541,10 +541,10 @@ final class tk extends IntrusiveNode {
         return var1;
     }
 
-    private final static boolean a(vj param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_v) {
-          var1 = param0.a(0, 0, (byte) 35);
+          var1 = param0.getFile(0, 0, (byte) 35);
           if (var1 == null) {
             return false;
           }
@@ -553,14 +553,14 @@ final class tk extends IntrusiveNode {
         return true;
     }
 
-    final static tk a(vj param0, String param1, String param2) {
+    final static tk a(ResourceArchive param0, String param1, String param2) {
         try {
           tk var4_ref = null;
           if (!tk.a(param0)) {
             param0.a(-23, param1, param2);
             return null;
           }
-          byte[] var3 = param0.a(param1, param2, 24874);
+          byte[] var3 = param0.getFileByName(param1, param2, 24874);
           if (var3 == null) {
             return null;
           }
@@ -729,14 +729,14 @@ final class tk extends IntrusiveNode {
         field_v = true;
     }
 
-    final static tk a(vj param0, int param1, int param2) {
+    final static tk a(ResourceArchive param0, int param1, int param2) {
         try {
           tk var4_ref = null;
           if (!tk.a(param0)) {
-            param0.b(param1, param2, -98);
+            param0.tryLoadFile(param1, param2, -98);
             return null;
           }
-          byte[] var3 = param0.a(param1, param2, (byte) 35);
+          byte[] var3 = param0.getFile(param1, param2, (byte) 35);
           if (var3 == null) {
             return null;
           }

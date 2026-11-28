@@ -31,8 +31,8 @@ final class pk extends ta implements jb, ai {
         field_G = null;
         field_F = null;
         if (param0 != -100) {
-          ki var2 = (ki) null;
-          pk.a(2, 65, (ki) null, 120);
+          ResourceArchive var2 = (ResourceArchive) null;
+          pk.a(2, 65, (ResourceArchive) null, 120);
         }
     }
 
@@ -85,7 +85,7 @@ final class pk extends ta implements jb, ai {
         }
     }
 
-    final static boolean a(int param0, int param1, ki param2, int param3) {
+    final static boolean a(int param0, int param1, ResourceArchive param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -95,7 +95,7 @@ final class pk extends ta implements jb, ai {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = param2.b(param1, false, param3);
+          var6 = param2.getFile(param1, false, param3);
           var4 = var6;
           var5 = 28 / ((param0 - 28) / 40);
           if (var6 == null) {
@@ -284,7 +284,7 @@ final class pk extends ta implements jb, ai {
             }
             this.field_A = new s(stackIn_18_3, (ag) null);
             if (this.field_J) {
-              this.field_K = new s(ki.field_h, (ag) (this));
+              this.field_K = new s(ResourceArchive.field_h, (ag) (this));
             }
           }
           this.field_N.field_j = (td) ((Object) new fg(10000536));

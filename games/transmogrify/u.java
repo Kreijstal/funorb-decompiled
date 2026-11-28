@@ -14,14 +14,14 @@ final class u {
         param1 = param1 | param1 >>> 4;
         param1 = param1 | param1 >>> 8;
         if (param0 != -816856703) {
-          hj var3 = (hj) null;
-          u.a((hj) null, (byte) 92);
+          BitPacketBuffer var3 = (BitPacketBuffer) null;
+          u.a((BitPacketBuffer) null, (byte) 92);
         }
         param1 = param1 | param1 >>> 16;
         return 1 + param1;
     }
 
-    final static oe[] a(hj param0, byte param1) {
+    final static oe[] a(BitPacketBuffer param0, byte param1) {
         Object stackIn_3_0 = null;
         oe[] stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
@@ -39,26 +39,26 @@ final class u {
         int var5Lifetime1;
         var7 = Transmogrify.field_A ? 1 : 0;
         try {
-          var2_int = param0.k(8, 1522829539);
+          var2_int = param0.readBits(8, 1522829539);
           if (var2_int > 0) {
             stackIn_3_0 = null;
             return (oe[]) (stackIn_3_0);
           }
-          var3 = param0.k(12, 1522829539);
+          var3 = param0.readBits(12, 1522829539);
           var4 = new oe[var3];
           for (var5 = 0; var5 < var3; var5++) {
             if (!NodeHashTableIterator.a(-1, param0)) {
-              var6 = param0.k(ol.a(-23755, var5 - 1), 1522829539);
+              var6 = param0.readBits(ol.a(-23755, var5 - 1), 1522829539);
               var4[var5] = var4[var6];
             } else {
               var6_ref_oe = new oe();
-              param0.k(24, 1522829539);
-              param0.k(24, 1522829539);
-              var6_ref_oe.field_b = param0.k(24, 1522829539);
-              param0.k(9, 1522829539);
-              param0.k(12, 1522829539);
-              param0.k(12, 1522829539);
-              param0.k(12, 1522829539);
+              param0.readBits(24, 1522829539);
+              param0.readBits(24, 1522829539);
+              var6_ref_oe.field_b = param0.readBits(24, 1522829539);
+              param0.readBits(9, 1522829539);
+              param0.readBits(12, 1522829539);
+              param0.readBits(12, 1522829539);
+              param0.readBits(12, 1522829539);
               var4[var5] = var6_ref_oe;
             }
           }
@@ -79,7 +79,7 @@ final class u {
         }
     }
 
-    final static String a(String param0, String param1, ci param2, boolean param3) {
+    final static String a(String param0, String param1, ResourceArchive param2, boolean param3) {
         RuntimeException var4 = null;
         String stackIn_4_0 = null;
         String stackIn_6_0 = null;
@@ -95,7 +95,7 @@ final class u {
           if (!param3) {
             field_a = (AudioOutput) null;
           }
-          if (param2.a((byte) -125)) {
+          if (param2.ensureIndexLoaded((byte) -125)) {
             stackIn_6_0 = param1 + " - " + param2.b(-22884) + "%";
             return stackIn_6_0;
           }
@@ -152,7 +152,7 @@ final class u {
             }
             var4 = new byte[var3_int];
             param2.position = param2.position + bf.field_C.a(var3_int, var4, 0, param2.payload, 0, param2.position);
-            var5 = cc.a(0, 15923, var3_int, var4);
+            var5 = cc.decodeCp1252String(0, 15923, var3_int, var4);
             stackIn_6_0 = var5;
             return stackIn_6_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -177,8 +177,8 @@ final class u {
 
     public static void a(byte param0) {
         if (param0 < 99) {
-          ci var2 = (ci) null;
-          u.a((String) null, (String) null, (ci) null, false);
+          ResourceArchive var2 = (ResourceArchive) null;
+          u.a((String) null, (String) null, (ResourceArchive) null, false);
         }
         field_c = null;
         field_a = null;

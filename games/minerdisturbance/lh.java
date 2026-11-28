@@ -205,7 +205,7 @@ final class lh {
             var3 = (String) null;
             lh.a(94, (String) null);
           }
-          stackIn_3_0 = fa.field_d.a(param1, ~param0, "");
+          stackIn_3_0 = fa.field_d.getFileByName(param1, ~param0, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

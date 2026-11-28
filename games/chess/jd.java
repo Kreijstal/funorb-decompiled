@@ -107,27 +107,27 @@ final class jd {
           return ob.field_z;
         }
         if (qa.field_c != null) {
-          if (qa.field_c.c((byte) 122)) {
+          if (qa.field_c.ensureIndexLoaded((byte) 122)) {
             return e.field_T;
           }
           return uk.field_a;
         }
-        if (!fl.field_m.c((byte) 121)) {
+        if (!fl.field_m.ensureIndexLoaded((byte) 121)) {
           return gb.field_o;
         }
         if (!fl.field_m.b("commonui", 100)) {
-          return k.field_V + " - " + fl.field_m.c("commonui", 0) + "%";
+          return k.field_V + " - " + fl.field_m.getGroupLoadPercentByName("commonui", 0) + "%";
         }
-        if (!Chess.field_B.c((byte) 119)) {
+        if (!Chess.field_B.ensureIndexLoaded((byte) 119)) {
           return HuffmanCodec.field_d;
         }
         if (!Chess.field_B.b("commonui", 100)) {
-          return nc.field_P + " - " + Chess.field_B.c("commonui", 0) + "%";
+          return nc.field_P + " - " + Chess.field_B.getGroupLoadPercentByName("commonui", 0) + "%";
         }
-        if (!bi.field_a.c((byte) 120)) {
+        if (!bi.field_a.ensureIndexLoaded((byte) 120)) {
           return ld.field_a;
         }
-        if (!bi.field_a.b((byte) -40)) {
+        if (!bi.field_a.tryLoadAllGroups((byte) -40)) {
           return wn.field_g + " - " + bi.field_a.a((byte) -91) + "%";
         }
         if (!param0) {

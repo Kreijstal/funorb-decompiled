@@ -185,7 +185,7 @@ class hh implements ca, th {
             return (gp) (stackIn_2_0);
           }
           var5_int = 12 / ((43 - param3) / 54);
-          stackIn_4_0 = wh.a(param0.b(5, param2, param4), (byte) -122);
+          stackIn_4_0 = wh.a(param0.getFile(5, param2, param4), (byte) -122);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

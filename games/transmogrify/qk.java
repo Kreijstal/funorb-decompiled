@@ -4,7 +4,7 @@
 final class qk {
     static Sprite field_c;
     String field_d;
-    ci field_a;
+    ResourceArchive field_a;
     String field_g;
     String field_b;
     static int[] field_e;

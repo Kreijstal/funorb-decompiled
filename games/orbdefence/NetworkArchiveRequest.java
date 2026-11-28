@@ -7,7 +7,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     static String field_r;
     static AudioOutput field_w;
     static String field_x;
-    static se field_t;
+    static BitPacketBuffer field_t;
     int field_v;
     PacketBuffer field_u;
 

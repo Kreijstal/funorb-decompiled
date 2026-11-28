@@ -26,7 +26,7 @@ final class rb extends ArchiveProvider {
     private long field_k;
     private boolean field_f;
 
-    final int b(int param0, int param1) {
+    final int getGroupRequestProgressPercent(int param0, int param1) {
         ArchiveRequest var3 = (ArchiveRequest) (this.field_i.a(false, (long)param1));
         int var4 = 5 / ((33 - param0) / 52);
         if (var3 == null) {
@@ -235,7 +235,7 @@ final class rb extends ArchiveProvider {
         byte[] var4 = var3.getData((byte) 127);
         var3.unlink(-76);
         if (param0 != -50) {
-          this.b(-104, 72);
+          this.getGroupRequestProgressPercent(-104, 72);
         }
         return var4;
     }

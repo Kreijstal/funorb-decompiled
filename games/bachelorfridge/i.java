@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class i {
-    private vr field_b;
+    private ResourceArchive field_b;
     static String[] field_e;
     static UiComponent field_a;
     static IntrusiveNodeHashTable field_h;
-    private vr field_g;
+    private ResourceArchive field_g;
     private IntrusiveNodeHashTable field_f;
     static lna field_d;
     private IntrusiveNodeHashTable field_c;
@@ -58,12 +58,12 @@ final class i {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (1 == this.field_g.a((byte) 20)) {
+          if (1 == this.field_g.getGroupSlotCount((byte) 20)) {
             stackIn_2_0 = this.a(param2, 0, (byte) -69, param1);
             return stackIn_2_0;
           }
           var4_int = 13 / ((-10 - param0) / 33);
-          if (this.field_g.d(param2, 0) != 1) {
+          if (this.field_g.getGroupFileSlotCount(param2, 0) != 1) {
             throw new RuntimeException();
           }
           stackIn_5_0 = this.a(0, param2, (byte) 106, param1);
@@ -98,12 +98,12 @@ final class i {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_b.a(param2, false);
+          var5_int = this.field_b.getGroupId(param2, false);
           var6 = 119 % ((-50 - param1) / 44);
           if (var5_int < 0) {
             return null;
           }
-          var7 = this.field_b.a((byte) 6, var5_int, param3);
+          var7 = this.field_b.getFileId((byte) 6, var5_int, param3);
           if (var7 >= 0) {
             stackIn_7_0 = this.a(var7, var5_int, param0, -1884086484);
             return stackIn_7_0;
@@ -152,12 +152,12 @@ final class i {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_g.a(param0, false);
+          var5_int = this.field_g.getGroupId(param0, false);
           if (param3 > var5_int) {
             stackIn_2_0 = null;
             return (PcmSample) (stackIn_2_0);
           }
-          var6 = this.field_g.a((byte) 6, var5_int, param2);
+          var6 = this.field_g.getFileId((byte) 6, var5_int, param2);
           if (var6 >= 0) {
             stackIn_7_0 = this.a(var6, var5_int, (byte) -27, param1);
             return stackIn_7_0;
@@ -200,12 +200,12 @@ final class i {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_b.a((byte) 20) == 1) {
+          if (this.field_b.getGroupSlotCount((byte) 20) == 1) {
             stackIn_2_0 = this.a(param0, 0, param2, -1884086484);
             return stackIn_2_0;
           }
           var4_int = 113 / ((-60 - param1) / 54);
-          if (1 != this.field_b.d(param0, 0)) {
+          if (1 != this.field_b.getGroupFileSlotCount(param0, 0)) {
             throw new RuntimeException();
           }
           stackIn_6_0 = this.a(0, param0, param2, -1884086484);
@@ -385,7 +385,7 @@ final class i {
         }
     }
 
-    i(vr param0, vr param1) {
+    i(ResourceArchive param0, ResourceArchive param1) {
         this.field_f = new IntrusiveNodeHashTable(256);
         this.field_c = new IntrusiveNodeHashTable(256);
         try {

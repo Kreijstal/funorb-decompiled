@@ -157,11 +157,11 @@ final class lf extends mf {
               for (var2 = 0; var2 < 112; var2++) {
                 mc.field_e[var2] = false;
               }
-              ab.field_a = mi.field_g;
+              ab.field_a = ResourceArchive.field_g;
             } else {
-              while (mi.field_g != ab.field_a) {
-                var2 = on.field_f[mi.field_g];
-                mi.field_g = 1 + mi.field_g & 127;
+              while (ResourceArchive.field_g != ab.field_a) {
+                var2 = on.field_f[ResourceArchive.field_g];
+                ResourceArchive.field_g = 1 + ResourceArchive.field_g & 127;
                 if (0 <= var2) {
                   mc.field_e[var2] = true;
                   continue;

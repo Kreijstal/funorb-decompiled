@@ -33,7 +33,7 @@ final class lb implements ComponentLayout {
             return (jh) (stackIn_2_0);
           }
           if (param1 == 5592405) {
-            stackIn_7_0 = lc.a(param4.a(param2, (byte) 122, param3), false);
+            stackIn_7_0 = lc.a(param4.getFile(param2, (byte) 122, param3), false);
             return stackIn_7_0;
           }
           stackIn_5_0 = (jh) null;

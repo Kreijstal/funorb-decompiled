@@ -23,7 +23,7 @@ final class MixedSupport067 {
           if (integerArgument1 >= -14) {
             MixedSupport067.resetStaticState(95);
           }
-          stackByteArrayLocal2 = MixedSupport096.resourceArchiveState0014.computeByteArray0809(0, stringArgument2, "");
+          stackByteArrayLocal2 = MixedSupport096.resourceArchiveState0014.getFileByName(0, stringArgument2, "");
           return stackByteArrayLocal2;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal6 = caughtParameterLocal7;

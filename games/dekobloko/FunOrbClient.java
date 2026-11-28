@@ -398,7 +398,7 @@ abstract class FunOrbClient extends GameApplet {
           }
           if (UiComponentPart004.integerState0091 == 2) {
             if (NodeDeque.resourceArchiveState0025 != null &&
-              NodeDeque.resourceArchiveState0025.computeBoolean0798((byte) 121)) {
+              NodeDeque.resourceArchiveState0025.ensureIndexLoaded((byte) 121)) {
               if (NodeDeque.resourceArchiveState0025.computeBoolean0812("", integerArgument2 ^ -11)) {
                 if (NodeDeque.resourceArchiveState0025.computeBoolean0811("", (byte) -94)) {
                   TranslatedUiText.performAction1063(NodeDeque.resourceArchiveState0025, (byte) 117);
@@ -459,8 +459,8 @@ abstract class FunOrbClient extends GameApplet {
           }
           boolean frameRemainderLocal17 = true;
           if (UiComponentPart004.integerState0091 == 11) {
-            if (null != GameDomainSupport006.resourceArchiveState0027 && (!GameDomainSupport006.resourceArchiveState0027.computeBoolean0798((byte) 121) ||
-              !GameDomainSupport006.resourceArchiveState0027.computeBoolean0814(false))) {
+            if (null != GameDomainSupport006.resourceArchiveState0027 && (!GameDomainSupport006.resourceArchiveState0027.ensureIndexLoaded((byte) 121) ||
+              !GameDomainSupport006.resourceArchiveState0027.tryLoadAllGroups(false))) {
               UiComponentPart025.performAction1359(0.0f, -78, ResourceSupport001.computeString0045(GameDomainSupport006.resourceArchiveState0027, MixedSupport037.stringState0174, true, MixedSupport028.stringState0137));
               frameRemainderLocal17 = false;
             }

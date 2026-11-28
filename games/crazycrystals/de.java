@@ -108,7 +108,7 @@ final class de extends f implements Cloneable {
         return true;
     }
 
-    final static db a(boolean param0, boolean param1, int param2, int param3, int param4) {
+    final static ResourceArchive a(boolean param0, boolean param1, int param2, int param3, int param4) {
         if (param4 == 12) {
           return qk.a(param2, param4 + 86, param0, param1, false, param3);
         }
@@ -149,12 +149,12 @@ final class de extends f implements Cloneable {
         }
     }
 
-    final static void a(byte param0, db param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new RgbSprite(param1.a(7693, "", "final_frame.jpg"), (java.awt.Component) ((Object) jd.field_D));
+          var2 = new RgbSprite(param1.getFileByName(7693, "", "final_frame.jpg"), (java.awt.Component) ((Object) jd.field_D));
           var3 = var2.field_l;
           var4 = var2.field_u;
           hd.a(false);

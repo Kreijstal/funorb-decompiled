@@ -104,7 +104,7 @@ final class cb {
         return false;
     }
 
-    final static tb a(String param0, ad param1, int param2, ad param3, String param4) {
+    final static tb a(String param0, ResourceArchive param1, int param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -120,8 +120,8 @@ final class cb {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param3.c(param0, (byte) -105);
-          var6 = param3.a(param4, var5_int, -28459);
+          var5_int = param3.getGroupIdByName(param0, (byte) -105);
+          var6 = param3.getFileIdByName(param4, var5_int, -28459);
           if (param2 > -66) {
             cb.a(false);
           }

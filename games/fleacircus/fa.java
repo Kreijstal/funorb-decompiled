@@ -150,7 +150,7 @@ abstract class fa extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var6 == -1)) {
-              var11 = (char)(SecondaryNodeDequeIterator.a((char) var11, 22861) & 255);
+              var11 = (char)(SecondaryNodeDequeIterator.encodeCp1252Character((char) var11, 22861) & 255);
               if (this.field_t != null &&
                 var7 != 0) {
                 param1 = param1 + this.field_t[(var7 << 8) + var11];
@@ -313,7 +313,7 @@ abstract class fa extends DualLinkNode {
     }
 
     final int a(char param0) {
-        return this.field_z[SecondaryNodeDequeIterator.a(param0, 22861) & 255];
+        return this.field_z[SecondaryNodeDequeIterator.encodeCp1252Character(param0, 22861) & 255];
     }
 
     final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
@@ -483,7 +483,7 @@ abstract class fa extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(SecondaryNodeDequeIterator.a((char) var8, 22861) & 255);
+              var8 = (char)(SecondaryNodeDequeIterator.encodeCp1252Character((char) var8, 22861) & 255);
               if (this.field_t != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_t[(var5 << 8) + var8];
@@ -660,7 +660,7 @@ abstract class fa extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(SecondaryNodeDequeIterator.a((char) var7, 22861) & 255);
+              var7 = (char)(SecondaryNodeDequeIterator.encodeCp1252Character((char) var7, 22861) & 255);
               var4 = var4 + this.field_z[var7];
               if (this.field_t != null &&
                 var3 != 0) {
@@ -821,7 +821,7 @@ abstract class fa extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_A.append((char) var14);
-                var14 = (char)(SecondaryNodeDequeIterator.a((char) var14, 22861) & 255);
+                var14 = (char)(SecondaryNodeDequeIterator.encodeCp1252Character((char) var14, 22861) & 255);
                 var4 = var4 + this.field_z[var14];
                 if (this.field_t != null &&
                   var10 != 0) {

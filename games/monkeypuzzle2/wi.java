@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wi implements ml {
-    static ad field_d;
+    static ResourceArchive field_d;
     static long field_f;
     static Sprite field_e;
     static String field_a;
@@ -24,7 +24,7 @@ final class wi implements ml {
           if (param1 == 1197) {
             return;
           }
-          field_d = (ad) null;
+          field_d = (ResourceArchive) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

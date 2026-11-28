@@ -50,7 +50,7 @@ final class Bzip2State {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -2) {
-            stackIn_4_0 = ch.field_a.a(4, "", param1);
+            stackIn_4_0 = ch.field_a.getFileByName(4, "", param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;

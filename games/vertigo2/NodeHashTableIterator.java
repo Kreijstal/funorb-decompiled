@@ -229,7 +229,7 @@ final class NodeHashTableIterator implements Iterator {
           return true;
         }
         var4 = TextureOperator.field_r;
-        if (!p.a(376, (char) var4)) {
+        if (!p.isAcceptedTextInputCharacter(376, (char) var4)) {
           return false;
         }
         if (var3 == 0) {

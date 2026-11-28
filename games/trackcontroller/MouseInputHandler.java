@@ -52,7 +52,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != hd.mouseHandler) {
             pa.idleTicks = 0;
-            la.liveMouseX = param0.getX();
+            BitPacketBuffer.liveMouseX = param0.getX();
             ArchiveSource.liveMouseY = param0.getY();
             hd.inputPending = true;
           }
@@ -181,7 +181,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != hd.mouseHandler) {
             pa.idleTicks = 0;
-            la.liveMouseX = param0.getX();
+            BitPacketBuffer.liveMouseX = param0.getX();
             ArchiveSource.liveMouseY = param0.getY();
             hd.inputPending = true;
           }
@@ -204,7 +204,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (hd.mouseHandler != null) {
             pa.idleTicks = 0;
-            la.liveMouseX = param0.getX();
+            BitPacketBuffer.liveMouseX = param0.getX();
             ArchiveSource.liveMouseY = param0.getY();
             hd.inputPending = true;
           }
@@ -269,7 +269,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != hd.mouseHandler) {
             pa.idleTicks = 0;
-            la.liveMouseX = -1;
+            BitPacketBuffer.liveMouseX = -1;
             ArchiveSource.liveMouseY = -1;
             hd.inputPending = true;
           }
@@ -299,7 +299,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         Object var6 = null;
         int var7 = 0;
         r var9 = null;
-        la var10 = null;
+        BitPacketBuffer var10 = null;
         byte[] var14 = null;
         var7 = TrackController.field_F ? 1 : 0;
         try {

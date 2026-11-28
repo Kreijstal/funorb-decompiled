@@ -55,7 +55,7 @@ final class GzipDecompressor {
     private GzipDecompressor(int param0, int param1, int param2) {
     }
 
-    final static ik a(int param0, ki param1, int param2) {
+    final static ik a(int param0, ResourceArchive param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;

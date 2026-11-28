@@ -91,11 +91,11 @@ final class hl {
     }
 
     final static void a(je param0, int param1, int param2) {
-        lh var6 = null;
+        BitPacketBuffer var6 = null;
         int var4 = 0;
         try {
           var6 = nj.field_p;
-          var6.d(param2, -18392);
+          var6.writeCipheredByte(param2, -18392);
           var6.position = var6.position + 1;
           var4 = var6.position;
           var6.writeByte(1, (byte) -108);

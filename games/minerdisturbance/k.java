@@ -66,27 +66,27 @@ final class k extends cb {
           return aa.field_f;
         }
         if (null != PacketBuffer.field_r) {
-          if (!PacketBuffer.field_r.a((byte) 107)) {
+          if (!PacketBuffer.field_r.ensureIndexLoaded((byte) 107)) {
             return ge.field_d;
           }
           return ic.field_g;
         }
-        if (!hj.field_i.a((byte) 111)) {
+        if (!hj.field_i.ensureIndexLoaded((byte) 111)) {
           return ul.field_d;
         }
         if (!hj.field_i.a(false, "commonui")) {
-          return ub.field_c + " - " + hj.field_i.a("commonui", param0 + 22834) + "%";
+          return ub.field_c + " - " + hj.field_i.getGroupLoadPercentByName("commonui", param0 + 22834) + "%";
         }
-        if (!pb.field_r.a((byte) 99)) {
+        if (!pb.field_r.ensureIndexLoaded((byte) 99)) {
           return GameCanvas.field_a;
         }
         if (!pb.field_r.a(false, "commonui")) {
-          return mb.field_a + " - " + pb.field_r.a("commonui", -121) + "%";
+          return mb.field_a + " - " + pb.field_r.getGroupLoadPercentByName("commonui", -121) + "%";
         }
-        if (!oh.field_C.a((byte) 85)) {
+        if (!oh.field_C.ensureIndexLoaded((byte) 85)) {
           return FullscreenFocusCanvas.field_e;
         }
-        if (!oh.field_C.b(-1)) {
+        if (!oh.field_C.tryLoadAllGroups(-1)) {
           return ec.field_f + " - " + oh.field_C.c(-14858) + "%";
         }
         if (param0 == -22962) {

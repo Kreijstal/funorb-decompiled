@@ -260,7 +260,7 @@ final class uj extends IntrusiveNode {
         int var5_int = 0;
         int[] var6 = null;
         int var8 = 0;
-        nk var9 = null;
+        BitPacketBuffer var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var8 = Chess.field_G;

@@ -59,8 +59,8 @@ final class ti extends IntrusiveNode {
             stackIn_2_0 = (IndexedSprite) null;
             return stackIn_2_0;
           }
-          var4_int = param1.a(true, param2);
-          var5 = param1.a(param0, var4_int, -1);
+          var4_int = param1.getGroupIdByName(true, param2);
+          var5 = param1.getFileIdByName(param0, var4_int, -1);
           stackIn_4_0 = pj.a(param1, var5, -127, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

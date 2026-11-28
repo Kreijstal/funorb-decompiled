@@ -102,7 +102,7 @@ final class MassPoisonEvent extends SpecialEvent {
         BufferedCacheFile.a((byte) -50);
     }
 
-    final static String a(vr param0, byte param1, String param2, String param3) {
+    final static String a(ResourceArchive param0, byte param1, String param2, String param3) {
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
@@ -115,14 +115,14 @@ final class MassPoisonEvent extends SpecialEvent {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0.a(0)) {
+          if (!param0.ensureIndexLoaded(0)) {
             stackIn_3_0 = (String) (param2);
             return stackIn_3_0;
           }
           if (param1 != -57) {
             field_q = -22;
           }
-          stackIn_7_0 = param3 + " - " + param0.a(true) + "%";
+          stackIn_7_0 = param3 + " - " + param0.getLoadPercent(true) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

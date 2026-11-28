@@ -61,7 +61,7 @@ final class MixedSupport061 {
         try {
           integerLocal1 = packetBufferArgument2.position;
           charSequenceLocal5 = (CharSequence) ((Object) stringArgument3);
-          byteArrayLocal3 = SceneWidgetNode.computeByteArray0915(integerArgument1 ^ -18547, charSequenceLocal5);
+          byteArrayLocal3 = SceneWidgetNode.encodeCp1252Bytes(integerArgument1 ^ -18547, charSequenceLocal5);
           packetBufferArgument2.writeUnsignedSmart(byteArrayLocal3.length, 57);
           packetBufferArgument2.position = packetBufferArgument2.position + NetworkSupport007.huffmanCodecState0001.compress(packetBufferArgument2.payload, byteArrayLocal3, byteArrayLocal3.length, packetBufferArgument2.position, 0, 8);
           if (integerArgument1 != -20539) {

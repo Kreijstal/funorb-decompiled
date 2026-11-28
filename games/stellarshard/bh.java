@@ -4,7 +4,7 @@
 final class bh {
     static long field_c;
     private String field_b;
-    static pf field_a;
+    static ResourceArchive field_a;
 
     final static boolean a(int param0, char param1) {
         boolean stackIn_6_0 = false;
@@ -92,7 +92,7 @@ final class bh {
     final void a(java.applet.Applet param0, byte param1) {
         try {
           if (param1 != 73) {
-            field_a = (pf) null;
+            field_a = (ResourceArchive) null;
           }
           b.a(this.field_b, (byte) 38, 31536000L, "jagex-last-login-method", param0);
         } catch (RuntimeException runtimeException) {

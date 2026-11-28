@@ -26,7 +26,7 @@ final class nh {
         field_a = null;
     }
 
-    final static IndexedSprite a(String param0, sh param1, boolean param2, String param3) {
+    final static IndexedSprite a(String param0, ResourceArchive param1, boolean param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -41,12 +41,12 @@ final class nh {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.c(param0, (byte) -89);
+          var4_int = param1.getGroupIdByName(param0, (byte) -89);
           if (param2) {
             stackIn_2_0 = (IndexedSprite) null;
             return stackIn_2_0;
           }
-          var5 = param1.a(param3, -27964, var4_int);
+          var5 = param1.getFileIdByName(param3, -27964, var4_int);
           stackIn_4_0 = uk.a(-40, param1, var4_int, var5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

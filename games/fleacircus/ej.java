@@ -26,9 +26,9 @@ final class ej {
           return var3;
         }
         if (param1 >= 32768) {
-          var4 = this.field_f.a(1, (byte) 123, 32767 & param1);
+          var4 = this.field_f.getFile(1, (byte) 123, 32767 & param1);
         } else {
-          var4 = this.field_d.a(1, (byte) 124, param1);
+          var4 = this.field_d.getFile(1, (byte) 124, param1);
         }
         var3 = new aj();
         if (var4 != null) {

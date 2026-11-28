@@ -17,7 +17,7 @@ final class kd {
     private cg field_p;
     int field_c;
     int[] field_o;
-    static ki field_q;
+    static ResourceArchive field_q;
     private int[] field_u;
     static String field_f;
     cg field_r;

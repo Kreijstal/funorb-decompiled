@@ -4,7 +4,7 @@
 abstract class RasterBuffer {
     static String[] field_e;
     int field_d;
-    static ci field_c;
+    static ResourceArchive field_c;
     static q field_b;
     int[] field_a;
     java.awt.Image field_f;
@@ -48,7 +48,7 @@ abstract class RasterBuffer {
             var3 = (java.awt.Canvas) null;
             RasterBuffer.a((java.awt.Canvas) null, -52);
           }
-          hj.a((java.awt.Component) ((Object) param0), param1 - 13863);
+          BitPacketBuffer.attachKeyboardListeners((java.awt.Component) ((Object) param0), param1 - 13863);
           jl.a((java.awt.Component) ((Object) param0), 0);
           if (null == ga.field_a) {
             return;

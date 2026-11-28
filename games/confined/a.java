@@ -60,7 +60,7 @@ final class a {
         a.a(false);
     }
 
-    final static bm a(mi param0, int param1, int param2, byte param3) {
+    final static bm a(ResourceArchive param0, int param1, int param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;

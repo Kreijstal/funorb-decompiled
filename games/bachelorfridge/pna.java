@@ -111,7 +111,7 @@ final class pna extends UiComponent {
         return;
     }
 
-    final static void a(Sprite[][] param0, int param1, vr param2, int param3, String[] param4, byte[] param5, byte[] param6, String[][] param7, String[] param8, boolean param9, int param10, String[] param11, Sprite[][] param12, int[] param13, String[][] param14) {
+    final static void a(Sprite[][] param0, int param1, ResourceArchive param2, int param3, String[] param4, byte[] param5, byte[] param6, String[][] param7, String[] param8, boolean param9, int param10, String[] param11, Sprite[][] param12, int[] param13, String[][] param14) {
         gna[] array$0 = null;
         gna[] array$1 = null;
         gna[] array$2 = null;
@@ -552,7 +552,7 @@ final class pna extends UiComponent {
           this.field_Ab = -1;
         }
         if (param0 != 0) {
-          pna.a((Sprite[][]) null, -30, (vr) null, -6, (String[]) null, (byte[]) null, (byte[]) null, (String[][]) null, (String[]) null, true, 101, (String[]) null, (Sprite[][]) null, (int[]) null, (String[][]) null);
+          pna.a((Sprite[][]) null, -30, (ResourceArchive) null, -6, (String[]) null, (byte[]) null, (byte[]) null, (String[][]) null, (String[]) null, true, 101, (String[]) null, (Sprite[][]) null, (int[]) null, (String[][]) null);
         }
         return true;
     }

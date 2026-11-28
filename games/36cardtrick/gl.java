@@ -124,7 +124,7 @@ final class gl extends hl {
         }
     }
 
-    final static RgbSprite[] a(String param0, qk param1, String param2, int param3) {
+    final static RgbSprite[] a(String param0, ResourceArchive param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -139,8 +139,8 @@ final class gl extends hl {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.a(18659, param2);
-          var5 = param1.a(var4_int, param0, (byte) 7);
+          var4_int = param1.getGroupIdByName(18659, param2);
+          var5 = param1.getFileIdByName(var4_int, param0, (byte) 7);
           if (param3 != -13244) {
             var6 = (String) null;
             gl.a((String) null, 104);

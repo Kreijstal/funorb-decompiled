@@ -136,7 +136,7 @@ final class CachedArchiveSource extends ArchiveSource {
         int var1 = 109 % ((-37 - param0) / 37);
     }
 
-    final int a(int param0, int param1) {
+    final int getGroupRequestProgressPercent(int param0, int param1) {
         if (param1 != -26954) {
           CachedArchiveSource.clearStaticReferences(83);
         }

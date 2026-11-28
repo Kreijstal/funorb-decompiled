@@ -358,7 +358,7 @@ final class wc extends wf {
         return var4;
     }
 
-    final int a(int param0, int param1) {
+    final int getGroupRequestProgressPercent(int param0, int param1) {
         ArchiveRequest var3 = (ArchiveRequest) (this.field_f.a((long)param1, 36));
         if (param0 != 0) {
           this.field_g = -63;

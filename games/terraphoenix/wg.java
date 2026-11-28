@@ -39,24 +39,24 @@ final class wg {
         var3 = Terraphoenix.field_V;
         while (this.field_a < this.field_i) {
           var4 = this.field_d[this.field_a];
-          if (!var4.field_a.a(0)) {
+          if (!var4.field_a.ensureIndexLoaded(0)) {
             this.a(0, var4, param0 ^ 111);
             return false;
           }
           if (var4.field_e >= 0 &&
-            !var4.field_a.e(var4.field_e, 4)) {
-            this.a(var4.field_a.a((byte) 107, var4.field_e), var4, param0 ^ 127);
+            !var4.field_a.tryLoadGroup(var4.field_e, 4)) {
+            this.a(var4.field_a.getGroupLoadPercent((byte) 107, var4.field_e), var4, param0 ^ 127);
             return false;
           }
           if (var4.field_g != null &&
             !var4.field_a.a(-3, var4.field_g)) {
-            this.a(var4.field_a.b(99, var4.field_g), var4, param0 + 107);
+            this.a(var4.field_a.getGroupLoadPercentByName(99, var4.field_g), var4, param0 + 107);
             return false;
           }
           if (0 > var4.field_e &&
             null == var4.field_g &&
             null != var4.field_b &&
-            !var4.field_a.b((byte) -128)) {
+            !var4.field_a.tryLoadAllGroups((byte) -128)) {
             this.a(var4.field_a.a((byte) 127), var4, param0 ^ 124);
             return false;
           }

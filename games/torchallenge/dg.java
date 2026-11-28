@@ -98,7 +98,7 @@ final class dg extends kj implements tl, sg, tb {
             return stackIn_2_0;
           }
           if (SpriteLoader.a(param4 ^ 229, param1, param0, param2)) {
-            stackIn_7_0 = gb.a(param4 ^ -28934, param3.c(param0, param2, param4 - 69));
+            stackIn_7_0 = gb.a(param4 ^ -28934, param3.getFile(param0, param2, param4 - 69));
             return stackIn_7_0;
           }
           stackIn_5_0 = null;

@@ -4,7 +4,7 @@
 final class kf {
     static he[] field_e;
     static int[] field_c;
-    static vj field_d;
+    static ResourceArchive field_d;
     static AccountServiceResult field_a;
     static String[] field_b;
 

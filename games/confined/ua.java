@@ -10,14 +10,14 @@ final class ua {
           nh.a(param0, param2 - 8795, param1);
           if (param2 != 8795) {
             String var4 = (String) null;
-            ua.a((String) null, -44, (mi) null, (String) null);
+            ua.a((String) null, -44, (ResourceArchive) null, (String) null);
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ua.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static RgbSprite[] a(String param0, int param1, mi param2, String param3) {
+    final static RgbSprite[] a(String param0, int param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -31,11 +31,11 @@ final class ua {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.a(-107, param0);
+          var4_int = param2.getGroupIdByName(-107, param0);
           if (param1 != -563) {
             field_a = (boolean[]) null;
           }
-          var5 = param2.a(var4_int, param3, -99);
+          var5 = param2.getFileIdByName(var4_int, param3, -99);
           stackIn_3_0 = DualLinkNode.a(-5744, var4_int, var5, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

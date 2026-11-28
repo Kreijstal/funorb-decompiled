@@ -8,7 +8,7 @@ final class ig extends IntrusiveNode {
     private int[] field_r;
     static int field_h;
     ri[] field_q;
-    static vj field_t;
+    static ResourceArchive field_t;
     byte[] field_m;
     PcmSample[] field_j;
     byte[] field_s;

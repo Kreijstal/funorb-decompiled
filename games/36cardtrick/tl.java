@@ -34,13 +34,13 @@ abstract class tl {
         int stackIn_11_0 = 0;
         int[] stackIn_24_0 = null;
         Throwable decompiledCaughtException = null;
-        w var2 = null;
+        BitPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        w var8 = null;
+        BitPacketBuffer var8 = null;
         vd var9 = null;
         var7 = Main.field_T;
         if (param0 != 24881) {

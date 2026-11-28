@@ -22,12 +22,12 @@ final class qm extends oj {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.a((byte) -2, param0);
+          var4_int = param3.getGroupIdByName((byte) -2, param0);
           if (param1 != 0) {
             stackIn_2_0 = (pg) null;
             return stackIn_2_0;
           }
-          var5 = param3.a(var4_int, param2, -1);
+          var5 = param3.getFileIdByName(var4_int, param2, -1);
           stackIn_4_0 = hf.a((byte) 119, param3, var4_int, var5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

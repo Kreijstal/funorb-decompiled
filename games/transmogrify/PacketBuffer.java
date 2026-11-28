@@ -138,7 +138,7 @@ class PacketBuffer extends IntrusiveNode {
         throw new IllegalArgumentException();
     }
 
-    final static mi a(int param0, ci param1, ci param2, int param3, int param4) {
+    final static mi a(int param0, ResourceArchive param1, ResourceArchive param2, int param3, int param4) {
         RuntimeException var5 = null;
         mi stackIn_2_0 = null;
         mi stackIn_7_0 = null;
@@ -156,7 +156,7 @@ class PacketBuffer extends IntrusiveNode {
           if (!rl.a(param4, 0, param3, param2)) {
             return null;
           }
-          stackIn_7_0 = ea.a(param1.a((byte) -93, param4, param3), 0);
+          stackIn_7_0 = ea.a(param1.getFile((byte) -93, param4, param3), 0);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -243,7 +243,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (this.payload[fieldTemp$1] != 0);
         var4 = -var3 + this.position - 1;
         if (var4 != 0) {
-          return cc.a(var3, 15923, var4, this.payload);
+          return cc.decodeCp1252String(var3, 15923, var4, this.payload);
         }
         return "";
     }
@@ -265,7 +265,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           var4 = (CharSequence) ((Object) param0);
-          this.position = this.position + rb.a(this.position, var4, this.payload, param0.length(), (byte) -116, 0);
+          this.position = this.position + rb.encodeCp1252Subsequence(this.position, var4, this.payload, param0.length(), (byte) -116, 0);
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
@@ -372,7 +372,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var5 = (CharSequence) ((Object) param1);
-          this.position = this.position + rb.a(this.position, var5, this.payload, param1.length(), (byte) -116, 0);
+          this.position = this.position + rb.encodeCp1252Subsequence(this.position, var5, this.payload, param1.length(), (byte) -116, 0);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -483,7 +483,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (this.payload[fieldTemp$0] != 0);
         var3 = -var2 + this.position - 1;
         if (var3 != 0) {
-          return cc.a(var2, 15923, var3, this.payload);
+          return cc.decodeCp1252String(var2, 15923, var3, this.payload);
         }
         return "";
     }

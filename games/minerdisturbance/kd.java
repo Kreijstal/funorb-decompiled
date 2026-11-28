@@ -272,12 +272,12 @@ final class kd {
         }
         this.b((byte) 72);
         if (wk.field_c != null &&
-          wk.field_c.a((byte) 105) &&
+          wk.field_c.ensureIndexLoaded((byte) 105) &&
           wk.field_c.a(false, "members_expansion_screen") &&
           wk.field_c.a(false, "arialish12") &&
           wk.field_c.a(false, "pump32") &&
           null != AccountCreationResultPanel.field_xb &&
-          AccountCreationResultPanel.field_xb.a((byte) 95) &&
+          AccountCreationResultPanel.field_xb.ensureIndexLoaded((byte) 95) &&
           AccountCreationResultPanel.field_xb.a(false, "arialish12") &&
           AccountCreationResultPanel.field_xb.a(false, "pump32")) {
           ba.field_K = pb.a("members_expansion_screen", wk.field_c, "frame", (byte) -77);

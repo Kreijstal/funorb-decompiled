@@ -554,7 +554,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           MouseInputHandler.a(true);
           MouseWheelInput.clearStaticReferences(-122);
           SoftwareRasterizer.clearStaticReferences();
-          db.clearStaticReferences((byte) 127);
+          ResourceArchive.clearStaticReferences((byte) 127);
           dg.clearStaticReferences((byte) 64);
           hf.clearStaticReferences(4);
           PacketBuffer.e((byte) -125);
@@ -728,7 +728,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           tm.clearStaticReferences(-11909);
           cf.a(0);
           jc.resetStaticState(param0 + 33469896);
-          tg.a((byte) -100);
+          tg.clearStaticReferences((byte) -100);
           lg.clearStaticReferences(31039);
           b.clearStaticReferences(param0 ^ 89);
           ra.clearStaticReferences(true);
@@ -1125,31 +1125,31 @@ public final class CrazyCrystals extends NetworkGameClient {
         try {
           boolean decompiledFrameRemainder0 = true;
           if (null == fq.field_x) {
-            if (dj.field_ab.a((byte) 102) &&
+            if (dj.field_ab.ensureIndexLoaded((byte) 102) &&
               dj.field_ab.a(-20402, "basic")) {
-              if (l.field_d.a((byte) 102) &&
+              if (l.field_d.ensureIndexLoaded((byte) 102) &&
                 l.field_d.a(-20402, "")) {
-                if (uf.field_e.a((byte) 102) &&
-                  uf.field_e.a(false)) {
-                  if (CipherPacketBuffer.field_p.a((byte) 102) &&
-                    CipherPacketBuffer.field_p.a(false)) {
-                    if (vm.field_k.a((byte) 102) &&
+                if (uf.field_e.ensureIndexLoaded((byte) 102) &&
+                  uf.field_e.tryLoadAllGroups(false)) {
+                  if (CipherPacketBuffer.field_p.ensureIndexLoaded((byte) 102) &&
+                    CipherPacketBuffer.field_p.tryLoadAllGroups(false)) {
+                    if (vm.field_k.ensureIndexLoaded((byte) 102) &&
                       vm.field_k.a(-20402, "initialset")) {
-                      if (ma.field_p.a((byte) 102) &&
-                        ma.field_p.e(0, 81) &&
+                      if (ma.field_p.ensureIndexLoaded((byte) 102) &&
+                        ma.field_p.tryLoadGroup(0, 81) &&
                         ma.field_p.a(-20402, "initialset")) {
-                        if (!rl.field_i.a((byte) 102)) {
+                        if (!rl.field_i.ensureIndexLoaded((byte) 102)) {
                           td.a(20.0f, jl.field_f, false);
                           return;
                         }
-                        if (!mg.field_c.a((byte) 102)) {
+                        if (!mg.field_c.ensureIndexLoaded((byte) 102)) {
                           td.a(20.0f, jl.field_f, false);
                           return;
                         }
-                        if (mg.field_g.a((byte) 102) &&
-                          mg.field_g.a(false)) {
-                          if (ba.field_k.a((byte) 102) &&
-                            ba.field_k.a(false)) {
+                        if (mg.field_g.ensureIndexLoaded((byte) 102) &&
+                          mg.field_g.tryLoadAllGroups(false)) {
+                          if (ba.field_k.ensureIndexLoaded((byte) 102) &&
+                            ba.field_k.tryLoadAllGroups(false)) {
                             if (!param0) {
                               return;
                             }
@@ -1212,7 +1212,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             jn.field_o = bf.a(-1, "hollowframe", "", l.field_d);
             mg.field_b = bf.a(-1, "tinyhollowframe", "", l.field_d);
             an.field_q = hp.a(CipherPacketBuffer.field_p, 0, "fonts_smallfont", l.field_d, "");
-            var3 = CipherPacketBuffer.field_p.a(7693, "fonts_largefont", "");
+            var3 = CipherPacketBuffer.field_p.getFileByName(7693, "fonts_largefont", "");
             var4_ref_wj__ = ep.a(l.field_d, "fonts_largefont", "", false);
             bd.a(l.field_d, var3, var4_ref_wj__, 8);
             go.field_l = wi.a(0, var4_ref_wj__, var3);
@@ -1364,7 +1364,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             var3_array = bf.a(-1, "sprites_mirrors", "", l.field_d);
             en.field_K = new RgbSprite[6];
             ImageProducerRasterBuffer.field_h = new RgbSprite[6];
-            db.field_j = new RgbSprite[6];
+            ResourceArchive.field_j = new RgbSprite[6];
             ig.field_q = var3_array[6];
             nf.field_g = var3_array[19];
             ja.field_h = new RgbSprite[6];
@@ -1373,7 +1373,7 @@ public final class CrazyCrystals extends NetworkGameClient {
               en.field_K[var4] = var3_array[-var4 + 12];
               ImageProducerRasterBuffer.field_h[var4] = var3_array[-var4 + 25];
               ja.field_h[var4] = var3_array[var4 + 13];
-              db.field_j[var4] = var3_array[var4];
+              ResourceArchive.field_j[var4] = var3_array[var4];
               var4++;
               if (var13 != 0) {
                 return;

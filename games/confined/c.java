@@ -141,7 +141,7 @@ final class c extends sc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -79) {
-            c.a(true, (mi) null);
+            c.a(true, (ResourceArchive) null);
           }
           var5 = new sd(-param2.field_C + param0, param2.field_D + param0, param3.length());
           this.field_c = new sd[]{var5};
@@ -414,7 +414,7 @@ final class c extends sc {
         }
     }
 
-    final static void a(boolean param0, mi param1) {
+    final static void a(boolean param0, ResourceArchive param1) {
         RuntimeException stackIn_698_0 = null;
         StringBuilder stackIn_698_1 = null;
         String stackIn_699_2 = null;

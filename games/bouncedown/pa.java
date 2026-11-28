@@ -9,8 +9,8 @@ final class pa {
     private byte[] field_m;
     private long[] field_f;
     private int field_g;
-    static gk field_c;
-    static gk field_i;
+    static ResourceArchive field_c;
+    static ResourceArchive field_i;
     private long[] field_o;
     private int field_j;
     private long[] field_h;
@@ -178,7 +178,7 @@ final class pa {
           MouseWheelInput.field_b.a(aj.field_f, true, true, kl.field_t);
           MouseWheelInput.field_b.d((byte) 120);
           while (q.g((byte) -15)) {
-            MouseWheelInput.field_b.a((byte) -90, lh.field_f, gk.field_d);
+            MouseWheelInput.field_b.a((byte) -90, lh.field_f, ResourceArchive.field_d);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -286,7 +286,7 @@ final class pa {
             wa.field_b = param8;
             cf.field_a = param10;
             ba.field_B = param5;
-            gk.field_h = param0;
+            ResourceArchive.field_h = param0;
             if (pj.field_c.field_v != null) {
               try {
                 gf.field_g = new BufferedRandomAccessFile(pj.field_c.field_v, 64, 0);

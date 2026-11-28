@@ -41,11 +41,11 @@ final class re {
           if (param0 <= 125) {
             field_b = (String) null;
           }
-          if (!param2.b((byte) -106)) {
+          if (!param2.ensureIndexLoaded((byte) -106)) {
             stackIn_5_0 = (String) (param4);
             return stackIn_5_0;
           }
-          stackIn_7_0 = param3 + " - " + param2.b(param1, -2) + "%";
+          stackIn_7_0 = param3 + " - " + param2.getGroupLoadPercent(param1, -2) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

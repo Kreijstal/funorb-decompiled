@@ -118,12 +118,12 @@ final class k {
         field_c = null;
     }
 
-    final static void a(pf param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new Sprite(param0.a("final_frame.jpg", "", (byte) -12), (java.awt.Component) ((Object) qd.field_j));
+          var2 = new Sprite(param0.getFileByName("final_frame.jpg", "", (byte) -12), (java.awt.Component) ((Object) qd.field_j));
           var3 = var2.field_v;
           var4 = var2.field_y;
           kg.d(false);

@@ -11,7 +11,7 @@ final class BoundedRandomAccessFile {
     static long field_a;
     private long field_g;
     private RandomAccessFile field_h;
-    static ue field_c;
+    static ResourceArchive field_c;
 
     final static byte[] a(String param0, byte param1) {
         RuntimeException var2 = null;
@@ -23,7 +23,7 @@ final class BoundedRandomAccessFile {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == -124) {
-            stackIn_4_0 = ri.field_c.a("", (byte) -128, param0);
+            stackIn_4_0 = ri.field_c.getFileByName("", (byte) -128, param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;
@@ -127,10 +127,10 @@ final class BoundedRandomAccessFile {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        ia var12 = null;
+        BitPacketBuffer var12 = null;
         int var13 = 0;
         int var14 = 0;
-        ia var15 = null;
+        BitPacketBuffer var15 = null;
         int[][] var19 = null;
         int var6_intLifetime1;
         int var9Lifetime1;
@@ -237,7 +237,7 @@ final class BoundedRandomAccessFile {
           return "";
         }
         if (!param0) {
-          field_c = (ue) null;
+          field_c = (ResourceArchive) null;
         }
         return we.field_i;
     }

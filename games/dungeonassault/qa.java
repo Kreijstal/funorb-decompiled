@@ -10,7 +10,7 @@ abstract class qa {
 
     abstract byte[] a(int param0, int param1);
 
-    abstract int b(int param0, int param1);
+    abstract int getGroupRequestProgressPercent(int param0, int param1);
 
     final static q[] a(int param0, String param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
@@ -31,8 +31,8 @@ abstract class qa {
             stackIn_2_0 = (q[]) null;
             return stackIn_2_0;
           }
-          var4_int = param3.a(param2, 1000);
-          var5 = param3.a(0, param1, var4_int);
+          var4_int = param3.getGroupIdByName(param2, 1000);
+          var5 = param3.getFileIdByName(0, param1, var4_int);
           stackIn_4_0 = rf.a(var5, (byte) -71, param3, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

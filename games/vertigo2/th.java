@@ -177,24 +177,24 @@ final class th {
         while (this.field_d < this.field_b) {
           var4 = this.field_c[this.field_d];
           var2 = var4;
-          if (!var4.field_i.b(0)) {
+          if (!var4.field_i.ensureIndexLoaded(0)) {
             this.a(var4, 1, 0);
             return false;
           }
           if (var4.field_b >= 0 &&
-            !var4.field_i.c(11321, var4.field_b)) {
-            this.a(var2, 1, var4.field_i.b(var4.field_b, 100));
+            !var4.field_i.tryLoadGroup(11321, var4.field_b)) {
+            this.a(var2, 1, var4.field_i.getGroupLoadPercent(var4.field_b, 100));
             return false;
           }
           if (null != var4.field_e &&
             !var4.field_i.c(var4.field_e, param0 ^ -21493)) {
-            this.a(var2, 1, var4.field_i.a(var4.field_e, param0 + 21493));
+            this.a(var2, 1, var4.field_i.getGroupLoadPercentByName(var4.field_e, param0 + 21493));
             return false;
           }
           if (var4.field_b < 0 &&
             null == var4.field_e &&
             var4.field_a != null &&
-            !var4.field_i.a((byte) -112)) {
+            !var4.field_i.tryLoadAllGroups((byte) -112)) {
             this.a(var2, 1, var4.field_i.d(-1));
             return false;
           }

@@ -93,11 +93,11 @@ final class fc {
     }
 
     final static void a(int param0, nl param1, int param2) {
-        lh var5 = null;
+        BitPacketBuffer var5 = null;
         int var4 = 0;
         try {
           var5 = nj.field_p;
-          var5.d(param2, -18392);
+          var5.writeCipheredByte(param2, -18392);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(1, (byte) -126);

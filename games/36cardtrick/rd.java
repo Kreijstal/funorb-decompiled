@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rd extends cg {
-    static w field_j;
+    static BitPacketBuffer field_j;
     static byte[][] field_k;
 
     public static void c(boolean param0) {
@@ -25,7 +25,7 @@ final class rd extends cg {
           param0 = param0 + (param0 >>> 16);
           return 255 & param0;
         }
-        field_j = (w) null;
+        field_j = (BitPacketBuffer) null;
         param0 = (1431655765 & param0) + ((param0 & -1431655766) >>> 1);
         param0 = (param0 & 858993459) + (param0 >>> 2 & -1288490189);
         param0 = 252645135 & param0 + (param0 >>> 4);
@@ -38,7 +38,7 @@ final class rd extends cg {
         try {
           we.a(-119, param1);
           if (param0 <= 54) {
-            field_j = (w) null;
+            field_j = (BitPacketBuffer) null;
           }
           ca.a(kj.field_q, false, 16777215);
         } catch (RuntimeException runtimeException) {
@@ -60,7 +60,7 @@ final class rd extends cg {
           stackIn_3_0 = (null != di.a(param0, 64)) ? 0 : 1;
           var3_int = stackIn_3_0;
           if (param1 >= -58) {
-            field_j = (w) null;
+            field_j = (BitPacketBuffer) null;
           }
           if (var3_int != 0) {
             stackIn_9_0 = ii.field_e;

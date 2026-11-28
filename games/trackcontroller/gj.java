@@ -17,10 +17,10 @@ final class gj {
     }
 
     final static void a(int param0, nk param1, int param2) {
-        la var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           var3 = LevelView.field_C;
-          var3.c(param2, 7);
+          var3.writeCipheredByte(param2, 7);
           var3.writeByte(param0, (byte) -93);
           var3.writeByte(0, (byte) -69);
           var3.writeByte(param1.field_i, (byte) -120);

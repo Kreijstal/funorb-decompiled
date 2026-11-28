@@ -53,13 +53,13 @@ final class mc extends ok {
     }
 
     final static void a(boolean param0, int param1, ti param2) {
-        la var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           var3 = LevelView.field_C;
           if (param0) {
             field_E = (Sprite) null;
           }
-          var3.c(param1, 7);
+          var3.writeCipheredByte(param1, 7);
           var3.writeByte(5, (byte) -123);
           var3.writeByte(0, (byte) -114);
           var3.writeShort(param2.field_i, (byte) -127);

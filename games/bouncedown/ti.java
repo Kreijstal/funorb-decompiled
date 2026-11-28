@@ -102,13 +102,13 @@ final class ti extends ba implements wc {
             var8 = ak.a(15, "@", "%40", var7);
             var9 = ak.a(88, "&", "%26", var8);
             var10 = ak.a(param1 ^ 48, "#", "%23", var9);
-            if (gk.field_j == null) {
+            if (ResourceArchive.field_j == null) {
               return;
             }
             stackIn_15_0 = jj.field_a;
             stackIn_15_1 = null;
             stackIn_15_2 = null;
-            stackIn_15_3 = gk.field_j.getCodeBase();
+            stackIn_15_3 = ResourceArchive.field_j.getCodeBase();
             stackIn_15_4 = new StringBuilder().append("clienterror.ws?c=").append(nd.field_E).append("&u=");
             if (ke.field_m != null) {
               stackIn_16_1 = null;

@@ -56,7 +56,7 @@ final class fg extends sp {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0.b(0)) {
+          if (!param0.ensureIndexLoaded(0)) {
             stackIn_3_0 = (String) (param2);
             return stackIn_3_0;
           }

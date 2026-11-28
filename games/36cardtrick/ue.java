@@ -5,7 +5,7 @@ final class ue {
     private int[] field_c;
     static int field_d;
     static IntrusiveDeque field_b;
-    static qk field_a;
+    static ResourceArchive field_a;
 
     public static void clearStaticReferences(int param0) {
         if (param0 != 4) {
@@ -76,7 +76,7 @@ final class ue {
           var7_int = 0;
           param0 = param0 + param3;
           if (param4 <= 95) {
-            field_a = (qk) null;
+            field_a = (ResourceArchive) null;
           }
           var8 = param5;
           scanLoop1: while (true) {

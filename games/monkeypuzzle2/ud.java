@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ud {
-    private ad field_h;
+    private ResourceArchive field_h;
     static int field_b;
     static int field_a;
-    private ad field_c;
+    private ResourceArchive field_c;
     static int field_d;
     private cg field_g;
     static String[] field_e;
@@ -195,7 +195,7 @@ final class ud {
             return null;
           }
           if (param1 <= 7) {
-            this.field_c = (ad) null;
+            this.field_c = (ResourceArchive) null;
           }
           var9 = (sf) (this.field_g.a((byte) 127, var6));
           if (var9 == null) {
@@ -243,12 +243,12 @@ final class ud {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_c.c(param1, (byte) -105);
+          var5_int = this.field_c.getGroupIdByName(param1, (byte) -105);
           if (var5_int < 0) {
             stackIn_2_0 = null;
             return (PcmSample) (stackIn_2_0);
           }
-          var6 = this.field_c.a(param3, var5_int, -28459);
+          var6 = this.field_c.getFileIdByName(param3, var5_int, -28459);
           if (var6 < 0) {
             stackIn_5_0 = null;
             return (PcmSample) (stackIn_5_0);
@@ -284,7 +284,7 @@ final class ud {
         }
     }
 
-    ud(ad param0, ad param1) {
+    ud(ResourceArchive param0, ResourceArchive param1) {
         this.field_g = new cg(256);
         this.field_f = new cg(256);
         try {

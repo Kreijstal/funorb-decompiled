@@ -5,7 +5,7 @@ final class eg extends mg {
     private IntrusiveDeque field_D;
     static String field_E;
     static String field_F;
-    static sh field_C;
+    static ResourceArchive field_C;
 
     final void h(int param0) {
         int var4 = Lexicominos.field_L ? 1 : 0;
@@ -151,7 +151,7 @@ final class eg extends mg {
         }
     }
 
-    final static CoverageBitmapFont a(int param0, int param1, sh param2, sh param3, int param4) {
+    final static CoverageBitmapFont a(int param0, int param1, ResourceArchive param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         CoverageBitmapFont stackIn_6_0 = null;
@@ -169,7 +169,7 @@ final class eg extends mg {
           if (param4 <= 15) {
             eg.clearStaticReferences(69);
           }
-          stackIn_6_0 = lj.a(22076, param3.a(param1, -27493, param0));
+          stackIn_6_0 = lj.a(22076, param3.getFile(param1, -27493, param0));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -69,11 +69,11 @@ final class ai {
         return false;
     }
 
-    final static i a(ue param0, String param1, boolean param2, String param3, ue param4) {
+    final static i a(ResourceArchive param0, String param1, boolean param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        ue stackIn_2_0 = null;
+        ResourceArchive stackIn_2_0 = null;
         String stackIn_2_1 = null;
         boolean stackIn_3_2 = false;
         i stackIn_4_0 = null;
@@ -88,12 +88,12 @@ final class ai {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_2_0 = (ue) (param0);
+          stackIn_2_0 = (ResourceArchive) (param0);
           stackIn_2_1 = (String) (param1);
           stackIn_3_2 = !(param2);
-          var5_int = ((ue) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_3_2);
-          var6 = param0.a(param3, param2, var5_int);
-          stackIn_4_0 = ue.a(param4, (byte) -114, var6, var5_int, param0);
+          var5_int = ((ResourceArchive) (Object) stackIn_2_0).getGroupIdByName(stackIn_2_1, stackIn_3_2);
+          var6 = param0.getFileIdByName(param3, param2, var5_int);
+          stackIn_4_0 = ResourceArchive.a(param4, (byte) -114, var6, var5_int, param0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

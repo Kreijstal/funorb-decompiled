@@ -50,7 +50,7 @@ final class eg {
 
     final static void a(int param0) {
         IterableNodeHashTable.field_e = wh.a((byte) -122);
-        ci.field_f = new da();
+        ResourceArchive.field_f = new da();
         wl.a(true, true, 170);
         if (param0 >= 54) {
           return;
@@ -159,7 +159,7 @@ final class eg {
           if (param0 < 82) {
             eg.a((byte) -117);
           }
-          stackIn_3_0 = cc.a(0, 15923, param1.length, param1);
+          stackIn_3_0 = cc.decodeCp1252String(0, 15923, param1.length, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

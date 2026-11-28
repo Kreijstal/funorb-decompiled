@@ -37,8 +37,8 @@ final class ij extends hh {
           if (param3 != 1) {
             field_g = (nf) null;
           }
-          int var4_int = param0.b(param2, 0);
-          int var5 = param0.a(-122, var4_int, param1);
+          int var4_int = param0.getGroupIdByName(param2, 0);
+          int var5 = param0.getFileIdByName(-122, var4_int, param1);
           Sprite stackIn_3_0 = FullscreenFocusCanvas.a(false, var5, var4_int, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

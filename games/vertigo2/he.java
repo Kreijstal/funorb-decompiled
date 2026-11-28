@@ -208,7 +208,7 @@ final class he extends DualLinkNode {
         try {
           if (b.field_i >= 0) {
             for (var4_int = 0; var4_int < this.field_y.length; var4_int++) {
-              if (!param0.b(param2 ^ 0, b.field_i, this.field_y[var4_int])) {
+              if (!param0.tryLoadFile(param2 ^ 0, b.field_i, this.field_y[var4_int])) {
                 return false;
               }
             }

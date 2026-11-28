@@ -8,7 +8,7 @@ final class fb {
     private String field_p;
     int field_i;
     String field_h;
-    static ue field_g;
+    static ResourceArchive field_g;
     static int[] field_n;
     static String field_d;
     static String field_f;
@@ -23,7 +23,7 @@ final class fb {
     static int field_r;
     static int[] field_l;
 
-    final static byte[] a(int param0, byte[] param1, ia param2, boolean param3) {
+    final static byte[] a(int param0, byte[] param1, BitPacketBuffer param2, boolean param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -40,7 +40,7 @@ final class fb {
         RuntimeException var4 = null;
         var8 = StarCannon.field_A;
         try {
-          var4_int = param2.e(8, param0);
+          var4_int = param2.readBits(8, param0);
           if (var4_int == 0) {
             stackIn_3_0 = null;
             return (byte[]) (stackIn_3_0);
@@ -52,15 +52,15 @@ final class fb {
             param1.length != var4_int) {
             param1 = new byte[var4_int];
           }
-          var5 = param2.e(8, 3);
-          var6 = (byte)param2.e(8, 8);
+          var5 = param2.readBits(8, 3);
+          var6 = (byte)param2.readBits(8, 8);
           if (0 >= var5) {
             for (var7 = 0; var4_int > var7; var7++) {
               param1[var7] = (byte)var6;
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {
-              param1[var7] = (byte)(var6 + param2.e(8, var5));
+              param1[var7] = (byte)(var6 + param2.readBits(8, var5));
             }
           }
           stackIn_18_0 = (byte[]) (param1);
@@ -88,7 +88,7 @@ final class fb {
     final static void a(byte param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ia var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -99,7 +99,7 @@ final class fb {
             return;
           }
           while (ma.a(0)) {
-            var1.d((byte) 84, 8);
+            var1.writeCipheredByte((byte) 84, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;

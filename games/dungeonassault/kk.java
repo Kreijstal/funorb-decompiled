@@ -219,8 +219,8 @@ final class kk extends IntrusiveNode {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param1.a(param4, param3 + 1000);
-          var6 = param1.a(param3, param2, var5_int);
+          var5_int = param1.getGroupIdByName(param4, param3 + 1000);
+          var6 = param1.getFileIdByName(param3, param2, var5_int);
           stackIn_1_0 = ef.a(param3 + 61, var5_int, param1, var6, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -265,7 +265,7 @@ final class kk extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = param0.b(5, param2, param3);
+          var6 = param0.getFile(5, param2, param3);
           var4 = var6;
           if (var6 == null) {
             return false;

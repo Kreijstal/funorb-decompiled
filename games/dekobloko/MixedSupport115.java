@@ -148,7 +148,7 @@ abstract class MixedSupport115 extends DualNode {
         }
     }
 
-    abstract int computeInteger0467(boolean booleanArgument1);
+    abstract int getProgressPercent(boolean booleanArgument1);
 
     public static void performAction1488(byte byteArgument1) {
         RuntimeException caughtExceptionLocal1 = null;

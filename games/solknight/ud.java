@@ -23,14 +23,14 @@ final class ud extends IntrusiveNode {
     final static void a(byte param0, lc param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
-        jd var5 = null;
+        BitPacketBuffer var5 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = id.field_c;
-          var5.e(param2, -2147483648);
+          var5.writeCipheredByte(param2, -2147483648);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(-102, 1);

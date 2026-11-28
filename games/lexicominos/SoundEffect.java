@@ -6,8 +6,8 @@ final class SoundEffect {
     private int field_b;
     private int field_c;
 
-    final static SoundEffect a(sh param0, String param1, String param2) {
-        byte[] var3 = param0.a((byte) 127, param2, param1);
+    final static SoundEffect a(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.getFileByName((byte) 127, param2, param1);
         if (var3 == null) {
           return null;
         }
@@ -19,8 +19,8 @@ final class SoundEffect {
         return new PcmSample(22050, var1, 22050 * this.field_b / 1000, 22050 * this.field_c / 1000);
     }
 
-    final static SoundEffect a(sh param0, int param1, int param2) {
-        byte[] var3 = param0.a(param1, -27493, param2);
+    final static SoundEffect a(ResourceArchive param0, int param1, int param2) {
+        byte[] var3 = param0.getFile(param1, -27493, param2);
         if (var3 == null) {
           return null;
         }

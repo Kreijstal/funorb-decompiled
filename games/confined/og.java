@@ -89,7 +89,7 @@ final class og extends n {
           var7 = new BufferedReader((Reader) ((Object) new InputStreamReader(var14.getInputStream())));
           if (param3 != 0) {
             var13 = (PcmStreamMixer) null;
-            og.a((byte) -66, (mi) null, (PcmStreamMixer) null, -29);
+            og.a((byte) -66, (ResourceArchive) null, (PcmStreamMixer) null, -29);
           }
           boolean decompiledFrameRemainder0 = true;
           var15 = var7.readLine();
@@ -657,7 +657,7 @@ final class og extends n {
         }
     }
 
-    final static void a(byte param0, mi param1, PcmStreamMixer param2, int param3) {
+    final static void a(byte param0, ResourceArchive param1, PcmStreamMixer param2, int param3) {
         mg.field_g = KeyboardInput.a(12398) * param3 / 1000;
         SpriteGeometry.a(param1, true);
         if (param0 <= 115) {

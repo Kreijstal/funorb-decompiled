@@ -5,7 +5,7 @@ final class uf {
     static boolean[] field_f;
     static String field_d;
     static int field_k;
-    vj field_b;
+    ResourceArchive field_b;
     static bb field_c;
     String field_e;
     String field_h;

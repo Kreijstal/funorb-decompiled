@@ -10,7 +10,7 @@ final class uf {
     private int field_a;
     String field_h;
     int field_l;
-    static db field_e;
+    static ResourceArchive field_e;
     int field_f;
     private long field_g;
     static KeyboardInputHandler field_c;

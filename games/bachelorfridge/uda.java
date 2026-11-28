@@ -9,7 +9,7 @@ abstract class uda extends am {
     private int field_W;
     private int field_V;
     private int field_db;
-    static vr field_U;
+    static ResourceArchive field_U;
     private hl field_S;
     private int field_bb;
     private kf field_Y;

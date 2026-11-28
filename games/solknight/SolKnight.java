@@ -483,20 +483,20 @@ public final class SolKnight extends ab {
         try {
           kb.b((byte) -128);
           if (null != AccountServiceResult.field_g) {
-            if (pl.field_d.c((byte) -121) &&
+            if (pl.field_d.ensureIndexLoaded((byte) -121) &&
               pl.field_d.a(2, "basic")) {
-              if (AccountServiceResult.field_g.c((byte) -121) &&
-                AccountServiceResult.field_g.b(true)) {
-                if (ProxySocketConnector.field_h.c((byte) -121) &&
-                  ProxySocketConnector.field_h.b(true)) {
-                  if (NetworkArchiveRequest.field_u.c((byte) -121) &&
-                    NetworkArchiveRequest.field_u.b(true)) {
-                    if (qb.field_cb.c((byte) -121) &&
-                      qb.field_cb.b(true)) {
-                      if (fh.field_c.c((byte) -121) &&
-                        fh.field_c.b(true)) {
-                        if (field_I.c((byte) -121) &&
-                          field_I.b(true)) {
+              if (AccountServiceResult.field_g.ensureIndexLoaded((byte) -121) &&
+                AccountServiceResult.field_g.tryLoadAllGroups(true)) {
+                if (ProxySocketConnector.field_h.ensureIndexLoaded((byte) -121) &&
+                  ProxySocketConnector.field_h.tryLoadAllGroups(true)) {
+                  if (NetworkArchiveRequest.field_u.ensureIndexLoaded((byte) -121) &&
+                    NetworkArchiveRequest.field_u.tryLoadAllGroups(true)) {
+                    if (qb.field_cb.ensureIndexLoaded((byte) -121) &&
+                      qb.field_cb.tryLoadAllGroups(true)) {
+                      if (fh.field_c.ensureIndexLoaded((byte) -121) &&
+                        fh.field_c.tryLoadAllGroups(true)) {
+                        if (field_I.ensureIndexLoaded((byte) -121) &&
+                          field_I.tryLoadAllGroups(true)) {
                           a.a((byte) 102, SocketConnector.field_e, 65.0f);
                           this.a(-11633);
                           if (!param1) {

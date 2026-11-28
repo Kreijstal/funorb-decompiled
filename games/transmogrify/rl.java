@@ -96,7 +96,7 @@ final class rl {
         return 0;
     }
 
-    final static boolean a(int param0, int param1, int param2, ci param3) {
+    final static boolean a(int param0, int param1, int param2, ResourceArchive param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -105,7 +105,7 @@ final class rl {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = param3.a((byte) -93, param0, param2);
+          var5 = param3.getFile((byte) -93, param0, param2);
           var4 = var5;
           if (var5 == null) {
             return false;

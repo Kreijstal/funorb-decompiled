@@ -63,10 +63,10 @@ final class ed {
         var10 = fleas.field_A ? 1 : 0;
         try {
           if (null != ub.field_b &&
-            ub.field_b.b((byte) -121) &&
+            ub.field_b.ensureIndexLoaded((byte) -121) &&
             ub.field_b.a("benefits", -127) &&
             null != SecondaryNodeDeque.field_b &&
-            SecondaryNodeDeque.field_b.b((byte) -122) &&
+            SecondaryNodeDeque.field_b.ensureIndexLoaded((byte) -122) &&
             SecondaryNodeDeque.field_b.a("benefits", -114)) {
             mf.field_b = kl.a(252, ub.field_b, "benefits", "headline");
             wh.field_b = kl.a(252, ub.field_b, "benefits", "blurbpane");
@@ -355,7 +355,7 @@ final class ed {
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new RgbSprite(param0.a(0, "", "final_frame.jpg"), (java.awt.Component) ((Object) ol.field_e));
+          var2 = new RgbSprite(param0.getFileByName(0, "", "final_frame.jpg"), (java.awt.Component) ((Object) ol.field_e));
           var3 = var2.field_w;
           var4 = var2.field_t;
           we.a(-66);

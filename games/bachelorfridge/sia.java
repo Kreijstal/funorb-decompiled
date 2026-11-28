@@ -275,7 +275,7 @@ final class sia extends TileEffect {
           this.field_k = (CreatureActor) null;
         }
         for (var5 = 0; 3 > var5; var5++) {
-          var6 = 50 * vr.field_b + 65536 * var5 / 3;
+          var6 = 50 * ResourceArchive.field_b + 65536 * var5 / 3;
           var7 = via.a(var6, (byte) 106);
           var8 = ft.a(var6, (byte) -128);
           var9 = this.field_l;

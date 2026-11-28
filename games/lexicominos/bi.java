@@ -108,7 +108,7 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
           if (AccountNameAvailabilityValidator.field_l != null) {
             var2_int = param0.getKeyChar();
             if (0 != var2_int && var2_int != 65535 &&
-              rf.a((byte) -10, (char) var2_int)) {
+              rf.isSupportedCp1252KeyCharacter((byte) -10, (char) var2_int)) {
               var3 = Lexicominos.field_G + 1 & 127;
               if (tj.field_h != var3) {
                 gj.field_x[Lexicominos.field_G] = -1;

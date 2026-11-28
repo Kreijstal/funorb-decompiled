@@ -111,7 +111,7 @@ final class rl {
             var5 = (ic) null;
             rl.a(79, (ic) null, 36);
           }
-          var6 = param1.a(false, param3, param2);
+          var6 = param1.getFile(false, param3, param2);
           var4 = var6;
           if (var6 == null) {
             return false;

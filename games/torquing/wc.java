@@ -98,7 +98,7 @@ final class wc extends IntrusiveNode {
           var2_int = param1.length();
           var3 = 0;
           for (var4 = 0; var4 < var2_int; var4++) {
-            var3 = -var3 + ((var3 << 5) + ka.a(false, param1.charAt(var4)));
+            var3 = -var3 + ((var3 << 5) + ka.encodeCp1252Character(false, param1.charAt(var4)));
           }
           var4Lifetime1 = -59 % ((-3 - param0) / 47);
           stackIn_5_0 = var3;

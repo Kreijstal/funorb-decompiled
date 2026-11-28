@@ -134,7 +134,7 @@ final class JaggrabClient implements Runnable {
               var3 = var4.getOutputStream();
               var3.write(17);
               var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_g.getFile() + "\n\n"));
-              var3.write(bo.a(var5, -711));
+              var3.write(bo.encodeCp1252Bytes(var5, -711));
               this.field_k = new DataInputStream(var4.getInputStream());
             }
             this.field_j.position = 0;

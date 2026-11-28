@@ -69,10 +69,10 @@ final class ki extends vj {
             field_S = (String) null;
           }
           if (sj.field_f != null &&
-            sj.field_f.a(0) &&
+            sj.field_f.ensureIndexLoaded(0) &&
             sj.field_f.a(-3, "benefits") &&
             null != dm.field_d &&
-            dm.field_d.a(param0 ^ 28418) &&
+            dm.field_d.ensureIndexLoaded(param0 ^ 28418) &&
             dm.field_d.a(param0 ^ -28417, "benefits")) {
             dg.field_a = il.a("headline", "benefits", sj.field_f, -1);
             hb.field_m = il.a("blurbpane", "benefits", sj.field_f, -1);

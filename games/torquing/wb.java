@@ -152,10 +152,10 @@ final class wb extends am {
         var10 = Torquing.field_u;
         try {
           if (qm.field_a != null &&
-            qm.field_a.a(-12749) &&
+            qm.field_a.ensureIndexLoaded(-12749) &&
             qm.field_a.a(true, "benefits") &&
             ae.field_mb != null &&
-            ae.field_mb.a(-12749) &&
+            ae.field_mb.ensureIndexLoaded(-12749) &&
             ae.field_mb.a(true, "benefits")) {
             RasterBuffer.field_f = mn.a(qm.field_a, "benefits", "headline", 86);
             mk.field_a = mn.a(qm.field_a, "benefits", "blurbpane", param0 ^ -88);

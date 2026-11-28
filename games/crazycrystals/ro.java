@@ -214,7 +214,7 @@ final class ro extends pn implements Cloneable {
                 if (var13 + var12 >= 0) {
                   stackIn_339_0 = en.field_K[var14];
                 } else {
-                  stackIn_339_0 = db.field_j[var14];
+                  stackIn_339_0 = ResourceArchive.field_j[var14];
                 }
                 var11 = stackIn_339_0;
               }
@@ -286,7 +286,7 @@ final class ro extends pn implements Cloneable {
                   if (var13Lifetime1 + var12Lifetime1 >= 0) {
                     stackIn_96_0 = en.field_K[var14Lifetime1];
                   } else {
-                    stackIn_96_0 = db.field_j[var14Lifetime1];
+                    stackIn_96_0 = ResourceArchive.field_j[var14Lifetime1];
                   }
                   var11 = stackIn_96_0;
                 } else {
@@ -314,7 +314,7 @@ final class ro extends pn implements Cloneable {
             }
           } else {
             if (var12Lifetime1 + var13Lifetime1 > 0) {
-              stackIn_22_0 = db.field_j[var14Lifetime1];
+              stackIn_22_0 = ResourceArchive.field_j[var14Lifetime1];
             } else {
               stackIn_22_0 = en.field_K[var14Lifetime1];
             }
@@ -339,7 +339,7 @@ final class ro extends pn implements Cloneable {
                   if (var13Lifetime1 + var12Lifetime1 >= 0) {
                     stackIn_48_0 = en.field_K[var14Lifetime1];
                   } else {
-                    stackIn_48_0 = db.field_j[var14Lifetime1];
+                    stackIn_48_0 = ResourceArchive.field_j[var14Lifetime1];
                   }
                   var11 = stackIn_48_0;
                 } else {
@@ -388,7 +388,7 @@ final class ro extends pn implements Cloneable {
                   if (var13Lifetime1 + var12Lifetime1 >= 0) {
                     stackIn_143_0 = en.field_K[var14Lifetime1];
                   } else {
-                    stackIn_143_0 = db.field_j[var14Lifetime1];
+                    stackIn_143_0 = ResourceArchive.field_j[var14Lifetime1];
                   }
                   var11 = stackIn_143_0;
                 } else {
@@ -447,7 +447,7 @@ final class ro extends pn implements Cloneable {
                     if (var13Lifetime1 + var12Lifetime1 >= 0) {
                       stackIn_243_0 = en.field_K[var14Lifetime1];
                     } else {
-                      stackIn_243_0 = db.field_j[var14Lifetime1];
+                      stackIn_243_0 = ResourceArchive.field_j[var14Lifetime1];
                     }
                     var11 = stackIn_243_0;
                   } else {
@@ -475,7 +475,7 @@ final class ro extends pn implements Cloneable {
               }
             } else {
               if (var12Lifetime1 + var13Lifetime1 > 0) {
-                stackIn_169_0 = db.field_j[var14Lifetime1];
+                stackIn_169_0 = ResourceArchive.field_j[var14Lifetime1];
               } else {
                 stackIn_169_0 = en.field_K[var14Lifetime1];
               }
@@ -500,7 +500,7 @@ final class ro extends pn implements Cloneable {
                     if (var13Lifetime1 + var12Lifetime1 >= 0) {
                       stackIn_195_0 = en.field_K[var14Lifetime1];
                     } else {
-                      stackIn_195_0 = db.field_j[var14Lifetime1];
+                      stackIn_195_0 = ResourceArchive.field_j[var14Lifetime1];
                     }
                     var11 = stackIn_195_0;
                   } else {
@@ -661,7 +661,7 @@ final class ro extends pn implements Cloneable {
         }
     }
 
-    final static boolean a(db param0, db param1, boolean param2, db param3) {
+    final static boolean a(ResourceArchive param0, ResourceArchive param1, boolean param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -675,15 +675,15 @@ final class ro extends pn implements Cloneable {
           if (param2) {
             return false;
           }
-          if (!param0.a((byte) 102)) {
+          if (!param0.ensureIndexLoaded((byte) 102)) {
             return false;
           }
           if (!param0.a(-20402, "commonui")) {
             return false;
           }
-          if (param1.a((byte) 102) &&
+          if (param1.ensureIndexLoaded((byte) 102) &&
             param1.a(-20402, "commonui")) {
-            if (param3.a((byte) 102) &&
+            if (param3.ensureIndexLoaded((byte) 102) &&
               param3.a(-20402, "button.gif")) {
               return true;
             }

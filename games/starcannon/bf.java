@@ -21,7 +21,7 @@ final class bf extends IntrusiveNode {
     int field_q;
     private int field_m;
     static int field_s;
-    static ue field_y;
+    static ResourceArchive field_y;
     int field_f;
 
     private final boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, d[] param6) {
@@ -65,7 +65,7 @@ final class bf extends IntrusiveNode {
                 fc.field_e = fc.field_e + ((param4 << 1) - jl.field_d);
                 var10.field_o = 0;
                 this.field_k = this.field_k - var10.field_i;
-                ia.field_k = ia.field_k + param4;
+                BitPacketBuffer.field_k = BitPacketBuffer.field_k + param4;
                 var10.field_h = 5;
                 var10.field_i = 16;
                 var10.field_p = 0;
@@ -336,11 +336,11 @@ final class bf extends IntrusiveNode {
                   if (!MouseInput.a(119)) {
                     pg.a(true, (byte) -98);
                     sa.a(nf.field_l + 3 * na.field_a, 23820);
-                    fc.field_e = fc.field_e - (ia.field_k << 1);
-                    ia.field_k = 0;
+                    fc.field_e = fc.field_e - (BitPacketBuffer.field_k << 1);
+                    BitPacketBuffer.field_k = 0;
                   } else {
                     stackIn_28_0 = -104;
-                    if (0 >= ia.field_k &&
+                    if (0 >= BitPacketBuffer.field_k &&
                       0 == jg.field_H) {
                       stackIn_30_1 = 0;
                     } else {

@@ -724,7 +724,7 @@ final class da extends ArchiveProvider {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = 86 % ((param3 + 7) / 41);
-          if (!param2.c((byte) 118)) {
+          if (!param2.ensureIndexLoaded((byte) 118)) {
             stackIn_4_0 = (String) (param0);
             return stackIn_4_0;
           }
@@ -1123,7 +1123,7 @@ final class da extends ArchiveProvider {
         }
     }
 
-    final int b(int param0, int param1) {
+    final int getGroupRequestProgressPercent(int param0, int param1) {
         ArchiveRequest var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;

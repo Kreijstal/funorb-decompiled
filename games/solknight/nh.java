@@ -40,11 +40,11 @@ final class nh {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.c(param2 ^ 75, param3);
+          var4_int = param0.getGroupIdByName(param2 ^ 75, param3);
           if (param2 != 0) {
             nh.a((byte) 67);
           }
-          var5 = param0.a(param1, param2 - 1, var4_int);
+          var5 = param0.getFileIdByName(param1, param2 - 1, var4_int);
           stackIn_3_0 = de.a(var4_int, var5, -17042, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -335,7 +335,7 @@ final class we extends UiWidget {
           bl.field_N = (BitmapFont) ((Object) rl.a(param1, 12, param0, "commonui", "arezzo12"));
           qc.field_x = (BitmapFont) ((Object) rl.a(param1, param3 ^ -53, param0, "commonui", "arezzo14"));
           sg.field_a = (BitmapFont) ((Object) rl.a(param1, param3 ^ -53, param0, "commonui", "arezzo14bold"));
-          var17 = new Sprite(param2.a("button.gif", "", 0), (java.awt.Component) ((Object) ne.field_F));
+          var17 = new Sprite(param2.getFileByName("button.gif", "", 0), (java.awt.Component) ((Object) ne.field_F));
           vl.a(0, "commonui", param1, "dropdown");
           var5 = WidgetWrapper.a((byte) -39, "screen_options", "commonui", param1);
           ProxyAuthenticationRequiredException.field_e = new u[4];

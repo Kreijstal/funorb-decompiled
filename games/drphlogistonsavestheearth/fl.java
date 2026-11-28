@@ -43,7 +43,7 @@ final class fl {
         return kc.field_k;
     }
 
-    final static boolean a(int param0, vj param1, int param2, byte param3) {
+    final static boolean a(int param0, ResourceArchive param1, int param2, byte param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -55,7 +55,7 @@ final class fl {
           if (param3 != -98) {
             fl.a(true);
           }
-          var5 = param1.a(param2, param0, (byte) 35);
+          var5 = param1.getFile(param2, param0, (byte) 35);
           var4 = var5;
           if (var5 == null) {
             return false;

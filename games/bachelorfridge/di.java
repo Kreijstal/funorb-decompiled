@@ -88,7 +88,7 @@ final class di extends pu {
         if (qq.field_l != null) {
           return true;
         }
-        if (vb.field_j.a("benefits", 20637)) {
+        if (vb.field_j.tryLoadGroupByName("benefits", 20637)) {
           qq.field_l = hca.a("benefits", vb.field_j, param0 ^ -90, "members_benefits_borders");
           st.field_c = hca.a("benefits", vb.field_j, 101, "members_benefits_price");
           f.field_c = hca.a("benefits", vb.field_j, param0 - 167, "members_benefits_logo");

@@ -110,7 +110,7 @@ final class e {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            stackIn_4_0 = th.field_u.a((byte) 127, param0, "");
+            stackIn_4_0 = BitPacketBuffer.field_u.getFileByName((byte) 127, param0, "");
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;

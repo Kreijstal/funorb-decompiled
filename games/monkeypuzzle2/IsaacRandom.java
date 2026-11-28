@@ -363,7 +363,7 @@ final class IsaacRandom {
         }
     }
 
-    final static ad a(int param0, int param1) {
+    final static ResourceArchive a(int param0, int param1) {
         if (param0 >= -87) {
           field_g = (BufferedSocket) null;
         }

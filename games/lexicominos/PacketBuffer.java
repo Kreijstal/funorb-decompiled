@@ -239,7 +239,7 @@ class PacketBuffer extends IntrusiveNode {
             field_i = 51;
           }
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + ByteStorage.a(param1.length(), 0, (byte) -80, this.payload, var4, this.position);
+          this.position = this.position + ByteStorage.encodeCp1252Subsequence(param1.length(), 0, (byte) -80, this.payload, var4, this.position);
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
@@ -429,7 +429,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var4 = (CharSequence) ((Object) param0);
-          this.position = this.position + ByteStorage.a(param0.length(), 0, (byte) -107, this.payload, var4, this.position);
+          this.position = this.position + ByteStorage.encodeCp1252Subsequence(param0.length(), 0, (byte) -107, this.payload, var4, this.position);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte)param1;
@@ -456,7 +456,7 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[fieldTemp$4] = (byte)(int)(param1 >> 16);
         if (param0 != -17131) {
           String var5 = (String) null;
-          PacketBuffer.a((sh) null, (String) null, true, (String) null);
+          PacketBuffer.a((ResourceArchive) null, (String) null, true, (String) null);
         }
         int fieldTemp$5 = this.position;
         this.position = this.position + 1;
@@ -662,10 +662,10 @@ class PacketBuffer extends IntrusiveNode {
         if (var3 == 0) {
           return "";
         }
-        return NetworkArchiveRequest.a(var3, this.payload, (byte) 16, var2);
+        return NetworkArchiveRequest.decodeCp1252String(var3, this.payload, (byte) 16, var2);
     }
 
-    final static IndexedSprite[] a(sh param0, String param1, boolean param2, String param3) {
+    final static IndexedSprite[] a(ResourceArchive param0, String param1, boolean param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -684,8 +684,8 @@ class PacketBuffer extends IntrusiveNode {
             stackIn_2_0 = (IndexedSprite[]) null;
             return stackIn_2_0;
           }
-          var4_int = param0.c(param1, (byte) -89);
-          var5 = param0.a(param3, -27964, var4_int);
+          var4_int = param0.getGroupIdByName(param1, (byte) -89);
+          var5 = param0.getFileIdByName(param3, -27964, var4_int);
           stackIn_4_0 = oc.a(param0, var5, var4_int, 20);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -739,7 +739,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (this.payload[fieldTemp$1] != 0);
         var4 = this.position + (-var3 - 1);
         if (var4 != 0) {
-          return NetworkArchiveRequest.a(var4, this.payload, (byte) 16, var3);
+          return NetworkArchiveRequest.decodeCp1252String(var4, this.payload, (byte) 16, var3);
         }
         return "";
     }

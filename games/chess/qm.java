@@ -336,12 +336,12 @@ final class qm {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.a(param1, 0);
+          var4_int = param3.getGroupIdByName(param1, 0);
           if (param0 != 1) {
             stackIn_2_0 = (rk[]) null;
             return stackIn_2_0;
           }
-          var5 = param3.a(param2, 7, var4_int);
+          var5 = param3.getFileIdByName(param2, 7, var4_int);
           stackIn_4_0 = om.a(param3, var4_int, true, var5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

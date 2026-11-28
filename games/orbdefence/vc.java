@@ -130,7 +130,7 @@ final class vc {
         int stackIn_59_1 = 0;
         ti stackIn_59_2 = null;
         RuntimeException decompiledCaughtException = null;
-        se var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -630,11 +630,11 @@ final class vc {
               if (tc.field_b > 0) {
                 jc.field_b = true;
               }
-              uk.field_b.b(og.field_n, 3777);
+              uk.field_b.setCipherSeed(og.field_n, 3777);
               var8 = 0;
               do {
                 if (4 <= var8) {
-                  NetworkArchiveRequest.field_t.b(og.field_n, 3777);
+                  NetworkArchiveRequest.field_t.setCipherSeed(og.field_n, 3777);
                   break;
                 }
                 og.field_n[var8] = og.field_n[var8] + 50;

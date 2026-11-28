@@ -764,7 +764,7 @@ final class GasCloudAnimation extends EventAnimation {
         }
     }
 
-    final static void a(int param0, IndexedSprite[] param1, vr param2, vr param3, int[] param4) {
+    final static void a(int param0, IndexedSprite[] param1, ResourceArchive param2, ResourceArchive param3, int[] param4) {
         Sprite[] dupTemp$0 = null;
         Sprite[] dupTemp$1 = null;
         Sprite[] dupTemp$2 = null;
@@ -958,7 +958,7 @@ final class GasCloudAnimation extends EventAnimation {
           iw.field_a = new UiComponent(0L, vo.field_b);
           if (param0 != 30869) {
             var19 = (int[]) null;
-            GasCloudAnimation.a(93, (IndexedSprite[]) null, (vr) null, (vr) null, (int[]) null);
+            GasCloudAnimation.a(93, (IndexedSprite[]) null, (ResourceArchive) null, (ResourceArchive) null, (int[]) null);
           }
           gfa.field_f = new UiComponent(0L, ria.field_k);
           uaa.field_i = new UiComponent(0L, ria.field_k);

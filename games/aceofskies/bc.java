@@ -37,10 +37,10 @@ final class bc extends to {
             return stackIn_13_0;
           }
           if (!rj.field_b.c(var3, -14012)) {
-            int stackIn_16_0 = rj.field_b.a(var3, (byte) -79);
+            int stackIn_16_0 = rj.field_b.getGroupLoadPercentByName(var3, (byte) -79);
             return stackIn_16_0;
           }
-          byte[] var15 = rj.field_b.a(var3, (byte) -71, "");
+          byte[] var15 = rj.field_b.getFileByName(var3, (byte) -71, "");
           byte[] var13 = var15;
           byte[] var4 = var13;
           int var6 = -26 / ((param1 + 35) / 33);

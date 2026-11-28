@@ -15,13 +15,13 @@ final class fi {
     private int field_c;
 
     final static void a(sd param0, int param1, int param2) {
-        jd var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           if (param2 != -24045) {
             fi.b(101);
           }
           var3 = id.field_c;
-          var3.e(param1, param2 - 2147459603);
+          var3.writeCipheredByte(param1, param2 - 2147459603);
           var3.writeByte(1, 5);
           var3.writeByte(-113, 0);
           var3.writeShort(true, param0.field_o);

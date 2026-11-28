@@ -164,7 +164,7 @@ abstract class kg extends DualLinkNode {
         int var5 = 0;
         if (param0 != 32) {
           param2 = param2 - this.field_C;
-          var5 = de.a(126, param0) & 255;
+          var5 = de.encodeCp1252Character(126, param0) & 255;
           this.a(var5, param1 + this.field_o[var5], param2 + this.field_G[var5], this.field_r[var5], this.field_z[var5], param3, false);
         }
     }
@@ -211,7 +211,7 @@ abstract class kg extends DualLinkNode {
     }
 
     final int a(char param0) {
-        return this.field_x[de.a(69, param0) & 255];
+        return this.field_x[de.encodeCp1252Character(69, param0) & 255];
     }
 
     final int a(String param0, int[] param1, String[] param2) {
@@ -360,7 +360,7 @@ abstract class kg extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_E.append((char) var14);
-                var14 = (char)(de.a(6, (char) var14) & 255);
+                var14 = (char)(de.encodeCp1252Character(6, (char) var14) & 255);
                 var4 = var4 + this.field_x[var14];
                 if (this.field_p != null &&
                   var10 != 0) {
@@ -523,7 +523,7 @@ abstract class kg extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var6 == -1)) {
-              var11 = (char)(de.a(32, (char) var11) & 255);
+              var11 = (char)(de.encodeCp1252Character(32, (char) var11) & 255);
               if (this.field_p != null &&
                 var7 != 0) {
                 param1 = param1 + this.field_p[(var7 << 8) + var11];
@@ -666,7 +666,7 @@ abstract class kg extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(de.a(73, (char) var8) & 255);
+              var8 = (char)(de.encodeCp1252Character(73, (char) var8) & 255);
               if (this.field_p != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_p[(var5 << 8) + var8];
@@ -904,7 +904,7 @@ abstract class kg extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(de.a(53, (char) var7) & 255);
+              var7 = (char)(de.encodeCp1252Character(53, (char) var7) & 255);
               var4 = var4 + this.field_x[var7];
               if (this.field_p != null &&
                 var3 != 0) {

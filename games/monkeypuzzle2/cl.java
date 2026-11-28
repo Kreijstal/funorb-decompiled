@@ -6,7 +6,7 @@ import java.util.*;
 final class cl {
     static String field_b;
     static Sprite[] field_c;
-    static ad field_a;
+    static ResourceArchive field_a;
     static int[] field_g;
     static String field_e;
     static int field_d;

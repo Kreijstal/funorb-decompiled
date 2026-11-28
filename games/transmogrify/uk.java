@@ -7,7 +7,7 @@ final class uk extends bj {
     String field_eb;
     String field_fb;
 
-    final static byte[] a(int param0, CharSequence param1) {
+    final static byte[] encodeCp1252Bytes(int param0, CharSequence param1) {
         int var4 = 0;
         byte[] stackIn_3_0 = null;
         byte[] stackIn_70_0 = null;

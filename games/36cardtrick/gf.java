@@ -61,24 +61,24 @@ final class gf {
         while (this.field_f < this.field_d) {
           var4 = this.field_c[this.field_f];
           var2 = var4;
-          if (!var4.field_d.b(4)) {
+          if (!var4.field_d.ensureIndexLoaded(4)) {
             this.a(var4, 0, (byte) 73);
             return false;
           }
           if (var4.field_c >= 0 &&
-            !var4.field_d.a(var4.field_c, 70)) {
-            this.a(var2, var4.field_d.a((byte) 60, var4.field_c), (byte) 73);
+            !var4.field_d.tryLoadGroup(var4.field_c, 70)) {
+            this.a(var2, var4.field_d.getGroupLoadPercent((byte) 60, var4.field_c), (byte) 73);
             return false;
           }
           if (null != var4.field_b &&
             !var4.field_d.b(4, var4.field_b)) {
-            this.a(var2, var4.field_d.a(var4.field_b, 0), (byte) 73);
+            this.a(var2, var4.field_d.getGroupLoadPercentByName(var4.field_b, 0), (byte) 73);
             return false;
           }
           if (var4.field_c < 0 &&
             null == var4.field_b &&
             null != var4.field_a &&
-            !var4.field_d.a((byte) 29)) {
+            !var4.field_d.tryLoadAllGroups((byte) 29)) {
             this.a(var2, var4.field_d.a(2), (byte) 73);
             return false;
           }

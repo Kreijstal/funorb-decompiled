@@ -16,7 +16,7 @@ final class nd {
           if (param2 != -1) {
             return true;
           }
-          var5 = param1.a(param0, 100, param3);
+          var5 = param1.getFile(param0, 100, param3);
           var4 = var5;
           if (var5 == null) {
             return false;

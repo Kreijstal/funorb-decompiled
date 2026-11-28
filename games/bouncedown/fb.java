@@ -72,7 +72,7 @@ final class fb extends ih {
         super(0L, (ih) null);
     }
 
-    final static String a(byte param0, String param1, String param2, gk param3, String param4) {
+    final static String a(byte param0, String param1, String param2, ResourceArchive param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
@@ -90,11 +90,11 @@ final class fb extends ih {
           if (param0 >= -7) {
             fb.d(2);
           }
-          if (!param3.c(102)) {
+          if (!param3.ensureIndexLoaded(102)) {
             stackIn_5_0 = (String) (param1);
             return stackIn_5_0;
           }
-          stackIn_7_0 = param2 + " - " + param3.b(param4, (byte) -100) + "%";
+          stackIn_7_0 = param2 + " - " + param3.getGroupLoadPercentByName(param4, (byte) -100) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

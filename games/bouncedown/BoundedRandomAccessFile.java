@@ -178,7 +178,7 @@ final class BoundedRandomAccessFile {
           int stackIn_13_0 = 0;
           Throwable decompiledCaughtException = null;
           if (null == ec.field_P) {
-            ec.field_P = pj.field_c.requestDirectSocket(gk.field_h, td.field_b, 0);
+            ec.field_P = pj.field_c.requestDirectSocket(ResourceArchive.field_h, td.field_b, 0);
           }
           if (ec.field_P.status == 0) {
             return false;

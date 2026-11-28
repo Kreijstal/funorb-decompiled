@@ -129,8 +129,8 @@ final class kh {
           if (param4 != 1) {
             field_b = (String) null;
           }
-          var5_int = param2.a(true, param3);
-          var6 = param2.a(param1, var5_int, -1);
+          var5_int = param2.getGroupIdByName(true, param3);
+          var6 = param2.getFileIdByName(param1, var5_int, -1);
           stackIn_3_0 = pb.a(var5_int, var6, param2, param0, (byte) 126);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

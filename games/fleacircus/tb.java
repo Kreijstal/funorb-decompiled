@@ -132,7 +132,7 @@ final class tb {
             return stackIn_3_0;
           }
           for (var4 = 0; var4 < var2_int; var4++) {
-            var3 = SecondaryNodeDequeIterator.a(param0.charAt(var4), 22861) + ((var3 << 5) - var3);
+            var3 = SecondaryNodeDequeIterator.encodeCp1252Character(param0.charAt(var4), 22861) + ((var3 << 5) - var3);
           }
           stackIn_8_0 = var3;
           return stackIn_8_0;

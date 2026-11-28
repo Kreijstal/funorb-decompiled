@@ -6,7 +6,7 @@ final class ee {
     static int field_b;
     static int field_a;
 
-    final static boolean a(gk param0, byte param1) {
+    final static boolean a(ResourceArchive param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
@@ -16,7 +16,7 @@ final class ee {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -79 / ((param1 - 43) / 53);
-          stackIn_1_0 = param0.a((byte) -93);
+          stackIn_1_0 = param0.tryLoadAllGroups((byte) -93);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

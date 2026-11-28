@@ -21,7 +21,7 @@ class mj extends l {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -41 % ((param0 + 59) / 35);
-          stackIn_1_0 = p.a(param1.length, (byte) 79, param1, 0);
+          stackIn_1_0 = p.decodeCp1252String(param1.length, (byte) 79, param1, 0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

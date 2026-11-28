@@ -118,7 +118,7 @@ final class StatusEffectInfo {
         return stackIn_6_0;
     }
 
-    final static vr a(int param0, boolean param1, int param2, boolean param3, int param4) {
+    final static ResourceArchive a(int param0, boolean param1, int param2, boolean param3, int param4) {
         if (param2 != 0) {
           StatusEffectInfo.a(false);
         }

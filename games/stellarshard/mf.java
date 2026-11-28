@@ -3,7 +3,7 @@
  */
 final class mf {
     static Sprite[] field_a;
-    static pf field_b;
+    static ResourceArchive field_b;
     private static String field_z;
 
     public static void clearStaticReferences(int param0) {

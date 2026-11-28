@@ -19,7 +19,7 @@ final class ni {
         field_c = null;
     }
 
-    final static boolean a(pf param0, pf param1, pf param2, byte param3) {
+    final static boolean a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, byte param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -30,11 +30,11 @@ final class ni {
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2.a((byte) -36) &&
+          if (param2.ensureIndexLoaded((byte) -36) &&
             param2.a("commonui", (byte) -109)) {
-            if (param0.a((byte) -36) &&
+            if (param0.ensureIndexLoaded((byte) -36) &&
               param0.a("commonui", (byte) -109)) {
-              if (param1.a((byte) -36) &&
+              if (param1.ensureIndexLoaded((byte) -36) &&
                 param1.a("button.gif", (byte) -109)) {
                 if (param3 == -104) {
                   return true;
@@ -98,7 +98,7 @@ final class ni {
             }
             var4 = new byte[var3_int];
             param2.position = param2.position + fl.field_b.a(param2.payload, param2.position, 0, var4, var3_int, true);
-            var5 = kk.a(var3_int, (byte) 122, 0, var4);
+            var5 = kk.decodeCp1252String(var3_int, (byte) 122, 0, var4);
             stackIn_7_0 = var5;
             return stackIn_7_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

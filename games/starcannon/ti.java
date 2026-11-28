@@ -60,7 +60,7 @@ abstract class ti {
         }
     }
 
-    abstract int a(int param0, boolean param1);
+    abstract int getGroupRequestProgressPercent(int param0, boolean param1);
 
     abstract ak b(byte param0);
 

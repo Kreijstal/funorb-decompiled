@@ -180,7 +180,7 @@ final class pa extends dg {
             } else {
               if (var9Lifetime1 == 248) {
                 wf.a((byte) -83, mk.g(-126));
-                e.field_a = qk.field_i;
+                e.field_a = ResourceArchive.field_i;
                 mc.a((byte) -127);
                 lk.field_w = false;
                 stackIn_34_0 = var9Lifetime1;
@@ -362,12 +362,12 @@ final class pa extends dg {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        w var5 = null;
+        BitPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
-        w var11 = null;
+        BitPacketBuffer var11 = null;
         int[] var12 = null;
         rc var13 = null;
         rc var14 = null;

@@ -309,7 +309,7 @@ abstract class fb {
             if (!rg.a((byte) 19, (CharSequence) ((Object) var6))) {
               ic.field_a = 2;
             } else {
-              ic.field_a = pf.a((CharSequence) ((Object) var6), (byte) 125);
+              ic.field_a = ResourceArchive.a((CharSequence) ((Object) var6), (byte) 125);
             }
           }
           ArchiveRequest.field_x = param5;

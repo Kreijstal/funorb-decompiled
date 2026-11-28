@@ -7,7 +7,7 @@ final class ad {
     static KeyboardListener field_b;
     int field_a;
     String field_f;
-    ki field_g;
+    ResourceArchive field_g;
     static RgbSprite field_e;
 
     final static void a(int param0) {
@@ -24,9 +24,9 @@ final class ad {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        se var13 = null;
+        BitPacketBuffer var13 = null;
         int var14 = 0;
-        se var15 = null;
+        BitPacketBuffer var15 = null;
         int[][] var19 = null;
         int var6_intLifetime1;
         int var9Lifetime1;

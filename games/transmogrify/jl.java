@@ -64,7 +64,7 @@ final class jl extends IntrusiveNode {
         int var5_int = 0;
         int[] var6 = null;
         int var8 = 0;
-        hj var9 = null;
+        BitPacketBuffer var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var8 = Transmogrify.field_A ? 1 : 0;

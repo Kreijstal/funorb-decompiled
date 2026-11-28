@@ -79,7 +79,7 @@ class fa extends mg {
           if (param0 >= -62) {
             field_k = (String) null;
           }
-          stackIn_3_0 = gd.a((byte) 102, param1, 0, param1.length);
+          stackIn_3_0 = gd.decodeCp1252String((byte) 102, param1, 0, param1.length);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

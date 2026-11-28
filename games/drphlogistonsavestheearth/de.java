@@ -45,7 +45,7 @@ final class de extends wd {
         int var4;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (param0) {
-          this.a(-70, 35);
+          this.getGroupRequestProgressPercent(-70, 35);
         }
         if (this.field_A == null) {
           return;
@@ -84,7 +84,7 @@ final class de extends wd {
         field_q = null;
     }
 
-    final int a(int param0, int param1) {
+    final int getGroupRequestProgressPercent(int param0, int param1) {
         ArchiveRequest var3 = (ArchiveRequest) (this.field_v.a(true, (long)param0));
         if (param1 != -1) {
           return 94;

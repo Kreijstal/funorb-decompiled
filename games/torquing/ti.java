@@ -206,7 +206,7 @@ final class ti {
     final static void a(ResourceArchive param0, int param1) {
         ho var2 = null;
         try {
-          ho.a(param0.a(-125, "", "headers.packvorbis"));
+          ho.a(param0.getFileByName(-125, "", "headers.packvorbis"));
           if (param1 != 28922) {
             ti.clearStaticReferences(true);
           }

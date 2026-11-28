@@ -40,7 +40,7 @@ final class nf {
             pb.field_a == r.field_c)) {
             if (d.field_b.position == 0 &&
               ca.field_Y + 10000L < dd.correctedCurrentTimeMillis(57)) {
-              d.field_b.d((byte) 88, param0);
+              d.field_b.writeCipheredByte((byte) 88, param0);
             }
             if (d.field_b.position > 0) {
               try {

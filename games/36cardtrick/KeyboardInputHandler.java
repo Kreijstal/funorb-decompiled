@@ -150,7 +150,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           if (sj.field_d != null) {
             var2_int = param0.getKeyChar();
             if (0 != var2_int && 65535 != var2_int &&
-              cg.a(111, (char) var2_int)) {
+              cg.isSupportedCp1252KeyCharacter(111, (char) var2_int)) {
               var3 = sa.field_b + 1 & 127;
               if (var3 != DiskArchiveRequest.field_t) {
                 db.field_c[sa.field_b] = -1;

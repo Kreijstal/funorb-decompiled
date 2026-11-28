@@ -272,7 +272,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
                 }
               } else {
                 try {
-                  JavaScriptBridge.callWithArguments(new Object[]{ue.a(BoundedRandomAccessFile.field_a, param4 + 16779)}, ll.b(114), "zap", -27504);
+                  JavaScriptBridge.callWithArguments(new Object[]{ResourceArchive.a(BoundedRandomAccessFile.field_a, param4 + 16779)}, ll.b(114), "zap", -27504);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -281,11 +281,11 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               if (u.field_d > 0) {
                 ah.field_i = true;
               }
-              d.field_b.a(jl.field_b, (byte) 122);
+              d.field_b.setCipherSeed(jl.field_b, (byte) 122);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 jl.field_b[var8Lifetime1] = jl.field_b[var8Lifetime1] + 50;
               }
-              se.field_p.a(jl.field_b, (byte) -82);
+              se.field_p.setCipherSeed(jl.field_b, (byte) -82);
               stackIn_73_0 = vh.field_t;
               return stackIn_73_0;
             }

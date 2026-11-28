@@ -4,7 +4,7 @@
 final class jf extends IntrusiveNode {
     static int[] field_k;
     static String field_l;
-    static pf field_m;
+    static ResourceArchive field_m;
     int field_o;
     static Sprite[] field_n;
 

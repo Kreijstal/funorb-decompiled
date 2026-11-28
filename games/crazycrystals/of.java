@@ -28,7 +28,7 @@ final class of extends pc {
         super.a(param0, param1, -106, param3);
     }
 
-    final static void a(db param0, int param1, db param2) {
+    final static void a(ResourceArchive param0, int param1, ResourceArchive param2) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;

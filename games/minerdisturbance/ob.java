@@ -249,7 +249,7 @@ abstract class ob extends GameAppletShell {
         }
         if (af.field_u == 2) {
           if (null != PacketBuffer.field_r &&
-            PacketBuffer.field_r.a((byte) 83)) {
+            PacketBuffer.field_r.ensureIndexLoaded((byte) 83)) {
             if (PacketBuffer.field_r.b(false, "")) {
               if (PacketBuffer.field_r.a(false, "")) {
                 li.a(9259, PacketBuffer.field_r);
@@ -303,8 +303,8 @@ abstract class ob extends GameAppletShell {
         }
         boolean decompiledFrameRemainder0 = true;
         if (af.field_u == 11) {
-          if (fh.field_c != null && (!fh.field_c.a((byte) 84) ||
-            !fh.field_c.b(-1))) {
+          if (fh.field_c != null && (!fh.field_c.ensureIndexLoaded((byte) 84) ||
+            !fh.field_c.tryLoadAllGroups(-1))) {
             pa.a(true, qn.a(ge.field_d, ic.field_g, false, fh.field_c), 0.0f);
             decompiledFrameRemainder0 = false;
           }
@@ -668,7 +668,7 @@ abstract class ob extends GameAppletShell {
               if (hf.field_u.a((byte) 105)) {
                 var11 = hf.field_u.a(0);
                 if (var11 != null) {
-                  var7 = ph.a((byte) 31, var11.position, var11.payload, 0);
+                  var7 = ph.decodeCp1252String((byte) 31, var11.position, var11.payload, 0);
                   stackIn_63_0 = var7;
                   stackIn_64_1 = !(param0);
                   fm.a(stackIn_63_0, stackIn_64_1);

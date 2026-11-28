@@ -171,7 +171,7 @@ final class hj {
           var6 = 15 / ((param0 - 63) / 32);
           while (this.field_fb.length > var5) {
             var7 = WidgetContainer.field_w[var5];
-            var8 = ad.field_g[var5];
+            var8 = ResourceArchive.field_g[var5];
             this.field_fb[var5] = BufferedRandomAccessFile.a(BufferedRandomAccessFile.a(65280, var8) * var4 + var3 * BufferedRandomAccessFile.a(var7, 65280), 16711680) + BufferedRandomAccessFile.a(var4 * BufferedRandomAccessFile.a(var8, 16711935) + BufferedRandomAccessFile.a(var7, 16711935) * var3, -16711936) >> 8;
             var5++;
           }

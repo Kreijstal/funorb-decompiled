@@ -92,7 +92,7 @@ final class NanoFrameTimer extends FrameTimer {
         r stackIn_80_0 = null;
         boolean stackIn_81_1 = false;
         RuntimeException decompiledCaughtException = null;
-        nk var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         long var3_long = 0L;
@@ -242,11 +242,11 @@ final class NanoFrameTimer extends FrameTimer {
               return;
             }
             if (var2 == 10) {
-              var30 = (ln) (nk.field_t.beginBackward(param0 ^ -18093));
+              var30 = (ln) (BitPacketBuffer.field_t.beginBackward(param0 ^ -18093));
               while (var30 != null) {
                 var30.unlink(-2193);
                 var30.unlinkSecondary(-1);
-                var30 = (ln) (nk.field_t.nextBackward((byte) -115));
+                var30 = (ln) (BitPacketBuffer.field_t.nextBackward((byte) -115));
               }
               return;
             }

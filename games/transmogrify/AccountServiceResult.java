@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AccountServiceResult {
-    static ci field_h;
+    static ResourceArchive field_h;
     boolean field_a;
     static volatile int field_i;
     String[] suggestions;

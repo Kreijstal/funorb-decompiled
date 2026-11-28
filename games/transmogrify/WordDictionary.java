@@ -31,7 +31,7 @@ final class WordDictionary {
           for (var3_int = 0; var3_int < param1.length - 2; var3_int++) {
             var4 = 1;
             for (var5 = var3_int; param1.length > var5; var5++) {
-              var4 = this.a(0, var4, de.a(33, param1[var5]), this.field_g);
+              var4 = this.a(0, var4, de.encodeCp1252Character(33, param1[var5]), this.field_g);
               if (var4 != 0) {
                 if (!this.a(var4, this.field_g, true)) {
                   continue;
@@ -48,7 +48,7 @@ final class WordDictionary {
           while (var3_intLifetime1 >= 2) {
             var4Lifetime1 = 1;
             for (var5Lifetime1 = var3_intLifetime1; var5Lifetime1 >= 0; var5Lifetime1--) {
-              var4Lifetime1 = this.a(0, var4Lifetime1, de.a(106, param1[var5Lifetime1]), this.field_g);
+              var4Lifetime1 = this.a(0, var4Lifetime1, de.encodeCp1252Character(106, param1[var5Lifetime1]), this.field_g);
               if (var4Lifetime1 != 0) {
                 if (!this.a(var4Lifetime1, this.field_g, true)) {
                   continue;
@@ -311,7 +311,7 @@ final class WordDictionary {
               }
               var7 = stackIn_9_0[stackIn_10_1];
               var5_int = var7[AccountNameAvailabilityValidator.a(var7.length, param1, false)] & 255;
-              param0[var6] = BoundedRandomAccessFile.a(68, (byte)var5_int);
+              param0[var6] = BoundedRandomAccessFile.decodeCp1252Byte(68, (byte)var5_int);
             }
             if (!this.b((byte) -119, param0)) {
               stackIn_5_0 = 256;
@@ -368,7 +368,7 @@ final class WordDictionary {
           while (var6 < param1.length) {
             var7 = 0;
             if (param1[var6] != 0) {
-              var7 = de.a(11, param1[var6]);
+              var7 = de.encodeCp1252Character(11, param1[var6]);
             }
             var5 = this.a(0, var5, (byte) var7, this.field_h);
             if (var5 != 0) {
@@ -396,7 +396,7 @@ final class WordDictionary {
         }
     }
 
-    final static void a(PcmStreamMixer param0, int param1, int param2, ci param3) {
+    final static void a(PcmStreamMixer param0, int param1, int param2, ResourceArchive param3) {
         try {
           tf.field_a = wi.b(-125) * param1 / 1000;
           NanoFrameTimer.a(param3, (byte) -80);

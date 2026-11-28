@@ -50,7 +50,7 @@ final class Bzip2State {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = param3.a(false, param2, param0);
+          var6 = param3.getFile(false, param2, param0);
           var4 = var6;
           if (var6 == null) {
             return false;

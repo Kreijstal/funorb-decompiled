@@ -45,7 +45,7 @@ final class ml {
         }
     }
 
-    final static short[] a(short[] param0, int param1, nk param2, int param3) {
+    final static short[] a(short[] param0, int param1, BitPacketBuffer param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -63,7 +63,7 @@ final class ml {
         RuntimeException var4 = null;
         var8 = Chess.field_G;
         try {
-          var4_int = param2.e(20, param1);
+          var4_int = param2.readBits(20, param1);
           if (param3 <= 40) {
             var9 = (java.applet.Applet) null;
             ml.a((java.applet.Applet) null, (byte) 24);
@@ -76,11 +76,11 @@ final class ml {
             param0.length != var4_int) {
             param0 = new short[var4_int];
           }
-          var5 = param2.e(127, 4);
-          var6 = (short)param2.e(22, 16);
+          var5 = param2.readBits(127, 4);
+          var6 = (short)param2.readBits(22, 16);
           if (var5 > 0) {
             for (var7 = 0; var4_int > var7; var7++) {
-              param0[var7] = (short)(param2.e(29, var5) + var6);
+              param0[var7] = (short)(param2.readBits(29, var5) + var6);
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
@@ -405,7 +405,7 @@ final class ml {
 
     final static boolean a(int param0, ResourceArchive param1) {
         RuntimeException var2 = null;
-        nk var3 = null;
+        BitPacketBuffer var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -413,10 +413,10 @@ final class ml {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            var3 = (nk) null;
-            ml.a((short[]) null, 52, (nk) null, 27);
+            var3 = (BitPacketBuffer) null;
+            ml.a((short[]) null, 52, (BitPacketBuffer) null, 27);
           }
-          stackIn_3_0 = param1.b((byte) -40);
+          stackIn_3_0 = param1.tryLoadAllGroups((byte) -40);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

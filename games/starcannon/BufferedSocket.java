@@ -150,7 +150,7 @@ final class BufferedSocket implements Runnable {
         return this.field_d.read();
     }
 
-    final static kl[] a(ia param0, byte param1) {
+    final static kl[] a(BitPacketBuffer param0, byte param1) {
         int var5 = 0;
         kl[] stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -166,11 +166,11 @@ final class BufferedSocket implements Runnable {
         int var7 = 0;
         var7 = StarCannon.field_A;
         try {
-          var2_int = param0.e(8, 8);
+          var2_int = param0.readBits(8, 8);
           if (0 < var2_int) {
             return null;
           }
-          var3 = param0.e(param1 - 99, 12);
+          var3 = param0.readBits(param1 - 99, 12);
           var4 = new kl[var3];
           if (param1 != 107) {
             field_o = (String) null;
@@ -178,16 +178,16 @@ final class BufferedSocket implements Runnable {
           for (var5 = 0; var3 > var5; var5++) {
             if (od.a(-2, param0)) {
               var6 = new kl();
-              param0.e(8, 24);
-              param0.e(8, 24);
-              var6.field_e = param0.e(8, 24);
-              param0.e(param1 ^ 99, 9);
-              param0.e(8, 12);
-              param0.e(8, 12);
-              param0.e(param1 ^ 99, 12);
+              param0.readBits(8, 24);
+              param0.readBits(8, 24);
+              var6.field_e = param0.readBits(8, 24);
+              param0.readBits(param1 ^ 99, 9);
+              param0.readBits(8, 12);
+              param0.readBits(8, 12);
+              param0.readBits(param1 ^ 99, 12);
               var4[var5] = var6;
             } else {
-              var6_int = param0.e(8, wg.a(false, -1 + var5));
+              var6_int = param0.readBits(8, wg.a(false, -1 + var5));
               var4[var5] = var4[var6_int];
             }
           }
@@ -423,7 +423,7 @@ final class BufferedSocket implements Runnable {
         return this.field_d.available();
     }
 
-    final static ue a(int param0, boolean param1, boolean param2, int param3, byte param4) {
+    final static ResourceArchive a(int param0, boolean param1, boolean param2, int param3, byte param4) {
         if (param4 < 100) {
           field_g = (kh) null;
         }

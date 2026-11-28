@@ -9,7 +9,7 @@ final class NodeHashTableIterator implements Iterator {
     private int field_c;
     static Sprite[] field_e;
     static Sprite field_h;
-    static ad field_d;
+    static ResourceArchive field_d;
     private IterableNodeHashTable field_b;
     static String field_a;
     private IntrusiveNode field_f;

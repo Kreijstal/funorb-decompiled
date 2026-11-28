@@ -39,11 +39,11 @@ final class fl {
     }
 
     final static void b(int param0, int param1) {
-        w var2 = NetworkArchiveRequest.field_r;
+        BitPacketBuffer var2 = NetworkArchiveRequest.field_r;
         if (param0 != 1) {
           fl.clearStaticReferences(-53);
         }
-        var2.h(param1, 0);
+        var2.writeCipheredByte(param1, 0);
         var2.writeByte(-9469, 1);
         var2.writeByte(-9469, 2);
     }
@@ -56,7 +56,7 @@ final class fl {
         this.field_f = var5;
     }
 
-    final static void a(w param0, boolean param1) {
+    final static void a(BitPacketBuffer param0, boolean param1) {
         try {
           int var5 = 0;
           int var10_int = 0;

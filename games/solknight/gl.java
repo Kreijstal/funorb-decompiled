@@ -207,7 +207,7 @@ final class gl {
         this.field_t = cf.field_d;
         this.field_p = DualLinkNode.field_h;
         this.field_i.a(param0, this.field_n, this.field_d);
-        jd.field_p = false;
+        BitPacketBuffer.field_p = false;
         FullscreenFocusCanvas var2 = g.a(this.field_d, 0, wh.field_c, this.field_n, (byte) -81, 0);
         if (var2 == null) {
           this.a(false);

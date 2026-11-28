@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class da {
-    private qk field_f;
+    private ResourceArchive field_f;
     static boolean field_b;
     private vb field_a;
     static String[] field_c;
-    private qk field_e;
+    private ResourceArchive field_e;
     private vb field_d;
 
     private final PcmSample a(byte param0, int[] param1, int param2, int param3) {
@@ -152,7 +152,7 @@ final class da {
         }
     }
 
-    da(qk param0, qk param1) {
+    da(ResourceArchive param0, ResourceArchive param1) {
         this.field_a = new vb(256);
         this.field_d = new vb(256);
         try {

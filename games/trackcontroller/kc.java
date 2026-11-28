@@ -7,11 +7,11 @@ final class kc {
     static String field_a;
 
     final static void a(int param0, byte param1, ei param2) {
-        la var6 = null;
+        BitPacketBuffer var6 = null;
         int var4 = 0;
         try {
           var6 = LevelView.field_C;
-          var6.c(param0, 7);
+          var6.writeCipheredByte(param0, 7);
           var6.position = var6.position + 1;
           var4 = var6.position;
           var6.writeByte(1, (byte) -75);
@@ -38,13 +38,13 @@ final class kc {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        la var5 = null;
+        BitPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
         cf var11 = null;
-        la var12 = null;
+        BitPacketBuffer var12 = null;
         int[] var13 = null;
         th var14 = null;
         th var15 = null;

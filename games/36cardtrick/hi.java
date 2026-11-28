@@ -239,7 +239,7 @@ final class hi {
         }
     }
 
-    final static int a(int param0, int param1, byte[] param2, CharSequence param3, int param4, boolean param5) {
+    final static int encodeCp1252Subsequence(int param0, int param1, byte[] param2, CharSequence param3, int param4, boolean param5) {
         int var7 = 0;
         int stackIn_68_0 = 0;
         int stackIn_70_0 = 0;

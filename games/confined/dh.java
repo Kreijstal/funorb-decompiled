@@ -12,7 +12,7 @@ class dh extends sj implements el {
     private ib field_wb;
     private ok field_xb;
 
-    final static RgbSprite a(boolean param0, String param1, String param2, mi param3) {
+    final static RgbSprite a(boolean param0, String param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -31,8 +31,8 @@ class dh extends sj implements el {
             stackIn_2_0 = (RgbSprite) null;
             return stackIn_2_0;
           }
-          var4_int = param3.a(-37, param2);
-          var5 = param3.a(var4_int, param1, -127);
+          var4_int = param3.getGroupIdByName(-37, param2);
+          var5 = param3.getFileIdByName(var4_int, param1, -127);
           stackIn_4_0 = ci.a(var4_int, param3, var5, param0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

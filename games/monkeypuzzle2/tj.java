@@ -20,15 +20,15 @@ final class tj {
           de.field_n.addFirst(-8212, var1);
           return;
         }
-        ad var2 = (ad) null;
-        tj.a(-96, (ad) null, 126, (byte) 79);
+        ResourceArchive var2 = (ResourceArchive) null;
+        tj.a(-96, (ResourceArchive) null, 126, (byte) 79);
         SoftwareRasterizer.setRasterBuffer(var1.field_l, var1.field_h, var1.field_m);
         SoftwareRasterizer.setClip(var1.field_j, var1.field_n, var1.field_e, var1.field_o);
         var1.field_l = null;
         de.field_n.addFirst(-8212, var1);
     }
 
-    final static Sprite[] a(int param0, ad param1, int param2, byte param3) {
+    final static Sprite[] a(int param0, ResourceArchive param1, int param2, byte param3) {
         RuntimeException var4 = null;
         Sprite[] stackIn_5_0 = null;
         Sprite[] stackIn_7_0 = null;
@@ -69,8 +69,8 @@ final class tj {
           field_d = null;
           return;
         }
-        ad var2 = (ad) null;
-        tj.a(-25, (ad) null, 77, (byte) 85);
+        ResourceArchive var2 = (ResourceArchive) null;
+        tj.a(-25, (ResourceArchive) null, 77, (byte) 85);
         field_b = null;
         field_a = null;
         field_e = null;
@@ -85,8 +85,8 @@ final class tj {
         wi.field_b = null;
         wd.field_g = false;
         if (param0 >= -2) {
-          ad var2 = (ad) null;
-          tj.a(-36, (ad) null, -94, (byte) 124);
+          ResourceArchive var2 = (ResourceArchive) null;
+          tj.a(-36, (ResourceArchive) null, -94, (byte) 124);
         }
     }
 

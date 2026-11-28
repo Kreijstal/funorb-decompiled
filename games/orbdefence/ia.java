@@ -44,7 +44,7 @@ abstract class ia {
     }
 
     final static void a(int param0, int param1, fb param2) {
-        se var3 = null;
+        BitPacketBuffer var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -52,7 +52,7 @@ abstract class ia {
         RuntimeException var3_ref = null;
         try {
           var3 = uk.field_b;
-          var3.i(param1, 126);
+          var3.writeCipheredByte(param1, 126);
           var3.writeByte(2, -29);
           var3.writeByte(0, -63);
           var3.writeByte(param2.field_h, -21);

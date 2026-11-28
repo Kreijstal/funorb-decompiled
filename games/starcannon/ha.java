@@ -29,7 +29,7 @@ final class ha {
             }
             var4 = new byte[var3_int];
             param0.position = param0.position + fd.field_a.a((byte) 125, param0.payload, var3_int, var4, param0.position, 0);
-            var5 = va.a(param2, param2 ^ 71, var4, var3_int);
+            var5 = va.decodeCp1252String(param2, param2 ^ 71, var4, var3_int);
             stackIn_3_0 = var5;
             return stackIn_3_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -90,13 +90,13 @@ final class ha {
     }
 
     final static void a(int param0, int param1, rh param2) {
-        ia var3 = null;
+        BitPacketBuffer var3 = null;
         if (param1 <= 40) {
           return;
         }
         try {
           var3 = d.field_b;
-          var3.d((byte) 38, param0);
+          var3.writeCipheredByte((byte) 38, param0);
           var3.writeByte(param2.field_k, -110);
           var3.writeShort(param2.field_l, -306);
         } catch (RuntimeException runtimeException) {

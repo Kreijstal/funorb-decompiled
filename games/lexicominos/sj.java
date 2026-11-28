@@ -26,7 +26,7 @@ final class sj extends IntrusiveNode {
           if (~ch.field_e == param0 &&
             fk.field_e == -1) {
             ch.field_e = bk.field_b;
-            fk.field_e = sh.field_e;
+            fk.field_e = ResourceArchive.field_e;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 != null) {

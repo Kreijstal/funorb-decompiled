@@ -3,9 +3,9 @@
  */
 final class vd {
     private mh field_d;
-    private ki field_b;
+    private ResourceArchive field_b;
     static String field_f;
-    private ki field_c;
+    private ResourceArchive field_c;
     static String[] field_e;
     static PacketBuffer field_a;
     private mh field_g;
@@ -243,7 +243,7 @@ final class vd {
         }
     }
 
-    vd(ki param0, ki param1) {
+    vd(ResourceArchive param0, ResourceArchive param1) {
         this.field_d = new mh(256);
         this.field_g = new mh(256);
         try {

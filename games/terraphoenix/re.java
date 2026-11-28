@@ -86,7 +86,7 @@ final class re {
             var7_int = (param3 >> 1) + (param2 >> 1) + (param3 & param2 & 1);
             var8 = param5;
             if (param1 >= -19) {
-              re.a(-91, '\n');
+              re.isSupportedCp1252KeyCharacter(-91, '\n');
             }
             var9 = param2;
             var10 = param3;
@@ -134,7 +134,7 @@ final class re {
         }
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isSupportedCp1252KeyCharacter(int param0, char param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

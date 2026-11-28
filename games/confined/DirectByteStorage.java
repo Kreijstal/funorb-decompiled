@@ -26,7 +26,7 @@ final class DirectByteStorage extends ByteStorage {
         }
     }
 
-    final static boolean a(mi param0, int param1, byte param2) {
+    final static boolean a(ResourceArchive param0, int param1, byte param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;

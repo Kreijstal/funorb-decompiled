@@ -22,24 +22,24 @@ final class wk {
         }
         while (this.field_e > this.field_d) {
           var4 = this.field_i[this.field_d];
-          if (!var4.field_q.a(-14354)) {
+          if (!var4.field_q.ensureIndexLoaded(-14354)) {
             this.a((byte) 12, 0, var4);
             return false;
           }
           if (0 <= var4.field_m &&
-            !var4.field_q.a(false, var4.field_m)) {
-            this.a((byte) 12, var4.field_q.c(-123, var4.field_m), var4);
+            !var4.field_q.tryLoadGroup(false, var4.field_m)) {
+            this.a((byte) 12, var4.field_q.getGroupLoadPercent(-123, var4.field_m), var4);
             return false;
           }
           if (var4.field_h != null &&
             !var4.field_q.a(false, var4.field_h)) {
-            this.a((byte) 12, var4.field_q.b(var4.field_h, -1), var4);
+            this.a((byte) 12, var4.field_q.getGroupLoadPercentByName(var4.field_h, -1), var4);
             return false;
           }
           if (var4.field_m < 0 &&
             var4.field_h == null &&
             null != var4.field_f &&
-            !var4.field_q.a((byte) 59)) {
+            !var4.field_q.tryLoadAllGroups((byte) 59)) {
             this.a((byte) 12, var4.field_q.b(100), var4);
             return false;
           }

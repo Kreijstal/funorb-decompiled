@@ -7,7 +7,7 @@ final class hi {
     static ll field_d;
     static RgbSprite[] field_b;
 
-    final static short[] a(th param0, byte param1, int param2, short[] param3) {
+    final static short[] a(BitPacketBuffer param0, byte param1, int param2, short[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -25,7 +25,7 @@ final class hi {
         RuntimeException var4 = null;
         var8 = Lexicominos.field_L ? 1 : 0;
         try {
-          var4_int = param0.g(param2, 26527);
+          var4_int = param0.readBits(param2, 26527);
           if (0 == var4_int) {
             stackIn_3_0 = null;
             return (short[]) (stackIn_3_0);
@@ -34,15 +34,15 @@ final class hi {
             param3.length != var4_int) {
             param3 = new short[var4_int];
           }
-          var5 = param0.g(4, 26527);
+          var5 = param0.readBits(4, 26527);
           if (param1 > -32) {
             stackIn_10_0 = (short[]) null;
             return stackIn_10_0;
           }
-          var6 = (short)param0.g(16, 26527);
+          var6 = (short)param0.readBits(16, 26527);
           if (var5 > 0) {
             for (var7 = 0; var4_int > var7; var7++) {
-              param3[var7] = (short)(param0.g(var5, 26527) + var6);
+              param3[var7] = (short)(param0.readBits(var5, 26527) + var6);
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
@@ -98,7 +98,7 @@ final class hi {
         try {
           var1_int = rf.field_c;
           var2 = param0;
-          if (sh.field_a == 2) {
+          if (ResourceArchive.field_a == 2) {
             var3_long = -ug.field_x + rf.correctedCurrentTimeMillis(param0 + 0);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
@@ -117,7 +117,7 @@ final class hi {
               var5 = BoundedRandomAccessFile.field_b;
             }
             var6 = MouseWheelInput.field_g[var3];
-            if (sh.field_a == 2 &&
+            if (ResourceArchive.field_a == 2 &&
               var2 == 1) {
               if (hf.field_b.length > SpriteGeometry.field_t.length) {
                 stackIn_16_0 = hf.field_b.length;

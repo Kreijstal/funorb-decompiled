@@ -45,7 +45,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     final static void a(ac param0, int param1, int param2) {
         RuntimeException runtimeException = null;
-        nk var3 = null;
+        BitPacketBuffer var3 = null;
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -53,7 +53,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = qn.field_U;
-          var3.f(param2, -65);
+          var3.writeCipheredByte(param2, -65);
           var3.position = var3.position + 1;
           var4 = var3.position;
           var3.writeByte(1, (byte) -114);
@@ -118,7 +118,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          if (nk.field_w == this &&
+          if (BitPacketBuffer.field_w == this &&
             !jf.field_a) {
             od.field_W = true;
             if (om.field_l &&
@@ -260,7 +260,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     }
 
     public final void stop() {
-        if (nk.field_w != this ||
+        if (BitPacketBuffer.field_w != this ||
           jf.field_a) {
           return;
         }
@@ -275,7 +275,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this == nk.field_w &&
+          if (this == BitPacketBuffer.field_w &&
             !jf.field_a) {
             mk.field_b = 0L;
             return;
@@ -306,7 +306,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         int[] stackIn_39_0 = null;
         ld stackIn_43_0 = null;
         Throwable decompiledCaughtException = null;
-        nk var2 = null;
+        BitPacketBuffer var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -494,7 +494,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
               }
               if (decompiledFrameRemainder3) {
-                var1 = nk.field_w;
+                var1 = BitPacketBuffer.field_w;
                 if (null != qe.field_B) {
                   var1 = qe.field_B;
                 }
@@ -718,7 +718,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           var10 = Chess.field_G;
           try {
             try {
-              if (null != nk.field_w) {
+              if (null != BitPacketBuffer.field_w) {
                 ih.field_O = ih.field_O + 1;
                 if (ih.field_O >= 3) {
                   this.a("alreadyloaded", -58);
@@ -729,7 +729,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               }
               tm.field_c = param5;
               sl.field_c = param5;
-              nk.field_w = this;
+              BitPacketBuffer.field_w = this;
               ka.field_c = 0;
               db.field_p = 0;
               cg.field_a = param3;
@@ -870,7 +870,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this == nk.field_w &&
+          if (this == BitPacketBuffer.field_w &&
             !jf.field_a) {
             mk.field_b = ud.correctedCurrentTimeMillis(2);
             bc.sleepMillis(5000L, (byte) -92);
@@ -909,7 +909,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             }
             if (decompiledFrameRemainder0) {
               if (null == qe.field_B) {
-                var2 = nk.field_w;
+                var2 = BitPacketBuffer.field_w;
                 if (var4 != 0) {
                   var2 = qe.field_B;
                   var2 = ec.field_e;

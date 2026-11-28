@@ -7,7 +7,7 @@ final class df extends wj {
     static String field_o;
     static Sprite[] field_q;
     private rj field_n;
-    static ad field_p;
+    static ResourceArchive field_p;
     private rj field_r;
 
     final static void f(int param0) {
@@ -125,7 +125,7 @@ final class df extends wj {
             return stackIn_14_0;
           }
           if (this.a((byte) 119, param1)) {
-            stackIn_18_0 = ad.field_d;
+            stackIn_18_0 = ResourceArchive.field_d;
             return stackIn_18_0;
           }
           if (var6.length() <= 0) {
@@ -173,7 +173,7 @@ final class df extends wj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 50) {
-            field_p = (ad) null;
+            field_p = (ResourceArchive) null;
           }
           var3 = this.field_r.field_s.toLowerCase();
           var4 = param1.toLowerCase();
@@ -277,7 +277,7 @@ final class df extends wj {
         }
     }
 
-    final static ai a(String param0, ad param1, byte param2, String param3) {
+    final static ai a(String param0, ResourceArchive param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -291,8 +291,8 @@ final class df extends wj {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.c(param0, (byte) -105);
-          var5 = param1.a(param3, var4_int, param2 ^ -28509);
+          var4_int = param1.getGroupIdByName(param0, (byte) -105);
+          var5 = param1.getFileIdByName(param3, var4_int, param2 ^ -28509);
           if (param2 != 118) {
             field_q = (Sprite[]) null;
           }
@@ -380,7 +380,7 @@ final class df extends wj {
         field_q = null;
         field_o = null;
         if (param0 != 0) {
-          field_p = (ad) null;
+          field_p = (ResourceArchive) null;
         }
     }
 

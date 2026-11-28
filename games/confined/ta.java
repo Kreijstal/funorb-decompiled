@@ -4,7 +4,7 @@
 final class ta {
     static String field_a;
 
-    final static byte[] a(byte param0, CharSequence param1) {
+    final static byte[] encodeCp1252Bytes(byte param0, CharSequence param1) {
         int var4 = 0;
         byte[] stackIn_69_0 = null;
         RuntimeException stackIn_72_0 = null;
@@ -142,7 +142,7 @@ final class ta {
         try {
           if (param0 <= 94) {
             CharSequence var6 = (CharSequence) null;
-            ta.a((byte) 99, (CharSequence) null);
+            ta.encodeCp1252Bytes((byte) 99, (CharSequence) null);
           }
           param2.d(param1, param3);
           pn.field_a.b(param4, param2.field_t / 2 + param1, 15 + param3, 0, -1);

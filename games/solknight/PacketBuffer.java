@@ -370,7 +370,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var4 == 0) {
           return "";
         }
-        return vd.a(this.payload, var3, var4, 160);
+        return vd.decodeCp1252String(this.payload, var3, var4, 160);
     }
 
     final int readVarInt(byte param0) {
@@ -597,7 +597,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (this.payload[fieldTemp$0] != 0);
         var3 = this.position - var2 - 1;
         if (0 != var3) {
-          return vd.a(this.payload, var2, var3, 160);
+          return vd.decodeCp1252String(this.payload, var2, var3, 160);
         }
         return "";
     }

@@ -55,7 +55,7 @@ final class BufferedSocket implements Runnable {
     final void a(byte param0) {
         try {
           int var4 = 0;
-          vr var5 = null;
+          ResourceArchive var5 = null;
           var4 = BachelorFridge.field_y;
           if (this.field_g) {
             return;
@@ -64,8 +64,8 @@ final class BufferedSocket implements Runnable {
             this.field_g = true;
             this.notifyAll();
             if (param0 < 26) {
-              var5 = (vr) null;
-              BufferedSocket.a(true, (vr) null);
+              var5 = (ResourceArchive) null;
+              BufferedSocket.a(true, (ResourceArchive) null);
             }
           }
           if (null != this.field_m) {
@@ -87,7 +87,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final static void a(boolean param0, vr param1) {
+    final static void a(boolean param0, ResourceArchive param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -133,8 +133,8 @@ final class BufferedSocket implements Runnable {
           IntrusiveDeque.field_a = param2;
           bb.h(0);
           if (param1 <= 42) {
-            vr var5 = (vr) null;
-            BufferedSocket.a(true, (vr) null);
+            ResourceArchive var5 = (ResourceArchive) null;
+            BufferedSocket.a(true, (ResourceArchive) null);
           }
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "pj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -535,8 +535,8 @@ final class BufferedSocket implements Runnable {
           return 0;
         }
         if (param0 != -47) {
-          vr var3 = (vr) null;
-          BufferedSocket.a(true, (vr) null);
+          ResourceArchive var3 = (ResourceArchive) null;
+          BufferedSocket.a(true, (ResourceArchive) null);
         }
         return this.field_f.read();
     }

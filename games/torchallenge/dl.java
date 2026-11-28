@@ -386,7 +386,7 @@ final class dl extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            stackIn_4_0 = ji.field_r.a(-2, param0, "");
+            stackIn_4_0 = ji.field_r.getFileByName(-2, param0, "");
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;

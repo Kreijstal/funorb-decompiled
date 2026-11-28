@@ -243,7 +243,7 @@ abstract class qd extends vk {
         return stackIn_45_0;
     }
 
-    final static lh a(int param0, int param1, ja param2, byte param3, ue param4) {
+    final static lh a(int param0, int param1, ja param2, byte param3, ResourceArchive param4) {
         byte[] var5 = null;
         RuntimeException var5_ref = null;
         byte[] var6 = null;
@@ -261,7 +261,7 @@ abstract class qd extends vk {
             stackIn_2_0 = (lh) null;
             return stackIn_2_0;
           }
-          var6 = param4.a(param0, true, param1);
+          var6 = param4.getFile(param0, true, param1);
           var5 = var6;
           if (var6 != null) {
             stackIn_7_0 = new lh(new PacketBuffer(var6), param2);

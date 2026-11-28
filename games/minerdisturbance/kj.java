@@ -102,7 +102,7 @@ final class kj {
         if (!param0) {
           return;
         }
-        kj.a('[', 105);
+        kj.encodeCp1252Character('[', 105);
     }
 
     final static boolean a(boolean param0) {
@@ -113,7 +113,7 @@ final class kj {
         return SecondaryNodeDeque.field_b;
     }
 
-    final static byte a(char param0, int param1) {
+    final static byte encodeCp1252Character(char param0, int param1) {
         int var2;
         int var3;
         int var2Lifetime1;

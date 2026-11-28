@@ -6,7 +6,7 @@ import java.io.*;
 abstract class SpriteGeometry extends DualLinkNode {
     static int field_v;
     int field_x;
-    static th field_q;
+    static BitPacketBuffer field_q;
     int field_p;
     int field_s;
     int field_u;
@@ -94,10 +94,10 @@ abstract class SpriteGeometry extends DualLinkNode {
         }
     }
 
-    final static void a(int param0, sh param1) {
+    final static void a(int param0, ResourceArchive param1) {
         VorbisSample var2 = null;
         try {
-          VorbisSample.b(param1.a((byte) 127, "", "headers.packvorbis"));
+          VorbisSample.b(param1.getFileByName((byte) 127, "", "headers.packvorbis"));
           if (param0 != 0) {
             SpriteGeometry.resetStaticState(-110);
           }
@@ -108,7 +108,7 @@ abstract class SpriteGeometry extends DualLinkNode {
         }
     }
 
-    final static eb[] a(sh param0, boolean param1) {
+    final static eb[] a(ResourceArchive param0, boolean param1) {
         int var8 = 0;
         eb[] var2 = null;
         RuntimeException var2_ref = null;
@@ -127,9 +127,9 @@ abstract class SpriteGeometry extends DualLinkNode {
         try {
           var2 = new eb[64];
           if (!param1) {
-            field_q = (th) null;
+            field_q = (BitPacketBuffer) null;
           }
-          var3 = new PacketBuffer(param0.a((byte) 127, "", "index"));
+          var3 = new PacketBuffer(param0.getFileByName((byte) 127, "", "index"));
           while (var3.payload.length > var3.position) {
             var4 = var3.readUnsignedByte(true);
             var5 = var3.readUnsignedShort(-1698573656);
@@ -140,7 +140,7 @@ abstract class SpriteGeometry extends DualLinkNode {
               var7.field_c[var8][0] = var3.readString(false);
               var7.field_c[var8][1] = var3.readString(false);
             }
-            var7.a(new PacketBuffer(param0.a(var5, -27493, var6)), (byte) 96);
+            var7.a(new PacketBuffer(param0.getFile(var5, -27493, var6)), (byte) 96);
           }
           stackIn_10_0 = var2;
           return stackIn_10_0;

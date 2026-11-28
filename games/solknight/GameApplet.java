@@ -563,7 +563,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   return;
                 }
               }
-              jd.field_p = true;
+              BitPacketBuffer.field_p = true;
             }
             return;
           }
@@ -681,7 +681,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           wh.field_b = param0;
           kk.field_b = true;
           wa.field_b = true;
-          jd.field_p = false;
+          BitPacketBuffer.field_p = false;
           lc.field_s = je.correctedCurrentTimeMillis(1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

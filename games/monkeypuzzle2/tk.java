@@ -11,7 +11,7 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
           if (null != wj.field_k) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 && var2_int != 65535 &&
-              ak.a(-1, (char) var2_int)) {
+              ak.isSupportedCp1252KeyCharacter(-1, (char) var2_int)) {
               var3 = 1 + jk.field_w & 127;
               if (PcmResampler.field_b != var3) {
                 oi.field_e[jk.field_w] = -1;
@@ -133,7 +133,7 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    final static String a(ad param0, String param1, String param2, int param3, String param4) {
+    final static String a(ResourceArchive param0, String param1, String param2, int param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -153,8 +153,8 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          if (param0.a(120)) {
-            stackIn_7_0 = param2 + " - " + param0.a(param1, (byte) -81) + "%";
+          if (param0.ensureIndexLoaded(120)) {
+            stackIn_7_0 = param2 + " - " + param0.getGroupLoadPercentByName(param1, (byte) -81) + "%";
             return stackIn_7_0;
           }
           stackIn_5_0 = (String) (param4);

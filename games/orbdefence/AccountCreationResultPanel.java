@@ -6,7 +6,7 @@ final class AccountCreationResultPanel extends dh implements ai {
     private boolean field_kb;
     private rf field_jb;
     static int field_fb;
-    static ki field_hb;
+    static ResourceArchive field_hb;
     static String field_gb;
     static pk field_ib;
 

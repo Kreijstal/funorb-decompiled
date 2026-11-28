@@ -347,7 +347,7 @@ class w extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.a(sh.field_e, bk.field_b, param3, param2, (byte) -65) ? 1 : 0;
+          var5_int = this.a(ResourceArchive.field_e, bk.field_b, param3, param2, (byte) -65) ? 1 : 0;
           stackIn_3_0 = (this.field_m) ? 0 : 1;
           if (stackIn_3_0 == var5_int) {
             stackIn_8_1 = (var5_int != 0);
@@ -518,7 +518,7 @@ class w extends IntrusiveNode {
             if (0 == nk.field_z) {
               if (0 == ul.field_o &&
                 0 != pg.field_f) {
-                this.a(this, bk.field_b, param2, 0, param0, sh.field_e);
+                this.a(this, bk.field_b, param2, 0, param0, ResourceArchive.field_e);
                 var8 = ArchiveRequest.field_t;
                 var6 = var8;
                 if (var8 != null) {
@@ -546,7 +546,7 @@ class w extends IntrusiveNode {
               sj.a(0, this.b(param3 - 2));
               return param1;
             }
-            this.a(this, bk.field_b, param2, 0, param0, sh.field_e);
+            this.a(this, bk.field_b, param2, 0, param0, ResourceArchive.field_e);
             var10 = ArchiveRequest.field_t;
             var6Lifetime2 = var10;
             if (var10 != null) {
@@ -559,7 +559,7 @@ class w extends IntrusiveNode {
             sj.a(0, this.b(param3 - 2));
             return param1;
           }
-          this.a(bk.field_b, param0, sh.field_e, param2, this, -29771, gd.field_l);
+          this.a(bk.field_b, param0, ResourceArchive.field_e, param2, this, -29771, gd.field_l);
         }
         if (0 == nk.field_z) {
           if (0 != ul.field_o) {
@@ -572,7 +572,7 @@ class w extends IntrusiveNode {
             sj.a(0, this.b(param3 - 2));
             return param1;
           }
-          this.a(this, bk.field_b, param2, 0, param0, sh.field_e);
+          this.a(this, bk.field_b, param2, 0, param0, ResourceArchive.field_e);
           var11 = ArchiveRequest.field_t;
           var6Lifetime1 = var11;
           if (var11 != null) {
@@ -602,7 +602,7 @@ class w extends IntrusiveNode {
                 sj.a(0, this.b(param3 - 2));
                 return param1;
               }
-              this.a(this, bk.field_b, param2, 0, param0, sh.field_e);
+              this.a(this, bk.field_b, param2, 0, param0, ResourceArchive.field_e);
               var12 = ArchiveRequest.field_t;
               if (var12 != null) {
                 if (var12.field_r instanceof wk) {
@@ -626,7 +626,7 @@ class w extends IntrusiveNode {
           sj.a(0, this.b(param3 - 2));
           return param1;
         }
-        this.a(this, bk.field_b, param2, 0, param0, sh.field_e);
+        this.a(this, bk.field_b, param2, 0, param0, ResourceArchive.field_e);
         var13 = ArchiveRequest.field_t;
         if (var13 != null) {
           if (var13.field_r instanceof wk) {

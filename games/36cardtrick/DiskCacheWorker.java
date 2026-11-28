@@ -17,7 +17,7 @@ final class DiskCacheWorker implements Runnable {
         Object var5 = null;
         int var6 = 0;
         pf var8 = null;
-        w var9 = null;
+        BitPacketBuffer var9 = null;
         byte[] var13 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = Main.field_T;

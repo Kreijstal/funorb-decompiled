@@ -110,8 +110,8 @@ final class jd extends IntrusiveNode {
           if (param0 != 33) {
             jd.resetStaticState(45);
           }
-          var4_int = param2.a((byte) -2, param1);
-          var5 = param2.a(var4_int, param3, -1);
+          var4_int = param2.getGroupIdByName((byte) -2, param1);
+          var5 = param2.getFileIdByName(var4_int, param3, -1);
           stackIn_3_0 = mg.a(param2, var4_int, var5, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

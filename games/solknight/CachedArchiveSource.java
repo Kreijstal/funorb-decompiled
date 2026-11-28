@@ -449,7 +449,7 @@ final class CachedArchiveSource extends ArchiveSource {
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int getGroupRequestProgressPercent(int param0, byte param1) {
         ArchiveRequest var3 = (ArchiveRequest) (this.field_w.a(true, (long)param0));
         if (var3 != null) {
           return var3.getProgressPercent((byte) -126);

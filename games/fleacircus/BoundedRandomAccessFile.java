@@ -145,7 +145,7 @@ final class BoundedRandomAccessFile {
             var3 = (int[]) null;
             BoundedRandomAccessFile.a(21, -126, (int[]) null, -68, -71, 30, -52, -14, (byte) 65);
           }
-          stackIn_3_0 = param0.a(-77);
+          stackIn_3_0 = param0.tryLoadAllGroups(-77);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

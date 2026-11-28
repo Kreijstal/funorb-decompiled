@@ -64,7 +64,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           }
           var6 = this;
           synchronized (var6) {
-            gk.field_f = k.field_H;
+            ResourceArchive.field_f = k.field_H;
           }
           this.a((byte) 37);
           return;
@@ -297,7 +297,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           }
           ch.field_h.addFocusListener((java.awt.event.FocusListener) (this));
           ch.field_h.requestFocus();
-          gk.field_f = true;
+          ResourceArchive.field_f = true;
           k.field_H = true;
           ae.field_b = true;
           AwtRasterBuffer.field_f = false;
@@ -443,7 +443,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
     public final void windowIconified(java.awt.event.WindowEvent param0) {
     }
 
-    final static rj a(gk param0, int param1, int param2) {
+    final static rj a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_7_0 = null;
@@ -546,7 +546,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
               ob.field_d = 0;
               nd.field_E = param4;
               og.field_c = this;
-              gk.field_j = DiskCacheWorker.b(0);
+              ResourceArchive.field_j = DiskCacheWorker.b(0);
               dupTemp$0 = new PlatformTaskDispatcher(param0, param1, param2, true);
               ck.field_e = dupTemp$0;
               jj.field_a = dupTemp$0;

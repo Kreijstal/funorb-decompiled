@@ -2688,7 +2688,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("keychar_the_character_under_questionmark", false);
                 if (null != var2) {
-                  im.a(var2[0], -24538);
+                  im.decodeCp1252Byte(var2[0], -24538);
                 }
                 var2 = bc.a("rating_noratings", false);
                 if (var2 != null) {

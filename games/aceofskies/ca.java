@@ -21,24 +21,24 @@ final class ca {
         while (this.field_e < this.field_a) {
           qq var4 = this.field_c[this.field_e];
           qq var2 = var4;
-          if (!var4.field_d.b((byte) -95)) {
+          if (!var4.field_d.ensureIndexLoaded((byte) -95)) {
             this.a(param0 + 18737, var4, 0);
             return false;
           }
           if (var4.field_f >= 0 &&
-            !var4.field_d.c(var4.field_f, 0)) {
-            this.a(-1, var2, var4.field_d.a(var4.field_f, 100));
+            !var4.field_d.tryLoadGroup(var4.field_f, 0)) {
+            this.a(-1, var2, var4.field_d.getGroupLoadPercent(var4.field_f, 100));
             return false;
           }
           if (var4.field_b != null &&
             !var4.field_d.c(var4.field_b, -14012)) {
-            this.a(-1, var2, var4.field_d.a(var4.field_b, (byte) -79));
+            this.a(-1, var2, var4.field_d.getGroupLoadPercentByName(var4.field_b, (byte) -79));
             return false;
           }
           if (0 > var4.field_f &&
             null == var4.field_b &&
             null != var4.field_c &&
-            !var4.field_d.b(0)) {
+            !var4.field_d.tryLoadAllGroups(0)) {
             this.a(-1, var2, var4.field_d.a(-83));
             return false;
           }

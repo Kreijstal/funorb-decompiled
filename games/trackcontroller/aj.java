@@ -29,14 +29,14 @@ final class aj extends IntrusiveNode {
           if (!param0) {
             return false;
           }
-          if (la.field_q != param2.field_ib) {
+          if (BitPacketBuffer.field_q != param2.field_ib) {
             if (param2.field_ib == null) {
               var3_int += 200;
             }
           } else {
             var3_int -= 200;
           }
-          if (la.field_q != param1.field_ib) {
+          if (BitPacketBuffer.field_q != param1.field_ib) {
             if (param1.field_ib == null) {
               var3_int -= 200;
             }
@@ -166,8 +166,8 @@ final class aj extends IntrusiveNode {
     aj(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         int fieldTemp$0 = 0;
         try {
-          fieldTemp$0 = la.field_o;
-          la.field_o = la.field_o + 1;
+          fieldTemp$0 = BitPacketBuffer.field_o;
+          BitPacketBuffer.field_o = BitPacketBuffer.field_o + 1;
           this.field_q = fieldTemp$0 & 65535;
           this.field_i = param5;
           this.field_k = param3;

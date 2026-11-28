@@ -36,7 +36,7 @@ abstract class jh {
           var2_int = param0.length();
           var3 = param1;
           for (var4 = 0; var4 < var2_int; var4++) {
-            var3 = (var3 << 5) - var3 + kj.a(param0.charAt(var4), param1 ^ -8251);
+            var3 = (var3 << 5) - var3 + kj.encodeCp1252Character(param0.charAt(var4), param1 ^ -8251);
           }
           stackIn_5_0 = var3;
           return stackIn_5_0;

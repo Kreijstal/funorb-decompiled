@@ -39,10 +39,10 @@ final class ed {
         }
     }
 
-    final static void a(ad param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         sf var2 = null;
         try {
-          sf.a(param0.a("", "headers.packvorbis", 30));
+          sf.a(param0.getFileByName("", "headers.packvorbis", 30));
           if (param1 < 44) {
             ed.greatestCommonDivisor(-96, -76, 44);
           }

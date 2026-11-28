@@ -33,7 +33,7 @@ class DualLinkNode extends IntrusiveNode {
           if (param0 <= 111) {
             field_h = (String[]) null;
           }
-          stackIn_3_0 = va.a(0, 83, param1, param1.length);
+          stackIn_3_0 = va.decodeCp1252String(0, 83, param1, param1.length);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -98,7 +98,7 @@ final class sf {
     final static void b(boolean param0) {
         if (10 == fj.field_i ||
           !rd.b(6144)) {
-          jd.n(-110);
+          BitPacketBuffer.showReconnectDialog(-110);
           fj.field_i = 11;
         }
         ib.field_o = true;

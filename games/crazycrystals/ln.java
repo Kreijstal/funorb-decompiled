@@ -24,12 +24,12 @@ abstract class ln {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        db var8 = null;
+        ResourceArchive var8 = null;
         var7 = CrazyCrystals.field_B;
         try {
           if (param0 != -17512) {
-            var8 = (db) null;
-            ln.a(46, (db) null);
+            var8 = (ResourceArchive) null;
+            ln.a(46, (ResourceArchive) null);
           }
           var5_int = 0;
           while (true) {
@@ -86,11 +86,11 @@ abstract class ln {
 
     abstract int a(int param0, byte param1);
 
-    final static void a(int param0, db param1) {
+    final static void a(int param0, ResourceArchive param1) {
         try {
           if (param0 != 0) {
-            db var3 = (db) null;
-            ln.a(46, (db) null);
+            ResourceArchive var3 = (ResourceArchive) null;
+            ln.a(46, (ResourceArchive) null);
           }
           fm.field_s = bf.a(-1, "sprites_player_death_electrocution_player", "", param1);
           mj.field_f = bf.a(-1, "sprites_player_death_electrocution_skeleton", "", param1);

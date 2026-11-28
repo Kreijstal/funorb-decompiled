@@ -632,7 +632,7 @@ final class uc extends pe {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int getGroupRequestProgressPercent(int param0, int param1) {
         ArchiveRequest var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;

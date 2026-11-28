@@ -78,30 +78,30 @@ class ro extends am {
           return ip.field_c;
         }
         if (null != je.field_f) {
-          if (!je.field_f.a(-12749)) {
+          if (!je.field_f.ensureIndexLoaded(-12749)) {
             return Torquing.field_w;
           }
           return DelegatingCanvas.field_b;
         }
-        if (!lp.field_a.a(-12749)) {
+        if (!lp.field_a.ensureIndexLoaded(-12749)) {
           return bo.field_i;
         }
         if (!lp.field_a.a(true, "commonui")) {
-          return db.field_d + " - " + lp.field_a.a((byte) 102, "commonui") + "%";
+          return db.field_d + " - " + lp.field_a.getGroupLoadPercentByName((byte) 102, "commonui") + "%";
         }
         if (param0 > -93) {
           field_t = (String) null;
         }
-        if (!eg.field_v.a(-12749)) {
+        if (!eg.field_v.ensureIndexLoaded(-12749)) {
           return ol.field_e;
         }
         if (!eg.field_v.a(true, "commonui")) {
-          return l.field_c + " - " + eg.field_v.a((byte) 50, "commonui") + "%";
+          return l.field_c + " - " + eg.field_v.getGroupLoadPercentByName((byte) 50, "commonui") + "%";
         }
-        if (!kb.field_a.a(-12749)) {
+        if (!kb.field_a.ensureIndexLoaded(-12749)) {
           return ci.field_d;
         }
-        if (!kb.field_a.c(-19375)) {
+        if (!kb.field_a.tryLoadAllGroups(-19375)) {
           return ResourceArchive.field_b + " - " + kb.field_a.a((byte) -32) + "%";
         }
         return pm.field_p;
@@ -183,16 +183,16 @@ class ro extends am {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param1.a(-12749)) {
+          if (!param1.ensureIndexLoaded(-12749)) {
             return false;
           }
           if (!param1.a(true, "commonui")) {
             return false;
           }
-          if (param3.a(-12749) &&
+          if (param3.ensureIndexLoaded(-12749) &&
             param3.a(true, "commonui")) {
             var4_int = -28 / ((param0 + 42) / 52);
-            if (param2.a(-12749) &&
+            if (param2.ensureIndexLoaded(-12749) &&
               param2.a(true, "button.gif")) {
               return true;
             }

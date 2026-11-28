@@ -4,7 +4,7 @@
 final class hg {
     private String field_e;
     static wk field_b;
-    static ci field_a;
+    static ResourceArchive field_a;
     static String field_d;
     private boolean field_c;
 
@@ -57,7 +57,7 @@ final class hg {
           if (param0 > 40) {
             return;
           }
-          field_a = (ci) null;
+          field_a = (ResourceArchive) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

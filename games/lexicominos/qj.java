@@ -82,7 +82,7 @@ final class qj extends re {
           if (param0 != 33) {
             qj.clearStaticReferences(true);
           }
-          stackIn_3_0 = hc.field_eb.a((byte) 127, param1, "");
+          stackIn_3_0 = hc.field_eb.getFileByName((byte) 127, param1, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

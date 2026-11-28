@@ -2730,7 +2730,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("keychar_the_character_under_questionmark", false);
                 if (var2 != null) {
-                  v.field_c = mn.a(var2[0], -115);
+                  v.field_c = mn.decodeCp1252Byte(var2[0], -115);
                 }
                 var2 = tk.a("rating_noratings", false);
                 if (null != var2) {

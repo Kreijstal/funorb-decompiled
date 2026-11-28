@@ -228,11 +228,11 @@ final class jb {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.a(-1, param3);
+          var4_int = param1.getGroupIdByName(-1, param3);
           if (param0 != 0) {
             jb.a(-44, (ResourceArchive) null, (String) null, (String) null);
           }
-          var5 = param1.a(param2, -110, var4_int);
+          var5 = param1.getFileIdByName(param2, -110, var4_int);
           stackIn_4_0 = gk.a(105, var4_int, param1, var5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

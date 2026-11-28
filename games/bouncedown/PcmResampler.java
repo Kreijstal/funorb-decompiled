@@ -163,7 +163,7 @@ final class PcmResampler {
         return;
     }
 
-    final static RgbSprite a(int param0, gk param1, int param2, int param3) {
+    final static RgbSprite a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

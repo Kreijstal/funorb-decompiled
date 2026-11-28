@@ -603,9 +603,9 @@ final class uo {
           return var3;
         }
         if (param0 < 32768) {
-          var4 = this.field_a.a(0, param0, (byte) -12);
+          var4 = this.field_a.getFile(0, param0, (byte) -12);
         } else {
-          var4 = this.field_b.a(0, 32767 & param0, (byte) -57);
+          var4 = this.field_b.getFile(0, 32767 & param0, (byte) -57);
         }
         var3 = new ud();
         if (var4 != null) {

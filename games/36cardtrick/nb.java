@@ -164,7 +164,7 @@ final class nb implements ci {
         }
     }
 
-    final static mg a(byte param0, w param1) {
+    final static mg a(byte param0, BitPacketBuffer param1) {
         int var7 = 0;
         mg stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
@@ -180,23 +180,23 @@ final class nb implements ci {
         int var8 = 0;
         var8 = Main.field_T;
         try {
-          var2_int = param1.g(8, -1);
+          var2_int = param1.readBits(8, -1);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
           var3 = di.a((byte) -115, param1) ? 1 : 0;
           var4 = di.a((byte) -117, param1) ? 1 : 0;
           var5 = new mg();
-          var5.field_C = (short)param1.g(16, -1);
+          var5.field_C = (short)param1.readBits(16, -1);
           var5.field_r = jc.a(param1, 16, 21, var5.field_r);
           var5.field_b = jc.a(param1, 16, 21, var5.field_b);
           var5.field_O = jc.a(param1, 16, 21, var5.field_O);
-          var5.field_M = (short)param1.g(16, -1);
+          var5.field_M = (short)param1.readBits(16, -1);
           var5.field_a = jc.a(param1, 16, 21, var5.field_a);
           var5.field_Q = jc.a(param1, 16, 21, var5.field_Q);
           var5.field_d = jc.a(param1, 16, 21, var5.field_d);
           if (var3 != 0) {
-            var5.field_c = (short)param1.g(16, -1);
+            var5.field_c = (short)param1.readBits(16, -1);
             var5.field_k = jc.a(param1, 16, 21, var5.field_k);
             var5.field_B = jc.a(param1, 16, 21, var5.field_B);
             var5.field_I = jc.a(param1, 16, 21, var5.field_I);
@@ -205,7 +205,7 @@ final class nb implements ci {
             var5.field_p = jc.a(param1, 16, 21, var5.field_p);
           }
           if (var4 != 0) {
-            param1.g(16, -1);
+            param1.readBits(16, -1);
             var5.field_n = jc.a(param1, 16, 21, var5.field_n);
             var5.field_J = jc.a(param1, 16, 21, var5.field_J);
             var5.field_t = jc.a(param1, 16, 21, var5.field_t);

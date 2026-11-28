@@ -81,7 +81,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    final static IndexedSprite[] a(byte param0, ci param1, String param2, String param3) {
+    final static IndexedSprite[] a(byte param0, ResourceArchive param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -98,9 +98,9 @@ final class MusicPatchPcmStream extends PcmStream {
           if (param0 != -43) {
             field_k = false;
           }
-          var4_int = param1.b(param0 + 108, param3);
-          var5 = param1.a(-1, param2, var4_int);
-          stackIn_4_0 = hj.a(param1, (byte) -62, var5, var4_int);
+          var4_int = param1.getGroupIdByName(param0 + 108, param3);
+          var5 = param1.getFileIdByName(-1, param2, var4_int);
+          stackIn_4_0 = BitPacketBuffer.loadIndexedSprites(param1, (byte) -62, var5, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -416,8 +416,8 @@ final class MusicPatchPcmStream extends PcmStream {
           if (jh.field_n != ArchiveRequest.field_v) {
             return false;
           }
-          var7 = new AccountCreationResultPanel(ci.field_f, param0);
-          ci.field_f.b((UiWidget) (var7), (byte) -71);
+          var7 = new AccountCreationResultPanel(ResourceArchive.field_f, param0);
+          ResourceArchive.field_f.b((UiWidget) (var7), (byte) -71);
           if (!PacketBuffer.f((byte) 105)) {
             ArchiveRequest.field_v = of.field_d;
             q.field_h = null;
@@ -654,7 +654,7 @@ final class MusicPatchPcmStream extends PcmStream {
           DiskCacheWorker.field_f = param5;
           ee.field_D = param3;
           if (param1 < 105) {
-            MusicPatchPcmStream.a((byte) 62, (ci) null, (String) null, (String) null);
+            MusicPatchPcmStream.a((byte) 62, (ResourceArchive) null, (String) null, (String) null);
           }
           vh.field_m = param0;
           jl.field_o = param2;

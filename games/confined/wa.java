@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wa {
-    mi field_e;
+    ResourceArchive field_e;
     String field_b;
     String field_a;
     static int[] field_d;
@@ -30,7 +30,7 @@ final class wa {
           for (var2_int = 0; mc.field_c > var2_int; var2_int++) {
             sj.field_rb[param0 + var2_int] = var2_int;
           }
-          PcmOutputWorker.a(param0, mi.field_f, ka.field_P, mc.field_c + param0, (byte) 92, param0 + param0, false);
+          PcmOutputWorker.a(param0, ResourceArchive.field_f, ka.field_P, mc.field_c + param0, (byte) 92, param0 + param0, false);
           if (mc.field_c <= param0) {
             return;
           }

@@ -26,7 +26,7 @@ final class f {
         gh var5_ref_gh = null;
         int[] var6 = null;
         int var8 = 0;
-        w var9 = null;
+        BitPacketBuffer var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var8 = Main.field_T;

@@ -209,7 +209,7 @@ final class un {
           this.b((byte) 26);
           this.a(param0, true, false);
         } else {
-          qn.field_U.f(58, -63);
+          qn.field_U.writeCipheredByte(58, -63);
           qn.field_U.writeByte(this.field_B.field_n, (byte) 98);
           qn.field_U.writeShort(this.field_t.b(0), 100);
           qn.field_U.writeShort(param0, 93);
@@ -592,7 +592,7 @@ final class un {
         if (!this.field_b) {
           throw new IllegalStateException();
         }
-        qn.field_U.f(60, -87);
+        qn.field_U.writeCipheredByte(60, -87);
     }
 
     final boolean b(int param0) {
@@ -995,7 +995,7 @@ final class un {
         if (!this.field_b) {
           throw new IllegalStateException();
         }
-        qn.field_U.f(59, -54);
+        qn.field_U.writeCipheredByte(59, -54);
         if (param0 < 2) {
           this.c(-43, false);
         }

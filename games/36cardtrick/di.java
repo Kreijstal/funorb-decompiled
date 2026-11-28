@@ -7,7 +7,7 @@ final class di {
     int[] field_a;
     int field_b;
 
-    final static byte[] a(byte[] param0, w param1, int param2, int param3) {
+    final static byte[] a(byte[] param0, BitPacketBuffer param1, int param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -24,7 +24,7 @@ final class di {
         RuntimeException var4 = null;
         var8 = Main.field_T;
         try {
-          var4_int = param1.g(param3, -1);
+          var4_int = param1.readBits(param3, -1);
           if (var4_int == 0) {
             stackIn_3_0 = null;
             return (byte[]) (stackIn_3_0);
@@ -33,8 +33,8 @@ final class di {
             param0.length != var4_int) {
             param0 = new byte[var4_int];
           }
-          var5 = param1.g(3, -1);
-          var6 = (byte)param1.g(8, -1);
+          var5 = param1.readBits(3, -1);
+          var6 = (byte)param1.readBits(8, -1);
           if (param2 != 17259) {
             field_d = (rf) null;
           }
@@ -44,7 +44,7 @@ final class di {
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param0[var7] = (byte)(param1.g(var5, -1) + var6);
+              param0[var7] = (byte)(param1.readBits(var5, -1) + var6);
             }
           }
           stackIn_18_0 = (byte[]) (param0);
@@ -238,7 +238,7 @@ final class di {
         this.field_c = param1;
     }
 
-    final static boolean a(byte param0, w param1) {
+    final static boolean a(byte param0, BitPacketBuffer param1) {
         RuntimeException var2 = null;
         wb var3 = null;
         boolean stackIn_5_0 = false;
@@ -251,7 +251,7 @@ final class di {
             var3 = (wb) null;
             di.a((wb) null, -19, -90, -105, -40, -114);
           }
-          stackIn_5_0 = (1 == param1.g(1, -1));
+          stackIn_5_0 = (1 == param1.readBits(1, -1));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

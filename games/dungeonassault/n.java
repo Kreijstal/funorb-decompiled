@@ -34,7 +34,7 @@ final class n {
         field_g = null;
     }
 
-    final static byte[] a(CharSequence param0, int param1) {
+    final static byte[] encodeCp1252Bytes(CharSequence param0, int param1) {
         int var4 = 0;
         byte[] stackIn_70_0 = null;
         byte[] stackIn_72_0 = null;

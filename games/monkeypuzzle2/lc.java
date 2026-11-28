@@ -140,7 +140,7 @@ final class lc implements ml {
         }
     }
 
-    final static void a(ad param0, boolean param1, ad param2, int param3, ad param4) {
+    final static void a(ResourceArchive param0, boolean param1, ResourceArchive param2, int param3, ResourceArchive param4) {
         try {
           if (param3 != 3249872) {
             field_b = (int[]) null;

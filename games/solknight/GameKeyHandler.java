@@ -16,7 +16,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
-              hi.a((char) var2_int, (byte) 70)) {
+              hi.isSupportedCp1252KeyCharacter((char) var2_int, (byte) 70)) {
               var3 = 127 & rh.field_e + 1;
               if (var3 != pf.field_a) {
                 lb.field_V[rh.field_e] = -1;

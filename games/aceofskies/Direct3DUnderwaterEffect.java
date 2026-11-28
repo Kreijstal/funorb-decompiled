@@ -101,10 +101,10 @@ final class Direct3DUnderwaterEffect extends RenderEffect {
         } else if ((65535 & this.field_j.field_Bc.VertexShaderVersion) < 257) {
           this.field_n = false;
         } else {
-          this.field_g = this.field_j.field_Rc.b(param1.a("dx", (byte) -71, "uw_ground_unlit"));
-          this.field_l = this.field_j.field_Rc.b(param1.a("dx", (byte) -71, "uw_ground_lit"));
-          this.field_p = this.field_j.field_Rc.b(param1.a("dx", (byte) -71, "uw_model_unlit"));
-          this.field_i = this.field_j.field_Rc.b(param1.a("dx", (byte) -71, "uw_model_lit"));
+          this.field_g = this.field_j.field_Rc.b(param1.getFileByName("dx", (byte) -71, "uw_ground_unlit"));
+          this.field_l = this.field_j.field_Rc.b(param1.getFileByName("dx", (byte) -71, "uw_ground_lit"));
+          this.field_p = this.field_j.field_Rc.b(param1.getFileByName("dx", (byte) -71, "uw_model_unlit"));
+          this.field_i = this.field_j.field_Rc.b(param1.getFileByName("dx", (byte) -71, "uw_model_lit"));
           boolean stackIn_5_0 = !(null == this.field_p);
           boolean stackIn_8_1 = !(this.field_l == null);
           boolean stackIn_11_2 = !(null == this.field_g);

@@ -213,7 +213,7 @@ final class qo extends am {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = param4.a(param0, param2 + 100, param1);
+          var6 = param4.getFile(param0, param2 + 100, param1);
           var5 = var6;
           if (param2 != 0) {
             stackIn_2_0 = (lh) null;

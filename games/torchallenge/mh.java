@@ -24,12 +24,12 @@ final class mh {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.a(param3, -80);
+          var4_int = param1.getGroupIdByName(param3, -80);
           if (param0 <= 27) {
             var6 = (String) null;
             mh.a((String) null, (byte) -125, 0.009368140250444412f);
           }
-          var5 = param1.a(var4_int, param2, (byte) 85);
+          var5 = param1.getFileIdByName(var4_int, param2, (byte) 85);
           stackIn_3_0 = m.a(param1, var4_int, (byte) 6, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -71,7 +71,7 @@ final class ra extends pc {
           var2_int = param1.length();
           var3 = 0;
           for (var4 = 0; var2_int > var4; var4++) {
-            var3 = m.a(1, param1.charAt(var4)) + (-var3 + (var3 << 5));
+            var3 = m.encodeCp1252Character(1, param1.charAt(var4)) + (-var3 + (var3 << 5));
           }
           var4Lifetime1 = -36 % ((param0 - 50) / 47);
           stackIn_5_0 = var3;

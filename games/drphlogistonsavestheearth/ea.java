@@ -6,12 +6,12 @@ final class ea {
     static String field_b;
     static he field_c;
 
-    final static void a(int param0, vj param1) {
+    final static void a(int param0, ResourceArchive param1) {
         RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new RgbSprite(param1.a("final_frame.jpg", "", 24874), (java.awt.Component) ((Object) DiskCacheWorker.field_g));
+          var2 = new RgbSprite(param1.getFileByName("final_frame.jpg", "", 24874), (java.awt.Component) ((Object) DiskCacheWorker.field_g));
           var3 = var2.field_y;
           var4 = var2.field_w;
           MouseInput.a(true);
@@ -37,7 +37,7 @@ final class ea {
         }
     }
 
-    final static RgbSprite[] a(String param0, String param1, int param2, vj param3) {
+    final static RgbSprite[] a(String param0, String param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -54,8 +54,8 @@ final class ea {
           if (param2 != 0) {
             field_b = (String) null;
           }
-          var4_int = param3.a(param1, (byte) -115);
-          var5 = param3.a((byte) -63, param0, var4_int);
+          var4_int = param3.getGroupIdByName(param1, (byte) -115);
+          var5 = param3.getFileIdByName((byte) -63, param0, var4_int);
           stackIn_3_0 = ob.a(var5, -13339, param3, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

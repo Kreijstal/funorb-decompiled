@@ -5,7 +5,7 @@ final class lb {
     private boolean field_c;
     private boolean field_d;
     static int field_g;
-    static qk field_a;
+    static ResourceArchive field_a;
     static String field_f;
     private String field_b;
     static String field_e;

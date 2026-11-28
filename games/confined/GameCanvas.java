@@ -5,7 +5,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
     volatile boolean field_f;
     static PrimaryNodeDeque field_b;
     java.awt.Frame field_e;
-    static mi field_a;
+    static ResourceArchive field_a;
     static String field_c;
     static PcmSample field_d;
     static String field_g;

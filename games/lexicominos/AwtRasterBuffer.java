@@ -12,8 +12,8 @@ abstract class AwtRasterBuffer {
     abstract void initialize(boolean param0, int param1, int param2, java.awt.Component param3);
 
     final static void a(int param0, int param1) {
-        th var2 = SpriteGeometry.field_q;
-        var2.h(param1, 0);
+        BitPacketBuffer var2 = SpriteGeometry.field_q;
+        var2.writeCipheredByte(param1, 0);
         if (param0 <= 32) {
           return;
         }

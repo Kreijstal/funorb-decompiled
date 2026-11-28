@@ -28,7 +28,7 @@ abstract class ca {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param2.a(-15879)) {
+          if (!param2.ensureIndexLoaded(-15879)) {
             return false;
           }
           if (!param2.a(param3 ^ -8088, "commonui")) {
@@ -37,9 +37,9 @@ abstract class ca {
           if (param3 != 0) {
             ca.a(-34);
           }
-          if (param1.a(-15879) &&
+          if (param1.ensureIndexLoaded(-15879) &&
             param1.a(-8088, "commonui")) {
-            if (param0.a(param3 - 15879) &&
+            if (param0.ensureIndexLoaded(param3 - 15879) &&
               param0.a(-8088, "button.gif")) {
               return true;
             }

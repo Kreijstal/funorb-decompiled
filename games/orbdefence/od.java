@@ -72,7 +72,7 @@ final class od {
     final static void a(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        se var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -83,7 +83,7 @@ final class od {
           }
           var1 = uk.field_b;
           while (wl.a(-1)) {
-            var1.i(8, -44);
+            var1.writeCipheredByte(8, -44);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;

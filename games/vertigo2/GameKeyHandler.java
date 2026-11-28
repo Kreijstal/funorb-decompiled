@@ -82,7 +82,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (null != kb.field_a) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 && 65535 != var2_int &&
-              gr.a(0, (char) var2_int)) {
+              gr.isSupportedCp1252KeyCharacter(0, (char) var2_int)) {
               var3 = 127 & ro.field_e + 1;
               if (var3 != MusicPatchPcmStream.field_B) {
                 wm.field_j[ro.field_e] = -1;

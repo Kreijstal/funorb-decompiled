@@ -4,7 +4,7 @@
 abstract class SpriteState extends DualLinkNode {
     int field_t;
     int field_x;
-    static pf field_u;
+    static ResourceArchive field_u;
     int field_w;
     int field_v;
     int field_s;
@@ -69,7 +69,7 @@ abstract class SpriteState extends DualLinkNode {
           this.a(var6, var7, param4, param3, param0, param1);
           return;
         }
-        field_u = (pf) null;
+        field_u = (ResourceArchive) null;
         var6Lifetime1 = this.field_w << 3;
         var7Lifetime1 = this.field_x << 3;
         param4 = (15 & var6Lifetime1) + (param4 << 4);

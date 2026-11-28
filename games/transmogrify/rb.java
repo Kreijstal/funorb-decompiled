@@ -50,7 +50,7 @@ final class rb {
         }
     }
 
-    final static int a(int param0, CharSequence param1, byte[] param2, int param3, byte param4, int param5) {
+    final static int encodeCp1252Subsequence(int param0, CharSequence param1, byte[] param2, int param3, byte param4, int param5) {
         int var7 = 0;
         int stackIn_68_0 = 0;
         int stackIn_70_0 = 0;
@@ -200,12 +200,12 @@ final class rb {
               decompiledFrameRemainder0 = (ll.field_Q == lj.field_z);
               if ((decompiledFrameRemainder0) && (ff.field_D.position == 0 &&
                 (10000L + FrameTimer.field_b) < lk.correctedCurrentTimeMillis(0))) {
-                ff.field_D.a(false, param0);
+                ff.field_D.writeCipheredByte(false, param0);
               }
             } else {
               if (ff.field_D.position == 0 &&
                 (10000L + FrameTimer.field_b) < lk.correctedCurrentTimeMillis(0)) {
-                ff.field_D.a(false, param0);
+                ff.field_D.writeCipheredByte(false, param0);
               }
             }
             if (decompiledFrameRemainder0) {
@@ -264,7 +264,7 @@ final class rb {
           }
           if (1 <= var3_int &&
             var3_int <= 12) {
-            var4 = hj.a((byte) -125, param1);
+            var4 = BitPacketBuffer.normalizePlayerName((byte) -125, param1);
             if (var4 != null &&
               var4.length() >= 1) {
               if (!uf.a(var4.charAt(0), (byte) -96) &&

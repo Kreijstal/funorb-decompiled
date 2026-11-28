@@ -40,7 +40,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
     DiskArchiveRequest() {
     }
 
-    final static ek a(String param0, pf param1, byte param2, String param3) {
+    final static ek a(String param0, ResourceArchive param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -55,9 +55,9 @@ final class DiskArchiveRequest extends ArchiveRequest {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.b(param3, (byte) -118);
+          var4_int = param1.getGroupIdByName(param3, (byte) -118);
           var6 = -52 % ((param2 - 71) / 55);
-          var5 = param1.a(var4_int, param0, (byte) -11);
+          var5 = param1.getFileIdByName(var4_int, param0, (byte) -11);
           stackIn_1_0 = fc.a(var4_int, param1, var5, true);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

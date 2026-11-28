@@ -219,7 +219,7 @@ final class rl {
             return stackIn_3_0;
           }
           for (var4 = 0; var4 < var2_int; var4++) {
-            var3 = (var3 << 5) - var3 + bf.a(-8250, param0.charAt(var4));
+            var3 = (var3 << 5) - var3 + bf.encodeCp1252Character(-8250, param0.charAt(var4));
           }
           stackIn_8_0 = var3;
           return stackIn_8_0;

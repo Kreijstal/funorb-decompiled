@@ -5,7 +5,7 @@ final class o extends em {
     private boolean field_p;
     private int field_m;
     private int field_i;
-    static vj field_l;
+    static ResourceArchive field_l;
     static String field_n;
     private int field_q;
     private int field_g;
@@ -47,7 +47,7 @@ final class o extends em {
             }
           }
           if (param1 != 320) {
-            field_l = (vj) null;
+            field_l = (ResourceArchive) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

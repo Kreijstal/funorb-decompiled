@@ -6,7 +6,7 @@ final class tk extends IntrusiveNode {
     il field_h;
 
     final static tk a(Archive param0, String param1, String param2) {
-        byte[] var3 = param0.a(param1, param2, -21653);
+        byte[] var3 = param0.getFileByName(param1, param2, -21653);
         if (var3 == null) {
           return null;
         }

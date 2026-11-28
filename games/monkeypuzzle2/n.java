@@ -16,7 +16,7 @@ final class n {
         field_b = null;
     }
 
-    final static vk a(ad param0, ad param1, byte param2, int param3, int param4) {
+    final static vk a(ResourceArchive param0, ResourceArchive param1, byte param2, int param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         vk stackIn_6_0 = null;
@@ -34,7 +34,7 @@ final class n {
           if (param2 <= 114) {
             field_d = (float[][]) null;
           }
-          stackIn_6_0 = IntrusiveDeque.a((byte) 101, param1.b(255, param4, param3));
+          stackIn_6_0 = IntrusiveDeque.a((byte) 101, param1.getFile(255, param4, param3));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

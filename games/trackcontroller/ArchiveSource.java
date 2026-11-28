@@ -9,7 +9,7 @@ abstract class ArchiveSource {
 
     abstract byte[] a(int param0, int param1);
 
-    abstract int b(int param0, int param1);
+    abstract int getGroupRequestProgressPercent(int param0, int param1);
 
     public static void clearStaticReferences(boolean param0) {
         field_c = null;

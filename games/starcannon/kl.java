@@ -4,7 +4,7 @@
 final class kl {
     static int[] field_c;
     static int field_d;
-    static ue field_b;
+    static ResourceArchive field_b;
     int field_e;
     static String field_a;
 

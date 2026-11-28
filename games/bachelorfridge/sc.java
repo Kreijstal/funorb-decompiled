@@ -8,7 +8,7 @@ final class sc extends lw {
     static nv field_m;
 
     final void a(byte param0) {
-        int var2 = (int)((1.0 - Math.cos((double)(vr.field_b * 4) * 3.141592653589793 / 100.0)) * 256.0);
+        int var2 = (int)((1.0 - Math.cos((double)(ResourceArchive.field_b * 4) * 3.141592653589793 / 100.0)) * 256.0);
         if (param0 > 103) {
           vg.a(sia.field_j, 8640, 22997, 32000, var2 + 4096, 6400, var2 + 4096, sia.field_j.field_o << 3, sia.field_j.field_n << 3);
           return;

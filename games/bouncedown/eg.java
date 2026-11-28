@@ -10,7 +10,7 @@ abstract class eg extends DualLinkNode {
 
     abstract Object e(int param0);
 
-    final static o a(gk param0, String param1, int param2, gk param3, String param4) {
+    final static o a(ResourceArchive param0, String param1, int param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -28,8 +28,8 @@ abstract class eg extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           var7 = -5 / ((param2 - 59) / 55);
-          var5_int = param3.a(param4, false);
-          var6 = param3.a(var5_int, param1, -40);
+          var5_int = param3.getGroupIdByName(param4, false);
+          var6 = param3.getFileIdByName(var5_int, param1, -40);
           stackIn_1_0 = rk.a(param3, param0, (byte) -20, var6, var5_int);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

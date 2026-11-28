@@ -6,8 +6,8 @@ final class SoundEffect {
     private int field_c;
     private SynthInstrument[] field_b;
 
-    final static SoundEffect a(vr param0, int param1, int param2) {
-        byte[] var3 = param0.b(104, param1, param2);
+    final static SoundEffect a(ResourceArchive param0, int param1, int param2) {
+        byte[] var3 = param0.getFile(104, param1, param2);
         if (var3 == null) {
           return null;
         }

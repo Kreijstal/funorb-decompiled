@@ -42,7 +42,7 @@ final class MixedSupport119 {
           integerLocal4 = charSequenceArgument1.length();
           integerLocal5 = 0;
           for (integerLocal1 = 0; integerLocal1 < integerLocal4; integerLocal1++) {
-            integerLocal5 = (integerLocal5 << 5) + (-integerLocal5 + MixedSupport063.computeByte0751(charSequenceArgument1.charAt(integerLocal1), (byte) 28));
+            integerLocal5 = (integerLocal5 << 5) + (-integerLocal5 + MixedSupport063.encodeCp1252Character(charSequenceArgument1.charAt(integerLocal1), (byte) 28));
           }
           stackIntegerLocal7 = integerLocal5;
           return stackIntegerLocal7;
@@ -89,15 +89,15 @@ final class MixedSupport119 {
         String stackStringLocal8 = null;
         RuntimeException caughtExceptionLocal9 = null;
         try {
-          if (!resourceArchiveArgument1.computeBoolean0798((byte) 121)) {
+          if (!resourceArchiveArgument1.ensureIndexLoaded((byte) 121)) {
             return false;
           }
           if (!resourceArchiveArgument1.computeBoolean0811("commonui", (byte) -101)) {
             return false;
           }
-          if (resourceArchiveArgument2.computeBoolean0798((byte) 121) &&
+          if (resourceArchiveArgument2.ensureIndexLoaded((byte) 121) &&
             resourceArchiveArgument2.computeBoolean0811("commonui", (byte) -117)) {
-            if (resourceArchiveArgument4.computeBoolean0798((byte) 121) &&
+            if (resourceArchiveArgument4.ensureIndexLoaded((byte) 121) &&
               resourceArchiveArgument4.computeBoolean0811("button.gif", (byte) -34)) {
               if (integerArgument3 != -21) {
                 stringState0523 = (String) null;

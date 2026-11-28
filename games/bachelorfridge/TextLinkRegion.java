@@ -72,11 +72,11 @@ final class TextLinkRegion extends IntrusiveNode {
         var10 = BachelorFridge.field_y;
         try {
           if (null != sha.field_l &&
-            sha.field_l.a(0) &&
-            sha.field_l.a("benefits", 20637) &&
+            sha.field_l.ensureIndexLoaded(0) &&
+            sha.field_l.tryLoadGroupByName("benefits", 20637) &&
             null != TBomberEvent.field_s &&
-            TBomberEvent.field_s.a(0) &&
-            TBomberEvent.field_s.a("benefits", 20637)) {
+            TBomberEvent.field_s.ensureIndexLoaded(0) &&
+            TBomberEvent.field_s.tryLoadGroupByName("benefits", 20637)) {
             lm.field_b = hca.a("benefits", sha.field_l, 72, "headline");
             uea.field_j = hca.a("benefits", sha.field_l, -71, "blurbpane");
             HomingMissileAnimation.field_E = hca.a("benefits", sha.field_l, 126, "button");

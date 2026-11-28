@@ -93,7 +93,7 @@ final class NanoFrameTimer extends FrameTimer {
             }
             var5 = new byte[var3_int];
             param0.position = param0.position + dm.field_f.a(param0.payload, 0, -1, var3_int, param0.position, var5);
-            var6 = gd.a((byte) 61, var5, 0, var3_int);
+            var6 = gd.decodeCp1252String((byte) 61, var5, 0, var3_int);
             stackIn_3_0 = var6;
             return stackIn_3_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

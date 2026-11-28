@@ -12,7 +12,7 @@ final class tk {
     final static void a(boolean param0, ResourceArchive param1) {
         qf var2 = null;
         try {
-          qf.a(param1.a("", "headers.packvorbis", 0));
+          qf.a(param1.getFileByName("", "headers.packvorbis", 0));
           var2 = qf.a(param1, "jagex logo2.packvorbis", "");
           if (!param0) {
             field_a = (ResourceArchive) null;

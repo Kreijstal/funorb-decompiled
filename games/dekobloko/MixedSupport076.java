@@ -160,13 +160,13 @@ final class MixedSupport076 extends ResourceSupport003 {
         }
     }
 
-    final int computeInteger0947(int integerArgument1, int integerArgument2) {
+    final int getGroupRequestProgressPercent(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 103 % ((integerArgument2 - 5) / 58);
         MixedSupport115 cachedMixedSupport115Local2 = (MixedSupport115) (this.mixedSupport086State0001.computeHashNode1108((long)integerArgument1, 77));
         MixedSupport115 mixedSupport115Local3 = cachedMixedSupport115Local2;
         MixedSupport115 mixedSupport115Local4 = cachedMixedSupport115Local2;
         if (mixedSupport115Local3 != null) {
-          return mixedSupport115Local3.computeInteger0467(false);
+          return mixedSupport115Local3.getProgressPercent(false);
         }
         return 0;
     }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class g {
-    static ue field_a;
+    static ResourceArchive field_a;
     static String[] field_b;
 
     final static void a(int param0) {

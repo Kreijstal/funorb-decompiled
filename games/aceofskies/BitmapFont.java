@@ -34,7 +34,7 @@ abstract class BitmapFont extends DualLinkNode {
     }
 
     final int measureCharacterAdvance(char character) {
-        return this.glyphAdvances[ae.a(character, -113) & 255];
+        return this.glyphAdvances[ae.encodeCp1252Character(character, -113) & 255];
     }
 
     public static void releaseTextScratchStorage() {
@@ -344,7 +344,7 @@ abstract class BitmapFont extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 StringBuilder discarded$3 = wrappingBuffer.append((char) var14);
-                var14 = (char)(ae.a((char) var14, 68) & 255);
+                var14 = (char)(ae.encodeCp1252Character((char) var14, 68) & 255);
                 var4 = var4 + this.glyphAdvances[var14];
                 if (this.pairKerning != null &&
                   var10 != 0) {
@@ -508,7 +508,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if (decompiledFrameRemainder0 &&
               var2 == -1) {
-              var7 = (char)(ae.a((char) var7, -110) & 255);
+              var7 = (char)(ae.encodeCp1252Character((char) var7, -110) & 255);
               var4 = var4 + this.glyphAdvances[var7];
               if (this.pairKerning != null &&
                 var3 != 0) {
@@ -593,7 +593,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if (decompiledFrameRemainder0 &&
               var4 == -1) {
-              var8 = (char)(ae.a((char) var8, -107) & 255);
+              var8 = (char)(ae.encodeCp1252Character((char) var8, -107) & 255);
               if (this.pairKerning != null &&
                 var5 != 0) {
                 penX = penX + this.pairKerning[(var5 << 8) + var8];

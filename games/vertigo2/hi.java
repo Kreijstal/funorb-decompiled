@@ -129,7 +129,7 @@ final class hi extends bg {
 
     final static void a(Archive param0, int param1) {
         vh var2 = null;
-        vh.a(param0.a("headers.packvorbis", "", 0));
+        vh.a(param0.getFileByName("headers.packvorbis", "", 0));
         if (param1 <= 2) {
           return;
         }

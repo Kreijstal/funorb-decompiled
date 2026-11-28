@@ -62,27 +62,27 @@ class hl extends lc {
           return 0;
         }
         if (cg.field_y == 0) {
-          if (!BoundedRandomAccessFile.field_d.b((byte) -115)) {
+          if (!BoundedRandomAccessFile.field_d.ensureIndexLoaded((byte) -115)) {
             return 20;
           }
           if (!BoundedRandomAccessFile.field_d.a("commonui", -114)) {
             return 40;
           }
-          if (!oa.field_l.b((byte) -111)) {
+          if (!oa.field_l.ensureIndexLoaded((byte) -111)) {
             return 50;
           }
           if (!oa.field_l.a("commonui", -106)) {
             return 60;
           }
-          if (!kc.field_d.b((byte) -122)) {
+          if (!kc.field_d.ensureIndexLoaded((byte) -122)) {
             return 70;
           }
-          if (!kc.field_d.a(-121)) {
+          if (!kc.field_d.tryLoadAllGroups(-121)) {
             return 80;
           }
         } else {
           if (null != il.field_a) {
-            if (!il.field_a.b((byte) -103)) {
+            if (!il.field_a.ensureIndexLoaded((byte) -103)) {
               return 14;
             }
             if (!il.field_a.b("", 37)) {
@@ -92,22 +92,22 @@ class hl extends lc {
               return 29;
             }
           }
-          if (!BoundedRandomAccessFile.field_d.b((byte) -120)) {
+          if (!BoundedRandomAccessFile.field_d.ensureIndexLoaded((byte) -120)) {
             return 43;
           }
           if (!BoundedRandomAccessFile.field_d.a("commonui", -99)) {
             return 57;
           }
-          if (!oa.field_l.b((byte) -105)) {
+          if (!oa.field_l.ensureIndexLoaded((byte) -105)) {
             return 71;
           }
           if (!oa.field_l.a("commonui", -95)) {
             return 80;
           }
-          if (!kc.field_d.b((byte) -116)) {
+          if (!kc.field_d.ensureIndexLoaded((byte) -116)) {
             return 82;
           }
-          if (!kc.field_d.a(-122)) {
+          if (!kc.field_d.tryLoadAllGroups(-122)) {
             return 86;
           }
         }

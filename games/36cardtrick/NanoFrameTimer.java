@@ -77,7 +77,7 @@ final class NanoFrameTimer extends FrameTimer {
         return var4;
     }
 
-    final static ic a(String param0, qk param1, boolean param2, String param3, qk param4) {
+    final static ic a(String param0, ResourceArchive param1, boolean param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -98,8 +98,8 @@ final class NanoFrameTimer extends FrameTimer {
             stackIn_2_0 = (ic) null;
             return stackIn_2_0;
           }
-          var5_int = param4.a(18659, param0);
-          var6 = param4.a(var5_int, param3, (byte) 7);
+          var5_int = param4.getGroupIdByName(18659, param0);
+          var6 = param4.getFileIdByName(var5_int, param3, (byte) 7);
           stackIn_4_0 = kf.a(param4, 0, var6, var5_int, param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -134,7 +134,7 @@ final class NanoFrameTimer extends FrameTimer {
         }
     }
 
-    final static byte a(byte param0, char param1) {
+    final static byte encodeCp1252Character(byte param0, char param1) {
         int var2;
         int var3;
         var3 = Main.field_T;

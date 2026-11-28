@@ -218,7 +218,7 @@ final class s extends vc {
         return null;
     }
 
-    final static we a(gk param0, String param1, int param2, String param3) {
+    final static we a(ResourceArchive param0, String param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -235,10 +235,10 @@ final class s extends vc {
         try {
           if (param2 != 28576) {
             var6 = (String) null;
-            s.a((gk) null, (String) null, 64, (String) null);
+            s.a((ResourceArchive) null, (String) null, 64, (String) null);
           }
-          var4_int = param0.a(param3, false);
-          var5 = param0.a(var4_int, param1, 102);
+          var4_int = param0.getGroupIdByName(param3, false);
+          var5 = param0.getFileIdByName(var4_int, param1, 102);
           stackIn_3_0 = jd.a(var4_int, param0, 8, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

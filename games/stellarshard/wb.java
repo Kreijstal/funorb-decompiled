@@ -12,7 +12,7 @@ final class wb {
     static java.security.SecureRandom field_a;
     static String field_h;
 
-    final static Sprite[] a(int param0, int param1, pf param2, int param3) {
+    final static Sprite[] a(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Sprite[] stackIn_2_0 = null;
         Object stackIn_5_0 = null;

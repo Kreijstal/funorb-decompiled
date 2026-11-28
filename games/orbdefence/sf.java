@@ -15,7 +15,7 @@ class sf extends ie {
     private String field_N;
     private boolean field_l;
     private RgbSprite[] field_B;
-    static ki field_q;
+    static ResourceArchive field_q;
     private RgbSprite field_S;
     static int field_O;
     private RgbSprite[] field_J;
@@ -48,7 +48,7 @@ class sf extends ie {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    final static wa a(String param0, ki param1, int param2, String param3, ki param4) {
+    final static wa a(String param0, ResourceArchive param1, int param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -65,8 +65,8 @@ class sf extends ie {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param4.a(param0, 0);
-          var6 = param4.a(param3, 5187, var5_int);
+          var5_int = param4.getGroupIdByName(param0, 0);
+          var6 = param4.getFileIdByName(param3, 5187, var5_int);
           if (param2 == -1) {
             stackIn_4_0 = pf.a(var5_int, -6, param1, param4, var6);
             return stackIn_4_0;

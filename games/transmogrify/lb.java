@@ -24,7 +24,7 @@ final class lb {
         field_e = null;
     }
 
-    final static short[] a(short[] param0, int param1, int param2, hj param3) {
+    final static short[] a(short[] param0, int param1, int param2, BitPacketBuffer param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -41,7 +41,7 @@ final class lb {
         RuntimeException var4 = null;
         var8 = Transmogrify.field_A ? 1 : 0;
         try {
-          var4_int = param3.k(param2, 1522829539);
+          var4_int = param3.readBits(param2, 1522829539);
           if (var4_int == 0) {
             return null;
           }
@@ -53,15 +53,15 @@ final class lb {
             stackIn_10_0 = (short[]) null;
             return stackIn_10_0;
           }
-          var5 = param3.k(4, 1522829539);
-          var6 = (short)param3.k(16, 1522829539);
+          var5 = param3.readBits(4, 1522829539);
+          var6 = (short)param3.readBits(16, 1522829539);
           if (0 >= var5) {
             for (var7 = 0; var7 < var4_int; var7++) {
               param0[var7] = (short)var6;
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param0[var7] = (short)(param3.k(var5, 1522829539) + var6);
+              param0[var7] = (short)(param3.readBits(var5, 1522829539) + var6);
             }
           }
           stackIn_19_0 = (short[]) (param0);

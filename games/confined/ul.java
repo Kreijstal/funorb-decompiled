@@ -8,7 +8,7 @@ class ul extends rg {
     private int field_S;
     static PcmSample field_P;
     private int field_R;
-    static mi field_U;
+    static ResourceArchive field_U;
     private long field_T;
     private boolean field_X;
     private int field_Q;
@@ -405,27 +405,27 @@ class ul extends rg {
           return fb.field_c;
         }
         if (null != IntrusiveNodeHashTableIterator.field_f) {
-          if (!IntrusiveNodeHashTableIterator.field_f.b(0)) {
+          if (!IntrusiveNodeHashTableIterator.field_f.ensureIndexLoaded(0)) {
             return hc.field_s;
           }
           return b.field_k;
         }
-        if (!wc.field_Wb.b(0)) {
+        if (!wc.field_Wb.ensureIndexLoaded(0)) {
           return fi.field_b;
         }
         if (!wc.field_Wb.a("commonui", 0)) {
-          return dl.field_a + " - " + wc.field_Wb.b(-8087, "commonui") + "%";
+          return dl.field_a + " - " + wc.field_Wb.getGroupLoadPercentByName(-8087, "commonui") + "%";
         }
-        if (!i.field_r.b(0)) {
+        if (!i.field_r.ensureIndexLoaded(0)) {
           return pb.field_a;
         }
         if (!i.field_r.a("commonui", 0)) {
-          return ByteStorage.field_d + " - " + i.field_r.b(param0 - 8087, "commonui") + "%";
+          return ByteStorage.field_d + " - " + i.field_r.getGroupLoadPercentByName(param0 - 8087, "commonui") + "%";
         }
-        if (!tf.field_k.b(param0)) {
+        if (!tf.field_k.ensureIndexLoaded(param0)) {
           return nl.field_d;
         }
-        if (!tf.field_k.a(25057)) {
+        if (!tf.field_k.tryLoadAllGroups(25057)) {
           return bd.field_c + " - " + tf.field_k.c(-123) + "%";
         }
         return hm.field_W;

@@ -70,7 +70,7 @@ abstract class gi {
         }
     }
 
-    abstract int a(int param0, byte param1);
+    abstract int getGroupRequestProgressPercent(int param0, byte param1);
 
     final static void a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var11 = 0;

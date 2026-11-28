@@ -38,7 +38,7 @@ final class ce {
         }
     }
 
-    final static void a(boolean param0, sh param1) {
+    final static void a(boolean param0, ResourceArchive param1) {
         String stackIn_44_0 = null;
         boolean stackIn_45_1 = false;
         String stackIn_55_0 = null;
@@ -143,7 +143,7 @@ final class ce {
         byte[] var2Lifetime62;
         byte[] var2Lifetime63;
         try {
-          th.field_u = param1;
+          BitPacketBuffer.field_u = param1;
           var2 = e.a("defaultlang", true);
           if (var2 != null) {
             ug.field_s = ni.a((byte) -55, var2);
@@ -437,7 +437,7 @@ final class ce {
           if (null != var2Lifetime63) {
             GzipDecompressor.field_e = var2Lifetime63[0] & 255;
           }
-          th.field_u = null;
+          BitPacketBuffer.field_u = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

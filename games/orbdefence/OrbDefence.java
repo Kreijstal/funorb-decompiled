@@ -384,7 +384,7 @@ public final class OrbDefence extends NetworkGameClient {
         MouseInputListener.a(8);
         MouseWheelInput.clearStaticReferences(121);
         SoftwareRasterizer.clearStaticReferences();
-        ki.clearStaticReferences(false);
+        ResourceArchive.clearStaticReferences(false);
         kc.clearStaticReferences();
         tc.a(true);
         n.c((byte) -87);
@@ -462,7 +462,7 @@ public final class OrbDefence extends NetworkGameClient {
         SpriteGeometry.clearDeclaredStaticReferences(-31028);
         th.clearStaticReferences(true);
         oj.clearDeclaredStaticReferences(384);
-        se.e(false);
+        BitPacketBuffer.clearStaticReferences(false);
         wc.clearStaticReferences((byte) -69);
         wl.b(-25829);
         de.clearStaticReferences(-2079);
@@ -764,32 +764,32 @@ public final class OrbDefence extends NetworkGameClient {
         var9 = field_D ? 1 : 0;
         bl.a(param1 ^ 20);
         if (null != kd.field_q) {
-          if (j.field_b.b(-1) &&
+          if (j.field_b.ensureIndexLoaded(-1) &&
             j.field_b.b((byte) 102, "basic")) {
             if (!j.field_b.b((byte) 99, "arialbold14")) {
               j.a(4.0f, ed.a(hi.field_e, j.field_b, -14416, ProxyAuthenticationRequiredException.field_a, "arialbold14"), (byte) 118);
               return false;
             }
-            if (GameAppletShell.field_d.b(-1) &&
+            if (GameAppletShell.field_d.ensureIndexLoaded(-1) &&
               GameAppletShell.field_d.b((byte) 121, "arialbold14")) {
               if (!j.field_b.b((byte) 81, "arial13")) {
                 j.a(4.0f, ed.a(hi.field_e, j.field_b, param1 - 14513, ProxyAuthenticationRequiredException.field_a, "arial13"), (byte) 112);
                 return false;
               }
-              if (GameAppletShell.field_d.b(param1 - 98) &&
+              if (GameAppletShell.field_d.ensureIndexLoaded(param1 - 98) &&
                 GameAppletShell.field_d.b((byte) -84, "arial13")) {
-                if (kd.field_q.b(-1) &&
-                  kd.field_q.c(7715)) {
-                  if (AccountCreationResultPanel.field_hb.b(-1) &&
-                    AccountCreationResultPanel.field_hb.c(7715)) {
-                    if (hl.field_N.b(-1) &&
-                      hl.field_N.c(param1 + 7618)) {
-                      if (lg.field_c.b(-1) &&
-                        lg.field_c.c(param1 + 7618)) {
-                        if (bh.field_d.b(-1) &&
-                          bh.field_d.c(7715)) {
-                          if (pd.field_r.b(param1 ^ -98) &&
-                            pd.field_r.c(param1 + 7618)) {
+                if (kd.field_q.ensureIndexLoaded(-1) &&
+                  kd.field_q.tryLoadAllGroups(7715)) {
+                  if (AccountCreationResultPanel.field_hb.ensureIndexLoaded(-1) &&
+                    AccountCreationResultPanel.field_hb.tryLoadAllGroups(7715)) {
+                    if (hl.field_N.ensureIndexLoaded(-1) &&
+                      hl.field_N.tryLoadAllGroups(param1 + 7618)) {
+                      if (lg.field_c.ensureIndexLoaded(-1) &&
+                        lg.field_c.tryLoadAllGroups(param1 + 7618)) {
+                        if (bh.field_d.ensureIndexLoaded(-1) &&
+                          bh.field_d.tryLoadAllGroups(7715)) {
+                          if (pd.field_r.ensureIndexLoaded(param1 ^ -98) &&
+                            pd.field_r.tryLoadAllGroups(param1 + 7618)) {
                             j.a(65.0f, me.field_i, (byte) 122);
                             this.d((byte) -80);
                             if (!param0) {

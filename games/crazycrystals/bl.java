@@ -39,10 +39,10 @@ final class bl extends IntrusiveNode {
     private static float[] field_h;
     private static byte[] field_x;
 
-    private final static boolean a(db param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_w) {
-          var1 = param0.b(0, 0, 0);
+          var1 = param0.getFile(0, 0, 0);
           if (var1 == null) {
             return false;
           }
@@ -208,14 +208,14 @@ final class bl extends IntrusiveNode {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    final static bl a(db param0, int param1, int param2) {
+    final static bl a(ResourceArchive param0, int param1, int param2) {
         try {
           bl var4_ref = null;
           if (!bl.a(param0)) {
-            param0.a(param1, (byte) 127, param2);
+            param0.tryLoadFile(param1, (byte) 127, param2);
             return null;
           }
-          byte[] var3 = param0.b(param2, 0, param1);
+          byte[] var3 = param0.getFile(param2, 0, param1);
           if (var3 == null) {
             return null;
           }
@@ -292,14 +292,14 @@ final class bl extends IntrusiveNode {
         field_J = 0;
     }
 
-    final static bl a(db param0, String param1, String param2) {
+    final static bl a(ResourceArchive param0, String param1, String param2) {
         try {
           bl var4_ref = null;
           if (!bl.a(param0)) {
             param0.a((byte) 43, param1, param2);
             return null;
           }
-          byte[] var3 = param0.a(7693, param2, param1);
+          byte[] var3 = param0.getFileByName(7693, param2, param1);
           if (var3 == null) {
             return null;
           }

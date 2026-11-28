@@ -77,7 +77,7 @@ final class FlySpecial extends SpecialOrder {
         int var3 = -72 / ((-21 - param2) / 58);
     }
 
-    final static void a(vr param0, byte param1) {
+    final static void a(ResourceArchive param0, byte param1) {
         byte[] var13 = null;
         byte[] var8 = null;
         byte[] var4 = null;
@@ -96,7 +96,7 @@ final class FlySpecial extends SpecialOrder {
         byte[] var2Lifetime2;
         byte[] var2Lifetime3;
         try {
-          var13 = param0.a((byte) 123, "MoveTable.csv", "");
+          var13 = param0.getFileByName((byte) 123, "MoveTable.csv", "");
           var8 = var13;
           var4 = var8;
           var2 = var4;
@@ -116,19 +116,19 @@ final class FlySpecial extends SpecialOrder {
           }
           TextInputWidget.field_E = qs.a(false, var9);
           hga.a(true, var13);
-          var14 = param0.a((byte) 123, "UnlockTable.csv", "");
+          var14 = param0.getFileByName((byte) 123, "UnlockTable.csv", "");
           var10 = var14;
           var5 = var10;
           var2Lifetime1 = var5;
           WidgetTheme.a((byte) -104);
           MoveCreatureEffect.a(var14, (byte) 22);
           lg.a(-92);
-          var15 = param0.a((byte) 123, "UnlockerTable.csv", "");
+          var15 = param0.getFileByName((byte) 123, "UnlockerTable.csv", "");
           var11 = var15;
           var6 = var11;
           var2Lifetime2 = var6;
           sp.a(var15, param1 ^ -5);
-          var16 = param0.a((byte) 123, "CreatureTable.csv", "");
+          var16 = param0.getFileByName((byte) 123, "CreatureTable.csv", "");
           var12 = var16;
           var7 = var12;
           var2Lifetime3 = var7;

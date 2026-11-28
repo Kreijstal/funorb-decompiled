@@ -11,8 +11,8 @@ abstract class SpecialEvent extends CreatureEvent {
           field_n = (al[][]) null;
           return;
         }
-        vr var2 = (vr) null;
-        SpecialEvent.a(-63, (vr) null, (vr) null);
+        ResourceArchive var2 = (ResourceArchive) null;
+        SpecialEvent.a(-63, (ResourceArchive) null, (ResourceArchive) null);
         field_n = (al[][]) null;
     }
 
@@ -111,11 +111,11 @@ abstract class SpecialEvent extends CreatureEvent {
         }
     }
 
-    final static void a(int param0, vr param1, vr param2) {
+    final static void a(int param0, ResourceArchive param1, ResourceArchive param2) {
         try {
           if (param0 > -101) {
-            vr var4 = (vr) null;
-            SpecialEvent.a(51, (vr) null, (vr) null);
+            ResourceArchive var4 = (ResourceArchive) null;
+            SpecialEvent.a(51, (ResourceArchive) null, (ResourceArchive) null);
           }
           TBomberEvent.field_s = param2;
           sha.field_l = param1;

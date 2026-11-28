@@ -56,9 +56,9 @@ final class kj {
           return var3;
         }
         if (param0 >= 32768) {
-          var4 = this.field_b.a(0, param0 & 32767, 5847);
+          var4 = this.field_b.getFile(0, param0 & 32767, 5847);
         } else {
-          var4 = this.field_e.a(0, param0, 5847);
+          var4 = this.field_e.getFile(0, param0, 5847);
         }
         j var5 = new j();
         if (var4 != null) {

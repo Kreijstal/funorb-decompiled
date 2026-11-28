@@ -5,7 +5,7 @@ import java.util.*;
 
 abstract class rl extends oh {
     static String field_f;
-    static db field_i;
+    static ResourceArchive field_i;
     static String field_g;
     static int field_h;
 

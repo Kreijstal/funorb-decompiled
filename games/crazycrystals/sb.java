@@ -44,7 +44,7 @@ final class sb extends pc {
           var4 = new byte[var2_int];
           param1.readFully(var4);
           if (param0 <= var3) {
-            stackIn_6_0 = db.a((byte) 109, var4);
+            stackIn_6_0 = ResourceArchive.a((byte) 109, var4);
             return stackIn_6_0;
           }
           stackIn_4_0 = fa.a((byte) -80, var4);
@@ -99,11 +99,11 @@ final class sb extends pc {
         }
     }
 
-    final static void a(db param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         try {
           if (param1 != 18180) {
-            db var3 = (db) null;
-            sb.a((db) null, 6);
+            ResourceArchive var3 = (ResourceArchive) null;
+            sb.a((ResourceArchive) null, 6);
           }
           hb.field_k = bl.a(param0, "initialset", "level-lost").a();
         } catch (RuntimeException runtimeException) {

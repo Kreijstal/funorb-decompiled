@@ -9,7 +9,7 @@ final class tg {
         String stackIn_13_2 = null;
         String stackIn_16_2 = null;
         try {
-          byte[] var5 = param0.a(param2, (byte) -71, param3);
+          byte[] var5 = param0.getFileByName(param2, (byte) -71, param3);
           byte[] var4 = var5;
           if (param1 != 8191) {
             tg.a(-91, 82);

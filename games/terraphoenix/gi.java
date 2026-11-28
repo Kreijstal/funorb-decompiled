@@ -887,7 +887,7 @@ final class gi {
         int var25 = 0;
         int var26 = 0;
         int var27 = 0;
-        uc var28 = null;
+        BitPacketBuffer var28 = null;
         int var4Lifetime1;
         int var26Lifetime1;
         int var26Lifetime2;
@@ -1195,7 +1195,7 @@ final class gi {
           ra.field_l = (BitmapFont) ((Object) ec.a("commonui", 8192, param1, param0, "arezzo12"));
           qk.field_e = (BitmapFont) ((Object) ec.a("commonui", 8192, param1, param0, "arezzo14"));
           be.field_x = (BitmapFont) ((Object) ec.a("commonui", param3 + 10232, param1, param0, "arezzo14bold"));
-          var18 = new Sprite(param2.a("button.gif", "", -21653), (java.awt.Component) ((Object) ae.field_G));
+          var18 = new Sprite(param2.getFileByName("button.gif", "", -21653), (java.awt.Component) ((Object) ae.field_G));
           qb.a("dropdown", (byte) -36, "commonui", param0);
           var5 = lf.a(true, "commonui", "screen_options", param0);
           hk.field_d = new IndexedSprite[4];

@@ -67,7 +67,7 @@ final class BoundedRandomAccessFile {
           this.field_h.write(param0, param1, param3);
           if (param2 < 5) {
             byte[] var6 = (byte[]) null;
-            BoundedRandomAccessFile.a(false, -127, (CharSequence) null, (byte[]) null, -72, -17);
+            BoundedRandomAccessFile.encodeCp1252Subsequence(false, -127, (CharSequence) null, (byte[]) null, -72, -17);
           }
           this.field_b = this.field_b + (long)param3;
         } catch (RuntimeException runtimeException) {
@@ -93,7 +93,7 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    final static int a(boolean param0, int param1, CharSequence param2, byte[] param3, int param4, int param5) {
+    final static int encodeCp1252Subsequence(boolean param0, int param1, CharSequence param2, byte[] param3, int param4, int param5) {
         String stackIn_74_2 = null;
         String stackIn_77_2 = null;
         int var9 = AceOfSkies.obfuscationControl ? 1 : 0;

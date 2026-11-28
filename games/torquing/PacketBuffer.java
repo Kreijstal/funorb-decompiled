@@ -75,7 +75,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + ni.a(this.position, var4, 0, -12421, this.payload, param1.length());
+          this.position = this.position + ni.encodeCp1252Subsequence(this.position, var4, 0, -12421, this.payload, param1.length());
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -111,7 +111,7 @@ class PacketBuffer extends IntrusiveNode {
         if (0 == var3) {
           return "";
         }
-        return GameApplet.a(var3, true, var2, this.payload);
+        return GameApplet.decodeCp1252String(var3, true, var2, this.payload);
     }
 
     final boolean verifyCrc32(int param0) {
@@ -212,7 +212,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (0 != this.payload[fieldTemp$1]);
         var4 = -var3 + this.position - 1;
         if (var4 != 0) {
-          return GameApplet.a(var4, true, var3, this.payload);
+          return GameApplet.decodeCp1252String(var4, true, var3, this.payload);
         }
         return "";
     }
@@ -564,7 +564,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           var4 = (CharSequence) ((Object) param0);
-          this.position = this.position + ni.a(this.position, var4, 0, param1 ^ 12483, this.payload, param0.length());
+          this.position = this.position + ni.encodeCp1252Subsequence(this.position, var4, 0, param1 ^ 12483, this.payload, param0.length());
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;

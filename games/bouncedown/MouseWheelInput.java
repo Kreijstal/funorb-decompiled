@@ -16,7 +16,7 @@ abstract class MouseWheelInput {
         return stackIn_6_0;
     }
 
-    final static RgbSprite[] a(int param0, int param1, gk param2, boolean param3) {
+    final static RgbSprite[] a(int param0, int param1, ResourceArchive param2, boolean param3) {
         RuntimeException var4 = null;
         RgbSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;

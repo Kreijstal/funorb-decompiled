@@ -83,14 +83,14 @@ final class mj {
             return stackIn_2_0;
           }
           if (FullscreenFocusCanvas.field_a != null) {
-            if (!FullscreenFocusCanvas.field_a.c(48)) {
+            if (!FullscreenFocusCanvas.field_a.ensureIndexLoaded(48)) {
               stackIn_10_0 = BufferedSocket.field_p;
               return stackIn_10_0;
             }
             stackIn_12_0 = CipherPacketBuffer.field_l;
             return stackIn_12_0;
           }
-          if (!pa.field_i.c(83)) {
+          if (!pa.field_i.ensureIndexLoaded(83)) {
             stackIn_15_0 = dk.field_b;
             return stackIn_15_0;
           }
@@ -99,22 +99,22 @@ final class mj {
             return stackIn_18_0;
           }
           if (!pa.field_i.b("commonui", false)) {
-            stackIn_23_0 = fi.field_a + " - " + pa.field_i.b("commonui", (byte) -100) + "%";
+            stackIn_23_0 = fi.field_a + " - " + pa.field_i.getGroupLoadPercentByName("commonui", (byte) -100) + "%";
             return stackIn_23_0;
           }
-          if (!kg.field_b.c(96)) {
+          if (!kg.field_b.ensureIndexLoaded(96)) {
             stackIn_26_0 = AccountNameAvailabilityValidator.field_k;
             return stackIn_26_0;
           }
           if (!kg.field_b.b("commonui", false)) {
-            stackIn_29_0 = vc.field_B + " - " + kg.field_b.b("commonui", (byte) -100) + "%";
+            stackIn_29_0 = vc.field_B + " - " + kg.field_b.getGroupLoadPercentByName("commonui", (byte) -100) + "%";
             return stackIn_29_0;
           }
-          if (!ea.field_e.c(-111)) {
+          if (!ea.field_e.ensureIndexLoaded(-111)) {
             stackIn_34_0 = se.field_F;
             return stackIn_34_0;
           }
-          if (!ea.field_e.a((byte) -100)) {
+          if (!ea.field_e.tryLoadAllGroups((byte) -100)) {
             stackIn_39_0 = da.field_b + " - " + ea.field_e.a(100) + "%";
             return stackIn_39_0;
           }

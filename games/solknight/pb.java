@@ -13,9 +13,9 @@ final class pb implements j {
         uh var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        jd var8 = null;
+        BitPacketBuffer var8 = null;
         int var9 = 0;
-        jd var10 = null;
+        BitPacketBuffer var10 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -24,10 +24,10 @@ final class pb implements j {
         int var4Lifetime1;
         var7 = SolKnight.field_L ? 1 : 0;
         try {
-          var8 = new jd(param0.a(4, "logo.fo3d", ""));
+          var8 = new BitPacketBuffer(param0.getFileByName(4, "logo.fo3d", ""));
           var10 = var8;
           var3 = var10.readUnsignedByte(255);
-          var10.d((byte) -83);
+          var10.beginBitAccess((byte) -83);
           vc.field_f = ml.a(22795, var10);
           DelegatingCanvas.field_d = new uh[var3];
           bg.field_v = new int[var3][];
@@ -35,7 +35,7 @@ final class pb implements j {
             DelegatingCanvas.field_d[var4] = ab.a(var8, -14945);
           }
           var5_int = -69 % ((param1 + 46) / 41);
-          var10.m(0);
+          var10.endBitAccess(0);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var3 > var9) {

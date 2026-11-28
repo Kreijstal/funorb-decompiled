@@ -18,11 +18,11 @@ final class ph {
           return;
         }
         byte[] var2 = (byte[]) null;
-        ph.a((byte) 20, -27, (byte[]) null, 126);
+        ph.decodeCp1252String((byte) 20, -27, (byte[]) null, 126);
         field_a = null;
     }
 
-    final static String a(byte param0, int param1, byte[] param2, int param3) {
+    final static String decodeCp1252String(byte param0, int param1, byte[] param2, int param3) {
         int var6 = 0;
         int incrementValue$1 = 0;
         char[] var4 = null;

@@ -1026,7 +1026,7 @@ public final class HostileSpawn extends NetworkGameClient {
           field_B = null;
           field_E = null;
           if (param0 <= 126) {
-            HostileSpawn.a(21, (byte) 54);
+            HostileSpawn.decodeCp1252Byte(21, (byte) 54);
           }
           field_J = null;
           return;
@@ -1499,16 +1499,16 @@ public final class HostileSpawn extends NetworkGameClient {
         RuntimeException decompiledCaughtException = null;
         var3 = field_I ? 1 : 0;
         try {
-          oc.field_h[0][3] = bi.field_h.a("level01-new.dat", "", 0);
-          oc.field_h[0][4] = bi.field_h.a("level02-new.dat", "", 0);
-          oc.field_h[0][5] = bi.field_h.a("level03-new.dat", "", param0 + 0);
-          oc.field_h[0][6] = bi.field_h.a("level04-new.dat", "", 0);
-          oc.field_h[0][7] = bi.field_h.a("level05-new.dat", "", 0);
-          oc.field_h[0][8] = bi.field_h.a("level06-new.dat", "", 0);
-          oc.field_h[0][9] = bi.field_h.a("level07-new.dat", "", 0);
-          oc.field_h[0][0] = bi.field_h.a("levelf1-new.dat", "", param0);
-          oc.field_h[0][1] = bi.field_h.a("levelf2-new.dat", "", 0);
-          oc.field_h[0][2] = bi.field_h.a("levelf3-new.dat", "", bm.a(param0, 0));
+          oc.field_h[0][3] = bi.field_h.getFileByName("level01-new.dat", "", 0);
+          oc.field_h[0][4] = bi.field_h.getFileByName("level02-new.dat", "", 0);
+          oc.field_h[0][5] = bi.field_h.getFileByName("level03-new.dat", "", param0 + 0);
+          oc.field_h[0][6] = bi.field_h.getFileByName("level04-new.dat", "", 0);
+          oc.field_h[0][7] = bi.field_h.getFileByName("level05-new.dat", "", 0);
+          oc.field_h[0][8] = bi.field_h.getFileByName("level06-new.dat", "", 0);
+          oc.field_h[0][9] = bi.field_h.getFileByName("level07-new.dat", "", 0);
+          oc.field_h[0][0] = bi.field_h.getFileByName("levelf1-new.dat", "", param0);
+          oc.field_h[0][1] = bi.field_h.getFileByName("levelf2-new.dat", "", 0);
+          oc.field_h[0][2] = bi.field_h.getFileByName("levelf3-new.dat", "", bm.a(param0, 0));
           var2_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var2_int >= 10))) {
@@ -1700,7 +1700,7 @@ public final class HostileSpawn extends NetworkGameClient {
         }
     }
 
-    final static char a(int param0, byte param1) {
+    final static char decodeCp1252Byte(int param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char stackIn_18_0 = 0;
@@ -1862,39 +1862,39 @@ public final class HostileSpawn extends NetworkGameClient {
             ql.f(8036);
             return true;
           }
-          if (ul.field_P.a(-15879) &&
-            ul.field_P.e(param0 ^ 4)) {
-            if (ph.field_F.a(param0 - 15883) &&
-              ph.field_F.e(0)) {
-              if (ej.field_h.a(-15879) &&
-                ej.field_h.e(0)) {
-                if (tk.field_a.a(param0 ^ -15875) &&
-                  tk.field_a.e(0)) {
-                  if (vd.field_C.a(-15879) &&
-                    vd.field_C.e(param0 ^ 4)) {
-                    if (bi.field_h.a(param0 ^ -15875) &&
-                      bi.field_h.e(param0 ^ 4)) {
-                      if (IsaacGenerator.field_h.a(-15879) &&
-                        IsaacGenerator.field_h.e(0)) {
-                        if (null != wd.field_a && (!wd.field_a.a(param0 ^ -15875) ||
+          if (ul.field_P.ensureIndexLoaded(-15879) &&
+            ul.field_P.tryLoadAllGroups(param0 ^ 4)) {
+            if (ph.field_F.ensureIndexLoaded(param0 - 15883) &&
+              ph.field_F.tryLoadAllGroups(0)) {
+              if (ej.field_h.ensureIndexLoaded(-15879) &&
+                ej.field_h.tryLoadAllGroups(0)) {
+                if (tk.field_a.ensureIndexLoaded(param0 ^ -15875) &&
+                  tk.field_a.tryLoadAllGroups(0)) {
+                  if (vd.field_C.ensureIndexLoaded(-15879) &&
+                    vd.field_C.tryLoadAllGroups(param0 ^ 4)) {
+                    if (bi.field_h.ensureIndexLoaded(param0 ^ -15875) &&
+                      bi.field_h.tryLoadAllGroups(param0 ^ 4)) {
+                      if (IsaacGenerator.field_h.ensureIndexLoaded(-15879) &&
+                        IsaacGenerator.field_h.tryLoadAllGroups(0)) {
+                        if (null != wd.field_a && (!wd.field_a.ensureIndexLoaded(param0 ^ -15875) ||
                           !wd.field_a.a(-8088, "basic"))) {
                           gj.a(param0 ^ 16, s.a(wd.field_a, "basic", 47, cl.field_h, lj.field_r), 40.0f);
                           return false;
                         }
-                        if (he.field_t.a(-15879) &&
-                          he.field_t.e(0)) {
-                          if (te.field_J != null && (!te.field_J.a(-15879) ||
-                            !te.field_J.e(param0 ^ 4))) {
+                        if (he.field_t.ensureIndexLoaded(-15879) &&
+                          he.field_t.tryLoadAllGroups(0)) {
+                          if (te.field_J != null && (!te.field_J.ensureIndexLoaded(-15879) ||
+                            !te.field_J.tryLoadAllGroups(param0 ^ 4))) {
                             gj.a(param0 ^ 16, DirectByteStorage.a(FrameTimer.field_a, te.field_J, cf.field_r, (byte) -58), 50.0f);
                             return false;
                           }
-                          if (wd.field_a.a(param0 - 15883) &&
+                          if (wd.field_a.ensureIndexLoaded(param0 - 15883) &&
                             wd.field_a.a(-8088, "basicfont12")) {
-                            if (ResourceArchive.field_a.a(-15879) &&
+                            if (ResourceArchive.field_a.ensureIndexLoaded(-15879) &&
                               ResourceArchive.field_a.a(param0 ^ -8084, "basicfont12")) {
-                              if (wd.field_a.a(-15879) &&
+                              if (wd.field_a.ensureIndexLoaded(-15879) &&
                                 wd.field_a.a(param0 - 8092, "kartika13")) {
-                                if (ResourceArchive.field_a.a(-15879) &&
+                                if (ResourceArchive.field_a.ensureIndexLoaded(-15879) &&
                                   ResourceArchive.field_a.a(-8088, "kartika13")) {
                                   MouseWheelInput.b((byte) -43);
                                   u.field_e = u.field_e - MidiPcmStream.field_r;
@@ -2100,14 +2100,14 @@ public final class HostileSpawn extends NetworkGameClient {
         int var3Lifetime1;
         var4 = field_I ? 1 : 0;
         try {
-          uf.field_i[4] = new RgbSprite(he.field_t.a("starfield.jpg", "", 0), (java.awt.Component) ((Object) GameAppletShell.field_h));
+          uf.field_i[4] = new RgbSprite(he.field_t.getFileByName("starfield.jpg", "", 0), (java.awt.Component) ((Object) GameAppletShell.field_h));
           var2 = new RgbSprite[8][];
-          var2[0] = gl.a(new RgbSprite(he.field_t.a("floors_1.jpg", "", 0), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
-          var2[1] = gl.a(new RgbSprite(he.field_t.a("floors_2.jpg", "", param0 + 4), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
-          var2[2] = gl.a(new RgbSprite(he.field_t.a("floors_3.jpg", "", 0), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
-          var2[3] = gl.a(new RgbSprite(he.field_t.a("floors_4.jpg", "", bm.a(param0, param0)), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
-          var2[5] = gl.a(new RgbSprite(he.field_t.a("floors_6.jpg", "", param0 + 4), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
-          var2[6] = gl.a(new RgbSprite(he.field_t.a("floors_7.jpg", "", 0), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
+          var2[0] = gl.a(new RgbSprite(he.field_t.getFileByName("floors_1.jpg", "", 0), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
+          var2[1] = gl.a(new RgbSprite(he.field_t.getFileByName("floors_2.jpg", "", param0 + 4), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
+          var2[2] = gl.a(new RgbSprite(he.field_t.getFileByName("floors_3.jpg", "", 0), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
+          var2[3] = gl.a(new RgbSprite(he.field_t.getFileByName("floors_4.jpg", "", bm.a(param0, param0)), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
+          var2[5] = gl.a(new RgbSprite(he.field_t.getFileByName("floors_6.jpg", "", param0 + 4), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
+          var2[6] = gl.a(new RgbSprite(he.field_t.getFileByName("floors_7.jpg", "", 0), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
           pk.field_d = new RgbSprite[1280];
           var3 = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -2126,8 +2126,8 @@ public final class HostileSpawn extends NetworkGameClient {
             stackIn_11_0 = (RgbSprite[][]) null;
           }
           var2Lifetime1 = stackIn_11_0;
-          ri.field_p = new RgbSprite(he.field_t.a("bg.jpg", "", 0), (java.awt.Component) ((Object) GameAppletShell.field_h));
-          hk.field_h = new RgbSprite(he.field_t.a("hs_logo.jpg", "", 0), (java.awt.Component) ((Object) GameAppletShell.field_h));
+          ri.field_p = new RgbSprite(he.field_t.getFileByName("bg.jpg", "", 0), (java.awt.Component) ((Object) GameAppletShell.field_h));
+          hk.field_h = new RgbSprite(he.field_t.getFileByName("hs_logo.jpg", "", 0), (java.awt.Component) ((Object) GameAppletShell.field_h));
           var3Lifetime1 = 0;
           while (hk.field_h.field_D.length > var3Lifetime1) {
             if (var4 != 0) {
@@ -2150,16 +2150,16 @@ public final class HostileSpawn extends NetworkGameClient {
 
     private final void o(int param0) {
         try {
-          oc.field_h[1][0] = IsaacGenerator.field_h.a("level_01.dat", "", 0);
-          oc.field_h[1][1] = IsaacGenerator.field_h.a("level_02.dat", "", bm.a(param0, 28974));
-          oc.field_h[1][2] = IsaacGenerator.field_h.a("level_03.dat", "", bm.a(param0, 28974));
-          oc.field_h[1][3] = IsaacGenerator.field_h.a("level_04.dat", "", bm.a(param0, param0));
-          oc.field_h[1][4] = IsaacGenerator.field_h.a("level_05.dat", "", param0 - 28974);
-          oc.field_h[1][5] = IsaacGenerator.field_h.a("level_06.dat", "", param0 - 28974);
-          oc.field_h[1][6] = IsaacGenerator.field_h.a("level_07.dat", "", 0);
-          oc.field_h[1][7] = IsaacGenerator.field_h.a("level_08.dat", "", 0);
-          oc.field_h[1][8] = IsaacGenerator.field_h.a("level_09.dat", "", 0);
-          oc.field_h[1][9] = IsaacGenerator.field_h.a("level_10.dat", "", 0);
+          oc.field_h[1][0] = IsaacGenerator.field_h.getFileByName("level_01.dat", "", 0);
+          oc.field_h[1][1] = IsaacGenerator.field_h.getFileByName("level_02.dat", "", bm.a(param0, 28974));
+          oc.field_h[1][2] = IsaacGenerator.field_h.getFileByName("level_03.dat", "", bm.a(param0, 28974));
+          oc.field_h[1][3] = IsaacGenerator.field_h.getFileByName("level_04.dat", "", bm.a(param0, param0));
+          oc.field_h[1][4] = IsaacGenerator.field_h.getFileByName("level_05.dat", "", param0 - 28974);
+          oc.field_h[1][5] = IsaacGenerator.field_h.getFileByName("level_06.dat", "", param0 - 28974);
+          oc.field_h[1][6] = IsaacGenerator.field_h.getFileByName("level_07.dat", "", 0);
+          oc.field_h[1][7] = IsaacGenerator.field_h.getFileByName("level_08.dat", "", 0);
+          oc.field_h[1][8] = IsaacGenerator.field_h.getFileByName("level_09.dat", "", 0);
+          oc.field_h[1][9] = IsaacGenerator.field_h.getFileByName("level_10.dat", "", 0);
           IsaacGenerator.field_h = null;
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "HostileSpawn.JA(" + param0 + ')');
@@ -2330,7 +2330,7 @@ public final class HostileSpawn extends NetworkGameClient {
         try {
           java.net.URL var2 = null;
           if (param1 > -18) {
-            HostileSpawn.a(-115, (byte) 85);
+            HostileSpawn.decodeCp1252Byte(-115, (byte) 85);
           }
           try {
             var2 = new java.net.URL(param0.getCodeBase(), "subscribe.ws");

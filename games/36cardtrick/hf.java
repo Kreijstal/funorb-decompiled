@@ -9,7 +9,7 @@ class hf extends hl {
     private int field_L;
     private long field_O;
     private int field_K;
-    static qk field_H;
+    static ResourceArchive field_H;
     private boolean field_J;
     private boolean field_G;
 

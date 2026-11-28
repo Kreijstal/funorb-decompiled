@@ -186,7 +186,7 @@ abstract class vm extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_H.append((char) var14);
-                var14 = (char)(nl.a(false, (char) var14) & 255);
+                var14 = (char)(nl.encodeCp1252Character(false, (char) var14) & 255);
                 var4 = var4 + this.field_E[var14];
                 if (this.field_v != null &&
                   var10 != 0) {
@@ -378,7 +378,7 @@ abstract class vm extends DualLinkNode {
     }
 
     final int a(char param0) {
-        return this.field_E[nl.a(false, param0) & 255];
+        return this.field_E[nl.encodeCp1252Character(false, param0) & 255];
     }
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
@@ -510,7 +510,7 @@ abstract class vm extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(nl.a(false, (char) var8) & 255);
+              var8 = (char)(nl.encodeCp1252Character(false, (char) var8) & 255);
               if (this.field_v != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_v[(var5 << 8) + var8];
@@ -699,7 +699,7 @@ abstract class vm extends DualLinkNode {
         int var5 = 0;
         if (param0 != 32) {
           param2 = param2 - this.field_u;
-          var5 = nl.a(false, param0) & 255;
+          var5 = nl.encodeCp1252Character(false, param0) & 255;
           this.a(var5, param1 + this.field_C[var5], param2 + this.field_q[var5], this.field_L[var5], this.field_G[var5], param3, false);
         }
     }
@@ -779,7 +779,7 @@ abstract class vm extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(nl.a(false, (char) var7) & 255);
+              var7 = (char)(nl.encodeCp1252Character(false, (char) var7) & 255);
               var4 = var4 + this.field_E[var7];
               if (this.field_v != null &&
                 var3 != 0) {

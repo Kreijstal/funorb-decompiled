@@ -14,7 +14,7 @@ final class rh extends IntrusiveNode {
         int fieldTemp$0 = 0;
         int stackIn_14_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        w var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         Object var3 = null;
@@ -251,7 +251,7 @@ final class rh extends IntrusiveNode {
         }
     }
 
-    final static RgbSprite a(int param0, qk param1, int param2, int param3) {
+    final static RgbSprite a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         RgbSprite stackIn_2_0 = null;
         Object stackIn_7_0 = null;

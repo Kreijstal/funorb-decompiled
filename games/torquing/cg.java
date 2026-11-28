@@ -68,7 +68,7 @@ final class cg {
     }
 
     final static cg a(ResourceArchive param0, String param1, String param2) {
-        byte[] var3 = param0.a(-113, param2, param1);
+        byte[] var3 = param0.getFileByName(-113, param2, param1);
         if (var3 == null) {
           return null;
         }
@@ -76,7 +76,7 @@ final class cg {
     }
 
     final static cg a(ResourceArchive param0, int param1, int param2) {
-        byte[] var3 = param0.a(param1, 100, param2);
+        byte[] var3 = param0.getFile(param1, 100, param2);
         if (var3 == null) {
           return null;
         }

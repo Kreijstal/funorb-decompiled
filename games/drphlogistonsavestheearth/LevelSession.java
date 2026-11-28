@@ -514,7 +514,7 @@ final class LevelSession {
         nf.field_u = 0;
         this.field_J = 0;
         SecondaryNodeDeque.field_c = 0;
-        lh.field_m = 0;
+        BitPacketBuffer.field_m = 0;
         this.field_Z = 0;
         this.field_ab = false;
         this.field_u = 0;
@@ -1396,7 +1396,7 @@ final class LevelSession {
 
     private final void o(int param0) {
         int var2;
-        if ((lh.field_m >> this.levelNumber & 1) == 0 &&
+        if ((BitPacketBuffer.field_m >> this.levelNumber & 1) == 0 &&
           this.field_w > 0) {
           this.a(4, 251, (byte) -95);
         }
@@ -2887,7 +2887,7 @@ final class LevelSession {
         boolean decompiledFrameRemainder3 = true;
         boolean decompiledFrameRemainder2 = true;
         var5 = (double)ri.field_q + this.field_D;
-        lh.field_m = lh.field_m | 1 << this.levelNumber;
+        BitPacketBuffer.field_m = BitPacketBuffer.field_m | 1 << this.levelNumber;
         var3 = this.field_N + (double)MusicPatchPcmStream.field_p;
         var13_int = param0;
         if (((19 != var13_int ||
@@ -3284,7 +3284,7 @@ final class LevelSession {
           this.field_d = (ib[]) null;
         }
         if (var8.h(49)) {
-          sc.a(-1, true, lh.field_l);
+          sc.a(-1, true, BitPacketBuffer.field_l);
           this.field_U = true;
         }
         if (!var8.a(false) &&
@@ -3339,19 +3339,19 @@ final class LevelSession {
           if (var4 == 0) {
             var3_int = stackIn_24_0;
             while (var3_int < 20) {
-              vi.field_h[var2][var3_int].a((int)vj.field_f[var2], 3, lh.field_n[var2], -21, 1, (int)IterableNodeHashTable.field_f[var2]);
+              vi.field_h[var2][var3_int].a((int)ResourceArchive.field_f[var2], 3, BitPacketBuffer.field_n[var2], -21, 1, (int)IterableNodeHashTable.field_f[var2]);
               IterableNodeHashTable.field_f[var2] = IterableNodeHashTable.field_f[var2] + 0.3;
-              vj.field_f[var2] = vj.field_f[var2] + 0.6;
-              stackIn_8_0 = compareDoublesNaNResultNegative(vj.field_f[var2], 305.0);
+              ResourceArchive.field_f[var2] = ResourceArchive.field_f[var2] + 0.6;
+              stackIn_8_0 = compareDoublesNaNResultNegative(ResourceArchive.field_f[var2], 305.0);
               if (stackIn_8_0 > 0) {
                 nd.field_M = 256;
-                this.a((int)vj.field_f[var2], -84, (int)IterableNodeHashTable.field_f[var2]);
+                this.a((int)ResourceArchive.field_f[var2], -84, (int)IterableNodeHashTable.field_f[var2]);
                 IterableNodeHashTable.field_f[var2] = (double)(hi.a(640, 4, this.field_l) - 100);
-                vj.field_f[var2] = (double)(-hi.a(1720, 4, this.field_l));
+                ResourceArchive.field_f[var2] = (double)(-hi.a(1720, 4, this.field_l));
                 if (hi.a(5, 4, this.field_l) >= 4) {
-                  lh.field_n[var2] = 2102528;
+                  BitPacketBuffer.field_n[var2] = 2102528;
                 } else {
-                  lh.field_n[var2] = 1052688;
+                  BitPacketBuffer.field_n[var2] = 1052688;
                 }
               }
               if (640.0 < IterableNodeHashTable.field_f[var2]) {
@@ -4261,7 +4261,7 @@ final class LevelSession {
         scanLoop1: while (true) {
           if (var2 < 2) {
             IterableNodeHashTable.field_f[var2] = (double)(hi.a(640, 4, this.field_l) - 100);
-            vj.field_f[var2] = (double)(-hi.a(1720, 4, this.field_l));
+            ResourceArchive.field_f[var2] = (double)(-hi.a(1720, 4, this.field_l));
             stackIn_16_0 = 0;
             if (var4 != 0) {
               break scanLoop1;
@@ -4274,9 +4274,9 @@ final class LevelSession {
                 continue;
               }
               if (hi.a(5, 4, this.field_l) >= 4) {
-                lh.field_n[var2] = 2102528;
+                BitPacketBuffer.field_n[var2] = 2102528;
               } else {
-                lh.field_n[var2] = 1052688;
+                BitPacketBuffer.field_n[var2] = 1052688;
               }
               break;
             }

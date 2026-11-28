@@ -35,9 +35,9 @@ final class td implements j {
         int var11 = 0;
         int var12 = 0;
         Archive var13 = null;
-        jd var14 = null;
+        BitPacketBuffer var14 = null;
         int var15 = 0;
-        jd var16 = null;
+        BitPacketBuffer var16 = null;
         int[][] var20 = null;
         int var6_intLifetime1;
         int var9Lifetime1;
@@ -203,7 +203,7 @@ final class td implements j {
           if (param0 != -3) {
             td.a(-37);
           }
-          stackIn_3_0 = param1.b(true);
+          stackIn_3_0 = param1.tryLoadAllGroups(true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -678,7 +678,7 @@ final class ca extends rf {
         field_f = null;
     }
 
-    final int a(int param0, int param1) {
+    final int getGroupRequestProgressPercent(int param0, int param1) {
         ArchiveRequest discarded$0 = null;
         ArchiveRequest var3 = (ArchiveRequest) (this.field_q.a((byte) 112, (long)param1));
         if (param0 >= -42) {
@@ -695,7 +695,7 @@ final class ca extends rf {
           return;
         }
         if (param0 != -1) {
-          this.a(-68, -82);
+          this.getGroupRequestProgressPercent(-68, -82);
         }
         this.field_m = true;
         if (null == this.field_h) {

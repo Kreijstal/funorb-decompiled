@@ -290,7 +290,7 @@ class lk extends IntrusiveNode {
         }
     }
 
-    final static wb[] a(String param0, String param1, byte param2, qk param3) {
+    final static wb[] a(String param0, String param1, byte param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -304,8 +304,8 @@ class lk extends IntrusiveNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.a(18659, param1);
-          var5 = param3.a(var4_int, param0, (byte) 7);
+          var4_int = param3.getGroupIdByName(18659, param1);
+          var5 = param3.getFileIdByName(var4_int, param0, (byte) 7);
           if (param2 <= 4) {
             lk.a((java.applet.Applet) null, 118, (String) null);
           }

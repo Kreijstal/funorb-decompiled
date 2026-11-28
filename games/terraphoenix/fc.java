@@ -347,7 +347,7 @@ final class fc {
         }
         if (~ph.field_o != param0) {
           if (bl.field_a != null) {
-            if (!bl.field_a.a(0)) {
+            if (!bl.field_a.ensureIndexLoaded(0)) {
               return 14;
             }
             if (!bl.field_a.d(param0 + 0, "")) {
@@ -357,41 +357,41 @@ final class fc {
               return 29;
             }
           }
-          if (!bi.field_d.a(~param0)) {
+          if (!bi.field_d.ensureIndexLoaded(~param0)) {
             return 43;
           }
           if (!bi.field_d.a(-3, "commonui")) {
             return 57;
           }
-          if (!ph.field_q.a(0)) {
+          if (!ph.field_q.ensureIndexLoaded(0)) {
             return 71;
           }
           if (!ph.field_q.a(param0 - 2, "commonui")) {
             return 80;
           }
-          if (!ch.field_g.a(0)) {
+          if (!ch.field_g.ensureIndexLoaded(0)) {
             return 82;
           }
-          if (!ch.field_g.b((byte) -128)) {
+          if (!ch.field_g.tryLoadAllGroups((byte) -128)) {
             return 86;
           }
         } else {
-          if (!bi.field_d.a(0)) {
+          if (!bi.field_d.ensureIndexLoaded(0)) {
             return 20;
           }
           if (!bi.field_d.a(param0 ^ 2, "commonui")) {
             return 40;
           }
-          if (!ph.field_q.a(0)) {
+          if (!ph.field_q.ensureIndexLoaded(0)) {
             return 50;
           }
           if (!ph.field_q.a(param0 ^ 2, "commonui")) {
             return 60;
           }
-          if (!ch.field_g.a(0)) {
+          if (!ch.field_g.ensureIndexLoaded(0)) {
             return 70;
           }
-          if (!ch.field_g.b((byte) -128)) {
+          if (!ch.field_g.tryLoadAllGroups((byte) -128)) {
             return 80;
           }
         }
@@ -420,7 +420,7 @@ final class fc {
         return var3;
     }
 
-    final static ee a(int param0, uc param1) {
+    final static ee a(int param0, BitPacketBuffer param1) {
         int var7 = 0;
         ee stackIn_24_0 = null;
         RuntimeException stackIn_27_0 = null;
@@ -436,7 +436,7 @@ final class fc {
         int var8 = 0;
         var8 = Terraphoenix.field_V;
         try {
-          var2_int = param1.a(false, 8);
+          var2_int = param1.readBits(false, 8);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
@@ -446,16 +446,16 @@ final class fc {
           var3 = DiskArchiveRequest.a(param1, (byte) 98) ? 1 : 0;
           var4 = DiskArchiveRequest.a(param1, (byte) 98) ? 1 : 0;
           var5 = new ee();
-          var5.field_m = (short)param1.a(false, 16);
+          var5.field_m = (short)param1.readBits(false, 16);
           var5.field_D = dc.a(-25076, var5.field_D, 16, param1);
           var5.field_B = dc.a(param0 ^ -19153, var5.field_B, 16, param1);
           var5.field_L = dc.a(-25076, var5.field_L, 16, param1);
-          var5.field_l = (short)param1.a(false, 16);
+          var5.field_l = (short)param1.readBits(false, 16);
           var5.field_E = dc.a(-25076, var5.field_E, 16, param1);
           var5.field_n = dc.a(-25076, var5.field_n, 16, param1);
           var5.field_p = dc.a(-25076, var5.field_p, 16, param1);
           if (var3 != 0) {
-            var5.field_o = (short)param1.a(false, 16);
+            var5.field_o = (short)param1.readBits(false, 16);
             var5.field_j = dc.a(param0 ^ -19153, var5.field_j, 16, param1);
             var5.field_P = dc.a(-25076, var5.field_P, 16, param1);
             var5.field_u = dc.a(-25076, var5.field_u, 16, param1);
@@ -464,7 +464,7 @@ final class fc {
             var5.field_g = dc.a(-25076, var5.field_g, 16, param1);
           }
           if (var4 != 0) {
-            param1.a(false, 16);
+            param1.readBits(false, 16);
             var5.field_F = dc.a(-25076, var5.field_F, 16, param1);
             var5.field_s = dc.a(-25076, var5.field_s, 16, param1);
             var5.field_A = dc.a(-25076, var5.field_A, 16, param1);

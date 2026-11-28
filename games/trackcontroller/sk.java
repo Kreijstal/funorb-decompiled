@@ -22,24 +22,24 @@ final class sk {
         }
         while (this.field_f < this.field_c) {
           var4 = this.field_d[this.field_f];
-          if (!var4.field_c.c(113)) {
+          if (!var4.field_c.ensureIndexLoaded(113)) {
             this.a(-1, 0, var4);
             return false;
           }
           if (var4.field_h >= 0 &&
-            !var4.field_c.a((byte) -40, var4.field_h)) {
-            this.a(-1, var4.field_c.a(var4.field_h, -24214), var4);
+            !var4.field_c.tryLoadGroup((byte) -40, var4.field_h)) {
+            this.a(-1, var4.field_c.getGroupLoadPercent(var4.field_h, -24214), var4);
             return false;
           }
           if (null != var4.field_f &&
             !var4.field_c.b(var4.field_f, (byte) -3)) {
-            this.a(-1, var4.field_c.a(var4.field_f, 0), var4);
+            this.a(-1, var4.field_c.getGroupLoadPercentByName(var4.field_f, 0), var4);
             return false;
           }
           if (var4.field_h < 0 &&
             null == var4.field_f &&
             null != var4.field_b &&
-            !var4.field_c.a((byte) 48)) {
+            !var4.field_c.tryLoadAllGroups((byte) 48)) {
             this.a(-1, var4.field_c.a(true), var4);
             return false;
           }
@@ -84,7 +84,7 @@ final class sk {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = param1.a(param3, param0, (byte) -117);
+          var6 = param1.getFile(param3, param0, (byte) -117);
           var4 = var6;
           if (param2 != 1) {
             var5 = (Archive) null;

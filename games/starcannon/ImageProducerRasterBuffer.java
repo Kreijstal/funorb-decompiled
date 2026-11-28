@@ -144,13 +144,13 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
     }
 
     final static void a(boolean param0, oj param1, int param2) {
-        ia var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           if (!param0) {
             field_k = (String) null;
           }
           var3 = d.field_b;
-          var3.d((byte) 25, param2);
+          var3.writeCipheredByte((byte) 25, param2);
           var3.writeByte(param1.field_i, -50);
           var3.writeByte(param1.field_h, -123);
         } catch (RuntimeException runtimeException) {

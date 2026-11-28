@@ -181,8 +181,8 @@ final class bb {
 
     final static void a(int param0, int param1, of param2) {
         int var4 = 0;
-        ia var5 = d.field_b;
-        var5.d((byte) 67, param1);
+        BitPacketBuffer var5 = d.field_b;
+        var5.writeCipheredByte((byte) 67, param1);
         if (param0 != 2) {
           return;
         }

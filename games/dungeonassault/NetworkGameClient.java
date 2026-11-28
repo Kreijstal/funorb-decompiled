@@ -548,7 +548,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   var9 = (String) null;
                   rg.a(15, (String) null);
                 } else {
-                  var7 = mk.a((byte) -24, var12.payload, var12.position, 0);
+                  var7 = mk.decodeCp1252String((byte) -24, var12.payload, var12.position, 0);
                   rg.a(15, var7);
                 }
                 hl.field_i = null;
@@ -741,7 +741,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (dk.field_c == 2) {
           if (null != ia.field_U &&
-            ia.field_U.a(param1 - 14280)) {
+            ia.field_U.ensureIndexLoaded(param1 - 14280)) {
             if (ia.field_U.c("", param1 ^ -74)) {
               if (ia.field_U.a(false, "")) {
                 ng.a(param1 ^ 27014, ia.field_U);
@@ -795,8 +795,8 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         boolean decompiledFrameRemainder0 = true;
         if (dk.field_c == 11) {
-          if (null != PacketBuffer.field_k && (!PacketBuffer.field_k.a(-14354) ||
-            !PacketBuffer.field_k.a((byte) 59))) {
+          if (null != PacketBuffer.field_k && (!PacketBuffer.field_k.ensureIndexLoaded(-14354) ||
+            !PacketBuffer.field_k.tryLoadAllGroups((byte) 59))) {
             tp.a(10, 0.0f, lk.a(ki.field_c, PacketBuffer.field_k, PacketBuffer.field_r, (byte) -125));
             decompiledFrameRemainder0 = false;
           }

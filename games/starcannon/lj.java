@@ -7,7 +7,7 @@ final class lj {
     static int[] field_g;
     static long[] field_b;
     static String field_c;
-    static ue field_h;
+    static ResourceArchive field_h;
     static int field_i;
     static String field_d;
     static String field_f;

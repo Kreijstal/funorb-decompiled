@@ -83,7 +83,7 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final static void a(ki param0, byte param1, ki param2, ki param3) {
+    final static void a(ResourceArchive param0, byte param1, ResourceArchive param2, ResourceArchive param3) {
         RgbSprite var18 = null;
         qg[] var5 = null;
         qg[][] var6 = null;
@@ -110,11 +110,11 @@ final class BufferedRandomAccessFile {
           pc.field_bb = (kc) ((Object) wl.a("arezzo12", (byte) -124, "commonui", param2, param3));
           lm.field_f = (kc) ((Object) wl.a("arezzo14", (byte) -111, "commonui", param2, param3));
           if (param1 <= 91) {
-            ki var14 = (ki) null;
-            BufferedRandomAccessFile.a((ki) null, (byte) 9, (ki) null, (ki) null);
+            ResourceArchive var14 = (ResourceArchive) null;
+            BufferedRandomAccessFile.a((ResourceArchive) null, (byte) 9, (ResourceArchive) null, (ResourceArchive) null);
           }
           qc.field_b = (kc) ((Object) wl.a("arezzo14bold", (byte) -120, "commonui", param2, param3));
-          var18 = new RgbSprite(param0.a("", 1, "button.gif"), (java.awt.Component) ((Object) GameAppletShell.field_f));
+          var18 = new RgbSprite(param0.getFileByName("", 1, "button.gif"), (java.awt.Component) ((Object) GameAppletShell.field_f));
           DiskArchiveRequest.a(false, "commonui", param2, "dropdown");
           var5 = fl.a(-9945, param2, "commonui", "screen_options");
           kk.field_P = new qg[4];
@@ -171,8 +171,8 @@ final class BufferedRandomAccessFile {
         field_e = null;
         field_b = null;
         if (param0 <= 72) {
-          ki var2 = (ki) null;
-          BufferedRandomAccessFile.a((ki) null, (byte) 47, (ki) null, (ki) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          BufferedRandomAccessFile.a((ResourceArchive) null, (byte) 47, (ResourceArchive) null, (ResourceArchive) null);
         }
     }
 

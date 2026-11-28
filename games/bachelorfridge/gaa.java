@@ -8,7 +8,7 @@ final class gaa extends lg {
     boolean field_j;
     private FridgeCreature field_h;
 
-    final static void a(BitmapFont param0, vr param1, int param2) {
+    final static void a(BitmapFont param0, ResourceArchive param1, int param2) {
         int var8 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;

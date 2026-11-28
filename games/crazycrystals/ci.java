@@ -4,7 +4,7 @@
 final class ci extends se {
     static PlatformTask field_k;
     static String field_j;
-    static db field_i;
+    static ResourceArchive field_i;
 
     ci(ga param0) {
         super(param0);
@@ -294,7 +294,7 @@ final class ci extends se {
             }
           }
           if (param2) {
-            field_i = (db) null;
+            field_i = (ResourceArchive) null;
           }
           if (var5_int >= SoftwareRasterizer.field_c &&
             var5_int < SoftwareRasterizer.field_g) {

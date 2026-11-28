@@ -10,9 +10,9 @@ final class SectorCacheStore {
     static boolean field_g;
     static volatile boolean field_b;
     private int field_e;
-    static sh field_d;
+    static ResourceArchive field_d;
 
-    final static BinaryBitmapFont a(int param0, sh param1, byte param2, sh param3, int param4) {
+    final static BinaryBitmapFont a(int param0, ResourceArchive param1, byte param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         BinaryBitmapFont stackIn_6_0 = null;
@@ -30,7 +30,7 @@ final class SectorCacheStore {
           if (param2 > -28) {
             SectorCacheStore.resetStaticState(-62);
           }
-          stackIn_6_0 = vi.a(param3.a(param0, -27493, param4), (byte) 107);
+          stackIn_6_0 = vi.a(param3.getFile(param0, -27493, param4), (byte) 107);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

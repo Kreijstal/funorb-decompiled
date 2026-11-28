@@ -98,7 +98,7 @@ final class qg extends kl implements ud {
         }
     }
 
-    final static bm a(vj param0, String param1, String param2, vj param3, int param4) {
+    final static bm a(ResourceArchive param0, String param1, String param2, ResourceArchive param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -116,8 +116,8 @@ final class qg extends kl implements ud {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = -127 / ((param4 - 40) / 53);
-          var5_int = param3.a(param2, (byte) -104);
-          var7 = param3.a((byte) -66, param1, var5_int);
+          var5_int = param3.getGroupIdByName(param2, (byte) -104);
+          var7 = param3.getFileIdByName((byte) -66, param1, var5_int);
           stackIn_1_0 = IterableNodeHashTable.a(var7, param3, var5_int, param0, 65245);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -157,8 +157,8 @@ final class qg extends kl implements ud {
           qf.field_c = param1;
           nd.field_K = param2;
           if (param3 != -11) {
-            vj var5 = (vj) null;
-            qg.a((String) null, (String) null, 112, (String) null, (vj) null);
+            ResourceArchive var5 = (ResourceArchive) null;
+            qg.a((String) null, (String) null, 112, (String) null, (ResourceArchive) null);
           }
           nc.a(LevelSession.field_Y, param0, (byte) 77);
         } catch (RuntimeException runtimeException) {
@@ -262,7 +262,7 @@ final class qg extends kl implements ud {
         }
     }
 
-    final static String a(String param0, String param1, int param2, String param3, vj param4) {
+    final static String a(String param0, String param1, int param2, String param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -282,8 +282,8 @@ final class qg extends kl implements ud {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          if (param4.a(0)) {
-            stackIn_7_0 = param1 + " - " + param4.b(10461, param3) + "%";
+          if (param4.ensureIndexLoaded(0)) {
+            stackIn_7_0 = param1 + " - " + param4.getGroupLoadPercentByName(10461, param3) + "%";
             return stackIn_7_0;
           }
           stackIn_5_0 = (String) (param0);

@@ -199,7 +199,7 @@ final class ch {
         if (param0 > -35) {
           return (rh[]) null;
         }
-        return new rh[]{vj.field_K, ArchiveRequest.field_z, lf.field_f, ArchiveRequest.field_u, fl.field_e, uc.field_p, uc.field_n, oe.field_d, GameApplet.field_f, fi.field_p, ai.field_b, BattleState.field_l, le.field_n, wg.field_b};
+        return new rh[]{vj.field_K, ArchiveRequest.field_z, lf.field_f, ArchiveRequest.field_u, fl.field_e, BitPacketBuffer.field_p, BitPacketBuffer.field_n, oe.field_d, GameApplet.field_f, fi.field_p, ai.field_b, BattleState.field_l, le.field_n, wg.field_b};
     }
 
     final void a(int param0, Terraphoenix param1) {

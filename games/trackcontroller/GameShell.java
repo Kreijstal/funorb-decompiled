@@ -171,7 +171,7 @@ abstract class GameShell extends GameApplet {
         }
         int var4 = hd.field_o - 1;
         byte[] var5 = new byte[var4];
-        ne.field_a.a(var4, false, 0, var5);
+        ne.field_a.readCipheredBytes(var4, false, 0, var5);
         ib.a(var3 != 0, ta.a(32200, var5), CachedArchiveSource.b((byte) 77), (byte) -25);
     }
 
@@ -431,7 +431,7 @@ abstract class GameShell extends GameApplet {
             ma.a(-9969, CachedArchiveSource.b((byte) 77));
           }
           if (var4 == 10) {
-            LevelView.field_C.c(17, 7);
+            LevelView.field_C.writeCipheredByte(17, 7);
           }
           if (var4 == 11) {
             q.a(CachedArchiveSource.b((byte) 77), -1);
@@ -450,7 +450,7 @@ abstract class GameShell extends GameApplet {
                   var9 = (String) null;
                   kd.a((String) null, (byte) 110);
                 } else {
-                  var7 = ka.a(0, -129, var12.payload, var12.position);
+                  var7 = ka.decodeCp1252String(0, -129, var12.payload, var12.position);
                   kd.a(var7, (byte) 92);
                 }
                 he.field_c = null;
@@ -673,7 +673,7 @@ abstract class GameShell extends GameApplet {
         }
         if (gl.field_I == 2) {
           if (null != ff.field_b &&
-            ff.field_b.c(-25)) {
+            ff.field_b.ensureIndexLoaded(-25)) {
             if (ff.field_b.a("", (byte) -125)) {
               if (ff.field_b.b("", (byte) -3)) {
                 sf.a((byte) -114, ff.field_b);
@@ -726,8 +726,8 @@ abstract class GameShell extends GameApplet {
         }
         boolean decompiledFrameRemainder0 = true;
         if (gl.field_I == 11) {
-          if (null != ed.field_I && (!ed.field_I.c(-47) ||
-            !ed.field_I.a((byte) 48))) {
+          if (null != ed.field_I && (!ed.field_I.ensureIndexLoaded(-47) ||
+            !ed.field_I.tryLoadAllGroups((byte) 48))) {
             ud.a(128, 0.0f, ug.a(ArchiveIndex.field_t, ed.field_I, 2147483647, jb.field_c));
             decompiledFrameRemainder0 = false;
           }

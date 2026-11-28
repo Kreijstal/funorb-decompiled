@@ -6,16 +6,16 @@ final class aj {
     private int field_c;
     private je[] field_b;
 
-    final static aj a(ue param0, int param1, int param2) {
-        byte[] var3 = param0.a(param1, true, param2);
+    final static aj a(ResourceArchive param0, int param1, int param2) {
+        byte[] var3 = param0.getFile(param1, true, param2);
         if (var3 == null) {
           return null;
         }
         return new aj(new PacketBuffer(var3));
     }
 
-    final static aj a(ue param0, String param1, String param2) {
-        byte[] var3 = param0.a(param1, (byte) 31, param2);
+    final static aj a(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.getFileByName(param1, (byte) 31, param2);
         if (var3 == null) {
           return null;
         }

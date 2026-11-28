@@ -18,7 +18,7 @@ abstract class hf {
         field_b = null;
     }
 
-    abstract int a(int param0, int param1);
+    abstract int getGroupRequestProgressPercent(int param0, int param1);
 
     abstract byte[] a(int param0, boolean param1);
 

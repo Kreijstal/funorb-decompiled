@@ -127,7 +127,7 @@ final class we implements Runnable {
               var3 = var4.getOutputStream();
               var3.write(17);
               var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_h.getFile() + "\n\n"));
-              var3.write(pi.a(var5, 353));
+              var3.write(pi.encodeCp1252Bytes(var5, 353));
               this.field_a = new DataInputStream(var4.getInputStream());
             }
             this.field_d.position = 0;

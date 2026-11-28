@@ -105,12 +105,12 @@ final class v {
         }
     }
 
-    final static void a(byte param0, ci param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new Sprite(param1.a("", (byte) 91, "final_frame.jpg"), (java.awt.Component) ((Object) AchievementNotice.field_k));
+          var2 = new Sprite(param1.getFileByName("", (byte) 91, "final_frame.jpg"), (java.awt.Component) ((Object) AchievementNotice.field_k));
           var3 = var2.field_n;
           var4 = var2.field_m;
           og.a((byte) 45);

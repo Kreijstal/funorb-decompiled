@@ -7,14 +7,14 @@ final class ne implements t {
     private int field_c;
     static bk field_d;
     private int field_f;
-    static la field_a;
+    static BitPacketBuffer field_a;
 
     public static void clearStaticReferences(int param0) {
         field_a = null;
         field_b = null;
         field_d = null;
         if (param0 != -29615) {
-          field_a = (la) null;
+          field_a = (BitPacketBuffer) null;
         }
     }
 

@@ -77,7 +77,7 @@ final class AccountNameAvailabilityValidator extends hi {
             field_s = (String) null;
           }
           var5 = (CharSequence) ((Object) param1);
-          var3 = ki.a(-1, var5);
+          var3 = ResourceArchive.a(-1, var5);
           if (var3 != null) {
             stackIn_4_0 = var3;
             return stackIn_4_0;

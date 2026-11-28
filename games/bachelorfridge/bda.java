@@ -63,7 +63,7 @@ final class bda extends lw {
         if (param0 < 103) {
           return;
         }
-        int var2 = (int)((1.0 - Math.cos((double)(vr.field_b * 4) * 3.141592653589793 / 100.0)) * 256.0);
+        int var2 = (int)((1.0 - Math.cos((double)(ResourceArchive.field_b * 4) * 3.141592653589793 / 100.0)) * 256.0);
         if (this.field_e != 1) {
           return;
         }

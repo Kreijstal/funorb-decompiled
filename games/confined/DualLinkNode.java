@@ -22,7 +22,7 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    final static RgbSprite[] a(int param0, int param1, int param2, mi param3) {
+    final static RgbSprite[] a(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

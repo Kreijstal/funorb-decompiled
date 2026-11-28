@@ -55,7 +55,7 @@ class MeshGeometry extends pa {
     }
 
     final static MeshGeometry a(ResourceArchive param0, String param1, String param2) {
-        byte[] var3 = param0.a(-106, param2, param1);
+        byte[] var3 = param0.getFileByName(-106, param2, param1);
         if (var3 == null) {
           return null;
         }

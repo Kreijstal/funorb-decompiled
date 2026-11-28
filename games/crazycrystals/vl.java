@@ -24,7 +24,7 @@ final class vl {
         field_b = null;
     }
 
-    final static String a(String param0, int param1, int param2, String param3, db param4) {
+    final static String a(String param0, int param1, int param2, String param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         String stackIn_4_0 = null;
         String stackIn_6_0 = null;
@@ -40,8 +40,8 @@ final class vl {
           if (param2 != 4164) {
             field_c = (String) null;
           }
-          if (param4.a((byte) 102)) {
-            stackIn_6_0 = param3 + " - " + param4.b(25030, param1) + "%";
+          if (param4.ensureIndexLoaded((byte) 102)) {
+            stackIn_6_0 = param3 + " - " + param4.getGroupLoadPercent(25030, param1) + "%";
             return stackIn_6_0;
           }
           stackIn_4_0 = (String) (param0);

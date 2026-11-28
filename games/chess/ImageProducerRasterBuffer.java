@@ -97,8 +97,8 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
     }
 
     final static void a(int param0, int param1) {
-        nk var2 = qn.field_U;
-        var2.f(param1, -68);
+        BitPacketBuffer var2 = qn.field_U;
+        var2.writeCipheredByte(param1, -68);
         var2.position = var2.position + 1;
         int var3 = -54 % ((param0 - 63) / 36);
         int var4 = var2.position;

@@ -19,7 +19,7 @@ final class jj extends vk implements dc, ga {
         return "</col></u>";
     }
 
-    final static lk a(int param0, ue param1, int param2, byte param3, ue param4) {
+    final static lk a(int param0, ResourceArchive param1, int param2, byte param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         lk stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -35,7 +35,7 @@ final class jj extends vk implements dc, ga {
           if (!qb.a((byte) 94, param0, param2, param1)) {
             return null;
           }
-          stackIn_6_0 = qd.a(param4.a(param0, true, param2), (byte) -71);
+          stackIn_6_0 = qd.a(param4.getFile(param0, true, param2), (byte) -71);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

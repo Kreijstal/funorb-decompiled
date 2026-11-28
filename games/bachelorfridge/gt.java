@@ -542,7 +542,7 @@ final class gt extends k {
         }
     }
 
-    final static String a(int param0, byte[] param1, byte param2, int param3) {
+    final static String decodeCp1252String(int param0, byte[] param1, byte param2, int param3) {
         int var6 = 0;
         int incrementValue$1 = 0;
         char[] var4 = null;
@@ -567,7 +567,7 @@ final class gt extends k {
           var5 = 0;
           if (param2 != 104) {
             var10 = (byte[]) null;
-            gt.a(15, (byte[]) null, (byte) 43, 15);
+            gt.decodeCp1252String(15, (byte[]) null, (byte) 43, 15);
           }
           for (var6 = 0; var6 < param3; var6++) {
             var7 = 255 & param1[var6 + param0];

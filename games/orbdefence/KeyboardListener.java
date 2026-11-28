@@ -167,7 +167,7 @@ final class KeyboardListener implements java.awt.event.KeyListener, java.awt.eve
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
-              oc.a((char) var2_int, 0)) {
+              oc.isSupportedCp1252KeyCharacter((char) var2_int, 0)) {
               var3 = 127 & 1 + uf.field_a;
               if (var3 != md.field_g) {
                 NanoFrameTimer.field_g[uf.field_a] = -1;

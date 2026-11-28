@@ -59,7 +59,7 @@ final class gm {
         field_b = null;
     }
 
-    final static boolean a(db param0, int param1, boolean param2, int param3) {
+    final static boolean a(ResourceArchive param0, int param1, boolean param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -68,7 +68,7 @@ final class gm {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = param0.b(param1, 0, param3);
+          var5 = param0.getFile(param1, 0, param3);
           var4 = var5;
           if (!param2) {
             return false;

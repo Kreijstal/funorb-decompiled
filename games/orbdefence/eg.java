@@ -3,10 +3,10 @@
  */
 final class eg extends fg {
     static String[] field_w;
-    static ki field_x;
+    static ResourceArchive field_x;
     static int field_v;
 
-    final static boolean a(se param0, int param1) {
+    final static boolean a(BitPacketBuffer param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -15,7 +15,7 @@ final class eg extends fg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 26678) {
-            stackIn_6_0 = (param0.h(1, 8) == 1);
+            stackIn_6_0 = (param0.readBits(1, 8) == 1);
             return stackIn_6_0;
           }
           return false;
@@ -132,7 +132,7 @@ final class eg extends fg {
 
     final String a(byte param0, pj param1) {
         RuntimeException var3 = null;
-        se var4 = null;
+        BitPacketBuffer var4 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -140,8 +140,8 @@ final class eg extends fg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -95) {
-            var4 = (se) null;
-            eg.a((se) null, -102);
+            var4 = (BitPacketBuffer) null;
+            eg.a((BitPacketBuffer) null, -102);
           }
           stackIn_3_0 = IntrusiveDeque.a('*', param1.field_l.length(), 77);
           return stackIn_3_0;

@@ -186,7 +186,7 @@ final class de {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 64 % ((-52 - param0) / 32);
-          stackIn_1_0 = param1.b((byte) 79);
+          stackIn_1_0 = param1.tryLoadAllGroups((byte) 79);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

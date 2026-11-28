@@ -270,7 +270,7 @@ final class DiskCacheWorker implements Runnable {
           if (param0 != 26197) {
             field_e = (java.awt.Color) null;
           }
-          sl.b(param1.a(param0 ^ 26193, "headers.packvorbis", ""));
+          sl.b(param1.getFileByName(param0 ^ 26193, "headers.packvorbis", ""));
           var2 = sl.a(param1, "jagex logo2.packvorbis", "");
           var2.c();
         } catch (RuntimeException runtimeException) {

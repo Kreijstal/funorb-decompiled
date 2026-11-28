@@ -4,7 +4,7 @@
 final class ua {
     static int field_a;
 
-    final static byte a(boolean param0, char param1) {
+    final static byte encodeCp1252Character(boolean param0, char param1) {
         int var2;
         int var3;
         var3 = Lexicominos.field_L ? 1 : 0;
@@ -16,7 +16,7 @@ final class ua {
             if (param1 == 8364) {
               var2 = -128;
               if (!param0) {
-                ua.a(true, 'ﾇ');
+                ua.encodeCp1252Character(true, 'ﾇ');
               }
               return (byte) var2;
             }
@@ -27,7 +27,7 @@ final class ua {
                   if (param0) {
                     return (byte) var2;
                   }
-                  ua.a(true, 'ﾇ');
+                  ua.encodeCp1252Character(true, 'ﾇ');
                   return (byte) var2;
                 }
                 if (param1 == 8230) {
@@ -35,7 +35,7 @@ final class ua {
                   if (param0) {
                     return (byte) var2;
                   }
-                  ua.a(true, 'ﾇ');
+                  ua.encodeCp1252Character(true, 'ﾇ');
                   return (byte) var2;
                 }
                 if (param1 != 8224) {
@@ -44,7 +44,7 @@ final class ua {
                     if (param0) {
                       return (byte) var2;
                     }
-                    ua.a(true, 'ﾇ');
+                    ua.encodeCp1252Character(true, 'ﾇ');
                     return (byte) var2;
                   }
                   if (param1 != 710) {
@@ -54,7 +54,7 @@ final class ua {
                         if (param0) {
                           return (byte) var2;
                         }
-                        ua.a(true, 'ﾇ');
+                        ua.encodeCp1252Character(true, 'ﾇ');
                         return (byte) var2;
                       }
                       if (param1 != 8249) {
@@ -151,7 +151,7 @@ final class ua {
                 if (param0) {
                   return (byte) var2;
                 }
-                ua.a(true, 'ﾇ');
+                ua.encodeCp1252Character(true, 'ﾇ');
                 return (byte) var2;
               }
               if (8218 != param1) {
@@ -161,7 +161,7 @@ final class ua {
                     if (param0) {
                       return (byte) var2;
                     }
-                    ua.a(true, 'ﾇ');
+                    ua.encodeCp1252Character(true, 'ﾇ');
                     return (byte) var2;
                   }
                   if (param1 == 8230) {
@@ -169,7 +169,7 @@ final class ua {
                     if (param0) {
                       return (byte) var2;
                     }
-                    ua.a(true, 'ﾇ');
+                    ua.encodeCp1252Character(true, 'ﾇ');
                     return (byte) var2;
                   }
                   if (param1 != 8224) {
@@ -178,7 +178,7 @@ final class ua {
                       if (param0) {
                         return (byte) var2;
                       }
-                      ua.a(true, 'ﾇ');
+                      ua.encodeCp1252Character(true, 'ﾇ');
                       return (byte) var2;
                     }
                     if (param1 != 710) {
@@ -188,7 +188,7 @@ final class ua {
                           if (param0) {
                             return (byte) var2;
                           }
-                          ua.a(true, 'ﾇ');
+                          ua.encodeCp1252Character(true, 'ﾇ');
                           return (byte) var2;
                         }
                         if (param1 != 8249) {
@@ -197,7 +197,7 @@ final class ua {
                             if (param0) {
                               return (byte) var2;
                             }
-                            ua.a(true, 'ﾇ');
+                            ua.encodeCp1252Character(true, 'ﾇ');
                             return (byte) var2;
                           }
                           if (param1 != 381) {
@@ -208,7 +208,7 @@ final class ua {
                                   if (param0) {
                                     return (byte) var2;
                                   }
-                                  ua.a(true, 'ﾇ');
+                                  ua.encodeCp1252Character(true, 'ﾇ');
                                   return (byte) var2;
                                 }
                                 if (param1 == 8221) {
@@ -216,7 +216,7 @@ final class ua {
                                   if (param0) {
                                     return (byte) var2;
                                   }
-                                  ua.a(true, 'ﾇ');
+                                  ua.encodeCp1252Character(true, 'ﾇ');
                                   return (byte) var2;
                                 }
                                 if (8226 == param1) {
@@ -224,7 +224,7 @@ final class ua {
                                   if (param0) {
                                     return (byte) var2;
                                   }
-                                  ua.a(true, 'ﾇ');
+                                  ua.encodeCp1252Character(true, 'ﾇ');
                                   return (byte) var2;
                                 }
                                 if (param1 == 8211) {
@@ -232,7 +232,7 @@ final class ua {
                                   if (param0) {
                                     return (byte) var2;
                                   }
-                                  ua.a(true, 'ﾇ');
+                                  ua.encodeCp1252Character(true, 'ﾇ');
                                   return (byte) var2;
                                 }
                                 if (8212 != param1) {
@@ -242,7 +242,7 @@ final class ua {
                                       if (param0) {
                                         return (byte) var2;
                                       }
-                                      ua.a(true, 'ﾇ');
+                                      ua.encodeCp1252Character(true, 'ﾇ');
                                       return (byte) var2;
                                     }
                                     if (param1 != 353) {
@@ -252,7 +252,7 @@ final class ua {
                                           if (param0) {
                                             return (byte) var2;
                                           }
-                                          ua.a(true, 'ﾇ');
+                                          ua.encodeCp1252Character(true, 'ﾇ');
                                           return (byte) var2;
                                         }
                                         if (param1 != 382) {
@@ -305,7 +305,7 @@ final class ua {
         if (param0) {
           return (byte) var2;
         }
-        ua.a(true, 'ﾇ');
+        ua.encodeCp1252Character(true, 'ﾇ');
         return (byte) var2;
     }
 

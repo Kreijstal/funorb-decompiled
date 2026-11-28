@@ -1473,7 +1473,7 @@ public final class Chess extends gb {
           ma.field_D = true;
         }
         if (-4 == qk.field_h) {
-          qn.field_U.f(9, -87);
+          qn.field_U.writeCipheredByte(9, -87);
           r.field_bc = true;
           qk.field_h = IntrusiveDeque.field_f;
         }
@@ -1652,7 +1652,7 @@ public final class Chess extends gb {
         wg.resetStaticState(69);
         cd.resetStaticState(1570);
         qe.clearStaticReferences(2);
-        nk.l(8);
+        BitPacketBuffer.clearStaticReferences(8);
         sc.a(-26862);
         hd.clearStaticReferences((byte) -2);
         SpriteGeometry.clearStaticReferences((byte) 1);
@@ -1881,7 +1881,7 @@ public final class Chess extends gb {
           }
           if (null == mm.field_d) {
             if (wg.field_q != null) {
-              kd.a((byte) -90, new HuffmanCodec(wg.field_q.a("", 30045, "huffman")));
+              kd.a((byte) -90, new HuffmanCodec(wg.field_q.getFileByName("", 30045, "huffman")));
               wg.field_q = null;
               ob.f(param0 ^ 19763);
               return false;
@@ -1938,40 +1938,40 @@ public final class Chess extends gb {
           ob.f(0);
           return false;
         }
-        if (BufferedRandomAccessFile.field_m.c((byte) 118) &&
-          BufferedRandomAccessFile.field_m.b((byte) -40)) {
-          if (tk.field_g.c((byte) 127) &&
-            tk.field_g.b((byte) -40)) {
-            if (pg.field_o.c((byte) 126) &&
-              pg.field_o.b((byte) -40)) {
-              if (li.field_g.c((byte) 121) &&
-                li.field_g.b((byte) -40)) {
-                if (mm.field_d.c((byte) 121) &&
-                  mm.field_d.b((byte) -40)) {
-                  if (wg.field_q.c((byte) 121) &&
-                    wg.field_q.b((byte) -40)) {
-                    if (!lg.field_b.c((byte) 122) ||
-                      !lg.field_b.b((byte) -40)) {
+        if (BufferedRandomAccessFile.field_m.ensureIndexLoaded((byte) 118) &&
+          BufferedRandomAccessFile.field_m.tryLoadAllGroups((byte) -40)) {
+          if (tk.field_g.ensureIndexLoaded((byte) 127) &&
+            tk.field_g.tryLoadAllGroups((byte) -40)) {
+            if (pg.field_o.ensureIndexLoaded((byte) 126) &&
+              pg.field_o.tryLoadAllGroups((byte) -40)) {
+              if (li.field_g.ensureIndexLoaded((byte) 121) &&
+                li.field_g.tryLoadAllGroups((byte) -40)) {
+                if (mm.field_d.ensureIndexLoaded((byte) 121) &&
+                  mm.field_d.tryLoadAllGroups((byte) -40)) {
+                  if (wg.field_q.ensureIndexLoaded((byte) 121) &&
+                    wg.field_q.tryLoadAllGroups((byte) -40)) {
+                    if (!lg.field_b.ensureIndexLoaded((byte) 122) ||
+                      !lg.field_b.tryLoadAllGroups((byte) -40)) {
                       nj.a(-20, ji.a(ve.field_Qb, "", hh.field_j, lg.field_b, (byte) 36), 56.0f);
                     }
-                    if (bo.field_d.c((byte) 127) &&
-                      bo.field_d.b((byte) -40)) {
-                      if (hm.field_e.c((byte) 118) &&
+                    if (bo.field_d.ensureIndexLoaded((byte) 127) &&
+                      bo.field_d.tryLoadAllGroups((byte) -40)) {
+                      if (hm.field_e.ensureIndexLoaded((byte) 118) &&
                         hm.field_e.b("basic", 100)) {
-                        if (hm.field_e.c((byte) 122) &&
+                        if (hm.field_e.ensureIndexLoaded((byte) 122) &&
                           hm.field_e.b("roman12", param0 - 19663)) {
-                          if (ByteStorage.field_b.c((byte) 123) &&
+                          if (ByteStorage.field_b.ensureIndexLoaded((byte) 123) &&
                             ByteStorage.field_b.b("roman12", param0 - 19663)) {
-                            if (hm.field_e.c((byte) 123) &&
+                            if (hm.field_e.ensureIndexLoaded((byte) 123) &&
                               hm.field_e.b("kartika13", 100)) {
-                              if (ByteStorage.field_b.c((byte) 127) &&
+                              if (ByteStorage.field_b.ensureIndexLoaded((byte) 127) &&
                                 ByteStorage.field_b.b("kartika13", 100)) {
-                                if (hm.field_e.c((byte) 118) &&
+                                if (hm.field_e.ensureIndexLoaded((byte) 118) &&
                                   hm.field_e.b("lobby", 100)) {
-                                  if (ByteStorage.field_b.c((byte) 118) &&
+                                  if (ByteStorage.field_b.ensureIndexLoaded((byte) 118) &&
                                     ByteStorage.field_b.b("lobby", 100)) {
-                                    if (ca.field_b.c((byte) 123) &&
-                                      ca.field_b.b((byte) -40)) {
+                                    if (ca.field_b.ensureIndexLoaded((byte) 123) &&
+                                      ca.field_b.tryLoadAllGroups((byte) -40)) {
                                       if (!param1) {
                                         return false;
                                       }

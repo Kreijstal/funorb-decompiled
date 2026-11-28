@@ -108,7 +108,7 @@ public final class Bounce extends GameClient {
           ha.clearStaticReferences(false);
           MouseWheelInput.a((byte) 53);
           SoftwareRasterizer.clearStaticReferences();
-          gk.b(false);
+          ResourceArchive.b(false);
           ob.clearStaticReferences(640);
           PacketBuffer.clearStaticReferences((byte) -127);
           of.clearStaticReferences(true);
@@ -275,7 +275,7 @@ public final class Bounce extends GameClient {
           ja.a(false);
           NodeHashTableIterator.clearStaticReferences(8832);
           SecondaryNodeDequeIterator.clearStaticReferences(true);
-          sa.a(true);
+          sa.clearCp1252ExtensionTable(true);
           he.b((byte) -53);
           w.resetStaticState(62771140);
           qa.a(19108);
@@ -551,27 +551,27 @@ public final class Bounce extends GameClient {
           }
           if (rj.field_j != -1 &&
             rj.field_j == 0) {
-            var2 = gk.field_e;
+            var2 = ResourceArchive.field_e;
             var3_int = var2.field_s + 200;
             var4 = 4 + var2.field_x + var2.field_F;
-            var5 = gk.field_e.b(qe.field_c);
+            var5 = ResourceArchive.field_e.b(qe.field_c);
             var6 = 320 - var5 / 2;
             var7 = 3 * var4 + var3_int;
             if ((var6 - 8) < uc.field_C &&
               uc.field_C <= (var6 - (-16 - var5)) &&
-              (var7 - 8 - gk.field_e.field_s) < ll.field_y &&
+              (var7 - 8 - ResourceArchive.field_e.field_s) < ll.field_y &&
               ll.field_y <= 16 + var7 &&
               this.field_L &&
               1 == SectorCacheStore.field_e) {
               ProxyAuthenticationRequiredException.d(-6144);
               rj.field_j = 2;
             }
-            var5Lifetime1 = gk.field_e.b(db.field_T);
+            var5Lifetime1 = ResourceArchive.field_e.b(db.field_T);
             var6Lifetime1 = -(var5Lifetime1 / 2) + 320;
             var7Lifetime1 = var4 / 2 + 4 * var4 + var3_int + 32;
             if ((var6Lifetime1 - 8) < uc.field_C &&
               var5Lifetime1 + var6Lifetime1 + 16 >= uc.field_C &&
-              (-8 + var7Lifetime1 - gk.field_e.field_s) < ll.field_y &&
+              (-8 + var7Lifetime1 - ResourceArchive.field_e.field_s) < ll.field_y &&
               ll.field_y <= var7Lifetime1 + 16 &&
               this.field_L &&
               SectorCacheStore.field_e == 1) {
@@ -1014,7 +1014,7 @@ public final class Bounce extends GameClient {
           if (var2_intLifetime1 != 2) {
             return;
           }
-          vk.a(240, (RgbSprite[]) null, 320, gk.field_e.field_s, cl.field_p[0].field_o, od.field_f.field_s, gk.field_e.field_s, 3, 2, gk.field_e, od.field_f, (RgbSprite[]) null, cl.field_p[0].field_t, od.field_f.field_s);
+          vk.a(240, (RgbSprite[]) null, 320, ResourceArchive.field_e.field_s, cl.field_p[0].field_o, od.field_f.field_s, ResourceArchive.field_e.field_s, 3, 2, ResourceArchive.field_e, od.field_f, (RgbSprite[]) null, cl.field_p[0].field_t, od.field_f.field_s);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1194,38 +1194,38 @@ public final class Bounce extends GameClient {
           SectorCacheStore.a(32459);
           qe.a((byte) -37, va.field_a);
           if (ca.field_e != null) {
-            if (null != pa.field_c && (!pa.field_c.c(-79) ||
-              !pa.field_c.a((byte) -41))) {
+            if (null != pa.field_c && (!pa.field_c.ensureIndexLoaded(-79) ||
+              !pa.field_c.tryLoadAllGroups((byte) -41))) {
               hg.a(hg.a(nl.field_a, pa.field_c, 130, AppletShell.field_k), -99, 10.0f);
               return;
             }
-            if (IntrusiveNode.field_e != null && (!IntrusiveNode.field_e.c(51) ||
-              !IntrusiveNode.field_e.a((byte) -109))) {
+            if (IntrusiveNode.field_e != null && (!IntrusiveNode.field_e.ensureIndexLoaded(51) ||
+              !IntrusiveNode.field_e.tryLoadAllGroups((byte) -109))) {
               hg.a(hg.a(nl.field_a, IntrusiveNode.field_e, 130, AppletShell.field_k), -114, 20.0f);
               return;
             }
-            if (null != MidiPcmStream.field_D && (!MidiPcmStream.field_D.c(67) ||
-              !MidiPcmStream.field_D.a((byte) -43))) {
+            if (null != MidiPcmStream.field_D && (!MidiPcmStream.field_D.ensureIndexLoaded(67) ||
+              !MidiPcmStream.field_D.tryLoadAllGroups((byte) -43))) {
               hg.a(hg.a(ke.field_n, MidiPcmStream.field_D, param1 ^ 3260, vk.field_e), -120, 30.0f);
               return;
             }
-            if (ca.field_e != null && (!ca.field_e.c(param1 - 3027) ||
-              !ca.field_e.a((byte) -113))) {
+            if (ca.field_e != null && (!ca.field_e.ensureIndexLoaded(param1 - 3027) ||
+              !ca.field_e.tryLoadAllGroups((byte) -113))) {
               hg.a(hg.a(ke.field_n, ca.field_e, 130, vk.field_e), param1 - 3156, 40.0f);
               return;
             }
-            if (null != ub.field_a && (!ub.field_a.c(94) ||
-              !ub.field_a.a((byte) -101))) {
+            if (null != ub.field_a && (!ub.field_a.ensureIndexLoaded(94) ||
+              !ub.field_a.tryLoadAllGroups((byte) -101))) {
               hg.a(hg.a(dk.field_b, ub.field_a, 130, fi.field_a), -86, 50.0f);
               return;
             }
-            if (j.field_j != null && (!j.field_j.c(param1 - 3219) ||
+            if (j.field_j != null && (!j.field_j.ensureIndexLoaded(param1 - 3219) ||
               !j.field_j.b("basic", false))) {
               hg.a(fb.a((byte) -67, dk.field_b, fi.field_a, j.field_j, "basic"), -39, 60.0f);
               return;
             }
-            if (va.field_c != null && (!va.field_c.c(param1 - 3244) ||
-              !va.field_c.a((byte) -46))) {
+            if (va.field_c != null && (!va.field_c.ensureIndexLoaded(param1 - 3244) ||
+              !va.field_c.tryLoadAllGroups((byte) -46))) {
               hg.a(fb.a((byte) -92, AccountNameAvailabilityValidator.field_k, vc.field_B, va.field_c, ""), param1 ^ -3159, 80.0f);
               return;
             }
@@ -1327,7 +1327,7 @@ public final class Bounce extends GameClient {
           }
           hg.a(he.field_i, -75, 99.0f);
           this.e(4);
-          gk.field_e = q.a(param1 ^ -3135, va.field_c, "b12", ub.field_a, "");
+          ResourceArchive.field_e = q.a(param1 ^ -3135, va.field_c, "b12", ub.field_a, "");
           jh.field_s = q.a(-1, va.field_c, "comic20", ub.field_a, "");
           od.field_f = q.a(-1, va.field_c, "newfont", ub.field_a, "");
           l.field_e = nc.a("title", ub.field_a, "", 0);
@@ -1388,7 +1388,7 @@ public final class Bounce extends GameClient {
           nc.a("soundoff", ub.field_a, "", param1 ^ 3134);
           nc.a("quitgame", ub.field_a, "", 0);
           nc.a("instruct", ub.field_a, "", 0);
-          ec.a(gk.field_e, 4, 16777215, 0, od.field_f, 240, (RgbSprite[]) null, 8, 320, 20, -35, 20, (RgbSprite[]) null, 320, 16741888, 14, (RgbSprite[]) null, 8, 20, 16697912, 0);
+          ec.a(ResourceArchive.field_e, 4, 16777215, 0, od.field_f, 240, (RgbSprite[]) null, 8, 320, 20, -35, 20, (RgbSprite[]) null, 320, 16741888, 14, (RgbSprite[]) null, 8, 20, 16697912, 0);
           ag.field_c = 16777215;
           ub.field_a = null;
           DirectByteStorage.field_f = 16697912;
@@ -1512,7 +1512,7 @@ public final class Bounce extends GameClient {
             if (null != sj.field_f) {
               stackIn_12_1 = true;
             } else {
-              stackIn_12_1 = gk.field_f;
+              stackIn_12_1 = ResourceArchive.field_f;
             }
             ke.a((java.awt.Canvas) (stackIn_11_0), stackIn_12_1, true);
             return;
@@ -1856,7 +1856,7 @@ public final class Bounce extends GameClient {
             }
             if ((decompiledFrameRemainder0) &&
               (rj.field_j == 0)) {
-              var6 = gk.field_e;
+              var6 = ResourceArchive.field_e;
               var7Lifetime2 = 200 + var6.field_s;
               var8 = var6.field_F + var6.field_x + 4;
               SoftwareRasterizer.fillRectangle(112, 190, 416, 64 + 5 * var8 + 20, 0);

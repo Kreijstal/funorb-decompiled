@@ -28,7 +28,7 @@ final class r {
         }
     }
 
-    final static int a(CharSequence param0, byte[] param1, int param2, int param3, int param4, int param5) {
+    final static int encodeCp1252Subsequence(CharSequence param0, byte[] param1, int param2, int param3, int param4, int param5) {
         int var7 = 0;
         int stackIn_69_0 = 0;
         RuntimeException stackIn_72_0 = null;

@@ -127,7 +127,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         }
     }
 
-    final static String a(int param0, int param1, int param2, byte[] param3) {
+    final static String decodeCp1252String(int param0, int param1, int param2, byte[] param3) {
         String stackIn_18_2 = null;
         int var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {

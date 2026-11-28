@@ -46,7 +46,7 @@ final class ud extends DualLinkNode {
                 stackIn_19_0 = this.field_v;
                 stackIn_19_1 = var5;
                 if (var6 != 0) {
-                  stackIn_20_2 = mn.a((byte) var6, 93);
+                  stackIn_20_2 = mn.decodeCp1252Byte((byte) var6, 93);
                 } else {
                   stackIn_20_2 = 0;
                 }
@@ -64,7 +64,7 @@ final class ud extends DualLinkNode {
                 if (var6 == 0) {
                   stackIn_14_2 = (char)0;
                 } else {
-                  stackIn_14_2 = mn.a((byte) var6, -48);
+                  stackIn_14_2 = mn.decodeCp1252Byte((byte) var6, -48);
                 }
                 stackIn_13_0[stackIn_13_1] = stackIn_14_2;
               }

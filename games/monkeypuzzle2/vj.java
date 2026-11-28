@@ -75,7 +75,7 @@ final class vj {
     }
 
     final static int a(int param0, int param1) {
-        byte[] var4 = NodeHashTableIterator.field_d.a("level" + (param1 + param0), "", -125);
+        byte[] var4 = NodeHashTableIterator.field_d.getFileByName("level" + (param1 + param0), "", -125);
         byte[] var2 = var4;
         if (var4 == null) {
           return -1;

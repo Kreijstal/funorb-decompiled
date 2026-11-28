@@ -167,7 +167,7 @@ abstract class GameShell extends GameApplet {
         }
         if (qc.field_A == 2) {
           if (null != qc.field_B &&
-            qc.field_B.b(0)) {
+            qc.field_B.ensureIndexLoaded(0)) {
             if (!qc.field_B.b("", param1 + 5)) {
               qc.field_B = null;
             } else {
@@ -221,8 +221,8 @@ abstract class GameShell extends GameApplet {
         }
         boolean decompiledFrameRemainder0 = true;
         if (11 == qc.field_A) {
-          if (IntrusiveDequeCursor.field_c != null && (!IntrusiveDequeCursor.field_c.b(0) ||
-            !IntrusiveDequeCursor.field_c.a((byte) -112))) {
+          if (IntrusiveDequeCursor.field_c != null && (!IntrusiveDequeCursor.field_c.ensureIndexLoaded(0) ||
+            !IntrusiveDequeCursor.field_c.tryLoadAllGroups((byte) -112))) {
             ProxySocketConnector.a(false, 0.0f, fg.a(IntrusiveDequeCursor.field_c, bq.field_A, eb.field_a, 274));
             decompiledFrameRemainder0 = false;
           }
@@ -380,7 +380,7 @@ abstract class GameShell extends GameApplet {
               if (ja.field_d.b(-1)) {
                 var7 = ja.field_d.a(-4);
                 if (var7 != null) {
-                  var8 = mj.a(32, var7.payload, 0, var7.position);
+                  var8 = mj.decodeCp1252String(32, var7.payload, 0, var7.position);
                   om.a(var8, (byte) -125);
                 } else {
                   var10 = (String) null;

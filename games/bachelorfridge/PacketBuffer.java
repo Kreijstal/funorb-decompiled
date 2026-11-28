@@ -175,7 +175,7 @@ class PacketBuffer extends IntrusiveNode {
         if (0 == var4) {
           return "";
         }
-        return gt.a(var3, this.payload, (byte) 104, var4);
+        return gt.decodeCp1252String(var3, this.payload, (byte) 104, var4);
     }
 
     final void writeString(byte param0, String param1) {
@@ -191,7 +191,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + BoardChange.a(param1.length(), -56, this.position, var4, this.payload, 0);
+          this.position = this.position + BoardChange.encodeCp1252Subsequence(param1.length(), -56, this.position, var4, this.payload, 0);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -1618,7 +1618,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           var4 = (CharSequence) ((Object) param0);
-          this.position = this.position + BoardChange.a(param0.length(), -113, this.position, var4, this.payload, 0);
+          this.position = this.position + BoardChange.encodeCp1252Subsequence(param0.length(), -113, this.position, var4, this.payload, 0);
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
@@ -1698,7 +1698,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var4 == param0) {
           return "";
         }
-        return gt.a(var3, this.payload, (byte) 104, var4);
+        return gt.decodeCp1252String(var3, this.payload, (byte) 104, var4);
     }
 
     final int readUnsignedSmart(int param0) {

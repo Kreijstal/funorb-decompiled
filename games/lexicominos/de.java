@@ -18,15 +18,15 @@ final class de extends RuntimeException {
         }
     }
 
-    final static void a(int param0, sh param1) {
+    final static void a(int param0, ResourceArchive param1) {
         int var3 = 0;
         int var4 = 0;
         TriangleMesh var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        th var8 = null;
+        BitPacketBuffer var8 = null;
         int var9 = 0;
-        th var10 = null;
+        BitPacketBuffer var10 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -35,17 +35,17 @@ final class de extends RuntimeException {
         int var4Lifetime1;
         var7 = Lexicominos.field_L ? 1 : 0;
         try {
-          var8 = new th(param1.a((byte) 127, "", "logo.fo3d"));
+          var8 = new BitPacketBuffer(param1.getFileByName((byte) 127, "", "logo.fo3d"));
           var10 = var8;
           var3 = var10.readUnsignedByte(true);
-          var10.e(10);
-          sh.field_d = cl.a(var10, -121);
+          var10.beginBitAccess(10);
+          ResourceArchive.field_d = cl.a(var10, -121);
           uj.field_f = new int[var3][];
           ae.field_J = new TriangleMesh[var3];
           for (var4 = 0; var4 < var3; var4++) {
             ae.field_J[var4] = FrameTimer.a(var8, dg.a(param0, -114));
           }
-          var10.f(8);
+          var10.endBitAccess(8);
           var9 = param0;
           var4Lifetime1 = var9;
           while (var3 > var9) {

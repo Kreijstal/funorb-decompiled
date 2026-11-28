@@ -175,7 +175,7 @@ final class ij extends IntrusiveNode {
         RuntimeException var3_ref = null;
         byte[] var4 = null;
         String var5 = null;
-        sh var6 = null;
+        ResourceArchive var6 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
@@ -189,12 +189,12 @@ final class ij extends IntrusiveNode {
               var3_int = param0;
             }
             if (param1 != -22651) {
-              var6 = (sh) null;
-              ij.a(-74, (byte) 99, (sh) null, 63);
+              var6 = (ResourceArchive) null;
+              ij.a(-74, (byte) 99, (ResourceArchive) null, 63);
             }
             var4 = new byte[var3_int];
             param2.position = param2.position + ImageProducerRasterBuffer.field_g.a(var3_int, -1, param2.payload, 0, param2.position, var4);
-            var5 = NetworkArchiveRequest.a(var3_int, var4, (byte) 16, 0);
+            var5 = NetworkArchiveRequest.decodeCp1252String(var3_int, var4, (byte) 16, 0);
             stackIn_5_0 = var5;
             return stackIn_5_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -255,7 +255,7 @@ final class ij extends IntrusiveNode {
         }
     }
 
-    final static RgbSprite[] a(int param0, byte param1, sh param2, int param3) {
+    final static RgbSprite[] a(int param0, byte param1, ResourceArchive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RgbSprite[] stackIn_4_0 = null;

@@ -40,7 +40,7 @@ final class bf {
         throw new IllegalStateException();
     }
 
-    final static RgbSprite[] a(int param0, String param1, String param2, db param3) {
+    final static RgbSprite[] a(int param0, String param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -54,8 +54,8 @@ final class bf {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.a(param2, param0);
-          var5 = param3.a(param0 ^ 2861, param1, var4_int);
+          var4_int = param3.getGroupIdByName(param2, param0);
+          var5 = param3.getFileIdByName(param0 ^ 2861, param1, var4_int);
           stackIn_1_0 = ArchiveRequest.a(var5, var4_int, param3, 100);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

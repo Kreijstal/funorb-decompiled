@@ -47,8 +47,8 @@ final class ek extends IntrusiveNode {
           int stackIn_10_0 = 0;
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
-          lh var4 = null;
-          lh var5 = null;
+          BitPacketBuffer var4 = null;
+          BitPacketBuffer var5 = null;
           if (null == de.field_q) {
             de.field_q = pi.field_I.requestDirectSocket(ml.field_n, ei.field_o, 105);
           }

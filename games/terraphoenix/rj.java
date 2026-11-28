@@ -57,8 +57,8 @@ final class rj {
                 LevelEditor.field_j.payload[var5_int] = var4_ref_ra.field_k[var5_int];
               }
               wc.field_r = wf.field_n;
-              wf.field_n = uc.field_r;
-              uc.field_r = qk.field_b;
+              wf.field_n = BitPacketBuffer.field_r;
+              BitPacketBuffer.field_r = qk.field_b;
               qk.field_b = var4_ref_ra.field_n;
               return true;
             }
@@ -72,7 +72,7 @@ final class rj {
               if (!FrameTimer.a(-125, 1)) {
                 return false;
               }
-              fg.field_d = LevelEditor.field_j.a(false);
+              fg.field_d = LevelEditor.field_j.readCipheredByte(false);
               LevelEditor.field_j.position = 0;
               qh.field_d = param1[fg.field_d];
             }
@@ -81,8 +81,8 @@ final class rj {
             }
             if (GameApplet.field_d == 0) {
               wc.field_r = wf.field_n;
-              wf.field_n = uc.field_r;
-              uc.field_r = qk.field_b;
+              wf.field_n = BitPacketBuffer.field_r;
+              BitPacketBuffer.field_r = qk.field_b;
               qk.field_b = fg.field_d;
               fg.field_d = -1;
               return true;
@@ -128,7 +128,7 @@ final class rj {
         int[] var6 = null;
         int var8 = 0;
         int[] var9 = null;
-        uc var10 = null;
+        BitPacketBuffer var10 = null;
         int[] var11 = null;
         int[] var12 = null;
         var8 = Terraphoenix.field_V;
@@ -188,10 +188,10 @@ final class rj {
     }
 
     final static void a(int param0, int param1, me param2) {
-        uc var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           var3 = di.field_l;
-          var3.k(-17410, param0);
+          var3.writeCipheredByte(-17410, param0);
           var3.writeByte(2, -106);
           var3.writeByte(0, -119);
           if (param1 >= -117) {

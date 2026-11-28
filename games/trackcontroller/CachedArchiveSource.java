@@ -26,7 +26,7 @@ final class CachedArchiveSource extends ArchiveSource {
     private boolean field_h;
     private long field_l;
 
-    final int b(int param0, int param1) {
+    final int getGroupRequestProgressPercent(int param0, int param1) {
         if (param1 != -21770) {
           this.field_w = (DiskArchiveStore) null;
         }

@@ -309,10 +309,10 @@ final class ig extends IntrusiveNode {
         field_q = null;
     }
 
-    private final static boolean a(qk param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_N) {
-          var1 = param0.a(0, (byte) -115, 0);
+          var1 = param0.getFile(0, (byte) -115, 0);
           if (var1 == null) {
             return false;
           }
@@ -704,14 +704,14 @@ final class ig extends IntrusiveNode {
         return (float[]) (var17);
     }
 
-    final static ig a(qk param0, String param1, String param2) {
+    final static ig a(ResourceArchive param0, String param1, String param2) {
         try {
           ig var4_ref = null;
           if (!ig.a(param0)) {
             param0.a(param1, param2, (byte) -44);
             return null;
           }
-          byte[] var3 = param0.a((byte) 7, param2, param1);
+          byte[] var3 = param0.getFileByName((byte) 7, param2, param1);
           if (var3 == null) {
             return null;
           }
@@ -729,14 +729,14 @@ final class ig extends IntrusiveNode {
         }
     }
 
-    final static ig a(qk param0, int param1, int param2) {
+    final static ig a(ResourceArchive param0, int param1, int param2) {
         try {
           ig var4_ref = null;
           if (!ig.a(param0)) {
-            param0.b(27493, param1, param2);
+            param0.tryLoadFile(27493, param1, param2);
             return null;
           }
-          byte[] var3 = param0.a(param2, (byte) -115, param1);
+          byte[] var3 = param0.getFile(param2, (byte) -115, param1);
           if (var3 == null) {
             return null;
           }

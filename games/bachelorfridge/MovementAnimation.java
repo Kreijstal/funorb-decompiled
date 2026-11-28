@@ -35,7 +35,7 @@ abstract class MovementAnimation extends AnimationNode {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        vr var11 = null;
+        ResourceArchive var11 = null;
         char[] var12 = null;
         char[] var13 = null;
         char[] var14 = null;
@@ -47,8 +47,8 @@ abstract class MovementAnimation extends AnimationNode {
           var4 = var12;
           var5 = 0;
           if (param3 != 258048) {
-            var11 = (vr) null;
-            MovementAnimation.a(-52, (vr) null, -120);
+            var11 = (ResourceArchive) null;
+            MovementAnimation.a(-52, (ResourceArchive) null, -120);
           }
           var6 = param2;
           var7 = param2 + param0;
@@ -160,7 +160,7 @@ abstract class MovementAnimation extends AnimationNode {
         return to.a(param0, param2, -25974, 1, param3);
     }
 
-    final static ArenaTheme a(int param0, vr param1, int param2) {
+    final static ArenaTheme a(int param0, ResourceArchive param1, int param2) {
         RuntimeException var3 = null;
         ArenaTheme stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

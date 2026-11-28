@@ -489,7 +489,7 @@ final class ti extends qa {
         }
     }
 
-    final int b(int param0, int param1) {
+    final int getGroupRequestProgressPercent(int param0, int param1) {
         ArchiveRequest var3 = (ArchiveRequest) (this.field_l.a((long)param0, 8));
         if (param1 != 27318) {
           this.field_t = (bb) null;

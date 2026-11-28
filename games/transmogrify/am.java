@@ -64,7 +64,7 @@ final class am extends IntrusiveNode {
         }
     }
 
-    final static mi a(String param0, ci param1, byte param2, ci param3, String param4) {
+    final static mi a(String param0, ResourceArchive param1, byte param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -85,8 +85,8 @@ final class am extends IntrusiveNode {
             stackIn_2_0 = (mi) null;
             return stackIn_2_0;
           }
-          var5_int = param1.b(114, param4);
-          var6 = param1.a(param2 - 73, param0, var5_int);
+          var5_int = param1.getGroupIdByName(114, param4);
+          var6 = param1.getFileIdByName(param2 - 73, param0, var5_int);
           stackIn_4_0 = PacketBuffer.a(-123, param3, param1, var5_int, var6);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

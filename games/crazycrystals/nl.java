@@ -115,10 +115,10 @@ final class nl extends fb {
         }
     }
 
-    final static void a(db param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         bl var2 = null;
         try {
-          bl.b(param0.a(7693, "", "headers.packvorbis"));
+          bl.b(param0.getFileByName(7693, "", "headers.packvorbis"));
           if (param1 != 640) {
             nl.clearStaticReferences(100);
           }

@@ -35,7 +35,7 @@ abstract class pn extends f {
         }
     }
 
-    final static boolean a(boolean param0, char param1) {
+    final static boolean isSupportedCp1252KeyCharacter(boolean param0, char param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -85,7 +85,7 @@ abstract class pn extends f {
         if (param1 == 160) {
           return var5 * var4 + param2 * var3 + (var6 * var4 >> 16);
         }
-        pn.a(false, 't');
+        pn.isSupportedCp1252KeyCharacter(false, 't');
         return var5 * var4 + param2 * var3 + (var6 * var4 >> 16);
     }
 

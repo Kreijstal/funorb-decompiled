@@ -20,7 +20,7 @@ final class hq extends IntrusiveNode {
           if (param0 != 124) {
             hq.resetStaticState(true);
           }
-          var5 = param3.a(param1, param2, (byte) -119);
+          var5 = param3.getFile(param1, param2, (byte) -119);
           var4 = var5;
           if (var5 == null) {
             return false;

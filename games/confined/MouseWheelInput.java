@@ -190,7 +190,7 @@ abstract class MouseWheelInput {
                   var26Lifetime1Lifetime1 = param6.field_i[var23Lifetime2];
                   jd.field_e[var23Lifetime2] = (var18 * var26Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var15 + var12 * var24Lifetime1Lifetime1) >> 16) + var9;
                   gm.field_bb[var23Lifetime2] = (var25Lifetime1Lifetime1 * var16 + (var13 * var24Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var19) >> 16) + var10;
-                  mi.field_c[var23Lifetime2] = (var26Lifetime1Lifetime1 * var20 + var17 * var25Lifetime1Lifetime1 + var14 * var24Lifetime1Lifetime1 >> 16) + var11;
+                  ResourceArchive.field_c[var23Lifetime2] = (var26Lifetime1Lifetime1 * var20 + var17 * var25Lifetime1Lifetime1 + var14 * var24Lifetime1Lifetime1 >> 16) + var11;
                   var24Lifetime1Lifetime1 = param6.field_H[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param6.field_N[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param6.field_Q[var23Lifetime2];
@@ -372,7 +372,7 @@ abstract class MouseWheelInput {
             break;
           }
           if (stackIn_14_0 < stackIn_14_1) {
-            MouseWheelInput.a(35, (mi) null);
+            MouseWheelInput.a(35, (ResourceArchive) null);
           }
           stackIn_18_0 = ql.field_k;
           return stackIn_18_0;
@@ -402,7 +402,7 @@ abstract class MouseWheelInput {
         }
     }
 
-    final static void a(int param0, mi param1) {
+    final static void a(int param0, ResourceArchive param1) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -416,7 +416,7 @@ abstract class MouseWheelInput {
         int var7 = 0;
         var7 = Confined.field_J ? 1 : 0;
         try {
-          var2 = new CipherPacketBuffer(param1.a(param0 ^ -26592, "logo.fo3d", ""));
+          var2 = new CipherPacketBuffer(param1.getFileByName(param0 ^ -26592, "logo.fo3d", ""));
           var3 = var2.readUnsignedByte(param0 ^ 26581);
           var2.i(8);
           im.field_a = ul.a(var2, 31662);

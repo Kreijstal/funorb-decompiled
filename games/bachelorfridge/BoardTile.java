@@ -13,7 +13,7 @@ class BoardTile {
     boolean field_g;
     int field_k;
     BattleCreature occupant;
-    static vr field_b;
+    static ResourceArchive field_b;
     int field_a;
     int field_h;
 

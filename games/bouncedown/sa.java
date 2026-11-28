@@ -275,7 +275,7 @@ final class sa extends IntrusiveNode {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearCp1252ExtensionTable(boolean param0) {
         if (!param0) {
           String var2 = (String) null;
           sa.a((String) null, true, -118, (String) null, -72, 70, (String) null);

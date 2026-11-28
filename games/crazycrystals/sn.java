@@ -6,7 +6,7 @@ final class sn {
     static String field_b;
     static int[] field_a;
 
-    final static byte[] a(CharSequence param0, int param1) {
+    final static byte[] encodeCp1252Bytes(CharSequence param0, int param1) {
         int var4 = 0;
         byte[] stackIn_69_0 = null;
         RuntimeException stackIn_72_0 = null;

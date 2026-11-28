@@ -273,7 +273,7 @@ final class mb {
             stackIn_65_1 = 0;
             break;
           }
-          jd.a(stackIn_65_0, stackIn_65_1 != 0, param5, param0, var7_int);
+          BitPacketBuffer.bucketModelFacesByDepth(stackIn_65_0, stackIn_65_1 != 0, param5, param0, var7_int);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

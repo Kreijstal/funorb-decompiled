@@ -13,7 +13,7 @@ final class ca {
           r.field_p = true;
           if (param2 != 16777215) {
             PcmStreamMixer var4 = (PcmStreamMixer) null;
-            ca.a((qk) null, (PcmStreamMixer) null, -27, -28);
+            ca.a((ResourceArchive) null, (PcmStreamMixer) null, -27, -28);
           }
           Crc32Table.field_a = new af(sd.field_c, vd.field_p, param0, DirectByteArrayStore.field_e, ij.field_g);
           sd.field_c.b(Crc32Table.field_a, (byte) -98);
@@ -22,7 +22,7 @@ final class ca {
         }
     }
 
-    final static void a(qk param0, PcmStreamMixer param1, int param2, int param3) {
+    final static void a(ResourceArchive param0, PcmStreamMixer param1, int param2, int param3) {
         try {
           vb.field_b = SecondaryNodeDeque.a(22018) * param2 / 1000;
           ch.a(-114, param0);
@@ -36,7 +36,7 @@ final class ca {
         }
     }
 
-    final static void a(qk param0, qk param1, qk param2, int param3) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3) {
         RgbSprite var17 = null;
         wb[] var5 = null;
         wb[][] var6 = null;
@@ -63,7 +63,7 @@ final class ca {
           me.field_c = (ee) ((Object) NanoFrameTimer.a("commonui", param2, false, "arezzo12", param1));
           j.field_C = (ee) ((Object) NanoFrameTimer.a("commonui", param2, false, "arezzo14", param1));
           vd.field_p = (ee) ((Object) NanoFrameTimer.a("commonui", param2, false, "arezzo14bold", param1));
-          var17 = new RgbSprite(param0.a((byte) 7, "", "button.gif"), (java.awt.Component) ((Object) tb.field_c));
+          var17 = new RgbSprite(param0.getFileByName((byte) 7, "", "button.gif"), (java.awt.Component) ((Object) tb.field_c));
           lh.a("dropdown", param1, "commonui", 105);
           var5 = lk.a("screen_options", "commonui", (byte) 98, param1);
           ri.field_d = new wb[4];

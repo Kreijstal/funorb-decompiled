@@ -116,7 +116,7 @@ final class kk extends t {
               stackIn_5_0 = (String) null;
               return stackIn_5_0;
             }
-            var5 = r.a(var3_int, 0, var4, (byte) 8);
+            var5 = r.decodeCp1252String(var3_int, 0, var4, (byte) 8);
             stackIn_7_0 = var5;
             return stackIn_7_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

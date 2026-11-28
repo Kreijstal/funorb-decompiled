@@ -4,7 +4,7 @@
 final class kb {
     static boolean field_a;
 
-    final static boolean a(ue param0, ue param1, byte param2, ue param3) {
+    final static boolean a(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_17_0 = null;
@@ -17,15 +17,15 @@ final class kb {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = -50 % ((param2 - 3) / 33);
-          if (!param3.b((byte) 126)) {
+          if (!param3.ensureIndexLoaded((byte) 126)) {
             return false;
           }
           if (!param3.a("commonui", -9883)) {
             return false;
           }
-          if (param1.b((byte) 121) &&
+          if (param1.ensureIndexLoaded((byte) 121) &&
             param1.a("commonui", -9883)) {
-            if (param0.b((byte) 100) &&
+            if (param0.ensureIndexLoaded((byte) 100) &&
               param0.a("button.gif", -9883)) {
               return true;
             }
@@ -58,7 +58,7 @@ final class kb {
         }
     }
 
-    final static char a(int param0, byte param1) {
+    final static char decodeCp1252Byte(int param0, byte param1) {
         int var3 = 0;
         int var2 = param1 & 255;
         if (0 == var2) {
@@ -308,7 +308,7 @@ final class kb {
           if (k.a(param2 ^ -9537, param1, param0)) {
             return false;
           }
-          if (ia.a(param1, (byte) -113, param0)) {
+          if (BitPacketBuffer.containsNameOrReverse(param1, (byte) -113, param0)) {
             return false;
           }
           if (!bj.a(param1, param0, true)) {

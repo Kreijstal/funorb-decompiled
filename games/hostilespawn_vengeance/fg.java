@@ -113,12 +113,12 @@ final class fg {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.a((byte) -2, param0);
+          var4_int = param2.getGroupIdByName((byte) -2, param0);
           if (param3) {
             stackIn_2_0 = (RgbSprite) null;
             return stackIn_2_0;
           }
-          var5 = param2.a(var4_int, param1, -1);
+          var5 = param2.getFileIdByName(var4_int, param1, -1);
           stackIn_4_0 = ac.a(var4_int, var5, (byte) -118, param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

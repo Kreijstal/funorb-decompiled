@@ -16,7 +16,7 @@ final class qb {
     static int field_a;
     static String field_d;
 
-    final static boolean a(byte param0, int param1, int param2, ue param3) {
+    final static boolean a(byte param0, int param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         byte[] var5 = null;
@@ -26,7 +26,7 @@ final class qb {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = 52 / ((15 - param0) / 60);
-          var5 = param3.a(param1, true, param2);
+          var5 = param3.getFile(param1, true, param2);
           if (var5 == null) {
             return false;
           }

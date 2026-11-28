@@ -46,8 +46,8 @@ final class ei {
         return var3;
     }
 
-    final static ei a(gk param0, int param1, int param2) {
-        byte[] var3 = param0.b(-113, param2, param1);
+    final static ei a(ResourceArchive param0, int param1, int param2) {
+        byte[] var3 = param0.getFile(-113, param2, param1);
         if (var3 == null) {
           return null;
         }
@@ -59,8 +59,8 @@ final class ei {
         return new PcmSample(22050, var1, 22050 * this.field_b / 1000, 22050 * this.field_c / 1000);
     }
 
-    final static ei a(gk param0, String param1, String param2) {
-        byte[] var3 = param0.b(param1, param2, 120);
+    final static ei a(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.getFileByName(param1, param2, 120);
         if (var3 == null) {
           return null;
         }

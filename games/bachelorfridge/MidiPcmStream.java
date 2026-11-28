@@ -1186,7 +1186,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean a(vr param0, MusicTrack param1, i param2, byte param3, int param4) {
+    final synchronized boolean a(ResourceArchive param0, MusicTrack param1, i param2, byte param3, int param4) {
         int stackIn_17_0 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;

@@ -8,7 +8,7 @@ final class wi implements WidgetRenderer {
     static int[] field_d;
     private kg field_i;
     private int field_o;
-    static ci field_e;
+    static ResourceArchive field_e;
     static boolean field_p;
     private int field_b;
     private int field_g;

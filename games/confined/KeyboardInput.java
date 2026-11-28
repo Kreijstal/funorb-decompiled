@@ -50,7 +50,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
-              nd.a((char) var2_int, (byte) -18)) {
+              nd.isSupportedCp1252KeyCharacter((char) var2_int, (byte) -18)) {
               var3 = oe.field_W + 1 & 127;
               if (ic.field_b != var3) {
                 ke.field_P[oe.field_W] = -1;
@@ -98,7 +98,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               var2_int >= 0) {
               on.field_f[ab.field_a] = var2_int;
               ab.field_a = 127 & 1 + ab.field_a;
-              if (ab.field_a == mi.field_g) {
+              if (ab.field_a == ResourceArchive.field_g) {
                 ab.field_a = -1;
               }
             }
@@ -160,7 +160,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               0 <= var2_int) {
               on.field_f[ab.field_a] = ~var2_int;
               ab.field_a = 1 + ab.field_a & 127;
-              if (mi.field_g == ab.field_a) {
+              if (ResourceArchive.field_g == ab.field_a) {
                 ab.field_a = -1;
               }
             }

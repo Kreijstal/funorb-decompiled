@@ -72,7 +72,7 @@ final class IntrusiveDeque {
         try {
           var3_int = param2.position;
           var5 = (CharSequence) ((Object) param0);
-          var4 = bo.a(var5, -711);
+          var4 = bo.encodeCp1252Bytes(var5, -711);
           param2.writeSmart(var4.length, (byte) -73);
           if (param1 != 7937) {
             field_f = (String) null;

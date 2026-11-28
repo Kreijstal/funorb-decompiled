@@ -95,7 +95,7 @@ final class MidiPcmStream extends PcmStream {
     final synchronized void b(int param0, int param1) {
         this.field_K = param1;
         if (param0 != -180) {
-          this.a(63, (ih) null, (byte) -51, (ja) null, (sh) null);
+          this.a(63, (ih) null, (byte) -51, (ja) null, (ResourceArchive) null);
         }
     }
 
@@ -108,7 +108,7 @@ final class MidiPcmStream extends PcmStream {
         field_N = null;
     }
 
-    final static boolean a(boolean param0, th param1) {
+    final static boolean a(boolean param0, BitPacketBuffer param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -119,7 +119,7 @@ final class MidiPcmStream extends PcmStream {
           if (!param0) {
             MidiPcmStream.f(53, 103);
           }
-          stackIn_5_0 = (param1.g(1, 26527) == 1);
+          stackIn_5_0 = (param1.readBits(1, 26527) == 1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -166,7 +166,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean a(int param0, ih param1, byte param2, ja param3, sh param4) {
+    final synchronized boolean a(int param0, ih param1, byte param2, ja param3, ResourceArchive param4) {
         int stackIn_21_0 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -762,8 +762,8 @@ final class MidiPcmStream extends PcmStream {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        th var27 = null;
-        th var28 = null;
+        BitPacketBuffer var27 = null;
+        BitPacketBuffer var28 = null;
         int var3Lifetime1;
         int var25Lifetime1;
         int var25Lifetime2;
@@ -1229,7 +1229,7 @@ final class MidiPcmStream extends PcmStream {
             var4 = (int)(0.5 + Math.pow(0.5, (double)var10.field_e * (0.00001953125 * (double)param0.field_j)) * (double)var4);
           }
           if (param1 != 1554) {
-            this.a(-54, (ih) null, (byte) -125, (ja) null, (sh) null);
+            this.a(-54, (ih) null, (byte) -125, (ja) null, (ResourceArchive) null);
           }
           if (var10.field_c != null) {
             var5 = param0.field_F;

@@ -44,8 +44,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             var7 = (String) null;
             FullscreenFocusCanvas.a((ResourceArchive) null, (ResourceArchive) null, (String) null, (String) null, false);
           }
-          var5_int = param0.a(param2, -91);
-          var6 = param0.a(var5_int, param3, (byte) 91);
+          var5_int = param0.getGroupIdByName(param2, -91);
+          var6 = param0.getFileIdByName(var5_int, param3, (byte) 91);
           stackIn_3_0 = DiskArchiveRequest.a(param0, var6, var5_int, param1, -127);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

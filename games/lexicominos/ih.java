@@ -5,8 +5,8 @@ final class ih extends IntrusiveNode {
     byte[] field_h;
     na field_i;
 
-    final static ih a(sh param0, String param1, String param2) {
-        byte[] var3 = param0.a((byte) 127, param2, param1);
+    final static ih a(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.getFileByName((byte) 127, param2, param1);
         if (var3 == null) {
           return null;
         }

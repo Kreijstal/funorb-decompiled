@@ -67,7 +67,7 @@ final class GzipDecompressor {
           if (param0 != 10) {
             field_c = (String) null;
           }
-          stackIn_3_0 = AccountServiceResult.field_h.a(param1, (byte) 102, "");
+          stackIn_3_0 = AccountServiceResult.field_h.getFileByName(param1, (byte) 102, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -110,8 +110,8 @@ final class GzipDecompressor {
           AchievementNotice.field_k.requestFocus();
           return;
         }
-        ci var2 = (ci) null;
-        GzipDecompressor.a((ci) null, (byte) 107);
+        ResourceArchive var2 = (ResourceArchive) null;
+        GzipDecompressor.a((ResourceArchive) null, (byte) 107);
         ub.field_c = null;
         if (vg.field_b != null) {
           vg.field_b.c((byte) -126);
@@ -119,7 +119,7 @@ final class GzipDecompressor {
         AchievementNotice.field_k.requestFocus();
     }
 
-    final static boolean a(ci param0, byte param1) {
+    final static boolean a(ResourceArchive param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
@@ -129,7 +129,7 @@ final class GzipDecompressor {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -52 % ((-18 - param1) / 34);
-          stackIn_1_0 = param0.c(32031);
+          stackIn_1_0 = param0.tryLoadAllGroups(32031);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

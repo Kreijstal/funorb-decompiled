@@ -12,7 +12,7 @@ final class cl extends gb {
     static he[] field_n;
     static he field_t;
 
-    final static RgbSprite[] a(String param0, vj param1, int param2, String param3) {
+    final static RgbSprite[] a(String param0, ResourceArchive param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -29,8 +29,8 @@ final class cl extends gb {
           if (param2 >= -113) {
             field_s = (RgbSprite) null;
           }
-          var4_int = param1.a(param0, (byte) -83);
-          var5 = param1.a((byte) -99, param3, var4_int);
+          var4_int = param1.getGroupIdByName(param0, (byte) -83);
+          var5 = param1.getFileIdByName((byte) -99, param3, var4_int);
           stackIn_3_0 = vh.a(param1, var4_int, -114, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -245,7 +245,7 @@ final class cl extends gb {
             }
             if (param0) {
               var17 = (String) null;
-              cl.a((String) null, (vj) null, 114, (String) null);
+              cl.a((String) null, (ResourceArchive) null, 114, (String) null);
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
               var3_int = this.field_r.availableBytes((byte) -122);

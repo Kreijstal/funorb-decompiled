@@ -66,10 +66,10 @@ final class la {
         var10 = CrazyCrystals.field_B;
         try {
           if (null != oj.field_H &&
-            oj.field_H.a((byte) 102) &&
+            oj.field_H.ensureIndexLoaded((byte) 102) &&
             oj.field_H.a(-20402, "benefits") &&
             MusicPatchPcmStream.field_m != null &&
-            MusicPatchPcmStream.field_m.a((byte) 102) &&
+            MusicPatchPcmStream.field_m.ensureIndexLoaded((byte) 102) &&
             MusicPatchPcmStream.field_m.a(-20402, "benefits")) {
             so.field_d = ArchiveRequest.a("headline", oj.field_H, 10, "benefits");
             uh.field_q = ArchiveRequest.a("blurbpane", oj.field_H, 10, "benefits");

@@ -10,7 +10,7 @@ abstract class SpriteGeometry extends DualLinkNode {
     int field_s;
     static PcmSample field_y;
 
-    final static void a(mi param0, boolean param1) {
+    final static void a(ResourceArchive param0, boolean param1) {
         ph var2 = null;
         RuntimeException var2_ref = null;
         RuntimeException stackIn_5_0 = null;
@@ -18,7 +18,7 @@ abstract class SpriteGeometry extends DualLinkNode {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ph.b(param0.a(112, "headers.packvorbis", ""));
+          ph.b(param0.getFileByName(112, "headers.packvorbis", ""));
           var2 = ph.a(param0, "jagex logo2.packvorbis", "");
           var2.b();
           if (param1) {

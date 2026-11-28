@@ -23,7 +23,7 @@ final class g extends IntrusiveNode {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, vr param3) {
+    final static boolean a(int param0, int param1, int param2, ResourceArchive param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -32,7 +32,7 @@ final class g extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = param3.b(108, param0, param1);
+          var5 = param3.getFile(108, param0, param1);
           var4 = var5;
           if (param2 != -30744) {
             g.releaseStatics((byte) 41);

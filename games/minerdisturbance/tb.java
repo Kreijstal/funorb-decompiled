@@ -121,12 +121,12 @@ final class tb implements uj {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.a(125, param1);
+          var4_int = param2.getGroupIdByName(125, param1);
           if (param3 != 1) {
             stackIn_2_0 = (ln[]) null;
             return stackIn_2_0;
           }
-          var5 = param2.a(param0, var4_int, -120);
+          var5 = param2.getFileIdByName(param0, var4_int, -120);
           stackIn_4_0 = FrameTimer.a(var4_int, param2, param3 ^ 20838, var5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

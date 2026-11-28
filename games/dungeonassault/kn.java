@@ -163,11 +163,11 @@ final class kn {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.a(param1, 1000);
+          var4_int = param0.getGroupIdByName(param1, 1000);
           if (param3 >= -43) {
             field_c = true;
           }
-          var5 = param0.a(0, param2, var4_int);
+          var5 = param0.getFileIdByName(0, param2, var4_int);
           stackIn_3_0 = oi.a(0, var4_int, var5, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

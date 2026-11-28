@@ -5,10 +5,10 @@ final class cf {
     static String field_a;
     private tg field_e;
     static cf field_c;
-    private vj field_h;
+    private ResourceArchive field_h;
     static he[] field_g;
     static byte[] field_b;
-    private vj field_d;
+    private ResourceArchive field_d;
     private tg field_f;
 
     final static void a(byte param0) {
@@ -228,7 +228,7 @@ final class cf {
         }
     }
 
-    cf(vj param0, vj param1) {
+    cf(ResourceArchive param0, ResourceArchive param1) {
         this.field_e = new tg(256);
         this.field_f = new tg(256);
         try {

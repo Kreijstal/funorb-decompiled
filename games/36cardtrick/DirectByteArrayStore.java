@@ -57,13 +57,13 @@ final class DirectByteArrayStore extends ByteArrayStore {
     }
 
     final static void a(int param0, uh param1, int param2) {
-        w var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           if (param0 >= -40) {
             field_d = (AccountRequestState) null;
           }
           var3 = NetworkArchiveRequest.field_r;
-          var3.h(param2, 0);
+          var3.writeCipheredByte(param2, 0);
           var3.writeByte(-9469, 5);
           var3.writeByte(-9469, 0);
           var3.writeShort(param1.field_g, 26040);

@@ -9,7 +9,7 @@ final class IntKeyLookup {
     static boolean field_a;
     private int[] field_d;
 
-    final static char a(byte param0, int param1) {
+    final static char decodeCp1252Byte(byte param0, int param1) {
         int var2 = param0 & 255;
         if (param1 != 29337) {
           field_b = 43;

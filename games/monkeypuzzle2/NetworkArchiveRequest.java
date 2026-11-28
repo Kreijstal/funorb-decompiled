@@ -47,7 +47,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     NetworkArchiveRequest() {
     }
 
-    final static int a(int param0, CharSequence param1, byte[] param2, int param3, int param4, int param5) {
+    final static int encodeCp1252Subsequence(int param0, CharSequence param1, byte[] param2, int param3, int param4, int param5) {
         int var7 = 0;
         int stackIn_69_0 = 0;
         RuntimeException stackIn_72_0 = null;
@@ -66,7 +66,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           var6_int = param5 - param3;
           if (param0 >= -71) {
             var10 = (byte[]) null;
-            NetworkArchiveRequest.a(-46, (CharSequence) null, (byte[]) null, 83, 110, -101);
+            NetworkArchiveRequest.encodeCp1252Subsequence(-46, (CharSequence) null, (byte[]) null, 83, 110, -101);
           }
           for (var7 = 0; var6_int > var7; var7++) {
             {

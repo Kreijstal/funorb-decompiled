@@ -264,7 +264,7 @@ class vi extends s {
         return var2Lifetime5;
     }
 
-    final static sc a(int param0, ki param1, ki param2, int param3, int param4) {
+    final static sc a(int param0, ResourceArchive param1, ResourceArchive param2, int param3, int param4) {
         RuntimeException var5 = null;
         sc stackIn_5_0 = null;
         sc stackIn_7_0 = null;
@@ -279,7 +279,7 @@ class vi extends s {
             return null;
           }
           if (param0 == -13449) {
-            stackIn_7_0 = DirectByteStorage.a(param1.b(param4, false, param3), -62);
+            stackIn_7_0 = DirectByteStorage.a(param1.getFile(param4, false, param3), -62);
             return stackIn_7_0;
           }
           stackIn_5_0 = (sc) null;

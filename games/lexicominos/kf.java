@@ -110,11 +110,11 @@ class kf extends w {
           super.a(param0, param1, param2, param3);
           if (this.field_h != 0 &&
             this.field_h != ul.field_o) {
-            if (this.a(sh.field_e, bk.field_b, param3, param2, (byte) -115) &&
+            if (this.a(ResourceArchive.field_e, bk.field_b, param3, param2, (byte) -115) &&
               ul.field_o == 0) {
-              this.a(-23287, -param2 + sh.field_e, this.field_h, bk.field_b - param3);
+              this.a(-23287, -param2 + ResourceArchive.field_e, this.field_h, bk.field_b - param3);
             }
-            this.a(param1, bk.field_b, param2, 0, param3, sh.field_e);
+            this.a(param1, bk.field_b, param2, 0, param3, ResourceArchive.field_e);
           }
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "kf.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

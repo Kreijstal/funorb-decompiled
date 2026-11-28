@@ -22,7 +22,7 @@ final class ff extends wd {
         return hf.a(false);
     }
 
-    final static we[] a(String param0, gk param1, byte param2, String param3) {
+    final static we[] a(String param0, ResourceArchive param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -36,11 +36,11 @@ final class ff extends wd {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.a(param3, false);
+          var4_int = param1.getGroupIdByName(param3, false);
           if (param2 < 104) {
             ff.a(13);
           }
-          var5 = param1.a(var4_int, param0, -34);
+          var5 = param1.getFileIdByName(var4_int, param0, -34);
           stackIn_3_0 = la.a(var5, var4_int, param1, (byte) -72);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -100,7 +100,7 @@ final class ff extends wd {
         field_D = null;
         if (param0 != -22756) {
           String var2 = (String) null;
-          ff.a((String) null, (gk) null, (byte) -2, (String) null);
+          ff.a((String) null, (ResourceArchive) null, (byte) -2, (String) null);
         }
     }
 

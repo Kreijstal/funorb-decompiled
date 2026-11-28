@@ -163,7 +163,7 @@ final class ic extends jh {
               return null;
             }
             var14 = (CharSequence) null;
-            ic.a(true, (CharSequence) null);
+            ic.encodeCp1252Bytes(true, (CharSequence) null);
             stackIn_23_0 = null;
             return (java.net.Socket) (stackIn_23_0);
           }
@@ -220,7 +220,7 @@ final class ic extends jh {
         field_j = null;
         if (param0 < 13) {
           CharSequence var2 = (CharSequence) null;
-          ic.a(true, (CharSequence) null);
+          ic.encodeCp1252Bytes(true, (CharSequence) null);
         }
         field_g = null;
         field_l = null;
@@ -321,7 +321,7 @@ final class ic extends jh {
         }
     }
 
-    final static byte[] a(boolean param0, CharSequence param1) {
+    final static byte[] encodeCp1252Bytes(boolean param0, CharSequence param1) {
         int var4 = 0;
         byte[] stackIn_69_0 = null;
         RuntimeException stackIn_72_0 = null;

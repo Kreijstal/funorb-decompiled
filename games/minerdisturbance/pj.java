@@ -286,7 +286,7 @@ final class pj implements uj {
           if (!Bzip2State.a(param3, 258, param1, param2)) {
             return null;
           }
-          stackIn_6_0 = lg.a(param4.a(false, param1, param3), param0 - 6623);
+          stackIn_6_0 = lg.a(param4.getFile(false, param1, param3), param0 - 6623);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

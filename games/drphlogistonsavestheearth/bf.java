@@ -2377,7 +2377,7 @@ final class bf {
               this.field_F = ad.field_v;
             } else {
               this.field_F = sh.field_c[this.field_Q];
-              this.field_n = vj.field_g[this.field_Q];
+              this.field_n = ResourceArchive.field_g[this.field_Q];
             }
             decompiledFrameRemainder1 = false;
           } else {
@@ -2387,7 +2387,7 @@ final class bf {
             (decompiledFrameRemainder0)) {
             if (this.field_J == 0) {
               this.field_F = sh.field_c[this.field_Q];
-              this.field_n = vj.field_g[this.field_Q];
+              this.field_n = ResourceArchive.field_g[this.field_Q];
               decompiledFrameRemainder1 = (var11 != 0);
             }
             if (decompiledFrameRemainder1) {
@@ -2398,7 +2398,7 @@ final class bf {
           }
           if (decompiledFrameRemainder1) {
             this.field_F = sh.field_c[this.field_Q];
-            this.field_n = vj.field_g[this.field_Q];
+            this.field_n = ResourceArchive.field_g[this.field_Q];
           }
           var7 = this.b((byte) 55);
           this.field_t = var7.field_k / 2 + var7.field_f;

@@ -65,7 +65,7 @@ class bd extends DualLinkNode {
         field_l = null;
     }
 
-    final static void a(db param0, byte[] param1, wj[] param2, int param3) {
+    final static void a(ResourceArchive param0, byte[] param1, wj[] param2, int param3) {
         try {
           ga.field_L = param0;
           io.field_I[16] = mh.field_j;

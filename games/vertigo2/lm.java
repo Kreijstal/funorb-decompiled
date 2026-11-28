@@ -105,7 +105,7 @@ final class lm extends TextureOperator {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -78 / ((param1 - 64) / 52);
-          stackIn_1_0 = param0.a((byte) -112);
+          stackIn_1_0 = param0.tryLoadAllGroups((byte) -112);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

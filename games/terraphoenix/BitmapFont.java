@@ -173,7 +173,7 @@ abstract class BitmapFont extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_K.append((char) var14);
-                var14 = (char)(vb.a((byte) -128, (char) var14) & 255);
+                var14 = (char)(vb.encodeCp1252Character((byte) -128, (char) var14) & 255);
                 var4 = var4 + this.field_M[var14];
                 if (this.field_H != null &&
                   var10 != 0) {
@@ -355,7 +355,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(vb.a((byte) -128, (char) var8) & 255);
+              var8 = (char)(vb.encodeCp1252Character((byte) -128, (char) var8) & 255);
               if (this.field_H != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_H[(var5 << 8) + var8];
@@ -732,7 +732,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(vb.a((byte) -128, (char) var7) & 255);
+              var7 = (char)(vb.encodeCp1252Character((byte) -128, (char) var7) & 255);
               var4 = var4 + this.field_M[var7];
               if (this.field_H != null &&
                 var3 != 0) {
@@ -859,7 +859,7 @@ abstract class BitmapFont extends DualLinkNode {
     }
 
     final int a(char param0) {
-        return this.field_M[vb.a((byte) -128, param0) & 255];
+        return this.field_M[vb.encodeCp1252Character((byte) -128, param0) & 255];
     }
 
     final void c(String param0, int param1, int param2, int param3, int param4, int param5) {

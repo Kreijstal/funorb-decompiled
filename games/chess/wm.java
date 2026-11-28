@@ -387,7 +387,7 @@ abstract class wm {
 
     abstract void c(int param0);
 
-    final static int a(int param0, int param1, CharSequence param2, int param3, byte[] param4, byte param5) {
+    final static int encodeCp1252Subsequence(int param0, int param1, CharSequence param2, int param3, byte[] param4, byte param5) {
         int var7 = 0;
         int stackIn_69_0 = 0;
         RuntimeException stackIn_72_0 = null;
@@ -503,7 +503,7 @@ abstract class wm {
           }
           if (param5 != -122) {
             var10 = (byte[]) null;
-            wm.a(125, 112, (CharSequence) null, -124, (byte[]) null, (byte) 94);
+            wm.encodeCp1252Subsequence(125, 112, (CharSequence) null, -124, (byte[]) null, (byte) 94);
           }
           stackIn_69_0 = var6_int;
           return stackIn_69_0;

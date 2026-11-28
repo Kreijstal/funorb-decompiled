@@ -21,17 +21,17 @@ final class ResourceArchive {
     static Sprite field_f;
     static boolean field_q;
 
-    final synchronized int a(int param0, byte param1) {
+    final synchronized int getGroupLoadPercent(int param0, byte param1) {
         if (param1 != 12) {
           return -38;
         }
-        if (!this.a((byte) 27, param0)) {
+        if (!this.validateGroupId((byte) 27, param0)) {
           return 0;
         }
         if (this.field_c[param0] != null) {
           return 100;
         }
-        return this.field_a.a(0, param0);
+        return this.field_a.getGroupRequestProgressPercent(0, param0);
     }
 
     final boolean a(byte param0, String param1) {
@@ -43,7 +43,7 @@ final class ResourceArchive {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.b(-7957)) {
+          if (!this.ensureIndexLoaded(-7957)) {
             return false;
           }
           if (param0 != -39) {
@@ -71,18 +71,18 @@ final class ResourceArchive {
     }
 
     final synchronized byte[] c(int param0, int param1) {
-        if (!this.b(-7957)) {
+        if (!this.ensureIndexLoaded(-7957)) {
           return null;
         }
         if (1 == this.field_l.field_g.length) {
-          return this.c(0, param0, 0);
+          return this.getFile(0, param0, 0);
         }
-        if (!this.a((byte) 27, param0)) {
+        if (!this.validateGroupId((byte) 27, param0)) {
           return null;
         }
         int var3 = 82 / ((param1 - 82) / 32);
         if (1 == this.field_l.field_g[param0]) {
-          return this.c(param0, 0, 0);
+          return this.getFile(param0, 0, 0);
         }
         throw new RuntimeException();
     }
@@ -97,14 +97,14 @@ final class ResourceArchive {
         if (param0 <= 31) {
           return -78;
         }
-        if (!this.b(-7957)) {
+        if (!this.ensureIndexLoaded(-7957)) {
           return 0;
         }
         var2 = 0;
         var3 = 0;
         for (var4 = 0; this.field_c.length > var4; var4++) {
           if (this.field_l.field_e[var4] > 0) {
-            var3 = var3 + this.a(var4, (byte) 12);
+            var3 = var3 + this.getGroupLoadPercent(var4, (byte) 12);
             var2 += 100;
           }
         }
@@ -115,8 +115,8 @@ final class ResourceArchive {
         return var4Lifetime1;
     }
 
-    final synchronized boolean a(int param0, int param1, int param2) {
-        if (!this.b(param2, param0, -122)) {
+    final synchronized boolean tryLoadFile(int param0, int param1, int param2) {
+        if (!this.validateFileId(param2, param0, -122)) {
           return false;
         }
         if (null != this.field_p[param2] &&
@@ -127,7 +127,7 @@ final class ResourceArchive {
           return true;
         }
         int var4 = -107 % ((param1 + 23) / 56);
-        this.b(param2, -124);
+        this.loadPackedGroup(param2, -124);
         if (this.field_c[param2] == null) {
           return false;
         }
@@ -145,7 +145,7 @@ final class ResourceArchive {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.b(-7957)) {
+          if (!this.ensureIndexLoaded(-7957)) {
             return false;
           }
           param1 = param1.toLowerCase();
@@ -155,7 +155,7 @@ final class ResourceArchive {
           }
           var5 = (CharSequence) ((Object) param1);
           var3_int = this.field_l.field_p.a((byte) 126, wh.a((byte) 68, var5));
-          stackIn_7_0 = this.a(true, var3_int);
+          stackIn_7_0 = this.tryLoadGroup(true, var3_int);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -171,8 +171,8 @@ final class ResourceArchive {
         }
     }
 
-    private final synchronized boolean a(byte param0, int param1) {
-        if (!this.b(param0 - 7984)) {
+    private final synchronized boolean validateGroupId(byte param0, int param1) {
+        if (!this.ensureIndexLoaded(param0 - 7984)) {
           return false;
         }
         if (param0 != 27) {
@@ -189,7 +189,7 @@ final class ResourceArchive {
         return true;
     }
 
-    final int a(String param0, int param1) {
+    final int getGroupIdByName(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -201,7 +201,7 @@ final class ResourceArchive {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.b(-7957)) {
+          if (!this.ensureIndexLoaded(-7957)) {
             stackIn_3_0 = -1;
             return stackIn_3_0;
           }
@@ -209,7 +209,7 @@ final class ResourceArchive {
           param0 = param0.toLowerCase();
           var5 = (CharSequence) ((Object) param0);
           var4 = this.field_l.field_p.a((byte) 116, wh.a((byte) 68, var5));
-          if (this.a((byte) 27, var4)) {
+          if (this.validateGroupId((byte) 27, var4)) {
             return var4;
           }
           stackIn_7_0 = -1;
@@ -228,17 +228,17 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized boolean a(boolean param0, int param1) {
+    final synchronized boolean tryLoadGroup(boolean param0, int param1) {
         if (!param0) {
           return false;
         }
-        if (!this.a((byte) 27, param1)) {
+        if (!this.validateGroupId((byte) 27, param1)) {
           return false;
         }
         if (null != this.field_c[param1]) {
           return true;
         }
-        this.b(param1, -108);
+        this.loadPackedGroup(param1, -108);
         if (this.field_c[param1] != null) {
           return true;
         }
@@ -255,7 +255,7 @@ final class ResourceArchive {
         return LevelDecoder.field_a;
     }
 
-    final synchronized byte[] a(int param0, String param1, String param2) {
+    final synchronized byte[] getFileByName(int param0, String param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -271,7 +271,7 @@ final class ResourceArchive {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.b(param0 - 7955)) {
+          if (!this.ensureIndexLoaded(param0 - 7955)) {
             stackIn_2_0 = null;
             return (byte[]) (stackIn_2_0);
           }
@@ -283,12 +283,12 @@ final class ResourceArchive {
           param1 = param1.toLowerCase();
           var6 = (CharSequence) ((Object) param2);
           var4_int = this.field_l.field_p.a((byte) -39, wh.a((byte) 68, var6));
-          if (!this.a((byte) 27, var4_int)) {
+          if (!this.validateGroupId((byte) 27, var4_int)) {
             return null;
           }
           var7 = (CharSequence) ((Object) param1);
           var5 = this.field_l.field_s[var4_int].a((byte) 101, wh.a((byte) 68, var7));
-          stackIn_10_0 = this.c(var4_int, var5, 0);
+          stackIn_10_0 = this.getFile(var4_int, var5, 0);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -310,9 +310,9 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized boolean b(int param0) {
+    final synchronized boolean ensureIndexLoaded(int param0) {
         if (param0 != -7957) {
-          this.a(((int[]) (this.field_c[1]))[2], -17, ((int[]) (this.field_c[3]))[1]);
+          this.tryLoadFile(((int[]) (this.field_c[1]))[2], -17, ((int[]) (this.field_c[3]))[1]);
         }
         if (null == this.field_l) {
           this.field_l = this.field_a.b(0);
@@ -325,7 +325,7 @@ final class ResourceArchive {
         return true;
     }
 
-    private final synchronized void b(int param0, int param1) {
+    private final synchronized void loadPackedGroup(int param0, int param1) {
         if (this.field_i) {
           this.field_c[param0] = this.field_a.a(param0, (byte) -72);
         } else {
@@ -348,14 +348,14 @@ final class ResourceArchive {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.b(-7957)) {
+          if (!this.ensureIndexLoaded(-7957)) {
             return false;
           }
           param1 = param1.toLowerCase();
           param2 = param2.toLowerCase();
           var6 = (CharSequence) ((Object) param1);
           var4_int = this.field_l.field_p.a((byte) -57, wh.a((byte) 68, var6));
-          if (!this.a((byte) 27, var4_int)) {
+          if (!this.validateGroupId((byte) 27, var4_int)) {
             return false;
           }
           if (param0 >= -16) {
@@ -363,7 +363,7 @@ final class ResourceArchive {
           }
           var7 = (CharSequence) ((Object) param2);
           var5 = this.field_l.field_s[var4_int].a((byte) 87, wh.a((byte) 68, var7));
-          stackIn_11_0 = this.a(var5, -109, var4_int);
+          stackIn_11_0 = this.tryLoadFile(var5, -109, var4_int);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -385,7 +385,7 @@ final class ResourceArchive {
         }
     }
 
-    final int a(int param0, String param1) {
+    final int getGroupLoadPercentByName(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -396,7 +396,7 @@ final class ResourceArchive {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.b(-7957)) {
+          if (!this.ensureIndexLoaded(-7957)) {
             stackIn_2_0 = 0;
             return stackIn_2_0;
           }
@@ -406,7 +406,7 @@ final class ResourceArchive {
           if (param0 < 99) {
             ResourceArchive.clearStaticReferences(30);
           }
-          stackIn_6_0 = this.a(var3_int, (byte) 12);
+          stackIn_6_0 = this.getGroupLoadPercent(var3_int, (byte) 12);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -422,7 +422,7 @@ final class ResourceArchive {
         }
     }
 
-    private final synchronized boolean a(int param0, byte param1, int[] param2, int param3) {
+    private final synchronized boolean unpackGroupFiles(int param0, byte param1, int[] param2, int param3) {
         Object[] array$0 = null;
         int var9_int = 0;
         int var20 = 0;
@@ -473,7 +473,7 @@ final class ResourceArchive {
         int var14_intLifetime1;
         var22 = TorChallenge.field_F ? 1 : 0;
         try {
-          if (!this.a((byte) 27, param3)) {
+          if (!this.validateGroupId((byte) 27, param3)) {
             return false;
           }
           if (this.field_c[param3] == null) {
@@ -664,7 +664,7 @@ final class ResourceArchive {
     }
 
     final int c(byte param0) {
-        if (!this.b(-7957)) {
+        if (!this.ensureIndexLoaded(-7957)) {
           return -1;
         }
         if (param0 != 52) {
@@ -675,31 +675,31 @@ final class ResourceArchive {
 
     final int a(int param0, int param1) {
         byte[] discarded$0 = null;
-        if (!this.a((byte) 27, param0)) {
+        if (!this.validateGroupId((byte) 27, param0)) {
           return 0;
         }
         if (param1 >= -69) {
           int[] var4 = (int[]) null;
-          discarded$0 = this.a((int[]) null, -124, -72, 97);
+          discarded$0 = this.getFileWithKeys((int[]) null, -124, -72, 97);
         }
         return this.field_l.field_g[param0];
     }
 
-    final synchronized boolean b(byte param0) {
+    final synchronized boolean tryLoadAllGroups(byte param0) {
         int var3 = 0;
         int var2;
         int var4;
         int var5;
         Object stackIn_15_0 = null;
         var5 = TorChallenge.field_F ? 1 : 0;
-        if (!this.b(-7957)) {
+        if (!this.ensureIndexLoaded(-7957)) {
           return false;
         }
         var2 = 1;
         for (var3 = 0; this.field_l.field_y.length > var3; var3++) {
           var4 = this.field_l.field_y[var3];
           if (this.field_c[var4] == null) {
-            this.b(var4, -92);
+            this.loadPackedGroup(var4, -92);
             if (null == this.field_c[var4]) {
               var2 = 0;
             }
@@ -712,7 +712,7 @@ final class ResourceArchive {
         return var2 != 0;
     }
 
-    final int a(int param0, String param1, byte param2) {
+    final int getFileIdByName(int param0, String param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         CharSequence var5 = null;
@@ -723,7 +723,7 @@ final class ResourceArchive {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.a((byte) 27, param0)) {
+          if (!this.validateGroupId((byte) 27, param0)) {
             stackIn_3_0 = -1;
             return stackIn_3_0;
           }
@@ -733,7 +733,7 @@ final class ResourceArchive {
           if (param2 < 81) {
             this.c((byte) 106);
           }
-          if (this.b(param0, var4_int, -100)) {
+          if (this.validateFileId(param0, var4_int, -100)) {
             return var4_int;
           }
           stackIn_9_0 = -1;
@@ -752,7 +752,7 @@ final class ResourceArchive {
         }
     }
 
-    private final synchronized byte[] a(int[] param0, int param1, int param2, int param3) {
+    private final synchronized byte[] getFileWithKeys(int[] param0, int param1, int param2, int param3) {
         byte[] stackIn_5_0 = null;
         Object stackIn_28_0 = null;
         Object stackIn_31_0 = null;
@@ -762,7 +762,7 @@ final class ResourceArchive {
         Object var5 = null;
         byte[] var7 = null;
         try {
-          if (!this.b(param1, param3, -77)) {
+          if (!this.validateFileId(param1, param3, -77)) {
             return null;
           }
           var5 = null;
@@ -772,9 +772,9 @@ final class ResourceArchive {
           }
           if ((this.field_p[param1] == null ||
             this.field_p[param1][param3] == null) &&
-            !this.a(param3, (byte) -25, param0, param1)) {
-            this.b(param1, 121);
-            if (!this.a(param3, (byte) -25, param0, param1)) {
+            !this.unpackGroupFiles(param3, (byte) -25, param0, param1)) {
+            this.loadPackedGroup(param1, 121);
+            if (!this.unpackGroupFiles(param3, (byte) -25, param0, param1)) {
               return null;
             }
           }
@@ -816,13 +816,13 @@ final class ResourceArchive {
         }
     }
 
-    private final synchronized boolean b(int param0, int param1, int param2) {
+    private final synchronized boolean validateFileId(int param0, int param1, int param2) {
         boolean discarded$0 = false;
-        if (!this.b(-7957)) {
+        if (!this.ensureIndexLoaded(-7957)) {
           return false;
         }
         if (param2 >= -68) {
-          discarded$0 = this.a(((int[]) (this.field_c[4]))[13], ((byte[]) (((Object[]) (this.field_c[2]))[0]))[10], (int[]) null, ((int[]) (this.field_c[4]))[0]);
+          discarded$0 = this.unpackGroupFiles(((int[]) (this.field_c[4]))[13], ((byte[]) (((Object[]) (this.field_c[2]))[0]))[10], (int[]) null, ((int[]) (this.field_c[4]))[0]);
         }
         if (param0 < 0 ||
           0 > param1 ||
@@ -836,12 +836,12 @@ final class ResourceArchive {
         return true;
     }
 
-    final byte[] c(int param0, int param1, int param2) {
+    final byte[] getFile(int param0, int param1, int param2) {
         boolean discarded$0 = false;
         if (param2 != 0) {
-          discarded$0 = this.a(((byte[]) (((Object[]) (this.field_c[4]))[5]))[2], -70);
+          discarded$0 = this.validateGroupId(((byte[]) (((Object[]) (this.field_c[4]))[5]))[2], -70);
         }
-        return this.a((int[]) null, param0, -62, param1);
+        return this.getFileWithKeys((int[]) null, param0, -62, param1);
     }
 
     ResourceArchive(kl param0, boolean param1, int param2) {

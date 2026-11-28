@@ -19,7 +19,7 @@ abstract class SocketConnector {
         RuntimeException decompiledCaughtException = null;
         try {
           if (DualLinkNode.a(param1, param2, param0, param3)) {
-            return uc.l(0);
+            return BitPacketBuffer.createSpritesFromDecodedSheet(0);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

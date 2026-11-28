@@ -5,7 +5,7 @@ final class sg {
     static String field_e;
     static RgbSprite field_d;
     static boolean field_b;
-    static qk field_a;
+    static ResourceArchive field_a;
     static int[] field_c;
     static int[] field_g;
     static int[] field_f;

@@ -31,14 +31,14 @@ final class cha extends lw {
         int var2Lifetime1;
         if (param0 < 103) {
           cha.releaseStatics(-74);
-          var2 = (int)((-Math.cos((double)(4 * vr.field_b) * 3.141592653589793 / 100.0) + 1.0) * 256.0);
+          var2 = (int)((-Math.cos((double)(4 * ResourceArchive.field_b) * 3.141592653589793 / 100.0) + 1.0) * 256.0);
           if (this.field_e == 0) {
             vg.a(sia.field_j, 7520, 22997, 1000, var2 + 4096, 1840, 4096 + var2, sia.field_j.field_o << 3, sia.field_j.field_n << 3);
             return;
           }
           return;
         }
-        var2Lifetime1 = (int)((-Math.cos((double)(4 * vr.field_b) * 3.141592653589793 / 100.0) + 1.0) * 256.0);
+        var2Lifetime1 = (int)((-Math.cos((double)(4 * ResourceArchive.field_b) * 3.141592653589793 / 100.0) + 1.0) * 256.0);
         if (this.field_e != 0) {
           return;
         }

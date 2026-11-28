@@ -4,8 +4,8 @@
 final class ja {
     static int[] field_b;
     private na field_d;
-    private sh field_a;
-    private sh field_e;
+    private ResourceArchive field_a;
+    private ResourceArchive field_e;
     private na field_c;
 
     private final PcmSample a(int[] param0, int param1, int param2, int param3) {
@@ -227,13 +227,13 @@ final class ja {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 7043) {
-            this.field_e = (sh) null;
+            this.field_e = (ResourceArchive) null;
           }
-          var5_int = this.field_e.c(param0, (byte) -89);
+          var5_int = this.field_e.getGroupIdByName(param0, (byte) -89);
           if (var5_int < 0) {
             return null;
           }
-          var6 = this.field_e.a(param3, param2 - 35007, var5_int);
+          var6 = this.field_e.getFileIdByName(param3, param2 - 35007, var5_int);
           if (var6 < 0) {
             return null;
           }
@@ -355,7 +355,7 @@ final class ja {
         }
     }
 
-    ja(sh param0, sh param1) {
+    ja(ResourceArchive param0, ResourceArchive param1) {
         this.field_d = new na(256);
         this.field_c = new na(256);
         try {

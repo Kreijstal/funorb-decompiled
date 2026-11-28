@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jd extends PacketBuffer {
+final class BitPacketBuffer extends PacketBuffer {
     private int field_o;
     static volatile boolean field_p;
     private IsaacRandom field_n;
 
-    final int l(int param0) {
+    final int readCipheredByte(int param0) {
         int fieldTemp$1 = 0;
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
@@ -28,7 +28,7 @@ final class jd extends PacketBuffer {
         }
     }
 
-    final static void a(int param0, boolean param1, boolean param2, uh param3, int param4) {
+    final static void bucketModelFacesByDepth(int param0, boolean param1, boolean param2, uh param3, int param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_10_0 = false;
         int stackIn_24_0 = 0;
@@ -162,7 +162,7 @@ final class jd extends PacketBuffer {
             }
           }
           if (param1) {
-            jd.n(71);
+            BitPacketBuffer.showReconnectDialog(71);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -179,7 +179,7 @@ final class jd extends PacketBuffer {
         }
     }
 
-    final static void a(String param0, long param1, java.applet.Applet param2, int param3, String param4) {
+    final static void setBrowserCookie(String param0, long param1, java.applet.Applet param2, int param3, String param4) {
         try {
           RuntimeException stackIn_13_0 = null;
           StringBuilder stackIn_13_1 = null;
@@ -244,11 +244,11 @@ final class jd extends PacketBuffer {
         }
     }
 
-    jd(int param0) {
+    BitPacketBuffer(int param0) {
         super(param0);
     }
 
-    final void a(int param0, int[] param1) {
+    final void setCipherSeed(int param0, int[] param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -257,7 +257,7 @@ final class jd extends PacketBuffer {
         try {
           this.field_n = new IsaacRandom(param1);
           if (param0 != -1) {
-            this.m(0);
+            this.endBitAccess(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -274,7 +274,7 @@ final class jd extends PacketBuffer {
         }
     }
 
-    final void b(int param0, int param1, int param2, byte[] param3) {
+    final void readCipheredBytes(int param0, int param1, int param2, byte[] param3) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -313,29 +313,29 @@ final class jd extends PacketBuffer {
         }
     }
 
-    final void d(byte param0) {
+    final void beginBitAccess(byte param0) {
         try {
           this.field_o = 8 * this.position;
           if (param0 >= -78) {
-            this.m(55);
+            this.endBitAccess(55);
           }
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "jd.G(" + param0 + ')');
         }
     }
 
-    final void m(int param0) {
+    final void endBitAccess(int param0) {
         try {
           this.position = (this.field_o + 7) / 8;
           if (param0 != 0) {
-            this.l(69);
+            this.readCipheredByte(69);
           }
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "jd.D(" + param0 + ')');
         }
     }
 
-    final int d(byte param0, int param1) {
+    final int readBits(byte param0, int param1) {
         int incrementValue$1 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -349,7 +349,7 @@ final class jd extends PacketBuffer {
           var3_int = this.field_o >> 3;
           var4 = 8 - (this.field_o & 7);
           if (param0 != 48) {
-            this.d((byte) 5);
+            this.beginBitAccess((byte) 5);
           }
           var5 = 0;
           this.field_o = this.field_o + param1;
@@ -383,7 +383,7 @@ final class jd extends PacketBuffer {
         }
     }
 
-    final static void n(int param0) {
+    final static void showReconnectDialog(int param0) {
         try {
           int var1_int = 32 % ((param0 - 41) / 53);
           k.a((byte) -35);
@@ -396,13 +396,13 @@ final class jd extends PacketBuffer {
         }
     }
 
-    final void e(int param0, int param1) {
+    final void writeCipheredByte(int param0, int param1) {
         int fieldTemp$1 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
           if (param1 != -2147483648) {
-            jd.a((String) null, 29L, (java.applet.Applet) null, -35, (String) null);
+            BitPacketBuffer.setBrowserCookie((String) null, 29L, (java.applet.Applet) null, -35, (String) null);
           }
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
@@ -415,7 +415,7 @@ final class jd extends PacketBuffer {
         }
     }
 
-    jd(byte[] param0) {
+    BitPacketBuffer(byte[] param0) {
         super(param0);
     }
 

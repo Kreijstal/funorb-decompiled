@@ -182,7 +182,7 @@ class hl extends lk {
 
     boolean a(char param0, byte param1, int param2, lk param3) {
         RuntimeException var5 = null;
-        qk var6 = null;
+        ResourceArchive var6 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -196,8 +196,8 @@ class hl extends lk {
           if (param1 < -99) {
             return false;
           }
-          var6 = (qk) null;
-          hl.a((qk) null, -100, -63, -51);
+          var6 = (ResourceArchive) null;
+          hl.a((ResourceArchive) null, -100, -63, -51);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -280,7 +280,7 @@ class hl extends lk {
         }
     }
 
-    final static RgbSprite[] a(qk param0, int param1, int param2, int param3) {
+    final static RgbSprite[] a(ResourceArchive param0, int param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;

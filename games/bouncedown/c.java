@@ -16,7 +16,7 @@ final class c {
         }
     }
 
-    final static boolean a(gk param0, boolean param1, int param2, int param3) {
+    final static boolean a(ResourceArchive param0, boolean param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -25,7 +25,7 @@ final class c {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = param0.b(-108, param3, param2);
+          var5 = param0.getFile(-108, param3, param2);
           var4 = var5;
           if (param1) {
             return false;
@@ -59,7 +59,7 @@ final class c {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 0) {
-            stackIn_4_0 = lh.a(0, -3789, param1.length, param1);
+            stackIn_4_0 = lh.decodeCp1252String(0, -3789, param1.length, param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

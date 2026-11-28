@@ -39,7 +39,7 @@ abstract class RasterBuffer {
         var5Lifetime1.field_m = param3;
         var5Lifetime1.field_n = param0;
         BufferedSocket.field_b.addLast(-92, var5Lifetime1);
-        se.a(var5Lifetime1, param1, -38);
+        BitPacketBuffer.writeLeaderboardRequest(var5Lifetime1, param1, -38);
         return var5Lifetime1;
     }
 
@@ -72,15 +72,15 @@ abstract class RasterBuffer {
         }
     }
 
-    final static void a(ki param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         wd var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        se var8 = null;
+        BitPacketBuffer var8 = null;
         int var9 = 0;
-        se var10 = null;
+        BitPacketBuffer var10 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -89,10 +89,10 @@ abstract class RasterBuffer {
         int var4Lifetime1;
         var7 = OrbDefence.field_D ? 1 : 0;
         try {
-          var8 = new se(param0.a("", 1, "logo.fo3d"));
+          var8 = new BitPacketBuffer(param0.getFileByName("", 1, "logo.fo3d"));
           var10 = var8;
           var3 = var10.readUnsignedByte((byte) 90);
-          var10.n(9471);
+          var10.beginBitAccess(9471);
           cg.field_c = mc.a(12, var10);
           if (param1 != -237) {
             RasterBuffer.resetStaticState((byte) -39);
@@ -102,7 +102,7 @@ abstract class RasterBuffer {
           for (var4 = 0; var3 > var4; var4++) {
             tc.field_a[var4] = f.a(var8, 16);
           }
-          var10.m(param1 ^ -236);
+          var10.endBitAccess(param1 ^ -236);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var3 > var9) {
@@ -135,8 +135,8 @@ abstract class RasterBuffer {
         int var4 = 0;
         bl.field_n.c(param3, param1);
         if (param0 != 8) {
-          ki var5 = (ki) null;
-          RasterBuffer.a((ki) null, 88);
+          ResourceArchive var5 = (ResourceArchive) null;
+          RasterBuffer.a((ResourceArchive) null, 88);
         }
         if (param2) {
           var4 = 2 * (GzipDecompressor.field_c % bl.field_n.field_o);
@@ -158,9 +158,9 @@ abstract class RasterBuffer {
         }
     }
 
-    final static RgbSprite[] a(ki param0, int param1, byte param2, int param3) {
+    final static RgbSprite[] a(ResourceArchive param0, int param1, byte param2, int param3) {
         RuntimeException var4 = null;
-        ki var5 = null;
+        ResourceArchive var5 = null;
         Object stackIn_4_0 = null;
         RgbSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -169,8 +169,8 @@ abstract class RasterBuffer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 > -74) {
-            var5 = (ki) null;
-            RasterBuffer.a((ki) null, -76, (byte) -18, -119);
+            var5 = (ResourceArchive) null;
+            RasterBuffer.a((ResourceArchive) null, -76, (byte) -18, -119);
           }
           if (pk.a(-128, param3, param0, param1)) {
             stackIn_6_0 = lm.a(-127);
@@ -202,8 +202,8 @@ abstract class RasterBuffer {
         int var4 = 0;
         bl.field_n.c(param3, param1);
         if (param0 != 8) {
-          ki var5 = (ki) null;
-          RasterBuffer.a((ki) null, 88);
+          ResourceArchive var5 = (ResourceArchive) null;
+          RasterBuffer.a((ResourceArchive) null, 88);
         }
         if (param2) {
           var4 = 2 * (GzipDecompressor.field_c % bl.field_n.field_o);

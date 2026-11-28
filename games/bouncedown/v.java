@@ -51,7 +51,7 @@ abstract class v {
 
     abstract void a(byte param0, Object param1, boolean param2);
 
-    final static int a(byte[] param0, CharSequence param1, int param2, int param3, byte param4, int param5) {
+    final static int encodeCp1252Subsequence(byte[] param0, CharSequence param1, int param2, int param3, byte param4, int param5) {
         int var7 = 0;
         int stackIn_69_0 = 0;
         RuntimeException stackIn_72_0 = null;
@@ -220,7 +220,7 @@ abstract class v {
     final int a(boolean param0) {
         if (!param0) {
           CharSequence var3 = (CharSequence) null;
-          v.a((byte[]) null, (CharSequence) null, 42, 22, (byte) -44, -125);
+          v.encodeCp1252Subsequence((byte[]) null, (CharSequence) null, 42, 22, (byte) -44, -125);
         }
         return this.field_h.a((byte) 12) + this.field_m.a((byte) 12);
     }

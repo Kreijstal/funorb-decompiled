@@ -20,7 +20,7 @@ final class sk {
         return var3Lifetime1 + ((param2 >>> 31) + param2) % param1;
     }
 
-    final static boolean a(byte param0, qk param1) {
+    final static boolean a(byte param0, ResourceArchive param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -29,7 +29,7 @@ final class sk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 33) {
-            stackIn_4_0 = param1.a((byte) 20);
+            stackIn_4_0 = param1.tryLoadAllGroups((byte) 20);
             return stackIn_4_0;
           }
           return false;

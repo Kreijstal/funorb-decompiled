@@ -28,7 +28,7 @@ abstract class GameShell extends GameApplet {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -25 % ((param0 - 30) / 34);
-          stackIn_1_0 = param1.b((byte) -128);
+          stackIn_1_0 = param1.tryLoadAllGroups((byte) -128);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -76,7 +76,7 @@ abstract class GameShell extends GameApplet {
         int var3 = 0 != (var2 & 1) ? 1 : 0;
         int var4 = qh.field_d - 1;
         byte[] var5 = new byte[var4];
-        LevelEditor.field_j.b(0, var5, var4, 0);
+        LevelEditor.field_j.readCipheredBytes(0, var5, var4, 0);
         PcmResampler.a(dg.a(false), var3 != 0, ll.a(0, var5), param0 + 118);
     }
 
@@ -258,7 +258,7 @@ abstract class GameShell extends GameApplet {
             MapTile.a(23943, dg.a(false));
           }
           if (var4 == 10) {
-            di.field_l.k(-17410, 17);
+            di.field_l.writeCipheredByte(-17410, 17);
           }
           if (var4 == 11) {
             MapTile.a(dg.a(false), -6242);
@@ -277,7 +277,7 @@ abstract class GameShell extends GameApplet {
                   var10 = (String) null;
                   si.a((String) null, 3);
                 } else {
-                  var8 = SecondaryNodeDeque.a((byte) -114, var7.payload, var7.position, 0);
+                  var8 = SecondaryNodeDeque.decodeCp1252String((byte) -114, var7.payload, var7.position, 0);
                   si.a(var8, 3);
                 }
                 fm.field_b = null;
@@ -340,7 +340,7 @@ abstract class GameShell extends GameApplet {
           vj.field_P = lk.field_d.consumeWheelDelta(125);
         }
         if (ra.c((byte) 66)) {
-          var3 = 1200 * uc.j((byte) -127);
+          var3 = 1200 * BitPacketBuffer.getTicksPerSecond((byte) -127);
           if (this.field_q ||
             !(var3 >= ch.a((byte) -5)) &&
             !(var3 >= wj.a(-127))) {
@@ -445,7 +445,7 @@ abstract class GameShell extends GameApplet {
         }
         if (uh.field_H == 2) {
           if (null != bl.field_a &&
-            bl.field_a.a(0)) {
+            bl.field_a.ensureIndexLoaded(0)) {
             if (!bl.field_a.d(-1, "")) {
               bl.field_a = null;
             } else {
@@ -498,8 +498,8 @@ abstract class GameShell extends GameApplet {
         }
         boolean decompiledFrameRemainder0 = true;
         if (uh.field_H == 11) {
-          if (bi.field_b != null && (!bi.field_b.a(0) ||
-            !bi.field_b.b((byte) -128))) {
+          if (bi.field_b != null && (!bi.field_b.ensureIndexLoaded(0) ||
+            !bi.field_b.tryLoadAllGroups((byte) -128))) {
             DualLinkNode.a(qc.a(qb.field_e, bi.field_b, si.field_hb, (byte) 123), (byte) 66, 0.0f);
             decompiledFrameRemainder0 = false;
           }
@@ -792,7 +792,7 @@ abstract class GameShell extends GameApplet {
               if (q.field_Jb == 0) {
                 discarded$3 = this.a(false, false, -91);
               } else {
-                uc.l(3795, vj.field_P);
+                BitPacketBuffer.pumpClientUi(3795, vj.field_P);
               }
             }
           }

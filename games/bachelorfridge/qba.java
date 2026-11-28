@@ -24,7 +24,7 @@ final class qba extends pu {
           if (param0 != 17602) {
             field_l = (UiComponent) null;
           }
-          stackIn_3_0 = ft.field_h.a((byte) 123, param1, "");
+          stackIn_3_0 = ft.field_h.getFileByName((byte) 123, param1, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

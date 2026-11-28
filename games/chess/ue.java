@@ -9,7 +9,7 @@ final class ue {
     static ci field_d;
 
     final static void a(int param0, hh param1, byte param2) {
-        nk var3 = null;
+        BitPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -17,7 +17,7 @@ final class ue {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = qn.field_U;
-          var3.f(param0, -94);
+          var3.writeCipheredByte(param0, -94);
           var3.writeByte(param1.field_l, (byte) -88);
           var3.writeShort(param1.field_n, 109);
           if (param2 >= 9) {
@@ -40,8 +40,8 @@ final class ue {
     }
 
     final static void a(long param0, int param1, int param2) {
-        nk var4 = qn.field_U;
-        var4.f(param2, -75);
+        BitPacketBuffer var4 = qn.field_U;
+        var4.writeCipheredByte(param2, -75);
         var4.position = var4.position + 1;
         int var5 = var4.position;
         var4.writeByte(6, (byte) 92);

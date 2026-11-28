@@ -12,7 +12,7 @@ final class wl {
         }
     }
 
-    final static u a(String param0, byte param1, String param2, ki param3, ki param4) {
+    final static u a(String param0, byte param1, String param2, ResourceArchive param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -28,8 +28,8 @@ final class wl {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param3.a(param2, 0);
-          var6 = param3.a(param0, 5187, var5_int);
+          var5_int = param3.getGroupIdByName(param2, 0);
+          var6 = param3.getFileIdByName(param0, 5187, var5_int);
           if (param1 >= -86) {
             field_b = (String) null;
           }

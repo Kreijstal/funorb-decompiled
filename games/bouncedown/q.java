@@ -98,7 +98,7 @@ final class q extends lc implements rf, rc {
         field_F = null;
     }
 
-    final static ie a(int param0, gk param1, String param2, gk param3, String param4) {
+    final static ie a(int param0, ResourceArchive param1, String param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -115,8 +115,8 @@ final class q extends lc implements rf, rc {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param3.a(param4, false);
-          var6 = param3.a(var5_int, param2, 1);
+          var5_int = param3.getGroupIdByName(param4, false);
+          var6 = param3.getFileIdByName(var5_int, param2, 1);
           if (param0 == -1) {
             stackIn_4_0 = qe.a(39, param3, var5_int, var6, param1);
             return stackIn_4_0;
@@ -307,7 +307,7 @@ final class q extends lc implements rf, rc {
             return false;
           }
           lh.field_f = pf.field_A[oh.field_a];
-          gk.field_d = fk.field_b[oh.field_a];
+          ResourceArchive.field_d = fk.field_b[oh.field_a];
           if (param0 != -15) {
             field_N = (pf) null;
           }

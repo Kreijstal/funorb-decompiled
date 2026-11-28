@@ -347,7 +347,7 @@ final class eb {
                     try {
                         var7 = stackIn_13_0[stackIn_13_1];
                         var5_int = 255 & var7[rh.a(param3 + 14561, param1, var7.length)];
-                        param0[var6] = el.a((byte)var5_int, (byte) 26);
+                        param0[var6] = el.decodeCp1252Byte((byte)var5_int, (byte) 26);
                         var6++;
                         statePc = 9;
                         continue scanLoop1;
@@ -465,7 +465,7 @@ final class eb {
           for (var3_int = 0; var3_int < -2 + param0.length; var3_int++) {
             var4 = 1;
             for (var5 = var3_int; param0.length > var5; var5++) {
-              var4 = this.a(this.field_i, 1, var4, ua.a(true, param0[var5]));
+              var4 = this.a(this.field_i, 1, var4, ua.encodeCp1252Character(true, param0[var5]));
               if (var4 != 0) {
                 if (!this.a(var4, this.field_i, (byte) -61)) {
                   continue;
@@ -478,7 +478,7 @@ final class eb {
           for (var3_intLifetime1 = -1 + param0.length; var3_intLifetime1 >= 2; var3_intLifetime1--) {
             var4Lifetime1 = 1;
             for (var5Lifetime1 = var3_intLifetime1; var5Lifetime1 >= 0; var5Lifetime1--) {
-              var4Lifetime1 = this.a(this.field_i, 1, var4Lifetime1, ua.a(true, param0[var5Lifetime1]));
+              var4Lifetime1 = this.a(this.field_i, 1, var4Lifetime1, ua.encodeCp1252Character(true, param0[var5Lifetime1]));
               if (var4Lifetime1 != 0) {
                 if (this.a(var4Lifetime1, this.field_i, (byte) -35)) {
                   return false;
@@ -524,7 +524,7 @@ final class eb {
           for (var6 = param2; var6 < param0.length; var6++) {
             var7 = 0;
             if (param0[var6] != 0) {
-              var7 = ua.a(true, param0[var6]);
+              var7 = ua.encodeCp1252Character(true, param0[var6]);
             }
             var5 = this.a(this.field_e, 1, var5, (byte) var7);
             if (var5 != 0) {

@@ -117,7 +117,7 @@ final class ji {
         }
     }
 
-    final static id[] a(boolean param0, ue param1, int param2, int param3) {
+    final static id[] a(boolean param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         id[] stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;

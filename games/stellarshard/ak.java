@@ -17,7 +17,7 @@ final class ak {
         }
     }
 
-    final static String a(String param0, String param1, pf param2, byte param3, String param4) {
+    final static String a(String param0, String param1, ResourceArchive param2, byte param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
@@ -33,12 +33,12 @@ final class ak {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param2.a((byte) -36)) {
+          if (!param2.ensureIndexLoaded((byte) -36)) {
             stackIn_3_0 = (String) (param1);
             return stackIn_3_0;
           }
           if (param3 == 51) {
-            stackIn_8_0 = param4 + " - " + param2.b(0, param0) + "%";
+            stackIn_8_0 = param4 + " - " + param2.getGroupLoadPercentByName(0, param0) + "%";
             return stackIn_8_0;
           }
           stackIn_6_0 = (String) null;

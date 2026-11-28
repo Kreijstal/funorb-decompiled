@@ -99,14 +99,14 @@ final class sf extends IntrusiveNode {
         }
     }
 
-    final static sf a(ad param0, String param1, String param2) {
+    final static sf a(ResourceArchive param0, String param1, String param2) {
         try {
           sf var4_ref = null;
           if (!sf.a(param0)) {
             param0.a(param2, true, param1);
             return null;
           }
-          byte[] var3 = param0.a(param2, param1, -124);
+          byte[] var3 = param0.getFileByName(param2, param1, -124);
           if (var3 == null) {
             return null;
           }
@@ -124,10 +124,10 @@ final class sf extends IntrusiveNode {
         }
     }
 
-    private final static boolean a(ad param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_C) {
-          var1 = param0.b(255, 0, 0);
+          var1 = param0.getFile(255, 0, 0);
           if (var1 == null) {
             return false;
           }
@@ -560,14 +560,14 @@ final class sf extends IntrusiveNode {
         field_k = null;
     }
 
-    final static sf a(ad param0, int param1, int param2) {
+    final static sf a(ResourceArchive param0, int param1, int param2) {
         try {
           sf var4_ref = null;
           if (!sf.a(param0)) {
-            param0.c(param1, param2, -125);
+            param0.tryLoadFile(param1, param2, -125);
             return null;
           }
-          byte[] var3 = param0.b(255, param2, param1);
+          byte[] var3 = param0.getFile(255, param2, param1);
           if (var3 == null) {
             return null;
           }

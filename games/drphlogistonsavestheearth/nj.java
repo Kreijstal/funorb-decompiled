@@ -9,7 +9,7 @@ final class nj {
     static RgbSprite field_f;
     private int field_g;
     static String field_e;
-    static lh field_p;
+    static BitPacketBuffer field_p;
     static he[] field_d;
     private long[] field_h;
     private byte[] field_k;
@@ -246,7 +246,7 @@ final class nj {
           this.field_n[var2Lifetime1] = 0L;
         }
         if (!param0) {
-          field_p = (lh) null;
+          field_p = (BitPacketBuffer) null;
         }
     }
 

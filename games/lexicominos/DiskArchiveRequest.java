@@ -18,8 +18,8 @@ final class DiskArchiveRequest extends ArchiveRequest {
     }
 
     final static void a(int param0, mc param1, boolean param2) {
-        th var3 = SpriteGeometry.field_q;
-        var3.h(param0, 0);
+        BitPacketBuffer var3 = SpriteGeometry.field_q;
+        var3.writeCipheredByte(param0, 0);
         var3.writeByte(2, -1);
         if (param2) {
           return;

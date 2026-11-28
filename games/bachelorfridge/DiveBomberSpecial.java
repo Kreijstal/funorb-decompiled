@@ -82,7 +82,7 @@ final class DiveBomberSpecial extends SpecialOrder {
         int var1 = 9 / ((param0 + 60) / 39);
     }
 
-    final static vr a(int param0, boolean param1, boolean param2, int param3, boolean param4) {
+    final static ResourceArchive a(int param0, boolean param1, boolean param2, int param3, boolean param4) {
         int var5 = 76 / ((param3 - 1) / 56);
         return qma.a(param2, 2097152, false, param4 ? 1 : 0, param1, param0);
     }

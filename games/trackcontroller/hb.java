@@ -93,7 +93,7 @@ final class hb {
         }
     }
 
-    final static cg[] a(int param0, la param1) {
+    final static cg[] a(int param0, BitPacketBuffer param1) {
         int var5 = 0;
         cg[] stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
@@ -109,25 +109,25 @@ final class hb {
         int var7 = 0;
         var7 = TrackController.field_F ? 1 : 0;
         try {
-          var2_int = param1.d(param0 ^ 12, 8);
+          var2_int = param1.readBits(param0 ^ 12, 8);
           if (var2_int > 0) {
             return null;
           }
-          var3 = param1.d(0, param0);
+          var3 = param1.readBits(0, param0);
           var4 = new cg[var3];
           for (var5 = 0; var3 > var5; var5++) {
             if (lf.a((byte) -68, param1)) {
               var6 = new cg();
-              param1.d(0, 24);
-              param1.d(0, 24);
-              var6.field_a = param1.d(param0 ^ 12, 24);
-              param1.d(0, 9);
-              param1.d(0, 12);
-              param1.d(param0 - 12, 12);
-              param1.d(0, 12);
+              param1.readBits(0, 24);
+              param1.readBits(0, 24);
+              var6.field_a = param1.readBits(param0 ^ 12, 24);
+              param1.readBits(0, 9);
+              param1.readBits(0, 12);
+              param1.readBits(param0 - 12, 12);
+              param1.readBits(0, 12);
               var4[var5] = var6;
             } else {
-              var6_int = param1.d(0, PacketBuffer.d((byte) -98, -1 + var5));
+              var6_int = param1.readBits(0, PacketBuffer.d((byte) -98, -1 + var5));
               var4[var5] = var4[var6_int];
             }
           }

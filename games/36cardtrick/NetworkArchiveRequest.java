@@ -6,7 +6,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     static int[] field_q;
     int field_t;
     static String field_p;
-    static w field_r;
+    static BitPacketBuffer field_r;
     PacketBuffer field_s;
 
     final byte[] getData(boolean param0) {

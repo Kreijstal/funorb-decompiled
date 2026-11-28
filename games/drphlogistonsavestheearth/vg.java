@@ -664,7 +664,7 @@ class vg extends IntrusiveNode {
         int fieldTemp$0 = 0;
         int stackIn_5_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        lh var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -676,7 +676,7 @@ class vg extends IntrusiveNode {
           }
           stackIn_5_0 = 99;
           while (ck.b(stackIn_5_0)) {
-            var1.d(8, -18392);
+            var1.writeCipheredByte(8, -18392);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
@@ -900,7 +900,7 @@ class vg extends IntrusiveNode {
         return 0;
     }
 
-    final static void a(vj param0, boolean param1) {
+    final static void a(ResourceArchive param0, boolean param1) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -911,24 +911,24 @@ class vg extends IntrusiveNode {
         ja var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        lh var8 = null;
-        lh var9 = null;
+        BitPacketBuffer var8 = null;
+        BitPacketBuffer var9 = null;
         var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           if (param1) {
             return;
           }
-          var8 = new lh(param0.a("logo.fo3d", "", 24874));
+          var8 = new BitPacketBuffer(param0.getFileByName("logo.fo3d", "", 24874));
           var9 = var8;
           var3 = var9.readUnsignedByte(31760);
-          var9.d((byte) 65);
+          var9.beginBitAccess((byte) 65);
           dm.field_B = FrameTimer.a(103, var9);
           FullscreenFocusCanvas.field_b = new int[var3][];
           r.field_c = new ja[var3];
           var4 = 0;
           do {
             if (var3 <= var4) {
-              var9.o(-124);
+              var9.endBitAccess(-124);
               break;
             }
             r.field_c[var4] = tl.a(var8, (byte) 105);

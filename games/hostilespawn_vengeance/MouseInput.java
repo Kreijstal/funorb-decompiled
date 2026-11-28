@@ -67,7 +67,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           var2_int = param1.length();
           var3 = 0;
           for (var4 = 0; var4 < var2_int; var4++) {
-            var3 = (var3 << 5) + (-var3 + nl.a(false, param1.charAt(var4)));
+            var3 = (var3 << 5) + (-var3 + nl.encodeCp1252Character(false, param1.charAt(var4)));
           }
           if (param0 >= -30) {
             MouseInput.b(99);
@@ -103,9 +103,9 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.a((byte) -2, param0);
+          var4_int = param3.getGroupIdByName((byte) -2, param0);
           var5 = -39 % ((76 - param1) / 32);
-          var6 = param3.a(var4_int, param2, -1);
+          var6 = param3.getFileIdByName(var4_int, param2, -1);
           stackIn_1_0 = jc.a(param3, 65, var6, var4_int);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

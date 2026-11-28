@@ -1137,7 +1137,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     abstract void a(int param0);
 
-    final static String a(int param0, boolean param1, int param2, byte[] param3) {
+    final static String decodeCp1252String(int param0, boolean param1, int param2, byte[] param3) {
         int incrementValue$1 = 0;
         char[] var4 = null;
         RuntimeException var4_ref = null;

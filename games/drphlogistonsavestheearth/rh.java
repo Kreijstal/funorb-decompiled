@@ -70,10 +70,10 @@ final class rh {
     }
 
     final static void a(int param0, kc param1, int param2) {
-        lh var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           var3 = nj.field_p;
-          var3.d(param2, -18392);
+          var3.writeCipheredByte(param2, -18392);
           var3.writeByte(param1.field_m, (byte) -113);
           if (param0 < 53) {
             field_e = 70;

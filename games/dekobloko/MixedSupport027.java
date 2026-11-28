@@ -44,7 +44,7 @@ final class MixedSupport027 {
             return null;
           }
           if (byteArgument4 == -75) {
-            stackRenderingSupport011Local3 = MixedSupport094.computeRenderingSupport0111201(resourceArchiveArgument1.computeByteArray0805(integerArgument3, 75, integerArgument2), (byte) 25);
+            stackRenderingSupport011Local3 = MixedSupport094.computeRenderingSupport0111201(resourceArchiveArgument1.getFile(integerArgument3, 75, integerArgument2), (byte) 25);
             return stackRenderingSupport011Local3;
           }
           stackRenderingSupport011Local2 = (RenderingSupport011) null;

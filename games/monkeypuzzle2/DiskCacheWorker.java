@@ -109,7 +109,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final static ai[] a(String param0, String param1, ad param2, boolean param3) {
+    final static ai[] a(String param0, String param1, ResourceArchive param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -123,11 +123,11 @@ final class DiskCacheWorker implements Runnable {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.c(param0, (byte) -105);
+          var4_int = param2.getGroupIdByName(param0, (byte) -105);
           if (param3) {
             field_k = (int[]) null;
           }
-          var5 = param2.a(param1, var4_int, -28459);
+          var5 = param2.getFileIdByName(param1, var4_int, -28459);
           stackIn_3_0 = b.a(var5, 10, param2, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

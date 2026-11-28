@@ -3,7 +3,7 @@
  */
 final class df {
     static FullscreenFocusCanvas field_l;
-    static vj field_a;
+    static ResourceArchive field_a;
     static int field_h;
     private de[] field_e;
     static he[] field_f;
@@ -14,7 +14,7 @@ final class df {
     private java.math.BigInteger field_n;
     private NetworkArchiveRequest field_i;
     private gb field_j;
-    static vj field_m;
+    static ResourceArchive field_m;
     private java.math.BigInteger field_g;
     static String field_b;
 

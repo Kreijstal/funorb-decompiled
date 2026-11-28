@@ -270,14 +270,14 @@ final class LetterTile extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1, jl param2) {
-        hj var5 = null;
+        BitPacketBuffer var5 = null;
         int var4 = 0;
         if (param0 != -7812) {
           return;
         }
         try {
           var5 = ff.field_D;
-          var5.a(false, param1);
+          var5.writeCipheredByte(false, param1);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(6389, 1);

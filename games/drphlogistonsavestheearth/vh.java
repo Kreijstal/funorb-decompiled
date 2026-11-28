@@ -17,8 +17,8 @@ final class vh {
         field_b = null;
         field_c = null;
         if (param0 <= 66) {
-          vj var2 = (vj) null;
-          vh.a((vj) null, -113, 38, -65);
+          ResourceArchive var2 = (ResourceArchive) null;
+          vh.a((ResourceArchive) null, -113, 38, -65);
         }
     }
 
@@ -26,7 +26,7 @@ final class vh {
         throw new IllegalStateException();
     }
 
-    final static RgbSprite[] a(vj param0, int param1, int param2, int param3) {
+    final static RgbSprite[] a(ResourceArchive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

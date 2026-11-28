@@ -122,7 +122,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                 var5 = var6_int + 2;
               }
               while (var3_int > var5) {
-                stackOut_13_0 = ne.a((byte) 115, param1.charAt(var5));
+                stackOut_13_0 = ne.isAsciiDigit((byte) 115, param1.charAt(var5));
                 stackIn_6_0 = stackOut_13_0 ? 1 : 0;
                 stackIn_14_0 = stackOut_13_0;
                 if (var11 != 0) {
@@ -162,7 +162,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             scanLoop4: while (!(decompiledNaturalLoopExit0 = (stackIn_32_0 > var8Lifetime1))) {
               var5Lifetime1 = 2 + var8Lifetime1;
               while (var3_int > var5Lifetime1) {
-                stackOut_35_0 = ne.a((byte) 85, param1.charAt(var5Lifetime1));
+                stackOut_35_0 = ne.isAsciiDigit((byte) 85, param1.charAt(var5Lifetime1));
                 stackIn_32_0 = stackOut_35_0 ? 1 : 0;
                 stackIn_36_0 = stackOut_35_0;
                 if (var11 != 0) {

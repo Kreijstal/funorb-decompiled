@@ -273,8 +273,8 @@ abstract class b extends DualLinkNode {
 
     abstract boolean b(byte param0);
 
-    final static ad a(boolean param0, int param1, boolean param2, int param3, byte param4) {
-        ad stackIn_1_0 = null;
+    final static ResourceArchive a(boolean param0, int param1, boolean param2, int param3, byte param4) {
+        ResourceArchive stackIn_1_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -297,7 +297,7 @@ abstract class b extends DualLinkNode {
         }
     }
 
-    final static ai[] a(int param0, int param1, ad param2, int param3) {
+    final static ai[] a(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         ai[] stackIn_7_0 = null;

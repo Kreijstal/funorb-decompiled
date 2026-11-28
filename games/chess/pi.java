@@ -24,9 +24,9 @@ final class pi {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        nk var13 = null;
+        BitPacketBuffer var13 = null;
         int var14 = 0;
-        nk var15 = null;
+        BitPacketBuffer var15 = null;
         int var6_intLifetime1;
         int var9Lifetime1;
         int var10Lifetime1;

@@ -40,7 +40,7 @@ final class l {
         field_a = null;
     }
 
-    final static char a(int param0, byte param1) {
+    final static char decodeCp1252Byte(int param0, byte param1) {
         int var2;
         int var3;
         String var4;
@@ -137,24 +137,24 @@ final class l {
         while (this.field_i > this.field_b) {
           var4 = this.field_e[this.field_b];
           var2 = var4;
-          if (!var4.field_g.b(-1)) {
+          if (!var4.field_g.ensureIndexLoaded(-1)) {
             this.a(var4, (byte) 0, 0);
             return false;
           }
           if (0 <= var4.field_a &&
-            !var4.field_g.c((byte) 103, var4.field_a)) {
-            this.a(var2, (byte) 0, var4.field_g.b((byte) -69, var4.field_a));
+            !var4.field_g.tryLoadGroup((byte) 103, var4.field_a)) {
+            this.a(var2, (byte) 0, var4.field_g.getGroupLoadPercent((byte) -69, var4.field_a));
             return false;
           }
           if (null != var4.field_f &&
             !var4.field_g.b((byte) -128, var4.field_f)) {
-            this.a(var2, (byte) 0, var4.field_g.a((byte) -52, var4.field_f));
+            this.a(var2, (byte) 0, var4.field_g.getGroupLoadPercentByName((byte) -52, var4.field_f));
             return false;
           }
           if (var4.field_a < 0 &&
             null == var4.field_f &&
             null != var4.field_c &&
-            !var4.field_g.c(7715)) {
+            !var4.field_g.tryLoadAllGroups(7715)) {
             this.a(var2, (byte) 0, var4.field_g.a(20147));
             return false;
           }

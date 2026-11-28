@@ -52,7 +52,7 @@ final class nr extends tb implements ef {
         if (var3 != null) {
           return var3;
         }
-        byte[] var4 = this.field_j.a(param0, 0, (byte) -126);
+        byte[] var4 = this.field_j.getFile(param0, 0, (byte) -126);
         if (param1 < 40) {
           this.a(1.1444469690322876f, -2, -78);
           if (var4 != null) {

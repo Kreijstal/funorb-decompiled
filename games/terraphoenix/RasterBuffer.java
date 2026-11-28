@@ -17,13 +17,13 @@ abstract class RasterBuffer {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        uc var5 = null;
+        BitPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
         eg var11 = null;
-        uc var12 = null;
+        BitPacketBuffer var12 = null;
         ok var13 = null;
         int[] var14 = null;
         ok var15 = null;

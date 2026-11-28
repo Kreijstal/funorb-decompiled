@@ -761,7 +761,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final static void a(PcmStreamMixer param0, byte param1, ad param2, int param3) {
+    final static void a(PcmStreamMixer param0, byte param1, ResourceArchive param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

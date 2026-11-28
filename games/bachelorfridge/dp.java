@@ -141,7 +141,7 @@ final class dp extends lw {
         if (param0 <= 103) {
           return;
         }
-        int var2 = (int)((-Math.cos((double)(4 * vr.field_b) * 3.141592653589793 / 100.0) + 1.0) * 256.0);
+        int var2 = (int)((-Math.cos((double)(4 * ResourceArchive.field_b) * 3.141592653589793 / 100.0) + 1.0) * 256.0);
         if (this.field_e != 0) {
           vg.a(sia.field_j, 8160, 22997, 32000, var2 + 4096, 1280, var2 + 4096, sia.field_j.field_o << 3, sia.field_j.field_n << 3);
           return;

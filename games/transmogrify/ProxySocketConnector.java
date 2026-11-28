@@ -250,7 +250,7 @@ final class ProxySocketConnector extends SocketConnector {
         int fieldTemp$0 = 0;
         int stackIn_15_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        hj var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         Object var3 = null;
@@ -286,7 +286,7 @@ final class ProxySocketConnector extends SocketConnector {
             }
             var5_ref = fi.b(var4_ref_String, (byte) 51);
             var6_ref = var1.readString(12248);
-            var7_ref = hj.a((byte) -128, (CharSequence) ((Object) var4_ref_String));
+            var7_ref = BitPacketBuffer.normalizePlayerName((byte) -128, (CharSequence) ((Object) var4_ref_String));
             if (null == var7_ref) {
               var7_ref = var4_ref_String;
             }
@@ -346,12 +346,12 @@ final class ProxySocketConnector extends SocketConnector {
           if (var6 == null) {
             var6 = mk.a(param0 ^ -111, var5);
             if (null != var6) {
-              LetterTile.field_u.a(19200, (long)hj.a((byte) -128, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6);
+              LetterTile.field_u.a(19200, (long)BitPacketBuffer.normalizePlayerName((byte) -128, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6);
             }
           }
           if (null == var6) {
             var6 = new uk();
-            LetterTile.field_u.a(19200, (long)hj.a((byte) -128, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6);
+            LetterTile.field_u.a(19200, (long)BitPacketBuffer.normalizePlayerName((byte) -128, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6);
             fieldTemp$0 = vl.field_A;
             vl.field_A = vl.field_A + 1;
             var6.field_hb = fieldTemp$0;

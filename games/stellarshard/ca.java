@@ -13,7 +13,7 @@ final class ca {
         }
     }
 
-    final static jj a(int param0, int param1, int param2, pf param3, gk param4) {
+    final static jj a(int param0, int param1, int param2, ResourceArchive param3, gk param4) {
         byte[] var5 = null;
         RuntimeException var5_ref = null;
         byte[] var6 = null;
@@ -31,7 +31,7 @@ final class ca {
             stackIn_2_0 = (jj) null;
             return stackIn_2_0;
           }
-          var6 = param3.a(param2, 16, param0);
+          var6 = param3.getFile(param2, 16, param0);
           var5 = var6;
           if (var6 != null) {
             stackIn_7_0 = new jj(new PacketBuffer(var6), param4);
@@ -93,7 +93,7 @@ final class ca {
           if (param0 < 84) {
             field_a = (String) null;
           }
-          stackIn_3_0 = nc.field_y.a("", param1, (byte) -12);
+          stackIn_3_0 = nc.field_y.getFileByName("", param1, (byte) -12);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

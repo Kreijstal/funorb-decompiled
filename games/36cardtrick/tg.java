@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tg implements ci {
-    final static String a(byte param0, String param1, String param2, qk param3, String param4) {
+    final static String a(byte param0, String param1, String param2, ResourceArchive param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
@@ -18,12 +18,12 @@ final class tg implements ci {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param3.b(4)) {
+          if (!param3.ensureIndexLoaded(4)) {
             stackIn_3_0 = (String) (param2);
             return stackIn_3_0;
           }
           if (param0 == 87) {
-            stackIn_8_0 = param4 + " - " + param3.a(param1, 0) + "%";
+            stackIn_8_0 = param4 + " - " + param3.getGroupLoadPercentByName(param1, 0) + "%";
             return stackIn_8_0;
           }
           stackIn_6_0 = (String) null;
@@ -93,7 +93,7 @@ final class tg implements ci {
     final static boolean a(byte param0, char param1) {
         if (param0 != -63) {
           String var3 = (String) null;
-          tg.a((byte) 33, (String) null, (String) null, (qk) null, (String) null);
+          tg.a((byte) 33, (String) null, (String) null, (ResourceArchive) null, (String) null);
           if (param1 == 160) {
             return true;
           }

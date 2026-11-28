@@ -1094,12 +1094,12 @@ final class ei extends IntrusiveNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.a((byte) -2, param2);
+          var4_int = param0.getGroupIdByName((byte) -2, param2);
           if (param1 < 88) {
             var6 = (oc) null;
             ei.a(36, -95, (oc) null, true, (og) null, (oc) null, 63, -21, false, (oj) null, -5, 22, 60, 105, 79, 88, (oc) null);
           }
-          var5 = param0.a(var4_int, param3, -1);
+          var5 = param0.getFileIdByName(var4_int, param3, -1);
           stackIn_3_0 = ne.a(44, param0, var5, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

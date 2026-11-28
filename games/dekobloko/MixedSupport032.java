@@ -77,11 +77,11 @@ final class MixedSupport032 {
           }
           integerLocal4 = 57 / ((integerArgument1 + 79) / 38);
           if (integerArgument2 < 32768) {
-            byteArrayLocal3 = this.resourceArchiveState0007.computeByteArray0805(integerArgument2, 63, 0);
+            byteArrayLocal3 = this.resourceArchiveState0007.getFile(integerArgument2, 63, 0);
           }
           if (integerArgument2 >= 32768 ||
             DekoBlokoClient.obfuscationControl) {
-            byteArrayLocal3 = this.resourceArchiveState0006.computeByteArray0805(32767 & integerArgument2, 49, 0);
+            byteArrayLocal3 = this.resourceArchiveState0006.getFile(32767 & integerArgument2, 49, 0);
           }
           mixedSupport003Local8 = new MixedSupport003();
           if (byteArrayLocal3 != null) {
@@ -292,7 +292,7 @@ final class MixedSupport032 {
         String stackStringLocal7 = null;
         RuntimeException caughtExceptionLocal8 = null;
         try {
-          rgbSpriteLocal2 = new RgbSprite(resourceArchiveArgument2.computeByteArray0809(0, "", "final_frame.jpg"), (java.awt.Component) ((Object) GameDomainSupport004.canvasState0001));
+          rgbSpriteLocal2 = new RgbSprite(resourceArchiveArgument2.getFileByName(0, "", "final_frame.jpg"), (java.awt.Component) ((Object) GameDomainSupport004.canvasState0001));
           integerLocal3 = rgbSpriteLocal2.integerState0258;
           integerLocal4 = rgbSpriteLocal2.integerState0255;
           IterableNodeCollection.performAction1656(-9074);

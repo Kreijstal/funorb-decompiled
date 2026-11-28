@@ -20,8 +20,8 @@ final class ok {
           if (param1 != -18884) {
             ok.a((byte) -15);
           }
-          if (param3.c((byte) -121)) {
-            stackIn_6_0 = param4 + " - " + param3.b((byte) 80, param0) + "%";
+          if (param3.ensureIndexLoaded((byte) -121)) {
+            stackIn_6_0 = param4 + " - " + param3.getGroupLoadPercent((byte) 80, param0) + "%";
             return stackIn_6_0;
           }
           stackIn_4_0 = (String) (param2);

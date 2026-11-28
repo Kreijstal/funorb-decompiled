@@ -30,7 +30,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         }
     }
 
-    final int e(int param0) {
+    final int getProgressPercent(int param0) {
         if (null == this.field_u) {
           return 0;
         }

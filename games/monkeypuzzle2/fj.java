@@ -8,7 +8,7 @@ final class fj extends ButtonWidget {
     static boolean field_J;
     int field_H;
     int field_I;
-    static ad field_B;
+    static ResourceArchive field_B;
     int field_K;
     int field_G;
     int field_D;

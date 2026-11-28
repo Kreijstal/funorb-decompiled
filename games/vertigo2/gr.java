@@ -77,7 +77,7 @@ final class gr extends sp implements ij {
         }
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isSupportedCp1252KeyCharacter(int param0, char param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -193,8 +193,8 @@ final class gr extends sp implements ij {
             var6 = (String) null;
             gr.a((String) null, (byte) -120, (Archive) null, (String) null, (String) null);
           }
-          if (param2.b(0)) {
-            stackIn_6_0 = param3 + " - " + param2.a(param4, 0) + "%";
+          if (param2.ensureIndexLoaded(0)) {
+            stackIn_6_0 = param3 + " - " + param2.getGroupLoadPercentByName(param4, 0) + "%";
             return stackIn_6_0;
           }
           stackIn_4_0 = (String) (param0);

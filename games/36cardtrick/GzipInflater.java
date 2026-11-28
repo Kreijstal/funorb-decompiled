@@ -162,7 +162,7 @@ final class GzipInflater {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= 77) {
-            stackIn_4_0 = bd.a(255, 0, param0, param0.length);
+            stackIn_4_0 = bd.decodeCp1252String(255, 0, param0, param0.length);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

@@ -114,14 +114,14 @@ final class wb {
         try {
           field_a = null;
           if (param0 != -8854) {
-            wb.a(117, (mi) null);
+            wb.a(117, (ResourceArchive) null);
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "wb.C(" + param0 + ')');
         }
     }
 
-    final static void a(int param0, mi param1) {
+    final static void a(int param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2619_0;
             StringBuilder stackIn_2619_1;
@@ -132,9 +132,9 @@ final class wb {
             int var3;
             int var4;
             int param0;
-            mi param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, mi initialParam1) {
+            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2619_0 = null;
@@ -2630,7 +2630,7 @@ final class wb {
                 }
                 var2 = ha.a("keychar_the_character_under_questionmark", (byte) 62);
                 if (var2 != null) {
-                  dg.a(false, var2[0]);
+                  dg.decodeCp1252Byte(false, var2[0]);
                 }
                 var2 = ha.a("rating_noratings", (byte) 56);
                 if (var2 != null) {

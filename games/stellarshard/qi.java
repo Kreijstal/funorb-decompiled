@@ -5,7 +5,7 @@ final class qi {
     static int level;
     static int field_b;
 
-    final static int a(byte[] param0, int param1, int param2, int param3, CharSequence param4, int param5) {
+    final static int encodeCp1252Subsequence(byte[] param0, int param1, int param2, int param3, CharSequence param4, int param5) {
         int var7 = 0;
         int stackIn_67_0 = 0;
         RuntimeException stackIn_70_0 = null;

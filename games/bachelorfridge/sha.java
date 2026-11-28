@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sha extends pu {
-    static vr field_l;
+    static ResourceArchive field_l;
     static int field_m;
 
-    final static void a(vr param0, boolean param1) {
-        Sprite var2 = new Sprite(param0.a((byte) 123, "", "final_frame.jpg"), (java.awt.Component) ((Object) TBomberAnimation.field_y));
+    final static void a(ResourceArchive param0, boolean param1) {
+        Sprite var2 = new Sprite(param0.getFileByName((byte) 123, "", "final_frame.jpg"), (java.awt.Component) ((Object) TBomberAnimation.field_y));
         int var3 = var2.field_q;
         int var4 = var2.field_p;
         if (param1) {
@@ -39,7 +39,7 @@ final class sha extends pu {
             return false;
           }
           if (param0 != -24) {
-            field_l = (vr) null;
+            field_l = (ResourceArchive) null;
           }
           if (gk.field_d == 2 &&
             MoveEvent.field_s != null) {

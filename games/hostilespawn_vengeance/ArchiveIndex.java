@@ -324,8 +324,8 @@ final class ArchiveIndex {
           if (param2 <= 23) {
             ArchiveIndex.clearStaticReferences(-98);
           }
-          var5_int = param3.a((byte) -2, param0);
-          var6 = param3.a(var5_int, param4, -1);
+          var5_int = param3.getGroupIdByName((byte) -2, param0);
+          var6 = param3.getFileIdByName(var5_int, param4, -1);
           stackIn_3_0 = qj.a(param1, param3, -1, var6, var5_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

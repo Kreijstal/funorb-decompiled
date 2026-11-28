@@ -28,10 +28,10 @@ final class h {
     }
 
     final static void a(int param0, fj param1, byte param2) {
-        jd var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           var3 = id.field_c;
-          var3.e(param0, -2147483648);
+          var3.writeCipheredByte(param0, -2147483648);
           if (param2 < 76) {
             field_g = -128;
           }

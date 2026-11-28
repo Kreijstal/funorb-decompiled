@@ -175,7 +175,7 @@ final class qj extends IntrusiveNode {
             qj.a((java.applet.Applet) null, (byte) 22);
           }
           if (rl.a(2884, param1, param4, param3)) {
-            stackIn_6_0 = th.a(-5427, param0.a(false, param3, param4));
+            stackIn_6_0 = th.a(-5427, param0.getFile(false, param3, param4));
             return stackIn_6_0;
           }
           stackIn_4_0 = null;

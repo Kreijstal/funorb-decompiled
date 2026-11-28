@@ -18,28 +18,28 @@ final class dj {
           return MonkeyPuzzle2.field_E;
         }
         if (null != ec.field_a) {
-          if (!ec.field_a.a(71)) {
+          if (!ec.field_a.ensureIndexLoaded(71)) {
             return IntrusiveNode.field_b;
           }
           return tk.field_a;
         }
-        if (!fj.field_B.a(116)) {
+        if (!fj.field_B.ensureIndexLoaded(116)) {
           return vb.field_i;
         }
         if (!fj.field_B.a(0, "commonui")) {
-          return ed.field_a + " - " + fj.field_B.a("commonui", (byte) -81) + "%";
+          return ed.field_a + " - " + fj.field_B.getGroupLoadPercentByName("commonui", (byte) -81) + "%";
         }
-        if (!hf.field_a.a(102)) {
+        if (!hf.field_a.ensureIndexLoaded(102)) {
           return DiskCacheWorker.field_b;
         }
         if (!hf.field_a.a(0, "commonui")) {
-          return ek.field_e + " - " + hf.field_a.a("commonui", (byte) -81) + "%";
+          return ek.field_e + " - " + hf.field_a.getGroupLoadPercentByName("commonui", (byte) -81) + "%";
         }
         var1 = 112 % ((param0 - 21) / 62);
-        if (!ii.field_m.a(-108)) {
+        if (!ii.field_m.ensureIndexLoaded(-108)) {
           return h.field_f;
         }
-        if (!ii.field_m.b(0)) {
+        if (!ii.field_m.tryLoadAllGroups(0)) {
           return db.field_b + " - " + ii.field_m.b(true) + "%";
         }
         return eg.field_h;

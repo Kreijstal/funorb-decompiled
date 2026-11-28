@@ -88,7 +88,7 @@ final class pg {
         int var4_int = 0;
         Object var5 = null;
         int var6 = 0;
-        th var9 = null;
+        BitPacketBuffer var9 = null;
         byte[] var13 = null;
         var6 = Lexicominos.field_L ? 1 : 0;
         try {

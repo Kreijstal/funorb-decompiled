@@ -7,7 +7,7 @@ final class re extends WidgetWrapper {
     static int[][] field_F;
     static int field_E;
 
-    final static void a(int param0, PcmStreamMixer param1, vr param2, boolean param3) {
+    final static void a(int param0, PcmStreamMixer param1, ResourceArchive param2, boolean param3) {
         try {
           fa.field_l = param0 * fda.a(0) / 1000;
           PizzaArenaTheme.a(param2, 64);

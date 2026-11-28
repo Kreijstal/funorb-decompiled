@@ -12,7 +12,7 @@ final class lb {
 
     final static void a(tj param0, int param1, int param2, tj param3) {
         try {
-          gk.field_a = param1;
+          ResourceArchive.field_a = param1;
           jc.field_h = param0;
           ba.field_E = param3;
           l.a(SoftwareRasterizer.field_k / 2, (byte) 127, SoftwareRasterizer.field_e / 2);

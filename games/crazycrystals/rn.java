@@ -174,27 +174,27 @@ final class rn extends rd {
           return hd.field_b;
         }
         if (null != SecondaryNodeDeque.field_e) {
-          if (!SecondaryNodeDeque.field_e.a((byte) 102)) {
+          if (!SecondaryNodeDeque.field_e.ensureIndexLoaded((byte) 102)) {
             return jg.field_h;
           }
           return ge.field_a;
         }
-        if (!rb.field_k.a((byte) 102)) {
+        if (!rb.field_k.ensureIndexLoaded((byte) 102)) {
           return re.field_n;
         }
         if (!rb.field_k.a(-20402, "commonui")) {
-          return dp.field_j + " - " + rb.field_k.b("commonui", -38) + "%";
+          return dp.field_j + " - " + rb.field_k.getGroupLoadPercentByName("commonui", -38) + "%";
         }
-        if (!ok.field_c.a((byte) 102)) {
+        if (!ok.field_c.ensureIndexLoaded((byte) 102)) {
           return NetworkArchiveRequest.field_w;
         }
         if (!ok.field_c.a(param0 ^ 20403, "commonui")) {
-          return jn.field_k + " - " + ok.field_c.b("commonui", -60) + "%";
+          return jn.field_k + " - " + ok.field_c.getGroupLoadPercentByName("commonui", -60) + "%";
         }
-        if (!FullscreenFocusCanvas.field_a.a((byte) 102)) {
+        if (!FullscreenFocusCanvas.field_a.ensureIndexLoaded((byte) 102)) {
           return gf.field_d;
         }
-        if (!FullscreenFocusCanvas.field_a.a(false)) {
+        if (!FullscreenFocusCanvas.field_a.tryLoadAllGroups(false)) {
           return l.field_a + " - " + FullscreenFocusCanvas.field_a.b(3492) + "%";
         }
         return wp.field_a;

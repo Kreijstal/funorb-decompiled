@@ -28,7 +28,7 @@ abstract class ResourceSupport003 {
         mixedSupport132State0008 = null;
     }
 
-    abstract int computeInteger0947(int integerArgument1, int integerArgument2);
+    abstract int getGroupRequestProgressPercent(int integerArgument1, int integerArgument2);
 
     final static void performAction1164(int integerArgument1) {
         GameDomainSupport001.integerState0053 = GameDomainSupport001.integerState0053 + 1;

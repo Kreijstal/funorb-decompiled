@@ -7,7 +7,7 @@ final class pg extends wl {
     static PcmStreamMixer field_cb;
     static volatile int field_gb;
     static String field_eb;
-    static pf field_db;
+    static ResourceArchive field_db;
 
     final void b(UiWidget param0, int param1) {
         try {

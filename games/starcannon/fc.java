@@ -15,11 +15,11 @@ final class fc {
     }
 
     final static boolean a(byte param0) {
-        ue var2;
+        ResourceArchive var2;
         boolean stackIn_6_0 = false;
         if (param0 != 57) {
-          var2 = (ue) null;
-          fc.a((ue) null, (ue) null, (byte) 66, (ue) null);
+          var2 = (ResourceArchive) null;
+          fc.a((ResourceArchive) null, (ResourceArchive) null, (byte) 66, (ResourceArchive) null);
         }
         stackIn_6_0 = (null != m.field_b) && (r.field_c == pb.field_a);
         return stackIn_6_0;
@@ -33,7 +33,7 @@ final class fc {
         }
     }
 
-    final static void a(ue param0, ue param1, byte param2, ue param3) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3) {
         Sprite var18 = null;
         id[] var5 = null;
         id[][] var6 = null;
@@ -60,7 +60,7 @@ final class fc {
           nb.field_b = (qe) ((Object) ai.a(param3, "commonui", true, "arezzo12", param1));
           nb.field_c = (qe) ((Object) ai.a(param3, "commonui", true, "arezzo14", param1));
           AwtRasterBuffer.field_a = (qe) ((Object) ai.a(param3, "commonui", true, "arezzo14bold", param1));
-          var18 = new Sprite(param0.a("button.gif", (byte) -95, ""), (java.awt.Component) ((Object) kj.field_E));
+          var18 = new Sprite(param0.getFileByName("button.gif", (byte) -95, ""), (java.awt.Component) ((Object) kj.field_E));
           o.a(param3, "commonui", "dropdown", false);
           var5 = fg.a(param3, "screen_options", "commonui", false);
           il.field_e = new id[4];

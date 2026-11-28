@@ -18,7 +18,7 @@ final class vd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 4) {
-            stackIn_4_0 = me.field_e.a(4, "", param0);
+            stackIn_4_0 = me.field_e.getFileByName(4, "", param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;
@@ -42,13 +42,13 @@ final class vd {
         int stackIn_9_0 = 0;
         int[] stackIn_22_0 = null;
         Throwable decompiledCaughtException = null;
-        jd var2 = null;
+        BitPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        jd var8 = null;
+        BitPacketBuffer var8 = null;
         ba var9 = null;
         var7 = SolKnight.field_L ? 1 : 0;
         var8 = te.field_N;
@@ -109,7 +109,7 @@ final class vd {
         return new hf(param1);
     }
 
-    final static String a(byte[] param0, int param1, int param2, int param3) {
+    final static String decodeCp1252String(byte[] param0, int param1, int param2, int param3) {
         int var6 = 0;
         int incrementValue$0 = 0;
         char[] var4 = null;

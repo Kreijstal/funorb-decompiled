@@ -83,7 +83,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         int var6 = 0;
         ve var7 = null;
         ve var8 = null;
-        nk var9 = null;
+        BitPacketBuffer var9 = null;
         CharSequence var10 = null;
         var6 = Chess.field_G;
         try {
@@ -117,7 +117,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           var8.unlinkSecondary(-1);
           wg.field_w = wg.field_w - 1;
           var9 = qn.field_U;
-          var9.f(param0, -104);
+          var9.writeCipheredByte(param0, -104);
           var9.position = var9.position + 1;
           var5 = var9.position;
           var9.writeByte(1, (byte) 66);

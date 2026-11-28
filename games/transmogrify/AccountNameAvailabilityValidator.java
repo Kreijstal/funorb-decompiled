@@ -7,7 +7,7 @@ final class AccountNameAvailabilityValidator extends me {
     static volatile boolean field_j;
     static String field_o;
     static int[] field_n;
-    static ci field_k;
+    static ResourceArchive field_k;
     private String checkedName;
     private boolean nameAvailable;
 
@@ -135,7 +135,7 @@ final class AccountNameAvailabilityValidator extends me {
             return stackIn_3_0;
           }
           if (param0 != 95) {
-            field_k = (ci) null;
+            field_k = (ResourceArchive) null;
           }
           if (!param1.equals(this.checkedName)) {
             var3 = vl.pollAccountNameCheck(param0 - 53, param1);

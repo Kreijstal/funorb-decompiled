@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fi extends BoardChange {
-    static vr field_n;
+    static ResourceArchive field_n;
     static String field_o;
     static IntrusiveNodeHashTable field_m;
     private int field_q;

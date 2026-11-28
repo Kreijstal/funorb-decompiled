@@ -109,7 +109,7 @@ final class ej extends IntrusiveNode {
     }
 
     final static ej a(ResourceArchive param0, String param1, String param2) {
-        byte[] var3 = param0.a(-2, param2, param1);
+        byte[] var3 = param0.getFileByName(-2, param2, param1);
         if (var3 == null) {
           return null;
         }

@@ -6,7 +6,7 @@ final class aj {
     int field_a;
     static String field_b;
 
-    final static IndexedSprite a(int param0, int param1, int param2, vr param3) {
+    final static IndexedSprite a(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         IndexedSprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -57,15 +57,15 @@ final class aj {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        vr var4 = null;
+        ResourceArchive var4 = null;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = BachelorFridge.field_y;
         try {
           if (param0 != -20) {
-            var4 = (vr) null;
-            aj.a(-51, -127, 29, (vr) null);
+            var4 = (ResourceArchive) null;
+            aj.a(-51, -127, 29, (ResourceArchive) null);
           }
           var2_int = 0;
           while (true) {

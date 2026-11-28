@@ -25,11 +25,11 @@ class mn extends aa implements ng {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.a(-1, param1);
+          var4_int = param0.getGroupIdByName(-1, param1);
           if (param3 <= 81) {
             mn.clearStaticReferences((byte) 123);
           }
-          var5 = param0.a(param2, -121, var4_int);
+          var5 = param0.getFileIdByName(param2, -121, var4_int);
           stackIn_3_0 = wi.a(var5, (byte) -106, param0, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -93,10 +93,10 @@ final class OpenGlUnderwaterEffect extends RenderEffect {
         try {
           if (param1 != null &&
             param0.field_Vc) {
-            this.field_o = SoftwareDepthBuffer.createAssemblyProgram(true, 34336, param1.a("gl", (byte) -71, "uw_ground_unlit"), param0);
-            this.field_g = SoftwareDepthBuffer.createAssemblyProgram(true, 34336, param1.a("gl", (byte) -71, "uw_ground_lit"), param0);
-            this.field_p = SoftwareDepthBuffer.createAssemblyProgram(true, 34336, param1.a("gl", (byte) -71, "uw_model_unlit"), param0);
-            this.field_j = SoftwareDepthBuffer.createAssemblyProgram(true, 34336, param1.a("gl", (byte) -71, "uw_model_lit"), param0);
+            this.field_o = SoftwareDepthBuffer.createAssemblyProgram(true, 34336, param1.getFileByName("gl", (byte) -71, "uw_ground_unlit"), param0);
+            this.field_g = SoftwareDepthBuffer.createAssemblyProgram(true, 34336, param1.getFileByName("gl", (byte) -71, "uw_ground_lit"), param0);
+            this.field_p = SoftwareDepthBuffer.createAssemblyProgram(true, 34336, param1.getFileByName("gl", (byte) -71, "uw_model_unlit"), param0);
+            this.field_j = SoftwareDepthBuffer.createAssemblyProgram(true, 34336, param1.getFileByName("gl", (byte) -71, "uw_model_lit"), param0);
             boolean stackIn_7_0 = !(null == this.field_p);
             stackIn_10_1 = !(this.field_o == null);
             stackIn_13_2 = !(this.field_g == null);

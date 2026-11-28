@@ -6,8 +6,8 @@ final class ci {
     private DualLinkNode field_c;
     static IntrusiveDeque field_f;
     static int[] field_b;
-    static sh field_e;
-    static sh field_a;
+    static ResourceArchive field_e;
+    static ResourceArchive field_a;
 
     public static void clearStaticReferences(byte param0) {
         field_e = null;
@@ -107,11 +107,11 @@ final class ci {
         if (param0 >= 22) {
           return var2;
         }
-        field_a = (sh) null;
+        field_a = (ResourceArchive) null;
         return var2;
     }
 
-    final static boolean a(boolean param0, char param1) {
+    final static boolean isAcceptedTextInputCharacter(boolean param0, char param1) {
         if (param0) {
           if (param1 >= 32 &&
             param1 <= 126) {

@@ -959,7 +959,7 @@ class PacketBuffer extends IntrusiveNode {
             return stackIn_6_0;
           }
           if (0 != var3) {
-            stackIn_11_0 = kh.a(this.payload, var3, 0, var2_int);
+            stackIn_11_0 = kh.decodeCp1252String(this.payload, var3, 0, var2_int);
             return stackIn_11_0;
           }
           stackIn_9_0 = "";
@@ -1190,7 +1190,7 @@ class PacketBuffer extends IntrusiveNode {
             stackIn_15_0 = "";
             return stackIn_15_0;
           }
-          stackIn_17_0 = kh.a(this.payload, var4, 0, var3);
+          stackIn_17_0 = kh.decodeCp1252String(this.payload, var4, 0, var3);
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

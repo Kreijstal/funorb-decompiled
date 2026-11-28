@@ -9,13 +9,13 @@ final class th {
     static FrameTimer field_c;
 
     final static void a(int param0, int param1, ng param2) {
-        hj var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           var3 = ff.field_D;
           if (param0 != 65536) {
             field_a = -12;
           }
-          var3.a(false, param1);
+          var3.writeCipheredByte(false, param1);
           var3.writeByte(6389, param2.field_m);
           var3.writeByte(6389, param2.field_k);
         } catch (RuntimeException runtimeException) {

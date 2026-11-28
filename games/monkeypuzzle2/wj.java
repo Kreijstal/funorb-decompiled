@@ -7,7 +7,7 @@ abstract class wj extends hf implements vc {
     static String field_l;
     static tk field_k;
     static na field_i;
-    static ad field_j;
+    static ResourceArchive field_j;
 
     public final void a(int param0, rj param1) {
         try {
@@ -23,8 +23,8 @@ abstract class wj extends hf implements vc {
         if (param0 == 1) {
           return this.a(this.field_m.field_s, param0 ^ 3916);
         }
-        ad var3 = (ad) null;
-        wj.a((byte) -23, -1, (ad) null, 109);
+        ResourceArchive var3 = (ResourceArchive) null;
+        wj.a((byte) -23, -1, (ResourceArchive) null, 109);
         return this.a(this.field_m.field_s, param0 ^ 3916);
     }
 
@@ -33,9 +33,9 @@ abstract class wj extends hf implements vc {
         return this.a(1, this.field_m.field_s);
     }
 
-    final static Sprite[] a(byte param0, int param1, ad param2, int param3) {
+    final static Sprite[] a(byte param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
-        ad var5 = null;
+        ResourceArchive var5 = null;
         Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -46,8 +46,8 @@ abstract class wj extends hf implements vc {
             return null;
           }
           if (param0 != 83) {
-            var5 = (ad) null;
-            wj.a((byte) -96, -124, (ad) null, -100);
+            var5 = (ResourceArchive) null;
+            wj.a((byte) -96, -124, (ResourceArchive) null, -100);
           }
           stackIn_6_0 = PcmResampler.a(true);
           return stackIn_6_0;
@@ -101,7 +101,7 @@ abstract class wj extends hf implements vc {
           jh.field_C.c((byte) 36, sc.field_f);
           return;
         }
-        field_j = (ad) null;
+        field_j = (ResourceArchive) null;
         if (me.field_f != null) {
           me.field_f.g((byte) -75);
         }

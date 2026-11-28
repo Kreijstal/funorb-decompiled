@@ -214,7 +214,7 @@ final class pg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            stackIn_4_0 = param1.c(-19375);
+            stackIn_4_0 = param1.tryLoadAllGroups(-19375);
             return stackIn_4_0;
           }
           return true;

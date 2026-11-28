@@ -3,7 +3,7 @@
  */
 final class gg {
     static dg field_b;
-    static sh field_d;
+    static ResourceArchive field_d;
     static RgbSprite[] field_a;
     static String field_c;
 

@@ -548,10 +548,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (var4 != 0L &&
             var2_long > var4) {
           }
-          fieldTemp$1 = ue.field_f;
-          ue.field_f = ue.field_f + 1;
+          fieldTemp$1 = ResourceArchive.field_f;
+          ResourceArchive.field_f = ResourceArchive.field_f + 1;
           if (fieldTemp$1 > 50) {
-            ue.field_f = ue.field_f - 50;
+            ResourceArchive.field_f = ResourceArchive.field_f - 50;
             v.field_b = true;
             kj.field_E.setSize(eh.field_n, DiskCacheWorker.field_d);
             kj.field_E.setVisible(true);

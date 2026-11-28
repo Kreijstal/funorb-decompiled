@@ -224,7 +224,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (vv.field_e != null) {
             var2_int = param0.getKeyChar();
             if (0 != var2_int && 65535 != var2_int &&
-              cga.a(255, (char) var2_int)) {
+              cga.isSupportedCp1252KeyCharacter(255, (char) var2_int)) {
               var3 = ClamsAnimation.field_x + 1 & 127;
               if (var3 != DefaultWidgetRenderer.field_q) {
                 aq.field_a[ClamsAnimation.field_x] = -1;

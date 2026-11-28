@@ -57,24 +57,24 @@ final class of {
         while (this.field_e > this.field_j) {
           var4 = this.field_l[this.field_j];
           var2 = var4;
-          if (!var4.field_a.b((byte) -110)) {
+          if (!var4.field_a.ensureIndexLoaded((byte) -110)) {
             this.a(var4, 0, false);
             return false;
           }
           if (var4.field_f >= 0 &&
-            !var4.field_a.c(var4.field_f, 14969)) {
-            this.a(var2, var4.field_a.b(var4.field_f, -2), false);
+            !var4.field_a.tryLoadGroup(var4.field_f, 14969)) {
+            this.a(var2, var4.field_a.getGroupLoadPercent(var4.field_f, -2), false);
             return false;
           }
           if (null != var4.field_c &&
             !var4.field_a.a(var4.field_c, -95)) {
-            this.a(var2, var4.field_a.a(-84, var4.field_c), false);
+            this.a(var2, var4.field_a.getGroupLoadPercentByName(-84, var4.field_c), false);
             return false;
           }
           if (0 > var4.field_f &&
             null == var4.field_c &&
             null != var4.field_d &&
-            !var4.field_a.a(param0 ^ -58)) {
+            !var4.field_a.tryLoadAllGroups(param0 ^ -58)) {
             this.a(var2, var4.field_a.a((byte) -77), false);
             return false;
           }
@@ -135,8 +135,8 @@ final class of {
             var6 = (ResourceArchive) null;
             of.a((String) null, (String) null, (ResourceArchive) null, 93);
           }
-          var4_int = param2.a(param1, (byte) -100);
-          var5 = param2.a(param0, (byte) -15, var4_int);
+          var4_int = param2.getGroupIdByName(param1, (byte) -100);
+          var5 = param2.getFileIdByName(param0, (byte) -15, var4_int);
           stackIn_3_0 = oc.a(param2, var5, var4_int, (byte) -109);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

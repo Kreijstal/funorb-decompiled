@@ -7,7 +7,7 @@ final class ej {
     static double[] field_a;
     static String field_d;
 
-    final static l a(String param0, mi param1, mi param2, String param3, int param4) {
+    final static l a(String param0, ResourceArchive param1, ResourceArchive param2, String param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -23,8 +23,8 @@ final class ej {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param1.a(param4 ^ -37, param3);
-          var6 = param1.a(var5_int, param0, -75);
+          var5_int = param1.getGroupIdByName(param4 ^ -37, param3);
+          var6 = param1.getFileIdByName(var5_int, param0, -75);
           if (param4 != 0) {
             field_b = true;
           }
@@ -70,7 +70,7 @@ final class ej {
           return;
         }
         String var2 = (String) null;
-        ej.a((String) null, (mi) null, (mi) null, (String) null, -110);
+        ej.a((String) null, (ResourceArchive) null, (ResourceArchive) null, (String) null, -110);
         field_c = null;
         field_d = null;
         field_a = null;
@@ -79,7 +79,7 @@ final class ej {
     final boolean a(int param0) {
         if (param0 > -125) {
           String var3 = (String) null;
-          ej.a((String) null, (mi) null, (mi) null, (String) null, 120);
+          ej.a((String) null, (ResourceArchive) null, (ResourceArchive) null, (String) null, 120);
           if (rh.field_ab == this) {
             return true;
           }

@@ -72,7 +72,7 @@ abstract class MouseWheelInput {
               if (!bf.c(114, 1)) {
                 return false;
               }
-              qg.field_a = te.field_N.l(27310);
+              qg.field_a = te.field_N.readCipheredByte(27310);
               te.field_N.position = 0;
               te.field_O = param0[qg.field_a];
             }

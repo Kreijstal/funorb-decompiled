@@ -142,7 +142,7 @@ final class nj extends al {
           ea.field_f = true;
           ne.field_u = param2;
           if (ne.field_u == 0) {
-            var3_int = r.a(ba.field_E, ClientException.field_g, vg.field_g, 1, gk.field_a);
+            var3_int = r.a(ba.field_E, ClientException.field_g, vg.field_g, 1, ResourceArchive.field_a);
             var4 = 3 + var3_int;
             se.field_E = new String[var4];
             IterableNodeHashTable.field_a = new int[var4];
@@ -161,7 +161,7 @@ final class nj extends al {
             IterableNodeHashTable.field_a[var4 - 1] = 1;
             CipherPacketBuffer.field_n[1] = 5;
           } else if (1 == ne.field_u) {
-            var3_int = r.a(ba.field_E, ClientException.field_g, vg.field_g, 1, gk.field_a);
+            var3_int = r.a(ba.field_E, ClientException.field_g, vg.field_g, 1, ResourceArchive.field_a);
             var4 = var3_int + 2;
             se.field_E = new String[var4];
             IterableNodeHashTable.field_a = new int[var4];
@@ -179,9 +179,9 @@ final class nj extends al {
           } else if (2 != ne.field_u) {
             if (ne.field_u == 3) {
               if (ck.field_e.privilegedTasksEnabled) {
-                var3_int = r.a(ba.field_E, ClientException.field_g, vg.field_f, param1 + 25699, gk.field_a);
+                var3_int = r.a(ba.field_E, ClientException.field_g, vg.field_f, param1 + 25699, ResourceArchive.field_a);
               } else {
-                var3_int = r.a(ba.field_E, ClientException.field_g, ra.field_f, param1 + 25699, gk.field_a);
+                var3_int = r.a(ba.field_E, ClientException.field_g, ra.field_f, param1 + 25699, ResourceArchive.field_a);
               }
               var4 = 2 + var3_int;
               se.field_E = new String[var4];
@@ -198,7 +198,7 @@ final class nj extends al {
               IterableNodeHashTable.field_a[var4 - 1] = 0;
               CipherPacketBuffer.field_n[0] = 5;
             } else if (ne.field_u == 4) {
-              var3_int = r.a(ba.field_E, ClientException.field_g, of.field_a, 1, gk.field_a);
+              var3_int = r.a(ba.field_E, ClientException.field_g, of.field_a, 1, ResourceArchive.field_a);
               var4 = var3_int + 2;
               IterableNodeHashTable.field_a = new int[var4];
               se.field_E = new String[var4];
@@ -217,7 +217,7 @@ final class nj extends al {
               if (5 != ne.field_u) {
                 throw new IllegalArgumentException();
               }
-              var3_int = r.a(ba.field_E, ClientException.field_g, pe.field_g, param1 + 25699, gk.field_a);
+              var3_int = r.a(ba.field_E, ClientException.field_g, pe.field_g, param1 + 25699, ResourceArchive.field_a);
               var4 = 3 + var3_int;
               se.field_E = new String[var4];
               IterableNodeHashTable.field_a = new int[var4];
@@ -237,7 +237,7 @@ final class nj extends al {
               CipherPacketBuffer.field_n[1] = 5;
             }
           } else {
-            var3_int = r.a(ba.field_E, ClientException.field_g, BufferedRandomAccessFile.a(al.field_g, new String[]{"<br><%0><br>"}, (byte) -126), 1, gk.field_a);
+            var3_int = r.a(ba.field_E, ClientException.field_g, BufferedRandomAccessFile.a(al.field_g, new String[]{"<br><%0><br>"}, (byte) -126), 1, ResourceArchive.field_a);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(ClientException.field_g[var5])) {
@@ -254,7 +254,7 @@ final class nj extends al {
             ll.field_E = new String[var3_int - var4 - 1];
             cb.a(ClientException.field_g, var4 + 1, ll.field_E, 0, -var4 + (var3_int - 1));
             var4 = -1;
-            var3_int = r.a(ba.field_E, ClientException.field_g, BufferedRandomAccessFile.a(se.field_B, new String[]{"<br><%0><br>"}, (byte) -126), param1 ^ -25697, gk.field_a);
+            var3_int = r.a(ba.field_E, ClientException.field_g, BufferedRandomAccessFile.a(se.field_B, new String[]{"<br><%0><br>"}, (byte) -126), param1 ^ -25697, ResourceArchive.field_a);
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(ClientException.field_g[var5])) {
                 continue;

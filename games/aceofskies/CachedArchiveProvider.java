@@ -95,7 +95,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
     }
 
-    final int b(int param0, int param1) {
+    final int getGroupRequestProgressPercent(int param0, int param1) {
         if (param0 != 1) {
           field_k = (String) null;
         }
@@ -103,7 +103,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         if (var3 == null) {
           return 0;
         }
-        return var3.e(21513);
+        return var3.getProgressPercent(21513);
     }
 
     final void b(int param0) {

@@ -171,7 +171,7 @@ final class va {
             var3 = (byte[]) null;
             va.a(7, (byte[]) null);
           }
-          stackIn_3_0 = kh.a(param1, param1.length, 0, 0);
+          stackIn_3_0 = kh.decodeCp1252String(param1, param1.length, 0, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

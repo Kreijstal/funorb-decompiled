@@ -117,7 +117,7 @@ final class DisableAnimation extends EventAnimation {
         int var2 = -50 / ((13 - param0) / 40);
     }
 
-    final static Sprite[] a(int param0, vr param1, int param2, int param3) {
+    final static Sprite[] a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;

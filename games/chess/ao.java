@@ -28,12 +28,12 @@ final class ao {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.a(param3, 0);
+          var4_int = param0.getGroupIdByName(param3, 0);
           if (param2 != 2993) {
             stackIn_2_0 = (RgbSprite[]) null;
             return stackIn_2_0;
           }
-          var5 = param0.a(param1, 7, var4_int);
+          var5 = param0.getFileIdByName(param1, 7, var4_int);
           stackIn_4_0 = qj.a(var5, var4_int, (byte) 108, param0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -90,7 +90,7 @@ final class ao {
           uc.a((byte) -72);
           jd.a((byte) -91);
           if (m.a(param0 ^ 25329)) {
-            qn.field_U.f(1, param0 ^ 25285);
+            qn.field_U.writeCipheredByte(1, param0 ^ 25285);
             vh.a(0, (byte) -58);
             ImageProducerRasterBuffer.d(65280);
             return;
@@ -104,7 +104,7 @@ final class ao {
           ImageProducerRasterBuffer.d(65280);
           return;
         }
-        qn.field_U.f(1, param0 ^ 25285);
+        qn.field_U.writeCipheredByte(1, param0 ^ 25285);
         vh.a(0, (byte) -58);
         ImageProducerRasterBuffer.d(65280);
     }

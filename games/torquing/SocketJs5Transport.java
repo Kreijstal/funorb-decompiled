@@ -3024,7 +3024,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "keychar_the_character_under_questionmark");
                 if (null != var2) {
-                  mf.b(var2[0], 255);
+                  mf.decodeCp1252Byte(var2[0], 255);
                 }
                 var2 = se.a((byte) -33, "rating_noratings");
                 if (var2 != null) {

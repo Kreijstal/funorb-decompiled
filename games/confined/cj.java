@@ -23,9 +23,9 @@ final class cj implements fe {
         }
     }
 
-    final static ce a(int param0, int param1, mi param2, int param3, mi param4) {
+    final static ce a(int param0, int param1, ResourceArchive param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
-        mi var6 = null;
+        ResourceArchive var6 = null;
         ce stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -35,13 +35,13 @@ final class cj implements fe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 20748) {
-            var6 = (mi) null;
-            cj.a(-84, -90, (mi) null, -34, (mi) null);
+            var6 = (ResourceArchive) null;
+            cj.a(-84, -90, (ResourceArchive) null, -34, (ResourceArchive) null);
           }
           if (!mc.a(param0, param1, param4, (byte) 119)) {
             return null;
           }
-          stackIn_6_0 = FrameTimer.a(2563, param2.a((byte) -2, param1, param0));
+          stackIn_6_0 = FrameTimer.a(2563, param2.getFile((byte) -2, param1, param0));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

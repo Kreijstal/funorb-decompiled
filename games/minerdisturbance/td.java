@@ -81,11 +81,11 @@ final class td {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.a(-6, param2);
+          var4_int = param1.getGroupIdByName(-6, param2);
           if (param3 < 108) {
             field_a = (String) null;
           }
-          var5 = param1.a(param0, var4_int, -91);
+          var5 = param1.getFileIdByName(param0, var4_int, -91);
           stackIn_3_0 = ki.a(var5, param1, var4_int, (byte) -7);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

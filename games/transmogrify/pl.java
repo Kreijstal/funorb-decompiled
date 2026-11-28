@@ -110,8 +110,8 @@ final class pl extends IntrusiveNode {
         }
     }
 
-    final static pl a(ci param0, String param1, String param2) {
-        byte[] var3 = param0.a(param2, (byte) 98, param1);
+    final static pl a(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.getFileByName(param2, (byte) 98, param1);
         if (var3 == null) {
           return null;
         }

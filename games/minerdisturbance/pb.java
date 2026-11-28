@@ -90,8 +90,8 @@ final class pb {
           if (param3 != -77) {
             field_c = (ae) null;
           }
-          var4_int = param1.a(param3 ^ -52, param0);
-          var5 = param1.a(param2, var4_int, -76);
+          var4_int = param1.getGroupIdByName(param3 ^ -52, param0);
+          var5 = param1.getFileIdByName(param2, var4_int, -76);
           stackIn_3_0 = ac.a(23917, param1, var4_int, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -218,7 +218,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (this.payload[fieldTemp$1] != 0);
         var5 = -var4 + this.position - 1;
         if (var5 != 0) {
-          return bd.a(255, var4, this.payload, var5);
+          return bd.decodeCp1252String(255, var4, this.payload, var5);
         }
         return "";
     }
@@ -260,7 +260,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + hi.a(param1.length(), 0, this.payload, var4, this.position, false);
+          this.position = this.position + hi.encodeCp1252Subsequence(param1.length(), 0, this.payload, var4, this.position, false);
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
@@ -511,7 +511,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var4 = (CharSequence) ((Object) param0);
-          this.position = this.position + hi.a(param0.length(), 0, this.payload, var4, this.position, false);
+          this.position = this.position + hi.encodeCp1252Subsequence(param0.length(), 0, this.payload, var4, this.position, false);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -705,11 +705,11 @@ class PacketBuffer extends IntrusiveNode {
           return "";
         }
         if (!param0) {
-          return bd.a(255, var2, this.payload, var3);
+          return bd.decodeCp1252String(255, var2, this.payload, var3);
         }
         var4 = (String) null;
         this.writeString((String) null, 84);
-        return bd.a(255, var2, this.payload, var3);
+        return bd.decodeCp1252String(255, var2, this.payload, var3);
     }
 
     final int readSignedSmart(byte param0) {

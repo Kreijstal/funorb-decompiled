@@ -1616,30 +1616,30 @@ public final class Terraphoenix extends GameShell {
         try {
           mi.clearStaticReferences(param1 ^ 22369);
           if (param0) {
-            uc.l(3795, vj.field_P);
+            BitPacketBuffer.pumpClientUi(3795, vj.field_P);
           }
           if (ab.field_a != null) {
-            if (ee.field_G.a(0) &&
-              ee.field_G.b((byte) -128)) {
-              if (mi.field_h.a(param1 ^ -107) &&
-                mi.field_h.b((byte) -128)) {
-                if (h.field_j.a(0) &&
-                  h.field_j.b((byte) -128)) {
-                  if (IntrusiveDeque.field_c.a(0) &&
-                    IntrusiveDeque.field_c.b((byte) -128)) {
-                    if (ab.field_a.a(0) &&
-                      ab.field_a.b((byte) -128)) {
-                      if (fc.field_a.a(0) &&
-                        fc.field_a.b((byte) -128)) {
-                        if (ByteStorage.field_d.a(0) &&
+            if (ee.field_G.ensureIndexLoaded(0) &&
+              ee.field_G.tryLoadAllGroups((byte) -128)) {
+              if (mi.field_h.ensureIndexLoaded(param1 ^ -107) &&
+                mi.field_h.tryLoadAllGroups((byte) -128)) {
+                if (h.field_j.ensureIndexLoaded(0) &&
+                  h.field_j.tryLoadAllGroups((byte) -128)) {
+                  if (IntrusiveDeque.field_c.ensureIndexLoaded(0) &&
+                    IntrusiveDeque.field_c.tryLoadAllGroups((byte) -128)) {
+                    if (ab.field_a.ensureIndexLoaded(0) &&
+                      ab.field_a.tryLoadAllGroups((byte) -128)) {
+                      if (fc.field_a.ensureIndexLoaded(0) &&
+                        fc.field_a.tryLoadAllGroups((byte) -128)) {
+                        if (ByteStorage.field_d.ensureIndexLoaded(0) &&
                           ByteStorage.field_d.a(-3, "basic")) {
-                          if (me.field_o <= 0 && (!ByteStorage.field_d.a(param1 + 107) ||
+                          if (me.field_o <= 0 && (!ByteStorage.field_d.ensureIndexLoaded(param1 + 107) ||
                             !ByteStorage.field_d.a(-3, "benefits"))) {
                             DualLinkNode.a(vf.a("benefits", bl.field_d, ByteStorage.field_d, be.field_w, 4650), (byte) 88, 40.0f);
                             return;
                           }
-                          if (aj.field_b.a(param1 + 107) &&
-                            aj.field_b.b((byte) -128)) {
+                          if (aj.field_b.ensureIndexLoaded(param1 + 107) &&
+                            aj.field_b.tryLoadAllGroups((byte) -128)) {
                             DualLinkNode.a(IsaacCipher.field_h, (byte) 58, 50.0f);
                             this.a((byte) -89);
                             if (!param0) {
@@ -1683,7 +1683,7 @@ public final class Terraphoenix extends GameShell {
             ImageProducerRasterBuffer.field_k = new byte[ph.field_n.length][];
             var3_int = 0;
             while (ph.field_n.length > var3_int) {
-              ImageProducerRasterBuffer.field_k[var3_int] = fc.field_a.a("", ph.field_n[var3_int] + ".lev", -21653);
+              ImageProducerRasterBuffer.field_k[var3_int] = fc.field_a.getFileByName("", ph.field_n[var3_int] + ".lev", -21653);
               var3_int++;
               if (var6 != 0) {
                 return;
@@ -4311,7 +4311,7 @@ public final class Terraphoenix extends GameShell {
           IntrusiveNode.clearDeclaredStaticReferences(71);
           SpriteState.clearStaticReferences((byte) -55);
           DualLinkNode.clearStaticReferences(7229);
-          uc.clearStaticReferences(-113);
+          BitPacketBuffer.clearStaticReferences(-113);
           kk.a((byte) 121);
           oh.clearStaticReferences(6);
           pc.clearStaticReferences(12653);
@@ -9370,7 +9370,7 @@ public final class Terraphoenix extends GameShell {
               -1 == this.field_X.field_e.field_i &&
               this.field_X.field_e.field_e != this.field_X.field_e.field_f + this.field_X.field_e.field_k + this.field_X.field_e.field_h) {
               if (bk.c(-25704)) {
-                AccountRequestState.field_f.a(uc.field_q, 16, 290, 288, 60, 16777215, 0, 1, 2, AccountRequestState.field_f.field_s);
+                AccountRequestState.field_f.a(BitPacketBuffer.field_q, 16, 290, 288, 60, 16777215, 0, 1, 2, AccountRequestState.field_f.field_s);
                 AccountRequestState.field_f.a(ae.field_L, 336, 290, 288, 60, 16777215, 0, 1, 2, AccountRequestState.field_f.field_s);
                 stackIn_222_0 = (this.a(false, 384, (byte) -44, 370, ba.field_c)) ? 0 : 1;
                 var14Lifetime3 = stackIn_222_0;

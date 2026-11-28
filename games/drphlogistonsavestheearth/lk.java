@@ -18,7 +18,7 @@ class lk extends u {
         return new int[8];
     }
 
-    final static vj a(boolean param0, boolean param1, int param2, int param3, int param4) {
+    final static ResourceArchive a(boolean param0, boolean param1, int param2, int param3, int param4) {
         if (param4 != 8) {
           field_k = (he) null;
         }

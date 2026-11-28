@@ -9,7 +9,7 @@ final class BagpipeAnimation extends EventAnimation {
 
     private final void d(int param0) {
         if (param0 < 75) {
-          BagpipeAnimation.a((byte[]) null, (int[]) null, (byte[]) null, (IndexedSprite[]) null, 91, (int[]) null, true, (vr) null, (Sprite[][]) null, (String[][]) null, 21, (String[]) null, 37, (vr) null, (String[]) null, (Sprite[][]) null, (vr) null, (String[][]) null, 2);
+          BagpipeAnimation.a((byte[]) null, (int[]) null, (byte[]) null, (IndexedSprite[]) null, 91, (int[]) null, true, (ResourceArchive) null, (Sprite[][]) null, (String[][]) null, 21, (String[]) null, 37, (ResourceArchive) null, (String[]) null, (Sprite[][]) null, (ResourceArchive) null, (String[][]) null, 2);
         }
     }
 
@@ -26,7 +26,7 @@ final class BagpipeAnimation extends EventAnimation {
         field_w = null;
     }
 
-    final static void a(byte[] param0, int[] param1, byte[] param2, IndexedSprite[] param3, int param4, int[] param5, boolean param6, vr param7, Sprite[][] param8, String[][] param9, int param10, String[] param11, int param12, vr param13, String[] param14, Sprite[][] param15, vr param16, String[][] param17, int param18) {
+    final static void a(byte[] param0, int[] param1, byte[] param2, IndexedSprite[] param3, int param4, int[] param5, boolean param6, ResourceArchive param7, Sprite[][] param8, String[][] param9, int param10, String[] param11, int param12, ResourceArchive param13, String[] param14, Sprite[][] param15, ResourceArchive param16, String[][] param17, int param18) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -170,7 +170,7 @@ final class BagpipeAnimation extends EventAnimation {
         DamageEffect var3 = (DamageEffect) (this.field_v.effects.beginForward((byte) 90));
         al.a(param0 + 88, this.field_v.moveId);
         if (param0 != 0) {
-          BagpipeAnimation.a((byte[]) null, (int[]) null, (byte[]) null, (IndexedSprite[]) null, -84, (int[]) null, true, (vr) null, (Sprite[][]) null, (String[][]) null, 83, (String[]) null, 45, (vr) null, (String[]) null, (Sprite[][]) null, (vr) null, (String[][]) null, -71);
+          BagpipeAnimation.a((byte[]) null, (int[]) null, (byte[]) null, (IndexedSprite[]) null, -84, (int[]) null, true, (ResourceArchive) null, (Sprite[][]) null, (String[][]) null, 83, (String[]) null, 45, (ResourceArchive) null, (String[]) null, (Sprite[][]) null, (ResourceArchive) null, (String[][]) null, -71);
         } else {
           var8 = this.field_v.creature.a(-27449, this.screen);
           this.screen.field_fb.addLast(new vt(this.screen, var8), true);

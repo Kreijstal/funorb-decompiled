@@ -62,7 +62,7 @@ final class pb {
         }
     }
 
-    final static char a(byte param0, byte param1) {
+    final static char decodeCp1252Byte(byte param0, byte param1) {
         int var2 = 0;
         int var3 = 0;
         int var2Lifetime1;

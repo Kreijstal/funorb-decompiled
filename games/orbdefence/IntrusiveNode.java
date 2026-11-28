@@ -8,13 +8,13 @@ class IntrusiveNode {
     IntrusiveNode field_e;
     static String field_a;
 
-    final static short[] a(short[] param0, int param1, boolean param2, se param3) {
+    final static short[] a(short[] param0, int param1, boolean param2, BitPacketBuffer param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        se var9 = null;
+        BitPacketBuffer var9 = null;
         short[] stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -25,7 +25,7 @@ class IntrusiveNode {
         RuntimeException var4 = null;
         var8 = OrbDefence.field_D ? 1 : 0;
         try {
-          var4_int = param3.h(param1, 8);
+          var4_int = param3.readBits(param1, 8);
           if (var4_int == 0) {
             return null;
           }
@@ -33,15 +33,15 @@ class IntrusiveNode {
             var4_int != param0.length) {
             param0 = new short[var4_int];
           }
-          var5 = param3.h(4, 8);
+          var5 = param3.readBits(4, 8);
           if (param2) {
-            var9 = (se) null;
-            IntrusiveNode.a((short[]) null, -25, true, (se) null);
+            var9 = (BitPacketBuffer) null;
+            IntrusiveNode.a((short[]) null, -25, true, (BitPacketBuffer) null);
           }
-          var6 = (short)param3.h(16, 8);
+          var6 = (short)param3.readBits(16, 8);
           if (0 < var5) {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param0[var7] = (short)(var6 + param3.h(var5, 8));
+              param0[var7] = (short)(var6 + param3.readBits(var5, 8));
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
@@ -85,27 +85,27 @@ class IntrusiveNode {
           field_b = false;
         }
         if (ArchiveRequest.field_m == 0) {
-          if (!og.field_g.b(-1)) {
+          if (!og.field_g.ensureIndexLoaded(-1)) {
             return 20;
           }
           if (!og.field_g.b((byte) 112, "commonui")) {
             return 40;
           }
-          if (!am.field_b.b(-1)) {
+          if (!am.field_b.ensureIndexLoaded(-1)) {
             return 50;
           }
           if (!am.field_b.b((byte) 111, "commonui")) {
             return 60;
           }
-          if (!wb.field_b.b(-1)) {
+          if (!wb.field_b.ensureIndexLoaded(-1)) {
             return 70;
           }
-          if (!wb.field_b.c(7715)) {
+          if (!wb.field_b.tryLoadAllGroups(7715)) {
             return 80;
           }
         } else {
           if (lf.field_a != null) {
-            if (!lf.field_a.b(-1)) {
+            if (!lf.field_a.ensureIndexLoaded(-1)) {
               return 14;
             }
             if (!lf.field_a.c((byte) -62, "")) {
@@ -115,22 +115,22 @@ class IntrusiveNode {
               return 29;
             }
           }
-          if (!og.field_g.b(-1)) {
+          if (!og.field_g.ensureIndexLoaded(-1)) {
             return 43;
           }
           if (!og.field_g.b((byte) 58, "commonui")) {
             return 57;
           }
-          if (!am.field_b.b(-1)) {
+          if (!am.field_b.ensureIndexLoaded(-1)) {
             return 71;
           }
           if (!am.field_b.b((byte) 94, "commonui")) {
             return 80;
           }
-          if (!wb.field_b.b(-1)) {
+          if (!wb.field_b.ensureIndexLoaded(-1)) {
             return 82;
           }
-          if (!wb.field_b.c(7715)) {
+          if (!wb.field_b.tryLoadAllGroups(7715)) {
             return 86;
           }
         }
@@ -143,8 +143,8 @@ class IntrusiveNode {
         }
         this.field_c.field_e = this.field_e;
         if (param0 != 57) {
-          se var3 = (se) null;
-          IntrusiveNode.a((short[]) null, 120, true, (se) null);
+          BitPacketBuffer var3 = (BitPacketBuffer) null;
+          IntrusiveNode.a((short[]) null, 120, true, (BitPacketBuffer) null);
         }
         this.field_e.field_c = this.field_c;
         this.field_e = null;

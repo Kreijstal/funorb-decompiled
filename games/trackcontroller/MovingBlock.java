@@ -47,7 +47,7 @@ final class MovingBlock extends IntrusiveNode {
             }
             if (LevelView.field_C.position == 0 &&
               qg.correctedCurrentTimeMillis(false) > qh.field_f + 10000L) {
-              LevelView.field_C.c(param1, param0 + 8);
+              LevelView.field_C.writeCipheredByte(param1, param0 + 8);
             }
             if (0 < LevelView.field_C.position) {
               try {
@@ -77,14 +77,14 @@ final class MovingBlock extends IntrusiveNode {
     }
 
     final static void a(dh param0, int param1, int param2) {
-        la var5 = null;
+        BitPacketBuffer var5 = null;
         int var4 = 0;
         try {
           if (param1 != 0) {
             field_p = (String[]) null;
           }
           var5 = LevelView.field_C;
-          var5.c(param2, 7);
+          var5.writeCipheredByte(param2, 7);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(1, (byte) -59);

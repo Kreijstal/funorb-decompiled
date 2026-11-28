@@ -3,7 +3,7 @@
  */
 final class AccountRequestState {
     static String field_b;
-    static ue field_a;
+    static ResourceArchive field_a;
     static String field_c;
     static int field_d;
     static int field_e;
@@ -35,7 +35,7 @@ final class AccountRequestState {
             return false;
           }
           if (param2) {
-            field_a = (ue) null;
+            field_a = (ResourceArchive) null;
           }
           for (var3_int = 0; param0.length() > var3_int; var3_int++) {
             if (!sa.a((byte) -121, param0.charAt(var3_int))) {

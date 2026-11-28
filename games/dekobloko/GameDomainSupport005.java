@@ -106,10 +106,10 @@ final class GameDomainSupport005 {
         integerLocal22 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
           if (MixedSupport076.resourceArchiveState0011 != null &&
-            MixedSupport076.resourceArchiveState0011.computeBoolean0798((byte) 121) &&
+            MixedSupport076.resourceArchiveState0011.ensureIndexLoaded((byte) 121) &&
             MixedSupport076.resourceArchiveState0011.computeBoolean0811("benefits", (byte) -119) &&
             MixedSupport028.resourceArchiveState0004 != null &&
-            MixedSupport028.resourceArchiveState0004.computeBoolean0798((byte) 121) &&
+            MixedSupport028.resourceArchiveState0004.ensureIndexLoaded((byte) 121) &&
             MixedSupport028.resourceArchiveState0004.computeBoolean0811("benefits", (byte) 102)) {
             UiComponentPart008.rgbSpriteState0012 = UiComponentPart015.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "headline", "benefits", integerArgument1 + 7802);
             MixedSupport054.rgbSpriteState0019 = UiComponentPart015.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "blurbpane", "benefits", 8192);
@@ -379,7 +379,7 @@ final class GameDomainSupport005 {
         int integerLocal14;
         integerLocal5 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          cipherPacketBufferLocal6 = new CipherPacketBuffer(resourceArchiveArgument1.computeByteArray0809(0, "", "logo.fo3d"));
+          cipherPacketBufferLocal6 = new CipherPacketBuffer(resourceArchiveArgument1.getFileByName(0, "", "logo.fo3d"));
           cipherPacketBufferLocal8 = cipherPacketBufferLocal6;
           integerLocal1 = cipherPacketBufferLocal8.readUnsignedByte((byte) -124);
           cipherPacketBufferLocal8.performAction1645((byte) -108);

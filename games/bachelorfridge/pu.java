@@ -14,7 +14,7 @@ class pu extends bia {
         int var1 = -64 % ((param0 - 74) / 49);
     }
 
-    final static void a(vr param0, vr param1, int param2, vr param3, vr param4) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3, ResourceArchive param4) {
         db.field_a = param1;
         if (param2 != -21201) {
           return;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class la extends PacketBuffer {
+final class BitPacketBuffer extends PacketBuffer {
     private int field_r;
     static volatile int liveMouseX;
     private IsaacRandom field_n;
@@ -9,7 +9,7 @@ final class la extends PacketBuffer {
     static String field_q;
     static int field_o;
 
-    final int d(int param0, int param1) {
+    final int readBits(int param0, int param1) {
         int incrementValue$0 = 0;
         int var6 = TrackController.field_F ? 1 : 0;
         int var3 = this.field_r >> 3;
@@ -31,11 +31,11 @@ final class la extends PacketBuffer {
         return var5;
     }
 
-    la(byte[] param0) {
+    BitPacketBuffer(byte[] param0) {
         super(param0);
     }
 
-    final void a(int param0, boolean param1, int param2, byte[] param3) {
+    final void readCipheredBytes(int param0, boolean param1, int param2, byte[] param3) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -71,7 +71,7 @@ final class la extends PacketBuffer {
         }
     }
 
-    final void g(byte param0) {
+    final void endBitAccess(byte param0) {
         this.position = (this.field_r + 7) / 8;
         if (param0 <= -25) {
           return;
@@ -79,7 +79,7 @@ final class la extends PacketBuffer {
         field_p = (int[]) null;
     }
 
-    final void a(byte param0, int[] param1) {
+    final void setCipherSeed(byte param0, int[] param1) {
         if (param0 != -83) {
           return;
         }
@@ -90,7 +90,7 @@ final class la extends PacketBuffer {
         }
     }
 
-    la(int param0) {
+    BitPacketBuffer(int param0) {
         super(param0);
     }
 
@@ -102,7 +102,7 @@ final class la extends PacketBuffer {
         field_q = null;
     }
 
-    final void h(byte param0) {
+    final void beginBitAccess(byte param0) {
         this.field_r = 8 * this.position;
         if (param0 == 31) {
           return;
@@ -110,21 +110,21 @@ final class la extends PacketBuffer {
         this.field_r = -2;
     }
 
-    final void c(int param0, int param1) {
+    final void writeCipheredByte(int param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)(this.field_n.nextInt(126) + param0);
         if (param1 == 7) {
           return;
         }
-        this.g((byte) 52);
+        this.endBitAccess((byte) 52);
     }
 
-    final int e(boolean param0) {
+    final int readCipheredByte(boolean param0) {
         int fieldTemp$0 = 0;
         if (param0) {
           byte[] var3 = (byte[]) null;
-          this.a(-123, false, 4, (byte[]) null);
+          this.readCipheredBytes(-123, false, 4, (byte[]) null);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           return this.payload[fieldTemp$0] - this.field_n.nextInt(125) & 255;

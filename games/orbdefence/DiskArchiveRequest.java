@@ -8,7 +8,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
     int field_t;
     static AccountServiceResult field_q;
 
-    final static qg a(boolean param0, String param1, ki param2, String param3) {
+    final static qg a(boolean param0, String param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -25,8 +25,8 @@ final class DiskArchiveRequest extends ArchiveRequest {
           if (param0) {
             field_r = (String) null;
           }
-          var4_int = param2.a(param1, 0);
-          var5 = param2.a(param3, 5187, var4_int);
+          var4_int = param2.getGroupIdByName(param1, 0);
+          var5 = param2.getFileIdByName(param3, 5187, var4_int);
           stackIn_3_0 = e.a(var4_int, var5, param2, 26052);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -58,7 +58,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
     final int getProgressPercent(int param0) {
         if (param0 != 100) {
           String var3 = (String) null;
-          DiskArchiveRequest.a(false, (String) null, (ki) null, (String) null);
+          DiskArchiveRequest.a(false, (String) null, (ResourceArchive) null, (String) null);
           if (this.field_l) {
             return 0;
           }

@@ -175,8 +175,8 @@ final class v {
     }
 
     final static void a(int param0, int param1) {
-        jd var2 = id.field_c;
-        var2.e(param1, -2147483648);
+        BitPacketBuffer var2 = id.field_c;
+        var2.writeCipheredByte(param1, -2147483648);
         var2.writeByte(8, 1);
         var2.writeByte(-126, param0);
     }

@@ -1031,10 +1031,10 @@ final class he extends ip {
         var10 = DungeonAssault.field_K;
         try {
           if (null != AccountCreationResultPanel.field_Qb &&
-            AccountCreationResultPanel.field_Qb.a(-14354) &&
+            AccountCreationResultPanel.field_Qb.ensureIndexLoaded(-14354) &&
             AccountCreationResultPanel.field_Qb.a(false, "benefits") &&
             null != hf.field_pb &&
-            hf.field_pb.a(-14354) &&
+            hf.field_pb.ensureIndexLoaded(-14354) &&
             hf.field_pb.a(false, "benefits")) {
             ia.field_Q = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "headline");
             gn.field_c = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "blurbpane");

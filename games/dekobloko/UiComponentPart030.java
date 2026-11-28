@@ -244,8 +244,8 @@ abstract class UiComponentPart030 extends UiComponentPart003 {
             stackIndexedSpriteArrayLocal4 = (IndexedSprite[]) null;
             return stackIndexedSpriteArrayLocal4;
           }
-          integerLocal1 = resourceArchiveArgument2.computeInteger0819(-1, stringArgument4);
-          integerLocal3 = resourceArchiveArgument2.computeInteger0806(integerLocal1, 13030, stringArgument1);
+          integerLocal1 = resourceArchiveArgument2.getGroupIdByName(-1, stringArgument4);
+          integerLocal3 = resourceArchiveArgument2.getFileIdByName(integerLocal1, 13030, stringArgument1);
           stackIndexedSpriteArrayLocal5 = MixedSupport094.computeIndexedSpriteArray1199(integerLocal3, (byte) 37, integerLocal1, resourceArchiveArgument2);
           return stackIndexedSpriteArrayLocal5;
         } catch (java.lang.RuntimeException caughtParameterLocal14) {

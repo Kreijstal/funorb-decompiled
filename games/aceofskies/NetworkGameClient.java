@@ -112,7 +112,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               if (hb.field_a.a((byte) 118)) {
                 PacketBuffer var12 = hb.field_a.a(true);
                 if (var12 != null) {
-                  String var7 = SocketArchiveNetworkClient.a(65, var12.position, 0, var12.payload);
+                  String var7 = SocketArchiveNetworkClient.decodeCp1252String(65, var12.position, 0, var12.payload);
                   hp.a((byte) -121, var7);
                 } else {
                   String var9 = (String) null;
@@ -514,7 +514,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (SectorCacheStore.field_c == 2) {
           if (ij.field_h != null &&
-            ij.field_h.b((byte) 104)) {
+            ij.field_h.ensureIndexLoaded((byte) 104)) {
             if (!ij.field_h.a("", 116)) {
               ij.field_h = null;
             } else if (ij.field_h.c("", -14012)) {
@@ -564,8 +564,8 @@ abstract class NetworkGameClient extends GameAppletShell {
           SectorCacheStore.field_c = 11;
         }
         if (SectorCacheStore.field_c == 11) {
-          if (null != fn.field_a && (!fn.field_a.b((byte) -88) ||
-            !fn.field_a.b(0))) {
+          if (null != fn.field_a && (!fn.field_a.ensureIndexLoaded((byte) -88) ||
+            !fn.field_a.tryLoadAllGroups(0))) {
             fh.setLoadingProgress(-82, 0.0f, Vector2.a(dt.field_b, gm.field_w, fn.field_a, 50));
             boolean decompiledFrameRemainder0 = false;
           }

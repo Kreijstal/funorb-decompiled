@@ -67,7 +67,7 @@ final class FoodShopPanel {
         int var7Lifetime1;
         boolean decompiledFrameRemainder2 = true;
         var11 = BachelorFridge.field_y;
-        Math.sin((double)vr.field_b / 10.0 * 0.5);
+        Math.sin((double)ResourceArchive.field_b / 10.0 * 0.5);
         if (FloodEvent.field_q &&
           this.field_s.field_T &&
           cc.field_b.children == null) {

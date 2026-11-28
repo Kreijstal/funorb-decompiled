@@ -14,7 +14,7 @@ abstract class SpriteGeometry extends DualLinkNode {
     static int field_n;
     static String[] field_r;
 
-    final static boolean a(ki param0, int param1) {
+    final static boolean a(ResourceArchive param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -25,7 +25,7 @@ abstract class SpriteGeometry extends DualLinkNode {
           if (param1 != 26810) {
             SpriteGeometry.clearDeclaredStaticReferences(4);
           }
-          stackIn_3_0 = param0.c(7715);
+          stackIn_3_0 = param0.tryLoadAllGroups(7715);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

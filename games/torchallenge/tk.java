@@ -137,7 +137,7 @@ final class tk extends ng {
         RuntimeException decompiledCaughtException = null;
         var6 = TorChallenge.field_F ? 1 : 0;
         try {
-          var10 = bh.field_q.a(-2, "font", "");
+          var10 = bh.field_q.getFileByName(-2, "font", "");
           var8 = var10;
           var7 = var8;
           var1 = var7;
@@ -212,7 +212,7 @@ final class tk extends ng {
           if (param3 != 256) {
             field_R = (BitmapFont) null;
           }
-          if (!param1.b(param3 - 8213)) {
+          if (!param1.ensureIndexLoaded(param3 - 8213)) {
             stackIn_5_0 = (String) (param0);
             return stackIn_5_0;
           }

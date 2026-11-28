@@ -105,7 +105,7 @@ abstract class SocketConnector {
 
     abstract java.net.Socket a(int param0) throws IOException;
 
-    final static ci a(boolean param0, byte param1, int param2, int param3, boolean param4) {
+    final static ResourceArchive a(boolean param0, byte param1, int param2, int param3, boolean param4) {
         if (param1 == 77) {
           return mh.a(-26159, param4, param0, false, param2, param3);
         }

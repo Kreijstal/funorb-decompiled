@@ -2552,7 +2552,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "keychar_the_character_under_questionmark");
                 if (var2 != null) {
-                  IntKeyLookup.a(var2[0], 29337);
+                  IntKeyLookup.decodeCp1252Byte(var2[0], 29337);
                 }
                 var2 = lr.a(4688, "rating_noratings");
                 if (null != var2) {

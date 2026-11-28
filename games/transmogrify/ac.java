@@ -36,7 +36,7 @@ final class ac extends kk {
         }
     }
 
-    final static si a(int param0, int param1, ci param2) {
+    final static si a(int param0, int param1, ResourceArchive param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -72,8 +72,8 @@ final class ac extends kk {
 
     final nk a(int param0) {
         if (param0 != -184) {
-          ci var3 = (ci) null;
-          ac.a(31, -57, (ci) null);
+          ResourceArchive var3 = (ResourceArchive) null;
+          ac.a(31, -57, (ResourceArchive) null);
           return wh.field_I;
         }
         return wh.field_I;
@@ -123,7 +123,7 @@ final class ac extends kk {
         }
     }
 
-    final static Sprite a(int param0, int param1, ci param2, boolean param3) {
+    final static Sprite a(int param0, int param1, ResourceArchive param2, boolean param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

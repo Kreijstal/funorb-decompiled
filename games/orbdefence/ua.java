@@ -94,7 +94,7 @@ final class ua {
         return param0 + 1;
     }
 
-    final static RgbSprite[] a(ki param0, int param1, int param2, int param3) {
+    final static RgbSprite[] a(ResourceArchive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         RgbSprite[] stackIn_2_0 = null;
         Object stackIn_5_0 = null;

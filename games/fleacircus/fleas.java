@@ -1266,25 +1266,25 @@ public final class fleas extends NetworkGameClient {
         try {
           MidiPcmStream.b(true);
           if (null != pb.field_a) {
-            if (a.field_a.b((byte) -100) &&
+            if (a.field_a.ensureIndexLoaded((byte) -100) &&
               a.field_a.a("basic", -116) &&
               a.field_a.a("roman12", -112) &&
               a.field_a.a("roman20", -113)) {
-              if (pb.field_a.b((byte) -110) &&
-                pb.field_a.a(-116)) {
-                if (ib.field_f.b((byte) -125) &&
-                  ib.field_f.a(-128)) {
-                  if (DualLinkNode.field_l.b((byte) -102) &&
-                    DualLinkNode.field_l.a(-22)) {
-                    if (ob.field_d.b((byte) -108) &&
-                      ob.field_d.a(-72)) {
-                      if (jc.field_e.b((byte) -104) &&
-                        jc.field_e.a(-36)) {
-                        if (hm.field_g.b((byte) -124) &&
-                          hm.field_g.a(-76)) {
-                          if (de.field_h.b((byte) -122) &&
-                            de.field_h.a(-54)) {
-                            if (pf.field_b.b((byte) -106) &&
+              if (pb.field_a.ensureIndexLoaded((byte) -110) &&
+                pb.field_a.tryLoadAllGroups(-116)) {
+                if (ib.field_f.ensureIndexLoaded((byte) -125) &&
+                  ib.field_f.tryLoadAllGroups(-128)) {
+                  if (DualLinkNode.field_l.ensureIndexLoaded((byte) -102) &&
+                    DualLinkNode.field_l.tryLoadAllGroups(-22)) {
+                    if (ob.field_d.ensureIndexLoaded((byte) -108) &&
+                      ob.field_d.tryLoadAllGroups(-72)) {
+                      if (jc.field_e.ensureIndexLoaded((byte) -104) &&
+                        jc.field_e.tryLoadAllGroups(-36)) {
+                        if (hm.field_g.ensureIndexLoaded((byte) -124) &&
+                          hm.field_g.tryLoadAllGroups(-76)) {
+                          if (de.field_h.ensureIndexLoaded((byte) -122) &&
+                            de.field_h.tryLoadAllGroups(-54)) {
+                            if (pf.field_b.ensureIndexLoaded((byte) -106) &&
                               pf.field_b.a("roman12", -106) &&
                               pf.field_b.a("roman20", -118)) {
                               jj.a(55.0f, ri.field_s, true);
@@ -1422,7 +1422,7 @@ public final class fleas extends NetworkGameClient {
             boolean decompiledFrameCompleted1 = true;
             if (var5 > var6) {
               var4_ref_String = 1 + var6 + ".lvl";
-              var3 = DualLinkNode.field_l.a(0, var4_ref_String, "");
+              var3 = DualLinkNode.field_l.getFileByName(0, var4_ref_String, "");
               stackIn_126_0 = null;
               stackIn_126_1 = var3;
               if (var10 != 0) {
@@ -1452,7 +1452,7 @@ public final class fleas extends NetworkGameClient {
               var6 = 0;
               while (var6 < var5) {
                 var4_ref_StringLifetime1 = "classic_" + (1 + var6) + ".lvl";
-                var3Lifetime1 = DualLinkNode.field_l.a(0, var4_ref_StringLifetime1, "");
+                var3Lifetime1 = DualLinkNode.field_l.getFileByName(0, var4_ref_StringLifetime1, "");
                 stackIn_137_0 = null;
                 if (var10 != 0) {
                   decompiledFrameCompleted0 = false;

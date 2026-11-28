@@ -24,7 +24,7 @@ final class hk {
         field_b = null;
     }
 
-    final static Sprite[] a(String param0, vr param1, int param2, String param3) {
+    final static Sprite[] a(String param0, ResourceArchive param1, int param2, String param3) {
         Sprite[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;

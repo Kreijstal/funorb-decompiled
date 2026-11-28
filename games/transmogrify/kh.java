@@ -26,7 +26,7 @@ final class kh {
     }
 
     final static void a(int param0, boolean param1) {
-        ci.field_f.a(0, -46, 0);
+        ResourceArchive.field_f.a(0, -46, 0);
         if (param0 > -28) {
           kh.a((byte) 88);
         }

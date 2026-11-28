@@ -231,11 +231,11 @@ abstract class ve {
               if (jd.field_c > 0) {
                 MidiPcmStream.field_F = true;
               }
-              SpriteGeometry.field_q.a(l.field_F, param1 ^ -48);
+              SpriteGeometry.field_q.setCipherSeed(l.field_F, param1 ^ -48);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 l.field_F[var8Lifetime1] = l.field_F[var8Lifetime1] + 50;
               }
-              ig.field_a.a(l.field_F, 16);
+              ig.field_a.setCipherSeed(l.field_F, 16);
               stackIn_73_0 = pg.field_d;
               return stackIn_73_0;
             }

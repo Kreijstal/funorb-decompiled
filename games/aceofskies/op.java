@@ -54,7 +54,7 @@ final class op {
     }
 
     final static void a(int param0, ResourceArchive param1) {
-        VorbisSample.a(param1.a("headers.packvorbis", (byte) -71, ""));
+        VorbisSample.a(param1.getFileByName("headers.packvorbis", (byte) -71, ""));
         if (param0 != 20786) {
           return;
         }

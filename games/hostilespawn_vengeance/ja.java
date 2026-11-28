@@ -47,24 +47,24 @@ final class ja {
         }
         while (this.field_a > this.field_i) {
           var4 = this.field_j[this.field_i];
-          if (!var4.field_a.a(-15879)) {
+          if (!var4.field_a.ensureIndexLoaded(-15879)) {
             this.a(0, 20467, var4);
             return false;
           }
           if (var4.field_f >= 0 &&
-            !var4.field_a.a(var4.field_f, (byte) 8)) {
-            this.a(var4.field_a.b(-8102, var4.field_f), 20467, var4);
+            !var4.field_a.tryLoadGroup(var4.field_f, (byte) 8)) {
+            this.a(var4.field_a.getGroupLoadPercent(-8102, var4.field_f), 20467, var4);
             return false;
           }
           if (null != var4.field_c &&
             !var4.field_a.a(-8088, var4.field_c)) {
-            this.a(var4.field_a.b(-113, var4.field_c), 20467, var4);
+            this.a(var4.field_a.getGroupLoadPercentByName(-113, var4.field_c), 20467, var4);
             return false;
           }
           if (var4.field_f < 0 &&
             null == var4.field_c &&
             var4.field_g != null &&
-            !var4.field_a.e(0)) {
+            !var4.field_a.tryLoadAllGroups(0)) {
             this.a(var4.field_a.c(0), 20467, var4);
             return false;
           }

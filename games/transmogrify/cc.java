@@ -10,7 +10,7 @@ final class cc {
     static String field_b;
     static int[] field_f;
 
-    final static Sprite[] a(int param0, ci param1, int param2, int param3) {
+    final static Sprite[] a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Sprite[] stackIn_2_0 = null;
         Object stackIn_5_0 = null;
@@ -44,7 +44,7 @@ final class cc {
         }
     }
 
-    final static String a(int param0, int param1, int param2, byte[] param3) {
+    final static String decodeCp1252String(int param0, int param1, int param2, byte[] param3) {
         int var6 = 0;
         int incrementValue$0 = 0;
         char[] var4 = null;

@@ -159,44 +159,44 @@ final class mh {
           return vj.field_a;
         }
         if (null != hg.field_a) {
-          if (!hg.field_a.a((byte) -118)) {
+          if (!hg.field_a.ensureIndexLoaded((byte) -118)) {
             return ByteStorage.field_c;
           }
           return od.field_h;
         }
-        if (!RasterBuffer.field_c.a((byte) -124)) {
+        if (!RasterBuffer.field_c.ensureIndexLoaded((byte) -124)) {
           return vg.field_a;
         }
         if (!RasterBuffer.field_c.a((byte) 120, "commonui")) {
-          return aa.field_f + " - " + RasterBuffer.field_c.a(0, "commonui") + "%";
+          return aa.field_f + " - " + RasterBuffer.field_c.getGroupLoadPercentByName(0, "commonui") + "%";
         }
         if (param0 <= 75) {
           return (String) null;
         }
-        if (!wi.field_e.a((byte) -121)) {
+        if (!wi.field_e.ensureIndexLoaded((byte) -121)) {
           return ByteStorage.field_a;
         }
         if (!wi.field_e.a((byte) 120, "commonui")) {
-          return i.field_c + " - " + wi.field_e.a(0, "commonui") + "%";
+          return i.field_c + " - " + wi.field_e.getGroupLoadPercentByName(0, "commonui") + "%";
         }
-        if (!DelayedPcmStream.field_n.a((byte) -123)) {
+        if (!DelayedPcmStream.field_n.ensureIndexLoaded((byte) -123)) {
           return gk.field_a;
         }
-        if (!DelayedPcmStream.field_n.c(32031)) {
+        if (!DelayedPcmStream.field_n.tryLoadAllGroups(32031)) {
           return fj.field_b + " - " + DelayedPcmStream.field_n.b(-22884) + "%";
         }
         return field_d;
     }
 
-    final static ci a(int param0, boolean param1, boolean param2, boolean param3, int param4, int param5) {
+    final static ResourceArchive a(int param0, boolean param1, boolean param2, boolean param3, int param4, int param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           be var8 = null;
-          ci stackIn_15_0 = null;
+          ResourceArchive stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
           if (param0 != -26159) {
-            return (ci) null;
+            return (ResourceArchive) null;
           }
           try {
             var6 = null;
@@ -220,7 +220,7 @@ final class mh {
             if (param1) {
               var8.a(true);
             }
-            stackIn_15_0 = new ci(var8, param2, param4);
+            stackIn_15_0 = new ResourceArchive(var8, param2, param4);
             return stackIn_15_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

@@ -34,8 +34,8 @@ final class HighscoreNameEntry {
           if (param4 != 24) {
             HighscoreNameEntry.a(-112);
           }
-          int var5_int = param0.b(param2, 0);
-          int var6 = param0.a(-79, var5_int, param1);
+          int var5_int = param0.getGroupIdByName(param2, 0);
+          int var6 = param0.getFileIdByName(-79, var5_int, param1);
           MonochromeBitmapFont stackIn_3_0 = eo.a(param0, var6, -112, var5_int, param3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

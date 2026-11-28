@@ -492,11 +492,11 @@ final class lc {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_i.a(param0, 1000);
+          var5_int = this.field_i.getGroupIdByName(param0, 1000);
           if (var5_int < 0) {
             return null;
           }
-          var6 = this.field_i.a(0, param3, var5_int);
+          var6 = this.field_i.getFileIdByName(0, param3, var5_int);
           if (param2 < 85) {
             var7 = (int[]) null;
             this.a((int[]) null, (byte) 102, -108);
@@ -547,14 +547,14 @@ final class lc {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_b.a(param1, param2 ^ 47133);
+          var5_int = this.field_b.getGroupIdByName(param1, param2 ^ 47133);
           if (var5_int < 0) {
             return null;
           }
           if (param2 != 48117) {
             field_k = (String[]) null;
           }
-          var6 = this.field_b.a(0, param3, var5_int);
+          var6 = this.field_b.getFileIdByName(0, param3, var5_int);
           if (0 > var6) {
             return null;
           }

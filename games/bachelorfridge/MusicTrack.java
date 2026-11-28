@@ -5,8 +5,8 @@ final class MusicTrack extends IntrusiveNode {
     IntrusiveNodeHashTable field_f;
     byte[] field_g;
 
-    final static MusicTrack a(vr param0, String param1, String param2) {
-        byte[] var3 = param0.a((byte) 123, param2, param1);
+    final static MusicTrack a(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.getFileByName((byte) 123, param2, param1);
         if (var3 == null) {
           return null;
         }

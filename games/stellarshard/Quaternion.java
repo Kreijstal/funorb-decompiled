@@ -153,7 +153,7 @@ final class Quaternion {
         this.w = 1.0;
     }
 
-    final static String a(String param0, pf param1, String param2, int param3) {
+    final static String a(String param0, ResourceArchive param1, String param2, int param3) {
         RuntimeException var4 = null;
         String var5 = null;
         String stackIn_2_0 = null;
@@ -167,13 +167,13 @@ final class Quaternion {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param1.a((byte) -36)) {
+          if (!param1.ensureIndexLoaded((byte) -36)) {
             stackIn_2_0 = (String) (param2);
             return stackIn_2_0;
           }
           if (param3 != 1) {
             var5 = (String) null;
-            Quaternion.a((String) null, (pf) null, (String) null, 1);
+            Quaternion.a((String) null, (ResourceArchive) null, (String) null, 1);
           }
           stackIn_6_0 = param0 + " - " + param1.b((byte) 1) + "%";
           return stackIn_6_0;

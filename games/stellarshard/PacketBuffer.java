@@ -4,7 +4,7 @@
 class PacketBuffer extends IntrusiveNode {
     static int field_q;
     static int field_p;
-    static pf field_n;
+    static ResourceArchive field_n;
     int position;
     static String field_l;
     static AudioMixer field_m;
@@ -77,7 +77,7 @@ class PacketBuffer extends IntrusiveNode {
         if (0 == var4) {
           return "";
         }
-        return kk.a(var4, (byte) 121, var3, this.payload);
+        return kk.decodeCp1252String(var4, (byte) 121, var3, this.payload);
     }
 
     final void writeByte(boolean param0, int param1) {
@@ -103,7 +103,7 @@ class PacketBuffer extends IntrusiveNode {
           return "";
         }
         if (param0 >= 78) {
-          return kk.a(var3, (byte) 93, var2, this.payload);
+          return kk.decodeCp1252String(var3, (byte) 93, var2, this.payload);
         }
         return (String) null;
     }
@@ -305,7 +305,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var4 = (CharSequence) ((Object) param0);
-          this.position = this.position + qi.a(this.payload, param1 + 9689, this.position, 0, var4, param0.length());
+          this.position = this.position + qi.encodeCp1252Subsequence(this.payload, param1 + 9689, this.position, 0, var4, param0.length());
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -483,7 +483,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           var5 = (CharSequence) ((Object) param1);
-          this.position = this.position + qi.a(this.payload, -53, this.position, 0, var5, param1.length());
+          this.position = this.position + qi.encodeCp1252Subsequence(this.payload, -53, this.position, 0, var5, param1.length());
           int var4 = 89 % ((37 - param0) / 39);
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
@@ -623,7 +623,7 @@ class PacketBuffer extends IntrusiveNode {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 != -64) {
-          field_n = (pf) null;
+          field_n = (ResourceArchive) null;
           var2 = this.payload[this.position] & 255;
           if (var2 >= 128) {
             return -49152 + this.readUnsignedShort((byte) 43);

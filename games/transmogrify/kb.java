@@ -39,7 +39,7 @@ class kb extends DualLinkNode {
           if (param1 <= 104) {
             kb.clearStaticReferences(true);
           }
-          stackIn_3_0 = AchievementUnlockEvent.field_g.a(param0, (byte) 118, "");
+          stackIn_3_0 = AchievementUnlockEvent.field_g.getFileByName(param0, (byte) 118, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

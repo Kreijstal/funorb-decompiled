@@ -33,7 +33,7 @@ final class HighscoreQuery extends IntrusiveNode {
             return (CoverageBitmapFont) (stackIn_2_0);
           }
           int var5_int = -15 / ((param0 - 65) / 51);
-          CoverageBitmapFont stackIn_4_0 = te.a(param1.a(param4, -10470, param2), -80);
+          CoverageBitmapFont stackIn_4_0 = te.a(param1.getFile(param4, -10470, param2), -80);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

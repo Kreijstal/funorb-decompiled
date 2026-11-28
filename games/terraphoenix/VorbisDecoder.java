@@ -52,7 +52,7 @@ final class VorbisDecoder extends IntrusiveNode {
             param0.a(param2, (byte) 104, param1);
             return null;
           }
-          byte[] var3 = param0.a(param1, param2, -21653);
+          byte[] var3 = param0.getFileByName(param1, param2, -21653);
           if (var3 == null) {
             return null;
           }
@@ -97,10 +97,10 @@ final class VorbisDecoder extends IntrusiveNode {
         try {
           VorbisDecoder var4_ref = null;
           if (!VorbisDecoder.a(param0)) {
-            param0.a(false, param2, param1);
+            param0.tryLoadFile(false, param2, param1);
             return null;
           }
-          byte[] var3 = param0.b(param1, 119, param2);
+          byte[] var3 = param0.getFile(param1, 119, param2);
           if (var3 == null) {
             return null;
           }
@@ -174,7 +174,7 @@ final class VorbisDecoder extends IntrusiveNode {
     private final static boolean a(Archive param0) {
         byte[] var1 = null;
         if (!field_I) {
-          var1 = param0.b(0, -100, 0);
+          var1 = param0.getFile(0, -100, 0);
           if (var1 == null) {
             return false;
           }

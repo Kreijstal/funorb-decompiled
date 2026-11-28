@@ -29,7 +29,7 @@ final class ac extends IntrusiveNode {
         this.field_s = param3;
     }
 
-    final static em a(nk param0, boolean param1) {
+    final static em a(BitPacketBuffer param0, boolean param1) {
         int var7 = 0;
         em stackIn_24_0 = null;
         RuntimeException stackIn_27_0 = null;
@@ -45,23 +45,23 @@ final class ac extends IntrusiveNode {
         int var8 = 0;
         var8 = Chess.field_G;
         try {
-          var2_int = param0.e(117, 8);
+          var2_int = param0.readBits(117, 8);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
           var3 = r.a(true, param0) ? 1 : 0;
           var4 = r.a(true, param0) ? 1 : 0;
           var5 = new em();
-          var5.field_d = (short)param0.e(-58, 16);
+          var5.field_d = (short)param0.readBits(-58, 16);
           var5.field_z = ml.a(var5.field_z, 16, param0, 119);
           var5.field_a = ml.a(var5.field_a, 16, param0, 78);
           var5.field_H = ml.a(var5.field_H, 16, param0, 50);
-          var5.field_e = (short)param0.e(119, 16);
+          var5.field_e = (short)param0.readBits(119, 16);
           var5.field_g = ml.a(var5.field_g, 16, param0, 63);
           var5.field_A = ml.a(var5.field_A, 16, param0, 118);
           var5.field_J = ml.a(var5.field_J, 16, param0, 62);
           if (var3 != 0) {
-            var5.field_t = (short)param0.e(-88, 16);
+            var5.field_t = (short)param0.readBits(-88, 16);
             var5.field_b = ml.a(var5.field_b, 16, param0, 106);
             var5.field_f = ml.a(var5.field_f, 16, param0, 42);
             var5.field_F = ml.a(var5.field_F, 16, param0, 83);
@@ -70,7 +70,7 @@ final class ac extends IntrusiveNode {
             var5.field_E = ml.a(var5.field_E, 16, param0, 64);
           }
           if (var4 != 0) {
-            param0.e(-32, 16);
+            param0.readBits(-32, 16);
             var5.field_B = ml.a(var5.field_B, 16, param0, 70);
             var5.field_N = ml.a(var5.field_N, 16, param0, 89);
             var5.field_o = ml.a(var5.field_o, 16, param0, 74);

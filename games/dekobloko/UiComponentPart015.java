@@ -58,8 +58,8 @@ final class UiComponentPart015 extends ComponentDecorator {
           if (integerArgument4 != 8192) {
             sceneWidgetPart010State0002 = (SceneWidgetPart010) null;
           }
-          integerLocal1 = resourceArchiveArgument1.computeInteger0819(-1, stringArgument3);
-          integerLocal3 = resourceArchiveArgument1.computeInteger0806(integerLocal1, 13030, stringArgument2);
+          integerLocal1 = resourceArchiveArgument1.getGroupIdByName(-1, stringArgument3);
+          integerLocal3 = resourceArchiveArgument1.getFileIdByName(integerLocal1, 13030, stringArgument2);
           stackRgbSpriteLocal4 = MixedSupport004.computeRgbSprite0052(integerLocal3, 50, resourceArchiveArgument1, integerLocal1);
           return stackRgbSpriteLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal13) {

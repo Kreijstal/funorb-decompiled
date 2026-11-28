@@ -518,7 +518,7 @@ abstract class gb extends GameAppletShell {
           if (se.field_V != 0) {
             qa.field_c = ri.a(dh.field_c, (byte) 127);
           }
-          fl.field_m = sh.a(1, nk.field_q, true, 935, false);
+          fl.field_m = sh.a(1, BitPacketBuffer.field_q, true, 935, false);
           Chess.field_B = sh.a(1, m.field_b, true, 935, false);
           bi.field_a = sh.a(1, kf.field_u, true, 935, false);
           hm.field_e = fl.field_m;
@@ -527,7 +527,7 @@ abstract class gb extends GameAppletShell {
         }
         if (il.field_a == 2) {
           if (null != qa.field_c &&
-            qa.field_c.c((byte) 124)) {
+            qa.field_c.ensureIndexLoaded((byte) 124)) {
             if (!qa.field_c.a(4, "")) {
               qa.field_c = null;
             } else {
@@ -581,8 +581,8 @@ abstract class gb extends GameAppletShell {
         }
         boolean decompiledFrameRemainder0 = true;
         if (il.field_a == 11) {
-          if (null != td.field_o && (!td.field_o.c((byte) 123) ||
-            !td.field_o.b((byte) -40))) {
+          if (null != td.field_o && (!td.field_o.ensureIndexLoaded((byte) 123) ||
+            !td.field_o.tryLoadAllGroups((byte) -40))) {
             nj.a(-20, da.a(uk.field_a, e.field_T, td.field_o, -123), 0.0f);
             decompiledFrameRemainder0 = false;
           }
@@ -635,12 +635,12 @@ abstract class gb extends GameAppletShell {
         this.setBackground(java.awt.Color.black);
         se.field_V = this.field_v;
         sc.a(se.field_V, false);
-        jn.a(this.field_u, oc.field_l, this.field_w, se.field_V, this.field_r, 5000, this.field_x, this.field_p, (byte) -121, 5000, param5, this.field_m, param4, this.field_q);
+        jn.initializeNetworkState(this.field_u, oc.field_l, this.field_w, se.field_V, this.field_r, 5000, this.field_x, this.field_p, (byte) -121, 5000, param5, this.field_m, param4, this.field_q);
         jb.a(350, this.field_w, se.field_V, param4, this.field_r, oc.field_l, this.field_q, this.field_x, this.field_m);
         bf.g((byte) 69);
         ii.field_L = sa.createMouseWheelInput(param6 + 28);
         ca.a(13369344, DirectByteStorage.field_h);
-        nk.field_q = param2;
+        BitPacketBuffer.field_q = param2;
         kf.field_u = param0;
         dh.field_c = param3;
         m.field_b = param7;
@@ -746,7 +746,7 @@ abstract class gb extends GameAppletShell {
             le.a(126, bh.i(81));
           }
           if (var4 == 10) {
-            qn.field_U.f(17, -93);
+            qn.field_U.writeCipheredByte(17, -93);
           }
           if (var4 == 11) {
             jd.a((byte) -117, bh.i(81));
@@ -762,7 +762,7 @@ abstract class gb extends GameAppletShell {
               if (ki.field_M.a(17)) {
                 var12 = ki.field_M.b(-120);
                 if (var12 != null) {
-                  var7 = gh.a(var12.data, 0, -161, var12.position);
+                  var7 = gh.decodeCp1252String(var12.data, 0, -161, var12.position);
                   ge.a(var7, (byte) 107);
                 } else {
                   var9 = (String) null;
@@ -807,7 +807,7 @@ abstract class gb extends GameAppletShell {
         if (param0 >= -110) {
           this.field_p = 64L;
         }
-        tk.field_h.a(var4, var5, false, 0);
+        tk.field_h.readCipheredBytes(var4, var5, false, 0);
         fe.a(ad.a(-29410, var5), var3 != 0, (byte) 16, bh.i(81));
     }
 

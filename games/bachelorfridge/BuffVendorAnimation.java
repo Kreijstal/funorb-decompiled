@@ -103,7 +103,7 @@ final class BuffVendorAnimation extends EventAnimation {
             var3 = (String) null;
             BuffVendorAnimation.a(-51L, (String) null, true);
           }
-          stackIn_3_0 = IsaacRandom.field_g.a((byte) 123, param0, "");
+          stackIn_3_0 = IsaacRandom.field_g.getFileByName((byte) 123, param0, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

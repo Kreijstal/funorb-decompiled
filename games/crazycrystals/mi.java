@@ -78,9 +78,9 @@ final class mi extends ea implements Cloneable {
         }
     }
 
-    final static db c(int param0, int param1) {
+    final static ResourceArchive c(int param0, int param1) {
         if (param1 > -94) {
-          return (db) null;
+          return (ResourceArchive) null;
         }
         return qk.a(param0, -114, false, true, false, 1);
     }

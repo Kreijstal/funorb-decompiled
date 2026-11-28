@@ -461,7 +461,7 @@ final class mk extends vd implements nk, qk, kn {
           if (param1 > -118) {
             field_L = (nc) null;
           }
-          stackIn_3_0 = ll.field_e.a(param0, "", 0);
+          stackIn_3_0 = ll.field_e.getFileByName(param0, "", 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

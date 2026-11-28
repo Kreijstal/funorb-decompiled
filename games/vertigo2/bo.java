@@ -48,11 +48,11 @@ final class bo extends IntrusiveNode {
         field_p = null;
         if (param0 <= 65) {
           CharSequence var2 = (CharSequence) null;
-          bo.a((CharSequence) null, 23);
+          bo.encodeCp1252Bytes((CharSequence) null, 23);
         }
     }
 
-    final static byte[] a(CharSequence param0, int param1) {
+    final static byte[] encodeCp1252Bytes(CharSequence param0, int param1) {
         int var4 = 0;
         byte[] stackIn_3_0 = null;
         byte[] stackIn_70_0 = null;

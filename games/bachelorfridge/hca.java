@@ -7,7 +7,7 @@ final class hca {
     UiComponent field_c;
     private int field_b;
 
-    final static Sprite a(String param0, vr param1, int param2, String param3) {
+    final static Sprite a(String param0, ResourceArchive param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -23,8 +23,8 @@ final class hca {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = 18 % ((param2 - 27) / 43);
-          var4_int = param1.a(param0, false);
-          var6 = param1.a((byte) 6, var4_int, param3);
+          var4_int = param1.getGroupId(param0, false);
+          var6 = param1.getFileId((byte) 6, var4_int, param3);
           stackIn_1_0 = jha.a(param1, (byte) 4, var4_int, var6);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

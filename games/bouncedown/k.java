@@ -87,7 +87,7 @@ final class k extends lc implements rc {
 
     public k() {
         super(0, 0, 476, 225, (fc) null);
-        this.field_z = new wd(gk.field_m, (sk) null);
+        this.field_z = new wd(ResourceArchive.field_m, (sk) null);
         this.field_A = new wd(AccountServiceResult.field_e, (sk) null);
         this.field_F = new wd(bi.field_i, (sk) null);
         jh var1 = new jh();

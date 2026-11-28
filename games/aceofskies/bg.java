@@ -16,7 +16,7 @@ final class bg {
           int var2_int = param0.length();
           int var3 = 0;
           for (int var4 = 0; var4 < var2_int; var4++) {
-            var3 = ae.a(param0.charAt(var4), -117) - var3 + (var3 << 5);
+            var3 = ae.encodeCp1252Character(param0.charAt(var4), -117) - var3 + (var3 << 5);
           }
           int stackIn_7_0 = var3;
           return stackIn_7_0;

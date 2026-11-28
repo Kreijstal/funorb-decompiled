@@ -57,8 +57,8 @@ final class Bzip2State {
     }
 
     final static void a(int param0, int param1) {
-        hj var2 = ff.field_D;
-        var2.a(false, param1);
+        BitPacketBuffer var2 = ff.field_D;
+        var2.writeCipheredByte(false, param1);
         var2.writeByte(6389, 1);
         var2.writeByte(6389, param0);
     }

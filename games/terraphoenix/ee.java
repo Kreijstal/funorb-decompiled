@@ -199,7 +199,7 @@ final class ee {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          VorbisDecoder.a(param1.a("headers.packvorbis", "", -21653));
+          VorbisDecoder.a(param1.getFileByName("headers.packvorbis", "", -21653));
           var2 = VorbisDecoder.a(param1, "jagex logo2.packvorbis", "");
           if (param0 != 51) {
             return;
@@ -241,7 +241,7 @@ final class ee {
         int stackIn_56_0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_48_0;
-        uc var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         Object var3 = null;

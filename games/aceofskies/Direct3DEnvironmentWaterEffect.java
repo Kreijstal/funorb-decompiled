@@ -78,8 +78,8 @@ final class Direct3DEnvironmentWaterEffect extends RenderEffect {
           this.field_h = null;
           return;
         }
-        this.field_i = this.field_f.field_Rc.b(param1.a("dx", (byte) -71, "environment_mapped_water_v"));
-        this.field_h = this.field_f.field_Rc.a(param1.a("dx", (byte) -71, "environment_mapped_water_f"));
+        this.field_i = this.field_f.field_Rc.b(param1.getFileByName("dx", (byte) -71, "environment_mapped_water_v"));
+        this.field_h = this.field_f.field_Rc.a(param1.getFileByName("dx", (byte) -71, "environment_mapped_water_f"));
         boolean stackIn_9_1 = (null != this.field_i) && (null != this.field_h) && (this.field_g.a(0));
         this.field_l = stackIn_9_1;
     }

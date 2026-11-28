@@ -152,28 +152,28 @@ final class DiveBomberAnimation extends EventAnimation {
           return dc.field_m;
         }
         if (null != lh.field_s) {
-          if (!lh.field_s.a(0)) {
+          if (!lh.field_s.ensureIndexLoaded(0)) {
             return OneAnimation.field_G;
           }
           return rj.field_q;
         }
-        if (!Bzip2State.field_B.a(param0 ^ param0)) {
+        if (!Bzip2State.field_B.ensureIndexLoaded(param0 ^ param0)) {
           return TileEffect.field_a;
         }
-        if (!Bzip2State.field_B.a("commonui", 20637)) {
-          return iea.field_b + " - " + Bzip2State.field_B.a(0, "commonui") + "%";
+        if (!Bzip2State.field_B.tryLoadGroupByName("commonui", 20637)) {
+          return iea.field_b + " - " + Bzip2State.field_B.getGroupLoadPercentByName(0, "commonui") + "%";
         }
-        if (!fi.field_n.a(param0 + 10284)) {
+        if (!fi.field_n.ensureIndexLoaded(param0 + 10284)) {
           return is.field_d;
         }
-        if (!fi.field_n.a("commonui", 20637)) {
-          return jh.field_m + " - " + fi.field_n.a(0, "commonui") + "%";
+        if (!fi.field_n.tryLoadGroupByName("commonui", 20637)) {
+          return jh.field_m + " - " + fi.field_n.getGroupLoadPercentByName(0, "commonui") + "%";
         }
-        if (!em.field_T.a(0)) {
+        if (!em.field_T.ensureIndexLoaded(0)) {
           return AirstrikeSpecial.field_p;
         }
-        if (!em.field_T.b((byte) 110)) {
-          return SetFriendlyEffect.field_i + " - " + em.field_T.a(true) + "%";
+        if (!em.field_T.tryLoadAllGroups((byte) 110)) {
+          return SetFriendlyEffect.field_i + " - " + em.field_T.getLoadPercent(true) + "%";
         }
         return fo.field_b;
     }

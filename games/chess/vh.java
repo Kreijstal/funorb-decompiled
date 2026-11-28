@@ -65,7 +65,7 @@ final class vh {
             tb.field_f == NodeHashTableIterator.field_e)) {
             if (qn.field_U.position == 0 &&
               (10000L + ta.field_t) < ud.correctedCurrentTimeMillis(2)) {
-              qn.field_U.f(param0, -105);
+              qn.field_U.writeCipheredByte(param0, -105);
             }
             if (qn.field_U.position > 0) {
               try {
@@ -99,7 +99,7 @@ final class vh {
           if (param0 <= 41) {
             field_d = (String) null;
           }
-          stackIn_3_0 = jj.field_e.a("", 30045, param1);
+          stackIn_3_0 = jj.field_e.getFileByName("", 30045, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

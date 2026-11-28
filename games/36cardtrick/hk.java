@@ -14,7 +14,7 @@ final class hk {
         }
     }
 
-    final static ha[] a(int param0, w param1) {
+    final static ha[] a(int param0, BitPacketBuffer param1) {
         ha[] stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -31,27 +31,27 @@ final class hk {
         int var8 = 0;
         var8 = Main.field_T;
         try {
-          var2_int = param1.g(8, -1);
+          var2_int = param1.readBits(8, -1);
           if (var2_int > 0) {
             return null;
           }
-          var3 = param1.g(12, -1);
+          var3 = param1.readBits(12, -1);
           var4 = new ha[var3];
           var5 = 0;
           var6 = -40 % ((12 - param0) / 38);
           while (var3 > var5) {
             if (!di.a((byte) -78, param1)) {
-              var7 = param1.g(AccountNameAvailabilityValidator.b(-27571, -1 + var5), -1);
+              var7 = param1.readBits(AccountNameAvailabilityValidator.b(-27571, -1 + var5), -1);
               var4[var5] = var4[var7];
             } else {
               var7_ref_ha = new ha();
-              param1.g(24, -1);
-              param1.g(24, -1);
-              var7_ref_ha.field_b = param1.g(24, -1);
-              param1.g(9, -1);
-              param1.g(12, -1);
-              param1.g(12, -1);
-              param1.g(12, -1);
+              param1.readBits(24, -1);
+              param1.readBits(24, -1);
+              var7_ref_ha.field_b = param1.readBits(24, -1);
+              param1.readBits(9, -1);
+              param1.readBits(12, -1);
+              param1.readBits(12, -1);
+              param1.readBits(12, -1);
               var4[var5] = var7_ref_ha;
             }
             var5++;
@@ -75,8 +75,8 @@ final class hk {
     final static void a(byte param0, int param1, int param2) {
         gl.a(param2, BufferedSocket.field_c[param1], ca.field_c[param1], 804);
         if (param0 <= 121) {
-          w var4 = (w) null;
-          hk.a(-7, (w) null);
+          BitPacketBuffer var4 = (BitPacketBuffer) null;
+          hk.a(-7, (BitPacketBuffer) null);
         }
     }
 
@@ -88,8 +88,8 @@ final class hk {
     final static void $cfr$intArgs$a$7ad285df57e9(int param0, int param1, int param2) {
         gl.a(param2, BufferedSocket.field_c[param1], ca.field_c[param1], 804);
         if (param0 <= 121) {
-          w var4 = (w) null;
-          hk.a(-7, (w) null);
+          BitPacketBuffer var4 = (BitPacketBuffer) null;
+          hk.a(-7, (BitPacketBuffer) null);
         }
     }
 }

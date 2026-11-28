@@ -21,7 +21,7 @@ final class se extends WidgetContainer implements oi {
           if (param0 != 0) {
             field_B = (int[]) null;
           }
-          stackIn_3_0 = kk.a(param1.length, (byte) -75, 0, param1);
+          stackIn_3_0 = kk.decodeCp1252String(param1.length, (byte) -75, 0, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

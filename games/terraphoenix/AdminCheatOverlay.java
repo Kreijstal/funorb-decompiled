@@ -32,7 +32,7 @@ final class AdminCheatOverlay {
             }
             var4 = new byte[var3_int];
             param1.position = param1.position + bd.field_m.a(-112, var3_int, 0, param1.position, var4, param1.payload);
-            var5 = SecondaryNodeDeque.a((byte) -114, var4, var3_int, 0);
+            var5 = SecondaryNodeDeque.decodeCp1252String((byte) -114, var4, var3_int, 0);
             stackIn_6_0 = var5;
             return stackIn_6_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

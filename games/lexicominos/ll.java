@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ll {
-    private sh field_d;
+    private ResourceArchive field_d;
     private bf field_g;
     static tf field_a;
     static int field_f;
-    private sh field_b;
+    private ResourceArchive field_b;
     static String[] field_c;
     static String[] field_e;
 
@@ -19,9 +19,9 @@ final class ll {
           return var3;
         }
         if (32768 > param1) {
-          var4 = this.field_d.a(1, -27493, param1);
+          var4 = this.field_d.getFile(1, -27493, param1);
         } else {
-          var4 = this.field_b.a(1, param0 ^ -48, 32767 & param1);
+          var4 = this.field_b.getFile(1, param0 ^ -48, 32767 & param1);
         }
         var5 = new me();
         if (param0 != 27467) {

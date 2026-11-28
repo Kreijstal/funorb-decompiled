@@ -3,14 +3,14 @@
  */
 final class ac {
     private ol field_i;
-    private vj field_e;
+    private ResourceArchive field_e;
     static int[] field_f;
     static java.awt.Image field_h;
     static PcmStreamMixer field_b;
     static sj[] field_d;
     static he[] field_g;
     static int[] field_j;
-    private vj field_c;
+    private ResourceArchive field_c;
     static int field_a;
 
     public static void a(byte param0) {
@@ -35,9 +35,9 @@ final class ac {
           return var3;
         }
         if (32768 > param0) {
-          var4 = this.field_c.a(1, param0, (byte) 35);
+          var4 = this.field_c.getFile(1, param0, (byte) 35);
         } else {
-          var4 = this.field_e.a(1, 32767 & param0, (byte) 35);
+          var4 = this.field_e.getFile(1, 32767 & param0, (byte) 35);
         }
         ai var5 = new ai();
         if (var4 != null) {

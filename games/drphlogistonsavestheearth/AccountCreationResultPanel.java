@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AccountCreationResultPanel extends ma implements ke {
-    static vj field_Jb;
+    static ResourceArchive field_Jb;
     static String field_Fb;
     static String field_Db;
     static java.awt.Frame field_Gb;

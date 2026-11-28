@@ -79,14 +79,14 @@ abstract class bh extends mf implements ra {
     }
 
     final static void a(dc param0, byte param1, int param2) {
-        nk var5 = null;
+        BitPacketBuffer var5 = null;
         int var4 = 0;
         try {
           if (param1 != 46) {
             bh.f((byte) -11);
           }
           var5 = qn.field_U;
-          var5.f(param2, param1 ^ -90);
+          var5.writeCipheredByte(param2, param1 ^ -90);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(1, (byte) -98);
@@ -702,7 +702,7 @@ abstract class bh extends mf implements ra {
         if (qe.field_B != null) {
           return qe.field_B;
         }
-        return (java.applet.Applet) ((Object) nk.field_w);
+        return (java.applet.Applet) ((Object) BitPacketBuffer.field_w);
     }
 
     abstract void a(int param0);

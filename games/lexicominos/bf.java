@@ -19,7 +19,7 @@ final class bf {
           ul.field_o = bb.field_I;
           uc.field_eb = uc.field_eb + 1;
           bk.field_b = cj.field_i;
-          sh.field_e = ij.field_h;
+          ResourceArchive.field_e = ij.field_h;
           ob.field_c = ql.field_K;
           ql.field_K = false;
           nk.field_z = lj.field_a;

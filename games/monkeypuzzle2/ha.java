@@ -5,7 +5,7 @@ import java.util.*;
 
 class ha extends pc implements ql {
     static PcmSampleStream field_Z;
-    static ad field_fb;
+    static ResourceArchive field_fb;
     private boolean field_eb;
     static long field_ab;
     private jh field_gb;
@@ -150,7 +150,7 @@ class ha extends pc implements ql {
         if (param0 == -75) {
           return;
         }
-        field_fb = (ad) null;
+        field_fb = (ResourceArchive) null;
     }
 
     final void a(int param0, String param1, int param2) {

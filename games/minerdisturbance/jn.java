@@ -148,8 +148,8 @@ final class jn extends IntrusiveNode {
             var6 = (ResourceArchive) null;
             jn.a((String) null, -42, (String) null, (ResourceArchive) null);
           }
-          var4_int = param3.a(-118, param2);
-          var5 = param3.a(param0, var4_int, param1 ^ 29451);
+          var4_int = param3.getGroupIdByName(-118, param2);
+          var5 = param3.getFileIdByName(param0, var4_int, param1 ^ 29451);
           stackIn_3_0 = el.a(var5, var4_int, param3, 2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

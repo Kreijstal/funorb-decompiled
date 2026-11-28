@@ -131,7 +131,7 @@ final class wl {
         int var4Lifetime1;
         var7 = TorChallenge.field_F ? 1 : 0;
         try {
-          var8 = new pa(param1.a(-2, "", "logo.fo3d"));
+          var8 = new pa(param1.getFileByName(-2, "", "logo.fo3d"));
           var10 = var8;
           if (param0 != -2681) {
             return;

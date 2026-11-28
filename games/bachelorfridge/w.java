@@ -3,12 +3,12 @@
  */
 class w implements q {
     private vi field_a;
-    private vr field_b;
+    private ResourceArchive field_b;
     static long field_g;
     static int[][] field_h;
     static boolean field_e;
     private gma[] field_c;
-    private vr field_d;
+    private ResourceArchive field_d;
     private int field_f;
 
     on d(int param0, int param1) {
@@ -16,7 +16,7 @@ class w implements q {
         if (var3 != null) {
           return (on) (var3);
         }
-        byte[] var4 = this.field_d.b(param0, 0);
+        byte[] var4 = this.field_d.getSingleFile(param0, 0);
         if (var4 == null) {
           return null;
         }
@@ -113,7 +113,7 @@ class w implements q {
         }
     }
 
-    w(vr param0, vr param1, vr param2) {
+    w(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2) {
         gma stackIn_11_0 = null;
         boolean stackIn_12_1 = false;
         gma stackIn_19_0 = null;
@@ -154,7 +154,7 @@ class w implements q {
         try {
           this.field_d = param1;
           this.field_b = param2;
-          var7 = new PacketBuffer(param0.b(-38, 0, 0));
+          var7 = new PacketBuffer(param0.getFile(-38, 0, 0));
           this.field_f = var7.readUnsignedShort((byte) 103);
           this.field_c = new gma[this.field_f];
           for (var5 = 0; this.field_f > var5; var5++) {

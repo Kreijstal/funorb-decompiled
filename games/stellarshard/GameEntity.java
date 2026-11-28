@@ -674,7 +674,7 @@ final class GameEntity {
               }
               var3 = var3 + param1;
             }
-            pf.a(17651, var3);
+            ResourceArchive.a(17651, var3);
             var3 = IntrusiveNode.a(var3, "%3a", ":", 85);
             var3 = IntrusiveNode.a(var3, "%40", "@", 85);
             var3 = IntrusiveNode.a(var3, "%26", "&", 71);

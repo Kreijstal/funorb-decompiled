@@ -1178,22 +1178,22 @@ public final class TorChallenge extends GameClientBase {
         try {
           t.a(-67);
           if (null != DelegatingCanvas.field_d) {
-            if (aj.field_f.b(-7957) &&
+            if (aj.field_f.ensureIndexLoaded(-7957) &&
               aj.field_f.b(5, "basic")) {
-              if (DelegatingCanvas.field_d.b(-7957) &&
-                DelegatingCanvas.field_d.b((byte) 79)) {
-                if (SpriteLoader.field_f.b(-7957) &&
-                  SpriteLoader.field_f.b((byte) 79)) {
-                  if (cl.field_y.b(-7957) &&
-                    cl.field_y.b((byte) 79)) {
-                    if (fh.field_f.b(-7957) &&
-                      fh.field_f.b((byte) 79)) {
-                      if (ic.field_C.b(-7957) &&
-                        ic.field_C.b((byte) 79)) {
-                        if (bh.field_q.b(-7957) &&
-                          bh.field_q.b((byte) 79)) {
-                          if (qh.field_M.b(-7957) &&
-                            qh.field_M.b((byte) 79)) {
+              if (DelegatingCanvas.field_d.ensureIndexLoaded(-7957) &&
+                DelegatingCanvas.field_d.tryLoadAllGroups((byte) 79)) {
+                if (SpriteLoader.field_f.ensureIndexLoaded(-7957) &&
+                  SpriteLoader.field_f.tryLoadAllGroups((byte) 79)) {
+                  if (cl.field_y.ensureIndexLoaded(-7957) &&
+                    cl.field_y.tryLoadAllGroups((byte) 79)) {
+                    if (fh.field_f.ensureIndexLoaded(-7957) &&
+                      fh.field_f.tryLoadAllGroups((byte) 79)) {
+                      if (ic.field_C.ensureIndexLoaded(-7957) &&
+                        ic.field_C.tryLoadAllGroups((byte) 79)) {
+                        if (bh.field_q.ensureIndexLoaded(-7957) &&
+                          bh.field_q.tryLoadAllGroups((byte) 79)) {
+                          if (qh.field_M.ensureIndexLoaded(-7957) &&
+                            qh.field_M.tryLoadAllGroups((byte) 79)) {
                             mh.a(DelegatingCanvas.field_a, (byte) -125, 65.0f);
                             if (!param0) {
                               return false;
@@ -1348,7 +1348,7 @@ public final class TorChallenge extends GameClientBase {
                 id.a(108);
                 break;
               }
-              je.field_c[var3_int] = qh.field_M.a(-2, cg.levelNames[var3_int], "");
+              je.field_c[var3_int] = qh.field_M.getFileByName(-2, cg.levelNames[var3_int], "");
               var3_int++;
             } while (var4 == 0);
             return false;

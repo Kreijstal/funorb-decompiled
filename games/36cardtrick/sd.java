@@ -4,7 +4,7 @@
 final class sd {
     static int[] field_b;
     static j field_c;
-    static qk field_a;
+    static ResourceArchive field_a;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, int param7, int param8, int param9) {
         int var12 = 0;
@@ -62,7 +62,7 @@ final class sd {
         field_a = null;
         field_c = null;
         if (param0 <= 21) {
-          field_a = (qk) null;
+          field_a = (ResourceArchive) null;
           field_b = null;
           return;
         }

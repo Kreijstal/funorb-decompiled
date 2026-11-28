@@ -8,7 +8,7 @@ abstract class MouseWheelInput {
     static String[] field_b;
     static long field_d;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_e = null;
         field_a = null;
@@ -34,7 +34,7 @@ abstract class MouseWheelInput {
         var6 = TrackController.field_F ? 1 : 0;
         var2 = 0;
         if (param0 > -22) {
-          MouseWheelInput.b(109);
+          MouseWheelInput.clearStaticReferences(109);
           var3 = fb.field_a;
           if (5 > var3) {
             var2 = var3 * (var3 * 8192) / 1100;

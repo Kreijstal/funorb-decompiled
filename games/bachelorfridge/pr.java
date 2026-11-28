@@ -9,7 +9,7 @@ final class pr {
     static Sprite[] field_h;
     private int field_f;
     static int field_i;
-    static vr field_j;
+    static ResourceArchive field_j;
     private IntrusiveDeque field_d;
     private int field_g;
     static String field_c;
@@ -68,7 +68,7 @@ final class pr {
             var1_ref = (Exception) (Object) decompiledCaughtException;
           }
           if (param0 != -21) {
-            field_j = (vr) null;
+            field_j = (ResourceArchive) null;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

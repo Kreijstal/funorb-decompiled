@@ -13,7 +13,7 @@ final class cm extends WidgetContainer implements ql {
     static String field_G;
 
     final static void k(int param0) {
-        if (!ad.a(false)) {
+        if (!ResourceArchive.a(false)) {
           return;
         }
         jk.a(-95, false, param0);
@@ -64,7 +64,7 @@ final class cm extends WidgetContainer implements ql {
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_A[var5] = new ButtonWidget(this.field_C[var5], (of) (this));
               this.field_A[var5].field_h = (ml) ((Object) var4);
-              this.field_A[var5].field_m = ad.field_j;
+              this.field_A[var5].field_m = ResourceArchive.field_j;
               this.field_A[var5].a(15, 13361, 0, 80, 20 + var5 * 16);
               this.b((byte) -104, this.field_A[var5]);
             }

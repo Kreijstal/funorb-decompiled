@@ -58,7 +58,7 @@ final class f {
         }
     }
 
-    final static byte a(char param0, int param1) {
+    final static byte encodeCp1252Character(char param0, int param1) {
         int var2;
         int var3;
         var3 = Confined.field_J ? 1 : 0;

@@ -13,7 +13,7 @@ abstract class l {
     static int[] field_h;
     static long[] field_b;
 
-    final static int a(int param0, byte[] param1, CharSequence param2, int param3, int param4, int param5) {
+    final static int encodeCp1252Subsequence(int param0, byte[] param1, CharSequence param2, int param3, int param4, int param5) {
         int var7 = 0;
         int stackIn_69_0 = 0;
         RuntimeException stackIn_72_0 = null;

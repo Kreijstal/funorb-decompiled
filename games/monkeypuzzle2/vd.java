@@ -132,7 +132,7 @@ final class vd {
         return k.field_f;
     }
 
-    final static vk a(boolean param0, String param1, ad param2, ad param3, String param4) {
+    final static vk a(boolean param0, String param1, ResourceArchive param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -149,12 +149,12 @@ final class vd {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param3.c(param1, (byte) -105);
+          var5_int = param3.getGroupIdByName(param1, (byte) -105);
           if (!param0) {
             stackIn_2_0 = (vk) null;
             return stackIn_2_0;
           }
-          var6 = param3.a(param4, var5_int, -28459);
+          var6 = param3.getFileIdByName(param4, var5_int, -28459);
           stackIn_4_0 = n.a(param3, param2, (byte) 125, var5_int, var6);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

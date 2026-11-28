@@ -108,7 +108,7 @@ final class ac {
           return;
         }
         try {
-          jp.a(param1.a("headers.packvorbis", "", (byte) -119));
+          jp.a(param1.getFileByName("headers.packvorbis", "", (byte) -119));
           var2 = jp.a(param1, "jagex logo2.packvorbis", "");
           var2.c();
         } catch (RuntimeException runtimeException) {

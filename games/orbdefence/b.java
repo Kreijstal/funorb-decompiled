@@ -9,7 +9,7 @@ final class b extends hi {
     private ug field_o;
     static String field_p;
 
-    final static sc a(String param0, String param1, int param2, ki param3, ki param4) {
+    final static sc a(String param0, String param1, int param2, ResourceArchive param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -26,9 +26,9 @@ final class b extends hi {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param4.a(param1, 0);
+          var5_int = param4.getGroupIdByName(param1, 0);
           var7 = -47 / ((param2 + 46) / 46);
-          var6 = param4.a(param0, 5187, var5_int);
+          var6 = param4.getFileIdByName(param0, 5187, var5_int);
           stackIn_1_0 = vi.a(-13449, param3, param4, var6, var5_int);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -129,8 +129,8 @@ final class b extends hi {
         if (param0 > 71) {
           return param1 >= 0 ? true : false;
         }
-        ki var3 = (ki) null;
-        b.a((String) null, (String) null, -123, (ki) null, (ki) null);
+        ResourceArchive var3 = (ResourceArchive) null;
+        b.a((String) null, (String) null, -123, (ResourceArchive) null, (ResourceArchive) null);
         return param1 >= 0 ? true : false;
     }
 

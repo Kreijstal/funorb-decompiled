@@ -671,10 +671,10 @@ final class VorbisSample extends HashNode {
         try {
           VorbisSample vorbisSampleLocal1 = null;
           if (!VorbisSample.computeBoolean1688(resourceArchiveArgument1)) {
-            resourceArchiveArgument1.computeBoolean0800((byte) -83, integerArgument3, integerArgument2);
+            resourceArchiveArgument1.tryLoadFile((byte) -83, integerArgument3, integerArgument2);
             return null;
           }
-          byte[] byteArrayLocal2 = resourceArchiveArgument1.computeByteArray0805(integerArgument3, -124, integerArgument2);
+          byte[] byteArrayLocal2 = resourceArchiveArgument1.getFile(integerArgument3, -124, integerArgument2);
           if (byteArrayLocal2 == null) {
             return null;
           }
@@ -695,7 +695,7 @@ final class VorbisSample extends HashNode {
     private final static boolean computeBoolean1688(ResourceArchive resourceArchiveArgument1) {
         byte[] byteArrayLocal1 = null;
         if (!booleanState0196) {
-          byteArrayLocal1 = resourceArchiveArgument1.computeByteArray0805(0, -121, 0);
+          byteArrayLocal1 = resourceArchiveArgument1.getFile(0, -121, 0);
           if (byteArrayLocal1 == null) {
             return false;
           }
@@ -736,7 +736,7 @@ final class VorbisSample extends HashNode {
             resourceArchiveArgument1.computeBoolean0813(stringArgument3, true, stringArgument2);
             return null;
           }
-          byte[] byteArrayLocal2 = resourceArchiveArgument1.computeByteArray0809(0, stringArgument3, stringArgument2);
+          byte[] byteArrayLocal2 = resourceArchiveArgument1.getFileByName(0, stringArgument3, stringArgument2);
           if (byteArrayLocal2 == null) {
             return null;
           }

@@ -200,12 +200,12 @@ final class IsaacRandom {
         this.field_b = 256;
     }
 
-    final static pf a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
+    final static ResourceArchive a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           wc var8 = null;
-          pf stackIn_16_0 = null;
+          ResourceArchive stackIn_16_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
@@ -232,7 +232,7 @@ final class IsaacRandom {
             if (param3) {
               var8.d(2);
             }
-            stackIn_16_0 = new pf(var8, param5, param0);
+            stackIn_16_0 = new ResourceArchive(var8, param5, param0);
             return stackIn_16_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

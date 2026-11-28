@@ -13,8 +13,8 @@ final class dh {
         field_b = null;
     }
 
-    final static void a(byte param0, ue param1) {
-        nj.b(param1.a("headers.packvorbis", (byte) 45, ""));
+    final static void a(byte param0, ResourceArchive param1) {
+        nj.b(param1.getFileByName("headers.packvorbis", (byte) 45, ""));
         nj var2 = nj.a(param1, "jagex logo2.packvorbis", "");
         if (param0 != 115) {
           return;

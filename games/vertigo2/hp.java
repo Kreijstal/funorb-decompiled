@@ -12,7 +12,7 @@ final class hp {
     }
 
     final static hp a(Archive param0, String param1, String param2) {
-        byte[] var3 = param0.a(param1, param2, 0);
+        byte[] var3 = param0.getFileByName(param1, param2, 0);
         if (var3 == null) {
           return null;
         }
@@ -20,7 +20,7 @@ final class hp {
     }
 
     final static hp a(Archive param0, int param1, int param2) {
-        byte[] var3 = param0.a(param1, param2, (byte) -25);
+        byte[] var3 = param0.getFile(param1, param2, (byte) -25);
         if (var3 == null) {
           return null;
         }

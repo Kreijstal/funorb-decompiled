@@ -403,7 +403,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
           jn.field_G = (vm) ((Object) th.a(param3, -107, "arezzo12", param1, "commonui"));
           jd.field_s = (vm) ((Object) th.a(param3, 25, "arezzo14", param1, "commonui"));
           pe.field_eb = (vm) ((Object) th.a(param3, 9, "arezzo14bold", param1, "commonui"));
-          var17 = new RgbSprite(param2.a("", "button.gif", param0 ^ 0), (java.awt.Component) ((Object) GameAppletShell.field_h));
+          var17 = new RgbSprite(param2.getFileByName("", "button.gif", param0 ^ 0), (java.awt.Component) ((Object) GameAppletShell.field_h));
           qm.a("commonui", 0, "dropdown", param3);
           var5 = sg.a(true, "commonui", param3, "screen_options");
           ak.field_h = new pg[4];

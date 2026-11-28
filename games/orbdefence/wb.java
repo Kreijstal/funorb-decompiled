@@ -4,7 +4,7 @@
 abstract class wb implements ga {
     static String field_c;
     static int field_d;
-    static ki field_b;
+    static ResourceArchive field_b;
     private long field_a;
 
     final static String a(CharSequence param0, int param1) {
@@ -45,7 +45,7 @@ abstract class wb implements ga {
             }
           }
           if (param1 != 122) {
-            field_b = (ki) null;
+            field_b = (ResourceArchive) null;
           }
           stackIn_24_0 = new String(var8);
           return stackIn_24_0;

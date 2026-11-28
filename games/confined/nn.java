@@ -38,9 +38,9 @@ final class nn extends IntrusiveNode {
         field_v = null;
     }
 
-    final static boolean a(mi param0, mi param1, mi param2, int param3) {
+    final static boolean a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
-        mi var5 = null;
+        ResourceArchive var5 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -50,19 +50,19 @@ final class nn extends IntrusiveNode {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0.b(0)) {
+          if (!param0.ensureIndexLoaded(0)) {
             return false;
           }
           if (!param0.a("commonui", 0)) {
             return false;
           }
           if (param3 <= 21) {
-            var5 = (mi) null;
-            nn.a((mi) null, (mi) null, (mi) null, -51);
+            var5 = (ResourceArchive) null;
+            nn.a((ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, -51);
           }
-          if (param2.b(0) &&
+          if (param2.ensureIndexLoaded(0) &&
             param2.a("commonui", 0)) {
-            if (param1.b(0) &&
+            if (param1.ensureIndexLoaded(0) &&
               param1.a("button.gif", 0)) {
               return true;
             }

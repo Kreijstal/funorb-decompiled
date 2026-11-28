@@ -102,7 +102,7 @@ class bc extends kf {
           this.field_I = null;
           if (this.field_m) {
             var5_int = -this.field_t - param3 + bk.field_b;
-            var6 = -this.field_o + sh.field_e - param2;
+            var6 = -this.field_o + ResourceArchive.field_e - param2;
             this.field_I = this.a(var6, false, var5_int);
           }
         } catch (RuntimeException runtimeException) {

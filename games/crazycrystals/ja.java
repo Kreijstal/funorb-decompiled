@@ -107,7 +107,7 @@ final class ja extends ff {
               kf.field_a[var18] = kf.field_a[var18] + je.field_d[var15][var18];
             }
             ArchiveRequest.a(ai.field_j, var17, 9, false, false, kf.field_a, true);
-            tg.a(var9Lifetime1, var7Lifetime1, var12Lifetime1, -9206, var14, var8Lifetime1, var17, var13Lifetime1);
+            tg.rasterizeLitModelFaces(var9Lifetime1, var7Lifetime1, var12Lifetime1, -9206, var14, var8Lifetime1, var17, var13Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

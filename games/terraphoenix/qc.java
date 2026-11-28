@@ -146,11 +146,11 @@ final class qc {
     }
 
     final static void a(int param0, eg param1, byte param2) {
-        uc var6 = null;
+        BitPacketBuffer var6 = null;
         int var4 = 0;
         try {
           var6 = di.field_l;
-          var6.k(-17410, param0);
+          var6.writeCipheredByte(-17410, param0);
           var6.position = var6.position + 1;
           var4 = var6.position;
           var6.writeByte(1, -125);
@@ -197,7 +197,7 @@ final class qc {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param1.a(0)) {
+          if (!param1.ensureIndexLoaded(0)) {
             stackIn_3_0 = (String) (param2);
             return stackIn_3_0;
           }

@@ -61,7 +61,7 @@ final class q {
     final static void a(boolean param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        la var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -72,7 +72,7 @@ final class q {
             field_j = (String) null;
           }
           while (lg.c(-1)) {
-            var1.c(8, 7);
+            var1.writeCipheredByte(8, 7);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;

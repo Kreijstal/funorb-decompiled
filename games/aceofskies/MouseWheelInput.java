@@ -16,8 +16,8 @@ abstract class MouseWheelInput {
           if (param0 != 3) {
             MouseWheelInput.a((byte) -15, -89, 51);
           }
-          int var4_int = param1.b(param2, param0 ^ 3);
-          int var5 = param1.a(-101, var4_int, param3);
+          int var4_int = param1.getGroupIdByName(param2, param0 ^ 3);
+          int var5 = param1.getFileIdByName(-101, var4_int, param3);
           Sprite[] stackIn_3_0 = SocketArchiveNetworkClient.a(1, param1, var4_int, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

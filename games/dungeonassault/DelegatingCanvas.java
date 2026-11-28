@@ -56,16 +56,16 @@ final class DelegatingCanvas extends java.awt.Canvas {
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param3.a(-14354)) {
+          if (!param3.ensureIndexLoaded(-14354)) {
             return false;
           }
           if (!param3.a(false, "commonui")) {
             return false;
           }
           var4_int = 62 / ((-27 - param2) / 59);
-          if (param0.a(-14354) &&
+          if (param0.ensureIndexLoaded(-14354) &&
             param0.a(false, "commonui")) {
-            if (param1.a(-14354) &&
+            if (param1.ensureIndexLoaded(-14354) &&
               param1.a(false, "button.gif")) {
               return true;
             }

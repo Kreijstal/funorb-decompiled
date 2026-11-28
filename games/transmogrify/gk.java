@@ -16,7 +16,7 @@ final class gk {
         try {
           long dupTemp$1 = 0L;
           int var2 = 0;
-          hj var2_ref_hj = null;
+          BitPacketBuffer var2_ref_hj = null;
           IOException var2_ref_IOException = null;
           int stackIn_10_0 = 0;
           Throwable decompiledCaughtException = null;
@@ -74,7 +74,7 @@ final class gk {
         field_d = null;
     }
 
-    final static IndexedSprite a(String param0, int param1, ci param2, String param3) {
+    final static IndexedSprite a(String param0, int param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -89,12 +89,12 @@ final class gk {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.b(118, param0);
+          var4_int = param2.getGroupIdByName(118, param0);
           if (param1 != -2479) {
             var6 = (String) null;
-            gk.a((String) null, 10, (ci) null, (String) null);
+            gk.a((String) null, 10, (ResourceArchive) null, (String) null);
           }
-          var5 = param2.a(-1, param3, var4_int);
+          var5 = param2.getFileIdByName(-1, param3, var4_int);
           stackIn_3_0 = ae.a(var4_int, param2, var5, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

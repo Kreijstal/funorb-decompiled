@@ -396,7 +396,7 @@ final class tl implements Runnable {
               var3 = var4.getOutputStream();
               var3.write(17);
               var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_h.getFile() + "\n\n"));
-              var3.write(n.a(var5, -14553));
+              var3.write(n.encodeCp1252Bytes(var5, -14553));
               this.field_o = new DataInputStream(var4.getInputStream());
             }
             this.field_j.position = 0;
@@ -457,27 +457,27 @@ final class tl implements Runnable {
           return to.field_g;
         }
         if (ia.field_U != null) {
-          if (!ia.field_U.a(-14354)) {
+          if (!ia.field_U.ensureIndexLoaded(-14354)) {
             return PacketBuffer.field_r;
           }
           return ki.field_c;
         }
-        if (!fi.field_u.a(-14354)) {
+        if (!fi.field_u.ensureIndexLoaded(-14354)) {
           return qk.field_c;
         }
         if (!fi.field_u.a(false, "commonui")) {
-          return sa.field_w + " - " + fi.field_u.b("commonui", -1) + "%";
+          return sa.field_w + " - " + fi.field_u.getGroupLoadPercentByName("commonui", -1) + "%";
         }
-        if (!GameAppletShell.field_b.a(param0 ^ 14355)) {
+        if (!GameAppletShell.field_b.ensureIndexLoaded(param0 ^ 14355)) {
           return rf.field_L;
         }
         if (!GameAppletShell.field_b.a(false, "commonui")) {
-          return mp.field_c + " - " + GameAppletShell.field_b.b("commonui", param0 ^ 2) + "%";
+          return mp.field_c + " - " + GameAppletShell.field_b.getGroupLoadPercentByName("commonui", param0 ^ 2) + "%";
         }
-        if (!ib.field_b.a(param0 - 14351)) {
+        if (!ib.field_b.ensureIndexLoaded(param0 - 14351)) {
           return NanoFrameTimer.field_m;
         }
-        if (!ib.field_b.a((byte) 59)) {
+        if (!ib.field_b.tryLoadAllGroups((byte) 59)) {
           return kj.field_m + " - " + ib.field_b.b(100) + "%";
         }
         return p.field_K;

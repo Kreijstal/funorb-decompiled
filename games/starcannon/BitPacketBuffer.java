@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ia extends PacketBuffer {
+final class BitPacketBuffer extends PacketBuffer {
     static String field_l;
     static int field_k;
     private IsaacRandom field_m;
     private int field_j;
 
-    final static void a(String param0, String param1, int param2) {
+    final static void beginCredentialLogin(String param0, String param1, int param2) {
         try {
           ne.a(false, param1, param0, param2 ^ 150);
           if (param2 != 0) {
@@ -18,11 +18,11 @@ final class ia extends PacketBuffer {
         }
     }
 
-    final int m(int param0) {
+    final int readCipheredByte(int param0) {
         int fieldTemp$0 = 0;
         if (param0 != 255) {
           IntrusiveNode var3 = (IntrusiveNode) null;
-          ia.a((IntrusiveNode) null, (IntrusiveNode) null, (byte) -73);
+          BitPacketBuffer.insertNodeBefore((IntrusiveNode) null, (IntrusiveNode) null, (byte) -73);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           return this.payload[fieldTemp$0] - this.field_m.nextInt(param0 ^ 252) & 255;
@@ -32,7 +32,7 @@ final class ia extends PacketBuffer {
         return this.payload[fieldTemp$1] - this.field_m.nextInt(param0 ^ 252) & 255;
     }
 
-    final void d(byte param0, int param1) {
+    final void writeCipheredByte(byte param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)(param1 + this.field_m.nextInt(3));
@@ -42,7 +42,7 @@ final class ia extends PacketBuffer {
         field_l = (String) null;
     }
 
-    final static void a(IntrusiveNode param0, IntrusiveNode param1, byte param2) {
+    final static void insertNodeBefore(IntrusiveNode param0, IntrusiveNode param1, byte param2) {
         try {
           if (param2 != 57) {
             field_l = (String) null;
@@ -59,21 +59,21 @@ final class ia extends PacketBuffer {
         }
     }
 
-    final void l(int param0) {
+    final void endBitAccess(int param0) {
         int var2 = -5 / ((58 - param0) / 56);
         this.position = (this.field_j + 7) / 8;
     }
 
-    public static void k(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_l = null;
         if (param0 > 29) {
           return;
         }
         IntrusiveNode var2 = (IntrusiveNode) null;
-        ia.a((IntrusiveNode) null, (IntrusiveNode) null, (byte) -41);
+        BitPacketBuffer.insertNodeBefore((IntrusiveNode) null, (IntrusiveNode) null, (byte) -41);
     }
 
-    final static boolean a(String param0, byte param1, String param2) {
+    final static boolean containsNameOrReverse(String param0, byte param1, String param2) {
         String var3 = null;
         int var4 = 0;
         boolean stackIn_5_0 = false;
@@ -110,7 +110,7 @@ final class ia extends PacketBuffer {
         }
     }
 
-    final void a(int[] param0, byte param1) {
+    final void setCipherSeed(int[] param0, byte param1) {
         try {
           this.field_m = new IsaacRandom(param0);
           int var3_int = -76 / ((param1 + 5) / 46);
@@ -119,7 +119,7 @@ final class ia extends PacketBuffer {
         }
     }
 
-    final void b(int param0, byte param1, byte[] param2, int param3) {
+    final void readCipheredBytes(int param0, byte param1, byte[] param2, int param3) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -155,14 +155,14 @@ final class ia extends PacketBuffer {
         }
     }
 
-    final void c(boolean param0) {
+    final void beginBitAccess(boolean param0) {
         if (!param0) {
           return;
         }
         this.field_j = this.position * 8;
     }
 
-    final int e(int param0, int param1) {
+    final int readBits(int param0, int param1) {
         int incrementValue$0 = 0;
         int var6 = StarCannon.field_A;
         int var3 = this.field_j >> 3;
@@ -184,11 +184,11 @@ final class ia extends PacketBuffer {
         return var5;
     }
 
-    ia(int param0) {
+    BitPacketBuffer(int param0) {
         super(param0);
     }
 
-    ia(byte[] param0) {
+    BitPacketBuffer(byte[] param0) {
         super(param0);
     }
 

@@ -23,14 +23,14 @@ final class rd extends wh {
 
     final Object b(byte param0) {
         if (param0 <= 57) {
-          vj var3 = (vj) null;
-          rd.a(-9, true, -89, (vj) null);
+          ResourceArchive var3 = (ResourceArchive) null;
+          rd.a(-9, true, -89, (ResourceArchive) null);
           return this.field_I;
         }
         return this.field_I;
     }
 
-    final static he[] a(int param0, boolean param1, int param2, vj param3) {
+    final static he[] a(int param0, boolean param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         he[] stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;

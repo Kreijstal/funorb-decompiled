@@ -10,7 +10,7 @@ final class pg extends IntrusiveNode {
     }
 
     final static void a(boolean param0, byte param1) {
-        na.field_a = ia.field_k * 10;
+        na.field_a = BitPacketBuffer.field_k * 10;
         if (nf.field_l != 0) {
           if (param1 > -39) {
             pg.a(true, (byte) -105);

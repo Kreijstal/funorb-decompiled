@@ -9,7 +9,7 @@ final class ak extends IntrusiveNode {
     int[][] field_l;
     long[][] field_k;
     String[][] field_i;
-    static db field_f;
+    static ResourceArchive field_f;
     int field_j;
     int field_h;
     static int field_m;
@@ -17,7 +17,7 @@ final class ak extends IntrusiveNode {
     public static void clearDeclaredStaticReferences(int param0) {
         field_f = null;
         if (param0 != 77) {
-          field_f = (db) null;
+          field_f = (ResourceArchive) null;
         }
     }
 

@@ -34,7 +34,7 @@ abstract class ta extends jc {
           var3 = 105 / ((param0 - 12) / 45);
           var4 = 0;
           for (var5 = 0; var5 < var2_int; var5++) {
-            var4 = NanoFrameTimer.a((byte) -123, param1.charAt(var5)) + (var4 << 5) - var4;
+            var4 = NanoFrameTimer.encodeCp1252Character((byte) -123, param1.charAt(var5)) + (var4 << 5) - var4;
           }
           stackIn_5_0 = var4;
           return stackIn_5_0;

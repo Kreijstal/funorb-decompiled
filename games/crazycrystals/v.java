@@ -130,7 +130,7 @@ final class v {
           var2_int = param1.length();
           var3 = 0;
           for (var4 = 0; var4 < var2_int; var4++) {
-            var3 = dg.a(param1.charAt(var4), 17176) - var3 + (var3 << 5);
+            var3 = dg.encodeCp1252Character(param1.charAt(var4), 17176) - var3 + (var3 << 5);
           }
           if (param0 != -2057727803) {
             field_d = -119;
@@ -172,7 +172,7 @@ final class v {
         }
     }
 
-    final static wj a(int param0, int param1, int param2, db param3) {
+    final static wj a(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

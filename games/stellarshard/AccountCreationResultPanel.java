@@ -24,7 +24,7 @@ final class AccountCreationResultPanel extends ck implements oi {
         }
     }
 
-    final static void a(pf param0, pf param1, byte param2) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, byte param2) {
         try {
           vf.field_E = param0;
           if (param2 != 118) {

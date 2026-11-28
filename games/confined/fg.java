@@ -271,7 +271,7 @@ final class fg extends eh {
         hj.field_j = -2147483648;
         ka.field_P = -2147483648;
         cg.field_f = 2147483647;
-        mi.field_f = 2147483647;
+        ResourceArchive.field_f = 2147483647;
         mc.field_c = 0;
     }
 

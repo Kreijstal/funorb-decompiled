@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class i extends GameAppletShell {
-    static mi field_r;
+    static ResourceArchive field_r;
     private boolean field_m;
     private boolean field_x;
     private int field_A;
@@ -17,7 +17,7 @@ abstract class i extends GameAppletShell {
     private int field_n;
     String field_y;
     private int field_B;
-    static mi field_u;
+    static ResourceArchive field_u;
     private int field_z;
 
     private final void n(int param0) {
@@ -251,7 +251,7 @@ abstract class i extends GameAppletShell {
         }
         if (we.field_c == 2) {
           if (null != IntrusiveNodeHashTableIterator.field_f &&
-            IntrusiveNodeHashTableIterator.field_f.b(0)) {
+            IntrusiveNodeHashTableIterator.field_f.ensureIndexLoaded(0)) {
             if (IntrusiveNodeHashTableIterator.field_f.b("", -4308)) {
               if (IntrusiveNodeHashTableIterator.field_f.a("", 0)) {
                 wb.a(param0 ^ 104, IntrusiveNodeHashTableIterator.field_f);
@@ -305,8 +305,8 @@ abstract class i extends GameAppletShell {
         }
         boolean decompiledFrameRemainder0 = true;
         if (we.field_c == 11) {
-          if (fj.field_u != null && (!fj.field_u.b(param0 ^ 110) ||
-            !fj.field_u.a(25057))) {
+          if (fj.field_u != null && (!fj.field_u.ensureIndexLoaded(param0 ^ 110) ||
+            !fj.field_u.tryLoadAllGroups(25057))) {
             jc.a(ka.a(fj.field_u, hc.field_s, -12, b.field_k), 10265, 0.0f);
             decompiledFrameRemainder0 = false;
           }
@@ -840,7 +840,7 @@ abstract class i extends GameAppletShell {
                   var9 = (String) null;
                   tk.a(13, (String) null);
                 } else {
-                  var7 = kh.a(var12.payload, var12.position, 0, 0);
+                  var7 = kh.decodeCp1252String(var12.payload, var12.position, 0, 0);
                   tk.a(13, var7);
                 }
                 cg.field_e = null;

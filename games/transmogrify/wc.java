@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wc {
-    private ci field_f;
-    private ci field_e;
+    private ResourceArchive field_f;
+    private ResourceArchive field_e;
     private lf field_c;
     static int[][] field_a;
     static boolean field_b;
@@ -151,7 +151,7 @@ final class wc {
               }
               NodeHashTableIterator.field_a = WordLanguage.field_l.readString(12248);
               var12 = (CharSequence) ((Object) NodeHashTableIterator.field_a);
-              NanoFrameTimer.field_e = hj.a((byte) -128, var12);
+              NanoFrameTimer.field_e = BitPacketBuffer.normalizePlayerName((byte) -128, var12);
               db.field_d = WordLanguage.field_l.readUnsignedByte((byte) 123);
               lj.field_z = ll.field_Q;
               if (ll.field_V.a(-184) != wh.field_I) {
@@ -184,11 +184,11 @@ final class wc {
               if (wj.field_o > 0) {
                 wd.field_g = true;
               }
-              ff.field_D.a((byte) -68, mf.field_c);
+              ff.field_D.setCipherSeed((byte) -68, mf.field_c);
               for (var9Lifetime1 = 0; var9Lifetime1 < 4; var9Lifetime1++) {
                 mf.field_c[var9Lifetime1] = mf.field_c[var9Lifetime1] + 50;
               }
-              WordLanguage.field_l.a((byte) -74, mf.field_c);
+              WordLanguage.field_l.setCipherSeed((byte) -74, mf.field_c);
               stackIn_73_0 = ca.field_e;
               return stackIn_73_0;
             }
@@ -315,9 +315,9 @@ final class wc {
           return var3;
         }
         if (param1 >= 32768) {
-          var4 = this.field_e.a((byte) -93, 32767 & param1, 1);
+          var4 = this.field_e.getFile((byte) -93, 32767 & param1, 1);
         } else {
-          var4 = this.field_f.a((byte) -93, param1, 1);
+          var4 = this.field_f.getFile((byte) -93, param1, 1);
         }
         var3 = new rk();
         if (var4 != null) {
@@ -356,9 +356,9 @@ final class wc {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        hj var14 = null;
+        BitPacketBuffer var14 = null;
         int var15 = 0;
-        hj var16 = null;
+        BitPacketBuffer var16 = null;
         int[][] var20 = null;
         int var7_intLifetime1;
         int var10Lifetime1;

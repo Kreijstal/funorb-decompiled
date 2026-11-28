@@ -42,7 +42,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (this.data[fieldTemp$0] != 0);
         var3 = this.position - var2 - 1;
         if (param0 != var3) {
-          return gh.a(this.data, var2, param0 ^ -161, var3);
+          return gh.decodeCp1252String(this.data, var2, param0 ^ -161, var3);
         }
         return "";
     }
@@ -100,7 +100,7 @@ class PacketBuffer extends IntrusiveNode {
             this.backpatchByteLength(-72, 103);
           }
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + wm.a(param1.length(), 0, var4, this.position, this.data, (byte) -122);
+          this.position = this.position + wm.encodeCp1252Subsequence(param1.length(), 0, var4, this.position, this.data, (byte) -122);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.data[fieldTemp$0] = (byte) 0;
@@ -232,7 +232,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.data[fieldTemp$2] = (byte) 0;
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + wm.a(param1.length(), 0, var4, this.position, this.data, (byte) -122);
+          this.position = this.position + wm.encodeCp1252Subsequence(param1.length(), 0, var4, this.position, this.data, (byte) -122);
           fieldTemp$3 = this.position;
           this.position = this.position + 1;
           this.data[fieldTemp$3] = (byte) 0;
@@ -534,7 +534,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var4 == 0) {
           return "";
         }
-        return gh.a(this.data, var3, -161, var4);
+        return gh.decodeCp1252String(this.data, var3, -161, var4);
     }
 
     final int readUnsignedByte(int param0) {

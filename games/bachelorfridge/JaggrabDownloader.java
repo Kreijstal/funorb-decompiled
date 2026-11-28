@@ -12,7 +12,7 @@ final class JaggrabDownloader implements Runnable {
     static UiComponent field_c;
     private PlatformTask field_g;
     private DataInputStream field_l;
-    static vr field_m;
+    static ResourceArchive field_m;
     static String field_a;
     private PlatformTask field_j;
     private int field_e;
@@ -138,7 +138,7 @@ final class JaggrabDownloader implements Runnable {
               var3 = var4.getOutputStream();
               var3.write(17);
               var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_i.getFile() + "\n\n"));
-              var3.write(Bzip2State.a(18019, var5));
+              var3.write(Bzip2State.encodeCp1252Bytes(18019, var5));
               this.field_l = new DataInputStream(var4.getInputStream());
             }
             this.field_h.position = 0;

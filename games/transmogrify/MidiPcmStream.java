@@ -39,7 +39,7 @@ final class MidiPcmStream extends PcmStream {
     private int field_E;
     private pl field_x;
 
-    final synchronized boolean a(int param0, boolean param1, bl param2, pl param3, ci param4) {
+    final synchronized boolean a(int param0, boolean param1, bl param2, pl param3, ResourceArchive param4) {
         int stackIn_21_0 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -426,13 +426,13 @@ final class MidiPcmStream extends PcmStream {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        hj var5 = null;
+        BitPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
         AchievementNotice var11 = null;
-        hj var12 = null;
+        BitPacketBuffer var12 = null;
         int[] var13 = null;
         oh var14 = null;
         oh var15 = null;
@@ -837,14 +837,14 @@ final class MidiPcmStream extends PcmStream {
         int var5 = 0;
         int var6 = 0;
         double var7 = 0.0;
-        hj var9 = null;
+        BitPacketBuffer var9 = null;
         int var5Lifetime1;
         try {
           var3_int = param0.field_C + (param0.field_v * param0.field_x >> 12);
           var3_int = var3_int + ((this.field_M[param0.field_u] - 8192) * this.field_F[param0.field_u] >> 12);
           if (param1 < 82) {
-            var9 = (hj) null;
-            MidiPcmStream.a((byte) 127, (hj) null);
+            var9 = (BitPacketBuffer) null;
+            MidiPcmStream.a((byte) 127, (BitPacketBuffer) null);
           }
           var4 = param0.field_s;
           if (var4.field_a > 0 && (!(var4.field_e <= 0) ||
@@ -882,7 +882,7 @@ final class MidiPcmStream extends PcmStream {
         return this.field_I.hasMidiData();
     }
 
-    final static void a(byte param0, hj param1) {
+    final static void a(byte param0, BitPacketBuffer param1) {
         try {
           int var6 = 0;
           int var11_int = 0;

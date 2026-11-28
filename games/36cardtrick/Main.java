@@ -1330,7 +1330,7 @@ public final class Main extends c {
             } else {
               var5 = -32 + var6 / 2;
             }
-            qk.field_a[var4.field_h].a(8, var5);
+            ResourceArchive.field_a[var4.field_h].a(8, var5);
             qa.field_b.b(GzipInflater.field_b[var4.field_h], 45, var5 + qa.field_b.field_s, 0, -1);
           }
           boolean decompiledSharedTail0 = (this.field_U != 4);
@@ -1567,18 +1567,18 @@ public final class Main extends c {
         try {
           SectorCacheStore.a(true);
           if (null == BufferedSocket.field_c[0]) {
-            if (hf.field_H.b(4) &&
+            if (hf.field_H.ensureIndexLoaded(4) &&
               hf.field_H.b(4, "basic")) {
-              if (sh.field_g.b(4) &&
-                sh.field_g.a((byte) 46)) {
-                if (id.field_a.b(4) &&
-                  id.field_a.a((byte) 34)) {
-                  if (fb.field_a.b(4) &&
-                    fb.field_a.a((byte) 79)) {
-                    if (ll.field_e.b(4) &&
-                      ll.field_e.a((byte) 91)) {
-                      if (mh.field_c.b(4) &&
-                        mh.field_c.a((byte) 44)) {
+              if (sh.field_g.ensureIndexLoaded(4) &&
+                sh.field_g.tryLoadAllGroups((byte) 46)) {
+                if (id.field_a.ensureIndexLoaded(4) &&
+                  id.field_a.tryLoadAllGroups((byte) 34)) {
+                  if (fb.field_a.ensureIndexLoaded(4) &&
+                    fb.field_a.tryLoadAllGroups((byte) 79)) {
+                    if (ll.field_e.ensureIndexLoaded(4) &&
+                      ll.field_e.tryLoadAllGroups((byte) 91)) {
+                      if (mh.field_c.ensureIndexLoaded(4) &&
+                        mh.field_c.tryLoadAllGroups((byte) 44)) {
                         if (!param0) {
                           stackIn_50_0 = 1;
                           return stackIn_50_0;
@@ -1714,7 +1714,7 @@ public final class Main extends c {
           }
           ug.a(95.0f, 77, lb.field_f);
           this.b((byte) 59);
-          var3_array = id.field_a.a((byte) 7, "font", "");
+          var3_array = id.field_a.getFileByName((byte) 7, "font", "");
           var4_ref_wb__ = lk.a("font", "", (byte) 49, mh.field_c);
           qa.field_b = PcmOutputWorker.a(121, var4_ref_wb__, var3_array);
           eb.field_c = kk.a(var4_ref_wb__, var3_array, 1, 256, 16777215);
@@ -1760,8 +1760,8 @@ public final class Main extends c {
           td.field_c[2] = DelegatingCanvas.a(-127, "lc", "", mh.field_c);
           td.field_c[1] = DelegatingCanvas.a(-127, "go", "", mh.field_c);
           db.field_o = DelegatingCanvas.a(-126, "gunsight", "", mh.field_c);
-          qk.field_a = gl.a("achievements", mh.field_c, "", -13244);
-          var8 = qk.field_a;
+          ResourceArchive.field_a = gl.a("achievements", mh.field_c, "", -13244);
+          var8 = ResourceArchive.field_a;
           var9_int = 0;
           do {
             if (var8.length <= var9_int) {
@@ -2065,7 +2065,7 @@ public final class Main extends c {
           Main.u(-24711);
           hh.a(20364);
           IntrusiveDeque.clearStaticReferences(false);
-          qk.clearStaticReferences(124);
+          ResourceArchive.clearStaticReferences(124);
           fb.clearStaticReferences(8);
           mh.clearStaticReferences((byte) -41);
           pk.clearStaticReferences(8450);
@@ -2147,7 +2147,7 @@ public final class Main extends c {
           nl.a(10000);
           od.clearStaticReferences(-28178);
           fe.a(17449);
-          w.h(106);
+          BitPacketBuffer.clearStaticReferences(106);
           i.clearStaticReferences(62);
           sk.clearStaticReferences(-12865);
           ke.clearStaticReferences((byte) -124);
@@ -2605,7 +2605,7 @@ public final class Main extends c {
     final static void l(byte param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        w var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -2613,7 +2613,7 @@ public final class Main extends c {
         try {
           var1 = NetworkArchiveRequest.field_r;
           while (gl.b(true)) {
-            var1.h(8, 0);
+            var1.writeCipheredByte(8, 0);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
@@ -2689,7 +2689,7 @@ public final class Main extends c {
                 if (!stackIn_36_0) {
                   return false;
                 }
-                vd.field_u = rd.field_j.g((byte) -35);
+                vd.field_u = rd.field_j.readCipheredByte((byte) -35);
                 rd.field_j.position = 0;
                 al.field_a = param1[vd.field_u];
               }

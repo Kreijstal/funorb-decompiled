@@ -40,7 +40,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           if (!ha.a(param4, -32180, param2, param0)) {
             return null;
           }
-          stackIn_6_0 = pd.a(param3.a(param2, (byte) 122, param0), true);
+          stackIn_6_0 = pd.a(param3.getFile(param2, (byte) 122, param0), true);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

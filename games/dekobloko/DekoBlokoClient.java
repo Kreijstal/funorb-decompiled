@@ -2700,7 +2700,7 @@ public final class DekoBlokoClient extends FunOrbClient {
           }
           if (null == UiComponentPart023.resourceArchiveState0015) {
             if (MixedSupport020.resourceArchiveState0003 != null) {
-              RenderingSupport003.performAction0570((byte) -93, new HuffmanCodec(MixedSupport020.resourceArchiveState0003.computeByteArray0809(0, "huffman", "")));
+              RenderingSupport003.performAction0570((byte) -93, new HuffmanCodec(MixedSupport020.resourceArchiveState0003.getFileByName(0, "huffman", "")));
               MixedSupport020.resourceArchiveState0003 = null;
               NodeDeque.performAction1737(true);
               return false;
@@ -2719,11 +2719,11 @@ public final class DekoBlokoClient extends FunOrbClient {
           this.performAction0306(320);
           UiComponentPart029.renderingSupport009State0005 = MixedSupport016.computeRenderingSupport0090204("", GameSession.resourceArchiveState0019, MixedSupport005.resourceArchiveState0002, (byte) 108, "arial13");
           indexedSpriteArrayLocal25 = UiComponentPart030.computeIndexedSpriteArray1554("", MixedSupport005.resourceArchiveState0002, false, "arialbold14");
-          byteArrayLocal26 = GameSession.resourceArchiveState0019.computeByteArray0809(0, "", "arialbold14");
+          byteArrayLocal26 = GameSession.resourceArchiveState0019.getFileByName(0, "", "arialbold14");
           SceneWidget.renderingSupport009State0007 = RenderingSupport004.computeRenderingSupport0090580(indexedSpriteArrayLocal25, 55, byteArrayLocal26);
           SceneWidgetNode.renderingSupport010State0002 = RenderingSupport003.computeRenderingSupport0100569((byte) -49, 16777215, 1, indexedSpriteArrayLocal25, byteArrayLocal26, 1);
           indexedSpriteArrayLocal27 = UiComponentPart030.computeIndexedSpriteArray1554("tinybloko", EmailFormatValidator.resourceArchiveState0008, false, "");
-          byteArrayLocal28 = UiComponentPart023.resourceArchiveState0015.computeByteArray0809(integerArgument1 ^ 0, "tinybloko", "");
+          byteArrayLocal28 = UiComponentPart023.resourceArchiveState0015.getFileByName(integerArgument1 ^ 0, "tinybloko", "");
           RenderingSupport006.renderingSupport009State0003 = RenderingSupport004.computeRenderingSupport0090580(indexedSpriteArrayLocal27, integerArgument1 ^ 111, byteArrayLocal28);
           integerLocal29 = 0;
           while (true) {
@@ -2950,7 +2950,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                 integerLocal35 = stackIntegerLocal20;
                 boolean naturalLoopExitLocal59 = false;
                 while (!(naturalLoopExitLocal59 = (8 <= integerLocal35))) {
-                  stackByteArrayLocal21 = MixedSupport031.resourceArchiveState0005.computeByteArray0809(integerArgument1 + 0, "", DisplayModeController.stringArrayState0038[integerLocal35] + ".jpg");
+                  stackByteArrayLocal21 = MixedSupport031.resourceArchiveState0005.getFileByName(integerArgument1 + 0, "", DisplayModeController.stringArrayState0038[integerLocal35] + ".jpg");
                   if (integerLocal10 == 0) {
                     byteArrayLocal37 = stackByteArrayLocal21;
                     NanoFrameTimer.rgbSpriteArrayState0009[integerLocal35] = new RgbSprite(byteArrayLocal37, (java.awt.Component) ((Object) GameDomainSupport004.canvasState0001));
@@ -2960,11 +2960,11 @@ public final class DekoBlokoClient extends FunOrbClient {
                   break;
                 }
                 if (naturalLoopExitLocal59) {
-                  stackByteArrayLocal21 = MixedSupport031.resourceArchiveState0005.computeByteArray0809(integerArgument1 + 0, "", "menu2.jpg");
+                  stackByteArrayLocal21 = MixedSupport031.resourceArchiveState0005.getFileByName(integerArgument1 + 0, "", "menu2.jpg");
                 }
                 byteArrayLocal34 = stackByteArrayLocal21;
                 SceneWidgetPart011.rgbSpriteState0058 = new RgbSprite(byteArrayLocal34, (java.awt.Component) ((Object) GameDomainSupport004.canvasState0001));
-                byteArrayLocal53 = MixedSupport031.resourceArchiveState0005.computeByteArray0809(0, "", "achievements.jpg");
+                byteArrayLocal53 = MixedSupport031.resourceArchiveState0005.getFileByName(0, "", "achievements.jpg");
                 CipherPacketBuffer.rgbSpriteArrayState0030 = MixedSupport036.computeRgbSpriteArray0506(31, new RgbSprite(byteArrayLocal53, (java.awt.Component) ((Object) GameDomainSupport004.canvasState0001)), -10241);
                 rgbSpriteArrayLocal40 = MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "achievements");
                 integerLocal41 = 0;

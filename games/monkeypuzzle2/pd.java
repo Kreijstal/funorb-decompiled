@@ -21,24 +21,24 @@ final class pd {
         }
         while (this.field_a > this.field_c) {
           var4 = this.field_d[this.field_c];
-          if (!var4.field_e.a(-72)) {
+          if (!var4.field_e.ensureIndexLoaded(-72)) {
             this.a(1, 0, var4);
             return false;
           }
           if (var4.field_c >= 0 &&
-            !var4.field_e.a(false, var4.field_c)) {
-            this.a(1, var4.field_e.b(var4.field_c, 11619), var4);
+            !var4.field_e.tryLoadGroup(false, var4.field_c)) {
+            this.a(1, var4.field_e.getGroupLoadPercent(var4.field_c, 11619), var4);
             return false;
           }
           if (var4.field_i != null &&
             !var4.field_e.a(0, var4.field_i)) {
-            this.a(1, var4.field_e.a(var4.field_i, (byte) -81), var4);
+            this.a(1, var4.field_e.getGroupLoadPercentByName(var4.field_i, (byte) -81), var4);
             return false;
           }
           if (var4.field_c < 0 &&
             var4.field_i == null &&
             null != var4.field_b &&
-            !var4.field_e.b(0)) {
+            !var4.field_e.tryLoadAllGroups(0)) {
             this.a(1, var4.field_e.b(true), var4);
             return false;
           }

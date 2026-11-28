@@ -116,7 +116,7 @@ final class ee extends aj implements df {
         }
     }
 
-    final static String a(String param0, byte param1, String param2, ci param3, String param4) {
+    final static String a(String param0, byte param1, String param2, ResourceArchive param3, String param4) {
         RuntimeException var5 = null;
         String var6 = null;
         String stackIn_5_0 = null;
@@ -134,13 +134,13 @@ final class ee extends aj implements df {
         try {
           if (param1 < 69) {
             var6 = (String) null;
-            ee.a((String) null, (byte) 66, (String) null, (ci) null, (String) null);
+            ee.a((String) null, (byte) 66, (String) null, (ResourceArchive) null, (String) null);
           }
-          if (!param3.a((byte) -115)) {
+          if (!param3.ensureIndexLoaded((byte) -115)) {
             stackIn_5_0 = (String) (param0);
             return stackIn_5_0;
           }
-          stackIn_7_0 = param2 + " - " + param3.a(0, param4) + "%";
+          stackIn_7_0 = param2 + " - " + param3.getGroupLoadPercentByName(0, param4) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

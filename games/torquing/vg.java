@@ -9,7 +9,7 @@ final class vg extends eh {
     private double[] field_n;
     static volatile int field_l;
 
-    final static byte[] a(CharSequence param0, byte param1) {
+    final static byte[] encodeCp1252Bytes(CharSequence param0, byte param1) {
         int var5 = 0;
         byte[] stackIn_67_0 = null;
         RuntimeException stackIn_70_0 = null;

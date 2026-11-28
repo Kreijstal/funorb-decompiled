@@ -162,7 +162,7 @@ abstract class BoardChange extends IntrusiveNode {
         return 1 + param1 + "/6";
     }
 
-    final static int a(int param0, int param1, int param2, CharSequence param3, byte[] param4, int param5) {
+    final static int encodeCp1252Subsequence(int param0, int param1, int param2, CharSequence param3, byte[] param4, int param5) {
         int var7 = 0;
         int stackIn_69_0 = 0;
         RuntimeException stackIn_72_0 = null;

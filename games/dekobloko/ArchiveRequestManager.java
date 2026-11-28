@@ -17,7 +17,7 @@ final class ArchiveRequestManager extends MixedSupport115 {
         if (byteArgument1 >= 65) {
           return this.byteArrayState0006;
         }
-        this.computeInteger0467(true);
+        this.getProgressPercent(true);
         return this.byteArrayState0006;
     }
 
@@ -85,7 +85,7 @@ final class ArchiveRequestManager extends MixedSupport115 {
     ArchiveRequestManager() {
     }
 
-    final int computeInteger0467(boolean booleanArgument1) {
+    final int getProgressPercent(boolean booleanArgument1) {
         if (this.booleanState0173) {
           return 0;
         }

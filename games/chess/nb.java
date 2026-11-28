@@ -206,13 +206,13 @@ final class nb extends ci {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        nk var5 = null;
+        BitPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
         ac var11 = null;
-        nk var12 = null;
+        BitPacketBuffer var12 = null;
         bk var13 = null;
         int[] var14 = null;
         bk var15 = null;

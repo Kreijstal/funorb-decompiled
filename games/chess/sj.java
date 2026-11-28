@@ -23,7 +23,7 @@ final class sj implements jm {
     static lh field_d;
     private int field_q;
 
-    final static boolean a(byte param0, char param1) {
+    final static boolean isAcceptedTextInputCharacter(byte param0, char param1) {
         if (param1 >= 32 &&
           126 >= param1) {
           return true;
@@ -47,15 +47,15 @@ final class sj implements jm {
     }
 
     final static void a(int param0, int param1, ak param2) {
-        nk var7 = null;
-        nk var8 = null;
+        BitPacketBuffer var7 = null;
+        BitPacketBuffer var8 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = Chess.field_G;
         try {
           var7 = qn.field_U;
           var8 = var7;
-          var8.f(param1, -117);
+          var8.writeCipheredByte(param1, -117);
           var8.position = var8.position + 1;
           var4 = var8.position;
           var8.writeByte(1, (byte) 62);

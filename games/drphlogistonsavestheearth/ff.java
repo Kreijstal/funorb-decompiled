@@ -6,7 +6,7 @@ final class ff extends pj implements ke {
     static String field_K;
     private hf field_L;
     private hf field_M;
-    static vj field_P;
+    static ResourceArchive field_P;
     static IntrusiveDeque field_O;
     static double[] field_N;
     static he[] field_R;

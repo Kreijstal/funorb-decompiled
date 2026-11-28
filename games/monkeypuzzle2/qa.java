@@ -105,7 +105,7 @@ final class qa implements Runnable {
               var4 = var5.getOutputStream();
               var4.write(17);
               var6 = (CharSequence) ((Object) ("JAGGRAB " + this.field_f.getFile() + "\n\n"));
-              var4.write(IntrusiveDeque.a(3231, var6));
+              var4.write(IntrusiveDeque.encodeCp1252Bytes(3231, var6));
               this.field_l = new DataInputStream(var5.getInputStream());
             }
             this.field_e.position = 0;

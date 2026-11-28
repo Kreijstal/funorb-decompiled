@@ -19,8 +19,8 @@ final class as {
           if (param1 > -89) {
             field_b = -94L;
           }
-          int var5_int = param2.b(param4, 0);
-          int var6 = param2.a(-110, var5_int, param3);
+          int var5_int = param2.getGroupIdByName(param4, 0);
+          int var6 = param2.getFileIdByName(-110, var5_int, param3);
           CoverageBitmapFont stackIn_3_0 = HighscoreQuery.a(121, param0, var6, param2, var5_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

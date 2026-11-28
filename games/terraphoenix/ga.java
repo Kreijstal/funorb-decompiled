@@ -321,7 +321,7 @@ final class ga {
             return (IndexedSprite[]) (stackIn_2_0);
           }
           var4_int = 35 / ((-65 - param0) / 58);
-          stackIn_4_0 = uc.o(-28336);
+          stackIn_4_0 = BitPacketBuffer.createIndexedSpritesFromDecodedSheet(-28336);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -7,7 +7,7 @@ final class ea {
     static boolean field_f;
     private IntrusiveNode field_a;
     static String field_c;
-    static gk field_e;
+    static ResourceArchive field_e;
 
     final IntrusiveNode a(byte param0) {
         IntrusiveNode var2 = null;

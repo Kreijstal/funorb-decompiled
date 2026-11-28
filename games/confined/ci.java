@@ -8,7 +8,7 @@ final class ci {
     static kc field_b;
     static String field_d;
 
-    final static RgbSprite a(int param0, mi param1, int param2, boolean param3) {
+    final static RgbSprite a(int param0, ResourceArchive param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         RgbSprite stackIn_6_0 = null;

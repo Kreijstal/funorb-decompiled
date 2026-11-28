@@ -71,7 +71,7 @@ final class dg {
     final static void a(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        uc var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -82,7 +82,7 @@ final class dg {
             field_c = (im) null;
           }
           while (RandomAccessCacheFile.a((byte) -102)) {
-            var1.k(-17410, 8);
+            var1.writeCipheredByte(-17410, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;

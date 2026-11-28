@@ -17,9 +17,9 @@ final class oe {
           return var3;
         }
         if (32768 > param1) {
-          var4 = this.field_g.b(1, 116, param1);
+          var4 = this.field_g.getFile(1, 116, param1);
         } else {
-          var4 = this.field_e.b(1, 19, 32767 & param1);
+          var4 = this.field_e.getFile(1, 19, 32767 & param1);
         }
         mb var5 = new mb();
         if (var4 != null) {

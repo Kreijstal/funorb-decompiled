@@ -184,7 +184,7 @@ final class lb extends WidgetContainer implements ql {
         }
     }
 
-    final static Sprite[] a(boolean param0, String param1, ad param2, String param3) {
+    final static Sprite[] a(boolean param0, String param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -198,8 +198,8 @@ final class lb extends WidgetContainer implements ql {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.c(param1, (byte) -105);
-          var5 = param2.a(param3, var4_int, -28459);
+          var4_int = param2.getGroupIdByName(param1, (byte) -105);
+          var5 = param2.getFileIdByName(param3, var4_int, -28459);
           if (param0) {
             lb.clearStaticReferences((byte) -92);
           }

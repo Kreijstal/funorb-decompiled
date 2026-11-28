@@ -6,7 +6,7 @@ final class AccountCreationResultPanel extends sh implements rc {
     private boolean field_nb;
     static int field_lb;
     static be field_mb;
-    static gk field_pb;
+    static ResourceArchive field_pb;
     private gh field_kb;
 
     public final void a(byte param0, int param1, int param2, int param3, wd param4) {

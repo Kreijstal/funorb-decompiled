@@ -43,7 +43,7 @@ final class FullHealEvent extends SpecialEvent {
         }
     }
 
-    final static Sprite a(String param0, vr param1, String param2, byte param3) {
+    final static Sprite a(String param0, ResourceArchive param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -59,8 +59,8 @@ final class FullHealEvent extends SpecialEvent {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = -111 / ((23 - param3) / 32);
-          var4_int = param1.a(param2, false);
-          var5 = param1.a((byte) 6, var4_int, param0);
+          var4_int = param1.getGroupId(param2, false);
+          var5 = param1.getFileId((byte) 6, var4_int, param0);
           stackIn_1_0 = bn.a(param1, (byte) -117, var5, var4_int);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -109,7 +109,7 @@ final class FullHealEvent extends SpecialEvent {
         try {
           if (param0 != 5) {
             var4 = (String) null;
-            FullHealEvent.a((String) null, (vr) null, (String) null, (byte) -5);
+            FullHealEvent.a((String) null, (ResourceArchive) null, (String) null, (byte) -5);
           }
           stackIn_3_0 = new FullHealAnimation(param1, this);
           return (AnimationNode) ((Object) stackIn_3_0);
@@ -132,7 +132,7 @@ final class FullHealEvent extends SpecialEvent {
         field_r = null;
         if (param0) {
           String var2 = (String) null;
-          FullHealEvent.a((String) null, (vr) null, (String) null, (byte) -111);
+          FullHealEvent.a((String) null, (ResourceArchive) null, (String) null, (byte) -111);
         }
     }
 

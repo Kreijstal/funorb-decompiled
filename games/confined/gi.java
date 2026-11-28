@@ -10,7 +10,7 @@ final class gi extends ah {
     static byte[] field_db;
     static PcmSample field_eb;
 
-    final static vk a(m param0, byte param1, mi param2, String param3, String param4) {
+    final static vk a(m param0, byte param1, ResourceArchive param2, String param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -27,8 +27,8 @@ final class gi extends ah {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param2.a(-51, param4);
-          var6 = param2.a(var5_int, param3, param1 ^ 126);
+          var5_int = param2.getGroupIdByName(-51, param4);
+          var6 = param2.getFileIdByName(var5_int, param3, param1 ^ 126);
           if (param1 == -65) {
             stackIn_4_0 = GameAppletShell.a((byte) -89, var6, param2, var5_int, param0);
             return stackIn_4_0;
@@ -188,7 +188,7 @@ final class gi extends ah {
         field_eb = null;
         if (param0 != -11008) {
           String var2 = (String) null;
-          gi.a((m) null, (byte) 3, (mi) null, (String) null, (String) null);
+          gi.a((m) null, (byte) 3, (ResourceArchive) null, (String) null, (String) null);
         }
     }
 
@@ -330,9 +330,9 @@ final class gi extends ah {
         }
     }
 
-    final static mi a(int param0, boolean param1, boolean param2, int param3, boolean param4) {
+    final static ResourceArchive a(int param0, boolean param1, boolean param2, int param3, boolean param4) {
         if (!param2) {
-          return (mi) null;
+          return (ResourceArchive) null;
         }
         return we.a(param0, false, (byte) -125, param4, param3, param1);
     }

@@ -204,8 +204,8 @@ final class tj extends ao {
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
         try {
-          int var4_int = param3.b(param1, param2 ^ param2);
-          int var5 = param3.a(-39, var4_int, param0);
+          int var4_int = param3.getGroupIdByName(param1, param2 ^ param2);
+          int var5 = param3.getFileIdByName(-39, var4_int, param0);
           Sprite[] stackIn_1_0 = ScorchMark.a(param3, var4_int, (byte) -70, var5);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -38,7 +38,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         int var5_int = 0;
         int[] var6 = null;
         int var8 = 0;
-        jd var9 = null;
+        BitPacketBuffer var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var8 = SolKnight.field_L ? 1 : 0;

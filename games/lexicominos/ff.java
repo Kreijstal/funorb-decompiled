@@ -145,12 +145,12 @@ final class ff {
               stackIn_32_0 = -1;
             }
             var20 = stackIn_32_0;
-            if (sh.field_d != null &&
+            if (ResourceArchive.field_d != null &&
               param7.field_q != null &&
               param7.field_q.length > var14Lifetime1 &&
               -1 != param7.field_q[var14Lifetime1] &&
-              param7.field_q[var14Lifetime1] < sh.field_d.length) {
-              stackIn_39_0 = sh.field_d[param7.field_q[var14Lifetime1]];
+              param7.field_q[var14Lifetime1] < ResourceArchive.field_d.length) {
+              stackIn_39_0 = ResourceArchive.field_d[param7.field_q[var14Lifetime1]];
             } else {
               stackIn_39_0 = null;
             }

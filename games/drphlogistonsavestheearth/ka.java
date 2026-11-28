@@ -204,7 +204,7 @@ final class ka extends hj {
         }
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isSupportedCp1252KeyCharacter(char param0, int param1) {
         int var3 = 0;
         char[] var2 = null;
         int var4 = 0;

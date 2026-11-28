@@ -6,7 +6,7 @@ import java.io.*;
 final class hi {
     private Sprite[] field_a;
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean isSupportedCp1252KeyCharacter(char param0, byte param1) {
         char[] var2 = null;
         int var2_int = 0;
         RuntimeException var2_ref = null;

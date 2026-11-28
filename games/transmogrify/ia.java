@@ -690,7 +690,7 @@ final class ia extends IntrusiveNode {
               wh.f((byte) 104);
               continue;
             }
-            if (i.a(sg.field_n, 160) &&
+            if (i.isAcceptedTextInputCharacter(sg.field_n, 160) &&
               sg.field_n != 32 &&
               od.submissionRack.tiles[11] == null) {
               sg.field_n = MouseInputHandler.field_c.toUpperCase(0, sg.field_n);

@@ -19,7 +19,7 @@ final class le {
         field_d = null;
     }
 
-    final static char a(int param0, byte param1) {
+    final static char decodeCp1252Byte(int param0, byte param1) {
         int var3 = 0;
         if (param0 != 63) {
           return '\004';

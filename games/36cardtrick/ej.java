@@ -22,7 +22,7 @@ final class ej extends ta {
         }
         if (0 != hf.field_I) {
           if (null != lb.field_a) {
-            if (!lb.field_a.b(4)) {
+            if (!lb.field_a.ensureIndexLoaded(4)) {
               return 14;
             }
             if (!lb.field_a.c(0, "")) {
@@ -32,41 +32,41 @@ final class ej extends ta {
               return 29;
             }
           }
-          if (!jk.field_c.b(4)) {
+          if (!jk.field_c.ensureIndexLoaded(4)) {
             return 43;
           }
           if (!jk.field_c.b(4, "commonui")) {
             return 57;
           }
-          if (!aa.field_db.b(4)) {
+          if (!aa.field_db.ensureIndexLoaded(4)) {
             return 71;
           }
           if (!aa.field_db.b(4, "commonui")) {
             return 80;
           }
-          if (!sg.field_a.b(4)) {
+          if (!sg.field_a.ensureIndexLoaded(4)) {
             return 82;
           }
-          if (!sg.field_a.a((byte) 32)) {
+          if (!sg.field_a.tryLoadAllGroups((byte) 32)) {
             return 86;
           }
         } else {
-          if (!jk.field_c.b(4)) {
+          if (!jk.field_c.ensureIndexLoaded(4)) {
             return 20;
           }
           if (!jk.field_c.b(4, "commonui")) {
             return 40;
           }
-          if (!aa.field_db.b(param0 ^ -6549)) {
+          if (!aa.field_db.ensureIndexLoaded(param0 ^ -6549)) {
             return 50;
           }
           if (!aa.field_db.b(4, "commonui")) {
             return 60;
           }
-          if (!sg.field_a.b(4)) {
+          if (!sg.field_a.ensureIndexLoaded(4)) {
             return 70;
           }
-          if (!sg.field_a.a((byte) 109)) {
+          if (!sg.field_a.tryLoadAllGroups((byte) 109)) {
             return 80;
           }
         }

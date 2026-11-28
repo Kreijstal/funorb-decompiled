@@ -105,7 +105,7 @@ final class rh extends IntrusiveNode {
         return var8;
     }
 
-    final static void a(ia param0, byte param1) {
+    final static void a(BitPacketBuffer param0, byte param1) {
         try {
           int var10_int = 0;
           RuntimeException stackIn_65_0 = null;

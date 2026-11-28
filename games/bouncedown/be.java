@@ -634,8 +634,8 @@ final class be extends IntrusiveNode {
         }
     }
 
-    final static be a(gk param0, String param1, String param2) {
-        byte[] var3 = param0.b(param1, param2, -85);
+    final static be a(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.getFileByName(param1, param2, -85);
         if (var3 == null) {
           return null;
         }

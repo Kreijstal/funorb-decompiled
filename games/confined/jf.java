@@ -156,7 +156,7 @@ abstract class jf {
         if (!(tg.field_H <= 200)) {
           var5 = (-tg.field_H + 250 << 8) / 50;
         }
-        vm.a(mi.field_a, -8409);
+        vm.a(ResourceArchive.field_a, -8409);
         ti.b();
         SoftwareRasterizer.clearRaster();
         of.a(false);
@@ -164,7 +164,7 @@ abstract class jf {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_l, 0, -var5 + 256);
           ib.b(false);
           if (tg.field_H < 150) {
-            mi.field_a.b(var3, var4);
+            ResourceArchive.field_a.b(var3, var4);
           } else {
             ad.field_b.a(var3 + 15, var4 + 10, var5);
           }
@@ -214,7 +214,7 @@ abstract class jf {
         }
         ib.b(false);
         if (tg.field_H < 150) {
-          mi.field_a.b(var3, var4);
+          ResourceArchive.field_a.b(var3, var4);
           var6Lifetime1 = tg.field_H - 125;
           if (var6Lifetime1 <= 0) {
             var6Lifetime1 = tg.field_H - 140;

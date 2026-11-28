@@ -9,7 +9,7 @@ abstract class si extends vg implements ba {
     static he[] field_G;
     static RgbSprite field_F;
     static boolean[] field_C;
-    static vj field_E;
+    static ResourceArchive field_E;
     static int field_B;
     static he field_D;
 
@@ -135,7 +135,7 @@ abstract class si extends vg implements ba {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 <= 113) {
-            field_E = (vj) null;
+            field_E = (ResourceArchive) null;
           }
           stackIn_6_0 = (null != this.field_z) && (this.field_z.a(param0, param1, param2, (byte) 123, param4, param5 + this.field_o, this.field_m + param6));
           return stackIn_6_0;

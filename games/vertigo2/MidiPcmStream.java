@@ -465,27 +465,27 @@ final class MidiPcmStream extends PcmStream {
           return ap.field_g;
         }
         if (null != qc.field_B) {
-          if (!qc.field_B.b(0)) {
+          if (!qc.field_B.ensureIndexLoaded(0)) {
             return eb.field_a;
           }
           return bq.field_A;
         }
-        if (!HuffmanCodec.field_b.b(0)) {
+        if (!HuffmanCodec.field_b.ensureIndexLoaded(0)) {
           return ib.field_b;
         }
         if (!HuffmanCodec.field_b.c("commonui", 0)) {
-          return me.field_b + " - " + HuffmanCodec.field_b.a("commonui", 0) + "%";
+          return me.field_b + " - " + HuffmanCodec.field_b.getGroupLoadPercentByName("commonui", 0) + "%";
         }
-        if (!la.field_e.b(0)) {
+        if (!la.field_e.ensureIndexLoaded(0)) {
           return vc.field_a;
         }
         if (!la.field_e.c("commonui", param0 - 2)) {
-          return vd.field_c + " - " + la.field_e.a("commonui", 0) + "%";
+          return vd.field_c + " - " + la.field_e.getGroupLoadPercentByName("commonui", 0) + "%";
         }
-        if (!kb.field_b.b(0)) {
+        if (!kb.field_b.ensureIndexLoaded(0)) {
           return vj.field_a;
         }
-        if (!kb.field_b.a((byte) -112)) {
+        if (!kb.field_b.tryLoadAllGroups((byte) -112)) {
           return dk.field_n + " - " + kb.field_b.d(-1) + "%";
         }
         return b.field_f;

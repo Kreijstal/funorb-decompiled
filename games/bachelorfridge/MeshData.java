@@ -563,8 +563,8 @@ final class MeshData extends MeshObject {
         return (ModelMeshBase) ((Object) new ModelMesh(this, param0, param1, param2, param3, param4));
     }
 
-    final static MeshData a(vr param0, String param1, String param2) {
-        byte[] var3 = param0.a((byte) 123, param2, param1);
+    final static MeshData a(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.getFileByName((byte) 123, param2, param1);
         if (var3 == null) {
           return null;
         }

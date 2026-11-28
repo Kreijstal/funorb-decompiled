@@ -77,7 +77,7 @@ final class se extends hl {
         field_F = null;
     }
 
-    final static void e(byte param0) {
+    final static void clearModelFaceGroupCounts(byte param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

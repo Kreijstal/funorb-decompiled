@@ -57,7 +57,7 @@ final class to {
             to.b(47);
           }
           while (var2_int > var4) {
-            var3 = Raider.a((byte) -38, param1.charAt(var4)) + (-var3 + (var3 << 5));
+            var3 = Raider.encodeCp1252Character((byte) -38, param1.charAt(var4)) + (-var3 + (var3 << 5));
             var4++;
           }
           stackIn_6_0 = var3;

@@ -15,7 +15,7 @@ final class bj extends IntrusiveNode {
     static int field_q;
     static boolean field_m;
 
-    final static ce a(String param0, mi param1, mi param2, String param3, byte param4) {
+    final static ce a(String param0, ResourceArchive param1, ResourceArchive param2, String param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -36,8 +36,8 @@ final class bj extends IntrusiveNode {
             stackIn_2_0 = (ce) null;
             return stackIn_2_0;
           }
-          var5_int = param1.a(-92, param0);
-          var6 = param1.a(var5_int, param3, -69);
+          var5_int = param1.getGroupIdByName(-92, param0);
+          var6 = param1.getFileIdByName(var5_int, param3, -69);
           stackIn_4_0 = cj.a(var6, var5_int, param2, param4 + 20710, param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

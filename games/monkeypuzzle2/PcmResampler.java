@@ -182,7 +182,7 @@ final class PcmResampler {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 76) {
-            stackIn_4_0 = SectorCacheStore.field_b.a(param1, "", 62);
+            stackIn_4_0 = SectorCacheStore.field_b.getFileByName(param1, "", 62);
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;

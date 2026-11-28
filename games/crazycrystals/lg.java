@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lg {
-    private db field_a;
-    private db field_c;
+    private ResourceArchive field_a;
+    private ResourceArchive field_c;
     static String field_e;
     private b field_d;
     static int field_b;
@@ -40,9 +40,9 @@ final class lg {
           return var3;
         }
         if (param1 < 32768) {
-          var4 = this.field_c.b(param1, 0, 1);
+          var4 = this.field_c.getFile(param1, 0, 1);
         } else {
-          var4 = this.field_a.b(32767 & param1, 0, 1);
+          var4 = this.field_a.getFile(32767 & param1, 0, 1);
         }
         mp var5 = new mp();
         if (var4 != null) {

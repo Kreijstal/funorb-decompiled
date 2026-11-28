@@ -267,7 +267,7 @@ class WidgetContainer extends UiWidget implements f {
             break;
           }
           if (stackIn_19_0 < 30) {
-            WidgetContainer.a((pf) null, 14);
+            WidgetContainer.a((ResourceArchive) null, 14);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -537,7 +537,7 @@ class WidgetContainer extends UiWidget implements f {
         }
     }
 
-    final static void a(pf param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2617_0;
             StringBuilder stackIn_2617_1;
@@ -545,10 +545,10 @@ class WidgetContainer extends UiWidget implements f {
             RuntimeException decompiledCaughtException;
             byte[] var2;
             RuntimeException var2_ref;
-            pf param0;
+            ResourceArchive param0;
             int param1;
             boolean finished;
-            $CfrPartitionedBody(pf initialParam0, int initialParam1) {
+            $CfrPartitionedBody(ResourceArchive initialParam0, int initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2617_0 = null;
@@ -3045,7 +3045,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(98, "keychar_the_character_under_questionmark");
                 if (null != var2) {
-                  vd.a(-128, var2[0]);
+                  vd.decodeCp1252Byte(-128, var2[0]);
                 }
                 var2 = ca.a(96, "rating_noratings");
                 if (var2 != null) {

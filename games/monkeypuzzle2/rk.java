@@ -8,7 +8,7 @@ final class rk {
     String field_i;
     static int field_d;
     static int field_h;
-    ad field_e;
+    ResourceArchive field_e;
     static PlatformTaskDispatcher field_g;
     String field_b;
 

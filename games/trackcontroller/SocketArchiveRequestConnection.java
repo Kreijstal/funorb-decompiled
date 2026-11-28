@@ -209,11 +209,11 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               if (SocketConnector.field_d > 0) {
                 oc.field_i = true;
               }
-              LevelView.field_C.a((byte) -83, pl.field_a);
+              LevelView.field_C.setCipherSeed((byte) -83, pl.field_a);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 pl.field_a[var8Lifetime1] = pl.field_a[var8Lifetime1] + 50;
               }
-              ne.field_a.a((byte) -83, pl.field_a);
+              ne.field_a.setCipherSeed((byte) -83, pl.field_a);
               stackIn_79_0 = uk.field_c;
               return stackIn_79_0;
             }

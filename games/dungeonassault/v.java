@@ -7,7 +7,7 @@ final class v {
     private wg[] field_c;
 
     final static v a(ResourceArchive param0, int param1, int param2) {
-        byte[] var3 = param0.b(5, param1, param2);
+        byte[] var3 = param0.getFile(5, param1, param2);
         if (var3 == null) {
           return null;
         }

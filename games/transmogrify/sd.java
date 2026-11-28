@@ -109,16 +109,16 @@ final class sd extends bi {
         }
     }
 
-    final static void a(ci param0, boolean param1) {
+    final static void a(ResourceArchive param0, boolean param1) {
         int var3 = 0;
         int var4 = 0;
         e var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        ci var8 = null;
-        hj var9 = null;
+        ResourceArchive var8 = null;
+        BitPacketBuffer var9 = null;
         int var10 = 0;
-        hj var11 = null;
+        BitPacketBuffer var11 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -127,13 +127,13 @@ final class sd extends bi {
         int var4Lifetime1;
         var7 = Transmogrify.field_A ? 1 : 0;
         try {
-          var9 = new hj(param0.a("", (byte) 124, "logo.fo3d"));
+          var9 = new BitPacketBuffer(param0.getFileByName("", (byte) 124, "logo.fo3d"));
           var11 = var9;
           var3 = var11.readUnsignedByte((byte) 121);
-          var11.h((byte) 106);
+          var11.beginBitAccess((byte) 106);
           if (!param1) {
-            var8 = (ci) null;
-            sd.a((ci) null, true);
+            var8 = (ResourceArchive) null;
+            sd.a((ResourceArchive) null, true);
           }
           rg.field_L = u.a(var11, (byte) 26);
           ae.field_a = new int[var3][];
@@ -141,7 +141,7 @@ final class sd extends bi {
           for (var4 = 0; var3 > var4; var4++) {
             rf.field_eb[var4] = nb.a(param1, var9);
           }
-          var11.n(0);
+          var11.endBitAccess(0);
           var10 = 0;
           var4Lifetime1 = var10;
           while (var10 < var3) {

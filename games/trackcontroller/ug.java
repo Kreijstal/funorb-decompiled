@@ -72,7 +72,7 @@ class ug extends ii {
             var5 = (java.awt.Component) null;
             ug.a(26, (java.awt.Component) null);
           }
-          if (!param1.c(param2 ^ -2147483600)) {
+          if (!param1.ensureIndexLoaded(param2 ^ -2147483600)) {
             stackIn_5_0 = (String) (param0);
             return stackIn_5_0;
           }

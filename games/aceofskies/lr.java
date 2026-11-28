@@ -12,7 +12,7 @@ final class lr extends lg {
             String var3 = (String) null;
             lr.a(-91, (String) null);
           }
-          byte[] stackIn_3_0 = te.field_f.a("", (byte) -71, param1);
+          byte[] stackIn_3_0 = te.field_f.getFileByName("", (byte) -71, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

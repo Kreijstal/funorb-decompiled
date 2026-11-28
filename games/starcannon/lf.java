@@ -6,7 +6,7 @@ final class lf extends kc {
     private String field_db;
     private String field_X;
     static int field_ab;
-    static ue field_eb;
+    static ResourceArchive field_eb;
     private boolean field_fb;
     private boolean field_Y;
     private fa field_W;

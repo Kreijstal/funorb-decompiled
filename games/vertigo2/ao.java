@@ -53,7 +53,7 @@ final class ao extends d {
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new Sprite(param1.a("final_frame.jpg", "", 0), (java.awt.Component) ((Object) ne.field_F));
+          var2 = new Sprite(param1.getFileByName("final_frame.jpg", "", 0), (java.awt.Component) ((Object) ne.field_F));
           var3 = var2.field_y;
           var4 = var2.field_t;
           DelegatingCanvas.a((byte) -31);

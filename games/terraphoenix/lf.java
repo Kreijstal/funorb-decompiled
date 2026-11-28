@@ -30,8 +30,8 @@ final class lf {
             stackIn_2_0 = (IndexedSprite[]) null;
             return stackIn_2_0;
           }
-          var4_int = param3.c(-1, param1);
-          var5 = param3.a(-79, var4_int, param2);
+          var4_int = param3.getGroupIdByName(-1, param1);
+          var5 = param3.getFileIdByName(-79, var4_int, param2);
           stackIn_4_0 = ga.a((byte) 103, var5, param3, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

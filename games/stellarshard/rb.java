@@ -153,7 +153,7 @@ abstract class rb extends GameApplet {
           }
           if (4 == var4) {
             if (uj.field_f) {
-              pf.a(hf.a((byte) -126), (byte) 123);
+              ResourceArchive.a(hf.a((byte) -126), (byte) 123);
             } else {
               eg.field_d = 10;
               cg.field_a = true;
@@ -170,7 +170,7 @@ abstract class rb extends GameApplet {
             qj.a((byte) 109, hf.a((byte) -17));
           }
           if (var4 == 8) {
-            pf.a(hf.a((byte) -85), (byte) 123);
+            ResourceArchive.a(hf.a((byte) -85), (byte) 123);
           }
           if (var4 == 9) {
             of.a((byte) 99, hf.a((byte) -101));
@@ -192,7 +192,7 @@ abstract class rb extends GameApplet {
               if (q.field_d.a(14709)) {
                 var12 = q.field_d.b(-4);
                 if (var12 != null) {
-                  var7 = kk.a(var12.position, (byte) 97, 0, var12.payload);
+                  var7 = kk.decodeCp1252String(var12.position, (byte) 97, 0, var12.payload);
                   il.a(7110, var7);
                 } else {
                   var9 = (String) null;
@@ -451,7 +451,7 @@ abstract class rb extends GameApplet {
         }
         if (DiskCacheWorker.field_f == 2) {
           if (pg.field_db != null &&
-            pg.field_db.a((byte) -36)) {
+            pg.field_db.ensureIndexLoaded((byte) -36)) {
             if (!pg.field_db.c("", (byte) -116)) {
               pg.field_db = null;
             } else {
@@ -505,8 +505,8 @@ abstract class rb extends GameApplet {
         }
         boolean decompiledFrameRemainder0 = true;
         if (DiskCacheWorker.field_f == 11) {
-          if (ld.field_G != null && (!ld.field_G.a((byte) -36) ||
-            !ld.field_G.c((byte) -111))) {
+          if (ld.field_G != null && (!ld.field_G.ensureIndexLoaded((byte) -36) ||
+            !ld.field_G.tryLoadAllGroups((byte) -111))) {
             rd.a((byte) -76, 0.0f, Quaternion.a(kf.field_d, ld.field_G, rg.field_I, 1));
             decompiledFrameRemainder0 = false;
           }
@@ -834,7 +834,7 @@ abstract class rb extends GameApplet {
         }
         if (0 != var2 &&
           var2 != 1) {
-          if (!pf.field_c) {
+          if (!ResourceArchive.field_c) {
             this.a(1, "reconnect");
           }
           pk.a(4);

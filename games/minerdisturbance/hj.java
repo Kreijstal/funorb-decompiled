@@ -78,7 +78,7 @@ final class hj {
           if (param1 != 347664612) {
             return;
           }
-          var8 = new CipherPacketBuffer(param0.a("", 0, "logo.fo3d"));
+          var8 = new CipherPacketBuffer(param0.getFileByName("", 0, "logo.fo3d"));
           var10 = var8;
           var3 = var10.readUnsignedByte((byte) -54);
           var10.f((byte) 16);

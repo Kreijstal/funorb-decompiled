@@ -153,7 +153,7 @@ final class nc extends fb {
             }
             var1 = (r) (bb.field_d.nextBackward((byte) -94));
           }
-          var1_ref = (ln) (nk.field_t.beginBackward(-18110));
+          var1_ref = (ln) (BitPacketBuffer.field_t.beginBackward(-18110));
           while (var1_ref != null) {
             if (var1_ref.field_Hb > 0) {
               var1_ref.field_Hb = var1_ref.field_Hb - 1;
@@ -164,7 +164,7 @@ final class nc extends fb {
                 }
               }
             }
-            var1_ref = (ln) (nk.field_t.nextBackward((byte) -114));
+            var1_ref = (ln) (BitPacketBuffer.field_t.nextBackward((byte) -114));
           }
           if (param0 != 20579) {
             nc.j(-85);

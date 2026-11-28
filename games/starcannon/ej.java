@@ -34,8 +34,8 @@ final class ej extends mi {
         if (param0) {
           return 255 & param1;
         }
-        ue var3 = (ue) null;
-        ej.a((ue) null, (ue) null, 8);
+        ResourceArchive var3 = (ResourceArchive) null;
+        ej.a((ResourceArchive) null, (ResourceArchive) null, 8);
         return 255 & param1;
     }
 
@@ -147,7 +147,7 @@ final class ej extends mi {
         return false;
     }
 
-    final static void a(ue param0, ue param1, int param2) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, int param2) {
         try {
           g.field_a = param0;
           AccountRequestState.field_a = param1;

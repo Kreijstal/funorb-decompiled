@@ -47,7 +47,7 @@ final class nl extends IntrusiveNode {
         field_r = null;
     }
 
-    final static byte[] a(byte param0, int param1, lh param2, byte[] param3) {
+    final static byte[] a(byte param0, int param1, BitPacketBuffer param2, byte[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -64,7 +64,7 @@ final class nl extends IntrusiveNode {
         RuntimeException var4 = null;
         var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          var4_int = param2.e(param1, (byte) -124);
+          var4_int = param2.readBits(param1, (byte) -124);
           if (param0 != 65) {
             nl.resetStaticState((byte) -84);
           }
@@ -76,11 +76,11 @@ final class nl extends IntrusiveNode {
             param3.length != var4_int) {
             param3 = new byte[var4_int];
           }
-          var5 = param2.e(3, (byte) 102);
-          var6 = (byte)param2.e(8, (byte) -95);
+          var5 = param2.readBits(3, (byte) 102);
+          var6 = (byte)param2.readBits(8, (byte) -95);
           if (0 < var5) {
             for (var7 = 0; var4_int > var7; var7++) {
-              param3[var7] = (byte)(param2.e(var5, (byte) -110) + var6);
+              param3[var7] = (byte)(param2.readBits(var5, (byte) -110) + var6);
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {

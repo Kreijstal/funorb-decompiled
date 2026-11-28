@@ -6,7 +6,7 @@ final class ba extends ln {
     static String field_l;
     static vc field_i;
     static RgbSprite[] field_g;
-    static db field_k;
+    static ResourceArchive field_k;
     static java.awt.Image field_h;
 
     final int a(int param0, byte param1) {

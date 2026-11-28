@@ -15,9 +15,9 @@ final class oc {
           return var3;
         }
         if (param1 < 32768) {
-          var4 = this.field_c.b(1, param0 + 12366, param1);
+          var4 = this.field_c.getFile(1, param0 + 12366, param1);
         } else {
-          var4 = this.field_b.b(1, 12257, param1 & 32767);
+          var4 = this.field_b.getFile(1, 12257, param1 & 32767);
         }
         ba var5 = new ba();
         if (param0 != -109) {

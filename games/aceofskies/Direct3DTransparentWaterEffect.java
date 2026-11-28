@@ -117,7 +117,7 @@ final class Direct3DTransparentWaterEffect extends RenderEffect {
         if (param1 != null &&
           this.field_i.b(false) &&
           (65535 & this.field_g.field_Bc.VertexShaderVersion) >= 257) {
-          this.field_f = this.field_g.field_Rc.b(param1.a("dx", (byte) -71, "transparent_water"));
+          this.field_f = this.field_g.field_Rc.b(param1.getFileByName("dx", (byte) -71, "transparent_water"));
         } else {
           this.field_f = null;
         }

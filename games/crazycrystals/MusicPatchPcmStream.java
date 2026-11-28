@@ -4,7 +4,7 @@
 final class MusicPatchPcmStream extends PcmStream {
     static boolean field_j;
     static int field_n;
-    static db field_m;
+    static ResourceArchive field_m;
     IntrusiveDeque field_k;
     private MidiPcmStream field_o;
     PcmStreamMixer field_l;

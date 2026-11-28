@@ -154,11 +154,11 @@ final class sc {
         field_d = null;
         if (param0 != -21718) {
           byte[] var2 = (byte[]) null;
-          sc.a((byte[]) null, -77, 2, 45);
+          sc.decodeCp1252String((byte[]) null, -77, 2, 45);
         }
     }
 
-    final static String a(byte[] param0, int param1, int param2, int param3) {
+    final static String decodeCp1252String(byte[] param0, int param1, int param2, int param3) {
         int var7 = 0;
         int incrementValue$1 = 0;
         char[] var4 = null;

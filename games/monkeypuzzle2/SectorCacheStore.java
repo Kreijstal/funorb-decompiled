@@ -7,7 +7,7 @@ final class SectorCacheStore {
     private int field_a;
     private BufferedRandomAccessFile field_d;
     private BufferedRandomAccessFile field_f;
-    static ad field_b;
+    static ResourceArchive field_b;
     static hb field_c;
     private int field_e;
 

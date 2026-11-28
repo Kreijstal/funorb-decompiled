@@ -59,8 +59,8 @@ final class md {
             stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
-          var4_int = param1.a(126, param3);
-          var5 = param1.a(param0, var4_int, param2 - 107);
+          var4_int = param1.getGroupIdByName(126, param3);
+          var5 = param1.getFileIdByName(param0, var4_int, param2 - 107);
           stackIn_4_0 = ck.a(var5, param2 + 54, var4_int, param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

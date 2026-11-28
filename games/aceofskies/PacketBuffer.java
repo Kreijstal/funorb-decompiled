@@ -108,7 +108,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           CharSequence var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + BoundedRandomAccessFile.a(false, param1.length(), var4, this.payload, this.position, 0);
+          this.position = this.position + BoundedRandomAccessFile.encodeCp1252Subsequence(false, param1.length(), var4, this.payload, this.position, 0);
           int fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -418,7 +418,7 @@ class PacketBuffer extends IntrusiveNode {
         if (0 == var5) {
           return "";
         }
-        return SocketArchiveNetworkClient.a(-111, var5, var4, this.payload);
+        return SocketArchiveNetworkClient.decodeCp1252String(-111, var5, var4, this.payload);
     }
 
     final void writeBase38String(int param0, String param1) {
@@ -585,7 +585,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           CharSequence var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + BoundedRandomAccessFile.a(param0, param1.length(), var4, this.payload, this.position, 0);
+          this.position = this.position + BoundedRandomAccessFile.encodeCp1252Subsequence(param0, param1.length(), var4, this.payload, this.position, 0);
           int fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
@@ -609,7 +609,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var3 == 0) {
           return "";
         }
-        return SocketArchiveNetworkClient.a(-124, var3, var2, this.payload);
+        return SocketArchiveNetworkClient.decodeCp1252String(-124, var3, var2, this.payload);
     }
 
     final static void i(int param0) {

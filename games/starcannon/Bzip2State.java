@@ -19,7 +19,7 @@ final class Bzip2State {
     int[] field_u;
     boolean[] field_y;
     byte[] field_I;
-    static ue field_k;
+    static ResourceArchive field_k;
     byte[] field_D;
     int[] field_n;
     int field_g;

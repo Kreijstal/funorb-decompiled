@@ -110,8 +110,8 @@ final class rg {
           var8Lifetime1 = m.a(var6Lifetime1, (byte) 30) >> 8;
           var9Lifetime1 = nb.a(-95, var6Lifetime1) >> 8;
           if (-1 != bk.field_b &&
-            sh.field_e != -1) {
-            var8Lifetime1 = -sh.field_e + 240;
+            ResourceArchive.field_e != -1) {
+            var8Lifetime1 = -ResourceArchive.field_e + 240;
             var7Lifetime1 = bk.field_b - 320;
             var9Lifetime1 = -128;
           }

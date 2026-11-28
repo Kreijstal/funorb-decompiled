@@ -4,7 +4,7 @@
 abstract class hf implements kf {
     private long field_e;
     static kg field_g;
-    static ad field_a;
+    static ResourceArchive field_a;
     static Sprite field_d;
     static int[] field_c;
     static String field_b;

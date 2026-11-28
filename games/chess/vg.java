@@ -119,7 +119,7 @@ final class vg {
               stackIn_36_0.field_db = ((String) (Object) stackIn_37_1).toUpperCase();
               stackIn_39_0 = ao.field_b;
               if (var8 != 0) {
-                stackIn_40_1 = nk.field_u;
+                stackIn_40_1 = BitPacketBuffer.field_u;
               } else {
                 stackIn_40_1 = he.field_Jb;
               }

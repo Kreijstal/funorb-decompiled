@@ -170,12 +170,12 @@ final class ah {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param4.a(param3, 1000);
+          var5_int = param4.getGroupIdByName(param3, 1000);
           if (param1 != 200) {
             var7 = (ResourceArchive) null;
             ah.a((ResourceArchive) null, 14, (String) null, (String) null, (ResourceArchive) null);
           }
-          var6 = param4.a(0, param2, var5_int);
+          var6 = param4.getFileIdByName(0, param2, var5_int);
           stackIn_3_0 = hh.a(param0, param4, var5_int, (byte) 124, var6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

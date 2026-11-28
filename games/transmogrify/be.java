@@ -23,7 +23,7 @@ final class be extends ih {
     private boolean field_j;
     private long field_l;
     static nk field_w;
-    static ci field_n;
+    static ResourceArchive field_n;
     static int field_x;
 
     public static void c(byte param0) {
@@ -107,7 +107,7 @@ final class be extends ih {
         var13 = var18;
         var5 = var13;
         if (param1 != 2) {
-          this.b(-44, 48);
+          this.getGroupRequestProgressPercent(-44, 48);
         }
         if (var4 instanceof DiskArchiveRequest) {
           try {
@@ -345,27 +345,27 @@ final class be extends ih {
           return 0;
         }
         if (0 == NodeHashTableIterator.field_f) {
-          if (!RasterBuffer.field_c.a((byte) -126)) {
+          if (!RasterBuffer.field_c.ensureIndexLoaded((byte) -126)) {
             return 20;
           }
           if (!RasterBuffer.field_c.a((byte) 120, "commonui")) {
             return 40;
           }
-          if (!wi.field_e.a((byte) -127)) {
+          if (!wi.field_e.ensureIndexLoaded((byte) -127)) {
             return 50;
           }
           if (!wi.field_e.a((byte) 112, "commonui")) {
             return 60;
           }
-          if (!DelayedPcmStream.field_n.a((byte) -118)) {
+          if (!DelayedPcmStream.field_n.ensureIndexLoaded((byte) -118)) {
             return 70;
           }
-          if (!DelayedPcmStream.field_n.c(param0 ^ 32088)) {
+          if (!DelayedPcmStream.field_n.tryLoadAllGroups(param0 ^ 32088)) {
             return 80;
           }
         } else {
           if (null != hg.field_a) {
-            if (!hg.field_a.a((byte) -114)) {
+            if (!hg.field_a.ensureIndexLoaded((byte) -114)) {
               return 14;
             }
             if (!hg.field_a.b((byte) -120, "")) {
@@ -375,22 +375,22 @@ final class be extends ih {
               return 29;
             }
           }
-          if (!RasterBuffer.field_c.a((byte) -125)) {
+          if (!RasterBuffer.field_c.ensureIndexLoaded((byte) -125)) {
             return 43;
           }
           if (!RasterBuffer.field_c.a((byte) 120, "commonui")) {
             return 57;
           }
-          if (!wi.field_e.a((byte) -118)) {
+          if (!wi.field_e.ensureIndexLoaded((byte) -118)) {
             return 71;
           }
           if (!wi.field_e.a((byte) -42, "commonui")) {
             return 80;
           }
-          if (!DelayedPcmStream.field_n.a((byte) -118)) {
+          if (!DelayedPcmStream.field_n.ensureIndexLoaded((byte) -118)) {
             return 82;
           }
-          if (!DelayedPcmStream.field_n.c(param0 ^ 32088)) {
+          if (!DelayedPcmStream.field_n.tryLoadAllGroups(param0 ^ 32088)) {
             return 86;
           }
         }
@@ -616,7 +616,7 @@ final class be extends ih {
         return new hg(DiskCacheWorker.b(-127), cf.d(4819119));
     }
 
-    final int b(int param0, int param1) {
+    final int getGroupRequestProgressPercent(int param0, int param1) {
         ArchiveRequest var3 = (ArchiveRequest) (this.field_m.a((long)param1, 0));
         if (var3 != null) {
           return var3.getProgressPercent(0);

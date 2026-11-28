@@ -622,7 +622,7 @@ final class ld {
         if (param0 != 13) {
           this.b(-103);
         }
-        we.a(false, nl.field_r[0]);
+        we.playPcmSample(false, nl.field_r[0]);
     }
 
     private final void i(int param0) {
@@ -1380,7 +1380,7 @@ final class ld {
             if (nj.field_j >= 2 &&
               ck.field_f[82]) {
               if (null == nb.field_a) {
-                nb.field_a = vj.a((byte) 74);
+                nb.field_a = ResourceArchive.a((byte) 74);
               }
               sd.field_a = new LevelSession(7);
               sd.field_a.field_G = nb.field_a;

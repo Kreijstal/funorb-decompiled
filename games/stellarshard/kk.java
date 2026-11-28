@@ -98,7 +98,7 @@ final class kk extends lk {
             field_k = (bh) null;
           }
           var5 = (CharSequence) ((Object) param1);
-          var3_int = pf.a(var5, (byte) 125);
+          var3_int = ResourceArchive.a(var5, (byte) 125);
           if (0 < var3_int &&
             130 >= var3_int) {
             return lg.field_c;
@@ -119,7 +119,7 @@ final class kk extends lk {
         }
     }
 
-    final static String a(int param0, byte param1, int param2, byte[] param3) {
+    final static String decodeCp1252String(int param0, byte param1, int param2, byte[] param3) {
         int var6 = 0;
         int incrementValue$1 = 0;
         char[] var4 = null;

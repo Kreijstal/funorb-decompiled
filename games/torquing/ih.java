@@ -37,8 +37,8 @@ class ih extends qf {
             var7 = (String) null;
             ih.a(-20, (String) null, (fi) null, (ResourceArchive) null, (String) null);
           }
-          var5_int = param3.a(-1, param1);
-          var6 = param3.a(param4, -124, var5_int);
+          var5_int = param3.getGroupIdByName(-1, param1);
+          var6 = param3.getFileIdByName(param4, -124, var5_int);
           stackIn_3_0 = qo.a(var5_int, var6, 0, param2, param3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

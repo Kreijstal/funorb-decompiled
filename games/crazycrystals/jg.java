@@ -133,7 +133,7 @@ final class jg {
         field_i = null;
     }
 
-    final static boolean a(db param0, int param1) {
+    final static boolean a(ResourceArchive param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
@@ -143,7 +143,7 @@ final class jg {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -73 % ((param1 - 25) / 34);
-          stackIn_1_0 = param0.a(false);
+          stackIn_1_0 = param0.tryLoadAllGroups(false);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

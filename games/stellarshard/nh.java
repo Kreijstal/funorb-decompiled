@@ -4,7 +4,7 @@
 import java.io.*;
 
 class nh extends sk {
-    static pf field_g;
+    static ResourceArchive field_g;
     static int[] field_d;
     static char[] field_e;
     private String field_i;

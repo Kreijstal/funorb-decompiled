@@ -30,15 +30,15 @@ abstract class we {
     }
 
     final static void a(int param0, aj param1, byte param2) {
-        la var8 = null;
-        la var9 = null;
+        BitPacketBuffer var8 = null;
+        BitPacketBuffer var9 = null;
         int var4 = 0;
         int var6 = 0;
         int var7 = TrackController.field_F ? 1 : 0;
         try {
           var8 = LevelView.field_C;
           var9 = var8;
-          var9.c(param0, 7);
+          var9.writeCipheredByte(param0, 7);
           var9.position = var9.position + 1;
           var4 = var9.position;
           var9.writeByte(1, (byte) -119);

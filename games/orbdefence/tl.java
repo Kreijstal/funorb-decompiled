@@ -14,14 +14,14 @@ final class tl {
     static int[] field_b;
 
     final static void a(int param0, ha param1, int param2) {
-        se var5 = null;
+        BitPacketBuffer var5 = null;
         int var4 = 0;
         try {
           var5 = uk.field_b;
           if (param0 > -121) {
             field_h = (AccountRequestState) null;
           }
-          var5.i(param2, 92);
+          var5.writeCipheredByte(param2, 92);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(1, -125);

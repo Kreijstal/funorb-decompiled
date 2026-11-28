@@ -97,8 +97,8 @@ final class MixedSupport011 {
             stackRgbSpriteArrayLocal4 = (RgbSprite[]) null;
             return stackRgbSpriteArrayLocal4;
           }
-          integerLocal1 = resourceArchiveArgument2.computeInteger0819(integerArgument1 - 113, stringArgument3);
-          integerLocal3 = resourceArchiveArgument2.computeInteger0806(integerLocal1, 13030, stringArgument4);
+          integerLocal1 = resourceArchiveArgument2.getGroupIdByName(integerArgument1 - 113, stringArgument3);
+          integerLocal3 = resourceArchiveArgument2.getFileIdByName(integerLocal1, 13030, stringArgument4);
           stackRgbSpriteArrayLocal5 = SocketFactory.computeRgbSpriteArray1793(resourceArchiveArgument2, -126, integerLocal3, integerLocal1);
           return stackRgbSpriteArrayLocal5;
         } catch (java.lang.RuntimeException caughtParameterLocal14) {

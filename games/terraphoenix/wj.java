@@ -210,11 +210,11 @@ final class wj {
               if (me.field_o > 0) {
                 DelegatingCanvas.field_c = true;
               }
-              di.field_l.a(ab.field_g, 16888);
+              di.field_l.setCipherSeed(ab.field_g, 16888);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 ab.field_g[var8Lifetime1] = ab.field_g[var8Lifetime1] + 50;
               }
-              LevelEditor.field_j.a(ab.field_g, 16888);
+              LevelEditor.field_j.setCipherSeed(ab.field_g, 16888);
               stackIn_76_0 = qk.field_b;
               return stackIn_76_0;
             }

@@ -45,7 +45,7 @@ final class mf {
         int var6_int = 0;
         int[] var7 = null;
         int var9 = 0;
-        la var10 = null;
+        BitPacketBuffer var10 = null;
         int[] var11 = null;
         int[] var12 = null;
         var9 = TrackController.field_F ? 1 : 0;

@@ -237,8 +237,8 @@ final class cj extends rb {
     }
 
     final static void a(int param0, boolean param1) {
-        la var2 = LevelView.field_C;
-        var2.c(param0, 7);
+        BitPacketBuffer var2 = LevelView.field_C;
+        var2.writeCipheredByte(param0, 7);
         var2.writeByte(1, (byte) -104);
         var2.writeByte(0, (byte) -88);
         if (param1) {

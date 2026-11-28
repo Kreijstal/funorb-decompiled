@@ -430,10 +430,10 @@ final class jp extends IntrusiveNode {
         try {
           jp var4_ref = null;
           if (!jp.a(param0)) {
-            param0.a(param2, 2, param1);
+            param0.tryLoadFile(param2, 2, param1);
             return null;
           }
-          byte[] var3 = param0.b(5, param1, param2);
+          byte[] var3 = param0.getFile(5, param1, param2);
           if (var3 == null) {
             return null;
           }
@@ -466,7 +466,7 @@ final class jp extends IntrusiveNode {
             param0.a(-13703, param2, param1);
             return null;
           }
-          byte[] var3 = param0.a(param1, param2, (byte) -110);
+          byte[] var3 = param0.getFileByName(param1, param2, (byte) -110);
           if (var3 == null) {
             return null;
           }
@@ -487,7 +487,7 @@ final class jp extends IntrusiveNode {
     private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_y) {
-          var1 = param0.b(5, 0, 0);
+          var1 = param0.getFile(5, 0, 0);
           if (var1 == null) {
             return false;
           }

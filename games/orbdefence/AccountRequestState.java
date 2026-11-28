@@ -9,7 +9,7 @@ final class AccountRequestState {
     static int field_d;
     static String[] field_b;
 
-    final static RgbSprite a(int param0, int param1, ki param2, byte param3) {
+    final static RgbSprite a(int param0, int param1, ResourceArchive param2, byte param3) {
         RuntimeException var4 = null;
         RgbSprite stackIn_2_0 = null;
         Object stackIn_5_0 = null;
@@ -120,7 +120,7 @@ final class AccountRequestState {
         }
     }
 
-    final static void a(ki param0, byte param1) {
+    final static void a(ResourceArchive param0, byte param1) {
         RuntimeException stackIn_664_0 = null;
         StringBuilder stackIn_664_1 = null;
         String stackIn_665_2 = null;

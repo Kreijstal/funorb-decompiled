@@ -246,7 +246,7 @@ final class ka extends IntrusiveNode {
             }
           }
           if (param2 >= -31) {
-            ka.a(true, '+');
+            ka.encodeCp1252Character(true, '+');
           }
           if (2 == go.field_x) {
             var10 = ArchiveIndex.field_k;
@@ -313,7 +313,7 @@ final class ka extends IntrusiveNode {
         }
     }
 
-    final static byte a(boolean param0, char param1) {
+    final static byte encodeCp1252Character(boolean param0, char param1) {
         int var2;
         int var3;
         {

@@ -4,7 +4,7 @@
 public abstract class GameAppletShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static int field_c;
     static java.awt.Canvas field_f;
-    static ki field_d;
+    static ResourceArchive field_d;
     static long field_l;
     boolean field_h;
     static volatile boolean field_m;

@@ -23,7 +23,7 @@ class DualLinkNode extends IntrusiveNode {
               ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-60);
               return;
             }
-            SpriteGeometry.field_q.h(1, 0);
+            SpriteGeometry.field_q.writeCipheredByte(1, 0);
             kc.a(0, -1);
             ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-60);
             return;
@@ -33,7 +33,7 @@ class DualLinkNode extends IntrusiveNode {
           hc.h(249);
           wa.a(-45);
           if (el.a(1)) {
-            SpriteGeometry.field_q.h(1, 0);
+            SpriteGeometry.field_q.writeCipheredByte(1, 0);
             kc.a(0, -1);
             ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-60);
             return;
@@ -50,7 +50,7 @@ class DualLinkNode extends IntrusiveNode {
             ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-60);
             return;
           }
-          SpriteGeometry.field_q.h(1, 0);
+          SpriteGeometry.field_q.writeCipheredByte(1, 0);
           kc.a(0, -1);
           ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-60);
           return;
@@ -62,7 +62,7 @@ class DualLinkNode extends IntrusiveNode {
           ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-60);
           return;
         }
-        SpriteGeometry.field_q.h(1, 0);
+        SpriteGeometry.field_q.writeCipheredByte(1, 0);
         kc.a(0, -1);
         ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-60);
     }

@@ -57,7 +57,7 @@ final class qi extends qg {
         }
     }
 
-    final static void a(byte param0, qk param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         RuntimeException stackIn_145_0 = null;
         StringBuilder stackIn_145_1 = null;
         String stackIn_146_2 = null;
@@ -315,17 +315,17 @@ final class qi extends qg {
         }
     }
 
-    final static qk a(boolean param0, int param1, int param2, boolean param3, int param4) {
+    final static ResourceArchive a(boolean param0, int param1, int param2, boolean param3, int param4) {
         RuntimeException var5 = null;
-        qk stackIn_2_0 = null;
-        qk stackIn_4_0 = null;
+        ResourceArchive stackIn_2_0 = null;
+        ResourceArchive stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 == 2147483647) {
             stackIn_4_0 = lf.a(param0, param3, param2, param1, (byte) -70, false);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (qk) null;
+          stackIn_2_0 = (ResourceArchive) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

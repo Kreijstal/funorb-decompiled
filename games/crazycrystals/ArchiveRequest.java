@@ -228,7 +228,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         this.field_n = true;
     }
 
-    final static RgbSprite[] a(int param0, int param1, db param2, int param3) {
+    final static RgbSprite[] a(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_5_0 = null;
         RgbSprite[] stackIn_7_0 = null;
@@ -318,7 +318,7 @@ abstract class ArchiveRequest extends DualLinkNode {
 
     abstract int getProgressPercent(byte param0);
 
-    final static RgbSprite a(String param0, db param1, int param2, String param3) {
+    final static RgbSprite a(String param0, ResourceArchive param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -333,12 +333,12 @@ abstract class ArchiveRequest extends DualLinkNode {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.a(param3, -1);
+          var4_int = param1.getGroupIdByName(param3, -1);
           if (param2 != 10) {
             stackIn_2_0 = (RgbSprite) null;
             return stackIn_2_0;
           }
-          var5 = param1.a(-2862, param0, var4_int);
+          var5 = param1.getFileIdByName(-2862, param0, var4_int);
           stackIn_4_0 = sj.a(var5, var4_int, param1, 28);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

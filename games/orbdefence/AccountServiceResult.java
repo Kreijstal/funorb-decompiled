@@ -33,7 +33,7 @@ final class AccountServiceResult {
           }
           var5 = (gj) (BufferedSocket.field_b.beginForward((byte) 123));
           while (var5 != null) {
-            se.a(var5, param0, -49);
+            BitPacketBuffer.writeLeaderboardRequest(var5, param0, -49);
             var5 = (gj) (BufferedSocket.field_b.nextForward(param1 ^ 7970));
           }
           if (param1 == 7287) {

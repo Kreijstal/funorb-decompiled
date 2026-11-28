@@ -43,12 +43,12 @@ abstract class v implements eh {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        la var12 = null;
+        BitPacketBuffer var12 = null;
         var11 = TrackController.field_F ? 1 : 0;
         try {
           if (param1 != -31) {
-            var12 = (la) null;
-            v.a(-84, (short[]) null, (la) null, 49);
+            var12 = (BitPacketBuffer) null;
+            v.a(-84, (short[]) null, (BitPacketBuffer) null, 49);
           }
           var4_int = param3.length();
           var5 = param2.length();
@@ -141,7 +141,7 @@ abstract class v implements eh {
 
     abstract String b(byte param0);
 
-    final static short[] a(int param0, short[] param1, la param2, int param3) {
+    final static short[] a(int param0, short[] param1, BitPacketBuffer param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -162,7 +162,7 @@ abstract class v implements eh {
             stackIn_3_0 = (short[]) null;
             return stackIn_3_0;
           }
-          var4_int = param2.d(0, param0);
+          var4_int = param2.readBits(0, param0);
           if (0 == var4_int) {
             return null;
           }
@@ -170,15 +170,15 @@ abstract class v implements eh {
             var4_int != param1.length) {
             param1 = new short[var4_int];
           }
-          var5 = param2.d(0, 4);
-          var6 = (short)param2.d(0, 16);
+          var5 = param2.readBits(0, 4);
+          var6 = (short)param2.readBits(0, 16);
           if (var5 <= 0) {
             for (var7 = 0; var4_int > var7; var7++) {
               param1[var7] = (short)var6;
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {
-              param1[var7] = (short)(var6 + param2.d(0, var5));
+              param1[var7] = (short)(var6 + param2.readBits(0, var5));
             }
           }
           stackIn_19_0 = (short[]) (param1);

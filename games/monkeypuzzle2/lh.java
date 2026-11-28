@@ -8,7 +8,7 @@ final class lh {
     static boolean field_e;
     static String[] field_d;
 
-    final static void a(ad param0, ad param1, ad param2, int param3) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3) {
         Sprite var18 = null;
         ai[] var5 = null;
         ai[][] var6 = null;
@@ -35,7 +35,7 @@ final class lh {
           pf.field_c = (ta) ((Object) cb.a("commonui", param0, -103, param1, "arezzo12"));
           ButtonWidget.field_z = (ta) ((Object) cb.a("commonui", param0, -99, param1, "arezzo14"));
           IntrusiveDeque.field_c = (ta) ((Object) cb.a("commonui", param0, -75, param1, "arezzo14bold"));
-          var18 = new Sprite(param2.a("", "button.gif", -128), (java.awt.Component) ((Object) ie.field_e));
+          var18 = new Sprite(param2.getFileByName("", "button.gif", -128), (java.awt.Component) ((Object) ie.field_e));
           df.a("commonui", param1, (byte) 118, "dropdown");
           var5 = DiskCacheWorker.a("commonui", "screen_options", param1, false);
           vj.field_d = new ai[4];

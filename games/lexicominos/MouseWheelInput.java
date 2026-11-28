@@ -10,7 +10,7 @@ abstract class MouseWheelInput {
     static int field_a;
     static int[] field_f;
 
-    final static CoverageBitmapFont a(String param0, String param1, boolean param2, sh param3, sh param4) {
+    final static CoverageBitmapFont a(String param0, String param1, boolean param2, ResourceArchive param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -31,8 +31,8 @@ abstract class MouseWheelInput {
             stackIn_2_0 = (CoverageBitmapFont) null;
             return stackIn_2_0;
           }
-          var5_int = param4.c(param0, (byte) -89);
-          var6 = param4.a(param1, -27964, var5_int);
+          var5_int = param4.getGroupIdByName(param0, (byte) -89);
+          var6 = param4.getFileIdByName(param1, -27964, var5_int);
           stackIn_4_0 = eg.a(var6, var5_int, param4, param3, 96);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -224,7 +224,7 @@ abstract class MouseWheelInput {
 
     abstract void detach(int param0, java.awt.Component param1);
 
-    final static String a(byte param0, String param1, String param2, sh param3) {
+    final static String a(byte param0, String param1, String param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         java.applet.Applet var5 = null;
         String stackIn_3_0 = null;
@@ -238,7 +238,7 @@ abstract class MouseWheelInput {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param3.c(104)) {
+          if (!param3.ensureIndexLoaded(104)) {
             stackIn_3_0 = (String) (param1);
             return stackIn_3_0;
           }

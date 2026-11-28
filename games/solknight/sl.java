@@ -43,10 +43,10 @@ final class sl extends IntrusiveNode {
         try {
           sl var4_ref = null;
           if (!sl.a(param0)) {
-            param0.a(100, param1, param2);
+            param0.tryLoadFile(100, param1, param2);
             return null;
           }
-          byte[] var3 = param0.b(param1, 12257, param2);
+          byte[] var3 = param0.getFile(param1, 12257, param2);
           if (var3 == null) {
             return null;
           }
@@ -90,7 +90,7 @@ final class sl extends IntrusiveNode {
     private final static boolean a(Archive param0) {
         byte[] var1 = null;
         if (!field_s) {
-          var1 = param0.b(0, 12257, 0);
+          var1 = param0.getFile(0, 12257, 0);
           if (var1 == null) {
             return false;
           }
@@ -384,7 +384,7 @@ final class sl extends IntrusiveNode {
             param0.a(param1, param2, true);
             return null;
           }
-          byte[] var3 = param0.a(4, param1, param2);
+          byte[] var3 = param0.getFileByName(4, param1, param2);
           if (var3 == null) {
             return null;
           }

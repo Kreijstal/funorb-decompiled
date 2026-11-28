@@ -64,8 +64,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (byteArgument4 <= 26) {
             mixedSupport061State0003 = (MixedSupport061) null;
           }
-          integerLocal1 = resourceArchiveArgument2.computeInteger0819(-1, stringArgument3);
-          integerLocal3 = resourceArchiveArgument2.computeInteger0806(integerLocal1, 13030, stringArgument1);
+          integerLocal1 = resourceArchiveArgument2.getGroupIdByName(-1, stringArgument3);
+          integerLocal3 = resourceArchiveArgument2.getFileIdByName(integerLocal1, 13030, stringArgument1);
           stackIndexedSpriteLocal4 = ComponentDecorator.computeIndexedSprite1015(resourceArchiveArgument2, integerLocal1, integerLocal3, 21828);
           return stackIndexedSpriteLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal13) {

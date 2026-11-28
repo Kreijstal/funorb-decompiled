@@ -202,11 +202,11 @@ final class ug extends hf {
           this.field_h = 1000L + rf.correctedCurrentTimeMillis(0);
         }
         if (param0) {
-          this.a(15, 40);
+          this.getGroupRequestProgressPercent(15, 40);
         }
     }
 
-    final int a(int param0, int param1) {
+    final int getGroupRequestProgressPercent(int param0, int param1) {
         ArchiveRequest var3 = (ArchiveRequest) (this.field_k.a((long)param0, (byte) 96));
         if (var3 != null) {
           return var3.getProgressPercent((byte) 16);
@@ -342,7 +342,7 @@ final class ug extends hf {
         }
     }
 
-    final static wj a(sh param0, int param1, boolean param2) {
+    final static wj a(ResourceArchive param0, int param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;

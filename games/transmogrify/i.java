@@ -9,7 +9,7 @@ final class i {
     static int[] field_b;
     static String field_c;
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isAcceptedTextInputCharacter(char param0, int param1) {
         if (32 <= param0) {
           if (param0 <= 126) {
             return true;

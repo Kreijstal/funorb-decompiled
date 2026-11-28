@@ -42,7 +42,7 @@ final class AccountRequestState {
             }
             var4 = new byte[var3_int];
             param2.position = param2.position + pa.field_d.a(var4, param2.position, 0, param2.payload, param1 ^ param1, var3_int);
-            var5 = lh.a(0, -3789, var3_int, var4);
+            var5 = lh.decodeCp1252String(0, -3789, var3_int, var4);
             stackIn_4_0 = var5;
             return stackIn_4_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

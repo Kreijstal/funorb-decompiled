@@ -14,7 +14,7 @@ final class BasicMoveDefinition extends MoveDefinition {
     static int field_v;
     int field_t;
 
-    final static void a(int param0, vr param1) {
+    final static void a(int param0, ResourceArchive param1) {
         try {
           vw.field_a = new ArenaTheme[3];
           vw.field_a[param0] = (ArenaTheme) ((Object) new PizzaArenaTheme(param1));

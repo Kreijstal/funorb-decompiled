@@ -9,7 +9,7 @@ final class hn {
         String stackIn_11_2 = null;
         int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          CipherPacketBuffer var8 = new CipherPacketBuffer(param0.a("logo.fo3d", (byte) -71, ""));
+          CipherPacketBuffer var8 = new CipherPacketBuffer(param0.getFileByName("logo.fo3d", (byte) -71, ""));
           CipherPacketBuffer var10 = var8;
           int var3 = var10.readUnsignedByte(-63);
           var10.j(91);

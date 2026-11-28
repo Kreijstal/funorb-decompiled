@@ -289,7 +289,7 @@ final class MidiPcmStream extends PcmStream {
           if (!DualLinkNode.a(param1, param3, param2, true)) {
             return null;
           }
-          stackIn_6_0 = fm.a(param0.b(param1, 127, param3), 38);
+          stackIn_6_0 = fm.a(param0.getFile(param1, 127, param3), 38);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

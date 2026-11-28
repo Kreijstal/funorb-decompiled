@@ -309,7 +309,7 @@ public final class TrackController extends GameShell {
         ClientException.clearStaticReferences((byte) -96);
         GameApplet.b((byte) -91);
         ej.clearStaticReferences(17);
-        MouseWheelInput.b(-31279);
+        MouseWheelInput.clearStaticReferences(-31279);
         SoftwareRasterizer.clearStaticReferences();
         BitmapFont.clearStaticReferences();
         e.clearStaticReferences(-1102);
@@ -383,7 +383,7 @@ public final class TrackController extends GameShell {
         pg.clearStaticReferences();
         c.a((byte) 107);
         PcmOutputWorker.a(param0 ^ -3863);
-        la.clearStaticReferences(false);
+        BitPacketBuffer.clearStaticReferences(false);
         jk.clearStaticReferences(-99);
         wf.resetStaticState((byte) -123);
         qa.clearStaticReferences(true);
@@ -780,7 +780,7 @@ public final class TrackController extends GameShell {
           int var8Lifetime2;
           var18 = field_F ? 1 : 0;
           if (null != el.field_L) {
-            if (el.field_L.c(111) &&
+            if (el.field_L.ensureIndexLoaded(111) &&
               el.field_L.b("basic", (byte) -3)) {
               if (!el.field_L.b("comic12", (byte) -3)) {
                 ud.a(128, 3.0f, wf.a("comic12", IndexedSpriteState.field_f, v.field_c, el.field_L, 43));
@@ -798,27 +798,27 @@ public final class TrackController extends GameShell {
                 ud.a(128, 3.0f, wf.a("kartika13", IndexedSpriteState.field_f, v.field_c, fb.field_b, 62));
                 return false;
               }
-              if (rl.field_D.c(param0 - 374) &&
-                rl.field_D.a((byte) 48)) {
-                if (ui.a(0, true) && (!sg.field_a.c(-115) ||
+              if (rl.field_D.ensureIndexLoaded(param0 - 374) &&
+                rl.field_D.tryLoadAllGroups((byte) 48)) {
+                if (ui.a(0, true) && (!sg.field_a.ensureIndexLoaded(-115) ||
                   !sg.field_a.b("halloween", (byte) -3))) {
                   ud.a(param0 ^ 339, 11.0f, wf.a("halloween", sa.field_K, gj.field_e, sg.field_a, param0 ^ 479));
                   return false;
                 }
-                if (sg.field_a.c(91) &&
+                if (sg.field_a.ensureIndexLoaded(91) &&
                   sg.field_a.b("", (byte) -3)) {
-                  if (sg.field_a.c(106) &&
+                  if (sg.field_a.ensureIndexLoaded(106) &&
                     sg.field_a.b("", (byte) -3)) {
-                    if (si.field_c.c(-109) &&
-                      si.field_c.a((byte) 48)) {
-                      if (j.field_h.c(96) &&
-                        j.field_h.a((byte) 48)) {
-                        if (wl.field_l.c(121) &&
-                          wl.field_l.a((byte) 48) &&
-                          DiskArchiveRequest.field_C.c(param0 - 357) &&
-                          DiskArchiveRequest.field_C.a((byte) 48)) {
-                          if (sk.field_j.c(-73) &&
-                            sk.field_j.a((byte) 48)) {
+                    if (si.field_c.ensureIndexLoaded(-109) &&
+                      si.field_c.tryLoadAllGroups((byte) 48)) {
+                      if (j.field_h.ensureIndexLoaded(96) &&
+                        j.field_h.tryLoadAllGroups((byte) 48)) {
+                        if (wl.field_l.ensureIndexLoaded(121) &&
+                          wl.field_l.tryLoadAllGroups((byte) 48) &&
+                          DiskArchiveRequest.field_C.ensureIndexLoaded(param0 - 357) &&
+                          DiskArchiveRequest.field_C.tryLoadAllGroups((byte) 48)) {
+                          if (sk.field_j.ensureIndexLoaded(-73) &&
+                            sk.field_j.tryLoadAllGroups((byte) 48)) {
                             ud.a(param0 ^ 339, 70.0f, cg.field_d);
                             if (!param1) {
                               return false;
@@ -830,7 +830,7 @@ public final class TrackController extends GameShell {
                             ii.field_p = ab.a("basic", -15383, "locked", el.field_L);
                             ei.a(ii.field_p, -1);
                             dc.field_p = ab.a("basic", -15383, "orbcoin", el.field_L);
-                            var3_ref_byte__ = si.field_c.a("", param0 ^ -468, "tcfont");
+                            var3_ref_byte__ = si.field_c.getFileByName("", param0 ^ -468, "tcfont");
                             var4_ref_ng__ = ie.a("", sg.field_a, "tcfont", param0 - 341);
                             var5_ref_oh = (BitmapFont) ((Object) ma.a(6488064, (byte) -123, 2, var4_ref_ng__, var3_ref_byte__, 15252224));
                             bk.font = var5_ref_oh;
@@ -972,7 +972,7 @@ public final class TrackController extends GameShell {
             if (null != rl.field_D) {
               mj.a(208);
               gj.levels = new LevelData[31];
-              var40 = rl.field_D.a("", param0 ^ -468, "levels.txt");
+              var40 = rl.field_D.getFileByName("", param0 ^ -468, "levels.txt");
               var32 = new BufferedReader((Reader) ((Object) new InputStreamReader((InputStream) ((Object) new ByteArrayInputStream(var40)))));
               try {
                 for (var5 = 0; 31 > var5; var5++) {

@@ -4,7 +4,7 @@
 final class oi extends IntrusiveNode {
     int[] field_m;
     static String field_j;
-    static ci field_g;
+    static ResourceArchive field_g;
     static long field_i;
     static da field_k;
     static String[] field_l;
@@ -16,7 +16,7 @@ final class oi extends IntrusiveNode {
         field_j = null;
         field_l = null;
         if (param0 >= -36) {
-          field_g = (ci) null;
+          field_g = (ResourceArchive) null;
         }
     }
 

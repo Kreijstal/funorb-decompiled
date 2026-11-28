@@ -22,7 +22,7 @@ final class fl extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -37 / ((70 - param0) / 37);
-          stackIn_1_0 = param1.a((byte) 59);
+          stackIn_1_0 = param1.tryLoadAllGroups((byte) 59);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

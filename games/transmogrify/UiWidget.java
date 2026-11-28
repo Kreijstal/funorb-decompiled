@@ -373,7 +373,7 @@ class UiWidget extends IntrusiveNode {
         try {
           var2_int = -6 / ((param1 - 17) / 55);
           var3 = (CharSequence) ((Object) param0);
-          stackIn_1_0 = NanoFrameTimer.field_e.equals(hj.a((byte) -126, var3));
+          stackIn_1_0 = NanoFrameTimer.field_e.equals(BitPacketBuffer.normalizePlayerName((byte) -126, var3));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

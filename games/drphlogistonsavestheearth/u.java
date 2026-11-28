@@ -24,7 +24,7 @@ abstract class u {
 
     final static boolean a(String param0, boolean param1, String param2) {
         RuntimeException var3 = null;
-        vj var4 = null;
+        ResourceArchive var4 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -42,8 +42,8 @@ abstract class u {
             return false;
           }
           if (param1) {
-            var4 = (vj) null;
-            u.a((vj) null, 120, -66);
+            var4 = (ResourceArchive) null;
+            u.a((ResourceArchive) null, 120, -66);
           }
           if (param2.length() == 0) {
             return true;
@@ -80,7 +80,7 @@ abstract class u {
 
     abstract void a(PacketBuffer param0, int param1);
 
-    final static ig a(vj param0, int param1, int param2) {
+    final static ig a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;

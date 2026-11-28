@@ -90,7 +90,7 @@ abstract class cb extends DualLinkNode {
           if (param3 != 13) {
             cb.a(-76, -116, -108, 42, -102);
           }
-          if (!param2.b((byte) -120)) {
+          if (!param2.ensureIndexLoaded((byte) -120)) {
             stackIn_5_0 = (String) (param0);
             return stackIn_5_0;
           }

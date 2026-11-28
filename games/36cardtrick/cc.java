@@ -13,7 +13,7 @@ final class cc {
         throw new IllegalStateException();
     }
 
-    final static char a(byte param0, int param1) {
+    final static char decodeCp1252Byte(byte param0, int param1) {
         int var3 = 0;
         int var2 = 255 & param0;
         if (var2 == 0) {

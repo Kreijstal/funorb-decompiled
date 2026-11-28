@@ -9,7 +9,7 @@ final class sf extends td implements ButtonListener {
     private ButtonWidget field_G;
     static java.awt.Frame field_H;
 
-    final static Model a(la param0, boolean param1) {
+    final static Model a(BitPacketBuffer param0, boolean param1) {
         int stackIn_28_0 = 0;
         int stackIn_28_1 = 0;
         Model stackIn_35_0 = null;
@@ -27,7 +27,7 @@ final class sf extends td implements ButtonListener {
         int var8 = 0;
         var8 = TrackController.field_F ? 1 : 0;
         try {
-          var2_int = param0.d(0, 8);
+          var2_int = param0.readBits(0, 8);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
@@ -37,16 +37,16 @@ final class sf extends td implements ButtonListener {
           }
           var4 = lf.a((byte) -68, param0) ? 1 : 0;
           var5 = new Model();
-          var5.field_q = (short)param0.d(0, 16);
+          var5.field_q = (short)param0.readBits(0, 16);
           var5.field_y = v.a(16, var5.field_y, param0, 115);
           var5.field_o = v.a(16, var5.field_o, param0, 39);
           var5.field_S = v.a(16, var5.field_S, param0, 97);
-          var5.field_E = (short)param0.d(0, 16);
+          var5.field_E = (short)param0.readBits(0, 16);
           var5.field_O = v.a(16, var5.field_O, param0, 114);
           var5.field_g = v.a(16, var5.field_g, param0, 99);
           var5.field_d = v.a(16, var5.field_d, param0, 95);
           if (var3 != 0) {
-            var5.field_l = (short)param0.d(0, 16);
+            var5.field_l = (short)param0.readBits(0, 16);
             var5.field_j = v.a(16, var5.field_j, param0, 30);
             var5.field_R = v.a(16, var5.field_R, param0, 117);
             var5.field_b = v.a(16, var5.field_b, param0, 126);
@@ -55,7 +55,7 @@ final class sf extends td implements ButtonListener {
             var5.field_J = v.a(16, var5.field_J, param0, 88);
           }
           if (var4 != 0) {
-            param0.d(0, 16);
+            param0.readBits(0, 16);
             var5.field_m = v.a(16, var5.field_m, param0, 55);
             var5.field_H = v.a(16, var5.field_H, param0, 51);
             var5.field_Q = v.a(16, var5.field_Q, param0, 68);
@@ -116,7 +116,7 @@ final class sf extends td implements ButtonListener {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -33) {
-            sf.a((la) null, true);
+            sf.a((BitPacketBuffer) null, true);
           }
           stackIn_16_0 = (param0 == 160) || (param0 == 32) || (param0 == 95) || (param0 == 45);
           return stackIn_16_0;
@@ -2675,7 +2675,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = va.a(0, "keychar_the_character_under_questionmark");
                 if (null != var2) {
-                  kj.a((byte) -58, var2[0]);
+                  kj.decodeCp1252Byte((byte) -58, var2[0]);
                 }
                 var2 = va.a(0, "rating_noratings");
                 if (var2 != null) {

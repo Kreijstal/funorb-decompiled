@@ -113,7 +113,7 @@ final class cc extends IntrusiveNode {
         }
     }
 
-    final static mi a(int param0, int param1) {
+    final static ResourceArchive a(int param0, int param1) {
         if (param1 != -14245) {
           field_p = (String) null;
         }

@@ -39,7 +39,7 @@ final class sc extends ch {
             }
             var4 = new byte[var3_int];
             param1.position = param1.position + qh.field_G.decompress(param1.payload, var4, (byte) -88, param1.position, 0, var3_int);
-            var5 = mk.a((byte) -24, var4, var3_int, 0);
+            var5 = mk.decodeCp1252String((byte) -24, var4, var3_int, 0);
             var6 = 114 / ((param2 - 54) / 47);
             stackIn_4_0 = var5;
             return stackIn_4_0;

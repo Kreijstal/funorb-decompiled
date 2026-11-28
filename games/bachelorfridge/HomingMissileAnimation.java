@@ -8,7 +8,7 @@ final class HomingMissileAnimation extends EventAnimation {
     private cf field_z;
     private Sprite field_B;
     private dda field_A;
-    static vr field_w;
+    static ResourceArchive field_w;
     static Sprite field_E;
     static vm field_G;
     static String field_y;

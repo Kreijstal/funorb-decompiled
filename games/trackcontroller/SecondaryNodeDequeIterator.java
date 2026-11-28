@@ -46,7 +46,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         int fieldTemp$0 = 0;
         int stackIn_15_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        la var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         Object var3 = null;
@@ -123,7 +123,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
             }
             q.field_a = 1;
             var3 = var1.readString(param0 ^ 128);
-            la.field_q = ((String) (var3)).intern();
+            BitPacketBuffer.field_q = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(16383);
             PcmOutputWorker.a((byte) 100, var4);
             return;

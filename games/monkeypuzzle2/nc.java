@@ -27,13 +27,13 @@ final class nc {
         }
     }
 
-    final static void a(ad param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         sj var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        ad var8 = null;
+        ResourceArchive var8 = null;
         hb var9 = null;
         int var10 = 0;
         hb var11 = null;
@@ -45,7 +45,7 @@ final class nc {
         int var4Lifetime1;
         var7 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var9 = new hb(param0.a("", "logo.fo3d", -127));
+          var9 = new hb(param0.getFileByName("", "logo.fo3d", -127));
           var11 = var9;
           var3 = var11.readUnsignedByte((byte) 114);
           var11.p(8);
@@ -53,8 +53,8 @@ final class nc {
           nl.field_a = new int[var3][];
           WidgetContainer.field_x = new sj[var3];
           if (param1 != 2) {
-            var8 = (ad) null;
-            nc.a((ad) null, -50);
+            var8 = (ResourceArchive) null;
+            nc.a((ResourceArchive) null, -50);
           }
           for (var4 = 0; var4 < var3; var4++) {
             WidgetContainer.field_x[var4] = gi.a(param1 - 114, var9);

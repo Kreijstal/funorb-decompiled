@@ -74,11 +74,11 @@ final class SmokeParticle extends FlightBody {
           if (param4 <= 65) {
             SmokeParticle.b(-73);
           }
-          if (!param3.b((byte) -77)) {
+          if (!param3.ensureIndexLoaded((byte) -77)) {
             String stackIn_5_0 = (String) (param2);
             return stackIn_5_0;
           }
-          String stackIn_7_0 = param0 + " - " + param3.a(param1, 100) + "%";
+          String stackIn_7_0 = param0 + " - " + param3.getGroupLoadPercent(param1, 100) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

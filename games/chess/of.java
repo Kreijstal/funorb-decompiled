@@ -111,7 +111,7 @@ final class of {
 
     final static String a(String param0, int param1, String param2, int param3) {
         RuntimeException var4 = null;
-        nk var5 = null;
+        BitPacketBuffer var5 = null;
         int var6 = 0;
         ve var7 = null;
         CharSequence var8 = null;
@@ -144,7 +144,7 @@ final class of {
           var7.unlinkSecondary(param3);
           wc.field_v = wc.field_v - 1;
           var5 = qn.field_U;
-          var5.f(param1, -123);
+          var5.writeCipheredByte(param1, -123);
           var5.position = var5.position + 1;
           var6 = var5.position;
           var5.writeByte(3, (byte) -112);

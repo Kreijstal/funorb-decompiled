@@ -181,7 +181,7 @@ abstract class qe extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_w.append((char) var14);
-                var14 = (char)(ma.a(-127, (char) var14) & 255);
+                var14 = (char)(ma.encodeCp1252Character(-127, (char) var14) & 255);
                 var4 = var4 + this.field_v[var14];
                 if (this.field_H != null &&
                   var10 != 0) {
@@ -327,7 +327,7 @@ abstract class qe extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(ma.a(-128, (char) var8) & 255);
+              var8 = (char)(ma.encodeCp1252Character(-128, (char) var8) & 255);
               if (this.field_H != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_H[(var5 << 8) + var8];
@@ -370,7 +370,7 @@ abstract class qe extends DualLinkNode {
     }
 
     final int a(char param0) {
-        return this.field_v[ma.a(-127, param0) & 255];
+        return this.field_v[ma.encodeCp1252Character(-127, param0) & 255];
     }
 
     final int a(String param0, int param1) {
@@ -790,7 +790,7 @@ abstract class qe extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(ma.a(-128, (char) var7) & 255);
+              var7 = (char)(ma.encodeCp1252Character(-128, (char) var7) & 255);
               var4 = var4 + this.field_v[var7];
               if (this.field_H != null &&
                 var3 != 0) {

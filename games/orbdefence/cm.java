@@ -11,16 +11,16 @@ final class cm {
         return new PcmSample(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
     }
 
-    final static cm a(ki param0, String param1, String param2) {
-        byte[] var3 = param0.a(param2, 1, param1);
+    final static cm a(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.getFileByName(param2, 1, param1);
         if (var3 == null) {
           return null;
         }
         return new cm(new PacketBuffer(var3));
     }
 
-    final static cm a(ki param0, int param1, int param2) {
-        byte[] var3 = param0.b(param1, false, param2);
+    final static cm a(ResourceArchive param0, int param1, int param2) {
+        byte[] var3 = param0.getFile(param1, false, param2);
         if (var3 == null) {
           return null;
         }

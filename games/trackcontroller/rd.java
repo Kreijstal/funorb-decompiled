@@ -159,7 +159,7 @@ final class rd {
           GameKeyHandler.a((byte) 114);
           return;
         }
-        la var2 = ne.field_a;
+        BitPacketBuffer var2 = ne.field_a;
         var2.readInt((byte) 113);
         var2.readInt((byte) 113);
         var2.readInt((byte) 113);
@@ -400,8 +400,8 @@ final class rd {
     }
 
     final static void a(jf param0, int param1, int param2) {
-        la var3 = LevelView.field_C;
-        var3.c(param2, 7);
+        BitPacketBuffer var3 = LevelView.field_C;
+        var3.writeCipheredByte(param2, 7);
         var3.writeByte(param0.field_m, (byte) -89);
         if (param1 != 4) {
           return;

@@ -23,9 +23,9 @@ final class vf implements jm {
             bb.field_d = null;
           }
           d.field_Mb = null;
-          if (null != nk.field_t) {
-            nk.field_t.clear(-31023);
-            nk.field_t = null;
+          if (null != BitPacketBuffer.field_t) {
+            BitPacketBuffer.field_t.clear(-31023);
+            BitPacketBuffer.field_t = null;
           }
           ae.field_f = null;
           if (null != pd.field_Sb) {

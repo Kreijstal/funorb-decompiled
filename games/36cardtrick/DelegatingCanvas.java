@@ -13,7 +13,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    final static RgbSprite a(int param0, String param1, String param2, qk param3) {
+    final static RgbSprite a(int param0, String param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -32,8 +32,8 @@ final class DelegatingCanvas extends java.awt.Canvas {
             var6 = (Object) null;
             DelegatingCanvas.extractBytes(true, 19, (Object) null);
           }
-          var4_int = param3.a(18659, param2);
-          var5 = param3.a(var4_int, param1, (byte) 7);
+          var4_int = param3.getGroupIdByName(18659, param2);
+          var5 = param3.getFileIdByName(var4_int, param1, (byte) 7);
           stackIn_3_0 = rh.a(var4_int, param3, var5, -30851);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -63,12 +63,12 @@ final class DelegatingCanvas extends java.awt.Canvas {
     }
 
     final static void a(int param0) {
-        w var2 = null;
+        BitPacketBuffer var2 = null;
         cb var1 = (cb) (ha.field_d.beginForward((byte) 74));
-        w var2Lifetime1;
+        BitPacketBuffer var2Lifetime1;
         if (param0 != 0) {
-          qk var3 = (qk) null;
-          DelegatingCanvas.a(-22, (String) null, (String) null, (qk) null);
+          ResourceArchive var3 = (ResourceArchive) null;
+          DelegatingCanvas.a(-22, (String) null, (String) null, (ResourceArchive) null);
           if (var1 != null) {
             var2 = rd.field_j;
             var2.readInt((byte) 127);

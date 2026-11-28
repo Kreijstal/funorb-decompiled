@@ -61,7 +61,7 @@ final class la {
         li.a(1392);
         vf.a(79);
         if (IsaacRandom.b(param0 - 127)) {
-          d.field_b.d((byte) 76, 1);
+          d.field_b.writeCipheredByte((byte) 76, 1);
           nf.a(0, (byte) 95);
         }
         ec.a((byte) 27);
@@ -74,10 +74,10 @@ final class la {
     }
 
     final static void a(int param0, we param1, int param2) {
-        ia var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           var3 = d.field_b;
-          var3.d((byte) 73, param2);
+          var3.writeCipheredByte((byte) 73, param2);
           var3.writeByte(2, -111);
           var3.writeByte(param0, -73);
           var3.writeByte(param1.field_g, -86);

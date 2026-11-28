@@ -5,7 +5,7 @@ final class BagpipeSpecial extends SpecialOrder {
     static PlatformTask field_p;
     static String field_q;
 
-    final static IndexedSprite a(vr param0, int param1, String param2, String param3) {
+    final static IndexedSprite a(ResourceArchive param0, int param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -22,10 +22,10 @@ final class BagpipeSpecial extends SpecialOrder {
         try {
           if (param1 != -1) {
             var6 = (String) null;
-            BagpipeSpecial.a((vr) null, -47, (String) null, (String) null);
+            BagpipeSpecial.a((ResourceArchive) null, -47, (String) null, (String) null);
           }
-          var4_int = param0.a(param2, false);
-          var5 = param0.a((byte) 6, var4_int, param3);
+          var4_int = param0.getGroupId(param2, false);
+          var5 = param0.getFileId((byte) 6, var4_int, param3);
           stackIn_3_0 = aj.a(var5, var4_int, 0, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

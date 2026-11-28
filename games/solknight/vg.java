@@ -536,9 +536,9 @@ class vg extends pj {
     }
 
     final static void a(int param0, ob param1, int param2) {
-        jd var5 = id.field_c;
-        jd var3 = var5;
-        var5.e(param0, -2147483648);
+        BitPacketBuffer var5 = id.field_c;
+        BitPacketBuffer var3 = var5;
+        var5.writeCipheredByte(param0, -2147483648);
         var5.position = var5.position + 1;
         int var4 = var5.position;
         var5.writeByte(-104, 1);

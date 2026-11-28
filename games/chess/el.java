@@ -17,8 +17,8 @@ final class el extends cm {
     }
 
     final static void a(int param0, int param1) {
-        nk var2 = qn.field_U;
-        var2.f(param1, -60);
+        BitPacketBuffer var2 = qn.field_U;
+        var2.writeCipheredByte(param1, -60);
         if (param0 == 4) {
           var2.writeByte(1, (byte) -95);
           var2.writeByte(2, (byte) -56);

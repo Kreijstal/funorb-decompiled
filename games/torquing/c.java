@@ -47,11 +47,11 @@ final class c {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          if (!param4.a(-12749)) {
+          if (!param4.ensureIndexLoaded(-12749)) {
             stackIn_6_0 = (String) (param1);
             return stackIn_6_0;
           }
-          stackIn_8_0 = param3 + " - " + param4.a((byte) 71, param2) + "%";
+          stackIn_8_0 = param3 + " - " + param4.getGroupLoadPercentByName((byte) 71, param2) + "%";
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

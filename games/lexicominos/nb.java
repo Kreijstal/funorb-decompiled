@@ -267,8 +267,8 @@ class nb extends w implements dh {
 
     public static void d(boolean param0) {
         if (param0) {
-          sh var2 = (sh) null;
-          nb.a(82, 41, (byte) -49, (sh) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          nb.a(82, 41, (byte) -49, (ResourceArchive) null);
         }
         field_y = null;
         field_z = null;
@@ -498,7 +498,7 @@ class nb extends w implements dh {
         }
     }
 
-    final static boolean a(int param0, int param1, byte param2, sh param3) {
+    final static boolean a(int param0, int param1, byte param2, ResourceArchive param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -508,7 +508,7 @@ class nb extends w implements dh {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = param3.a(param0, -27493, param1);
+          var6 = param3.getFile(param0, -27493, param1);
           var4 = var6;
           if (var6 == null) {
             return false;

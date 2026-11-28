@@ -586,7 +586,7 @@ final class qf extends IntrusiveNode {
     private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_K) {
-          var1 = param0.a(false, 0, 0);
+          var1 = param0.getFile(false, 0, 0);
           if (var1 == null) {
             return false;
           }
@@ -618,10 +618,10 @@ final class qf extends IntrusiveNode {
         try {
           qf var4_ref = null;
           if (!qf.a(param0)) {
-            param0.a(param2, param1, (byte) 86);
+            param0.tryLoadFile(param2, param1, (byte) 86);
             return null;
           }
-          byte[] var3 = param0.a(false, param2, param1);
+          byte[] var3 = param0.getFile(false, param2, param1);
           if (var3 == null) {
             return null;
           }
@@ -646,7 +646,7 @@ final class qf extends IntrusiveNode {
             param0.a(-121, param1, param2);
             return null;
           }
-          byte[] var3 = param0.a(param2, param1, 0);
+          byte[] var3 = param0.getFileByName(param2, param1, 0);
           if (var3 == null) {
             return null;
           }

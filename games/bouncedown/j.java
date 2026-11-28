@@ -5,21 +5,21 @@ import java.io.*;
 
 final class j extends IntrusiveNode {
     long field_h;
-    static gk field_j;
+    static ResourceArchive field_j;
     int field_g;
     byte[] field_i;
 
-    final static gk a(boolean param0, byte param1, boolean param2, int param3, boolean param4, int param5) {
+    final static ResourceArchive a(boolean param0, byte param1, boolean param2, int param3, boolean param4, int param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           ce var8 = null;
-          gk stackIn_16_0 = null;
+          ResourceArchive stackIn_16_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
             if (param1 >= -94) {
-              field_j = (gk) null;
+              field_j = (ResourceArchive) null;
             }
             var7 = null;
             if (null != vc.field_G.field_j) {
@@ -41,7 +41,7 @@ final class j extends IntrusiveNode {
             if (param0) {
               var8.b((byte) -124);
             }
-            stackIn_16_0 = new gk(var8, param4, param5);
+            stackIn_16_0 = new ResourceArchive(var8, param4, param5);
             return stackIn_16_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -58,7 +58,7 @@ final class j extends IntrusiveNode {
     public static void clearStaticReferences(byte param0) {
         field_j = null;
         if (param0 > -50) {
-          field_j = (gk) null;
+          field_j = (ResourceArchive) null;
         }
     }
 

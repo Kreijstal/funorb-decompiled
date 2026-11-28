@@ -73,15 +73,15 @@ final class ProxySocketConnector extends SocketConnector {
 
     public static void b(int param0) {
         if (param0 != -5) {
-          uc var2 = (uc) null;
-          ProxySocketConnector.a(67, (uc) null);
+          BitPacketBuffer var2 = (BitPacketBuffer) null;
+          ProxySocketConnector.a(67, (BitPacketBuffer) null);
         }
         field_h = null;
         field_f = null;
         field_e = null;
     }
 
-    final static void a(int param0, uc param1) {
+    final static void a(int param0, BitPacketBuffer param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -310,7 +310,7 @@ final class ProxySocketConnector extends SocketConnector {
         java.lang.reflect.Method var11 = null;
         String var12 = null;
         String var13 = null;
-        uc var14 = null;
+        BitPacketBuffer var14 = null;
         Class var15 = null;
         try {
           if (param0.type() == java.net.Proxy.Type.DIRECT) {
@@ -323,8 +323,8 @@ final class ProxySocketConnector extends SocketConnector {
           }
           var4 = (java.net.InetSocketAddress) ((Object) var3);
           if (param1 != 15736) {
-            var14 = (uc) null;
-            ProxySocketConnector.a(-77, (uc) null);
+            var14 = (BitPacketBuffer) null;
+            ProxySocketConnector.a(-77, (BitPacketBuffer) null);
           }
           if (param0.type() != java.net.Proxy.Type.HTTP) {
             if (param0.type() != java.net.Proxy.Type.SOCKS) {

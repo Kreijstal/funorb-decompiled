@@ -330,7 +330,7 @@ final class rg extends vk implements si, ga {
         if (se.d((byte) 125) ||
           !(this.field_I.field_k.length() <= 0) &&
           !(this.field_G.field_k.length() <= 0)) {
-          ia.a(this.field_I.field_k, this.field_G.field_k, 0);
+          BitPacketBuffer.beginCredentialLogin(this.field_I.field_k, this.field_G.field_k, 0);
         }
     }
 

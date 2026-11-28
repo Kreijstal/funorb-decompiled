@@ -351,7 +351,7 @@ final class vd {
         int var25 = 0;
         int var26 = 0;
         kg var27 = null;
-        hj var28 = null;
+        BitPacketBuffer var28 = null;
         int var25Lifetime1;
         int var25Lifetime2;
         var26 = Transmogrify.field_A ? 1 : 0;

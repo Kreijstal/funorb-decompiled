@@ -60,28 +60,28 @@ final class ie {
           return 0;
         }
         if (hl.field_F == 0) {
-          if (!ei.field_i.c(-81)) {
+          if (!ei.field_i.ensureIndexLoaded(-81)) {
             return 20;
           }
           if (!ei.field_i.b("commonui", (byte) -3)) {
             return 40;
           }
-          if (!ha.field_x.c(-63)) {
+          if (!ha.field_x.ensureIndexLoaded(-63)) {
             return 50;
           }
           if (!ha.field_x.b("commonui", (byte) -3)) {
             return 60;
           }
-          if (!ok.field_G.c(88)) {
+          if (!ok.field_G.ensureIndexLoaded(88)) {
             return 70;
           }
-          if (ok.field_G.a((byte) 48)) {
+          if (ok.field_G.tryLoadAllGroups((byte) 48)) {
             return 100;
           }
           return 80;
         }
         if (null != ff.field_b) {
-          if (!ff.field_b.c(123)) {
+          if (!ff.field_b.ensureIndexLoaded(123)) {
             return 14;
           }
           if (!ff.field_b.a("", (byte) -113)) {
@@ -91,22 +91,22 @@ final class ie {
             return 29;
           }
         }
-        if (!ei.field_i.c(-121)) {
+        if (!ei.field_i.ensureIndexLoaded(-121)) {
           return 43;
         }
         if (!ei.field_i.b("commonui", (byte) -3)) {
           return 57;
         }
-        if (!ha.field_x.c(116)) {
+        if (!ha.field_x.ensureIndexLoaded(116)) {
           return 71;
         }
         if (!ha.field_x.b("commonui", (byte) -3)) {
           return 80;
         }
-        if (!ok.field_G.c(94)) {
+        if (!ok.field_G.ensureIndexLoaded(94)) {
           return 82;
         }
-        if (!ok.field_G.a((byte) 48)) {
+        if (!ok.field_G.tryLoadAllGroups((byte) 48)) {
           return 86;
         }
         return 100;
@@ -131,8 +131,8 @@ final class ie {
             var6 = (String) null;
             ie.a(11L, (String) null, false, (String) null, (byte) 116);
           }
-          var4_int = param1.a(true, param0);
-          var5 = param1.a(param2, var4_int, -1);
+          var4_int = param1.getGroupIdByName(true, param0);
+          var5 = param1.getFileIdByName(param2, var4_int, -1);
           stackIn_3_0 = nd.a(param1, var5, var4_int, 16777215);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

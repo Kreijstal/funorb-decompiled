@@ -51,16 +51,16 @@ final class uj {
         return var3;
     }
 
-    final static uj a(qk param0, int param1, int param2) {
-        byte[] var3 = param0.a(param2, (byte) -115, param1);
+    final static uj a(ResourceArchive param0, int param1, int param2) {
+        byte[] var3 = param0.getFile(param2, (byte) -115, param1);
         if (var3 == null) {
           return null;
         }
         return new uj(new PacketBuffer(var3));
     }
 
-    final static uj a(qk param0, String param1, String param2) {
-        byte[] var3 = param0.a((byte) 7, param2, param1);
+    final static uj a(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.getFileByName((byte) 7, param2, param1);
         if (var3 == null) {
           return null;
         }

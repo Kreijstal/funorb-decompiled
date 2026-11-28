@@ -27,9 +27,9 @@ final class gh {
             return var3;
           }
           if (param0 < 32768) {
-            var4 = this.field_d.a(1, 100, param0);
+            var4 = this.field_d.getFile(1, 100, param0);
           } else {
-            var4 = this.field_e.a(1, 100, param0 & 32767);
+            var4 = this.field_e.getFile(1, 100, param0 & 32767);
           }
           var3 = new p();
           if (var4 == null) {
@@ -54,9 +54,9 @@ final class gh {
           return var3;
         }
         if (param0 < 32768) {
-          var4Lifetime1 = this.field_d.a(1, 100, param0);
+          var4Lifetime1 = this.field_d.getFile(1, 100, param0);
         } else {
-          var4Lifetime1 = this.field_e.a(1, 100, param0 & 32767);
+          var4Lifetime1 = this.field_e.getFile(1, 100, param0 & 32767);
         }
         p var7 = new p();
         if (var4Lifetime1 != null) {

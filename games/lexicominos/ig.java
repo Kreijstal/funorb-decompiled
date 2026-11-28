@@ -5,7 +5,7 @@ final class ig {
     static String field_d;
     static String[] field_c;
     static int field_b;
-    static th field_a;
+    static BitPacketBuffer field_a;
 
     public static void clearStaticReferences(int param0) {
         field_c = null;

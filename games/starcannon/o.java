@@ -7,7 +7,7 @@ final class o {
     static String field_b;
     static String field_c;
 
-    final static id a(ue param0, String param1, String param2, boolean param3) {
+    final static id a(ResourceArchive param0, String param1, String param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -21,8 +21,8 @@ final class o {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.a(param1, param3);
-          var5 = param0.a(param2, true, var4_int);
+          var4_int = param0.getGroupIdByName(param1, param3);
+          var5 = param0.getFileIdByName(param2, true, var4_int);
           stackIn_1_0 = jl.a(var4_int, param0, (byte) 64, var5);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -127,7 +127,7 @@ final class o {
         throw new IllegalStateException();
     }
 
-    final static int a(int param0, int param1, CharSequence param2, int param3, byte param4, byte[] param5) {
+    final static int encodeCp1252Subsequence(int param0, int param1, CharSequence param2, int param3, byte param4, byte[] param5) {
         int var7 = 0;
         int stackIn_67_0 = 0;
         int stackIn_69_0 = 0;

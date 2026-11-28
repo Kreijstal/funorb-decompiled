@@ -431,7 +431,7 @@ final class ul extends IntrusiveNode {
         }
     }
 
-    final static void a(sh param0, sh param1, sh param2, byte param3) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, byte param3) {
         RgbSprite var18 = null;
         IndexedSprite[] var5 = null;
         IndexedSprite[][] var6 = null;
@@ -458,7 +458,7 @@ final class ul extends IntrusiveNode {
           cl.field_T = (BitmapFont) ((Object) MouseWheelInput.a("commonui", "arezzo12", false, param1, param0));
           ql.field_Q = (BitmapFont) ((Object) MouseWheelInput.a("commonui", "arezzo14", false, param1, param0));
           FullscreenFocusCanvas.field_c = (BitmapFont) ((Object) MouseWheelInput.a("commonui", "arezzo14bold", false, param1, param0));
-          var18 = new RgbSprite(param2.a((byte) 127, "", "button.gif"), (java.awt.Component) ((Object) ug.field_y));
+          var18 = new RgbSprite(param2.getFileByName((byte) 127, "", "button.gif"), (java.awt.Component) ((Object) ug.field_y));
           nh.a("commonui", param0, false, "dropdown");
           var5 = PacketBuffer.a(param0, "commonui", true, "screen_options");
           ArchiveRequest.field_u = new IndexedSprite[4];

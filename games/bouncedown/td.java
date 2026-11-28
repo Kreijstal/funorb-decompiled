@@ -7,7 +7,7 @@ abstract class td {
 
     abstract byte[] a(int param0, boolean param1);
 
-    final static void a(int param0, gk param1, gk param2, gk param3, boolean param4) {
+    final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3, boolean param4) {
         try {
           if (param0 != 1) {
             field_b = 63;
@@ -30,7 +30,7 @@ abstract class td {
         return fe.field_g;
     }
 
-    abstract int a(int param0, int param1);
+    abstract int getGroupRequestProgressPercent(int param0, int param1);
 
     final static void a(byte param0) {
         eh.a(true);

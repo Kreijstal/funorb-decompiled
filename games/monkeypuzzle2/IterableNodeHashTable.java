@@ -11,7 +11,7 @@ final class IterableNodeHashTable implements Iterable {
     static String field_b;
     static int field_c;
 
-    final static lg a(int param0, String param1, String param2, ud param3, ad param4) {
+    final static lg a(int param0, String param1, String param2, ud param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -32,8 +32,8 @@ final class IterableNodeHashTable implements Iterable {
             stackIn_2_0 = (lg) null;
             return stackIn_2_0;
           }
-          var5_int = param4.c(param2, (byte) -105);
-          var6 = param4.a(param1, var5_int, -28459);
+          var5_int = param4.getGroupIdByName(param2, (byte) -105);
+          var6 = param4.getFileIdByName(param1, var5_int, -28459);
           stackIn_4_0 = ei.a(param4, (byte) 115, param3, var6, var5_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -78,8 +78,8 @@ final class IterableNodeHashTable implements Iterable {
           jh.field_C.c((byte) 121, nf.field_F);
           return;
         }
-        ad var2 = (ad) null;
-        IterableNodeHashTable.a(54, (String) null, (String) null, (ud) null, (ad) null);
+        ResourceArchive var2 = (ResourceArchive) null;
+        IterableNodeHashTable.a(54, (String) null, (String) null, (ud) null, (ResourceArchive) null);
         jh.field_C.c((byte) 121, nf.field_F);
     }
 

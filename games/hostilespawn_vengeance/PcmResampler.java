@@ -427,7 +427,7 @@ final class PcmResampler {
           if (param0 <= 121) {
             PcmResampler.resetStaticState((byte) -36);
           }
-          stackIn_3_0 = db.a(param1, 0, (byte) -126, param1.length);
+          stackIn_3_0 = db.decodeCp1252String(param1, 0, (byte) -126, param1.length);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

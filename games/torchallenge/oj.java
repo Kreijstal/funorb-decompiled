@@ -2535,7 +2535,7 @@ final class oj {
                 }
                 var2 = dl.a("keychar_the_character_under_questionmark", false);
                 if (var2 != null) {
-                  ic.a(var2[0], param0 ^ 8989);
+                  ic.decodeCp1252Byte(var2[0], param0 ^ 8989);
                 }
                 var2 = dl.a("rating_noratings", false);
                 if (null != var2) {

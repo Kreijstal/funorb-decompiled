@@ -2856,7 +2856,7 @@ public final class stellarshard extends rb implements cf {
           MouseHandler.clearStaticReferences((byte) -20);
           MouseWheelInput.clearStaticReferences(31147);
           SoftwareRasterizer.clearStaticReferences();
-          pf.a(30300);
+          ResourceArchive.a(30300);
           t.resetStaticState(param0 ^ 6079);
           wi.clearStaticReferences((byte) -93);
           PacketBuffer.clearStaticReferences((byte) -14);
@@ -2919,7 +2919,7 @@ public final class stellarshard extends rb implements cf {
           lg.clearStaticReferences(param0 ^ 69);
           lh.clearStaticReferences((byte) -16);
           GzipDecompressor.clearStaticReferences(-127);
-          wf.b(param0 + 227);
+          wf.clearStaticReferences(param0 + 227);
           PcmResampler.clearStaticReferences(param0 - 15392);
           tj.clearStaticReferences();
           ad.clearStaticReferences();
@@ -3135,20 +3135,20 @@ public final class stellarshard extends rb implements cf {
             sg.a(116, ke.field_b);
           }
           if (mf.field_b != null) {
-            if (wk.field_a.a((byte) -36) &&
-              wk.field_a.c((byte) -111)) {
-              if (mf.field_b.a((byte) -36) &&
-                mf.field_b.c((byte) -111)) {
-                if (PacketBuffer.field_n.a((byte) -36) &&
-                  PacketBuffer.field_n.c((byte) -111)) {
-                  if (bh.field_a.a((byte) -36) &&
-                    bh.field_a.c((byte) -111)) {
-                    if (fc.field_a.a((byte) -36) &&
+            if (wk.field_a.ensureIndexLoaded((byte) -36) &&
+              wk.field_a.tryLoadAllGroups((byte) -111)) {
+              if (mf.field_b.ensureIndexLoaded((byte) -36) &&
+                mf.field_b.tryLoadAllGroups((byte) -111)) {
+                if (PacketBuffer.field_n.ensureIndexLoaded((byte) -36) &&
+                  PacketBuffer.field_n.tryLoadAllGroups((byte) -111)) {
+                  if (bh.field_a.ensureIndexLoaded((byte) -36) &&
+                    bh.field_a.tryLoadAllGroups((byte) -111)) {
+                    if (fc.field_a.ensureIndexLoaded((byte) -36) &&
                       fc.field_a.a("basic", (byte) -109)) {
-                      if (MouseHandler.field_d.a((byte) -36) &&
-                        MouseHandler.field_d.c((byte) -111)) {
-                        if (jf.field_m.a((byte) -36) &&
-                          jf.field_m.c((byte) -111)) {
+                      if (MouseHandler.field_d.ensureIndexLoaded((byte) -36) &&
+                        MouseHandler.field_d.tryLoadAllGroups((byte) -111)) {
+                        if (jf.field_m.ensureIndexLoaded((byte) -36) &&
+                          jf.field_m.tryLoadAllGroups((byte) -111)) {
                           rd.a((byte) -72, 70.0f, ve.field_b);
                           if (!param0) {
                             return;

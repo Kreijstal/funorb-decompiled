@@ -19,7 +19,7 @@ final class ik {
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new Sprite(param0.a("final_frame.jpg", "", -21653), (java.awt.Component) ((Object) ae.field_G));
+          var2 = new Sprite(param0.getFileByName("final_frame.jpg", "", -21653), (java.awt.Component) ((Object) ae.field_G));
           var3 = var2.field_r;
           var4 = var2.field_t;
           ja.c((byte) 88);

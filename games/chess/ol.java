@@ -237,8 +237,8 @@ final class ol extends ma implements nn, mj, wl {
             stackIn_2_0 = (RgbSprite[]) null;
             return stackIn_2_0;
           }
-          var4_int = param0.a(param2, 0);
-          var5 = param0.a(param1, 7, var4_int);
+          var4_int = param0.getGroupIdByName(param2, 0);
+          var5 = param0.getFileIdByName(param1, 7, var4_int);
           stackIn_4_0 = jg.a((byte) -96, var5, param0, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

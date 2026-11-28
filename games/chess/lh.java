@@ -329,7 +329,7 @@ abstract class lh extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(ai.a((byte) -43, (char) var8) & 255);
+              var8 = (char)(ai.encodeCp1252Character((byte) -43, (char) var8) & 255);
               if (this.field_u != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_u[(var5 << 8) + var8];
@@ -593,7 +593,7 @@ abstract class lh extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_v.append((char) var14);
-                var14 = (char)(ai.a((byte) -43, (char) var14) & 255);
+                var14 = (char)(ai.encodeCp1252Character((byte) -43, (char) var14) & 255);
                 var4 = var4 + this.field_I[var14];
                 if (this.field_u != null &&
                   var10 != 0) {
@@ -717,7 +717,7 @@ abstract class lh extends DualLinkNode {
     }
 
     final int a(char param0) {
-        return this.field_I[ai.a((byte) -43, param0) & 255];
+        return this.field_I[ai.encodeCp1252Character((byte) -43, param0) & 255];
     }
 
     final static String a(lh param0, String param1, int param2) {
@@ -833,7 +833,7 @@ abstract class lh extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(ai.a((byte) -43, (char) var7) & 255);
+              var7 = (char)(ai.encodeCp1252Character((byte) -43, (char) var7) & 255);
               var4 = var4 + this.field_I[var7];
               if (this.field_u != null &&
                 var3 != 0) {

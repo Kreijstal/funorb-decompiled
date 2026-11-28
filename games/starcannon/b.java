@@ -226,7 +226,7 @@ final class b {
         field_d = null;
     }
 
-    final static ue a(boolean param0, int param1) {
+    final static ResourceArchive a(boolean param0, int param1) {
         if (param0) {
           b.clearStaticReferences(true);
         }

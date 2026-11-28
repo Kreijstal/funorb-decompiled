@@ -120,7 +120,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           var4 = (CharSequence) ((Object) param0);
-          this.position = this.position + fo.a(this.position, this.payload, param0.length(), var4, (byte) 123, 0);
+          this.position = this.position + fo.encodeCp1252Subsequence(this.position, this.payload, param0.length(), var4, (byte) 123, 0);
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
@@ -184,7 +184,7 @@ class PacketBuffer extends IntrusiveNode {
         }
         var3 = this.position - var2 - 1;
         if (var3 != 0) {
-          return gd.a((byte) 5, this.payload, var2, var3);
+          return gd.decodeCp1252String((byte) 5, this.payload, var2, var3);
         }
         return "";
     }
@@ -446,7 +446,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var4 = (CharSequence) ((Object) param0);
-          this.position = this.position + fo.a(this.position, this.payload, param0.length(), var4, (byte) 118, 0);
+          this.position = this.position + fo.encodeCp1252Subsequence(this.position, this.payload, param0.length(), var4, (byte) 118, 0);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -731,7 +731,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var4 == 0) {
           return "";
         }
-        return gd.a((byte) 71, this.payload, var3, var4);
+        return gd.decodeCp1252String((byte) 71, this.payload, var3, var4);
     }
 
     final byte readByte(byte param0) {

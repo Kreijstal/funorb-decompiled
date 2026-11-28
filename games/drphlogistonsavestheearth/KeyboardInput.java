@@ -23,7 +23,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               65535 != var2_int &&
-              ka.a((char) var2_int, 8192)) {
+              ka.isSupportedCp1252KeyCharacter((char) var2_int, 8192)) {
               var3 = 1 + DirectByteStorage.field_j & 127;
               if (var3 != rc.field_g) {
                 ac.field_f[DirectByteStorage.field_j] = -1;

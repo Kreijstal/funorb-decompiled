@@ -186,8 +186,8 @@ final class qi extends jd {
 
     final kg b(int param0, int param1) {
         if (param0 != -1) {
-          gk var4 = (gk) null;
-          qi.a((gk) null, (gk) null, (byte) -12, (gk) null);
+          ResourceArchive var4 = (ResourceArchive) null;
+          qi.a((ResourceArchive) null, (ResourceArchive) null, (byte) -12, (ResourceArchive) null);
         }
         kg dupTemp$0 = new kg();
         this.field_q[param1] = dupTemp$0;
@@ -232,7 +232,7 @@ final class qi extends jd {
         }
     }
 
-    final static boolean a(gk param0, gk param1, byte param2, gk param3) {
+    final static boolean a(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_19_0 = null;
@@ -245,15 +245,15 @@ final class qi extends jd {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = -52 / ((-79 - param2) / 39);
-          if (!param3.c(-108)) {
+          if (!param3.ensureIndexLoaded(-108)) {
             return false;
           }
           if (!param3.b("commonui", false)) {
             return false;
           }
-          if (param1.c(-90) &&
+          if (param1.ensureIndexLoaded(-90) &&
             param1.b("commonui", false)) {
-            if (param0.c(44) &&
+            if (param0.ensureIndexLoaded(44) &&
               param0.b("button.gif", false)) {
               return true;
             }
@@ -442,7 +442,7 @@ final class qi extends jd {
             field_r = (int[]) null;
           }
           cl.field_n = new int[nj.field_p];
-          gk.field_g = new byte[nj.field_p][];
+          ResourceArchive.field_g = new byte[nj.field_p][];
           ae.field_c = new int[nj.field_p];
           ph.field_c = new byte[nj.field_p][];
           qh.field_i = new int[nj.field_p];
@@ -483,7 +483,7 @@ final class qi extends jd {
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;
-            gk.field_g[var4Lifetime5] = var21;
+            ResourceArchive.field_g[var4Lifetime5] = var21;
             var10 = 0;
             var11 = var17.readUnsignedByte((byte) -118);
             if ((1 & var11) == 0) {

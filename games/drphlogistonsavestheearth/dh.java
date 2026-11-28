@@ -12,7 +12,7 @@ final class dh extends si {
     static String field_J;
     private String field_L;
     static he[] field_R;
-    static lh field_N;
+    static BitPacketBuffer field_N;
     static int field_M;
 
     dh(int param0, int param1, int param2, int param3, vg param4, boolean param5, int param6, int param7, rf param8, int param9, String param10) {
@@ -99,13 +99,13 @@ final class dh extends si {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        lh var5 = null;
+        BitPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
         je var11 = null;
-        lh var12 = null;
+        BitPacketBuffer var12 = null;
         f var13 = null;
         int[] var14 = null;
         f var15 = null;
@@ -194,7 +194,7 @@ final class dh extends si {
         this.field_z.field_n = this.field_n;
         String var3 = this.field_z.e(-76);
         if (param0 >= -39) {
-          field_N = (lh) null;
+          field_N = (BitPacketBuffer) null;
         }
         this.field_z.field_n = var2 != 0 ? true : false;
         return var3;
@@ -219,7 +219,7 @@ final class dh extends si {
     final static void a(int param0, java.awt.Canvas param1) {
         try {
           if (param0 < 8) {
-            field_N = (lh) null;
+            field_N = (BitPacketBuffer) null;
           }
           if (af.field_b == 11) {
             wa.a((byte) -43);

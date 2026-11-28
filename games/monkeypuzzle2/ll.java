@@ -16,7 +16,7 @@ final class ll {
         }
     }
 
-    final static void a(int param0, ad param1) {
+    final static void a(int param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2609_0;
             StringBuilder stackIn_2609_1;
@@ -27,9 +27,9 @@ final class ll {
             RuntimeException var2_ref;
             int var3;
             int param0;
-            ad param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, ad initialParam1) {
+            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2609_0 = null;
@@ -1462,7 +1462,7 @@ final class ll {
                 }
                 var2 = te.a("create_select_alternative", -85);
                 if (var2 != null) {
-                  ad.field_j = be.a(var2, (byte) -83);
+                  ResourceArchive.field_j = be.a(var2, (byte) -83);
                 }
                 var2 = te.a("create_optin_news", param0 - 64);
                 if (var2 != null) {
@@ -1546,7 +1546,7 @@ final class ll {
                 }
                 var2 = te.a("create_email_tooltip", -34);
                 if (var2 != null) {
-                  ad.field_f = be.a(var2, (byte) -111);
+                  ResourceArchive.field_f = be.a(var2, (byte) -111);
                 }
                 var2 = te.a("create_email_confirm_tooltip", -103);
                 if (null != var2) {
@@ -1626,7 +1626,7 @@ final class ll {
                 }
                 var2 = te.a("create_alert_passcontainsemail", -107);
                 if (var2 != null) {
-                  ad.field_d = be.a(var2, (byte) 63);
+                  ResourceArchive.field_d = be.a(var2, (byte) 63);
                 }
                 var2 = te.a("create_alert_passcontainsname_partial", param0 ^ -44);
                 if (var2 != null) {
@@ -1658,7 +1658,7 @@ final class ll {
                 }
                 var2 = te.a("create_alert_mismatch", param0 - 44);
                 if (null != var2) {
-                  ad.field_k = be.a(var2, (byte) 91);
+                  ResourceArchive.field_k = be.a(var2, (byte) 91);
                 }
                 var2 = te.a("create_passwordvalid", -46);
                 if (var2 != null) {
@@ -2528,7 +2528,7 @@ final class ll {
                 }
                 var2 = te.a("keychar_the_character_under_questionmark", -104);
                 if (null != var2) {
-                  FrameTimer.a(param0 + 14, var2[0]);
+                  FrameTimer.decodeCp1252Byte(param0 + 14, var2[0]);
                 }
                 var2 = te.a("rating_noratings", param0 ^ -86);
                 if (var2 != null) {

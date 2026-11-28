@@ -38,13 +38,13 @@ final class qd {
         int stackIn_9_0 = 0;
         int[] stackIn_22_0 = null;
         Throwable decompiledCaughtException = null;
-        th var2 = null;
+        BitPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        th var8 = null;
+        BitPacketBuffer var8 = null;
         me var9 = null;
         var7 = Lexicominos.field_L ? 1 : 0;
         var8 = ig.field_a;

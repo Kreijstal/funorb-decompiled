@@ -221,8 +221,8 @@ final class FridgeScreen {
             this.field_o = 10;
           }
         }
-        if (vr.field_b % 200 != 1 &&
-          vr.field_b % 200 != 4 &&
+        if (ResourceArchive.field_b % 200 != 1 &&
+          ResourceArchive.field_b % 200 != 4 &&
           this.field_a.field_T) {
           ot.field_e.draw(param1 + 48, 330);
         } else {

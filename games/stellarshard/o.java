@@ -48,7 +48,7 @@ abstract class o {
         }
     }
 
-    final static pf a(int param0, int param1, int param2, boolean param3, boolean param4) {
+    final static ResourceArchive a(int param0, int param1, int param2, boolean param3, boolean param4) {
         if (param1 != 2) {
           field_c = (String) null;
         }

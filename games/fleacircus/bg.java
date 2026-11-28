@@ -109,8 +109,8 @@ final class bg {
             stackIn_2_0 = (RgbSprite[]) null;
             return stackIn_2_0;
           }
-          var4_int = param1.a(param3, (byte) -100);
-          var5 = param1.a(param0, (byte) -15, var4_int);
+          var4_int = param1.getGroupIdByName(param3, (byte) -100);
+          var5 = param1.getFileIdByName(param0, (byte) -15, var4_int);
           stackIn_4_0 = w.a(-37, var5, var4_int, param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -23,8 +23,8 @@ class fg extends jc {
           int stackIn_13_0 = 0;
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
-          se var4 = null;
-          se var5 = null;
+          BitPacketBuffer var4 = null;
+          BitPacketBuffer var5 = null;
           if (null == ia.field_f) {
             ia.field_f = ef.field_i.requestDirectSocket(eg.field_v, 0, jl.field_e);
           }

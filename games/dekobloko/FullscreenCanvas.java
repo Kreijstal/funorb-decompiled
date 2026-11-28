@@ -37,7 +37,7 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
           if (!SceneWidgetPart002.computeBoolean0558(integerArgument4, resourceArchiveArgument1, integerArgument3, 56)) {
             return null;
           }
-          stackRenderingSupport009Local2 = SceneWidget.computeRenderingSupport0091773(resourceArchiveArgument5.computeByteArray0805(integerArgument3, -117, integerArgument4), (byte) -5);
+          stackRenderingSupport009Local2 = SceneWidget.computeRenderingSupport0091773(resourceArchiveArgument5.getFile(integerArgument3, -117, integerArgument4), (byte) -5);
           return stackRenderingSupport009Local2;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal8 = caughtParameterLocal9;

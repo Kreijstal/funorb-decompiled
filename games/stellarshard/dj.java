@@ -6,7 +6,7 @@ final class dj {
     static int[] field_b;
     static String field_c;
 
-    final static boolean a(pf param0, byte param1) {
+    final static boolean a(ResourceArchive param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -15,7 +15,7 @@ final class dj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= -109) {
-            stackIn_4_0 = param0.c((byte) -111);
+            stackIn_4_0 = param0.tryLoadAllGroups((byte) -111);
             return stackIn_4_0;
           }
           return false;

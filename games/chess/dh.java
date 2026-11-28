@@ -247,7 +247,7 @@ final class dh {
           int var3_int = -49 % ((param0 - 3) / 36);
           if (param1.field_k == 1) {
             if (ii.field_Q == 0) {
-              this.field_b.a((byte) -12, nk.field_v, 12);
+              this.field_b.a((byte) -12, BitPacketBuffer.field_v, 12);
             }
             this.field_b.a((byte) -12, un.field_i, 13);
           }
@@ -268,7 +268,7 @@ final class dh {
           ImageProducerRasterBuffer.d(65280);
           return;
         }
-        nk var2 = tk.field_h;
+        BitPacketBuffer var2 = tk.field_h;
         var2.readInt((byte) -96);
         var2.readInt((byte) -92);
         var2.readInt((byte) -99);
@@ -520,8 +520,8 @@ final class dh {
     private final static void c(int param0, int param1, int param2) {
         ln var6 = null;
         ln var7 = null;
-        nk var4 = null;
-        nk var4Lifetime1;
+        BitPacketBuffer var4 = null;
+        BitPacketBuffer var4Lifetime1;
         if (param2 != SecondaryNodeDeque.field_g) {
           var6 = (ln) (ae.field_f.get((long)SecondaryNodeDeque.field_g, 3000));
           var7 = var6;
@@ -530,7 +530,7 @@ final class dh {
             var7.field_ec = null;
           } else {
             var4 = qn.field_U;
-            var4.f(param1, -94);
+            var4.writeCipheredByte(param1, -94);
             var4.writeByte(3, (byte) 82);
             var4.writeByte(11, (byte) 76);
             var4.writeShort(param2, 117);
@@ -541,7 +541,7 @@ final class dh {
             return;
           }
           var4Lifetime1 = qn.field_U;
-          var4Lifetime1.f(param1, -94);
+          var4Lifetime1.writeCipheredByte(param1, -94);
           var4Lifetime1.writeByte(3, (byte) 82);
           var4Lifetime1.writeByte(11, (byte) 76);
           var4Lifetime1.writeShort(param2, 117);

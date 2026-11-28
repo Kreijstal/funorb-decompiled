@@ -29,7 +29,7 @@ final class li extends IntrusiveNode {
         int stackIn_11_0 = 0;
         ia stackIn_56_0 = null;
         RuntimeException decompiledCaughtException = null;
-        jd var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         Object var3 = null;

@@ -33,7 +33,7 @@ final class BufferedSocket implements Runnable {
         return -67;
     }
 
-    final static byte[] a(byte param0, CharSequence param1) {
+    final static byte[] encodeCp1252Bytes(byte param0, CharSequence param1) {
         int var4 = 0;
         byte[] stackIn_69_0 = null;
         RuntimeException stackIn_72_0 = null;
@@ -52,7 +52,7 @@ final class BufferedSocket implements Runnable {
           var3 = new byte[var2_int];
           if (param0 != -6) {
             var7 = (CharSequence) null;
-            BufferedSocket.a((byte) 8, (CharSequence) null);
+            BufferedSocket.encodeCp1252Bytes((byte) 8, (CharSequence) null);
           }
           for (var4 = 0; var2_int > var4; var4++) {
             {
@@ -184,7 +184,7 @@ final class BufferedSocket implements Runnable {
           }
           if (param0 != 12587) {
             var3 = (CharSequence) null;
-            BufferedSocket.a((byte) -122, (CharSequence) null);
+            BufferedSocket.encodeCp1252Bytes((byte) -122, (CharSequence) null);
           }
           var2 = new ck(param1, ka.field_f, vb.field_a, cf.field_p, j.field_f, CrossfadingMidiPcmStream.field_z, qk.field_M);
           ff.b(26);
@@ -211,7 +211,7 @@ final class BufferedSocket implements Runnable {
     final int b(int param0) throws IOException {
         if (param0 != 0) {
           CharSequence var3 = (CharSequence) null;
-          BufferedSocket.a((byte) 44, (CharSequence) null);
+          BufferedSocket.encodeCp1252Bytes((byte) 44, (CharSequence) null);
           if (this.field_j) {
             return 0;
           }

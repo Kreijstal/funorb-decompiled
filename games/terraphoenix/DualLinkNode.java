@@ -20,7 +20,7 @@ class DualLinkNode extends IntrusiveNode {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = param2.b(param0, -106, param1);
+          var5 = param2.getFile(param0, -106, param1);
           var4 = var5;
           if (!param3) {
             field_n = (String) null;

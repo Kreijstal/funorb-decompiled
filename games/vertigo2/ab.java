@@ -7,7 +7,7 @@ abstract class ab {
     static UiPanel field_d;
     static String field_c;
 
-    abstract int b(int param0, int param1);
+    abstract int getGroupRequestProgressPercent(int param0, int param1);
 
     final static boolean a(boolean param0, char param1) {
         if (param0) {

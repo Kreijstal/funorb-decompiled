@@ -58,7 +58,7 @@ final class ha extends IntrusiveNode {
             var5 = (ResourceArchive) null;
             ha.a((ResourceArchive) null, -106, -37, 82);
           }
-          var6 = param0.a(param2, (byte) 120, param3);
+          var6 = param0.getFile(param2, (byte) 120, param3);
           var4 = var6;
           if (var6 == null) {
             return false;

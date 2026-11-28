@@ -3,7 +3,7 @@
  */
 final class lg {
     static int field_a;
-    static ki field_c;
+    static ResourceArchive field_c;
     static String field_b;
 
     final static void a(int param0, int param1, sh param2, boolean param3, boolean param4) {
@@ -95,8 +95,8 @@ final class lg {
     }
 
     final static void a(int param0, int param1) {
-        se var2 = uk.field_b;
-        var2.i(param0, -114);
+        BitPacketBuffer var2 = uk.field_b;
+        var2.writeCipheredByte(param0, -114);
         var2.writeByte(1, -55);
         var2.writeByte(0, -32);
         int var3 = 56 % ((-11 - param1) / 56);

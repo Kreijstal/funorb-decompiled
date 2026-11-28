@@ -14,9 +14,9 @@ final class cl extends rl implements nd {
         super(param0, param1, param2);
     }
 
-    final static boolean a(sh param0, sh param1, sh param2, byte param3) {
+    final static boolean a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, byte param3) {
         RuntimeException var4 = null;
-        sh var5 = null;
+        ResourceArchive var5 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -27,14 +27,14 @@ final class cl extends rl implements nd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 < 117) {
-            var5 = (sh) null;
-            cl.a((sh) null, (sh) null, (sh) null, (byte) -3);
+            var5 = (ResourceArchive) null;
+            cl.a((ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, (byte) -3);
           }
-          if (param1.c(89) &&
+          if (param1.ensureIndexLoaded(89) &&
             param1.a("commonui", 10762)) {
-            if (param2.c(-53) &&
+            if (param2.ensureIndexLoaded(-53) &&
               param2.a("commonui", 10762)) {
-              if (param0.c(74) &&
+              if (param0.ensureIndexLoaded(74) &&
                 param0.a("button.gif", 10762)) {
                 return true;
               }
@@ -72,8 +72,8 @@ final class cl extends rl implements nd {
     final static void a(byte param0, String param1, String param2) {
         try {
           if (param0 != 41) {
-            th var4 = (th) null;
-            cl.a((th) null, -73);
+            BitPacketBuffer var4 = (BitPacketBuffer) null;
+            cl.a((BitPacketBuffer) null, -73);
           }
           if (jj.field_a != null) {
             jj.field_a.g(true);
@@ -85,7 +85,7 @@ final class cl extends rl implements nd {
         }
     }
 
-    final static nj[] a(th param0, int param1) {
+    final static nj[] a(BitPacketBuffer param0, int param1) {
         int var5 = 0;
         nj[] stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -102,11 +102,11 @@ final class cl extends rl implements nd {
         String var8 = null;
         var7 = Lexicominos.field_L ? 1 : 0;
         try {
-          var2_int = param0.g(8, 26527);
+          var2_int = param0.readBits(8, 26527);
           if (var2_int > 0) {
             return null;
           }
-          var3 = param0.g(12, 26527);
+          var3 = param0.readBits(12, 26527);
           if (param1 >= -81) {
             var8 = (String) null;
             cl.a((byte) 101, (String) null, (String) null);
@@ -115,16 +115,16 @@ final class cl extends rl implements nd {
           for (var5 = 0; var5 < var3; var5++) {
             if (MidiPcmStream.a(true, param0)) {
               var6 = new nj();
-              param0.g(24, 26527);
-              param0.g(24, 26527);
-              var6.field_c = param0.g(24, 26527);
-              param0.g(9, 26527);
-              param0.g(12, 26527);
-              param0.g(12, 26527);
-              param0.g(12, 26527);
+              param0.readBits(24, 26527);
+              param0.readBits(24, 26527);
+              var6.field_c = param0.readBits(24, 26527);
+              param0.readBits(9, 26527);
+              param0.readBits(12, 26527);
+              param0.readBits(12, 26527);
+              param0.readBits(12, 26527);
               var4[var5] = var6;
             } else {
-              var6_int = param0.g(AwtRasterBuffer.a((byte) 34, var5 - 1), 26527);
+              var6_int = param0.readBits(AwtRasterBuffer.a((byte) 34, var5 - 1), 26527);
               var4[var5] = var4[var6_int];
             }
           }
@@ -173,16 +173,16 @@ final class cl extends rl implements nd {
         if (this.field_q == null) {
           return null;
         }
-        ta.a(sh.field_e, 112, bk.field_b + this.field_j - this.field_R);
+        ta.a(ResourceArchive.field_e, 112, bk.field_b + this.field_j - this.field_R);
         return this.field_q;
     }
 
-    final static sh a(boolean param0, byte param1, boolean param2, int param3, int param4) {
+    final static ResourceArchive a(boolean param0, byte param1, boolean param2, int param3, int param4) {
         int var5 = -35 % ((46 - param1) / 55);
         return il.a(param0, 12317, false, param3, param2, param4);
     }
 
-    final static byte[] a(byte param0, CharSequence param1) {
+    final static byte[] encodeCp1252Bytes(byte param0, CharSequence param1) {
         int var4 = 0;
         byte[] stackIn_69_0 = null;
         RuntimeException stackIn_72_0 = null;
@@ -194,13 +194,13 @@ final class cl extends rl implements nd {
         byte[] var3 = null;
         int var5 = 0;
         int var6 = 0;
-        th var7 = null;
+        BitPacketBuffer var7 = null;
         var6 = Lexicominos.field_L ? 1 : 0;
         try {
           var2_int = param1.length();
           if (param0 != -98) {
-            var7 = (th) null;
-            cl.a((th) null, -87);
+            var7 = (BitPacketBuffer) null;
+            cl.a((BitPacketBuffer) null, -87);
           }
           var3 = new byte[var2_int];
           for (var4 = 0; var2_int > var4; var4++) {

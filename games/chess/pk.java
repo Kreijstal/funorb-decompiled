@@ -24,10 +24,10 @@ abstract class pk {
     }
 
     final static void a(int param0, int param1, fd param2) {
-        nk var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           var3 = qn.field_U;
-          var3.f(param0, -126);
+          var3.writeCipheredByte(param0, -126);
           var3.writeByte(5, (byte) -108);
           var3.writeByte(0, (byte) -120);
           int var4 = -54 / ((-22 - param1) / 58);

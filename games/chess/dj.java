@@ -154,7 +154,7 @@ final class dj extends DualLinkNode {
         return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
-    final static byte[] a(CharSequence param0, int param1) {
+    final static byte[] encodeCp1252Bytes(CharSequence param0, int param1) {
         int var4 = 0;
         byte[] stackIn_67_0 = null;
         RuntimeException stackIn_70_0 = null;
@@ -355,7 +355,7 @@ final class dj extends DualLinkNode {
           }
           if (param1 != 80) {
             var10 = (CharSequence) null;
-            dj.a((CharSequence) null, 106);
+            dj.encodeCp1252Bytes((CharSequence) null, 106);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

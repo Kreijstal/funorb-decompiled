@@ -5,7 +5,7 @@ final class em extends am implements WidgetActionListener {
     private InteractiveWidget field_U;
     static Sprite field_S;
     static String field_V;
-    static vr field_T;
+    static ResourceArchive field_T;
 
     final static int updateMembershipSlides(boolean param0, int param1) {
         int stackIn_61_0 = 0;
@@ -274,7 +274,7 @@ final class em extends am implements WidgetActionListener {
           return;
         }
         if (param0 != 0) {
-          field_T = (vr) null;
+          field_T = (ResourceArchive) null;
           this.field_C = false;
           return;
         }
@@ -301,7 +301,7 @@ final class em extends am implements WidgetActionListener {
           if (param3 >= 50) {
             return;
           }
-          field_T = (vr) null;
+          field_T = (ResourceArchive) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

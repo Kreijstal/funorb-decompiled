@@ -10,11 +10,11 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     static String field_v;
 
     final static void a(byte param0, int param1) {
-        nk var2 = null;
+        BitPacketBuffer var2 = null;
         int var3 = 0;
         if (param0 == 81) {
           var2 = qn.field_U;
-          var2.f(param1, -118);
+          var2.writeCipheredByte(param1, -118);
           var2.position = var2.position + 1;
           var3 = var2.position;
           var2.writeByte(2, (byte) 47);

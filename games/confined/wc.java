@@ -36,7 +36,7 @@ final class wc extends id {
     private int field_Qb;
     private double[] field_bc;
     private boolean field_dc;
-    static mi field_Wb;
+    static ResourceArchive field_Wb;
 
     public static void n(int param0) {
         if (param0 != 0) {
@@ -301,7 +301,7 @@ final class wc extends id {
           if (h.field_R != null) {
             h.field_R.b(lf.field_m[param3], 32);
           }
-          this.field_cc = new gk((pm) (this), mi.field_b[param3]);
+          this.field_cc = new gk((pm) (this), ResourceArchive.field_b[param3]);
           this.field_cc.field_w = this.field_C;
           this.field_cc.field_m = 192;
           var8 = sc.field_h[param3];

@@ -7,7 +7,7 @@ final class am {
     static int field_e;
     static String field_g;
     static String field_c;
-    static ki field_b;
+    static ResourceArchive field_b;
     static long field_a;
     static String field_f;
 

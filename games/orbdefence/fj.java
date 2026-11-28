@@ -5,8 +5,8 @@ final class fj extends IntrusiveNode {
     mh field_g;
     byte[] field_f;
 
-    final static fj a(ki param0, String param1, String param2) {
-        byte[] var3 = param0.a(param2, 1, param1);
+    final static fj a(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.getFileByName(param2, 1, param1);
         if (var3 == null) {
           return null;
         }

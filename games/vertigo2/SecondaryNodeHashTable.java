@@ -138,7 +138,7 @@ final class SecondaryNodeHashTable {
         try {
           var5_int = 34 % ((-6 - param4) / 33);
           if (hq.a(124, param0, param3, param1)) {
-            stackIn_4_0 = m.a(param2.a(param0, param3, (byte) -103), 0);
+            stackIn_4_0 = m.a(param2.getFile(param0, param3, (byte) -103), 0);
             return stackIn_4_0;
           }
           stackIn_2_0 = null;

@@ -221,14 +221,14 @@ final class ProxySocketConnector extends SocketConnector {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param1.b(-7957)) {
+          if (!param1.ensureIndexLoaded(-7957)) {
             stackIn_3_0 = (String) (param0);
             return stackIn_3_0;
           }
           if (param3 <= 13) {
             field_o = -99;
           }
-          stackIn_7_0 = param4 + " - " + param1.a(param2, (byte) 12) + "%";
+          stackIn_7_0 = param4 + " - " + param1.getGroupLoadPercent(param2, (byte) 12) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

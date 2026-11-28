@@ -93,24 +93,24 @@ final class ml {
         while (this.field_b > this.field_d) {
           var4 = this.field_h[this.field_d];
           var2 = var4;
-          if (!var4.field_d.c((byte) -121)) {
+          if (!var4.field_d.ensureIndexLoaded((byte) -121)) {
             this.a(var4, 0, 84);
             return false;
           }
           if (0 <= var4.field_c &&
-            !var4.field_d.a(var4.field_c, -1)) {
-            this.a(var2, var4.field_d.b((byte) 99, var4.field_c), 76);
+            !var4.field_d.tryLoadGroup(var4.field_c, -1)) {
+            this.a(var2, var4.field_d.getGroupLoadPercent((byte) 99, var4.field_c), 76);
             return false;
           }
           if (null != var4.field_a &&
             !var4.field_d.a(2, var4.field_a)) {
-            this.a(var2, var4.field_d.d(-1, var4.field_a), 72);
+            this.a(var2, var4.field_d.getGroupLoadPercentByName(-1, var4.field_a), 72);
             return false;
           }
           if (var4.field_c < 0 &&
             var4.field_a == null &&
             null != var4.field_h &&
-            !var4.field_d.b(true)) {
+            !var4.field_d.tryLoadAllGroups(true)) {
             this.a(var2, var4.field_d.b((byte) -66), 82);
             return false;
           }
@@ -155,7 +155,7 @@ final class ml {
         }
     }
 
-    final static cf[] a(int param0, jd param1) {
+    final static cf[] a(int param0, BitPacketBuffer param1) {
         int var5 = 0;
         int var2_int = 0;
         int var3 = 0;
@@ -172,7 +172,7 @@ final class ml {
         RuntimeException var2 = null;
         var7 = SolKnight.field_L ? 1 : 0;
         try {
-          var2_int = param1.d((byte) 48, 8);
+          var2_int = param1.readBits((byte) 48, 8);
           if (var2_int > 0) {
             return null;
           }
@@ -180,21 +180,21 @@ final class ml {
             stackIn_6_0 = (cf[]) null;
             return stackIn_6_0;
           }
-          var3 = param1.d((byte) 48, 12);
+          var3 = param1.readBits((byte) 48, 12);
           var4 = new cf[var3];
           for (var5 = 0; var3 > var5; var5++) {
             if (wa.a(param1, (byte) -121)) {
               var6 = new cf();
-              param1.d((byte) 48, 24);
-              param1.d((byte) 48, 24);
-              var6.field_a = param1.d((byte) 48, 24);
-              param1.d((byte) 48, 9);
-              param1.d((byte) 48, 12);
-              param1.d((byte) 48, 12);
-              param1.d((byte) 48, 12);
+              param1.readBits((byte) 48, 24);
+              param1.readBits((byte) 48, 24);
+              var6.field_a = param1.readBits((byte) 48, 24);
+              param1.readBits((byte) 48, 9);
+              param1.readBits((byte) 48, 12);
+              param1.readBits((byte) 48, 12);
+              param1.readBits((byte) 48, 12);
               var4[var5] = var6;
             } else {
-              var6_int = param1.d((byte) 48, ac.a(var5 - 1, 125));
+              var6_int = param1.readBits((byte) 48, ac.a(var5 - 1, 125));
               var4[var5] = var4[var6_int];
             }
           }

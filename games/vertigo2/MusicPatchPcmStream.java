@@ -105,8 +105,8 @@ final class MusicPatchPcmStream extends PcmStream {
             stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
-          var4_int = param0.a((byte) 120, param2);
-          var5 = param0.a(var4_int, param1, 96);
+          var4_int = param0.getGroupIdByName((byte) 120, param2);
+          var5 = param0.getFileIdByName(var4_int, param1, 96);
           stackIn_4_0 = mf.a(param0, var5, (byte) -94, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

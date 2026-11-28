@@ -213,7 +213,7 @@ public final class Transmogrify extends SessionGameApplet {
     final static void m(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        hj var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -224,7 +224,7 @@ public final class Transmogrify extends SessionGameApplet {
           }
           var1 = ff.field_D;
           while (cg.g(-5591)) {
-            var1.a(false, 8);
+            var1.writeCipheredByte(false, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
@@ -679,25 +679,25 @@ public final class Transmogrify extends SessionGameApplet {
         var10 = field_A ? 1 : 0;
         try {
           if (null != pc.field_a) {
-            if (AccountNameAvailabilityValidator.field_k.a((byte) -116) &&
+            if (AccountNameAvailabilityValidator.field_k.ensureIndexLoaded((byte) -116) &&
               AccountNameAvailabilityValidator.field_k.a((byte) -98, "basic")) {
-              if (pc.field_a.a((byte) -120) &&
-                pc.field_a.c(param0 ^ -32065)) {
-                if (BoundedRandomAccessFile.field_h.a((byte) -116) &&
-                  BoundedRandomAccessFile.field_h.c(32031)) {
-                  if (be.field_n.a((byte) -117) &&
-                    be.field_n.c(32031)) {
-                    if (ta.field_d.a((byte) -115) &&
-                      ta.field_d.c(32031)) {
-                      if (oi.field_g.a((byte) -128) &&
+              if (pc.field_a.ensureIndexLoaded((byte) -120) &&
+                pc.field_a.tryLoadAllGroups(param0 ^ -32065)) {
+                if (BoundedRandomAccessFile.field_h.ensureIndexLoaded((byte) -116) &&
+                  BoundedRandomAccessFile.field_h.tryLoadAllGroups(32031)) {
+                  if (be.field_n.ensureIndexLoaded((byte) -117) &&
+                    be.field_n.tryLoadAllGroups(32031)) {
+                    if (ta.field_d.ensureIndexLoaded((byte) -115) &&
+                      ta.field_d.tryLoadAllGroups(32031)) {
+                      if (oi.field_g.ensureIndexLoaded((byte) -128) &&
                         oi.field_g.a((byte) 123, "")) {
-                        if (wl.a(false, 0) && (!oi.field_g.a((byte) -113) ||
+                        if (wl.a(false, 0) && (!oi.field_g.ensureIndexLoaded((byte) -113) ||
                           !oi.field_g.a((byte) 121, "halloween"))) {
                           vf.a((byte) 36, 50.0f, ee.a(q.field_e, (byte) 114, ih.field_c, oi.field_g, "halloween"));
                           return false;
                         }
-                        if (kk.field_a.a((byte) -118) &&
-                          kk.field_a.c(32031)) {
+                        if (kk.field_a.ensureIndexLoaded((byte) -118) &&
+                          kk.field_a.tryLoadAllGroups(32031)) {
                           if (!AccountNameAvailabilityValidator.field_k.a((byte) 126, "arialish12")) {
                             vf.a((byte) -128, 52.0f, ee.a(ByteStorage.field_a, (byte) 102, i.field_c, AccountNameAvailabilityValidator.field_k, "arialish12"));
                             return false;
@@ -714,8 +714,8 @@ public final class Transmogrify extends SessionGameApplet {
                             vf.a((byte) -123, 53.0f, ee.a(ByteStorage.field_a, (byte) 123, i.field_c, AccountNameAvailabilityValidator.field_k, "arialish20"));
                             return false;
                           }
-                          if (l.field_a.a((byte) -124) &&
-                            l.field_a.c(32031)) {
+                          if (l.field_a.ensureIndexLoaded((byte) -124) &&
+                            l.field_a.tryLoadAllGroups(32031)) {
                             vf.a((byte) 17, 73.0f, q.field_c);
                             if (!param1) {
                               return false;
@@ -814,7 +814,7 @@ public final class Transmogrify extends SessionGameApplet {
             return false;
           }
           if (le.field_A == null) {
-            var21 = SessionGameApplet.field_y.a("", (byte) 92, "arialish20");
+            var21 = SessionGameApplet.field_y.getFileByName("", (byte) 92, "arialish20");
             IntrusiveNode.field_d = ProxyAuthenticationRequiredException.a(var21, 98, gb.field_a);
             og.field_a = ua.a(oi.field_g, "", 32, kk.field_a, "arialish20narrow");
             le.field_A = eh.a(gb.field_a, param0 ^ -96, var21, 255, 119);
@@ -1145,7 +1145,7 @@ public final class Transmogrify extends SessionGameApplet {
           dk.clearStaticReferences((byte) 127);
           BufferedRandomAccessFile.clearStaticReferences(-11509);
           BufferedSocket.clearStaticReferences(-102);
-          ci.clearStaticReferences(-120);
+          ResourceArchive.clearStaticReferences(-120);
           SessionGameApplet.clearStaticReferences((byte) -49);
           ContextualRuntimeException.a(6);
           GameApplet.f(-121);
@@ -1222,7 +1222,7 @@ public final class Transmogrify extends SessionGameApplet {
           ld.clearStaticReferences(102);
           LetterTile.b((byte) -15);
           ua.clearStaticReferences(-124);
-          hj.clearStaticReferences(param0 ^ 252);
+          BitPacketBuffer.clearStaticReferences(param0 ^ 252);
           d.clearStaticReferences(1);
           uc.resetStaticState(0);
           eh.clearStaticReferences((byte) 26);

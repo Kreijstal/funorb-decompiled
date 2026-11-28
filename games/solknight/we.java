@@ -205,10 +205,10 @@ final class we implements j {
         var10 = SolKnight.field_L ? 1 : 0;
         try {
           if (kc.field_Q != null &&
-            kc.field_Q.c((byte) -121) &&
+            kc.field_Q.ensureIndexLoaded((byte) -121) &&
             kc.field_Q.a(2, "benefits") &&
             eb.field_b != null &&
-            eb.field_b.c((byte) -121) &&
+            eb.field_b.ensureIndexLoaded((byte) -121) &&
             eb.field_b.a(2, "benefits")) {
             of.field_f = Asteroid.a("headline", "benefits", kc.field_Q, (byte) -120);
             pf.field_b = Asteroid.a("blurbpane", "benefits", kc.field_Q, (byte) -126);

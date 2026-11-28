@@ -711,7 +711,7 @@ class PacketBuffer extends IntrusiveNode {
           } while (0 != this.payload[fieldTemp$1]);
           var4 = -1 + (this.position - var3);
           if (var4 != 0) {
-            stackIn_13_0 = mk.a((byte) -24, this.payload, var4, var3);
+            stackIn_13_0 = mk.decodeCp1252String((byte) -24, this.payload, var4, var3);
             return stackIn_13_0;
           }
           stackIn_11_0 = "";
@@ -4366,7 +4366,7 @@ class PacketBuffer extends IntrusiveNode {
             return stackIn_6_0;
           }
           if (var3 != 0) {
-            stackIn_11_0 = mk.a((byte) -24, this.payload, var3, var2_int);
+            stackIn_11_0 = mk.decodeCp1252String((byte) -24, this.payload, var3, var2_int);
             return stackIn_11_0;
           }
           stackIn_9_0 = "";

@@ -9,7 +9,7 @@ final class nl {
     static String field_f;
     static int field_c;
 
-    final static byte a(boolean param0, char param1) {
+    final static byte encodeCp1252Character(boolean param0, char param1) {
         int var2;
         int var3;
         var3 = HostileSpawn.field_I ? 1 : 0;

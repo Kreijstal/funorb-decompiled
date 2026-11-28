@@ -121,7 +121,7 @@ final class aj {
         field_s = null;
     }
 
-    final static qk a(int param0, int param1) {
+    final static ResourceArchive a(int param0, int param1) {
         if (param0 != 1) {
           aj.a(38, 2);
         }

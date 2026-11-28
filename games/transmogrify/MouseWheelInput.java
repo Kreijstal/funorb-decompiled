@@ -7,7 +7,7 @@ abstract class MouseWheelInput {
 
     abstract int pollRotation(int param0);
 
-    final static String a(ci param0, byte param1) {
+    final static String a(ResourceArchive param0, byte param1) {
         int var6 = 0;
         int[] var2 = null;
         RuntimeException var2_ref = null;
@@ -26,13 +26,13 @@ abstract class MouseWheelInput {
         RuntimeException decompiledCaughtException = null;
         var8 = Transmogrify.field_A ? 1 : 0;
         try {
-          if (!param0.a((byte) -123)) {
+          if (!param0.ensureIndexLoaded((byte) -123)) {
             stackIn_3_0 = bd.field_r;
             return stackIn_3_0;
           }
           var9 = param0.a(false);
           var2 = var9;
-          var3 = param0.b(79, "index");
+          var3 = param0.getGroupIdByName(79, "index");
           var4 = 0;
           var5 = var9;
           if (param1 > -2) {
@@ -42,7 +42,7 @@ abstract class MouseWheelInput {
           for (var6 = 0; var6 < var5.length; var6++) {
             var7 = var5[var6];
             if (var3 != var7) {
-              var4 = var4 + param0.a(true, var7);
+              var4 = var4 + param0.getGroupLoadPercent(true, var7);
             }
           }
           stackIn_14_0 = ne.field_c + " - " + var4 / (-1 + var9.length) + "%";

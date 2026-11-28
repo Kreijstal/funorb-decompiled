@@ -111,7 +111,7 @@ final class AccountNameAvailabilityValidator extends gf {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = 17 % ((-22 - param3) / 48);
-          if (!param1.a(-12749)) {
+          if (!param1.ensureIndexLoaded(-12749)) {
             stackIn_3_0 = (String) (param0);
             return stackIn_3_0;
           }

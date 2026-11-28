@@ -7,7 +7,7 @@ abstract class SocketConnector {
     int field_a;
     String field_b;
 
-    final static boolean a(ad param0, byte param1) {
+    final static boolean a(ResourceArchive param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -16,7 +16,7 @@ abstract class SocketConnector {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > 19) {
-            stackIn_4_0 = param0.b(0);
+            stackIn_4_0 = param0.tryLoadAllGroups(0);
             return stackIn_4_0;
           }
           return true;

@@ -365,7 +365,7 @@ final class lk extends gd {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param1.a(-14354)) {
+          if (!param1.ensureIndexLoaded(-14354)) {
             stackIn_2_0 = (String) (param2);
             return stackIn_2_0;
           }

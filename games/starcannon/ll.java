@@ -50,7 +50,7 @@ final class ll {
               if (!ag.a(125, 1)) {
                 return false;
               }
-              t.field_C = se.field_p.m(255);
+              t.field_C = se.field_p.readCipheredByte(255);
               se.field_p.position = 0;
               il.field_g = param0[t.field_C];
             }

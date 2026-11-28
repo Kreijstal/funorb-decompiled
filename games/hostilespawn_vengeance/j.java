@@ -14,7 +14,7 @@ final class j {
         field_b = null;
     }
 
-    final static boolean a(boolean param0, char param1) {
+    final static boolean isSupportedCp1252KeyCharacter(boolean param0, char param1) {
         int var3 = 0;
         char[] var2 = null;
         RuntimeException var2_ref = null;
@@ -53,7 +53,7 @@ final class j {
         }
     }
 
-    final static int a(int param0, int param1, int param2, byte param3, byte[] param4, CharSequence param5) {
+    final static int encodeCp1252Subsequence(int param0, int param1, int param2, byte param3, byte[] param4, CharSequence param5) {
         int var7 = 0;
         int stackIn_69_0 = 0;
         RuntimeException stackIn_72_0 = null;
@@ -169,7 +169,7 @@ final class j {
           }
           if (param3 != -125) {
             var10 = (CharSequence) null;
-            j.a(-82, -13, -122, (byte) 122, (byte[]) null, (CharSequence) null);
+            j.encodeCp1252Subsequence(-82, -13, -122, (byte) 122, (byte[]) null, (CharSequence) null);
           }
           stackIn_69_0 = var6_int;
           return stackIn_69_0;

@@ -14,7 +14,7 @@ final class LoginMenuScreen extends pj implements ke {
     static int field_N;
     static int[] field_L;
 
-    final static void a(int param0, vj param1) {
+    final static void a(int param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2593_0;
             StringBuilder stackIn_2593_1;
@@ -25,9 +25,9 @@ final class LoginMenuScreen extends pj implements ke {
             int var3;
             int var4;
             int param0;
-            vj param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, vj initialParam1) {
+            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2593_0 = null;
@@ -2523,7 +2523,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("keychar_the_character_under_questionmark", 0);
                 if (null != var2) {
-                  le.a(63, var2[0]);
+                  le.decodeCp1252Byte(63, var2[0]);
                 }
                 var2 = wg.a("rating_noratings", param0 - 7);
                 if (null != var2) {

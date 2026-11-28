@@ -6,7 +6,7 @@ final class fw extends IntrusiveNode {
     static IndexedSprite field_f;
     int field_g;
     static jd field_i;
-    static vr field_j;
+    static ResourceArchive field_j;
     static long field_l;
     static pd[] field_h;
 

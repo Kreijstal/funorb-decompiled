@@ -64,10 +64,10 @@ final class tg {
     }
 
     final static void a(int param0, int param1) {
-        se var2 = null;
+        BitPacketBuffer var2 = null;
         if (param0 < -65) {
           var2 = uk.field_b;
-          var2.i(param1, 108);
+          var2.writeCipheredByte(param1, 108);
           var2.writeByte(1, -92);
           var2.writeByte(2, -71);
           return;

@@ -10,7 +10,7 @@ final class IsaacRandom {
     private int[] field_c;
     static kga field_f;
     private int field_j;
-    static vr field_g;
+    static ResourceArchive field_g;
     static String field_h;
 
     private final void generateResults(boolean param0) {

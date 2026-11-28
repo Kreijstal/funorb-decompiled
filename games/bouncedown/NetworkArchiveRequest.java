@@ -105,7 +105,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         }
     }
 
-    final static byte a(char param0, byte param1) {
+    final static byte encodeCp1252Character(char param0, byte param1) {
         int var2;
         int var3;
         int var4;
@@ -183,7 +183,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         field_q = null;
         field_r = (int[][]) null;
         if (param0) {
-          NetworkArchiveRequest.a('￙', (byte) -105);
+          NetworkArchiveRequest.encodeCp1252Character('￙', (byte) -105);
         }
     }
 

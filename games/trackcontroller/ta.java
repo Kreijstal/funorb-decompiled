@@ -72,7 +72,7 @@ final class ta {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 32200) {
-            stackIn_4_0 = ka.a(0, param0 - 32329, param1, param1.length);
+            stackIn_4_0 = ka.decodeCp1252String(0, param0 - 32329, param1, param1.length);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

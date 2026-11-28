@@ -16,7 +16,7 @@ final class te {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < -10) {
-            stackIn_4_0 = ve.field_z.a(param0, "", 97);
+            stackIn_4_0 = ve.field_z.getFileByName(param0, "", 97);
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;

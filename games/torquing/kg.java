@@ -158,27 +158,27 @@ final class kg {
           return 0;
         }
         if (0 == ImageProducerRasterBuffer.field_i) {
-          if (!lp.field_a.a(-12749)) {
+          if (!lp.field_a.ensureIndexLoaded(-12749)) {
             return 20;
           }
           if (!lp.field_a.a(true, "commonui")) {
             return 40;
           }
-          if (!eg.field_v.a(-12749)) {
+          if (!eg.field_v.ensureIndexLoaded(-12749)) {
             return 50;
           }
           if (!eg.field_v.a(true, "commonui")) {
             return 60;
           }
-          if (!kb.field_a.a(-12749)) {
+          if (!kb.field_a.ensureIndexLoaded(-12749)) {
             return 70;
           }
-          if (!kb.field_a.c(-19375)) {
+          if (!kb.field_a.tryLoadAllGroups(-19375)) {
             return 80;
           }
         } else {
           if (je.field_f != null) {
-            if (!je.field_f.a(-12749)) {
+            if (!je.field_f.ensureIndexLoaded(-12749)) {
               return 14;
             }
             if (!je.field_f.b((byte) -37, "")) {
@@ -188,22 +188,22 @@ final class kg {
               return 29;
             }
           }
-          if (!lp.field_a.a(-12749)) {
+          if (!lp.field_a.ensureIndexLoaded(-12749)) {
             return 43;
           }
           if (!lp.field_a.a(true, "commonui")) {
             return 57;
           }
-          if (!eg.field_v.a(-12749)) {
+          if (!eg.field_v.ensureIndexLoaded(-12749)) {
             return 71;
           }
           if (!eg.field_v.a(true, "commonui")) {
             return 80;
           }
-          if (!kb.field_a.a(-12749)) {
+          if (!kb.field_a.ensureIndexLoaded(-12749)) {
             return 82;
           }
-          if (!kb.field_a.c(param0 - 19424)) {
+          if (!kb.field_a.tryLoadAllGroups(param0 - 19424)) {
             return 86;
           }
         }

@@ -7,7 +7,7 @@ final class v {
     static int field_a;
     static boolean field_c;
 
-    final static void a(byte param0, ad param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         try {
           NodeHashTableIterator.field_d = param1;
           rb.a(IterableNodeHashTable.field_c, (byte) -58);

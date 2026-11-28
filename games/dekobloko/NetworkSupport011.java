@@ -220,11 +220,11 @@ final class NetworkSupport011 {
             stringLocal4 = (String) null;
             this.computeRawSound1262((String) null, (String) null, 126);
           }
-          integerLocal1 = this.resourceArchiveState0018.computeInteger0819(-1, stringArgument3);
+          integerLocal1 = this.resourceArchiveState0018.getGroupIdByName(-1, stringArgument3);
           if (0 > integerLocal1) {
             return null;
           }
-          integerLocal3 = this.resourceArchiveState0018.computeInteger0806(integerLocal1, 13030, stringArgument1);
+          integerLocal3 = this.resourceArchiveState0018.getFileIdByName(integerLocal1, 13030, stringArgument1);
           if (integerLocal3 < 0) {
             return null;
           }
@@ -315,14 +315,14 @@ final class NetworkSupport011 {
         String stackStringLocal12 = null;
         RuntimeException caughtExceptionLocal13 = null;
         try {
-          integerLocal1 = this.resourceArchiveState0017.computeInteger0819(-1, stringArgument1);
+          integerLocal1 = this.resourceArchiveState0017.getGroupIdByName(-1, stringArgument1);
           if (!booleanArgument4) {
             this.mixedSupport086State0002 = (MixedSupport086) null;
           }
           if (0 > integerLocal1) {
             return null;
           }
-          integerLocal3 = this.resourceArchiveState0017.computeInteger0806(integerLocal1, 13030, stringArgument3);
+          integerLocal3 = this.resourceArchiveState0017.getFileIdByName(integerLocal1, 13030, stringArgument3);
           if (integerLocal3 >= 0) {
             stackRawSoundLocal5 = this.computeRawSound1260(119, integerLocal1, integerArrayArgument2, integerLocal3);
             return stackRawSoundLocal5;

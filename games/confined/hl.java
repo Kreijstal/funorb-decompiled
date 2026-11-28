@@ -6,7 +6,7 @@ final class hl implements de {
     static String field_b;
     private ma[] field_e;
     private PrimaryNodeDeque field_f;
-    private mi field_a;
+    private ResourceArchive field_a;
     private int field_g;
     private int field_c;
     private int field_d;
@@ -103,7 +103,7 @@ final class hl implements de {
 
     public final int b(int param0, int param1) {
         if (param0 != 0) {
-          this.field_a = (mi) null;
+          this.field_a = (ResourceArchive) null;
           if (this.field_e[param1] != null) {
             return this.field_e[param1].field_s;
           }
@@ -136,7 +136,7 @@ final class hl implements de {
         field_b = null;
     }
 
-    hl(mi param0, mi param1, int param2, int param3) {
+    hl(ResourceArchive param0, ResourceArchive param1, int param2, int param3) {
         int var7 = 0;
         int[] var5 = null;
         int var6 = 0;
@@ -166,7 +166,7 @@ final class hl implements de {
           var6 = var12.length;
           this.field_e = new ma[param0.d(0, (byte) -73)];
           for (var7 = 0; var7 < var6; var7++) {
-            var8 = new PacketBuffer(param0.a((byte) -2, 0, var12[var7]));
+            var8 = new PacketBuffer(param0.getFile((byte) -2, 0, var12[var7]));
             this.field_e[var12[var7]] = new ma(var8);
           }
           return;

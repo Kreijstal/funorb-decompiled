@@ -4,7 +4,7 @@
 final class me extends IntrusiveNode {
     static RgbSprite field_f;
     private double field_l;
-    static ki field_g;
+    static ResourceArchive field_g;
     private double field_o;
     private double field_h;
     private double field_k;

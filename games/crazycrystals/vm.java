@@ -14,7 +14,7 @@ final class vm {
     float field_b;
     private int field_i;
     static int[] field_d;
-    static db field_k;
+    static ResourceArchive field_k;
     static Vector[] field_j;
 
     public static void b(byte param0) {
@@ -46,24 +46,24 @@ final class vm {
         while (this.field_c > this.field_i) {
           var4 = this.field_f[this.field_i];
           var2 = var4;
-          if (!var4.field_h.a((byte) 102)) {
+          if (!var4.field_h.ensureIndexLoaded((byte) 102)) {
             this.a(var4, 1, 0);
             return false;
           }
           if (var4.field_i >= 0 &&
-            !var4.field_h.e(var4.field_i, 75)) {
-            this.a(var2, 1, var4.field_h.b(25030, var4.field_i));
+            !var4.field_h.tryLoadGroup(var4.field_i, 75)) {
+            this.a(var2, 1, var4.field_h.getGroupLoadPercent(25030, var4.field_i));
             return false;
           }
           if (var4.field_b != null &&
             !var4.field_h.a(-20402, var4.field_b)) {
-            this.a(var2, 1, var4.field_h.b(var4.field_b, param0 ^ -75));
+            this.a(var2, 1, var4.field_h.getGroupLoadPercentByName(var4.field_b, param0 ^ -75));
             return false;
           }
           if (var4.field_i < 0 &&
             null == var4.field_b &&
             null != var4.field_f &&
-            !var4.field_h.a(false)) {
+            !var4.field_h.tryLoadAllGroups(false)) {
             this.a(var2, param0 ^ 1, var4.field_h.b(param0 + 3492));
             return false;
           }

@@ -18,7 +18,7 @@ final class dg {
         field_a = null;
     }
 
-    final static byte a(char param0, int param1) {
+    final static byte encodeCp1252Character(char param0, int param1) {
         int var2;
         int var3;
         int var2Lifetime1;
@@ -497,7 +497,7 @@ final class dg {
           pc.field_y = 0;
           return;
         }
-        dg.a('ￚ', 73);
+        dg.encodeCp1252Character('ￚ', 73);
         pc.field_y = 0;
     }
 

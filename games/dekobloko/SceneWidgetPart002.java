@@ -113,7 +113,7 @@ final class SceneWidgetPart002 extends SceneWidget {
         String stackStringLocal6 = null;
         RuntimeException caughtExceptionLocal7 = null;
         try {
-          byteArrayLocal3 = resourceArchiveArgument2.computeByteArray0805(integerArgument3, 108, integerArgument1);
+          byteArrayLocal3 = resourceArchiveArgument2.getFile(integerArgument3, 108, integerArgument1);
           byteArrayLocal1 = byteArrayLocal3;
           if (integerArgument4 <= 34) {
             return true;

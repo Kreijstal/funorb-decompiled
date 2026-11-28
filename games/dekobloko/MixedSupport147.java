@@ -13,7 +13,7 @@ final class MixedSupport147 {
         String stackStringLocal5 = null;
         RuntimeException caughtExceptionLocal6 = null;
         try {
-          VorbisSample.performAction1695(resourceArchiveArgument2.computeByteArray0809(byteArgument1 ^ -51, "", "headers.packvorbis"));
+          VorbisSample.performAction1695(resourceArchiveArgument2.getFileByName(byteArgument1 ^ -51, "", "headers.packvorbis"));
           vorbisSampleLocal1 = VorbisSample.computeVorbisSample1690(resourceArchiveArgument2, "jagex logo2.packvorbis", "");
           vorbisSampleLocal1.computeRawSound1686();
           if (byteArgument1 == -51) {

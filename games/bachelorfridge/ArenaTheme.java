@@ -338,7 +338,7 @@ abstract class ArenaTheme {
                             var14 = -var12 + (param5 + var11_int);
                             var15 = 32 + (1212 * param2 + 4642 * param0 & 31);
                             var16 = 16 + (31 & param2 * 464 + 57 * param0);
-                            var17 = vr.field_b % var15;
+                            var17 = ResourceArchive.field_b % var15;
                             var18 = var17 * (4 * (var16 * (var15 - var17))) / (var15 * var15);
                             var19 = 32;
                             var20 = 24;

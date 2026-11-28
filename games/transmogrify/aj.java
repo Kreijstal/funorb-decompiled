@@ -284,8 +284,8 @@ class aj extends UiWidget implements pb {
           jk.field_D.a((byte) 107, lb.field_a);
           Bzip2State.field_h.setRootStream(jk.field_D);
           if (param2 != 22290) {
-            ci var9 = (ci) null;
-            aj.a((ci) null, (ci) null, (ci) null, -25);
+            ResourceArchive var9 = (ResourceArchive) null;
+            aj.a((ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, -25);
           }
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "aj.JB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
@@ -321,7 +321,7 @@ class aj extends UiWidget implements pb {
         }
     }
 
-    final static void a(ci param0, ci param1, ci param2, int param3) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3) {
         Sprite var17 = null;
         IndexedSprite[] var5 = null;
         IndexedSprite[][] var6 = null;
@@ -348,7 +348,7 @@ class aj extends UiWidget implements pb {
           al.field_i = (kg) ((Object) ua.a(param2, "commonui", 32, param1, "arezzo12"));
           vd.field_h = (kg) ((Object) ua.a(param2, "commonui", 32, param1, "arezzo14"));
           ArchiveRequest.field_q = (kg) ((Object) ua.a(param2, "commonui", param3 - 2394310, param1, "arezzo14bold"));
-          var17 = new Sprite(param0.a("", (byte) 100, "button.gif"), (java.awt.Component) ((Object) AchievementNotice.field_k));
+          var17 = new Sprite(param0.getFileByName("", (byte) 100, "button.gif"), (java.awt.Component) ((Object) AchievementNotice.field_k));
           gk.a("commonui", param3 ^ -2392393, param2, "dropdown");
           var5 = MusicPatchPcmStream.a((byte) -43, param2, "screen_options", "commonui");
           NanoFrameTimer.field_h = new IndexedSprite[4];

@@ -56,7 +56,7 @@ final class ma {
         return this.field_d;
     }
 
-    final static byte a(int param0, char param1) {
+    final static byte encodeCp1252Character(int param0, char param1) {
         int var2;
         if (param0 > -126) {
           ma.a(100);

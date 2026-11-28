@@ -15,8 +15,8 @@ final class ng {
           hc.field_n = param8;
           pi.field_L = param5;
           if (param2 != 24774) {
-            mi var10 = (mi) null;
-            ng.a((mi) null, 105, (mi) null);
+            ResourceArchive var10 = (ResourceArchive) null;
+            ng.a((ResourceArchive) null, 105, (ResourceArchive) null);
           }
           om.field_s = (jf) ((Object) new kd());
           oc.field_l = new DiskCacheWorker(param6);
@@ -31,7 +31,7 @@ final class ng {
         field_a = null;
     }
 
-    final static void a(mi param0, int param1, mi param2) {
+    final static void a(ResourceArchive param0, int param1, ResourceArchive param2) {
         try {
           rn.field_f = param2;
           un.field_a = param0;

@@ -109,7 +109,7 @@ final class uk extends ql {
         }
     }
 
-    final static IndexedSprite a(int param0, sh param1, int param2, int param3) {
+    final static IndexedSprite a(int param0, ResourceArchive param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -136,7 +136,7 @@ final class uk extends ql {
         }
     }
 
-    final static RgbSprite[] a(String param0, String param1, int param2, sh param3) {
+    final static RgbSprite[] a(String param0, String param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -155,8 +155,8 @@ final class uk extends ql {
             stackIn_2_0 = (RgbSprite[]) null;
             return stackIn_2_0;
           }
-          var4_int = param3.c(param1, (byte) -89);
-          var5 = param3.a(param0, -27964, var4_int);
+          var4_int = param3.getGroupIdByName(param1, (byte) -89);
+          var5 = param3.getFileIdByName(param0, -27964, var4_int);
           stackIn_4_0 = fi.a(param3, var5, (byte) 62, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -193,7 +193,7 @@ final class uk extends ql {
     final static void g(boolean param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        th var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -204,7 +204,7 @@ final class uk extends ql {
             uk.g(false);
           }
           while (kf.d(true)) {
-            var1.h(8, 0);
+            var1.writeCipheredByte(8, 0);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
@@ -223,8 +223,8 @@ final class uk extends ql {
         this.field_T = true;
         this.field_X.field_G = false;
         if (param0 != 4210752) {
-          sh var3 = (sh) null;
-          uk.a(-77, (sh) null, 44, -33);
+          ResourceArchive var3 = (ResourceArchive) null;
+          uk.a(-77, (ResourceArchive) null, 44, -33);
           return;
         }
     }

@@ -5,7 +5,7 @@ import java.util.*;
 
 final class IterableNodeHashTable implements Iterable {
     static String field_e;
-    static vr field_a;
+    static ResourceArchive field_a;
     static String field_g;
     int field_f;
     private IntrusiveNode field_d;

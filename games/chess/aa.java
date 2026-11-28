@@ -760,24 +760,24 @@ final class aa {
         em var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        nk var8 = null;
-        nk var9 = null;
+        BitPacketBuffer var8 = null;
+        BitPacketBuffer var9 = null;
         var7 = Chess.field_G;
         try {
-          var8 = new nk(param1.a("logo.fo3d", 30045, ""));
+          var8 = new BitPacketBuffer(param1.getFileByName("logo.fo3d", 30045, ""));
           var9 = var8;
           if (param0 != -8428) {
             field_f = 65;
           }
           var3 = var9.readUnsignedByte(param0 ^ 8372);
-          var9.m(param0 ^ 18713);
+          var9.beginBitAccess(param0 ^ 18713);
           m.field_e = cl.a(param0 ^ 13190, var9);
           ei.field_v = new em[var3];
           ql.field_a = new int[var3][];
           var4 = 0;
           do {
             if (var4 >= var3) {
-              var9.g((byte) 67);
+              var9.endBitAccess((byte) 67);
               break;
             }
             ei.field_v[var4] = ac.a(var8, true);

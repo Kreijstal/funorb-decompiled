@@ -252,12 +252,12 @@ final class DiskCacheWorker implements Runnable {
         field_a = null;
         if (param0 < 89) {
           CharSequence var2 = (CharSequence) null;
-          DiskCacheWorker.a(-4, (byte[]) null, 19, (CharSequence) null, 98, 103);
+          DiskCacheWorker.encodeCp1252Subsequence(-4, (byte[]) null, 19, (CharSequence) null, 98, 103);
         }
         field_f = null;
     }
 
-    final static int a(int param0, byte[] param1, int param2, CharSequence param3, int param4, int param5) {
+    final static int encodeCp1252Subsequence(int param0, byte[] param1, int param2, CharSequence param3, int param4, int param5) {
         int var7 = 0;
         int stackIn_69_0 = 0;
         RuntimeException stackIn_72_0 = null;

@@ -92,7 +92,7 @@ final class pk {
           if (param2 < 30) {
             field_g = (ResourceArchive) null;
           }
-          stackIn_6_0 = ge.a(param4.a(false, param3, param0), -569);
+          stackIn_6_0 = ge.a(param4.getFile(false, param3, param0), -569);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

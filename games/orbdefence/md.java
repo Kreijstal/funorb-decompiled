@@ -12,7 +12,7 @@ final class md extends rg {
     static int field_f;
     static String[] field_e;
     static byte[][] field_i;
-    static ki field_d;
+    static ResourceArchive field_d;
 
     private final java.net.Socket a(int param0, int param1, String param2, String param3) throws IOException {
         java.net.Socket stackIn_11_0 = null;
@@ -54,7 +54,7 @@ final class md extends rg {
           var8 = var14;
           var8Lifetime1 = var14;
           if (param0 != 0) {
-            field_d = (ki) null;
+            field_d = (ResourceArchive) null;
           }
           boolean decompiledFrameRemainder0 = true;
           if (var14 != null) {

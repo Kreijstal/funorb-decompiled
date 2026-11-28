@@ -18,7 +18,7 @@ final class qq extends EventEffect {
           if (param1) {
             qq.createMouseWheelInput(82);
           }
-          stackIn_4_0 = gt.a(0, param0, (byte) 104, param0.length);
+          stackIn_4_0 = gt.decodeCp1252String(0, param0, (byte) 104, param0.length);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

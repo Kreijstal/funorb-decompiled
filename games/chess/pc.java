@@ -736,7 +736,7 @@ final class pc extends ci {
                 (decompiledFrameRemainder0 = (null != t.field_L ||
                 uj.field_k != null ||
                 il.field_b != null ||
-                nk.field_r != null))) {
+                BitPacketBuffer.field_r != null))) {
                 var11_int = 0;
                 var12 = 0;
                 var13_int = 0;
@@ -774,9 +774,9 @@ final class pc extends ci {
                         var11_int = 1;
                       }
                     }
-                    if (null != nk.field_r &&
-                      nk.field_r[var16] != null) {
-                      var15 = var15 | nk.field_r[var16][var17_int];
+                    if (null != BitPacketBuffer.field_r &&
+                      BitPacketBuffer.field_r[var16] != null) {
+                      var15 = var15 | BitPacketBuffer.field_r[var16][var17_int];
                     }
                     var16++;
                     continue;

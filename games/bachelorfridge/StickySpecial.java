@@ -46,7 +46,7 @@ final class StickySpecial extends SpecialOrder {
           var2_int = param0.length();
           var3 = 0;
           for (var4 = 0; var4 < var2_int; var4++) {
-            var3 = -var3 + (var3 << 5) + aca.a(param0.charAt(var4), 8220);
+            var3 = -var3 + (var3 << 5) + aca.encodeCp1252Character(param0.charAt(var4), 8220);
           }
           if (!param1) {
             field_p = true;

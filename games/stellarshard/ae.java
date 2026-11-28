@@ -12,7 +12,7 @@ class ae extends ig {
     private int field_F;
     private int field_I;
 
-    final static ub a(String param0, String param1, pf param2, int param3, pf param4) {
+    final static ub a(String param0, String param1, ResourceArchive param2, int param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -31,8 +31,8 @@ class ae extends ig {
           if (param3 >= -105) {
             field_N = (ha) null;
           }
-          var5_int = param2.b(param0, (byte) -118);
-          var6 = param2.a(var5_int, param1, (byte) -11);
+          var5_int = param2.getGroupIdByName(param0, (byte) -118);
+          var6 = param2.getFileIdByName(var5_int, param1, (byte) -11);
           stackIn_3_0 = BufferedRandomAccessFile.a(var5_int, param4, param2, (byte) -39, var6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -292,12 +292,12 @@ class ae extends ig {
     public static void m(int param0) {
         field_N = null;
         if (param0 < 110) {
-          pf var2 = (pf) null;
-          ae.a(-3, (pf) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          ae.a(-3, (ResourceArchive) null);
         }
     }
 
-    final static void a(int param0, pf param1) {
+    final static void a(int param0, ResourceArchive param1) {
         int var3 = 0;
         int var4 = 0;
         n var5 = null;
@@ -314,7 +314,7 @@ class ae extends ig {
         int var4Lifetime1;
         var7 = stellarshard.field_B;
         try {
-          var8 = new ha(param1.a("logo.fo3d", "", (byte) -12));
+          var8 = new ha(param1.getFileByName("logo.fo3d", "", (byte) -12));
           var10 = var8;
           var3 = var10.readUnsignedByte(4);
           var10.j(8);
@@ -322,7 +322,7 @@ class ae extends ig {
           sj.field_B = new n[var3];
           bi.field_s = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {
-            sj.field_B[var4] = pf.a(16, var8);
+            sj.field_B[var4] = ResourceArchive.a(16, var8);
           }
           var10.g((byte) 95);
           var9 = 0;

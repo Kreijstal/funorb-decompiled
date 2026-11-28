@@ -336,7 +336,7 @@ final class t extends ti {
         IntrusiveNode var3Lifetime1;
         var5 = StarCannon.field_A;
         if (param0 != -12) {
-          this.a(-73, false);
+          this.getGroupRequestProgressPercent(-73, false);
         }
         boolean decompiledFrameRemainder0 = true;
         if (null != this.field_B) {
@@ -496,7 +496,7 @@ final class t extends ti {
         }
     }
 
-    final int a(int param0, boolean param1) {
+    final int getGroupRequestProgressPercent(int param0, boolean param1) {
         ArchiveRequest var3 = (ArchiveRequest) (this.field_w.a((long)param0, (byte) 120));
         if (!param1) {
           this.d((byte) -101);

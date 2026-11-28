@@ -21,7 +21,7 @@ abstract class tl {
         }
     }
 
-    final static void a(int param0, db param1) {
+    final static void a(int param0, ResourceArchive param1) {
         RuntimeException stackIn_1007_0 = null;
         StringBuilder stackIn_1007_1 = null;
         String stackIn_1008_2 = null;
@@ -666,7 +666,7 @@ abstract class tl {
           }
           var2Lifetime87 = we.a("puzzle1p_levelnames,67", 1);
           if (param0 < 83) {
-            tl.a(-68, (db) null);
+            tl.a(-68, (ResourceArchive) null);
           }
           if (var2Lifetime87 != null) {
             ro.field_r[67] = fa.a((byte) -114, var2Lifetime87);

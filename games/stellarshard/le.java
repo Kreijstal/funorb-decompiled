@@ -41,7 +41,7 @@ final class le extends IntrusiveNode {
         }
     }
 
-    final static void a(pf param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         RuntimeException stackIn_309_0 = null;
         StringBuilder stackIn_309_1 = null;
         String stackIn_310_2 = null;

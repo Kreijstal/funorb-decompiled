@@ -51,7 +51,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
-              oh.a(-161, (char) var2_int)) {
+              oh.isSupportedCp1252KeyCharacter(-161, (char) var2_int)) {
               var3 = 127 & ka.field_c + 1;
               if (var3 != je.field_i) {
                 jk.field_Db[ka.field_c] = -1;

@@ -17,7 +17,7 @@ final class gd {
         field_e = null;
     }
 
-    final static void a(vj param0, int param1, vj param2) {
+    final static void a(ResourceArchive param0, int param1, ResourceArchive param2) {
         try {
           if (param1 != 255) {
             field_b = (he[]) null;

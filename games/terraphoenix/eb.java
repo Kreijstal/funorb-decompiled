@@ -55,8 +55,8 @@ class eb extends UiWidget {
 
     final static void a(int param0, byte param1) {
         int var3 = 79 % ((param1 - 80) / 44);
-        uc var2 = di.field_l;
-        var2.k(-17410, param0);
+        BitPacketBuffer var2 = di.field_l;
+        var2.writeCipheredByte(-17410, param0);
         var2.writeByte(1, -106);
         var2.writeByte(2, 73);
     }
@@ -194,12 +194,12 @@ class eb extends UiWidget {
     }
 
     final static void a(ja param0, int param1, int param2) {
-        uc var3 = di.field_l;
+        BitPacketBuffer var3 = di.field_l;
         if (param1 != 0) {
           return;
         }
         try {
-          var3.k(-17410, param2);
+          var3.writeCipheredByte(-17410, param2);
           var3.writeByte(param0.field_o, -90);
           var3.writeByte(param0.field_k, 38);
         } catch (RuntimeException runtimeException) {

@@ -288,7 +288,7 @@ final class di extends kl {
 
     final void d(int param0) {
         if (param0 != 14) {
-          this.a(-90, -21);
+          this.getGroupRequestProgressPercent(-90, -21);
         }
         if (null == this.field_v) {
           return;
@@ -503,7 +503,7 @@ final class di extends kl {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int getGroupRequestProgressPercent(int param0, int param1) {
         ArchiveRequest var3 = (ArchiveRequest) (this.field_j.a((byte) 91, (long)param1));
         if (param0 != 0) {
           this.b(124);

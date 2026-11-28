@@ -21,8 +21,8 @@ final class gj extends IntrusiveNode {
           field_f = null;
           return;
         }
-        ki var2 = (ki) null;
-        gj.a((ki) null, (byte) -123, (ki) null, true, (ki) null);
+        ResourceArchive var2 = (ResourceArchive) null;
+        gj.a((ResourceArchive) null, (byte) -123, (ResourceArchive) null, true, (ResourceArchive) null);
         field_f = null;
     }
 
@@ -33,7 +33,7 @@ final class gj extends IntrusiveNode {
         return null != od.field_f ? true : false;
     }
 
-    final static void a(ki param0, byte param1, ki param2, boolean param3, ki param4) {
+    final static void a(ResourceArchive param0, byte param1, ResourceArchive param2, boolean param3, ResourceArchive param4) {
         try {
           bd.field_u = hg.a("", (byte) 113);
           bd.field_u.a(false, (byte) -114);

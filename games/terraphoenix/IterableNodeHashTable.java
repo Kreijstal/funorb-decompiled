@@ -33,8 +33,8 @@ final class IterableNodeHashTable implements Iterable {
             var6 = (Archive) null;
             IterableNodeHashTable.a((String) null, (byte) 73, (String) null, (Archive) null);
           }
-          var4_int = param3.c(-1, param2);
-          var5 = param3.a(-103, var4_int, param0);
+          var4_int = param3.getGroupIdByName(-1, param2);
+          var5 = param3.getFileIdByName(-103, var4_int, param0);
           stackIn_3_0 = SocketConnector.a(param3, var4_int, var5, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

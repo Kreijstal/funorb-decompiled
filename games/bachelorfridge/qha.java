@@ -49,13 +49,13 @@ final class qha {
         }
     }
 
-    final static void a(int param0, vr param1) {
+    final static void a(int param0, ResourceArchive param1) {
         try {
           IterableNodeHashTable.field_a = param1;
           vj.field_p = FullHealEvent.a("logo", param1, "minimal", (byte) -86);
           if (param0 < 114) {
-            vr var3 = (vr) null;
-            qha.a(-41, (vr) null);
+            ResourceArchive var3 = (ResourceArchive) null;
+            qha.a(-41, (ResourceArchive) null);
           }
           em.field_S = FullHealEvent.a("loading", param1, "minimal", (byte) -74);
           ml.field_a = BagpipeSpecial.a(param1, -1, "minimal", "fridgedoor2d");
@@ -77,25 +77,25 @@ final class qha {
         while (this.field_g > this.field_a) {
           var4 = this.field_f[this.field_a];
           var2 = var4;
-          if (!var4.field_e.a(0)) {
+          if (!var4.field_e.ensureIndexLoaded(0)) {
             this.a(var4, -1, 0);
             return false;
           }
           if (var4.field_d >= 0 &&
-            !var4.field_e.c(var4.field_d, -734)) {
-            this.a(var2, -1, var4.field_e.b(var4.field_d, (byte) -87));
+            !var4.field_e.tryLoadGroup(var4.field_d, -734)) {
+            this.a(var2, -1, var4.field_e.getGroupLoadPercent(var4.field_d, (byte) -87));
             return false;
           }
           if (null != var4.field_f &&
-            !var4.field_e.a(var4.field_f, 20637)) {
-            this.a(var2, -1, var4.field_e.a(0, var4.field_f));
+            !var4.field_e.tryLoadGroupByName(var4.field_f, 20637)) {
+            this.a(var2, -1, var4.field_e.getGroupLoadPercentByName(0, var4.field_f));
             return false;
           }
           if (var4.field_d < 0 &&
             var4.field_f == null &&
             var4.field_b != null &&
-            !var4.field_e.b((byte) 111)) {
-            this.a(var2, -1, var4.field_e.a(true));
+            !var4.field_e.tryLoadAllGroups((byte) 111)) {
+            this.a(var2, -1, var4.field_e.getLoadPercent(true));
             return false;
           }
           this.field_a = this.field_a + 1;

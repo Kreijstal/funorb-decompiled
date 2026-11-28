@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class i {
-    private gk field_b;
+    private ResourceArchive field_b;
     static int field_a;
     static String field_g;
     static long field_c;
     private uk field_d;
     static java.awt.Frame field_h;
     static int field_f;
-    private gk field_i;
+    private ResourceArchive field_i;
     private uk field_e;
 
     final PcmSample a(int param0, int param1, int[] param2) {
@@ -221,7 +221,7 @@ final class i {
         }
     }
 
-    i(gk param0, gk param1) {
+    i(ResourceArchive param0, ResourceArchive param1) {
         this.field_d = new uk(256);
         this.field_e = new uk(256);
         try {

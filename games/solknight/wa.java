@@ -9,7 +9,7 @@ final class wa {
         return param0 ^ param1;
     }
 
-    final static boolean a(jd param0, byte param1) {
+    final static boolean a(BitPacketBuffer param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -18,7 +18,7 @@ final class wa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < -107) {
-            stackIn_6_0 = (param0.d((byte) 48, 1) == 1);
+            stackIn_6_0 = (param0.readBits((byte) 48, 1) == 1);
             return stackIn_6_0;
           }
           return true;

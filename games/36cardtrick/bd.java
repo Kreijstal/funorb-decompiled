@@ -68,7 +68,7 @@ final class bd extends g implements qh {
         }
     }
 
-    final static String a(int param0, int param1, byte[] param2, int param3) {
+    final static String decodeCp1252String(int param0, int param1, byte[] param2, int param3) {
         int var6 = 0;
         int incrementValue$1 = 0;
         char[] var4 = null;
@@ -155,7 +155,7 @@ final class bd extends g implements qh {
           }
           if (param1 >= -99) {
             var6 = (byte[]) null;
-            bd.a(101, 70, (byte[]) null, 118);
+            bd.decodeCp1252String(101, 70, (byte[]) null, 118);
           }
           if (param2 != 99) {
             return false;

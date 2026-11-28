@@ -55,7 +55,7 @@ final class jh extends wb implements qk {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 107 % ((param0 + 6) / 59);
-          stackIn_1_0 = param1.e(0);
+          stackIn_1_0 = param1.tryLoadAllGroups(0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

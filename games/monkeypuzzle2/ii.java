@@ -41,7 +41,7 @@ class ii extends vb {
     private int field_G;
     private Sprite[] field_Y;
     private int field_L;
-    static ad field_m;
+    static ResourceArchive field_m;
     static int field_B;
     private int field_v;
     static int field_T;

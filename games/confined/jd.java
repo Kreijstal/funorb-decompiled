@@ -3,7 +3,7 @@
  */
 final class jd {
     static int[] field_d;
-    static mi field_b;
+    static ResourceArchive field_b;
     static int[] field_h;
     static int[] field_e;
     static PrimaryNodeDeque field_f;
@@ -16,7 +16,7 @@ final class jd {
         field_b = null;
         field_d = null;
         if (param0 != -38) {
-          field_b = (mi) null;
+          field_b = (ResourceArchive) null;
         }
         field_f = null;
         field_a = null;

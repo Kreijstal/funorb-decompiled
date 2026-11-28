@@ -33,7 +33,7 @@ final class hd extends hi {
         int var4Lifetime1;
         var7 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var8 = new CipherPacketBuffer(param0.a("", "logo.fo3d", 0));
+          var8 = new CipherPacketBuffer(param0.getFileByName("", "logo.fo3d", 0));
           var10 = var8;
           var3 = var10.readUnsignedByte(32270);
           var10.c(false);

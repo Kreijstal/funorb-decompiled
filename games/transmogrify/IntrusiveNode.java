@@ -199,13 +199,13 @@ class IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var2 = Transmogrify.field_A ? 1 : 0;
         try {
-          ci.field_f.a(be.field_x, MidiPcmStream.field_R, true, 4);
+          ResourceArchive.field_f.a(be.field_x, MidiPcmStream.field_R, true, 4);
           if (param0 != -1) {
             field_d = (mi) null;
           }
-          ci.field_f.l(0);
+          ResourceArchive.field_f.l(0);
           while (pc.b(param0 ^ -97)) {
-            ci.field_f.a(param0 - 80, sg.field_n, ch.field_d);
+            ResourceArchive.field_f.a(param0 - 80, sg.field_n, ch.field_d);
           }
           if (sg.field_e != -1) {
             var1_int = sg.field_e;

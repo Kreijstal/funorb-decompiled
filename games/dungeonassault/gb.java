@@ -15,9 +15,9 @@ final class gb {
           return var3;
         }
         if (param0 < 32768) {
-          var4 = this.field_b.b(5, 1, param0);
+          var4 = this.field_b.getFile(5, 1, param0);
         } else {
-          var4 = this.field_d.b(5, 1, param0 & 32767);
+          var4 = this.field_d.getFile(5, 1, param0 & 32767);
         }
         if (param1 != -19256) {
           return (nf) null;

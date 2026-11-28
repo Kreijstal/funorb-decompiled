@@ -6,8 +6,8 @@ final class kb {
     private int field_a;
     private int field_b;
 
-    final static kb a(vj param0, int param1, int param2) {
-        byte[] var3 = param0.a(param1, param2, (byte) 35);
+    final static kb a(ResourceArchive param0, int param1, int param2) {
+        byte[] var3 = param0.getFile(param1, param2, (byte) 35);
         if (var3 == null) {
           return null;
         }
@@ -19,8 +19,8 @@ final class kb {
         return new PcmSample(22050, var1, 22050 * this.field_b / 1000, 22050 * this.field_a / 1000);
     }
 
-    final static kb a(vj param0, String param1, String param2) {
-        byte[] var3 = param0.a(param1, param2, 24874);
+    final static kb a(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.getFileByName(param1, param2, 24874);
         if (var3 == null) {
           return null;
         }

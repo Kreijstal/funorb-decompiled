@@ -25,7 +25,7 @@ final class bc {
             od.field_g == mh.field_a)) {
             if (di.field_l.position == 0 &&
               ll.correctedCurrentTimeMillis(1000) > (10000L + bl.field_h)) {
-              di.field_l.k(-17410, param0);
+              di.field_l.writeCipheredByte(-17410, param0);
             }
             if (di.field_l.position > 0) {
               try {
@@ -62,7 +62,7 @@ final class bc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            stackIn_4_0 = fh.field_d.a("", param0, -21653);
+            stackIn_4_0 = fh.field_d.getFileByName("", param0, -21653);
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;

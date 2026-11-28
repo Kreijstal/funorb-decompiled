@@ -31,7 +31,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     final static String a(int param0, String param1, byte param2) {
         RuntimeException var3 = null;
         int var4 = 0;
-        nk var5 = null;
+        BitPacketBuffer var5 = null;
         CharSequence var6 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
@@ -76,7 +76,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             return stackIn_22_0;
           }
           var5 = qn.field_U;
-          var5.f(param0, param2 - 165);
+          var5.writeCipheredByte(param0, param2 - 165);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(2, (byte) 68);

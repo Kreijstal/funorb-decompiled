@@ -111,7 +111,7 @@ class tb implements ka {
         try {
           this.field_e = param2;
           this.field_i = param1;
-          var7 = new PacketBuffer(param0.a(0, 0, (byte) -74));
+          var7 = new PacketBuffer(param0.getFile(0, 0, (byte) -74));
           this.field_f = var7.readUnsignedShort((byte) -11);
           this.field_g = new ui[this.field_f];
           for (var5 = 0; var5 < this.field_f; var5++) {

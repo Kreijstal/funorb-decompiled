@@ -290,9 +290,9 @@ abstract class wl extends tb {
         }
     }
 
-    final static pf a(int param0, int param1) {
+    final static ResourceArchive a(int param0, int param1) {
         if (param0 != 1) {
-          return (pf) null;
+          return (ResourceArchive) null;
         }
         return IsaacRandom.a(1, 255, param1, false, false, true);
     }

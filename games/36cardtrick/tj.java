@@ -81,7 +81,7 @@ final class tj extends g implements qh {
         this.field_E.field_k = (pl) (this);
         this.field_G.field_k = (pl) (this);
         this.field_E.field_n = bl.field_b;
-        this.field_G.field_n = w.field_m;
+        this.field_G.field_n = BitPacketBuffer.field_m;
         this.b(this.field_I, (byte) 118);
         this.b(this.field_E, (byte) 118);
         this.b(this.field_G, (byte) 118);

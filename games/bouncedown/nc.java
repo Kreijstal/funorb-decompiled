@@ -9,11 +9,11 @@ final class nc {
         field_a = null;
         if (param0 < 84) {
           String var2 = (String) null;
-          nc.a((String) null, (gk) null, (String) null, 120);
+          nc.a((String) null, (ResourceArchive) null, (String) null, 120);
         }
     }
 
-    final static RgbSprite a(String param0, gk param1, String param2, int param3) {
+    final static RgbSprite a(String param0, ResourceArchive param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -32,8 +32,8 @@ final class nc {
             stackIn_2_0 = (RgbSprite) null;
             return stackIn_2_0;
           }
-          var4_int = param1.a(param2, false);
-          var5 = param1.a(var4_int, param0, param3 ^ 125);
+          var4_int = param1.getGroupIdByName(param2, false);
+          var5 = param1.getFileIdByName(var4_int, param0, param3 ^ 125);
           stackIn_4_0 = PcmResampler.a(0, param1, var5, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

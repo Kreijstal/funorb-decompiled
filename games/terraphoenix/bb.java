@@ -98,7 +98,7 @@ final class bb {
 
     final static void a(Archive param0, int param1, int param2, PcmStreamMixer param3) {
         try {
-          IntrusiveNode.field_e = uc.j((byte) -127) * param2 / 1000;
+          IntrusiveNode.field_e = BitPacketBuffer.getTicksPerSecond((byte) -127) * param2 / 1000;
           ee.a((byte) 51, param0);
           IsaacCipher.a(-28664, param0);
           if (param1 >= -60) {

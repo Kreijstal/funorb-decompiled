@@ -96,7 +96,7 @@ final class mn extends IntrusiveNode {
           }
         }
         if (param1 > -113) {
-          mn.a((byte) 97, -80);
+          mn.decodeCp1252Byte((byte) 97, -80);
         }
     }
 
@@ -345,7 +345,7 @@ final class mn extends IntrusiveNode {
         }
     }
 
-    final static char a(byte param0, int param1) {
+    final static char decodeCp1252Byte(byte param0, int param1) {
         int var4 = 0;
         int var2 = -54 / ((param1 - 8) / 40);
         int var3 = param0 & 255;

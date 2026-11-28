@@ -8,7 +8,7 @@ final class r extends pu {
     static lo field_m;
     static UiComponent[] field_l;
 
-    final static void a(int[] param0, int param1, vr param2, String[][] param3, byte[] param4, byte[] param5, String[] param6, int param7, vr param8, vr param9, String[][] param10, Sprite[][] param11, boolean param12, Sprite[][] param13, int param14) {
+    final static void a(int[] param0, int param1, ResourceArchive param2, String[][] param3, byte[] param4, byte[] param5, String[] param6, int param7, ResourceArchive param8, ResourceArchive param9, String[][] param10, Sprite[][] param11, boolean param12, Sprite[][] param13, int param14) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -119,7 +119,7 @@ final class r extends pu {
         field_n = null;
         field_l = null;
         if (param0 != -1) {
-          r.a((int[]) null, -60, (vr) null, (String[][]) null, (byte[]) null, (byte[]) null, (String[]) null, 7, (vr) null, (vr) null, (String[][]) null, (Sprite[][]) null, true, (Sprite[][]) null, 53);
+          r.a((int[]) null, -60, (ResourceArchive) null, (String[][]) null, (byte[]) null, (byte[]) null, (String[]) null, 7, (ResourceArchive) null, (ResourceArchive) null, (String[][]) null, (Sprite[][]) null, true, (Sprite[][]) null, 53);
         }
     }
 

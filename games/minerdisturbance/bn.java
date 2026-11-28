@@ -15,7 +15,7 @@ final class bn implements uj {
     public final void a(boolean param0) {
         tb.field_a = 0;
         if (param0) {
-          bn.a(126, 'ﾂ');
+          bn.isSupportedCp1252KeyCharacter(126, 'ﾂ');
         }
     }
 
@@ -24,11 +24,11 @@ final class bn implements uj {
         field_b = null;
         field_a = null;
         if (param0 != 160) {
-          bn.a(-15, '￬');
+          bn.isSupportedCp1252KeyCharacter(-15, '￬');
         }
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isSupportedCp1252KeyCharacter(int param0, char param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;

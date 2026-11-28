@@ -24,7 +24,7 @@ final class ce extends td {
     private long field_e;
     private boolean field_v;
 
-    final int a(int param0, int param1) {
+    final int getGroupRequestProgressPercent(int param0, int param1) {
         ArchiveRequest var3 = (ArchiveRequest) (this.field_o.a(19, (long)param1));
         if (param0 < 111) {
           return -12;

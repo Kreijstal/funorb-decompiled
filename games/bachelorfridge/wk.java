@@ -4,13 +4,13 @@
 final class wk {
     private pha field_d;
     static int field_g;
-    private vr field_c;
+    private ResourceArchive field_c;
     static int field_f;
     static String field_e;
     static boolean field_b;
     static int field_a;
     static String field_i;
-    private vr field_h;
+    private ResourceArchive field_h;
 
     public static void resetStaticState(int param0) {
         if (param0 >= -8) {
@@ -43,9 +43,9 @@ final class wk {
           return var3;
         }
         if (param1 >= 32768) {
-          var4 = this.field_h.b(-96, 1, param1 & 32767);
+          var4 = this.field_h.getFile(-96, 1, param1 & 32767);
         } else {
-          var4 = this.field_c.b(-110, 1, param1);
+          var4 = this.field_c.getFile(-110, 1, param1);
         }
         if (param0 != -22834) {
           return (pda) null;
@@ -61,7 +61,7 @@ final class wk {
         return var3Lifetime1;
     }
 
-    wk(int param0, vr param1, vr param2, so param3) {
+    wk(int param0, ResourceArchive param1, ResourceArchive param2, so param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -76,12 +76,12 @@ final class wk {
           this.field_h = param2;
           this.field_c = param1;
           if (null != this.field_c) {
-            this.field_c.d(1, 0);
+            this.field_c.getGroupFileSlotCount(1, 0);
           }
           if (null == this.field_h) {
             return;
           }
-          this.field_h.d(1, 0);
+          this.field_h.getGroupFileSlotCount(1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

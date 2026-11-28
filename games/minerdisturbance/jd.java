@@ -12,7 +12,7 @@ final class jd {
     }
 
     final static jd a(ResourceArchive param0, String param1, String param2) {
-        byte[] var3 = param0.a(param2, 0, param1);
+        byte[] var3 = param0.getFileByName(param2, 0, param1);
         if (var3 == null) {
           return null;
         }
@@ -20,7 +20,7 @@ final class jd {
     }
 
     final static jd a(ResourceArchive param0, int param1, int param2) {
-        byte[] var3 = param0.a(false, param1, param2);
+        byte[] var3 = param0.getFile(false, param1, param2);
         if (var3 == null) {
           return null;
         }

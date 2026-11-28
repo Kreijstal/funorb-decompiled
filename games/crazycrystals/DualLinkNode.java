@@ -29,7 +29,7 @@ class DualLinkNode extends IntrusiveNode {
             field_h = false;
           }
           while (var2_int > var5) {
-            var3 = (long)dg.a(param1.charAt(var5), 17176) - var3 + (var3 << 5);
+            var3 = (long)dg.encodeCp1252Character(param1.charAt(var5), 17176) - var3 + (var3 << 5);
             var5++;
           }
           stackIn_6_0 = var3;

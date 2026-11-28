@@ -204,7 +204,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (ib.field_k == 2) {
           if (il.field_a != null &&
-            il.field_a.b((byte) -109)) {
+            il.field_a.ensureIndexLoaded((byte) -109)) {
             if (!il.field_a.b("", 37)) {
               il.field_a = null;
             } else {
@@ -256,8 +256,8 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         boolean decompiledFrameRemainder0 = true;
         if (ib.field_k == 11) {
-          if (null != ne.field_a && (!ne.field_a.b((byte) -113) ||
-            !ne.field_a.a(-18))) {
+          if (null != ne.field_a && (!ne.field_a.ensureIndexLoaded((byte) -113) ||
+            !ne.field_a.tryLoadAllGroups(-18))) {
             jj.a(0.0f, cb.a(sg.field_a, AccountServiceResult.field_a, ne.field_a, (byte) 13), true);
             decompiledFrameRemainder0 = false;
           }
@@ -759,7 +759,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               if (IntrusiveNode.field_g.c((byte) 79)) {
                 var12 = IntrusiveNode.field_g.a(param1 + 86);
                 if (var12 != null) {
-                  var7 = pg.a(var12.position, 0, var12.payload, 0);
+                  var7 = pg.decodeCp1252String(var12.position, 0, var12.payload, 0);
                   w.a(61, var7);
                 } else {
                   var9 = (String) null;

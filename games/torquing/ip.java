@@ -120,8 +120,8 @@ final class ip {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.a(-1, param2);
-          var5 = param0.a(param3, -101, var4_int);
+          var4_int = param0.getGroupIdByName(-1, param2);
+          var5 = param0.getFileIdByName(param3, -101, var4_int);
           if (param1 >= -105) {
             field_a = (k) null;
           }

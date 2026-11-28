@@ -28,7 +28,7 @@ final class IsaacRandom {
         Object var5 = null;
         int var6 = 0;
         uj var8 = null;
-        lh var9 = null;
+        BitPacketBuffer var9 = null;
         byte[] var13 = null;
         var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {

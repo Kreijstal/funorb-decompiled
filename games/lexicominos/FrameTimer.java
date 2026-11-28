@@ -62,7 +62,7 @@ abstract class FrameTimer {
 
     abstract void resetTiming(byte param0);
 
-    final static TriangleMesh a(th param0, int param1) {
+    final static TriangleMesh a(BitPacketBuffer param0, int param1) {
         TriangleMesh stackIn_5_0 = null;
         TriangleMesh stackIn_29_0 = null;
         RuntimeException stackIn_32_0 = null;
@@ -81,7 +81,7 @@ abstract class FrameTimer {
         int var10 = 0;
         var8 = Lexicominos.field_L ? 1 : 0;
         try {
-          var2_int = param0.g(8, 26527);
+          var2_int = param0.readBits(8, 26527);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
@@ -92,16 +92,16 @@ abstract class FrameTimer {
           }
           var4 = MidiPcmStream.a(true, param0) ? 1 : 0;
           var5 = new TriangleMesh();
-          var5.field_w = (short)param0.g(16, 26527);
+          var5.field_w = (short)param0.readBits(16, 26527);
           var5.field_h = hi.a(param0, (byte) -94, 16, var5.field_h);
           var5.field_I = hi.a(param0, (byte) -70, 16, var5.field_I);
           var5.field_g = hi.a(param0, (byte) -83, 16, var5.field_g);
-          var5.field_H = (short)param0.g(16, 26527);
+          var5.field_H = (short)param0.readBits(16, 26527);
           var5.field_a = hi.a(param0, (byte) -46, 16, var5.field_a);
           var5.field_k = hi.a(param0, (byte) -41, 16, var5.field_k);
           var5.field_B = hi.a(param0, (byte) -114, 16, var5.field_B);
           if (var3 != 0) {
-            var5.field_A = (short)param0.g(16, 26527);
+            var5.field_A = (short)param0.readBits(16, 26527);
             var5.field_z = hi.a(param0, (byte) -87, 16, var5.field_z);
             var5.field_b = hi.a(param0, (byte) -97, 16, var5.field_b);
             var5.field_c = hi.a(param0, (byte) -42, 16, var5.field_c);
@@ -110,7 +110,7 @@ abstract class FrameTimer {
             var5.field_E = hi.a(param0, (byte) -98, 16, var5.field_E);
           }
           if (var4 != 0) {
-            param0.g(16, 26527);
+            param0.readBits(16, 26527);
             var5.field_d = hi.a(param0, (byte) -70, 16, var5.field_d);
             var5.field_s = hi.a(param0, (byte) -96, 16, var5.field_s);
             var5.field_e = hi.a(param0, (byte) -128, 16, var5.field_e);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lh extends PacketBuffer {
+final class BitPacketBuffer extends PacketBuffer {
     static int[] field_n;
     static ok field_l;
     private IsaacRandom field_o;
@@ -9,11 +9,11 @@ final class lh extends PacketBuffer {
     static RgbSprite field_p;
     private int field_q;
 
-    final int e(byte param0) {
+    final int readCipheredByte(byte param0) {
         int fieldTemp$0 = 0;
         if (param0 != 121) {
           byte[] var3 = (byte[]) null;
-          this.a(-86, 117, (byte[]) null, (byte) -63);
+          this.readCipheredBytes(-86, 117, (byte[]) null, (byte) -63);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           return 255 & this.payload[fieldTemp$0] - this.field_o.nextInt((byte) -57);
@@ -23,7 +23,7 @@ final class lh extends PacketBuffer {
         return 255 & this.payload[fieldTemp$1] - this.field_o.nextInt((byte) -57);
     }
 
-    final void a(int param0, int param1, byte[] param2, byte param3) {
+    final void readCipheredBytes(int param0, int param1, byte[] param2, byte param3) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -59,7 +59,7 @@ final class lh extends PacketBuffer {
         }
     }
 
-    final static void a(RgbSprite[] param0, byte param1, int param2, int param3, int param4, int param5) {
+    final static void drawTiledSpriteStrip(RgbSprite[] param0, byte param1, int param2, int param3, int param4, int param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -108,11 +108,11 @@ final class lh extends PacketBuffer {
         }
     }
 
-    lh(byte[] param0) {
+    BitPacketBuffer(byte[] param0) {
         super(param0);
     }
 
-    final void a(byte param0, int[] param1) {
+    final void setCipherSeed(byte param0, int[] param1) {
         try {
           if (param0 > -100) {
             this.field_o = (IsaacRandom) null;
@@ -123,7 +123,7 @@ final class lh extends PacketBuffer {
         }
     }
 
-    lh(int param0) {
+    BitPacketBuffer(int param0) {
         super(param0);
     }
 
@@ -146,7 +146,7 @@ final class lh extends PacketBuffer {
         }
     }
 
-    final void o(int param0) {
+    final void endBitAccess(int param0) {
         this.position = (this.field_q + 7) / 8;
         if (param0 <= -107) {
           return;
@@ -154,15 +154,15 @@ final class lh extends PacketBuffer {
         field_l = (ok) null;
     }
 
-    final void d(byte param0) {
+    final void beginBitAccess(byte param0) {
         int var2 = -98 / ((param0 + 11) / 42);
         this.field_q = 8 * this.position;
     }
 
-    final void d(int param0, int param1) {
+    final void writeCipheredByte(int param0, int param1) {
         int fieldTemp$0 = 0;
         if (param1 != -18392) {
-          lh.sleepIgnoringInterrupts(2L, (byte) -21);
+          BitPacketBuffer.sleepIgnoringInterrupts(2L, (byte) -21);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte)(this.field_o.nextInt((byte) 127) + param0);
@@ -173,7 +173,7 @@ final class lh extends PacketBuffer {
         this.payload[fieldTemp$1] = (byte)(this.field_o.nextInt((byte) 127) + param0);
     }
 
-    final int e(int param0, byte param1) {
+    final int readBits(int param0, byte param1) {
         int incrementValue$0 = 0;
         int var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         int var3 = this.field_q >> 3;

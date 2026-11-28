@@ -822,7 +822,7 @@ final class ql {
         }
     }
 
-    final static bm[] a(String param0, byte param1, String param2, mi param3) {
+    final static bm[] a(String param0, byte param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -841,8 +841,8 @@ final class ql {
             stackIn_2_0 = (bm[]) null;
             return stackIn_2_0;
           }
-          var4_int = param3.a(-118, param0);
-          var5 = param3.a(var4_int, param2, -107);
+          var4_int = param3.getGroupIdByName(-118, param0);
+          var5 = param3.getFileIdByName(var4_int, param2, -107);
           stackIn_4_0 = kj.a(param3, var4_int, var5, false);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -7,7 +7,7 @@ final class qf {
     private cc[] field_b;
 
     final static qf a(ResourceArchive param0, int param1, int param2) {
-        byte[] var3 = param0.a(param1, (byte) 122, param2);
+        byte[] var3 = param0.getFile(param1, (byte) 122, param2);
         if (var3 == null) {
           return null;
         }
@@ -60,7 +60,7 @@ final class qf {
     }
 
     final static qf a(ResourceArchive param0, String param1, String param2) {
-        byte[] var3 = param0.a(0, param2, param1);
+        byte[] var3 = param0.getFileByName(0, param2, param1);
         if (var3 == null) {
           return null;
         }

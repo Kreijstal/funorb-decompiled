@@ -114,7 +114,7 @@ final class cc extends qf {
             stackIn_22_0 = fa.field_t;
             return stackIn_22_0;
           }
-          if (ia.a(var5, (byte) -16, var3)) {
+          if (BitPacketBuffer.containsNameOrReverse(var5, (byte) -16, var3)) {
             stackIn_26_0 = pc.field_c;
             return stackIn_26_0;
           }

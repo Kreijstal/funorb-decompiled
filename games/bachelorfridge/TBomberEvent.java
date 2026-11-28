@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TBomberEvent extends SpecialEvent {
-    static vr field_s;
+    static ResourceArchive field_s;
     static int field_r;
     int field_t;
     int field_q;
@@ -136,7 +136,7 @@ final class TBomberEvent extends SpecialEvent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 5) {
-            field_s = (vr) null;
+            field_s = (ResourceArchive) null;
           }
           stackIn_3_0 = new TBomberAnimation(param1, this, this.field_p);
           return (AnimationNode) ((Object) stackIn_3_0);

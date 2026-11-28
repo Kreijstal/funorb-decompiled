@@ -177,7 +177,7 @@ final class vi {
         return ol.field_a[var4];
     }
 
-    final static char a(byte param0, int param1) {
+    final static char decodeCp1252Byte(byte param0, int param1) {
         int var4 = 0;
         int var3 = 76 / ((63 - param1) / 45);
         int var2 = param0 & 255;

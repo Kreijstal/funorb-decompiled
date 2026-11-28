@@ -4,7 +4,7 @@
 final class wba {
     static IntrusiveDeque field_g;
     int field_b;
-    static vr field_f;
+    static ResourceArchive field_f;
     static String[] field_a;
     static MusicTrack[] field_e;
     static int field_c;

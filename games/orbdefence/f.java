@@ -937,7 +937,7 @@ final class f {
         }
     }
 
-    final static void a(ki param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         RuntimeException runtimeException = null;
         RgbSprite var2 = null;
         int var3 = 0;
@@ -947,7 +947,7 @@ final class f {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new RgbSprite(param0.a("", 1, "final_frame.jpg"), (java.awt.Component) ((Object) GameAppletShell.field_f));
+          var2 = new RgbSprite(param0.getFileByName("", 1, "final_frame.jpg"), (java.awt.Component) ((Object) GameAppletShell.field_f));
           if (param1 != -17763) {
             return;
           }
@@ -977,7 +977,7 @@ final class f {
         }
     }
 
-    final static wd a(se param0, int param1) {
+    final static wd a(BitPacketBuffer param0, int param1) {
         int stackIn_25_0 = 0;
         int stackIn_25_1 = 0;
         wd stackIn_32_0 = null;
@@ -995,23 +995,23 @@ final class f {
         int var8 = 0;
         var8 = OrbDefence.field_D ? 1 : 0;
         try {
-          var2_int = param0.h(8, 8);
+          var2_int = param0.readBits(8, 8);
           if (0 < var2_int) {
             throw new IllegalStateException("" + var2_int);
           }
           var3 = eg.a(param0, 26678) ? 1 : 0;
           var4 = eg.a(param0, param1 + 26662) ? 1 : 0;
           var5 = new wd();
-          var5.field_c = (short)param0.h(16, param1 ^ 24);
+          var5.field_c = (short)param0.readBits(16, param1 ^ 24);
           var5.field_R = IntrusiveNode.a(var5.field_R, 16, false, param0);
           var5.field_x = IntrusiveNode.a(var5.field_x, 16, false, param0);
           var5.field_Q = IntrusiveNode.a(var5.field_Q, 16, false, param0);
-          var5.field_u = (short)param0.h(16, 8);
+          var5.field_u = (short)param0.readBits(16, 8);
           var5.field_M = IntrusiveNode.a(var5.field_M, 16, false, param0);
           var5.field_e = IntrusiveNode.a(var5.field_e, 16, false, param0);
           var5.field_l = IntrusiveNode.a(var5.field_l, param1, false, param0);
           if (var3 != 0) {
-            var5.field_w = (short)param0.h(16, param1 - 8);
+            var5.field_w = (short)param0.readBits(16, param1 - 8);
             var5.field_K = IntrusiveNode.a(var5.field_K, 16, false, param0);
             var5.field_H = IntrusiveNode.a(var5.field_H, 16, false, param0);
             var5.field_G = IntrusiveNode.a(var5.field_G, 16, false, param0);
@@ -1020,7 +1020,7 @@ final class f {
             var5.field_i = IntrusiveNode.a(var5.field_i, 16, false, param0);
           }
           if (var4 != 0) {
-            param0.h(16, param1 ^ 24);
+            param0.readBits(16, param1 ^ 24);
             var5.field_n = IntrusiveNode.a(var5.field_n, 16, false, param0);
             var5.field_B = IntrusiveNode.a(var5.field_B, 16, false, param0);
             var5.field_h = IntrusiveNode.a(var5.field_h, 16, false, param0);

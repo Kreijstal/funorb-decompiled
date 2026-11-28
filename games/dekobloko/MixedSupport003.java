@@ -35,8 +35,8 @@ final class MixedSupport003 extends DualNode {
         String stackStringLocal11 = null;
         RuntimeException caughtExceptionLocal12 = null;
         try {
-          integerLocal1 = resourceArchiveArgument4.computeInteger0819(-1, stringArgument2);
-          integerLocal3 = resourceArchiveArgument4.computeInteger0806(integerLocal1, 13030, stringArgument3);
+          integerLocal1 = resourceArchiveArgument4.getGroupIdByName(-1, stringArgument2);
+          integerLocal3 = resourceArchiveArgument4.getFileIdByName(integerLocal1, 13030, stringArgument3);
           if (integerArgument1 != 0) {
             MixedSupport003.clearStaticReferences((byte) 24);
           }
@@ -143,7 +143,7 @@ final class MixedSupport003 extends DualNode {
                 if (0 == integerLocal14) {
                   stackCharacterLocal3 = (char)0;
                 } else {
-                  stackCharacterLocal3 = DiagnosticSupport002.computeCharacter0762((byte) integerLocal14, (byte) 78);
+                  stackCharacterLocal3 = DiagnosticSupport002.decodeCp1252Byte((byte) integerLocal14, (byte) 78);
                 }
                 stackCharacterArrayLocal1[stackIntegerLocal2] = stackCharacterLocal3;
               }
@@ -160,7 +160,7 @@ final class MixedSupport003 extends DualNode {
                   if (integerLocal14 == 0) {
                     stackCharacterLocal6 = (char)0;
                   } else {
-                    stackCharacterLocal6 = DiagnosticSupport002.computeCharacter0762((byte) integerLocal14, (byte) 88);
+                    stackCharacterLocal6 = DiagnosticSupport002.decodeCp1252Byte((byte) integerLocal14, (byte) 88);
                   }
                   stackCharacterArrayLocal4[stackIntegerLocal5] = stackCharacterLocal6;
                 }

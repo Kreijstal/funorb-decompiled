@@ -123,7 +123,7 @@ final class UrlRequest implements Runnable {
               var3 = var4.getOutputStream();
               var3.write(17);
               var5 = (CharSequence) ((Object) ("JAGGRAB " + this.url.getFile() + "\n\n"));
-              var3.write(vg.a(var5, (byte) -126));
+              var3.write(vg.encodeCp1252Bytes(var5, (byte) -126));
               this.field_c = new DataInputStream(var4.getInputStream());
             }
             this.buffer.position = 0;

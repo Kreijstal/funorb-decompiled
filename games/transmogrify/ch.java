@@ -36,8 +36,8 @@ final class ch {
         }
         try {
           if (gh.field_m == null) {
-            gh.field_m = new sd(ci.field_f, tg.field_c);
-            ci.field_f.b((UiWidget) (gh.field_m), (byte) -71);
+            gh.field_m = new sd(ResourceArchive.field_f, tg.field_c);
+            ResourceArchive.field_f.b((UiWidget) (gh.field_m), (byte) -71);
           }
           gh.field_m.a(param2, param1, (byte) -27, param3);
           SoftwareRasterizer.clearRaster();

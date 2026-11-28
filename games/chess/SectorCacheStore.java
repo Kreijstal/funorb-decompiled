@@ -186,8 +186,8 @@ final class SectorCacheStore {
 
     final static boolean a(byte param0, boolean param1) {
         try {
-          nk var4 = null;
-          nk var5 = null;
+          BitPacketBuffer var4 = null;
+          BitPacketBuffer var5 = null;
           if (null == tl.field_Gb) {
             tl.field_Gb = re.field_n.requestDirectSocket(am.field_d, false, qh.field_a);
           }

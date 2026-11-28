@@ -9,7 +9,7 @@ final class BoundedRandomAccessFile {
     private long field_c;
     private long field_g;
     private RandomAccessFile field_f;
-    static ci field_h;
+    static ResourceArchive field_h;
     static String field_a;
     static int field_d;
 
@@ -30,7 +30,7 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    final static char a(int param0, byte param1) {
+    final static char decodeCp1252Byte(int param0, byte param1) {
         int var2 = param1 & 255;
         if (var2 == 0) {
           throw new IllegalArgumentException("" + Integer.toString(var2, 16));

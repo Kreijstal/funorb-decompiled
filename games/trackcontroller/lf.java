@@ -69,7 +69,7 @@ final class lf extends lb implements wk {
         field_Y = null;
     }
 
-    final static boolean a(byte param0, la param1) {
+    final static boolean a(byte param0, BitPacketBuffer param1) {
         RuntimeException var2 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -78,7 +78,7 @@ final class lf extends lb implements wk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -68) {
-            stackIn_6_0 = (param1.d(0, 1) == 1);
+            stackIn_6_0 = (param1.readBits(0, 1) == 1);
             return stackIn_6_0;
           }
           return true;

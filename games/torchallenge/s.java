@@ -31,8 +31,8 @@ final class s extends IntrusiveNode {
           if (param2 != 0) {
             field_j = (String[]) null;
           }
-          var4_int = param0.a(param1, 73);
-          var5 = param0.a(var4_int, param3, (byte) 116);
+          var4_int = param0.getGroupIdByName(param1, 73);
+          var5 = param0.getFileIdByName(var4_int, param3, (byte) 116);
           stackIn_3_0 = bl.a(var5, var4_int, param0, param2 ^ 2147483647);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

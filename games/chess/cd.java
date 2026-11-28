@@ -51,7 +51,7 @@ final class cd extends pk {
           if (param1 > -73) {
             field_p = 49;
           }
-          stackIn_3_0 = sc.field_c.a("", 30045, param0);
+          stackIn_3_0 = sc.field_c.getFileByName("", 30045, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -220,7 +220,7 @@ final class cd extends pk {
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new RgbSprite(param1.a("final_frame.jpg", 30045, ""), (java.awt.Component) ((Object) DirectByteStorage.field_h));
+          var2 = new RgbSprite(param1.getFileByName("final_frame.jpg", 30045, ""), (java.awt.Component) ((Object) DirectByteStorage.field_h));
           var3 = var2.field_w;
           var4 = var2.field_t;
           r.k(3029);
@@ -251,12 +251,12 @@ final class cd extends pk {
     }
 
     final static void a(int param0, byte[] param1, boolean param2, int param3, int param4, int param5) {
-        nk var6 = null;
+        BitPacketBuffer var6 = null;
         int var7 = 0;
         int var9 = 0;
         try {
           var6 = qn.field_U;
-          var6.f(param3, -82);
+          var6.writeCipheredByte(param3, -82);
           var6.position = var6.position + 1;
           var7 = var6.position;
           var6.writeByte(4, (byte) -75);

@@ -58,7 +58,7 @@ final class fd extends IntrusiveNode {
     final static void a(byte param0, ResourceArchive param1) {
         hi var2 = null;
         try {
-          hi.b(param1.a("headers.packvorbis", 30045, ""));
+          hi.b(param1.getFileByName("headers.packvorbis", 30045, ""));
           int var3 = -89 / ((-60 - param0) / 43);
           var2 = hi.a(param1, "jagex logo2.packvorbis", "");
           var2.a();
@@ -72,8 +72,8 @@ final class fd extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1, long param2) {
-        nk var4 = qn.field_U;
-        var4.f(param0, -87);
+        BitPacketBuffer var4 = qn.field_U;
+        var4.writeCipheredByte(param0, -87);
         var4.position = var4.position + 1;
         int var5 = var4.position;
         var4.writeByte(7, (byte) -84);

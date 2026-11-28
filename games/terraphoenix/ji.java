@@ -105,8 +105,8 @@ final class ji extends IntrusiveNode {
           RuntimeException var15 = null;
           IOException var16 = null;
           try {
-            LevelEditor.field_j = new uc(param9);
-            di.field_l = new uc(param8);
+            LevelEditor.field_j = new BitPacketBuffer(param9);
+            di.field_l = new BitPacketBuffer(param8);
             nd.field_i = param13;
             DelegatingCanvas.field_c = param1;
             sb.field_i = param2;

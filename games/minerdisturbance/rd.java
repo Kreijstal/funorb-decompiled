@@ -94,8 +94,8 @@ final class rd {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param3.a(-89, param0);
-          var6 = param3.a(param4, var5_int, -80);
+          var5_int = param3.getGroupIdByName(-89, param0);
+          var6 = param3.getFileIdByName(param4, var5_int, -80);
           if (param1 >= -64) {
             rd.clearStaticReferences((byte) -105);
           }

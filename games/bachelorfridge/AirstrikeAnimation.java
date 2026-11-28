@@ -14,7 +14,7 @@ final class AirstrikeAnimation extends EventAnimation {
     static String field_E;
     static int[] field_D;
 
-    final static PalettedBitmapFont a(byte param0, int param1, int param2, vr param3, vr param4) {
+    final static PalettedBitmapFont a(byte param0, int param1, int param2, ResourceArchive param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         PalettedBitmapFont stackIn_2_0 = null;
         PalettedBitmapFont stackIn_7_0 = null;
@@ -32,7 +32,7 @@ final class AirstrikeAnimation extends EventAnimation {
           if (!g.a(param2, param1, param0 ^ 30847, param4)) {
             return null;
           }
-          stackIn_7_0 = cea.a(param3.b(-56, param2, param1), 28450);
+          stackIn_7_0 = cea.a(param3.getFile(-56, param2, param1), 28450);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -60,7 +60,7 @@ final class AirstrikeAnimation extends EventAnimation {
         field_D = null;
         if (param0 != 0) {
           String[] var2 = (String[]) null;
-          AirstrikeAnimation.a((int[]) null, (vr) null, -57, 54, (byte[]) null, (vr) null, true, (vr) null, (int[]) null, 67, (IndexedSprite[]) null, (Sprite[][]) null, (Sprite[][]) null, (byte[]) null, (String[][]) null, (String[][]) null, (String[]) null);
+          AirstrikeAnimation.a((int[]) null, (ResourceArchive) null, -57, 54, (byte[]) null, (ResourceArchive) null, true, (ResourceArchive) null, (int[]) null, 67, (IndexedSprite[]) null, (Sprite[][]) null, (Sprite[][]) null, (byte[]) null, (String[][]) null, (String[][]) null, (String[]) null);
         }
     }
 
@@ -127,7 +127,7 @@ final class AirstrikeAnimation extends EventAnimation {
         int var2 = -114 % ((param0 + 7) / 34);
     }
 
-    final static void a(int[] param0, vr param1, int param2, int param3, byte[] param4, vr param5, boolean param6, vr param7, int[] param8, int param9, IndexedSprite[] param10, Sprite[][] param11, Sprite[][] param12, byte[] param13, String[][] param14, String[][] param15, String[] param16) {
+    final static void a(int[] param0, ResourceArchive param1, int param2, int param3, byte[] param4, ResourceArchive param5, boolean param6, ResourceArchive param7, int[] param8, int param9, IndexedSprite[] param10, Sprite[][] param11, Sprite[][] param12, byte[] param13, String[][] param14, String[][] param15, String[] param16) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -157,14 +157,14 @@ final class AirstrikeAnimation extends EventAnimation {
         String stackIn_42_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var17 = null;
-        vr var18 = null;
+        ResourceArchive var18 = null;
         String[] var19 = null;
         try {
           var19 = (String[]) null;
           BagpipeAnimation.a(param4, param8, param13, param10, 1, param0, param6, param5, param12, param14, param9, param16, param2, param1, (String[]) null, param11, param7, param15, 22914);
           if (param3 != 0) {
-            var18 = (vr) null;
-            AirstrikeAnimation.a((byte) 115, 95, 37, (vr) null, (vr) null);
+            var18 = (ResourceArchive) null;
+            AirstrikeAnimation.a((byte) 115, 95, 37, (ResourceArchive) null, (ResourceArchive) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

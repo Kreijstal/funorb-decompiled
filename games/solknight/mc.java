@@ -12,27 +12,27 @@ final class mc {
           return (String) null;
         }
         if (af.field_c != null) {
-          if (!af.field_c.c((byte) -121)) {
+          if (!af.field_c.ensureIndexLoaded((byte) -121)) {
             return wa.field_a;
           }
           return uf.field_r;
         }
-        if (!MusicPatchPcmStream.field_o.c((byte) -121)) {
+        if (!MusicPatchPcmStream.field_o.ensureIndexLoaded((byte) -121)) {
           return IsaacRandom.field_e;
         }
         if (!MusicPatchPcmStream.field_o.a(2, "commonui")) {
-          return vb.field_i + " - " + MusicPatchPcmStream.field_o.d(-1, "commonui") + "%";
+          return vb.field_i + " - " + MusicPatchPcmStream.field_o.getGroupLoadPercentByName(-1, "commonui") + "%";
         }
-        if (!DelegatingCanvas.field_c.c((byte) -121)) {
+        if (!DelegatingCanvas.field_c.ensureIndexLoaded((byte) -121)) {
           return ri.field_d;
         }
         if (!DelegatingCanvas.field_c.a(2, "commonui")) {
-          return qb.field_bb + " - " + DelegatingCanvas.field_c.d(-1, "commonui") + "%";
+          return qb.field_bb + " - " + DelegatingCanvas.field_c.getGroupLoadPercentByName(-1, "commonui") + "%";
         }
-        if (!AccountCreationResultPanel.field_ub.c((byte) -121)) {
+        if (!AccountCreationResultPanel.field_ub.ensureIndexLoaded((byte) -121)) {
           return bg.field_t;
         }
-        if (!AccountCreationResultPanel.field_ub.b(true)) {
+        if (!AccountCreationResultPanel.field_ub.tryLoadAllGroups(true)) {
           return li.field_j + " - " + AccountCreationResultPanel.field_ub.b((byte) -66) + "%";
         }
         return qf.field_g;

@@ -45,7 +45,7 @@ final class dl {
         return hd.field_g[var4];
     }
 
-    final static lh a(ja param0, byte param1, String param2, String param3, ue param4) {
+    final static lh a(ja param0, byte param1, String param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -62,9 +62,9 @@ final class dl {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param4.a(param3, false);
+          var5_int = param4.getGroupIdByName(param3, false);
           var7 = -19 % ((param1 - 3) / 59);
-          var6 = param4.a(param2, true, var5_int);
+          var6 = param4.getFileIdByName(param2, true, var5_int);
           stackIn_1_0 = qd.a(var5_int, var6, param0, (byte) 108, param4);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

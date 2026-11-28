@@ -465,7 +465,7 @@ public final class BachelorFridge extends NetworkGameClient {
         }
     }
 
-    private final void a(vr param0, byte param1, float param2, float param3) {
+    private final void a(ResourceArchive param0, byte param1, float param2, float param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         RuntimeException stackIn_5_0 = null;
@@ -473,7 +473,7 @@ public final class BachelorFridge extends NetworkGameClient {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ShieldSpecial.field_r = (float)param0.a(true) * (-param2 + param3) / 100.0f + param2;
+          ShieldSpecial.field_r = (float)param0.getLoadPercent(true) * (-param2 + param3) / 100.0f + param2;
           var5_int = 12 % ((param1 - 57) / 48);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -502,7 +502,7 @@ public final class BachelorFridge extends NetworkGameClient {
         }
     }
 
-    private final void a(float param0, vr param1, float param2, int param3, String param4) {
+    private final void a(float param0, ResourceArchive param1, float param2, int param3, String param4) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -511,7 +511,7 @@ public final class BachelorFridge extends NetworkGameClient {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ShieldSpecial.field_r = (param2 - param0) * (float)param1.a(0, param4) / 100.0f + param0;
+          ShieldSpecial.field_r = (param2 - param0) * (float)param1.getGroupLoadPercentByName(0, param4) / 100.0f + param0;
           if (param3 > -109) {
             this.field_x = false;
           }
@@ -546,12 +546,12 @@ public final class BachelorFridge extends NetworkGameClient {
           boolean decompiledFrameRemainder0 = true;
           IndexedSpriteState.a(25);
           if (!this.field_x) {
-            if (vb.field_j.a(param0 - 7) &&
-              vb.field_j.a("minimal", 20637)) {
-              if ((BoardTile.field_b.a(0) &&
-                BoardTile.field_b.a("minimal", 20637)) &&
-                (decompiledFrameRemainder0 = (!(ria.field_i.a(param0 ^ 7)) ||
-                !(ria.field_i.b((byte) 95))))) {
+            if (vb.field_j.ensureIndexLoaded(param0 - 7) &&
+              vb.field_j.tryLoadGroupByName("minimal", 20637)) {
+              if ((BoardTile.field_b.ensureIndexLoaded(0) &&
+                BoardTile.field_b.tryLoadGroupByName("minimal", 20637)) &&
+                (decompiledFrameRemainder0 = (!(ria.field_i.ensureIndexLoaded(param0 ^ 7)) ||
+                !(ria.field_i.tryLoadAllGroups((byte) 95))))) {
                 dea.a(MassPoisonEvent.a(ria.field_i, (byte) -57, TileEffect.field_a, iea.field_b), 80.0f, 115);
                 return false;
               }
@@ -566,7 +566,7 @@ public final class BachelorFridge extends NetworkGameClient {
             }
           }
           this.field_x = true;
-          var2 = BoardTile.field_b.a((byte) 123, "smallfont", "minimal");
+          var2 = BoardTile.field_b.getFileByName((byte) 123, "smallfont", "minimal");
           var3 = RageSpecial.a(param0 ^ 29612, "minimal", "smallfont", vb.field_j);
           dupTemp$0 = RasterBuffer.a(var3, var2, 0);
           LinkTextWidget.field_D = dupTemp$0;
@@ -610,7 +610,7 @@ public final class BachelorFridge extends NetworkGameClient {
         kb.releaseStatics(92);
         BufferedCacheFile.releaseStatics(-203);
         BufferedSocket.releaseStatics(96);
-        vr.releaseStatics(-19779);
+        ResourceArchive.releaseStatics(-19779);
         oja.a(-32341);
         dj.clearStaticReferences((byte) -75);
         cba.releaseStatics((byte) -44);
@@ -1345,65 +1345,65 @@ public final class BachelorFridge extends NetworkGameClient {
           iha.clearStaticReferences(5);
           IndexedSpriteState.a(25);
           if (HomingMissileAnimation.field_w != null) {
-            if (ScavengerSpecial.field_p.a(0) &&
-              ScavengerSpecial.field_p.a("basic", 20637)) {
+            if (ScavengerSpecial.field_p.ensureIndexLoaded(0) &&
+              ScavengerSpecial.field_p.tryLoadGroupByName("basic", 20637)) {
               waa.a(0, 0);
-              if (ScavengerSpecial.field_p.a(0) &&
-                ScavengerSpecial.field_p.a("lobby", 20637)) {
+              if (ScavengerSpecial.field_p.ensureIndexLoaded(0) &&
+                ScavengerSpecial.field_p.tryLoadGroupByName("lobby", 20637)) {
                 waa.a(0, 1);
-                if (ClamsSpecial.field_p.a(0) &&
-                  ClamsSpecial.field_p.a("lobby", 20637)) {
+                if (ClamsSpecial.field_p.ensureIndexLoaded(0) &&
+                  ClamsSpecial.field_p.tryLoadGroupByName("lobby", 20637)) {
                   waa.a(0, 2);
-                  if (HomingMissileAnimation.field_w.a(0) &&
-                    HomingMissileAnimation.field_w.b((byte) 120)) {
+                  if (HomingMissileAnimation.field_w.ensureIndexLoaded(0) &&
+                    HomingMissileAnimation.field_w.tryLoadAllGroups((byte) 120)) {
                     waa.a(0, 3);
-                    if (FullHealAnimation.field_B.a(0) &&
-                      FullHealAnimation.field_B.b((byte) 105)) {
+                    if (FullHealAnimation.field_B.ensureIndexLoaded(0) &&
+                      FullHealAnimation.field_B.tryLoadAllGroups((byte) 105)) {
                       waa.a(0, 4);
-                      if (fda.field_l.a(0) &&
-                        fda.field_l.b((byte) 113)) {
+                      if (fda.field_l.ensureIndexLoaded(0) &&
+                        fda.field_l.tryLoadAllGroups((byte) 113)) {
                         waa.a(0, 5);
-                        if (JaggrabDownloader.field_m.a(0) &&
-                          JaggrabDownloader.field_m.b((byte) 120)) {
+                        if (JaggrabDownloader.field_m.ensureIndexLoaded(0) &&
+                          JaggrabDownloader.field_m.tryLoadAllGroups((byte) 120)) {
                           waa.a(0, 6);
-                          if (vb.field_j.a(0) &&
-                            vb.field_j.a("basic", 20637)) {
+                          if (vb.field_j.ensureIndexLoaded(0) &&
+                            vb.field_j.tryLoadGroupByName("basic", 20637)) {
                             waa.a(0, 7);
-                            if (vb.field_j.a(0) &&
-                              vb.field_j.a("bacteria_components", 20637)) {
+                            if (vb.field_j.ensureIndexLoaded(0) &&
+                              vb.field_j.tryLoadGroupByName("bacteria_components", 20637)) {
                               waa.a(0, 8);
-                              if (BoardTile.field_b.a(0) &&
-                                BoardTile.field_b.a("basic", 20637)) {
+                              if (BoardTile.field_b.ensureIndexLoaded(0) &&
+                                BoardTile.field_b.tryLoadGroupByName("basic", 20637)) {
                                 waa.a(0, 9);
-                                if (ria.field_i.a(0) &&
-                                  ria.field_i.b((byte) 123)) {
+                                if (ria.field_i.ensureIndexLoaded(0) &&
+                                  ria.field_i.tryLoadAllGroups((byte) 123)) {
                                   waa.a(0, 10);
-                                  if (uda.field_U.a(0) &&
-                                    uda.field_U.b((byte) 106)) {
+                                  if (uda.field_U.ensureIndexLoaded(0) &&
+                                    uda.field_U.tryLoadAllGroups((byte) 106)) {
                                     waa.a(0, 11);
-                                    if (WidgetContainer.field_y.a(0) &&
-                                      WidgetContainer.field_y.b((byte) 115)) {
+                                    if (WidgetContainer.field_y.ensureIndexLoaded(0) &&
+                                      WidgetContainer.field_y.tryLoadAllGroups((byte) 115)) {
                                       waa.a(0, 12);
-                                      if (fw.field_j.a(0) &&
-                                        fw.field_j.b((byte) 118)) {
+                                      if (fw.field_j.ensureIndexLoaded(0) &&
+                                        fw.field_j.tryLoadAllGroups((byte) 118)) {
                                         waa.a(0, 13);
-                                        if (pr.field_j.a(0) &&
-                                          pr.field_j.b((byte) 104)) {
+                                        if (pr.field_j.ensureIndexLoaded(0) &&
+                                          pr.field_j.tryLoadAllGroups((byte) 104)) {
                                           waa.a(0, 14);
-                                          if (fga.field_h.a(0) &&
-                                            fga.field_h.b((byte) 120)) {
+                                          if (fga.field_h.ensureIndexLoaded(0) &&
+                                            fga.field_h.tryLoadAllGroups((byte) 120)) {
                                             waa.a(0, 15);
-                                            if (iga.field_d.a(0) &&
-                                              iga.field_d.b((byte) 113)) {
+                                            if (iga.field_d.ensureIndexLoaded(0) &&
+                                              iga.field_d.tryLoadAllGroups((byte) 113)) {
                                               waa.a(0, 16);
-                                              if (wba.field_f.a(0) &&
-                                                wba.field_f.b((byte) 100)) {
+                                              if (wba.field_f.ensureIndexLoaded(0) &&
+                                                wba.field_f.tryLoadAllGroups((byte) 100)) {
                                                 waa.a(0, 17);
-                                                if (wb.field_l.a(0) &&
-                                                  wb.field_l.b((byte) 99)) {
+                                                if (wb.field_l.ensureIndexLoaded(0) &&
+                                                  wb.field_l.tryLoadAllGroups((byte) 99)) {
                                                   waa.a(0, 18);
-                                                  if (fda.field_k.a(0) &&
-                                                    fda.field_k.b((byte) 101)) {
+                                                  if (fda.field_k.ensureIndexLoaded(0) &&
+                                                    fda.field_k.tryLoadAllGroups((byte) 101)) {
                                                     waa.a(0, 19);
                                                     SlowAllSpecial.b(108);
                                                     this.a(78.5999984741211f, true);
@@ -1537,7 +1537,7 @@ public final class BachelorFridge extends NetworkGameClient {
             this.a(99.5999984741211f, true);
             waa.a(0, 32);
             if (fga.field_h != null) {
-              ika.a((byte) 18, new HuffmanCodec(fga.field_h.a((byte) 123, "huffman", "")));
+              ika.a((byte) 18, new HuffmanCodec(fga.field_h.getFileByName((byte) 123, "huffman", "")));
               fga.field_h = null;
               mia.b(32);
               return false;
@@ -1568,7 +1568,7 @@ public final class BachelorFridge extends NetworkGameClient {
             return true;
           }
           this.draw((byte) 3);
-          var2 = BoardTile.field_b.a((byte) 123, "menufont", "basic");
+          var2 = BoardTile.field_b.getFileByName((byte) 123, "menufont", "basic");
           var3 = RageSpecial.a(29611, "basic", "menufont", vb.field_j);
           p.a(2, var2, 256);
           ActorAnimation.field_u = RaiseEvent.a(4676, var3, var2);
@@ -1581,13 +1581,13 @@ public final class BachelorFridge extends NetworkGameClient {
           TileEffectAnimation.field_j = new String[2][2];
           DiveBomberAnimation.field_w.a(fu.field_l[0], new int[]{60}, TileEffectAnimation.field_j[0]);
           DiveBomberAnimation.field_w.a(fu.field_l[1], new int[]{60}, TileEffectAnimation.field_j[1]);
-          var2Lifetime1 = BoardTile.field_b.a((byte) 123, "tinyfont", "basic");
+          var2Lifetime1 = BoardTile.field_b.getFileByName((byte) 123, "tinyfont", "basic");
           var3Lifetime1 = RageSpecial.a(29611, "basic", "tinyfont", vb.field_j);
           CreatureActor.field_h = hl.a(16777215, (byte) 107, var3Lifetime1, 65793, var2Lifetime1);
           CreatureActor.field_h.field_M = ce.field_w;
           wt.field_k = RaiseEvent.a(4676, var3Lifetime1, var2Lifetime1);
           g.field_g = ClamsSpecial.a("midfont", vb.field_j, -50, "basic", BoardTile.field_b);
-          var2Lifetime2 = BoardTile.field_b.a((byte) 123, "arenafont", "basic");
+          var2Lifetime2 = BoardTile.field_b.getFileByName((byte) 123, "arenafont", "basic");
           var3Lifetime2 = RageSpecial.a(29611, "basic", "arenafont", vb.field_j);
           b.field_t = hl.a(16777215, (byte) 107, var3Lifetime2, 65793, var2Lifetime2);
           b.field_t.field_M = ce.field_w;
@@ -1682,7 +1682,7 @@ public final class BachelorFridge extends NetworkGameClient {
             this.r(11);
             ed.field_a = false;
           }
-          vr.field_b = vr.field_b + 1;
+          ResourceArchive.field_b = ResourceArchive.field_b + 1;
           var2_int = 89 % ((40 - param0) / 49);
           if (sn.c(63)) {
             if (!SnowAnimation.field_z) {

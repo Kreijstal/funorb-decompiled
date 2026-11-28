@@ -20,14 +20,14 @@ final class u {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param1.a((byte) 105)) {
+          if (!param1.ensureIndexLoaded((byte) 105)) {
             stackIn_2_0 = (String) (param2);
             return stackIn_2_0;
           }
           if (param3 != -7157) {
             u.a(20);
           }
-          stackIn_6_0 = param0 + " - " + param1.a(param4, -118) + "%";
+          stackIn_6_0 = param0 + " - " + param1.getGroupLoadPercentByName(param4, -118) + "%";
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

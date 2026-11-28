@@ -26,15 +26,15 @@ final class hf extends IntrusiveNode {
           ok.a(param2, param9, param4, param13, param11, param6, param3, -1, 0, lf.field_e, he.field_C, param7, param14, mf.field_c, 480, (RgbSprite[]) null, param12, 0, param1, param0, param8);
           hb.a(param5, (byte) -128);
           if (param10 < 5) {
-            ki var16 = (ki) null;
-            hf.a((PcmStreamMixer) null, (ki) null, 124, 16);
+            ResourceArchive var16 = (ResourceArchive) null;
+            hf.a((PcmStreamMixer) null, (ResourceArchive) null, 124, 16);
           }
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "hf.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + (param13 != null ? "{...}" : "null") + ',' + param14 + ')');
         }
     }
 
-    final static void a(PcmStreamMixer param0, ki param1, int param2, int param3) {
+    final static void a(PcmStreamMixer param0, ResourceArchive param1, int param2, int param3) {
         try {
           DualLinkDequeIterator.field_h = ok.a((byte) 84) * param2 / param3;
           fb.a(-2, param1);

@@ -355,7 +355,7 @@ class ci extends gf implements ka {
           stackIn_7_2 = !(param1);
           ua.field_G = (BitmapFont) ((Object) si.a(stackIn_6_0, stackIn_6_1, stackIn_7_2, "arezzo14", param3));
           uc.field_g = (BitmapFont) ((Object) si.a(param0, "commonui", true, "arezzo14bold", param3));
-          var18 = new Sprite(param2.a(4, "button.gif", ""), (java.awt.Component) ((Object) dc.field_q));
+          var18 = new Sprite(param2.getFileByName(4, "button.gif", ""), (java.awt.Component) ((Object) dc.field_q));
           ClientException.a(param3, -97, "dropdown", "commonui");
           var5 = dj.a(8108, "screen_options", param3, "commonui");
           DiskArchiveRequest.field_s = new od[4];

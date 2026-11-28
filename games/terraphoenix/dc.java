@@ -26,7 +26,7 @@ final class dc {
         field_e = null;
     }
 
-    final static short[] a(int param0, short[] param1, int param2, uc param3) {
+    final static short[] a(int param0, short[] param1, int param2, BitPacketBuffer param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -43,7 +43,7 @@ final class dc {
         RuntimeException var4 = null;
         var8 = Terraphoenix.field_V;
         try {
-          var4_int = param3.a(false, param2);
+          var4_int = param3.readBits(false, param2);
           if (var4_int == 0) {
             return null;
           }
@@ -51,15 +51,15 @@ final class dc {
             var4_int != param1.length) {
             param1 = new short[var4_int];
           }
-          var5 = param3.a(false, 4);
-          var6 = (short)param3.a(false, 16);
+          var5 = param3.readBits(false, 4);
+          var6 = (short)param3.readBits(false, 16);
           if (var5 <= 0) {
             for (var7 = 0; var4_int > var7; var7++) {
               param1[var7] = (short)var6;
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {
-              param1[var7] = (short)(var6 + param3.a(false, var5));
+              param1[var7] = (short)(var6 + param3.readBits(false, var5));
             }
           }
           if (param0 == -25076) {

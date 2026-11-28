@@ -227,7 +227,7 @@ final class AccountNameAvailabilityValidator extends al {
           if (param0 != 48) {
             field_l = (String) null;
           }
-          stackIn_3_0 = ih.field_p.b("", param1, 16);
+          stackIn_3_0 = ih.field_p.getFileByName("", param1, 16);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

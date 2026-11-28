@@ -107,27 +107,27 @@ final class ak {
           return 0;
         }
         if (0 == vd.field_b) {
-          if (!MusicPatchPcmStream.field_o.c((byte) -121)) {
+          if (!MusicPatchPcmStream.field_o.ensureIndexLoaded((byte) -121)) {
             return 20;
           }
           if (!MusicPatchPcmStream.field_o.a(2, "commonui")) {
             return 40;
           }
-          if (!DelegatingCanvas.field_c.c((byte) -121)) {
+          if (!DelegatingCanvas.field_c.ensureIndexLoaded((byte) -121)) {
             return 50;
           }
           if (!DelegatingCanvas.field_c.a(2, "commonui")) {
             return 60;
           }
-          if (!AccountCreationResultPanel.field_ub.c((byte) -121)) {
+          if (!AccountCreationResultPanel.field_ub.ensureIndexLoaded((byte) -121)) {
             return 70;
           }
-          if (!AccountCreationResultPanel.field_ub.b(true)) {
+          if (!AccountCreationResultPanel.field_ub.tryLoadAllGroups(true)) {
             return 80;
           }
         } else {
           if (null != af.field_c) {
-            if (!af.field_c.c((byte) -121)) {
+            if (!af.field_c.ensureIndexLoaded((byte) -121)) {
               return 14;
             }
             if (!af.field_c.b(82, "")) {
@@ -137,22 +137,22 @@ final class ak {
               return 29;
             }
           }
-          if (!MusicPatchPcmStream.field_o.c((byte) -121)) {
+          if (!MusicPatchPcmStream.field_o.ensureIndexLoaded((byte) -121)) {
             return 43;
           }
           if (!MusicPatchPcmStream.field_o.a(2, "commonui")) {
             return 57;
           }
-          if (!DelegatingCanvas.field_c.c((byte) -121)) {
+          if (!DelegatingCanvas.field_c.ensureIndexLoaded((byte) -121)) {
             return 71;
           }
           if (!DelegatingCanvas.field_c.a(2, "commonui")) {
             return 80;
           }
-          if (!AccountCreationResultPanel.field_ub.c((byte) -121)) {
+          if (!AccountCreationResultPanel.field_ub.ensureIndexLoaded((byte) -121)) {
             return 82;
           }
-          if (!AccountCreationResultPanel.field_ub.b(param0)) {
+          if (!AccountCreationResultPanel.field_ub.tryLoadAllGroups(param0)) {
             return 86;
           }
         }

@@ -224,12 +224,12 @@ final class oc extends hn {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param4.a(127, param2);
+          var5_int = param4.getGroupIdByName(127, param2);
           if (param1 != 125) {
             stackIn_2_0 = (ih) null;
             return stackIn_2_0;
           }
-          var6 = param4.a(param3, var5_int, -103);
+          var6 = param4.getFileIdByName(param3, var5_int, -103);
           stackIn_4_0 = pk.a(var6, param4, (byte) 82, var5_int, param0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

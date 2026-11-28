@@ -80,7 +80,7 @@ final class ae extends RenderEffect {
         }
     }
 
-    final static byte a(char param0, int param1) {
+    final static byte encodeCp1252Character(char param0, int param1) {
         int var2;
         int var3;
         if (param0 <= 0) {
@@ -351,7 +351,7 @@ final class ae extends RenderEffect {
           int var14 = AceOfSkies.obfuscationControl ? 1 : 0;
           try {
             if (param2) {
-              ae.a('￫', 105);
+              ae.encodeCp1252Character('￫', 105);
             }
             bb var18 = new bb();
             var18.field_g = param1.readUnsignedByte(99);

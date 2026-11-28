@@ -9,7 +9,7 @@ final class GzipDecompressor {
     static int field_e;
     private java.util.zip.Inflater field_d;
     static int[][] field_f;
-    static sh field_a;
+    static ResourceArchive field_a;
 
     public static void clearStaticReferences(int param0) {
         field_a = null;

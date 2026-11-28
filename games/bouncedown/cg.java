@@ -19,7 +19,7 @@ final class cg {
         }
     }
 
-    final static void a(byte param0, gk param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2609_0;
             StringBuilder stackIn_2609_1;
@@ -30,9 +30,9 @@ final class cg {
             int var3;
             int var4;
             byte param0;
-            gk param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(byte initialParam0, gk initialParam1) {
+            $CfrPartitionedBody(byte initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2609_0 = null;
@@ -1398,7 +1398,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 107, "create_createanaccount");
                 if (null != var2) {
-                  gk.field_m = c.a(0, var2);
+                  ResourceArchive.field_m = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 117, "create_username");
                 if (null != var2) {
@@ -2528,7 +2528,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 105, "keychar_the_character_under_questionmark");
                 if (var2 != null) {
-                  pb.a(var2[0], (byte) 111);
+                  pb.decodeCp1252Byte(var2[0], (byte) 111);
                 }
                 var2 = hg.a((byte) 85, "rating_noratings");
                 if (null != var2) {

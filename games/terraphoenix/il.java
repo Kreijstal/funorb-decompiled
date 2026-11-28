@@ -62,8 +62,8 @@ final class il {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.c(param3, param1);
-          var5 = param2.a(-117, var4_int, param0);
+          var4_int = param2.getGroupIdByName(param3, param1);
+          var5 = param2.getFileIdByName(-117, var4_int, param0);
           stackIn_1_0 = hl.a(param2, var5, (byte) -90, var4_int);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -203,7 +203,7 @@ final class il {
             var3 = (Archive) null;
             il.a((String) null, (String) null, (Archive) null, -14);
           }
-          stackIn_3_0 = DirectByteStorage.field_i.a("", param1, -21653);
+          stackIn_3_0 = DirectByteStorage.field_i.getFileByName("", param1, -21653);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

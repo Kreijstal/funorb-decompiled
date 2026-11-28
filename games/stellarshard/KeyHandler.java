@@ -69,7 +69,7 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
-              wa.a((char) var2_int, (byte) -79)) {
+              wa.isSupportedCp1252KeyCharacter((char) var2_int, (byte) -79)) {
               var3 = 127 & 1 + l.field_h;
               if (var3 != di.field_a) {
                 sf.field_d[l.field_h] = -1;

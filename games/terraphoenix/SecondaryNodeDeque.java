@@ -97,7 +97,7 @@ final class SecondaryNodeDeque implements Iterable {
         }
     }
 
-    final static String a(byte param0, byte[] param1, int param2, int param3) {
+    final static String decodeCp1252String(byte param0, byte[] param1, int param2, int param3) {
         int var6 = 0;
         int incrementValue$0 = 0;
         char[] var4 = null;

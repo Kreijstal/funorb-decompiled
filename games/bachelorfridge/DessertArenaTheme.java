@@ -126,7 +126,7 @@ final class DessertArenaTheme extends ArenaTheme {
         }
     }
 
-    DessertArenaTheme(vr param0) {
+    DessertArenaTheme(ResourceArchive param0) {
         try {
           this.field_b = RageSpecial.a(29611, "basic", "tiles_dessert", param0);
           this.b((byte) -117);

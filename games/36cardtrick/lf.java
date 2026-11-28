@@ -42,13 +42,13 @@ final class lf {
         field_d = null;
     }
 
-    final static qk a(boolean param0, boolean param1, int param2, int param3, byte param4, boolean param5) {
+    final static ResourceArchive a(boolean param0, boolean param1, int param2, int param3, byte param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           uc var8 = null;
           PacketBuffer var9 = null;
-          qk stackIn_15_0 = null;
+          ResourceArchive stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param4 != -70) {
@@ -76,7 +76,7 @@ final class lf {
             if (param1) {
               var8.a(param4 ^ 25408);
             }
-            stackIn_15_0 = new qk(var8, param0, param2);
+            stackIn_15_0 = new ResourceArchive(var8, param0, param2);
             return stackIn_15_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

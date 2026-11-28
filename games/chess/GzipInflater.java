@@ -14,8 +14,8 @@ final class GzipInflater {
     static dd[] field_c;
 
     final static void b(int param0, int param1) {
-        nk var2 = qn.field_U;
-        var2.f(param1, param0 + 6324);
+        BitPacketBuffer var2 = qn.field_U;
+        var2.writeCipheredByte(param1, param0 + 6324);
         var2.writeByte(2, (byte) 107);
         if (param0 == -6446) {
           var2.writeByte(4, (byte) -71);

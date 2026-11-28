@@ -7,7 +7,7 @@ final class di {
     static String field_d;
     static AccountRequestState field_a;
 
-    final static boolean a(ad param0, ad param1, ad param2, byte param3) {
+    final static boolean a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, byte param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -18,18 +18,18 @@ final class di {
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0.a(92)) {
+          if (!param0.ensureIndexLoaded(92)) {
             return false;
           }
           if (!param0.a(0, "commonui")) {
             return false;
           }
-          if (param1.a(-33) &&
+          if (param1.ensureIndexLoaded(-33) &&
             param1.a(0, "commonui")) {
             if (param3 < 100) {
               return true;
             }
-            if (param2.a(-82) &&
+            if (param2.ensureIndexLoaded(-82) &&
               param2.a(0, "button.gif")) {
               return true;
             }

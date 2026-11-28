@@ -8,7 +8,7 @@ final class sh extends mh {
     static qi field_i;
     static int[] field_l;
     static PcmStreamMixer field_e;
-    static qk field_g;
+    static ResourceArchive field_g;
     static String field_h;
 
     public static void clearStaticReferences(int param0) {
@@ -21,7 +21,7 @@ final class sh extends mh {
         field_h = null;
         field_e = null;
         if (param0 != 4352) {
-          field_g = (qk) null;
+          field_g = (ResourceArchive) null;
         }
     }
 

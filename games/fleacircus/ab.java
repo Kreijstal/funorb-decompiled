@@ -18,7 +18,7 @@ final class ab {
           if (param0 != 0) {
             ab.clearStaticReferences(125);
           }
-          stackIn_3_0 = pg.a(param1.length, 0, param1, param0 + 0);
+          stackIn_3_0 = pg.decodeCp1252String(param1.length, 0, param1, param0 + 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

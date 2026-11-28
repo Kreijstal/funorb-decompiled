@@ -90,7 +90,7 @@ abstract class ne {
             return stackIn_3_0;
           }
           for (var4 = 0; var2_int > var4; var4++) {
-            var3 = ma.a(-128, param1.charAt(var4)) - var3 + (var3 << 5);
+            var3 = ma.encodeCp1252Character(-128, param1.charAt(var4)) - var3 + (var3 << 5);
           }
           stackIn_8_0 = var3;
           return stackIn_8_0;

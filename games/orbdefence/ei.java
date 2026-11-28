@@ -13,7 +13,7 @@ final class ei {
         }
     }
 
-    final static qg[] a(byte param0, int param1, int param2, ki param3) {
+    final static qg[] a(byte param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         qg[] stackIn_5_0 = null;
@@ -54,7 +54,7 @@ final class ei {
         Object var2 = null;
         int var3 = 0;
         int var4 = 0;
-        ki var5 = null;
+        ResourceArchive var5 = null;
         int var6 = 0;
         RgbSprite var7 = null;
         RgbSprite var8 = null;
@@ -71,8 +71,8 @@ final class ei {
             return;
           }
           if (param0 != -463) {
-            var5 = (ki) null;
-            ei.a((byte) 4, -62, 74, (ki) null);
+            var5 = (ResourceArchive) null;
+            ei.a((byte) 4, -62, 74, (ResourceArchive) null);
           }
           var7 = dm.field_b[kb.field_m];
           if (var7 != null) {

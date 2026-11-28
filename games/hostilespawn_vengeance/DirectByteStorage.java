@@ -29,7 +29,7 @@ final class DirectByteStorage extends ByteStorage {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param1.a(-15879)) {
+          if (!param1.ensureIndexLoaded(-15879)) {
             stackIn_3_0 = (String) (param2);
             return stackIn_3_0;
           }

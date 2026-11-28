@@ -10,7 +10,7 @@ abstract class cga extends DualLinkNode {
 
     abstract byte[] d(byte param0);
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isSupportedCp1252KeyCharacter(int param0, char param1) {
         int var3 = 0;
         char[] var2 = null;
         RuntimeException var2_ref = null;

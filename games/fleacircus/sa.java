@@ -22,7 +22,7 @@ final class sa {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0.b((byte) -115)) {
+          if (!param0.ensureIndexLoaded((byte) -115)) {
             stackIn_3_0 = (String) (param2);
             return stackIn_3_0;
           }
@@ -30,7 +30,7 @@ final class sa {
             var6 = (String) null;
             sa.a((ResourceArchive) null, (String) null, (String) null, (String) null, (byte) 95);
           }
-          stackIn_7_0 = param3 + " - " + param0.a(param4 - 164, param1) + "%";
+          stackIn_7_0 = param3 + " - " + param0.getGroupLoadPercentByName(param4 - 164, param1) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

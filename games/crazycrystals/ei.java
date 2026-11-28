@@ -236,7 +236,7 @@ final class ei extends om {
         SecondaryNodeDeque.field_c = 0;
         em.field_i = -2147483648;
         uo.field_m = -2147483648;
-        db.field_i = 2147483647;
+        ResourceArchive.field_i = 2147483647;
     }
 
     public static void clearStaticReferences(byte param0) {

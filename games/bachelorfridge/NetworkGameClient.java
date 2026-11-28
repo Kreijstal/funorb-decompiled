@@ -282,11 +282,11 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (SuperSpeedAllEvent.field_r == 2) {
           if (lh.field_s != null &&
-            lh.field_s.a(0)) {
-            if (!lh.field_s.b("", false)) {
+            lh.field_s.ensureIndexLoaded(0)) {
+            if (!lh.field_s.hasGroupName("", false)) {
               lh.field_s = null;
             } else {
-              if (lh.field_s.a("", 20637)) {
+              if (lh.field_s.tryLoadGroupByName("", 20637)) {
                 StickyEvent.a(false, lh.field_s);
                 lh.field_s = null;
                 mia.b(32);
@@ -335,8 +335,8 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         boolean decompiledFrameRemainder0 = true;
         if (SuperSpeedAllEvent.field_r == 11) {
-          if (nha.field_c != null && (!nha.field_c.a(0) ||
-            !nha.field_c.b((byte) 99))) {
+          if (nha.field_c != null && (!nha.field_c.ensureIndexLoaded(0) ||
+            !nha.field_c.tryLoadAllGroups((byte) 99))) {
             dea.a(MassPoisonEvent.a(nha.field_c, (byte) -57, OneAnimation.field_G, rj.field_q), 0.0f, 120);
             decompiledFrameRemainder0 = false;
           }
@@ -612,7 +612,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   var10 = (String) null;
                   EventAnimation.a(-1, (String) null);
                 } else {
-                  var8 = gt.a(0, var7.payload, (byte) 104, var7.position);
+                  var8 = gt.decodeCp1252String(0, var7.payload, (byte) 104, var7.position);
                   EventAnimation.a(-1, var8);
                 }
                 lf.field_d = null;
@@ -670,7 +670,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             HomingMissileEvent.c(-60, 6);
           }
           if (cl.field_p[6]) {
-            vr.a((byte) 75, 7);
+            ResourceArchive.resendLeaderboardRequests((byte) 75, 7);
           }
           if (cl.field_p[8]) {
             OneEvent.c(true);

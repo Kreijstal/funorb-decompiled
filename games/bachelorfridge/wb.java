@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wb extends lw {
-    static vr field_l;
+    static ResourceArchive field_l;
 
     final static boolean a(int param0, int param1, boolean param2, int param3) {
         if (null != NetworkGameClient.field_u &&
@@ -28,7 +28,7 @@ final class wb extends lw {
     public static void releaseStatics(int param0) {
         field_l = null;
         if (param0 != 10046) {
-          field_l = (vr) null;
+          field_l = (ResourceArchive) null;
         }
     }
 
@@ -250,7 +250,7 @@ final class wb extends lw {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 52) {
-            field_l = (vr) null;
+            field_l = (ResourceArchive) null;
           }
           var3 = (CharSequence) ((Object) param1);
           stackIn_3_0 = JaggrabDownloader.field_a.equals(HomingMissileSpecial.a(param0 ^ 52, var3));
@@ -314,7 +314,7 @@ final class wb extends lw {
     }
 
     final void a(byte param0) {
-        int var2 = (int)((-Math.cos((double)(vr.field_b * 4) * 3.141592653589793 / 200.0) + 1.0) * 32.0);
+        int var2 = (int)((-Math.cos((double)(ResourceArchive.field_b * 4) * 3.141592653589793 / 200.0) + 1.0) * 32.0);
         if (0 == (this.field_e & 2)) {
           wa.field_n.a(520, 12, var2);
         }

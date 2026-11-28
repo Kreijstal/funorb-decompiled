@@ -148,7 +148,7 @@ final class dn {
           if (!tj.a(param1, param0, param3, (byte) 83)) {
             return null;
           }
-          stackIn_6_0 = DelegatingCanvas.a(param4.a(param1, param0, 5847), 127);
+          stackIn_6_0 = DelegatingCanvas.a(param4.getFile(param1, param0, 5847), 127);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -171,8 +171,8 @@ final class dn {
     }
 
     final static void a(byte param0, int param1) {
-        nk var2 = qn.field_U;
-        var2.f(param1, -85);
+        BitPacketBuffer var2 = qn.field_U;
+        var2.writeCipheredByte(param1, -85);
         var2.writeByte(1, (byte) -73);
         var2.writeByte(3, (byte) 124);
         if (param0 <= 10) {

@@ -3,7 +3,7 @@
  */
 final class li {
     static byte[][] field_a;
-    static ue field_b;
+    static ResourceArchive field_b;
 
     final static void a(Sprite param0, byte param1) {
         int var7 = 0;
@@ -91,7 +91,7 @@ final class li {
             param1.field_q != 8 &&
             param1.field_q != 9) {
             if (param0 >= -110) {
-              field_b = (ue) null;
+              field_b = (ResourceArchive) null;
             }
             if (param1.field_q != 22) {
               kh.field_y.addLast(63, param1);
@@ -112,10 +112,10 @@ final class li {
               }
               break;
             }
-            ia.a(param1, var2, (byte) 57);
+            BitPacketBuffer.insertNodeBefore(param1, var2, (byte) 57);
             return;
           }
-          ia.a(param1, FrameTimer.field_e, (byte) 57);
+          BitPacketBuffer.insertNodeBefore(param1, FrameTimer.field_e, (byte) 57);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

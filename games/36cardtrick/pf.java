@@ -67,7 +67,7 @@ final class pf extends IntrusiveNode {
         throw new Error();
     }
 
-    final static String a(qk param0, String param1, String param2, boolean param3) {
+    final static String a(ResourceArchive param0, String param1, String param2, boolean param3) {
         RuntimeException var4 = null;
         String stackIn_4_0 = null;
         String stackIn_6_0 = null;
@@ -83,7 +83,7 @@ final class pf extends IntrusiveNode {
           if (!param3) {
             pf.a(3);
           }
-          if (param0.b(4)) {
+          if (param0.ensureIndexLoaded(4)) {
             stackIn_6_0 = param2 + " - " + param0.a(2) + "%";
             return stackIn_6_0;
           }

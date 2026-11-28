@@ -143,7 +143,7 @@ final class tb {
             }
             var4 = new byte[var3_int];
             param1.position = param1.position + hc.field_t.a(param1.position, var4, 0, param1.payload, var3_int, false);
-            var5 = kh.a(var4, var3_int, 0, 0);
+            var5 = kh.decodeCp1252String(var4, var3_int, 0, 0);
             stackIn_6_0 = var5;
             return stackIn_6_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

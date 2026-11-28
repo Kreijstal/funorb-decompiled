@@ -101,8 +101,8 @@ final class ff {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            te.field_N = new jd(param11);
-            id.field_c = new jd(param7);
+            te.field_N = new BitPacketBuffer(param11);
+            id.field_c = new BitPacketBuffer(param7);
             cl.field_m = param9;
             b.field_b = param2;
             lc.field_l = param8;

@@ -230,7 +230,7 @@ final class dl {
         }
     }
 
-    final static void a(int param0, ad param1) {
+    final static void a(int param0, ResourceArchive param1) {
         Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -238,7 +238,7 @@ final class dl {
           if (param0 != 11405) {
             field_b = false;
           }
-          var2 = new Sprite(param1.a("", "final_frame.jpg", 25), (java.awt.Component) ((Object) ie.field_e));
+          var2 = new Sprite(param1.getFileByName("", "final_frame.jpg", 25), (java.awt.Component) ((Object) ie.field_e));
           var3 = var2.field_k;
           var4 = var2.field_j;
           vf.a((byte) 127);

@@ -35,11 +35,11 @@ final class gw {
         return true;
     }
 
-    final static Sprite[] a(String param0, String param1, vr param2, int param3) {
+    final static Sprite[] a(String param0, String param1, ResourceArchive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        vr var6 = null;
+        ResourceArchive var6 = null;
         Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -50,12 +50,12 @@ final class gw {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.a(param0, false);
+          var4_int = param2.getGroupId(param0, false);
           if (param3 > -31) {
-            var6 = (vr) null;
-            gw.a((String) null, (String) null, (vr) null, 110);
+            var6 = (ResourceArchive) null;
+            gw.a((String) null, (String) null, (ResourceArchive) null, 110);
           }
-          var5 = param2.a((byte) 6, var4_int, param1);
+          var5 = param2.getFileId((byte) 6, var4_int, param1);
           stackIn_3_0 = DisableAnimation.a(var4_int, param2, -116, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

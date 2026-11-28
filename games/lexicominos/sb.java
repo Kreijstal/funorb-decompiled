@@ -43,8 +43,8 @@ final class sb {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            ig.field_a = new th(param8);
-            SpriteGeometry.field_q = new th(param11);
+            ig.field_a = new BitPacketBuffer(param8);
+            SpriteGeometry.field_q = new BitPacketBuffer(param11);
             bk.field_a = param12;
             GameAppletShell.field_c = param4;
             ua.field_a = param5;

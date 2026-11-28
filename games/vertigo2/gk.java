@@ -21,12 +21,12 @@ final class gk {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.a((byte) 114, param1);
+          var4_int = param0.getGroupIdByName((byte) 114, param1);
           if (!param3) {
             stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
-          var5 = param0.a(var4_int, param2, 106);
+          var5 = param0.getFileIdByName(var4_int, param2, 106);
           stackIn_4_0 = NanoFrameTimer.a(var5, var4_int, param0, 13416);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

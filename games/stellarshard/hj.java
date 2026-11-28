@@ -34,8 +34,8 @@ final class hj {
         }
     }
 
-    final static void a(pf param0, int param1) {
-        ad.a(param0.a("headers.packvorbis", "", (byte) -12));
+    final static void a(ResourceArchive param0, int param1) {
+        ad.a(param0.getFileByName("headers.packvorbis", "", (byte) -12));
         ad var2 = ad.a(param0, "jagex logo2.packvorbis", "");
         if (param1 != 23987) {
           return;

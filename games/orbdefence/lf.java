@@ -6,7 +6,7 @@ final class lf {
     static String field_c;
     static int field_d;
     static IntrusiveDeque field_b;
-    static ki field_a;
+    static ResourceArchive field_a;
 
     public static void clearStaticReferences(int param0) {
         field_a = null;

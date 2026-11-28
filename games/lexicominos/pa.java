@@ -42,7 +42,7 @@ final class pa {
         int fieldTemp$0 = 0;
         int stackIn_11_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        th var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         Object var3 = null;

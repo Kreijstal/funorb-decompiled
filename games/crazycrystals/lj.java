@@ -5,7 +5,7 @@ final class lj {
     static int field_b;
     static String field_a;
 
-    final static dh a(db param0, String param1, db param2, String param3, int param4) {
+    final static dh a(ResourceArchive param0, String param1, ResourceArchive param2, String param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -26,8 +26,8 @@ final class lj {
             var7 = (we) null;
             lj.a(96, (we) null, -65);
           }
-          var5_int = param0.a(param1, param4 ^ -17154);
-          var6 = param0.a(-2862, param3, var5_int);
+          var5_int = param0.getGroupIdByName(param1, param4 ^ -17154);
+          var6 = param0.getFileIdByName(-2862, param3, var5_int);
           stackIn_3_0 = ve.a(103, param0, var6, param2, var5_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

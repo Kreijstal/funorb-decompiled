@@ -140,7 +140,7 @@ final class aca extends TileEffect {
         }
     }
 
-    final static byte a(char param0, int param1) {
+    final static byte encodeCp1252Character(char param0, int param1) {
         int var2;
         int var3;
         var3 = BachelorFridge.field_y;
@@ -674,7 +674,7 @@ final class aca extends TileEffect {
                 if (param1 == 8220) {
                   return (byte) var2;
                 }
-                aca.a('ﾵ', 108);
+                aca.encodeCp1252Character('ﾵ', 108);
                 return (byte) var2;
               }
             }
@@ -684,7 +684,7 @@ final class aca extends TileEffect {
         if (param1 == 8220) {
           return (byte) var2;
         }
-        aca.a('ﾵ', 108);
+        aca.encodeCp1252Character('ﾵ', 108);
         return (byte) var2;
     }
 
@@ -764,7 +764,7 @@ final class aca extends TileEffect {
         if (param0 == -118) {
           return;
         }
-        aca.a('q', -54);
+        aca.encodeCp1252Character('q', -54);
     }
 
     final static hs a(byte param0, int param1, int param2) {
@@ -784,7 +784,7 @@ final class aca extends TileEffect {
         if (var3 == null) {
           Object var4 = null;
           try {
-            var4_array = SpiltMilkAnimation.field_v.a((byte) 123, hk.field_h[param2], fl.field_o[param1]);
+            var4_array = SpiltMilkAnimation.field_v.getFileByName((byte) 123, hk.field_h[param2], fl.field_o[param1]);
           } catch (IllegalArgumentException illegalArgumentException) {
           }
           var3 = StampedeEvent.a(param2, (byte) -77, var4_array, param1);

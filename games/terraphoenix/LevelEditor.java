@@ -17,7 +17,7 @@ final class LevelEditor {
     private int field_m;
     int field_d;
     int field_k;
-    static uc field_j;
+    static BitPacketBuffer field_j;
 
     public static void clearStaticReferences(byte param0) {
         field_j = null;

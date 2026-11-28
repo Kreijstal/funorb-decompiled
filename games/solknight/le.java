@@ -113,7 +113,7 @@ final class le {
           je.a(false);
           return;
         }
-        jd var2 = te.field_N;
+        BitPacketBuffer var2 = te.field_N;
         var2.readInt(true);
         var2.readInt(true);
         var2.readInt(true);

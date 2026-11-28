@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pc {
-    static ci field_a;
+    static ResourceArchive field_a;
     static int field_b;
 
     final static int a(boolean param0, SessionGameApplet param1, byte param2) {
@@ -42,11 +42,11 @@ final class pc {
         if (param0 == 1) {
           return;
         }
-        ci var2 = (ci) null;
-        pc.a((String) null, (String) null, (ci) null, -89);
+        ResourceArchive var2 = (ResourceArchive) null;
+        pc.a((String) null, (String) null, (ResourceArchive) null, -89);
     }
 
-    final static Sprite a(String param0, String param1, ci param2, int param3) {
+    final static Sprite a(String param0, String param1, ResourceArchive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -62,8 +62,8 @@ final class pc {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = 60 / ((-91 - param3) / 33);
-          var4_int = param2.b(77, param0);
-          var5 = param2.a(-1, param1, var4_int);
+          var4_int = param2.getGroupIdByName(77, param0);
+          var5 = param2.getFileIdByName(-1, param1, var4_int);
           stackIn_1_0 = ac.a(var4_int, var5, param2, false);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

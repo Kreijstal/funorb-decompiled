@@ -38,7 +38,7 @@ final class rc extends k {
         super(1, false);
     }
 
-    final static AntialiasedBitmapFont a(vr param0, byte param1, vr param2, String param3, String param4) {
+    final static AntialiasedBitmapFont a(ResourceArchive param0, byte param1, ResourceArchive param2, String param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -59,8 +59,8 @@ final class rc extends k {
             stackIn_2_0 = (AntialiasedBitmapFont) null;
             return stackIn_2_0;
           }
-          var5_int = param2.a(param4, false);
-          var6 = param2.a((byte) 6, var5_int, param3);
+          var5_int = param2.getGroupId(param4, false);
+          var6 = param2.getFileId((byte) 6, var5_int, param3);
           stackIn_4_0 = DualLinkDequeIterator.a(128, var6, param2, param0, var5_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

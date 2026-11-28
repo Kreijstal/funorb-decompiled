@@ -6164,29 +6164,29 @@ public final class MinerDisturbance extends ob {
           if (param0) {
             il.a(ki.field_n, (byte) -109);
           }
-          if (ei.field_Q.a((byte) 127) &&
-            ei.field_Q.b(-1)) {
-            if (pk.field_g.a((byte) 104) &&
-              pk.field_g.b(-1)) {
-              if (ge.field_e.a((byte) 88) &&
-                ge.field_e.b(-1)) {
-                if (ig.field_c.a((byte) 108) &&
-                  ig.field_c.b(-1)) {
-                  if (fl.field_f.a((byte) 84) &&
+          if (ei.field_Q.ensureIndexLoaded((byte) 127) &&
+            ei.field_Q.tryLoadAllGroups(-1)) {
+            if (pk.field_g.ensureIndexLoaded((byte) 104) &&
+              pk.field_g.tryLoadAllGroups(-1)) {
+              if (ge.field_e.ensureIndexLoaded((byte) 88) &&
+                ge.field_e.tryLoadAllGroups(-1)) {
+                if (ig.field_c.ensureIndexLoaded((byte) 108) &&
+                  ig.field_c.tryLoadAllGroups(-1)) {
+                  if (fl.field_f.ensureIndexLoaded((byte) 84) &&
                     fl.field_f.a(false, "")) {
-                    if (fl.field_f.a((byte) 96) &&
+                    if (fl.field_f.ensureIndexLoaded((byte) 96) &&
                       fl.field_f.a(false, "shop")) {
-                      if (0 >= pj.field_a && (!fl.field_f.a((byte) 86) ||
+                      if (0 >= pj.field_a && (!fl.field_f.ensureIndexLoaded((byte) 86) ||
                         !fl.field_f.a(false, "membersexpansion"))) {
                         pa.a(true, u.a(ub.field_c, fl.field_f, ul.field_d, -7157, "membersexpansion"), 29.0f);
                         return;
                       }
-                      if (ne.field_L.a((byte) 108) &&
-                        ne.field_L.b(-1)) {
-                        if (ob.field_q.a((byte) 86) &&
+                      if (ne.field_L.ensureIndexLoaded((byte) 108) &&
+                        ne.field_L.tryLoadAllGroups(-1)) {
+                        if (ob.field_q.ensureIndexLoaded((byte) 86) &&
                           ob.field_q.a(false, "basic")) {
-                          if (id.field_c.a((byte) 107) &&
-                            id.field_c.b(-1)) {
+                          if (id.field_c.ensureIndexLoaded((byte) 107) &&
+                            id.field_c.tryLoadAllGroups(-1)) {
                             pa.a(true, le.field_b, 50.0f);
                             if (!param0) {
                               return;
@@ -6213,8 +6213,8 @@ public final class MinerDisturbance extends ob {
                             }
                             pa.a(true, s.field_T, 95.0f);
                             this.b(false);
-                            var3 = new PacketBuffer(id.field_c.a("volcano.csv", 0, ""));
-                            var4 = new PacketBuffer(id.field_c.a("supervolcano.csv", 0, ""));
+                            var3 = new PacketBuffer(id.field_c.getFileByName("volcano.csv", 0, ""));
+                            var4 = new PacketBuffer(id.field_c.getFileByName("supervolcano.csv", 0, ""));
                             ml.a(var4, (byte) 0, var3);
                             this.h((byte) 65);
                             BoundedRandomAccessFile.setTickRate(-122, 50);
@@ -6265,7 +6265,7 @@ public final class MinerDisturbance extends ob {
                 pa.a(true, u.a(gm.field_c, ig.field_c, w.field_X, -7157, ""), 16.0f);
                 return;
               }
-              if (ge.field_e.a((byte) 112)) {
+              if (ge.field_e.ensureIndexLoaded((byte) 112)) {
                 var3_ref = gm.field_c;
                 if (var5 != 0) {
                   var3_ref = w.field_X;

@@ -3,7 +3,7 @@
  */
 final class AchievementUnlockEvent extends IntrusiveNode {
     static int field_j;
-    static ci field_g;
+    static ResourceArchive field_g;
     static int field_k;
     static int field_h;
     int field_i;

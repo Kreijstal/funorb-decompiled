@@ -493,7 +493,7 @@ final class BoardView {
         int var8Lifetime2;
         int var8Lifetime3;
         int var8Lifetime4;
-        param0 = param0 * (160 + (via.a(vr.field_b << 7, (byte) 58) >> 11));
+        param0 = param0 * (160 + (via.a(ResourceArchive.field_b << 7, (byte) 58) >> 11));
         param0 = param0 >> 8;
         for (var7 = param3; var7 < param2; var7++) {
           for (var8 = param1; var8 < param4; var8++) {
@@ -1019,7 +1019,7 @@ final class BoardView {
           var9 = param1.field_f;
           var10 = param1.e((byte) -121);
           if (0.0f != var10) {
-            var11 = (int)((float)(via.a(50 * vr.field_b, (byte) 104) + 65536) * var10);
+            var11 = (int)((float)(via.a(50 * ResourceArchive.field_b, (byte) 104) + 65536) * var10);
             var5 = var5 - (int)(var10 * 30.0f);
             var6 = var6 - (var11 * 6 >> 16);
             var7 = var7 - (var11 * 4 >> 16);
@@ -2593,7 +2593,7 @@ final class BoardView {
         try {
           this.field_i = param0;
           this.field_I = this.field_i.field_h.tiles;
-          this.field_k = MovementAnimation.a(0, (vr) null, this.field_i.field_h.field_E);
+          this.field_k = MovementAnimation.a(0, (ResourceArchive) null, this.field_i.field_h.field_E);
           hga.field_U.a((byte) 127);
           this.field_z = this.field_i.field_h.height;
           this.field_a = this.field_i.field_h.width;

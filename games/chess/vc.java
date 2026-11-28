@@ -14,7 +14,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
             var2_int = param0.getKeyChar();
             if (0 != var2_int &&
               var2_int != 65535 &&
-              s.a((char) var2_int, 0)) {
+              s.isSupportedCp1252KeyCharacter((char) var2_int, 0)) {
               var3 = 127 & ce.field_e + 1;
               if (ph.field_h != var3) {
                 ag.field_a[ce.field_e] = -1;

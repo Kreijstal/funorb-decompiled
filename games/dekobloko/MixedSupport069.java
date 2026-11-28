@@ -81,7 +81,7 @@ final class MixedSupport069 {
             if (integerArgument4 >= 0 &&
               integerArgument4 <= this.integerState0381) {
               if (byteArgument1 != 43) {
-                MixedSupport069.computeBoolean0899(')', -33);
+                MixedSupport069.isAcceptedTextInputCharacter(')', -33);
               }
               integerLocal3 = this.computeBoolean0904(true, (byte) -108, integerArgument3, integerArgument4, byteArrayArgument2) ? 1 : 0;
               if (integerLocal3 == 0) {
@@ -304,7 +304,7 @@ final class MixedSupport069 {
         }
     }
 
-    final static boolean computeBoolean0899(char characterArgument1, int integerArgument2) {
+    final static boolean isAcceptedTextInputCharacter(char characterArgument1, int integerArgument2) {
         if (characterArgument1 >= 32 &&
           characterArgument1 <= 126) {
           return true;

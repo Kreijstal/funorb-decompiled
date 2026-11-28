@@ -9,7 +9,7 @@ final class wa {
     static String[] field_e;
     private int field_c;
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean isSupportedCp1252KeyCharacter(char param0, byte param1) {
         int var3 = 0;
         char[] var2 = null;
         int var2_int = 0;
@@ -58,7 +58,7 @@ final class wa {
         field_e = null;
         field_b = null;
         if (param0 != 0) {
-          wa.a('\n', (byte) 2);
+          wa.isSupportedCp1252KeyCharacter('\n', (byte) 2);
         }
     }
 

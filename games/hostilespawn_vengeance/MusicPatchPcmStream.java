@@ -2716,7 +2716,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("keychar_the_character_under_questionmark", 24);
                 if (var2 != null) {
-                  HostileSpawn.a(3, var2[0]);
+                  HostileSpawn.decodeCp1252Byte(3, var2[0]);
                 }
                 var2 = vj.a("rating_noratings", 24);
                 if (null != var2) {

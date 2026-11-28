@@ -4,7 +4,7 @@
 final class fga extends TileEffect {
     static int field_f;
     private vca field_g;
-    static vr field_h;
+    static ResourceArchive field_h;
 
     final void a(int param0, boolean param1, int param2) {
         if (!param1) {

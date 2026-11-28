@@ -5,7 +5,7 @@ final class ri {
     static ed[] field_c;
     static String field_d;
     static IntrusiveDeque field_b;
-    static ad field_a;
+    static ResourceArchive field_a;
 
     final static ai a(ai param0, boolean param1, int[] param2) {
         ai var3 = null;
@@ -19,7 +19,7 @@ final class ri {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            field_a = (ad) null;
+            field_a = (ResourceArchive) null;
           }
           var3 = new ai(0, 0, 0);
           var3.field_d = param0.field_d;
@@ -245,7 +245,7 @@ final class ri {
         }
     }
 
-    final static void a(ad param0, int param1, ad param2, ad param3) {
+    final static void a(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3) {
         String[] var8 = null;
         int var5 = 0;
         PcmSample var6 = null;
@@ -284,8 +284,8 @@ final class ri {
         field_d = null;
         field_c = null;
         if (param0 != -66) {
-          ad var2 = (ad) null;
-          ri.a((ad) null, 38, (ad) null, (ad) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          ri.a((ResourceArchive) null, 38, (ResourceArchive) null, (ResourceArchive) null);
         }
         field_a = null;
     }

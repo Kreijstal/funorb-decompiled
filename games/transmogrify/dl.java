@@ -34,7 +34,7 @@ abstract class dl extends DualLinkNode {
         }
     }
 
-    final static void a(ci param0, byte param1) {
+    final static void a(ResourceArchive param0, byte param1) {
         RuntimeException stackIn_249_0 = null;
         StringBuilder stackIn_249_1 = null;
         String stackIn_250_2 = null;

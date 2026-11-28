@@ -57,7 +57,7 @@ final class cf extends IntrusiveNode {
         }
     }
 
-    final static void a(ci param0, ci param1, ci param2, boolean param3, byte param4) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, boolean param3, byte param4) {
         dl.field_l = bh.a(-70, "");
         if (param4 < 93) {
           return;

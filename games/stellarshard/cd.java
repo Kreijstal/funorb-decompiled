@@ -482,30 +482,30 @@ final class cd extends rg {
           return IntrusiveDequeCursor.field_d;
         }
         if (null != pg.field_db) {
-          if (!pg.field_db.a((byte) -36)) {
+          if (!pg.field_db.ensureIndexLoaded((byte) -36)) {
             return rg.field_I;
           }
           return kf.field_d;
         }
-        if (!lk.field_i.a((byte) -36)) {
+        if (!lk.field_i.ensureIndexLoaded((byte) -36)) {
           return lg.field_e;
         }
         if (!lk.field_i.a("commonui", (byte) -109)) {
-          return am.field_e + " - " + lk.field_i.b(0, "commonui") + "%";
+          return am.field_e + " - " + lk.field_i.getGroupLoadPercentByName(0, "commonui") + "%";
         }
-        if (!wf.field_e.a((byte) -36)) {
+        if (!wf.field_e.ensureIndexLoaded((byte) -36)) {
           return mb.field_c;
         }
         if (param0 != -1064120735) {
           field_L = (qd) null;
         }
         if (!wf.field_e.a("commonui", (byte) -109)) {
-          return le.field_l + " - " + wf.field_e.b(0, "commonui") + "%";
+          return le.field_l + " - " + wf.field_e.getGroupLoadPercentByName(0, "commonui") + "%";
         }
-        if (!am.field_g.a((byte) -36)) {
+        if (!am.field_g.ensureIndexLoaded((byte) -36)) {
           return ve.field_b;
         }
-        if (!am.field_g.c((byte) -111)) {
+        if (!am.field_g.tryLoadAllGroups((byte) -111)) {
           return lj.field_B + " - " + am.field_g.b((byte) 1) + "%";
         }
         return wl.field_W;

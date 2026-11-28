@@ -14,7 +14,7 @@ final class MidiPcmStream extends PcmStream {
     private int[] field_N;
     private uk field_u;
     private oe field_w;
-    static gk field_D;
+    static ResourceArchive field_D;
     private int field_I;
     private int[] field_B;
     int[] field_K;
@@ -118,7 +118,7 @@ final class MidiPcmStream extends PcmStream {
             nk.field_a.a(true);
           }
           if (param2 >= -1) {
-            field_D = (gk) null;
+            field_D = (ResourceArchive) null;
           }
           vk.field_c = new ci(param1, param0, false, true, true);
           ed.field_c.a(10768, vk.field_c);
@@ -1204,7 +1204,7 @@ final class MidiPcmStream extends PcmStream {
     private final void a(int param0, byte param1, int param2) {
         this.field_y[param0] = param2;
         if (param1 < 100) {
-          field_D = (gk) null;
+          field_D = (ResourceArchive) null;
         }
     }
 
@@ -1372,7 +1372,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean a(byte param0, i param1, gk param2, be param3, int param4) {
+    final synchronized boolean a(byte param0, i param1, ResourceArchive param2, be param3, int param4) {
         int stackIn_21_0 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;

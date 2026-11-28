@@ -87,7 +87,7 @@ class jla {
         var4 = 570;
         var5 = 20 + var3 * g.field_g.field_u;
         vw.field_a[2].field_b[102].a(-(vw.field_a[0].field_b[0].field_d / 2) + var4, 16 + var5);
-        var6 = vr.field_b;
+        var6 = ResourceArchive.field_b;
         var7 = (int)(Math.sin(0.5 * ((double)((var5 * var4 << 2) + var6) / 40.0)) * 30.0);
         var8 = (int)(Math.cos((double)(var6 + (var4 * var5 << 2)) / 40.0 * 0.5) * 15.0);
         var3 += 7;
@@ -432,7 +432,7 @@ class jla {
         var3++;
         var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_s[3], 25, 40 + var3 * g.field_g.field_u, var2, 430, 3518976, -1, 0, 0, g.field_g.field_u);
         var3++;
-        var4 = vr.field_b % (wl.field_yb[0].length * 4);
+        var4 = ResourceArchive.field_b % (wl.field_yb[0].length * 4);
         wl.field_yb[2][var4 / 4].draw(25, 40 + g.field_g.field_u * var3);
         g.field_g.drawText(EventAnimation.field_s[4], wl.field_yb[0][0].field_q + 35, wl.field_yb[0][0].field_p / 2 + g.field_g.field_u * var3 + (40 + g.field_g.field_u / 4), 3518976, -1);
         var3 += 3;
@@ -991,11 +991,11 @@ class jla {
                 break regionExit2;
               }
               if (this.field_e.b(param0 ^ -38) &&
-                LevitateEvent.field_q >= vr.field_b) {
+                LevitateEvent.field_q >= ResourceArchive.field_b) {
                 break regionExit2;
               }
               ol.a(AirstrikeSpecial.field_r[0], true);
-              LevitateEvent.field_q = 20 + vr.field_b;
+              LevitateEvent.field_q = 20 + ResourceArchive.field_b;
               if (var9 == 0) {
                 break regionExit2;
               }
@@ -2022,7 +2022,7 @@ class jla {
           var3 = this.field_e.field_g;
         }
         this.field_e.a(param0, 115, this.a(false, mk.field_p, gd.field_m), var3);
-        LevitateEvent.field_q = vr.field_b;
+        LevitateEvent.field_q = ResourceArchive.field_b;
         if (param1 != 32) {
           this.a((byte) -76);
         }

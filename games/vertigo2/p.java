@@ -83,7 +83,7 @@ final class p {
         }
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isAcceptedTextInputCharacter(int param0, char param1) {
         if (param0 == 376) {
           if (param1 >= 32 &&
             126 >= param1) {

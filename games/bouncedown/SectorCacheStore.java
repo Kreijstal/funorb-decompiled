@@ -411,7 +411,7 @@ final class SectorCacheStore {
         field_g = null;
     }
 
-    final static RgbSprite[] a(gk param0, String param1, byte param2, String param3) {
+    final static RgbSprite[] a(ResourceArchive param0, String param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -427,8 +427,8 @@ final class SectorCacheStore {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = 122 % ((param2 - 59) / 46);
-          var4_int = param0.a(param1, false);
-          var5 = param0.a(var4_int, param3, 95);
+          var4_int = param0.getGroupIdByName(param1, false);
+          var5 = param0.getFileIdByName(var4_int, param3, 95);
           stackIn_1_0 = MouseWheelInput.a(var4_int, var5, param0, false);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

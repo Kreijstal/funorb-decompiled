@@ -5,9 +5,9 @@ final class hc extends ui {
     String field_jb;
     int field_hb;
     static int field_db;
-    static sh field_eb;
+    static ResourceArchive field_eb;
     static int field_fb;
-    static sh field_gb;
+    static ResourceArchive field_gb;
     static String[] field_ib;
     static String field_kb;
     String field_R;
@@ -221,7 +221,7 @@ final class hc extends ui {
         }
     }
 
-    final static PalettedBitmapFont a(byte param0, sh param1, sh param2, int param3, int param4) {
+    final static PalettedBitmapFont a(byte param0, ResourceArchive param1, ResourceArchive param2, int param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         PalettedBitmapFont stackIn_6_0 = null;
@@ -237,9 +237,9 @@ final class hc extends ui {
             return (PalettedBitmapFont) (stackIn_2_0);
           }
           if (param0 < 97) {
-            field_eb = (sh) null;
+            field_eb = (ResourceArchive) null;
           }
-          stackIn_6_0 = fl.a(param2.a(param4, -27493, param3), (byte) -116);
+          stackIn_6_0 = fl.a(param2.getFile(param4, -27493, param3), (byte) -116);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -263,7 +263,7 @@ final class hc extends ui {
 
     final static int f(int param0) {
         if (param0 != -1980) {
-          field_eb = (sh) null;
+          field_eb = (ResourceArchive) null;
         }
         return gd.field_o - me.field_v;
     }
@@ -271,7 +271,7 @@ final class hc extends ui {
     public static void releaseDeclaredStaticReferences(int param0) {
         field_ib = null;
         if (param0 != -1) {
-          field_gb = (sh) null;
+          field_gb = (ResourceArchive) null;
         }
         field_eb = null;
         field_gb = null;

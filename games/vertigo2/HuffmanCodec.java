@@ -329,7 +329,7 @@ final class HuffmanCodec {
         field_i = null;
     }
 
-    final static byte a(char param0, byte param1) {
+    final static byte encodeCp1252Character(char param0, byte param1) {
         int var2;
         int var3;
         String var4;

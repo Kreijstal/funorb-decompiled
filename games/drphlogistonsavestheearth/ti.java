@@ -13,12 +13,12 @@ final class ti {
           Throwable var2 = null;
           RuntimeException var2_ref = null;
           String var3 = null;
-          lh var4 = null;
+          BitPacketBuffer var4 = null;
           java.net.URL var5 = null;
           try {
             if (param0 != -101) {
-              var4 = (lh) null;
-              ti.a((lh) null, false);
+              var4 = (BitPacketBuffer) null;
+              ti.a((BitPacketBuffer) null, false);
             }
             try {
               var5 = param1.getCodeBase();
@@ -63,7 +63,7 @@ final class ti {
         ArchiveRequest.field_w.a(-1, DelegatingCanvas.a(ob.field_g, -13412, ck.field_c), param0, -76);
     }
 
-    final static boolean a(lh param0, boolean param1) {
+    final static boolean a(BitPacketBuffer param0, boolean param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -74,7 +74,7 @@ final class ti {
           if (param1) {
             field_a = -91;
           }
-          stackIn_5_0 = (param0.e(1, (byte) 98) == 1);
+          stackIn_5_0 = (param0.readBits(1, (byte) 98) == 1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

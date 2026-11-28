@@ -69,8 +69,8 @@ final class sc {
     }
 
     final static void a(int param0, int param1) {
-        ia var2 = d.field_b;
-        var2.d((byte) 28, param1);
+        BitPacketBuffer var2 = d.field_b;
+        var2.writeCipheredByte((byte) 28, param1);
         var2.writeByte(1, -63);
         if (param0 != 32395) {
           return;

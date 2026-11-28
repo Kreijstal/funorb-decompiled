@@ -107,7 +107,7 @@ final class ji extends IntrusiveNode {
     }
 
     final static ji a(ResourceArchive param0, String param1, String param2) {
-        byte[] var3 = param0.a(param2, param1, 0);
+        byte[] var3 = param0.getFileByName(param2, param1, 0);
         if (var3 == null) {
           return null;
         }

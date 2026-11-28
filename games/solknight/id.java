@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class id {
-    static jd field_c;
+    static BitPacketBuffer field_c;
     static String field_b;
     static int field_a;
 
@@ -10,7 +10,7 @@ final class id {
         field_b = null;
         field_c = null;
         if (param0 <= 94) {
-          field_c = (jd) null;
+          field_c = (BitPacketBuffer) null;
         }
     }
 

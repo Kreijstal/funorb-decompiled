@@ -25,7 +25,7 @@ final class tg {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, jg param6, int param7) {
+    final static void rasterizeLitModelFaces(int param0, int param1, int param2, int param3, int param4, int param5, jg param6, int param7) {
         int stackIn_15_0 = 0;
         int[] stackIn_17_0 = null;
         int stackIn_18_1 = 0;
@@ -228,18 +228,18 @@ final class tg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_c = null;
         if (param0 != -100) {
           jg var2 = (jg) null;
-          tg.a(-124, 27, 6, 79, -72, -110, (jg) null, 54);
+          tg.rasterizeLitModelFaces(-124, 27, 6, 79, -72, -110, (jg) null, 54);
         }
         field_e = (byte[][]) null;
         field_d = null;
     }
 
-    final static void a(PacketBuffer param0, PacketBuffer param1, java.math.BigInteger param2, int param3, java.math.BigInteger param4) {
+    final static void appendEncryptedLoginPayload(PacketBuffer param0, PacketBuffer param1, java.math.BigInteger param2, int param3, java.math.BigInteger param4) {
         try {
           jl.a(0, param1, param0.payload, param2, param0.position, param4, 4);
           if (param3 >= -102) {

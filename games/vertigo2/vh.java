@@ -42,7 +42,7 @@ final class vh extends IntrusiveNode {
     private final static boolean a(Archive param0) {
         byte[] var1 = null;
         if (!field_M) {
-          var1 = param0.a(0, 0, (byte) -54);
+          var1 = param0.getFile(0, 0, (byte) -54);
           if (var1 == null) {
             return false;
           }
@@ -517,7 +517,7 @@ final class vh extends IntrusiveNode {
             param0.a(param2, param1, false);
             return null;
           }
-          byte[] var3 = param0.a(param1, param2, 0);
+          byte[] var3 = param0.getFileByName(param1, param2, 0);
           if (var3 == null) {
             return null;
           }
@@ -617,10 +617,10 @@ final class vh extends IntrusiveNode {
         try {
           vh var4_ref = null;
           if (!vh.a(param0)) {
-            param0.b(0, param1, param2);
+            param0.tryLoadFile(0, param1, param2);
             return null;
           }
-          byte[] var3 = param0.a(param1, param2, (byte) -107);
+          byte[] var3 = param0.getFile(param1, param2, (byte) -107);
           if (var3 == null) {
             return null;
           }

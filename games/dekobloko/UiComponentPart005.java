@@ -135,48 +135,48 @@ final class UiComponentPart005 extends ComponentContainer implements CallbackCon
           return 0;
         }
         if (AgeValidator.integerState0360 == 0) {
-          if (!MixedSupport116.resourceArchiveState0021.computeBoolean0798((byte) 121)) {
+          if (!MixedSupport116.resourceArchiveState0021.ensureIndexLoaded((byte) 121)) {
             return 20;
           }
           if (!MixedSupport116.resourceArchiveState0021.computeBoolean0811("commonui", (byte) -33)) {
             return 40;
           }
-          if (!PcmPlayerService.resourceArchiveState0020.computeBoolean0798((byte) 121)) {
+          if (!PcmPlayerService.resourceArchiveState0020.ensureIndexLoaded((byte) 121)) {
             return 50;
           }
           if (!PcmPlayerService.resourceArchiveState0020.computeBoolean0811("commonui", (byte) 57)) {
             return 60;
           }
-          if (!UiComponentPart023.resourceArchiveState0016.computeBoolean0798((byte) 121)) {
+          if (!UiComponentPart023.resourceArchiveState0016.ensureIndexLoaded((byte) 121)) {
             return 70;
           }
-          if (!UiComponentPart023.resourceArchiveState0016.computeBoolean0814(false)) {
+          if (!UiComponentPart023.resourceArchiveState0016.tryLoadAllGroups(false)) {
             return 80;
           }
         } else {
           if (null == NodeDeque.resourceArchiveState0025) {
-            if (!MixedSupport116.resourceArchiveState0021.computeBoolean0798((byte) 121)) {
+            if (!MixedSupport116.resourceArchiveState0021.ensureIndexLoaded((byte) 121)) {
               return 43;
             }
             if (!MixedSupport116.resourceArchiveState0021.computeBoolean0811("commonui", (byte) -114)) {
               return 57;
             }
-            if (!PcmPlayerService.resourceArchiveState0020.computeBoolean0798((byte) 121)) {
+            if (!PcmPlayerService.resourceArchiveState0020.ensureIndexLoaded((byte) 121)) {
               return 71;
             }
             if (!PcmPlayerService.resourceArchiveState0020.computeBoolean0811("commonui", (byte) -125)) {
               return 80;
             }
-            if (!UiComponentPart023.resourceArchiveState0016.computeBoolean0798((byte) 121)) {
+            if (!UiComponentPart023.resourceArchiveState0016.ensureIndexLoaded((byte) 121)) {
               return 82;
             }
             stackResourceArchiveLocal3 = UiComponentPart023.resourceArchiveState0016;
             stackBooleanLocal4 = (booleanArgument1) ? false : true;
-            if (!((ResourceArchive) (Object) stackResourceArchiveLocal3).computeBoolean0814(stackBooleanLocal4)) {
+            if (!((ResourceArchive) (Object) stackResourceArchiveLocal3).tryLoadAllGroups(stackBooleanLocal4)) {
               return 86;
             }
           } else {
-            if (!NodeDeque.resourceArchiveState0025.computeBoolean0798((byte) 121)) {
+            if (!NodeDeque.resourceArchiveState0025.ensureIndexLoaded((byte) 121)) {
               return 14;
             }
             if (!NodeDeque.resourceArchiveState0025.computeBoolean0812("", 0)) {
@@ -185,24 +185,24 @@ final class UiComponentPart005 extends ComponentContainer implements CallbackCon
             if (!NodeDeque.resourceArchiveState0025.computeBoolean0811("", (byte) 63)) {
               return 29;
             }
-            if (!MixedSupport116.resourceArchiveState0021.computeBoolean0798((byte) 121)) {
+            if (!MixedSupport116.resourceArchiveState0021.ensureIndexLoaded((byte) 121)) {
               return 43;
             }
             if (!MixedSupport116.resourceArchiveState0021.computeBoolean0811("commonui", (byte) -114)) {
               return 57;
             }
-            if (!PcmPlayerService.resourceArchiveState0020.computeBoolean0798((byte) 121)) {
+            if (!PcmPlayerService.resourceArchiveState0020.ensureIndexLoaded((byte) 121)) {
               return 71;
             }
             if (!PcmPlayerService.resourceArchiveState0020.computeBoolean0811("commonui", (byte) -125)) {
               return 80;
             }
-            if (!UiComponentPart023.resourceArchiveState0016.computeBoolean0798((byte) 121)) {
+            if (!UiComponentPart023.resourceArchiveState0016.ensureIndexLoaded((byte) 121)) {
               return 82;
             }
             stackResourceArchiveLocal1 = UiComponentPart023.resourceArchiveState0016;
             stackBooleanLocal2 = (booleanArgument1) ? false : true;
-            if (!((ResourceArchive) (Object) stackResourceArchiveLocal1).computeBoolean0814(stackBooleanLocal2)) {
+            if (!((ResourceArchive) (Object) stackResourceArchiveLocal1).tryLoadAllGroups(stackBooleanLocal2)) {
               return 86;
             }
           }

@@ -80,7 +80,7 @@ final class oh {
         }
     }
 
-    final static boolean a(sh param0, int param1) {
+    final static boolean a(ResourceArchive param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -91,7 +91,7 @@ final class oh {
           if (param1 >= -16) {
             field_c = (String) null;
           }
-          stackIn_3_0 = param0.a((byte) -128);
+          stackIn_3_0 = param0.tryLoadAllGroups((byte) -128);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

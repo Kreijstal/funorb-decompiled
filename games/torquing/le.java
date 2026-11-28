@@ -20,7 +20,7 @@ final class le {
         int var4Lifetime1;
         var7 = Torquing.field_u;
         try {
-          var9 = new IsaacPacketBuffer(param1.a(-125, "", "logo.fo3d"));
+          var9 = new IsaacPacketBuffer(param1.getFileByName(-125, "", "logo.fo3d"));
           var11 = var9;
           var3 = var11.readUnsignedByte((byte) -101);
           var11.j((byte) -100);

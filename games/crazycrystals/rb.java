@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rb extends ue {
-    static db field_k;
+    static ResourceArchive field_k;
     static String field_e;
     private re field_f;
     static String field_i;

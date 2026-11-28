@@ -15,7 +15,7 @@ final class wf {
           if (param1 != -19073) {
             field_a = (String) null;
           }
-          stackIn_3_0 = sd.field_a.a((byte) 7, param0, "");
+          stackIn_3_0 = sd.field_a.getFileByName((byte) 7, param0, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

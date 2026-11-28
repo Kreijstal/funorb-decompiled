@@ -23,7 +23,7 @@ final class vg {
           if (param2 != -1) {
             vg.a(-31, 13, -101, -83);
           }
-          stackIn_6_0 = w.a(param4.a(param0, param1, (byte) -114), true);
+          stackIn_6_0 = w.a(param4.getFile(param0, param1, (byte) -114), true);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

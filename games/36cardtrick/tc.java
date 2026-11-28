@@ -12,8 +12,8 @@ final class tc {
           field_a = null;
           return;
         }
-        qk var2 = (qk) null;
-        tc.a(51, -63, -35, (qk) null);
+        ResourceArchive var2 = (ResourceArchive) null;
+        tc.a(51, -63, -35, (ResourceArchive) null);
         field_a = null;
     }
 
@@ -31,7 +31,7 @@ final class tc {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, qk param3) {
+    final static boolean a(int param0, int param1, int param2, ResourceArchive param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -43,7 +43,7 @@ final class tc {
           if (param2 != 25479) {
             field_c = (String) null;
           }
-          var5 = param3.a(param0, (byte) -115, param1);
+          var5 = param3.getFile(param0, (byte) -115, param1);
           var4 = var5;
           if (var5 == null) {
             return false;

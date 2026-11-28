@@ -9,7 +9,7 @@ final class cl {
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new Sprite(param0.a("final_frame.jpg", -1, ""), (java.awt.Component) ((Object) ki.field_f));
+          var2 = new Sprite(param0.getFileByName("final_frame.jpg", -1, ""), (java.awt.Component) ((Object) ki.field_f));
           var3 = var2.field_t;
           var4 = var2.field_q;
           nk.b(false);

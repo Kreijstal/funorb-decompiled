@@ -124,7 +124,7 @@ final class ej extends BoardChange {
         }
     }
 
-    final static String a(vr param0, String param1, byte param2, String param3, String param4) {
+    final static String a(ResourceArchive param0, String param1, byte param2, String param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
@@ -142,11 +142,11 @@ final class ej extends BoardChange {
           if (param2 != -12) {
             ej.releaseStatics(-110);
           }
-          if (!param0.a(0)) {
+          if (!param0.ensureIndexLoaded(0)) {
             stackIn_5_0 = (String) (param1);
             return stackIn_5_0;
           }
-          stackIn_7_0 = param4 + " - " + param0.a(0, param3) + "%";
+          stackIn_7_0 = param4 + " - " + param0.getGroupLoadPercentByName(0, param3) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -33,7 +33,7 @@ class ih extends fd {
     static int[] field_V;
     private int field_J;
     private RgbSprite field_Z;
-    static gk field_p;
+    static ResourceArchive field_p;
     private boolean field_q;
     private boolean field_Y;
     static int field_X;

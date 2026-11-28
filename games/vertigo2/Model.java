@@ -380,7 +380,7 @@ final class Model extends sb {
     }
 
     final static Model a(Archive param0, String param1, String param2) {
-        byte[] var3 = param0.a(param1, param2, 0);
+        byte[] var3 = param0.getFileByName(param1, param2, 0);
         if (var3 == null) {
           return null;
         }

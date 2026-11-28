@@ -162,7 +162,7 @@ final class bh extends wf implements sh {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -110 / ((-64 - param1) / 54);
-          stackIn_1_0 = ph.a((byte) 41, param0.length, param0, 0);
+          stackIn_1_0 = ph.decodeCp1252String((byte) 41, param0.length, param0, 0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

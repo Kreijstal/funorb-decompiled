@@ -93,7 +93,7 @@ final class PcmOutputWorker implements Runnable {
         this.field_e = false;
     }
 
-    final static byte a(char param0, byte param1) {
+    final static byte encodeCp1252Character(char param0, byte param1) {
         int var2;
         int var3;
         int var2Lifetime1;

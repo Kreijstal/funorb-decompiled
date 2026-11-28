@@ -99,7 +99,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var3 == 0) {
           return "";
         }
-        return SecondaryNodeDeque.a((byte) -114, this.payload, var3, var2);
+        return SecondaryNodeDeque.decodeCp1252String((byte) -114, this.payload, var3, var2);
     }
 
     final void xteaEncrypt(int obfuscationGuard, int[] key) {
@@ -284,7 +284,7 @@ class PacketBuffer extends IntrusiveNode {
           throw new IllegalArgumentException("");
         }
         CharSequence var4 = (CharSequence) ((Object) value);
-        this.position = this.position + ed.a(0, (byte) -97, var4, this.payload, this.position, value.length());
+        this.position = this.position + ed.encodeCp1252Subsequence(0, (byte) -97, var4, this.payload, this.position, value.length());
         if (obfuscationGuard != 2295) {
           return;
         }
@@ -626,7 +626,7 @@ class PacketBuffer extends IntrusiveNode {
         var4 = -var3 + (this.position - 1);
         var5 = -27 % ((-56 - param0) / 60);
         if (0 != var4) {
-          return SecondaryNodeDeque.a((byte) -114, this.payload, var4, var3);
+          return SecondaryNodeDeque.decodeCp1252String((byte) -114, this.payload, var4, var3);
         }
         return "";
     }
@@ -768,7 +768,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           var4 = (CharSequence) ((Object) param0);
-          this.position = this.position + ed.a(0, (byte) 115, var4, this.payload, this.position, param0.length());
+          this.position = this.position + ed.encodeCp1252Subsequence(0, (byte) 115, var4, this.payload, this.position, param0.length());
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;

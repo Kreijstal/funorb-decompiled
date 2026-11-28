@@ -81,7 +81,7 @@ final class hg extends al {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= 84) {
-            stackIn_4_0 = la.field_D.b("", param1, -11);
+            stackIn_4_0 = la.field_D.getFileByName("", param1, -11);
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;
@@ -145,7 +145,7 @@ final class hg extends al {
         }
     }
 
-    final static String a(String param0, gk param1, int param2, String param3) {
+    final static String a(String param0, ResourceArchive param1, int param2, String param3) {
         RuntimeException var4 = null;
         String stackIn_4_0 = null;
         String stackIn_6_0 = null;
@@ -161,7 +161,7 @@ final class hg extends al {
           if (param2 != 130) {
             field_j = (eh) null;
           }
-          if (param1.c(77)) {
+          if (param1.ensureIndexLoaded(77)) {
             stackIn_6_0 = param3 + " - " + param1.a(100) + "%";
             return stackIn_6_0;
           }

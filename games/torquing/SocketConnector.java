@@ -46,7 +46,7 @@ abstract class SocketConnector {
             SocketConnector.a(77, 31, 80, (ResourceArchive) null, (ResourceArchive) null);
           }
           if (nd.a(param1, param3, -1, param2)) {
-            stackIn_6_0 = ee.a(param4.a(param1, 100, param2), 7028);
+            stackIn_6_0 = ee.a(param4.getFile(param1, 100, param2), 7028);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;

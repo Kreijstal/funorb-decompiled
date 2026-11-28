@@ -204,27 +204,27 @@ final class oo extends se {
           return 0;
         }
         if (ul.field_g == 0) {
-          if (!rb.field_k.a((byte) 102)) {
+          if (!rb.field_k.ensureIndexLoaded((byte) 102)) {
             return 20;
           }
           if (!rb.field_k.a(-20402, "commonui")) {
             return 40;
           }
-          if (!ok.field_c.a((byte) 102)) {
+          if (!ok.field_c.ensureIndexLoaded((byte) 102)) {
             return 50;
           }
           if (!ok.field_c.a(-20402, "commonui")) {
             return 60;
           }
-          if (!FullscreenFocusCanvas.field_a.a((byte) 102)) {
+          if (!FullscreenFocusCanvas.field_a.ensureIndexLoaded((byte) 102)) {
             return 70;
           }
-          if (!FullscreenFocusCanvas.field_a.a(false)) {
+          if (!FullscreenFocusCanvas.field_a.tryLoadAllGroups(false)) {
             return 80;
           }
         } else {
           if (SecondaryNodeDeque.field_e != null) {
-            if (!SecondaryNodeDeque.field_e.a((byte) 102)) {
+            if (!SecondaryNodeDeque.field_e.ensureIndexLoaded((byte) 102)) {
               return 14;
             }
             if (!SecondaryNodeDeque.field_e.c("", -46)) {
@@ -234,22 +234,22 @@ final class oo extends se {
               return 29;
             }
           }
-          if (!rb.field_k.a((byte) 102)) {
+          if (!rb.field_k.ensureIndexLoaded((byte) 102)) {
             return 43;
           }
           if (!rb.field_k.a(-20402, "commonui")) {
             return 57;
           }
-          if (!ok.field_c.a((byte) 102)) {
+          if (!ok.field_c.ensureIndexLoaded((byte) 102)) {
             return 71;
           }
           if (!ok.field_c.a(-20402, "commonui")) {
             return 80;
           }
-          if (!FullscreenFocusCanvas.field_a.a((byte) 102)) {
+          if (!FullscreenFocusCanvas.field_a.ensureIndexLoaded((byte) 102)) {
             return 82;
           }
-          if (!FullscreenFocusCanvas.field_a.a(false)) {
+          if (!FullscreenFocusCanvas.field_a.tryLoadAllGroups(false)) {
             return 86;
           }
         }

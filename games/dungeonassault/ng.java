@@ -2587,7 +2587,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("keychar_the_character_under_questionmark", 62);
                 if (null != var2) {
-                  lg.a(var2[0], 99);
+                  lg.decodeCp1252Byte(var2[0], 99);
                 }
                 var2 = rp.a("rating_noratings", 48);
                 if (null != var2) {

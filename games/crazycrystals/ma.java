@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ma extends pn {
-    static db field_p;
+    static ResourceArchive field_p;
     static String field_o;
     static int[] field_n;
     static jp field_m;
@@ -157,7 +157,7 @@ final class ma extends pn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -21) {
-            field_p = (db) null;
+            field_p = (ResourceArchive) null;
           }
           stackIn_3_0 = this.field_l.a((byte) -21, param1, param2, param3, param4, param5, param6);
           return stackIn_3_0;
@@ -226,7 +226,7 @@ final class ma extends pn {
           var27 = kd.field_n;
           var2 = var27.readUnsignedByte(255);
           if (param0 <= 56) {
-            field_p = (db) null;
+            field_p = (ResourceArchive) null;
           }
           if (var2 == 0) {
             var3 = var27.readUnsignedShort((byte) -7);

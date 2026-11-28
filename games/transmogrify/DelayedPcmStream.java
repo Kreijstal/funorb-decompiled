@@ -5,7 +5,7 @@ final class DelayedPcmStream extends PcmStream {
     private PcmStream field_o;
     private int field_k;
     static int field_m;
-    static ci field_n;
+    static ResourceArchive field_n;
     static int[] field_l;
 
     public static void clearStaticReferences(int param0) {

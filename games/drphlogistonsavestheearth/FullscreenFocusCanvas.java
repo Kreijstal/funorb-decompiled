@@ -43,7 +43,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    final static void a(vj param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         RuntimeException stackIn_489_0 = null;
         StringBuilder stackIn_489_1 = null;
         String stackIn_490_2 = null;

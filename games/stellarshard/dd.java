@@ -72,7 +72,7 @@ final class dd {
         }
     }
 
-    final static bm a(int param0, byte param1, pf param2, pf param3, int param4) {
+    final static bm a(int param0, byte param1, ResourceArchive param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
         bm stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -88,7 +88,7 @@ final class dd {
           if (!ProxyAuthenticationRequiredException.a(param2, (byte) -5, param0, param4)) {
             return null;
           }
-          stackIn_6_0 = DirectByteStorage.a(2376, param3.a(param4, 16, param0));
+          stackIn_6_0 = DirectByteStorage.a(2376, param3.getFile(param4, 16, param0));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -113,8 +113,8 @@ final class dd {
     public static void b(int param0) {
         field_f = null;
         if (param0 != -26269) {
-          pf var2 = (pf) null;
-          dd.a(48, (byte) -60, (pf) null, (pf) null, 98);
+          ResourceArchive var2 = (ResourceArchive) null;
+          dd.a(48, (byte) -60, (ResourceArchive) null, (ResourceArchive) null, 98);
         }
         field_h = null;
         field_i = null;

@@ -235,7 +235,7 @@ final class SceneWidgetPart008 extends SceneWidget {
           return true;
         }
         integerLocal3 = ArchiveRequestManager.characterState0002;
-        if (!MixedSupport069.computeBoolean0899((char) integerLocal3, 8212)) {
+        if (!MixedSupport069.isAcceptedTextInputCharacter((char) integerLocal3, 8212)) {
           return false;
         }
         if (integerLocal2 != 0 &&

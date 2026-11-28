@@ -29,12 +29,12 @@ final class SecondaryNodeDequeIterator implements Iterator {
     final static void b(int param0) {
         t.field_h.c(20317, new db());
         if (param0 != 11) {
-          ue var2 = (ue) null;
-          SecondaryNodeDequeIterator.a((String) null, 17, (String) null, (ue) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          SecondaryNodeDequeIterator.a((String) null, 17, (String) null, (ResourceArchive) null);
         }
     }
 
-    final static Sprite[] a(String param0, int param1, String param2, ue param3) {
+    final static Sprite[] a(String param0, int param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -50,8 +50,8 @@ final class SecondaryNodeDequeIterator implements Iterator {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = -25 % ((27 - param1) / 58);
-          var4_int = param3.a(param2, false);
-          var5 = param3.a(param0, true, var4_int);
+          var4_int = param3.getGroupIdByName(param2, false);
+          var5 = param3.getFileIdByName(param0, true, var4_int);
           stackIn_1_0 = ProxyAuthenticationRequiredException.a(var5, var4_int, (byte) -77, param3);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

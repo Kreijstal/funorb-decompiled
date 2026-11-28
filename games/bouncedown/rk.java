@@ -77,7 +77,7 @@ final class rk {
         }
     }
 
-    final static o a(gk param0, gk param1, byte param2, int param3, int param4) {
+    final static o a(ResourceArchive param0, ResourceArchive param1, byte param2, int param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         o stackIn_4_0 = null;
@@ -92,7 +92,7 @@ final class rk {
           if (!c.a(param0, false, param4, param3)) {
             return null;
           }
-          stackIn_4_0 = gi.a(param1.b(-127, param3, param4), 41);
+          stackIn_4_0 = gi.a(param1.getFile(-127, param3, param4), 41);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

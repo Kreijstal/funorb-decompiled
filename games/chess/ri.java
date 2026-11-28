@@ -119,10 +119,10 @@ final class ri extends jb implements ha, we {
     }
 
     final static void a(int param0, pa param1, int param2) {
-        nk var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           var3 = qn.field_U;
-          var3.f(param2, -106);
+          var3.writeCipheredByte(param2, -106);
           var3.writeByte(2, (byte) -56);
           var3.writeByte(0, (byte) -112);
           if (param0 != -1281) {

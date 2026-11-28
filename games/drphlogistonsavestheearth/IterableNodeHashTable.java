@@ -24,7 +24,7 @@ final class IterableNodeHashTable implements Iterable {
         field_b = null;
     }
 
-    final static bm a(int param0, vj param1, int param2, vj param3, int param4) {
+    final static bm a(int param0, ResourceArchive param1, int param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         bm stackIn_5_0 = null;
@@ -41,7 +41,7 @@ final class IterableNodeHashTable implements Iterable {
             return (bm) (stackIn_2_0);
           }
           if (param4 == 65245) {
-            stackIn_7_0 = af.a(119, param3.a(param2, param0, (byte) 35));
+            stackIn_7_0 = af.a(119, param3.getFile(param2, param0, (byte) 35));
             return stackIn_7_0;
           }
           stackIn_5_0 = (bm) null;

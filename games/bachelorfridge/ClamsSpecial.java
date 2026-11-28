@@ -5,7 +5,7 @@ import java.util.*;
 
 final class ClamsSpecial extends SpecialOrder {
     static String field_r;
-    static vr field_p;
+    static ResourceArchive field_p;
     static String field_q;
 
     public static void releaseStatics(int param0) {
@@ -25,7 +25,7 @@ final class ClamsSpecial extends SpecialOrder {
           return (jla) ((Object) new ina(false));
         }
         if (param0 != 19341) {
-          field_p = (vr) null;
+          field_p = (ResourceArchive) null;
         }
         if (param1 == 8) {
           return (jla) ((Object) new ina(true));
@@ -133,7 +133,7 @@ final class ClamsSpecial extends SpecialOrder {
         }
     }
 
-    final static BinaryBitmapFont a(String param0, vr param1, int param2, String param3, vr param4) {
+    final static BinaryBitmapFont a(String param0, ResourceArchive param1, int param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -150,9 +150,9 @@ final class ClamsSpecial extends SpecialOrder {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param1.a(param3, false);
+          var5_int = param1.getGroupId(param3, false);
           var7 = -21 % ((31 - param2) / 43);
-          var6 = param1.a((byte) 6, var5_int, param0);
+          var6 = param1.getFileId((byte) 6, var5_int, param0);
           stackIn_1_0 = jc.a(param4, var6, false, param1, var5_int);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -8,7 +8,7 @@ final class ve extends lb {
     private int field_q;
     private RgbSprite[] field_u;
 
-    final static dh a(int param0, db param1, int param2, db param3, int param4) {
+    final static dh a(int param0, ResourceArchive param1, int param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
         dh stackIn_5_0 = null;
         dh stackIn_7_0 = null;
@@ -23,7 +23,7 @@ final class ve extends lb {
             return null;
           }
           if (param0 >= 53) {
-            stackIn_7_0 = dq.a(-18289, param3.b(param2, 0, param4));
+            stackIn_7_0 = dq.a(-18289, param3.getFile(param2, 0, param4));
             return stackIn_7_0;
           }
           stackIn_5_0 = (dh) null;

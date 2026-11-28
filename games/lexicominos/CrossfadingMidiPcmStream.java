@@ -76,13 +76,13 @@ final class CrossfadingMidiPcmStream extends PcmStream {
     }
 
     final static void a(sj param0, byte param1, int param2) {
-        th var3 = null;
+        BitPacketBuffer var3 = null;
         if (param1 > -91) {
           return;
         }
         try {
           var3 = SpriteGeometry.field_q;
-          var3.h(param2, 0);
+          var3.writeCipheredByte(param2, 0);
           var3.writeByte(5, -1);
           var3.writeByte(0, -1);
           var3.writeShort(91, param0.field_h);
@@ -465,7 +465,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         this.field_u = param1;
     }
 
-    final static RgbSprite a(sh param0, int param1, byte param2, int param3) {
+    final static RgbSprite a(ResourceArchive param0, int param1, byte param2, int param3) {
         RuntimeException var4 = null;
         RgbSprite stackIn_2_0 = null;
         Object stackIn_5_0 = null;

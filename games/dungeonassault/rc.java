@@ -34,7 +34,7 @@ final class rc {
           if (!param1.b(param2, param0, (byte) -82)) {
             param2 = param2 + ".jpg";
           }
-          var7 = new RgbSprite(param1.a(param0, param2, (byte) -127), (java.awt.Component) ((Object) fi.d(false)));
+          var7 = new RgbSprite(param1.getFileByName(param0, param2, (byte) -127), (java.awt.Component) ((Object) fi.d(false)));
           var8 = var7;
           if (param3 != 71) {
             stackIn_6_0 = (RgbSprite) null;

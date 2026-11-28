@@ -1152,7 +1152,7 @@ final class kb extends IntrusiveNode {
               this.field_F < jk.field_j[this.field_C]) {
               var7Lifetime2Lifetime1 = 64 + (int)(Math.sin((double)ji.correctedCurrentTimeMillis(param2 ^ 91) * 0.01 + (double)this.field_g + (double)this.field_h) * 48.0);
               var6Lifetime2Lifetime6 = 16777215;
-              SoftwareRasterizer.addRadialGlow(var4_int << 4, var5 << 4, var7Lifetime2Lifetime1, 255, ki.field_f);
+              SoftwareRasterizer.addRadialGlow(var4_int << 4, var5 << 4, var7Lifetime2Lifetime1, 255, ResourceArchive.field_f);
             }
             var5 += 15;
           }

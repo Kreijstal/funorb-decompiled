@@ -16,7 +16,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               65535 != var2_int &&
-              pn.a(true, (char) var2_int)) {
+              pn.isSupportedCp1252KeyCharacter(true, (char) var2_int)) {
               var3 = 127 & ei.field_A + 1;
               if (var3 != td.field_d) {
                 re.field_o[ei.field_A] = -1;

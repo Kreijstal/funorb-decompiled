@@ -137,9 +137,9 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3.a(0) &&
+          if (param3.ensureIndexLoaded(0) &&
             param3.a(-3, "commonui")) {
-            if (!param0.a(0)) {
+            if (!param0.ensureIndexLoaded(0)) {
               return false;
             }
             if (!param0.a(-3, "commonui")) {
@@ -148,7 +148,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             if (param2) {
               return true;
             }
-            if (param1.a(0) &&
+            if (param1.ensureIndexLoaded(0) &&
               param1.a(-3, "button.gif")) {
               return true;
             }

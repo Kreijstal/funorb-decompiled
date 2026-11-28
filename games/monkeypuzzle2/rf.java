@@ -165,7 +165,7 @@ abstract class rf {
 
     abstract byte[] b(int param0, int param1);
 
-    abstract int a(int param0, int param1);
+    abstract int getGroupRequestProgressPercent(int param0, int param1);
 
     static {
         field_b = "Type your email address again to make sure it's correct";

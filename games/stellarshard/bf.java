@@ -6,7 +6,7 @@ final class bf {
     static int field_b;
     static int field_c;
 
-    final static byte a(int param0, char param1) {
+    final static byte encodeCp1252Character(int param0, char param1) {
         int var2;
         int var3;
         int var2Lifetime1;
@@ -597,11 +597,11 @@ final class bf {
         field_a = null;
     }
 
-    final static ek[] a(String param0, byte param1, String param2, pf param3) {
+    final static ek[] a(String param0, byte param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        pf var6 = null;
+        ResourceArchive var6 = null;
         ek[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -612,12 +612,12 @@ final class bf {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.b(param2, (byte) -118);
+          var4_int = param3.getGroupIdByName(param2, (byte) -118);
           if (param1 != 37) {
-            var6 = (pf) null;
-            bf.a((String) null, (byte) -24, (String) null, (pf) null);
+            var6 = (ResourceArchive) null;
+            bf.a((String) null, (byte) -24, (String) null, (ResourceArchive) null);
           }
-          var5 = param3.a(var4_int, param0, (byte) -11);
+          var5 = param3.getFileIdByName(var4_int, param0, (byte) -11);
           stackIn_3_0 = b.a(-127, var5, var4_int, param3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

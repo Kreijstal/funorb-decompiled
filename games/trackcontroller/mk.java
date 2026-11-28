@@ -20,7 +20,7 @@ final class mk {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param1.c(-102)) {
+          if (!param1.ensureIndexLoaded(-102)) {
             stackIn_2_0 = (String) (param3);
             return stackIn_2_0;
           }
@@ -28,7 +28,7 @@ final class mk {
             var6 = (String) null;
             mk.a(-118, (Archive) null, (String) null, (String) null, (byte) 60);
           }
-          stackIn_6_0 = param2 + " - " + param1.a(param0, -24214) + "%";
+          stackIn_6_0 = param2 + " - " + param1.getGroupLoadPercent(param0, -24214) + "%";
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

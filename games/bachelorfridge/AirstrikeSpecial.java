@@ -42,7 +42,7 @@ final class AirstrikeSpecial extends SpecialOrder {
         }
     }
 
-    final static void a(int param0, vr param1) {
+    final static void a(int param0, ResourceArchive param1) {
         UiComponent var5 = null;
         UiComponent var6 = null;
         UiComponent var3 = null;

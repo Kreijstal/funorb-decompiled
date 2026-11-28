@@ -8,11 +8,11 @@ final class p {
     static String field_b;
 
     final static void a(tg param0, int param1, byte param2) {
-        th var5 = null;
+        BitPacketBuffer var5 = null;
         int var4 = 0;
         try {
           var5 = SpriteGeometry.field_q;
-          var5.h(param1, 0);
+          var5.writeCipheredByte(param1, 0);
           if (param2 != 24) {
             field_a = (String[]) null;
           }

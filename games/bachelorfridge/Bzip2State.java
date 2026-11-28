@@ -24,7 +24,7 @@ final class Bzip2State {
     int[][] field_i;
     int[] field_t;
     int field_q;
-    static vr field_B;
+    static ResourceArchive field_B;
     int field_y;
     int[] field_m;
     int[][] field_x;
@@ -56,7 +56,7 @@ final class Bzip2State {
         }
         if (param0 != 16964) {
           CharSequence var2 = (CharSequence) null;
-          Bzip2State.a(-13, (CharSequence) null);
+          Bzip2State.encodeCp1252Bytes(-13, (CharSequence) null);
         }
     }
 
@@ -68,7 +68,7 @@ final class Bzip2State {
         int var1 = -93 / ((24 - param0) / 49);
     }
 
-    final static byte[] a(int param0, CharSequence param1) {
+    final static byte[] encodeCp1252Bytes(int param0, CharSequence param1) {
         int var4 = 0;
         byte[] stackIn_69_0 = null;
         RuntimeException stackIn_72_0 = null;

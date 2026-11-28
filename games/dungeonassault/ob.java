@@ -185,7 +185,7 @@ final class ob extends ok {
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new RgbSprite(param1.a("final_frame.jpg", "", (byte) -123), (java.awt.Component) ((Object) AwtRasterBuffer.field_h));
+          var2 = new RgbSprite(param1.getFileByName("final_frame.jpg", "", (byte) -123), (java.awt.Component) ((Object) AwtRasterBuffer.field_h));
           if (param0 >= -40) {
             ob.discardDeclaredStaticReferences(119);
           }

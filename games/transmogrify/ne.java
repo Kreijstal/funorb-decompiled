@@ -73,8 +73,8 @@ final class ne {
 
     final static void a(byte param0, AchievementNotice param1, int param2) {
         int var4 = 0;
-        hj var5 = ff.field_D;
-        var5.a(false, param2);
+        BitPacketBuffer var5 = ff.field_D;
+        var5.writeCipheredByte(false, param2);
         if (param0 != 7) {
           return;
         }

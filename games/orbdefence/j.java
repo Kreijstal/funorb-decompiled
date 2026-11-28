@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class j {
-    static ki field_b;
+    static ResourceArchive field_b;
     int field_a;
     int field_d;
     static int field_e;
@@ -33,7 +33,7 @@ final class j {
         try {
           var1_int = sd.field_h;
           if (param0 >= -8) {
-            field_b = (ki) null;
+            field_b = (ResourceArchive) null;
           }
           var2 = 0;
           if (kg.field_m == 2) {

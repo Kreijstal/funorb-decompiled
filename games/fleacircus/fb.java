@@ -110,12 +110,12 @@ final class fb {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.a(param2, (byte) -100);
+          var4_int = param0.getGroupIdByName(param2, (byte) -100);
           if (param1 != 45) {
             stackIn_2_0 = (bi[]) null;
             return stackIn_2_0;
           }
-          var5 = param0.a(param3, (byte) -15, var4_int);
+          var5 = param0.getFileIdByName(param3, (byte) -15, var4_int);
           stackIn_4_0 = be.a(var5, var4_int, -1, param0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

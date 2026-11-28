@@ -145,7 +145,7 @@ abstract class jc extends qf {
         return super.o(928516712);
     }
 
-    final static short[] a(w param0, int param1, int param2, short[] param3) {
+    final static short[] a(BitPacketBuffer param0, int param1, int param2, short[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -162,7 +162,7 @@ abstract class jc extends qf {
         RuntimeException var4 = null;
         var8 = Main.field_T;
         try {
-          var4_int = param0.g(param1, -1);
+          var4_int = param0.readBits(param1, -1);
           if (var4_int == 0) {
             stackIn_3_0 = null;
             return (short[]) (stackIn_3_0);
@@ -171,15 +171,15 @@ abstract class jc extends qf {
             param3.length != var4_int) {
             param3 = new short[var4_int];
           }
-          var5 = param0.g(4, -1);
-          var6 = (short)param0.g(16, -1);
+          var5 = param0.readBits(4, -1);
+          var6 = (short)param0.readBits(16, -1);
           if (var5 <= 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
               param3[var7] = (short)var6;
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param3[var7] = (short)(param0.g(var5, -1) + var6);
+              param3[var7] = (short)(param0.readBits(var5, -1) + var6);
             }
           }
           if (param2 != 21) {

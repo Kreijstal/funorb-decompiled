@@ -4,7 +4,7 @@
 final class fi {
     static String field_d;
     static int[] field_c;
-    static ad field_b;
+    static ResourceArchive field_b;
     static Sprite[] field_a;
 
     final static void b(int param0) {

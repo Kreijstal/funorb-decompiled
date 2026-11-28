@@ -23,7 +23,7 @@ final class qh extends hk {
         return (pb) null;
     }
 
-    final static boolean a(int param0, int param1, int param2, db param3) {
+    final static boolean a(int param0, int param1, int param2, ResourceArchive param3) {
         RgbSprite[] array$0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;

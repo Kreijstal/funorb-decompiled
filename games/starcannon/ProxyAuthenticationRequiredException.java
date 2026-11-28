@@ -34,8 +34,8 @@ final class ProxyAuthenticationRequiredException extends IOException {
             if (param5 != 22692) {
               field_d = (boolean[]) null;
             }
-            se.field_p = new ia(param11);
-            d.field_b = new ia(param2);
+            se.field_p = new BitPacketBuffer(param11);
+            d.field_b = new BitPacketBuffer(param2);
             sj.field_I = param9;
             qa.field_e = param4;
             r.field_d = param10;
@@ -137,7 +137,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         kf.field_v = param2;
     }
 
-    final static Sprite[] a(int param0, int param1, byte param2, ue param3) {
+    final static Sprite[] a(int param0, int param1, byte param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Sprite[] stackIn_4_0 = null;

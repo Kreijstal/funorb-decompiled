@@ -38,7 +38,7 @@ final class qf {
             AccountRequestState.field_e == jj.field_Y)) {
             if (param0 == id.field_c.position &&
               je.correctedCurrentTimeMillis(1) > gf.field_Y + 10000L) {
-              id.field_c.e(param1, -2147483648);
+              id.field_c.writeCipheredByte(param1, -2147483648);
             }
             if (id.field_c.position > 0) {
               try {

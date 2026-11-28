@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AccountCreationResultPanel extends dh implements el {
-    static mi field_Bb;
+    static ResourceArchive field_Bb;
     private boolean field_Fb;
     private ke field_Hb;
     private boolean field_Gb;

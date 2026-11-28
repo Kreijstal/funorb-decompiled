@@ -5,7 +5,7 @@ abstract class l {
     static AccountRequestState field_b;
     static String field_c;
     static String field_a;
-    static db field_d;
+    static ResourceArchive field_d;
 
     public static void clearStaticReferences(byte param0) {
         field_c = null;

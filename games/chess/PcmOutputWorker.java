@@ -31,15 +31,15 @@ final class PcmOutputWorker implements Runnable {
           if (param1 <= 44) {
             field_d = -26;
           }
-          if (param0.c((byte) 127) &&
+          if (param0.ensureIndexLoaded((byte) 127) &&
             param0.b("commonui", 100)) {
-            if (!param2.c((byte) 121)) {
+            if (!param2.ensureIndexLoaded((byte) 121)) {
               return false;
             }
             if (!param2.b("commonui", 100)) {
               return false;
             }
-            if (param3.c((byte) 126) &&
+            if (param3.ensureIndexLoaded((byte) 126) &&
               param3.b("button.gif", 100)) {
               return true;
             }

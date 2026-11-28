@@ -316,7 +316,7 @@ abstract class RendererBitmapFont {
           int var12 = text.length();
           for (int var13 = 0; var13 < var12; var13++) {
             boolean decompiledFrameRemainder0 = true;
-            int var14 = (char)(255 & ae.a(text.charAt(var13), 56));
+            int var14 = (char)(255 & ae.encodeCp1252Character(text.charAt(var13), 56));
             if (var14 != 60) {
               if (var14 == 62 &&
                 -1 != var10_int) {

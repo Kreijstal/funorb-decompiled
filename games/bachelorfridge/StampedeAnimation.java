@@ -24,12 +24,12 @@ final class StampedeAnimation extends EventAnimation {
 
     final static void f(int param0) {
         if (param0 != -21522) {
-          vr var2 = (vr) null;
-          StampedeAnimation.a((vr) null, (vr) null, -95, (vr) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          StampedeAnimation.a((ResourceArchive) null, (ResourceArchive) null, -95, (ResourceArchive) null);
         }
     }
 
-    final static void a(vr param0, vr param1, int param2, vr param3) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
         Sprite var17 = null;
         IndexedSprite[] var5 = null;
         IndexedSprite[][] var6 = null;
@@ -57,7 +57,7 @@ final class StampedeAnimation extends EventAnimation {
           oc.field_l = (BitmapFont) ((Object) rc.a(param3, (byte) 113, param1, "arezzo12", "commonui"));
           jca.field_a = (BitmapFont) ((Object) rc.a(param3, (byte) 113, param1, "arezzo14", "commonui"));
           qia.field_a = (BitmapFont) ((Object) rc.a(param3, (byte) 113, param1, "arezzo14bold", "commonui"));
-          var17 = new Sprite(param0.a((byte) 123, "", "button.gif"), (java.awt.Component) ((Object) TBomberAnimation.field_y));
+          var17 = new Sprite(param0.getFileByName((byte) 123, "", "button.gif"), (java.awt.Component) ((Object) TBomberAnimation.field_y));
           BagpipeSpecial.a(param1, -1, "commonui", "dropdown");
           var5 = RageSpecial.a(29611, "commonui", "screen_options", param1);
           sh.field_G = new IndexedSprite[4];

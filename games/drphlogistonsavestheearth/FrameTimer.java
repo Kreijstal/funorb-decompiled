@@ -21,7 +21,7 @@ abstract class FrameTimer {
 
     abstract void resetTiming(boolean param0);
 
-    final static ej[] a(int param0, lh param1) {
+    final static ej[] a(int param0, BitPacketBuffer param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -39,7 +39,7 @@ abstract class FrameTimer {
         RuntimeException decompiledCaughtException = null;
         var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          var2_int = param1.e(8, (byte) 48);
+          var2_int = param1.readBits(8, (byte) 48);
           if (var2_int > 0) {
             stackIn_3_0 = null;
             return (ej[]) (stackIn_3_0);
@@ -48,21 +48,21 @@ abstract class FrameTimer {
             stackIn_6_0 = (ej[]) null;
             return stackIn_6_0;
           }
-          var3 = param1.e(12, (byte) -123);
+          var3 = param1.readBits(12, (byte) -123);
           var4 = new ej[var3];
           for (var5 = 0; var5 < var3; var5++) {
             if (!ti.a(param1, false)) {
-              var6 = param1.e(jl.a(109, var5 - 1), (byte) 53);
+              var6 = param1.readBits(jl.a(109, var5 - 1), (byte) 53);
               var4[var5] = var4[var6];
             } else {
               var6_ref_ej = new ej();
-              param1.e(24, (byte) 40);
-              param1.e(24, (byte) 95);
-              var6_ref_ej.field_d = param1.e(24, (byte) 114);
-              param1.e(9, (byte) 62);
-              param1.e(12, (byte) 42);
-              param1.e(12, (byte) 75);
-              param1.e(12, (byte) -115);
+              param1.readBits(24, (byte) 40);
+              param1.readBits(24, (byte) 95);
+              var6_ref_ej.field_d = param1.readBits(24, (byte) 114);
+              param1.readBits(9, (byte) 62);
+              param1.readBits(12, (byte) 42);
+              param1.readBits(12, (byte) 75);
+              param1.readBits(12, (byte) -115);
               var4[var5] = var6_ref_ej;
             }
           }

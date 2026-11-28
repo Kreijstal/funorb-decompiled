@@ -8,7 +8,7 @@ final class oc {
     static int field_c;
     static IndexedSprite[] field_d;
 
-    final static IndexedSprite[] a(sh param0, int param1, int param2, int param3) {
+    final static IndexedSprite[] a(ResourceArchive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
         IndexedSprite[] stackIn_6_0 = null;

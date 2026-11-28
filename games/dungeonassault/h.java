@@ -85,7 +85,7 @@ final class h {
         }
         if (hc.field_d != 0) {
           if (null != ia.field_U) {
-            if (!ia.field_U.a(-14354)) {
+            if (!ia.field_U.ensureIndexLoaded(-14354)) {
               return 14;
             }
             if (!ia.field_U.c("", param0 + 3)) {
@@ -95,41 +95,41 @@ final class h {
               return 29;
             }
           }
-          if (!fi.field_u.a(-14354)) {
+          if (!fi.field_u.ensureIndexLoaded(-14354)) {
             return 43;
           }
           if (!fi.field_u.a(false, "commonui")) {
             return 57;
           }
-          if (!GameAppletShell.field_b.a(-14354)) {
+          if (!GameAppletShell.field_b.ensureIndexLoaded(-14354)) {
             return 71;
           }
           if (!GameAppletShell.field_b.a(false, "commonui")) {
             return 80;
           }
-          if (!ib.field_b.a(-14354)) {
+          if (!ib.field_b.ensureIndexLoaded(-14354)) {
             return 82;
           }
-          if (!ib.field_b.a((byte) 59)) {
+          if (!ib.field_b.tryLoadAllGroups((byte) 59)) {
             return 86;
           }
         } else {
-          if (!fi.field_u.a(-14354)) {
+          if (!fi.field_u.ensureIndexLoaded(-14354)) {
             return 20;
           }
           if (!fi.field_u.a(false, "commonui")) {
             return 40;
           }
-          if (!GameAppletShell.field_b.a(-14354)) {
+          if (!GameAppletShell.field_b.ensureIndexLoaded(-14354)) {
             return 50;
           }
           if (!GameAppletShell.field_b.a(false, "commonui")) {
             return 60;
           }
-          if (!ib.field_b.a(-14354)) {
+          if (!ib.field_b.ensureIndexLoaded(-14354)) {
             return 70;
           }
-          if (!ib.field_b.a((byte) 59)) {
+          if (!ib.field_b.tryLoadAllGroups((byte) 59)) {
             return 80;
           }
         }

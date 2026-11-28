@@ -5,7 +5,7 @@ final class mr {
     static String field_a;
     static int[] field_b;
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isSupportedCp1252KeyCharacter(char param0, int param1) {
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1 != 2004352972) {

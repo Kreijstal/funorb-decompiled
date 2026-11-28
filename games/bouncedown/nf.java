@@ -57,7 +57,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
           if (null != GzipDecompressor.field_c) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 && var2_int != 65535 &&
-              vf.a(-13891, (char) var2_int)) {
+              vf.isSupportedCp1252KeyCharacter(-13891, (char) var2_int)) {
               var3 = Bounce.field_F + 1 & 127;
               if (oh.field_a != var3) {
                 pf.field_A[Bounce.field_F] = -1;

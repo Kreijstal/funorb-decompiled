@@ -100,7 +100,7 @@ final class hi extends IntrusiveNode {
     private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_K) {
-          var1 = param0.a(0, 0, 5847);
+          var1 = param0.getFile(0, 0, 5847);
           if (var1 == null) {
             return false;
           }
@@ -122,7 +122,7 @@ final class hi extends IntrusiveNode {
             param0.a(param1, param2, (byte) -78);
             return null;
           }
-          byte[] var3 = param0.a(param1, 30045, param2);
+          byte[] var3 = param0.getFileByName(param1, 30045, param2);
           if (var3 == null) {
             return null;
           }
@@ -723,10 +723,10 @@ final class hi extends IntrusiveNode {
         try {
           hi var4_ref = null;
           if (!hi.a(param0)) {
-            param0.a((byte) -109, param1, param2);
+            param0.tryLoadFile((byte) -109, param1, param2);
             return null;
           }
-          byte[] var3 = param0.a(param1, param2, 5847);
+          byte[] var3 = param0.getFile(param1, param2, 5847);
           if (var3 == null) {
             return null;
           }

@@ -11,7 +11,7 @@ final class fk extends IntrusiveNode {
     int field_n;
     static String field_p;
     static int[] field_t;
-    static vj field_h;
+    static ResourceArchive field_h;
     int field_j;
     int field_i;
     static String field_r;
@@ -36,9 +36,9 @@ final class fk extends IntrusiveNode {
         field_h = null;
     }
 
-    final static RgbSprite a(int param0, vj param1, int param2, int param3) {
+    final static RgbSprite a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
-        vj var5 = null;
+        ResourceArchive var5 = null;
         RgbSprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -46,8 +46,8 @@ final class fk extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 16711680) {
-            var5 = (vj) null;
-            fk.a(-100, (vj) null, -21, -59);
+            var5 = (ResourceArchive) null;
+            fk.a(-100, (ResourceArchive) null, -21, -59);
           }
           if (!fl.a(param2, param1, param0, (byte) -98)) {
             return null;

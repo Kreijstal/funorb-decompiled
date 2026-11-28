@@ -22,30 +22,30 @@ final class tb {
           return a.field_c;
         }
         if (DiskArchiveRequest.field_I != null) {
-          if (!DiskArchiveRequest.field_I.a(0)) {
+          if (!DiskArchiveRequest.field_I.ensureIndexLoaded(0)) {
             return mi.field_d;
           }
           return dh.field_J;
         }
-        if (!AccountCreationResultPanel.field_Jb.a(0)) {
+        if (!AccountCreationResultPanel.field_Jb.ensureIndexLoaded(0)) {
           return td.field_o;
         }
         if (!AccountCreationResultPanel.field_Jb.a(255, "commonui")) {
-          return sa.field_b + " - " + AccountCreationResultPanel.field_Jb.b(10461, "commonui") + "%";
+          return sa.field_b + " - " + AccountCreationResultPanel.field_Jb.getGroupLoadPercentByName(10461, "commonui") + "%";
         }
-        if (!sb.field_i.a(0)) {
+        if (!sb.field_i.ensureIndexLoaded(0)) {
           return ByteStorage.field_d;
         }
         if (param0 != -81) {
           return (String) null;
         }
         if (!sb.field_i.a(255, "commonui")) {
-          return ij.field_a + " - " + sb.field_i.b(param0 + 10542, "commonui") + "%";
+          return ij.field_a + " - " + sb.field_i.getGroupLoadPercentByName(param0 + 10542, "commonui") + "%";
         }
-        if (!ig.field_t.a(0)) {
+        if (!ig.field_t.ensureIndexLoaded(0)) {
           return ia.field_b;
         }
-        if (!ig.field_t.c((byte) 68)) {
+        if (!ig.field_t.tryLoadAllGroups((byte) 68)) {
           return PcmOutputWorker.field_a + " - " + ig.field_t.d((byte) 95) + "%";
         }
         return tl.field_J;

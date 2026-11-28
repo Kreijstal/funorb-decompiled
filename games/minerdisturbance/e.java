@@ -18,7 +18,7 @@ final class e extends cb {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 87 / ((param0 + 43) / 60);
-          stackIn_1_0 = hb.field_e.a(param1, 0, "");
+          stackIn_1_0 = hb.field_e.getFileByName(param1, 0, "");
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

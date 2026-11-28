@@ -115,7 +115,7 @@ final class pk extends ql {
             var4 = new byte[var3_int];
             var5 = 85 % ((71 - param1) / 43);
             param2.field_i = param2.field_i + fj.field_Tb.a(0, param2.field_n, param2.field_i, 17112, var3_int, var4);
-            var6 = db.a(var4, 0, (byte) -120, var3_int);
+            var6 = db.decodeCp1252String(var4, 0, (byte) -120, var3_int);
             stackIn_4_0 = var6;
             return stackIn_4_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

@@ -27,7 +27,7 @@ final class hp extends IntrusiveNode {
         }
     }
 
-    final static ef a(db param0, int param1, String param2, db param3, String param4) {
+    final static ef a(ResourceArchive param0, int param1, String param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -44,12 +44,12 @@ final class hp extends IntrusiveNode {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param3.a(param4, -1);
+          var5_int = param3.getGroupIdByName(param4, -1);
           if (param1 != 0) {
             var7 = (String) null;
-            hp.a((db) null, 9, (String) null, (db) null, (String) null);
+            hp.a((ResourceArchive) null, 9, (String) null, (ResourceArchive) null, (String) null);
           }
-          var6 = param3.a(-2862, param2, var5_int);
+          var6 = param3.getFileIdByName(-2862, param2, var5_int);
           stackIn_3_0 = pl.a(var5_int, var6, param1 ^ -11, param3, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

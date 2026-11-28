@@ -19,7 +19,7 @@ final class im extends za {
           if (param0 < 33) {
             field_e = false;
           }
-          byte[] stackIn_3_0 = q.field_q.a("", (byte) -71, param1);
+          byte[] stackIn_3_0 = q.field_q.getFileByName("", (byte) -71, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

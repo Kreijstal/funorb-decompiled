@@ -5,7 +5,7 @@ class ka extends pm {
     private double field_O;
     private oi field_I;
     static int field_P;
-    static mi field_N;
+    static ResourceArchive field_N;
     private int field_J;
     static volatile int field_L;
     double field_K;
@@ -139,7 +139,7 @@ class ka extends pm {
         }
     }
 
-    final static String a(mi param0, String param1, int param2, String param3) {
+    final static String a(ResourceArchive param0, String param1, int param2, String param3) {
         RuntimeException var4 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -152,7 +152,7 @@ class ka extends pm {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0.b(param2 + 12)) {
+          if (!param0.ensureIndexLoaded(param2 + 12)) {
             stackIn_2_0 = (String) (param1);
             return stackIn_2_0;
           }
@@ -339,7 +339,7 @@ class ka extends pm {
 
     final boolean i(int param0) {
         if (param0 != 8) {
-          field_N = (mi) null;
+          field_N = (ResourceArchive) null;
           return false;
         }
         return false;
@@ -418,7 +418,7 @@ class ka extends pm {
     final void a(kh param0, int param1) {
         try {
           if (param1 <= 122) {
-            field_N = (mi) null;
+            field_N = (ResourceArchive) null;
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ka.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

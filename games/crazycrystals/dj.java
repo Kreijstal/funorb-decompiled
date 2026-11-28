@@ -14,7 +14,7 @@ class dj extends bd {
     private RgbSprite field_U;
     private int field_s;
     private int field_Z;
-    static db field_ab;
+    static ResourceArchive field_ab;
     private int field_q;
     private int field_F;
     private RgbSprite field_J;

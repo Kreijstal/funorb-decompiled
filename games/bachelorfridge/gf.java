@@ -158,7 +158,7 @@ final class gf extends TileEffect {
         while (var4 != null) {
           var5 = param2 + (var4.field_i >> 4);
           var6 = (var4.field_q >> 4) + (-(var4.field_h >> 4) + param0);
-          var7 = vr.field_b / var4.field_s % 3;
+          var7 = ResourceArchive.field_b / var4.field_s % 3;
           var8 = this.field_g[var4.field_r][var7];
           var9 = var8.field_n >> 1;
           var10 = var8.field_o >> 1;

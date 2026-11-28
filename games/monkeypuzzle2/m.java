@@ -10,7 +10,7 @@ final class m extends IntrusiveNode {
     int field_j;
     static GameApplet field_f;
 
-    final static byte a(int param0, char param1) {
+    final static byte encodeCp1252Character(int param0, char param1) {
         int var2;
         int var3;
         {

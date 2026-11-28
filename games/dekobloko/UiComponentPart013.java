@@ -428,7 +428,7 @@ final class UiComponentPart013 extends ComponentContainer implements CallbackCon
         }
     }
 
-    final static boolean computeBoolean0625(int integerArgument1, char characterArgument2) {
+    final static boolean isSupportedCp1252KeyCharacter(int integerArgument1, char characterArgument2) {
         int integerLocal1 = 0;
         char[] characterArrayLocal2 = null;
         RuntimeException runtimeExceptionLocal3 = null;

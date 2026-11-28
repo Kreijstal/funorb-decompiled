@@ -24,7 +24,7 @@ final class cd {
           if (!param3) {
             cd.a(75);
           }
-          stackIn_6_0 = ua.a(true, param4.b(param2, 12257, param1));
+          stackIn_6_0 = ua.a(true, param4.getFile(param2, 12257, param1));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

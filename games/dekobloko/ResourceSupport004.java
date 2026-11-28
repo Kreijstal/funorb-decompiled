@@ -11,7 +11,7 @@ final class ResourceSupport004 extends MixedSupport115 {
     PacketBuffer packetBufferState0007;
     byte byteState0003;
 
-    final int computeInteger0467(boolean booleanArgument1) {
+    final int getProgressPercent(boolean booleanArgument1) {
         if (booleanArgument1) {
           return -110;
         }

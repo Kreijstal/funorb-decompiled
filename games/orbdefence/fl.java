@@ -9,7 +9,7 @@ final class fl {
         field_a = (byte[][]) null;
     }
 
-    final static qg[] a(int param0, ki param1, String param2, String param3) {
+    final static qg[] a(int param0, ResourceArchive param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -28,8 +28,8 @@ final class fl {
             stackIn_2_0 = (qg[]) null;
             return stackIn_2_0;
           }
-          var4_int = param1.a(param2, 0);
-          var5 = param1.a(param3, 5187, var4_int);
+          var4_int = param1.getGroupIdByName(param2, 0);
+          var5 = param1.getFileIdByName(param3, 5187, var4_int);
           stackIn_4_0 = ei.a((byte) 97, var5, var4_int, param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -150,7 +150,7 @@ final class fe {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_f.a(param0, 0);
+          var5_int = this.field_f.getGroupIdByName(param0, 0);
           if (0 > var5_int) {
             stackIn_2_0 = null;
             return (PcmSample) (stackIn_2_0);
@@ -159,7 +159,7 @@ final class fe {
             stackIn_5_0 = (PcmSample) null;
             return stackIn_5_0;
           }
-          var6 = this.field_f.a(param2, 7, var5_int);
+          var6 = this.field_f.getFileIdByName(param2, 7, var5_int);
           if (var6 < 0) {
             return null;
           }
@@ -356,7 +356,7 @@ final class fe {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_a.a(param1, 0);
+          var5_int = this.field_a.getGroupIdByName(param1, 0);
           if (var5_int < 0) {
             stackIn_2_0 = null;
             return (PcmSample) (stackIn_2_0);
@@ -365,7 +365,7 @@ final class fe {
             var7 = (java.applet.Applet) null;
             fe.a((String) null, false, (byte) -34, (java.applet.Applet) null);
           }
-          var6 = this.field_a.a(param3, 7, var5_int);
+          var6 = this.field_a.getFileIdByName(param3, 7, var5_int);
           if (var6 >= 0) {
             stackIn_9_0 = this.a(true, var6, var5_int, param0);
             return stackIn_9_0;

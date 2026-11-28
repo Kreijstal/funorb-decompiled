@@ -485,8 +485,8 @@ final class fc {
               if (this.field_y.size(param0 + 1) != 0) {
                 mh.b(0, 100);
                 this.field_l = this.field_l + this.field_y.size(2);
-                if (th.field_l.length <= this.field_l) {
-                  this.field_l = th.field_l.length - 1;
+                if (BitPacketBuffer.field_l.length <= this.field_l) {
+                  this.field_l = BitPacketBuffer.field_l.length - 1;
                 }
                 if (this.field_l >= 3) {
                   this.a((byte) -107, 251, 4);
@@ -1147,7 +1147,7 @@ final class fc {
             stackIn_46_0 = 75 + this.field_n;
           }
           var5Lifetime3 = stackIn_46_0 * 4096 / 100;
-          th.field_l[this.field_l].a(this.field_o, this.field_V, 0, var5Lifetime3);
+          BitPacketBuffer.field_l[this.field_l].a(this.field_o, this.field_V, 0, var5Lifetime3);
         }
         var10 = (vf) (this.field_B.beginForward(true));
         while (var10 != null) {
@@ -1189,7 +1189,7 @@ final class fc {
           this.field_r = this.field_r + var2;
         }
         if (~this.field_r == ~this.field_J) {
-          th.field_o[2].e(0);
+          BitPacketBuffer.field_o[2].e(0);
         } else {
           na.a(2, true);
         }

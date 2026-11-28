@@ -274,7 +274,7 @@ final class sf {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        lh var27 = null;
+        BitPacketBuffer var27 = null;
         int var3Lifetime1;
         int var25Lifetime1;
         int var25Lifetime2;

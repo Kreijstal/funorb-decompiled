@@ -16,7 +16,7 @@ final class gh {
         field_a = null;
         if (param0 != -1) {
           byte[] var2 = (byte[]) null;
-          gh.a((byte[]) null, 100, 123, -101);
+          gh.decodeCp1252String((byte[]) null, 100, 123, -101);
         }
     }
 
@@ -32,7 +32,7 @@ final class gh {
         }
     }
 
-    final static String a(byte[] param0, int param1, int param2, int param3) {
+    final static String decodeCp1252String(byte[] param0, int param1, int param2, int param3) {
         int var6 = 0;
         int incrementValue$1 = 0;
         char[] var4 = null;

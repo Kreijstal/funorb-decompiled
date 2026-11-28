@@ -178,11 +178,11 @@ final class f extends IntrusiveNode {
               if (0 < hb.field_g) {
                 bd.field_N = true;
               }
-              nj.field_p.a((byte) -101, PcmOutputWorker.field_b);
+              nj.field_p.setCipherSeed((byte) -101, PcmOutputWorker.field_b);
               for (var9Lifetime1 = 0; 4 > var9Lifetime1; var9Lifetime1++) {
                 PcmOutputWorker.field_b[var9Lifetime1] = PcmOutputWorker.field_b[var9Lifetime1] + 50;
               }
-              dh.field_N.a((byte) -105, PcmOutputWorker.field_b);
+              dh.field_N.setCipherSeed((byte) -105, PcmOutputWorker.field_b);
               stackIn_75_0 = t.field_b;
               return stackIn_75_0;
             }

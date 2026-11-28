@@ -8,7 +8,7 @@ final class ig {
     static BufferedSocket field_e;
     static String field_d;
 
-    final static dj[] a(int param0, uc param1) {
+    final static dj[] a(int param0, BitPacketBuffer param1) {
         int var5 = 0;
         int var2_int = 0;
         int var3 = 0;
@@ -26,12 +26,12 @@ final class ig {
         RuntimeException var2 = null;
         var7 = Terraphoenix.field_V;
         try {
-          var2_int = param1.a(false, 8);
+          var2_int = param1.readBits(false, 8);
           if (0 < var2_int) {
             stackIn_3_0 = null;
             return (dj[]) (stackIn_3_0);
           }
-          var3 = param1.a(false, 12);
+          var3 = param1.readBits(false, 12);
           var4 = new dj[var3];
           if (param0 != -25831) {
             stackIn_6_0 = (dj[]) null;
@@ -39,17 +39,17 @@ final class ig {
           }
           for (var5 = 0; var3 > var5; var5++) {
             if (!DiskArchiveRequest.a(param1, (byte) 98)) {
-              var6 = param1.a(false, fb.b(2, var5 - 1));
+              var6 = param1.readBits(false, fb.b(2, var5 - 1));
               var4[var5] = var4[var6];
             } else {
               var6_ref_dj = new dj();
-              param1.a(false, 24);
-              param1.a(false, 24);
-              var6_ref_dj.field_b = param1.a(false, 24);
-              param1.a(false, 9);
-              param1.a(false, 12);
-              param1.a(false, 12);
-              param1.a(false, 12);
+              param1.readBits(false, 24);
+              param1.readBits(false, 24);
+              var6_ref_dj.field_b = param1.readBits(false, 24);
+              param1.readBits(false, 9);
+              param1.readBits(false, 12);
+              param1.readBits(false, 12);
+              param1.readBits(false, 12);
               var4[var5] = var6_ref_dj;
             }
           }
@@ -69,7 +69,7 @@ final class ig {
         }
     }
 
-    final static byte[] a(int param0, int param1, uc param2, byte[] param3) {
+    final static byte[] a(int param0, int param1, BitPacketBuffer param2, byte[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -91,7 +91,7 @@ final class ig {
             stackIn_3_0 = (byte[]) null;
             return stackIn_3_0;
           }
-          var4_int = param2.a(false, param0);
+          var4_int = param2.readBits(false, param0);
           if (var4_int == 0) {
             stackIn_6_0 = null;
             return (byte[]) (stackIn_6_0);
@@ -100,11 +100,11 @@ final class ig {
             param3.length != var4_int) {
             param3 = new byte[var4_int];
           }
-          var5 = param2.a(false, 3);
-          var6 = (byte)param2.a(false, 8);
+          var5 = param2.readBits(false, 3);
+          var6 = (byte)param2.readBits(false, 8);
           if (0 < var5) {
             for (var7 = 0; var4_int > var7; var7++) {
-              param3[var7] = (byte)(var6 + param2.a(false, var5));
+              param3[var7] = (byte)(var6 + param2.readBits(false, var5));
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {
@@ -137,11 +137,11 @@ final class ig {
         try {
           Throwable decompiledCaughtException = null;
           Throwable var2 = null;
-          uc var3 = null;
+          BitPacketBuffer var3 = null;
           try {
             if (param1 != 12) {
-              var3 = (uc) null;
-              ig.a(47, (uc) null);
+              var3 = (BitPacketBuffer) null;
+              ig.a(47, (BitPacketBuffer) null);
             }
             JavaScriptBridge.callWithArguments(dg.a(false), "resizing", new Object[]{new Integer(param0)}, 10056);
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -159,7 +159,7 @@ final class ig {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        uc var6 = null;
+        BitPacketBuffer var6 = null;
         Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -171,11 +171,11 @@ final class ig {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            var6 = (uc) null;
-            ig.a(-76, (uc) null);
+            var6 = (BitPacketBuffer) null;
+            ig.a(-76, (BitPacketBuffer) null);
           }
-          var4_int = param0.c(-1, param3);
-          var5 = param0.a(-104, var4_int, param2);
+          var4_int = param0.getGroupIdByName(-1, param3);
+          var5 = param0.getFileIdByName(-104, var4_int, param2);
           stackIn_3_0 = pb.a(var4_int, false, var5, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

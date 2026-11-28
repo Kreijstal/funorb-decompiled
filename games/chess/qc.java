@@ -19,9 +19,9 @@ final class qc {
           return var3;
         }
         if (param1 >= 32768) {
-          var4 = this.field_b.a(1, param1 & 32767, 5847);
+          var4 = this.field_b.getFile(1, param1 & 32767, 5847);
         } else {
-          var4 = this.field_g.a(1, param1, 5847);
+          var4 = this.field_g.getFile(1, param1, 5847);
         }
         if (param0 != 79) {
           return (dj) null;

@@ -81,7 +81,7 @@ final class wg extends IntrusiveNode {
         }
     }
 
-    final static boolean a(int param0, int param1, ad param2, int param3) {
+    final static boolean a(int param0, int param1, ResourceArchive param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -93,7 +93,7 @@ final class wg extends IntrusiveNode {
           if (param3 != -3) {
             field_g = (Sprite) null;
           }
-          var5 = param2.b(255, param1, param0);
+          var5 = param2.getFile(255, param1, param0);
           var4 = var5;
           if (var5 == null) {
             return false;
@@ -156,7 +156,7 @@ final class wg extends IntrusiveNode {
           Throwable var6 = null;
           RuntimeException var6_ref = null;
           String var7 = null;
-          ad var8 = null;
+          ResourceArchive var8 = null;
           String var9 = null;
           String var10 = null;
           String var7Lifetime1;
@@ -182,8 +182,8 @@ final class wg extends IntrusiveNode {
               var6 = decompiledCaughtException;
             }
             if (param3 != -26372) {
-              var8 = (ad) null;
-              wg.a(-106, -61, (ad) null, -79);
+              var8 = (ResourceArchive) null;
+              wg.a(-106, -61, (ResourceArchive) null, -79);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

@@ -160,7 +160,7 @@ final class ee extends lk {
         var2Lifetime1 = -100 / ((param0 + 13) / 37);
     }
 
-    final static wj a(db param0, String param1, byte param2, String param3) {
+    final static wj a(ResourceArchive param0, String param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -174,8 +174,8 @@ final class ee extends lk {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.a(param1, -1);
-          var5 = param0.a(-2862, param3, var4_int);
+          var4_int = param0.getGroupIdByName(param1, -1);
+          var5 = param0.getFileIdByName(-2862, param3, var4_int);
           if (param2 >= -14) {
             field_m = (RgbSprite) null;
           }
@@ -207,7 +207,7 @@ final class ee extends lk {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int getGroupRequestProgressPercent(int param0, int param1) {
         ArchiveRequest var3 = (ArchiveRequest) (this.field_g.a((long)param0, 0));
         if (param1 != 486289953) {
           this.e(-120);

@@ -422,7 +422,7 @@ final class ah {
           if (param1 != 5236) {
             field_f = (String) null;
           }
-          stackIn_3_0 = ci.field_i.a(7693, param0, "");
+          stackIn_3_0 = ci.field_i.getFileByName(7693, param0, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

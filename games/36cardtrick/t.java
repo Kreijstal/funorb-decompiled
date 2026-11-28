@@ -8,7 +8,7 @@ final class t {
     static ek field_j;
     String field_a;
     static int field_i;
-    qk field_d;
+    ResourceArchive field_d;
     static String field_e;
     String field_g;
     static long field_h;

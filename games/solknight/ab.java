@@ -304,11 +304,11 @@ abstract class ab extends GameApplet {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          if (!param0.c((byte) -121)) {
+          if (!param0.ensureIndexLoaded((byte) -121)) {
             stackIn_6_0 = (String) (param2);
             return stackIn_6_0;
           }
-          stackIn_8_0 = param1 + " - " + param0.d(-1, param3) + "%";
+          stackIn_8_0 = param1 + " - " + param0.getGroupLoadPercentByName(-1, param3) + "%";
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -429,7 +429,7 @@ abstract class ab extends GameApplet {
             WidgetContainer.a(ia.g(-92), -1);
           }
           if (var4 == 10) {
-            id.field_c.e(17, -2147483648);
+            id.field_c.writeCipheredByte(17, -2147483648);
           }
           if (param2 <= 69) {
             return 57;
@@ -448,7 +448,7 @@ abstract class ab extends GameApplet {
               if (wi.field_j.a((byte) -106)) {
                 var12 = wi.field_j.a(true);
                 if (var12 != null) {
-                  var7 = vd.a(var12.payload, 0, var12.position, 160);
+                  var7 = vd.decodeCp1252String(var12.payload, 0, var12.position, 160);
                   GameApplet.a(var7, false);
                 } else {
                   var9 = (String) null;
@@ -746,7 +746,7 @@ abstract class ab extends GameApplet {
         }
         if (kj.field_R == 2) {
           if (af.field_c != null &&
-            af.field_c.c((byte) -121)) {
+            af.field_c.ensureIndexLoaded((byte) -121)) {
             if (!af.field_c.b(param0 - 95, "")) {
               af.field_c = null;
             } else {
@@ -802,8 +802,8 @@ abstract class ab extends GameApplet {
         }
         boolean decompiledFrameRemainder0 = true;
         if (kj.field_R == 11) {
-          if (null != wc.field_b && (!wc.field_b.c((byte) -121) ||
-            !wc.field_b.b(true))) {
+          if (null != wc.field_b && (!wc.field_b.ensureIndexLoaded((byte) -121) ||
+            !wc.field_b.tryLoadAllGroups(true))) {
             a.a((byte) 102, ClientException.a(uf.field_r, wa.field_a, wc.field_b, (byte) -94), 0.0f);
             decompiledFrameRemainder0 = false;
           }
@@ -828,7 +828,7 @@ abstract class ab extends GameApplet {
           }
         }
         if (!param1 &&
-          jd.field_p) {
+          BitPacketBuffer.field_p) {
           IntrusiveDeque.a((byte) 86, dc.field_q);
           this.a(true);
           th.a((byte) -69, dc.field_q);
@@ -838,7 +838,7 @@ abstract class ab extends GameApplet {
         }
     }
 
-    final static uh a(jd param0, int param1) {
+    final static uh a(BitPacketBuffer param0, int param1) {
         int var7 = 0;
         uh stackIn_5_0 = null;
         uh stackIn_25_0 = null;
@@ -855,7 +855,7 @@ abstract class ab extends GameApplet {
         int var8 = 0;
         var8 = SolKnight.field_L ? 1 : 0;
         try {
-          var2_int = param0.d((byte) 48, 8);
+          var2_int = param0.readBits((byte) 48, 8);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
@@ -866,16 +866,16 @@ abstract class ab extends GameApplet {
           var3 = wa.a(param0, (byte) -119) ? 1 : 0;
           var4 = wa.a(param0, (byte) -114) ? 1 : 0;
           var5 = new uh();
-          var5.field_y = (short)param0.d((byte) 48, 16);
+          var5.field_y = (short)param0.readBits((byte) 48, 16);
           var5.field_n = pj.a(param1 ^ 14944, param0, 16, var5.field_n);
           var5.field_q = pj.a(-1, param0, 16, var5.field_q);
           var5.field_z = pj.a(-1, param0, 16, var5.field_z);
-          var5.field_F = (short)param0.d((byte) 48, 16);
+          var5.field_F = (short)param0.readBits((byte) 48, 16);
           var5.field_K = pj.a(-1, param0, 16, var5.field_K);
           var5.field_o = pj.a(-1, param0, 16, var5.field_o);
           var5.field_w = pj.a(-1, param0, 16, var5.field_w);
           if (var3 != 0) {
-            var5.field_b = (short)param0.d((byte) 48, 16);
+            var5.field_b = (short)param0.readBits((byte) 48, 16);
             var5.field_B = pj.a(-1, param0, 16, var5.field_B);
             var5.field_v = pj.a(-1, param0, 16, var5.field_v);
             var5.field_J = pj.a(-1, param0, 16, var5.field_J);
@@ -884,7 +884,7 @@ abstract class ab extends GameApplet {
             var5.field_g = pj.a(-1, param0, 16, var5.field_g);
           }
           if (var4 != 0) {
-            param0.d((byte) 48, 16);
+            param0.readBits((byte) 48, 16);
             var5.field_c = pj.a(param1 + 14944, param0, 16, var5.field_c);
             var5.field_H = pj.a(param1 + 14944, param0, 16, var5.field_H);
             var5.field_A = pj.a(-1, param0, 16, var5.field_A);
@@ -968,7 +968,7 @@ abstract class ab extends GameApplet {
         }
         int var4 = te.field_O - 1;
         byte[] var5 = new byte[var4];
-        te.field_N.b(70, var4, 0, var5);
+        te.field_N.readCipheredBytes(70, var4, 0, var5);
         ke.a((byte) -122, ia.g(-107), Archive.a(true, var5), var3 != 0);
     }
 

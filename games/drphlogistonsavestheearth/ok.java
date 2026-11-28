@@ -9,8 +9,8 @@ final class ok extends IntrusiveNode {
         this.field_i = null;
     }
 
-    final static ok a(vj param0, String param1, String param2) {
-        byte[] var3 = param0.a(param1, param2, 24874);
+    final static ok a(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.getFileByName(param1, param2, 24874);
         if (var3 == null) {
           return null;
         }

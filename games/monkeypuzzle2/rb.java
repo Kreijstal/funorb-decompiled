@@ -19,7 +19,7 @@ final class rb extends ii {
         }
         if (fe.field_h != 0) {
           if (ec.field_a != null) {
-            if (!ec.field_a.a(-58)) {
+            if (!ec.field_a.ensureIndexLoaded(-58)) {
               return 14;
             }
             if (!ec.field_a.b("", (byte) -102)) {
@@ -29,41 +29,41 @@ final class rb extends ii {
               return 29;
             }
           }
-          if (!fj.field_B.a(93)) {
+          if (!fj.field_B.ensureIndexLoaded(93)) {
             return 43;
           }
           if (!fj.field_B.a(0, "commonui")) {
             return 57;
           }
-          if (!hf.field_a.a(-90)) {
+          if (!hf.field_a.ensureIndexLoaded(-90)) {
             return 71;
           }
           if (!hf.field_a.a(0, "commonui")) {
             return 80;
           }
-          if (!ii.field_m.a(-47)) {
+          if (!ii.field_m.ensureIndexLoaded(-47)) {
             return 82;
           }
-          if (!ii.field_m.b(0)) {
+          if (!ii.field_m.tryLoadAllGroups(0)) {
             return 86;
           }
         } else {
-          if (!fj.field_B.a(-46)) {
+          if (!fj.field_B.ensureIndexLoaded(-46)) {
             return 20;
           }
           if (!fj.field_B.a(0, "commonui")) {
             return 40;
           }
-          if (!hf.field_a.a(-59)) {
+          if (!hf.field_a.ensureIndexLoaded(-59)) {
             return 50;
           }
           if (!hf.field_a.a(0, "commonui")) {
             return 60;
           }
-          if (!ii.field_m.a(107)) {
+          if (!ii.field_m.ensureIndexLoaded(107)) {
             return 70;
           }
-          if (!ii.field_m.b(0)) {
+          if (!ii.field_m.tryLoadAllGroups(0)) {
             return 80;
           }
         }
@@ -112,7 +112,7 @@ final class rb extends ii {
         var19 = null;
         var16 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var22 = NodeHashTableIterator.field_d.a("level" + param0, "", param1 + 49);
+          var22 = NodeHashTableIterator.field_d.getFileByName("level" + param0, "", param1 + 49);
           var18 = var22;
           var17 = var18;
           var2 = var17;

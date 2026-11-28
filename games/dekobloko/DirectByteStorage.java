@@ -44,7 +44,7 @@ final class DirectByteStorage extends ByteStorage {
           MixedSupport011.bitmapFontState0006 = (BitmapFont) ((Object) MixedSupport140.computeRenderingSupport0111727(resourceArchiveArgument3, resourceArchiveArgument1, "commonui", (byte) 110, "arezzo12"));
           GameDomainSupport003.bitmapFontState0015 = (BitmapFont) ((Object) MixedSupport140.computeRenderingSupport0111727(resourceArchiveArgument3, resourceArchiveArgument1, "commonui", (byte) 93, "arezzo14"));
           GameDomainSupport002.bitmapFontState0012 = (BitmapFont) ((Object) MixedSupport140.computeRenderingSupport0111727(resourceArchiveArgument3, resourceArchiveArgument1, "commonui", (byte) -121, "arezzo14bold"));
-          rgbSpriteLocal1 = new RgbSprite(resourceArchiveArgument2.computeByteArray0809(0, "", "button.gif"), (java.awt.Component) ((Object) GameDomainSupport004.canvasState0001));
+          rgbSpriteLocal1 = new RgbSprite(resourceArchiveArgument2.getFileByName(0, "", "button.gif"), (java.awt.Component) ((Object) GameDomainSupport004.canvasState0001));
           GameApplet.computeIndexedSprite0676("dropdown", resourceArchiveArgument1, "commonui", (byte) 73);
           indexedSpriteArrayLocal2 = UiComponentPart030.computeIndexedSpriteArray1554("screen_options", resourceArchiveArgument1, false, "commonui");
           UiComponentPart007.indexedSpriteArrayState0002 = new IndexedSprite[4];

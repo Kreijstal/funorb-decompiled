@@ -282,8 +282,8 @@ final class lh extends ik {
           }
           var2_intLifetime2 = param0.readUnsignedByte(true);
           hh.field_I = hh.field_I + (var2_intLifetime2 >> 1);
-          th.field_s = var2_intLifetime2 << 16 & 65536;
-          th.field_s = th.field_s + param0.readUnsignedShort(-1698573656);
+          BitPacketBuffer.field_s = var2_intLifetime2 << 16 & 65536;
+          BitPacketBuffer.field_s = BitPacketBuffer.field_s + param0.readUnsignedShort(-1698573656);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "lh.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

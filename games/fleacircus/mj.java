@@ -275,7 +275,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
-              ol.a((char) var2_int, -103)) {
+              ol.isSupportedCp1252KeyCharacter((char) var2_int, -103)) {
               var3 = 127 & 1 + ak.field_e;
               if (~var3 != ~tl.field_o) {
                 hj.field_b[ak.field_e] = -1;

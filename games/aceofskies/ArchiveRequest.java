@@ -26,7 +26,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         }
     }
 
-    abstract int e(int param0);
+    abstract int getProgressPercent(int param0);
 
     ArchiveRequest() {
         this.field_p = true;

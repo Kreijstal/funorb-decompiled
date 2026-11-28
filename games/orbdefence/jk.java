@@ -68,7 +68,7 @@ final class jk {
             var3 = (ee) null;
             jk.a(91, -71, (ee) null, (String) null, (ee) null, true, -102);
           }
-          stackIn_3_0 = md.field_d.a(param1, 1, "");
+          stackIn_3_0 = md.field_d.getFileByName(param1, 1, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,11 +85,11 @@ final class jk {
     }
 
     final static void a(int param0, ef param1, boolean param2) {
-        se var5 = null;
+        BitPacketBuffer var5 = null;
         int var4 = 0;
         try {
           var5 = uk.field_b;
-          var5.i(param0, -98);
+          var5.writeCipheredByte(param0, -98);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(1, -75);

@@ -591,7 +591,7 @@ final class ij extends ArchiveProvider {
         }
     }
 
-    final int a(byte param0, int param1) {
+    final int getGroupRequestProgressPercent(byte param0, int param1) {
         if (param0 < 62) {
           this.c(25);
         }

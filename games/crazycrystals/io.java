@@ -45,7 +45,7 @@ final class io extends rf {
         }
     }
 
-    final static void a(int param0, db param1, db param2) {
+    final static void a(int param0, ResourceArchive param1, ResourceArchive param2) {
         try {
           oj.field_H = param2;
           MusicPatchPcmStream.field_m = param1;

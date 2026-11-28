@@ -4,7 +4,7 @@
 final class ub {
     static qc field_b;
     static String field_d;
-    static gk field_a;
+    static ResourceArchive field_a;
     static String field_e;
     static String field_c;
 
@@ -24,7 +24,7 @@ final class ub {
         field_b = null;
     }
 
-    final static void a(byte param0, gk param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -32,7 +32,7 @@ final class ub {
           return;
         }
         try {
-          var2 = new RgbSprite(param1.b("final_frame.jpg", "", -90), (java.awt.Component) ((Object) ch.field_h));
+          var2 = new RgbSprite(param1.getFileByName("final_frame.jpg", "", -90), (java.awt.Component) ((Object) ch.field_h));
           var3 = var2.field_s;
           var4 = var2.field_q;
           wa.a(true);

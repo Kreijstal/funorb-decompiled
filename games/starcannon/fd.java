@@ -150,7 +150,7 @@ final class fd {
         field_b = null;
     }
 
-    final static short[] a(int param0, short[] param1, int param2, ia param3) {
+    final static short[] a(int param0, short[] param1, int param2, BitPacketBuffer param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -167,7 +167,7 @@ final class fd {
         RuntimeException var4 = null;
         var9 = StarCannon.field_A;
         try {
-          var4_int = param3.e(8, param0);
+          var4_int = param3.readBits(8, param0);
           if (var4_int == 0) {
             return null;
           }
@@ -175,16 +175,16 @@ final class fd {
             var4_int != param1.length) {
             param1 = new short[var4_int];
           }
-          var5 = param3.e(8, 4);
+          var5 = param3.readBits(8, 4);
           var6 = -78 / ((param2 - 34) / 53);
-          var7 = (short)param3.e(8, 16);
+          var7 = (short)param3.readBits(8, 16);
           if (var5 <= 0) {
             for (var8 = 0; var8 < var4_int; var8++) {
               param1[var8] = (short)var7;
             }
           } else {
             for (var8 = 0; var8 < var4_int; var8++) {
-              param1[var8] = (short)(param3.e(8, var5) + var7);
+              param1[var8] = (short)(param3.readBits(8, var5) + var7);
             }
           }
           stackIn_16_0 = (short[]) (param1);

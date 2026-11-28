@@ -6,7 +6,7 @@ final class rl extends IntrusiveNode {
     qd field_h;
 
     final static rl a(Archive param0, String param1, String param2) {
-        byte[] var3 = param0.a(4, param1, param2);
+        byte[] var3 = param0.getFileByName(4, param1, param2);
         if (var3 == null) {
           return null;
         }

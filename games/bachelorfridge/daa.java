@@ -6,7 +6,7 @@ final class daa extends UiComponent {
     private UiComponent field_wb;
     static volatile boolean field_vb;
 
-    final static vr c(int param0, int param1) {
+    final static ResourceArchive c(int param0, int param1) {
         int var2 = 62 % ((-2 - param0) / 55);
         return qma.a(true, 2097152, false, 1, false, param1);
     }

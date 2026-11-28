@@ -13,7 +13,7 @@ abstract class uj {
 
     abstract ArchiveIndex a(byte param0);
 
-    abstract int b(int param0, int param1);
+    abstract int getGroupRequestProgressPercent(int param0, int param1);
 
     public static void clearStaticReferences(byte param0) {
         field_e = null;

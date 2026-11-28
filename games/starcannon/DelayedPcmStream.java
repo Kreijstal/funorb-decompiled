@@ -37,7 +37,7 @@ final class DelayedPcmStream extends PcmStream {
     final static void a(int param0, int param1, int param2, qe param3, int param4, int param5, int param6, int param7, int param8, int param9, Sprite param10) {
         try {
           int var11_int = -45 / ((param5 - 9) / 47);
-          ue.field_e = param0;
+          ResourceArchive.field_e = param0;
           AccountNameAvailabilityValidator.field_k = param2;
           w.field_v = param6;
           BoundedRandomAccessFile.field_f = param9;

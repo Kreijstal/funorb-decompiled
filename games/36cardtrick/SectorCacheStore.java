@@ -131,7 +131,7 @@ final class SectorCacheStore {
             var3 = (String) null;
             SectorCacheStore.a((String) null, (byte) 7);
           }
-          stackIn_3_0 = FrameTimer.field_d.a((byte) 7, param0, "");
+          stackIn_3_0 = FrameTimer.field_d.getFileByName((byte) 7, param0, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

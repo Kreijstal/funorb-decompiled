@@ -31,7 +31,7 @@ final class AccountRequestState {
           if (!nd.a(param1, param0, -1, param3)) {
             return null;
           }
-          stackIn_4_0 = fi.a((byte) -9, param2.a(param1, 100, param3));
+          stackIn_4_0 = fi.a((byte) -9, param2.getFile(param1, 100, param3));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

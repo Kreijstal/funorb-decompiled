@@ -44,7 +44,7 @@ final class ci extends lc implements gl, rc {
         }
     }
 
-    final static void a(byte param0, gk param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         int var3 = 0;
         int var4 = 0;
         jk var5 = null;
@@ -61,7 +61,7 @@ final class ci extends lc implements gl, rc {
         int var4Lifetime1;
         var7 = Bounce.field_N;
         try {
-          var8 = new CipherPacketBuffer(param1.b("logo.fo3d", "", -88));
+          var8 = new CipherPacketBuffer(param1.getFileByName("logo.fo3d", "", -88));
           var10 = var8;
           var3 = var10.readUnsignedByte((byte) -124);
           var10.o(8);
@@ -224,7 +224,7 @@ final class ci extends lc implements gl, rc {
             }
             this.field_K = new wd(stackIn_18_3, (sk) null);
             if (this.field_C) {
-              this.field_H = new wd(gk.field_m, (sk) (this));
+              this.field_H = new wd(ResourceArchive.field_m, (sk) (this));
             }
           }
           this.field_I.field_j = (fc) ((Object) new tc(10000536));
@@ -415,11 +415,11 @@ final class ci extends lc implements gl, rc {
     }
 
     final static boolean k(int param0) {
-        gk var2;
+        ResourceArchive var2;
         boolean stackIn_9_0 = false;
         if (param0 != -31077) {
-          var2 = (gk) null;
-          ci.a((byte) -62, (gk) null);
+          var2 = (ResourceArchive) null;
+          ci.a((byte) -62, (ResourceArchive) null);
         }
         boolean decompiledFrameRemainder0 = true;
         if (sa.field_k >= 20 &&

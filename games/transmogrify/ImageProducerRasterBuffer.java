@@ -12,7 +12,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
     }
 
-    final static String a(String param0, ci param1, int param2, String param3, int param4) {
+    final static String a(String param0, ResourceArchive param1, int param2, String param3, int param4) {
         RuntimeException var5 = null;
         int[] var6 = null;
         String stackIn_4_0 = null;
@@ -30,8 +30,8 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             var6 = (int[]) null;
             ImageProducerRasterBuffer.a(61, 83, (byte) 125, 103, 62, -127, (int[]) null, -45);
           }
-          if (param1.a((byte) -127)) {
-            stackIn_6_0 = param0 + " - " + param1.a(true, param2) + "%";
+          if (param1.ensureIndexLoaded((byte) -127)) {
+            stackIn_6_0 = param0 + " - " + param1.getGroupLoadPercent(true, param2) + "%";
             return stackIn_6_0;
           }
           stackIn_4_0 = (String) (param3);

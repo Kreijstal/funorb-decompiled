@@ -29,7 +29,7 @@ final class mg {
           var3 = 0;
           var4 = -64 % ((-22 - param1) / 51);
           for (var5 = 0; var2_int > var5; var5++) {
-            var3 = f.a(param0.charAt(var5), -8483) + ((var3 << 5) - var3);
+            var3 = f.encodeCp1252Character(param0.charAt(var5), -8483) + ((var3 << 5) - var3);
           }
           stackIn_5_0 = var3;
           return stackIn_5_0;

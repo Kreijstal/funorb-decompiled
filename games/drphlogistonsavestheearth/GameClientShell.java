@@ -158,7 +158,7 @@ abstract class GameClientShell extends GameAppletShell {
         }
         if (hj.field_f == 2) {
           if (null != DiskArchiveRequest.field_I &&
-            DiskArchiveRequest.field_I.a(0)) {
+            DiskArchiveRequest.field_I.ensureIndexLoaded(0)) {
             if (DiskArchiveRequest.field_I.a((byte) 12, "")) {
               if (DiskArchiveRequest.field_I.a(255, "")) {
                 LoginMenuScreen.a(7, DiskArchiveRequest.field_I);
@@ -211,8 +211,8 @@ abstract class GameClientShell extends GameAppletShell {
         }
         boolean decompiledFrameRemainder0 = true;
         if (hj.field_f == 11) {
-          if (df.field_m != null && (!df.field_m.a(0) ||
-            !df.field_m.c((byte) 126))) {
+          if (df.field_m != null && (!df.field_m.ensureIndexLoaded(0) ||
+            !df.field_m.tryLoadAllGroups((byte) 126))) {
             we.a(kl.a(mi.field_d, df.field_m, 27867, dh.field_J), -125, 0.0f);
             decompiledFrameRemainder0 = false;
           }
@@ -615,7 +615,7 @@ abstract class GameClientShell extends GameAppletShell {
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var4 = gf.field_C - 1;
         byte[] var5 = new byte[var4];
-        dh.field_N.a(var4, 0, var5, (byte) -118);
+        dh.field_N.readCipheredBytes(var4, 0, var5, (byte) -118);
         wa.a(mj.a((byte) 127, var5), var3 != 0, nb.a(89), (byte) 9);
     }
 
@@ -725,7 +725,7 @@ abstract class GameClientShell extends GameAppletShell {
             al.a(nb.a(param2 + 107), 75);
           }
           if (var4 == 10) {
-            nj.field_p.d(17, -18392);
+            nj.field_p.writeCipheredByte(17, -18392);
           }
           if (var4 == 11) {
             bf.a(63, nb.a(param2 - 75));
@@ -744,7 +744,7 @@ abstract class GameClientShell extends GameAppletShell {
                   var9 = (String) null;
                   cb.a((String) null, true);
                 } else {
-                  var7 = p.a(var12.position, (byte) 79, var12.payload, 0);
+                  var7 = p.decodeCp1252String(var12.position, (byte) 79, var12.payload, 0);
                   cb.a(var7, true);
                 }
                 al.field_e = null;

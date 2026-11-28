@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ta {
-    private ue field_b;
+    private ResourceArchive field_b;
     private gd field_f;
     static String field_a;
     static String field_c;
     static String field_d;
     static int field_e;
-    private ue field_h;
+    private ResourceArchive field_h;
     static String field_g;
 
     public static void resetStaticState(int param0) {
@@ -34,9 +34,9 @@ final class ta {
           return var3;
         }
         if (param1 >= ~param0) {
-          var4 = this.field_h.a(1, true, 32767 & param0);
+          var4 = this.field_h.getFile(1, true, 32767 & param0);
         } else {
-          var4 = this.field_b.a(1, true, param0);
+          var4 = this.field_b.getFile(1, true, param0);
         }
         var3Lifetime1 = new ff();
         if (var4 != null) {

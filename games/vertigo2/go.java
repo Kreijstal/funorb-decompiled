@@ -118,11 +118,11 @@ final class go {
     }
 
     private go(Archive param0, int param1, String param2) {
-        this(param0, param1, param0.a(param1, param2, 111));
+        this(param0, param1, param0.getFileIdByName(param1, param2, 111));
     }
 
     go(Archive param0, String param1, String param2) {
-        this(param0, param0.a((byte) 122, param1), param2);
+        this(param0, param0.getGroupIdByName((byte) 122, param1), param2);
     }
 
     private final void a(int param0, PacketBuffer param1, byte param2) {
@@ -267,7 +267,7 @@ final class go {
         this.field_b = -1;
         try {
           this.field_a = true;
-          var11 = param0.a(param1, param2, (byte) -79);
+          var11 = param0.getFile(param1, param2, (byte) -79);
           var10 = var11;
           var9 = var10;
           var4 = var9;

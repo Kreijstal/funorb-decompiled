@@ -148,7 +148,7 @@ final class pi extends TileEffect {
         return false;
     }
 
-    final static Sprite[] a(vr param0, int param1, String param2, String param3) {
+    final static Sprite[] a(ResourceArchive param0, int param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -165,8 +165,8 @@ final class pi extends TileEffect {
           if (param1 != -8845) {
             field_h = (String) null;
           }
-          var4_int = param0.a(param2, false);
-          var5 = param0.a((byte) 6, var4_int, param3);
+          var4_int = param0.getGroupId(param2, false);
+          var5 = param0.getFileId((byte) 6, var4_int, param3);
           stackIn_3_0 = ImageProducerRasterBuffer.a(var5, param1 ^ -8947, param0, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

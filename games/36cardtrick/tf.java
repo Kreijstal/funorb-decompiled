@@ -109,7 +109,7 @@ final class tf extends pd {
           sa.a(param3 ^ -123);
           if (param2.field_E > 0 &&
             null != param2.field_D) {
-            se.e((byte) 124);
+            se.clearModelFaceGroupCounts((byte) 124);
           }
           ol.field_X = 0;
           var8 = 0;

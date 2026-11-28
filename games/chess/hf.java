@@ -117,7 +117,7 @@ final class hf {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        nk var5 = null;
+        BitPacketBuffer var5 = null;
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param2);
@@ -151,7 +151,7 @@ final class hf {
             return stackIn_26_0;
           }
           var5 = qn.field_U;
-          var5.f(param0, -88);
+          var5.writeCipheredByte(param0, -88);
           var5.position = var5.position + 1;
           var4 = var5.position;
           if (param1 <= 72) {

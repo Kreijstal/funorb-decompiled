@@ -45,8 +45,8 @@ final class SecondaryNodeDequeIterator implements Iterator {
     }
 
     final static void a(int param0, byte param1) {
-        nk var2 = qn.field_U;
-        var2.f(param0, -95);
+        BitPacketBuffer var2 = qn.field_U;
+        var2.writeCipheredByte(param0, -95);
         int var3 = 60 / ((-20 - param1) / 47);
         var2.writeByte(1, (byte) 69);
         var2.writeByte(1, (byte) 122);

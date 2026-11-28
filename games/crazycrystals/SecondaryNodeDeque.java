@@ -7,7 +7,7 @@ final class SecondaryNodeDeque implements Iterable {
     static String field_b;
     static int field_c;
     DualLinkNode sentinel;
-    static db field_e;
+    static ResourceArchive field_e;
     static am field_d;
     static String field_a;
 

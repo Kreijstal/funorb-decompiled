@@ -41,7 +41,7 @@ class fk extends kb {
         return ej.field_a;
     }
 
-    final static void a(boolean param0, sh param1, byte param2, sh param3, sh param4) {
+    final static void a(boolean param0, ResourceArchive param1, byte param2, ResourceArchive param3, ResourceArchive param4) {
         try {
           qa.field_c = AccountServiceResult.a((byte) -63, "");
           qa.field_c.a((byte) 121, false);

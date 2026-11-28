@@ -28,7 +28,7 @@ final class ai {
         Object var23 = null;
         if (me.field_a == null) {
           if (param1 != 3) {
-            ai.a((byte) 43, '�');
+            ai.encodeCp1252Character((byte) 43, '�');
             return;
           }
           return;
@@ -38,7 +38,7 @@ final class ai {
           if (param1 == 3) {
             return;
           }
-          ai.a((byte) 43, '�');
+          ai.encodeCp1252Character((byte) 43, '�');
           return;
         }
         if (var3 == 2 &&
@@ -47,7 +47,7 @@ final class ai {
             pk.field_b = -1;
             me.field_a = null;
             if (param1 != 3) {
-              ai.a((byte) 43, '�');
+              ai.encodeCp1252Character((byte) 43, '�');
               return;
             }
             return;
@@ -77,7 +77,7 @@ final class ai {
             pk.field_b = -1;
             me.field_a = null;
             if (param1 != 3) {
-              ai.a((byte) 43, '�');
+              ai.encodeCp1252Character((byte) 43, '�');
               return;
             }
             return;
@@ -86,12 +86,12 @@ final class ai {
         pk.field_b = -1;
         me.field_a = null;
         if (param1 != 3) {
-          ai.a((byte) 43, '�');
+          ai.encodeCp1252Character((byte) 43, '�');
           return;
         }
     }
 
-    final static byte a(byte param0, char param1) {
+    final static byte encodeCp1252Character(byte param0, char param1) {
         int var2;
         int var3;
         var3 = Chess.field_G;

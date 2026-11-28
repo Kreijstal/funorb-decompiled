@@ -232,7 +232,7 @@ class rl extends kf {
           if (!(this.field_i instanceof ub)) {
             return false;
           }
-          var8_int = ((ub) ((Object) this.field_i)).a((w) (this), param4, 9, param5, bk.field_b, sh.field_e);
+          var8_int = ((ub) ((Object) this.field_i)).a((w) (this), param4, 9, param5, bk.field_b, ResourceArchive.field_e);
           if (-1 != var8_int) {
             stackIn_6_1 = var8_int;
           } else {
@@ -440,7 +440,7 @@ class rl extends kf {
           if (this.field_h == 1) {
             if (this.field_i instanceof ub) {
               var5 = (ub) ((Object) this.field_i);
-              var6 = var5.a((w) (this), param2, 9, param3, bk.field_b, sh.field_e);
+              var6 = var5.a((w) (this), param2, 9, param3, bk.field_b, ResourceArchive.field_e);
               if (var6 != -1) {
                 if (this.field_K &&
                   var6 < this.field_L &&

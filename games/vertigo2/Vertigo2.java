@@ -447,12 +447,12 @@ public final class Vertigo2 extends GameShell {
 
     private final void loadBackgroundImages(byte param0) {
         AccountRequestState.a(11579, nn.field_y);
-        Sprite var7 = new Sprite(nn.field_y.a("", "nebula_2_v2.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
+        Sprite var7 = new Sprite(nn.field_y.getFileByName("", "nebula_2_v2.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
         Sprite var8 = var7;
-        Sprite var3 = new Sprite(nn.field_y.a("", "nebula_1.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
-        Sprite var4 = new Sprite(nn.field_y.a("", "planet_1.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
-        Sprite var5 = new Sprite(nn.field_y.a("", "stars.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
-        Sprite var6 = new Sprite(nn.field_y.a("", "asteroids.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
+        Sprite var3 = new Sprite(nn.field_y.getFileByName("", "nebula_1.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
+        Sprite var4 = new Sprite(nn.field_y.getFileByName("", "planet_1.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
+        Sprite var5 = new Sprite(nn.field_y.getFileByName("", "stars.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
+        Sprite var6 = new Sprite(nn.field_y.getFileByName("", "asteroids.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
         qr.field_l = new rp(true, new Sprite[]{var7, var3, var4, var5, var7.c(), var6});
         ue.field_N = new Sprite(640, 480);
         ue.field_N.d();
@@ -1496,7 +1496,7 @@ public final class Vertigo2 extends GameShell {
             if (null != gi.field_p) {
               ProxySocketConnector.a(false, 98.0f, fa.field_v);
               this.d(-17);
-              AccountServiceResult.a(new HuffmanCodec(gi.field_p.a("", "huffman", 0)), (byte) 98);
+              AccountServiceResult.a(new HuffmanCodec(gi.field_p.getFileByName("", "huffman", 0)), (byte) 98);
               gi.field_p = null;
               di.b((byte) 126);
               return false;
@@ -1521,60 +1521,60 @@ public final class Vertigo2 extends GameShell {
             ng.a(-10236);
             return true;
           }
-          if (ml.field_y.b(0) &&
+          if (ml.field_y.ensureIndexLoaded(0) &&
             ml.field_y.c("basic", 0)) {
             if (!ml.field_y.c("roman20", param0 ^ 16777215)) {
               ProxySocketConnector.a(false, 4.0f, gr.a(vc.field_a, (byte) 66, ml.field_y, vd.field_c, "roman20"));
               return false;
             }
-            if (ac.field_G.b(0) &&
+            if (ac.field_G.ensureIndexLoaded(0) &&
               ac.field_G.c("roman20", 0)) {
               if (!ml.field_y.c("kartika13", 0)) {
                 ProxySocketConnector.a(false, 6.0f, gr.a(vc.field_a, (byte) 103, ml.field_y, vd.field_c, "kartika13"));
                 return false;
               }
-              if (ac.field_G.b(param0 ^ 16777215) &&
+              if (ac.field_G.ensureIndexLoaded(param0 ^ 16777215) &&
                 ac.field_G.c("kartika13", 0)) {
                 if (!ml.field_y.c("comic20", param0 ^ 16777215)) {
                   ProxySocketConnector.a(false, 8.0f, gr.a(vc.field_a, (byte) 47, ml.field_y, vd.field_c, "comic20"));
                   return false;
                 }
-                if (ac.field_G.b(param0 ^ 16777215) &&
+                if (ac.field_G.ensureIndexLoaded(param0 ^ 16777215) &&
                   ac.field_G.c("comic20", param0 ^ 16777215)) {
-                  if (ml.field_y.b(0) &&
+                  if (ml.field_y.ensureIndexLoaded(0) &&
                     ml.field_y.c("lobby", 0)) {
-                    if (ac.field_G.b(0) &&
+                    if (ac.field_G.ensureIndexLoaded(0) &&
                       ac.field_G.c("lobby", 0)) {
-                      if (DualLinkNode.field_s.b(0) &&
+                      if (DualLinkNode.field_s.ensureIndexLoaded(0) &&
                         DualLinkNode.field_s.c("", 0)) {
-                        if (mj.field_b.b(0) &&
+                        if (mj.field_b.ensureIndexLoaded(0) &&
                           mj.field_b.c("", 0)) {
-                          if (re.field_d.b(param0 - 16777215) &&
-                            re.field_d.a((byte) -112)) {
-                            if (le.field_f.b(param0 - 16777215) &&
+                          if (re.field_d.ensureIndexLoaded(param0 - 16777215) &&
+                            re.field_d.tryLoadAllGroups((byte) -112)) {
+                            if (le.field_f.ensureIndexLoaded(param0 - 16777215) &&
                               le.field_f.c("", 0)) {
-                              if (rn.field_u.b(param0 - 16777215) &&
+                              if (rn.field_u.ensureIndexLoaded(param0 - 16777215) &&
                                 rn.field_u.c("", param0 ^ 16777215)) {
-                                if (vi.field_n.b(0) &&
+                                if (vi.field_n.ensureIndexLoaded(0) &&
                                   vi.field_n.c("", 0)) {
-                                  if (gi.field_p.b(param0 ^ 16777215) &&
+                                  if (gi.field_p.ensureIndexLoaded(param0 ^ 16777215) &&
                                     gi.field_p.c("", param0 ^ 16777215)) {
-                                    if (pp.field_s.b(param0 ^ 16777215) &&
+                                    if (pp.field_s.ensureIndexLoaded(param0 ^ 16777215) &&
                                       pp.field_s.c("", param0 ^ 16777215)) {
-                                      if (np.field_Kb.b(0) &&
-                                        np.field_Kb.a((byte) -112)) {
-                                        if (tl.field_c.b(param0 ^ 16777215) &&
-                                          tl.field_c.a((byte) -112)) {
-                                          if (ml.field_u.b(0) &&
-                                            ml.field_u.a((byte) -112)) {
-                                            if (ii.field_C.b(0) &&
-                                              ii.field_C.a((byte) -112)) {
-                                              if (hi.field_o.b(param0 - 16777215) &&
-                                                hi.field_o.a((byte) -112)) {
-                                                if (nn.field_y.b(0) &&
+                                      if (np.field_Kb.ensureIndexLoaded(0) &&
+                                        np.field_Kb.tryLoadAllGroups((byte) -112)) {
+                                        if (tl.field_c.ensureIndexLoaded(param0 ^ 16777215) &&
+                                          tl.field_c.tryLoadAllGroups((byte) -112)) {
+                                          if (ml.field_u.ensureIndexLoaded(0) &&
+                                            ml.field_u.tryLoadAllGroups((byte) -112)) {
+                                            if (ii.field_C.ensureIndexLoaded(0) &&
+                                              ii.field_C.tryLoadAllGroups((byte) -112)) {
+                                              if (hi.field_o.ensureIndexLoaded(param0 - 16777215) &&
+                                                hi.field_o.tryLoadAllGroups((byte) -112)) {
+                                                if (nn.field_y.ensureIndexLoaded(0) &&
                                                   nn.field_y.c("", 0)) {
-                                                  if (m.field_z.b(param0 ^ 16777215) &&
-                                                    m.field_z.a((byte) -112)) {
+                                                  if (m.field_z.ensureIndexLoaded(param0 ^ 16777215) &&
+                                                    m.field_z.tryLoadAllGroups((byte) -112)) {
                                                     ProxySocketConnector.a(false, 78.0f, AccountCreationResultPanel.field_sb);
                                                     if (!param1) {
                                                       return false;

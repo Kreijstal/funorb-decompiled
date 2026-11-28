@@ -11,8 +11,8 @@ final class kj {
         return new PcmSample(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
     }
 
-    final static kj a(pf param0, String param1, String param2) {
-        byte[] var3 = param0.a(param1, param2, (byte) -12);
+    final static kj a(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.getFileByName(param1, param2, (byte) -12);
         if (var3 == null) {
           return null;
         }
@@ -75,8 +75,8 @@ final class kj {
         this.field_b = param0.readUnsignedShort((byte) 116);
     }
 
-    final static kj a(pf param0, int param1, int param2) {
-        byte[] var3 = param0.a(param2, 16, param1);
+    final static kj a(ResourceArchive param0, int param1, int param2) {
+        byte[] var3 = param0.getFile(param2, 16, param1);
         if (var3 == null) {
           return null;
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nk extends PacketBuffer {
+final class BitPacketBuffer extends PacketBuffer {
     static String field_u;
     private int field_s;
     private IsaacCipher field_p;
@@ -12,14 +12,14 @@ final class nk extends PacketBuffer {
     static GameAppletShell field_w;
     static int field_q;
 
-    final void m(int param0) {
+    final void beginBitAccess(int param0) {
         this.field_s = 8 * this.position;
         if (param0 != -27123) {
           field_r = (int[][]) null;
         }
     }
 
-    final int e(int param0, int param1) {
+    final int readBits(int param0, int param1) {
         int incrementValue$0 = 0;
         int var7 = Chess.field_G;
         int var3 = this.field_s >> 3;
@@ -42,24 +42,24 @@ final class nk extends PacketBuffer {
         return var5;
     }
 
-    nk(int param0) {
+    BitPacketBuffer(int param0) {
         super(param0);
     }
 
-    final void g(byte param0) {
+    final void endBitAccess(byte param0) {
         if (param0 >= 44) {
           this.position = (7 + this.field_s) / 8;
           return;
         }
-        this.g((byte) -48);
+        this.endBitAccess((byte) -48);
         this.position = (7 + this.field_s) / 8;
     }
 
-    nk(byte[] param0) {
+    BitPacketBuffer(byte[] param0) {
         super(param0);
     }
 
-    final int n(int param0) {
+    final int readCipheredByte(int param0) {
         int fieldTemp$0 = 0;
         if (param0 < -15) {
           fieldTemp$0 = this.position;
@@ -72,18 +72,18 @@ final class nk extends PacketBuffer {
         return this.data[fieldTemp$1] - this.field_p.nextValue(-1) & 255;
     }
 
-    final void a(int[] param0, byte param1) {
+    final void setCipherSeed(int[] param0, byte param1) {
         try {
           this.field_p = new IsaacCipher(param0);
           if (param1 != -92) {
-            this.n(-19);
+            this.readCipheredByte(-19);
           }
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "nk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(int param0, byte[] param1, boolean param2, int param3) {
+    final void readCipheredBytes(int param0, byte[] param1, boolean param2, int param3) {
         int var5_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -118,7 +118,7 @@ final class nk extends PacketBuffer {
         }
     }
 
-    final static dm a(boolean param0, String param1, String param2, boolean param3) {
+    final static dm createLoginRequest(boolean param0, String param1, String param2, boolean param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
@@ -166,17 +166,17 @@ final class nk extends PacketBuffer {
         }
     }
 
-    final void f(int param0, int param1) {
+    final void writeCipheredByte(int param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.data[fieldTemp$0] = (byte)(param0 + this.field_p.nextValue(-1));
         if (param1 > -49) {
           String var4 = (String) null;
-          nk.a(true, (String) null, (String) null, true);
+          BitPacketBuffer.createLoginRequest(true, (String) null, (String) null, true);
         }
     }
 
-    public static void l(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_r = (int[][]) null;
         field_u = null;
         field_t = null;
@@ -186,7 +186,7 @@ final class nk extends PacketBuffer {
           return;
         }
         String var2 = (String) null;
-        nk.a(false, (String) null, (String) null, true);
+        BitPacketBuffer.createLoginRequest(false, (String) null, (String) null, true);
         field_x = null;
         field_v = null;
     }

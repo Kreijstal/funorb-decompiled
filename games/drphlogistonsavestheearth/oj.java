@@ -29,7 +29,7 @@ final class oj {
         field_f = null;
     }
 
-    final static byte a(byte param0, char param1) {
+    final static byte encodeCp1252Character(byte param0, char param1) {
         int var2;
         int var3;
         int var2Lifetime1;
@@ -611,7 +611,7 @@ final class oj {
         return (byte) var2Lifetime4;
     }
 
-    final static jb a(int param0, int param1, vj param2, vj param3, int param4) {
+    final static jb a(int param0, int param1, ResourceArchive param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
         jb stackIn_5_0 = null;
         jb stackIn_7_0 = null;
@@ -626,7 +626,7 @@ final class oj {
             return null;
           }
           if (param4 == 15619) {
-            stackIn_7_0 = GameClientShell.a((byte) -83, param3.a(param0, param1, (byte) 35));
+            stackIn_7_0 = GameClientShell.a((byte) -83, param3.getFile(param0, param1, (byte) 35));
             return stackIn_7_0;
           }
           stackIn_5_0 = (jb) null;

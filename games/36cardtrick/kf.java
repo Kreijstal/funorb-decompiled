@@ -106,7 +106,7 @@ final class kf extends IntrusiveNode {
         }
     }
 
-    final static ic a(qk param0, int param1, int param2, int param3, qk param4) {
+    final static ic a(ResourceArchive param0, int param1, int param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         ic stackIn_2_0 = null;
         Object stackIn_5_0 = null;
@@ -123,7 +123,7 @@ final class kf extends IntrusiveNode {
             return stackIn_2_0;
           }
           if (tc.a(param2, param3, 25479, param0)) {
-            stackIn_7_0 = pa.a(param4.a(param2, (byte) -115, param3), -1);
+            stackIn_7_0 = pa.a(param4.getFile(param2, (byte) -115, param3), -1);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;

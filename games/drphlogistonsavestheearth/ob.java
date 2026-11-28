@@ -20,7 +20,7 @@ final class ob {
         field_f = null;
     }
 
-    final static RgbSprite[] a(int param0, int param1, vj param2, int param3) {
+    final static RgbSprite[] a(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
         RgbSprite[] stackIn_6_0 = null;

@@ -89,13 +89,13 @@ final class qk extends og implements fd, vd {
         }
     }
 
-    final static db a(int param0, int param1, boolean param2, boolean param3, boolean param4, int param5) {
+    final static ResourceArchive a(int param0, int param1, boolean param2, boolean param3, boolean param4, int param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           int var8 = 0;
           ee var9 = null;
-          db stackIn_14_0 = null;
+          ResourceArchive stackIn_14_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
@@ -120,7 +120,7 @@ final class qk extends og implements fd, vd {
             if (param2) {
               var9.b((byte) 125);
             }
-            stackIn_14_0 = new db(var9, param3, param5);
+            stackIn_14_0 = new ResourceArchive(var9, param3, param5);
             return stackIn_14_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -183,7 +183,7 @@ final class qk extends og implements fd, vd {
         }
     }
 
-    final static wj[] a(boolean param0, int param1, db param2, int param3) {
+    final static wj[] a(boolean param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         wj[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;

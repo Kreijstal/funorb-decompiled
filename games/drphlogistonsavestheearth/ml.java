@@ -32,7 +32,7 @@ final class ml extends IntrusiveNode {
           var2_int = param1.length();
           var3 = 0;
           for (var4 = 0; var2_int > var4; var4++) {
-            var3 = oj.a((byte) 124, param1.charAt(var4)) + ((var3 << 5) - var3);
+            var3 = oj.encodeCp1252Character((byte) 124, param1.charAt(var4)) + ((var3 << 5) - var3);
           }
           stackIn_8_0 = var3;
           return stackIn_8_0;

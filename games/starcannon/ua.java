@@ -15,7 +15,7 @@ final class ua {
         field_b = null;
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isSupportedCp1252KeyCharacter(char param0, int param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

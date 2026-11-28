@@ -487,7 +487,7 @@ final class pk extends kj {
           nh.a(-117);
           m.b(param0);
           if (ak.a(60)) {
-            id.field_c.e(1, -2147483648);
+            id.field_c.writeCipheredByte(1, -2147483648);
             qf.a(0, 0);
           }
           je.a(param0);
@@ -498,7 +498,7 @@ final class pk extends kj {
         nh.a(-117);
         m.b(param0);
         if (ak.a(60)) {
-          id.field_c.e(1, -2147483648);
+          id.field_c.writeCipheredByte(1, -2147483648);
           qf.a(0, 0);
         }
         je.a(param0);

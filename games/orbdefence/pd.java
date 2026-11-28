@@ -19,7 +19,7 @@ final class pd extends IntrusiveNode {
     int field_i;
     int field_o;
     private int field_k;
-    static ki field_r;
+    static ResourceArchive field_r;
     int field_E;
     private int field_q;
     int field_t;
@@ -100,7 +100,7 @@ final class pd extends IntrusiveNode {
         if (!this.field_n) {
         }
         if (12 == this.field_y) {
-          SoftwareRasterizer.addRadialGlow(var4 << 4, var5 << 4, 64, 255, ki.field_f);
+          SoftwareRasterizer.addRadialGlow(var4 << 4, var5 << 4, 64, 255, ResourceArchive.field_f);
           return;
         }
         if (1 == this.field_y) {

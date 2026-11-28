@@ -124,7 +124,7 @@ final class cg extends gi {
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int getGroupRequestProgressPercent(int param0, byte param1) {
         if (param1 != -5) {
           this.b(60, true);
         }
@@ -304,7 +304,7 @@ final class cg extends gi {
         byte[] var30 = null;
         var10 = fleas.field_A ? 1 : 0;
         if (param0 != 2) {
-          this.a(-58, (byte) -93);
+          this.getGroupRequestProgressPercent(-58, (byte) -93);
         }
         var12 = (ArchiveRequest) (this.field_n.a((long)param2, -1110));
         var4 = var12;

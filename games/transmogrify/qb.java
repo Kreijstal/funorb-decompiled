@@ -112,7 +112,7 @@ final class qb implements Runnable {
             var3 = var4.getOutputStream();
             var3.write(17);
             var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_b.getFile() + "\n\n"));
-            var3.write(uk.a(14122, var5));
+            var3.write(uk.encodeCp1252Bytes(14122, var5));
             this.field_g = new DataInputStream(var4.getInputStream());
           }
           this.field_h.position = 0;

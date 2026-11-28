@@ -88,12 +88,12 @@ final class fe {
               decompiledFrameRemainder0 = (ra.field_b == ad.field_q);
               if ((decompiledFrameRemainder0) && (NetworkArchiveRequest.field_r.position == 0 &&
                 id.correctedCurrentTimeMillis(90) > ua.field_E + 10000L)) {
-                NetworkArchiveRequest.field_r.h(param1, 0);
+                NetworkArchiveRequest.field_r.writeCipheredByte(param1, 0);
               }
             } else {
               if (NetworkArchiveRequest.field_r.position == 0 &&
                 id.correctedCurrentTimeMillis(90) > ua.field_E + 10000L) {
-                NetworkArchiveRequest.field_r.h(param1, 0);
+                NetworkArchiveRequest.field_r.writeCipheredByte(param1, 0);
               }
             }
             if (decompiledFrameRemainder0) {

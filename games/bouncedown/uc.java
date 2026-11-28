@@ -193,7 +193,7 @@ final class uc extends lc implements rc {
         }
     }
 
-    final static void a(gk param0, int param1, gk param2, gk param3) {
+    final static void a(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3) {
         RgbSprite var17 = null;
         we[] var5 = null;
         we[][] var6 = null;
@@ -223,7 +223,7 @@ final class uc extends lc implements rc {
           if (param1 <= 77) {
             field_E = (lj) null;
           }
-          var17 = new RgbSprite(param3.b("button.gif", "", 124), (java.awt.Component) ((Object) ch.field_h));
+          var17 = new RgbSprite(param3.getFileByName("button.gif", "", 124), (java.awt.Component) ((Object) ch.field_h));
           s.a(param0, "dropdown", 28576, "commonui");
           var5 = ff.a("screen_options", param0, (byte) 124, "commonui");
           nh.field_R = new we[4];

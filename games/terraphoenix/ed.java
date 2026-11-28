@@ -16,7 +16,7 @@ final class ed {
         field_c = null;
     }
 
-    final static int a(int param0, byte param1, CharSequence param2, byte[] param3, int param4, int param5) {
+    final static int encodeCp1252Subsequence(int param0, byte param1, CharSequence param2, byte[] param3, int param4, int param5) {
         int var8 = 0;
         int stackIn_67_0 = 0;
         RuntimeException stackIn_70_0 = null;
@@ -181,7 +181,7 @@ final class ed {
           var5_int = param0 + param4;
           if (param3 != 52) {
             var14 = (byte[]) null;
-            ed.a(49, (byte) 110, (CharSequence) null, (byte[]) null, -127, -124);
+            ed.encodeCp1252Subsequence(49, (byte) 110, (CharSequence) null, (byte[]) null, -127, -124);
           }
           var6 = param1 + param2;
           if (param4 <= SoftwareRasterizer.field_b) {

@@ -138,27 +138,27 @@ final class jk {
           return 0;
         }
         if (0 == Slime.field_a) {
-          if (!pa.field_i.c(-102)) {
+          if (!pa.field_i.ensureIndexLoaded(-102)) {
             return 20;
           }
           if (!pa.field_i.b("commonui", false)) {
             return 40;
           }
-          if (!kg.field_b.c(108)) {
+          if (!kg.field_b.ensureIndexLoaded(108)) {
             return 50;
           }
           if (!kg.field_b.b("commonui", false)) {
             return 60;
           }
-          if (!ea.field_e.c(38)) {
+          if (!ea.field_e.ensureIndexLoaded(38)) {
             return 70;
           }
-          if (!ea.field_e.a((byte) -40)) {
+          if (!ea.field_e.tryLoadAllGroups((byte) -40)) {
             return 80;
           }
         } else {
           if (FullscreenFocusCanvas.field_a != null) {
-            if (!FullscreenFocusCanvas.field_a.c(-125)) {
+            if (!FullscreenFocusCanvas.field_a.ensureIndexLoaded(-125)) {
               return 14;
             }
             if (!FullscreenFocusCanvas.field_a.a("", (byte) -16)) {
@@ -168,22 +168,22 @@ final class jk {
               return 29;
             }
           }
-          if (!pa.field_i.c(-101)) {
+          if (!pa.field_i.ensureIndexLoaded(-101)) {
             return 43;
           }
           if (!pa.field_i.b("commonui", false)) {
             return 57;
           }
-          if (!kg.field_b.c(98)) {
+          if (!kg.field_b.ensureIndexLoaded(98)) {
             return 71;
           }
           if (!kg.field_b.b("commonui", false)) {
             return 80;
           }
-          if (!ea.field_e.c(-104)) {
+          if (!ea.field_e.ensureIndexLoaded(-104)) {
             return 82;
           }
-          if (!ea.field_e.a((byte) -114)) {
+          if (!ea.field_e.tryLoadAllGroups((byte) -114)) {
             return 86;
           }
         }

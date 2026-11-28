@@ -7,7 +7,7 @@ class WidgetContainer extends UiWidget implements e {
     static Random field_z;
     static String[] field_B;
     IntrusiveDeque children;
-    static vr field_y;
+    static ResourceArchive field_y;
 
     void a(int param0, int param1, byte param2, int param3, int param4) {
         super.a(param0, param1, param2, param3, param4);
@@ -90,7 +90,7 @@ class WidgetContainer extends UiWidget implements e {
         }
     }
 
-    final static boolean a(byte param0, vr param1) {
+    final static boolean a(byte param0, ResourceArchive param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -101,7 +101,7 @@ class WidgetContainer extends UiWidget implements e {
           if (param0 != 89) {
             field_z = (Random) null;
           }
-          stackIn_3_0 = param1.b((byte) 107);
+          stackIn_3_0 = param1.tryLoadAllGroups((byte) 107);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -177,12 +177,12 @@ class WidgetContainer extends UiWidget implements e {
         IntrusiveDequeCursor var2;
         UiWidget var3;
         int var4;
-        vr var5;
+        ResourceArchive var5;
         var4 = BachelorFridge.field_y;
         var2 = new IntrusiveDequeCursor(this.children);
         if (param0 >= -26) {
-          var5 = (vr) null;
-          WidgetContainer.a((byte) 113, (vr) null);
+          var5 = (ResourceArchive) null;
+          WidgetContainer.a((byte) 113, (ResourceArchive) null);
         }
         var3 = (UiWidget) (var2.b((byte) 106));
         while (var3 != null) {
@@ -351,7 +351,7 @@ class WidgetContainer extends UiWidget implements e {
             break;
           }
           if (param0 != 10) {
-            field_y = (vr) null;
+            field_y = (ResourceArchive) null;
           }
           var6 = param1;
           if (var6 != 80) {
@@ -480,7 +480,7 @@ class WidgetContainer extends UiWidget implements e {
           if (param1 == 13) {
             return false;
           }
-          field_y = (vr) null;
+          field_y = (ResourceArchive) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -660,7 +660,7 @@ class WidgetContainer extends UiWidget implements e {
     final void blur(int param0) {
         int var4 = BachelorFridge.field_y;
         if (param0 != 31) {
-          field_y = (vr) null;
+          field_y = (ResourceArchive) null;
         }
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         UiWidget var3 = (UiWidget) (var2.b((byte) 79));

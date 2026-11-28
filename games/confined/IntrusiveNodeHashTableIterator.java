@@ -5,7 +5,7 @@ import java.util.*;
 
 final class IntrusiveNodeHashTableIterator implements Iterator {
     private IntrusiveNode field_c;
-    static mi field_f;
+    static ResourceArchive field_f;
     static String field_d;
     private IntrusiveNode field_e;
     private int field_b;

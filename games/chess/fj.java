@@ -41,8 +41,8 @@ final class fj {
     }
 
     final static void a(int param0, int param1, int param2) {
-        nk var3 = qn.field_U;
-        var3.f(param0, -109);
+        BitPacketBuffer var3 = qn.field_U;
+        var3.writeCipheredByte(param0, -109);
         var3.writeByte(param1, (byte) -79);
         var3.writeByte(8, (byte) -113);
         var3.writeShort(param2, 116);

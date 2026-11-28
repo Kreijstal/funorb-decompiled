@@ -38,8 +38,8 @@ final class dj extends IntrusiveNode {
             stackIn_2_0 = (od[]) null;
             return stackIn_2_0;
           }
-          var4_int = param2.c(120, param3);
-          var5 = param2.a(param1, -1, var4_int);
+          var4_int = param2.getGroupIdByName(120, param3);
+          var5 = param2.getFileIdByName(param1, -1, var4_int);
           stackIn_4_0 = WidgetContainer.a(10, param2, var5, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

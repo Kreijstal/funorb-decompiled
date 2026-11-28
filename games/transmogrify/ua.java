@@ -21,7 +21,7 @@ final class ua {
         boolean stackIn_6_0 = false;
         if (param0 <= 29) {
           var2 = (String) null;
-          ua.a((ci) null, (String) null, -14, (ci) null, (String) null);
+          ua.a((ResourceArchive) null, (String) null, -14, (ResourceArchive) null, (String) null);
         }
         stackIn_6_0 = (null != nk.field_b) && (lj.field_z.a(-65));
         return stackIn_6_0;
@@ -178,7 +178,7 @@ final class ua {
         }
     }
 
-    final static hh a(ci param0, String param1, int param2, ci param3, String param4) {
+    final static hh a(ResourceArchive param0, String param1, int param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -197,8 +197,8 @@ final class ua {
           if (param2 != 32) {
             field_d = 80;
           }
-          var5_int = param0.b(80, param1);
-          var6 = param0.a(param2 ^ -33, param4, var5_int);
+          var5_int = param0.getGroupIdByName(80, param1);
+          var6 = param0.getFileIdByName(param2 ^ -33, param4, var5_int);
           stackIn_3_0 = pe.a((byte) -66, param0, var5_int, param3, var6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -107,8 +107,8 @@ abstract class hm {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = 75 % ((param2 - 67) / 55);
-          var4_int = param1.a(param3, (byte) -100);
-          var6 = param1.a(param0, (byte) -15, var4_int);
+          var4_int = param1.getGroupIdByName(param3, (byte) -100);
+          var6 = param1.getFileIdByName(param0, (byte) -15, var4_int);
           stackIn_1_0 = ji.a(param1, var4_int, -21460, var6);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

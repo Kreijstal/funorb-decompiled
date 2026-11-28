@@ -9,7 +9,7 @@ final class p {
     static String field_b;
     static String field_f;
 
-    final static RgbSprite[] a(int param0, String param1, ki param2, String param3) {
+    final static RgbSprite[] a(int param0, String param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -23,8 +23,8 @@ final class p {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.a(param1, 0);
-          var5 = param2.a(param3, param0 ^ 8804, var4_int);
+          var4_int = param2.getGroupIdByName(param1, 0);
+          var5 = param2.getFileIdByName(param3, param0 ^ 8804, var4_int);
           if (param0 != 13863) {
             field_a = -63L;
           }

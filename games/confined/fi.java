@@ -7,7 +7,7 @@ final class fi {
     static int field_a;
     static RgbSprite[] field_d;
 
-    final static void a(mi param0, int param1, boolean param2, mi param3, mi param4) {
+    final static void a(ResourceArchive param0, int param1, boolean param2, ResourceArchive param3, ResourceArchive param4) {
         try {
           fb.field_a = a.a("", -6728);
           fb.field_a.a(false, param1 + 64187);

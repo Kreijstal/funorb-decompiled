@@ -215,9 +215,9 @@ final class IsaacCipher {
         ee var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        uc var8 = null;
+        BitPacketBuffer var8 = null;
         int var9 = 0;
-        uc var10 = null;
+        BitPacketBuffer var10 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -226,10 +226,10 @@ final class IsaacCipher {
         int var4Lifetime1;
         var7 = Terraphoenix.field_V;
         try {
-          var8 = new uc(param1.a("logo.fo3d", "", -21653));
+          var8 = new BitPacketBuffer(param1.getFileByName("logo.fo3d", "", -21653));
           var10 = var8;
           var3 = var10.readUnsignedByte(-16384);
-          var10.k(-1694261224);
+          var10.beginBitAccess(-1694261224);
           qk.field_l = ig.a(-25831, var10);
           cm.field_b = new ee[var3];
           DualLinkNode.field_j = new int[var3][];
@@ -239,7 +239,7 @@ final class IsaacCipher {
           for (var4 = 0; var3 > var4; var4++) {
             cm.field_b[var4] = fc.a(11043, var8);
           }
-          var10.n(8);
+          var10.endBitAccess(8);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var9 < var3) {

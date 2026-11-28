@@ -43,28 +43,28 @@ final class te implements uj {
         }
         var1 = 78 % ((-29 - param0) / 54);
         if (0 == kb.field_c) {
-          if (!hj.field_i.a((byte) 125)) {
+          if (!hj.field_i.ensureIndexLoaded((byte) 125)) {
             return 20;
           }
           if (!hj.field_i.a(false, "commonui")) {
             return 40;
           }
-          if (!pb.field_r.a((byte) 89)) {
+          if (!pb.field_r.ensureIndexLoaded((byte) 89)) {
             return 50;
           }
           if (!pb.field_r.a(false, "commonui")) {
             return 60;
           }
-          if (!oh.field_C.a((byte) 94)) {
+          if (!oh.field_C.ensureIndexLoaded((byte) 94)) {
             return 70;
           }
-          if (oh.field_C.b(-1)) {
+          if (oh.field_C.tryLoadAllGroups(-1)) {
             return 100;
           }
           return 80;
         }
         if (null != PacketBuffer.field_r) {
-          if (!PacketBuffer.field_r.a((byte) 125)) {
+          if (!PacketBuffer.field_r.ensureIndexLoaded((byte) 125)) {
             return 14;
           }
           if (!PacketBuffer.field_r.b(false, "")) {
@@ -74,22 +74,22 @@ final class te implements uj {
             return 29;
           }
         }
-        if (!hj.field_i.a((byte) 94)) {
+        if (!hj.field_i.ensureIndexLoaded((byte) 94)) {
           return 43;
         }
         if (!hj.field_i.a(false, "commonui")) {
           return 57;
         }
-        if (!pb.field_r.a((byte) 104)) {
+        if (!pb.field_r.ensureIndexLoaded((byte) 104)) {
           return 71;
         }
         if (!pb.field_r.a(false, "commonui")) {
           return 80;
         }
-        if (!oh.field_C.a((byte) 115)) {
+        if (!oh.field_C.ensureIndexLoaded((byte) 115)) {
           return 82;
         }
-        if (oh.field_C.b(-1)) {
+        if (oh.field_C.tryLoadAllGroups(-1)) {
           return 100;
         }
         return 86;

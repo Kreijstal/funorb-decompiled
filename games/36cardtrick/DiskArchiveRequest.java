@@ -22,12 +22,12 @@ final class DiskArchiveRequest extends ArchiveRequest {
         return this.field_r;
     }
 
-    final static void a(qk param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new RgbSprite(param0.a((byte) 7, "", "final_frame.jpg"), (java.awt.Component) ((Object) tb.field_c));
+          var2 = new RgbSprite(param0.getFileByName((byte) 7, "", "final_frame.jpg"), (java.awt.Component) ((Object) tb.field_c));
           var3 = var2.field_p;
           var4 = var2.field_o;
           ji.a(true);
@@ -86,7 +86,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
             var4 = new byte[var3_int];
             var5 = 54 % ((6 - param1) / 55);
             param0.position = param0.position + qf.field_J.a(var3_int, var4, param0.payload, 0, 109, param0.position);
-            var6 = bd.a(255, 0, var4, var3_int);
+            var6 = bd.decodeCp1252String(255, 0, var4, var3_int);
             stackIn_4_0 = var6;
             return stackIn_4_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

@@ -227,14 +227,14 @@ final class NanoFrameTimer extends FrameTimer {
         field_k = null;
     }
 
-    final static void a(ci param0, byte param1) {
+    final static void a(ResourceArchive param0, byte param1) {
         ml var2 = null;
         try {
-          ml.b(param0.a("", (byte) 95, "headers.packvorbis"));
+          ml.b(param0.getFileByName("", (byte) 95, "headers.packvorbis"));
           var2 = ml.a(param0, "jagex logo2.packvorbis", "");
           if (param1 != -80) {
-            ci var3 = (ci) null;
-            NanoFrameTimer.a((ci) null, (byte) 29);
+            ResourceArchive var3 = (ResourceArchive) null;
+            NanoFrameTimer.a((ResourceArchive) null, (byte) 29);
           }
           var2.b();
         } catch (RuntimeException runtimeException) {

@@ -277,7 +277,7 @@ final class dj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            stackIn_4_0 = mk.a((byte) -24, param0, param0.length, 0);
+            stackIn_4_0 = mk.decodeCp1252String((byte) -24, param0, param0.length, 0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

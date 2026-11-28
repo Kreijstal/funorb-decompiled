@@ -179,7 +179,7 @@ final class s extends ma implements wl, mj {
         mn.field_h.writeByte(param1, (byte) -91);
         mn.field_h.writeShort(param3, 115);
         mn.field_h.applyRsa(SecondaryNodeHashTable.field_k, se.field_M, (byte) 86);
-        qn.field_U.f(18, -116);
+        qn.field_U.writeCipheredByte(18, -116);
         int fieldTemp$0 = qn.field_U.position + 1;
         qn.field_U.position = qn.field_U.position + 1;
         int var4 = fieldTemp$0;
@@ -292,7 +292,7 @@ final class s extends ma implements wl, mj {
           if (null != pd.field_Rb && (null != t.field_L ||
             uj.field_k != null ||
             null != il.field_b ||
-            null != nk.field_r)) {
+            null != BitPacketBuffer.field_r)) {
             for (var9 = 0; var9 < qa.field_e; var9++) {
               var10_int = pd.field_Rb.field_sc[var9] & 255;
               if (null != t.field_L &&
@@ -311,9 +311,9 @@ final class s extends ma implements wl, mj {
                   var6 = var11_int;
                 }
               }
-              if (nk.field_r != null &&
-                null != nk.field_r[var9]) {
-                var8 = var8 | nk.field_r[var9][var10_int];
+              if (BitPacketBuffer.field_r != null &&
+                null != BitPacketBuffer.field_r[var9]) {
+                var8 = var8 | BitPacketBuffer.field_r[var9][var10_int];
               }
               if (null != il.field_b &&
                 il.field_b[var9] != null) {
@@ -627,9 +627,9 @@ final class s extends ma implements wl, mj {
                       var29 = 1;
                     }
                   }
-                  if (null != nk.field_r &&
-                    null != nk.field_r[var27_int] &&
-                    (nk.field_r[var27_int][var28] & ~var12.field_Wb) != 0) {
+                  if (null != BitPacketBuffer.field_r &&
+                    null != BitPacketBuffer.field_r[var27_int] &&
+                    (BitPacketBuffer.field_r[var27_int][var28] & ~var12.field_Wb) != 0) {
                     var29 = 1;
                   }
                   if (var29 != 0) {
@@ -695,7 +695,7 @@ final class s extends ma implements wl, mj {
         sf.a(-122, this.field_L.field_v);
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isSupportedCp1252KeyCharacter(char param0, int param1) {
         int var3 = 0;
         char[] var2 = null;
         RuntimeException var2_ref = null;

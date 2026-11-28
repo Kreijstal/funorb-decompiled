@@ -16,7 +16,7 @@ final class nc extends UiWidget {
     boolean field_B;
     static int field_A;
     private int field_z;
-    static pf field_y;
+    static ResourceArchive field_y;
     static int field_H;
     private Sprite field_E;
 

@@ -3,7 +3,7 @@
  */
 final class aa extends kj {
     String field_gb;
-    static qk field_db;
+    static ResourceArchive field_db;
     String field_cb;
     static String field_fb;
     int field_eb;
@@ -13,15 +13,15 @@ final class aa extends kj {
     }
 
     final static void a(ad param0, int param1, int param2) {
-        w var7 = null;
-        w var8 = null;
+        BitPacketBuffer var7 = null;
+        BitPacketBuffer var8 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = Main.field_T;
         try {
           var7 = NetworkArchiveRequest.field_r;
           var8 = var7;
-          var8.h(param2, 0);
+          var8.writeCipheredByte(param2, 0);
           var8.position = var8.position + 1;
           var4 = var8.position;
           var8.writeByte(-9469, 1);

@@ -6,9 +6,9 @@ abstract class mg {
     static String field_h;
     static PcmSample field_d;
     static int field_e;
-    static db field_c;
+    static ResourceArchive field_c;
     static int field_a;
-    static db field_g;
+    static ResourceArchive field_g;
     static String field_f;
 
     abstract void a(PacketBuffer param0, byte param1);
@@ -34,7 +34,7 @@ abstract class mg {
         field_f = null;
     }
 
-    final static void a(int param0, db param1) {
+    final static void a(int param0, ResourceArchive param1) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException stackIn_14_0 = null;

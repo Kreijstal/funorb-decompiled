@@ -3,11 +3,11 @@
  */
 final class PrimaryNodeDeque {
     static String field_g;
-    static mi field_b;
+    static ResourceArchive field_b;
     IntrusiveNode sentinel;
     static e field_f;
     private IntrusiveNode iterationCursor;
-    static mi field_e;
+    static ResourceArchive field_e;
     static String field_c;
 
     final IntrusiveNode removeLast(byte param0) {
@@ -135,7 +135,7 @@ final class PrimaryNodeDeque {
         if (param0 >= 29) {
           return;
         }
-        field_b = (mi) null;
+        field_b = (ResourceArchive) null;
         return;
     }
 

@@ -61,7 +61,7 @@ final class gb {
             gb.a(-113, 32, (String) null);
           }
           while (var2_int > var4) {
-            var3 = de.a(33, param1.charAt(var4)) + (-var3 + (var3 << 5));
+            var3 = de.encodeCp1252Character(33, param1.charAt(var4)) + (-var3 + (var3 << 5));
             var4++;
           }
           stackIn_6_0 = var3;

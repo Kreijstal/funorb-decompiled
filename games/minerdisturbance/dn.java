@@ -124,7 +124,7 @@ final class dn extends IntrusiveNode {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new Sprite(param0.a("", 0, "final_frame.jpg"), (java.awt.Component) ((Object) ef.field_c));
+          var2 = new Sprite(param0.getFileByName("", 0, "final_frame.jpg"), (java.awt.Component) ((Object) ef.field_c));
           var3 = var2.field_y;
           var4 = var2.field_C;
           ti.a((byte) -4);

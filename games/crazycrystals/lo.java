@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class lo {
-    static db field_a;
+    static ResourceArchive field_a;
     static String[] field_c;
     static hp field_b;
 

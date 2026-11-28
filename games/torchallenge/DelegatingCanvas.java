@@ -63,12 +63,12 @@ final class DelegatingCanvas extends java.awt.Canvas {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param3.b(-7957)) {
+          if (!param3.ensureIndexLoaded(-7957)) {
             stackIn_3_0 = (String) (param4);
             return stackIn_3_0;
           }
           if (param0 == 256) {
-            stackIn_8_0 = param1 + " - " + param3.a(109, param2) + "%";
+            stackIn_8_0 = param1 + " - " + param3.getGroupLoadPercentByName(109, param2) + "%";
             return stackIn_8_0;
           }
           stackIn_6_0 = (String) null;

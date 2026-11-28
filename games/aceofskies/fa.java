@@ -54,7 +54,7 @@ abstract class fa {
         field_c = null;
     }
 
-    final static byte[] a(CharSequence param0, int param1) {
+    final static byte[] encodeCp1252Bytes(CharSequence param0, int param1) {
         String stackIn_73_2 = null;
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {

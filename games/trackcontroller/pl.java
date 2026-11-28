@@ -97,7 +97,7 @@ final class pl {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        la var27 = null;
+        BitPacketBuffer var27 = null;
         int var25Lifetime1;
         int var25Lifetime2;
         var26 = TrackController.field_F ? 1 : 0;

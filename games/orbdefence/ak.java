@@ -4,7 +4,7 @@
 final class ak extends jl {
     private byte[] field_A;
     private mh field_p;
-    static ki field_y;
+    static ResourceArchive field_y;
     private int field_t;
     static int field_z;
     private SectorCacheStore field_l;
@@ -389,7 +389,7 @@ final class ak extends jl {
         }
     }
 
-    final int b(int param0, int param1) {
+    final int getGroupRequestProgressPercent(int param0, int param1) {
         ArchiveRequest var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;

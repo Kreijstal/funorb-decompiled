@@ -159,7 +159,7 @@ final class ai implements Runnable {
                 var3 = var4.getOutputStream();
                 var3.write(17);
                 var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_i.getFile() + "\n\n"));
-                var3.write(sn.a(var5, 83));
+                var3.write(sn.encodeCp1252Bytes(var5, 83));
                 this.field_e = new DataInputStream(var4.getInputStream());
               }
               this.field_k.position = 0;
@@ -299,7 +299,7 @@ final class ai implements Runnable {
                 var11_ref_String = "";
               }
               tp.field_f.writeString(var11_ref_String, (byte) -23);
-              tg.a(SectorCacheStore.field_c, tp.field_f, gn.field_S, -105, lm.field_j);
+              tg.appendEncryptedLoginPayload(SectorCacheStore.field_c, tp.field_f, gn.field_S, -105, lm.field_j);
               tp.field_f.backpatchShortLength(977272835, -var10 + tp.field_f.position);
             } else {
               SectorCacheStore.field_c.position = 0;
@@ -322,7 +322,7 @@ final class ai implements Runnable {
               tp.field_f.writeByte(true, 16);
               tp.field_f.position = tp.field_f.position + 1;
               var9 = tp.field_f.position;
-              tg.a(SectorCacheStore.field_c, tp.field_f, gn.field_S, -122, lm.field_j);
+              tg.appendEncryptedLoginPayload(SectorCacheStore.field_c, tp.field_f, gn.field_S, -122, lm.field_j);
               tp.field_f.backpatchByteLength((byte) 46, tp.field_f.position - var9);
             }
             ak.a(-1, (byte) -48);

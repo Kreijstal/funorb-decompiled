@@ -37,7 +37,7 @@ final class cc extends IntrusiveNode {
         }
     }
 
-    final static he a(int param0, int param1, vj param2, int param3) {
+    final static he a(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         he stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;

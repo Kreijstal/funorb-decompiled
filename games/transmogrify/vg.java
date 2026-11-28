@@ -644,7 +644,7 @@ final class vg {
         if (param0 <= 100) {
           this.field_d = 62;
         }
-        if (ci.field_g[this.field_i]) {
+        if (ResourceArchive.field_g[this.field_i]) {
           return jk.field_x.a(true);
         }
         return fd.field_b[this.field_i];
@@ -718,7 +718,7 @@ final class vg {
           if (var3_int > 12) {
             return false;
           }
-          var4 = hj.a((byte) -125, param1);
+          var4 = BitPacketBuffer.normalizePlayerName((byte) -125, param1);
           if (var4 != null &&
             var4.length() >= 1) {
             if (!uf.a(var4.charAt(0), (byte) -56) &&
@@ -1189,7 +1189,7 @@ final class vg {
             } else {
               le.field_A.b(var9, var15, var11.field_y + var5, var10, -1);
             }
-          } else if (!ci.field_g[this.field_i]) {
+          } else if (!ResourceArchive.field_g[this.field_i]) {
             if (!param0) {
               var11.c(var9, var7 + var6 >> 1, var11.field_y + var5, var10, -1);
             } else {

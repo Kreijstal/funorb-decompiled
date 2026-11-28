@@ -52,8 +52,8 @@ final class df {
         if (param0 != 91) {
           field_d = (String[]) null;
         }
-        var1 = new RgbSprite[th.field_t];
-        for (var2 = 0; var2 < th.field_t; var2++) {
+        var1 = new RgbSprite[BitPacketBuffer.field_t];
+        for (var2 = 0; var2 < BitPacketBuffer.field_t; var2++) {
           var3 = pb.field_h[var2] * bd.field_m[var2];
           var20 = BufferedRandomAccessFile.field_f[var2];
           if (!me.field_w[var2]) {
@@ -85,7 +85,7 @@ final class df {
         field_d = null;
     }
 
-    final static RgbSprite a(String param0, String param1, sh param2, byte param3) {
+    final static RgbSprite a(String param0, String param1, ResourceArchive param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -99,11 +99,11 @@ final class df {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.c(param0, (byte) -89);
+          var4_int = param2.getGroupIdByName(param0, (byte) -89);
           if (param3 > -36) {
             df.resetStaticState(true);
           }
-          var5 = param2.a(param1, -27964, var4_int);
+          var5 = param2.getFileIdByName(param1, -27964, var4_int);
           stackIn_3_0 = CrossfadingMidiPcmStream.a(param2, var4_int, (byte) -108, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

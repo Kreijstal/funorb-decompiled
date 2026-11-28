@@ -471,7 +471,7 @@ class kl extends hf {
         }
     }
 
-    final static String a(String param0, vj param1, int param2, String param3) {
+    final static String a(String param0, ResourceArchive param1, int param2, String param3) {
         RuntimeException var4 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -484,7 +484,7 @@ class kl extends hf {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param1.a(0)) {
+          if (!param1.ensureIndexLoaded(0)) {
             stackIn_2_0 = (String) (param0);
             return stackIn_2_0;
           }

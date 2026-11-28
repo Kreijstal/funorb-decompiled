@@ -3,12 +3,12 @@
  */
 final class nh {
     private gb field_f;
-    private ki field_g;
+    private ResourceArchive field_g;
     static tl field_c;
     static String field_e;
     static int field_b;
     static String field_a;
-    private ki field_d;
+    private ResourceArchive field_d;
 
     public static void clearStaticReferences(byte param0) {
         if (param0 > -51) {
@@ -101,9 +101,9 @@ final class nh {
           return var3;
         }
         if (param1 >= 32768) {
-          var4 = this.field_g.b(1, false, 32767 & param1);
+          var4 = this.field_g.getFile(1, false, 32767 & param1);
         } else {
-          var4 = this.field_d.b(1, false, param1);
+          var4 = this.field_d.getFile(1, false, param1);
         }
         var3 = new oe();
         if (var4 != null) {

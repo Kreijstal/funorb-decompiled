@@ -5,7 +5,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     static int field_q;
     static sj field_u;
     private int field_l;
-    static db field_p;
+    static ResourceArchive field_p;
     static int[] field_k;
     static String[] field_t;
     private IsaacRandom field_r;
@@ -195,8 +195,8 @@ final class CipherPacketBuffer extends PacketBuffer {
 
     final void k(int param0) {
         if (param0 != -2321) {
-          db var3 = (db) null;
-          CipherPacketBuffer.a(6, -104, (db) null);
+          ResourceArchive var3 = (ResourceArchive) null;
+          CipherPacketBuffer.a(6, -104, (ResourceArchive) null);
           this.position = (this.field_l + 7) / 8;
           return;
         }
@@ -220,7 +220,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         super(param0);
     }
 
-    final static dk a(int param0, int param1, db param2) {
+    final static dk a(int param0, int param1, ResourceArchive param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;

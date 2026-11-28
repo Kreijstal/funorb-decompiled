@@ -76,7 +76,7 @@ final class ga {
           var2_int = param1.length();
           var3 = 0;
           for (var4 = 0; var4 < var2_int; var4++) {
-            var3 = -var3 + (var3 << 5) + ai.a((byte) -43, param1.charAt(var4));
+            var3 = -var3 + (var3 << 5) + ai.encodeCp1252Character((byte) -43, param1.charAt(var4));
           }
           if (param0 < -71) {
             stackIn_8_0 = var3;

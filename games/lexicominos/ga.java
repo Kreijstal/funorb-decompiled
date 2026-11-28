@@ -4,19 +4,19 @@
 final class ga {
     static int field_c;
     static String field_b;
-    static sh field_a;
+    static ResourceArchive field_a;
 
     final static void a(nc param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = Lexicominos.field_L ? 1 : 0;
-        th var7 = SpriteGeometry.field_q;
-        th var8 = var7;
+        BitPacketBuffer var7 = SpriteGeometry.field_q;
+        BitPacketBuffer var8 = var7;
         if (param2 <= 71) {
           return;
         }
         try {
-          var8.h(param1, 0);
+          var8.writeCipheredByte(param1, 0);
           var8.position = var8.position + 1;
           var4 = var8.position;
           var8.writeByte(1, -1);

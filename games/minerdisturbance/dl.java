@@ -48,7 +48,7 @@ final class dl {
             }
             var4 = new byte[var3_int];
             param0.position = param0.position + hf.field_q.a(param0.position, 0, var3_int, param0.payload, var4, 256);
-            var5 = ph.a((byte) 54, var3_int, var4, 0);
+            var5 = ph.decodeCp1252String((byte) 54, var3_int, var4, 0);
             if (param2 != -27898) {
               dl.b(48);
             }
@@ -91,7 +91,7 @@ final class dl {
             return (vm) (stackIn_2_0);
           }
           var5_int = 1 / ((37 - param3) / 62);
-          stackIn_4_0 = bh.a((byte) 104, param0.a(false, param2, param1));
+          stackIn_4_0 = bh.a((byte) 104, param0.getFile(false, param2, param1));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -21,7 +21,7 @@ final class id {
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        hj var8 = null;
+        BitPacketBuffer var8 = null;
         rk var9 = null;
         var7 = Transmogrify.field_A ? 1 : 0;
         var8 = WordLanguage.field_l;

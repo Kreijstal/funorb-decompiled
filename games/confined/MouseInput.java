@@ -3,7 +3,7 @@
  */
 final class MouseInput implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static int[] field_b;
-    static mi field_a;
+    static ResourceArchive field_a;
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {

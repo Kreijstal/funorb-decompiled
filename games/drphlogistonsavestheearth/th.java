@@ -231,7 +231,7 @@ final class th {
               if (!LoginMenuScreen.a(1, 5929)) {
                 return false;
               }
-              dj.field_N = dh.field_N.e((byte) 121);
+              dj.field_N = dh.field_N.readCipheredByte((byte) 121);
               dh.field_N.position = 0;
               gf.field_C = param1[dj.field_N];
             }

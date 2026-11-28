@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ve extends mg {
-    static ad field_z;
+    static ResourceArchive field_z;
     static te field_A;
     static int[][] field_x;
     static long[] field_w;

@@ -410,7 +410,7 @@ abstract class ag extends GameApplet {
         }
         if (IntrusiveDeque.field_d == 2) {
           if (kl.field_b != null &&
-            kl.field_b.b((byte) 95)) {
+            kl.field_b.ensureIndexLoaded((byte) 95)) {
             if (kl.field_b.a(-20955, "")) {
               if (kl.field_b.a("", param1 ^ 9882)) {
                 eh.a((byte) 63, kl.field_b);
@@ -464,8 +464,8 @@ abstract class ag extends GameApplet {
         }
         boolean decompiledFrameRemainder0 = true;
         if (IntrusiveDeque.field_d == 11) {
-          if (null != fb.field_g && (!fb.field_g.b((byte) 101) ||
-            !fb.field_g.a(param1 + 29742))) {
+          if (null != fb.field_g && (!fb.field_g.ensureIndexLoaded((byte) 101) ||
+            !fb.field_g.tryLoadAllGroups(param1 + 29742))) {
             ma.a(lb.a(fb.field_g, b.field_e, lb.field_L, (byte) -116), param1 ^ 13922, 0.0f);
             decompiledFrameRemainder0 = false;
           }
@@ -627,7 +627,7 @@ abstract class ag extends GameApplet {
             pa.b(ll.b(99), param0 ^ -31162);
           }
           if (var4 == 10) {
-            d.field_b.d((byte) 73, 17);
+            d.field_b.writeCipheredByte((byte) 73, 17);
           }
           if (param0 == var4) {
             wj.a(ll.b(86), 0);
@@ -643,7 +643,7 @@ abstract class ag extends GameApplet {
               if (qa.field_b.c((byte) -127)) {
                 var10 = qa.field_b.a((byte) 60);
                 if (var10 != null) {
-                  var7 = va.a(0, 107, var10.payload, var10.position);
+                  var7 = va.decodeCp1252String(0, 107, var10.payload, var10.position);
                   ci.a(var7, param0 - 11);
                 } else {
                   var8 = (String) null;
@@ -809,7 +809,7 @@ abstract class ag extends GameApplet {
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var4 = il.field_g - 1;
         byte[] var5 = new byte[var4];
-        se.field_p.b(var4, (byte) -54, var5, 0);
+        se.field_p.readCipheredBytes(var4, (byte) -54, var5, 0);
         ag.a(var3 != 0, DualLinkNode.a(127, var5), 64, ll.b(126));
     }
 

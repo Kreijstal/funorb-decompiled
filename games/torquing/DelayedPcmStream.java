@@ -16,7 +16,7 @@ final class DelayedPcmStream extends PcmStream {
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new Sprite(param1.a(-116, "", "final_frame.jpg"), (java.awt.Component) ((Object) k.field_d));
+          var2 = new Sprite(param1.getFileByName(-116, "", "final_frame.jpg"), (java.awt.Component) ((Object) k.field_d));
           var3 = var2.field_s;
           var4 = var2.field_t;
           bp.a((byte) -56);

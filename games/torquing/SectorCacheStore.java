@@ -391,8 +391,8 @@ final class SectorCacheStore {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.a(param1, param2);
-          var5 = param3.a(param0, param1 - 103, var4_int);
+          var4_int = param3.getGroupIdByName(param1, param2);
+          var5 = param3.getFileIdByName(param0, param1 - 103, var4_int);
           stackIn_1_0 = mi.a(var4_int, param3, var5, 482809644);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

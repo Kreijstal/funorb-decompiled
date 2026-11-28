@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ta {
-    static ci field_d;
+    static ResourceArchive field_d;
     String field_e;
     static String field_b;
     String field_a;

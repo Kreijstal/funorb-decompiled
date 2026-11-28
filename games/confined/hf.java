@@ -100,7 +100,7 @@ abstract class hf extends ee {
         }
     }
 
-    final static RgbSprite[] a(mi param0, int param1, byte param2, int param3) {
+    final static RgbSprite[] a(ResourceArchive param0, int param1, byte param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
         RgbSprite[] stackIn_6_0 = null;
@@ -136,8 +136,8 @@ abstract class hf extends ee {
         try {
           param1.a(param0 + 23056, this);
           if (param0 != -23154) {
-            mi var4 = (mi) null;
-            hf.a((mi) null, -38, (byte) -52, 80);
+            ResourceArchive var4 = (ResourceArchive) null;
+            hf.a((ResourceArchive) null, -38, (byte) -52, 80);
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "hf.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -159,8 +159,8 @@ abstract class hf extends ee {
         if (param0 == 50) {
           return na.field_S == wh.field_fb ? true : false;
         }
-        mi var2 = (mi) null;
-        hf.a((mi) null, -32, (byte) 16, -69);
+        ResourceArchive var2 = (ResourceArchive) null;
+        hf.a((ResourceArchive) null, -32, (byte) 16, -69);
         return na.field_S == wh.field_fb ? true : false;
     }
 

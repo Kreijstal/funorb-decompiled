@@ -115,10 +115,10 @@ abstract class ic implements w {
           if (param1 < 30) {
             return;
           }
-          var5 = (af) (pf.field_b.beginForward(-110));
+          var5 = (af) (ResourceArchive.field_b.beginForward(-110));
           while (var5 != null) {
             kg.a(param0, var5, false);
-            var5 = (af) (pf.field_b.nextForward((byte) 87));
+            var5 = (af) (ResourceArchive.field_b.nextForward((byte) 87));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

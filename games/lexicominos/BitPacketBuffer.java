@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class th extends PacketBuffer {
+final class BitPacketBuffer extends PacketBuffer {
     static int field_m;
-    static sh field_u;
-    static sh field_p;
+    static ResourceArchive field_u;
+    static ResourceArchive field_p;
     static long field_k;
     private int field_q;
     static int field_r;
@@ -14,24 +14,24 @@ final class th extends PacketBuffer {
     static RgbSprite[] field_l;
     static int field_s;
 
-    final int i(byte param0) {
+    final int readCipheredByte(byte param0) {
         int fieldTemp$0 = 0;
         if (param0 == -76) {
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           return this.payload[fieldTemp$0] - this.field_n.nextInt(0) & 255;
         }
-        field_u = (sh) null;
+        field_u = (ResourceArchive) null;
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
         return this.payload[fieldTemp$1] - this.field_n.nextInt(0) & 255;
     }
 
-    final void f(int param0) {
+    final void endBitAccess(int param0) {
         this.position = (this.field_q + 7) / param0;
     }
 
-    final static void a(byte param0, String[] param1) {
+    final static void updateOptionLists(byte param0, String[] param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -63,20 +63,20 @@ final class th extends PacketBuffer {
         }
     }
 
-    final void h(int param0, int param1) {
+    final void writeCipheredByte(int param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)(param0 + this.field_n.nextInt(param1));
     }
 
-    final void e(int param0) {
+    final void beginBitAccess(int param0) {
         if (param0 != 10) {
           return;
         }
         this.field_q = 8 * this.position;
     }
 
-    final int g(int param0, int param1) {
+    final int readBits(int param0, int param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var4 = 0;
@@ -123,11 +123,11 @@ final class th extends PacketBuffer {
         return var5Lifetime1;
     }
 
-    th(byte[] param0) {
+    BitPacketBuffer(byte[] param0) {
         super(param0);
     }
 
-    final static int a(CharSequence param0, int param1, int param2) {
+    final static int parseIntInRadix(CharSequence param0, int param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -164,7 +164,7 @@ final class th extends PacketBuffer {
         int var1 = -42 % ((-6 - param0) / 50);
     }
 
-    final void b(int param0, int param1, int param2, byte[] param3) {
+    final void readCipheredBytes(int param0, int param1, int param2, byte[] param3) {
         int var6 = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -197,7 +197,7 @@ final class th extends PacketBuffer {
         }
     }
 
-    final void a(int[] param0, int param1) {
+    final void setCipherSeed(int[] param0, int param1) {
         try {
           int var3_int = 18 / ((param1 + 36) / 50);
           this.field_n = new IsaacRandom(param0);
@@ -206,7 +206,7 @@ final class th extends PacketBuffer {
         }
     }
 
-    th(int param0) {
+    BitPacketBuffer(int param0) {
         super(param0);
     }
 

@@ -36,7 +36,7 @@ final class pc extends hl {
         try {
           vh.field_k = param1;
           wd.field_p = param2;
-          vd.a(param3, -536866817, ki.field_d);
+          vd.a(param3, -536866817, ResourceArchive.field_d);
           if (param0 != -1) {
             String var5 = (String) null;
             pc.a((String) null, false);
@@ -275,7 +275,7 @@ final class pc extends hl {
         int var6 = 0;
         int[] var7 = null;
         vb var9 = null;
-        se var10 = null;
+        BitPacketBuffer var10 = null;
         byte[] var14 = null;
         var6 = OrbDefence.field_D ? 1 : 0;
         try {

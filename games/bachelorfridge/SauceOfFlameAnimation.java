@@ -8,7 +8,7 @@ final class SauceOfFlameAnimation extends EventAnimation {
     static Sprite[] field_w;
     private SauceOfFlameEvent field_z;
 
-    final static void a(boolean param0, int param1, vr param2, vr param3, vr param4) {
+    final static void a(boolean param0, int param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4) {
         try {
           ut.field_m = MovementAnimation.a("", -203);
           if (param1 != -12472) {

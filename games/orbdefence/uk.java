@@ -4,7 +4,7 @@
 final class uk {
     static int field_c;
     static int field_a;
-    static se field_b;
+    static BitPacketBuffer field_b;
 
     public static void clearStaticReferences(boolean param0) {
         if (!param0) {
@@ -102,7 +102,7 @@ final class uk {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        se var27 = null;
+        BitPacketBuffer var27 = null;
         int var3Lifetime1;
         int var25Lifetime1;
         int var25Lifetime2;

@@ -164,7 +164,7 @@ final class rb {
           ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-120);
           return;
         }
-        th var2 = ig.field_a;
+        BitPacketBuffer var2 = ig.field_a;
         if (param0) {
           String var3 = (String) null;
           rb.a((byte) -12, (String) null);

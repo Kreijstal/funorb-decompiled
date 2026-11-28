@@ -117,7 +117,7 @@ final class gn {
         b var3 = null;
         try {
           int var2_int = 86 % ((param1 + 42) / 57);
-          b.a(param0.a("", 0, "headers.packvorbis"));
+          b.a(param0.getFileByName("", 0, "headers.packvorbis"));
           var3 = b.a(param0, "jagex logo2.packvorbis", "");
           var3.a();
         } catch (RuntimeException runtimeException) {

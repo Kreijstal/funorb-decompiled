@@ -15,7 +15,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
-              jj.a((byte) 118, (char) var2_int)) {
+              jj.isSupportedCp1252KeyCharacter((byte) 118, (char) var2_int)) {
               var3 = 127 & 1 + b.field_M;
               if (var3 != ja.field_f) {
                 CrossfadingMidiPcmStream.field_C[b.field_M] = -1;

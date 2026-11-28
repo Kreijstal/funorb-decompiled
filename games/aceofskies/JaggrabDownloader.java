@@ -109,7 +109,7 @@ final class JaggrabDownloader implements Runnable {
             OutputStream var4 = var5.getOutputStream();
             var4.write(17);
             CharSequence var6 = (CharSequence) ((Object) ("JAGGRAB " + this.field_j.getFile() + "\n\n"));
-            var4.write(fa.a(var6, 8482));
+            var4.write(fa.encodeCp1252Bytes(var6, 8482));
             this.field_g = new DataInputStream(var5.getInputStream());
           }
           this.field_a.position = 0;

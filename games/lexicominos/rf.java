@@ -192,7 +192,7 @@ final class rf {
         }
     }
 
-    final static boolean a(byte param0, char param1) {
+    final static boolean isSupportedCp1252KeyCharacter(byte param0, char param1) {
         int var3 = 0;
         char[] var2 = null;
         RuntimeException var2_ref = null;
@@ -242,10 +242,10 @@ final class rf {
         }
         long var1 = System.currentTimeMillis();
         if (!(var1 >= fh.field_g)) {
-          th.field_k = th.field_k + (fh.field_g - var1);
+          BitPacketBuffer.field_k = BitPacketBuffer.field_k + (fh.field_g - var1);
         }
         fh.field_g = var1;
-        return th.field_k + var1;
+        return BitPacketBuffer.field_k + var1;
     }
 
     final static int a(int param0, int param1) {

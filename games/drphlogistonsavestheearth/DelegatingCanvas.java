@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class DelegatingCanvas extends java.awt.Canvas {
-    static vj field_b;
+    static ResourceArchive field_b;
     private java.awt.Component delegateComponent;
     static RgbSprite field_c;
 
@@ -76,8 +76,8 @@ final class DelegatingCanvas extends java.awt.Canvas {
           RuntimeException var15 = null;
           IOException var16 = null;
           try {
-            dh.field_N = new lh(param7);
-            nj.field_p = new lh(param4);
+            dh.field_N = new BitPacketBuffer(param7);
+            nj.field_p = new BitPacketBuffer(param4);
             ci.field_W = param13;
             ei.field_o = param3;
             ArchiveRequest.field_v = param1;

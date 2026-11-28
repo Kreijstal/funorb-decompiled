@@ -111,8 +111,8 @@ final class ca extends IntrusiveNode {
             var7 = stackIn_45_0;
             jk.field_g[SecondaryNodeDeque.field_c] = var7;
             SecondaryNodeDeque.field_c = SecondaryNodeDeque.field_c + 1;
-            if (db.field_i > var7) {
-              db.field_i = var7;
+            if (ResourceArchive.field_i > var7) {
+              ResourceArchive.field_i = var7;
             }
             if (em.field_i < var7) {
               em.field_i = var7;
@@ -135,7 +135,7 @@ final class ca extends IntrusiveNode {
           }
           var7 = stackIn_32_0;
         } else {
-          db.field_i = param2;
+          ResourceArchive.field_i = param2;
           if (param2 <= uo.field_m) {
             dk.field_l[SecondaryNodeDeque.field_c] = param0;
             BufferedSocket.field_i[SecondaryNodeDeque.field_c] = param1;
@@ -163,8 +163,8 @@ final class ca extends IntrusiveNode {
         }
         jk.field_g[SecondaryNodeDeque.field_c] = var7;
         SecondaryNodeDeque.field_c = SecondaryNodeDeque.field_c + 1;
-        if (db.field_i > var7) {
-          db.field_i = var7;
+        if (ResourceArchive.field_i > var7) {
+          ResourceArchive.field_i = var7;
         }
         if (em.field_i < var7) {
           em.field_i = var7;

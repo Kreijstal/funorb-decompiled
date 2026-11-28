@@ -5,7 +5,7 @@ abstract class lk {
     static String field_b;
     static double field_a;
 
-    abstract int a(int param0, int param1);
+    abstract int getGroupRequestProgressPercent(int param0, int param1);
 
     abstract byte[] a(int param0, boolean param1);
 
@@ -16,7 +16,7 @@ abstract class lk {
         field_b = null;
     }
 
-    final static void a(db param0, byte param1) {
+    final static void a(ResourceArchive param0, byte param1) {
         int var3 = 0;
         int var4 = 0;
         jg var5 = null;
@@ -36,7 +36,7 @@ abstract class lk {
           if (param1 < 26) {
             return;
           }
-          var8 = new CipherPacketBuffer(param0.a(7693, "", "logo.fo3d"));
+          var8 = new CipherPacketBuffer(param0.getFileByName(7693, "", "logo.fo3d"));
           var10 = var8;
           var3 = var10.readUnsignedByte(255);
           var10.f((byte) 50);

@@ -14,15 +14,15 @@ final class mh {
     }
 
     final static void a(fb param0, int param1, int param2) {
-        uc var7 = null;
-        uc var8 = null;
+        BitPacketBuffer var7 = null;
+        BitPacketBuffer var8 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = Terraphoenix.field_V;
         try {
           var7 = di.field_l;
           var8 = var7;
-          var8.k(-17410, param1);
+          var8.writeCipheredByte(-17410, param1);
           var8.position = var8.position + 1;
           var4 = var8.position;
           var8.writeByte(1, -22);

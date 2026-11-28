@@ -13,7 +13,7 @@ final class dg extends IntrusiveNode {
     int[] field_v;
     static ad field_n;
 
-    final static char a(boolean param0, byte param1) {
+    final static char decodeCp1252Byte(boolean param0, byte param1) {
         int var3 = 0;
         if (param0) {
           return '\b';

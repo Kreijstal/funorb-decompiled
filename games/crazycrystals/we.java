@@ -20,11 +20,11 @@ final class we extends IntrusiveNode {
         field_l = null;
     }
 
-    final static RgbSprite[] a(String param0, String param1, db param2, boolean param3) {
+    final static RgbSprite[] a(String param0, String param1, ResourceArchive param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        db var6 = null;
+        ResourceArchive var6 = null;
         RgbSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -36,11 +36,11 @@ final class we extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3) {
-            var6 = (db) null;
-            we.a((String) null, (String) null, (db) null, true);
+            var6 = (ResourceArchive) null;
+            we.a((String) null, (String) null, (ResourceArchive) null, true);
           }
-          var4_int = param2.a(param1, -1);
-          var5 = param2.a(-2862, param0, var4_int);
+          var4_int = param2.getGroupIdByName(param1, -1);
+          var5 = param2.getFileIdByName(-2862, param0, var4_int);
           stackIn_6_0 = jo.a(!param3, var4_int, param2, var5);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -80,7 +80,7 @@ final class we extends IntrusiveNode {
           if (param1 != 1) {
             field_h = 17;
           }
-          stackIn_3_0 = ge.field_b.a(7693, param0, "");
+          stackIn_3_0 = ge.field_b.getFileByName(7693, param0, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -96,9 +96,9 @@ final class we extends IntrusiveNode {
         }
     }
 
-    final static db a(boolean param0, byte param1, boolean param2, boolean param3, int param4) {
+    final static ResourceArchive a(boolean param0, byte param1, boolean param2, boolean param3, int param4) {
         if (param1 > -38) {
-          return (db) null;
+          return (ResourceArchive) null;
         }
         return qk.a(param4, 112, param0, param3, false, !param2 ? 0 : 1);
     }

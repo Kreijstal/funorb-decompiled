@@ -15,7 +15,7 @@ final class jj {
         int var1 = 100 / ((param0 - 57) / 41);
     }
 
-    final static boolean a(byte param0, char param1) {
+    final static boolean isSupportedCp1252KeyCharacter(byte param0, char param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

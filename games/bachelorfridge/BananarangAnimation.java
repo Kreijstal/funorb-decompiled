@@ -456,7 +456,7 @@ final class BananarangAnimation extends EventAnimation {
           var6 = 64 - (var5 >> 2);
           var7 = 48 - (var5 >> 2);
           nk.a(this.screen.field_s.field_y, -(var6 >> 1) + var9.field_c + 64, -(var7 >> 1) + (var9.field_a + 24), var6, var7);
-          this.field_J.drawRotated(vr.field_b << 12, -var5 - 20 + var9.field_a, 64 + var9.field_c, -1049413117, 3072);
+          this.field_J.drawRotated(ResourceArchive.field_b << 12, -var5 - 20 + var9.field_a, 64 + var9.field_c, -1049413117, 3072);
           return;
         }
         this.field_J = (Sprite) null;
@@ -466,7 +466,7 @@ final class BananarangAnimation extends EventAnimation {
         var6Lifetime1 = 64 - (var5Lifetime1 >> 2);
         var7Lifetime1 = 48 - (var5Lifetime1 >> 2);
         nk.a(this.screen.field_s.field_y, -(var6Lifetime1 >> 1) + var8.field_c + 64, -(var7Lifetime1 >> 1) + (var8.field_a + 24), var6Lifetime1, var7Lifetime1);
-        this.field_J.drawRotated(vr.field_b << 12, -var5Lifetime1 - 20 + var8.field_a, 64 + var8.field_c, -1049413117, 3072);
+        this.field_J.drawRotated(ResourceArchive.field_b << 12, -var5Lifetime1 - 20 + var8.field_a, 64 + var8.field_c, -1049413117, 3072);
     }
 
     static {

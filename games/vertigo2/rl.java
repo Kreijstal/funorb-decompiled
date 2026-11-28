@@ -58,12 +58,12 @@ abstract class rl extends sp {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param0.a((byte) 120, param3);
+          var5_int = param0.getGroupIdByName((byte) 120, param3);
           if (param1 != 12) {
             stackIn_2_0 = (ge) null;
             return stackIn_2_0;
           }
-          var6 = param0.a(var5_int, param4, 117);
+          var6 = param0.getFileIdByName(var5_int, param4, 117);
           stackIn_4_0 = vg.a(var5_int, var6, param1 ^ -13, param0, param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

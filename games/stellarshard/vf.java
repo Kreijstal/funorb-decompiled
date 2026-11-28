@@ -4,7 +4,7 @@
 final class vf extends WidgetContainer implements oi {
     private String field_C;
     private int[] field_K;
-    static pf field_E;
+    static ResourceArchive field_E;
     static d field_L;
     static String field_D;
     private ck field_I;
@@ -34,7 +34,7 @@ final class vf extends WidgetContainer implements oi {
         this.field_J = var3;
     }
 
-    final static Sprite[] a(pf param0, byte param1, int param2, int param3) {
+    final static Sprite[] a(ResourceArchive param0, byte param1, int param2, int param3) {
         RuntimeException var4 = null;
         Sprite[] stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;

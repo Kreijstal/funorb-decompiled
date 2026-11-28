@@ -9,7 +9,7 @@ abstract class wd {
     static he[] field_f;
     static he[] field_a;
 
-    abstract int a(int param0, int param1);
+    abstract int getGroupRequestProgressPercent(int param0, int param1);
 
     abstract kh a(byte param0);
 

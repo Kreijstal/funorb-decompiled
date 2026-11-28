@@ -9,7 +9,7 @@ abstract class FrameTimer {
     static IntrusiveDeque field_c;
     static Sprite[] field_g;
     static boolean field_h;
-    static ue field_f;
+    static ResourceArchive field_f;
 
     abstract int advanceTicks(byte param0, long param1);
 

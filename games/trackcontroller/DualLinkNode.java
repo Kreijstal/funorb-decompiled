@@ -60,7 +60,7 @@ class DualLinkNode extends IntrusiveNode {
           if (param1 != -523) {
             field_i = -75;
           }
-          stackIn_3_0 = si.field_b.a("", param1 + 522, param0);
+          stackIn_3_0 = si.field_b.getFileByName("", param1 + 522, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

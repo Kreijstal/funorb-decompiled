@@ -68,11 +68,11 @@ final class s {
           if (param2 < 35) {
             s.a(66, 36, 47, 70);
           }
-          if (!param0.a(-15879)) {
+          if (!param0.ensureIndexLoaded(-15879)) {
             stackIn_5_0 = (String) (param3);
             return stackIn_5_0;
           }
-          stackIn_7_0 = param4 + " - " + param0.b(122, param1) + "%";
+          stackIn_7_0 = param4 + " - " + param0.getGroupLoadPercentByName(122, param1) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

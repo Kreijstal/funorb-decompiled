@@ -284,7 +284,7 @@ final class AccountCreationResultPanel extends uc implements jk {
         wa var5_ref_wa = null;
         int[] var6 = null;
         int var8 = 0;
-        th var10 = null;
+        BitPacketBuffer var10 = null;
         int[] var11 = null;
         int[] var12 = null;
         var8 = Lexicominos.field_L ? 1 : 0;
@@ -368,7 +368,7 @@ final class AccountCreationResultPanel extends uc implements jk {
           var1 = AccountNameAvailabilityValidator.field_l;
           synchronized (var1) {
             FrameTimer.field_b = FrameTimer.field_b + 1;
-            tj.field_h = sh.field_f;
+            tj.field_h = ResourceArchive.field_f;
             if (vg.field_b < 0) {
               var5 = 0;
               var2 = var5;
@@ -391,7 +391,7 @@ final class AccountCreationResultPanel extends uc implements jk {
             if (param0 != -7) {
               field_tb = true;
             }
-            sh.field_f = Lexicominos.field_G;
+            ResourceArchive.field_f = Lexicominos.field_G;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

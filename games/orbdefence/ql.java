@@ -70,7 +70,7 @@ final class ql {
         }
     }
 
-    final static String a(ki param0, String param1, String param2, byte param3) {
+    final static String a(ResourceArchive param0, String param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String stackIn_2_0 = null;
@@ -85,7 +85,7 @@ final class ql {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = 82 % ((-20 - param3) / 32);
-          if (param0.b(-1)) {
+          if (param0.ensureIndexLoaded(-1)) {
             stackIn_4_0 = param1 + " - " + param0.a(20147) + "%";
             return stackIn_4_0;
           }

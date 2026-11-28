@@ -21,7 +21,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
         return this.field_u;
     }
 
-    final int e(int param0) {
+    final int getProgressPercent(int param0) {
         if (param0 != 21513) {
           this.a(true);
           if (this.field_p) {

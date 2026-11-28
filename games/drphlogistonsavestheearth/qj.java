@@ -67,7 +67,7 @@ final class qj {
             }
             if (nj.field_p.position == 0 &&
               la.correctedCurrentTimeMillis(false) > 10000L + ck.field_e) {
-              nj.field_p.d(param0, param1 ^ -32408);
+              nj.field_p.writeCipheredByte(param0, param1 ^ -32408);
             }
             if (nj.field_p.position > 0) {
               try {

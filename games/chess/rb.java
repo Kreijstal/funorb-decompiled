@@ -15,7 +15,7 @@ final class rb {
         return in.field_i;
     }
 
-    final static byte[] a(byte[] param0, byte param1, nk param2, int param3) {
+    final static byte[] a(byte[] param0, byte param1, BitPacketBuffer param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -32,7 +32,7 @@ final class rb {
         RuntimeException var4 = null;
         var8 = Chess.field_G;
         try {
-          var4_int = param2.e(29, param3);
+          var4_int = param2.readBits(29, param3);
           if (var4_int == 0) {
             stackIn_3_0 = null;
             return (byte[]) (stackIn_3_0);
@@ -41,8 +41,8 @@ final class rb {
             var4_int != param0.length) {
             param0 = new byte[var4_int];
           }
-          var5 = param2.e(111, 3);
-          var6 = (byte)param2.e(-5, 8);
+          var5 = param2.readBits(111, 3);
+          var6 = (byte)param2.readBits(-5, 8);
           if (param1 > -51) {
             field_b = (lh) null;
           }
@@ -52,7 +52,7 @@ final class rb {
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {
-              param0[var7] = (byte)(var6 + param2.e(-44, var5));
+              param0[var7] = (byte)(var6 + param2.readBits(-44, var5));
             }
           }
           stackIn_18_0 = (byte[]) (param0);

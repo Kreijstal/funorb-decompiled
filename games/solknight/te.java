@@ -3,7 +3,7 @@
  */
 final class te extends si {
     static ng field_L;
-    static jd field_N;
+    static BitPacketBuffer field_N;
     static int field_O;
     int field_H;
     static String[] field_I;

@@ -63,8 +63,8 @@ final class ub {
             stackIn_2_0 = (jh) null;
             return stackIn_2_0;
           }
-          var5_int = param1.a(param0, (byte) -100);
-          var6 = param1.a(param2, (byte) -15, var5_int);
+          var5_int = param1.getGroupIdByName(param0, (byte) -100);
+          var6 = param1.getFileIdByName(param2, (byte) -15, var5_int);
           stackIn_4_0 = lb.a(param1, 5592405, var5_int, var6, param3);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

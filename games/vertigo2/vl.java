@@ -36,11 +36,11 @@ final class vl {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.a((byte) 123, param1);
+          var4_int = param2.getGroupIdByName((byte) 123, param1);
           if (param0 != 0) {
             field_b = (String) null;
           }
-          var5 = param2.a(var4_int, param3, 126);
+          var5 = param2.getFileIdByName(var4_int, param3, 126);
           stackIn_3_0 = wh.a(param2, 4080, var5, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

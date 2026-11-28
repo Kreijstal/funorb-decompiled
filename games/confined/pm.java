@@ -1105,7 +1105,7 @@ abstract class pm extends DualLinkNode {
 
     abstract void a(pm param0, int param1);
 
-    final static bm a(mi param0, String param1, String param2, byte param3) {
+    final static bm a(ResourceArchive param0, String param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -1120,8 +1120,8 @@ abstract class pm extends DualLinkNode {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.a(param3 ^ -12, param1);
-          var5 = param0.a(var4_int, param2, -91);
+          var4_int = param0.getGroupIdByName(param3 ^ -12, param1);
+          var5 = param0.getFileIdByName(var4_int, param2, -91);
           if (param3 == 112) {
             stackIn_4_0 = a.a(param0, var4_int, var5, (byte) -99);
             return stackIn_4_0;

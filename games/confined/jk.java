@@ -4,8 +4,8 @@
 final class jk {
     static od[] field_c;
     private ag field_d;
-    private mi field_a;
-    private mi field_b;
+    private ResourceArchive field_a;
+    private ResourceArchive field_b;
 
     final static void a(int param0, boolean param1) {
         try {
@@ -261,9 +261,9 @@ final class jk {
           return var3;
         }
         if (param1 < 32768) {
-          var4 = this.field_a.a((byte) -2, 1, param1);
+          var4 = this.field_a.getFile((byte) -2, 1, param1);
         } else {
-          var4 = this.field_b.a((byte) -2, 1, 32767 & param1);
+          var4 = this.field_b.getFile((byte) -2, 1, 32767 & param1);
         }
         var3 = new lb();
         if (var4 != null) {

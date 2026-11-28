@@ -104,7 +104,7 @@ final class qd {
         int var1 = 114 / ((param0 + 85) / 39);
     }
 
-    final static Sprite a(pf param0, String param1, String param2, byte param3) {
+    final static Sprite a(ResourceArchive param0, String param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -119,12 +119,12 @@ final class qd {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.b(param2, (byte) -118);
+          var4_int = param0.getGroupIdByName(param2, (byte) -118);
           if (param3 < 41) {
             var6 = (java.applet.Applet) null;
             qd.openSubscriptionPage((java.applet.Applet) null, (byte) -109);
           }
-          var5 = param0.a(var4_int, param1, (byte) -11);
+          var5 = param0.getFileIdByName(var4_int, param1, (byte) -11);
           stackIn_3_0 = vc.a(param0, var5, var4_int, -2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -229,7 +229,7 @@ final class qd {
         var11 = 0;
         if (param6 != -1) {
           var16 = (String) null;
-          qd.a((pf) null, (String) null, (String) null, (byte) 11);
+          qd.a((ResourceArchive) null, (String) null, (String) null, (byte) 11);
         }
         while (var11 < param5) {
           for (var12Lifetime1 = 0; var9 > var12Lifetime1; var12Lifetime1++) {

@@ -438,14 +438,14 @@ class eg implements ad, cf {
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2.a((byte) 127) &&
+          if (param2.ensureIndexLoaded((byte) 127) &&
             param2.a(false, "commonui")) {
-            if (param0.a((byte) 95) &&
+            if (param0.ensureIndexLoaded((byte) 95) &&
               param0.a(false, "commonui")) {
               if (param1 != 4) {
                 return false;
               }
-              if (param3.a((byte) 83) &&
+              if (param3.ensureIndexLoaded((byte) 83) &&
                 param3.a(false, "button.gif")) {
                 return true;
               }

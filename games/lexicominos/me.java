@@ -78,15 +78,15 @@ final class me extends DualLinkNode {
 
     final static void e(boolean param0) {
         int var7 = 0;
-        th stackIn_3_0 = null;
+        BitPacketBuffer stackIn_3_0 = null;
         boolean stackIn_4_1 = false;
         RuntimeException decompiledCaughtException = null;
-        th var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        th var5 = null;
+        BitPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var10 = null;
@@ -101,7 +101,7 @@ final class me extends DualLinkNode {
           var1 = ig.field_a;
           stackIn_3_0 = var1;
           stackIn_4_1 = !(param0);
-          var2 = ((th) (Object) stackIn_3_0).readUnsignedByte(stackIn_4_1);
+          var2 = ((BitPacketBuffer) (Object) stackIn_3_0).readUnsignedByte(stackIn_4_1);
           if (var2 == 0) {
             var11 = wj.b(26770);
             var16 = var11;

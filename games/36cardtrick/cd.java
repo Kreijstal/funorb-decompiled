@@ -97,22 +97,22 @@ final class cd {
         var9 = Main.field_T;
         if (param0 >= param2) {
           if (param1 > param0) {
-            w.a(SoftwareRasterizer.field_j, param6, param0, param5, true, param4, param7, param2, param1);
+            BitPacketBuffer.rasterizeClippedTriangle(SoftwareRasterizer.field_j, param6, param0, param5, true, param4, param7, param2, param1);
           } else {
             if (param1 > param2) {
-              w.a(SoftwareRasterizer.field_j, param6, param1, param5, true, param7, param4, param2, param0);
+              BitPacketBuffer.rasterizeClippedTriangle(SoftwareRasterizer.field_j, param6, param1, param5, true, param7, param4, param2, param0);
             } else {
-              w.a(SoftwareRasterizer.field_j, param6, param2, param7, true, param5, param4, param1, param0);
+              BitPacketBuffer.rasterizeClippedTriangle(SoftwareRasterizer.field_j, param6, param2, param7, true, param5, param4, param1, param0);
             }
           }
         } else {
           if (param2 < param1) {
-            w.a(SoftwareRasterizer.field_j, param6, param2, param4, true, param5, param7, param0, param1);
+            BitPacketBuffer.rasterizeClippedTriangle(SoftwareRasterizer.field_j, param6, param2, param4, true, param5, param7, param0, param1);
           } else {
             if (param0 >= param1) {
-              w.a(SoftwareRasterizer.field_j, param6, param0, param7, true, param4, param5, param1, param2);
+              BitPacketBuffer.rasterizeClippedTriangle(SoftwareRasterizer.field_j, param6, param0, param7, true, param4, param5, param1, param2);
             } else {
-              w.a(SoftwareRasterizer.field_j, param6, param1, param4, true, param7, param5, param0, param2);
+              BitPacketBuffer.rasterizeClippedTriangle(SoftwareRasterizer.field_j, param6, param1, param4, true, param7, param5, param0, param2);
             }
           }
         }

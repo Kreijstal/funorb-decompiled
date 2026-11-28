@@ -215,11 +215,11 @@ final class ha {
               if (d.field_c > 0) {
                 dg.field_F = true;
               }
-              NetworkArchiveRequest.field_r.b(kb.field_e, 8);
+              NetworkArchiveRequest.field_r.setCipherSeed(kb.field_e, 8);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 kb.field_e[var8Lifetime1] = kb.field_e[var8Lifetime1] + 50;
               }
-              rd.field_j.b(kb.field_e, 8);
+              rd.field_j.setCipherSeed(kb.field_e, 8);
               stackIn_73_0 = pd.field_l;
               return stackIn_73_0;
             }

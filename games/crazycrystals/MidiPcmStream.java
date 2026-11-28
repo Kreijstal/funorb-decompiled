@@ -836,7 +836,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean a(db param0, bn param1, rm param2, int param3, int param4) {
+    final synchronized boolean a(ResourceArchive param0, bn param1, rm param2, int param3, int param4) {
         int stackIn_21_0 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;

@@ -14,7 +14,7 @@ abstract class SpriteState extends DualLinkNode {
     static int field_o;
     int field_s;
 
-    final static void a(jd param0, byte param1) {
+    final static void a(BitPacketBuffer param0, byte param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -237,12 +237,12 @@ abstract class SpriteState extends DualLinkNode {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        jd var5 = null;
+        BitPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
-        jd var11 = null;
+        BitPacketBuffer var11 = null;
         ib var12 = null;
         bl var13 = null;
         int[] var14 = null;
@@ -345,7 +345,7 @@ abstract class SpriteState extends DualLinkNode {
         }
     }
 
-    final static char a(byte param0, boolean param1) {
+    final static char decodeCp1252Byte(byte param0, boolean param1) {
         int var3 = 0;
         if (param1) {
           field_m = (int[]) null;

@@ -418,7 +418,7 @@ final class MixedSupport063 {
         integerArrayState0111 = null;
     }
 
-    final static byte computeByte0751(char characterArgument1, byte byteArgument2) {
+    final static byte encodeCp1252Character(char characterArgument1, byte byteArgument2) {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;

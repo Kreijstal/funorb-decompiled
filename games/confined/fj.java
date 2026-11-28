@@ -7,7 +7,7 @@ class fj extends IntrusiveNode {
     int field_q;
     fe field_n;
     String field_C;
-    static mi field_u;
+    static ResourceArchive field_u;
     static String[] field_s;
     static ci field_x;
     int field_z;

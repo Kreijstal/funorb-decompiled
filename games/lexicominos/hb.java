@@ -11,7 +11,7 @@ final class hb {
         field_a = null;
     }
 
-    final static BinaryBitmapFont a(sh param0, int param1, String param2, String param3, sh param4) {
+    final static BinaryBitmapFont a(ResourceArchive param0, int param1, String param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -28,12 +28,12 @@ final class hb {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param4.c(param2, (byte) -89);
+          var5_int = param4.getGroupIdByName(param2, (byte) -89);
           if (param1 != 246) {
             stackIn_2_0 = (BinaryBitmapFont) null;
             return stackIn_2_0;
           }
-          var6 = param4.a(param3, -27964, var5_int);
+          var6 = param4.getFileIdByName(param3, -27964, var5_int);
           stackIn_4_0 = SectorCacheStore.a(var5_int, param4, (byte) -44, param0, var6);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -77,7 +77,7 @@ final class hb {
         ka.a(2);
     }
 
-    final static PalettedBitmapFont a(sh param0, String param1, String param2, sh param3, int param4) {
+    final static PalettedBitmapFont a(ResourceArchive param0, String param1, String param2, ResourceArchive param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -96,8 +96,8 @@ final class hb {
           if (param4 != -2569) {
             field_a = (char[]) null;
           }
-          var5_int = param0.c(param2, (byte) -89);
-          var6 = param0.a(param1, -27964, var5_int);
+          var5_int = param0.getGroupIdByName(param2, (byte) -89);
+          var6 = param0.getFileIdByName(param1, -27964, var5_int);
           stackIn_3_0 = hc.a((byte) 110, param0, param3, var6, var5_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

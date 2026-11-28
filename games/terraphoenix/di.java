@@ -8,7 +8,7 @@ abstract class di extends af implements pa {
     static Archive field_i;
     static int field_e;
     static String field_g;
-    static uc field_l;
+    static BitPacketBuffer field_l;
     static IndexedSprite[] field_f;
 
     final static PcmStreamMixer f(int param0) {

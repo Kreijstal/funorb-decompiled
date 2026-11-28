@@ -128,10 +128,10 @@ final class ina extends bi {
           if (this.f(var7, 78)) {
             var8Lifetime1 = 0;
             if (var7 == this.field_t) {
-              var8Lifetime1 = 96 + (via.a(vr.field_b << 6, (byte) 103) >> 11);
+              var8Lifetime1 = 96 + (via.a(ResourceArchive.field_b << 6, (byte) 103) >> 11);
             } else {
               if (var7 == this.field_p) {
-                var8Lifetime1 = (via.a(vr.field_b << 6, (byte) 83) >> 12) + 32;
+                var8Lifetime1 = (via.a(ResourceArchive.field_b << 6, (byte) 83) >> 12) + 32;
               }
             }
             if (0 != var8Lifetime1) {

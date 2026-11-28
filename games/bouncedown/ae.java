@@ -43,7 +43,7 @@ final class ae {
           var2_int = param1.length();
           var3 = 0;
           for (var4 = 0; var2_int > var4; var4++) {
-            var3 = NetworkArchiveRequest.a(param1.charAt(var4), (byte) 85) + ((var3 << 5) - var3);
+            var3 = NetworkArchiveRequest.encodeCp1252Character(param1.charAt(var4), (byte) 85) + ((var3 << 5) - var3);
           }
           if (param0 == -51764539) {
             stackIn_8_0 = var3;

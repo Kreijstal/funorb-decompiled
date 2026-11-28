@@ -71,7 +71,7 @@ final class ResourceSupport001 {
         String stackStringLocal11 = null;
         RuntimeException caughtExceptionLocal12 = null;
         try {
-          if (!resourceArchiveArgument1.computeBoolean0798((byte) 121)) {
+          if (!resourceArchiveArgument1.ensureIndexLoaded((byte) 121)) {
             stackStringLocal3 = (String) (stringArgument2);
             return stackStringLocal3;
           }

@@ -12,7 +12,7 @@ final class ad {
     private int field_c;
     static RgbSprite field_b;
 
-    final void a(boolean param0, String param1, String param2, mi param3, String param4) {
+    final void a(boolean param0, String param1, String param2, ResourceArchive param3, String param4) {
         try {
           if (param0) {
             this.field_a = 77;
@@ -63,19 +63,19 @@ final class ad {
         }
     }
 
-    final void a(byte param0, mi param1, String param2, String param3) {
+    final void a(byte param0, ResourceArchive param1, String param2, String param3) {
         try {
           this.a((String) null, param3, -1, param0 ^ 7061, param1, param2);
           if (param0 != -6) {
             String var6 = (String) null;
-            this.a((String) null, (String) null, -81, 87, (mi) null, (String) null);
+            this.a((String) null, (String) null, -81, 87, (ResourceArchive) null, (String) null);
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ad.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(String param0, String param1, int param2, int param3, mi param4, String param5) {
+    private final void a(String param0, String param1, int param2, int param3, ResourceArchive param4, String param5) {
         wa[] var9 = null;
         wa var8 = null;
         wa var10 = null;
@@ -114,24 +114,24 @@ final class ad {
         while (this.field_c < this.field_i) {
           var4 = this.field_f[this.field_c];
           var2 = var4;
-          if (!var4.field_e.b(param0 + 1)) {
+          if (!var4.field_e.ensureIndexLoaded(param0 + 1)) {
             this.a(var4, true, 0);
             return false;
           }
           if (var4.field_f >= 0 &&
-            !var4.field_e.a(var4.field_f, 0)) {
-            this.a(var2, true, var4.field_e.b(var4.field_f, -72));
+            !var4.field_e.tryLoadGroup(var4.field_f, 0)) {
+            this.a(var2, true, var4.field_e.getGroupLoadPercent(var4.field_f, -72));
             return false;
           }
           if (var4.field_b != null &&
             !var4.field_e.a(var4.field_b, ~param0)) {
-            this.a(var2, true, var4.field_e.b(-8087, var4.field_b));
+            this.a(var2, true, var4.field_e.getGroupLoadPercentByName(-8087, var4.field_b));
             return false;
           }
           if (var4.field_f < 0 &&
             var4.field_b == null &&
             var4.field_c != null &&
-            !var4.field_e.a(25057)) {
+            !var4.field_e.tryLoadAllGroups(25057)) {
             this.a(var2, true, var4.field_e.c(param0 - 123));
             return false;
           }

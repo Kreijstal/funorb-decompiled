@@ -12,7 +12,7 @@ final class oc {
     }
 
     final static oc a(Archive param0, int param1, int param2) {
-        byte[] var3 = param0.b(param1, 119, param2);
+        byte[] var3 = param0.getFile(param1, 119, param2);
         if (var3 == null) {
           return null;
         }

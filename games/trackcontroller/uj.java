@@ -41,8 +41,8 @@ final class uj {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = 108 % ((-60 - param2) / 39);
-          var4_int = param1.a(true, param3);
-          var6 = param1.a(param0, var4_int, -1);
+          var4_int = param1.getGroupIdByName(true, param3);
+          var6 = param1.getFileIdByName(param0, var4_int, -1);
           stackIn_1_0 = jd.a(4764, var6, var4_int, param1);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -93,8 +93,8 @@ final class uj {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            ne.field_a = new la(param7);
-            LevelView.field_C = new la(param4);
+            ne.field_a = new BitPacketBuffer(param7);
+            LevelView.field_C = new BitPacketBuffer(param4);
             ke.field_c = param6;
             dc.field_o = param0;
             ma.field_c = param2;

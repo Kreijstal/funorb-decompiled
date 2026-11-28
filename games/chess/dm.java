@@ -46,8 +46,8 @@ abstract class dm {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param1.a(param4, param0 ^ param0);
-          var6 = param1.a(param2, param0 + 7, var5_int);
+          var5_int = param1.getGroupIdByName(param4, param0 ^ param0);
+          var6 = param1.getFileIdByName(param2, param0 + 7, var5_int);
           stackIn_1_0 = ig.a(var6, param3, -122, var5_int, param1);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -27,7 +27,7 @@ final class us {
         }
     }
 
-    final static boolean a(vr param0, vr param1, vr param2, int param3) {
+    final static boolean a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -38,19 +38,19 @@ final class us {
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1.a(0) &&
-            param1.a("commonui", 20637)) {
+          if (param1.ensureIndexLoaded(0) &&
+            param1.tryLoadGroupByName("commonui", 20637)) {
             if (param3 < 23) {
               field_a = (String) null;
             }
-            if (!param0.a(0)) {
+            if (!param0.ensureIndexLoaded(0)) {
               return false;
             }
-            if (!param0.a("commonui", 20637)) {
+            if (!param0.tryLoadGroupByName("commonui", 20637)) {
               return false;
             }
-            if (param2.a(0) &&
-              param2.a("button.gif", 20637)) {
+            if (param2.ensureIndexLoaded(0) &&
+              param2.tryLoadGroupByName("button.gif", 20637)) {
               return true;
             }
             return false;

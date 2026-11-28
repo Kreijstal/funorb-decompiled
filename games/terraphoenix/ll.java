@@ -17,7 +17,7 @@ final class ll {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 0) {
-            stackIn_4_0 = SecondaryNodeDeque.a((byte) -114, param1, param1.length, 0);
+            stackIn_4_0 = SecondaryNodeDeque.decodeCp1252String((byte) -114, param1, param1.length, 0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

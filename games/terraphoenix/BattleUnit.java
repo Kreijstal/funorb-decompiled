@@ -3064,7 +3064,7 @@ final class BattleUnit {
           BattleUnit.clearStaticReferences(-82);
         }
         boolean decompiledFrameCompleted0 = true;
-        var6 = "(" + wc.field_r + " " + wf.field_n + " " + uc.field_r + ") " + qk.field_b;
+        var6 = "(" + wc.field_r + " " + wf.field_n + " " + BitPacketBuffer.field_r + ") " + qk.field_b;
         var1 = var6;
         if (qh.field_d > 0) {
           var1 = var6 + ":";

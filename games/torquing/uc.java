@@ -28,7 +28,7 @@ abstract class uc extends DualLinkNode {
     private static String[] field_E;
 
     final int a(char param0) {
-        return this.field_N[ka.a(false, param0) & 255];
+        return this.field_N[ka.encodeCp1252Character(false, param0) & 255];
     }
 
     public static void clearStaticReferences() {
@@ -128,7 +128,7 @@ abstract class uc extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(ka.a(false, (char) var7) & 255);
+              var7 = (char)(ka.encodeCp1252Character(false, (char) var7) & 255);
               var4 = var4 + this.field_N[var7];
               if (this.field_z != null &&
                 var3 != 0) {
@@ -694,7 +694,7 @@ abstract class uc extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_L.append((char) var14);
-                var14 = (char)(ka.a(false, (char) var14) & 255);
+                var14 = (char)(ka.encodeCp1252Character(false, (char) var14) & 255);
                 var4 = var4 + this.field_N[var14];
                 if (this.field_z != null &&
                   var10 != 0) {
@@ -858,7 +858,7 @@ abstract class uc extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(ka.a(false, (char) var8) & 255);
+              var8 = (char)(ka.encodeCp1252Character(false, (char) var8) & 255);
               if (this.field_z != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_z[(var5 << 8) + var8];

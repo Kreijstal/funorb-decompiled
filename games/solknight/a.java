@@ -106,7 +106,7 @@ abstract class a extends wf implements pi {
             }
             var4 = new byte[var3_int];
             param0.position = param0.position + v.field_g.a(0, param0.position, 4, var4, var3_int, param0.payload);
-            var5 = vd.a(var4, 0, var3_int, 160);
+            var5 = vd.decodeCp1252String(var4, 0, var3_int, 160);
             stackIn_3_0 = var5;
             return stackIn_3_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

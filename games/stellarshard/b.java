@@ -8,9 +8,9 @@ final class b extends id {
     private int field_q;
     private int field_p;
     private Sprite[] field_s;
-    static pf field_u;
+    static ResourceArchive field_u;
 
-    final static ek[] a(int param0, int param1, int param2, pf param3) {
+    final static ek[] a(int param0, int param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;

@@ -58,10 +58,10 @@ final class te extends IntrusiveNode {
         field_p = null;
     }
 
-    private final static boolean a(gk param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_u) {
-          var1 = param0.b(-85, 0, 0);
+          var1 = param0.getFile(-85, 0, 0);
           if (var1 == null) {
             return false;
           }
@@ -239,14 +239,14 @@ final class te extends IntrusiveNode {
         return new PcmSample(this.field_j, var12, this.field_H, this.field_A, this.field_g);
     }
 
-    final static te a(gk param0, String param1, String param2) {
+    final static te a(ResourceArchive param0, String param1, String param2) {
         try {
           te var4_ref = null;
           if (!te.a(param0)) {
             param0.a(param1, param2, 16484);
             return null;
           }
-          byte[] var3 = param0.b(param1, param2, 118);
+          byte[] var3 = param0.getFileByName(param1, param2, 118);
           if (var3 == null) {
             return null;
           }
@@ -624,14 +624,14 @@ final class te extends IntrusiveNode {
         return var0;
     }
 
-    final static te a(gk param0, int param1, int param2) {
+    final static te a(ResourceArchive param0, int param1, int param2) {
         try {
           te var4_ref = null;
           if (!te.a(param0)) {
-            param0.a(param1, param2, (byte) -14);
+            param0.tryLoadFile(param1, param2, (byte) -14);
             return null;
           }
-          byte[] var3 = param0.b(-78, param2, param1);
+          byte[] var3 = param0.getFile(-78, param2, param1);
           if (var3 == null) {
             return null;
           }

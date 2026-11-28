@@ -6,7 +6,7 @@ final class de {
     static PcmStreamMixer field_a;
     static String field_c;
 
-    final static u a(ki param0, int param1, boolean param2, int param3, ki param4) {
+    final static u a(ResourceArchive param0, int param1, boolean param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         Object stackIn_4_0 = null;
         u stackIn_6_0 = null;
@@ -21,7 +21,7 @@ final class de {
             de.createMouseWheelInput((byte) -108);
           }
           if (pk.a(107, param1, param0, param3)) {
-            stackIn_6_0 = ok.a(-3362, param4.b(param1, false, param3));
+            stackIn_6_0 = ok.a(-3362, param4.getFile(param1, false, param3));
             return stackIn_6_0;
           }
           stackIn_4_0 = null;

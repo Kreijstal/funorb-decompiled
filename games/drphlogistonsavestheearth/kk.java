@@ -67,7 +67,7 @@ final class kk {
         field_b = (he[][]) null;
     }
 
-    final static void a(int param0, vj param1, vj param2, vj param3) {
+    final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
         RgbSprite var18 = null;
         he[] var5 = null;
         he[][] var6 = null;
@@ -95,7 +95,7 @@ final class kk {
           u.field_d = (rf) ((Object) qg.a(param2, "arezzo12", "commonui", param1, 126));
           DualLinkNode.field_i = (rf) ((Object) qg.a(param2, "arezzo14", "commonui", param1, -100));
           wi.field_e = (rf) ((Object) qg.a(param2, "arezzo14bold", "commonui", param1, 106));
-          var18 = new RgbSprite(param3.a("button.gif", "", 24874), (java.awt.Component) ((Object) DiskCacheWorker.field_g));
+          var18 = new RgbSprite(param3.getFileByName("button.gif", "", 24874), (java.awt.Component) ((Object) DiskCacheWorker.field_g));
           eh.a("commonui", (byte) -45, param1, "dropdown");
           var5 = ij.a("screen_options", (byte) 113, param1, "commonui");
           al.field_d = new he[4];
@@ -147,10 +147,10 @@ final class kk {
           return;
         }
         if (param0 % 10L == 0L) {
-          lh.sleepIgnoringInterrupts(param0 - 1L, (byte) 120);
-          lh.sleepIgnoringInterrupts(1L, (byte) -3);
+          BitPacketBuffer.sleepIgnoringInterrupts(param0 - 1L, (byte) 120);
+          BitPacketBuffer.sleepIgnoringInterrupts(1L, (byte) -3);
         } else {
-          lh.sleepIgnoringInterrupts(param0, (byte) -124);
+          BitPacketBuffer.sleepIgnoringInterrupts(param0, (byte) -124);
         }
         if (!param1) {
           kk.sleepMillis(-113L, false);

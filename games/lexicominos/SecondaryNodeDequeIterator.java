@@ -8,7 +8,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     private DualLinkNode lastReturned;
     private DualLinkNode nextNode;
     static int field_c;
-    static sh field_b;
+    static ResourceArchive field_b;
     static IntrusiveDeque field_e;
 
     public final Object next() {
@@ -38,7 +38,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         field_b = null;
         field_e = null;
         if (!param0) {
-          field_b = (sh) null;
+          field_b = (ResourceArchive) null;
         }
     }
 

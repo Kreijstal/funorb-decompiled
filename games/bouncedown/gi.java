@@ -62,24 +62,24 @@ final class gi {
         while (this.field_a < this.field_h) {
           var4 = this.field_f[this.field_a];
           var2 = var4;
-          if (!var4.field_c.c(44)) {
+          if (!var4.field_c.ensureIndexLoaded(44)) {
             this.a(-127, var4, 0);
             return false;
           }
           if (0 <= var4.field_a &&
-            !var4.field_c.d(var4.field_a, 84)) {
-            this.a(-128, var2, var4.field_c.a(var4.field_a, 0));
+            !var4.field_c.tryLoadGroup(var4.field_a, 84)) {
+            this.a(-128, var2, var4.field_c.getGroupLoadPercent(var4.field_a, 0));
             return false;
           }
           if (null != var4.field_e &&
             !var4.field_c.b(var4.field_e, false)) {
-            this.a(-127, var2, var4.field_c.b(var4.field_e, (byte) -100));
+            this.a(-127, var2, var4.field_c.getGroupLoadPercentByName(var4.field_e, (byte) -100));
             return false;
           }
           if (var4.field_a < 0 &&
             var4.field_e == null &&
             var4.field_d != null &&
-            !var4.field_c.a((byte) -73)) {
+            !var4.field_c.tryLoadAllGroups((byte) -73)) {
             this.a(-128, var2, var4.field_c.a(100));
             return false;
           }

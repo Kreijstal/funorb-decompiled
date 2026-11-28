@@ -163,7 +163,7 @@ final class hc {
         }
     }
 
-    final static void a(pf param0, pf param1, pf param2, boolean param3, byte param4) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, boolean param3, byte param4) {
         try {
           al.field_f = de.a("", -47);
           al.field_f.a(false, true);

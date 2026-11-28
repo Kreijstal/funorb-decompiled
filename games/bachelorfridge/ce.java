@@ -185,7 +185,7 @@ final class ce extends AttackEvent {
         }
     }
 
-    final static void a(vr param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         lr incrementValue$0 = null;
         int incrementValue$1 = 0;
         lr stackIn_9_0 = null;
@@ -206,12 +206,12 @@ final class ce extends AttackEvent {
         byte[] var14 = null;
         var9 = BachelorFridge.field_y;
         try {
-          var2_int = param0.a("", false);
+          var2_int = param0.getGroupId("", false);
           if (param1 != 15) {
             var10 = (String) null;
             ce.a(false, -81, -123, (String) null, 28, false);
           }
-          var3 = new ika(param0.a((byte) 123, "", "manifest"));
+          var3 = new ika(param0.getFileByName((byte) 123, "", "manifest"));
           BananarangEvent.field_u = var3.field_c;
           StatusEffectInfo.field_g = new lr[BananarangEvent.field_u];
           var4 = 0;
@@ -219,7 +219,7 @@ final class ce extends AttackEvent {
           while (var5 != null) {
             var6 = var5.field_g;
             var7 = var5.field_f ? 1 : 0;
-            var14 = param0.b(-102, var2_int, var6);
+            var14 = param0.getFile(-102, var2_int, var6);
             StatusEffectInfo.field_g[var4] = new lr(new PacketBuffer(var14));
             if (var7 != 0) {
             }

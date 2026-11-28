@@ -226,7 +226,7 @@ final class qn extends hc {
           if (param2) {
             field_K = 78;
           }
-          if (param3.a((byte) 126)) {
+          if (param3.ensureIndexLoaded((byte) 126)) {
             stackIn_6_0 = param1 + " - " + param3.c(-14858) + "%";
             return stackIn_6_0;
           }

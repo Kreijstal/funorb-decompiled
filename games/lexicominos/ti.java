@@ -193,8 +193,8 @@ final class ti extends nb implements nf, jk {
     final static IndexedSprite[] a(byte param0) {
         int var2 = 0;
         int var3 = Lexicominos.field_L ? 1 : 0;
-        IndexedSprite[] var1 = new IndexedSprite[th.field_t];
-        for (var2 = 0; th.field_t > var2; var2++) {
+        IndexedSprite[] var1 = new IndexedSprite[BitPacketBuffer.field_t];
+        for (var2 = 0; BitPacketBuffer.field_t > var2; var2++) {
           var1[var2] = new IndexedSprite(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], BufferedRandomAccessFile.field_f[var2], ci.field_b);
         }
         if (param0 <= 103) {

@@ -76,7 +76,7 @@ abstract class c extends GameApplet {
         }
     }
 
-    private final static void a(int param0, qk param1) {
+    private final static void a(int param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2608_0;
             StringBuilder stackIn_2608_1;
@@ -86,9 +86,9 @@ abstract class c extends GameApplet {
             RuntimeException var2_ref;
             int var3;
             int param0;
-            qk param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, qk initialParam1) {
+            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2608_0 = null;
@@ -139,7 +139,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("create_unable", (byte) -127);
                 if (var2 != null) {
-                  qk.field_i = GzipInflater.a(var2, (byte) 116);
+                  ResourceArchive.field_i = GzipInflater.a(var2, (byte) 116);
                 }
                 var2 = SectorCacheStore.a("create_ineligible", (byte) -127);
                 if (var2 != null) {
@@ -1353,7 +1353,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("create", (byte) -127);
                 if (null != var2) {
-                  qk.field_h = GzipInflater.a(var2, (byte) 96);
+                  ResourceArchive.field_h = GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = SectorCacheStore.a("create_pleasechooseapassword", (byte) -127);
                 if (var2 != null) {
@@ -1561,7 +1561,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("login_justplay_tooltip", (byte) -127);
                 if (null != var2) {
-                  w.field_m = GzipInflater.a(var2, (byte) 115);
+                  BitPacketBuffer.field_m = GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = SectorCacheStore.a("login_back_tooltip", (byte) -127);
                 if (var2 != null) {
@@ -2584,7 +2584,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("keychar_the_character_under_questionmark", (byte) -127);
                 if (var2 != null) {
-                  cc.a(var2[0], 63);
+                  cc.decodeCp1252Byte(var2[0], 63);
                 }
                 var2 = SectorCacheStore.a("rating_noratings", (byte) -127);
                 if (null != var2) {
@@ -3344,7 +3344,7 @@ abstract class c extends GameApplet {
             return stackIn_36_0;
           }
           if (cd.field_e == 11 &&
-            w.field_n == 0) {
+            BitPacketBuffer.field_n == 0) {
             al.a(-53);
           }
           stackIn_28_0 = var2_int;
@@ -3420,35 +3420,35 @@ abstract class c extends GameApplet {
               mf.field_j = 15000L + id.correctedCurrentTimeMillis(74);
             }
           }
-          if (-1 == w.field_n ||
-            w.field_n == 0) {
-            stackIn_38_0 = (w.field_n != -1) ? 0 : 1;
+          if (-1 == BitPacketBuffer.field_n ||
+            BitPacketBuffer.field_n == 0) {
+            stackIn_38_0 = (BitPacketBuffer.field_n != -1) ? 0 : 1;
             var3_intLifetime1 = stackIn_38_0;
-            w.field_n = DirectByteArrayStore.c(0);
+            BitPacketBuffer.field_n = DirectByteArrayStore.c(0);
             if (var3_intLifetime1 != 0 &&
-              w.field_n == 0 &&
+              BitPacketBuffer.field_n == 0 &&
               cd.field_e == 11 &&
               !SpriteGeometry.b((byte) 34)) {
               al.a(-76);
             }
-            if (-1 != w.field_n &&
-              0 != w.field_n) {
+            if (-1 != BitPacketBuffer.field_n &&
+              0 != BitPacketBuffer.field_n) {
               mf.field_j = id.correctedCurrentTimeMillis(54) + 15000L;
             }
           }
           boolean decompiledFrameRemainder1 = true;
           var3_intLifetime2 = 14 / ((param0 - 5) / 57);
-          if (-1 != w.field_n &&
-            w.field_n != 0) {
+          if (-1 != BitPacketBuffer.field_n &&
+            BitPacketBuffer.field_n != 0) {
             if (10 > g.field_A) {
-              if (w.field_n == 3) {
+              if (BitPacketBuffer.field_n == 3) {
                 this.a((byte) -115, "js5crc");
                 decompiledFrameRemainder1 = (var5 != 0);
               }
               if (decompiledFrameRemainder1) {
-                if (w.field_n != 4) {
-                  if (w.field_n != 2) {
-                    if (5 == w.field_n) {
+                if (BitPacketBuffer.field_n != 4) {
+                  if (BitPacketBuffer.field_n != 2) {
+                    if (5 == BitPacketBuffer.field_n) {
                       this.a((byte) -121, "outofdate");
                       decompiledFrameRemainder1 = (var5 != 0);
                     }
@@ -3472,14 +3472,14 @@ abstract class c extends GameApplet {
               (cd.field_e >= 10)) {
               boolean decompiledFrameRemainder0 = true;
               wd.a(31668);
-              if (w.field_n == 3) {
+              if (BitPacketBuffer.field_n == 3) {
                 AccountServiceResult.a(256, -9, kk.field_a);
                 decompiledFrameRemainder0 = (var5 != 0);
               }
               if (decompiledFrameRemainder0) {
-                if (4 != w.field_n) {
-                  if (w.field_n != 2) {
-                    if (w.field_n != 5) {
+                if (4 != BitPacketBuffer.field_n) {
+                  if (BitPacketBuffer.field_n != 2) {
+                    if (BitPacketBuffer.field_n != 5) {
                       AccountServiceResult.a(256, -9, ClientException.field_c);
                       if (var5 != 0) {
                         AccountServiceResult.a(5, -9, ve.field_b);
@@ -3506,18 +3506,18 @@ abstract class c extends GameApplet {
               ve.field_a = true;
             }
           }
-          if ((w.field_n != -1 &&
-            w.field_n != 0 ||
+          if ((BitPacketBuffer.field_n != -1 &&
+            BitPacketBuffer.field_n != 0 ||
             SpriteGeometry.b((byte) 34)) &&
             mf.field_j <= id.correctedCurrentTimeMillis(59)) {
             ve.field_a = false;
-            if (w.field_n != -1 &&
-              w.field_n != 0) {
-              w.field_n = -1;
+            if (BitPacketBuffer.field_n != -1 &&
+              BitPacketBuffer.field_n != 0) {
+              BitPacketBuffer.field_n = -1;
               ta.c(true);
             }
           }
-          if (w.field_n == 0 &&
+          if (BitPacketBuffer.field_n == 0 &&
             !SpriteGeometry.b((byte) 34)) {
             sg.field_b = false;
           }
@@ -3537,7 +3537,7 @@ abstract class c extends GameApplet {
           }
           if (g.field_A == 2) {
             if (null != lb.field_a &&
-              lb.field_a.b(4)) {
+              lb.field_a.ensureIndexLoaded(4)) {
               if (lb.field_a.c(0, "")) {
                 if (lb.field_a.b(4, "")) {
                   c.a(-106, lb.field_a);
@@ -3594,8 +3594,8 @@ abstract class c extends GameApplet {
           }
           if (g.field_A == 11) {
             boolean decompiledSharedTail0 = (null != ue.field_a &&
-              (!(ue.field_a.b(4)) ||
-              !(ue.field_a.a((byte) 56))));
+              (!(ue.field_a.ensureIndexLoaded(4)) ||
+              !(ue.field_a.tryLoadAllGroups((byte) 56))));
             if (!decompiledSharedTail0) {
               g.field_A = 12;
               kj.field_P = true;
@@ -3787,7 +3787,7 @@ abstract class c extends GameApplet {
           if (param0 != -47) {
             this.c(false);
           }
-          rd.field_j.b(0, var5, 28040, var4);
+          rd.field_j.readCipheredBytes(0, var5, 28040, var4);
           IntrusiveDeque.a(mk.g(-117), -25573, GzipInflater.a(var5, (byte) 89), var3 != 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3950,9 +3950,9 @@ abstract class c extends GameApplet {
               }
             }
             if (var4_int == 3) {
-              if (w.field_n != -1 &&
-                w.field_n != 0) {
-                w.field_n = -1;
+              if (BitPacketBuffer.field_n != -1 &&
+                BitPacketBuffer.field_n != 0) {
+                BitPacketBuffer.field_n = -1;
                 ta.c(true);
               }
               if (param1) {
@@ -4004,7 +4004,7 @@ abstract class c extends GameApplet {
               rk.a(mk.g(-127), (byte) -85);
             }
             if (param2 == var4_int) {
-              NetworkArchiveRequest.field_r.h(17, 0);
+              NetworkArchiveRequest.field_r.writeCipheredByte(17, 0);
             }
             if (var4_int == 11) {
               wh.a(mk.g(-125), 63);
@@ -4026,7 +4026,7 @@ abstract class c extends GameApplet {
                     decompiledSharedTail0 = (var8 != 0);
                   }
                   if (decompiledSharedTail0) {
-                    var7 = bd.a(255, 0, var6_ref.payload, var6_ref.position);
+                    var7 = bd.decodeCp1252String(255, 0, var6_ref.payload, var6_ref.position);
                     ok.a(564, var7);
                   }
                   di.field_d = null;

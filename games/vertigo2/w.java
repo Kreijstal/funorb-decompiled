@@ -92,8 +92,8 @@ final class w extends TextureOperator {
             var7 = (String) null;
             w.a((Archive) null, (Archive) null, (String) null, (String) null, 73);
           }
-          var5_int = param1.a((byte) 118, param3);
-          var6 = param1.a(var5_int, param2, 113);
+          var5_int = param1.getGroupIdByName((byte) 118, param3);
+          var6 = param1.getFileIdByName(var5_int, param2, 113);
           stackIn_3_0 = SecondaryNodeHashTable.a(var5_int, param1, param0, var6, (byte) 70);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

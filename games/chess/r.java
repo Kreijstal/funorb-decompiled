@@ -146,7 +146,7 @@ final class r extends ci {
         field_Fb = null;
     }
 
-    final static boolean a(boolean param0, nk param1) {
+    final static boolean a(boolean param0, BitPacketBuffer param1) {
         RuntimeException var2 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -155,7 +155,7 @@ final class r extends ci {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            stackIn_6_0 = (1 == param1.e(-63, 1));
+            stackIn_6_0 = (1 == param1.readBits(-63, 1));
             return stackIn_6_0;
           }
           return true;

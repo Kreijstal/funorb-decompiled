@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class se extends PacketBuffer {
+final class BitPacketBuffer extends PacketBuffer {
     private int field_p;
     private IsaacRandom field_o;
     static String field_n;
 
-    final void m(int param0) {
+    final void endBitAccess(int param0) {
         this.position = (param0 + this.field_p) / 8;
     }
 
-    final int h(int param0, int param1) {
+    final int readBits(int param0, int param1) {
         int incrementValue$0 = 0;
         int var6 = OrbDefence.field_D ? 1 : 0;
         int var3 = this.field_p >> 3;
@@ -32,10 +32,10 @@ final class se extends PacketBuffer {
         return var5;
     }
 
-    final int o(int param0) {
+    final int readCipheredByte(int param0) {
         int fieldTemp$0 = 0;
         if (param0 >= -22) {
-          this.h(69, 70);
+          this.readBits(69, 70);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           return this.payload[fieldTemp$0] - this.field_o.nextInt(128) & 255;
@@ -45,7 +45,7 @@ final class se extends PacketBuffer {
         return this.payload[fieldTemp$1] - this.field_o.nextInt(128) & 255;
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) {
+    final void readCipheredBytes(int param0, int param1, byte[] param2, int param3) {
         int var6 = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -78,29 +78,29 @@ final class se extends PacketBuffer {
         }
     }
 
-    public static void e(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_n = null;
         if (param0) {
           String var2 = (String) null;
-          se.a((String) null, (byte) -75, 110);
+          BitPacketBuffer.showLobbyDialog((String) null, (byte) -75, 110);
         }
     }
 
-    final void i(int param0, int param1) {
+    final void writeCipheredByte(int param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)(this.field_o.nextInt(128) + param0);
         int var3 = -34 / ((21 - param1) / 58);
     }
 
-    final static void a(gj param0, int param1, int param2) {
-        se var3 = null;
+    final static void writeLeaderboardRequest(gj param0, int param1, int param2) {
+        BitPacketBuffer var3 = null;
         try {
           if (param2 >= -37) {
             field_n = (String) null;
           }
           var3 = uk.field_b;
-          var3.i(param1, -116);
+          var3.writeCipheredByte(param1, -116);
           var3.writeByte(5, -9);
           var3.writeByte(0, -30);
           var3.writeShort((byte) -60, param0.field_o);
@@ -111,14 +111,14 @@ final class se extends PacketBuffer {
         }
     }
 
-    final void n(int param0) {
+    final void beginBitAccess(int param0) {
         this.field_p = this.position * 8;
         if (param0 != 9471) {
           this.field_o = (IsaacRandom) null;
         }
     }
 
-    final static void a(String param0, byte param1, int param2) {
+    final static void showLobbyDialog(String param0, byte param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_27_0 = null;
@@ -181,11 +181,11 @@ final class se extends PacketBuffer {
         }
     }
 
-    se(byte[] param0) {
+    BitPacketBuffer(byte[] param0) {
         super(param0);
     }
 
-    final void b(int[] param0, int param1) {
+    final void setCipherSeed(int[] param0, int param1) {
         try {
           this.field_o = new IsaacRandom(param0);
           if (param1 != 3777) {
@@ -196,7 +196,7 @@ final class se extends PacketBuffer {
         }
     }
 
-    se(int param0) {
+    BitPacketBuffer(int param0) {
         super(param0);
     }
 

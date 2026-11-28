@@ -176,13 +176,13 @@ final class fb extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, ki param1) {
+    final static void a(int param0, ResourceArchive param1) {
         nj var2 = null;
         try {
           if (param0 != -2) {
             fb.c(-98);
           }
-          nj.b(param1.a("", 1, "headers.packvorbis"));
+          nj.b(param1.getFileByName("", 1, "headers.packvorbis"));
           var2 = nj.a(param1, "jagex logo2.packvorbis", "");
           var2.a();
         } catch (RuntimeException runtimeException) {

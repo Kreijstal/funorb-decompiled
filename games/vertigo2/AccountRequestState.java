@@ -32,25 +32,25 @@ final class AccountRequestState {
         var3 = Vertigo2.field_L ? 1 : 0;
         try {
           for (var2_int = 0; var2_int < 9; var2_int++) {
-            kn.field_h[0][var2_int] = new PacketBuffer(param1.a("", "level0" + (var2_int + 1) + ".map", 0));
+            kn.field_h[0][var2_int] = new PacketBuffer(param1.getFileByName("", "level0" + (var2_int + 1) + ".map", 0));
           }
           for (var2_intLifetime1 = 9; 50 > var2_intLifetime1; var2_intLifetime1++) {
-            kn.field_h[0][var2_intLifetime1] = new PacketBuffer(param1.a("", "level" + (var2_intLifetime1 + 1) + ".map", 0));
+            kn.field_h[0][var2_intLifetime1] = new PacketBuffer(param1.getFileByName("", "level" + (var2_intLifetime1 + 1) + ".map", 0));
           }
           for (var2_intLifetime2 = 0; var2_intLifetime2 < 9; var2_intLifetime2++) {
-            kn.field_h[1][var2_intLifetime2] = new PacketBuffer(param1.a("", "level0" + (1 + var2_intLifetime2) + ".2pl", param0 - 11579));
+            kn.field_h[1][var2_intLifetime2] = new PacketBuffer(param1.getFileByName("", "level0" + (1 + var2_intLifetime2) + ".2pl", param0 - 11579));
           }
           for (var2_intLifetime3 = 9; var2_intLifetime3 < 30; var2_intLifetime3++) {
-            kn.field_h[1][var2_intLifetime3] = new PacketBuffer(param1.a("", "level" + (1 + var2_intLifetime3) + ".2pl", tk.a(param0, 11579)));
+            kn.field_h[1][var2_intLifetime3] = new PacketBuffer(param1.getFileByName("", "level" + (1 + var2_intLifetime3) + ".2pl", tk.a(param0, 11579)));
           }
           for (var2_intLifetime4 = 0; var2_intLifetime4 < 9; var2_intLifetime4++) {
-            kn.field_h[2][var2_intLifetime4] = new PacketBuffer(param1.a("", "level0" + (var2_intLifetime4 + 1) + ".cmp", 0));
+            kn.field_h[2][var2_intLifetime4] = new PacketBuffer(param1.getFileByName("", "level0" + (var2_intLifetime4 + 1) + ".cmp", 0));
           }
           if (param0 != 11579) {
             return;
           }
           for (var2_intLifetime5 = 9; 40 > var2_intLifetime5; var2_intLifetime5++) {
-            kn.field_h[2][var2_intLifetime5] = new PacketBuffer(param1.a("", "level" + (1 + var2_intLifetime5) + ".cmp", tk.a(param0, 11579)));
+            kn.field_h[2][var2_intLifetime5] = new PacketBuffer(param1.getFileByName("", "level" + (1 + var2_intLifetime5) + ".cmp", tk.a(param0, 11579)));
           }
           for (var2_intLifetime6 = 0; var2_intLifetime6 < 9; var2_intLifetime6++) {
             kn.field_h[3][var2_intLifetime6] = kn.field_h[0][var2_intLifetime6];

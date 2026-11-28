@@ -14,7 +14,7 @@ final class sj {
     final static tl a(int param0, String param1, byte param2) {
         wf var3 = null;
         RuntimeException var3_ref = null;
-        db var4 = null;
+        ResourceArchive var4 = null;
         wf stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -22,8 +22,8 @@ final class sj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 <= 101) {
-            var4 = (db) null;
-            sj.a(42, -122, (db) null, 40);
+            var4 = (ResourceArchive) null;
+            sj.a(42, -122, (ResourceArchive) null, 40);
           }
           var3 = new wf();
           ((tl) ((Object) var3)).field_d = param0;
@@ -62,7 +62,7 @@ final class sj {
         }
     }
 
-    final static RgbSprite a(int param0, int param1, db param2, int param3) {
+    final static RgbSprite a(int param0, int param1, ResourceArchive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
@@ -106,8 +106,8 @@ final class sj {
         field_d = null;
         field_b = null;
         if (param0 != 21732) {
-          db var2 = (db) null;
-          sj.a(-71, -36, (db) null, -87);
+          ResourceArchive var2 = (ResourceArchive) null;
+          sj.a(-71, -36, (ResourceArchive) null, -87);
         }
     }
 

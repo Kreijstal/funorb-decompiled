@@ -4,9 +4,9 @@
 final class fda extends EventEffect {
     static java.awt.Frame field_j;
     static Sprite field_m;
-    static vr field_l;
+    static ResourceArchive field_l;
     static WidgetTheme field_i;
-    static vr field_k;
+    static ResourceArchive field_k;
 
     fda(CreatureRef param0) {
         try {
@@ -147,7 +147,7 @@ final class fda extends EventEffect {
           var4.field_A = false;
           var4.j(param2 ^ -98);
           if (param2 != 12) {
-            field_l = (vr) null;
+            field_l = (ResourceArchive) null;
           }
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "fda.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

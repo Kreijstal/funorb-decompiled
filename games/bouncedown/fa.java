@@ -35,7 +35,7 @@ final class fa {
         return var1Lifetime1;
     }
 
-    final static gk a(byte param0, int param1) {
+    final static ResourceArchive a(byte param0, int param1) {
         if (param0 == -76) {
           return j.a(false, (byte) -95, false, param1, true, 1);
         }

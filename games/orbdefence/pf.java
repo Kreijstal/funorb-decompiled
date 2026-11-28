@@ -7,7 +7,7 @@ final class pf {
     private RgbSprite[] field_d;
     static RgbSprite field_b;
 
-    final static wa a(int param0, int param1, ki param2, ki param3, int param4) {
+    final static wa a(int param0, int param1, ResourceArchive param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
         wa stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -23,7 +23,7 @@ final class pf {
           if (param1 != -6) {
             pf.a((byte) 9, 16);
           }
-          stackIn_6_0 = i.a(false, param2.b(param0, false, param4));
+          stackIn_6_0 = i.a(false, param2.getFile(param0, false, param4));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

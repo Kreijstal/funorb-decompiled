@@ -61,8 +61,8 @@ final class uk {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = -86 / ((param4 - 64) / 53);
-          var6 = param1.a(true, param0);
-          var7 = param1.a(param3, var6, -1);
+          var6 = param1.getGroupIdByName(true, param0);
+          var7 = param1.getFileIdByName(param3, var6, -1);
           stackIn_1_0 = qh.a(param2, var6, param1, var7, -11948);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

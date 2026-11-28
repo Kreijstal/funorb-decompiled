@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uc extends PacketBuffer {
+final class BitPacketBuffer extends PacketBuffer {
     static rh field_n;
     private int field_o;
     static rh field_p;
@@ -18,7 +18,7 @@ final class uc extends PacketBuffer {
         field_n = null;
     }
 
-    final int a(boolean param0, int param1) {
+    final int readBits(boolean param0, int param1) {
         int incrementValue$0 = 0;
         int var6 = Terraphoenix.field_V;
         int var3 = this.field_o >> 3;
@@ -43,14 +43,14 @@ final class uc extends PacketBuffer {
         return var5;
     }
 
-    final static void l(int param0, int param1) {
+    final static void pumpClientUi(int param0, int param1) {
         PcmResampler.a(1);
         if (param0 != 3795) {
           field_q = (String) null;
         }
     }
 
-    final static IndexedSprite[] o(int param0) {
+    final static IndexedSprite[] createIndexedSpritesFromDecodedSheet(int param0) {
         int var2 = 0;
         int var3 = Terraphoenix.field_V;
         IndexedSprite[] var1 = new IndexedSprite[kf.field_b];
@@ -59,27 +59,27 @@ final class uc extends PacketBuffer {
         }
         if (param0 != -28336) {
           String var4 = (String) null;
-          uc.b(-83, (String) null);
+          BitPacketBuffer.setLoginRequestToken(-83, (String) null);
         }
         SocketConnector.a((byte) 113);
         return var1;
     }
 
-    final static int j(byte param0) {
+    final static int getTicksPerSecond(byte param0) {
         if (param0 > -124) {
           field_p = (rh) null;
         }
         return (int)(1000000000L / dm.field_f);
     }
 
-    final void k(int param0) {
+    final void beginBitAccess(int param0) {
         if (param0 != -1694261224) {
           return;
         }
         this.field_o = this.position * 8;
     }
 
-    final static Sprite[] l(int param0) {
+    final static Sprite[] createSpritesFromDecodedSheet(int param0) {
         int var2 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -126,7 +126,7 @@ final class uc extends PacketBuffer {
         return var1;
     }
 
-    final static void b(int param0, String param1) {
+    final static void setLoginRequestToken(int param0, String param1) {
         try {
           AccountRequestState.field_e = param1;
           int var2_int = 111 / ((49 - param0) / 53);
@@ -135,7 +135,7 @@ final class uc extends PacketBuffer {
         }
     }
 
-    final void b(int param0, byte[] param1, int param2, int param3) {
+    final void readCipheredBytes(int param0, byte[] param1, int param2, int param3) {
         int var5_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -166,7 +166,7 @@ final class uc extends PacketBuffer {
         }
     }
 
-    final void a(int[] param0, int param1) {
+    final void setCipherSeed(int[] param0, int param1) {
         if (param1 != 16888) {
           return;
         }
@@ -177,7 +177,7 @@ final class uc extends PacketBuffer {
         }
     }
 
-    final void k(int param0, int param1) {
+    final void writeCipheredByte(int param0, int param1) {
         if (param0 != -17410) {
           return;
         }
@@ -186,19 +186,19 @@ final class uc extends PacketBuffer {
         this.payload[fieldTemp$0] = (byte)(param1 + this.field_m.nextInt(65));
     }
 
-    final void n(int param0) {
+    final void endBitAccess(int param0) {
         this.position = (this.field_o + 7) / param0;
     }
 
-    uc(byte[] param0) {
+    BitPacketBuffer(byte[] param0) {
         super(param0);
     }
 
-    uc(int param0) {
+    BitPacketBuffer(int param0) {
         super(param0);
     }
 
-    final int a(boolean param0) {
+    final int readCipheredByte(boolean param0) {
         if (param0) {
           return 72;
         }

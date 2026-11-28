@@ -215,7 +215,7 @@ abstract class tg extends GameApplet {
         }
         if (b.field_x == 2) {
           if (null != je.field_f &&
-            je.field_f.a(-12749)) {
+            je.field_f.ensureIndexLoaded(-12749)) {
             if (!je.field_f.b((byte) -58, "")) {
               je.field_f = null;
             } else {
@@ -268,8 +268,8 @@ abstract class tg extends GameApplet {
         }
         boolean decompiledFrameRemainder0 = true;
         if (b.field_x == 11) {
-          if (null != rd.field_z && (!rd.field_z.a(-12749) ||
-            !rd.field_z.c(-19375))) {
+          if (null != rd.field_z && (!rd.field_z.ensureIndexLoaded(-12749) ||
+            !rd.field_z.tryLoadAllGroups(-19375))) {
             IsaacPacketBuffer.a(0.0f, -84, AccountNameAvailabilityValidator.a(Torquing.field_w, rd.field_z, DelegatingCanvas.field_b, (byte) 78));
             decompiledFrameRemainder0 = false;
           }
@@ -767,7 +767,7 @@ abstract class tg extends GameApplet {
                   var9 = (String) null;
                   WidgetContainer.a((String) null, (byte) -126);
                 } else {
-                  var7 = GameApplet.a(var12.position, true, 0, var12.payload);
+                  var7 = GameApplet.decodeCp1252String(var12.position, true, 0, var12.payload);
                   WidgetContainer.a(var7, (byte) -84);
                 }
                 ub.field_G = null;

@@ -8,13 +8,13 @@ final class fa {
     static String field_c;
 
     final static void a(d param0, int param1, int param2) {
-        se var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           if (param2 < 14) {
             fa.clearStaticReferences(false);
           }
           var3 = uk.field_b;
-          var3.i(param1, -74);
+          var3.writeCipheredByte(param1, -74);
           var3.writeByte(param0.field_f, -12);
           var3.writeByte(param0.field_i, -99);
         } catch (RuntimeException runtimeException) {

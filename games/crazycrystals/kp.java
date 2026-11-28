@@ -47,7 +47,7 @@ final class kp extends f implements Cloneable {
         }
     }
 
-    final static String a(String param0, String param1, String param2, int param3, db param4) {
+    final static String a(String param0, String param1, String param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
@@ -65,11 +65,11 @@ final class kp extends f implements Cloneable {
           if (param3 != 3) {
             kp.resetStaticState(false);
           }
-          if (!param4.a((byte) 102)) {
+          if (!param4.ensureIndexLoaded((byte) 102)) {
             stackIn_5_0 = (String) (param0);
             return stackIn_5_0;
           }
-          stackIn_7_0 = param1 + " - " + param4.b(param2, -36) + "%";
+          stackIn_7_0 = param1 + " - " + param4.getGroupLoadPercentByName(param2, -36) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -13,7 +13,7 @@ final class nm extends gk {
     static int field_I;
     private boolean field_B;
 
-    final static RgbSprite[] a(mi param0, String param1, int param2, String param3) {
+    final static RgbSprite[] a(ResourceArchive param0, String param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -30,8 +30,8 @@ final class nm extends gk {
           if (param2 != 1) {
             field_C = (int[]) null;
           }
-          var4_int = param0.a(-26, param3);
-          var5 = param0.a(var4_int, param1, -94);
+          var4_int = param0.getGroupIdByName(-26, param3);
+          var5 = param0.getFileIdByName(var4_int, param1, -94);
           stackIn_3_0 = hf.a(param0, var4_int, (byte) -127, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -96,7 +96,7 @@ final class nm extends gk {
     public static void h(int param0) {
         if (param0 != 3981) {
           String var2 = (String) null;
-          nm.a((mi) null, (String) null, -1, (String) null);
+          nm.a((ResourceArchive) null, (String) null, -1, (String) null);
         }
         field_D = null;
         field_F = null;

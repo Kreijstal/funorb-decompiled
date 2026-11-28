@@ -136,7 +136,7 @@ final class RendererManager {
               int var7_int = var6.field_d;
               if (var7_int != 0) {
                 if (5 == var7_int) {
-                  if (!oi.field_d.b((byte) -90)) {
+                  if (!oi.field_d.ensureIndexLoaded((byte) -90)) {
                     return;
                   }
                   var7_int = bc.a("hw3d", (byte) -95);
@@ -167,7 +167,7 @@ final class RendererManager {
                     }
                   }
                 } else if (var7_int == 1) {
-                  if (!oi.field_d.b((byte) -44)) {
+                  if (!oi.field_d.ensureIndexLoaded((byte) -44)) {
                     return;
                   }
                   var7_int = bc.a("jaclib", (byte) -120);
@@ -188,7 +188,7 @@ final class RendererManager {
                     }
                   }
                 } else if (var7_int == 3) {
-                  if (!oi.field_d.b((byte) 116)) {
+                  if (!oi.field_d.ensureIndexLoaded((byte) 116)) {
                     return;
                   }
                   var7_int = bc.a("jaclib", (byte) 12);
@@ -222,7 +222,7 @@ final class RendererManager {
                   if (var7_int != 2) {
                     throw new IllegalStateException("UT" + var6.field_d);
                   }
-                  if (!oi.field_d.b((byte) -39)) {
+                  if (!oi.field_d.ensureIndexLoaded((byte) -39)) {
                     return;
                   }
                   var7_int = bc.a("jaclib", (byte) 74);

@@ -4,8 +4,8 @@
 final class ja {
     static Sprite field_e;
     static int field_d;
-    private ue field_h;
-    private ue field_b;
+    private ResourceArchive field_h;
+    private ResourceArchive field_b;
     static String field_g;
     private ih field_f;
     static n field_c;
@@ -75,7 +75,7 @@ final class ja {
           var6 = (long)var5_int;
           var8 = (PcmSample) (this.field_a.a(var6, (byte) 111));
           if (param2 != 0) {
-            this.field_h = (ue) null;
+            this.field_h = (ResourceArchive) null;
           }
           if (var8 != null) {
             stackIn_4_0 = var8;
@@ -196,7 +196,7 @@ final class ja {
         return this.a((int[]) null, param0, 0, param1);
     }
 
-    ja(ue param0, ue param1) {
+    ja(ResourceArchive param0, ResourceArchive param1) {
         this.field_f = new ih(256);
         this.field_a = new ih(256);
         try {

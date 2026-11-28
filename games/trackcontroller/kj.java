@@ -91,7 +91,7 @@ final class kj extends IntrusiveNode {
         }
     }
 
-    final static char a(byte param0, byte param1) {
+    final static char decodeCp1252Byte(byte param0, byte param1) {
         int var3 = 0;
         int var2 = param1 & 255;
         if (param0 >= -3) {

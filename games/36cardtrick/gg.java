@@ -15,7 +15,7 @@ final class gg {
         }
     }
 
-    final static rj a(String param0, da param1, qk param2, int param3, String param4) {
+    final static rj a(String param0, da param1, ResourceArchive param2, int param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -36,8 +36,8 @@ final class gg {
             stackIn_2_0 = (rj) null;
             return stackIn_2_0;
           }
-          var5_int = param2.a(param3 ^ -30526, param4);
-          var6 = param2.a(var5_int, param0, (byte) 7);
+          var5_int = param2.getGroupIdByName(param3 ^ -30526, param4);
+          var6 = param2.getFileIdByName(var5_int, param0, (byte) 7);
           stackIn_4_0 = ni.a((byte) 65, var5_int, param2, var6, param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

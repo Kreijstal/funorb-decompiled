@@ -362,7 +362,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          VorbisSample.b(param1.a(-2, "", "headers.packvorbis"));
+          VorbisSample.b(param1.getFileByName(-2, "", "headers.packvorbis"));
           if (param0 != 0) {
             screens = (GameScreen[]) null;
           }

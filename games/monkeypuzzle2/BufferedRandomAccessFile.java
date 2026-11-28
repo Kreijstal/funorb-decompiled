@@ -16,7 +16,7 @@ final class BufferedRandomAccessFile {
     private long field_f;
     static java.awt.Color field_i;
     private byte[] field_c;
-    static ad field_j;
+    static ResourceArchive field_j;
     static AccountRequestState field_d;
 
     final void readFully(int param0, byte[] param1) throws IOException {
@@ -57,7 +57,7 @@ final class BufferedRandomAccessFile {
             mb.field_e.removeLast(4011);
           }
           if (param0 > -106) {
-            field_j = (ad) null;
+            field_j = (ResourceArchive) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

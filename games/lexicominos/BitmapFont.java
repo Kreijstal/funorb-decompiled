@@ -173,7 +173,7 @@ abstract class BitmapFont extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_r.append((char) var14);
-                var14 = (char)(ua.a(true, (char) var14) & 255);
+                var14 = (char)(ua.encodeCp1252Character(true, (char) var14) & 255);
                 var4 = var4 + this.field_K[var14];
                 if (this.field_u != null &&
                   var10 != 0) {
@@ -335,7 +335,7 @@ abstract class BitmapFont extends DualLinkNode {
     }
 
     final int a(char param0) {
-        return this.field_K[ua.a(true, param0) & 255];
+        return this.field_K[ua.encodeCp1252Character(true, param0) & 255];
     }
 
     final int a(String param0, int param1) {
@@ -429,7 +429,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(ua.a(true, (char) var7) & 255);
+              var7 = (char)(ua.encodeCp1252Character(true, (char) var7) & 255);
               var4 = var4 + this.field_K[var7];
               if (this.field_u != null &&
                 var3 != 0) {
@@ -671,7 +671,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(ua.a(true, (char) var8) & 255);
+              var8 = (char)(ua.encodeCp1252Character(true, (char) var8) & 255);
               if (this.field_u != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_u[(var5 << 8) + var8];
@@ -746,7 +746,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 }
                               } else {
                                 var7 = (CharSequence) ((Object) param0.substring(5));
-                                field_z = th.a(var7, 8, 16);
+                                field_z = BitPacketBuffer.parseIntInRadix(var7, 8, 16);
                               }
                             } else {
                               field_w = -1;
@@ -756,7 +756,7 @@ abstract class BitmapFont extends DualLinkNode {
                           }
                         } else {
                           var6 = (CharSequence) ((Object) param0.substring(2));
-                          field_w = th.a(var6, 8, 16);
+                          field_w = BitPacketBuffer.parseIntInRadix(var6, 8, 16);
                         }
                       } else {
                         field_y = -1;
@@ -766,7 +766,7 @@ abstract class BitmapFont extends DualLinkNode {
                     }
                   } else {
                     var5 = (CharSequence) ((Object) param0.substring(4));
-                    field_y = th.a(var5, 8, 16);
+                    field_y = BitPacketBuffer.parseIntInRadix(var5, 8, 16);
                   }
                 } else {
                   field_I = field_J;
@@ -780,7 +780,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
           } else {
             var3 = (CharSequence) ((Object) param0.substring(4));
-            field_F = th.a(var3, 8, 16);
+            field_F = BitPacketBuffer.parseIntInRadix(var3, 8, 16);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -818,7 +818,7 @@ abstract class BitmapFont extends DualLinkNode {
         int var5 = 0;
         if (param0 != 32) {
           param2 = param2 - this.field_C;
-          var5 = ua.a(true, param0) & 255;
+          var5 = ua.encodeCp1252Character(true, param0) & 255;
           this.drawGlyph(var5, param1 + this.field_B[var5] - (this.field_K[var5] >> 1), param2 + this.field_M[var5], this.field_s[var5], this.field_x[var5], param3, false);
         }
     }
@@ -827,7 +827,7 @@ abstract class BitmapFont extends DualLinkNode {
         int var6 = 0;
         if (param0 != 32) {
           param2 = param2 - this.field_C;
-          var6 = ua.a(true, param0) & 255;
+          var6 = ua.encodeCp1252Character(true, param0) & 255;
           this.drawGlyphAlpha(var6, param1 + this.field_B[var6] - (this.field_K[var6] >> 1), param2 + this.field_M[var6], this.field_s[var6], this.field_x[var6], param3, param4, false);
         }
     }

@@ -282,7 +282,7 @@ final class lh {
         return stackIn_9_0;
     }
 
-    final static wb a(String param0, qk param1, String param2, int param3) {
+    final static wb a(String param0, ResourceArchive param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -297,9 +297,9 @@ final class lh {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.a(18659, param2);
+          var4_int = param1.getGroupIdByName(18659, param2);
           var5 = 1 % ((param3 - 43) / 62);
-          var6 = param1.a(var4_int, param0, (byte) 7);
+          var6 = param1.getFileIdByName(var4_int, param0, (byte) 7);
           stackIn_1_0 = oj.a(var4_int, param1, var6, -8691);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -209,7 +209,7 @@ final class Raider {
         }
     }
 
-    final static byte a(byte param0, char param1) {
+    final static byte encodeCp1252Character(byte param0, char param1) {
         int var2;
         int var3;
         var3 = DungeonAssault.field_K;

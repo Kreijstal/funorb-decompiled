@@ -147,11 +147,11 @@ final class tj extends kf {
     }
 
     final static void a(byte param0, dg param1, int param2) {
-        ia var5 = null;
+        BitPacketBuffer var5 = null;
         int var4 = 0;
         try {
           var5 = d.field_b;
-          var5.d((byte) 100, param2);
+          var5.writeCipheredByte((byte) 100, param2);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(1, -70);

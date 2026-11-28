@@ -55,9 +55,9 @@ final class ki {
           return var3;
         }
         if (param1 < 32768) {
-          var4 = this.field_g.a(1, param1, (byte) -23);
+          var4 = this.field_g.getFile(1, param1, (byte) -23);
         } else {
-          var4 = this.field_b.a(1, param1 & 32767, (byte) -67);
+          var4 = this.field_b.getFile(1, param1 & 32767, (byte) -67);
         }
         var5 = new ob();
         if (param0 < 91) {

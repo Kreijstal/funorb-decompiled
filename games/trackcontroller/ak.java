@@ -12,7 +12,7 @@ final class ak {
           if (param1 != 4) {
             field_a = (String) null;
           }
-          VorbisDecoder.a(param0.a("headers.packvorbis", param1 ^ -5, ""));
+          VorbisDecoder.a(param0.getFileByName("headers.packvorbis", param1 ^ -5, ""));
           var2 = VorbisDecoder.a(param0, "jagex logo2.packvorbis", "");
           var2.a();
         } catch (RuntimeException runtimeException) {
@@ -55,7 +55,7 @@ final class ak {
           fk.field_a = (BitmapFont) ((Object) kh.a(param2, "arezzo12", param1, "commonui", 1));
           gk.field_c = (BitmapFont) ((Object) kh.a(param2, "arezzo14", param1, "commonui", 1));
           p.field_a = (BitmapFont) ((Object) kh.a(param2, "arezzo14bold", param1, "commonui", 1));
-          var17 = new Sprite(param0.a("button.gif", -1, ""), (java.awt.Component) ((Object) ki.field_f));
+          var17 = new Sprite(param0.getFileByName("button.gif", -1, ""), (java.awt.Component) ((Object) ki.field_f));
           ti.a("dropdown", param1, "commonui", 17);
           var5 = ie.a("commonui", param1, "screen_options", 124);
           fj.field_M = new IndexedSprite[4];

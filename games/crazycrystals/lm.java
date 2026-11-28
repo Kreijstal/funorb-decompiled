@@ -3,7 +3,7 @@
  */
 final class lm {
     static java.math.BigInteger field_j;
-    db field_h;
+    ResourceArchive field_h;
     int field_i;
     String field_c;
     String field_b;

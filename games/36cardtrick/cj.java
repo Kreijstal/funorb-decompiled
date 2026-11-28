@@ -18,7 +18,7 @@ class cj extends DualLinkNode {
         field_m = null;
     }
 
-    final static void a(qk param0, boolean param1, qk param2, qk param3, int param4) {
+    final static void a(ResourceArchive param0, boolean param1, ResourceArchive param2, ResourceArchive param3, int param4) {
         try {
           wh.field_a = AccountServiceResult.a(false, "");
           wh.field_a.a(16511, false);

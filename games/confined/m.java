@@ -7,8 +7,8 @@ final class m {
     static RgbSprite[] field_i;
     static int field_a;
     static int field_l;
-    private mi field_c;
-    private mi field_e;
+    private ResourceArchive field_c;
+    private ResourceArchive field_e;
     static java.awt.Color field_k;
     private vh field_j;
     static String field_h;
@@ -165,7 +165,7 @@ final class m {
         field_h = null;
     }
 
-    m(mi param0, mi param1) {
+    m(ResourceArchive param0, ResourceArchive param1) {
         this.field_f = new vh(256);
         this.field_j = new vh(256);
         try {

@@ -308,10 +308,10 @@ final class t extends ma implements mj {
               var15 = 0;
               if (var4_int != 0 &&
                 var9 >= 0) {
-                if (null != nk.field_r &&
-                  null != nk.field_r[var7] &&
-                  (nk.field_r[var7][var9] & ~cb.field_c) > 0) {
-                  var15 = ie.a(nk.field_r[var7][var9] & ~cb.field_c, (byte) -59);
+                if (null != BitPacketBuffer.field_r &&
+                  null != BitPacketBuffer.field_r[var7] &&
+                  (BitPacketBuffer.field_r[var7][var9] & ~cb.field_c) > 0) {
+                  var15 = ie.a(BitPacketBuffer.field_r[var7][var9] & ~cb.field_c, (byte) -59);
                   var14 = 1;
                 }
                 if (field_L != null &&
