@@ -97,10 +97,10 @@ final class he extends ch {
               return;
             }
             var15 = -var14 + 400;
-            if (jh.field_db >= var15) {
+            if (FullscreenStatusDialog.field_db >= var15) {
               return;
             }
-            jh.field_db = var15;
+            FullscreenStatusDialog.field_db = var15;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

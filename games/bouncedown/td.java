@@ -14,7 +14,7 @@ abstract class td {
           }
           pb.field_k = kg.a(2, "");
           pb.field_k.a(false, (byte) -48);
-          uc.a(param2, 118, param3, param1);
+          DialogMessagePane.a(param2, 118, param3, param1);
           ProxyAuthenticationRequiredException.a(param0 ^ 127);
           RichTextWidget.field_F = wj.field_a;
           fh.field_B = wj.field_a;
@@ -35,7 +35,7 @@ abstract class td {
     final static void a(byte param0) {
         eh.a(true);
         if (ch.field_h != null) {
-          mh.a(ch.field_h, (byte) 86);
+          ContentTransitionDialog.a(ch.field_h, (byte) 86);
         }
         DisplayNameSelectionPanel.l(8927);
         mc.a(-660);

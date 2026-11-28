@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends uc implements WidgetActivationListener {
+final class AccountCreationResultPanel extends ProgressMessageDialog implements WidgetActivationListener {
     private boolean field_qb;
     private boolean field_ub;
     static boolean field_tb;
@@ -185,14 +185,14 @@ final class AccountCreationResultPanel extends uc implements WidgetActivationLis
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        vc var5 = null;
+        DialogMessagePane var5 = null;
         int var6 = 0;
         int var7 = 0;
         var7 = Lexicominos.field_L ? 1 : 0;
         try {
           this.field_ub = true;
           if (param2.success) {
-            var4 = vc.field_G;
+            var4 = DialogMessagePane.field_G;
           } else {
             if (null == param2.suggestions) {
               var4 = param2.message;
@@ -213,36 +213,36 @@ final class AccountCreationResultPanel extends uc implements WidgetActivationLis
               }
             }
           }
-          var5 = new vc((uc) (this), FullscreenFocusCanvas.field_c, var4);
+          var5 = new DialogMessagePane((ProgressMessageDialog) (this), FullscreenFocusCanvas.field_c, var4);
           var6 = -123 % ((-72 - param1) / 44);
           if (param2.success) {
             if (param2.field_b) {
-              this.b(127, new kg(this));
+              this.replaceContent(127, new RegistrationAgreementPane(this));
               return;
             }
-            var5.a(-1, n.field_h, (WidgetEventListener) (this));
+            var5.addListenerButton(-1, n.field_h, (WidgetEventListener) (this));
           } else {
             if (this.field_qb) {
-              var5.a(-1, n.field_h, (WidgetEventListener) (this));
+              var5.addListenerButton(-1, n.field_h, (WidgetEventListener) (this));
             } else {
               if (param2.statusCode == 5) {
-                var5.a(md.field_B, 11, 120);
-                var5.a(jd.field_d, 17, 125);
+                var5.addActionButton(StripedProgressWidget.field_B, 11, 120);
+                var5.addActionButton(jd.field_d, 17, 125);
               } else {
-                var5.a(a.field_e, -1, 114);
+                var5.addActionButton(a.field_e, -1, 114);
               }
             }
             if (param2.statusCode == 3) {
-              var5.a(pa.field_b, 7, -35);
+              var5.addActionButton(pa.field_b, 7, -35);
             } else {
               if (6 != param2.statusCode) {
-                this.b(127, var5);
+                this.replaceContent(127, var5);
                 return;
               }
-              var5.a(lb.field_b, 9, 118);
+              var5.addActionButton(lb.field_b, 9, 118);
             }
           }
-          this.b(127, var5);
+          this.replaceContent(127, var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -263,13 +263,13 @@ final class AccountCreationResultPanel extends uc implements WidgetActivationLis
           throw new IllegalStateException();
         }
         if (jj.field_a != null) {
-          jj.field_a.g(!param0 ? true : false);
+          jj.field_a.closeDialog(!param0 ? true : false);
         }
         String var1 = ni.a(param0);
         eb.field_b = new LoginPanel(var1, (String) null, true, false, false);
         ug.field_A.showDialog(-14579, di.field_x);
-        di.field_x.b(126, eb.field_b);
-        di.field_x.f(!param0 ? true : false);
+        di.field_x.replaceContent(126, eb.field_b);
+        di.field_x.finishResize(!param0 ? true : false);
     }
 
     final static void l(byte param0) {
@@ -332,7 +332,7 @@ final class AccountCreationResultPanel extends uc implements WidgetActivationLis
             ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-95);
             return;
           }
-          uj.a("LR1: " + qj.h(-93), (Throwable) null, 1);
+          uj.a("LR1: " + StandardContentDialog.h(-93), (Throwable) null, 1);
           ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-42);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -342,7 +342,7 @@ final class AccountCreationResultPanel extends uc implements WidgetActivationLis
         }
     }
 
-    final void k(byte param0) {
+    final void showAccountCreationConnectionFailure(byte param0) {
         int var2 = 88 % ((param0 + 27) / 57);
         this.showAccountCreationResult(true, (byte) -120, wi.createAccountErrorResult(248, (byte) -113, he.field_b));
     }
@@ -408,7 +408,7 @@ final class AccountCreationResultPanel extends uc implements WidgetActivationLis
         }
         try {
           DelegatingCanvas.a((byte) 108);
-          this.g(true);
+          this.closeDialog(true);
           if (param2 != 215535458) {
             InteractiveWidget var7 = (InteractiveWidget) null;
             this.onWidgetActivated(123, -100, -20, 115, (InteractiveWidget) null);

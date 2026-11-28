@@ -59,14 +59,14 @@ final class fg {
             var8 = DraggableWidgetContainer.a(var7, param1 + 77, "%40", "@");
             var9 = DraggableWidgetContainer.a(var8, 0, "%26", "&");
             var10 = DraggableWidgetContainer.a(var9, param1 ^ -77, "%23", "#");
-            if (null == ba.field_L) {
+            if (null == RegistrationAgreementPane.field_L) {
               return;
             }
             stackIn_14_0 = ResourceArchive.field_g;
             stackIn_14_1 = -49;
             stackIn_14_2 = null;
             stackIn_14_3 = null;
-            stackIn_14_4 = ba.field_L.getCodeBase();
+            stackIn_14_4 = RegistrationAgreementPane.field_L.getCodeBase();
             stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(cg.field_a).append("&u=");
             if (null == TextLineMetrics.field_h) {
               stackIn_15_2 = null;

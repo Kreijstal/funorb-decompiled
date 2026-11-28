@@ -102,7 +102,7 @@ final class IterableNodeHashTable implements Iterable {
     }
 
     final static void a(int param0) {
-        LabeledWidgetContainer.field_K.c(0, new ih());
+        LabeledWidgetContainer.field_K.replaceContent(0, new GuestPlayConfirmationForm());
         if (param0 != -2068) {
           field_h = (Sprite) null;
         }

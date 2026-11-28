@@ -228,7 +228,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
           this.field_H = (TextInputWidget) ((Object) new ValidatedTextField("", (WidgetListener) (this), 20));
           if (this.field_J) {
             this.field_M = new InteractiveWidget(bga.field_k, (WidgetListener) null);
-            this.field_K = new InteractiveWidget(uda.field_ab, (WidgetListener) null);
+            this.field_K = new InteractiveWidget(ContentTransitionDialog.field_ab, (WidgetListener) null);
             this.field_Q.field_z = false;
           } else {
             this.field_M = new InteractiveWidget(RichTextLayout.field_n, (WidgetListener) null);

@@ -114,7 +114,7 @@ final class SecondaryNodeDeque implements Iterable {
         try {
           SectorCacheStore.field_c = true;
           ud.field_c = param2 ? true : false;
-          ok.field_x = new bd(nb.field_a, rg.field_o, param0, MouseWheelInput.field_d, ud.field_c);
+          ok.field_x = new ProgressMessageDialog(nb.field_a, rg.field_o, param0, MouseWheelInput.field_d, ud.field_c);
           nb.field_a.showDialog(ok.field_x, (byte) -35);
           if (param1) {
             field_e = (String) null;

@@ -208,7 +208,7 @@ final class th {
           }
           var2_long = la.correctedCurrentTimeMillis(param0);
           if (lc.field_v != 0 &&
-            dj.field_N < 0) {
+            DialogMessagePane.field_N < 0) {
             var4_ref_wk = (wk) (AccountServiceResult.field_f.beginForward(-11151));
             if (var4_ref_wk != null &&
               var4_ref_wk.field_k < var2_long) {
@@ -226,14 +226,14 @@ final class th {
             }
           }
           while (true) {
-            if (dj.field_N < 0) {
+            if (DialogMessagePane.field_N < 0) {
               LabeledWidgetContainer.field_N.position = 0;
               if (!NameSuggestionsPanel.a(1, 5929)) {
                 return false;
               }
-              dj.field_N = LabeledWidgetContainer.field_N.readCipheredByte((byte) 121);
+              DialogMessagePane.field_N = LabeledWidgetContainer.field_N.readCipheredByte((byte) 121);
               LabeledWidgetContainer.field_N.position = 0;
-              gf.field_C = param1[dj.field_N];
+              gf.field_C = param1[DialogMessagePane.field_N];
             }
             if (!GameAppletShell.d(-29427)) {
               return false;
@@ -242,8 +242,8 @@ final class th {
               DefaultTextWidgetRenderer.field_q = gg.field_l;
               gg.field_l = ek.field_h;
               ek.field_h = t.field_b;
-              t.field_b = dj.field_N;
-              dj.field_N = -1;
+              t.field_b = DialogMessagePane.field_N;
+              DialogMessagePane.field_N = -1;
               return true;
             }
             var4 = lc.field_v;
@@ -253,12 +253,12 @@ final class th {
                 var4 = 0;
               }
             }
-            var5 = new wk((long)var4 + var2_long, dj.field_N, new byte[gf.field_C]);
+            var5 = new wk((long)var4 + var2_long, DialogMessagePane.field_N, new byte[gf.field_C]);
             for (var6 = 0; var6 < gf.field_C; var6++) {
               var5.field_j[var6] = LabeledWidgetContainer.field_N.payload[var6];
             }
             AccountServiceResult.field_f.addLast(var5, 255);
-            dj.field_N = -1;
+            DialogMessagePane.field_N = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

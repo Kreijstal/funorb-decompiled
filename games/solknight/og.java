@@ -20,7 +20,7 @@ final class og {
         }
         ph.field_h = null;
         uj.field_b = null;
-        ig.field_H = null;
+        GuestPlayConfirmationForm.field_H = null;
         sa.field_l = null;
         jc.field_c = (byte[][]) null;
         qf.field_d = null;

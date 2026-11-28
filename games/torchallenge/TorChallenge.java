@@ -72,17 +72,17 @@ public final class TorChallenge extends GameClientBase {
           ph.field_o[5] = qk.a("", "overlay_characters", SingleChildWidgetContainer.field_C, 0);
           ph.field_o[6] = qk.a("", "overlay_levels", SingleChildWidgetContainer.field_C, 0);
           ri.field_j = qk.a("", "overlay_title_tile", SingleChildWidgetContainer.field_C, param0 ^ 1);
-          DebouncedFieldValidator.field_i = v.a("frame", 26, "", SingleChildWidgetContainer.field_C);
+          DebouncedFieldValidator.field_i = ResizableModalDialog.a("frame", 26, "", SingleChildWidgetContainer.field_C);
           dh.field_cb = new Sprite[2][];
-          GzipDecoder.field_a = v.a("main_menu_frame", param0 + 123, "", SingleChildWidgetContainer.field_C);
+          GzipDecoder.field_a = ResizableModalDialog.a("main_menu_frame", param0 + 123, "", SingleChildWidgetContainer.field_C);
           dh.field_cb[0] = GzipDecoder.field_a;
           dh.field_cb[1] = SpriteLoader.a(-127, "char_select_frame_selected", "", SingleChildWidgetContainer.field_C);
-          ba.field_b = v.a("button_frame", 53, "", SingleChildWidgetContainer.field_C);
+          ba.field_b = ResizableModalDialog.a("button_frame", 53, "", SingleChildWidgetContainer.field_C);
           aa.field_k = SpriteLoader.a(-127, "nav_frame", "", SingleChildWidgetContainer.field_C);
           ph.field_m = SpriteLoader.a(param0 - 129, "text_frame", "", SingleChildWidgetContainer.field_C);
           qf.field_c = SpriteLoader.a(-127, "seal_list", "", SingleChildWidgetContainer.field_C);
           DisplayNameSelectionPanel.field_M = SpriteLoader.a(-127, "go_button", "", SingleChildWidgetContainer.field_C);
-          AccountRegistrationPanel.field_J = v.a("instructions_frame", 35, "", SingleChildWidgetContainer.field_C);
+          AccountRegistrationPanel.field_J = ResizableModalDialog.a("instructions_frame", 35, "", SingleChildWidgetContainer.field_C);
           SpriteLoader.a(-127, "char_select_arrows", "", SingleChildWidgetContainer.field_C);
           ua.field_d = mh.a(param0 + 52, SingleChildWidgetContainer.field_C, "keys", "");
           EditableTextField.field_V = mh.a(113, SingleChildWidgetContainer.field_C, "keys2", "");
@@ -113,8 +113,8 @@ public final class TorChallenge extends GameClientBase {
               ie.field_f[2][0] = ba.field_d[0];
               ie.field_f[2][1] = ba.field_d[1];
               dh.field_Y = qk.a("", "menu_slider", SingleChildWidgetContainer.field_C, 0);
-              wa.field_xb = DiskCacheWorker.a(SingleChildWidgetContainer.field_C, "", (byte) -127, "intro4_bg");
-              hl.a(wa.field_xb, false, MatchingFieldValidator.field_m[3][0]);
+              ProgressMessageDialog.field_xb = DiskCacheWorker.a(SingleChildWidgetContainer.field_C, "", (byte) -127, "intro4_bg");
+              hl.a(ProgressMessageDialog.field_xb, false, MatchingFieldValidator.field_m[3][0]);
               break;
             }
             var4_ref_ka = var2[var3_int];
@@ -166,8 +166,8 @@ public final class TorChallenge extends GameClientBase {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            AccountServiceResult.field_h[3][0] = wa.field_xb.a();
-            wa.field_xb = null;
+            AccountServiceResult.field_h[3][0] = ProgressMessageDialog.field_xb.a();
+            ProgressMessageDialog.field_xb = null;
             we.field_m = new Sprite[4];
             we.field_m[0] = null;
             qc.field_c = DiskCacheWorker.a(SingleChildWidgetContainer.field_C, "", (byte) -116, "game_start_bg");
@@ -200,8 +200,8 @@ public final class TorChallenge extends GameClientBase {
             pf.field_a[2] = qk.a("", "game_win_1_ziren", SingleChildWidgetContainer.field_C, 0);
             pf.field_a[3] = qk.a("", "game_win_1_damen", SingleChildWidgetContainer.field_C, 0);
             pf.field_a[4] = qk.a("", "game_win_1_stars", SingleChildWidgetContainer.field_C, 0);
-            pe.field_eb = SpriteLoader.a(-127, "status_messages", "", SingleChildWidgetContainer.field_C);
-            var2_int = pe.field_eb.length;
+            ProgressDialog.field_eb = SpriteLoader.a(-127, "status_messages", "", SingleChildWidgetContainer.field_C);
+            var2_int = ProgressDialog.field_eb.length;
             stackIn_51_0 = 0;
           }
           var3_int = stackIn_51_0;
@@ -236,7 +236,7 @@ public final class TorChallenge extends GameClientBase {
               ModalDialogHost.field_I = new Sprite[3][][];
               break;
             }
-            pe.field_eb[var3_int].normalizeCanvas();
+            ProgressDialog.field_eb[var3_int].normalizeCanvas();
             var3_int++;
           } while (var12 == 0);
           var6_int = 0;
@@ -615,7 +615,7 @@ public final class TorChallenge extends GameClientBase {
             return;
           }
           if (!jh.a((byte) 103)) {
-            mh.a(wa.field_qb, (byte) -125, 100.0f);
+            mh.a(ProgressMessageDialog.field_qb, (byte) -125, 100.0f);
             EmailFormatValidator.a(-20895, var2);
             return;
           }
@@ -921,13 +921,13 @@ public final class TorChallenge extends GameClientBase {
           return;
         }
         try {
-          SingleChildWidgetContainer.field_C = pe.b(4, -1);
-          PasswordValidator.field_q = pe.b(5, -1);
-          DelegatingCanvas.field_d = pe.b(6, -1);
-          SpriteLoader.field_f = pe.b(7, -1);
-          cl.field_y = pe.b(8, -1);
-          fh.field_f = pe.b(9, -1);
-          qh.field_M = pe.b(10, -1);
+          SingleChildWidgetContainer.field_C = ProgressDialog.b(4, -1);
+          PasswordValidator.field_q = ProgressDialog.b(5, -1);
+          DelegatingCanvas.field_d = ProgressDialog.b(6, -1);
+          SpriteLoader.field_f = ProgressDialog.b(7, -1);
+          cl.field_y = ProgressDialog.b(8, -1);
+          fh.field_f = ProgressDialog.b(9, -1);
+          RegistrationAgreementPane.field_M = ProgressDialog.b(10, -1);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "TorChallenge.D(" + param0 + ')');
         }
@@ -965,7 +965,7 @@ public final class TorChallenge extends GameClientBase {
           if (hc.c((byte) 63)) {
             this.i(109);
             if (hc.c((byte) -108)) {
-              if (ih.f((byte) -128)) {
+              if (GuestPlayConfirmationForm.f((byte) -128)) {
                 discarded$0 = this.a(false, (byte) 82);
               }
               return;
@@ -1192,8 +1192,8 @@ public final class TorChallenge extends GameClientBase {
                         SingleChildWidgetContainer.field_C.tryLoadAllGroups((byte) 79)) {
                         if (PasswordValidator.field_q.ensureIndexLoaded(-7957) &&
                           PasswordValidator.field_q.tryLoadAllGroups((byte) 79)) {
-                          if (qh.field_M.ensureIndexLoaded(-7957) &&
-                            qh.field_M.tryLoadAllGroups((byte) 79)) {
+                          if (RegistrationAgreementPane.field_M.ensureIndexLoaded(-7957) &&
+                            RegistrationAgreementPane.field_M.tryLoadAllGroups((byte) 79)) {
                             mh.a(DelegatingCanvas.field_a, (byte) -125, 65.0f);
                             if (!param0) {
                               return false;
@@ -1315,7 +1315,7 @@ public final class TorChallenge extends GameClientBase {
                             id.a(62);
                             return false;
                           }
-                          mh.a(DelegatingCanvas.a(256, "Loading Levels", "", qh.field_M, "Waiting for Levels"), (byte) -125, 60.0f);
+                          mh.a(DelegatingCanvas.a(256, "Loading Levels", "", RegistrationAgreementPane.field_M, "Waiting for Levels"), (byte) -125, 60.0f);
                           return false;
                         }
                         mh.a(DelegatingCanvas.a(256, ij.field_x, "", PasswordValidator.field_q, wf.field_a), (byte) -125, 60.0f);
@@ -1324,10 +1324,10 @@ public final class TorChallenge extends GameClientBase {
                       mh.a(DelegatingCanvas.a(256, ra.field_m, "", SingleChildWidgetContainer.field_C, DraggableWidgetContainer.field_K), (byte) -125, 50.0f);
                       return false;
                     }
-                    mh.a(DelegatingCanvas.a(256, DebouncedFieldValidator.field_e, "", fh.field_f, qh.field_L), (byte) -125, 40.0f);
+                    mh.a(DelegatingCanvas.a(256, DebouncedFieldValidator.field_e, "", fh.field_f, RegistrationAgreementPane.field_L), (byte) -125, 40.0f);
                     return false;
                   }
-                  mh.a(ProxySocketConnector.a(qh.field_L, cl.field_y, 0, 89, DebouncedFieldValidator.field_e), (byte) -125, 30.0f);
+                  mh.a(ProxySocketConnector.a(RegistrationAgreementPane.field_L, cl.field_y, 0, 89, DebouncedFieldValidator.field_e), (byte) -125, 30.0f);
                   return false;
                 }
                 mh.a(DelegatingCanvas.a(256, ie.field_c, "", SpriteLoader.field_f, cb.field_a), (byte) -125, 20.0f);
@@ -1339,16 +1339,16 @@ public final class TorChallenge extends GameClientBase {
             mh.a(DelegatingCanvas.a(256, ra.field_m, "basic", aj.field_f, DraggableWidgetContainer.field_K), (byte) -125, 3.0f);
             return false;
           }
-          if (qh.field_M != null) {
+          if (RegistrationAgreementPane.field_M != null) {
             je.field_c = new byte[cg.levelNames.length][];
             var3_int = 0;
             do {
               if (!(var3_int < je.field_c.length)) {
-                qh.field_M = null;
+                RegistrationAgreementPane.field_M = null;
                 id.a(108);
                 break;
               }
-              je.field_c[var3_int] = qh.field_M.getFileByName(-2, cg.levelNames[var3_int], "");
+              je.field_c[var3_int] = RegistrationAgreementPane.field_M.getFileByName(-2, cg.levelNames[var3_int], "");
               var3_int++;
             } while (var4 == 0);
             return false;
@@ -1356,53 +1356,53 @@ public final class TorChallenge extends GameClientBase {
           if (null != SpriteLoader.field_f) {
             mh.a(DelegatingCanvas.field_a, (byte) -125, 70.0f);
             this.drawFrame(7808);
-            cg.field_a[3] = VorbisSample.a(SpriteLoader.field_f, "", "Henhui_character_select").c();
-            cg.field_a[4] = VorbisSample.a(SpriteLoader.field_f, "", "Ziren_character_select").c();
-            cg.field_a[5] = VorbisSample.a(SpriteLoader.field_f, "", "Damen_character_select").c();
-            cg.field_a[6] = VorbisSample.a(SpriteLoader.field_f, "", "TOR_Challenge_Menu").c();
-            cg.field_a[7] = VorbisSample.a(SpriteLoader.field_f, "", "menu_character_selected_gong").c();
-            cg.field_a[8] = VorbisSample.a(SpriteLoader.field_f, "", "menu_TOWER").c();
-            cg.field_a[9] = VorbisSample.a(SpriteLoader.field_f, "", "menu_ONE").c();
-            cg.field_a[10] = VorbisSample.a(SpriteLoader.field_f, "", "menu_TWO").c();
-            cg.field_a[11] = VorbisSample.a(SpriteLoader.field_f, "", "menu_THREE").c();
-            cg.field_a[12] = VorbisSample.a(SpriteLoader.field_f, "", "menu_FOUR").c();
-            cg.field_a[13] = VorbisSample.a(SpriteLoader.field_f, "", "menu_FIVE").c();
-            cg.field_a[14] = VorbisSample.a(SpriteLoader.field_f, "", "menu_SIX").c();
-            cg.field_a[15] = VorbisSample.a(SpriteLoader.field_f, "", "menu_READY").c();
-            cg.field_a[16] = VorbisSample.a(SpriteLoader.field_f, "", "menu_YOU_LOSE").c();
-            wl.field_c[6][0] = VorbisSample.a(SpriteLoader.field_f, "", "H_Attack_1").c();
-            wl.field_c[6][1] = VorbisSample.a(SpriteLoader.field_f, "", "Z_Attack_1").c();
-            wl.field_c[6][2] = VorbisSample.a(SpriteLoader.field_f, "", "D_Attack_1").c();
-            wl.field_c[7][0] = VorbisSample.a(SpriteLoader.field_f, "", "H_Attack_2").c();
-            wl.field_c[7][1] = VorbisSample.a(SpriteLoader.field_f, "", "Z_Attack_2").c();
-            wl.field_c[7][2] = VorbisSample.a(SpriteLoader.field_f, "", "D_Attack_2").c();
-            wl.field_c[8][0] = VorbisSample.a(SpriteLoader.field_f, "", "H_Attack_3_combo").c();
-            wl.field_c[8][1] = VorbisSample.a(SpriteLoader.field_f, "", "Z_Attack_3_combo").c();
-            wl.field_c[8][2] = VorbisSample.a(SpriteLoader.field_f, "", "D_Attack_3_combo").c();
-            wl.field_c[9][0] = VorbisSample.a(SpriteLoader.field_f, "", "H_Attack_2_spec").c();
-            wl.field_c[9][1] = VorbisSample.a(SpriteLoader.field_f, "", "Z_Attack_2_spec").c();
-            wl.field_c[9][2] = VorbisSample.a(SpriteLoader.field_f, "", "D_Attack_2_spec").c();
-            wl.field_c[10][0] = VorbisSample.a(SpriteLoader.field_f, "", "H_Death").c();
-            wl.field_c[10][1] = VorbisSample.a(SpriteLoader.field_f, "", "Z_Death").c();
-            wl.field_c[10][2] = VorbisSample.a(SpriteLoader.field_f, "", "D_Death").c();
-            wl.field_c[11][0] = VorbisSample.a(SpriteLoader.field_f, "", "H_Hit_1").c();
-            wl.field_c[11][1] = VorbisSample.a(SpriteLoader.field_f, "", "Z_Hit_1").c();
-            wl.field_c[11][2] = VorbisSample.a(SpriteLoader.field_f, "", "D_Hit_1").c();
-            wl.field_c[12][0] = VorbisSample.a(SpriteLoader.field_f, "", "H_Hit_2").c();
-            wl.field_c[12][1] = VorbisSample.a(SpriteLoader.field_f, "", "Z_Hit_2").c();
-            wl.field_c[12][2] = VorbisSample.a(SpriteLoader.field_f, "", "D_Hit_2").c();
-            wl.field_c[13][0] = VorbisSample.a(SpriteLoader.field_f, "", "H_Hit_3").c();
-            wl.field_c[13][1] = VorbisSample.a(SpriteLoader.field_f, "", "Z_Hit_3").c();
-            wl.field_c[13][2] = VorbisSample.a(SpriteLoader.field_f, "", "D_Hit_3").c();
-            bf.field_c[0][6] = VorbisSample.a(SpriteLoader.field_f, "", "Boss_1_Attack_combo").c();
-            bf.field_c[0][7] = VorbisSample.a(SpriteLoader.field_f, "", "Boss_1_Death").c();
-            bf.field_c[0][8] = VorbisSample.a(SpriteLoader.field_f, "", "Boss_1_Hit").c();
-            bf.field_c[1][6] = VorbisSample.a(SpriteLoader.field_f, "", "Boss_2_Attack_combo").c();
-            bf.field_c[1][7] = VorbisSample.a(SpriteLoader.field_f, "", "Boss_2_Death").c();
-            bf.field_c[1][8] = VorbisSample.a(SpriteLoader.field_f, "", "Boss_2_Hit").c();
-            bf.field_c[2][6] = VorbisSample.a(SpriteLoader.field_f, "", "Boss_3_Attack_combo").c();
-            bf.field_c[2][7] = VorbisSample.a(SpriteLoader.field_f, "", "Boss_3_Death").c();
-            bf.field_c[2][8] = VorbisSample.a(SpriteLoader.field_f, "", "Boss_3_Hit").c();
+            cg.field_a[3] = VorbisSample.loadByName(SpriteLoader.field_f, "", "Henhui_character_select").decodeAllToPcm();
+            cg.field_a[4] = VorbisSample.loadByName(SpriteLoader.field_f, "", "Ziren_character_select").decodeAllToPcm();
+            cg.field_a[5] = VorbisSample.loadByName(SpriteLoader.field_f, "", "Damen_character_select").decodeAllToPcm();
+            cg.field_a[6] = VorbisSample.loadByName(SpriteLoader.field_f, "", "TOR_Challenge_Menu").decodeAllToPcm();
+            cg.field_a[7] = VorbisSample.loadByName(SpriteLoader.field_f, "", "menu_character_selected_gong").decodeAllToPcm();
+            cg.field_a[8] = VorbisSample.loadByName(SpriteLoader.field_f, "", "menu_TOWER").decodeAllToPcm();
+            cg.field_a[9] = VorbisSample.loadByName(SpriteLoader.field_f, "", "menu_ONE").decodeAllToPcm();
+            cg.field_a[10] = VorbisSample.loadByName(SpriteLoader.field_f, "", "menu_TWO").decodeAllToPcm();
+            cg.field_a[11] = VorbisSample.loadByName(SpriteLoader.field_f, "", "menu_THREE").decodeAllToPcm();
+            cg.field_a[12] = VorbisSample.loadByName(SpriteLoader.field_f, "", "menu_FOUR").decodeAllToPcm();
+            cg.field_a[13] = VorbisSample.loadByName(SpriteLoader.field_f, "", "menu_FIVE").decodeAllToPcm();
+            cg.field_a[14] = VorbisSample.loadByName(SpriteLoader.field_f, "", "menu_SIX").decodeAllToPcm();
+            cg.field_a[15] = VorbisSample.loadByName(SpriteLoader.field_f, "", "menu_READY").decodeAllToPcm();
+            cg.field_a[16] = VorbisSample.loadByName(SpriteLoader.field_f, "", "menu_YOU_LOSE").decodeAllToPcm();
+            wl.field_c[6][0] = VorbisSample.loadByName(SpriteLoader.field_f, "", "H_Attack_1").decodeAllToPcm();
+            wl.field_c[6][1] = VorbisSample.loadByName(SpriteLoader.field_f, "", "Z_Attack_1").decodeAllToPcm();
+            wl.field_c[6][2] = VorbisSample.loadByName(SpriteLoader.field_f, "", "D_Attack_1").decodeAllToPcm();
+            wl.field_c[7][0] = VorbisSample.loadByName(SpriteLoader.field_f, "", "H_Attack_2").decodeAllToPcm();
+            wl.field_c[7][1] = VorbisSample.loadByName(SpriteLoader.field_f, "", "Z_Attack_2").decodeAllToPcm();
+            wl.field_c[7][2] = VorbisSample.loadByName(SpriteLoader.field_f, "", "D_Attack_2").decodeAllToPcm();
+            wl.field_c[8][0] = VorbisSample.loadByName(SpriteLoader.field_f, "", "H_Attack_3_combo").decodeAllToPcm();
+            wl.field_c[8][1] = VorbisSample.loadByName(SpriteLoader.field_f, "", "Z_Attack_3_combo").decodeAllToPcm();
+            wl.field_c[8][2] = VorbisSample.loadByName(SpriteLoader.field_f, "", "D_Attack_3_combo").decodeAllToPcm();
+            wl.field_c[9][0] = VorbisSample.loadByName(SpriteLoader.field_f, "", "H_Attack_2_spec").decodeAllToPcm();
+            wl.field_c[9][1] = VorbisSample.loadByName(SpriteLoader.field_f, "", "Z_Attack_2_spec").decodeAllToPcm();
+            wl.field_c[9][2] = VorbisSample.loadByName(SpriteLoader.field_f, "", "D_Attack_2_spec").decodeAllToPcm();
+            wl.field_c[10][0] = VorbisSample.loadByName(SpriteLoader.field_f, "", "H_Death").decodeAllToPcm();
+            wl.field_c[10][1] = VorbisSample.loadByName(SpriteLoader.field_f, "", "Z_Death").decodeAllToPcm();
+            wl.field_c[10][2] = VorbisSample.loadByName(SpriteLoader.field_f, "", "D_Death").decodeAllToPcm();
+            wl.field_c[11][0] = VorbisSample.loadByName(SpriteLoader.field_f, "", "H_Hit_1").decodeAllToPcm();
+            wl.field_c[11][1] = VorbisSample.loadByName(SpriteLoader.field_f, "", "Z_Hit_1").decodeAllToPcm();
+            wl.field_c[11][2] = VorbisSample.loadByName(SpriteLoader.field_f, "", "D_Hit_1").decodeAllToPcm();
+            wl.field_c[12][0] = VorbisSample.loadByName(SpriteLoader.field_f, "", "H_Hit_2").decodeAllToPcm();
+            wl.field_c[12][1] = VorbisSample.loadByName(SpriteLoader.field_f, "", "Z_Hit_2").decodeAllToPcm();
+            wl.field_c[12][2] = VorbisSample.loadByName(SpriteLoader.field_f, "", "D_Hit_2").decodeAllToPcm();
+            wl.field_c[13][0] = VorbisSample.loadByName(SpriteLoader.field_f, "", "H_Hit_3").decodeAllToPcm();
+            wl.field_c[13][1] = VorbisSample.loadByName(SpriteLoader.field_f, "", "Z_Hit_3").decodeAllToPcm();
+            wl.field_c[13][2] = VorbisSample.loadByName(SpriteLoader.field_f, "", "D_Hit_3").decodeAllToPcm();
+            bf.field_c[0][6] = VorbisSample.loadByName(SpriteLoader.field_f, "", "Boss_1_Attack_combo").decodeAllToPcm();
+            bf.field_c[0][7] = VorbisSample.loadByName(SpriteLoader.field_f, "", "Boss_1_Death").decodeAllToPcm();
+            bf.field_c[0][8] = VorbisSample.loadByName(SpriteLoader.field_f, "", "Boss_1_Hit").decodeAllToPcm();
+            bf.field_c[1][6] = VorbisSample.loadByName(SpriteLoader.field_f, "", "Boss_2_Attack_combo").decodeAllToPcm();
+            bf.field_c[1][7] = VorbisSample.loadByName(SpriteLoader.field_f, "", "Boss_2_Death").decodeAllToPcm();
+            bf.field_c[1][8] = VorbisSample.loadByName(SpriteLoader.field_f, "", "Boss_2_Hit").decodeAllToPcm();
+            bf.field_c[2][6] = VorbisSample.loadByName(SpriteLoader.field_f, "", "Boss_3_Attack_combo").decodeAllToPcm();
+            bf.field_c[2][7] = VorbisSample.loadByName(SpriteLoader.field_f, "", "Boss_3_Death").decodeAllToPcm();
+            bf.field_c[2][8] = VorbisSample.loadByName(SpriteLoader.field_f, "", "Boss_3_Hit").decodeAllToPcm();
             SpriteLoader.field_f = null;
             id.a(102);
             return false;
@@ -1496,9 +1496,9 @@ public final class TorChallenge extends GameClientBase {
               }
               qa.field_g = be.a(4, 31315);
               vh.field_d = new tc[3];
-              vh.field_d[0] = v.b(1, 256, 5, 0);
-              vh.field_d[1] = v.b(1, 256, 5, 1);
-              vh.field_d[2] = v.b(1, 256, 5, 2);
+              vh.field_d[0] = ResizableModalDialog.b(1, 256, 5, 0);
+              vh.field_d[1] = ResizableModalDialog.b(1, 256, 5, 1);
+              vh.field_d[2] = ResizableModalDialog.b(1, 256, 5, 2);
               eb.field_l = kk.b(6, -6262);
               break;
             }
@@ -1549,9 +1549,9 @@ public final class TorChallenge extends GameClientBase {
               if (decompiledFrameRemainder0) {
                 qa.field_g = be.a(4, param0 ^ 31315);
                 vh.field_d = new tc[4];
-                vh.field_d[0] = v.b(1, TorChallenge.a(param0, 256), 5, 0);
-                vh.field_d[1] = v.b(1, 256, 5, 1);
-                vh.field_d[2] = v.b(1, 256, 5, 2);
+                vh.field_d[0] = ResizableModalDialog.b(1, TorChallenge.a(param0, 256), 5, 0);
+                vh.field_d[1] = ResizableModalDialog.b(1, 256, 5, 1);
+                vh.field_d[2] = ResizableModalDialog.b(1, 256, 5, 2);
                 eb.field_l = kk.b(6, param0 - 6262);
                 if (null != ji.field_m) {
                   SocketConnector.field_a = true;
@@ -1597,13 +1597,13 @@ public final class TorChallenge extends GameClientBase {
               PcmOutputWorker.activeScreenId == 1 &&
               DirectByteStorage.field_g) {
               if (EditableTextField.field_Q >= 0 &&
-                ~n.field_jb != ~EditableTextField.field_Q) {
-                n.field_jb = EditableTextField.field_Q;
+                ~ContentTransitionDialog.field_jb != ~EditableTextField.field_Q) {
+                ContentTransitionDialog.field_jb = EditableTextField.field_Q;
                 if (var3 != 0) {
-                  n.field_jb = 0;
+                  ContentTransitionDialog.field_jb = 0;
                 }
               } else {
-                n.field_jb = 0;
+                ContentTransitionDialog.field_jb = 0;
               }
               DirectByteStorage.field_g = false;
               if (!(DequeWidgetContainer.field_A >= 0) ||
@@ -1915,11 +1915,11 @@ public final class TorChallenge extends GameClientBase {
           vj.clearStaticReferences((byte) 95);
           ModalDialogHost.clearDeclaredStaticReferences((byte) 69);
           AccountCreationResultPanel.resetDeclaredStaticReferences(255);
-          pe.releaseDeclaredStaticReferences(4210752);
-          jf.discardDeclaredStaticReferences(-118);
-          wa.discardDeclaredStaticReferences(104);
+          ProgressDialog.releaseDeclaredStaticReferences(4210752);
+          StandardContentDialog.discardDeclaredStaticReferences(-118);
+          ProgressMessageDialog.discardDeclaredStaticReferences(104);
           AccountRegistrationPanel.clearDeclaredStaticReferences(-110);
-          ih.resetDeclaredStaticState(99);
+          GuestPlayConfirmationForm.resetDeclaredStaticState(99);
           LoginPanel.clearDeclaredStaticReferences((byte) -86);
           DisplayNameSelectionPanel.clearStaticReferences(false);
           qa.a(-1);
@@ -1964,7 +1964,7 @@ public final class TorChallenge extends GameClientBase {
           ai.resetStaticState(2048);
           ArchiveRequest.b(true);
           cb.clearStaticReferences(-9386);
-          nh.releaseDeclaredStaticReferences(-25725);
+          FullscreenStatusDialog.releaseDeclaredStaticReferences(-25725);
           te.a((byte) -50);
           DefaultTextWidgetRenderer.a((byte) 46);
           oc.clearStaticReferences();
@@ -1991,7 +1991,7 @@ public final class TorChallenge extends GameClientBase {
           UiComponent.clearStaticReferences(107);
           InteractiveWidget.clearStaticReferences(true);
           SingleChildWidgetContainer.clearDeclaredStaticReferences(1);
-          v.clearStaticReferences(false);
+          ResizableModalDialog.clearStaticReferences(false);
           ModalDialog.clearDeclaredStaticReferences(0);
           DequeWidgetContainer.resetStaticState(-10365);
           nj.b((byte) -40);
@@ -2019,15 +2019,15 @@ public final class TorChallenge extends GameClientBase {
           LabeledWidgetContainer.releaseDeclaredStaticReferences(0);
           ValidatedTextField.resetStaticState((byte) 96);
           EditableTextField.clearDeclaredStaticReferences(65);
-          n.releaseDeclaredStaticReferences(5);
-          ek.clearDeclaredStaticReferences((byte) 123);
+          ContentTransitionDialog.releaseDeclaredStaticReferences(5);
+          StripedProgressWidget.clearDeclaredStaticReferences((byte) 123);
           NameSuggestionsPanel.c(true);
           RichTextWidget.clearDeclaredStaticReferences(-1);
           tk.clearDeclaredStaticReferences((byte) 87);
           dh.g(112);
           hc.clearDeclaredStaticReferences(-110);
           wf.clearStaticReferences((byte) -116);
-          qh.clearDeclaredStaticReferences((byte) -36);
+          RegistrationAgreementPane.clearDeclaredStaticReferences((byte) -36);
           uc.clearDeclaredStaticReferences(-15087);
           bl.e(false);
           SoundFilter.clearStaticReferences();
@@ -2070,12 +2070,12 @@ public final class TorChallenge extends GameClientBase {
           vh.clearStaticReferences(-44);
           cf.clearStaticReferences(-113);
           lc.clearDeclaredStaticReferences((byte) -75);
-          sj.clearDeclaredStaticReferences(15638);
+          DialogMessagePane.clearDeclaredStaticReferences(15638);
           hb.clearStaticReferences(false);
           na.releaseDeclaredStaticReferences(-7345);
           ri.clearStaticReferences(12);
           kk.clearStaticReferences(61);
-          ll.clearStaticReferences(256);
+          FullscreenNoticeType.clearStaticReferences(256);
           kd.resetStaticState(8192);
           gj.clearStaticReferences(-909082559);
           TextLineMetrics.clearStaticReferences((byte) -81);

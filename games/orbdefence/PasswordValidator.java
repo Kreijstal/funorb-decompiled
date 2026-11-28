@@ -35,7 +35,7 @@ final class PasswordValidator extends TextFieldValidator {
           return;
         }
         try {
-          hm.a(cg.field_d.field_v, 3, param0 - 67, 3);
+          GuestPlayConfirmationForm.a(cg.field_d.field_v, 3, param0 - 67, 3);
           BufferedSocket.field_a.a(param0 ^ -101);
           li.field_a.drawScaledAdditive(0, 0, 640, 480, ef.field_k);
         } catch (RuntimeException runtimeException) {
@@ -47,7 +47,7 @@ final class PasswordValidator extends TextFieldValidator {
         if (n.b(param0)) {
           return;
         }
-        if (pc.field_cb) {
+        if (StandardContentDialog.field_cb) {
           return;
         }
         if (null == oh.field_c) {
@@ -56,7 +56,7 @@ final class PasswordValidator extends TextFieldValidator {
         if (oh.field_c.field_g) {
           lb.field_g = lb.field_g | oh.field_c.field_i;
           TextLayout.field_f = TextLayout.field_f & ~oh.field_c.field_i;
-          pc.field_cb = true;
+          StandardContentDialog.field_cb = true;
           oh.field_c = null;
           return;
         }
@@ -220,7 +220,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_8_0;
           }
           if (md.a(-20767, var5)) {
-            stackIn_11_0 = ec.field_H;
+            stackIn_11_0 = DialogMessagePane.field_H;
             return stackIn_11_0;
           }
           if (me.a(var5, (byte) -27)) {

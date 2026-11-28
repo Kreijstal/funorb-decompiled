@@ -143,7 +143,7 @@ final class ModalDialogHost extends SingleChildWidgetContainer {
             }
           }
           SectorCacheStore.field_f.bindAsTarget(param0 - 188);
-          ll.field_b = -1;
+          FullscreenNoticeType.field_b = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

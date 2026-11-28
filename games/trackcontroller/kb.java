@@ -4,7 +4,7 @@
 final class kb {
     static aa field_e;
     static PlatformTaskDispatcher field_d;
-    static jj field_a;
+    static ProgressMessageDialog field_a;
     static boolean[] field_f;
     static int field_b;
     static String field_c;

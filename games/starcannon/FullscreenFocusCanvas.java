@@ -39,7 +39,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           if (param0.field_i != 0 ||
             param0.field_b != 0) {
             for (var2_int = 0; wi.field_b > var2_int; var2_int++) {
-              var3 = lf.field_bb[var2_int];
+              var3 = ProgressDialog.field_bb[var2_int];
               if (var3.field_q == 2 &&
                 var3.field_i == param0.field_i &&
                 param0.field_b == var3.field_b) {
@@ -107,14 +107,14 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     }
 
     final static void a(boolean param0) {
-        if (null != fa.field_G) {
-          fa.field_G.n(-110);
+        if (null != StripedProgressWidget.field_G) {
+          StripedProgressWidget.field_G.closeDialog(-110);
         }
         if (param0) {
           return;
         }
         n.field_l = new DisplayNameSelectionPanel();
-        t.field_h.c(20317, n.field_l);
+        t.field_h.replaceContent(20317, n.field_l);
     }
 
     public final void paint(java.awt.Graphics param0) {
@@ -249,7 +249,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               we.field_i = RichTextLayout.field_p.readString(-110);
               var11 = (CharSequence) ((Object) we.field_i);
               ba.field_e = ni.a(param4 ^ -117, var11);
-              jj.field_F = RichTextLayout.field_p.readUnsignedByte(7909);
+              RegistrationAgreementPane.field_F = RichTextLayout.field_p.readUnsignedByte(7909);
               r.field_c = pb.field_a;
               if (jh.field_h.b((byte) 1) != j.field_d) {
                 if (jh.field_h.b((byte) 1) == na.field_b) {

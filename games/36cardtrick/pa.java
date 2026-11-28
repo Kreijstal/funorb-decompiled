@@ -176,7 +176,7 @@ final class pa extends RichTextWidget {
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
               ll.field_f = new String[var9Lifetime1 - 100];
-              ra.field_b = ta.field_eb;
+              ra.field_b = ContentTransitionDialog.field_eb;
             } else {
               if (var9Lifetime1 == 248) {
                 wf.a((byte) -83, PasswordValidator.g(-126));
@@ -197,7 +197,7 @@ final class pa extends RichTextWidget {
               }
             }
           }
-          if (ta.field_eb == ra.field_b) {
+          if (ContentTransitionDialog.field_eb == ra.field_b) {
             var9Lifetime2 = 2;
             if (r.a(var9Lifetime2, (byte) 120)) {
               var10Lifetime1 = EmailFormatValidator.field_j.readUnsignedShort((byte) 72);
@@ -293,7 +293,7 @@ final class pa extends RichTextWidget {
           if (param1 != -1) {
             field_N = (String) null;
           }
-          var2 = new CoverageBitmapFont(param0, kb.field_c, ml.field_b, NetworkArchiveRequest.field_q, hb.field_a, ImageProducerRasterBuffer.field_i, EmailFormatValidator.field_k);
+          var2 = new CoverageBitmapFont(param0, kb.field_c, FullscreenNoticeType.field_b, NetworkArchiveRequest.field_q, hb.field_a, ImageProducerRasterBuffer.field_i, EmailFormatValidator.field_k);
           rh.d(-41);
           stackIn_6_0 = var2;
           return stackIn_6_0;

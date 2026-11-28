@@ -211,7 +211,7 @@ final class md extends TextureOperator {
             }
             var8 = stackIn_8_0;
             var8 = var8 >> 4 & 255;
-            var9 = mj.a(-106, var6, we.field_M);
+            var9 = mj.a(-106, var6, StripedProgressWidget.field_M);
             var10 = mj.a(-128, var6, aa.field_Vb);
             var11 = (JaggrabClient.field_b[var8] * this.field_B >> 12) + var9;
             var12 = var10 + (this.field_B * eh.field_b[var8] >> 12);

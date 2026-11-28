@@ -81,14 +81,14 @@ final class qc {
             if (0 != gh.field_c &&
               var3 < oc.field_e &&
               oc.field_e < MatchingFieldValidator.field_l.field_y + var3) {
-              if (-MatchingFieldValidator.field_l.field_v + 269 < di.field_b &&
-                269 > di.field_b) {
+              if (-MatchingFieldValidator.field_l.field_v + 269 < FullscreenNoticeType.field_b &&
+                269 > FullscreenNoticeType.field_b) {
                 nj.field_g = false;
                 var4 = 1;
                 ha.field_w = cj.field_a;
               }
-              if (di.field_b > 586 &&
-                di.field_b < MatchingFieldValidator.field_l.field_v + 586) {
+              if (FullscreenNoticeType.field_b > 586 &&
+                FullscreenNoticeType.field_b < MatchingFieldValidator.field_l.field_v + 586) {
                 var4 = 1;
                 ha.field_w = cj.field_a;
                 nj.field_g = true;
@@ -111,7 +111,7 @@ final class qc {
           if (!param1) {
             return 0;
           }
-          cd.field_L.a(af.a(1, ni.field_e, KeyHandler.field_a), af.a(1, di.field_b, oc.field_e), -1);
+          cd.field_L.a(af.a(1, ni.field_e, KeyHandler.field_a), af.a(1, FullscreenNoticeType.field_b, oc.field_e), -1);
           if (cd.field_L.c(-18)) {
             if (0 == cd.field_L.field_f) {
               stackIn_65_0 = 3;
@@ -204,10 +204,10 @@ final class qc {
           if (rb.field_s == 0) {
             var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, ii.field_G);
             var4 = 3 + var3_int;
-            sj.field_J = new int[var4];
+            RegistrationAgreementPane.field_J = new int[var4];
             stellarshard.field_L = new String[var4];
             for (var5 = 0; var5 < var4; var5++) {
-              sj.field_J[var5] = -1;
+              RegistrationAgreementPane.field_J[var5] = -1;
             }
             pk.field_j = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -215,18 +215,18 @@ final class qc {
             }
             stellarshard.field_L[-3 + var4] = "";
             stellarshard.field_L[-2 + var4] = AgeValidator.field_l;
-            sj.field_J[-2 + var4] = 0;
+            RegistrationAgreementPane.field_J[-2 + var4] = 0;
             pk.field_j[0] = 4;
             stellarshard.field_L[-1 + var4] = td.field_a;
-            sj.field_J[var4 - 1] = 1;
+            RegistrationAgreementPane.field_J[var4 - 1] = 1;
             pk.field_j[1] = 5;
           } else if (rb.field_s == 1) {
             var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, ii.field_G);
             var4 = 2 + var3_int;
             stellarshard.field_L = new String[var4];
-            sj.field_J = new int[var4];
+            RegistrationAgreementPane.field_J = new int[var4];
             for (var5 = 0; var4 > var5; var5++) {
-              sj.field_J[var5] = -1;
+              RegistrationAgreementPane.field_J[var5] = -1;
             }
             pk.field_j = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -234,7 +234,7 @@ final class qc {
             }
             stellarshard.field_L[-2 + var4] = "";
             stellarshard.field_L[var4 - 1] = td.field_a;
-            sj.field_J[var4 - 1] = 0;
+            RegistrationAgreementPane.field_J[var4 - 1] = 0;
             pk.field_j[0] = 5;
           } else if (rb.field_s != 2) {
             if (rb.field_s == 3) {
@@ -245,9 +245,9 @@ final class qc {
               }
               var4 = var3_int + 2;
               stellarshard.field_L = new String[var4];
-              sj.field_J = new int[var4];
+              RegistrationAgreementPane.field_J = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                sj.field_J[var5] = -1;
+                RegistrationAgreementPane.field_J[var5] = -1;
               }
               pk.field_j = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
@@ -255,15 +255,15 @@ final class qc {
               }
               stellarshard.field_L[var4 - 2] = "";
               stellarshard.field_L[-1 + var4] = td.field_a;
-              sj.field_J[var4 - 1] = 0;
+              RegistrationAgreementPane.field_J[var4 - 1] = 0;
               pk.field_j[0] = 5;
             } else if (rb.field_s == 4) {
               var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, wh.field_d);
               var4 = var3_int + 2;
-              sj.field_J = new int[var4];
+              RegistrationAgreementPane.field_J = new int[var4];
               stellarshard.field_L = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                sj.field_J[var5] = -1;
+                RegistrationAgreementPane.field_J[var5] = -1;
               }
               pk.field_j = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -271,7 +271,7 @@ final class qc {
               }
               stellarshard.field_L[var4 - 2] = "";
               stellarshard.field_L[var4 - 1] = td.field_a;
-              sj.field_J[-1 + var4] = 0;
+              RegistrationAgreementPane.field_J[-1 + var4] = 0;
               pk.field_j[0] = 5;
             } else {
               if (rb.field_s != 5) {
@@ -280,9 +280,9 @@ final class qc {
               var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, df.field_k);
               var4 = var3_int + 3;
               stellarshard.field_L = new String[var4];
-              sj.field_J = new int[var4];
+              RegistrationAgreementPane.field_J = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                sj.field_J[var5] = -1;
+                RegistrationAgreementPane.field_J[var5] = -1;
               }
               pk.field_j = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
@@ -290,10 +290,10 @@ final class qc {
               }
               stellarshard.field_L[var4 - 3] = "";
               stellarshard.field_L[var4 - 2] = ha.field_v;
-              sj.field_J[var4 - 2] = 0;
+              RegistrationAgreementPane.field_J[var4 - 2] = 0;
               pk.field_j[0] = 3;
               stellarshard.field_L[var4 - 1] = td.field_a;
-              sj.field_J[-1 + var4] = 1;
+              RegistrationAgreementPane.field_J[-1 + var4] = 1;
               pk.field_j[1] = 5;
             }
           } else {
@@ -342,18 +342,18 @@ final class qc {
             }
             var6 = stackIn_53_0;
             var7 = var5 + 7 + var6;
-            sj.field_J = new int[var7];
+            RegistrationAgreementPane.field_J = new int[var7];
             stellarshard.field_L = new String[var7];
             for (var8 = 0; var7 > var8; var8++) {
-              sj.field_J[var8] = -1;
+              RegistrationAgreementPane.field_J[var8] = -1;
             }
-            sj.field_J[1] = 0;
+            RegistrationAgreementPane.field_J[1] = 0;
             stellarshard.field_L[1] = am.field_b;
             pk.field_j = new int[2];
             stellarshard.field_L[0] = AlphaWidgetContainer.field_B;
             pk.field_j[0] = 5;
             pk.field_j[1] = 2;
-            sj.field_J[3] = 1;
+            RegistrationAgreementPane.field_J[3] = 1;
             stellarshard.field_L[2] = vl.field_i;
             stellarshard.field_L[5] = "";
             stellarshard.field_L[4] = tk.field_a;
@@ -369,7 +369,7 @@ final class qc {
               stackIn_60_0[stackIn_60_1] = stackIn_61_2;
             }
             stellarshard.field_L[6 + var5] = null;
-            sj.field_J[6 + var5] = -2;
+            RegistrationAgreementPane.field_J[6 + var5] = -2;
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
               stackIn_66_0 = stellarshard.field_L;
               stackIn_66_1 = var8Lifetime3 + (7 + var5);
@@ -387,7 +387,7 @@ final class qc {
           for (var4Lifetime1 = 0; var4Lifetime1 < stellarshard.field_L.length; var4Lifetime1++) {
             stackIn_87_0 = -39;
             stackIn_87_1 = stellarshard.field_L[var4Lifetime1];
-            stackIn_88_2 = !(sj.field_J[var4Lifetime1] < 0);
+            stackIn_88_2 = !(RegistrationAgreementPane.field_J[var4Lifetime1] < 0);
             var5Lifetime1 = GameEntity.$cfr$intArgs$a$590e95718a07(stackIn_87_0, stackIn_87_1, stackIn_88_2);
             if (var5Lifetime1 > var3_intLifetime1) {
               var3_intLifetime1 = var5Lifetime1;
@@ -417,7 +417,7 @@ final class qc {
           fl.field_a = ua.field_i.field_i * (nh.field_h + nh.field_f << 1);
           for (var4Lifetime2 = 0; var4Lifetime2 < stellarshard.field_L.length; var4Lifetime2++) {
             stackIn_110_0 = fl.field_a;
-            if (sj.field_J[var4Lifetime2] >= 0) {
+            if (RegistrationAgreementPane.field_J[var4Lifetime2] >= 0) {
               stackIn_111_1 = IsaacRandom.field_a;
             } else {
               stackIn_111_1 = l.field_e;
@@ -429,7 +429,7 @@ final class qc {
           var4Lifetime3 = param2;
           var5Lifetime3 = RichTextWidget.field_F;
           while (var4Lifetime3 < stellarshard.field_L.length) {
-            var6Lifetime1 = sj.field_J[var4Lifetime3];
+            var6Lifetime1 = RegistrationAgreementPane.field_J[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
               var7Lifetime2 = GameEntity.$cfr$intArgs$a$590e95718a07(-21, stellarshard.field_L[var4Lifetime3], true);
               var5Lifetime3 = var5Lifetime3 + nh.field_f;

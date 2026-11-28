@@ -120,7 +120,7 @@ final class dk {
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
-            stackIn_4_0 = uc.field_E;
+            stackIn_4_0 = DialogMessagePane.field_E;
             return stackIn_4_0;
           }
           if (~var2_int < param0) {
@@ -132,12 +132,12 @@ final class dk {
             if (var4 == 45) {
               if (0 == var3 ||
                 var3 == -1 + var2_int) {
-                stackIn_17_0 = mh.field_R;
+                stackIn_17_0 = ContentTransitionDialog.field_R;
                 return stackIn_17_0;
               }
             } else {
               if (SectorCacheStore.field_g.indexOf(var4) == -1) {
-                stackIn_21_0 = mh.field_R;
+                stackIn_21_0 = ContentTransitionDialog.field_R;
                 return stackIn_21_0;
               }
             }

@@ -22,12 +22,12 @@ final class ProxyAuthenticationRequiredException extends IOException {
           if (param0 != 71) {
             field_a = (int[]) null;
           }
-          if (null == wa.field_pb) {
-            wa.field_pb = new boolean[5];
+          if (null == ProgressMessageDialog.field_pb) {
+            ProgressMessageDialog.field_pb = new boolean[5];
           }
           for (var1_int = 0; var1_int < 5; var1_int++) {
             mh.field_d[var1_int] = -1;
-            wa.field_pb[var1_int] = false;
+            ProgressMessageDialog.field_pb[var1_int] = false;
           }
           gh.field_m = false;
           bi.field_f = false;
@@ -35,7 +35,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
           jj.field_d = false;
           qk.field_lb = 0;
           wj.field_a = 0;
-          ih.a(param0 ^ 55);
+          GuestPlayConfirmationForm.a(param0 ^ 55);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "bj.B(" + param0 + ')');
         }

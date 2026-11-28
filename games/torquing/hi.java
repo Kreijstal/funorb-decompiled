@@ -78,7 +78,7 @@ final class hi {
         this.field_k = oh.field_b;
         this.field_e = TranslucentSpriteLayer.field_m;
         this.field_f = n.field_u;
-        this.field_d = hh.field_a;
+        this.field_d = FullscreenNoticeType.field_a;
         this.field_i = ArchiveIndex.field_a;
         if (param0) {
           this.field_c = DelegatingCanvas.field_a;

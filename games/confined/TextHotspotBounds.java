@@ -16,7 +16,7 @@ final class TextHotspotBounds extends IntrusiveNode {
 
     final static al[] b(int param0) {
         if (param0 >= 46) {
-          return new al[]{pi.field_T, tj.field_n, tk.field_f};
+          return new al[]{RegistrationAgreementPane.field_T, tj.field_n, tk.field_f};
         }
         return (al[]) null;
     }

@@ -439,7 +439,7 @@ final class hg {
           }
           var2Lifetime79 = da.a((byte) -87, "graphics_medium");
           if (var2Lifetime79 != null) {
-            hh.field_c = SecondaryNodeDeque.a(var2Lifetime79, false);
+            FullscreenNoticeType.field_c = SecondaryNodeDeque.a(var2Lifetime79, false);
           }
           var2Lifetime80 = da.a((byte) -84, "graphics_high");
           if (null != var2Lifetime80) {

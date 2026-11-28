@@ -11,7 +11,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
     static int field_b;
     static String field_h;
     static ResourceArchive field_c;
-    static nd field_g;
+    static ProgressDialog field_g;
 
     final static void a(int param0) {
         ia.field_p[4] = new int[]{5};

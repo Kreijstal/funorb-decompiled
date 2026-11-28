@@ -55,11 +55,11 @@ class DualLinkNode extends IntrusiveNode {
               }
               incrementValue$1 = var6;
               var6++;
-              param3 = hf.field_yb[incrementValue$1];
+              param3 = ContentTransitionDialog.field_yb[incrementValue$1];
               dupTemp$2 = param1[param3];
               dupTemp$3 = param4[dupTemp$2];
               param4[dupTemp$2] = dupTemp$3 + 1;
-              hf.field_yb[dupTemp$3] = param3;
+              ContentTransitionDialog.field_yb[dupTemp$3] = param3;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

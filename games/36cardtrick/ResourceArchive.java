@@ -311,7 +311,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.field_c.field_h.a((byte) -100, ta.a(109, var4));
+          var3_int = this.field_c.field_h.a((byte) -100, ContentTransitionDialog.a(109, var4));
           stackIn_6_0 = this.tryLoadGroup(var3_int, 105);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -356,7 +356,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.field_c.field_h.a((byte) -100, ta.a(98, var4));
+          var3_int = this.field_c.field_h.a((byte) -100, ContentTransitionDialog.a(98, var4));
           if (param0 <= var3_int) {
             return true;
           }
@@ -440,12 +440,12 @@ final class ResourceArchive {
           param0 = param0.toLowerCase();
           param1 = param1.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
-          var4_int = this.field_c.field_h.a((byte) -100, ta.a(param2 - 7, var6));
+          var4_int = this.field_c.field_h.a((byte) -100, ContentTransitionDialog.a(param2 - 7, var6));
           if (!this.validateGroupId(var4_int, (byte) -112)) {
             return false;
           }
           var7 = (CharSequence) ((Object) param1);
-          var5 = this.field_c.field_p[var4_int].a((byte) -100, ta.a(90, var7));
+          var5 = this.field_c.field_p[var4_int].a((byte) -100, ContentTransitionDialog.a(90, var7));
           if (param2 != -44) {
             this.field_b = (Object[][]) null;
           }
@@ -510,7 +510,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var5 = (CharSequence) ((Object) param1);
-          var4_int = this.field_c.field_p[param0].a((byte) -100, ta.a(param2 ^ 99, var5));
+          var4_int = this.field_c.field_p[param0].a((byte) -100, ContentTransitionDialog.a(param2 ^ 99, var5));
           if (!this.validateFileId(param0, 0, var4_int)) {
             stackIn_5_0 = -1;
             return stackIn_5_0;
@@ -559,12 +559,12 @@ final class ResourceArchive {
           param2 = param2.toLowerCase();
           param1 = param1.toLowerCase();
           var6 = (CharSequence) ((Object) param2);
-          var4_int = this.field_c.field_h.a((byte) -100, ta.a(param0 - 94, var6));
+          var4_int = this.field_c.field_h.a((byte) -100, ContentTransitionDialog.a(param0 - 94, var6));
           if (!this.validateGroupId(var4_int, (byte) -47)) {
             return null;
           }
           var7 = (CharSequence) ((Object) param1);
-          var5 = this.field_c.field_p[var4_int].a((byte) -100, ta.a(57, var7));
+          var5 = this.field_c.field_p[var4_int].a((byte) -100, ContentTransitionDialog.a(57, var7));
           stackIn_10_0 = this.getFile(var5, (byte) -115, var4_int);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -715,7 +715,7 @@ final class ResourceArchive {
             field_i = (String) (this.field_g[5]);
           }
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_c.field_h.a((byte) -100, ta.a(-54, var4));
+          var3_int = this.field_c.field_h.a((byte) -100, ContentTransitionDialog.a(-54, var4));
           stackIn_6_0 = this.getGroupLoadPercent((byte) 60, var3_int);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -751,7 +751,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.field_c.field_h.a((byte) -100, ta.a(-62, var4));
+          var3_int = this.field_c.field_h.a((byte) -100, ContentTransitionDialog.a(-62, var4));
           if (param0 != 18659) {
             discarded$1 = this.validateGroupId(-2, (byte) 61);
           }

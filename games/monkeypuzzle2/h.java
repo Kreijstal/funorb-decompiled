@@ -65,7 +65,7 @@ final class h {
           } else {
             var7 = param3;
           }
-          stackIn_4_0 = sk.a(param2, var4_long, param1, true, (String) (var7));
+          stackIn_4_0 = DialogMessagePane.a(param2, var4_long, param1, true, (String) (var7));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

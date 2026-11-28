@@ -30,14 +30,14 @@ final class gf {
           te.field_b = DualLinkNode.field_i;
           pe.field_d = hj.field_d;
           la.field_c = wj.field_a;
-          SectorCacheStore.field_d = vj.field_Y;
-          vj.field_Y = false;
+          SectorCacheStore.field_d = FullscreenStatusDialog.field_Y;
+          FullscreenStatusDialog.field_Y = false;
           kg.field_a = na.field_c;
           if (!param0) {
             field_e = (String) null;
           }
           LoginPanel.field_B = fb.field_j;
-          kc.field_Q = TextHotspotBounds.field_f;
+          ResizableModalDialog.field_Q = TextHotspotBounds.field_f;
           na.field_c = 0;
         }
     }

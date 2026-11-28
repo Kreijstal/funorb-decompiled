@@ -263,7 +263,7 @@ final class rh {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param1 = kf.a(param1, '_', "", 111);
+          param1 = StripedProgressWidget.a(param1, '_', "", 111);
           if (!param0) {
             field_a = (String) null;
           }

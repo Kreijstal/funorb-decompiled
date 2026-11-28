@@ -367,7 +367,7 @@ final class kb extends IntrusiveNode {
               }
               var5 = var3 + "settings=" + param2 + "; version=1; path=/; domain=" + var4;
               if (param2.length() != 0) {
-                var5 = var5 + "; Expires=" + dh.a(-15591, ji.correctedCurrentTimeMillis(-78) + 94608000000L) + "; Max-Age=" + 94608000L;
+                var5 = var5 + "; Expires=" + ProgressMessageDialog.a(-15591, ji.correctedCurrentTimeMillis(-78) + 94608000000L) + "; Max-Age=" + 94608000L;
                 if (OrbDefence.field_D) {
                   var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                 }

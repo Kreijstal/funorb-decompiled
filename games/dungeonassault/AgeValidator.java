@@ -218,8 +218,8 @@ final class AgeValidator extends TextFieldValidator {
           DualLinkNode.field_m[1] = t.field_b.toUpperCase();
           DualLinkNode.field_m[2] = me.field_c.toUpperCase();
           DualLinkNode.field_m[3] = t.field_b.toUpperCase();
-          DualLinkNode.field_m[4] = sj.field_W.toUpperCase();
-          DualLinkNode.field_m[5] = uc.field_C.toUpperCase();
+          DualLinkNode.field_m[4] = ResizableModalDialog.field_W.toUpperCase();
+          DualLinkNode.field_m[5] = StripedProgressWidget.field_C.toUpperCase();
           DualLinkNode.field_m[6] = rl.field_a.toUpperCase();
           DualLinkNode.field_m[7] = ue.field_m.toUpperCase();
           DualLinkNode.field_m[8] = kd.field_a.toUpperCase();
@@ -308,7 +308,7 @@ final class AgeValidator extends TextFieldValidator {
             }
           }
           var3_ref_String = d.field_a;
-          var4 = nm.field_lb;
+          var4 = FullscreenStatusDialog.field_lb;
           if (null != hp.field_b[1]) {
             hp.field_b[1].field_F = var3_ref_String;
             hp.field_b[1].field_G = var4;
@@ -355,7 +355,7 @@ final class AgeValidator extends TextFieldValidator {
             hp.field_b[8].field_G = var4Lifetime7;
             hp.field_b[8].field_F = var3_ref_StringLifetime7;
           }
-          var3_ref_StringLifetime8 = jk.field_Cb;
+          var3_ref_StringLifetime8 = StandardContentDialog.field_Cb;
           var4Lifetime8 = fc.field_h;
           if (hp.field_b[9] != null) {
             hp.field_b[9].field_G = var4Lifetime8;
@@ -368,7 +368,7 @@ final class AgeValidator extends TextFieldValidator {
             hp.field_b[10].field_G = var4Lifetime9;
           }
           var3_ref_StringLifetime10 = LoginPanel.field_W;
-          var4Lifetime10 = uc.field_Q;
+          var4Lifetime10 = StripedProgressWidget.field_Q;
           if (hp.field_b[11] != null) {
             hp.field_b[11].field_G = var4Lifetime10;
             hp.field_b[11].field_F = var3_ref_StringLifetime10;
@@ -527,7 +527,7 @@ final class AgeValidator extends TextFieldValidator {
             gh.field_i[1].field_t = var4Lifetime35;
             gh.field_i[1].field_o = var5Lifetime1;
           }
-          var3_ref_StringLifetime36 = cm.field_S;
+          var3_ref_StringLifetime36 = RegistrationAgreementPane.field_S;
           var4Lifetime36 = (String) null;
           var5Lifetime2 = (String) null;
           if (null != gh.field_i[2]) {
@@ -535,7 +535,7 @@ final class AgeValidator extends TextFieldValidator {
             gh.field_i[2].field_z = var3_ref_StringLifetime36;
             gh.field_i[2].field_t = var4Lifetime36;
           }
-          var3_ref_StringLifetime37 = wi.field_mb;
+          var3_ref_StringLifetime37 = ProgressDialog.field_mb;
           var4Lifetime37 = (String) null;
           var5Lifetime3 = (String) null;
           if (null != gh.field_i[3]) {
@@ -583,7 +583,7 @@ final class AgeValidator extends TextFieldValidator {
             gh.field_i[8].field_o = var5Lifetime8;
             gh.field_i[8].field_z = var3_ref_StringLifetime42;
           }
-          var3_ref_StringLifetime43 = nm.field_mb;
+          var3_ref_StringLifetime43 = FullscreenStatusDialog.field_mb;
           if (param0 != -23487) {
             return;
           }
@@ -658,7 +658,7 @@ final class AgeValidator extends TextFieldValidator {
             gh.field_i[17].field_z = var3_ref_StringLifetime51;
             gh.field_i[17].field_o = var5Lifetime17;
           }
-          var3_ref_StringLifetime52 = wi.field_rb;
+          var3_ref_StringLifetime52 = ProgressDialog.field_rb;
           var4Lifetime52 = ke.field_a;
           var5Lifetime18 = (String) null;
           if (gh.field_i[18] != null) {
@@ -723,7 +723,7 @@ final class AgeValidator extends TextFieldValidator {
             gh.field_i[25].field_t = var4Lifetime59;
           }
           var3_ref_StringLifetime60 = wf.field_v;
-          var4Lifetime60 = wi.field_lb;
+          var4Lifetime60 = ProgressDialog.field_lb;
           var5Lifetime26 = ko.field_w;
           if (gh.field_i[26] != null) {
             gh.field_i[26].field_z = var3_ref_StringLifetime60;
@@ -763,7 +763,7 @@ final class AgeValidator extends TextFieldValidator {
             gh.field_i[30].field_o = var5Lifetime30;
           }
           var3_ref_StringLifetime65 = kk.field_i;
-          var4Lifetime65 = sj.field_eb;
+          var4Lifetime65 = ResizableModalDialog.field_eb;
           var5Lifetime31 = (String) null;
           if (gh.field_i[31] != null) {
             gh.field_i[31].field_o = var5Lifetime31;
@@ -922,7 +922,7 @@ final class AgeValidator extends TextFieldValidator {
         try {
           var3_int = -39 / ((param1 - 5) / 44);
           var5 = (CharSequence) ((Object) param0);
-          if (!sj.a(var5, 10)) {
+          if (!ResizableModalDialog.a(var5, 10)) {
             stackIn_3_0 = pd.field_J;
             return stackIn_3_0;
           }
@@ -1033,18 +1033,18 @@ final class AgeValidator extends TextFieldValidator {
           if (null != AccountCreationResultPanel.field_Qb &&
             AccountCreationResultPanel.field_Qb.ensureIndexLoaded(-14354) &&
             AccountCreationResultPanel.field_Qb.tryLoadGroupByName(false, "benefits") &&
-            null != hf.field_pb &&
-            hf.field_pb.ensureIndexLoaded(-14354) &&
-            hf.field_pb.tryLoadGroupByName(false, "benefits")) {
-            ia.field_Q = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "headline");
+            null != ContentTransitionDialog.field_pb &&
+            ContentTransitionDialog.field_pb.ensureIndexLoaded(-14354) &&
+            ContentTransitionDialog.field_pb.tryLoadGroupByName(false, "benefits")) {
+            GuestPlayConfirmationForm.field_Q = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "headline");
             gn.field_c = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "blurbpane");
             tl.field_i = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "button");
             DirectByteStorage.field_g = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "signup_text");
             lg.field_u = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "menu_text");
             MouseWheelInput.field_g = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "button_frame");
             DelegatingCanvas.field_c = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "arrow");
-            Bzip2State.field_e = (BitmapFont) ((Object) ah.a(hf.field_pb, 200, "large_font", "benefits", AccountCreationResultPanel.field_Qb));
-            TextLineMetrics.field_l = (BitmapFont) ((Object) ah.a(hf.field_pb, 200, "small_font", "benefits", AccountCreationResultPanel.field_Qb));
+            Bzip2State.field_e = (BitmapFont) ((Object) ah.a(ContentTransitionDialog.field_pb, 200, "large_font", "benefits", AccountCreationResultPanel.field_Qb));
+            TextLineMetrics.field_l = (BitmapFont) ((Object) ah.a(ContentTransitionDialog.field_pb, 200, "small_font", "benefits", AccountCreationResultPanel.field_Qb));
             var27 = SoftwareRasterizer.field_b;
             var2 = SoftwareRasterizer.field_i;
             var3 = SoftwareRasterizer.field_c;
@@ -1052,25 +1052,25 @@ final class AgeValidator extends TextFieldValidator {
             var11 = new RgbSprite(4 + DelegatingCanvas.field_c.field_y, DelegatingCanvas.field_c.field_v + 4);
             var11.bindAsRenderTarget();
             DelegatingCanvas.field_c.drawGrayModulated(2, 2, uj.field_d);
-            uc.a(1, 2, var11.field_y, var11, 0, var11.field_v, 0, false);
+            StripedProgressWidget.a(1, 2, var11.field_y, var11, 0, var11.field_v, 0, false);
             DelegatingCanvas.field_c = var11;
             al.field_j = DelegatingCanvas.field_c.copyMirroredHorizontally();
             var12 = new RgbSprite(195, 221);
             var6 = var12.field_y / 2;
             var12.bindAsRenderTarget();
-            Bzip2State.field_e.drawCentred(jk.a(new String[]{mj.field_f}, IntrusiveDeque.field_a, 30496), var6, 40, 16777215, -1);
-            TextLineMetrics.field_l.drawCentred(jk.a(new String[]{mj.field_f}, AchievementIconEntry.field_t, 30496), var6, 60, 16777215, -1);
-            Bzip2State.field_e.drawCentred(jk.a(new String[]{SecondaryNodeDeque.field_f}, RichTextWidget.field_K, 30496), var6, 110, 16777215, -1);
-            TextLineMetrics.field_l.drawCentred(jk.a(new String[]{SecondaryNodeDeque.field_f}, jm.field_b, 30496), var6, 130, 16777215, -1);
+            Bzip2State.field_e.drawCentred(StandardContentDialog.a(new String[]{mj.field_f}, IntrusiveDeque.field_a, 30496), var6, 40, 16777215, -1);
+            TextLineMetrics.field_l.drawCentred(StandardContentDialog.a(new String[]{mj.field_f}, AchievementIconEntry.field_t, 30496), var6, 60, 16777215, -1);
+            Bzip2State.field_e.drawCentred(StandardContentDialog.a(new String[]{SecondaryNodeDeque.field_f}, RichTextWidget.field_K, 30496), var6, 110, 16777215, -1);
+            TextLineMetrics.field_l.drawCentred(StandardContentDialog.a(new String[]{SecondaryNodeDeque.field_f}, jm.field_b, 30496), var6, 130, 16777215, -1);
             Bzip2State.field_e.drawCentred(je.field_l, var6, 180, 16777215, -1);
             TextLineMetrics.field_l.drawCentred(cg.field_c, var6, 200, 16777215, -1);
-            uc.a(1, 3, var12.field_y, var12, 0, var12.field_v, 0, false);
+            StripedProgressWidget.a(1, 3, var12.field_y, var12, 0, var12.field_v, 0, false);
             gn.field_c.bindAsRenderTarget();
             var12.draw(18 - gn.field_c.field_w, -gn.field_c.field_A + 241);
             for (var7 = 0; var7 < PacketBuffer.field_l.length; var7++) {
               en.field_b[var7].bindAsRenderTarget();
               TextLineMetrics.field_l.drawParagraph(PacketBuffer.field_l[var7], 3, 3, en.field_b[var7].field_y - 6, -6 + en.field_b[var7].field_v, uj.field_d, -1, 1, 1, TextLineMetrics.field_l.field_H + TextLineMetrics.field_l.field_E);
-              uc.a(1, 3, en.field_b[var7].field_y, en.field_b[var7], 0, en.field_b[var7].field_v, 0, false);
+              StripedProgressWidget.a(1, 3, en.field_b[var7].field_y, en.field_b[var7], 0, en.field_b[var7].field_v, 0, false);
             }
             PacketBuffer.field_l = null;
             IntrusiveNode.field_d = DirectByteStorage.field_g.copy();
@@ -1093,7 +1093,7 @@ final class AgeValidator extends TextFieldValidator {
             var2Lifetime1 = SoftwareRasterizer.field_i;
             var3Lifetime1 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(rp.field_e);
-            var14 = jk.a(new String[]{kl.field_c[wo.field_g]}, rn.field_e, 30496);
+            var14 = StandardContentDialog.a(new String[]{kl.field_c[wo.field_g]}, rn.field_e, 30496);
             var5 = Bzip2State.field_e.maxLineWidth(var14, PackedBitSet.field_b);
             var6Lifetime1 = Bzip2State.field_e.textHeight(var14, PackedBitSet.field_b, Bzip2State.field_e.field_E + Bzip2State.field_e.field_H);
             var7Lifetime1 = (-var5 + PackedBitSet.field_b) / 2 + lj.field_m;
@@ -1142,7 +1142,7 @@ final class AgeValidator extends TextFieldValidator {
             var9 = new RgbSprite(MenuScreen.field_z.field_E, MenuScreen.field_z.field_G);
             var9.bindAsRenderTarget();
             Bzip2State.field_e.drawParagraph(var14, lj.field_m, cb.field_b, PackedBitSet.field_b, e.field_d, 16777215, -1, 1, 1, Bzip2State.field_e.field_H + Bzip2State.field_e.field_E);
-            uc.a(1, 3, var9.field_E, var9, 0, var9.field_G, 0, false);
+            StripedProgressWidget.a(1, 3, var9.field_E, var9, 0, var9.field_G, 0, false);
             MenuScreen.field_z.bindAsRenderTarget();
             var9.draw(0, 0);
             IntroSequenceScreen.field_r = new RgbSprite(640, 480);
@@ -1160,11 +1160,11 @@ final class AgeValidator extends TextFieldValidator {
             var3Lifetime2 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(rp.field_e);
             var16 = new RgbSprite(412, 43);
-            var5_ref_String = jk.a(new String[]{lg.field_m}, je.field_a, 30496);
+            var5_ref_String = StandardContentDialog.a(new String[]{lg.field_m}, je.field_a, 30496);
             lg.field_m = null;
             var16.bindAsRenderTarget();
             TextLineMetrics.field_l.drawParagraph(var5_ref_String, 3, 3, var16.field_y - 6, var16.field_v - 6, 16777215, -1, 0, 1, TextLineMetrics.field_l.field_H + TextLineMetrics.field_l.field_E);
-            uc.a(1, 3, var16.field_y, var16, 0, var16.field_v, 0, false);
+            StripedProgressWidget.a(1, 3, var16.field_y, var16, 0, var16.field_v, 0, false);
             ModalDialog.field_Q.bindAsRenderTarget();
             var16.draw(199 - ModalDialog.field_Q.field_w, 83 - ModalDialog.field_Q.field_A);
             SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime2, var3Lifetime2);
@@ -1182,7 +1182,7 @@ final class AgeValidator extends TextFieldValidator {
             var7Lifetime2 = ol.field_b.field_E + (var6Lifetime2 + 20);
             ModalDialog.field_Q.bindAsRenderTarget();
             TextLineMetrics.field_l.drawString(rp.field_h, var7Lifetime2 - ModalDialog.field_Q.field_w, TextLineMetrics.field_l.field_H + 155 - (ModalDialog.field_Q.field_A - TextLineMetrics.field_l.field_E), 16777215, -1);
-            uc.a(1, 3, var4, ModalDialog.field_Q, -ModalDialog.field_Q.field_w + (var7Lifetime2 - 4), 50, -ModalDialog.field_Q.field_A + 155, false);
+            StripedProgressWidget.a(1, 3, var4, ModalDialog.field_Q, -ModalDialog.field_Q.field_w + (var7Lifetime2 - 4), 50, -ModalDialog.field_Q.field_A + 155, false);
             var8Lifetime1 = -((-TextLineMetrics.field_l.field_E - TextLineMetrics.field_l.field_H + (-3 + ol.field_b.field_G)) / 2) + (155 - ModalDialog.field_Q.field_A);
             ol.field_b.draw(-ModalDialog.field_Q.field_w + var6Lifetime2, var8Lifetime1);
             SoftwareRasterizer.setRasterBuffer(var30, var2Lifetime3, var3Lifetime3);
@@ -1193,8 +1193,8 @@ final class AgeValidator extends TextFieldValidator {
           var1_int = -53 / ((param0 + 30) / 57);
           SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, ld.field_c, lj.field_u);
           SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, ld.field_c, lj.field_u);
-          if (null != ia.field_Q) {
-            ia.field_Q.draw(0, 0);
+          if (null != GuestPlayConfirmationForm.field_Q) {
+            GuestPlayConfirmationForm.field_Q.draw(0, 0);
           }
           if (gn.field_c != null) {
             gn.field_c.draw(0, 0);

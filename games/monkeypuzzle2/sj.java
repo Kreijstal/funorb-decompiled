@@ -117,7 +117,7 @@ final class sj {
           RichTextLayout.field_r = vd.a(true, "", param0, param3, "big_font");
           BoundedRandomAccessFile.field_e = vd.a(true, "kartika13", param2, param1, "");
           ke.field_i = ma.a(param3, "background", param4 + 16711680, "");
-          fi.field_a = lb.a(false, "", param3, "river_background");
+          fi.field_a = GuestPlayConfirmationForm.a(false, "", param3, "river_background");
           var13 = DiskCacheWorker.a("", "jungle_background", param3, false);
           m.field_k = var13[0];
           m.field_k.b();
@@ -138,10 +138,10 @@ final class sj {
           ByteStorage.field_b = ma.a(param1, "unachieved", 16711680, "basic");
           aj.field_e = ma.a(param1, "orbcoin", 16711680, "basic");
           ma.a(param1, "locked", 16711680, "basic");
-          lb.field_E = lb.a(false, "", param3, "totems");
-          dj.field_a = lb.a(false, "", param3, "vines");
-          j.field_f = lb.a(false, "", param3, "birds");
-          LoginPanel.field_K = lb.a(false, "", param3, "blocks");
+          GuestPlayConfirmationForm.field_E = GuestPlayConfirmationForm.a(false, "", param3, "totems");
+          dj.field_a = GuestPlayConfirmationForm.a(false, "", param3, "vines");
+          j.field_f = GuestPlayConfirmationForm.a(false, "", param3, "birds");
+          LoginPanel.field_K = GuestPlayConfirmationForm.a(false, "", param3, "blocks");
           for (var6_intLifetime2 = 0; dj.field_a.length > var6_intLifetime2; var6_intLifetime2++) {
             var14 = new Sprite(2 + dj.field_a[var6_intLifetime2].field_m, dj.field_a[var6_intLifetime2].field_n + 1);
             var14.bindAsRenderTarget();
@@ -150,15 +150,15 @@ final class sj {
             dj.field_a[var6_intLifetime2] = var14;
           }
           ac.field_a.setAsRasterTarget((byte) 120);
-          AwtRasterBuffer.field_a[param4] = lb.a(false, "", param3, "sprite_explorer_idle");
-          AwtRasterBuffer.field_a[4] = lb.a(false, "", param3, "sprite_explorer_celebrate_maj");
-          AwtRasterBuffer.field_a[3] = lb.a(false, "", param3, "sprite_explorer_celebrate_min");
-          AwtRasterBuffer.field_a[2] = lb.a(false, "", param3, "sprite_explorer_climbing");
-          AwtRasterBuffer.field_a[1] = lb.a(false, "", param3, "sprite_explorer_shoot");
-          AwtRasterBuffer.field_a[5] = lb.a(false, "", param3, "sprite_explorer_lose");
-          AwtRasterBuffer.field_a[6] = lb.a(false, "", param3, "sprite_explorer_idle_panic");
+          AwtRasterBuffer.field_a[param4] = GuestPlayConfirmationForm.a(false, "", param3, "sprite_explorer_idle");
+          AwtRasterBuffer.field_a[4] = GuestPlayConfirmationForm.a(false, "", param3, "sprite_explorer_celebrate_maj");
+          AwtRasterBuffer.field_a[3] = GuestPlayConfirmationForm.a(false, "", param3, "sprite_explorer_celebrate_min");
+          AwtRasterBuffer.field_a[2] = GuestPlayConfirmationForm.a(false, "", param3, "sprite_explorer_climbing");
+          AwtRasterBuffer.field_a[1] = GuestPlayConfirmationForm.a(false, "", param3, "sprite_explorer_shoot");
+          AwtRasterBuffer.field_a[5] = GuestPlayConfirmationForm.a(false, "", param3, "sprite_explorer_lose");
+          AwtRasterBuffer.field_a[6] = GuestPlayConfirmationForm.a(false, "", param3, "sprite_explorer_idle_panic");
           kb.field_a = new Sprite[8];
-          var6 = lb.a(false, "", param3, "menu_titles");
+          var6 = GuestPlayConfirmationForm.a(false, "", param3, "menu_titles");
           kb.field_a[6] = var6[6];
           kb.field_a[2] = var6[2];
           kb.field_a[5] = var6[4];
@@ -174,7 +174,7 @@ final class sj {
             h.a(3, 16777215, 0, false, NameSuggestionsPanel.field_F[var7].field_j, 0, NameSuggestionsPanel.field_F[var7].field_k, NameSuggestionsPanel.field_F[var7]);
           }
           ac.field_a.setAsRasterTarget((byte) 119);
-          wl.field_f = lb.a(false, "", param3, "catapult");
+          wl.field_f = GuestPlayConfirmationForm.a(false, "", param3, "catapult");
           DebouncedFieldValidator.field_d = ma.a(param3, "sun", 16711680, "");
           qa.field_i = ma.a(param3, "moon", param4 ^ 16711680, "");
           Bzip2State.field_D = new Sprite[5];
@@ -184,9 +184,9 @@ final class sj {
           Bzip2State.field_D[3] = ma.a(param3, "world_four_complete", 16711680, "");
           Bzip2State.field_D[4] = ma.a(param3, "game_complete", 16711680, "");
           ib.field_d = ma.a(param3, "game_over", 16711680, "");
-          m.field_i = lb.a(false, "", param3, "water");
+          m.field_i = GuestPlayConfirmationForm.a(false, "", param3, "water");
           ph.field_d = ma.a(param3, "map", param4 ^ 16711680, "");
-          var15 = lb.a(false, "", param3, "monkeys_idle");
+          var15 = GuestPlayConfirmationForm.a(false, "", param3, "monkeys_idle");
           for (var8_int = 0; var8_int < 5; var8_int++) {
             nh.field_f[0][var8_int] = new Sprite[4];
             var9_int = var8_int;
@@ -198,7 +198,7 @@ final class sj {
               var9_int += 5;
             }
           }
-          var16 = lb.a(false, "", param3, "monkeys_falling");
+          var16 = GuestPlayConfirmationForm.a(false, "", param3, "monkeys_falling");
           for (var8_intLifetime1 = 0; 5 > var8_intLifetime1; var8_intLifetime1++) {
             nh.field_f[1][var8_intLifetime1] = new Sprite[4];
             var9_intLifetime1 = var8_intLifetime1;
@@ -210,27 +210,27 @@ final class sj {
               var10_intLifetime1++;
             }
           }
-          DequeCursor.field_a = lb.a(false, "", param3, "basket");
+          DequeCursor.field_a = GuestPlayConfirmationForm.a(false, "", param3, "basket");
           j.field_g = ma.a(param3, "raft", 16711680, "");
           ci.field_d = ma.a(param3, "arrow", 16711680, "");
-          ak.field_t = lb.a(false, "", param3, "sprite_coconuts");
-          qh.field_a = lb.a(false, "", param3, "gecko");
-          SpriteState.field_p = lb.a(false, "", param3, "waterfall_central");
-          cl.field_c = lb.a(false, "", param3, "waterfall_bottom");
-          MouseWheelInput.field_a[0] = lb.a(false, "", param3, "fish_a");
-          MouseWheelInput.field_a[1] = lb.a(false, "", param3, "fish_b");
-          MouseWheelInput.field_a[2] = lb.a(false, "", param3, "fish_c");
-          pc.field_U = lb.a(false, "", param3, "eyes");
-          ie.field_b = lb.a(false, "", param3, "achievements_large");
-          NodeHashTableIterator.field_e = lb.a(false, "", param3, "menu_frame");
-          PasswordValidator.field_q = lb.a(false, "", param3, "menu_monkey");
+          ak.field_t = GuestPlayConfirmationForm.a(false, "", param3, "sprite_coconuts");
+          qh.field_a = GuestPlayConfirmationForm.a(false, "", param3, "gecko");
+          SpriteState.field_p = GuestPlayConfirmationForm.a(false, "", param3, "waterfall_central");
+          cl.field_c = GuestPlayConfirmationForm.a(false, "", param3, "waterfall_bottom");
+          MouseWheelInput.field_a[0] = GuestPlayConfirmationForm.a(false, "", param3, "fish_a");
+          MouseWheelInput.field_a[1] = GuestPlayConfirmationForm.a(false, "", param3, "fish_b");
+          MouseWheelInput.field_a[2] = GuestPlayConfirmationForm.a(false, "", param3, "fish_c");
+          ContentTransitionDialog.field_U = GuestPlayConfirmationForm.a(false, "", param3, "eyes");
+          ie.field_b = GuestPlayConfirmationForm.a(false, "", param3, "achievements_large");
+          NodeHashTableIterator.field_e = GuestPlayConfirmationForm.a(false, "", param3, "menu_frame");
+          PasswordValidator.field_q = GuestPlayConfirmationForm.a(false, "", param3, "menu_monkey");
           ModalDialogHost.field_F = ma.a(param3, "menu_vine", 16711680, "");
           wg.field_g = ma.a(param3, "title_logo", 16711680, "");
-          UiWidget.field_f = lb.a(false, "", param3, "title_monkey");
-          w.field_b = lb.a(false, "", param3, "title_flashes");
+          UiWidget.field_f = GuestPlayConfirmationForm.a(false, "", param3, "title_monkey");
+          w.field_b = GuestPlayConfirmationForm.a(false, "", param3, "title_flashes");
           j.field_c = ma.a(param3, "intro_screen", 16711680, "");
           EmailFormatValidator.field_n = ma.a(param3, "title_2", 16711680, "");
-          fe.field_f = lb.a(false, "", param3, "river");
+          fe.field_f = GuestPlayConfirmationForm.a(false, "", param3, "river");
           de.field_f = ma.a(param3, "slider", param4 ^ 16711680, "");
           sd.field_f = ma.a(param3, "bar", 16711680, "");
           NodeHashTableIterator.field_h = ma.a(param3, "web", 16711680, "");
@@ -239,13 +239,13 @@ final class sj {
           SecondaryNodeDeque.field_c[1] = PasswordValidator.a("", param3, (byte) 118, "x2");
           SecondaryNodeDeque.field_c[2] = PasswordValidator.a("", param3, (byte) 118, "x3");
           SecondaryNodeDeque.field_c[3] = PasswordValidator.a("", param3, (byte) 118, "x4");
-          SpriteState.field_o = lb.a(false, "", param3, "fs_frame");
-          DelegatingCanvas.field_b = lb.a(false, "", param3, "fs_frame_inv");
+          SpriteState.field_o = GuestPlayConfirmationForm.a(false, "", param3, "fs_frame");
+          DelegatingCanvas.field_b = GuestPlayConfirmationForm.a(false, "", param3, "fs_frame_inv");
           for (var8_intLifetime2 = 0; SecondaryNodeDeque.field_c.length > var8_intLifetime2; var8_intLifetime2++) {
             SecondaryNodeDeque.field_c[var8_intLifetime2].b();
           }
-          ValidatedTextField.field_L = lb.a(false, "", param3, "map_explorer");
-          var8 = lb.a(false, "", param3, "spider");
+          ValidatedTextField.field_L = GuestPlayConfirmationForm.a(false, "", param3, "map_explorer");
+          var8 = GuestPlayConfirmationForm.a(false, "", param3, "spider");
           for (var9_intLifetime2 = 4; var9_intLifetime2 >= 0; var9_intLifetime2--) {
             array$0 = new Sprite[var8.length];
             hb.field_m[var9_intLifetime2] = array$0;

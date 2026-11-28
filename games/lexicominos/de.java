@@ -74,11 +74,11 @@ final class de extends RuntimeException {
 
     final static void a(boolean param0, float param1, String param2, boolean param3) {
         try {
-          if (null == qj.field_fb) {
-            qj.field_fb = new uk(ug.field_A, jj.field_d);
-            ug.field_A.showDialog(-14579, qj.field_fb);
+          if (null == StandardContentDialog.field_fb) {
+            StandardContentDialog.field_fb = new ProgressDialog(ug.field_A, jj.field_d);
+            ug.field_A.showDialog(-14579, StandardContentDialog.field_fb);
           }
-          qj.field_fb.a(param0, param2, 125, param1);
+          StandardContentDialog.field_fb.setProgress(param0, param2, 125, param1);
           SoftwareRasterizer.clearRaster();
           we.a((byte) -65, param3);
         } catch (RuntimeException runtimeException) {

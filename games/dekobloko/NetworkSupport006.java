@@ -30,24 +30,24 @@ final class NetworkSupport006 {
           ArchiveRequestManager.longState0011 = cachedLongLocal1;
           MixedSupport095.longState0040 = cachedLongLocal1;
           if (MixedSupport066.asyncTaskState0004.integerState0510 != 1) {
-            UiComponentPart023.mixedSupport132State0009 = MixedSupport071.mixedSupport132State0005;
+            StandardContentDialog.mixedSupport132State0009 = MixedSupport071.mixedSupport132State0005;
           } else {
             try {
               GameSession.bufferedSocketState0002 = new BufferedSocket((java.net.Socket) (MixedSupport066.asyncTaskState0004.objectState0004), GzipDecompressor.platformServiceState0002);
               cipherPacketBufferLocal3 = LabeledWidgetContainer.cipherPacketBufferState0001;
               SocketFactory.cipherPacketBufferState0002.position = 0;
-              UiComponentPart023.mixedSupport132State0009 = DebouncedFieldValidator.mixedSupport132State0001;
+              StandardContentDialog.mixedSupport132State0009 = DebouncedFieldValidator.mixedSupport132State0001;
               stackIntegerLocal5 = (!booleanArgument1) ? -1 : -2;
-              UiComponentPart017.integerState0438 = stackIntegerLocal5;
+              GuestPlayConfirmationForm.integerState0438 = stackIntegerLocal5;
               GameDomainSupport001.integerState0051 = stackIntegerLocal5;
               ComponentContainer.integerState0378 = stackIntegerLocal5;
               cipherPacketBufferLocal3.position = 0;
               MixedSupport049.performAction0587(MixedSupport067.integerState0356, MixedSupport073.integerState0415, 17, SocketFactory.cipherPacketBufferState0002, BufferedSocket.integerState0662);
-              UiComponentPart033.performAction1818(4792, -1);
+              AccountCreationResultPanel.performAction1818(4792, -1);
             } catch (java.io.IOException caughtParameterLocal7) {
               caughtExceptionLocal6 = caughtParameterLocal7;
               iOExceptionLocal4 = (IOException) (Object) caughtExceptionLocal6;
-              UiComponentPart023.mixedSupport132State0009 = MixedSupport071.mixedSupport132State0005;
+              StandardContentDialog.mixedSupport132State0009 = MixedSupport071.mixedSupport132State0005;
               MixedSupport066.asyncTaskState0004 = null;
               integerLocal2 = 79 / ((integerArgument2 - 21) / 48);
               return true;

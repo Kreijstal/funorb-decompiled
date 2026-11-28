@@ -80,7 +80,7 @@ final class ud extends IntrusiveNode {
           }
           stackIn_6_0 = 125;
           stackIn_7_1 = !(13 <= wc.field_Ob);
-          ji.field_d = jj.createAccountSuccessResultWithIntGuard(stackIn_6_0, stackIn_7_1);
+          ji.field_d = ProgressDialog.createAccountSuccessResultWithIntGuard(stackIn_6_0, stackIn_7_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -104,7 +104,7 @@ final class ud extends IntrusiveNode {
 
     final static void a(int param0, byte param1, int param2) {
         pe.field_q = param2;
-        ef.field_vb = param0;
+        StandardContentDialog.field_vb = param0;
         if (param1 != -12) {
           String[] var4 = (String[]) null;
           ud.a(false, -13, (String) null, (String[]) null);

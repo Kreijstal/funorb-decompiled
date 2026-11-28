@@ -18,7 +18,7 @@ final class AgeValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.getValidationStatus(8192, param1) == u.field_b) {
-            stackIn_2_0 = jf.field_kb;
+            stackIn_2_0 = ContentTransitionDialog.field_kb;
             return stackIn_2_0;
           }
           if (param0 > 47) {
@@ -191,7 +191,7 @@ final class AgeValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param1);
-          if (!jf.a(var4, param0 - 640)) {
+          if (!ContentTransitionDialog.a(var4, param0 - 640)) {
             stackIn_2_0 = u.field_b;
             return stackIn_2_0;
           }

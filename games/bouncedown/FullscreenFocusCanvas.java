@@ -6,7 +6,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     static ResourceArchive field_a;
     static String field_b;
     java.awt.Frame fullscreenFrame;
-    static lg field_c;
+    static FullscreenNoticeType field_c;
     static boolean field_d;
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
@@ -51,7 +51,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
 
     final static int a(int param0) {
         if (param0 != 31083) {
-          field_c = (lg) null;
+          field_c = (FullscreenNoticeType) null;
           return SingleChildWidgetContainer.field_y;
         }
         return SingleChildWidgetContainer.field_y;
@@ -59,7 +59,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
 
     static {
         field_b = "Type your age in years";
-        field_c = new lg();
+        field_c = new FullscreenNoticeType();
         field_d = false;
     }
 }

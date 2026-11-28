@@ -50,7 +50,7 @@ final class MixedSupport079 {
           objectLocal6 = MixedSupport107.computeString1403(integerArgument3, integerArgument2 + 0, stringLocal2);
         }
         if (ResourceSupport003.integerState0555 == 1) {
-          objectLocal6 = UiComponentPart018.computeString1033(integerArgument3, stringLocal2, false);
+          objectLocal6 = RegistrationAgreementPane.computeString1033(integerArgument3, stringLocal2, false);
         }
         if (ResourceSupport003.integerState0555 == 2) {
           objectLocal6 = NetworkSupport003.computeString0351(stringLocal2, 127, integerArgument3);
@@ -64,7 +64,7 @@ final class MixedSupport079 {
           return;
         }
         stringLocal4 = (String) null;
-        UiComponentPart004.performAction0184(stringLocal2, (String) null, (String) (objectLocal6), (byte) -37, 2, 0);
+        ContentTransitionDialog.performAction0184(stringLocal2, (String) null, (String) (objectLocal6), (byte) -37, 2, 0);
         MixedSupport139.sceneWidgetPart004State0001 = null;
         ResourceSupport003.integerState0555 = -1;
         return;
@@ -174,11 +174,11 @@ final class MixedSupport079 {
             for (integerLocal1 = 0; mixedSupport003Argument3.integerArrayState0005.length > integerLocal1; integerLocal1++) {
               integerLocal28 = mixedSupport003Argument3.integerArrayState0005[integerLocal1];
               if (-1 == integerLocal28) {
-                stringArrayLocal21[integerLocal1 + integerLocal35] = UiComponentPart012.stringState0207;
+                stringArrayLocal21[integerLocal1 + integerLocal35] = ProgressMessageDialog.stringState0207;
                 characterArrayLocal22[integerLocal35 + integerLocal1] = mixedSupport003Argument3.characterArrayState0002[integerLocal1];
                 integerArrayLocal23[integerLocal35 + integerLocal1] = mixedSupport003Argument3.integerArrayState0005[integerLocal1];
               } else {
-                networkSupport007Local29 = UiComponentPart033.networkSupport012State0001.computeNetworkSupport0071535(126, integerLocal28);
+                networkSupport007Local29 = AccountCreationResultPanel.networkSupport012State0001.computeNetworkSupport0071535(126, integerLocal28);
                 stringArrayLocal21[integerLocal1 + integerLocal35] = networkSupport007Local29.computeString1043((byte) -81);
                 characterArrayLocal22[integerLocal35 + integerLocal1] = mixedSupport003Argument3.characterArrayState0002[integerLocal1];
                 if (characterArrayLocal22[integerLocal35 + integerLocal1] <= 0) {

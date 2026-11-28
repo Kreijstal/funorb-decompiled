@@ -125,7 +125,7 @@ final class fe extends ButtonWidget {
           ef.field_a = new Model[var3];
           kc.field_c = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {
-            ef.field_a[var4] = sf.a(var9, false);
+            ef.field_a[var4] = GuestPlayConfirmationForm.a(var9, false);
           }
           var11.endBitAccess((byte) -106);
           var10 = 0;

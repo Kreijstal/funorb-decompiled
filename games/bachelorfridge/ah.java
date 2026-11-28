@@ -153,7 +153,7 @@ final class ah extends tia {
           var4_ref = "";
           if (param0.field_p != 2) {
             if (param0.field_p == 0 &&
-              am.field_O) {
+              ResizableModalDialog.field_O) {
               var4_ref = "[" + FlyEvent.field_r + "] ";
             }
             if (1 == param0.field_p) {
@@ -196,7 +196,7 @@ final class ah extends tia {
     }
 
     final static void a(int param0, int param1) {
-        BitPacketBuffer var2 = sja.field_fb;
+        BitPacketBuffer var2 = StandardContentDialog.field_fb;
         var2.writeCipheredByte(param1, (byte) 118);
         var2.writeByte(1, 0);
         var2.writeByte(2, param0 ^ param0);

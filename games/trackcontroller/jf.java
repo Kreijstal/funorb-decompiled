@@ -6,7 +6,7 @@ final class jf extends IntrusiveNode {
     static String[] field_i;
     int field_k;
     static int field_j;
-    static mk field_l;
+    static FullscreenNoticeType field_l;
 
     final static void e(int param0) {
         gh.field_k = false;
@@ -15,7 +15,7 @@ final class jf extends IntrusiveNode {
         if (param0 != 640) {
           return;
         }
-        rk.field_X = DiskArchiveStore.field_f;
+        ProgressDialog.field_X = DiskArchiveStore.field_f;
         IndexedSpriteState.field_h = DiskArchiveStore.field_f;
     }
 
@@ -36,6 +36,6 @@ final class jf extends IntrusiveNode {
 
     static {
         field_j = 640;
-        field_l = new mk();
+        field_l = new FullscreenNoticeType();
     }
 }

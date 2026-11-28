@@ -142,31 +142,31 @@ final class ek {
           throw new IllegalStateException();
         }
         if (ok.field_x != null) {
-          ok.field_x.n(param0 ^ 22641);
+          ok.field_x.closeDialog(param0 ^ 22641);
           var1 = PacketBuffer.d(true);
           lg.field_b = new LoginPanel(var1, (String) null, true, false, false);
           nb.field_a.showDialog(ak.field_a, (byte) -35);
           if (param0 != -6) {
             ek.a((byte) 6);
-            ak.field_a.d(lg.field_b, 26034);
-            ak.field_a.l(param0 ^ 5);
+            ak.field_a.replaceContent(lg.field_b, 26034);
+            ak.field_a.finishResize(param0 ^ 5);
             return;
           }
-          ak.field_a.d(lg.field_b, 26034);
-          ak.field_a.l(param0 ^ 5);
+          ak.field_a.replaceContent(lg.field_b, 26034);
+          ak.field_a.finishResize(param0 ^ 5);
           return;
         }
         var1Lifetime1 = PacketBuffer.d(true);
         lg.field_b = new LoginPanel(var1Lifetime1, (String) null, true, false, false);
         nb.field_a.showDialog(ak.field_a, (byte) -35);
         if (param0 == -6) {
-          ak.field_a.d(lg.field_b, 26034);
-          ak.field_a.l(param0 ^ 5);
+          ak.field_a.replaceContent(lg.field_b, 26034);
+          ak.field_a.finishResize(param0 ^ 5);
           return;
         }
         ek.a((byte) 6);
-        ak.field_a.d(lg.field_b, 26034);
-        ak.field_a.l(param0 ^ 5);
+        ak.field_a.replaceContent(lg.field_b, 26034);
+        ak.field_a.finishResize(param0 ^ 5);
     }
 
     final static void a(int param0, int param1) {

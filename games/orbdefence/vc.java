@@ -188,14 +188,14 @@ final class vc {
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              if (ob.field_H == 1) {
-                ob.field_H = 2;
+              if (RegistrationAgreementPane.field_H == 1) {
+                RegistrationAgreementPane.field_H = 2;
               }
               return;
             }
             if (3 == var2) {
-              if (ob.field_H == 2) {
-                ob.field_H = 1;
+              if (RegistrationAgreementPane.field_H == 2) {
+                RegistrationAgreementPane.field_H = 1;
               }
               return;
             }
@@ -204,7 +204,7 @@ final class vc {
               th.a(113);
               return;
             }
-            ob.field_H = 1;
+            RegistrationAgreementPane.field_H = 1;
             var4 = var1.readString(2);
             DiskArchiveRequest.field_r = ((String) (var4)).intern();
             var5 = var1.readUnsignedByte((byte) 90);
@@ -482,7 +482,7 @@ final class vc {
                 return stackIn_8_0;
               }
             }
-            if (dh.field_bb == ModalDialogHost.field_E) {
+            if (ProgressMessageDialog.field_bb == ModalDialogHost.field_E) {
               if (!param4) {
                 InteractiveWidget.field_A = sj.a(true, param3, false, param5);
               }
@@ -494,30 +494,30 @@ final class vc {
               uk.field_b.writeByte(14, -111);
               uk.field_b.writeByte(InteractiveWidget.field_A.a(10277).field_c, -53);
               bh.a(-1, -1);
-              dh.field_bb = nh.field_c;
+              ProgressMessageDialog.field_bb = nh.field_c;
             }
-            if (nh.field_c == dh.field_bb &&
+            if (nh.field_c == ProgressMessageDialog.field_bb &&
               AccountRequestState.a(true, 1)) {
               var6_intLifetime1 = NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
               if (0 == var6_intLifetime1) {
-                dh.field_bb = wh.field_c;
+                ProgressMessageDialog.field_bb = wh.field_c;
               }
               if (0 != var6_intLifetime1 ||
                 var9 != 0) {
                 ab.field_l = var6_intLifetime1;
                 GameAppletShell.field_c = -1;
-                dh.field_bb = hf.field_l;
+                ProgressMessageDialog.field_bb = hf.field_l;
               }
               NetworkArchiveRequest.field_t.position = 0;
             }
-            if (wh.field_c == dh.field_bb &&
+            if (wh.field_c == ProgressMessageDialog.field_bb &&
               AccountRequestState.a(true, 8)) {
               tg.field_a = NetworkArchiveRequest.field_t.readLong((byte) -89);
               NetworkArchiveRequest.field_t.position = 0;
               lg.a(3, param1, InteractiveWidget.field_A, param4, param0);
-              dh.field_bb = Bzip2State.field_m;
+              ProgressMessageDialog.field_bb = Bzip2State.field_m;
             }
-            if (Bzip2State.field_m == dh.field_bb &&
+            if (Bzip2State.field_m == ProgressMessageDialog.field_bb &&
               AccountRequestState.a(true, 1)) {
               var6_intLifetime2 = NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
               NetworkArchiveRequest.field_t.position = 0;
@@ -525,13 +525,13 @@ final class vc {
               ab.field_l = var6_intLifetime2;
               if (var6_intLifetime2 == 0 ||
                 var6_intLifetime2 == 1) {
-                dh.field_bb = lm.field_e;
+                ProgressMessageDialog.field_bb = lm.field_e;
                 GameAppletShell.field_c = -1;
               }
               if (var6_intLifetime2 != 0 &&
                 var6_intLifetime2 != 1 || var9 != 0) {
                 if (var6_intLifetime2 != 8) {
-                  dh.field_bb = hf.field_l;
+                  ProgressMessageDialog.field_bb = hf.field_l;
                   GameAppletShell.field_c = -1;
                 }
                 if (var6_intLifetime2 == 8 ||
@@ -545,7 +545,7 @@ final class vc {
               stackIn_58_0 = 87;
               return stackIn_58_0;
             }
-            if (dh.field_bb == lm.field_e &&
+            if (ProgressMessageDialog.field_bb == lm.field_e &&
               ce.a(-60)) {
               p.field_c = NetworkArchiveRequest.field_t.readLong((byte) -89);
               AccountRequestState.field_d = NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
@@ -558,10 +558,10 @@ final class vc {
               }
               if (!param4) {
                 stackIn_74_0 = ((8 & var7) != 0);
-                pc.field_Z = stackIn_74_0;
+                StandardContentDialog.field_Z = stackIn_74_0;
                 stackIn_78_0 = ((4 & var7) != 0);
                 jd.field_b = stackIn_78_0;
-                if (pc.field_Z) {
+                if (StandardContentDialog.field_Z) {
                 }
               }
               boolean decompiledFrameCompleted0 = true;
@@ -585,7 +585,7 @@ final class vc {
                 gb.field_h = NetworkArchiveRequest.field_t.readString(2);
                 ModalDialog.field_E = ua.a(90, (CharSequence) ((Object) gb.field_h));
                 BufferedSocket.field_j = NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
-                dh.field_bb = Bzip2State.field_r;
+                ProgressMessageDialog.field_bb = Bzip2State.field_r;
               }
               if (InteractiveWidget.field_A.a(10277) != ci.field_b) {
                 if (InteractiveWidget.field_A.a(10277) == oj.field_j) {
@@ -643,7 +643,7 @@ final class vc {
               stackIn_124_0 = ab.field_l;
               return stackIn_124_0;
             }
-            if (hf.field_l == dh.field_bb &&
+            if (hf.field_l == ProgressMessageDialog.field_bb &&
               ce.a(-114)) {
               th.a(114);
               if (7 == ab.field_l &&

@@ -53,9 +53,9 @@ abstract class RasterBuffer {
           boolean decompiledFrameRemainder0 = true;
           kk.field_d = kk.field_d + 1;
           if (param1 == null) {
-            decompiledFrameRemainder0 = (s.field_ib == null);
+            decompiledFrameRemainder0 = (StandardContentDialog.field_ib == null);
           } else {
-            decompiledFrameRemainder0 = !(param1.equals(s.field_ib));
+            decompiledFrameRemainder0 = !(param1.equals(StandardContentDialog.field_ib));
           }
           if (decompiledFrameRemainder0) {
             if (!ab.field_u) {
@@ -102,7 +102,7 @@ abstract class RasterBuffer {
             var4 = (String) null;
             RasterBuffer.a(95, (String) null);
           }
-          s.field_ib = param1;
+          StandardContentDialog.field_ib = param1;
           if (ab.field_u &&
             kk.field_d == InteractiveWidget.field_A) {
             kk.field_d = 0;

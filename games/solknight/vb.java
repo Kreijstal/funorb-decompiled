@@ -147,7 +147,7 @@ final class vb extends il {
                 AccountRequestState.field_e = bj.field_a;
               } else {
                 bf.c(54, ArchiveRequest.g(-9917));
-                NodeHashTableIterator.field_b = new Boolean(lj.a(AlphaWidgetContainer.field_N, -2));
+                NodeHashTableIterator.field_b = new Boolean(DialogMessagePane.a(AlphaWidgetContainer.field_N, -2));
                 AlphaWidgetContainer.field_N.position = 0;
               }
             }
@@ -277,7 +277,7 @@ final class vb extends il {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var6 < var3; var6++) {
-              var10[var6] = ig.field_H[fi.a((int) var21[var6], 255)];
+              var10[var6] = GuestPlayConfirmationForm.field_H[fi.a((int) var21[var6], 255)];
             }
             var1[var2] = new Sprite(MouseInputHandler.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], var22);
           } else {
@@ -289,7 +289,7 @@ final class vb extends il {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var7 < var3; var7++) {
-              var6_ref_int__[var7] = ProxySocketConnector.a(ig.field_H[fi.a((int) var21[var7], 255)], fi.a((int) var16[var7], 255) << 24);
+              var6_ref_int__[var7] = ProxySocketConnector.a(GuestPlayConfirmationForm.field_H[fi.a((int) var21[var7], 255)], fi.a((int) var16[var7], 255) << 24);
             }
             var1[var2] = (Sprite) ((Object) new ArgbSprite(MouseInputHandler.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], var17));
           }

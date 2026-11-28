@@ -145,11 +145,11 @@ final class ModalDialogHost extends SingleChildWidgetContainer {
         r.field_p = false;
         DirectByteArrayStore.field_e = false;
         gh.a(-1, 31888);
-        jc.field_P = tj.field_F;
+        ResizableModalDialog.field_P = GuestPlayConfirmationForm.field_F;
         if (param0 != -23687) {
           field_A = (String) null;
         }
-        DirectByteArrayStore.field_d = tj.field_F;
+        DirectByteArrayStore.field_d = GuestPlayConfirmationForm.field_F;
     }
 
     static {

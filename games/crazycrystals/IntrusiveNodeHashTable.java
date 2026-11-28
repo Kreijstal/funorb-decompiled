@@ -86,7 +86,7 @@ final class IntrusiveNodeHashTable implements Iterable {
         String var7;
         String var8;
         var5 = CrazyCrystals.field_B;
-        var6 = "(" + fl.field_m + " " + ea.field_n + " " + Bzip2State.field_u + ") " + bf.field_b;
+        var6 = "(" + fl.field_m + " " + ea.field_n + " " + Bzip2State.field_u + ") " + FullscreenNoticeType.field_b;
         var1 = var6;
         if (param0 != -1815) {
           return (String) null;

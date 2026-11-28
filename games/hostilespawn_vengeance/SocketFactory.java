@@ -12,16 +12,16 @@ abstract class SocketFactory {
 
     final static void a(boolean param0) {
         if (AccountServiceResult.field_d != null) {
-          AccountServiceResult.field_d.g((byte) -42);
+          AccountServiceResult.field_d.closeDialog((byte) -42);
         }
         if (param0) {
-          te.field_M = new DisplayNameSelectionPanel();
-          ke.field_s.b(te.field_M, (byte) 110);
+          RegistrationAgreementPane.field_M = new DisplayNameSelectionPanel();
+          ke.field_s.replaceContent(RegistrationAgreementPane.field_M, (byte) 110);
           return;
         }
         SocketFactory.clearStaticReferences((byte) -109);
-        te.field_M = new DisplayNameSelectionPanel();
-        ke.field_s.b(te.field_M, (byte) 110);
+        RegistrationAgreementPane.field_M = new DisplayNameSelectionPanel();
+        ke.field_s.replaceContent(RegistrationAgreementPane.field_M, (byte) 110);
     }
 
     final java.net.Socket openDirectSocket(int param0) throws IOException {

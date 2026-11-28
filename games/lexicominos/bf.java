@@ -17,11 +17,11 @@ final class bf {
         var1 = DraggableWidgetContainer.field_M;
         synchronized (var1) {
           ul.field_o = NameSuggestionsPanel.field_I;
-          uc.field_eb = uc.field_eb + 1;
+          ProgressMessageDialog.field_eb = ProgressMessageDialog.field_eb + 1;
           bk.field_b = cj.field_i;
           ResourceArchive.field_e = ij.field_h;
-          ob.field_c = ql.field_K;
-          ql.field_K = false;
+          ob.field_c = ResizableModalDialog.field_K;
+          ResizableModalDialog.field_K = false;
           nk.field_z = lj.field_a;
           ef.field_a = GameAppletShell.field_j;
           ProxyAuthenticationRequiredException.field_a = GzipDecompressor.field_b;

@@ -141,7 +141,7 @@ final class on extends DefaultTextWidgetRenderer {
             stackIn_3_0 = (UiWidget) (param2);
           }
           var10 = (InteractiveWidget) (stackIn_3_0);
-          wf.a(param2.field_t + param3, param2.field_u + param1, (byte) 8, param2.field_u + param1 + param2.field_v, param3 + param2.field_t + param2.field_q);
+          ResizableModalDialog.a(param2.field_t + param3, param2.field_u + param1, (byte) 8, param2.field_u + param1 + param2.field_v, param3 + param2.field_t + param2.field_q);
           if (param0 != 12088) {
             this.field_y = (nb) null;
           }

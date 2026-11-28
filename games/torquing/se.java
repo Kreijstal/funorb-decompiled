@@ -15,7 +15,7 @@ final class se extends DefaultTextWidgetRenderer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -33) {
-            stackIn_4_0 = fm.field_F.getFileByName(-115, param1, "");
+            stackIn_4_0 = GuestPlayConfirmationForm.field_F.getFileByName(-115, param1, "");
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;

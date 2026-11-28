@@ -59,8 +59,8 @@ final class wb extends TextureOperator {
         var3 = var13;
         if (this.field_x.field_i) {
           var4 = lf.field_y[param0] - 2048;
-          for (var5 = 0; var5 < we.field_M; var5++) {
-            var6 = rh.field_O[var5] - 2048;
+          for (var5 = 0; var5 < StripedProgressWidget.field_M; var5++) {
+            var6 = DialogMessagePane.field_O[var5] - 2048;
             var7 = this.field_A + var6;
             if (var7 < -2048) {
               stackIn_8_0 = 4096 + var7;

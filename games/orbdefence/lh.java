@@ -31,7 +31,7 @@ final class lh {
           Throwable var3_ref = null;
           RuntimeException var3_ref2 = null;
           try {
-            pc.field_ab = param1;
+            StandardContentDialog.field_ab = param1;
             try {
               if (param2) {
                 return;

@@ -425,7 +425,7 @@ final class BufferedSocket implements Runnable {
           field_j = (int[]) null;
         }
         if (LevelRun.field_f == null) {
-          LevelRun.field_f = new DefaultTextWidgetRenderer(sp.field_R, 20, 0, 0, 0, 11579568, -1, 0, 0, sp.field_R.field_x, -1, 2147483647, true);
+          LevelRun.field_f = new DefaultTextWidgetRenderer(ProgressDialog.field_R, 20, 0, 0, 0, 11579568, -1, 0, 0, ProgressDialog.field_R.field_x, -1, 2147483647, true);
         }
         return LevelRun.field_f;
     }

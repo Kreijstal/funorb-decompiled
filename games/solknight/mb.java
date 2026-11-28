@@ -185,7 +185,7 @@ final class mb {
                   hl.field_a[var23Lifetime2] = -2147483648;
                 }
                 if (param1) {
-                  ig.field_D[var23Lifetime2] = var27Lifetime1 >> InteractiveWidget.field_H;
+                  GuestPlayConfirmationForm.field_D[var23Lifetime2] = var27Lifetime1 >> InteractiveWidget.field_H;
                   ob.field_m[var23Lifetime2] = var28Lifetime1 >> InteractiveWidget.field_H;
                   hf.field_b[var23Lifetime2] = var29Lifetime1;
                 }
@@ -209,7 +209,7 @@ final class mb {
                   var24Lifetime1Lifetime1 = param0.field_p[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param0.field_x[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_h[var23Lifetime2];
-                  ng.field_b[var23Lifetime2] = var9 + (var12 * var24Lifetime1Lifetime1 + var15 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var18 >> 16);
+                  FullscreenNoticeType.field_b[var23Lifetime2] = var9 + (var12 * var24Lifetime1Lifetime1 + var15 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var18 >> 16);
                   hg.field_B[var23Lifetime2] = (var19 * var26Lifetime1Lifetime1 + (var24Lifetime1Lifetime1 * var13 + var16 * var25Lifetime1Lifetime1) >> 16) + var10;
                   cd.field_b[var23Lifetime2] = (var25Lifetime1Lifetime1 * var17 + (var24Lifetime1Lifetime1 * var14 + var20 * var26Lifetime1Lifetime1) >> 16) + var11;
                   var24Lifetime1Lifetime1 = param0.field_i[var23Lifetime2];
@@ -222,7 +222,7 @@ final class mb {
                   var25Lifetime1Lifetime1 = param0.field_M[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_u[var23Lifetime2];
                   fa.field_g[var23Lifetime2] = var9 + (var25Lifetime1Lifetime1 * var15 + (var24Lifetime1Lifetime1 * var12 + var26Lifetime1Lifetime1 * var18) >> 16);
-                  ci.field_pb[var23Lifetime2] = (var16 * var25Lifetime1Lifetime1 + (var13 * var24Lifetime1Lifetime1 + var19 * var26Lifetime1Lifetime1) >> 16) + var10;
+                  ProgressMessageDialog.field_pb[var23Lifetime2] = (var16 * var25Lifetime1Lifetime1 + (var13 * var24Lifetime1Lifetime1 + var19 * var26Lifetime1Lifetime1) >> 16) + var10;
                   pb.field_a[var23Lifetime2] = (var24Lifetime1Lifetime1 * var14 + (var25Lifetime1Lifetime1 * var17 + var26Lifetime1Lifetime1 * var20) >> 16) + var11;
                   var23Lifetime2++;
                   if (var30 != 0) {

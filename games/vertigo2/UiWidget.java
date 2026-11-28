@@ -348,7 +348,7 @@ class UiWidget extends IntrusiveNode {
         }
         var6 = ti.a((byte) -52);
         if (var6 != null) {
-          eb.field_c.a(var6, -48, hn.field_n, rl.field_db);
+          eb.field_c.a(var6, -48, hn.field_n, ContentTransitionDialog.field_db);
         }
     }
 

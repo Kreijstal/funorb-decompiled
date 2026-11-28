@@ -198,7 +198,7 @@ final class w extends DefaultTextWidgetRenderer {
         s.field_c = false;
         sg.field_n = null;
         if (!ModalDialogHost.field_x) {
-          var1 = jj.field_F;
+          var1 = RegistrationAgreementPane.field_F;
           if (var1 > 0) {
             if (var1 == 1) {
               sg.field_n = of.field_j;
@@ -207,10 +207,10 @@ final class w extends DefaultTextWidgetRenderer {
             }
             sg.field_n = LoginPanel.a(true, new CharSequence[]{(CharSequence) ((Object) sg.field_n), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) BufferedSocket.field_f)});
           }
-          fa.field_G.n(3);
+          StripedProgressWidget.field_G.closeDialog(3);
           ea.a(-101);
         } else {
-          fa.field_G.o(param0 + 109);
+          StripedProgressWidget.field_G.showConnectionFailure(param0 + 109);
         }
     }
 
@@ -229,10 +229,10 @@ final class w extends DefaultTextWidgetRenderer {
         }
         try {
           if (ve.field_f == null) {
-            ve.field_f = new lf(ti.field_b, sg.field_n);
+            ve.field_f = new ProgressDialog(ti.field_b, sg.field_n);
             ti.field_b.showDialog((byte) 93, (UiWidget) (ve.field_f));
           }
-          ve.field_f.a(param0, param2, param3, true);
+          ve.field_f.setProgress(param0, param2, param3, true);
           SoftwareRasterizer.clearRaster();
           wa.a(true, true);
         } catch (RuntimeException runtimeException) {

@@ -51,13 +51,13 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         if (param0 <= 112) {
           java.awt.Frame var2 = (java.awt.Frame) null;
           FullscreenFocusCanvas.a((PlatformTaskDispatcher) null, 73, (java.awt.Frame) null);
-          if (null != al.field_W) {
-            return (java.awt.Container) ((Object) al.field_W);
+          if (null != ContentTransitionDialog.field_W) {
+            return (java.awt.Container) ((Object) ContentTransitionDialog.field_W);
           }
           return (java.awt.Container) ((Object) dg.a(false));
         }
-        if (null != al.field_W) {
-          return (java.awt.Container) ((Object) al.field_W);
+        if (null != ContentTransitionDialog.field_W) {
+          return (java.awt.Container) ((Object) ContentTransitionDialog.field_W);
         }
         return (java.awt.Container) ((Object) dg.a(false));
     }

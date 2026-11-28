@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends si implements WidgetActivationListener {
+final class AccountCreationResultPanel extends ProgressMessageDialog implements WidgetActivationListener {
     static int field_wb;
     private boolean field_xb;
     static String field_ub;
@@ -23,7 +23,7 @@ final class AccountCreationResultPanel extends si implements WidgetActivationLis
             var3 = (CharSequence) null;
             AccountCreationResultPanel.a((CharSequence) null, 66);
           }
-          var2 = hi.a(qd.a(-113, param0), -12382);
+          var2 = FullscreenStatusDialog.a(qd.a(-113, param0), -12382);
           if (var2 == null) {
             var2 = "";
           }
@@ -60,7 +60,7 @@ final class AccountCreationResultPanel extends si implements WidgetActivationLis
         }
     }
 
-    final void q(int param0) {
+    final void showAccountCreationConnectionFailure(int param0) {
         if (param0 >= 66) {
           this.showAccountCreationResult(aj.createAccountErrorResult(248, (byte) -47, ValidatedTextField.field_ab), (byte) -110, true);
           return;
@@ -77,7 +77,7 @@ final class AccountCreationResultPanel extends si implements WidgetActivationLis
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        oi var5 = null;
+        DialogMessagePane var5 = null;
         int var6 = 0;
         var6 = Terraphoenix.field_V;
         try {
@@ -104,36 +104,36 @@ final class AccountCreationResultPanel extends si implements WidgetActivationLis
               }
             }
           }
-          var5 = new oi((si) (this), be.field_x, var4);
+          var5 = new DialogMessagePane((ProgressMessageDialog) (this), be.field_x, var4);
           if (param1 != -110) {
-            this.q(102);
+            this.showAccountCreationConnectionFailure(102);
           }
           if (param0.success) {
             if (param0.field_a) {
-              this.a(new cl(this), -86);
+              this.replaceContent(new RegistrationAgreementPane(this), -86);
               return;
             }
-            var5.a((byte) 23, (WidgetEventListener) (this), rj.field_e);
+            var5.addListenerButton((byte) 23, (WidgetEventListener) (this), rj.field_e);
           } else {
             if (!this.field_xb) {
               if (param0.statusCode == 5) {
-                var5.a(11, hf.field_u, (byte) -65);
-                var5.a(17, ed.field_c, (byte) 54);
+                var5.addActionButton(11, hf.field_u, (byte) -65);
+                var5.addActionButton(17, ed.field_c, (byte) 54);
               } else {
-                var5.a(-1, gd.field_b, (byte) -120);
+                var5.addActionButton(-1, gd.field_b, (byte) -120);
               }
             } else {
-              var5.a((byte) 23, (WidgetEventListener) (this), rj.field_e);
+              var5.addListenerButton((byte) 23, (WidgetEventListener) (this), rj.field_e);
             }
             if (3 == param0.statusCode) {
-              var5.a(7, mi.field_i, (byte) 118);
+              var5.addActionButton(7, mi.field_i, (byte) 118);
             } else {
               if (param0.statusCode == 6) {
-                var5.a(9, fc.field_b, (byte) -117);
+                var5.addActionButton(9, fc.field_b, (byte) -117);
               }
             }
           }
-          this.a(var5, -31);
+          this.replaceContent(var5, -31);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -156,7 +156,7 @@ final class AccountCreationResultPanel extends si implements WidgetActivationLis
         }
         try {
           jh.c((byte) 30);
-          this.h((byte) -126);
+          this.closeDialog((byte) -126);
           int var6_int = 75 / ((-5 - param4) / 57);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "tj.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');

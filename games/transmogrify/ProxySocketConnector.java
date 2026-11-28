@@ -321,7 +321,7 @@ final class ProxySocketConnector extends SocketConnector {
               return;
             }
             if (4 != var2) {
-              d.a((Throwable) null, param0 - 117, "F1: " + ik.q(48));
+              d.a((Throwable) null, param0 - 117, "F1: " + ProgressMessageDialog.q(48));
               pc.a(1);
               return;
             }

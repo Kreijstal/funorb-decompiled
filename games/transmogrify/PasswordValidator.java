@@ -148,7 +148,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_6_0;
           }
           if (ga.a(var5, 3336)) {
-            stackIn_10_0 = qe.field_H;
+            stackIn_10_0 = StripedProgressWidget.field_H;
             return stackIn_10_0;
           }
           if (ve.a(1, var5)) {

@@ -3,7 +3,7 @@
  */
 final class ui {
     static String field_d;
-    static jj field_c;
+    static ProgressDialog field_c;
     static RgbSprite field_a;
     static String field_e;
     static String field_b;

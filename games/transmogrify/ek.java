@@ -94,7 +94,7 @@ final class ek implements WidgetRenderer {
           return;
         }
         fd.field_a[5] = var2 + (IntrusiveNode.field_d.field_t + 130 + IntrusiveNode.field_d.field_y) + 4;
-        fd.field_b[5] = 2 * var2 + jk.field_x.a(true);
+        fd.field_b[5] = 2 * var2 + GuestPlayConfirmationForm.field_x.a(true);
     }
 
     final static String a(int param0, CharSequence[] param1, int param2, int param3) {

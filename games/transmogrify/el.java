@@ -292,7 +292,7 @@ final class el {
             el.a(5);
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
-            ik.field_ib[var1_intLifetime1] = 0L;
+            ProgressMessageDialog.field_ib[var1_intLifetime1] = 0L;
           }
           DebouncedFieldValidator.field_b = 0;
         } catch (RuntimeException runtimeException) {

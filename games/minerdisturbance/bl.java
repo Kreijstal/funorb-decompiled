@@ -72,7 +72,7 @@ abstract class bl extends DualLinkNode {
           if (AccountRequestState.field_k < 0) {
             return false;
           }
-          if (qd.field_O[99]) {
+          if (GuestPlayConfirmationForm.field_O[99]) {
             return false;
           }
           if (2 == rj.field_f) {
@@ -121,7 +121,7 @@ abstract class bl extends DualLinkNode {
             return true;
           }
           if (AccountRequestState.field_k >= 0 &&
-            !qd.field_O[99] &&
+            !GuestPlayConfirmationForm.field_O[99] &&
             2 != rj.field_f &&
             qe.field_b[4]) {
             if (sk.field_d < -30 &&
@@ -147,7 +147,7 @@ abstract class bl extends DualLinkNode {
         if (AccountRequestState.field_k < 0) {
           return false;
         }
-        if (qd.field_O[99]) {
+        if (GuestPlayConfirmationForm.field_O[99]) {
           return false;
         }
         if (2 == rj.field_f) {

@@ -115,14 +115,14 @@ public final class Lexicominos extends nk {
                                   return false;
                                 }
                                 MusicPatchPcmStream.c(true);
-                                kc.field_m[0] = VorbisSample.a(gl.field_a, "", "turnover_page").c();
-                                kc.field_m[1] = VorbisSample.a(gl.field_a, "", "drop_book").c();
-                                kc.field_m[4] = VorbisSample.a(gl.field_a, "", "x2").c();
-                                kc.field_m[5] = VorbisSample.a(gl.field_a, "", "x3").c();
-                                kc.field_m[6] = VorbisSample.a(gl.field_a, "", "x4").c();
-                                kc.field_m[7] = VorbisSample.a(gl.field_a, "", "x5").c();
-                                var3_ref = VorbisSample.a(gl.field_a, "", "score_increase_loop").c();
-                                var4_ref_ke = VorbisSample.a(gl.field_a, "", "score_increase_stop").c();
+                                kc.field_m[0] = VorbisSample.loadByName(gl.field_a, "", "turnover_page").decodeAllToPcm();
+                                kc.field_m[1] = VorbisSample.loadByName(gl.field_a, "", "drop_book").decodeAllToPcm();
+                                kc.field_m[4] = VorbisSample.loadByName(gl.field_a, "", "x2").decodeAllToPcm();
+                                kc.field_m[5] = VorbisSample.loadByName(gl.field_a, "", "x3").decodeAllToPcm();
+                                kc.field_m[6] = VorbisSample.loadByName(gl.field_a, "", "x4").decodeAllToPcm();
+                                kc.field_m[7] = VorbisSample.loadByName(gl.field_a, "", "x5").decodeAllToPcm();
+                                var3_ref = VorbisSample.loadByName(gl.field_a, "", "score_increase_loop").decodeAllToPcm();
+                                var4_ref_ke = VorbisSample.loadByName(gl.field_a, "", "score_increase_stop").decodeAllToPcm();
                                 kc.field_m[2] = aj.a((byte) -42, var4_ref_ke, var3_ref);
                                 BitPacketBuffer.field_o[2] = PcmSampleStream.createForPlaybackRate(kc.field_m[2], 100, 128);
                                 kc.field_m[8] = SoundEffect.a(hc.field_gb, "", "lexi_block_stop").a();
@@ -419,7 +419,7 @@ public final class Lexicominos extends nk {
             if (!(ef.field_d.length > var7_int)) {
               MouseWheelInput.a((byte) -102, e.field_u);
               fc.field_e = new RgbSprite[ef.field_d.length];
-              md.field_A = new RgbSprite[ef.field_d.length];
+              StripedProgressWidget.field_A = new RgbSprite[ef.field_d.length];
               break;
             }
             MouseWheelInput.a((byte) -102, ef.field_d[var7_int]);
@@ -431,8 +431,8 @@ public final class Lexicominos extends nk {
             stackIn_159_1 = fc.field_e.length;
             if (stackIn_159_0 < stackIn_159_1) {
               fc.field_e[var7_int] = this.a(-128, ef.field_d[var7_int]);
-              md.field_A[var7_int] = fc.field_e[var7_int].copy();
-              var8_ref_int__ = md.field_A[var7_int].field_y;
+              StripedProgressWidget.field_A[var7_int] = fc.field_e[var7_int].copy();
+              var8_ref_int__ = StripedProgressWidget.field_A[var7_int].field_y;
               stackIn_170_0 = var8_ref_int__;
               if (var17 == 0) {
                 var9_int = stackIn_170_0.length - 1;
@@ -983,11 +983,11 @@ public final class Lexicominos extends nk {
           jj.clearStaticReferences(100);
           ModalDialogHost.clearStaticReferences(-102);
           AccountCreationResultPanel.j((byte) -50);
-          uk.clearStaticReferences(78);
-          qj.clearStaticReferences(true);
-          uc.clearStaticReferences(param0 + 11252);
+          ProgressDialog.clearStaticReferences(78);
+          StandardContentDialog.clearStaticReferences(true);
+          ProgressMessageDialog.clearStaticReferences(param0 + 11252);
           AccountRegistrationPanel.clearStaticReferences((byte) 71);
-          mh.clearStaticReferences((byte) 119);
+          GuestPlayConfirmationForm.clearStaticReferences((byte) 119);
           LoginPanel.clearStaticReferences(false);
           DisplayNameSelectionPanel.clearStaticReferences(param0 ^ -45);
           VorbisSample.clearStaticReferences();
@@ -1047,7 +1047,7 @@ public final class Lexicominos extends nk {
           UiWidget.releaseDeclaredStaticReferences(false);
           InteractiveWidget.clearStaticReferences(-85);
           SingleChildWidgetContainer.clearStaticReferences(false);
-          ql.resetStaticState((byte) 42);
+          ResizableModalDialog.resetStaticState((byte) 42);
           ModalDialog.clearStaticReferences((byte) 102);
           DequeWidgetContainer.d(false);
           ta.f(0);
@@ -1075,8 +1075,8 @@ public final class Lexicominos extends nk {
           LabeledWidgetContainer.h(-127);
           ValidatedTextField.clearDeclaredStaticReferences(-60);
           EditableTextField.clearStaticReferences((byte) 93);
-          re.clearDeclaredStaticReferences((byte) -27);
-          md.e(344066273);
+          ContentTransitionDialog.clearDeclaredStaticReferences((byte) -27);
+          StripedProgressWidget.e(344066273);
           NameSuggestionsPanel.clearStaticReferences((byte) -26);
           RichTextWidget.clearStaticReferences(false);
           ld.clearDeclaredStaticReferences(6977);
@@ -1084,7 +1084,7 @@ public final class Lexicominos extends nk {
           te.clearStaticReferences((byte) -122);
           TextFieldValidator.clearStaticReferences(0);
           pl.clearStaticReferences(0);
-          kg.clearStaticReferences(300);
+          RegistrationAgreementPane.clearStaticReferences(300);
           ae.clearDeclaredStaticReferences(-126);
           AudioFilter.clearStaticReferences();
           hd.a(-115);
@@ -1118,13 +1118,13 @@ public final class Lexicominos extends nk {
           AccountServiceResult.clearStaticReferences(-26);
           la.clearStaticReferences((byte) 122);
           c.clearStaticReferences(117);
-          vc.clearStaticReferences(-16531);
+          DialogMessagePane.clearStaticReferences(-16531);
           tl.a(3);
           m.clearStaticReferences(1000);
           fk.clearStaticReferences(false);
           pf.clearDeclaredStaticReferences(false);
           a.b(true);
-          oc.clearStaticReferences(-123);
+          FullscreenNoticeType.clearStaticReferences(-123);
           mc.a(29407);
           wa.clearStaticReferences((byte) 102);
           pb.clearStaticReferences((byte) -48);
@@ -1160,7 +1160,7 @@ public final class Lexicominos extends nk {
         try {
           nh.a(0, 1000000, 6, true);
           if (!AccountRequestState.a((byte) -118)) {
-            vc.field_D = ce.a(4, 109);
+            DialogMessagePane.field_D = ce.a(4, 109);
             DraggableWidgetContainer.field_N = ud.a(1, -108, 10, 3, 9);
             ModalDialog.a(16, ef.field_c, 100.0f);
           }
@@ -1556,12 +1556,12 @@ public final class Lexicominos extends nk {
           var2_int = 0;
           if (oj.field_g) {
             if (!this.p(0)) {
-              if (vc.field_D != null &&
-                vc.field_D.field_h) {
+              if (DialogMessagePane.field_D != null &&
+                DialogMessagePane.field_D.field_h) {
                 this.field_K = true;
-                sc.field_g = sc.field_g | vc.field_D.field_i;
-                MouseWheelInput.field_a = MouseWheelInput.field_a & ~vc.field_D.field_i;
-                vc.field_D = null;
+                sc.field_g = sc.field_g | DialogMessagePane.field_D.field_i;
+                MouseWheelInput.field_a = MouseWheelInput.field_a & ~DialogMessagePane.field_D.field_i;
+                DialogMessagePane.field_D = null;
                 MusicPatchPcmStream.c(!param0);
                 qf.a(this, 117);
                 decompiledFrameRemainder0 = (ImageProducerRasterBuffer.field_j == 7);
@@ -1573,8 +1573,8 @@ public final class Lexicominos extends nk {
                 }
               }
               if ((decompiledFrameRemainder0) &&
-                (decompiledFrameRemainder0 = (null == vc.field_D))) {
-                vc.field_D = ce.a(4, 76);
+                (decompiledFrameRemainder0 = (null == DialogMessagePane.field_D))) {
+                DialogMessagePane.field_D = ce.a(4, 76);
                 decompiledFrameRemainder0 = (var4 != 0);
               }
             }
@@ -2251,9 +2251,9 @@ public final class Lexicominos extends nk {
               stackIn_46_3 = false;
               stackIn_46_4 = 52;
               stackIn_47_5 = (el.field_c.field_J != 0);
-              var6Lifetime1Lifetime1 = stackIn_42_0 + ((BinaryBitmapFont) (Object) stackIn_42_1).lineCount(ii.a(stackIn_43_2, stackIn_46_3, stackIn_46_4, stackIn_47_5), 254) * var7;
+              var6Lifetime1Lifetime1 = stackIn_42_0 + ((BinaryBitmapFont) (Object) stackIn_42_1).lineCount(FullscreenStatusDialog.a(stackIn_43_2, stackIn_46_3, stackIn_46_4, stackIn_47_5), 254) * var7;
               qc.field_c[6] = var6Lifetime1Lifetime1;
-              stackIn_50_0 = uk.field_U;
+              stackIn_50_0 = ProgressDialog.field_U;
               stackIn_50_1 = 6;
               stackIn_50_2 = 2 * gg.field_a[0].field_x;
               stackIn_50_3 = var7;

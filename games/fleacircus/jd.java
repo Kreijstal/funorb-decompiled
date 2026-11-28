@@ -324,7 +324,7 @@ final class jd {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ui.field_kb == wi.field_f) {
+          if (StandardContentDialog.field_kb == wi.field_f) {
             stackIn_2_0 = null;
             return (AccountServiceResult) (stackIn_2_0);
           }
@@ -332,13 +332,13 @@ final class jd {
             var3 = (String) null;
             jd.pollAccountNameCheck((String) null, -64);
           }
-          if (ui.field_kb == ui.field_ob &&
+          if (StandardContentDialog.field_kb == StandardContentDialog.field_ob &&
             param0.equals(IterableNodeHashTable.field_d)) {
-            ui.field_kb = ql.field_l;
+            StandardContentDialog.field_kb = ql.field_l;
             stackIn_11_0 = kh.field_a;
             return stackIn_11_0;
           }
-          ui.field_kb = wi.field_f;
+          StandardContentDialog.field_kb = wi.field_f;
           IterableNodeHashTable.field_d = param0;
           kh.field_a = null;
           stackIn_9_0 = null;

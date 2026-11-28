@@ -200,7 +200,7 @@ final class sc implements Runnable {
         u.field_f[2] = NanoFrameTimer.field_h;
         u.field_f[6] = ej.field_o;
         u.field_f[3] = il.field_d;
-        u.field_f[7] = jh.field_bb;
+        u.field_f[7] = FullscreenStatusDialog.field_bb;
         u.field_f[15] = IntrusiveNodeHashTable.field_d;
         u.field_f[13] = ArchiveIndex.field_s;
         u.field_f[11] = TextHotspotBounds.field_h;
@@ -215,7 +215,7 @@ final class sc implements Runnable {
         u.field_f[17] = DualLinkDeque.field_d;
         u.field_f[32] = f.field_c;
         u.field_f[22] = il.field_d;
-        u.field_f[26] = jf.field_e;
+        u.field_f[26] = FullscreenNoticeType.field_e;
         u.field_f[25] = em.field_b;
         u.field_f[33] = ln.field_h;
         u.field_f[24] = gn.field_l;

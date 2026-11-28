@@ -153,7 +153,7 @@ final class BitPacketBuffer extends PacketBuffer {
               if (DefaultTextWidgetRenderer.field_j) {
                 param0 = mh.field_f;
               }
-              oj.field_q.a(-92, param2, param0);
+              oj.field_q.showResult(-92, param2, param0);
             }
             if (256 != param2) {
               if (param2 == 10) {

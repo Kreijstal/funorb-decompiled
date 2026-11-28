@@ -92,7 +92,7 @@ final class ga {
         if (param0 != 0) {
           return;
         }
-        di.field_x.b(123, new mh());
+        di.field_x.replaceContent(123, new GuestPlayConfirmationForm());
     }
 
     public static void a(int param0) {

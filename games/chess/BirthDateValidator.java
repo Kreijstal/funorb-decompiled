@@ -3,7 +3,7 @@
  */
 final class BirthDateValidator extends DebouncedFieldValidator implements TextFieldListener, we {
     static int field_i;
-    bf field_j;
+    DateInputWidget field_j;
     static int field_g;
     static ci field_k;
     static String field_h;
@@ -21,9 +21,9 @@ final class BirthDateValidator extends DebouncedFieldValidator implements TextFi
           return (String) null;
         }
         try {
-          var2_int = this.field_j.c(false);
-          var3 = this.field_j.h(-1);
-          var4 = this.field_j.i(93);
+          var2_int = this.field_j.getDay(false);
+          var3 = this.field_j.getMonthIndex(-1);
+          var4 = this.field_j.getYear(93);
           var5 = ca.a(13421568);
           if (1890 <= var4 &&
             var4 <= -3 + var5) {
@@ -45,7 +45,7 @@ final class BirthDateValidator extends DebouncedFieldValidator implements TextFi
     final static void g(int param0) {
         jh.field_e.closeAllDialogs(0);
         if (mk.field_e == null) {
-          mk.field_e = new ch(jh.field_e, qf.field_g);
+          mk.field_e = new ProgressDialog(jh.field_e, qf.field_g);
           jh.field_e.showDialog(mk.field_e, (byte) -65);
           if (param0 <= 119) {
             field_h = (String) null;
@@ -72,9 +72,9 @@ final class BirthDateValidator extends DebouncedFieldValidator implements TextFi
         mk stackIn_11_0 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var2_int = this.field_j.c(false);
-          var3 = this.field_j.h(-1);
-          var4 = this.field_j.i(110);
+          var2_int = this.field_j.getDay(false);
+          var3 = this.field_j.getMonthIndex(-1);
+          var4 = this.field_j.getYear(110);
           var5 = ca.a(13421568);
           if (param0 != 4) {
             var6 = (EditableTextField) null;
@@ -115,7 +115,7 @@ final class BirthDateValidator extends DebouncedFieldValidator implements TextFi
         if (param0 != 14496) {
           return false;
         }
-        return this.field_j.h((byte) -123);
+        return this.field_j.isDateEmpty((byte) -123);
     }
 
     final static void a(int param0, pa param1, int param2) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vl extends IntrusiveNode {
-    static ul field_f;
+    static ProgressDialog field_f;
     static int field_g;
     int field_e;
     int field_m;

@@ -81,7 +81,7 @@ final class paa {
 
     final static boolean a(int param0) {
         lna.field_f = true;
-        sja.field_hb = f.correctedCurrentTimeMillis((byte) 73) + (long)param0;
+        StandardContentDialog.field_hb = f.correctedCurrentTimeMillis((byte) 73) + (long)param0;
         return jv.field_j == 11 ? true : false;
     }
 

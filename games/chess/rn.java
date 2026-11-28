@@ -58,7 +58,7 @@ final class rn {
                 ig.field_i[var12].a(var9, param2, -2147483648, -param4 + var7Lifetime1 - param4, param4);
                 UiWidget.field_l[var12].a(var10, -var10 + var8 - param3, -2147483648, -param4 + var7Lifetime1 - param4, param4);
               } else {
-                bj.field_jb.a(var6_int, var8, -2147483648, var7Lifetime1, var13);
+                ContentTransitionDialog.field_jb.a(var6_int, var8, -2147483648, var7Lifetime1, var13);
               }
             }
           }

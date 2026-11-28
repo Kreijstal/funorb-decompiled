@@ -385,7 +385,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
           var9 = qj.a(BufferedRandomAccessFile.c(-1), (byte) -116);
           if (ub.field_b != var9) {
             if (var9 == wh.field_c) {
-              var8 = dg.field_nb;
+              var8 = ProgressMessageDialog.field_nb;
             }
           } else {
             var8 = DualLinkNode.field_k;

@@ -117,7 +117,7 @@ final class BitPacketBuffer extends PacketBuffer {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var7 < var3; var7++) {
-              var6_ref_int__[var7] = ei.b(ProxyAuthenticationRequiredException.field_a[dg.a((int) var21[var7], 255)], dg.a((int) var16[var7], 255) << 24);
+              var6_ref_int__[var7] = ResizableModalDialog.b(ProxyAuthenticationRequiredException.field_a[dg.a((int) var21[var7], 255)], dg.a((int) var16[var7], 255) << 24);
             }
             var1[var2] = (Sprite) ((Object) new ArgbSprite(ah.field_A, sb.field_j, ConfirmedEmailAvailabilityValidator.field_s[var2], DropTargetWidgetContainer.field_K[var2], sb.field_m[var2], ArchiveRequest.field_p[var2], var17));
           }

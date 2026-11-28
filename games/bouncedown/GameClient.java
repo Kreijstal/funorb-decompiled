@@ -163,7 +163,7 @@ abstract class GameClient extends AppletShell {
         ra.c(28282);
         ve.b((byte) -91);
         if (!LoginPanel.k(-31077) &&
-          mh.field_U != 11) {
+          ContentTransitionDialog.field_U != 11) {
           pa.a((byte) -65);
         }
         if (AgeValidator.field_k != null) {
@@ -190,7 +190,7 @@ abstract class GameClient extends AppletShell {
           cf.field_e = hd.a((byte) 96);
           if (var3Lifetime1 != 0 &&
             cf.field_e == 0 &&
-            mh.field_U == 11 &&
+            ContentTransitionDialog.field_U == 11 &&
             !tb.e(-11)) {
             ta.b(102);
           }
@@ -220,7 +220,7 @@ abstract class GameClient extends AppletShell {
               }
             }
           } else {
-            if (10 <= mh.field_U) {
+            if (10 <= ContentTransitionDialog.field_U) {
               va.a(2);
               if (cf.field_e == 3) {
                 ConfirmedEmailAvailabilityValidator.a(ub.field_c, true, 256);
@@ -228,7 +228,7 @@ abstract class GameClient extends AppletShell {
                 if (cf.field_e != 4) {
                   if (2 != cf.field_e) {
                     if (cf.field_e != 5) {
-                      ConfirmedEmailAvailabilityValidator.a(db.field_O, true, 256);
+                      ConfirmedEmailAvailabilityValidator.a(ProgressDialog.field_O, true, 256);
                     } else {
                       ConfirmedEmailAvailabilityValidator.a(TextHotspotBounds.field_k, true, 5);
                     }
@@ -267,7 +267,7 @@ abstract class GameClient extends AppletShell {
             FullscreenFocusCanvas.field_a = fa.a((byte) -76, DefaultTextWidgetRenderer.field_g);
           }
           pa.field_i = jc.a(ne.field_n, false, 1, 0, true);
-          kg.field_b = jc.a(mh.field_Y, false, 1, 0, true);
+          kg.field_b = jc.a(ContentTransitionDialog.field_Y, false, 1, 0, true);
           ea.field_e = jc.a(b.field_a, false, 1, 0, true);
           j.field_j = pa.field_i;
           sa.field_k = 2;
@@ -322,7 +322,7 @@ abstract class GameClient extends AppletShell {
         }
         if (sa.field_k == 10) {
           if (0 != Slime.field_a) {
-            AccountCreationResultPanel.field_pb = fa.a((byte) -76, lg.field_a);
+            AccountCreationResultPanel.field_pb = fa.a((byte) -76, FullscreenNoticeType.field_a);
           }
           sa.field_k = 11;
         }
@@ -358,7 +358,7 @@ abstract class GameClient extends AppletShell {
         }
         if (!param0 &&
           AwtRasterBuffer.field_f) {
-          mh.a(ch.field_h, (byte) 110);
+          ContentTransitionDialog.a(ch.field_h, (byte) 110);
           this.d(12955);
           l.a(0, ch.field_h);
         }
@@ -387,7 +387,7 @@ abstract class GameClient extends AppletShell {
         }
         if (var2 == 0 ||
           var2 == 1) {
-          if (mh.field_U == 11 &&
+          if (ContentTransitionDialog.field_U == 11 &&
             cf.field_e == 0) {
             ta.b(param0 ^ 95);
           }
@@ -441,9 +441,9 @@ abstract class GameClient extends AppletShell {
         PacketBuffer.g(param5 - 8717);
         AgeValidator.field_k = ek.createMouseWheelInput(0);
         l.a(0, ch.field_h);
-        lg.field_a = param0;
+        FullscreenNoticeType.field_a = param0;
         ne.field_n = param1;
-        mh.field_Y = param4;
+        ContentTransitionDialog.field_Y = param4;
         DefaultTextWidgetRenderer.field_g = param7;
         if (param5 != 8764) {
           this.h(-50);
@@ -508,7 +508,7 @@ abstract class GameClient extends AppletShell {
             }
             var11 = fa.b(1);
             if (var11 != null) {
-              lg.a(param1, var11.booleanValue());
+              FullscreenNoticeType.a(param1, var11.booleanValue());
             }
           }
           if (var4 == 2) {
@@ -538,7 +538,7 @@ abstract class GameClient extends AppletShell {
                 } else {
                   TextFieldValidator.field_h = l.field_b;
                   ta.b(101);
-                  mh.field_U = 10;
+                  ContentTransitionDialog.field_U = 10;
                   pg.field_c = false;
                 }
               }
@@ -548,7 +548,7 @@ abstract class GameClient extends AppletShell {
             if (EditableTextField.field_B) {
               fl.a(8192, DiskCacheWorker.b(0));
             } else {
-              mh.field_U = 10;
+              ContentTransitionDialog.field_U = 10;
               pg.field_c = true;
             }
           }
@@ -557,7 +557,7 @@ abstract class GameClient extends AppletShell {
           }
           if (var4 == 6 &&
             pa.field_e) {
-            mh.field_U = 10;
+            ContentTransitionDialog.field_U = 10;
           }
           if (7 == var4) {
             NameSuggestionsPanel.a(DiskCacheWorker.b(0), 8192);
@@ -572,7 +572,7 @@ abstract class GameClient extends AppletShell {
             hh.field_p.a(true, 17);
           }
           if (11 == var4) {
-            lg.a(0, DiskCacheWorker.b(0));
+            FullscreenNoticeType.a(0, DiskCacheWorker.b(0));
           }
           if (var4 == 12) {
             qc.a(DiskCacheWorker.b(0), 24, hd.a(-124));
@@ -603,7 +603,7 @@ abstract class GameClient extends AppletShell {
             }
           }
           if (var4 == 15) {
-            mh.field_U = 10;
+            ContentTransitionDialog.field_U = 10;
           }
           if (var4 == 16) {
             return 1;
@@ -734,7 +734,7 @@ abstract class GameClient extends AppletShell {
             if (!ProxyAuthenticationRequiredException.c(param0 ^ 250)) {
               ij.a((byte) -105);
             } else {
-              if (0 != mh.field_U) {
+              if (0 != ContentTransitionDialog.field_U) {
                 qe.a((byte) -76, va.field_a);
               } else {
                 discarded$2 = this.a(false, false, false);

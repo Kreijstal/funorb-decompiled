@@ -12,7 +12,7 @@ final class ne {
     private PacketBuffer field_b;
     private NetworkArchiveRequest field_m;
     static String field_g;
-    static ng field_i;
+    static FullscreenNoticeType field_i;
     private CachedArchiveSource[] field_k;
     static String field_a;
 
@@ -297,6 +297,6 @@ final class ne {
         field_d = false;
         field_f = new ff(1, 2, 2, 0);
         field_a = "Destroyed";
-        field_i = new ng();
+        field_i = new FullscreenNoticeType();
     }
 }

@@ -303,7 +303,7 @@ final class la extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          lj.a(param14, (byte) 127, param12, param4);
+          DialogMessagePane.a(param14, (byte) 127, param12, param4);
           FrameTimer.a(param17, param10, (byte) 106, param19, param0);
           ProxySocketConnector.a(param1, param3, -102);
           SocketConnector.a(param18, param8, param20, param6, (byte) 117, param5);

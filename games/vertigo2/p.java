@@ -154,7 +154,7 @@ final class p {
     final static void a(int param0) {
         AccountServiceResult.field_e.closeAllDialogs(param0 ^ param0);
         if (null == bb.field_F) {
-          bb.field_F = new fg(AccountServiceResult.field_e, eg.field_t);
+          bb.field_F = new ProgressDialog(AccountServiceResult.field_e, eg.field_t);
         }
         AccountServiceResult.field_e.showDialog(bb.field_F, 0);
     }

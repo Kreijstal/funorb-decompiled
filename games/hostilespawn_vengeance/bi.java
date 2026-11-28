@@ -48,7 +48,7 @@ final class bi {
                       if (var10 != 226) {
                         if (var10 != 228) {
                           if (232 == var10) {
-                            var9 = ta.field_jb;
+                            var9 = StandardContentDialog.field_jb;
                           }
                         } else {
                           var9 = tb.field_I;
@@ -70,7 +70,7 @@ final class bi {
               }
               if (var9 != null) {
                 var7 = 128;
-                if (ta.field_jb == var9) {
+                if (StandardContentDialog.field_jb == var9) {
                   var6 += 10;
                   var5 += 10;
                   if (var8.field_e >= 240) {
@@ -134,8 +134,8 @@ final class bi {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = Math.min(param0.field_e, 90);
-          var4_int = (3 * var4_int - var4_int * var4_int / 60) % te.field_G.length;
-          stackIn_2_0 = te.field_G[var4_int];
+          var4_int = (3 * var4_int - var4_int * var4_int / 60) % RegistrationAgreementPane.field_G.length;
+          stackIn_2_0 = RegistrationAgreementPane.field_G[var4_int];
           stackIn_2_1 = (double)param1;
           stackIn_2_2 = (double)param2;
           stackIn_2_3 = false;

@@ -195,7 +195,7 @@ final class mc extends IntrusiveNode {
           TextFieldValidator.a(false);
           if (param2.field_m > 0 &&
             null != param2.field_t) {
-            ec.l(102);
+            DialogMessagePane.l(102);
           }
           fg.field_u = 0;
           var8 = 0;
@@ -218,11 +218,11 @@ final class mc extends IntrusiveNode {
               }
               if (!stackIn_13_0 ||
                 !(0 <= -(var16 * var15) + var17 * var14)) {
-                var12Lifetime1 = dg.field_B[var9];
+                var12Lifetime1 = StripedProgressWidget.field_B[var9];
                 if (-2147483648 != var12Lifetime1) {
-                  var13Lifetime1 = dg.field_B[var10];
+                  var13Lifetime1 = StripedProgressWidget.field_B[var10];
                   if (var13Lifetime1 != -2147483648) {
-                    var14 = dg.field_B[var11];
+                    var14 = StripedProgressWidget.field_B[var11];
                     if (-2147483648 != var14) {
                       var15 = var14 + (var12Lifetime1 + (var13Lifetime1 - var6));
                       stackIn_27_0 = vf.field_a.length;

@@ -82,7 +82,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             var6_int = param2.indexOf("<%", var5);
             if (var6_int >= 0) {
               for (var5 = var6_int + 2; var5 < var3_int; var5++) {
-                if (hm.a(-20625, param2.charAt(var5))) {
+                if (GuestPlayConfirmationForm.a(-20625, param2.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -119,7 +119,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             }
             stackIn_20_0 = var8Lifetime1 + 2;
             for (var5Lifetime1 = stackIn_20_0; var3_int > var5Lifetime1; var5Lifetime1++) {
-              if (hm.a(-20625, param2.charAt(var5Lifetime1))) {
+              if (GuestPlayConfirmationForm.a(-20625, param2.charAt(var5Lifetime1))) {
                 continue;
               }
               break;

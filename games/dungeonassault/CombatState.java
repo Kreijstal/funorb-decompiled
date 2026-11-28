@@ -1252,19 +1252,19 @@ final class CombatState {
           if (this.field_v.isBitSet(param0 - 1 - param0 / 7, (byte) 116)) {
             incrementValue$0 = var3;
             var3++;
-            ia.field_S[incrementValue$0] = param0 - 1 - param0 / 7;
+            GuestPlayConfirmationForm.field_S[incrementValue$0] = param0 - 1 - param0 / 7;
             if (param0 % 7 != 6 &&
               this.field_v.isBitSet(param0 - param0 / 7, (byte) 125)) {
               incrementValue$1 = var3;
               var3++;
-              ia.field_S[incrementValue$1] = -(param0 / 7) + param0;
+              GuestPlayConfirmationForm.field_S[incrementValue$1] = -(param0 / 7) + param0;
             }
           } else {
             if (param0 % 7 != 6 &&
               this.field_v.isBitSet(param0 - param0 / 7, (byte) 125)) {
               incrementValue$2 = var3;
               var3++;
-              ia.field_S[incrementValue$2] = -(param0 / 7) + param0;
+              GuestPlayConfirmationForm.field_S[incrementValue$2] = -(param0 / 7) + param0;
             }
           }
         } else {
@@ -1272,25 +1272,25 @@ final class CombatState {
             this.field_v.isBitSet(param0 - param0 / 7, (byte) 125)) {
             incrementValue$3 = var3;
             var3++;
-            ia.field_S[incrementValue$3] = -(param0 / 7) + param0;
+            GuestPlayConfirmationForm.field_S[incrementValue$3] = -(param0 / 7) + param0;
           }
         }
         if (6 < param0 &&
           this.field_v.isBitSet(35 + param0, (byte) 88)) {
           incrementValue$4 = var3;
           var3++;
-          ia.field_S[incrementValue$4] = 35 + param0;
+          GuestPlayConfirmationForm.field_S[incrementValue$4] = 35 + param0;
         }
         if (param0 < 42 &&
           this.field_v.isBitSet(param0 + 42, (byte) 77)) {
           incrementValue$5 = var3;
           var3++;
-          ia.field_S[incrementValue$5] = param0 + 42;
+          GuestPlayConfirmationForm.field_S[incrementValue$5] = param0 + 42;
         }
         var4 = new int[var3];
         var5 = 111 % ((param1 - 29) / 45);
         for (var6 = 0; var6 < var3; var6++) {
-          var4[var6] = ia.field_S[var6];
+          var4[var6] = GuestPlayConfirmationForm.field_S[var6];
         }
         return var4;
     }

@@ -369,7 +369,7 @@ final class uo {
               var12.field_Vb.a(77, 78, Archive.field_f, var31, 70);
               if (var12.field_Vb.field_pb &&
                 !var12.field_Vb.field_S.equals(var32)) {
-                ko.field_S = var32;
+                NumericDateInputWidget.field_S = var32;
               }
               var12.field_cc.field_S = Integer.toString(var12.field_Qb);
               if (!var12.field_vc) {
@@ -523,9 +523,9 @@ final class uo {
                   }
                 }
                 if (var35 != null) {
-                  ko.field_S = md.field_C[var34_intLifetime2] + " - " + (String) (var35);
+                  NumericDateInputWidget.field_S = md.field_C[var34_intLifetime2] + " - " + (String) (var35);
                 } else {
-                  ko.field_S = md.field_C[var34_intLifetime2];
+                  NumericDateInputWidget.field_S = md.field_C[var34_intLifetime2];
                 }
               }
             }
@@ -535,7 +535,7 @@ final class uo {
               } else {
                 var34 = gm.field_c[var12.field_Ub];
               }
-              ko.field_S = gn.field_c + " - " + var34;
+              NumericDateInputWidget.field_S = gn.field_c + " - " + var34;
             }
             if (var12.field_Kb.field_pb) {
               if (!var12.field_Tb) {
@@ -543,7 +543,7 @@ final class uo {
               } else {
                 stackIn_153_0 = ej.field_d;
               }
-              ko.field_S = stackIn_153_0;
+              NumericDateInputWidget.field_S = stackIn_153_0;
             }
             if (var12.field_ec.field_pb) {
               if (!var12.field_dc &&
@@ -556,7 +556,7 @@ final class uo {
               } else {
                 stackIn_162_0 = rm.field_E;
               }
-              ko.field_S = stackIn_162_0;
+              NumericDateInputWidget.field_S = stackIn_162_0;
             }
             if (var12.field_wc.field_pb) {
               if (var12.field_xc == 2) {
@@ -564,7 +564,7 @@ final class uo {
               } else {
                 stackIn_167_0 = in.field_e;
               }
-              ko.field_S = stackIn_167_0;
+              NumericDateInputWidget.field_S = stackIn_167_0;
             }
             boolean decompiledFrameRemainder0 = true;
             if (var12.field_tb != 0 &&

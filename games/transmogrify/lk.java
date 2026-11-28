@@ -69,8 +69,8 @@ final class lk {
           var10 = new PacketBuffer(param1);
           var4 = var10.readUnsignedByte((byte) 57);
           var5 = var10.readInt((byte) -126);
-          if (var5 >= 0 && (ll.field_R == 0 ||
-            !(ll.field_R < var5))) {
+          if (var5 >= 0 && (FullscreenStatusDialog.field_R == 0 ||
+            !(FullscreenStatusDialog.field_R < var5))) {
             if (var4 == 0) {
               var13 = new byte[var5];
               var11 = var13;
@@ -80,8 +80,8 @@ final class lk {
               return stackIn_7_0;
             }
             var6 = var10.readInt((byte) -116);
-            if (var6 >= 0 && (ll.field_R == 0 ||
-              !(ll.field_R < var6))) {
+            if (var6 >= 0 && (FullscreenStatusDialog.field_R == 0 ||
+              !(FullscreenStatusDialog.field_R < var6))) {
               var14 = new byte[var6];
               var12 = var14;
               var7 = var12;
@@ -125,7 +125,7 @@ final class lk {
         for (var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = EditableTextField.field_D[vg.c(255, (int) var2[var4_int])];
         }
-        Sprite var4 = new Sprite(NetworkArchiveRequest.field_y, ll.field_U, BufferedSocket.field_j[0], Bzip2State.field_a[0], ql.field_b[0], wk.field_b[0], var3);
+        Sprite var4 = new Sprite(NetworkArchiveRequest.field_y, FullscreenStatusDialog.field_U, BufferedSocket.field_j[0], Bzip2State.field_a[0], ql.field_b[0], wk.field_b[0], var3);
         wd.d(126);
         return var4;
     }

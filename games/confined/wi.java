@@ -92,7 +92,7 @@ final class wi {
             return;
           }
           this.field_l = this.field_i;
-          if (pi.field_H < this.field_m) {
+          if (RegistrationAgreementPane.field_H < this.field_m) {
             this.field_n = false;
           } else {
             this.c((byte) -128);
@@ -104,10 +104,10 @@ final class wi {
         }
         if (this.field_h <= wm.field_ab) {
           if (this.field_h > 0) {
-            ei.field_kb = 0;
+            FullscreenStatusDialog.field_kb = 0;
           }
         } else {
-          ei.field_kb = (-wm.field_ab + this.field_h) / 2;
+          FullscreenStatusDialog.field_kb = (-wm.field_ab + this.field_h) / 2;
         }
         if (wm.field_ab == this.field_t &&
           im.field_b == this.field_r) {
@@ -121,7 +121,7 @@ final class wi {
         if (param0 >= -112) {
           field_q = (String) null;
         }
-        stackIn_6_0 = (this.field_m <= pi.field_H) && (0 < sg.field_x);
+        stackIn_6_0 = (this.field_m <= RegistrationAgreementPane.field_H) && (0 < sg.field_x);
         return stackIn_6_0;
     }
 
@@ -228,7 +228,7 @@ final class wi {
             }
           }
           if (this.field_h > 0) {
-            ei.field_kb = (-wm.field_ab + this.field_h) / 2;
+            FullscreenStatusDialog.field_kb = (-wm.field_ab + this.field_h) / 2;
           }
         }
     }

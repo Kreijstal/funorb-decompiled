@@ -166,7 +166,7 @@ final class vd {
         RuntimeException var5 = null;
         long var6 = 0L;
         PcmSample var8 = null;
-        nj var9 = null;
+        VorbisSample var9 = null;
         PcmSample stackIn_3_0 = null;
         Object stackIn_11_0 = null;
         PcmSample stackIn_17_0 = null;
@@ -188,16 +188,16 @@ final class vd {
             param1[0] <= 0) {
             return null;
           }
-          var9 = (nj) (this.field_d.a(var6, param0 - 65528));
+          var9 = (VorbisSample) (this.field_d.a(var6, param0 - 65528));
           if (var9 == null) {
-            var9 = nj.a(this.field_b, param3, param2);
+            var9 = VorbisSample.load(this.field_b, param3, param2);
             if (var9 == null) {
               stackIn_11_0 = null;
               return (PcmSample) (stackIn_11_0);
             }
             this.field_d.a(var6, (byte) -93, var9);
           }
-          var8Lifetime1 = var9.a(param1);
+          var8Lifetime1 = var9.decodeToPcm(param1);
           if (var8Lifetime1 == null) {
             return null;
           }
@@ -236,7 +236,7 @@ final class vd {
             field_e = (String[]) null;
           }
           oe.field_p = true;
-          oj.field_q = new dh(bm.field_d, qc.field_b, param2, vh.field_j, DefaultTextWidgetRenderer.field_j);
+          oj.field_q = new ProgressMessageDialog(bm.field_d, qc.field_b, param2, vh.field_j, DefaultTextWidgetRenderer.field_j);
           bm.field_d.showDialog((byte) 74, (UiWidget) (oj.field_q));
         } catch (RuntimeException runtimeException) {
           throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "vd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

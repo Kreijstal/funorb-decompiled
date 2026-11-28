@@ -9,7 +9,7 @@ final class SectorCacheStore {
     private int field_e;
     private BufferedRandomAccessFile field_b;
     private int field_g;
-    static na field_a;
+    static ProgressMessageDialog field_a;
     static sj field_f;
 
     private final boolean writeSectorChain(int param0, int param1, byte[] param2, int param3, boolean param4) {
@@ -64,7 +64,7 @@ final class SectorCacheStore {
                 this.field_b.write(123, DiskArchiveRequest.field_u, 0, 6);
                 var8 = 0;
                 if (param3 <= 111) {
-                  field_a = (na) null;
+                  field_a = (ProgressMessageDialog) null;
                 }
                 var9 = 0;
                 scanLoop1: while (true) {

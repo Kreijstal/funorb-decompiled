@@ -199,7 +199,7 @@ final class ChangeCreatureStatOrHealthEffect extends EventEffect {
           HazmatEvent.field_u[3] = 16736511;
           HazmatEvent.field_u[2] = 9474303;
           dc.field_r = param4;
-          am.field_O = param11;
+          ResizableModalDialog.field_O = param11;
           HazmatEvent.field_u[1] = 6356832;
           wp.field_q[2] = 16736352;
           wp.field_q[0] = 16764000;
@@ -248,7 +248,7 @@ final class ChangeCreatureStatOrHealthEffect extends EventEffect {
               boolean decompiledFrameRemainder0 = true;
               if (stackIn_31_0 != 0) {
                 if (var18 == 1 &&
-                  am.field_O) {
+                  ResizableModalDialog.field_O) {
                   var19 = WidgetWrapper.field_B;
                 } else {
                   decompiledFrameRemainder0 = (var18 == 2);
@@ -257,7 +257,7 @@ final class ChangeCreatureStatOrHealthEffect extends EventEffect {
                   }
                 }
               } else {
-                if (!am.field_O) {
+                if (!ResizableModalDialog.field_O) {
                   stackIn_27_0 = uha.field_Vb;
                 } else {
                   stackIn_27_0 = FlyEvent.field_r;
@@ -293,7 +293,7 @@ final class ChangeCreatureStatOrHealthEffect extends EventEffect {
             !AlphaWidgetContainer.field_I) {
             return;
           }
-          ao.field_d = new d(0, 0, 0, 0);
+          ao.field_d = new BirthDateChatEnableForm(0, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -147,7 +147,7 @@ abstract class ArchiveRequest extends DualLinkNode {
                 var25 = param1.field_d[var23];
                 var26 = param1.field_M[var23];
                 ModalDialogHost.field_C[var23] = (var15 * var25 + (var12 * var24 + var26 * var18) >> 16) + var9;
-                ud.field_bb[var23] = (var24 * var13 + var16 * var25 + var26 * var19 >> 16) + var10;
+                ContentTransitionDialog.field_bb[var23] = (var24 * var13 + var16 * var25 + var26 * var19 >> 16) + var10;
                 ModalDialogHost.field_y[var23] = var11 + (var26 * var20 + var14 * var24 + var17 * var25 >> 16);
                 var24 = param1.field_z[var23];
                 var25 = param1.field_m[var23];

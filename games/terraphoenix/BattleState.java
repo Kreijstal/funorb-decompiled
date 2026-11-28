@@ -685,7 +685,7 @@ final class BattleState {
                   this.field_L == 1)) {
                   var3 = q.field_Fb;
                   if (this.field_m) {
-                    var3 = hm.field_G;
+                    var3 = StripedProgressWidget.field_G;
                   }
                   if (this.field_L == 1) {
                     var4_ref = cm.field_a;
@@ -1245,7 +1245,7 @@ final class BattleState {
                   var5_ref.field_g != 6 &&
                   var5_ref.field_g != 7) {
                   param0.field_Eb = new String[1];
-                  param0.field_Eb[0] = ArchiveRequest.field_q + od.field_c[var5_ref.field_g].field_j + hi.field_Y;
+                  param0.field_Eb[0] = ArchiveRequest.field_q + od.field_c[var5_ref.field_g].field_j + FullscreenStatusDialog.field_Y;
                   decompiledFrameRemainder0 = (1 == this.field_N);
                   if (decompiledFrameRemainder0) {
                     var6Lifetime2 = 14;
@@ -1378,7 +1378,7 @@ final class BattleState {
                     qd.$cfr$intArgs$a$e9dea5688aa5(stackIn_927_0, stackIn_928_1);
                     if (var9 != 0) {
                       param0.field_Eb = new String[1];
-                      param0.field_Eb[0] = ArchiveRequest.field_q + od.field_c[var5_refLifetime1.field_g].field_j + hi.field_Y;
+                      param0.field_Eb[0] = ArchiveRequest.field_q + od.field_c[var5_refLifetime1.field_g].field_j + FullscreenStatusDialog.field_Y;
                       if (this.field_N == 1) {
                         var6Lifetime3 = 14;
                         if (this.field_q.field_jb >= var6Lifetime3) {
@@ -1393,7 +1393,7 @@ final class BattleState {
                   }
                 } else {
                   param0.field_Eb = new String[1];
-                  param0.field_Eb[0] = ArchiveRequest.field_q + od.field_c[var5_refLifetime1.field_g].field_j + hi.field_Y;
+                  param0.field_Eb[0] = ArchiveRequest.field_q + od.field_c[var5_refLifetime1.field_g].field_j + FullscreenStatusDialog.field_Y;
                   if (this.field_N == 1) {
                     var6Lifetime3 = 14;
                     if (this.field_q.field_jb >= var6Lifetime3) {
@@ -4584,9 +4584,9 @@ final class BattleState {
             (decompiledFrameCompleted2)) {
             var8_ref_dlLifetime1 = stackIn_573_0;
             if (null != var8_ref_dlLifetime1) {
-              if (null != oi.field_J) {
-                SoftwareRasterizer.fillRectangle(0, 100, oi.field_J.field_q, oi.field_J.field_u, 16711823);
-                oi.field_J.draw(0, 100);
+              if (null != DialogMessagePane.field_J) {
+                SoftwareRasterizer.fillRectangle(0, 100, DialogMessagePane.field_J.field_q, DialogMessagePane.field_J.field_u, 16711823);
+                DialogMessagePane.field_J.draw(0, 100);
               }
               var9_refLifetime1 = var8_ref_dlLifetime1.unit;
               var10_intLifetime2 = 80;

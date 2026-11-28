@@ -3,7 +3,7 @@
  */
 final class SplitAnimation extends EventAnimation {
     private SplitEvent field_y;
-    static lo field_x;
+    static FullscreenNoticeType field_x;
     static ws field_w;
     static int field_v;
 
@@ -70,7 +70,7 @@ final class SplitAnimation extends EventAnimation {
     final static void a(int[][] param0, int param1) {
         try {
           if (param1 != -5) {
-            field_x = (lo) null;
+            field_x = (FullscreenNoticeType) null;
           }
           tj.field_b = param0;
         } catch (RuntimeException runtimeException) {
@@ -141,7 +141,7 @@ final class SplitAnimation extends EventAnimation {
     }
 
     static {
-        field_x = new lo();
+        field_x = new FullscreenNoticeType();
         field_w = new ws();
     }
 }

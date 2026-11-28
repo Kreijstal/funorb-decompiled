@@ -298,7 +298,7 @@ public final class Terraphoenix extends GameShell {
               decompiledSharedTail3 = (var8 != 0);
             }
             if (decompiledSharedTail3) {
-              cg.field_K = hf.a(4, (byte) 49);
+              GuestPlayConfirmationForm.field_K = hf.a(4, (byte) 49);
               ja.field_i = wj.field_a;
               if (ja.field_i == 16) {
                 ja.field_i = 10;
@@ -492,7 +492,7 @@ public final class Terraphoenix extends GameShell {
               var3Lifetime1 = 100;
               stackIn_272_0 = var3Lifetime1;
               stackIn_272_1 = AccountRequestState.field_f;
-              stackIn_272_2 = new StringBuilder().append(qf.field_a).append("<br><br>");
+              stackIn_272_2 = new StringBuilder().append(FullscreenNoticeType.field_a).append("<br><br>");
               stackIn_273_3 = (ge.field_e != 0);
               stackIn_276_4 = 98;
               stackIn_277_5 = (TutorialText.field_a != 0);
@@ -529,8 +529,8 @@ public final class Terraphoenix extends GameShell {
             (decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3)) {
             stackIn_296_0 = -102;
-            stackIn_297_1 = !(qf.a(true));
-            var3Lifetime1 = ei.updateMembershipSlidesWithIntGuard(stackIn_296_0, stackIn_297_1);
+            stackIn_297_1 = !(FullscreenNoticeType.a(true));
+            var3Lifetime1 = ResizableModalDialog.updateMembershipSlidesWithIntGuard(stackIn_296_0, stackIn_297_1);
             if (var3Lifetime1 == 3) {
               NodeHashTableIterator.openSubscriptionPage((byte) -110, dg.a(false));
             }
@@ -1341,11 +1341,11 @@ public final class Terraphoenix extends GameShell {
             stackIn_51_0 = 0;
           }
           var5 = stackIn_51_0;
-          if (null != si.field_ib) {
+          if (null != ProgressMessageDialog.field_ib) {
             if (~var5 == ~var2_int &&
               var3 == 0) {
               this.n((byte) -121);
-              this.a(si.field_ib, false, true);
+              this.a(ProgressMessageDialog.field_ib, false, true);
               stackIn_64_0 = !(me.field_o <= 0);
               se.field_h = stackIn_64_0;
               ConfirmedEmailAvailabilityValidator.field_q = 0;
@@ -1737,7 +1737,7 @@ public final class Terraphoenix extends GameShell {
               var3_int++;
             } while (var6 == 0);
             if (!bk.c(-25704)) {
-              cg.field_K = hf.a(4, (byte) -117);
+              GuestPlayConfirmationForm.field_K = hf.a(4, (byte) -117);
               EditableTextField.field_M = ok.a(false, 6);
             }
             ba.field_h = true;
@@ -2259,7 +2259,7 @@ public final class Terraphoenix extends GameShell {
             var10 = 30;
             var11 = 0;
             var12 = -wa.field_s + 16776960;
-            if (si.field_ib != null) {
+            if (ProgressMessageDialog.field_ib != null) {
               boolean decompiledFrameRemainder8 = true;
               if (this.field_xb != var11 && (!(MouseWheelInput.field_b >= (4 + var9 - var10)) ||
                 !(MouseWheelInput.field_b < (var9 + 4)) ||
@@ -2276,8 +2276,8 @@ public final class Terraphoenix extends GameShell {
               }
               pj.field_t = 0;
               RandomAccessCacheFile.field_b = 0;
-              discarded$0 = this.a(si.field_ib, -23);
-              var13 = this.a(si.field_ib, -26);
+              discarded$0 = this.a(ProgressMessageDialog.field_ib, -23);
+              var13 = this.a(ProgressMessageDialog.field_ib, -26);
               if (var13 > 0) {
                 var14 = null;
                 if (var13 < 3) {
@@ -2711,7 +2711,7 @@ public final class Terraphoenix extends GameShell {
             stackIn_13_1 = 1 & param0;
             if (var6 == 0) {
               if (stackIn_13_0 < stackIn_13_1) {
-                param1[pj.field_t] = (byte)ei.b((int) param1[pj.field_t], 1 << RandomAccessCacheFile.field_b);
+                param1[pj.field_t] = (byte)ResizableModalDialog.b((int) param1[pj.field_t], 1 << RandomAccessCacheFile.field_b);
               }
               param2--;
               RandomAccessCacheFile.field_b = RandomAccessCacheFile.field_b + 1;
@@ -4005,7 +4005,7 @@ public final class Terraphoenix extends GameShell {
             field_O = 14;
           }
           kj.field_f = LevelEditor.field_j.readString(-1);
-          IntrusiveDeque.field_e = hm.a((byte) 125, (CharSequence) ((Object) kj.field_f));
+          IntrusiveDeque.field_e = StripedProgressWidget.a((byte) 125, (CharSequence) ((Object) kj.field_f));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4335,11 +4335,11 @@ public final class Terraphoenix extends GameShell {
           rb.clearStaticReferences(-61);
           ModalDialogHost.clearStaticReferences((byte) -57);
           AccountCreationResultPanel.p(38);
-          na.resetDeclaredStaticState(true);
-          jg.clearDeclaredStaticReferences(true);
-          si.discardDeclaredStaticReferences(8);
+          ProgressDialog.resetDeclaredStaticState(true);
+          StandardContentDialog.clearDeclaredStaticReferences(true);
+          ProgressMessageDialog.discardDeclaredStaticReferences(8);
           AccountRegistrationPanel.clearStaticReferences((byte) 123);
-          cg.clearStaticReferences(4);
+          GuestPlayConfirmationForm.clearStaticReferences(4);
           LoginPanel.a(8);
           DisplayNameSelectionPanel.clearStaticReferences(-13271);
           gd.clearStaticReferences(25284);
@@ -4389,7 +4389,7 @@ public final class Terraphoenix extends GameShell {
           Bzip2Decompressor.clearStaticReferences();
           Bzip2State.clearStaticReferences((byte) -105);
           MessageKeys.a(77);
-          hi.l(0);
+          FullscreenStatusDialog.l(0);
           kd.clearStaticReferences(true);
           DefaultTextWidgetRenderer.resetStaticState(69);
           ob.clearStaticReferences();
@@ -4433,8 +4433,8 @@ public final class Terraphoenix extends GameShell {
           LabeledWidgetContainer.resetStaticState(-5981);
           ValidatedTextField.b(false);
           EditableTextField.m(14653);
-          al.releaseDeclaredStaticReferences(-22);
-          hm.clearStaticReferences(true);
+          ContentTransitionDialog.releaseDeclaredStaticReferences(-22);
+          StripedProgressWidget.clearStaticReferences(true);
           NameSuggestionsPanel.clearStaticReferences((byte) 114);
           RichTextWidget.h(-32015);
           dd.clearDeclaredStaticReferences((byte) 121);
@@ -4442,7 +4442,7 @@ public final class Terraphoenix extends GameShell {
           df.clearDeclaredStaticReferences((byte) -106);
           TextFieldValidator.clearStaticReferences((byte) 125);
           fm.clearStaticReferences(-19266);
-          cl.g((byte) 123);
+          RegistrationAgreementPane.g((byte) 123);
           gh.a(-58);
           ig.clearStaticReferences(123);
           SoundFilter.clearStaticReferences();
@@ -4481,12 +4481,12 @@ public final class Terraphoenix extends GameShell {
           ec.clearStaticReferences((byte) -82);
           o.resetStaticState(0);
           ra.clearStaticReferences(7876);
-          oi.clearStaticReferences((byte) 124);
+          DialogMessagePane.clearStaticReferences((byte) 124);
           kf.clearStaticReferences((byte) -77);
           hb.resetStaticState(-127);
           ml.clearStaticReferences((byte) 53);
           mi.clearStaticReferences((byte) -118);
-          qf.a(127);
+          FullscreenNoticeType.a(127);
           aa.clearStaticReferences(true);
           me.resetStaticState(true);
           vi.clearStaticReferences((byte) -113);
@@ -4848,8 +4848,8 @@ public final class Terraphoenix extends GameShell {
             }
             if ((8 != ja.field_i ||
               !(me.field_o <= 0)) && var4 != 0) {
-              si.field_ib = this.o((byte) -61);
-              var5 = new cc(si.field_ib);
+              ProgressMessageDialog.field_ib = this.o((byte) -61);
+              var5 = new cc(ProgressMessageDialog.field_ib);
               if (!bk.c(-25704)) {
                 ga.a((byte) 7, 6, var5);
               }
@@ -7943,7 +7943,7 @@ public final class Terraphoenix extends GameShell {
             EditableTextField.a(param0 ^ 13053, var2);
             return;
           }
-          if (cg.field_K != null) {
+          if (GuestPlayConfirmationForm.field_K != null) {
             EditableTextField.a(-12966, var2);
             return;
           }
@@ -8130,7 +8130,7 @@ public final class Terraphoenix extends GameShell {
               stackIn_184_0 = var8;
               stackIn_184_1 = 14;
               stackIn_184_2 = var7_ref_ud;
-              stackIn_184_3 = new StringBuilder().append(qf.field_a).append("<br><br>");
+              stackIn_184_3 = new StringBuilder().append(FullscreenNoticeType.field_a).append("<br><br>");
               stackIn_185_4 = (ge.field_e != 0);
               stackIn_188_5 = 119;
               stackIn_189_6 = (0 != TutorialText.field_a);
@@ -8762,7 +8762,7 @@ public final class Terraphoenix extends GameShell {
           vk.field_d = il.a("soldierscreen", "menu_graphics", ab.field_a, -1);
           BattleState.field_g = il.a("equipbox", "menu_graphics", ab.field_a, param0 ^ 2019);
           bj.field_g = il.a("researchbox", "menu_graphics", ab.field_a, -1);
-          jg.field_hb = il.a("equipslider", "menu_graphics", ab.field_a, -1);
+          StandardContentDialog.field_hb = il.a("equipslider", "menu_graphics", ab.field_a, -1);
           qc.field_f = ig.a(ab.field_a, 0, "equipbuttons", "menu_graphics");
           hb.field_p = ig.a(ab.field_a, 0, "selectors", "");
           tg.field_e = il.a("equipbar", "menu_graphics", ab.field_a, -1);
@@ -8777,7 +8777,7 @@ public final class Terraphoenix extends GameShell {
           me.field_l = lf.a(true, "", "weaponsdir", ab.field_a);
           fc.field_i = lf.a(true, "", "weaponsdiralien", ab.field_a);
           TextFieldValidator.field_f = lf.a(true, "", "aimshield", ab.field_a);
-          hi.field_W = lf.a(true, "", "alienwalk_aliens", ab.field_a);
+          FullscreenStatusDialog.field_W = lf.a(true, "", "alienwalk_aliens", ab.field_a);
           ba.field_e = lf.a(true, "", "alienwalk_brutes", ab.field_a);
           ByteStorage.field_a = lf.a(true, "", "manwalk", ab.field_a);
           nb.field_f = lf.a(true, "", "menwalk", ab.field_a);
@@ -8857,13 +8857,13 @@ public final class Terraphoenix extends GameShell {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (ba.field_h) {
-              if (cg.field_K != null) {
+              if (GuestPlayConfirmationForm.field_K != null) {
                 DualLinkNode.a(li.field_b, (byte) 44, 100.0f);
-                decompiledFrameRemainder0 = !(!cg.field_K.field_k);
+                decompiledFrameRemainder0 = !(!GuestPlayConfirmationForm.field_K.field_k);
                 if (decompiledFrameRemainder0) {
-                  ef.field_i = ef.field_i | cg.field_K.field_m;
-                  TutorialText.field_a = TutorialText.field_a & ~cg.field_K.field_m;
-                  cg.field_K = null;
+                  ef.field_i = ef.field_i | GuestPlayConfirmationForm.field_K.field_m;
+                  TutorialText.field_a = TutorialText.field_a & ~GuestPlayConfirmationForm.field_K.field_m;
+                  GuestPlayConfirmationForm.field_K = null;
                   lk.b(9407);
                   var2 = (eg) (u.field_c.beginBackward(9272));
                   while (var2 != null) {
@@ -8885,17 +8885,17 @@ public final class Terraphoenix extends GameShell {
                   DualLinkNode.a(li.field_b, (byte) 102, 100.0f);
                   decompiledFrameRemainder0 = !(!EditableTextField.field_M.field_i);
                   if (decompiledFrameRemainder0) {
-                    si.field_ib = EditableTextField.field_M.field_j;
+                    ProgressMessageDialog.field_ib = EditableTextField.field_M.field_j;
                     this.field_I = new rk(Archive.field_a);
                     try {
-                      if (null != si.field_ib) {
-                        this.a(si.field_ib, false, true);
+                      if (null != ProgressMessageDialog.field_ib) {
+                        this.a(ProgressMessageDialog.field_ib, false, true);
                       }
                     } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       var2_ref = decompiledCaughtException;
                       bd.reportClientError((Throwable) ((Object) var2_ref), "TP Sgc", 88);
-                      si.field_ib = null;
+                      ProgressMessageDialog.field_ib = null;
                     }
                     this.field_zb = null;
                     EditableTextField.field_M = null;
@@ -8984,7 +8984,7 @@ public final class Terraphoenix extends GameShell {
               }
               break;
             }
-            if (qf.a((byte) 76)) {
+            if (FullscreenNoticeType.a((byte) 76)) {
               var2_int = this.h((byte) -13);
               if (2 == var2_int) {
                 o.a(50, 320, 240, AccountRequestState.field_f, 10, 12);
@@ -9125,7 +9125,7 @@ public final class Terraphoenix extends GameShell {
             }
             var11 = 105;
             if (this.field_X.field_f == 1) {
-              FrameTimer.field_f.drawString(hm.field_J, 48, var11, 16776960 - wa.field_s, 0);
+              FrameTimer.field_f.drawString(StripedProgressWidget.field_J, 48, var11, 16776960 - wa.field_s, 0);
             }
             if (this.field_X.field_f == 2) {
               FrameTimer.field_f.drawString(sk.field_a, 48, var11, 16776960 - wa.field_s, 0);
@@ -9415,7 +9415,7 @@ public final class Terraphoenix extends GameShell {
                   SoftwareRasterizer.drawRectangleOutline(495, -1 + var15Lifetime1 + 340, 82, 52, 0);
                   SoftwareRasterizer.drawRectangleOutline(497, 340 + (var15Lifetime1 + 1), 78, 48, 0);
                   SoftwareRasterizer.drawRectangleOutline(496, 340 + var15Lifetime1, 80, 50, var14Lifetime3Lifetime1);
-                  boolean decompiledSharedTail0 = (null == si.field_ib);
+                  boolean decompiledSharedTail0 = (null == ProgressMessageDialog.field_ib);
                   if (!decompiledSharedTail0) {
                     AccountRequestState.field_f.drawParagraph(UiWidget.field_t, 352, 310, 256, 50, 16777215, 0, 1, 1, AccountRequestState.field_f.field_s);
                     decompiledSharedTail0 = (var16 != 0);

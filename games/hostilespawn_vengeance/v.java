@@ -52,7 +52,7 @@ final class v {
         try {
           ea.a(1, (java.awt.Component) ((Object) param1));
           var2_int = 111 / ((param0 + 52) / 39);
-          te.a((java.awt.Component) ((Object) param1), -100);
+          RegistrationAgreementPane.a((java.awt.Component) ((Object) param1), -100);
           if (null == h.field_b) {
             return;
           }

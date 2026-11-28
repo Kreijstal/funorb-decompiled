@@ -291,7 +291,7 @@ final class kc extends am {
         var9 = Torquing.field_u;
         try {
           var10 = (CharSequence) ((Object) param1);
-          var3_int = fm.a(param2, param0, var10);
+          var3_int = GuestPlayConfirmationForm.a(param2, param0, var10);
           var4 = new String[1 + var3_int];
           var5 = 0;
           var6 = 0;

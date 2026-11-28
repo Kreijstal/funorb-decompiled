@@ -52,16 +52,16 @@ final class TileEffectAnimation extends AnimationNode {
           qja.b(param1 ^ 24, ProxySocketConnector.field_g);
           ProxySocketConnector.field_g.writeShort(param0, -125);
           param2.a(ProxySocketConnector.field_g, false);
-          sja.field_fb.position = 0;
+          StandardContentDialog.field_fb.position = 0;
           if (!param4) {
-            sja.field_fb.writeByte(16, 0);
+            StandardContentDialog.field_fb.writeByte(16, 0);
           } else {
-            sja.field_fb.writeByte(18, param1 ^ 0);
+            StandardContentDialog.field_fb.writeByte(18, param1 ^ 0);
           }
-          sja.field_fb.position = sja.field_fb.position + 2;
-          var5_int = sja.field_fb.position;
-          sja.field_fb.writeInt(cp.field_c, param1 - 1615464796);
-          sja.field_fb.writeLong(param1 + 1686281208, vi.field_a);
+          StandardContentDialog.field_fb.position = StandardContentDialog.field_fb.position + 2;
+          var5_int = StandardContentDialog.field_fb.position;
+          StandardContentDialog.field_fb.writeInt(cp.field_c, param1 - 1615464796);
+          StandardContentDialog.field_fb.writeLong(param1 + 1686281208, vi.field_a);
           var6 = 0;
           if (vs.field_c) {
             var6 = var6 | 1;
@@ -75,17 +75,17 @@ final class TileEffectAnimation extends AnimationNode {
           if (ij.field_m != null) {
             var6 = var6 | 16;
           }
-          sja.field_fb.writeByte(var6, 0);
+          StandardContentDialog.field_fb.writeByte(var6, 0);
           var7 = pi.a(11713, nia.d(param1 - 31768));
           if (var7 == null) {
             var7 = "";
           }
-          sja.field_fb.writeString((byte) -50, var7);
+          StandardContentDialog.field_fb.writeString((byte) -50, var7);
           if (null != ij.field_m) {
-            sja.field_fb.writePrefixedString(ij.field_m, 86);
+            StandardContentDialog.field_fb.writePrefixedString(ij.field_m, 86);
           }
-          wd.a(SlowAllEvent.field_q, (byte) -126, sja.field_fb, ProxySocketConnector.field_g, SuperSpeedSpecial.field_p);
-          sja.field_fb.writeLengthShort((byte) -88, sja.field_fb.position - var5_int);
+          wd.a(SlowAllEvent.field_q, (byte) -126, StandardContentDialog.field_fb, ProxySocketConnector.field_g, SuperSpeedSpecial.field_p);
+          StandardContentDialog.field_fb.writeLengthShort((byte) -88, StandardContentDialog.field_fb.position - var5_int);
           ConfirmedEmailAvailabilityValidator.a(-1, 85);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

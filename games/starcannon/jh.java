@@ -32,7 +32,7 @@ final class jh {
 
     final static void a(int param0, boolean param1) {
         AccountRequestState.field_c = ProxyAuthenticationRequiredException.field_b[param0];
-        lb.field_L = fa.field_A[param0];
+        lb.field_L = StripedProgressWidget.field_A[param0];
         if (!param1) {
           return;
         }

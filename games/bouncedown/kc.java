@@ -77,7 +77,7 @@ final class kc {
         for (var2 = 0; EmailFormatValidator.field_p > var2; var2++) {
           var3 = ih.field_V[var2] * qh.field_i[var2];
           var21 = ph.field_c[var2];
-          if (!lg.field_c[var2]) {
+          if (!FullscreenNoticeType.field_c[var2]) {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var3 > var6; var6++) {

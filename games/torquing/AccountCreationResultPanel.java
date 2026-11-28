@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends mn implements WidgetActivationListener {
+final class AccountCreationResultPanel extends ProgressMessageDialog implements WidgetActivationListener {
     private boolean field_gb;
     private boolean field_hb;
     private AccountRegistrationPanel field_ib;
@@ -26,13 +26,13 @@ final class AccountCreationResultPanel extends mn implements WidgetActivationLis
         }
         try {
           m.c(-103);
-          this.b(true);
+          this.closeDialog(true);
         } catch (RuntimeException runtimeException) {
           throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "nm.NA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final void o(int param0) {
+    final void showAccountCreationConnectionFailure(int param0) {
         if (param0 != 11) {
           return;
         }
@@ -85,7 +85,7 @@ final class AccountCreationResultPanel extends mn implements WidgetActivationLis
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        fo var5 = null;
+        DialogMessagePane var5 = null;
         int var6 = 0;
         var6 = Torquing.field_u;
         try {
@@ -112,36 +112,36 @@ final class AccountCreationResultPanel extends mn implements WidgetActivationLis
               }
             }
           }
-          var5 = new fo((mn) (this), LoginPanel.field_E, var4);
+          var5 = new DialogMessagePane((ProgressMessageDialog) (this), LoginPanel.field_E, var4);
           if (param2 >= -102) {
             this.field_ib = (AccountRegistrationPanel) null;
           }
           if (param1.success) {
             if (param1.field_g) {
-              this.c(new sc(this), 33);
+              this.replaceContent(new RegistrationAgreementPane(this), 33);
               return;
             }
-            var5.a(0, vd.field_d, (WidgetEventListener) (this));
+            var5.addListenerButton(0, vd.field_d, (WidgetEventListener) (this));
           } else {
             if (!this.field_gb) {
               if (param1.statusCode == 5) {
-                var5.a(DelayedPcmStream.field_n, 5177, 11);
-                var5.a(pf.field_q, 5177, 17);
+                var5.addActionButton(DelayedPcmStream.field_n, 5177, 11);
+                var5.addActionButton(pf.field_q, 5177, 17);
               } else {
-                var5.a(qh.field_a, 5177, -1);
+                var5.addActionButton(qh.field_a, 5177, -1);
               }
             } else {
-              var5.a(0, vd.field_d, (WidgetEventListener) (this));
+              var5.addListenerButton(0, vd.field_d, (WidgetEventListener) (this));
             }
             if (param1.statusCode != 3) {
               if (param1.statusCode == 6) {
-                var5.a(pf.field_u, 5177, 9);
+                var5.addActionButton(pf.field_u, 5177, 9);
               }
             } else {
-              var5.a(dc.field_b, 5177, 7);
+              var5.addActionButton(dc.field_b, 5177, 7);
             }
           }
-          this.c(var5, 33);
+          this.replaceContent(var5, 33);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

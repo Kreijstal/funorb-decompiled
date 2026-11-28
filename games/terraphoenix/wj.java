@@ -159,7 +159,7 @@ final class wj {
               }
               if (!param0) {
                 stackIn_45_0 = ((4 & var7) != 0);
-                si.field_gb = stackIn_45_0;
+                ProgressMessageDialog.field_gb = stackIn_45_0;
                 stackIn_48_0 = (0 != (8 & var7));
                 fh.field_g = stackIn_48_0;
                 if (!fh.field_g) {
@@ -177,7 +177,7 @@ final class wj {
               }
               kj.field_f = LevelEditor.field_j.readString(-1);
               var11 = (CharSequence) ((Object) kj.field_f);
-              IntrusiveDeque.field_e = hm.a((byte) 2, var11);
+              IntrusiveDeque.field_e = StripedProgressWidget.a((byte) 2, var11);
               MouseInputHandler.field_b = LevelEditor.field_j.readUnsignedByte(-16384);
               mh.field_a = od.field_g;
               if (NameSuggestionsPanel.field_K.c(0) != rj.field_a) {
@@ -192,7 +192,7 @@ final class wj {
                 hk.a(var6, (byte) 3, dg.a(false));
               }
               if (0 >= me.field_o &&
-                !si.field_gb) {
+                !ProgressMessageDialog.field_gb) {
                 try {
                   JavaScriptBridge.callWithoutArguments((byte) -128, "unzap", dg.a(false));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -201,7 +201,7 @@ final class wj {
                 }
               } else {
                 try {
-                  JavaScriptBridge.callWithArguments(dg.a(false), "zap", new Object[]{hi.a(SpriteState.field_y, param1 - 41780)}, 10056);
+                  JavaScriptBridge.callWithArguments(dg.a(false), "zap", new Object[]{FullscreenStatusDialog.a(SpriteState.field_y, param1 - 41780)}, 10056);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -238,7 +238,7 @@ final class wj {
             if (null == ig.field_e) {
               if (RichTextWidget.field_Q) {
                 if (30000L >= IterableNodeHashTable.b(1)) {
-                  bh.field_d = cl.field_I;
+                  bh.field_d = RegistrationAgreementPane.field_I;
                 } else {
                   bh.field_d = qk.field_f;
                 }

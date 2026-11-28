@@ -72,8 +72,8 @@ final class TextHotspotBounds extends IntrusiveNode {
           var14 = 65280 & param7;
           for (var15 = 0; var15 < 16; var15++) {
             var16 = param6 * var15 >> 4;
-            var12[var15] = vf.b(DirectByteStorage.a(16711680, var16 * var14), DirectByteStorage.a(-16711936, var16 * var13)) >>> 8;
-            var12[31 - var15] = vf.b(DirectByteStorage.a(var14 * var16, 16711680), DirectByteStorage.a(var16 * var13, -16711936)) >>> 8;
+            var12[var15] = DialogMessagePane.b(DirectByteStorage.a(16711680, var16 * var14), DirectByteStorage.a(-16711936, var16 * var13)) >>> 8;
+            var12[31 - var15] = DialogMessagePane.b(DirectByteStorage.a(var14 * var16, 16711680), DirectByteStorage.a(var16 * var13, -16711936)) >>> 8;
           }
           var15Lifetime1 = -var8_int + var10;
           var16Lifetime1 = var11 - var9;
@@ -203,12 +203,12 @@ final class TextHotspotBounds extends IntrusiveNode {
         var19 = stellarshard.field_B;
         try {
           GzipDecompressor.field_a = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var1_int = sj.field_B.length;
+          var1_int = RegistrationAgreementPane.field_B.length;
           var21 = new int[var1_int];
           var20 = var21;
           var2 = var20;
           for (var3 = 0; var3 < var1_int; var3++) {
-            var4_ref_n = sj.field_B[var3];
+            var4_ref_n = RegistrationAgreementPane.field_B[var3];
             var4_ref_n.b((byte) -53);
             BoundedRandomAccessFile.a(var3, -128);
             var5 = var4_ref_n.field_t + var4_ref_n.field_F >> 1;
@@ -249,15 +249,15 @@ final class TextHotspotBounds extends IntrusiveNode {
           var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
           var14 = (int)((double)var14 * var10Lifetime1);
-          for (var15 = 0; var15 < sj.field_B.length; var15++) {
+          for (var15 = 0; var15 < RegistrationAgreementPane.field_B.length; var15++) {
             var16 = 0;
-            for (var17_int = 1; sj.field_B.length > var17_int; var17_int++) {
+            for (var17_int = 1; RegistrationAgreementPane.field_B.length > var17_int; var17_int++) {
               if (var21[var16] < var21[var17_int]) {
                 var16 = var17_int;
               }
             }
             var21[var16] = -2147483648;
-            var17 = sj.field_B[var16];
+            var17 = RegistrationAgreementPane.field_B[var16];
             BoundedRandomAccessFile.a(var16, param0 ^ 116);
             for (var18 = 0; var18 < 3; var18++) {
               RichTextLayout.field_u[var18] = RichTextLayout.field_u[var18] + bi.field_s[var15][var18];

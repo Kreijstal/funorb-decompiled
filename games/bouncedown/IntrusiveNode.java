@@ -111,12 +111,12 @@ class IntrusiveNode {
               var10.setColor(java.awt.Color.white);
               var10.drawString(param3, var8 + (304 - param3.length() * 6) / 2, 22 + var9);
             }
-            if (eb.field_D == null) {
+            if (RegistrationAgreementPane.field_D == null) {
               return;
             }
             var10.setFont(pa.field_a);
             var10.setColor(java.awt.Color.white);
-            var10.drawString(eb.field_D, kj.field_i / 2 - 6 * eb.field_D.length() / 2, -26 + jc.field_i / 2);
+            var10.drawString(RegistrationAgreementPane.field_D, kj.field_i / 2 - 6 * RegistrationAgreementPane.field_D.length() / 2, -26 + jc.field_i / 2);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

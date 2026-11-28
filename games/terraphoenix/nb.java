@@ -7,7 +7,7 @@ abstract class nb {
     static Sprite[] field_d;
     static int[] field_c;
     static int field_g;
-    static si field_b;
+    static ProgressMessageDialog field_b;
     static String field_a;
 
     final static Sprite a(int param0, int param1, int param2) {
@@ -34,7 +34,7 @@ abstract class nb {
     }
 
     final static void a(int param0) {
-        if (!ei.field_R) {
+        if (!ResizableModalDialog.field_R) {
           throw new IllegalStateException();
         }
         wd.field_b = true;

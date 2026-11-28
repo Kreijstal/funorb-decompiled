@@ -20,34 +20,34 @@ final class ContextualRuntimeException extends RuntimeException {
           if (param1 < param5) {
             if (param3 <= param5) {
               if (param3 <= param1) {
-                rf.a(param10, param8, param14, param11, param12, param5, param6, SoftwareRasterizer.field_h, 0, param4, param7, param2, param1, param15, param0, param13, param3);
+                StandardContentDialog.a(param10, param8, param14, param11, param12, param5, param6, SoftwareRasterizer.field_h, 0, param4, param7, param2, param1, param15, param0, param13, param3);
                 if (var17 == 0) {
                   return;
                 }
               }
-              rf.a(param13, param2, param7, param11, param12, param5, param15, SoftwareRasterizer.field_h, param9 - 44, param4, param14, param8, param3, param6, param0, param10, param1);
+              StandardContentDialog.a(param13, param2, param7, param11, param12, param5, param15, SoftwareRasterizer.field_h, param9 - 44, param4, param14, param8, param3, param6, param0, param10, param1);
               if (var17 == 0) {
                 return;
               }
             }
-            rf.a(param13, param12, param7, param6, param2, param3, param15, SoftwareRasterizer.field_h, param9 - 44, param10, param0, param8, param5, param11, param14, param4, param1);
+            StandardContentDialog.a(param13, param12, param7, param6, param2, param3, param15, SoftwareRasterizer.field_h, param9 - 44, param10, param0, param8, param5, param11, param14, param4, param1);
             if (var17 == 0) {
               return;
             }
           }
           if (param1 >= param3) {
             if (param5 < param3) {
-              rf.a(param4, param2, param0, param15, param8, param1, param11, SoftwareRasterizer.field_h, 0, param13, param14, param12, param3, param6, param7, param10, param5);
+              StandardContentDialog.a(param4, param2, param0, param15, param8, param1, param11, SoftwareRasterizer.field_h, 0, param13, param14, param12, param3, param6, param7, param10, param5);
               if (var17 == 0) {
                 return;
               }
             }
-            rf.a(param10, param12, param14, param15, param8, param1, param6, SoftwareRasterizer.field_h, 0, param13, param0, param2, param5, param11, param7, param4, param3);
+            StandardContentDialog.a(param10, param12, param14, param15, param8, param1, param6, SoftwareRasterizer.field_h, 0, param13, param0, param2, param5, param11, param7, param4, param3);
             if (var17 == 0) {
               return;
             }
           }
-          rf.a(param4, param8, param0, param6, param2, param3, param11, SoftwareRasterizer.field_h, param9 - 44, param10, param7, param12, param1, param15, param14, param13, param5);
+          StandardContentDialog.a(param4, param8, param0, param6, param2, param3, param11, SoftwareRasterizer.field_h, param9 - 44, param10, param7, param12, param1, param15, param14, param13, param5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1091,7 +1091,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("tocustomersupport", (byte) 105);
                 if (var2 != null) {
-                  ee.field_C = eg.a(114, var2);
+                  DialogMessagePane.field_C = eg.a(114, var2);
                 }
                 var2 = kb.a("changedisplayname", (byte) 124);
                 if (null != var2) {
@@ -1382,51 +1382,51 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("monthnames,0", (byte) 113);
                 if (var2 != null) {
-                  qe.field_E[0] = eg.a(101, var2);
+                  StripedProgressWidget.field_E[0] = eg.a(101, var2);
                 }
                 var2 = kb.a("monthnames,1", (byte) 109);
                 if (var2 != null) {
-                  qe.field_E[1] = eg.a(108, var2);
+                  StripedProgressWidget.field_E[1] = eg.a(108, var2);
                 }
                 var2 = kb.a("monthnames,2", (byte) 111);
                 if (var2 != null) {
-                  qe.field_E[2] = eg.a(114, var2);
+                  StripedProgressWidget.field_E[2] = eg.a(114, var2);
                 }
                 var2 = kb.a("monthnames,3", (byte) 125);
                 if (null != var2) {
-                  qe.field_E[3] = eg.a(86, var2);
+                  StripedProgressWidget.field_E[3] = eg.a(86, var2);
                 }
                 var2 = kb.a("monthnames,4", (byte) 117);
                 if (null != var2) {
-                  qe.field_E[4] = eg.a(89, var2);
+                  StripedProgressWidget.field_E[4] = eg.a(89, var2);
                 }
                 var2 = kb.a("monthnames,5", (byte) 110);
                 if (var2 != null) {
-                  qe.field_E[5] = eg.a(120, var2);
+                  StripedProgressWidget.field_E[5] = eg.a(120, var2);
                 }
                 var2 = kb.a("monthnames,6", (byte) 122);
                 if (null != var2) {
-                  qe.field_E[6] = eg.a(100, var2);
+                  StripedProgressWidget.field_E[6] = eg.a(100, var2);
                 }
                 var2 = kb.a("monthnames,7", (byte) 105);
                 if (null != var2) {
-                  qe.field_E[7] = eg.a(118, var2);
+                  StripedProgressWidget.field_E[7] = eg.a(118, var2);
                 }
                 var2 = kb.a("monthnames,8", (byte) 120);
                 if (var2 != null) {
-                  qe.field_E[8] = eg.a(111, var2);
+                  StripedProgressWidget.field_E[8] = eg.a(111, var2);
                 }
                 var2 = kb.a("monthnames,9", (byte) 110);
                 if (null != var2) {
-                  qe.field_E[9] = eg.a(98, var2);
+                  StripedProgressWidget.field_E[9] = eg.a(98, var2);
                 }
                 var2 = kb.a("monthnames,10", (byte) 109);
                 if (null != var2) {
-                  qe.field_E[10] = eg.a(110, var2);
+                  StripedProgressWidget.field_E[10] = eg.a(110, var2);
                 }
                 var2 = kb.a("monthnames,11", (byte) 109);
                 if (var2 != null) {
-                  qe.field_E[11] = eg.a(85, var2);
+                  StripedProgressWidget.field_E[11] = eg.a(85, var2);
                 }
                 var2 = kb.a("create_welcome", (byte) 105);
                 if (null != var2) {
@@ -1446,11 +1446,11 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("create_displayname", (byte) 112);
                 if (null != var2) {
-                  bi.field_O = eg.a(123, var2);
+                  ResizableModalDialog.field_O = eg.a(123, var2);
                 }
                 var2 = kb.a("create_password", (byte) 116);
                 if (var2 != null) {
-                  ee.field_y = eg.a(86, var2);
+                  DialogMessagePane.field_y = eg.a(86, var2);
                 }
                 var2 = kb.a("create_password_confirm", (byte) 112);
                 if (null != var2) {
@@ -1466,7 +1466,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("create_age", (byte) 113);
                 if (null != var2) {
-                  qe.field_A = eg.a(96, var2);
+                  StripedProgressWidget.field_A = eg.a(96, var2);
                 }
                 var2 = kb.a("create_u13_email", (byte) 105);
                 if (null != var2) {
@@ -1590,7 +1590,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("create_email_confirm_tooltip", (byte) 126);
                 if (null != var2) {
-                  sd.field_V = eg.a(86, var2);
+                  ProgressDialog.field_V = eg.a(86, var2);
                 }
                 var2 = kb.a("create_age_tooltip", (byte) 124);
                 if (null != var2) {
@@ -1650,7 +1650,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("create_alert_passchars", (byte) 118);
                 if (var2 != null) {
-                  qe.field_H = eg.a(125, var2);
+                  StripedProgressWidget.field_H = eg.a(125, var2);
                 }
                 var2 = kb.a("create_alert_passrepeated", (byte) 112);
                 if (var2 != null) {
@@ -1926,7 +1926,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("instructions", (byte) 120);
                 if (null != var2) {
-                  qe.field_v = eg.a(param0 + 85, var2);
+                  StripedProgressWidget.field_v = eg.a(param0 + 85, var2);
                 }
                 var2 = kb.a("tutorial", (byte) 121);
                 if (var2 != null) {
@@ -2140,7 +2140,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("cont", (byte) 114);
                 if (var2 != null) {
-                  qe.field_I = eg.a(121, var2);
+                  StripedProgressWidget.field_I = eg.a(121, var2);
                 }
                 var2 = kb.a("continue_spectating", (byte) 121);
                 if (var2 != null) {
@@ -2888,35 +2888,35 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("mustlogin1", (byte) 105);
                 if (null != var2) {
-                  sd.field_Q = eg.a(90, var2);
+                  ProgressDialog.field_Q = eg.a(90, var2);
                 }
                 var2 = kb.a("mustlogin2,1", (byte) 112);
                 if (var2 != null) {
-                  rf.field_cb[1] = eg.a(param0 + 120, var2);
+                  StandardContentDialog.field_cb[1] = eg.a(param0 + 120, var2);
                 }
                 var2 = kb.a("mustlogin2,2", (byte) 118);
                 if (var2 != null) {
-                  rf.field_cb[2] = eg.a(119, var2);
+                  StandardContentDialog.field_cb[2] = eg.a(119, var2);
                 }
                 var2 = kb.a("mustlogin2,3", (byte) 127);
                 if (var2 != null) {
-                  rf.field_cb[3] = eg.a(SectorCacheStore.a(param0, 124), var2);
+                  StandardContentDialog.field_cb[3] = eg.a(SectorCacheStore.a(param0, 124), var2);
                 }
                 var2 = kb.a("mustlogin2,4", (byte) 106);
                 if (var2 != null) {
-                  rf.field_cb[4] = eg.a(SectorCacheStore.a(param0, 126), var2);
+                  StandardContentDialog.field_cb[4] = eg.a(SectorCacheStore.a(param0, 126), var2);
                 }
                 var2 = kb.a("mustlogin2,5", (byte) 106);
                 if (null != var2) {
-                  rf.field_cb[5] = eg.a(106, var2);
+                  StandardContentDialog.field_cb[5] = eg.a(106, var2);
                 }
                 var2 = kb.a("mustlogin2,6", (byte) 109);
                 if (null != var2) {
-                  rf.field_cb[6] = eg.a(param0 + 80, var2);
+                  StandardContentDialog.field_cb[6] = eg.a(param0 + 80, var2);
                 }
                 var2 = kb.a("mustlogin2,7", (byte) 121);
                 if (null != var2) {
-                  rf.field_cb[7] = eg.a(114, var2);
+                  StandardContentDialog.field_cb[7] = eg.a(114, var2);
                 }
                 var2 = kb.a("mustlogin3,1", (byte) 120);
                 if (null != var2) {

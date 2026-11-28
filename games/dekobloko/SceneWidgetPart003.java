@@ -29,7 +29,7 @@ final class SceneWidgetPart003 extends SceneWidget {
         if (integerArgument1 != 0) {
           return;
         }
-        LabeledWidgetContainer.uiComponentPart023State0001.performAction0185(MixedSupport022.uiComponentPart031State0001, (byte) 62);
+        LabeledWidgetContainer.uiComponentPart023State0001.replaceContent(MixedSupport022.uiComponentPart031State0001, (byte) 62);
     }
 
     final int computeInteger0610(int integerArgument1, int integerArgument2) {

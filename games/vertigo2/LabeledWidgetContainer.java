@@ -97,10 +97,10 @@ final class LabeledWidgetContainer extends WidgetWrapper {
 
     final static void a(int param0, boolean param1, float param2, String param3) {
         if (null == bb.field_F) {
-          bb.field_F = new fg(AccountServiceResult.field_e, eg.field_t);
+          bb.field_F = new ProgressDialog(AccountServiceResult.field_e, eg.field_t);
           AccountServiceResult.field_e.showDialog(bb.field_F, 0);
         }
-        bb.field_F.a(param2, 4210752, param1, param3);
+        bb.field_F.setProgress(param2, 4210752, param1, param3);
         if (param0 != 1) {
           return;
         }
@@ -248,9 +248,9 @@ final class LabeledWidgetContainer extends WidgetWrapper {
             }
             if (field_S[0][2].field_G) {
               if (LevelCamera.isLocalPlayerLobbyHost(false)) {
-                ko.field_S = qn.field_z;
+                NumericDateInputWidget.field_S = qn.field_z;
               } else {
-                ko.field_S = Vertigo2.a(new String[]{gd.field_j.field_Nb}, e.field_e, 77);
+                NumericDateInputWidget.field_S = Vertigo2.a(new String[]{gd.field_j.field_Nb}, e.field_e, 77);
               }
             }
           }
@@ -362,8 +362,8 @@ final class LabeledWidgetContainer extends WidgetWrapper {
             stackIn_126_0.field_lb = stackIn_127_1;
           }
           if (param2 &&
-            sp.field_O > 1) {
-            for (var6Lifetime3 = 0; var6Lifetime3 < sp.field_O + 1; var6Lifetime3++) {
+            ResizableModalDialog.field_O > 1) {
+            for (var6Lifetime3 = 0; var6Lifetime3 < ResizableModalDialog.field_O + 1; var6Lifetime3++) {
               var29 = field_S[3][var6Lifetime3];
               if (var4_int != 0 &&
                 var29.field_tb != 0) {
@@ -378,7 +378,7 @@ final class LabeledWidgetContainer extends WidgetWrapper {
                 }
                 var8 = stackIn_142_0;
                 if (var8 != null) {
-                  ko.field_S = var8;
+                  NumericDateInputWidget.field_S = var8;
                 }
               }
               stackIn_146_0 = var29;
@@ -480,7 +480,7 @@ final class LabeledWidgetContainer extends WidgetWrapper {
               var16Lifetime1 = stackIn_216_0;
               if (var16Lifetime1 == 0 &&
                 var9 >= 0 &&
-                gr.field_W != null && (!param2 ||
+                FullscreenStatusDialog.field_W != null && (!param2 ||
                 !qn.field_q)) {
                 ng.field_a = false;
                 if (null == e.field_c) {
@@ -633,7 +633,7 @@ final class LabeledWidgetContainer extends WidgetWrapper {
                   }
                 }
                 if (var20 != null) {
-                  ko.field_S = (String) (var20);
+                  NumericDateInputWidget.field_S = (String) (var20);
                 }
               }
               if (!param2) {

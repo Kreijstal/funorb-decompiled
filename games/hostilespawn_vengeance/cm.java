@@ -38,7 +38,7 @@ final class cm {
 
     final static void a(int param0, int param1, int param2) {
         ne var3 = new ne(param0, param2, param1, 0, 0, 0);
-        if (!ta.p(3)) {
+        if (!StandardContentDialog.p(3)) {
           if (gn.field_k[param0] <= param2) {
             gn.field_k[param0] = 1 + param2;
           }

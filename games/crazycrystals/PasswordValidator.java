@@ -97,7 +97,7 @@ final class PasswordValidator extends TextFieldValidator {
           if (qc.a(param2, -122)) {
             return false;
           }
-          if (bf.a(param2, false)) {
+          if (FullscreenNoticeType.a(param2, false)) {
             return false;
           }
           if (param1.length() == 0) {
@@ -171,7 +171,7 @@ final class PasswordValidator extends TextFieldValidator {
             return (String) (stackIn_2_0);
           }
           var5 = var4;
-          if (bf.a(var5, false)) {
+          if (FullscreenNoticeType.a(var5, false)) {
             stackIn_5_0 = dq.field_G;
             return stackIn_5_0;
           }

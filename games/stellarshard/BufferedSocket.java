@@ -42,10 +42,10 @@ final class BufferedSocket implements Runnable {
         Sprite var17 = new Sprite(param0.getFileByName("button.gif", "", (byte) -12), (java.awt.Component) ((Object) qd.field_j));
         DiskArchiveRequest.a("dropdown", param2, (byte) -89, "commonui");
         ek[] var5 = bf.a("screen_options", (byte) 37, "commonui", param2);
-        nc.field_F = new ek[4];
+        StripedProgressWidget.field_F = new ek[4];
         ua.field_c = new ek[4];
         sb.field_c = new ek[4];
-        ek[][] var6 = new ek[][]{sb.field_c, ua.field_c, nc.field_F};
+        ek[][] var6 = new ek[][]{sb.field_c, ua.field_c, StripedProgressWidget.field_F};
         int[][] var19 = new int[4][];
         int[][] var16 = var19;
         int[][] var7 = var16;

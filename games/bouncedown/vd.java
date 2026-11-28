@@ -46,7 +46,7 @@ final class vd {
             if (param1.length() <= var5) {
               return null;
             }
-            if (uc.a(2, param1.charAt(var5))) {
+            if (DialogMessagePane.a(2, param1.charAt(var5))) {
               var5++;
               continue;
             }

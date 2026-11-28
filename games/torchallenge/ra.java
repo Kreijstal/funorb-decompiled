@@ -755,19 +755,19 @@ final class ra {
               var18Lifetime1++;
             }
             var19Lifetime1 = 480 + (-td.field_n - 16);
-            jf.field_qb.fullWidth = SoftwareRasterizer.width;
-            jf.field_qb.storedWidth = jf.field_qb.fullWidth;
-            jf.field_qb.fullHeight = SoftwareRasterizer.height;
-            jf.field_qb.storedHeight = jf.field_qb.fullHeight;
+            StandardContentDialog.field_qb.fullWidth = SoftwareRasterizer.width;
+            StandardContentDialog.field_qb.storedWidth = StandardContentDialog.field_qb.fullWidth;
+            StandardContentDialog.field_qb.fullHeight = SoftwareRasterizer.height;
+            StandardContentDialog.field_qb.storedHeight = StandardContentDialog.field_qb.fullHeight;
             mb.field_c.fullWidth = SoftwareRasterizer.width;
-            jf.field_qb.pixels = SoftwareRasterizer.pixels;
+            StandardContentDialog.field_qb.pixels = SoftwareRasterizer.pixels;
             mb.field_c.fullHeight = SoftwareRasterizer.height;
             mb.field_c.storedWidth = mb.field_c.fullWidth;
             mb.field_c.pixels = SoftwareRasterizer.pixels;
             mb.field_c.storedHeight = mb.field_c.fullHeight;
             SoftwareRasterizer.fillRectangle(0, var19Lifetime1 + 16, 640, 480 - (16 + var19Lifetime1), 1);
             for (var20Lifetime1 = 0; var18Lifetime1 > var20Lifetime1; var20Lifetime1++) {
-              Sprite.copyRegion(jf.field_qb, mb.field_c, 0, var19Lifetime1, 0, var19Lifetime1 + 16, 640, 16);
+              Sprite.copyRegion(StandardContentDialog.field_qb, mb.field_c, 0, var19Lifetime1, 0, var19Lifetime1 + 16, 640, 16);
               var19Lifetime1 += 16;
             }
             return;

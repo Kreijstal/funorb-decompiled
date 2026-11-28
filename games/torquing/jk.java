@@ -62,7 +62,7 @@ final class jk {
           }
           ArchiveRequest.field_t = param2;
           aq.field_c = true;
-          IsaacCipher.field_m = new mn(dc.field_a, LoginPanel.field_E, param0, ff.field_a, ArchiveRequest.field_t);
+          IsaacCipher.field_m = new ProgressMessageDialog(dc.field_a, LoginPanel.field_E, param0, ff.field_a, ArchiveRequest.field_t);
           dc.field_a.showDialog(IsaacCipher.field_m, (byte) 112);
         } catch (RuntimeException runtimeException) {
           throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "jk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

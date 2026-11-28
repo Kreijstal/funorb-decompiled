@@ -18,7 +18,7 @@ final class vda {
           RuntimeException var15_ref = null;
           try {
             ig.field_m = new BitPacketBuffer(param6);
-            sja.field_fb = new BitPacketBuffer(param2);
+            StandardContentDialog.field_fb = new BitPacketBuffer(param2);
             vs.field_c = param5;
             oja.field_c = param9;
             if (param7 != 64) {

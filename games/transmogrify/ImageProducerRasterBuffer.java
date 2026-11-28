@@ -100,7 +100,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     }
 
     final static void d(byte param0) {
-        if (!ge.field_x) {
+        if (!RegistrationAgreementPane.field_x) {
           throw new IllegalStateException();
         }
         PasswordValidator.field_n = true;

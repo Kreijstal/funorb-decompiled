@@ -191,15 +191,15 @@ final class gna extends UiComponent {
           var7 = SoftwareRasterizer.field_i;
           var8 = SoftwareRasterizer.field_c;
           if (null != MouseWheelInput.field_a &&
-            lo.field_b != null) {
-            param5 = param5 - (lo.field_b.field_F - lo.field_b.field_B);
-            var9 = lo.field_b.stringWidth(param2) + 10;
+            FullscreenNoticeType.field_b != null) {
+            param5 = param5 - (FullscreenNoticeType.field_b.field_F - FullscreenNoticeType.field_b.field_B);
+            var9 = FullscreenNoticeType.field_b.stringWidth(param2) + 10;
             MouseWheelInput.field_a.bindAsRenderTarget();
             if ((1 & var9) == 1) {
               var9++;
             }
             SoftwareRasterizer.clear();
-            lo.field_b.drawText(param2, 5, 3 + lo.field_b.field_u, 0, -1);
+            FullscreenNoticeType.field_b.drawText(param2, 5, 3 + FullscreenNoticeType.field_b.field_u, 0, -1);
             SoftwareRasterizer.setTarget(var12, var7, var8);
             HomingMissileEvent.d((byte) -111);
             if (param4) {
@@ -209,7 +209,7 @@ final class gna extends UiComponent {
               PlaceCreatureEffect.a((byte) -63, var9, ap.field_c, param1, param3, param5, MouseWheelInput.field_a);
               return;
             }
-            uma.a(var9, param3, 0, MouseWheelInput.field_a, param5, param1);
+            NumericDateInputWidget.a(var9, param3, 0, MouseWheelInput.field_a, param5, param1);
             return;
           }
           return;

@@ -137,7 +137,7 @@ final class th {
         ha var5 = null;
         int var4 = 0;
         try {
-          var5 = pg.field_fb;
+          var5 = StandardContentDialog.field_fb;
           var5.f(param0, 950);
           var5.position = var5.position + 1;
           var4 = var5.position;

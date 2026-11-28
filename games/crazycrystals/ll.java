@@ -118,7 +118,7 @@ final class ll {
               !rn.field_q.equals(hf.field_b[var10.field_d])) {
               um.a(FloatingScoreLabel.field_j[var10.field_d], hf.field_b[var10.field_d], (byte) 80);
             }
-            en.field_O = 0;
+            ResizableModalDialog.field_O = 0;
             ConfirmedEmailAvailabilityValidator.field_l = nj.a(45, var8, var7);
             if (!param1) {
               cn.field_d = null;

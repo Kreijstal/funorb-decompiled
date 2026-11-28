@@ -167,7 +167,7 @@ final class eg {
                 var2 = Runtime.getRuntime();
                 var4 = (Object[]) null;
                 var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
-                sj.field_bb = 1 + (int)(var3.longValue() / 1048576L);
+                ResizableModalDialog.field_bb = 1 + (int)(var3.longValue() / 1048576L);
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = decompiledCaughtException;
@@ -317,13 +317,13 @@ final class eg {
           }
           var6 = to.a(hj.field_S, eh.field_h, param0, 0);
           var2 = var6;
-          if (wi.field_ob != var6) {
-            if (null != wi.field_ob) {
-              wi.field_ob.field_p = mo.field_a;
+          if (ProgressDialog.field_ob != var6) {
+            if (null != ProgressDialog.field_ob) {
+              ProgressDialog.field_ob.field_p = mo.field_a;
             }
-            wi.field_ob = var6;
-            if (wi.field_ob != null) {
-              wi.field_ob.field_m = mo.field_a;
+            ProgressDialog.field_ob = var6;
+            if (ProgressDialog.field_ob != null) {
+              ProgressDialog.field_ob.field_m = mo.field_a;
             }
           }
           boolean decompiledFrameRemainder0 = true;
@@ -370,8 +370,8 @@ final class eg {
             pa.field_c = to.a(lc.field_c, AchievementIconEntry.field_k, param0, 0);
           }
           if (CombatState.field_r != 0 &&
-            null != wi.field_ob) {
-            wi.field_ob.a(1, CombatState.field_r);
+            null != ProgressDialog.field_ob) {
+            ProgressDialog.field_ob.a(1, CombatState.field_r);
             return;
           }
           return;

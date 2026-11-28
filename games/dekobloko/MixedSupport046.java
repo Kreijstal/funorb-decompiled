@@ -5,7 +5,7 @@ final class MixedSupport046 {
     static String stringState0195;
     static boolean booleanState0052;
     static String stringState0196;
-    static MixedSupport080 mixedSupport080State0001;
+    static FullscreenNoticeType mixedSupport080State0001;
     static RgbSprite[] rgbSpriteArrayState0015;
     static int integerState0250;
     static String stringState0197;
@@ -144,7 +144,7 @@ final class MixedSupport046 {
     static {
         stringState0195 = "You need a rating of <%1> to play with the current options.";
         stringState0196 = "Spectate";
-        mixedSupport080State0001 = new MixedSupport080();
+        mixedSupport080State0001 = new FullscreenNoticeType();
         stringState0197 = "Fullscreen mode was cancelled after a delay of 10 seconds. If you were unable to accept fullscreen mode during this time, there may be a problem with your configuration. You could try restarting your browser and trying again.";
         stringState0198 = "This game option is not available in rated games.";
     }

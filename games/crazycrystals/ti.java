@@ -22,7 +22,7 @@ final class ti extends rd {
             var3 = (CharSequence) null;
             ti.a(92, (CharSequence) null);
           }
-          stackIn_3_0 = ud.a(param1, 10, (byte) -76, true);
+          stackIn_3_0 = ContentTransitionDialog.a(param1, 10, (byte) -76, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -51,7 +51,7 @@ final class ti extends rd {
           if (param0) {
             field_j = (String) null;
           }
-          ph.a(100, (byte) 107, param1, param4);
+          RegistrationAgreementPane.a(100, (byte) 107, param1, param4);
           stackIn_3_0 = IsaacRandom.field_g;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

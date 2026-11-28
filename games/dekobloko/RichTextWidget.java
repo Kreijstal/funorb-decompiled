@@ -36,7 +36,7 @@ class RichTextWidget extends InteractiveComponent {
 
     final static void performAction1363(boolean booleanArgument1, byte byteArgument2) {
         if (BucketBoard.booleanState0109) {
-          MixedSupport051.renderingSupport007State0005 = IterableNodeCollection.computeRenderingSupport0071657(MixedSupport063.integerArrayState0111, booleanArgument1, !UiComponentPart012.booleanState0059 ? 1 : 2, -104);
+          MixedSupport051.renderingSupport007State0005 = IterableNodeCollection.computeRenderingSupport0071657(MixedSupport063.integerArrayState0111, booleanArgument1, !ProgressMessageDialog.booleanState0059 ? 1 : 2, -104);
           return;
         }
         if (SceneWidgetPart007.booleanState0114) {
@@ -44,7 +44,7 @@ class RichTextWidget extends InteractiveComponent {
           return;
         }
         if (MixedSupport043.booleanState0048) {
-          MixedSupport007.renderingSupport007State0001 = UiComponentPart014.computeRenderingSupport0070696((byte) -108, booleanArgument1);
+          MixedSupport007.renderingSupport007State0001 = FullscreenStatusDialog.computeRenderingSupport0070696((byte) -108, booleanArgument1);
           return;
         }
         if (LoginPanel.booleanState0066) {

@@ -25,7 +25,7 @@ final class sl {
               var3_int = 1;
               il.field_e = false;
             }
-            sa.a(-26, vb.b((byte) -27), fc.a(-1), oi.field_H, var3_int != 0);
+            sa.a(-26, vb.b((byte) -27), fc.a(-1), DialogMessagePane.field_H, var3_int != 0);
           } else {
             if (!sl.a((byte) -40)) {
               SoftwareRasterizer.clearRaster();

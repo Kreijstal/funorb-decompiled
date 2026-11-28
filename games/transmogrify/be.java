@@ -341,7 +341,7 @@ final class be extends ih {
         if (param0 != 71) {
           field_q = -78;
         }
-        if (bi.field_L < 2) {
+        if (ResizableModalDialog.field_L < 2) {
           return 0;
         }
         if (0 == NodeHashTableIterator.field_f) {

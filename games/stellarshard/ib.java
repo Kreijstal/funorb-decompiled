@@ -107,13 +107,13 @@ abstract class ib {
         int var3;
         var3 = stellarshard.field_B;
         if (gh.field_c != 0) {
-          var2 = this.a((byte) 59, oc.field_e, di.field_b);
+          var2 = this.a((byte) 59, oc.field_e, FullscreenNoticeType.field_b);
           this.field_l = var2;
           if (var2 == -1) {
             this.field_f = false;
           } else {
             this.field_f = true;
-            this.a(gh.field_c, di.field_b, (byte) 8, var2, oc.field_e - this.field_b - var2 * this.field_a, false);
+            this.a(gh.field_c, FullscreenNoticeType.field_b, (byte) 8, var2, oc.field_e - this.field_b - var2 * this.field_a, false);
           }
         } else {
           if (0 == fb.field_n) {

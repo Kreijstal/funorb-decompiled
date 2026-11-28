@@ -33,7 +33,7 @@ final class qk extends kg {
           if (param0 < 0) {
             var8_int = 127;
           } else {
-            var8_int = ll.field_e[param0][param6][param3];
+            var8_int = FullscreenNoticeType.field_e[param0][param6][param3];
           }
           var9 = param1 - param7;
           var10 = param2 - param5;
@@ -127,17 +127,17 @@ final class qk extends kg {
 
     final static void d(byte param0) {
         if (null != IntrusiveNode.field_c) {
-          IntrusiveNode.field_c.o(77);
+          IntrusiveNode.field_c.closeDialog(77);
         }
         m.field_j = new DisplayNameSelectionPanel();
         if (param0 < -43) {
-          LabeledWidgetContainer.field_K.c(0, m.field_j);
+          LabeledWidgetContainer.field_K.replaceContent(0, m.field_j);
           return;
         }
     }
 
     final static void a(boolean param0, int param1) {
-        ll.a(param1, true, param0);
+        FullscreenNoticeType.a(param1, true, param0);
     }
 
     public static void clearStaticReferences(boolean param0) {

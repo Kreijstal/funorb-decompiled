@@ -271,7 +271,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
                   var21Lifetime3 = 128;
                 }
                 if (0 < var21Lifetime3) {
-                  jh.a(uh.field_i * var21Lifetime3 / 128, (byte) 120, 41, TextInputField.field_V, 5);
+                  FullscreenStatusDialog.a(uh.field_i * var21Lifetime3 / 128, (byte) 120, 41, TextInputField.field_V, 5);
                   return;
                 }
               }
@@ -286,7 +286,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
                     var16 = 128;
                   }
                   if (var16 > 0) {
-                    jh.a(var16 * uh.field_i / 256, (byte) 51, 46, TextInputField.field_V, 5);
+                    FullscreenStatusDialog.a(var16 * uh.field_i / 256, (byte) 51, 46, TextInputField.field_V, 5);
                   }
                 }
                 var16_double = 1.25;
@@ -402,7 +402,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
           cf.field_u = DelayedPacket.loadNamedRgbSprites(param3, 113, "commonui", "validation");
           AlphaWidgetContainer.field_G = (BitmapFont) ((Object) th.a(param3, -107, "arezzo12", param1, "commonui"));
           jd.field_s = (BitmapFont) ((Object) th.a(param3, 25, "arezzo14", param1, "commonui"));
-          pe.field_eb = (BitmapFont) ((Object) th.a(param3, 9, "arezzo14bold", param1, "commonui"));
+          ProgressDialog.field_eb = (BitmapFont) ((Object) th.a(param3, 9, "arezzo14bold", param1, "commonui"));
           var17 = new RgbSprite(param2.getFileByName("", "button.gif", param0 ^ 0), (java.awt.Component) ((Object) GameAppletShell.field_h));
           qm.a("commonui", 0, "dropdown", param3);
           var5 = sg.a(true, "commonui", param3, "screen_options");

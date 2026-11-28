@@ -40,7 +40,7 @@ final class h extends InteractiveWidget {
               JavaScriptBridge.evaluate(param0, "document.cookie=\"" + var5Lifetime4 + "\"", -12300);
             } catch (Throwable throwable) {
             }
-            tj.a(true, param0);
+            GuestPlayConfirmationForm.a(true, param0);
           } catch (RuntimeException runtimeException) {
             throw ma.wrapException((Throwable) ((Object) runtimeException), "h.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }

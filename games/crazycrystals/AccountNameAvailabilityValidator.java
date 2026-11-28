@@ -146,28 +146,28 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
     }
 
     final static void e(byte param0) {
-        if (ph.field_E == null) {
+        if (RegistrationAgreementPane.field_E == null) {
           return;
         }
-        fq.a(-32, ph.field_E);
-        ph.field_E.exitFullscreen(ResultScene.field_a, (byte) -92);
-        ph.field_E = null;
+        fq.a(-32, RegistrationAgreementPane.field_E);
+        RegistrationAgreementPane.field_E.exitFullscreen(ResultScene.field_a, (byte) -92);
+        RegistrationAgreementPane.field_E = null;
         if (ne.field_f != null) {
           ne.field_f.a((byte) 96);
           if (param0 != -23) {
             field_i = (String) null;
-            jd.field_D.requestFocus();
+            DialogMessagePane.field_D.requestFocus();
             return;
           }
-          jd.field_D.requestFocus();
+          DialogMessagePane.field_D.requestFocus();
           return;
         }
         if (param0 == -23) {
-          jd.field_D.requestFocus();
+          DialogMessagePane.field_D.requestFocus();
           return;
         }
         field_i = (String) null;
-        jd.field_D.requestFocus();
+        DialogMessagePane.field_D.requestFocus();
     }
 
     static {

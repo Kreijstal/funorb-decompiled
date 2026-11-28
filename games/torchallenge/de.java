@@ -3,7 +3,7 @@
  */
 final class de {
     static Sprite field_a;
-    static ll field_b;
+    static FullscreenNoticeType field_b;
     static boolean[][] field_c;
     static int field_d;
 
@@ -139,7 +139,7 @@ final class de {
         int var8Lifetime1;
         var9 = TorChallenge.field_F ? 1 : 0;
         try {
-          var1_int = nh.field_hb.length;
+          var1_int = FullscreenStatusDialog.field_hb.length;
           if (TextFieldValidator.field_j >= var1_int) {
             return;
           }
@@ -147,7 +147,7 @@ final class de {
           if (!var2[a.field_c]) {
             return;
           }
-          var3 = nh.field_hb[TextFieldValidator.field_j];
+          var3 = FullscreenStatusDialog.field_hb[TextFieldValidator.field_j];
           var4 = we.field_l[TextFieldValidator.field_j];
           var5 = 200;
           var6 = var4 * var5;
@@ -338,7 +338,7 @@ final class de {
     static {
         field_a = null;
         field_c = new boolean[][]{new boolean[]{true, true, true}, new boolean[]{true, true, true}, new boolean[]{true, true, true}, new boolean[]{true, true, true}, new boolean[]{true, true, true}, new boolean[]{true, true, false}, new boolean[]{false, false, false}, new boolean[]{false, false, false}, new boolean[]{false}, new boolean[]{false}};
-        field_b = new ll();
+        field_b = new FullscreenNoticeType();
         field_d = 0;
     }
 }

@@ -76,7 +76,7 @@ final class ej {
             return;
           }
           BufferedRandomAccessFile.a(0, hf.field_e[var2]);
-          lk.field_D.field_k = false;
+          StripedProgressWidget.field_D.field_k = false;
           si.field_y.field_k = true;
           EditableTextField.field_U = false;
           AwtRasterBuffer.b((byte) 84);
@@ -104,7 +104,7 @@ final class ej {
     }
 
     final static void a(int param0) {
-        ak.field_a.d(new rb(), 26034);
+        ak.field_a.replaceContent(new GuestPlayConfirmationForm(), 26034);
         if (param0 != 16) {
           ej.a(17);
         }

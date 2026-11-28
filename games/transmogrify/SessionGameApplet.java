@@ -63,7 +63,7 @@ abstract class SessionGameApplet extends GameApplet {
                                 EditableTextField.n(82);
                                 return;
                               }
-                              d.a((Throwable) null, -110, "MGS1: " + ik.q(48));
+                              d.a((Throwable) null, -110, "MGS1: " + ProgressMessageDialog.q(48));
                               pc.a(1);
                               return;
                             }
@@ -91,7 +91,7 @@ abstract class SessionGameApplet extends GameApplet {
           }
           return;
         }
-        d.a((Throwable) null, 73, "MGS2: " + ik.q(48));
+        d.a((Throwable) null, 73, "MGS2: " + ProgressMessageDialog.q(48));
         pc.a(1);
         return;
     }
@@ -143,7 +143,7 @@ abstract class SessionGameApplet extends GameApplet {
           this.b(false);
         }
         if (!pa.b(-47)) {
-          if (bi.field_L >= 10) {
+          if (ResizableModalDialog.field_L >= 10) {
             if (!ki.b(true)) {
               ga.a((byte) 94);
             } else {
@@ -179,7 +179,7 @@ abstract class SessionGameApplet extends GameApplet {
         q.field_d = param0;
         BoundedRandomAccessFile.field_d = param7;
         this.c(true);
-        rf.q(param1 ^ param1);
+        StandardContentDialog.q(param1 ^ param1);
     }
 
     final void a(String param0, boolean param1, int param2) {
@@ -465,7 +465,7 @@ abstract class SessionGameApplet extends GameApplet {
         }
         if (tb.field_a != -1 &&
           tb.field_a != 0) {
-          if (bi.field_L >= 10) {
+          if (ResizableModalDialog.field_L >= 10) {
             if (10 <= AlphaWidgetContainer.field_y) {
               je.a(-11);
               if (3 == tb.field_a) {
@@ -522,11 +522,11 @@ abstract class SessionGameApplet extends GameApplet {
           !ValidatedTextField.e(false)) {
           DropTargetWidgetContainer.field_A = false;
         }
-        if (0 == bi.field_L &&
+        if (0 == ResizableModalDialog.field_L &&
           LetterTile.e(31)) {
-          bi.field_L = 1;
+          ResizableModalDialog.field_L = 1;
         }
-        if (bi.field_L == 1) {
+        if (ResizableModalDialog.field_L == 1) {
           if (NodeHashTableIterator.field_f != 0) {
             hg.field_a = MatchingFieldValidator.a((byte) -82, uh.field_q);
           }
@@ -534,10 +534,10 @@ abstract class SessionGameApplet extends GameApplet {
           wi.field_e = SocketConnector.a(true, (byte) 77, 1, q.field_d, false);
           DelayedPcmStream.field_n = SocketConnector.a(true, (byte) 77, 1, rd.field_a, false);
           AccountNameAvailabilityValidator.field_k = RasterBuffer.field_c;
-          bi.field_L = 2;
+          ResizableModalDialog.field_L = 2;
           field_y = wi.field_e;
         }
-        if (2 == bi.field_L) {
+        if (2 == ResizableModalDialog.field_L) {
           if (null != hg.field_a &&
             hg.field_a.ensureIndexLoaded((byte) -117)) {
             if (hg.field_a.hasGroupName((byte) -120, "")) {
@@ -551,10 +551,10 @@ abstract class SessionGameApplet extends GameApplet {
             }
           }
           if (null == hg.field_a) {
-            bi.field_L = 3;
+            ResizableModalDialog.field_L = 3;
           }
         }
-        if (bi.field_L == 3 &&
+        if (ResizableModalDialog.field_L == 3 &&
           ud.a(DelayedPcmStream.field_n, true, RasterBuffer.field_c, wi.field_e) &&
           GzipDecompressor.a(DelayedPcmStream.field_n, (byte) -109)) {
           BufferedSocket.e(0);
@@ -583,31 +583,31 @@ abstract class SessionGameApplet extends GameApplet {
           DelayedPcmStream.field_n = null;
           gh.a((java.applet.Applet) (this), (byte) -112);
           el.b(-6491);
-          bi.field_L = 10;
+          ResizableModalDialog.field_L = 10;
         }
-        if (10 == bi.field_L) {
+        if (10 == ResizableModalDialog.field_L) {
           if (NodeHashTableIterator.field_f != 0) {
             nk.field_d = MatchingFieldValidator.a((byte) -82, BoundedRandomAccessFile.field_d);
           }
-          bi.field_L = 11;
+          ResizableModalDialog.field_L = 11;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (bi.field_L == 11) {
+        if (ResizableModalDialog.field_L == 11) {
           if (null != nk.field_d && (!nk.field_d.ensureIndexLoaded((byte) -122) ||
             !nk.field_d.tryLoadAllGroups(32031))) {
             vf.a((byte) -122, 0.0f, u.a(ByteStorage.field_c, od.field_h, nk.field_d, true));
             decompiledFrameRemainder0 = false;
           }
           else {
-            bi.field_L = 12;
+            ResizableModalDialog.field_L = 12;
             IntrusiveNode.field_a = true;
           }
         }
-        if (12 == bi.field_L &&
+        if (12 == ResizableModalDialog.field_L &&
           !IntrusiveNode.field_a) {
-          bi.field_L = 13;
+          ResizableModalDialog.field_L = 13;
         }
-        if (13 == bi.field_L) {
+        if (13 == ResizableModalDialog.field_L) {
           var3Lifetime2 = 1;
           if (null != kh.field_c) {
             stackIn_138_0 = (!kh.field_c.a(param0 ^ 10020)) ? 0 : 1;
@@ -615,7 +615,7 @@ abstract class SessionGameApplet extends GameApplet {
             vf.a((byte) -125, kh.field_c.field_c, kh.field_c.field_a);
           }
           if (var3Lifetime2 != 0) {
-            bi.field_L = 20;
+            ResizableModalDialog.field_L = 20;
           }
         }
         if (!param1 &&
@@ -706,14 +706,14 @@ abstract class SessionGameApplet extends GameApplet {
                   oi.field_i = ac.field_j;
                   BoundedRandomAccessFile.d(-4690);
                   AlphaWidgetContainer.field_y = 10;
-                  ge.field_x = false;
+                  RegistrationAgreementPane.field_x = false;
                 }
               }
             }
           }
           if (4 == var4) {
             if (!wd.field_g) {
-              ge.field_x = true;
+              RegistrationAgreementPane.field_x = true;
               AlphaWidgetContainer.field_y = 10;
             } else {
               ki.a((byte) 3, ha.b(75));

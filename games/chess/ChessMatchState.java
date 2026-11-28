@@ -56,7 +56,7 @@ final class ChessMatchState {
           }
           var1[var2] = new RgbSprite(cd.field_p, MouseWheelInput.field_a, be.field_a[var2], FullscreenFocusCanvas.field_c[var2], wm.field_b[var2], b.field_c[var2], var5);
         }
-        ch.k(4210752);
+        ProgressDialog.k(4210752);
         return var1;
     }
 

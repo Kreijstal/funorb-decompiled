@@ -111,7 +111,7 @@ final class IsaacCipher {
           if (param5 == null) {
             var8.writeShort(param4, 119);
           } else {
-            rm.a(var8, param5, param0 ^ 16701600);
+            StripedProgressWidget.a(var8, param5, param0 ^ 16701600);
           }
           var8.backpatchByteLength(-var7 + var8.position, -1);
         } catch (RuntimeException runtimeException) {
@@ -255,7 +255,7 @@ final class IsaacCipher {
           byte[] var2 = (byte[]) null;
           IsaacCipher.a((byte[]) null, 98, 120);
         }
-        return rm.field_M;
+        return StripedProgressWidget.field_M;
     }
 
     public static void clearStaticReferences(byte param0) {

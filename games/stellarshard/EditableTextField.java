@@ -319,10 +319,10 @@ class EditableTextField extends InteractiveWidget {
           var3 = var10.readUnsignedByte(4);
           var10.j(8);
           e.field_d = uh.a(var10, -1);
-          sj.field_B = new n[var3];
+          RegistrationAgreementPane.field_B = new n[var3];
           bi.field_s = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {
-            sj.field_B[var4] = ResourceArchive.decodeLogoMesh(16, var8);
+            RegistrationAgreementPane.field_B[var4] = ResourceArchive.decodeLogoMesh(16, var8);
           }
           var10.g((byte) 95);
           var9 = 0;
@@ -331,7 +331,7 @@ class EditableTextField extends InteractiveWidget {
             return;
           }
           while (var9 < var3) {
-            var5 = sj.field_B[var9];
+            var5 = RegistrationAgreementPane.field_B[var9];
             var5.a(-12966, 6, 1, 6, 6);
             var5.b((byte) -53);
             var6 = new int[]{var5.field_F + var5.field_t >> 1, var5.field_x + var5.field_G >> 1, var5.field_u + var5.field_k >> 1};

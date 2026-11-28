@@ -53,7 +53,7 @@ final class de {
               if (!param5) {
                 stackIn_23_0 = vh.field_h[var12];
               } else {
-                stackIn_23_0 = se.field_B[var12];
+                stackIn_23_0 = GuestPlayConfirmationForm.field_B[var12];
               }
               var13 = stackIn_23_0;
               if (var7_int >= var13) {

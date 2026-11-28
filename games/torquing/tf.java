@@ -56,7 +56,7 @@ final class tf {
           lp.field_e = new boolean[ti.field_g];
           vo.field_b = new int[ti.field_g];
           var17.position = -(8 * ti.field_g) - 7 + param1.length;
-          fm.field_E = var17.readUnsignedShort(7088);
+          GuestPlayConfirmationForm.field_E = var17.readUnsignedShort(7088);
           rh.field_d = var17.readUnsignedShort(7088);
           var3 = (255 & var17.readUnsignedByte((byte) -101)) + 1;
           if (param0 < 101) {

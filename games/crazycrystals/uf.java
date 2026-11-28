@@ -67,7 +67,7 @@ final class uf {
         }
         this.field_j = SingleChildWidgetContainer.field_u;
         this.field_h = fb.field_b;
-        this.field_d = na.field_kb;
+        this.field_d = ProgressMessageDialog.field_kb;
         this.field_f = lj.field_b;
         this.field_b = CipherPacketBuffer.field_s;
         this.field_g = KeyboardInputHandler.field_d;

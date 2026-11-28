@@ -64,7 +64,7 @@ final class ca {
         int var5 = 0;
         try {
           int var3_int = 112 / ((11 - param2) / 36);
-          var4 = pg.field_fb;
+          var4 = StandardContentDialog.field_fb;
           var4.f(param0, 950);
           var4.position = var4.position + 1;
           var5 = var4.position;
@@ -93,7 +93,7 @@ final class ca {
           if (param0 < 84) {
             field_a = (String) null;
           }
-          stackIn_3_0 = nc.field_y.getFileByName("", param1, (byte) -12);
+          stackIn_3_0 = StripedProgressWidget.field_y.getFileByName("", param1, (byte) -12);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

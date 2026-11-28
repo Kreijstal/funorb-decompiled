@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MouseInput implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
-    static ae field_b;
+    static FullscreenNoticeType field_b;
     static String field_a;
 
     final static void a(java.awt.Component param0, byte param1) {
@@ -30,7 +30,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             pg.field_g = 0;
             hj.field_d = param0.getX();
             wj.field_a = param0.getY();
-            vj.field_Y = true;
+            FullscreenStatusDialog.field_Y = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -70,7 +70,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             var2_int = param0.getModifiers();
             if ((var2_int & 16) == 0) {
             }
-            vj.field_Y = true;
+            FullscreenStatusDialog.field_Y = true;
             if ((var2_int & 8) == 0) {
             }
             if ((4 & var2_int) != 0) {
@@ -113,7 +113,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           if (null != rc.field_d) {
             pg.field_g = 0;
             DualLinkNode.field_i = 0;
-            vj.field_Y = true;
+            FullscreenStatusDialog.field_Y = true;
             var2_int = param0.getModifiers();
             if ((16 & var2_int) != 0) {
             }
@@ -291,7 +291,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             pg.field_g = 0;
             hj.field_d = param0.getX();
             wj.field_a = param0.getY();
-            vj.field_Y = true;
+            FullscreenStatusDialog.field_Y = true;
           }
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "wk.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
@@ -380,7 +380,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             pg.field_g = 0;
             hj.field_d = -1;
             wj.field_a = -1;
-            vj.field_Y = true;
+            FullscreenStatusDialog.field_Y = true;
           }
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "wk.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
@@ -398,7 +398,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             pg.field_g = 0;
             hj.field_d = param0.getX();
             wj.field_a = param0.getY();
-            vj.field_Y = true;
+            FullscreenStatusDialog.field_Y = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -426,7 +426,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
     }
 
     static {
-        field_b = new ae();
+        field_b = new FullscreenNoticeType();
         field_a = "Create";
     }
 }

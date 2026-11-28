@@ -219,7 +219,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
             throw new IllegalStateException();
           }
           if (null != kb.field_a) {
-            kb.field_a.t(20252);
+            kb.field_a.closeDialog(20252);
           }
           if (param0 <= 45) {
             return;
@@ -227,8 +227,8 @@ final class SecondaryNodeDequeIterator implements Iterator {
           var1 = uj.a(-119);
           LevelView.field_y = new LoginPanel(var1, (String) null, true, false, false);
           AlphaWidgetContainer.field_E.showDialog((byte) -120, GameApplet.field_g);
-          GameApplet.field_g.b(LevelView.field_y, -82);
-          GameApplet.field_g.o(0);
+          GameApplet.field_g.replaceContent(LevelView.field_y, -82);
+          GameApplet.field_g.finishResize(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

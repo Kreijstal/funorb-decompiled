@@ -14,7 +14,7 @@ final class jc {
         int var1 = 0;
         int var1Lifetime1;
         if (ai.field_i == -1) {
-          if (!jj.a(1, (byte) -78)) {
+          if (!ProgressDialog.a(1, (byte) -78)) {
             return false;
           }
           ai.field_i = e.field_c.readUnsignedByte(32);
@@ -22,13 +22,13 @@ final class jc {
         }
         if (ai.field_i != -2) {
           var1 = -122 / ((param0 + 9) / 57);
-          return jj.a(ai.field_i, (byte) 43);
+          return ProgressDialog.a(ai.field_i, (byte) 43);
         }
-        if (jj.a(2, (byte) -111)) {
+        if (ProgressDialog.a(2, (byte) -111)) {
           ai.field_i = e.field_c.readUnsignedShort((byte) 25);
           e.field_c.position = 0;
           var1Lifetime1 = -122 / ((param0 + 9) / 57);
-          return jj.a(ai.field_i, (byte) 43);
+          return ProgressDialog.a(ai.field_i, (byte) 43);
         }
         return false;
     }

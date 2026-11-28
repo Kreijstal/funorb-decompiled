@@ -6,7 +6,7 @@ final class nj extends DefaultTextWidgetRenderer {
     private ai field_s;
     static int field_t;
     private ai[] field_y;
-    static sb field_w;
+    static StandardContentDialog field_w;
     static of field_u;
     static String field_z;
     static ci field_x;
@@ -177,7 +177,7 @@ final class nj extends DefaultTextWidgetRenderer {
     final static void a(int param0, String param1, float param2) {
         try {
           ka.field_o = param2;
-          ih.field_T = param1;
+          NumericDateInputWidget.field_T = param1;
           if (param0 != -20) {
             field_t = -89;
           }
@@ -193,7 +193,7 @@ final class nj extends DefaultTextWidgetRenderer {
         field_u = null;
         field_x = null;
         if (param0 != -10406) {
-          field_w = (sb) null;
+          field_w = (StandardContentDialog) null;
         }
     }
 
@@ -425,7 +425,7 @@ final class nj extends DefaultTextWidgetRenderer {
           return;
         }
         try {
-          field_w = new sb(jh.field_e, ResourceArchive.field_b);
+          field_w = new StandardContentDialog(jh.field_e, ResourceArchive.field_b);
           jh.field_e.showDialog(field_w, (byte) -75);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "nj.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

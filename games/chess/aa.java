@@ -1398,7 +1398,7 @@ final class aa {
                   if (!this.field_e.d((byte) 111)) {
                     break regionExit2;
                   }
-                  if (rm.field_R != null) {
+                  if (StripedProgressWidget.field_R != null) {
                     b.a(true);
                     if (var11 == 0) {
                       break regionExit2;
@@ -1572,7 +1572,7 @@ final class aa {
                   if (!this.field_e.d((byte) 116)) {
                     break regionExit2;
                   }
-                  if (rm.field_R != null) {
+                  if (StripedProgressWidget.field_R != null) {
                     b.a(true);
                   }
                   dh.a(ArrayWidgetContainer.i(81), true);
@@ -1947,7 +1947,7 @@ final class aa {
           if (-1 != var13Lifetime1) {
             var21.drawCentred("<u=000001>" + da.field_m[var13Lifetime1] + "</u>", param2 + 320, 210, 1, -1);
             if (PcmOutputWorker.a(param0 + 18207)) {
-              jj.field_b.drawCentred(bf.field_N, 320 + param2, var11, 1, -1);
+              jj.field_b.drawCentred(DateInputWidget.field_N, 320 + param2, var11, 1, -1);
             }
             stackIn_72_0 = ((1 << var13Lifetime1 & var9) == 0) ? 0 : 1;
             var14_int = stackIn_72_0;
@@ -2121,7 +2121,7 @@ final class aa {
           var9Lifetime1 = stackIn_17_0;
           if (!PcmOutputWorker.a(-3)) {
             if (ce.field_b == null) {
-              ce.field_b = ge.a(true, 7, 0, 10);
+              ce.field_b = FullscreenStatusDialog.a(true, 7, 0, 10);
             }
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
@@ -2132,7 +2132,7 @@ final class aa {
             }
             if (decompiledFrameRemainder0) {
               if (null == ce.field_b.field_t) {
-                var11_ref_String = ii.field_O;
+                var11_ref_String = GuestPlayConfirmationForm.field_O;
                 decompiledFrameRemainder0 = (var29 != 0);
               }
               if (decompiledFrameRemainder0) {
@@ -2241,10 +2241,10 @@ final class aa {
             var12 = 100 + var31.field_C + 140;
             var31.drawCentred(var11_ref_String, param1 + 330, var12, 1, -1);
             if (var29 != 0) {
-              v.field_j.drawCentred(bf.field_N, param1 + 320, 240, 1, -1);
+              v.field_j.drawCentred(DateInputWidget.field_N, param1 + 320, 240, 1, -1);
             }
           } else {
-            v.field_j.drawCentred(bf.field_N, param1 + 320, 240, 1, -1);
+            v.field_j.drawCentred(DateInputWidget.field_N, param1 + 320, 240, 1, -1);
           }
           var10 = new int[]{1, 16777215, 3100495, 3100495, 3100495};
           var11 = 4;
@@ -2341,7 +2341,7 @@ final class aa {
           if (var5_int != 0) {
             if (var5_int == 1 &&
               var15 == 0) {
-              var2_ref = vn.field_Bb;
+              var2_ref = ProgressMessageDialog.field_Bb;
               decompiledFrameRemainder2 = false;
             }
             else {

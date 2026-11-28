@@ -38,7 +38,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
           if (param1 >= -82) {
             field_A = (String) null;
           }
-          kg.a(TextLineMetrics.field_d, lh.field_e, IntrusiveDeque.field_h, -9089);
+          FullscreenNoticeType.a(TextLineMetrics.field_d, lh.field_e, IntrusiveDeque.field_h, -9089);
           oh.a(0, (byte) 63, 0, param0);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "qi.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -233,7 +233,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
             if (!this.field_F) {
               stackIn_18_1 = null;
               stackIn_18_2 = null;
-              stackIn_18_3 = nf.field_E;
+              stackIn_18_3 = ResizableModalDialog.field_E;
             } else {
               stackIn_18_1 = null;
               stackIn_18_2 = null;

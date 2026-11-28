@@ -13,15 +13,15 @@ final class bga extends IntrusiveNode {
 
     final static void c(byte param0) {
         if (null != oq.field_b) {
-          oq.field_b.p(-79);
+          oq.field_b.closeDialog(-79);
         }
         MartyrEvent.field_q = new DisplayNameSelectionPanel();
         if (param0 < -4) {
-          kka.field_l.e(MartyrEvent.field_q, 33);
+          kka.field_l.replaceContent(MartyrEvent.field_q, 33);
           return;
         }
         field_j = (Sprite[]) null;
-        kka.field_l.e(MartyrEvent.field_q, 33);
+        kka.field_l.replaceContent(MartyrEvent.field_q, 33);
     }
 
     public static void releaseStatics(boolean param0) {

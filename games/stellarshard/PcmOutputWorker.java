@@ -4,7 +4,7 @@
 final class PcmOutputWorker implements Runnable {
     volatile AudioMixer[] field_e;
     volatile boolean field_b;
-    static ql field_d;
+    static ProgressDialog field_d;
     PlatformTaskDispatcher field_h;
     static java.awt.Color field_a;
     volatile boolean field_c;

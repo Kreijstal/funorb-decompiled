@@ -68,7 +68,7 @@ final class sd {
     final static void a(byte param0) {
         PcmResampler.field_c.closeAllDialogs(300);
         if (null == af.field_g) {
-          af.field_g = new tf(PcmResampler.field_c, SpriteGeometry.field_u);
+          af.field_g = new ProgressDialog(PcmResampler.field_c, SpriteGeometry.field_u);
           PcmResampler.field_c.showDialog((byte) -95, (UiWidget) (af.field_g));
           if (param0 != -124) {
             field_e = 33;

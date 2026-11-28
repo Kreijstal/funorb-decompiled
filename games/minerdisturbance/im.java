@@ -41,7 +41,7 @@ final class im {
         int var7 = 0;
         var7 = MinerDisturbance.field_ab;
         try {
-          if (qd.field_Q != pb.field_c) {
+          if (GuestPlayConfirmationForm.field_Q != pb.field_c) {
             return false;
           }
           var2_long = sf.correctedCurrentTimeMillis((byte) 116);
@@ -209,7 +209,7 @@ final class im {
           var17.position = -2 + param1.length;
           sc.field_d = var17.readUnsignedShort(-120);
           ClientException.field_b = new byte[sc.field_d][];
-          jk.field_gb = new boolean[sc.field_d];
+          ContentTransitionDialog.field_gb = new boolean[sc.field_d];
           oc.field_e = new int[sc.field_d];
           bg.field_d = new int[sc.field_d];
           ng.field_e = new int[sc.field_d];
@@ -298,7 +298,7 @@ final class im {
                 }
               }
             }
-            jk.field_gb[var4Lifetime5] = var10 != 0;
+            ContentTransitionDialog.field_gb[var4Lifetime5] = var10 != 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

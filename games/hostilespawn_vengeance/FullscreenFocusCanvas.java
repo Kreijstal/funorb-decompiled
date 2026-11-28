@@ -94,7 +94,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     }
 
     final static void a(int param0, boolean param1) {
-        if (wb.field_R > 0) {
+        if (ResizableModalDialog.field_R > 0) {
         }
         if (!param1) {
           MidiPcmStream.field_r = MidiPcmStream.field_r + param0;

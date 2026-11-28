@@ -81,14 +81,14 @@ class IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           AccountRegistrationPanel.a((java.awt.Component) ((Object) param1), (byte) 83);
-          ui.a((java.awt.Component) ((Object) param1), 122);
+          StandardContentDialog.a((java.awt.Component) ((Object) param1), 122);
           if (param0 >= -4) {
             field_f = 38;
           }
-          if (ui.field_pb == null) {
+          if (StandardContentDialog.field_pb == null) {
             return;
           }
-          ui.field_pb.detach((byte) 103, (java.awt.Component) ((Object) param1));
+          StandardContentDialog.field_pb.detach((byte) 103, (java.awt.Component) ((Object) param1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

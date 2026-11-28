@@ -11,12 +11,12 @@ final class di {
         int var1 = ef.a((byte) 30);
         int var2 = MouseWheelInput.c(param0 + 44845);
         if (param0 == -20667) {
-          AccountServiceResult.field_d.a(-q.field_d + MidiPcmStream.field_M, param0 + 20667, (q.field_d << 1) + var1, var2 + (InteractiveWidget.field_C << 1), -InteractiveWidget.field_C + rb.field_H);
+          AccountServiceResult.field_d.a(-q.field_d + MidiPcmStream.field_M, param0 + 20667, (q.field_d << 1) + var1, var2 + (InteractiveWidget.field_C << 1), -InteractiveWidget.field_C + GuestPlayConfirmationForm.field_H);
           PasswordValidator.e(-46);
           return;
         }
         di.resetStaticState(43);
-        AccountServiceResult.field_d.a(-q.field_d + MidiPcmStream.field_M, param0 + 20667, (q.field_d << 1) + var1, var2 + (InteractiveWidget.field_C << 1), -InteractiveWidget.field_C + rb.field_H);
+        AccountServiceResult.field_d.a(-q.field_d + MidiPcmStream.field_M, param0 + 20667, (q.field_d << 1) + var1, var2 + (InteractiveWidget.field_C << 1), -InteractiveWidget.field_C + GuestPlayConfirmationForm.field_H);
         PasswordValidator.e(-46);
     }
 

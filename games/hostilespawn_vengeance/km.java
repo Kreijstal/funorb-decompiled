@@ -102,10 +102,10 @@ final class km extends sd {
     final static void a(String param0, boolean param1, float param2, byte param3) {
         try {
           if (null == hj.field_t) {
-            hj.field_t = new pe(im.field_e, GameAppletShell.field_g);
+            hj.field_t = new ProgressDialog(im.field_e, GameAppletShell.field_g);
             im.field_e.showDialog(hj.field_t, 98);
           }
-          hj.field_t.a(param2, param1, 127, param0);
+          hj.field_t.setProgress(param2, param1, 127, param0);
           SoftwareRasterizer.clearRaster();
           if (param3 <= 122) {
             int[] var5 = (int[]) null;

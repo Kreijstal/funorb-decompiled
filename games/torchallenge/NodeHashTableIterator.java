@@ -80,20 +80,20 @@ final class NodeHashTableIterator implements Iterator {
             NodeHashTableIterator.b(109);
           }
           if (PcmOutputWorker.field_i == -1) {
-            if (!pe.a((byte) 81, 1)) {
+            if (!ProgressDialog.a((byte) 81, 1)) {
               return false;
             }
             PcmOutputWorker.field_i = id.field_b.readUnsignedByte(-116);
             id.field_b.position = 0;
           }
           if (PcmOutputWorker.field_i == -2) {
-            if (!pe.a((byte) 102, 2)) {
+            if (!ProgressDialog.a((byte) 102, 2)) {
               return false;
             }
             PcmOutputWorker.field_i = id.field_b.readUnsignedShort(false);
             id.field_b.position = 0;
           }
-          stackIn_18_0 = pe.a((byte) 75, PcmOutputWorker.field_i);
+          stackIn_18_0 = ProgressDialog.a((byte) 75, PcmOutputWorker.field_i);
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -112,7 +112,7 @@ final class rc {
           dc.field_a = 0;
           eg.field_b = 0;
           n.submittedWordCount = 0;
-          bi.field_J = 0;
+          ResizableModalDialog.field_J = 0;
           hi.field_a = 1;
           gk.field_e = 0;
           rb.field_a = 0;

@@ -29,10 +29,10 @@ final class AccountServiceResult {
         RuntimeException decompiledCaughtException = null;
         var3 = CrazyCrystals.field_B;
         try {
-          var4 = (ca) (gn.field_Q.beginForward(32073));
+          var4 = (ca) (FullscreenStatusDialog.field_Q.beginForward(32073));
           while (var4 != null) {
             NameSuggestionsPanel.a(param0, (byte) -99, var4);
-            var4 = (ca) (gn.field_Q.nextForward(false));
+            var4 = (ca) (FullscreenStatusDialog.field_Q.nextForward(false));
           }
           var2 = pm.field_c.beginForward(32073);
           while (var2 != null) {

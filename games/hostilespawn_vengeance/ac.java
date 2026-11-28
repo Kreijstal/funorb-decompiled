@@ -126,7 +126,7 @@ final class ac {
                 } else {
                   if (var17.field_i == 1) {
                     var17.field_i = -1;
-                    VolumeRampingMidiPcmStream.field_ib[var15.field_h] = VolumeRampingMidiPcmStream.field_ib[var15.field_h] + te.field_F[var15.field_h];
+                    VolumeRampingMidiPcmStream.field_ib[var15.field_h] = VolumeRampingMidiPcmStream.field_ib[var15.field_h] + RegistrationAgreementPane.field_F[var15.field_h];
                     if (uj.field_l == 1) {
                       eh.field_c.playSample(TextInputField.field_V[40], 100, uh.field_i);
                     }
@@ -179,7 +179,7 @@ final class ac {
                                     gf.field_j = gf.field_j + 100;
                                   }
                                 } else {
-                                  jf.field_g = jf.field_g + 100;
+                                  FullscreenNoticeType.field_g = FullscreenNoticeType.field_g + 100;
                                 }
                               }
                             }
@@ -187,13 +187,13 @@ final class ac {
                             pl.field_l = true;
                           }
                         } else {
-                          eh.field_g = ba.a((byte) 114);
+                          eh.field_g = StripedProgressWidget.a((byte) 114);
                           eh.field_c.playSample(fg.field_b[20], 100, uh.field_i);
                         }
                       } else {
-                        eh.field_g = eh.field_g + ba.a((byte) 109) / 4;
-                        if (eh.field_g > ba.a((byte) 108)) {
-                          eh.field_g = ba.a((byte) 100);
+                        eh.field_g = eh.field_g + StripedProgressWidget.a((byte) 109) / 4;
+                        if (eh.field_g > StripedProgressWidget.a((byte) 108)) {
+                          eh.field_g = StripedProgressWidget.a((byte) 100);
                         }
                         eh.field_c.playSample(fg.field_b[19], 100, uh.field_i);
                       }
@@ -245,7 +245,7 @@ final class ac {
           de.c(param2 ^ 0);
           im.field_e.closeAllDialogs((byte) 32);
           ib.field_e = new LoginPanel(rf.field_e, (String) null, MatchingFieldValidator.field_o, param1, param0);
-          ke.field_s = new ta(im.field_e, ib.field_e);
+          ke.field_s = new StandardContentDialog(im.field_e, ib.field_e);
           im.field_e.showDialog(ke.field_s, param2 ^ -116);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "ac.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

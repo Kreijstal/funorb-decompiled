@@ -40,7 +40,7 @@ final class sc {
               if (lh.field_w) {
                 param2 = id.field_u;
               }
-              jj.field_a.a(-109, param0, param2);
+              jj.field_a.showResult(-109, param0, param2);
             }
             if (param0 != 256) {
               if (param0 == 10) {

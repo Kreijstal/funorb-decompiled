@@ -7,7 +7,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
     static ResultScene field_D;
     private ModalDialogHost field_E;
     boolean field_C;
-    static bf field_A;
+    static FullscreenNoticeType field_A;
 
     final UiWidget getFocusedChild(boolean param0) {
         UiWidget var2 = super.getFocusedChild(param0);
@@ -160,7 +160,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         int var4 = -89 % ((76 - param1) / 37);
     }
 
-    abstract void b(int param0, int param1, int param2);
+    abstract void drawDialogBackground(int param0, int param1, int param2);
 
     ModalDialog(ModalDialogHost param0, int param1, int param2) {
         super(-param1 + DraggableWidgetContainer.field_y >> 1, pk.field_c - param2 >> 1, param1, param2, (WidgetRenderer) null);
@@ -175,7 +175,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
 
     boolean advanceDialogAnimation(byte param0) {
         if (param0 != 8) {
-          this.b(39, -23, 119);
+          this.drawDialogBackground(39, -23, 119);
         }
         int var2 = this.getTargetAlpha(-124);
         int var3 = var2 - this.field_B;
@@ -238,7 +238,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           if (param3 != 0) {
             return;
           }
-          this.b(30, this.field_r + param2, this.field_j + param0);
+          this.drawDialogBackground(30, this.field_r + param2, this.field_j + param0);
           super.drawWidget(param0, (byte) -87, param2, param3);
           return;
         }
@@ -246,7 +246,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           hp.field_g = new RgbSprite(this.field_g, this.field_f);
           em.a((byte) 38, hp.field_g);
           SoftwareRasterizer.clearRaster();
-          this.b(30, 0, 0);
+          this.drawDialogBackground(30, 0, 0);
           super.drawWidget(-this.field_j - param0, (byte) -89, -this.field_r - param2, param3);
           lg.a(1);
           if (param1 < -12) {
@@ -259,7 +259,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           hp.field_g = new RgbSprite(this.field_g, this.field_f);
           em.a((byte) 38, hp.field_g);
           SoftwareRasterizer.clearRaster();
-          this.b(30, 0, 0);
+          this.drawDialogBackground(30, 0, 0);
           super.drawWidget(-this.field_j - param0, (byte) -89, -this.field_r - param2, param3);
           lg.a(1);
           if (param1 < -12) {
@@ -272,7 +272,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           hp.field_g = new RgbSprite(this.field_g, this.field_f);
           em.a((byte) 38, hp.field_g);
           SoftwareRasterizer.clearRaster();
-          this.b(30, 0, 0);
+          this.drawDialogBackground(30, 0, 0);
           super.drawWidget(-this.field_j - param0, (byte) -89, -this.field_r - param2, param3);
           lg.a(1);
           if (param1 < -12) {
@@ -283,7 +283,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         }
         em.a((byte) 38, hp.field_g);
         SoftwareRasterizer.clearRaster();
-        this.b(30, 0, 0);
+        this.drawDialogBackground(30, 0, 0);
         super.drawWidget(-this.field_j - param0, (byte) -89, -this.field_r - param2, param3);
         lg.a(1);
         if (param1 < -12) {
@@ -297,42 +297,42 @@ abstract class ModalDialog extends DequeWidgetContainer {
           field_D = (ResultScene) null;
           if (null == qe.field_g) {
             if (td.field_b == null) {
-              ck.m(0);
+              StandardContentDialog.m(0);
               return;
             }
-            td.field_b.i((byte) 32);
-            ck.m(0);
+            td.field_b.freezeNormalProgressAnimation((byte) 32);
+            StandardContentDialog.m(0);
             return;
           }
           qe.field_g.snapAndPruneDialogs(0);
           if (td.field_b != null) {
-            td.field_b.i((byte) 32);
-            ck.m(0);
+            td.field_b.freezeNormalProgressAnimation((byte) 32);
+            StandardContentDialog.m(0);
             return;
           }
-          ck.m(0);
+          StandardContentDialog.m(0);
           return;
         }
         if (null != qe.field_g) {
           qe.field_g.snapAndPruneDialogs(0);
           if (td.field_b == null) {
-            ck.m(0);
+            StandardContentDialog.m(0);
             return;
           }
-          td.field_b.i((byte) 32);
-          ck.m(0);
+          td.field_b.freezeNormalProgressAnimation((byte) 32);
+          StandardContentDialog.m(0);
           return;
         }
         if (td.field_b == null) {
-          ck.m(0);
+          StandardContentDialog.m(0);
           return;
         }
-        td.field_b.i((byte) 32);
-        ck.m(0);
+        td.field_b.freezeNormalProgressAnimation((byte) 32);
+        StandardContentDialog.m(0);
     }
 
     static {
         field_D = null;
-        field_A = new bf();
+        field_A = new FullscreenNoticeType();
     }
 }

@@ -63,7 +63,7 @@ final class DirectByteStorage extends ByteStorage {
           if (param0 != 2376) {
             field_g = (Sprite[]) null;
           }
-          tb.f((byte) -62);
+          ResizableModalDialog.f((byte) -62);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

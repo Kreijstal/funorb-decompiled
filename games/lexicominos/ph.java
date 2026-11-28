@@ -14,7 +14,7 @@ final class ph {
         try {
           if (param1 != null &&
             param1.length() >= MatchingFieldValidator.field_o &&
-            param1.length() <= oc.field_c) {
+            param1.length() <= FullscreenNoticeType.field_c) {
             if (param0 == 107) {
               return false;
             }
@@ -86,11 +86,11 @@ final class ph {
           return var2_ref_byte__;
         }
         if (param1 == 5000 &&
-          re.field_Z > 0) {
-          fieldTemp$4 = re.field_Z - 1;
-          re.field_Z = re.field_Z - 1;
+          ContentTransitionDialog.field_Z > 0) {
+          fieldTemp$4 = ContentTransitionDialog.field_Z - 1;
+          ContentTransitionDialog.field_Z = ContentTransitionDialog.field_Z - 1;
           var2_ref_byte__Lifetime1 = rb.field_c[fieldTemp$4];
-          rb.field_c[re.field_Z] = null;
+          rb.field_c[ContentTransitionDialog.field_Z] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (param1 == 30000 &&

@@ -34,12 +34,12 @@ final class aj {
           if (!vg.a(param1.type, -1)) {
             return -1;
           }
-          if (null != n.field_kb &&
+          if (null != ContentTransitionDialog.field_kb &&
             param1 != null &&
-            n.field_kb[param1.x][param1.y] != null) {
+            ContentTransitionDialog.field_kb[param1.x][param1.y] != null) {
             for (var3_int = 0; 8 > var3_int; var3_int++) {
-              if (param2 == n.field_kb[param1.x][param1.y][var3_int]) {
-                n.field_kb[param1.x][param1.y][var3_int] = -1;
+              if (param2 == ContentTransitionDialog.field_kb[param1.x][param1.y][var3_int]) {
+                ContentTransitionDialog.field_kb[param1.x][param1.y][var3_int] = -1;
               }
             }
             stackIn_19_0 = 1;
@@ -162,9 +162,9 @@ final class aj {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               ob.a(-33, var15);
               if (var6_intLifetime1 == 0) {
-                ImageProducerRasterBuffer.a(TextHotspotBounds.field_j, var6_intLifetime1, 27715, jf.field_sb, uc.field_U, ti.field_e);
+                ImageProducerRasterBuffer.a(TextHotspotBounds.field_j, var6_intLifetime1, 27715, StandardContentDialog.field_sb, uc.field_U, ti.field_e);
               } else {
-                ImageProducerRasterBuffer.a(TextHotspotBounds.field_j, var6_intLifetime1, param0 ^ 31088, jf.field_sb, uc.field_U, ti.field_e);
+                ImageProducerRasterBuffer.a(TextHotspotBounds.field_j, var6_intLifetime1, param0 ^ 31088, StandardContentDialog.field_sb, uc.field_U, ti.field_e);
               }
             }
             hl.a((byte) -44, var5);

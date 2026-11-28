@@ -28,7 +28,7 @@ final class fl extends IntrusiveNode {
     final static void a(boolean param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = bj.field_cb;
+        var1 = ContentTransitionDialog.field_cb;
         synchronized (var1) {
           wh.field_f = nd.field_l;
           qf.field_a = qf.field_a + 1;
@@ -78,7 +78,7 @@ final class fl extends IntrusiveNode {
             fl.a((int[]) null, -126L, 111, (String) null, (byte) 60);
           }
           vk.field_g = param2;
-          ij.field_c = param3;
+          FullscreenNoticeType.field_c = param3;
           var8 = (CharSequence) ((Object) param3);
           ec.field_f = ad.a(var8, -2);
           TextHotspotBounds.field_p = param1;

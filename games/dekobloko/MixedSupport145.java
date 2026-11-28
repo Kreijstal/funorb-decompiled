@@ -108,7 +108,7 @@ final class MixedSupport145 {
           if (integerLocal1 < integerLocal5) {
             integerLocal1 = integerLocal5;
           }
-          integerLocal6 = DefaultTextWidgetRenderer.renderingSupport009State0001.stringWidth(UiComponentPart033.stringState0623);
+          integerLocal6 = DefaultTextWidgetRenderer.renderingSupport009State0001.stringWidth(AccountCreationResultPanel.stringState0623);
           if (integerLocal6 > integerLocal1) {
             integerLocal1 = integerLocal6;
           }

@@ -437,7 +437,7 @@ final class SceneWidgetPart007 extends SceneWidget {
           this.sceneWidgetState0084 = new SceneWidget(0L, (SceneWidget) null);
           this.performAction1768(this.sceneWidgetState0084, -16834);
           if (stringArgument12 != null) {
-            this.sceneWidgetState0081 = new SceneWidget(0L, sceneWidgetArgument9, UiComponentPart023.stringState0423);
+            this.sceneWidgetState0081 = new SceneWidget(0L, sceneWidgetArgument9, StandardContentDialog.stringState0423);
             this.sceneWidgetState0081.integerState0916 = 1;
             this.sceneWidgetState0081.integerState0910 = 11184810;
             this.sceneWidgetState0084.performAction1768(this.sceneWidgetState0081, -16834);

@@ -317,7 +317,7 @@ final class la {
               stackIn_58_1 = 16709;
               stackIn_58_2 = var7_ref;
             }
-            tf.a(stackIn_58_0, stackIn_58_1, stackIn_58_2);
+            ProgressDialog.a(stackIn_58_0, stackIn_58_1, stackIn_58_2);
             if (var8 == 0) {
               return;
             }

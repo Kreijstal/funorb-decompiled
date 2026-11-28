@@ -166,7 +166,7 @@ final class fu extends AnimationNode {
           FoodShopPanel.field_g = FullHealEvent.a("lrg_button", param0, "basic", (byte) 126);
           BattleScreen.field_F = FullHealEvent.a("med_button", param0, "basic", (byte) -68);
           EventAnimation.field_r = FullHealEvent.a("small_button", param0, "basic", (byte) -17);
-          de.field_A = MidiNote.a("frame_tape", param0, "basic", 7);
+          StripedProgressWidget.field_A = MidiNote.a("frame_tape", param0, "basic", 7);
           bh.field_r = FullHealEvent.a("mag", param0, "basic", (byte) 62);
           cba.field_a = FullHealEvent.a("bag", param0, "basic", (byte) -105);
           gca.field_g = FullHealEvent.a("bag_full", param0, "basic", (byte) 106);

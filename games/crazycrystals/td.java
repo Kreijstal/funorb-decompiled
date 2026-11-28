@@ -5,7 +5,7 @@ final class td {
     static double[] field_c;
     static am field_e;
     static String field_a;
-    static kl field_b;
+    static ProgressDialog field_b;
     static int field_d;
 
     final static void a(float param0, String param1, boolean param2) {

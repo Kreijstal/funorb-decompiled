@@ -251,7 +251,7 @@ abstract class TextLayout {
             for (var8Lifetime1 = param5; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
               var9Lifetime1 = AccountNameAvailabilityValidator.field_o[var8Lifetime1];
               var10Lifetime1 = AccountNameAvailabilityValidator.field_o[1 + var8Lifetime1];
-              if (hl.a(param2, -122, var10Lifetime1, var9Lifetime1)) {
+              if (ContentTransitionDialog.a(param2, -122, var10Lifetime1, var9Lifetime1)) {
                 AccountNameAvailabilityValidator.field_o[var8Lifetime1] = var10Lifetime1;
                 AccountNameAvailabilityValidator.field_o[1 + var8Lifetime1] = var9Lifetime1;
               }

@@ -37,9 +37,9 @@ final class BirthDateTextFields extends BirthDateInput {
         }
         integerArgument1 = integerArgument1 + this.integerState0110;
         integerArgument4 = integerArgument4 + this.integerState0104;
-        this.performAction1273(integerArgument1, KeyboardInputHandler.stringState0356, integerArgument4, this.uiComponentPart028State0003, 0);
-        this.performAction1273(integerArgument1, FullscreenCanvas.stringState0454, integerArgument4, this.uiComponentPart028State0004, 0);
-        this.performAction1273(integerArgument1, MixedSupport099.stringState0419, integerArgument4, this.uiComponentPart028State0005, 0);
+        this.drawDateFieldLabel(integerArgument1, KeyboardInputHandler.stringState0356, integerArgument4, this.uiComponentPart028State0003, 0);
+        this.drawDateFieldLabel(integerArgument1, FullscreenCanvas.stringState0454, integerArgument4, this.uiComponentPart028State0004, 0);
+        this.drawDateFieldLabel(integerArgument1, MixedSupport099.stringState0419, integerArgument4, this.uiComponentPart028State0005, 0);
     }
 
     final static void performAction1271(int integerArgument1, int integerArgument2, boolean booleanArgument3, int integerArgument4, String stringArgument5, int integerArgument6, int integerArgument7, int integerArgument8) {
@@ -137,10 +137,10 @@ final class BirthDateTextFields extends BirthDateInput {
         int integerLocal2;
         int integerLocal3;
         try {
-          UiComponentPart008.integerState0144 = packetBufferArgument2.readUnsignedShort(3) << 5;
+          DialogMessagePane.integerState0144 = packetBufferArgument2.readUnsignedShort(3) << 5;
           integerLocal1 = packetBufferArgument2.readUnsignedByte((byte) -39);
           SceneWidgetPart012.integerState0783 = integerLocal1 << 18 & 1835008;
-          UiComponentPart008.integerState0144 = UiComponentPart008.integerState0144 + (integerLocal1 >> 3);
+          DialogMessagePane.integerState0144 = DialogMessagePane.integerState0144 + (integerLocal1 >> 3);
           SceneWidgetPart012.integerState0783 = SceneWidgetPart012.integerState0783 + (packetBufferArgument2.readUnsignedShort(3) << 2);
           integerLocal2 = packetBufferArgument2.readUnsignedByte((byte) -59);
           MixedSupport091.integerState0549 = (integerLocal2 & integerArgument1) << 15;
@@ -269,7 +269,7 @@ final class BirthDateTextFields extends BirthDateInput {
         }
     }
 
-    private final void performAction1273(int integerArgument1, String stringArgument2, int integerArgument3, UiComponent uiComponentArgument4, int integerArgument5) {
+    private final void drawDateFieldLabel(int integerArgument1, String stringArgument2, int integerArgument3, UiComponent uiComponentArgument4, int integerArgument5) {
         try {
           if (integerArgument5 != 0) {
             this.uiComponentPart028State0005 = (EditableTextField) null;
@@ -376,7 +376,7 @@ final class BirthDateTextFields extends BirthDateInput {
             ComponentContainer.gameSessionState0002.nodeDequeState0024.addFirst(new RenderingSupport006(ModalDialogHost.stringState0296, 10, false), 2777);
           }
           MixedSupport007.booleanState0005 = booleanArgument3;
-          UiComponentPart012.booleanState0059 = false;
+          ProgressMessageDialog.booleanState0059 = false;
           integerArrayLocal1 = MixedSupport063.integerArrayState0111;
           integerArrayLocal2 = integerArrayLocal1;
           integerArrayLocal3 = integerArrayLocal2;

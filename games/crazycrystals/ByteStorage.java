@@ -83,7 +83,7 @@ abstract class ByteStorage {
           var1_int = 480;
           if (!uh.field_n &&
             uh.field_p == null &&
-            !gn.d(false)) {
+            !FullscreenStatusDialog.d(false)) {
             if (DebouncedFieldValidator.field_a == null) {
               if (ModalDialog.field_D instanceof LevelCompleteScene) {
                 var1_int -= 20;
@@ -117,7 +117,7 @@ abstract class ByteStorage {
               var2 = 480;
               if (!uh.field_n &&
                 null == uh.field_p &&
-                !gn.d(false)) {
+                !FullscreenStatusDialog.d(false)) {
                 if (!(ModalDialog.field_D instanceof LevelCompleteScene)) {
                   var2 -= 40;
                   if (var11 != 0) {
@@ -150,10 +150,10 @@ abstract class ByteStorage {
                 if (!uh.field_n &&
                   uh.field_p == null &&
                   null == ModalDialog.field_D &&
-                  !gn.d(false)) {
+                  !FullscreenStatusDialog.d(false)) {
                   go.field_l.drawParagraph(fa.field_i, 484, -go.field_l.field_o + 15 + 4 + var3_int, 152, 1000, 16760896, -1, 1, 0, 20);
                   if (qh.field_o.isEmpty() &&
-                    en.field_O == 0 &&
+                    ResizableModalDialog.field_O == 0 &&
                     cn.field_d == null) {
                     var4_intLifetime1 = 16760896;
                     var5_int = go.field_l.lineCount(PuzzleTile.field_e, 152);
@@ -178,12 +178,12 @@ abstract class ByteStorage {
               (decompiledFrameCompleted0)) {
               qc.a(160, 54, var1_int - 54, mg.field_b, 480, 160, param0 ^ 482);
               if ((qh.field_o.isEmpty()) &&
-                (en.field_O == 0) &&
+                (ResizableModalDialog.field_O == 0) &&
                 (cn.field_d == null) &&
                 (!(ModalDialog.field_D instanceof LevelCompleteScene)) &&
                 (!go.field_i)) {
                 SoftwareRasterizer.setClip(484, 58, 636, var1_int - 4);
-                co.d((byte) -51);
+                StripedProgressWidget.d((byte) -51);
                 SoftwareRasterizer.resetClip();
                 if (var11 != 0) {
                   SoftwareRasterizer.setClip(480, 168, 640, var1_int);
@@ -203,7 +203,7 @@ abstract class ByteStorage {
             boolean decompiledFrameRemainder0 = true;
             if (!uh.field_n &&
               uh.field_p == null &&
-              !gn.d(false)) {
+              !FullscreenStatusDialog.d(false)) {
               var2 = 476;
               if (null != DebouncedFieldValidator.field_a) {
                 if (qh.field_i >= 480 &&
@@ -318,7 +318,7 @@ abstract class ByteStorage {
                     stackIn_216_2 = 16760896;
                   }
                   TextLayout.a(stackIn_215_0, stackIn_215_1, stackIn_216_2, 488, ji.field_u);
-                  stackIn_219_0 = en.field_I;
+                  stackIn_219_0 = ResizableModalDialog.field_I;
                   stackIn_219_1 = var2;
                   if (var3_intLifetime1Lifetime2 == 0) {
                     stackIn_220_2 = 12640511;
@@ -351,7 +351,7 @@ abstract class ByteStorage {
                     stackIn_241_2 = 16760896;
                   }
                   TextLayout.a(stackIn_240_0, stackIn_240_1, stackIn_241_2, 488, BoundedRandomAccessFile.field_f);
-                  stackIn_244_0 = jd.field_J;
+                  stackIn_244_0 = DialogMessagePane.field_J;
                   stackIn_244_1 = var2;
                   if (var3_intLifetime1Lifetime3 == 0) {
                     stackIn_245_2 = 12640511;
@@ -432,7 +432,7 @@ abstract class ByteStorage {
                         var9++;
                         continue;
                       }
-                      jd.field_A.drawGrayModulated(var6Lifetime1, 60, LevelCompleteEntrancePhase.field_f[var7Lifetime1]);
+                      DialogMessagePane.field_A.drawGrayModulated(var6Lifetime1, 60, LevelCompleteEntrancePhase.field_f[var7Lifetime1]);
                       break;
                     }
                     decompiledFrameRemainder2 = false;
@@ -2033,7 +2033,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("create_optin_news_tooltip", 5236);
                 if (var2 != null) {
-                  na.field_fb = fa.a((byte) -86, var2);
+                  ProgressMessageDialog.field_fb = fa.a((byte) -86, var2);
                 }
                 var2 = ah.a("create_u13_email_tooltip", 5236);
                 if (null != var2) {
@@ -2443,7 +2443,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("pausemenu", 5236);
                 if (null != var2) {
-                  en.field_I = fa.a((byte) -91, var2);
+                  ResizableModalDialog.field_I = fa.a((byte) -91, var2);
                 }
                 var2 = ah.a("optionsmenu_notpaused", 5236);
                 if (var2 != null) {
@@ -2491,7 +2491,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("restartlevel", 5236);
                 if (var2 != null) {
-                  jd.field_J = fa.a((byte) -125, var2);
+                  DialogMessagePane.field_J = fa.a((byte) -125, var2);
                 }
                 var2 = ah.a("endtest", 5236);
                 if (null != var2) {
@@ -2779,7 +2779,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("hs_name", 5236);
                 if (var2 != null) {
-                  ae.field_G = fa.a((byte) -125, var2);
+                  GuestPlayConfirmationForm.field_G = fa.a((byte) -125, var2);
                 }
                 var2 = ah.a("hs_level", 5236);
                 if (null != var2) {
@@ -3063,19 +3063,19 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("reconnect_lost_seq,0", 5236);
                 if (var2 != null) {
-                  co.field_G[0] = fa.a((byte) -84, var2);
+                  StripedProgressWidget.field_G[0] = fa.a((byte) -84, var2);
                 }
                 var2 = ah.a("reconnect_lost_seq,1", 5236);
                 if (var2 != null) {
-                  co.field_G[1] = fa.a((byte) -128, var2);
+                  StripedProgressWidget.field_G[1] = fa.a((byte) -128, var2);
                 }
                 var2 = ah.a("reconnect_lost_seq,2", 5236);
                 if (null != var2) {
-                  co.field_G[2] = fa.a((byte) -100, var2);
+                  StripedProgressWidget.field_G[2] = fa.a((byte) -100, var2);
                 }
                 var2 = ah.a("reconnect_lost_seq,3", 5236);
                 if (var2 != null) {
-                  co.field_G[3] = fa.a((byte) -70, var2);
+                  StripedProgressWidget.field_G[3] = fa.a((byte) -70, var2);
                 }
                 var2 = ah.a("reconnect_lost", 5236);
                 if (var2 != null) {
@@ -3174,7 +3174,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("fs_unavailable_try_signed_applet", 5236);
                 if (null != var2) {
-                  gn.field_U = fa.a((byte) -67, var2);
+                  FullscreenStatusDialog.field_U = fa.a((byte) -67, var2);
                 }
                 var2 = ah.a("fs_focus", 5236);
                 if (null != var2) {
@@ -3322,7 +3322,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("DEFAULT_PLAYER_NAME", 5236);
                 if (var2 != null) {
-                  ck.field_eb = fa.a((byte) -126, var2);
+                  StandardContentDialog.field_eb = fa.a((byte) -126, var2);
                 }
                 var2 = ah.a("mustlogin1", 5236);
                 if (null != var2) {

@@ -175,7 +175,7 @@ final class ra {
     }
 
     final static void b(int param0) {
-        ha.field_k = new lc(ia.field_W, DualLinkNode.field_r);
+        ha.field_k = new lc(GuestPlayConfirmationForm.field_W, DualLinkNode.field_r);
         BufferedRandomAccessFile.a(false, 30, "menu_select");
         sa.field_v = sh.a(-77, "da_ambience_drip", new int[]{110, 110, 110, 110, 140});
         hp.field_c = sh.a(-95, "da_ambience_insect", new int[]{256, 256, 168});

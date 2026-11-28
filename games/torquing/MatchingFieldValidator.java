@@ -112,7 +112,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           if (param3 < 13) {
             MatchingFieldValidator.clearStaticReferences((byte) 48);
           }
-          sp.field_Q = param2;
+          ProgressDialog.field_Q = param2;
           bo.field_e = param0;
           ka.field_j = param1;
           cl.a(-67, SoftwareRasterizer.field_j / 2, SoftwareRasterizer.field_d / 2);

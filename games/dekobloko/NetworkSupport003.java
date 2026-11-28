@@ -50,11 +50,11 @@ abstract class NetworkSupport003 {
             return stackStringLocal3;
           }
           if (MixedSupport062.computeBoolean0736(stringArgument1, (byte) -118)) {
-            stackStringLocal4 = NodeHashTableIterator.substituteIndexedPlaceholders(114, UiComponentPart023.stringState0422, new String[]{stringArgument1});
+            stackStringLocal4 = NodeHashTableIterator.substituteIndexedPlaceholders(114, StandardContentDialog.stringState0422, new String[]{stringArgument1});
             return stackStringLocal4;
           }
           if (MixedSupport029.integerState0182 >= 100) {
-            stackStringLocal5 = UiComponentPart004.stringState0065;
+            stackStringLocal5 = ContentTransitionDialog.stringState0065;
             return stackStringLocal5;
           }
           if (RenderingSupport012.computeBoolean1345(stringArgument1, 3)) {
@@ -129,7 +129,7 @@ abstract class NetworkSupport003 {
               if (MixedSupport023.booleanState0025) {
                 stringArgument1 = MixedSupport109.stringState0477;
               }
-              MixedSupport020.uiComponentPart012State0001.performAction0589((byte) 48, stringArgument1, integerArgument3);
+              MixedSupport020.uiComponentPart012State0001.showResult((byte) 48, stringArgument1, integerArgument3);
             }
             if (integerArgument3 != 256 &&
               integerArgument3 != 10 &&

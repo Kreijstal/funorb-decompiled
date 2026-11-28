@@ -19,7 +19,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
-          if (null != bj.field_cb) {
+          if (null != ContentTransitionDialog.field_cb) {
             qf.field_a = 0;
             IntrusiveNode.field_b = param0.getX();
             cb.field_b = param0.getY();
@@ -108,7 +108,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-          if (bj.field_cb != null) {
+          if (ContentTransitionDialog.field_cb != null) {
             nd.field_l = 0;
           }
         } catch (RuntimeException runtimeException) {
@@ -118,7 +118,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
-          if (bj.field_cb != null) {
+          if (ContentTransitionDialog.field_cb != null) {
             qf.field_a = 0;
             IntrusiveNode.field_b = -1;
             cb.field_b = -1;
@@ -137,7 +137,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != bj.field_cb) {
+          if (null != ContentTransitionDialog.field_cb) {
             qf.field_a = 0;
             TextLayout.field_b = param0.getX();
             pd.field_Eb = param0.getY();
@@ -185,7 +185,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (bj.field_cb != null) {
+          if (ContentTransitionDialog.field_cb != null) {
             qf.field_a = 0;
             nd.field_l = 0;
             rc.field_d = true;
@@ -221,7 +221,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         try {
-          if (bj.field_cb != null) {
+          if (ContentTransitionDialog.field_cb != null) {
             qf.field_a = 0;
             IntrusiveNode.field_b = param0.getX();
             cb.field_b = param0.getY();
@@ -239,7 +239,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == bj.field_cb) {
+          if (null == ContentTransitionDialog.field_cb) {
             return;
           }
           qf.field_a = 0;

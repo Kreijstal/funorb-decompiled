@@ -12,7 +12,7 @@ final class fa {
         if (null != mb.field_b) {
           mb.field_b.snapAndPruneDialogs(true);
           if (null != AccountRequestState.field_e) {
-            AccountRequestState.field_e.r(4595);
+            AccountRequestState.field_e.freezeNormalProgressAnimation(4595);
           }
           tc.a(param0 ^ -9351);
           if (param0 == -9) {
@@ -22,7 +22,7 @@ final class fa {
           return;
         }
         if (null != AccountRequestState.field_e) {
-          AccountRequestState.field_e.r(4595);
+          AccountRequestState.field_e.freezeNormalProgressAnimation(4595);
         }
         tc.a(param0 ^ -9351);
         if (param0 != -9) {

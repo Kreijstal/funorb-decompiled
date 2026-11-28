@@ -9,7 +9,7 @@ final class rc extends IntrusiveNode {
     static de field_g;
     static String field_n;
     static RgbSprite field_i;
-    static ml field_l;
+    static FullscreenNoticeType field_l;
     static RgbSprite[] field_k;
     static boolean field_m;
 
@@ -71,6 +71,6 @@ final class rc extends IntrusiveNode {
         field_g = new de(10, 2, 2, 0);
         field_n = "Select pairs of tiles to reveal them. If they match, they are removed from the<nbsp>game.<br><br>Remember the tiles you've revealed and track them as they move to clear the<nbsp>board.<br><br>Don't waste time, but think before you click, because the number of mistakes you can make is<nbsp>limited.";
         field_i = new RgbSprite(270, 70);
-        field_l = new ml();
+        field_l = new FullscreenNoticeType();
     }
 }

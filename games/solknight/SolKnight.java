@@ -14,7 +14,7 @@ public final class SolKnight extends ab {
     final void disposeClient(int param0) {
         int discarded$0 = 0;
         try {
-          s.n(0);
+          StandardContentDialog.n(0);
           if (null != dj.field_k) {
             ProxySocketConnector.d(param0 ^ -14996);
           }
@@ -42,7 +42,7 @@ public final class SolKnight extends ab {
           NetworkArchiveRequest.field_u = IsaacRandom.a(4, 109);
           ValidatedTextField.field_cb = IsaacRandom.a(5, 90);
           field_I = IsaacRandom.a(7, 124);
-          nf.a(ai.field_b, -111, pl.field_d);
+          FullscreenStatusDialog.a(ai.field_b, -111, pl.field_d);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -121,7 +121,7 @@ public final class SolKnight extends ab {
                       }
                     }
                   } else {
-                    ig.h(-109);
+                    GuestPlayConfirmationForm.h(-109);
                   }
                 } else {
                   this.h((byte) -108);
@@ -154,7 +154,7 @@ public final class SolKnight extends ab {
             if (pb.field_c != var2_int) {
               mh.a(8192);
             }
-            if (var2_int == ng.field_d) {
+            if (var2_int == FullscreenNoticeType.field_d) {
               na.field_b = true;
             }
           }
@@ -261,16 +261,16 @@ public final class SolKnight extends ab {
           jc.clearStaticReferences(1731);
           ModalDialogHost.clearStaticReferences((byte) 30);
           AccountCreationResultPanel.discardDeclaredStaticReferences(6);
-          lb.discardDeclaredStaticReferences(121);
-          s.discardDeclaredStaticReferences(-1);
-          ci.clearDeclaredStaticReferences((byte) -107);
+          ProgressDialog.discardDeclaredStaticReferences(121);
+          StandardContentDialog.discardDeclaredStaticReferences(-1);
+          ProgressMessageDialog.clearDeclaredStaticReferences((byte) -107);
           AccountRegistrationPanel.clearStaticReferences(false);
-          ig.e((byte) -102);
+          GuestPlayConfirmationForm.e((byte) -102);
           LoginPanel.clearStaticReferences((byte) 97);
           DisplayNameSelectionPanel.h(60);
           mb.b(-694484242);
           aj.clearStaticReferences((byte) -63);
-          sl.clearStaticReferences();
+          VorbisSample.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
           fe.clearStaticReferences();
           u.clearStaticReferences(2);
@@ -299,7 +299,7 @@ public final class SolKnight extends ab {
           qj.a(-126);
           ArchiveRequest.clearDeclaredStaticReferences(-106);
           pf.clearStaticReferences((byte) -104);
-          nf.discardDeclaredStaticReferences(-1);
+          FullscreenStatusDialog.discardDeclaredStaticReferences(-1);
           DefaultTextWidgetRenderer.clearStaticReferences(0);
           hk.clearStaticReferences();
           ai.clearStaticReferences(-78);
@@ -330,7 +330,7 @@ public final class SolKnight extends ab {
           UiWidget.e(-24922);
           InteractiveWidget.clearDeclaredStaticReferences(85);
           SingleChildWidgetContainer.i(126);
-          ld.releaseDeclaredStaticReferences(73);
+          ResizableModalDialog.releaseDeclaredStaticReferences(73);
           ModalDialog.clearDeclaredStaticReferences(112);
           WidgetContainer.resetStaticState(false);
           gd.clearStaticReferences(103);
@@ -354,8 +354,8 @@ public final class SolKnight extends ab {
           LabeledWidgetContainer.d((byte) -61);
           ValidatedTextField.clearStaticReferences((byte) -80);
           EditableTextField.releaseDeclaredStaticReferences(106);
-          gf.clearStaticReferences((byte) 87);
-          c.clearStaticReferences((byte) 113);
+          ContentTransitionDialog.clearStaticReferences((byte) 87);
+          StripedProgressWidget.clearStaticReferences((byte) 113);
           NameSuggestionsPanel.clearStaticReferences((byte) -88);
           RichTextWidget.a(2);
           kc.clearStaticReferences((byte) 110);
@@ -363,7 +363,7 @@ public final class SolKnight extends ab {
           tg.releaseDeclaredStaticReferences(22722);
           TextFieldValidator.clearDeclaredStaticReferences(30514);
           nb.clearStaticReferences(19161);
-          qe.i(-28528);
+          RegistrationAgreementPane.i(-28528);
           be.a(-3);
           hh.clearStaticReferences((byte) 54);
           SoundFilter.clearStaticReferences();
@@ -402,12 +402,12 @@ public final class SolKnight extends ab {
           ce.clearStaticReferences(true);
           kb.clearStaticReferences((byte) 15);
           sa.clearStaticReferences((byte) -116);
-          lj.a((byte) -127);
+          DialogMessagePane.a((byte) -127);
           fg.clearStaticReferences((byte) -115);
           il.clearStaticReferences(2113536);
           vb.d(20364);
           jb.clearStaticReferences(22174);
-          ng.clearStaticReferences(0);
+          FullscreenNoticeType.clearStaticReferences(0);
           fj.clearDeclaredStaticReferences(-13);
           lc.a(-53);
           wi.a(-26923);
@@ -505,8 +505,8 @@ public final class SolKnight extends ab {
                           }
                           FullscreenFocusCanvas.a((byte) 81);
                           qc.field_s = new me(AccountServiceResult.field_g, ProxySocketConnector.field_h);
-                          bf.field_b[0] = sl.a(ProxySocketConnector.field_h, "", "combo_power").c();
-                          bf.field_b[1] = sl.a(ProxySocketConnector.field_h, "", "mega_power").c();
+                          bf.field_b[0] = VorbisSample.loadByName(ProxySocketConnector.field_h, "", "combo_power").decodeAllToPcm();
+                          bf.field_b[1] = VorbisSample.loadByName(ProxySocketConnector.field_h, "", "mega_power").decodeAllToPcm();
                           bf.field_b[2] = ra.a(AccountServiceResult.field_g, "", "load_weapon").b();
                           bf.field_b[3] = ra.a(AccountServiceResult.field_g, "", "rocket_launcher").b();
                           bf.field_b[4] = ra.a(AccountServiceResult.field_g, "", "explosion").b();
@@ -577,20 +577,20 @@ public final class SolKnight extends ab {
           if (ValidatedTextField.field_cb != null) {
             TextFieldValidator.a((byte) 102, AccountRegistrationPanel.field_E, 75.0f);
             this.renderClientFrame(param0 - 11633);
-            c.field_M[0] = rl.a(ValidatedTextField.field_cb, "", "sol knight title");
-            c.field_M[1] = rl.a(ValidatedTextField.field_cb, "", "sol_ingame_1");
-            c.field_M[2] = rl.a(ValidatedTextField.field_cb, "", "sol_ingame_2");
-            c.field_M[3] = rl.a(ValidatedTextField.field_cb, "", "sol_ingame_3");
-            c.field_M[4] = rl.a(ValidatedTextField.field_cb, "", "sol knight gameover jingle");
-            c.field_M[5] = rl.a(ValidatedTextField.field_cb, "", "sol knight victory jingle");
+            StripedProgressWidget.field_M[0] = rl.a(ValidatedTextField.field_cb, "", "sol knight title");
+            StripedProgressWidget.field_M[1] = rl.a(ValidatedTextField.field_cb, "", "sol_ingame_1");
+            StripedProgressWidget.field_M[2] = rl.a(ValidatedTextField.field_cb, "", "sol_ingame_2");
+            StripedProgressWidget.field_M[3] = rl.a(ValidatedTextField.field_cb, "", "sol_ingame_3");
+            StripedProgressWidget.field_M[4] = rl.a(ValidatedTextField.field_cb, "", "sol knight gameover jingle");
+            StripedProgressWidget.field_M[5] = rl.a(ValidatedTextField.field_cb, "", "sol knight victory jingle");
             ValidatedTextField.field_cb = null;
             stackIn_49_0 = fc.field_o;
             return stackIn_49_0;
           }
           if (null != NetworkArchiveRequest.field_u) {
             for (var3_int = 0; 6 > var3_int; var3_int++) {
-              if (null != c.field_M[var3_int] &&
-                !NameSuggestionsPanel.field_I.a(176400, c.field_M[var3_int], qc.field_s, NetworkArchiveRequest.field_u, -122)) {
+              if (null != StripedProgressWidget.field_M[var3_int] &&
+                !NameSuggestionsPanel.field_I.a(176400, StripedProgressWidget.field_M[var3_int], qc.field_s, NetworkArchiveRequest.field_u, -122)) {
                 stackIn_56_0 = fc.field_o;
                 return stackIn_56_0;
               }
@@ -623,14 +623,14 @@ public final class SolKnight extends ab {
             kd.currentScreenIndex = 0;
             vh.a(24, 50);
             bj.a(50, -127);
-            nf.field_W = new int[500];
-            for (var3_intLifetime1Lifetime1 = 0; nf.field_W.length > var3_intLifetime1Lifetime1; var3_intLifetime1Lifetime1 += 2) {
-              nf.field_W[var3_intLifetime1Lifetime1] = -640 + bk.a(1280, jb.field_g, (byte) -108);
-              nf.field_W[1 + var3_intLifetime1Lifetime1] = bk.a(720, jb.field_g, (byte) 69);
+            FullscreenStatusDialog.field_W = new int[500];
+            for (var3_intLifetime1Lifetime1 = 0; FullscreenStatusDialog.field_W.length > var3_intLifetime1Lifetime1; var3_intLifetime1Lifetime1 += 2) {
+              FullscreenStatusDialog.field_W[var3_intLifetime1Lifetime1] = -640 + bk.a(1280, jb.field_g, (byte) -108);
+              FullscreenStatusDialog.field_W[1 + var3_intLifetime1Lifetime1] = bk.a(720, jb.field_g, (byte) 69);
             }
             kh.field_d = 255;
             pg.field_e = true;
-            stackIn_86_0 = ng.field_d;
+            stackIn_86_0 = FullscreenNoticeType.field_d;
             return stackIn_86_0;
           }
           BufferedSocket.field_b = lc.a(fh.field_c, 1, "b24", "", field_I);
@@ -817,10 +817,10 @@ public final class SolKnight extends ab {
               kd.currentScreenIndex != -1) {
               var4 = 1;
               var2_intLifetime1 = var4;
-              while (nf.field_W.length > var4) {
-                nf.field_W[var4] = nf.field_W[var4] - 1;
-                if (nf.field_W[var4] < 0) {
-                  nf.field_W[var4] = nf.field_W[var4] + 720;
+              while (FullscreenStatusDialog.field_W.length > var4) {
+                FullscreenStatusDialog.field_W[var4] = FullscreenStatusDialog.field_W[var4] - 1;
+                if (FullscreenStatusDialog.field_W[var4] < 0) {
+                  FullscreenStatusDialog.field_W[var4] = FullscreenStatusDialog.field_W[var4] + 720;
                 }
                 var4 += 2;
               }
@@ -931,26 +931,26 @@ public final class SolKnight extends ab {
           SoftwareRasterizer.fillRectangleVerticalGradient(-320 - ArchiveSource.field_c, -SingleChildWidgetContainer.field_E, 1280, 720, 0, il.field_e[kb.field_b]);
           kc.field_O = kc.field_O + 1;
           var3 = 0;
-          if (nf.field_W.length < kc.field_O) {
+          if (FullscreenStatusDialog.field_W.length < kc.field_O) {
             kc.field_O = 0;
           }
           var4_int = 0;
           if (param0 != -11633) {
             return;
           }
-          while (var4_int < nf.field_W.length) {
+          while (var4_int < FullscreenStatusDialog.field_W.length) {
             var3++;
             if (var3 >= 5) {
               var3 = 0;
             }
-            var5 = 320 + (-ArchiveSource.field_c + nf.field_W[var4_int]);
-            var6 = -SingleChildWidgetContainer.field_E + nf.field_W[1 + var4_int];
+            var5 = 320 + (-ArchiveSource.field_c + FullscreenStatusDialog.field_W[var4_int]);
+            var6 = -SingleChildWidgetContainer.field_E + FullscreenStatusDialog.field_W[1 + var4_int];
             var7 = var4_int - kc.field_O;
-            if (-nf.field_W.length / 2 > var7) {
-              var7 = var7 + nf.field_W.length;
+            if (-FullscreenStatusDialog.field_W.length / 2 > var7) {
+              var7 = var7 + FullscreenStatusDialog.field_W.length;
             }
-            if (nf.field_W.length / 2 < var7) {
-              var7 = var7 - nf.field_W.length;
+            if (FullscreenStatusDialog.field_W.length / 2 < var7) {
+              var7 = var7 - FullscreenStatusDialog.field_W.length;
             }
             if (var7 < 0) {
               var7 = -var7;
@@ -999,7 +999,7 @@ public final class SolKnight extends ab {
               var5Lifetime1 = 480 - var6Lifetime1;
             }
             var7Lifetime1 = SocketConnector.field_g.stringWidth(BufferedCacheFile.field_m[var4.field_h]);
-            uj.a(60 + var7Lifetime1, 70, -60 - var7Lifetime1 + 640 >> 1, gf.field_fb, var5Lifetime1, 2);
+            uj.a(60 + var7Lifetime1, 70, -60 - var7Lifetime1 + 640 >> 1, ContentTransitionDialog.field_fb, var5Lifetime1, 2);
             IterableNodeHashTable.field_f[var4.field_h].drawQuarterSize(304, 10 + SocketConnector.field_g.field_s + (SocketConnector.field_g.field_F + var5Lifetime1));
             SocketConnector.field_g.drawCentred(BufferedCacheFile.field_m[var4.field_h], 320, var5Lifetime1 + SocketConnector.field_g.field_F + 8, 16776960, 1);
           }
@@ -1013,7 +1013,7 @@ public final class SolKnight extends ab {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d, 0, var5Lifetime2);
             }
           }
-          if (lb.g((byte) -94) &&
+          if (ProgressDialog.g((byte) -94) &&
             !RandomAccessCacheFile.b((byte) -104)) {
             stackIn_79_0 = 25899;
             if (null != dj.field_k) {
@@ -1173,7 +1173,7 @@ public final class SolKnight extends ab {
           var41 = wc.a(var12, 0);
           var42 = wc.a(var41, 0);
           var43 = wc.a(var42, 0);
-          var16 = ig.a(var40[2], 30, 0, 0, 29, 29);
+          var16 = GuestPlayConfirmationForm.a(var40[2], 30, 0, 0, 29, 29);
           var17 = wc.a(var16, 0);
           var18 = wc.a(var17, 0);
           var19 = wc.a(var18, 0);
@@ -1181,39 +1181,39 @@ public final class SolKnight extends ab {
           var21 = wc.a(var20, 0);
           var22 = wc.a(var21, 0);
           var23 = wc.a(var22, 0);
-          var24 = lb.a(var12.field_r - var20.field_r, var20, 0, 0, 0, 0);
-          var25 = lb.a(0, var21, var41.field_q - var21.field_q, 0, 0, 0);
-          var26 = lb.a(0, var22, 0, 0, 0, var42.field_r - var22.field_r);
-          var27 = lb.a(0, var23, 0, var43.field_q - var23.field_q, 0, 0);
-          var28 = ig.a(var16, 30, 0, 0, var40[1].field_t, var40[1].field_t);
+          var24 = ProgressDialog.a(var12.field_r - var20.field_r, var20, 0, 0, 0, 0);
+          var25 = ProgressDialog.a(0, var21, var41.field_q - var21.field_q, 0, 0, 0);
+          var26 = ProgressDialog.a(0, var22, 0, 0, 0, var42.field_r - var22.field_r);
+          var27 = ProgressDialog.a(0, var23, 0, var43.field_q - var23.field_q, 0, 0);
+          var28 = GuestPlayConfirmationForm.a(var16, 30, 0, 0, var40[1].field_t, var40[1].field_t);
           var29 = wc.a(var28, 0);
           var30 = wc.a(var29, 0);
           var31 = wc.a(var30, 0);
-          gf.field_fb = new Sprite[9];
-          gf.field_fb[5] = var25;
-          gf.field_fb[2] = var41;
-          gf.field_fb[0] = var12;
-          gf.field_fb[3] = var27;
-          gf.field_fb[1] = var24;
-          gf.field_fb[6] = ig.a(var19, 30, var19.field_r - var31.field_r, 0, var12.field_q, var31.field_r);
-          gf.field_fb[7] = var22;
-          gf.field_fb[8] = ig.a(var18, 30, var18.field_r - var31.field_r, 0, var41.field_q, var31.field_r);
+          ContentTransitionDialog.field_fb = new Sprite[9];
+          ContentTransitionDialog.field_fb[5] = var25;
+          ContentTransitionDialog.field_fb[2] = var41;
+          ContentTransitionDialog.field_fb[0] = var12;
+          ContentTransitionDialog.field_fb[3] = var27;
+          ContentTransitionDialog.field_fb[1] = var24;
+          ContentTransitionDialog.field_fb[6] = GuestPlayConfirmationForm.a(var19, 30, var19.field_r - var31.field_r, 0, var12.field_q, var31.field_r);
+          ContentTransitionDialog.field_fb[7] = var22;
+          ContentTransitionDialog.field_fb[8] = GuestPlayConfirmationForm.a(var18, 30, var18.field_r - var31.field_r, 0, var41.field_q, var31.field_r);
           GameApplet.field_f = new Sprite[9];
-          GameApplet.field_f[0] = ig.a(var16, 30, 0, 0, var43.field_q, var29.field_r);
+          GameApplet.field_f[0] = GuestPlayConfirmationForm.a(var16, 30, 0, 0, var43.field_q, var29.field_r);
           GameApplet.field_f[3] = var27;
           GameApplet.field_f[7] = var26;
           GameApplet.field_f[2] = var29;
           GameApplet.field_f[1] = var20;
           GameApplet.field_f[6] = var43;
           GameApplet.field_f[5] = var21;
-          GameApplet.field_f[8] = ig.a(var18, 30, 0, var18.field_q - var29.field_q, var29.field_q, var43.field_r);
+          GameApplet.field_f[8] = GuestPlayConfirmationForm.a(var18, 30, 0, var18.field_q - var29.field_q, var29.field_q, var43.field_r);
           TextLineMetrics.field_d = new Sprite[9];
           TextLineMetrics.field_d[0] = var28;
           TextLineMetrics.field_d[1] = var20;
-          TextLineMetrics.field_d[2] = ig.a(var17, 30, 0, 0, var42.field_q, var28.field_r);
+          TextLineMetrics.field_d[2] = GuestPlayConfirmationForm.a(var17, 30, 0, 0, var42.field_q, var28.field_r);
           TextLineMetrics.field_d[3] = var23;
           TextLineMetrics.field_d[5] = var25;
-          TextLineMetrics.field_d[6] = ig.a(var19, 30, 0, 0, var28.field_q, var42.field_r);
+          TextLineMetrics.field_d[6] = GuestPlayConfirmationForm.a(var19, 30, 0, 0, var28.field_q, var42.field_r);
           TextLineMetrics.field_d[8] = var42;
           TextLineMetrics.field_d[7] = GameApplet.field_f[7];
           return;

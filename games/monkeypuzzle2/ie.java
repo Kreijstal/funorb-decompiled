@@ -10,7 +10,7 @@ final class ie {
 
     final static void a(int param0, int param1) {
         int var2 = -59 % ((param1 - 43) / 50);
-        nf.a(param0, (byte) 115, 0, 0);
+        ResizableModalDialog.a(param0, (byte) 115, 0, 0);
     }
 
     final static byte[] a(int param0, byte[] param1, int param2, int param3) {

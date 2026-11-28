@@ -25,7 +25,7 @@ final class lc extends IntrusiveNode {
     }
 
     final static boolean a(int param0) {
-        ll.field_i = true;
+        FullscreenNoticeType.field_i = true;
         ji.field_y = 15000L + ol.correctedCurrentTimeMillis(256);
         if (param0 != 1) {
           java.math.BigInteger var2 = (java.math.BigInteger) null;
@@ -66,14 +66,14 @@ final class lc extends IntrusiveNode {
           for (var9 = 0; var9 < 4; var9++) {
             var8[var9] = af.field_d.nextInt();
           }
-          if (null == nh.field_eb ||
-            !(var7_int <= nh.field_eb.payload.length)) {
-            nh.field_eb = new PacketBuffer(var7_int);
+          if (null == FullscreenStatusDialog.field_eb ||
+            !(var7_int <= FullscreenStatusDialog.field_eb.payload.length)) {
+            FullscreenStatusDialog.field_eb = new PacketBuffer(var7_int);
           }
-          nh.field_eb.position = 0;
-          nh.field_eb.writeBytes(param4, param0, param3, -16384);
-          nh.field_eb.padZerosTo(var7_int, (byte) 36);
-          nh.field_eb.encryptXtea(var13, (byte) -124);
+          FullscreenStatusDialog.field_eb.position = 0;
+          FullscreenStatusDialog.field_eb.writeBytes(param4, param0, param3, -16384);
+          FullscreenStatusDialog.field_eb.padZerosTo(var7_int, (byte) 36);
+          FullscreenStatusDialog.field_eb.encryptXtea(var13, (byte) -124);
           if (null == bi.field_d ||
             !(bi.field_d.payload.length >= 100)) {
             bi.field_d = new PacketBuffer(100);
@@ -89,7 +89,7 @@ final class lc extends IntrusiveNode {
           bi.field_d.writeShort(param4, (byte) 106);
           bi.field_d.applyRsa(param6, true, param5);
           param1.writeBytes(bi.field_d.position, param2, bi.field_d.payload, param2 ^ -16384);
-          param1.writeBytes(nh.field_eb.position, 0, nh.field_eb.payload, -16384);
+          param1.writeBytes(FullscreenStatusDialog.field_eb.position, 0, FullscreenStatusDialog.field_eb.payload, -16384);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -134,24 +134,24 @@ final class lc extends IntrusiveNode {
         int var5Lifetime2;
         var2 = -1;
         var5 = 0;
-        if (v.field_X[0][ValidatedTextField.field_ib][param0][0] <= RandomAccessCacheFile.field_e &&
-          RandomAccessCacheFile.field_e < v.field_X[0][ValidatedTextField.field_ib][param0][1]) {
-          var4 = v.field_X[0][ValidatedTextField.field_ib][param0][1];
-          var3 = v.field_X[0][ValidatedTextField.field_ib][param0][0];
+        if (ResizableModalDialog.field_X[0][ValidatedTextField.field_ib][param0][0] <= RandomAccessCacheFile.field_e &&
+          RandomAccessCacheFile.field_e < ResizableModalDialog.field_X[0][ValidatedTextField.field_ib][param0][1]) {
+          var4 = ResizableModalDialog.field_X[0][ValidatedTextField.field_ib][param0][1];
+          var3 = ResizableModalDialog.field_X[0][ValidatedTextField.field_ib][param0][0];
           var5Lifetime1 = -var3 + RandomAccessCacheFile.field_e;
           var2 = var5Lifetime1 * 256 / (var4 - var3);
         }
-        if (v.field_X[1][ValidatedTextField.field_ib][param0][0] <= RandomAccessCacheFile.field_e &&
-          RandomAccessCacheFile.field_e < v.field_X[1][ValidatedTextField.field_ib][param0][1]) {
-          var3Lifetime1 = v.field_X[1][ValidatedTextField.field_ib][param0][0];
-          var4Lifetime1 = v.field_X[1][ValidatedTextField.field_ib][param0][1];
+        if (ResizableModalDialog.field_X[1][ValidatedTextField.field_ib][param0][0] <= RandomAccessCacheFile.field_e &&
+          RandomAccessCacheFile.field_e < ResizableModalDialog.field_X[1][ValidatedTextField.field_ib][param0][1]) {
+          var3Lifetime1 = ResizableModalDialog.field_X[1][ValidatedTextField.field_ib][param0][0];
+          var4Lifetime1 = ResizableModalDialog.field_X[1][ValidatedTextField.field_ib][param0][1];
           var5Lifetime2 = -var3Lifetime1 + RandomAccessCacheFile.field_e;
           var2 = 256 - 256 * var5Lifetime2 / (-var3Lifetime1 + var4Lifetime1);
         }
-        if (v.field_X[0][ValidatedTextField.field_ib][param0][0] > RandomAccessCacheFile.field_e) {
+        if (ResizableModalDialog.field_X[0][ValidatedTextField.field_ib][param0][0] > RandomAccessCacheFile.field_e) {
           var2 = 0;
         }
-        if (RandomAccessCacheFile.field_e >= v.field_X[param1][ValidatedTextField.field_ib][param0][1]) {
+        if (RandomAccessCacheFile.field_e >= ResizableModalDialog.field_X[param1][ValidatedTextField.field_ib][param0][1]) {
           var2 = 0;
         }
         return var2;

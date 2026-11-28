@@ -50,10 +50,10 @@ final class mn extends gk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null == AccountRequestState.field_e) {
-            AccountRequestState.field_e = new jl(mb.field_b, ic.field_i);
+            AccountRequestState.field_e = new ProgressDialog(mb.field_b, ic.field_i);
             mb.field_b.showDialog(1, AccountRequestState.field_e);
           }
-          AccountRequestState.field_e.a(param0 ^ 68, param3, param1, param2);
+          AccountRequestState.field_e.setProgress(param0 ^ 68, param3, param1, param2);
           SoftwareRasterizer.clearRaster();
           pf.a(0, true);
           if (param0 == -63) {

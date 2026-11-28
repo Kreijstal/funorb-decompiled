@@ -38,9 +38,9 @@ final class on extends qf {
     final static boolean b(int param0) {
         if (param0 != 160) {
           field_e = (eb) null;
-          return i.field_R;
+          return FullscreenStatusDialog.field_R;
         }
-        return i.field_R;
+        return FullscreenStatusDialog.field_R;
     }
 
     static {

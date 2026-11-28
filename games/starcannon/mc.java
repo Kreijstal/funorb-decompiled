@@ -93,15 +93,15 @@ final class mc {
           sj.field_B[pg.field_f] = null;
           return var2_ref_byte__Lifetime2;
         }
-        if (null != kc.field_O) {
+        if (null != ResizableModalDialog.field_O) {
           for (var2 = 0; var2 < fl.field_e.length; var2++) {
             if (fl.field_e[var2] == param1 &&
               nf.field_i[var2] > 0) {
               dupTemp$6 = nf.field_i[var2] - 1;
-              arrayValue$7 = kc.field_O[var2];
+              arrayValue$7 = ResizableModalDialog.field_O[var2];
               nf.field_i[var2] = dupTemp$6;
               var3 = arrayValue$7[dupTemp$6];
-              kc.field_O[var2][nf.field_i[var2]] = null;
+              ResizableModalDialog.field_O[var2][nf.field_i[var2]] = null;
               return var3;
             }
           }

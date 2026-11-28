@@ -11,8 +11,8 @@ final class ml {
 
     final static void e(int param0) {
         ge.field_c = 0;
-        mh.field_Z = -1;
-        nh.field_P = false;
+        ContentTransitionDialog.field_Z = -1;
+        FullscreenStatusDialog.field_P = false;
         if (param0 == 8192) {
           ha.field_b = -1;
           oc.field_b = null;

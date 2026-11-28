@@ -65,7 +65,7 @@ final class pd extends rj {
         int var3;
         boolean stackIn_6_0 = false;
         var3 = -8 / ((param2 - 14) / 43);
-        stackIn_6_0 = (ArchiveRequest.field_w - 16 <= param1) && (16 + (ArchiveRequest.field_w + 200) > param1) && (param0 >= -32 + MenuScreen.field_w) && (32 + (wi.field_kb + MenuScreen.field_w) > param0);
+        stackIn_6_0 = (ArchiveRequest.field_w - 16 <= param1) && (16 + (ArchiveRequest.field_w + 200) > param1) && (param0 >= -32 + MenuScreen.field_w) && (32 + (ProgressDialog.field_kb + MenuScreen.field_w) > param0);
         return stackIn_6_0;
     }
 
@@ -144,7 +144,7 @@ final class pd extends rj {
         bp.a(var5, AchievementIconEntry.field_q, var4, (byte) 99);
         bp.a(this.field_F + var5 + 10, qf.field_f, var4, (byte) 99);
         for (var6 = 0; var6 < 7; var6++) {
-          te.b(var6 + (6 + var4), var5 + 11, this.field_F - 2, kc.field_M);
+          te.b(var6 + (6 + var4), var5 + 11, this.field_F - 2, DialogMessagePane.field_M);
         }
         for (var6Lifetime1 = 0; var6Lifetime1 < 3; var6Lifetime1++) {
           DungeonAssaultScreen.b(-var6Lifetime1 + var4 + 5, 11 + var5, this.field_F - 2, 0, 192 - var6Lifetime1 * 64);

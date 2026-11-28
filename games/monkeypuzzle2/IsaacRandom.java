@@ -204,7 +204,7 @@ final class IsaacRandom {
           var17 = var16;
           var17.position = -2 + param0.length;
           eg.field_c = var17.readUnsignedShort(17277);
-          ra.field_ab = new int[eg.field_c];
+          StandardContentDialog.field_ab = new int[eg.field_c];
           j.field_d = new boolean[eg.field_c];
           cb.field_b = new byte[eg.field_c][];
           ValidatedTextField.field_P = new int[eg.field_c];
@@ -228,7 +228,7 @@ final class IsaacRandom {
             da.field_c[var4Lifetime2] = var17.readUnsignedShort(17277);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < eg.field_c; var4Lifetime3++) {
-            ra.field_ab[var4Lifetime3] = var17.readUnsignedShort(17277);
+            StandardContentDialog.field_ab[var4Lifetime3] = var17.readUnsignedShort(17277);
           }
           var17.position = -(3 * (var3 - 1)) - 8 * eg.field_c + (-7 + param0.length);
           fk.field_d = new int[var3];
@@ -241,7 +241,7 @@ final class IsaacRandom {
           var17.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < eg.field_c; var4Lifetime5++) {
             var5 = da.field_c[var4Lifetime5];
-            var6 = ra.field_ab[var4Lifetime5];
+            var6 = StandardContentDialog.field_ab[var4Lifetime5];
             var7 = var6 * var5;
             var20 = new byte[var7];
             var18 = var20;

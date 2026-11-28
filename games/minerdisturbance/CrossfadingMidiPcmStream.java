@@ -169,7 +169,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
           param1.removeMouseListener(TextHotspotBounds.field_y);
           param1.removeMouseMotionListener(TextHotspotBounds.field_y);
           param1.removeFocusListener(TextHotspotBounds.field_y);
-          qd.field_J = 0;
+          GuestPlayConfirmationForm.field_J = 0;
           if (param0 != -106) {
             field_z = 13;
           }

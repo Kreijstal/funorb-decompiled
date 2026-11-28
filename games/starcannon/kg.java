@@ -9,15 +9,15 @@ final class kg {
 
     final static void a(String param0, String param1, byte param2) {
         try {
-          if (null != fa.field_G) {
-            fa.field_G.n(-104);
+          if (null != StripedProgressWidget.field_G) {
+            StripedProgressWidget.field_G.closeDialog(-104);
           }
           wi.field_c = new LoginPanel(param1, param0, false, true, true);
           if (param2 != 92) {
             String var4 = (String) null;
             kg.a((String) null, (String) null, (byte) 89);
           }
-          t.field_h.c(20317, wi.field_c);
+          t.field_h.replaceContent(20317, wi.field_c);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "kg.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -45,7 +45,7 @@ final class kg {
           EmailFormatValidator.field_k = wc.a(-43) * param2 / 1000;
           dh.a((byte) 115, param3);
           nb.a(param3, (byte) 124);
-          lc.a(false, param3);
+          StandardContentDialog.a(false, param3);
           p.a((byte) -68);
           FrameTimer.c((byte) -96);
           qb.field_h = -EmailFormatValidator.field_k + param1;

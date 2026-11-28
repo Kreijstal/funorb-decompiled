@@ -21,12 +21,12 @@ final class sl {
 
     final static void a(byte param0, java.applet.Applet param1) {
         try {
-          IntrusiveNode.field_c = ah.a(gh.field_c, 200, "", "roman20", uc.field_I);
-          la.field_b = ah.a(gh.field_c, 200, "", "roman12", uc.field_I);
-          f.field_a = oh.a(uc.field_I, "basic", 11091, "unachieved");
+          IntrusiveNode.field_c = ah.a(gh.field_c, 200, "", "roman20", StripedProgressWidget.field_I);
+          la.field_b = ah.a(gh.field_c, 200, "", "roman12", StripedProgressWidget.field_I);
+          f.field_a = oh.a(StripedProgressWidget.field_I, "basic", 11091, "unachieved");
           int var2_int = -24 % ((param0 + 15) / 54);
-          PlayerDungeonProfile.field_o = oh.a(uc.field_I, "basic", 11091, "orbcoin");
-          nj.a(gh.field_c, uc.field_I, -6332);
+          PlayerDungeonProfile.field_o = oh.a(StripedProgressWidget.field_I, "basic", 11091, "orbcoin");
+          nj.a(gh.field_c, StripedProgressWidget.field_I, -6332);
           cp.a(0, param1, (byte) -36, 0, qk.field_b, 16777215);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "sl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

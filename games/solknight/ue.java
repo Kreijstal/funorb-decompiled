@@ -262,35 +262,35 @@ final class ue {
           }
           var2Lifetime37 = Bzip2State.a((byte) -2, "planetnames,0");
           if (null != var2Lifetime37) {
-            ci.field_gb[0] = Archive.decodeCp1252(true, var2Lifetime37);
+            ProgressMessageDialog.field_gb[0] = Archive.decodeCp1252(true, var2Lifetime37);
           }
           var2Lifetime38 = Bzip2State.a((byte) -2, "planetnames,1");
           if (null != var2Lifetime38) {
-            ci.field_gb[1] = Archive.decodeCp1252(true, var2Lifetime38);
+            ProgressMessageDialog.field_gb[1] = Archive.decodeCp1252(true, var2Lifetime38);
           }
           var2Lifetime39 = Bzip2State.a((byte) -2, "planetnames,2");
           if (null != var2Lifetime39) {
-            ci.field_gb[2] = Archive.decodeCp1252(true, var2Lifetime39);
+            ProgressMessageDialog.field_gb[2] = Archive.decodeCp1252(true, var2Lifetime39);
           }
           var2Lifetime40 = Bzip2State.a((byte) -2, "planetnames,3");
           if (null != var2Lifetime40) {
-            ci.field_gb[3] = Archive.decodeCp1252(true, var2Lifetime40);
+            ProgressMessageDialog.field_gb[3] = Archive.decodeCp1252(true, var2Lifetime40);
           }
           var2Lifetime41 = Bzip2State.a((byte) -2, "planetnames,4");
           if (null != var2Lifetime41) {
-            ci.field_gb[4] = Archive.decodeCp1252(true, var2Lifetime41);
+            ProgressMessageDialog.field_gb[4] = Archive.decodeCp1252(true, var2Lifetime41);
           }
           var2Lifetime42 = Bzip2State.a((byte) -2, "planetnames,5");
           if (var2Lifetime42 != null) {
-            ci.field_gb[5] = Archive.decodeCp1252(true, var2Lifetime42);
+            ProgressMessageDialog.field_gb[5] = Archive.decodeCp1252(true, var2Lifetime42);
           }
           var2Lifetime43 = Bzip2State.a((byte) -2, "planetnames,6");
           if (null != var2Lifetime43) {
-            ci.field_gb[6] = Archive.decodeCp1252(true, var2Lifetime43);
+            ProgressMessageDialog.field_gb[6] = Archive.decodeCp1252(true, var2Lifetime43);
           }
           var2Lifetime44 = Bzip2State.a((byte) -2, "planetnames,7");
           if (null != var2Lifetime44) {
-            ci.field_gb[7] = Archive.decodeCp1252(true, var2Lifetime44);
+            ProgressMessageDialog.field_gb[7] = Archive.decodeCp1252(true, var2Lifetime44);
           }
           var2Lifetime45 = Bzip2State.a((byte) -2, "nextweapon,0");
           if (var2Lifetime45 != null) {
@@ -473,7 +473,7 @@ final class ue {
           }
           var2Lifetime89 = Bzip2State.a((byte) -2, "instructiontext");
           if (null != var2Lifetime89) {
-            c.field_E = Archive.decodeCp1252(true, var2Lifetime89);
+            StripedProgressWidget.field_E = Archive.decodeCp1252(true, var2Lifetime89);
           }
           var2Lifetime90 = Bzip2State.a((byte) -2, "firingmouse");
           if (null != var2Lifetime90) {

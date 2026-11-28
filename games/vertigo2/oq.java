@@ -20,7 +20,7 @@ final class oq extends qc {
     }
 
     final static void a(boolean param0) {
-        rh.b(-14, 4);
+        DialogMessagePane.b(-14, 4);
         if (!param0) {
           CharSequence[] var2 = (CharSequence[]) null;
           oq.a((CharSequence[]) null, 95);
@@ -154,7 +154,7 @@ final class oq extends qc {
               if (bf.field_a) {
                 param1 = LevelRenderer.field_m;
               }
-              BirthDateValidator.field_l.a(param2, true, param1);
+              BirthDateValidator.field_l.showResult(param2, true, param1);
             }
             if (param2 != 256 &&
               param2 != 10 &&

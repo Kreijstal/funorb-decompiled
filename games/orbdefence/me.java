@@ -241,7 +241,7 @@ final class me extends IntrusiveNode {
     final static void c(boolean param0) {
         AccountNameAvailabilityValidator.field_t = null;
         UiWidget.field_o = null;
-        pc.field_db = false;
+        StandardContentDialog.field_db = false;
         fd.field_e = null;
         sj.field_u = null;
         if (!param0) {

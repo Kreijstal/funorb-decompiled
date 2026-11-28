@@ -11,13 +11,13 @@ final class uj {
     final static void a(float param0, String param1, boolean param2, byte param3) {
         try {
           if (pc.field_b == null) {
-            pc.field_b = new lb(u.field_b, v.field_a);
+            pc.field_b = new ProgressDialog(u.field_b, v.field_a);
             u.field_b.showDialog(pc.field_b, -49);
           }
           if (param3 != -77) {
             uj.clearStaticReferences(-106);
           }
-          pc.field_b.a(param1, param2, param0, 125);
+          pc.field_b.setProgress(param1, param2, param0, 125);
           SoftwareRasterizer.clearRaster();
           uf.a(false, true);
         } catch (RuntimeException runtimeException) {

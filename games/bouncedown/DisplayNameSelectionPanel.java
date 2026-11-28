@@ -3,7 +3,7 @@
  */
 final class DisplayNameSelectionPanel extends DequeWidgetContainer implements NameSuggestionListener, WidgetActivationListener {
     static RgbSprite field_F;
-    static db field_A;
+    static ProgressDialog field_A;
     private InteractiveWidget field_D;
     NameSuggestionsPanel field_C;
     private InteractiveWidget field_z;
@@ -221,7 +221,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            field_A = (db) null;
+            field_A = (ProgressDialog) null;
           }
           var3 = param0.getFieldValidator(true);
           if (var3 == null) {
@@ -303,7 +303,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         Throwable decompiledCaughtException = null;
         var1 = GzipDecompressor.field_c;
         synchronized (var1) {
-          if (ec.field_bb == oh.field_a) {
+          if (StandardContentDialog.field_bb == oh.field_a) {
             return false;
           }
           lh.field_f = ModalDialogHost.field_A[oh.field_a];

@@ -188,7 +188,7 @@ final class bs extends UiPanel {
         UiPanel var4 = null;
         try {
           qr.field_q = tn.a("display_name_changed", param0, -99, "basic");
-          h.field_D = new dm(0L, pb.field_b, we.field_J, nf.field_o);
+          h.field_D = new dm(0L, pb.field_b, StripedProgressWidget.field_J, nf.field_o);
           ao.field_O = new dm(0L, pb.field_b, RichTextLayout.field_s, eq.field_B);
           wi.field_g = new UiPanel(0L, (UiPanel) null);
           IterableNodeHashTable.field_a = new UiPanel(0L, AccountRequestState.field_b);

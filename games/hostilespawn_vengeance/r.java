@@ -57,9 +57,9 @@ final class r {
           } else {
             if (var6 == 1) {
               var5_int = 5;
-              if (jf.field_g > 0) {
+              if (FullscreenNoticeType.field_g > 0) {
                 param2.field_i = 7;
-                jf.field_g = jf.field_g - 1;
+                FullscreenNoticeType.field_g = FullscreenNoticeType.field_g - 1;
               }
             } else {
               if (var6 == 2) {

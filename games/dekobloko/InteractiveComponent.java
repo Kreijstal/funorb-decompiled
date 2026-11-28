@@ -241,7 +241,7 @@ class InteractiveComponent extends UiComponent {
         if (integerArgument1 != -1209) {
           return;
         }
-        UiComponentPart023.booleanState0134 = false;
+        StandardContentDialog.booleanState0134 = false;
     }
 
     void updatePointer(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {

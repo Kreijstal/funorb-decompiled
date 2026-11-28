@@ -3,7 +3,7 @@
  */
 public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static PlatformTaskDispatcher field_f;
-    static pj field_g;
+    static StandardContentDialog field_g;
     boolean field_e;
     static boolean field_k;
     static BitmapFont field_c;
@@ -130,7 +130,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_8_0 = LabeledWidgetContainer.field_Q.a((byte) 63);
             return stackIn_8_0;
           }
-          if (oe.field_b == rk.field_X) {
+          if (oe.field_b == ProgressDialog.field_X) {
             stackIn_13_0 = LabeledWidgetContainer.field_Q.a((byte) 63);
             return stackIn_13_0;
           }
@@ -179,8 +179,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             ki.field_f.getParent().remove((java.awt.Component) ((Object) ki.field_f));
           }
           boolean decompiledFrameRemainder0 = true;
-          if (sf.field_H != null) {
-            var2 = sf.field_H;
+          if (GuestPlayConfirmationForm.field_H != null) {
+            var2 = GuestPlayConfirmationForm.field_H;
             decompiledFrameRemainder0 = (var4 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -668,12 +668,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Object var6 = null;
         try {
           var2_long = qg.correctedCurrentTimeMillis(false);
-          var4 = ai.field_g[ge.field_G];
-          ai.field_g[ge.field_G] = var2_long;
+          var4 = ai.field_g[RegistrationAgreementPane.field_G];
+          ai.field_g[RegistrationAgreementPane.field_G] = var2_long;
           if (param0 != 8865) {
             this.focusLost((java.awt.event.FocusEvent) null);
           }
-          ge.field_G = 1 + ge.field_G & 31;
+          RegistrationAgreementPane.field_G = 1 + RegistrationAgreementPane.field_G & 31;
           if (var4 != 0L &&
             var2_long <= var4) {
           }
@@ -852,7 +852,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           var4 = BufferedSocket.field_a[ai.field_f];
           BufferedSocket.field_a[ai.field_f] = var2_long;
           if (param0 != 57) {
-            field_g = (pj) null;
+            field_g = (StandardContentDialog) null;
           }
           ai.field_f = ai.field_f + 1 & 31;
           if (var4 != 0L &&
@@ -868,7 +868,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             ki.field_f.setSize(AccountCreationResultPanel.field_pb, wf.field_b);
             ki.field_f.setVisible(true);
             if (null != ii.field_s &&
-              sf.field_H == null) {
+              GuestPlayConfirmationForm.field_H == null) {
               var6 = ii.field_s.getInsets();
               ki.field_f.setLocation(DualLinkNode.field_i + var6.left, ActiveLevel.field_P + var6.top);
               if (TrackController.field_F) {

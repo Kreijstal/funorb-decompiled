@@ -387,7 +387,7 @@ abstract class wc extends DualLinkNode {
 
     final static int c(int param0) {
         i.field_a.a(param0);
-        if (!jg.field_kb.c(true)) {
+        if (!StandardContentDialog.field_kb.c(true)) {
           return ga.a(param0 ^ -108);
         }
         return 0;

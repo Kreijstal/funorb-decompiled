@@ -15,10 +15,10 @@ final class eg {
         RuntimeException var2 = null;
         var3 = Transmogrify.field_A ? 1 : 0;
         try {
-          var4 = (jl) (ll.field_T.beginForward((byte) -95));
+          var4 = (jl) (FullscreenStatusDialog.field_T.beginForward((byte) -95));
           while (var4 != null) {
             LetterTile.a(-7812, param1, var4);
-            var4 = (jl) (ll.field_T.nextForward(true));
+            var4 = (jl) (FullscreenStatusDialog.field_T.nextForward(true));
           }
           var5 = (oi) (GzipDecompressor.field_d.beginForward((byte) -95));
           if (param0) {

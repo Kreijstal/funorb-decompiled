@@ -159,7 +159,7 @@ final class MixedSupport033 extends HashNode {
               if (integerLocal23 > integerLocal20) {
                 integerLocal20 = integerLocal23;
               }
-              integerLocal24 = DefaultTextWidgetRenderer.renderingSupport009State0001.stringWidth(UiComponentPart033.stringState0623);
+              integerLocal24 = DefaultTextWidgetRenderer.renderingSupport009State0001.stringWidth(AccountCreationResultPanel.stringState0623);
               if (integerLocal24 > integerLocal20) {
                 integerLocal20 = integerLocal24;
               }
@@ -189,7 +189,7 @@ final class MixedSupport033 extends HashNode {
           renderingSupport007Local19.performAction0852(new GameDomainSupport002(19, MixedSupport006.stringState0028, DefaultTextWidgetRenderer.renderingSupport009State0001), 108);
           renderingSupport007Local19.performAction0852(new GameDomainSupport002(10, MixedSupport131.stringState0567, DefaultTextWidgetRenderer.renderingSupport009State0001), 126);
           renderingSupport007Local19.performAction0852(new GameDomainSupport002(9, MixedSupport124.stringState0542, DefaultTextWidgetRenderer.renderingSupport009State0001), 118);
-          renderingSupport007Local19.performAction0852(new GameDomainSupport002(11, UiComponentPart019.stringState0350, DefaultTextWidgetRenderer.renderingSupport009State0001), 108);
+          renderingSupport007Local19.performAction0852(new GameDomainSupport002(11, BirthDateChatEnableForm.stringState0350, DefaultTextWidgetRenderer.renderingSupport009State0001), 108);
           renderingSupport007Local19.performAction0852(new GameDomainSupport002(12, TextLayout.stringState0084, DefaultTextWidgetRenderer.renderingSupport009State0001), 112);
         }
         renderingSupport007Local19.performAction0849(integerLocal13, 320, true, 53, 24);

@@ -53,7 +53,7 @@ final class wg extends pk {
     final static void a(String param0, byte param1, long param2) {
         CharSequence var5 = null;
         try {
-          ij.field_c = param0;
+          FullscreenNoticeType.field_c = param0;
           vk.field_g = 2;
           var5 = (CharSequence) ((Object) param0);
           ec.field_f = ad.a(var5, -2);

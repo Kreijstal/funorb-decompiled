@@ -132,12 +132,12 @@ final class kd implements WidgetRenderer {
             var4_int = 10;
             var5_ref = null;
             if (jl.field_j == 0) {
-              var5_ref = sh.field_a + MouseInputHandler.field_c.field_h;
+              var5_ref = FullscreenNoticeType.field_a + MouseInputHandler.field_c.field_h;
             }
             if (jl.field_j == 1) {
               ob.a(1, 0, sg.field_p, dc.field_a);
               var4_int = var4_int + (tj.field_s.field_m - hk.field_a.field_y);
-              var5_ref = ll.field_W;
+              var5_ref = FullscreenStatusDialog.field_W;
             }
             if (jl.field_j == 2) {
               var5_ref = ProxySocketConnector.field_g;
@@ -149,8 +149,8 @@ final class kd implements WidgetRenderer {
               hk.field_a.drawParagraph((String) (var5_ref), 461, o.field_i + 247 + param1, 160, var7, 0, -1, 1, 0, var6);
             }
           } else {
-            if (qe.field_F != null) {
-              var16 = qe.field_F[rd.field_c[gk.field_e]];
+            if (StripedProgressWidget.field_F != null) {
+              var16 = StripedProgressWidget.field_F[rd.field_c[gk.field_e]];
               var4 = var16;
               if (jl.field_j == 3) {
                 var5 = o.field_i + 413;
@@ -188,7 +188,7 @@ final class kd implements WidgetRenderer {
                 n.submittedWordCount == 0 &&
                 var7Lifetime1 > 0) {
                 var8_int = 128 + (int)(Math.sin(3.141592653589793 * (double)dc.field_a / 50.0) * 64.0);
-                ImageProducerRasterBuffer.a(param1 + 376, 264, (byte) 98, 164, 13, jk.field_x.a(true) - 10, NetworkArchiveRequest.field_x, var8_int);
+                ImageProducerRasterBuffer.a(param1 + 376, 264, (byte) 98, 164, 13, GuestPlayConfirmationForm.field_x.a(true) - 10, NetworkArchiveRequest.field_x, var8_int);
               }
               pa.a(param1 + 376, tj.field_z + var7Lifetime1, 39935, 16776867, 164, 16710412, 264, -10, 39935);
             } else {
@@ -296,17 +296,17 @@ final class kd implements WidgetRenderer {
             stackIn_103_2 = 16776867;
             stackIn_103_3 = 16710412;
             stackIn_103_4 = param1 + 183;
-            stackIn_104_5 = (0 == a.field_S.field_d);
-            jk.a(stackIn_103_0, stackIn_103_1, stackIn_103_2, stackIn_103_3, stackIn_103_4, stackIn_104_5, il.field_a, 224, 65280, (byte) -50);
+            stackIn_104_5 = (0 == ContentTransitionDialog.field_S.field_d);
+            GuestPlayConfirmationForm.a(stackIn_103_0, stackIn_103_1, stackIn_103_2, stackIn_103_3, stackIn_103_4, stackIn_104_5, il.field_a, 224, 65280, (byte) -50);
             stackIn_106_0 = 16711680;
             stackIn_106_1 = 80;
             stackIn_106_2 = 16776867;
             stackIn_106_3 = 16710412;
             stackIn_106_4 = param1 + 183;
-            stackIn_107_5 = (1 == a.field_S.field_d);
-            jk.a(stackIn_106_0, stackIn_106_1, stackIn_106_2, stackIn_106_3, stackIn_106_4, stackIn_107_5, nh.field_h, 336, 16711680, (byte) 111);
+            stackIn_107_5 = (1 == ContentTransitionDialog.field_S.field_d);
+            GuestPlayConfirmationForm.a(stackIn_106_0, stackIn_106_1, stackIn_106_2, stackIn_106_3, stackIn_106_4, stackIn_107_5, nh.field_h, 336, 16711680, (byte) 111);
           }
-          if (ll.field_S) {
+          if (FullscreenStatusDialog.field_S) {
             IntrusiveNode.field_d.drawRightAligned("FPS: " + ub.field_a, 630, 30, 65535, -1);
             IntrusiveNode.field_d.drawRightAligned("LPS: " + LabeledWidgetContainer.field_y, 630, 60, 65535, -1);
           }
@@ -323,7 +323,7 @@ final class kd implements WidgetRenderer {
                 var9Lifetime2 = 8;
               }
             }
-            jk.field_x.a(16776867, var9Lifetime2 - 5, 3, 56 + IntrusiveNode.field_d.stringWidth(IntrusiveDeque.field_a[var15.field_i]), 0, 16776867);
+            GuestPlayConfirmationForm.field_x.a(16776867, var9Lifetime2 - 5, 3, 56 + IntrusiveNode.field_d.stringWidth(IntrusiveDeque.field_a[var15.field_i]), 0, 16776867);
             fc.field_h[var15.field_i].drawQuarterSizeAveraged(8, var9Lifetime2);
             IntrusiveNode.field_d.drawString(IntrusiveDeque.field_a[var15.field_i], 48, var9Lifetime2 + IntrusiveNode.field_d.field_y, 0, -1);
           }

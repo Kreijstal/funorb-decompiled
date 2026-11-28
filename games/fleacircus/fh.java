@@ -16,12 +16,12 @@ final class fh {
         cg.a((byte) -105, -1);
         if (param0 == -55) {
           cb.field_v = ql.field_l;
-          ui.field_kb = ql.field_l;
+          StandardContentDialog.field_kb = ql.field_l;
           return;
         }
         field_b = (ed) null;
         cb.field_v = ql.field_l;
-        ui.field_kb = ql.field_l;
+        StandardContentDialog.field_kb = ql.field_l;
     }
 
     public static void clearStaticReferences(byte param0) {

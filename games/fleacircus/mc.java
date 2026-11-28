@@ -38,7 +38,7 @@ final class mc {
         if (0 >= nb.field_h) {
           return false;
         }
-        if (!lk.a(95)) {
+        if (!StripedProgressWidget.a(95)) {
           return true;
         }
         return false;

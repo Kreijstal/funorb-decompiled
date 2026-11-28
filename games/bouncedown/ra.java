@@ -222,18 +222,18 @@ final class ra extends oa {
             if (param0 != 28282) {
               field_f = (String) null;
             }
-            oh.field_a = ec.field_bb;
+            oh.field_a = StandardContentDialog.field_bb;
             SingleChildWidgetContainer.field_y = SingleChildWidgetContainer.field_y + 1;
-            if (db.field_R < 0) {
+            if (ProgressDialog.field_R < 0) {
               var5 = 0;
               var2 = var5;
               while (var5 < 112) {
                 ng.field_a[var5] = false;
                 var5++;
               }
-              db.field_R = rj.field_g;
+              ProgressDialog.field_R = rj.field_g;
             } else {
-              while (rj.field_g != db.field_R) {
+              while (rj.field_g != ProgressDialog.field_R) {
                 var2 = SecondaryNodeDequeIterator.field_b[rj.field_g];
                 rj.field_g = 127 & 1 + rj.field_g;
                 if (var2 >= 0) {
@@ -243,7 +243,7 @@ final class ra extends oa {
                 ng.field_a[~var2] = false;
               }
             }
-            ec.field_bb = Bounce.field_F;
+            StandardContentDialog.field_bb = Bounce.field_F;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

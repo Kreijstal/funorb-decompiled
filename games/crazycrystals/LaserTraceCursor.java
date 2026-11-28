@@ -72,7 +72,7 @@ final class LaserTraceCursor {
               this.field_e = var4;
               return var5;
             }
-            var5 = en.field_M;
+            var5 = ResizableModalDialog.field_M;
             this.field_g = var3;
             this.field_e = var4;
             return var5;
@@ -95,7 +95,7 @@ final class LaserTraceCursor {
             this.field_e = var4;
             return var5Lifetime1;
           }
-          var5Lifetime1Lifetime1 = en.field_M;
+          var5Lifetime1Lifetime1 = ResizableModalDialog.field_M;
           this.field_g = var3;
           this.field_e = var4;
           return var5Lifetime1Lifetime1;

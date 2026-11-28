@@ -26,7 +26,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
         try {
           var4_int = -1;
           for (var5 = param2; param0 > var5; var5++) {
-            var4_int = var4_int >>> 8 ^ sh.field_gb[(var4_int ^ param1[var5]) & 255];
+            var4_int = var4_int >>> 8 ^ ProgressMessageDialog.field_gb[(var4_int ^ param1[var5]) & 255];
           }
           if (param3 != -33) {
             field_n = -120;

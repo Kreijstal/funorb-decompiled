@@ -604,7 +604,7 @@ abstract class MovingTunnelEntity extends TunnelEntity {
           ic.field_a.bindAsRenderTarget();
           var2.drawOpaque(0, -ad.field_b.field_w);
           ic.field_a.field_v = ad.field_b.field_w;
-          ib.b(false);
+          StripedProgressWidget.b(false);
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ee.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

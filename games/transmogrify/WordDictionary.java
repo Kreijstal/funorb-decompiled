@@ -400,7 +400,7 @@ final class WordDictionary {
         try {
           tf.field_a = wi.b(-125) * param1 / 1000;
           NanoFrameTimer.a(param3, (byte) -80);
-          sd.a(param3, true);
+          ProgressDialog.a(param3, true);
           v.a((byte) 118, param3);
           if (param2 != 22313) {
             field_f = (String) null;

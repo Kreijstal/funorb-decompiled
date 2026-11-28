@@ -42,7 +42,7 @@ final class MixedSupport004 {
 
     final static void performAction0051(int integerArgument1, int integerArgument2) {
         IconLabelWidget.integerState0647 = integerArgument2 * integerArgument1 / 50;
-        UiComponentPart014.integerState0316 = integerArgument2 * 20 / 50;
+        FullscreenStatusDialog.integerState0316 = integerArgument2 * 20 / 50;
     }
 
     public final String toString() {

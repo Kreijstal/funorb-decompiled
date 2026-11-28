@@ -65,7 +65,7 @@ final class hk {
             var2 != 0) {
             var5.a(false);
           }
-          if (!fm.a((byte) 95)) {
+          if (!DialogMessagePane.a((byte) 95)) {
             return ak.a(-92);
           }
           fn.a(27, 228, 3);
@@ -84,7 +84,7 @@ final class hk {
           var2 != 0) {
           ((tm) (var1)).a(false);
         }
-        if (!fm.a((byte) 95)) {
+        if (!DialogMessagePane.a((byte) 95)) {
           return ak.a(-92);
         }
         fn.a(27, 228, 3);
@@ -188,11 +188,11 @@ final class hk {
 
     final static void c(int param0) {
         if (param0 <= -94) {
-          de.field_a.a((byte) -116, (UiWidget) (new qd()));
+          de.field_a.replaceContent((byte) -116, (UiWidget) (new GuestPlayConfirmationForm()));
           return;
         }
         field_c = (String) null;
-        de.field_a.a((byte) -116, (UiWidget) (new qd()));
+        de.field_a.replaceContent((byte) -116, (UiWidget) (new GuestPlayConfirmationForm()));
     }
 
     private hk() throws Throwable {

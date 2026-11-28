@@ -183,7 +183,7 @@ final class df implements WidgetRenderer {
             while (var9 < var8) {
               var11 = fj.field_b[var9];
               var6[0][var10] = wj.field_t[var11];
-              var20[0][var10 * 4] = se.field_B[var11];
+              var20[0][var10 * 4] = GuestPlayConfirmationForm.field_B[var11];
               var20[0][4 * var10 + 1] = PcmOutputWorker.field_g[var11];
               var20[0][2 + var10 * 4] = wb.field_e[var11];
               var20[0][4 * var10 + 3] = vc.field_f[var11];
@@ -201,7 +201,7 @@ final class df implements WidgetRenderer {
             while (var8 > var9Lifetime1) {
               var11Lifetime1 = fj.field_b[var9Lifetime1 + var5];
               var6[1][var15] = wj.field_t[var11Lifetime1];
-              var20[1][4 * var15] = se.field_B[var11Lifetime1];
+              var20[1][4 * var15] = GuestPlayConfirmationForm.field_B[var11Lifetime1];
               var20[1][4 * var15 + 1] = PcmOutputWorker.field_g[var11Lifetime1];
               var20[1][4 * var15 + 2] = wb.field_e[var11Lifetime1];
               var20[1][3 + var15 * 4] = vc.field_f[var11Lifetime1];

@@ -219,7 +219,7 @@ final class MusicPatchPcmStream extends PcmStream {
     final static void g(int param0) {
         SecondaryNodeDequeIterator.field_d = LabeledWidgetContainer.field_N.readString((byte) -53);
         CharSequence var2 = (CharSequence) ((Object) SecondaryNodeDequeIterator.field_d);
-        tf.field_pb = rh.a(119, var2);
+        ProgressDialog.field_pb = rh.a(119, var2);
         if (param0 != 11) {
           MusicPatchPcmStream.g(-127);
         }

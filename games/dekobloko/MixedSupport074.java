@@ -110,7 +110,7 @@ final class MixedSupport074 {
         try {
           DefaultTextWidgetRenderer.rgbSpriteState0001 = DropTargetWidgetContainer.computeRgbSprite0704(resourceArchiveArgument1, "display_name_changed", "basic", integerArgument2 ^ 24181);
           MixedSupport066.sceneWidgetPart010State0003 = new SceneWidgetPart010(0L, DropTargetWidgetContainer.sceneWidgetPart010State0002, MixedSupport088.stringState0370, MixedSupport042.stringState0184);
-          RenderingSupport003.sceneWidgetPart010State0001 = new SceneWidgetPart010(0L, DropTargetWidgetContainer.sceneWidgetPart010State0002, UiComponentPart019.stringState0349, GameDomainSupport006.stringState0630);
+          RenderingSupport003.sceneWidgetPart010State0001 = new SceneWidgetPart010(0L, DropTargetWidgetContainer.sceneWidgetPart010State0002, BirthDateChatEnableForm.stringState0349, GameDomainSupport006.stringState0630);
           ValidationStatus.sceneWidgetState0112 = new SceneWidget(0L, (SceneWidget) null);
           EmailValidationError.sceneWidgetState0060 = new SceneWidget(0L, MixedSupport125.sceneWidgetState0125);
           EmailValidationError.sceneWidgetState0060.integerState0916 = 1;

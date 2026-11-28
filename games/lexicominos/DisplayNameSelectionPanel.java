@@ -154,7 +154,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var11 = new LabeledWidgetContainer(20, param3, param5 + 120, 25, param6, false, 120, 3, ql.field_Q, 16777215, param0);
+          var11 = new LabeledWidgetContainer(20, param3, param5 + 120, 25, param6, false, 120, 3, ResizableModalDialog.field_Q, 16777215, param0);
           this.addChild((byte) 73, var11);
           var9 = new li(((FieldValidatorProvider) ((Object) param6)).getFieldValidator((byte) 6), param4, 126, param3 + var11.field_v, 25 + param5, param1);
           var10 = -12 / ((21 - param2) / 47);
@@ -303,7 +303,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
         this.field_E = new ValidatedTextField("", (WidgetEventListener) null, 12);
-        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(ValidatedTextField.field_T, 0, 0, 0, 0, 16777215, -1, 3, 0, ql.field_Q.field_E, -1, 2147483647, true);
+        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(ValidatedTextField.field_T, 0, 0, 0, 0, 16777215, -1, 3, 0, ResizableModalDialog.field_Q.field_E, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(oh.field_c, var1, (WidgetEventListener) null);
         this.field_G = new InteractiveWidget(PasswordValidator.field_l, (WidgetEventListener) null);
         this.field_B = new InteractiveWidget(he.field_a, (WidgetEventListener) null);

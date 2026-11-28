@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pc {
-    static ng field_c;
+    static FullscreenNoticeType field_c;
     static String field_d;
     static String field_a;
-    static lb field_b;
+    static ProgressDialog field_b;
 
     public final String toString() {
         throw new IllegalStateException();
@@ -39,6 +39,6 @@ final class pc {
     static {
         field_d = "That name is not available";
         field_a = "Connection restored.";
-        field_c = new ng();
+        field_c = new FullscreenNoticeType();
     }
 }

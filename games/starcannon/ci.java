@@ -92,7 +92,7 @@ final class ci implements WidgetRenderer {
         java.awt.Graphics var11 = null;
         try {
           try {
-            var10 = kj.field_E.getGraphics();
+            var10 = DialogMessagePane.field_E.getGraphics();
             if (null == IsaacRandom.field_c) {
               IsaacRandom.field_c = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -109,7 +109,7 @@ final class ci implements WidgetRenderer {
             }
             try {
               if (TextLineMetrics.field_h == null) {
-                TextLineMetrics.field_h = kj.field_E.createImage(304, 34);
+                TextLineMetrics.field_h = DialogMessagePane.field_E.createImage(304, 34);
               }
               var11 = TextLineMetrics.field_h.getGraphics();
               var11.setColor(param1);
@@ -147,7 +147,7 @@ final class ci implements WidgetRenderer {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            kj.field_E.repaint();
+            DialogMessagePane.field_E.repaint();
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

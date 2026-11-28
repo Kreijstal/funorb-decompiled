@@ -70,8 +70,8 @@ final class uc {
         if (param1 >= -116) {
           return;
         }
-        if (null != jk.field_D) {
-          jk.field_D.setMasterVolume((byte) 101, param0);
+        if (null != GuestPlayConfirmationForm.field_D) {
+          GuestPlayConfirmationForm.field_D.setMasterVolume((byte) 101, param0);
           if (null != jj.field_a) {
             jj.field_a.a(param0, false);
             return;

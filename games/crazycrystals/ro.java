@@ -102,7 +102,7 @@ final class ro extends pn implements Cloneable {
     final static void g(int param0) {
         int var1 = -38 % ((18 - param0) / 61);
         SecondaryNodeDequeIterator.a(dg.field_a, true, fh.field_i, false);
-        ud.field_U = true;
+        ContentTransitionDialog.field_U = true;
     }
 
     final void drawTileForeground(int param0, int param1, int param2, boolean param3, int param4, int param5) {
@@ -212,7 +212,7 @@ final class ro extends pn implements Cloneable {
                 var11 = stackIn_306_0;
               } else {
                 if (var13 + var12 >= 0) {
-                  stackIn_339_0 = en.field_K[var14];
+                  stackIn_339_0 = ResizableModalDialog.field_K[var14];
                 } else {
                   stackIn_339_0 = ResourceArchive.field_j[var14];
                 }
@@ -284,7 +284,7 @@ final class ro extends pn implements Cloneable {
                 var14Lifetime1 = this.field_o.field_m;
                 if (1 != this.field_m) {
                   if (var13Lifetime1 + var12Lifetime1 >= 0) {
-                    stackIn_96_0 = en.field_K[var14Lifetime1];
+                    stackIn_96_0 = ResizableModalDialog.field_K[var14Lifetime1];
                   } else {
                     stackIn_96_0 = ResourceArchive.field_j[var14Lifetime1];
                   }
@@ -316,7 +316,7 @@ final class ro extends pn implements Cloneable {
             if (var12Lifetime1 + var13Lifetime1 > 0) {
               stackIn_22_0 = ResourceArchive.field_j[var14Lifetime1];
             } else {
-              stackIn_22_0 = en.field_K[var14Lifetime1];
+              stackIn_22_0 = ResizableModalDialog.field_K[var14Lifetime1];
             }
             var11 = stackIn_22_0;
             stackIn_25_0 = (var7Lifetime1 != 0) ? 0 : 1;
@@ -337,7 +337,7 @@ final class ro extends pn implements Cloneable {
                 var14Lifetime1 = this.field_o.field_m;
                 if (1 != this.field_m) {
                   if (var13Lifetime1 + var12Lifetime1 >= 0) {
-                    stackIn_48_0 = en.field_K[var14Lifetime1];
+                    stackIn_48_0 = ResizableModalDialog.field_K[var14Lifetime1];
                   } else {
                     stackIn_48_0 = ResourceArchive.field_j[var14Lifetime1];
                   }
@@ -386,7 +386,7 @@ final class ro extends pn implements Cloneable {
                 var14Lifetime1 = this.field_o.field_m;
                 if (1 != this.field_m) {
                   if (var13Lifetime1 + var12Lifetime1 >= 0) {
-                    stackIn_143_0 = en.field_K[var14Lifetime1];
+                    stackIn_143_0 = ResizableModalDialog.field_K[var14Lifetime1];
                   } else {
                     stackIn_143_0 = ResourceArchive.field_j[var14Lifetime1];
                   }
@@ -445,7 +445,7 @@ final class ro extends pn implements Cloneable {
                   var14Lifetime1 = this.field_o.field_m;
                   if (1 != this.field_m) {
                     if (var13Lifetime1 + var12Lifetime1 >= 0) {
-                      stackIn_243_0 = en.field_K[var14Lifetime1];
+                      stackIn_243_0 = ResizableModalDialog.field_K[var14Lifetime1];
                     } else {
                       stackIn_243_0 = ResourceArchive.field_j[var14Lifetime1];
                     }
@@ -477,7 +477,7 @@ final class ro extends pn implements Cloneable {
               if (var12Lifetime1 + var13Lifetime1 > 0) {
                 stackIn_169_0 = ResourceArchive.field_j[var14Lifetime1];
               } else {
-                stackIn_169_0 = en.field_K[var14Lifetime1];
+                stackIn_169_0 = ResizableModalDialog.field_K[var14Lifetime1];
               }
               var11 = stackIn_169_0;
               stackIn_172_0 = (var7Lifetime1 != 0) ? 0 : 1;
@@ -498,7 +498,7 @@ final class ro extends pn implements Cloneable {
                   var14Lifetime1 = this.field_o.field_m;
                   if (1 != this.field_m) {
                     if (var13Lifetime1 + var12Lifetime1 >= 0) {
-                      stackIn_195_0 = en.field_K[var14Lifetime1];
+                      stackIn_195_0 = ResizableModalDialog.field_K[var14Lifetime1];
                     } else {
                       stackIn_195_0 = ResourceArchive.field_j[var14Lifetime1];
                     }

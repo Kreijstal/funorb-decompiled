@@ -130,7 +130,7 @@ final class sr {
                 stackIn_44_3 = ffa.field_h;
               }
               stackIn_43_0.field_Z = lga.a(stackIn_43_1, stackIn_43_2, stackIn_44_3);
-              cw.field_yb.field_Z = lo.field_a;
+              cw.field_yb.field_Z = FullscreenNoticeType.field_a;
               ShieldSpecial.field_q = true;
               jj.field_wb.field_u = true;
               if (null != pha.field_h) {

@@ -60,7 +60,7 @@ final class nc {
     }
 
     final static void b(int param0) {
-        if (!ei.field_R) {
+        if (!ResizableModalDialog.field_R) {
           throw new IllegalStateException();
         }
         wd.field_b = true;

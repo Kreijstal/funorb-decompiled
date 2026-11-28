@@ -114,7 +114,7 @@ final class dj {
           }
           for (var2_int = 0; param1.length() > var2_int; var2_int++) {
             var3 = param1.charAt(var2_int);
-            if (!uc.a(param0 - 854863799, (char) var3) &&
+            if (!StripedProgressWidget.a(param0 - 854863799, (char) var3) &&
               !EmailFormatValidator.a(57, (char) var3)) {
               return true;
             }
@@ -315,11 +315,11 @@ final class dj {
           }
           var2_int = param0.readUnsignedByte(true);
           SecondaryNodeDeque.field_g = SecondaryNodeDeque.field_g + (var2_int >> 3);
-          cm.field_P = var2_int << 18 & 1835008;
-          cm.field_P = cm.field_P + (param0.readUnsignedShort(0) << 2);
+          RegistrationAgreementPane.field_P = var2_int << 18 & 1835008;
+          RegistrationAgreementPane.field_P = RegistrationAgreementPane.field_P + (param0.readUnsignedShort(0) << 2);
           var2_intLifetime1 = param0.readUnsignedByte(true);
           fm.field_g = 2064384 & var2_intLifetime1 << 15;
-          cm.field_P = cm.field_P + (var2_intLifetime1 >> 6);
+          RegistrationAgreementPane.field_P = RegistrationAgreementPane.field_P + (var2_intLifetime1 >> 6);
           fm.field_g = fm.field_g + (param0.readUnsignedByte(true) << 7);
           var2_intLifetime2 = param0.readUnsignedByte(true);
           fm.field_g = fm.field_g + (var2_intLifetime2 >> 1);

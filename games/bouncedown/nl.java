@@ -19,7 +19,7 @@ final class nl {
           int var1 = -119 / ((56 - param0) / 59);
           pa.field_e = true;
           IsaacRandom.a(false, -1402584374);
-          mh.field_U = 0;
+          ContentTransitionDialog.field_U = 0;
           return;
         }
         throw new IllegalStateException();

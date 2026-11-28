@@ -111,7 +111,7 @@ final class p {
           }
           var2_long = ol.correctedCurrentTimeMillis(256);
           if (IntrusiveDeque.field_b != 0 &&
-            jf.field_tb < 0) {
+            StandardContentDialog.field_tb < 0) {
             var4_ref_lc = (lc) (ba.field_a.first((byte) -5));
             if (var4_ref_lc != null &&
               var2_long > var4_ref_lc.field_l) {
@@ -129,14 +129,14 @@ final class p {
             }
           }
           while (true) {
-            if (jf.field_tb < 0) {
+            if (StandardContentDialog.field_tb < 0) {
               id.field_b.position = 0;
-              if (!pe.a((byte) 119, 1)) {
+              if (!ProgressDialog.a((byte) 119, 1)) {
                 return false;
               }
-              jf.field_tb = id.field_b.o(11650);
+              StandardContentDialog.field_tb = id.field_b.o(11650);
               id.field_b.position = 0;
-              PcmOutputWorker.field_i = param1[jf.field_tb];
+              PcmOutputWorker.field_i = param1[StandardContentDialog.field_tb];
             }
             if (!NodeHashTableIterator.a((byte) 124)) {
               return false;
@@ -145,8 +145,8 @@ final class p {
               ul.field_j = uc.field_X;
               uc.field_X = NodeHashTableIterator.field_i;
               NodeHashTableIterator.field_i = cb.field_g;
-              cb.field_g = jf.field_tb;
-              jf.field_tb = -1;
+              cb.field_g = StandardContentDialog.field_tb;
+              StandardContentDialog.field_tb = -1;
               return true;
             }
             var4 = IntrusiveDeque.field_b;
@@ -156,12 +156,12 @@ final class p {
                 var4 = 0;
               }
             }
-            var5 = new lc((long)var4 + var2_long, jf.field_tb, new byte[PcmOutputWorker.field_i]);
+            var5 = new lc((long)var4 + var2_long, StandardContentDialog.field_tb, new byte[PcmOutputWorker.field_i]);
             for (var6 = 0; var6 < PcmOutputWorker.field_i; var6++) {
               var5.field_q[var6] = id.field_b.payload[var6];
             }
             ba.field_a.addLast(var5, -111);
-            jf.field_tb = -1;
+            StandardContentDialog.field_tb = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

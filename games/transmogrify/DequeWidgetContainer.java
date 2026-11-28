@@ -280,9 +280,9 @@ class DequeWidgetContainer extends UiWidget implements WidgetContainerMarker {
           of.field_a = new PcmStreamMixer();
           pc.field_b = param7 * 1000 / param5;
           u.field_a.setRootStream(of.field_a);
-          jk.field_D = param3;
-          jk.field_D.setMasterVolume((byte) 107, lb.field_a);
-          Bzip2State.field_h.setRootStream(jk.field_D);
+          GuestPlayConfirmationForm.field_D = param3;
+          GuestPlayConfirmationForm.field_D.setMasterVolume((byte) 107, lb.field_a);
+          Bzip2State.field_h.setRootStream(GuestPlayConfirmationForm.field_D);
           if (param2 != 22290) {
             ResourceArchive var9 = (ResourceArchive) null;
             DequeWidgetContainer.a((ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, -25);
@@ -344,7 +344,7 @@ class DequeWidgetContainer extends UiWidget implements WidgetContainerMarker {
           ArchiveRequest.field_l = ContextualRuntimeException.a(param2, (byte) 125, "commonui", "frame_bottom");
           vf.field_a = pc.a("commonui", "jagex_logo_grey", param2, 113);
           mc.field_b = ContextualRuntimeException.a(param2, (byte) 125, "commonui", "button");
-          ai.field_b = ik.a("commonui", param2, (byte) -46, "validation");
+          ai.field_b = ProgressMessageDialog.a("commonui", param2, (byte) -46, "validation");
           al.field_i = (BitmapFont) ((Object) ua.a(param2, "commonui", 32, param1, "arezzo12"));
           vd.field_h = (BitmapFont) ((Object) ua.a(param2, "commonui", 32, param1, "arezzo14"));
           ArchiveRequest.field_q = (BitmapFont) ((Object) ua.a(param2, "commonui", param3 - 2394310, param1, "arezzo14bold"));
@@ -408,7 +408,7 @@ class DequeWidgetContainer extends UiWidget implements WidgetContainerMarker {
         if (!param0) {
           return (String) null;
         }
-        return rf.field_cb[var4];
+        return StandardContentDialog.field_cb[var4];
     }
 
     boolean handleKey(int param0, UiWidget param1, byte param2, char param3) {

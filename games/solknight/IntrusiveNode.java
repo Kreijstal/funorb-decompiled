@@ -62,9 +62,9 @@ class IntrusiveNode {
     final static boolean b(byte param0) {
         if (param0 != 89) {
           field_f = (boolean[]) null;
-          return lb.g((byte) -94);
+          return ProgressDialog.g((byte) -94);
         }
-        return lb.g((byte) -94);
+        return ProgressDialog.g((byte) -94);
     }
 
     static {

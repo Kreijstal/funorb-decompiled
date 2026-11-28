@@ -26,8 +26,8 @@ final class wh {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (nf.field_F != null) {
-            nf.field_F.field_G.setNameSuggestions(args, 560186724);
+          if (ResizableModalDialog.field_F != null) {
+            ResizableModalDialog.field_F.field_G.setNameSuggestions(args, 560186724);
           }
           if (!param1) {
             field_b = (ib) null;

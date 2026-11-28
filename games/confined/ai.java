@@ -141,7 +141,7 @@ class ai extends em {
             lk.field_d = dg.field_p;
           }
           if (dg.field_p == lk.field_d &&
-            jj.a(1, (byte) -119)) {
+            ProgressDialog.a(1, (byte) -119)) {
             var9Lifetime1 = e.field_c.readUnsignedByte(32);
             e.field_c.position = 0;
             if (var9Lifetime1 >= 100 &&
@@ -158,7 +158,7 @@ class ai extends em {
                 return stackIn_29_0;
               }
               if (99 == var9Lifetime1) {
-                jj.a(lb.c(-30316), (byte) 16);
+                ProgressDialog.a(lb.c(-30316), (byte) 16);
                 ca.field_o = new Boolean(DraggableWidgetContainer.a((byte) -73, e.field_c));
                 e.field_c.position = 0;
               } else {
@@ -170,10 +170,10 @@ class ai extends em {
           }
           if (lk.field_d == LabeledWidgetContainer.field_M) {
             var9Lifetime2 = 2;
-            if (jj.a(var9Lifetime2, (byte) -126)) {
+            if (ProgressDialog.a(var9Lifetime2, (byte) -126)) {
               var10Lifetime1 = e.field_c.readUnsignedShort((byte) 25);
               e.field_c.position = 0;
-              if (jj.a(var10Lifetime1, (byte) 49)) {
+              if (ProgressDialog.a(var10Lifetime1, (byte) 49)) {
                 var11 = TextLayout.field_g.length;
                 for (var12 = 0; var11 > var12; var12++) {
                   TextLayout.field_g[var12] = e.field_c.readPrefixedString((byte) 31);

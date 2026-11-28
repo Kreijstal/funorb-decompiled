@@ -263,7 +263,7 @@ final class nb extends ci {
               ImageProducerRasterBuffer.d(65280);
             }
           } else {
-            var11 = (ac) (vn.field_vb.beginBackward(-18110));
+            var11 = (ac) (ProgressMessageDialog.field_vb.beginBackward(-18110));
             if (var11 == null) {
               ImageProducerRasterBuffer.d(65280);
               return;

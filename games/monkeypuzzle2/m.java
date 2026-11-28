@@ -148,7 +148,7 @@ final class m extends IntrusiveNode {
             }
             if (param3) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, ub.field_b, lb.field_z);
+              var9.fillRect(0, 0, ub.field_b, GuestPlayConfirmationForm.field_z);
             }
             if (param1 == null) {
               param1 = new java.awt.Color(140, 17, 17);
@@ -167,12 +167,12 @@ final class m extends IntrusiveNode {
               var10.setFont(de.field_o);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param0, (-(param0.length() * 6) + 304) / 2, 22);
-              var9.drawImage(ei.field_b, -152 + ub.field_b / 2, -18 + lb.field_z / 2, (java.awt.image.ImageObserver) null);
+              var9.drawImage(ei.field_b, -152 + ub.field_b / 2, -18 + GuestPlayConfirmationForm.field_z / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
               var7 = ub.field_b / 2 - 152;
-              var8 = lb.field_z / 2 - 18;
+              var8 = GuestPlayConfirmationForm.field_z / 2 - 18;
               var9.setColor(param1);
               var9.drawRect(var7, var8, 303, 33);
               var9.fillRect(2 + var7, var8 + 2, 3 * param2, 30);
@@ -186,7 +186,7 @@ final class m extends IntrusiveNode {
             if (null != EditableTextField.field_B) {
               var9.setFont(de.field_o);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(EditableTextField.field_B, ub.field_b / 2 - 6 * EditableTextField.field_B.length() / 2, -26 + lb.field_z / 2);
+              var9.drawString(EditableTextField.field_B, ub.field_b / 2 - 6 * EditableTextField.field_B.length() / 2, -26 + GuestPlayConfirmationForm.field_z / 2);
             }
             if (param4 != -3) {
               field_e = (int[]) null;

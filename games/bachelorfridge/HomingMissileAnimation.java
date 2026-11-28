@@ -194,7 +194,7 @@ final class HomingMissileAnimation extends EventAnimation {
           this.field_C = param1;
           this.field_v = this.field_m;
           this.field_z = li.field_l;
-          this.field_B = de.field_F.toRgbSprite();
+          this.field_B = StripedProgressWidget.field_F.toRgbSprite();
           this.field_l = 150;
           var3 = this.field_C.creature.resolveCreature(34, this.screen.field_h);
           this.field_A = new dda(this.screen, var3.tileX, var3.tileY);

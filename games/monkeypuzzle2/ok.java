@@ -12,9 +12,9 @@ final class ok {
     final static boolean a(boolean param0) {
         if (param0) {
           ok.a(-101);
-          return ha.field_db;
+          return ProgressMessageDialog.field_db;
         }
-        return ha.field_db;
+        return ProgressMessageDialog.field_db;
     }
 
     public static void clearStaticReferences(byte param0) {

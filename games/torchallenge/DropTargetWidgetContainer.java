@@ -16,10 +16,10 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (IntrusiveNode.field_c != null) {
-            IntrusiveNode.field_c.o(77);
+            IntrusiveNode.field_c.closeDialog(77);
           }
           MidiPcmStream.field_O = new LoginPanel(param2, param0, false, true, true);
-          LabeledWidgetContainer.field_K.c(0, MidiPcmStream.field_O);
+          LabeledWidgetContainer.field_K.replaceContent(0, MidiPcmStream.field_O);
           if (param1 < -27) {
             return;
           }

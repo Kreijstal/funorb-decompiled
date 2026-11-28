@@ -47,8 +47,8 @@ final class SectorCacheStore {
                     return false;
                   }
                   this.field_f.seek(false, (long)(6 * param1));
-                  this.field_f.readFully(0, aa.field_X, 6, -80);
-                  var7_int = (aa.field_X[3] << 16 & 16711680) + (aa.field_X[4] << 8 & 65280) + (255 & aa.field_X[5]);
+                  this.field_f.readFully(0, ContentTransitionDialog.field_X, 6, -80);
+                  var7_int = (ContentTransitionDialog.field_X[3] << 16 & 16711680) + (ContentTransitionDialog.field_X[4] << 8 & 65280) + (255 & ContentTransitionDialog.field_X[5]);
                   if (var7_int <= 0 ||
                     !((this.field_d.length(true) / 520L) >= (long)var7_int)) {
                     return false;
@@ -59,14 +59,14 @@ final class SectorCacheStore {
                     var7_int = 1;
                   }
                 }
-                aa.field_X[0] = (byte)(param4 >> 16);
-                aa.field_X[1] = (byte)(param4 >> 8);
-                aa.field_X[2] = (byte)param4;
-                aa.field_X[3] = (byte)(var7_int >> 16);
-                aa.field_X[4] = (byte)(var7_int >> 8);
-                aa.field_X[5] = (byte)var7_int;
+                ContentTransitionDialog.field_X[0] = (byte)(param4 >> 16);
+                ContentTransitionDialog.field_X[1] = (byte)(param4 >> 8);
+                ContentTransitionDialog.field_X[2] = (byte)param4;
+                ContentTransitionDialog.field_X[3] = (byte)(var7_int >> 16);
+                ContentTransitionDialog.field_X[4] = (byte)(var7_int >> 8);
+                ContentTransitionDialog.field_X[5] = (byte)var7_int;
                 this.field_f.seek(false, (long)(6 * param1));
-                this.field_f.write(-1, 6, 0, aa.field_X);
+                this.field_f.write(-1, 6, 0, ContentTransitionDialog.field_X);
                 var9 = 120 % ((-33 - param3) / 62);
                 var8 = 0;
                 var10 = 0;
@@ -78,7 +78,7 @@ final class SectorCacheStore {
                       this.field_d.seek(false, (long)(var7_int * 520));
                       if (65535 >= param1) {
                         try {
-                          this.field_d.readFully(0, aa.field_X, 8, -108);
+                          this.field_d.readFully(0, ContentTransitionDialog.field_X, 8, -108);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -88,13 +88,13 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector0 != 0) {
                           break scanLoop1;
                         }
-                        var11 = (255 & aa.field_X[6]) + (65280 & aa.field_X[5] << 8) + ((255 & aa.field_X[4]) << 16);
-                        var14 = aa.field_X[7] & 255;
-                        var12 = (aa.field_X[1] & 255) + (65280 & aa.field_X[0] << 8);
-                        var13 = (255 & aa.field_X[3]) + ((aa.field_X[2] & 255) << 8);
+                        var11 = (255 & ContentTransitionDialog.field_X[6]) + (65280 & ContentTransitionDialog.field_X[5] << 8) + ((255 & ContentTransitionDialog.field_X[4]) << 16);
+                        var14 = ContentTransitionDialog.field_X[7] & 255;
+                        var12 = (ContentTransitionDialog.field_X[1] & 255) + (65280 & ContentTransitionDialog.field_X[0] << 8);
+                        var13 = (255 & ContentTransitionDialog.field_X[3]) + ((ContentTransitionDialog.field_X[2] & 255) << 8);
                       } else {
                         try {
-                          this.field_d.readFully(0, aa.field_X, 10, -89);
+                          this.field_d.readFully(0, ContentTransitionDialog.field_X, 10, -89);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -104,10 +104,10 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector1 != 0) {
                           break scanLoop1;
                         }
-                        var11 = (aa.field_X[7] << 8 & 65280) + ((aa.field_X[6] & 255) << 16) + (255 & aa.field_X[8]);
-                        var12 = (255 & aa.field_X[3]) + ((65280 & aa.field_X[2] << 8) + ((aa.field_X[0] & 255) << 24)) + ((aa.field_X[1] & 255) << 16);
-                        var14 = aa.field_X[9] & 255;
-                        var13 = (aa.field_X[4] << 8 & 65280) + (255 & aa.field_X[5]);
+                        var11 = (ContentTransitionDialog.field_X[7] << 8 & 65280) + ((ContentTransitionDialog.field_X[6] & 255) << 16) + (255 & ContentTransitionDialog.field_X[8]);
+                        var12 = (255 & ContentTransitionDialog.field_X[3]) + ((65280 & ContentTransitionDialog.field_X[2] << 8) + ((ContentTransitionDialog.field_X[0] & 255) << 24)) + ((ContentTransitionDialog.field_X[1] & 255) << 16);
+                        var14 = ContentTransitionDialog.field_X[9] & 255;
+                        var13 = (ContentTransitionDialog.field_X[4] << 8 & 65280) + (255 & ContentTransitionDialog.field_X[5]);
                       }
                       if ((var12 == param1 &&
                         var13 == var10 &&
@@ -134,16 +134,16 @@ final class SectorCacheStore {
                       var11 = 0;
                     }
                     if (param1 <= 65535) {
-                      aa.field_X[6] = (byte)var11;
-                      aa.field_X[0] = (byte)(param1 >> 8);
-                      aa.field_X[2] = (byte)(var10 >> 8);
-                      aa.field_X[3] = (byte)var10;
-                      aa.field_X[1] = (byte)param1;
-                      aa.field_X[5] = (byte)(var11 >> 8);
-                      aa.field_X[4] = (byte)(var11 >> 16);
-                      aa.field_X[7] = (byte)this.field_a;
+                      ContentTransitionDialog.field_X[6] = (byte)var11;
+                      ContentTransitionDialog.field_X[0] = (byte)(param1 >> 8);
+                      ContentTransitionDialog.field_X[2] = (byte)(var10 >> 8);
+                      ContentTransitionDialog.field_X[3] = (byte)var10;
+                      ContentTransitionDialog.field_X[1] = (byte)param1;
+                      ContentTransitionDialog.field_X[5] = (byte)(var11 >> 8);
+                      ContentTransitionDialog.field_X[4] = (byte)(var11 >> 16);
+                      ContentTransitionDialog.field_X[7] = (byte)this.field_a;
                       this.field_d.seek(false, (long)(var7_int * 520));
-                      this.field_d.write(-1, 8, 0, aa.field_X);
+                      this.field_d.write(-1, 8, 0, ContentTransitionDialog.field_X);
                       var12 = -var8 + param4;
                       if (512 < var12) {
                         var12 = 512;
@@ -151,18 +151,18 @@ final class SectorCacheStore {
                       this.field_d.write(-1, var12, var8, param2);
                       var8 = var8 + var12;
                     } else {
-                      aa.field_X[5] = (byte)var10;
-                      aa.field_X[8] = (byte)var11;
-                      aa.field_X[4] = (byte)(var10 >> 8);
-                      aa.field_X[1] = (byte)(param1 >> 16);
-                      aa.field_X[9] = (byte)this.field_a;
-                      aa.field_X[0] = (byte)(param1 >> 24);
-                      aa.field_X[7] = (byte)(var11 >> 8);
-                      aa.field_X[6] = (byte)(var11 >> 16);
-                      aa.field_X[3] = (byte)param1;
-                      aa.field_X[2] = (byte)(param1 >> 8);
+                      ContentTransitionDialog.field_X[5] = (byte)var10;
+                      ContentTransitionDialog.field_X[8] = (byte)var11;
+                      ContentTransitionDialog.field_X[4] = (byte)(var10 >> 8);
+                      ContentTransitionDialog.field_X[1] = (byte)(param1 >> 16);
+                      ContentTransitionDialog.field_X[9] = (byte)this.field_a;
+                      ContentTransitionDialog.field_X[0] = (byte)(param1 >> 24);
+                      ContentTransitionDialog.field_X[7] = (byte)(var11 >> 8);
+                      ContentTransitionDialog.field_X[6] = (byte)(var11 >> 16);
+                      ContentTransitionDialog.field_X[3] = (byte)param1;
+                      ContentTransitionDialog.field_X[2] = (byte)(param1 >> 8);
                       this.field_d.seek(false, (long)(520 * var7_int));
-                      this.field_d.write(-1, 10, 0, aa.field_X);
+                      this.field_d.write(-1, 10, 0, ContentTransitionDialog.field_X);
                       var12 = param4 - var8;
                       if (var12 > 510) {
                         var12 = 510;
@@ -245,13 +245,13 @@ final class SectorCacheStore {
                 return (byte[]) (stackIn_3_0);
               }
               this.field_f.seek(false, (long)(param0 * 6));
-              this.field_f.readFully(0, aa.field_X, 6, param1 + 25);
-              var4_int = ((aa.field_X[0] & 255) << 16) + ((255 & aa.field_X[1]) << 8) + (255 & aa.field_X[2]);
+              this.field_f.readFully(0, ContentTransitionDialog.field_X, 6, param1 + 25);
+              var4_int = ((ContentTransitionDialog.field_X[0] & 255) << 16) + ((255 & ContentTransitionDialog.field_X[1]) << 8) + (255 & ContentTransitionDialog.field_X[2]);
               if (param1 != 85) {
                 stackIn_7_0 = (byte[]) null;
                 return stackIn_7_0;
               }
-              var5 = ((aa.field_X[3] & 255) << 16) + ((255 & aa.field_X[4]) << 8) + (255 & aa.field_X[5]);
+              var5 = ((ContentTransitionDialog.field_X[3] & 255) << 16) + ((255 & ContentTransitionDialog.field_X[4]) << 8) + (255 & ContentTransitionDialog.field_X[5]);
               if (var4_int < 0) {
                 return null;
               }
@@ -279,21 +279,21 @@ final class SectorCacheStore {
                   if (var9 > 510) {
                     var9 = 510;
                   }
-                  this.field_d.readFully(0, aa.field_X, var9 + var14, -76);
-                  var11 = (aa.field_X[5] & 255) + (aa.field_X[4] << 8 & 65280);
-                  var13 = aa.field_X[9] & 255;
-                  var10 = (aa.field_X[3] & 255) + ((aa.field_X[0] << 24 & -16777216) + ((16711680 & aa.field_X[1] << 16) + (aa.field_X[2] << 8 & 65280)));
-                  var12 = (255 & aa.field_X[8]) + (((255 & aa.field_X[6]) << 16) + ((255 & aa.field_X[7]) << 8));
+                  this.field_d.readFully(0, ContentTransitionDialog.field_X, var9 + var14, -76);
+                  var11 = (ContentTransitionDialog.field_X[5] & 255) + (ContentTransitionDialog.field_X[4] << 8 & 65280);
+                  var13 = ContentTransitionDialog.field_X[9] & 255;
+                  var10 = (ContentTransitionDialog.field_X[3] & 255) + ((ContentTransitionDialog.field_X[0] << 24 & -16777216) + ((16711680 & ContentTransitionDialog.field_X[1] << 16) + (ContentTransitionDialog.field_X[2] << 8 & 65280)));
+                  var12 = (255 & ContentTransitionDialog.field_X[8]) + (((255 & ContentTransitionDialog.field_X[6]) << 16) + ((255 & ContentTransitionDialog.field_X[7]) << 8));
                 } else {
                   var14 = 8;
                   if (512 < var9) {
                     var9 = 512;
                   }
-                  this.field_d.readFully(0, aa.field_X, var9 + var14, -113);
-                  var10 = (aa.field_X[1] & 255) + (65280 & aa.field_X[0] << 8);
-                  var13 = 255 & aa.field_X[7];
-                  var11 = ((aa.field_X[2] & 255) << 8) + (aa.field_X[3] & 255);
-                  var12 = (255 & aa.field_X[6]) + (aa.field_X[4] << 16 & 16711680) + (aa.field_X[5] << 8 & 65280);
+                  this.field_d.readFully(0, ContentTransitionDialog.field_X, var9 + var14, -113);
+                  var10 = (ContentTransitionDialog.field_X[1] & 255) + (65280 & ContentTransitionDialog.field_X[0] << 8);
+                  var13 = 255 & ContentTransitionDialog.field_X[7];
+                  var11 = ((ContentTransitionDialog.field_X[2] & 255) << 8) + (ContentTransitionDialog.field_X[3] & 255);
+                  var12 = (255 & ContentTransitionDialog.field_X[6]) + (ContentTransitionDialog.field_X[4] << 16 & 16711680) + (ContentTransitionDialog.field_X[5] << 8 & 65280);
                 }
                 if (var10 != param0) {
                   return null;
@@ -316,7 +316,7 @@ final class SectorCacheStore {
                 for (var16 = var14; var15 > var16; var16++) {
                   incrementValue$2 = var7;
                   var7++;
-                  var6[incrementValue$2] = aa.field_X[var16];
+                  var6[incrementValue$2] = ContentTransitionDialog.field_X[var16];
                 }
               }
               stackIn_54_0 = var6;

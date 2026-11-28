@@ -17,18 +17,18 @@ abstract class cb extends DualLinkNode {
     final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4) {
         RgbSprite[] var6 = new RgbSprite[9];
         RgbSprite[] var5 = var6;
-        RgbSprite dupTemp$0 = oh.c(102, param3, param0);
+        RgbSprite dupTemp$0 = ContentTransitionDialog.c(102, param3, param0);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[param2] = dupTemp$0;
-        RgbSprite dupTemp$1 = oh.c(107, param1, param0);
+        RgbSprite dupTemp$1 = ContentTransitionDialog.c(107, param1, param0);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param4 != 0) {
-          var5[4] = oh.c(df.a(param2, 122), param4, 64);
+          var5[4] = ContentTransitionDialog.c(df.a(param2, 122), param4, 64);
         }
         return var5;
     }

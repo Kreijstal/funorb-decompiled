@@ -101,10 +101,10 @@ final class MixedSupport056 {
         } else {
           this.integerArrayState0065 = MixedSupport034.integerArrayState0043;
         }
-        this.integerState0290 = UiComponentPart019.integerState0505;
+        this.integerState0290 = BirthDateChatEnableForm.integerState0505;
         this.booleanState0070 = MixedSupport043.booleanState0050;
         this.integerState0287 = ClientException.integerState0141;
-        this.stringState0241 = UiComponentPart014.stringState0248;
+        this.stringState0241 = FullscreenStatusDialog.stringState0248;
         this.stringState0238 = MixedSupport112.stringState0489;
     }
 

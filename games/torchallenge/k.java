@@ -34,7 +34,7 @@ final class k {
 
     final static void a(int param0) {
         GameApplet.field_n = new AccountRegistrationPanel();
-        LabeledWidgetContainer.field_K.c(0, GameApplet.field_n);
+        LabeledWidgetContainer.field_K.replaceContent(0, GameApplet.field_n);
         if (param0 != -14956) {
           byte[] var2 = (byte[]) null;
           k.a((byte[]) null, 40, -82);

@@ -61,7 +61,7 @@ final class of extends ec {
         Object var1 = null;
         var1 = ConfirmedEmailAvailabilityValidator.mouseHandler;
         synchronized (var1) {
-          SecondaryNodeDeque.mouseButton = db.liveMouseButton;
+          SecondaryNodeDeque.mouseButton = ContentTransitionDialog.liveMouseButton;
           pa.idleTicks = pa.idleTicks + 1;
           if (param0 != 66) {
             var3 = (java.net.URL) null;
@@ -72,7 +72,7 @@ final class of extends ec {
           GameScreen.mouseMoved = ConfirmedEmailAvailabilityValidator.inputPending;
           ConfirmedEmailAvailabilityValidator.inputPending = false;
           uk.clickButton = wf.pendingClick;
-          db.clickX = LabeledWidgetContainer.pressX;
+          ContentTransitionDialog.clickX = LabeledWidgetContainer.pressX;
           wg.clickY = GameShell.pressY;
           wf.pendingClick = 0;
         }

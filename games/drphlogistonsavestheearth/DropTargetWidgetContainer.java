@@ -324,7 +324,7 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
             sg.field_f[4] = GameClientShell.field_B;
             sg.field_f[2] = ph.field_d;
             lg.field_a[3] = 1;
-            sg.field_f[3] = ff.field_K;
+            sg.field_f[3] = GuestPlayConfirmationForm.field_K;
             TextLineMetrics.field_g[0] = 5;
             TextLineMetrics.field_g[1] = 2;
             sg.field_f[5] = "";

@@ -94,11 +94,11 @@ final class le {
             !jd.b((byte) 75)) {
             boolean decompiledSharedTail0 = !(RichTextLayout.a(ec.field_f, 75));
             if (!decompiledSharedTail0) {
-              var2 = MatchingFieldValidator.a(el.field_x, new String[]{ij.field_c}, (byte) -57);
+              var2 = MatchingFieldValidator.a(el.field_x, new String[]{FullscreenNoticeType.field_c}, (byte) -57);
               decompiledSharedTail0 = (var10 != 0);
             }
             if (decompiledSharedTail0) {
-              var2 = MatchingFieldValidator.a(r.field_Fb, new String[]{ij.field_c}, (byte) -69);
+              var2 = MatchingFieldValidator.a(r.field_Fb, new String[]{FullscreenNoticeType.field_c}, (byte) -69);
             }
             if (an.field_c) {
               BufferedRandomAccessFile.a((String) null, (String) null, 2, 0, (String) (var2), false);
@@ -120,7 +120,7 @@ final class le {
             var6 = vk.field_g;
             var7 = 0;
             if (var6 == 2) {
-              var4 = MatchingFieldValidator.a(vf.field_d, new String[]{ij.field_c}, (byte) -97);
+              var4 = MatchingFieldValidator.a(vf.field_d, new String[]{FullscreenNoticeType.field_c}, (byte) -97);
               var8 = MatchingFieldValidator.a(sa.field_d, new String[]{var3}, (byte) -110);
               var7 = BoundedRandomAccessFile.field_f.field_M - (-uc.field_c.field_M + 485) - (-sc.field_a.stringWidth(var8) + sc.field_a.stringWidth(var4));
               if (var7 < 0) {
@@ -189,7 +189,7 @@ final class le {
               uc.field_c.field_F = false;
             }
             if (uc.field_c.field_F) {
-              var1 = MatchingFieldValidator.a(vk.field_h, new String[]{var3, ij.field_c}, (byte) -50);
+              var1 = MatchingFieldValidator.a(vk.field_h, new String[]{var3, FullscreenNoticeType.field_c}, (byte) -50);
             }
           }
           stackIn_103_0 = var1;

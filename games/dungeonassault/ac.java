@@ -103,14 +103,14 @@ final class ac {
     }
 
     final static void a(byte param0, ResourceArchive param1) {
-        jp var2 = null;
+        VorbisSample var2 = null;
         if (param0 != -125) {
           return;
         }
         try {
-          jp.a(param1.getFileByName("headers.packvorbis", "", (byte) -119));
-          var2 = jp.a(param1, "jagex logo2.packvorbis", "");
-          var2.c();
+          VorbisSample.decodeSetup(param1.getFileByName("headers.packvorbis", "", (byte) -119));
+          var2 = VorbisSample.loadByName(param1, "jagex logo2.packvorbis", "");
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ac.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

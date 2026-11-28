@@ -1,0 +1,176 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ProgressDialog extends ResizableModalDialog {
+    private boolean field_sb;
+    private String field_jb;
+    private StripedProgressWidget field_ub;
+    private String field_ib;
+    static rj field_ob;
+    static String field_mb;
+    static String field_rb;
+    static String field_nb;
+    static int field_kb;
+    static String field_lb;
+    static String field_qb;
+    private boolean field_pb;
+    static volatile int field_tb;
+
+    final static int c(int param0, int param1, int param2) {
+        int var3_int = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_14_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        var8 = DungeonAssault.field_K;
+        try {
+          var3_int = 0;
+          if (param1 != 2113632) {
+            field_tb = -43;
+          }
+          var4 = en.field_c;
+          while (StripedProgressWidget.field_K.length > var3_int) {
+            var5 = dd.field_A[var3_int];
+            if (var5 < 0) {
+              var4 = var4 + gb.field_a;
+            } else {
+              var6 = rb.$cfr$intArgs$a$62abead39cee(120, true, StripedProgressWidget.field_K[var3_int]);
+              var7 = -(var6 >> 1) + tm.field_e;
+              var4 = var4 + lc.field_j;
+              if (PacketBuffer.a(var4, (i.field_o << 1) + cd.field_e, param2, (an.field_w << 1) + var6, -an.field_w + var7, param0, param1 - 2113557)) {
+                stackIn_8_0 = var5;
+                return stackIn_8_0;
+              }
+              var4 = var4 + (cd.field_e + (lc.field_j + (i.field_o << 1)));
+            }
+            var3_int++;
+          }
+          stackIn_14_0 = -1;
+          return stackIn_14_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) var3), "wi.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+        }
+    }
+
+    public static void discardDeclaredStaticReferences(byte param0) {
+        if (param0 <= -44) {
+          field_lb = null;
+          field_mb = null;
+          field_rb = null;
+          field_qb = null;
+          field_ob = null;
+          field_nb = null;
+          return;
+        }
+        field_rb = (String) null;
+        field_lb = null;
+        field_mb = null;
+        field_rb = null;
+        field_qb = null;
+        field_ob = null;
+        field_nb = null;
+    }
+
+    final void drawDialogBackground(int param0, int param1, boolean param2) {
+        super.drawDialogBackground(param0, param1, param2);
+        hc.field_f.drawCentred(this.field_jb, param1 + (this.field_x >> 1), param0 + 103, 16777215, -1);
+        if (null != this.field_ib) {
+          SoftwareRasterizer.drawHorizontalLine(20 + param1, 120 + (param0 - 7), 260, 8421504);
+          hc.field_f.drawParagraph(this.field_ib, param1 + 20, param0 + 128, 260, 100, 16777215, -1, 1, 0, hc.field_f.field_H);
+        }
+    }
+
+    final void freezeNormalProgressAnimation(byte param0) {
+        if (param0 == -115) {
+          this.field_pb = true;
+          this.field_ub.field_R = false;
+          return;
+        }
+        ProgressDialog.discardDeclaredStaticReferences((byte) 54);
+        this.field_pb = true;
+        this.field_ub.field_R = false;
+    }
+
+    ProgressDialog(ModalDialogHost param0, String param1) {
+        super(param0, 300, 120);
+        int var3_int = 0;
+        try {
+          this.field_ib = param1;
+          if (this.field_ib != null) {
+            var3_int = hc.field_f.textHeight(this.field_ib, 260, hc.field_f.field_H);
+            this.setCenteredSize(120, 150 + var3_int, 300);
+          }
+          this.field_ub = new StripedProgressWidget(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_pb = false;
+          this.field_sb = false;
+          this.field_ub.field_R = true;
+          this.addChild((byte) -84, this.field_ub);
+        } catch (RuntimeException runtimeException) {
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "wi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final void setProgress(boolean param0, String param1, float param2, byte param3) {
+        RuntimeException runtimeException = null;
+        int var5_int = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_6_1 = 0;
+        boolean stackIn_10_1 = false;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          stackIn_3_0 = (param0) ? 0 : 1;
+          if (this.field_sb) {
+            stackIn_6_1 = 0;
+          } else {
+            stackIn_6_1 = 1;
+          }
+          if (stackIn_3_0 != stackIn_6_1) {
+            stackIn_10_1 = (param0);
+            this.field_sb = stackIn_10_1;
+            if (this.field_sb) {
+              this.field_ub.setColours(4210752, (byte) 94, 8405024);
+              this.field_ub.field_R = true;
+            } else {
+              this.field_ub.setColours(4210752, (byte) 94, 2113632);
+              if (this.field_pb) {
+                this.field_ub.field_R = false;
+              }
+            }
+          }
+          this.field_jb = param1;
+          this.field_ub.field_S = (int)(param2 / 100.0f * 65536.0f);
+          var5_int = 95 % ((0 - param3) / 38);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          runtimeException = decompiledCaughtException;
+          stackIn_18_0 = runtimeException;
+          stackIn_18_1 = new StringBuilder().append("wi.G(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
+          }
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    static {
+        field_mb = "Entrance";
+        field_nb = "Ability used";
+        field_rb = "Giant Snake";
+        field_lb = "A humanoid construct made of stone; its one instruction is to crush the bodies of any raiders that cross its path.<br><br>This monster requires 2 successful strikes from the same raider to defeat.";
+        field_qb = "You successfully stole <%0> gold!";
+        field_tb = -1;
+    }
+}

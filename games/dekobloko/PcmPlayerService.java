@@ -137,8 +137,8 @@ final class PcmPlayerService implements Runnable {
         stackRenderingSupport007Local5 = renderingSupport007Local10;
         stackBooleanLocal6 = (!booleanArgument1) ? false : true;
         stackRenderingSupport007Local5.booleanState0095 = stackBooleanLocal6;
-        renderingSupport007Local10.performAction0852(new GameDomainSupport002(20, UiComponentPart026.stringState0461, DefaultTextWidgetRenderer.renderingSupport009State0001), 115);
-        renderingSupport007Local10.performAction0852(new GameDomainSupport002(21, UiComponentPart017.stringState0329, DefaultTextWidgetRenderer.renderingSupport009State0001), 102);
+        renderingSupport007Local10.performAction0852(new GameDomainSupport002(20, ProgressDialog.stringState0461, DefaultTextWidgetRenderer.renderingSupport009State0001), 115);
+        renderingSupport007Local10.performAction0852(new GameDomainSupport002(21, GuestPlayConfirmationForm.stringState0329, DefaultTextWidgetRenderer.renderingSupport009State0001), 102);
         renderingSupport007Local9.gameDomainSupport002ArrayState0001[0].integerState0174 = 320 - renderingSupport007Local9.gameDomainSupport002ArrayState0001[0].integerState0176 / 2;
         renderingSupport007Local9.gameDomainSupport002ArrayState0001[0].integerState0178 = 150;
         renderingSupport007Local9.gameDomainSupport002ArrayState0001[1].integerState0178 = 250;

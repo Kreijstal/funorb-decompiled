@@ -211,7 +211,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
           }
           if (lf.field_z == null ||
             !(param14 <= lf.field_z.length)) {
-            ga.field_hb = new int[100 + param14];
+            StandardContentDialog.field_hb = new int[100 + param14];
             MovingLevelTile.field_z = new int[param14 + 100];
             lf.field_z = new int[param14 + 100];
           }
@@ -331,8 +331,8 @@ final class DiskArchiveRequest extends ArchiveRequest {
                   qq.a(lf.field_z, 0, var55Lifetime1, 0, no.field_b);
                   lf.field_z = var55Lifetime1;
                   var55Lifetime1Lifetime1 = new int[var32 + param14 + 104];
-                  qq.a(ga.field_hb, 0, var55Lifetime1Lifetime1, 0, no.field_b);
-                  ga.field_hb = var55Lifetime1Lifetime1;
+                  qq.a(StandardContentDialog.field_hb, 0, var55Lifetime1Lifetime1, 0, no.field_b);
+                  StandardContentDialog.field_hb = var55Lifetime1Lifetime1;
                   var55Lifetime1Lifetime2 = new int[104 + (var32 + param14)];
                   qq.a(MovingLevelTile.field_z, 0, var55Lifetime1Lifetime2, 0, no.field_b);
                   MovingLevelTile.field_z = var55Lifetime1Lifetime2;
@@ -391,7 +391,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                     var35 = incrementValue$5;
                     var25[var40] = incrementValue$5;
                     lf.field_z[var35] = var43;
-                    ga.field_hb[var35] = var44;
+                    StandardContentDialog.field_hb[var35] = var44;
                     MovingLevelTile.field_z[var35] = var45;
                   }
                   var26[var59 + 4] = var35;
@@ -419,7 +419,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                   var57++;
                   var35 = incrementValue$7;
                   lf.field_z[var35] = var60;
-                  ga.field_hb[var35] = var61;
+                  StandardContentDialog.field_hb[var35] = var61;
                   MovingLevelTile.field_z[var35] = var62;
                   var26[4 + var59] = var35;
                   var26[12 + var59] = var63;
@@ -448,7 +448,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                     var35 = incrementValue$9;
                     var25[var41] = incrementValue$9;
                     lf.field_z[var35] = var46;
-                    ga.field_hb[var35] = var47;
+                    StandardContentDialog.field_hb[var35] = var47;
                     MovingLevelTile.field_z[var35] = var48;
                   }
                   var26[4 + var59] = var35;
@@ -476,7 +476,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                   var35 = incrementValue$11;
                   var58++;
                   lf.field_z[var35] = var60Lifetime1;
-                  ga.field_hb[var35] = var61Lifetime1;
+                  StandardContentDialog.field_hb[var35] = var61Lifetime1;
                   MovingLevelTile.field_z[var35] = var62Lifetime1;
                   var26[var59 + 4] = var35;
                   var26[var59 + 12] = var63Lifetime1;
@@ -505,7 +505,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                     var35 = incrementValue$13;
                     var25[var42] = incrementValue$13;
                     lf.field_z[var35] = var49;
-                    ga.field_hb[var35] = var50;
+                    StandardContentDialog.field_hb[var35] = var50;
                     MovingLevelTile.field_z[var35] = var51;
                   }
                   var26[4 + var59] = var35;
@@ -532,7 +532,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                   var57++;
                   var35 = incrementValue$15;
                   lf.field_z[var35] = var60Lifetime2;
-                  ga.field_hb[var35] = var61Lifetime2;
+                  StandardContentDialog.field_hb[var35] = var61Lifetime2;
                   MovingLevelTile.field_z[var35] = var62Lifetime2;
                   var26[var59 + 4] = var35;
                   var26[12 + var59] = var63Lifetime2;
@@ -663,7 +663,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                   var35 = fieldTemp$21;
                   var25[var40] = fieldTemp$21;
                   lf.field_z[var35] = var43;
-                  ga.field_hb[var35] = var44;
+                  StandardContentDialog.field_hb[var35] = var44;
                   MovingLevelTile.field_z[var35] = var45;
                 }
                 b.field_m[var34] = var35;
@@ -674,7 +674,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                   var35 = fieldTemp$22;
                   var25[var41] = fieldTemp$22;
                   lf.field_z[var35] = var46;
-                  ga.field_hb[var35] = var47;
+                  StandardContentDialog.field_hb[var35] = var47;
                   MovingLevelTile.field_z[var35] = var48;
                 }
                 tf.field_p[var34] = var35;
@@ -685,7 +685,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                   var35 = fieldTemp$23;
                   var25[var42] = fieldTemp$23;
                   lf.field_z[var35] = var49;
-                  ga.field_hb[var35] = var50;
+                  StandardContentDialog.field_hb[var35] = var50;
                   MovingLevelTile.field_z[var35] = var51;
                 }
                 vj.field_f[var34] = var35;
@@ -750,7 +750,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                         var35Lifetime1 = fieldTemp$26;
                         var25[var34] = fieldTemp$26;
                         lf.field_z[var35Lifetime1] = param17[var34];
-                        ga.field_hb[var35Lifetime1] = param1[var34];
+                        StandardContentDialog.field_hb[var35Lifetime1] = param1[var34];
                         MovingLevelTile.field_z[var35Lifetime1] = param6[var34];
                       }
                       PlayerAvatarRenderer.field_A.field_M[var39Lifetime1] = (short)var35Lifetime1;
@@ -773,7 +773,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                         var35Lifetime1 = fieldTemp$28;
                         var25[var34] = fieldTemp$28;
                         lf.field_z[var35Lifetime1] = param17[var34];
-                        ga.field_hb[var35Lifetime1] = param1[var34];
+                        StandardContentDialog.field_hb[var35Lifetime1] = param1[var34];
                         MovingLevelTile.field_z[var35Lifetime1] = param6[var34];
                       }
                       PlayerAvatarRenderer.field_A.field_P[var39Lifetime1] = (short)var35Lifetime1;
@@ -796,7 +796,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                         var35Lifetime1 = fieldTemp$30;
                         var25[var34] = fieldTemp$30;
                         lf.field_z[var35Lifetime1] = param17[var34];
-                        ga.field_hb[var35Lifetime1] = param1[var34];
+                        StandardContentDialog.field_hb[var35Lifetime1] = param1[var34];
                         MovingLevelTile.field_z[var35Lifetime1] = param6[var34];
                       }
                       PlayerAvatarRenderer.field_A.field_F[var39Lifetime1] = (short)var35Lifetime1;
@@ -853,10 +853,10 @@ final class DiskArchiveRequest extends ArchiveRequest {
               TextFieldValidator.field_k = new int[param11];
               qp.field_g = new int[param11];
             }
-            if (null == ga.field_jb ||
-              !(ga.field_jb.length >= param11)) {
+            if (null == StandardContentDialog.field_jb ||
+              !(StandardContentDialog.field_jb.length >= param11)) {
               GameKeyHandler.field_e = new int[param11];
-              ga.field_jb = new int[param11];
+              StandardContentDialog.field_jb = new int[param11];
               ln.field_g = new int[param11];
             }
             var39Lifetime1Lifetime1 = 0;
@@ -883,10 +883,10 @@ final class DiskArchiveRequest extends ArchiveRequest {
                 var35Lifetime1Lifetime1 = fieldTemp$43;
                 var25[var34] = fieldTemp$43;
                 lf.field_z[var35Lifetime1Lifetime1] = param17[var34];
-                ga.field_hb[var35Lifetime1Lifetime1] = param1[var34];
+                StandardContentDialog.field_hb[var35Lifetime1Lifetime1] = param1[var34];
                 MovingLevelTile.field_z[var35Lifetime1Lifetime1] = param6[var34];
               }
-              ga.field_jb[var39Lifetime1Lifetime1] = var35Lifetime1Lifetime1;
+              StandardContentDialog.field_jb[var39Lifetime1Lifetime1] = var35Lifetime1Lifetime1;
               var34 = param8[var39Lifetime1Lifetime1];
               var35Lifetime1Lifetime1 = var24[var34];
               if (var35Lifetime1Lifetime1 < 0) {
@@ -906,7 +906,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                 var35Lifetime1Lifetime1 = fieldTemp$45;
                 var25[var34] = fieldTemp$45;
                 lf.field_z[var35Lifetime1Lifetime1] = param17[var34];
-                ga.field_hb[var35Lifetime1Lifetime1] = param1[var34];
+                StandardContentDialog.field_hb[var35Lifetime1Lifetime1] = param1[var34];
                 MovingLevelTile.field_z[var35Lifetime1Lifetime1] = param6[var34];
               }
               ln.field_g[var39Lifetime1Lifetime1] = var35Lifetime1Lifetime1;
@@ -929,7 +929,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                 var35Lifetime1Lifetime1 = fieldTemp$47;
                 var25[var34] = fieldTemp$47;
                 lf.field_z[var35Lifetime1Lifetime1] = param17[var34];
-                ga.field_hb[var35Lifetime1Lifetime1] = param1[var34];
+                StandardContentDialog.field_hb[var35Lifetime1Lifetime1] = param1[var34];
                 MovingLevelTile.field_z[var35Lifetime1Lifetime1] = param6[var34];
               }
               GameKeyHandler.field_e[var39Lifetime1Lifetime1] = var35Lifetime1Lifetime1;

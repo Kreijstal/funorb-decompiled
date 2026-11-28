@@ -168,7 +168,7 @@ final class pa {
             if (sj.field_f != null &&
               sj.field_f.focusLost) {
               eh.a(true);
-              MouseWheelInput.field_b.showDialog(new nh(MouseWheelInput.field_b, FullscreenFocusCanvas.field_c), false);
+              MouseWheelInput.field_b.showDialog(new FullscreenStatusDialog(MouseWheelInput.field_b, FullscreenFocusCanvas.field_c), false);
             }
             return;
           }

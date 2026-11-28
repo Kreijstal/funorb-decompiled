@@ -14,7 +14,7 @@ final class il {
         if (null != DisplayNameSelectionPanel.field_N) {
           DisplayNameSelectionPanel.field_N.snapAndPruneDialogs(-26623);
           if (DisplayNameSelectionPanel.field_A != null) {
-            DisplayNameSelectionPanel.field_A.m(65536);
+            DisplayNameSelectionPanel.field_A.freezeNormalProgressAnimation(65536);
           }
           ml.e(8192);
           if (param0 < 4) {
@@ -25,7 +25,7 @@ final class il {
           return;
         }
         if (DisplayNameSelectionPanel.field_A != null) {
-          DisplayNameSelectionPanel.field_A.m(65536);
+          DisplayNameSelectionPanel.field_A.freezeNormalProgressAnimation(65536);
         }
         ml.e(8192);
         if (param0 >= 4) {

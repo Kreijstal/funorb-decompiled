@@ -157,7 +157,7 @@ final class ma {
         IterableNodeHashTable.field_c = 0;
         tf.field_r = null;
         var2 = LoginPanel.field_O;
-        LoginPanel.field_O = ej.field_kb;
+        LoginPanel.field_O = StandardContentDialog.field_kb;
         if (51 == param1) {
           RichTextWidget.field_H.field_l = 2;
         } else {
@@ -167,7 +167,7 @@ final class ma {
             RichTextWidget.field_H.field_l = 5;
           }
         }
-        ej.field_kb = var2;
+        StandardContentDialog.field_kb = var2;
         RichTextWidget.field_H.field_b = RichTextWidget.field_H.field_b + 1;
         if (param0 <= RichTextWidget.field_H.field_b &&
           51 == param1) {

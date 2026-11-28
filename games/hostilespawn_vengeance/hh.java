@@ -57,10 +57,10 @@ final class hh {
           if (be.field_e == 0) {
             var3_int = fa.a(gf.field_c, cg.field_a, 113, lj.field_u, ne.field_p);
             var4 = var3_int + 3;
-            jf.field_b = new int[var4];
+            FullscreenNoticeType.field_b = new int[var4];
             hf.field_d = new String[var4];
             for (var5 = 0; var5 < var4; var5++) {
-              jf.field_b[var5] = -1;
+              FullscreenNoticeType.field_b[var5] = -1;
             }
             FullscreenFocusCanvas.field_k = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
@@ -68,18 +68,18 @@ final class hh {
             }
             hf.field_d[-3 + var4] = "";
             hf.field_d[var4 - 2] = lh.field_c;
-            jf.field_b[var4 - 2] = 0;
+            FullscreenNoticeType.field_b[var4 - 2] = 0;
             FullscreenFocusCanvas.field_k[0] = 4;
             hf.field_d[var4 - 1] = IsaacGenerator.field_n;
-            jf.field_b[var4 - 1] = 1;
+            FullscreenNoticeType.field_b[var4 - 1] = 1;
             FullscreenFocusCanvas.field_k[1] = 5;
           } else if (be.field_e == 1) {
             var3_int = fa.a(gf.field_c, cg.field_a, 105, lj.field_u, ne.field_p);
             var4 = var3_int + 2;
             hf.field_d = new String[var4];
-            jf.field_b = new int[var4];
+            FullscreenNoticeType.field_b = new int[var4];
             for (var5 = 0; var4 > var5; var5++) {
-              jf.field_b[var5] = -1;
+              FullscreenNoticeType.field_b[var5] = -1;
             }
             FullscreenFocusCanvas.field_k = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -87,7 +87,7 @@ final class hh {
             }
             hf.field_d[-2 + var4] = "";
             hf.field_d[var4 - 1] = IsaacGenerator.field_n;
-            jf.field_b[-1 + var4] = 0;
+            FullscreenNoticeType.field_b[-1 + var4] = 0;
             FullscreenFocusCanvas.field_k[0] = 5;
           } else if (2 != be.field_e) {
             if (be.field_e == 3) {
@@ -98,9 +98,9 @@ final class hh {
               }
               var4 = var3_int + 2;
               hf.field_d = new String[var4];
-              jf.field_b = new int[var4];
+              FullscreenNoticeType.field_b = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                jf.field_b[var5] = -1;
+                FullscreenNoticeType.field_b[var5] = -1;
               }
               FullscreenFocusCanvas.field_k = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
@@ -108,15 +108,15 @@ final class hh {
               }
               hf.field_d[-2 + var4] = "";
               hf.field_d[var4 - 1] = IsaacGenerator.field_n;
-              jf.field_b[-1 + var4] = 0;
+              FullscreenNoticeType.field_b[-1 + var4] = 0;
               FullscreenFocusCanvas.field_k[0] = 5;
             } else if (4 == be.field_e) {
               var3_int = fa.a(gf.field_c, cg.field_a, param0 ^ 119, lj.field_u, ha.field_y);
               var4 = 2 + var3_int;
-              jf.field_b = new int[var4];
+              FullscreenNoticeType.field_b = new int[var4];
               hf.field_d = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                jf.field_b[var5] = -1;
+                FullscreenNoticeType.field_b[var5] = -1;
               }
               FullscreenFocusCanvas.field_k = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -124,7 +124,7 @@ final class hh {
               }
               hf.field_d[var4 - 2] = "";
               hf.field_d[var4 - 1] = IsaacGenerator.field_n;
-              jf.field_b[-1 + var4] = 0;
+              FullscreenNoticeType.field_b[-1 + var4] = 0;
               FullscreenFocusCanvas.field_k[0] = 5;
             } else {
               if (5 != be.field_e) {
@@ -133,9 +133,9 @@ final class hh {
               var3_int = fa.a(gf.field_c, cg.field_a, 62, lj.field_u, InteractiveWidget.field_y);
               var4 = 3 + var3_int;
               hf.field_d = new String[var4];
-              jf.field_b = new int[var4];
+              FullscreenNoticeType.field_b = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                jf.field_b[var5] = -1;
+                FullscreenNoticeType.field_b[var5] = -1;
               }
               FullscreenFocusCanvas.field_k = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -143,10 +143,10 @@ final class hh {
               }
               hf.field_d[var4 - 3] = "";
               hf.field_d[var4 - 2] = field_c;
-              jf.field_b[-2 + var4] = 0;
+              FullscreenNoticeType.field_b[-2 + var4] = 0;
               FullscreenFocusCanvas.field_k[0] = 3;
               hf.field_d[-1 + var4] = IsaacGenerator.field_n;
-              jf.field_b[var4 - 1] = 1;
+              FullscreenNoticeType.field_b[var4 - 1] = 1;
               FullscreenFocusCanvas.field_k[1] = 5;
             }
           } else {
@@ -195,20 +195,20 @@ final class hh {
             }
             var6 = stackIn_68_0;
             var7 = var6 + (var5 + 7);
-            jf.field_b = new int[var7];
+            FullscreenNoticeType.field_b = new int[var7];
             hf.field_d = new String[var7];
             for (var8 = 0; var8 < var7; var8++) {
-              jf.field_b[var8] = -1;
+              FullscreenNoticeType.field_b[var8] = -1;
             }
             hf.field_d[1] = al.field_X;
-            jf.field_b[1] = 0;
+            FullscreenNoticeType.field_b[1] = 0;
             FullscreenFocusCanvas.field_k = new int[2];
             hf.field_d[0] = sg.field_e;
             hf.field_d[2] = ve.field_d;
             FullscreenFocusCanvas.field_k[0] = 5;
             FullscreenFocusCanvas.field_k[1] = 2;
             hf.field_d[4] = an.field_f;
-            jf.field_b[3] = 1;
+            FullscreenNoticeType.field_b[3] = 1;
             hf.field_d[5] = "";
             hf.field_d[3] = sc.field_i;
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
@@ -222,7 +222,7 @@ final class hh {
               stackIn_75_0[stackIn_75_1] = stackIn_76_2;
             }
             hf.field_d[6 + var5] = null;
-            jf.field_b[6 + var5] = -2;
+            FullscreenNoticeType.field_b[6 + var5] = -2;
             for (var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
               stackIn_81_0 = hf.field_d;
               stackIn_81_1 = var8Lifetime3 + 7 + var5;
@@ -239,8 +239,8 @@ final class hh {
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < hf.field_d.length; var4Lifetime1++) {
             stackIn_88_0 = 110;
-            stackIn_89_1 = !(jf.field_b[var4Lifetime1] < 0);
-            var5Lifetime1 = wb.a(stackIn_88_0, stackIn_89_1, hf.field_d[var4Lifetime1]);
+            stackIn_89_1 = !(FullscreenNoticeType.field_b[var4Lifetime1] < 0);
+            var5Lifetime1 = ResizableModalDialog.a(stackIn_88_0, stackIn_89_1, hf.field_d[var4Lifetime1]);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -250,7 +250,7 @@ final class hh {
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = wb.a(86, false, var11);
+              var7Lifetime1 = ResizableModalDialog.a(86, false, var11);
               if (var3_intLifetime1 < var7Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -258,7 +258,7 @@ final class hh {
             var4_ref_String__Lifetime1 = p.field_k;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = wb.a(115, false, var12);
+              var7Lifetime1Lifetime1 = ResizableModalDialog.a(115, false, var12);
               if (var3_intLifetime1 < var7Lifetime1Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -269,7 +269,7 @@ final class hh {
           ArchiveIndex.field_m = (ProxyAuthenticationRequiredException.field_b + cl.field_l << 1) * NameSuggestionsPanel.field_F.field_b;
           for (var4Lifetime2 = 0; var4Lifetime2 < hf.field_d.length; var4Lifetime2++) {
             stackIn_112_0 = ArchiveIndex.field_m;
-            if (jf.field_b[var4Lifetime2] < 0) {
+            if (FullscreenNoticeType.field_b[var4Lifetime2] < 0) {
               stackIn_113_1 = MouseWheelInput.field_d;
             } else {
               stackIn_113_1 = eh.field_d;
@@ -284,11 +284,11 @@ final class hh {
           var4Lifetime3 = 0;
           var5Lifetime3 = s.field_g;
           while (var4Lifetime3 < hf.field_d.length) {
-            var6Lifetime1 = jf.field_b[var4Lifetime3];
+            var6Lifetime1 = FullscreenNoticeType.field_b[var4Lifetime3];
             if (0 > var6Lifetime1) {
               var5Lifetime3 = var5Lifetime3 + MouseWheelInput.field_d;
             } else {
-              var7Lifetime2 = wb.a(103, true, hf.field_d[var4Lifetime3]);
+              var7Lifetime2 = ResizableModalDialog.a(103, true, hf.field_d[var4Lifetime3]);
               var5Lifetime3 = var5Lifetime3 + cl.field_l;
               var8Lifetime1 = -(var7Lifetime2 >> 1) + wk.field_c;
               q.field_e[var4Lifetime3] = new int[4];

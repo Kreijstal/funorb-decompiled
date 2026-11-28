@@ -387,9 +387,9 @@ final class qh {
           !(qa.field_d.length >= param0)) {
           qa.field_d = new int[param0 * 2];
         }
-        if (null == ta.field_mb ||
-          !(ta.field_mb.length >= param0)) {
-          ta.field_mb = new int[param0 * 2];
+        if (null == StandardContentDialog.field_mb ||
+          !(StandardContentDialog.field_mb.length >= param0)) {
+          StandardContentDialog.field_mb = new int[param0 * 2];
         }
         if (og.field_b == null ||
           !(param0 <= og.field_b.length)) {

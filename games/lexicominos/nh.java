@@ -47,7 +47,7 @@ final class nh {
             return stackIn_2_0;
           }
           var5 = param1.getFileIdByName(param3, -27964, var4_int);
-          stackIn_4_0 = uk.a(-40, param1, var4_int, var5);
+          stackIn_4_0 = ProgressDialog.a(-40, param1, var4_int, var5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -23,7 +23,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var3;
         var3 = fleas.field_A ? 1 : 0;
         lc.field_r = 0;
-        jj.field_M = null;
+        ResizableModalDialog.field_M = null;
         nj.field_a = null;
         var2 = il.field_g;
         il.field_g = pg.field_c;
@@ -95,11 +95,11 @@ abstract class NetworkGameClient extends GameAppletShell {
           bh.field_t != 11) {
           SectorCacheStore.a(-1);
         }
-        if (ui.field_pb != null) {
-          al.field_f = ui.field_pb.pollRotation(0);
+        if (StandardContentDialog.field_pb != null) {
+          al.field_f = StandardContentDialog.field_pb.pollRotation(0);
         }
         if (DiskArchiveRequest.j(32391)) {
-          var3 = bm.f((byte) 85) * 1200;
+          var3 = DialogMessagePane.f((byte) 85) * 1200;
           if (this.field_v ||
             !(var3 >= BufferedSocket.a(true)) &&
             !(vg.c(-127) <= var3)) {
@@ -120,7 +120,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var3Lifetime1 != 0 &&
             oa.field_j == 0 &&
             bh.field_t == 11 &&
-            !lk.i(10)) {
+            !StripedProgressWidget.i(10)) {
             ii.a((byte) -88);
           }
           if (oa.field_j != -1 &&
@@ -174,7 +174,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if ((oa.field_j != -1 &&
           oa.field_j != 0 ||
-          lk.i(10)) &&
+          StripedProgressWidget.i(10)) &&
           AccountCreationResultPanel.field_sb <= lj.correctedCurrentTimeMillis((byte) -47)) {
           rj.field_j = false;
           if (oa.field_j != -1 &&
@@ -184,7 +184,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
         }
         if (0 == oa.field_j &&
-          !lk.i(10)) {
+          !StripedProgressWidget.i(10)) {
           rj.field_m = false;
         }
         if (ib.field_k == 0 &&
@@ -196,7 +196,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             il.field_a = q.a(8192, df.field_a);
           }
           BoundedRandomAccessFile.field_d = uh.a(1, 26, false, true, ki.field_d);
-          oa.field_l = uh.a(1, 26, false, true, bm.field_M);
+          oa.field_l = uh.a(1, 26, false, true, DialogMessagePane.field_M);
           kc.field_d = uh.a(1, 26, false, true, IntrusiveNode.field_f);
           pf.field_b = oa.field_l;
           ib.field_k = 2;
@@ -226,7 +226,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           sd.clearStaticReferences((byte) -63);
           DropTargetWidgetContainer.field_I = MouseWheelInput.field_a;
           tb.field_c = false;
-          oh.a(kc.field_d, oa.field_l, va.field_m, (byte) 28, BoundedRandomAccessFile.field_d);
+          ContentTransitionDialog.a(kc.field_d, oa.field_l, va.field_m, (byte) 28, BoundedRandomAccessFile.field_d);
           if (of.field_i ||
             null != hc.field_d) {
             stackIn_100_0 = !(of.field_i);
@@ -258,7 +258,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (ib.field_k == 11) {
           if (null != TextLayout.field_a && (!TextLayout.field_a.ensureIndexLoaded((byte) -113) ||
             !TextLayout.field_a.tryLoadAllGroups(-18))) {
-            jj.a(0.0f, cb.a(sg.field_a, AccountServiceResult.field_a, TextLayout.field_a, (byte) 13), true);
+            ResizableModalDialog.a(0.0f, cb.a(sg.field_a, AccountServiceResult.field_a, TextLayout.field_a, (byte) 13), true);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -272,10 +272,10 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (ib.field_k == 13) {
           var3Lifetime2 = 1;
-          if (fc.field_c != null) {
-            stackIn_134_0 = (!fc.field_c.c(0)) ? 0 : 1;
+          if (FullscreenNoticeType.field_c != null) {
+            stackIn_134_0 = (!FullscreenNoticeType.field_c.c(0)) ? 0 : 1;
             var3Lifetime2 = stackIn_134_0;
-            jj.a(fc.field_c.field_k, fc.field_c.field_f, true);
+            ResizableModalDialog.a(FullscreenNoticeType.field_c.field_k, FullscreenNoticeType.field_c.field_f, true);
           }
           if (var3Lifetime2 != 0) {
             ib.field_k = 20;
@@ -287,7 +287,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           this.c(122);
           aj.a(0, ol.field_e);
         }
-        if (ui.field_mb[8]) {
+        if (StandardContentDialog.field_mb[8]) {
           ImageProducerRasterBuffer.e((byte) -41);
         }
     }
@@ -298,7 +298,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (this.field_i) {
           return -1;
         }
-        if (!lk.i(10)) {
+        if (!StripedProgressWidget.i(10)) {
           return -1;
         }
         if (param0 != 5000) {
@@ -308,7 +308,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (rj.field_j) {
           return -1;
         }
-        var2 = rb.a(this.field_s, lc.f(0), true, vi.b((byte) -55), this.field_k, -107);
+        var2 = GuestPlayConfirmationForm.a(this.field_s, lc.f(0), true, vi.b((byte) -55), this.field_k, -107);
         if (-1 == var2) {
           return -1;
         }
@@ -363,7 +363,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           this.a(false, -14);
         }
         if (var2 < 64 &&
-          ui.field_mb[var2]) {
+          StandardContentDialog.field_mb[var2]) {
           if (var2 == 0) {
             return;
           }
@@ -421,7 +421,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                 }
               }
             } else {
-              bd.o(param0 - 24009);
+              ProgressMessageDialog.o(param0 - 24009);
             }
           }
           return;
@@ -440,7 +440,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (!nl.a(-118)) {
           if (ib.field_k >= 10) {
             if (!wh.b(27415)) {
-              lk.a((byte) 35);
+              StripedProgressWidget.a((byte) 35);
             } else {
               if (0 == bh.field_t) {
                 discarded$6 = this.a(false, 0, false);
@@ -565,7 +565,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     private final void d(byte param0) {
-        ui.field_mb[2] = true;
+        StandardContentDialog.field_mb[2] = true;
         if (param0 > -44) {
           field_y = -117;
         }
@@ -581,9 +581,9 @@ abstract class NetworkGameClient extends GameAppletShell {
         wc.a(22986, param2, cg.field_y, param3, fg.field_q, this.field_p, this.field_n, this.field_o, this.field_u, 5000, this.field_r, this.field_x, 5000, this.field_l);
         ResourceArchive.initializeArchiveNetworkServices(cg.field_y, this.field_r, 8737, param2, this.field_u, this.field_n, this.field_p, this.field_l, fg.field_q);
         vg.b((byte) 32);
-        ui.field_pb = of.createMouseWheelInput(-21814);
+        StandardContentDialog.field_pb = of.createMouseWheelInput(-21814);
         aj.a(0, ol.field_e);
-        bm.field_M = param5;
+        DialogMessagePane.field_M = param5;
         ll.field_s = param1;
         df.field_a = param0;
         if (param6 != 8) {
@@ -599,7 +599,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (param0 >= -55) {
           this.field_r = 94;
         }
-        ui.field_mb[1] = true;
+        StandardContentDialog.field_mb[1] = true;
     }
 
     final int e(boolean param0) {
@@ -610,25 +610,25 @@ abstract class NetworkGameClient extends GameAppletShell {
         var2 = this.h(5000);
         if (0 == var2 ||
           var2 == 1) {
-          if (ui.field_mb[1]) {
+          if (StandardContentDialog.field_mb[1]) {
             ik.a(2, (byte) 110);
           }
-          if (ui.field_mb[2]) {
+          if (StandardContentDialog.field_mb[2]) {
             pb.a(3, 0);
           }
-          if (ui.field_mb[3]) {
+          if (StandardContentDialog.field_mb[3]) {
             wd.a(-29250, 4);
           }
-          if (ui.field_mb[4]) {
+          if (StandardContentDialog.field_mb[4]) {
             BufferedSocket.a(5, -1115925337);
           }
-          if (ui.field_mb[5]) {
+          if (StandardContentDialog.field_mb[5]) {
             pg.a(-68, 6);
           }
-          if (ui.field_mb[6]) {
+          if (StandardContentDialog.field_mb[6]) {
             LabeledWidgetContainer.a(7, 960240129);
           }
-          if (ui.field_mb[8]) {
+          if (StandardContentDialog.field_mb[8]) {
             ge.a(119);
           }
         }
@@ -637,20 +637,20 @@ abstract class NetworkGameClient extends GameAppletShell {
 
     private final void e(int param0) {
         int var2 = -17 / ((param0 + 78) / 43);
-        ui.field_mb[4] = true;
+        StandardContentDialog.field_mb[4] = true;
     }
 
     private final void a(boolean param0, int param1) {
-        ui.field_mb[3] = true;
+        StandardContentDialog.field_mb[3] = true;
         if (param1 > -52) {
           return;
         }
-        ui.field_mb[18] = true;
-        ui.field_mb[8] = param0;
-        ui.field_mb[7] = true;
-        ui.field_mb[17] = true;
-        ui.field_mb[16] = true;
-        ui.field_mb[0] = true;
+        StandardContentDialog.field_mb[18] = true;
+        StandardContentDialog.field_mb[8] = param0;
+        StandardContentDialog.field_mb[7] = true;
+        StandardContentDialog.field_mb[17] = true;
+        StandardContentDialog.field_mb[16] = true;
+        StandardContentDialog.field_mb[0] = true;
     }
 
     private final int a(boolean param0, int param1, boolean param2) {
@@ -673,7 +673,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = tg.a(ol.a(-125), param1 ^ 0, fc.d(64));
+            var5_int = tg.a(ol.a(-125), param1 ^ 0, FullscreenNoticeType.d(64));
             if (var5_int != -1) {
               NetworkArchiveRequest.a(fh.field_a, var5_int, false, tc.field_e);
               tc.field_e = null;
@@ -701,7 +701,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (param2) {
               rj.field_j = false;
             } else {
-              var5_intLifetime2 = rb.a(this.field_s, lc.f(0), false, vi.b((byte) -55), this.field_k, -99);
+              var5_intLifetime2 = GuestPlayConfirmationForm.a(this.field_s, lc.f(0), false, vi.b((byte) -55), this.field_k, -99);
               if (var5_intLifetime2 != -1) {
                 if (0 != var5_intLifetime2) {
                   BoundedRandomAccessFile.a(fh.field_a, var5_intLifetime2, 110);
@@ -797,7 +797,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (param0 != 12405) {
           this.field_s = false;
         }
-        ui.field_mb[5] = true;
+        StandardContentDialog.field_mb[5] = true;
     }
 
     final int a(byte param0, boolean param1) {

@@ -35,7 +35,7 @@ abstract class wh extends DualLinkNode {
           MouseWheelInput.field_c = false;
           boolean decompiledSharedTail0 = !(sg.field_a);
           if (!decompiledSharedTail0) {
-            ol.field_a.c(false);
+            ol.field_a.showConnectionFailure(false);
             decompiledSharedTail0 = (var2 != 0);
           }
           if (decompiledSharedTail0) {
@@ -50,7 +50,7 @@ abstract class wh extends DualLinkNode {
               }
               SpriteGeometry.field_u = dm.a(0, new CharSequence[]{(CharSequence) ((Object) SpriteGeometry.field_u), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) fm.field_b)});
             }
-            ol.field_a.d(true);
+            ol.field_a.closeDialog(true);
             sd.a((byte) -124);
           }
           if (!param0) {
@@ -107,7 +107,7 @@ abstract class wh extends DualLinkNode {
           var7 = var5_int - 10;
           if (0 < param3.field_G &&
             null != param3.field_O) {
-            ff.a((byte) -2);
+            GuestPlayConfirmationForm.a((byte) -2);
           }
           eg.field_i = 0;
           var8 = 0;

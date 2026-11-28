@@ -1153,7 +1153,7 @@ final class lj implements cl {
           this.field_w[param1][param0] = param4;
           var6_int = 1 + this.field_q + (32 * (param1 / 7 + param1 % 7) - 224 + IntroSequenceScreen.field_w[param4]);
           int var8 = -118 / ((param2 - 32) / 44);
-          var7 = -21 + r.field_b[param4] + (168 + 24 * (-(param1 % 7) + param1 / 7)) + this.field_l;
+          var7 = -21 + FullscreenNoticeType.field_b[param4] + (168 + 24 * (-(param1 % 7) + param1 / 7)) + this.field_l;
           this.field_a[param1] = param3;
           this.field_v[param1][param0] = new rh(var6_int, var7, 20, 40, je.field_d[param3], AccountRegistrationPanel.field_P[param3], 256);
         } catch (RuntimeException runtimeException) {

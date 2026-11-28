@@ -53,12 +53,12 @@ final class ib {
     }
 
     final static void a(int param0) {
-        if (null == cm.field_R) {
+        if (null == RegistrationAgreementPane.field_R) {
           return;
         }
-        pd.a(cm.field_R, -32);
-        cm.field_R.exitFullscreen(i.field_A, 0);
-        cm.field_R = null;
+        pd.a(RegistrationAgreementPane.field_R, -32);
+        RegistrationAgreementPane.field_R.exitFullscreen(i.field_A, 0);
+        RegistrationAgreementPane.field_R = null;
         if (il.field_c != null) {
           il.field_c.a(6733);
         }
@@ -138,7 +138,7 @@ final class ib {
         if (param0 < 25) {
           ib.b(-45);
         }
-        return nk.field_Hb;
+        return ProgressMessageDialog.field_Hb;
     }
 
     final static void c(int param0) {

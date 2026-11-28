@@ -166,7 +166,7 @@ final class tb extends v {
         if (param0 != -11) {
           tb.clearStaticReferences((byte) 123);
         }
-        stackIn_7_0 = (mh.field_U >= 10) && (!pg.field_c) && (!ej.b(-27));
+        stackIn_7_0 = (ContentTransitionDialog.field_U >= 10) && (!pg.field_c) && (!ej.b(-27));
         return stackIn_7_0;
     }
 

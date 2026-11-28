@@ -89,8 +89,8 @@ final class qf extends wb {
         if (param0 != -28390) {
           qf.g(-118);
         }
-        if (qj.field_fb != null) {
-          qj.field_fb.h(param0 + 4239142);
+        if (StandardContentDialog.field_fb != null) {
+          StandardContentDialog.field_fb.freezeNormalProgressAnimation(param0 + 4239142);
         }
         cb.a((byte) -52);
     }
@@ -404,10 +404,10 @@ final class qf extends wb {
 
     final static void g(int param0) {
         if (null != jj.field_a) {
-          jj.field_a.g(true);
+          jj.field_a.closeDialog(true);
         }
         hd.field_a = new DisplayNameSelectionPanel();
-        di.field_x.b(122, hd.field_a);
+        di.field_x.replaceContent(122, hd.field_a);
         if (param0 >= -15) {
           field_q = (int[]) null;
         }

@@ -130,7 +130,7 @@ final class aj extends ig {
         if (!kf.b(47)) {
           return true;
         }
-        if (0 >= kl.field_V) {
+        if (0 >= ProgressDialog.field_V) {
           return false;
         }
         if (!ca.a((byte) 117)) {

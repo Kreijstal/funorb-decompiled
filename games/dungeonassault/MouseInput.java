@@ -72,7 +72,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             return;
           }
           fc.field_m = 0;
-          wi.field_tb = param0.getX();
+          ProgressDialog.field_tb = param0.getX();
           dj.field_d = param0.getY();
           lj.field_g = true;
           return;
@@ -104,7 +104,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         try {
           if (ib.field_f != null) {
             fc.field_m = 0;
-            wi.field_tb = param0.getX();
+            ProgressDialog.field_tb = param0.getX();
             dj.field_d = param0.getY();
             lj.field_g = true;
           }
@@ -132,7 +132,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         try {
           if (null != ib.field_f) {
             fc.field_m = 0;
-            wi.field_tb = -1;
+            ProgressDialog.field_tb = -1;
             dj.field_d = -1;
             lj.field_g = true;
           }
@@ -204,7 +204,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             return;
           }
           fc.field_m = 0;
-          wi.field_tb = param0.getX();
+          ProgressDialog.field_tb = param0.getX();
           dj.field_d = param0.getY();
           lj.field_g = true;
           return;

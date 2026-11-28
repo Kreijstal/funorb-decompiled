@@ -165,7 +165,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           if (PcmOutputWorker.field_h == this &&
             !RichTextWidget.field_J) {
-            bh.field_cb = true;
+            FullscreenStatusDialog.field_cb = true;
             if (dh.field_e &&
               -pk.field_e + sf.correctedCurrentTimeMillis((byte) 113) > 1000L) {
               var2 = param0.getClipBounds();
@@ -300,7 +300,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (oi.a(-19804, (CharSequence) ((Object) var4)) &&
+                      if (StripedProgressWidget.a(-19804, (CharSequence) ((Object) var4)) &&
                         !(md.a((CharSequence) ((Object) var4), true) >= 10)) {
                         this.a((byte) -128, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
@@ -380,7 +380,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   do {
                     if (!(ig.field_b > var3)) {
                       this.renderAppletFrame(-23036);
-                      jk.a(-23765, qa.field_a, ef.field_c);
+                      ContentTransitionDialog.a(-23765, qa.field_a, ef.field_c);
                       break;
                     }
                     this.processClientTick(0);
@@ -515,7 +515,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           jb.field_p = jb.field_p + 1;
           if (50 < fieldTemp$1) {
             jb.field_p = jb.field_p - 50;
-            bh.field_cb = true;
+            FullscreenStatusDialog.field_cb = true;
             ef.field_c.setSize(nk.field_x, ml.field_a);
             ef.field_c.setVisible(true);
             boolean decompiledSharedTail0 = (null != nd.field_f &&
@@ -669,7 +669,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           ef.field_c.requestFocus();
           rd.field_f = true;
           pe.field_rb = true;
-          bh.field_cb = true;
+          FullscreenStatusDialog.field_cb = true;
           fa.field_a = false;
           pk.field_e = sf.correctedCurrentTimeMillis((byte) 113);
           return;
@@ -741,7 +741,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         try {
           pe.field_rb = true;
-          bh.field_cb = true;
+          FullscreenStatusDialog.field_cb = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

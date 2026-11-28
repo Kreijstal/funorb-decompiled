@@ -41,12 +41,12 @@ final class PcmResampler {
         }
         var1_ref = pk.field_e;
         synchronized (var1_ref) {
-          if (di.field_a == q.field_c) {
+          if (FullscreenNoticeType.field_a == q.field_c) {
             return false;
           }
-          SectorCacheStore.field_f = sf.field_d[di.field_a];
-          AccountRequestState.field_b = GameApplet.field_i[di.field_a];
-          di.field_a = 127 & di.field_a + 1;
+          SectorCacheStore.field_f = sf.field_d[FullscreenNoticeType.field_a];
+          AccountRequestState.field_b = GameApplet.field_i[FullscreenNoticeType.field_a];
+          FullscreenNoticeType.field_a = 127 & FullscreenNoticeType.field_a + 1;
           stackIn_7_0 = true;
         }
         return stackIn_7_0;
@@ -155,7 +155,7 @@ final class PcmResampler {
           return;
         }
         if (PcmOutputWorker.field_d == null) {
-          PcmOutputWorker.field_d = new ql(IsaacRandom.field_d, ii.field_F);
+          PcmOutputWorker.field_d = new ProgressDialog(IsaacRandom.field_d, ii.field_F);
         }
         IsaacRandom.field_d.showDialog((byte) 72, (UiWidget) (PcmOutputWorker.field_d));
     }

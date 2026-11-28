@@ -143,7 +143,7 @@ final class DiskCacheWorker implements Runnable {
     final static void a(byte param0) {
         int var1;
         Archive var2;
-        if (sp.field_V &&
+        if (ResizableModalDialog.field_V &&
           vj.field_h) {
           return;
         }
@@ -157,7 +157,7 @@ final class DiskCacheWorker implements Runnable {
           hj.field_e.field_o) {
           jq.field_e = jq.field_e & ~hj.field_e.field_p;
           ml.field_z = ml.field_z | hj.field_e.field_p;
-          sp.field_V = true;
+          ResizableModalDialog.field_V = true;
           hj.field_e = null;
         }
         if (bs.field_Xb != null &&
@@ -173,7 +173,7 @@ final class DiskCacheWorker implements Runnable {
           var2 = (Archive) null;
           DiskCacheWorker.a((u[]) null, (int[]) null, (Archive) null, (Archive) null, false);
         }
-        if (sp.field_V &&
+        if (ResizableModalDialog.field_V &&
           vj.field_h) {
           le.a(468713154);
           jn.a(param0 ^ 41);
@@ -669,10 +669,10 @@ final class DiskCacheWorker implements Runnable {
           var17 = gk.a(stackIn_58_0, stackIn_58_1, stackIn_58_2, stackIn_59_3);
           fr.field_a = new sm(0L, var17[1], var17[0], 1, ja.field_e, (String) null);
           tb.field_a = new UiPanel(0L, (UiPanel) null);
-          tb.field_a.field_Bb = rh.a(tn.a("slideregion", param3, -90, "lobby"), -27140);
-          tb.field_a.field_Q = rh.a(tn.a("slideregion_mouseover", param3, -95, "lobby"), -27140);
-          tb.field_a.field_cb = rh.a(tn.a("slideregion_mouseheld", param3, -77, "lobby"), -27140);
-          tb.field_a.field_gb = rh.a(tn.a("slideregion_disabled", param3, -89, "lobby"), -27140);
+          tb.field_a.field_Bb = DialogMessagePane.a(tn.a("slideregion", param3, -90, "lobby"), -27140);
+          tb.field_a.field_Q = DialogMessagePane.a(tn.a("slideregion_mouseover", param3, -95, "lobby"), -27140);
+          tb.field_a.field_cb = DialogMessagePane.a(tn.a("slideregion_mouseheld", param3, -77, "lobby"), -27140);
+          tb.field_a.field_gb = DialogMessagePane.a(tn.a("slideregion_disabled", param3, -89, "lobby"), -27140);
           sj.field_c = new UiPanel(0L, (UiPanel) null);
           sj.field_c.field_Bb = hq.a(gk.a(param3, "lobby", "dragbar", true), 202);
           stackIn_61_0 = sj.field_c;

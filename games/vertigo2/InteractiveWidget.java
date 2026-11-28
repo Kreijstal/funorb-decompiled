@@ -41,7 +41,7 @@ class InteractiveWidget extends UiWidget {
           if (param0 < 47) {
             field_C = 1.5664135217666626f;
           }
-          if (ko.field_P <= 0 &&
+          if (NumericDateInputWidget.field_P <= 0 &&
             mp.field_b <= 0) {
             return;
           }

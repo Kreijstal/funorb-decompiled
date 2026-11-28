@@ -328,7 +328,7 @@ abstract class ComponentDecorator extends UiComponent implements WidgetContainer
             } else {
               MixedSupport066.sceneWidgetPart010State0003.sceneWidgetPart008State0005.sceneWidgetState0089.stringState0598 = SoftwareFramebuffer.stringState0616;
             }
-            UiComponentPart012.performAction0591(MixedSupport066.sceneWidgetPart010State0003.sceneWidgetState0108, true);
+            ProgressMessageDialog.performAction0591(MixedSupport066.sceneWidgetPart010State0003.sceneWidgetState0108, true);
             frameRemainderLocal36 = (integerLocal33 != 0);
           }
           if (frameRemainderLocal36) {

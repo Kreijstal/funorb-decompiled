@@ -294,13 +294,13 @@ final class ja {
           }
           var9 = (VorbisSample) (this.field_d.a(var6, (byte) 122));
           if (var9 == null) {
-            var9 = VorbisSample.a(this.field_e, param1, param0);
+            var9 = VorbisSample.load(this.field_e, param1, param0);
             if (var9 == null) {
               return null;
             }
             this.field_d.a(var9, (byte) -102, var6);
           }
-          var8Lifetime1 = var9.a(param3);
+          var8Lifetime1 = var9.decodeToPcm(param3);
           if (param2 != -6) {
             stackIn_15_0 = (PcmSample) null;
             return stackIn_15_0;

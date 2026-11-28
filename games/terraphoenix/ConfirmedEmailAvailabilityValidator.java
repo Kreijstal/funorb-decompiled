@@ -23,12 +23,12 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_r.getValidationStatus(param0, param1) == qf.field_d) {
-            stackIn_3_0 = qf.field_d;
+          if (this.field_r.getValidationStatus(param0, param1) == FullscreenNoticeType.field_d) {
+            stackIn_3_0 = FullscreenNoticeType.field_d;
             return stackIn_3_0;
           }
           if (!param0.equals(this.field_t)) {
-            var3 = ei.a(-110, param0);
+            var3 = ResizableModalDialog.a(-110, param0);
             if (!var3.a(-72)) {
               stackIn_9_0 = oh.field_b;
               return stackIn_9_0;
@@ -37,7 +37,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             this.field_u = var3.a(true);
           }
           if (!this.field_u) {
-            stackIn_14_0 = qf.field_d;
+            stackIn_14_0 = FullscreenNoticeType.field_d;
           } else {
             stackIn_14_0 = dg.field_c;
           }
@@ -67,11 +67,11 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_r.getValidationStatus(param0, 0) == qf.field_d) {
+          if (this.field_r.getValidationStatus(param0, 0) == FullscreenNoticeType.field_d) {
             stackIn_3_0 = this.field_r.getValidationMessage(param0, -85);
             return stackIn_3_0;
           }
-          if (this.getValidationStatus(param0, 0) == qf.field_d) {
+          if (this.getValidationStatus(param0, 0) == FullscreenNoticeType.field_d) {
             stackIn_6_0 = fl.field_a;
             return stackIn_6_0;
           }

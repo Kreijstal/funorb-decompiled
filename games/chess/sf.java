@@ -19,8 +19,8 @@ final class sf extends DefaultTextWidgetRenderer {
 
     final static void a(int param0, String param1) {
         try {
-          rm.a((byte) -122, param1);
-          qd.a(-1845, ii.field_T, false);
+          StripedProgressWidget.a((byte) -122, param1);
+          qd.a(-1845, GuestPlayConfirmationForm.field_T, false);
           if (param0 >= -120) {
             field_u = (long[]) null;
           }
@@ -118,7 +118,7 @@ final class sf extends DefaultTextWidgetRenderer {
     }
 
     private sf(int param0, int param1, int param2) {
-        this.field_x = bj.field_db;
+        this.field_x = ContentTransitionDialog.field_db;
         this.field_t = param1;
         this.field_e = tk.field_a;
         this.field_w = param2;

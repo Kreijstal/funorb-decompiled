@@ -188,14 +188,14 @@ final class qd {
     }
 
     final static AccountServiceResult pollAccountCreationResult(int param0) {
-        if (tj.field_F == jc.field_P) {
+        if (GuestPlayConfirmationForm.field_F == ResizableModalDialog.field_P) {
           throw new IllegalStateException();
         }
         int var1 = -14 % ((param0 + 25) / 60);
-        if (gg.field_b != jc.field_P) {
+        if (gg.field_b != ResizableModalDialog.field_P) {
           return null;
         }
-        jc.field_P = tj.field_F;
+        ResizableModalDialog.field_P = GuestPlayConfirmationForm.field_F;
         return mh.field_a;
     }
 

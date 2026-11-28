@@ -144,17 +144,17 @@ abstract class jf {
         int var7Lifetime1Lifetime4;
         int var7Lifetime1Lifetime5;
         int var7Lifetime4Lifetime1;
-        if (!(0 <= tg.field_H)) {
+        if (!(0 <= GuestPlayConfirmationForm.field_H)) {
           return;
         }
         int var3 = param1 - 135;
         int var4 = -35 + param2;
         int var5 = param0;
-        if (tg.field_H < 75) {
-          var5 = (tg.field_H << 8) / 75;
+        if (GuestPlayConfirmationForm.field_H < 75) {
+          var5 = (GuestPlayConfirmationForm.field_H << 8) / 75;
         }
-        if (!(tg.field_H <= 200)) {
-          var5 = (-tg.field_H + 250 << 8) / 50;
+        if (!(GuestPlayConfirmationForm.field_H <= 200)) {
+          var5 = (-GuestPlayConfirmationForm.field_H + 250 << 8) / 50;
         }
         vm.a(ResourceArchive.field_a, -8409);
         ti.b();
@@ -162,15 +162,15 @@ abstract class jf {
         of.a(false);
         if (var5 < 256) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_l, 0, -var5 + 256);
-          ib.b(false);
-          if (tg.field_H < 150) {
+          StripedProgressWidget.b(false);
+          if (GuestPlayConfirmationForm.field_H < 150) {
             ResourceArchive.field_a.drawHalfSize(var3, var4);
           } else {
             ad.field_b.drawWithOpacity(var3 + 15, var4 + 10, var5);
           }
-          var6 = tg.field_H - 125;
+          var6 = GuestPlayConfirmationForm.field_H - 125;
           if (var6 <= 0) {
-            var6 = tg.field_H - 140;
+            var6 = GuestPlayConfirmationForm.field_H - 140;
             if (var6 > 0) {
               var7 = 256;
               if (var6 < 20) {
@@ -192,7 +192,7 @@ abstract class jf {
                 KeyboardInput.field_c.drawAdditive(var3, var4, 256);
               }
             }
-            var6 = tg.field_H - 140;
+            var6 = GuestPlayConfirmationForm.field_H - 140;
             if (var6 > 0) {
               var7Lifetime8 = 256;
               if (var6 < 20) {
@@ -202,7 +202,7 @@ abstract class jf {
             }
             return;
           }
-          var6Lifetime4 = tg.field_H - 140;
+          var6Lifetime4 = GuestPlayConfirmationForm.field_H - 140;
           if (var6Lifetime4 > 0) {
             var7Lifetime9 = 256;
             if (var6Lifetime4 < 20) {
@@ -212,12 +212,12 @@ abstract class jf {
           }
           return;
         }
-        ib.b(false);
-        if (tg.field_H < 150) {
+        StripedProgressWidget.b(false);
+        if (GuestPlayConfirmationForm.field_H < 150) {
           ResourceArchive.field_a.drawHalfSize(var3, var4);
-          var6Lifetime1 = tg.field_H - 125;
+          var6Lifetime1 = GuestPlayConfirmationForm.field_H - 125;
           if (var6Lifetime1 <= 0) {
-            var6Lifetime1 = tg.field_H - 140;
+            var6Lifetime1 = GuestPlayConfirmationForm.field_H - 140;
             if (var6Lifetime1 > 0) {
               var7Lifetime1 = 256;
               if (var6Lifetime1 < 20) {
@@ -228,7 +228,7 @@ abstract class jf {
             return;
           }
           if (50 <= var6Lifetime1) {
-            var6Lifetime1 = tg.field_H - 140;
+            var6Lifetime1 = GuestPlayConfirmationForm.field_H - 140;
             if (var6Lifetime1 > 0) {
               var7Lifetime1Lifetime1 = 256;
               if (var6Lifetime1 < 20) {
@@ -241,7 +241,7 @@ abstract class jf {
           if (var6Lifetime1 < 20) {
             var7Lifetime1Lifetime2 = var6Lifetime1 * 256 / 20;
             KeyboardInput.field_c.drawAdditive(var3, var4, var7Lifetime1Lifetime2);
-            var6Lifetime1 = tg.field_H - 140;
+            var6Lifetime1 = GuestPlayConfirmationForm.field_H - 140;
             if (var6Lifetime1 > 0) {
               var7Lifetime1Lifetime2 = 256;
               if (var6Lifetime1 < 20) {
@@ -253,7 +253,7 @@ abstract class jf {
           }
           if (var6Lifetime1 < 30) {
             KeyboardInput.field_c.drawAdditive(var3, var4, 256);
-            var6Lifetime1 = tg.field_H - 140;
+            var6Lifetime1 = GuestPlayConfirmationForm.field_H - 140;
             if (var6Lifetime1 > 0) {
               var7Lifetime1Lifetime3 = 256;
               if (var6Lifetime1 < 20) {
@@ -265,7 +265,7 @@ abstract class jf {
           }
           var7Lifetime1Lifetime4 = (-var6Lifetime1 + 50) * 256 / 20;
           KeyboardInput.field_c.drawAdditive(var3, var4, var7Lifetime1Lifetime4);
-          var6Lifetime1Lifetime1 = tg.field_H - 140;
+          var6Lifetime1Lifetime1 = GuestPlayConfirmationForm.field_H - 140;
           if (var6Lifetime1Lifetime1 > 0) {
             var7Lifetime1Lifetime5 = 256;
             if (var6Lifetime1Lifetime1 < 20) {
@@ -276,9 +276,9 @@ abstract class jf {
           return;
         }
         ad.field_b.drawWithOpacity(var3 + 15, var4 + 10, var5);
-        var6Lifetime2 = tg.field_H - 125;
+        var6Lifetime2 = GuestPlayConfirmationForm.field_H - 125;
         if (var6Lifetime2 <= 0) {
-          var6Lifetime2 = tg.field_H - 140;
+          var6Lifetime2 = GuestPlayConfirmationForm.field_H - 140;
           if (var6Lifetime2 > 0) {
             var7Lifetime2 = 256;
             if (var6Lifetime2 < 20) {
@@ -289,7 +289,7 @@ abstract class jf {
           return;
         }
         if (50 <= var6Lifetime2) {
-          var6Lifetime2 = tg.field_H - 140;
+          var6Lifetime2 = GuestPlayConfirmationForm.field_H - 140;
           if (var6Lifetime2 > 0) {
             var7Lifetime3 = 256;
             if (var6Lifetime2 < 20) {
@@ -302,7 +302,7 @@ abstract class jf {
         if (var6Lifetime2 < 20) {
           var7Lifetime4 = var6Lifetime2 * 256 / 20;
           KeyboardInput.field_c.drawAdditive(var3, var4, var7Lifetime4);
-          var6Lifetime2 = tg.field_H - 140;
+          var6Lifetime2 = GuestPlayConfirmationForm.field_H - 140;
           if (var6Lifetime2 > 0) {
             var7Lifetime4Lifetime1 = 256;
             if (var6Lifetime2 < 20) {
@@ -314,7 +314,7 @@ abstract class jf {
         }
         if (var6Lifetime2 < 30) {
           KeyboardInput.field_c.drawAdditive(var3, var4, 256);
-          var6Lifetime2 = tg.field_H - 140;
+          var6Lifetime2 = GuestPlayConfirmationForm.field_H - 140;
           if (var6Lifetime2 > 0) {
             var7Lifetime5 = 256;
             if (var6Lifetime2 < 20) {
@@ -326,7 +326,7 @@ abstract class jf {
         }
         var7Lifetime6 = (-var6Lifetime2 + 50) * 256 / 20;
         KeyboardInput.field_c.drawAdditive(var3, var4, var7Lifetime6);
-        var6Lifetime3 = tg.field_H - 140;
+        var6Lifetime3 = GuestPlayConfirmationForm.field_H - 140;
         if (var6Lifetime3 > 0) {
           var7Lifetime7 = 256;
           if (var6Lifetime3 < 20) {

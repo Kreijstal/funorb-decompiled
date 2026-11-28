@@ -1,0 +1,259 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class RegistrationAgreementPane extends WidgetContainer implements TextHotspotListener, WidgetActivationListener {
+    private AccountCreationResultPanel field_C;
+    private RichTextWidget field_D;
+    private InteractiveWidget field_E;
+
+    private final String getAgreementLinkOpeningTag(int param0) {
+        if (param0 != -29996) {
+          InteractiveWidget var3 = (InteractiveWidget) null;
+          this.onWidgetActivated((byte) -117, (InteractiveWidget) null, -25, -101, -74);
+          return "<u=2164A2><col=2164A2>";
+        }
+        return "<u=2164A2><col=2164A2>";
+    }
+
+    RegistrationAgreementPane(AccountCreationResultPanel param0) {
+        super(0, 0, 288, 0, (WidgetRenderer) null);
+        String var7 = null;
+        int var3 = 0;
+        DefaultTextWidgetRenderer var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        try {
+          this.field_C = param0;
+          this.field_E = new InteractiveWidget(vd.field_d, (WidgetEventListener) null);
+          this.field_E.renderer = (WidgetRenderer) ((Object) new rf());
+          var7 = ff.a(new String[]{this.getAgreementLinkOpeningTag(-29996), this.getAgreementLinkClosingTag(119)}, 0, DelegatingCanvas.field_d);
+          var3 = 20;
+          var4 = new DefaultTextWidgetRenderer(TranslucentSpriteLayer.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, TranslucentSpriteLayer.field_e.field_x, -1, 2147483647, true);
+          this.field_D = new RichTextWidget(var7, var4);
+          this.field_D.field_n = "";
+          this.field_D.a(0, (byte) -115, Js5Transport.field_e);
+          this.field_D.a(1, (byte) -93, Js5Transport.field_e);
+          this.field_D.width = -40 + this.width;
+          this.field_D.listener = (WidgetEventListener) (this);
+          this.field_D.a((byte) 46, 26, this.width - 40, var3);
+          var3 = var3 + (15 + this.field_D.height);
+          this.addChild(this.field_D, -6938);
+          var5 = 4;
+          var6 = 200;
+          this.field_E.setBounds((byte) -97, 300 - var6 >> 1, var3, 40, var6);
+          this.field_E.listener = (WidgetEventListener) (this);
+          this.addChild(this.field_E, -6938);
+          this.setBounds((byte) -49, 0, 0, var3 - (-55 - var5), 300);
+        } catch (RuntimeException runtimeException) {
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "sc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static void a(int param0, java.awt.Color param1, boolean param2, byte param3, String param4) {
+        Exception exception = null;
+        Exception var5 = null;
+        RuntimeException var5_ref = null;
+        int var7 = 0;
+        int var8 = 0;
+        java.awt.Graphics var9 = null;
+        java.awt.Graphics var10 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_22_2 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_25_2 = null;
+        Throwable decompiledCaughtException = null;
+        try {
+          try {
+            var9 = k.field_d.getGraphics();
+            if (vb.field_d == null) {
+              vb.field_d = new java.awt.Font("Helvetica", 1, 13);
+            }
+            if (param2) {
+              var9.setColor(java.awt.Color.black);
+              var9.fillRect(0, 0, wk.field_d, MouseInputHandler.field_a);
+            }
+            if (param1 == null) {
+              param1 = new java.awt.Color(140, 17, 17);
+            }
+            try {
+              if (VertexMesh.field_u == null) {
+                VertexMesh.field_u = k.field_d.createImage(304, 34);
+              }
+              var10 = VertexMesh.field_u.getGraphics();
+              var10.setColor(param1);
+              var10.drawRect(0, 0, 303, 33);
+              var10.fillRect(2, 2, param0 * 3, 30);
+              var7 = 19 % ((-41 - param3) / 52);
+              var10.setColor(java.awt.Color.black);
+              var10.drawRect(1, 1, 301, 31);
+              var10.fillRect(param0 * 3 + 2, 2, -(param0 * 3) + 300, 30);
+              var10.setFont(vb.field_d);
+              var10.setColor(java.awt.Color.white);
+              var10.drawString(param4, (-(6 * param4.length()) + 304) / 2, 22);
+              var9.drawImage(VertexMesh.field_u, wk.field_d / 2 - 152, -18 + MouseInputHandler.field_a / 2, (java.awt.image.ImageObserver) null);
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              exception = (Exception) (Object) decompiledCaughtException;
+              var7 = -152 + wk.field_d / 2;
+              var8 = MouseInputHandler.field_a / 2 - 18;
+              var9.setColor(param1);
+              var9.drawRect(var7, var8, 303, 33);
+              var9.fillRect(2 + var7, var8 + 2, 3 * param0, 30);
+              var9.setColor(java.awt.Color.black);
+              var9.drawRect(1 + var7, 1 + var8, 301, 31);
+              var9.fillRect(2 + (var7 + 3 * param0), var8 + 2, 300 - param0 * 3, 30);
+              var9.setFont(vb.field_d);
+              var9.setColor(java.awt.Color.white);
+              var9.drawString(param4, var7 + (-(6 * param4.length()) + 304) / 2, var8 + 22);
+            }
+            if (null == rh.field_a) {
+              return;
+            }
+            var9.setFont(vb.field_d);
+            var9.setColor(java.awt.Color.white);
+            var9.drawString(rh.field_a, wk.field_d / 2 - rh.field_a.length() * 6 / 2, MouseInputHandler.field_a / 2 - 26);
+            return;
+          } catch (java.lang.Exception decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var5 = (Exception) (Object) decompiledCaughtException;
+            k.field_d.repaint();
+            return;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
+          decompiledCaughtException = decompiledCaughtParameter2;
+          var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_21_0 = var5_ref;
+          stackIn_21_1 = new StringBuilder().append("sc.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_2 = "{...}";
+          }
+          stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_25_2 = "null";
+          } else {
+            stackIn_25_2 = "{...}";
+          }
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+        }
+    }
+
+    public final void onTextHotspotActivated(byte param0, int param1, int param2, RichTextWidget param3) {
+        RuntimeException var5 = null;
+        int var6 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var6 = Torquing.field_u;
+        try {
+          if (param0 <= 106) {
+            return;
+          }
+          if (param2 == 0) {
+            d.a("terms.ws", (byte) 31);
+            return;
+          }
+          if (1 == param2) {
+            d.a("privacy.ws", (byte) 31);
+            return;
+          }
+          if (2 != param2) {
+            return;
+          }
+          d.a("conduct.ws", (byte) 31);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_12_0 = var5;
+          stackIn_12_1 = new StringBuilder().append("sc.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+        }
+    }
+
+    public final void onWidgetActivated(byte param0, InteractiveWidget param1, int param2, int param3, int param4) {
+        RuntimeException var6 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 >= -85) {
+            this.field_C = (AccountCreationResultPanel) null;
+          }
+          if (param1 != this.field_E) {
+            return;
+          }
+          m.c(-119);
+          this.field_C.closeDialog(true);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_8_0 = var6;
+          stackIn_8_1 = new StringBuilder().append("sc.NA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
+          }
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+        }
+    }
+
+    final boolean handleKey(int param0, UiWidget param1, char param2, int param3) {
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        boolean stackIn_7_0 = false;
+        boolean stackIn_10_0 = false;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (super.handleKey(param0, param1, param2, 98)) {
+            return true;
+          }
+          if (param0 == 98) {
+            stackIn_7_0 = this.focusPreviousChild((byte) 19, param1);
+            return stackIn_7_0;
+          }
+          var5_int = -40 % ((-33 - param3) / 57);
+          if (99 != param0) {
+            return false;
+          }
+          stackIn_10_0 = this.focusNextChild(param1, -9928);
+          return stackIn_10_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_15_0 = var5;
+          stackIn_15_1 = new StringBuilder().append("sc.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    private final String getAgreementLinkClosingTag(int param0) {
+        if (param0 <= 117) {
+          this.field_E = (InteractiveWidget) null;
+          return "</col></u>";
+        }
+        return "</col></u>";
+    }
+
+    static {
+    }
+}

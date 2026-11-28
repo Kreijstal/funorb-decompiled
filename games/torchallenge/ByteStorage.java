@@ -32,7 +32,7 @@ abstract class ByteStorage {
           if (param2 instanceof byte[]) {
             var3 = (byte[]) (param2);
             if (param1) {
-              stackIn_9_0 = ek.copyBytes(var3, -43);
+              stackIn_9_0 = StripedProgressWidget.copyBytes(var3, -43);
               return stackIn_9_0;
             }
             stackIn_7_0 = var3;
@@ -219,9 +219,9 @@ abstract class ByteStorage {
             return;
           }
           boolean decompiledFrameRemainder1 = true;
-          var10 = 5 + nh.field_db[0];
-          var11 = nh.field_db[1] + 5;
-          var12 = (-8 + nh.field_db[2]) / 5;
+          var10 = 5 + FullscreenStatusDialog.field_db[0];
+          var11 = FullscreenStatusDialog.field_db[1] + 5;
+          var12 = (-8 + FullscreenStatusDialog.field_db[2]) / 5;
           var14 = 0;
           var15 = 0;
           var16 = -1;
@@ -232,7 +232,7 @@ abstract class ByteStorage {
             for (var20 = 0; var20 < 5; var20++) {
               if (0 < (1 << var20 & vi.field_a)) {
                 var19 = ea.field_g[mh.field_d[var20]];
-                if (!wa.field_pb[-(ea.field_e * 5) + var19.variant] &&
+                if (!ProgressMessageDialog.field_pb[-(ea.field_e * 5) + var19.variant] &&
                   var15 == 0) {
                   var17 = var19.field_D;
                   var16 = var20;

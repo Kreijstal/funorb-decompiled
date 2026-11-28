@@ -40,19 +40,19 @@ final class ib {
         var5 = Vertigo2.field_L ? 1 : 0;
         try {
           var3_int = 68 % ((9 - param0) / 62);
-          if (param2 != we.field_M) {
-            rh.field_O = new int[param2];
+          if (param2 != StripedProgressWidget.field_M) {
+            DialogMessagePane.field_O = new int[param2];
             for (var4 = 0; param2 > var4; var4++) {
-              rh.field_O[var4] = (var4 << 12) / param2;
+              DialogMessagePane.field_O[var4] = (var4 << 12) / param2;
             }
             rm.field_z = -1 + param2;
-            we.field_M = param2;
+            StripedProgressWidget.field_M = param2;
             h.field_y = param2 * 32;
           }
           if (aa.field_Vb == param1) {
             return;
           }
-          if (param1 != we.field_M) {
+          if (param1 != StripedProgressWidget.field_M) {
             lf.field_y = new int[param1];
             var6 = 0;
             var4Lifetime1 = var6;
@@ -61,7 +61,7 @@ final class ib {
               var6++;
             }
           } else {
-            lf.field_y = rh.field_O;
+            lf.field_y = DialogMessagePane.field_O;
           }
           aa.field_Vb = param1;
           CrossfadingMidiPcmStream.field_x = -1 + param1;

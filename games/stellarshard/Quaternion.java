@@ -9,17 +9,17 @@ final class Quaternion {
 
     final static void a(boolean param0) {
         if (ModalDialogHost.field_G != null) {
-          ModalDialogHost.field_G.o(3);
+          ModalDialogHost.field_G.closeDialog(3);
           RichTextLayout.field_e = new DisplayNameSelectionPanel();
           if (!param0) {
-            sf.field_f.b(RichTextLayout.field_e, 23143);
+            sf.field_f.replaceContent(RichTextLayout.field_e, 23143);
             return;
           }
           return;
         }
         RichTextLayout.field_e = new DisplayNameSelectionPanel();
         if (!param0) {
-          sf.field_f.b(RichTextLayout.field_e, 23143);
+          sf.field_f.replaceContent(RichTextLayout.field_e, 23143);
           return;
         }
     }

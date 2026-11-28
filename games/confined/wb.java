@@ -1148,7 +1148,7 @@ final class wb {
                 }
                 var2 = ha.a("reloadgame", (byte) 74);
                 if (null != var2) {
-                  ei.field_nb = va.a(0, var2);
+                  FullscreenStatusDialog.field_nb = va.a(0, var2);
                 }
                 var2 = ha.a("toserverlist", (byte) 56);
                 if (null != var2) {
@@ -1168,7 +1168,7 @@ final class wb {
                 }
                 var2 = ha.a("justplay", (byte) 88);
                 if (null != var2) {
-                  ug.field_cb = va.a(0, var2);
+                  ResizableModalDialog.field_cb = va.a(0, var2);
                 }
                 var2 = ha.a("justplay_excl", (byte) 61);
                 if (var2 != null) {
@@ -1200,7 +1200,7 @@ final class wb {
                 }
                 var2 = ha.a("logging_in", (byte) 30);
                 if (var2 != null) {
-                  sj.field_kb = va.a(param0 ^ 6, var2);
+                  ContentTransitionDialog.field_kb = va.a(param0 ^ 6, var2);
                 }
                 var2 = ha.a("reconnect", (byte) 93);
                 if (var2 != null) {
@@ -1640,7 +1640,7 @@ final class wb {
                 }
                 var2 = ha.a("create_password_hint", (byte) 101);
                 if (null != var2) {
-                  jj.field_hb = va.a(0, var2);
+                  ProgressDialog.field_hb = va.a(0, var2);
                 }
                 var2 = ha.a("create_password_confirm_tooltip", (byte) 82);
                 if (var2 != null) {
@@ -1696,11 +1696,11 @@ final class wb {
                 }
                 var2 = ha.a("create_alert_namelength", (byte) 52);
                 if (var2 != null) {
-                  ef.field_wb = va.a(0, var2);
+                  StandardContentDialog.field_wb = va.a(0, var2);
                 }
                 var2 = ha.a("create_alert_namechars", (byte) 122);
                 if (var2 != null) {
-                  jn.field_R = va.a(param0 - 6, var2);
+                  DialogMessagePane.field_R = va.a(param0 - 6, var2);
                 }
                 var2 = ha.a("create_alert_nameleadingspace", (byte) 91);
                 if (null != var2) {
@@ -1928,7 +1928,7 @@ final class wb {
                 }
                 var2 = ha.a("loading_music", (byte) 121);
                 if (var2 != null) {
-                  ug.field_bb = va.a(0, var2);
+                  ResizableModalDialog.field_bb = va.a(0, var2);
                 }
                 var2 = ha.a("loading_instruments", (byte) 39);
                 if (null != var2) {
@@ -2390,7 +2390,7 @@ final class wb {
                 }
                 var2 = ha.a("orbcoins_colon", (byte) 21);
                 if (null != var2) {
-                  ei.field_ib = va.a(0, var2);
+                  FullscreenStatusDialog.field_ib = va.a(0, var2);
                 }
                 var2 = ha.a("achieved_colon_description", (byte) 89);
                 if (var2 != null) {

@@ -15,7 +15,7 @@ final class MixedSupport071 extends HashNode {
     static int[] integerArrayState0137;
     static String stringState0316;
     int[] integerArrayState0138;
-    static MixedSupport080 mixedSupport080State0002;
+    static FullscreenNoticeType mixedSupport080State0002;
     static SceneWidget sceneWidgetState0070;
     static String stringState0317;
 
@@ -52,7 +52,7 @@ final class MixedSupport071 extends HashNode {
         stringState0316 = "Unable to delete friend - system busy";
         integerArrayState0137 = new int[8192];
         mixedSupport004State0002 = new MixedSupport004();
-        mixedSupport080State0002 = new MixedSupport080();
+        mixedSupport080State0002 = new FullscreenNoticeType();
         stringState0317 = "Bugs";
     }
 }

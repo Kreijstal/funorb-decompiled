@@ -196,19 +196,19 @@ final class SceneWidgetPart008 extends SceneWidget {
               BufferedSocket.performAction1371((byte) 94);
             }
           } else {
-            if (UiComponentPart008.stringBuilderState0001.length() <= 0) {
+            if (DialogMessagePane.stringBuilderState0001.length() <= 0) {
               BufferedSocket.performAction1371((byte) 94);
             } else {
-              stringLocal4 = UiComponentPart008.stringBuilderState0001.toString();
+              stringLocal4 = DialogMessagePane.stringBuilderState0001.toString();
               stringLocal6 = stringLocal4;
               stringLocal24 = stringLocal4;
               if (MixedSupport128.computeBoolean1635(integerArgument2 ^ 2049, stringLocal4)) {
                 stringLocal12 = (String) null;
                 stringLocal11 = (String) null;
-                UiComponentPart004.performAction0184((String) null, (String) null, MixedSupport145.stringState0608, (byte) 90, 2, 0);
+                ContentTransitionDialog.performAction0184((String) null, (String) null, MixedSupport145.stringState0608, (byte) 90, 2, 0);
                 stringLocal14 = (String) null;
                 stringLocal13 = (String) null;
-                UiComponentPart004.performAction0184((String) null, (String) null, MixedSupport132.stringState0571, (byte) 69, 2, 0);
+                ContentTransitionDialog.performAction0184((String) null, (String) null, MixedSupport132.stringState0571, (byte) 69, 2, 0);
                 BufferedSocket.performAction1371((byte) 94);
               } else {
                 integerLocal5 = TextHotspotBounds.integerState0585;
@@ -228,8 +228,8 @@ final class SceneWidgetPart008 extends SceneWidget {
         }
         if (MixedSupport146.integerState0931 == 85) {
           if (integerLocal2 != 0 &&
-            0 < UiComponentPart008.stringBuilderState0001.length()) {
-            MixedSupport137.computeStringBuilder1715(UiComponentPart008.stringBuilderState0001, -23510, UiComponentPart008.stringBuilderState0001.length() - 1, ' ');
+            0 < DialogMessagePane.stringBuilderState0001.length()) {
+            MixedSupport137.computeStringBuilder1715(DialogMessagePane.stringBuilderState0001, -23510, DialogMessagePane.stringBuilderState0001.length() - 1, ' ');
             return true;
           }
           return true;
@@ -239,8 +239,8 @@ final class SceneWidgetPart008 extends SceneWidget {
           return false;
         }
         if (integerLocal2 != 0 &&
-          80 > UiComponentPart008.stringBuilderState0001.length()) {
-          discarded$0 = UiComponentPart008.stringBuilderState0001.append((char) integerLocal3);
+          80 > DialogMessagePane.stringBuilderState0001.length()) {
+          discarded$0 = DialogMessagePane.stringBuilderState0001.append((char) integerLocal3);
           integerLocal22 = 485;
           stringLocal16 = MixedSupport089.stringState0372;
           stringLocal23 = stringLocal16;
@@ -281,8 +281,8 @@ final class SceneWidgetPart008 extends SceneWidget {
             stringLocal18 = stringLocal30 + stringLocal17 + ": ";
             integerLocal22 = integerLocal22 - MixedSupport038.bitmapFontState0013.stringWidth(stringLocal18);
           }
-          if (MixedSupport038.bitmapFontState0013.stringWidth(UiComponentPart008.stringBuilderState0001.toString()) > integerLocal22) {
-            MixedSupport137.computeStringBuilder1715(UiComponentPart008.stringBuilderState0001, -23510, UiComponentPart008.stringBuilderState0001.length() - 1, ' ');
+          if (MixedSupport038.bitmapFontState0013.stringWidth(DialogMessagePane.stringBuilderState0001.toString()) > integerLocal22) {
+            MixedSupport137.computeStringBuilder1715(DialogMessagePane.stringBuilderState0001, -23510, DialogMessagePane.stringBuilderState0001.length() - 1, ' ');
           }
         }
         return true;

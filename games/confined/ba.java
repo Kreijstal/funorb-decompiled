@@ -134,7 +134,7 @@ final class ba extends InteractiveWidget {
               vm.a(FrameTimer.field_g, -8409);
             }
             var15.drawRotatedAbout(112, 144, var15.field_t << 4, var15.field_x << 4, -this.field_R << 10, 4096);
-            ib.b(false);
+            StripedProgressWidget.b(false);
             FrameTimer.field_g.drawAdditive(var5 - var15.field_t, -var15.field_x + var6, 256);
             return;
           }
@@ -173,7 +173,7 @@ final class ba extends InteractiveWidget {
             }
           }
           var16.drawRotatedAbout(112, 144, var16.field_t << 4, var16.field_x << 4, -this.field_R << 10, 4096);
-          ib.b(false);
+          StripedProgressWidget.b(false);
           FrameTimer.field_g.drawAdditive(var5 - var16.field_t, -var16.field_x + var6, 256);
           return;
         }
@@ -215,7 +215,7 @@ final class ba extends InteractiveWidget {
           }
         }
         var22.drawRotatedAbout(112, 144, var22.field_t << 4, var22.field_x << 4, -this.field_R << 10, 4096);
-        ib.b(false);
+        StripedProgressWidget.b(false);
         FrameTimer.field_g.drawAdditive(var5Lifetime1 - var22.field_t, -var22.field_x + var6Lifetime1, 256);
     }
 

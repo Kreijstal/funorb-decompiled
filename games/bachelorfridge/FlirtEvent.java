@@ -34,9 +34,9 @@ final class FlirtEvent extends SpecialEvent {
             aa.field_l = null;
           }
           iga.field_c = null;
-          if (null != uma.field_M) {
-            uma.field_M.clear(112);
-            uma.field_M = null;
+          if (null != NumericDateInputWidget.field_M) {
+            NumericDateInputWidget.field_M.clear(112);
+            NumericDateInputWidget.field_M = null;
           }
           FridgeScreen.field_g = null;
           if (null != bia.field_g) {

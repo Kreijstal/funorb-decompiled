@@ -108,10 +108,10 @@ final class ti {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null == ji.field_a) {
-            ji.field_a = new rk(sd.field_c, rk.field_ab);
+            ji.field_a = new ProgressDialog(sd.field_c, ProgressDialog.field_ab);
             sd.field_c.showDialog(ji.field_a, (byte) 117);
           }
-          ji.field_a.a(param2, param3, param0, (byte) -63);
+          ji.field_a.setProgress(param2, param3, param0, (byte) -63);
           SoftwareRasterizer.clearRaster();
           PcmOutputWorker.a(true, 40);
           if (param1 == 54) {

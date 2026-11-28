@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class DebouncedFieldValidator implements FieldValidator {
-    static oc field_c;
+    static FullscreenNoticeType field_c;
     private long field_a;
     static String field_f;
     static RgbSprite field_b;
@@ -150,7 +150,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
           if (null != og.field_b) {
             SpriteGeometry.field_q.writePrefixedString((byte) -38, og.field_b);
           }
-          wc.a(wb.field_m, SpriteGeometry.field_q, re.field_T, (byte) 111, of.field_a);
+          wc.a(wb.field_m, SpriteGeometry.field_q, ContentTransitionDialog.field_T, (byte) 111, of.field_a);
           SpriteGeometry.field_q.backpatchShortLength(-var5_int + SpriteGeometry.field_q.position, (byte) 26);
           if (param3 != -82) {
             field_f = (String) null;
@@ -177,7 +177,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
 
     static {
         field_f = "This game has been updated! Please reload this page.";
-        field_c = new oc();
+        field_c = new FullscreenNoticeType();
         field_d = "Create a free Account";
     }
 }

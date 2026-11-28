@@ -9,7 +9,7 @@ final class ta {
         try {
           DefaultTextWidgetRenderer.field_k = true;
           ok.field_h = param1 ? true : false;
-          nb.field_b = new si(AlphaWidgetContainer.field_I, be.field_x, param0, qi.field_b, ok.field_h);
+          nb.field_b = new ProgressMessageDialog(AlphaWidgetContainer.field_I, be.field_x, param0, qi.field_b, ok.field_h);
           if (param2 != 10) {
             CharSequence var4 = (CharSequence) null;
             ta.a((CharSequence) null, 126);

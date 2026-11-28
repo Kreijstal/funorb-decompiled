@@ -45,7 +45,7 @@ final class mp {
         }
         int var3 = null != sj.field_d ? 1 : 0;
         if (DebouncedFieldValidator.field_f == 9) {
-          if (!RasterBuffer.a(1, DelegatingCanvas.field_a, uo.field_d, jo.field_b, fj.field_lb)) {
+          if (!RasterBuffer.a(1, DelegatingCanvas.field_a, uo.field_d, jo.field_b, ProgressMessageDialog.field_lb)) {
             if (DebouncedFieldValidator.field_f == 10) {
               if (var3 != 0) {
                 return false;
@@ -83,11 +83,11 @@ final class mp {
           }
           if (jo.field_b != 2) {
             if (var3 == 0) {
-              return qm.a(fj.field_lb, uo.field_d, (byte) 83, jo.field_b, DelegatingCanvas.field_a);
+              return GuestPlayConfirmationForm.a(ProgressMessageDialog.field_lb, uo.field_d, (byte) 83, jo.field_b, DelegatingCanvas.field_a);
             }
             return false;
           }
-          return qm.a(fj.field_lb, uo.field_d, (byte) 83, jo.field_b, DelegatingCanvas.field_a);
+          return GuestPlayConfirmationForm.a(ProgressMessageDialog.field_lb, uo.field_d, (byte) 83, jo.field_b, DelegatingCanvas.field_a);
         }
         if (DebouncedFieldValidator.field_f == 10) {
           if (var3 != 0) {

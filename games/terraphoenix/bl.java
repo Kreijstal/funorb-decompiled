@@ -116,7 +116,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 101, "yrsoldat");
                 if (var2 != null) {
-                  hm.field_H = ll.a(param0 - 96, var2);
+                  StripedProgressWidget.field_H = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 84, "stairs");
                 if (null != var2) {
@@ -132,7 +132,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 99, "coverterr");
                 if (var2 != null) {
-                  cg.field_I = ll.a(0, var2);
+                  GuestPlayConfirmationForm.field_I = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 77, "blockterr");
                 if (var2 != null) {
@@ -392,7 +392,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 103, "clicktothrow");
                 if (var2 != null) {
-                  hm.field_G = ll.a(0, var2);
+                  StripedProgressWidget.field_G = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 108, "clicktoreturntomove");
                 if (var2 != null) {
@@ -484,7 +484,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 117, "cost14");
                 if (var2 != null) {
-                  hi.field_Y = ll.a(0, var2);
+                  FullscreenStatusDialog.field_Y = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 120, "selgren");
                 if (var2 != null) {
@@ -684,19 +684,19 @@ final class bl {
                 }
                 var2 = il.a((byte) 82, "armourresearchdescriptions,0");
                 if (var2 != null) {
-                  jg.field_jb[0] = ll.a(0, var2);
+                  StandardContentDialog.field_jb[0] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 113, "armourresearchdescriptions,1");
                 if (null != var2) {
-                  jg.field_jb[1] = ll.a(0, var2);
+                  StandardContentDialog.field_jb[1] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 111, "armourresearchdescriptions,2");
                 if (var2 != null) {
-                  jg.field_jb[2] = ll.a(0, var2);
+                  StandardContentDialog.field_jb[2] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 71, "armourresearchdescriptions,3");
                 if (var2 != null) {
-                  jg.field_jb[3] = ll.a(param0 - 96, var2);
+                  StandardContentDialog.field_jb[3] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 88, "weaponnames,0");
                 if (var2 != null) {
@@ -1258,19 +1258,19 @@ final class bl {
                 }
                 var2 = il.a((byte) 83, "instructions5,0");
                 if (var2 != null) {
-                  oi.field_M[0] = ll.a(0, var2);
+                  DialogMessagePane.field_M[0] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 121, "instructions5,1");
                 if (var2 != null) {
-                  oi.field_M[1] = ll.a(sl.a((int) param0, 96), var2);
+                  DialogMessagePane.field_M[1] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 103, "instructions5,2");
                 if (var2 != null) {
-                  oi.field_M[2] = ll.a(0, var2);
+                  DialogMessagePane.field_M[2] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 123, "instructions5,3");
                 if (null != var2) {
-                  oi.field_M[3] = ll.a(0, var2);
+                  DialogMessagePane.field_M[3] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 95, "instructions6,0");
                 if (null != var2) {
@@ -1690,7 +1690,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 110, "yaysuccess");
                 if (var2 != null) {
-                  hm.field_J = ll.a(0, var2);
+                  StripedProgressWidget.field_J = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 88, "boofailed");
                 if (null != var2) {

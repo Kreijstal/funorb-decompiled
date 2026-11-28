@@ -242,7 +242,7 @@ final class ResourceArchive {
           return;
         }
         ik.field_d = new AccountRegistrationPanel();
-        ke.field_s.b(ik.field_d, (byte) 110);
+        ke.field_s.replaceContent(ik.field_d, (byte) 110);
     }
 
     final static void drawRotatedEntityEffect(int param0, byte param1, p param2, int param3) {
@@ -259,10 +259,10 @@ final class ResourceArchive {
         try {
           if (param2.field_e > 0) {
             if (param2.field_e <= 5) {
-              pe.field_fb[6].a(true, 128, (int)param2.field_c, 8 + param3, 8 + param0);
+              ProgressDialog.field_fb[6].a(true, 128, (int)param2.field_c, 8 + param3, 8 + param0);
             } else {
               if (param2.field_e <= 10) {
-                pe.field_fb[7].a(true, 128, (int)param2.field_c, 8 + param3, param0 + 8);
+                ProgressDialog.field_fb[7].a(true, 128, (int)param2.field_c, 8 + param3, param0 + 8);
               }
             }
           } else {
@@ -270,10 +270,10 @@ final class ResourceArchive {
               var7 = new RgbSprite(64, 64);
               var8 = var7;
               var7.bindAsRenderTarget();
-              pe.field_fb[12].a(true, 128, (int)param2.field_c, 32, 32);
+              ProgressDialog.field_fb[12].a(true, 128, (int)param2.field_c, 32, 32);
               o.field_n.setAsRasterTarget((byte) 119);
               var8.drawWithOpacity(-32 + param3, -32 + param0, 64);
-              pe.field_fb[8].a(true, 128, (int)param2.field_c, param3, param0);
+              ProgressDialog.field_fb[8].a(true, 128, (int)param2.field_c, param3, param0);
             }
           }
           if (param1 != 81) {
@@ -312,7 +312,7 @@ final class ResourceArchive {
               var3_int = 1;
               pc.field_a = false;
             }
-            ki.a(var3_int != 0, nb.j(96), cc.a(74), re.field_A, (byte) 44);
+            ki.a(var3_int != 0, GuestPlayConfirmationForm.j(96), cc.a(74), re.field_A, (byte) 44);
           } else {
             if (ArchiveProvider.a(27301)) {
               if (fa.field_c == 0) {

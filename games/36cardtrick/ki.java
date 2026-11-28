@@ -14,13 +14,13 @@ final class ki extends DefaultTextWidgetRenderer {
     final static void a(int param0, byte param1, int param2, int param3) {
         if (param1 < -86) {
           wg.field_a = param0;
-          af.field_jb = param3;
+          ProgressMessageDialog.field_jb = param3;
           ca.field_b = param2;
           return;
         }
         ki.a(118, (byte) 95, 42, -10);
         wg.field_a = param0;
-        af.field_jb = param3;
+        ProgressMessageDialog.field_jb = param3;
         ca.field_b = param2;
     }
 

@@ -73,7 +73,7 @@ final class bn {
     final static void c(int param0) {
         TunnelCamera.field_Z.closeAllDialogs((byte) 127);
         if (ui.field_c == null) {
-          ui.field_c = new jj(TunnelCamera.field_Z, cb.field_b);
+          ui.field_c = new ProgressDialog(TunnelCamera.field_Z, cb.field_b);
         }
         TunnelCamera.field_Z.showDialog(ui.field_c, param0);
     }

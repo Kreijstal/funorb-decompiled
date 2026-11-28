@@ -567,7 +567,7 @@ public final class fleas extends NetworkGameClient {
                 qi.field_c = kl.a(252, hm.field_g, "", "back_background");
                 nc.field_d = kl.a(252, hm.field_g, "", "ingame_back");
                 kl.a(252, hm.field_g, "", "ingame_banner");
-                jj.field_P = kl.a(252, hm.field_g, "", "ingame_title");
+                ResizableModalDialog.field_P = kl.a(252, hm.field_g, "", "ingame_title");
                 stackIn_40_0 = aj.field_t.length + 1;
               }
               var4 = new RgbSprite[stackIn_40_0];
@@ -578,11 +578,11 @@ public final class fleas extends NetworkGameClient {
                   aj.field_t = var4;
                   be.field_c = kl.a(252, hm.field_g, "", "level_select_arrow");
                   tk.field_m = kl.a(252, hm.field_g, "", "level_select_arrow_pressed");
-                  ad.field_b = fc.a(hm.field_g, "level_select_frame", "", (byte) 61);
+                  ad.field_b = FullscreenNoticeType.a(hm.field_g, "level_select_frame", "", (byte) 61);
                   pf.field_a = kl.a(252, hm.field_g, "", "level_select_preview_frame");
                   DualLinkNode.field_n = kl.a(252, hm.field_g, "", "level_select_slider_tab");
                   rd.field_e = kl.a(252, hm.field_g, "", "level_select_bracket");
-                  rb.field_G = kl.a(252, hm.field_g, "", "level_select_scroll_bg");
+                  GuestPlayConfirmationForm.field_G = kl.a(252, hm.field_g, "", "level_select_scroll_bg");
                   de.field_a = kl.a(252, hm.field_g, "", "main_title");
                   fg.field_j = kl.a(252, hm.field_g, "", "achievements_title");
                   aj.field_v = kl.a(252, hm.field_g, "", "instructions_title");
@@ -712,10 +712,10 @@ public final class fleas extends NetworkGameClient {
                   dupTemp$5.field_v = dupTemp$5.field_v - 200;
                   dupTemp$6 = je.field_O[1];
                   dupTemp$6.field_v = dupTemp$6.field_v - 200;
-                  pd.field_k = fc.a(hm.field_g, "frame", "", (byte) 61);
-                  DequeWidgetContainer.field_E = fc.a(hm.field_g, "frame_bright", "", (byte) 61);
-                  SpriteGeometry.field_z = fc.a(hm.field_g, "button_frame", "", (byte) 61);
-                  a.field_b = fc.a(hm.field_g, "button_raised", "", (byte) 61);
+                  pd.field_k = FullscreenNoticeType.a(hm.field_g, "frame", "", (byte) 61);
+                  DequeWidgetContainer.field_E = FullscreenNoticeType.a(hm.field_g, "frame_bright", "", (byte) 61);
+                  SpriteGeometry.field_z = FullscreenNoticeType.a(hm.field_g, "button_frame", "", (byte) 61);
+                  a.field_b = FullscreenNoticeType.a(hm.field_g, "button_raised", "", (byte) 61);
                   ud.b((byte) 47);
                   var11 = MatchingFieldValidator.field_p.field_N;
                   FullscreenFocusCanvas.field_a = new RgbSprite(var11, var11);
@@ -729,7 +729,7 @@ public final class fleas extends NetworkGameClient {
                 var11++;
               } while (var17 == 0);
               var12 = 10 * MatchingFieldValidator.field_p.field_N;
-              ResourceArchive.field_c = new ik(45, -(var12 / 2) + 250, 340, var12, MatchingFieldValidator.field_p, be.field_c, tk.field_m, DualLinkNode.field_n, rb.field_G);
+              ResourceArchive.field_c = new ik(45, -(var12 / 2) + 250, 340, var12, MatchingFieldValidator.field_p, be.field_c, tk.field_m, DualLinkNode.field_n, GuestPlayConfirmationForm.field_G);
               ResourceArchive.field_c.field_Q = -16777216;
               ResourceArchive.field_c.field_r = -1862275584;
               ResourceArchive.field_c.field_F = -2241536;
@@ -762,29 +762,29 @@ public final class fleas extends NetworkGameClient {
               } while (var17 == 0);
               do {
                 if (var15_int < 0) {
-                  lk.field_D = new vg(nj.field_d.toLowerCase(), 415, de.field_b.field_l, MatchingFieldValidator.field_p);
-                  lk.field_D.field_w = 16711680;
-                  lk.field_D.field_n = 220;
-                  lk.field_D.field_k = false;
-                  lk.field_D.field_A = 0;
-                  lk.field_D.field_C = -2;
-                  lk.field_D.field_x = -1;
-                  lk.field_D.field_E = 8388608;
-                  lk.field_D.field_B = 4194304;
-                  lk.field_D.field_d = 30;
-                  lk.field_D.field_D = 2;
-                  lk.field_D.field_F = 0;
-                  si.field_y = new vg(kf.field_l.toLowerCase(), lk.field_D.field_a, lk.field_D.field_l, MatchingFieldValidator.field_p);
-                  si.field_y.field_C = lk.field_D.field_C;
-                  si.field_y.field_B = lk.field_D.field_B;
-                  si.field_y.field_A = lk.field_D.field_A;
-                  si.field_y.field_D = lk.field_D.field_D;
+                  StripedProgressWidget.field_D = new vg(nj.field_d.toLowerCase(), 415, de.field_b.field_l, MatchingFieldValidator.field_p);
+                  StripedProgressWidget.field_D.field_w = 16711680;
+                  StripedProgressWidget.field_D.field_n = 220;
+                  StripedProgressWidget.field_D.field_k = false;
+                  StripedProgressWidget.field_D.field_A = 0;
+                  StripedProgressWidget.field_D.field_C = -2;
+                  StripedProgressWidget.field_D.field_x = -1;
+                  StripedProgressWidget.field_D.field_E = 8388608;
+                  StripedProgressWidget.field_D.field_B = 4194304;
+                  StripedProgressWidget.field_D.field_d = 30;
+                  StripedProgressWidget.field_D.field_D = 2;
+                  StripedProgressWidget.field_D.field_F = 0;
+                  si.field_y = new vg(kf.field_l.toLowerCase(), StripedProgressWidget.field_D.field_a, StripedProgressWidget.field_D.field_l, MatchingFieldValidator.field_p);
+                  si.field_y.field_C = StripedProgressWidget.field_D.field_C;
+                  si.field_y.field_B = StripedProgressWidget.field_D.field_B;
+                  si.field_y.field_A = StripedProgressWidget.field_D.field_A;
+                  si.field_y.field_D = StripedProgressWidget.field_D.field_D;
                   si.field_y.field_d = 30;
-                  si.field_y.field_E = lk.field_D.field_E;
-                  si.field_y.field_F = lk.field_D.field_F;
+                  si.field_y.field_E = StripedProgressWidget.field_D.field_E;
+                  si.field_y.field_F = StripedProgressWidget.field_D.field_F;
                   si.field_y.field_k = true;
-                  si.field_y.field_w = lk.field_D.field_w;
-                  si.field_y.field_x = lk.field_D.field_x;
+                  si.field_y.field_w = StripedProgressWidget.field_D.field_w;
+                  si.field_y.field_x = StripedProgressWidget.field_D.field_x;
                   si.field_y.field_n = 220;
                   ModalDialogHost.field_G = new el(100, 100, 150, q.field_c, sd.field_e, lj.field_f, (RgbSprite) null, tb.field_f);
                   cb.field_w = new el(100, 100, 150, q.field_c, sd.field_e, lj.field_f, (RgbSprite) null, tb.field_f);
@@ -848,7 +848,7 @@ public final class fleas extends NetworkGameClient {
             return;
           }
           if (!BufferedSocket.d(-89)) {
-            jj.a(100.0f, IterableNodeHashTable.field_h, true);
+            ResizableModalDialog.a(100.0f, IterableNodeHashTable.field_h, true);
             bg.a((byte) -104, (java.awt.Canvas) (var2));
             return;
           }
@@ -862,7 +862,7 @@ public final class fleas extends NetworkGameClient {
               if (3 != ab.field_b) {
               }
               if (-1 == ValidatedTextField.field_V) {
-                fc.c(126);
+                FullscreenNoticeType.c(126);
                 if (var4 != 0) {
                   TextLineMetrics.field_b[ValidatedTextField.field_V].f(2);
                 }
@@ -879,7 +879,7 @@ public final class fleas extends NetworkGameClient {
             }
             if (decompiledFrameRemainder0) {
               if (ab.field_b == -1) {
-                fc.c(-21);
+                FullscreenNoticeType.c(-21);
                 if (var4 != 0) {
                   TextLineMetrics.field_b[ab.field_b].f(2);
                 }
@@ -894,7 +894,7 @@ public final class fleas extends NetworkGameClient {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 1, var3Lifetime2);
               if (var4 != 0) {
                 if (-1 == ab.field_b) {
-                  fc.c(126);
+                  FullscreenNoticeType.c(126);
                   TextLineMetrics.field_b[ab.field_b].f(2);
                 } else {
                   TextLineMetrics.field_b[ab.field_b].f(2);
@@ -903,7 +903,7 @@ public final class fleas extends NetworkGameClient {
             }
           } else {
             if (-1 == ab.field_b) {
-              fc.c(126);
+              FullscreenNoticeType.c(126);
               if (var4 != 0) {
                 TextLineMetrics.field_b[ab.field_b].f(2);
               }
@@ -1023,10 +1023,10 @@ public final class fleas extends NetworkGameClient {
           nl.clearStaticReferences((byte) -33);
           ModalDialogHost.releaseDeclaredStaticReferences(-7409);
           AccountCreationResultPanel.releaseDeclaredStaticReferences((byte) 124);
-          ui.e(false);
-          bd.clearDeclaredStaticReferences((byte) 127);
+          StandardContentDialog.e(false);
+          ProgressMessageDialog.clearDeclaredStaticReferences((byte) 127);
           AccountRegistrationPanel.j(100);
-          rb.a(param0 ^ 107);
+          GuestPlayConfirmationForm.a(param0 ^ 107);
           LoginPanel.releaseDeclaredStaticReferences(16777215);
           DisplayNameSelectionPanel.clearDeclaredStaticReferences((byte) -50);
           ad.clearStaticReferences((byte) 42);
@@ -1047,7 +1047,7 @@ public final class fleas extends NetworkGameClient {
           PcmResampler.clearStaticReferences((byte) 127);
           gd.clearStaticReferences(-1);
           PcmOutputWorker.clearStaticReferences(124);
-          hk.clearStaticReferences();
+          VorbisSample.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
           ub.clearStaticReferences(17077);
           uk.clearStaticReferences(-9435);
@@ -1070,7 +1070,7 @@ public final class fleas extends NetworkGameClient {
           u.resetStaticState(-2355);
           ArchiveRequest.releaseDeclaredStaticReferences(2);
           ek.clearStaticReferences((byte) -42);
-          ic.discardDeclaredStaticReferences(-101);
+          FullscreenStatusDialog.discardDeclaredStaticReferences(-101);
           mc.clearStaticReferences((byte) 87);
           DefaultTextWidgetRenderer.clearStaticReferences((byte) -92);
           bl.clearStaticReferences();
@@ -1101,7 +1101,7 @@ public final class fleas extends NetworkGameClient {
           UiComponent.clearDeclaredStaticReferences(0);
           InteractiveWidget.releaseDeclaredStaticReferences(-1);
           SingleChildWidgetContainer.clearStaticReferences((byte) 2);
-          jj.clearStaticReferences(true);
+          ResizableModalDialog.clearStaticReferences(true);
           ModalDialog.releaseDeclaredStaticReferences(0);
           DequeWidgetContainer.clearStaticReferences((byte) -112);
           ab.clearStaticReferences(param0 + 1);
@@ -1121,8 +1121,8 @@ public final class fleas extends NetworkGameClient {
           wa.clearStaticReferences(param0 ^ 1730);
           kb.clearStaticReferences(false);
           LabeledWidgetContainer.resetStaticState(1);
-          oh.f((byte) -110);
-          lk.clearStaticReferences(true);
+          ContentTransitionDialog.f((byte) -110);
+          StripedProgressWidget.clearStaticReferences(true);
           NameSuggestionsPanel.clearDeclaredStaticReferences((byte) -20);
           RichTextWidget.discardDeclaredStaticReferences(-91);
           je.i(93);
@@ -1171,14 +1171,14 @@ public final class fleas extends NetworkGameClient {
           ve.clearStaticReferences((byte) 84);
           ed.clearStaticReferences(20760);
           ha.clearStaticReferences(false);
-          bm.clearStaticReferences(false);
+          DialogMessagePane.clearStaticReferences(false);
           nj.clearStaticReferences((byte) -105);
           ji.clearStaticReferences(-122);
           wh.clearStaticReferences(param0 ^ 250);
           ef.clearStaticReferences((byte) -117);
           rg.b(true);
           rj.clearStaticReferences((byte) 75);
-          fc.a(-100);
+          FullscreenNoticeType.a(-100);
           uh.a(8);
           kf.clearDeclaredStaticReferences(param0 ^ 116);
           oa.clearStaticReferences((byte) -88);
@@ -1287,7 +1287,7 @@ public final class fleas extends NetworkGameClient {
                             if (pf.field_b.ensureIndexLoaded((byte) -106) &&
                               pf.field_b.tryLoadGroupByName("roman12", -106) &&
                               pf.field_b.tryLoadGroupByName("roman20", -118)) {
-                              jj.a(55.0f, ri.field_s, true);
+                              ResizableModalDialog.a(55.0f, ri.field_s, true);
                               if (!param0) {
                                 return false;
                               }
@@ -1301,35 +1301,35 @@ public final class fleas extends NetworkGameClient {
                               fleas.h((byte) -110);
                               return false;
                             }
-                            jj.a(31.0f, sa.a(pf.field_b, "roman12", de.field_j, rg.field_q, (byte) 46), true);
+                            ResizableModalDialog.a(31.0f, sa.a(pf.field_b, "roman12", de.field_j, rg.field_q, (byte) 46), true);
                             return false;
                           }
-                          jj.a(30.0f, sa.a(de.field_h, "", de.field_j, rg.field_q, (byte) 46), true);
+                          ResizableModalDialog.a(30.0f, sa.a(de.field_h, "", de.field_j, rg.field_q, (byte) 46), true);
                           return false;
                         }
-                        jj.a(25.0f, sa.a(hm.field_g, "", bf.field_f, IterableNodeHashTable.field_e, (byte) 46), true);
+                        ResizableModalDialog.a(25.0f, sa.a(hm.field_g, "", bf.field_f, IterableNodeHashTable.field_e, (byte) 46), true);
                         return false;
                       }
-                      jj.a(20.0f, sa.a(jc.field_e, "", tj.field_b, TextHotspotBounds.field_p, (byte) 46), true);
+                      ResizableModalDialog.a(20.0f, sa.a(jc.field_e, "", tj.field_b, TextHotspotBounds.field_p, (byte) 46), true);
                       return false;
                     }
-                    jj.a(18.0f, re.a((byte) 127, 0, ob.field_d, kk.field_c, cf.field_b), true);
+                    ResizableModalDialog.a(18.0f, re.a((byte) 127, 0, ob.field_d, kk.field_c, cf.field_b), true);
                     return false;
                   }
-                  jj.a(15.0f, sa.a(DualLinkNode.field_l, "", Bzip2State.field_G, sc.field_c, (byte) 46), true);
+                  ResizableModalDialog.a(15.0f, sa.a(DualLinkNode.field_l, "", Bzip2State.field_G, sc.field_c, (byte) 46), true);
                   return false;
                 }
-                jj.a(10.0f, sa.a(ib.field_f, "", NetworkArchiveRequest.field_x, AccountNameAvailabilityValidator.field_n, (byte) 46), true);
+                ResizableModalDialog.a(10.0f, sa.a(ib.field_f, "", NetworkArchiveRequest.field_x, AccountNameAvailabilityValidator.field_n, (byte) 46), true);
                 return false;
               }
-              jj.a(5.0f, sa.a(pb.field_a, "", NetworkArchiveRequest.field_x, AccountNameAvailabilityValidator.field_n, (byte) 46), true);
+              ResizableModalDialog.a(5.0f, sa.a(pb.field_a, "", NetworkArchiveRequest.field_x, AccountNameAvailabilityValidator.field_n, (byte) 46), true);
               return false;
             }
-            jj.a(3.0f, sa.a(a.field_a, "basic", bf.field_f, IterableNodeHashTable.field_e, (byte) 46), true);
+            ResizableModalDialog.a(3.0f, sa.a(a.field_a, "basic", bf.field_f, IterableNodeHashTable.field_e, (byte) 46), true);
             return false;
           }
           if (null != ib.field_f) {
-            jj.a(60.0f, ri.field_s, true);
+            ResizableModalDialog.a(60.0f, ri.field_s, true);
             this.renderClientFrame(true);
             wi.b(-14277);
             ib.field_f = null;
@@ -1337,7 +1337,7 @@ public final class fleas extends NetworkGameClient {
             return false;
           }
           if (jc.field_e != null) {
-            jj.a(65.0f, cb.field_q, true);
+            ResizableModalDialog.a(65.0f, cb.field_q, true);
             this.renderClientFrame(true);
             BufferedSocket.field_j = wk.a(jc.field_e, "", "Flea Circus Titlescreen");
             DebouncedFieldValidator.field_h.a(field_K, ob.field_d, 11498, 0, BufferedSocket.field_j);
@@ -1359,20 +1359,20 @@ public final class fleas extends NetworkGameClient {
             return false;
           }
           if (null != a.field_a) {
-            jj.a(70.0f, ModalDialogHost.field_H, true);
+            ResizableModalDialog.a(70.0f, ModalDialogHost.field_H, true);
             this.renderClientFrame(true);
             cb.field_u = kl.a(252, a.field_a, "basic", "unachieved");
             BufferedSocket.field_m = kl.a(252, a.field_a, "basic", "orbcoin");
             ProxyAuthenticationRequiredException.a(BufferedSocket.field_m, (byte) -85);
             mf.field_g = kl.a(252, a.field_a, "basic", "locked");
             ve.field_d = (BitmapFont) ((Object) ub.a("roman12", a.field_a, "", pf.field_b, 32));
-            lk.field_Q = (BitmapFont) ((Object) ub.a("roman20", a.field_a, "", pf.field_b, 32));
+            StripedProgressWidget.field_Q = (BitmapFont) ((Object) ub.a("roman20", a.field_a, "", pf.field_b, 32));
             a.field_a = null;
             fleas.h((byte) 33);
             return false;
           }
           if (hm.field_g != null) {
-            jj.a(72.0f, ModalDialogHost.field_H, true);
+            ResizableModalDialog.a(72.0f, ModalDialogHost.field_H, true);
             this.renderClientFrame(true);
             this.g((byte) -111);
             de.field_h = null;
@@ -1401,17 +1401,17 @@ public final class fleas extends NetworkGameClient {
             }
             var8 = this.field_C.field_w - 20;
             var9 = this.field_C.field_t - 20;
-            rb.a(var5, var6, var9, this.field_C, var8, var3_int, (byte) 125, var4, var7);
+            GuestPlayConfirmationForm.a(var5, var6, var9, this.field_C, var8, var3_int, (byte) 125, var4, var7);
             ue.a((byte) -122, this.field_N);
             mc.a(this.field_D, ih.field_m, 0);
-            DualLinkNode.a(false, jj.field_P);
+            DualLinkNode.a(false, ResizableModalDialog.field_P);
             el.a((java.applet.Applet) (this), 150, (byte) 44, 15488514, jd.field_g, 1052688);
             we.a(50, 106);
             qb.a(50, 114);
             fleas.h((byte) -71);
             return true;
           }
-          jj.a(98.0f, vi.field_c, true);
+          ResizableModalDialog.a(98.0f, vi.field_c, true);
           this.renderClientFrame(true);
           var5 = pl.field_l[0];
           array$0 = new kh[var5];
@@ -1620,7 +1620,7 @@ public final class fleas extends NetworkGameClient {
             if (decompiledFrameRemainder0) {
               if (hi.a((byte) -72)) {
                 if (vk.field_L == 0) {
-                  var2_int = lk.k(param0 ^ 31053);
+                  var2_int = StripedProgressWidget.k(param0 ^ 31053);
                   switch (var2_int) {
                     case 3:
                       EditableTextField.a(320, (byte) 110, MatchingFieldValidator.field_p.field_K + MatchingFieldValidator.field_p.field_y, a.field_b, 8, 2, MatchingFieldValidator.field_p, SpriteGeometry.field_z, 240, MatchingFieldValidator.field_p.field_y, true, 8);
@@ -1704,7 +1704,7 @@ public final class fleas extends NetworkGameClient {
             }
             this.g(-12);
           } while (var3 == 0);
-          if (lk.i(param0 ^ 21424)) {
+          if (StripedProgressWidget.i(param0 ^ 21424)) {
             var2_int = this.e(false);
             if (var2_int == 2) {
               id.a(false);
@@ -1850,7 +1850,7 @@ public final class fleas extends NetworkGameClient {
 
     private final void a(byte param0, int param1, int param2) {
         try {
-          bm.e((byte) 31);
+          DialogMessagePane.e((byte) 31);
           if (param0 > -47) {
             fleas.h((byte) -92);
           }
@@ -1893,7 +1893,7 @@ public final class fleas extends NetworkGameClient {
         PcmResampler var2 = null;
         try {
           var2 = new PcmResampler(22050, AudioOutput.field_a);
-          ic.field_ab = qf.a(pb.field_a, "", "FLEA_drops").b().resample(var2);
+          FullscreenStatusDialog.field_ab = qf.a(pb.field_a, "", "FLEA_drops").b().resample(var2);
           fi.field_n = qf.a(pb.field_a, "", "FLEA_flea_die").b().resample(var2);
           nb.field_f = qf.a(pb.field_a, "", "FLEA_escape").b().resample(var2);
           BoundedRandomAccessFile.field_g = qf.a(pb.field_a, "", "FLEA_placeblock").b().resample(var2);
@@ -2226,24 +2226,24 @@ public final class fleas extends NetworkGameClient {
             GzipDecompressor.field_d = GzipDecompressor.field_d + 1;
           }
           this.field_M = 1.0 + ma.a((double)PacketBuffer.field_j / 10.0, 109);
-          if (!lk.field_D.field_k) {
+          if (!StripedProgressWidget.field_D.field_k) {
             if (!(GzipDecompressor.field_d < 0)) {
               si.field_y.field_a = (int)(415.0 - 2.0 * this.field_M);
               si.field_y.field_n = (int)(4.0 * this.field_M + 220.0);
               si.field_y.field_l = (int)(395.0 - this.field_M * 2.0);
               si.field_y.field_d = (int)(4.0 * this.field_M + 30.0);
               if (var24 != 0) {
-                lk.field_D.field_d = (int)(30.0 + this.field_M * 4.0);
-                lk.field_D.field_a = (int)(-(2.0 * this.field_M) + 415.0);
-                lk.field_D.field_l = (int)(-(this.field_M * 2.0) + 395.0);
-                lk.field_D.field_n = (int)(4.0 * this.field_M + 220.0);
+                StripedProgressWidget.field_D.field_d = (int)(30.0 + this.field_M * 4.0);
+                StripedProgressWidget.field_D.field_a = (int)(-(2.0 * this.field_M) + 415.0);
+                StripedProgressWidget.field_D.field_l = (int)(-(this.field_M * 2.0) + 395.0);
+                StripedProgressWidget.field_D.field_n = (int)(4.0 * this.field_M + 220.0);
               }
             }
           } else {
-            lk.field_D.field_d = (int)(30.0 + this.field_M * 4.0);
-            lk.field_D.field_a = (int)(-(2.0 * this.field_M) + 415.0);
-            lk.field_D.field_l = (int)(-(this.field_M * 2.0) + 395.0);
-            lk.field_D.field_n = (int)(4.0 * this.field_M + 220.0);
+            StripedProgressWidget.field_D.field_d = (int)(30.0 + this.field_M * 4.0);
+            StripedProgressWidget.field_D.field_a = (int)(-(2.0 * this.field_M) + 415.0);
+            StripedProgressWidget.field_D.field_l = (int)(-(this.field_M * 2.0) + 395.0);
+            StripedProgressWidget.field_D.field_n = (int)(4.0 * this.field_M + 220.0);
           }
           var2_int = tj.field_a;
           if (nl.field_c[field_E].length <= tj.field_a) {
@@ -2348,9 +2348,9 @@ public final class fleas extends NetworkGameClient {
             0 > GzipDecompressor.field_d) {
             GzipDecompressor.field_d = 0;
           }
-          lk.field_D.field_k = var17 != 0;
+          StripedProgressWidget.field_D.field_k = var17 != 0;
           stackIn_113_0 = si.field_y;
-          stackIn_114_1 = !(lk.field_D.field_k);
+          stackIn_114_1 = !(StripedProgressWidget.field_D.field_k);
           stackIn_113_0.field_k = stackIn_114_1;
           if (var17 != 0) {
             if (5 == tj.field_a) {
@@ -2460,9 +2460,9 @@ public final class fleas extends NetworkGameClient {
             !oa.field_n) {
             this.b(-94, kc.field_b, ag.field_f);
           }
-          lk.field_D.b(true);
+          StripedProgressWidget.field_D.b(true);
           si.field_y.b(true);
-          if (lk.field_D.field_g) {
+          if (StripedProgressWidget.field_D.field_g) {
             oa.a(10, true, 91);
             ik.a(FrameTimer.field_b[0], (byte) -84);
           }
@@ -2550,7 +2550,7 @@ public final class fleas extends NetworkGameClient {
             if (!(1 <= qg.field_c)) {
               nb.field_b = nb.field_b + 1;
               qg.field_c = 6;
-              fh.$cfr$intArgs$a$cb0bc10e6b69(105, ic.field_ab, 100, 63);
+              fh.$cfr$intArgs$a$cb0bc10e6b69(105, FullscreenStatusDialog.field_ab, 100, 63);
               if (var24 != 0) {
                 qg.field_c = -1;
               }

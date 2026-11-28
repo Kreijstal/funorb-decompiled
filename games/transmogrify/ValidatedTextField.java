@@ -55,7 +55,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         if (AlphaWidgetContainer.field_y < 10) {
           return false;
         }
-        if (!ge.field_x) {
+        if (!RegistrationAgreementPane.field_x) {
           return !i.b(true) ? true : false;
         }
         return false;
@@ -69,11 +69,11 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           return null;
         }
         if (param0 == 4) {
-          sh.a((byte) 123, this.field_l + (-this.field_P + PacketBuffer.field_j), bk.field_a);
+          FullscreenNoticeType.a((byte) 123, this.field_l + (-this.field_P + PacketBuffer.field_j), bk.field_a);
           return this.field_j;
         }
         this.field_Q = (FieldValidator) null;
-        sh.a((byte) 123, this.field_l + (-this.field_P + PacketBuffer.field_j), bk.field_a);
+        FullscreenNoticeType.a((byte) 123, this.field_l + (-this.field_P + PacketBuffer.field_j), bk.field_a);
         return this.field_j;
     }
 

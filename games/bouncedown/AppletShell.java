@@ -53,18 +53,18 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         Object var6 = null;
         try {
           var2_long = fa.correctedCurrentTimeMillis(87);
-          var4 = GzipDecompressor.field_a[sh.field_hb];
-          GzipDecompressor.field_a[sh.field_hb] = var2_long;
+          var4 = GzipDecompressor.field_a[ProgressMessageDialog.field_hb];
+          GzipDecompressor.field_a[ProgressMessageDialog.field_hb] = var2_long;
           if (0L != var4 &&
             var2_long <= var4) {
           }
-          sh.field_hb = 31 & sh.field_hb + 1;
+          ProgressMessageDialog.field_hb = 31 & ProgressMessageDialog.field_hb + 1;
           if (param0 >= -33) {
             this.disposeClient((byte) 102);
           }
           var6 = this;
           synchronized (var6) {
-            ResourceArchive.field_f = k.field_H;
+            ResourceArchive.field_f = GuestPlayConfirmationForm.field_H;
           }
           this.updateClient((byte) 37);
           return;
@@ -298,7 +298,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           ch.field_h.addFocusListener((java.awt.event.FocusListener) (this));
           ch.field_h.requestFocus();
           ResourceArchive.field_f = true;
-          k.field_H = true;
+          GuestPlayConfirmationForm.field_H = true;
           ae.field_b = true;
           AwtRasterBuffer.field_f = false;
           jc.field_k = fa.correctedCurrentTimeMillis(-73);
@@ -416,7 +416,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          k.field_H = false;
+          GuestPlayConfirmationForm.field_H = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -488,7 +488,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         try {
           va.field_f = param0;
           ng.field_b = true;
-          nk.field_a = new sh(DisplayNameSelectionPanel.field_N, ne.field_v, param1, fe.field_g, va.field_f);
+          nk.field_a = new ProgressMessageDialog(DisplayNameSelectionPanel.field_N, ne.field_v, param1, fe.field_g, va.field_f);
           if (param2 != -1) {
             return;
           }
@@ -874,7 +874,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          k.field_H = true;
+          GuestPlayConfirmationForm.field_H = true;
           ae.field_b = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

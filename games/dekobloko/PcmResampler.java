@@ -170,7 +170,7 @@ final class PcmResampler {
             return stackStringLocal4;
           }
           if (integerArgument2 == 5) {
-            stackStringLocal5 = NodeHashTableIterator.substituteIndexedPlaceholders(96, MixedSupport080.stringState0337, new String[]{stringArgument1});
+            stackStringLocal5 = NodeHashTableIterator.substituteIndexedPlaceholders(96, FullscreenNoticeType.stringState0337, new String[]{stringArgument1});
             return stackStringLocal5;
           }
           if (integerArgument2 == 6) {
@@ -190,7 +190,7 @@ final class PcmResampler {
             return stackStringLocal9;
           }
           if (integerArgument2 == 12) {
-            stackStringLocal10 = NodeHashTableIterator.substituteIndexedPlaceholders(100, UiComponentPart018.stringState0343, new String[]{stringArgument1});
+            stackStringLocal10 = NodeHashTableIterator.substituteIndexedPlaceholders(100, RegistrationAgreementPane.stringState0343, new String[]{stringArgument1});
             return stackStringLocal10;
           }
           if (13 != integerArgument2) {

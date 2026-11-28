@@ -15,7 +15,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
     static boolean field_P;
     static AccountRequestState field_Q;
 
-    abstract void b(int param0, byte param1, int param2);
+    abstract void drawDialogBackground(int param0, byte param1, int param2);
 
     boolean snapDialogAnimation(int param0) {
         this.field_V = this.getTargetAlpha(false);
@@ -66,15 +66,15 @@ abstract class ModalDialog extends DequeWidgetContainer {
 
     final void setCenteredSize(int param0, int param1, int param2) {
         if (param0 <= -30) {
-          this.setBounds(-127, param2, qk.field_c - param1 >> 1, param1, tg.field_L - param2 >> 1);
+          this.setBounds(-127, param2, qk.field_c - param1 >> 1, param1, GuestPlayConfirmationForm.field_L - param2 >> 1);
           return;
         }
         field_P = false;
-        this.setBounds(-127, param2, qk.field_c - param1 >> 1, param1, tg.field_L - param2 >> 1);
+        this.setBounds(-127, param2, qk.field_c - param1 >> 1, param1, GuestPlayConfirmationForm.field_L - param2 >> 1);
     }
 
     ModalDialog(ModalDialogHost param0, int param1, int param2) {
-        super(tg.field_L - param1 >> 1, qk.field_c - param2 >> 1, param1, param2, (WidgetRenderer) null);
+        super(GuestPlayConfirmationForm.field_L - param1 >> 1, qk.field_c - param2 >> 1, param1, param2, (WidgetRenderer) null);
         try {
           this.field_V = 0;
           this.field_H = false;
@@ -142,7 +142,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           if (0 != param1) {
             return;
           }
-          this.b(this.field_q + param3, (byte) -126, this.field_m + param0);
+          this.drawDialogBackground(this.field_q + param3, (byte) -126, this.field_m + param0);
           super.drawWidget(param0, param1, (byte) 102, param3);
           return;
         }
@@ -152,9 +152,9 @@ abstract class ModalDialog extends DequeWidgetContainer {
             DequeWidgetContainer.field_K = new RgbSprite(this.field_F, this.field_z);
             vm.a(DequeWidgetContainer.field_K, -8409);
             SoftwareRasterizer.clearRaster();
-            this.b(0, (byte) -90, 0);
+            this.drawDialogBackground(0, (byte) -90, 0);
             super.drawWidget(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
-            ib.b(false);
+            StripedProgressWidget.b(false);
             DequeWidgetContainer.field_K.drawWithOpacity(param3 + this.field_q, this.field_m + param0, this.field_V);
             return;
           }
@@ -162,27 +162,27 @@ abstract class ModalDialog extends DequeWidgetContainer {
             DequeWidgetContainer.field_K = new RgbSprite(this.field_F, this.field_z);
             vm.a(DequeWidgetContainer.field_K, -8409);
             SoftwareRasterizer.clearRaster();
-            this.b(0, (byte) -90, 0);
+            this.drawDialogBackground(0, (byte) -90, 0);
             super.drawWidget(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
-            ib.b(false);
+            StripedProgressWidget.b(false);
             DequeWidgetContainer.field_K.drawWithOpacity(param3 + this.field_q, this.field_m + param0, this.field_V);
             return;
           }
           if (DequeWidgetContainer.field_K.field_w >= this.field_z) {
             vm.a(DequeWidgetContainer.field_K, -8409);
             SoftwareRasterizer.clearRaster();
-            this.b(0, (byte) -90, 0);
+            this.drawDialogBackground(0, (byte) -90, 0);
             super.drawWidget(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
-            ib.b(false);
+            StripedProgressWidget.b(false);
             DequeWidgetContainer.field_K.drawWithOpacity(param3 + this.field_q, this.field_m + param0, this.field_V);
             return;
           }
           DequeWidgetContainer.field_K = new RgbSprite(this.field_F, this.field_z);
           vm.a(DequeWidgetContainer.field_K, -8409);
           SoftwareRasterizer.clearRaster();
-          this.b(0, (byte) -90, 0);
+          this.drawDialogBackground(0, (byte) -90, 0);
           super.drawWidget(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
-          ib.b(false);
+          StripedProgressWidget.b(false);
           DequeWidgetContainer.field_K.drawWithOpacity(param3 + this.field_q, this.field_m + param0, this.field_V);
           return;
         }
@@ -190,9 +190,9 @@ abstract class ModalDialog extends DequeWidgetContainer {
           DequeWidgetContainer.field_K = new RgbSprite(this.field_F, this.field_z);
           vm.a(DequeWidgetContainer.field_K, -8409);
           SoftwareRasterizer.clearRaster();
-          this.b(0, (byte) -90, 0);
+          this.drawDialogBackground(0, (byte) -90, 0);
           super.drawWidget(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
-          ib.b(false);
+          StripedProgressWidget.b(false);
           DequeWidgetContainer.field_K.drawWithOpacity(param3 + this.field_q, this.field_m + param0, this.field_V);
           return;
         }
@@ -200,27 +200,27 @@ abstract class ModalDialog extends DequeWidgetContainer {
           DequeWidgetContainer.field_K = new RgbSprite(this.field_F, this.field_z);
           vm.a(DequeWidgetContainer.field_K, -8409);
           SoftwareRasterizer.clearRaster();
-          this.b(0, (byte) -90, 0);
+          this.drawDialogBackground(0, (byte) -90, 0);
           super.drawWidget(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
-          ib.b(false);
+          StripedProgressWidget.b(false);
           DequeWidgetContainer.field_K.drawWithOpacity(param3 + this.field_q, this.field_m + param0, this.field_V);
           return;
         }
         if (DequeWidgetContainer.field_K.field_w >= this.field_z) {
           vm.a(DequeWidgetContainer.field_K, -8409);
           SoftwareRasterizer.clearRaster();
-          this.b(0, (byte) -90, 0);
+          this.drawDialogBackground(0, (byte) -90, 0);
           super.drawWidget(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
-          ib.b(false);
+          StripedProgressWidget.b(false);
           DequeWidgetContainer.field_K.drawWithOpacity(param3 + this.field_q, this.field_m + param0, this.field_V);
           return;
         }
         DequeWidgetContainer.field_K = new RgbSprite(this.field_F, this.field_z);
         vm.a(DequeWidgetContainer.field_K, -8409);
         SoftwareRasterizer.clearRaster();
-        this.b(0, (byte) -90, 0);
+        this.drawDialogBackground(0, (byte) -90, 0);
         super.drawWidget(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
-        ib.b(false);
+        StripedProgressWidget.b(false);
         DequeWidgetContainer.field_K.drawWithOpacity(param3 + this.field_q, this.field_m + param0, this.field_V);
     }
 

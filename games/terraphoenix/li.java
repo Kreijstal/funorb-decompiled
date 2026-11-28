@@ -126,7 +126,7 @@ final class li {
             var9 = (CharSequence) null;
             li.a(true, (CharSequence) null, 20);
           }
-          var4 = hm.a((byte) 6, param1);
+          var4 = StripedProgressWidget.a((byte) 6, param1);
           if (var4 != null &&
             var4.length() >= 1) {
             if (!TutorialController.a((byte) 120, var4.charAt(0)) &&

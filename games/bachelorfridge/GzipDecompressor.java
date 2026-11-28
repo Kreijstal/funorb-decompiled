@@ -232,7 +232,7 @@ final class GzipDecompressor {
               break regionExit1;
             }
             if (null == SnowAnimation.field_w) {
-              if (!am.field_O) {
+              if (!ResizableModalDialog.field_O) {
                 if (SnowAnimation.field_w == null) {
                   var30 = var7Lifetime1Lifetime6 + var17 + ": ";
                   var7Lifetime1Lifetime6 = var30;

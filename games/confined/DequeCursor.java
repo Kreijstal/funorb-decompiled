@@ -32,7 +32,7 @@ final class DequeCursor {
               stackIn_9_0 = var3;
               return stackIn_9_0;
             }
-            stackIn_7_0 = ug.copyBytes(var3, 194);
+            stackIn_7_0 = ResizableModalDialog.copyBytes(var3, 194);
             return stackIn_7_0;
           }
           if (param2 instanceof ByteStorage) {

@@ -128,14 +128,14 @@ final class BlastDebrisModel extends LevelRenderable {
     }
 
     final static void preloadLogoVorbisAudio(Archive param0, int param1) {
-        vh var2 = null;
-        vh.a(param0.getFileByName("headers.packvorbis", "", 0));
+        VorbisSample var2 = null;
+        VorbisSample.decodeSetup(param0.getFileByName("headers.packvorbis", "", 0));
         if (param1 <= 2) {
           return;
         }
         try {
-          var2 = vh.a(param0, "jagex logo2.packvorbis", "");
-          var2.b();
+          var2 = VorbisSample.loadByName(param0, "jagex logo2.packvorbis", "");
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "hi.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

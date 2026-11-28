@@ -384,7 +384,7 @@ final class og extends n {
           if (!param0) {
             var12.a((byte) -116, new bd(2, mk.field_k, pn.field_a));
             var12.a((byte) -53, new bd(3, ea.field_e, pn.field_a));
-            var12.a((byte) -80, new bd(4, ef.field_ub, pn.field_a));
+            var12.a((byte) -80, new bd(4, StandardContentDialog.field_ub, pn.field_a));
           } else {
             if (!of.field_a &&
               null == qn.field_v.field_K) {
@@ -440,7 +440,7 @@ final class og extends n {
           if (!param0) {
             var12.a((byte) -116, new bd(2, mk.field_k, pn.field_a));
             var12.a((byte) -53, new bd(3, ea.field_e, pn.field_a));
-            var12.a((byte) -80, new bd(4, ef.field_ub, pn.field_a));
+            var12.a((byte) -80, new bd(4, StandardContentDialog.field_ub, pn.field_a));
             var31 = new bd(7, AwtRasterBuffer.field_h, pn.field_a);
             var32 = new bd(8, mg.field_d, pn.field_a);
             var33 = new bd(9, TunnelEntity.field_u, pn.field_a);
@@ -668,7 +668,7 @@ final class og extends n {
           MovingTunnelEntity.a(param1, (byte) 70);
           pb.b(126);
           im.b((byte) -85);
-          tg.field_H = 0 - mg.field_g;
+          GuestPlayConfirmationForm.field_H = 0 - mg.field_g;
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "og.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

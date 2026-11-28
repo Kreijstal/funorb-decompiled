@@ -106,7 +106,7 @@ final class ld {
           if (10 > k.field_g) {
             return false;
           }
-          if (!ha.field_db) {
+          if (!ProgressMessageDialog.field_db) {
             return !cb.a(false) ? true : false;
           }
           return false;
@@ -114,7 +114,7 @@ final class ld {
         if (10 > k.field_g) {
           return false;
         }
-        if (!ha.field_db) {
+        if (!ProgressMessageDialog.field_db) {
           return !cb.a(false) ? true : false;
         }
         return false;

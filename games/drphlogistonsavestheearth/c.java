@@ -12,14 +12,14 @@ final class c {
     }
 
     final static void a(boolean param0, ResourceArchive param1) {
-        tk var2 = null;
-        tk.b(param1.getFileByName("headers.packvorbis", "", 24874));
+        VorbisSample var2 = null;
+        VorbisSample.decodeSetup(param1.getFileByName("headers.packvorbis", "", 24874));
         if (param0) {
           return;
         }
         try {
-          var2 = tk.a(param1, "jagex logo2.packvorbis", "");
-          var2.c();
+          var2 = VorbisSample.loadByName(param1, "jagex logo2.packvorbis", "");
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "c.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

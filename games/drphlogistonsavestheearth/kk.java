@@ -21,9 +21,9 @@ final class kk {
         Object var4Lifetime2;
         try {
           var3 = null;
-          if (ih.field_J != null &&
-            !ih.field_J.equals(param1.getParameter("settings"))) {
-            var3 = ih.field_J;
+          if (RegistrationAgreementPane.field_J != null &&
+            !RegistrationAgreementPane.field_J.equals(param1.getParameter("settings"))) {
+            var3 = RegistrationAgreementPane.field_J;
             var4 = var3;
             var4Lifetime2 = var3;
           }

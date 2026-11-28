@@ -4,7 +4,7 @@
 final class kg extends IntrusiveNode {
     static String field_g;
     static ge field_h;
-    static pc field_j;
+    static StandardContentDialog field_j;
     static int field_m;
     static int[] field_i;
     int field_k;

@@ -3,7 +3,7 @@
  */
 final class NanoFrameTimer extends FrameTimer {
     private int field_g;
-    static ij field_k;
+    static FullscreenNoticeType field_k;
     private long field_h;
     private long field_j;
     static ci field_l;
@@ -532,6 +532,6 @@ final class NanoFrameTimer extends FrameTimer {
     static {
         field_p = "Decline invitation to <%0>'s game";
         field_m = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
-        field_k = new ij();
+        field_k = new FullscreenNoticeType();
     }
 }

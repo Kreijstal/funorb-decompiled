@@ -14,7 +14,7 @@ final class pf {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 65 / ((-27 - param0) / 52);
-          stackIn_1_0 = sp.a(SamplePlaybackStream.createForPlaybackRate(param1, 100, param2), -124);
+          stackIn_1_0 = ResizableModalDialog.a(SamplePlaybackStream.createForPlaybackRate(param1, 100, param2), -124);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -185,10 +185,10 @@ final class pf {
                   var5 = var7;
                 } else if (var7.field_Jb.field_pb &&
                   var15 != 0) {
-                  ko.field_S = var7.field_Mb;
+                  NumericDateInputWidget.field_S = var7.field_Mb;
                 }
               } else {
-                ko.field_S = var7.field_Ib;
+                NumericDateInputWidget.field_S = var7.field_Ib;
               }
               var7 = (tp) (var4.nextBackward(122));
             }

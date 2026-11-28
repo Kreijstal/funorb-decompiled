@@ -169,10 +169,10 @@ final class TextLineMetrics {
 
     final static void b(int param0) {
         if (null != Crc32Table.field_a) {
-          Crc32Table.field_a.s(-94);
+          Crc32Table.field_a.closeDialog(-94);
         }
         ti.field_e = new DisplayNameSelectionPanel();
-        vb.field_h.c(ti.field_e, (byte) 57);
+        vb.field_h.replaceContent(ti.field_e, (byte) 57);
         if (param0 != 1) {
           wb var2 = (wb) null;
           TextLineMetrics.a((wb) null, -23, -72, 49, -91, 49);

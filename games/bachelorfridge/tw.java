@@ -23,13 +23,13 @@ final class tw {
           return;
         }
         try {
-          sja.field_fb.writeCipheredByte(91, (byte) 104);
-          sja.field_fb.position = sja.field_fb.position + 2;
-          var3_int = sja.field_fb.position;
-          sja.field_fb.writeByte(param0, 0);
-          rha.a(param1.field_g, sja.field_fb, (byte) -81);
+          StandardContentDialog.field_fb.writeCipheredByte(91, (byte) 104);
+          StandardContentDialog.field_fb.position = StandardContentDialog.field_fb.position + 2;
+          var3_int = StandardContentDialog.field_fb.position;
+          StandardContentDialog.field_fb.writeByte(param0, 0);
+          rha.a(param1.field_g, StandardContentDialog.field_fb, (byte) -81);
           int var4 = 21 / ((param2 - 3) / 60);
-          sja.field_fb.writeLengthShort((byte) -88, sja.field_fb.position - var3_int);
+          StandardContentDialog.field_fb.writeLengthShort((byte) -88, StandardContentDialog.field_fb.position - var3_int);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "tw.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

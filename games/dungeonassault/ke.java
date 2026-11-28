@@ -26,7 +26,7 @@ final class ke {
         synchronized (var1) {
           la.field_g = ua.field_a;
           fc.field_m = fc.field_m + 1;
-          hj.field_S = wi.field_tb;
+          hj.field_S = ProgressDialog.field_tb;
           eh.field_h = dj.field_d;
           cp.field_U = lj.field_g;
           lj.field_g = false;

@@ -74,7 +74,7 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
           var7 = lj.field_c.get(11);
           var8 = lj.field_c.get(12);
           var9 = lj.field_c.get(13);
-          return ll.field_A[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + vk.field_d[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          return StripedProgressWidget.field_A[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + vk.field_d[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         field_F = (String) null;
         var5Lifetime1 = lj.field_c.get(2);
@@ -82,7 +82,7 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
         var7Lifetime1 = lj.field_c.get(11);
         var8Lifetime1 = lj.field_c.get(12);
         var9Lifetime1 = lj.field_c.get(13);
-        return ll.field_A[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + vk.field_d[var5Lifetime1] + "-" + var6Lifetime1 + " " + var7Lifetime1 / 10 + var7Lifetime1 % 10 + ":" + var8Lifetime1 / 10 + var8Lifetime1 % 10 + ":" + var9Lifetime1 / 10 + var9Lifetime1 % 10 + " GMT";
+        return StripedProgressWidget.field_A[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + vk.field_d[var5Lifetime1] + "-" + var6Lifetime1 + " " + var7Lifetime1 / 10 + var7Lifetime1 % 10 + ":" + var8Lifetime1 / 10 + var8Lifetime1 % 10 + ":" + var9Lifetime1 / 10 + var9Lifetime1 % 10 + " GMT";
     }
 
     static {

@@ -39,7 +39,7 @@ final class uh {
     final static void a(int param0, na param1, int param2, int param3, int param4, na param5) {
         try {
           of.field_f = param0;
-          mk.field_a = param5;
+          FullscreenNoticeType.field_a = param5;
           int var6_int = 43 % ((49 - param3) / 32);
           mb.field_c = param4;
           na.field_e = param2;

@@ -143,7 +143,7 @@ final class BoundedRandomAccessFile {
           var9 = HostileSpawn.field_I ? 1 : 0;
           try {
             if (null == UiWidget.field_t &&
-              !me.a(param0, 107)) {
+              !ContentTransitionDialog.a(param0, 107)) {
               stackIn_5_0 = -1;
               return stackIn_5_0;
             }
@@ -214,7 +214,7 @@ final class BoundedRandomAccessFile {
               ib.field_d = sc.field_g.c(10818);
               MatchingFieldValidator.field_q = sc.field_g.readUnsignedByte(32270);
               sc.field_g.readUnsignedByte(32270);
-              wb.field_S = sc.field_g.readUnsignedShort(8);
+              ResizableModalDialog.field_S = sc.field_g.readUnsignedShort(8);
               var12 = sc.field_g.a((byte) 28);
               var7 = sc.field_g.readUnsignedByte(32270);
               if ((1 & var7) != 0) {
@@ -254,7 +254,7 @@ final class BoundedRandomAccessFile {
               if (var12 != null) {
                 ResourceArchive.writeSettingsCookie((byte) 62, BufferedRandomAccessFile.c(-1), var12);
               }
-              if (0 >= wb.field_S &&
+              if (0 >= ResizableModalDialog.field_S &&
                 !AccountCreationResultPanel.field_ub) {
                 try {
                   JavaScriptBridge.callWithoutArguments("unzap", BufferedRandomAccessFile.c(-1), -124);
@@ -270,7 +270,7 @@ final class BoundedRandomAccessFile {
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               }
-              if (wb.field_S > 0) {
+              if (ResizableModalDialog.field_S > 0) {
                 ArchiveIndex.field_g = true;
               }
               s.field_b.a(he.field_s, 8);

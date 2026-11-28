@@ -628,13 +628,13 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
               var4 = var4 + d.field_j;
             } else {
               var6 = hg.a(true, FullscreenFocusCanvas.field_d[var3_int], 0);
-              var4 = var4 + gg.field_N;
+              var4 = var4 + FullscreenStatusDialog.field_N;
               var7 = fd.field_c - (var6 >> 1);
               if (fm.a(var4, param2, -mj.field_f + var7, (mj.field_f << 1) + var6, 102, param0, DisplayNameSelectionPanel.field_D + (DualLinkDequeIterator.field_b << 1))) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
-              var4 = var4 + (gg.field_N + ((DualLinkDequeIterator.field_b << 1) + DisplayNameSelectionPanel.field_D));
+              var4 = var4 + (FullscreenStatusDialog.field_N + ((DualLinkDequeIterator.field_b << 1) + DisplayNameSelectionPanel.field_D));
             }
             var3_int++;
           }

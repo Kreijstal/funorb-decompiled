@@ -23,7 +23,7 @@ abstract class tl {
           return;
         }
         try {
-          ej.a((byte) -121, param0, param1, false);
+          StandardContentDialog.a((byte) -121, param0, param1, false);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "tl.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

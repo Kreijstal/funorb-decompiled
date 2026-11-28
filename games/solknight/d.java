@@ -38,7 +38,7 @@ final class d {
             Bzip2State.field_e.a(true);
             EmailFormatValidator.field_n.a(ProxyAuthenticationRequiredException.field_a, 46, 107, 0, 125);
           }
-          if (ci.field_ib > 0 &&
+          if (ProgressMessageDialog.field_ib > 0 &&
             lk.field_e > 0) {
             if (EmailFormatValidator.field_n == null) {
               EmailFormatValidator.field_n = new Sprite(256, 1 + BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_F);
@@ -47,7 +47,7 @@ final class d {
             SoftwareRasterizer.clearRaster();
             BufferedSocket.field_b.drawCentred(LoginPanel.a(ArchiveIndex.field_p, new String[]{Integer.toString(lk.field_e)}, -63), 128, BufferedSocket.field_b.field_F, 16777215, 8421504);
             Bzip2State.field_e.a(true);
-            EmailFormatValidator.field_n.a(ci.field_ib, 46, 109, 0, 475);
+            EmailFormatValidator.field_n.a(ProgressMessageDialog.field_ib, 46, 109, 0, 475);
           }
           if (fg.field_a > 0) {
             if (fg.field_a >= 500) {
@@ -122,7 +122,7 @@ final class d {
                   var6Lifetime1 = var6Lifetime1 + 1285 * (-wc.field_c + 200);
                 }
               }
-              BufferedSocket.field_b.drawParagraph(LoginPanel.a(fj.field_j, new String[]{ci.field_gb[kb.field_b], Integer.toString(kb.field_b + 1)}, -63), 0, 0, 640, 480, var6Lifetime1, -1, 1, 1, 24);
+              BufferedSocket.field_b.drawParagraph(LoginPanel.a(fj.field_j, new String[]{ProgressMessageDialog.field_gb[kb.field_b], Integer.toString(kb.field_b + 1)}, -63), 0, 0, 640, 480, var6Lifetime1, -1, 1, 1, 24);
             }
           }
           return;
@@ -144,7 +144,7 @@ final class d {
     final static void a(Archive param0, boolean param1, byte param2, Archive param3, Archive param4) {
         td.field_h = hh.a("", false);
         td.field_h.a(false, (byte) -75);
-        ci.a(param0, false, param3, param4);
+        ProgressMessageDialog.a(param0, false, param3, param4);
         if (param2 != -110) {
           return;
         }

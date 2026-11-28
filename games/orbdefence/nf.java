@@ -20,7 +20,7 @@ abstract class nf extends DualLinkNode {
           if (param0 != 32722) {
             field_l = (String) null;
           }
-          ob.field_K = NanoFrameTimer.field_g[md.field_g];
+          RegistrationAgreementPane.field_K = NanoFrameTimer.field_g[md.field_g];
           od.field_k = ByteStorage.field_b[md.field_g];
           md.field_g = 1 + md.field_g & 127;
           stackIn_8_0 = true;

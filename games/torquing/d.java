@@ -5,7 +5,7 @@ abstract class d extends DualLinkNode {
     int field_t;
     static int field_s;
     static String field_q;
-    static sp field_r;
+    static ProgressDialog field_r;
 
     public static void releaseDeclaredStaticReferences(int param0) {
         field_q = null;
@@ -19,21 +19,21 @@ abstract class d extends DualLinkNode {
 
     final static void d(byte param0) {
         if (IsaacCipher.field_m != null) {
-          IsaacCipher.field_m.b(true);
+          IsaacCipher.field_m.closeDialog(true);
         }
         je.field_g = new DisplayNameSelectionPanel();
         if (param0 <= -43) {
-          hb.field_x.c(je.field_g, 33);
+          hb.field_x.replaceContent(je.field_g, 33);
           return;
         }
         d.releaseDeclaredStaticReferences(8);
-        hb.field_x.c(je.field_g, 33);
+        hb.field_x.replaceContent(je.field_g, 33);
     }
 
     final static void a(String param0, byte param1) {
         try {
           if (param1 != 31) {
-            field_r = (sp) null;
+            field_r = (ProgressDialog) null;
           }
           eb.field_c = param0;
           od.b(param1 + 97, 12);

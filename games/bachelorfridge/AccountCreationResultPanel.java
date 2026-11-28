@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends mf implements WidgetActionListener {
+final class AccountCreationResultPanel extends ProgressMessageDialog implements WidgetActionListener {
     static String field_lb;
     private AccountCreationPanel field_ob;
     private boolean field_nb;
@@ -41,7 +41,7 @@ final class AccountCreationResultPanel extends mf implements WidgetActionListene
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        hc var5 = null;
+        DialogMessagePane var5 = null;
         int var6 = 0;
         var6 = BachelorFridge.field_y;
         try {
@@ -68,35 +68,35 @@ final class AccountCreationResultPanel extends mf implements WidgetActionListene
           } else {
             var4 = dla.field_m;
           }
-          var5 = new hc((mf) (this), qia.field_a, var4);
+          var5 = new DialogMessagePane((ProgressMessageDialog) (this), qia.field_a, var4);
           if (param2.success) {
             if (param2.field_h) {
-              this.e(new TermsPanel(this), 33);
+              this.replaceContent(new TermsPanel(this), 33);
               return;
             }
-            var5.a((WidgetListener) (this), tj.field_a, 19528);
+            var5.addListenerButton((WidgetListener) (this), tj.field_a, 19528);
           } else {
             if (!this.field_mb) {
               if (5 != param2.statusCode) {
-                var5.a(7, ina.field_s, -1);
+                var5.addActionButton(7, ina.field_s, -1);
               } else {
-                var5.a(7, AccountNameAvailabilityValidator.field_h, 11);
-                var5.a(7, uda.field_ab, 17);
+                var5.addActionButton(7, AccountNameAvailabilityValidator.field_h, 11);
+                var5.addActionButton(7, ContentTransitionDialog.field_ab, 17);
               }
             } else {
-              var5.a((WidgetListener) (this), tj.field_a, 19528);
+              var5.addListenerButton((WidgetListener) (this), tj.field_a, 19528);
             }
             if (param2.statusCode != 3) {
               if (param2.statusCode != 6) {
-                this.e(var5, 33);
+                this.replaceContent(var5, 33);
                 return;
               }
-              var5.a(7, IterableNodeHashTable.field_b, 9);
+              var5.addActionButton(7, IterableNodeHashTable.field_b, 9);
             } else {
-              var5.a(param0 ^ -12334, pr.field_c, 7);
+              var5.addActionButton(param0 ^ -12334, pr.field_c, 7);
             }
           }
-          this.e(var5, 33);
+          this.replaceContent(var5, 33);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -112,7 +112,7 @@ final class AccountCreationResultPanel extends mf implements WidgetActionListene
         }
     }
 
-    final void r(int param0) {
+    final void showAccountCreationConnectionFailure(int param0) {
         if (param0 != -7) {
           return;
         }
@@ -142,7 +142,7 @@ final class AccountCreationResultPanel extends mf implements WidgetActionListene
         }
         try {
           tr.a(-97);
-          this.p(-120);
+          this.closeDialog(-120);
           if (param3 < 50) {
             field_lb = (String) null;
           }

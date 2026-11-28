@@ -74,7 +74,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
             var3 = ((FieldValidatorProvider) ((Object) this.field_n)).getFieldValidator(29730);
             if (var3 != null &&
               var3.getValidationStatus(-16323) != dg.field_c) {
-              stackIn_5_0 = qf.field_d;
+              stackIn_5_0 = FullscreenNoticeType.field_d;
               return stackIn_5_0;
             }
           }
@@ -84,7 +84,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           if (param0.equals(this.field_n.text)) {
             stackIn_11_0 = dg.field_c;
           } else {
-            stackIn_11_0 = qf.field_d;
+            stackIn_11_0 = FullscreenNoticeType.field_d;
           }
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

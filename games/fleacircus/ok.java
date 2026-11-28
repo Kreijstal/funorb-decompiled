@@ -20,7 +20,7 @@ final class ok extends wi {
     int field_z;
     int field_J;
     private int field_F;
-    static bd field_x;
+    static ProgressMessageDialog field_x;
     private int field_r;
     private BitmapFont field_I;
     static String field_B;

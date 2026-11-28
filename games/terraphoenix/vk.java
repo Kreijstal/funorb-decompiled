@@ -13,21 +13,21 @@ final class vk {
         RuntimeException var1 = null;
         var2 = Terraphoenix.field_V;
         try {
-          if (!si.o(param0 + 8187)) {
+          if (!ProgressMessageDialog.o(param0 + 8187)) {
             if (null != a.field_b &&
               a.field_b.field_d) {
               ga.b((byte) 82);
-              cl.field_J.showDialog((UiWidget) (new hi(cl.field_J, ProxySocketConnector.field_e)), (byte) -1);
+              RegistrationAgreementPane.field_J.showDialog((UiWidget) (new FullscreenStatusDialog(RegistrationAgreementPane.field_J, ProxySocketConnector.field_e)), (byte) -1);
             }
             return;
           }
-          cl.field_J.processPointerInput(true, q.field_Hb, dm.field_g, 120);
+          RegistrationAgreementPane.field_J.processPointerInput(true, q.field_Hb, dm.field_g, 120);
           if (param0 != -8177) {
             vk.a(87);
           }
-          cl.field_J.advanceDialogs((byte) 126);
+          RegistrationAgreementPane.field_J.advanceDialogs((byte) 126);
           while (DefaultTextWidgetRenderer.d(1)) {
-            cl.field_J.processKeyInput(lf.field_c, SectorCacheStore.field_g, (byte) -116);
+            RegistrationAgreementPane.field_J.processKeyInput(lf.field_c, SectorCacheStore.field_g, (byte) -116);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

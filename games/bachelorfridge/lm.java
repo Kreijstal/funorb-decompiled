@@ -17,7 +17,7 @@ final class lm {
         String[] var3 = null;
         UiComponent[] var4 = null;
         try {
-          var3 = new String[]{param0, de.field_K, HailEvent.field_v};
+          var3 = new String[]{param0, StripedProgressWidget.field_K, HailEvent.field_v};
           var4 = new UiComponent[]{param1, ov.field_d, (UiComponent) ((Object) RageAnimation.field_w)};
           this.field_a = new dna(0L, CreatureActor.field_q, var3, FridgeCreature.field_f, var4, 0);
         } catch (RuntimeException runtimeException) {

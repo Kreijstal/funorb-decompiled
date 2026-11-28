@@ -45,7 +45,7 @@ final class fg extends InteractiveWidget {
           if (this.field_I * this.field_I <= var8_int * var8_int + var9 * var9) {
             return true;
           }
-          var10 = Math.atan2((double)var9, (double)var8_int) - sj.field_I;
+          var10 = Math.atan2((double)var9, (double)var8_int) - RegistrationAgreementPane.field_I;
           if (var10 < 0.0) {
             var10 = var10 - 3.141592653589793 / (double)this.field_N;
           } else {

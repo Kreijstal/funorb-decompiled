@@ -1,0 +1,288 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class StripedProgressWidget extends UiWidget {
+    private Sprite field_F;
+    private int field_Q;
+    private int field_H;
+    static String field_K;
+    private int field_N;
+    private int field_P;
+    boolean field_O;
+    private int field_D;
+    private Sprite[] field_E;
+    static String[] field_J;
+    private Sprite field_M;
+    private int field_L;
+    int field_R;
+    private Sprite field_I;
+
+    final void setColours(int param0, int param1, byte param2) {
+        if (param2 > -103) {
+          UiWidget var5 = (UiWidget) null;
+          this.updatePointer(55, 86, (byte) 13, (UiWidget) null);
+        }
+        this.field_L = param1 >> 1 & 8355711;
+        this.field_Q = (param0 & 16711422) >> 1;
+        this.field_H = param0;
+        this.field_P = param1;
+        this.refreshTextures(-1262785631);
+    }
+
+    private final Sprite createStripeTexture(int param0, int param1, boolean param2) {
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = MinerDisturbance.field_ab;
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var12Lifetime1;
+        if (param2) {
+          this.field_Q = 49;
+        }
+        Sprite var14 = new Sprite(2 * this.field_N, this.field_q);
+        ArchiveProvider.a(var14, 125);
+        int var5 = this.field_q >> 1;
+        for (var6 = 0; this.field_q > var6; var6++) {
+          var7 = (var6 >> 1) * (this.field_N * 2 - 1) % (2 * this.field_N);
+          var8 = param0 & 16711935;
+          var9 = param0 & 65280;
+          var10 = var6 - var5;
+          var11 = (int)(128.0 * (Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5)) + 128;
+          var12 = var11 >= 256 ? var8 | var9 : (-16711936 & var8 * var11 | 16711680 & var9 * var11) >>> 8;
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_N, var12);
+          var9Lifetime1 = 65280 & param1;
+          var8Lifetime1 = param1 & 16711935;
+          SoftwareRasterizer.drawHorizontalLine(-(this.field_N * 2) + var7, var6, this.field_N, var12);
+          var12Lifetime1 = var11 < 256 ? (-16711936 & var11 * var8Lifetime1 | 16711680 & var11 * var9Lifetime1) >>> 8 : var9Lifetime1 | var8Lifetime1;
+          SoftwareRasterizer.drawHorizontalLine(var7 + this.field_N, var6, this.field_N, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-this.field_N + var7, var6, this.field_N, var12Lifetime1);
+        }
+        tk.b(true);
+        return var14;
+    }
+
+    StripedProgressWidget(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+        this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, 8355711 & param6 >> 1);
+    }
+
+    public static void clearStaticReferences(byte param0) {
+        field_J = null;
+        field_K = null;
+        if (param0 < 15) {
+          field_K = (String) null;
+        }
+    }
+
+    private final void refreshTextures(int param0) {
+        if (param0 != -1262785631) {
+          return;
+        }
+        this.field_E = new Sprite[]{this.createStripeTexture(this.field_P, this.field_H, false), this.createStripeTexture(this.field_L, this.field_Q, false)};
+        this.field_F = this.createCapMask((byte) -125);
+        this.field_I = this.field_F.copyMirroredHorizontally();
+        this.field_M = new Sprite(this.field_q >> 1, this.field_q);
+    }
+
+    private final Sprite createCapMask(byte param0) {
+        int var4 = 0;
+        int var5 = 0;
+        double var6 = 0.0;
+        int var8 = 0;
+        int var9 = MinerDisturbance.field_ab;
+        int var2 = this.field_q >> 1;
+        Sprite var3 = new Sprite(var2, this.field_q);
+        ArchiveProvider.a(var3, 125);
+        for (var4 = 0; var4 < this.field_q; var4++) {
+          for (var5 = 0; var5 < var2; var5++) {
+            var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + this.field_q));
+            var8 = 1;
+            if (var6 < 1.0) {
+              var6 = Math.sqrt(1.0 - var6);
+              var8 = !(var6 >= 1.0) ? (int)(var6 * 255.0) : 255;
+            }
+            SoftwareRasterizer.setPixel(var5, var4, var8 << 16 | (var8 | var8 << 8));
+          }
+        }
+        tk.b(true);
+        if (param0 >= -105) {
+          this.refreshTextures(65);
+        }
+        return var3;
+    }
+
+    final static void a(BitmapFont param0, BitmapFont param1, int param2, int param3) {
+        try {
+          w.field_S = param3;
+          IntrusiveDeque.field_b = param0;
+          if (param2 < 86) {
+            BitmapFont var5 = (BitmapFont) null;
+            StripedProgressWidget.a((BitmapFont) null, (BitmapFont) null, -28, -53);
+          }
+          gh.field_b = param1;
+          ti.a((byte) 88, SoftwareRasterizer.field_c / 2, SoftwareRasterizer.field_g / 2);
+          DiskArchiveRequest.a(param1.field_E + param1.field_N, param1.field_N, false, param0.field_N + param0.field_E, param0.field_N);
+        } catch (RuntimeException runtimeException) {
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "oi.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+
+    final static boolean a(int param0, CharSequence param1) {
+        RuntimeException var2 = null;
+        boolean stackIn_3_0 = false;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != -19804) {
+            StripedProgressWidget.clearStaticReferences((byte) -17);
+          }
+          stackIn_3_0 = GzipDecompressor.isValidInteger(param1, 10, true, (byte) 78);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("oi.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    private final void drawStripeTexture(int param0, int param1, int param2, Sprite param3) {
+        int var6 = 0;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var7 = 0;
+        int var8 = 0;
+        CharSequence var9 = null;
+        var8 = MinerDisturbance.field_ab;
+        try {
+          var5_int = param2 + this.field_v;
+          ResizableModalDialog.a(param1, param2 + this.field_F.field_y, (byte) 8, -this.field_F.field_y + var5_int, this.field_q + param1);
+          if (param0 != 21984) {
+            var9 = (CharSequence) null;
+            StripedProgressWidget.a(-125, (CharSequence) null);
+          }
+          for (var6 = param2 - this.field_D; var5_int > var6; var6 = var6 + param3.field_y) {
+            param3.draw(var6, param1);
+          }
+          tk.b(true);
+          if (SoftwareRasterizer.field_a <= this.field_F.field_y + param2) {
+            ArchiveProvider.a(this.field_M, 126);
+            param3.draw(-this.field_D, 0);
+            param3.draw(-this.field_D + this.field_N * 2, 0);
+            this.field_I.drawMultiply(0, 0);
+            tk.b(true);
+            this.field_M.draw(param2, param1);
+          }
+          if (var5_int - this.field_F.field_y <= SoftwareRasterizer.field_k) {
+            ArchiveProvider.a(this.field_M, 127);
+            for (var7 = this.field_v - (this.field_F.field_y - this.field_D); var7 > this.field_N * 2; var7 = var7 - 2 * this.field_N) {
+            }
+            param3.draw(-var7, 0);
+            param3.draw(-var7 + 2 * this.field_N, 0);
+            this.field_F.drawMultiply(0, 0);
+            tk.b(true);
+            this.field_M.draw(-this.field_F.field_y + var5_int, param1);
+            return;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_16_0 = var5;
+          stackIn_16_1 = new StringBuilder().append("oi.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
+          }
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+        }
+    }
+
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
+        if (param3 != 0) {
+          return;
+        }
+        if (param0 != 4) {
+          BitmapFont var7 = (BitmapFont) null;
+          StripedProgressWidget.a((BitmapFont) null, (BitmapFont) null, -20, 96);
+        }
+        int var5 = param1 + this.field_u;
+        int var6 = this.field_t + param2;
+        this.drawStripeTexture(param0 + 21980, var6, var5, this.field_E[0]);
+        if (this.field_R < 65536) {
+          ResizableModalDialog.a(var6, (this.field_v * this.field_R >> 16) + var5, (byte) 8, this.field_v + var5, var6 + this.field_q);
+          this.drawStripeTexture(21984, var6, var5, this.field_E[1]);
+          tk.b(true);
+        }
+    }
+
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        if (param1 > -33) {
+          this.field_F = (Sprite) null;
+        }
+        super.setBounds(param0, -67, param2, param3, param4);
+        this.refreshTextures(-1262785631);
+    }
+
+    final void updatePointer(int param0, int param1, byte param2, UiWidget param3) {
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        try {
+          if (this.field_O) {
+            this.field_D = this.field_D + 1;
+            if (this.field_D > this.field_N * 2) {
+              this.field_D = this.field_D - 2 * this.field_N;
+            }
+          }
+          if (param2 <= 49) {
+            this.refreshTextures(-126);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_9_0 = var5;
+          stackIn_9_1 = new StringBuilder().append("oi.V(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw lj.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+        }
+    }
+
+    private StripedProgressWidget(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        this.field_H = param6;
+        this.field_L = param7;
+        this.field_P = param5;
+        this.field_N = param4;
+        this.field_Q = param8;
+        this.setBounds(param3, -72, param0, param2, param1);
+    }
+
+    static {
+        field_J = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};
+        field_K = "Connection timed out. Please try using a different server.";
+    }
+}

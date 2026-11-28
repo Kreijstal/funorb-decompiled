@@ -11,9 +11,9 @@ final class uj extends IntrusiveNode {
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-          param1.removeMouseListener(bj.field_cb);
-          param1.removeMouseMotionListener(bj.field_cb);
-          param1.removeFocusListener(bj.field_cb);
+          param1.removeMouseListener(ContentTransitionDialog.field_cb);
+          param1.removeMouseMotionListener(ContentTransitionDialog.field_cb);
+          param1.removeFocusListener(ContentTransitionDialog.field_cb);
           nd.field_l = param0;
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "uj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -277,7 +277,7 @@ final class uj extends IntrusiveNode {
               ImageProducerRasterBuffer.d(65280);
               return;
             }
-            var5_int = -var9.position + sb.field_sb;
+            var5_int = -var9.position + StandardContentDialog.field_sb;
             var11 = var4_ref_pa.field_q;
             var10 = var11;
             var6 = var10;

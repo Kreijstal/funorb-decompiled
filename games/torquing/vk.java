@@ -279,7 +279,7 @@ final class vk extends am {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param0 = kf.a(param0, '_', "", 121);
+          param0 = StripedProgressWidget.a(param0, '_', "", 121);
           if (param1 != 4096) {
             vk.b(37);
           }

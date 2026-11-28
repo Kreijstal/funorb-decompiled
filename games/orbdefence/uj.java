@@ -58,7 +58,7 @@ final class uj implements Runnable {
     final static void c(byte param0) {
         lb.a(true);
         if (null != GameAppletShell.field_f) {
-          hl.a(GameAppletShell.field_f, 106);
+          ContentTransitionDialog.a(GameAppletShell.field_f, 106);
         }
         fd.b(-82);
         km.b(-100);
@@ -141,7 +141,7 @@ final class uj implements Runnable {
         int var8 = 0;
         var8 = OrbDefence.field_D ? 1 : 0;
         try {
-          if (Bzip2State.field_r != dh.field_bb) {
+          if (Bzip2State.field_r != ProgressMessageDialog.field_bb) {
             return false;
           }
           var2_int = 28 / ((param1 - 65) / 36);
@@ -235,7 +235,7 @@ final class uj implements Runnable {
         if (param0 != -36) {
           field_b = (qd) null;
         }
-        stackIn_6_0 = (p.field_d != null) && (dh.field_bb.a((byte) 74));
+        stackIn_6_0 = (p.field_d != null) && (ProgressMessageDialog.field_bb.a((byte) 74));
         return stackIn_6_0;
     }
 

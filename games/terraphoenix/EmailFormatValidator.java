@@ -34,7 +34,7 @@ final class EmailFormatValidator extends TextFieldValidator {
             stackIn_10_0 = dg.field_c;
             return stackIn_10_0;
           }
-          stackIn_8_0 = qf.field_d;
+          stackIn_8_0 = FullscreenNoticeType.field_d;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -70,7 +70,7 @@ final class EmailFormatValidator extends TextFieldValidator {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.getValidationStatus(param0, 0) == qf.field_d) {
+          if (this.getValidationStatus(param0, 0) == FullscreenNoticeType.field_d) {
             stackIn_3_0 = pb.field_c;
             return stackIn_3_0;
           }

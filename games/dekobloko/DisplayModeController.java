@@ -370,11 +370,11 @@ final class DisplayModeController {
         MixedSupport017.integerArrayState0022[ValidatedTextField.integerState0556] = ValidatedTextField.integerState0556;
         ResourceSupport001.integerArrayState0012[ValidatedTextField.integerState0556] = integerArgument4;
         if (RenderingSupport003.integerState0252 > integerArgument4) {
-          UiComponentPart019.integerState0504 = integerArgument4;
+          BirthDateChatEnableForm.integerState0504 = integerArgument4;
         }
         if (integerArgument4 <= MixedSupport010.integerState0066) {
           MixedSupport089.integerArrayState0173[ValidatedTextField.integerState0556] = integerArgument2;
-          MixedSupport080.integerArrayState0150[ValidatedTextField.integerState0556] = integerArgument5;
+          FullscreenNoticeType.integerArrayState0150[ValidatedTextField.integerState0556] = integerArgument5;
           ByteStorage.integerArrayState0157[ValidatedTextField.integerState0556] = integerArgument6;
           integerLocal3 = integerArgument6 + (integerArgument5 + integerArgument2);
           if (~integerLocal3 == integerArgument3) {
@@ -388,15 +388,15 @@ final class DisplayModeController {
           if (ReturnedShape.integerState0695 < integerLocal4) {
             ReturnedShape.integerState0695 = integerLocal4;
           }
-          if (UiComponentPart019.integerState0504 <= integerLocal4) {
+          if (BirthDateChatEnableForm.integerState0504 <= integerLocal4) {
             return;
           }
-          UiComponentPart019.integerState0504 = integerLocal4;
+          BirthDateChatEnableForm.integerState0504 = integerLocal4;
           return;
         }
         ReturnedShape.integerState0695 = integerArgument4;
         MixedSupport089.integerArrayState0173[ValidatedTextField.integerState0556] = integerArgument2;
-        MixedSupport080.integerArrayState0150[ValidatedTextField.integerState0556] = integerArgument5;
+        FullscreenNoticeType.integerArrayState0150[ValidatedTextField.integerState0556] = integerArgument5;
         ByteStorage.integerArrayState0157[ValidatedTextField.integerState0556] = integerArgument6;
         integerLocal5 = integerArgument6 + (integerArgument5 + integerArgument2);
         if (~integerLocal5 == integerArgument3) {
@@ -410,10 +410,10 @@ final class DisplayModeController {
         if (ReturnedShape.integerState0695 < integerLocal6) {
           ReturnedShape.integerState0695 = integerLocal6;
         }
-        if (UiComponentPart019.integerState0504 <= integerLocal6) {
+        if (BirthDateChatEnableForm.integerState0504 <= integerLocal6) {
           return;
         }
-        UiComponentPart019.integerState0504 = integerLocal6;
+        BirthDateChatEnableForm.integerState0504 = integerLocal6;
     }
 
     final boolean canResize(int integerArgument1) {

@@ -57,7 +57,7 @@ final class kh {
             BufferedRandomAccessFile.field_d = cf.field_b;
             LabeledWidgetContainer.field_F = param3;
           } else {
-            var8.h((byte) 114);
+            var8.showAccountCreationConnectionFailure((byte) 114);
           }
           if (param1 <= 69) {
             kh.a(53);

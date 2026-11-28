@@ -49,10 +49,10 @@ final class bk extends IntrusiveNode {
           var7 = var8;
           jh.field_e.showDialog(var8, (byte) -93);
           if (jn.a(32359)) {
-            var8.o(-10896);
+            var8.showAccountCreationConnectionFailure(-10896);
           } else {
             lg.field_a = null;
-            ih.field_Q = param6;
+            NumericDateInputWidget.field_Q = param6;
             DelegatingCanvas.field_a = ci.field_ub;
             SecondaryNodeDeque.field_f = param5;
             jd.field_d = param2;

@@ -71,20 +71,20 @@ final class vg {
         ug.field_A.closeAllDialogs(0);
         if (param0 <= 100) {
           field_b = 110;
-          if (qj.field_fb == null) {
-            qj.field_fb = new uk(ug.field_A, jj.field_d);
-            ug.field_A.showDialog(-14579, qj.field_fb);
+          if (StandardContentDialog.field_fb == null) {
+            StandardContentDialog.field_fb = new ProgressDialog(ug.field_A, jj.field_d);
+            ug.field_A.showDialog(-14579, StandardContentDialog.field_fb);
             return;
           }
-          ug.field_A.showDialog(-14579, qj.field_fb);
+          ug.field_A.showDialog(-14579, StandardContentDialog.field_fb);
           return;
         }
-        if (qj.field_fb != null) {
-          ug.field_A.showDialog(-14579, qj.field_fb);
+        if (StandardContentDialog.field_fb != null) {
+          ug.field_A.showDialog(-14579, StandardContentDialog.field_fb);
           return;
         }
-        qj.field_fb = new uk(ug.field_A, jj.field_d);
-        ug.field_A.showDialog(-14579, qj.field_fb);
+        StandardContentDialog.field_fb = new ProgressDialog(ug.field_A, jj.field_d);
+        ug.field_A.showDialog(-14579, StandardContentDialog.field_fb);
     }
 
     static int a(int param0, int param1) {

@@ -284,7 +284,7 @@ final class ArchiveIndex {
         CharSequence var5 = null;
         try {
           vk.field_g = 2;
-          ij.field_c = param0;
+          FullscreenNoticeType.field_c = param0;
           var5 = (CharSequence) ((Object) param0);
           ec.field_f = ad.a(var5, -2);
           TextHotspotBounds.field_p = param1;

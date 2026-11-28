@@ -9,7 +9,7 @@ abstract class uk {
     int field_h;
     int field_f;
     int field_c;
-    static ml field_d;
+    static FullscreenNoticeType field_d;
 
     public static void a(byte param0) {
         if (param0 < 3) {
@@ -197,10 +197,10 @@ abstract class uk {
         }
         try {
           if (Crc32Table.field_a != null) {
-            Crc32Table.field_a.s(-101);
+            Crc32Table.field_a.closeDialog(-101);
           }
           i.field_a = new LoginPanel(param0, param2, false, true, true);
-          vb.field_h.c(i.field_a, (byte) 106);
+          vb.field_h.replaceContent(i.field_a, (byte) 106);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "uk.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -297,6 +297,6 @@ abstract class uk {
     }
 
     static {
-        field_d = new ml();
+        field_d = new FullscreenNoticeType();
     }
 }

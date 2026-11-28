@@ -60,10 +60,10 @@ final class StampedeAnimation extends EventAnimation {
           var17 = new Sprite(param0.getFileByName((byte) 123, "", "button.gif"), (java.awt.Component) ((Object) TBomberAnimation.field_y));
           BagpipeSpecial.a(param1, -1, "commonui", "dropdown");
           var5 = RageSpecial.a(29611, "commonui", "screen_options", param1);
-          sh.field_G = new IndexedSprite[4];
+          DateInputWidget.field_G = new IndexedSprite[4];
           sb.field_l = new IndexedSprite[4];
           nea.field_Bb = new IndexedSprite[4];
-          var6 = new IndexedSprite[][]{sb.field_l, nea.field_Bb, sh.field_G};
+          var6 = new IndexedSprite[][]{sb.field_l, nea.field_Bb, DateInputWidget.field_G};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;

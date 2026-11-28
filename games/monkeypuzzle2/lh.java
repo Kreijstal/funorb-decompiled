@@ -27,10 +27,10 @@ final class lh {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          pe.field_a = lb.a(false, "commonui", param1, "frame_top");
-          ra.field_Z = lb.a(false, "commonui", param1, "frame_bottom");
+          pe.field_a = GuestPlayConfirmationForm.a(false, "commonui", param1, "frame_top");
+          StandardContentDialog.field_Z = GuestPlayConfirmationForm.a(false, "commonui", param1, "frame_bottom");
           af.field_e = ma.a(param1, "jagex_logo_grey", 16711680, "commonui");
-          qj.field_C = lb.a(false, "commonui", param1, "button");
+          qj.field_C = GuestPlayConfirmationForm.a(false, "commonui", param1, "button");
           hk.field_i = MatchingFieldValidator.a("validation", param1, 0, "commonui");
           pf.field_c = (BitmapFont) ((Object) cb.a("commonui", param0, -103, param1, "arezzo12"));
           ButtonWidget.field_z = (BitmapFont) ((Object) cb.a("commonui", param0, -99, param1, "arezzo14"));

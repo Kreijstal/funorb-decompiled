@@ -43,7 +43,7 @@ final class GameScreen {
         while (mh.e(127)) {
           this.d((byte) -55);
         }
-        this.field_e.a(-118, this.a((byte) 6, kf.mouseX, fg.mouseY), this.a((byte) 6, db.clickX, wg.clickY));
+        this.field_e.a(-118, this.a((byte) 6, kf.mouseX, fg.mouseY), this.a((byte) 6, ContentTransitionDialog.clickX, wg.clickY));
         if (this.field_e.field_e != -1) {
           this.a(this.field_e.field_e, false, true);
         }
@@ -65,8 +65,8 @@ final class GameScreen {
           if (null != this.a(kf.mouseX, 2600, fg.mouseY)) {
             var4 = 2;
           }
-          if (db.clickX >= 576 &&
-            db.clickX < 602) {
+          if (ContentTransitionDialog.clickX >= 576 &&
+            ContentTransitionDialog.clickX < 602) {
             if (67 <= wg.clickY &&
               wg.clickY < 93) {
               var5 = 0;
@@ -76,7 +76,7 @@ final class GameScreen {
               var5 = 1;
             }
           }
-          if (this.a(db.clickX, 2600, wg.clickY) != null) {
+          if (this.a(ContentTransitionDialog.clickX, 2600, wg.clickY) != null) {
             var5 = 2;
           }
           if (uk.clickButton != 0) {
@@ -95,7 +95,7 @@ final class GameScreen {
           }
           if (this.field_e.d(0)) {
             var6 = qh.field_b.levelIndex;
-            var7 = this.a(db.clickX, 2600, wg.clickY);
+            var7 = this.a(ContentTransitionDialog.clickX, 2600, wg.clickY);
             if (var7 != null) {
               this.field_e.field_a = true;
               qh.field_b = var7;
@@ -120,7 +120,7 @@ final class GameScreen {
         }
         if (uk.clickButton != 0) {
           this.field_g = wg.clickY;
-          this.field_h = db.clickX;
+          this.field_h = ContentTransitionDialog.clickX;
         }
         var4Lifetime1 = -1;
         var5Lifetime1 = this.a((byte) 6, kf.mouseX, fg.mouseY);
@@ -174,7 +174,7 @@ final class GameScreen {
               var4 = var4 + dh.field_l;
             } else {
               var6 = ib.a(true, param1 ^ 10, LabeledWidgetContainer.field_I[var3_int]);
-              var7 = -(var6 >> 1) + sf.field_F;
+              var7 = -(var6 >> 1) + GuestPlayConfirmationForm.field_F;
               var4 = var4 + na.field_e;
               if (NanoFrameTimer.a(-mb.field_c + var7, param0, param1 ^ 10, (mb.field_c << 1) + var6, var4, param2, ArchiveIndex.field_m + (of.field_f << 1))) {
                 stackIn_8_0 = var5;
@@ -315,7 +315,7 @@ final class GameScreen {
         }
         SoftwareRasterizer.drawRectangleOutline(152, 75, 206, 284, 3352864);
         SoftwareRasterizer.drawRectangleOutline(386, 75, 102, 284, 3352864);
-        if (jj.s(23)) {
+        if (ProgressMessageDialog.s(23)) {
           var2 = NameSuggestionsPanel.field_I;
           DisplayNameSelectionPanel.font.drawCentred(SecondaryNodeDequeIterator.field_b, 320, 406, 0, -1);
         } else {
@@ -341,8 +341,8 @@ final class GameScreen {
                     var8 = var17[var7];
                     if (var4 < 0 &&
                       var3_ref_String__[var7] == IntrusiveDequeCursor.field_a &&
-                      null != rk.field_bb &&
-                      ~rk.field_bb.field_j == ~SpriteState.field_w.field_q[TextFieldValidator.field_i][var7] &&
+                      null != ProgressDialog.field_bb &&
+                      ~ProgressDialog.field_bb.field_j == ~SpriteState.field_w.field_q[TextFieldValidator.field_i][var7] &&
                       ua.field_L != null &&
                       var17[var7] == ua.field_L.score) {
                       var4 = var7;
@@ -771,7 +771,7 @@ final class GameScreen {
                         1 + ArchiveIndex.field_i >= qh.field_b.levelIndex) {
                         si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
                         SpriteState.field_w = null;
-                        rk.field_bb = null;
+                        ProgressDialog.field_bb = null;
                         ua.field_L = new ActiveLevel();
                         sc.field_g = -1;
                         oe.field_e = 0;
@@ -932,7 +932,7 @@ final class GameScreen {
           return;
         }
         DisplayNameSelectionPanel.font.drawCentred(NodeHashTable.field_a, 320, 302, 0, -1);
-        if (jj.s(39)) {
+        if (ProgressMessageDialog.s(39)) {
           DisplayNameSelectionPanel.font.drawCentred(SecondaryNodeDequeIterator.field_b, 320, 354, 0, -1);
         }
         return;
@@ -1171,7 +1171,7 @@ final class GameScreen {
                       UiWidget.field_z[3].drawTransparent(-UiWidget.field_z[3].field_t + 640 >> 1, 1);
                       if (qh.field_b.levelIndex > (1 + ArchiveIndex.field_i)) {
                         cl.a(NameSuggestionsPanel.field_L, 90, 254, 57, 176, 4);
-                        if (!jj.s(param0 + 54)) {
+                        if (!ProgressMessageDialog.s(param0 + 54)) {
                           var4_ref_String = Archive.field_a;
                           var12 = var4_ref_String;
                           var12Lifetime2 = var4_ref_String;
@@ -1329,7 +1329,7 @@ final class GameScreen {
           if (var6 == 1) {
             if (this.field_e.b(false)) {
               si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
-              rk.field_bb = null;
+              ProgressDialog.field_bb = null;
               SpriteState.field_w = null;
               ua.field_L = new ActiveLevel();
               oe.field_e = 0;
@@ -1478,7 +1478,7 @@ final class GameScreen {
                                                             if (var6 == 27) {
                                                               if (this.field_e.b(false)) {
                                                                 si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
-                                                                if (jj.s(49)) {
+                                                                if (ProgressMessageDialog.s(49)) {
                                                                   if ((ua.field_L.score | oe.field_e) == 0) {
                                                                     sc.field_g = 0;
                                                                   } else {

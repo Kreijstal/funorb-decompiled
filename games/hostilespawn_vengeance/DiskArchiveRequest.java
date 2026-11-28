@@ -87,7 +87,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
           }
           var3 = -94 / ((-2 - param0) / 60);
           for (var4 = 0; var4 < hf.field_d.length; var4++) {
-            var5 = jf.field_b[var4];
+            var5 = FullscreenNoticeType.field_b[var4];
             if (0 > var5) {
               var6 = TextLayout.field_c;
             } else {
@@ -136,7 +136,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
             }
             stackIn_37_0 = 91;
             stackIn_38_1 = !(var5 < 0);
-            var8Lifetime1 = wb.a(stackIn_37_0, stackIn_38_1, var7);
+            var8Lifetime1 = ResizableModalDialog.a(stackIn_37_0, stackIn_38_1, var7);
             var9Lifetime1 = wk.field_c - (var8Lifetime1 >> 1);
             if (var5 >= 0) {
               var1_int = var1_int + cl.field_l;

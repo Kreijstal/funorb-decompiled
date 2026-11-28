@@ -141,7 +141,7 @@ abstract class i extends GameAppletShell {
         }
         if (!DequeWidgetContainer.g(15214) &&
           IntrusiveNode.field_e != 11) {
-          ei.n(15102);
+          FullscreenStatusDialog.n(15102);
         }
         if (null != jc.field_c) {
           ExpandingPulseProjectile.field_cb = jc.field_c.pollRotation(8);
@@ -427,22 +427,22 @@ abstract class i extends GameAppletShell {
     }
 
     private final void j(int param0) {
-        ib.field_M[9] = -1;
-        ib.field_M[13] = -1;
-        ib.field_M[7] = -1;
-        ib.field_M[17] = -1;
-        ib.field_M[6] = -2;
-        ib.field_M[12] = -1;
-        ib.field_M[2] = -2;
-        ib.field_M[10] = -1;
-        ib.field_M[8] = -2;
-        ib.field_M[11] = -1;
-        ib.field_M[5] = -1;
-        ib.field_M[4] = -1;
-        ib.field_M[16] = param0;
-        ib.field_M[3] = -1;
-        ib.field_M[18] = 1;
-        ib.field_M[1] = 16;
+        StripedProgressWidget.field_M[9] = -1;
+        StripedProgressWidget.field_M[13] = -1;
+        StripedProgressWidget.field_M[7] = -1;
+        StripedProgressWidget.field_M[17] = -1;
+        StripedProgressWidget.field_M[6] = -2;
+        StripedProgressWidget.field_M[12] = -1;
+        StripedProgressWidget.field_M[2] = -2;
+        StripedProgressWidget.field_M[10] = -1;
+        StripedProgressWidget.field_M[8] = -2;
+        StripedProgressWidget.field_M[11] = -1;
+        StripedProgressWidget.field_M[5] = -1;
+        StripedProgressWidget.field_M[4] = -1;
+        StripedProgressWidget.field_M[16] = param0;
+        StripedProgressWidget.field_M[3] = -1;
+        StripedProgressWidget.field_M[18] = 1;
+        StripedProgressWidget.field_M[1] = 16;
     }
 
     private final void k(int param0) {
@@ -582,7 +582,7 @@ abstract class i extends GameAppletShell {
           return;
         }
         String var2 = mh.a(true);
-        ci.a(ii.b(false), var2, -77);
+        FullscreenNoticeType.a(ii.b(false), var2, -77);
     }
 
     final static char a(char param0, byte param1) {
@@ -805,14 +805,14 @@ abstract class i extends GameAppletShell {
             i.a('ﾵ', (byte) -116);
           }
           if (var4 == 5) {
-            jn.a(false, ii.b(false));
+            DialogMessagePane.a(false, ii.b(false));
           }
           if (var4 == 6 &&
             ByteStorage.field_g) {
             IntrusiveNode.field_e = 10;
           }
           if (var4 == 7) {
-            ci.a(ii.b(false), true);
+            FullscreenNoticeType.a(ii.b(false), true);
           }
           if (var4 == 8) {
             pe.a(ii.b(false), (byte) 11);
@@ -827,7 +827,7 @@ abstract class i extends GameAppletShell {
             AlphaWidgetContainer.a((byte) 102, ii.b(false));
           }
           if (var4 == 12) {
-            li.a(ii.b(false), 104, ci.a((byte) -102));
+            li.a(ii.b(false), 104, FullscreenNoticeType.a((byte) -102));
           }
           if (var4 == 13) {
             try {

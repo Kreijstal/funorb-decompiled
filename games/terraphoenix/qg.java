@@ -96,8 +96,8 @@ final class qg {
           MatchingFieldValidator.field_o > 0) {
           fieldTemp$6 = MatchingFieldValidator.field_o - 1;
           MatchingFieldValidator.field_o = MatchingFieldValidator.field_o - 1;
-          var2_ref_byte__Lifetime1 = na.field_Z[fieldTemp$6];
-          na.field_Z[MatchingFieldValidator.field_o] = null;
+          var2_ref_byte__Lifetime1 = ProgressDialog.field_Z[fieldTemp$6];
+          ProgressDialog.field_Z[MatchingFieldValidator.field_o] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (param1 == 30000 &&

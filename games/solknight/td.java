@@ -67,13 +67,13 @@ final class td implements WidgetRenderer {
             for (var6_int = 1; var4 > var6_int; var6_int++) {
               cg.field_a[var6_int] = var14.readString(20);
             }
-            ld.c(var5, var4, 42);
+            ResizableModalDialog.c(var5, var4, 42);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               eh.a((byte) 68, var16);
               if (var6_intLifetime1 != 0) {
-                sf.a(fh.field_a, false, var6_intLifetime1, EditableTextField.field_P, nf.field_S, NanoFrameTimer.field_i);
+                sf.a(fh.field_a, false, var6_intLifetime1, EditableTextField.field_P, FullscreenStatusDialog.field_S, NanoFrameTimer.field_i);
               } else {
-                sf.a(fh.field_a, false, var6_intLifetime1, EditableTextField.field_P, nf.field_S, NanoFrameTimer.field_i);
+                sf.a(fh.field_a, false, var6_intLifetime1, EditableTextField.field_P, FullscreenStatusDialog.field_S, NanoFrameTimer.field_i);
               }
             }
             ta.b((byte) 105, var5);
@@ -87,10 +87,10 @@ final class td implements WidgetRenderer {
               var6[0][var10] = cg.field_a[var11];
               var20[0][var10 * 4] = qg.field_c[var11];
               var20[0][var10 * 4 + 1] = eh.field_a[var11];
-              var20[0][2 + 4 * var10] = ld.field_M[var11];
+              var20[0][2 + 4 * var10] = ResizableModalDialog.field_M[var11];
               var20[0][4 * var10 + 3] = ma.field_n[var11];
               if (RichTextWidget.a(cg.field_a[var11], (byte) -66) &&
-                ld.field_M[var11] + eh.field_a[var11] + ma.field_n[var11] == 0) {
+                ResizableModalDialog.field_M[var11] + eh.field_a[var11] + ma.field_n[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -105,10 +105,10 @@ final class td implements WidgetRenderer {
               var6[1][var15] = cg.field_a[var11Lifetime1];
               var20[1][4 * var15] = qg.field_c[var11Lifetime1];
               var20[1][1 + 4 * var15] = eh.field_a[var11Lifetime1];
-              var20[1][2 + 4 * var15] = ld.field_M[var11Lifetime1];
+              var20[1][2 + 4 * var15] = ResizableModalDialog.field_M[var11Lifetime1];
               var20[1][3 + var15 * 4] = ma.field_n[var11Lifetime1];
               if (RichTextWidget.a(cg.field_a[var11Lifetime1], (byte) -75) &&
-                ld.field_M[var11Lifetime1] + eh.field_a[var11Lifetime1] + ma.field_n[var11Lifetime1] == 0) {
+                ResizableModalDialog.field_M[var11Lifetime1] + eh.field_a[var11Lifetime1] + ma.field_n[var11Lifetime1] == 0) {
                 var6[1][var15] = null;
                 var15--;
               }

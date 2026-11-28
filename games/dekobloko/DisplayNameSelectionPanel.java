@@ -16,7 +16,7 @@ final class DisplayNameSelectionPanel extends ComponentContainer implements Name
         if (byteArgument1 < 69) {
           return false;
         }
-        return UiComponentPart023.booleanState0134;
+        return StandardContentDialog.booleanState0134;
     }
 
     final boolean handleKey(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
@@ -131,7 +131,7 @@ final class DisplayNameSelectionPanel extends ComponentContainer implements Name
         boolean stackBooleanLocal2 = false;
         ResourceArchive stackResourceArchiveLocal3 = null;
         boolean stackBooleanLocal4 = false;
-        if (UiComponentPart004.integerState0091 < 2) {
+        if (ContentTransitionDialog.integerState0091 < 2) {
           return 0;
         }
         if (AgeValidator.integerState0360 == 0) {
@@ -147,10 +147,10 @@ final class DisplayNameSelectionPanel extends ComponentContainer implements Name
           if (!PcmPlayerService.resourceArchiveState0020.tryLoadGroupByName("commonui", (byte) 57)) {
             return 60;
           }
-          if (!UiComponentPart023.resourceArchiveState0016.ensureIndexLoaded((byte) 121)) {
+          if (!StandardContentDialog.resourceArchiveState0016.ensureIndexLoaded((byte) 121)) {
             return 70;
           }
-          if (!UiComponentPart023.resourceArchiveState0016.tryLoadAllGroups(false)) {
+          if (!StandardContentDialog.resourceArchiveState0016.tryLoadAllGroups(false)) {
             return 80;
           }
         } else {
@@ -167,10 +167,10 @@ final class DisplayNameSelectionPanel extends ComponentContainer implements Name
             if (!PcmPlayerService.resourceArchiveState0020.tryLoadGroupByName("commonui", (byte) -125)) {
               return 80;
             }
-            if (!UiComponentPart023.resourceArchiveState0016.ensureIndexLoaded((byte) 121)) {
+            if (!StandardContentDialog.resourceArchiveState0016.ensureIndexLoaded((byte) 121)) {
               return 82;
             }
-            stackResourceArchiveLocal3 = UiComponentPart023.resourceArchiveState0016;
+            stackResourceArchiveLocal3 = StandardContentDialog.resourceArchiveState0016;
             stackBooleanLocal4 = (booleanArgument1) ? false : true;
             if (!((ResourceArchive) (Object) stackResourceArchiveLocal3).tryLoadAllGroups(stackBooleanLocal4)) {
               return 86;
@@ -197,10 +197,10 @@ final class DisplayNameSelectionPanel extends ComponentContainer implements Name
             if (!PcmPlayerService.resourceArchiveState0020.tryLoadGroupByName("commonui", (byte) -125)) {
               return 80;
             }
-            if (!UiComponentPart023.resourceArchiveState0016.ensureIndexLoaded((byte) 121)) {
+            if (!StandardContentDialog.resourceArchiveState0016.ensureIndexLoaded((byte) 121)) {
               return 82;
             }
-            stackResourceArchiveLocal1 = UiComponentPart023.resourceArchiveState0016;
+            stackResourceArchiveLocal1 = StandardContentDialog.resourceArchiveState0016;
             stackBooleanLocal2 = (booleanArgument1) ? false : true;
             if (!((ResourceArchive) (Object) stackResourceArchiveLocal1).tryLoadAllGroups(stackBooleanLocal2)) {
               return 86;
@@ -335,7 +335,7 @@ final class DisplayNameSelectionPanel extends ComponentContainer implements Name
             GameDomainSupport001.performAction0092((byte) -22);
           }
           ReturnedShape.performAction1432(12, AccountRegistrationPanel.booleanState0185, RenderingSupport002.floatState0002, LoginPanel.stringState0227);
-          UiComponentPart019.performAction1045(1, 0, 0, canvasArgument2);
+          BirthDateChatEnableForm.performAction1045(1, 0, 0, canvasArgument2);
           if (booleanArgument1) {
             return;
           }

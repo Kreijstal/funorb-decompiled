@@ -205,7 +205,7 @@ abstract class TextLayout {
                 NameSuggestionsPanel.field_J.a(RichTextLayout.c(-14047), 4096);
               } else {
                 if (fa.field_b.a((byte) 45) == ej.field_a) {
-                  mh.field_B.a(RichTextLayout.c(-14047), 4096);
+                  GuestPlayConfirmationForm.field_B.a(RichTextLayout.c(-14047), 4096);
                 }
               }
               fb.field_p = false;

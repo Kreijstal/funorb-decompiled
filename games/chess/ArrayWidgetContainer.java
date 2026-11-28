@@ -158,7 +158,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements WidgetContainerM
 
     final void setBounds(int param0, int param1, int param2, int param3, int param4) {
         super.setBounds(param0, (int) (char)param1, param2, param3, param4);
-        this.a(30);
+        this.layoutChildren(30);
     }
 
     final StringBuilder appendDebugTree(Hashtable param0, int param1, StringBuilder param2, int param3) {
@@ -705,7 +705,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements WidgetContainerM
         return (java.applet.Applet) ((Object) BitPacketBuffer.field_w);
     }
 
-    abstract void a(int param0);
+    abstract void layoutChildren(int param0);
 
     void drawWidget(int param0, int param1, int param2, int param3) {
         int var5 = 0;

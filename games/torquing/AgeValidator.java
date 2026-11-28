@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AgeValidator extends TextFieldValidator {
-    static hh field_l;
+    static FullscreenNoticeType field_l;
 
     public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 64) {
-          field_l = (hh) null;
+          field_l = (FullscreenNoticeType) null;
           field_l = null;
           return;
         }
@@ -55,7 +55,7 @@ final class AgeValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -85) {
-            field_l = (hh) null;
+            field_l = (FullscreenNoticeType) null;
           }
           var2 = TextLineMetrics.a((byte) -87, UrlRequest.a(param1, (byte) 121));
           if (var2 == null) {
@@ -176,6 +176,6 @@ final class AgeValidator extends TextFieldValidator {
     }
 
     static {
-        field_l = new hh();
+        field_l = new FullscreenNoticeType();
     }
 }

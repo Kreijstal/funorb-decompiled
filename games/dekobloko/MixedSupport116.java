@@ -279,7 +279,7 @@ final class MixedSupport116 {
           this.integerState0755 = SceneWidgetPart005.integerState0328;
           this.integerState0749 = SceneWidgetPart005.integerState0328;
           this.integerState0754 = integerArgument3;
-          this.integerState0750 = UiComponentPart014.integerState0316;
+          this.integerState0750 = FullscreenStatusDialog.integerState0316;
         }
         if (this.integerState0755 != 0 &&
           DualNode.integerState0062 != 0) {

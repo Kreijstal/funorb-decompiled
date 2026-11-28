@@ -28,7 +28,7 @@ final class EmailFormatValidator extends TextFieldValidator {
         ql.field_d = new ci(0L, (ci) null);
         ql.field_d.a((byte) 124, LoginPanel.field_W.field_a);
         ql.field_d.a((byte) 123, ln.field_cc);
-        e.g((byte) -128);
+        DialogMessagePane.g((byte) -128);
     }
 
     final static byte[] copyBytes(int param0, byte[] param1) {
@@ -102,7 +102,7 @@ final class EmailFormatValidator extends TextFieldValidator {
           int[] var2 = (int[]) null;
           EmailFormatValidator.a((byte) -38, (int[]) null);
         }
-        return null == rm.field_R ? wc.field_x : true;
+        return null == StripedProgressWidget.field_R ? wc.field_x : true;
     }
 
     final static boolean a(int param0, int param1, ResourceArchive param2, byte param3) {
@@ -169,9 +169,9 @@ final class EmailFormatValidator extends TextFieldValidator {
             if (var4_ref_tf != null &&
               var4_ref_tf.field_m < var2_long) {
               var4_ref_tf.unlink(-2193);
-              sb.field_sb = var4_ref_tf.field_j.length;
+              StandardContentDialog.field_sb = var4_ref_tf.field_j.length;
               tk.field_h.position = 0;
-              for (var5_int = 0; var5_int < sb.field_sb; var5_int++) {
+              for (var5_int = 0; var5_int < StandardContentDialog.field_sb; var5_int++) {
                 tk.field_h.data[var5_int] = var4_ref_tf.field_j[var5_int];
               }
               AlphaWidgetContainer.field_T = wc.field_u;
@@ -203,7 +203,7 @@ final class EmailFormatValidator extends TextFieldValidator {
               }
               da.field_p = tk.field_h.readCipheredByte(param0 ^ -31);
               tk.field_h.position = 0;
-              sb.field_sb = param1[da.field_p];
+              StandardContentDialog.field_sb = param1[da.field_p];
             }
             if (!jl.a(false)) {
               return false;
@@ -223,8 +223,8 @@ final class EmailFormatValidator extends TextFieldValidator {
                 var4 = 0;
               }
             }
-            var5 = new tf((long)var4 + var2_long, da.field_p, new byte[sb.field_sb]);
-            for (var6 = 0; var6 < sb.field_sb; var6++) {
+            var5 = new tf((long)var4 + var2_long, da.field_p, new byte[StandardContentDialog.field_sb]);
+            for (var6 = 0; var6 < StandardContentDialog.field_sb; var6++) {
               var5.field_j[var6] = tk.field_h.data[var6];
             }
             SingleChildWidgetContainer.field_I.addFirst((IntrusiveNode) (var5), (byte) -122);

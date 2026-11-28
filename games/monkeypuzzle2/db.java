@@ -38,7 +38,7 @@ final class db implements WidgetRenderer {
         ah.field_h = param0;
         rc.field_i = null;
         if (fk.field_a) {
-          me.field_f.q(105);
+          me.field_f.showConnectionFailure(105);
         } else {
           var1 = AlphaWidgetContainer.field_G;
           if (var1 > 0) {
@@ -49,7 +49,7 @@ final class db implements WidgetRenderer {
             }
             rc.field_i = vd.a(new CharSequence[]{(CharSequence) ((Object) rc.field_i), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) gb.field_n)}, (byte) -125);
           }
-          me.field_f.g((byte) -75);
+          me.field_f.closeDialog((byte) -75);
           hl.b(34);
         }
     }

@@ -31,9 +31,9 @@ final class MixedSupport130 {
           MatchingFieldValidator.sceneWidgetState0105.performAction1764(-6 + integerLocal2, 0, 3, -6 + RichTextLayout.sceneWidgetState0021.integerState0915, 3);
           integerLocal4 = -5 + MatchingFieldValidator.sceneWidgetState0105.integerState0915;
           MixedSupport116.sceneWidgetState0111.performAction1764(2 + (485 + integerArgument5) + integerArgument2, 0, -integerArgument1 + integerLocal4, integerArgument1, 5);
-          UiComponentPart033.sceneWidgetState0150.performAction1764(MixedSupport116.sceneWidgetState0111.integerState0896 - (integerArgument5 + DiagnosticSupport002.sceneWidgetState0057.integerState0896), 0, 0, integerArgument1, integerArgument5);
+          AccountCreationResultPanel.sceneWidgetState0150.performAction1764(MixedSupport116.sceneWidgetState0111.integerState0896 - (integerArgument5 + DiagnosticSupport002.sceneWidgetState0057.integerState0896), 0, 0, integerArgument1, integerArgument5);
           integerLocal4 = integerLocal4 - (integerArgument1 + 2);
-          DiagnosticSupport002.sceneWidgetState0057.performAction1764(DiagnosticSupport002.sceneWidgetState0057.integerState0896, 0, 0, integerArgument1, integerArgument5 + UiComponentPart033.sceneWidgetState0150.integerState0896);
+          DiagnosticSupport002.sceneWidgetState0057.performAction1764(DiagnosticSupport002.sceneWidgetState0057.integerState0896, 0, 0, integerArgument1, integerArgument5 + AccountCreationResultPanel.sceneWidgetState0150.integerState0896);
           NanoFrameTimer.sceneWidgetPart008State0001.performAction1122(6, 5, integerArgument2, 5, integerLocal4 - 5, 487 + integerArgument5 + integerArgument2, 2);
           if (null != MixedSupport009.uiComponentPart019State0001) {
             MixedSupport009.uiComponentPart019State0001.setBounds(NanoFrameTimer.sceneWidgetPart008State0001.integerState0915, NanoFrameTimer.sceneWidgetPart008State0001.integerState0896, NanoFrameTimer.sceneWidgetPart008State0001.integerState0890, NanoFrameTimer.sceneWidgetPart008State0001.integerState0903, -16555);
@@ -112,13 +112,13 @@ final class MixedSupport130 {
           MixedSupport021.integerState0124 > 0) {
           integerLocal3 = MixedSupport021.integerState0124 - 1;
           MixedSupport021.integerState0124 = MixedSupport021.integerState0124 - 1;
-          byteArrayLocal10 = UiComponentPart012.byteArrayArrayState0002[integerLocal3];
-          UiComponentPart012.byteArrayArrayState0002[MixedSupport021.integerState0124] = null;
+          byteArrayLocal10 = ProgressMessageDialog.byteArrayArrayState0002[integerLocal3];
+          ProgressMessageDialog.byteArrayArrayState0002[MixedSupport021.integerState0124] = null;
           return byteArrayLocal10;
         }
         if (null != LoginCredentials.byteArrayArrayArrayState0001) {
-          for (integerLocal4 = 0; MixedSupport080.integerArrayState0149.length > integerLocal4; integerLocal4++) {
-            if (MixedSupport080.integerArrayState0149[integerLocal4] == integerArgument2 &&
+          for (integerLocal4 = 0; FullscreenNoticeType.integerArrayState0149.length > integerLocal4; integerLocal4++) {
+            if (FullscreenNoticeType.integerArrayState0149[integerLocal4] == integerArgument2 &&
               MixedSupport143.integerArrayState0256[integerLocal4] > 0) {
               cachedIntegerLocal5 = MixedSupport143.integerArrayState0256[integerLocal4] - 1;
               arrayValue$7 = LoginCredentials.byteArrayArrayArrayState0001[integerLocal4];

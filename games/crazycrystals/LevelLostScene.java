@@ -39,7 +39,7 @@ final class LevelLostScene extends AnimatedResultScene {
             return;
           }
           if (param2 <= 105) {
-            qc.field_i = en.createAccountSuggestionsResult(param1, 169);
+            qc.field_i = ResizableModalDialog.createAccountSuggestionsResult(param1, 169);
             return;
           }
           qc.field_i = me.createAccountErrorResult(param3, 20, param2);

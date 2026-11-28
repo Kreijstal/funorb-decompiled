@@ -95,18 +95,18 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
     final static void d(byte param0) {
         if (param0 == 35) {
           if (me.field_f != null) {
-            me.field_f.g((byte) -75);
+            me.field_f.closeDialog((byte) -75);
           }
           sc.field_f = new DisplayNameSelectionPanel();
-          jh.field_C.c((byte) 36, sc.field_f);
+          StripedProgressWidget.field_C.replaceContent((byte) 36, sc.field_f);
           return;
         }
         field_j = (ResourceArchive) null;
         if (me.field_f != null) {
-          me.field_f.g((byte) -75);
+          me.field_f.closeDialog((byte) -75);
         }
         sc.field_f = new DisplayNameSelectionPanel();
-        jh.field_C.c((byte) 36, sc.field_f);
+        StripedProgressWidget.field_C.replaceContent((byte) 36, sc.field_f);
     }
 
     public final void onTextChanged(int param0, EditableTextField param1) {

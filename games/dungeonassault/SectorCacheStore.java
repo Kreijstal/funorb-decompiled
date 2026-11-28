@@ -41,7 +41,7 @@ final class SectorCacheStore {
             return stackIn_3_0;
           }
           if (param2 == 255) {
-            stackIn_8_0 = jk.a(new String[]{param1}, var3, 30496);
+            stackIn_8_0 = StandardContentDialog.a(new String[]{param1}, var3, 30496);
             return stackIn_8_0;
           }
           stackIn_6_0 = (String) null;

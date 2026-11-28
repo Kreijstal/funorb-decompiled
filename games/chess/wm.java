@@ -92,8 +92,8 @@ abstract class wm {
           ln.field_qc = param7;
           in.field_f = param10;
           ChessMatchSession.field_q = param11;
-          ba.field_Q = param3;
-          bj.field_pb = param4;
+          RegistrationAgreementPane.field_Q = param3;
+          ContentTransitionDialog.field_pb = param4;
           td.field_n = args;
           wn.field_d = param13;
           GzipInflater.field_e = param14;
@@ -130,11 +130,11 @@ abstract class wm {
           he.field_Hb = new ci((long)param2, DequeWidgetContainer.field_G, em.field_M.toUpperCase());
           oh.field_a = new ci(0L, DefaultTextWidgetRenderer.field_d);
           ue.field_d = new ci(0L, bo.field_e, ql.field_b);
-          in.field_b = new ci(0L, e.field_M, de.field_a);
-          ca.field_g = new ci(0L, e.field_M, qj.field_h);
-          NanoFrameTimer.field_l = new ci(0L, e.field_M, uj.field_l);
-          lg.field_c = new ci(0L, e.field_M, vh.field_d);
-          vk.field_i = new ci(0L, DualLinkNode.field_j, ba.field_R);
+          in.field_b = new ci(0L, DialogMessagePane.field_M, de.field_a);
+          ca.field_g = new ci(0L, DialogMessagePane.field_M, qj.field_h);
+          NanoFrameTimer.field_l = new ci(0L, DialogMessagePane.field_M, uj.field_l);
+          lg.field_c = new ci(0L, DialogMessagePane.field_M, vh.field_d);
+          vk.field_i = new ci(0L, DualLinkNode.field_j, RegistrationAgreementPane.field_R);
           ci.field_zb = new nb(0L, new ci(0L, (ci) null), FrameTimer.field_b, Bzip2State.field_o);
           ImageProducerRasterBuffer.field_l = new ci(0L, nj.field_x, ae.field_c.toUpperCase());
           ImageProducerRasterBuffer.field_l.field_tb = bo.field_c;
@@ -196,39 +196,39 @@ abstract class wm {
           sc.field_f = new ci(0L, DequeWidgetContainer.field_G);
           ce.field_d = new ci(0L, DefaultTextWidgetRenderer.field_d);
           DisplayNameSelectionPanel.field_M = new ci(0L, wc.field_B, ob.field_r.toUpperCase());
-          ba.field_P = new tl[param6 + 4][];
+          RegistrationAgreementPane.field_P = new tl[param6 + 4][];
           hm.field_c = new ci[4 + param6];
           hm.field_c[0] = new ci(0L, r.field_Tb, Bzip2State.field_w);
-          ba.field_P[0] = new tl[6];
+          RegistrationAgreementPane.field_P[0] = new tl[6];
           for (var17_int = 0; 5 > var17_int; var17_int++) {
-            ba.field_P[0][1 + var17_int] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, sh.field_b[var17_int], gf.field_a[var17_int]);
+            RegistrationAgreementPane.field_P[0][1 + var17_int] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, sh.field_b[var17_int], gf.field_a[var17_int]);
           }
           if (2 <= wn.field_d.length) {
             hm.field_c[1] = new ci(0L, r.field_Tb, tm.field_h);
             array$0 = new tl[1 + wn.field_d.length];
-            ba.field_P[1] = array$0;
-            ba.field_P[1][0] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) null, df.field_k);
+            RegistrationAgreementPane.field_P[1] = array$0;
+            RegistrationAgreementPane.field_P[1][0] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) null, df.field_k);
             for (var17_intLifetime1 = 0; var17_intLifetime1 < wn.field_d.length; var17_intLifetime1++) {
-              ba.field_P[1][var17_intLifetime1 + 1] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) null, Integer.toString(wn.field_d[var17_intLifetime1]));
+              RegistrationAgreementPane.field_P[1][var17_intLifetime1 + 1] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) null, Integer.toString(wn.field_d[var17_intLifetime1]));
             }
           }
           hm.field_c[2] = new ci(0L, r.field_Tb, DebouncedFieldValidator.field_d);
-          ba.field_P[2] = new tl[]{new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) null, df.field_k), new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, gi.field_c[0], fd.field_l), new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, gi.field_c[1], pe.field_c)};
+          RegistrationAgreementPane.field_P[2] = new tl[]{new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) null, df.field_k), new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, gi.field_c[0], fd.field_l), new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, gi.field_c[1], pe.field_c)};
           if (ChessMatchSession.field_q > 1) {
             hm.field_c[3] = new ci(0L, r.field_Tb, cl.field_a);
             array$1 = new tl[ChessMatchSession.field_q + 1];
-            ba.field_P[3] = array$1;
-            ba.field_P[3][0] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) null, df.field_k);
+            RegistrationAgreementPane.field_P[3] = array$1;
+            RegistrationAgreementPane.field_P[3][0] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) null, df.field_k);
             for (var17_intLifetime2 = 0; ChessMatchSession.field_q > var17_intLifetime2; var17_intLifetime2++) {
-              ba.field_P[3][var17_intLifetime2 + 1] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) null, bj.field_pb[var17_intLifetime2]);
+              RegistrationAgreementPane.field_P[3][var17_intLifetime2 + 1] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) null, ContentTransitionDialog.field_pb[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; var17_intLifetime3 < param6; var17_intLifetime3++) {
             hm.field_c[4 + var17_intLifetime3] = new ci(0L, r.field_Tb, td.field_n[var17_intLifetime3]);
-            array$2 = new tl[ce.a((int) ba.field_Q[var17_intLifetime3], 255) + 1];
-            ba.field_P[var17_intLifetime3 + 4] = array$2;
-            ba.field_P[4 + var17_intLifetime3][0] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) null, df.field_k);
-            for (var18 = 0; (255 & ba.field_Q[var17_intLifetime3]) > var18; var18++) {
+            array$2 = new tl[ce.a((int) RegistrationAgreementPane.field_Q[var17_intLifetime3], 255) + 1];
+            RegistrationAgreementPane.field_P[var17_intLifetime3 + 4] = array$2;
+            RegistrationAgreementPane.field_P[4 + var17_intLifetime3][0] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) null, df.field_k);
+            for (var18 = 0; (255 & RegistrationAgreementPane.field_Q[var17_intLifetime3]) > var18; var18++) {
               if (GzipInflater.field_e == null) {
                 var19_ref = null;
               } else {
@@ -247,18 +247,18 @@ abstract class wm {
                   var20 = null;
                 }
               }
-              ba.field_P[4 + var17_intLifetime3][var18 + 1] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) (var19_ref), (String) (var20));
+              RegistrationAgreementPane.field_P[4 + var17_intLifetime3][var18 + 1] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; var17_intLifetime4 < 4 + param6; var17_intLifetime4++) {
             if (null != hm.field_c[var17_intLifetime4]) {
               hm.field_c[var17_intLifetime4].field_K = 11;
             }
-            if (null != ba.field_P[var17_intLifetime4]) {
-              for (var18Lifetime1 = 0; ba.field_P[var17_intLifetime4].length > var18Lifetime1; var18Lifetime1++) {
-                if (ba.field_P[var17_intLifetime4][var18Lifetime1] != null &&
-                  ba.field_P[var17_intLifetime4][var18Lifetime1].field_Hb != null) {
-                  ba.field_P[var17_intLifetime4][var18Lifetime1].field_Hb.field_K = 11;
+            if (null != RegistrationAgreementPane.field_P[var17_intLifetime4]) {
+              for (var18Lifetime1 = 0; RegistrationAgreementPane.field_P[var17_intLifetime4].length > var18Lifetime1; var18Lifetime1++) {
+                if (RegistrationAgreementPane.field_P[var17_intLifetime4][var18Lifetime1] != null &&
+                  RegistrationAgreementPane.field_P[var17_intLifetime4][var18Lifetime1].field_Hb != null) {
+                  RegistrationAgreementPane.field_P[var17_intLifetime4][var18Lifetime1].field_Hb.field_K = 11;
                 }
               }
             }
@@ -279,9 +279,9 @@ abstract class wm {
               !(wn.field_d.length < 2)) && (var18Lifetime2 != 3 ||
               !(1 >= ChessMatchSession.field_q))) {
               ce.field_d.a((byte) 123, hm.field_c[var18Lifetime2]);
-              for (var19 = 0; var19 < ba.field_P[var18Lifetime2].length; var19++) {
-                if (ba.field_P[var18Lifetime2][var19] != null) {
-                  ce.field_d.a((byte) 123, ba.field_P[var18Lifetime2][var19]);
+              for (var19 = 0; var19 < RegistrationAgreementPane.field_P[var18Lifetime2].length; var19++) {
+                if (RegistrationAgreementPane.field_P[var18Lifetime2][var19] != null) {
+                  ce.field_d.a((byte) 123, RegistrationAgreementPane.field_P[var18Lifetime2][var19]);
                 }
               }
             }

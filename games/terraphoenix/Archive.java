@@ -278,7 +278,7 @@ final class Archive {
             param2[1] != 0 ||
             param2[2] != 0 ||
             param2[3] != 0)) {
-            var35 = ei.extractBytes(this.field_k[param3], true, false);
+            var35 = ResizableModalDialog.extractBytes(this.field_k[param3], true, false);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -287,7 +287,7 @@ final class Archive {
           }
           else {
             stackIn_33_0 = this.field_k[param3];
-            var9 = ei.extractBytes(stackIn_33_0, false, false);
+            var9 = ResizableModalDialog.extractBytes(stackIn_33_0, false, false);
           }
           try {
             var36 = qg.a(-1, var9);
@@ -618,7 +618,7 @@ final class Archive {
             throw new RuntimeException("");
           }
           if (this.field_g[param3][param2] != null) {
-            var7 = ei.extractBytes(this.field_g[param3][param2], false, false);
+            var7 = ResizableModalDialog.extractBytes(this.field_g[param3][param2], false, false);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");

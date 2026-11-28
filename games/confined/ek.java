@@ -553,7 +553,7 @@ final class ek {
                     stackIn_19_0 = DiskCacheWorker.field_e;
                   }
                 } else {
-                  stackIn_19_0 = ei.field_mb;
+                  stackIn_19_0 = FullscreenStatusDialog.field_mb;
                 }
                 stackIn_21_0 = stackIn_19_0[(7 & this.field_m) >> 1];
                 stackIn_21_1 = var22 - var24;

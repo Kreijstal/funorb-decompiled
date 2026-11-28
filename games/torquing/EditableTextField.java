@@ -489,7 +489,7 @@ class EditableTextField extends InteractiveWidget {
               if (param0 == 96) {
                 if (this.field_G > 0) {
                   stackIn_49_1 = -84;
-                  if (!i.field_P[82]) {
+                  if (!FullscreenStatusDialog.field_P[82]) {
                     stackIn_50_2 = this.field_G - 1;
                   } else {
                     stackIn_50_2 = this.findPreviousWordBoundary((byte) -127);
@@ -511,17 +511,17 @@ class EditableTextField extends InteractiveWidget {
                     this.submitText(123);
                     return true;
                   }
-                  if (i.field_P[82] &&
+                  if (FullscreenStatusDialog.field_P[82] &&
                     param0 == 65) {
                     this.cutSelection(-1);
                     return true;
                   }
-                  if (i.field_P[82] &&
+                  if (FullscreenStatusDialog.field_P[82] &&
                     param0 == 66) {
                     this.copySelection((byte) 102);
                     return true;
                   }
-                  if (i.field_P[82] &&
+                  if (FullscreenStatusDialog.field_P[82] &&
                     param0 == 67) {
                     this.pasteClipboardText(-121);
                     return true;
@@ -529,7 +529,7 @@ class EditableTextField extends InteractiveWidget {
                 } else {
                   if (this.field_G < this.text.length()) {
                     stackIn_22_1 = -49;
-                    if (!i.field_P[82]) {
+                    if (!FullscreenStatusDialog.field_P[82]) {
                       stackIn_23_2 = this.field_G + 1;
                     } else {
                       stackIn_23_2 = this.findNextWordBoundary((byte) 74);
@@ -612,7 +612,7 @@ class EditableTextField extends InteractiveWidget {
           return;
         }
         this.field_G = param1;
-        if (!i.field_P[81]) {
+        if (!FullscreenStatusDialog.field_P[81]) {
           this.field_C = this.field_G;
         }
     }

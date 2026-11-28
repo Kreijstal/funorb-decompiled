@@ -121,10 +121,10 @@ final class cf extends ci {
                 var7 = hm.field_c[var6];
                 hm.field_c[var6].field_pb = 0;
                 var7.field_M = 0;
-                for (var8 = 0; var8 < ba.field_P[var6].length; var8++) {
-                  if (null != ba.field_P[var6][var8]) {
-                    var9 = ba.field_P[var6][var8];
-                    ba.field_P[var6][var8].field_pb = 0;
+                for (var8 = 0; var8 < RegistrationAgreementPane.field_P[var6].length; var8++) {
+                  if (null != RegistrationAgreementPane.field_P[var6][var8]) {
+                    var9 = RegistrationAgreementPane.field_P[var6][var8];
+                    RegistrationAgreementPane.field_P[var6][var8].field_pb = 0;
                     var9.field_M = 0;
                   }
                 }
@@ -134,12 +134,12 @@ final class cf extends ci {
                 var7 = var14;
                 hm.field_c[var6].field_pb = 0;
                 var14.field_M = 0;
-                for (var8 = 0; ba.field_P[var6].length > var8; var8++) {
+                for (var8 = 0; RegistrationAgreementPane.field_P[var6].length > var8; var8++) {
                   stackIn_32_0 = null;
-                  stackIn_32_1 = ba.field_P[var6][var8];
+                  stackIn_32_1 = RegistrationAgreementPane.field_P[var6][var8];
                   if (stackIn_32_0 != stackIn_32_1) {
-                    var9 = ba.field_P[var6][var8];
-                    ba.field_P[var6][var8].field_pb = 0;
+                    var9 = RegistrationAgreementPane.field_P[var6][var8];
+                    RegistrationAgreementPane.field_P[var6][var8].field_pb = 0;
                     var9.field_M = 0;
                   }
                 }
@@ -164,10 +164,10 @@ final class cf extends ci {
                   var8_ref_ci.field_M = 0;
                   var15 = 0;
                   var9_int = var15;
-                  while (var15 < ba.field_P[var6].length) {
-                    if (ba.field_P[var6][var15] != null) {
-                      var10 = ba.field_P[var6][var15];
-                      ba.field_P[var6][var15].field_pb = 0;
+                  while (var15 < RegistrationAgreementPane.field_P[var6].length) {
+                    if (RegistrationAgreementPane.field_P[var6][var15] != null) {
+                      var10 = RegistrationAgreementPane.field_P[var6][var15];
+                      RegistrationAgreementPane.field_P[var6][var15].field_pb = 0;
                       var10.field_M = 0;
                     }
                     var15++;
@@ -176,20 +176,20 @@ final class cf extends ci {
                   hm.field_c[var6].a(5, 103, -2147483648, var3, var5);
                   var8 = 110;
                   if (param1) {
-                    ba.field_P[var6][0].a(38, qc.field_e, var3, var8, var5, (byte) -22, 2);
+                    RegistrationAgreementPane.field_P[var6][0].a(38, qc.field_e, var3, var8, var5, (byte) -22, 2);
                     var8 += 40;
                   } else {
-                    if (ba.field_P[var6][0] != null) {
-                      var9 = ba.field_P[var6][0];
-                      ba.field_P[var6][0].field_pb = 0;
+                    if (RegistrationAgreementPane.field_P[var6][0] != null) {
+                      var9 = RegistrationAgreementPane.field_P[var6][0];
+                      RegistrationAgreementPane.field_P[var6][0].field_pb = 0;
                       var9.field_M = 0;
                     }
                   }
                   var9_int = 2 + (-var8 + BirthDateValidator.field_k.field_M) - 5;
-                  var10_int = ba.field_P[var6].length - 1;
+                  var10_int = RegistrationAgreementPane.field_P[var6].length - 1;
                   for (var11 = 0; var10_int > var11; var11++) {
                     var12 = var9_int * var11 / var10_int;
-                    ba.field_P[var6][1 + var11].a(-var12 + ((1 + var11) * var9_int / var10_int - 2), qc.field_e, var3, var12 + var8, var5, (byte) -22, 2);
+                    RegistrationAgreementPane.field_P[var6][1 + var11].a(-var12 + ((1 + var11) * var9_int / var10_int - 2), qc.field_e, var3, var12 + var8, var5, (byte) -22, 2);
                   }
                   var5 = var5 + (2 + var3);
                 }

@@ -39,7 +39,7 @@ final class rb extends ue {
           var2 = param0.getParameter("username");
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
-            if (ck.a((byte) -29, var3) != 0L) {
+            if (StandardContentDialog.a((byte) -29, var3) != 0L) {
               return;
             }
           }
@@ -76,7 +76,7 @@ final class rb extends ue {
             if (!EditableTextField.field_L.tryLoadGroupByName(param0 ^ -20410, "benefits")) {
               if (!ob.field_o &&
                 EditableTextField.field_L.tryLoadGroupByName(param0 ^ -20410, "screenshots")) {
-                IsaacRandom.a(6437, bf.a(-1, "screenshots", "screenshots", EditableTextField.field_L));
+                IsaacRandom.a(6437, FullscreenNoticeType.a(-1, "screenshots", "screenshots", EditableTextField.field_L));
                 ob.field_o = true;
                 vp.a(127);
               }
@@ -97,7 +97,7 @@ final class rb extends ue {
           }
           if ((decompiledFrameRemainder0) && (!ob.field_o &&
             EditableTextField.field_L.tryLoadGroupByName(param0 ^ -20410, "screenshots"))) {
-            IsaacRandom.a(6437, bf.a(-1, "screenshots", "screenshots", EditableTextField.field_L));
+            IsaacRandom.a(6437, FullscreenNoticeType.a(-1, "screenshots", "screenshots", EditableTextField.field_L));
             ob.field_o = true;
             vp.a(127);
           }

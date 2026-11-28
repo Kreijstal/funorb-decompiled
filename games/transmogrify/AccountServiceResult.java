@@ -28,7 +28,7 @@ final class AccountServiceResult {
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = EditableTextField.field_D[vg.c((int) var4[var6], 255)];
           }
-          var1[var2] = new Sprite(NetworkArchiveRequest.field_y, ll.field_U, BufferedSocket.field_j[var2], Bzip2State.field_a[var2], ql.field_b[var2], wk.field_b[var2], var5);
+          var1[var2] = new Sprite(NetworkArchiveRequest.field_y, FullscreenStatusDialog.field_U, BufferedSocket.field_j[var2], Bzip2State.field_a[var2], ql.field_b[var2], wk.field_b[var2], var5);
         }
         wd.d(-9);
         if (param0 == 31151) {

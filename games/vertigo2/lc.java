@@ -62,7 +62,7 @@ final class lc {
           ej.field_c = new byte[eo.field_m][];
           se.field_y = new byte[eo.field_m][];
           var17.position = param1.length - 7 - eo.field_m * 8;
-          ql.field_M = var17.readUnsignedShort((byte) -11);
+          BirthDateChatEnableForm.field_M = var17.readUnsignedShort((byte) -11);
           vj.field_c = var17.readUnsignedShort((byte) -11);
           var3 = (var17.readUnsignedByte(-11) & 255) + 1;
           for (var4 = 0; eo.field_m > var4; var4++) {

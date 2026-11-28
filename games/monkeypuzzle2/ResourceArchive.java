@@ -48,12 +48,12 @@ final class ResourceArchive {
             return true;
           }
           var6 = (CharSequence) ((Object) param2);
-          var4_int = this.field_a.field_b.a(param1, ra.a((byte) -21, var6));
+          var4_int = this.field_a.field_b.a(param1, StandardContentDialog.a((byte) -21, var6));
           if (!this.validateGroupId((byte) 115, var4_int)) {
             return false;
           }
           var7 = (CharSequence) ((Object) param0);
-          var5 = this.field_a.field_t[var4_int].a(param1, ra.a((byte) 99, var7));
+          var5 = this.field_a.field_t[var4_int].a(param1, StandardContentDialog.a((byte) 99, var7));
           stackIn_10_0 = this.tryLoadFile(var4_int, var5, -119);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -176,7 +176,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.field_a.field_b.a(true, ra.a((byte) 115, var4));
+          var3_int = this.field_a.field_b.a(true, StandardContentDialog.a((byte) 115, var4));
           stackIn_6_0 = this.tryLoadGroup(false, var3_int);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -225,7 +225,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_a.field_b.a(true, ra.a((byte) -14, var4));
+          var3_int = this.field_a.field_b.a(true, StandardContentDialog.a((byte) -14, var4));
           if (this.validateGroupId((byte) 73, var3_int)) {
             return var3_int;
           }
@@ -297,7 +297,7 @@ final class ResourceArchive {
           var3_int = 20 % ((param1 + 58) / 43);
           param0 = param0.toLowerCase();
           var5 = (CharSequence) ((Object) param0);
-          var4 = this.field_a.field_b.a(true, ra.a((byte) 104, var5));
+          var4 = this.field_a.field_b.a(true, StandardContentDialog.a((byte) 104, var5));
           if (var4 >= 0) {
             return true;
           }
@@ -633,12 +633,12 @@ final class ResourceArchive {
           param0 = param0.toLowerCase();
           var5 = 26 / ((-88 - param2) / 36);
           var7 = (CharSequence) ((Object) param1);
-          var4_int = this.field_a.field_b.a(true, ra.a((byte) 125, var7));
+          var4_int = this.field_a.field_b.a(true, StandardContentDialog.a((byte) 125, var7));
           if (!this.validateGroupId((byte) 117, var4_int)) {
             return null;
           }
           var8 = (CharSequence) ((Object) param0);
-          var6 = this.field_a.field_t[var4_int].a(true, ra.a((byte) -59, var8));
+          var6 = this.field_a.field_t[var4_int].a(true, StandardContentDialog.a((byte) -59, var8));
           stackIn_7_0 = this.getFile(255, var6, var4_int);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -748,7 +748,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var5 = (CharSequence) ((Object) param0);
-          var4_int = this.field_a.field_t[param1].a(true, ra.a((byte) 3, var5));
+          var4_int = this.field_a.field_t[param1].a(true, StandardContentDialog.a((byte) 3, var5));
           if (param2 != -28459) {
             ((int[]) (((Object[]) (((Object[]) (this.field_h[1]))[14]))[2]))[0] = -43;
           }
@@ -841,7 +841,7 @@ final class ResourceArchive {
                 IntrusiveDeque.field_b = h.a(param1 ^ -739, false, param4, param5);
               } else {
                 var11 = (String) null;
-                IntrusiveDeque.field_b = sk.a(param4, ProxySocketConnector.field_f, false, true, (String) null);
+                IntrusiveDeque.field_b = DialogMessagePane.a(param4, ProxySocketConnector.field_f, false, true, (String) null);
               }
               SectorCacheStore.field_c.position = 0;
               SectorCacheStore.field_c.writeByte(14, -49152);
@@ -1050,7 +1050,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_a.field_b.a(true, ra.a((byte) -117, var4));
+          var3_int = this.field_a.field_b.a(true, StandardContentDialog.a((byte) -117, var4));
           stackIn_7_0 = this.getGroupLoadPercent(var3_int, 11619);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

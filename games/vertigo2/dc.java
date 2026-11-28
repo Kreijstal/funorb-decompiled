@@ -126,12 +126,12 @@ final class dc extends TextureOperator {
           var4 = 2048 + this.field_I * lf.field_y[param0];
           var5 = var4 >> 12;
           var6 = 1 + var5;
-          for (var14 = 0; var14 < we.field_M; var14++) {
+          for (var14 = 0; var14 < StripedProgressWidget.field_M; var14++) {
             pl.field_q = 2147483647;
             PlayerAvatarRenderer.field_p = 2147483647;
             hj.field_d = 2147483647;
             fq.field_g = 2147483647;
-            var15 = this.field_y * rh.field_O[var14] + 2048;
+            var15 = this.field_y * DialogMessagePane.field_O[var14] + 2048;
             var16 = var15 >> 12;
             var17 = 1 + var16;
             for (var8 = -1 + var5; var8 <= var6; var8++) {

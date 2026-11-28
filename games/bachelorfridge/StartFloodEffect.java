@@ -313,7 +313,7 @@ final class StartFloodEffect extends EventEffect {
             if (fr.field_l[var4Lifetime2] < 0) {
               stackIn_117_1 = FlyAnimation.field_z;
             } else {
-              stackIn_117_1 = hc.field_D;
+              stackIn_117_1 = DialogMessagePane.field_D;
             }
             qk.field_l = stackIn_116_0 + stackIn_117_1;
           }
@@ -333,8 +333,8 @@ final class StartFloodEffect extends EventEffect {
               a.field_m[var4Lifetime3][0] = -vt.field_k + var8Lifetime1;
               a.field_m[var4Lifetime3][1] = var5Lifetime3;
               a.field_m[var4Lifetime3][2] = var7Lifetime2 + (vt.field_k << 1);
-              a.field_m[var4Lifetime3][3] = (um.field_d << 1) + hc.field_D;
-              var5Lifetime3 = var5Lifetime3 + (hc.field_D + cba.field_d + (um.field_d << 1));
+              a.field_m[var4Lifetime3][3] = (um.field_d << 1) + DialogMessagePane.field_D;
+              var5Lifetime3 = var5Lifetime3 + (DialogMessagePane.field_D + cba.field_d + (um.field_d << 1));
             }
             var4Lifetime3++;
           }

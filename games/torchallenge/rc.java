@@ -586,7 +586,7 @@ class rc extends DualLinkNode {
           }
           if (!t.a(16, var4, 116) &&
             g.a(125, 0) &&
-            qh.field_J >= 150) {
+            RegistrationAgreementPane.field_J >= 150) {
             var5Lifetime6 = 16;
             var6Lifetime1 = 255 - var5Lifetime6;
             hf.a(var6Lifetime1, param0 + 97, var5Lifetime6);

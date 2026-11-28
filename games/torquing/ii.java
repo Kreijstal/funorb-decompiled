@@ -54,7 +54,7 @@ final class ii extends IntrusiveNode {
               var3_int = 1;
               cf.field_c = false;
             }
-            sc.a(kg.a((byte) 49), rd.field_A, var3_int != 0, (byte) 21, ro.b(-126));
+            RegistrationAgreementPane.a(kg.a((byte) 49), rd.field_A, var3_int != 0, (byte) 21, ro.b(-126));
             return;
           }
           if (!pl.b(-109)) {

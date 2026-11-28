@@ -46,7 +46,7 @@ final class ia {
             stackIn_12_0 = 3;
             return stackIn_12_0;
           }
-          if (rk.field_X == oe.field_b) {
+          if (ProgressDialog.field_X == oe.field_b) {
             stackIn_15_0 = 1;
             return stackIn_15_0;
           }

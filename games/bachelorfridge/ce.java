@@ -106,9 +106,9 @@ final class ce extends AttackEvent {
           var7 = SoftwareRasterizer.field_i;
           var8 = SoftwareRasterizer.field_c;
           if (MouseWheelInput.field_a != null &&
-            lo.field_b != null) {
-            param2 = param2 - (lo.field_b.field_u - lo.field_b.field_B);
-            var9 = lo.field_b.stringWidth(param3);
+            FullscreenNoticeType.field_b != null) {
+            param2 = param2 - (FullscreenNoticeType.field_b.field_u - FullscreenNoticeType.field_b.field_B);
+            var9 = FullscreenNoticeType.field_b.stringWidth(param3);
             var9 += 10;
             MouseWheelInput.field_a.bindAsRenderTarget();
             if ((1 & var9) == 1) {
@@ -118,7 +118,7 @@ final class ce extends AttackEvent {
             if (!param0) {
               field_x = 120;
             }
-            lo.field_b.drawText(param3, 5, 3 + lo.field_b.field_u, 0, -1);
+            FullscreenNoticeType.field_b.drawText(param3, 5, 3 + FullscreenNoticeType.field_b.field_u, 0, -1);
             SoftwareRasterizer.setTarget(var12, var7, var8);
             HomingMissileEvent.d((byte) 69);
             if (param5) {

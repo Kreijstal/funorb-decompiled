@@ -11,7 +11,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
     static String field_c;
 
     final static void e(int param0) {
-        if (!ge.field_D) {
+        if (!RegistrationAgreementPane.field_D) {
           throw new IllegalStateException();
         }
         BufferedSocket.field_d = true;

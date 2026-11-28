@@ -97,7 +97,7 @@ final class rh extends RichTextWidget {
             }
           }
           var26.drawRotatedAbout(112, 144, var26.field_t << 4, var26.field_x << 4, -this.field_Y << 10, 4096);
-          ib.b(false);
+          StripedProgressWidget.b(false);
           this.field_eb.drawAdditive(var9 - (var26.field_t >> 1), var10 - var26.field_x, 256);
           return;
         }
@@ -121,7 +121,7 @@ final class rh extends RichTextWidget {
             vm.a(this.field_eb, -8409);
           }
           var18.drawRotatedAbout(112, 144, var18.field_t << 4, var18.field_x << 4, -this.field_Y << 10, 4096);
-          ib.b(false);
+          StripedProgressWidget.b(false);
           this.field_eb.drawAdditive(var9Lifetime1 - (var18.field_t >> 1), var10Lifetime1 - var18.field_x, 256);
           return;
         }
@@ -152,7 +152,7 @@ final class rh extends RichTextWidget {
           vm.a(this.field_eb, -8409);
         }
         var19.drawRotatedAbout(112, 144, var19.field_t << 4, var19.field_x << 4, -this.field_Y << 10, 4096);
-        ib.b(false);
+        StripedProgressWidget.b(false);
         this.field_eb.drawAdditive(var9Lifetime1 - (var19.field_t >> 1), var10Lifetime1 - var19.field_x, 256);
         return;
     }

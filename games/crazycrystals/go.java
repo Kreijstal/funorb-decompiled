@@ -16,7 +16,7 @@ final class go extends ScoreModifier {
         RuntimeException var2 = null;
         var3 = CrazyCrystals.field_B;
         try {
-          WallTile.a(ae.field_F, param0, SecondaryNodeDeque.field_c, true, uo.field_m, (byte) 119, 0);
+          WallTile.a(GuestPlayConfirmationForm.field_F, param0, SecondaryNodeDeque.field_c, true, uo.field_m, (byte) 119, 0);
           for (var2_int = 0; SecondaryNodeDeque.field_c > var2_int; var2_int++) {
             wp.field_d[var2_int + param0] = var2_int;
           }

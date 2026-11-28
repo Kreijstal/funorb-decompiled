@@ -61,16 +61,16 @@ final class wc {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }
-            if (jk.field_y == InteractiveWidget.field_z) {
+            if (GuestPlayConfirmationForm.field_y == InteractiveWidget.field_z) {
               if (param4) {
                 var11 = (String) null;
-                ll.field_V = dk.a((String) null, ac.field_j, false, param2, 126);
+                FullscreenStatusDialog.field_V = dk.a((String) null, ac.field_j, false, param2, 126);
               } else {
-                ll.field_V = bf.a(param5, (byte) 41, false, param2);
+                FullscreenStatusDialog.field_V = bf.a(param5, (byte) 41, false, param2);
               }
               LoginPanel.field_D.position = 0;
               LoginPanel.field_D.writeByte(6389, 14);
-              LoginPanel.field_D.writeByte(6389, ll.field_V.a(-184).field_a);
+              LoginPanel.field_D.writeByte(6389, FullscreenStatusDialog.field_V.a(-184).field_a);
               rb.a(-1, -377);
               InteractiveWidget.field_z = DropTargetWidgetContainer.field_y;
             }
@@ -90,7 +90,7 @@ final class wc {
               TextLayout.a(8, 0)) {
               fd.field_g = WordLanguage.field_l.readLong((byte) -115);
               WordLanguage.field_l.position = 0;
-              tb.a(ll.field_V, param0, param3, param4, 122);
+              tb.a(FullscreenStatusDialog.field_V, param0, param3, param4, 122);
               InteractiveWidget.field_z = DisplayNameSelectionPanel.field_I;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -153,9 +153,9 @@ final class wc {
               var12 = (CharSequence) ((Object) NodeHashTableIterator.field_a);
               NanoFrameTimer.field_e = BitPacketBuffer.normalizePlayerName((byte) -128, var12);
               db.field_d = WordLanguage.field_l.readUnsignedByte((byte) 123);
-              InteractiveWidget.field_z = ll.field_Q;
-              if (ll.field_V.a(-184) != wh.field_I) {
-                if (ll.field_V.a(-184) == ValidatedTextField.field_G) {
+              InteractiveWidget.field_z = FullscreenStatusDialog.field_Q;
+              if (FullscreenStatusDialog.field_V.a(-184) != wh.field_I) {
+                if (FullscreenStatusDialog.field_V.a(-184) == ValidatedTextField.field_G) {
                   of.field_f.a(ha.b(101), 0);
                 }
               } else {

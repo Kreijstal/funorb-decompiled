@@ -147,7 +147,7 @@ final class rc implements WidgetRenderer {
             null != param4.field_P) {
             se.a(0);
           }
-          ei.field_jb = 0;
+          FullscreenStatusDialog.field_jb = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(param4.field_w > var8)))) {
@@ -204,7 +204,7 @@ final class rc implements WidgetRenderer {
                           dupTemp$0 = param4.field_P[var8];
                           bd.field_g[dupTemp$0] = bd.field_g[dupTemp$0] + 1;
                         }
-                        ei.field_jb = ei.field_jb + 1;
+                        FullscreenStatusDialog.field_jb = FullscreenStatusDialog.field_jb + 1;
                         break;
                       }
                     }
@@ -331,7 +331,7 @@ final class rc implements WidgetRenderer {
             null != param4.field_P) {
             se.a(0);
           }
-          ei.field_jb = 0;
+          FullscreenStatusDialog.field_jb = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(param4.field_w > var8)))) {
@@ -388,7 +388,7 @@ final class rc implements WidgetRenderer {
                           dupTemp$0 = param4.field_P[var8];
                           bd.field_g[dupTemp$0] = bd.field_g[dupTemp$0] + 1;
                         }
-                        ei.field_jb = ei.field_jb + 1;
+                        FullscreenStatusDialog.field_jb = FullscreenStatusDialog.field_jb + 1;
                         break;
                       }
                     }

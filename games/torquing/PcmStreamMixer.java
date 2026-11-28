@@ -116,7 +116,7 @@ final class PcmStreamMixer extends PcmStream {
 
     private final void addChildStreamWithDelay(PcmStream param0, int param1) {
         if (param1 > 0) {
-          param0 = (PcmStream) ((Object) qc.a(param1, (byte) -112, param0));
+          param0 = (PcmStream) ((Object) StandardContentDialog.a(param1, (byte) -112, param0));
         }
         this.addChildStream(param0);
     }

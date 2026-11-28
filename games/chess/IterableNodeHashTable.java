@@ -137,11 +137,11 @@ final class IterableNodeHashTable implements Iterable {
           bb.a(param16, param10, param18, (byte) -105, param4);
           DirectByteStorage.a(param16, 1);
           wm.a(args, param11, 0, param6, param17, param16, param3, param14, param15, param19, param12, param1, param7, param8, param13);
-          ij.a(param5, param9, param16, (byte) 91);
+          FullscreenNoticeType.a(param5, param9, param16, (byte) 91);
           if (param2 != 31) {
             return;
           }
-          vn.l(param2 - 25);
+          ProgressMessageDialog.l(param2 - 25);
           EmailFormatValidator.b((byte) -108);
           th.c(106);
           return;

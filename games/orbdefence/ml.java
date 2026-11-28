@@ -82,7 +82,7 @@ final class ml {
         this.field_k = 0;
         this.field_d = 0;
         if (this.field_b == 0) {
-          this.field_k = ob.field_K;
+          this.field_k = RegistrationAgreementPane.field_K;
           if (this.field_b != 0) {
             if (this.field_b != 0) {
               if (param0 == -74) {
@@ -91,7 +91,7 @@ final class ml {
               this.a((byte) 14);
               return;
             }
-            if (ob.field_K != 99) {
+            if (RegistrationAgreementPane.field_K != 99) {
               if (param0 != -74) {
                 this.a((byte) 14);
                 return;
@@ -109,7 +109,7 @@ final class ml {
             }
             return;
           }
-          if (ob.field_K == 98) {
+          if (RegistrationAgreementPane.field_K == 98) {
             if (this.field_h <= 0) {
               this.field_h = this.field_i;
             }
@@ -123,7 +123,7 @@ final class ml {
             }
             return;
           }
-          if (ob.field_K == 99) {
+          if (RegistrationAgreementPane.field_K == 99) {
             this.field_h = this.field_h + 1;
             if (this.field_h >= this.field_i) {
               this.field_h = 0;
@@ -137,9 +137,9 @@ final class ml {
           return;
         }
         if (this.field_b == 0) {
-          if (ob.field_K != 98) {
+          if (RegistrationAgreementPane.field_K != 98) {
             if (this.field_b == 0 &&
-              ob.field_K == 99) {
+              RegistrationAgreementPane.field_K == 99) {
               this.field_h = this.field_h + 1;
               if (this.field_h >= this.field_i) {
                 this.field_h = 0;
@@ -159,7 +159,7 @@ final class ml {
           this.field_g = false;
         }
         if (this.field_b == 0 &&
-          ob.field_K == 99) {
+          RegistrationAgreementPane.field_K == 99) {
           this.field_h = this.field_h + 1;
           if (this.field_h >= this.field_i) {
             this.field_h = 0;
@@ -329,10 +329,10 @@ final class ml {
         this.field_k = 0;
         var2 = 82 / ((-64 - param0) / 49);
         if (this.field_b == 0) {
-          this.field_k = ob.field_K;
+          this.field_k = RegistrationAgreementPane.field_K;
         }
         if (this.field_b == 0 &&
-          ob.field_K == 96) {
+          RegistrationAgreementPane.field_K == 96) {
           if (this.field_h <= 0) {
             this.field_h = this.field_i;
           }
@@ -342,7 +342,7 @@ final class ml {
         if (this.field_b != 0) {
           return;
         }
-        if (ob.field_K != 97) {
+        if (RegistrationAgreementPane.field_K != 97) {
           return;
         }
         this.field_h = this.field_h + 1;
@@ -366,14 +366,14 @@ final class ml {
         }
         if (0 != this.field_b) {
           if (0 == this.field_b) {
-            this.field_k = ob.field_K;
+            this.field_k = RegistrationAgreementPane.field_K;
           }
           if (this.field_b != 0) {
             if (this.field_b != 0) {
               return;
             }
-            if (ob.field_K != 98 &&
-              ob.field_K != 99) {
+            if (RegistrationAgreementPane.field_K != 98 &&
+              RegistrationAgreementPane.field_K != 99) {
               return;
             }
             this.field_g = false;
@@ -383,12 +383,12 @@ final class ml {
             }
             return;
           }
-          if (ob.field_K != 97) {
+          if (RegistrationAgreementPane.field_K != 97) {
             if (this.field_b != 0) {
               return;
             }
-            if (ob.field_K != 98 &&
-              ob.field_K != 99) {
+            if (RegistrationAgreementPane.field_K != 98 &&
+              RegistrationAgreementPane.field_K != 99) {
               return;
             }
             this.field_g = false;
@@ -404,8 +404,8 @@ final class ml {
           }
           this.field_g = false;
           if (this.field_b == 0) {
-            if (ob.field_K != 98 &&
-              ob.field_K != 99) {
+            if (RegistrationAgreementPane.field_K != 98 &&
+              RegistrationAgreementPane.field_K != 99) {
               return;
             }
             this.field_g = false;
@@ -416,12 +416,12 @@ final class ml {
           }
           return;
         }
-        if (ob.field_K != 96) {
+        if (RegistrationAgreementPane.field_K != 96) {
           if (0 == this.field_b) {
-            this.field_k = ob.field_K;
+            this.field_k = RegistrationAgreementPane.field_K;
           }
           if (this.field_b == 0 &&
-            ob.field_K == 97) {
+            RegistrationAgreementPane.field_K == 97) {
             this.field_h = this.field_h + 1;
             if (this.field_h >= this.field_i) {
               this.field_h = 0;
@@ -429,8 +429,8 @@ final class ml {
             this.field_g = false;
           }
           if (this.field_b == 0) {
-            if (ob.field_K != 98 &&
-              ob.field_K != 99) {
+            if (RegistrationAgreementPane.field_K != 98 &&
+              RegistrationAgreementPane.field_K != 99) {
               return;
             }
             this.field_g = false;
@@ -447,10 +447,10 @@ final class ml {
           this.field_h = this.field_h - 1;
           this.field_g = false;
           if (0 == this.field_b) {
-            this.field_k = ob.field_K;
+            this.field_k = RegistrationAgreementPane.field_K;
           }
           if (this.field_b == 0 &&
-            ob.field_K == 97) {
+            RegistrationAgreementPane.field_K == 97) {
             this.field_h = this.field_h + 1;
             if (this.field_h >= this.field_i) {
               this.field_h = 0;
@@ -458,7 +458,7 @@ final class ml {
             this.field_g = false;
           }
           if (this.field_b == 0) {
-            if (ob.field_K == 98) {
+            if (RegistrationAgreementPane.field_K == 98) {
               this.field_g = false;
               if (this.field_h >= 0) {
                 return;
@@ -466,7 +466,7 @@ final class ml {
               this.field_h = param1;
               return;
             }
-            if (ob.field_K == 99) {
+            if (RegistrationAgreementPane.field_K == 99) {
               this.field_g = false;
               if (this.field_h >= 0) {
                 return;
@@ -481,10 +481,10 @@ final class ml {
         this.field_h = this.field_h - 1;
         this.field_g = false;
         if (0 == this.field_b) {
-          this.field_k = ob.field_K;
+          this.field_k = RegistrationAgreementPane.field_K;
         }
         if (this.field_b == 0 &&
-          ob.field_K == 97) {
+          RegistrationAgreementPane.field_K == 97) {
           this.field_h = this.field_h + 1;
           if (this.field_h >= this.field_i) {
             this.field_h = 0;
@@ -492,8 +492,8 @@ final class ml {
           this.field_g = false;
         }
         if (this.field_b == 0) {
-          if (ob.field_K != 98 &&
-            ob.field_K != 99) {
+          if (RegistrationAgreementPane.field_K != 98 &&
+            RegistrationAgreementPane.field_K != 99) {
             return;
           }
           this.field_g = false;
@@ -508,7 +508,7 @@ final class ml {
         this.field_d = param0;
         this.field_k = 0;
         if (this.field_b == 0) {
-          this.field_k = ob.field_K;
+          this.field_k = RegistrationAgreementPane.field_K;
         }
     }
 

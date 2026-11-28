@@ -446,7 +446,7 @@ final class bf {
             2 == sd.field_e &&
             0 < AgeValidator.field_s[this.field_Q]) {
             if (0 == (1 & this.field_e)) {
-              this.field_f = gm.a(this.field_f, PcmOutputWorker.field_c[this.field_Q], AgeValidator.field_s[this.field_Q], ff.field_Q[this.field_Q][this.field_E], TextHotspotBounds.field_t[this.field_Q], true);
+              this.field_f = gm.a(this.field_f, PcmOutputWorker.field_c[this.field_Q], AgeValidator.field_s[this.field_Q], GuestPlayConfirmationForm.field_Q[this.field_Q][this.field_E], TextHotspotBounds.field_t[this.field_Q], true);
             }
             if (this.field_f != null) {
               this.field_f.drawAdditive((int)this.field_o, (int)this.field_N, 382);
@@ -1983,17 +1983,17 @@ final class bf {
         String stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ae.field_ib.setTime(new Date(param0));
-          var3_int = ae.field_ib.get(7);
-          var4 = ae.field_ib.get(5);
-          var5 = ae.field_ib.get(2);
-          var6 = ae.field_ib.get(1);
-          var7 = ae.field_ib.get(11);
-          var8 = ae.field_ib.get(12);
+          FullscreenStatusDialog.field_ib.setTime(new Date(param0));
+          var3_int = FullscreenStatusDialog.field_ib.get(7);
+          var4 = FullscreenStatusDialog.field_ib.get(5);
+          var5 = FullscreenStatusDialog.field_ib.get(2);
+          var6 = FullscreenStatusDialog.field_ib.get(1);
+          var7 = FullscreenStatusDialog.field_ib.get(11);
+          var8 = FullscreenStatusDialog.field_ib.get(12);
           if (param1 != -29) {
             bf.a(29, (java.applet.Applet) null);
           }
-          var9 = ae.field_ib.get(13);
+          var9 = FullscreenStatusDialog.field_ib.get(13);
           stackIn_4_0 = MatchingFieldValidator.field_q[var3_int - 1] + ", " + var4 / 10 + var4 % 10 + "-" + ka.field_j[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2178,13 +2178,13 @@ final class bf {
           boolean decompiledSharedTail0 = !(this.field_C);
           if (!decompiledSharedTail0) {
             var7 = 4.0 * MouseWheelInput.field_b[this.field_Q];
-            var5 = 4.0 * ff.field_N[this.field_Q];
+            var5 = 4.0 * GuestPlayConfirmationForm.field_N[this.field_Q];
             var3 = 3.0 * vh.field_a[this.field_Q];
             decompiledSharedTail0 = (var12 != 0);
           }
           if (decompiledSharedTail0) {
             var7 = MouseWheelInput.field_b[this.field_Q];
-            var5 = ff.field_N[this.field_Q];
+            var5 = GuestPlayConfirmationForm.field_N[this.field_Q];
             var3 = vh.field_a[this.field_Q];
           }
           var11 = this.field_Q;
@@ -2499,7 +2499,7 @@ final class bf {
               }
               this.field_o = (double)(50 + hi.a(-100 - (this.field_m - 640), 4, this.field_T));
               this.field_N = (double)(5 - this.field_O);
-              this.field_j = 2.0 * -ff.field_N[this.field_Q];
+              this.field_j = 2.0 * -GuestPlayConfirmationForm.field_N[this.field_Q];
               this.field_l = 0.0;
               if (var11 == 0) {
                 break;

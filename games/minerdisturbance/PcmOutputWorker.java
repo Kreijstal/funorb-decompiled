@@ -60,7 +60,7 @@ final class PcmOutputWorker implements Runnable {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
-          if (qd.field_Q == cm.field_p) {
+          if (GuestPlayConfirmationForm.field_Q == cm.field_p) {
             IsaacRandom.field_a = null;
             sn.field_c.position = 0;
             if (param5 != null) {
@@ -115,15 +115,15 @@ final class PcmOutputWorker implements Runnable {
               sn.field_c.backpatchByteLength(-1, sn.field_c.position - var9);
             }
             bk.a((byte) -114, -1);
-            qd.field_Q = jn.field_r;
+            GuestPlayConfirmationForm.field_Q = jn.field_r;
           }
-          if (qd.field_Q == jn.field_r &&
+          if (GuestPlayConfirmationForm.field_Q == jn.field_r &&
             IntrusiveDeque.a(0, 1)) {
             var9Lifetime1 = kj.field_a.readUnsignedByte((byte) -54);
             kj.field_a.position = 0;
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
-              qd.field_Q = DisplayNameSelectionPanel.field_M;
+              GuestPlayConfirmationForm.field_Q = DisplayNameSelectionPanel.field_M;
               vh.field_i = new String[var9Lifetime1 - 100];
             } else {
               if (248 == var9Lifetime1) {
@@ -137,15 +137,15 @@ final class PcmOutputWorker implements Runnable {
               if (var9Lifetime1 != 99) {
                 rj.field_d = -1;
                 AlphaWidgetContainer.field_K = var9Lifetime1;
-                qd.field_Q = aa.field_l;
+                GuestPlayConfirmationForm.field_Q = aa.field_l;
               } else {
                 IntrusiveDeque.a(0, hl.a(-92));
-                IsaacRandom.field_a = new Boolean(bh.a(kj.field_a, -29320));
+                IsaacRandom.field_a = new Boolean(FullscreenStatusDialog.a(kj.field_a, -29320));
                 kj.field_a.position = 0;
               }
             }
           }
-          if (DisplayNameSelectionPanel.field_M == qd.field_Q) {
+          if (DisplayNameSelectionPanel.field_M == GuestPlayConfirmationForm.field_Q) {
             var9Lifetime2 = 2;
             if (IntrusiveDeque.a(0, var9Lifetime2)) {
               var10Lifetime1 = kj.field_a.readUnsignedShort(-25);
@@ -162,7 +162,7 @@ final class PcmOutputWorker implements Runnable {
               }
             }
           }
-          if (qd.field_Q == aa.field_l &&
+          if (GuestPlayConfirmationForm.field_Q == aa.field_l &&
             kj.b(-9319)) {
             if (AlphaWidgetContainer.field_K != 255) {
               TextLayout.field_g = kj.field_a.readString(false);
@@ -180,7 +180,7 @@ final class PcmOutputWorker implements Runnable {
           if (AwtRasterBuffer.field_i == null) {
             if (FrameTimer.field_c) {
               if (qa.a(-112) > 30000L) {
-                TextLayout.field_g = oi.field_K;
+                TextLayout.field_g = StripedProgressWidget.field_K;
               } else {
                 TextLayout.field_g = FullscreenFocusCanvas.field_a;
               }
@@ -245,7 +245,7 @@ final class PcmOutputWorker implements Runnable {
             }
             gf.sleepMillis(10L, -10309);
             Object var5 = (Object) null;
-            jk.a(-23765, this.field_c, (Object) null);
+            ContentTransitionDialog.a(-23765, this.field_c, (Object) null);
           }
         } catch (Exception exception) {
           String var6 = (String) null;

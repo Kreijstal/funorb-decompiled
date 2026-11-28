@@ -170,9 +170,9 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
               EditableTextField.field_U.writeByte(14, (byte) 61);
               EditableTextField.field_U.writeByte(ModalDialog.field_K.b((byte) 70).field_c, (byte) -73);
               vh.a(-1, (byte) 83);
-              tb.field_f = rm.field_J;
+              tb.field_f = StripedProgressWidget.field_J;
             }
-            if (rm.field_J == tb.field_f &&
+            if (StripedProgressWidget.field_J == tb.field_f &&
               tk.a(5, 1)) {
               var7 = tk.field_h.readUnsignedByte(-89);
               tk.field_h.position = 0;
@@ -181,7 +181,7 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
               } else {
                 tb.field_f = qd.field_m;
                 wg.field_B = var7;
-                sb.field_sb = -1;
+                StandardContentDialog.field_sb = -1;
               }
             }
             if (tb.field_f == tg.field_d &&
@@ -201,7 +201,7 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
               if (var7Lifetime1 != 0 &&
                 var7Lifetime1 != 1) {
                 if (8 != var7Lifetime1) {
-                  sb.field_sb = -1;
+                  StandardContentDialog.field_sb = -1;
                   tb.field_f = qd.field_m;
                   decompiledFrameRemainder0 = false;
                 }
@@ -213,7 +213,7 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
                 }
               }
               if (decompiledFrameRemainder0) {
-                sb.field_sb = -1;
+                StandardContentDialog.field_sb = -1;
                 tb.field_f = gi.field_d;
               }
             }
@@ -222,7 +222,7 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
               sj.field_i = tk.field_h.readLong((byte) 123);
               gi.field_g = param2;
               sk.field_t = tk.field_h.readUnsignedByte(-79);
-              sb.field_rb = tk.field_h.readUnsignedByte(-113);
+              StandardContentDialog.field_rb = tk.field_h.readUnsignedByte(-113);
               cl.field_d = tk.field_h.readUnsignedShort(674914976);
               var7_ref_String = tk.field_h.readNullableString(true);
               var8 = tk.field_h.readUnsignedByte(-91);

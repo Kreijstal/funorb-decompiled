@@ -208,7 +208,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + r.encodeCp1252Subsequence(var4, this.payload, this.position, 0, param1.length(), 8211);
+          this.position = this.position + FullscreenNoticeType.encodeCp1252Subsequence(var4, this.payload, this.position, 0, param1.length(), 8211);
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
@@ -608,7 +608,7 @@ class PacketBuffer extends IntrusiveNode {
           throw new IllegalArgumentException("");
         }
         CharSequence var4 = (CharSequence) ((Object) param1);
-        this.position = this.position + r.encodeCp1252Subsequence(var4, this.payload, this.position, 0, param1.length(), 8211);
+        this.position = this.position + FullscreenNoticeType.encodeCp1252Subsequence(var4, this.payload, this.position, 0, param1.length(), 8211);
         if (param0 != 23446) {
           return;
         }

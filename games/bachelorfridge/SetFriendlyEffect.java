@@ -32,11 +32,11 @@ final class SetFriendlyEffect extends EventEffect {
               var6 = gg.a(true, -103, mj.field_h[var3_int]);
               var7 = mg.field_k - (var6 >> 1);
               var4 = var4 + cba.field_d;
-              if (SleepAnimation.a((um.field_d << 1) + hc.field_D, param1, (vt.field_k << 1) + var6, 1, var7 - vt.field_k, var4, param0)) {
+              if (SleepAnimation.a((um.field_d << 1) + DialogMessagePane.field_D, param1, (vt.field_k << 1) + var6, 1, var7 - vt.field_k, var4, param0)) {
                 stackIn_8_0 = var5;
                 return stackIn_8_0;
               }
-              var4 = var4 + (cba.field_d + (um.field_d << 1) + hc.field_D);
+              var4 = var4 + (cba.field_d + (um.field_d << 1) + DialogMessagePane.field_D);
             }
             var3_int++;
           }

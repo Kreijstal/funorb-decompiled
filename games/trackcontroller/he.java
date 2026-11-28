@@ -16,11 +16,11 @@ final class he {
         if (param1 != 0) {
           field_d = -71;
           LevelGrid.field_n = param0;
-          db.field_db = param2;
+          ContentTransitionDialog.field_db = param2;
           return;
         }
         LevelGrid.field_n = param0;
-        db.field_db = param2;
+        ContentTransitionDialog.field_db = param2;
     }
 
     public static void resetStaticState(byte param0) {

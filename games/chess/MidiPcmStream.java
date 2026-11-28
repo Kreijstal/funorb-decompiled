@@ -644,7 +644,7 @@ final class MidiPcmStream extends PcmStream {
             var9 = (int)var8.key;
             var12 = (kf) (this.field_s.a(71, (long)var9));
             if (var12 == null) {
-              var13 = ij.a(-109, var9, param0);
+              var13 = FullscreenNoticeType.a(-109, var9, param0);
               if (var13 != null) {
                 this.field_s.a(-128, (long)var9, var13);
                 if (!var13.a((int[]) (var7), param4, (byte) -73, var8.field_q)) {

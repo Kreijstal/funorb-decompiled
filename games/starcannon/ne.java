@@ -20,7 +20,7 @@ abstract class ne {
           if (param3 != 150) {
             ne.a(-9, -29);
           }
-          lc.field_hb = param2;
+          StandardContentDialog.field_hb = param2;
           sd.field_b = param1;
           sc.a(param0, (byte) 93, bl.field_c);
         } catch (RuntimeException runtimeException) {

@@ -12,13 +12,13 @@ final class p {
               rf.a(true);
               return;
             }
-            ib.field_e.e((byte) 50);
+            ib.field_e.freezeNormalProgressAnimation((byte) 50);
             rf.a(true);
             return;
           }
           AlphaWidgetContainer.field_E.snapAndPruneDialogs(-113);
           if (null != ib.field_e) {
-            ib.field_e.e((byte) 50);
+            ib.field_e.freezeNormalProgressAnimation((byte) 50);
             rf.a(true);
             return;
           }
@@ -31,7 +31,7 @@ final class p {
             rf.a(true);
             return;
           }
-          ib.field_e.e((byte) 50);
+          ib.field_e.freezeNormalProgressAnimation((byte) 50);
           rf.a(true);
           return;
         }
@@ -39,7 +39,7 @@ final class p {
           rf.a(true);
           return;
         }
-        ib.field_e.e((byte) 50);
+        ib.field_e.freezeNormalProgressAnimation((byte) 50);
         rf.a(true);
     }
 

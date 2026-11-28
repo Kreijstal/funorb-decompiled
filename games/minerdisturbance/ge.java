@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ge {
-    static r field_a;
+    static FullscreenNoticeType field_a;
     static String field_h;
     static ResourceArchive field_e;
     static int[] field_g;
@@ -100,7 +100,7 @@ final class ge {
 
     static {
         field_h = "<%0> <times> 500 = <%1>";
-        field_a = new r();
+        field_a = new FullscreenNoticeType();
         field_b = "???";
         field_f = 48;
         field_g = new int[256];

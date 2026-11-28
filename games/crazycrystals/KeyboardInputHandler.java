@@ -62,7 +62,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
               0 <= var2_int) {
               pl.field_n[bo.field_n] = ~var2_int;
               bo.field_n = 127 & bo.field_n + 1;
-              if (bo.field_n == ud.field_Z) {
+              if (bo.field_n == ContentTransitionDialog.field_Z) {
                 bo.field_n = -1;
               }
             }
@@ -126,7 +126,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             var2_int >= 0) {
             pl.field_n[bo.field_n] = var2_int;
             bo.field_n = 127 & bo.field_n + 1;
-            if (ud.field_Z == bo.field_n) {
+            if (ContentTransitionDialog.field_Z == bo.field_n) {
               bo.field_n = -1;
             }
           }

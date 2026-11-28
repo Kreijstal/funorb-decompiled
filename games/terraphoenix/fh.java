@@ -194,7 +194,7 @@ final class fh {
         try {
           var5[4] = (Sprite) ((Object) var18);
           var4.a(4, 3).a(-47, true).a(var5, (byte) 45);
-          var4.a(5, 3).a(al.a(0, 0, 0, 65793, (byte) -123), (byte) 45).a(-82, true).b(-1, true);
+          var4.a(5, 3).a(ContentTransitionDialog.a(0, 0, 0, 65793, (byte) -123), (byte) 45).a(-82, true).b(-1, true);
           this.field_n = (WidgetActionListener) ((Object) var4);
           var6 = new hf(var4, true);
           var6.field_h = 0;

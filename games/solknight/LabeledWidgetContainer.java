@@ -165,8 +165,8 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
             var3 = 357 - RichTextWidget.field_S.field_r / 2;
             var4 = 0;
             if (hg.field_F != 0 &&
-              s.field_gb > var3 &&
-              s.field_gb < RichTextWidget.field_S.field_t + var3) {
+              StandardContentDialog.field_gb > var3 &&
+              StandardContentDialog.field_gb < RichTextWidget.field_S.field_t + var3) {
               if (SpriteState.field_o > 269 - RichTextWidget.field_S.field_p &&
                 SpriteState.field_o < 269) {
                 var4 = 1;
@@ -197,7 +197,7 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
           if (!param0) {
             return 0;
           }
-          GameKeyHandler.field_b.a(-117, BufferedSocket.a(BufferedSocket.field_m, PacketBuffer.field_j, 0), BufferedSocket.a(s.field_gb, SpriteState.field_o, 0));
+          GameKeyHandler.field_b.a(-117, BufferedSocket.a(BufferedSocket.field_m, PacketBuffer.field_j, 0), BufferedSocket.a(StandardContentDialog.field_gb, SpriteState.field_o, 0));
           if (GameKeyHandler.field_b.d((byte) -8)) {
             if (GameKeyHandler.field_b.field_f == 0) {
               stackIn_62_0 = 3;

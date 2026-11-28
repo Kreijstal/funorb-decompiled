@@ -18,7 +18,7 @@ final class gd extends qc {
             this.field_k = -18;
           }
           this.field_j = this.field_j + 1;
-          ph.a(1, (byte) 107, param1, param4);
+          RegistrationAgreementPane.a(1, (byte) 107, param1, param4);
           stackIn_3_0 = new aj(IsaacRandom.field_g);
           return (PuzzleTile) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -65,7 +65,7 @@ final class gd extends qc {
             var3 = (CharSequence) null;
             gd.a((byte) 51, (CharSequence) null);
           }
-          var2 = DiskCacheWorker.a(37, ck.a((byte) 95, param1));
+          var2 = DiskCacheWorker.a(37, StandardContentDialog.a((byte) 95, param1));
           if (var2 == null) {
             var2 = "";
           }
@@ -155,7 +155,7 @@ final class gd extends qc {
         if (param0 != 128) {
           return (java.awt.Canvas) null;
         }
-        return ph.field_E == null ? jd.field_D : (java.awt.Canvas) ((Object) ph.field_E);
+        return RegistrationAgreementPane.field_E == null ? DialogMessagePane.field_D : (java.awt.Canvas) ((Object) RegistrationAgreementPane.field_E);
     }
 
     final pb b(byte param0) {

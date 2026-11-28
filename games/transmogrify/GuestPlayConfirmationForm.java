@@ -1,0 +1,491 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class GuestPlayConfirmationForm extends DequeWidgetContainer implements WidgetActivationListener {
+    private InteractiveWidget field_z;
+    static int field_B;
+    static hi field_y;
+    private InteractiveWidget field_C;
+    private InteractiveWidget field_w;
+    static MidiPcmStream field_D;
+    static mg field_x;
+
+    final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5, String param6, int param7, int param8, byte param9) {
+        int var10_int = 0;
+        int var11 = 0;
+        int var13 = 0;
+        try {
+          int var12 = -30 % ((33 - param9) / 46);
+          var10_int = -10 + field_x.a(true);
+          var11 = !param5 ? param3 : param2;
+          var13 = !param5 ? param0 : param8;
+          field_x.a(var13, -5 + param4, 3, 10 + param1, -5 + param7, var11);
+          IntrusiveNode.field_d.drawCentred(param6, (param1 >> 1) + param7, (-IntrusiveNode.field_d.field_t - IntrusiveNode.field_d.field_y + var10_int) / 2 + (IntrusiveNode.field_d.field_y + param4), 0, -1);
+        } catch (RuntimeException runtimeException) {
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "jk.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+        }
+    }
+
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
+        int var7 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
+        var7 = Transmogrify.field_A ? 1 : 0;
+        try {
+          if (param0 == this.field_z) {
+            bl.a(858);
+          } else {
+            if (param0 != this.field_w) {
+              if (this.field_C == param0) {
+                gg.b(4);
+              }
+            } else {
+              hg.c(param1 - 17);
+            }
+          }
+          if (param1 != 17) {
+            GuestPlayConfirmationForm.l(-1);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_13_0 = var6;
+          stackIn_13_1 = new StringBuilder().append("jk.MA(");
+          if (param0 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+        }
+    }
+
+    public GuestPlayConfirmationForm() {
+        super(0, 0, 476, 225, (WidgetRenderer) null);
+        this.field_w = new InteractiveWidget(je.field_c, (WidgetEventListener) null);
+        this.field_z = new InteractiveWidget(el.field_a, (WidgetEventListener) null);
+        this.field_C = new InteractiveWidget(AlphaWidgetContainer.field_z, (WidgetEventListener) null);
+        qa var1 = new qa();
+        this.field_w.field_q = (WidgetRenderer) ((Object) var1);
+        this.field_z.field_q = (WidgetRenderer) ((Object) var1);
+        this.field_C.field_q = (WidgetRenderer) ((Object) var1);
+        int var2 = 4;
+        int var3 = 326;
+        int var4 = var3 - var2 >> 1;
+        this.field_z.setBounds(-105, -48 + (this.field_h - var2), this.field_l - var3 >> 1, var4, 30);
+        this.field_C.setBounds(62, -var2 + (this.field_h - 48), var4 + (-var3 + this.field_l >> 1) + var2, var4, 30);
+        this.field_w.setBounds(96, -(var2 * 2) - 78 + this.field_h, this.field_l - var3 >> 1, var3, 30);
+        this.field_z.field_m = (WidgetEventListener) (this);
+        this.field_w.field_m = (WidgetEventListener) (this);
+        this.field_w.field_j = uf.field_b;
+        this.field_C.field_m = (WidgetEventListener) (this);
+        this.field_C.field_j = pa.field_a;
+        this.addChild((UiWidget) (this.field_z), (byte) -81);
+        this.addChild((UiWidget) (this.field_w), (byte) -92);
+        this.addChild((UiWidget) (this.field_C), (byte) -125);
+    }
+
+    final static int l(int param0) {
+        if (param0 == -889) {
+          return -ic.field_b + ProxyAuthenticationRequiredException.field_a;
+        }
+        String var2 = (String) null;
+        GuestPlayConfirmationForm.a(80, 5, -66, 13, 33, false, (String) null, -125, -49, (byte) -7);
+        return -ic.field_b + ProxyAuthenticationRequiredException.field_a;
+    }
+
+    final void drawWidget(int param0, int param1, int param2, byte param3) {
+        int var5 = param0 + this.field_p;
+        int var6 = this.field_n + param1;
+        vd.field_h.drawParagraph(wb.field_d, var5 + 20, 20 + var6, this.field_l - 40, -50 + this.field_h, 16777215, -1, 1, 0, vd.field_h.field_y);
+        super.drawWidget(param0, param1, param2, (byte) 123);
+        int var7 = -112 / ((param3 - 77) / 34);
+    }
+
+    final static char a(char param0, boolean param1) {
+        int var2;
+        int var3;
+        int var2Lifetime1;
+        var3 = Transmogrify.field_A ? 1 : 0;
+        if (!param1) {
+          var2 = param0;
+          if (var2 == 32) {
+            return '_';
+          }
+          if (var2 == 160) {
+            return '_';
+          }
+          if (var2 == 95) {
+            return '_';
+          }
+          if (var2 == 45) {
+            return '_';
+          }
+          if (var2 != 91) {
+            if (var2 == 93) {
+              return param0;
+            }
+            if (var2 != 35) {
+              if (var2 != 224 &&
+                var2 != 225 &&
+                226 != var2 &&
+                var2 != 228 &&
+                var2 != 227 &&
+                var2 != 192 &&
+                var2 != 193 &&
+                var2 != 194 &&
+                var2 != 196 &&
+                var2 != 195) {
+                if (232 != var2 &&
+                  var2 != 233 &&
+                  234 != var2 &&
+                  var2 != 235 &&
+                  var2 != 200 &&
+                  var2 != 201 &&
+                  202 != var2 &&
+                  var2 != 203) {
+                  if (237 != var2 &&
+                    var2 != 238 &&
+                    var2 != 239 &&
+                    var2 != 205 &&
+                    var2 != 206 &&
+                    var2 != 207) {
+                    if (242 != var2 &&
+                      var2 != 243 &&
+                      var2 != 244 &&
+                      var2 != 246 &&
+                      var2 != 245 &&
+                      var2 != 210 &&
+                      211 != var2 &&
+                      var2 != 212 &&
+                      var2 != 214 &&
+                      var2 != 213) {
+                      if (var2 != 249 &&
+                        250 != var2 &&
+                        var2 != 251 &&
+                        252 != var2 &&
+                        var2 != 217 &&
+                        218 != var2) {
+                        if (var2 == 219) {
+                          return 'u';
+                        }
+                        if (var2 == 220) {
+                          return 'u';
+                        }
+                        if (var2 == 231) {
+                          return 'c';
+                        }
+                        if (var2 == 199) {
+                          return 'c';
+                        }
+                        if (var2 == 255) {
+                          return 'y';
+                        }
+                        if (var2 == 376) {
+                          return 'y';
+                        }
+                        if (241 == var2) {
+                          return 'n';
+                        }
+                        if (var2 == 209) {
+                          return 'n';
+                        }
+                        if (var2 != 223) {
+                          return Character.toLowerCase(param0);
+                        }
+                        return 'b';
+                      }
+                      return 'u';
+                    }
+                    return 'o';
+                  }
+                  return 'i';
+                }
+                return 'e';
+              }
+              return 'a';
+            }
+          }
+          return param0;
+        }
+        GuestPlayConfirmationForm.l(100);
+        var2Lifetime1 = param0;
+        if (var2Lifetime1 == 32) {
+          return '_';
+        }
+        if (var2Lifetime1 != 160 &&
+          var2Lifetime1 != 95 &&
+          var2Lifetime1 != 45) {
+          if (var2Lifetime1 != 91 &&
+            var2Lifetime1 != 93 &&
+            var2Lifetime1 != 35) {
+            if (var2Lifetime1 != 224 &&
+              var2Lifetime1 != 225 &&
+              226 != var2Lifetime1 &&
+              var2Lifetime1 != 228 &&
+              var2Lifetime1 != 227 &&
+              var2Lifetime1 != 192 &&
+              var2Lifetime1 != 193 &&
+              var2Lifetime1 != 194 &&
+              var2Lifetime1 != 196 &&
+              var2Lifetime1 != 195) {
+              if (232 != var2Lifetime1 &&
+                var2Lifetime1 != 233 &&
+                234 != var2Lifetime1 &&
+                var2Lifetime1 != 235 &&
+                var2Lifetime1 != 200 &&
+                var2Lifetime1 != 201) {
+                if (202 == var2Lifetime1) {
+                  return 'e';
+                }
+                if (var2Lifetime1 == 203) {
+                  return 'e';
+                }
+                if (237 == var2Lifetime1) {
+                  return 'i';
+                }
+                if (var2Lifetime1 != 238) {
+                  if (var2Lifetime1 == 239) {
+                    return 'i';
+                  }
+                  if (var2Lifetime1 != 205 &&
+                    var2Lifetime1 != 206) {
+                    if (var2Lifetime1 == 207) {
+                      return 'i';
+                    }
+                    if (242 == var2Lifetime1) {
+                      return 'o';
+                    }
+                    if (var2Lifetime1 != 243 &&
+                      var2Lifetime1 != 244 &&
+                      var2Lifetime1 != 246 &&
+                      var2Lifetime1 != 245 &&
+                      var2Lifetime1 != 210) {
+                      if (211 == var2Lifetime1) {
+                        return 'o';
+                      }
+                      if (var2Lifetime1 == 212) {
+                        return 'o';
+                      }
+                      if (var2Lifetime1 == 214) {
+                        return 'o';
+                      }
+                      if (var2Lifetime1 != 213) {
+                        if (var2Lifetime1 != 249 &&
+                          250 != var2Lifetime1 &&
+                          var2Lifetime1 != 251) {
+                          if (252 == var2Lifetime1) {
+                            return 'u';
+                          }
+                          if (var2Lifetime1 == 217) {
+                            return 'u';
+                          }
+                          if (218 == var2Lifetime1) {
+                            return 'u';
+                          }
+                          if (var2Lifetime1 == 219) {
+                            return 'u';
+                          }
+                          if (var2Lifetime1 == 220) {
+                            return 'u';
+                          }
+                          if (var2Lifetime1 == 231) {
+                            return 'c';
+                          }
+                          if (var2Lifetime1 == 199) {
+                            return 'c';
+                          }
+                          if (var2Lifetime1 == 255) {
+                            return 'y';
+                          }
+                          if (var2Lifetime1 == 376) {
+                            return 'y';
+                          }
+                          if (241 == var2Lifetime1) {
+                            return 'n';
+                          }
+                          if (var2Lifetime1 == 209) {
+                            return 'n';
+                          }
+                          if (var2Lifetime1 != 223) {
+                            return Character.toLowerCase(param0);
+                          }
+                          return 'b';
+                        }
+                        return 'u';
+                      }
+                    }
+                    return 'o';
+                  }
+                }
+                return 'i';
+              }
+              return 'e';
+            }
+            return 'a';
+          }
+          return param0;
+        }
+        return '_';
+    }
+
+    final static void a(java.awt.Color param0, byte param1, int param2, String param3, boolean param4) {
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_24_2 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_27_2 = null;
+        Throwable decompiledCaughtException = null;
+        Exception var5 = null;
+        RuntimeException var5_ref = null;
+        Exception var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        String var9 = null;
+        java.awt.Graphics var10 = null;
+        java.awt.Graphics var11 = null;
+        try {
+          if (param1 != -119) {
+            var9 = (String) null;
+            GuestPlayConfirmationForm.a((java.awt.Color) null, (byte) 107, 51, (String) null, false);
+          }
+          try {
+            var10 = AchievementNotice.field_k.getGraphics();
+            if (ha.field_a == null) {
+              ha.field_a = new java.awt.Font("Helvetica", 1, 13);
+            }
+            if (param4) {
+              var10.setColor(java.awt.Color.black);
+              var10.fillRect(0, 0, fk.field_E, ModalDialog.field_x);
+            }
+            if (param0 == null) {
+              param0 = new java.awt.Color(140, 17, 17);
+            }
+            try {
+              if (hk.field_c == null) {
+                hk.field_c = AchievementNotice.field_k.createImage(304, 34);
+              }
+              var11 = hk.field_c.getGraphics();
+              var11.setColor(param0);
+              var11.drawRect(0, 0, 303, 33);
+              var11.fillRect(2, 2, param2 * 3, 30);
+              var11.setColor(java.awt.Color.black);
+              var11.drawRect(1, 1, 301, 31);
+              var11.fillRect(2 + 3 * param2, 2, 300 - 3 * param2, 30);
+              var11.setFont(ha.field_a);
+              var11.setColor(java.awt.Color.white);
+              var11.drawString(param3, (-(6 * param3.length()) + 304) / 2, 22);
+              var10.drawImage(hk.field_c, -152 + fk.field_E / 2, ModalDialog.field_x / 2 - 18, (java.awt.image.ImageObserver) null);
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var6 = (Exception) (Object) decompiledCaughtException;
+              var7 = -152 + fk.field_E / 2;
+              var8 = -18 + ModalDialog.field_x / 2;
+              var10.setColor(param0);
+              var10.drawRect(var7, var8, 303, 33);
+              var10.fillRect(2 + var7, var8 + 2, param2 * 3, 30);
+              var10.setColor(java.awt.Color.black);
+              var10.drawRect(1 + var7, var8 + 1, 301, 31);
+              var10.fillRect(2 + (var7 + 3 * param2), 2 + var8, -(param2 * 3) + 300, 30);
+              var10.setFont(ha.field_a);
+              var10.setColor(java.awt.Color.white);
+              var10.drawString(param3, var7 + (304 - 6 * param3.length()) / 2, 22 + var8);
+            }
+            if (LetterTile.field_r != null) {
+              var10.setFont(ha.field_a);
+              var10.setColor(java.awt.Color.white);
+              var10.drawString(LetterTile.field_r, fk.field_E / 2 - LetterTile.field_r.length() * 6 / 2, ModalDialog.field_x / 2 - 26);
+            }
+          } catch (java.lang.Exception decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var5 = (Exception) (Object) decompiledCaughtException;
+            AchievementNotice.field_k.repaint();
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
+          decompiledCaughtException = decompiledCaughtParameter2;
+          var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_23_0 = var5_ref;
+          stackIn_23_1 = new StringBuilder().append("jk.G(");
+          if (param0 == null) {
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_2 = "{...}";
+          }
+          stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_27_2 = "null";
+          } else {
+            stackIn_27_2 = "{...}";
+          }
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
+        }
+    }
+
+    final boolean handleKey(int param0, UiWidget param1, byte param2, char param3) {
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        boolean stackIn_6_0 = false;
+        boolean stackIn_10_0 = false;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (super.handleKey(param0, param1, (byte) -61, param3)) {
+            return true;
+          }
+          var5_int = 42 % ((param2 - 65) / 55);
+          if (98 == param0) {
+            stackIn_6_0 = this.focusPreviousChild(2, param1);
+            return stackIn_6_0;
+          }
+          if (param0 != 99) {
+            return false;
+          }
+          stackIn_10_0 = this.focusNextChild(param1, 91);
+          return stackIn_10_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_13_0 = var5;
+          stackIn_13_1 = new StringBuilder().append("jk.K(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    public static void clearStaticReferences(int param0) {
+        field_y = null;
+        if (param0 != 486302657) {
+          field_x = (mg) null;
+          field_D = null;
+          field_x = null;
+          return;
+        }
+        field_D = null;
+        field_x = null;
+    }
+
+    final static int a(byte param0) {
+        if (param0 > -102) {
+          String var2 = (String) null;
+          GuestPlayConfirmationForm.a((java.awt.Color) null, (byte) -6, -86, (String) null, false);
+          return 1;
+        }
+        return 1;
+    }
+
+    static {
+        field_B = 0;
+        field_y = new hi();
+    }
+}

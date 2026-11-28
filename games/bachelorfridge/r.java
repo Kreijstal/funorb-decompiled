@@ -5,7 +5,7 @@ import java.util.*;
 
 final class r extends pu {
     static Sprite field_n;
-    static lo field_m;
+    static FullscreenNoticeType field_m;
     static UiComponent[] field_l;
 
     final static void a(int[] param0, int param1, ResourceArchive param2, String[][] param3, byte[] param4, byte[] param5, String[] param6, int param7, ResourceArchive param8, ResourceArchive param9, String[][] param10, Sprite[][] param11, boolean param12, Sprite[][] param13, int param14) {
@@ -37,7 +37,7 @@ final class r extends pu {
         try {
           AirstrikeAnimation.a(param0, param8, param14, param1 + 1, param5, param9, param12, param2, (int[]) null, param7, (IndexedSprite[]) null, param11, param13, param4, param3, param10, param6);
           if (param1 != -1) {
-            field_m = (lo) null;
+            field_m = (FullscreenNoticeType) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -172,6 +172,6 @@ final class r extends pu {
     }
 
     static {
-        field_m = new lo();
+        field_m = new FullscreenNoticeType();
     }
 }

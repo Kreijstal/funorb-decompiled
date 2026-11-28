@@ -25,7 +25,7 @@ final class vi extends IntrusiveNode {
           AccountServiceResult.field_e.snapAndPruneDialogs(0);
         }
         if (null != bb.field_F) {
-          bb.field_F.c(true);
+          bb.field_F.freezeNormalProgressAnimation(true);
         }
         if (param0 != -45) {
           return;

@@ -58,8 +58,8 @@ final class jd {
             if (qh.field_c != null) {
               qh.field_c.a((byte) -103);
             }
-            if (null != ba.field_O) {
-              ba.field_O.shutdown(3);
+            if (null != RegistrationAgreementPane.field_O) {
+              RegistrationAgreementPane.field_O.shutdown(3);
             }
             if (param0 != -91) {
               field_e = (String) null;
@@ -108,7 +108,7 @@ final class jd {
         }
         if (qa.field_c != null) {
           if (qa.field_c.ensureIndexLoaded((byte) 122)) {
-            return e.field_T;
+            return DialogMessagePane.field_T;
           }
           return ChessBoardState.field_a;
         }
@@ -116,7 +116,7 @@ final class jd {
           return NetworkGameClient.field_o;
         }
         if (!fl.field_m.tryLoadGroupByName("commonui", 100)) {
-          return k.field_V + " - " + fl.field_m.getGroupLoadPercentByName("commonui", 0) + "%";
+          return ResizableModalDialog.field_V + " - " + fl.field_m.getGroupLoadPercentByName("commonui", 0) + "%";
         }
         if (!Chess.field_B.ensureIndexLoaded((byte) 119)) {
           return HuffmanCodec.field_d;

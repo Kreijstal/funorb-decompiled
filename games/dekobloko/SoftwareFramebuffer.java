@@ -185,10 +185,10 @@ final class SoftwareFramebuffer extends Framebuffer implements java.awt.image.Im
         RgbSprite rgbSpriteLocal2 = DropTargetWidgetContainer.computeRgbSprite0704(EmailFormatValidator.resourceArchiveState0008, "price", "benefits", 8192);
         RgbSprite rgbSpriteLocal3 = DropTargetWidgetContainer.computeRgbSprite0704(EmailFormatValidator.resourceArchiveState0008, "logo", "benefits", 8192);
         RgbSprite[] rgbSpriteArrayLocal4 = MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "benefits", "screenshots");
-        MixedSupport062.performAction0735(200, rgbSpriteLocal1, UiComponentPart023.stringState0425);
+        MixedSupport062.performAction0735(200, rgbSpriteLocal1, StandardContentDialog.stringState0425);
         DropTargetWidgetContainer.performAction0703(103, 92, 2, -2400, 35, 13, 8192, rgbSpriteLocal2, 15);
-        UiComponentPart014.performAction0697((byte) -108, rgbSpriteArrayLocal4);
-        UiComponentPart033.performAction1815(rgbSpriteLocal3, 369179521);
+        FullscreenStatusDialog.performAction0697((byte) -108, rgbSpriteArrayLocal4);
+        AccountCreationResultPanel.performAction1815(rgbSpriteLocal3, 369179521);
         MixedSupport074.booleanState0097 = true;
         return true;
     }

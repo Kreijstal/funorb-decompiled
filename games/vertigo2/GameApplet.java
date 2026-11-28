@@ -31,8 +31,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           try {
             try {
               if (qe.field_T != null) {
-                rh.field_H = rh.field_H + 1;
-                if (rh.field_H < 3) {
+                DialogMessagePane.field_H = DialogMessagePane.field_H + 1;
+                if (DialogMessagePane.field_H < 3) {
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                   return;
                 }

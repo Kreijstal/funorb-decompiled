@@ -240,7 +240,7 @@ class DequeWidgetContainer extends UiWidget implements WidgetContainerMarker {
             for (var8Lifetime1 = param3; var7_intLifetime1 > var8Lifetime1; var8Lifetime1++) {
               var9Lifetime1 = ol.field_k[var8Lifetime1];
               var10Lifetime1 = ol.field_k[1 + var8Lifetime1];
-              if (r.a(2, param6, var9Lifetime1, var10Lifetime1)) {
+              if (FullscreenNoticeType.a(2, param6, var9Lifetime1, var10Lifetime1)) {
                 ol.field_k[var8Lifetime1] = var10Lifetime1;
                 ol.field_k[var8Lifetime1 + 1] = var9Lifetime1;
               }

@@ -266,7 +266,7 @@ final class mc {
     }
 
     final static u a(byte param0) {
-        u var1 = new u(ql.field_M, vj.field_c, ca.field_a[0], pc.field_a[0], mh.field_c[0], vi.field_w[0], se.field_y[0], in.field_c);
+        u var1 = new u(BirthDateChatEnableForm.field_M, vj.field_c, ca.field_a[0], pc.field_a[0], mh.field_c[0], vi.field_w[0], se.field_y[0], in.field_c);
         if (param0 != 9) {
           return (u) null;
         }

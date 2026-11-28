@@ -53,7 +53,7 @@ final class le extends ScoreModifier {
             return;
           }
           if (var2 == 1) {
-            var11 = (ca) (gn.field_Q.beginForward(param0 ^ 18166));
+            var11 = (ca) (FullscreenStatusDialog.field_Q.beginForward(param0 ^ 18166));
             if (var11 == null) {
               jj.a(4);
               return;

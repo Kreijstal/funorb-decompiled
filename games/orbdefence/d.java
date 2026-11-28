@@ -17,7 +17,7 @@ final class d extends IntrusiveNode {
             bm.field_d.snapAndPruneDialogs(-113);
           }
           if (na.field_c != null) {
-            na.field_c.p(1);
+            na.field_c.freezeNormalProgressAnimation(1);
           }
           pf.a(104);
           return;
@@ -117,7 +117,7 @@ final class d extends IntrusiveNode {
 
     final static void c(byte param0) {
         ck.field_j = new AccountRegistrationPanel();
-        kg.field_j.a(false, ck.field_j);
+        kg.field_j.replaceContent(false, ck.field_j);
         if (param0 >= -65) {
           field_h = (String) null;
         }

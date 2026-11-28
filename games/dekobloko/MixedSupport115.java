@@ -47,8 +47,8 @@ abstract class MixedSupport115 extends DualNode {
               objectLocal5 = NodeHashTableIterator.substituteIndexedPlaceholders(87, MixedSupport023.stringState0105, new String[]{MixedSupport029.stringState0149});
             }
             if (GameDomainSupport004.booleanState0087) {
-              UiComponentPart004.performAction0184((String) null, (String) null, (String) (objectLocal5), (byte) 125, 2, 0);
-              UiComponentPart026.performAction1393(13);
+              ContentTransitionDialog.performAction0184((String) null, (String) null, (String) (objectLocal5), (byte) 125, 2, 0);
+              ProgressDialog.performAction1393(13);
             }
           }
           if (null == objectLocal5 &&
@@ -68,7 +68,7 @@ abstract class MixedSupport115 extends DualNode {
             if (integerLocal10 == 2) {
               stringLocal8 = NodeHashTableIterator.substituteIndexedPlaceholders(81, NetworkSupport009.stringState0388, new String[]{MixedSupport029.stringState0149});
               stringLocal12 = NodeHashTableIterator.substituteIndexedPlaceholders(125, CacheWorkQueue.stringState0266, new String[]{stringLocal6});
-              integerLocal11 = -485 + DiagnosticSupport002.sceneWidgetState0057.integerState0896 + UiComponentPart033.sceneWidgetState0150.integerState0896 - (-MixedSupport038.bitmapFontState0013.stringWidth(stringLocal12) + MixedSupport038.bitmapFontState0013.stringWidth(stringLocal8));
+              integerLocal11 = -485 + DiagnosticSupport002.sceneWidgetState0057.integerState0896 + AccountCreationResultPanel.sceneWidgetState0150.integerState0896 - (-MixedSupport038.bitmapFontState0013.stringWidth(stringLocal12) + MixedSupport038.bitmapFontState0013.stringWidth(stringLocal8));
               if (0 > integerLocal11) {
                 integerLocal11 = 0;
               }
@@ -115,22 +115,22 @@ abstract class MixedSupport115 extends DualNode {
               }
               integerLocal13 = MixedSupport038.bitmapFontState0013.stringWidth(stringLocal8);
               if (!PcmPlayerService.hasSceneWidgetState(false)) {
-                if (UiComponentPart033.sceneWidgetState0150.booleanState0218 &&
-                  (HashNode.integerState0069 - UiComponentPart033.sceneWidgetState0150.integerState0892) < integerLocal13) {
+                if (AccountCreationResultPanel.sceneWidgetState0150.booleanState0218 &&
+                  (HashNode.integerState0069 - AccountCreationResultPanel.sceneWidgetState0150.integerState0892) < integerLocal13) {
                   if (MixedSupport144.booleanState0221) {
                     objectLocal4 = "Broken!";
                   } else {
                     objectLocal4 = MixedSupport018.stringState0092;
                   }
                 }
-                if (UiComponentPart033.sceneWidgetState0150.integerState0891 != 0 &&
-                  integerLocal13 > UiComponentPart033.sceneWidgetState0150.integerState0897 &&
+                if (AccountCreationResultPanel.sceneWidgetState0150.integerState0891 != 0 &&
+                  integerLocal13 > AccountCreationResultPanel.sceneWidgetState0150.integerState0897 &&
                   !MixedSupport144.booleanState0221) {
                   NetworkSupport001.performAction0061(-1045);
                 }
               }
             }
-            MixedSupport020.performAction0298(stringLocal9, integerLocal11, ConfirmedEmailAvailabilityValidator.integerArrayState0207[integerLocal10], stringLocal8 + BitmapFont.escapeMarkup(UiComponentPart008.stringBuilderState0001.toString()), -24503);
+            MixedSupport020.performAction0298(stringLocal9, integerLocal11, ConfirmedEmailAvailabilityValidator.integerArrayState0207[integerLocal10], stringLocal8 + BitmapFont.escapeMarkup(DialogMessagePane.stringBuilderState0001.toString()), -24503);
             if (!LoginCredentials.booleanState0085) {
               DiagnosticSupport002.sceneWidgetState0057.booleanState0218 = false;
             }

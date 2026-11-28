@@ -97,12 +97,12 @@ abstract class SpriteGeometry extends DualLinkNode {
     final static void a(int param0, ResourceArchive param1) {
         VorbisSample var2 = null;
         try {
-          VorbisSample.b(param1.getFileByName((byte) 127, "", "headers.packvorbis"));
+          VorbisSample.decodeSetup(param1.getFileByName((byte) 127, "", "headers.packvorbis"));
           if (param0 != 0) {
             SpriteGeometry.resetStaticState(-110);
           }
-          var2 = VorbisSample.a(param1, "jagex logo2.packvorbis", "");
-          var2.c();
+          var2 = VorbisSample.loadByName(param1, "jagex logo2.packvorbis", "");
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ed.FB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

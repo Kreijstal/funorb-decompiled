@@ -4,7 +4,7 @@
 final class dn {
     static GameCanvas field_d;
     static RgbSprite[] field_c;
-    static ef field_b;
+    static StandardContentDialog field_b;
     static String field_a;
     static String[] field_e;
     static BitmapFont field_f;

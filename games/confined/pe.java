@@ -126,7 +126,7 @@ final class pe extends IntrusiveNode {
 
     final static void a(java.applet.Applet param0, byte param1) {
         try {
-          ci.a(param0, "", -81);
+          FullscreenNoticeType.a(param0, "", -81);
           AlphaWidgetContainer.a((byte) 74, param0);
           if (param1 != 11) {
             field_o = (PcmSample) null;
@@ -164,7 +164,7 @@ final class pe extends IntrusiveNode {
           }
           var2_long = ri.correctedCurrentTimeMillis(-3);
           if (tk.field_b != 0 &&
-            tg.field_S < 0) {
+            GuestPlayConfirmationForm.field_S < 0) {
             var4_ref_hc = (hc) (qh.field_w.beginForward(-121));
             if (var4_ref_hc != null &&
               var4_ref_hc.field_r < var2_long) {
@@ -193,17 +193,17 @@ final class pe extends IntrusiveNode {
           }
           throw TextLineMetrics.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(')').toString());
         }
-        stackIn_18_0 = tg.field_S;
+        stackIn_18_0 = GuestPlayConfirmationForm.field_S;
         try {
           while (true) {
             if (stackIn_18_0 < 0) {
               e.field_c.position = 0;
-              if (!jj.a(1, (byte) -113)) {
+              if (!ProgressDialog.a(1, (byte) -113)) {
                 return false;
               }
-              tg.field_S = e.field_c.h(-1);
+              GuestPlayConfirmationForm.field_S = e.field_c.h(-1);
               e.field_c.position = 0;
-              ai.field_i = param0[tg.field_S];
+              ai.field_i = param0[GuestPlayConfirmationForm.field_S];
             }
             if (!jc.a(-111)) {
               return false;
@@ -212,8 +212,8 @@ final class pe extends IntrusiveNode {
               ProxyAuthenticationRequiredException.field_c = pk.field_c;
               pk.field_c = qm.field_y;
               qm.field_y = Confined.field_F;
-              Confined.field_F = tg.field_S;
-              tg.field_S = -1;
+              Confined.field_F = GuestPlayConfirmationForm.field_S;
+              GuestPlayConfirmationForm.field_S = -1;
               return true;
             }
             var4 = tk.field_b;
@@ -223,13 +223,13 @@ final class pe extends IntrusiveNode {
                 var4 = 0;
               }
             }
-            var5 = new hc((long)var4 + var2_long, tg.field_S, new byte[ai.field_i]);
+            var5 = new hc((long)var4 + var2_long, GuestPlayConfirmationForm.field_S, new byte[ai.field_i]);
             for (var6 = 0; var6 < ai.field_i; var6++) {
               var5.field_q[var6] = e.field_c.payload[var6];
             }
             qh.field_w.addLast((IntrusiveNode) (var5), (byte) -93);
-            tg.field_S = -1;
-            stackIn_18_0 = tg.field_S;
+            GuestPlayConfirmationForm.field_S = -1;
+            stackIn_18_0 = GuestPlayConfirmationForm.field_S;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;

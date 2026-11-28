@@ -256,7 +256,7 @@ final class ql extends DefaultTextWidgetRenderer {
     final static void d(int param0) {
         u.field_b.closeAllDialogs(1);
         if (pc.field_b == null) {
-          pc.field_b = new lb(u.field_b, v.field_a);
+          pc.field_b = new ProgressDialog(u.field_b, v.field_a);
         }
         u.field_b.showDialog(pc.field_b, -120);
         if (param0 != 18962) {

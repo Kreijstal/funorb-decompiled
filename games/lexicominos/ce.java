@@ -411,7 +411,7 @@ final class ce {
           }
           var2Lifetime58 = e.a("tutorialp2_word1", true);
           if (null != var2Lifetime58) {
-            md.field_L = ni.a((byte) -55, var2Lifetime58);
+            StripedProgressWidget.field_L = ni.a((byte) -55, var2Lifetime58);
           }
           stackIn_277_0 = "tutorialp3_word1";
           stackIn_278_1 = !(param0);

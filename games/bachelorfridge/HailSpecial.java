@@ -91,7 +91,7 @@ final class HailSpecial extends SpecialOrder {
 
     final static void a(int[] param0, int param1, int param2) {
         try {
-          uma.field_P[param1] = new kga(param1, param0);
+          NumericDateInputWidget.field_P[param1] = new kga(param1, param0);
           if (param2 != 0) {
             int[] var4 = (int[]) null;
             HailSpecial.a((int[]) null, 60, -103);

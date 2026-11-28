@@ -11,22 +11,22 @@ final class ValidationStatus {
         integerLocal1 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         if (integerArgument6 > integerArgument1) {
           if (integerArgument2 > integerArgument6) {
-            UiComponentPart014.performAction0698(integerArgument3, integerArgument6, integerArgument8, integerArgument2, integerArgument4, (byte) 117, integerArgument5, integerArgument1, SoftwareRaster.integerArrayState0063);
+            FullscreenStatusDialog.performAction0698(integerArgument3, integerArgument6, integerArgument8, integerArgument2, integerArgument4, (byte) 117, integerArgument5, integerArgument1, SoftwareRaster.integerArrayState0063);
           } else {
             if (integerArgument1 >= integerArgument2) {
-              UiComponentPart014.performAction0698(integerArgument8, integerArgument1, integerArgument5, integerArgument6, integerArgument4, (byte) 117, integerArgument3, integerArgument2, SoftwareRaster.integerArrayState0063);
+              FullscreenStatusDialog.performAction0698(integerArgument8, integerArgument1, integerArgument5, integerArgument6, integerArgument4, (byte) 117, integerArgument3, integerArgument2, SoftwareRaster.integerArrayState0063);
             } else {
-              UiComponentPart014.performAction0698(integerArgument3, integerArgument2, integerArgument5, integerArgument6, integerArgument4, (byte) 117, integerArgument8, integerArgument1, SoftwareRaster.integerArrayState0063);
+              FullscreenStatusDialog.performAction0698(integerArgument3, integerArgument2, integerArgument5, integerArgument6, integerArgument4, (byte) 117, integerArgument8, integerArgument1, SoftwareRaster.integerArrayState0063);
             }
           }
         } else {
           if (integerArgument1 < integerArgument2) {
-            UiComponentPart014.performAction0698(integerArgument5, integerArgument1, integerArgument8, integerArgument2, integerArgument4, (byte) 117, integerArgument3, integerArgument6, SoftwareRaster.integerArrayState0063);
+            FullscreenStatusDialog.performAction0698(integerArgument5, integerArgument1, integerArgument8, integerArgument2, integerArgument4, (byte) 117, integerArgument3, integerArgument6, SoftwareRaster.integerArrayState0063);
           } else {
             if (integerArgument2 <= integerArgument6) {
-              UiComponentPart014.performAction0698(integerArgument8, integerArgument6, integerArgument3, integerArgument1, integerArgument4, (byte) 117, integerArgument5, integerArgument2, SoftwareRaster.integerArrayState0063);
+              FullscreenStatusDialog.performAction0698(integerArgument8, integerArgument6, integerArgument3, integerArgument1, integerArgument4, (byte) 117, integerArgument5, integerArgument2, SoftwareRaster.integerArrayState0063);
             } else {
-              UiComponentPart014.performAction0698(integerArgument5, integerArgument2, integerArgument3, integerArgument1, integerArgument4, (byte) 117, integerArgument8, integerArgument6, SoftwareRaster.integerArrayState0063);
+              FullscreenStatusDialog.performAction0698(integerArgument5, integerArgument2, integerArgument3, integerArgument1, integerArgument4, (byte) 117, integerArgument8, integerArgument6, SoftwareRaster.integerArrayState0063);
             }
           }
         }

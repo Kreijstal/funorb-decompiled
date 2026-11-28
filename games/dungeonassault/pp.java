@@ -46,14 +46,14 @@ final class pp extends rj {
           this.field_A.draw(param0 + this.field_t, this.field_i + param2);
           return;
         }
-        int var4 = this != wi.field_ob ? this.field_p : mo.field_a;
+        int var4 = this != ProgressDialog.field_ob ? this.field_p : mo.field_a;
         int var5 = var4 - this.field_m >> 2;
         if (var5 > 64) {
           var5 = 64;
         }
         int var6 = var5 + (this.field_p - mo.field_a);
         if (this.field_G) {
-          if (wi.field_ob == this) {
+          if (ProgressDialog.field_ob == this) {
             var7 = var5;
             this.field_z.draw(this.field_t + param0, param2 + this.field_i);
           } else {
@@ -68,8 +68,8 @@ final class pp extends rj {
           this.field_C.drawAdditive(this.field_t + param0, this.field_i + param2, var8);
           return;
         }
-        if (this == wi.field_ob) {
-          if (wi.field_ob == this) {
+        if (this == ProgressDialog.field_ob) {
+          if (ProgressDialog.field_ob == this) {
             var7Lifetime1 = var5;
             this.field_z.draw(this.field_t + param0, param2 + this.field_i);
           } else {
@@ -88,7 +88,7 @@ final class pp extends rj {
           this.field_B.draw(param0 + this.field_t, param2 + this.field_i);
           return;
         }
-        if (wi.field_ob == this) {
+        if (ProgressDialog.field_ob == this) {
           var7Lifetime2 = var5;
           this.field_z.draw(this.field_t + param0, param2 + this.field_i);
         } else {

@@ -289,7 +289,7 @@ class UiWidget extends IntrusiveNode {
           AgeValidator.a(this.getTooltipText(param3 ^ -125), param3 ^ param3);
           return param2;
         }
-        if (ma.field_sb == 0) {
+        if (ProgressMessageDialog.field_sb == 0) {
           if (0 == mh.field_f) {
             if (db.field_a == 0 &&
               i.field_a != 0) {
@@ -312,7 +312,7 @@ class UiWidget extends IntrusiveNode {
             return param2;
           }
           regionExit1: {
-            if (this.pointerPressed(ih.field_R, this, mh.field_f, (byte) 115, ae.field_gb, param0, param1)) {
+            if (this.pointerPressed(RegistrationAgreementPane.field_R, this, mh.field_f, (byte) 115, FullscreenStatusDialog.field_gb, param0, param1)) {
               param2 = false;
               if (var7 == 0) {
                 break regionExit1;
@@ -368,7 +368,7 @@ class UiWidget extends IntrusiveNode {
           return param2;
         }
         if (var5 != 0) {
-          this.handleWheel(ck.field_c, ob.field_g, (byte) 89, ma.field_sb, this, param1, param0);
+          this.handleWheel(ck.field_c, ob.field_g, (byte) 89, ProgressMessageDialog.field_sb, this, param1, param0);
           if (0 == mh.field_f) {
             if (db.field_a == 0 &&
               i.field_a != 0) {
@@ -391,7 +391,7 @@ class UiWidget extends IntrusiveNode {
             return param2;
           }
           regionExit2: {
-            if (this.pointerPressed(ih.field_R, this, mh.field_f, (byte) 115, ae.field_gb, param0, param1)) {
+            if (this.pointerPressed(RegistrationAgreementPane.field_R, this, mh.field_f, (byte) 115, FullscreenStatusDialog.field_gb, param0, param1)) {
               param2 = false;
               if (var7 == 0) {
                 break regionExit2;
@@ -466,7 +466,7 @@ class UiWidget extends IntrusiveNode {
           AgeValidator.a(this.getTooltipText(param3 ^ -125), param3 ^ param3);
           return param2;
         }
-        if (this.pointerPressed(ih.field_R, this, mh.field_f, (byte) 115, ae.field_gb, param0, param1)) {
+        if (this.pointerPressed(RegistrationAgreementPane.field_R, this, mh.field_f, (byte) 115, FullscreenStatusDialog.field_gb, param0, param1)) {
           param2 = false;
           if (var7 == 0) {
             if (db.field_a != 0) {

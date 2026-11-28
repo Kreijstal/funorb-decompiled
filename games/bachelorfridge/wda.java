@@ -88,9 +88,9 @@ final class wda {
               var7[0][4 * var10] = gk.field_a[var11];
               var7[0][1 + var10 * 4] = mba.field_a[var11];
               var7[0][2 + var10 * 4] = sc.field_o[var11];
-              var7[0][3 + var10 * 4] = uda.field_X[var11];
+              var7[0][3 + var10 * 4] = ContentTransitionDialog.field_X[var11];
               if (wb.a((byte) 52, vs.field_a[var11]) &&
-                0 == sc.field_o[var11] + mba.field_a[var11] + uda.field_X[var11]) {
+                0 == sc.field_o[var11] + mba.field_a[var11] + ContentTransitionDialog.field_X[var11]) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -106,9 +106,9 @@ final class wda {
               var7[1][4 * var13] = gk.field_a[var11Lifetime1];
               var7[1][4 * var13 + 1] = mba.field_a[var11Lifetime1];
               var7[1][4 * var13 + 2] = sc.field_o[var11Lifetime1];
-              var7[1][4 * var13 + 3] = uda.field_X[var11Lifetime1];
+              var7[1][4 * var13 + 3] = ContentTransitionDialog.field_X[var11Lifetime1];
               if (wb.a((byte) 52, vs.field_a[var11Lifetime1]) &&
-                sc.field_o[var11Lifetime1] + (mba.field_a[var11Lifetime1] + uda.field_X[var11Lifetime1]) == 0) {
+                sc.field_o[var11Lifetime1] + (mba.field_a[var11Lifetime1] + ContentTransitionDialog.field_X[var11Lifetime1]) == 0) {
                 var6[1][var13] = null;
                 var13--;
               }

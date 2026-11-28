@@ -95,10 +95,10 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           } else {
             if (var2 == 1) {
               var3 = var10.readInt(30);
-              var4_ref_eh = (eh) (nh.field_cb.first((byte) 105));
+              var4_ref_eh = (eh) (FullscreenStatusDialog.field_cb.first((byte) 105));
               while (var4_ref_eh != null) {
                 if (~var4_ref_eh.field_j != ~var3) {
-                  var4_ref_eh = (eh) (nh.field_cb.next(-270));
+                  var4_ref_eh = (eh) (FullscreenStatusDialog.field_cb.next(-270));
                   continue;
                 }
                 break;

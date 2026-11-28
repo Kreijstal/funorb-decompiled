@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oq {
-    static mf field_b;
+    static ProgressMessageDialog field_b;
     static int field_a;
 
     final static String a(CharSequence[] param0, int param1, int param2, boolean param3) {

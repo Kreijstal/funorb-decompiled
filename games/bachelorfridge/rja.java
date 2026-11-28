@@ -15,7 +15,7 @@ final class rja extends mv {
     final static void a(int param0, int param1, int param2) {
         BitPacketBuffer var3 = null;
         if (param2 == 1) {
-          var3 = sja.field_fb;
+          var3 = StandardContentDialog.field_fb;
           var3.writeCipheredByte(param0, (byte) 99);
           var3.writeByte(3, 0);
           var3.writeByte(9, 0);

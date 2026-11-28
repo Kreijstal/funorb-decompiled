@@ -20,7 +20,7 @@ final class kb {
             return (bm) (stackIn_2_0);
           }
           if (param1 > 22) {
-            stackIn_7_0 = ei.o(69);
+            stackIn_7_0 = FullscreenStatusDialog.o(69);
             return stackIn_7_0;
           }
           stackIn_5_0 = (bm) null;

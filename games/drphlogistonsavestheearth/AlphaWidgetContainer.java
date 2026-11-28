@@ -41,7 +41,7 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
             if (param1 != 8) {
             } else {
               if (sg.field_a) {
-                param0 = tf.field_ib;
+                param0 = ProgressDialog.field_ib;
               } else {
                 param0 = FrameTimer.field_c;
               }
@@ -59,7 +59,7 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
               if (hl.field_b) {
                 param0 = eg.field_b;
               }
-              ol.field_a.a(param1, param0, -5485);
+              ol.field_a.showResult(param1, param0, -5485);
             }
             if (param1 != 256) {
               if (param1 == 10) {
@@ -101,19 +101,19 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
         var4 = -87 % ((param1 + 47) / 45);
         fm.field_j = var9.readLong((byte) -53);
         if (EditableTextField.field_J == 2) {
-          dj.field_K = var9.readUnsignedShort(-788751192);
+          DialogMessagePane.field_K = var9.readUnsignedShort(-788751192);
           ob.field_a = var9.readUnsignedMedium(-1);
         } else {
           ob.field_a = 0;
-          dj.field_K = 0;
+          DialogMessagePane.field_K = 0;
         }
         stackIn_9_0 = (var9.readUnsignedByte(31760) != 1) ? 0 : 1;
         var5 = stackIn_9_0;
         rh.field_j = var9.readString((byte) -93);
         if (var5 != 0) {
-          tf.field_kb = var9.readString((byte) -64);
+          ProgressDialog.field_kb = var9.readString((byte) -64);
         } else {
-          tf.field_kb = rh.field_j;
+          ProgressDialog.field_kb = rh.field_j;
         }
         if (1 == EditableTextField.field_J) {
           var9.readUnsignedShort(-788751192);
@@ -133,7 +133,7 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
         try {
           var10 = nc.field_O.a(var6, (byte) -74);
           MusicPatchPcmStream.field_m = var10.i(121);
-          if (tf.field_kb.equals(SecondaryNodeDequeIterator.field_d)) {
+          if (ProgressDialog.field_kb.equals(SecondaryNodeDequeIterator.field_d)) {
             stackIn_22_0 = null;
           } else {
             stackIn_22_0 = var10.field_D;

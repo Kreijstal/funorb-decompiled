@@ -66,7 +66,7 @@ final class AudioService implements Runnable {
           lk.field_v.field_c = 2763306;
           lk.field_v.field_d = 6;
           lk.field_v.field_b = 14;
-          lk.field_v.field_j = sp.field_R;
+          lk.field_v.field_j = ProgressDialog.field_R;
           lk.field_v.field_f = 4;
         }
         if (param0 == 35) {
@@ -91,7 +91,7 @@ final class AudioService implements Runnable {
 
     final static void a(String param0, int param1, String param2) {
         try {
-          fm.a(false, -78, param2, param0);
+          GuestPlayConfirmationForm.a(false, -78, param2, param0);
           if (param1 < 121) {
             field_d = (Random) null;
           }

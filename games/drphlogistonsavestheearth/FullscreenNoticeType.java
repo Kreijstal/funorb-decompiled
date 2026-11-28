@@ -1,0 +1,82 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class FullscreenNoticeType {
+    static int field_c;
+    static gk field_a;
+    static String field_b;
+
+    final static void a(byte param0) {
+        ml var1 = null;
+        int var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+        try {
+          StandardContentDialog.field_sb.serviceOutput();
+          ModalDialogHost.field_J.serviceOutput();
+          vb.field_k = vb.field_k - 1;
+          if (param0 < 4) {
+            field_c = -62;
+          }
+          if (vb.field_k == 0) {
+            vb.field_k = 200;
+            var1 = (ml) (GuestPlayConfirmationForm.field_O.beginForward(-11151));
+            while (var1 != null) {
+              if (!var1.field_o.isLinked(-1387)) {
+                var1.unlink(-16175);
+              }
+              var1 = (ml) (GuestPlayConfirmationForm.field_O.nextForward(0));
+            }
+          }
+        } catch (RuntimeException runtimeException) {
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ia.D(" + param0 + ')');
+        }
+    }
+
+    public final String toString() {
+        throw new IllegalStateException();
+    }
+
+    public static void b(int param0) {
+        field_b = null;
+        field_a = null;
+        if (param0 != 27174) {
+          FullscreenNoticeType.a((byte) 30);
+        }
+    }
+
+    final static void a(int param0) {
+        int var2 = 0;
+        Throwable decompiledCaughtException = null;
+        Object var1 = null;
+        var1 = DequeWidgetContainer.field_G;
+        synchronized (var1) {
+          db.field_a = ProgressDialog.field_mb;
+          th.field_e = th.field_e + 1;
+          ck.field_c = ConfirmedEmailAvailabilityValidator.field_q;
+          ob.field_g = mj.field_u;
+          var2 = -96 / ((27 - param0) / 56);
+          df.field_o = lk.field_j;
+          lk.field_j = false;
+          mh.field_f = f.field_h;
+          FullscreenStatusDialog.field_gb = ee.field_d;
+          RegistrationAgreementPane.field_R = fj.field_j;
+          f.field_h = 0;
+        }
+    }
+
+    final static void a(gk param0, int param1, int param2, int param3) {
+        df.field_h = param2;
+        cb.field_a = param0;
+        if (param1 != 0) {
+          return;
+        }
+        try {
+          di.field_d = param3;
+        } catch (RuntimeException runtimeException) {
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ia.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+
+    static {
+        field_b = "Waiting for extra data";
+    }
+}

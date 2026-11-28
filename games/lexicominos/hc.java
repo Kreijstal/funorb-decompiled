@@ -83,7 +83,7 @@ final class hc extends ui {
                 var11_ref_String = "";
               }
               SpriteGeometry.field_q.writeTerminatedString(var11_ref_String, (byte) 0);
-              wc.a(wb.field_m, SpriteGeometry.field_q, re.field_T, (byte) 111, of.field_a);
+              wc.a(wb.field_m, SpriteGeometry.field_q, ContentTransitionDialog.field_T, (byte) 111, of.field_a);
               SpriteGeometry.field_q.backpatchShortLength(SpriteGeometry.field_q.position - var10, (byte) 26);
             } else {
               of.field_a.position = 0;
@@ -108,7 +108,7 @@ final class hc extends ui {
               SpriteGeometry.field_q.writeByte(16, -1);
               SpriteGeometry.field_q.position = SpriteGeometry.field_q.position + 1;
               var9 = SpriteGeometry.field_q.position;
-              wc.a(wb.field_m, SpriteGeometry.field_q, re.field_T, (byte) 111, of.field_a);
+              wc.a(wb.field_m, SpriteGeometry.field_q, ContentTransitionDialog.field_T, (byte) 111, of.field_a);
               SpriteGeometry.field_q.backpatchByteLength(SpriteGeometry.field_q.position - var9, (byte) -128);
             }
             kc.a(-1, param3 ^ 30761);

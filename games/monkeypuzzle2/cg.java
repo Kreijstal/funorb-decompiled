@@ -4,7 +4,7 @@
 final class cg {
     private int field_j;
     private int field_i;
-    static kg field_c;
+    static FullscreenNoticeType field_c;
     private IntrusiveNode[] field_e;
     private IntrusiveNode field_f;
     static AccountServiceResult field_a;
@@ -193,7 +193,7 @@ final class cg {
     }
 
     static {
-        field_c = new kg();
+        field_c = new FullscreenNoticeType();
         field_d = new int[4];
     }
 }

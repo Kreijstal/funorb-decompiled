@@ -9,10 +9,10 @@ final class eh {
         NanoFrameTimer.field_i = param1.readUnsignedShort(31) << 5;
         int var2_int = param1.readUnsignedByte(255);
         NanoFrameTimer.field_i = NanoFrameTimer.field_i + (var2_int >> 3);
-        nf.field_S = (7 & var2_int) << 18;
-        nf.field_S = nf.field_S + (param1.readUnsignedShort(-105) << 2);
+        FullscreenStatusDialog.field_S = (7 & var2_int) << 18;
+        FullscreenStatusDialog.field_S = FullscreenStatusDialog.field_S + (param1.readUnsignedShort(-105) << 2);
         var2_int = param1.readUnsignedByte(255);
-        nf.field_S = nf.field_S + (var2_int >> 6);
+        FullscreenStatusDialog.field_S = FullscreenStatusDialog.field_S + (var2_int >> 6);
         EditableTextField.field_P = var2_int << 15 & 2064384;
         EditableTextField.field_P = EditableTextField.field_P + (param1.readUnsignedByte(255) << 7);
         var2_int = param1.readUnsignedByte(255);

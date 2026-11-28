@@ -21,9 +21,9 @@ final class pn implements uj {
         }
         if (null == IntrusiveNode.field_h) {
           IntrusiveNode.field_h = new int[2 * param0];
-          if (jk.field_db == null ||
-            !(jk.field_db.length >= param0)) {
-            jk.field_db = new int[2 * param0];
+          if (ContentTransitionDialog.field_db == null ||
+            !(ContentTransitionDialog.field_db.length >= param0)) {
+            ContentTransitionDialog.field_db = new int[2 * param0];
           }
           if (null == qa.field_c ||
             !(qa.field_c.length >= param0)) {
@@ -39,9 +39,9 @@ final class pn implements uj {
               !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
               BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
             }
-            if (null == rg.field_ub ||
-              !(param0 <= rg.field_ub.length)) {
-              rg.field_ub = new boolean[2 * param0];
+            if (null == ProgressMessageDialog.field_ub ||
+              !(param0 <= ProgressMessageDialog.field_ub.length)) {
+              ProgressMessageDialog.field_ub = new boolean[2 * param0];
             }
           } else {
             if (li.field_a.length < param0) {
@@ -54,9 +54,9 @@ final class pn implements uj {
                 !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
                 BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
               }
-              if (null == rg.field_ub ||
-                !(param0 <= rg.field_ub.length)) {
-                rg.field_ub = new boolean[2 * param0];
+              if (null == ProgressMessageDialog.field_ub ||
+                !(param0 <= ProgressMessageDialog.field_ub.length)) {
+                ProgressMessageDialog.field_ub = new boolean[2 * param0];
               }
             } else {
               if (ModalDialog.field_L == null) {
@@ -65,9 +65,9 @@ final class pn implements uj {
                   !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
                   BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
                 }
-                if (null == rg.field_ub ||
-                  !(param0 <= rg.field_ub.length)) {
-                  rg.field_ub = new boolean[2 * param0];
+                if (null == ProgressMessageDialog.field_ub ||
+                  !(param0 <= ProgressMessageDialog.field_ub.length)) {
+                  ProgressMessageDialog.field_ub = new boolean[2 * param0];
                 }
               } else {
                 if (param0 > ModalDialog.field_L.length) {
@@ -76,20 +76,20 @@ final class pn implements uj {
                     !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
                     BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
                   }
-                  if (null == rg.field_ub ||
-                    !(param0 <= rg.field_ub.length)) {
-                    rg.field_ub = new boolean[2 * param0];
+                  if (null == ProgressMessageDialog.field_ub ||
+                    !(param0 <= ProgressMessageDialog.field_ub.length)) {
+                    ProgressMessageDialog.field_ub = new boolean[2 * param0];
                   }
                 } else {
                   if (BoundedRandomAccessFile.field_a == null ||
                     !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
                     BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
                   }
-                  if (null == rg.field_ub) {
-                    rg.field_ub = new boolean[2 * param0];
+                  if (null == ProgressMessageDialog.field_ub) {
+                    ProgressMessageDialog.field_ub = new boolean[2 * param0];
                   } else {
-                    if (param0 > rg.field_ub.length) {
-                      rg.field_ub = new boolean[2 * param0];
+                    if (param0 > ProgressMessageDialog.field_ub.length) {
+                      ProgressMessageDialog.field_ub = new boolean[2 * param0];
                     }
                   }
                 }
@@ -99,9 +99,9 @@ final class pn implements uj {
         } else {
           if (param0 > IntrusiveNode.field_h.length) {
             IntrusiveNode.field_h = new int[2 * param0];
-            if (jk.field_db == null ||
-              !(jk.field_db.length >= param0)) {
-              jk.field_db = new int[2 * param0];
+            if (ContentTransitionDialog.field_db == null ||
+              !(ContentTransitionDialog.field_db.length >= param0)) {
+              ContentTransitionDialog.field_db = new int[2 * param0];
             }
             if (null == qa.field_c ||
               !(qa.field_c.length >= param0)) {
@@ -117,9 +117,9 @@ final class pn implements uj {
                 !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
                 BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
               }
-              if (null == rg.field_ub ||
-                !(param0 <= rg.field_ub.length)) {
-                rg.field_ub = new boolean[2 * param0];
+              if (null == ProgressMessageDialog.field_ub ||
+                !(param0 <= ProgressMessageDialog.field_ub.length)) {
+                ProgressMessageDialog.field_ub = new boolean[2 * param0];
               }
             } else {
               if (li.field_a.length < param0) {
@@ -132,9 +132,9 @@ final class pn implements uj {
                   !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
                   BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
                 }
-                if (null == rg.field_ub ||
-                  !(param0 <= rg.field_ub.length)) {
-                  rg.field_ub = new boolean[2 * param0];
+                if (null == ProgressMessageDialog.field_ub ||
+                  !(param0 <= ProgressMessageDialog.field_ub.length)) {
+                  ProgressMessageDialog.field_ub = new boolean[2 * param0];
                 }
               } else {
                 if (ModalDialog.field_L == null) {
@@ -143,9 +143,9 @@ final class pn implements uj {
                     !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
                     BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
                   }
-                  if (null == rg.field_ub ||
-                    !(param0 <= rg.field_ub.length)) {
-                    rg.field_ub = new boolean[2 * param0];
+                  if (null == ProgressMessageDialog.field_ub ||
+                    !(param0 <= ProgressMessageDialog.field_ub.length)) {
+                    ProgressMessageDialog.field_ub = new boolean[2 * param0];
                   }
                 } else {
                   if (param0 > ModalDialog.field_L.length) {
@@ -154,20 +154,20 @@ final class pn implements uj {
                       !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
                       BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
                     }
-                    if (null == rg.field_ub ||
-                      !(param0 <= rg.field_ub.length)) {
-                      rg.field_ub = new boolean[2 * param0];
+                    if (null == ProgressMessageDialog.field_ub ||
+                      !(param0 <= ProgressMessageDialog.field_ub.length)) {
+                      ProgressMessageDialog.field_ub = new boolean[2 * param0];
                     }
                   } else {
                     if (BoundedRandomAccessFile.field_a == null ||
                       !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
                       BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
                     }
-                    if (null == rg.field_ub) {
-                      rg.field_ub = new boolean[2 * param0];
+                    if (null == ProgressMessageDialog.field_ub) {
+                      ProgressMessageDialog.field_ub = new boolean[2 * param0];
                     } else {
-                      if (param0 > rg.field_ub.length) {
-                        rg.field_ub = new boolean[2 * param0];
+                      if (param0 > ProgressMessageDialog.field_ub.length) {
+                        ProgressMessageDialog.field_ub = new boolean[2 * param0];
                       }
                     }
                   }
@@ -175,9 +175,9 @@ final class pn implements uj {
               }
             }
           } else {
-            if (jk.field_db == null ||
-              !(jk.field_db.length >= param0)) {
-              jk.field_db = new int[2 * param0];
+            if (ContentTransitionDialog.field_db == null ||
+              !(ContentTransitionDialog.field_db.length >= param0)) {
+              ContentTransitionDialog.field_db = new int[2 * param0];
             }
             if (null == qa.field_c ||
               !(qa.field_c.length >= param0)) {
@@ -193,11 +193,11 @@ final class pn implements uj {
                 !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
                 BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
               }
-              if (null == rg.field_ub) {
-                rg.field_ub = new boolean[2 * param0];
+              if (null == ProgressMessageDialog.field_ub) {
+                ProgressMessageDialog.field_ub = new boolean[2 * param0];
               } else {
-                if (param0 > rg.field_ub.length) {
-                  rg.field_ub = new boolean[2 * param0];
+                if (param0 > ProgressMessageDialog.field_ub.length) {
+                  ProgressMessageDialog.field_ub = new boolean[2 * param0];
                 }
               }
             } else {
@@ -211,9 +211,9 @@ final class pn implements uj {
                   !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
                   BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
                 }
-                if (null == rg.field_ub ||
-                  !(param0 <= rg.field_ub.length)) {
-                  rg.field_ub = new boolean[2 * param0];
+                if (null == ProgressMessageDialog.field_ub ||
+                  !(param0 <= ProgressMessageDialog.field_ub.length)) {
+                  ProgressMessageDialog.field_ub = new boolean[2 * param0];
                 }
               } else {
                 if (ModalDialog.field_L == null) {
@@ -236,11 +236,11 @@ final class pn implements uj {
                     }
                   }
                 }
-                if (null == rg.field_ub) {
-                  rg.field_ub = new boolean[2 * param0];
+                if (null == ProgressMessageDialog.field_ub) {
+                  ProgressMessageDialog.field_ub = new boolean[2 * param0];
                 } else {
-                  if (param0 > rg.field_ub.length) {
-                    rg.field_ub = new boolean[2 * param0];
+                  if (param0 > ProgressMessageDialog.field_ub.length) {
+                    ProgressMessageDialog.field_ub = new boolean[2 * param0];
                   }
                 }
               }

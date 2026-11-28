@@ -105,7 +105,7 @@ final class hl {
         int var1 = -60 / ((param0 + 76) / 35);
         wg.field_j.closeAllDialogs(121);
         if (vl.field_f == null) {
-          vl.field_f = new ul(wg.field_j, rc.field_i);
+          vl.field_f = new ProgressDialog(wg.field_j, rc.field_i);
         }
         wg.field_j.showDialog((byte) -97, vl.field_f);
     }

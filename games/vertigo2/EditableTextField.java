@@ -581,7 +581,7 @@ class EditableTextField extends InteractiveWidget {
     final static void i(int param0) {
         if (BufferedSocket.field_a) {
           SoftwareRasterizer.darkenRectangleHalf(SoftwareRasterizer.field_d, SoftwareRasterizer.field_f, -SoftwareRasterizer.field_d + SoftwareRasterizer.field_i, SoftwareRasterizer.field_c - SoftwareRasterizer.field_f);
-          ql.field_L.b(false, param0 ^ 0);
+          BirthDateChatEnableForm.field_L.b(false, param0 ^ 0);
           if (param0 != 0) {
             EditableTextField.i(-128);
             return;

@@ -20,7 +20,7 @@ final class jea {
         qi.b(-1);
         te.c((byte) 94);
         if (lt.a((byte) 99)) {
-          sja.field_fb.writeCipheredByte(1, (byte) 125);
+          StandardContentDialog.field_fb.writeCipheredByte(1, (byte) 125);
           ConfirmedEmailAvailabilityValidator.a(0, 68);
         }
         vc.a((byte) -96);

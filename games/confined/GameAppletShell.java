@@ -213,12 +213,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           fb.field_b.setVisible(true);
           if (var2 == ValidatedTextField.field_cb) {
             var3 = ValidatedTextField.field_cb.getInsets();
-            fb.field_b.setLocation(var3.left + ei.field_kb, DefaultTextWidgetRenderer.field_c + var3.top);
+            fb.field_b.setLocation(var3.left + FullscreenStatusDialog.field_kb, DefaultTextWidgetRenderer.field_c + var3.top);
             if (var4 != 0) {
-              fb.field_b.setLocation(ei.field_kb, DefaultTextWidgetRenderer.field_c);
+              fb.field_b.setLocation(FullscreenStatusDialog.field_kb, DefaultTextWidgetRenderer.field_c);
             }
           } else {
-            fb.field_b.setLocation(ei.field_kb, DefaultTextWidgetRenderer.field_c);
+            fb.field_b.setLocation(FullscreenStatusDialog.field_kb, DefaultTextWidgetRenderer.field_c);
           }
           fb.field_b.addFocusListener((java.awt.event.FocusListener) (this));
           fb.field_b.requestFocus();
@@ -520,7 +520,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 g.b(-1);
                 this.g(125);
-                pi.field_S = on.a((java.awt.Component) ((Object) fb.field_b), im.field_b, wm.field_ab, 1359);
+                RegistrationAgreementPane.field_S = on.a((java.awt.Component) ((Object) fb.field_b), im.field_b, wm.field_ab, 1359);
                 this.initializeClient(-3998);
                 ProjectileRay.field_gb = og.e(1);
                 do {
@@ -724,7 +724,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               wm.field_ab = param2;
               kn.field_c = param2;
               rj.field_e = this;
-              ei.field_kb = 0;
+              FullscreenStatusDialog.field_kb = 0;
               im.field_b = param0;
               LabeledWidgetContainer.field_R = param0;
               if (param3 < 42) {
@@ -810,12 +810,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             boolean decompiledSharedTail0 = (ValidatedTextField.field_cb != null &&
               null == sf.field_o);
             if (!decompiledSharedTail0) {
-              fb.field_b.setLocation(ei.field_kb, DefaultTextWidgetRenderer.field_c);
+              fb.field_b.setLocation(FullscreenStatusDialog.field_kb, DefaultTextWidgetRenderer.field_c);
               decompiledSharedTail0 = (Confined.field_J);
             }
             if (decompiledSharedTail0) {
               var6 = ValidatedTextField.field_cb.getInsets();
-              fb.field_b.setLocation(var6.left + ei.field_kb, DefaultTextWidgetRenderer.field_c + var6.top);
+              fb.field_b.setLocation(var6.left + FullscreenStatusDialog.field_kb, DefaultTextWidgetRenderer.field_c + var6.top);
             }
           }
           if (param0 != 11) {

@@ -52,11 +52,11 @@ class cf extends DualLinkNode {
           IsaacGenerator.field_h = qm.b(1, 5);
           bi.field_h = qm.b(1, 6);
           he.field_t = qm.b(1, 12);
-          te.field_J = qm.b(1, 8);
+          RegistrationAgreementPane.field_J = qm.b(1, 8);
           if (nl.field_c == 0) {
             sc.a((byte) 118);
           }
-          if (wb.field_S <= 0) {
+          if (ResizableModalDialog.field_S <= 0) {
             ArchiveRequest.a(wd.field_a, 110, ResourceArchive.field_a);
           }
           return;
@@ -73,11 +73,11 @@ class cf extends DualLinkNode {
         IsaacGenerator.field_h = qm.b(1, 5);
         bi.field_h = qm.b(1, 6);
         he.field_t = qm.b(1, 12);
-        te.field_J = qm.b(1, 8);
+        RegistrationAgreementPane.field_J = qm.b(1, 8);
         if (nl.field_c == 0) {
           sc.a((byte) 118);
         }
-        if (wb.field_S <= 0) {
+        if (ResizableModalDialog.field_S <= 0) {
           ArchiveRequest.a(wd.field_a, 110, ResourceArchive.field_a);
         }
     }

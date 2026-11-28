@@ -351,7 +351,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             var8 = me.field_e;
           } else {
             if (var9 == gg.field_c) {
-              var8 = hf.field_ub;
+              var8 = ContentTransitionDialog.field_ub;
             }
           }
           dupTemp$0 = new LabeledWidgetContainer(10, this.field_v, -20 + this.field_x, 25, this.field_O, false, 80, 3, var7, 16777215, var8);

@@ -61,7 +61,7 @@ final class cd {
             if (null != AwtRasterBuffer.field_f &&
               AwtRasterBuffer.field_f.focusLost) {
               wl.e((byte) 120);
-              DiskArchiveRequest.field_o.showDialog((byte) -56, new s(DiskArchiveRequest.field_o, cg.field_c));
+              DiskArchiveRequest.field_o.showDialog((byte) -56, new FullscreenStatusDialog(DiskArchiveRequest.field_o, cg.field_c));
             }
             return;
           }

@@ -103,7 +103,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
               var2 = new PacketBuffer(13);
               StageDirector.writeConnectionHandshakeHeader(AgeValidator.field_k, var2, hc.field_n, (byte) 40, wi.field_c);
               var2.writeByte(93, 15);
-              var2.writeInt(-103, pi.field_L);
+              var2.writeInt(-103, RegistrationAgreementPane.field_L);
               gk.field_u.queueWrite(13, false, var2.payload, 0);
               we.field_k = we.field_k + 1;
               fl.field_a = ri.correctedCurrentTimeMillis(-3) + 30000L;
@@ -231,8 +231,8 @@ final class PowerUpPickup extends MovingTunnelEntity {
     }
 
     final static void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
-        ci.field_a[mc.field_c] = param2;
-        sj.field_rb[mc.field_c] = mc.field_c;
+        FullscreenNoticeType.field_a[mc.field_c] = param2;
+        ContentTransitionDialog.field_rb[mc.field_c] = mc.field_c;
         an.field_n[mc.field_c] = param3;
         if (cg.field_f > param3) {
           ResourceArchive.field_f = param3;
@@ -445,7 +445,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
                                         if (param1.field_Bb.field_d == 65536) {
                                           stackIn_116_0 = PlayerShip.field_Ib;
                                         } else {
-                                          stackIn_116_0 = pi.field_P;
+                                          stackIn_116_0 = RegistrationAgreementPane.field_P;
                                         }
                                         kc.a(stackIn_116_0, (TunnelEntity) (this), 121, true);
                                         decompiledFrameRemainder0 = false;

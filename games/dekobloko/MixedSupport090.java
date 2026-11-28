@@ -70,14 +70,14 @@ final class MixedSupport090 extends MixedSupport043 {
           if (PcmPlayerService.musicTrackState0005 != musicTrackArgument2) {
             if (PcmPlayerService.musicTrackState0005 != null &&
               musicTrackArgument2 != null) {
-              UiComponentPart033.midiSynthesizerState0001.performAction0689(musicTrackArgument2, 0, 0, 16);
+              AccountCreationResultPanel.midiSynthesizerState0001.performAction0689(musicTrackArgument2, 0, 0, 16);
               PcmPlayerService.musicTrackState0005 = musicTrackArgument2;
-              UiComponentPart033.midiSynthesizerState0001.performAction0692(integerArgument1);
+              AccountCreationResultPanel.midiSynthesizerState0001.performAction0692(integerArgument1);
             } else {
               MixedSupport087.performAction1134(integerArgument1, musicTrackArgument2, true);
             }
           } else {
-            UiComponentPart033.midiSynthesizerState0001.performAction0692(integerArgument1);
+            AccountCreationResultPanel.midiSynthesizerState0001.performAction0692(integerArgument1);
           }
           if (byteArgument3 < 45) {
             integerState0548 = 64;

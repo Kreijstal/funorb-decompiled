@@ -194,8 +194,8 @@ final class vc {
           return var2_ref_byte__Lifetime2;
         }
         if (BirthDateValidator.field_j != null) {
-          for (var2 = 0; ue.field_M.length > var2; var2++) {
-            if (param0 == ue.field_M[var2] &&
+          for (var2 = 0; RegistrationAgreementPane.field_M.length > var2; var2++) {
+            if (param0 == RegistrationAgreementPane.field_M[var2] &&
               BitPacketBuffer.field_w[var2] > 0) {
               dupTemp$3 = BitPacketBuffer.field_w[var2] - 1;
               arrayValue$4 = BirthDateValidator.field_j[var2];

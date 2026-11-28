@@ -208,8 +208,8 @@ final class DirectByteStorage extends ByteStorage {
                       } else {
                         stackIn_34_0 = var15 << -var7;
                       }
-                      var16 = -stackIn_34_0 + ge.field_eb.length - 1;
-                      var17 = ge.field_eb[var16];
+                      var16 = -stackIn_34_0 + FullscreenStatusDialog.field_eb.length - 1;
+                      var17 = FullscreenStatusDialog.field_eb[var16];
                       while (true) {
                         if (var17 >> 4 != 0) {
                           var16--;
@@ -219,14 +219,14 @@ final class DirectByteStorage extends ByteStorage {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var17 = ge.field_eb[var16];
+                          var17 = FullscreenStatusDialog.field_eb[var16];
                           continue;
                         }
                         stackIn_45_0Lifetime1 = var17;
                         stackIn_45_1Lifetime1 = var16 << 4;
                         var18 = stackIn_45_0Lifetime1 + stackIn_45_1Lifetime1;
                         ve.field_Hb[var18] = var8;
-                        ge.field_eb[var16] = var17 + 1;
+                        FullscreenStatusDialog.field_eb[var16] = var17 + 1;
                         if (param0.field_j > 0 &&
                           null != param0.field_y) {
                           dupTemp$0 = param0.field_y[var8];

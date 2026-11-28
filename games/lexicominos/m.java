@@ -55,7 +55,7 @@ final class m {
           gb.field_d = true;
           lh.field_w = param2 ? true : false;
           int var3_int = -67 / ((param1 + 72) / 33);
-          jj.field_a = new uc(ug.field_A, FullscreenFocusCanvas.field_c, param0, DualLinkNode.field_k, lh.field_w);
+          jj.field_a = new ProgressMessageDialog(ug.field_A, FullscreenFocusCanvas.field_c, param0, DualLinkNode.field_k, lh.field_w);
           ug.field_A.showDialog(-14579, jj.field_a);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "m.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

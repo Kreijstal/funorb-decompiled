@@ -167,7 +167,7 @@ final class ei {
     }
 
     final static void a(int param0, int param1) {
-        BitPacketBuffer var2 = sja.field_fb;
+        BitPacketBuffer var2 = StandardContentDialog.field_fb;
         var2.writeCipheredByte(param1, (byte) 122);
         var2.writeByte(2, 0);
         var2.writeByte(param0, 0);

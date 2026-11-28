@@ -1,0 +1,92 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class DateInputWidget extends DequeWidgetContainer implements FieldValidatorProvider {
+    static SecondaryNodeHashTable field_M;
+    private BirthDateValidator field_L;
+    static ci field_K;
+    static String field_N;
+
+    abstract int getYear(int param0);
+
+    abstract int getDay(boolean param0);
+
+    final static void g(byte param0) {
+        if (param0 >= 38) {
+          IntrusiveNode.field_a[520] = 59;
+          IntrusiveNode.field_a[222] = 58;
+          IntrusiveNode.field_a[192] = 28;
+          IntrusiveNode.field_a[91] = 42;
+          IntrusiveNode.field_a[45] = 26;
+          IntrusiveNode.field_a[47] = 73;
+          IntrusiveNode.field_a[59] = 57;
+          IntrusiveNode.field_a[93] = 43;
+          IntrusiveNode.field_a[44] = 71;
+          IntrusiveNode.field_a[61] = 27;
+          IntrusiveNode.field_a[92] = 74;
+          IntrusiveNode.field_a[46] = 72;
+          return;
+        }
+        field_N = (String) null;
+        IntrusiveNode.field_a[520] = 59;
+        IntrusiveNode.field_a[222] = 58;
+        IntrusiveNode.field_a[192] = 28;
+        IntrusiveNode.field_a[91] = 42;
+        IntrusiveNode.field_a[45] = 26;
+        IntrusiveNode.field_a[47] = 73;
+        IntrusiveNode.field_a[59] = 57;
+        IntrusiveNode.field_a[93] = 43;
+        IntrusiveNode.field_a[44] = 71;
+        IntrusiveNode.field_a[61] = 27;
+        IntrusiveNode.field_a[92] = 74;
+        IntrusiveNode.field_a[46] = 72;
+    }
+
+    abstract boolean isDateEmpty(byte param0);
+
+    DateInputWidget(int param0, int param1, int param2, int param3, WidgetRenderer param4) {
+        super(param0, param1, param2, param3, param4);
+    }
+
+    final static void a(boolean param0, int param1) {
+        DropTargetWidgetContainer.field_U = 1000000000L / (long)param1;
+        if (!param0) {
+          DateInputWidget.clearStaticReferences(true);
+        }
+    }
+
+    public static void clearStaticReferences(boolean param0) {
+        field_M = null;
+        if (param0) {
+          return;
+        }
+        field_N = null;
+        field_K = null;
+    }
+
+    public final FieldValidator getFieldValidator(int param0) {
+        if (param0 > -80) {
+          field_K = (ci) null;
+          return (FieldValidator) ((Object) this.field_L);
+        }
+        return (FieldValidator) ((Object) this.field_L);
+    }
+
+    void setDateValidator(boolean param0, BirthDateValidator param1) {
+        try {
+          this.field_L = param1;
+          this.field_L.field_j = this;
+          if (param0) {
+            DateInputWidget.clearStaticReferences(true);
+          }
+        } catch (RuntimeException runtimeException) {
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "bf.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    abstract int getMonthIndex(int param0);
+
+    static {
+        field_N = "Create a free account to start using this feature";
+    }
+}

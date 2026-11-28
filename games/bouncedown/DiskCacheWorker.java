@@ -42,7 +42,7 @@ final class DiskCacheWorker implements Runnable {
             }
             var2 = 1;
           }
-          cf.field_f.a(qe.a(uc.field_C, (byte) -94, ll.field_y), qe.a(og.field_a, (byte) -125, rk.field_a), -798);
+          cf.field_f.a(qe.a(DialogMessagePane.field_C, (byte) -94, StripedProgressWidget.field_y), qe.a(og.field_a, (byte) -125, rk.field_a), -798);
           if (cf.field_f.a(-1)) {
             var1_int = 1;
           }

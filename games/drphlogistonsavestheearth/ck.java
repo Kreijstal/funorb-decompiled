@@ -21,7 +21,7 @@ final class ck {
           throw new IllegalStateException();
         }
         if (ol.field_a != null) {
-          ol.field_a.d(true);
+          ol.field_a.closeDialog(true);
         }
         String var1 = gk.a(0);
         DraggableWidgetContainer.field_O = new LoginPanel(var1, (String) null, true, false, false);
@@ -29,8 +29,8 @@ final class ck {
           field_d = (he[]) null;
         }
         PcmResampler.field_c.showDialog((byte) -112, (UiWidget) (PcmOutputWorker.field_e));
-        PcmOutputWorker.field_e.a(33, DraggableWidgetContainer.field_O);
-        PcmOutputWorker.field_e.g((byte) -125);
+        PcmOutputWorker.field_e.replaceContent(33, DraggableWidgetContainer.field_O);
+        PcmOutputWorker.field_e.finishResize((byte) -125);
     }
 
     final static boolean b(int param0) {

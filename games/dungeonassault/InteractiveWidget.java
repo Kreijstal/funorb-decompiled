@@ -235,19 +235,19 @@ class InteractiveWidget extends UiWidget {
         var4 = DungeonAssault.field_K;
         try {
           re.b();
-          jk.field_Bb = new int[260];
+          StandardContentDialog.field_Bb = new int[260];
           lh.field_t = 11;
           if (param0 != 65) {
             return;
           }
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var2 = 15.0;
-            jk.field_Bb[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
+            StandardContentDialog.field_Bb[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
           }
           var5 = 256;
           var1_intLifetime1 = var5;
-          while (var5 < jk.field_Bb.length) {
-            jk.field_Bb[var5] = 255;
+          while (var5 < StandardContentDialog.field_Bb.length) {
+            StandardContentDialog.field_Bb[var5] = 255;
             var5++;
           }
           return;
@@ -315,7 +315,7 @@ class InteractiveWidget extends UiWidget {
         if (param0 != -1) {
           return true;
         }
-        stackIn_7_0 = (nk.field_Ib != null) || (td.field_c);
+        stackIn_7_0 = (ProgressMessageDialog.field_Ib != null) || (td.field_c);
         return stackIn_7_0;
     }
 

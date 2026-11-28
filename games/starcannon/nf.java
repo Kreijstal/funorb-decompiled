@@ -235,7 +235,7 @@ final class nf {
           var8 = new AccountCreationResultPanel(ti.field_b, param6);
           ti.field_b.showDialog((byte) 72, (UiWidget) (var8));
           if (dd.a((byte) 77)) {
-            var8.p(10341);
+            var8.showAccountCreationConnectionFailure(10341);
             return true;
           }
           DualLinkNode.field_k = jl.field_a;

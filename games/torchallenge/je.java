@@ -113,8 +113,8 @@ final class je {
         int var2;
         int var3;
         var3 = TorChallenge.field_F ? 1 : 0;
-        nh.field_jb = 0;
-        n.field_cb = null;
+        FullscreenStatusDialog.field_jb = 0;
+        ContentTransitionDialog.field_cb = null;
         bl.field_V = null;
         var2 = BufferedSocket.field_d;
         BufferedSocket.field_d = MusicPatchPcmStream.field_m;
@@ -220,7 +220,7 @@ final class je {
             decompiledFrameRemainder0 = !(param1.equals(ie.field_g));
           }
           if (decompiledFrameRemainder0) {
-            if (!sj.field_R) {
+            if (!DialogMessagePane.field_R) {
               if (bk.field_p >= cf.field_a) {
                 stackIn_19_0 = (AccountServiceResult.field_e + cf.field_a > bk.field_p) ? 1 : 0;
               } else {
@@ -233,7 +233,7 @@ final class je {
             if (param1 == null) {
               bk.field_p = 0;
             } else {
-              if (sj.field_R) {
+              if (DialogMessagePane.field_R) {
                 bk.field_p = cf.field_a;
               } else {
                 if (var2_int != 0) {
@@ -244,18 +244,18 @@ final class je {
               }
             }
             if (param1 != null) {
-              sj.field_R = false;
+              DialogMessagePane.field_R = false;
             } else {
               if (var2_int != 0) {
-                sj.field_R = true;
+                DialogMessagePane.field_R = true;
               }
             }
             ul.field_n = sd.field_b;
             bi.field_h = DequeWidgetContainer.field_G;
           }
-          if (!sj.field_R &&
+          if (!DialogMessagePane.field_R &&
             cf.field_a > bk.field_p &&
-            ek.field_P) {
+            StripedProgressWidget.field_P) {
             bi.field_h = DequeWidgetContainer.field_G;
             ul.field_n = sd.field_b;
             bk.field_p = 0;
@@ -263,12 +263,12 @@ final class je {
           ie.field_g = param1;
           DequeWidgetContainer.field_G = -1;
           sd.field_b = -1;
-          if (sj.field_R) {
+          if (DialogMessagePane.field_R) {
             if (bk.field_p != gi.field_e) {
               return;
             }
             bk.field_p = 0;
-            sj.field_R = false;
+            DialogMessagePane.field_R = false;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

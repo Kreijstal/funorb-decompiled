@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends ck implements WidgetActivationListener {
+final class AccountCreationResultPanel extends ProgressMessageDialog implements WidgetActivationListener {
     private boolean field_lb;
     private AccountRegistrationPanel field_nb;
     static String field_ob;
     static int field_pb;
     private boolean field_mb;
 
-    final void p(int param0) {
+    final void showAccountCreationConnectionFailure(int param0) {
         this.showAccountCreationResult(fb.createAccountErrorResult(248, true, ArchiveRequest.field_r), -8895, true);
         if (param0 < 77) {
           this.field_nb = (AccountRegistrationPanel) null;
@@ -26,7 +26,7 @@ final class AccountCreationResultPanel extends ck implements WidgetActivationLis
 
     final static void a(ResourceArchive param0, ResourceArchive param1, byte param2) {
         try {
-          vf.field_E = param0;
+          DialogMessagePane.field_E = param0;
           if (param2 != 118) {
             field_ob = (String) null;
           }
@@ -46,7 +46,7 @@ final class AccountCreationResultPanel extends ck implements WidgetActivationLis
         }
         try {
           IterableNodeHashTable.a((byte) 98);
-          this.o(3);
+          this.closeDialog(3);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "jg.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -59,7 +59,7 @@ final class AccountCreationResultPanel extends ck implements WidgetActivationLis
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        vf var5 = null;
+        DialogMessagePane var5 = null;
         int var6 = 0;
         var6 = stellarshard.field_B;
         try {
@@ -72,7 +72,7 @@ final class AccountCreationResultPanel extends ck implements WidgetActivationLis
               var4 = param0.message;
               if (248 == param0.statusCode) {
                 if (!param2) {
-                  di.a(1);
+                  FullscreenNoticeType.a(1);
                 }
                 this.field_lb = true;
                 var4 = ArchiveRequest.field_r;
@@ -86,33 +86,33 @@ final class AccountCreationResultPanel extends ck implements WidgetActivationLis
           } else {
             var4 = mb.field_a;
           }
-          var5 = new vf((ck) (this), DualLinkDequeIterator.field_c, var4);
+          var5 = new DialogMessagePane((ProgressMessageDialog) (this), DualLinkDequeIterator.field_c, var4);
           if (!param0.success) {
             if (!this.field_lb) {
               if (5 == param0.statusCode) {
-                var5.a(param1 - 22910, 11, gj.field_s);
-                var5.a(-31805, 17, wc.field_z);
+                var5.addActionButton(param1 - 22910, 11, gj.field_s);
+                var5.addActionButton(-31805, 17, wc.field_z);
               } else {
-                var5.a(-31805, -1, bk.field_e);
+                var5.addActionButton(-31805, -1, bk.field_e);
               }
             } else {
-              var5.a((WidgetEventListener) (this), tc.field_q, (byte) 118);
+              var5.addListenerButton((WidgetEventListener) (this), tc.field_q, (byte) 118);
             }
             if (param0.statusCode == 3) {
-              var5.a(-31805, 7, gh.field_a);
+              var5.addActionButton(-31805, 7, gh.field_a);
             } else {
               if (6 == param0.statusCode) {
-                var5.a(-31805, 9, a.field_d);
+                var5.addActionButton(-31805, 9, a.field_d);
               }
             }
           } else {
             if (param0.field_a) {
-              this.b(new sj(this), param1 ^ -30938);
+              this.replaceContent(new RegistrationAgreementPane(this), param1 ^ -30938);
               return;
             }
-            var5.a((WidgetEventListener) (this), tc.field_q, (byte) -125);
+            var5.addListenerButton((WidgetEventListener) (this), tc.field_q, (byte) -125);
           }
-          this.b(var5, 23143);
+          this.replaceContent(var5, 23143);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

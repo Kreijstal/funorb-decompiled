@@ -137,17 +137,17 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           return;
         }
         RichTextLayout.field_s.a(500, 8000);
-        if (jh.field_ab != 1) {
+        if (FullscreenStatusDialog.field_ab != 1) {
           return;
         }
         AlphaWidgetContainer.l(0);
         if (param0) {
           PasswordValidator.a(true, 256, vg.field_h);
         } else {
-          PasswordValidator.a(false, 256, dg.field_tb);
+          PasswordValidator.a(false, 256, ProgressMessageDialog.field_tb);
           return;
         }
-        PasswordValidator.a(false, 256, dg.field_tb);
+        PasswordValidator.a(false, 256, ProgressMessageDialog.field_tb);
     }
 
     final void invalidateCheckedName(int param0) {

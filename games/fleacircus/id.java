@@ -73,7 +73,7 @@ final class id {
           re.a(-17634);
           bh.field_t = 11;
         } else {
-          if (!lk.a(-109)) {
+          if (!StripedProgressWidget.a(-109)) {
             re.a(-17634);
             bh.field_t = 11;
           }
@@ -273,7 +273,7 @@ final class id {
         if (param0 != -5935) {
           return false;
         }
-        return wi.field_f == ui.field_kb ? true : false;
+        return wi.field_f == StandardContentDialog.field_kb ? true : false;
     }
 
     private id() throws Throwable {

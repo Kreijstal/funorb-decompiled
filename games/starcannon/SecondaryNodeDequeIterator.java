@@ -27,7 +27,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     }
 
     final static void b(int param0) {
-        t.field_h.c(20317, new db());
+        t.field_h.replaceContent(20317, new GuestPlayConfirmationForm());
         if (param0 != 11) {
           ResourceArchive var2 = (ResourceArchive) null;
           SecondaryNodeDequeIterator.a((String) null, 17, (String) null, (ResourceArchive) null);

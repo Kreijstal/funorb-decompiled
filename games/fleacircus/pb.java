@@ -28,10 +28,10 @@ final class pb {
             s.a(param1 ^ -4471, param0, var4);
             var4 = (bh) (wi.field_j.nextForward((byte) -105));
           }
-          var5 = (ll) (jj.field_S.beginForward((byte) 47));
+          var5 = (ll) (ResizableModalDialog.field_S.beginForward((byte) 47));
           while (var5 != null) {
             ak.a(-14722, var5, param0);
-            var5 = (ll) (jj.field_S.nextForward((byte) -105));
+            var5 = (ll) (ResizableModalDialog.field_S.nextForward((byte) -105));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

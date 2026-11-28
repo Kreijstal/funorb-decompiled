@@ -24,12 +24,12 @@ final class tf {
           if (param1 != 1041792321) {
             return false;
           }
-          if (ia.field_W != null) {
+          if (GuestPlayConfirmationForm.field_W != null) {
             InteractiveWidget.h(-116);
             tp.a(10, 75.0f, i.field_s);
             g.a(InstructionsScreen.getActiveCanvas(false), param1 - 1041774190);
             ra.b(9);
-            ia.field_W = null;
+            GuestPlayConfirmationForm.field_W = null;
             nf.d(0);
             return false;
           }

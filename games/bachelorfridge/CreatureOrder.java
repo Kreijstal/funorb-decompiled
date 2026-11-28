@@ -32,7 +32,7 @@ abstract class CreatureOrder extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        BitPacketBuffer var3 = sja.field_fb;
+        BitPacketBuffer var3 = StandardContentDialog.field_fb;
         var3.writeCipheredByte(param0, (byte) 119);
         var3.writeByte(3, 0);
         var3.writeByte(10, 0);

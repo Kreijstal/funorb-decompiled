@@ -147,7 +147,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (jf.a((CharSequence) ((Object) var4), 7552) &&
+                      if (ContentTransitionDialog.a((CharSequence) ((Object) var4), 7552) &&
                         !(hh.a(10, (CharSequence) ((Object) var4)) >= 10)) {
                         this.a(-51, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
@@ -220,7 +220,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    jj.field_b = BufferedSocket.field_e.waitAndCountTicks(ma.field_vb, 1);
+                    jj.field_b = BufferedSocket.field_e.waitAndCountTicks(ProgressMessageDialog.field_vb, 1);
                     stackIn_100_0 = 0;
                   }
                   var3 = stackIn_100_0;

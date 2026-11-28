@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ke {
-    static di field_c;
+    static FullscreenNoticeType field_c;
     static int field_b;
     static int field_a;
 
@@ -41,7 +41,7 @@ final class ke {
 
     final static void a(int param0, int param1) {
         IntrusiveDequeCursor.field_d = ib.field_h[param1];
-        RichTextWidget.field_I = se.field_E[param1];
+        RichTextWidget.field_I = GuestPlayConfirmationForm.field_E[param1];
         kf.field_d = e.field_f[param1];
         if (param0 <= 33) {
           ke.a(110, 60);
@@ -56,6 +56,6 @@ final class ke {
     }
 
     static {
-        field_c = new di();
+        field_c = new FullscreenNoticeType();
     }
 }

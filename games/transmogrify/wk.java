@@ -121,7 +121,7 @@ final class wk {
     }
 
     final static void b(byte param0) {
-        if (!ll.c(true)) {
+        if (!FullscreenStatusDialog.c(true)) {
           return;
         }
         tf.a((byte) 77, false, 4);

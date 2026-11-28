@@ -152,10 +152,10 @@ abstract class ArchiveRequest extends DualLinkNode {
           wg.field_w = 0;
           me.field_e.clear(-31023);
           cl.field_e.clear(-31023);
-          var1 = bf.field_M.first(false);
+          var1 = DateInputWidget.field_M.first(false);
           while (var1 != null) {
             var1.unlinkSecondary(-1);
-            var1 = bf.field_M.next(0);
+            var1 = DateInputWidget.field_M.next(0);
           }
           var1Lifetime1 = r.field_Ib.first(false);
           while (var1Lifetime1 != null) {
@@ -179,12 +179,12 @@ abstract class ArchiveRequest extends DualLinkNode {
         ModalDialogHost.field_R = new String[38];
         ModalDialogHost.field_R[16] = SecondaryNodeDeque.field_a;
         ModalDialogHost.field_R[17] = aa.field_a;
-        ModalDialogHost.field_R[7] = jg.field_L;
+        ModalDialogHost.field_R[7] = BirthDateChatEnableForm.field_L;
         ModalDialogHost.field_R[27] = ec.field_g;
         ModalDialogHost.field_R[15] = qa.field_b;
         ModalDialogHost.field_R[20] = sh.field_c;
         ModalDialogHost.field_R[28] = RichTextWidget.field_Z;
-        ModalDialogHost.field_R[6] = jg.field_L;
+        ModalDialogHost.field_R[6] = BirthDateChatEnableForm.field_L;
         ModalDialogHost.field_R[34] = ca.field_e;
         ModalDialogHost.field_R[33] = qm.field_a;
         ModalDialogHost.field_R[13] = rc.field_b;
@@ -207,7 +207,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         ModalDialogHost.field_R[37] = r.field_Zb;
         ModalDialogHost.field_R[2] = DiskArchiveRequest.field_y;
         ModalDialogHost.field_R[9] = gl.field_a;
-        ModalDialogHost.field_R[param0] = ij.field_d;
+        ModalDialogHost.field_R[param0] = FullscreenNoticeType.field_d;
         ModalDialogHost.field_R[10] = oh.field_d;
         ModalDialogHost.field_R[5] = vc.field_c;
         ModalDialogHost.field_R[25] = ac.field_p;

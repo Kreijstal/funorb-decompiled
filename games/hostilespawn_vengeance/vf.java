@@ -24,14 +24,14 @@ final class vf extends InteractiveWidget {
             if (null != ImageProducerRasterBuffer.field_q &&
               ImageProducerRasterBuffer.field_q.focusLost) {
               tb.f((byte) -119);
-              nb.field_F.showDialog(new jh(nb.field_F, hf.field_g), param0 + 118);
+              GuestPlayConfirmationForm.field_F.showDialog(new FullscreenStatusDialog(GuestPlayConfirmationForm.field_F, hf.field_g), param0 + 118);
             }
             return;
           }
-          nb.field_F.processPointerInput(im.field_f, param0 + 8800, true, ModalDialog.field_H);
-          nb.field_F.advanceDialogs((byte) 114);
+          GuestPlayConfirmationForm.field_F.processPointerInput(im.field_f, param0 + 8800, true, ModalDialog.field_H);
+          GuestPlayConfirmationForm.field_F.advanceDialogs((byte) 114);
           while (AlphaWidgetContainer.e((byte) 125)) {
-            nb.field_F.processKeyInput(pj.field_e, SpriteBase.field_e, 80);
+            GuestPlayConfirmationForm.field_F.processKeyInput(pj.field_e, SpriteBase.field_e, 80);
           }
           if (param0 != -1) {
             field_H = (RgbSprite) null;
@@ -214,7 +214,7 @@ final class vf extends InteractiveWidget {
           return;
         }
         if (ln.field_a.field_r[param1] &&
-          wb.field_Z) {
+          ResizableModalDialog.field_Z) {
           var2 = 0;
         }
         if (!(ln.field_a.field_u[param1] >= var2) &&

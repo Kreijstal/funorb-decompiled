@@ -33,7 +33,7 @@ final class PcmOutputWorker implements Runnable {
           }
           ug.field_A.showDialog(param1 - 14579, var8);
           if (MatchingFieldValidator.f(256)) {
-            var8.k((byte) -92);
+            var8.showAccountCreationConnectionFailure((byte) -92);
             return true;
           }
           ce.field_d = param0;

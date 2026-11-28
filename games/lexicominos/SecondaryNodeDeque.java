@@ -14,11 +14,11 @@ final class SecondaryNodeDeque implements Iterable {
     final static void a(boolean param0) {
         field_b = new AccountRegistrationPanel();
         if (!param0) {
-          di.field_x.b(117, field_b);
+          di.field_x.replaceContent(117, field_b);
           return;
         }
         field_a = (FrameTimer) null;
-        di.field_x.b(117, field_b);
+        di.field_x.replaceContent(117, field_b);
     }
 
     final static void clearStaticReferences(int param0) {

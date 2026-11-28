@@ -1,0 +1,48 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class StandardContentDialog extends ContentTransitionDialog {
+    static String field_gb;
+    static BitPacketBuffer field_fb;
+    static long field_hb;
+
+    final static void a(int param0, mha param1, boolean param2) {
+        BitPacketBuffer var3 = field_fb;
+        var3.writeCipheredByte(param0, (byte) 122);
+        if (!param2) {
+          return;
+        }
+        try {
+          var3.writeByte(5, 0);
+          var3.writeByte(0, 0);
+          var3.writeShort(param1.field_f, -115);
+          var3.writeByte(param1.field_h, 0);
+          var3.writeByte(param1.field_i, 0);
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "sja.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        field_gb = null;
+        field_fb = null;
+        if (param0 != 33) {
+          StandardContentDialog.releaseStatics(-59);
+        }
+    }
+
+    StandardContentDialog(ModalDialogHost param0, UiWidget param1) {
+        super(param0, param1, 33, 20, 30);
+    }
+
+    final void replaceContent(UiWidget param0, int param1) {
+        try {
+          super.replaceContent(param0, param1);
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "sja.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    static {
+    }
+}

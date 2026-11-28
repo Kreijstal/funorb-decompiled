@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nb {
-    static lg field_c;
+    static FullscreenNoticeType field_c;
     static int field_d;
     static int field_f;
     static String[] field_h;
@@ -45,7 +45,7 @@ final class nb {
     }
 
     static {
-        field_c = new lg();
+        field_c = new FullscreenNoticeType();
         field_h = new String[]{"[BACKSPACE]", "[HOME]", "[F9]", "[F10]", "[F11]", "[ESC]"};
         field_e = 0;
         field_g = 55;

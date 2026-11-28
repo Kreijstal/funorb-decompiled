@@ -16,7 +16,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
             return null;
           }
           if (null != this.field_q) {
-            ll.a(uc.field_C - (this.field_M - this.field_k), true, ll.field_y);
+            StripedProgressWidget.a(DialogMessagePane.field_C - (this.field_M - this.field_k), true, StripedProgressWidget.field_y);
             return this.field_q;
           }
           return null;
@@ -25,7 +25,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           return null;
         }
         if (null != this.field_q) {
-          ll.a(uc.field_C - (this.field_M - this.field_k), true, ll.field_y);
+          StripedProgressWidget.a(DialogMessagePane.field_C - (this.field_M - this.field_k), true, StripedProgressWidget.field_y);
           return this.field_q;
         }
         return null;
@@ -37,7 +37,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           if (param0 != -1) {
             field_O = 53;
           }
-          this.field_M = -param1 + (uc.field_C - this.field_r);
+          this.field_M = -param1 + (DialogMessagePane.field_C - this.field_r);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "ti.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -191,31 +191,31 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
             var6 = DropTargetWidgetContainer.field_E[var3];
             if (ne.field_u == 2 &&
               var2 == 1) {
-              if (t.field_r.length > eb.field_E.length) {
+              if (t.field_r.length > RegistrationAgreementPane.field_E.length) {
                 stackIn_20_0 = t.field_r.length;
               } else {
-                stackIn_20_0 = eb.field_E.length;
+                stackIn_20_0 = RegistrationAgreementPane.field_E.length;
               }
               var7 = stackIn_20_0;
               if (6 <= var3 &&
                 var3 < var7 + 6) {
-                if (eb.field_E.length + (var3 - 6 - var7) < 0) {
+                if (RegistrationAgreementPane.field_E.length + (var3 - 6 - var7) < 0) {
                   stackIn_26_0 = "";
                 } else {
-                  stackIn_26_0 = eb.field_E[-var7 + (var3 - 6 + eb.field_E.length)];
+                  stackIn_26_0 = RegistrationAgreementPane.field_E[-var7 + (var3 - 6 + RegistrationAgreementPane.field_E.length)];
                 }
                 var6 = stackIn_26_0;
               }
-              if (ll.field_E.length >= vb.field_k.length) {
-                stackIn_30_0 = ll.field_E.length;
+              if (StripedProgressWidget.field_E.length >= vb.field_k.length) {
+                stackIn_30_0 = StripedProgressWidget.field_E.length;
               } else {
                 stackIn_30_0 = vb.field_k.length;
               }
               var8 = stackIn_30_0;
               if (var3 >= 7 + var7 &&
                 var3 < var8 + (var7 + 7)) {
-                if (var3 - 7 - var7 < ll.field_E.length) {
-                  stackIn_36_0 = ll.field_E[-7 + var3 - var7];
+                if (var3 - 7 - var7 < StripedProgressWidget.field_E.length) {
+                  stackIn_36_0 = StripedProgressWidget.field_E[-7 + var3 - var7];
                 } else {
                   stackIn_36_0 = "";
                 }
@@ -242,7 +242,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
             }
             if (var4 < 0) {
               EditableTextField.field_E.drawString(var6, var8Lifetime1, qd.field_b + var1_int, var5, -1);
-              var1_int = var1_int + k.field_D;
+              var1_int = var1_int + GuestPlayConfirmationForm.field_D;
             } else {
               jc.field_h.drawString(var6, var8Lifetime1, TextLayout.field_d + var1_int, var5, -1);
               var1_int = var1_int + (ConfirmedEmailAvailabilityValidator.field_m + hj.field_a + pb.field_j);

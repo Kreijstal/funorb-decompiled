@@ -77,7 +77,7 @@ final class jj {
               if (var6_int == 0) {
                 gj.field_k = ul.field_j;
               } else {
-                bf.field_b = var6_int;
+                FullscreenNoticeType.field_b = var6_int;
                 rk.field_b = -1;
                 gj.field_k = GameCanvas.field_a;
               }
@@ -95,7 +95,7 @@ final class jj {
             if (ImageProducerRasterBuffer.field_k == gj.field_k &&
               fq.a(1, (byte) -70)) {
               var6_intLifetime1 = ConfirmedEmailAvailabilityValidator.field_n.readUnsignedByte(255);
-              bf.field_b = var6_intLifetime1;
+              FullscreenNoticeType.field_b = var6_intLifetime1;
               NetworkArchiveRequest.field_r = null;
               ConfirmedEmailAvailabilityValidator.field_n.position = 0;
               if (var6_intLifetime1 != 0 &&
@@ -149,7 +149,7 @@ final class jj {
               je.field_g = ConfirmedEmailAvailabilityValidator.field_n.readString(119);
               var11 = (CharSequence) ((Object) je.field_g);
               lk.field_b = fe.a(60136, var11);
-              kl.field_V = ConfirmedEmailAvailabilityValidator.field_n.readUnsignedByte(255);
+              ProgressDialog.field_V = ConfirmedEmailAvailabilityValidator.field_n.readUnsignedByte(255);
               gj.field_k = LevelCompleteEntrancePhase.field_h;
               if (mk.field_c.a(0) == of.field_C) {
                 gg.field_d.a(1, le.b((byte) -20));
@@ -186,24 +186,24 @@ final class jj {
                 WallTile.field_r[var8Lifetime1] = WallTile.field_r[var8Lifetime1] + 50;
               }
               ConfirmedEmailAvailabilityValidator.field_n.a(WallTile.field_r, true);
-              stackIn_74_0 = bf.field_b;
+              stackIn_74_0 = FullscreenNoticeType.field_b;
               return stackIn_74_0;
             }
             if (GameCanvas.field_a == gj.field_k &&
               ModalDialogHost.f((byte) 60)) {
               jj.a(4);
-              if (bf.field_b == 7 &&
+              if (FullscreenNoticeType.field_b == 7 &&
                 !ec.field_g) {
                 ec.field_g = true;
                 stackIn_87_0 = -1;
                 return stackIn_87_0;
               }
-              if (bf.field_b == 7) {
-                bf.field_b = 3;
+              if (FullscreenNoticeType.field_b == 7) {
+                FullscreenNoticeType.field_b = 3;
               }
               re.field_j = ConfirmedEmailAvailabilityValidator.field_n.readString(123);
               ec.field_g = false;
-              stackIn_85_0 = bf.field_b;
+              stackIn_85_0 = FullscreenNoticeType.field_b;
               return stackIn_85_0;
             }
             if (oi.field_c == null) {

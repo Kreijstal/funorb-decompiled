@@ -336,7 +336,7 @@ final class ja extends IntrusiveNode {
           }
           vi.field_o = nd.field_r - (var4Lifetime1 >> 1);
           ProxySocketConnector.field_g = -(var4Lifetime1 >> 1) + (var4Lifetime1 + nd.field_r);
-          BufferedRandomAccessFile.field_e = (dc.field_b + hi.field_ab << 1) * ai.field_i.field_g;
+          BufferedRandomAccessFile.field_e = (dc.field_b + FullscreenStatusDialog.field_ab << 1) * ai.field_i.field_g;
           for (var5Lifetime2 = 0; var5Lifetime2 < rb.field_d.length; var5Lifetime2++) {
             stackIn_112_0 = BufferedRandomAccessFile.field_e;
             if (0 > f.field_a[var5Lifetime2]) {
@@ -355,12 +355,12 @@ final class ja extends IntrusiveNode {
             if (var7Lifetime1 >= 0) {
               var8Lifetime2 = bb.$cfr$intArgs$a$62abead39cee(87, true, rb.field_d[var5Lifetime3]);
               var9Lifetime1 = -(var8Lifetime2 >> 1) + nd.field_r;
-              var6Lifetime3 = var6Lifetime3 + hi.field_ab;
+              var6Lifetime3 = var6Lifetime3 + FullscreenStatusDialog.field_ab;
               ll.field_d[var5Lifetime3] = new int[4];
               ll.field_d[var5Lifetime3][0] = -se.field_j + var9Lifetime1;
               ll.field_d[var5Lifetime3][1] = var6Lifetime3;
               ll.field_d[var5Lifetime3][2] = var8Lifetime2 + (se.field_j << 1);
-              var6Lifetime3 = var6Lifetime3 + (lm.field_d + ((dc.field_b << 1) + hi.field_ab));
+              var6Lifetime3 = var6Lifetime3 + (lm.field_d + ((dc.field_b << 1) + FullscreenStatusDialog.field_ab));
               ll.field_d[var5Lifetime3][3] = (dc.field_b << 1) + lm.field_d;
             } else {
               var6Lifetime3 = var6Lifetime3 + DelegatingCanvas.field_b;

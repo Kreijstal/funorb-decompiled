@@ -43,7 +43,7 @@ final class nn {
           hb.field_u[22] = te.field_t.toUpperCase();
           hb.field_u[23] = ValidatedTextField.field_M.toUpperCase();
           po.field_t[2] = SpriteState.field_q;
-          po.field_t[1] = hh.field_c;
+          po.field_t[1] = FullscreenNoticeType.field_c;
           po.field_t[0] = ro.field_t;
           oh.field_a = oh.field_a.toUpperCase();
           ip.field_d = ip.field_d.toUpperCase();
@@ -52,7 +52,7 @@ final class nn {
           al.field_c = al.field_c.toUpperCase();
           kj.field_f = kj.field_f.toUpperCase();
           EmailFormatValidator.field_m = EmailFormatValidator.field_m.toUpperCase();
-          fo.field_E = fo.field_E.toUpperCase();
+          DialogMessagePane.field_E = DialogMessagePane.field_E.toUpperCase();
           qd.field_i = qd.field_i.toUpperCase();
           ud.field_l = ud.field_l.toUpperCase();
           ol.field_b = ol.field_b.toUpperCase();
@@ -85,7 +85,7 @@ final class nn {
         hb.field_u[22] = te.field_t.toUpperCase();
         hb.field_u[23] = ValidatedTextField.field_M.toUpperCase();
         po.field_t[2] = SpriteState.field_q;
-        po.field_t[1] = hh.field_c;
+        po.field_t[1] = FullscreenNoticeType.field_c;
         po.field_t[0] = ro.field_t;
         oh.field_a = oh.field_a.toUpperCase();
         ip.field_d = ip.field_d.toUpperCase();
@@ -94,7 +94,7 @@ final class nn {
         al.field_c = al.field_c.toUpperCase();
         kj.field_f = kj.field_f.toUpperCase();
         EmailFormatValidator.field_m = EmailFormatValidator.field_m.toUpperCase();
-        fo.field_E = fo.field_E.toUpperCase();
+        DialogMessagePane.field_E = DialogMessagePane.field_E.toUpperCase();
         qd.field_i = qd.field_i.toUpperCase();
         ud.field_l = ud.field_l.toUpperCase();
         ol.field_b = ol.field_b.toUpperCase();
@@ -167,10 +167,10 @@ final class nn {
               var3 = var3 + param0;
             }
             DirectByteStorage.a(3, var3);
-            var3 = sp.a(var3, ":", "%3a", (byte) -77);
-            var3 = sp.a(var3, "@", "%40", (byte) -71);
-            var3 = sp.a(var3, "&", "%26", (byte) -85);
-            var7 = sp.a(var3, "#", "%23", (byte) -92);
+            var3 = ProgressDialog.a(var3, ":", "%3a", (byte) -77);
+            var3 = ProgressDialog.a(var3, "@", "%40", (byte) -71);
+            var3 = ProgressDialog.a(var3, "&", "%26", (byte) -85);
+            var7 = ProgressDialog.a(var3, "#", "%23", (byte) -92);
             if (null == InteractiveWidget.field_B) {
               return;
             }

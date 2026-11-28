@@ -409,8 +409,8 @@ final class ri {
               return false;
             }
           }
-          var4_int = jk.field_db[param2] + qa.field_c[param2] + li.field_a[param2];
-          var5 = qa.field_c[param3] + jk.field_db[param3] + li.field_a[param3];
+          var4_int = ContentTransitionDialog.field_db[param2] + qa.field_c[param2] + li.field_a[param2];
+          var5 = qa.field_c[param3] + ContentTransitionDialog.field_db[param3] + li.field_a[param3];
           if (var4_int < var5) {
             return true;
           }
@@ -443,7 +443,7 @@ final class ri {
         RuntimeException var5 = null;
         long var6 = 0L;
         PcmSample var8 = null;
-        b var9 = null;
+        VorbisSample var9 = null;
         PcmSample var8Lifetime1;
         try {
           var5_int = param2 ^ ((param1 & -1610608641) << 4 | param1 >>> 12);
@@ -463,16 +463,16 @@ final class ri {
             stackIn_13_0 = null;
             return (PcmSample) (stackIn_13_0);
           }
-          var9 = (b) (this.field_e.a(var6, param0 + 3984));
+          var9 = (VorbisSample) (this.field_e.a(var6, param0 + 3984));
           if (var9 == null) {
-            var9 = b.a(this.field_a, param1, param2);
+            var9 = VorbisSample.load(this.field_a, param1, param2);
             if (null == var9) {
               stackIn_19_0 = null;
               return (PcmSample) (stackIn_19_0);
             }
             this.field_e.a(0, var6, var9);
           }
-          var8Lifetime1 = var9.a(param3);
+          var8Lifetime1 = var9.decodeToPcm(param3);
           if (var8Lifetime1 == null) {
             stackIn_23_0 = null;
             return (PcmSample) (stackIn_23_0);

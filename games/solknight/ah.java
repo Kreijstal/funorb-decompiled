@@ -7,7 +7,7 @@ final class ah {
     static int field_f;
     static wh field_j;
     static MouseWheelInput field_d;
-    static ci field_e;
+    static ProgressMessageDialog field_e;
     static String field_h;
     static int field_c;
     static CrossfadingMidiPcmStream field_a;
@@ -193,7 +193,7 @@ final class ah {
             if (var5 > 7) {
               var5 = 7;
             }
-            td.field_e[var4Lifetime1 + var5].a(128, -SingleChildWidgetContainer.field_E + ci.field_sb, 119, jj.field_t, 320 + (-ArchiveSource.field_c + FrameTimer.field_b));
+            td.field_e[var4Lifetime1 + var5].a(128, -SingleChildWidgetContainer.field_E + ProgressMessageDialog.field_sb, 119, jj.field_t, 320 + (-ArchiveSource.field_c + FrameTimer.field_b));
             if (param1 != 7) {
               ah.b(true);
             }
@@ -255,7 +255,7 @@ final class ah {
         if (var5 > 7) {
           var5 = 7;
         }
-        td.field_e[var4Lifetime1 + var5].a(128, -SingleChildWidgetContainer.field_E + ci.field_sb, 119, jj.field_t, 320 + (-ArchiveSource.field_c + FrameTimer.field_b));
+        td.field_e[var4Lifetime1 + var5].a(128, -SingleChildWidgetContainer.field_E + ProgressMessageDialog.field_sb, 119, jj.field_t, 320 + (-ArchiveSource.field_c + FrameTimer.field_b));
         if (param1 == 7) {
           return;
         }

@@ -1536,8 +1536,8 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
           if (this.field_Y.field_u.field_n.field_s != -1) {
             var5 = this.field_Y.field_u.field_n.field_d;
             var3 = var5;
-            var4 = jk.a(new String[]{this.field_Y.field_u.field_n.field_F.toUpperCase()}, "<col=178B8B><%0></col>", 30496);
-            this.field_O.field_n = (en) ((Object) new qf(jk.a(new String[]{var5[0]}, PasswordValidator.field_m, 30496), jk.a(new String[]{var4}, var5[1], 30496)));
+            var4 = StandardContentDialog.a(new String[]{this.field_Y.field_u.field_n.field_F.toUpperCase()}, "<col=178B8B><%0></col>", 30496);
+            this.field_O.field_n = (en) ((Object) new qf(StandardContentDialog.a(new String[]{var5[0]}, PasswordValidator.field_m, 30496), StandardContentDialog.a(new String[]{var4}, var5[1], 30496)));
           }
           if (param0 <= 27) {
             this.field_w = true;
@@ -1986,7 +1986,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
           }
         } else {
           var13 = (SpriteAnimationPlayer) null;
-          DungeonRaidScreen.drawFramedSpriteAnimation(518, 57, (SpriteAnimationPlayer) null, kc.field_V);
+          DungeonRaidScreen.drawFramedSpriteAnimation(518, 57, (SpriteAnimationPlayer) null, DialogMessagePane.field_V);
         }
         DungeonRaidScreen.drawDungeonTileStatBars(590, 320, var16, var4Lifetime2 != 0, this.field_Y.field_i);
         var15 = (rj) (this.field_p.beginBackward(-24172));
@@ -2255,8 +2255,8 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
           return false;
         }
         var2 = null;
-        if (wi.field_ob instanceof hj) {
-          var2 = ((hj) (wi.field_ob)).field_V;
+        if (ProgressDialog.field_ob instanceof hj) {
+          var2 = ((hj) (ProgressDialog.field_ob)).field_V;
         }
         var3 = this.field_y.field_n.field_s;
         if (!param0) {
@@ -2409,7 +2409,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
     }
 
     final void c(byte param0) {
-        this.setRaidMessage(jk.a(new String[]{Integer.toString(this.field_C)}, wi.field_qb, 30496), -8963);
+        this.setRaidMessage(StandardContentDialog.a(new String[]{Integer.toString(this.field_C)}, ProgressDialog.field_qb, 30496), -8963);
         if (param0 >= -107) {
           DungeonRaidScreen.b((byte) 51);
         }
@@ -2456,8 +2456,8 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
           this.field_Y.field_u.field_n.field_s != -1) {
           var5 = this.field_Y.field_u.field_n.field_d;
           var2 = var5;
-          var3_ref_String = jk.a(new String[]{this.field_Y.field_u.field_n.field_F.toUpperCase()}, "<col=178B8B><%0></col>", 30496);
-          this.field_O.field_n = (en) ((Object) new qf(jk.a(new String[]{var5[0]}, PasswordValidator.field_m, 30496), jk.a(new String[]{var3_ref_String}, var5[1], 30496)));
+          var3_ref_String = StandardContentDialog.a(new String[]{this.field_Y.field_u.field_n.field_F.toUpperCase()}, "<col=178B8B><%0></col>", 30496);
+          this.field_O.field_n = (en) ((Object) new qf(StandardContentDialog.a(new String[]{var5[0]}, PasswordValidator.field_m, 30496), StandardContentDialog.a(new String[]{var3_ref_String}, var5[1], 30496)));
         } else {
           this.field_O.field_n = null;
         }
@@ -2682,7 +2682,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
         this.field_t = ke.a(var2, (byte) -125, gh.field_g[2], 548);
         this.field_O = ke.a(var2, (byte) -114, gh.field_g[3], 590);
         this.field_J = tn.a(-jm.field_i.field_y + 164 >> 1, (32 - jm.field_i.field_v >> 1) + 8, IntrusiveNode.field_c, jm.field_i, param0 - 18125, TextLayout.field_d);
-        this.field_K = tn.a(476 + (-jm.field_i.field_y + 164 >> 1), 8 + (32 - jm.field_i.field_v >> 1), IntrusiveNode.field_c, jm.field_i, -109, r.field_a);
+        this.field_K = tn.a(476 + (-jm.field_i.field_y + 164 >> 1), 8 + (32 - jm.field_i.field_v >> 1), IntrusiveNode.field_c, jm.field_i, -109, FullscreenNoticeType.field_a);
         var3 = 424;
         this.field_M = new nn(false);
         this.field_z = new hj[4];
@@ -2772,7 +2772,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
               var8Lifetime1 = stackIn_17_0;
               if (var6.field_h.a((byte) -54, 7) &&
                 var8Lifetime1 != 0) {
-                var9 = new oc(var7, var6, false, jk.a(new String[]{var6.field_h.field_z}, DirectByteStorage.field_i, 30496));
+                var9 = new oc(var7, var6, false, StandardContentDialog.a(new String[]{var6.field_h.field_z}, DirectByteStorage.field_i, 30496));
                 decompiledFrameRemainder0 = false;
               }
               else {
@@ -2788,7 +2788,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
                 }
                 if ((1024 & var5_int) != 0 &&
                   var7.field_n.hasAbility(ob.field_jc, -120)) {
-                  var10 = var10 + " <col=FF8000>" + jk.a(new String[]{var7.field_n.field_F}, ia.field_N, 30496) + "</col> ";
+                  var10 = var10 + " <col=FF8000>" + StandardContentDialog.a(new String[]{var7.field_n.field_F}, GuestPlayConfirmationForm.field_N, 30496) + "</col> ";
                   var18 = var10;
                   var10 = var18;
                   var18Lifetime2 = var10;
@@ -2846,7 +2846,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
                           var10 = var19;
                           if (var13 <= 0 &&
                             var12 != 0) {
-                            var9 = new oc(var7, var6, true, var19 + " " + cm.field_K);
+                            var9 = new oc(var7, var6, true, var19 + " " + RegistrationAgreementPane.field_K);
                             decompiledFrameCompleted2 = false;
                             break;
                           }
@@ -2854,7 +2854,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
                           var18Lifetime1 = var10 + " " + ri.field_c;
                           var10 = var18Lifetime1;
                           if (var15 == var13) {
-                            var10 = var18Lifetime1 + " <col=FF8000>" + jk.a(new String[]{var6.field_h.field_z}, IterableNodeHashTable.field_h, 30496) + "</col>";
+                            var10 = var18Lifetime1 + " <col=FF8000>" + StandardContentDialog.a(new String[]{var6.field_h.field_z}, IterableNodeHashTable.field_h, 30496) + "</col>";
                           }
                           if (var13 == 0 &&
                             var12 != 0) {
@@ -2868,7 +2868,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
                       var10 = var20;
                       var11 = 1;
                       if (var13 == var14) {
-                        var10 = var20 + " <col=FF8000>" + jk.a(new String[]{var7.field_n.field_F}, le.field_e, param3 ^ 26023) + "</col>";
+                        var10 = var20 + " <col=FF8000>" + StandardContentDialog.a(new String[]{var7.field_n.field_F}, le.field_e, param3 ^ 26023) + "</col>";
                       }
                       if (var13 <= 0 &&
                         var12 == 0) {

@@ -15,10 +15,10 @@ final class ri {
 
     final synchronized static long correctedCurrentTimeMillis(int param0) {
         long var1 = System.currentTimeMillis();
-        if (var1 < ci.field_c) {
-          im.field_d = im.field_d + (ci.field_c - var1);
+        if (var1 < FullscreenNoticeType.field_c) {
+          im.field_d = im.field_d + (FullscreenNoticeType.field_c - var1);
         }
-        ci.field_c = var1;
+        FullscreenNoticeType.field_c = var1;
         if (param0 != -3) {
           field_a = (String[]) null;
         }

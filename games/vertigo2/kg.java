@@ -125,19 +125,19 @@ final class kg extends TextureOperator {
               var16 = 0;
             }
             var11 = var11 & 4095;
-            var14 = ue.field_G[var11];
+            var14 = RegistrationAgreementPane.field_G[var11];
             var17 = this.field_B[255 & var15] & 255;
             var18 = 255 & this.field_B[255 & var16];
             if (!this.field_D) {
-              for (var10 = 0; var10 < we.field_M; var10++) {
-                var4_int = rh.field_O[var10] * this.field_F;
+              for (var10 = 0; var10 < StripedProgressWidget.field_M; var10++) {
+                var4_int = DialogMessagePane.field_O[var10] * this.field_F;
                 var6 = this.a(var4_int * var8 >> 12, 255, var18, var12, var14, var11, var17);
                 param0[var10] = var9 * var6 >> 12;
               }
               return;
             }
-            for (var10Lifetime3 = 0; we.field_M > var10Lifetime3; var10Lifetime3++) {
-              var4_intLifetime3 = this.field_F * rh.field_O[var10Lifetime3];
+            for (var10Lifetime3 = 0; StripedProgressWidget.field_M > var10Lifetime3; var10Lifetime3++) {
+              var4_intLifetime3 = this.field_F * DialogMessagePane.field_O[var10Lifetime3];
               var6Lifetime3 = this.a(var8 * var4_intLifetime3 >> 12, 255, var18, var12, var14, var11, var17);
               var6Lifetime3 = var6Lifetime3 * var9 >> 12;
               param0[var10Lifetime3] = (var6Lifetime3 >> 1) + 2048;
@@ -158,10 +158,10 @@ final class kg extends TextureOperator {
               var16Lifetime1 = 0;
             }
             var18Lifetime1 = this.field_B[255 & var16Lifetime1] & 255;
-            var14Lifetime1 = ue.field_G[var11Lifetime1];
+            var14Lifetime1 = RegistrationAgreementPane.field_G[var11Lifetime1];
             var17Lifetime1 = this.field_B[255 & var15Lifetime1] & 255;
-            for (var10Lifetime1 = 0; we.field_M > var10Lifetime1; var10Lifetime1++) {
-              var4_intLifetime1 = this.field_F * rh.field_O[var10Lifetime1];
+            for (var10Lifetime1 = 0; StripedProgressWidget.field_M > var10Lifetime1; var10Lifetime1++) {
+              var4_intLifetime1 = this.field_F * DialogMessagePane.field_O[var10Lifetime1];
               var6Lifetime1 = this.a(var8Lifetime1 * var4_intLifetime1 >> 12, 255, var18Lifetime1, var12Lifetime1, var14Lifetime1, var11Lifetime1, var17Lifetime1);
               param0[var10Lifetime1] = var6Lifetime1 * var9Lifetime1 >> 12;
             }
@@ -181,19 +181,19 @@ final class kg extends TextureOperator {
                 var16Lifetime2 = 0;
               }
               var17Lifetime2 = this.field_B[255 & var15Lifetime2] & 255;
-              var14Lifetime2 = ue.field_G[var11Lifetime2];
+              var14Lifetime2 = RegistrationAgreementPane.field_G[var11Lifetime2];
               var18Lifetime2 = this.field_B[255 & var16Lifetime2] & 255;
               if (this.field_D &&
                 var7 == -1 + this.field_E) {
-                for (var10Lifetime2 = 0; we.field_M > var10Lifetime2; var10Lifetime2++) {
-                  var4_intLifetime2 = rh.field_O[var10Lifetime2] * this.field_F;
+                for (var10Lifetime2 = 0; StripedProgressWidget.field_M > var10Lifetime2; var10Lifetime2++) {
+                  var4_intLifetime2 = DialogMessagePane.field_O[var10Lifetime2] * this.field_F;
                   var6Lifetime2 = this.a(var8Lifetime2 * var4_intLifetime2 >> 12, 255, var18Lifetime2, var12Lifetime2, var14Lifetime2, var11Lifetime2, var17Lifetime2);
                   var6Lifetime2 = param0[var10Lifetime2] + (var6Lifetime2 * var9Lifetime2 >> 12);
                   param0[var10Lifetime2] = (var6Lifetime2 >> 1) + 2048;
                 }
               } else {
-                for (var10Lifetime2 = 0; we.field_M > var10Lifetime2; var10Lifetime2++) {
-                  var4_intLifetime2 = this.field_F * rh.field_O[var10Lifetime2];
+                for (var10Lifetime2 = 0; StripedProgressWidget.field_M > var10Lifetime2; var10Lifetime2++) {
+                  var4_intLifetime2 = this.field_F * DialogMessagePane.field_O[var10Lifetime2];
                   var6Lifetime2 = this.a(var8Lifetime2 * var4_intLifetime2 >> 12, 255, var18Lifetime2, var12Lifetime2, var14Lifetime2, var11Lifetime2, var17Lifetime2);
                   param0[var10Lifetime2] = param0[var10Lifetime2] + (var9Lifetime2 * var6Lifetime2 >> 12);
                 }
@@ -259,7 +259,7 @@ final class kg extends TextureOperator {
         var11 = param0 - 4096;
         var12 = var12 & 255;
         var10 = -4096 + param5;
-        var15 = ue.field_G[param0];
+        var15 = RegistrationAgreementPane.field_G[param0];
         var14 = this.field_B[var13 + param6] & 3;
         if (var14 <= 1) {
           if (var14 == 0) {

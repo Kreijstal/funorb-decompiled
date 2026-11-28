@@ -57,7 +57,7 @@ final class mh {
         ga.field_k.addFirst(new hd(param1), -16611);
         if (!kg.field_q) {
           if (!bk.c(-25704)) {
-            cl.a(4, -ge.field_e + oe.field_c, oh.field_e, param1, ArchiveIndex.field_e, bh.field_a, param2, (byte) 43);
+            RegistrationAgreementPane.a(4, -ge.field_e + oe.field_c, oh.field_e, param1, ArchiveIndex.field_e, bh.field_a, param2, (byte) 43);
           } else {
             u.field_c.addFirst(new eg(param1, param2, -ge.field_e + oe.field_c, ArchiveIndex.field_e, oh.field_e, bh.field_a), -16611);
           }
@@ -100,9 +100,9 @@ final class mh {
               var2_int = vi.field_p * (60 + var7.field_q) / ByteStorage.field_c;
               var3 = var2_int - 30;
               if (!ve.field_c) {
-                cl.a(var3 * -256 / 30, 245, (byte) -51, var7, 199, (var7.field_q - var3) * 256 / 30);
+                RegistrationAgreementPane.a(var3 * -256 / 30, 245, (byte) -51, var7, 199, (var7.field_q - var3) * 256 / 30);
               } else {
-                cl.a(256 * (-var3 + var7.field_q) / 30, 245, (byte) 99, var7, 199, var3 * -256 / 30);
+                RegistrationAgreementPane.a(256 * (-var3 + var7.field_q) / 30, 245, (byte) 99, var7, 199, var3 * -256 / 30);
               }
             }
           }

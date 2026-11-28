@@ -121,10 +121,10 @@ final class NodeHashTableIterator implements Iterator {
             field_a = (BufferedSocket) null;
           }
           if (DisplayNameSelectionPanel.field_A == null) {
-            DisplayNameSelectionPanel.field_A = new db(DisplayNameSelectionPanel.field_N, ej.field_c);
+            DisplayNameSelectionPanel.field_A = new ProgressDialog(DisplayNameSelectionPanel.field_N, ej.field_c);
             DisplayNameSelectionPanel.field_N.showDialog(DisplayNameSelectionPanel.field_A, false);
           }
-          DisplayNameSelectionPanel.field_A.a(param0, param2, param1, 65536);
+          DisplayNameSelectionPanel.field_A.setProgress(param0, param2, param1, 65536);
           SoftwareRasterizer.clearRaster();
           pj.a(true, 1);
         } catch (RuntimeException runtimeException) {

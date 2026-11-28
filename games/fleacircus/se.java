@@ -47,10 +47,10 @@ final class se {
         }
         try {
           if (ProxyAuthenticationRequiredException.field_g == null) {
-            ProxyAuthenticationRequiredException.field_g = new nd(nb.field_a, ResourceArchive.field_e);
+            ProxyAuthenticationRequiredException.field_g = new ProgressDialog(nb.field_a, ResourceArchive.field_e);
             nb.field_a.showDialog(ProxyAuthenticationRequiredException.field_g, (byte) -35);
           }
-          ProxyAuthenticationRequiredException.field_g.a(param0, param3, param2, -122);
+          ProxyAuthenticationRequiredException.field_g.setProgress(param0, param3, param2, -122);
           SoftwareRasterizer.clearRaster();
           kb.a(0, true);
         } catch (RuntimeException runtimeException) {
@@ -82,7 +82,7 @@ final class se {
           var2 = var10.readUnsignedByte(false);
           var3 = var10.readUnsignedByte(false);
           if (var2 == 0) {
-            var4_ref_fi = (fi) (lk.field_O.beginForward((byte) 47));
+            var4_ref_fi = (fi) (StripedProgressWidget.field_O.beginForward((byte) 47));
             if (var4_ref_fi == null) {
               BufferedRandomAccessFile.c(-28354);
               return;
@@ -146,8 +146,8 @@ final class se {
         try {
           try {
             var9 = ol.field_e.getGraphics();
-            if (null == ic.field_bb) {
-              ic.field_bb = new java.awt.Font("Helvetica", 1, 13);
+            if (null == FullscreenStatusDialog.field_bb) {
+              FullscreenStatusDialog.field_bb = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param3) {
               var9.setColor(java.awt.Color.black);
@@ -160,20 +160,20 @@ final class se {
               if (param4 > -37) {
                 field_f = (String) null;
               }
-              if (bd.field_kb == null) {
-                bd.field_kb = ol.field_e.createImage(304, 34);
+              if (ProgressMessageDialog.field_kb == null) {
+                ProgressMessageDialog.field_kb = ol.field_e.createImage(304, 34);
               }
-              var10 = bd.field_kb.getGraphics();
+              var10 = ProgressMessageDialog.field_kb.getGraphics();
               var10.setColor(param1);
               var10.drawRect(0, 0, 303, 33);
               var10.fillRect(2, 2, 3 * param0, 30);
               var10.setColor(java.awt.Color.black);
               var10.drawRect(1, 1, 301, 31);
               var10.fillRect(3 * param0 + 2, 2, 300 - param0 * 3, 30);
-              var10.setFont(ic.field_bb);
+              var10.setFont(FullscreenStatusDialog.field_bb);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param2, (304 - 6 * param2.length()) / 2, 22);
-              var9.drawImage(bd.field_kb, -152 + ki.field_a / 2, -18 + gm.field_nb / 2, (java.awt.image.ImageObserver) null);
+              var9.drawImage(ProgressMessageDialog.field_kb, -152 + ki.field_a / 2, -18 + gm.field_nb / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
@@ -185,12 +185,12 @@ final class se {
               var9.setColor(java.awt.Color.black);
               var9.drawRect(1 + var7, 1 + var8, 301, 31);
               var9.fillRect(2 + (var7 + param0 * 3), var8 + 2, 300 - param0 * 3, 30);
-              var9.setFont(ic.field_bb);
+              var9.setFont(FullscreenStatusDialog.field_bb);
               var9.setColor(java.awt.Color.white);
               var9.drawString(param2, var7 + (304 - 6 * param2.length()) / 2, var8 + 22);
             }
             if (null != vi.field_b) {
-              var9.setFont(ic.field_bb);
+              var9.setFont(FullscreenStatusDialog.field_bb);
               var9.setColor(java.awt.Color.white);
               var9.drawString(vi.field_b, ki.field_a / 2 - 6 * vi.field_b.length() / 2, -26 + gm.field_nb / 2);
             }

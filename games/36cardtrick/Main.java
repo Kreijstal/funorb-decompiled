@@ -152,7 +152,7 @@ public final class Main extends c {
           AccountRequestState.a((byte) 81, lc.field_a[1]);
           AgeValidator.field_m = 0;
           nb.field_e = 0;
-          rj.field_p = af.field_ob - ByteArrayStore.field_b;
+          rj.field_p = ProgressMessageDialog.field_ob - ByteArrayStore.field_b;
           ue.field_d = param0;
           RichTextWidget.field_J = 0;
           if (NanoFrameTimer.field_f >= 2) {
@@ -241,8 +241,8 @@ public final class Main extends c {
         var3 = field_T;
         try {
           hb.field_d = hb.field_d + 1;
-          ByteArrayStore.field_b = ByteArrayStore.field_b + (af.field_ob << 1);
-          rj.field_p = rj.field_p - (af.field_ob << 1);
+          ByteArrayStore.field_b = ByteArrayStore.field_b + (ProgressMessageDialog.field_ob << 1);
+          rj.field_p = rj.field_p - (ProgressMessageDialog.field_ob << 1);
           if (param0 != -97283608) {
             return;
           }
@@ -286,13 +286,13 @@ public final class Main extends c {
                   (decompiledFrameRemainder2) &&
                   (decompiledFrameRemainder1) &&
                   (decompiledFrameRemainder0)) {
-                  if ((1073741824 & rk.field_X) != 0) {
+                  if ((1073741824 & ProgressDialog.field_X) != 0) {
                     hb.field_d = hb.field_d - 2;
                     if (hb.field_d != 31) {
                       if (0 != hb.field_d) {
                         return;
                       }
-                      rk.field_X = 0;
+                      ProgressDialog.field_X = 0;
                       ff.field_b = -1;
                       if (var3 == 0) {
                         return;
@@ -302,14 +302,14 @@ public final class Main extends c {
                       ra.field_d = sk.a(4, (byte) 125);
                       if (0 < AgeValidator.field_m &&
                         !ImageProducerRasterBuffer.field_n) {
-                        this.field_P = pk.a(fb.field_c[this.field_C], new int[]{(AgeValidator.field_m << 8) + RichTextWidget.field_J}, af.field_ob, vb.field_a[this.field_C], ByteArrayStore.field_b, rj.field_p, BufferedRandomAccessFile.field_c, (byte) 80, 3);
+                        this.field_P = pk.a(fb.field_c[this.field_C], new int[]{(AgeValidator.field_m << 8) + RichTextWidget.field_J}, ProgressMessageDialog.field_ob, vb.field_a[this.field_C], ByteArrayStore.field_b, rj.field_p, BufferedRandomAccessFile.field_c, (byte) 80, 3);
                       }
-                      dj.field_a = (byte)(rk.field_X >> 8);
+                      dj.field_a = (byte)(ProgressDialog.field_X >> 8);
                       if (var3 != 0) {
-                        dj.field_a = (byte)rk.field_X;
+                        dj.field_a = (byte)ProgressDialog.field_X;
                       }
                     } else {
-                      dj.field_a = (byte)rk.field_X;
+                      dj.field_a = (byte)ProgressDialog.field_X;
                     }
                     if (dj.field_a != -2) {
                       return;
@@ -331,7 +331,7 @@ public final class Main extends c {
                   } else {
                     pf.b((byte) 127);
                   }
-                  rk.field_X = rk.field_X | 1073741824;
+                  ProgressDialog.field_X = ProgressDialog.field_X | 1073741824;
                   if (var3 == 0) {
                     return;
                   }
@@ -354,14 +354,14 @@ public final class Main extends c {
                     return;
                   }
                   ff.field_b = -1;
-                  dj.field_a = rk.field_X;
+                  dj.field_a = ProgressDialog.field_X;
                   if (var3 == 0) {
                     return;
                   }
                 }
                 if (decompiledFrameRemainder3) {
                   if (hb.field_d == 1) {
-                    if (5 == rk.field_X &&
+                    if (5 == ProgressDialog.field_X &&
                       !dl.d(param0 + 97283608)) {
                       this.field_cb = NodeHashTableIterator.a(8, 3, 25404, fb.field_c[this.field_C], 1);
                     }
@@ -373,13 +373,13 @@ public final class Main extends c {
                     return;
                   }
                   ff.field_b = -1;
-                  dj.field_a = rk.field_X;
+                  dj.field_a = ProgressDialog.field_X;
                   if (var3 == 0) {
                     return;
                   }
                 }
                 if (hb.field_d == 1) {
-                  if (rk.field_X == 5 &&
+                  if (ProgressDialog.field_X == 5 &&
                     !dl.d(0)) {
                     this.field_cb = NodeHashTableIterator.a(8, 3, 25404, fb.field_c[this.field_C], 1);
                   }
@@ -389,7 +389,7 @@ public final class Main extends c {
                   return;
                 }
                 ff.field_b = -1;
-                dj.field_a = rk.field_X;
+                dj.field_a = ProgressDialog.field_X;
                 if (var3 == 0) {
                   return;
                 }
@@ -398,7 +398,7 @@ public final class Main extends c {
                 return;
               }
               ff.field_b = -1;
-              if (rk.field_X != 7) {
+              if (ProgressDialog.field_X != 7) {
                 if ((this.field_U == 4) &&
                   (!(this.field_K <= 0))) {
                   gh.a(ve.field_c, (byte) -78);
@@ -418,7 +418,7 @@ public final class Main extends c {
               return;
             }
             ff.field_b = -1;
-            dj.field_a = rk.field_X;
+            dj.field_a = ProgressDialog.field_X;
             if (var3 == 0) {
               return;
             }
@@ -426,8 +426,8 @@ public final class Main extends c {
           if (hb.field_d == 32) {
             ff.field_b = -1;
             var2_int = dj.field_a;
-            dj.field_a = rk.field_X;
-            rk.field_X = var2_int;
+            dj.field_a = ProgressDialog.field_X;
+            ProgressDialog.field_X = var2_int;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -490,7 +490,7 @@ public final class Main extends c {
         try {
           jl.field_h = jl.field_h + ((bc.field_a << 1) + bc.field_a);
           BufferedRandomAccessFile.field_a = BufferedRandomAccessFile.field_a + 3;
-          ol.field_W = ol.field_W + (BufferedRandomAccessFile.field_a << 1);
+          FullscreenStatusDialog.field_W = FullscreenStatusDialog.field_W + (BufferedRandomAccessFile.field_a << 1);
           nb.field_e = nb.field_e | ue.field_d;
           bc.field_a = bc.field_a + 2;
           q.field_i = q.field_i - 1;
@@ -671,9 +671,9 @@ public final class Main extends c {
                       var2_int = eg.field_b * (640 ^ ij.field_e);
                       BufferedRandomAccessFile.field_c = BufferedRandomAccessFile.field_c + 8;
                       jl.field_h = jl.field_h + var2_int;
-                      ol.field_W = ol.field_W - var2_int;
-                      ByteArrayStore.field_b = ByteArrayStore.field_b + (af.field_ob << 3);
-                      rj.field_p = rj.field_p - (af.field_ob << 3);
+                      FullscreenStatusDialog.field_W = FullscreenStatusDialog.field_W - var2_int;
+                      ByteArrayStore.field_b = ByteArrayStore.field_b + (ProgressMessageDialog.field_ob << 3);
+                      rj.field_p = rj.field_p - (ProgressMessageDialog.field_ob << 3);
                       decompiledFrameRemainder0 = (var3 != 0);
                     }
                   }
@@ -720,7 +720,7 @@ public final class Main extends c {
                       var2_int = this.b(true, (byte) -51);
                       if (2 == var2_int) {
                         bc.field_a = -2073859829;
-                        ol.field_W = -2073859829;
+                        FullscreenStatusDialog.field_W = -2073859829;
                         ok.b(63);
                         this.v(256);
                         MatchingFieldValidator.field_k = true;
@@ -738,7 +738,7 @@ public final class Main extends c {
               var2_int = this.b(true, (byte) -51);
               if (2 == var2_int) {
                 bc.field_a = -2073859829;
-                ol.field_W = -2073859829;
+                FullscreenStatusDialog.field_W = -2073859829;
                 ok.b(63);
                 this.v(256);
                 MatchingFieldValidator.field_k = true;
@@ -1013,7 +1013,7 @@ public final class Main extends c {
           oa.a((java.awt.Component) ((Object) tb.field_c), 22050, (byte) 103, jk.field_a, true);
           wg.field_a = param0;
           ca.field_b = 4086842;
-          af.field_jb = 4473924;
+          ProgressMessageDialog.field_jb = 4473924;
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "Main.CB(" + param0 + ')');
         }
@@ -1094,7 +1094,7 @@ public final class Main extends c {
           if (AgeValidator.field_m > 0 &&
             !ImageProducerRasterBuffer.field_n &&
             !dl.d(0)) {
-            this.field_P = pk.a(fb.field_c[this.field_C], new int[]{(AgeValidator.field_m << 8) + RichTextWidget.field_J}, af.field_ob, vb.field_a[this.field_C], ByteArrayStore.field_b, rj.field_p, BufferedRandomAccessFile.field_c, (byte) 70, 3);
+            this.field_P = pk.a(fb.field_c[this.field_C], new int[]{(AgeValidator.field_m << 8) + RichTextWidget.field_J}, ProgressMessageDialog.field_ob, vb.field_a[this.field_C], ByteArrayStore.field_b, rj.field_p, BufferedRandomAccessFile.field_c, (byte) 70, 3);
           }
           AccountRequestState.a((byte) 53, lc.field_a[0]);
           this.a(11246, 6, 3, false);
@@ -1153,9 +1153,9 @@ public final class Main extends c {
           var4 = this.field_H[var2_int];
           this.field_H[var2_int] = this.field_H[var3];
           this.field_H[var3] = (byte) var4;
-          ByteArrayStore.field_b = ByteArrayStore.field_b + af.field_ob;
+          ByteArrayStore.field_b = ByteArrayStore.field_b + ProgressMessageDialog.field_ob;
           BufferedRandomAccessFile.field_c = BufferedRandomAccessFile.field_c + 1;
-          rj.field_p = rj.field_p - af.field_ob;
+          rj.field_p = rj.field_p - ProgressMessageDialog.field_ob;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1286,7 +1286,7 @@ public final class Main extends c {
           NameSuggestionsPanel.field_H.drawOpaque(0, 0);
           qa.field_b.drawRightAligned(Integer.toString(RichTextWidget.field_J), 85, 80, 16777215, -1);
           stackIn_4_0 = qa.field_b;
-          stackIn_4_1 = Integer.toString(-af.field_ob + rj.field_p + ByteArrayStore.field_b >> 8);
+          stackIn_4_1 = Integer.toString(-ProgressMessageDialog.field_ob + rj.field_p + ByteArrayStore.field_b >> 8);
           stackIn_4_2 = 130;
           stackIn_4_3 = 238;
           if (ImageProducerRasterBuffer.field_n) {
@@ -1589,20 +1589,20 @@ public final class Main extends c {
                         BufferedSocket.field_c[0] = uj.a(sh.field_g, "", "turnover_card").a();
                         BufferedSocket.field_c[1] = uj.a(sh.field_g, "", "revolver_cocking").a();
                         BufferedSocket.field_c[2] = uj.a(sh.field_g, "", "revolver_decocking").a();
-                        BufferedSocket.field_c[3] = ig.a(fb.field_a, "", "gunshot").c();
-                        BufferedSocket.field_c[4] = ig.a(fb.field_a, "", "crow").c();
-                        BufferedSocket.field_c[5] = ig.a(fb.field_a, "", "pesky varment").c();
-                        BufferedSocket.field_c[6] = ig.a(fb.field_a, "", "feelin lucky").c();
+                        BufferedSocket.field_c[3] = VorbisSample.loadByName(fb.field_a, "", "gunshot").decodeAllToPcm();
+                        BufferedSocket.field_c[4] = VorbisSample.loadByName(fb.field_a, "", "crow").decodeAllToPcm();
+                        BufferedSocket.field_c[5] = VorbisSample.loadByName(fb.field_a, "", "pesky varment").decodeAllToPcm();
+                        BufferedSocket.field_c[6] = VorbisSample.loadByName(fb.field_a, "", "feelin lucky").decodeAllToPcm();
                         ca.field_c[6] = 112;
-                        BufferedSocket.field_c[7] = ig.a(fb.field_a, "", "dont try that again").c();
-                        BufferedSocket.field_c[8] = ig.a(fb.field_a, "", "didnt see that one comin").c();
+                        BufferedSocket.field_c[7] = VorbisSample.loadByName(fb.field_a, "", "dont try that again").decodeAllToPcm();
+                        BufferedSocket.field_c[8] = VorbisSample.loadByName(fb.field_a, "", "didnt see that one comin").decodeAllToPcm();
                         BufferedSocket.field_c[9] = uj.a(sh.field_g, "", "swap_cards").a();
-                        BufferedSocket.field_c[10] = ig.a(fb.field_a, "", "yeeehaaa").c();
-                        BufferedSocket.field_c[11] = ig.a(fb.field_a, "", "yeeehaaa2").c();
-                        BufferedSocket.field_c[12] = ig.a(fb.field_a, "", "yeeehaaa3").c();
-                        BufferedSocket.field_c[13] = ig.a(fb.field_a, "", "are you a mexican").c();
+                        BufferedSocket.field_c[10] = VorbisSample.loadByName(fb.field_a, "", "yeeehaaa").decodeAllToPcm();
+                        BufferedSocket.field_c[11] = VorbisSample.loadByName(fb.field_a, "", "yeeehaaa2").decodeAllToPcm();
+                        BufferedSocket.field_c[12] = VorbisSample.loadByName(fb.field_a, "", "yeeehaaa3").decodeAllToPcm();
+                        BufferedSocket.field_c[13] = VorbisSample.loadByName(fb.field_a, "", "are you a mexican").decodeAllToPcm();
                         ca.field_c[13] = 120;
-                        BufferedSocket.field_c[14] = ig.a(fb.field_a, "", "chicken").c();
+                        BufferedSocket.field_c[14] = VorbisSample.loadByName(fb.field_a, "", "chicken").decodeAllToPcm();
                         BufferedSocket.field_c[15] = uj.a(sh.field_g, "", "menu_click").a();
                         var3 = uj.a(sh.field_g, "", "score-count").a();
                         var3.field_k = var3.field_h.length;
@@ -1957,7 +1957,7 @@ public final class Main extends c {
           SoftwareRasterizer.fillRectangle(198, 33, 415, 415, 1);
           DefaultTextWidgetRenderer.a((byte) 92, 10274800, 269877, 538209, 31, 5671872, 419, 196, 419);
           a.a(16777215, vk.field_j, -1, 39, 6697779, 113);
-          a.a(16777215, tj.field_D, -1, 98, 6697779, 162);
+          a.a(16777215, GuestPlayConfirmationForm.field_D, -1, 98, 6697779, 162);
           a.a(16777215, ti.field_b, -1, 15, 6697779, 262);
           a.a(16777215, uc.field_o, -1, 36, 6697779, 313);
           f.field_a = var12.copy();
@@ -2122,16 +2122,16 @@ public final class Main extends c {
           hk.a(121);
           ModalDialogHost.releaseDeclaredStaticReferences(param0 + 46);
           AccountCreationResultPanel.resetStaticState(-2113);
-          rk.clearStaticReferences((byte) -30);
+          ProgressDialog.clearStaticReferences((byte) -30);
           AccountRegistrationPanel.clearDeclaredStaticReferences(-23573);
-          tj.clearDeclaredStaticReferences(0);
+          GuestPlayConfirmationForm.clearDeclaredStaticReferences(0);
           LoginPanel.clearDeclaredStaticReferences(false);
           DisplayNameSelectionPanel.clearDeclaredStaticReferences(200);
           jk.clearStaticReferences((byte) -63);
           aj.clearStaticReferences(83);
           th.resetStaticState(true);
           hd.clearStaticReferences();
-          ig.clearStaticReferences();
+          VorbisSample.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
           da.clearStaticReferences(-1703274388);
           vb.clearStaticReferences(-1);
@@ -2187,7 +2187,7 @@ public final class Main extends c {
           UiWidget.clearStaticReferences(0);
           InteractiveWidget.clearDeclaredStaticReferences((byte) -69);
           SingleChildWidgetContainer.clearDeclaredStaticReferences(80);
-          jc.clearDeclaredStaticReferences(42);
+          ResizableModalDialog.clearDeclaredStaticReferences(42);
           ModalDialog.n(param0 + 8736);
           DequeWidgetContainer.clearStaticReferences(true);
           qd.resetStaticState(param0 ^ -2057);
@@ -2210,8 +2210,8 @@ public final class Main extends c {
           dd.clearStaticReferences(false);
           LabeledWidgetContainer.clearStaticReferences((byte) 41);
           EditableTextField.o(-31141);
-          ta.clearStaticReferences((byte) 116);
-          ng.resetStaticState(2);
+          ContentTransitionDialog.clearStaticReferences((byte) 116);
+          StripedProgressWidget.resetStaticState(2);
           NameSuggestionsPanel.resetStaticState(-10790);
           RichTextWidget.clearDeclaredStaticReferences(param0 ^ -74);
           gl.clearDeclaredStaticReferences(1);
@@ -2219,7 +2219,7 @@ public final class Main extends c {
           ua.clearDeclaredStaticReferences(72);
           TextFieldValidator.clearStaticReferences(1);
           s.clearStaticReferences(30235);
-          qe.clearStaticReferences((byte) 73);
+          RegistrationAgreementPane.clearStaticReferences((byte) 73);
           se.clearDeclaredStaticReferences(param0 ^ 87);
           h.clearDeclaredStaticReferences(-26526);
           SoundFilter.clearStaticReferences();
@@ -2256,12 +2256,12 @@ public final class Main extends c {
           lb.clearStaticReferences(640);
           cc.resetStaticState((byte) 107);
           kf.clearStaticReferences((byte) 110);
-          ui.clearDeclaredStaticReferences(-22742);
+          DialogMessagePane.clearDeclaredStaticReferences(-22742);
           qa.clearStaticReferences((byte) -31);
           mi.clearStaticReferences(-3731);
           rb.clearDeclaredStaticReferences(-107);
           jl.clearStaticReferences((byte) 126);
-          ml.clearStaticReferences(param0 + 107);
+          FullscreenNoticeType.clearStaticReferences(param0 + 107);
           pf.clearStaticReferences(param0 ^ -26);
           rh.b((byte) -109);
           dl.a(param0 + 8996);
@@ -2420,7 +2420,7 @@ public final class Main extends c {
         int var6 = 0;
         try {
           if (dl.field_h == 1) {
-            var2_int = -5 + (jc.field_N - 31);
+            var2_int = -5 + (ResizableModalDialog.field_N - 31);
             if (var2_int > 0 &&
               var2_int % 69 < 64) {
               var3 = var2_int / 69;
@@ -2490,7 +2490,7 @@ public final class Main extends c {
             var8 != 0))) {
             if (var3 == 7 &&
               var8 == 0) {
-              this.field_E[rk.field_X].a(0, 0, 0);
+              this.field_E[ProgressDialog.field_X].a(0, 0, 0);
               td.field_c[-5 + dj.field_a].drawWithOpacity(198, 33, -hb.field_d + 32 << 3);
               ArchiveRequest.field_k.drawOpaque(347, 401);
               decompiledFrameRemainder5 = false;
@@ -2499,7 +2499,7 @@ public final class Main extends c {
               if (6 == var3) {
                 var3 = 24 * hb.field_d;
                 SoftwareRasterizer.setClip(0, 0, 640, var3);
-                this.field_E[rk.field_X].a(0, 0, 0);
+                this.field_E[ProgressDialog.field_X].a(0, 0, 0);
                 SoftwareRasterizer.setClip(0, var3, 640, 480);
                 this.field_E[dj.field_a].a(0, 0, var3);
                 SoftwareRasterizer.resetClip();
@@ -2512,7 +2512,7 @@ public final class Main extends c {
               }
               if ((decompiledFrameRemainder5) &&
                 (decompiledFrameRemainder0)) {
-                this.field_E[rk.field_X].a(0, 0, 0);
+                this.field_E[ProgressDialog.field_X].a(0, 0, 0);
                 this.field_E[dj.field_a].a(hb.field_d, 0, 0);
                 decompiledFrameRemainder5 = false;
               }
@@ -2520,7 +2520,7 @@ public final class Main extends c {
             if ((decompiledFrameRemainder5) &&
               (decompiledFrameRemainder0)) {
               this.b(0, 2);
-              if (rk.field_X == 7) {
+              if (ProgressDialog.field_X == 7) {
                 var3 = -hb.field_d + 68;
                 var4 = hb.field_d * 2;
                 var5 = 0;
@@ -2537,7 +2537,7 @@ public final class Main extends c {
                   var5++;
                 }
               }
-              var3_ref_kc = td.field_c[-5 + rk.field_X];
+              var3_ref_kc = td.field_c[-5 + ProgressDialog.field_X];
               var3_ref_kc.drawScaled(198 + hb.field_d * var3_ref_kc.field_p / 64, 33 + var3_ref_kc.field_o * hb.field_d / 64, var3_ref_kc.field_p * (-hb.field_d + 32) / 32, (-hb.field_d + 32) * var3_ref_kc.field_o / 32);
               ArchiveRequest.field_k.drawScaled(198 + (-hb.field_d + 32) * (-var3_ref_kc.field_p + 298) / 64 + var3_ref_kc.field_p / 2, 33 + (32 - hb.field_d) * (-var3_ref_kc.field_o + 736) / 64 + var3_ref_kc.field_o / 2, (32 - hb.field_d) * ArchiveRequest.field_k.field_p / 32, (32 - hb.field_d) * ArchiveRequest.field_k.field_o / 32);
               decompiledFrameRemainder5 = false;
@@ -2568,25 +2568,25 @@ public final class Main extends c {
             (decompiledFrameRemainder3) &&
             (decompiledFrameRemainder2)) {
             this.b(0, 2);
-            this.field_E[rk.field_X].a(hb.field_d, 0, 0);
+            this.field_E[ProgressDialog.field_X].a(hb.field_d, 0, 0);
             decompiledFrameRemainder5 = (var8 != 0);
           }
           if ((decompiledFrameRemainder5) &&
             (decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3)) {
             this.b(0, 2);
-            this.field_E[rk.field_X].a(-hb.field_d + 32, 0, 0);
+            this.field_E[ProgressDialog.field_X].a(-hb.field_d + 32, 0, 0);
             decompiledFrameRemainder5 = (var8 != 0);
           }
           if ((decompiledFrameRemainder5) &&
             (decompiledFrameRemainder4)) {
             this.field_E[dj.field_a].a(0, 0, 0);
-            this.field_E[rk.field_X].a(32 - hb.field_d, 0, 0);
+            this.field_E[ProgressDialog.field_X].a(32 - hb.field_d, 0, 0);
             decompiledFrameRemainder5 = (var8 != 0);
           }
           if (decompiledFrameRemainder5) {
             this.b(0, 2);
-            var3_ref_kcLifetime1 = td.field_c[-5 + rk.field_X];
+            var3_ref_kcLifetime1 = td.field_c[-5 + ProgressDialog.field_X];
             var3_ref_kcLifetime1.drawScaled(198 + (32 - hb.field_d) * var3_ref_kcLifetime1.field_p / 64, 33 + var3_ref_kcLifetime1.field_o * (-hb.field_d + 32) / 64, hb.field_d * var3_ref_kcLifetime1.field_p / 32, var3_ref_kcLifetime1.field_o * hb.field_d / 32);
             ArchiveRequest.field_k.drawScaled(var3_ref_kcLifetime1.field_p / 2 + (-var3_ref_kcLifetime1.field_p + 298) * hb.field_d / 64 + 198, 33 + ((-var3_ref_kcLifetime1.field_o + 736) * hb.field_d / 64 + var3_ref_kcLifetime1.field_o / 2), hb.field_d * ArchiveRequest.field_k.field_p / 32, hb.field_d * ArchiveRequest.field_k.field_o / 32);
           }
@@ -2766,7 +2766,7 @@ public final class Main extends c {
           }
           hb.field_d = 0;
           ff.field_b = param2;
-          rk.field_X = param1;
+          ProgressDialog.field_X = param1;
           this.p(-97283608);
           if (2 != param2 &&
             6 != param2 &&
@@ -2832,7 +2832,7 @@ public final class Main extends c {
               if (0 >= this.field_J) {
                 if (0 < this.field_K) {
                   this.field_K = this.field_K - 1;
-                  af.field_ob = af.field_ob - 512;
+                  ProgressMessageDialog.field_ob = ProgressMessageDialog.field_ob - 512;
                   AgeValidator.field_m = AgeValidator.field_m + 2;
                   ByteArrayStore.field_b = ByteArrayStore.field_b - (BufferedRandomAccessFile.field_c << 9);
                   rj.field_p = rj.field_p + (BufferedRandomAccessFile.field_c << 9);
@@ -2845,7 +2845,7 @@ public final class Main extends c {
                 this.field_J = this.field_J - 1;
                 AgeValidator.field_m = AgeValidator.field_m + RichTextWidget.field_J;
                 rj.field_p = rj.field_p + ((BufferedRandomAccessFile.field_c + 1) * RichTextWidget.field_J << 7);
-                af.field_ob = af.field_ob - (RichTextWidget.field_J << 7);
+                ProgressMessageDialog.field_ob = ProgressMessageDialog.field_ob - (RichTextWidget.field_J << 7);
               }
               decompiledFrameRemainder2 = false;
             } else {
@@ -2916,7 +2916,7 @@ public final class Main extends c {
                     continue;
                   }
                   this.a(11246, 1, 2, false);
-                  rk.a(false, lc.field_a[2], false);
+                  ProgressDialog.a(false, lc.field_a[2], false);
                 }
               }
               if (!(2 > NanoFrameTimer.field_f)) {
@@ -2967,18 +2967,18 @@ public final class Main extends c {
               var2[var3Lifetime1] = (byte) -1;
               var4 = 4 + RichTextWidget.field_J;
               AgeValidator.field_m = AgeValidator.field_m + var4;
-              af.field_ob = af.field_ob - (var4 << 7);
+              ProgressMessageDialog.field_ob = ProgressMessageDialog.field_ob - (var4 << 7);
               rj.field_p = rj.field_p + (var4 << 7);
               var4 = var4 * BufferedRandomAccessFile.field_c << 7;
               bc.field_a = bc.field_a + 1;
               ByteArrayStore.field_b = ByteArrayStore.field_b - var4;
-              ol.field_W = ol.field_W + BufferedRandomAccessFile.field_a;
+              FullscreenStatusDialog.field_W = FullscreenStatusDialog.field_W + BufferedRandomAccessFile.field_a;
               rj.field_p = rj.field_p + var4;
               fieldTemp$1 = this.field_Q - 1;
               this.field_Q = this.field_Q - 1;
               if (fieldTemp$1 == 0) {
                 ByteArrayStore.field_b = ByteArrayStore.field_b - (BufferedRandomAccessFile.field_c * 50 << 7);
-                af.field_ob = af.field_ob - 6400;
+                ProgressMessageDialog.field_ob = ProgressMessageDialog.field_ob - 6400;
                 AgeValidator.field_m = AgeValidator.field_m + 50;
                 rj.field_p = rj.field_p + 6400;
                 rj.field_p = rj.field_p + (BufferedRandomAccessFile.field_c * 50 << 7);

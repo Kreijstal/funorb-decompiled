@@ -220,7 +220,7 @@ final class kk {
                 if (6 != this.field_g &&
                   this.field_g != 10) {
                   if (this.field_g == 7) {
-                    lb.a(120, 400, (byte) -119, NodeHashTableIterator.field_e, 180, 185);
+                    GuestPlayConfirmationForm.a(120, 400, (byte) -119, NodeHashTableIterator.field_e, 180, 185);
                     var3_ref_vk = BoundedRandomAccessFile.field_e;
                     var4Lifetime1 = var3_ref_vk.field_C + 200;
                     var5Lifetime1 = 4 + (var3_ref_vk.field_j + var3_ref_vk.field_D);
@@ -330,7 +330,7 @@ final class kk {
         var3 = 380;
         var4 = 263;
         SoftwareRasterizer.fillRectangle(3, 3, var3 - 6, -6 + var4, 16249775);
-        lb.a(0, var3, (byte) -124, NodeHashTableIterator.field_e, 0, var4);
+        GuestPlayConfirmationForm.a(0, var3, (byte) -124, NodeHashTableIterator.field_e, 0, var4);
         var5 = BoundedRandomAccessFile.field_e;
         var6 = 0;
         var7_int = DiskArchiveRequest.field_r / 8;
@@ -434,8 +434,8 @@ final class kk {
         Throwable var15;
         int[] var19;
         var14 = MonkeyPuzzle2.field_F ? 1 : 0;
-        if (s.field_S == null) {
-          s.field_S = PcmResampler.a(41, 10, 3, 1, -114);
+        if (FullscreenStatusDialog.field_S == null) {
+          FullscreenStatusDialog.field_S = PcmResampler.a(41, 10, 3, 1, -114);
         }
         if (param0 < 39) {
           var15 = (Throwable) null;
@@ -446,10 +446,10 @@ final class kk {
           var2 = 380;
           var3 = 275;
           SoftwareRasterizer.fillRectangle(3, 3, var2 - 6, var3 - 6, 16249775);
-          lb.a(0, var2, (byte) -12, NodeHashTableIterator.field_e, 0, var3);
+          GuestPlayConfirmationForm.a(0, var2, (byte) -12, NodeHashTableIterator.field_e, 0, var3);
           RichTextLayout.field_r.drawCentred(AccountRegistrationPanel.field_B[ef.field_b], var2 >> 1, 30, 9330743, -1);
           var4 = BoundedRandomAccessFile.field_e;
-          var5 = s.field_S;
+          var5 = FullscreenStatusDialog.field_S;
           if (var5.field_l) {
             if (var5.field_g == null) {
               var6 = re.field_b;
@@ -543,7 +543,7 @@ final class kk {
             }
             ProxyAuthenticationRequiredException.field_d[this.field_e].c((byte) -122);
             if (this.field_e == 2) {
-              s.field_S = null;
+              FullscreenStatusDialog.field_S = null;
             }
             var3 = qh.field_b;
             if (this.field_g != 1 ||
@@ -804,7 +804,7 @@ final class kk {
         stackIn_17_0 = (param2) ? 5683782 : 1;
         var9 = stackIn_17_0;
         if (this.field_g != 7) {
-          lb.a(0, var8, (byte) -33, NodeHashTableIterator.field_e, 0, 40);
+          GuestPlayConfirmationForm.a(0, var8, (byte) -33, NodeHashTableIterator.field_e, 0, 40);
         }
         var10 = RichTextLayout.field_r;
         if (var6 == 11 ||
@@ -849,7 +849,7 @@ final class kk {
         int var2 = 380;
         int var3 = 275;
         SoftwareRasterizer.fillRectangle(3, 3, -6 + var2, -6 + var3, 16249775);
-        lb.a(0, var2, (byte) 64, NodeHashTableIterator.field_e, 0, var3);
+        GuestPlayConfirmationForm.a(0, var2, (byte) 64, NodeHashTableIterator.field_e, 0, var3);
         int var5 = 86 % ((53 - param0) / 61);
         int var4 = 90;
         RichTextLayout.field_r.drawParagraph(el.field_c, 20, var4, -40 + var2, 200, 9330743, -1, 1, 0, 0);
@@ -1016,9 +1016,9 @@ final class kk {
                 decompiledFrameRemainder1 = (var8 != 0);
               }
               if ((decompiledFrameRemainder1) &&
-                (s.field_S != null)) {
-                if (!s.field_S.field_l) {
-                  s.field_S = null;
+                (FullscreenStatusDialog.field_S != null)) {
+                if (!FullscreenStatusDialog.field_S.field_l) {
+                  FullscreenStatusDialog.field_S = null;
                   lg.field_w = lg.field_w + 1;
                   ProxyAuthenticationRequiredException.field_b = null;
                   DebouncedFieldValidator.field_f = new hj();
@@ -1026,8 +1026,8 @@ final class kk {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  if (null != s.field_S.field_g) {
-                    var5_ref_String__ = s.field_S.field_g[1];
+                  if (null != FullscreenStatusDialog.field_S.field_g) {
+                    var5_ref_String__ = FullscreenStatusDialog.field_S.field_g[1];
                     stackIn_61_0 = (null == var5_ref_String__[0]);
                     qb.field_b = stackIn_61_0;
                   }
@@ -1035,7 +1035,7 @@ final class kk {
               }
             }
             if (decompiledFrameRemainder0) {
-              s.field_S = null;
+              FullscreenStatusDialog.field_S = null;
               lg.field_w = lg.field_w + 1;
               ProxyAuthenticationRequiredException.field_b = null;
               DebouncedFieldValidator.field_f = new hj();
@@ -1065,7 +1065,7 @@ final class kk {
               }
             case 15:
               if (this.field_c.g(0)) {
-                kg.field_c = 0;
+                FullscreenNoticeType.field_c = 0;
               }
             case 5:
               if (!this.field_c.g(0)) {
@@ -1272,7 +1272,7 @@ final class kk {
                   }
                 }
                 DebouncedFieldValidator.field_f.c((byte) -108);
-                s.field_S = null;
+                FullscreenStatusDialog.field_S = null;
                 if (FrameTimer.field_b != 0) {
                   if (0 >= DebouncedFieldValidator.field_f.field_A) {
                     this.field_e = 10;

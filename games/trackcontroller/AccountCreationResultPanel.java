@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends jj implements ButtonListener {
+final class AccountCreationResultPanel extends ProgressMessageDialog implements ButtonListener {
     static int field_pb;
     static FullscreenFocusCanvas field_rb;
     static String field_qb;
@@ -45,7 +45,7 @@ final class AccountCreationResultPanel extends jj implements ButtonListener {
         ne.field_a.readUnsignedByte(16383);
     }
 
-    final void u(int param0) {
+    final void showAccountCreationConnectionFailure(int param0) {
         this.showAccountCreationResult(true, wg.createAccountErrorResult((byte) -123, 248, DirectByteStorage.field_h), 7);
         int var2 = 58 % ((param0 + 61) / 57);
     }
@@ -57,7 +57,7 @@ final class AccountCreationResultPanel extends jj implements ButtonListener {
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        lc var5 = null;
+        DialogMessagePane var5 = null;
         int var6 = 0;
         var6 = TrackController.field_F ? 1 : 0;
         try {
@@ -69,7 +69,7 @@ final class AccountCreationResultPanel extends jj implements ButtonListener {
               var4 = param1.message;
               if (248 == param1.statusCode) {
                 if (!param0) {
-                  db.b(true);
+                  ContentTransitionDialog.b(true);
                 }
                 var4 = DirectByteStorage.field_h;
                 this.field_lb = true;
@@ -81,36 +81,36 @@ final class AccountCreationResultPanel extends jj implements ButtonListener {
               }
             }
           }
-          var5 = new lc((jj) (this), p.field_a, var4);
+          var5 = new DialogMessagePane((ProgressMessageDialog) (this), p.field_a, var4);
           if (param1.success) {
             if (param1.field_f) {
-              this.b(new ge(this), param2 ^ -118);
+              this.replaceContent(new RegistrationAgreementPane(this), param2 ^ -118);
               return;
             }
-            var5.a(param2 - 21, (WidgetEventListener) (this), ConfirmedEmailAvailabilityValidator.field_m);
+            var5.addListenerButton(param2 - 21, (WidgetEventListener) (this), ConfirmedEmailAvailabilityValidator.field_m);
           } else {
             if (this.field_lb) {
-              var5.a(-14, (WidgetEventListener) (this), ConfirmedEmailAvailabilityValidator.field_m);
+              var5.addListenerButton(-14, (WidgetEventListener) (this), ConfirmedEmailAvailabilityValidator.field_m);
             } else {
               if (param1.statusCode == 5) {
-                var5.a(-17040, dh.field_r, 11);
-                var5.a(-17040, cg.field_b, 17);
+                var5.addActionButton(-17040, dh.field_r, 11);
+                var5.addActionButton(-17040, cg.field_b, 17);
               } else {
-                var5.a(param2 ^ -17033, LevelData.field_p, -1);
+                var5.addActionButton(param2 ^ -17033, LevelData.field_p, -1);
               }
             }
             if (param1.statusCode != 3) {
               if (param1.statusCode == 6) {
-                var5.a(-17040, md.field_c, 9);
+                var5.addActionButton(-17040, md.field_c, 9);
               }
             } else {
-              var5.a(-17040, LevelData.field_y, 7);
+              var5.addActionButton(-17040, LevelData.field_y, 7);
             }
           }
           if (param2 != 7) {
             return;
           }
-          this.b(var5, param2 - 109);
+          this.replaceContent(var5, param2 - 109);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -133,7 +133,7 @@ final class AccountCreationResultPanel extends jj implements ButtonListener {
         }
         try {
           nh.a((byte) 122);
-          this.t(20252);
+          this.closeDialog(20252);
           if (param4 != -27322) {
             this.field_ob = true;
           }

@@ -53,7 +53,7 @@ final class sj {
           }
           o.field_f = param7;
           field_f = param3;
-          kl.field_U = param1;
+          ProgressDialog.field_U = param1;
           sc.field_h = param5;
           fk.field_u = param6;
           SecondaryIntrusiveDeque.field_e = param2;

@@ -595,10 +595,10 @@ final class vl {
           if (var4 > 280) {
             var6 = 78120 / var4;
             var7 = param1.field_G * (-var6 + 279) / (var4 - 280);
-            jg.field_hb.drawScaled(this.field_f + 337, var7 + 73, jg.field_hb.field_r, var6);
+            StandardContentDialog.field_hb.drawScaled(this.field_f + 337, var7 + 73, StandardContentDialog.field_hb.field_r, var6);
             if ((!param1.field_J) &&
               (decompiledFrameRemainder1 = !(337 + this.field_f > ef.field_j))) {
-              decompiledFrameRemainder1 = !(this.field_f + (337 + jg.field_hb.field_r) <= ef.field_j);
+              decompiledFrameRemainder1 = !(this.field_f + (337 + StandardContentDialog.field_hb.field_r) <= ef.field_j);
             }
             if ((decompiledFrameRemainder1) && (62 <= MouseWheelInput.field_b &&
               363 > MouseWheelInput.field_b &&

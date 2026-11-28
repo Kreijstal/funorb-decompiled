@@ -150,7 +150,7 @@ final class VertexMesh {
     }
 
     final static void b(byte param0) {
-        hb.field_x.c(new fm(), param0 - 72);
+        hb.field_x.replaceContent(new GuestPlayConfirmationForm(), param0 - 72);
         if (param0 != 105) {
           field_m = 65;
         }

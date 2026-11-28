@@ -86,7 +86,7 @@ final class bc extends IntrusiveNode {
             uj.field_p.field_e = uj.field_p.field_e + (int)((-0.5 + Math.random()) * 8.0);
             uj.field_p.field_g = uj.field_p.field_g + (int)(8.0 * (Math.random() - 0.5));
           }
-          if (jf.field_c == 0) {
+          if (FullscreenNoticeType.field_c == 0) {
             ii.field_d.setCoordinates((j.field_c + uj.field_p.field_e) / 24, 8360, (uj.field_p.field_g + rb.field_m) / 24);
           }
           var16 = param6 - 25;

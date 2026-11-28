@@ -143,7 +143,7 @@ final class ol {
     }
 
     final static void b(int param0) {
-        sj.field_F = null;
+        RegistrationAgreementPane.field_F = null;
         if (param0 > -12) {
           return;
         }

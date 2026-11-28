@@ -19,7 +19,7 @@ final class jk {
 
     final static void a(boolean param0) {
         db.field_a = new AccountRegistrationPanel();
-        vb.field_h.c(db.field_a, (byte) 48);
+        vb.field_h.replaceContent(db.field_a, (byte) 48);
         if (param0) {
           jk.clearStaticReferences((byte) 87);
         }

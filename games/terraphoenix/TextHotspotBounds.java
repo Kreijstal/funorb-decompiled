@@ -75,7 +75,7 @@ final class TextHotspotBounds extends IntrusiveNode {
                   var11 = 65280 & var9;
                   var11 = -(var11 >> 5) + (var11 >> 1) & 65280;
                   var12 = 31 & var9 >> 3;
-                  SoftwareRasterizer.field_i[var7] = ei.b(var12, ei.b(var10 << 16, var11));
+                  SoftwareRasterizer.field_i[var7] = ResizableModalDialog.b(var12, ResizableModalDialog.b(var10 << 16, var11));
                 }
                 var7++;
               }

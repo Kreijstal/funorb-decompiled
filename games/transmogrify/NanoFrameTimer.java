@@ -57,7 +57,7 @@ final class NanoFrameTimer extends FrameTimer {
           if (null != ub.field_c &&
             ub.field_c.field_c) {
             GzipDecompressor.b(param0 + 3);
-            oi.field_k.showDialog((UiWidget) (new ll(oi.field_k, SingleChildWidgetContainer.field_w)), (byte) -71);
+            oi.field_k.showDialog((UiWidget) (new FullscreenStatusDialog(oi.field_k, SingleChildWidgetContainer.field_w)), (byte) -71);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -119,7 +119,7 @@ final class NanoFrameTimer extends FrameTimer {
           Bzip2State.field_K = new byte[ih.field_b][];
           var17.position = param0.length - (7 + ih.field_b * 8);
           NetworkArchiveRequest.field_y = var17.readUnsignedShort((byte) -122);
-          ll.field_U = var17.readUnsignedShort((byte) -100);
+          FullscreenStatusDialog.field_U = var17.readUnsignedShort((byte) -100);
           var3 = (var17.readUnsignedByte((byte) 102) & 255) + 1;
           for (var4 = 0; ih.field_b > var4; var4++) {
             BufferedSocket.field_j[var4] = var16.readUnsignedShort((byte) -93);
@@ -228,15 +228,15 @@ final class NanoFrameTimer extends FrameTimer {
     }
 
     final static void a(ResourceArchive param0, byte param1) {
-        ml var2 = null;
+        VorbisSample var2 = null;
         try {
-          ml.b(param0.getFileByName("", (byte) 95, "headers.packvorbis"));
-          var2 = ml.a(param0, "jagex logo2.packvorbis", "");
+          VorbisSample.decodeSetup(param0.getFileByName("", (byte) 95, "headers.packvorbis"));
+          var2 = VorbisSample.loadByName(param0, "jagex logo2.packvorbis", "");
           if (param1 != -80) {
             ResourceArchive var3 = (ResourceArchive) null;
             NanoFrameTimer.a((ResourceArchive) null, (byte) 29);
           }
-          var2.b();
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "kf.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

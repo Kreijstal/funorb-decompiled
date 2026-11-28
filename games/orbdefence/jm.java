@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jm {
-    static i field_a;
+    static FullscreenNoticeType field_a;
     static String field_c;
     static RgbSprite field_b;
 
@@ -32,6 +32,6 @@ final class jm {
 
     static {
         field_c = "Prepare your defences!";
-        field_a = new i();
+        field_a = new FullscreenNoticeType();
     }
 }

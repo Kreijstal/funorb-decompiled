@@ -52,7 +52,7 @@ final class kja {
             ne var4 = (ne) null;
             kja.a(80, (byte) 81, (ne) null);
           }
-          var3 = sja.field_fb;
+          var3 = StandardContentDialog.field_fb;
           var3.writeCipheredByte(param0, (byte) 108);
           var3.writeByte(param2.field_o, 0);
           var3.writeByte(param2.field_i, 0);

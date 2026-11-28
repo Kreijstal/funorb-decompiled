@@ -23,7 +23,7 @@ final class wa {
     final static void a(boolean param0) {
         n var1 = null;
         if (param0) {
-          var1 = (n) (k.field_B.removeLast((byte) 123));
+          var1 = (n) (GuestPlayConfirmationForm.field_B.removeLast((byte) 123));
           if (var1 == null) {
             var1 = new n();
           }

@@ -71,8 +71,8 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
             FrameTimer.field_b = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              var2_int < vc.field_K.length) {
-              var2_int = vc.field_K[var2_int] & -129;
+              var2_int < DialogMessagePane.field_K.length) {
+              var2_int = DialogMessagePane.field_K[var2_int] & -129;
             } else {
               var2_int = -1;
             }
@@ -165,8 +165,8 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
           FrameTimer.field_b = 0;
           var2_int = param0.getKeyCode();
           if (var2_int >= 0 &&
-            vc.field_K.length > var2_int) {
-            var2_int = vc.field_K[var2_int];
+            DialogMessagePane.field_K.length > var2_int) {
+            var2_int = DialogMessagePane.field_K[var2_int];
             if ((128 & var2_int) != 0) {
               var2_int = -1;
             }

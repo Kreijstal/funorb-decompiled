@@ -3,7 +3,7 @@
  */
 final class bj {
     static AsyncRequest field_c;
-    static jg field_f;
+    static StandardContentDialog field_f;
     static String field_b;
     static int[] field_d;
     static Sprite field_g;

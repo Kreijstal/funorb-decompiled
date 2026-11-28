@@ -29,7 +29,7 @@ final class SecondaryNodeDeque implements Iterable {
         if (param0 != 255) {
           field_c = 101;
         }
-        if (!jk.field_gb[0]) {
+        if (!ContentTransitionDialog.field_gb[0]) {
           var8 = new int[var1];
           for (var5_int = 0; var1 > var5_int; var5_int++) {
             var8[var5_int] = af.field_p[c.a(255, (int) var16[var5_int])];

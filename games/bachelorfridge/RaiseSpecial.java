@@ -14,7 +14,7 @@ final class RaiseSpecial extends SpecialOrder {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = sja.field_fb;
+          var3 = StandardContentDialog.field_fb;
           var3.writeCipheredByte(param2, (byte) 127);
           var3.writeByte(param0.field_g, 0);
           var3.writeShort(param0.field_h, -127);

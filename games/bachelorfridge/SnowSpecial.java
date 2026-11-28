@@ -199,9 +199,9 @@ final class SnowSpecial extends SpecialOrder {
             }
             um.field_c = 1;
             var3 = var1.readString(52);
-            sja.field_gb = ((String) (var3)).intern();
+            StandardContentDialog.field_gb = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(param0 ^ -16711826);
-            em.a(param0 ^ -109, var4);
+            FullscreenStatusDialog.a(param0 ^ -109, var4);
             return;
           }
           if (wja.field_m == null) {

@@ -306,7 +306,7 @@ final class nk {
                   if (var4 > 0) {
                     var5 = DualLinkDequeIterator.field_e / 2 - this.field_t + var3.field_g * DualLinkDequeIterator.field_e + 320;
                     var6 = -24 + DualLinkDequeIterator.field_e * var3.field_h + (-this.field_h + 240);
-                    ob.field_I.drawCentred(Integer.toString(var4), var5, var6, 16777215, 0);
+                    RegistrationAgreementPane.field_I.drawCentred(Integer.toString(var4), var5, var6, 16777215, 0);
                     var3.a(this.field_t, (byte) -108, this.field_h);
                   }
                 }
@@ -350,7 +350,7 @@ final class nk {
                   if (var4 > 0) {
                     var5 = DualLinkDequeIterator.field_e / 2 - this.field_t + var3.field_g * DualLinkDequeIterator.field_e + 320;
                     var6 = -24 + DualLinkDequeIterator.field_e * var3.field_h + (-this.field_h + 240);
-                    ob.field_I.drawCentred(Integer.toString(var4), var5, var6, 16777215, 0);
+                    RegistrationAgreementPane.field_I.drawCentred(Integer.toString(var4), var5, var6, 16777215, 0);
                     var3.a(this.field_t, (byte) -108, this.field_h);
                   }
                 }
@@ -411,7 +411,7 @@ final class nk {
         }
         if (decompiledNaturalLoopExit2) {
           PasswordValidator.c((byte) 67);
-          i.field_a.drawOpaque(0, 0);
+          FullscreenNoticeType.field_a.drawOpaque(0, 0);
           hc.field_i.drawOpaque(0, 358);
           SoftwareRasterizer.setClip(0, 0, param0, 480);
           SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 640, 480, 11184810, 4605510);
@@ -498,9 +498,9 @@ final class nk {
               var9_ref_String = CrossfadingMidiPcmStream.a(-415993727, new String[]{var28}, ia.field_e);
             }
             TextHotspotBounds.field_t.drawCentredAlpha(Integer.toString(var8 + 1), -4 - var5 + (320 + 79 * var8), 387, 0, -1, 128);
-            ob.field_I.drawParagraph(var9_ref_String, -4 - var5 + (320 + 79 * var8) - 39 - 1, 358, 76, 33, 0, 0, 1, 1, 12);
-            ob.field_I.drawParagraph(var9_ref_String, -39 + 79 * var8 + (-var5 + 320) - 4, 357, 76, 33, 0, 0, 1, 1, 12);
-            ob.field_I.drawParagraph(var9_ref_String, -43 + (79 * var8 - var5 + 320), 358, 76, 33, 16777215, -1, 1, 1, 12);
+            RegistrationAgreementPane.field_I.drawParagraph(var9_ref_String, -4 - var5 + (320 + 79 * var8) - 39 - 1, 358, 76, 33, 0, 0, 1, 1, 12);
+            RegistrationAgreementPane.field_I.drawParagraph(var9_ref_String, -39 + 79 * var8 + (-var5 + 320) - 4, 357, 76, 33, 0, 0, 1, 1, 12);
+            RegistrationAgreementPane.field_I.drawParagraph(var9_ref_String, -43 + (79 * var8 - var5 + 320), 358, 76, 33, 16777215, -1, 1, 1, 12);
             var8++;
             continue;
           }
@@ -508,9 +508,9 @@ final class nk {
         }
         if (decompiledNaturalLoopExit1) {
           SoftwareRasterizer.resetClip();
-          ob.field_I.drawCentred(Integer.toString(wf.field_c.field_x), 111, 29, 0, 0);
-          ob.field_I.drawCentred(Integer.toString(wf.field_c.field_x), 110, 30, 0, 0);
-          ob.field_I.drawCentred(Integer.toString(wf.field_c.field_x), 111, 30, 16777215, -1);
+          RegistrationAgreementPane.field_I.drawCentred(Integer.toString(wf.field_c.field_x), 111, 29, 0, 0);
+          RegistrationAgreementPane.field_I.drawCentred(Integer.toString(wf.field_c.field_x), 110, 30, 0, 0);
+          RegistrationAgreementPane.field_I.drawCentred(Integer.toString(wf.field_c.field_x), 111, 30, 16777215, -1);
           stackIn_162_0 = -wf.field_c.field_i + wf.field_c.field_g;
           stackIn_162_1 = 50;
         }
@@ -518,10 +518,10 @@ final class nk {
         if (var4 < 0) {
           var4 = 0;
         }
-        ob.field_I.drawRightAligned(Integer.toString(var4), 200, 24, 16777215, -1);
+        RegistrationAgreementPane.field_I.drawRightAligned(Integer.toString(var4), 200, 24, 16777215, -1);
         boolean decompiledSharedTail3 = !(0 < wf.field_c.field_e[0].field_f);
         if (!decompiledSharedTail3) {
-          ob.field_I.drawString(CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].field_d)}, ke.field_a), 400, 32, 16777215, -1);
+          RegistrationAgreementPane.field_I.drawString(CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].field_d)}, ke.field_a), 400, 32, 16777215, -1);
           var4 = 32;
           var5 = 526;
           if (ArchiveRequest.field_m == 1) {
@@ -532,9 +532,9 @@ final class nk {
           decompiledSharedTail3 = (var20 != 0);
         }
         if (decompiledSharedTail3) {
-          ob.field_I.drawString(CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].field_d)}, ke.field_a), 400, 32, 16777215, -1);
+          RegistrationAgreementPane.field_I.drawString(CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].field_d)}, ke.field_a), 400, 32, 16777215, -1);
         }
-        var31 = new String[][]{new String[]{MusicPatchPcmStream.field_l, MusicPatchPcmStream.field_l + " I", MusicPatchPcmStream.field_l + " II", MusicPatchPcmStream.field_l + " III", nd.field_f, ob.field_L}, new String[]{am.field_g, am.field_g + " I", am.field_g + " II", am.field_g + " III", p.field_e, kd.field_b}, new String[]{oj.field_o, oj.field_o + " I", oj.field_o + " II", oj.field_o + " III", MatchingFieldValidator.field_o, NetworkArchiveRequest.field_r}, new String[]{fd.field_g, fd.field_g + " I", fd.field_g + " II", fd.field_g + " III", ConfirmedEmailAvailabilityValidator.field_q, ua.field_b}, new String[]{q.field_c, q.field_c + " I", q.field_c + " II", q.field_c + " III", MidiPcmStream.field_B, ob.field_E}, new String[]{kg.field_l, kg.field_l + " I", kg.field_l + " II", kg.field_l + " III", de.field_c, ua.field_d}, new String[]{BoundedRandomAccessFile.field_c, BoundedRandomAccessFile.field_c, BoundedRandomAccessFile.field_c + " II", BoundedRandomAccessFile.field_c + " III", MidiPcmStream.field_B, ob.field_E}};
+        var31 = new String[][]{new String[]{MusicPatchPcmStream.field_l, MusicPatchPcmStream.field_l + " I", MusicPatchPcmStream.field_l + " II", MusicPatchPcmStream.field_l + " III", nd.field_f, RegistrationAgreementPane.field_L}, new String[]{am.field_g, am.field_g + " I", am.field_g + " II", am.field_g + " III", p.field_e, kd.field_b}, new String[]{oj.field_o, oj.field_o + " I", oj.field_o + " II", oj.field_o + " III", MatchingFieldValidator.field_o, NetworkArchiveRequest.field_r}, new String[]{fd.field_g, fd.field_g + " I", fd.field_g + " II", fd.field_g + " III", ConfirmedEmailAvailabilityValidator.field_q, ua.field_b}, new String[]{q.field_c, q.field_c + " I", q.field_c + " II", q.field_c + " III", MidiPcmStream.field_B, RegistrationAgreementPane.field_E}, new String[]{kg.field_l, kg.field_l + " I", kg.field_l + " II", kg.field_l + " III", de.field_c, ua.field_d}, new String[]{BoundedRandomAccessFile.field_c, BoundedRandomAccessFile.field_c, BoundedRandomAccessFile.field_c + " II", BoundedRandomAccessFile.field_c + " III", MidiPcmStream.field_B, RegistrationAgreementPane.field_E}};
         var5 = this.field_f;
         var6 = 0;
         var7 = uh.field_b * wf.field_c.field_f.field_c + SectorCacheStore.field_a;
@@ -656,7 +656,7 @@ final class nk {
           break;
         }
         if (decompiledNaturalLoopExit0) {
-          ob.field_I.drawCentred(var31[var5][var6], 549, 380, 16777215, -1);
+          RegistrationAgreementPane.field_I.drawCentred(var31[var5][var6], 549, 380, 16777215, -1);
           stackIn_236_0 = 0;
           stackIn_236_1 = var5;
         }
@@ -1006,9 +1006,9 @@ final class nk {
               TextFieldValidator.field_m = -150;
             }
           }
-          ob.field_I.drawParagraph(var15_ref_String, 14, 362, 158, 105, 0, 0, 1, 2, 18);
-          ob.field_I.drawParagraph(var15_ref_String, 13, 363, 158, 105, 0, 0, 1, 2, 18);
-          ob.field_I.drawParagraph(var15_ref_String, 14, 363, 158, 105, 16777215, -1, 1, 2, 18);
+          RegistrationAgreementPane.field_I.drawParagraph(var15_ref_String, 14, 362, 158, 105, 0, 0, 1, 2, 18);
+          RegistrationAgreementPane.field_I.drawParagraph(var15_ref_String, 13, 363, 158, 105, 0, 0, 1, 2, 18);
+          RegistrationAgreementPane.field_I.drawParagraph(var15_ref_String, 14, 363, 158, 105, 16777215, -1, 1, 2, 18);
           var16 = (wf.field_c.field_g - wf.field_c.field_i) / 50;
           if (var16 < 0) {
             var16 = 0;
@@ -1020,9 +1020,9 @@ final class nk {
             wf.field_c.field_r.isEmpty(param0 ^ -3086) &&
             !(wf.field_c.field_e[0].field_f <= 0))) {
             var15_ref_String = p.field_b;
-            ob.field_I.drawParagraph(var15_ref_String, 14, Math.abs(TextFieldValidator.field_m) / 4 + 327, 158, 105, 0, 0, 1, 0, 16);
-            ob.field_I.drawParagraph(var15_ref_String, 13, 328 + Math.abs(TextFieldValidator.field_m) / 4, 158, 105, 0, 0, 1, 0, 16);
-            ob.field_I.drawParagraph(var15_ref_String, 14, Math.abs(TextFieldValidator.field_m) / 4 + 328, 158, 105, 16777215, -1, 1, 0, 16);
+            RegistrationAgreementPane.field_I.drawParagraph(var15_ref_String, 14, Math.abs(TextFieldValidator.field_m) / 4 + 327, 158, 105, 0, 0, 1, 0, 16);
+            RegistrationAgreementPane.field_I.drawParagraph(var15_ref_String, 13, 328 + Math.abs(TextFieldValidator.field_m) / 4, 158, 105, 0, 0, 1, 0, 16);
+            RegistrationAgreementPane.field_I.drawParagraph(var15_ref_String, 14, Math.abs(TextFieldValidator.field_m) / 4 + 328, 158, 105, 16777215, -1, 1, 0, 16);
           }
           SoftwareRasterizer.resetClip();
           decompiledFrameRemainder1 = (var20 != 0);
@@ -1031,9 +1031,9 @@ final class nk {
           var32 = jm.field_c;
           var14 = var32;
           var14 = var32;
-          ob.field_I.drawParagraph(var32, 14, 332, 158, 105, 0, 0, 1, 2, 18);
-          ob.field_I.drawParagraph(var32, 13, 333, 158, 105, 0, 0, 1, 2, 18);
-          ob.field_I.drawParagraph(var32, 14, 333, 158, 105, 16777215, -1, 1, 2, 18);
+          RegistrationAgreementPane.field_I.drawParagraph(var32, 14, 332, 158, 105, 0, 0, 1, 2, 18);
+          RegistrationAgreementPane.field_I.drawParagraph(var32, 13, 333, 158, 105, 0, 0, 1, 2, 18);
+          RegistrationAgreementPane.field_I.drawParagraph(var32, 14, 333, 158, 105, 16777215, -1, 1, 2, 18);
           var15 = (wf.field_c.field_g - wf.field_c.field_i) / 50;
           if (0 > var15) {
             var15 = 0;
@@ -1070,9 +1070,9 @@ final class nk {
             var14 = CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].b(true) / 1000), Integer.toString(wf.field_c.field_e[0].b(true) / 100 % 10)}, AccountRegistrationPanel.field_H);
           }
         }
-        ob.field_I.drawCentred(var14, 362, 30, 0, 0);
-        ob.field_I.drawCentred(var14, 363, 29, 0, 0);
-        ob.field_I.drawCentred(var14, 363, 30, 16777215, -1);
+        RegistrationAgreementPane.field_I.drawCentred(var14, 362, 30, 0, 0);
+        RegistrationAgreementPane.field_I.drawCentred(var14, 363, 29, 0, 0);
+        RegistrationAgreementPane.field_I.drawCentred(var14, 363, 30, 16777215, -1);
         if (0 == this.field_b ||
           this.field_b > 3) {
           DelegatingCanvas.field_d.drawQuarterSizeAveraged(598, 10);
@@ -1083,9 +1083,9 @@ final class nk {
             DiskCacheWorker.field_d >= 10 &&
             ua.field_a <= 630 &&
             DiskCacheWorker.field_d <= 42) {
-            ob.field_I.drawRightAligned(MusicPatchPcmStream.field_n[25], 635, 49, 0, 0);
-            ob.field_I.drawRightAligned(MusicPatchPcmStream.field_n[25], 634, 50, 0, 0);
-            ob.field_I.drawRightAligned(MusicPatchPcmStream.field_n[25], 635, 50, 16777215, -1);
+            RegistrationAgreementPane.field_I.drawRightAligned(MusicPatchPcmStream.field_n[25], 635, 49, 0, 0);
+            RegistrationAgreementPane.field_I.drawRightAligned(MusicPatchPcmStream.field_n[25], 634, 50, 0, 0);
+            RegistrationAgreementPane.field_I.drawRightAligned(MusicPatchPcmStream.field_n[25], 635, 50, 16777215, -1);
           }
         }
         if (1 != of.field_G) {
@@ -1111,9 +1111,9 @@ final class nk {
             decompiledSharedTail1 = (var20 != 0);
           }
           if (decompiledSharedTail1) {
-            ob.field_I.drawCentred(pa.field_a[this.field_m], 320, 339, 0, 0);
-            ob.field_I.drawCentred(pa.field_a[this.field_m], 319, 340, 0, 0);
-            ob.field_I.drawCentred(pa.field_a[this.field_m], 320, 340, 16777215, -1);
+            RegistrationAgreementPane.field_I.drawCentred(pa.field_a[this.field_m], 320, 339, 0, 0);
+            RegistrationAgreementPane.field_I.drawCentred(pa.field_a[this.field_m], 319, 340, 0, 0);
+            RegistrationAgreementPane.field_I.drawCentred(pa.field_a[this.field_m], 320, 340, 16777215, -1);
           }
         }
         if (this.field_o > 0) {
@@ -1157,17 +1157,17 @@ final class nk {
               }
               UiWidget.field_u[2].drawWithVerticalOpacityGradient(0, 0, var15, var16);
               if (this.field_o <= 300) {
-                ob.field_I.drawParagraph(sl.field_Z, 149, -this.field_o + 500, 340, 200, 0, 0, 1, 1, 14);
-                ob.field_I.drawParagraph(sl.field_Z, 150, -this.field_o + 499, 340, 200, 0, 0, 1, 1, 14);
-                ob.field_I.drawParagraph(sl.field_Z, 150, -this.field_o + 500, 340, 200, 16777215, -1, 1, 1, 14);
+                RegistrationAgreementPane.field_I.drawParagraph(sl.field_Z, 149, -this.field_o + 500, 340, 200, 0, 0, 1, 1, 14);
+                RegistrationAgreementPane.field_I.drawParagraph(sl.field_Z, 150, -this.field_o + 499, 340, 200, 0, 0, 1, 1, 14);
+                RegistrationAgreementPane.field_I.drawParagraph(sl.field_Z, 150, -this.field_o + 500, 340, 200, 16777215, -1, 1, 1, 14);
               }
               if (this.field_o > 300) {
-                ob.field_I.drawParagraph(sl.field_Z, 149, 200, 340, 200, 0, 0, 1, 1, 14);
-                ob.field_I.drawParagraph(sl.field_Z, 150, 199, 340, 200, 0, 0, 1, 1, 14);
-                ob.field_I.drawParagraph(sl.field_Z, 150, 200, 340, 200, 16777215, -1, 1, 1, 14);
-                ob.field_I.drawCentred(oh.field_d, 319, 450, 0, 0);
-                ob.field_I.drawCentred(oh.field_d, 320, 449, 0, 0);
-                ob.field_I.drawCentred(oh.field_d, 320, 450, 16777215, -1);
+                RegistrationAgreementPane.field_I.drawParagraph(sl.field_Z, 149, 200, 340, 200, 0, 0, 1, 1, 14);
+                RegistrationAgreementPane.field_I.drawParagraph(sl.field_Z, 150, 199, 340, 200, 0, 0, 1, 1, 14);
+                RegistrationAgreementPane.field_I.drawParagraph(sl.field_Z, 150, 200, 340, 200, 16777215, -1, 1, 1, 14);
+                RegistrationAgreementPane.field_I.drawCentred(oh.field_d, 319, 450, 0, 0);
+                RegistrationAgreementPane.field_I.drawCentred(oh.field_d, 320, 449, 0, 0);
+                RegistrationAgreementPane.field_I.drawCentred(oh.field_d, 320, 450, 16777215, -1);
               }
               decompiledSharedTail0 = (var20 != 0);
             }
@@ -1852,10 +1852,10 @@ final class nk {
         var19 = OrbDefence.field_D ? 1 : 0;
         if (AccountRequestState.field_d >= 2) {
           if (IterableNodeHashTable.field_a[12]) {
-            ob.field_F = true;
+            RegistrationAgreementPane.field_F = true;
           }
           if (IterableNodeHashTable.field_a[11]) {
-            ob.field_F = false;
+            RegistrationAgreementPane.field_F = false;
           }
         }
         boolean decompiledFrameCompleted6 = true;
@@ -2057,7 +2057,7 @@ final class nk {
           }
         }
         if (0 == this.field_b) {
-          if (0 == hm.field_C &&
+          if (0 == GuestPlayConfirmationForm.field_C &&
             wf.field_c.field_i == 0 &&
             this.field_c == 0 &&
             !this.field_k &&
@@ -2066,7 +2066,7 @@ final class nk {
             this.field_c = 0;
           }
           boolean decompiledFrameRemainder2 = true;
-          if ((hm.field_C == 0 &&
+          if ((GuestPlayConfirmationForm.field_C == 0 &&
             wf.field_c.field_o.size((byte) 52) < 10 &&
             wf.field_c.field_e[0].b(true) > 30 &&
             wf.field_c.field_b.isEmpty(-3088)) &&
@@ -2076,7 +2076,7 @@ final class nk {
             decompiledFrameRemainder2 = (var19 != 0);
           }
           if ((decompiledFrameRemainder2) &&
-            (hm.field_C == 0)) {
+            (GuestPlayConfirmationForm.field_C == 0)) {
             if (this.field_m != 2) {
               if ((wf.field_c.field_o.size((byte) 52) > 3 &&
                 wf.field_c.field_e[0].b(true) <= 30 ||
@@ -2088,7 +2088,7 @@ final class nk {
                 }
                 if (this.field_j &&
                   gi.field_e == 1) {
-                  hm.field_C = 1;
+                  GuestPlayConfirmationForm.field_C = 1;
                   this.field_m = -1;
                 }
               }
@@ -2100,42 +2100,42 @@ final class nk {
               }
               if (this.field_j &&
                 gi.field_e == 1) {
-                hm.field_C = 1;
+                GuestPlayConfirmationForm.field_C = 1;
                 this.field_m = -1;
               }
             }
           }
-          if (hm.field_C == 1) {
+          if (GuestPlayConfirmationForm.field_C == 1) {
             this.field_c = 0;
             this.field_m = 3;
             if (wf.field_c.field_x > 1) {
-              hm.field_C = 2;
+              GuestPlayConfirmationForm.field_C = 2;
               this.field_m = -1;
             }
           }
-          if (2 == hm.field_C) {
+          if (2 == GuestPlayConfirmationForm.field_C) {
             if (this.field_j &&
               gi.field_e == 1) {
               this.field_m = -1;
             }
             if (wf.field_c.field_x == 2) {
-              hm.field_C = 3;
+              GuestPlayConfirmationForm.field_C = 3;
               this.field_m = 15;
               this.field_c = 0;
             }
           }
-          if (hm.field_C == 3) {
+          if (GuestPlayConfirmationForm.field_C == 3) {
             if (this.field_j &&
               gi.field_e == 1) {
               this.field_m = -1;
             }
             if (wf.field_c.field_x == 5) {
               this.field_m = 5;
-              hm.field_C = 4;
+              GuestPlayConfirmationForm.field_C = 4;
               this.field_c = 0;
             }
           }
-          if (hm.field_C == 4) {
+          if (GuestPlayConfirmationForm.field_C == 4) {
             if (this.field_j &&
               1 == gi.field_e) {
               this.field_m = -1;
@@ -2145,7 +2145,7 @@ final class nk {
               !(wf.field_c.field_x < 11)) {
               this.field_m = 4;
               this.field_c = 0;
-              hm.field_C = 5;
+              GuestPlayConfirmationForm.field_C = 5;
             }
           }
           if (this.field_m == -1 &&
@@ -2155,7 +2155,7 @@ final class nk {
             this.field_c = 0;
             this.field_m = 6;
             if (var19 != 0 && (this.field_b > 3 &&
-              hm.field_C == 0 &&
+              GuestPlayConfirmationForm.field_C == 0 &&
               0 == wf.field_c.field_i &&
               0 == this.field_c &&
               !this.field_k &&
@@ -2166,7 +2166,7 @@ final class nk {
           }
         } else {
           if (this.field_b > 3 &&
-            hm.field_C == 0 &&
+            GuestPlayConfirmationForm.field_C == 0 &&
             0 == wf.field_c.field_i &&
             0 == this.field_c &&
             !this.field_k &&
@@ -2896,7 +2896,7 @@ final class nk {
         int stackIn_5_0 = 0;
         int var2;
         int var3;
-        if (ob.field_K == 13 &&
+        if (RegistrationAgreementPane.field_K == 13 &&
           this.field_o == 0) {
           var2 = 1;
           MouseInputListener.a(mh.field_a[45], (byte) -11);
@@ -2908,7 +2908,7 @@ final class nk {
         if (!param0) {
           return;
         }
-        if (ob.field_K == 83) {
+        if (RegistrationAgreementPane.field_K == 83) {
           if (wf.field_c.field_g > (10 + wf.field_c.field_i) && (wf.field_c.field_x % 11 != 0 &&
             0 < wf.field_c.field_x ||
             0 == wf.field_c.field_x ||
@@ -2918,51 +2918,51 @@ final class nk {
             dupTemp$0.field_f = dupTemp$0.field_f + (-wf.field_c.field_i + wf.field_c.field_g);
             wf.field_c.field_g = 10 + wf.field_c.field_i;
           }
-          if (1 == hm.field_C) {
-            hm.field_C = 2;
+          if (1 == GuestPlayConfirmationForm.field_C) {
+            GuestPlayConfirmationForm.field_C = 2;
             this.field_m = -1;
           }
         }
-        if (16 == ob.field_K &&
+        if (16 == RegistrationAgreementPane.field_K &&
           this.field_f != 0 &&
           jk.field_j[0] >= 0) {
           this.field_f = 0;
           MouseInputListener.a(mh.field_a[2], (byte) -11);
         }
-        if (ob.field_K == 17 &&
+        if (RegistrationAgreementPane.field_K == 17 &&
           this.field_f != 1 &&
           jk.field_j[1] >= 0) {
           this.field_f = 1;
           MouseInputListener.a(mh.field_a[2], (byte) -11);
         }
-        if (ob.field_K == 18 &&
+        if (RegistrationAgreementPane.field_K == 18 &&
           this.field_f != 2 &&
           0 <= jk.field_j[2]) {
           this.field_f = 2;
           MouseInputListener.a(mh.field_a[2], (byte) -11);
         }
-        if (19 == ob.field_K &&
+        if (19 == RegistrationAgreementPane.field_K &&
           this.field_b < 4 &&
           this.field_f != 3 &&
           jk.field_j[3] >= 0) {
           this.field_f = 3;
           MouseInputListener.a(mh.field_a[2], (byte) -11);
         }
-        if (ob.field_K == 20 &&
+        if (RegistrationAgreementPane.field_K == 20 &&
           this.field_b < 4 &&
           this.field_f != 4 &&
           jk.field_j[4] >= 0) {
           this.field_f = 4;
           MouseInputListener.a(mh.field_a[2], (byte) -11);
         }
-        if (ob.field_K == 19 &&
+        if (RegistrationAgreementPane.field_K == 19 &&
           this.field_b >= 4 &&
           this.field_f != 5 &&
           jk.field_j[5] >= 0) {
           this.field_f = 5;
           MouseInputListener.a(mh.field_a[2], (byte) -11);
         }
-        if (20 == ob.field_K &&
+        if (20 == RegistrationAgreementPane.field_K &&
           this.field_b >= 4 &&
           this.field_f != 6 && !(jk.field_j[6] < 0)) {
           this.field_f = 6;
@@ -3112,7 +3112,7 @@ final class nk {
               }
               break;
             }
-            bm.field_d.processKeyInput(od.field_k, true, ob.field_K);
+            bm.field_d.processKeyInput(od.field_k, true, RegistrationAgreementPane.field_K);
           } while (var2 == 0);
           if (param0 >= -93) {
             field_w = (tl) null;
@@ -3207,7 +3207,7 @@ final class nk {
         wf.field_c = new f(param0);
         this.field_s = this.field_l < 0 ? null : wf.field_c.field_e[this.field_l];
         wf.field_c.a((byte) -4, 0, 0);
-        hm.field_C = 0;
+        GuestPlayConfirmationForm.field_C = 0;
         this.b(-97);
     }
 

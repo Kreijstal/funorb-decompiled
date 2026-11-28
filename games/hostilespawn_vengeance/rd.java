@@ -16,7 +16,7 @@ final class rd {
         RuntimeException var5 = null;
         long var6 = 0L;
         PcmSample var8 = null;
-        qf var9 = null;
+        VorbisSample var9 = null;
         PcmSample stackIn_3_0 = null;
         Object stackIn_11_0 = null;
         PcmSample stackIn_15_0 = null;
@@ -40,16 +40,16 @@ final class rd {
             0 >= param0[0]) {
             return null;
           }
-          var9 = (qf) (this.field_b.a(false, var6));
+          var9 = (VorbisSample) (this.field_b.a(false, var6));
           if (var9 == null) {
-            var9 = qf.a(this.field_c, param1, param2);
+            var9 = VorbisSample.load(this.field_c, param1, param2);
             if (var9 == null) {
               stackIn_11_0 = null;
               return (PcmSample) (stackIn_11_0);
             }
             this.field_b.a(-122, var6, var9);
           }
-          var8Lifetime1 = var9.a(param0);
+          var8Lifetime1 = var9.decodeToPcm(param0);
           if (param3 != 97) {
             stackIn_15_0 = (PcmSample) null;
             return stackIn_15_0;
@@ -321,7 +321,7 @@ final class rd {
             var6_ref_oc = new GridPoint();
             ln.field_a.a(-2, 1);
             var10 = var5.field_j;
-            if (jf.field_c == 0) {
+            if (FullscreenNoticeType.field_c == 0) {
               var11 = var10.field_e;
               var12 = var10.field_g;
               if (ha.field_t != 5) {
@@ -545,13 +545,13 @@ final class rd {
                 if (NameSuggestionsPanel.field_I == 5) {
                   var6 = 16777215;
                 }
-                if (0 < jf.field_c &&
-                  128 > jf.field_c) {
-                  SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, var6, jf.field_c * 2);
+                if (0 < FullscreenNoticeType.field_c &&
+                  128 > FullscreenNoticeType.field_c) {
+                  SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, var6, FullscreenNoticeType.field_c * 2);
                 }
-                if (128 <= jf.field_c &&
-                  jf.field_c < 256) {
-                  SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, var6, 512 - 2 * jf.field_c);
+                if (128 <= FullscreenNoticeType.field_c &&
+                  FullscreenNoticeType.field_c < 256) {
+                  SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, var6, 512 - 2 * FullscreenNoticeType.field_c);
                 }
                 cb.a(631, var5);
                 if (!(0 >= NanoFrameTimer.field_f)) {
@@ -572,13 +572,13 @@ final class rd {
             if (NameSuggestionsPanel.field_I == 5) {
               var6Lifetime1 = 16777215;
             }
-            if (0 < jf.field_c &&
-              128 > jf.field_c) {
-              SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, var6Lifetime1, jf.field_c * 2);
+            if (0 < FullscreenNoticeType.field_c &&
+              128 > FullscreenNoticeType.field_c) {
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, var6Lifetime1, FullscreenNoticeType.field_c * 2);
             }
-            if (128 <= jf.field_c &&
-              jf.field_c < 256) {
-              SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, var6Lifetime1, 512 - 2 * jf.field_c);
+            if (128 <= FullscreenNoticeType.field_c &&
+              FullscreenNoticeType.field_c < 256) {
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, var6Lifetime1, 512 - 2 * FullscreenNoticeType.field_c);
             }
             cb.a(631, var5);
             if (0 < NanoFrameTimer.field_f) {

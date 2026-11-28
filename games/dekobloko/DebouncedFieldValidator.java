@@ -305,9 +305,9 @@ abstract class DebouncedFieldValidator implements FieldValidator {
           !(MixedSupport089.integerArrayState0173.length >= integerArgument2)) {
           MixedSupport089.integerArrayState0173 = new int[2 * integerArgument2];
         }
-        if (MixedSupport080.integerArrayState0150 == null ||
-          !(integerArgument2 <= MixedSupport080.integerArrayState0150.length)) {
-          MixedSupport080.integerArrayState0150 = new int[2 * integerArgument2];
+        if (FullscreenNoticeType.integerArrayState0150 == null ||
+          !(integerArgument2 <= FullscreenNoticeType.integerArrayState0150.length)) {
+          FullscreenNoticeType.integerArrayState0150 = new int[2 * integerArgument2];
         }
         if (null == ByteStorage.integerArrayState0157 ||
           !(integerArgument2 <= ByteStorage.integerArrayState0157.length)) {
@@ -328,7 +328,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
         RenderingSupport003.integerState0252 = 2147483647;
         MixedSupport010.integerState0066 = -2147483648;
         ValidatedTextField.integerState0556 = 0;
-        UiComponentPart019.integerState0504 = integerArgument1;
+        BirthDateChatEnableForm.integerState0504 = integerArgument1;
         ReturnedShape.integerState0695 = -2147483648;
     }
 

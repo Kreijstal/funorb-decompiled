@@ -73,7 +73,7 @@ final class te {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          og.a(param1.field_z + param3, this.field_g, -113, param4 + param1.field_y, param1.field_j, param1.field_u);
+          RegistrationAgreementPane.a(param1.field_z + param3, this.field_g, -113, param4 + param1.field_y, param1.field_j, param1.field_u);
           if (this.field_c != null) {
             var6_int = param4 + param1.field_y + this.field_h;
             var7 = this.field_a + (param1.field_z + param3);

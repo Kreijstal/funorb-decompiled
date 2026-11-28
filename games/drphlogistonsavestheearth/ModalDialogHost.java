@@ -30,7 +30,7 @@ final class ModalDialogHost extends SingleChildWidgetContainer {
         if (param0 != 0) {
           return;
         }
-        ma.field_vb = 1000000000L / (long)param1;
+        ProgressMessageDialog.field_vb = 1000000000L / (long)param1;
     }
 
     final void closeAllDialogs(int param0) {

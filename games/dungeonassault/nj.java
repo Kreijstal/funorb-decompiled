@@ -28,7 +28,7 @@ final class nj {
 
     final static void a(ResourceArchive param0, ResourceArchive param1, int param2) {
         try {
-          hf.field_pb = param0;
+          ContentTransitionDialog.field_pb = param0;
           if (param2 != -6332) {
             nj.resetStaticState((byte) 73);
           }

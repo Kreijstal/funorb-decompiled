@@ -26,7 +26,7 @@ final class ng extends IntrusiveNode {
     final static void a(boolean param0, java.awt.Canvas param1) {
         try {
           if (AlphaWidgetContainer.field_y == 11) {
-            sd.releaseDeclaredStaticReferences(274);
+            ProgressDialog.releaseDeclaredStaticReferences(274);
           }
           if (param0) {
             ng.clearStaticReferences((byte) 43);

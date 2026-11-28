@@ -147,7 +147,7 @@ final class re implements uj {
               stackIn_6_0 = -1;
               return stackIn_6_0;
             }
-            if (qd.field_Q == cm.field_p) {
+            if (GuestPlayConfirmationForm.field_Q == cm.field_p) {
               if (param4) {
                 var10 = (String) null;
                 tb.field_d = qg.a(ne.field_Q, param5, 0, (String) null, false);
@@ -158,29 +158,29 @@ final class re implements uj {
               sn.field_c.writeByte(14, 25564);
               sn.field_c.writeByte(tb.field_d.b(0).field_a, 25564);
               bk.a((byte) -104, -1);
-              qd.field_Q = ra.field_c;
+              GuestPlayConfirmationForm.field_Q = ra.field_c;
             }
-            if (qd.field_Q == ra.field_c &&
+            if (GuestPlayConfirmationForm.field_Q == ra.field_c &&
               IntrusiveDeque.a(0, 1)) {
               var6_int = kj.field_a.readUnsignedByte((byte) -54);
               kj.field_a.position = 0;
               if (var6_int == 0) {
-                qd.field_Q = ka.field_d;
+                GuestPlayConfirmationForm.field_Q = ka.field_d;
               } else {
                 AlphaWidgetContainer.field_K = var6_int;
-                qd.field_Q = bh.field_bb;
+                GuestPlayConfirmationForm.field_Q = FullscreenStatusDialog.field_bb;
                 rj.field_d = -1;
               }
             }
-            if (qd.field_Q == ka.field_d &&
+            if (GuestPlayConfirmationForm.field_Q == ka.field_d &&
               IntrusiveDeque.a(0, 8)) {
               MusicPatchPcmStream.field_s = kj.field_a.readLong(81);
               kj.field_a.position = 0;
               cm.a((byte) 6, param4, param0, tb.field_d, param2);
-              qd.field_Q = nn.field_m;
+              GuestPlayConfirmationForm.field_Q = nn.field_m;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (qd.field_Q == nn.field_m &&
+            if (GuestPlayConfirmationForm.field_Q == nn.field_m &&
               IntrusiveDeque.a(0, 1)) {
               var6_intLifetime1 = kj.field_a.readUnsignedByte((byte) -54);
               ag.field_d = null;
@@ -189,7 +189,7 @@ final class re implements uj {
               if (0 != var6_intLifetime1 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
-                  qd.field_Q = bh.field_bb;
+                  GuestPlayConfirmationForm.field_Q = FullscreenStatusDialog.field_bb;
                   rj.field_d = -1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -202,10 +202,10 @@ final class re implements uj {
               }
               if (decompiledFrameRemainder0) {
                 rj.field_d = -1;
-                qd.field_Q = wi.field_s;
+                GuestPlayConfirmationForm.field_Q = wi.field_s;
               }
             }
-            if (qd.field_Q == wi.field_s &&
+            if (GuestPlayConfirmationForm.field_Q == wi.field_s &&
               kj.b(-9319)) {
               ne.field_Q = kj.field_a.readLong(71);
               AgeValidator.field_j = kj.field_a.readUnsignedByte((byte) -54);
@@ -238,7 +238,7 @@ final class re implements uj {
               var12 = (CharSequence) ((Object) ti.field_J);
               in.field_b = LoginPanel.a(-95, var12);
               a.field_d = kj.field_a.readUnsignedByte((byte) -54);
-              qd.field_Q = pb.field_c;
+              GuestPlayConfirmationForm.field_Q = pb.field_c;
               if (tb.field_d.b(0) == hk.field_i) {
                 ak.field_b.a(RichTextLayout.c(-122), 447616545);
               } else {
@@ -281,7 +281,7 @@ final class re implements uj {
               stackIn_75_0 = -33;
               return stackIn_75_0;
             }
-            if (bh.field_bb == qd.field_Q &&
+            if (FullscreenStatusDialog.field_bb == GuestPlayConfirmationForm.field_Q &&
               kj.b(-9319)) {
               si.a(-110);
               if (7 == AlphaWidgetContainer.field_K &&
@@ -301,7 +301,7 @@ final class re implements uj {
             if (null == AwtRasterBuffer.field_i) {
               if (FrameTimer.field_c) {
                 if (qa.a(-125) > 30000L) {
-                  TextLayout.field_g = oi.field_K;
+                  TextLayout.field_g = StripedProgressWidget.field_K;
                 } else {
                   TextLayout.field_g = FullscreenFocusCanvas.field_a;
                 }

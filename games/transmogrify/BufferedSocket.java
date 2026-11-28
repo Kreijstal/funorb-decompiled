@@ -465,7 +465,7 @@ final class BufferedSocket implements Runnable {
         int var7 = 0;
         var7 = Transmogrify.field_A ? 1 : 0;
         try {
-          if (ll.field_Q != InteractiveWidget.field_z) {
+          if (FullscreenStatusDialog.field_Q != InteractiveWidget.field_z) {
             return false;
           }
           var2_long = lk.correctedCurrentTimeMillis(0);

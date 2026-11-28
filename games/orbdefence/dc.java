@@ -26,12 +26,12 @@ final class dc extends IntrusiveNode {
         int var1 = 114 % ((-46 - param0) / 61);
         if (null == oj.field_q) {
           ti.field_bb = new DisplayNameSelectionPanel();
-          kg.field_j.a(false, ti.field_bb);
+          kg.field_j.replaceContent(false, ti.field_bb);
           return;
         }
-        oj.field_q.q(4210752);
+        oj.field_q.closeDialog(4210752);
         ti.field_bb = new DisplayNameSelectionPanel();
-        kg.field_j.a(false, ti.field_bb);
+        kg.field_j.replaceContent(false, ti.field_bb);
     }
 
     dc() {

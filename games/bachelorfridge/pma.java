@@ -104,11 +104,11 @@ final class pma extends k {
         stackIn_16_6 = (md.field_l <= 50) ? false : true;
         gfa.a(stackIn_13_0, stackIn_15_1, stackIn_15_2, stackIn_15_3, stackIn_15_4 != 0, stackIn_15_5, stackIn_16_6, param1, 0, true, 109, 11);
         if (TextFieldValidator.field_f) {
-          sja.field_fb.writeCipheredByte(57, (byte) 100);
+          StandardContentDialog.field_fb.writeCipheredByte(57, (byte) 100);
           TextFieldValidator.field_f = false;
         }
         if (StickySpecial.field_p) {
-          sja.field_fb.writeCipheredByte(10, (byte) 97);
+          StandardContentDialog.field_fb.writeCipheredByte(10, (byte) 97);
           StickySpecial.field_p = false;
         }
     }
@@ -134,7 +134,7 @@ final class pma extends k {
           MeshObject.field_a = false;
         }
         if (CreatureType.field_n <= 3) {
-          sh.field_I = false;
+          DateInputWidget.field_I = false;
         }
         if (8 > CreatureType.field_n) {
           pka.field_f = false;

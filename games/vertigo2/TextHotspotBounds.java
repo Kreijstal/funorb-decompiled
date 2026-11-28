@@ -62,7 +62,7 @@ final class TextHotspotBounds extends IntrusiveNode {
           }
           if (ModalDialog.field_F != -1) {
             var1_int = ModalDialog.field_F;
-            rh.b(-14, -1);
+            DialogMessagePane.b(-14, -1);
             stackIn_9_0 = var1_int;
             return stackIn_9_0;
           }

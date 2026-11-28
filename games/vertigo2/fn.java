@@ -88,8 +88,8 @@ final class fn extends TextureOperator {
           return var3;
         }
         var4 = lf.field_y[param0];
-        for (var5 = 0; we.field_M > var5; var5++) {
-          var7[var5] = this.d(rh.field_O[var5], 2147483647, var4) % 4096;
+        for (var5 = 0; StripedProgressWidget.field_M > var5; var5++) {
+          var7[var5] = this.d(DialogMessagePane.field_O[var5], 2147483647, var4) % 4096;
         }
         return var3;
     }

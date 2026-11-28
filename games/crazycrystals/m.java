@@ -293,7 +293,7 @@ final class m extends ue {
         }
         var4 = CrazyCrystals.field_C;
         var5 = DisplayNameSelectionPanel.a(al.field_c, param0 ^ 119, this.field_k, lo.field_b);
-        go.field_l.drawString(ae.field_G, 100, 136, 16760896, -1);
+        go.field_l.drawString(GuestPlayConfirmationForm.field_G, 100, 136, 16760896, -1);
         go.field_l.drawRightAligned(vn.field_m, 340, 136, 16760896, -1);
         go.field_l.drawRightAligned(tg.field_a, 440, 136, 16760896, -1);
         go.field_l.drawRightAligned(AnimatedResultScene.field_d, 560, 136, 16760896, -1);

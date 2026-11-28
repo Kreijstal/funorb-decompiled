@@ -1,0 +1,313 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class GuestPlayConfirmationForm extends DequeWidgetContainer implements WidgetActivationListener {
+    static int[] field_O;
+    private InteractiveWidget field_M;
+    private InteractiveWidget field_P;
+    static int field_K;
+    private InteractiveWidget field_L;
+    static int[] field_N;
+    static int field_J;
+
+    public GuestPlayConfirmationForm() {
+        super(0, 0, 476, 225, (WidgetRenderer) null);
+        this.field_M = new InteractiveWidget(RandomAccessCacheFile.field_a, (WidgetEventListener) null);
+        this.field_P = new InteractiveWidget(DraggableWidgetContainer.field_Q, (WidgetEventListener) null);
+        this.field_L = new InteractiveWidget(cj.field_k, (WidgetEventListener) null);
+        cl var1 = new cl();
+        this.field_M.field_q = (WidgetRenderer) ((Object) var1);
+        this.field_P.field_q = (WidgetRenderer) ((Object) var1);
+        this.field_L.field_q = (WidgetRenderer) ((Object) var1);
+        int var2 = 4;
+        int var3 = 326;
+        int var4 = var3 - var2 >> 1;
+        this.field_P.setBounds((byte) 111, -var3 + this.field_p >> 1, 30, var4, -var2 + (this.field_l - 48));
+        this.field_L.setBounds((byte) 116, var4 + (-var3 + this.field_p >> 1) + var2, 30, var4, -var2 - 48 + this.field_l);
+        this.field_M.setBounds((byte) 123, this.field_p - var3 >> 1, 30, var3, -(2 * var2) + (this.field_l - 78));
+        this.field_P.field_k = (WidgetEventListener) (this);
+        this.field_M.field_k = (WidgetEventListener) (this);
+        this.field_L.field_k = (WidgetEventListener) (this);
+        this.field_M.field_r = am.field_c;
+        this.field_L.field_r = vk.field_c;
+        this.addChild(0, this.field_P);
+        this.addChild(0, this.field_M);
+        this.addChild(0, this.field_L);
+    }
+
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, boolean param4) {
+        int var7 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
+        var7 = TorChallenge.field_F ? 1 : 0;
+        try {
+          if (param0 != this.field_P) {
+            if (param0 == this.field_M) {
+              k.a(-14956);
+            } else {
+              if (param0 == this.field_L) {
+                hf.a((byte) -111);
+              }
+            }
+          } else {
+            RandomAccessCacheFile.b((byte) 116);
+          }
+          if (param4) {
+            field_K = -44;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_12_0 = var6;
+          stackIn_12_1 = new StringBuilder().append("ih.A(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw oj.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+        }
+    }
+
+    final static boolean f(byte param0) {
+        boolean stackIn_6_0 = false;
+        if (param0 >= -77) {
+          GuestPlayConfirmationForm.resetDeclaredStaticState(-21);
+        }
+        stackIn_6_0 = (gj.field_c >= 10) && (NameSuggestionsPanel.field_K >= 13);
+        return stackIn_6_0;
+    }
+
+    final static void a(int param0) {
+        oa.field_g = 0;
+        ha.field_d = 0;
+        jj.field_d = false;
+        cl.field_z = false;
+        s.field_m = false;
+        NetworkArchiveRequest.field_B = 0;
+        ra.field_q = false;
+        dk.field_a = 0;
+        ah.field_i = false;
+        InteractiveWidget.field_I = 0;
+        ni.field_b = false;
+        lc.field_r = false;
+        me.field_g = 0;
+        ii.field_k = null;
+        we.field_j = 0;
+        ResourceArchive.field_b = 0;
+        ec.field_b = -1;
+        IsaacRandom.field_c = 0;
+        gh.field_m = false;
+        RichTextLayout.field_t = -1;
+        sd.field_d = 0;
+        ConfirmedEmailAvailabilityValidator.field_w = (int[][]) null;
+        fh.field_d = 0;
+        vi.field_a = 0;
+        ContentTransitionDialog.field_jb = 0;
+        ProxySocketConnector.field_o = 0;
+        if (param0 <= 84) {
+          field_O = (int[]) null;
+        }
+        BufferedCacheFile.field_e = true;
+        o.field_l = 0;
+        FullscreenFocusCanvas.field_a = true;
+        tk.field_P = false;
+        NanoFrameTimer.field_l = false;
+        AccountNameAvailabilityValidator.field_r = 0;
+        qk.field_lb = 0;
+        rj.field_d = null;
+        PacketBuffer.field_k = false;
+        hf.field_c = 0;
+        SocketConnector.field_f = false;
+        pi.field_c = null;
+        id.field_d = (int[][]) null;
+        wj.field_a = 0;
+        eb.field_n = false;
+        DropTargetWidgetContainer.field_F = 0;
+        ii.field_e = false;
+        kl.field_a = false;
+        ql.field_j = false;
+        td.field_e = 0;
+        bk.field_w = false;
+        hb.field_f = 0;
+        ti.field_d = 0;
+        vd.field_b = true;
+        kf.field_d = 0;
+        ea.field_h = null;
+        sf.field_c = 0;
+        ql.field_n = 0;
+        GameKeyHandler.field_b = false;
+        wh.field_b = false;
+        RegistrationAgreementPane.d(true);
+        sd.a(123);
+        sd.b(116);
+    }
+
+    final boolean handleKey(int param0, char param1, byte param2, UiComponent param3) {
+        RuntimeException var5 = null;
+        UiComponent var6 = null;
+        boolean stackIn_6_0 = false;
+        boolean stackIn_9_0 = false;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (super.handleKey(param0, param1, (byte) 98, param3)) {
+            return true;
+          }
+          if (98 == param0) {
+            stackIn_6_0 = this.focusPreviousChild(param3, (byte) -16);
+            return stackIn_6_0;
+          }
+          if (param0 == 99) {
+            stackIn_9_0 = this.focusNextChild(113, param3);
+            return stackIn_9_0;
+          }
+          if (param2 > 9) {
+            return false;
+          }
+          var6 = (UiComponent) null;
+          this.handleKey(20, 'Q', (byte) 83, (UiComponent) null);
+          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_16_0 = var5;
+          stackIn_16_1 = new StringBuilder().append("ih.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
+          }
+          throw oj.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+        }
+    }
+
+    final static void a(int param0, int param1, int param2, int param3, int param4, Sprite param5, int param6, int param7) {
+        int var16 = 0;
+        int var17 = 0;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        String stackIn_44_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var8 = null;
+        int var10 = 0;
+        int var11 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int[] var15 = null;
+        int var18 = 0;
+        int var19 = 0;
+        Sprite var21 = null;
+        int[] var22 = null;
+        int[] var25 = null;
+        int[] var29 = null;
+        int[] var30 = null;
+        var19 = TorChallenge.field_F ? 1 : 0;
+        try {
+          if (SoftwareRasterizer.field_a > param1) {
+            param0 = param0 - (SoftwareRasterizer.field_a - param1);
+            param1 = SoftwareRasterizer.field_a;
+          }
+          if (SoftwareRasterizer.field_k > param6) {
+            param3 = param3 - (-param6 + SoftwareRasterizer.field_k);
+            param6 = SoftwareRasterizer.field_k;
+          }
+          if (SoftwareRasterizer.field_c < param0 + param1) {
+            param0 = -param1 + SoftwareRasterizer.field_c;
+          }
+          if (param2 != 4) {
+            return;
+          }
+          if (SoftwareRasterizer.field_l < param6 + param3) {
+            param3 = SoftwareRasterizer.field_l - param6;
+          }
+          if (param0 > 0 &&
+            param3 > 0) {
+            var21 = param5.copy();
+            var30 = SoftwareRasterizer.pixels;
+            var10 = SoftwareRasterizer.width;
+            var11 = SoftwareRasterizer.height;
+            var29 = new int[4];
+            SoftwareRasterizer.saveClip(var29);
+            param5.bindAsRenderTarget();
+            SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
+            var13 = param6 * param5.storedWidth + param1;
+            var14 = -param0 + param5.storedWidth;
+            var25 = var21.pixels;
+            var22 = var25;
+            var15 = var22;
+            for (var16 = param6; var16 < param6 + param3; var16++) {
+              for (var17 = param1; param1 + param0 > var17; var17++) {
+                var18 = var25[var13];
+                if (var18 != 0) {
+                  if (var17 > 0 &&
+                    0 == var15[-1 + var13]) {
+                    SoftwareRasterizer.fillCircle(var17, var16, param4, param7);
+                  } else {
+                    if (var16 > 0 &&
+                      var15[var13 - param5.storedWidth] == 0) {
+                      SoftwareRasterizer.fillCircle(var17, var16, param4, param7);
+                    } else {
+                      if (var17 < param5.storedWidth - 1 &&
+                        var15[var13 + 1] == 0) {
+                        SoftwareRasterizer.fillCircle(var17, var16, param4, param7);
+                      } else {
+                        if (var16 < -1 + param5.storedHeight &&
+                          var15[param5.storedWidth + var13] == 0) {
+                          SoftwareRasterizer.fillCircle(var17, var16, param4, param7);
+                        }
+                      }
+                    }
+                  }
+                }
+                var13++;
+              }
+              var13 = var13 + var14;
+            }
+            var21.drawTransparent(-param5.offsetX, -param5.offsetY);
+            SoftwareRasterizer.setTarget(var30, var10, var11);
+            SoftwareRasterizer.restoreClip(var29);
+            return;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var8 = decompiledCaughtException;
+          stackIn_43_0 = var8;
+          stackIn_43_1 = new StringBuilder().append("ih.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          if (param5 == null) {
+            stackIn_44_2 = "null";
+          } else {
+            stackIn_44_2 = "{...}";
+          }
+          throw oj.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+        }
+    }
+
+    public static void resetDeclaredStaticState(int param0) {
+        field_O = null;
+        if (param0 != 99) {
+          field_K = -128;
+        }
+        field_N = null;
+    }
+
+    final void drawWidget(int param0, int param1, boolean param2, int param3) {
+        int var5 = this.field_m + param1;
+        int var6 = this.field_i + param0;
+        RasterBuffer.field_g.drawParagraph(dk.field_g, 20 + var5, var6 + 20, -40 + this.field_p, this.field_l - 50, 16777215, -1, 1, 0, RasterBuffer.field_g.field_x);
+        super.drawWidget(param0, param1, param2, param3);
+    }
+
+    static {
+        field_O = new int[8192];
+        field_N = new int[]{16773632, 12095488, 12424960, 16773632};
+        field_J = 0;
+    }
+}

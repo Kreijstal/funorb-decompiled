@@ -89,12 +89,12 @@ final class ka {
             var4 = r.a(param0, param2 ^ 11133);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!sf.a(var4.charAt(0), -33) &&
-                !sf.a(var4.charAt(-1 + var4.length()), param2 ^ 33)) {
+              if (!GuestPlayConfirmationForm.a(var4.charAt(0), -33) &&
+                !GuestPlayConfirmationForm.a(var4.charAt(-1 + var4.length()), param2 ^ 33)) {
                 var5 = 0;
                 for (var6 = 0; var6 < param0.length(); var6++) {
                   var7 = param0.charAt(var6);
-                  if (!sf.a((char) var7, -33)) {
+                  if (!GuestPlayConfirmationForm.a((char) var7, -33)) {
                     var5 = 0;
                   } else {
                     var5++;

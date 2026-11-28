@@ -164,7 +164,7 @@ final class LevelCompleteScene extends AnimatedResultScene {
         if (jj.field_b >= 0) {
           for (var2 = 0; var2 < ma.field_n.length; var2++) {
             if (q.field_a[ma.field_n[var2]].field_h) {
-              stackIn_7_0 = jd.field_A;
+              stackIn_7_0 = DialogMessagePane.field_A;
             } else {
               stackIn_7_0 = vj.field_a[11][this.field_g >> 2];
             }
@@ -216,7 +216,7 @@ final class LevelCompleteScene extends AnimatedResultScene {
           for (var5_int = param0 + 1; var5_int < -1 - param0 + param1.length; var5_int++) {
             for (var6 = 1 + param2; var6 < -1 - param2 + param1[0].length; var6++) {
               if (param1[var5_int][var6] instanceof LaserHubTile) {
-                na.a(var6, param3, param1, var5_int, param4 ^ 76);
+                ProgressMessageDialog.a(var6, param3, param1, var5_int, param4 ^ 76);
               }
             }
           }

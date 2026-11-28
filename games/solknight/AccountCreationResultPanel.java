@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends ci implements WidgetActivationListener {
+final class AccountCreationResultPanel extends ProgressMessageDialog implements WidgetActivationListener {
     private boolean field_tb;
     private AccountRegistrationPanel field_vb;
     private boolean field_wb;
@@ -30,7 +30,7 @@ final class AccountCreationResultPanel extends ci implements WidgetActivationLis
         }
         try {
           NameSuggestionsPanel.a((byte) -110);
-          this.f(param4);
+          this.closeDialog(param4);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "jk.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -43,7 +43,7 @@ final class AccountCreationResultPanel extends ci implements WidgetActivationLis
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        lj var5 = null;
+        DialogMessagePane var5 = null;
         int var6 = 0;
         var6 = SolKnight.field_L ? 1 : 0;
         try {
@@ -67,33 +67,33 @@ final class AccountCreationResultPanel extends ci implements WidgetActivationLis
               }
             }
           }
-          var5 = new lj((ci) (this), uc.field_g, var4);
+          var5 = new DialogMessagePane((ProgressMessageDialog) (this), uc.field_g, var4);
           if (!param2.success) {
             if (this.field_wb) {
-              var5.a(0, dd.field_a, (WidgetEventListener) (this));
+              var5.addListenerButton(0, dd.field_a, (WidgetEventListener) (this));
             } else {
               if (param2.statusCode == 5) {
-                var5.a(11, AgeValidator.field_k, 1);
-                var5.a(17, ph.field_e, 1);
+                var5.addActionButton(11, AgeValidator.field_k, 1);
+                var5.addActionButton(17, ph.field_e, 1);
               } else {
-                var5.a(-1, u.field_e, 1);
+                var5.addActionButton(-1, u.field_e, 1);
               }
             }
             if (3 != param2.statusCode) {
               if (6 == param2.statusCode) {
-                var5.a(9, SecondaryNodeDeque.field_d, 1);
+                var5.addActionButton(9, SecondaryNodeDeque.field_d, 1);
               }
             } else {
-              var5.a(7, qd.field_a, 1);
+              var5.addActionButton(7, qd.field_a, 1);
             }
           } else {
             if (param2.field_f) {
-              this.c(-3399, new qe(this));
+              this.replaceContent(-3399, new RegistrationAgreementPane(this));
               return;
             }
-            var5.a(0, dd.field_a, (WidgetEventListener) (this));
+            var5.addListenerButton(0, dd.field_a, (WidgetEventListener) (this));
           }
-          this.c(-3399, var5);
+          this.replaceContent(-3399, var5);
           if (param1 > 19) {
             return;
           }
@@ -113,7 +113,7 @@ final class AccountCreationResultPanel extends ci implements WidgetActivationLis
         }
     }
 
-    final void h(byte param0) {
+    final void showAccountCreationConnectionFailure(byte param0) {
         this.showAccountCreationResult(true, (byte) 58, mh.createAccountErrorResult(248, true, ce.field_a));
         if (param0 != -63) {
           this.field_wb = false;

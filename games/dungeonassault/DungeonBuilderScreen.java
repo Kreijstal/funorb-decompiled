@@ -390,10 +390,10 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
         if (var2 != null) {
           DungeonBuilderScreen.drawDungeonTilePreview(488, 54, (DungeonTileState) (var2));
           if (var15 != 0) {
-            DungeonBuilderScreen.drawFramedSpriteAnimation(488, 54, this.field_H, kc.field_V);
+            DungeonBuilderScreen.drawFramedSpriteAnimation(488, 54, this.field_H, DialogMessagePane.field_V);
           }
         } else {
-          DungeonBuilderScreen.drawFramedSpriteAnimation(488, 54, this.field_H, kc.field_V);
+          DungeonBuilderScreen.drawFramedSpriteAnimation(488, 54, this.field_H, DialogMessagePane.field_V);
         }
         this.a(false, 484, 327);
         var4 = (rj) (this.field_p.beginBackward(-24172));
@@ -824,7 +824,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
                                 }
                               }
                             }
-                            jk.j((byte) 59);
+                            StandardContentDialog.j((byte) 59);
                             this.c((byte) -118);
                           }
                           decompiledFrameRemainder1 = (var4 != 0);
@@ -1052,8 +1052,8 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
         if (param0 >= -42) {
           this.field_R = (nn) null;
         }
-        hf.field_nb.field_J = null;
-        hf.field_nb.e(true);
+        ContentTransitionDialog.field_nb.field_J = null;
+        ContentTransitionDialog.field_nb.e(true);
         var4Lifetime2 = 0;
         var5 = this.field_D;
         var6 = 0;
@@ -1063,7 +1063,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
             if (var7 != null) {
               ((gd) ((Object) var7)).b(10, var4Lifetime2, (byte) 4);
               var4Lifetime2 = var4Lifetime2 + (8 + ((gd) ((Object) var7)).field_x);
-              hf.field_nb.a(var7, (byte) -48);
+              ContentTransitionDialog.field_nb.a(var7, (byte) -48);
             }
             var6++;
             continue;
@@ -1297,15 +1297,15 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
         this.resetScreenWidgets();
         this.field_R = new nn(true);
         this.field_M = new nn(false);
-        hf.field_nb = new ed(8, 90, 180, 382);
+        ContentTransitionDialog.field_nb = new ed(8, 90, 180, 382);
         this.field_Q = tn.a(16, 12, IntrusiveNode.field_c, jm.field_i, param0 ^ -18245, lk.field_P);
         this.field_O = tn.a(472, 12, IntrusiveNode.field_c, jm.field_i, param0 ^ -18248, MatchingFieldValidator.field_r.toUpperCase());
-        this.field_A = sj.a(24, 87, 66, uj.field_c, this.field_M);
-        this.field_L = sj.a(55, 96, 66, gd.field_E, this.field_M);
-        this.field_C = sj.a(86, 110, 66, jj.field_b, this.field_M);
-        this.field_P = sj.a(117, 87, 66, tb.field_c, this.field_M);
-        this.field_y = sj.a(148, 91, 66, kd.field_f, this.field_M);
-        this.field_p.addFirst(hf.field_nb, false);
+        this.field_A = ResizableModalDialog.a(24, 87, 66, uj.field_c, this.field_M);
+        this.field_L = ResizableModalDialog.a(55, 96, 66, gd.field_E, this.field_M);
+        this.field_C = ResizableModalDialog.a(86, 110, 66, jj.field_b, this.field_M);
+        this.field_P = ResizableModalDialog.a(117, 87, 66, tb.field_c, this.field_M);
+        this.field_y = ResizableModalDialog.a(148, 91, 66, kd.field_f, this.field_M);
+        this.field_p.addFirst(ContentTransitionDialog.field_nb, false);
         this.field_p.addFirst(this.field_Q, false);
         this.field_p.addFirst(this.field_O, false);
         this.field_p.addFirst(this.field_A, false);
@@ -1313,12 +1313,12 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
         this.field_p.addFirst(this.field_C, false);
         this.field_p.addFirst(this.field_P, false);
         this.field_p.addFirst(this.field_y, false);
-        this.field_A.field_n = (en) ((Object) new e(jk.a(new String[]{tn.field_U}, tp.field_w, 30496)));
-        this.field_L.field_n = (en) ((Object) new e(jk.a(new String[]{qk.field_d}, tp.field_w, param0 + 12257)));
-        this.field_C.field_n = (en) ((Object) new e(jk.a(new String[]{dj.field_c}, tp.field_w, param0 + 12257)));
-        this.field_P.field_n = (en) ((Object) new e(jk.a(new String[]{BufferedSocket.field_a}, tp.field_w, 30496)));
-        this.field_y.field_n = (en) ((Object) new e(jk.a(new String[]{eg.field_f}, tp.field_w, 30496)));
-        this.field_O.field_n = (en) ((Object) new e((String) null, pm.field_o, nk.field_Lb));
+        this.field_A.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{tn.field_U}, tp.field_w, 30496)));
+        this.field_L.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{qk.field_d}, tp.field_w, param0 + 12257)));
+        this.field_C.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{dj.field_c}, tp.field_w, param0 + 12257)));
+        this.field_P.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{BufferedSocket.field_a}, tp.field_w, 30496)));
+        this.field_y.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{eg.field_f}, tp.field_w, 30496)));
+        this.field_O.field_n = (en) ((Object) new e((String) null, pm.field_o, ProgressMessageDialog.field_Lb));
         this.field_Q.field_n = (en) ((Object) new e((String) null, IntroSequenceScreen.field_u, DraggableWidgetContainer.field_M));
         this.b((byte) 26);
         this.field_z = 0;
@@ -1355,7 +1355,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
         } else {
           this.field_u = null;
         }
-        jk.j((byte) 59);
+        StandardContentDialog.j((byte) 59);
     }
 
     final void releaseScreenResources() {
@@ -1759,7 +1759,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
     }
 
     DungeonBuilderScreen() {
-        this.field_E = new tf(IntrusiveNode.field_c, f.field_c, cm.field_M);
+        this.field_E = new tf(IntrusiveNode.field_c, f.field_c, RegistrationAgreementPane.field_M);
     }
 
     static {

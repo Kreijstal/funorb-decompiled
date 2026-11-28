@@ -5,7 +5,7 @@ final class TextLineMetrics {
     static String[] field_e;
     int field_f;
     int field_d;
-    static ql field_a;
+    static BirthDateChatEnableForm field_a;
     int[] field_c;
     static LevelSimulation field_b;
 

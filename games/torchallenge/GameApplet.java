@@ -155,7 +155,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
                       if (Bzip2State.a((byte) -117, (CharSequence) ((Object) var4)) &&
-                        !(qh.a((CharSequence) ((Object) var4), (byte) -85) >= 10)) {
+                        !(RegistrationAgreementPane.a((CharSequence) ((Object) var4), (byte) -85) >= 10)) {
                         this.redirectToErrorPage((byte) -116, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
@@ -319,7 +319,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException var2_ref = null;
         try {
           if (this == GameKeyHandler.field_c &&
-            !jf.field_rb) {
+            !StandardContentDialog.field_rb) {
             je.field_f = true;
             if (ah.field_h &&
               -hc.field_R + ol.correctedCurrentTimeMillis(256) > 1000L) {
@@ -362,12 +362,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          VorbisSample.b(param1.getFileByName(-2, "", "headers.packvorbis"));
+          VorbisSample.decodeSetup(param1.getFileByName(-2, "", "headers.packvorbis"));
           if (param0 != 0) {
             screens = (GameScreen[]) null;
           }
-          var2 = VorbisSample.a(param1, "jagex logo2.packvorbis", "");
-          var2.c();
+          var2 = VorbisSample.loadByName(param1, "jagex logo2.packvorbis", "");
+          var2.decodeAllToPcm();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -530,8 +530,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           try {
             try {
               if (GameKeyHandler.field_c != null) {
-                ih.field_J = ih.field_J + 1;
-                if (ih.field_J < 3) {
+                GuestPlayConfirmationForm.field_J = GuestPlayConfirmationForm.field_J + 1;
+                if (GuestPlayConfirmationForm.field_J < 3) {
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                   return;
                 }
@@ -698,10 +698,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           var3_ref = this;
           synchronized (var3_ref) {
-            if (jf.field_rb) {
+            if (StandardContentDialog.field_rb) {
               return;
             }
-            jf.field_rb = true;
+            StandardContentDialog.field_rb = true;
           }
           if (aj.field_g != null) {
             aj.field_g.destroy();
@@ -867,7 +867,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           if (GameKeyHandler.field_c == this &&
-            !jf.field_rb) {
+            !StandardContentDialog.field_rb) {
             vd.field_a = 0L;
             return;
           }
@@ -923,7 +923,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           if (this == GameKeyHandler.field_c &&
-            !jf.field_rb) {
+            !StandardContentDialog.field_rb) {
             vd.field_a = ol.correctedCurrentTimeMillis(256) + 4000L;
             return;
           }
@@ -940,7 +940,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           if (GameKeyHandler.field_c == this &&
-            !jf.field_rb) {
+            !StandardContentDialog.field_rb) {
             vd.field_a = ol.correctedCurrentTimeMillis(256);
             c.sleepMillis(79, 5000L);
             u.field_a = null;

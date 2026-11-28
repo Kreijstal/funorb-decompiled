@@ -8,14 +8,14 @@ final class ki {
 
     final static void a(byte param0) {
         if (param0 < -36) {
-          ql.i(34);
+          BirthDateChatEnableForm.i(34);
           al.a((byte) -41);
           up.field_z = null;
           bm.g(0);
           return;
         }
         field_b = (Sprite[]) null;
-        ql.i(34);
+        BirthDateChatEnableForm.i(34);
         al.a((byte) -41);
         up.field_z = null;
         bm.g(0);

@@ -23,10 +23,10 @@ final class ag {
             ag.clearStaticReferences(-62);
           }
           if (null == mk.field_e) {
-            mk.field_e = new ch(jh.field_e, qf.field_g);
+            mk.field_e = new ProgressDialog(jh.field_e, qf.field_g);
             jh.field_e.showDialog(mk.field_e, (byte) -105);
           }
-          mk.field_e.a(param3, param2, param1, param0 - 11945);
+          mk.field_e.setProgress(param3, param2, param1, param0 - 11945);
           SoftwareRasterizer.clearRaster();
           ChessBoardRenderer.a((byte) -31, true);
         } catch (RuntimeException runtimeException) {

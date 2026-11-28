@@ -193,7 +193,7 @@ public final class MinerDisturbance extends ob {
           if (!ConfirmedEmailAvailabilityValidator.e(param0) &&
             !AccountNameAvailabilityValidator.f(-9202)) {
             if (cm.field_o == 0 &&
-              qd.field_S ||
+              GuestPlayConfirmationForm.field_S ||
               cm.field_o == 1 &&
               AwtRasterBuffer.field_b) {
               this.t(48);
@@ -391,7 +391,7 @@ public final class MinerDisturbance extends ob {
               gh.field_a = jn.a("skeleton", -29553, "supervolcano", fl.field_f);
               rd.field_b = td.a("miner2oily", fl.field_f, "supervolcano", (byte) 109);
               fg.field_c = td.a("miner_stash_oily", fl.field_f, "supervolcano", (byte) 122);
-              rg.field_tb = td.a("jetpack", fl.field_f, "supervolcano", (byte) 112);
+              ProgressMessageDialog.field_tb = td.a("jetpack", fl.field_f, "supervolcano", (byte) 112);
               pc.field_f = td.a("jetpack_onfire", fl.field_f, "supervolcano", (byte) 110);
               ob.field_w = td.a("miner_pickup_freezium", fl.field_f, "supervolcano", (byte) 117);
               tf.field_c = td.a("miner_pickup_freezium_oily", fl.field_f, "supervolcano", (byte) 122);
@@ -511,7 +511,7 @@ public final class MinerDisturbance extends ob {
           }
           if (null != this.field_Q &&
             fl.field_d) {
-            this.field_Q.a(jk.field_ab, param0 - 12, NodeHashTableIterator.field_e, nk.field_w);
+            this.field_Q.a(ContentTransitionDialog.field_ab, param0 - 12, NodeHashTableIterator.field_e, nk.field_w);
             if (null != this.field_Q &&
               !this.field_Q.field_o) {
               return;
@@ -556,7 +556,7 @@ public final class MinerDisturbance extends ob {
             if (this.field_D.length == this.field_I) {
               this.field_I = 0;
             }
-            var2_int = 6000 - rg.field_sb;
+            var2_int = 6000 - ProgressMessageDialog.field_sb;
             if (var2_int <= 0) {
               var2_int = 1;
             }
@@ -953,7 +953,7 @@ public final class MinerDisturbance extends ob {
           }
           boolean decompiledFrameRemainder0 = true;
           if (pl.field_h == 3) {
-            rg.field_wb = rg.field_wb / 2;
+            ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb / 2;
             AccountRequestState.field_k = AccountRequestState.field_k / 2;
             if (je.e(NanoFrameTimer.field_k, hf.field_t, 1, 1) >= 5) {
               var6 = 12;
@@ -990,7 +990,7 @@ public final class MinerDisturbance extends ob {
           if (pl.field_h == 12) {
             cm.field_r = cm.field_r + 1;
             AccountRequestState.field_k = AccountRequestState.field_k / 2;
-            rg.field_wb = rg.field_wb / 2;
+            ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb / 2;
             if (cm.field_r > 5) {
               var6 = 12;
             }
@@ -1133,7 +1133,7 @@ public final class MinerDisturbance extends ob {
           if (fh.field_c != null) {
             lg.a(fh.field_c, -36);
             fh.field_c = null;
-            wf.p(param0 + 4440);
+            ResizableModalDialog.p(param0 + 4440);
           }
           fl.field_f = TextHotspotBounds.a(param0 - 21, 1);
           NameSuggestionsPanel.field_Q = TextHotspotBounds.a(1, 2);
@@ -1306,7 +1306,7 @@ public final class MinerDisturbance extends ob {
             }
           }
           if (je.field_N[cm.field_o] > je.field_u) {
-            if (rg.field_sb > 0) {
+            if (ProgressMessageDialog.field_sb > 0) {
               if (!(ic.field_k <= 0)) {
                 ic.field_k = ic.field_k - 1;
                 if (var21 != 0) {
@@ -1433,7 +1433,7 @@ public final class MinerDisturbance extends ob {
           }
           if (decompiledSharedTail7) {
             if (lj.field_r > 0) {
-              rg.field_sb = rg.field_sb - 1;
+              ProgressMessageDialog.field_sb = ProgressMessageDialog.field_sb - 1;
               lj.field_r = lj.field_r - (1 + lj.field_r / 10);
             }
             nd.field_d.a(param0 ^ 16444);
@@ -1491,10 +1491,10 @@ public final class MinerDisturbance extends ob {
             ValidatedTextField.field_V = false;
             this.field_T = BufferedSocket.a((byte) -73, sl.field_u[pl.field_h].length);
             cm.field_r = 0;
-            if (wf.q(88)) {
+            if (ResizableModalDialog.q(88)) {
               a.field_c = a.field_c * 2;
               var5 = a.field_c / 2;
-              var6 = rg.field_sb % 3;
+              var6 = ProgressMessageDialog.field_sb % 3;
               if (var6 != 0) {
                 if (var6 != 1) {
                   var7 = var5 / 3;
@@ -1529,7 +1529,7 @@ public final class MinerDisturbance extends ob {
           }
           if (!ValidatedTextField.field_V &&
             il.e(-31391)) {
-            rg.field_wb = 0;
+            ProgressMessageDialog.field_wb = 0;
             AccountRequestState.field_k = 0;
           }
           if (!je.c(NanoFrameTimer.field_k, hf.field_t, 1, 1)) {
@@ -1552,8 +1552,8 @@ public final class MinerDisturbance extends ob {
           var4Lifetime3 = fn.a(true) ? 1 : 0;
           if (var4Lifetime3 != 0 &&
             tc.field_s < 4) {
-            if (qd.field_K < 100) {
-              qd.field_K = qd.field_K + 1;
+            if (GuestPlayConfirmationForm.field_K < 100) {
+              GuestPlayConfirmationForm.field_K = GuestPlayConfirmationForm.field_K + 1;
             }
             if (!qe.field_b[15]) {
               tc.field_s = tc.field_s + 1;
@@ -1563,12 +1563,12 @@ public final class MinerDisturbance extends ob {
           if (tc.field_s > 0) {
             ag.a(true, 31, hf.field_t * 32, NanoFrameTimer.field_k * 32);
           }
-          if ((!qd.field_O[98] ||
-            !qd.field_O[86]) &&
+          if ((!GuestPlayConfirmationForm.field_O[98] ||
+            !GuestPlayConfirmationForm.field_O[86]) &&
             (!NanoFrameTimer.c(-2302) &&
             (dl.field_c & 7) == 0 &&
-            100 > qd.field_K)) {
-            qd.field_K = qd.field_K + 1;
+            100 > GuestPlayConfirmationForm.field_K)) {
+            GuestPlayConfirmationForm.field_K = GuestPlayConfirmationForm.field_K + 1;
           }
           stackIn_290_0 = (ValidatedTextField.field_V) && (pl.field_h == 15);
           d.field_b = stackIn_290_0;
@@ -1863,25 +1863,25 @@ public final class MinerDisturbance extends ob {
                   } else {
                     TextLayout.field_e = TextLayout.field_e - 1;
                   }
-                  if (qd.field_K > 0) {
-                    qd.field_K = qd.field_K - 1;
+                  if (GuestPlayConfirmationForm.field_K > 0) {
+                    GuestPlayConfirmationForm.field_K = GuestPlayConfirmationForm.field_K - 1;
                   }
                   if (je.d(NanoFrameTimer.field_k, hf.field_t, 1, 1)) {
                     je.field_O.a(NanoFrameTimer.field_k, -4, hf.field_t);
                     uf.field_p[jf.b((byte) 108)] = new gf(NanoFrameTimer.field_k, hf.field_t, 16);
                   }
                   if (d.field_b &&
-                    qd.field_O[96]) {
+                    GuestPlayConfirmationForm.field_O[96]) {
                     MidiPcmStream.field_K = -1;
-                    rg.field_wb = -10;
+                    ProgressMessageDialog.field_wb = -10;
                   }
                   if (AccountRequestState.field_k > -160) {
                     AccountRequestState.field_k = -160;
                   }
                   if (d.field_b &&
-                    qd.field_O[97]) {
+                    GuestPlayConfirmationForm.field_O[97]) {
                     MidiPcmStream.field_K = 1;
-                    rg.field_wb = 10;
+                    ProgressMessageDialog.field_wb = 10;
                   }
                   if ((TextLayout.field_e & 3) == 0) {
                     var13_ref_gf = new gf(NanoFrameTimer.field_k, hf.field_t, 16);
@@ -1891,7 +1891,7 @@ public final class MinerDisturbance extends ob {
                     AccountRequestState.field_k = -160;
                   }
                   IsaacRandom.field_i = IsaacRandom.field_i + AccountRequestState.field_k;
-                  sk.field_d = sk.field_d + rg.field_wb;
+                  sk.field_d = sk.field_d + ProgressMessageDialog.field_wb;
                   if (IsaacRandom.field_i > 40 &&
                     mh.field_e[NanoFrameTimer.field_k][hf.field_t + 1].g()) {
                     IsaacRandom.field_i = 40;
@@ -1963,7 +1963,7 @@ public final class MinerDisturbance extends ob {
               (decompiledFrameRemainder6) &&
               (decompiledFrameRemainder5)) {
               if (d.field_b &&
-                qd.field_O[96] ||
+                GuestPlayConfirmationForm.field_O[96] ||
                 (2 == this.field_E ||
                 this.field_E == 5)) {
                 rj.field_f = 1;
@@ -1973,7 +1973,7 @@ public final class MinerDisturbance extends ob {
                 }
               }
               if (d.field_b &&
-                qd.field_O[97] ||
+                GuestPlayConfirmationForm.field_O[97] ||
                 (this.field_E == 1 ||
                 this.field_E == 4)) {
                 MidiPcmStream.field_K = 1;
@@ -1983,7 +1983,7 @@ public final class MinerDisturbance extends ob {
                 }
               }
               if (d.field_b &&
-                qd.field_O[98] &&
+                GuestPlayConfirmationForm.field_O[98] &&
                 !ag.field_c ||
                 (this.field_E == 3 ||
                 this.field_E == 4 ||
@@ -2005,8 +2005,8 @@ public final class MinerDisturbance extends ob {
                 }
                 if (var13 != 0) {
                   boolean decompiledSharedTail6 = (!(qe.field_b[20]) ||
-                    !(qd.field_O[49]) ||
-                    !(qd.field_K > 10));
+                    !(GuestPlayConfirmationForm.field_O[49]) ||
+                    !(GuestPlayConfirmationForm.field_K > 10));
                   if (!decompiledSharedTail6) {
                     rj.field_f = 12;
                     decompiledSharedTail6 = (var21 != 0);
@@ -2014,7 +2014,7 @@ public final class MinerDisturbance extends ob {
                   if (decompiledSharedTail6) {
                     AccountRequestState.field_k = -40;
                     rj.field_f = 3;
-                    rg.field_wb = 10 * MidiPcmStream.field_K;
+                    ProgressMessageDialog.field_wb = 10 * MidiPcmStream.field_K;
                     ne.a(10, 79);
                   }
                 }
@@ -2143,7 +2143,7 @@ public final class MinerDisturbance extends ob {
               }
               var2_int = 0;
               if (AccountRequestState.field_k >= 0 &&
-                !qd.field_O[99]) {
+                !GuestPlayConfirmationForm.field_O[99]) {
                 if (sk.field_d < -30 &&
                   mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].g()) {
                   var2_int = 1;
@@ -2209,25 +2209,25 @@ public final class MinerDisturbance extends ob {
               regionExit3: {
                 var6Lifetime2 = stackIn_906_0;
                 if ((!d.field_b ||
-                  !qd.field_O[96]) && this.field_E != 2) {
+                  !GuestPlayConfirmationForm.field_O[96]) && this.field_E != 2) {
                   if (var6Lifetime2 != 0) {
                     break regionExit3;
                   }
-                  if (0 <= rg.field_wb) {
+                  if (0 <= ProgressMessageDialog.field_wb) {
                     break regionExit3;
                   }
-                  rg.field_wb = rg.field_wb + 1;
+                  ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb + 1;
                   if (var21 == 0) {
                     break regionExit3;
                   }
                 }
                 if (var6Lifetime2 == 0) {
-                  rg.field_wb = -20;
+                  ProgressMessageDialog.field_wb = -20;
                 }
                 if ((var6Lifetime2 != 0 ||
                   var21 != 0) &&
-                  rg.field_wb > -30) {
-                  rg.field_wb = rg.field_wb - 1;
+                  ProgressMessageDialog.field_wb > -30) {
+                  ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb - 1;
                 }
                 MidiPcmStream.field_K = -1;
                 var7Lifetime2 = 0;
@@ -2241,7 +2241,7 @@ public final class MinerDisturbance extends ob {
                   }
                   if (decompiledSharedTail5) {
                     rj.field_f = 10;
-                    rg.field_wb = -50;
+                    ProgressMessageDialog.field_wb = -50;
                     kj.field_d = 0;
                     AccountRequestState.field_k = -10;
                     tc.field_t = 0;
@@ -2250,15 +2250,15 @@ public final class MinerDisturbance extends ob {
               }
               regionExit4: {
                 if ((!d.field_b ||
-                  !qd.field_O[97]) &&
+                  !GuestPlayConfirmationForm.field_O[97]) &&
                   this.field_E != 1) {
                   if (var6Lifetime2 != 0) {
                     break regionExit4;
                   }
-                  if (rg.field_wb <= 0) {
+                  if (ProgressMessageDialog.field_wb <= 0) {
                     break regionExit4;
                   }
-                  rg.field_wb = rg.field_wb - 1;
+                  ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb - 1;
                   if (var21 == 0) {
                     break regionExit4;
                   }
@@ -2266,12 +2266,12 @@ public final class MinerDisturbance extends ob {
                 MidiPcmStream.field_K = 1;
                 var7Lifetime2 = 0;
                 if (var6Lifetime2 == 0) {
-                  rg.field_wb = 20;
+                  ProgressMessageDialog.field_wb = 20;
                 }
                 if ((var6Lifetime2 != 0 ||
                   var21 != 0) &&
-                  rg.field_wb < 30) {
-                  rg.field_wb = rg.field_wb + 1;
+                  ProgressMessageDialog.field_wb < 30) {
+                  ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb + 1;
                 }
                 if (qe.field_b[11] &&
                   sk.field_d > 0 &&
@@ -2280,7 +2280,7 @@ public final class MinerDisturbance extends ob {
                     AccountRequestState.field_k = -10;
                     tc.field_t = 0;
                     rj.field_f = 10;
-                    rg.field_wb = 50;
+                    ProgressMessageDialog.field_wb = 50;
                     kj.field_d = 0;
                     if (var21 != 0) {
                       tc.field_t = tc.field_t + 2;
@@ -2292,39 +2292,39 @@ public final class MinerDisturbance extends ob {
               }
               if (var6Lifetime2 == 0) {
                 if (d.field_b &&
-                  qd.field_O[96] &&
-                  qd.field_O[99]) {
+                  GuestPlayConfirmationForm.field_O[96] &&
+                  GuestPlayConfirmationForm.field_O[99]) {
                   MidiPcmStream.field_K = -1;
                   var7Lifetime2 = 0;
-                  rg.field_wb = -10;
+                  ProgressMessageDialog.field_wb = -10;
                   if ((var21 != 0) &&
-                    (0 > rg.field_wb)) {
-                    rg.field_wb = rg.field_wb + 1;
+                    (0 > ProgressMessageDialog.field_wb)) {
+                    ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb + 1;
                   }
                 } else {
-                  if (0 > rg.field_wb) {
-                    rg.field_wb = rg.field_wb + 1;
+                  if (0 > ProgressMessageDialog.field_wb) {
+                    ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb + 1;
                   }
                 }
                 if (!d.field_b ||
-                  !qd.field_O[97] ||
-                  !qd.field_O[99]) {
-                  if (!(0 >= rg.field_wb)) {
-                    rg.field_wb = rg.field_wb - 1;
+                  !GuestPlayConfirmationForm.field_O[97] ||
+                  !GuestPlayConfirmationForm.field_O[99]) {
+                  if (!(0 >= ProgressMessageDialog.field_wb)) {
+                    ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb - 1;
                     if (var21 != 0) {
                       var7Lifetime2 = 0;
                       MidiPcmStream.field_K = 1;
-                      rg.field_wb = 10;
+                      ProgressMessageDialog.field_wb = 10;
                     }
                   }
                 } else {
                   var7Lifetime2 = 0;
                   MidiPcmStream.field_K = 1;
-                  rg.field_wb = 10;
+                  ProgressMessageDialog.field_wb = 10;
                 }
               }
               if (d.field_b &&
-                qd.field_O[98] &&
+                GuestPlayConfirmationForm.field_O[98] &&
                 !ag.field_c) {
                 var13 = 1;
                 if (mh.field_e[NanoFrameTimer.field_k][hf.field_t].field_a) {
@@ -2342,7 +2342,7 @@ public final class MinerDisturbance extends ob {
                   var13 = 0;
                 }
                 if (var13 != 0) {
-                  rg.field_wb = MidiPcmStream.field_K * 10;
+                  ProgressMessageDialog.field_wb = MidiPcmStream.field_K * 10;
                   rj.field_f = 3;
                   AccountRequestState.field_k = -40;
                   ne.a(10, -77);
@@ -2359,7 +2359,7 @@ public final class MinerDisturbance extends ob {
                 ne.a(30, 59);
               }
               BoundedRandomAccessFile.field_f = BoundedRandomAccessFile.field_f - 1;
-              if ((rg.field_wb == 0 ||
+              if ((ProgressMessageDialog.field_wb == 0 ||
                 var6Lifetime2 != 0 &&
                 var7Lifetime2 != 0) && var2_int != 0) {
                 rj.field_f = 0;
@@ -2387,7 +2387,7 @@ public final class MinerDisturbance extends ob {
               (decompiledFrameRemainder19) &&
               (decompiledFrameRemainder18)) {
               if ((d.field_b &&
-                qd.field_O[96] ||
+                GuestPlayConfirmationForm.field_O[96] ||
                 (this.field_E == 2 ||
                 this.field_E == 5)) && (qe.field_b[11] &&
                 0 > sk.field_d &&
@@ -2395,7 +2395,7 @@ public final class MinerDisturbance extends ob {
                 mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].field_S)) {
                 if (tc.field_t >= 25) {
                   rj.field_f = 10;
-                  rg.field_wb = 50;
+                  ProgressMessageDialog.field_wb = 50;
                   AccountRequestState.field_k = -10;
                   kj.field_d = 0;
                   if (var21 != 0) {
@@ -2406,7 +2406,7 @@ public final class MinerDisturbance extends ob {
                 }
               }
               if ((d.field_b &&
-                qd.field_O[97] ||
+                GuestPlayConfirmationForm.field_O[97] ||
                 (this.field_E == 1 ||
                 this.field_E == 4)) && (qe.field_b[11] &&
                 sk.field_d > 0 &&
@@ -2419,26 +2419,26 @@ public final class MinerDisturbance extends ob {
                 }
                 if (decompiledSharedTail4) {
                   AccountRequestState.field_k = -10;
-                  rg.field_wb = 50;
+                  ProgressMessageDialog.field_wb = 50;
                   kj.field_d = 0;
                   rj.field_f = 10;
                 }
               }
               if (!d.field_b ||
-                !qd.field_O[96]) {
-                if (!(0 <= rg.field_wb)) {
-                  rg.field_wb = rg.field_wb + 1;
+                !GuestPlayConfirmationForm.field_O[96]) {
+                if (!(0 <= ProgressMessageDialog.field_wb)) {
+                  ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb + 1;
                   if (var21 != 0) {
-                    rg.field_wb = -20;
+                    ProgressMessageDialog.field_wb = -20;
                     MidiPcmStream.field_K = -1;
                   }
                 }
               } else {
-                rg.field_wb = -20;
+                ProgressMessageDialog.field_wb = -20;
                 MidiPcmStream.field_K = -1;
               }
               if ((d.field_b &&
-                qd.field_O[98] ||
+                GuestPlayConfirmationForm.field_O[98] ||
                 (this.field_E == 5 ||
                 this.field_E == 4)) &&
                 -40 < AccountRequestState.field_k) {
@@ -2453,20 +2453,20 @@ public final class MinerDisturbance extends ob {
                 }
               }
               if (d.field_b &&
-                qd.field_O[97]) {
-                rg.field_wb = 20;
+                GuestPlayConfirmationForm.field_O[97]) {
+                ProgressMessageDialog.field_wb = 20;
                 MidiPcmStream.field_K = 1;
                 if ((var21 != 0) &&
-                  (rg.field_wb > 0)) {
-                  rg.field_wb = rg.field_wb - 1;
+                  (ProgressMessageDialog.field_wb > 0)) {
+                  ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb - 1;
                 }
               } else {
-                if (rg.field_wb > 0) {
-                  rg.field_wb = rg.field_wb - 1;
+                if (ProgressMessageDialog.field_wb > 0) {
+                  ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb - 1;
                 }
               }
               if ((d.field_b &&
-                qd.field_O[99] ||
+                GuestPlayConfirmationForm.field_O[99] ||
                 var5Lifetime1 != 0) &&
                 (var2_int == 0 &&
                 AccountRequestState.field_k < 40)) {
@@ -2481,18 +2481,18 @@ public final class MinerDisturbance extends ob {
                 }
               }
               if ((d.field_b &&
-                !qd.field_O[99] ||
+                !GuestPlayConfirmationForm.field_O[99] ||
                 var5Lifetime1 != 0) &&
-                (!qd.field_O[98] &&
+                (!GuestPlayConfirmationForm.field_O[98] &&
                 mh.field_e[NanoFrameTimer.field_k][1 + hf.field_t].g() &&
                 var2_int == 0 &&
                 AccountRequestState.field_k < 40)) {
                 AccountRequestState.field_k = AccountRequestState.field_k + 1;
               }
               if ((d.field_b &&
-                qd.field_O[99] ||
+                GuestPlayConfirmationForm.field_O[99] ||
                 (var5Lifetime1 != 0 ||
-                !qd.field_O[98])) &&
+                !GuestPlayConfirmationForm.field_O[98])) &&
                 var2_int != 0) {
                 rj.field_f = 1;
                 AccountRequestState.field_k = 0;
@@ -2500,16 +2500,16 @@ public final class MinerDisturbance extends ob {
               }
               if (var4Lifetime3 != 0 &&
                 !qe.field_b[15]) {
-                if (rg.field_wb * rg.field_wb > 400) {
-                  rg.field_wb = rg.field_wb / 2;
+                if (ProgressMessageDialog.field_wb * ProgressMessageDialog.field_wb > 400) {
+                  ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb / 2;
                 }
                 if (AccountRequestState.field_k * AccountRequestState.field_k > 400) {
                   AccountRequestState.field_k = AccountRequestState.field_k / 2;
                 }
               }
               IsaacRandom.field_i = IsaacRandom.field_i + AccountRequestState.field_k;
-              sk.field_d = sk.field_d + rg.field_wb;
-              if (!qd.field_O[98] &&
+              sk.field_d = sk.field_d + ProgressMessageDialog.field_wb;
+              if (!GuestPlayConfirmationForm.field_O[98] &&
                 this.field_E != 5) {
                 if (80 < sk.field_d &&
                   mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t].g()) {
@@ -2563,7 +2563,7 @@ public final class MinerDisturbance extends ob {
                 mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t + 1].g()) {
                 sk.field_d = -80;
               }
-              if (qd.field_O[98]) {
+              if (GuestPlayConfirmationForm.field_O[98]) {
                 if (sk.field_d > 80 &&
                   mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].g()) {
                   sk.field_d = 80;
@@ -2627,7 +2627,7 @@ public final class MinerDisturbance extends ob {
                 !(BoundedRandomAccessFile.field_f <= 8)) {
                 tf.field_b = tf.field_b + 1;
                 BoundedRandomAccessFile.field_f = 8;
-                if (Math.abs(rg.field_wb) > 5) {
+                if (Math.abs(ProgressMessageDialog.field_wb) > 5) {
                   BoundedRandomAccessFile.field_f = BoundedRandomAccessFile.field_f / 4;
                 }
               }
@@ -2645,24 +2645,24 @@ public final class MinerDisturbance extends ob {
               (decompiledFrameRemainder19)) {
               boolean decompiledFrameRemainder3 = true;
               if (d.field_b &&
-                qd.field_O[96] ||
+                GuestPlayConfirmationForm.field_O[96] ||
                 5 == this.field_E) {
                 MidiPcmStream.field_K = -1;
                 if (cm.field_o == 0) {
-                  rg.field_wb = -20;
+                  ProgressMessageDialog.field_wb = -20;
                   decompiledFrameRemainder3 = (var21 != 0);
                 }
                 if ((decompiledFrameRemainder3) &&
-                  (!(-20 >= rg.field_wb))) {
-                  rg.field_wb = -20;
+                  (!(-20 >= ProgressMessageDialog.field_wb))) {
+                  ProgressMessageDialog.field_wb = -20;
                   if ((var21 != 0) &&
-                    (rg.field_wb < 0)) {
-                    rg.field_wb = rg.field_wb + 1;
+                    (ProgressMessageDialog.field_wb < 0)) {
+                    ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb + 1;
                   }
                 }
               } else {
-                if (rg.field_wb < 0) {
-                  rg.field_wb = rg.field_wb + 1;
+                if (ProgressMessageDialog.field_wb < 0) {
+                  ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb + 1;
                 }
               }
               if (AccountRequestState.field_k < 40 && (d.field_b ||
@@ -2670,30 +2670,30 @@ public final class MinerDisturbance extends ob {
                 AccountRequestState.field_k = AccountRequestState.field_k + 1;
               }
               if (d.field_b &&
-                qd.field_O[97] ||
+                GuestPlayConfirmationForm.field_O[97] ||
                 this.field_E == 4) {
                 if (cm.field_o != 0) {
-                  if (!(rg.field_wb >= 20)) {
-                    rg.field_wb = 20;
+                  if (!(ProgressMessageDialog.field_wb >= 20)) {
+                    ProgressMessageDialog.field_wb = 20;
                     if (var21 != 0) {
-                      rg.field_wb = 20;
+                      ProgressMessageDialog.field_wb = 20;
                     }
                   }
                 } else {
-                  rg.field_wb = 20;
+                  ProgressMessageDialog.field_wb = 20;
                 }
                 MidiPcmStream.field_K = 1;
                 if ((var21 != 0) &&
-                  (rg.field_wb > 0)) {
-                  rg.field_wb = rg.field_wb - 1;
+                  (ProgressMessageDialog.field_wb > 0)) {
+                  ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb - 1;
                 }
               } else {
-                if (rg.field_wb > 0) {
-                  rg.field_wb = rg.field_wb - 1;
+                if (ProgressMessageDialog.field_wb > 0) {
+                  ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb - 1;
                 }
               }
               IsaacRandom.field_i = IsaacRandom.field_i + AccountRequestState.field_k;
-              sk.field_d = sk.field_d + rg.field_wb;
+              sk.field_d = sk.field_d + ProgressMessageDialog.field_wb;
               if (IsaacRandom.field_i > 0 &&
                 mh.field_e[NanoFrameTimer.field_k][hf.field_t + 1].g()) {
                 if (!je.c(NanoFrameTimer.field_k, hf.field_t + 1, 1, 0)) {
@@ -2728,7 +2728,7 @@ public final class MinerDisturbance extends ob {
                 AccountRequestState.field_k = 0;
               }
               if (Math.abs(sk.field_d) >= Math.abs(IsaacRandom.field_i) && (!d.field_b ||
-                !qd.field_O[99])) {
+                !GuestPlayConfirmationForm.field_O[99])) {
                 if (80 < sk.field_d &&
                   IsaacRandom.field_i < 0 &&
                   AccountRequestState.field_k <= 0 &&
@@ -2777,25 +2777,25 @@ public final class MinerDisturbance extends ob {
                   if (var21 != 0) {
                     if (sk.field_d > 80 &&
                       IsaacRandom.field_i < 0 &&
-                      rg.field_wb >= 0 &&
+                      ProgressMessageDialog.field_wb >= 0 &&
                       mh.field_e[NanoFrameTimer.field_k + 1][-1 + hf.field_t].g()) {
                       sk.field_d = 80;
                     }
                     if (sk.field_d < -80 &&
                       IsaacRandom.field_i < 0 &&
-                      0 >= rg.field_wb &&
+                      0 >= ProgressMessageDialog.field_wb &&
                       mh.field_e[-1 + NanoFrameTimer.field_k][-1 + hf.field_t].g()) {
                       sk.field_d = -80;
                     }
                     if (sk.field_d > 80 &&
                       IsaacRandom.field_i > 0 &&
-                      rg.field_wb >= 0 &&
+                      ProgressMessageDialog.field_wb >= 0 &&
                       mh.field_e[NanoFrameTimer.field_k + 1][1 + hf.field_t].g()) {
                       sk.field_d = 80;
                     }
                     if (sk.field_d < -80 &&
                       IsaacRandom.field_i > 0 &&
-                      rg.field_wb <= 0 &&
+                      ProgressMessageDialog.field_wb <= 0 &&
                       mh.field_e[NanoFrameTimer.field_k - 1][1 + hf.field_t].g()) {
                       sk.field_d = -80;
                     }
@@ -2804,25 +2804,25 @@ public final class MinerDisturbance extends ob {
               } else {
                 if (sk.field_d > 80 &&
                   IsaacRandom.field_i < 0 &&
-                  rg.field_wb >= 0 &&
+                  ProgressMessageDialog.field_wb >= 0 &&
                   mh.field_e[NanoFrameTimer.field_k + 1][-1 + hf.field_t].g()) {
                   sk.field_d = 80;
                 }
                 if (sk.field_d < -80 &&
                   IsaacRandom.field_i < 0 &&
-                  0 >= rg.field_wb &&
+                  0 >= ProgressMessageDialog.field_wb &&
                   mh.field_e[-1 + NanoFrameTimer.field_k][-1 + hf.field_t].g()) {
                   sk.field_d = -80;
                 }
                 if (sk.field_d > 80 &&
                   IsaacRandom.field_i > 0 &&
-                  rg.field_wb >= 0 &&
+                  ProgressMessageDialog.field_wb >= 0 &&
                   mh.field_e[NanoFrameTimer.field_k + 1][1 + hf.field_t].g()) {
                   sk.field_d = 80;
                 }
                 if (sk.field_d < -80 &&
                   IsaacRandom.field_i > 0 &&
-                  rg.field_wb <= 0 &&
+                  ProgressMessageDialog.field_wb <= 0 &&
                   mh.field_e[NanoFrameTimer.field_k - 1][1 + hf.field_t].g()) {
                   sk.field_d = -80;
                 }
@@ -2833,20 +2833,20 @@ public final class MinerDisturbance extends ob {
                 mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].g()) {
                 sk.field_d = 40;
                 if (var8Lifetime1 != 0 &&
-                  rg.field_wb > 28 &&
+                  ProgressMessageDialog.field_wb > 28 &&
                   mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].field_v) {
                   mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].field_S = true;
                   mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].field_r = 975;
-                  rg.field_wb = -10;
+                  ProgressMessageDialog.field_wb = -10;
                   AccountRequestState.field_k = AccountRequestState.field_k - 10;
                   if (sc.field_b) {
                     ag.a(true, 28, hf.field_t << 5, 1 + NanoFrameTimer.field_k << 5);
                     if (var21 != 0) {
-                      rg.field_wb = 0;
+                      ProgressMessageDialog.field_wb = 0;
                     }
                   }
                 } else {
-                  rg.field_wb = 0;
+                  ProgressMessageDialog.field_wb = 0;
                 }
               }
               var9Lifetime1 = 0;
@@ -2854,20 +2854,20 @@ public final class MinerDisturbance extends ob {
                 mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].g()) {
                 sk.field_d = -40;
                 if (var8Lifetime1 != 0 &&
-                  rg.field_wb < -28 &&
+                  ProgressMessageDialog.field_wb < -28 &&
                   mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].field_v) {
                   mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].field_S = true;
                   mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t].field_r = 975;
-                  rg.field_wb = 10;
+                  ProgressMessageDialog.field_wb = 10;
                   AccountRequestState.field_k = AccountRequestState.field_k - 10;
                   if (sc.field_b) {
                     ag.a(true, 28, hf.field_t << 5, -1 + NanoFrameTimer.field_k << 5);
                     if (var21 != 0) {
-                      rg.field_wb = 0;
+                      ProgressMessageDialog.field_wb = 0;
                     }
                   }
                 } else {
-                  rg.field_wb = 0;
+                  ProgressMessageDialog.field_wb = 0;
                 }
               }
               if (sk.field_d > 160) {
@@ -2901,14 +2901,14 @@ public final class MinerDisturbance extends ob {
                 decompiledFrameRemainder2 = (var21 != 0);
               }
               if ((decompiledFrameRemainder2) && (AccountRequestState.field_k == 0 &&
-                rg.field_wb * rg.field_wb > 225)) {
-                if (rg.field_wb < 0) {
-                  rg.field_wb = -15;
+                ProgressMessageDialog.field_wb * ProgressMessageDialog.field_wb > 225)) {
+                if (ProgressMessageDialog.field_wb < 0) {
+                  ProgressMessageDialog.field_wb = -15;
                   if (var21 != 0) {
-                    rg.field_wb = 15;
+                    ProgressMessageDialog.field_wb = 15;
                   }
                 } else {
-                  rg.field_wb = 15;
+                  ProgressMessageDialog.field_wb = 15;
                 }
               }
               if (var2_int == 0 && (je.c(NanoFrameTimer.field_k, hf.field_t, 1, 1) ||
@@ -2921,10 +2921,10 @@ public final class MinerDisturbance extends ob {
               if (var2_int != 0) {
                 rj.field_f = 1;
               }
-              if (!qd.field_O[98] ||
-                !qd.field_O[49] ||
+              if (!GuestPlayConfirmationForm.field_O[98] ||
+                !GuestPlayConfirmationForm.field_O[49] ||
                 !qe.field_b[20] ||
-                !(10 < qd.field_K)) {
+                !(10 < GuestPlayConfirmationForm.field_K)) {
                 if ((!je.c(NanoFrameTimer.field_k, hf.field_t, 1, 3)) &&
                   (pl.field_h == 15)) {
                   var13 = (640 + IsaacRandom.field_i * 4) / 320;
@@ -3030,7 +3030,7 @@ public final class MinerDisturbance extends ob {
                 if (!decompiledSharedTail3) {
                   mh.field_e[this.field_db][this.field_N].field_S = true;
                   mh.field_e[this.field_db][this.field_N].field_r = 975;
-                  rg.field_sb = rg.field_sb - 3;
+                  ProgressMessageDialog.field_sb = ProgressMessageDialog.field_sb - 3;
                   decompiledSharedTail3 = (var21 != 0);
                 }
                 if (decompiledSharedTail3) {
@@ -3041,7 +3041,7 @@ public final class MinerDisturbance extends ob {
                     }
                   }
                   mh.field_e[this.field_db][this.field_N].field_a = false;
-                  rg.field_sb = rg.field_sb - 3;
+                  ProgressMessageDialog.field_sb = ProgressMessageDialog.field_sb - 3;
                 }
               }
               if (kj.field_d <= 10) {
@@ -3072,7 +3072,7 @@ public final class MinerDisturbance extends ob {
                 if (!decompiledSharedTail2) {
                   mh.field_e[this.field_db][this.field_N].field_S = true;
                   mh.field_e[this.field_db][this.field_N].field_r = 975;
-                  rg.field_sb = rg.field_sb - 3;
+                  ProgressMessageDialog.field_sb = ProgressMessageDialog.field_sb - 3;
                   decompiledSharedTail2 = (var21 != 0);
                 }
                 if (decompiledSharedTail2) {
@@ -3082,7 +3082,7 @@ public final class MinerDisturbance extends ob {
                   }
                   ne.a(21, param0 ^ 16424);
                   mh.field_e[this.field_db][this.field_N].field_a = false;
-                  rg.field_sb = rg.field_sb - 3;
+                  ProgressMessageDialog.field_sb = ProgressMessageDialog.field_sb - 3;
                 }
               }
               if (kj.field_d <= 10) {
@@ -3120,7 +3120,7 @@ public final class MinerDisturbance extends ob {
                 tb.field_c = tb.field_c + 1;
               }
               if (kj.field_d > 34) {
-                if (qd.field_O[81]) {
+                if (GuestPlayConfirmationForm.field_O[81]) {
                   kj.field_d = 15;
                   tb.field_c = 98;
                   if (var21 != 0) {
@@ -3183,7 +3183,7 @@ public final class MinerDisturbance extends ob {
                   if (decompiledSharedTail0) {
                     mh.field_e[NanoFrameTimer.field_k + 1 * MidiPcmStream.field_K][hf.field_t].field_a = false;
                   }
-                  rg.field_wb = 50 * MidiPcmStream.field_K;
+                  ProgressMessageDialog.field_wb = 50 * MidiPcmStream.field_K;
                   rj.field_f = 3;
                   AccountRequestState.field_k = -10;
                   decompiledSharedTail1 = (var21 != 0);
@@ -3250,20 +3250,20 @@ public final class MinerDisturbance extends ob {
               kj.field_d = 0;
             }
             if (!(tb.field_c >= 0) ||
-              !(rg.field_tb.length > tb.field_c)) {
+              !(ProgressMessageDialog.field_tb.length > tb.field_c)) {
               tb.field_c = 0;
             }
-            if (qd.field_K > 0) {
-              qd.field_K = qd.field_K - 1;
+            if (GuestPlayConfirmationForm.field_K > 0) {
+              GuestPlayConfirmationForm.field_K = GuestPlayConfirmationForm.field_K - 1;
             }
             if (d.field_b &&
-              qd.field_O[96]) {
+              GuestPlayConfirmationForm.field_O[96]) {
               MidiPcmStream.field_K = -1;
-              rg.field_wb = -10;
+              ProgressMessageDialog.field_wb = -10;
             }
             if (d.field_b &&
-              qd.field_O[97]) {
-              rg.field_wb = 10;
+              GuestPlayConfirmationForm.field_O[97]) {
+              ProgressMessageDialog.field_wb = 10;
               MidiPcmStream.field_K = 1;
             }
             if (je.d(NanoFrameTimer.field_k, hf.field_t, 1, 1)) {
@@ -3274,10 +3274,10 @@ public final class MinerDisturbance extends ob {
               var13_ref_gfLifetime1 = dupTemp$3;
               var13_ref_gfLifetime1.field_b = 250;
             }
-            if (qd.field_K > 0 &&
+            if (GuestPlayConfirmationForm.field_K > 0 &&
               d.field_b &&
-              qd.field_O[98] &&
-              qd.field_O[49]) {
+              GuestPlayConfirmationForm.field_O[98] &&
+              GuestPlayConfirmationForm.field_O[49]) {
               stackIn_2099_0 = 1;
             } else {
               stackIn_2099_0 = 0;
@@ -3295,8 +3295,8 @@ public final class MinerDisturbance extends ob {
                 AccountRequestState.field_k = AccountRequestState.field_k + 1;
               }
             }
-            if (!qd.field_O[98] ||
-              qd.field_K == 0) {
+            if (!GuestPlayConfirmationForm.field_O[98] ||
+              GuestPlayConfirmationForm.field_K == 0) {
               if (var2_int != 0) {
                 rj.field_f = 1;
                 AccountRequestState.field_k = 0;
@@ -3308,7 +3308,7 @@ public final class MinerDisturbance extends ob {
                 rj.field_f = 4;
               }
             }
-            sk.field_d = sk.field_d + rg.field_wb;
+            sk.field_d = sk.field_d + ProgressMessageDialog.field_wb;
             IsaacRandom.field_i = IsaacRandom.field_i + AccountRequestState.field_k;
             if ((var4Lifetime3 != 0 ||
               !(tc.field_s <= 0)) && (var12 != 0 &&
@@ -3645,13 +3645,13 @@ public final class MinerDisturbance extends ob {
           mh.field_e[16][3].field_i = 255;
           mh.field_e[NanoFrameTimer.field_k][hf.field_t].field_V = true;
           mh.field_e[NanoFrameTimer.field_k][hf.field_t].field_e = true;
-          var8Lifetime4 = qd.field_O[83] ? 1 : 0;
+          var8Lifetime4 = GuestPlayConfirmationForm.field_O[83] ? 1 : 0;
           var9Lifetime4 = -1;
           var10Lifetime2 = -1;
-          if (d.field_b && (qd.field_O[d.field_e] ||
+          if (d.field_b && (GuestPlayConfirmationForm.field_O[d.field_e] ||
             var8Lifetime4 != 0 &&
-            qd.field_O[96] &&
-            qd.field_O[98])) {
+            GuestPlayConfirmationForm.field_O[96] &&
+            GuestPlayConfirmationForm.field_O[98])) {
             stackIn_2618_0 = 1;
             decompiledFrameRemainder13 = false;
           }
@@ -3660,11 +3660,11 @@ public final class MinerDisturbance extends ob {
           }
           regionExit5: {
             var11Lifetime2 = stackIn_2618_0;
-            if (d.field_b && (qd.field_O[TextHotspotBounds.field_w] ||
+            if (d.field_b && (GuestPlayConfirmationForm.field_O[TextHotspotBounds.field_w] ||
               var8Lifetime4 != 0 &&
-              qd.field_O[98] &&
-              !qd.field_O[96] &&
-              !qd.field_O[97])) {
+              GuestPlayConfirmationForm.field_O[98] &&
+              !GuestPlayConfirmationForm.field_O[96] &&
+              !GuestPlayConfirmationForm.field_O[97])) {
               stackIn_2637_0 = 1;
               break regionExit5;
             }
@@ -3672,10 +3672,10 @@ public final class MinerDisturbance extends ob {
           }
           regionExit6: {
             var12Lifetime1 = stackIn_2637_0;
-            if (d.field_b && (qd.field_O[hd.field_l] ||
+            if (d.field_b && (GuestPlayConfirmationForm.field_O[hd.field_l] ||
               var8Lifetime4 != 0 &&
-              qd.field_O[97] &&
-              qd.field_O[98])) {
+              GuestPlayConfirmationForm.field_O[97] &&
+              GuestPlayConfirmationForm.field_O[98])) {
               stackIn_2653_0 = 1;
               break regionExit6;
             }
@@ -3683,10 +3683,10 @@ public final class MinerDisturbance extends ob {
           }
           regionExit7: {
             var13Lifetime1 = stackIn_2653_0;
-            if (d.field_b && (qd.field_O[tk.field_g] ||
+            if (d.field_b && (GuestPlayConfirmationForm.field_O[tk.field_g] ||
               var8Lifetime4 != 0 &&
-              qd.field_O[96] &&
-              qd.field_O[99])) {
+              GuestPlayConfirmationForm.field_O[96] &&
+              GuestPlayConfirmationForm.field_O[99])) {
               stackIn_2669_0 = 1;
               break regionExit7;
             }
@@ -3694,11 +3694,11 @@ public final class MinerDisturbance extends ob {
           }
           regionExit8: {
             var14Lifetime1 = stackIn_2669_0;
-            if (d.field_b && (qd.field_O[SecondaryNodeDeque.field_c] ||
+            if (d.field_b && (GuestPlayConfirmationForm.field_O[SecondaryNodeDeque.field_c] ||
               var8Lifetime4 != 0 &&
-              qd.field_O[99] &&
-              !qd.field_O[96] &&
-              !qd.field_O[97])) {
+              GuestPlayConfirmationForm.field_O[99] &&
+              !GuestPlayConfirmationForm.field_O[96] &&
+              !GuestPlayConfirmationForm.field_O[97])) {
               stackIn_2688_0 = 1;
               break regionExit8;
             }
@@ -3706,10 +3706,10 @@ public final class MinerDisturbance extends ob {
           }
           regionExit9: {
             var15 = stackIn_2688_0;
-            if (d.field_b && (qd.field_O[qm.field_a] ||
+            if (d.field_b && (GuestPlayConfirmationForm.field_O[qm.field_a] ||
               var8Lifetime4 != 0 &&
-              qd.field_O[97] &&
-              qd.field_O[99])) {
+              GuestPlayConfirmationForm.field_O[97] &&
+              GuestPlayConfirmationForm.field_O[99])) {
               stackIn_2704_0 = 1;
               break regionExit9;
             }
@@ -3717,11 +3717,11 @@ public final class MinerDisturbance extends ob {
           }
           regionExit10: {
             var16 = stackIn_2704_0;
-            if (d.field_b && (qd.field_O[ge.field_f] ||
+            if (d.field_b && (GuestPlayConfirmationForm.field_O[ge.field_f] ||
               var8Lifetime4 != 0 &&
-              qd.field_O[96] &&
-              !qd.field_O[98] &&
-              !qd.field_O[99])) {
+              GuestPlayConfirmationForm.field_O[96] &&
+              !GuestPlayConfirmationForm.field_O[98] &&
+              !GuestPlayConfirmationForm.field_O[99])) {
               stackIn_2723_0 = 1;
               break regionExit10;
             }
@@ -3729,11 +3729,11 @@ public final class MinerDisturbance extends ob {
           }
           boolean decompiledFrameRemainder12 = true;
           var17 = stackIn_2723_0;
-          if (d.field_b && (qd.field_O[SpriteState.field_v] ||
+          if (d.field_b && (GuestPlayConfirmationForm.field_O[SpriteState.field_v] ||
             var8Lifetime4 != 0 &&
-            qd.field_O[97] &&
-            !qd.field_O[98] &&
-            !qd.field_O[99])) {
+            GuestPlayConfirmationForm.field_O[97] &&
+            !GuestPlayConfirmationForm.field_O[98] &&
+            !GuestPlayConfirmationForm.field_O[99])) {
             stackIn_2742_0 = 1;
             decompiledFrameRemainder12 = false;
           }
@@ -3930,7 +3930,7 @@ public final class MinerDisturbance extends ob {
             var2 = ug.field_a.e(-27555);
             var3 = 0;
             while (var2.length > var3) {
-              bh.a(var2[var3], (byte) -115);
+              FullscreenStatusDialog.a(var2[var3], (byte) -115);
               var3++;
               if (var4 != 0) {
                 return;
@@ -4541,7 +4541,7 @@ public final class MinerDisturbance extends ob {
               }
             }
             if (a.field_c < 5000) {
-              ce.field_d.drawCentred(fm.field_O, param2, param3, param0, -1);
+              ce.field_d.drawCentred(DialogMessagePane.field_O, param2, param3, param0, -1);
               var5[1].b(var6Lifetime1, 0);
               if (var12 == 0) {
                 return;
@@ -4673,7 +4673,7 @@ public final class MinerDisturbance extends ob {
                   return;
                 }
               }
-              ce.field_d.drawCentred(bh.field_ab, param2, param3, param0, -1);
+              ce.field_d.drawCentred(FullscreenStatusDialog.field_ab, param2, param3, param0, -1);
               var5[4].b(var6Lifetime1, 0);
               if (var12 == 0) {
                 return;
@@ -4770,10 +4770,10 @@ public final class MinerDisturbance extends ob {
           ig.b(119);
           ModalDialogHost.clearStaticReferences((byte) 112);
           AccountCreationResultPanel.discardDeclaredStaticReferences((byte) -42);
-          jl.releaseDeclaredStaticReferences((byte) 126);
-          rg.resetStaticState(param0 ^ 28777);
+          ProgressDialog.releaseDeclaredStaticReferences((byte) 126);
+          ProgressMessageDialog.resetStaticState(param0 ^ 28777);
           AccountRegistrationPanel.resetStaticState(120);
-          qd.clearStaticReferences(true);
+          GuestPlayConfirmationForm.clearStaticReferences(true);
           LoginPanel.resetStaticState(20);
           DisplayNameSelectionPanel.clearDeclaredStaticReferences((byte) -106);
           pf.clearStaticReferences(-1);
@@ -4839,9 +4839,9 @@ public final class MinerDisturbance extends ob {
           ValidatedTextField.resetStaticState(-125);
           EditableTextField.clearDeclaredStaticReferences(param0 ^ -2);
           DequeWidgetContainer.clearStaticReferences((byte) -15);
-          jk.releaseDeclaredStaticReferences((byte) -36);
-          wf.g((byte) 87);
-          oi.clearStaticReferences((byte) 91);
+          ContentTransitionDialog.releaseDeclaredStaticReferences((byte) -36);
+          ResizableModalDialog.g((byte) 87);
+          StripedProgressWidget.clearStaticReferences((byte) 91);
           NameSuggestionsPanel.o(-2638);
           RichTextWidget.resetStaticState(param0 - 3);
           qn.clearStaticReferences((byte) 84);
@@ -4849,12 +4849,12 @@ public final class MinerDisturbance extends ob {
           ti.clearStaticReferences((byte) -53);
           TextFieldValidator.d(false);
           ol.clearStaticReferences(1);
-          ba.resetStaticState((byte) 54);
+          RegistrationAgreementPane.resetStaticState((byte) 54);
           gm.clearStaticReferences(-20);
           dj.clearStaticReferences();
           td.clearStaticReferences(false);
-          bh.releaseDeclaredStaticReferences((byte) 102);
-          b.clearStaticReferences();
+          FullscreenStatusDialog.releaseDeclaredStaticReferences((byte) 102);
+          VorbisSample.clearStaticReferences();
           ud.clearStaticReferences(-105);
           pb.clearStaticReferences(-98);
           ef.a((byte) 102);
@@ -4949,7 +4949,7 @@ public final class MinerDisturbance extends ob {
           hj.clearStaticReferences(false);
           dn.clearStaticReferences((byte) -100);
           nk.resetStaticState(0);
-          fm.clearDeclaredStaticReferences((byte) -123);
+          DialogMessagePane.clearDeclaredStaticReferences((byte) -123);
           sj.resetStaticState((byte) 22);
           pc.d(12);
           tl.clearStaticReferences((byte) -121);
@@ -4967,7 +4967,7 @@ public final class MinerDisturbance extends ob {
           TextHotspotBounds.clearDeclaredStaticReferences(param0 ^ 1);
           ag.a(false);
           DebouncedFieldValidator.clearStaticReferences(param0 + 1626);
-          r.clearStaticReferences((byte) 125);
+          FullscreenNoticeType.clearStaticReferences((byte) 125);
           jb.clearDeclaredStaticReferences(110);
           il.clearDeclaredStaticReferences(-128);
           gj.clearStaticReferences(param0 ^ 29749);
@@ -5265,7 +5265,7 @@ public final class MinerDisturbance extends ob {
                       (decompiledFrameRemainder4) &&
                       (decompiledFrameRemainder3) &&
                       (decompiledFrameRemainder2)) {
-                      var9_ref_String = r.field_b;
+                      var9_ref_String = FullscreenNoticeType.field_b;
                       decompiledFrameRemainder11 = (var15 != 0);
                     }
                     if ((decompiledFrameRemainder11) &&
@@ -5342,7 +5342,7 @@ public final class MinerDisturbance extends ob {
                     }
                   }
                   if (decompiledFrameRemainder11) {
-                    var9_ref_String = jl.field_bb;
+                    var9_ref_String = ProgressDialog.field_bb;
                     decompiledFrameRemainder11 = (var15 != 0);
                   }
                 }
@@ -5613,26 +5613,26 @@ public final class MinerDisturbance extends ob {
         int var4 = 0;
         var4 = field_ab;
         try {
-          sk.field_d = sk.field_d + rg.field_wb;
+          sk.field_d = sk.field_d + ProgressMessageDialog.field_wb;
           if (80 < sk.field_d &&
             mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].g()) {
             sk.field_d = 80;
             if (mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].field_v &&
-              rg.field_wb > 28) {
+              ProgressMessageDialog.field_wb > 28) {
               mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t].field_S = true;
               mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].field_r = 975;
               AccountRequestState.field_k = AccountRequestState.field_k + 10;
-              rg.field_wb = -10;
+              ProgressMessageDialog.field_wb = -10;
               if (sc.field_b) {
                 ag.a(true, 28, hf.field_t << 5, NanoFrameTimer.field_k + 1 << 5);
                 if ((var4 != 0) &&
-                  (rg.field_wb > 1)) {
-                  rg.field_wb = rg.field_wb - 1;
+                  (ProgressMessageDialog.field_wb > 1)) {
+                  ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb - 1;
                 }
               }
             } else {
-              if (rg.field_wb > 1) {
-                rg.field_wb = rg.field_wb - 1;
+              if (ProgressMessageDialog.field_wb > 1) {
+                ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb - 1;
               }
             }
           }
@@ -5640,21 +5640,21 @@ public final class MinerDisturbance extends ob {
             mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].g()) {
             sk.field_d = -80;
             if (mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].field_v &&
-              rg.field_wb < -28) {
+              ProgressMessageDialog.field_wb < -28) {
               mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t].field_S = true;
               mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].field_r = 975;
-              rg.field_wb = 10;
+              ProgressMessageDialog.field_wb = 10;
               AccountRequestState.field_k = AccountRequestState.field_k + 10;
               if (sc.field_b) {
                 ag.a(true, 28, hf.field_t << 5, -1 + NanoFrameTimer.field_k << 5);
                 if ((var4 != 0) &&
-                  (rg.field_wb < -1)) {
-                  rg.field_wb = rg.field_wb + 1;
+                  (ProgressMessageDialog.field_wb < -1)) {
+                  ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb + 1;
                 }
               }
             } else {
-              if (rg.field_wb < -1) {
-                rg.field_wb = rg.field_wb + 1;
+              if (ProgressMessageDialog.field_wb < -1) {
+                ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb + 1;
               }
             }
           }
@@ -5683,30 +5683,30 @@ public final class MinerDisturbance extends ob {
           var3 = stackIn_74_0;
           if (var3 != 0 &&
             (dl.field_c & 3) == 0 &&
-            !qd.field_O[96] &&
-            !qd.field_O[97]) {
-            if (rg.field_wb < 0) {
-              rg.field_wb = rg.field_wb + 1;
+            !GuestPlayConfirmationForm.field_O[96] &&
+            !GuestPlayConfirmationForm.field_O[97]) {
+            if (ProgressMessageDialog.field_wb < 0) {
+              ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb + 1;
               if ((var4 != 0) &&
-                (rg.field_wb > 0)) {
-                rg.field_wb = rg.field_wb - 1;
+                (ProgressMessageDialog.field_wb > 0)) {
+                ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb - 1;
               }
             } else {
-              if (rg.field_wb > 0) {
-                rg.field_wb = rg.field_wb - 1;
+              if (ProgressMessageDialog.field_wb > 0) {
+                ProgressMessageDialog.field_wb = ProgressMessageDialog.field_wb - 1;
               }
             }
           }
           if (var3 != 0) {
-            if ((rg.field_wb == 0 ||
-              qd.field_O[96] ||
-              qd.field_O[97]) &&
-              (!(0 > rg.field_wb) ||
-              !qd.field_O[97])) {
-              if (0 >= rg.field_wb) {
+            if ((ProgressMessageDialog.field_wb == 0 ||
+              GuestPlayConfirmationForm.field_O[96] ||
+              GuestPlayConfirmationForm.field_O[97]) &&
+              (!(0 > ProgressMessageDialog.field_wb) ||
+              !GuestPlayConfirmationForm.field_O[97])) {
+              if (0 >= ProgressMessageDialog.field_wb) {
                 return;
               }
-              if (!qd.field_O[96]) {
+              if (!GuestPlayConfirmationForm.field_O[96]) {
                 return;
               }
             }
@@ -5764,12 +5764,12 @@ public final class MinerDisturbance extends ob {
             !qm.field_f) {
             boolean decompiledSharedTail0 = (0 != cm.field_o);
             if (!decompiledSharedTail0) {
-              tj.a(ac.field_b, 65529, qd.field_M, (byte) -66, MidiPcmStream.field_X, new int[]{param1}, 6, vh.field_g, 3);
+              tj.a(ac.field_b, 65529, GuestPlayConfirmationForm.field_M, (byte) -66, MidiPcmStream.field_X, new int[]{param1}, 6, vh.field_g, 3);
               decompiledSharedTail0 = (field_ab != 0);
             }
             if ((decompiledSharedTail0) &&
               (cm.field_o == 1)) {
-              tj.a(ac.field_b, 65528, qd.field_M, (byte) -66, MidiPcmStream.field_X, new int[]{param1}, 7, vh.field_g, 3);
+              tj.a(ac.field_b, 65528, GuestPlayConfirmationForm.field_M, (byte) -66, MidiPcmStream.field_X, new int[]{param1}, 7, vh.field_g, 3);
             }
             sn.field_b[cm.field_o] = null;
           }
@@ -5838,7 +5838,7 @@ public final class MinerDisturbance extends ob {
                 IntrusiveNode.field_b = jn.a("score_box", -29553, "volcano", fl.field_f);
                 BufferedRandomAccessFile.field_k[0] = jn.a("levelbackground", -29553, "volcano", fl.field_f);
               }
-              qd.field_S = true;
+              GuestPlayConfirmationForm.field_S = true;
               return true;
             }
             nn.field_h[0] = jn.a("gravestone", -29553, "volcano", fl.field_f);
@@ -6129,7 +6129,7 @@ public final class MinerDisturbance extends ob {
                   }
                   var20 = var17Lifetime1;
                   while (var20 < var14Lifetime1Lifetime1) {
-                    var21 = jl.field_gb[var11Lifetime1];
+                    var21 = ProgressDialog.field_gb[var11Lifetime1];
                     var22 = -var21 + 256;
                     var23 = SoftwareRasterizer.field_f[var20 + var16Lifetime1 * SoftwareRasterizer.field_g];
                     incrementValue$1 = var11Lifetime1;
@@ -6194,15 +6194,15 @@ public final class MinerDisturbance extends ob {
                             vh.a(-128);
                             this.renderClientFrame(false);
                             LabeledWidgetContainer.a(NameSuggestionsPanel.field_Q, 27);
-                            wf.p(4462);
+                            ResizableModalDialog.p(4462);
                             pa.a(true, AccountRegistrationPanel.field_S, 60.0f);
                             this.renderClientFrame(false);
-                            ba.a(NameSuggestionsPanel.field_Q, pk.field_g, ge.field_e, true, ig.field_c);
+                            RegistrationAgreementPane.a(NameSuggestionsPanel.field_Q, pk.field_g, ge.field_e, true, ig.field_c);
                             ig.field_c = null;
                             pk.field_g = null;
                             ge.field_e = null;
                             NameSuggestionsPanel.field_Q = null;
-                            wf.p(4462);
+                            ResizableModalDialog.p(4462);
                             pa.a(true, qg.field_e, 75.0f);
                             this.renderClientFrame(false);
                             this.x(-33);
@@ -6220,14 +6220,14 @@ public final class MinerDisturbance extends ob {
                             BoundedRandomAccessFile.setTickRate(-122, 50);
                             ValidatedTextField.field_V = false;
                             ResourceArchive.playMusicTrack(-6358, ph.field_a);
-                            oi.a(mm.field_a, ce.field_d, 97, 300);
+                            StripedProgressWidget.a(mm.field_a, ce.field_d, 97, 300);
                             ud.a(new ac(hd.field_d), 30, 30, 88);
                             ic.a(113, 4473924, 15885602, 16502531);
                             aa.a(6, new ac(vc.field_p), -1, 6, new ac(vc.field_p), 6);
                             ResourceArchive.field_e.setAsRasterTarget((byte) -45);
-                            qd.n(21);
+                            GuestPlayConfirmationForm.n(21);
                             nn.field_n = true;
-                            wf.p(4462);
+                            ResizableModalDialog.p(4462);
                             kf.a(this, 45977);
                             if (pj.field_a <= 0) {
                               vh.a(3, ib.field_c);
@@ -6243,7 +6243,7 @@ public final class MinerDisturbance extends ob {
                               sn.field_b[1] = gk.a(3, 1, 7, -65, 10);
                               sn.field_b[0] = gk.a(3, 1, 6, -12, 10);
                               dm.field_f = fn.a(0, 6);
-                              r.field_d = gk.b(4, 1);
+                              FullscreenNoticeType.field_d = gk.b(4, 1);
                             }
                             return;
                           }
@@ -6326,14 +6326,14 @@ public final class MinerDisturbance extends ob {
             MidiPcmStream.field_X = 312;
             pn.field_b = 3213;
             ac.field_b = 2439;
-            qd.field_M = 4533;
+            GuestPlayConfirmationForm.field_M = 4533;
             pe.field_sb = 1633100126;
             aa.field_b = 32424;
             vh.field_g = 1235;
           }
           ic.field_k = 1500;
           var2_intLifetime1 = -102 / ((param0 + 1) / 60);
-          rg.field_sb = 6000;
+          ProgressMessageDialog.field_sb = 6000;
           this.field_R = 300;
           cm.field_o = ah.field_f;
           this.field_S = 0;
@@ -6342,7 +6342,7 @@ public final class MinerDisturbance extends ob {
           this.field_I = 0;
           qm.field_f = false;
           if (cm.field_o == 1) {
-            rg.field_sb = rg.field_sb + rg.field_sb / 2;
+            ProgressMessageDialog.field_sb = ProgressMessageDialog.field_sb + ProgressMessageDialog.field_sb / 2;
           }
           SingleChildWidgetContainer.field_H = 0;
           ch.field_h = -1;
@@ -6378,7 +6378,7 @@ public final class MinerDisturbance extends ob {
               je.d();
               je.d();
               je.d();
-              qd.field_K = 100;
+              GuestPlayConfirmationForm.field_K = 100;
               tc.field_s = 0;
               hf.field_t = 4;
               NanoFrameTimer.field_g = 0;
@@ -6400,7 +6400,7 @@ public final class MinerDisturbance extends ob {
             ClientException.field_d = 0;
           }
           AccountRequestState.field_k = -1;
-          rg.field_wb = 0;
+          ProgressMessageDialog.field_wb = 0;
           this.field_K = false;
           pc.field_k = 0;
           MidiPcmStream.field_K = 1;
@@ -6467,10 +6467,10 @@ public final class MinerDisturbance extends ob {
                       !oc.d(63)) {
                       AccountServiceResult.a(true);
                       if (var4 != 0) {
-                        r.a(-14475);
+                        FullscreenNoticeType.a(-14475);
                       }
                     } else {
-                      r.a(-14475);
+                      FullscreenNoticeType.a(-14475);
                     }
                     mh.field_f = true;
                     ge.field_c = false;
@@ -6687,7 +6687,7 @@ public final class MinerDisturbance extends ob {
               if (!qe.field_b[14]) {
                 break scanLoop1;
               }
-              if (jk.field_ab == 0) {
+              if (ContentTransitionDialog.field_ab == 0) {
                 if (InteractiveWidget.a(19, 65, 10, 572, nk.field_w, 48, NodeHashTableIterator.field_e)) {
                   var2_int = -2;
                   if (var10 == 0) {
@@ -6713,7 +6713,7 @@ public final class MinerDisturbance extends ob {
           }
           boolean decompiledFrameRemainder0 = true;
           DisplayNameSelectionPanel.a(var2_int, 98);
-          ag.field_c = qd.field_O[83];
+          ag.field_c = GuestPlayConfirmationForm.field_O[83];
           if (!ValidatedTextField.field_V &&
             il.e(-31391)) {
             if (this.field_C != nk.field_w ||
@@ -6735,11 +6735,11 @@ public final class MinerDisturbance extends ob {
               stackIn_94_0 = true;
             }
             of.field_a = stackIn_94_0;
-            if (jk.field_ab != 0) {
+            if (ContentTransitionDialog.field_ab != 0) {
               this.field_O = false;
               this.q(-46);
               ResourceArchive.playMusicTrack(-6358, ph.field_a);
-              fm.f((byte) 81);
+              DialogMessagePane.f((byte) 81);
               if (!kj.a(false)) {
                 if (ig.a(-20144)) {
                   SingleChildWidgetContainer.a(true, -126, 5);
@@ -6770,40 +6770,40 @@ public final class MinerDisturbance extends ob {
             }
           }
           while (mm.b((byte) 84)) {
-            var6Lifetime1 = (lj.field_t + (rg.field_sb + (GameAppletShell.field_e + nk.field_w))) % 8;
+            var6Lifetime1 = (lj.field_t + (ProgressMessageDialog.field_sb + (GameAppletShell.field_e + nk.field_w))) % 8;
             if (var10 != 0) {
               return;
             }
             if (0 == var6Lifetime1) {
               ac.field_b = ac.field_b - 1;
-              MidiPcmStream.field_X = MidiPcmStream.field_X + qd.field_M;
+              MidiPcmStream.field_X = MidiPcmStream.field_X + GuestPlayConfirmationForm.field_M;
             } else if (var6Lifetime1 != 1) {
               if (var6Lifetime1 == 2) {
-                MidiPcmStream.field_X = MidiPcmStream.field_X - qd.field_M;
+                MidiPcmStream.field_X = MidiPcmStream.field_X - GuestPlayConfirmationForm.field_M;
                 ac.field_b = ac.field_b + 1;
               } else if (3 == var6Lifetime1) {
-                qd.field_M = qd.field_M + 1;
+                GuestPlayConfirmationForm.field_M = GuestPlayConfirmationForm.field_M + 1;
                 MidiPcmStream.field_X = MidiPcmStream.field_X - ac.field_b;
               } else if (4 == var6Lifetime1) {
                 ac.field_b = ac.field_b + 1;
-                vh.field_g = vh.field_g + qd.field_M;
+                vh.field_g = vh.field_g + GuestPlayConfirmationForm.field_M;
               } else if (var6Lifetime1 == 5) {
-                qd.field_M = qd.field_M + 1;
+                GuestPlayConfirmationForm.field_M = GuestPlayConfirmationForm.field_M + 1;
                 vh.field_g = vh.field_g + ac.field_b;
               } else if (var6Lifetime1 != 6) {
                 if (var6Lifetime1 == 7) {
                   vh.field_g = vh.field_g - ac.field_b;
-                  qd.field_M = qd.field_M - 1;
+                  GuestPlayConfirmationForm.field_M = GuestPlayConfirmationForm.field_M - 1;
                 }
               } else {
-                vh.field_g = vh.field_g - qd.field_M;
+                vh.field_g = vh.field_g - GuestPlayConfirmationForm.field_M;
                 ac.field_b = ac.field_b - 1;
               }
             } else {
-              qd.field_M = qd.field_M - 1;
+              GuestPlayConfirmationForm.field_M = GuestPlayConfirmationForm.field_M - 1;
               MidiPcmStream.field_X = MidiPcmStream.field_X + ac.field_b;
             }
-            var6Lifetime1Lifetime1 = (nk.field_w + GameAppletShell.field_e + (rg.field_sb + lj.field_t)) % 4;
+            var6Lifetime1Lifetime1 = (nk.field_w + GameAppletShell.field_e + (ProgressMessageDialog.field_sb + lj.field_t)) % 4;
             if (var6Lifetime1Lifetime1 == 0) {
               hl.field_b = hl.field_b + 1;
               pn.field_b = pn.field_b + aa.field_b;
@@ -6854,8 +6854,8 @@ public final class MinerDisturbance extends ob {
                 je.k();
               }
               if (ConfirmedEmailAvailabilityValidator.field_i.equalsIgnoreCase("prtyhrd")) {
-                stackIn_240_0 = !(ba.field_M);
-                ba.field_M = stackIn_240_0;
+                stackIn_240_0 = !(RegistrationAgreementPane.field_M);
+                RegistrationAgreementPane.field_M = stackIn_240_0;
               }
               if (ConfirmedEmailAvailabilityValidator.field_i.equalsIgnoreCase("hamyths")) {
                 qm.field_f = true;
@@ -6900,7 +6900,7 @@ public final class MinerDisturbance extends ob {
                   a.field_c = 24999;
                 }
                 var7 = -var6Lifetime1Lifetime2 + a.field_c;
-                var8 = rg.field_sb % 3;
+                var8 = ProgressMessageDialog.field_sb % 3;
                 if (var8 != 0) {
                   if (var8 != 1) {
                     var9 = var7 / 3;
@@ -6920,7 +6920,7 @@ public final class MinerDisturbance extends ob {
               ValidatedTextField.field_V &&
               15 == pl.field_h && (!this.field_K ||
               ak.a(-120))) {
-              fm.f((byte) 81);
+              DialogMessagePane.f((byte) 81);
               df.a(0, 5494, -1);
               ne.a(1, -90);
               DualLinkNode.e(107);
@@ -6937,7 +6937,7 @@ public final class MinerDisturbance extends ob {
               if (lj.field_t == 84) {
                 this.q(-46);
                 ResourceArchive.playMusicTrack(-6358, ph.field_a);
-                fm.f((byte) 81);
+                DialogMessagePane.f((byte) 81);
                 if (!kj.a(false)) {
                   SingleChildWidgetContainer.a(false, -107, 2);
                   kd.a(cm.field_o, (byte) -106);
@@ -7064,7 +7064,7 @@ public final class MinerDisturbance extends ob {
                 this.field_O = false;
                 this.q(-46);
                 ResourceArchive.playMusicTrack(-6358, ph.field_a);
-                fm.f((byte) 81);
+                DialogMessagePane.f((byte) 81);
                 if (kj.a(false)) {
                   SingleChildWidgetContainer.a(false, -125, 6);
                 } else {
@@ -7141,10 +7141,10 @@ public final class MinerDisturbance extends ob {
             if (cm.field_o == 0) {
               var4_ref_String = DiskCacheWorker.field_c;
               if (var10 != 0) {
-                var4_ref_String = wf.field_V;
+                var4_ref_String = ResizableModalDialog.field_V;
               }
             } else {
-              var4_ref_String = wf.field_V;
+              var4_ref_String = ResizableModalDialog.field_V;
             }
             var5 = 320;
             var6 = 1;
@@ -7311,7 +7311,7 @@ public final class MinerDisturbance extends ob {
                 }
                 if (var8 == 20) {
                   SoftwareRasterizer.saveClip(var7);
-                  var9Lifetime1 = 32 - qd.field_K * 32 / 100;
+                  var9Lifetime1 = 32 - GuestPlayConfirmationForm.field_K * 32 / 100;
                   SoftwareRasterizer.intersectClip(var4, var5 + 6, 33 + var4, var9Lifetime1 + (var5 + 6));
                   ff.field_c[var8].drawTransparentWithIntensity(var4, var5, 64);
                   SoftwareRasterizer.restoreClip(var7);

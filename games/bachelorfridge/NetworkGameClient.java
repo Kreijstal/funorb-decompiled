@@ -133,7 +133,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             ih.e(param0 ^ 1);
             ns.a(vt.field_m, -11, var2);
             qe.field_l = true;
-            sja.field_hb = f.correctedCurrentTimeMillis((byte) 73) + 15000L;
+            StandardContentDialog.field_hb = f.correctedCurrentTimeMillis((byte) 73) + 15000L;
           }
         }
         return var2;
@@ -187,7 +187,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             ns.a(bja.field_m, -11, 2);
             MusicPatch.c((byte) -69);
             qe.field_l = true;
-            sja.field_hb = f.correctedCurrentTimeMillis((byte) 73) + 15000L;
+            StandardContentDialog.field_hb = f.correctedCurrentTimeMillis((byte) 73) + 15000L;
           }
         }
         if (AttackUpAllAnimation.field_x == -1 ||
@@ -203,7 +203,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (AttackUpAllAnimation.field_x != -1 &&
             AttackUpAllAnimation.field_x != 0) {
-            sja.field_hb = f.correctedCurrentTimeMillis((byte) 73) + 15000L;
+            StandardContentDialog.field_hb = f.correctedCurrentTimeMillis((byte) 73) + 15000L;
           }
         }
         if (-1 != AttackUpAllAnimation.field_x &&
@@ -253,7 +253,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if ((AttackUpAllAnimation.field_x != -1 &&
           AttackUpAllAnimation.field_x != 0 ||
           FlirtAnimation.d(11154)) &&
-          f.correctedCurrentTimeMillis((byte) 73) >= sja.field_hb) {
+          f.correctedCurrentTimeMillis((byte) 73) >= StandardContentDialog.field_hb) {
           qe.field_l = false;
           if (-1 != AttackUpAllAnimation.field_x &&
             0 != AttackUpAllAnimation.field_x) {
@@ -275,7 +275,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           Bzip2State.field_B = StatusEffectInfo.a(1, false, 0, true, OneEvent.field_q);
           fi.field_n = StatusEffectInfo.a(1, false, 0, true, mj.field_j);
-          em.field_T = StatusEffectInfo.a(1, false, 0, true, GzipDecompressor.field_d);
+          FullscreenStatusDialog.field_T = StatusEffectInfo.a(1, false, 0, true, GzipDecompressor.field_d);
           SuperSpeedAllEvent.field_r = 2;
           ClamsSpecial.field_p = fi.field_n;
           ScavengerSpecial.field_p = Bzip2State.field_B;
@@ -298,13 +298,13 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
         }
         if (3 == SuperSpeedAllEvent.field_r &&
-          us.a(fi.field_n, Bzip2State.field_B, em.field_T, 76) &&
-          WidgetContainer.a((byte) 89, em.field_T)) {
+          us.a(fi.field_n, Bzip2State.field_B, FullscreenStatusDialog.field_T, 76) &&
+          WidgetContainer.a((byte) 89, FullscreenStatusDialog.field_T)) {
           sr.a(48);
           ut.d(-124);
           ChangeHealthAndStatusEffect.field_i = false;
           MassPoisonSpecial.field_p = ema.field_Ab;
-          SauceOfFlameAnimation.a(vs.field_c, -12472, em.field_T, Bzip2State.field_B, fi.field_n);
+          SauceOfFlameAnimation.a(vs.field_c, -12472, FullscreenStatusDialog.field_T, Bzip2State.field_B, fi.field_n);
           if (FloodSpecial.field_p ||
             nj.field_i != null) {
             stackIn_103_0 = -6;
@@ -317,10 +317,10 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (null == dla.field_l) {
             dla.field_l = cda.a(0);
-            de.field_E = SocketConnector.b(1);
+            StripedProgressWidget.field_E = SocketConnector.b(1);
           }
-          DropTargetWidgetContainer.a(de.field_E, dla.field_l, em.field_T, false);
-          em.field_T = null;
+          DropTargetWidgetContainer.a(StripedProgressWidget.field_E, dla.field_l, FullscreenStatusDialog.field_T, false);
+          FullscreenStatusDialog.field_T = null;
           Bzip2State.field_B = null;
           fi.field_n = null;
           rh.a(19007, (java.applet.Applet) (this));
@@ -447,7 +447,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                 InsanoSauceSpecial.c(-64);
                 break;
               case 3:
-                sh.l(-71);
+                DateInputWidget.l(-71);
                 break;
               case 2:
                 FridgeScreen.c((byte) -60);
@@ -592,7 +592,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             lha.a(nia.d(-31768), -17672);
           }
           if (var4 == 10) {
-            sja.field_fb.writeCipheredByte(17, (byte) 127);
+            StandardContentDialog.field_fb.writeCipheredByte(17, (byte) 127);
           }
           if (var4 == 11) {
             qfa.a(nia.d(-31768), -61);

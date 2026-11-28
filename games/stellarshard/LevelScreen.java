@@ -224,33 +224,33 @@ final class LevelScreen extends ib {
                     if (IterableNodeHashTable.field_c > 100) {
                       IterableNodeHashTable.field_c = 100;
                     }
-                    decompiledFrameRemainder0 = (vf.field_L == null);
+                    decompiledFrameRemainder0 = (DialogMessagePane.field_L == null);
                     if (decompiledFrameRemainder0) {
-                      vf.field_L = MouseWheelInput.field_c;
-                      nj.field_o.addListener(vf.field_L);
+                      DialogMessagePane.field_L = MouseWheelInput.field_c;
+                      nj.field_o.addListener(DialogMessagePane.field_L);
                       decompiledFrameRemainder0 = (var8 != 0);
                     }
                   }
                   if ((decompiledFrameRemainder0) && ((320 - l.field_f.stringWidth(DropTargetWidgetContainer.field_D)) <= param1 &&
                     param1 < 320 &&
                     !param5)) {
-                    if (null != vf.field_L) {
-                      nj.field_o.removeOwnedListener(vf.field_L);
-                      vf.field_L.c();
-                      vf.field_L = null;
+                    if (null != DialogMessagePane.field_L) {
+                      nj.field_o.removeOwnedListener(DialogMessagePane.field_L);
+                      DialogMessagePane.field_L.c();
+                      DialogMessagePane.field_L = null;
                       if (var8 != 0) {
-                        vf.field_L = MouseWheelInput.field_c;
-                        nj.field_o.addListener(vf.field_L);
+                        DialogMessagePane.field_L = MouseWheelInput.field_c;
+                        nj.field_o.addListener(DialogMessagePane.field_L);
                       }
                     } else {
-                      vf.field_L = MouseWheelInput.field_c;
-                      nj.field_o.addListener(vf.field_L);
+                      DialogMessagePane.field_L = MouseWheelInput.field_c;
+                      nj.field_o.addListener(DialogMessagePane.field_L);
                     }
                   }
-                  if (vf.field_L == null) {
+                  if (DialogMessagePane.field_L == null) {
                     return;
                   }
-                  vf.field_L.d(IterableNodeHashTable.field_c / 2);
+                  DialogMessagePane.field_L.d(IterableNodeHashTable.field_c / 2);
                   if (var8 == 0) {
                     return;
                   }
@@ -378,14 +378,14 @@ final class LevelScreen extends ib {
               IterableNodeHashTable.field_c = IterableNodeHashTable.field_c - 12;
               if (IterableNodeHashTable.field_c < 10) {
                 IterableNodeHashTable.field_c = 10;
-                if (vf.field_L != null) {
-                  nj.field_o.removeOwnedListener(vf.field_L);
-                  vf.field_L.c();
-                  vf.field_L = null;
+                if (DialogMessagePane.field_L != null) {
+                  nj.field_o.removeOwnedListener(DialogMessagePane.field_L);
+                  DialogMessagePane.field_L.c();
+                  DialogMessagePane.field_L = null;
                 }
               }
-              if (null != vf.field_L) {
-                vf.field_L.d(IterableNodeHashTable.field_c / 2);
+              if (null != DialogMessagePane.field_L) {
+                DialogMessagePane.field_L.d(IterableNodeHashTable.field_c / 2);
               }
             }
           }
@@ -600,15 +600,15 @@ final class LevelScreen extends ib {
                       }
                       if (decompiledFrameRemainder0) {
                         if (4 == param1) {
-                          if (null == vf.field_L) {
-                            vf.field_L = MouseWheelInput.field_c;
-                            nj.field_o.addListener(vf.field_L);
+                          if (null == DialogMessagePane.field_L) {
+                            DialogMessagePane.field_L = MouseWheelInput.field_c;
+                            nj.field_o.addListener(DialogMessagePane.field_L);
                             decompiledFrameRemainder0 = (var4 != 0);
                           }
                           if (decompiledFrameRemainder0) {
-                            nj.field_o.removeOwnedListener(vf.field_L);
-                            vf.field_L.c();
-                            vf.field_L = null;
+                            nj.field_o.removeOwnedListener(DialogMessagePane.field_L);
+                            DialogMessagePane.field_L.c();
+                            DialogMessagePane.field_L = null;
                             decompiledFrameRemainder0 = (var4 != 0);
                           }
                         }
@@ -703,7 +703,7 @@ final class LevelScreen extends ib {
                           IsaacRandom.field_j = null;
                           IsaacRandom.field_j = null;
                           if (var4 != 0) {
-                            nc.field_H = 0;
+                            StripedProgressWidget.field_H = 0;
                             a.entities[0].field_g = -150;
                             IsaacRandom.field_j = null;
                             if (DualLinkDequeIterator.field_e != null) {
@@ -716,7 +716,7 @@ final class LevelScreen extends ib {
                           }
                         }
                       } else {
-                        nc.field_H = 0;
+                        StripedProgressWidget.field_H = 0;
                         a.entities[0].field_g = -150;
                         IsaacRandom.field_j = null;
                         if (var4 != 0) {
@@ -971,7 +971,7 @@ final class LevelScreen extends ib {
                 return;
               }
             }
-            if (vf.field_L != null) {
+            if (DialogMessagePane.field_L != null) {
               DebouncedFieldValidator.a(MouseWheelInput.field_f, param2, -1, false, 320, var5_int, param3);
               BufferedSocket.field_k[0].draw(316, 2 + param3);
               BufferedSocket.field_k[2].draw(418, param3 + 2);
@@ -1020,14 +1020,14 @@ final class LevelScreen extends ib {
             if (IterableNodeHashTable.field_c > 100) {
               IterableNodeHashTable.field_c = 100;
             }
-            if (null == vf.field_L) {
-              vf.field_L = MouseWheelInput.field_c;
-              nj.field_o.addListener(vf.field_L);
+            if (null == DialogMessagePane.field_L) {
+              DialogMessagePane.field_L = MouseWheelInput.field_c;
+              nj.field_o.addListener(DialogMessagePane.field_L);
             }
-            if (vf.field_L == null) {
+            if (DialogMessagePane.field_L == null) {
               return;
             }
-            vf.field_L.d(IterableNodeHashTable.field_c / 2);
+            DialogMessagePane.field_L.d(IterableNodeHashTable.field_c / 2);
             if (var4 == 0) {
               return;
             }
@@ -1429,7 +1429,7 @@ final class LevelScreen extends ib {
             stackIn_116_1 = 320;
             stackIn_116_2 = -4;
             stackIn_117_3 = (ld.field_F == 0);
-            if (this.a(stackIn_116_1, stackIn_116_2, stackIn_117_3, var4 * 3 + var3, v.field_e, wl.field_T, 5883647) &&
+            if (this.a(stackIn_116_1, stackIn_116_2, stackIn_117_3, var4 * 3 + var3, v.field_e, ContentTransitionDialog.field_T, 5883647) &&
               n.field_L <= 0) {
               am.a(5, 4, -122);
             }
@@ -1570,7 +1570,7 @@ final class LevelScreen extends ib {
               if (DualLinkNode.a(param0 ^ -86)) {
                 qj.field_a.drawParagraph(hj.field_e, 220, 192, 200, 200, 16777215, 0, 1, 0, qj.field_a.field_N);
               }
-              DebouncedFieldValidator.a(wl.field_T, 8, -1, false, 320, 5883647, 411);
+              DebouncedFieldValidator.a(ContentTransitionDialog.field_T, 8, -1, false, 320, 5883647, 411);
               decompiledFrameRemainder1 = (var14 != 0);
             }
             if (decompiledFrameRemainder1) {
@@ -1682,11 +1682,11 @@ final class LevelScreen extends ib {
                     qj.field_a.drawCentred(RichTextLayout.field_p, 320, 160, 16777215, -1);
                   }
                   SoftwareRasterizer.setClip(129, 0, 511, 479);
-                  qj.field_a.drawCentred(sj.field_C, 320 - bf.field_c, 366, 0, -1);
-                  qj.field_a.drawCentred(sj.field_C, -bf.field_c + 320, 368, 0, -1);
-                  qj.field_a.drawCentred(sj.field_C, 319 - bf.field_c, 367, 0, -1);
-                  qj.field_a.drawCentred(sj.field_C, -bf.field_c + 321, 367, 0, -1);
-                  qj.field_a.drawCentred(sj.field_C, 320 - bf.field_c, 367, 16777215, -1);
+                  qj.field_a.drawCentred(RegistrationAgreementPane.field_C, 320 - bf.field_c, 366, 0, -1);
+                  qj.field_a.drawCentred(RegistrationAgreementPane.field_C, -bf.field_c + 320, 368, 0, -1);
+                  qj.field_a.drawCentred(RegistrationAgreementPane.field_C, 319 - bf.field_c, 367, 0, -1);
+                  qj.field_a.drawCentred(RegistrationAgreementPane.field_C, -bf.field_c + 321, 367, 0, -1);
+                  qj.field_a.drawCentred(RegistrationAgreementPane.field_C, 320 - bf.field_c, 367, 16777215, -1);
                   SoftwareRasterizer.resetClip();
                 }
               }
@@ -1742,7 +1742,7 @@ final class LevelScreen extends ib {
               DebouncedFieldValidator.a(ta.field_r, 8, -1, false, 320, 5883647, 411);
             }
             if (DualLinkNode.a(param0 - 86)) {
-              DebouncedFieldValidator.a(wl.field_T, 8, -1, false, 320, 5883647, 411);
+              DebouncedFieldValidator.a(ContentTransitionDialog.field_T, 8, -1, false, 320, 5883647, 411);
             }
             var2_intLifetime3 = 180;
             var3Lifetime3 = 134;

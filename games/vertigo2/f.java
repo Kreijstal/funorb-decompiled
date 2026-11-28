@@ -266,7 +266,7 @@ final class f extends TextureOperator {
             if (null != dc.field_L &&
               dc.field_L.field_e) {
               cp.a((byte) 127);
-              JaggrabClient.field_d.showDialog(new gr(JaggrabClient.field_d, ModalDialogHost.field_I), 0);
+              JaggrabClient.field_d.showDialog(new FullscreenStatusDialog(JaggrabClient.field_d, ModalDialogHost.field_I), 0);
             }
             return;
           }
@@ -350,7 +350,7 @@ final class f extends TextureOperator {
             return var8;
           }
           var11 = this.a(0, -1, param0);
-          for (var5 = 0; we.field_M > var5; var5++) {
+          for (var5 = 0; StripedProgressWidget.field_M > var5; var5++) {
             var6 = var11[var5];
             stackIn_22_0 = var8;
             stackIn_22_1 = var5;
@@ -372,7 +372,7 @@ final class f extends TextureOperator {
         }
         var9 = this.a(0, -1, param0);
         var4 = var9;
-        for (var5Lifetime1 = 0; we.field_M > var5Lifetime1; var5Lifetime1++) {
+        for (var5Lifetime1 = 0; StripedProgressWidget.field_M > var5Lifetime1; var5Lifetime1++) {
           var9Lifetime1 = var4;
           var6Lifetime1 = var9Lifetime1[var5Lifetime1];
           stackIn_11_0 = var8Lifetime1;

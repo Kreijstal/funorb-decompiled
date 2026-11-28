@@ -20,10 +20,10 @@ final class TextLineMetrics {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != ah.field_e) {
-            ah.field_e.f(true);
+            ah.field_e.closeDialog(true);
           }
           ClientException.field_a = new LoginPanel(param1, param2, false, true, true);
-          gf.field_cb.c(-3399, ClientException.field_a);
+          ContentTransitionDialog.field_cb.replaceContent(-3399, ClientException.field_a);
           if (param0 <= -11) {
             return;
           }

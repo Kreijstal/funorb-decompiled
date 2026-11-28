@@ -195,9 +195,9 @@ class InteractiveWidget extends UiWidget {
     final static int g(int param0) {
         if (param0 != 0) {
           InteractiveWidget.f(-4);
-          return uk.field_V;
+          return ProgressDialog.field_V;
         }
-        return uk.field_V;
+        return ProgressDialog.field_V;
     }
 
     final static void h(int param0) {

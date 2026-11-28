@@ -61,7 +61,7 @@ final class VorbisSample extends IntrusiveNode {
         var1 = new byte[this.field_u];
         var2 = 0;
         for (var3 = 0; var3 < this.field_J.length; var3++) {
-          var4 = this.b(var3);
+          var4 = this.decodePacket(var3);
           if (var4 != null) {
             var5 = var4.length;
             if (var5 > this.field_u - var2) {
@@ -106,7 +106,7 @@ final class VorbisSample extends IntrusiveNode {
             param0[0] <= 0) {
             return null;
           }
-          var7 = this.b(this.field_A);
+          var7 = this.decodePacket(this.field_A);
           if (var7 != null) {
             var3 = this.field_M;
             var4 = var7.length;
@@ -145,7 +145,7 @@ final class VorbisSample extends IntrusiveNode {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    final static void b(byte[] param0) {
+    final static void decodeSetup(byte[] param0) {
         int var7_int = 0;
         int var8_int = 0;
         int var9_int = 0;
@@ -176,7 +176,7 @@ final class VorbisSample extends IntrusiveNode {
         int var4Lifetime2;
         int var5Lifetime1;
         int var5Lifetime2;
-        VorbisSample.a(param0, 0);
+        VorbisSample.setBitStream(param0, 0);
         field_s = 1 << VorbisSample.readBits(4);
         field_f = 1 << VorbisSample.readBits(4);
         field_q = new float[field_f];
@@ -261,10 +261,10 @@ final class VorbisSample extends IntrusiveNode {
         field_E = true;
     }
 
-    final static VorbisSample a(ResourceArchive param0, String param1, String param2) {
+    final static VorbisSample loadByName(ResourceArchive param0, String param1, String param2) {
         try {
           VorbisSample var4_ref = null;
-          if (!VorbisSample.a(param0)) {
+          if (!VorbisSample.ensureSetup(param0)) {
             param0.tryLoadFileByName(param2, false, param1);
             return null;
           }
@@ -286,13 +286,13 @@ final class VorbisSample extends IntrusiveNode {
         }
     }
 
-    private final static void a(byte[] param0, int param1) {
+    private final static void setBitStream(byte[] param0, int param1) {
         field_F = param0;
         field_o = param1;
         field_w = 0;
     }
 
-    private final float[] b(int param0) {
+    private final float[] decodePacket(int param0) {
         int var32_int = 0;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
@@ -404,7 +404,7 @@ final class VorbisSample extends IntrusiveNode {
         float var30Lifetime1Lifetime3;
         int var18_intLifetime1;
         int var18_intLifetime2;
-        VorbisSample.a(this.field_J[param0], 0);
+        VorbisSample.setBitStream(this.field_J[param0], 0);
         VorbisSample.readBit();
         var2 = VorbisSample.readBits(mda.bitLength(field_v.length - 1, 16));
         var3 = field_D[var2] ? 1 : 0;
@@ -667,7 +667,7 @@ final class VorbisSample extends IntrusiveNode {
         return var1;
     }
 
-    private final void a(byte[] param0) throws IOException {
+    private final void decodePacketContainer(byte[] param0) throws IOException {
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -698,10 +698,10 @@ final class VorbisSample extends IntrusiveNode {
         }
     }
 
-    final static VorbisSample a(ResourceArchive param0, int param1, int param2) {
+    final static VorbisSample load(ResourceArchive param0, int param1, int param2) {
         try {
           VorbisSample var4_ref = null;
-          if (!VorbisSample.a(param0)) {
+          if (!VorbisSample.ensureSetup(param0)) {
             param0.tryLoadFile(-105, param2, param1);
             return null;
           }
@@ -723,20 +723,20 @@ final class VorbisSample extends IntrusiveNode {
         }
     }
 
-    private final static boolean a(ResourceArchive param0) {
+    private final static boolean ensureSetup(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_E) {
           var1 = param0.getFile(120, 0, 0);
           if (var1 == null) {
             return false;
           }
-          VorbisSample.b(var1);
+          VorbisSample.decodeSetup(var1);
         }
         return true;
     }
 
     private VorbisSample(byte[] param0) throws IOException {
-        this.a(param0);
+        this.decodePacketContainer(param0);
     }
 
     public static void releaseStatics() {

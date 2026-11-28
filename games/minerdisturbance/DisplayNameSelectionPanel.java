@@ -421,7 +421,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
             EmailFormatValidator.field_i) {
             hk.field_e = 0;
             im.field_c = nk.field_w;
-            qd.field_P = NodeHashTableIterator.field_e;
+            GuestPlayConfirmationForm.field_P = NodeHashTableIterator.field_e;
           }
           if (fh.field_d) {
             if (hk.field_e != DropTargetWidgetContainer.field_M) {
@@ -445,7 +445,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
             }
           }
           im.field_c = nk.field_w;
-          qd.field_P = NodeHashTableIterator.field_e;
+          GuestPlayConfirmationForm.field_P = NodeHashTableIterator.field_e;
           if (param0 != -1) {
             fh.field_d = false;
           } else {
@@ -459,7 +459,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
             EmailFormatValidator.field_i) {
             hk.field_e = 0;
             im.field_c = nk.field_w;
-            qd.field_P = NodeHashTableIterator.field_e;
+            GuestPlayConfirmationForm.field_P = NodeHashTableIterator.field_e;
           }
           if (fh.field_d &&
             hk.field_e == DropTargetWidgetContainer.field_M) {
@@ -481,7 +481,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
             }
           }
           im.field_c = nk.field_w;
-          qd.field_P = NodeHashTableIterator.field_e;
+          GuestPlayConfirmationForm.field_P = NodeHashTableIterator.field_e;
           if (param0 != -1) {
             fh.field_d = false;
           } else {
@@ -495,7 +495,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
             EmailFormatValidator.field_i) {
             hk.field_e = 0;
             im.field_c = nk.field_w;
-            qd.field_P = NodeHashTableIterator.field_e;
+            GuestPlayConfirmationForm.field_P = NodeHashTableIterator.field_e;
           }
           if (fh.field_d &&
             hk.field_e == DropTargetWidgetContainer.field_M) {
@@ -513,7 +513,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
             var2Lifetime2 == 0) {
             hk.field_e = 0;
             im.field_c = nk.field_w;
-            qd.field_P = NodeHashTableIterator.field_e;
+            GuestPlayConfirmationForm.field_P = NodeHashTableIterator.field_e;
             if (param0 != -1) {
               fh.field_d = false;
             } else {
@@ -524,7 +524,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
               EmailFormatValidator.field_i) {
               hk.field_e = 0;
               im.field_c = nk.field_w;
-              qd.field_P = NodeHashTableIterator.field_e;
+              GuestPlayConfirmationForm.field_P = NodeHashTableIterator.field_e;
             }
             if (fh.field_d &&
               hk.field_e == DropTargetWidgetContainer.field_M) {
@@ -536,7 +536,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
           hk.field_e = CipherPacketBuffer.field_w;
         }
         im.field_c = nk.field_w;
-        qd.field_P = NodeHashTableIterator.field_e;
+        GuestPlayConfirmationForm.field_P = NodeHashTableIterator.field_e;
         if (param0 != -1) {
           fh.field_d = false;
         } else {
@@ -550,7 +550,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
           EmailFormatValidator.field_i) {
           hk.field_e = 0;
           im.field_c = nk.field_w;
-          qd.field_P = NodeHashTableIterator.field_e;
+          GuestPlayConfirmationForm.field_P = NodeHashTableIterator.field_e;
         }
         if (!fh.field_d) {
           return;

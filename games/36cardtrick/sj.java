@@ -25,7 +25,7 @@ final class sj {
           if (param1 <= 0) {
             throw new IllegalArgumentException();
           }
-          if (ng.a(param1, (byte) -101)) {
+          if (StripedProgressWidget.a(param1, (byte) -101)) {
             stackIn_6_0 = (int)((4294967295L & (long)param2.nextInt()) * (long)param1 >> 32);
             return stackIn_6_0;
           }
@@ -104,7 +104,7 @@ final class sj {
         for (var5_int = 0; var5_int < var1; var5_int++) {
           var3[var5_int] = ImageProducerRasterBuffer.field_i[bc.a(255, (int) var2[var5_int])];
         }
-        RgbSprite var5 = new RgbSprite(ConfirmedEmailAvailabilityValidator.field_l, FrameTimer.field_a, kb.field_c[0], ml.field_b[0], NetworkArchiveRequest.field_q[0], hb.field_a[0], var3);
+        RgbSprite var5 = new RgbSprite(ConfirmedEmailAvailabilityValidator.field_l, FrameTimer.field_a, kb.field_c[0], FullscreenNoticeType.field_b[0], NetworkArchiveRequest.field_q[0], hb.field_a[0], var3);
         rh.d(-128);
         return var5;
     }
@@ -137,7 +137,7 @@ final class sj {
           if (param0 > -60) {
             return;
           }
-          var1_int = qe.field_E;
+          var1_int = RegistrationAgreementPane.field_E;
           var2 = 0;
           if (ValidatedTextField.field_R == 2) {
             var3_long = -jl.field_c + id.correctedCurrentTimeMillis(87);
@@ -149,7 +149,7 @@ final class sj {
           for (var3 = 0; var3 < me.field_a.length; var3++) {
             var4 = wd.field_d[var3];
             if (var4 < 0) {
-              var5 = af.field_jb;
+              var5 = ProgressMessageDialog.field_jb;
             } else {
               if (var4 == TextFieldValidator.field_e.field_k) {
                 var5 = ca.field_b;
@@ -315,7 +315,7 @@ final class sj {
           if (param0 <= 23) {
             field_a = (IntrusiveDeque) null;
           }
-          jc.field_P = gg.field_b;
+          ResizableModalDialog.field_P = gg.field_b;
           if (255 != param3) {
             if (param3 >= 100 &&
               param3 <= 105) {

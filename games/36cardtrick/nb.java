@@ -188,35 +188,35 @@ final class nb implements WidgetRenderer {
           var4 = TextLineMetrics.a((byte) -117, param1) ? 1 : 0;
           var5 = new mg();
           var5.field_C = (short)param1.readBits(16, -1);
-          var5.field_r = jc.a(param1, 16, 21, var5.field_r);
-          var5.field_b = jc.a(param1, 16, 21, var5.field_b);
-          var5.field_O = jc.a(param1, 16, 21, var5.field_O);
+          var5.field_r = ResizableModalDialog.a(param1, 16, 21, var5.field_r);
+          var5.field_b = ResizableModalDialog.a(param1, 16, 21, var5.field_b);
+          var5.field_O = ResizableModalDialog.a(param1, 16, 21, var5.field_O);
           var5.field_M = (short)param1.readBits(16, -1);
-          var5.field_a = jc.a(param1, 16, 21, var5.field_a);
-          var5.field_Q = jc.a(param1, 16, 21, var5.field_Q);
-          var5.field_d = jc.a(param1, 16, 21, var5.field_d);
+          var5.field_a = ResizableModalDialog.a(param1, 16, 21, var5.field_a);
+          var5.field_Q = ResizableModalDialog.a(param1, 16, 21, var5.field_Q);
+          var5.field_d = ResizableModalDialog.a(param1, 16, 21, var5.field_d);
           if (var3 != 0) {
             var5.field_c = (short)param1.readBits(16, -1);
-            var5.field_k = jc.a(param1, 16, 21, var5.field_k);
-            var5.field_B = jc.a(param1, 16, 21, var5.field_B);
-            var5.field_I = jc.a(param1, 16, 21, var5.field_I);
-            var5.field_g = jc.a(param1, 16, 21, var5.field_g);
-            var5.field_v = jc.a(param1, 16, 21, var5.field_v);
-            var5.field_p = jc.a(param1, 16, 21, var5.field_p);
+            var5.field_k = ResizableModalDialog.a(param1, 16, 21, var5.field_k);
+            var5.field_B = ResizableModalDialog.a(param1, 16, 21, var5.field_B);
+            var5.field_I = ResizableModalDialog.a(param1, 16, 21, var5.field_I);
+            var5.field_g = ResizableModalDialog.a(param1, 16, 21, var5.field_g);
+            var5.field_v = ResizableModalDialog.a(param1, 16, 21, var5.field_v);
+            var5.field_p = ResizableModalDialog.a(param1, 16, 21, var5.field_p);
           }
           if (var4 != 0) {
             param1.readBits(16, -1);
-            var5.field_n = jc.a(param1, 16, 21, var5.field_n);
-            var5.field_J = jc.a(param1, 16, 21, var5.field_J);
-            var5.field_t = jc.a(param1, 16, 21, var5.field_t);
-            var5.field_l = jc.a(param1, 16, 21, var5.field_l);
-            var5.field_H = jc.a(param1, 16, 21, var5.field_H);
+            var5.field_n = ResizableModalDialog.a(param1, 16, 21, var5.field_n);
+            var5.field_J = ResizableModalDialog.a(param1, 16, 21, var5.field_J);
+            var5.field_t = ResizableModalDialog.a(param1, 16, 21, var5.field_t);
+            var5.field_l = ResizableModalDialog.a(param1, 16, 21, var5.field_l);
+            var5.field_H = ResizableModalDialog.a(param1, 16, 21, var5.field_H);
           }
           if (param0 < 105) {
             field_e = -87;
           }
           if (TextLineMetrics.a((byte) -79, param1)) {
-            var5.field_N = jc.a(param1, 16, 21, var5.field_N);
+            var5.field_N = ResizableModalDialog.a(param1, 16, 21, var5.field_N);
           }
           if (TextLineMetrics.a((byte) -97, param1)) {
             var5.field_D = TextLineMetrics.a(var5.field_D, param1, 17259, 16);

@@ -8,7 +8,7 @@ final class waa {
         if (!param0) {
           field_a = 2;
           if (StopFloodEffect.field_j == FridgeScreen.field_p) {
-            return em.field_V;
+            return FullscreenStatusDialog.field_V;
           }
           if (StopFloodEffect.field_j == ReportAbusePanel.field_G) {
             return BagpipeAnimation.field_w;
@@ -19,7 +19,7 @@ final class waa {
           return BagpipeAnimation.field_w;
         }
         if (StopFloodEffect.field_j == FridgeScreen.field_p) {
-          return em.field_V;
+          return FullscreenStatusDialog.field_V;
         }
         if (StopFloodEffect.field_j == ReportAbusePanel.field_G) {
           return BagpipeAnimation.field_w;

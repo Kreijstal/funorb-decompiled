@@ -122,7 +122,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           var2 == 1) {
           if (11 == fa.field_c &&
             DraggableWidgetContainer.field_H == 0) {
-            ba.e((byte) -90);
+            StripedProgressWidget.e((byte) -90);
           }
           return var2;
         }
@@ -322,7 +322,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   km.field_x = null;
                 } else {
                   AccountCreationResultPanel.field_yb = ib.field_d;
-                  ba.e((byte) -86);
+                  StripedProgressWidget.e((byte) -86);
                   DirectByteStorage.field_k = false;
                   fa.field_c = 10;
                 }
@@ -360,7 +360,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             o.a((byte) -98, BufferedRandomAccessFile.c(-1));
           }
           if (var4 == 12) {
-            ta.a(-320, hj.d(param1 + 71), BufferedRandomAccessFile.c(-1));
+            StandardContentDialog.a(-320, hj.d(param1 + 71), BufferedRandomAccessFile.c(-1));
           }
           if (var4 == 13) {
             try {
@@ -578,7 +578,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             DraggableWidgetContainer.field_H == 0 &&
             fa.field_c == 11 &&
             !EditableTextField.c(false)) {
-            ba.e((byte) -104);
+            StripedProgressWidget.e((byte) -104);
           }
           if (-1 != DraggableWidgetContainer.field_H &&
             DraggableWidgetContainer.field_H != 0) {
@@ -681,7 +681,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (pb.field_Kb == 3 &&
           ca.a(ll.field_b, RichTextLayout.field_m, im.field_c, param1 - 9768) &&
-          jh.a(-95, ll.field_b)) {
+          FullscreenStatusDialog.a(-95, ll.field_b)) {
           GzipDecompressor.a(1);
           ni.clearDeclaredStaticReferences(-30074);
           wi.field_c = l.field_e;

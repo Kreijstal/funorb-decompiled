@@ -111,7 +111,7 @@ final class ff {
             }
             ia.field_kb = param6;
             ConfirmedEmailAvailabilityValidator.field_n = param1;
-            ci.field_jb = param10;
+            ProgressMessageDialog.field_jb = param10;
             al.field_n = param4;
             jj.field_s = param0;
             WidgetContainer.field_C = param5;

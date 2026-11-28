@@ -15,8 +15,8 @@ final class pd {
           return;
         }
         try {
-          if (null != fa.field_G) {
-            if (!fa.field_G.field_G) {
+          if (null != StripedProgressWidget.field_G) {
+            if (!StripedProgressWidget.field_G.field_G) {
               return;
             }
             var3_int = 1;
@@ -27,7 +27,7 @@ final class pd {
               } else {
                 param0 = pk.field_b;
               }
-              wi.field_c.b((byte) -79, lc.field_hb);
+              wi.field_c.b((byte) -79, StandardContentDialog.field_hb);
             }
             if (10 == param1) {
               FullscreenFocusCanvas.a(false);
@@ -37,10 +37,10 @@ final class pd {
               if (ic.field_a) {
                 param0 = fb.a(oh.field_b, param2 ^ -50, new String[]{param0});
               }
-              if (vj.field_V) {
+              if (FullscreenStatusDialog.field_V) {
                 param0 = jl.field_k;
               }
-              fa.field_G.a(param0, param1, true);
+              StripedProgressWidget.field_G.showResult(param0, param1, true);
             }
             if (256 != param1) {
               if (param1 == 10) {

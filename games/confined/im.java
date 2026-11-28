@@ -64,7 +64,7 @@ final class im {
           ti.b();
           int var2 = -113 / ((param0 - 32) / 49);
           SoftwareRasterizer.clearRaster();
-          tg.field_H = 0;
+          GuestPlayConfirmationForm.field_H = 0;
           of.a(false);
           var3 = var1.copy();
           for (var4 = 0; var4 < 15; var4++) {
@@ -73,7 +73,7 @@ final class im {
           }
           KeyboardInput.field_c.bindAsRenderTarget();
           var1.drawHalfSize(0, 0);
-          ib.b(false);
+          StripedProgressWidget.b(false);
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "im.D(" + param0 + ')');
         }

@@ -3,7 +3,7 @@
  */
 final class ke extends DefaultTextWidgetRenderer {
     private int field_t;
-    static ta field_s;
+    static StandardContentDialog field_s;
     static String field_w;
     private RgbSprite[] field_u;
     private int field_y;
@@ -76,7 +76,7 @@ final class ke extends DefaultTextWidgetRenderer {
         this.field_u = km.field_y;
         this.field_A = param1;
         this.field_y = param0;
-        this.field_g = pe.field_eb;
+        this.field_g = ProgressDialog.field_eb;
     }
 
     public static void clearStaticReferences(boolean param0) {

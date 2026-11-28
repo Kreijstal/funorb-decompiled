@@ -169,7 +169,7 @@ final class wd {
           if (wc.a(param2, param0 ^ -14)) {
             return false;
           }
-          if (ef.a(96, param2)) {
+          if (StandardContentDialog.a(96, param2)) {
             return false;
           }
           if (param1.length() == param0) {

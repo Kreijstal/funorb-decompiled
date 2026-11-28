@@ -92,7 +92,7 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
           var6 = new RgbSprite(this.field_H.field_F, this.field_H.field_z);
           vm.a(var6, -8409);
           this.field_H.drawWidget(0, param1, (byte) 83, 0);
-          ib.b(false);
+          StripedProgressWidget.b(false);
           var6.drawWithOpacity(param3 + this.field_q, this.field_m + param0, this.field_K);
           return;
         }

@@ -34,7 +34,7 @@ final class lg implements WidgetRenderer {
             if (null != df.field_l &&
               df.field_l.focusLost) {
               af.b(6);
-              hg.field_S.showDialog((byte) -115, (UiWidget) (new ae(hg.field_S, uf.field_a)));
+              hg.field_S.showDialog((byte) -115, (UiWidget) (new FullscreenStatusDialog(hg.field_S, uf.field_a)));
             }
             return;
           }

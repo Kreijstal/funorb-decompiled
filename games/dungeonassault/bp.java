@@ -227,13 +227,13 @@ final class bp {
           synchronized (var1) {
             hl.field_g = hl.field_g + 1;
             je.field_i = CombatState.field_x;
-            if (0 > ia.field_M) {
+            if (0 > GuestPlayConfirmationForm.field_M) {
               for (var2 = 0; var2 < 112; var2++) {
                 qk.field_e[var2] = false;
               }
-              ia.field_M = dl.field_b;
+              GuestPlayConfirmationForm.field_M = dl.field_b;
             } else {
-              while (dl.field_b != ia.field_M) {
+              while (dl.field_b != GuestPlayConfirmationForm.field_M) {
                 var2 = RaiderRecruitmentScreen.field_r[dl.field_b];
                 dl.field_b = 127 & dl.field_b + 1;
                 if (0 <= var2) {

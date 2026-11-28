@@ -1026,7 +1026,7 @@ final class MidiPlayer extends PcmStream {
         try {
           gh.field_k = true;
           ArchiveIndex.field_h = param1 ? true : false;
-          kb.field_a = new jj(AlphaWidgetContainer.field_E, p.field_a, param0, vg.field_o, ArchiveIndex.field_h);
+          kb.field_a = new ProgressMessageDialog(AlphaWidgetContainer.field_E, p.field_a, param0, vg.field_o, ArchiveIndex.field_h);
           if (param2 != -16257) {
             field_s = (int[]) null;
           }

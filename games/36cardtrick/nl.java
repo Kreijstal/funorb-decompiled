@@ -54,7 +54,7 @@ final class nl {
             }
             var2 = 1;
           }
-          TextFieldValidator.field_e.a(af.a(ij.field_e, true, eg.field_b), (byte) 123, af.a(jc.field_N, param0, MouseInputHandler.field_a));
+          TextFieldValidator.field_e.a(ProgressMessageDialog.a(ij.field_e, true, eg.field_b), (byte) 123, ProgressMessageDialog.a(ResizableModalDialog.field_N, param0, MouseInputHandler.field_a));
           if (TextFieldValidator.field_e.f(-85)) {
             var1_int = 1;
           }

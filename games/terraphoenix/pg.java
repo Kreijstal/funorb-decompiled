@@ -12,16 +12,16 @@ final class pg {
 
     final static void a(float param0, boolean param1, String param2, int param3) {
         if (vi.field_n == null) {
-          vi.field_n = new na(AlphaWidgetContainer.field_I, PcmResampler.field_e);
+          vi.field_n = new ProgressDialog(AlphaWidgetContainer.field_I, PcmResampler.field_e);
           AlphaWidgetContainer.field_I.showDialog((UiWidget) (vi.field_n), (byte) -1);
         }
-        vi.field_n.a((byte) 60, param1, param2, param0);
+        vi.field_n.setProgress((byte) 60, param1, param2, param0);
         SoftwareRasterizer.clearRaster();
         if (param3 <= 53) {
           return;
         }
         try {
-          oi.a(-22417, true);
+          DialogMessagePane.a(-22417, true);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "pg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

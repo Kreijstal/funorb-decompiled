@@ -166,7 +166,7 @@ final class saa {
             return;
           }
           sn.field_m.a(19842, true);
-          d.field_H.a(19842, true);
+          BirthDateChatEnableForm.field_H.a(19842, true);
           if (this.field_d.field_c.field_k.field_a == 2) {
             if (sn.field_m.field_T &&
               AccountRequestState.field_a) {
@@ -185,7 +185,7 @@ final class saa {
               OneEvent.c(var2_intLifetime3, -123);
               this.field_o = 5;
             }
-            if (d.field_H.field_T &&
+            if (BirthDateChatEnableForm.field_H.field_T &&
               AccountRequestState.field_a) {
               Crc32Table.a(4, (byte) -41);
             }
@@ -401,7 +401,7 @@ final class saa {
           if (!param0) {
             return false;
           }
-          stackIn_10_0 = (mk.field_p > d.field_H.field_kb) && (gd.field_m > d.field_H.field_rb) && (d.field_H.field_kb + d.field_H.field_sb > mk.field_p) && (gd.field_m < d.field_H.field_p + d.field_H.field_rb);
+          stackIn_10_0 = (mk.field_p > BirthDateChatEnableForm.field_H.field_kb) && (gd.field_m > BirthDateChatEnableForm.field_H.field_rb) && (BirthDateChatEnableForm.field_H.field_kb + BirthDateChatEnableForm.field_H.field_sb > mk.field_p) && (gd.field_m < BirthDateChatEnableForm.field_H.field_p + BirthDateChatEnableForm.field_H.field_rb);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -495,7 +495,7 @@ final class saa {
           }
           FullscreenFocusCanvas.field_e = new UiComponent("shopbutton", var2, 433, 87, 195, 42, "");
           sn.field_m = new UiComponent("getmagnify", var2, 420, 32, 80, 62, "");
-          d.field_H = new UiComponent("clean", var2, 526, 318, 82, 124, "");
+          BirthDateChatEnableForm.field_H = new UiComponent("clean", var2, 526, 318, 82, 124, "");
           discarded$0 = new UiComponent("freeze", var2, 576, 430, 50, 42, "");
           discarded$1 = new UiComponent("throwin", var2, 580, 380, 80, 20, "Throw in");
           aq.field_b = new UiComponent("viewstats", var2, -50, -50, 50, 20, "View");
@@ -628,7 +628,7 @@ final class saa {
           BattleState.field_u.draw(param1 + 540, 424);
           dp.field_n[5].draw(524 + param1, 300);
           if (this.field_n <= 0) {
-            if ((d.field_H.field_T ||
+            if ((BirthDateChatEnableForm.field_H.field_T ||
               this.b(true)) &&
               (this.field_d.field_c.field_k.field_a != 0 &&
               !this.field_i)) {

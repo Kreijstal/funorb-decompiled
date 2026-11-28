@@ -117,7 +117,7 @@ final class u extends gd {
           var14 = var14 + (la.field_b.field_H + 2);
           if (var8 == 0) {
             if (var9 == 0) {
-              la.field_b.drawString(jk.a(new String[]{Integer.toString(var5 / 10)}, n.field_a, 30496), 52, var14, 12632256, -1);
+              la.field_b.drawString(StandardContentDialog.a(new String[]{Integer.toString(var5 / 10)}, n.field_a, 30496), 52, var14, 12632256, -1);
             } else {
               la.field_b.drawString(MatchingFieldValidator.field_q, 52, var14, 16711680, -1);
             }
@@ -130,15 +130,15 @@ final class u extends gd {
           SoftwareRasterizer.clearRaster();
           var11.drawSilhouette(0, 0, 16744448);
           DisplayNameSelectionPanel.a(52, this.field_Q, 95, 16744448, var14);
-          rp.a(8, 40, (byte) 108, 2, 40, kc.field_S, var15Lifetime1);
+          rp.a(8, 40, (byte) 108, 2, 40, DialogMessagePane.field_S, var15Lifetime1);
           var13.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
           var11.drawSilhouette(0, 0, 12690143);
           DisplayNameSelectionPanel.a(52, this.field_Q, 118, 10449103, var14);
-          rp.a(8, 40, (byte) 108, 2, 40, kc.field_S, var15Lifetime1);
+          rp.a(8, 40, (byte) 108, 2, 40, DialogMessagePane.field_S, var15Lifetime1);
           var11.bindAsRenderTarget();
           DisplayNameSelectionPanel.a(52, this.field_Q, 115, 12632256, var14);
-          rp.a(8, 40, (byte) 108, 2, 40, kc.field_S, var15Lifetime1);
+          rp.a(8, 40, (byte) 108, 2, 40, DialogMessagePane.field_S, var15Lifetime1);
           jh.b();
           var16 = rb.a(16, var12, 255, (byte) 99);
           var17 = rb.a(16, var12, 16711680, (byte) -128);
@@ -254,7 +254,7 @@ final class u extends gd {
         RuntimeException decompiledCaughtException = null;
         try {
           var6_int = 106 % ((-21 - param1) / 43);
-          stackIn_1_0 = ia.a(param5, param0, an.a(param4, (byte) -109, param3, param2), 0);
+          stackIn_1_0 = GuestPlayConfirmationForm.a(param5, param0, an.a(param4, (byte) -109, param3, param2), 0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

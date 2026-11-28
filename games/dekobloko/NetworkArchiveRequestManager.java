@@ -7,7 +7,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
     static CacheWorkQueue cacheWorkQueueState0003;
     static String stringState0438;
     private BufferedSocket bufferedSocketState0001;
-    static MixedSupport080 mixedSupport080State0003;
+    static FullscreenNoticeType mixedSupport080State0003;
     static RgbSprite rgbSpriteState0044;
     static int integerState0598;
     static SceneWidget sceneWidgetState0098;
@@ -214,7 +214,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
             stackIntegerLocal2 = -1;
             return stackIntegerLocal2;
           }
-          if (UiComponentPart023.mixedSupport132State0009 == DebouncedFieldValidator.mixedSupport132State0001) {
+          if (StandardContentDialog.mixedSupport132State0009 == DebouncedFieldValidator.mixedSupport132State0001) {
             SceneWidgetPart014.booleanState0220 = null;
             SocketFactory.cipherPacketBufferState0002.position = 0;
             if (stringArgument7 == null) {
@@ -268,17 +268,17 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
               MatchingFieldValidator.writeEncryptedBuffer(AnimatedTileRegion.bigIntegerState0004, RichTextLayout.bigIntegerState0001, SocketFactory.cipherPacketBufferState0002, MixedSupport140.packetBufferState0008, 0);
               SocketFactory.cipherPacketBufferState0002.writeLengthShort(true, -integerLocal27 + SocketFactory.cipherPacketBufferState0002.position);
             }
-            UiComponentPart033.performAction1818(4792, -1);
-            UiComponentPart023.mixedSupport132State0009 = MixedSupport067.mixedSupport132State0003;
+            AccountCreationResultPanel.performAction1818(4792, -1);
+            StandardContentDialog.mixedSupport132State0009 = MixedSupport067.mixedSupport132State0003;
           }
-          if (MixedSupport067.mixedSupport132State0003 == UiComponentPart023.mixedSupport132State0009 &&
+          if (MixedSupport067.mixedSupport132State0003 == StandardContentDialog.mixedSupport132State0009 &&
             MixedSupport098.computeBoolean1219(25973, 1)) {
             integerLocal39 = LabeledWidgetContainer.cipherPacketBufferState0001.readUnsignedByte((byte) -70);
             LabeledWidgetContainer.cipherPacketBufferState0001.position = 0;
             if (integerLocal39 >= 100 &&
               integerLocal39 <= 105) {
-              UiComponentPart023.mixedSupport132State0009 = MixedSupport079.mixedSupport132State0006;
-              UiComponentPart023.stringArrayState0030 = new String[-100 + integerLocal39];
+              StandardContentDialog.mixedSupport132State0009 = MixedSupport079.mixedSupport132State0006;
+              StandardContentDialog.stringArrayState0030 = new String[-100 + integerLocal39];
             } else {
               if (integerLocal39 == 248) {
                 LoginCredentials.performAction0790(DraggableWidgetContainer.computeApplet1485(25144), 0);
@@ -295,19 +295,19 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
               } else {
                 NetworkSupport012.integerState0759 = -1;
                 HashNode.integerState0070 = integerLocal39;
-                UiComponentPart023.mixedSupport132State0009 = MixedSupport107.mixedSupport132State0010;
+                StandardContentDialog.mixedSupport132State0009 = MixedSupport107.mixedSupport132State0010;
               }
             }
           }
-          if (UiComponentPart023.mixedSupport132State0009 == MixedSupport079.mixedSupport132State0006) {
+          if (StandardContentDialog.mixedSupport132State0009 == MixedSupport079.mixedSupport132State0006) {
             integerLocal40 = 2;
             if (MixedSupport098.computeBoolean1219(25973, integerLocal40)) {
               integerLocal38 = LabeledWidgetContainer.cipherPacketBufferState0001.readUnsignedShort(3);
               LabeledWidgetContainer.cipherPacketBufferState0001.position = 0;
               if (MixedSupport098.computeBoolean1219(25973, integerLocal38)) {
-                integerLocal29 = UiComponentPart023.stringArrayState0030.length;
+                integerLocal29 = StandardContentDialog.stringArrayState0030.length;
                 for (integerLocal1 = 0; integerLocal29 > integerLocal1; integerLocal1++) {
-                  UiComponentPart023.stringArrayState0030[integerLocal1] = LabeledWidgetContainer.cipherPacketBufferState0001.readNullCircumfixedString(true);
+                  StandardContentDialog.stringArrayState0030[integerLocal1] = LabeledWidgetContainer.cipherPacketBufferState0001.readNullCircumfixedString(true);
                 }
                 NodeHashTable.performAction1498(60);
                 SceneWidgetPart006.booleanState0083 = false;
@@ -316,7 +316,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
               }
             }
           }
-          if (MixedSupport107.mixedSupport132State0010 == UiComponentPart023.mixedSupport132State0009 &&
+          if (MixedSupport107.mixedSupport132State0010 == StandardContentDialog.mixedSupport132State0009 &&
             MixedSupport039.computeBoolean0524((byte) 117)) {
             if (255 == HashNode.integerState0070) {
               stringLocal26 = LabeledWidgetContainer.cipherPacketBufferState0001.readNullableString(-16829);
@@ -777,6 +777,6 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
 
     static {
         integerState0598 = 22;
-        mixedSupport080State0003 = new MixedSupport080();
+        mixedSupport080State0003 = new FullscreenNoticeType();
     }
 }

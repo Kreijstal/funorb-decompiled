@@ -47,10 +47,10 @@ final class MixedSupport057 {
           try {
             byteArrayLocal6 = new byte[24];
             byteArrayLocal2 = byteArrayLocal6;
-            if (UiComponentPart008.bufferedFileState0001 != null) {
+            if (DialogMessagePane.bufferedFileState0001 != null) {
               try {
-                UiComponentPart008.bufferedFileState0001.seek(0L, (byte) -109);
-                UiComponentPart008.bufferedFileState0001.readFully(byteArrayLocal6, (byte) -76);
+                DialogMessagePane.bufferedFileState0001.seek(0L, (byte) -109);
+                DialogMessagePane.bufferedFileState0001.readFully(byteArrayLocal6, (byte) -76);
                 for (integerLocal3 = 0; integerLocal3 < 24; integerLocal3++) {
                   if (byteArrayLocal2[integerLocal3] == 0) {
                     continue;

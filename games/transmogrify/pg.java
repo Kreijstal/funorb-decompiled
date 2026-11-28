@@ -17,27 +17,27 @@ final class pg {
           if (null != ResourceArchive.field_f) {
             ResourceArchive.field_f.snapAndPruneDialogs(param0 + 127);
             if (gh.field_m != null) {
-              gh.field_m.r(-96);
+              gh.field_m.freezeNormalProgressAnimation(-96);
             }
             FullscreenFocusCanvas.c(-1);
             return;
           }
           if (gh.field_m != null) {
-            gh.field_m.r(-96);
+            gh.field_m.freezeNormalProgressAnimation(-96);
           }
           FullscreenFocusCanvas.c(-1);
           return;
         }
         if (null == ResourceArchive.field_f) {
           if (gh.field_m != null) {
-            gh.field_m.r(-96);
+            gh.field_m.freezeNormalProgressAnimation(-96);
           }
           FullscreenFocusCanvas.c(-1);
           return;
         }
         ResourceArchive.field_f.snapAndPruneDialogs(param0 + 127);
         if (gh.field_m != null) {
-          gh.field_m.r(-96);
+          gh.field_m.freezeNormalProgressAnimation(-96);
         }
         FullscreenFocusCanvas.c(-1);
     }

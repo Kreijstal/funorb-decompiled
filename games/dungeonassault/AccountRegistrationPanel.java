@@ -393,7 +393,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         var6 = DungeonAssault.field_K;
         try {
           var1_int = sn.field_c.length;
-          r.field_b = new int[var1_int];
+          FullscreenNoticeType.field_b = new int[var1_int];
           IntroSequenceScreen.field_w = new int[var1_int];
           for (var2 = 0; var2 < var1_int; var2++) {
             var8 = sn.field_c[var2].field_B;
@@ -411,7 +411,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
             var3_ref_int__[-var4 + var5] = 0;
             var3_ref_int__[-1 - var4 + var5] = 0;
             IntroSequenceScreen.field_w[var2] = sn.field_c[var2].field_w + var5 / var4 - 1;
-            r.field_b[var2] = -1 + var5 % var4 + sn.field_c[var2].field_A;
+            FullscreenNoticeType.field_b[var2] = -1 + var5 % var4 + sn.field_c[var2].field_A;
           }
           var3 = -33 / ((param0 + 41) / 61);
           return;
@@ -467,7 +467,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         ic dupTemp$1 = new ic(10000536);
         this.field_L.field_o = (WidgetRenderer) ((Object) dupTemp$1);
         this.field_K.field_o = (WidgetRenderer) ((Object) dupTemp$1);
-        String var2 = jk.a(new String[]{this.g((byte) -47), this.j((byte) -115)}, ae.field_h, 30496);
+        String var2 = StandardContentDialog.a(new String[]{this.g((byte) -47), this.j((byte) -115)}, ae.field_h, 30496);
         int var3 = 20;
         var3 = var3 + this.a(3, mp.field_b, this.field_O, var3, 170);
         var3 = var3 + (this.a(-96, var3, hp.field_a, "", 170, this.field_U, 20) + 5);

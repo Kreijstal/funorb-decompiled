@@ -61,7 +61,7 @@ final class ti extends IntrusiveNode {
           }
           var4_int = param1.getGroupIdByName(true, param2);
           var5 = param1.getFileIdByName(param0, var4_int, -1);
-          stackIn_4_0 = pj.a(param1, var5, -127, var4_int);
+          stackIn_4_0 = StandardContentDialog.a(param1, var5, -127, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

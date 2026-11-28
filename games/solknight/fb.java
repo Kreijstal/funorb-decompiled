@@ -81,7 +81,7 @@ final class fb {
             u.field_b.snapAndPruneDialogs(true);
           }
           if (null != pc.field_b) {
-            pc.field_b.f((byte) -85);
+            pc.field_b.freezeNormalProgressAnimation((byte) -85);
           }
           AccountNameAvailabilityValidator.h(-1);
           return;
@@ -91,7 +91,7 @@ final class fb {
           u.field_b.snapAndPruneDialogs(true);
         }
         if (null != pc.field_b) {
-          pc.field_b.f((byte) -85);
+          pc.field_b.freezeNormalProgressAnimation((byte) -85);
         }
         AccountNameAvailabilityValidator.h(-1);
     }

@@ -47,14 +47,14 @@ final class da {
           }
           var9 = (VorbisDecoder) (this.field_j.a((byte) 46, var6));
           if (var9 == null) {
-            var9 = VorbisDecoder.a(this.field_c, param3, param0);
+            var9 = VorbisDecoder.load(this.field_c, param3, param0);
             if (var9 == null) {
               stackIn_13_0 = null;
               return (PcmSample) (stackIn_13_0);
             }
             this.field_j.a(var9, var6, (byte) -123);
           }
-          var8Lifetime1 = var9.a(param2);
+          var8Lifetime1 = var9.decodeToPcm(param2);
           if (var8Lifetime1 == null) {
             return null;
           }

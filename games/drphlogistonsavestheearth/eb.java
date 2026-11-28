@@ -28,7 +28,7 @@ final class eb {
         cf.a((byte) -107);
         PcmResampler.field_c.closeAllDialogs(300);
         DraggableWidgetContainer.field_O = new LoginPanel(qf.field_c, (String) null, sg.field_a, param1, param2);
-        PcmOutputWorker.field_e = new el(PcmResampler.field_c, DraggableWidgetContainer.field_O);
+        PcmOutputWorker.field_e = new StandardContentDialog(PcmResampler.field_c, DraggableWidgetContainer.field_O);
         if (param3 != 10) {
           return;
         }

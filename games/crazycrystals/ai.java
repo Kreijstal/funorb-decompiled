@@ -299,7 +299,7 @@ final class ai implements Runnable {
                 var11_ref_String = "";
               }
               tp.field_f.writeString(var11_ref_String, (byte) -23);
-              tg.appendEncryptedLoginPayload(SectorCacheStore.field_c, tp.field_f, gn.field_S, -105, lm.field_j);
+              tg.appendEncryptedLoginPayload(SectorCacheStore.field_c, tp.field_f, FullscreenStatusDialog.field_S, -105, lm.field_j);
               tp.field_f.backpatchShortLength(977272835, -var10 + tp.field_f.position);
             } else {
               SectorCacheStore.field_c.position = 0;
@@ -322,7 +322,7 @@ final class ai implements Runnable {
               tp.field_f.writeByte(true, 16);
               tp.field_f.position = tp.field_f.position + 1;
               var9 = tp.field_f.position;
-              tg.appendEncryptedLoginPayload(SectorCacheStore.field_c, tp.field_f, gn.field_S, -122, lm.field_j);
+              tg.appendEncryptedLoginPayload(SectorCacheStore.field_c, tp.field_f, FullscreenStatusDialog.field_S, -122, lm.field_j);
               tp.field_f.backpatchByteLength((byte) 46, tp.field_f.position - var9);
             }
             ak.a(-1, (byte) -48);
@@ -346,7 +346,7 @@ final class ai implements Runnable {
                 return stackIn_33_0;
               }
               if (var9Lifetime1 != 99) {
-                bf.field_b = var9Lifetime1;
+                FullscreenNoticeType.field_b = var9Lifetime1;
                 rk.field_b = -1;
                 gj.field_k = kf.field_b;
               } else {
@@ -375,7 +375,7 @@ final class ai implements Runnable {
           }
           if (gj.field_k == kf.field_b &&
             ModalDialogHost.f((byte) 60)) {
-            if (bf.field_b != 255) {
+            if (FullscreenNoticeType.field_b != 255) {
               re.field_j = ConfirmedEmailAvailabilityValidator.field_n.readString(122);
             } else {
               var9_ref_String = ConfirmedEmailAvailabilityValidator.field_n.readNullableString(0);
@@ -385,7 +385,7 @@ final class ai implements Runnable {
             }
             jj.a(4);
             ec.field_g = false;
-            stackIn_56_0 = bf.field_b;
+            stackIn_56_0 = FullscreenNoticeType.field_b;
             return stackIn_56_0;
           }
           if (null == oi.field_c) {

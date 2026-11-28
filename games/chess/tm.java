@@ -49,7 +49,7 @@ final class tm {
         var5 = Chess.field_G;
         var6 = "(" + AlphaWidgetContainer.field_T + " " + wc.field_u + " " + hh.field_o + ") " + wg.field_B;
         var1 = var6;
-        if (sb.field_sb <= 0) {
+        if (StandardContentDialog.field_sb <= 0) {
           if (param0 <= -119) {
             return var1;
           }
@@ -57,7 +57,7 @@ final class tm {
           return var1;
         }
         var1Lifetime1 = var6 + ":";
-        for (var2 = 0; sb.field_sb > var2; var2++) {
+        for (var2 = 0; StandardContentDialog.field_sb > var2; var2++) {
           var7 = var1Lifetime1 + ' ';
           var1Lifetime1 = var7;
           var3 = 255 & tk.field_h.data[var2];

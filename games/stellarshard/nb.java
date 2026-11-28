@@ -5,7 +5,7 @@ final class nb extends InteractiveWidget {
     int field_G;
     private int field_J;
     private ol field_L;
-    static di field_K;
+    static FullscreenNoticeType field_K;
     int field_I;
     static int field_H;
     static String field_N;
@@ -16,14 +16,14 @@ final class nb extends InteractiveWidget {
     final static void a(boolean param0, float param1, String param2, byte param3) {
         try {
           if (PcmOutputWorker.field_d == null) {
-            PcmOutputWorker.field_d = new ql(IsaacRandom.field_d, ii.field_F);
+            PcmOutputWorker.field_d = new ProgressDialog(IsaacRandom.field_d, ii.field_F);
             IsaacRandom.field_d.showDialog((byte) -104, (UiWidget) (PcmOutputWorker.field_d));
           }
           if (param3 > -117) {
             String var5 = (String) null;
             nb.a(true, 0.3101823627948761f, (String) null, (byte) 81);
           }
-          PcmOutputWorker.field_d.a(param0, param1, true, param2);
+          PcmOutputWorker.field_d.setProgress(param0, param1, true, param2);
           SoftwareRasterizer.clearRaster();
           af.a(true, (byte) -79);
         } catch (RuntimeException runtimeException) {
@@ -122,7 +122,7 @@ final class nb extends InteractiveWidget {
 
     public static void clearStaticReferences(byte param0) {
         if (param0 != 105) {
-          field_K = (di) null;
+          field_K = (FullscreenNoticeType) null;
         }
         field_O = null;
         field_M = null;
@@ -139,7 +139,7 @@ final class nb extends InteractiveWidget {
         int var1 = 0;
         int var2 = 0;
         int var0;
-        field_K = new di();
+        field_K = new FullscreenNoticeType();
         field_H = 0;
         field_F = new int[256];
         field_N = "Turn ship - <img=4>+<img=5>     Thrust - <img=0>";

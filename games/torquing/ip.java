@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ip {
-    static hh field_b;
+    static FullscreenNoticeType field_b;
     static k field_a;
     static String field_c;
     static String field_d;
@@ -154,7 +154,7 @@ final class ip {
     }
 
     static {
-        field_b = new hh();
+        field_b = new FullscreenNoticeType();
         field_a = new k(14, 0, 4, 1);
         field_d = "Retry";
     }

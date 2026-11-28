@@ -29,7 +29,7 @@ final class wm {
           throw new IllegalStateException();
         }
         if (null != SectorCacheStore.field_a) {
-          SectorCacheStore.field_a.i((byte) -99);
+          SectorCacheStore.field_a.closeDialog((byte) -99);
         }
         String var1 = vg.c((byte) 104);
         mk.field_b = new LoginPanel(var1, (String) null, true, false, false);
@@ -37,8 +37,8 @@ final class wm {
         if (param0 != -12) {
           field_d = -98L;
         }
-        MouseWheelInput.field_d.a((UiWidget) (mk.field_b), (byte) -50);
-        MouseWheelInput.field_d.j(param0 + 11);
+        MouseWheelInput.field_d.replaceContent((UiWidget) (mk.field_b), (byte) -50);
+        MouseWheelInput.field_d.finishResize(param0 + 11);
     }
 
     final void a(byte param0) {

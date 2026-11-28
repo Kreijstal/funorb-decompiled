@@ -52,7 +52,7 @@ final class a {
           }
         }
         if (tl.field_g) {
-          tg.a((byte) -124);
+          GuestPlayConfirmationForm.a((byte) -124);
         }
         if (param0 == 0) {
           return;
@@ -70,7 +70,7 @@ final class a {
         try {
           var4_int = 83 % ((param3 + 25) / 50);
           if (mc.a(param2, param1, param0, (byte) 119)) {
-            return ei.o(85);
+            return FullscreenStatusDialog.o(85);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

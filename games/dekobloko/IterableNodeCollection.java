@@ -26,8 +26,8 @@ final class IterableNodeCollection implements Iterable {
           renderingSupport007Local8 = new RenderingSupport007(3);
           renderingSupport007Local8.integerArrayState0121 = integerArrayArgument1;
           renderingSupport007Local8.integerState0366 = integerArgument3;
-          if (UiComponentPart023.computeBoolean1242(-30146)) {
-            gameDomainSupport002Local7 = new GameDomainSupport002(20, UiComponentPart026.stringState0461, DefaultTextWidgetRenderer.renderingSupport009State0001);
+          if (StandardContentDialog.computeBoolean1242(-30146)) {
+            gameDomainSupport002Local7 = new GameDomainSupport002(20, ProgressDialog.stringState0461, DefaultTextWidgetRenderer.renderingSupport009State0001);
             gameDomainSupport002Local7.integerState0178 = 387;
             gameDomainSupport002Local7.integerState0174 = 320 - gameDomainSupport002Local7.integerState0176 / 2;
             renderingSupport007Local8.performAction0852(gameDomainSupport002Local7, 100);
@@ -156,7 +156,7 @@ final class IterableNodeCollection implements Iterable {
           for (integerLocal1 = 0; integerLocal1 < AlphaWidgetContainer.stringArrayState0012.length; integerLocal1++) {
             integerLocal10 = MixedSupport129.integerArrayState0211[integerLocal1];
             if (integerLocal10 >= 0) {
-              if (UiComponentPart033.mixedSupport116State0004.integerState0754 == integerLocal10) {
+              if (AccountCreationResultPanel.mixedSupport116State0004.integerState0754 == integerLocal10) {
                 integerLocal11 = MixedSupport053.integerState0271;
               } else {
                 integerLocal11 = MixedSupport057.integerState0296;
@@ -172,7 +172,7 @@ final class IterableNodeCollection implements Iterable {
             integerLocal14 = -(integerLocal13 >> 1) + MixedSupport004.integerState0029;
             if (integerLocal10 >= 0) {
               integerLocal9 = integerLocal9 + PcmResampler.integerState0344;
-              if (integerLocal10 != UiComponentPart033.mixedSupport116State0004.integerState0754) {
+              if (integerLocal10 != AccountCreationResultPanel.mixedSupport116State0004.integerState0754) {
                 stackMixedSupport015Local5 = FullscreenCanvas.mixedSupport015State0004;
               } else {
                 stackMixedSupport015Local5 = MixedSupport047.mixedSupport015State0002;

@@ -163,7 +163,7 @@ final class MusicPatchPcmStream extends PcmStream {
         if (param0 < 18) {
           return;
         }
-        kka.field_l.e(new ReportAbusePanel(), 33);
+        kka.field_l.replaceContent(new ReportAbusePanel(), 33);
     }
 
     final void skipFrames(int param0) {

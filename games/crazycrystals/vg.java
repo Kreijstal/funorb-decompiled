@@ -39,7 +39,7 @@ final class vg {
           if (!gk.field_e.b(-82)) {
             return ne.field_h;
           }
-          return jd.field_G;
+          return DialogMessagePane.field_G;
         }
         if (lc.field_c == ResultScenePhase.field_b) {
           return ji.field_x;
@@ -50,7 +50,7 @@ final class vg {
         if (!gk.field_e.b(-82)) {
           return ne.field_h;
         }
-        return jd.field_G;
+        return DialogMessagePane.field_G;
     }
 
     final static String c(byte param0) {
@@ -63,7 +63,7 @@ final class vg {
           var1 = IsaacRandom.b((byte) 89);
         }
         if (var1.length() == 0) {
-          var1 = ck.field_eb;
+          var1 = StandardContentDialog.field_eb;
         }
         return var1;
     }

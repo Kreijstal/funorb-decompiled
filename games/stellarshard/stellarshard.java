@@ -119,7 +119,7 @@ public final class stellarshard extends rb implements cf {
           }
           DualLinkDequeIterator.field_i = false;
           ll.a(16);
-          nc.field_H = 0;
+          StripedProgressWidget.field_H = 0;
           var2_int = -73 % ((param0 - 31) / 34);
           if (MouseWheelInput.field_e) {
             ll.field_c.playSample(sb.field_e[19], 100, pk.field_h * 2);
@@ -696,16 +696,16 @@ public final class stellarshard extends rb implements cf {
           }
           vh.field_e = 0;
           ta.field_p = 0;
-          nc.field_H = 3;
+          StripedProgressWidget.field_H = 3;
           te.field_c = 0;
-          sj.field_K = 0;
+          RegistrationAgreementPane.field_K = 0;
           gh.field_b = 250;
           sf.field_b = 0;
           ua.field_d = 0;
           this.field_R = 255;
           Bzip2State.field_t = qi.level;
-          nc.field_A = 0;
-          tb.field_K = 0;
+          StripedProgressWidget.field_A = 0;
+          ResizableModalDialog.field_K = 0;
           ScorePopup.field_b = 0;
           if (qi.level > 20) {
             e.field_e = 2;
@@ -906,8 +906,8 @@ public final class stellarshard extends rb implements cf {
           }
           fieldTemp$1 = bf.field_c;
           bf.field_c = bf.field_c + 1;
-          if (fieldTemp$1 > qj.field_a.stringWidth(sj.field_C)) {
-            bf.field_c = bf.field_c - qj.field_a.stringWidth(sj.field_C) * 2;
+          if (fieldTemp$1 > qj.field_a.stringWidth(RegistrationAgreementPane.field_C)) {
+            bf.field_c = bf.field_c - qj.field_a.stringWidth(RegistrationAgreementPane.field_C) * 2;
           }
           if (0 < this.field_R) {
             this.field_R = this.field_R / 2;
@@ -1245,38 +1245,38 @@ public final class stellarshard extends rb implements cf {
           if (!DualLinkDequeIterator.field_i) {
             al.field_c = 858899;
           }
-          if (nc.field_H == 1) {
+          if (StripedProgressWidget.field_H == 1) {
             if (a.entities[0].field_g < 1) {
               dupTemp$2 = a.entities[0];
               dupTemp$2.field_g = dupTemp$2.field_g + 1;
               gh.field_b = gh.field_b - 1;
             }
             if (0 >= gh.field_b) {
-              nc.field_H = 0;
+              StripedProgressWidget.field_H = 0;
             }
           }
-          if (nc.field_H == 2) {
+          if (StripedProgressWidget.field_H == 2) {
             gh.field_b = gh.field_b - 1;
             if (0 >= gh.field_b) {
               gh.field_b = 5;
-              nc.field_H = 1;
+              StripedProgressWidget.field_H = 1;
             }
           }
-          if (nc.field_H == 3) {
+          if (StripedProgressWidget.field_H == 3) {
             gh.field_b = gh.field_b - 1;
             if (gh.field_b <= 0) {
               gh.field_b = 5;
-              nc.field_H = 1;
+              StripedProgressWidget.field_H = 1;
             }
           }
           if (96 > tc.field_r) {
             tc.field_r = tc.field_r + 1;
           }
-          if (nc.field_H == 4) {
+          if (StripedProgressWidget.field_H == 4) {
             gh.field_b = gh.field_b - 1;
             if (0 >= gh.field_b) {
               gh.field_b = 5;
-              nc.field_H = 1;
+              StripedProgressWidget.field_H = 1;
             }
           }
           if (null == a.entities[0] ||
@@ -1307,7 +1307,7 @@ public final class stellarshard extends rb implements cf {
             boolean decompiledFrameCompleted12 = true;
             boolean decompiledFrameCompleted11 = true;
             if ((!si.field_jb[98] &&
-              4 != nc.field_H ||
+              4 != StripedProgressWidget.field_H ||
               !(a.entities[0].field_g > 0)) &&
               (decompiledFrameRemainder15 = !(!si.field_jb[99])) &&
               (decompiledFrameRemainder15 = !(0 >= a.entities[0].field_g))) {
@@ -1385,7 +1385,7 @@ public final class stellarshard extends rb implements cf {
                 stackIn_420_3 = 0.1;
               }
               stackIn_419_0.velocityX = stackIn_419_1 - stackIn_419_2 * stackIn_420_3;
-              if (nc.field_H == 4) {
+              if (StripedProgressWidget.field_H == 4) {
                 dupTemp$7 = a.entities[0];
                 dupTemp$7.velocityY = dupTemp$7.velocityY - 0.1 * Math.cos(3.141592653589793 * (double)a.entities[0].heading * 2.0 / 256.0);
                 dupTemp$8 = a.entities[0];
@@ -1398,7 +1398,7 @@ public final class stellarshard extends rb implements cf {
               }
               var2_int = 3;
               var3 = 5;
-              if (nc.field_H == 4) {
+              if (StripedProgressWidget.field_H == 4) {
                 var3 = 10;
                 var2_int = 6;
               }
@@ -1410,7 +1410,7 @@ public final class stellarshard extends rb implements cf {
                 }
                 stackIn_440_0 = null;
                 stackIn_440_1 = null;
-                if (nc.field_H != 4) {
+                if (StripedProgressWidget.field_H != 4) {
                   stackIn_441_0 = null;
                   stackIn_441_1 = null;
                   stackIn_441_2 = 1;
@@ -1421,7 +1421,7 @@ public final class stellarshard extends rb implements cf {
                 }
                 var4_ref_vlLifetime1 = new vl(stackIn_441_2, a.entities[0]);
                 var4_ref_vlLifetime1.field_q = 16711680;
-                if (nc.field_H == 4) {
+                if (StripedProgressWidget.field_H == 4) {
                   var4_ref_vlLifetime1.field_q = 16776960;
                   var4_ref_vlLifetime1.field_p = 10;
                 }
@@ -1435,7 +1435,7 @@ public final class stellarshard extends rb implements cf {
                 var5++;
               }
               if ((decompiledFrameCompleted11) &&
-                (4 == nc.field_H)) {
+                (4 == StripedProgressWidget.field_H)) {
                 var5 = 4 * (gh.field_b % 8);
                 while (var5 < 256) {
                   if (var15 != 0) {
@@ -1444,7 +1444,7 @@ public final class stellarshard extends rb implements cf {
                   }
                   stackIn_454_0 = null;
                   stackIn_454_1 = null;
-                  if (nc.field_H == 4) {
+                  if (StripedProgressWidget.field_H == 4) {
                     stackIn_455_0 = null;
                     stackIn_455_1 = null;
                     stackIn_455_2 = 4;
@@ -1455,7 +1455,7 @@ public final class stellarshard extends rb implements cf {
                   }
                   var4_ref_vlLifetime1Lifetime1 = new vl(stackIn_455_2, a.entities[0]);
                   var4_ref_vlLifetime1Lifetime1.field_q = 16711680;
-                  if (nc.field_H == 4) {
+                  if (StripedProgressWidget.field_H == 4) {
                     var4_ref_vlLifetime1Lifetime1.field_p = 10;
                     var4_ref_vlLifetime1Lifetime1.field_q = 16776960;
                   }
@@ -2432,7 +2432,7 @@ public final class stellarshard extends rb implements cf {
               }
             }
             if ((decompiledFrameRemainder2) && (decompiledFrameRemainder1) && (stackIn_1090_0.field_g <= 0 &&
-              0 == nc.field_H)) {
+              0 == StripedProgressWidget.field_H)) {
               stackIn_1097_0 = 1;
               decompiledFrameRemainder19 = false;
             }
@@ -2650,16 +2650,16 @@ public final class stellarshard extends rb implements cf {
             if (qi.level >= 10 &&
               mk.field_k <= 0 &&
               DualLinkDequeIterator.field_i) {
-              nc.field_A = nc.field_A - 1;
-              if (nc.field_A <= 0) {
+              StripedProgressWidget.field_A = StripedProgressWidget.field_A - 1;
+              if (StripedProgressWidget.field_A <= 0) {
                 a.entities[0] = null;
                 this.k((byte) 97);
               }
             }
             if (50 == qi.level &&
-              nc.field_A > 0) {
-              nc.field_A = nc.field_A - 1;
-              if (nc.field_A <= 0) {
+              StripedProgressWidget.field_A > 0) {
+              StripedProgressWidget.field_A = StripedProgressWidget.field_A - 1;
+              if (StripedProgressWidget.field_A <= 0) {
                 a.entities[0] = null;
                 this.k((byte) 121);
               }
@@ -2908,10 +2908,10 @@ public final class stellarshard extends rb implements cf {
           h.resetStaticState((byte) 45);
           ModalDialogHost.clearStaticReferences((byte) 77);
           AccountCreationResultPanel.clearStaticReferences(true);
-          pg.clearDeclaredStaticReferences(7694);
-          ck.m(-121);
+          StandardContentDialog.clearDeclaredStaticReferences(7694);
+          ProgressMessageDialog.m(-121);
           AccountRegistrationPanel.l(120);
-          se.clearStaticReferences((byte) 9);
+          GuestPlayConfirmationForm.clearStaticReferences((byte) 9);
           LoginPanel.clearStaticReferences(param0 ^ -16);
           DisplayNameSelectionPanel.clearStaticReferences(120);
           am.clearStaticReferences(param0 ^ 36);
@@ -2922,7 +2922,7 @@ public final class stellarshard extends rb implements cf {
           wf.clearStaticReferences(param0 + 227);
           PcmResampler.clearStaticReferences(param0 - 15392);
           tj.clearStaticReferences();
-          ad.clearStaticReferences();
+          VorbisSample.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
           gk.resetStaticState(param0 + 129);
           fc.clearStaticReferences((byte) 86);
@@ -3007,8 +3007,8 @@ public final class stellarshard extends rb implements cf {
           we.clearStaticReferences((byte) 116);
           ValidatedTextField.clearStaticReferences(0);
           EditableTextField.m(122);
-          wl.clearStaticReferences(115);
-          nc.clearStaticReferences(true);
+          ContentTransitionDialog.clearStaticReferences(115);
+          StripedProgressWidget.clearStaticReferences(true);
           NameSuggestionsPanel.clearStaticReferences(160);
           RichTextWidget.clearStaticReferences(true);
           ii.clearStaticReferences((byte) 25);
@@ -3016,7 +3016,7 @@ public final class stellarshard extends rb implements cf {
           nd.clearStaticReferences(-94);
           TextFieldValidator.clearStaticReferences(67);
           aj.clearStaticReferences((byte) 101);
-          sj.clearStaticReferences((byte) 23);
+          RegistrationAgreementPane.clearStaticReferences((byte) 23);
           fg.clearStaticReferences(param0 ^ -128);
           nb.clearStaticReferences((byte) 105);
           SoundFilter.clearStaticReferences();
@@ -3057,7 +3057,7 @@ public final class stellarshard extends rb implements cf {
           bk.clearStaticReferences(-127);
           th.clearStaticReferences(-116);
           fa.a(false);
-          vf.clearStaticReferences(false);
+          DialogMessagePane.clearStaticReferences(false);
           bh.clearStaticReferences((byte) -120);
           nh.clearStaticReferences(245);
           hf.b(-27159);
@@ -3211,7 +3211,7 @@ public final class stellarshard extends rb implements cf {
                             sb.field_e[43] = kj.a(wk.field_a, "", "eerie_creak2").a().resample((PcmResampler) (var3));
                             sb.field_e[44] = kj.a(wk.field_a, "", "eerie_creak3").a().resample((PcmResampler) (var3));
                             sb.field_e[45] = kj.a(wk.field_a, "", "eerie_creak4").a().resample((PcmResampler) (var3));
-                            sb.field_e[46] = ad.a(mf.field_b, "", "heartbeat").b().resample((PcmResampler) (var3));
+                            sb.field_e[46] = VorbisSample.loadByName(mf.field_b, "", "heartbeat").decodeAllToPcm().resample((PcmResampler) (var3));
                             sb.field_e[47] = kj.a(wk.field_a, "", "howling1").a().resample((PcmResampler) (var3));
                             sb.field_e[48] = kj.a(wk.field_a, "", "howling2").a().resample((PcmResampler) (var3));
                             sb.field_e[49] = kj.a(wk.field_a, "", "howling3").a().resample((PcmResampler) (var3));
@@ -3222,10 +3222,10 @@ public final class stellarshard extends rb implements cf {
                             sb.field_e[54] = kj.a(wk.field_a, "", "trans1").a().resample((PcmResampler) (var3));
                             sb.field_e[55] = kj.a(wk.field_a, "", "trans2").a().resample((PcmResampler) (var3));
                             sb.field_e[56] = kj.a(wk.field_a, "", "trans3").a().resample((PcmResampler) (var3));
-                            sb.field_e[57] = ad.a(mf.field_b, "", "cyber_laugh1").b().resample((PcmResampler) (var3));
-                            sb.field_e[58] = ad.a(mf.field_b, "", "cyber_laugh2").b().resample((PcmResampler) (var3));
-                            sb.field_e[59] = ad.a(mf.field_b, "", "cyber_laugh4").b().resample((PcmResampler) (var3));
-                            sb.field_e[60] = ad.a(mf.field_b, "", "cyber_laugh5_rev").b().resample((PcmResampler) (var3));
+                            sb.field_e[57] = VorbisSample.loadByName(mf.field_b, "", "cyber_laugh1").decodeAllToPcm().resample((PcmResampler) (var3));
+                            sb.field_e[58] = VorbisSample.loadByName(mf.field_b, "", "cyber_laugh2").decodeAllToPcm().resample((PcmResampler) (var3));
+                            sb.field_e[59] = VorbisSample.loadByName(mf.field_b, "", "cyber_laugh4").decodeAllToPcm().resample((PcmResampler) (var3));
+                            sb.field_e[60] = VorbisSample.loadByName(mf.field_b, "", "cyber_laugh5_rev").decodeAllToPcm().resample((PcmResampler) (var3));
                           }
                           var4_ref2 = new gk(wk.field_a, mf.field_b);
                           wk.field_a = null;
@@ -3271,19 +3271,19 @@ public final class stellarshard extends rb implements cf {
             if (param1 >= -60) {
               this.a(70, -17);
             }
-            vf.field_L = MouseWheelInput.field_c;
+            DialogMessagePane.field_L = MouseWheelInput.field_c;
             lg.field_b = 5883647;
             aj.a(50, 11236);
             ConfirmedEmailAvailabilityValidator.a(50, (byte) 63);
             MouseWheelInput.field_c = new d(oe.field_a);
-            if (vf.field_L != null) {
-              nj.field_o.removeOwnedListener(vf.field_L);
-              vf.field_L.c();
-              nj.field_o.addListener(vf.field_L);
+            if (DialogMessagePane.field_L != null) {
+              nj.field_o.removeOwnedListener(DialogMessagePane.field_L);
+              DialogMessagePane.field_L.c();
+              nj.field_o.addListener(DialogMessagePane.field_L);
             }
-            vf.field_L = MouseWheelInput.field_c;
-            nj.field_o.addListener(vf.field_L);
-            vf.field_L.d(IterableNodeHashTable.field_c / 2);
+            DialogMessagePane.field_L = MouseWheelInput.field_c;
+            nj.field_o.addListener(DialogMessagePane.field_L);
+            DialogMessagePane.field_L.d(IterableNodeHashTable.field_c / 2);
             if (!DualLinkNode.a(-1)) {
               MouseHandler.field_g = ab.a(-5094, 4);
               wh.a(-124);
@@ -3298,7 +3298,7 @@ public final class stellarshard extends rb implements cf {
             qd.a(bh.field_a, "space", "", (byte) 42);
             qd.a(bh.field_a, "nebula", "", (byte) 73);
             wh.field_e = AccountServiceResult.a("", (byte) 83, bh.field_a, "achievements_lrg");
-            pg.field_hb = AccountServiceResult.a("", (byte) -88, bh.field_a, "explosion");
+            StandardContentDialog.field_hb = AccountServiceResult.a("", (byte) -88, bh.field_a, "explosion");
             hk.field_l = AccountServiceResult.a("", (byte) 107, bh.field_a, "titlepics");
             uf.field_g = qd.a(fc.field_a, "unachieved", "basic", (byte) 106);
             ce.field_a = qd.a(fc.field_a, "locked", "basic", (byte) 60);
@@ -3722,8 +3722,8 @@ public final class stellarshard extends rb implements cf {
             }
           }
           if (e.field_e == 9) {
-            fieldTemp$2 = sj.field_K;
-            sj.field_K = sj.field_K + 1;
+            fieldTemp$2 = RegistrationAgreementPane.field_K;
+            RegistrationAgreementPane.field_K = RegistrationAgreementPane.field_K + 1;
             if (fieldTemp$2 == 5) {
               hj.a(252, 3, 1);
             }
@@ -3758,18 +3758,18 @@ public final class stellarshard extends rb implements cf {
             }
           }
           if (10 <= qi.level &&
-            nc.field_A <= 0 &&
+            StripedProgressWidget.field_A <= 0 &&
             mk.field_k <= 0 &&
             DualLinkDequeIterator.field_i) {
-            nc.field_A = 1500;
+            StripedProgressWidget.field_A = 1500;
           }
           if (null == this.field_F) {
             this.field_F = new Sprite(640, 480);
           }
           if (qi.level > 50) {
             qi.level = 50;
-            if (nc.field_A <= 0) {
-              nc.field_A = 1500;
+            if (StripedProgressWidget.field_A <= 0) {
+              StripedProgressWidget.field_A = 1500;
             }
           }
           if (qi.level == 1) {
@@ -3929,7 +3929,7 @@ public final class stellarshard extends rb implements cf {
             lh.a(DebouncedFieldValidator.field_d, (byte) 115)) {
             DualLinkDequeIterator.field_e = wb.createFullscreenCanvas(0, -107, 480, DebouncedFieldValidator.field_d, 640, 0);
             if (null != DualLinkDequeIterator.field_e) {
-              nc.a(DualLinkDequeIterator.field_e, (byte) 121);
+              StripedProgressWidget.a(DualLinkDequeIterator.field_e, (byte) 121);
             }
           }
           stackIn_24_0 = qj.field_a.field_N;
@@ -3948,7 +3948,7 @@ public final class stellarshard extends rb implements cf {
               }
             }
           }
-          vf.a(stackIn_24_0, stackIn_24_1, stackIn_24_2, stackIn_25_3, (Sprite[]) null, 320, qj.field_a, 8, (Sprite[]) null, 8, 8 + qj.field_a.field_N, l.field_f.field_N, 260, true, 240, l.field_f);
+          DialogMessagePane.a(stackIn_24_0, stackIn_24_1, stackIn_24_2, stackIn_25_3, (Sprite[]) null, 320, qj.field_a, 8, (Sprite[]) null, 8, 8 + qj.field_a.field_N, l.field_f.field_N, 260, true, 240, l.field_f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4507,19 +4507,19 @@ public final class stellarshard extends rb implements cf {
               var9Lifetime3Lifetime1 = 250;
               var10 = null;
               var11 = -1;
-              if (nc.field_H == 1) {
+              if (StripedProgressWidget.field_H == 1) {
                 var10 = pe.field_a;
                 var11 = 8;
               }
-              if (2 == nc.field_H) {
+              if (2 == StripedProgressWidget.field_H) {
                 var10 = ha.field_x;
                 var11 = 10;
               }
-              if (3 == nc.field_H) {
+              if (3 == StripedProgressWidget.field_H) {
                 var11 = 11;
                 var10 = fc.field_c;
               }
-              if (4 == nc.field_H) {
+              if (4 == StripedProgressWidget.field_H) {
                 var11 = 12;
                 var10 = ClientException.field_e;
               }
@@ -4552,7 +4552,7 @@ public final class stellarshard extends rb implements cf {
                 if (var13 > 0) {
                   var14 = 0;
                   var15 = 0;
-                  if (2 == nc.field_H) {
+                  if (2 == StripedProgressWidget.field_H) {
                     if (gh.field_b > 500) {
                       gh.field_b = 500;
                     }
@@ -4562,7 +4562,7 @@ public final class stellarshard extends rb implements cf {
                       var14 = 327680 * (gh.field_b % 50);
                     }
                   }
-                  if (nc.field_H == 3) {
+                  if (StripedProgressWidget.field_H == 3) {
                     if (gh.field_b > 1500) {
                       gh.field_b = 1500;
                     }
@@ -4572,7 +4572,7 @@ public final class stellarshard extends rb implements cf {
                       var14 = gh.field_b % 50 * 327680;
                     }
                   }
-                  if (nc.field_H == 4) {
+                  if (StripedProgressWidget.field_H == 4) {
                     if (500 < gh.field_b) {
                       gh.field_b = 500;
                     }
@@ -4582,7 +4582,7 @@ public final class stellarshard extends rb implements cf {
                       var14 = gh.field_b % 50 * 327680;
                     }
                   }
-                  if (nc.field_H == 1) {
+                  if (StripedProgressWidget.field_H == 1) {
                     if (gh.field_b == 5) {
                       var14 = 16777215;
                     }
@@ -4603,7 +4603,7 @@ public final class stellarshard extends rb implements cf {
                   var16 = 20 + (2 + var9Lifetime3Lifetime1);
                   var17 = 439;
                   SoftwareRasterizer.fillRoundedRectangle(var16, var17, -3 + var13, 18, 8, (var14 & 16711422) >> 1);
-                  if (3 == nc.field_H) {
+                  if (3 == StripedProgressWidget.field_H) {
                     SoftwareRasterizer.drawRoundedRectangleOutline(var16, var17, -3 + var13, 18, 8, var14);
                     if (var20 != 0) {
                       SoftwareRasterizer.drawRoundedRectangleOutline(var16, var17, var13 - 3, 18, 8, 4144959 & var14 >> 2);
@@ -4632,7 +4632,7 @@ public final class stellarshard extends rb implements cf {
                     if (stackIn_438_0 < stackIn_438_1) {
                       var18 = 10 - var18;
                     }
-                    if (nc.field_H == 2) {
+                    if (StripedProgressWidget.field_H == 2) {
                       SoftwareRasterizer.addRadialGlow((var13 - 35) * (10 * var19) / 10 + (136 + var16), (var18 << 2) + (136 + var17), -var18 + 9 << 4, 50, eh.field_e);
                     } else {
                       SoftwareRasterizer.addRadialGlow((var13 - 35) * (var18 + var19 * 10) / 10 + var16 + 136, 136 + var17, 144, 50, eh.field_e);
@@ -4692,18 +4692,18 @@ public final class stellarshard extends rb implements cf {
             if (this.field_R > 0) {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 16777215, this.field_R);
             }
-            if (nc.field_A > 0 &&
+            if (StripedProgressWidget.field_A > 0 &&
               DualLinkDequeIterator.field_i &&
               mk.field_k <= 0) {
-              var6Lifetime1 = dd.field_i + nc.field_A / 50 + ConfirmedEmailAvailabilityValidator.field_o;
+              var6Lifetime1 = dd.field_i + StripedProgressWidget.field_A / 50 + ConfirmedEmailAvailabilityValidator.field_o;
               l.field_f.drawParagraph(var6Lifetime1, 32, -l.field_f.field_N + 68, 575, 480, 0, 0, 1, 0, l.field_f.field_N);
               l.field_f.drawParagraph(var6Lifetime1, 32, 68 - l.field_f.field_N, 576, 479, 0, 0, 1, 0, l.field_f.field_N);
               l.field_f.drawParagraph(var6Lifetime1, 32, -l.field_f.field_N + 68, 576, 480, 16777215, -1, 1, 0, l.field_f.field_N);
             }
-            if (nc.field_A > 0 &&
+            if (StripedProgressWidget.field_A > 0 &&
               DualLinkDequeIterator.field_i &&
               qi.level >= 50) {
-              var6Lifetime2 = TextFieldValidator.field_g + hf.field_g + nc.field_A / 50 + ConfirmedEmailAvailabilityValidator.field_o;
+              var6Lifetime2 = TextFieldValidator.field_g + hf.field_g + StripedProgressWidget.field_A / 50 + ConfirmedEmailAvailabilityValidator.field_o;
               l.field_f.drawParagraph(var6Lifetime2, 32, 68 - l.field_f.field_N, 575, 480, 0, 0, 1, 0, l.field_f.field_N);
               l.field_f.drawParagraph(var6Lifetime2, 32, -l.field_f.field_N + 68, 576, 479, 0, 0, 1, 0, l.field_f.field_N);
               l.field_f.drawParagraph(var6Lifetime2, 32, -l.field_f.field_N + 68, 576, 480, 16777215, -1, 1, 0, l.field_f.field_N);
@@ -4822,13 +4822,13 @@ public final class stellarshard extends rb implements cf {
             ld.field_G = null;
             RichTextWidget.g(-33);
           }
-          bh.field_a = wl.a(1, 1);
-          wk.field_a = wl.a(1, 2);
+          bh.field_a = ContentTransitionDialog.a(1, 1);
+          wk.field_a = ContentTransitionDialog.a(1, 2);
           var2_int = 122 / ((-3 - param0) / 34);
-          mf.field_b = wl.a(1, 3);
-          PacketBuffer.field_n = wl.a(1, 4);
-          MouseHandler.field_d = wl.a(1, 5);
-          jf.field_m = wl.a(1, 7);
+          mf.field_b = ContentTransitionDialog.a(1, 3);
+          PacketBuffer.field_n = ContentTransitionDialog.a(1, 4);
+          MouseHandler.field_d = ContentTransitionDialog.a(1, 5);
+          jf.field_m = ContentTransitionDialog.a(1, 7);
           AccountCreationResultPanel.a(SpriteState.field_u, fc.field_a, (byte) 118);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

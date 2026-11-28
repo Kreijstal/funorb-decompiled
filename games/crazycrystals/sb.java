@@ -105,7 +105,7 @@ final class sb extends InteractiveWidget {
             ResourceArchive var3 = (ResourceArchive) null;
             sb.a((ResourceArchive) null, 6);
           }
-          hb.field_k = bl.a(param0, "initialset", "level-lost").a();
+          hb.field_k = VorbisSample.loadByName(param0, "initialset", "level-lost").decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "sb.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

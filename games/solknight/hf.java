@@ -384,8 +384,8 @@ final class hf {
             String var5 = (String) null;
             hf.a(false, -42, false, (String) null);
           }
-          gf.field_cb = new s(u.field_b, ClientException.field_a);
-          u.field_b.showDialog(gf.field_cb, param1 ^ 17105);
+          ContentTransitionDialog.field_cb = new StandardContentDialog(u.field_b, ClientException.field_a);
+          u.field_b.showDialog(ContentTransitionDialog.field_cb, param1 ^ 17105);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "hf.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -398,7 +398,7 @@ final class hf {
         this.field_k = ml.field_e;
         this.field_e = ek.field_a;
         if (param0) {
-          this.field_g = qe.field_G;
+          this.field_g = RegistrationAgreementPane.field_G;
         } else {
           this.field_g = null;
         }

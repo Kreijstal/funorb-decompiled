@@ -90,11 +90,11 @@ final class rh {
               }
               if (!stackIn_13_0 ||
                 !(var17 * var14 - var16 * var15 >= 0)) {
-                var12Lifetime1 = wl.field_P[var9];
+                var12Lifetime1 = ContentTransitionDialog.field_P[var9];
                 if (var12Lifetime1 != -2147483648) {
-                  var13Lifetime1 = wl.field_P[var10];
+                  var13Lifetime1 = ContentTransitionDialog.field_P[var10];
                   if (var13Lifetime1 != -2147483648) {
-                    var14 = wl.field_P[var11];
+                    var14 = ContentTransitionDialog.field_P[var11];
                     if (var14 != -2147483648) {
                       var15 = -var6 + (var14 + var12Lifetime1) + var13Lifetime1;
                       stackIn_32_0 = IntrusiveNode.field_h.length;

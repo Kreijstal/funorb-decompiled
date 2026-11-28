@@ -8,7 +8,7 @@ final class sa {
     static int field_b;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        jc.field_O.a(param7, param5, param0, param6, param3, param1, param2);
+        ResizableModalDialog.field_O.a(param7, param5, param0, param6, param3, param1, param2);
         if (param4 != 0) {
           field_c = 35;
         }

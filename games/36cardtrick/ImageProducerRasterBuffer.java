@@ -44,7 +44,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
               var3_int = 1;
               ii.field_a = false;
             }
-            uk.a(ej.r(-6545), var3_int != 0, (byte) -96, aj.field_p, TextLayout.a(-1));
+            uk.a(StandardContentDialog.r(-6545), var3_int != 0, (byte) -96, aj.field_p, TextLayout.a(-1));
             return;
           }
           if (!lc.a((byte) -82)) {
@@ -57,7 +57,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
             nl.a(param0, -125);
             return;
           }
-          ej.a(false, (byte) 55, param2);
+          StandardContentDialog.a(false, (byte) 55, param2);
           ll.a(0, (byte) 115, param0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

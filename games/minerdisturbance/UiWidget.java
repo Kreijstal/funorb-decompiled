@@ -179,12 +179,12 @@ class UiWidget extends IntrusiveNode {
     final static void e(int param0) {
         if (param0 == 26313) {
           kb.field_b = new AccountRegistrationPanel();
-          de.field_a.a((byte) -65, (UiWidget) (kb.field_b));
+          de.field_a.replaceContent((byte) -65, (UiWidget) (kb.field_b));
           return;
         }
         UiWidget.a((byte) 55, 'ﾗ', (CharSequence) null);
         kb.field_b = new AccountRegistrationPanel();
-        de.field_a.a((byte) -65, (UiWidget) (kb.field_b));
+        de.field_a.replaceContent((byte) -65, (UiWidget) (kb.field_b));
     }
 
     final boolean processKeyInput(byte param0, int param1, char param2) {
@@ -311,14 +311,14 @@ class UiWidget extends IntrusiveNode {
         var5 = this.isFocused(param3 ^ 91) ? 1 : 0;
         if (!param0) {
           if (var5 != 0 &&
-            0 != jk.field_ab) {
+            0 != ContentTransitionDialog.field_ab) {
             this.blur(4966);
             if (var7 != 0) {
               if (0 != ki.field_n) {
                 this.handleWheel(param1, ki.field_n, NodeHashTableIterator.field_e, nk.field_w, (byte) -123, this, param2);
               }
-              if (jk.field_ab != 0) {
-                if (this.pointerPressed(wi.field_w, param1, param3 + 0, GameAppletShell.field_e, jk.field_ab, this, param2)) {
+              if (ContentTransitionDialog.field_ab != 0) {
+                if (this.pointerPressed(wi.field_w, param1, param3 + 0, GameAppletShell.field_e, ContentTransitionDialog.field_ab, this, param2)) {
                   param0 = false;
                 }
                 this.blur(4966);
@@ -339,8 +339,8 @@ class UiWidget extends IntrusiveNode {
         } else {
           if (0 != ki.field_n) {
             if (var5 == 0) {
-              if (jk.field_ab != 0 &&
-                this.pointerPressed(wi.field_w, param1, param3 + 0, GameAppletShell.field_e, jk.field_ab, this, param2)) {
+              if (ContentTransitionDialog.field_ab != 0 &&
+                this.pointerPressed(wi.field_w, param1, param3 + 0, GameAppletShell.field_e, ContentTransitionDialog.field_ab, this, param2)) {
                 param0 = false;
                 if (var7 == 0) {
                 }
@@ -379,8 +379,8 @@ class UiWidget extends IntrusiveNode {
             this.handleWheel(param1, ki.field_n, NodeHashTableIterator.field_e, nk.field_w, (byte) -123, this, param2);
           }
           regionExit1: {
-            if (jk.field_ab != 0) {
-              if (this.pointerPressed(wi.field_w, param1, param3 + 0, GameAppletShell.field_e, jk.field_ab, this, param2)) {
+            if (ContentTransitionDialog.field_ab != 0) {
+              if (this.pointerPressed(wi.field_w, param1, param3 + 0, GameAppletShell.field_e, ContentTransitionDialog.field_ab, this, param2)) {
                 param0 = false;
                 if (var7 == 0) {
                   break regionExit1;

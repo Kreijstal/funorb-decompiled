@@ -65,7 +65,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           if (param1 != 0) {
             return;
           }
-          this.a(param3 + this.field_s, param0 + this.field_n, -9111);
+          this.drawDialogBackground(param3 + this.field_s, param0 + this.field_n, -9111);
           super.drawWidget(param0, param1, param2 + 0, param3);
           return;
         }
@@ -76,7 +76,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         }
         de.a(param2 ^ -1048454, me.field_f);
         SoftwareRasterizer.clearRaster();
-        this.a(0, 0, -9111);
+        this.drawDialogBackground(0, 0, -9111);
         super.drawWidget(-param0 - this.field_n, param1, param2, -this.field_s - param3);
         ValidatedTextField.g((byte) -105);
         me.field_f.drawWithOpacity(param3 + this.field_s, param0 + this.field_n, this.field_D);
@@ -93,7 +93,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         }
     }
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void drawDialogBackground(int param0, int param1, int param2);
 
     final static boolean c(boolean param0) {
         boolean stackIn_7_0 = false;
@@ -145,7 +145,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           var5 = 0;
           while (true) {
             if (var5 >= var4.length) {
-              stackIn_21_0 = dh.a(var3[-1 + var3.length], (byte) 118);
+              stackIn_21_0 = ProgressMessageDialog.a(var3[-1 + var3.length], (byte) 118);
               return stackIn_21_0;
             }
             var6 = var4[var5];

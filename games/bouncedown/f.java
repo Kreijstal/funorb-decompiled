@@ -27,7 +27,7 @@ final class f {
             if (param1.length() <= var3_int) {
               return true;
             }
-            if (uc.a(2, param1.charAt(var3_int))) {
+            if (DialogMessagePane.a(2, param1.charAt(var3_int))) {
               var3_int++;
               continue;
             }

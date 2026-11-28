@@ -155,7 +155,7 @@ final class IsaacRandom {
         try {
           qg.field_c = param2;
           ValidatedTextField.field_T = param1;
-          MidiPlayer.a(rk.field_Z, param0, param3 - 16152);
+          MidiPlayer.a(ProgressDialog.field_Z, param0, param3 - 16152);
           if (param3 != -105) {
             field_h = (String) null;
           }

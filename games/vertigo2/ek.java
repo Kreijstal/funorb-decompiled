@@ -102,7 +102,7 @@ final class ek extends TextureOperator {
         var8 = var23[0];
         var9 = var23[1];
         var10 = var23[2];
-        for (var11 = 0; we.field_M > var11; var11++) {
+        for (var11 = 0; StripedProgressWidget.field_M > var11; var11++) {
           var12 = var32[var11];
           var13 = var33[var11];
           var14 = var34[var11];

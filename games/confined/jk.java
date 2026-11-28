@@ -41,7 +41,7 @@ final class jk {
         var7 = Confined.field_J ? 1 : 0;
         var2 = -5 / ((-36 - param1) / 52);
         var3 = 0;
-        var4 = tg.field_H;
+        var4 = GuestPlayConfirmationForm.field_H;
         if (var4 < 5) {
           var3 = var4 * var4 * 8192 / 1100;
           var5 = 1;

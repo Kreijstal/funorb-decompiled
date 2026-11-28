@@ -38,7 +38,7 @@ abstract class va {
             return null;
           }
           if (kk.field_d < GzipDecompressor.field_e + wi.field_l) {
-            return s.field_ib;
+            return StandardContentDialog.field_ib;
           }
           return null;
         }
@@ -49,7 +49,7 @@ abstract class va {
           return null;
         }
         if (kk.field_d < GzipDecompressor.field_e + wi.field_l) {
-          return s.field_ib;
+          return StandardContentDialog.field_ib;
         }
         return null;
     }

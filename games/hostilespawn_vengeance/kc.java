@@ -36,7 +36,7 @@ final class kc extends RuntimeException {
           ln.field_a.field_f[param0] = 2;
           return false;
         }
-        if (wb.field_Z) {
+        if (ResizableModalDialog.field_Z) {
           pl.field_k = ln.field_a.field_r[param0];
           var2Lifetime2 = -127 / ((param1 + 72) / 38);
           ln.field_a.field_e[param0] = true;

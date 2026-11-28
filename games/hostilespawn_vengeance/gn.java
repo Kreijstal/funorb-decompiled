@@ -65,7 +65,7 @@ final class gn {
         if (null != ImageProducerRasterBuffer.field_q) {
           return;
         }
-        if (0 >= wb.field_S) {
+        if (0 >= ResizableModalDialog.field_S) {
           this.field_b = false;
         }
         if (this.field_b) {
@@ -197,7 +197,7 @@ final class gn {
         if (param0 != 28433) {
           return true;
         }
-        stackIn_6_0 = (this.field_q <= ca.field_d) && (wb.field_S > 0);
+        stackIn_6_0 = (this.field_q <= ca.field_d) && (ResizableModalDialog.field_S > 0);
         return stackIn_6_0;
     }
 

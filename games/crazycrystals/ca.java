@@ -97,7 +97,7 @@ final class ca extends IntrusiveNode {
         rc.field_b[SecondaryNodeDeque.field_c] = param3;
         wp.field_d[SecondaryNodeDeque.field_c] = SecondaryNodeDeque.field_c;
         mh.field_l[SecondaryNodeDeque.field_c] = param2;
-        if (param2 >= ae.field_F) {
+        if (param2 >= GuestPlayConfirmationForm.field_F) {
           if (param2 <= uo.field_m) {
             dk.field_l[SecondaryNodeDeque.field_c] = param0;
             BufferedSocket.field_i[SecondaryNodeDeque.field_c] = param1;

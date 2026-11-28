@@ -101,7 +101,7 @@ final class tf {
           if (null != NetworkArchiveRequest.field_r) {
             tp.field_f.writePrefixedString(NetworkArchiveRequest.field_r, (byte) -117);
           }
-          tg.appendEncryptedLoginPayload(SectorCacheStore.field_c, tp.field_f, gn.field_S, -107, lm.field_j);
+          tg.appendEncryptedLoginPayload(SectorCacheStore.field_c, tp.field_f, FullscreenStatusDialog.field_S, -107, lm.field_j);
           tp.field_f.backpatchShortLength(977272835, -var5_int + tp.field_f.position);
           ak.a(-1, (byte) -48);
           return;

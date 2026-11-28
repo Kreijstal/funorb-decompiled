@@ -13,10 +13,10 @@ final class EmailFormatValidator extends TextFieldValidator {
 
     final static void d(byte param0) {
         if (null != ah.field_e) {
-          ah.field_e.f(true);
+          ah.field_e.closeDialog(true);
         }
         sj.field_d = new DisplayNameSelectionPanel();
-        gf.field_cb.c(-3399, sj.field_d);
+        ContentTransitionDialog.field_cb.replaceContent(-3399, sj.field_d);
         if (param0 < 117) {
           field_o = 48;
         }

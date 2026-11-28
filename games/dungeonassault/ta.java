@@ -8,7 +8,7 @@ final class ta {
     static String field_h;
     static String field_g;
     static BitmapFont field_e;
-    static jk field_a;
+    static StandardContentDialog field_a;
     static IntrusiveDeque field_f;
 
     final static String a(BitmapFont param0, int param1, int param2, String param3, int param4) {
@@ -23,7 +23,7 @@ final class ta {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 > 103) {
-            stackIn_4_0 = ia.a(param2, param0, CombatState.formatPlayerNameWithTitle((byte) 66, param1, param3), 0);
+            stackIn_4_0 = GuestPlayConfirmationForm.a(param2, param0, CombatState.formatPlayerNameWithTitle((byte) 66, param1, param3), 0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

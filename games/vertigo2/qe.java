@@ -121,7 +121,7 @@ final class qe extends RichTextWidget {
               var22.drawAdditive(var9, var10 - (var22.field_t >> 1), 256);
               return;
             }
-            if (qm.field_G != var6) {
+            if (GuestPlayConfirmationForm.field_G != var6) {
               return;
             }
             var21 = jn.field_b[1];
@@ -188,7 +188,7 @@ final class qe extends RichTextWidget {
               var28.drawAdditive(var9Lifetime1, var10Lifetime1 - (var28.field_t >> 1), 256);
               return;
             }
-            if (qm.field_G != var6) {
+            if (GuestPlayConfirmationForm.field_G != var6) {
               return;
             }
             var27 = jn.field_b[1];
@@ -257,7 +257,7 @@ final class qe extends RichTextWidget {
             var33.drawAdditive(var9Lifetime2, var10Lifetime2 - (var33.field_t >> 1), 256);
             return;
           }
-          if (qm.field_G != var6Lifetime1) {
+          if (GuestPlayConfirmationForm.field_G != var6Lifetime1) {
             return;
           }
           var32 = jn.field_b[1];

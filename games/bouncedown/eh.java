@@ -87,7 +87,7 @@ final class eh {
           var42 = var51;
           var8 = var42;
           var66 = new int[param0.field_d];
-          var63 = uc.field_D;
+          var63 = DialogMessagePane.field_D;
           var64 = ih.field_db;
           var65 = nk.field_b;
           for (var13 = 0; var13 < param0.field_d; var13++) {
@@ -128,19 +128,19 @@ final class eh {
             var15Lifetime1 = param0.field_O[var14Lifetime1];
             var16 = param0.field_P[var14Lifetime1];
             var17 = param0.field_l[var14Lifetime1];
-            if (param0.field_F[var14Lifetime1] < uc.field_D.length) {
+            if (param0.field_F[var14Lifetime1] < DialogMessagePane.field_D.length) {
               stackIn_26_0 = param0.field_F[var14Lifetime1];
             } else {
               stackIn_26_0 = -1;
             }
             var18 = stackIn_26_0;
-            if (param0.field_I[var14Lifetime1] < uc.field_D.length) {
+            if (param0.field_I[var14Lifetime1] < DialogMessagePane.field_D.length) {
               stackIn_29_0 = param0.field_I[var14Lifetime1];
             } else {
               stackIn_29_0 = -1;
             }
             var19 = stackIn_29_0;
-            if (param0.field_Q[var14Lifetime1] >= uc.field_D.length) {
+            if (param0.field_Q[var14Lifetime1] >= DialogMessagePane.field_D.length) {
               stackIn_32_0 = -1;
             } else {
               stackIn_32_0 = param0.field_Q[var14Lifetime1];
@@ -233,7 +233,7 @@ final class eh {
         if (sj.field_f == null) {
           return;
         }
-        mh.a(sj.field_f, (byte) 112);
+        ContentTransitionDialog.a(sj.field_f, (byte) 112);
         sj.field_f.exitFullscreen((byte) -113, DebouncedFieldValidator.field_e);
         sj.field_f = null;
         if (vd.field_b != null) {

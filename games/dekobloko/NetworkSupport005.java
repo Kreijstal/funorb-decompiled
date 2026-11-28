@@ -31,12 +31,12 @@ final class NetworkSupport005 extends HashNode {
         }
         cipherPacketBufferLocal10 = LabeledWidgetContainer.cipherPacketBufferState0001;
         integerLocal5 = cipherPacketBufferLocal10.readUnsignedByte((byte) -99);
-        UiComponentPart019.integerState0505 = 127 & integerLocal5;
+        BirthDateChatEnableForm.integerState0505 = 127 & integerLocal5;
         stackBooleanLocal1 = ((integerLocal5 & 128) != 0);
         MixedSupport043.booleanState0050 = stackBooleanLocal1;
         MixedSupport121.integerState0777 = cipherPacketBufferLocal10.readUnsignedByte((byte) -71);
         MixedSupport036.longState0015 = cipherPacketBufferLocal10.readLong((byte) -108);
-        if (UiComponentPart019.integerState0505 != 2) {
+        if (BirthDateChatEnableForm.integerState0505 != 2) {
           Bzip2State.integerState0873 = 0;
           MixedSupport058.integerState0318 = 0;
         } else {
@@ -51,11 +51,11 @@ final class NetworkSupport005 extends HashNode {
         } else {
           MixedSupport112.stringState0489 = cipherPacketBufferLocal10.readNullTerminatedString((byte) -38);
         }
-        if (UiComponentPart019.integerState0505 == 1) {
+        if (BirthDateChatEnableForm.integerState0505 == 1) {
           ClientException.integerState0141 = cipherPacketBufferLocal10.readUnsignedShort(3);
           MixedSupport106.stringState0456 = cipherPacketBufferLocal10.readNullTerminatedString((byte) -38);
         } else {
-          if (UiComponentPart019.integerState0505 != 4) {
+          if (BirthDateChatEnableForm.integerState0505 != 4) {
             MixedSupport106.stringState0456 = null;
             ClientException.integerState0141 = 0;
           } else {
@@ -64,14 +64,14 @@ final class NetworkSupport005 extends HashNode {
           }
         }
         if (!booleanArgument2) {
-          UiComponentPart014.stringState0248 = MixedSupport077.computeString0958(80, 0, cipherPacketBufferLocal10);
+          FullscreenStatusDialog.stringState0248 = MixedSupport077.computeString0958(80, 0, cipherPacketBufferLocal10);
           MixedSupport034.integerArrayState0043 = null;
           return new MixedSupport056(booleanArgument2);
         }
         integerLocal7 = cipherPacketBufferLocal10.readUnsignedShort(3);
         try {
-          networkSupport007Local11 = UiComponentPart033.networkSupport012State0001.computeNetworkSupport0071535(127, integerLocal7);
-          UiComponentPart014.stringState0248 = networkSupport007Local11.computeString1043((byte) -61);
+          networkSupport007Local11 = AccountCreationResultPanel.networkSupport012State0001.computeNetworkSupport0071535(127, integerLocal7);
+          FullscreenStatusDialog.stringState0248 = networkSupport007Local11.computeString1043((byte) -61);
           if (MixedSupport112.stringState0489.equals(MixedSupport089.stringState0372)) {
             stackIntegerArrayLocal3 = null;
           } else {
@@ -82,7 +82,7 @@ final class NetworkSupport005 extends HashNode {
           caughtExceptionLocal4 = caughtParameterLocal12;
           exceptionLocal8 = (Exception) (Object) caughtExceptionLocal4;
           NetworkArchiveRequestManager.performAction1289((Throwable) ((Object) exceptionLocal8), 16408, "CC1");
-          UiComponentPart014.stringState0248 = null;
+          FullscreenStatusDialog.stringState0248 = null;
           MixedSupport034.integerArrayState0043 = null;
           return new MixedSupport056(booleanArgument2);
         }

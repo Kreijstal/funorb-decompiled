@@ -12,7 +12,7 @@ final class IntrusiveDeque {
           fb.field_m = param1;
           pb.field_i = param3;
           Lexicominos.a(SoftwareRasterizer.field_f / 2, 67, SoftwareRasterizer.field_a / 2);
-          vc.a(-5094, param1.field_t, param1.field_t + param1.field_G, param3.field_t, param3.field_G + param3.field_t);
+          DialogMessagePane.a(-5094, param1.field_t, param1.field_t + param1.field_G, param3.field_t, param3.field_G + param3.field_t);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ng.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

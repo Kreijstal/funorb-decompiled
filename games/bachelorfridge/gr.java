@@ -45,10 +45,10 @@ final class gr {
             if (!BirthDateValidator.a(3, MoveEvent.field_s)) {
               var2 = lga.a(true, new String[]{bd.field_k}, ResetSpecial.field_r);
               if (var10 != 0) {
-                var2 = lga.a(true, new String[]{bd.field_k}, uma.field_O);
+                var2 = lga.a(true, new String[]{bd.field_k}, NumericDateInputWidget.field_O);
               }
             } else {
-              var2 = lga.a(true, new String[]{bd.field_k}, uma.field_O);
+              var2 = lga.a(true, new String[]{bd.field_k}, NumericDateInputWidget.field_O);
             }
             if (MoveOrder.field_k) {
               ModalDialog.a((String) null, 0, param0 + 115, (String) null, (String) (var2), 2);
@@ -79,7 +79,7 @@ final class gr {
             } else {
               if (var6 == 0) {
                 if (SnowAnimation.field_w == null &&
-                  am.field_O) {
+                  ResizableModalDialog.field_O) {
                   var4 = "[" + FlyEvent.field_r + "] ";
                 }
                 if (null != SnowAnimation.field_w) {

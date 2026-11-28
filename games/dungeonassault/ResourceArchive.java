@@ -81,7 +81,7 @@ final class ResourceArchive {
           field_a = (String) null;
         }
         cd.field_f = new AccountRegistrationPanel();
-        ta.field_a.b(1, cd.field_f);
+        ta.field_a.replaceContent(1, cd.field_f);
     }
 
     final static void initializeLogoAnimation(byte param0, ResourceArchive param1, PcmStreamMixer param2, int param3) {

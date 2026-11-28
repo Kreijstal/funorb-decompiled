@@ -119,7 +119,7 @@ final class kr {
         int var3 = Vertigo2.field_L ? 1 : 0;
         u[] var1 = new u[eo.field_m];
         for (var2 = 0; eo.field_m > var2; var2++) {
-          var1[var2] = new u(ql.field_M, vj.field_c, ca.field_a[var2], pc.field_a[var2], mh.field_c[var2], vi.field_w[var2], se.field_y[var2], in.field_c);
+          var1[var2] = new u(BirthDateChatEnableForm.field_M, vj.field_c, ca.field_a[var2], pc.field_a[var2], mh.field_c[var2], vi.field_w[var2], se.field_y[var2], in.field_c);
         }
         la.a((byte) 17);
         if (param0 >= -19) {

@@ -3,7 +3,7 @@
  */
 final class BirthDateValidator extends DebouncedFieldValidator implements TextFieldListener, ufa {
     static String field_g;
-    sh field_e;
+    DateInputWidget field_e;
     static String field_f;
 
     final static boolean a(int param0, String param1) {
@@ -52,9 +52,9 @@ final class BirthDateValidator extends DebouncedFieldValidator implements TextFi
         String stackIn_4_0 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var2_int = this.field_e.d((byte) 112);
-          var3 = this.field_e.f((byte) 99);
-          var4 = this.field_e.j(-1);
+          var2_int = this.field_e.getDay((byte) 112);
+          var3 = this.field_e.getMonthIndex((byte) 99);
+          var4 = this.field_e.getYear(-1);
           var5 = kja.a(27168);
           if (1890 <= var4 &&
             -3 + var5 >= var4) {
@@ -88,10 +88,10 @@ final class BirthDateValidator extends DebouncedFieldValidator implements TextFi
 
     public final boolean hasMissingInput(byte param0) {
         if (param0 == 5) {
-          return this.field_e.k(param0 ^ -81);
+          return this.field_e.isDateEmpty(param0 ^ -81);
         }
         BirthDateValidator.releaseStatics(97);
-        return this.field_e.k(param0 ^ -81);
+        return this.field_e.isDateEmpty(param0 ^ -81);
     }
 
     final jg evaluateValidationStatus(byte param0) {
@@ -105,9 +105,9 @@ final class BirthDateValidator extends DebouncedFieldValidator implements TextFi
         jg stackIn_13_0 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var2_int = this.field_e.d((byte) 107);
-          var3 = this.field_e.f((byte) 73);
-          var4 = this.field_e.j(param0 - 36);
+          var2_int = this.field_e.getDay((byte) 107);
+          var3 = this.field_e.getMonthIndex((byte) 73);
+          var4 = this.field_e.getYear(param0 - 36);
           if (param0 != 35) {
             field_g = (String) null;
           }

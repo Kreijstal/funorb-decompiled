@@ -36,7 +36,7 @@ abstract class MouseWheelInput {
           var3 = 0;
           if (var1_int != 0 &&
             0 <= DebouncedFieldValidator.field_c.field_j) {
-            var3 = pe.field_db[DebouncedFieldValidator.field_c.field_j];
+            var3 = ProgressDialog.field_db[DebouncedFieldValidator.field_c.field_j];
             if (var3 == 2 ||
               var3 == 5) {
               CrossfadingMidiPcmStream.b((byte) -103);

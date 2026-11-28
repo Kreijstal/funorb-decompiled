@@ -58,7 +58,7 @@ abstract class TextLayout {
         if (!sg.field_a.tryLoadAllGroups((byte) 88)) {
           return rj.field_w + " - " + sg.field_a.getArchiveLoadPercent(2) + "%";
         }
-        return tj.field_H;
+        return GuestPlayConfirmationForm.field_H;
     }
 
     final int getMaxLineRightX(byte param0) {

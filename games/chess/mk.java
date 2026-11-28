@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mk {
-    static ch field_e;
+    static ProgressDialog field_e;
     static int field_c;
     static long field_b;
     static int field_a;

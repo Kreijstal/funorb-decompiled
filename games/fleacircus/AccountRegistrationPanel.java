@@ -365,19 +365,19 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         var6 = fleas.field_A ? 1 : 0;
         try {
           if (param0 == 0) {
-            lk.a(-15493, "terms.ws");
+            StripedProgressWidget.a(-15493, "terms.ws");
           }
           if (param0 != 0 ||
             var6 != 0) {
             if (param0 != 1) {
               if (param0 == 2) {
-                lk.a(-15493, "conduct.ws");
+                StripedProgressWidget.a(-15493, "conduct.ws");
                 if (var6 != 0) {
-                  lk.a(-15493, "privacy.ws");
+                  StripedProgressWidget.a(-15493, "privacy.ws");
                 }
               }
             } else {
-              lk.a(-15493, "privacy.ws");
+              StripedProgressWidget.a(-15493, "privacy.ws");
             }
           }
           var5_int = 8 % ((param3 + 36) / 61);

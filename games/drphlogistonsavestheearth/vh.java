@@ -37,7 +37,7 @@ final class vh {
             vh.a(-113);
           }
           if (fl.a(param3, param0, param1, (byte) -98)) {
-            return hd.c(true);
+            return StripedProgressWidget.c(true);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

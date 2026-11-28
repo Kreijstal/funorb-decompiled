@@ -117,7 +117,7 @@ final class me {
         RuntimeException var5 = null;
         long var6 = 0L;
         PcmSample var8 = null;
-        sl var9 = null;
+        VorbisSample var9 = null;
         PcmSample stackIn_2_0 = null;
         Object stackIn_6_0 = null;
         PcmSample stackIn_17_0 = null;
@@ -141,15 +141,15 @@ final class me {
             stackIn_6_0 = null;
             return (PcmSample) (stackIn_6_0);
           }
-          var9 = (sl) (this.field_j.a(true, var6));
+          var9 = (VorbisSample) (this.field_j.a(true, var6));
           if (var9 == null) {
-            var9 = sl.a(this.field_c, param0, param1);
+            var9 = VorbisSample.load(this.field_c, param0, param1);
             if (var9 == null) {
               return null;
             }
             this.field_j.a((byte) 113, var9, var6);
           }
-          var8Lifetime1 = var9.a(param2);
+          var8Lifetime1 = var9.decodeToPcm(param2);
           if (var8Lifetime1 == null) {
             return null;
           }

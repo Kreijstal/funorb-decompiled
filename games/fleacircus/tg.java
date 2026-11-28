@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tg {
-    static fc field_h;
+    static FullscreenNoticeType field_h;
     static double[] field_b;
     static boolean field_g;
     static int field_d;
@@ -68,7 +68,7 @@ final class tg {
 
     static {
         int var0 = 0;
-        field_h = new fc();
+        field_h = new FullscreenNoticeType();
         field_g = true;
         field_b = new double[65536];
         field_c = new double[65536];

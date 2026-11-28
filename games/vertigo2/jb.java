@@ -363,7 +363,7 @@ final class jb extends TextureOperator {
           var8 = var20[0];
           var9 = var20[1];
           var10 = var20[2];
-          for (var11 = 0; we.field_M > var11; var11++) {
+          for (var11 = 0; StripedProgressWidget.field_M > var11; var11++) {
             this.a(var34[var11], var35[var11], var36[var11], 12288);
             this.field_E = this.field_E + this.field_I;
             this.field_K = this.field_K + this.field_D;
@@ -411,7 +411,7 @@ final class jb extends TextureOperator {
         var8Lifetime1 = var20Lifetime1[0];
         var9Lifetime1 = var20Lifetime1[1];
         var10Lifetime1 = var20Lifetime1[2];
-        for (var11Lifetime1 = 0; we.field_M > var11Lifetime1; var11Lifetime1++) {
+        for (var11Lifetime1 = 0; StripedProgressWidget.field_M > var11Lifetime1; var11Lifetime1++) {
           this.a(var25[var11Lifetime1], var26[var11Lifetime1], var27[var11Lifetime1], 12288);
           this.field_E = this.field_E + this.field_I;
           this.field_K = this.field_K + this.field_D;

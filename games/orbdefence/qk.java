@@ -8,7 +8,7 @@ final class qk {
 
     final static void a(String param0, byte param1) {
         try {
-          pc.a(param0, true);
+          StandardContentDialog.a(param0, true);
           int var2_int = 12 % ((26 - param1) / 62);
           vd.a(false, -536866817, ResourceArchive.field_d);
         } catch (RuntimeException runtimeException) {

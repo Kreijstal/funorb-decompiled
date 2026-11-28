@@ -256,7 +256,7 @@ final class ol extends TextureOperator {
           var16 = this.field_M[var7 - 1];
           if (this.field_K + var16 < var9 &&
             var15 - this.field_K > var9) {
-            for (var4 = 0; we.field_M > var4; var4++) {
+            for (var4 = 0; StripedProgressWidget.field_M > var4; var4++) {
               var6 = 0;
               if (var12 != 0) {
                 stackIn_22_0 = this.field_L;
@@ -264,7 +264,7 @@ final class ol extends TextureOperator {
                 stackIn_22_0 = -this.field_L;
               }
               var5 = stackIn_22_0;
-              for (var8 = rh.field_O[var4] + (this.field_G * var5 >> 12); var8 < 0; var8 += 4096) {
+              for (var8 = DialogMessagePane.field_O[var4] + (this.field_G * var5 >> 12); var8 < 0; var8 += 4096) {
               }
               while (var8 > 4096) {
                 var8 -= 4096;
@@ -289,7 +289,7 @@ final class ol extends TextureOperator {
             }
           } else {
             var19Lifetime1 = var18;
-            qq.a(var19Lifetime1, 0, we.field_M, 0);
+            qq.a(var19Lifetime1, 0, StripedProgressWidget.field_M, 0);
           }
         }
         return var3;

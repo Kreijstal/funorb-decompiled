@@ -39,7 +39,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         ie.field_g = null;
         ul.field_n = -1;
         bk.field_p = 0;
-        sj.field_R = false;
+        DialogMessagePane.field_R = false;
         bi.field_h = -1;
         if (param0 != 19630) {
           ValidatedTextField.m(119);

@@ -84,8 +84,8 @@ final class ee {
           db.field_g > 0) {
           fieldTemp$0 = db.field_g - 1;
           db.field_g = db.field_g - 1;
-          var2_ref_byte__ = ck.field_ib[fieldTemp$0];
-          ck.field_ib[db.field_g] = null;
+          var2_ref_byte__ = ProgressMessageDialog.field_ib[fieldTemp$0];
+          ProgressMessageDialog.field_ib[db.field_g] = null;
           return var2_ref_byte__;
         }
         if (param0 == 5000 &&

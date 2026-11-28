@@ -71,9 +71,9 @@ final class IntrusiveDeque {
     final static boolean b(byte param0) {
         if (param0 < 65) {
           field_c = (String) null;
-          return ge.field_x;
+          return RegistrationAgreementPane.field_x;
         }
-        return ge.field_x;
+        return RegistrationAgreementPane.field_x;
     }
 
     final IntrusiveNode nextForward(boolean param0) {

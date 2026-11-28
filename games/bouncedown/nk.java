@@ -13,7 +13,7 @@ final class nk {
     private int field_g;
     private int field_m;
     static int[] field_b;
-    static sh field_a;
+    static ProgressMessageDialog field_a;
     static String field_e;
 
     private final void a(int param0, int param1, String param2, int param3, int param4) {
@@ -189,7 +189,7 @@ final class nk {
                       return;
                     }
                     if (sj.field_f != null) {
-                      mh.a(sj.field_f, (byte) 122);
+                      ContentTransitionDialog.a(sj.field_f, (byte) 122);
                       sj.field_f.exitFullscreen((byte) -124, DebouncedFieldValidator.field_e);
                       sj.field_f = null;
                       ch.field_h.requestFocus();
@@ -222,7 +222,7 @@ final class nk {
                       return;
                     }
                     if (null != sj.field_f) {
-                      mh.a(sj.field_f, (byte) 84);
+                      ContentTransitionDialog.a(sj.field_f, (byte) 84);
                       sj.field_f.exitFullscreen((byte) -127, DebouncedFieldValidator.field_e);
                       sj.field_f = null;
                       ch.field_h.requestFocus();
@@ -246,10 +246,10 @@ final class nk {
                       } else {
                         if (param2) {
                           CipherPacketBuffer.field_k = 1;
-                          if (uc.field_C < 256) {
+                          if (DialogMessagePane.field_C < 256) {
                             CipherPacketBuffer.field_k = 0;
                           }
-                          if (!(uc.field_C <= 384)) {
+                          if (!(DialogMessagePane.field_C <= 384)) {
                             CipherPacketBuffer.field_k = 2;
                           }
                         } else {
@@ -306,7 +306,7 @@ final class nk {
               nb.field_e = 0;
               kg.field_f = 0;
               vg.field_j = 0;
-              k.field_C = 0;
+              GuestPlayConfirmationForm.field_C = 0;
               PasswordValidator.field_k = false;
               qe.field_f = 0;
               qf.field_c = 0;
@@ -670,10 +670,10 @@ final class nk {
           var12 = var8Lifetime2;
           var13 = 8 + od.field_f.field_s;
           var14 = 16697912;
-          if (var10Lifetime1 <= uc.field_C &&
-            uc.field_C < var10Lifetime1 + var12 &&
-            var11 <= ll.field_y &&
-            var13 + var11 > ll.field_y &&
+          if (var10Lifetime1 <= DialogMessagePane.field_C &&
+            DialogMessagePane.field_C < var10Lifetime1 + var12 &&
+            var11 <= StripedProgressWidget.field_y &&
+            var13 + var11 > StripedProgressWidget.field_y &&
             this.field_k.field_o &&
             var3 != 0) {
             if (n.field_m != 0) {
@@ -706,10 +706,10 @@ final class nk {
                       var13Lifetime1 = 16729088;
                     }
                     var5Lifetime1 = 16741888;
-                    if (var9Lifetime2 <= uc.field_C &&
-                      var11 + var9Lifetime2 > uc.field_C &&
-                      ll.field_y >= var10Lifetime2 &&
-                      ll.field_y < var10Lifetime2 + var12Lifetime1 &&
+                    if (var9Lifetime2 <= DialogMessagePane.field_C &&
+                      var11 + var9Lifetime2 > DialogMessagePane.field_C &&
+                      StripedProgressWidget.field_y >= var10Lifetime2 &&
+                      StripedProgressWidget.field_y < var10Lifetime2 + var12Lifetime1 &&
                       this.field_k.field_o &&
                       var3 != 0) {
                       this.field_j = true;
@@ -782,10 +782,10 @@ final class nk {
               var9Lifetime2Lifetime1 = -od.field_f.field_s + this.field_g - 10;
               var10Lifetime2Lifetime1 = var7Lifetime2;
               var11 = 8 + od.field_f.field_s;
-              if (uc.field_C >= var8Lifetime3Lifetime1 &&
-                uc.field_C < var8Lifetime3Lifetime1 + var10Lifetime2Lifetime1 &&
-                ll.field_y >= var9Lifetime2Lifetime1 &&
-                var11 + var9Lifetime2Lifetime1 > ll.field_y &&
+              if (DialogMessagePane.field_C >= var8Lifetime3Lifetime1 &&
+                DialogMessagePane.field_C < var8Lifetime3Lifetime1 + var10Lifetime2Lifetime1 &&
+                StripedProgressWidget.field_y >= var9Lifetime2Lifetime1 &&
+                var11 + var9Lifetime2Lifetime1 > StripedProgressWidget.field_y &&
                 this.field_k.field_o &&
                 var3 != 0) {
                 this.field_k.field_n = this.field_m;
@@ -868,10 +868,10 @@ final class nk {
             regionExit2: {
               if (var12Lifetime2 != 0) {
                 var13Lifetime2 = 0;
-                if (var7Lifetime3Lifetime1 <= uc.field_C &&
-                  uc.field_C <= var7Lifetime3Lifetime1 + 32 &&
-                  var8Lifetime4 <= ll.field_y &&
-                  ll.field_y <= var8Lifetime4 + 32) {
+                if (var7Lifetime3Lifetime1 <= DialogMessagePane.field_C &&
+                  DialogMessagePane.field_C <= var7Lifetime3Lifetime1 + 32 &&
+                  var8Lifetime4 <= StripedProgressWidget.field_y &&
+                  StripedProgressWidget.field_y <= var8Lifetime4 + 32) {
                   fa.field_b = var11;
                   var13Lifetime2 = 2;
                 }
@@ -890,10 +890,10 @@ final class nk {
                   DualLinkNode.field_h[var11].drawDownscaledAreaAveraged(var7Lifetime3Lifetime1 - var13Lifetime2, -var13Lifetime2 + var8Lifetime4, 32 + var13Lifetime2 * 2, 2 * var13Lifetime2 + 32);
                 }
                 if (var11 == ua.field_a ||
-                  !(uc.field_C < var7Lifetime3Lifetime1) &&
-                  !(uc.field_C > 32 + var7Lifetime3Lifetime1) &&
-                  !(var8Lifetime4 > ll.field_y) &&
-                  !(ll.field_y > var8Lifetime4 + 32) &&
+                  !(DialogMessagePane.field_C < var7Lifetime3Lifetime1) &&
+                  !(DialogMessagePane.field_C > 32 + var7Lifetime3Lifetime1) &&
+                  !(var8Lifetime4 > StripedProgressWidget.field_y) &&
+                  !(StripedProgressWidget.field_y > var8Lifetime4 + 32) &&
                   -1 == ua.field_a) {
                   this.a(-228 + this.field_g, 16741888, lj.field_b[var11], 400, 21641);
                   var10Lifetime3Lifetime1 = 0;
@@ -998,10 +998,10 @@ final class nk {
             n.field_m == 0) {
             this.field_j = false;
           }
-          if (uc.field_C > 320 - var3 / 2 &&
-            uc.field_C < 320 + var3 / 2 &&
-            -od.field_f.field_s + this.field_g < ll.field_y &&
-            this.field_g > ll.field_y &&
+          if (DialogMessagePane.field_C > 320 - var3 / 2 &&
+            DialogMessagePane.field_C < 320 + var3 / 2 &&
+            -od.field_f.field_s + this.field_g < StripedProgressWidget.field_y &&
+            this.field_g > StripedProgressWidget.field_y &&
             n.field_m == 0 &&
             this.field_k.field_o) {
             this.field_k.field_n = this.field_m;
@@ -1016,10 +1016,10 @@ final class nk {
           var7 = this.field_g - od.field_f.field_s;
           var8 = var5;
           var9 = od.field_f.field_s;
-          if (var6 <= uc.field_C &&
-            uc.field_C < var6 + var8 &&
-            ll.field_y >= var7 &&
-            ll.field_y < var7 + var9 &&
+          if (var6 <= DialogMessagePane.field_C &&
+            DialogMessagePane.field_C < var6 + var8 &&
+            StripedProgressWidget.field_y >= var7 &&
+            StripedProgressWidget.field_y < var7 + var9 &&
             this.field_k.field_o &&
             n.field_m == 0) {
             this.field_j = true;
@@ -1056,7 +1056,7 @@ final class nk {
               if (stackIn_65_0 != stackIn_68_1) {
                 this.a(0, (byte) 104, true);
               }
-              stackIn_73_0 = -320 + (uc.field_C + 33);
+              stackIn_73_0 = -320 + (DialogMessagePane.field_C + 33);
               if (this.field_i != 5) {
                 stackIn_74_1 = DefaultTextWidgetRenderer.field_a;
               } else {
@@ -1068,9 +1068,9 @@ final class nk {
                 } else {
                   stackIn_78_1 = DefaultTextWidgetRenderer.field_a;
                 }
-                this.a(-(stackIn_78_1 / 2) + (35 + uc.field_C) - 322, (byte) -51, true);
+                this.a(-(stackIn_78_1 / 2) + (35 + DialogMessagePane.field_C) - 322, (byte) -51, true);
               }
-              stackIn_81_0 = uc.field_C - 320 + 33;
+              stackIn_81_0 = DialogMessagePane.field_C - 320 + 33;
               if (this.field_i != 5) {
                 stackIn_82_1 = DefaultTextWidgetRenderer.field_a;
               } else {
@@ -1082,7 +1082,7 @@ final class nk {
                 } else {
                   stackIn_86_1 = DefaultTextWidgetRenderer.field_a;
                 }
-                this.a(-(stackIn_86_1 / 2) + (2 + (-320 + uc.field_C)) + 35, (byte) 84, true);
+                this.a(-(stackIn_86_1 / 2) + (2 + (-320 + DialogMessagePane.field_C)) + 35, (byte) 84, true);
               }
             }
           }

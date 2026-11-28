@@ -76,7 +76,7 @@ final class StampedeSpecial extends SpecialOrder {
         JaggrabDownloader.field_f = param1;
         gaa.field_k = param0;
         FlyAnimation.field_z = param3;
-        hc.field_D = param4;
+        DialogMessagePane.field_D = param4;
     }
 
     StampedeSpecial(int param0, BattleCreature param1, int param2) {

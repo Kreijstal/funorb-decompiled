@@ -9,12 +9,12 @@ final class cg {
 
     final static void a(byte param0) {
         if (param0 >= 54) {
-          sf.field_f.b(new se(), 23143);
+          sf.field_f.replaceContent(new GuestPlayConfirmationForm(), 23143);
           return;
         }
         BitmapFont var2 = (BitmapFont) null;
         cg.a(-26, (qc) null, -94, -80, -18, 102, -121, (qc) null, (BitmapFont) null, (byte) 5, 41, -60, 79, (qc) null, -121, 122, 103, 36, 121, (BitmapFont) null, 37);
-        sf.field_f.b(new se(), 23143);
+        sf.field_f.replaceContent(new GuestPlayConfirmationForm(), 23143);
     }
 
     public final String toString() {

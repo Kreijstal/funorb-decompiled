@@ -9,7 +9,7 @@ class of extends DualLinkNode {
 
     final static long a(byte param0) {
         int var1 = -95 / ((param0 - 75) / 32);
-        return -el.field_rb + la.correctedCurrentTimeMillis(false);
+        return -StandardContentDialog.field_rb + la.correctedCurrentTimeMillis(false);
     }
 
     of() {

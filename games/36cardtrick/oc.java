@@ -216,7 +216,7 @@ final class oc {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (tj.field_F != jc.field_P) {
+          if (GuestPlayConfirmationForm.field_F != ResizableModalDialog.field_P) {
             return false;
           }
           var8 = new AccountCreationResultPanel(sd.field_c, param1);
@@ -225,11 +225,11 @@ final class oc {
             oc.clearStaticReferences(-71);
           }
           if (md.a((byte) -101)) {
-            var8.f((byte) -42);
+            var8.showAccountCreationConnectionFailure((byte) -42);
             return true;
           }
           lh.field_c = param0;
-          jc.field_P = hh.field_g;
+          ResizableModalDialog.field_P = hh.field_g;
           mh.field_a = null;
           ri.field_b = param3;
           lf.field_b = param4;

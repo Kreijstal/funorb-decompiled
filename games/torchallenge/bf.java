@@ -112,7 +112,7 @@ final class bf {
         } else {
           this.field_j = eb.field_k;
         }
-        this.field_h = ih.field_K;
+        this.field_h = GuestPlayConfirmationForm.field_K;
         this.field_n = td.field_q;
         this.field_i = o.field_m;
         this.field_m = hf.field_e;

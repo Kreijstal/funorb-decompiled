@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class TextLayout {
-    static ec field_c;
+    static StandardContentDialog field_c;
     static int field_b;
     static int field_d;
     TextLineMetrics[] field_a;
@@ -224,7 +224,7 @@ abstract class TextLayout {
             return (java.awt.Frame) (stackIn_37_0);
           }
           if (param0 != 4147) {
-            field_c = (ec) null;
+            field_c = (StandardContentDialog) null;
           }
           stackIn_41_0 = var7;
           return stackIn_41_0;

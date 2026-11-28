@@ -108,7 +108,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_6_0;
           }
           if (kaa.a(var5, (byte) 63)) {
-            stackIn_10_0 = sh.field_D;
+            stackIn_10_0 = DateInputWidget.field_D;
             return stackIn_10_0;
           }
           var6 = 24 / ((param0 + 8) / 45);

@@ -36,7 +36,7 @@ final class lg {
         this.field_m = ModalDialog.field_H[param0];
         this.field_b = pf.field_e[param0];
         this.field_k = bd.field_f[param0];
-        this.field_a = jg.field_jb[param0];
+        this.field_a = StandardContentDialog.field_jb[param0];
         var2 = param0;
         if (var2 == 0) {
           this.field_l = true;

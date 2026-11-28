@@ -73,10 +73,10 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             lj.correctedCurrentTimeMillis((byte) -88);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               vk.field_O = 1;
-              lk.field_J = 1;
+              StripedProgressWidget.field_J = 1;
             } else {
               vk.field_O = 2;
-              lk.field_J = 2;
+              StripedProgressWidget.field_J = 2;
             }
             var2_int = param0.getModifiers();
             ag.field_a = true;
@@ -129,7 +129,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (sg.field_i == null) {
             return;
           }
-          lk.field_J = 0;
+          StripedProgressWidget.field_J = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -226,7 +226,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           if (sg.field_i != null) {
             m.field_a = 0;
-            lk.field_J = 0;
+            StripedProgressWidget.field_J = 0;
             ag.field_a = true;
             var2_int = param0.getModifiers();
             if (0 != (4 & var2_int)) {

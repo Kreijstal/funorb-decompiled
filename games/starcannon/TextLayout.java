@@ -78,7 +78,7 @@ abstract class TextLayout {
             }
             var2 = 1;
           }
-          ja.field_c.a(ja.a(kc.field_Q, LoginPanel.field_B, 100), ja.a(la.field_c, pe.field_d, param0 - 31284), -113);
+          ja.field_c.a(ja.a(ResizableModalDialog.field_Q, LoginPanel.field_B, 100), ja.a(la.field_c, pe.field_d, param0 - 31284), -113);
           if (ja.field_c.g(0)) {
             var1_int = 1;
           }

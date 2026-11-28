@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AlphaWidgetContainer extends SingleChildWidgetContainer {
-    static ng field_L;
+    static FullscreenNoticeType field_L;
     static BitPacketBuffer field_N;
     static int field_O;
     int field_H;
@@ -77,7 +77,7 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
     }
 
     static {
-        field_L = new ng();
+        field_L = new FullscreenNoticeType();
         field_J = "Loading...";
     }
 }

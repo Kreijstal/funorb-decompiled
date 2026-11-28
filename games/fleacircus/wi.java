@@ -43,12 +43,12 @@ abstract class wi {
         PcmResampler var1Lifetime1;
         if (param0 == -14277) {
           var1 = new PcmResampler(22050, AudioOutput.field_a);
-          jd.field_q = hk.a(ib.field_f, "", "laura_woohoo").b().resample(var1);
+          jd.field_q = VorbisSample.loadByName(ib.field_f, "", "laura_woohoo").decodeAllToPcm().resample(var1);
           return;
         }
         wi.clearStaticReferences(true);
         var1Lifetime1 = new PcmResampler(22050, AudioOutput.field_a);
-        jd.field_q = hk.a(ib.field_f, "", "laura_woohoo").b().resample(var1Lifetime1);
+        jd.field_q = VorbisSample.loadByName(ib.field_f, "", "laura_woohoo").decodeAllToPcm().resample(var1Lifetime1);
     }
 
     final static DefaultTextWidgetRenderer a(int param0) {

@@ -46,7 +46,7 @@ class PacketBuffer extends IntrusiveNode {
           if (param1 < 98) {
             PacketBuffer.a('*', 15);
           }
-          if (gf.field_Z == field_i) {
+          if (ContentTransitionDialog.field_Z == field_i) {
             stackIn_4_0 = null;
             return (AccountServiceResult) (stackIn_4_0);
           }
@@ -58,7 +58,7 @@ class PacketBuffer extends IntrusiveNode {
           }
           uh.field_r = param0;
           TextFieldValidator.field_h = null;
-          field_i = gf.field_Z;
+          field_i = ContentTransitionDialog.field_Z;
           stackIn_9_0 = null;
           return (AccountServiceResult) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -251,7 +251,7 @@ class RichTextWidget extends InteractiveWidget {
               CrossfadingMidiPcmStream.field_u = ra.field_c.readString(-98);
               var11 = (CharSequence) ((Object) CrossfadingMidiPcmStream.field_u);
               nn.field_k = jm.a((byte) 59, var11);
-              hf.field_sb = ra.field_c.readUnsignedByte(true);
+              ContentTransitionDialog.field_sb = ra.field_c.readUnsignedByte(true);
               pd.field_A = qa.field_c;
               if (MatchingFieldValidator.field_n.b(65) != pe.field_j) {
                 if (MatchingFieldValidator.field_n.b(-104) == MidiPcmStream.field_w) {

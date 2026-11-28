@@ -39,13 +39,13 @@ final class md {
           }
           LevelView.field_C.position = LevelView.field_C.position + 2;
           var5_int = LevelView.field_C.position;
-          LevelView.field_C.writeInt(false, db.field_Z);
+          LevelView.field_C.writeInt(false, ContentTransitionDialog.field_Z);
           LevelView.field_C.writeLong(sb.field_a, 2147483647);
           var6 = 0;
           if (oc.field_i) {
             var6 = var6 | 1;
           }
-          if (mk.field_c) {
+          if (FullscreenNoticeType.field_c) {
             var6 = var6 | 4;
           }
           if (param4) {

@@ -195,7 +195,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("ticketing_oneunread", -85);
                 if (var2 != null) {
-                  k.field_T = ad.a(-29410, var2);
+                  ResizableModalDialog.field_T = ad.a(-29410, var2);
                 }
                 var2 = cd.a("ticketing_xunread", -115);
                 if (var2 != null) {
@@ -219,7 +219,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("mu_chat_off", -91);
                 if (null != var2) {
-                  ii.field_K = ad.a(-29410, var2);
+                  GuestPlayConfirmationForm.field_K = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_chat_lobby", -117);
                 if (var2 != null) {
@@ -227,7 +227,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("mu_chat_public", -111);
                 if (var2 != null) {
-                  ij.field_e = ad.a(-29410, var2);
+                  FullscreenNoticeType.field_e = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_chat_ignore", -108);
                 if (var2 != null) {
@@ -247,11 +247,11 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("mu_x_entered_game", -112);
                 if (null != var2) {
-                  ch.field_eb = ad.a(-29410, var2);
+                  ProgressDialog.field_eb = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_x_joined_your_game", -84);
                 if (null != var2) {
-                  ii.field_S = ad.a(-29410, var2);
+                  GuestPlayConfirmationForm.field_S = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_x_entered_other_game", -85);
                 if (null != var2) {
@@ -271,7 +271,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("mu_x_cannot_join_inprogress", -119);
                 if (var2 != null) {
-                  ih.field_V = ad.a(-29410, var2);
+                  NumericDateInputWidget.field_V = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_x_declined_invite", -124);
                 if (null != var2) {
@@ -375,7 +375,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("mu_gamelist_elapsed_time", -86);
                 if (var2 != null) {
-                  ba.field_R = ad.a(-29410, var2);
+                  RegistrationAgreementPane.field_R = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_play_rated", -93);
                 if (var2 != null) {
@@ -591,7 +591,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("find_opponents_plural", -109);
                 if (null != var2) {
-                  k.field_ab = ad.a(-29410, var2);
+                  ResizableModalDialog.field_ab = ad.a(-29410, var2);
                 }
                 var2 = cd.a("rated_game_tips_setup_singular", -106);
                 if (var2 != null) {
@@ -607,7 +607,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("your_game", -114);
                 if (var2 != null) {
-                  ge.field_cb = ad.a(-29410, var2);
+                  FullscreenStatusDialog.field_cb = ad.a(-29410, var2);
                 }
                 var2 = cd.a("game_full", -103);
                 if (null != var2) {
@@ -755,7 +755,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("connecting_to_friend_server_twoline", -90);
                 if (null != var2) {
-                  ch.field_db = ad.a(-29410, var2);
+                  ProgressDialog.field_db = ad.a(-29410, var2);
                 }
                 var2 = cd.a("loading", -92);
                 if (var2 != null) {
@@ -763,7 +763,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("offline", -123);
                 if (var2 != null) {
-                  ba.field_M = ad.a(-29410, var2);
+                  RegistrationAgreementPane.field_M = ad.a(-29410, var2);
                 }
                 var2 = cd.a("multiconst_invite_only", -103);
                 if (var2 != null) {
@@ -887,7 +887,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("gameopt_notunlocked", -94);
                 if (null != var2) {
-                  vn.field_Eb = ad.a(-29410, var2);
+                  ProgressMessageDialog.field_Eb = ad.a(-29410, var2);
                 }
                 var2 = cd.a("gameopt_cannotbecombined1", -80);
                 if (null != var2) {
@@ -947,7 +947,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("gameopt_needchanging1", -125);
                 if (var2 != null) {
-                  ij.field_b = ad.a(-29410, var2);
+                  FullscreenNoticeType.field_b = ad.a(-29410, var2);
                 }
                 var2 = cd.a("gameopt_needchanging2", -78);
                 if (var2 != null) {
@@ -1089,7 +1089,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("rule_2_2", -87);
                 if (null != var2) {
-                  ii.field_N = ad.a(-29410, var2);
+                  GuestPlayConfirmationForm.field_N = ad.a(-29410, var2);
                 }
                 var2 = cd.a("createafreeaccount", -110);
                 if (var2 != null) {
@@ -1181,7 +1181,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("logging_in", -78);
                 if (var2 != null) {
-                  ii.field_T = ad.a(-29410, var2);
+                  GuestPlayConfirmationForm.field_T = ad.a(-29410, var2);
                 }
                 var2 = cd.a("reconnect", -82);
                 if (null != var2) {
@@ -1545,7 +1545,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("create_select_alternative", -108);
                 if (null != var2) {
-                  ih.field_Y = ad.a(-29410, var2);
+                  NumericDateInputWidget.field_Y = ad.a(-29410, var2);
                 }
                 var2 = cd.a("create_optin_news", -89);
                 if (null != var2) {
@@ -1733,7 +1733,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("create_alert_invalidage", -117);
                 if (var2 != null) {
-                  rm.field_D = ad.a(-29410, var2);
+                  StripedProgressWidget.field_D = ad.a(-29410, var2);
                 }
                 var2 = cd.a("create_alert_yearrange", -90);
                 if (var2 != null) {
@@ -1753,7 +1753,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("create_account_success", -116);
                 if (var2 != null) {
-                  ge.field_db = ad.a(-29410, var2);
+                  FullscreenStatusDialog.field_db = ad.a(-29410, var2);
                 }
                 var2 = cd.a("invalid_name", -123);
                 if (var2 != null) {
@@ -1896,7 +1896,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("loading_graphics", -101);
                 if (null != var2) {
-                  k.field_V = ad.a(-29410, var2);
+                  ResizableModalDialog.field_V = ad.a(-29410, var2);
                 }
                 var2 = cd.a("loading_models", -93);
                 if (null != var2) {
@@ -1972,7 +1972,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("instructions", -91);
                 if (var2 != null) {
-                  ij.field_d = ad.a(-29410, var2);
+                  FullscreenNoticeType.field_d = ad.a(-29410, var2);
                 }
                 var2 = cd.a("tutorial", -76);
                 if (null != var2) {
@@ -2062,7 +2062,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("menu", -92);
                 if (null != var2) {
-                  jg.field_L = ad.a(-29410, var2);
+                  BirthDateChatEnableForm.field_L = ad.a(-29410, var2);
                 }
                 var2 = cd.a("selectlevel", -113);
                 if (var2 != null) {
@@ -2914,11 +2914,11 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("serviceunavailable", -80);
                 if (null != var2) {
-                  ii.field_O = ad.a(-29410, var2);
+                  GuestPlayConfirmationForm.field_O = ad.a(-29410, var2);
                 }
                 var2 = cd.a("createtouse", -123);
                 if (var2 != null) {
-                  bf.field_N = ad.a(-29410, var2);
+                  DateInputWidget.field_N = ad.a(-29410, var2);
                 }
                 var2 = cd.a("achievementsoffline", -111);
                 if (var2 != null) {

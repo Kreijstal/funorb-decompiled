@@ -25,7 +25,7 @@ class fk extends DefaultTextWidgetRenderer {
     public final void paintWidget(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
         try {
           if (param4) {
-            v.b(param0.field_m + param2, param3 ^ 12105945, param0.field_p, param0.field_i + param1, param0.field_l);
+            ResizableModalDialog.b(param0.field_m + param2, param3 ^ 12105945, param0.field_p, param0.field_i + param1, param0.field_l);
           }
           super.paintWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {

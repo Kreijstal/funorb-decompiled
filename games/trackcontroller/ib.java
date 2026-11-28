@@ -3,7 +3,7 @@
  */
 final class ib {
     static int field_a;
-    static rk field_e;
+    static ProgressDialog field_e;
     static String field_b;
     static String field_c;
     static int field_f;
@@ -28,7 +28,7 @@ final class ib {
             return stackIn_2_0;
           }
           if (param0) {
-            stackIn_7_0 = mk.field_b.stringWidth(param2);
+            stackIn_7_0 = FullscreenNoticeType.field_b.stringWidth(param2);
             return stackIn_7_0;
           }
           stackIn_5_0 = r.field_k.stringWidth(param2);
@@ -126,7 +126,7 @@ final class ib {
           }
           var4_int = param2.getGroupIdByName(true, param1);
           var5 = param2.getFileIdByName(param3, var4_int, param0 - 11);
-          stackIn_3_0 = dg.a(false, var4_int, var5, param2);
+          stackIn_3_0 = StripedProgressWidget.a(false, var4_int, var5, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

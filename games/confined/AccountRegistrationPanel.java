@@ -222,7 +222,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
     }
 
     final static void g(byte param0) {
-        dn.field_b.a((UiWidget) (new tg()), (byte) -72);
+        dn.field_b.replaceContent((UiWidget) (new GuestPlayConfirmationForm()), (byte) -72);
         if (param0 > -7) {
           field_ab = (String) null;
         }
@@ -270,7 +270,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         var3 = var3 + this.a(this.field_U, oh.field_d, 170, var3, 120);
         var3 = var3 + (this.a(this.field_W, 170, var3, UiWidget.field_A, "", 20, 20) + 5);
         var3 = var3 + this.a(this.field_H, TextLayout.field_b, 170, var3, 120);
-        var3 = var3 + (5 + this.a(CipherPacketBuffer.field_t, jj.field_hb, 150, 170, var3, this.field_X));
+        var3 = var3 + (5 + this.a(CipherPacketBuffer.field_t, ProgressDialog.field_hb, 150, 170, var3, this.field_X));
         var3 = var3 + (5 + this.a(rc.field_a, va.field_d, 150, 170, var3, this.field_R));
         var3 = var3 + this.a(170, var3, qi.field_j, (byte) 59, this.field_V);
         LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, -90 + this.field_F, 25, this.field_bb, true, -120 + this.field_F, 5, fa.field_Q, 11579568, ag.field_j);

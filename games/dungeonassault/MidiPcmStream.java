@@ -590,7 +590,7 @@ final class MidiPcmStream extends PcmStream {
         boolean stackOut_6_0;
         var5 = DungeonAssault.field_K;
         try {
-          var3 = cm.a(param0, -125, param2);
+          var3 = RegistrationAgreementPane.a(param0, -125, param2);
           if (var3 != null) {
             stackIn_3_0 = var3;
             return stackIn_3_0;

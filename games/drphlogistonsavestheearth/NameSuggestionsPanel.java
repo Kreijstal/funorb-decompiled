@@ -1041,7 +1041,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
                 var2 = wg.a("reloadgame", param0 ^ 7);
                 if (var2 != null) {
-                  jf.field_fb = mj.a((byte) -125, var2);
+                  ContentTransitionDialog.field_fb = mj.a((byte) -125, var2);
                 }
                 var2 = wg.a("toserverlist", 0);
                 if (null != var2) {
@@ -1125,7 +1125,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
                 var2 = wg.a("invalidpass", 0);
                 if (null != var2) {
-                  tf.field_ib = mj.a((byte) -14, var2);
+                  ProgressDialog.field_ib = mj.a((byte) -14, var2);
                 }
                 var2 = wg.a("retry", param0 ^ 7);
                 if (null != var2) {
@@ -1645,7 +1645,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
                 var2 = wg.a("create_alert_invalidage", 0);
                 if (var2 != null) {
-                  jf.field_kb = mj.a((byte) -116, var2);
+                  ContentTransitionDialog.field_kb = mj.a((byte) -116, var2);
                 }
                 var2 = wg.a("create_alert_yearrange", 0);
                 if (null != var2) {
@@ -1653,11 +1653,11 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
                 var2 = wg.a("create_alert_mismatch", 0);
                 if (var2 != null) {
-                  ih.field_N = mj.a((byte) 19, var2);
+                  RegistrationAgreementPane.field_N = mj.a((byte) 19, var2);
                 }
                 var2 = wg.a("create_passwordvalid", 0);
                 if (null != var2) {
-                  ae.field_jb = mj.a((byte) 32, var2);
+                  FullscreenStatusDialog.field_jb = mj.a((byte) 32, var2);
                 }
                 var2 = wg.a("create_emailvalid", 0);
                 if (null != var2) {
@@ -1789,7 +1789,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
                 var2 = wg.a("waitingfor_extradata", 0);
                 if (null != var2) {
-                  ia.field_b = mj.a((byte) 98, var2);
+                  FullscreenNoticeType.field_b = mj.a((byte) 98, var2);
                 }
                 var2 = wg.a("waitingfor_languages", 0);
                 if (var2 != null) {
@@ -2019,7 +2019,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
                 var2 = wg.a("endgame", 0);
                 if (var2 != null) {
-                  hd.field_L = mj.a((byte) -115, var2);
+                  StripedProgressWidget.field_L = mj.a((byte) -115, var2);
                 }
                 var2 = wg.a("endtutorial", 0);
                 if (null != var2) {
@@ -2659,7 +2659,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
                 var2 = wg.a("fs_button_cancel", 0);
                 if (null != var2) {
-                  ff.field_K = mj.a((byte) 25, var2);
+                  GuestPlayConfirmationForm.field_K = mj.a((byte) 25, var2);
                 }
                 var2 = wg.a("fs_accept_aftercancel", 0);
                 if (var2 != null) {
@@ -2847,31 +2847,31 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
                 var2 = wg.a("mustlogin2,1", 0);
                 if (null != var2) {
-                  tf.field_nb[1] = mj.a((byte) -101, var2);
+                  ProgressDialog.field_nb[1] = mj.a((byte) -101, var2);
                 }
                 var2 = wg.a("mustlogin2,2", param0 - 7);
                 if (null != var2) {
-                  tf.field_nb[2] = mj.a((byte) 2, var2);
+                  ProgressDialog.field_nb[2] = mj.a((byte) 2, var2);
                 }
                 var2 = wg.a("mustlogin2,3", 0);
                 if (null != var2) {
-                  tf.field_nb[3] = mj.a((byte) -106, var2);
+                  ProgressDialog.field_nb[3] = mj.a((byte) -106, var2);
                 }
                 var2 = wg.a("mustlogin2,4", 0);
                 if (var2 != null) {
-                  tf.field_nb[4] = mj.a((byte) 49, var2);
+                  ProgressDialog.field_nb[4] = mj.a((byte) 49, var2);
                 }
                 var2 = wg.a("mustlogin2,5", 0);
                 if (null != var2) {
-                  tf.field_nb[5] = mj.a((byte) 126, var2);
+                  ProgressDialog.field_nb[5] = mj.a((byte) 126, var2);
                 }
                 var2 = wg.a("mustlogin2,6", 0);
                 if (null != var2) {
-                  tf.field_nb[6] = mj.a((byte) -118, var2);
+                  ProgressDialog.field_nb[6] = mj.a((byte) -118, var2);
                 }
                 var2 = wg.a("mustlogin2,7", param0 - 7);
                 if (var2 != null) {
-                  tf.field_nb[7] = mj.a((byte) -102, var2);
+                  ProgressDialog.field_nb[7] = mj.a((byte) -102, var2);
                 }
                 var2 = wg.a("mustlogin3,1", param0 ^ 7);
                 if (null != var2) {
@@ -2903,7 +2903,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
                 var2 = wg.a("discard", 0);
                 if (var2 != null) {
-                  ih.field_P = mj.a((byte) 28, var2);
+                  RegistrationAgreementPane.field_P = mj.a((byte) 28, var2);
                 }
                 var2 = wg.a("mustlogin4,1", 0);
                 if (null != var2) {
@@ -3229,7 +3229,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                   var2_int = -LabeledWidgetContainer.field_N.position + param0;
                 }
                 uj.field_j.readFully((byte) -14, LabeledWidgetContainer.field_N.payload, LabeledWidgetContainer.field_N.position, var2_int);
-                el.field_rb = la.correctedCurrentTimeMillis(false);
+                StandardContentDialog.field_rb = la.correctedCurrentTimeMillis(false);
                 LabeledWidgetContainer.field_N.position = LabeledWidgetContainer.field_N.position + var2_int;
                 if (param0 > LabeledWidgetContainer.field_N.position) {
                   return false;

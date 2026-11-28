@@ -209,7 +209,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("loginm2", false);
                 if (var2 != null) {
-                  cl.field_I = ll.a(0, var2);
+                  RegistrationAgreementPane.field_I = ll.a(0, var2);
                 }
                 var2 = bc.a("loginm1", false);
                 if (null != var2) {
@@ -273,7 +273,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("ticketing_xunread", false);
                 if (var2 != null) {
-                  na.field_X = ll.a(0, var2);
+                  ProgressDialog.field_X = ll.a(0, var2);
                 }
                 var2 = bc.a("ticketing_gotowebsite", false);
                 if (var2 != null) {
@@ -1307,7 +1307,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("connectionrestored", false);
                 if (var2 != null) {
-                  si.field_pb = ll.a(0, var2);
+                  ProgressMessageDialog.field_pb = ll.a(0, var2);
                 }
                 var2 = bc.a("warning_ifyouquit", false);
                 if (var2 != null) {
@@ -1650,7 +1650,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("login_username_tooltip", false);
                 if (null != var2) {
-                  hi.field_Z = ll.a(0, var2);
+                  FullscreenStatusDialog.field_Z = ll.a(0, var2);
                 }
                 var2 = bc.a("login_password_tooltip", false);
                 if (null != var2) {
@@ -1666,7 +1666,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("login_justplay_tooltip", false);
                 if (null != var2) {
-                  qf.field_b = ll.a(param0 ^ 3, var2);
+                  FullscreenNoticeType.field_b = ll.a(param0 ^ 3, var2);
                 }
                 var2 = bc.a("login_back_tooltip", false);
                 if (var2 != null) {
@@ -2748,19 +2748,19 @@ final class MessageKeys {
                 }
                 var2 = bc.a("reconnect_lost_seq,0", false);
                 if (null != var2) {
-                  na.field_db[0] = ll.a(param0 - 3, var2);
+                  ProgressDialog.field_db[0] = ll.a(param0 - 3, var2);
                 }
                 var2 = bc.a("reconnect_lost_seq,1", false);
                 if (null != var2) {
-                  na.field_db[1] = ll.a(param0 - 3, var2);
+                  ProgressDialog.field_db[1] = ll.a(param0 - 3, var2);
                 }
                 var2 = bc.a("reconnect_lost_seq,2", false);
                 if (var2 != null) {
-                  na.field_db[2] = ll.a(sl.a(param0, 3), var2);
+                  ProgressDialog.field_db[2] = ll.a(sl.a(param0, 3), var2);
                 }
                 var2 = bc.a("reconnect_lost_seq,3", false);
                 if (var2 != null) {
-                  na.field_db[3] = ll.a(0, var2);
+                  ProgressDialog.field_db[3] = ll.a(0, var2);
                 }
                 var2 = bc.a("reconnect_lost", false);
                 if (null != var2) {
@@ -3008,7 +3008,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("mustlogin1", false);
                 if (var2 != null) {
-                  qf.field_a = ll.a(0, var2);
+                  FullscreenNoticeType.field_a = ll.a(0, var2);
                 }
                 var2 = bc.a("mustlogin2,1", false);
                 if (var2 != null) {

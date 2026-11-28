@@ -151,7 +151,7 @@ final class qg implements WidgetRenderer {
             NameSuggestionsPanel.field_L = param11;
             sj.field_c = param13;
             mm.field_b = param0;
-            wf.field_U = param7;
+            ResizableModalDialog.field_U = param7;
             ii.field_a = param1;
             v.field_e = param8;
             if (!param10) {

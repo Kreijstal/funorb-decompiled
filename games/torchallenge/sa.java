@@ -38,7 +38,7 @@ final class sa {
           return ij.field_x + " - " + MatchingFieldValidator.field_p.getGroupLoadPercentByName(125, "commonui") + "%";
         }
         if (!FrameTimer.field_b.ensureIndexLoaded(-7957)) {
-          return wa.field_qb;
+          return ProgressMessageDialog.field_qb;
         }
         if (!FrameTimer.field_b.tryLoadAllGroups((byte) 79)) {
           return bk.field_l + " - " + FrameTimer.field_b.getArchiveLoadPercent(126) + "%";

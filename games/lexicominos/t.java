@@ -12,11 +12,11 @@ final class t {
     }
 
     final static DefaultTextWidgetRenderer b(int param0) {
-        if (uc.field_kb == null) {
-          uc.field_kb = new DefaultTextWidgetRenderer(ValidatedTextField.field_T, 20, 0, 0, 0, 11579568, -1, 0, 0, ValidatedTextField.field_T.field_E, -1, 2147483647, true);
+        if (ProgressMessageDialog.field_kb == null) {
+          ProgressMessageDialog.field_kb = new DefaultTextWidgetRenderer(ValidatedTextField.field_T, 20, 0, 0, 0, 11579568, -1, 0, 0, ValidatedTextField.field_T.field_E, -1, 2147483647, true);
         }
         int var1 = 28 % ((param0 - 69) / 52);
-        return uc.field_kb;
+        return ProgressMessageDialog.field_kb;
     }
 
     static {

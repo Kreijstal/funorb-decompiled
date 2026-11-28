@@ -24,9 +24,9 @@ final class c {
         int fieldTemp$2 = 0;
         if (kj.a(false)) {
           if (!InteractiveWidget.field_D &&
-            null != r.field_d &&
-            r.field_d.field_o) {
-            i.field_c = r.field_d.field_p;
+            null != FullscreenNoticeType.field_d &&
+            FullscreenNoticeType.field_d.field_o) {
+            i.field_c = FullscreenNoticeType.field_d.field_p;
             sj.field_d = new int[i.field_c.length];
             MidiPcmStream.field_x = new int[i.field_c.length];
             sj.field_d = i.a(-111, i.field_c, sj.field_d);
@@ -129,8 +129,8 @@ final class c {
           }
           return;
         }
-        if (null == r.field_d) {
-          r.field_d = gk.b(4, 1);
+        if (null == FullscreenNoticeType.field_d) {
+          FullscreenNoticeType.field_d = gk.b(4, 1);
         }
         if (InteractiveWidget.field_D) {
           if (param0 > -94) {
@@ -229,9 +229,9 @@ final class c {
           }
           return;
         }
-        if (null != r.field_d &&
-          r.field_d.field_o) {
-          i.field_c = r.field_d.field_p;
+        if (null != FullscreenNoticeType.field_d &&
+          FullscreenNoticeType.field_d.field_o) {
+          i.field_c = FullscreenNoticeType.field_d.field_p;
           sj.field_d = new int[i.field_c.length];
           MidiPcmStream.field_x = new int[i.field_c.length];
           sj.field_d = i.a(-111, i.field_c, sj.field_d);

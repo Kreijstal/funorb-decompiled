@@ -138,7 +138,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         super(0, 0, 496, 0, (WidgetRenderer) null);
         this.field_E = new ValidatedTextField("", (WidgetEventListener) null, 12);
         DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(me.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, ModalDialogHost.field_C.field_s, -1, 2147483647, true);
-        UiWidget var2 = new UiWidget(ui.field_F, var1, (WidgetEventListener) null);
+        UiWidget var2 = new UiWidget(DialogMessagePane.field_F, var1, (WidgetEventListener) null);
         this.field_F = new InteractiveWidget(bl.field_g, (WidgetEventListener) null);
         this.field_H = new InteractiveWidget(cj.field_m, (WidgetEventListener) null);
         this.field_E.field_n = re.field_h;

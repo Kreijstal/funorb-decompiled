@@ -153,7 +153,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
             stackIn_7_0 = -1;
             return stackIn_7_0;
           }
-          if (InteractiveWidget.field_z == jk.field_y) {
+          if (InteractiveWidget.field_z == GuestPlayConfirmationForm.field_y) {
             ch.field_f = null;
             LoginPanel.field_D.position = 0;
             if (param3 != null) {
@@ -230,7 +230,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
                 tg.field_a = -1;
                 DebouncedFieldValidator.field_e = var9Lifetime1;
               } else {
-                TextLayout.a(jk.a((byte) -114), 0);
+                TextLayout.a(GuestPlayConfirmationForm.a((byte) -114), 0);
                 ch.field_f = new Boolean(oh.a((byte) -87, WordLanguage.field_l));
                 WordLanguage.field_l.position = 0;
               }

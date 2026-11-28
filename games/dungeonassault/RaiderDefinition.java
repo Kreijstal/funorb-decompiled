@@ -84,14 +84,14 @@ final class RaiderDefinition {
           return 0;
         }
         if (hc.field_d != 0) {
-          if (null != ia.field_U) {
-            if (!ia.field_U.ensureIndexLoaded(-14354)) {
+          if (null != GuestPlayConfirmationForm.field_U) {
+            if (!GuestPlayConfirmationForm.field_U.ensureIndexLoaded(-14354)) {
               return 14;
             }
-            if (!ia.field_U.hasGroupName("", param0 + 3)) {
+            if (!GuestPlayConfirmationForm.field_U.hasGroupName("", param0 + 3)) {
               return 29;
             }
-            if (!ia.field_U.tryLoadGroupByName(false, "")) {
+            if (!GuestPlayConfirmationForm.field_U.tryLoadGroupByName(false, "")) {
               return 29;
             }
           }

@@ -37,7 +37,7 @@ final class MenuScreen extends DungeonAssaultScreen {
         } else {
           SoftwareRasterizer.drawRectangleOutline(var4 - 4, var6 - 6, var5 + (-var4 + 8), var7 + 8, 0);
           MenuScreen.b(var4, -2 + var6, var5 - var4, var7, 8421504, 128, 128);
-          rp.a(4, var5 - var4, (byte) 108, var4, var7, kc.field_S, -2 + var6);
+          rp.a(4, var5 - var4, (byte) 108, var4, var7, DialogMessagePane.field_S, -2 + var6);
           MenuScreen.a(var4, var6 - 2, var5 - var4, var7, 224, 64, 3, 128);
         }
         if (var3 == 13 ||
@@ -251,12 +251,12 @@ final class MenuScreen extends DungeonAssaultScreen {
             var5 = 1;
           }
           if (var5 != 0 && (!this.field_x.b((byte) 127) ||
-            !(mo.field_a <= ia.field_X))) {
+            !(mo.field_a <= GuestPlayConfirmationForm.field_X))) {
             var6_ref_cf__ = eb.field_O;
             var7 = DraggableWidgetContainer.b(0, var6_ref_cf__.length);
             var8_ref_cf = var6_ref_cf__[var7];
             cf.a(100, var8_ref_cf.field_e, var8_ref_cf.field_a << 2);
-            ia.field_X = 20 + mo.field_a;
+            GuestPlayConfirmationForm.field_X = 20 + mo.field_a;
           }
         } else {
           if (var6 == 14) {
@@ -616,7 +616,7 @@ final class MenuScreen extends DungeonAssaultScreen {
             stackIn_46_3 = InstructionsScreen.field_x;
           }
           stackIn_42_0[stackIn_45_2] = stackIn_46_3;
-          var7 = jk.a(stackIn_42_0, f.field_b, 30496);
+          var7 = StandardContentDialog.a(stackIn_42_0, f.field_b, 30496);
           var10 = var7;
           var10Lifetime1 = var7;
           db.field_v.drawString(var7, 239, var6 + 195, 16777215, -1);
@@ -640,17 +640,17 @@ final class MenuScreen extends DungeonAssaultScreen {
                 } else {
                   stackIn_64_1 = ModalDialogHost.field_H;
                 }
-                var10Lifetime2 = jk.a(stackIn_63_0, stackIn_64_1, 30496);
+                var10Lifetime2 = StandardContentDialog.a(stackIn_63_0, stackIn_64_1, 30496);
               }
             } else {
               if (var3Lifetime1 != 41) {
                 if (var3Lifetime1 == 42 &&
                   df.a((byte) -38) < gm.field_d.field_p &&
                   gm.field_d.field_p >= gm.field_d.field_i) {
-                  var10Lifetime2 = jk.a(new String[]{np.b(3, gm.field_d.field_p), np.b(3, gm.field_d.field_i)}, ProxyAuthenticationRequiredException.field_b, 30496);
+                  var10Lifetime2 = StandardContentDialog.a(new String[]{np.b(3, gm.field_d.field_p), np.b(3, gm.field_d.field_i)}, ProxyAuthenticationRequiredException.field_b, 30496);
                 }
               } else {
-                var10Lifetime2 = jk.a(new String[]{ve.a(1, (long)gm.field_d.field_g, -17311, hc.field_d, true)}, fn.field_q, 30496);
+                var10Lifetime2 = StandardContentDialog.a(new String[]{ve.a(1, (long)gm.field_d.field_g, -17311, hc.field_d, true)}, fn.field_q, 30496);
               }
             }
             if (var10Lifetime2 != null) {
@@ -820,7 +820,7 @@ final class MenuScreen extends DungeonAssaultScreen {
         GameAppletShell.field_f = -1;
         um.field_g = null;
         fj.field_f = null;
-        ia.field_X = mo.field_a;
+        GuestPlayConfirmationForm.field_X = mo.field_a;
         ak.field_n = -1;
         if (this.field_B == 8 ||
           this.field_B == 9) {
@@ -851,7 +851,7 @@ final class MenuScreen extends DungeonAssaultScreen {
             stackIn_26_0 = (!vl.a(var7, -124, var17)) ? 0 : 1;
             var8 = stackIn_26_0;
             if (var4 == 0) {
-              stackIn_35_0 = (vl.a(var7, -63, ia.field_P)) ? 0 : 1;
+              stackIn_35_0 = (vl.a(var7, -63, GuestPlayConfirmationForm.field_P)) ? 0 : 1;
               var9 = stackIn_35_0;
               if (var9 != 0 ||
                 var8 != 0) {
@@ -940,7 +940,7 @@ final class MenuScreen extends DungeonAssaultScreen {
           stackIn_5_0 = !(kk.d(0));
           var2 = AchievementIconEntry.updateMembershipSlides(stackIn_5_0, (byte) -20);
           if (var2 == 3) {
-            if (null != cm.field_R) {
+            if (null != RegistrationAgreementPane.field_R) {
               ib.a(930);
             }
             sf.openSubscriptionPage(false, DebouncedFieldValidator.c(true));
@@ -1012,7 +1012,7 @@ final class MenuScreen extends DungeonAssaultScreen {
         if (param0 <= 49) {
           discarded$0 = this.a(-114, 14);
         }
-        var3 = var3 + " " + TextLineMetrics.a('#', jk.a(new String[]{jg.field_e}, g.a(false, false, (byte) -111, var2 != 0), 30496), 3, "<br><br>");
+        var3 = var3 + " " + TextLineMetrics.a('#', StandardContentDialog.a(new String[]{jg.field_e}, g.a(false, false, (byte) -111, var2 != 0), 30496), 3, "<br><br>");
         IntrusiveNode.field_c.drawParagraph(var3, 80, 80, 480, 10 * IntrusiveNode.field_c.field_R, 16777215, -1, 1, 0, IntrusiveNode.field_c.field_R);
     }
 

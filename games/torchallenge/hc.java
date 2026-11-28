@@ -314,7 +314,7 @@ final class hc extends InteractiveWidget {
         boolean decompiledFrameRemainder0 = true;
         var1 = -73 % ((param0 + 52) / 54);
         if (NameSuggestionsPanel.field_K >= 20 &&
-          ih.f((byte) -108) && (!(0 < DraggableWidgetContainer.field_H) ||
+          GuestPlayConfirmationForm.f((byte) -108) && (!(0 < DraggableWidgetContainer.field_H) ||
           LevelDecoder.a((byte) -119))) {
           stackIn_7_0 = false;
           decompiledFrameRemainder0 = false;

@@ -155,7 +155,7 @@ final class hi {
             }
             stackIn_37_0 = var6;
             stackIn_38_1 = !(var4 < 0);
-            var7Lifetime1 = ii.a(stackIn_37_0, stackIn_38_1, 0);
+            var7Lifetime1 = FullscreenStatusDialog.a(stackIn_37_0, stackIn_38_1, 0);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + CrossfadingMidiPcmStream.field_D;
             if (var4 >= 0) {
               if (RichTextWidget.field_H.field_d != var4) {

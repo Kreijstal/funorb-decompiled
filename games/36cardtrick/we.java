@@ -5,7 +5,7 @@ final class we {
     final static void a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int param5, int param6, int param7, int param8, BitmapFont param9, RgbSprite[] param10, int param11, boolean param12, boolean param13, BitmapFont param14) {
         try {
           RgbSprite[] var16 = (RgbSprite[]) null;
-          af.a(param14, param5, param2, 0, (byte) -120, af.field_jb, param3, param6, 0, param0, 480, (RgbSprite[]) null, param1, param10, param8, param11, param9, wg.field_a, param7, ca.field_b, param4);
+          ProgressMessageDialog.a(param14, param5, param2, 0, (byte) -120, ProgressMessageDialog.field_jb, param3, param6, 0, param0, 480, (RgbSprite[]) null, param1, param10, param8, param11, param9, wg.field_a, param7, ca.field_b, param4);
           if (!param12) {
             we.a(-28);
           }
@@ -136,14 +136,14 @@ final class we {
           throw new IllegalStateException();
         }
         if (param0 < -117) {
-          tj.field_K = true;
+          GuestPlayConfirmationForm.field_K = true;
           gh.a((byte) 59, false);
           cd.field_e = 0;
           return;
         }
         String var2 = (String) null;
         we.a((String) null, 15);
-        tj.field_K = true;
+        GuestPlayConfirmationForm.field_K = true;
         gh.a((byte) 59, false);
         cd.field_e = 0;
     }

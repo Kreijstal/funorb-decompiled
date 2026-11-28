@@ -36,20 +36,20 @@ final class ic extends mc {
           return;
         }
         if (null == il.field_c) {
-          cm.field_R = gh.createFullscreenCanvas(0, -115, 0, 480, i.field_A, 640);
-          if (cm.field_R == null) {
+          RegistrationAgreementPane.field_R = gh.createFullscreenCanvas(0, -115, 0, 480, i.field_A, 640);
+          if (RegistrationAgreementPane.field_R == null) {
             var2Lifetime1 = 3;
           } else {
-            GzipDecompressor.a(cm.field_R, (byte) -124);
+            GzipDecompressor.a(RegistrationAgreementPane.field_R, (byte) -124);
             var2Lifetime1 = 2;
           }
         } else {
-          cm.field_R = il.field_c.d(92);
+          RegistrationAgreementPane.field_R = il.field_c.d(92);
           DisplayNameSelectionPanel.a(2, (byte) 4);
-          if (cm.field_R == null) {
+          if (RegistrationAgreementPane.field_R == null) {
             var2Lifetime1 = 3;
           } else {
-            GzipDecompressor.a(cm.field_R, (byte) -124);
+            GzipDecompressor.a(RegistrationAgreementPane.field_R, (byte) -124);
             var2Lifetime1 = 2;
           }
         }

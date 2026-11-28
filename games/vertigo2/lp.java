@@ -14,7 +14,7 @@ final class lp extends TextureOperator {
         int[] var4 = this.field_x.a(param0, (byte) 59);
         int[] var3 = var4;
         if (this.field_x.field_i) {
-          qq.a(var4, 0, we.field_M, this.field_y);
+          qq.a(var4, 0, StripedProgressWidget.field_M, this.field_y);
         }
         if (param1 <= 91) {
           return (int[]) null;

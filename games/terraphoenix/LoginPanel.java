@@ -25,7 +25,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
     }
 
     final static void a(bm param0, bm param1, int param2, int param3, int param4, int param5) {
-        hi.field_ab = param3;
+        FullscreenStatusDialog.field_ab = param3;
         if (param4 >= -125) {
           return;
         }
@@ -148,7 +148,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
           if (this.field_K != null) {
             this.field_K.listener = (WidgetActionListener) ((Object) var6);
           }
-          this.field_N.field_x = hi.field_Z;
+          this.field_N.field_x = FullscreenStatusDialog.field_Z;
           if (this.field_K != null) {
             this.field_K.field_x = sj.field_d;
           }
@@ -156,7 +156,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
             this.field_G.field_x = ie.field_c;
           } else {
             if (this.field_Q) {
-              this.field_G.field_x = qf.field_b;
+              this.field_G.field_x = FullscreenNoticeType.field_b;
               this.field_G.listener = (WidgetActionListener) ((Object) new qh());
             } else {
               this.field_G.listener = (WidgetActionListener) ((Object) new qh());
@@ -375,7 +375,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
             if (param0 != this.field_K) {
               if (this.field_G == param0) {
                 if (this.field_O) {
-                  si.m(-74);
+                  ProgressMessageDialog.m(-74);
                 } else {
                   if (this.field_Q) {
                     DefaultTextWidgetRenderer.c(-24);

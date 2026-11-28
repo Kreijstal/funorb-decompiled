@@ -192,7 +192,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         var2.setBounds(53, var3, 20, 270, 50);
         var3 += 50;
         this.addChild(var2, (byte) -110);
-        var3 = var3 + (5 + this.a(var3, 170, bi.field_O, this.field_D, rd.field_b, (byte) -32));
+        var3 = var3 + (5 + this.a(var3, 170, ResizableModalDialog.field_O, this.field_D, rd.field_b, (byte) -32));
         this.field_x.setBounds(122, var3, -var5 + 496 >> 1, var5, 40);
         this.field_w.setBounds(-116, 15 + var3, 3 + var4, 60, 40);
         this.field_w.field_m = (WidgetEventListener) (this);

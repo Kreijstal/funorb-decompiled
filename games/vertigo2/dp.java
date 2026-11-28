@@ -92,15 +92,15 @@ final class dp extends TextureOperator {
               }
               break;
             }
-            qq.a(var13, 0, we.field_M, var5);
+            qq.a(var13, 0, StripedProgressWidget.field_M, var5);
             decompiledFrameRemainder0 = false;
           }
           else {
             var5Lifetime1 = 0;
-            while (!(var5Lifetime1 >= we.field_M)) {
+            while (!(var5Lifetime1 >= StripedProgressWidget.field_M)) {
               var6Lifetime1 = 0;
               var7 = 0;
-              var8 = rh.field_O[var5Lifetime1];
+              var8 = DialogMessagePane.field_O[var5Lifetime1];
               var9 = this.field_y;
               stackIn_18_0 = ~var9;
               stackIn_18_1 = -2;

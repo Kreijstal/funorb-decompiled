@@ -206,12 +206,12 @@ final class h {
         if (null != lp.field_a) {
           for (var2 = 0; FloatingScoreLabel.field_e.length > var2; var2++) {
             if (FloatingScoreLabel.field_e[var2] == param1 &&
-              jd.field_K[var2] > 0) {
-              dupTemp$4 = jd.field_K[var2] - 1;
+              DialogMessagePane.field_K[var2] > 0) {
+              dupTemp$4 = DialogMessagePane.field_K[var2] - 1;
               arrayValue$5 = lp.field_a[var2];
-              jd.field_K[var2] = dupTemp$4;
+              DialogMessagePane.field_K[var2] = dupTemp$4;
               var3 = arrayValue$5[dupTemp$4];
-              lp.field_a[var2][jd.field_K[var2]] = null;
+              lp.field_a[var2][DialogMessagePane.field_K[var2]] = null;
               return var3;
             }
           }

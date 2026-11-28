@@ -15,11 +15,11 @@ class InteractiveWidget extends UiWidget {
           super.updatePointer(param0, param1, param2, param3);
           if (this.field_u != 0 &&
             this.field_u != n.field_m) {
-            if (this.containsPointer(uc.field_C, 0, param2, param1, ll.field_y) &&
+            if (this.containsPointer(DialogMessagePane.field_C, 0, param2, param1, StripedProgressWidget.field_y) &&
               n.field_m == 0) {
-              this.activateFromInput(ll.field_y - param2, uc.field_C - param1, (byte) -127, this.field_u);
+              this.activateFromInput(StripedProgressWidget.field_y - param2, DialogMessagePane.field_C - param1, (byte) -127, this.field_u);
             }
-            this.pointerReleased(ll.field_y, param1, param3, param2, 34, uc.field_C);
+            this.pointerReleased(StripedProgressWidget.field_y, param1, param3, param2, 34, DialogMessagePane.field_C);
           }
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "wd.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

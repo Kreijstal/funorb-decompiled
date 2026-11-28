@@ -173,7 +173,7 @@ final class d extends InteractiveWidget {
           }
           gi.field_b = param2;
           SingleChildWidgetContainer.field_w = param0;
-          AppletShell.a(param1, sh.field_jb, -1);
+          AppletShell.a(param1, ProgressMessageDialog.field_jb, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -257,19 +257,19 @@ final class d extends InteractiveWidget {
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              if (db.field_V == 1) {
-                db.field_V = 2;
+              if (ProgressDialog.field_V == 1) {
+                ProgressDialog.field_V = 2;
               }
               return;
             }
             if (var2 == 3) {
-              if (db.field_V == 2) {
-                db.field_V = 1;
+              if (ProgressDialog.field_V == 2) {
+                ProgressDialog.field_V = 1;
               }
               return;
             }
             if (var2 == 4) {
-              db.field_V = 1;
+              ProgressDialog.field_V = 1;
               var3 = var1.readString(true);
               PcmResampler.field_d = ((String) (var3)).intern();
               var4 = var1.readUnsignedByte((byte) -117);

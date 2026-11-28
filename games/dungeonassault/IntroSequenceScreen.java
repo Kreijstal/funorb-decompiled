@@ -69,10 +69,10 @@ final class IntroSequenceScreen extends DungeonAssaultScreen {
     }
 
     private final void finishIntroSequence(boolean param0, int param1) {
-        ia.field_K.field_w = 0;
+        GuestPlayConfirmationForm.field_K.field_w = 0;
         lk.f(param1 - 4080);
         gd.a(0, param1 ^ param1, 0, param0);
-        cm.a(1.600000023841858f, 0.9200000166893005f, param1 - 11884, 0.10000000149011612f, 25.0f);
+        RegistrationAgreementPane.a(1.600000023841858f, 0.9200000166893005f, param1 - 11884, 0.10000000149011612f, 25.0f);
     }
 
     private final int[] a(boolean param0, int[] param1) {
@@ -141,10 +141,10 @@ final class IntroSequenceScreen extends DungeonAssaultScreen {
         if (!param0) {
           return;
         }
-        if (ia.field_K == null) {
+        if (GuestPlayConfirmationForm.field_K == null) {
           SoftwareRasterizer.clearRaster();
         } else {
-          if (ia.field_K.field_w > ia.field_K.field_g) {
+          if (GuestPlayConfirmationForm.field_K.field_w > GuestPlayConfirmationForm.field_K.field_g) {
             SoftwareRasterizer.clearRaster();
             var2 = -sg.field_b.field_y + 640 >> 1;
             var3 = -sg.field_b.field_v + 480 >> 1;
@@ -155,7 +155,7 @@ final class IntroSequenceScreen extends DungeonAssaultScreen {
             ModalDialog.field_O.b(false, 84);
             (ModalDialog.field_O.field_hb ? ok.field_Y : ub.field_i).b(ModalDialog.field_O.field_D, 32, ModalDialog.field_O.field_gb + ModalDialog.field_O.field_ob / 2 - ok.field_Y.field_i / 2);
           } else {
-            ia.field_K.a(-101);
+            GuestPlayConfirmationForm.field_K.a(-101);
             ModalDialog.field_O.b(false, 125);
             (!ModalDialog.field_O.field_hb ? ub.field_i : ok.field_Y).b(ModalDialog.field_O.field_D, 32, -(ok.field_Y.field_i / 2) + (ModalDialog.field_O.field_ob / 2 + ModalDialog.field_O.field_gb));
           }
@@ -188,10 +188,10 @@ final class IntroSequenceScreen extends DungeonAssaultScreen {
             this.d(true);
           }
         }
-        ia.field_K.a(true);
-        if (ia.field_K.field_w < ia.field_K.field_g) {
-          for (var2 = 0; var2 < sj.field_db.length; var2++) {
-            if (sj.field_db[var2] == ia.field_K.field_w &&
+        GuestPlayConfirmationForm.field_K.a(true);
+        if (GuestPlayConfirmationForm.field_K.field_w < GuestPlayConfirmationForm.field_K.field_g) {
+          for (var2 = 0; var2 < ResizableModalDialog.field_db.length; var2++) {
+            if (ResizableModalDialog.field_db[var2] == GuestPlayConfirmationForm.field_K.field_w &&
               var2 < u.field_T.length) {
               gd.a(64, u.field_T[var2]);
             }
@@ -203,7 +203,7 @@ final class IntroSequenceScreen extends DungeonAssaultScreen {
         if (fieldTemp$0 >= 150) {
           sf.field_g = sf.field_g + 8;
           if (sf.field_g >= 256) {
-            cm.a(0.0f, 0.0f, -7788, 0.10000000149011612f, 0.0f);
+            RegistrationAgreementPane.a(0.0f, 0.0f, -7788, 0.10000000149011612f, 0.0f);
             this.finishIntroSequence(false, 4096);
             return;
           }
@@ -226,74 +226,74 @@ final class IntroSequenceScreen extends DungeonAssaultScreen {
         int var3 = 0;
         int var9 = 0;
         int var13 = DungeonAssault.field_K;
-        int[] var21 = new int[]{sj.field_db[1], sj.field_db[2] - sj.field_db[1], -sj.field_db[2] + sj.field_db[3], sj.field_db[4] - sj.field_db[3], -sj.field_db[4] + sj.field_db[5], -sj.field_db[5] + sj.field_db[6], sj.field_db[7] - sj.field_db[6], sj.field_db[8] - sj.field_db[7], 1870 - sj.field_db[8]};
+        int[] var21 = new int[]{ResizableModalDialog.field_db[1], ResizableModalDialog.field_db[2] - ResizableModalDialog.field_db[1], -ResizableModalDialog.field_db[2] + ResizableModalDialog.field_db[3], ResizableModalDialog.field_db[4] - ResizableModalDialog.field_db[3], -ResizableModalDialog.field_db[4] + ResizableModalDialog.field_db[5], -ResizableModalDialog.field_db[5] + ResizableModalDialog.field_db[6], ResizableModalDialog.field_db[7] - ResizableModalDialog.field_db[6], ResizableModalDialog.field_db[8] - ResizableModalDialog.field_db[7], 1870 - ResizableModalDialog.field_db[8]};
         int var3Lifetime1;
         int var9Lifetime1;
-        ia.field_K = new tk(ConfirmedEmailAvailabilityValidator.field_o, var21, 0, IntrusiveNode.field_c, qh.field_J, (RgbSprite[]) null);
-        ia.field_K.field_i = new boolean[]{param0, true, true, true, false, true, true, true, true};
-        ia.field_K.field_a[8] = 16777215;
-        ia.field_K.field_u[7] = 16777215;
-        ia.field_K.field_B = new boolean[]{true, true, true, true, true, false, true, true, true};
-        ia.field_K.field_r = 64;
-        for (var3 = 0; ia.field_K.field_n.length > var3; var3++) {
-          ia.field_K.field_n[var3] = 5120;
-          ia.field_K.field_s[var3] = 4096;
-          var46 = ia.field_K.field_c;
-          ia.field_K.field_h[var3] = 0;
+        GuestPlayConfirmationForm.field_K = new tk(ConfirmedEmailAvailabilityValidator.field_o, var21, 0, IntrusiveNode.field_c, qh.field_J, (RgbSprite[]) null);
+        GuestPlayConfirmationForm.field_K.field_i = new boolean[]{param0, true, true, true, false, true, true, true, true};
+        GuestPlayConfirmationForm.field_K.field_a[8] = 16777215;
+        GuestPlayConfirmationForm.field_K.field_u[7] = 16777215;
+        GuestPlayConfirmationForm.field_K.field_B = new boolean[]{true, true, true, true, true, false, true, true, true};
+        GuestPlayConfirmationForm.field_K.field_r = 64;
+        for (var3 = 0; GuestPlayConfirmationForm.field_K.field_n.length > var3; var3++) {
+          GuestPlayConfirmationForm.field_K.field_n[var3] = 5120;
+          GuestPlayConfirmationForm.field_K.field_s[var3] = 4096;
+          var46 = GuestPlayConfirmationForm.field_K.field_c;
+          GuestPlayConfirmationForm.field_K.field_h[var3] = 0;
           var5 = var3;
           var46[var5] = 0;
-          ia.field_K.field_j[var3] = 3840;
-          ia.field_K.field_f[var3] = 5120;
-          ia.field_K.field_q[var3] = 2880;
-          ia.field_K.field_x[var3] = 3840;
-          var47 = ia.field_K.field_A;
-          ia.field_K.field_e[var3] = 5120;
+          GuestPlayConfirmationForm.field_K.field_j[var3] = 3840;
+          GuestPlayConfirmationForm.field_K.field_f[var3] = 5120;
+          GuestPlayConfirmationForm.field_K.field_q[var3] = 2880;
+          GuestPlayConfirmationForm.field_K.field_x[var3] = 3840;
+          var47 = GuestPlayConfirmationForm.field_K.field_A;
+          GuestPlayConfirmationForm.field_K.field_e[var3] = 5120;
           var7 = var3;
           var47[var7] = 5120;
-          var48 = ia.field_K.field_y;
-          ia.field_K.field_m[var3] = 3840;
+          var48 = GuestPlayConfirmationForm.field_K.field_y;
+          GuestPlayConfirmationForm.field_K.field_m[var3] = 3840;
           var9 = var3;
           var48[var9] = 3840;
         }
-        ia.field_K.field_y[8] = 2560;
-        ia.field_K.field_m[8] = 3200;
-        ia.field_K.field_j = this.a(new int[]{-160, 160, 0, 42, ia.field_K.field_j[4], ia.field_K.field_j[5], -120, -18, -18}, false);
-        ia.field_K.field_q = this.a(false, new int[]{-120, -120, -120, -9, ia.field_K.field_q[4], ia.field_K.field_q[5], -70, 2, 2});
+        GuestPlayConfirmationForm.field_K.field_y[8] = 2560;
+        GuestPlayConfirmationForm.field_K.field_m[8] = 3200;
+        GuestPlayConfirmationForm.field_K.field_j = this.a(new int[]{-160, 160, 0, 42, GuestPlayConfirmationForm.field_K.field_j[4], GuestPlayConfirmationForm.field_K.field_j[5], -120, -18, -18}, false);
+        GuestPlayConfirmationForm.field_K.field_q = this.a(false, new int[]{-120, -120, -120, -9, GuestPlayConfirmationForm.field_K.field_q[4], GuestPlayConfirmationForm.field_K.field_q[5], -70, 2, 2});
         int var20 = 0;
         var3Lifetime1 = var20;
-        while (ia.field_K.field_n.length > var20) {
-          ia.field_K.field_n[var20] = 5120;
-          ia.field_K.field_s[var20] = 4096;
+        while (GuestPlayConfirmationForm.field_K.field_n.length > var20) {
+          GuestPlayConfirmationForm.field_K.field_n[var20] = 5120;
+          GuestPlayConfirmationForm.field_K.field_s[var20] = 4096;
           var20++;
         }
-        int[] var51 = ia.field_K.field_n;
-        int[] var50 = ia.field_K.field_n;
-        int[] var49 = ia.field_K.field_s;
-        ia.field_K.field_s[5] = 4096;
+        int[] var51 = GuestPlayConfirmationForm.field_K.field_n;
+        int[] var50 = GuestPlayConfirmationForm.field_K.field_n;
+        int[] var49 = GuestPlayConfirmationForm.field_K.field_s;
+        GuestPlayConfirmationForm.field_K.field_s[5] = 4096;
         var49[4] = 4096;
         var50[5] = 4096;
         var51[4] = 4096;
-        int[] var54 = ia.field_K.field_c;
-        int[] var52 = ia.field_K.field_c;
-        int[] var53 = ia.field_K.field_h;
-        ia.field_K.field_h[5] = 0;
+        int[] var54 = GuestPlayConfirmationForm.field_K.field_c;
+        int[] var52 = GuestPlayConfirmationForm.field_K.field_c;
+        int[] var53 = GuestPlayConfirmationForm.field_K.field_h;
+        GuestPlayConfirmationForm.field_K.field_h[5] = 0;
         var52[5] = 0;
         var53[4] = 0;
         var54[4] = 0;
-        var9Lifetime1 = 600 * (-ia.field_K.field_z[4] + ia.field_K.field_d[4]) / (ia.field_K.field_d[5] - ia.field_K.field_z[4]);
-        ia.field_K.field_j[4] = 0;
-        ia.field_K.field_j[5] = -var9Lifetime1 << 4;
-        ia.field_K.field_f[4] = -var9Lifetime1 << 4;
-        ia.field_K.field_f[5] = -9600;
-        int[] var57 = ia.field_K.field_q;
-        int[] var56 = ia.field_K.field_q;
-        ia.field_K.field_x[5] = 3840;
-        int[] var55 = ia.field_K.field_x;
+        var9Lifetime1 = 600 * (-GuestPlayConfirmationForm.field_K.field_z[4] + GuestPlayConfirmationForm.field_K.field_d[4]) / (GuestPlayConfirmationForm.field_K.field_d[5] - GuestPlayConfirmationForm.field_K.field_z[4]);
+        GuestPlayConfirmationForm.field_K.field_j[4] = 0;
+        GuestPlayConfirmationForm.field_K.field_j[5] = -var9Lifetime1 << 4;
+        GuestPlayConfirmationForm.field_K.field_f[4] = -var9Lifetime1 << 4;
+        GuestPlayConfirmationForm.field_K.field_f[5] = -9600;
+        int[] var57 = GuestPlayConfirmationForm.field_K.field_q;
+        int[] var56 = GuestPlayConfirmationForm.field_K.field_q;
+        GuestPlayConfirmationForm.field_K.field_x[5] = 3840;
+        int[] var55 = GuestPlayConfirmationForm.field_K.field_x;
         var55[4] = 3840;
         var56[5] = 3840;
-        ia.field_K.field_w = 0;
+        GuestPlayConfirmationForm.field_K.field_w = 0;
         var57[4] = 3840;
-        cm.a(0.0f, 0.0f, -7788, 0.10000000149011612f, 0.0f);
+        RegistrationAgreementPane.a(0.0f, 0.0f, -7788, 0.10000000149011612f, 0.0f);
         t.a(1048576, jd.field_o, false, true);
     }
 
@@ -301,7 +301,7 @@ final class IntroSequenceScreen extends DungeonAssaultScreen {
         try {
           param0.removeKeyListener(NetworkGameClient.field_C);
           param0.removeFocusListener(NetworkGameClient.field_C);
-          ia.field_M = param1;
+          GuestPlayConfirmationForm.field_M = param1;
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ud.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -48,7 +48,7 @@ final class AccountServiceResult {
         try {
           var3 = (sl) (ArchiveProvider.field_c.beginForward(88));
           while (var3 != null) {
-            qd.a(4, (byte) -90, var3);
+            GuestPlayConfirmationForm.a(4, (byte) -90, var3);
             var3 = (sl) (ArchiveProvider.field_c.nextForward((byte) 56));
           }
           if (param0 == 4) {
@@ -87,10 +87,10 @@ final class AccountServiceResult {
         RuntimeException decompiledCaughtException = null;
         try {
           if (sj.field_h != null) {
-            sj.field_h.s(2121792);
+            sj.field_h.closeDialog(2121792);
           }
           MidiPcmStream.field_D = new LoginPanel(param1, param0, false, true, true);
-          de.field_a.a((byte) -126, (UiWidget) (MidiPcmStream.field_D));
+          de.field_a.replaceContent((byte) -126, (UiWidget) (MidiPcmStream.field_D));
           if (param2 == -1) {
             return;
           }
@@ -125,7 +125,7 @@ final class AccountServiceResult {
           int stackIn_9_0 = 0;
           Throwable decompiledCaughtException = null;
           if (dk.field_b == null) {
-            dk.field_b = mm.field_b.requestDirectSocket(wf.field_U, SingleChildWidgetContainer.field_E, (byte) 73);
+            dk.field_b = mm.field_b.requestDirectSocket(ResizableModalDialog.field_U, SingleChildWidgetContainer.field_E, (byte) 73);
           }
           var2 = -97 % ((-24 - param1) / 56);
           if (dk.field_b.status == 0) {
@@ -135,7 +135,7 @@ final class AccountServiceResult {
           ck.field_d = dupTemp$1;
           sk.field_c = dupTemp$1;
           if (dk.field_b.status != 1) {
-            qd.field_Q = dk.field_c;
+            GuestPlayConfirmationForm.field_Q = dk.field_c;
           } else {
             try {
               AwtRasterBuffer.field_i = new BufferedSocket((java.net.Socket) (dk.field_b.result), mm.field_b);
@@ -146,13 +146,13 @@ final class AccountServiceResult {
               lc.field_s = stackIn_9_0;
               rd.field_a = stackIn_9_0;
               ud.field_a = stackIn_9_0;
-              qd.field_Q = cm.field_p;
+              GuestPlayConfirmationForm.field_Q = cm.field_p;
               le.a(cm.field_q, sn.field_c, sj.field_c, ii.field_a, -80);
               bk.a((byte) 124, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (IOException) (Object) decompiledCaughtException;
-              qd.field_Q = dk.field_c;
+              GuestPlayConfirmationForm.field_Q = dk.field_c;
               dk.field_b = null;
               return true;
             }

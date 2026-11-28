@@ -45,7 +45,7 @@ class MixedSupport024 extends DefaultTextWidgetRenderer {
           if (null == GameSession.bufferedSocketState0002) {
             return false;
           }
-          if (UiComponentPart023.mixedSupport132State0009.computeBoolean1676(22277)) {
+          if (StandardContentDialog.mixedSupport132State0009.computeBoolean1676(22277)) {
             return true;
           }
           return false;
@@ -53,7 +53,7 @@ class MixedSupport024 extends DefaultTextWidgetRenderer {
         if (null == GameSession.bufferedSocketState0002) {
           return false;
         }
-        if (UiComponentPart023.mixedSupport132State0009.computeBoolean1676(22277)) {
+        if (StandardContentDialog.mixedSupport132State0009.computeBoolean1676(22277)) {
           return true;
         }
         return false;

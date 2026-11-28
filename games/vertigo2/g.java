@@ -177,7 +177,7 @@ final class g {
             j.field_n = null;
             mb.field_y = null;
             uh.field_Xb = null;
-            fg.field_eb.clear(0);
+            ProgressDialog.field_eb.clear(0);
             ml.field_z = 0;
             jq.field_e = 0;
             DiskCacheWorker.field_l = 0;
@@ -223,7 +223,7 @@ final class g {
                 j.field_n = null;
                 mb.field_y = null;
                 uh.field_Xb = null;
-                fg.field_eb.clear(0);
+                ProgressDialog.field_eb.clear(0);
                 ml.field_z = 0;
                 jq.field_e = 0;
                 DiskCacheWorker.field_l = 0;
@@ -250,7 +250,7 @@ final class g {
                 j.field_n = null;
                 mb.field_y = null;
                 uh.field_Xb = null;
-                fg.field_eb.clear(0);
+                ProgressDialog.field_eb.clear(0);
                 ml.field_z = 0;
                 jq.field_e = 0;
                 DiskCacheWorker.field_l = 0;
@@ -271,7 +271,7 @@ final class g {
               j.field_n = null;
               mb.field_y = null;
               uh.field_Xb = null;
-              fg.field_eb.clear(0);
+              ProgressDialog.field_eb.clear(0);
               ml.field_z = 0;
               jq.field_e = 0;
               DiskCacheWorker.field_l = 0;
@@ -312,7 +312,7 @@ final class g {
                 j.field_n = null;
                 mb.field_y = null;
                 uh.field_Xb = null;
-                fg.field_eb.clear(0);
+                ProgressDialog.field_eb.clear(0);
                 ml.field_z = 0;
                 jq.field_e = 0;
                 DiskCacheWorker.field_l = 0;
@@ -342,7 +342,7 @@ final class g {
               j.field_n = null;
               mb.field_y = null;
               uh.field_Xb = null;
-              fg.field_eb.clear(0);
+              ProgressDialog.field_eb.clear(0);
               ml.field_z = 0;
               jq.field_e = 0;
               DiskCacheWorker.field_l = 0;
@@ -360,7 +360,7 @@ final class g {
                 j.field_n = null;
                 mb.field_y = null;
                 uh.field_Xb = null;
-                fg.field_eb.clear(0);
+                ProgressDialog.field_eb.clear(0);
                 ml.field_z = 0;
                 jq.field_e = 0;
                 DiskCacheWorker.field_l = 0;
@@ -390,7 +390,7 @@ final class g {
             j.field_n = null;
             mb.field_y = null;
             uh.field_Xb = null;
-            fg.field_eb.clear(0);
+            ProgressDialog.field_eb.clear(0);
             ml.field_z = 0;
             jq.field_e = 0;
             DiskCacheWorker.field_l = 0;

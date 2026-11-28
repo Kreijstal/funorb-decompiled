@@ -1118,20 +1118,20 @@ final class BattleUnit {
             this.field_d == 1) {
             switch (var3) {
               case 0:
-                hi.field_W[this.field_e + 4 * var5].draw(-(hi.field_W[0].field_f / 2) + 53, 77 - hi.field_W[0].field_i);
+                FullscreenStatusDialog.field_W[this.field_e + 4 * var5].draw(-(FullscreenStatusDialog.field_W[0].field_f / 2) + 53, 77 - FullscreenStatusDialog.field_W[0].field_i);
                 break;
               case 5:
-                ba.field_e[4 * var5 + this.field_e].draw(53 - hi.field_W[0].field_f / 2, 77 - hi.field_W[0].field_i);
+                ba.field_e[4 * var5 + this.field_e].draw(53 - FullscreenStatusDialog.field_W[0].field_f / 2, 77 - FullscreenStatusDialog.field_W[0].field_i);
                 break;
               case 10:
-                hi.field_W[20 + this.field_e + var5 * 4].draw(53 - hi.field_W[0].field_f / 2, -hi.field_W[0].field_i + 77);
+                FullscreenStatusDialog.field_W[20 + this.field_e + var5 * 4].draw(53 - FullscreenStatusDialog.field_W[0].field_f / 2, -FullscreenStatusDialog.field_W[0].field_i + 77);
                 break;
               case 15:
-                ba.field_e[this.field_e + 4 * var5 + 20].draw(53 - hi.field_W[0].field_f / 2, 77 - hi.field_W[0].field_i);
+                ba.field_e[this.field_e + 4 * var5 + 20].draw(53 - FullscreenStatusDialog.field_W[0].field_f / 2, 77 - FullscreenStatusDialog.field_W[0].field_i);
               default:
                 break regionExit1;
               case 20:
-                hi.field_W[4 * var5 + this.field_e + 20].draw(53 - hi.field_W[0].field_f / 2, -hi.field_W[0].field_i + 77);
+                FullscreenStatusDialog.field_W[4 * var5 + this.field_e + 20].draw(53 - FullscreenStatusDialog.field_W[0].field_f / 2, -FullscreenStatusDialog.field_W[0].field_i + 77);
                 if (var8 == 0) {
                   break regionExit1;
                 }

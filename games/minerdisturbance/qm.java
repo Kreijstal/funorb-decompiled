@@ -28,7 +28,7 @@ final class qm {
         if (param0 > AccountRequestState.field_g) {
           v.field_c = param0;
         }
-        jk.field_db[fb.field_c] = param4;
+        ContentTransitionDialog.field_db[fb.field_c] = param4;
         qa.field_c[fb.field_c] = param5;
         li.field_a[fb.field_c] = param1;
         int var6 = param1 + (param5 + param4);

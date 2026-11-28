@@ -137,9 +137,9 @@ final class CreaturePoseEffect extends EventEffect {
                 ik.field_i.field_u = true;
               }
               ik.field_i.field_eb = vo.field_b.field_eb;
-              if (hc.field_J > 0) {
-                if (hc.field_J != 1) {
-                  var10_ref_String = lga.a(true, new String[]{Integer.toString(hc.field_J)}, mk.field_y);
+              if (DialogMessagePane.field_J > 0) {
+                if (DialogMessagePane.field_J != 1) {
+                  var10_ref_String = lga.a(true, new String[]{Integer.toString(DialogMessagePane.field_J)}, mk.field_y);
                   if (var19 != 0) {
                     var10_ref_String = mu.field_m;
                   }

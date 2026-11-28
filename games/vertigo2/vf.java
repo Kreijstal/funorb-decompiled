@@ -48,22 +48,22 @@ final class vf extends TextureOperator {
           var8 = this.field_z;
           if (var8 == 1) {
             var11Lifetime1 = var3;
-            for (var8 = 0; we.field_M > var8; var8++) {
+            for (var8 = 0; StripedProgressWidget.field_M > var8; var8++) {
               var11Lifetime1[var8] = var18[var8] + var19[var8];
             }
           } else {
             if (var8 == 2) {
-              for (var8 = 0; var8 < we.field_M; var8++) {
+              for (var8 = 0; var8 < StripedProgressWidget.field_M; var8++) {
                 var3[var8] = var19[var8] - var18[var8];
               }
             } else {
               if (3 == var8) {
-                for (var8 = 0; we.field_M > var8; var8++) {
+                for (var8 = 0; StripedProgressWidget.field_M > var8; var8++) {
                   var3[var8] = var19[var8] * var18[var8] >> 12;
                 }
               } else {
                 if (var8 == 4) {
-                  for (var8 = 0; we.field_M > var8; var8++) {
+                  for (var8 = 0; StripedProgressWidget.field_M > var8; var8++) {
                     var5 = var18[var8];
                     stackIn_35_0 = var3;
                     stackIn_35_1 = var8;
@@ -76,12 +76,12 @@ final class vf extends TextureOperator {
                   }
                 } else {
                   if (var8 == 5) {
-                    for (var8 = 0; var8 < we.field_M; var8++) {
+                    for (var8 = 0; var8 < StripedProgressWidget.field_M; var8++) {
                       var3[var8] = 4096 - ((4096 - var18[var8]) * (-var19[var8] + 4096) >> 12);
                     }
                   } else {
                     if (6 == var8) {
-                      for (var8 = 0; var8 < we.field_M; var8++) {
+                      for (var8 = 0; var8 < StripedProgressWidget.field_M; var8++) {
                         var5 = var18[var8];
                         stackIn_44_0 = var3;
                         stackIn_44_1 = var8;
@@ -94,7 +94,7 @@ final class vf extends TextureOperator {
                       }
                     } else {
                       if (var8 == 7) {
-                        for (var8 = 0; we.field_M > var8; var8++) {
+                        for (var8 = 0; StripedProgressWidget.field_M > var8; var8++) {
                           var4 = var19[var8];
                           stackIn_50_0 = var3;
                           stackIn_50_1 = var8;
@@ -107,7 +107,7 @@ final class vf extends TextureOperator {
                         }
                       } else {
                         if (8 == var8) {
-                          for (var8 = 0; var8 < we.field_M; var8++) {
+                          for (var8 = 0; var8 < StripedProgressWidget.field_M; var8++) {
                             var4 = var19[var8];
                             stackIn_56_0 = var3;
                             stackIn_56_1 = var8;
@@ -120,7 +120,7 @@ final class vf extends TextureOperator {
                           }
                         } else {
                           if (var8 == 9) {
-                            for (var8 = 0; we.field_M > var8; var8++) {
+                            for (var8 = 0; StripedProgressWidget.field_M > var8; var8++) {
                               var5 = var18[var8];
                               var4 = var19[var8];
                               stackIn_62_0 = var3;
@@ -134,7 +134,7 @@ final class vf extends TextureOperator {
                             }
                           } else {
                             if (var8 == 10) {
-                              for (var8 = 0; var8 < we.field_M; var8++) {
+                              for (var8 = 0; var8 < StripedProgressWidget.field_M; var8++) {
                                 var4 = var19[var8];
                                 var5 = var18[var8];
                                 stackIn_68_0 = var3;
@@ -148,7 +148,7 @@ final class vf extends TextureOperator {
                               }
                             } else {
                               if (var8 == 11) {
-                                for (var8 = 0; var8 < we.field_M; var8++) {
+                                for (var8 = 0; var8 < StripedProgressWidget.field_M; var8++) {
                                   var4 = var19[var8];
                                   var5 = var18[var8];
                                   stackIn_74_0 = var3;
@@ -162,7 +162,7 @@ final class vf extends TextureOperator {
                                 }
                               } else {
                                 if (var8 == 12) {
-                                  for (var8 = 0; we.field_M > var8; var8++) {
+                                  for (var8 = 0; StripedProgressWidget.field_M > var8; var8++) {
                                     var5 = var18[var8];
                                     var4 = var19[var8];
                                     var3[var8] = -(var5 * var4 >> 11) + (var4 + var5);
@@ -366,7 +366,7 @@ final class vf extends TextureOperator {
             var55Lifetime1 = var50[1];
             var56Lifetime1 = var51[2];
             var57Lifetime1 = var50[2];
-            for (var21 = 0; var21 < we.field_M; var21++) {
+            for (var21 = 0; var21 < StripedProgressWidget.field_M; var21++) {
               var12Lifetime1[var21] = var52Lifetime1[var21] + var53Lifetime1[var21];
               var13Lifetime1[var21] = var54Lifetime1[var21] + var55Lifetime1[var21];
               var14Lifetime1[var21] = var56Lifetime1[var21] + var57Lifetime1[var21];
@@ -382,7 +382,7 @@ final class vf extends TextureOperator {
               var55Lifetime1 = var50[1];
               var56Lifetime1 = var51[2];
               var57Lifetime1 = var50[2];
-              for (var21 = 0; var21 < we.field_M; var21++) {
+              for (var21 = 0; var21 < StripedProgressWidget.field_M; var21++) {
                 var12Lifetime1[var21] = -var53Lifetime1[var21] + var52Lifetime1[var21];
                 var13Lifetime1[var21] = var55Lifetime1[var21] - var54Lifetime1[var21];
                 var14Lifetime1[var21] = var57Lifetime1[var21] - var56Lifetime1[var21];
@@ -398,7 +398,7 @@ final class vf extends TextureOperator {
                 var55Lifetime1 = var50[1];
                 var56Lifetime1 = var51[2];
                 var57Lifetime1 = var50[2];
-                for (var21 = 0; var21 < we.field_M; var21++) {
+                for (var21 = 0; var21 < StripedProgressWidget.field_M; var21++) {
                   var12Lifetime1[var21] = var52Lifetime1[var21] * var53Lifetime1[var21] >> 12;
                   var13Lifetime1[var21] = var55Lifetime1[var21] * var54Lifetime1[var21] >> 12;
                   var14Lifetime1[var21] = var57Lifetime1[var21] * var56Lifetime1[var21] >> 12;
@@ -414,7 +414,7 @@ final class vf extends TextureOperator {
                   var55Lifetime1 = var50[1];
                   var56Lifetime1 = var51[2];
                   var57Lifetime1 = var50[2];
-                  for (var21 = 0; we.field_M > var21; var21++) {
+                  for (var21 = 0; StripedProgressWidget.field_M > var21; var21++) {
                     var7 = var53Lifetime1[var21];
                     var8 = var54Lifetime1[var21];
                     var9 = var56Lifetime1[var21];
@@ -454,7 +454,7 @@ final class vf extends TextureOperator {
                     var55Lifetime1 = var50[1];
                     var56Lifetime1 = var51[2];
                     var57Lifetime1 = var50[2];
-                    for (var21 = 0; we.field_M > var21; var21++) {
+                    for (var21 = 0; StripedProgressWidget.field_M > var21; var21++) {
                       var12Lifetime1[var21] = -((-var53Lifetime1[var21] + 4096) * (-var52Lifetime1[var21] + 4096) >> 12) + 4096;
                       var13Lifetime1[var21] = 4096 - ((-var54Lifetime1[var21] + 4096) * (-var55Lifetime1[var21] + 4096) >> 12);
                       var14Lifetime1[var21] = -((-var56Lifetime1[var21] + 4096) * (4096 - var57Lifetime1[var21]) >> 12) + 4096;
@@ -470,7 +470,7 @@ final class vf extends TextureOperator {
                       var55Lifetime1 = var50[1];
                       var56Lifetime1 = var51[2];
                       var57Lifetime1 = var50[2];
-                      for (var21 = 0; var21 < we.field_M; var21++) {
+                      for (var21 = 0; var21 < StripedProgressWidget.field_M; var21++) {
                         var9 = var56Lifetime1[var21];
                         var7 = var53Lifetime1[var21];
                         var8 = var54Lifetime1[var21];
@@ -510,7 +510,7 @@ final class vf extends TextureOperator {
                         var55Lifetime1 = var50[1];
                         var56Lifetime1 = var51[2];
                         var57Lifetime1 = var50[2];
-                        for (var21 = 0; var21 < we.field_M; var21++) {
+                        for (var21 = 0; var21 < StripedProgressWidget.field_M; var21++) {
                           var4 = var52Lifetime1[var21];
                           var5 = var55Lifetime1[var21];
                           var6 = var57Lifetime1[var21];
@@ -550,7 +550,7 @@ final class vf extends TextureOperator {
                           var55Lifetime1 = var50[1];
                           var56Lifetime1 = var51[2];
                           var57Lifetime1 = var50[2];
-                          for (var21 = 0; we.field_M > var21; var21++) {
+                          for (var21 = 0; StripedProgressWidget.field_M > var21; var21++) {
                             var6 = var57Lifetime1[var21];
                             var5 = var55Lifetime1[var21];
                             var4 = var52Lifetime1[var21];
@@ -590,7 +590,7 @@ final class vf extends TextureOperator {
                             var55Lifetime1 = var50[1];
                             var56Lifetime1 = var51[2];
                             var57Lifetime1 = var50[2];
-                            for (var21 = 0; we.field_M > var21; var21++) {
+                            for (var21 = 0; StripedProgressWidget.field_M > var21; var21++) {
                               var4 = var52Lifetime1[var21];
                               var5 = var55Lifetime1[var21];
                               var9 = var56Lifetime1[var21];
@@ -633,7 +633,7 @@ final class vf extends TextureOperator {
                               var55Lifetime1 = var50[1];
                               var56Lifetime1 = var51[2];
                               var57Lifetime1 = var50[2];
-                              for (var21 = 0; we.field_M > var21; var21++) {
+                              for (var21 = 0; StripedProgressWidget.field_M > var21; var21++) {
                                 var4 = var52Lifetime1[var21];
                                 var7 = var53Lifetime1[var21];
                                 var6 = var57Lifetime1[var21];
@@ -676,7 +676,7 @@ final class vf extends TextureOperator {
                                 var55Lifetime1 = var50[1];
                                 var56Lifetime1 = var51[2];
                                 var57Lifetime1 = var50[2];
-                                for (var21 = 0; we.field_M > var21; var21++) {
+                                for (var21 = 0; StripedProgressWidget.field_M > var21; var21++) {
                                   var7 = var53Lifetime1[var21];
                                   var6 = var57Lifetime1[var21];
                                   var4 = var52Lifetime1[var21];
@@ -719,7 +719,7 @@ final class vf extends TextureOperator {
                                   var55Lifetime1 = var50[1];
                                   var56Lifetime1 = var51[2];
                                   var57Lifetime1 = var50[2];
-                                  for (var21 = 0; var21 < we.field_M; var21++) {
+                                  for (var21 = 0; var21 < StripedProgressWidget.field_M; var21++) {
                                     var9 = var56Lifetime1[var21];
                                     var5 = var55Lifetime1[var21];
                                     var7 = var53Lifetime1[var21];

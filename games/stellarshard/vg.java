@@ -37,8 +37,8 @@ class vg extends DefaultTextWidgetRenderer {
           for (var4_int = 0; var1 > var4_int; var4_int++) {
             var3[var4_int] = gj.field_w[DirectByteStorage.a(255, (int) var2[var4_int])];
           }
-          var4 = new Sprite(nc.field_G, wd.field_b, ak.field_c[0], RasterBuffer.field_c[0], vc.field_b[0], ih.field_d[0], var3);
-          tb.f((byte) -73);
+          var4 = new Sprite(StripedProgressWidget.field_G, wd.field_b, ak.field_c[0], RasterBuffer.field_c[0], vc.field_b[0], ih.field_d[0], var3);
+          ResizableModalDialog.f((byte) -73);
           return var4;
         }
         return (Sprite) null;

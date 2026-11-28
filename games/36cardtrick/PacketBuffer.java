@@ -234,7 +234,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final int appendCrc32(int param0, byte param1) {
-        int var3 = ml.computeCrc32(this.payload, param0, this.position, param1 ^ 12014);
+        int var3 = FullscreenNoticeType.computeCrc32(this.payload, param0, this.position, param1 ^ 12014);
         this.writeInt(-246, var3);
         if (param1 != 5) {
           field_k = (RgbSprite) null;
@@ -467,7 +467,7 @@ class PacketBuffer extends IntrusiveNode {
         if (param0 != -1) {
           field_h = false;
           this.position = this.position - 4;
-          var2 = ml.computeCrc32(this.payload, 0, this.position, 12011);
+          var2 = FullscreenNoticeType.computeCrc32(this.payload, 0, this.position, 12011);
           var3 = this.readInt((byte) 124);
           if (var2 == var3) {
             return true;
@@ -475,7 +475,7 @@ class PacketBuffer extends IntrusiveNode {
           return false;
         }
         this.position = this.position - 4;
-        var2Lifetime1 = ml.computeCrc32(this.payload, 0, this.position, 12011);
+        var2Lifetime1 = FullscreenNoticeType.computeCrc32(this.payload, 0, this.position, 12011);
         var3Lifetime1 = this.readInt((byte) 124);
         if (var2Lifetime1 == var3Lifetime1) {
           return true;

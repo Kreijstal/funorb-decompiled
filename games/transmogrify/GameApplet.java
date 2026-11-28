@@ -28,8 +28,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           var2_int = -41 / ((-5 - param0) / 36);
           var3 = lk.correctedCurrentTimeMillis(0);
-          var5 = ik.field_ib[FrameTimer.field_a];
-          ik.field_ib[FrameTimer.field_a] = var3;
+          var5 = ProgressMessageDialog.field_ib[FrameTimer.field_a];
+          ProgressMessageDialog.field_ib[FrameTimer.field_a] = var3;
           if (var5 != 0L &&
             var3 > var5) {
             var7_int = (int)(-var5 + var3);
@@ -38,7 +38,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           FrameTimer.field_a = 1 + FrameTimer.field_a & 31;
           var7 = this;
           synchronized (var7) {
-            MouseWheelInput.field_b = bi.field_M;
+            MouseWheelInput.field_b = ResizableModalDialog.field_M;
           }
           this.updateGame((byte) -111);
           return;
@@ -56,7 +56,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          bi.field_M = false;
+          ResizableModalDialog.field_M = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -220,7 +220,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           AchievementNotice.field_k.addFocusListener((java.awt.event.FocusListener) (this));
           AchievementNotice.field_k.requestFocus();
           MouseWheelInput.field_b = true;
-          bi.field_M = true;
+          ResizableModalDialog.field_M = true;
           kb.field_l = true;
           mg.field_c = param0;
           tg.field_b = lk.correctedCurrentTimeMillis(0);
@@ -496,7 +496,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          bi.field_M = true;
+          ResizableModalDialog.field_M = true;
           kb.field_l = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -59,7 +59,7 @@ final class kl extends IntrusiveNode {
             }
           }
           for (var3 = 0; stellarshard.field_L.length > var3; var3++) {
-            var4 = sj.field_J[var3];
+            var4 = RegistrationAgreementPane.field_J[var3];
             if (var4 < 0) {
               var5 = NameSuggestionsPanel.field_G;
             } else {

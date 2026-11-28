@@ -26,7 +26,7 @@ final class jk {
     short[] field_b;
     short[] field_g;
     int field_n;
-    static lg field_a;
+    static FullscreenNoticeType field_a;
     int[] field_o;
     int field_N;
     short[] field_s;
@@ -286,6 +286,6 @@ final class jk {
         field_m = "High score service unavailable";
         field_K = 10;
         field_q = -1;
-        field_a = new lg();
+        field_a = new FullscreenNoticeType();
     }
 }

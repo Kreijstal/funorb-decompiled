@@ -266,7 +266,7 @@ final class pj implements uj {
         }
         if (ij.field_o == null &&
           ArchiveRequest.field_w) {
-          qd.a(126, param0, var2);
+          GuestPlayConfirmationForm.a(126, param0, var2);
         }
     }
 

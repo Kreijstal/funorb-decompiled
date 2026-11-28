@@ -111,7 +111,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_19_0;
           }
           if (k.a(19272, var5, var3)) {
-            stackIn_22_0 = fa.field_t;
+            stackIn_22_0 = StripedProgressWidget.field_t;
             return stackIn_22_0;
           }
           if (BitPacketBuffer.containsNameOrReverse(var5, (byte) -16, var3)) {
@@ -122,7 +122,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_31_0 = eb.field_g;
             return stackIn_31_0;
           }
-          stackIn_29_0 = fa.field_t;
+          stackIn_29_0 = StripedProgressWidget.field_t;
           return stackIn_29_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

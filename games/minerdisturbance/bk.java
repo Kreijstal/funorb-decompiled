@@ -163,7 +163,7 @@ final class bk {
           int var2 = 0;
           Throwable decompiledCaughtException = null;
           if (null != AwtRasterBuffer.field_i && (0 > param1 ||
-            pb.field_c == qd.field_Q)) {
+            pb.field_c == GuestPlayConfirmationForm.field_Q)) {
             var2 = -19 % ((-8 - param0) / 45);
             if (sn.field_c.position == 0 &&
               10000L + ck.field_d < sf.correctedCurrentTimeMillis((byte) 116)) {

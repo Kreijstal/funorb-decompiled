@@ -100,7 +100,7 @@ final class j {
                 stackIn_46_0 = gj.field_g;
               }
               var9 = stackIn_46_0;
-              var1_int = var1_int + gg.field_N;
+              var1_int = var1_int + FullscreenStatusDialog.field_N;
               if (var9 != null) {
                 var9.a(-123, -mj.field_f + var8Lifetime1, DisplayNameSelectionPanel.field_D + (DualLinkDequeIterator.field_b << 1), var1_int, var7Lifetime1 + (mj.field_f << 1));
               }
@@ -108,7 +108,7 @@ final class j {
             }
             if (var4 >= 0) {
               ck.field_g.drawString(var6, var8Lifetime1, DiskCacheWorker.field_f + var1_int, var5, -1);
-              var1_int = var1_int + (DualLinkDequeIterator.field_b - (-gg.field_N - DisplayNameSelectionPanel.field_D));
+              var1_int = var1_int + (DualLinkDequeIterator.field_b - (-FullscreenStatusDialog.field_N - DisplayNameSelectionPanel.field_D));
             } else {
               jd.field_a.drawString(var6, var8Lifetime1, var1_int + fe.field_c, var5, -1);
               var1_int = var1_int + d.field_j;

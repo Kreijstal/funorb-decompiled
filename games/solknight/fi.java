@@ -128,7 +128,7 @@ final class fi {
         if (param0 != 84) {
           return (String) null;
         }
-        if (gf.field_Z == ma.field_o) {
+        if (ContentTransitionDialog.field_Z == ma.field_o) {
           return MouseWheelInput.field_e;
         }
         return DualLinkNode.field_j;
@@ -253,7 +253,7 @@ final class fi {
           var4 = jc.field_c[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
-            var5[var6] = ig.field_H[fi.a((int) var4[var6], 255)];
+            var5[var6] = GuestPlayConfirmationForm.field_H[fi.a((int) var4[var6], 255)];
           }
           var1[var2] = new Sprite(MouseInputHandler.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], var5);
         }

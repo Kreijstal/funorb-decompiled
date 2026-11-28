@@ -127,11 +127,11 @@ public final class MonkeyPuzzle2 extends bi {
           ld.clearStaticReferences(-82);
           ModalDialogHost.clearDeclaredStaticReferences((byte) 121);
           AccountCreationResultPanel.releaseDeclaredStaticReferences(-249);
-          ul.releaseDeclaredStaticReferences(-105);
-          ra.clearStaticReferences((byte) -96);
-          ha.resetStaticState((byte) -128);
+          ProgressDialog.releaseDeclaredStaticReferences(-105);
+          StandardContentDialog.clearStaticReferences((byte) -96);
+          ProgressMessageDialog.resetStaticState((byte) -128);
           AccountRegistrationPanel.releaseDeclaredStaticReferences(20660);
-          lb.clearStaticReferences((byte) 86);
+          GuestPlayConfirmationForm.clearStaticReferences((byte) 86);
           LoginPanel.d((byte) 98);
           DisplayNameSelectionPanel.releaseDeclaredStaticReferences(-109);
           aj.clearStaticReferences(-14958);
@@ -169,11 +169,11 @@ public final class MonkeyPuzzle2 extends bi {
           ArchiveRequest.clearStaticReferences((byte) -61);
           cg.resetStaticState((byte) -115);
           tl.clearStaticReferences((byte) -17);
-          s.releaseDeclaredStaticReferences(7993);
+          FullscreenStatusDialog.releaseDeclaredStaticReferences(7993);
           wk.clearStaticReferences(false);
           DefaultTextWidgetRenderer.clearStaticReferences(true);
           ig.clearStaticReferences();
-          sf.clearStaticReferences();
+          VorbisSample.clearStaticReferences();
           j.b(5);
           ed.clearStaticReferences(false);
           sj.b(-21);
@@ -202,7 +202,7 @@ public final class MonkeyPuzzle2 extends bi {
           UiWidget.resetStaticState(0);
           ButtonWidget.j(-64);
           SingleChildWidgetContainer.clearStaticReferences((byte) 77);
-          nf.o(-4110);
+          ResizableModalDialog.o(-4110);
           WidgetContainer.clearDeclaredStaticReferences(0);
           DequeCursor.clearStaticReferences(110);
           ri.a((byte) -66);
@@ -233,8 +233,8 @@ public final class MonkeyPuzzle2 extends bi {
           LabeledWidgetContainer.clearDeclaredStaticReferences((byte) 99);
           ValidatedTextField.releaseDeclaredStaticReferences(125);
           EditableTextField.clearDeclaredStaticReferences(0);
-          pc.resetStaticState(true);
-          jh.clearDeclaredStaticReferences(7434);
+          ContentTransitionDialog.resetStaticState(true);
+          StripedProgressWidget.clearDeclaredStaticReferences(7434);
           NameSuggestionsPanel.clearStaticReferences((byte) 111);
           RichTextWidget.d((byte) 117);
           vh.clearDeclaredStaticReferences(-9473);
@@ -242,7 +242,7 @@ public final class MonkeyPuzzle2 extends bi {
           em.resetDeclaredStaticState(-27714);
           TextFieldValidator.e((byte) -95);
           fl.clearStaticReferences((byte) -45);
-          ja.clearStaticReferences(false);
+          RegistrationAgreementPane.clearStaticReferences(false);
           fj.c((byte) 62);
           qj.clearDeclaredStaticReferences(4201);
           dm.clearStaticReferences();
@@ -276,13 +276,13 @@ public final class MonkeyPuzzle2 extends bi {
           h.clearStaticReferences((byte) 85);
           ib.clearStaticReferences(55);
           nh.clearDeclaredStaticReferences(-19931);
-          sk.clearStaticReferences(false);
+          DialogMessagePane.clearStaticReferences(false);
           f.b((byte) -77);
           od.clearStaticReferences((byte) -57);
           rc.clearStaticReferences((byte) 117);
           k.clearStaticReferences((byte) -85);
           vl.clearStaticReferences(false);
-          kg.clearStaticReferences((byte) 0);
+          FullscreenNoticeType.clearStaticReferences((byte) 0);
           jf.e(-51);
           wf.a((byte) -47);
           uh.a(true);
@@ -365,9 +365,9 @@ public final class MonkeyPuzzle2 extends bi {
                 ProxyAuthenticationRequiredException.field_d[Bzip2State.field_f].b((byte) 125);
               }
             }
-            gl.a(SoftwareRasterizer.field_i, 0, lb.field_H.field_s, 0, 307200);
+            gl.a(SoftwareRasterizer.field_i, 0, GuestPlayConfirmationForm.field_H.field_s, 0, 307200);
             DebouncedFieldValidator.field_f.b(-76);
-            EmailFormatValidator.a(ej.field_b, (byte) 123, lb.field_H);
+            EmailFormatValidator.a(ej.field_b, (byte) 123, GuestPlayConfirmationForm.field_H);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -384,7 +384,7 @@ public final class MonkeyPuzzle2 extends bi {
           if (ResourceArchive.isMessageDialogActive(false)) {
             af.a(15, NodeHashTableIterator.field_e, 15, -3);
           } else {
-            if (kg.a((byte) 90)) {
+            if (FullscreenNoticeType.a((byte) 90)) {
               stackIn_50_0 = param0 + 25905;
               if (null != AwtRasterBuffer.field_f) {
                 stackIn_51_1 = true;
@@ -496,7 +496,7 @@ public final class MonkeyPuzzle2 extends bi {
                       ej.field_b = ej.field_b + 1;
                       if ((ej.field_b == 50)) {
                         if (qh.field_b == 2) {
-                          s.field_S = null;
+                          FullscreenStatusDialog.field_S = null;
                         }
                         qh.field_b = Bzip2State.field_f;
                         if ((qh.field_b == 2 ||
@@ -537,7 +537,7 @@ public final class MonkeyPuzzle2 extends bi {
                       if (ResourceArchive.isMessageDialogActive(false)) {
                         PasswordValidator.e(param0 ^ -15328);
                       } else {
-                        sk.b(false);
+                        DialogMessagePane.b(false);
                       }
                       sc.field_e = 2;
                     }
@@ -615,7 +615,7 @@ public final class MonkeyPuzzle2 extends bi {
           if (ld.b(true)) {
             var2_intLifetime2 = this.f(param0 ^ 15246);
             if (2 == var2_intLifetime2) {
-              ha.a(8, 126, 8, BoundedRandomAccessFile.field_e.field_j, (Sprite[]) null, (Sprite[]) null, 2, 320, BoundedRandomAccessFile.field_e.field_j + BoundedRandomAccessFile.field_e.field_D, 240, BoundedRandomAccessFile.field_e);
+              ProgressMessageDialog.a(8, 126, 8, BoundedRandomAccessFile.field_e.field_j, (Sprite[]) null, (Sprite[]) null, 2, 320, BoundedRandomAccessFile.field_e.field_j + BoundedRandomAccessFile.field_e.field_D, 240, BoundedRandomAccessFile.field_e);
             }
           }
           return;
@@ -643,7 +643,7 @@ public final class MonkeyPuzzle2 extends bi {
           }
           fi.field_b = IsaacRandom.a(param0 - 92, 5);
           PasswordValidator.field_p = TextLineMetrics.a(false, true, param0 + 13303, 6, false);
-          ha.field_fb = IsaacRandom.a(-117, 7);
+          ProgressMessageDialog.field_fb = IsaacRandom.a(-117, 7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -688,8 +688,8 @@ public final class MonkeyPuzzle2 extends bi {
                   fi.field_b.tryLoadAllGroups(0)) {
                   if (hk.field_k.ensureIndexLoaded(85) &&
                     hk.field_k.tryLoadAllGroups(param0 ^ 36)) {
-                    if (ha.field_fb.ensureIndexLoaded(param0 - 126) &&
-                      ha.field_fb.tryLoadAllGroups(0)) {
+                    if (ProgressMessageDialog.field_fb.ensureIndexLoaded(param0 - 126) &&
+                      ProgressMessageDialog.field_fb.tryLoadAllGroups(0)) {
                       if (PasswordValidator.field_p.ensureIndexLoaded(65) &&
                         PasswordValidator.field_p.tryLoadAllGroups(0)) {
                         if (TextFieldValidator.field_j.ensureIndexLoaded(123) &&
@@ -723,7 +723,7 @@ public final class MonkeyPuzzle2 extends bi {
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      ResourceArchive.setLoadingStatus(tk.a(ha.field_fb, "", ek.field_e, 1, DiskCacheWorker.field_b), param0 - 24155, 51.0f);
+                      ResourceArchive.setLoadingStatus(tk.a(ProgressMessageDialog.field_fb, "", ek.field_e, 1, DiskCacheWorker.field_b), param0 - 24155, 51.0f);
                       return false;
                     }
                   }
@@ -761,11 +761,11 @@ public final class MonkeyPuzzle2 extends bi {
             return false;
           }
           if (null != hk.field_k &&
-            ha.field_fb != null) {
+            ProgressMessageDialog.field_fb != null) {
             ResourceArchive.setLoadingStatus(gd.field_a, -24119, 75.0f);
             this.renderClientFrame(param0 ^ -25940);
-            sj.a(ha.field_fb, TextFieldValidator.field_j, ri.field_a, hk.field_k, 0);
-            ha.field_fb = null;
+            sj.a(ProgressMessageDialog.field_fb, TextFieldValidator.field_j, ri.field_a, hk.field_k, 0);
+            ProgressMessageDialog.field_fb = null;
             hk.field_k = null;
             oe.a((byte) 101);
             return false;
@@ -795,7 +795,7 @@ public final class MonkeyPuzzle2 extends bi {
           wg.a(-106);
           gj.a((byte) -31);
           if (!ok.a(false)) {
-            s.field_S = PcmResampler.a(41, 10, 3, 1, -46);
+            FullscreenStatusDialog.field_S = PcmResampler.a(41, 10, 3, 1, -46);
             cg.a(false);
           }
           return true;

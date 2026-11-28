@@ -597,7 +597,7 @@ class ci extends ei {
             if (param0 != -17288) {
               field_J = (String) null;
             }
-            var8 = ge.field_fb.a((byte) 14, param4, param1, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
+            var8 = FullscreenStatusDialog.field_fb.a((byte) 14, param4, param1, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
             if (param3) {
               var8.a((byte) 108);
             }

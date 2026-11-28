@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ge {
-    static fc field_c;
+    static FullscreenNoticeType field_c;
     static int[] field_a;
     static int[] field_e;
     static int field_h;
@@ -30,7 +30,7 @@ final class ge {
 
     static {
         field_a = new int[40];
-        field_c = new fc();
+        field_c = new FullscreenNoticeType();
         field_e = new int[128];
         field_b = "This password contains repeated characters, and would be easy to guess";
     }

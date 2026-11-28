@@ -115,13 +115,13 @@ final class MidiPcmStream extends PcmStream {
     final static void a(String param0, String param1, int param2) {
         try {
           if (null != nk.field_a) {
-            nk.field_a.a(true);
+            nk.field_a.closeDialog(true);
           }
           if (param2 >= -1) {
             field_D = (ResourceArchive) null;
           }
           vk.field_c = new LoginPanel(param1, param0, false, true, true);
-          TextLayout.field_c.a(10768, vk.field_c);
+          TextLayout.field_c.replaceContent(10768, vk.field_c);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "pk.FA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

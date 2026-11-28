@@ -202,7 +202,7 @@ final class vi {
         if (cb.field_v == wi.field_f) {
           return ag.field_e;
         }
-        if (ui.field_kb == wi.field_f) {
+        if (StandardContentDialog.field_kb == wi.field_f) {
           return IterableNodeHashTable.field_d;
         }
         if (!AwtRasterBuffer.field_c.a(param0 ^ 87)) {

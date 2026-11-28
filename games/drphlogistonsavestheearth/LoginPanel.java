@@ -480,16 +480,16 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             var4 = 357 - sc.field_c.field_C / 2;
             var5 = 0;
             if (mh.field_f != 0 &&
-              var4 < ih.field_R &&
-              ih.field_R < var4 + sc.field_c.field_w) {
-              if (ae.field_gb > -sc.field_c.field_y + 269 &&
-                ae.field_gb < 269) {
+              var4 < RegistrationAgreementPane.field_R &&
+              RegistrationAgreementPane.field_R < var4 + sc.field_c.field_w) {
+              if (FullscreenStatusDialog.field_gb > -sc.field_c.field_y + 269 &&
+                FullscreenStatusDialog.field_gb < 269) {
                 ie.field_B = false;
                 var5 = 1;
                 la.field_b = rd.field_D;
               }
-              if (ae.field_gb > 586 &&
-                ae.field_gb < sc.field_c.field_y + 586) {
+              if (FullscreenStatusDialog.field_gb > 586 &&
+                FullscreenStatusDialog.field_gb < sc.field_c.field_y + 586) {
                 var5 = 1;
                 la.field_b = rd.field_D;
                 ie.field_B = true;
@@ -510,7 +510,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             }
           }
           if (param1) {
-            ArchiveRequest.field_w.a(0, DelegatingCanvas.a(ob.field_g, -13412, ck.field_c), DelegatingCanvas.a(ih.field_R, -13412, ae.field_gb));
+            ArchiveRequest.field_w.a(0, DelegatingCanvas.a(ob.field_g, -13412, ck.field_c), DelegatingCanvas.a(RegistrationAgreementPane.field_R, -13412, FullscreenStatusDialog.field_gb));
             if (ArchiveRequest.field_w.c((byte) -82)) {
               if (ArchiveRequest.field_w.field_f == 0) {
                 stackIn_62_0 = 3;
@@ -639,16 +639,16 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             var4 = 357 - sc.field_c.field_C / 2;
             var5 = 0;
             if (mh.field_f != 0 &&
-              var4 < ih.field_R &&
-              ih.field_R < var4 + sc.field_c.field_w) {
-              if (ae.field_gb > -sc.field_c.field_y + 269 &&
-                ae.field_gb < 269) {
+              var4 < RegistrationAgreementPane.field_R &&
+              RegistrationAgreementPane.field_R < var4 + sc.field_c.field_w) {
+              if (FullscreenStatusDialog.field_gb > -sc.field_c.field_y + 269 &&
+                FullscreenStatusDialog.field_gb < 269) {
                 ie.field_B = false;
                 var5 = 1;
                 la.field_b = rd.field_D;
               }
-              if (ae.field_gb > 586 &&
-                ae.field_gb < sc.field_c.field_y + 586) {
+              if (FullscreenStatusDialog.field_gb > 586 &&
+                FullscreenStatusDialog.field_gb < sc.field_c.field_y + 586) {
                 var5 = 1;
                 la.field_b = rd.field_D;
                 ie.field_B = true;
@@ -669,7 +669,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             }
           }
           if (param1) {
-            ArchiveRequest.field_w.a(0, DelegatingCanvas.a(ob.field_g, -13412, ck.field_c), DelegatingCanvas.a(ih.field_R, -13412, ae.field_gb));
+            ArchiveRequest.field_w.a(0, DelegatingCanvas.a(ob.field_g, -13412, ck.field_c), DelegatingCanvas.a(RegistrationAgreementPane.field_R, -13412, FullscreenStatusDialog.field_gb));
             if (ArchiveRequest.field_w.c((byte) -82)) {
               if (ArchiveRequest.field_w.field_f == 0) {
                 stackIn_62_0 = 3;

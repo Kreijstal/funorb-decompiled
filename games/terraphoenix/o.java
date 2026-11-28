@@ -85,39 +85,39 @@ final class o {
         int var4;
         int var3Lifetime1;
         var4 = Terraphoenix.field_V;
-        hm.field_N = 0;
+        StripedProgressWidget.field_N = 0;
         bj.field_c = null;
         gi.field_l = null;
         var2 = lg.field_h;
         lg.field_h = ml.field_s;
-        jg.field_kb.field_i = jg.field_kb.field_i + 1;
+        StandardContentDialog.field_kb.field_i = StandardContentDialog.field_kb.field_i + 1;
         if (param0 == 51) {
-          jg.field_kb.field_l = 2;
+          StandardContentDialog.field_kb.field_l = 2;
           var3 = 58 / ((param1 + 54) / 55);
           ml.field_s = var2;
-          if (jg.field_kb.field_i >= 2 &&
+          if (StandardContentDialog.field_kb.field_i >= 2 &&
             param0 == 51) {
             return 2;
           }
-          if (jg.field_kb.field_i >= 2 &&
+          if (StandardContentDialog.field_kb.field_i >= 2 &&
             50 == param0) {
             return 5;
           }
-          if (4 > jg.field_kb.field_i) {
+          if (4 > StandardContentDialog.field_kb.field_i) {
             return -1;
           }
           return 1;
         }
         if (50 != param0) {
-          jg.field_kb.field_l = 1;
+          StandardContentDialog.field_kb.field_l = 1;
           var3Lifetime1 = 58 / ((param1 + 54) / 55);
           ml.field_s = var2;
-          if (jg.field_kb.field_i < 2) {
-            if (jg.field_kb.field_i >= 2 &&
+          if (StandardContentDialog.field_kb.field_i < 2) {
+            if (StandardContentDialog.field_kb.field_i >= 2 &&
               50 == param0) {
               return 5;
             }
-            if (4 > jg.field_kb.field_i) {
+            if (4 > StandardContentDialog.field_kb.field_i) {
               return -1;
             }
             return 1;
@@ -126,19 +126,19 @@ final class o {
             return 2;
           }
         } else {
-          jg.field_kb.field_l = 5;
+          StandardContentDialog.field_kb.field_l = 5;
           var3Lifetime1 = 58 / ((param1 + 54) / 55);
           ml.field_s = var2;
-          if (jg.field_kb.field_i >= 2 &&
+          if (StandardContentDialog.field_kb.field_i >= 2 &&
             param0 == 51) {
             return 2;
           }
         }
-        if (jg.field_kb.field_i >= 2 &&
+        if (StandardContentDialog.field_kb.field_i >= 2 &&
           50 == param0) {
           return 5;
         }
-        if (4 <= jg.field_kb.field_i) {
+        if (4 <= StandardContentDialog.field_kb.field_i) {
           return 1;
         }
         return -1;

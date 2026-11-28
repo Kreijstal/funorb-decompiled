@@ -10,7 +10,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
           if (te.field_b != null) {
-            sj.field_L = 0;
+            DialogMessagePane.field_L = 0;
             ProxyAuthenticationRequiredException.mouseX = -1;
             qb.mouseY = -1;
             ua.field_c = true;
@@ -51,7 +51,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException var2 = null;
         try {
           if (te.field_b != null) {
-            sj.field_L = 0;
+            DialogMessagePane.field_L = 0;
             ProxyAuthenticationRequiredException.mouseX = param0.getX();
             qb.mouseY = param0.getY();
             ua.field_c = true;
@@ -79,7 +79,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException var2 = null;
         try {
           if (te.field_b != null) {
-            sj.field_L = 0;
+            DialogMessagePane.field_L = 0;
             ProxyAuthenticationRequiredException.mouseX = param0.getX();
             qb.mouseY = param0.getY();
             ua.field_c = true;
@@ -215,7 +215,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
         try {
           if (null != te.field_b) {
-            sj.field_L = 0;
+            DialogMessagePane.field_L = 0;
             ProxyAuthenticationRequiredException.mouseX = param0.getX();
             qb.mouseY = param0.getY();
             ua.field_c = true;
@@ -234,9 +234,9 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException var2 = null;
         try {
           if (te.field_b != null) {
-            sj.field_L = 0;
+            DialogMessagePane.field_L = 0;
             aa.pressX = param0.getX();
-            ll.pressY = param0.getY();
+            FullscreenNoticeType.pressY = param0.getY();
             ol.correctedCurrentTimeMillis(256);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               e.field_o = 1;
@@ -281,7 +281,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException var2 = null;
         try {
           if (null != te.field_b) {
-            sj.field_L = 0;
+            DialogMessagePane.field_L = 0;
             jc.field_h = 0;
             ua.field_c = true;
             var2_int = param0.getModifiers();

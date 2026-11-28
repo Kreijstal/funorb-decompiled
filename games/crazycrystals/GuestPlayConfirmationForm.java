@@ -1,0 +1,139 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class GuestPlayConfirmationForm extends DequeWidgetContainer implements WidgetActivationListener {
+    static String field_D;
+    static int field_F;
+    private InteractiveWidget field_z;
+    private InteractiveWidget field_B;
+    static String field_G;
+    private InteractiveWidget field_E;
+    static String field_C;
+
+    public GuestPlayConfirmationForm() {
+        super(0, 0, 476, 225, (WidgetRenderer) null);
+        this.field_E = new InteractiveWidget(LaserTraceCursor.field_d, (WidgetEventListener) null);
+        this.field_B = new InteractiveWidget(ProfileDataRequest.field_i, (WidgetEventListener) null);
+        this.field_z = new InteractiveWidget(ip.field_b, (WidgetEventListener) null);
+        ve var1 = new ve();
+        this.field_E.field_i = (WidgetRenderer) ((Object) var1);
+        this.field_B.field_i = (WidgetRenderer) ((Object) var1);
+        this.field_z.field_i = (WidgetRenderer) ((Object) var1);
+        int var2 = 4;
+        int var3 = 326;
+        int var4 = var3 - var2 >> 1;
+        this.field_B.setBounds(30, this.field_g - var3 >> 1, -48 + this.field_f - var2, var4, (byte) -52);
+        this.field_z.setBounds(30, var4 + ((-var3 + this.field_g >> 1) + var2), this.field_f - 48 - var2, var4, (byte) -52);
+        this.field_E.setBounds(30, this.field_g - var3 >> 1, -(var2 * 2) - 78 + this.field_f, var3, (byte) -52);
+        this.field_B.field_l = (WidgetEventListener) (this);
+        this.field_E.field_l = (WidgetEventListener) (this);
+        this.field_z.field_l = (WidgetEventListener) (this);
+        this.field_E.field_t = GameCanvas.field_c;
+        this.field_z.field_t = CipherPacketBuffer.field_o;
+        this.addChild(this.field_B, 1);
+        this.addChild(this.field_E, -5);
+        this.addChild(this.field_z, -115);
+    }
+
+    final boolean handleKey(int param0, int param1, UiWidget param2, char param3) {
+        RuntimeException var5 = null;
+        boolean stackIn_6_0 = false;
+        boolean stackIn_10_0 = false;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (super.handleKey(param0, param1, param2, param3)) {
+            return true;
+          }
+          if (param0 == 98) {
+            stackIn_6_0 = this.focusPreviousChild((byte) -124, param2);
+            return stackIn_6_0;
+          }
+          if (param0 != 99) {
+            return false;
+          }
+          stackIn_10_0 = this.focusNextChild(param2, -25911);
+          return stackIn_10_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_13_0 = var5;
+          stackIn_13_1 = new StringBuilder().append("ae.AA(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    public static void releaseDeclaredStaticReferences(int param0) {
+        field_G = null;
+        if (param0 != 20) {
+          return;
+        }
+        field_D = null;
+        field_C = null;
+    }
+
+    public final void onWidgetActivated(byte param0, int param1, int param2, int param3, InteractiveWidget param4) {
+        int var6_int = 0;
+        int var7 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
+        int var6_intLifetime1;
+        var7 = CrazyCrystals.field_B;
+        try {
+          if (this.field_B == param4) {
+            BoundedRandomAccessFile.b(53);
+          } else {
+            if (this.field_E == param4) {
+              GzipDecompressor.a((byte) 63);
+            } else {
+              if (this.field_z != param4) {
+                var6_int = -40 % ((param0 - 83) / 36);
+                return;
+              }
+              hf.a(4);
+            }
+          }
+          var6_intLifetime1 = -40 % ((param0 - 83) / 36);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_12_0 = var6;
+          stackIn_12_1 = new StringBuilder().append("ae.BA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+        }
+    }
+
+    final void drawWidget(int param0, byte param1, int param2, int param3) {
+        int var5 = 0;
+        int var6 = 0;
+        if (param1 < -12) {
+          var5 = this.field_r + param2;
+          var6 = this.field_j + param0;
+          ai.field_h.drawParagraph(BufferedSocket.field_h, 20 + var5, 20 + var6, -40 + this.field_g, this.field_f - 50, 16777215, -1, 1, 0, ai.field_h.field_o);
+          super.drawWidget(param0, (byte) -20, param2, param3);
+          return;
+        }
+    }
+
+    static {
+        field_D = "Playing Wizard Run";
+        field_G = "Name";
+        field_C = "There is spider web here.<br>Are there any spiders<br>nearby?";
+    }
+}

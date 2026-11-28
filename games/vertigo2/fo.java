@@ -11,7 +11,7 @@ final class fo {
 
     final void c(int param0) {
         if (this.field_b == 19) {
-          ue.field_J = null;
+          RegistrationAgreementPane.field_J = null;
         }
         if (param0 != 20) {
           return;
@@ -110,25 +110,25 @@ final class fo {
                     if (10 == this.field_b) {
                       continue;
                     }
-                    if (ue.field_O == 1) {
+                    if (RegistrationAgreementPane.field_O == 1) {
                       continue;
                     }
-                    if (ue.field_O == 2) {
+                    if (RegistrationAgreementPane.field_O == 2) {
                       continue;
                     }
-                    if (ue.field_O == 18) {
+                    if (RegistrationAgreementPane.field_O == 18) {
                       continue;
                     }
-                    if (ue.field_O == 3) {
+                    if (RegistrationAgreementPane.field_O == 3) {
                       continue;
                     }
-                    if (4 == ue.field_O) {
+                    if (4 == RegistrationAgreementPane.field_O) {
                       continue;
                     }
-                    gj.a((byte) 116, false, ue.field_O, ue.field_O);
+                    gj.a((byte) 116, false, RegistrationAgreementPane.field_O, RegistrationAgreementPane.field_O);
                     continue;
                   }
-                  gj.a((byte) -65, false, ue.field_O, ue.field_O);
+                  gj.a((byte) -65, false, RegistrationAgreementPane.field_O, RegistrationAgreementPane.field_O);
                   continue;
                 }
                 this.a(true, (byte) -66, false, 0);
@@ -269,7 +269,7 @@ final class fo {
           if ((this.field_b == 5 || this.field_b == 6) &&
             2 == this.field_a.itemCount) {
             if (param0 == 0) {
-              return 24 + (320 + DefaultTextWidgetRenderer.field_s.a(1, sp.field_Q) / 2);
+              return 24 + (320 + DefaultTextWidgetRenderer.field_s.a(1, ResizableModalDialog.field_Q) / 2);
             }
             return this.b(param0, 26) + 160;
           }
@@ -515,7 +515,7 @@ final class fo {
           }
         } else {
           if (!ag.b(49)) {
-            DefaultTextWidgetRenderer.field_s.a(fj.field_hb, 16777215, -1, 320, 240, 2);
+            DefaultTextWidgetRenderer.field_s.a(ProgressMessageDialog.field_hb, 16777215, -1, 320, 240, 2);
           }
         }
     }
@@ -576,7 +576,7 @@ final class fo {
           DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 62, -1, var4, le.field_a, var6);
           DefaultTextWidgetRenderer.field_s.a(var5 + var4, -40, 16777215, var6, -1, Integer.toString(kn.field_h[param1.field_j].length > param1.field_e + param1.field_c ? param1.field_c + param1.field_e : kn.field_h[param1.field_j].length));
           var6 += 20;
-          DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 103, -1, var4, we.field_H, var6);
+          DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 103, -1, var4, StripedProgressWidget.field_H, var6);
           DefaultTextWidgetRenderer.field_s.a(var5 + var4, param0 ^ -27, 16777215, var6, -1, Integer.toString(1 + param1.getLevelIndex(-6133)));
           var6 += 20;
           if (!PacketBuffer.field_q) {
@@ -743,20 +743,20 @@ final class fo {
         var5 = var21;
         var5 = var21;
         if (var4 == 8) {
-          if (ue.field_O != 0 &&
+          if (RegistrationAgreementPane.field_O != 0 &&
             LevelRenderer.field_n != 0) {
-            if (ue.field_O == 21) {
+            if (RegistrationAgreementPane.field_O == 21) {
               var5 = RichTextLayout.field_q[34];
             } else {
-              if (ue.field_O != 1 &&
+              if (RegistrationAgreementPane.field_O != 1 &&
                 LevelRenderer.field_n != 1) {
-                if (2 != ue.field_O &&
+                if (2 != RegistrationAgreementPane.field_O &&
                   LevelRenderer.field_n != 2 &&
-                  ue.field_O != 3 &&
+                  RegistrationAgreementPane.field_O != 3 &&
                   LevelRenderer.field_n != 3 &&
-                  4 != ue.field_O &&
+                  4 != RegistrationAgreementPane.field_O &&
                   LevelRenderer.field_n != 4 &&
-                  22 != ue.field_O &&
+                  22 != RegistrationAgreementPane.field_O &&
                   22 != LevelRenderer.field_n) {
                   var5 = j.field_o;
                 } else {
@@ -888,8 +888,8 @@ final class fo {
         String var3Lifetime2;
         String var4Lifetime1;
         var11 = Vertigo2.field_L ? 1 : 0;
-        if (null == ue.field_J) {
-          ue.field_J = on.a(1, 3, 10, (byte) 71, 2);
+        if (null == RegistrationAgreementPane.field_J) {
+          RegistrationAgreementPane.field_J = on.a(1, 3, 10, (byte) 71, 2);
         }
         var2 = 2;
         var4 = gl.a(-120, false, true, 1500000);
@@ -899,13 +899,13 @@ final class fo {
         jq.a(63, 332, 270, 274, 150);
         DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 76, -1, 348, ni.field_c, DefaultTextWidgetRenderer.field_s.field_j + 280);
         DefaultTextWidgetRenderer.field_s.a(580, -34, 16777215, DefaultTextWidgetRenderer.field_s.field_j + 280, -1, mo.field_f);
-        if (ue.field_J.field_s) {
-          if (ue.field_J.field_x != null) {
+        if (RegistrationAgreementPane.field_J.field_s) {
+          if (RegistrationAgreementPane.field_J.field_x != null) {
             var3Lifetime2 = qe.field_V;
             var4Lifetime1 = var3Lifetime2;
             var4Lifetime1 = var3Lifetime2;
-            var5_ref_String__ = ue.field_J.field_x[var2];
-            var15 = ue.field_J.field_n[var2];
+            var5_ref_String__ = RegistrationAgreementPane.field_J.field_x[var2];
+            var15 = RegistrationAgreementPane.field_J.field_n[var2];
             var7 = tk.field_c.field_z + 280 + 40;
             for (var8 = 0; var8 < 5; var8++) {
               if (var5_ref_String__[var8] != null &&
@@ -958,7 +958,7 @@ final class fo {
           this.field_b == 6) &&
           (this.field_a.itemCount == 2 &&
           param0 == 0)) {
-          return -24 - DefaultTextWidgetRenderer.field_s.a(1, sp.field_Q) / 2 + 320;
+          return -24 - DefaultTextWidgetRenderer.field_s.a(1, ResizableModalDialog.field_Q) / 2 + 320;
         }
         return param0 * NameSuggestionsPanel.field_H[this.field_b] + NameSuggestionsPanel.field_M[this.field_b];
     }
@@ -1124,18 +1124,18 @@ final class fo {
             as.field_e = on.a(1, 3, 10, (byte) 109, 0);
           }
           if (var3 != 0 &&
-            null == ue.field_J) {
-            ue.field_J = on.a(1, 3, 10, (byte) 120, 2);
+            null == RegistrationAgreementPane.field_J) {
+            RegistrationAgreementPane.field_J = on.a(1, 3, 10, (byte) 120, 2);
           }
         } else {
-          if (null == ue.field_J) {
-            ue.field_J = on.a(1, 3, 10, (byte) 120, 2);
+          if (null == RegistrationAgreementPane.field_J) {
+            RegistrationAgreementPane.field_J = on.a(1, 3, 10, (byte) 120, 2);
           }
         }
         if (var3 == 0) {
           stackIn_15_0 = as.field_e;
         } else {
-          stackIn_15_0 = ue.field_J;
+          stackIn_15_0 = RegistrationAgreementPane.field_J;
         }
         var4 = stackIn_15_0;
         var5 = nf.field_v;
@@ -1394,7 +1394,7 @@ final class fo {
                     }
                     if (var8 == 8) {
                       if (this.field_a.a(84)) {
-                        var8 = ue.field_O;
+                        var8 = RegistrationAgreementPane.field_O;
                         var9Lifetime1 = param2 ? 1 : 0;
                         gj.a((byte) 46, var9Lifetime1 != 0, LevelRenderer.field_n, var8);
                       }

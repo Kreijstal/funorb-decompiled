@@ -118,7 +118,7 @@ final class hc {
             param0.length() != 0) {
             var2_int = param0.indexOf('@');
             if (var2_int == -1) {
-              stackIn_8_0 = uc.field_E;
+              stackIn_8_0 = DialogMessagePane.field_E;
               return stackIn_8_0;
             }
             var3 = param0.substring(0, var2_int);
@@ -261,9 +261,9 @@ final class hc {
           if (sj.field_j[param2] < sj.field_j[param0]) {
             return false;
           }
-          var4 = DelegatingCanvas.field_c[param0] + (nh.field_S[param0] + ResourceArchive.field_i[param0]);
+          var4 = DelegatingCanvas.field_c[param0] + (FullscreenStatusDialog.field_S[param0] + ResourceArchive.field_i[param0]);
           if (param3 == 97) {
-            var5 = DelegatingCanvas.field_c[param2] + (nh.field_S[param2] + ResourceArchive.field_i[param2]);
+            var5 = DelegatingCanvas.field_c[param2] + (FullscreenStatusDialog.field_S[param2] + ResourceArchive.field_i[param2]);
             if (var4 < var5) {
               return true;
             }
@@ -273,7 +273,7 @@ final class hc {
             return !(param0 >= param2);
           }
           hc.a(-127, true, -50, (byte) 41);
-          var5Lifetime3 = DelegatingCanvas.field_c[param2] + (nh.field_S[param2] + ResourceArchive.field_i[param2]);
+          var5Lifetime3 = DelegatingCanvas.field_c[param2] + (FullscreenStatusDialog.field_S[param2] + ResourceArchive.field_i[param2]);
           if (var4 < var5Lifetime3) {
             return true;
           }
@@ -294,9 +294,9 @@ final class hc {
         if (ij.field_b[param2] < ij.field_b[param0]) {
           return false;
         }
-        var4Lifetime1 = DelegatingCanvas.field_c[param0] + (nh.field_S[param0] + ResourceArchive.field_i[param0]);
+        var4Lifetime1 = DelegatingCanvas.field_c[param0] + (FullscreenStatusDialog.field_S[param0] + ResourceArchive.field_i[param0]);
         if (param3 == 97) {
-          var5Lifetime1 = DelegatingCanvas.field_c[param2] + (nh.field_S[param2] + ResourceArchive.field_i[param2]);
+          var5Lifetime1 = DelegatingCanvas.field_c[param2] + (FullscreenStatusDialog.field_S[param2] + ResourceArchive.field_i[param2]);
           if (var4Lifetime1 < var5Lifetime1) {
             return true;
           }
@@ -306,7 +306,7 @@ final class hc {
           return !(param0 >= param2);
         }
         hc.a(-127, true, -50, (byte) 41);
-        var5Lifetime2 = DelegatingCanvas.field_c[param2] + (nh.field_S[param2] + ResourceArchive.field_i[param2]);
+        var5Lifetime2 = DelegatingCanvas.field_c[param2] + (FullscreenStatusDialog.field_S[param2] + ResourceArchive.field_i[param2]);
         if (var4Lifetime1 < var5Lifetime2) {
           return true;
         }

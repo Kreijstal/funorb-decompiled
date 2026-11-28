@@ -81,7 +81,7 @@ final class oe {
     final static void a(int param0) {
         int var1 = -1 / ((36 - param0) / 61);
         pe.field_b = new AccountRegistrationPanel();
-        bj.field_f.a(pe.field_b, -100);
+        bj.field_f.replaceContent(pe.field_b, -100);
     }
 
     private oe() throws Throwable {

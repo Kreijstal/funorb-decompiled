@@ -108,7 +108,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         }
         if (this.field_A >= 256) {
           if (0 == param0) {
-            this.b(param1 + this.field_i, -104, this.field_r + param3);
+            this.drawDialogBackground(param1 + this.field_i, -104, this.field_r + param3);
             super.drawWidget(param0, param1, 105, param3);
             return;
           }
@@ -118,7 +118,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           ml.field_d = new RgbSprite(this.field_k, this.field_m);
           kh.a(ml.field_d, 1);
           SoftwareRasterizer.clearRaster();
-          this.b(0, -11, 0);
+          this.drawDialogBackground(0, -11, 0);
           if (param2 >= 33) {
             super.drawWidget(param0, -param1 - this.field_i, 34, -param3 - this.field_r);
             ve.a(-121);
@@ -135,7 +135,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           ml.field_d = new RgbSprite(this.field_k, this.field_m);
           kh.a(ml.field_d, 1);
           SoftwareRasterizer.clearRaster();
-          this.b(0, -11, 0);
+          this.drawDialogBackground(0, -11, 0);
           if (param2 >= 33) {
             super.drawWidget(param0, -param1 - this.field_i, 34, -param3 - this.field_r);
             ve.a(-121);
@@ -152,7 +152,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           ml.field_d = new RgbSprite(this.field_k, this.field_m);
           kh.a(ml.field_d, 1);
           SoftwareRasterizer.clearRaster();
-          this.b(0, -11, 0);
+          this.drawDialogBackground(0, -11, 0);
           if (param2 >= 33) {
             super.drawWidget(param0, -param1 - this.field_i, 34, -param3 - this.field_r);
             ve.a(-121);
@@ -167,7 +167,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         }
         kh.a(ml.field_d, 1);
         SoftwareRasterizer.clearRaster();
-        this.b(0, -11, 0);
+        this.drawDialogBackground(0, -11, 0);
         if (param2 >= 33) {
           super.drawWidget(param0, -param1 - this.field_i, 34, -param3 - this.field_r);
           ve.a(-121);
@@ -236,7 +236,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         return stackIn_12_0;
     }
 
-    abstract void b(int param0, int param1, int param2);
+    abstract void drawDialogBackground(int param0, int param1, int param2);
 
     static {
         field_C = new uf();

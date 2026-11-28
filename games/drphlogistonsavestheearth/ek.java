@@ -57,7 +57,7 @@ final class ek extends IntrusiveNode {
           }
           dupTemp$0 = la.correctedCurrentTimeMillis(false);
           ck.field_e = dupTemp$0;
-          el.field_rb = dupTemp$0;
+          StandardContentDialog.field_rb = dupTemp$0;
           if (de.field_q.status != 1) {
             tl.field_O = sg.field_b;
           } else {
@@ -115,8 +115,8 @@ final class ek extends IntrusiveNode {
     }
 
     final static void d(int param0) {
-        if (null != el.field_sb) {
-          el.field_sb.dispose();
+        if (null != StandardContentDialog.field_sb) {
+          StandardContentDialog.field_sb.dispose();
           if (param0 == -2) {
             if (ModalDialogHost.field_J != null) {
               ModalDialogHost.field_J.dispose();

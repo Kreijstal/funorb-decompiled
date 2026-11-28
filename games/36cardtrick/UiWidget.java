@@ -41,7 +41,7 @@ class UiWidget extends IntrusiveNode {
             this.handleWheel(param1, eg.field_b, param2, ij.field_e, eg.field_f, -1, this);
           }
           if (dl.field_h != 0) {
-            if (this.pointerPressed(param1, param2, MouseInputHandler.field_a, param0 + 77, this, dl.field_h, jc.field_N)) {
+            if (this.pointerPressed(param1, param2, MouseInputHandler.field_a, param0 + 77, this, dl.field_h, ResizableModalDialog.field_N)) {
               param3 = false;
             } else {
               if (var5 != 0) {
@@ -309,7 +309,7 @@ class UiWidget extends IntrusiveNode {
           if (param2 <= 4) {
             UiWidget.a((java.applet.Applet) null, 118, (String) null);
           }
-          stackIn_3_0 = ol.a(var5, param3, var4_int, 505437496);
+          stackIn_3_0 = FullscreenStatusDialog.a(var5, param3, var4_int, 505437496);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -392,7 +392,7 @@ class UiWidget extends IntrusiveNode {
               JavaScriptBridge.evaluate(param0, "document.cookie=\"" + var5Lifetime6 + "\"", param1 ^ -12300);
             } catch (Throwable throwable) {
             }
-            tj.a(true, param0);
+            GuestPlayConfirmationForm.a(true, param0);
           } catch (RuntimeException runtimeException) {
             throw ma.wrapException((Throwable) ((Object) runtimeException), "lk.T(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }

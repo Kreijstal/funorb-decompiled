@@ -76,10 +76,10 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
             ValidatedTextField.a((BitPacketBuffer) null, -73);
           }
           if (jj.field_a != null) {
-            jj.field_a.g(true);
+            jj.field_a.closeDialog(true);
           }
           eb.field_b = new LoginPanel(param2, param1, false, true, true);
-          di.field_x.b(120, eb.field_b);
+          di.field_x.replaceContent(120, eb.field_b);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "cl.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -69,7 +69,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException var2 = null;
         try {
           if (null != ConfirmedEmailAvailabilityValidator.mouseHandler) {
-            db.liveMouseButton = 0;
+            ContentTransitionDialog.liveMouseButton = 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -228,10 +228,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             qg.correctedCurrentTimeMillis(false);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               wf.pendingClick = 2;
-              db.liveMouseButton = 2;
+              ContentTransitionDialog.liveMouseButton = 2;
             } else {
               wf.pendingClick = 1;
-              db.liveMouseButton = 1;
+              ContentTransitionDialog.liveMouseButton = 1;
             }
             var2_int = param0.getModifiers();
             ConfirmedEmailAvailabilityValidator.inputPending = true;
@@ -364,7 +364,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (ConfirmedEmailAvailabilityValidator.mouseHandler != null) {
             pa.idleTicks = 0;
-            db.liveMouseButton = 0;
+            ContentTransitionDialog.liveMouseButton = 0;
             ConfirmedEmailAvailabilityValidator.inputPending = true;
             var2_int = param0.getModifiers();
             if ((8 & var2_int) != 0) {

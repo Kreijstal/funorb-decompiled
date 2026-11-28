@@ -67,7 +67,7 @@ final class g extends IntrusiveNode {
                 var2 = Runtime.getRuntime();
                 var4 = (Object[]) null;
                 var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
-                pi.field_H = (int)(var3.longValue() / 1048576L) + 1;
+                RegistrationAgreementPane.field_H = (int)(var3.longValue() / 1048576L) + 1;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = decompiledCaughtException;

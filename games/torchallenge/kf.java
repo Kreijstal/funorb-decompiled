@@ -75,32 +75,32 @@ final class kf {
             stackIn_38_0 = -1;
             return stackIn_38_0;
           }
-          if (n.field_kb == null) {
+          if (ContentTransitionDialog.field_kb == null) {
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }
           if (param0.y >= 0 &&
             param0.y < ol.field_g.field_a &&
-            n.field_kb[param0.x][param0.y] == null) {
-            n.field_kb[param0.x][param0.y] = new int[8];
+            ContentTransitionDialog.field_kb[param0.x][param0.y] == null) {
+            ContentTransitionDialog.field_kb[param0.x][param0.y] = new int[8];
             for (var3_int = 0; var3_int < 8; var3_int++) {
-              n.field_kb[param0.x][param0.y][var3_int] = -1;
+              ContentTransitionDialog.field_kb[param0.x][param0.y][var3_int] = -1;
             }
-            n.field_kb[param0.x][param0.y][0] = param1;
+            ContentTransitionDialog.field_kb[param0.x][param0.y][0] = param1;
             stackIn_13_0 = 1;
             return stackIn_13_0;
           }
           if (param0.y >= 0 &&
             param0.y < ol.field_g.field_a &&
-            n.field_kb[param0.x][param0.y] != null) {
+            ContentTransitionDialog.field_kb[param0.x][param0.y] != null) {
             var7 = 0;
             var3_intLifetime1 = var7;
             while (8 > var7) {
-              if (n.field_kb[param0.x][param0.y][var7] == param1) {
+              if (ContentTransitionDialog.field_kb[param0.x][param0.y][var7] == param1) {
                 stackIn_21_0 = 1;
                 return stackIn_21_0;
               }
-              if (n.field_kb[param0.x][param0.y][var7] < 0 &&
+              if (ContentTransitionDialog.field_kb[param0.x][param0.y][var7] < 0 &&
                 var4 < 0) {
                 var4 = var7;
               }
@@ -109,7 +109,7 @@ final class kf {
             if (var4 < 0) {
               return 1;
             }
-            n.field_kb[param0.x][param0.y][var4] = param1;
+            ContentTransitionDialog.field_kb[param0.x][param0.y][var4] = param1;
             stackIn_32_0 = 1;
             return stackIn_32_0;
           }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DelegatingCanvas extends java.awt.Canvas {
-    static mk field_b;
+    static FullscreenNoticeType field_b;
     private java.awt.Component field_a;
 
     public final void paint(java.awt.Graphics param0) {
@@ -19,7 +19,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
     }
 
     final static void a(byte param0) {
-        if (!ge.field_D) {
+        if (!RegistrationAgreementPane.field_D) {
           throw new IllegalStateException();
         }
         if (param0 < -22) {
@@ -28,7 +28,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           LoginPanel.field_N = 0;
           return;
         }
-        field_b = (mk) null;
+        field_b = (FullscreenNoticeType) null;
         BufferedSocket.field_d = true;
         wg.a(-100, false);
         LoginPanel.field_N = 0;
@@ -121,7 +121,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         var9 = TrackController.field_F ? 1 : 0;
         try {
           var10 = (CharSequence) ((Object) param0);
-          var3_int = sf.a(var10, param1, 11109);
+          var3_int = GuestPlayConfirmationForm.a(var10, param1, 11109);
           var4 = new String[1 + var3_int];
           var5 = 0;
           var6 = 0;
@@ -155,6 +155,6 @@ final class DelegatingCanvas extends java.awt.Canvas {
     }
 
     static {
-        field_b = new mk();
+        field_b = new FullscreenNoticeType();
     }
 }

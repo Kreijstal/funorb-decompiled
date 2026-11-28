@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class n {
-    static ga field_b;
+    static StandardContentDialog field_b;
     static Sprite field_a;
     static String field_c;
     private static String field_z;

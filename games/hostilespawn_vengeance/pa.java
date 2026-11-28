@@ -464,7 +464,7 @@ final class pa extends ql {
         this.field_j.field_l = 0;
         this.field_k = new v(AccountServiceResult.field_h, 0, 0, 200, false);
         this.field_k.field_l = 0;
-        this.field_f = new v(ta.field_lb, 0, 0, 200, false);
+        this.field_f = new v(StandardContentDialog.field_lb, 0, 0, 200, false);
         this.field_f.field_l = ih.field_y[0].field_e * 24 - 100;
         this.field_f.field_d = ih.field_y[0].field_g * 24 + 60;
         this.field_e = new v(ProxyAuthenticationRequiredException.field_d, 0, 0, 200, false);

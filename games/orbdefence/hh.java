@@ -5,7 +5,7 @@ final class hh extends sh {
     private String field_a;
     private String field_b;
     static volatile boolean field_c;
-    static i field_d;
+    static FullscreenNoticeType field_d;
     static String field_e;
 
     public static void resetStaticState(int param0) {
@@ -60,7 +60,7 @@ final class hh extends sh {
 
     static {
         field_c = true;
-        field_d = new i();
+        field_d = new FullscreenNoticeType();
         field_e = "MY HISCORES";
     }
 }

@@ -66,7 +66,7 @@ final class mu {
 
     final void b(int param0) {
         this.field_c = 0;
-        this.field_e = hga.n(param0 ^ -27213);
+        this.field_e = ProgressDialog.n(param0 ^ -27213);
         this.field_a = 500;
         this.field_f = new int[50];
         this.field_h = new int[50];

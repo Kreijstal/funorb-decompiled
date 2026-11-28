@@ -485,7 +485,7 @@ final class MidiPcmStream extends PcmStream {
               fg.field_b = qd.field_d;
             } else {
               while (qd.field_d != fg.field_b) {
-                var2 = ci.field_qb[qd.field_d];
+                var2 = ProgressMessageDialog.field_qb[qd.field_d];
                 qd.field_d = 127 & qd.field_d + 1;
                 if (var2 < 0) {
                   fh.field_d[~var2] = false;

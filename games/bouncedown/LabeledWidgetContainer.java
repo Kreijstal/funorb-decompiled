@@ -291,9 +291,9 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
         ea.field_f = false;
         int var1 = -60 % ((-45 - param0) / 61);
         t.field_r = null;
-        eb.field_E = null;
+        RegistrationAgreementPane.field_E = null;
         vb.field_k = null;
-        ll.field_E = null;
+        StripedProgressWidget.field_E = null;
     }
 
     final String getTooltipText(int param0) {

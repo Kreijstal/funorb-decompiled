@@ -143,7 +143,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           var40 = new GridPoint();
           mg.field_c = 0;
           ak.field_f = 0;
-          jh.field_db = 0;
+          FullscreenStatusDialog.field_db = 0;
           lj.field_q = 0;
           nl.field_b = 0;
           var3 = ProxySocketFactory.field_j;
@@ -281,14 +281,14 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
                           !(0 >= ln.field_a.field_i[var16 - 1]) ||
                           !(0 >= ln.field_a.field_i[var16 - ln.field_a.field_d - 1]))) {
                           var39Lifetime2.field_n = true;
-                          if (0 == te.field_K) {
+                          if (0 == RegistrationAgreementPane.field_K) {
                             var26 = uh.field_i;
-                            te.field_K = (int)(Math.random() * 50.0) + 20;
+                            RegistrationAgreementPane.field_K = (int)(Math.random() * 50.0) + 20;
                             if (var17 >= 4 ||
                               var18 >= 4) {
                               var26 = var26 / 2;
                             }
-                            jh.a(var26, (byte) 29, 18, jc.field_c, 3);
+                            FullscreenStatusDialog.a(var26, (byte) 29, 18, jc.field_c, 3);
                           }
                         }
                         if (!var39Lifetime2.field_n) {
@@ -447,7 +447,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
                                                                               ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
                                                                             }
                                                                             tk.a(3, jc.field_c, 32, true);
-                                                                            jh.a(uh.field_i * 3 / 2, (byte) 118, 47, jc.field_c, 3);
+                                                                            FullscreenStatusDialog.a(uh.field_i * 3 / 2, (byte) 118, 47, jc.field_c, 3);
                                                                           }
                                                                         }
                                                                         break regionExit1;
@@ -681,11 +681,11 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             }
           }
           if ((em.field_c & 7) == 0) {
-            if (jh.field_db > 0) {
+            if (FullscreenStatusDialog.field_db > 0) {
               if (null != ec.field_b) {
-                ec.field_b.setScaledVolume(uh.field_i * jh.field_db / 400);
+                ec.field_b.setScaledVolume(uh.field_i * FullscreenStatusDialog.field_db / 400);
               } else {
-                ec.field_b = RawPcmStream.createForPlaybackRate(NetworkArchiveRequest.field_A[5], 100, uh.field_i * jh.field_db / 400);
+                ec.field_b = RawPcmStream.createForPlaybackRate(NetworkArchiveRequest.field_A[5], 100, uh.field_i * FullscreenStatusDialog.field_db / 400);
                 ec.field_b.setLoopCount(-1);
                 eh.field_c.addChildStream(ec.field_b);
               }
@@ -887,7 +887,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             param2.field_t = param2.field_t - 1;
           }
           if (ClientLookupTables.field_h == null &&
-            jf.field_c == 0) {
+            FullscreenNoticeType.field_c == 0) {
             if (bm.field_c == 0 &&
               rl.field_c == 5 &&
               param0 >= 46 &&
@@ -928,7 +928,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
                   fj.field_Pb = fj.field_Pb - 32.0;
                 }
               } else {
-                if (qh.field_m[jh.field_fb]) {
+                if (qh.field_m[FullscreenStatusDialog.field_fb]) {
                   fj.field_Pb = (double)(int)(param2.field_c + 128.0);
                   if (qh.field_m[aa.field_a]) {
                     fj.field_Pb = fj.field_Pb - 32.0;
@@ -985,7 +985,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             if (dn.field_i == ClientLookupTables.field_d) {
               var6Lifetime4 = 0;
               var7_double = (double)param2.field_j.field_e + param2.field_l.field_f - PacketBuffer.field_h;
-              param2.field_c = (double)qi.field_N;
+              param2.field_c = (double)DialogMessagePane.field_N;
               var9_double = -bc.field_i + ((double)param2.field_j.field_g + param2.field_l.field_a);
               if (0.1 < var7_double) {
                 param2.field_l.field_f = param2.field_l.field_f - 0.1;
@@ -1203,7 +1203,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           if (SectorCacheStore.field_e > 0 &&
             NameSuggestionsPanel.field_I != 4) {
             SectorCacheStore.field_e = SectorCacheStore.field_e - 1;
-            var6Lifetime1 = ba.a((byte) 87);
+            var6Lifetime1 = StripedProgressWidget.a((byte) 87);
             if (var6Lifetime1 > eh.field_g) {
               eh.field_g = eh.field_g + 1;
             }
@@ -1281,7 +1281,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             }
             if (MouseInput.field_a[0] <= 0) {
               if (null == ClientLookupTables.field_h &&
-                jf.field_c == 0) {
+                FullscreenNoticeType.field_c == 0) {
                 if (0 < VolumeRampingMidiPcmStream.field_U[0]) {
                   if (GzipDecompressor.field_c[0] &&
                     VolumeRampingMidiPcmStream.field_ib[an.field_r[VolumeRampingMidiPcmStream.field_U[0]]] <= 0) {
@@ -1315,7 +1315,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             }
             if (MouseInput.field_a[1] <= 0) {
               if (ClientLookupTables.field_h == null &&
-                jf.field_c == 0) {
+                FullscreenNoticeType.field_c == 0) {
                 if (VolumeRampingMidiPcmStream.field_U[1] > 0) {
                   if (GzipDecompressor.field_c[1] &&
                     VolumeRampingMidiPcmStream.field_ib[an.field_r[VolumeRampingMidiPcmStream.field_U[1]]] <= 0) {

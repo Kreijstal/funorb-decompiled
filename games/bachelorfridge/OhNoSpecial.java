@@ -75,7 +75,7 @@ final class OhNoSpecial extends SpecialOrder {
           var6_int = 0;
           var7 = -110 % ((param4 - 7) / 37);
           while (var6_int < param2.field_v.length) {
-            param2.field_v[var6_int] = hga.field_U.field_e[var6_int];
+            param2.field_v[var6_int] = ProgressDialog.field_U.field_e[var6_int];
             var6_int++;
           }
           return;

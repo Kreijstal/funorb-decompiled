@@ -9,7 +9,7 @@ class UiWidget extends IntrusiveNode {
     String field_C;
     static ResourceArchive field_u;
     static String[] field_s;
-    static ci field_x;
+    static FullscreenNoticeType field_x;
     int field_z;
     int field_y;
     TextLayout field_p;
@@ -175,7 +175,7 @@ class UiWidget extends IntrusiveNode {
             tj.a(7370619, 120, (byte) 52, 166, 166, 104);
             tj.a(7370619, 104, (byte) 36, 180, 166, 104);
             pn.field_a.drawString(da.field_a, 188, 110, 9805732, -1);
-            pn.field_a.drawString(ci.field_d, 220, 142, 9805732, -1);
+            pn.field_a.drawString(FullscreenNoticeType.field_d, 220, 142, 9805732, -1);
             pn.field_a.drawString(MatchingFieldValidator.field_h, 232, 166, 9805732, -1);
             var4 = pn.field_a.stringWidth(pn.field_b);
             var5 = (512 - var4) / 2;
@@ -213,7 +213,7 @@ class UiWidget extends IntrusiveNode {
             tj.a(7370619, 170, (byte) 55, 294, 294, 154);
             tj.a(7370619, 154, (byte) 49, 308, 294, 154);
             pn.field_a.drawString(ol.field_b, 316, 160, 9805732, -1);
-            pn.field_a.drawString(ci.field_d, 348, 192, 9805732, -1);
+            pn.field_a.drawString(FullscreenNoticeType.field_d, 348, 192, 9805732, -1);
             pn.field_a.drawString(MatchingFieldValidator.field_h, 360, 216, 9805732, -1);
             pn.field_a.drawParagraph(eg.field_m, 92, 60, 472, 100, 4243584, -1, 0, 0, 20);
             tj.a(2652240, 70, (byte) 34, 76, 84, 70);
@@ -271,7 +271,7 @@ class UiWidget extends IntrusiveNode {
                 IntrusiveDeque.field_c.draw(-470, 224);
                 SoftwareRasterizer.resetClip();
                 ol.a(122, 30613, 2, 9, 232);
-                pn.field_a.drawParagraph(ug.field_Z, 178, 230, 252, 60, 4243584, -1, 0, 0, 20);
+                pn.field_a.drawParagraph(ResizableModalDialog.field_Z, 178, 230, 252, 60, 4243584, -1, 0, 0, 20);
                 pn.field_a.drawRightAligned(b.field_j, 466, 296, 4243584, -1);
               }
               break;
@@ -864,7 +864,7 @@ class UiWidget extends IntrusiveNode {
     static {
         field_r = "Achieved";
         field_E = new int[4];
-        field_x = new ci();
+        field_x = new FullscreenNoticeType();
         field_D = "<col=FFFFFF>Invincibility:</col> this ultimate defence renders you impervious to every attack and unscathed by every collision. It lasts for 30 seconds. Finding this power-up is like going on holiday!";
         field_A = "Confirm Email:";
     }

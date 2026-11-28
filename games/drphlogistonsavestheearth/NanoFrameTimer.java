@@ -8,7 +8,7 @@ final class NanoFrameTimer extends FrameTimer {
     private long field_g;
     private long[] field_l;
     private int field_k;
-    static ia field_e;
+    static FullscreenNoticeType field_e;
     static he[] field_j;
     static he[] field_d;
 
@@ -181,6 +181,6 @@ final class NanoFrameTimer extends FrameTimer {
     }
 
     static {
-        field_e = new ia();
+        field_e = new FullscreenNoticeType();
     }
 }

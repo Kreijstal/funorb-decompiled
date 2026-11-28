@@ -49,7 +49,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_11_0 = s.field_r;
             return stackIn_11_0;
           }
-          if (rh.a(288, var5)) {
+          if (DialogMessagePane.a(288, var5)) {
             stackIn_14_0 = bq.field_C;
             return stackIn_14_0;
           }
@@ -116,7 +116,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_12_0 = ir.field_a;
             return stackIn_12_0;
           }
-          stackIn_14_0 = qm.field_G;
+          stackIn_14_0 = GuestPlayConfirmationForm.field_G;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -283,11 +283,11 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("create_unable", false);
                 if (null != var2) {
-                  ql.field_K = in.a(param0 + 0, var2);
+                  BirthDateChatEnableForm.field_K = in.a(param0 + 0, var2);
                 }
                 var2 = tk.a("create_ineligible", false);
                 if (null != var2) {
-                  af.field_J = in.a(0, var2);
+                  DateInputWidget.field_J = in.a(0, var2);
                 }
                 var2 = tk.a("usernameprompt", false);
                 if (var2 != null) {
@@ -311,7 +311,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("ticketing_oneunread", false);
                 if (null != var2) {
-                  ll.field_c = in.a(0, var2);
+                  FullscreenNoticeType.field_c = in.a(0, var2);
                 }
                 var2 = tk.a("ticketing_xunread", false);
                 if (var2 != null) {
@@ -415,7 +415,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("mu_game_has_started", false);
                 if (null != var2) {
-                  sp.field_K = in.a(0, var2);
+                  ResizableModalDialog.field_K = in.a(0, var2);
                 }
                 var2 = tk.a("mu_you_declined_invite", false);
                 if (var2 != null) {
@@ -431,7 +431,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("mu_request_withdrawn", false);
                 if (var2 != null) {
-                  fg.field_cb = in.a(0, var2);
+                  ProgressDialog.field_cb = in.a(0, var2);
                 }
                 var2 = tk.a("mu_all_players_have_left", false);
                 if (null != var2) {
@@ -447,7 +447,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("mu_lobby_friend_add", false);
                 if (null != var2) {
-                  we.field_J = in.a(0, var2);
+                  StripedProgressWidget.field_J = in.a(0, var2);
                 }
                 var2 = tk.a("mu_lobby_friend_rm", false);
                 if (var2 != null) {
@@ -539,7 +539,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("close", false);
                 if (null != var2) {
-                  af.field_I = in.a(param0 ^ 0, var2);
+                  DateInputWidget.field_I = in.a(param0 ^ 0, var2);
                 }
                 var2 = tk.a("add_x_to_friends", false);
                 if (null != var2) {
@@ -551,7 +551,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("rm_x_from_friends", false);
                 if (var2 != null) {
-                  fg.field_X = in.a(0, var2);
+                  ProgressDialog.field_X = in.a(0, var2);
                 }
                 var2 = tk.a("rm_x_from_ignore", false);
                 if (null != var2) {
@@ -571,7 +571,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("invite_accept_xs_game", false);
                 if (null != var2) {
-                  af.field_G = in.a(0, var2);
+                  DateInputWidget.field_G = in.a(0, var2);
                 }
                 var2 = tk.a("invite_decline_xs_game", false);
                 if (null != var2) {
@@ -587,7 +587,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("join_withdraw_request_xs_game", false);
                 if (null != var2) {
-                  we.field_L = in.a(param0 ^ 0, var2);
+                  StripedProgressWidget.field_L = in.a(param0 ^ 0, var2);
                 }
                 var2 = tk.a("mu_gameopt_kick_x_from_this_game", false);
                 if (null != var2) {
@@ -651,7 +651,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("mu_chat_game_hide", false);
                 if (null != var2) {
-                  sp.field_P = in.a(param0 + 0, var2);
+                  ResizableModalDialog.field_P = in.a(param0 + 0, var2);
                 }
                 var2 = tk.a("mu_chat_pm_show_all", false);
                 if (var2 != null) {
@@ -727,7 +727,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("game_full", false);
                 if (var2 != null) {
-                  fg.field_db = in.a(0, var2);
+                  ProgressDialog.field_db = in.a(0, var2);
                 }
                 var2 = tk.a("join_requests_one", false);
                 if (var2 != null) {
@@ -783,7 +783,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("x_wants_to_join", false);
                 if (var2 != null) {
-                  we.field_N = in.a(0, var2);
+                  StripedProgressWidget.field_N = in.a(0, var2);
                 }
                 var2 = tk.a("accept", false);
                 if (var2 != null) {
@@ -939,7 +939,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("privatequickchat_from_x", false);
                 if (var2 != null) {
-                  af.field_L = in.a(0, var2);
+                  DateInputWidget.field_L = in.a(0, var2);
                 }
                 var2 = tk.a("privatequickchat_to_x", false);
                 if (null != var2) {
@@ -1665,7 +1665,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("create_optin_news", false);
                 if (var2 != null) {
-                  ll.field_d = in.a(param0 ^ 0, var2);
+                  FullscreenNoticeType.field_d = in.a(param0 ^ 0, var2);
                 }
                 var2 = tk.a("create_agreeterms", false);
                 if (null != var2) {
@@ -1677,7 +1677,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("login_username_email", false);
                 if (null != var2) {
-                  ll.field_a = in.a(0, var2);
+                  FullscreenNoticeType.field_a = in.a(0, var2);
                 }
                 var2 = tk.a("login_username", false);
                 if (var2 != null) {
@@ -1969,7 +1969,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("waitingfor_models", false);
                 if (null != var2) {
-                  ga.field_ib = in.a(0, var2);
+                  StandardContentDialog.field_ib = in.a(0, var2);
                 }
                 var2 = tk.a("waitingfor_fonts", false);
                 if (var2 != null) {
@@ -2143,7 +2143,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("login_createaccount", false);
                 if (null != var2) {
-                  sp.field_Q = in.a(0, var2);
+                  ResizableModalDialog.field_Q = in.a(0, var2);
                 }
                 var2 = tk.a("tohighscores", false);
                 if (var2 != null) {
@@ -2463,7 +2463,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("mouseoveranicon", false);
                 if (var2 != null) {
-                  fj.field_hb = in.a(0, var2);
+                  ProgressMessageDialog.field_hb = in.a(0, var2);
                 }
                 var2 = tk.a("notyetachieved", false);
                 if (null != var2) {
@@ -2587,7 +2587,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("mp_youofferrematch_unrated", false);
                 if (var2 != null) {
-                  ue.field_H = in.a(param0 ^ 0, var2);
+                  RegistrationAgreementPane.field_H = in.a(param0 ^ 0, var2);
                 }
                 if (param0 != 0) {
                   PasswordValidator.a(6, (Archive) null);
@@ -2898,7 +2898,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("fs_unavailable_try_signed_applet", false);
                 if (null != var2) {
-                  ko.field_U = in.a(0, var2);
+                  NumericDateInputWidget.field_U = in.a(0, var2);
                 }
                 var2 = tk.a("fs_focus", false);
                 if (var2 != null) {

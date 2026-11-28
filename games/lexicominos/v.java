@@ -127,7 +127,7 @@ final class v extends DefaultTextWidgetRenderer {
         this.field_y = param2;
         this.field_v = param1;
         this.field_x = param0;
-        this.field_C = uc.field_hb;
+        this.field_C = ProgressMessageDialog.field_hb;
         this.field_f = FullscreenFocusCanvas.field_c;
     }
 

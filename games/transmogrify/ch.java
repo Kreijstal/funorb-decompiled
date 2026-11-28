@@ -36,10 +36,10 @@ final class ch {
         }
         try {
           if (gh.field_m == null) {
-            gh.field_m = new sd(ResourceArchive.field_f, tg.field_c);
+            gh.field_m = new ProgressDialog(ResourceArchive.field_f, tg.field_c);
             ResourceArchive.field_f.showDialog((UiWidget) (gh.field_m), (byte) -71);
           }
-          gh.field_m.a(param2, param1, (byte) -27, param3);
+          gh.field_m.setProgress(param2, param1, (byte) -27, param3);
           SoftwareRasterizer.clearRaster();
           kh.a(-111, true);
         } catch (RuntimeException runtimeException) {

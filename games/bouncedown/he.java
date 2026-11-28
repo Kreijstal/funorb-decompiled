@@ -102,11 +102,11 @@ final class he extends IntrusiveNode {
               var11 = w.field_f[var9];
               var6[0][var10] = SecondaryNodeDeque.field_c[var11];
               var18[0][4 * var10] = sj.field_j[var11];
-              var18[0][var10 * 4 + 1] = nh.field_S[var11];
+              var18[0][var10 * 4 + 1] = FullscreenStatusDialog.field_S[var11];
               var18[0][var10 * 4 + 2] = ResourceArchive.field_i[var11];
               var18[0][4 * var10 + 3] = DelegatingCanvas.field_c[var11];
               if (s.a(SecondaryNodeDeque.field_c[var11], param0 - 3) &&
-                ResourceArchive.field_i[var11] + nh.field_S[var11] + DelegatingCanvas.field_c[var11] == 0) {
+                ResourceArchive.field_i[var11] + FullscreenStatusDialog.field_S[var11] + DelegatingCanvas.field_c[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -120,11 +120,11 @@ final class he extends IntrusiveNode {
               var11Lifetime1 = w.field_f[var9Lifetime1 + var5];
               var6[1][var13] = SecondaryNodeDeque.field_c[var11Lifetime1];
               var18[1][4 * var13] = sj.field_j[var11Lifetime1];
-              var18[1][4 * var13 + 1] = nh.field_S[var11Lifetime1];
+              var18[1][4 * var13 + 1] = FullscreenStatusDialog.field_S[var11Lifetime1];
               var18[1][4 * var13 + 2] = ResourceArchive.field_i[var11Lifetime1];
               var18[1][3 + 4 * var13] = DelegatingCanvas.field_c[var11Lifetime1];
               if (s.a(SecondaryNodeDeque.field_c[var11Lifetime1], -97) &&
-                nh.field_S[var11Lifetime1] - (-ResourceArchive.field_i[var11Lifetime1] - DelegatingCanvas.field_c[var11Lifetime1]) == 0) {
+                FullscreenStatusDialog.field_S[var11Lifetime1] - (-ResourceArchive.field_i[var11Lifetime1] - DelegatingCanvas.field_c[var11Lifetime1]) == 0) {
                 var6[1][var13] = null;
                 var13--;
               }

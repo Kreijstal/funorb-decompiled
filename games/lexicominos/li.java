@@ -39,32 +39,32 @@ final class li extends RichTextWidget {
     }
 
     final static void g(boolean param0) {
-        vc.field_K[61] = 27;
-        vc.field_K[93] = 43;
+        DialogMessagePane.field_K[61] = 27;
+        DialogMessagePane.field_K[93] = 43;
         if (!param0) {
-          vc.field_K[46] = 72;
-          vc.field_K[45] = 26;
-          vc.field_K[92] = 74;
-          vc.field_K[44] = 71;
-          vc.field_K[47] = 73;
-          vc.field_K[59] = 57;
-          vc.field_K[222] = 58;
-          vc.field_K[520] = 59;
-          vc.field_K[192] = 28;
-          vc.field_K[91] = 42;
+          DialogMessagePane.field_K[46] = 72;
+          DialogMessagePane.field_K[45] = 26;
+          DialogMessagePane.field_K[92] = 74;
+          DialogMessagePane.field_K[44] = 71;
+          DialogMessagePane.field_K[47] = 73;
+          DialogMessagePane.field_K[59] = 57;
+          DialogMessagePane.field_K[222] = 58;
+          DialogMessagePane.field_K[520] = 59;
+          DialogMessagePane.field_K[192] = 28;
+          DialogMessagePane.field_K[91] = 42;
           return;
         }
         field_S = -24;
-        vc.field_K[46] = 72;
-        vc.field_K[45] = 26;
-        vc.field_K[92] = 74;
-        vc.field_K[44] = 71;
-        vc.field_K[47] = 73;
-        vc.field_K[59] = 57;
-        vc.field_K[222] = 58;
-        vc.field_K[520] = 59;
-        vc.field_K[192] = 28;
-        vc.field_K[91] = 42;
+        DialogMessagePane.field_K[46] = 72;
+        DialogMessagePane.field_K[45] = 26;
+        DialogMessagePane.field_K[92] = 74;
+        DialogMessagePane.field_K[44] = 71;
+        DialogMessagePane.field_K[47] = 73;
+        DialogMessagePane.field_K[59] = 57;
+        DialogMessagePane.field_K[222] = 58;
+        DialogMessagePane.field_K[520] = 59;
+        DialogMessagePane.field_K[192] = 28;
+        DialogMessagePane.field_K[91] = 42;
     }
 
     final void updatePointer(byte param0, UiWidget param1, int param2, int param3) {

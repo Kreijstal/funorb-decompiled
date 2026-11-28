@@ -139,7 +139,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
               } else {
                 if (var1.field_E &&
                   var1.field_q - (float)var1.field_y >= (float)DebouncedFieldValidator.field_f.field_O) {
-                  lb.b(false);
+                  GuestPlayConfirmationForm.b(false);
                 }
                 if (!var1.field_E) {
                   if ((float)var1.field_y + var1.field_q <= 0.0f) {

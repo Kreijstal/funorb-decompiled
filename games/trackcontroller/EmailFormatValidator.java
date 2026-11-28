@@ -15,7 +15,7 @@ final class EmailFormatValidator extends TextFieldValidator {
         }
         if (param0 != 0) {
           field_m = (ba) null;
-          if (oe.field_b == rk.field_X) {
+          if (oe.field_b == ProgressDialog.field_X) {
             return vh.field_p;
           }
           if (LabeledWidgetContainer.field_Q.b((byte) 121)) {
@@ -23,7 +23,7 @@ final class EmailFormatValidator extends TextFieldValidator {
           }
           return vh.field_p;
         }
-        if (oe.field_b == rk.field_X) {
+        if (oe.field_b == ProgressDialog.field_X) {
           return vh.field_p;
         }
         if (LabeledWidgetContainer.field_Q.b((byte) 121)) {

@@ -155,7 +155,7 @@ final class mh {
     }
 
     final static String b(int param0) {
-        if (!(bi.field_L >= 2)) {
+        if (!(ResizableModalDialog.field_L >= 2)) {
           return vj.field_a;
         }
         if (null != hg.field_a) {

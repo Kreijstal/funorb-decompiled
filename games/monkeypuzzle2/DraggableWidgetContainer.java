@@ -84,12 +84,12 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
         ai var1 = null;
         ai var1Lifetime1;
         if (param0 == 15090) {
-          var1 = new ai(nj.field_d, qk.field_a, ValidatedTextField.field_P[0], mb.field_b[0], da.field_c[0], ra.field_ab[0], cb.field_b[0], fk.field_d);
+          var1 = new ai(nj.field_d, qk.field_a, ValidatedTextField.field_P[0], mb.field_b[0], da.field_c[0], StandardContentDialog.field_ab[0], cb.field_b[0], fk.field_d);
           gb.a(-45);
           return var1;
         }
         DraggableWidgetContainer.j(94);
-        var1Lifetime1 = new ai(nj.field_d, qk.field_a, ValidatedTextField.field_P[0], mb.field_b[0], da.field_c[0], ra.field_ab[0], cb.field_b[0], fk.field_d);
+        var1Lifetime1 = new ai(nj.field_d, qk.field_a, ValidatedTextField.field_P[0], mb.field_b[0], da.field_c[0], StandardContentDialog.field_ab[0], cb.field_b[0], fk.field_d);
         gb.a(-45);
         return var1Lifetime1;
     }
@@ -222,10 +222,10 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
 
     final static te[] j(int param0) {
         if (param0 == 44) {
-          return new te[]{MatchingFieldValidator.field_o, GameApplet.field_g, eg.field_i, NameSuggestionsPanel.field_D, lb.field_I, ja.field_B, GameApplet.field_j, lg.field_E, PcmResampler.field_d, wa.field_b, ve.field_A, vj.field_a, ph.field_b, he.field_e};
+          return new te[]{MatchingFieldValidator.field_o, GameApplet.field_g, eg.field_i, NameSuggestionsPanel.field_D, GuestPlayConfirmationForm.field_I, RegistrationAgreementPane.field_B, GameApplet.field_j, lg.field_E, PcmResampler.field_d, wa.field_b, ve.field_A, vj.field_a, ph.field_b, he.field_e};
         }
         field_F = -9;
-        return new te[]{MatchingFieldValidator.field_o, GameApplet.field_g, eg.field_i, NameSuggestionsPanel.field_D, lb.field_I, ja.field_B, GameApplet.field_j, lg.field_E, PcmResampler.field_d, wa.field_b, ve.field_A, vj.field_a, ph.field_b, he.field_e};
+        return new te[]{MatchingFieldValidator.field_o, GameApplet.field_g, eg.field_i, NameSuggestionsPanel.field_D, GuestPlayConfirmationForm.field_I, RegistrationAgreementPane.field_B, GameApplet.field_j, lg.field_E, PcmResampler.field_d, wa.field_b, ve.field_A, vj.field_a, ph.field_b, he.field_e};
     }
 
     static {

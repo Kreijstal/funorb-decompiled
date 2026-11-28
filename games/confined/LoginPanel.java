@@ -256,7 +256,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = ug.field_cb;
+              stackIn_19_3 = ResizableModalDialog.field_cb;
             }
             this.field_U = new InteractiveWidget(stackIn_19_3, (WidgetEventListener) null);
             if (this.field_S) {
@@ -298,7 +298,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
           }
           var8 = hd.field_a;
           var9 = SecondaryNodeDequeIterator.a(ii.b(false), -118);
-          if (pi.field_T == var9) {
+          if (RegistrationAgreementPane.field_T == var9) {
             var8 = GameSession.field_p;
           } else {
             if (tj.field_n == var9) {

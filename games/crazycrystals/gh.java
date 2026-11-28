@@ -394,7 +394,7 @@ final class gh extends ea implements Cloneable {
           return vp.field_d;
         }
         if (this.field_G > 0) {
-          return na.field_eb;
+          return ProgressMessageDialog.field_eb;
         }
         if (this.field_x < 0) {
           return mk.field_a;
@@ -661,7 +661,7 @@ final class gh extends ea implements Cloneable {
           }
           var6_int = param1.readUnsignedByte();
           this.field_G = mo.field_h[var6_int];
-          this.field_x = kl.field_S[var6_int];
+          this.field_x = ProgressDialog.field_S[var6_int];
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "gh.JC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -876,7 +876,7 @@ final class gh extends ea implements Cloneable {
           DraggableWidgetContainer.field_E = null;
           LaserHubTile.field_q.a((byte) -68);
           LaserHubTile.field_q = null;
-          ck.field_db.a((byte) -86);
+          StandardContentDialog.field_db.a((byte) -86);
           LoginPanel.field_N.a((byte) -16);
           fp.field_c.a((byte) -84);
           aa.field_a.a((byte) -94);
@@ -888,10 +888,10 @@ final class gh extends ea implements Cloneable {
 
     final static void f(byte param0) {
         if (null != SectorCacheStore.field_a) {
-          SectorCacheStore.field_a.i((byte) -45);
+          SectorCacheStore.field_a.closeDialog((byte) -45);
         }
         oh.field_d = new DisplayNameSelectionPanel();
-        MouseWheelInput.field_d.a((UiWidget) (oh.field_d), (byte) -50);
+        MouseWheelInput.field_d.replaceContent((UiWidget) (oh.field_d), (byte) -50);
         if (param0 != -10) {
           field_F = (BitmapFont) null;
         }

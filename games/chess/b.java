@@ -110,7 +110,7 @@ final class b {
           }
           if ((decompiledFrameCompleted2) &&
             (decompiledFrameCompleted1)) {
-            stackIn_32_0 = ba.field_P;
+            stackIn_32_0 = RegistrationAgreementPane.field_P;
             if (param3 == -1) {
               stackIn_33_1 = 1;
             } else {
@@ -230,17 +230,17 @@ final class b {
     }
 
     final static void a(boolean param0) {
-        if (null == rm.field_R) {
+        if (null == StripedProgressWidget.field_R) {
           return;
         }
-        kl.a(rm.field_R, (byte) -114);
-        rm.field_R.exitFullscreen(MatchingFieldValidator.field_l, -3);
+        kl.a(StripedProgressWidget.field_R, (byte) -114);
+        StripedProgressWidget.field_R.exitFullscreen(MatchingFieldValidator.field_l, -3);
         if (!param0) {
           field_f = false;
         }
-        rm.field_R = null;
-        if (null != ch.field_gb) {
-          ch.field_gb.c((byte) -103);
+        StripedProgressWidget.field_R = null;
+        if (null != ProgressDialog.field_gb) {
+          ProgressDialog.field_gb.c((byte) -103);
         }
         DirectByteStorage.field_h.requestFocus();
     }

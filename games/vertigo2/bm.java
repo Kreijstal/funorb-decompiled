@@ -113,7 +113,7 @@ final class bm extends TextureOperator {
           var8 = var20[0];
           var9 = var20[1];
           var10 = var20[2];
-          for (var11 = 0; var11 < we.field_M; var11++) {
+          for (var11 = 0; var11 < StripedProgressWidget.field_M; var11++) {
             var8[var11] = (var29[var11] * this.field_z >> 12) + this.field_C;
             var9[var11] = (this.field_z * var30[var11] >> 12) + this.field_C;
             var10[var11] = this.field_C + (this.field_z * var31[var11] >> 12);
@@ -133,7 +133,7 @@ final class bm extends TextureOperator {
         int[] var3 = var7;
         if (this.field_x.field_i) {
           var4 = this.a(0, -1, param0);
-          for (var5 = 0; we.field_M > var5; var5++) {
+          for (var5 = 0; StripedProgressWidget.field_M > var5; var5++) {
             var7[var5] = (this.field_z * var4[var5] >> 12) + this.field_C;
           }
         }
@@ -148,7 +148,7 @@ final class bm extends TextureOperator {
         if (ui.field_g != param0) {
           SpriteState.h(0);
         }
-        gr.field_Y = 0;
+        FullscreenStatusDialog.field_Y = 0;
     }
 
     final static void a(si param0, boolean param1, int param2) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends vn implements WidgetActivationListener {
+final class AccountCreationResultPanel extends ProgressMessageDialog implements WidgetActivationListener {
     private boolean field_Hb;
     private AccountRegistrationPanel field_Ib;
     private boolean field_Jb;
@@ -11,7 +11,7 @@ final class AccountCreationResultPanel extends vn implements WidgetActivationLis
         if (param0 > -36) {
           return true;
         }
-        if (10 > rm.field_Q) {
+        if (10 > StripedProgressWidget.field_Q) {
           return false;
         }
         if (il.field_a >= 13) {
@@ -29,8 +29,8 @@ final class AccountCreationResultPanel extends vn implements WidgetActivationLis
           return;
         }
         try {
-          ij.a(-128);
-          this.k((byte) -114);
+          FullscreenNoticeType.a(-128);
+          this.closeDialog((byte) -114);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "vd.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -43,7 +43,7 @@ final class AccountCreationResultPanel extends vn implements WidgetActivationLis
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        e var5 = null;
+        DialogMessagePane var5 = null;
         int var6 = 0;
         var6 = Chess.field_G;
         try {
@@ -68,35 +68,35 @@ final class AccountCreationResultPanel extends vn implements WidgetActivationLis
               }
             }
           } else {
-            var4 = ge.field_db;
+            var4 = FullscreenStatusDialog.field_db;
           }
-          var5 = new e((vn) (this), tk.field_a, var4);
+          var5 = new DialogMessagePane((ProgressMessageDialog) (this), tk.field_a, var4);
           if (!param1.success) {
             if (!this.field_Jb) {
               if (5 != param1.statusCode) {
-                var5.a(-1, 114, GameAppletShell.field_k);
+                var5.addActionButton(-1, 114, GameAppletShell.field_k);
               } else {
-                var5.a(11, 67, PcmOutputWorker.field_a);
-                var5.a(17, 39, HuffmanCodec.field_b);
+                var5.addActionButton(11, 67, PcmOutputWorker.field_a);
+                var5.addActionButton(17, 39, HuffmanCodec.field_b);
               }
             } else {
-              var5.a((byte) -114, (WidgetEventListener) (this), sg.field_e);
+              var5.addListenerButton((byte) -114, (WidgetEventListener) (this), sg.field_e);
             }
             if (param1.statusCode != 3) {
               if (param1.statusCode == 6) {
-                var5.a(9, 124, gg.field_e);
+                var5.addActionButton(9, 124, gg.field_e);
               }
             } else {
-              var5.a(7, 30, ki.field_Q);
+              var5.addActionButton(7, 30, ki.field_Q);
             }
           } else {
             if (param1.field_f) {
-              this.c(new ba(this), param2 ^ -101);
+              this.replaceContent(new RegistrationAgreementPane(this), param2 ^ -101);
               return;
             }
-            var5.a((byte) -114, (WidgetEventListener) (this), sg.field_e);
+            var5.addListenerButton((byte) -114, (WidgetEventListener) (this), sg.field_e);
           }
-          this.c(var5, 108);
+          this.replaceContent(var5, 108);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -158,7 +158,7 @@ final class AccountCreationResultPanel extends vn implements WidgetActivationLis
         field_Gb = null;
     }
 
-    final void o(int param0) {
+    final void showAccountCreationConnectionFailure(int param0) {
         this.showAccountCreationResult(true, sc.createAccountErrorResult(nj.field_z, 248, (byte) -92), -1);
         if (param0 != -10896) {
           this.field_Jb = false;

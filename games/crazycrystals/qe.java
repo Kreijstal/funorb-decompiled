@@ -175,7 +175,7 @@ final class qe extends ScoreModifier {
             tp.field_f = new CipherPacketBuffer(param4);
             gj.field_l = param13;
             gf.field_b = param3;
-            kl.field_T = param8;
+            ProgressDialog.field_T = param8;
             vn.field_f = param9;
             if (param0 > -70) {
               return;

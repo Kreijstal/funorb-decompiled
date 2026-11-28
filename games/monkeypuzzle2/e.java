@@ -75,7 +75,7 @@ final class e {
 
     final static void a(int param0, byte param1, int param2) {
         int var3 = 1 << param2;
-        if ((kg.field_c & var3) != 0) {
+        if ((FullscreenNoticeType.field_c & var3) != 0) {
           return;
         }
         int var4 = param2;
@@ -85,7 +85,7 @@ final class e {
           b.field_m = b.field_m - (1 << var4);
           DebouncedFieldValidator.field_f.field_P = DebouncedFieldValidator.field_f.field_P + 1;
           FrameTimer.field_b = FrameTimer.field_b | var3;
-          kg.field_c = kg.field_c | var3;
+          FullscreenNoticeType.field_c = FullscreenNoticeType.field_c | var3;
           if (param1 == 40) {
             var4 = mb.field_e.isEmpty(11253) ? 1 : 0;
             mb.field_e.addFirst(param1 - 8252, new he(param2));
@@ -110,7 +110,7 @@ final class e {
         }
         DebouncedFieldValidator.field_f.field_P = DebouncedFieldValidator.field_f.field_P + 1;
         FrameTimer.field_b = FrameTimer.field_b | var3;
-        kg.field_c = kg.field_c | var3;
+        FullscreenNoticeType.field_c = FullscreenNoticeType.field_c | var3;
         if (param1 != 40) {
           field_a = (ki[]) null;
           var4 = mb.field_e.isEmpty(11253) ? 1 : 0;

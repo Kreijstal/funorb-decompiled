@@ -19,7 +19,7 @@ final class ej {
         for (var5_int = 0; var5_int < var2; var5_int++) {
           var4[var5_int] = in.field_c[b.a(255, (int) var3[var5_int])];
         }
-        Sprite var5 = new Sprite(ql.field_M, vj.field_c, ca.field_a[0], pc.field_a[0], mh.field_c[0], vi.field_w[0], var4);
+        Sprite var5 = new Sprite(BirthDateChatEnableForm.field_M, vj.field_c, ca.field_a[0], pc.field_a[0], mh.field_c[0], vi.field_w[0], var4);
         la.a((byte) 17);
         return var5;
     }

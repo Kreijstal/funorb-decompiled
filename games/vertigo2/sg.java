@@ -220,7 +220,7 @@ final class sg {
         if (param0 != 81) {
           return;
         }
-        n.field_b.a(false, new qm());
+        n.field_b.replaceContent(false, new GuestPlayConfirmationForm());
     }
 
     static {

@@ -12,9 +12,9 @@ final class ak {
           if (param1 != 4) {
             field_a = (String) null;
           }
-          VorbisDecoder.a(param0.getFileByName("headers.packvorbis", param1 ^ -5, ""));
-          var2 = VorbisDecoder.a(param0, "jagex logo2.packvorbis", "");
-          var2.a();
+          VorbisDecoder.decodeSetup(param0.getFileByName("headers.packvorbis", param1 ^ -5, ""));
+          var2 = VorbisDecoder.loadByName(param0, "jagex logo2.packvorbis", "");
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ak.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

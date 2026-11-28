@@ -40,7 +40,7 @@ final class eq extends TextureOperator {
         var3 = this.field_x.a(param0, (byte) 82);
         if (this.field_x.field_i) {
           var4 = this.a(0, -1, param0);
-          for (var5 = 0; var5 < we.field_M; var5++) {
+          for (var5 = 0; var5 < StripedProgressWidget.field_M; var5++) {
             var6 = var4[var5];
             if (this.field_y <= var6) {
               if (this.field_A >= var6) {
@@ -108,7 +108,7 @@ final class eq extends TextureOperator {
           var32 = var26[2];
           var24 = var32;
           var10 = var24;
-          for (var11 = 0; we.field_M > var11; var11++) {
+          for (var11 = 0; StripedProgressWidget.field_M > var11; var11++) {
             var12 = var38[var11];
             var13 = var39[var11];
             var14 = var40[var11];

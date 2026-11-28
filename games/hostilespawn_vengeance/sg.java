@@ -80,7 +80,7 @@ final class sg {
             return stackIn_2_0;
           }
           var5 = param2.getFileIdByName(var4_int, param3, -1);
-          stackIn_4_0 = qi.a(var4_int, (byte) 118, var5, param2);
+          stackIn_4_0 = DialogMessagePane.a(var4_int, (byte) 118, var5, param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

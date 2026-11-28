@@ -2466,7 +2466,7 @@ final class BattleScreen extends dfa {
           this.field_x = new Sprite(45, 45);
           this.field_x.bindAsRenderTarget();
           SoftwareRasterizer.addRadialGlow(352, 352, 352, 255, var16);
-          hga.field_U.a((byte) 120);
+          ProgressDialog.field_U.a((byte) 120);
           var17 = nga.field_i;
           for (var7 = 0; var7 < 8; var7++) {
             var17[var7] = 0;
@@ -2518,7 +2518,7 @@ final class BattleScreen extends dfa {
           if (BananarangSpecial.field_r >= 2 &&
             gf.field_k == 50 &&
             InvincibleEvent.field_q[82]) {
-            sja.field_fb.writeCipheredByte(93, (byte) 113);
+            StandardContentDialog.field_fb.writeCipheredByte(93, (byte) 113);
             System.out.println("--- STATE DUMP REQUESTED ---");
             System.out.println(this.field_h.describeBattleState((byte) -72));
             System.out.println("--- STATE DUMP ENDS ---");

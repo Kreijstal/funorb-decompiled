@@ -95,7 +95,7 @@ final class BufferedSocket implements Runnable {
         String stringLocal7;
         String stringLocal8;
         integerLocal5 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        stringLocal6 = "(" + UiComponentPart017.integerState0438 + " " + GameDomainSupport001.integerState0051 + " " + ComponentContainer.integerState0378 + ") " + HashNode.integerState0070;
+        stringLocal6 = "(" + GuestPlayConfirmationForm.integerState0438 + " " + GameDomainSupport001.integerState0051 + " " + ComponentContainer.integerState0378 + ") " + HashNode.integerState0070;
         stringLocal2 = stringLocal6;
         if (byteArgument1 < 14) {
           return (String) null;
@@ -374,7 +374,7 @@ final class BufferedSocket implements Runnable {
     }
 
     final static void performAction1371(byte byteArgument1) {
-        UiComponentPart008.stringBuilderState0001.setLength(0);
+        DialogMessagePane.stringBuilderState0001.setLength(0);
         TextHotspotBounds.integerState0585 = 0;
         if (byteArgument1 != 94) {
           integerState0661 = -4;

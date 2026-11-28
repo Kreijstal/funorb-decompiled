@@ -55,7 +55,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
           if (var5_int != 80) {
             return false;
           }
-          if (!qd.field_O[81]) {
+          if (!GuestPlayConfirmationForm.field_O[81]) {
             stackIn_14_0 = this.focusNextChild(param1, (byte) 77);
           } else {
             stackIn_14_0 = this.focusPreviousChild(-13, param1);

@@ -122,10 +122,10 @@ final class ProxySocketConnector extends SocketConnector {
         }
         try {
           if (BirthDateValidator.field_l != null) {
-            BirthDateValidator.field_l.h((byte) 64);
+            BirthDateValidator.field_l.closeDialog((byte) 64);
           }
           eb.field_d = new LoginPanel(param1, param0, false, true, true);
-          n.field_b.a(false, eb.field_d);
+          n.field_b.replaceContent(false, eb.field_d);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "aj.I(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

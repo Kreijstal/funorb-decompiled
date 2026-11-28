@@ -94,7 +94,7 @@ final class dc {
               if (ArchiveRequest.field_t) {
                 param1 = pn.field_a;
               }
-              IsaacCipher.field_m.a(param0, param1, param2 ^ -259);
+              IsaacCipher.field_m.showResult(param0, param1, param2 ^ -259);
             }
             if (param0 != 256 &&
               param0 != 10 &&

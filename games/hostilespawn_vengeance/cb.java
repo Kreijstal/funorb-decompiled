@@ -105,13 +105,13 @@ final class cb {
           stackIn_2_0 = -11003;
           stackIn_2_1 = Math.max(eh.field_g, 0);
           if (0 >= SectorCacheStore.field_e) {
-            stackIn_3_2 = ba.a((byte) 61);
+            stackIn_3_2 = StripedProgressWidget.a((byte) 61);
           } else {
-            stackIn_3_2 = Math.max(eh.field_g, qi.field_J);
+            stackIn_3_2 = Math.max(eh.field_g, DialogMessagePane.field_J);
           }
           AwtRasterBuffer.a(stackIn_2_0, stackIn_2_1, stackIn_3_2);
           if (le.field_D > 0) {
-            AccountRegistrationPanel.field_L.drawCentred(jh.a((byte) -93, le.field_D / 50), 320, 52, 16711680, 0);
+            AccountRegistrationPanel.field_L.drawCentred(FullscreenStatusDialog.a((byte) -93, le.field_D / 50), 320, 52, 16711680, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

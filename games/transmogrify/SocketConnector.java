@@ -116,11 +116,11 @@ abstract class SocketConnector {
     final static void a(String param0, int param1, String param2) {
         try {
           if (null != SecondaryNodeDequeIterator.field_d) {
-            SecondaryNodeDequeIterator.field_d.r(77);
+            SecondaryNodeDequeIterator.field_d.closeDialog(77);
           }
           ok.field_a = new LoginPanel(param0, param2, false, true, true);
           int var3_int = -114 / ((57 - param1) / 56);
-          l.field_d.b(-88, ok.field_a);
+          l.field_d.replaceContent(-88, ok.field_a);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ec.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

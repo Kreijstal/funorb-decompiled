@@ -309,14 +309,14 @@ final class nd extends IntrusiveNode {
             throw new IllegalStateException();
           }
           if (nb.field_b != null) {
-            nb.field_b.h((byte) -126);
+            nb.field_b.closeDialog((byte) -126);
           }
           var1 = lk.c(-62);
           mb.field_s = new LoginPanel(var1, (String) null, true, false, false);
           var2 = -47 % ((-58 - param0) / 40);
           AlphaWidgetContainer.field_I.showDialog((UiWidget) (bj.field_f), (byte) -1);
-          bj.field_f.a(mb.field_s, -67);
-          bj.field_f.j(-2065096856);
+          bj.field_f.replaceContent(mb.field_s, -67);
+          bj.field_f.finishResize(-2065096856);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

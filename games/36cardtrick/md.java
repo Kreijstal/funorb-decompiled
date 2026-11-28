@@ -12,9 +12,9 @@ final class md {
     final static boolean a(byte param0) {
         if (param0 > -6) {
           md.a(122, false);
-          return qe.a(PasswordValidator.g(-122), (byte) -98);
+          return RegistrationAgreementPane.a(PasswordValidator.g(-122), (byte) -98);
         }
-        return qe.a(PasswordValidator.g(-122), (byte) -98);
+        return RegistrationAgreementPane.a(PasswordValidator.g(-122), (byte) -98);
     }
 
     final static boolean a(int param0, boolean param1) {
@@ -38,7 +38,7 @@ final class md {
           ua.field_E = dupTemp$1;
           uk.field_a = dupTemp$1;
           if (fe.field_c.status != 1) {
-            ra.field_b = rk.field_fb;
+            ra.field_b = ProgressDialog.field_fb;
           } else {
             try {
               cb.field_j = new BufferedSocket((java.net.Socket) (fe.field_c.result), td.field_b);
@@ -56,7 +56,7 @@ final class md {
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
-              ra.field_b = rk.field_fb;
+              ra.field_b = ProgressDialog.field_fb;
               fe.field_c = null;
               return true;
             }

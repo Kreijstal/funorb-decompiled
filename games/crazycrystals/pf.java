@@ -604,7 +604,7 @@ final class pf extends pn implements Cloneable {
           }
           var4 = new pf(this.field_o, this.field_s, new kp(-1));
           var4.field_q = 1024;
-          stackIn_5_0 = PacketBuffer.a(tn.field_m, param1, var4, (byte) -83, ae.field_C);
+          stackIn_5_0 = PacketBuffer.a(tn.field_m, param1, var4, (byte) -83, GuestPlayConfirmationForm.field_C);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

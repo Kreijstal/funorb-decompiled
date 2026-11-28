@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hp {
-    static hga field_d;
+    static ProgressDialog field_d;
     static boolean field_a;
     static Sprite[] field_b;
     static int field_c;

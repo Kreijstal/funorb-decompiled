@@ -167,7 +167,7 @@ class DualLinkNode extends IntrusiveNode {
         int var3;
         var3 = Lexicominos.field_L ? 1 : 0;
         lj.field_b = null;
-        re.field_X = null;
+        ContentTransitionDialog.field_X = null;
         gj.field_t = 0;
         var2 = rc.field_i;
         rc.field_i = DelegatingCanvas.field_c;

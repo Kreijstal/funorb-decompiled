@@ -5,7 +5,7 @@ final class tj {
     static int[] field_c;
     static int field_b;
     static IntrusiveDeque field_e;
-    static ll field_d;
+    static FullscreenNoticeType field_d;
     static int[] field_a;
 
     final static void a(boolean param0, int param1, int param2, int param3) {
@@ -69,7 +69,7 @@ final class tj {
     static {
         field_c = new int[]{13, 11};
         field_e = new IntrusiveDeque();
-        field_d = new ll();
+        field_d = new FullscreenNoticeType();
         field_a = new int[8192];
     }
 }

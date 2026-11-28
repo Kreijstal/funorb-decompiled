@@ -60,11 +60,11 @@ final class q {
         byte[] var4Lifetime5;
         byte[] var4Lifetime1Lifetime1;
         if (param0 == 100) {
-          if (gg.field_Q > 0) {
-            fieldTemp$22 = gg.field_Q - 1;
-            gg.field_Q = gg.field_Q - 1;
+          if (FullscreenStatusDialog.field_Q > 0) {
+            fieldTemp$22 = FullscreenStatusDialog.field_Q - 1;
+            FullscreenStatusDialog.field_Q = FullscreenStatusDialog.field_Q - 1;
             var2_ref_byte__ = KeyboardListener.field_b[fieldTemp$22];
-            KeyboardListener.field_b[gg.field_Q] = null;
+            KeyboardListener.field_b[FullscreenStatusDialog.field_Q] = null;
             return var2_ref_byte__;
           }
           var2 = 25 % ((param1 + 16) / 48);
@@ -80,8 +80,8 @@ final class q {
             if (null == ef.field_g) {
               return new byte[param0];
             }
-            for (var3 = 0; ec.field_E.length > var3; var3++) {
-              if (ec.field_E[var3] == param0 &&
+            for (var3 = 0; DialogMessagePane.field_E.length > var3; var3++) {
+              if (DialogMessagePane.field_E[var3] == param0 &&
                 fb.field_f[var3] > 0) {
                 dupTemp$20 = fb.field_f[var3] - 1;
                 arrayValue$21 = ef.field_g[var3];
@@ -104,8 +104,8 @@ final class q {
             if (null == ef.field_g) {
               return new byte[param0];
             }
-            for (var3Lifetime4 = 0; ec.field_E.length > var3Lifetime4; var3Lifetime4++) {
-              if (ec.field_E[var3Lifetime4] == param0 &&
+            for (var3Lifetime4 = 0; DialogMessagePane.field_E.length > var3Lifetime4; var3Lifetime4++) {
+              if (DialogMessagePane.field_E[var3Lifetime4] == param0 &&
                 fb.field_f[var3Lifetime4] > 0) {
                 dupTemp$17 = fb.field_f[var3Lifetime4] - 1;
                 arrayValue$18 = ef.field_g[var3Lifetime4];
@@ -127,8 +127,8 @@ final class q {
           if (null == ef.field_g) {
             return new byte[param0];
           }
-          for (var3Lifetime5 = 0; ec.field_E.length > var3Lifetime5; var3Lifetime5++) {
-            if (ec.field_E[var3Lifetime5] == param0 &&
+          for (var3Lifetime5 = 0; DialogMessagePane.field_E.length > var3Lifetime5; var3Lifetime5++) {
+            if (DialogMessagePane.field_E[var3Lifetime5] == param0 &&
               fb.field_f[var3Lifetime5] > 0) {
               dupTemp$15 = fb.field_f[var3Lifetime5] - 1;
               arrayValue$16 = ef.field_g[var3Lifetime5];
@@ -144,8 +144,8 @@ final class q {
         if (param0 != 5000) {
           if (param0 != 30000) {
             if (null != ef.field_g) {
-              for (var3Lifetime1 = 0; ec.field_E.length > var3Lifetime1; var3Lifetime1++) {
-                if (ec.field_E[var3Lifetime1] == param0 &&
+              for (var3Lifetime1 = 0; DialogMessagePane.field_E.length > var3Lifetime1; var3Lifetime1++) {
+                if (DialogMessagePane.field_E[var3Lifetime1] == param0 &&
                   fb.field_f[var3Lifetime1] > 0) {
                   dupTemp$2 = fb.field_f[var3Lifetime1] - 1;
                   arrayValue$3 = ef.field_g[var3Lifetime1];
@@ -166,8 +166,8 @@ final class q {
             return var3_ref_byte__Lifetime1;
           }
           if (null != ef.field_g) {
-            for (var3Lifetime1Lifetime1 = 0; ec.field_E.length > var3Lifetime1Lifetime1; var3Lifetime1Lifetime1++) {
-              if (ec.field_E[var3Lifetime1Lifetime1] == param0 &&
+            for (var3Lifetime1Lifetime1 = 0; DialogMessagePane.field_E.length > var3Lifetime1Lifetime1; var3Lifetime1Lifetime1++) {
+              if (DialogMessagePane.field_E[var3Lifetime1Lifetime1] == param0 &&
                 fb.field_f[var3Lifetime1Lifetime1] > 0) {
                 dupTemp$5 = fb.field_f[var3Lifetime1Lifetime1] - 1;
                 arrayValue$6 = ef.field_g[var3Lifetime1Lifetime1];
@@ -189,8 +189,8 @@ final class q {
         }
         if (param0 != 30000) {
           if (null != ef.field_g) {
-            for (var3Lifetime2 = 0; ec.field_E.length > var3Lifetime2; var3Lifetime2++) {
-              if (ec.field_E[var3Lifetime2] == param0 &&
+            for (var3Lifetime2 = 0; DialogMessagePane.field_E.length > var3Lifetime2; var3Lifetime2++) {
+              if (DialogMessagePane.field_E[var3Lifetime2] == param0 &&
                 fb.field_f[var3Lifetime2] > 0) {
                 dupTemp$8 = fb.field_f[var3Lifetime2] - 1;
                 arrayValue$9 = ef.field_g[var3Lifetime2];
@@ -211,8 +211,8 @@ final class q {
           return var3_ref_byte__Lifetime3;
         }
         if (null != ef.field_g) {
-          for (var3Lifetime3 = 0; ec.field_E.length > var3Lifetime3; var3Lifetime3++) {
-            if (ec.field_E[var3Lifetime3] == param0 &&
+          for (var3Lifetime3 = 0; DialogMessagePane.field_E.length > var3Lifetime3; var3Lifetime3++) {
+            if (DialogMessagePane.field_E[var3Lifetime3] == param0 &&
               fb.field_f[var3Lifetime3] > 0) {
               dupTemp$11 = fb.field_f[var3Lifetime3] - 1;
               arrayValue$12 = ef.field_g[var3Lifetime3];

@@ -38,7 +38,7 @@ final class uh extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= 97) {
-            stackIn_4_0 = ml.computeCrc32(param2, 0, param1, 12011);
+            stackIn_4_0 = FullscreenNoticeType.computeCrc32(param2, 0, param1, 12011);
             return stackIn_4_0;
           }
           stackIn_2_0 = 53;
@@ -71,7 +71,7 @@ final class uh extends IntrusiveNode {
           if (param3 != -73) {
             field_n = (de) null;
           }
-          stackIn_6_0 = ol.s(-106);
+          stackIn_6_0 = FullscreenStatusDialog.s(-106);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -139,7 +139,7 @@ final class lb {
           var11_ref_StringLifetime1 = var8;
           var11_ref_StringLifetime2 = var8;
           if (null == UiWidget.field_t &&
-            !me.a(false, 96)) {
+            !ContentTransitionDialog.a(false, 96)) {
             stackIn_9_0 = -1;
             return stackIn_9_0;
           }
@@ -169,7 +169,7 @@ final class lb {
                 var11_ref_StringLifetime3 = "";
               }
               s.field_b.a(var11_ref_StringLifetime3, 0);
-              ml.a(s.field_b, nb.field_L, 0, NetworkArchiveRequest.field_z, ob.field_s);
+              ml.a(s.field_b, GuestPlayConfirmationForm.field_L, 0, NetworkArchiveRequest.field_z, ob.field_s);
               s.field_b.a(true, s.field_b.field_i - var10);
             } else {
               ob.field_s.field_i = 0;
@@ -194,7 +194,7 @@ final class lb {
               s.field_b.d(86, 16);
               s.field_b.field_i = s.field_b.field_i + 1;
               var9 = s.field_b.field_i;
-              ml.a(s.field_b, nb.field_L, 0, NetworkArchiveRequest.field_z, ob.field_s);
+              ml.a(s.field_b, GuestPlayConfirmationForm.field_L, 0, NetworkArchiveRequest.field_z, ob.field_s);
               s.field_b.a(-var9 + s.field_b.field_i, -19720);
             }
             RichTextLayout.d(-1, -22370);

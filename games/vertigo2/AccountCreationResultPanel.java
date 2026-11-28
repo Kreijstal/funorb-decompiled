@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends fj implements WidgetActivationListener {
+final class AccountCreationResultPanel extends ProgressMessageDialog implements WidgetActivationListener {
     private boolean field_ub;
     static String field_rb;
     private boolean field_nb;
@@ -93,8 +93,8 @@ final class AccountCreationResultPanel extends fj implements WidgetActivationLis
         return stackIn_6_0;
     }
 
-    final void o(int param0) {
-        this.showAccountCreationResult(fn.createAccountErrorResult(248, true, af.field_J), true, -120);
+    final void showAccountCreationConnectionFailure(int param0) {
+        this.showAccountCreationResult(fn.createAccountErrorResult(248, true, DateInputWidget.field_J), true, -120);
         if (param0 != 16614) {
           AccountCreationResultPanel.q(56);
         }
@@ -122,7 +122,7 @@ final class AccountCreationResultPanel extends fj implements WidgetActivationLis
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        rh var5 = null;
+        DialogMessagePane var5 = null;
         int var6 = 0;
         var6 = Vertigo2.field_L ? 1 : 0;
         try {
@@ -138,7 +138,7 @@ final class AccountCreationResultPanel extends fj implements WidgetActivationLis
                   mr.a(false);
                 }
                 this.field_ub = true;
-                var4 = af.field_J;
+                var4 = DateInputWidget.field_J;
               }
             } else {
               var4 = IsaacCipher.field_g;
@@ -149,35 +149,35 @@ final class AccountCreationResultPanel extends fj implements WidgetActivationLis
           } else {
             var4 = ByteStorage.field_c;
           }
-          var5 = new rh((fj) (this), sg.field_a, var4);
+          var5 = new DialogMessagePane((ProgressMessageDialog) (this), sg.field_a, var4);
           if (!param0.success) {
             if (!this.field_ub) {
               if (param0.statusCode != 5) {
-                var5.a(ap.field_f, -1, -61);
+                var5.addActionButton(ap.field_f, -1, -61);
               } else {
-                var5.a(jb.field_A, 11, -123);
-                var5.a(jd.field_b, 17, -50);
+                var5.addActionButton(jb.field_A, 11, -123);
+                var5.addActionButton(jd.field_b, 17, -50);
               }
             } else {
-              var5.a(vi.field_x, (WidgetEventListener) (this), -116);
+              var5.addListenerButton(vi.field_x, (WidgetEventListener) (this), -116);
             }
             if (param0.statusCode == 3) {
-              var5.a(PlayerAvatarRenderer.field_o, 7, -33);
+              var5.addActionButton(PlayerAvatarRenderer.field_o, 7, -33);
             } else {
               if (param0.statusCode != 6) {
-                this.a(false, var5);
+                this.replaceContent(false, var5);
                 return;
               }
-              var5.a(hm.field_H, 9, -26);
+              var5.addActionButton(hm.field_H, 9, -26);
             }
           } else {
             if (param0.field_i) {
-              this.a(false, new ue(this));
+              this.replaceContent(false, new RegistrationAgreementPane(this));
               return;
             }
-            var5.a(vi.field_x, (WidgetEventListener) (this), -110);
+            var5.addListenerButton(vi.field_x, (WidgetEventListener) (this), -110);
           }
-          this.a(false, var5);
+          this.replaceContent(false, var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -208,8 +208,8 @@ final class AccountCreationResultPanel extends fj implements WidgetActivationLis
           return;
         }
         try {
-          fj.g((byte) -127);
-          this.h((byte) 57);
+          ProgressMessageDialog.g((byte) -127);
+          this.closeDialog((byte) 57);
           int var6_int = 112 % ((-63 - param2) / 51);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "oe.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');

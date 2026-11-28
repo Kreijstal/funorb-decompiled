@@ -80,12 +80,12 @@ abstract class LevelRenderable {
           var9 = new AccountCreationResultPanel(AccountServiceResult.field_e, param6);
           var7 = var9;
           AccountServiceResult.field_e.showDialog(var9, 0);
-          if (ko.e((byte) -94)) {
-            var9.o(16614);
+          if (NumericDateInputWidget.e((byte) -94)) {
+            var9.showAccountCreationConnectionFailure(16614);
             return true;
           }
           un.field_Hb = bf.field_b;
-          af.field_H = param4;
+          DateInputWidget.field_H = param4;
           ea.field_e = param1;
           wn.field_d = param0;
           ab.field_b = param3;

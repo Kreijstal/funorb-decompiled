@@ -57,7 +57,7 @@ final class pf extends IntrusiveNode {
           for (var7 = 0; var7 < var4; var7++) {
             var6[var7] = ImageProducerRasterBuffer.field_i[bc.a((int) var5[var7], 255)];
           }
-          var1[var2] = new RgbSprite(ConfirmedEmailAvailabilityValidator.field_l, FrameTimer.field_a, kb.field_c[var2], ml.field_b[var2], NetworkArchiveRequest.field_q[var2], hb.field_a[var2], var6);
+          var1[var2] = new RgbSprite(ConfirmedEmailAvailabilityValidator.field_l, FrameTimer.field_a, kb.field_c[var2], FullscreenNoticeType.field_b[var2], NetworkArchiveRequest.field_q[var2], hb.field_a[var2], var6);
         }
         rh.d(77);
         return var1;
@@ -119,7 +119,7 @@ final class pf extends IntrusiveNode {
         if (!vg.field_d) {
           throw new IllegalStateException();
         }
-        tj.field_K = true;
+        GuestPlayConfirmationForm.field_K = true;
         gh.a((byte) 59, true);
         cd.field_e = 0;
         if (param0 <= 126) {

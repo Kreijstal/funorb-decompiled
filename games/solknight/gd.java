@@ -30,7 +30,7 @@ final class gd {
         SoftwareRasterizer.intersectClip(var9_int, 0, var10, param7 + var11);
         param1.drawAdditive(param0 - 1, -1 + param5, param8);
         param1.drawAdditive(-1 + param0, 1 + param5, param8);
-        SoftwareRasterizer.restoreClip(lj.field_D);
+        SoftwareRasterizer.restoreClip(DialogMessagePane.field_D);
         SoftwareRasterizer.intersectClip(1 + var9_int, 0, 1 + var10, param7 + var11);
         param1.drawAdditive(param0 + 1, param5 - 1, param8);
         param1.drawAdditive(param0 + 1, param5 + 1, param8);
@@ -38,17 +38,17 @@ final class gd {
           return;
         }
         try {
-          SoftwareRasterizer.restoreClip(lj.field_D);
+          SoftwareRasterizer.restoreClip(DialogMessagePane.field_D);
           var10 = param0 + (param1.field_s + (param1.field_p - param6)) - param4;
           var9_int = -param2 + (-param6 + param0) + param1.field_s + param1.field_p;
           SoftwareRasterizer.intersectClip(var9_int, var11 - param7, var10, 480);
           param1.drawAdditive(param0 - 1, -1 + param5, param8);
           param1.drawAdditive(param0 - 1, param5 + 1, param8);
-          SoftwareRasterizer.restoreClip(lj.field_D);
+          SoftwareRasterizer.restoreClip(DialogMessagePane.field_D);
           SoftwareRasterizer.intersectClip(var9_int + 1, var11 - param7, var10 + 1, 480);
           param1.drawAdditive(param0 + 1, param5 - 1, param8);
           param1.drawAdditive(1 + param0, param5 + 1, param8);
-          SoftwareRasterizer.restoreClip(lj.field_D);
+          SoftwareRasterizer.restoreClip(DialogMessagePane.field_D);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "gd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

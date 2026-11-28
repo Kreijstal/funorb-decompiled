@@ -26,7 +26,7 @@ abstract class SpriteGeometry extends DualLinkNode {
     }
 
     final static String a(byte param0) {
-        if (co.field_F) {
+        if (StripedProgressWidget.field_F) {
           if (param0 != 6) {
             return (String) null;
           }

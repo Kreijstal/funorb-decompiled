@@ -197,7 +197,7 @@ final class an {
         int var10Lifetime1;
         var12 = Vertigo2.field_L ? 1 : 0;
         try {
-          hq.b(ko.field_P, -128);
+          hq.b(NumericDateInputWidget.field_P, -128);
           if (sj.field_d != null) {
             fo.field_f.field_db = 0;
             var15 = fo.field_f;
@@ -262,7 +262,7 @@ final class an {
               DisplayNameSelectionPanel.field_G.field_lb = true;
               kk.field_f.field_S = MatchSession.field_A;
               gd.field_r = true;
-              if (null != gr.field_W) {
+              if (null != FullscreenStatusDialog.field_W) {
                 gd.field_r = false;
                 ng.field_a = false;
                 if (e.field_c == null) {
@@ -304,7 +304,7 @@ final class an {
                       }
                     }
                   }
-                  ko.field_S = "<col=A00000>" + qe.field_X + "<br>" + ah.field_j + (String) (var9);
+                  NumericDateInputWidget.field_S = "<col=A00000>" + qe.field_X + "<br>" + ah.field_j + (String) (var9);
                 }
               }
             } else {
@@ -519,7 +519,7 @@ final class an {
         if (hn.field_t) {
           qr.field_l.a(this.field_d, 28580);
         } else {
-          ue.field_N.drawOpaque(0, 0);
+          RegistrationAgreementPane.field_N.drawOpaque(0, 0);
         }
         if (LevelCamera.field_r) {
           RasterBuffer.a(this.field_d, (byte) -48);

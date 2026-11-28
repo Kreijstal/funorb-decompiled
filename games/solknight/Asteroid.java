@@ -833,7 +833,7 @@ final class Asteroid {
         if (param0 != -1) {
           return false;
         }
-        return lb.b(ia.g(-45), 6669);
+        return ProgressDialog.b(ia.g(-45), 6669);
     }
 
     private final void a(int param0, int param1, int param2) {

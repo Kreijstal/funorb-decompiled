@@ -58,7 +58,7 @@ final class da {
               if (oh.field_F) {
                 param1 = MatchingFieldValidator.field_j;
               }
-              sj.field_h.a(param1, param2, (byte) -115);
+              sj.field_h.showResult(param1, param2, (byte) -115);
             }
             if (256 != param2 &&
               param2 != 10 &&

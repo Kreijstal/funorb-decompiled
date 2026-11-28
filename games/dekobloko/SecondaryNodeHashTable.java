@@ -211,7 +211,7 @@ final class SecondaryNodeHashTable {
 
     final static boolean computeBoolean1118(String stringArgument1, byte byteArgument2, AccountRegistrationPanel uiComponentPart031Argument3, boolean booleanArgument4, int integerArgument5, String stringArgument6, String stringArgument7) {
         RuntimeException runtimeExceptionLocal1 = null;
-        UiComponentPart033 uiComponentPart033Local2 = null;
+        AccountCreationResultPanel uiComponentPart033Local2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
         StringBuilder stackStringBuilderLocal4 = null;
         String stackStringLocal5 = null;
@@ -226,7 +226,7 @@ final class SecondaryNodeHashTable {
           if (MixedSupport127.mixedSupport004State0005 != GameAssets.mixedSupport004State0004) {
             return false;
           }
-          uiComponentPart033Local2 = new UiComponentPart033(MixedSupport005.uiComponentPart016State0001, uiComponentPart031Argument3);
+          uiComponentPart033Local2 = new AccountCreationResultPanel(MixedSupport005.uiComponentPart016State0001, uiComponentPart031Argument3);
           MixedSupport005.uiComponentPart016State0001.showDialog((byte) -123, uiComponentPart033Local2);
           if (!SecondaryNodeDequeIterator.computeBoolean0363(-40)) {
             LobbyRoomRow.stringState0586 = stringArgument1;
@@ -237,7 +237,7 @@ final class SecondaryNodeHashTable {
             HuffmanCodec.integerState0352 = integerArgument5;
             TextLayout.booleanState0019 = booleanArgument4;
           } else {
-            uiComponentPart033Local2.performAction1817(true);
+            uiComponentPart033Local2.showAccountCreationConnectionFailure(true);
           }
           if (byteArgument2 > 120) {
             return true;

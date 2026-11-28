@@ -177,7 +177,7 @@ class EditableTextField extends InteractiveWidget {
           if (1 == this.field_u) {
             if (this.field_j instanceof TextWidgetRenderer) {
               var5 = (TextWidgetRenderer) ((Object) this.field_j);
-              var6 = var5.findTextOffsetAtScreenPosition((UiWidget) (this), param2, ll.field_y, param1, param0 - 57, uc.field_C);
+              var6 = var5.findTextOffsetAtScreenPosition((UiWidget) (this), param2, StripedProgressWidget.field_y, param1, param0 - 57, DialogMessagePane.field_C);
               if (-1 != var6) {
                 if (this.field_C &&
                   this.field_F > var6 &&
@@ -486,7 +486,7 @@ class EditableTextField extends InteractiveWidget {
           if (!(this.field_j instanceof TextWidgetRenderer)) {
             return false;
           }
-          var8_int = ((TextWidgetRenderer) ((Object) this.field_j)).findTextOffsetAtScreenPosition((UiWidget) (this), param6, ll.field_y, param2, -66, uc.field_C);
+          var8_int = ((TextWidgetRenderer) ((Object) this.field_j)).findTextOffsetAtScreenPosition((UiWidget) (this), param6, StripedProgressWidget.field_y, param2, -66, DialogMessagePane.field_C);
           if (-1 == var8_int) {
             stackIn_6_1 = 0;
           } else {

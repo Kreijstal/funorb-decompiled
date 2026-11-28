@@ -14,7 +14,7 @@ final class qn extends TileEffect {
         int var5 = 0;
         int var6 = BachelorFridge.field_y;
         try {
-          var7 = sja.field_fb;
+          var7 = StandardContentDialog.field_fb;
           var8 = var7;
           var8.writeCipheredByte(param0, (byte) 109);
           var8.position = var8.position + 1;

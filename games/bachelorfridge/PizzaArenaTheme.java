@@ -90,11 +90,11 @@ final class PizzaArenaTheme extends ArenaTheme {
     final static void a(ResourceArchive param0, int param1) {
         VorbisSample var2 = null;
         try {
-          VorbisSample.b(param0.getFileByName((byte) 123, "", "headers.packvorbis"));
+          VorbisSample.decodeSetup(param0.getFileByName((byte) 123, "", "headers.packvorbis"));
           if (param1 != 64) {
             PizzaArenaTheme.releaseStatics(-45);
           }
-          var2 = VorbisSample.a(param0, "jagex logo2.packvorbis", "");
+          var2 = VorbisSample.loadByName(param0, "jagex logo2.packvorbis", "");
           var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "id.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

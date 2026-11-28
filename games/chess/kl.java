@@ -128,8 +128,8 @@ final class kl {
             return;
           }
           uj.a(param1 + 114, (java.awt.Component) ((Object) param0));
-          if (ii.field_L != null) {
-            ii.field_L.detach((java.awt.Component) ((Object) param0), param1 + 116);
+          if (GuestPlayConfirmationForm.field_L != null) {
+            GuestPlayConfirmationForm.field_L.detach((java.awt.Component) ((Object) param0), param1 + 116);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

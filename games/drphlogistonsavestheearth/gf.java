@@ -259,14 +259,14 @@ final class gf {
 
     final static void b(byte param0) {
         kj.field_b[2] = 240;
-        ih.field_O[2] = 180;
+        RegistrationAgreementPane.field_O[2] = 180;
         kj.field_b[4] = 80;
         kj.field_b[10] = 80;
-        ih.field_O[4] = 56;
+        RegistrationAgreementPane.field_O[4] = 56;
         if (param0 != 86) {
           field_s = (String) null;
         }
-        ih.field_O[10] = 56;
+        RegistrationAgreementPane.field_O[10] = 56;
         AlphaWidgetContainer.a(new int[]{5}, 390, 275, 4, 455, 30, (byte) 123);
         th.field_a[4] = new ld(4);
         ul.field_j[9] = new int[]{2, 5};
@@ -287,7 +287,7 @@ final class gf {
     }
 
     final static void d(byte param0) {
-        PcmOutputWorker.field_e.a(33, new ff());
+        PcmOutputWorker.field_e.replaceContent(33, new GuestPlayConfirmationForm());
         if (param0 <= 78) {
           field_C = -56;
         }
@@ -424,7 +424,7 @@ final class gf {
         this.field_c = param3;
         this.field_m = this.field_H;
         this.field_j = new ck[this.field_x[this.field_I]];
-        this.field_g = ae.field_hb[this.field_I];
+        this.field_g = FullscreenStatusDialog.field_hb[this.field_I];
         this.field_a = this.field_v[this.field_I];
         this.field_d = param5;
         this.field_F = param6;

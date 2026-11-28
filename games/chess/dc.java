@@ -27,7 +27,7 @@ final class dc extends IntrusiveNode {
           dc.a(-70);
         }
         DraggableWidgetContainer.field_O = new AccountRegistrationPanel();
-        nj.field_w.c(DraggableWidgetContainer.field_O, 79);
+        nj.field_w.replaceContent(DraggableWidgetContainer.field_O, 79);
     }
 
     final static void a(int param0, int param1, boolean param2, byte param3, int param4, int param5, int param6) {
@@ -65,7 +65,7 @@ final class dc extends IntrusiveNode {
             var9 = param4;
             var10 = param0;
             for (var11 = param6; var11 < param5; var11++) {
-              var12 = vn.field_Ab[var11];
+              var12 = ProgressMessageDialog.field_Ab[var11];
               if (!param2) {
                 stackIn_26_0 = gh.field_a[var12];
               } else {
@@ -73,13 +73,13 @@ final class dc extends IntrusiveNode {
               }
               var13 = stackIn_26_0;
               if (var13 > var7_int) {
-                vn.field_Ab[var11] = vn.field_Ab[var8];
+                ProgressMessageDialog.field_Ab[var11] = ProgressMessageDialog.field_Ab[var8];
                 if (var13 < var9) {
                   var9 = var13;
                 }
                 incrementValue$0 = var8;
                 var8++;
-                vn.field_Ab[incrementValue$0] = var12;
+                ProgressMessageDialog.field_Ab[incrementValue$0] = var12;
               } else {
                 if (var13 > var10) {
                   var10 = var13;
@@ -92,11 +92,11 @@ final class dc extends IntrusiveNode {
           }
           for (var7_intLifetime1 = param5 - 1; param6 < var7_intLifetime1; var7_intLifetime1--) {
             for (var8Lifetime1 = param6; var7_intLifetime1 > var8Lifetime1; var8Lifetime1++) {
-              var9Lifetime1 = vn.field_Ab[var8Lifetime1];
-              var10Lifetime1 = vn.field_Ab[1 + var8Lifetime1];
+              var9Lifetime1 = ProgressMessageDialog.field_Ab[var8Lifetime1];
+              var10Lifetime1 = ProgressMessageDialog.field_Ab[1 + var8Lifetime1];
               if (ec.a((byte) 126, var9Lifetime1, var10Lifetime1, param2)) {
-                vn.field_Ab[var8Lifetime1] = var10Lifetime1;
-                vn.field_Ab[1 + var8Lifetime1] = var9Lifetime1;
+                ProgressMessageDialog.field_Ab[var8Lifetime1] = var10Lifetime1;
+                ProgressMessageDialog.field_Ab[1 + var8Lifetime1] = var9Lifetime1;
               }
             }
           }

@@ -19,7 +19,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               hi.isSupportedCp1252KeyCharacter((char) var2_int, (byte) 70)) {
               var3 = 127 & rh.field_e + 1;
               if (var3 != pf.field_a) {
-                lb.field_V[rh.field_e] = -1;
+                ProgressDialog.field_V[rh.field_e] = -1;
                 IsaacRandom.field_g[rh.field_e] = (char)var2_int;
                 rh.field_e = var3;
               }
@@ -36,10 +36,10 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
 
     final static ff[] a(int param0) {
         if (param0 <= -63) {
-          return new ff[]{u.field_a, ne.field_f, ng.field_f, ti.field_c, Archive.field_i, di.field_i, rg.field_b, me.field_f, RichTextWidget.field_J, mb.field_b, wh.field_a, GzipDecompressor.field_f, AccountRequestState.field_a, la.field_l};
+          return new ff[]{u.field_a, ne.field_f, FullscreenNoticeType.field_f, ti.field_c, Archive.field_i, di.field_i, rg.field_b, me.field_f, RichTextWidget.field_J, mb.field_b, wh.field_a, GzipDecompressor.field_f, AccountRequestState.field_a, la.field_l};
         }
         field_b = (sf) null;
-        return new ff[]{u.field_a, ne.field_f, ng.field_f, ti.field_c, Archive.field_i, di.field_i, rg.field_b, me.field_f, RichTextWidget.field_J, mb.field_b, wh.field_a, GzipDecompressor.field_f, AccountRequestState.field_a, la.field_l};
+        return new ff[]{u.field_a, ne.field_f, FullscreenNoticeType.field_f, ti.field_c, Archive.field_i, di.field_i, rg.field_b, me.field_f, RichTextWidget.field_J, mb.field_b, wh.field_a, GzipDecompressor.field_f, AccountRequestState.field_a, la.field_l};
     }
 
     public final synchronized void keyReleased(java.awt.event.KeyEvent param0) {
@@ -61,7 +61,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (fg.field_b >= 0 &&
               var2_int >= 0) {
-              ci.field_qb[fg.field_b] = ~var2_int;
+              ProgressMessageDialog.field_qb[fg.field_b] = ~var2_int;
               fg.field_b = 127 & fg.field_b + 1;
               if (fg.field_b == qd.field_d) {
                 fg.field_b = -1;
@@ -108,7 +108,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (fg.field_b >= 0 &&
               var2_int >= 0) {
-              ci.field_qb[fg.field_b] = var2_int;
+              ProgressMessageDialog.field_qb[fg.field_b] = var2_int;
               fg.field_b = fg.field_b + 1 & 127;
               if (qd.field_d == fg.field_b) {
                 fg.field_b = -1;
@@ -117,7 +117,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             if (var2_int >= 0) {
               var3 = 127 & 1 + rh.field_e;
               if (var3 != pf.field_a) {
-                lb.field_V[rh.field_e] = var2_int;
+                ProgressDialog.field_V[rh.field_e] = var2_int;
                 IsaacRandom.field_g[rh.field_e] = (char)0;
                 rh.field_e = var3;
               }

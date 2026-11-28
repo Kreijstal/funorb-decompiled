@@ -30,7 +30,7 @@ final class wf {
           }
           AlphaWidgetContainer.field_E.showDialog((byte) -125, var8);
           if (pa.b((byte) 91)) {
-            var8.u(-118);
+            var8.showAccountCreationConnectionFailure(-118);
             return true;
           }
           WhirlpoolDigest.field_f = param2;

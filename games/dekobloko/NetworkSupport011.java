@@ -392,7 +392,7 @@ final class NetworkSupport011 {
           vorbisSampleLocal17 = cachedVorbisSampleLocal1;
           vorbisSampleLocal16 = cachedVorbisSampleLocal1;
           if (vorbisSampleLocal17 == null) {
-            vorbisSampleLocal16 = VorbisSample.computeVorbisSample1689(this.resourceArchiveState0018, integerArgument3, integerArgument1);
+            vorbisSampleLocal16 = VorbisSample.load(this.resourceArchiveState0018, integerArgument3, integerArgument1);
             if (vorbisSampleLocal16 == null) {
               stackObjectLocal4 = null;
               return (RawSound) (stackObjectLocal4);
@@ -403,7 +403,7 @@ final class NetworkSupport011 {
             stackRawSoundLocal5 = (RawSound) null;
             return stackRawSoundLocal5;
           }
-          rawSoundLocal18 = vorbisSampleLocal16.computeRawSound1693(integerArrayArgument2);
+          rawSoundLocal18 = vorbisSampleLocal16.decodeToPcm(integerArrayArgument2);
           if (rawSoundLocal18 == null) {
             stackObjectLocal6 = null;
             return (RawSound) (stackObjectLocal6);

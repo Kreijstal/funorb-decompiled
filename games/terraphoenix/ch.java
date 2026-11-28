@@ -572,10 +572,10 @@ final class ch {
           if (var3_int > 353) {
             var6_int = 116137 / var3_int;
             var7 = param1.field_G * (329 - var6_int) / (var3_int - 353);
-            jg.field_hb.drawScaledTinted(this.field_i + 337, var7 + 74, jg.field_hb.field_r, var6_int, 7381200);
+            StandardContentDialog.field_hb.drawScaledTinted(this.field_i + 337, var7 + 74, StandardContentDialog.field_hb.field_r, var6_int, 7381200);
             if (1 == oh.field_f && (param1.field_J ||
               !(337 + this.field_i > ef.field_j) &&
-              !(jg.field_hb.field_r + 337 + this.field_i <= ef.field_j)) && (MouseWheelInput.field_b >= 64 &&
+              !(StandardContentDialog.field_hb.field_r + 337 + this.field_i <= ef.field_j)) && (MouseWheelInput.field_b >= 64 &&
               414 > MouseWheelInput.field_b)) {
               var8 = var6_int / 2 + 74;
               var9 = -(var6_int / 2) + 403;
@@ -818,7 +818,7 @@ final class ch {
           var9 = (int[]) null;
           ch.a(-64, -120, 87, (int[]) null, 24);
         }
-        il.a(1, jg.field_ib);
+        il.a(1, StandardContentDialog.field_ib);
         ob.b();
         SoftwareRasterizer.clearRaster();
         DebouncedFieldValidator.d(-2766);
@@ -829,7 +829,7 @@ final class ch {
         if (kf.field_f >= 150) {
           hd.field_l.drawWithOpacity(var3 + 15, 10 + var4, var5);
         } else {
-          jg.field_ib.drawHalfSize(var3, var4);
+          StandardContentDialog.field_ib.drawHalfSize(var3, var4);
         }
         var6 = -125 + kf.field_f;
         if (0 < var6 &&

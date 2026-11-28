@@ -18,10 +18,10 @@ final class MixedSupport105 implements WidgetRenderer {
         try {
           Exception exceptionLocal1 = null;
           Throwable caughtExceptionLocal2 = null;
-          if (null != UiComponentPart008.bufferedFileState0001) {
+          if (null != DialogMessagePane.bufferedFileState0001) {
             try {
-              UiComponentPart008.bufferedFileState0001.seek(0L, (byte) -109);
-              UiComponentPart008.bufferedFileState0001.write(LabeledWidgetContainer.cipherPacketBufferState0001.payload, (byte) 117, LabeledWidgetContainer.cipherPacketBufferState0001.position, 24);
+              DialogMessagePane.bufferedFileState0001.seek(0L, (byte) -109);
+              DialogMessagePane.bufferedFileState0001.write(LabeledWidgetContainer.cipherPacketBufferState0001.payload, (byte) 117, LabeledWidgetContainer.cipherPacketBufferState0001.position, 24);
             } catch (java.lang.Exception caughtParameterLocal3) {
               caughtExceptionLocal2 = caughtParameterLocal3;
               exceptionLocal1 = (Exception) (Object) caughtExceptionLocal2;
@@ -46,8 +46,8 @@ final class MixedSupport105 implements WidgetRenderer {
         GameDomainSupport002 gameDomainSupport002Local5 = null;
         RenderingSupport007 renderingSupport007Local6 = new RenderingSupport007(4);
         RenderingSupport007 renderingSupport007Local7 = renderingSupport007Local6;
-        if (UiComponentPart023.computeBoolean1242(-30146)) {
-          gameDomainSupport002Local5 = new GameDomainSupport002(20, UiComponentPart026.stringState0461, DefaultTextWidgetRenderer.renderingSupport009State0001);
+        if (StandardContentDialog.computeBoolean1242(-30146)) {
+          gameDomainSupport002Local5 = new GameDomainSupport002(20, ProgressDialog.stringState0461, DefaultTextWidgetRenderer.renderingSupport009State0001);
           gameDomainSupport002Local5.integerState0174 = 320 - gameDomainSupport002Local5.integerState0176 / 2;
           gameDomainSupport002Local5.integerState0178 = 372;
           renderingSupport007Local7.performAction0852(gameDomainSupport002Local5, 122);

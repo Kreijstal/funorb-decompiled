@@ -16,7 +16,7 @@ class IntrusiveNode {
         if (param0 < 2) {
           return false;
         }
-        stackIn_7_0 = (LoginPanel.field_N >= 10) && (!ge.field_D) && (!gh.a(3100));
+        stackIn_7_0 = (LoginPanel.field_N >= 10) && (!RegistrationAgreementPane.field_D) && (!gh.a(3100));
         return stackIn_7_0;
     }
 

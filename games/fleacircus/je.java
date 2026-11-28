@@ -1081,7 +1081,7 @@ final class je extends InteractiveWidget {
                 }
                 var2 = ad.a("toserverlist", 0);
                 if (null != var2) {
-                  bm.field_N = ab.a(0, var2);
+                  DialogMessagePane.field_N = ab.a(0, var2);
                 }
                 var2 = ad.a("tocustomersupport", 0);
                 if (null != var2) {
@@ -1089,7 +1089,7 @@ final class je extends InteractiveWidget {
                 }
                 var2 = ad.a("changedisplayname", 0);
                 if (null != var2) {
-                  fc.field_d = ab.a(0, var2);
+                  FullscreenNoticeType.field_d = ab.a(0, var2);
                 }
                 var2 = ad.a("returntohomepage", 0);
                 if (null != var2) {
@@ -1507,7 +1507,7 @@ final class je extends InteractiveWidget {
                 }
                 var2 = ad.a("create_u13terms", 0);
                 if (null != var2) {
-                  oh.field_jb = ab.a(0, var2);
+                  ContentTransitionDialog.field_jb = ab.a(0, var2);
                 }
                 var2 = ad.a("login_username_email", 0);
                 if (null != var2) {
@@ -2227,7 +2227,7 @@ final class je extends InteractiveWidget {
                 }
                 var2 = ad.a("unreachedlevel_name", 0);
                 if (var2 != null) {
-                  fc.field_b = ab.a(0, var2);
+                  FullscreenNoticeType.field_b = ab.a(0, var2);
                 }
                 var2 = ad.a("unreachedlevel_cannotplayreason", 0);
                 if (var2 != null) {
@@ -2765,7 +2765,7 @@ final class je extends InteractiveWidget {
                 }
                 var2 = ad.a("mb_full_access_2", 0);
                 if (null != var2) {
-                  jj.field_Y = ab.a(0, var2);
+                  ResizableModalDialog.field_Y = ab.a(0, var2);
                 }
                 var2 = ad.a("mb_achievement_count_1", 0);
                 if (var2 != null) {
@@ -2882,7 +2882,7 @@ final class je extends InteractiveWidget {
                 }
                 var2 = ad.a("mustlogin1", 0);
                 if (null != var2) {
-                  jj.field_X = ab.a(0, var2);
+                  ResizableModalDialog.field_X = ab.a(0, var2);
                 }
                 var2 = ad.a("mustlogin2,1", 0);
                 if (null != var2) {

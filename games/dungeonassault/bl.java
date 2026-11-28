@@ -116,7 +116,7 @@ final class bl {
           am.field_a = oh.a(hj.field_Z, "", 11091, "menu_chain_frame");
           lf.field_x = oh.a(hj.field_Z, "", 11091, "menu_chain_ext");
           lf.field_n = oh.a(hj.field_Z, "", 11091, "menu_chain_line");
-          hf.field_Ab = oh.a(hj.field_Z, "", 11091, "menu_chain");
+          ContentTransitionDialog.field_Ab = oh.a(hj.field_Z, "", 11091, "menu_chain");
           AccountNameAvailabilityValidator.field_m = kn.a(hj.field_Z, "", "cursor", -49);
           jg.field_c = new RgbSprite[AccountNameAvailabilityValidator.field_m.length];
           for (var1_intLifetime2 = 0; AccountNameAvailabilityValidator.field_m.length > var1_intLifetime2; var1_intLifetime2++) {
@@ -273,7 +273,7 @@ final class bl {
           }
           f.field_f = oh.a(hj.field_Z, "pieces", 11091, "piece_banshee");
           EmailFormatValidator.field_m = oh.a(hj.field_Z, "pieces", 11091, "piece_bat");
-          ia.field_R = oh.a(hj.field_Z, "pieces", 11091, "piece_beastman");
+          GuestPlayConfirmationForm.field_R = oh.a(hj.field_Z, "pieces", 11091, "piece_beastman");
           ld.field_d = oh.a(hj.field_Z, "pieces", 11091, "piece_blackknight");
           InteractiveWidget.field_G = oh.a(hj.field_Z, "pieces", 11091, "piece_blade_construct");
           DualLinkNode.field_q = oh.a(hj.field_Z, "pieces", 11091, "piece_darkelf");
@@ -395,14 +395,14 @@ final class bl {
             var13[var14Lifetime2] = 16776960 + (-192 + var14Lifetime2) * 4;
           }
           jn.field_n.field_v.field_i = var13;
-          fp.field_d = new tf(IntrusiveNode.field_c, tp.field_u, cm.field_M);
-          na.field_w = new tf(IntrusiveNode.field_c, bn.field_q, cm.field_M);
-          cg.field_a = new tf(IntrusiveNode.field_c, vd.field_c, cm.field_M);
-          RaiderRecruitmentScreen.field_x = new tf(IntrusiveNode.field_c, AwtRasterBuffer.field_e.toUpperCase(), cm.field_M);
-          bf.field_m = new tf(IntrusiveNode.field_c, DisplayNameSelectionPanel.field_K, cm.field_M);
+          fp.field_d = new tf(IntrusiveNode.field_c, tp.field_u, RegistrationAgreementPane.field_M);
+          na.field_w = new tf(IntrusiveNode.field_c, bn.field_q, RegistrationAgreementPane.field_M);
+          cg.field_a = new tf(IntrusiveNode.field_c, vd.field_c, RegistrationAgreementPane.field_M);
+          RaiderRecruitmentScreen.field_x = new tf(IntrusiveNode.field_c, AwtRasterBuffer.field_e.toUpperCase(), RegistrationAgreementPane.field_M);
+          bf.field_m = new tf(IntrusiveNode.field_c, DisplayNameSelectionPanel.field_K, RegistrationAgreementPane.field_M);
           kd.field_e = new tf[ie.field_j.length];
           for (var14Lifetime3 = 0; var14Lifetime3 < ie.field_j.length; var14Lifetime3++) {
-            kd.field_e[var14Lifetime3] = new tf(db.field_v, ie.field_j[var14Lifetime3], cm.field_M);
+            kd.field_e[var14Lifetime3] = new tf(db.field_v, ie.field_j[var14Lifetime3], RegistrationAgreementPane.field_M);
           }
           discarded$1 = new RgbSprite(SoftwareRasterizer.field_i, SoftwareRasterizer.field_c);
         } catch (RuntimeException runtimeException) {
@@ -420,19 +420,19 @@ final class bl {
           field_p = -78;
         }
         if (!MenuScreen.field_t) {
-          var1 = hf.field_sb;
+          var1 = ContentTransitionDialog.field_sb;
           if (0 < var1) {
             if (var1 != 1) {
-              ub.field_o = jk.a(new String[]{Integer.toString(var1)}, AchievementIconEntry.field_j, 30496);
+              ub.field_o = StandardContentDialog.a(new String[]{Integer.toString(var1)}, AchievementIconEntry.field_j, 30496);
             } else {
               ub.field_o = fb.field_g;
             }
             ub.field_o = nf.a(new CharSequence[]{(CharSequence) ((Object) ub.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qa.field_b)}, (byte) 34);
           }
-          a.field_n.j((byte) 79);
+          a.field_n.closeDialog((byte) 79);
           hl.a(true);
         } else {
-          a.field_n.o(4210752);
+          a.field_n.showConnectionFailure(4210752);
         }
     }
 
@@ -462,7 +462,7 @@ final class bl {
             ui.field_a = hc.field_b;
           }
         }
-        wi.field_kb = fa.a((byte) -127, ui.field_a, hc.field_b);
+        ProgressDialog.field_kb = fa.a((byte) -127, ui.field_a, hc.field_b);
         if (DisplayNameSelectionPanel.field_L == null) {
           stackIn_8_0 = 620;
         } else {
@@ -470,9 +470,9 @@ final class bl {
         }
         ArchiveRequest.field_w = stackIn_8_0;
         if (null != DisplayNameSelectionPanel.field_L) {
-          stackIn_11_0 = ed.field_P - (wi.field_kb >> 1);
+          stackIn_11_0 = ed.field_P - (ProgressDialog.field_kb >> 1);
         } else {
-          stackIn_11_0 = 480 - wi.field_kb >> 1;
+          stackIn_11_0 = 480 - ProgressDialog.field_kb >> 1;
         }
         MenuScreen.field_w = stackIn_11_0;
         if (-1 != ce.field_p) {
@@ -483,17 +483,17 @@ final class bl {
           }
           var1 = stackIn_16_0;
           if (jn.field_l != null) {
-            stackIn_19_0 = -(wi.field_kb >> 1) + ed.field_P;
+            stackIn_19_0 = -(ProgressDialog.field_kb >> 1) + ed.field_P;
           } else {
-            stackIn_19_0 = 480 - wi.field_kb >> 1;
+            stackIn_19_0 = 480 - ProgressDialog.field_kb >> 1;
           }
           var2 = stackIn_19_0;
           ArchiveRequest.field_w = fa.a((byte) -127, var1, ArchiveRequest.field_w);
           MenuScreen.field_w = fa.a((byte) -128, var2, MenuScreen.field_w);
         }
         ti.field_A.b(204 + ArchiveRequest.field_w, MenuScreen.field_w - 28, (byte) 4);
-        tk.field_k.b(ArchiveRequest.field_w - 7, 20 + MenuScreen.field_w + wi.field_kb, (byte) 4);
-        PacketBuffer.field_n.b(7 + (ArchiveRequest.field_w + 200), MenuScreen.field_w + (wi.field_kb + 22), (byte) 4);
+        tk.field_k.b(ArchiveRequest.field_w - 7, 20 + MenuScreen.field_w + ProgressDialog.field_kb, (byte) 4);
+        PacketBuffer.field_n.b(7 + (ArchiveRequest.field_w + 200), MenuScreen.field_w + (ProgressDialog.field_kb + 22), (byte) 4);
         stackIn_22_0 = ti.field_A;
         stackIn_23_1 = (null == DisplayNameSelectionPanel.field_L) ? false : true;
         stackIn_22_0.field_w = stackIn_23_1;

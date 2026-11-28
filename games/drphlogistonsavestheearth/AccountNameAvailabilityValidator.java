@@ -76,7 +76,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         if (param0 != 9) {
           return -67;
         }
-        return (int)(1000000000L / ma.field_vb);
+        return (int)(1000000000L / ProgressMessageDialog.field_vb);
     }
 
     final String getValidationMessage(byte param0, String param1) {

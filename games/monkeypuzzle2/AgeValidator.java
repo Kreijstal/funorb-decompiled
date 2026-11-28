@@ -128,7 +128,7 @@ final class AgeValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!ra.a(var4, (byte) -128)) {
+          if (!StandardContentDialog.a(var4, (byte) -128)) {
             stackIn_3_0 = IsaacRandom.field_h;
             return stackIn_3_0;
           }

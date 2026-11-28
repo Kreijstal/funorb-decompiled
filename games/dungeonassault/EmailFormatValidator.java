@@ -83,7 +83,7 @@ final class EmailFormatValidator extends TextFieldValidator {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_3_0 = (null != kc.a(param0, true)) ? 0 : 1;
+          stackIn_3_0 = (null != DialogMessagePane.a(param0, true)) ? 0 : 1;
           var3_int = stackIn_3_0;
           var4 = -1 % ((param1 - 5) / 44);
           if (var3_int != 0) {

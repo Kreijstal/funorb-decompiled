@@ -12,7 +12,7 @@ final class of extends InteractiveWidget {
         if (!BoundedRandomAccessFile.field_c) {
           throw new IllegalStateException();
         }
-        jd.field_z = true;
+        DialogMessagePane.field_z = true;
         fl.a(false, 1);
         if (param0 >= -36) {
           field_C = (wh) null;
@@ -41,31 +41,31 @@ final class of extends InteractiveWidget {
         int var3_intLifetime1;
         var4 = CrazyCrystals.field_B;
         try {
-          wc.field_q = bl.a(param2, "initialset", "level-complete").a();
-          re.field_h = bl.a(param2, "initialset", "crystal1-appear").a();
-          jj.field_a = bl.a(param2, "initialset", "crystal2-appear").a();
-          cb.field_p = bl.a(param2, "initialset", "bomb-appear").a();
-          lp.field_b = bl.a(param2, "initialset", "ball-appear").a();
-          ti.field_m = bl.a(param2, "initialset", "key-appear").a();
-          ad.field_k = bl.a(param2, "initialset", "spider-appear").a();
+          wc.field_q = VorbisSample.loadByName(param2, "initialset", "level-complete").decodeAllToPcm();
+          re.field_h = VorbisSample.loadByName(param2, "initialset", "crystal1-appear").decodeAllToPcm();
+          jj.field_a = VorbisSample.loadByName(param2, "initialset", "crystal2-appear").decodeAllToPcm();
+          cb.field_p = VorbisSample.loadByName(param2, "initialset", "bomb-appear").decodeAllToPcm();
+          lp.field_b = VorbisSample.loadByName(param2, "initialset", "ball-appear").decodeAllToPcm();
+          ti.field_m = VorbisSample.loadByName(param2, "initialset", "key-appear").decodeAllToPcm();
+          ad.field_k = VorbisSample.loadByName(param2, "initialset", "spider-appear").decodeAllToPcm();
           for (var3_int = 0; var3_int < 7; var3_int++) {
-            d.field_b[var3_int] = bl.a(param2, "initialset", "bonus" + var3_int + "-appear").a();
+            d.field_b[var3_int] = VorbisSample.loadByName(param2, "initialset", "bonus" + var3_int + "-appear").decodeAllToPcm();
           }
-          cj.field_x = bl.a(param2, "initialset", "penalty-appear").a();
-          qp.field_i = bl.a(param2, "initialset", "crystal1-disappear").a();
-          ck.field_cb = bl.a(param2, "initialset", "crystal2-disappear").a();
-          cf.field_d = bl.a(param2, "initialset", "ball-disappear").a();
-          de.field_l = bl.a(param2, "initialset", "key-disappear").a();
-          rd.field_i = bl.a(param2, "initialset", "spider-disappear").a();
+          cj.field_x = VorbisSample.loadByName(param2, "initialset", "penalty-appear").decodeAllToPcm();
+          qp.field_i = VorbisSample.loadByName(param2, "initialset", "crystal1-disappear").decodeAllToPcm();
+          StandardContentDialog.field_cb = VorbisSample.loadByName(param2, "initialset", "crystal2-disappear").decodeAllToPcm();
+          cf.field_d = VorbisSample.loadByName(param2, "initialset", "ball-disappear").decodeAllToPcm();
+          de.field_l = VorbisSample.loadByName(param2, "initialset", "key-disappear").decodeAllToPcm();
+          rd.field_i = VorbisSample.loadByName(param2, "initialset", "spider-disappear").decodeAllToPcm();
           if (param1 < 22) {
             field_D = -59;
           }
           for (var3_intLifetime1 = 0; 7 > var3_intLifetime1; var3_intLifetime1++) {
-            DraggableWidgetContainer.field_L[var3_intLifetime1] = bl.a(param2, "initialset", "bonus" + var3_intLifetime1 + "-disappear").a();
+            DraggableWidgetContainer.field_L[var3_intLifetime1] = VorbisSample.loadByName(param2, "initialset", "bonus" + var3_intLifetime1 + "-disappear").decodeAllToPcm();
           }
-          bp.field_a = bl.a(param2, "initialset", "penalty-disappear").a();
+          bp.field_a = VorbisSample.loadByName(param2, "initialset", "penalty-disappear").decodeAllToPcm();
           je.field_f = ha.a(param0, "initialset", "score-count").b();
-          dn.field_e = bl.a(param2, "initialset", "score-end").a();
+          dn.field_e = VorbisSample.loadByName(param2, "initialset", "score-end").decodeAllToPcm();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

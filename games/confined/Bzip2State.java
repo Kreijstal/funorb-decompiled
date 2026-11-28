@@ -44,9 +44,9 @@ final class Bzip2State {
           TunnelCamera.field_Z.snapAndPruneDialogs((byte) -3);
         }
         if (ui.field_c != null) {
-          ui.field_c.i((byte) 127);
+          ui.field_c.freezeNormalProgressAnimation((byte) 127);
         }
-        ei.h((byte) -107);
+        FullscreenStatusDialog.h((byte) -107);
         if (param0 < -99) {
           return;
         }

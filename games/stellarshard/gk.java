@@ -81,7 +81,7 @@ final class gk {
             return stackIn_8_0;
           }
           if (GzipDecompressor.field_d == AlphaWidgetContainer.field_C) {
-            pg.field_fb.position = 0;
+            StandardContentDialog.field_fb.position = 0;
             nb.field_M = null;
             if (param3 != null) {
               var9 = 0;
@@ -98,16 +98,16 @@ final class gk {
               AccountRequestState.field_c.writeShort(param0, -127);
               AccountRequestState.field_c.writeByte(false, param4);
               AccountRequestState.field_c.writeByte(false, var9);
-              pg.field_fb.writeByte(false, 18);
-              pg.field_fb.position = pg.field_fb.position + 2;
-              var10 = pg.field_fb.position;
+              StandardContentDialog.field_fb.writeByte(false, 18);
+              StandardContentDialog.field_fb.position = StandardContentDialog.field_fb.position + 2;
+              var10 = StandardContentDialog.field_fb.position;
               var11_ref_StringLifetime4 = dd.a(0, hf.a((byte) -118));
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
-              pg.field_fb.writeString(var11_ref_StringLifetime4, -9799);
-              ha.a(fj.field_l, pg.field_fb, AccountRequestState.field_c, -105, u.field_o);
-              pg.field_fb.backpatchShortLength(-1, -var10 + pg.field_fb.position);
+              StandardContentDialog.field_fb.writeString(var11_ref_StringLifetime4, -9799);
+              ha.a(fj.field_l, StandardContentDialog.field_fb, AccountRequestState.field_c, -105, u.field_o);
+              StandardContentDialog.field_fb.backpatchShortLength(-1, -var10 + StandardContentDialog.field_fb.position);
             } else {
               AccountRequestState.field_c.position = 0;
               AccountRequestState.field_c.writeInt(0, ValidatedTextField.field_P.nextInt());
@@ -128,11 +128,11 @@ final class gk {
                 stackIn_18_2 = var8;
               }
               ((PacketBuffer) (Object) stackIn_17_0).writePrefixedString(stackIn_17_1, stackIn_18_2);
-              pg.field_fb.writeByte(false, 16);
-              pg.field_fb.position = pg.field_fb.position + 1;
-              var9 = pg.field_fb.position;
-              ha.a(fj.field_l, pg.field_fb, AccountRequestState.field_c, -121, u.field_o);
-              pg.field_fb.backpatchByteLength(pg.field_fb.position - var9, (byte) -94);
+              StandardContentDialog.field_fb.writeByte(false, 16);
+              StandardContentDialog.field_fb.position = StandardContentDialog.field_fb.position + 1;
+              var9 = StandardContentDialog.field_fb.position;
+              ha.a(fj.field_l, StandardContentDialog.field_fb, AccountRequestState.field_c, -121, u.field_o);
+              StandardContentDialog.field_fb.backpatchByteLength(StandardContentDialog.field_fb.position - var9, (byte) -94);
             }
             ue.a((byte) -108, -1);
             GzipDecompressor.field_d = ByteStorage.field_d;
@@ -148,7 +148,7 @@ final class gk {
             } else {
               if (var9Lifetime1 == 248) {
                 aa.a(hf.a((byte) -64), false);
-                NodeHashTableIterator.field_a = pg.field_eb;
+                NodeHashTableIterator.field_a = StandardContentDialog.field_eb;
                 IntrusiveDeque.c(-2290);
                 ta.field_u = false;
                 stackIn_33_0 = var9Lifetime1;
@@ -317,7 +317,7 @@ final class gk {
         RuntimeException var5 = null;
         long var6 = 0L;
         PcmSample var8 = null;
-        ad var9 = null;
+        VorbisSample var9 = null;
         PcmSample stackIn_2_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_11_0 = null;
@@ -341,16 +341,16 @@ final class gk {
             stackIn_6_0 = null;
             return (PcmSample) (stackIn_6_0);
           }
-          var9 = (ad) (this.field_e.a(var6, param3 ^ -125));
+          var9 = (VorbisSample) (this.field_e.a(var6, param3 ^ -125));
           if (var9 == null) {
-            var9 = ad.a(this.field_d, param1, param0);
+            var9 = VorbisSample.load(this.field_d, param1, param0);
             if (var9 == null) {
               stackIn_11_0 = null;
               return (PcmSample) (stackIn_11_0);
             }
             this.field_e.a(var9, var6, param3 + 0);
           }
-          var8Lifetime1 = var9.a(param2);
+          var8Lifetime1 = var9.decodeToPcm(param2);
           if (var8Lifetime1 == null) {
             return null;
           }

@@ -39,7 +39,7 @@ final class pf {
             return null;
           }
           if (param5 == 0) {
-            var10 = nd.a(true, param3);
+            var10 = ProgressDialog.a(true, param3);
             var6 = var10;
             if (var6 == null) {
               stackIn_7_0 = null;
@@ -371,7 +371,7 @@ final class pf {
             }
           }
           ProxyAuthenticationRequiredException.field_d = bk.field_a.field_m * (id.field_c + ge.field_h << 1);
-          bm.field_K = DiskCacheWorker.field_b + (var3_intLifetime1 - (var3_intLifetime1 >> 1));
+          DialogMessagePane.field_K = DiskCacheWorker.field_b + (var3_intLifetime1 - (var3_intLifetime1 >> 1));
           MidiPcmStream.field_M = -(var3_intLifetime1 >> 1) + DiskCacheWorker.field_b;
           for (var4Lifetime2 = 0; var4Lifetime2 < fb.field_d.length; var4Lifetime2++) {
             stackIn_115_0 = ProxyAuthenticationRequiredException.field_d;
@@ -382,10 +382,10 @@ final class pf {
             }
             ProxyAuthenticationRequiredException.field_d = stackIn_115_0 + stackIn_116_1;
           }
-          rb.field_H = IntrusiveDeque.field_f - (ProxyAuthenticationRequiredException.field_d >> 1);
+          GuestPlayConfirmationForm.field_H = IntrusiveDeque.field_f - (ProxyAuthenticationRequiredException.field_d >> 1);
           vh.field_j = new int[fb.field_d.length][];
           var4Lifetime3 = 0;
-          var5Lifetime3 = rb.field_H;
+          var5Lifetime3 = GuestPlayConfirmationForm.field_H;
           while (fb.field_d.length > var4Lifetime3) {
             var6Lifetime1 = m.field_c[var4Lifetime3];
             if (var6Lifetime1 >= 0) {

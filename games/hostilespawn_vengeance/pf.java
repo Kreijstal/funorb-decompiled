@@ -101,13 +101,13 @@ final class pf {
           if (!param1) {
             return;
           }
-          if (me.field_ib.length <= var4_int) {
-            var4_int = -1 + me.field_ib.length;
+          if (ContentTransitionDialog.field_ib.length <= var4_int) {
+            var4_int = -1 + ContentTransitionDialog.field_ib.length;
           }
           if (!CrossfadingMidiPcmStream.field_t) {
-            me.field_ib[var4_int].a(true, 128, (int)param2.field_c, param3, param0);
+            ContentTransitionDialog.field_ib[var4_int].a(true, 128, (int)param2.field_c, param3, param0);
           } else {
-            ByteStorage.a(param3, 128, param0, 22173, me.field_ib[var4_int], (int)param2.field_c);
+            ByteStorage.a(param3, 128, param0, 22173, ContentTransitionDialog.field_ib[var4_int], (int)param2.field_c);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

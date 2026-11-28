@@ -35,8 +35,8 @@ final class oh {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != lg.field_b) {
-            lg.field_b.field_z.setNameSuggestions((byte) -124, param1);
+          if (null != FullscreenNoticeType.field_b) {
+            FullscreenNoticeType.field_b.field_z.setNameSuggestions((byte) -124, param1);
           }
           if (null != il.field_b) {
             il.field_b.field_C.setNameSuggestions((byte) -112, param1);
@@ -81,7 +81,7 @@ final class oh {
     }
 
     final static void b(boolean param0) {
-        TextLayout.field_c.a(10768, new k());
+        TextLayout.field_c.replaceContent(10768, new GuestPlayConfirmationForm());
         if (!param0) {
           oh.a(true);
         }

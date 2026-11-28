@@ -280,7 +280,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements WidgetContainerM
 
     final void setBounds(boolean param0, int param1, int param2, int param3, int param4) {
         super.setBounds(param0, param1, param2, param3, param4);
-        this.b(!param0 ? true : false);
+        this.layoutChildren(!param0 ? true : false);
     }
 
     public static void clearStaticReferences(int param0) {
@@ -705,7 +705,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements WidgetContainerM
         }
     }
 
-    abstract void b(boolean param0);
+    abstract void layoutChildren(boolean param0);
 
     final void pointerReleased(UiWidget param0, byte param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;

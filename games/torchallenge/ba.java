@@ -271,7 +271,7 @@ final class ba {
     final static void c(byte param0) {
         t.field_b.closeAllDialogs(param0 + 8389890);
         if (oa.field_k == null) {
-          oa.field_k = new pe(t.field_b, jh.field_a);
+          oa.field_k = new ProgressDialog(t.field_b, jh.field_a);
         }
         t.field_b.showDialog((byte) 53, (UiComponent) (oa.field_k));
         if (param0 != 15) {

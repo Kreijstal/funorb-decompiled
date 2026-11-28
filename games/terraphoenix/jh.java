@@ -33,7 +33,7 @@ final class jh extends IntrusiveNode {
           String var2 = (String) null;
           jh.a((byte) 14, (String) null);
         }
-        na.a(true, oe.field_a, 89, cg.field_H);
+        ProgressDialog.a(true, oe.field_a, 89, GuestPlayConfirmationForm.field_H);
         ok.field_h = true;
     }
 

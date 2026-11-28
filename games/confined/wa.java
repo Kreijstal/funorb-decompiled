@@ -28,7 +28,7 @@ final class wa {
             wa.a(-119);
           }
           for (var2_int = 0; mc.field_c > var2_int; var2_int++) {
-            sj.field_rb[param0 + var2_int] = var2_int;
+            ContentTransitionDialog.field_rb[param0 + var2_int] = var2_int;
           }
           PcmOutputWorker.a(param0, ResourceArchive.field_f, ka.field_P, mc.field_c + param0, (byte) 92, param0 + param0, false);
           if (mc.field_c <= param0) {

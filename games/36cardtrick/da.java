@@ -96,7 +96,7 @@ final class da {
         RuntimeException var5 = null;
         long var6 = 0L;
         PcmSample var8 = null;
-        ig var9 = null;
+        VorbisSample var9 = null;
         PcmSample stackIn_3_0 = null;
         Object stackIn_13_0 = null;
         PcmSample stackIn_19_0 = null;
@@ -118,19 +118,19 @@ final class da {
             param1[0] <= 0) {
             return null;
           }
-          var9 = (ig) (this.field_a.a(false, var6));
+          var9 = (VorbisSample) (this.field_a.a(false, var6));
           if (param0 != 0) {
             field_b = true;
           }
           if (var9 == null) {
-            var9 = ig.a(this.field_e, param3, param2);
+            var9 = VorbisSample.load(this.field_e, param3, param2);
             if (var9 == null) {
               stackIn_13_0 = null;
               return (PcmSample) (stackIn_13_0);
             }
             this.field_a.a(var6, (byte) 124, var9);
           }
-          var8Lifetime1 = var9.a(param1);
+          var8Lifetime1 = var9.decodeToPcm(param1);
           if (var8Lifetime1 == null) {
             return null;
           }

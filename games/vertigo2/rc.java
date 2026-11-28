@@ -91,7 +91,7 @@ final class rc {
             return;
           }
           DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 98, -1, 40, en.field_b, var5);
-          var13.drawParagraph(ue.field_K, 40, var4 * 1 + (130 + var3), 540, 225, 16777215, -1, 0, 0, var13.field_z + var13.field_M);
+          var13.drawParagraph(RegistrationAgreementPane.field_K, 40, var4 * 1 + (130 + var3), 540, 225, 16777215, -1, 0, 0, var13.field_z + var13.field_M);
           DefaultTextWidgetRenderer.field_s.a(15637810, (byte) 109, -1, 40, bq.field_H, var5 + 76);
           var13.drawParagraph(th.field_k, 40, var4 / 2 + var5 + 76, 540, 225, 16777215, -1, 0, 0, var13.field_z + var13.field_M);
           DefaultTextWidgetRenderer.field_s.a(15637810, (byte) 67, -1, 40, AccountNameAvailabilityValidator.field_r, var5 + 156);

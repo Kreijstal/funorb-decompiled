@@ -279,11 +279,11 @@ final class AccountRequestState {
             }
             cc.field_e = stackIn_115_0 + stackIn_116_1;
           }
-          qe.field_E = s.field_c - (cc.field_e >> 1);
+          RegistrationAgreementPane.field_E = s.field_c - (cc.field_e >> 1);
           ud.field_a = new int[me.field_a.length][];
           var4Lifetime3 = 0;
           var6Lifetime1 = 90 / ((61 - param1) / 54);
-          var5Lifetime3 = qe.field_E;
+          var5Lifetime3 = RegistrationAgreementPane.field_E;
           while (var4Lifetime3 < me.field_a.length) {
             var7Lifetime2 = wd.field_d[var4Lifetime3];
             if (var7Lifetime2 >= 0) {
@@ -302,7 +302,7 @@ final class AccountRequestState {
             var4Lifetime3++;
           }
           if (2 != ValidatedTextField.field_R) {
-            TextFieldValidator.field_e.a(-91, af.a(ij.field_e, true, eg.field_b), 0, param2);
+            TextFieldValidator.field_e.a(-91, ProgressMessageDialog.a(ij.field_e, true, eg.field_b), 0, param2);
           } else {
             TextFieldValidator.field_e.a(-88, -1, -1, param2);
           }
@@ -324,7 +324,7 @@ final class AccountRequestState {
 
     final static void a(byte param0, uf param1) {
         try {
-          rk.a(true, param1, false);
+          ProgressDialog.a(true, param1, false);
           int var2_int = 57 % ((param0 + 15) / 39);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "sc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

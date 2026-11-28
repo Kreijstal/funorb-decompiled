@@ -23,7 +23,7 @@ final class lf extends TextureOperator {
         if (param1 < 91) {
           lf.clearStaticReferences((byte) 85);
         }
-        return rh.field_O;
+        return DialogMessagePane.field_O;
     }
 
     public lf() {

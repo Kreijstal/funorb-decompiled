@@ -267,9 +267,9 @@ final class bf {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               dj.a(var15, (byte) 123);
               if (var6_intLifetime1 != 0) {
-                oc.a(var6_intLifetime1, (byte) -59, SecondaryNodeDeque.field_g, cm.field_P, fm.field_g, SectorCacheStore.field_e);
+                oc.a(var6_intLifetime1, (byte) -59, SecondaryNodeDeque.field_g, RegistrationAgreementPane.field_P, fm.field_g, SectorCacheStore.field_e);
               } else {
-                oc.a(var6_intLifetime1, (byte) -66, SecondaryNodeDeque.field_g, cm.field_P, fm.field_g, SectorCacheStore.field_e);
+                oc.a(var6_intLifetime1, (byte) -66, SecondaryNodeDeque.field_g, RegistrationAgreementPane.field_P, fm.field_g, SectorCacheStore.field_e);
               }
             }
             kj.a(var5, 0);

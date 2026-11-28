@@ -325,7 +325,7 @@ class RichTextWidget extends InteractiveWidget {
             stackIn_38_1 = var6;
             stackIn_39_2 = !(var4 < 0);
             var7Lifetime1 = PowerUpPickup.a(stackIn_38_0, stackIn_38_1, stackIn_39_2);
-            var8Lifetime1 = -(var7Lifetime1 >> 1) + ef.field_vb;
+            var8Lifetime1 = -(var7Lifetime1 >> 1) + StandardContentDialog.field_vb;
             if (var4 >= 0) {
               var1_int = var1_int + kb.field_b;
               if (var4 != ij.field_q.field_i) {
@@ -340,7 +340,7 @@ class RichTextWidget extends InteractiveWidget {
               var1_int = var1_int + n.field_d;
             }
             if (var4 < 0) {
-              rn.field_e.drawString(var6, var8Lifetime1, dh.field_Ab + var1_int, var5, -1);
+              rn.field_e.drawString(var6, var8Lifetime1, ProgressMessageDialog.field_Ab + var1_int, var5, -1);
               var1_int = var1_int + wm.field_bb;
             } else {
               dn.field_f.drawString(var6, var8Lifetime1, var1_int + nm.field_z, var5, -1);

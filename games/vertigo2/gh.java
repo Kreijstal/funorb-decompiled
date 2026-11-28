@@ -33,13 +33,13 @@ final class gh {
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (un.field_Lb != null) {
           if (un.field_Lb.d(2)) {
-            ql.i(-109);
+            BirthDateChatEnableForm.i(-109);
             return true;
           }
           if (up.field_z != null &&
             up.field_z.c(false)) {
             up.field_z = null;
-            ql.i(101);
+            BirthDateChatEnableForm.i(101);
             return true;
           }
           if (un.a((byte) -67)) {
@@ -67,7 +67,7 @@ final class gh {
         }
         if (up.field_z.c(false)) {
           up.field_z = null;
-          ql.i(101);
+          BirthDateChatEnableForm.i(101);
           return true;
         }
         if (un.a((byte) -67)) {
@@ -158,7 +158,7 @@ final class gh {
             var21.field_n.a(var22, var23, 12, param1 - 122);
             var24 = un.field_Lb;
             var26 = kb.field_d[2];
-            var25 = sp.field_P;
+            var25 = ResizableModalDialog.field_P;
             var24.field_n.a(var25, var26, 13, -60);
           }
           if (param2 == 2) {

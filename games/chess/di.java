@@ -69,7 +69,7 @@ final class di extends ci {
           var1_int = ak.field_j;
           var2 = 0;
           if (FrameTimer.field_f == 2) {
-            var3_long = -jg.field_M + ud.correctedCurrentTimeMillis(2);
+            var3_long = -BirthDateChatEnableForm.field_M + ud.correctedCurrentTimeMillis(2);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;
@@ -139,7 +139,7 @@ final class di extends ci {
               var1_int = var1_int + kl.field_i;
             }
             if (var4 >= 0) {
-              ce.field_a.drawString(var6, var8Lifetime1, var1_int + rm.field_S, var5, -1);
+              ce.field_a.drawString(var6, var8Lifetime1, var1_int + StripedProgressWidget.field_S, var5, -1);
               var1_int = var1_int + (vh.field_c + kl.field_i + MouseWheelInput.field_b);
             } else {
               AwtRasterBuffer.field_d.drawString(var6, var8Lifetime1, var1_int + b.field_d, var5, -1);
@@ -232,10 +232,10 @@ final class di extends ci {
                 oj.a(var6, (byte) -99, 1, param3);
               }
               var8 = (String) null;
-              IsaacCipher.a(9822, vk.field_g, ij.field_c, param1, var5, (String) null);
-              BufferedSocket.a(ij.field_c, vk.field_g, (byte) -54, var5, TextHotspotBounds.field_p);
+              IsaacCipher.a(9822, vk.field_g, FullscreenNoticeType.field_c, param1, var5, (String) null);
+              BufferedSocket.a(FullscreenNoticeType.field_c, vk.field_g, (byte) -54, var5, TextHotspotBounds.field_p);
               rc.b(param0 ^ 24);
-              e.h((byte) -120);
+              DialogMessagePane.h((byte) -120);
             }
           }
         }

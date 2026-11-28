@@ -68,8 +68,8 @@ final class un {
           if (param2 != -17596) {
             return false;
           }
-          var4 = uda.field_X[param3] + sc.field_o[param3] + mba.field_a[param3];
-          var5 = sc.field_o[param1] + mba.field_a[param1] + uda.field_X[param1];
+          var4 = ContentTransitionDialog.field_X[param3] + sc.field_o[param3] + mba.field_a[param3];
+          var5 = sc.field_o[param1] + mba.field_a[param1] + ContentTransitionDialog.field_X[param1];
           if (var4 < var5) {
             return true;
           }
@@ -93,8 +93,8 @@ final class un {
         if (param2 != -17596) {
           return false;
         }
-        var4Lifetime1 = uda.field_X[param3] + sc.field_o[param3] + mba.field_a[param3];
-        var5Lifetime1 = sc.field_o[param1] + mba.field_a[param1] + uda.field_X[param1];
+        var4Lifetime1 = ContentTransitionDialog.field_X[param3] + sc.field_o[param3] + mba.field_a[param3];
+        var5Lifetime1 = sc.field_o[param1] + mba.field_a[param1] + ContentTransitionDialog.field_X[param1];
         if (var4Lifetime1 < var5Lifetime1) {
           return true;
         }

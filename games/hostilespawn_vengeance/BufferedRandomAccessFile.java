@@ -322,7 +322,7 @@ final class BufferedRandomAccessFile {
         if (p.field_a != null) {
           return p.field_a;
         }
-        return (java.applet.Applet) ((Object) te.field_E);
+        return (java.applet.Applet) ((Object) RegistrationAgreementPane.field_E);
     }
 
     final static void a(int param0, oj param1) {

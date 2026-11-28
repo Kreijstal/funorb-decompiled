@@ -145,7 +145,7 @@ final class Js5ArchiveManager {
     }
 
     final static void performAction1102(int integerArgument1) {
-        UiComponentPart033.performAction1819(114);
+        AccountCreationResultPanel.performAction1819(114);
         if (integerArgument1 != -5) {
           byteArrayState0017 = (byte[]) null;
         }

@@ -91,7 +91,7 @@ final class rg {
               } else {
                 param0 = al.field_d;
               }
-              mk.field_b.a(jd.field_G, (byte) 61);
+              mk.field_b.a(DialogMessagePane.field_G, (byte) 61);
             }
             var3_int = 1;
             if (param1 == 10) {
@@ -102,10 +102,10 @@ final class rg {
               if (qd.field_q) {
                 param0 = AgeValidator.a(new String[]{param0}, am.field_a, param2 + 260);
               }
-              if (ud.field_U) {
+              if (ContentTransitionDialog.field_U) {
                 param0 = SecondaryNodeDeque.field_a;
               }
-              SectorCacheStore.field_a.a(param1, 1833, param0);
+              SectorCacheStore.field_a.showResult(param1, 1833, param0);
             }
             if (param1 != 256 &&
               param1 != 10) {

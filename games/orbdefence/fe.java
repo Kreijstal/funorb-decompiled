@@ -24,7 +24,7 @@ final class fe {
           gj.field_g = param3;
           DualLinkDequeIterator.field_b = param1;
           mj.field_f = param4;
-          gg.field_N = param0;
+          FullscreenStatusDialog.field_N = param0;
           lc.field_v = param2;
           if (param5 > -36) {
             fe.clearStaticReferences((byte) 54);
@@ -44,7 +44,7 @@ final class fe {
           var1 = AlphaWidgetContainer.l(-112);
         }
         if (var1.length() == 0) {
-          var1 = ec.field_F;
+          var1 = DialogMessagePane.field_F;
         }
         return var1;
     }

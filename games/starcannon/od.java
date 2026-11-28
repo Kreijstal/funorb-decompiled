@@ -56,7 +56,7 @@ class od extends hh {
           }
           var5_int = param1.getGroupIdByName(param0, false);
           var6 = param1.getFileIdByName(param2, true, var5_int);
-          stackIn_3_0 = jj.a(var5_int, param1, var6, (byte) -124, param4);
+          stackIn_3_0 = RegistrationAgreementPane.a(var5_int, param1, var6, (byte) -124, param4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -129,7 +129,7 @@ class od extends hh {
               return;
             }
             stackIn_59_0 = (u.field_d > 0) ? 0 : 7;
-            lf.field_cb = stackIn_59_0;
+            ProgressDialog.field_cb = stackIn_59_0;
           } else {
             cd.field_c = 25;
             if (StarCannon.field_z == 7) {
@@ -142,7 +142,7 @@ class od extends hh {
               return;
             }
             stackIn_45_0 = (u.field_d > 0) ? 0 : 7;
-            lf.field_cb = stackIn_45_0;
+            ProgressDialog.field_cb = stackIn_45_0;
           }
         } else {
           field_i = -12;
@@ -159,7 +159,7 @@ class od extends hh {
               return;
             }
             stackIn_14_0 = (u.field_d > 0) ? 0 : 7;
-            lf.field_cb = stackIn_14_0;
+            ProgressDialog.field_cb = stackIn_14_0;
           } else {
             cd.field_c = 25;
             if (StarCannon.field_z == 7) {
@@ -172,10 +172,10 @@ class od extends hh {
               return;
             }
             stackIn_29_0 = (u.field_d > 0) ? 0 : 7;
-            lf.field_cb = stackIn_29_0;
+            ProgressDialog.field_cb = stackIn_29_0;
           }
         }
-        if (7 != lf.field_cb) {
+        if (7 != ProgressDialog.field_cb) {
           return;
         }
         DirectByteStorage.a(0, true);

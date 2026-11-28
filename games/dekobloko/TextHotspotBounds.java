@@ -5,7 +5,7 @@ final class TextHotspotBounds extends HashNode {
     int integerState0583;
     int integerState0584;
     static int integerState0585;
-    static UiComponentPart026 uiComponentPart026State0001;
+    static ProgressDialog uiComponentPart026State0001;
     int integerState0586;
     TextHotspotBounds networkSupport010State0001;
     static RawSound rawSoundState0017;

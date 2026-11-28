@@ -97,19 +97,19 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           throw new IllegalStateException();
         }
         if (null != Crc32Table.field_a) {
-          Crc32Table.field_a.s(2);
+          Crc32Table.field_a.closeDialog(2);
         }
         String var1 = hh.b((byte) 23);
         i.field_a = new LoginPanel(var1, (String) null, true, false, false);
         sd.field_c.showDialog(vb.field_h, (byte) -71);
         if (param0 == -9145) {
-          vb.field_h.c(i.field_a, (byte) 33);
-          vb.field_h.q(0);
+          vb.field_h.replaceContent(i.field_a, (byte) 33);
+          vb.field_h.finishResize(0);
           return;
         }
         field_c = (String) null;
-        vb.field_h.c(i.field_a, (byte) 33);
-        vb.field_h.q(0);
+        vb.field_h.replaceContent(i.field_a, (byte) 33);
+        vb.field_h.finishResize(0);
     }
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {

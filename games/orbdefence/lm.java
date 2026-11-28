@@ -105,7 +105,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_unable");
                 if (var2 != null) {
-                  ob.field_C = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  RegistrationAgreementPane.field_C = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_ineligible");
                 if (null != var2) {
@@ -1033,7 +1033,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 + 15020, "cancel");
                 if (var2 != null) {
-                  ob.field_D = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  RegistrationAgreementPane.field_D = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 ^ 15188, "pleaselogintoplay");
                 if (var2 != null) {
@@ -1526,7 +1526,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "login_create_tooltip");
                 if (var2 != null) {
-                  ec.field_J = ProxyAuthenticationRequiredException.a(var2, param0 - 12581);
+                  DialogMessagePane.field_J = ProxyAuthenticationRequiredException.a(var2, param0 - 12581);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "login_justplay_tooltip");
                 if (null != var2) {
@@ -1634,7 +1634,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 + 15020, "create_alert_passchars");
                 if (null != var2) {
-                  ec.field_H = ProxyAuthenticationRequiredException.a(var2, param0 - 12581);
+                  DialogMessagePane.field_H = ProxyAuthenticationRequiredException.a(var2, param0 - 12581);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_alert_passrepeated");
                 if (null != var2) {
@@ -2720,7 +2720,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "fs_unavailable_try_signed_applet");
                 if (var2 != null) {
-                  dg.field_C = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  StripedProgressWidget.field_C = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "fs_focus");
                 if (var2 != null) {
@@ -2808,11 +2808,11 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 + 15020, "rating_mode_long_name,0");
                 if (var2 != null) {
-                  ej.field_J[0] = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  ResizableModalDialog.field_J[0] = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "rating_mode_long_name,1");
                 if (var2 != null) {
-                  ej.field_J[1] = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  ResizableModalDialog.field_J[1] = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "graphics_config_fixed_size");
                 if (var2 != null) {
@@ -2868,7 +2868,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "DEFAULT_PLAYER_NAME");
                 if (var2 != null) {
-                  ec.field_F = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  DialogMessagePane.field_F = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "mustlogin1");
                 if (null != var2) {
@@ -3101,13 +3101,13 @@ final class lm {
         RuntimeException decompiledCaughtException = null;
         var7 = OrbDefence.field_D ? 1 : 0;
         try {
-          var1 = new RgbSprite[ec.field_K];
+          var1 = new RgbSprite[DialogMessagePane.field_K];
           var2 = 0;
           if (param0 >= -97) {
             field_f = (BitmapFont) null;
           }
           scanLoop1: while (true) {
-            if (ec.field_K > var2) {
+            if (DialogMessagePane.field_K > var2) {
               var3 = wh.field_b[var2] * m.field_a[var2];
               var4 = fl.field_a[var2];
               var5 = new int[var3];

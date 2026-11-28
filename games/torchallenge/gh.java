@@ -42,7 +42,7 @@ final class gh extends IntrusiveNode {
         try {
           ae.field_C = param2;
           hl.field_e = true;
-          IntrusiveNode.field_c = new wa(t.field_b, dl.field_H, param1, eb.field_m, ae.field_C);
+          IntrusiveNode.field_c = new ProgressMessageDialog(t.field_b, dl.field_H, param1, eb.field_m, ae.field_C);
           t.field_b.showDialog((byte) 73, (UiComponent) (IntrusiveNode.field_c));
           if (param0 != -116) {
             field_y = (String) null;

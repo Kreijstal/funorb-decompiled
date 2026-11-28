@@ -29,7 +29,7 @@ final class ModalDialogHost extends SingleChildWidgetContainer {
         java.awt.Canvas var5 = null;
         var4 = Transmogrify.field_A ? 1 : 0;
         try {
-          if (bi.field_L >= 10) {
+          if (ResizableModalDialog.field_L >= 10) {
             if (!ki.b(true)) {
               SoftwareRasterizer.clearRaster();
               ub.a(320, 240, (byte) 116);
@@ -48,7 +48,7 @@ final class ModalDialogHost extends SingleChildWidgetContainer {
               kb.field_l = false;
               var3_int = 1;
             }
-            jk.a(BufferedSocket.field_a, (byte) -119, be.b(71), mh.b(100), var3_int != 0);
+            GuestPlayConfirmationForm.a(BufferedSocket.field_a, (byte) -119, be.b(71), mh.b(100), var3_int != 0);
           }
           if (param1 <= 63) {
             var5 = (java.awt.Canvas) null;

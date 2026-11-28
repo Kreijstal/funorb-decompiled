@@ -49,7 +49,7 @@ final class qk extends wh {
         int[] var5 = var13[1];
         int[] var6 = var13[2];
         int var7 = param1 % this.field_C * this.field_C;
-        for (var8 = 0; we.field_M > var8; var8++) {
+        for (var8 = 0; StripedProgressWidget.field_M > var8; var8++) {
           var9 = this.field_y[var7 + var8 % this.field_z];
           var6[var8] = b.a(var9, 255) << 4;
           var5[var8] = b.a(65280, var9) >> 4;

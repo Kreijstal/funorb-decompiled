@@ -41,7 +41,7 @@ final class ke extends IntrusiveNode {
             qi.a(param0, 0, 0, -25971);
             return;
           }
-          if (mh.field_U != 0) {
+          if (ContentTransitionDialog.field_U != 0) {
             i.a(param0, 0);
             return;
           }

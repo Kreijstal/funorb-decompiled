@@ -49,7 +49,7 @@ final class td {
           var8 = new AccountCreationResultPanel(lg.field_w, param4);
           lg.field_w.showDialog(var8, -1);
           if (AccountRegistrationPanel.i((byte) -125)) {
-            var8.r(102);
+            var8.showAccountCreationConnectionFailure(102);
             return true;
           }
           field_d = param0;

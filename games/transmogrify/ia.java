@@ -162,7 +162,7 @@ final class ia extends IntrusiveNode {
           DirectByteStorage.field_j = DirectByteStorage.field_j + 1;
           gh.field_l = gh.field_l + 1;
           SecondaryNodeDeque.field_g = eh.totalScore;
-          nc.field_t = nc.field_t + jk.field_B;
+          nc.field_t = nc.field_t + GuestPlayConfirmationForm.field_B;
           EmailFormatValidator.field_n = EmailFormatValidator.field_n + 1;
           hg.a(95);
           if (CrossfadingMidiPcmStream.field_u.beginForward((byte) -95) != null) {
@@ -505,8 +505,8 @@ final class ia extends IntrusiveNode {
           }
           if (ve.field_B[1] &&
             ConfirmedEmailAvailabilityValidator.field_j >= 2) {
-            stackIn_205_0 = !(ll.field_S);
-            ll.field_S = stackIn_205_0;
+            stackIn_205_0 = !(FullscreenStatusDialog.field_S);
+            FullscreenStatusDialog.field_S = stackIn_205_0;
           }
           if (ve.field_B[12]) {
             SessionGameApplet.field_l = 0;
@@ -514,12 +514,12 @@ final class ia extends IntrusiveNode {
           scanLoop5: while (true) {
             if (!pc.b(-122)) {
               if (WordDictionary.field_e) {
-                a.field_S.a(-127, kk.a(336, TextLineMetrics.field_b, nk.field_c), kk.a(336, PacketBuffer.field_j, bk.field_a));
-                if (a.field_S.f(-9112)) {
-                  if (0 == a.field_S.field_d) {
+                ContentTransitionDialog.field_S.a(-127, kk.a(336, TextLineMetrics.field_b, nk.field_c), kk.a(336, PacketBuffer.field_j, bk.field_a));
+                if (ContentTransitionDialog.field_S.f(-9112)) {
+                  if (0 == ContentTransitionDialog.field_S.field_d) {
                     dc.submitWord(-22991, true);
                   }
-                  if (a.field_S.field_d == 1) {
+                  if (ContentTransitionDialog.field_S.field_d == 1) {
                     WordDictionary.field_e = false;
                   }
                 }
@@ -638,7 +638,7 @@ final class ia extends IntrusiveNode {
             qf.field_e = qf.field_e ^ 1 << eh.totalScore;
             bc.field_b = bc.field_b ^ 1 << eh.totalScore;
             ud.field_b = ud.field_b - gh.field_l;
-            jk.field_B = jk.field_B - 1;
+            GuestPlayConfirmationForm.field_B = GuestPlayConfirmationForm.field_B - 1;
             if (ch.field_d == 13) {
               if (WordDictionary.field_e) {
                 WordDictionary.field_e = false;
@@ -656,14 +656,14 @@ final class ia extends IntrusiveNode {
               continue;
             }
             if (WordDictionary.field_e) {
-              a.field_S.b(false);
-              if (!a.field_S.f(-9112)) {
+              ContentTransitionDialog.field_S.b(false);
+              if (!ContentTransitionDialog.field_S.f(-9112)) {
                 continue;
               }
-              if (0 == a.field_S.field_d) {
+              if (0 == ContentTransitionDialog.field_S.field_d) {
                 dc.submitWord(-22991, false);
               }
-              if (1 != a.field_S.field_d) {
+              if (1 != ContentTransitionDialog.field_S.field_d) {
                 continue;
               }
               WordDictionary.field_e = false;

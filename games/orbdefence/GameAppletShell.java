@@ -150,7 +150,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     (var2.startsWith("1.6.0_"))) {
                     var3 = 6;
                     while (var3 < var2.length()) {
-                      stackIn_68_0 = hm.a(-20625, var2.charAt(var3));
+                      stackIn_68_0 = GuestPlayConfirmationForm.a(-20625, var2.charAt(var3));
                       if (var5 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;
@@ -567,8 +567,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           try {
             try {
               if (aj.field_b != null) {
-                dh.field_Z = dh.field_Z + 1;
-                if (3 <= dh.field_Z) {
+                ProgressMessageDialog.field_Z = ProgressMessageDialog.field_Z + 1;
+                if (3 <= ProgressMessageDialog.field_Z) {
                   this.a(100, "alreadyloaded");
                   return;
                 }

@@ -484,7 +484,7 @@ final class TutorialController {
         } else {
           SoftwareRasterizer.clearRaster();
         }
-        oi.a(-22417, param2);
+        DialogMessagePane.a(-22417, param2);
         if (param1 != 0) {
           TutorialController.a(30, -91);
         }

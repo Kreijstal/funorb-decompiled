@@ -554,7 +554,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         if (!BufferedSocket.field_a) {
           return;
         }
-        ql.field_L.a(0, param0);
+        BirthDateChatEnableForm.field_L.a(0, param0);
         var4 = TextureOperator.field_n.l(0) ? 1 : 0;
         if (param1 != ~kf.field_c &&
           var4 == 0) {
@@ -565,16 +565,16 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
           TextureOperator.field_n.a(param2, 538, param3);
         }
         if (var4 != 0) {
-          ql.field_L.a(0, param0);
+          BirthDateChatEnableForm.field_L.a(0, param0);
         }
         var5 = TextureOperator.field_n.k(12282) + TextureOperator.field_n.field_ob;
         if (var5 <= 640) {
           if (635 > var5 &&
-            !(0 >= gr.field_Y)) {
-            gr.field_Y = gr.field_Y - 5;
+            !(0 >= FullscreenStatusDialog.field_Y)) {
+            FullscreenStatusDialog.field_Y = FullscreenStatusDialog.field_Y - 5;
           }
         } else {
-          gr.field_Y = gr.field_Y + 5;
+          FullscreenStatusDialog.field_Y = FullscreenStatusDialog.field_Y + 5;
         }
     }
 

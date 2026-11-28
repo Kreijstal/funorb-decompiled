@@ -1,0 +1,165 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class DialogMessagePane extends DequeWidgetContainer implements ButtonListener {
+    private ProgressMessageDialog field_D;
+    private int[] field_C;
+    private String field_H;
+    static String field_E;
+    private int field_I;
+    private BitmapFont field_F;
+    private ButtonWidget[] field_G;
+
+    private final void growActions(int param0, int param1) {
+        int var6 = 0;
+        int var7 = TrackController.field_F ? 1 : 0;
+        if (this.field_I >= param0) {
+          return;
+        }
+        ButtonWidget[] var8 = new ButtonWidget[param0];
+        ButtonWidget[] var3 = var8;
+        int[] var4 = new int[param0];
+        int var5 = -100 / ((param1 - 86) / 32);
+        for (var6 = 0; this.field_I > var6; var6++) {
+          var8[var6] = this.field_G[var6];
+          var4[var6] = this.field_C[var6];
+        }
+        this.field_G = var3;
+        this.field_C = var4;
+        this.field_I = param0;
+    }
+
+    public static void clearStaticReferences(int param0) {
+        field_E = null;
+        if (param0 <= 111) {
+          field_E = (String) null;
+        }
+    }
+
+    public final void onWidgetActivated(ButtonWidget param0, int param1, int param2, int param3, int param4) {
+        int var6_int = 0;
+        int var7 = 0;
+        int var8 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
+        var8 = TrackController.field_F ? 1 : 0;
+        try {
+          if (param4 != -27322) {
+            this.field_C = (int[]) null;
+          }
+          for (var6_int = 0; var6_int < this.field_I; var6_int++) {
+            if (this.field_G[var6_int] != param0) {
+              continue;
+            }
+            var7 = this.field_C[var6_int];
+            if (-1 != var7) {
+              ProxySocketConnector.b(this.field_C[var6_int], (byte) -42);
+            } else {
+              this.field_D.closeDialog(20252);
+            }
+            break;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_13_0 = var6;
+          stackIn_13_1 = new StringBuilder().append("lc.A(");
+          if (param0 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+        }
+    }
+
+    final void drawWidget(int param0, int param1, int param2, int param3) {
+        super.drawWidget(param0, param1, param2, param3);
+        this.field_F.drawParagraph(this.field_H, 14 + param1 + this.field_p, param2 + this.field_m + 10, this.field_x - 28, this.field_u, 16777215, -1, 0, 0, this.field_F.field_G);
+    }
+
+    final ButtonWidget addListenerButton(int param0, WidgetEventListener param1, String param2) {
+        ButtonWidget var4 = null;
+        RuntimeException var4_ref = null;
+        int var5 = 0;
+        ButtonWidget stackIn_1_0 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        String stackIn_5_2 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var4 = new ButtonWidget(param2, param1);
+          var4.field_y = (WidgetRenderer) ((Object) new dc());
+          var5 = this.field_u - 2;
+          this.setBounds(34 + this.field_u, -3050, 0, this.field_x, 0);
+          var4.setBounds(30, -3050, var5, param0 + this.field_x, 7);
+          this.addChild(false, var4);
+          stackIn_1_0 = var4;
+          return stackIn_1_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4_ref = decompiledCaughtException;
+          stackIn_4_0 = var4_ref;
+          stackIn_4_1 = new StringBuilder().append("lc.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
+          }
+          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
+          if (param2 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+        }
+    }
+
+    final static int[] b(boolean param0) {
+        if (param0) {
+          DialogMessagePane.b(true);
+        }
+        return new int[8];
+    }
+
+    final void addActionButton(int param0, String param1, int param2) {
+        int var4_int = 0;
+        try {
+          var4_int = this.field_I;
+          if (param0 != -17040) {
+            field_E = (String) null;
+          }
+          this.growActions(var4_int + 1, 120);
+          this.field_G[var4_int] = this.addListenerButton(-14, (WidgetEventListener) (this), param1);
+          this.field_C[var4_int] = param2;
+        } catch (RuntimeException runtimeException) {
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "lc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+        }
+    }
+
+    DialogMessagePane(ProgressMessageDialog param0, BitmapFont param1, String param2) {
+        super(0, 0, 288, 0, (WidgetRenderer) null);
+        int var4_int = 0;
+        this.field_I = 0;
+        try {
+          this.field_F = param1;
+          this.field_D = param0;
+          this.field_H = param2;
+          var4_int = null == this.field_H ? 0 : this.field_F.textHeight(this.field_H, 260, this.field_F.field_G);
+          this.setBounds(22 + var4_int, -3050, 0, 288, 0);
+        } catch (RuntimeException runtimeException) {
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "lc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_E = "Warning: if you quit, you will lose any game you are in the middle of!";
+    }
+}

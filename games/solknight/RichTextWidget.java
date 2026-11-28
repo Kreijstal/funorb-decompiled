@@ -165,7 +165,7 @@ class RichTextWidget extends InteractiveWidget {
           var7 = var5.getTextOriginX(param2, (UiWidget) (this), 0);
           var8 = var5.getTextOriginY((UiWidget) (this), false, param0);
           do {
-            ci.a(2 + var6.field_m, -2 + var6.field_n + var8, 2 + var6.field_i, -2 + var6.field_o + var7, (byte) 123);
+            ProgressMessageDialog.a(2 + var6.field_m, -2 + var6.field_n + var8, 2 + var6.field_i, -2 + var6.field_o + var7, (byte) 123);
             var6 = var6.field_k;
           } while (var6 != null);
         }

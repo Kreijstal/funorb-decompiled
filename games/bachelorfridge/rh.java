@@ -103,9 +103,9 @@ final class rh {
           if (saa.field_b > FishRainSpecial.field_t) {
             FishRainSpecial.field_t = FishRainSpecial.field_t + 1;
           }
-          if (hga.field_U.field_f != pda.field_p) {
-            fs.field_f = fs.field_f + (hga.field_U.field_f - pda.field_p);
-            pda.field_p = hga.field_U.field_f;
+          if (ProgressDialog.field_U.field_f != pda.field_p) {
+            fs.field_f = fs.field_f + (ProgressDialog.field_U.field_f - pda.field_p);
+            pda.field_p = ProgressDialog.field_U.field_f;
           }
           if (FishRainSpecial.field_t <= 0) {
             return;
@@ -163,26 +163,26 @@ final class rh {
           if (AttackUpAllAnimation.e(-29919)) {
             throw new IllegalStateException();
           }
-          sja.field_fb.writeCipheredByte(80, (byte) 107);
+          StandardContentDialog.field_fb.writeCipheredByte(80, (byte) 107);
           if (param0) {
             field_a = (String) null;
           }
-          sja.field_fb.position = sja.field_fb.position + 2;
-          var2_int = sja.field_fb.position;
-          sja.field_fb.position = sja.field_fb.position + 1;
+          StandardContentDialog.field_fb.position = StandardContentDialog.field_fb.position + 2;
+          var2_int = StandardContentDialog.field_fb.position;
+          StandardContentDialog.field_fb.position = StandardContentDialog.field_fb.position + 1;
           var3 = 0;
           var4 = (kha) (param1.beginForward((byte) 90));
           while (var4 != null) {
-            sja.field_fb.writeByte(var4.field_h, 0);
+            StandardContentDialog.field_fb.writeByte(var4.field_h, 0);
             var3++;
-            sja.field_fb.writeByte(var4.field_g, 0);
+            StandardContentDialog.field_fb.writeByte(var4.field_g, 0);
             var4 = (kha) (param1.nextForward(0));
           }
-          var5 = sja.field_fb.position;
-          sja.field_fb.position = var2_int;
-          sja.field_fb.writeByte(var3, 0);
-          sja.field_fb.position = var5;
-          sja.field_fb.writeLengthShort((byte) -88, -var2_int + sja.field_fb.position);
+          var5 = StandardContentDialog.field_fb.position;
+          StandardContentDialog.field_fb.position = var2_int;
+          StandardContentDialog.field_fb.writeByte(var3, 0);
+          StandardContentDialog.field_fb.position = var5;
+          StandardContentDialog.field_fb.writeLengthShort((byte) -88, -var2_int + StandardContentDialog.field_fb.position);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "rh.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

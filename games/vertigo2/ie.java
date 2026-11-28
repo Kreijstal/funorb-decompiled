@@ -364,8 +364,8 @@ final class ie extends UiPanel {
           return;
         }
         e.a(param1, (byte) -128);
-        if (null != ko.field_S) {
-          WidgetWrapper.a(ko.field_S, false);
+        if (null != NumericDateInputWidget.field_S) {
+          WidgetWrapper.a(NumericDateInputWidget.field_S, false);
         }
     }
 

@@ -142,19 +142,19 @@ final class AdminCheatOverlay {
               } else {
                 if (4 != var5) {
                   if (var5 == 5) {
-                    FrameTimer.field_f.drawCentred(oi.field_M[0], 320, 468, 13881286, -1);
+                    FrameTimer.field_f.drawCentred(DialogMessagePane.field_M[0], 320, 468, 13881286, -1);
                     param2 = 76;
                     param0 = 320;
                     param0 = 64;
                     param2 += 64;
                     rh.field_b[5].draw(32, param2 - 16);
-                    sj.a(16777215, 20, param2, 608, 14, param0, oi.field_M[1], 0);
+                    sj.a(16777215, 20, param2, 608, 14, param0, DialogMessagePane.field_M[1], 0);
                     param2 += 64;
                     rh.field_b[7].draw(32, -16 + param2);
-                    sj.a(16777215, 20, param2, 608, 14, param0, oi.field_M[2], 0);
+                    sj.a(16777215, 20, param2, 608, 14, param0, DialogMessagePane.field_M[2], 0);
                     param2 += 64;
                     rh.field_b[8].draw(32, param2 - 16);
-                    sj.a(16777215, param1 + 20, param2, 608, 14, param0, oi.field_M[3], 0);
+                    sj.a(16777215, param1 + 20, param2, 608, 14, param0, DialogMessagePane.field_M[3], 0);
                   } else {
                     if (var5 != 6) {
                       if (7 != var5) {

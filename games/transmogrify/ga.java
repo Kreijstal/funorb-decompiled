@@ -64,7 +64,7 @@ final class ga {
           }
           var2 = InteractiveWidget.a(true, "jagex-last-login-method", param1);
           if (var2 == null) {
-            stackIn_7_0 = qe.field_x;
+            stackIn_7_0 = StripedProgressWidget.field_x;
             return stackIn_7_0;
           }
           var3 = hd.b((byte) 87);
@@ -75,7 +75,7 @@ final class ga {
               return stackIn_13_0;
             }
           }
-          stackIn_16_0 = qe.field_x;
+          stackIn_16_0 = StripedProgressWidget.field_x;
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

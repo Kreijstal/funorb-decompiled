@@ -11,19 +11,19 @@ final class DropTargetWidgetContainer extends ComponentDecorator {
         DraggableWidgetContainer uiComponentPart029Local1 = null;
         try {
           super.pointerReleased(integerArgument1, integerArgument2, integerArgument3, uiComponentArgument4, integerArgument5, integerArgument6);
-          uiComponentPart029Local1 = UiComponentPart017.uiComponentPart029State0001;
+          uiComponentPart029Local1 = GuestPlayConfirmationForm.uiComponentPart029State0001;
           if (uiComponentPart029Local1 != null) {
             if (!this.containsPointer(integerArgument6, (byte) -58, integerArgument5, integerArgument1, integerArgument3)) {
               return;
             }
             if (this.callbackContract006State0001 instanceof WidgetDropListener) {
               ((WidgetDropListener) (this.callbackContract006State0001)).widgetDropped(uiComponentPart029Local1, this, (byte) -128);
-              UiComponentPart017.uiComponentPart029State0001 = null;
+              GuestPlayConfirmationForm.uiComponentPart029State0001 = null;
               return;
             }
             if (uiComponentPart029Local1.callbackContract006State0001 instanceof WidgetDropListener) {
               ((WidgetDropListener) (uiComponentPart029Local1.callbackContract006State0001)).widgetDropped(uiComponentPart029Local1, this, (byte) -128);
-              UiComponentPart017.uiComponentPart029State0001 = null;
+              GuestPlayConfirmationForm.uiComponentPart029State0001 = null;
               return;
             }
           }

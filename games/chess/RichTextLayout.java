@@ -343,7 +343,7 @@ final class RichTextLayout extends TextLayout {
 
     final static boolean a(byte param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         if (lk.a((byte) 95)) {
-          ih.a(param4, param2, param3, -1);
+          NumericDateInputWidget.a(param4, param2, param3, -1);
           if (pi.field_d != null &&
             pi.field_d.a(param5, param2, param4, param1, -11)) {
             fi.a(-393711775);

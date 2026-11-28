@@ -198,9 +198,9 @@ final class lha {
         if (0 < FishRainSpecial.field_t) {
           FishRainSpecial.field_t = FishRainSpecial.field_t - 1;
         }
-        if (hga.field_U.field_f != pda.field_p) {
-          fs.field_f = fs.field_f + (hga.field_U.field_f - pda.field_p);
-          pda.field_p = hga.field_U.field_f;
+        if (ProgressDialog.field_U.field_f != pda.field_p) {
+          fs.field_f = fs.field_f + (ProgressDialog.field_U.field_f - pda.field_p);
+          pda.field_p = ProgressDialog.field_U.field_f;
         }
         if (param0 <= 59) {
           field_b = (BitmapFont) null;

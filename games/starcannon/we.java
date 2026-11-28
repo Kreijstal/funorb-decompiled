@@ -23,7 +23,7 @@ final class we extends IntrusiveNode {
           CharSequence var2 = (CharSequence) null;
           we.a((byte) -46, (CharSequence) null, false, -37);
         }
-        return lc.field_hb;
+        return StandardContentDialog.field_hb;
     }
 
     private we() throws Throwable {

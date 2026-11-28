@@ -114,12 +114,12 @@ final class gn {
     }
 
     final static void a(ResourceArchive param0, byte param1) {
-        b var3 = null;
+        VorbisSample var3 = null;
         try {
           int var2_int = 86 % ((param1 + 42) / 57);
-          b.a(param0.getFileByName("", 0, "headers.packvorbis"));
-          var3 = b.a(param0, "jagex logo2.packvorbis", "");
-          var3.a();
+          VorbisSample.decodeSetup(param0.getFileByName("", 0, "headers.packvorbis"));
+          var3 = VorbisSample.loadByName(param0, "jagex logo2.packvorbis", "");
+          var3.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "gn.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

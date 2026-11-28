@@ -449,7 +449,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
           wd.field_g = true;
           ud.field_b = param2;
           if (0 == ud.field_b) {
-            var3_int = TextLayout.a(fe.field_a, rk.field_h, pc.field_P, true, vi.field_b);
+            var3_int = TextLayout.a(fe.field_a, rk.field_h, ContentTransitionDialog.field_P, true, vi.field_b);
             var4 = 3 + var3_int;
             gh.field_a = new int[var4];
             BoundedRandomAccessFile.field_k = new String[var4];
@@ -468,7 +468,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
             gh.field_a[-1 + var4] = 1;
             bi.field_B[1] = 5;
           } else if (ud.field_b == 1) {
-            var3_int = TextLayout.a(fe.field_a, rk.field_h, pc.field_P, true, vi.field_b);
+            var3_int = TextLayout.a(fe.field_a, rk.field_h, ContentTransitionDialog.field_P, true, vi.field_b);
             var4 = var3_int + 2;
             BoundedRandomAccessFile.field_k = new String[var4];
             gh.field_a = new int[var4];
@@ -599,7 +599,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
             gh.field_a[1] = 0;
             BoundedRandomAccessFile.field_k[1] = jf.field_p;
             gh.field_a[3] = 1;
-            BoundedRandomAccessFile.field_k[4] = sk.field_F;
+            BoundedRandomAccessFile.field_k[4] = DialogMessagePane.field_F;
             bi.field_B[1] = 2;
             BoundedRandomAccessFile.field_k[2] = WidgetContainer.field_y;
             bi.field_B[0] = 5;
@@ -677,7 +677,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
             ConfirmedEmailAvailabilityValidator.field_s = stackIn_118_0 + stackIn_119_1;
           }
           ArchiveRequest.field_k = -(ConfirmedEmailAvailabilityValidator.field_s >> 1) + fl.field_b;
-          ja.field_A = new int[BoundedRandomAccessFile.field_k.length][];
+          RegistrationAgreementPane.field_A = new int[BoundedRandomAccessFile.field_k.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = ArchiveRequest.field_k;
           while (BoundedRandomAccessFile.field_k.length > var4Lifetime3) {
@@ -688,12 +688,12 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
               var7Lifetime2 = AccountNameAvailabilityValidator.$cfr$intArgs$a$590e95718a07(-115, BoundedRandomAccessFile.field_k[var4Lifetime3], true);
               var8Lifetime1 = jc.field_b - (var7Lifetime2 >> 1);
               var5Lifetime3 = var5Lifetime3 + ud.field_a;
-              ja.field_A[var4Lifetime3] = new int[4];
-              ja.field_A[var4Lifetime3][0] = -BoundedRandomAccessFile.field_h + var8Lifetime1;
-              ja.field_A[var4Lifetime3][1] = var5Lifetime3;
-              ja.field_A[var4Lifetime3][2] = (BoundedRandomAccessFile.field_h << 1) + var7Lifetime2;
+              RegistrationAgreementPane.field_A[var4Lifetime3] = new int[4];
+              RegistrationAgreementPane.field_A[var4Lifetime3][0] = -BoundedRandomAccessFile.field_h + var8Lifetime1;
+              RegistrationAgreementPane.field_A[var4Lifetime3][1] = var5Lifetime3;
+              RegistrationAgreementPane.field_A[var4Lifetime3][2] = (BoundedRandomAccessFile.field_h << 1) + var7Lifetime2;
               var5Lifetime3 = var5Lifetime3 + ((vf.field_b << 1) + (ud.field_a + hb.field_n));
-              ja.field_A[var4Lifetime3][3] = hb.field_n + (vf.field_b << 1);
+              RegistrationAgreementPane.field_A[var4Lifetime3][3] = hb.field_n + (vf.field_b << 1);
             }
             var4Lifetime3++;
           }

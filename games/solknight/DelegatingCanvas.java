@@ -68,7 +68,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           if (SingleChildWidgetContainer.field_B == pf.field_a) {
             return false;
           }
-          MatchingFieldValidator.field_n = lb.field_V[pf.field_a];
+          MatchingFieldValidator.field_n = ProgressDialog.field_V[pf.field_a];
           if (param0 != -56) {
             var3 = (String[]) null;
             DelegatingCanvas.createAccountSuggestionsResult((byte) -108, (String[]) null);

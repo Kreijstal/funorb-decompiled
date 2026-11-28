@@ -229,7 +229,7 @@ final class mj {
           if (param2 <= 0) {
             throw new IllegalArgumentException();
           }
-          if (ko.b((byte) -75, param2)) {
+          if (NumericDateInputWidget.b((byte) -75, param2)) {
             stackIn_8_0 = (int)(((long)param1.nextInt() & 4294967295L) * (long)param2 >> 32);
             return stackIn_8_0;
           }

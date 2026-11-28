@@ -230,7 +230,7 @@ final class MixedSupport118 {
               stackIntegerLocal1 = -1;
               return stackIntegerLocal1;
             }
-            if (DebouncedFieldValidator.mixedSupport132State0001 == UiComponentPart023.mixedSupport132State0009) {
+            if (DebouncedFieldValidator.mixedSupport132State0001 == StandardContentDialog.mixedSupport132State0009) {
               if (booleanArgument6) {
                 stringLocal26 = (String) null;
                 SceneWidgetPart014.mixedSupport043State0001 = MixedSupport113.computeMixedSupport0431472(GameAssets.longState0046, stringArgument3, false, (String) null, 0);
@@ -240,18 +240,18 @@ final class MixedSupport118 {
               SocketFactory.cipherPacketBufferState0002.position = 0;
               SocketFactory.cipherPacketBufferState0002.writeByte(true, 14);
               SocketFactory.cipherPacketBufferState0002.writeByte(true, SceneWidgetPart014.mixedSupport043State0001.computeMixedSupport0480543(byteArgument4 ^ 37).integerState0261);
-              UiComponentPart033.performAction1818(4792, -1);
-              UiComponentPart023.mixedSupport132State0009 = SoftwareFramebuffer.mixedSupport132State0011;
+              AccountCreationResultPanel.performAction1818(4792, -1);
+              StandardContentDialog.mixedSupport132State0009 = SoftwareFramebuffer.mixedSupport132State0011;
             }
-            if (UiComponentPart023.mixedSupport132State0009 == SoftwareFramebuffer.mixedSupport132State0011 &&
+            if (StandardContentDialog.mixedSupport132State0009 == SoftwareFramebuffer.mixedSupport132State0011 &&
               MixedSupport098.computeBoolean1219(25973, 1)) {
               integerLocal19 = LabeledWidgetContainer.cipherPacketBufferState0001.readUnsignedByte((byte) -85);
               if (integerLocal19 != 0) {
                 HashNode.integerState0070 = integerLocal19;
-                UiComponentPart023.mixedSupport132State0009 = HashNode.mixedSupport132State0002;
+                StandardContentDialog.mixedSupport132State0009 = HashNode.mixedSupport132State0002;
                 NetworkSupport012.integerState0759 = -1;
               } else {
-                UiComponentPart023.mixedSupport132State0009 = MixedSupport070.mixedSupport132State0004;
+                StandardContentDialog.mixedSupport132State0009 = MixedSupport070.mixedSupport132State0004;
               }
               LabeledWidgetContainer.cipherPacketBufferState0001.position = 0;
             }
@@ -259,15 +259,15 @@ final class MixedSupport118 {
               stackIntegerLocal2 = -94;
               return stackIntegerLocal2;
             }
-            if (MixedSupport070.mixedSupport132State0004 == UiComponentPart023.mixedSupport132State0009 &&
+            if (MixedSupport070.mixedSupport132State0004 == StandardContentDialog.mixedSupport132State0009 &&
               MixedSupport098.computeBoolean1219(25973, 8)) {
               Sprite.longState0027 = LabeledWidgetContainer.cipherPacketBufferState0001.readLong((byte) -108);
               LabeledWidgetContainer.cipherPacketBufferState0001.position = 0;
               PlayerNameAvailabilityValidator.performAction0827(booleanArgument6, SceneWidgetPart014.mixedSupport043State0001, integerArgument5, (byte) 127, booleanArgument2);
-              UiComponentPart023.mixedSupport132State0009 = MixedSupport087.mixedSupport132State0007;
+              StandardContentDialog.mixedSupport132State0009 = MixedSupport087.mixedSupport132State0007;
             }
             boolean frameRemainderLocal31 = true;
-            if (UiComponentPart023.mixedSupport132State0009 == MixedSupport087.mixedSupport132State0007 &&
+            if (StandardContentDialog.mixedSupport132State0009 == MixedSupport087.mixedSupport132State0007 &&
               MixedSupport098.computeBoolean1219(25973, 1)) {
               integerLocal28 = LabeledWidgetContainer.cipherPacketBufferState0001.readUnsignedByte((byte) -46);
               MixedSupport139.stringState0594 = null;
@@ -277,7 +277,7 @@ final class MixedSupport118 {
                 integerLocal28 != 1) {
                 if (8 != integerLocal28) {
                   NetworkSupport012.integerState0759 = -1;
-                  UiComponentPart023.mixedSupport132State0009 = HashNode.mixedSupport132State0002;
+                  StandardContentDialog.mixedSupport132State0009 = HashNode.mixedSupport132State0002;
                   frameRemainderLocal31 = false;
                 }
                 else {
@@ -289,10 +289,10 @@ final class MixedSupport118 {
               }
               if (frameRemainderLocal31) {
                 NetworkSupport012.integerState0759 = -1;
-                UiComponentPart023.mixedSupport132State0009 = ResourceSupport003.mixedSupport132State0008;
+                StandardContentDialog.mixedSupport132State0009 = ResourceSupport003.mixedSupport132State0008;
               }
             }
-            if (UiComponentPart023.mixedSupport132State0009 == ResourceSupport003.mixedSupport132State0008 &&
+            if (StandardContentDialog.mixedSupport132State0009 == ResourceSupport003.mixedSupport132State0008 &&
               MixedSupport039.computeBoolean0524((byte) -62)) {
               GameAssets.longState0046 = LabeledWidgetContainer.cipherPacketBufferState0001.readLong((byte) -108);
               HuffmanCodec.stringState0288 = stringArgument3;
@@ -331,7 +331,7 @@ final class MixedSupport118 {
               charSequenceLocal27 = (CharSequence) ((Object) MixedSupport089.stringState0372);
               MixedSupport051.stringState0212 = ComponentContainer.computeString0894(charSequenceLocal27, (byte) 2);
               GameDomainSupport001.integerState0052 = LabeledWidgetContainer.cipherPacketBufferState0001.readUnsignedByte((byte) -49);
-              UiComponentPart023.mixedSupport132State0009 = SoftwareFramebuffer.mixedSupport132State0012;
+              StandardContentDialog.mixedSupport132State0009 = SoftwareFramebuffer.mixedSupport132State0012;
               if (SceneWidgetPart014.mixedSupport043State0001.computeMixedSupport0480543(18) != GameDomainSupport005.mixedSupport048State0002) {
                 if (SceneWidgetPart014.mixedSupport043State0001.computeMixedSupport0480543(18) == MusicTrack.mixedSupport048State0003) {
                   RenderingSupport003.mixedSupport061State0002.performAction0729(-117, DraggableWidgetContainer.computeApplet1485(25144));
@@ -370,7 +370,7 @@ final class MixedSupport118 {
               stackIntegerLocal8 = HashNode.integerState0070;
               return stackIntegerLocal8;
             }
-            if (UiComponentPart023.mixedSupport132State0009 == HashNode.mixedSupport132State0002 &&
+            if (StandardContentDialog.mixedSupport132State0009 == HashNode.mixedSupport132State0002 &&
               MixedSupport039.computeBoolean0524((byte) 122)) {
               NodeHashTable.performAction1498(119);
               if (HashNode.integerState0070 == 7 &&

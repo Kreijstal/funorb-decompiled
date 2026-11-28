@@ -45,7 +45,7 @@ final class MixedSupport063 {
             MatchingFieldValidator.integerState0686 = integerArgument2;
             if (null != GzipDecompressor.platformServiceState0002.boundedRandomAccessFileState0002) {
               try {
-                UiComponentPart008.bufferedFileState0001 = new BufferedFile(GzipDecompressor.platformServiceState0002.boundedRandomAccessFileState0002, 64, 0);
+                DialogMessagePane.bufferedFileState0001 = new BufferedFile(GzipDecompressor.platformServiceState0002.boundedRandomAccessFileState0002, 64, 0);
               } catch (java.io.IOException caughtParameterLocal9) {
                 caughtExceptionLocal6 = caughtParameterLocal9;
                 iOExceptionLocal7 = (IOException) (Object) caughtExceptionLocal6;

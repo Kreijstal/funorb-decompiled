@@ -115,7 +115,7 @@ final class cd {
         BufferedSocket.field_p.a((byte) 79, RichTextWidget.field_R, aa.field_g);
         if (param1 != -1) {
           if (ii.field_d) {
-            qh.a(param1, true);
+            RegistrationAgreementPane.a(param1, true);
             ii.field_d = false;
           }
           ByteStorage.a(0, 0, (byte) 40, param4, param1);

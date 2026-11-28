@@ -1,0 +1,214 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class DialogMessagePane extends DequeWidgetContainer implements WidgetActivationListener {
+    private int field_J;
+    private InteractiveWidget[] field_Q;
+    static int field_N;
+    private int[] field_M;
+    private String field_L;
+    static int field_K;
+    private ProgressMessageDialog field_P;
+    private BitmapFont field_O;
+
+    DialogMessagePane(ProgressMessageDialog param0, BitmapFont param1, String param2) {
+        super(0, 0, 288, 0, (WidgetRenderer) null);
+        int var4_int = 0;
+        this.field_J = 0;
+        try {
+          this.field_P = param0;
+          this.field_O = param1;
+          this.field_L = param2;
+          var4_int = null == this.field_L ? 0 : this.field_O.textHeight(this.field_L, 260, this.field_O.field_x);
+          this.setBounds(0, var4_int + 22, 0, 16535, 288);
+        } catch (RuntimeException runtimeException) {
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    private final void growActions(int param0, byte param1) {
+        int var5 = 0;
+        int var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+        if (this.field_J >= param0) {
+          return;
+        }
+        if (param1 != -38) {
+          this.field_Q = (InteractiveWidget[]) null;
+        }
+        InteractiveWidget[] var7 = new InteractiveWidget[param0];
+        InteractiveWidget[] var3 = var7;
+        int[] var4 = new int[param0];
+        for (var5 = 0; var5 < this.field_J; var5++) {
+          var7[var5] = this.field_Q[var5];
+          var4[var5] = this.field_M[var5];
+        }
+        this.field_M = var4;
+        this.field_Q = var3;
+        this.field_J = param0;
+    }
+
+    final void drawWidget(int param0, int param1, byte param2, int param3) {
+        super.drawWidget(param0, param1, param2, param3);
+        this.field_O.drawParagraph(this.field_L, param0 - (-this.field_o - 14), this.field_m + (param3 + 10), this.field_w - 28, this.field_k, 16777215, -1, 0, 0, this.field_O.field_x);
+    }
+
+    final static void a(int param0, int param1, int param2, boolean param3, int param4) {
+        int var5 = param2 * 5;
+        if (var5 < 0) {
+          var5 = 0;
+        }
+        if (param3) {
+          return;
+        }
+        if (param0 < var5) {
+          var5 = param0;
+        }
+        SoftwareRasterizer.fillRectangleVerticalGradient(-var5 + 311, param4, 18 + 2 * var5, param1, 13875857, 15987691);
+        SoftwareRasterizer.drawHorizontalLineAlpha(-var5 + 311, param4, 2 * (var5 + 9), 0, 25);
+        SoftwareRasterizer.drawHorizontalLineAlpha(-var5 + 311, param4 + param1, var5 * 2 + 18, 0, 25);
+        ek.field_m.a(0, -10 + param4, -var5 + 253, ek.field_m.field_c);
+        ek.field_m.a(388 + var5, param4 - 10, 253, ek.field_m.field_c);
+        ek.field_m.a(0, -70 + (param1 + param4), 253 - var5, ek.field_m.field_c);
+        ek.field_m.a(388 + var5, -70 + (param4 + param1), 261, ek.field_m.field_c);
+        t.field_a.a(253 - var5, -10 + param4);
+        bb.field_b.a(var5 + 388 - la.field_a.field_h, -10 + param4);
+        la.field_a.a(-var5 + 253, -51 + param4 + param1);
+        ri.field_o.a(-ri.field_o.field_h + var5 + 388, -51 + param4 + param1);
+        cl.field_t.a(-var5 + 253, 54 + param4, cl.field_t.field_h, param1 - 105);
+        tb.field_d.a(-la.field_a.field_h + 388 + var5, 54 + param4, cl.field_t.field_h, param1 - 105);
+    }
+
+    final static void a(boolean param0, int param1) {
+        int var3 = 0;
+        h var4 = null;
+        nl var5 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+        try {
+          var5 = (nl) (gf.field_A.beginForward(-11151));
+          if (param0) {
+            field_N = -49;
+          }
+          while (var5 != null) {
+            fc.a(-105, var5, param1);
+            var5 = (nl) (gf.field_A.nextForward(0));
+          }
+          var4 = (h) (eg.field_c.beginForward(-11151));
+          while (var4 != null) {
+            bj.a(param1, -81, var4);
+            var4 = (h) (eg.field_c.nextForward(0));
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw ie.wrapClientException((Throwable) ((Object) var2), "dj.F(" + param0 + ',' + param1 + ')');
+        }
+    }
+
+    public final void onWidgetActivated(int param0, int param1, boolean param2, InteractiveWidget param3, int param4) {
+        int var6_int = 0;
+        int var7 = 0;
+        int var8 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
+        var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+        try {
+          if (!param2) {
+            this.growActions(37, (byte) -128);
+          }
+          for (var6_int = 0; this.field_J > var6_int; var6_int++) {
+            if (param3 != this.field_Q[var6_int]) {
+              continue;
+            }
+            var7 = this.field_M[var6_int];
+            if (var7 != -1) {
+              sf.a(this.field_M[var6_int], 11649);
+            } else {
+              this.field_P.closeDialog(true);
+            }
+            break;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_13_0 = var6;
+          stackIn_13_1 = new StringBuilder().append("dj.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
+        }
+    }
+
+    final void addActionButton(boolean param0, String param1, int param2) {
+        int var4_int = 0;
+        try {
+          var4_int = this.field_J;
+          if (param0) {
+            this.drawWidget(-94, -80, (byte) -32, 127);
+          }
+          this.growActions(var4_int + 1, (byte) -38);
+          this.field_Q[var4_int] = this.addListenerButton(param1, param0, (WidgetEventListener) (this));
+          this.field_M[var4_int] = param2;
+        } catch (RuntimeException runtimeException) {
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "dj.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+        }
+    }
+
+    final InteractiveWidget addListenerButton(String param0, boolean param1, WidgetEventListener param2) {
+        InteractiveWidget var4 = null;
+        RuntimeException var4_ref = null;
+        int var5 = 0;
+        InteractiveWidget stackIn_2_0 = null;
+        InteractiveWidget stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var4 = new InteractiveWidget(param0, param2);
+          var4.field_l = (WidgetRenderer) ((Object) new ie());
+          if (param1) {
+            stackIn_2_0 = (InteractiveWidget) null;
+            return stackIn_2_0;
+          }
+          var5 = -2 + this.field_k;
+          this.setBounds(0, 34 + this.field_k, 0, 16535, this.field_w);
+          var4.setBounds(var5, 30, 7, 16535, -14 + this.field_w);
+          this.addChild(var4, (byte) 102);
+          stackIn_4_0 = var4;
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4_ref = decompiledCaughtException;
+          stackIn_7_0 = var4_ref;
+          stackIn_7_1 = new StringBuilder().append("dj.C(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+        }
+    }
+
+    static {
+        field_N = -1;
+    }
+}

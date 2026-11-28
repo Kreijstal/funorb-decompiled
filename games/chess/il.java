@@ -20,8 +20,8 @@ final class il {
           if (param1.field_I == null) {
             param1.field_I = new IntrusiveDeque();
           }
-          if (null == bf.field_M) {
-            bf.field_M = new SecondaryNodeHashTable(64);
+          if (null == DateInputWidget.field_M) {
+            DateInputWidget.field_M = new SecondaryNodeHashTable(64);
           }
           if (param2 != 15) {
             field_a = 90;

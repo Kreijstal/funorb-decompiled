@@ -35,7 +35,7 @@ final class se extends InteractiveWidget {
           var8_int = -this.field_o - param0 - this.field_E + param2;
           var9 = -this.field_i - param1 - this.field_M + param6;
           if (this.field_H * this.field_H > var9 * var9 + var8_int * var8_int) {
-            var10 = Math.atan2((double)var9, (double)var8_int) - ta.field_Z;
+            var10 = Math.atan2((double)var9, (double)var8_int) - ContentTransitionDialog.field_Z;
             if (!(0.0 > var10)) {
               if (var10 > 0.0) {
                 var10 = var10 + 3.141592653589793 / (double)this.field_N;

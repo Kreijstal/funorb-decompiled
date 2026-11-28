@@ -6,7 +6,7 @@ final class jj {
     static String field_d;
     static RgbSprite[] field_f;
     static sc field_e;
-    static uc field_a;
+    static ProgressMessageDialog field_a;
     static char[] field_b;
     private static String field_z;
 

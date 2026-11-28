@@ -82,7 +82,7 @@ final class pa implements WidgetRenderer {
           if (AlphaWidgetContainer.field_y < 10) {
             return false;
           }
-          if (bi.field_L >= 13) {
+          if (ResizableModalDialog.field_L >= 13) {
             return true;
           }
           return false;
@@ -90,7 +90,7 @@ final class pa implements WidgetRenderer {
         if (AlphaWidgetContainer.field_y < 10) {
           return false;
         }
-        if (bi.field_L >= 13) {
+        if (ResizableModalDialog.field_L >= 13) {
           return true;
         }
         return false;
@@ -112,7 +112,7 @@ final class pa implements WidgetRenderer {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9_int = param7 + jk.field_x.a(true);
+          var9_int = param7 + GuestPlayConfirmationForm.field_x.a(true);
           if (param6 <= PacketBuffer.field_j) {
             if (param6 + param4 > PacketBuffer.field_j) {
               if (param0 <= bk.field_a) {
@@ -127,7 +127,7 @@ final class pa implements WidgetRenderer {
             stackIn_10_0 = 0;
           }
           var10 = stackIn_10_0;
-          jk.a(param2, param4, param3, param5, param0, var10 != 0, param1, param6, param8, (byte) 88);
+          GuestPlayConfirmationForm.a(param2, param4, param3, param5, param0, var10 != 0, param1, param6, param8, (byte) 88);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

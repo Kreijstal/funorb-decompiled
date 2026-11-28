@@ -93,11 +93,11 @@ final class jl extends IntrusiveNode {
           } else {
             if (var2 == 1) {
               var4 = var9.readSignedSmart(128);
-              var5 = (jl) (ll.field_T.beginForward((byte) -95));
+              var5 = (jl) (FullscreenStatusDialog.field_T.beginForward((byte) -95));
               while (var5 != null) {
                 if (~var5.field_m != ~var3 ||
                   var4 != var5.field_i) {
-                  var5 = (jl) (ll.field_T.nextForward(true));
+                  var5 = (jl) (FullscreenStatusDialog.field_T.nextForward(true));
                   continue;
                 }
                 break;
@@ -110,7 +110,7 @@ final class jl extends IntrusiveNode {
               decompiledFrameRemainder0 = false;
             }
             else {
-              d.a((Throwable) null, 46, "LR1: " + ik.q(48));
+              d.a((Throwable) null, 46, "LR1: " + ProgressMessageDialog.q(48));
               pc.a(1);
             }
           }

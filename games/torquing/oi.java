@@ -15,7 +15,7 @@ final class oi {
     }
 
     final static IndexedSprite a(byte param0) {
-        IndexedSprite var1 = new IndexedSprite(fm.field_E, rh.field_d, PacketBuffer.field_o[0], LabeledWidgetContainer.field_G[0], vo.field_b[0], PasswordValidator.field_o[0], pn.field_b[0], cq.field_y);
+        IndexedSprite var1 = new IndexedSprite(GuestPlayConfirmationForm.field_E, rh.field_d, PacketBuffer.field_o[0], LabeledWidgetContainer.field_G[0], vo.field_b[0], PasswordValidator.field_o[0], pn.field_b[0], cq.field_y);
         go.b(0);
         if (param0 < -59) {
           return var1;

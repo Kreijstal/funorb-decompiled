@@ -416,7 +416,7 @@ final class gf {
           BufferedRandomAccessFile.field_f = new byte[BitPacketBuffer.field_t][];
           bd.field_m = new int[BitPacketBuffer.field_t];
           var17.position = -(8 * BitPacketBuffer.field_t) - 7 + param1.length;
-          uc.field_fb = var17.readUnsignedShort(-1698573656);
+          ProgressMessageDialog.field_fb = var17.readUnsignedShort(-1698573656);
           eh.field_b = var17.readUnsignedShort(-1698573656);
           var3 = (var17.readUnsignedByte(true) & 255) + 1;
           for (var4 = 0; BitPacketBuffer.field_t > var4; var4++) {

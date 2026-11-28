@@ -52,7 +52,7 @@ abstract class NetworkGameClient extends GameApplet {
             po.field_w = po.field_w + 1;
             if (0 > hb.field_y) {
               for (var2 = 0; var2 < 112; var2++) {
-                i.field_P[var2] = false;
+                FullscreenStatusDialog.field_P[var2] = false;
               }
               hb.field_y = n.field_w;
             } else {
@@ -60,10 +60,10 @@ abstract class NetworkGameClient extends GameApplet {
                 var2 = BufferedSocket.field_i[n.field_w];
                 n.field_w = 127 & n.field_w + 1;
                 if (var2 >= 0) {
-                  i.field_P[var2] = true;
+                  FullscreenStatusDialog.field_P[var2] = true;
                   continue;
                 }
-                i.field_P[~var2] = false;
+                FullscreenStatusDialog.field_P[~var2] = false;
               }
             }
             mj.field_d = IsaacCipher.field_d;
@@ -250,9 +250,9 @@ abstract class NetworkGameClient extends GameApplet {
           }
           if (kb.field_d == null) {
             kb.field_d = rg.a(true);
-            qc.field_Z = c.a(24852);
+            StandardContentDialog.field_Z = c.a(24852);
           }
-          cl.a(qc.field_Z, false, kb.field_d, kb.field_a);
+          cl.a(StandardContentDialog.field_Z, false, kb.field_d, kb.field_a);
           eg.field_v = null;
           kb.field_a = null;
           lp.field_a = null;
@@ -299,7 +299,7 @@ abstract class NetworkGameClient extends GameApplet {
           this.a(false);
           Bzip2State.a(k.field_d, (byte) -118);
         }
-        if (hh.field_d[8]) {
+        if (FullscreenNoticeType.field_d[8]) {
           kj.a(8);
         }
         if (param0 != 23) {
@@ -335,7 +335,7 @@ abstract class NetworkGameClient extends GameApplet {
     }
 
     private final void l(int param0) {
-        hh.field_d[1] = true;
+        FullscreenNoticeType.field_d[1] = true;
         if (param0 != 0) {
           String var3 = (String) null;
           this.startAppletClient(43, (String) null, -13);
@@ -353,7 +353,7 @@ abstract class NetworkGameClient extends GameApplet {
         var2 = fa.field_e;
         var3 = -51 / ((param0 - 4) / 53);
         if (64 > var2 &&
-          hh.field_d[var2]) {
+          FullscreenNoticeType.field_d[var2]) {
           if (var2 == 0) {
             return;
           }
@@ -422,23 +422,23 @@ abstract class NetworkGameClient extends GameApplet {
     }
 
     private final void i(int param0) {
-        hh.field_d[2] = true;
+        FullscreenNoticeType.field_d[2] = true;
         if (param0 != 24500) {
           this.b(false, 7);
         }
     }
 
     private final void a(boolean param0, byte param1) {
-        hh.field_d[7] = true;
-        hh.field_d[16] = true;
+        FullscreenNoticeType.field_d[7] = true;
+        FullscreenNoticeType.field_d[16] = true;
         if (param1 > -90) {
           return;
         }
-        hh.field_d[8] = param0;
-        hh.field_d[17] = true;
-        hh.field_d[0] = true;
-        hh.field_d[18] = true;
-        hh.field_d[3] = true;
+        FullscreenNoticeType.field_d[8] = param0;
+        FullscreenNoticeType.field_d[17] = true;
+        FullscreenNoticeType.field_d[0] = true;
+        FullscreenNoticeType.field_d[18] = true;
+        FullscreenNoticeType.field_d[3] = true;
     }
 
     final int g(int param0) {
@@ -448,25 +448,25 @@ abstract class NetworkGameClient extends GameApplet {
         var3 = this.pollLoginConnection(-93);
         if (0 == var3 ||
           1 == var3) {
-          if (hh.field_d[1]) {
-            kf.b(2, -8190);
+          if (FullscreenNoticeType.field_d[1]) {
+            StripedProgressWidget.b(2, -8190);
           }
-          if (hh.field_d[2]) {
+          if (FullscreenNoticeType.field_d[2]) {
             ag.a((byte) -45, 3);
           }
-          if (hh.field_d[3]) {
+          if (FullscreenNoticeType.field_d[3]) {
             DirectByteStorage.a(4, 0);
           }
-          if (hh.field_d[4]) {
+          if (FullscreenNoticeType.field_d[4]) {
             km.a((byte) -128, 5);
           }
-          if (hh.field_d[5]) {
+          if (FullscreenNoticeType.field_d[5]) {
             DropTargetWidgetContainer.a(true, 6);
           }
-          if (hh.field_d[6]) {
+          if (FullscreenNoticeType.field_d[6]) {
             fa.a(7, -21386);
           }
-          if (hh.field_d[8]) {
+          if (FullscreenNoticeType.field_d[8]) {
             kg.a(112);
           }
         }
@@ -486,7 +486,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (param0 != 84) {
           this.field_l = -57;
         }
-        hh.field_d[5] = true;
+        FullscreenNoticeType.field_d[5] = true;
     }
 
     final void startAppletClient(int param0, String param1, int param2) {
@@ -518,7 +518,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (gk.field_a) {
           return -1;
         }
-        int var2 = vb.a(fo.i(17543), AccountRegistrationPanel.i(20), (byte) 27, true, this.field_j, this.field_q);
+        int var2 = vb.a(DialogMessagePane.i(17543), AccountRegistrationPanel.i(20), (byte) 27, true, this.field_j, this.field_q);
         if (var2 == -1) {
           return -1;
         }
@@ -541,7 +541,7 @@ abstract class NetworkGameClient extends GameApplet {
     }
 
     private final void f(int param0) {
-        hh.field_d[param0] = true;
+        FullscreenNoticeType.field_d[param0] = true;
     }
 
     final void n(int param0) {
@@ -690,7 +690,7 @@ abstract class NetworkGameClient extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = od.a(wd.a(-19), -124, fo.i(17543), VertexMesh.d((byte) -87), this.field_q, oc.a(false), AccountRegistrationPanel.i(20));
+            var5_intLifetime1 = od.a(wd.a(-19), -124, DialogMessagePane.i(17543), VertexMesh.d((byte) -87), this.field_q, oc.a(false), AccountRegistrationPanel.i(20));
             if (var5_intLifetime1 != -1) {
               gk.a(-5006, pl.field_u, Model.field_n, var5_intLifetime1);
               pl.field_u = null;
@@ -704,7 +704,7 @@ abstract class NetworkGameClient extends GameApplet {
               jl.b((byte) 106);
             }
             if (!param1) {
-              var5_intLifetime2 = vb.a(fo.i(17543), AccountRegistrationPanel.i(20), (byte) 27, false, this.field_j, this.field_q);
+              var5_intLifetime2 = vb.a(DialogMessagePane.i(17543), AccountRegistrationPanel.i(20), (byte) 27, false, this.field_j, this.field_q);
               if (-1 != var5_intLifetime2) {
                 if (var5_intLifetime2 != 0) {
                   dc.a(var5_intLifetime2, pl.field_u, 2);

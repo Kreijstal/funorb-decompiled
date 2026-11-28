@@ -50,10 +50,10 @@ final class he extends ci {
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-          param1.addMouseListener(bj.field_cb);
-          param1.addMouseMotionListener(bj.field_cb);
+          param1.addMouseListener(ContentTransitionDialog.field_cb);
+          param1.addMouseMotionListener(ContentTransitionDialog.field_cb);
           int var2_int = 101 / ((-38 - param0) / 46);
-          param1.addFocusListener(bj.field_cb);
+          param1.addFocusListener(ContentTransitionDialog.field_cb);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "he.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

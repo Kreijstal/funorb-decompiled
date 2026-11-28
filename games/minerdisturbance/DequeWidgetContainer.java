@@ -43,7 +43,7 @@ class DequeWidgetContainer extends UiWidget implements WidgetContainerMarker {
           if (var6 != 80) {
             return false;
           }
-          if (qd.field_O[81]) {
+          if (GuestPlayConfirmationForm.field_O[81]) {
             stackIn_15_0 = this.focusPreviousChild(param1, param2 ^ -79);
           } else {
             stackIn_15_0 = this.focusNextChild(param1, (byte) 12);

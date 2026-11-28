@@ -25,7 +25,7 @@ final class mb extends DualLinkNode {
         }
         if (this.field_r != null) {
           for (var2 = 0; this.field_r.length > var2; var2++) {
-            this.field_r[var2] = ei.b(this.field_r[var2], 32768);
+            this.field_r[var2] = ResizableModalDialog.b(this.field_r[var2], 32768);
           }
         }
     }

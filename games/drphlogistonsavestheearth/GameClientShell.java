@@ -41,7 +41,7 @@ abstract class GameClientShell extends GameAppletShell {
           DraggableWidgetContainer.field_V.a((byte) 123);
         }
         GameAppletShell.b((byte) -81);
-        ia.a(-116);
+        FullscreenNoticeType.a(-116);
         if (!kh.a(false) &&
           af.field_b != 11) {
           lg.a(2);
@@ -50,7 +50,7 @@ abstract class GameClientShell extends GameAppletShell {
           this.field_p = -105;
         }
         if (sc.field_e != null) {
-          ma.field_sb = sc.field_e.pollRotation(0);
+          ProgressMessageDialog.field_sb = sc.field_e.pollRotation(0);
         }
         if (DiskCacheWorker.a(64)) {
           var3 = 1200 * AccountNameAvailabilityValidator.d((byte) 9);
@@ -275,7 +275,7 @@ abstract class GameClientShell extends GameAppletShell {
         if (param0 >= -106) {
           field_o = (BitmapFont) null;
         }
-        String var2 = ca.b(false);
+        String var2 = ResizableModalDialog.b(false);
         hg.a(nb.a(-102), -1, var2);
     }
 
@@ -443,7 +443,7 @@ abstract class GameClientShell extends GameAppletShell {
                             gk.a(var3, -15980);
                           }
                         } else {
-                          hd.a((byte) 109, LabeledWidgetContainer.field_N, sb.field_d, gf.field_C);
+                          StripedProgressWidget.a((byte) 109, LabeledWidgetContainer.field_N, sb.field_d, gf.field_C);
                         }
                       } else {
                         this.i(-115);
@@ -571,7 +571,7 @@ abstract class GameClientShell extends GameAppletShell {
               sa.b(0);
             } else {
               if (af.field_b != 0) {
-                ui.a(ma.field_sb, 1);
+                ui.a(ProgressMessageDialog.field_sb, 1);
               } else {
                 discarded$0 = this.a(false, false, 10);
               }
@@ -653,7 +653,7 @@ abstract class GameClientShell extends GameAppletShell {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-          var4 = hl.a(ob.field_c, param0, -1980693983, ma.field_sb);
+          var4 = hl.a(ob.field_c, param0, -1980693983, ProgressMessageDialog.field_sb);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -731,7 +731,7 @@ abstract class GameClientShell extends GameAppletShell {
             bf.a(63, nb.a(param2 - 75));
           }
           if (var4 == 12) {
-            ff.a(-76, hm.a(22812), nb.a(param2 ^ 110));
+            GuestPlayConfirmationForm.a(-76, hm.a(22812), nb.a(param2 ^ 110));
           }
           if (13 == var4) {
             try {

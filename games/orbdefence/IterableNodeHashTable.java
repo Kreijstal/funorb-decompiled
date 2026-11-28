@@ -25,7 +25,7 @@ final class IterableNodeHashTable implements Iterable {
     }
 
     final static void c(int param0) {
-        pc.field_Z = false;
+        StandardContentDialog.field_Z = false;
         if (param0 > 110) {
           NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
           return;

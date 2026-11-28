@@ -43,7 +43,7 @@ final class qo extends TextureOperator {
           return (int[][]) null;
         }
         if (this.field_v.field_c) {
-          var4 = we.field_M;
+          var4 = StripedProgressWidget.field_M;
           var5 = aa.field_Vb;
           var29 = new int[var5][var4];
           var30 = this.field_v.a(0);
@@ -54,7 +54,7 @@ final class qo extends TextureOperator {
             var11 = var31[0];
             var12 = var31[1];
             var13 = var31[2];
-            for (var14 = 0; we.field_M > var14; var14++) {
+            for (var14 = 0; StripedProgressWidget.field_M > var14; var14++) {
               var15 = var32[var14];
               var13[var14] = b.a(var15, 255) << 4;
               var12[var14] = b.a(4080, var15 >> 4);
@@ -153,7 +153,7 @@ final class qo extends TextureOperator {
           if (param0 != 17989) {
             field_A = (Model) null;
           }
-          var3_int = we.field_M;
+          var3_int = StripedProgressWidget.field_M;
           var4 = aa.field_Vb;
           eo.a(0, param1);
           ec.a(CrossfadingMidiPcmStream.field_x, 0, rm.field_z, 0, (byte) -16);

@@ -19,12 +19,12 @@ final class GzipInflater {
         var2.writeByte(2, (byte) 107);
         if (param0 == -6446) {
           var2.writeByte(4, (byte) -71);
-          var2.writeByte(jg.m(73), (byte) -88);
+          var2.writeByte(BirthDateChatEnableForm.m(73), (byte) -88);
           return;
         }
         GzipInflater.b(27, 37);
         var2.writeByte(4, (byte) -71);
-        var2.writeByte(jg.m(73), (byte) -88);
+        var2.writeByte(BirthDateChatEnableForm.m(73), (byte) -88);
     }
 
     final static int a(int param0, int param1) {

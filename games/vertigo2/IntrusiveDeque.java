@@ -77,7 +77,7 @@ final class IntrusiveDeque {
           if (param1 != 7937) {
             field_f = (String) null;
           }
-          param2.position = param2.position + ko.field_M.compress(0, -56, param2.payload, param2.position, var4.length, var4);
+          param2.position = param2.position + NumericDateInputWidget.field_M.compress(0, -56, param2.payload, param2.position, var4.length, var4);
           stackIn_3_0 = param2.position - var3_int;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

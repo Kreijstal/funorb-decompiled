@@ -35,7 +35,7 @@ final class fn extends IntrusiveNode {
           }
           try {
             if (tl.field_m == 0) {
-              ArchiveRequest.field_B = jl.field_fb.requestDirectSocket(fb.field_a, kb.field_a, (byte) 60);
+              ArchiveRequest.field_B = ProgressDialog.field_fb.requestDirectSocket(fb.field_a, kb.field_a, (byte) 60);
               tl.field_m = tl.field_m + 1;
             }
             if (1 == tl.field_m) {
@@ -48,7 +48,7 @@ final class fn extends IntrusiveNode {
               }
             }
             if (tl.field_m == 2) {
-              mb.field_c = new BufferedSocket((java.net.Socket) (ArchiveRequest.field_B.result), jl.field_fb);
+              mb.field_c = new BufferedSocket((java.net.Socket) (ArchiveRequest.field_B.result), ProgressDialog.field_fb);
               var2 = new PacketBuffer(13);
               le.a(da.field_a, var2, ph.field_f, i.field_a, -91);
               var2.writeByte(15, 25564);
@@ -153,17 +153,17 @@ final class fn extends IntrusiveNode {
             var5 = var27.readUnsignedByte((byte) -54);
             if (var5 != 0) {
               var6 = var4_ref.field_r;
-              fm.field_S[0].field_f = null;
-              fm.field_S[0].field_g = false;
+              DialogMessagePane.field_S[0].field_f = null;
+              DialogMessagePane.field_S[0].field_g = false;
               var7 = var4_ref.field_v;
-              fm.field_S[0].field_a = ti.field_J;
+              DialogMessagePane.field_S[0].field_a = ti.field_J;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                fm.field_S[var8_int].field_a = var27.readString(false);
-                fm.field_S[var8_int].field_g = false;
+                DialogMessagePane.field_S[var8_int].field_a = var27.readString(false);
+                DialogMessagePane.field_S[var8_int].field_g = false;
                 if (1 == var27.readUnsignedByte((byte) -54)) {
-                  fm.field_S[var8_int].field_f = var27.readString(false);
+                  DialogMessagePane.field_S[var8_int].field_f = var27.readString(false);
                 } else {
-                  fm.field_S[var8_int].field_f = null;
+                  DialogMessagePane.field_S[var8_int].field_f = null;
                 }
               }
               dupTemp$0 = new String[3][var6];
@@ -184,12 +184,12 @@ final class fn extends IntrusiveNode {
               if (var18 > 0) {
                 for (var19 = 0; var19 < var18; var19++) {
                   var20 = var27.readUnsignedByte((byte) -54);
-                  var21 = fm.field_S[var20].field_a;
+                  var21 = DialogMessagePane.field_S[var20].field_a;
                   var22 = var27.readLong(65);
                   var24 = var27.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = fm.field_S[var20].field_f;
+                    var9[0][var12] = DialogMessagePane.field_S[var20].field_f;
                     var31[0][var12] = var22;
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$2 = var15;
@@ -212,10 +212,10 @@ final class fn extends IntrusiveNode {
                     }
                   }
                   if (var6 > var14 &&
-                    !fm.field_S[var20].field_g) {
-                    fm.field_S[var20].field_g = true;
+                    !DialogMessagePane.field_S[var20].field_g) {
+                    DialogMessagePane.field_S[var20].field_g = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = fm.field_S[var20].field_f;
+                    var9[2][var14] = DialogMessagePane.field_S[var20].field_f;
                     var31[2][var14] = var22;
                     var14++;
                     var27.position = var24;
@@ -302,9 +302,9 @@ final class fn extends IntrusiveNode {
         var3Lifetime1[var4Lifetime2 >> 5] = SpriteState.a(var7[var4Lifetime2 >> 5], 1 << c.a(var4Lifetime2, 31));
         ce.field_a.addLast((byte) 40, new cm(param0));
         if (!kj.a(false) &&
-          wf.q(89)) {
+          ResizableModalDialog.q(89)) {
           qa.a(pn.field_b, hl.field_b, param0, pe.field_sb, (byte) 56, 4, param1, aa.field_b);
-          r.field_d = gk.b(4, 1);
+          FullscreenNoticeType.field_d = gk.b(4, 1);
           return;
         }
         ArchiveProvider.field_c.addLast((byte) -116, new sl(param0, param1, pe.field_sb, pn.field_b, aa.field_b, hl.field_b));

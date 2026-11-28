@@ -13,14 +13,14 @@ final class ng {
           tl.field_f = param3;
           fa.field_P = param0;
           hc.field_n = param8;
-          pi.field_L = param5;
+          RegistrationAgreementPane.field_L = param5;
           if (param2 != 24774) {
             ResourceArchive var10 = (ResourceArchive) null;
             ng.a((ResourceArchive) null, 105, (ResourceArchive) null);
           }
           om.field_s = (jf) ((Object) new kd());
           oc.field_l = new DiskCacheWorker(param6);
-          dh.field_vb = new ja(om.field_s, oc.field_l);
+          ProgressMessageDialog.field_vb = new ja(om.field_s, oc.field_l);
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ng.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }

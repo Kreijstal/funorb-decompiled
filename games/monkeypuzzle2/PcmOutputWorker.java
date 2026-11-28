@@ -63,7 +63,7 @@ final class PcmOutputWorker implements Runnable {
           kb.field_c = kb.field_c + 1;
           if (FrameTimer.field_a < (480 - param0) / 10 &&
             20 > FrameTimer.field_a) {
-            ul.field_O[FrameTimer.field_a] = pf.a((byte) -110, 3);
+            ProgressDialog.field_O[FrameTimer.field_a] = pf.a((byte) -110, 3);
             AccountNameAvailabilityValidator.field_r[FrameTimer.field_a] = 0;
             n.field_d[FrameTimer.field_a][0] = (float)(pf.a((byte) 60, 3) - 1);
             n.field_d[FrameTimer.field_a][1] = -0.5f;

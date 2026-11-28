@@ -369,7 +369,7 @@ final class ina extends bi {
             var6 = ((BitmapFont) ((Object) var3)).field_u << 1;
             var7 = new Sprite(var5, var6);
             bu.a(0, var7);
-            hp.a(var5, 0, (byte) 108, var6, de.field_A, 0);
+            hp.a(var5, 0, (byte) 108, var6, StripedProgressWidget.field_A, 0);
             for (var8 = 0; var7.field_v.length > var8; var8++) {
               if (0 != var7.field_v[var8]) {
                 var7.field_v[var8] = MassPoisonSpecial.a(var7.field_v[var8], -16777216);

@@ -10,13 +10,13 @@ final class tk {
         String var1 = null;
         if (gk.field_a) {
           if (ModalDialogHost.field_G != null) {
-            ModalDialogHost.field_G.o(3);
+            ModalDialogHost.field_G.closeDialog(3);
           }
           var1 = kl.a((byte) 124);
           af.field_r = new LoginPanel(var1, (String) null, true, false, false);
           IsaacRandom.field_d.showDialog((byte) 107, (UiWidget) (sf.field_f));
-          sf.field_f.b(af.field_r, 23143);
-          sf.field_f.i(3642);
+          sf.field_f.replaceContent(af.field_r, 23143);
+          sf.field_f.finishResize(3642);
           int var2 = -85 / ((61 - param0) / 57);
           return;
         }

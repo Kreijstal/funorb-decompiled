@@ -611,7 +611,7 @@ final class ResourceArchive {
         while (param1 != 0L) {
           var7 = param1;
           param1 = param1 / 37L;
-          var9 = ic.field_db[(int)(-(param1 * 37L) + var7)];
+          var9 = FullscreenStatusDialog.field_db[(int)(-(param1 * 37L) + var7)];
           if (95 == var9) {
             var10 = -1 + var6.length();
             var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));

@@ -43,7 +43,7 @@ final class rd extends wh {
             return stackIn_2_0;
           }
           if (fl.a(param0, param3, param2, (byte) -98)) {
-            return ih.k(24782);
+            return RegistrationAgreementPane.k(24782);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -82,10 +82,10 @@ final class kj extends IntrusiveNode {
     final static void a(String param0, boolean param1, int param2, float param3) {
         try {
           if (null == MusicPatchPcmStream.field_r) {
-            MusicPatchPcmStream.field_r = new wi(lg.field_w, ub.field_o);
+            MusicPatchPcmStream.field_r = new ProgressDialog(lg.field_w, ub.field_o);
             lg.field_w.showDialog(MusicPatchPcmStream.field_r, -1);
           }
-          MusicPatchPcmStream.field_r.a(param1, param0, param3, (byte) 45);
+          MusicPatchPcmStream.field_r.setProgress(param1, param0, param3, (byte) 45);
           if (param2 != -2958) {
             kj.resetStaticState(93);
           }

@@ -52,7 +52,7 @@ final class sh {
           of.d(-103);
           return;
         }
-        mk.field_e.l(-30336);
+        mk.field_e.freezeNormalProgressAnimation(-30336);
         of.d(-103);
     }
 
@@ -74,7 +74,7 @@ final class sh {
             return (BinaryBitmapFont) (stackIn_4_0);
           }
           var2 = new BinaryBitmapFont(param1, be.field_a, FullscreenFocusCanvas.field_c, wm.field_b, b.field_c, vk.field_d);
-          ch.k(4210752);
+          ProgressDialog.k(4210752);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

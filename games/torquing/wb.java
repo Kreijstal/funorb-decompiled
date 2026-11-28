@@ -157,25 +157,25 @@ final class wb extends am {
             ae.field_mb != null &&
             ae.field_mb.ensureIndexLoaded(-12749) &&
             ae.field_mb.tryLoadGroupByName(true, "benefits")) {
-            RasterBuffer.field_f = mn.a(qm.field_a, "benefits", "headline", 86);
-            mk.field_a = mn.a(qm.field_a, "benefits", "blurbpane", param0 ^ -88);
-            vk.field_s = mn.a(qm.field_a, "benefits", "button", 89);
-            je.field_e = mn.a(qm.field_a, "benefits", "signup_text", 113);
-            AccountRegistrationPanel.field_H = mn.a(qm.field_a, "benefits", "menu_text", 111);
-            jg.field_t = mn.a(qm.field_a, "benefits", "button_frame", 112);
-            qc.field_db = mn.a(qm.field_a, "benefits", "arrow", 110);
+            RasterBuffer.field_f = ProgressMessageDialog.a(qm.field_a, "benefits", "headline", 86);
+            mk.field_a = ProgressMessageDialog.a(qm.field_a, "benefits", "blurbpane", param0 ^ -88);
+            vk.field_s = ProgressMessageDialog.a(qm.field_a, "benefits", "button", 89);
+            je.field_e = ProgressMessageDialog.a(qm.field_a, "benefits", "signup_text", 113);
+            AccountRegistrationPanel.field_H = ProgressMessageDialog.a(qm.field_a, "benefits", "menu_text", 111);
+            jg.field_t = ProgressMessageDialog.a(qm.field_a, "benefits", "button_frame", 112);
+            StandardContentDialog.field_db = ProgressMessageDialog.a(qm.field_a, "benefits", "arrow", 110);
             lh.field_O = (BitmapFont) ((Object) qg.a(ae.field_mb, qm.field_a, "benefits", "large_font", 255));
             DelayedPcmStream.field_o = (BitmapFont) ((Object) qg.a(ae.field_mb, qm.field_a, "benefits", "small_font", param0 + 256));
             var27 = SoftwareRasterizer.field_e;
             var2 = SoftwareRasterizer.field_j;
             var3 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.saveClip(mo.field_w);
-            var11 = new Sprite(qc.field_db.field_s + 4, 4 + qc.field_db.field_t);
+            var11 = new Sprite(StandardContentDialog.field_db.field_s + 4, 4 + StandardContentDialog.field_db.field_t);
             var11.bindAsRenderTarget();
-            qc.field_db.drawGrayModulated(2, 2, fa.field_c);
+            StandardContentDialog.field_db.drawGrayModulated(2, 2, fa.field_c);
             hb.a(0, false, var11, var11.field_t, var11.field_s, 1, 0, 2);
-            qc.field_db = var11;
-            p.field_w = qc.field_db.copyMirroredHorizontally();
+            StandardContentDialog.field_db = var11;
+            p.field_w = StandardContentDialog.field_db.copyMirroredHorizontally();
             var12 = new Sprite(195, 221);
             var6 = var12.field_s / 2;
             var12.bindAsRenderTarget();
@@ -371,23 +371,23 @@ final class wb extends am {
             stackIn_67_3 = (1 == sd.field_s.field_g);
             eh.a(stackIn_66_0, stackIn_66_1, stackIn_66_2, stackIn_67_3);
           }
-          if (qc.field_db != null) {
-            var1_int = 357 - qc.field_db.field_u / 2;
-            qc.field_db.draw(269 - qc.field_db.field_w, var1_int);
+          if (StandardContentDialog.field_db != null) {
+            var1_int = 357 - StandardContentDialog.field_db.field_u / 2;
+            StandardContentDialog.field_db.draw(269 - StandardContentDialog.field_db.field_w, var1_int);
             p.field_w.draw(586, var1_int);
             if (k.field_e > var1_int &&
-              k.field_e < qc.field_db.field_t + var1_int) {
+              k.field_e < StandardContentDialog.field_db.field_t + var1_int) {
               var2Lifetime5 = (cd.a(-118, ke.field_c << 4) * 40 >> 16) + 40;
               if (0 < var2Lifetime5) {
-                if (n.field_t > -qc.field_db.field_s + 269 &&
+                if (n.field_t > -StandardContentDialog.field_db.field_s + 269 &&
                   n.field_t < 269) {
-                  qc.field_db.drawAdditive(-1 - qc.field_db.field_w + 269, var1_int - 1, var2Lifetime5);
-                  qc.field_db.drawAdditive(-qc.field_db.field_w + 270, -1 + var1_int, var2Lifetime5);
-                  qc.field_db.drawAdditive(-1 + (269 - qc.field_db.field_w), var1_int + 1, var2Lifetime5);
-                  qc.field_db.drawAdditive(-qc.field_db.field_w + 269 + 1, 1 + var1_int, var2Lifetime5);
+                  StandardContentDialog.field_db.drawAdditive(-1 - StandardContentDialog.field_db.field_w + 269, var1_int - 1, var2Lifetime5);
+                  StandardContentDialog.field_db.drawAdditive(-StandardContentDialog.field_db.field_w + 270, -1 + var1_int, var2Lifetime5);
+                  StandardContentDialog.field_db.drawAdditive(-1 + (269 - StandardContentDialog.field_db.field_w), var1_int + 1, var2Lifetime5);
+                  StandardContentDialog.field_db.drawAdditive(-StandardContentDialog.field_db.field_w + 269 + 1, 1 + var1_int, var2Lifetime5);
                 } else {
                   if (n.field_t > 586 &&
-                    n.field_t < qc.field_db.field_s + 586) {
+                    n.field_t < StandardContentDialog.field_db.field_s + 586) {
                     p.field_w.drawAdditive(585, var1_int - 1, var2Lifetime5);
                     p.field_w.drawAdditive(587, var1_int - 1, var2Lifetime5);
                     p.field_w.drawAdditive(585, 1 + var1_int, var2Lifetime5);

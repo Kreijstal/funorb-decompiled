@@ -427,10 +427,10 @@ final class MusicPatchPcmStream extends PcmStream {
             kk.field_g = param5;
             ta.field_h = param2;
             if (Transmogrify.field_A) {
-              var7.u(-10);
+              var7.showAccountCreationConnectionFailure(-10);
             }
           } else {
-            var7.u(-10);
+            var7.showAccountCreationConnectionFailure(-10);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -652,7 +652,7 @@ final class MusicPatchPcmStream extends PcmStream {
         RuntimeException var6 = null;
         try {
           DiskCacheWorker.field_f = param5;
-          ee.field_D = param3;
+          DialogMessagePane.field_D = param3;
           if (param1 < 105) {
             MusicPatchPcmStream.a((byte) 62, (ResourceArchive) null, (String) null, (String) null);
           }

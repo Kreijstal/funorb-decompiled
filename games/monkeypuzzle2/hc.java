@@ -211,7 +211,7 @@ final class hc {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          lb.a(param4 + param1.field_r, param1.field_l, (byte) -120, this.field_e, param1.field_e + param3, param1.field_p);
+          GuestPlayConfirmationForm.a(param4 + param1.field_r, param1.field_l, (byte) -120, this.field_e, param1.field_e + param3, param1.field_p);
           if (this.field_a != null) {
             var6_int = param1.field_r + (param4 + this.field_i);
             var7 = param3 + param1.field_e + this.field_g;

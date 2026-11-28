@@ -80,7 +80,7 @@ final class pl {
               0 < nl.field_d) {
               if (al.field_Q < 160) {
                 al.field_Q = al.field_Q + 50;
-                jh.a(3 * uh.field_i / 2, (byte) 69, 41, jc.field_c, 6);
+                FullscreenStatusDialog.a(3 * uh.field_i / 2, (byte) 69, 41, jc.field_c, 6);
               }
               param1.a(false, 0, 21963, 1, rl.field_c, param1.field_j);
               param1.field_l.a(0.9, 0.9, 1);
@@ -97,7 +97,7 @@ final class pl {
             param1.field_w != 5) {
             if (al.field_Q < 160) {
               al.field_Q = al.field_Q + 50;
-              jh.a(uh.field_i * 3 / 2, (byte) 41, 41, jc.field_c, 6);
+              FullscreenStatusDialog.a(uh.field_i * 3 / 2, (byte) 41, 41, jc.field_c, 6);
             }
             param1.field_z = 0;
             param1.field_w = 5;

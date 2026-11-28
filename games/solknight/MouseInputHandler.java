@@ -161,7 +161,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (ee.field_j != null) {
             cf.field_e = 0;
             TextLineMetrics.field_f = -1;
-            c.field_J = -1;
+            StripedProgressWidget.field_J = -1;
             pe.field_n = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -174,7 +174,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (ee.field_j != null) {
             cf.field_e = 0;
             TextLineMetrics.field_f = param0.getX();
-            c.field_J = param0.getY();
+            StripedProgressWidget.field_J = param0.getY();
             pe.field_n = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -187,7 +187,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null != ee.field_j) {
             cf.field_e = 0;
             TextLineMetrics.field_f = param0.getX();
-            c.field_J = param0.getY();
+            StripedProgressWidget.field_J = param0.getY();
             pe.field_n = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -200,7 +200,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null != ee.field_j) {
             cf.field_e = 0;
             TextLineMetrics.field_f = param0.getX();
-            c.field_J = param0.getY();
+            StripedProgressWidget.field_J = param0.getY();
             pe.field_n = true;
           }
         } catch (RuntimeException runtimeException) {

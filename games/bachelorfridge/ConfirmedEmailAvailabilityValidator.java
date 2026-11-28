@@ -124,24 +124,24 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           }
           if (dma.field_b != null && (param0 < 0 ||
             eia.field_a == Crc32Table.field_a)) {
-            if (0 == sja.field_fb.position &&
+            if (0 == StandardContentDialog.field_fb.position &&
               f.correctedCurrentTimeMillis((byte) 73) > (vla.field_v + 10000L)) {
-              sja.field_fb.writeCipheredByte(param0, (byte) 99);
+              StandardContentDialog.field_fb.writeCipheredByte(param0, (byte) 99);
             }
-            if (sja.field_fb.position > 0) {
+            if (StandardContentDialog.field_fb.position > 0) {
               try {
-                dma.field_b.a(0, sja.field_fb.payload, false, sja.field_fb.position);
+                dma.field_b.a(0, StandardContentDialog.field_fb.payload, false, StandardContentDialog.field_fb.position);
                 vla.field_v = f.correctedCurrentTimeMillis((byte) 73);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 vc.a((byte) -118);
               }
-              sja.field_fb.position = 0;
+              StandardContentDialog.field_fb.position = 0;
             }
             return;
           }
-          sja.field_fb.position = 0;
+          StandardContentDialog.field_fb.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

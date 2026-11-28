@@ -81,7 +81,7 @@ abstract class fb {
     }
 
     final static void a(int param0, byte param1, ta param2) {
-        ha var3 = pg.field_fb;
+        ha var3 = StandardContentDialog.field_fb;
         var3.f(param0, 950);
         var3.writeByte(false, param2.field_o);
         if (param1 > -117) {

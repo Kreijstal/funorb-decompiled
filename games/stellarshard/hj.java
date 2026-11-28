@@ -18,7 +18,7 @@ final class hj {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 5 / ((param0 - 42) / 39);
-          stackIn_3_0 = (ck.a(true, param1) != null);
+          stackIn_3_0 = (ProgressMessageDialog.a(true, param1) != null);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -35,13 +35,13 @@ final class hj {
     }
 
     final static void a(ResourceArchive param0, int param1) {
-        ad.a(param0.getFileByName("headers.packvorbis", "", (byte) -12));
-        ad var2 = ad.a(param0, "jagex logo2.packvorbis", "");
+        VorbisSample.decodeSetup(param0.getFileByName("headers.packvorbis", "", (byte) -12));
+        VorbisSample var2 = VorbisSample.loadByName(param0, "jagex logo2.packvorbis", "");
         if (param1 != 23987) {
           return;
         }
         try {
-          var2.b();
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "hj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

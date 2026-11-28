@@ -182,7 +182,7 @@ final class ng {
         RuntimeException var5 = null;
         long var6 = 0L;
         PcmSample var8 = null;
-        hk var9 = null;
+        VorbisSample var9 = null;
         PcmSample stackIn_2_0 = null;
         Object stackIn_17_0 = null;
         PcmSample stackIn_19_0 = null;
@@ -207,15 +207,15 @@ final class ng {
           if (param2 < 59) {
             field_c = 19;
           }
-          var9 = (hk) (this.field_e.a(var6, -1110));
+          var9 = (VorbisSample) (this.field_e.a(var6, -1110));
           if (var9 == null) {
-            var9 = hk.a(this.field_b, param0, param1);
+            var9 = VorbisSample.load(this.field_b, param0, param1);
             if (var9 == null) {
               return null;
             }
             this.field_e.a(var9, true, var6);
           }
-          var8Lifetime1 = var9.a(param3);
+          var8Lifetime1 = var9.decodeToPcm(param3);
           if (var8Lifetime1 == null) {
             stackIn_17_0 = null;
             return (PcmSample) (stackIn_17_0);

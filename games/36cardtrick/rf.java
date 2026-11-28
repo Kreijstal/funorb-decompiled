@@ -74,7 +74,7 @@ final class rf implements Runnable {
           oa.field_d = false;
           dl.field_h = kk.field_b;
           MouseInputHandler.field_a = nl.field_d;
-          jc.field_N = FrameTimer.field_b;
+          ResizableModalDialog.field_N = FrameTimer.field_b;
           kk.field_b = 0;
         }
     }

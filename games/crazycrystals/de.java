@@ -154,7 +154,7 @@ final class de extends PuzzleTile implements Cloneable {
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new RgbSprite(param1.getFileByName(7693, "", "final_frame.jpg"), (java.awt.Component) ((Object) jd.field_D));
+          var2 = new RgbSprite(param1.getFileByName(7693, "", "final_frame.jpg"), (java.awt.Component) ((Object) DialogMessagePane.field_D));
           var3 = var2.field_l;
           var4 = var2.field_u;
           hd.a(false);

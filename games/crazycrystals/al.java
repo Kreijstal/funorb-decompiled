@@ -15,9 +15,9 @@ final class al {
     final static boolean a(byte param0) {
         if (param0 != 2) {
           al.a(-100);
-          return ph.field_E == null ? mb.field_d : true;
+          return RegistrationAgreementPane.field_E == null ? mb.field_d : true;
         }
-        return ph.field_E == null ? mb.field_d : true;
+        return RegistrationAgreementPane.field_E == null ? mb.field_d : true;
     }
 
     public static void a(int param0) {

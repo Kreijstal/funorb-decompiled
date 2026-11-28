@@ -38,7 +38,7 @@ final class fm {
           return NetworkGameClient.field_D;
         }
         if (6 == param1) {
-          return ia.field_R;
+          return GuestPlayConfirmationForm.field_R;
         }
         if (7 == param1) {
           return sp.field_a;
@@ -151,18 +151,18 @@ final class fm {
         int var5Lifetime1;
         var24 = DungeonAssault.field_K;
         try {
-          if (null == uc.field_E ||
-            param2 * param1 != uc.field_E.field_c.length) {
+          if (null == StripedProgressWidget.field_E ||
+            param2 * param1 != StripedProgressWidget.field_E.field_c.length) {
             var4 = new int[64];
             for (var5 = 0; var5 < 64; var5++) {
               var4[var5] = mp.a(65793 * (var5 + 24), -2147483648);
             }
             var5_ref_cn = te.a(param1, param2, var4, 16, 8, 0.125);
-            uc.field_E = new ph(var5_ref_cn, te.b(param1, param2, 0.125));
+            StripedProgressWidget.field_E = new ph(var5_ref_cn, te.b(param1, param2, 0.125));
           }
           var4_int = -(param1 / 2) + 320;
           var5Lifetime1 = -(param2 / 2) + 240;
-          uc.field_E.b(var4_int, var5Lifetime1);
+          StripedProgressWidget.field_E.b(var4_int, var5Lifetime1);
           SoftwareRasterizer.fillRectangle(var4_int, var5Lifetime1, param1, param2, 6637335);
           DungeonAssaultScreen.b(var4_int, var5Lifetime1, param1, param2, 8421504, 128, 128);
           var6 = MatchingFieldValidator.field_o.field_d / 2;
@@ -208,7 +208,7 @@ final class fm {
                 SoftwareRasterizer.setClip(var20, var21, var22 + var20, var21 + var23);
                 en.a((byte) -1, var20, var22, 4 + var23, var21);
                 SoftwareRasterizer.resetClip();
-                rp.a(4, var22, (byte) 108, var20, var23, kc.field_S, var21);
+                rp.a(4, var22, (byte) 108, var20, var23, DialogMessagePane.field_S, var21);
               }
             }
           }

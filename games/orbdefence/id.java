@@ -40,7 +40,7 @@ final class id {
         oe.field_p = param0;
         bm.field_a = null;
         if (vh.field_j) {
-          oj.field_q.d((byte) -62);
+          oj.field_q.showConnectionFailure((byte) -62);
         } else {
           var1 = BufferedSocket.field_j;
           if (var1 > 0) {
@@ -51,7 +51,7 @@ final class id {
             }
             bm.field_a = DebouncedFieldValidator.a(new CharSequence[]{(CharSequence) ((Object) bm.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ci.field_p)}, (byte) -123);
           }
-          oj.field_q.q(4210752);
+          oj.field_q.closeDialog(4210752);
           DualLinkNode.d(-1);
         }
     }

@@ -243,7 +243,7 @@ final class BufferedSocket implements Runnable {
         IntrusiveDeque.field_d = ao.a(param3, "frame_top", 2993, "commonui");
         ej.field_e = ao.a(param3, "frame_bottom", 2993, "commonui");
         vk.field_a = wk.a(param3, 1, "jagex_logo_grey", "commonui");
-        bj.field_db = ao.a(param3, "button", 2993, "commonui");
+        ContentTransitionDialog.field_db = ao.a(param3, "button", 2993, "commonui");
         AccountNameAvailabilityValidator.field_p = AccountRegistrationPanel.a(param3, "validation", "commonui", (byte) -117);
         rc.field_a = (BitmapFont) ((Object) rc.a("commonui", 19131, "arezzo12", param3, param1));
         rb.field_b = (BitmapFont) ((Object) rc.a("commonui", 19131, "arezzo14", param3, param1));
@@ -274,7 +274,7 @@ final class BufferedSocket implements Runnable {
             var14 = var6[var9];
             rk[] var10 = var14;
             for (var11_int = 0; var11_int < var14.length; var11_int++) {
-              var14[var11_int] = ch.a(true, var19[var11_int], var5[var9]);
+              var14[var11_int] = ProgressDialog.a(true, var19[var11_int], var5[var9]);
             }
           }
           var9Lifetime1 = var17.field_t;
@@ -292,7 +292,7 @@ final class BufferedSocket implements Runnable {
           var12.bindAsRenderTarget();
           var17.drawOpaque(-var9Lifetime1, 0);
           fd.a(28773);
-          bj.field_db = new RgbSprite[]{var15, var12, var11};
+          ContentTransitionDialog.field_db = new RgbSprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "hn.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

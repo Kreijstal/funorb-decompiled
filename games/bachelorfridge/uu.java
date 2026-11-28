@@ -74,7 +74,7 @@ final class uu extends UiComponent {
           jha.field_g.drawRightAligned(dj.field_b, 288, 92, 16736256, -1);
         }
         SoftwareRasterizer.drawRectangleBorder(8, 10, 75, 83, 2, 16694784);
-        hga.field_U.a((byte) -27);
+        ProgressDialog.field_U.a((byte) -27);
         return var4;
     }
 

@@ -376,7 +376,7 @@ final class ul extends IntrusiveNode {
             for (var6 = 0; var5 > var6; var6++) {
               boolean decompiledFrameCompleted0 = true;
               if (param0.field_h == param1.field_i[param3][var6] &&
-                md.a(param1.field_j[param3][var6], -98)) {
+                StripedProgressWidget.a(param1.field_j[param3][var6], -98)) {
                 for (var7 = 0; var4_int > var7; var7++) {
                   if (param1.field_n[param3][var7 + var4_int * var6] != param0.field_m[var7]) {
                     decompiledFrameCompleted0 = false;
@@ -453,18 +453,18 @@ final class ul extends IntrusiveNode {
           LoginPanel.field_I = td.a("commonui", "frame_top", param0, 22306);
           we.field_i = td.a("commonui", "frame_bottom", param0, 22306);
           Lexicominos.field_I = df.a("commonui", "jagex_logo_grey", param0, (byte) -123);
-          uc.field_hb = td.a("commonui", "button", param0, 22306);
-          BufferedRandomAccessFile.field_b = uk.a("validation", "commonui", -909811167, param0);
+          ProgressMessageDialog.field_hb = td.a("commonui", "button", param0, 22306);
+          BufferedRandomAccessFile.field_b = ProgressDialog.a("validation", "commonui", -909811167, param0);
           ValidatedTextField.field_T = (BitmapFont) ((Object) MouseWheelInput.a("commonui", "arezzo12", false, param1, param0));
-          ql.field_Q = (BitmapFont) ((Object) MouseWheelInput.a("commonui", "arezzo14", false, param1, param0));
+          ResizableModalDialog.field_Q = (BitmapFont) ((Object) MouseWheelInput.a("commonui", "arezzo14", false, param1, param0));
           FullscreenFocusCanvas.field_c = (BitmapFont) ((Object) MouseWheelInput.a("commonui", "arezzo14bold", false, param1, param0));
           var18 = new RgbSprite(param2.getFileByName((byte) 127, "", "button.gif"), (java.awt.Component) ((Object) ug.field_y));
           nh.a("commonui", param0, false, "dropdown");
           var5 = PacketBuffer.a(param0, "commonui", true, "screen_options");
           ArchiveRequest.field_u = new IndexedSprite[4];
-          oc.field_d = new IndexedSprite[4];
+          FullscreenNoticeType.field_d = new IndexedSprite[4];
           uj.field_a = new IndexedSprite[4];
-          var6 = new IndexedSprite[][]{uj.field_a, ArchiveRequest.field_u, oc.field_d};
+          var6 = new IndexedSprite[][]{uj.field_a, ArchiveRequest.field_u, FullscreenNoticeType.field_d};
           var20 = new int[4][];
           var17 = var20;
           var7 = var17;
@@ -499,7 +499,7 @@ final class ul extends IntrusiveNode {
           var13.bindAsRenderTarget();
           var18.drawOpaque(-var9Lifetime1, 0);
           pd.a(-22949);
-          uc.field_hb = new RgbSprite[]{var16, var13, var11};
+          ProgressMessageDialog.field_hb = new RgbSprite[]{var16, var13, var11};
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ul.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

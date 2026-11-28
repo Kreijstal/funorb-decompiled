@@ -26,7 +26,7 @@ final class oc extends kl {
     private boolean field_x;
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5) {
-        kc.field_Q[lc.field_d] = param0;
+        DialogMessagePane.field_Q[lc.field_d] = param0;
         ol.field_k[lc.field_d] = lc.field_d;
         i.field_t[lc.field_d] = param5;
         if (!(param5 <= SectorCacheStore.field_d)) {
@@ -153,7 +153,7 @@ final class oc extends kl {
         oe.field_m.j(-63 + this.field_a, 21);
         ad.field_e.i(23, this.field_i - 38);
         ad.field_e.f(-39 + this.field_a, -38 + this.field_i);
-        SingleChildWidgetContainer.a(bb.field_q, cm.field_M, this.field_a >> 1, param0 + 1917623580, 14 + (IntrusiveNode.field_c.field_H + 36 >> 1), IntrusiveNode.field_c);
+        SingleChildWidgetContainer.a(bb.field_q, RegistrationAgreementPane.field_M, this.field_a >> 1, param0 + 1917623580, 14 + (IntrusiveNode.field_c.field_H + 36 >> 1), IntrusiveNode.field_c);
         jh.b();
     }
 
@@ -305,20 +305,20 @@ final class oc extends kl {
         var2 = Math.log(0.02) * -0.005;
         var4 = 0.5 / var2;
         var6 = (int)(-0.5 + var4 * (1.0 - Math.exp(-var2 * (double)this.field_C)) + (double)this.field_r);
-        var6 = var6 % hf.field_ib.field_c;
+        var6 = var6 % ContentTransitionDialog.field_ib.field_c;
         if (this.field_s) {
-          var6 = -1 + (hf.field_ib.field_c - var6);
+          var6 = -1 + (ContentTransitionDialog.field_ib.field_c - var6);
         }
-        var19 = hf.field_ib.a(108, var6, 108, 0);
+        var19 = ContentTransitionDialog.field_ib.a(108, var6, 108, 0);
         if (var19 != null) {
           var19.drawOpaque(10, 57);
         }
         var6Lifetime1 = (int)(-0.5 + (1.0 - Math.exp(-var2 * (double)this.field_C)) * var4 + (double)this.field_H);
-        var6Lifetime1 = var6Lifetime1 % hf.field_ib.field_c;
+        var6Lifetime1 = var6Lifetime1 % ContentTransitionDialog.field_ib.field_c;
         if (this.field_u) {
-          var6Lifetime1 = hf.field_ib.field_c + (-1 - var6Lifetime1);
+          var6Lifetime1 = ContentTransitionDialog.field_ib.field_c + (-1 - var6Lifetime1);
         }
-        var20 = hf.field_ib.a(108, var6Lifetime1, 108, 0);
+        var20 = ContentTransitionDialog.field_ib.a(108, var6Lifetime1, 108, 0);
         if (var20 != null) {
           var20.drawOpaque(518, 57);
         }
@@ -336,7 +336,7 @@ final class oc extends kl {
         var13 = 79 % ((41 - param0) / 63);
         var14 = 230 + (var11 + (60 - this.field_o.field_v >> 1));
         SoftwareRasterizer.fillRectangle(-8 + var10, var11 - 8, 232, 232, 0);
-        rp.a(4, 224, (byte) 108, var10 - 4, 224, kc.field_S, var11 - 4);
+        rp.a(4, 224, (byte) 108, var10 - 4, 224, DialogMessagePane.field_S, var11 - 4);
         if (this.field_C >= 100) {
           this.field_p.drawAnimation(216, var11, (byte) 102, var10, 216);
           if (this.field_C >= 250) {

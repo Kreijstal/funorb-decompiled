@@ -165,11 +165,11 @@ final class bd {
               var3 = var3 + context;
             }
             u.a(var3, 113);
-            var8 = qf.a(var3, 0, ":", "%3a");
-            var9 = qf.a(var8, 0, "@", "%40");
+            var8 = FullscreenNoticeType.a(var3, 0, ":", "%3a");
+            var9 = FullscreenNoticeType.a(var8, 0, "@", "%40");
             var4 = -44 % ((3 - obfuscationGuard) / 63);
-            var10 = qf.a(var9, 0, "&", "%26");
-            var11 = qf.a(var10, 0, "#", "%23");
+            var10 = FullscreenNoticeType.a(var9, 0, "&", "%26");
+            var11 = FullscreenNoticeType.a(var10, 0, "#", "%23");
             if (IndexedSpriteState.field_b == null) {
               return;
             }

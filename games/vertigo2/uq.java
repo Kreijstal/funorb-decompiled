@@ -54,7 +54,7 @@ final class uq {
             var8_int = 1;
             var9 = 0;
             while (true) {
-              if (gr.field_W.length <= var9) {
+              if (FullscreenStatusDialog.field_W.length <= var9) {
                 if (var8_int == 0) {
                   decompiledFrameCompleted2 = false;
                   break;
@@ -63,7 +63,7 @@ final class uq {
                 decompiledFrameCompleted1 = false;
                 break;
               }
-              var19 = gr.field_W[var9];
+              var19 = FullscreenStatusDialog.field_W[var9];
               var17 = var19;
               var10_ref_int__ = var17;
               var11 = 0;

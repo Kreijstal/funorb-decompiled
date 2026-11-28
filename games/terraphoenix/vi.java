@@ -3,7 +3,7 @@
  */
 final class vi extends IntrusiveNode {
     int field_m;
-    static na field_n;
+    static ProgressDialog field_n;
     int field_i;
     static int field_p;
     int field_l;

@@ -293,22 +293,22 @@ final class vg {
         if (var5 == 0 &&
           uc.field_d) {
           if (!IntrusiveDeque.b((byte) 120)) {
-            if (null == sh.field_c) {
+            if (null == FullscreenNoticeType.field_c) {
               uc.field_d = false;
               decompiledFrameRemainder0 = false;
             }
             else {
-              if (!sh.field_c.field_k) {
+              if (!FullscreenNoticeType.field_c.field_k) {
                 uc.field_d = false;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (null == sh.field_c.field_l) {
+                if (null == FullscreenNoticeType.field_c.field_l) {
                   uc.field_d = false;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  if (sh.field_c.field_l[1][0] != 0) {
+                  if (FullscreenNoticeType.field_c.field_l[1][0] != 0) {
                     uc.field_d = false;
                     decompiledFrameRemainder0 = false;
                   }
@@ -479,7 +479,7 @@ final class vg {
                           } else {
                             qf.field_d = 2;
                           }
-                          sh.field_c = null;
+                          FullscreenNoticeType.field_c = null;
                         }
                       }
                       wc.field_d = 0;
@@ -614,7 +614,7 @@ final class vg {
               }
               if (var4 != 0) {
                 vk.a((byte) 105, FullscreenFocusCanvas.field_d[0]);
-                sh.field_c = null;
+                FullscreenNoticeType.field_c = null;
                 ArchiveRequest.field_t = null;
                 rc.a(true, (byte) -13);
                 wc.field_d = 0;
@@ -628,7 +628,7 @@ final class vg {
               }
               if (var4 != 0) {
                 vk.a((byte) 91, FullscreenFocusCanvas.field_d[0]);
-                sh.field_c = null;
+                FullscreenNoticeType.field_c = null;
                 ArchiveRequest.field_t = null;
                 rc.a(false, (byte) -13);
                 wc.field_d = 0;
@@ -645,7 +645,7 @@ final class vg {
           this.field_d = 62;
         }
         if (ResourceArchive.field_g[this.field_i]) {
-          return jk.field_x.a(true);
+          return GuestPlayConfirmationForm.field_x.a(true);
         }
         return fd.field_b[this.field_i];
     }
@@ -811,11 +811,11 @@ final class vg {
           if (IntrusiveDeque.b((byte) 93)) {
             var3 = tj.field_t;
           } else {
-            if (sh.field_c == null) {
-              sh.field_c = NetworkArchiveRequest.a(29, (byte) -10, 3, 10, 1);
+            if (FullscreenNoticeType.field_c == null) {
+              FullscreenNoticeType.field_c = NetworkArchiveRequest.a(29, (byte) -10, 3, 10, 1);
             }
             var5_ref_mi = IntrusiveNode.field_d;
-            var6 = sh.field_c;
+            var6 = FullscreenNoticeType.field_c;
             var7 = DisplayNameSelectionPanel.field_y;
             if (var6.field_k) {
               if (var6.field_m != null) {
@@ -911,8 +911,8 @@ final class vg {
                 if (this.field_i == 5) {
                   var3 = 130 + param1;
                   var4 = 4 + IntrusiveNode.field_d.field_t + IntrusiveNode.field_d.field_D;
-                  var5 = var4 * IntrusiveNode.field_d.lineCount(sd.field_Q, 341);
-                  IntrusiveNode.field_d.drawParagraph(sd.field_Q, 150, var3, 341, var5, 0, -1, 1, 0, var4);
+                  var5 = var4 * IntrusiveNode.field_d.lineCount(ProgressDialog.field_Q, 341);
+                  IntrusiveNode.field_d.drawParagraph(ProgressDialog.field_Q, 150, var3, 341, var5, 0, -1, 1, 0, var4);
                   var3 = var3 + var5;
                   stackIn_10_0 = true;
                   stackIn_11_1 = (hc.field_u == 0) ? false : true;
@@ -922,7 +922,7 @@ final class vg {
                   var5Lifetime1 = var4 * IntrusiveNode.field_d.lineCount(var8, 341);
                   IntrusiveNode.field_d.drawParagraph(var8, 150, var3, 341, var5Lifetime1, 0, -1, 1, 0, var4);
                   var3 = var3 + var5Lifetime1;
-                  var3 = var3 + (jk.field_x.a(true) + var4);
+                  var3 = var3 + (GuestPlayConfirmationForm.field_x.a(true) + var4);
                   stackIn_16_0 = -85;
                   stackIn_16_1 = false;
                   stackIn_17_2 = (SecondaryNodeDeque.field_g == 0) ? false : true;
@@ -931,7 +931,7 @@ final class vg {
                   var5Lifetime2 = var4 * IntrusiveNode.field_d.lineCount(var9, 341);
                   IntrusiveNode.field_d.drawParagraph(var9, 150, var3, 341, var5Lifetime2, 0, -1, 1, 0, var4);
                   var3 = var3 + var5Lifetime2;
-                  var3 = var3 + jk.field_x.a(true);
+                  var3 = var3 + GuestPlayConfirmationForm.field_x.a(true);
                   stackIn_22_0 = false;
                   stackIn_23_1 = (hc.field_u == 0) ? false : true;
                   stackIn_25_2 = -106;

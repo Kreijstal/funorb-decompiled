@@ -16,7 +16,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
     static PlatformTaskDispatcher field_N;
     private ValidatedTextField field_W;
     private ValidatedTextField field_U;
-    static jg field_O;
+    static BirthDateChatEnableForm field_O;
     static String field_X;
 
     public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
@@ -239,7 +239,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
           }
           var4_int = param0.getGroupIdByName(param2, 0);
           var5 = param0.getFileIdByName(param1, 7, var4_int);
-          stackIn_4_0 = jg.a((byte) -96, var5, param0, var4_int);
+          stackIn_4_0 = BirthDateChatEnableForm.a((byte) -96, var5, param0, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

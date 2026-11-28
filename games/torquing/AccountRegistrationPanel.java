@@ -246,7 +246,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         var3 = var3 + (this.a(ug.field_a, var3, 170, this.field_L, bj.field_K, true) + 5);
         var3 = var3 + (5 + this.a(de.field_b, var3, 170, this.field_E, ConfirmedEmailAvailabilityValidator.field_l, true));
         var3 = var3 + this.a(170, DualLinkNode.field_m, var3, this.field_I, 3);
-        LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, -90 + this.width, 25, this.field_F, true, -120 + this.width, 5, sp.field_R, 11579568, ce.field_a);
+        LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, -90 + this.width, 25, this.field_F, true, -120 + this.width, 5, ProgressDialog.field_R, 11579568, ce.field_a);
         this.addChild(var4, -6938);
         var3 = var3 + var4.height;
         DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(TranslucentSpriteLayer.field_e, 0, 0, 0, 0, 16777215, -1, 0, 0, TranslucentSpriteLayer.field_e.field_x, -1, 2147483647, true);

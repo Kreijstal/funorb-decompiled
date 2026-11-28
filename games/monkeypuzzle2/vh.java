@@ -197,10 +197,10 @@ final class vh extends ButtonWidget {
         try {
           int var3_int = -14 % ((16 - param2) / 63);
           if (me.field_f != null) {
-            me.field_f.g((byte) -75);
+            me.field_f.closeDialog((byte) -75);
           }
           j.field_e = new LoginPanel(param0, param1, false, true, true);
-          jh.field_C.c((byte) 67, j.field_e);
+          StripedProgressWidget.field_C.replaceContent((byte) 67, j.field_e);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "vh.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

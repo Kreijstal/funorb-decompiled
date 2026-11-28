@@ -82,14 +82,14 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         dc.field_a.closeAllDialogs(6);
         if (param0 == -34) {
           if (d.field_r == null) {
-            d.field_r = new sp(dc.field_a, LevelRun.field_u);
+            d.field_r = new ProgressDialog(dc.field_a, LevelRun.field_u);
           }
           dc.field_a.showDialog(d.field_r, (byte) 112);
           return;
         }
         field_P = (String) null;
         if (d.field_r == null) {
-          d.field_r = new sp(dc.field_a, LevelRun.field_u);
+          d.field_r = new ProgressDialog(dc.field_a, LevelRun.field_u);
         }
         dc.field_a.showDialog(d.field_r, (byte) 112);
     }

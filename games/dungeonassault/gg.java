@@ -105,10 +105,10 @@ final class gg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != a.field_n) {
-            a.field_n.j((byte) 51);
+            a.field_n.closeDialog((byte) 51);
           }
           wo.field_e = new LoginPanel(param2, param1, false, true, true);
-          ta.field_a.b(1, wo.field_e);
+          ta.field_a.replaceContent(1, wo.field_e);
           if (param0 < -88) {
             return;
           }
@@ -173,13 +173,13 @@ final class gg {
         }
         if (param0 == 0) {
           if (a.field_n != null) {
-            a.field_n.j((byte) 56);
+            a.field_n.closeDialog((byte) 56);
           }
           var1 = dm.a(param0 + 121);
           wo.field_e = new LoginPanel(var1, (String) null, true, false, false);
           lg.field_w.showDialog(ta.field_a, -1);
-          ta.field_a.b(1, wo.field_e);
-          ta.field_a.h((byte) 59);
+          ta.field_a.replaceContent(1, wo.field_e);
+          ta.field_a.finishResize((byte) 59);
           return;
         }
     }

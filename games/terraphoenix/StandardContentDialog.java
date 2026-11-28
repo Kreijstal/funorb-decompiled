@@ -1,0 +1,93 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.io.*;
+
+final class StandardContentDialog extends ContentTransitionDialog {
+    static Sprite field_ib;
+    static h field_kb;
+    static String[] field_jb;
+    static Sprite field_hb;
+    static int field_gb;
+
+    final static Archive a(int param0, int param1, boolean param2, boolean param3, int param4, boolean param5) {
+        try {
+          Object var6 = null;
+          Object var7 = null;
+          tb var8 = null;
+          Archive stackIn_17_0 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            if (param0 != 30) {
+              field_kb = (h) null;
+            }
+            var6 = null;
+            var7 = null;
+            if (mc.field_b.field_r != null) {
+              TutorialController.field_x = new BufferedRandomAccessFile(mc.field_b.field_r, 5200, 0);
+              mc.field_b.field_r = null;
+              var6 = new SectorCacheStore(255, TutorialController.field_x, new BufferedRandomAccessFile(mc.field_b.field_q, 12000, 0), 2097152);
+            }
+            if (TutorialController.field_x != null) {
+              if (null == ProxyAuthenticationRequiredException.field_b) {
+                ProxyAuthenticationRequiredException.field_b = new BufferedRandomAccessFile[mc.field_b.field_s.length];
+              }
+              if (null == ProxyAuthenticationRequiredException.field_b[param4]) {
+                ProxyAuthenticationRequiredException.field_b[param4] = new BufferedRandomAccessFile(mc.field_b.field_s[param4], 12000, 0);
+                mc.field_b.field_s[param4] = null;
+              }
+              var7 = new SectorCacheStore(param4, TutorialController.field_x, ProxyAuthenticationRequiredException.field_b[param4], 2097152);
+            }
+            var8 = i.field_a.a(param2, param4, (SectorCacheStore) (var6), (SectorCacheStore) (var7), 115);
+            if (param3) {
+              var8.c((byte) 2);
+            }
+            stackIn_17_0 = new Archive(var8, param5, param1);
+            return stackIn_17_0;
+          } catch (java.io.IOException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var6 = (IOException) (Object) decompiledCaughtException;
+            throw new RuntimeException(((IOException) (var6)).toString());
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    public static void clearDeclaredStaticReferences(boolean param0) {
+        if (param0) {
+          field_kb = null;
+          field_jb = null;
+          field_hb = null;
+          field_ib = null;
+          return;
+        }
+        field_kb = (h) null;
+        field_kb = null;
+        field_jb = null;
+        field_hb = null;
+        field_ib = null;
+    }
+
+    final void replaceContent(UiWidget param0, int param1) {
+        try {
+          super.replaceContent(param0, -31);
+          if (param1 > -21) {
+            StandardContentDialog.a(46, 78, false, false, -28, false);
+          }
+        } catch (RuntimeException runtimeException) {
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "jg.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    StandardContentDialog(ModalDialogHost param0, UiWidget param1) {
+        super(param0, param1, 33, 20, 30);
+    }
+
+    static {
+        field_jb = new String[]{"", "", "We believe that we could modify the alien's armoured suits to fit our soldiers and provide them with much better protection against the aliens' weapons.", "By implanting a shield module within a suit of battle armour a much better form of protection could be created to keep our soldiers alive."};
+        field_ib = new Sprite(540, 140);
+    }
+}

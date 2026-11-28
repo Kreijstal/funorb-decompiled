@@ -273,7 +273,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("create_ineligible", 24);
                 if (null != var2) {
-                  dg.field_sb = PcmResampler.a(122, var2);
+                  ProgressMessageDialog.field_sb = PcmResampler.a(122, var2);
                 }
                 var2 = vj.a("usernameprompt", 24);
                 if (var2 != null) {
@@ -1228,7 +1228,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("playfreeversion", 24);
                 if (var2 != null) {
-                  pe.field_gb = PcmResampler.a(124, var2);
+                  ProgressDialog.field_gb = PcmResampler.a(124, var2);
                 }
                 var2 = vj.a("reloadgame", 24);
                 if (var2 != null) {
@@ -1670,7 +1670,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("login_username", 24);
                 if (null != var2) {
-                  dg.field_nb = PcmResampler.a(127, var2);
+                  ProgressMessageDialog.field_nb = PcmResampler.a(127, var2);
                 }
                 var2 = vj.a("login_email", 24);
                 if (var2 != null) {
@@ -1978,11 +1978,11 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("waitingfor_levels", 24);
                 if (null != var2) {
-                  dg.field_rb = PcmResampler.a(123, var2);
+                  ProgressMessageDialog.field_rb = PcmResampler.a(123, var2);
                 }
                 var2 = vj.a("waitingfor_extradata", 24);
                 if (null != var2) {
-                  dg.field_qb = PcmResampler.a(125, var2);
+                  ProgressMessageDialog.field_qb = PcmResampler.a(125, var2);
                 }
                 var2 = vj.a("waitingfor_languages", 24);
                 if (null != var2) {
@@ -2286,7 +2286,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("cont", 24);
                 if (null != var2) {
-                  jf.field_e = PcmResampler.a(125, var2);
+                  FullscreenNoticeType.field_e = PcmResampler.a(125, var2);
                 }
                 var2 = vj.a("continue_spectating", 24);
                 if (null != var2) {
@@ -3012,7 +3012,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("pleasewait_dotdotdot", 24);
                 if (null != var2) {
-                  jf.field_h = PcmResampler.a(124, var2);
+                  FullscreenNoticeType.field_h = PcmResampler.a(124, var2);
                 }
                 var2 = vj.a("serviceunavailable", 24);
                 if (var2 != null) {

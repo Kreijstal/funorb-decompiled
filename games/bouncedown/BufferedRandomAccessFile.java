@@ -666,10 +666,10 @@ final class BufferedRandomAccessFile {
           var7Lifetime1 = 0;
           var8Lifetime1 = AlphaWidgetContainer.a(var6Lifetime1, true) >> 8;
           var9Lifetime1 = ProxyAuthenticationRequiredException.a(-822, var6Lifetime1) >> 8;
-          if (uc.field_C != -1 &&
-            ll.field_y != -1) {
-            var7Lifetime1 = -320 + uc.field_C;
-            var8Lifetime1 = 240 - ll.field_y;
+          if (DialogMessagePane.field_C != -1 &&
+            StripedProgressWidget.field_y != -1) {
+            var7Lifetime1 = -320 + DialogMessagePane.field_C;
+            var8Lifetime1 = 240 - StripedProgressWidget.field_y;
             var9Lifetime1 = -128;
           }
           var10 = 256.0 / Math.sqrt((double)(var7Lifetime1 * var7Lifetime1 + var8Lifetime1 * var8Lifetime1 + var9Lifetime1 * var9Lifetime1));

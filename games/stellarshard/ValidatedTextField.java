@@ -39,7 +39,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         if (param0 != 3690) {
           return (String) null;
         }
-        nc.b((byte) 98, ni.field_e - this.field_O + this.field_p, KeyHandler.field_a);
+        StripedProgressWidget.b((byte) 98, ni.field_e - this.field_O + this.field_p, KeyHandler.field_a);
         return this.field_x;
     }
 

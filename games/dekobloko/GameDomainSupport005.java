@@ -111,7 +111,7 @@ final class GameDomainSupport005 {
             MixedSupport028.resourceArchiveState0004 != null &&
             MixedSupport028.resourceArchiveState0004.ensureIndexLoaded((byte) 121) &&
             MixedSupport028.resourceArchiveState0004.tryLoadGroupByName("benefits", (byte) 102)) {
-            UiComponentPart008.rgbSpriteState0012 = DropTargetWidgetContainer.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "headline", "benefits", integerArgument1 + 7802);
+            DialogMessagePane.rgbSpriteState0012 = DropTargetWidgetContainer.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "headline", "benefits", integerArgument1 + 7802);
             MixedSupport054.rgbSpriteState0019 = DropTargetWidgetContainer.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "blurbpane", "benefits", 8192);
             RichTextLayout.rgbSpriteState0015 = DropTargetWidgetContainer.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "button", "benefits", 8192);
             ResourceSupport004.rgbSpriteState0043 = DropTargetWidgetContainer.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "signup_text", "benefits", 8192);
@@ -268,10 +268,10 @@ final class GameDomainSupport005 {
           if (integerArgument1 != 390) {
             GameDomainSupport005.clearStaticReferences((byte) 100);
           }
-          SoftwareRaster.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, UiComponentPart026.integerState0673, SceneWidget.integerState0909);
-          SoftwareRaster.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, UiComponentPart026.integerState0673, SceneWidget.integerState0909);
-          if (null != UiComponentPart008.rgbSpriteState0012) {
-            UiComponentPart008.rgbSpriteState0012.draw(0, 0);
+          SoftwareRaster.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, ProgressDialog.integerState0673, SceneWidget.integerState0909);
+          SoftwareRaster.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, ProgressDialog.integerState0673, SceneWidget.integerState0909);
+          if (null != DialogMessagePane.rgbSpriteState0012) {
+            DialogMessagePane.rgbSpriteState0012.draw(0, 0);
           }
           if (null != MixedSupport054.rgbSpriteState0019) {
             MixedSupport054.rgbSpriteState0019.draw(0, 0);

@@ -687,7 +687,7 @@ final class fq extends ea implements Cloneable {
             if (2 != this.field_u) {
               var4 = q.field_c[this.field_u];
               var5 = pl.field_s;
-              var6 = en.field_F;
+              var6 = ResizableModalDialog.field_F;
             } else {
               var6 = ModalDialogHost.field_E;
               var4 = g.field_c;

@@ -20,9 +20,9 @@ final class PasswordValidator extends TextFieldValidator {
           SoftwareRasterizer.setClip(80, 0, 560, 480);
           for (var1_int = 0; FrameTimer.field_a > var1_int; var1_int++) {
             if (n.field_d[var1_int][0] > 0.0f) {
-              MouseWheelInput.field_a[ul.field_O[var1_int]][AccountNameAvailabilityValidator.field_r[var1_int]].draw((int)BoundedRandomAccessFile.field_f[var1_int][0], (int)BoundedRandomAccessFile.field_f[var1_int][1]);
+              MouseWheelInput.field_a[ProgressDialog.field_O[var1_int]][AccountNameAvailabilityValidator.field_r[var1_int]].draw((int)BoundedRandomAccessFile.field_f[var1_int][0], (int)BoundedRandomAccessFile.field_f[var1_int][1]);
             } else {
-              MouseWheelInput.field_a[ul.field_O[var1_int]][AccountNameAvailabilityValidator.field_r[var1_int]].drawFlippedHorizontal((int)BoundedRandomAccessFile.field_f[var1_int][0], (int)BoundedRandomAccessFile.field_f[var1_int][1]);
+              MouseWheelInput.field_a[ProgressDialog.field_O[var1_int]][AccountNameAvailabilityValidator.field_r[var1_int]].drawFlippedHorizontal((int)BoundedRandomAccessFile.field_f[var1_int][0], (int)BoundedRandomAccessFile.field_f[var1_int][1]);
             }
           }
           SoftwareRasterizer.setClip(0, 0, 640, 480);
@@ -64,7 +64,7 @@ final class PasswordValidator extends TextFieldValidator {
     }
 
     final static void e(int param0) {
-        if (!ha.field_db) {
+        if (!ProgressMessageDialog.field_db) {
           throw new IllegalStateException();
         }
         cf.field_c = true;

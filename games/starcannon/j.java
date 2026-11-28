@@ -32,7 +32,7 @@ final class j {
           return n.field_f;
         }
         if (!bf.field_y.tryLoadGroupByName("commonui", -9883)) {
-          return ae.field_a + " - " + bf.field_y.getGroupLoadPercentByName("commonui", (byte) 98) + "%";
+          return FullscreenNoticeType.field_a + " - " + bf.field_y.getGroupLoadPercentByName("commonui", (byte) 98) + "%";
         }
         if (!Bzip2State.field_k.ensureIndexLoaded((byte) 106)) {
           return s.field_g;

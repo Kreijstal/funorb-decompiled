@@ -177,18 +177,18 @@ final class BoundedRandomAccessFile {
           CipherPacketBuffer var5 = null;
           int stackIn_13_0 = 0;
           Throwable decompiledCaughtException = null;
-          if (null == ec.field_P) {
-            ec.field_P = pj.field_c.requestDirectSocket(ResourceArchive.field_h, td.field_b, 0);
+          if (null == StandardContentDialog.field_P) {
+            StandardContentDialog.field_P = pj.field_c.requestDirectSocket(ResourceArchive.field_h, td.field_b, 0);
           }
-          if (ec.field_P.status == 0) {
+          if (StandardContentDialog.field_P.status == 0) {
             return false;
           }
           dupTemp$1 = fa.correctedCurrentTimeMillis(73);
           wa.field_e = dupTemp$1;
           qe.field_k = dupTemp$1;
-          if (ec.field_P.status == 1) {
+          if (StandardContentDialog.field_P.status == 1) {
             try {
-              NodeHashTableIterator.field_a = new BufferedSocket((java.net.Socket) (ec.field_P.result), pj.field_c);
+              NodeHashTableIterator.field_a = new BufferedSocket((java.net.Socket) (StandardContentDialog.field_P.result), pj.field_c);
               var4 = jc.field_g;
               var5 = var4;
               hh.field_p.position = 0;
@@ -204,21 +204,21 @@ final class BoundedRandomAccessFile {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
               pj.field_a = ModalDialog.field_C;
-              ec.field_P = null;
+              StandardContentDialog.field_P = null;
               if (param1 > 117) {
                 return true;
               }
               BoundedRandomAccessFile.d(70);
               return true;
             }
-            ec.field_P = null;
+            StandardContentDialog.field_P = null;
             if (param1 <= 117) {
               BoundedRandomAccessFile.d(70);
             }
             return true;
           }
           pj.field_a = ModalDialog.field_C;
-          ec.field_P = null;
+          StandardContentDialog.field_P = null;
           if (param1 > 117) {
             return true;
           }

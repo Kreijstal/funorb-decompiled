@@ -73,7 +73,7 @@ final class wc {
             for (var8Lifetime1 = param3; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
               var9Lifetime1 = AlphaWidgetContainer.field_G[var8Lifetime1];
               var10Lifetime1 = AlphaWidgetContainer.field_G[1 + var8Lifetime1];
-              if (nh.a(param0, 0, var9Lifetime1, var10Lifetime1)) {
+              if (FullscreenStatusDialog.a(param0, 0, var9Lifetime1, var10Lifetime1)) {
                 AlphaWidgetContainer.field_G[var8Lifetime1] = var10Lifetime1;
                 AlphaWidgetContainer.field_G[1 + var8Lifetime1] = var9Lifetime1;
               }

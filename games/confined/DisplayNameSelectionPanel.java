@@ -186,7 +186,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
           if (param0 >= -14) {
             field_L = (int[][]) null;
           }
-          r.a((byte) 93, false, sj.field_kb);
+          r.a((byte) 93, false, ContentTransitionDialog.field_kb);
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "bf.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

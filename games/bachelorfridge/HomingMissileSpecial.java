@@ -31,7 +31,7 @@ final class HomingMissileSpecial extends SpecialOrder {
 
     final static void a(int param0, byte param1) {
         int var3 = 0;
-        BitPacketBuffer var2 = sja.field_fb;
+        BitPacketBuffer var2 = StandardContentDialog.field_fb;
         int var3Lifetime1;
         var2.writeCipheredByte(param0, (byte) 127);
         var2.position = var2.position + 1;

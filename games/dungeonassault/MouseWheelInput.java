@@ -27,7 +27,7 @@ abstract class MouseWheelInput {
     abstract void attach(byte param0, java.awt.Component param1);
 
     final static boolean a(int param0, byte param1) {
-        int var2 = nk.field_Fb[param0];
+        int var2 = ProgressMessageDialog.field_Fb[param0];
         if (var2 == 18) {
           return 0 < mo.field_e ? true : false;
         }

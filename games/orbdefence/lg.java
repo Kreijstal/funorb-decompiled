@@ -60,7 +60,7 @@ final class lg {
           if (null != MatchingFieldValidator.field_r) {
             uk.field_b.writePrefixedString(false, MatchingFieldValidator.field_r);
           }
-          cg.a(uk.field_b, pc.field_W, 0, nc.field_ab, pg.field_c);
+          cg.a(uk.field_b, StandardContentDialog.field_W, 0, nc.field_ab, pg.field_c);
           uk.field_b.backpatchShortLength(uk.field_b.position - var5_int, -2);
           bh.a(-1, param0 - 4);
           return;

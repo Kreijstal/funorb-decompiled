@@ -21,7 +21,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         if (param1 != -93) {
           return -30;
         }
-        int var4 = nk.field_Fb[param0];
+        int var4 = ProgressMessageDialog.field_Fb[param0];
         if (var4 == 27) {
           var3 = of.field_j.field_y;
         }
@@ -33,7 +33,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
           String var2 = (String) null;
           InstructionsScreen.a(105, -61, (String) null, 118);
         }
-        return cm.field_R == null ? AwtRasterBuffer.field_h : (java.awt.Canvas) ((Object) cm.field_R);
+        return RegistrationAgreementPane.field_R == null ? AwtRasterBuffer.field_h : (java.awt.Canvas) ((Object) RegistrationAgreementPane.field_R);
     }
 
     private final int a(boolean param0, int param1) {
@@ -41,7 +41,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         if (param0) {
           return -14;
         }
-        var3 = nk.field_Fb[param1];
+        var3 = ProgressMessageDialog.field_Fb[param1];
         if (25 != var3 &&
           var3 != 24 &&
           var3 != 26) {
@@ -58,7 +58,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         int var5;
         int var6;
         var6 = DungeonAssault.field_K;
-        for (var4 = 0; var4 < nk.field_Fb.length; var4++) {
+        for (var4 = 0; var4 < ProgressMessageDialog.field_Fb.length; var4++) {
           var5 = this.a(false, var4);
           if (MouseWheelInput.a(var4, (byte) -124) &&
             param2 >= this.a((byte) -4, var4) &&
@@ -87,7 +87,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         int var12;
         int[] var13;
         int[] var14;
-        var4 = nk.field_Fb[param1];
+        var4 = ProgressMessageDialog.field_Fb[param1];
         var5 = this.getMenuActionLabel(-13, var4);
         var6 = IntrusiveNode.field_c.stringWidth(var5);
         var7 = this.a((byte) -4, param1);
@@ -95,7 +95,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         var9 = this.a(false, param1);
         var10 = var8 - (-var7 + var6) >> 1;
         if (!param0) {
-          stackIn_3_0 = cm.field_M;
+          stackIn_3_0 = RegistrationAgreementPane.field_M;
         } else {
           stackIn_3_0 = ml.field_b;
         }
@@ -140,14 +140,14 @@ final class InstructionsScreen extends DungeonAssaultScreen {
               continue;
             }
             this.handleScreenKeyPress();
-            if (nk.field_Jb.field_b == -1) {
+            if (ProgressMessageDialog.field_Jb.field_b == -1) {
               continue;
             }
-            this.b(false, 240, nk.field_Jb.field_b);
+            this.b(false, 240, ProgressMessageDialog.field_Jb.field_b);
           }
-          nk.field_Jb.a(-7734, this.findInstructionsMenuItemAt(AchievementIconEntry.field_k, (byte) 116, lc.field_c), this.findInstructionsMenuItemAt(eh.field_h, (byte) 116, hj.field_S));
-          if (-1 != nk.field_Jb.field_b) {
-            this.b(true, 240, nk.field_Jb.field_b);
+          ProgressMessageDialog.field_Jb.a(-7734, this.findInstructionsMenuItemAt(AchievementIconEntry.field_k, (byte) 116, lc.field_c), this.findInstructionsMenuItemAt(eh.field_h, (byte) 116, hj.field_S));
+          if (-1 != ProgressMessageDialog.field_Jb.field_b) {
+            this.b(true, 240, ProgressMessageDialog.field_Jb.field_b);
           }
         }
     }
@@ -158,14 +158,14 @@ final class InstructionsScreen extends DungeonAssaultScreen {
 
     final void initializeScreen(boolean param0) {
         super.initializeScreen(param0);
-        int var2 = nk.field_Jb.field_i <= 0 ? -1 : 1;
-        if (nk.field_Jb.field_b != -1) {
-          var2 = nk.field_Jb.field_b;
+        int var2 = ProgressMessageDialog.field_Jb.field_i <= 0 ? -1 : 1;
+        if (ProgressMessageDialog.field_Jb.field_b != -1) {
+          var2 = ProgressMessageDialog.field_Jb.field_b;
         }
-        nk.field_Jb.a(false, param0, var2, this.findInstructionsMenuItemAt(eh.field_h, (byte) 116, hj.field_S));
+        ProgressMessageDialog.field_Jb.a(false, param0, var2, this.findInstructionsMenuItemAt(eh.field_h, (byte) 116, hj.field_S));
         this.field_D = new rh(58, 394, 80, 160, 255, 197376, 240);
         this.field_s = new rh(580, 394, 80, 160, 255, 197376, 240);
-        this.field_w = new tf[nk.field_Jb.field_i];
+        this.field_w = new tf[ProgressMessageDialog.field_Jb.field_i];
         this.field_z = new kl();
         jh.a(this.field_e);
         bf.a(false, -128);
@@ -215,9 +215,9 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         super.renderScreen(param0);
         this.field_e.b(0, 0);
         am.field_a.draw(320 - am.field_a.field_E / 2, 48);
-        for (var2 = 0; var2 < -1 + nk.field_Jb.field_i; var2++) {
+        for (var2 = 0; var2 < -1 + ProgressMessageDialog.field_Jb.field_i; var2++) {
           if (MouseWheelInput.a(var2, (byte) -124)) {
-            stackIn_9_1 = (var2 == nk.field_Jb.field_b) && (!kn.field_e);
+            stackIn_9_1 = (var2 == ProgressMessageDialog.field_Jb.field_b) && (!kn.field_e);
             this.c(stackIn_9_1, -33, var2);
           }
         }
@@ -226,11 +226,11 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         if (!kn.field_e) {
           InstructionsScreen.applyScreenLighting();
         }
-        for (var2Lifetime1 = 0; var2Lifetime1 < -1 + nk.field_Jb.field_i; var2Lifetime1++) {
+        for (var2Lifetime1 = 0; var2Lifetime1 < -1 + ProgressMessageDialog.field_Jb.field_i; var2Lifetime1++) {
           if (MouseWheelInput.a(var2Lifetime1, (byte) -124)) {
             stackIn_22_1 = 1;
             stackIn_22_2 = var2Lifetime1;
-            if (nk.field_Jb.field_b == var2Lifetime1 &&
+            if (ProgressMessageDialog.field_Jb.field_b == var2Lifetime1 &&
               !kn.field_e) {
               stackIn_23_0 = this;
               stackIn_23_3 = true;
@@ -251,10 +251,10 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         wk.a(552, DropTargetWidgetContainer.a(mo.field_e, 77), IntrusiveNode.field_c, 366, ag.field_c, 31139);
         if (kn.field_e) {
           this.field_z.a((byte) -64);
-          var2Lifetime2 = nk.field_Jb.field_i - 1;
+          var2Lifetime2 = ProgressMessageDialog.field_Jb.field_i - 1;
           InstructionsScreen.applyScreenLighting();
           this.field_z.b(106);
-          stackIn_33_1 = (nk.field_Jb.field_b == var2Lifetime2);
+          stackIn_33_1 = (ProgressMessageDialog.field_Jb.field_b == var2Lifetime2);
           this.a(stackIn_33_1, var2Lifetime2, 0);
           var3 = null;
           var4 = null;
@@ -284,7 +284,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
             var6 = 77;
             var8 = 486;
           }
-          pi.a(0, (String) (var4), cm.field_M, 30 + var6, IntrusiveNode.field_c, var5 + var7);
+          pi.a(0, (String) (var4), RegistrationAgreementPane.field_M, 30 + var6, IntrusiveNode.field_c, var5 + var7);
           var7 = var7 + (5 + var5);
           la.field_b.drawParagraph((String) (var3), 30 + var6, var7, var8 - 60, -30 + var9, 16777215, -1, 0, 0, la.field_b.field_H + la.field_b.field_E);
         }
@@ -309,7 +309,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         SoftwareRasterizer.drawRectangleOutline(-4 + var4, -6 + var6, 8 + (var5 - var4), 8 + var7, 0);
         InstructionsScreen.b(var4, var6 - 2, -var4 + var5, var7, 8421504, 128, 128);
         var9 = 106 % ((param1 - 71) / 37);
-        var8 = nk.field_Fb[param2];
+        var8 = ProgressMessageDialog.field_Fb[param2];
         if (var8 != 25) {
           if (var8 != 24) {
             stackIn_8_0 = (var8 == 26) ? 1 : 0;
@@ -321,9 +321,9 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         }
         var10 = stackIn_8_0;
         if (var10 != 0) {
-          rp.a(4, -var4 + var5, (byte) 108, var4, var7, kc.field_V, -2 + var6);
+          rp.a(4, -var4 + var5, (byte) 108, var4, var7, DialogMessagePane.field_V, -2 + var6);
         } else {
-          rp.a(4, var5 - var4, (byte) 108, var4, var7, kc.field_S, var6 - 2);
+          rp.a(4, var5 - var4, (byte) 108, var4, var7, DialogMessagePane.field_S, var6 - 2);
         }
         InstructionsScreen.a(var4, var6 - 2, var5 - var4, var7, 224, 64, 3, 128);
     }
@@ -345,7 +345,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
     }
 
     private final void b(int param0, int param1) {
-        int var3 = nk.field_Fb[param0];
+        int var3 = ProgressMessageDialog.field_Fb[param0];
         String var4 = this.getMenuActionLabel(-13, var3);
         int var5 = IntrusiveNode.field_c.stringWidth(var4);
         int var6 = IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_H;
@@ -365,7 +365,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         if (param0 != -4) {
           this.a(true, -67, -118);
         }
-        int var3 = nk.field_Fb[param1];
+        int var3 = ProgressMessageDialog.field_Fb[param1];
         if (var3 == 27) {
           return 640 - of.field_j.field_y >> 1;
         }
@@ -384,27 +384,27 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         int var1Lifetime2;
         int var1Lifetime2Lifetime1;
         var2 = DungeonAssault.field_K;
-        if (!nk.field_Jb.b((byte) -84) &&
+        if (!ProgressMessageDialog.field_Jb.b((byte) -84) &&
           !kn.field_e) {
           if (96 == mm.field_t) {
-            var1 = nk.field_Jb.field_b;
+            var1 = ProgressMessageDialog.field_Jb.field_b;
             while (true) {
               var1--;
               if (var1 < 0) {
-                var1 = nk.field_Jb.field_i - 1;
+                var1 = ProgressMessageDialog.field_Jb.field_i - 1;
               }
               if (!MouseWheelInput.a(var1, (byte) -124)) {
                 continue;
               }
               break;
             }
-            nk.field_Jb.b(var1, 3);
+            ProgressMessageDialog.field_Jb.b(var1, 3);
           }
           if (mm.field_t == 97) {
-            var1Lifetime1 = nk.field_Jb.field_b;
+            var1Lifetime1 = ProgressMessageDialog.field_Jb.field_b;
             while (true) {
               var1Lifetime1++;
-              if (nk.field_Jb.field_i <= var1Lifetime1) {
+              if (ProgressMessageDialog.field_Jb.field_i <= var1Lifetime1) {
                 var1Lifetime1 = 0;
               }
               if (!MouseWheelInput.a(var1Lifetime1, (byte) -124)) {
@@ -412,43 +412,43 @@ final class InstructionsScreen extends DungeonAssaultScreen {
               }
               break;
             }
-            nk.field_Jb.b(var1Lifetime1, 3);
+            ProgressMessageDialog.field_Jb.b(var1Lifetime1, 3);
           }
           if (6 == mo.field_e) {
             if (98 == mm.field_t) {
-              var1Lifetime2 = nk.field_Jb.field_b;
+              var1Lifetime2 = ProgressMessageDialog.field_Jb.field_b;
               while (true) {
                 var1Lifetime2 -= 3;
                 if (var1Lifetime2 < 0) {
-                  var1Lifetime2 = -1 + nk.field_Jb.field_i + var1Lifetime2;
+                  var1Lifetime2 = -1 + ProgressMessageDialog.field_Jb.field_i + var1Lifetime2;
                 }
                 if (!MouseWheelInput.a(var1Lifetime2, (byte) -124)) {
                   continue;
                 }
                 break;
               }
-              nk.field_Jb.b(var1Lifetime2, 3);
+              ProgressMessageDialog.field_Jb.b(var1Lifetime2, 3);
             }
             if (mm.field_t == 99) {
-              var1Lifetime2Lifetime1 = nk.field_Jb.field_b;
+              var1Lifetime2Lifetime1 = ProgressMessageDialog.field_Jb.field_b;
               while (true) {
                 var1Lifetime2Lifetime1 += 3;
                 if (var1Lifetime2Lifetime1 == 6) {
                   var1Lifetime2Lifetime1 = 0;
                 }
-                if (var1Lifetime2Lifetime1 >= nk.field_Jb.field_i) {
-                  var1Lifetime2Lifetime1 = var1Lifetime2Lifetime1 - (-1 + nk.field_Jb.field_i);
+                if (var1Lifetime2Lifetime1 >= ProgressMessageDialog.field_Jb.field_i) {
+                  var1Lifetime2Lifetime1 = var1Lifetime2Lifetime1 - (-1 + ProgressMessageDialog.field_Jb.field_i);
                 }
                 if (!MouseWheelInput.a(var1Lifetime2Lifetime1, (byte) -124)) {
                   continue;
                 }
                 break;
               }
-              nk.field_Jb.b(var1Lifetime2Lifetime1, 3);
+              ProgressMessageDialog.field_Jb.b(var1Lifetime2Lifetime1, 3);
             }
           }
         }
-        nk.field_Jb.e(107);
+        ProgressMessageDialog.field_Jb.e(107);
         super.handleScreenKeyPress();
     }
 
@@ -518,8 +518,8 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         if (param1 != 240) {
           discarded$1 = this.a(false, 31);
         }
-        var4 = nk.field_Fb[param2];
-        if (nk.field_Jb.c(param1 ^ 176) &&
+        var4 = ProgressMessageDialog.field_Fb[param2];
+        if (ProgressMessageDialog.field_Jb.c(param1 ^ 176) &&
           MouseWheelInput.a(param2, (byte) -124)) {
           if (var4 == 27) {
             kn.field_e = false;
@@ -543,7 +543,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
               }
               kn.field_e = true;
               if (!param0) {
-                nk.field_Jb.field_b = 6;
+                ProgressMessageDialog.field_Jb.field_b = 6;
               }
               if (this.field_B != 0) {
                 var5 = 167;
@@ -575,7 +575,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         int var12;
         int[] var13;
         int[] var14;
-        var4 = nk.field_Fb[param1];
+        var4 = ProgressMessageDialog.field_Fb[param1];
         var5 = this.getMenuActionLabel(param0 ^ -14, var4);
         var6 = IntrusiveNode.field_c.stringWidth(var5);
         if (param0 != 1) {
@@ -588,7 +588,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         if (param2) {
           stackIn_5_0 = ml.field_b;
         } else {
-          stackIn_5_0 = cm.field_M;
+          stackIn_5_0 = RegistrationAgreementPane.field_M;
         }
         var14 = stackIn_5_0;
         var13 = var14;

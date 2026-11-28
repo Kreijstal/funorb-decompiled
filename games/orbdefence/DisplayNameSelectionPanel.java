@@ -170,10 +170,10 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
         this.field_C = new ValidatedTextField("", (WidgetEventListener) null, 12);
-        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(pc.field_bb, 0, 0, 0, 0, 16777215, -1, 3, 0, lm.field_f.field_H, -1, 2147483647, true);
+        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(StandardContentDialog.field_bb, 0, 0, 0, 0, 16777215, -1, 3, 0, lm.field_f.field_H, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(AccountRegistrationPanel.field_A, var1, (WidgetEventListener) null);
         this.field_J = new InteractiveWidget(qk.field_b, (WidgetEventListener) null);
-        this.field_H = new InteractiveWidget(ob.field_D, (WidgetEventListener) null);
+        this.field_H = new InteractiveWidget(RegistrationAgreementPane.field_D, (WidgetEventListener) null);
         this.field_C.field_i = bg.field_b;
         this.field_C.setFieldValidator(new AccountNameAvailabilityValidator(this.field_C), 22);
         this.field_J.field_F = false;

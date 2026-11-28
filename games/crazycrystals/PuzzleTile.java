@@ -145,7 +145,7 @@ abstract class PuzzleTile {
               param3 <= 105) {
               var4 = param1;
               rk.a(var4, 3928);
-              nn.field_a = en.createAccountSuggestionsResult(param1, 169);
+              nn.field_a = ResizableModalDialog.createAccountSuggestionsResult(param1, 169);
             } else {
               nn.field_a = me.createAccountErrorResult(param2, 20, param3);
             }

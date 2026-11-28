@@ -111,7 +111,7 @@ abstract class gb {
             }
             var3 = "";
             if (param0 != null) {
-              var3 = ca.a(param0, (byte) -36);
+              var3 = ResizableModalDialog.a(param0, (byte) -36);
             }
             if (param1 != null) {
               if (param0 != null) {

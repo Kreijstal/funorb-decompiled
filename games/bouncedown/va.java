@@ -43,13 +43,13 @@ final class va {
     }
 
     final static void a(int param0) {
-        if (10 == mh.field_U) {
+        if (10 == ContentTransitionDialog.field_U) {
           j.c((byte) 41);
-          mh.field_U = 11;
+          ContentTransitionDialog.field_U = 11;
         } else {
           if (!cg.a(param0 - 1)) {
             j.c((byte) 41);
-            mh.field_U = 11;
+            ContentTransitionDialog.field_U = 11;
           }
         }
         ProxyAuthenticationRequiredException.field_a = true;

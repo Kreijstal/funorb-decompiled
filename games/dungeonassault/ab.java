@@ -30,9 +30,9 @@ final class ab {
           if (param0 != 0) {
             return;
           }
-          SecondaryNodeDeque.a(32, ArchiveRequest.field_w, wi.field_kb, MenuScreen.field_w);
+          SecondaryNodeDeque.a(32, ArchiveRequest.field_w, ProgressDialog.field_kb, MenuScreen.field_w);
           SoftwareRasterizer.saveClip(ib.field_a);
-          SoftwareRasterizer.setClip(ArchiveRequest.field_w, MenuScreen.field_w, ArchiveRequest.field_w + 200, wi.field_kb + MenuScreen.field_w + 3);
+          SoftwareRasterizer.setClip(ArchiveRequest.field_w, MenuScreen.field_w, ArchiveRequest.field_w + 200, ProgressDialog.field_kb + MenuScreen.field_w + 3);
           if (-1 == ce.field_p) {
             bo.a(param0 ^ 5, DisplayNameSelectionPanel.field_L, MenuScreen.field_w, ArchiveRequest.field_w);
           } else {
@@ -127,9 +127,9 @@ final class ab {
     final static int a(byte param0) {
         if (param0 != -97) {
           field_c = -77;
-          return kc.field_U;
+          return DialogMessagePane.field_U;
         }
-        return kc.field_U;
+        return DialogMessagePane.field_U;
     }
 
     static {

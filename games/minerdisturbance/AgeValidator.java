@@ -135,7 +135,7 @@ final class AgeValidator extends TextFieldValidator {
             this.getValidationMessage((byte) 97, (String) null);
           }
           var5 = (CharSequence) ((Object) param0);
-          if (!oi.a(-19804, var5)) {
+          if (!StripedProgressWidget.a(-19804, var5)) {
             stackIn_5_0 = fg.field_d;
             return stackIn_5_0;
           }

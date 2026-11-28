@@ -43,15 +43,15 @@ final class nh {
           lf.field_c[qa.field_c] = null;
           return var3_ref_byte__Lifetime2;
         }
-        if (null != ui.field_H) {
+        if (null != DialogMessagePane.field_H) {
           for (var3 = 0; var3 < fd.field_q.length; var3++) {
             if (param1 == fd.field_q[var3] &&
               sg.field_f[var3] > 0) {
               dupTemp$4 = sg.field_f[var3] - 1;
-              arrayValue$5 = ui.field_H[var3];
+              arrayValue$5 = DialogMessagePane.field_H[var3];
               sg.field_f[var3] = dupTemp$4;
               var4 = arrayValue$5[dupTemp$4];
-              ui.field_H[var3][sg.field_f[var3]] = null;
+              DialogMessagePane.field_H[var3][sg.field_f[var3]] = null;
               return var4;
             }
           }

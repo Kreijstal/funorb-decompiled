@@ -19,8 +19,8 @@ final class MixedSupport054 {
             NanoFrameTimer.booleanState0028 = false;
           }
           if (booleanArgument1) {
-            if (0 < UiComponentPart017.integerState0437) {
-              UiComponentPart017.integerState0437 = UiComponentPart017.integerState0437 - 1;
+            if (0 < GuestPlayConfirmationForm.integerState0437) {
+              GuestPlayConfirmationForm.integerState0437 = GuestPlayConfirmationForm.integerState0437 - 1;
             } else {
               if (RenderingSupport001.integerState0064 > 0) {
                 RenderingSupport001.integerState0064 = RenderingSupport001.integerState0064 - 1;
@@ -40,17 +40,17 @@ final class MixedSupport054 {
                   if (MixedSupport121.integerState0778 > 0) {
                     MixedSupport121.integerState0778 = MixedSupport121.integerState0778 - 1;
                   } else {
-                    if (UiComponentPart009.integerState0149 > UiComponentPart017.integerState0437) {
-                      if (UiComponentPart017.integerState0437 == 0) {
+                    if (UiComponentPart009.integerState0149 > GuestPlayConfirmationForm.integerState0437) {
+                      if (GuestPlayConfirmationForm.integerState0437 == 0) {
                         SceneWidgetPart012.performAction1612((byte) -40);
                       }
-                      UiComponentPart017.integerState0437 = UiComponentPart017.integerState0437 + 1;
+                      GuestPlayConfirmationForm.integerState0437 = GuestPlayConfirmationForm.integerState0437 + 1;
                     }
                   }
                 }
               } else {
-                if (UiComponentPart017.integerState0437 > 0) {
-                  UiComponentPart017.integerState0437 = UiComponentPart017.integerState0437 - 1;
+                if (GuestPlayConfirmationForm.integerState0437 > 0) {
+                  GuestPlayConfirmationForm.integerState0437 = GuestPlayConfirmationForm.integerState0437 - 1;
                 } else {
                   if (MixedSupport121.integerState0778 > 0) {
                     MixedSupport121.integerState0778 = MixedSupport121.integerState0778 - 1;
@@ -65,8 +65,8 @@ final class MixedSupport054 {
                 }
               }
             } else {
-              if (0 < UiComponentPart017.integerState0437) {
-                UiComponentPart017.integerState0437 = UiComponentPart017.integerState0437 - 1;
+              if (0 < GuestPlayConfirmationForm.integerState0437) {
+                GuestPlayConfirmationForm.integerState0437 = GuestPlayConfirmationForm.integerState0437 - 1;
               } else {
                 if (0 < RenderingSupport001.integerState0064) {
                   RenderingSupport001.integerState0064 = RenderingSupport001.integerState0064 - 1;

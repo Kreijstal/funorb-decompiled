@@ -7,7 +7,7 @@ final class sj {
     static bg field_a;
     static String field_e;
     static IntrusiveDeque field_g;
-    static rg field_h;
+    static ProgressMessageDialog field_h;
     static int field_c;
     static int field_f;
 

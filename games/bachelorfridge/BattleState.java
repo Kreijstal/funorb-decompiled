@@ -2873,9 +2873,9 @@ final class BattleState {
           }
         }
         if (this.field_E == 2) {
-          if (sh.field_C == null ||
-            !(this.width * this.height <= sh.field_C.length)) {
-            sh.field_C = new aj[this.width * this.height];
+          if (DateInputWidget.field_C == null ||
+            !(this.width * this.height <= DateInputWidget.field_C.length)) {
+            DateInputWidget.field_C = new aj[this.width * this.height];
           }
           var3Lifetime3 = 0;
           for (var4Lifetime3 = 0; var4Lifetime3 < this.width; var4Lifetime3++) {
@@ -2884,12 +2884,12 @@ final class BattleState {
                 this.tiles[var4Lifetime3][var5].field_j == -1) {
                 incrementValue$1 = var3Lifetime3;
                 var3Lifetime3++;
-                sh.field_C[incrementValue$1] = new aj(var4Lifetime3, var5);
+                DateInputWidget.field_C[incrementValue$1] = new aj(var4Lifetime3, var5);
               }
             }
           }
           if (var3Lifetime3 != 0) {
-            var8.a(new ow(sh.field_C, var3Lifetime3), (byte) 93);
+            var8.a(new ow(DateInputWidget.field_C, var3Lifetime3), (byte) 93);
           }
         }
         if (this.field_x &&

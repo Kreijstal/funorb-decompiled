@@ -32,16 +32,16 @@ final class NodeHashTableIterator implements Iterator {
     }
 
     final static aj a(byte param0) {
-        String var1 = lb.d((byte) -56);
+        String var1 = GuestPlayConfirmationForm.d((byte) -56);
         if (var1 != null &&
           0 <= var1.indexOf('@')) {
           var1 = "";
         }
         if (param0 > 90) {
-          return new aj(lb.d((byte) -56), EmailFormatValidator.f(20));
+          return new aj(GuestPlayConfirmationForm.d((byte) -56), EmailFormatValidator.f(20));
         }
         field_g = (String) null;
-        return new aj(lb.d((byte) -56), EmailFormatValidator.f(20));
+        return new aj(GuestPlayConfirmationForm.d((byte) -56), EmailFormatValidator.f(20));
     }
 
     final static void a(String param0, boolean param1) {

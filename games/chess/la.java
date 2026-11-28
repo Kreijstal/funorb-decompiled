@@ -8,7 +8,7 @@ final class la {
 
     final static int a(byte param0) {
         int var1 = -116 % ((param0 - 50) / 52);
-        ge.field_fb.a(32130);
+        FullscreenStatusDialog.field_fb.a(32130);
         if (!qh.field_c.b(-31259)) {
           return sh.b(32288);
         }

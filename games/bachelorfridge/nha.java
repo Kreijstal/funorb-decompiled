@@ -12,7 +12,7 @@ final class nha {
         BitPacketBuffer var6 = null;
         int var4 = 0;
         try {
-          var6 = sja.field_fb;
+          var6 = StandardContentDialog.field_fb;
           BitPacketBuffer var3 = var6;
           var6.writeCipheredByte(param0, (byte) 110);
           var6.position = var6.position + 1;

@@ -5,7 +5,7 @@ final class rk {
     static RgbSprite field_e;
     static String field_f;
     static RgbSprite[] field_d;
-    static ia field_b;
+    static FullscreenNoticeType field_b;
     static he field_a;
     static String field_c;
 
@@ -34,7 +34,7 @@ final class rk {
     static {
         field_f = "";
         field_e = null;
-        field_b = new ia();
+        field_b = new FullscreenNoticeType();
         field_c = "Menu";
     }
 }

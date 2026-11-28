@@ -57,7 +57,7 @@ final class ro extends kl {
         int var2 = (this.field_a - 200 >> 1) + this.field_k;
         int var3 = this.field_j + 80;
         SoftwareRasterizer.fillRectangle(var2 - 5, -5 + var3, 210, 210, 0);
-        rp.a(4, 202, (byte) 108, var2 - 1, 202, kc.field_S, -1 + var3);
+        rp.a(4, 202, (byte) 108, var2 - 1, 202, DialogMessagePane.field_S, -1 + var3);
         this.field_o.drawAnimation(200, var3, (byte) 102, var2, 200);
         if (this.field_w == null) {
           this.a(this.field_k, -80 + (this.field_j + this.field_i), this.field_a, (byte) 4, 80);
@@ -421,7 +421,7 @@ final class ro extends kl {
           oe.field_m.j(-63 + this.field_a, 21);
           ad.field_e.i(23, -38 + this.field_i);
           ad.field_e.f(-39 + this.field_a, this.field_i - 38);
-          SingleChildWidgetContainer.a(ak.field_p, cm.field_M, this.field_a >> 1, 1917623617, (36 + IntrusiveNode.field_c.field_H >> 1) + 14, IntrusiveNode.field_c);
+          SingleChildWidgetContainer.a(ak.field_p, RegistrationAgreementPane.field_M, this.field_a >> 1, 1917623617, (36 + IntrusiveNode.field_c.field_H >> 1) + 14, IntrusiveNode.field_c);
           jh.b();
           return;
         }
@@ -441,7 +441,7 @@ final class ro extends kl {
         oe.field_m.j(-63 + this.field_a, 21);
         ad.field_e.i(23, -38 + this.field_i);
         ad.field_e.f(-39 + this.field_a, this.field_i - 38);
-        SingleChildWidgetContainer.a(ak.field_p, cm.field_M, this.field_a >> 1, 1917623617, (36 + IntrusiveNode.field_c.field_H >> 1) + 14, IntrusiveNode.field_c);
+        SingleChildWidgetContainer.a(ak.field_p, RegistrationAgreementPane.field_M, this.field_a >> 1, 1917623617, (36 + IntrusiveNode.field_c.field_H >> 1) + 14, IntrusiveNode.field_c);
         jh.b();
     }
 
@@ -617,7 +617,7 @@ final class ro extends kl {
                   if (this.field_A >= this.f(-2)) {
                     System.gc();
                     this.field_p.c((byte) -121);
-                    this.a(true, 16744448, jk.a(new String[]{Integer.toString(this.e(-90))}, wi.field_qb, 30496));
+                    this.a(true, 16744448, StandardContentDialog.a(new String[]{Integer.toString(this.e(-90))}, ProgressDialog.field_qb, 30496));
                     this.a(ac.field_h, 16744448, -84);
                     this.d((byte) -94);
                   }
@@ -639,7 +639,7 @@ final class ro extends kl {
               }
               System.gc();
               this.field_p.c((byte) -121);
-              this.a(true, 16744448, jk.a(new String[]{Integer.toString(this.e(-90))}, wi.field_qb, 30496));
+              this.a(true, 16744448, StandardContentDialog.a(new String[]{Integer.toString(this.e(-90))}, ProgressDialog.field_qb, 30496));
               this.a(ac.field_h, 16744448, -84);
               this.d((byte) -94);
               return;
@@ -656,7 +656,7 @@ final class ro extends kl {
                       var7 = 0;
                       while (true) {
                         if (var7 >= 4) {
-                          var5 = jk.a(new String[]{((String) (var9)).toUpperCase()}, rp.field_a, 30496);
+                          var5 = StandardContentDialog.a(new String[]{((String) (var9)).toUpperCase()}, rp.field_a, 30496);
                           break regionExit1;
                         }
                         if ((1 << var7 & var3) == 0) {
@@ -666,14 +666,14 @@ final class ro extends kl {
                         break;
                       }
                       var10 = this.field_p.field_Y.field_A[var7].field_n.field_F;
-                      var11 = jk.a(new String[]{var10.toUpperCase()}, rp.field_a, 30496);
+                      var11 = StandardContentDialog.a(new String[]{var10.toUpperCase()}, rp.field_a, 30496);
                       var5 = var11;
                       this.a(true, 16711680, sm.field_e + "<br><br>" + var11);
                       this.a(lp.field_n, 8421504, -103);
                       this.d((byte) -88);
                       return;
                     }
-                    var5 = jk.a(new String[]{Integer.toString(var4)}, od.field_c, 30496);
+                    var5 = StandardContentDialog.a(new String[]{Integer.toString(var4)}, od.field_c, 30496);
                     var10 = var5;
                     var10 = var5;
                   } else {
@@ -726,7 +726,7 @@ final class ro extends kl {
             }
             System.gc();
             this.field_p.c((byte) -121);
-            this.a(true, 16744448, jk.a(new String[]{Integer.toString(this.e(-90))}, wi.field_qb, 30496));
+            this.a(true, 16744448, StandardContentDialog.a(new String[]{Integer.toString(this.e(-90))}, ProgressDialog.field_qb, 30496));
             this.a(ac.field_h, 16744448, -84);
             this.d((byte) -94);
             return;
@@ -748,7 +748,7 @@ final class ro extends kl {
               return;
             }
             if (var4 > 1) {
-              var13 = jk.a(new String[]{Integer.toString(var4)}, od.field_c, 30496);
+              var13 = StandardContentDialog.a(new String[]{Integer.toString(var4)}, od.field_c, 30496);
               var16 = var13;
               var16 = var13;
               this.a(true, 16711680, sm.field_e + "<br><br>" + var13);
@@ -760,7 +760,7 @@ final class ro extends kl {
             var7Lifetime1 = 0;
             while (true) {
               if (var7Lifetime1 >= 4) {
-                var15 = jk.a(new String[]{((String) (var14)).toUpperCase()}, rp.field_a, 30496);
+                var15 = StandardContentDialog.a(new String[]{((String) (var14)).toUpperCase()}, rp.field_a, 30496);
                 this.a(true, 16711680, sm.field_e + "<br><br>" + var15);
                 this.a(lp.field_n, 8421504, -103);
                 this.d((byte) -88);
@@ -773,7 +773,7 @@ final class ro extends kl {
               break;
             }
             var16 = this.field_p.field_Y.field_A[var7Lifetime1].field_n.field_F;
-            var17 = jk.a(new String[]{var16.toUpperCase()}, rp.field_a, 30496);
+            var17 = StandardContentDialog.a(new String[]{var16.toUpperCase()}, rp.field_a, 30496);
             this.a(true, 16711680, sm.field_e + "<br><br>" + var17);
             this.a(lp.field_n, 8421504, -103);
             this.d((byte) -88);
@@ -823,7 +823,7 @@ final class ro extends kl {
         var14 = DungeonAssault.field_K;
         var6 = this.field_D;
         if (this.field_t == 5) {
-          db.field_v.drawParagraph(jk.a(new String[]{gh.a(this.field_p.field_Y.field_l, (byte) -120)}, PackedBitSet.field_e, 30496), 30 + param0, param1 - 20, param2 - 60, 40, 16777215, -1, 1, 1, la.field_b.field_H);
+          db.field_v.drawParagraph(StandardContentDialog.a(new String[]{gh.a(this.field_p.field_Y.field_l, (byte) -120)}, PackedBitSet.field_e, 30496), 30 + param0, param1 - 20, param2 - 60, 40, 16777215, -1, 1, 1, la.field_b.field_H);
         } else {
           if (this.field_t != 0) {
             if (this.field_t != 4) {
@@ -859,7 +859,7 @@ final class ro extends kl {
                   var13 = gm.field_d.field_b;
                 }
                 var6 = var6 - var13;
-                db.field_v.drawRightAligned(nm.field_jb, var7, var8, this.field_r, -1);
+                db.field_v.drawRightAligned(FullscreenStatusDialog.field_jb, var7, var8, this.field_r, -1);
                 db.field_v.drawString(gh.a(var6, (byte) -106), var7, var8, this.field_r, -1);
                 var8 = var8 + (db.field_v.field_H + 2);
               }

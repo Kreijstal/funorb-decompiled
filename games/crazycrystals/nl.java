@@ -116,14 +116,14 @@ final class nl extends fb {
     }
 
     final static void a(ResourceArchive param0, int param1) {
-        bl var2 = null;
+        VorbisSample var2 = null;
         try {
-          bl.b(param0.getFileByName(7693, "", "headers.packvorbis"));
+          VorbisSample.decodeSetup(param0.getFileByName(7693, "", "headers.packvorbis"));
           if (param1 != 640) {
             nl.clearStaticReferences(100);
           }
-          var2 = bl.a(param0, "jagex logo2.packvorbis", "");
-          var2.a();
+          var2 = VorbisSample.loadByName(param0, "jagex logo2.packvorbis", "");
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "nl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

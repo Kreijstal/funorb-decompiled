@@ -8,7 +8,7 @@ final class wl {
     final static void a(int param0, int param1, int param2) {
         hg.field_sb = param0;
         ul.field_a = 1;
-        tf.field_jb = param1;
+        ProgressDialog.field_jb = param1;
         if (param2 <= 46) {
           wl.a(91, 40, -7);
         }

@@ -155,7 +155,7 @@ final class GridPoint {
             var3 = var1.o(32);
             eg.field_w = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(32270);
-            jf.a(-1631279870, var4);
+            FullscreenNoticeType.a(-1631279870, var4);
             return;
           }
           if (null == SecondaryNodeDequeIterator.field_g) {

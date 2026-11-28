@@ -4,7 +4,7 @@
 abstract class cm extends DualLinkNode {
     static int field_w;
     int field_q;
-    static ij field_t;
+    static FullscreenNoticeType field_t;
     static String[] field_r;
     static int field_u;
     static rk field_s;
@@ -44,6 +44,6 @@ abstract class cm extends DualLinkNode {
 
     static {
         field_r = new String[]{"By rating", "By win percentage"};
-        field_t = new ij();
+        field_t = new FullscreenNoticeType();
     }
 }

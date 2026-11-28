@@ -125,20 +125,20 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
-            if (jl.field_fb.field_k != null) {
-              UiWidget.field_z = new BufferedRandomAccessFile(jl.field_fb.field_k, 5200, 0);
-              jl.field_fb.field_k = null;
-              var6 = new SectorCacheStore(255, UiWidget.field_z, new BufferedRandomAccessFile(jl.field_fb.field_f, 12000, 0), 2097152);
+            if (ProgressDialog.field_fb.field_k != null) {
+              UiWidget.field_z = new BufferedRandomAccessFile(ProgressDialog.field_fb.field_k, 5200, 0);
+              ProgressDialog.field_fb.field_k = null;
+              var6 = new SectorCacheStore(255, UiWidget.field_z, new BufferedRandomAccessFile(ProgressDialog.field_fb.field_f, 12000, 0), 2097152);
             }
             var7 = null;
             var8 = -4 / ((param0 - 18) / 41);
             if (UiWidget.field_z != null) {
               if (null == aa.field_h) {
-                aa.field_h = new BufferedRandomAccessFile[jl.field_fb.field_e.length];
+                aa.field_h = new BufferedRandomAccessFile[ProgressDialog.field_fb.field_e.length];
               }
               if (null == aa.field_h[param1]) {
-                aa.field_h[param1] = new BufferedRandomAccessFile(jl.field_fb.field_e[param1], 12000, 0);
-                jl.field_fb.field_e[param1] = null;
+                aa.field_h[param1] = new BufferedRandomAccessFile(ProgressDialog.field_fb.field_e[param1], 12000, 0);
+                ProgressDialog.field_fb.field_e[param1] = null;
               }
               var7 = new SectorCacheStore(param1, UiWidget.field_z, aa.field_h[param1], 2097152);
             }
@@ -260,7 +260,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
               stackIn_5_3 = var8.field_i;
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
-            wf.a(param3 + param4.field_t, param1 + param4.field_u, (byte) 8, param1 + param4.field_u + param4.field_v, param4.field_q + (param3 + param4.field_t));
+            ResizableModalDialog.a(param3 + param4.field_t, param1 + param4.field_u, (byte) 8, param1 + param4.field_u + param4.field_v, param4.field_q + (param3 + param4.field_t));
             AccountRequestState.field_c.a(var10, var12, var11, (byte) 97, var10, this.field_a);
             tk.b(true);
           }
@@ -297,7 +297,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         var13 = MinerDisturbance.field_ab;
         try {
           boolean decompiledFrameRemainder0 = true;
-          wf.a(param7.field_t + param4, param6 + param7.field_u, (byte) 8, param6 - (-param7.field_u - param7.field_v), param7.field_q + param4 + param7.field_t);
+          ResizableModalDialog.a(param7.field_t + param4, param6 + param7.field_u, (byte) 8, param6 - (-param7.field_u - param7.field_v), param7.field_q + param4 + param7.field_t);
           var9_int = this.getTextAreaWidth(param7, false);
           var10 = this.a(param7, 0);
           if (!this.field_f) {
@@ -546,7 +546,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
             }
             var10 = var18.getLineIndexForTextOffset((byte) 39, var8);
             var11 = var18.getLineIndexForTextOffset((byte) 39, var9);
-            wf.a(param1.field_t + param2, param3 + param1.field_u, (byte) 8, param1.field_u + (param3 + param1.field_v), param1.field_q + (param1.field_t + param2));
+            ResizableModalDialog.a(param1.field_t + param2, param3 + param1.field_u, (byte) 8, param1.field_u + (param3 + param1.field_v), param1.field_q + (param1.field_t + param2));
             for (var12 = var10; var12 <= var11; var12++) {
               var13 = var17.field_f[var12];
               if (var10 == var12) {

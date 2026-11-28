@@ -173,7 +173,7 @@ final class ec {
               SpriteState.field_i[var18] = SpriteState.field_i[var18] + nl.field_a[var15][var18];
             }
             b.a(SpriteState.field_i, false, ma.field_c, false, var17, (byte) -91, true);
-            ja.a(var14, var9Lifetime1, 46, var13Lifetime1, var8Lifetime1, var17, var12Lifetime1, var7Lifetime1);
+            RegistrationAgreementPane.a(var14, var9Lifetime1, 46, var13Lifetime1, var8Lifetime1, var17, var12Lifetime1, var7Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

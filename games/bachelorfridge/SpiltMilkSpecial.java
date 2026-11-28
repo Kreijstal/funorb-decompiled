@@ -5,7 +5,7 @@ final class SpiltMilkSpecial extends SpecialOrder {
     static du field_p;
 
     final static void c(byte param0) {
-        sja.field_fb.writeCipheredByte(95, (byte) 104);
+        StandardContentDialog.field_fb.writeCipheredByte(95, (byte) 104);
         if (param0 != -69) {
           uha var2 = (uha) null;
           SpiltMilkSpecial.a((uha) null, -126);
@@ -68,16 +68,16 @@ final class SpiltMilkSpecial extends SpecialOrder {
           if (param1 != 0) {
             return;
           }
-          var2 = (uha) (uma.field_M.beginForward((byte) 90));
+          var2 = (uha) (NumericDateInputWidget.field_M.beginForward((byte) 90));
           while (var2 != null) {
             if (var2.a(param1 ^ -7, param0)) {
-              var2 = (uha) (uma.field_M.nextForward(0));
+              var2 = (uha) (NumericDateInputWidget.field_M.nextForward(0));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            uma.field_M.addLast(param0, true);
+            NumericDateInputWidget.field_M.addLast(param0, true);
             return;
           }
           stackIn_10_0 = 106;
@@ -123,7 +123,7 @@ final class SpiltMilkSpecial extends SpecialOrder {
           var8 = -49 / ((-8 - param3) / 56);
           gja.field_m.showDialog((UiWidget) (var9), (byte) 86);
           if (AttackUpAllEvent.d((byte) 77)) {
-            var9.r(-7);
+            var9.showAccountCreationConnectionFailure(-7);
             return true;
           }
           FridgeScreen.field_p = StopFloodEffect.field_j;
@@ -131,7 +131,7 @@ final class SpiltMilkSpecial extends SpecialOrder {
           sc.field_n = param5;
           ZombiesSpecial.field_p = null;
           UiWidget.field_i = param4;
-          em.field_V = param6;
+          FullscreenStatusDialog.field_V = param6;
           fga.field_f = param0;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

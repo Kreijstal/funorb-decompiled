@@ -18,7 +18,7 @@ final class BufferedRandomAccessFile {
     static java.applet.Applet field_o;
     private int field_d;
     private long field_j;
-    static ml field_b;
+    static FullscreenNoticeType field_b;
     static String field_l;
     static boolean field_q;
 
@@ -423,7 +423,7 @@ final class BufferedRandomAccessFile {
     static {
         field_c = 1;
         field_a = 1;
-        field_b = new ml();
+        field_b = new FullscreenNoticeType();
         field_q = false;
         field_l = "Fullscreen play is an option available to subscribing members only. For more details see the website.";
     }

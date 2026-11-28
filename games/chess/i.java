@@ -54,7 +54,7 @@ final class i {
         try {
           gg.field_a = param3;
           pi.field_a = param1;
-          qd.a(-1845, ii.field_T, param0);
+          qd.a(-1845, GuestPlayConfirmationForm.field_T, param0);
           if (param2 != -5136) {
             String var5 = (String) null;
             i.a(true, (String) null, 91, (String) null);

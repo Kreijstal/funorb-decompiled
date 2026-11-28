@@ -149,7 +149,7 @@ final class fa extends TileEffect {
         this.field_m.bindAsRenderTarget();
         SoftwareRasterizer.clear();
         bd.field_i.drawSilhouette(0, 0, 16711680);
-        hga.field_U.a((byte) 127);
+        ProgressDialog.field_U.a((byte) 127);
         this.field_m.drawScaledAlpha(param2 + 9, -90 + param0, this.field_m.field_q >> 1, this.field_m.field_p >> 1, (int)((1.0 - Math.cos(3.141592653589793 * (double)(8 * this.field_h) / 50.0)) * 64.0));
         if (param1) {
           return;

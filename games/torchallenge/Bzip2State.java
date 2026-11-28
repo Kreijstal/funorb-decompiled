@@ -53,12 +53,12 @@ final class Bzip2State {
               return;
             }
             var4 = ConfirmedEmailAvailabilityValidator.field_p[var3];
-            if (var4 < wa.field_sb[var3]) {
-              wa.field_sb[var3] = var4;
+            if (var4 < ProgressMessageDialog.field_sb[var3]) {
+              ProgressMessageDialog.field_sb[var3] = var4;
             }
-            if (wa.field_sb[var3] < 0) {
+            if (ProgressMessageDialog.field_sb[var3] < 0) {
               wh.a(param2, param1, -112);
-              wa.field_sb[var3] = var4;
+              ProgressMessageDialog.field_sb[var3] = var4;
             }
             return;
           }
@@ -71,12 +71,12 @@ final class Bzip2State {
             return;
           }
           var4Lifetime1 = ConfirmedEmailAvailabilityValidator.field_p[var3Lifetime1];
-          if (var4Lifetime1 < wa.field_sb[var3Lifetime1]) {
-            wa.field_sb[var3Lifetime1] = var4Lifetime1;
+          if (var4Lifetime1 < ProgressMessageDialog.field_sb[var3Lifetime1]) {
+            ProgressMessageDialog.field_sb[var3Lifetime1] = var4Lifetime1;
           }
-          if (wa.field_sb[var3Lifetime1] < 0) {
+          if (ProgressMessageDialog.field_sb[var3Lifetime1] < 0) {
             wh.a(param2, param1, -112);
-            wa.field_sb[var3Lifetime1] = var4Lifetime1;
+            ProgressMessageDialog.field_sb[var3Lifetime1] = var4Lifetime1;
           }
           return;
         }

@@ -183,7 +183,7 @@ final class BufferedRandomAccessFile {
           return;
         }
         try {
-          ta.field_a = new jk(lg.field_w, wo.field_e);
+          ta.field_a = new StandardContentDialog(lg.field_w, wo.field_e);
           lg.field_w.showDialog(ta.field_a, -1);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "hd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -250,7 +250,7 @@ final class BufferedRandomAccessFile {
             var5.unlink(false);
             return;
           }
-          sm.a((Throwable) null, 1, "LR1: " + sj.l(192));
+          sm.a((Throwable) null, 1, "LR1: " + ResizableModalDialog.l(192));
           tl.a(-51);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

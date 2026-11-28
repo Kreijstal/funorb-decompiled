@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class IterableNodeHashTable implements Iterable {
-    static ll field_d;
+    static FullscreenNoticeType field_d;
     int field_c;
     IntrusiveNode[] buckets;
     private IntrusiveNode field_g;
@@ -145,6 +145,6 @@ final class IterableNodeHashTable implements Iterable {
     }
 
     static {
-        field_d = new ll();
+        field_d = new FullscreenNoticeType();
     }
 }

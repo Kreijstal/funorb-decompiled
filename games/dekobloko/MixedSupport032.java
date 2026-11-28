@@ -46,7 +46,7 @@ final class MixedSupport032 {
         try {
           MixedSupport005.uiComponentPart016State0001.closeAllDialogs(true);
           if (TextHotspotBounds.uiComponentPart026State0001 == null) {
-            TextHotspotBounds.uiComponentPart026State0001 = new UiComponentPart026(MixedSupport005.uiComponentPart016State0001, MixedSupport029.stringState0148);
+            TextHotspotBounds.uiComponentPart026State0001 = new ProgressDialog(MixedSupport005.uiComponentPart016State0001, MixedSupport029.stringState0148);
           }
           if (integerArgument1 != -1199770620) {
             stringState0157 = (String) null;

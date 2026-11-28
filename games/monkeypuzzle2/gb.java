@@ -34,7 +34,7 @@ final class gb extends IntrusiveNode {
         ValidatedTextField.field_P = null;
         da.field_c = null;
         mb.field_b = null;
-        ra.field_ab = null;
+        StandardContentDialog.field_ab = null;
         cb.field_b = (byte[][]) null;
     }
 

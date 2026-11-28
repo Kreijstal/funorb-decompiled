@@ -134,7 +134,7 @@ final class mn extends pd {
           this.field_k = this.field_k + param3;
           this.field_h = this.field_h + 1;
           stackIn_6_0 = (q.field_a[ma.field_n[param1]].field_c[param2] < 4) ? 50 : 100;
-          ph.a(stackIn_6_0, (byte) 107, param1, param4);
+          RegistrationAgreementPane.a(stackIn_6_0, (byte) 107, param1, param4);
           stackIn_7_0 = IsaacRandom.field_g;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

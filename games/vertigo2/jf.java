@@ -31,7 +31,7 @@ final class jf extends InteractiveWidget {
     }
 
     final static void c(int param0, int param1) {
-        ue.b((byte) 77, param0);
+        RegistrationAgreementPane.b((byte) 77, param0);
         if (param1 < 84) {
           jf.c(-61, 78);
         }

@@ -81,7 +81,7 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
         }
         try {
           param0.removeFocusListener(DequeWidgetContainer.field_G);
-          tf.field_mb = 0;
+          ProgressDialog.field_mb = 0;
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "pi.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

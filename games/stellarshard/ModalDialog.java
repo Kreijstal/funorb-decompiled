@@ -18,7 +18,7 @@ abstract class ModalDialog extends WidgetContainer {
           if (param0 != 0) {
             return;
           }
-          this.b(param1 ^ -58, param2 + this.field_k, param3 + this.field_w);
+          this.drawDialogBackground(param1 ^ -58, param2 + this.field_k, param3 + this.field_w);
           super.drawWidget(param0, (byte) -57, param2, param3);
           return;
         }
@@ -26,7 +26,7 @@ abstract class ModalDialog extends WidgetContainer {
           UiWidget.field_s = new Sprite(this.field_p, this.field_t);
           hj.a(UiWidget.field_s, 1);
           SoftwareRasterizer.clearRaster();
-          this.b(param1 + 58, 0, 0);
+          this.drawDialogBackground(param1 + 58, 0, 0);
           super.drawWidget(param0, param1, -this.field_k - param2, -this.field_w - param3);
           DefaultTextWidgetRenderer.b((byte) -58);
           UiWidget.field_s.drawWithOpacity(param3 + this.field_w, param2 + this.field_k, this.field_E);
@@ -36,7 +36,7 @@ abstract class ModalDialog extends WidgetContainer {
           UiWidget.field_s = new Sprite(this.field_p, this.field_t);
           hj.a(UiWidget.field_s, 1);
           SoftwareRasterizer.clearRaster();
-          this.b(param1 + 58, 0, 0);
+          this.drawDialogBackground(param1 + 58, 0, 0);
           super.drawWidget(param0, param1, -this.field_k - param2, -this.field_w - param3);
           DefaultTextWidgetRenderer.b((byte) -58);
           UiWidget.field_s.drawWithOpacity(param3 + this.field_w, param2 + this.field_k, this.field_E);
@@ -46,7 +46,7 @@ abstract class ModalDialog extends WidgetContainer {
           UiWidget.field_s = new Sprite(this.field_p, this.field_t);
           hj.a(UiWidget.field_s, 1);
           SoftwareRasterizer.clearRaster();
-          this.b(param1 + 58, 0, 0);
+          this.drawDialogBackground(param1 + 58, 0, 0);
           super.drawWidget(param0, param1, -this.field_k - param2, -this.field_w - param3);
           DefaultTextWidgetRenderer.b((byte) -58);
           UiWidget.field_s.drawWithOpacity(param3 + this.field_w, param2 + this.field_k, this.field_E);
@@ -54,7 +54,7 @@ abstract class ModalDialog extends WidgetContainer {
         }
         hj.a(UiWidget.field_s, 1);
         SoftwareRasterizer.clearRaster();
-        this.b(param1 + 58, 0, 0);
+        this.drawDialogBackground(param1 + 58, 0, 0);
         super.drawWidget(param0, param1, -this.field_k - param2, -this.field_w - param3);
         DefaultTextWidgetRenderer.b((byte) -58);
         UiWidget.field_s.drawWithOpacity(param3 + this.field_w, param2 + this.field_k, this.field_E);
@@ -64,7 +64,7 @@ abstract class ModalDialog extends WidgetContainer {
         if (param0 == 0) {
           return this.field_G ? this.field_H.getTopOpenDialog((byte) -120) != this ? 0 : 256 : 0;
         }
-        this.b(-18, -2, -61);
+        this.drawDialogBackground(-18, -2, -61);
         return this.field_G ? this.field_H.getTopOpenDialog((byte) -120) != this ? 0 : 256 : 0;
     }
 
@@ -78,7 +78,7 @@ abstract class ModalDialog extends WidgetContainer {
         field_D = null;
     }
 
-    abstract void b(int param0, int param1, int param2);
+    abstract void drawDialogBackground(int param0, int param1, int param2);
 
     boolean advanceDialogAnimation(boolean param0) {
         boolean stackIn_11_0 = false;
@@ -153,7 +153,7 @@ abstract class ModalDialog extends WidgetContainer {
     }
 
     ModalDialog(ModalDialogHost param0, int param1, int param2) {
-        super(AccountServiceResult.field_b - param1 >> 1, -param2 + vf.field_F >> 1, param1, param2, (WidgetRenderer) null);
+        super(AccountServiceResult.field_b - param1 >> 1, -param2 + DialogMessagePane.field_F >> 1, param1, param2, (WidgetRenderer) null);
         try {
           this.field_E = 0;
           this.field_H = param0;
@@ -164,7 +164,7 @@ abstract class ModalDialog extends WidgetContainer {
     }
 
     final void setCenteredSize(int param0, byte param1, int param2) {
-        this.setBounds(param0, AccountServiceResult.field_b - param0 >> 1, vf.field_F - param2 >> 1, param2, 23987);
+        this.setBounds(param0, AccountServiceResult.field_b - param0 >> 1, DialogMessagePane.field_F - param2 >> 1, param2, 23987);
         if (param1 > -4) {
           field_B = (String) null;
         }

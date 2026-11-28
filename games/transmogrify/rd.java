@@ -58,7 +58,7 @@ final class rd {
           return false;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (bi.field_L >= 20 &&
+        if (ResizableModalDialog.field_L >= 20 &&
           pa.b(-120) && (!(db.field_d > 0) ||
           Transmogrify.d(false))) {
           stackIn_9_0 = false;

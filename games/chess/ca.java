@@ -45,8 +45,8 @@ final class ca {
             return;
           }
           he.a(-108, (java.awt.Component) ((Object) param1));
-          if (null != ii.field_L) {
-            ii.field_L.attach((byte) 123, (java.awt.Component) ((Object) param1));
+          if (null != GuestPlayConfirmationForm.field_L) {
+            GuestPlayConfirmationForm.field_L.attach((byte) 123, (java.awt.Component) ((Object) param1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -142,7 +142,7 @@ final class ca {
             hb.field_a.field_tb = false;
             oj.field_c.field_db = m.field_c;
             if (ld.field_g == 1) {
-              ea.field_bb.field_Kb.field_Jb.field_db = ch.field_db;
+              ea.field_bb.field_Kb.field_Jb.field_db = ProgressDialog.field_db;
               if (var19 != 0) {
                 ea.field_bb.field_Kb.field_Jb.field_db = field_c;
               }
@@ -220,7 +220,7 @@ final class ca {
                   var7.field_Mb.a(var13, var14, -2147483648, fe.field_g, var9);
                   stackIn_50_0 = var7.field_Jb;
                   if (var7.field_Lb == null) {
-                    stackIn_51_1 = ba.field_M;
+                    stackIn_51_1 = RegistrationAgreementPane.field_M;
                   } else {
                     stackIn_51_1 = var7.field_Lb;
                   }

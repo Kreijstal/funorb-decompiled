@@ -30,18 +30,18 @@ final class mh {
 
     final static void a(int param0, int param1) {
         sg.field_d = 3 & param1 >> 4;
-        ii.field_Q = (param1 & 13) >> 2;
+        GuestPlayConfirmationForm.field_Q = (param1 & 13) >> 2;
         if (!(sg.field_d <= 2)) {
           sg.field_d = 2;
         }
         v.field_d = 3 & param1;
-        if (2 >= ii.field_Q) {
+        if (2 >= GuestPlayConfirmationForm.field_Q) {
           if (!(v.field_d <= param0)) {
             v.field_d = 2;
           }
           return;
         }
-        ii.field_Q = 2;
+        GuestPlayConfirmationForm.field_Q = 2;
         if (!(v.field_d <= param0)) {
           v.field_d = 2;
         }

@@ -103,7 +103,7 @@ final class bj extends IntrusiveNode {
         try {
           kj.field_c = param3;
           LightningArc.field_gb = param1;
-          r.a((byte) 101, param0, sj.field_kb);
+          r.a((byte) 101, param0, ContentTransitionDialog.field_kb);
           if (param2 != 14451) {
             field_w = (String[]) null;
           }

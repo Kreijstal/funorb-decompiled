@@ -122,7 +122,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         var3 = var3 + (this.a(170, var3, pf.field_c, lm.field_b, this.field_J, false) + 5);
         var3 = var3 + (this.a(170, var3, bh.field_a, ja.field_b, this.field_B, false) + 5);
         var3 = var3 + this.a(var3, 170, pi.field_c, this.field_E, 25);
-        LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, -90 + this.field_m, 25, this.field_P, true, this.field_m - 120, 5, pc.field_bb, 11579568, rh.field_d);
+        LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, -90 + this.field_m, 25, this.field_P, true, this.field_m - 120, 5, StandardContentDialog.field_bb, 11579568, rh.field_d);
         this.addChild(var4, (byte) 74);
         var3 = var3 + var4.field_r;
         DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(lm.field_f, 0, 0, 0, 0, 16777215, -1, 0, 0, lm.field_f.field_H, -1, 2147483647, true);

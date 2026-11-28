@@ -34,7 +34,7 @@ final class cf {
             if (PacketBuffer.field_k != null &&
               PacketBuffer.field_k.field_e) {
               lb.a(true);
-              ConfirmedEmailAvailabilityValidator.field_n.showDialog((byte) 74, (UiWidget) (new gg(ConfirmedEmailAvailabilityValidator.field_n, hh.field_d)));
+              ConfirmedEmailAvailabilityValidator.field_n.showDialog((byte) 74, (UiWidget) (new FullscreenStatusDialog(ConfirmedEmailAvailabilityValidator.field_n, hh.field_d)));
             }
             return;
           }
@@ -42,7 +42,7 @@ final class cf {
           ConfirmedEmailAvailabilityValidator.field_n.advanceDialogs(117);
           var1_int = 17 % ((param0 - 53) / 47);
           while (nf.e(32722)) {
-            ConfirmedEmailAvailabilityValidator.field_n.processKeyInput(od.field_k, true, ob.field_K);
+            ConfirmedEmailAvailabilityValidator.field_n.processKeyInput(od.field_k, true, RegistrationAgreementPane.field_K);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

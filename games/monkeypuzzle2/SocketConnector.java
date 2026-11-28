@@ -58,11 +58,11 @@ abstract class SocketConnector {
           return;
         }
         ne.field_a[1].b(0, 0);
-        var3 = 50 + (int)(ProxySocketConnector.a(true, 0.14000000059604645f * (float)param0) * 30.0f + 10.0f * ha.a((byte) 51, (float)param0 * 0.11999999731779099f));
+        var3 = 50 + (int)(ProxySocketConnector.a(true, 0.14000000059604645f * (float)param0) * 30.0f + 10.0f * ProgressMessageDialog.a((byte) 51, (float)param0 * 0.11999999731779099f));
         ne.field_a[0].b(0, 0, var3);
         SoftwareRasterizer.setClip(80, 0, 560, 480);
         SpriteState.field_p[i.field_n].drawWithOpacity(100, 0, 70);
-        cl.field_c[sk.field_G].drawWithOpacity(0, 0, 100);
+        cl.field_c[DialogMessagePane.field_G].drawWithOpacity(0, 0, 100);
         SoftwareRasterizer.resetClip();
         return;
     }

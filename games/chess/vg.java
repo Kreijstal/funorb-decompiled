@@ -114,7 +114,7 @@ final class vg {
               if (var8 == 0) {
                 stackIn_37_1 = kf.field_m;
               } else {
-                stackIn_37_1 = k.field_ab;
+                stackIn_37_1 = ResizableModalDialog.field_ab;
               }
               stackIn_36_0.field_db = ((String) (Object) stackIn_37_1).toUpperCase();
               stackIn_39_0 = ao.field_b;

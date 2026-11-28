@@ -99,7 +99,7 @@ final class AccountServiceResult {
               if (!nb.field_e.privilegedTasksEnabled) {
                 var3_int = lb.a(qa.field_c, gi.field_f, wc.field_h, rh.field_h, -110);
               } else {
-                var3_int = lb.a(qa.field_c, gi.field_f, lc.field_fb, rh.field_h, -101);
+                var3_int = lb.a(qa.field_c, gi.field_f, StandardContentDialog.field_fb, rh.field_h, -101);
               }
               var4 = 2 + var3_int;
               DualLinkNode.field_h = new String[var4];
@@ -155,7 +155,7 @@ final class AccountServiceResult {
               od.field_h[1] = 5;
             }
           } else {
-            var3_int = lb.a(qa.field_c, gi.field_f, fb.a(ph.field_gb, 110, new String[]{"<br><%0><br>"}), rh.field_h, -82);
+            var3_int = lb.a(qa.field_c, gi.field_f, fb.a(ProgressMessageDialog.field_gb, 110, new String[]{"<br><%0><br>"}), rh.field_h, -82);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(gi.field_f[var5])) {
@@ -270,7 +270,7 @@ final class AccountServiceResult {
             }
           }
           kl.field_d = ee.field_b + var3_intLifetime1 - (var3_intLifetime1 >> 1);
-          DiskCacheWorker.field_b = ja.field_c.field_b * (mc.field_h + kc.field_S << 1);
+          DiskCacheWorker.field_b = ja.field_c.field_b * (mc.field_h + ResizableModalDialog.field_S << 1);
           p.field_g = -(var3_intLifetime1 >> 1) + ee.field_b;
           for (var4Lifetime2 = 0; var4Lifetime2 < DualLinkNode.field_h.length; var4Lifetime2++) {
             stackIn_113_0 = DiskCacheWorker.field_b;
@@ -295,8 +295,8 @@ final class AccountServiceResult {
               oh.field_e[var4Lifetime3][0] = var8Lifetime1 - rh.field_i;
               oh.field_e[var4Lifetime3][1] = var5Lifetime3;
               oh.field_e[var4Lifetime3][2] = var7Lifetime2 + (rh.field_i << 1);
-              oh.field_e[var4Lifetime3][3] = (kc.field_S << 1) + pk.field_c;
-              var5Lifetime3 = var5Lifetime3 + (pk.field_c + (mc.field_h + (kc.field_S << 1)));
+              oh.field_e[var4Lifetime3][3] = (ResizableModalDialog.field_S << 1) + pk.field_c;
+              var5Lifetime3 = var5Lifetime3 + (pk.field_c + (mc.field_h + (ResizableModalDialog.field_S << 1)));
             } else {
               var5Lifetime3 = var5Lifetime3 + sg.field_e;
             }

@@ -90,7 +90,7 @@ final class eq extends rl {
           }
           var7 = (int)(100.0 * Math.pow(2.0, (double)var6_int / 12.0));
           TextLayout.field_d.playSampleWithPan(qp.field_i, var7, 48 * gi.field_m, param3);
-          ph.a(10, (byte) 107, param1, param4);
+          RegistrationAgreementPane.a(10, (byte) 107, param1, param4);
           stackIn_4_0 = IsaacRandom.field_g;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

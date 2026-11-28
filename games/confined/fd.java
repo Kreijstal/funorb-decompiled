@@ -227,7 +227,7 @@ final class fd {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_a[var3Lifetime1] = pa.a(this.field_a[var3Lifetime1], ib.field_T[var4][va.a(255, (int)(this.field_l[va.a(-var4 + var3Lifetime1, 7)] >>> var5))]);
+              this.field_a[var3Lifetime1] = pa.a(this.field_a[var3Lifetime1], StripedProgressWidget.field_T[var4][va.a(255, (int)(this.field_l[va.a(-var4 + var3Lifetime1, 7)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -235,14 +235,14 @@ final class fd {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_l[var3Lifetime1Lifetime1] = this.field_a[var3Lifetime1Lifetime1];
           }
-          this.field_l[0] = pa.a(this.field_l[0], ib.field_V[var2Lifetime2]);
+          this.field_l[0] = pa.a(this.field_l[0], StripedProgressWidget.field_V[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_a[var3Lifetime1Lifetime2] = this.field_l[var3Lifetime1Lifetime2];
             var8 = 0;
             var4Lifetime1 = var8;
             var5Lifetime1 = 56;
             while (8 > var8) {
-              this.field_a[var3Lifetime1Lifetime2] = pa.a(this.field_a[var3Lifetime1Lifetime2], ib.field_T[var8][va.a((int)(this.field_b[va.a(-var8 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1), 255)]);
+              this.field_a[var3Lifetime1Lifetime2] = pa.a(this.field_a[var3Lifetime1Lifetime2], StripedProgressWidget.field_T[var8][va.a((int)(this.field_b[va.a(-var8 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1), 255)]);
               var8++;
               var5Lifetime1 -= 8;
             }

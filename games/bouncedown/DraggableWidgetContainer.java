@@ -243,8 +243,8 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
           if ((!(this.field_x instanceof InteractiveWidget) ||
             ((InteractiveWidget) (this.field_x)).field_y) &&
             this.field_u == 1) {
-            var5_int = -param1 + (-this.field_B + uc.field_C);
-            var6 = ll.field_y - this.field_H - param2;
+            var5_int = -param1 + (-this.field_B + DialogMessagePane.field_C);
+            var6 = StripedProgressWidget.field_y - this.field_H - param2;
             if (this.field_r != var5_int ||
               var6 != this.field_i) {
               this.field_r = var5_int;
@@ -337,7 +337,7 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
           for (var2_int = 0; var2_int < DisplayNameSelectionPanel.field_M; var2_int++) {
             w.field_f[var2_int + param1] = var2_int;
           }
-          Bounce.sortLeaderboardIndices(AccountNameAvailabilityValidator.field_n, DisplayNameSelectionPanel.field_M + param1, 22668, param1, uc.field_A, param1 + param1, false);
+          Bounce.sortLeaderboardIndices(AccountNameAvailabilityValidator.field_n, DisplayNameSelectionPanel.field_M + param1, 22668, param1, DialogMessagePane.field_A, param1 + param1, false);
           if (param1 < DisplayNameSelectionPanel.field_M) {
             DisplayNameSelectionPanel.field_M = param1;
           }

@@ -19,15 +19,15 @@ final class ba {
         if (param0 != 17867) {
           field_b = (IntrusiveDeque) null;
         } else {
-          var1 = new qg[ec.field_K];
-          for (var2 = 0; ec.field_K > var2; var2++) {
+          var1 = new qg[DialogMessagePane.field_K];
+          for (var2 = 0; DialogMessagePane.field_K > var2; var2++) {
             var1[var2] = new qg(ModalDialog.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], fl.field_a[var2], vc.field_g);
           }
           md.$cfr$intArgs$a$6121ff5511c4(-127);
           return var1;
         }
-        var1Lifetime1 = new qg[ec.field_K];
-        for (var2Lifetime1 = 0; ec.field_K > var2Lifetime1; var2Lifetime1++) {
+        var1Lifetime1 = new qg[DialogMessagePane.field_K];
+        for (var2Lifetime1 = 0; DialogMessagePane.field_K > var2Lifetime1; var2Lifetime1++) {
           var1Lifetime1[var2Lifetime1] = new qg(ModalDialog.field_B, he.field_r, jd.field_g[var2Lifetime1], wc.field_a[var2Lifetime1], wh.field_b[var2Lifetime1], m.field_a[var2Lifetime1], fl.field_a[var2Lifetime1], vc.field_g);
         }
         md.$cfr$intArgs$a$6121ff5511c4(-127);
@@ -38,9 +38,9 @@ final class ba {
         int var1_int = 0;
         int var2 = OrbDefence.field_D ? 1 : 0;
         try {
-          i.field_a = new RgbSprite(640, 58);
+          FullscreenNoticeType.field_a = new RgbSprite(640, 58);
           hc.field_i = new RgbSprite(640, 122);
-          i.field_a.bindAsRenderTarget();
+          FullscreenNoticeType.field_a.bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(3, 3, 634, 50, 0);
           SoftwareRasterizer.fillRectangle(65, 3, 511, 50, 10359);
           for (var1_int = 0; var1_int < 256; var1_int++) {
@@ -63,15 +63,15 @@ final class ba {
           SoftwareRasterizer.drawHorizontalLine(2, 56, 636, 13749446);
           SoftwareRasterizer.drawHorizontalLine(3, 57, 634, 0);
           SoftwareRasterizer.setClip(0, 0, 150, 480);
-          dh.field_X.draw(-(dh.field_X.field_s / 2) + 295, 0);
+          ProgressMessageDialog.field_X.draw(-(ProgressMessageDialog.field_X.field_s / 2) + 295, 0);
           SoftwareRasterizer.setClip(200, 0, 300, 480);
-          dh.field_X.draw(-(dh.field_X.field_s / 2) + 320, 0);
+          ProgressMessageDialog.field_X.draw(-(ProgressMessageDialog.field_X.field_s / 2) + 320, 0);
           SoftwareRasterizer.setClip(300, 0, 640, 480);
-          dh.field_X.draw(210 - dh.field_X.field_s / 2, 0);
+          ProgressMessageDialog.field_X.draw(210 - ProgressMessageDialog.field_X.field_s / 2, 0);
           SoftwareRasterizer.resetClip();
-          ob.field_I.drawRightAligned(gb.field_e, 85, 30, 16777215, -1);
+          RegistrationAgreementPane.field_I.drawRightAligned(gb.field_e, 85, 30, 16777215, -1);
           jd.field_c.drawRightAligned(cf.field_g, 200, 40, 16777215, -1);
-          ob.field_I.drawRightAligned(nh.field_a, 339, 30, 16777215, -1);
+          RegistrationAgreementPane.field_I.drawRightAligned(nh.field_a, 339, 30, 16777215, -1);
           SoftwareRasterizer.setClip(0, 0, 640, 2);
           SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 640, 480, 11184810, 4605510);
           BufferedSocket.field_a.a(-40);

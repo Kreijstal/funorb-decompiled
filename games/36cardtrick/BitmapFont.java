@@ -493,7 +493,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 }
                               } else {
                                 var7 = (CharSequence) ((Object) param0.substring(5));
-                                field_D = af.a(16, var7, (byte) 54);
+                                field_D = ProgressMessageDialog.a(16, var7, (byte) 54);
                               }
                             } else {
                               field_G = -1;
@@ -503,7 +503,7 @@ abstract class BitmapFont extends DualLinkNode {
                           }
                         } else {
                           var6 = (CharSequence) ((Object) param0.substring(2));
-                          field_G = af.a(16, var6, (byte) 54);
+                          field_G = ProgressMessageDialog.a(16, var6, (byte) 54);
                         }
                       } else {
                         field_v = -1;
@@ -513,7 +513,7 @@ abstract class BitmapFont extends DualLinkNode {
                     }
                   } else {
                     var5 = (CharSequence) ((Object) param0.substring(4));
-                    field_v = af.a(16, var5, (byte) 54);
+                    field_v = ProgressMessageDialog.a(16, var5, (byte) 54);
                   }
                 } else {
                   field_m = field_y;
@@ -527,7 +527,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
           } else {
             var3 = (CharSequence) ((Object) param0.substring(4));
-            field_A = af.a(16, var3, (byte) 54);
+            field_A = ProgressMessageDialog.a(16, var3, (byte) 54);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

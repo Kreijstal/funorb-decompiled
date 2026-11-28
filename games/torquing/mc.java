@@ -23,7 +23,7 @@ final class mc extends IntrusiveNode {
           }
           while (var2 < u.field_v.length) {
             var3 = u.field_v[var2];
-            dk.a(mn.field_bb, var2 << 4, mn.field_bb, var1_int, var3);
+            dk.a(ProgressMessageDialog.field_bb, var2 << 4, ProgressMessageDialog.field_bb, var1_int, var3);
             var1_int = var1_int + var3;
             var2++;
           }

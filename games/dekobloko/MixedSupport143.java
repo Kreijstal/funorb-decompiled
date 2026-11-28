@@ -50,7 +50,7 @@ final class MixedSupport143 {
           integerLocal6 = 49;
           try {
             for (integerLocal1 = 0; integerLocal2 > integerLocal1; integerLocal1++) {
-              networkSupport007Local7 = UiComponentPart033.networkSupport012State0001.computeNetworkSupport0071535(126, integerArrayArgument1[integerLocal1]);
+              networkSupport007Local7 = AccountCreationResultPanel.networkSupport012State0001.computeNetworkSupport0071535(126, integerArrayArgument1[integerLocal1]);
               stringArrayLocal3[integerLocal1] = networkSupport007Local7.computeString1043((byte) -92);
               integerLocal6 = (char)(integerLocal6 + 1);
               characterArrayLocal4[integerLocal1] = (char)integerLocal6;

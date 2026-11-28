@@ -12,7 +12,7 @@ final class MixedSupport020 extends HashNode {
     int integerState0118;
     String[][] stringArrayArrayState0001;
     boolean booleanState0022;
-    static UiComponentPart012 uiComponentPart012State0001;
+    static ProgressMessageDialog uiComponentPart012State0001;
     static String stringState0094;
     static FullscreenCanvas fullscreenCanvasState0001;
     int integerState0119;
@@ -157,7 +157,7 @@ final class MixedSupport020 extends HashNode {
               sceneWidgetPart012Local26.performAction1774(-117);
               sceneWidgetPart012Local26.sceneWidgetState0124 = new SceneWidget(0L, MixedSupport078.sceneWidgetState0076);
               sceneWidgetPart012Local26.performAction1768(sceneWidgetPart012Local26.sceneWidgetState0124, integerArgument2 + 505);
-              sceneWidgetPart012Local26.sceneWidgetState0120 = new SceneWidget(0L, UiComponentPart012.sceneWidgetState0042);
+              sceneWidgetPart012Local26.sceneWidgetState0120 = new SceneWidget(0L, ProgressMessageDialog.sceneWidgetState0042);
               sceneWidgetPart012Local26.performAction1768(sceneWidgetPart012Local26.sceneWidgetState0120, -16834);
               integerLocal27 = 1;
             }
@@ -477,17 +477,17 @@ final class MixedSupport020 extends HashNode {
     }
 
     final static void performAction0298(String stringArgument1, int integerArgument2, int integerArgument3, String stringArgument4, int integerArgument5) {
-        UiComponentPart033.sceneWidgetState0150.integerState0910 = integerArgument3;
-        UiComponentPart033.sceneWidgetState0150.stringState0599 = stringArgument1;
-        UiComponentPart033.sceneWidgetState0150.integerState0896 = UiComponentPart033.sceneWidgetState0150.integerState0896 + DiagnosticSupport002.sceneWidgetState0057.integerState0896;
-        UiComponentPart033.sceneWidgetState0150.stringState0598 = stringArgument4;
+        AccountCreationResultPanel.sceneWidgetState0150.integerState0910 = integerArgument3;
+        AccountCreationResultPanel.sceneWidgetState0150.stringState0599 = stringArgument1;
+        AccountCreationResultPanel.sceneWidgetState0150.integerState0896 = AccountCreationResultPanel.sceneWidgetState0150.integerState0896 + DiagnosticSupport002.sceneWidgetState0057.integerState0896;
+        AccountCreationResultPanel.sceneWidgetState0150.stringState0598 = stringArgument4;
         DiagnosticSupport002.sceneWidgetState0057.integerState0890 = DiagnosticSupport002.sceneWidgetState0057.integerState0890 + DiagnosticSupport002.sceneWidgetState0057.integerState0896;
         if (integerArgument5 != -24503) {
           return;
         }
         try {
           DiagnosticSupport002.sceneWidgetState0057.integerState0896 = integerArgument2;
-          UiComponentPart033.sceneWidgetState0150.integerState0896 = UiComponentPart033.sceneWidgetState0150.integerState0896 - DiagnosticSupport002.sceneWidgetState0057.integerState0896;
+          AccountCreationResultPanel.sceneWidgetState0150.integerState0896 = AccountCreationResultPanel.sceneWidgetState0150.integerState0896 - DiagnosticSupport002.sceneWidgetState0057.integerState0896;
           DiagnosticSupport002.sceneWidgetState0057.integerState0890 = DiagnosticSupport002.sceneWidgetState0057.integerState0890 - DiagnosticSupport002.sceneWidgetState0057.integerState0896;
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "cl.E(" + (stringArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + (stringArgument4 != null ? "{...}" : "null") + ',' + integerArgument5 + ')');

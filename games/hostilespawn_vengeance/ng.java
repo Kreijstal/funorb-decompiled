@@ -41,12 +41,12 @@ final class ng extends IntrusiveNode {
           var8 = new AccountCreationResultPanel(im.field_e, param0);
           im.field_e.showDialog(var8, param5 ^ -8686);
           if (SingleChildWidgetContainer.i(-1)) {
-            var8.r(-104);
+            var8.showAccountCreationConnectionFailure(-104);
             return true;
           }
           cg.field_e = param4;
           fj.field_Sb = param6;
-          qi.field_G = param3;
+          DialogMessagePane.field_G = param3;
           DropTargetWidgetContainer.field_I = ti.field_b;
           wj.field_H = null;
           uh.field_o = param2;

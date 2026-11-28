@@ -14,7 +14,7 @@ final class AgeValidator extends TextFieldValidator {
 
     final static String a(boolean param0) {
         if (IsaacCipher.field_f == SectorCacheStore.field_d) {
-          return cg.field_H;
+          return GuestPlayConfirmationForm.field_H;
         }
         if (param0) {
           field_m = (String) null;
@@ -37,7 +37,7 @@ final class AgeValidator extends TextFieldValidator {
         try {
           var4 = (CharSequence) ((Object) param0);
           if (!RasterBuffer.a(var4, true)) {
-            stackIn_3_0 = qf.field_d;
+            stackIn_3_0 = FullscreenNoticeType.field_d;
             return stackIn_3_0;
           }
           var5 = (CharSequence) ((Object) param0);
@@ -46,7 +46,7 @@ final class AgeValidator extends TextFieldValidator {
             var3_int <= 130) {
             return dg.field_c;
           }
-          stackIn_8_0 = qf.field_d;
+          stackIn_8_0 = FullscreenNoticeType.field_d;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -82,8 +82,8 @@ final class AgeValidator extends TextFieldValidator {
               !(param0 <= dd.field_L.length)) {
               dd.field_L = new int[2 * param0];
             }
-            if (al.field_bb == null) {
-              al.field_bb = new int[param0 * 2];
+            if (ContentTransitionDialog.field_bb == null) {
+              ContentTransitionDialog.field_bb = new int[param0 * 2];
               if (null == pf.field_b ||
                 !(param1 + param0 <= pf.field_b.length)) {
                 pf.field_b = new int[2 * (param1 + param0)];
@@ -93,8 +93,8 @@ final class AgeValidator extends TextFieldValidator {
                 MapTile.field_y = new boolean[param0 * 2];
               }
             } else {
-              if (al.field_bb.length < param0) {
-                al.field_bb = new int[param0 * 2];
+              if (ContentTransitionDialog.field_bb.length < param0) {
+                ContentTransitionDialog.field_bb = new int[param0 * 2];
                 if (null == pf.field_b ||
                   !(param1 + param0 <= pf.field_b.length)) {
                   pf.field_b = new int[2 * (param1 + param0)];
@@ -124,9 +124,9 @@ final class AgeValidator extends TextFieldValidator {
                 !(param0 <= dd.field_L.length)) {
                 dd.field_L = new int[2 * param0];
               }
-              if (al.field_bb == null ||
-                !(al.field_bb.length >= param0)) {
-                al.field_bb = new int[param0 * 2];
+              if (ContentTransitionDialog.field_bb == null ||
+                !(ContentTransitionDialog.field_bb.length >= param0)) {
+                ContentTransitionDialog.field_bb = new int[param0 * 2];
               }
               if (null == pf.field_b ||
                 !(param1 + param0 <= pf.field_b.length)) {
@@ -137,20 +137,20 @@ final class AgeValidator extends TextFieldValidator {
                 !(param0 <= dd.field_L.length)) {
                 dd.field_L = new int[2 * param0];
               }
-              if (al.field_bb == null) {
-                al.field_bb = new int[param0 * 2];
+              if (ContentTransitionDialog.field_bb == null) {
+                ContentTransitionDialog.field_bb = new int[param0 * 2];
                 if (null == pf.field_b ||
                   !(param1 + param0 <= pf.field_b.length)) {
                   pf.field_b = new int[2 * (param1 + param0)];
                 }
               } else {
-                if (al.field_bb.length >= param0) {
+                if (ContentTransitionDialog.field_bb.length >= param0) {
                   if (null == pf.field_b ||
                     !(param1 + param0 <= pf.field_b.length)) {
                     pf.field_b = new int[2 * (param1 + param0)];
                   }
                 } else {
-                  al.field_bb = new int[param0 * 2];
+                  ContentTransitionDialog.field_bb = new int[param0 * 2];
                   if (null == pf.field_b ||
                     !(param1 + param0 <= pf.field_b.length)) {
                     pf.field_b = new int[2 * (param1 + param0)];
@@ -167,7 +167,7 @@ final class AgeValidator extends TextFieldValidator {
             }
           }
           bd.field_a = 2147483647;
-          hm.field_L = 2147483647;
+          StripedProgressWidget.field_L = 2147483647;
           ClientException.field_d = -2147483648;
           pb.field_b = 0;
           ok.field_j = -2147483648;
@@ -184,9 +184,9 @@ final class AgeValidator extends TextFieldValidator {
             !(param0 <= dd.field_L.length)) {
             dd.field_L = new int[2 * param0];
           }
-          if (al.field_bb == null ||
-            !(al.field_bb.length >= param0)) {
-            al.field_bb = new int[param0 * 2];
+          if (ContentTransitionDialog.field_bb == null ||
+            !(ContentTransitionDialog.field_bb.length >= param0)) {
+            ContentTransitionDialog.field_bb = new int[param0 * 2];
           }
           if (null == pf.field_b ||
             !(param1 + param0 <= pf.field_b.length)) {
@@ -197,7 +197,7 @@ final class AgeValidator extends TextFieldValidator {
             MapTile.field_y = new boolean[param0 * 2];
           }
           bd.field_a = 2147483647;
-          hm.field_L = 2147483647;
+          StripedProgressWidget.field_L = 2147483647;
           ClientException.field_d = -2147483648;
           pb.field_b = 0;
           ok.field_j = -2147483648;
@@ -206,9 +206,9 @@ final class AgeValidator extends TextFieldValidator {
         oa.field_c = new int[2 * param0];
         if (null == dd.field_L) {
           dd.field_L = new int[2 * param0];
-          if (al.field_bb == null ||
-            !(al.field_bb.length >= param0)) {
-            al.field_bb = new int[param0 * 2];
+          if (ContentTransitionDialog.field_bb == null ||
+            !(ContentTransitionDialog.field_bb.length >= param0)) {
+            ContentTransitionDialog.field_bb = new int[param0 * 2];
           }
           if (null == pf.field_b ||
             !(param1 + param0 <= pf.field_b.length)) {
@@ -222,9 +222,9 @@ final class AgeValidator extends TextFieldValidator {
           if (param0 > dd.field_L.length) {
             dd.field_L = new int[2 * param0];
           }
-          if (al.field_bb == null ||
-            !(al.field_bb.length >= param0)) {
-            al.field_bb = new int[param0 * 2];
+          if (ContentTransitionDialog.field_bb == null ||
+            !(ContentTransitionDialog.field_bb.length >= param0)) {
+            ContentTransitionDialog.field_bb = new int[param0 * 2];
           }
           if (null == pf.field_b ||
             !(param1 + param0 <= pf.field_b.length)) {
@@ -236,7 +236,7 @@ final class AgeValidator extends TextFieldValidator {
           }
         }
         bd.field_a = 2147483647;
-        hm.field_L = 2147483647;
+        StripedProgressWidget.field_L = 2147483647;
         ClientException.field_d = -2147483648;
         pb.field_b = 0;
         ok.field_j = -2147483648;
@@ -269,7 +269,7 @@ final class AgeValidator extends TextFieldValidator {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.getValidationStatus(param0, 0) == qf.field_d) {
+          if (this.getValidationStatus(param0, 0) == FullscreenNoticeType.field_d) {
             stackIn_2_0 = (String) (field_m);
             return stackIn_2_0;
           }

@@ -13,7 +13,7 @@ final class vj {
         try {
           if (param1 != null &&
             param1.length() >= DebouncedFieldValidator.field_f) {
-            if (param1.length() > a.field_Q) {
+            if (param1.length() > ContentTransitionDialog.field_Q) {
               return true;
             }
             if (param0 == -23424) {

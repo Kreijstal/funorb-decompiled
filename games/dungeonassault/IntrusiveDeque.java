@@ -72,21 +72,21 @@ final class IntrusiveDeque {
 
     final static void a(int param0, int param1) {
         mo.field_e = param1;
-        if (nk.field_Jb.field_b < 0) {
+        if (ProgressMessageDialog.field_Jb.field_b < 0) {
           if (param0 != 20631) {
             field_b = 78;
             return;
           }
           return;
         }
-        if (MouseWheelInput.a(nk.field_Jb.field_b, (byte) -124)) {
+        if (MouseWheelInput.a(ProgressMessageDialog.field_Jb.field_b, (byte) -124)) {
           if (param0 != 20631) {
             field_b = 78;
             return;
           }
           return;
         }
-        nk.field_Jb.field_b = 1;
+        ProgressMessageDialog.field_Jb.field_b = 1;
         if (param0 != 20631) {
           field_b = 78;
           return;
@@ -122,7 +122,7 @@ final class IntrusiveDeque {
         if (param0 != 20) {
           return false;
         }
-        return null == cm.field_R ? rj.field_o : true;
+        return null == RegistrationAgreementPane.field_R ? rj.field_o : true;
     }
 
     public static void clearStaticReferences(int param0) {

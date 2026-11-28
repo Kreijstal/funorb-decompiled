@@ -309,7 +309,7 @@ abstract class TextLayout {
             }
             var1_int = 1;
           }
-          RaiderDefinition.field_h.a(-7734, wi.c(AchievementIconEntry.field_k, param0 ^ 2118074, lc.field_c), wi.c(eh.field_h, 2113632, hj.field_S));
+          RaiderDefinition.field_h.a(-7734, ProgressDialog.c(AchievementIconEntry.field_k, param0 ^ 2118074, lc.field_c), ProgressDialog.c(eh.field_h, 2113632, hj.field_S));
           if (RaiderDefinition.field_h.c(param0 - 4689)) {
             var1_int = 1;
           }

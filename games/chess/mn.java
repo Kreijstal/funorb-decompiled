@@ -376,7 +376,7 @@ final class mn extends wn {
         RuntimeException var2_ref = null;
         var5 = Chess.field_G;
         try {
-          if (null == bf.field_M) {
+          if (null == DateInputWidget.field_M) {
             return null;
           }
           if (param1 == null) {
@@ -391,7 +391,7 @@ final class mn extends wn {
             stackIn_10_0 = null;
             return (ve) (stackIn_10_0);
           }
-          var3 = (ve) (bf.field_M.get((long)var2.hashCode(), param0 ^ -3001));
+          var3 = (ve) (DateInputWidget.field_M.get((long)var2.hashCode(), param0 ^ -3001));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Fb);
             var4 = ad.a(var7, -2);
@@ -399,7 +399,7 @@ final class mn extends wn {
               stackIn_17_0 = var3;
               return stackIn_17_0;
             }
-            var3 = (ve) (bf.field_M.nextWithSameKey(true));
+            var3 = (ve) (DateInputWidget.field_M.nextWithSameKey(true));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

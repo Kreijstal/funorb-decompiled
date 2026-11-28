@@ -11,27 +11,27 @@ final class g {
           if (param0 != 21975) {
             g.a(99);
             if (null != ve.field_f) {
-              ve.field_f.l(260);
+              ve.field_f.freezeNormalProgressAnimation(260);
             }
             dg.a(11199);
             return;
           }
           if (null != ve.field_f) {
-            ve.field_f.l(260);
+            ve.field_f.freezeNormalProgressAnimation(260);
           }
           dg.a(11199);
           return;
         }
         if (param0 == 21975) {
           if (null != ve.field_f) {
-            ve.field_f.l(260);
+            ve.field_f.freezeNormalProgressAnimation(260);
           }
           dg.a(11199);
           return;
         }
         g.a(99);
         if (null != ve.field_f) {
-          ve.field_f.l(260);
+          ve.field_f.freezeNormalProgressAnimation(260);
         }
         dg.a(11199);
     }

@@ -53,7 +53,7 @@ final class k {
               if (ok.field_h) {
                 param1 = TextLayout.field_g;
               }
-              nb.field_b.a(true, param1, param0);
+              nb.field_b.showResult(true, param1, param0);
             }
             if (param0 != 256) {
               if (param0 == 10) {

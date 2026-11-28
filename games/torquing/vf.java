@@ -218,7 +218,7 @@ final class vf {
                         stackIn_47_0Lifetime1 = var16 << 4;
                         stackIn_47_1Lifetime1 = -var17;
                         var18 = stackIn_47_0Lifetime1 - stackIn_47_1Lifetime1;
-                        mn.field_bb[var18] = var8;
+                        ProgressMessageDialog.field_bb[var18] = var8;
                         u.field_v[var16] = 1 + var17;
                         if (param0.field_M > 0 &&
                           param0.field_i != null) {
@@ -340,7 +340,7 @@ final class vf {
           dc.field_a.showDialog(var7, (byte) 91);
           boolean decompiledSharedTail0 = !(mc.b(120));
           if (!decompiledSharedTail0) {
-            var7.o(11);
+            var7.showAccountCreationConnectionFailure(11);
             decompiledSharedTail0 = (Torquing.field_u != 0);
           }
           if (decompiledSharedTail0) {

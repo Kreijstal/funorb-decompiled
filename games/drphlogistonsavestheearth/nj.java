@@ -276,7 +276,7 @@ final class nj {
         if (param3) {
           var4++;
         }
-        return tf.field_nb[var4];
+        return ProgressDialog.field_nb[var4];
     }
 
     final static java.awt.Frame a(int param0, int param1, PlatformTaskDispatcher param2, boolean param3, int param4, int param5) {
@@ -379,7 +379,7 @@ final class nj {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_l[var2] = ff.a(hg.a(255L, (long)this.field_k[7 + var3]), ff.a(hg.a(65280L, (long)this.field_k[6 + var3] << 8), ff.a(hg.a(16711680L, (long)this.field_k[var3 + 5] << 16), ff.a(ff.a(ff.a(ff.a((long)this.field_k[var3] << 56, hg.a((long)this.field_k[var3 + 1], 255L) << 48), hg.a(255L, (long)this.field_k[2 + var3]) << 40), hg.a((long)this.field_k[3 + var3] << 32, 1095216660480L)), hg.a((long)this.field_k[var3 + 4] << 24, 4278190080L)))));
+          this.field_l[var2] = GuestPlayConfirmationForm.a(hg.a(255L, (long)this.field_k[7 + var3]), GuestPlayConfirmationForm.a(hg.a(65280L, (long)this.field_k[6 + var3] << 8), GuestPlayConfirmationForm.a(hg.a(16711680L, (long)this.field_k[var3 + 5] << 16), GuestPlayConfirmationForm.a(GuestPlayConfirmationForm.a(GuestPlayConfirmationForm.a(GuestPlayConfirmationForm.a((long)this.field_k[var3] << 56, hg.a((long)this.field_k[var3 + 1], 255L) << 48), hg.a(255L, (long)this.field_k[2 + var3]) << 40), hg.a((long)this.field_k[3 + var3] << 32, 1095216660480L)), hg.a((long)this.field_k[var3 + 4] << 24, 4278190080L)))));
           var2++;
           var3 += 8;
         }
@@ -387,7 +387,7 @@ final class nj {
           dupTemp$0 = this.field_n[var2Lifetime1];
           arrayValue$1 = this.field_l[var2Lifetime1];
           this.field_q[var2Lifetime1] = dupTemp$0;
-          this.field_h[var2Lifetime1] = ff.a(arrayValue$1, dupTemp$0);
+          this.field_h[var2Lifetime1] = GuestPlayConfirmationForm.a(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
@@ -395,7 +395,7 @@ final class nj {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_i[var3Lifetime1] = ff.a(this.field_i[var3Lifetime1], AccountRequestState.field_c[var4][rk.a((int)(this.field_q[rk.a(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
+              this.field_i[var3Lifetime1] = GuestPlayConfirmationForm.a(this.field_i[var3Lifetime1], AccountRequestState.field_c[var4][rk.a((int)(this.field_q[rk.a(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
               var5 -= 8;
               var4++;
             }
@@ -403,14 +403,14 @@ final class nj {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_q[var3Lifetime1Lifetime1] = this.field_i[var3Lifetime1Lifetime1];
           }
-          this.field_q[0] = ff.a(this.field_q[0], AccountRequestState.field_e[var2Lifetime2]);
+          this.field_q[0] = GuestPlayConfirmationForm.a(this.field_q[0], AccountRequestState.field_e[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; 8 > var3Lifetime1Lifetime2; var3Lifetime1Lifetime2++) {
             this.field_i[var3Lifetime1Lifetime2] = this.field_q[var3Lifetime1Lifetime2];
             var8 = 0;
             var4Lifetime1 = var8;
             var5Lifetime1 = 56;
             while (var8 < 8) {
-              this.field_i[var3Lifetime1Lifetime2] = ff.a(this.field_i[var3Lifetime1Lifetime2], AccountRequestState.field_c[var8][rk.a(255, (int)(this.field_h[rk.a(7, var3Lifetime1Lifetime2 - var8)] >>> var5Lifetime1))]);
+              this.field_i[var3Lifetime1Lifetime2] = GuestPlayConfirmationForm.a(this.field_i[var3Lifetime1Lifetime2], AccountRequestState.field_c[var8][rk.a(255, (int)(this.field_h[rk.a(7, var3Lifetime1Lifetime2 - var8)] >>> var5Lifetime1))]);
               var5Lifetime1 -= 8;
               var8++;
             }
@@ -424,7 +424,7 @@ final class nj {
           nj.a(118, 34, (PlatformTaskDispatcher) null, false, -72, 58);
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_n[var2Lifetime3] = ff.a(this.field_n[var2Lifetime3], ff.a(this.field_l[var2Lifetime3], this.field_h[var2Lifetime3]));
+          this.field_n[var2Lifetime3] = GuestPlayConfirmationForm.a(this.field_n[var2Lifetime3], GuestPlayConfirmationForm.a(this.field_l[var2Lifetime3], this.field_h[var2Lifetime3]));
         }
     }
 

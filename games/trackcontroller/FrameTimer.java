@@ -54,7 +54,7 @@ abstract class FrameTimer {
         var4 = TrackController.field_F ? 1 : 0;
         var2 = -64 / ((44 - param0) / 37);
         if (0 >= SocketConnector.field_d) {
-          if (jj.s(109)) {
+          if (ProgressMessageDialog.s(109)) {
             var3 = 0;
           } else {
             var3 = 1;

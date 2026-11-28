@@ -64,7 +64,7 @@ abstract class w {
         try {
           var4_int = -54 % ((36 - param0) / 55);
           if (ha.a(param3, -32180, param2, param1)) {
-            stackIn_4_0 = fc.b(-128);
+            stackIn_4_0 = FullscreenNoticeType.b(-128);
             return stackIn_4_0;
           }
           stackIn_2_0 = null;

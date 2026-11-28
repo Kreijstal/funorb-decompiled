@@ -80,7 +80,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_10_0;
           }
           if (lc.a((byte) -33, var5)) {
-            stackIn_13_0 = ta.field_fb;
+            stackIn_13_0 = ContentTransitionDialog.field_fb;
             return stackIn_13_0;
           }
           if (this.b(param0, 0)) {

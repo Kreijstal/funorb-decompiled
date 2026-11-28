@@ -102,7 +102,7 @@ final class vk {
         var8 = Confined.field_J ? 1 : 0;
         try {
           if (param1 == null) {
-            stackIn_3_0 = ef.field_wb;
+            stackIn_3_0 = StandardContentDialog.field_wb;
             return stackIn_3_0;
           }
           if (param2 != -2) {
@@ -140,10 +140,10 @@ final class vk {
               stackIn_21_0 = f.field_c;
               return stackIn_21_0;
             }
-            stackIn_16_0 = ef.field_wb;
+            stackIn_16_0 = StandardContentDialog.field_wb;
             return stackIn_16_0;
           }
-          stackIn_11_0 = ef.field_wb;
+          stackIn_11_0 = StandardContentDialog.field_wb;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

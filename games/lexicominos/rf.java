@@ -259,7 +259,7 @@ final class rf {
         if (param0 != 30448) {
           field_c = 74;
         }
-        return uc.field_eb;
+        return ProgressMessageDialog.field_eb;
     }
 
     static {

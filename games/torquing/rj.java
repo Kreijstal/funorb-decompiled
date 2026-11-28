@@ -139,7 +139,7 @@ final class rj extends am {
         int var3;
         int var4;
         var4 = Torquing.field_u;
-        this.field_s = i.b(10758, this.field_A);
+        this.field_s = FullscreenStatusDialog.b(10758, this.field_A);
         if (param0 <= 123) {
           this.field_s = (byte[]) null;
         }

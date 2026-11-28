@@ -182,18 +182,18 @@ final class ii {
               ResourceArchive.field_e = ModalDialog.a(rg.field_r, new String[]{Integer.toString(var1)}, true);
             }
             ResourceArchive.field_e = DequeWidgetContainer.a(0, new CharSequence[]{(CharSequence) ((Object) ResourceArchive.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) jk.field_p)});
-            ok.field_x.n(-22645);
-            ic.n(-128);
+            ok.field_x.closeDialog(-22645);
+            FullscreenStatusDialog.n(-128);
             if (param0 == -88) {
               return;
             }
             ii.a(-2, 'D');
             return;
           }
-          ok.field_x.n(-22645);
-          ic.n(-128);
+          ok.field_x.closeDialog(-22645);
+          FullscreenStatusDialog.n(-128);
         } else {
-          ok.field_x.e(true);
+          ok.field_x.showConnectionFailure(true);
         }
         if (param0 == -88) {
           return;

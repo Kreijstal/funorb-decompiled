@@ -30,7 +30,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         }
         if (256 <= this.field_A) {
           if (param0 == 0) {
-            this.c(this.field_s + param1, (byte) -122, param3 + this.field_j);
+            this.drawDialogBackground(this.field_s + param1, (byte) -122, param3 + this.field_j);
             super.drawWidget(param0, param1, (byte) 49, param3);
             return;
           }
@@ -40,7 +40,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           ProxyAuthenticationRequiredException.field_c = new Sprite(this.field_i, this.field_f);
           bc.a(ProxyAuthenticationRequiredException.field_c, 26095);
           SoftwareRasterizer.clearRaster();
-          this.c(0, (byte) 73, 0);
+          this.drawDialogBackground(0, (byte) 73, 0);
           super.drawWidget(param0, -param1 - this.field_s, param2, -this.field_j - param3);
           wf.a(param2 ^ -15);
           ProxyAuthenticationRequiredException.field_c.drawWithOpacity(param1 + this.field_s, param3 + this.field_j, this.field_A);
@@ -50,7 +50,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           ProxyAuthenticationRequiredException.field_c = new Sprite(this.field_i, this.field_f);
           bc.a(ProxyAuthenticationRequiredException.field_c, 26095);
           SoftwareRasterizer.clearRaster();
-          this.c(0, (byte) 73, 0);
+          this.drawDialogBackground(0, (byte) 73, 0);
           super.drawWidget(param0, -param1 - this.field_s, param2, -this.field_j - param3);
           wf.a(param2 ^ -15);
           ProxyAuthenticationRequiredException.field_c.drawWithOpacity(param1 + this.field_s, param3 + this.field_j, this.field_A);
@@ -59,7 +59,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         if (ProxyAuthenticationRequiredException.field_c.field_v >= this.field_f) {
           bc.a(ProxyAuthenticationRequiredException.field_c, 26095);
           SoftwareRasterizer.clearRaster();
-          this.c(0, (byte) 73, 0);
+          this.drawDialogBackground(0, (byte) 73, 0);
           super.drawWidget(param0, -param1 - this.field_s, param2, -this.field_j - param3);
           wf.a(param2 ^ -15);
           ProxyAuthenticationRequiredException.field_c.drawWithOpacity(param1 + this.field_s, param3 + this.field_j, this.field_A);
@@ -68,7 +68,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         ProxyAuthenticationRequiredException.field_c = new Sprite(this.field_i, this.field_f);
         bc.a(ProxyAuthenticationRequiredException.field_c, 26095);
         SoftwareRasterizer.clearRaster();
-        this.c(0, (byte) 73, 0);
+        this.drawDialogBackground(0, (byte) 73, 0);
         super.drawWidget(param0, -param1 - this.field_s, param2, -this.field_j - param3);
         wf.a(param2 ^ -15);
         ProxyAuthenticationRequiredException.field_c.drawWithOpacity(param1 + this.field_s, param3 + this.field_j, this.field_A);
@@ -81,7 +81,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         }
     }
 
-    abstract void c(int param0, byte param1, int param2);
+    abstract void drawDialogBackground(int param0, byte param1, int param2);
 
     boolean snapDialogAnimation(int param0) {
         if (param0 >= -121) {

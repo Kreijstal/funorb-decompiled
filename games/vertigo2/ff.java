@@ -27,7 +27,7 @@ final class ff {
 
     final static void b(byte param0) {
         vd.field_b = new AccountRegistrationPanel();
-        n.field_b.a(false, vd.field_b);
+        n.field_b.replaceContent(false, vd.field_b);
         if (param0 != -104) {
           field_b = 45;
         }

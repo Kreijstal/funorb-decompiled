@@ -1,0 +1,258 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class StripedProgressWidget extends UiWidget {
+    private Sprite field_y;
+    static String field_H;
+    private Sprite field_C;
+    static String field_I;
+    static Sprite[] field_F;
+    private Sprite[] field_D;
+    private int field_G;
+    boolean field_w;
+    int field_J;
+    static kh field_x;
+    private int field_u;
+    private Sprite field_K;
+    private int field_M;
+    private int field_L;
+    private int field_t;
+    private int field_B;
+    static String[] field_E;
+    static int[] field_z;
+    static String field_v;
+    static String field_A;
+
+    private final Sprite createCapMask(int param0) {
+        int var4 = 0;
+        int var5 = 0;
+        double var6 = 0.0;
+        int var8 = 0;
+        int var9 = Transmogrify.field_A ? 1 : 0;
+        int var2 = this.field_h >> 1;
+        Sprite var3 = new Sprite(var2, this.field_h);
+        CrossfadingMidiPcmStream.a(var3, 256);
+        for (var4 = 0; var4 < this.field_h; var4++) {
+          for (var5 = 0; var2 > var5; var5++) {
+            var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + this.field_h));
+            var8 = 1;
+            if (var6 < 1.0) {
+              var6 = Math.sqrt(-var6 + 1.0);
+              var8 = !(1.0 <= var6) ? (int)(var6 * 255.0) : 255;
+            }
+            SoftwareRasterizer.setPixel(var5, var4, var8 << 8 | var8 | var8 << 16);
+          }
+        }
+        if (param0 != -29239) {
+          field_E = (String[]) null;
+        }
+        SingleChildWidgetContainer.c(true);
+        return var3;
+    }
+
+    final void setColours(boolean param0, int param1, int param2) {
+        this.field_u = (param1 & 16711422) >> 1;
+        this.field_L = 8355711 & param2 >> 1;
+        this.field_B = param1;
+        this.field_M = param2;
+        this.refreshTextures(false);
+        if (!param0) {
+          this.setColours(false, 76, -81);
+        }
+    }
+
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(-109, param1, param2, param3, param4);
+        int var6 = 118 / ((param0 + 29) / 53);
+        this.refreshTextures(false);
+    }
+
+    private final Sprite createStripeTexture(byte param0, int param1, int param2) {
+        Sprite discarded$0 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = Transmogrify.field_A ? 1 : 0;
+        Sprite var14 = new Sprite(this.field_t * 2, this.field_h);
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var12Lifetime1;
+        CrossfadingMidiPcmStream.a(var14, param0 + 166);
+        int var5 = this.field_h >> 1;
+        if (param0 != 90) {
+          discarded$0 = this.createCapMask(50);
+        }
+        for (var6 = 0; var6 < this.field_h; var6++) {
+          var7 = (var6 >> 1) * (-1 + this.field_t * 2) % (this.field_t * 2);
+          var8 = param2 & 16711935;
+          var9 = 65280 & param2;
+          var10 = var6 - var5;
+          var11 = 128 + (int)(128.0 * (Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5));
+          var12 = var11 < 256 ? (16711680 & var11 * var9 | var11 * var8 & -16711936) >>> 8 : var9 | var8;
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_t, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7 - 2 * this.field_t, var6, this.field_t, var12);
+          var9Lifetime1 = param1 & 65280;
+          var8Lifetime1 = 16711935 & param1;
+          var12Lifetime1 = var11 >= 256 ? var9Lifetime1 | var8Lifetime1 : (var9Lifetime1 * var11 & 16711680 | var11 * var8Lifetime1 & -16711936) >>> 8;
+          SoftwareRasterizer.drawHorizontalLine(var7 + this.field_t, var6, this.field_t, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-this.field_t + var7, var6, this.field_t, var12Lifetime1);
+        }
+        SingleChildWidgetContainer.c(true);
+        return var14;
+    }
+
+    final void updatePointer(int param0, byte param1, UiWidget param2, int param3) {
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        try {
+          if (this.field_w) {
+            this.field_G = this.field_G + 1;
+            if (this.field_G > this.field_t * 2) {
+              this.field_G = this.field_G - this.field_t * 2;
+            }
+          }
+          if (param1 != -12) {
+            field_v = (String) null;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_10_0 = var5;
+          stackIn_10_1 = new StringBuilder().append("qe.B(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    private final void refreshTextures(boolean param0) {
+        if (param0) {
+          this.field_u = -108;
+        }
+        this.field_D = new Sprite[]{this.createStripeTexture((byte) 90, this.field_B, this.field_M), this.createStripeTexture((byte) 90, this.field_u, this.field_L)};
+        this.field_y = this.createCapMask(-29239);
+        this.field_C = this.field_y.copyMirroredHorizontally();
+        this.field_K = new Sprite(this.field_h >> 1, this.field_h);
+    }
+
+    private final void drawStripeTexture(byte param0, Sprite param1, int param2, int param3) {
+        Sprite discarded$0 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        var8 = Transmogrify.field_A ? 1 : 0;
+        try {
+          var5_int = this.field_l + param3;
+          c.a(var5_int - this.field_y.field_n, this.field_y.field_n + param3, (byte) -50, this.field_h + param2, param2);
+          var6 = -this.field_G + param3;
+          if (param0 != -57) {
+            discarded$0 = this.createCapMask(-123);
+          }
+          while (var6 < var5_int) {
+            param1.draw(var6, param2);
+            var6 = var6 + param1.field_n;
+          }
+          SingleChildWidgetContainer.c(true);
+          if (param3 + this.field_y.field_n >= SoftwareRasterizer.field_d) {
+            CrossfadingMidiPcmStream.a(this.field_K, 256);
+            param1.draw(-this.field_G, 0);
+            param1.draw(this.field_t * 2 - this.field_G, 0);
+            this.field_C.drawMultiply(0, 0);
+            SingleChildWidgetContainer.c(true);
+            this.field_K.draw(param3, param2);
+          }
+          if (var5_int - this.field_y.field_n <= SoftwareRasterizer.field_b) {
+            CrossfadingMidiPcmStream.a(this.field_K, 256);
+            for (var7 = this.field_G + this.field_l - this.field_y.field_n; 2 * this.field_t < var7; var7 = var7 - 2 * this.field_t) {
+            }
+            param1.draw(-var7, 0);
+            param1.draw(this.field_t * 2 - var7, 0);
+            this.field_y.drawMultiply(0, 0);
+            SingleChildWidgetContainer.c(true);
+            this.field_K.draw(-this.field_y.field_n + var5_int, param2);
+            return;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_16_0 = var5;
+          stackIn_16_1 = new StringBuilder().append("qe.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
+          }
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    StripedProgressWidget(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+        this(param0, param1, param2, param3, param4, param5, param6, 8355711 & param5 >> 1, param6 >> 1 & 8355711);
+    }
+
+    final void drawWidget(int param0, int param1, int param2, byte param3) {
+        if (0 != param2) {
+          return;
+        }
+        int var5 = -77 % ((param3 - 77) / 34);
+        int var6 = this.field_p + param0;
+        int var7 = this.field_n + param1;
+        this.drawStripeTexture((byte) -57, this.field_D[0], var7, var6);
+        if (65536 > this.field_J) {
+          c.a(this.field_l + var6, (this.field_l * this.field_J >> 16) + var6, (byte) -50, this.field_h + var7, var7);
+          this.drawStripeTexture((byte) -57, this.field_D[1], var7, var6);
+          SingleChildWidgetContainer.c(true);
+        }
+    }
+
+    public static void clearStaticReferences(int param0) {
+        field_E = null;
+        field_A = null;
+        field_F = null;
+        field_z = null;
+        field_H = null;
+        if (param0 != -156630320) {
+          StripedProgressWidget.clearStaticReferences(-7);
+        }
+        field_x = null;
+        field_v = null;
+        field_I = null;
+    }
+
+    private StripedProgressWidget(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        this.field_L = param7;
+        this.field_t = param4;
+        this.field_M = param5;
+        this.field_u = param8;
+        this.field_B = param6;
+        this.setBounds(75, param1, param0, param2, param3);
+    }
+
+    static {
+        field_H = "Passwords can only contain letters and numbers";
+        field_I = "Continue";
+        field_x = new kh("");
+        field_v = "Instructions";
+        field_E = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+        field_z = new int[8192];
+        field_A = "Age:";
+    }
+}

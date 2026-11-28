@@ -42,8 +42,8 @@ final class ec extends TextureOperator {
         }
         var4 = lf.field_y[param0];
         var5 = -2048 + var4 >> 1;
-        for (var6 = 0; we.field_M > var6; var6++) {
-          var8 = rh.field_O[var6];
+        for (var6 = 0; StripedProgressWidget.field_M > var6; var6++) {
+          var8 = DialogMessagePane.field_O[var6];
           var9 = -2048 + var8 >> 1;
           if (this.field_y != 0) {
             var10 = var5 * var5 + var9 * var9 >> 12;

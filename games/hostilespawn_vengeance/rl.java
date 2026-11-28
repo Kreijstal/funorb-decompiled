@@ -116,7 +116,7 @@ final class rl {
           if (var6 == null) {
             return false;
           }
-          jh.a(-26869, var6);
+          FullscreenStatusDialog.a(-26869, var6);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

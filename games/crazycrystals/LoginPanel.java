@@ -144,7 +144,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
         var1 = q.field_a[2].field_i;
         var6 = (String) null;
         um.a(0, (String) null, (byte) 118);
-        ck.field_db.b((byte) -107);
+        StandardContentDialog.field_db.b((byte) -107);
         field_N.b((byte) 64);
         fp.field_c.b((byte) 111);
         aa.field_a.b((byte) -126);

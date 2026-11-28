@@ -3,10 +3,10 @@
  */
 final class BirthDateValidator extends DebouncedFieldValidator implements TextFieldListener, wr {
     static byte[][][] field_j;
-    af field_h;
+    DateInputWidget field_h;
     static int field_k;
     static boolean field_m;
-    static fj field_l;
+    static ProgressMessageDialog field_l;
     static String[] field_n;
     static String field_i;
 
@@ -22,13 +22,13 @@ final class BirthDateValidator extends DebouncedFieldValidator implements TextFi
         ba stackIn_13_0 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var2_int = this.field_h.a(-32410);
-          var3 = this.field_h.i(0);
+          var2_int = this.field_h.getDay(-32410);
+          var3 = this.field_h.getMonthIndex(0);
           if (param0 < 24) {
             stackIn_2_0 = (ba) null;
             return stackIn_2_0;
           }
-          var4 = this.field_h.c(false);
+          var4 = this.field_h.getYear(false);
           var5 = hd.b(false);
           if (var4 < 1890) {
             stackIn_6_0 = ir.field_a;
@@ -47,7 +47,7 @@ final class BirthDateValidator extends DebouncedFieldValidator implements TextFi
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return ir.field_a;
         }
-        return qm.field_G;
+        return GuestPlayConfirmationForm.field_G;
     }
 
     public static void clearDeclaredStaticReferences(int param0) {
@@ -98,9 +98,9 @@ final class BirthDateValidator extends DebouncedFieldValidator implements TextFi
     public final boolean hasMissingInput(int param0) {
         if (param0 != -12211) {
           this.hasMissingInput(1);
-          return this.field_h.e(false);
+          return this.field_h.isDateEmpty(false);
         }
-        return this.field_h.e(false);
+        return this.field_h.isDateEmpty(false);
     }
 
     final String evaluateValidationMessage(int param0) {
@@ -116,9 +116,9 @@ final class BirthDateValidator extends DebouncedFieldValidator implements TextFi
           return (String) null;
         }
         try {
-          var2_int = this.field_h.a(-32410);
-          var3 = this.field_h.i(0);
-          var4 = this.field_h.c(false);
+          var2_int = this.field_h.getDay(-32410);
+          var3 = this.field_h.getMonthIndex(0);
+          var4 = this.field_h.getYear(false);
           var5 = hd.b(false);
           if (1890 <= var4 &&
             var4 <= -3 + var5) {

@@ -31,12 +31,12 @@ final class mk {
         RuntimeException var2 = null;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          ae.a(1, BoundedRandomAccessFile.field_f, cc.field_B, gg.field_b, true, 0, param1);
+          FullscreenStatusDialog.a(1, BoundedRandomAccessFile.field_f, cc.field_B, gg.field_b, true, 0, param1);
           var3 = 77 / ((param0 - 21) / 63);
           for (var2_int = 0; gg.field_b > var2_int; var2_int++) {
             bj.field_a[var2_int + param1] = var2_int;
           }
-          ae.a(1, mh.field_b, ha.field_c, gg.field_b + param1, false, param1, param1 + param1);
+          FullscreenStatusDialog.a(1, mh.field_b, ha.field_c, gg.field_b + param1, false, param1, param1 + param1);
           if (gg.field_b > param1) {
             gg.field_b = param1;
           }

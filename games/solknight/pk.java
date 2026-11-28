@@ -337,7 +337,7 @@ final class pk extends RichTextWidget {
         Object var3 = null;
         var3 = RichTextWidget.field_P;
         synchronized (var3) {
-          FullscreenFocusCanvas.a(c.field_M[param1], param0 + 182, param2);
+          FullscreenFocusCanvas.a(StripedProgressWidget.field_M[param1], param0 + 182, param2);
           be.field_K = qc.field_o[param1];
           ed.a((byte) -122);
         }

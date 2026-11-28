@@ -474,7 +474,7 @@ final class BufferedSocket implements Runnable {
             }
             var2 = 1;
           }
-          DraggableWidgetContainer.field_K.a(-121, uc.a(PacketBuffer.field_j, 1691746689, field_m), uc.a(SpriteState.field_o, 1691746689, s.field_gb));
+          DraggableWidgetContainer.field_K.a(-121, uc.a(PacketBuffer.field_j, 1691746689, field_m), uc.a(SpriteState.field_o, 1691746689, StandardContentDialog.field_gb));
           if (DraggableWidgetContainer.field_K.d((byte) -36)) {
             var1_int = 1;
           }

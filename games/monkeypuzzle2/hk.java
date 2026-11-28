@@ -466,7 +466,7 @@ final class hk extends IntrusiveNode {
           return (ai[]) null;
         }
         for (var2 = 0; eg.field_c > var2; var2++) {
-          var1[var2] = new ai(nj.field_d, qk.field_a, ValidatedTextField.field_P[var2], mb.field_b[var2], da.field_c[var2], ra.field_ab[var2], cb.field_b[var2], fk.field_d);
+          var1[var2] = new ai(nj.field_d, qk.field_a, ValidatedTextField.field_P[var2], mb.field_b[var2], da.field_c[var2], StandardContentDialog.field_ab[var2], cb.field_b[var2], fk.field_d);
         }
         gb.a(-119);
         return var1;

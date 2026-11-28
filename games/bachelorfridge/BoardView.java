@@ -723,7 +723,7 @@ final class BoardView {
                 if (var5.field_s.statusId != 0 &&
                   pna.field_zb[var5.field_s.statusId].field_i != -1) {
                   lga.field_k.draw(15 + var19.field_c, var19.field_a + 2);
-                  am.field_M[pna.field_zb[var5.field_s.statusId].field_i].draw(var19.field_c + 17, var19.field_a + 4);
+                  ResizableModalDialog.field_M[pna.field_zb[var5.field_s.statusId].field_i].draw(var19.field_c + 17, var19.field_a + 4);
                 }
                 if (!var5.field_s.isDown(-89)) {
                   if (var5.field_s.statusId == 39) {
@@ -1409,7 +1409,7 @@ final class BoardView {
         this.a(64, -1, this.field_E, -64, 1, (byte) -127, 2, 2);
         this.field_l = this.field_A.copy();
         this.a(192, -1, this.field_l, 64, -1, (byte) -100, 2, -2);
-        hga.field_U.a((byte) 126);
+        ProgressDialog.field_U.a((byte) 126);
     }
 
     private final int c(int param0, int param1) {
@@ -2594,7 +2594,7 @@ final class BoardView {
           this.field_i = param0;
           this.field_I = this.field_i.field_h.tiles;
           this.field_k = MovementAnimation.a(0, (ResourceArchive) null, this.field_i.field_h.field_E);
-          hga.field_U.a((byte) 127);
+          ProgressDialog.field_U.a((byte) 127);
           this.field_z = this.field_i.field_h.height;
           this.field_a = this.field_i.field_h.width;
           this.field_j = new bq[this.field_a + 2][2 + this.field_z];

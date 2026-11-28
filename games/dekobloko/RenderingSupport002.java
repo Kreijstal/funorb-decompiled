@@ -70,7 +70,7 @@ final class RenderingSupport002 {
             rgbSpriteLocal37 = rgbSpriteLocal5;
             rgbSpriteLocal41 = rgbSpriteLocal37;
             rgbSpriteLocal38 = rgbSpriteLocal5;
-            stringLocal6 = UiComponentPart008.stringState0122;
+            stringLocal6 = DialogMessagePane.stringState0122;
             mixedSupport099Local4.sceneWidgetPart002State0002.performAction0556(4193, 12, rgbSpriteLocal5, stringLocal6);
             mixedSupport099Local7 = SceneWidget.mixedSupport099State0001;
             rgbSpriteLocal8 = AlphaWidgetContainer.rgbSpriteArrayState0010[2];
@@ -85,7 +85,7 @@ final class RenderingSupport002 {
             rgbSpriteLocal33 = AlphaWidgetContainer.rgbSpriteArrayState0010[0];
             rgbSpriteLocal34 = rgbSpriteLocal33;
             rgbSpriteLocal43 = rgbSpriteLocal33;
-            stringLocal11 = UiComponentPart008.stringState0121;
+            stringLocal11 = DialogMessagePane.stringState0121;
             mixedSupport099Local10.sceneWidgetPart002State0002.performAction0556(4193, 11, rgbSpriteLocal33, stringLocal11);
             mixedSupport099Local12 = SceneWidget.mixedSupport099State0001;
             rgbSpriteLocal13 = AlphaWidgetContainer.rgbSpriteArrayState0010[1];
@@ -144,7 +144,7 @@ final class RenderingSupport002 {
     }
 
     final static void performAction0249(boolean booleanArgument1, int integerArgument2) {
-        if (UiComponentPart017.integerState0437 > 0 &&
+        if (GuestPlayConfirmationForm.integerState0437 > 0 &&
           LobbyRoomRow.booleanState0202) {
           SoftwareRaster.darkenRectangleHalf(0, 0, SoftwareRaster.integerState0285, RichTextLayout.sceneWidgetState0021.integerState0886);
           SceneWidgetPart011.sceneWidgetState0115.performAction1767(integerArgument2 ^ 1141039779, booleanArgument1);

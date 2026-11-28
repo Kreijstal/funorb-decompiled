@@ -33,7 +33,7 @@ final class hj extends gd {
           (6 & this.field_V.field_o) == 0) {
           this.a(var4, var5, this.field_H, (byte) 112);
         }
-        if (wi.field_ob == this &&
+        if (ProgressDialog.field_ob == this &&
           this.field_Y) {
           this.a(var4, var5, this.field_I, (byte) -12);
         }
@@ -75,7 +75,7 @@ final class hj extends gd {
         }
         SoftwareRasterizer.drawRectangleOutline(var4, var5, 40, 40, 0);
         SoftwareRasterizer.drawRectangleOutline(4 + var4, 4 + var5, 32, 32, 0);
-        rp.a(6, 32, (byte) 108, 4 + var4, 32, kc.field_S, 4 + var5);
+        rp.a(6, 32, (byte) 108, 4 + var4, 32, DialogMessagePane.field_S, 4 + var5);
     }
 
     final static RgbSprite[] a(int param0, int param1, byte param2, int param3, int param4) {

@@ -179,7 +179,7 @@ final class uj implements WidgetRenderer {
 
     public uj() {
         this.field_b = 1;
-        this.field_d = ql.field_Q;
+        this.field_d = ResizableModalDialog.field_Q;
         this.field_e = 1;
     }
 

@@ -66,7 +66,7 @@ final class ResourceArchive {
           var5 = -50 / ((19 - param1) / 61);
           var4_int = param3.getGroupIdByName(param0, (byte) -118);
           var6 = param3.getFileIdByName(var4_int, param2, (byte) -11);
-          stackIn_1_0 = vf.a(param3, (byte) -78, var6, var4_int);
+          stackIn_1_0 = DialogMessagePane.a(param3, (byte) -78, var6, var4_int);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

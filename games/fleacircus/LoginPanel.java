@@ -219,7 +219,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
                 }
               }
             } else {
-              oh.d(false);
+              ContentTransitionDialog.d(false);
             }
           } else {
             this.submitLogin((byte) -32);

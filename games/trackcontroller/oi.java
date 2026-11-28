@@ -14,7 +14,7 @@ final class oi {
 
     final static void a(int param0, Sprite[] param1, int param2, BitmapFont param3, BitmapFont param4, int param5, int param6, int param7, int param8, Sprite[] param9, int param10, boolean param11, int param12, int param13, int param14) {
         try {
-          DirectByteStorage.a(param12, param6, param5, 480, (Sprite[]) null, param7, 0, LevelGrid.field_n, param9, param14, db.field_db, param0, param1, param2, param4, param13, param8, param10 ^ param10, 0, param3, j.field_a);
+          DirectByteStorage.a(param12, param6, param5, 480, (Sprite[]) null, param7, 0, LevelGrid.field_n, param9, param14, ContentTransitionDialog.field_db, param0, param1, param2, param4, param13, param8, param10 ^ param10, 0, param3, j.field_a);
           FrameTimer.a((byte) 116, param11);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "oi.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ')');

@@ -134,7 +134,7 @@ final class IntrusiveDeque {
             ub.field_e = qk.a("benefits", "button_frame", IterableNodeHashTable.field_c, 0);
             le.field_e = qk.a("benefits", "arrow", IterableNodeHashTable.field_c, 0);
             tk.field_R = (BitmapFont) ((Object) FullscreenFocusCanvas.a(IterableNodeHashTable.field_c, sf.field_a, "benefits", "large_font", false));
-            ek.field_G = (BitmapFont) ((Object) FullscreenFocusCanvas.a(IterableNodeHashTable.field_c, sf.field_a, "benefits", "small_font", false));
+            StripedProgressWidget.field_G = (BitmapFont) ((Object) FullscreenFocusCanvas.a(IterableNodeHashTable.field_c, sf.field_a, "benefits", "small_font", false));
             var28 = SoftwareRasterizer.pixels;
             var2 = SoftwareRasterizer.width;
             var3 = SoftwareRasterizer.height;
@@ -142,25 +142,25 @@ final class IntrusiveDeque {
             var11 = new Sprite(4 + le.field_e.storedWidth, le.field_e.storedHeight + 4);
             var11.bindAsRenderTarget();
             le.field_e.drawTinted(2, 2, vh.field_h);
-            ih.a(var11.storedWidth, 0, 4, var11.storedHeight, 2, var11, 0, 1);
+            GuestPlayConfirmationForm.a(var11.storedWidth, 0, 4, var11.storedHeight, 2, var11, 0, 1);
             le.field_e = var11;
             dh.field_ab = le.field_e.copyMirroredHorizontally();
             var12 = new Sprite(195, 221);
             var6 = var12.storedWidth / 2;
             var12.bindAsRenderTarget();
             tk.field_R.drawCentred(ni.a(new String[]{kg.field_db}, 0, gh.field_v), var6, 40, 16777215, -1);
-            ek.field_G.drawCentred(ni.a(new String[]{kg.field_db}, 0, FrameTimer.field_d), var6, 60, 16777215, -1);
+            StripedProgressWidget.field_G.drawCentred(ni.a(new String[]{kg.field_db}, 0, FrameTimer.field_d), var6, 60, 16777215, -1);
             tk.field_R.drawCentred(ni.a(new String[]{LevelEntity.field_J}, 0, ConfirmedEmailAvailabilityValidator.field_t), var6, 110, 16777215, -1);
-            ek.field_G.drawCentred(ni.a(new String[]{LevelEntity.field_J}, 0, di.field_n), var6, 130, 16777215, -1);
+            StripedProgressWidget.field_G.drawCentred(ni.a(new String[]{LevelEntity.field_J}, 0, di.field_n), var6, 130, 16777215, -1);
             tk.field_R.drawCentred(ub.field_m, var6, 180, 16777215, -1);
-            ek.field_G.drawCentred(wi.field_b, var6, 200, 16777215, -1);
-            ih.a(var12.storedWidth, 0, 4, var12.storedHeight, 3, var12, 0, 1);
+            StripedProgressWidget.field_G.drawCentred(wi.field_b, var6, 200, 16777215, -1);
+            GuestPlayConfirmationForm.a(var12.storedWidth, 0, 4, var12.storedHeight, 3, var12, 0, 1);
             me.field_e.bindAsRenderTarget();
             var12.drawTransparent(-me.field_e.offsetX + 18, -me.field_e.offsetY + 241);
             for (var7 = 0; hb.field_g.length > var7; var7++) {
               SecondaryNodeDeque.field_i[var7].bindAsRenderTarget();
-              ek.field_G.drawParagraph(hb.field_g[var7], 3, 3, SecondaryNodeDeque.field_i[var7].storedWidth - 6, SecondaryNodeDeque.field_i[var7].storedHeight - 6, vh.field_h, -1, 1, 1, ek.field_G.field_x + ek.field_G.field_K);
-              ih.a(SecondaryNodeDeque.field_i[var7].storedWidth, 0, 4, SecondaryNodeDeque.field_i[var7].storedHeight, 3, SecondaryNodeDeque.field_i[var7], 0, 1);
+              StripedProgressWidget.field_G.drawParagraph(hb.field_g[var7], 3, 3, SecondaryNodeDeque.field_i[var7].storedWidth - 6, SecondaryNodeDeque.field_i[var7].storedHeight - 6, vh.field_h, -1, 1, 1, StripedProgressWidget.field_G.field_x + StripedProgressWidget.field_G.field_K);
+              GuestPlayConfirmationForm.a(SecondaryNodeDeque.field_i[var7].storedWidth, 0, 4, SecondaryNodeDeque.field_i[var7].storedHeight, 3, SecondaryNodeDeque.field_i[var7], 0, 1);
             }
             hb.field_g = null;
             AccountRegistrationPanel.field_R = GzipDecoder.field_b.copy();
@@ -232,7 +232,7 @@ final class IntrusiveDeque {
             var9 = new Sprite(vk.field_d.fullWidth, vk.field_d.fullHeight);
             var9.bindAsRenderTarget();
             tk.field_R.drawParagraph(var14, ModalDialogHost.field_J, vk.field_k, IterableNodeHashTable.field_f, pi.field_b, 16777215, -1, 1, 1, tk.field_R.field_x + tk.field_R.field_K);
-            ih.a(var9.fullWidth, 0, 4, var9.fullHeight, 3, var9, 0, 1);
+            GuestPlayConfirmationForm.a(var9.fullWidth, 0, 4, var9.fullHeight, 3, var9, 0, 1);
             vk.field_d.bindAsRenderTarget();
             var9.drawTransparent(0, 0);
             cf.field_c = new Sprite(640, 480);
@@ -244,7 +244,7 @@ final class IntrusiveDeque {
             SoftwareRasterizer.restoreClip(ck.field_c);
           }
           if (null != TextHotspotBounds.field_l &&
-            ek.field_G != null) {
+            StripedProgressWidget.field_G != null) {
             var30 = SoftwareRasterizer.pixels;
             var2Lifetime2 = SoftwareRasterizer.width;
             var3Lifetime2 = SoftwareRasterizer.height;
@@ -253,27 +253,27 @@ final class IntrusiveDeque {
             var17 = ni.a(new String[]{TextHotspotBounds.field_l}, 0, DualLinkNode.field_n);
             TextHotspotBounds.field_l = null;
             var16.bindAsRenderTarget();
-            ek.field_G.drawParagraph(var17, 3, 3, var16.storedWidth - 6, var16.storedHeight - 6, 16777215, -1, 0, 1, ek.field_G.field_K + ek.field_G.field_x);
-            ih.a(var16.storedWidth, 0, 4, var16.storedHeight, 3, var16, 0, 1);
+            StripedProgressWidget.field_G.drawParagraph(var17, 3, 3, var16.storedWidth - 6, var16.storedHeight - 6, 16777215, -1, 0, 1, StripedProgressWidget.field_G.field_K + StripedProgressWidget.field_G.field_x);
+            GuestPlayConfirmationForm.a(var16.storedWidth, 0, 4, var16.storedHeight, 3, var16, 0, 1);
             ResourceArchive.field_f.bindAsRenderTarget();
             var16.drawTransparent(199 - ResourceArchive.field_f.offsetX, 83 - ResourceArchive.field_f.offsetY);
             SoftwareRasterizer.setTarget(var30, var2Lifetime2, var3Lifetime2);
             SoftwareRasterizer.restoreClip(ck.field_c);
           }
           if (ProxySocketConnector.field_m != null &&
-            null != ek.field_G) {
+            null != StripedProgressWidget.field_G) {
             var31 = SoftwareRasterizer.pixels;
             var2Lifetime3 = SoftwareRasterizer.width;
             var3Lifetime3 = SoftwareRasterizer.height;
             SoftwareRasterizer.saveClip(ck.field_c);
-            var4 = ek.field_G.maxLineWidth(ImageProducerRasterBuffer.field_r, 640) + 6;
+            var4 = StripedProgressWidget.field_G.maxLineWidth(ImageProducerRasterBuffer.field_r, 640) + 6;
             var5Lifetime1 = var4 + (ProxySocketConnector.field_m.fullWidth + 20);
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = 20 + (var6Lifetime2 + ProxySocketConnector.field_m.fullWidth);
             ResourceArchive.field_f.bindAsRenderTarget();
-            ek.field_G.drawString(ImageProducerRasterBuffer.field_r, -ResourceArchive.field_f.offsetX + var7Lifetime2, ek.field_G.field_x + (155 - ResourceArchive.field_f.offsetY + ek.field_G.field_K), 16777215, -1);
-            ih.a(var4, -ResourceArchive.field_f.offsetX + (var7Lifetime2 - 4), 4, 50, 3, ResourceArchive.field_f, -ResourceArchive.field_f.offsetY + 155, 1);
-            var8Lifetime1 = -((ProxySocketConnector.field_m.fullHeight - (3 + ek.field_G.field_x + ek.field_G.field_K)) / 2) + (-ResourceArchive.field_f.offsetY + 155);
+            StripedProgressWidget.field_G.drawString(ImageProducerRasterBuffer.field_r, -ResourceArchive.field_f.offsetX + var7Lifetime2, StripedProgressWidget.field_G.field_x + (155 - ResourceArchive.field_f.offsetY + StripedProgressWidget.field_G.field_K), 16777215, -1);
+            GuestPlayConfirmationForm.a(var4, -ResourceArchive.field_f.offsetX + (var7Lifetime2 - 4), 4, 50, 3, ResourceArchive.field_f, -ResourceArchive.field_f.offsetY + 155, 1);
+            var8Lifetime1 = -((ProxySocketConnector.field_m.fullHeight - (3 + StripedProgressWidget.field_G.field_x + StripedProgressWidget.field_G.field_K)) / 2) + (-ResourceArchive.field_f.offsetY + 155);
             ProxySocketConnector.field_m.drawTransparent(var6Lifetime2 - ResourceArchive.field_f.offsetX, var8Lifetime1);
             SoftwareRasterizer.setTarget(var31, var2Lifetime3, var3Lifetime3);
             SoftwareRasterizer.restoreClip(ck.field_c);

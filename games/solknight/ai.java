@@ -12,7 +12,7 @@ final class ai {
     final static void a(int param0, BitmapFont param1, int param2, int param3, int param4, int param5, int param6, int param7, Sprite param8, int param9, int param10) {
         try {
           jj.field_db = param4;
-          gf.field_T = param2;
+          ContentTransitionDialog.field_T = param2;
           ja.field_a = param8;
           aj.field_p = param10;
           AgeValidator.field_o = param7;
@@ -45,7 +45,7 @@ final class ai {
             return false;
           }
           dupTemp$1 = je.correctedCurrentTimeMillis(1);
-          gf.field_Y = dupTemp$1;
+          ContentTransitionDialog.field_Y = dupTemp$1;
           DiskArchiveRequest.field_y = dupTemp$1;
           if (bk.field_a.status != 1) {
             AccountRequestState.field_e = wc.field_f;
@@ -56,12 +56,12 @@ final class ai {
               var4 = AlphaWidgetContainer.field_N;
               var5 = var4;
               stackIn_11_0 = (param0) ? -2 : -1;
-              nf.field_U = stackIn_11_0;
+              FullscreenStatusDialog.field_U = stackIn_11_0;
               MouseInputHandler.field_b = stackIn_11_0;
               FullscreenFocusCanvas.field_e = stackIn_11_0;
               var5.position = 0;
               AccountRequestState.field_e = qc.field_i;
-              SingleChildWidgetContainer.a(jj.field_s, (byte) 22, jh.field_f, ci.field_jb, id.field_c);
+              SingleChildWidgetContainer.a(jj.field_s, (byte) 22, jh.field_f, ProgressMessageDialog.field_jb, id.field_c);
               qf.a(param1 + 37, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

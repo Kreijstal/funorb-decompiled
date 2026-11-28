@@ -88,7 +88,7 @@ final class AccountServiceResult {
                 param2 = jh.field_d;
               }
               param0 = 2;
-              i.field_a.a(ng.field_y, -95);
+              i.field_a.a(StripedProgressWidget.field_y, -95);
             }
             var3_int = 1;
             if (param0 == 10) {
@@ -102,7 +102,7 @@ final class AccountServiceResult {
               if (ij.field_g) {
                 param2 = ph.field_a;
               }
-              Crc32Table.field_a.a(param2, (byte) -109, param0);
+              Crc32Table.field_a.showResult(param2, (byte) -109, param0);
             }
             if (param0 != 256 &&
               param0 != 10 &&

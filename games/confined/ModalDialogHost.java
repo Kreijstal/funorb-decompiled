@@ -22,7 +22,7 @@ final class ModalDialogHost extends SingleChildWidgetContainer {
     }
 
     public ModalDialogHost() {
-        super(0, 0, tg.field_L, qk.field_c, (WidgetRenderer) null, (WidgetEventListener) null);
+        super(0, 0, GuestPlayConfirmationForm.field_L, qk.field_c, (WidgetRenderer) null, (WidgetEventListener) null);
         this.field_J = new PrimaryNodeDeque();
     }
 

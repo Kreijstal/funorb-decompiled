@@ -89,7 +89,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                         this.i((byte) -109);
                       } else {
                         if (var2 == 8) {
-                          pa.a(sb.field_sb, true, tk.field_h, MatchingFieldValidator.field_l);
+                          pa.a(StandardContentDialog.field_sb, true, tk.field_h, MatchingFieldValidator.field_l);
                         } else {
                           if (16 == var2) {
                             AccountServiceResult.a((byte) 49);
@@ -173,7 +173,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           DequeWidgetContainer.field_E = 15000L + ud.correctedCurrentTimeMillis(param0 + 2);
           return var2;
         }
-        if (11 != rm.field_Q) {
+        if (11 != StripedProgressWidget.field_Q) {
           return var2;
         }
         if (cf.field_Lb != 0) {
@@ -190,19 +190,19 @@ abstract class NetworkGameClient extends GameAppletShell {
           qf.field_g = null;
           cf.field_Nb = false;
           if (SecondaryNodeHashTable.field_g) {
-            ArchiveProvider.field_d.n(24528);
+            ArchiveProvider.field_d.showConnectionFailure(24528);
           } else {
             var1 = FrameTimer.field_d;
             if (0 >= var1) {
             } else {
               if (var1 == 1) {
-                qf.field_g = k.field_T;
+                qf.field_g = ResizableModalDialog.field_T;
               } else {
                 qf.field_g = MatchingFieldValidator.a(rc.field_c, new String[]{Integer.toString(var1)}, (byte) -113);
               }
               qf.field_g = tb.a((byte) 96, new CharSequence[]{(CharSequence) ((Object) qf.field_g), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) IterableNodeHashTable.field_a)});
             }
-            ArchiveProvider.field_d.k((byte) -123);
+            ArchiveProvider.field_d.closeDialog((byte) -123);
             BirthDateValidator.g(127);
           }
           return;
@@ -221,7 +221,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         var3 = Chess.field_G;
         if (AccountCreationResultPanel.p(-60)) {
           stackIn_10_1 = 103;
-          stackIn_11_2 = (null != rm.field_R);
+          stackIn_11_2 = (null != StripedProgressWidget.field_R);
           discarded$1 = this.a((byte) stackIn_10_1, stackIn_11_2, false);
         } else {
           if (10 > il.field_a) {
@@ -232,7 +232,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (!mk.b((byte) -119)) {
               ni.b(0);
             } else {
-              if (0 == rm.field_Q) {
+              if (0 == StripedProgressWidget.field_Q) {
                 discarded$2 = this.a((byte) 110, false, false);
               } else {
                 cf.a(fl.field_p, (byte) -101);
@@ -403,22 +403,22 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var3Lifetime1;
         int var4Lifetime1;
         var5 = Chess.field_G;
-        if (null != ch.field_gb) {
-          if (null == rm.field_R) {
+        if (null != ProgressDialog.field_gb) {
+          if (null == StripedProgressWidget.field_R) {
             var6 = FullscreenFocusCanvas.a((byte) -110);
             var4_ref_java_awt_Dimension = var6.getSize();
-            ch.field_gb.a(var4_ref_java_awt_Dimension.width, -83, var4_ref_java_awt_Dimension.height);
+            ProgressDialog.field_gb.a(var4_ref_java_awt_Dimension.width, -83, var4_ref_java_awt_Dimension.height);
           }
-          ch.field_gb.a(0);
+          ProgressDialog.field_gb.a(0);
         }
         cb.a((byte) 12);
         fl.a(true);
         if (!PasswordValidator.h(30065) &&
-          11 != rm.field_Q) {
-          e.i((byte) 114);
+          11 != StripedProgressWidget.field_Q) {
+          DialogMessagePane.i((byte) 114);
         }
-        if (ii.field_L != null) {
-          fl.field_p = ii.field_L.pollRotation((byte) -91);
+        if (GuestPlayConfirmationForm.field_L != null) {
+          fl.field_p = GuestPlayConfirmationForm.field_L.pollRotation((byte) -91);
         }
         if (TextLayout.a(21549)) {
           var3 = qd.d(-31137) * 1200;
@@ -442,7 +442,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           cf.field_Lb = la.a((byte) -98);
           if (var4 != 0 &&
             cf.field_Lb == 0 &&
-            rm.field_Q == 11 &&
+            StripedProgressWidget.field_Q == 11 &&
             !nc.j(125)) {
             NetworkGameClient.i(-29025);
           }
@@ -472,7 +472,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               this.a("js5crc", -58);
             }
           } else {
-            if (rm.field_Q >= 10) {
+            if (StripedProgressWidget.field_Q >= 10) {
               dh.c(12);
               if (cf.field_Lb == 3) {
                 IntrusiveDeque.a(256, ti.field_b, (byte) 109);
@@ -548,7 +548,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           NetworkGameClient.e(-5);
           ag.a((byte) -119);
           vh.field_e = false;
-          ih.field_T = ca.field_c;
+          NumericDateInputWidget.field_T = ca.field_c;
           n.a(fl.field_m, bi.field_a, ln.field_Kb, 0, Chess.field_B);
           if (gf.field_e ||
             LabeledWidgetContainer.field_O != null) {
@@ -559,7 +559,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             nj.a(stackIn_101_0, stackIn_103_1, stackIn_103_2, stackIn_104_3);
           }
           if (RichTextWidget.field_X) {
-            jg.b(true);
+            BirthDateChatEnableForm.b(true);
           }
           if (pe.field_f == null) {
             pe.field_f = IsaacCipher.a(-27212);
@@ -575,7 +575,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (10 == il.field_a) {
           if (RichTextWidget.field_V != 0) {
-            td.field_o = BirthDateValidator.a(rm.field_U, (byte) 127);
+            td.field_o = BirthDateValidator.a(StripedProgressWidget.field_U, (byte) 127);
           }
           il.field_a = 11;
         }
@@ -583,7 +583,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (il.field_a == 11) {
           if (null != td.field_o && (!td.field_o.ensureIndexLoaded((byte) 123) ||
             !td.field_o.tryLoadAllGroups((byte) -40))) {
-            nj.a(-20, da.a(ChessBoardState.field_a, e.field_T, td.field_o, -123), 0.0f);
+            nj.a(-20, da.a(ChessBoardState.field_a, DialogMessagePane.field_T, td.field_o, -123), 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -637,14 +637,14 @@ abstract class NetworkGameClient extends GameAppletShell {
         sc.a(RichTextWidget.field_V, false);
         jn.initializeNetworkState(this.field_u, MatchingFieldValidator.field_l, this.field_w, RichTextWidget.field_V, this.field_r, 5000, this.field_x, this.field_p, (byte) -121, 5000, param5, this.field_m, param4, this.field_q);
         DebouncedFieldValidator.a(350, this.field_w, RichTextWidget.field_V, param4, this.field_r, MatchingFieldValidator.field_l, this.field_q, this.field_x, this.field_m);
-        bf.g((byte) 69);
-        ii.field_L = sa.createMouseWheelInput(param6 + 28);
+        DateInputWidget.g((byte) 69);
+        GuestPlayConfirmationForm.field_L = sa.createMouseWheelInput(param6 + 28);
         ca.a(13369344, DirectByteStorage.field_h);
         BitPacketBuffer.field_q = param2;
         kf.field_u = param0;
         dh.field_c = param3;
         m.field_b = param7;
-        rm.field_U = param1;
+        StripedProgressWidget.field_U = param1;
         this.c(false);
         ug.b(false);
     }
@@ -716,14 +716,14 @@ abstract class NetworkGameClient extends GameAppletShell {
                   gi.field_e = sj.field_i;
                   NetworkGameClient.i(-29025);
                   ad.field_b = false;
-                  rm.field_Q = 10;
+                  StripedProgressWidget.field_Q = 10;
                 }
               }
             }
           }
           if (var4 == 4) {
             if (!ln.field_Kb) {
-              rm.field_Q = 10;
+              StripedProgressWidget.field_Q = 10;
               ad.field_b = true;
             } else {
               gh.a(ArrayWidgetContainer.i(81), -161);
@@ -734,7 +734,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (6 == var4 &&
             vh.field_e) {
-            rm.field_Q = 10;
+            StripedProgressWidget.field_Q = 10;
           }
           if (var4 == 7) {
             ak.a(false, ArrayWidgetContainer.i(81));
@@ -763,10 +763,10 @@ abstract class NetworkGameClient extends GameAppletShell {
                 var12 = ki.field_M.b(-120);
                 if (var12 != null) {
                   var7 = gh.decodeCp1252String(var12.data, 0, -161, var12.position);
-                  ge.a(var7, (byte) 107);
+                  FullscreenStatusDialog.a(var7, (byte) 107);
                 } else {
                   var9 = (String) null;
-                  ge.a((String) null, (byte) 36);
+                  FullscreenStatusDialog.a((String) null, (byte) 36);
                 }
                 ki.field_M = null;
               }
@@ -775,12 +775,12 @@ abstract class NetworkGameClient extends GameAppletShell {
               var5 = (Exception) (Object) decompiledCaughtException;
               fg.a((Throwable) ((Object) var5), (byte) -77, "S1");
               var10 = (String) null;
-              ge.a((String) null, (byte) 30);
+              FullscreenStatusDialog.a((String) null, (byte) 30);
               ki.field_M = null;
             }
           }
           if (var4 == 15) {
-            rm.field_Q = 10;
+            StripedProgressWidget.field_Q = 10;
           }
           if (var4 == 16) {
             return 1;
@@ -802,7 +802,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     private final void d(int param0) {
         int var2 = tk.field_h.readUnsignedByte(-121);
         int var3 = 0 != (var2 & 1) ? 1 : 0;
-        int var4 = -1 + sb.field_sb;
+        int var4 = -1 + StandardContentDialog.field_sb;
         byte[] var5 = new byte[var4];
         if (param0 >= -110) {
           this.field_p = 64L;

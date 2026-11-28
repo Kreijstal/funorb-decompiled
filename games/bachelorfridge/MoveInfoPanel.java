@@ -963,7 +963,7 @@ final class MoveInfoPanel {
           this.field_k = new Sprite(84, 84);
           this.field_k.bindAsRenderTarget();
           SoftwareRasterizer.addRadialGlow(672, 672, 672, 128, this.field_o);
-          hga.field_U.a((byte) 114);
+          ProgressDialog.field_U.a((byte) 114);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

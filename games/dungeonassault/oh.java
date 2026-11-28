@@ -36,10 +36,10 @@ final class oh implements WidgetRenderer {
           if (param1 != 7) {
             field_b = (String) null;
           }
-          hf.field_ob.clear(-4);
-          hf.field_ob.addFirst(new a(24), false);
-          while (!hf.field_ob.isEmpty((byte) -88)) {
-            var2_int = ((a) (hf.field_ob.removeLast((byte) -124))).field_j;
+          ContentTransitionDialog.field_ob.clear(-4);
+          ContentTransitionDialog.field_ob.addFirst(new a(24), false);
+          while (!ContentTransitionDialog.field_ob.isEmpty((byte) -88)) {
+            var2_int = ((a) (ContentTransitionDialog.field_ob.removeLast((byte) -124))).field_j;
             if (me.field_g[var2_int].field_h.field_g == param0) {
               al.field_o.clearBit(var2_int, param1 + 24);
               continue;

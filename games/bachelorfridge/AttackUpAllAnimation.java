@@ -115,7 +115,7 @@ final class AttackUpAllAnimation extends EventAnimation {
             return;
           }
           if (null != hp.field_d) {
-            hp.field_d.d((byte) 47);
+            hp.field_d.freezeNormalProgressAnimation((byte) 47);
             va.a((byte) 75);
             return;
           }
@@ -129,7 +129,7 @@ final class AttackUpAllAnimation extends EventAnimation {
           va.a((byte) 75);
           return;
         }
-        hp.field_d.d((byte) 47);
+        hp.field_d.freezeNormalProgressAnimation((byte) 47);
         va.a((byte) 75);
     }
 

@@ -21,7 +21,7 @@ final class qd {
     }
 
     final static void a(byte param0) {
-        kg.field_j.a(false, new hm());
+        kg.field_j.replaceContent(false, new GuestPlayConfirmationForm());
         if (param0 < 116) {
           qd.a((byte) -27);
         }

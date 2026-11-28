@@ -31,10 +31,10 @@ final class rb {
           if (a.field_c[param0] > a.field_c[param3]) {
             return false;
           }
-          if (al.field_bb[param3] > al.field_bb[param0]) {
+          if (ContentTransitionDialog.field_bb[param3] > ContentTransitionDialog.field_bb[param0]) {
             return true;
           }
-          if (al.field_bb[param0] > al.field_bb[param3]) {
+          if (ContentTransitionDialog.field_bb[param0] > ContentTransitionDialog.field_bb[param3]) {
             return false;
           }
           var4 = oa.field_a[param0] - (-oa.field_c[param0] - dd.field_L[param0]);
@@ -48,10 +48,10 @@ final class rb {
           }
           return !(param3 <= param0);
         }
-        if (al.field_bb[param0] < al.field_bb[param3]) {
+        if (ContentTransitionDialog.field_bb[param0] < ContentTransitionDialog.field_bb[param3]) {
           return true;
         }
-        if (al.field_bb[param0] > al.field_bb[param3]) {
+        if (ContentTransitionDialog.field_bb[param0] > ContentTransitionDialog.field_bb[param3]) {
           return false;
         }
         if (a.field_c[param3] > a.field_c[param0]) {

@@ -10,7 +10,7 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
     static java.awt.Canvas field_P;
     private String field_L;
     private int field_H;
-    static jf field_K;
+    static StandardContentDialog field_K;
     private BitmapFont field_F;
     static int[][] field_I;
     static float field_G;

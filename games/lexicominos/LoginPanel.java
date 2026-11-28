@@ -195,7 +195,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
         int var3 = Lexicominos.field_L ? 1 : 0;
         IndexedSprite[] var1 = new IndexedSprite[BitPacketBuffer.field_t];
         for (var2 = 0; BitPacketBuffer.field_t > var2; var2++) {
-          var1[var2] = new IndexedSprite(uc.field_fb, eh.field_b, SingleChildWidgetContainer.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], BufferedRandomAccessFile.field_f[var2], ci.field_b);
+          var1[var2] = new IndexedSprite(ProgressMessageDialog.field_fb, eh.field_b, SingleChildWidgetContainer.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], BufferedRandomAccessFile.field_f[var2], ci.field_b);
         }
         if (param0 <= 103) {
           field_M = -84L;
@@ -344,7 +344,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             this.field_E.field_q = ig.field_d;
           }
           this.field_o = 15;
-          var7 = ql.field_Q;
+          var7 = ResizableModalDialog.field_Q;
           if (null != this.field_F) {
             this.field_o = this.field_o + (5 + var7.textHeight(this.field_F, this.field_j - 40, var7.field_E));
           }
@@ -353,7 +353,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
           if (var9 == NameSuggestionsPanel.field_J) {
             var8 = fg.field_d;
           } else {
-            if (var9 == mh.field_B) {
+            if (var9 == GuestPlayConfirmationForm.field_B) {
               var8 = ah.field_a;
             }
           }
@@ -433,7 +433,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
 
     final void drawWidget(byte param0, int param1, int param2, int param3) {
         if (null != this.field_F) {
-          ql.field_Q.drawParagraph(this.field_F, 20 + (this.field_t + param2), 15 + (param1 + this.field_o), this.field_j - 40, this.field_v, 16777215, -1, 1, 0, ql.field_Q.field_E);
+          ResizableModalDialog.field_Q.drawParagraph(this.field_F, 20 + (this.field_t + param2), 15 + (param1 + this.field_o), this.field_j - 40, this.field_v, 16777215, -1, 1, 0, ResizableModalDialog.field_Q.field_E);
         }
         if (this.field_H != null) {
           SoftwareRasterizer.drawHorizontalLine(param2 + 10, param1 + 134, this.field_j - 20, 4210752);

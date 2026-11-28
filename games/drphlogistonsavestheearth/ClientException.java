@@ -18,11 +18,11 @@ final class ClientException extends RuntimeException {
           ph.field_e = param6;
           af.field_d = param0;
           InteractiveWidget.field_z = param5;
-          ca.field_db = param1;
+          ResizableModalDialog.field_db = param1;
           ac.field_a = param3;
           KeyboardInput.field_a = param7;
           ib.field_l = param8;
-          hd.field_B = param4;
+          StripedProgressWidget.field_B = param4;
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "gl.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

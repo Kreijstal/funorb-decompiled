@@ -656,7 +656,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
                   }
                 } else {
                   if (var26Lifetime1 == 0) {
-                    var24 = var34 + "<br>" + MatchingFieldValidator.a(ij.field_b, new String[]{(String) (var25)}, (byte) -83);
+                    var24 = var34 + "<br>" + MatchingFieldValidator.a(FullscreenNoticeType.field_b, new String[]{(String) (var25)}, (byte) -83);
                   } else {
                     var24 = var34 + "<br>" + gg.field_l + (String) (var25);
                   }

@@ -72,7 +72,7 @@ final class te extends TextureOperator {
           var4 = var9[0];
           var5 = var9[1];
           var6 = var9[2];
-          for (var7 = 0; we.field_M > var7; var7++) {
+          for (var7 = 0; StripedProgressWidget.field_M > var7; var7++) {
             var4[var7] = this.field_G;
             var5[var7] = this.field_K;
             var6[var7] = this.field_A;
@@ -86,7 +86,7 @@ final class te extends TextureOperator {
         var4Lifetime1 = var9[0];
         var5Lifetime1 = var9[1];
         var6Lifetime1 = var9[2];
-        for (var7Lifetime1 = 0; we.field_M > var7Lifetime1; var7Lifetime1++) {
+        for (var7Lifetime1 = 0; StripedProgressWidget.field_M > var7Lifetime1; var7Lifetime1++) {
           var4Lifetime1[var7Lifetime1] = this.field_G;
           var5Lifetime1[var7Lifetime1] = this.field_K;
           var6Lifetime1[var7Lifetime1] = this.field_A;

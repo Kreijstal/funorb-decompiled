@@ -27,7 +27,7 @@ final class ab {
             } else {
               var6 = PowerUpPickup.a(param0 ^ -3, dl.field_c[var3_int], true);
               var4 = var4 + kb.field_b;
-              var7 = ef.field_vb - (var6 >> 1);
+              var7 = StandardContentDialog.field_vb - (var6 >> 1);
               if (qd.a(param1, var4, (jd.field_g << 1) + var6, param2, true, -jd.field_g + var7, (n.field_d << 1) + af.field_Z)) {
                 stackIn_7_0 = var5;
                 return stackIn_7_0;

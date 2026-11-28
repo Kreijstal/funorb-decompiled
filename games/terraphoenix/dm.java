@@ -50,14 +50,14 @@ final class dm {
             return (q) (stackIn_5_0);
           }
           var7 = (CharSequence) ((Object) param1);
-          var2 = hm.a((byte) 126, var7);
+          var2 = StripedProgressWidget.a((byte) 126, var7);
           if (var2 == null) {
             var2 = param1;
           }
           var3 = (q) (ai.field_f.a(param0 + 203, (long)var2.hashCode()));
           while (var3 != null) {
             var8 = (CharSequence) ((Object) var3.field_Lb);
-            var4 = hm.a((byte) 65, var8);
+            var4 = StripedProgressWidget.a((byte) 65, var8);
             if (var4 == null) {
               var4 = var3.field_Lb;
             }

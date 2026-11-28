@@ -172,7 +172,7 @@ final class wd {
                   return stackIn_75_0;
                 }
               }
-              if (13 != ob.field_K) {
+              if (13 != RegistrationAgreementPane.field_K) {
                 continue;
               }
               stackIn_79_0 = 1;

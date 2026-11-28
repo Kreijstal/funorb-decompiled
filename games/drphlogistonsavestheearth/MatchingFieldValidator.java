@@ -106,7 +106,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
             if (var3 != null) {
               if (var3.getValidationStatus(-12317) == ce.field_e &&
                 !param1.equals(this.field_r.field_p)) {
-                stackIn_6_0 = ih.field_N;
+                stackIn_6_0 = RegistrationAgreementPane.field_N;
                 return stackIn_6_0;
               }
               stackIn_8_0 = var3.getValidationMessage(-16034);
@@ -114,7 +114,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
             }
           }
           if (!param1.equals(this.field_r.field_p)) {
-            stackIn_11_0 = ih.field_N;
+            stackIn_11_0 = RegistrationAgreementPane.field_N;
             return stackIn_11_0;
           }
           if (param0 >= 47) {

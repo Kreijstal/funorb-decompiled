@@ -511,7 +511,7 @@ abstract class BitmapFont extends DualLinkNode {
         if (param0 == null) {
           return 0;
         }
-        wd.a(field_C, ' ', 0, 1);
+        ResizableModalDialog.a(field_C, ' ', 0, 1);
         var4 = 0;
         var5 = 0;
         var6 = -1;

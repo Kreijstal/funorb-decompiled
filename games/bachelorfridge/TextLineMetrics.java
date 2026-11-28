@@ -63,7 +63,7 @@ final class TextLineMetrics {
             }
             var1 = (ema) (aa.field_l.nextForward(0));
           }
-          var1_ref = (uha) (uma.field_M.beginForward((byte) 90));
+          var1_ref = (uha) (NumericDateInputWidget.field_M.beginForward((byte) 90));
           while (var1_ref != null) {
             if (var1_ref.field_Mb > 0) {
               var1_ref.field_Mb = var1_ref.field_Mb - 1;
@@ -74,7 +74,7 @@ final class TextLineMetrics {
                 }
               }
             }
-            var1_ref = (uha) (uma.field_M.nextForward(0));
+            var1_ref = (uha) (NumericDateInputWidget.field_M.nextForward(0));
           }
           var1Lifetime1 = (ema) (bia.field_g.beginForward((byte) 90));
           while (var1Lifetime1 != null) {

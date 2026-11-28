@@ -6,7 +6,7 @@ abstract class ModalDialog extends WidgetContainer {
     boolean field_D;
     private int field_B;
 
-    abstract void b(int param0, int param1, byte param2);
+    abstract void drawDialogBackground(int param0, int param1, byte param2);
 
     ModalDialog(ModalDialogHost param0, int param1, int param2) {
         super(qj.field_f - param1 >> 1, -param2 + RasterBuffer.field_h >> 1, param1, param2, (WidgetRenderer) null);
@@ -115,7 +115,7 @@ abstract class ModalDialog extends WidgetContainer {
         }
         if (this.field_B >= 256) {
           if (param0 == 0) {
-            this.b(this.y + param2, param3 + this.x, (byte) -117);
+            this.drawDialogBackground(this.y + param2, param3 + this.x, (byte) -117);
             super.drawWidget(param0, (byte) -19, param2, param3);
             return;
           }
@@ -126,7 +126,7 @@ abstract class ModalDialog extends WidgetContainer {
           if (param1 <= -7) {
             GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
             SoftwareRasterizer.clearRaster();
-            this.b(0, 0, (byte) -127);
+            this.drawDialogBackground(0, 0, (byte) -127);
             super.drawWidget(param0, (byte) -64, -param2 - this.y, -this.x - param3);
             r.a(126);
             RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);
@@ -135,7 +135,7 @@ abstract class ModalDialog extends WidgetContainer {
           this.snapDialogAnimation((byte) -26);
           GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
           SoftwareRasterizer.clearRaster();
-          this.b(0, 0, (byte) -127);
+          this.drawDialogBackground(0, 0, (byte) -127);
           super.drawWidget(param0, (byte) -64, -param2 - this.y, -this.x - param3);
           r.a(126);
           RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);
@@ -146,7 +146,7 @@ abstract class ModalDialog extends WidgetContainer {
           if (param1 <= -7) {
             GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
             SoftwareRasterizer.clearRaster();
-            this.b(0, 0, (byte) -127);
+            this.drawDialogBackground(0, 0, (byte) -127);
             super.drawWidget(param0, (byte) -64, -param2 - this.y, -this.x - param3);
             r.a(126);
             RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);
@@ -155,7 +155,7 @@ abstract class ModalDialog extends WidgetContainer {
           this.snapDialogAnimation((byte) -26);
           GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
           SoftwareRasterizer.clearRaster();
-          this.b(0, 0, (byte) -127);
+          this.drawDialogBackground(0, 0, (byte) -127);
           super.drawWidget(param0, (byte) -64, -param2 - this.y, -this.x - param3);
           r.a(126);
           RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);
@@ -166,7 +166,7 @@ abstract class ModalDialog extends WidgetContainer {
           if (param1 <= -7) {
             GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
             SoftwareRasterizer.clearRaster();
-            this.b(0, 0, (byte) -127);
+            this.drawDialogBackground(0, 0, (byte) -127);
             super.drawWidget(param0, (byte) -64, -param2 - this.y, -this.x - param3);
             r.a(126);
             RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);
@@ -175,7 +175,7 @@ abstract class ModalDialog extends WidgetContainer {
           this.snapDialogAnimation((byte) -26);
           GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
           SoftwareRasterizer.clearRaster();
-          this.b(0, 0, (byte) -127);
+          this.drawDialogBackground(0, 0, (byte) -127);
           super.drawWidget(param0, (byte) -64, -param2 - this.y, -this.x - param3);
           r.a(126);
           RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);
@@ -184,7 +184,7 @@ abstract class ModalDialog extends WidgetContainer {
         if (param1 <= -7) {
           GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
           SoftwareRasterizer.clearRaster();
-          this.b(0, 0, (byte) -127);
+          this.drawDialogBackground(0, 0, (byte) -127);
           super.drawWidget(param0, (byte) -64, -param2 - this.y, -this.x - param3);
           r.a(126);
           RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);
@@ -193,7 +193,7 @@ abstract class ModalDialog extends WidgetContainer {
         this.snapDialogAnimation((byte) -26);
         GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
         SoftwareRasterizer.clearRaster();
-        this.b(0, 0, (byte) -127);
+        this.drawDialogBackground(0, 0, (byte) -127);
         super.drawWidget(param0, (byte) -64, -param2 - this.y, -this.x - param3);
         r.a(126);
         RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);

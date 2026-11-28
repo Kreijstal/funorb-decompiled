@@ -18,7 +18,7 @@ final class rl {
           if (param1 == null) {
             return null;
           }
-          var2 = new CoverageBitmapFont(param1, ValidatedTextField.field_P, mb.field_b, da.field_c, ra.field_ab, fk.field_d, cb.field_b);
+          var2 = new CoverageBitmapFont(param1, ValidatedTextField.field_P, mb.field_b, da.field_c, StandardContentDialog.field_ab, fk.field_d, cb.field_b);
           gb.a(param0 + 32415);
           if (param0 != -32466) {
             field_c = (float[][]) null;

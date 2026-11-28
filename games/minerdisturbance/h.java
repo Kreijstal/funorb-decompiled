@@ -274,7 +274,7 @@ final class h {
         if (!oc.d(param0 + 59)) {
           return;
         }
-        qd.a(126, false, param0);
+        GuestPlayConfirmationForm.a(126, false, param0);
     }
 
     final static void b(int param0) {

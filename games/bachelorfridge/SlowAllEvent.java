@@ -81,10 +81,10 @@ final class SlowAllEvent extends SpecialEvent {
         if (param0) {
           SlowAllEvent.e(-51);
           if (!AttackUpAllAnimation.e(-29919)) {
-            sja.field_fb.writeCipheredByte(81, (byte) 126);
-            sja.field_fb.writeByte(param1, 0);
-            sja.field_fb.writeByte(param2, 0);
-            sja.field_fb.writeByte(param3, 0);
+            StandardContentDialog.field_fb.writeCipheredByte(81, (byte) 126);
+            StandardContentDialog.field_fb.writeByte(param1, 0);
+            StandardContentDialog.field_fb.writeByte(param2, 0);
+            StandardContentDialog.field_fb.writeByte(param3, 0);
             return;
           }
           return;
@@ -92,10 +92,10 @@ final class SlowAllEvent extends SpecialEvent {
         if (AttackUpAllAnimation.e(-29919)) {
           return;
         }
-        sja.field_fb.writeCipheredByte(81, (byte) 126);
-        sja.field_fb.writeByte(param1, 0);
-        sja.field_fb.writeByte(param2, 0);
-        sja.field_fb.writeByte(param3, 0);
+        StandardContentDialog.field_fb.writeCipheredByte(81, (byte) 126);
+        StandardContentDialog.field_fb.writeByte(param1, 0);
+        StandardContentDialog.field_fb.writeByte(param2, 0);
+        StandardContentDialog.field_fb.writeByte(param3, 0);
     }
 
     SlowAllEvent(int param0, CreatureRef param1) {

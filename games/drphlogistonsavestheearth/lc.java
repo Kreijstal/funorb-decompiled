@@ -284,14 +284,14 @@ final class lc extends IntrusiveNode {
           if (param1 != 24) {
             return;
           }
-          var2 = (ml) (ff.field_O.beginForward(-11151));
+          var2 = (ml) (GuestPlayConfirmationForm.field_O.beginForward(-11151));
           while (var2 != null) {
             if (var2.field_o.isLinked(-1387)) {
               var2.field_i.setVolume(var2.field_k * SecondaryNodeDeque.field_e / 80);
             } else {
               var2.unlink(-16175);
             }
-            var2 = (ml) (ff.field_O.nextForward(0));
+            var2 = (ml) (GuestPlayConfirmationForm.field_O.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

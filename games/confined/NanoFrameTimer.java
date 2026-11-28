@@ -335,12 +335,12 @@ final class NanoFrameTimer extends FrameTimer {
               }
             }
           }
-          AccountCreationResultPanel.field_Eb = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + ef.field_vb);
+          AccountCreationResultPanel.field_Eb = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + StandardContentDialog.field_vb);
           if (param2 >= -94) {
             return;
           }
           nh.field_b = ij.field_q.field_k * (n.field_d + kb.field_b << 1);
-          ef.field_sb = -(var3_intLifetime1 >> 1) + ef.field_vb;
+          StandardContentDialog.field_sb = -(var3_intLifetime1 >> 1) + StandardContentDialog.field_vb;
           for (var4Lifetime2 = 0; var4Lifetime2 < dl.field_c.length; var4Lifetime2++) {
             stackIn_113_0 = nh.field_b;
             if (LabeledWidgetContainer.field_T[var4Lifetime2] < 0) {
@@ -361,7 +361,7 @@ final class NanoFrameTimer extends FrameTimer {
             } else {
               var7Lifetime2 = PowerUpPickup.a(-3, dl.field_c[var4Lifetime3], true);
               var5Lifetime3 = var5Lifetime3 + kb.field_b;
-              var8Lifetime1 = ef.field_vb - (var7Lifetime2 >> 1);
+              var8Lifetime1 = StandardContentDialog.field_vb - (var7Lifetime2 >> 1);
               tj.field_l[var4Lifetime3] = new int[4];
               tj.field_l[var4Lifetime3][0] = var8Lifetime1 - jd.field_g;
               tj.field_l[var4Lifetime3][1] = var5Lifetime3;

@@ -363,7 +363,7 @@ final class bk {
           }
           lj.field_a = param2;
           vh.field_l = param1;
-          rb.a(SoftwareRasterizer.field_d / 2, SoftwareRasterizer.field_k / 2, (byte) 70);
+          GuestPlayConfirmationForm.a(SoftwareRasterizer.field_d / 2, SoftwareRasterizer.field_k / 2, (byte) 70);
           hg.a(0, param2.field_K + param2.field_y, param2.field_y, param3.field_y + param3.field_K, param3.field_y);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "bk.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

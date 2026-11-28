@@ -91,20 +91,20 @@ abstract class SocketFactory {
         try {
           integerLocal1 = booleanArgument1 ? 1 : 0;
           while (DualNodeDeque.computeBoolean0027(114)) {
-            UiComponentPart033.mixedSupport116State0004.performAction1512(-38);
-            if (!UiComponentPart033.mixedSupport116State0004.computeBoolean1520((byte) 114)) {
+            AccountCreationResultPanel.mixedSupport116State0004.performAction1512(-38);
+            if (!AccountCreationResultPanel.mixedSupport116State0004.computeBoolean1520((byte) 114)) {
               continue;
             }
             integerLocal1 = 1;
           }
-          UiComponentPart033.mixedSupport116State0004.performAction1515(MixedSupport101.computeInteger1269(MixedSupport101.integerState0590, -2141435999, HashNode.integerState0069), -20563, MixedSupport101.computeInteger1269(TextLineMetrics.integerState0535, -2141435999, LoginPanel.integerState0276));
-          if (UiComponentPart033.mixedSupport116State0004.computeBoolean1520((byte) 114)) {
+          AccountCreationResultPanel.mixedSupport116State0004.performAction1515(MixedSupport101.computeInteger1269(MixedSupport101.integerState0590, -2141435999, HashNode.integerState0069), -20563, MixedSupport101.computeInteger1269(TextLineMetrics.integerState0535, -2141435999, LoginPanel.integerState0276));
+          if (AccountCreationResultPanel.mixedSupport116State0004.computeBoolean1520((byte) 114)) {
             integerLocal1 = 1;
           }
           integerLocal3 = 0;
           if (integerLocal1 != 0 &&
-            UiComponentPart033.mixedSupport116State0004.integerState0754 >= 0) {
-            integerLocal3 = AlphaWidgetContainer.integerArrayState0039[UiComponentPart033.mixedSupport116State0004.integerState0754];
+            AccountCreationResultPanel.mixedSupport116State0004.integerState0754 >= 0) {
+            integerLocal3 = AlphaWidgetContainer.integerArrayState0039[AccountCreationResultPanel.mixedSupport116State0004.integerState0754];
             if (integerLocal3 == 2) {
               InteractiveComponent.performAction0465(-1209);
             }

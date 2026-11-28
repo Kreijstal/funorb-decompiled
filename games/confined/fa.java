@@ -28,10 +28,10 @@ final class fa extends InteractiveWidget {
     }
 
     final static void g(int param0) {
-        if (param0 - mg.field_g != tg.field_H &&
-          tg.field_H != 250 - mg.field_g) {
+        if (param0 - mg.field_g != GuestPlayConfirmationForm.field_H &&
+          GuestPlayConfirmationForm.field_H != 250 - mg.field_g) {
         }
-        tg.field_H = tg.field_H + 1;
+        GuestPlayConfirmationForm.field_H = GuestPlayConfirmationForm.field_H + 1;
     }
 
     fa(String param0, WidgetEventListener param1, boolean param2) {

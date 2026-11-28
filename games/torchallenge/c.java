@@ -232,10 +232,10 @@ final class c {
     final static void a(String param0, int param1, boolean param2, float param3) {
         try {
           if (null == oa.field_k) {
-            oa.field_k = new pe(t.field_b, jh.field_a);
+            oa.field_k = new ProgressDialog(t.field_b, jh.field_a);
             t.field_b.showDialog((byte) 86, (UiComponent) (oa.field_k));
           }
-          oa.field_k.a(param2, param0, param3, false);
+          oa.field_k.setProgress(param2, param0, param3, false);
           SoftwareRasterizer.clearRaster();
           int var4_int = -58 / ((-64 - param1) / 51);
           c.a(true, false);

@@ -4,7 +4,7 @@
 final class gl extends ok {
     static String field_Jb;
     static wh field_Ib;
-    static r field_Gb;
+    static FullscreenNoticeType field_Gb;
     static String[] field_Kb;
     static String field_Hb;
     static boolean field_Lb;
@@ -68,6 +68,6 @@ final class gl extends ok {
         field_Lb = false;
         field_Hb = "Incapacitated";
         field_Kb = new String[]{"Glamour", "Monster <%attack> and <%defence> halved in the next room. (Single use)"};
-        field_Gb = new r();
+        field_Gb = new FullscreenNoticeType();
     }
 }

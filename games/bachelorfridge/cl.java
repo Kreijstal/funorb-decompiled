@@ -468,7 +468,7 @@ final class cl extends vm {
             var5[var3].bindAsRenderTarget();
             param0[var3].drawHalfSize(0, 0);
           }
-          hga.field_U.a((byte) 6);
+          ProgressDialog.field_U.a((byte) 6);
           stackIn_8_0 = var2;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

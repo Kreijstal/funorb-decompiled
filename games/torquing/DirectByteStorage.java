@@ -66,11 +66,11 @@ final class DirectByteStorage extends ByteStorage {
 
     final static void a(int param0, String param1) {
         if (param0 == 3) {
-          System.out.println("Error: " + sp.a(param1, "%0a", "\n", (byte) -82));
+          System.out.println("Error: " + ProgressDialog.a(param1, "%0a", "\n", (byte) -82));
           return;
         }
         DirectByteStorage.clearDeclaredStaticReferences(61);
-        System.out.println("Error: " + sp.a(param1, "%0a", "\n", (byte) -82));
+        System.out.println("Error: " + ProgressDialog.a(param1, "%0a", "\n", (byte) -82));
     }
 
     DirectByteStorage() {

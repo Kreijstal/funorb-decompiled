@@ -34,14 +34,14 @@ final class CipherPacketBuffer extends PacketBuffer {
     }
 
     final static void n(int param0) {
-        lg.field_b = new AccountRegistrationPanel();
+        FullscreenNoticeType.field_b = new AccountRegistrationPanel();
         if (param0 != 8) {
           String var2 = (String) null;
           CipherPacketBuffer.wrapClientException((Throwable) null, (String) null);
-          TextLayout.field_c.a(10768, lg.field_b);
+          TextLayout.field_c.replaceContent(10768, FullscreenNoticeType.field_b);
           return;
         }
-        TextLayout.field_c.a(10768, lg.field_b);
+        TextLayout.field_c.replaceContent(10768, FullscreenNoticeType.field_b);
     }
 
     final void a(boolean param0, int param1) {
@@ -148,14 +148,14 @@ final class CipherPacketBuffer extends PacketBuffer {
         while (var4 < param1) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((this.payload[incrementValue$0] & nh.field_N[var4]) << -var4 + param1);
+          var5 = var5 + ((this.payload[incrementValue$0] & FullscreenStatusDialog.field_N[var4]) << -var4 + param1);
           param1 = param1 - var4;
           var4 = 8;
         }
         if (var4 == param1) {
-          var5 = var5 + (nh.field_N[var4] & this.payload[var3]);
+          var5 = var5 + (FullscreenStatusDialog.field_N[var4] & this.payload[var3]);
         } else {
-          var5 = var5 + (this.payload[var3] >> -param1 + var4 & nh.field_N[param1]);
+          var5 = var5 + (this.payload[var3] >> -param1 + var4 & FullscreenStatusDialog.field_N[param1]);
         }
         return var5;
     }

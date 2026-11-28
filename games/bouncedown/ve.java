@@ -195,8 +195,8 @@ final class ve {
         synchronized (var1) {
           n.field_m = c.field_c;
           SecondaryNodeDeque.field_d = SecondaryNodeDeque.field_d + 1;
-          uc.field_C = DelegatingCanvas.field_a;
-          ll.field_y = DisplayNameSelectionPanel.field_H;
+          DialogMessagePane.field_C = DelegatingCanvas.field_a;
+          StripedProgressWidget.field_y = DisplayNameSelectionPanel.field_H;
           mi.field_j = ConfirmedEmailAvailabilityValidator.field_o;
           ConfirmedEmailAvailabilityValidator.field_o = false;
           SectorCacheStore.field_e = ta.field_a;
@@ -218,7 +218,7 @@ final class ve {
             ve.b((byte) -90);
           }
           var1.field_g = null;
-          k.field_B.addLast(1, var1);
+          GuestPlayConfirmationForm.field_B.addLast(1, var1);
           return;
         }
         throw new IllegalStateException();

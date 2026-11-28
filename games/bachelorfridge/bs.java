@@ -24,7 +24,7 @@ final class bs extends IntrusiveNode {
           var2 = new Sprite(param0.field_n, param0.field_o);
           var2.bindAsRenderTarget();
           param0.drawSilhouette(0, 0, 65793);
-          hga.field_U.a((byte) 14);
+          ProgressDialog.field_U.a((byte) 14);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

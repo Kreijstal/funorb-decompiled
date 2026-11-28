@@ -171,7 +171,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         }
         if (this.field_D >= 256) {
           if (param2 == 0) {
-            this.a(this.field_n + param1, (byte) -106, param0 + this.field_p);
+            this.drawDialogBackground(this.field_n + param1, (byte) -106, param0 + this.field_p);
             super.drawWidget(param0, param1, param2, (byte) -27);
             return;
           }
@@ -181,7 +181,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           qk.field_c = new Sprite(this.field_l, this.field_h);
           CrossfadingMidiPcmStream.a(qk.field_c, 256);
           SoftwareRasterizer.clearRaster();
-          this.a(0, (byte) -81, 0);
+          this.drawDialogBackground(0, (byte) -81, 0);
           super.drawWidget(-this.field_p - param0, -this.field_n - param1, param2, (byte) -93);
           SingleChildWidgetContainer.c(true);
           qk.field_c.drawWithOpacity(param0 + this.field_p, param1 + this.field_n, this.field_D);
@@ -191,7 +191,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           qk.field_c = new Sprite(this.field_l, this.field_h);
           CrossfadingMidiPcmStream.a(qk.field_c, 256);
           SoftwareRasterizer.clearRaster();
-          this.a(0, (byte) -81, 0);
+          this.drawDialogBackground(0, (byte) -81, 0);
           super.drawWidget(-this.field_p - param0, -this.field_n - param1, param2, (byte) -93);
           SingleChildWidgetContainer.c(true);
           qk.field_c.drawWithOpacity(param0 + this.field_p, param1 + this.field_n, this.field_D);
@@ -200,7 +200,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         if (qk.field_c.field_m >= this.field_h) {
           CrossfadingMidiPcmStream.a(qk.field_c, 256);
           SoftwareRasterizer.clearRaster();
-          this.a(0, (byte) -81, 0);
+          this.drawDialogBackground(0, (byte) -81, 0);
           super.drawWidget(-this.field_p - param0, -this.field_n - param1, param2, (byte) -93);
           SingleChildWidgetContainer.c(true);
           qk.field_c.drawWithOpacity(param0 + this.field_p, param1 + this.field_n, this.field_D);
@@ -209,13 +209,13 @@ abstract class ModalDialog extends DequeWidgetContainer {
         qk.field_c = new Sprite(this.field_l, this.field_h);
         CrossfadingMidiPcmStream.a(qk.field_c, 256);
         SoftwareRasterizer.clearRaster();
-        this.a(0, (byte) -81, 0);
+        this.drawDialogBackground(0, (byte) -81, 0);
         super.drawWidget(-this.field_p - param0, -this.field_n - param1, param2, (byte) -93);
         SingleChildWidgetContainer.c(true);
         qk.field_c.drawWithOpacity(param0 + this.field_p, param1 + this.field_n, this.field_D);
     }
 
-    abstract void a(int param0, byte param1, int param2);
+    abstract void drawDialogBackground(int param0, byte param1, int param2);
 
     final UiWidget getFocusedChild(int param0) {
         UiWidget var2 = super.getFocusedChild(-120);

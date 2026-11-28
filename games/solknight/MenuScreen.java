@@ -112,9 +112,9 @@ final class MenuScreen {
                           lk.field_f = 0;
                           RichTextLayout.field_p = 0;
                           SectorCacheStore.field_h = 0;
-                          for (var5 = 0; var5 < nf.field_W.length; var5 += 2) {
-                            nf.field_W[var5] = bk.a(1280, jb.field_g, (byte) -116) - 640;
-                            nf.field_W[var5 + 1] = bk.a(720, jb.field_g, (byte) 83);
+                          for (var5 = 0; var5 < FullscreenStatusDialog.field_W.length; var5 += 2) {
+                            FullscreenStatusDialog.field_W[var5] = bk.a(1280, jb.field_g, (byte) -116) - 640;
+                            FullscreenStatusDialog.field_W[var5 + 1] = bk.a(720, jb.field_g, (byte) 83);
                           }
                           PacketBuffer.a(param0, -1, -128);
                           mb.a(true, 14, 256);
@@ -369,7 +369,7 @@ final class MenuScreen {
               lk.field_b = 0;
               lk.field_e = 0;
               RichTextLayout.field_p = 0;
-              ci.field_ib = 0;
+              ProgressMessageDialog.field_ib = 0;
               ob.field_j = 0;
               ia.field_hb = 0;
               lk.field_f = 0;
@@ -592,12 +592,12 @@ final class MenuScreen {
           }
           this.a(false, 2647, this.field_f.field_f);
         }
-        this.field_f.a(param0 - 125, this.a(PacketBuffer.field_j, (byte) 111, BufferedSocket.field_m), this.a(SpriteState.field_o, (byte) 111, s.field_gb));
+        this.field_f.a(param0 - 125, this.a(PacketBuffer.field_j, (byte) 111, BufferedSocket.field_m), this.a(SpriteState.field_o, (byte) 111, StandardContentDialog.field_gb));
         if (-1 != this.field_f.field_f) {
           this.a(true, 2647, this.field_f.field_f);
         }
         if (param0 != hg.field_F) {
-          this.field_b = s.field_gb;
+          this.field_b = StandardContentDialog.field_gb;
           this.field_a = SpriteState.field_o;
         }
     }
@@ -974,7 +974,7 @@ final class MenuScreen {
 
     private final void b(byte param0) {
         int var2 = SocketConnector.field_g.field_F + SocketConnector.field_g.field_s;
-        int var3 = SocketConnector.field_g.lineCount(c.field_E, 600);
+        int var3 = SocketConnector.field_g.lineCount(StripedProgressWidget.field_E, 600);
         int var4 = (4 + var3) * var2 + 60;
         int var5 = -var4 + 574 >> 1;
         ah.field_i[this.field_d] = -30 + var5 + var4;
@@ -982,7 +982,7 @@ final class MenuScreen {
         if (param0 <= 39) {
           field_c = (long[][]) null;
         }
-        var5 = var5 + SocketConnector.field_g.drawParagraph(c.field_E, 20, var5, 600, 640, 16777215, -1, 1, 0, var2) * var2;
+        var5 = var5 + SocketConnector.field_g.drawParagraph(StripedProgressWidget.field_E, 20, var5, 600, 640, 16777215, -1, 1, 0, var2) * var2;
         var5 = var5 + (var2 << 1);
         SocketConnector.field_g.drawCentred(IterableNodeHashTable.field_i, 320, var5, 16776960, -1);
         var5 = var5 + var2;

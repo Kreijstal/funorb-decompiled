@@ -481,23 +481,23 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           }
           var2Lifetime57 = MouseInputHandler.a(95, "basic_controls,0,0");
           if (var2Lifetime57 != null) {
-            jf.field_ob[0][0] = re.a(18990, var2Lifetime57);
+            StandardContentDialog.field_ob[0][0] = re.a(18990, var2Lifetime57);
           }
           var2Lifetime58 = MouseInputHandler.a(95, "basic_controls,1,0");
           if (null != var2Lifetime58) {
-            jf.field_ob[1][0] = re.a(18990, var2Lifetime58);
+            StandardContentDialog.field_ob[1][0] = re.a(18990, var2Lifetime58);
           }
           var2Lifetime59 = MouseInputHandler.a(95, "basic_controls,2,0");
           if (null != var2Lifetime59) {
-            jf.field_ob[2][0] = re.a(18990, var2Lifetime59);
+            StandardContentDialog.field_ob[2][0] = re.a(18990, var2Lifetime59);
           }
           var2Lifetime60 = MouseInputHandler.a(95, "basic_controls,3,0");
           if (var2Lifetime60 != null) {
-            jf.field_ob[3][0] = re.a(TorChallenge.a(param1, 18990), var2Lifetime60);
+            StandardContentDialog.field_ob[3][0] = re.a(TorChallenge.a(param1, 18990), var2Lifetime60);
           }
           var2Lifetime61 = MouseInputHandler.a(95, "basic_controls,3,1");
           if (var2Lifetime61 != null) {
-            jf.field_ob[3][1] = re.a(18990, var2Lifetime61);
+            StandardContentDialog.field_ob[3][1] = re.a(18990, var2Lifetime61);
           }
           var2Lifetime62 = MouseInputHandler.a(95, "BACK");
           if (null != var2Lifetime62) {
@@ -1001,7 +1001,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           var2Lifetime186 = MouseInputHandler.a(95, "keycode_jump");
           EditableTextField.field_cb = null;
           if (null != var2Lifetime186) {
-            ll.field_a = 255 & var2Lifetime186[0];
+            FullscreenNoticeType.field_a = 255 & var2Lifetime186[0];
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

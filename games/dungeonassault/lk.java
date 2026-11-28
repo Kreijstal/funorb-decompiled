@@ -77,12 +77,12 @@ final class lk extends gd {
         int var8Lifetime3;
         int var8Lifetime4;
         if (var2 != 0) {
-          var9 = jk.a(new String[]{Integer.toString(var2)}, ResourceArchive.field_i, 30496);
+          var9 = StandardContentDialog.a(new String[]{Integer.toString(var2)}, ResourceArchive.field_i, 30496);
           var4 = var9;
           var4 = var9;
           var4 = var9;
           if (var3 != 0) {
-            var4 = var9 + ", " + jk.a(new String[]{Integer.toString(var3)}, to.field_a, 30496);
+            var4 = var9 + ", " + StandardContentDialog.a(new String[]{Integer.toString(var3)}, to.field_a, 30496);
           }
           if (!ve.a(false)) {
             var10 = li.field_b[this.field_O];
@@ -297,7 +297,7 @@ final class lk extends gd {
           return;
         }
         if (var3 != 0) {
-          var4 = jk.a(new String[]{Integer.toString(var3)}, to.field_a, 30496);
+          var4 = StandardContentDialog.a(new String[]{Integer.toString(var3)}, to.field_a, 30496);
         }
         String var15 = li.field_b[this.field_O];
         var6Lifetime1 = db.field_v.stringWidth(var15);
@@ -402,7 +402,7 @@ final class lk extends gd {
     }
 
     final static void f(int param0) {
-        ia.field_K = null;
+        GuestPlayConfirmationForm.field_K = null;
         sg.field_b = null;
         ConfirmedEmailAvailabilityValidator.field_o = null;
         ro.field_B = false;

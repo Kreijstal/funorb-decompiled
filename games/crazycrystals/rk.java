@@ -56,7 +56,7 @@ final class rk {
         if (!BoundedRandomAccessFile.field_c) {
           throw new IllegalStateException();
         }
-        jd.field_z = true;
+        DialogMessagePane.field_z = true;
         fl.a(true, param0 + 1);
         hp.field_s = param0;
     }

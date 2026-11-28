@@ -92,7 +92,7 @@ final class jf extends IntrusiveNode {
     }
 
     final static void d(int param0) {
-        ck.field_db = false;
+        ProgressMessageDialog.field_db = false;
         gk.field_a = false;
         rh.a(param0, (byte) -72);
         DiskArchiveRequest.field_E = ok.field_a;

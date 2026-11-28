@@ -72,7 +72,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
           if (param3 == 255) {
             stackIn_9_0 = -108;
             stackIn_10_1 = !(wc.field_Ob >= 13);
-            IntrusiveDeque.field_e = jj.createAccountSuccessResultWithIntGuard(stackIn_9_0, stackIn_10_1);
+            IntrusiveDeque.field_e = ProgressDialog.createAccountSuccessResultWithIntGuard(stackIn_9_0, stackIn_10_1);
             var7 = (String[]) null;
             IsaacRandom.a(-7212, (String[]) null);
           } else {

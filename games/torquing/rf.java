@@ -20,7 +20,7 @@ final class rf extends DefaultTextWidgetRenderer {
         }
         IndexedSprite[] var1 = new IndexedSprite[ti.field_g];
         for (var2 = 0; ti.field_g > var2; var2++) {
-          var1[var2] = new IndexedSprite(fm.field_E, rh.field_d, PacketBuffer.field_o[var2], LabeledWidgetContainer.field_G[var2], vo.field_b[var2], PasswordValidator.field_o[var2], pn.field_b[var2], cq.field_y);
+          var1[var2] = new IndexedSprite(GuestPlayConfirmationForm.field_E, rh.field_d, PacketBuffer.field_o[var2], LabeledWidgetContainer.field_G[var2], vo.field_b[var2], PasswordValidator.field_o[var2], pn.field_b[var2], cq.field_y);
         }
         go.b(0);
         return var1;

@@ -25,10 +25,10 @@ final class cd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != ol.field_a) {
-            ol.field_a.d(true);
+            ol.field_a.closeDialog(true);
           }
           DraggableWidgetContainer.field_O = new LoginPanel(param0, param2, false, true, true);
-          PcmOutputWorker.field_e.a(33, DraggableWidgetContainer.field_O);
+          PcmOutputWorker.field_e.replaceContent(33, DraggableWidgetContainer.field_O);
           if (param1 <= -2) {
             return;
           }

@@ -27,7 +27,7 @@ final class oc {
         field_e = param3 - param1;
         oc.b();
         if (field_b.length < field_e) {
-          field_b = new int[ll.roundUpPowerOfTwo(true, field_e)];
+          field_b = new int[FullscreenNoticeType.roundUpPowerOfTwo(true, field_e)];
         }
         int var4 = param1 * SoftwareRasterizer.width + param0;
         for (var5 = 0; var5 < field_e; var5++) {

@@ -89,17 +89,17 @@ final class MixedSupport123 {
     }
 
     final static void performAction1616(byte byteArgument1) {
-        UiComponentPart018.stringArrayState0021[4] = NanoFrameTimer.stringState0128;
-        UiComponentPart018.stringArrayState0021[7] = AccountFieldStatusIndicator.stringState0401;
-        UiComponentPart018.stringArrayState0021[1] = UiComponentPart030.stringState0520;
-        UiComponentPart018.stringArrayState0021[2] = MixedSupport124.stringState0545;
-        UiComponentPart018.stringArrayState0021[3] = MixedSupport071.stringState0317;
-        UiComponentPart018.stringArrayState0021[6] = MixedSupport073.stringState0321;
+        RegistrationAgreementPane.stringArrayState0021[4] = NanoFrameTimer.stringState0128;
+        RegistrationAgreementPane.stringArrayState0021[7] = AccountFieldStatusIndicator.stringState0401;
+        RegistrationAgreementPane.stringArrayState0021[1] = ResizableModalDialog.stringState0520;
+        RegistrationAgreementPane.stringArrayState0021[2] = MixedSupport124.stringState0545;
+        RegistrationAgreementPane.stringArrayState0021[3] = MixedSupport071.stringState0317;
+        RegistrationAgreementPane.stringArrayState0021[6] = MixedSupport073.stringState0321;
         if (byteArgument1 <= -30) {
-          UiComponentPart018.stringArrayState0021[5] = RichTextLayout.stringState0135;
-          UiComponentPart018.stringArrayState0021[0] = MixedSupport137.stringState0588;
+          RegistrationAgreementPane.stringArrayState0021[5] = RichTextLayout.stringState0135;
+          RegistrationAgreementPane.stringArrayState0021[0] = MixedSupport137.stringState0588;
           MixedSupport003.stringArrayState0001[MixedSupport003.stringArrayState0001.length - 2] = MixedSupport119.stringState0522;
-          MixedSupport003.stringArrayState0001[-1 + MixedSupport003.stringArrayState0001.length] = UiComponentPart023.stringState0426;
+          MixedSupport003.stringArrayState0001[-1 + MixedSupport003.stringArrayState0001.length] = StandardContentDialog.stringState0426;
           return;
         }
     }

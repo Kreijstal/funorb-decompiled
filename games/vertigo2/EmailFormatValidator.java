@@ -164,7 +164,7 @@ final class EmailFormatValidator extends TextFieldValidator {
           stackIn_6_0 = (null != ol.a(param1, param0 - 6674)) ? 0 : 1;
           var3_int = stackIn_6_0;
           if (var3_int != 0) {
-            stackIn_10_0 = qm.field_G;
+            stackIn_10_0 = GuestPlayConfirmationForm.field_G;
             return stackIn_10_0;
           }
           stackIn_8_0 = ir.field_a;

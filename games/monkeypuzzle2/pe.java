@@ -61,7 +61,7 @@ final class pe {
               var5Lifetime4 = var7;
               var5Lifetime5 = var7;
               if (0 != param0.length()) {
-                var5Lifetime6 = var7 + "; Expires=" + ha.a((byte) -127, pf.correctedCurrentTimeMillis(0) + 94608000000L) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + ProgressMessageDialog.a((byte) -127, pf.correctedCurrentTimeMillis(0) + 94608000000L) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
@@ -104,7 +104,7 @@ final class pe {
           BoundedRandomAccessFile.field_e.drawRightAligned("Clearances WithOut Monkeys: " + ek.field_b, 635, 50, 16711680, 1);
           BoundedRandomAccessFile.field_e.drawRightAligned("Nuts Fired: " + sc.field_c, 635, 70, 16711680, 1);
           BoundedRandomAccessFile.field_e.drawRightAligned("Size of last detatched clump " + ke.field_c, 635, 90, 16711680, 1);
-          BoundedRandomAccessFile.field_e.drawRightAligned("FPS: " + s.field_T, 635, 110, 16711680, 1);
+          BoundedRandomAccessFile.field_e.drawRightAligned("FPS: " + FullscreenStatusDialog.field_T, 635, 110, 16711680, 1);
           BoundedRandomAccessFile.field_e.drawRightAligned("LPS: " + jf.field_g, 635, 130, 16711680, 1);
         }
     }

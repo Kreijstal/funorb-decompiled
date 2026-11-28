@@ -109,10 +109,10 @@ final class LevelLostEntrancePhase extends ResultScenePhase {
         FullscreenFocusCanvas.field_b = var9.readUnsignedByte(255);
         KeyboardInputHandler.field_d = var9.readLong(true);
         if (lj.field_b == 2) {
-          na.field_kb = var9.readUnsignedShort((byte) -7);
+          ProgressMessageDialog.field_kb = var9.readUnsignedShort((byte) -7);
           ca.field_m = var9.readUnsignedMedium(false);
         } else {
-          na.field_kb = 0;
+          ProgressMessageDialog.field_kb = 0;
           ca.field_m = 0;
         }
         stackIn_9_0 = (var9.readUnsignedByte(255) != 1) ? 0 : 1;

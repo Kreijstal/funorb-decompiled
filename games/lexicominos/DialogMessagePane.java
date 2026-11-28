@@ -1,0 +1,178 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class DialogMessagePane extends DequeWidgetContainer implements WidgetActivationListener {
+    private BitmapFont field_E;
+    private int field_J;
+    static String field_G;
+    private InteractiveWidget[] field_H;
+    static vi field_D;
+    private ProgressMessageDialog field_F;
+    private String field_L;
+    static int[] field_K;
+    private int[] field_B;
+
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
+        super.drawWidget(param0, param1, param2, param3);
+        this.field_E.drawParagraph(this.field_L, this.field_t + param2 + 14, 10 + param1 + this.field_o, this.field_j - 28, this.field_v, 16777215, -1, 0, 0, this.field_E.field_E);
+    }
+
+    DialogMessagePane(ProgressMessageDialog param0, BitmapFont param1, String param2) {
+        super(0, 0, 288, 0, (WidgetRenderer) null);
+        int var4_int = 0;
+        this.field_J = 0;
+        try {
+          this.field_E = param1;
+          this.field_L = param2;
+          this.field_F = param0;
+          var4_int = null == this.field_L ? 0 : this.field_E.textHeight(this.field_L, 260, this.field_E.field_E);
+          this.setBounds(var4_int + 22, 288, true, 0, 0);
+        } catch (RuntimeException runtimeException) {
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "vc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
+        fb.field_g = param2;
+        RichTextLayout.field_o = param1;
+        hc.field_fb = param4;
+        sb.field_f = param3;
+        if (param0 != -5094) {
+          field_D = (vi) null;
+        }
+    }
+
+    final InteractiveWidget addListenerButton(int param0, String param1, WidgetEventListener param2) {
+        InteractiveWidget var4 = null;
+        RuntimeException var4_ref = null;
+        int var5 = 0;
+        InteractiveWidget stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var4 = new InteractiveWidget(param1, param2);
+          var4.field_i = (WidgetRenderer) ((Object) new v());
+          if (param0 != -1) {
+            field_G = (String) null;
+          }
+          var5 = -2 + this.field_v;
+          this.setBounds(34 + this.field_v, this.field_j, true, 0, 0);
+          var4.setBounds(30, this.field_j - 14, true, var5, 7);
+          this.addChild((byte) -106, var4);
+          stackIn_3_0 = var4;
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4_ref = decompiledCaughtException;
+          stackIn_6_0 = var4_ref;
+          stackIn_6_1 = new StringBuilder().append("vc.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+        }
+    }
+
+    final void addActionButton(String param0, int param1, int param2) {
+        int var4_int = 0;
+        try {
+          var4_int = this.field_J;
+          this.growActions(102, var4_int + 1);
+          int var5 = 61 / ((param2 - 47) / 58);
+          this.field_H[var4_int] = this.addListenerButton(-1, param0, (WidgetEventListener) (this));
+          this.field_B[var4_int] = param1;
+        } catch (RuntimeException runtimeException) {
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "vc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+        }
+    }
+
+    public final void onWidgetActivated(int param0, int param1, int param2, int param3, InteractiveWidget param4) {
+        int var6_int = 0;
+        int var7 = 0;
+        int var8 = 0;
+        WidgetEventListener var9 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
+        var8 = Lexicominos.field_L ? 1 : 0;
+        try {
+          if (param2 != 215535458) {
+            var9 = (WidgetEventListener) null;
+            this.addListenerButton(-94, (String) null, (WidgetEventListener) null);
+          }
+          for (var6_int = 0; this.field_J > var6_int; var6_int++) {
+            if (this.field_H[var6_int] != param4) {
+              continue;
+            }
+            var7 = this.field_B[var6_int];
+            if (var7 == -1) {
+              this.field_F.closeDialog(true);
+            } else {
+              ni.a(82, this.field_B[var6_int]);
+            }
+            break;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_14_0 = var6;
+          stackIn_14_1 = new StringBuilder().append("vc.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+        }
+    }
+
+    private final void growActions(int param0, int param1) {
+        int var5 = 0;
+        int var6 = Lexicominos.field_L ? 1 : 0;
+        if (this.field_J >= param1) {
+          return;
+        }
+        InteractiveWidget[] var7 = new InteractiveWidget[param1];
+        InteractiveWidget[] var3 = var7;
+        int[] var4 = new int[param1];
+        for (var5 = 0; var5 < this.field_J; var5++) {
+          var7[var5] = this.field_H[var5];
+          var4[var5] = this.field_B[var5];
+        }
+        this.field_H = var3;
+        this.field_J = param1;
+        if (param0 < 69) {
+          return;
+        }
+        this.field_B = var4;
+    }
+
+    public static void clearStaticReferences(int param0) {
+        field_G = null;
+        if (param0 != -16531) {
+          return;
+        }
+        field_D = null;
+        field_K = null;
+    }
+
+    static {
+        field_K = new int[]{-1, -1, -1, -1, -1, -1, -1, -1, 85, 80, 84, -1, 91, -1, -1, -1, 81, 82, 86, -1, -1, -1, -1, -1, -1, -1, -1, 13, -1, -1, -1, -1, 83, 104, 105, 103, 102, 96, 98, 97, 99, -1, -1, -1, -1, -1, -1, -1, 25, 16, 17, 18, 19, 20, 21, 22, 23, 24, -1, -1, -1, -1, -1, -1, -1, 48, 68, 66, 50, 34, 51, 52, 53, 39, 54, 55, 56, 70, 69, 40, 41, 32, 35, 49, 36, 38, 67, 33, 65, 37, 64, -1, -1, -1, -1, -1, 228, 231, 227, 233, 224, 219, 225, 230, 226, 232, 89, 87, -1, 88, 229, 90, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, -1, -1, -1, 101, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 100, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
+        field_G = "Account created successfully!";
+    }
+}

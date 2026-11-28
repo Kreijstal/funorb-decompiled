@@ -205,13 +205,13 @@ class bj extends kb {
 
     final static void d(int param0) {
         if (null != SecondaryNodeDequeIterator.field_d) {
-          SecondaryNodeDequeIterator.field_d.r(77);
+          SecondaryNodeDequeIterator.field_d.closeDialog(77);
         }
         DebouncedFieldValidator.field_g = new DisplayNameSelectionPanel();
         if (param0 != -2147483648) {
           field_P = (String) null;
         }
-        l.field_d.b(104, DebouncedFieldValidator.field_g);
+        l.field_d.replaceContent(104, DebouncedFieldValidator.field_g);
     }
 
     private bj(long param0, bj param1, int param2, int param3, int param4, int param5, String param6) {

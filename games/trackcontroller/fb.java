@@ -106,7 +106,7 @@ final class fb {
           if (param0 >= -99) {
             fb.resetStaticState(-114);
           }
-          db.liveMouseButton = 0;
+          ContentTransitionDialog.liveMouseButton = 0;
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "fb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

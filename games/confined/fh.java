@@ -257,7 +257,7 @@ final class fh {
               om.field_p.a(0, kj.field_c);
             }
             if (param0 == 10) {
-              ib.c(false);
+              StripedProgressWidget.c(false);
               var3_int = 0;
             }
             if (var3_int != 0) {
@@ -267,7 +267,7 @@ final class fh {
               if (DiskCacheWorker.field_f) {
                 param2 = GameCanvas.field_c;
               }
-              ki.field_c.a(param2, param0, false);
+              ki.field_c.showResult(param2, param0, false);
             }
             if (param0 != 256) {
               if (10 == param0) {

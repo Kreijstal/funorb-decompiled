@@ -19,7 +19,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         try {
           if (DequeWidgetContainer.field_G != null) {
             th.field_e = 0;
-            tf.field_mb = 0;
+            ProgressDialog.field_mb = 0;
             lk.field_j = true;
             var2_int = param0.getModifiers();
             if ((16 & var2_int) != 0) {
@@ -98,7 +98,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           String var5Lifetime5;
           String var5Lifetime6;
           try {
-            ih.field_J = param2;
+            RegistrationAgreementPane.field_J = param2;
             var6 = param0.getParameter("cookieprefix");
             var5 = var6;
             var5Lifetime1 = var6;
@@ -225,7 +225,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         RuntimeException var2 = null;
         try {
           if (DequeWidgetContainer.field_G != null) {
-            tf.field_mb = 0;
+            ProgressDialog.field_mb = 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -283,10 +283,10 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             la.correctedCurrentTimeMillis(false);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               f.field_h = 2;
-              tf.field_mb = 2;
+              ProgressDialog.field_mb = 2;
             } else {
               f.field_h = 1;
-              tf.field_mb = 1;
+              ProgressDialog.field_mb = 1;
             }
             var2_int = param0.getModifiers();
             lk.field_j = true;

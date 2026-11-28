@@ -260,7 +260,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
           var12 = dupTemp$0;
           this.addChild(dupTemp$0, 5411);
           this.field_j = this.field_j + (((UiWidget) ((Object) var12)).field_x + 5);
-          dupTemp$1 = new LabeledWidgetContainer(10, this.field_j, this.field_t - 20, 25, this.field_L, false, 80, 3, var7, 16777215, ld.field_O);
+          dupTemp$1 = new LabeledWidgetContainer(10, this.field_j, this.field_t - 20, 25, this.field_L, false, 80, 3, var7, 16777215, ResizableModalDialog.field_O);
           var13 = dupTemp$1;
           this.addChild(dupTemp$1, 5411);
           this.field_N.field_n = (WidgetEventListener) (this);
@@ -349,7 +349,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
               if (param3 == this.field_D) {
                 if (!this.field_E) {
                   if (this.field_H) {
-                    ig.a((byte) -82);
+                    GuestPlayConfirmationForm.a((byte) -82);
                   } else {
                     qd.a((byte) -13);
                   }

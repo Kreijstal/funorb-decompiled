@@ -109,7 +109,7 @@ final class ki extends InteractiveWidget {
         RuntimeException var1_ref = null;
         var4 = Chess.field_G;
         try {
-          var5 = ge.field_eb;
+          var5 = FullscreenStatusDialog.field_eb;
           var1 = var5;
           var2 = param0;
           var3 = var5.length;

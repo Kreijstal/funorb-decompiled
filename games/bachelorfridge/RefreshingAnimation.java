@@ -28,7 +28,7 @@ final class RefreshingAnimation extends EventAnimation {
           ClientException.field_b = gw.a("lobby", "chatfilter", param3, -112);
           qo.field_a[0] = UiWidget.field_x;
           qo.field_a[2] = PlaceCreatureEffect.field_i;
-          qo.field_a[1] = de.field_K;
+          qo.field_a[1] = StripedProgressWidget.field_K;
           gaa.a(ds.field_l, param0, -95);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "nma.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

@@ -94,11 +94,11 @@ final class ob {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
             }
-            if (null == ih.field_J) {
+            if (null == RegistrationAgreementPane.field_J) {
               stackIn_17_0 = param1.getParameter("settings");
               return stackIn_17_0;
             }
-            stackIn_15_0 = ih.field_J;
+            stackIn_15_0 = RegistrationAgreementPane.field_J;
             return stackIn_15_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

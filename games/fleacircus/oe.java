@@ -102,14 +102,14 @@ final class oe {
           }
           return null;
         }
-        if (oh.field_db > EditableTextField.field_S) {
+        if (ContentTransitionDialog.field_db > EditableTextField.field_S) {
           if (param0 != 19007) {
             oe.a(-82);
             return null;
           }
           return null;
         }
-        if (EditableTextField.field_S < oh.field_db + fj.field_b) {
+        if (EditableTextField.field_S < ContentTransitionDialog.field_db + fj.field_b) {
           return gf.field_b;
         }
         if (param0 != 19007) {

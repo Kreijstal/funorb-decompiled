@@ -417,7 +417,7 @@ final class eca extends bi {
     }
 
     private final void p(int param0) {
-        this.field_k.drawCentred(d.field_E, 320, this.field_k.field_u + 353 + 11, 3518976, -1);
+        this.field_k.drawCentred(BirthDateChatEnableForm.field_E, 320, this.field_k.field_u + 353 + 11, 3518976, -1);
         if (param0 >= -113) {
           this.a((String) null, -62, 37, -6, 83, 78, 31, -18, -51);
         }

@@ -136,7 +136,7 @@ final class a {
                 break;
               }
               var7_ref_String = param1.substring(var6_int + 2, var5);
-              if (!jf.a((CharSequence) ((Object) var7_ref_String), 7552)) {
+              if (!ContentTransitionDialog.a((CharSequence) ((Object) var7_ref_String), 7552)) {
                 continue;
               }
               if (var5 >= var3_int) {
@@ -169,7 +169,7 @@ final class a {
               break;
             }
             var9 = param1.substring(2 + var8Lifetime1, var5Lifetime1);
-            if (!jf.a((CharSequence) ((Object) var9), 7552)) {
+            if (!ContentTransitionDialog.a((CharSequence) ((Object) var9), 7552)) {
               continue;
             }
             if (var3_int <= var5Lifetime1) {

@@ -56,9 +56,9 @@ final class IsaacRandom {
         if (AttackUpAllAnimation.e(-29919)) {
           return;
         }
-        sja.field_fb.writeCipheredByte(94, (byte) 115);
+        StandardContentDialog.field_fb.writeCipheredByte(94, (byte) 115);
         int var2 = -5 / ((param1 + 18) / 51);
-        sja.field_fb.writeByte(param0, 0);
+        StandardContentDialog.field_fb.writeByte(param0, 0);
     }
 
     private final void initializeState(int param0) {

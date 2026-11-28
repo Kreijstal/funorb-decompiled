@@ -75,7 +75,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               }
               k.field_a = 0;
               ac.field_f = param2;
-              lf.field_ab = 0;
+              ProgressDialog.field_ab = 0;
               eh.field_n = param5;
               cg.field_b = param5;
               ic.field_b = this;
@@ -324,7 +324,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 mi.e((byte) -6);
                 this.e(-121);
-                DisplayNameSelectionPanel.field_y = mf.a(eh.field_n, (java.awt.Component) ((Object) kj.field_E), DiskCacheWorker.field_d, -21880);
+                DisplayNameSelectionPanel.field_y = mf.a(eh.field_n, (java.awt.Component) ((Object) DialogMessagePane.field_E), DiskCacheWorker.field_d, -21880);
                 this.initializeClient(-108);
                 p.field_d = qb.a(true);
                 do {
@@ -345,7 +345,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     if (!(sg.field_k > var3)) {
                       this.renderAppletFrame((byte) -99);
-                      ea.a(kj.field_E, -90, nb.field_e);
+                      ea.a(DialogMessagePane.field_E, -90, nb.field_e);
                       break;
                     }
                     this.processClientTick((byte) 85);
@@ -397,7 +397,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   return;
                 }
               }
-              jj.field_E = true;
+              RegistrationAgreementPane.field_E = true;
             }
             return;
           }
@@ -443,10 +443,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
           }
-          if (kj.field_E != null) {
+          if (DialogMessagePane.field_E != null) {
             try {
-              kj.field_E.removeFocusListener((java.awt.event.FocusListener) (this));
-              kj.field_E.getParent().remove((java.awt.Component) ((Object) kj.field_E));
+              DialogMessagePane.field_E.removeFocusListener((java.awt.event.FocusListener) (this));
+              DialogMessagePane.field_E.getParent().remove((java.awt.Component) ((Object) DialogMessagePane.field_E));
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -553,17 +553,17 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (fieldTemp$1 > 50) {
             ResourceArchive.field_f = ResourceArchive.field_f - 50;
             v.field_b = true;
-            kj.field_E.setSize(eh.field_n, DiskCacheWorker.field_d);
-            kj.field_E.setVisible(true);
+            DialogMessagePane.field_E.setSize(eh.field_n, DiskCacheWorker.field_d);
+            DialogMessagePane.field_E.setVisible(true);
             if (ic.field_d != null &&
               null == sg.field_i) {
               var6 = ic.field_d.getInsets();
-              kj.field_E.setLocation(k.field_a + var6.left, lf.field_ab + var6.top);
+              DialogMessagePane.field_E.setLocation(k.field_a + var6.left, ProgressDialog.field_ab + var6.top);
               if (StarCannon.field_A != 0) {
-                kj.field_E.setLocation(k.field_a, lf.field_ab);
+                DialogMessagePane.field_E.setLocation(k.field_a, ProgressDialog.field_ab);
               }
             } else {
-              kj.field_E.setLocation(k.field_a, lf.field_ab);
+              DialogMessagePane.field_E.setLocation(k.field_a, ProgressDialog.field_ab);
             }
           }
           this.renderClientFrame((byte) 22);
@@ -625,10 +625,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         var4 = StarCannon.field_A;
         try {
-          if (kj.field_E != null) {
-            kj.field_E.removeFocusListener((java.awt.event.FocusListener) (this));
-            kj.field_E.getParent().setBackground(java.awt.Color.black);
-            kj.field_E.getParent().remove((java.awt.Component) ((Object) kj.field_E));
+          if (DialogMessagePane.field_E != null) {
+            DialogMessagePane.field_E.removeFocusListener((java.awt.event.FocusListener) (this));
+            DialogMessagePane.field_E.getParent().setBackground(java.awt.Color.black);
+            DialogMessagePane.field_E.getParent().remove((java.awt.Component) ((Object) DialogMessagePane.field_E));
           }
           boolean decompiledFrameRemainder0 = true;
           if (sg.field_i != null) {
@@ -658,25 +658,25 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          kj.field_E = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
-          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) kj.field_E));
-          kj.field_E.setSize(eh.field_n, DiskCacheWorker.field_d);
-          kj.field_E.setVisible(true);
+          DialogMessagePane.field_E = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
+          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) DialogMessagePane.field_E));
+          DialogMessagePane.field_E.setSize(eh.field_n, DiskCacheWorker.field_d);
+          DialogMessagePane.field_E.setVisible(true);
           if (ic.field_d == var2) {
             var3_ref_java_awt_Insets = ic.field_d.getInsets();
-            kj.field_E.setLocation(k.field_a + var3_ref_java_awt_Insets.left, var3_ref_java_awt_Insets.top + lf.field_ab);
+            DialogMessagePane.field_E.setLocation(k.field_a + var3_ref_java_awt_Insets.left, var3_ref_java_awt_Insets.top + ProgressDialog.field_ab);
             if (var4 != 0) {
-              kj.field_E.setLocation(k.field_a, lf.field_ab);
+              DialogMessagePane.field_E.setLocation(k.field_a, ProgressDialog.field_ab);
             }
           } else {
-            kj.field_E.setLocation(k.field_a, lf.field_ab);
+            DialogMessagePane.field_E.setLocation(k.field_a, ProgressDialog.field_ab);
           }
-          kj.field_E.addFocusListener((java.awt.event.FocusListener) (this));
-          kj.field_E.requestFocus();
+          DialogMessagePane.field_E.addFocusListener((java.awt.event.FocusListener) (this));
+          DialogMessagePane.field_E.requestFocus();
           nf.field_k = true;
           dl.field_d = true;
           v.field_b = true;
-          jj.field_E = false;
+          RegistrationAgreementPane.field_E = false;
           var3 = -95 / ((param0 + 36) / 45);
           TextLineMetrics.field_b = dd.correctedCurrentTimeMillis(63);
           return;
@@ -810,9 +810,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 <= 40) {
             this.updateClient(29);
           }
-          var4 = vd.field_g[jj.field_D];
-          vd.field_g[jj.field_D] = var2_long;
-          jj.field_D = 31 & 1 + jj.field_D;
+          var4 = vd.field_g[RegistrationAgreementPane.field_D];
+          vd.field_g[RegistrationAgreementPane.field_D] = var2_long;
+          RegistrationAgreementPane.field_D = 31 & 1 + RegistrationAgreementPane.field_D;
           if (var4 != 0L &&
             var2_long > var4) {
           }

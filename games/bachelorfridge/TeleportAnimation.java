@@ -104,7 +104,7 @@ final class TeleportAnimation extends EventAnimation {
         }
         gs.field_f.a((byte) 79);
         if (!AttackUpAllAnimation.e(-29919)) {
-          sja.field_fb.writeCipheredByte(79, (byte) 103);
+          StandardContentDialog.field_fb.writeCipheredByte(79, (byte) 103);
         }
     }
 

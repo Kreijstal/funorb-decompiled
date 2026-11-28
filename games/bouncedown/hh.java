@@ -136,7 +136,7 @@ final class hh extends IntrusiveNode {
     final static void b(int param0, int param1, int param2, int param3, int param4) {
         pb.field_j = param0;
         TextLayout.field_d = param2;
-        k.field_D = param3;
+        GuestPlayConfirmationForm.field_D = param3;
         qd.field_b = param1;
         if (param4 != 0) {
           field_h = (int[]) null;

@@ -10,7 +10,7 @@ final class ad extends um {
 
     final void a(byte param0) {
         int var2 = 57 / ((29 - param0) / 42);
-        TextLayout.field_d.playSampleWithPan(ck.field_cb, 100, 48 * (gi.field_m * this.field_i), this.field_g / this.field_i);
+        TextLayout.field_d.playSampleWithPan(StandardContentDialog.field_cb, 100, 48 * (gi.field_m * this.field_i), this.field_g / this.field_i);
         this.field_i = 0;
         this.field_g = 0;
     }
@@ -54,7 +54,7 @@ final class ad extends um {
           }
           this.field_i = this.field_i + 1;
           this.field_g = this.field_g + param3;
-          ph.a(100, (byte) 107, param1, param4);
+          RegistrationAgreementPane.a(100, (byte) 107, param1, param4);
           stackIn_3_0 = IsaacRandom.field_g;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

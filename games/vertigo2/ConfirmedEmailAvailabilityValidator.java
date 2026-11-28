@@ -85,7 +85,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           if (!this.field_r) {
             stackIn_12_0 = ir.field_a;
           } else {
-            stackIn_12_0 = qm.field_G;
+            stackIn_12_0 = GuestPlayConfirmationForm.field_G;
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

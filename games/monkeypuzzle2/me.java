@@ -8,7 +8,7 @@ final class me extends IntrusiveNode {
     int field_k;
     static byte[][][] field_g;
     static String field_n;
-    static ha field_f;
+    static ProgressMessageDialog field_f;
     static int[] field_i;
     static String field_l;
     static int[] field_j;

@@ -147,7 +147,7 @@ final class PasswordValidator extends TextFieldValidator {
             return (String) (stackIn_2_0);
           }
           var5 = var4;
-          if (ef.a(101, var5)) {
+          if (StandardContentDialog.a(101, var5)) {
             stackIn_6_0 = vm.field_bb;
             return stackIn_6_0;
           }

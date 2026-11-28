@@ -229,7 +229,7 @@ final class tb {
             }
             break;
           }
-          stackIn_10_0 = jn.field_R;
+          stackIn_10_0 = DialogMessagePane.field_R;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

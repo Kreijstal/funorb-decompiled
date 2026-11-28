@@ -89,9 +89,9 @@ final class SectorCacheStore {
                 return null;
               }
               this.field_h.seek((long)(param0 * 6), 0);
-              this.field_h.readFully(jg.field_O, -19616, 0, 6);
-              var4_int = ((jg.field_O[0] & 255) << 16) - (-(65280 & jg.field_O[1] << 8) - (255 & jg.field_O[2]));
-              var5 = (jg.field_O[5] & 255) + ((jg.field_O[3] & 255) << 16) + (65280 & jg.field_O[4] << 8);
+              this.field_h.readFully(BirthDateChatEnableForm.field_O, -19616, 0, 6);
+              var4_int = ((BirthDateChatEnableForm.field_O[0] & 255) << 16) - (-(65280 & BirthDateChatEnableForm.field_O[1] << 8) - (255 & BirthDateChatEnableForm.field_O[2]));
+              var5 = (BirthDateChatEnableForm.field_O[5] & 255) + ((BirthDateChatEnableForm.field_O[3] & 255) << 16) + (65280 & BirthDateChatEnableForm.field_O[4] << 8);
               if (var4_int < 0) {
                 return null;
               }
@@ -124,21 +124,21 @@ final class SectorCacheStore {
                     var9 = 510;
                   }
                   var14 = 10;
-                  this.field_a.readFully(jg.field_O, -19616, 0, var14 + var9);
-                  var13 = jg.field_O[9] & 255;
-                  var12 = (65280 & jg.field_O[7] << 8) + (((jg.field_O[6] & 255) << 16) + (255 & jg.field_O[8]));
-                  var10 = ((255 & jg.field_O[2]) << 8) + (jg.field_O[0] << 24 & -16777216) + ((jg.field_O[1] & 255) << 16) + (jg.field_O[3] & 255);
-                  var11 = (jg.field_O[4] << 8 & 65280) + (255 & jg.field_O[5]);
+                  this.field_a.readFully(BirthDateChatEnableForm.field_O, -19616, 0, var14 + var9);
+                  var13 = BirthDateChatEnableForm.field_O[9] & 255;
+                  var12 = (65280 & BirthDateChatEnableForm.field_O[7] << 8) + (((BirthDateChatEnableForm.field_O[6] & 255) << 16) + (255 & BirthDateChatEnableForm.field_O[8]));
+                  var10 = ((255 & BirthDateChatEnableForm.field_O[2]) << 8) + (BirthDateChatEnableForm.field_O[0] << 24 & -16777216) + ((BirthDateChatEnableForm.field_O[1] & 255) << 16) + (BirthDateChatEnableForm.field_O[3] & 255);
+                  var11 = (BirthDateChatEnableForm.field_O[4] << 8 & 65280) + (255 & BirthDateChatEnableForm.field_O[5]);
                 } else {
                   var14 = 8;
                   if (var9 > 512) {
                     var9 = 512;
                   }
-                  this.field_a.readFully(jg.field_O, -19616, 0, var9 + var14);
-                  var12 = (jg.field_O[6] & 255) + ((jg.field_O[4] << 16 & 16711680) + (65280 & jg.field_O[5] << 8));
-                  var13 = 255 & jg.field_O[7];
-                  var10 = (255 & jg.field_O[1]) + (65280 & jg.field_O[0] << 8);
-                  var11 = (65280 & jg.field_O[2] << 8) + (255 & jg.field_O[3]);
+                  this.field_a.readFully(BirthDateChatEnableForm.field_O, -19616, 0, var9 + var14);
+                  var12 = (BirthDateChatEnableForm.field_O[6] & 255) + ((BirthDateChatEnableForm.field_O[4] << 16 & 16711680) + (65280 & BirthDateChatEnableForm.field_O[5] << 8));
+                  var13 = 255 & BirthDateChatEnableForm.field_O[7];
+                  var10 = (255 & BirthDateChatEnableForm.field_O[1]) + (65280 & BirthDateChatEnableForm.field_O[0] << 8);
+                  var11 = (65280 & BirthDateChatEnableForm.field_O[2] << 8) + (255 & BirthDateChatEnableForm.field_O[3]);
                 }
                 if (param0 != var10) {
                   return null;
@@ -161,7 +161,7 @@ final class SectorCacheStore {
                 for (var16 = var14; var16 < var15; var16++) {
                   incrementValue$2 = var7;
                   var7++;
-                  var6[incrementValue$2] = jg.field_O[var16];
+                  var6[incrementValue$2] = BirthDateChatEnableForm.field_O[var16];
                 }
               }
               stackIn_51_0 = var6;
@@ -266,8 +266,8 @@ final class SectorCacheStore {
                     return false;
                   }
                   this.field_h.seek((long)(param1 * 6), 0);
-                  this.field_h.readFully(jg.field_O, -19616, 0, 6);
-                  var7_int = (255 & jg.field_O[5]) + ((16711680 & jg.field_O[3] << 16) + ((jg.field_O[4] & 255) << 8));
+                  this.field_h.readFully(BirthDateChatEnableForm.field_O, -19616, 0, 6);
+                  var7_int = (255 & BirthDateChatEnableForm.field_O[5]) + ((16711680 & BirthDateChatEnableForm.field_O[3] << 16) + ((BirthDateChatEnableForm.field_O[4] & 255) << 8));
                   if (0 >= var7_int ||
                     !((long)var7_int <= (this.field_a.length((byte) 109) / 520L))) {
                     return false;
@@ -278,15 +278,15 @@ final class SectorCacheStore {
                     var7_int = 1;
                   }
                 }
-                jg.field_O[5] = (byte)var7_int;
-                jg.field_O[3] = (byte)(var7_int >> 16);
-                jg.field_O[4] = (byte)(var7_int >> 8);
+                BirthDateChatEnableForm.field_O[5] = (byte)var7_int;
+                BirthDateChatEnableForm.field_O[3] = (byte)(var7_int >> 16);
+                BirthDateChatEnableForm.field_O[4] = (byte)(var7_int >> 8);
                 var8 = -43 / ((param4 + 55) / 57);
-                jg.field_O[0] = (byte)(param3 >> 16);
-                jg.field_O[2] = (byte)param3;
-                jg.field_O[1] = (byte)(param3 >> 8);
+                BirthDateChatEnableForm.field_O[0] = (byte)(param3 >> 16);
+                BirthDateChatEnableForm.field_O[2] = (byte)param3;
+                BirthDateChatEnableForm.field_O[1] = (byte)(param3 >> 8);
                 this.field_h.seek((long)(param1 * 6), 0);
-                this.field_h.write(0, 6, -1, jg.field_O);
+                this.field_h.write(0, 6, -1, BirthDateChatEnableForm.field_O);
                 var9 = 0;
                 var10 = 0;
                 scanLoop1: while (true) {
@@ -297,7 +297,7 @@ final class SectorCacheStore {
                       this.field_a.seek((long)(520 * var7_int), 0);
                       if (param1 <= 65535) {
                         try {
-                          this.field_a.readFully(jg.field_O, -19616, 0, 8);
+                          this.field_a.readFully(BirthDateChatEnableForm.field_O, -19616, 0, 8);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -307,13 +307,13 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector0 != 0) {
                           break scanLoop1;
                         }
-                        var14 = 255 & jg.field_O[7];
-                        var11 = (jg.field_O[6] & 255) + (((255 & jg.field_O[4]) << 16) + (jg.field_O[5] << 8 & 65280));
-                        var12 = (255 & jg.field_O[1]) + (65280 & jg.field_O[0] << 8);
-                        var13 = (255 & jg.field_O[3]) + ((jg.field_O[2] & 255) << 8);
+                        var14 = 255 & BirthDateChatEnableForm.field_O[7];
+                        var11 = (BirthDateChatEnableForm.field_O[6] & 255) + (((255 & BirthDateChatEnableForm.field_O[4]) << 16) + (BirthDateChatEnableForm.field_O[5] << 8 & 65280));
+                        var12 = (255 & BirthDateChatEnableForm.field_O[1]) + (65280 & BirthDateChatEnableForm.field_O[0] << 8);
+                        var13 = (255 & BirthDateChatEnableForm.field_O[3]) + ((BirthDateChatEnableForm.field_O[2] & 255) << 8);
                       } else {
                         try {
-                          this.field_a.readFully(jg.field_O, -19616, 0, 10);
+                          this.field_a.readFully(BirthDateChatEnableForm.field_O, -19616, 0, 10);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -323,10 +323,10 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector1 != 0) {
                           break scanLoop1;
                         }
-                        var11 = (255 & jg.field_O[8]) + ((16711680 & jg.field_O[6] << 16) + (jg.field_O[7] << 8 & 65280));
-                        var14 = jg.field_O[9] & 255;
-                        var13 = (jg.field_O[4] << 8 & 65280) + (255 & jg.field_O[5]);
-                        var12 = (jg.field_O[3] & 255) + ((jg.field_O[2] & 255) << 8) + ((16711680 & jg.field_O[1] << 16) + ((jg.field_O[0] & 255) << 24));
+                        var11 = (255 & BirthDateChatEnableForm.field_O[8]) + ((16711680 & BirthDateChatEnableForm.field_O[6] << 16) + (BirthDateChatEnableForm.field_O[7] << 8 & 65280));
+                        var14 = BirthDateChatEnableForm.field_O[9] & 255;
+                        var13 = (BirthDateChatEnableForm.field_O[4] << 8 & 65280) + (255 & BirthDateChatEnableForm.field_O[5]);
+                        var12 = (BirthDateChatEnableForm.field_O[3] & 255) + ((BirthDateChatEnableForm.field_O[2] & 255) << 8) + ((16711680 & BirthDateChatEnableForm.field_O[1] << 16) + ((BirthDateChatEnableForm.field_O[0] & 255) << 24));
                       }
                       if ((param1 == var12 &&
                         var13 == var10 &&
@@ -353,16 +353,16 @@ final class SectorCacheStore {
                       var11 = 0;
                     }
                     if (65535 >= param1) {
-                      jg.field_O[7] = (byte)this.field_g;
-                      jg.field_O[0] = (byte)(param1 >> 8);
-                      jg.field_O[6] = (byte)var11;
-                      jg.field_O[2] = (byte)(var10 >> 8);
-                      jg.field_O[1] = (byte)param1;
-                      jg.field_O[5] = (byte)(var11 >> 8);
-                      jg.field_O[3] = (byte)var10;
-                      jg.field_O[4] = (byte)(var11 >> 16);
+                      BirthDateChatEnableForm.field_O[7] = (byte)this.field_g;
+                      BirthDateChatEnableForm.field_O[0] = (byte)(param1 >> 8);
+                      BirthDateChatEnableForm.field_O[6] = (byte)var11;
+                      BirthDateChatEnableForm.field_O[2] = (byte)(var10 >> 8);
+                      BirthDateChatEnableForm.field_O[1] = (byte)param1;
+                      BirthDateChatEnableForm.field_O[5] = (byte)(var11 >> 8);
+                      BirthDateChatEnableForm.field_O[3] = (byte)var10;
+                      BirthDateChatEnableForm.field_O[4] = (byte)(var11 >> 16);
                       this.field_a.seek((long)(520 * var7_int), 0);
-                      this.field_a.write(0, 8, -1, jg.field_O);
+                      this.field_a.write(0, 8, -1, BirthDateChatEnableForm.field_O);
                       var12 = param3 - var9;
                       if (var12 > 512) {
                         var12 = 512;
@@ -370,18 +370,18 @@ final class SectorCacheStore {
                       this.field_a.write(var9, var12, -1, param0);
                       var9 = var9 + var12;
                     } else {
-                      jg.field_O[6] = (byte)(var11 >> 16);
-                      jg.field_O[7] = (byte)(var11 >> 8);
-                      jg.field_O[0] = (byte)(param1 >> 24);
-                      jg.field_O[4] = (byte)(var10 >> 8);
-                      jg.field_O[2] = (byte)(param1 >> 8);
-                      jg.field_O[8] = (byte)var11;
-                      jg.field_O[5] = (byte)var10;
-                      jg.field_O[1] = (byte)(param1 >> 16);
-                      jg.field_O[9] = (byte)this.field_g;
-                      jg.field_O[3] = (byte)param1;
+                      BirthDateChatEnableForm.field_O[6] = (byte)(var11 >> 16);
+                      BirthDateChatEnableForm.field_O[7] = (byte)(var11 >> 8);
+                      BirthDateChatEnableForm.field_O[0] = (byte)(param1 >> 24);
+                      BirthDateChatEnableForm.field_O[4] = (byte)(var10 >> 8);
+                      BirthDateChatEnableForm.field_O[2] = (byte)(param1 >> 8);
+                      BirthDateChatEnableForm.field_O[8] = (byte)var11;
+                      BirthDateChatEnableForm.field_O[5] = (byte)var10;
+                      BirthDateChatEnableForm.field_O[1] = (byte)(param1 >> 16);
+                      BirthDateChatEnableForm.field_O[9] = (byte)this.field_g;
+                      BirthDateChatEnableForm.field_O[3] = (byte)param1;
                       this.field_a.seek((long)(var7_int * 520), 0);
-                      this.field_a.write(0, 10, -1, jg.field_O);
+                      this.field_a.write(0, 10, -1, BirthDateChatEnableForm.field_O);
                       var12 = -var9 + param3;
                       if (var12 > 510) {
                         var12 = 510;

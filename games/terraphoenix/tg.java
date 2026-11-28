@@ -118,7 +118,7 @@ final class tg {
         int var8 = 0;
         var8 = Terraphoenix.field_V;
         try {
-          this.field_b[this.field_i] = (byte)ei.b((int) this.field_b[this.field_i], 128 >>> dg.a(this.field_f, 7));
+          this.field_b[this.field_i] = (byte)ResizableModalDialog.b((int) this.field_b[this.field_i], 128 >>> dg.a(this.field_f, 7));
           this.field_i = this.field_i + 1;
           if (this.field_i > 32) {
             while (64 > this.field_i) {
@@ -214,7 +214,7 @@ final class tg {
             var8 = param2[var5_int] << var6 & 255 | (255 & param2[var5_int + 1]) >>> -var6 + 8;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_b[this.field_i] = (byte)ei.b((int) this.field_b[this.field_i], var8 >>> var7);
+              this.field_b[this.field_i] = (byte)ResizableModalDialog.b((int) this.field_b[this.field_i], var8 >>> var7);
               this.field_i = this.field_i + 1;
               this.field_f = this.field_f + (-var7 + 8);
               if (this.field_f == 512) {
@@ -234,7 +234,7 @@ final class tg {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = 255 & param2[var5_int] << var6;
-            this.field_b[this.field_i] = (byte)ei.b((int) this.field_b[this.field_i], var8Lifetime1 >>> var7);
+            this.field_b[this.field_i] = (byte)ResizableModalDialog.b((int) this.field_b[this.field_i], var8Lifetime1 >>> var7);
           }
           if ((long)var7 + param1 >= 8L) {
             this.field_i = this.field_i + 1;

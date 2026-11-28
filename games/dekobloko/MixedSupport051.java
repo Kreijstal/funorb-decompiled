@@ -94,7 +94,7 @@ final class MixedSupport051 {
         if (booleanArgument1) {
           return true;
         }
-        if (UiComponentPart023.computeBoolean1242(-30146)) {
+        if (StandardContentDialog.computeBoolean1242(-30146)) {
           stackBooleanLocal1 = true;
         } else {
           if (Framebuffer.integerState0192 <= 0) {
@@ -139,10 +139,10 @@ final class MixedSupport051 {
             MixedSupport007.renderingSupport007State0001.integerState0363 > 0) {
             MixedSupport007.renderingSupport007State0001.integerState0363 = MixedSupport007.renderingSupport007State0001.integerState0363 - 1;
           }
-          if (UiComponentPart004.renderingSupport007State0002 != null &&
-            renderingSupport007Argument1 != UiComponentPart004.renderingSupport007State0002 &&
-            UiComponentPart004.renderingSupport007State0002.integerState0363 > 0) {
-            UiComponentPart004.renderingSupport007State0002.integerState0363 = UiComponentPart004.renderingSupport007State0002.integerState0363 - 1;
+          if (ContentTransitionDialog.renderingSupport007State0002 != null &&
+            renderingSupport007Argument1 != ContentTransitionDialog.renderingSupport007State0002 &&
+            ContentTransitionDialog.renderingSupport007State0002.integerState0363 > 0) {
+            ContentTransitionDialog.renderingSupport007State0002.integerState0363 = ContentTransitionDialog.renderingSupport007State0002.integerState0363 - 1;
           }
           if (null != MixedSupport033.renderingSupport007State0004 &&
             renderingSupport007Argument1 != MixedSupport033.renderingSupport007State0004 &&
@@ -175,10 +175,10 @@ final class MixedSupport051 {
             renderingSupport007State0005.integerState0363 == 0) {
             renderingSupport007State0005 = null;
           }
-          if (null != UiComponentPart004.renderingSupport007State0002 &&
+          if (null != ContentTransitionDialog.renderingSupport007State0002 &&
             !LobbyRoomRow.booleanState0203 &&
-            UiComponentPart004.renderingSupport007State0002.integerState0363 == 0) {
-            UiComponentPart004.renderingSupport007State0002 = null;
+            ContentTransitionDialog.renderingSupport007State0002.integerState0363 == 0) {
+            ContentTransitionDialog.renderingSupport007State0002 = null;
           }
           if (MixedSupport033.renderingSupport007State0004 != null &&
             !SecondaryNodeHashTable.booleanState0121 &&
@@ -203,8 +203,8 @@ final class MixedSupport051 {
           if (null != MixedSupport007.renderingSupport007State0001) {
             MixedSupport007.renderingSupport007State0001.performAction0883((byte) 122);
           }
-          if (null != UiComponentPart004.renderingSupport007State0002) {
-            UiComponentPart004.renderingSupport007State0002.performAction0883((byte) 108);
+          if (null != ContentTransitionDialog.renderingSupport007State0002) {
+            ContentTransitionDialog.renderingSupport007State0002.performAction0883((byte) 108);
           }
           if (MixedSupport033.renderingSupport007State0004 == null) {
             return;

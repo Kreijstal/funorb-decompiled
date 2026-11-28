@@ -88,21 +88,21 @@ abstract class ByteStorage {
                         if (0 > var11) {
                           var11 = 0;
                         }
-                        if (me.field_ib.length <= var11) {
-                          var11 = -1 + me.field_ib.length;
+                        if (ContentTransitionDialog.field_ib.length <= var11) {
+                          var11 = -1 + ContentTransitionDialog.field_ib.length;
                         }
                         if (bm.field_c != 1) {
-                          me.field_ib[var11].drawAdditive(var2 - me.field_ib[var11].field_z / 2, -(me.field_ib[var11].field_A / 2) + var3, 128);
+                          ContentTransitionDialog.field_ib[var11].drawAdditive(var2 - ContentTransitionDialog.field_ib[var11].field_z / 2, -(ContentTransitionDialog.field_ib[var11].field_A / 2) + var3, 128);
                           break regionExit1;
                         }
                         if (CrossfadingMidiPcmStream.field_t) {
-                          ByteStorage.a(var2 - me.field_ib[var11].field_z / 2, 128, -(me.field_ib[var11].field_A / 2) + var3, 22173, me.field_ib[var11], (int)var8_ref_p.field_c);
+                          ByteStorage.a(var2 - ContentTransitionDialog.field_ib[var11].field_z / 2, 128, -(ContentTransitionDialog.field_ib[var11].field_A / 2) + var3, 22173, ContentTransitionDialog.field_ib[var11], (int)var8_ref_p.field_c);
                           break regionExit1;
                         }
                         if (var11 <= 0) {
                           break regionExit1;
                         }
-                        me.field_ib[var11].a(true, 128, (int)var8_ref_p.field_c, var2, var3);
+                        ContentTransitionDialog.field_ib[var11].a(true, 128, (int)var8_ref_p.field_c, var2, var3);
                         break regionExit1;
                       case 2:
                         var10 = 16711680;

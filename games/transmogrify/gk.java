@@ -41,7 +41,7 @@ final class gk {
               bd.field_t = stackIn_10_0;
               WordLanguage.field_k = stackIn_10_0;
               FullscreenFocusCanvas.field_a = stackIn_10_0;
-              InteractiveWidget.field_z = jk.field_y;
+              InteractiveWidget.field_z = GuestPlayConfirmationForm.field_y;
               qb.a(124, AchievementUnlockEvent.field_h, LoginPanel.field_D, NameSuggestionsPanel.field_x, ua.field_c);
               rb.a(-1, -377);
             } catch (java.io.IOException decompiledCaughtParameter0) {

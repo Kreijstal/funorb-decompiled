@@ -57,7 +57,7 @@ final class vb {
         }
         if (bl.field_a != null) {
           if (!bl.field_a.ensureIndexLoaded(0)) {
-            return si.field_hb;
+            return ProgressMessageDialog.field_hb;
           }
           return qb.field_e;
         }

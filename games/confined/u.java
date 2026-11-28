@@ -77,7 +77,7 @@ final class u extends MovingTunnelEntity {
         var16 = Confined.field_J ? 1 : 0;
         if (this.field_V >= 2) {
           if (GameSession.field_I) {
-            var18 = this.a((byte) 120, jn.field_U, 1.0);
+            var18 = this.a((byte) 120, DialogMessagePane.field_U, 1.0);
             var18.field_M.field_m = 96 >> this.field_V;
           }
         } else {
@@ -113,7 +113,7 @@ final class u extends MovingTunnelEntity {
             }
           }
           if (GameSession.field_I) {
-            var19 = this.a((byte) 120, jn.field_U, 1.0);
+            var19 = this.a((byte) 120, DialogMessagePane.field_U, 1.0);
             var19.field_M.field_m = 96 >> this.field_V;
           }
         }

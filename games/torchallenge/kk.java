@@ -150,7 +150,7 @@ final class kk extends t {
           return;
         }
         try {
-          qh.field_J = qh.field_J + 1;
+          RegistrationAgreementPane.field_J = RegistrationAgreementPane.field_J + 1;
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "kk.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

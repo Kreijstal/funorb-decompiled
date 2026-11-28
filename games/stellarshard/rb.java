@@ -47,10 +47,10 @@ abstract class rb extends GameApplet {
         int var3 = stellarshard.field_B;
         ek[] var1 = new ek[sb.field_b];
         for (var2 = 0; sb.field_b > var2; var2++) {
-          var1[var2] = new ek(nc.field_G, wd.field_b, ak.field_c[var2], RasterBuffer.field_c[var2], vc.field_b[var2], ih.field_d[var2], ih.field_b[var2], gj.field_w);
+          var1[var2] = new ek(StripedProgressWidget.field_G, wd.field_b, ak.field_c[var2], RasterBuffer.field_c[var2], vc.field_b[var2], ih.field_d[var2], ih.field_b[var2], gj.field_w);
         }
         if (param0 == 1851) {
-          tb.f((byte) -118);
+          ResizableModalDialog.f((byte) -118);
           return var1;
         }
         return (ek[]) null;
@@ -104,12 +104,12 @@ abstract class rb extends GameApplet {
           if (!param2) {
             this.field_q = -96;
           }
-          var4 = ck.a(bb.field_d, ke.field_b, param0, false);
+          var4 = ProgressMessageDialog.a(bb.field_d, ke.field_b, param0, false);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = dc.a(tb.g((byte) 118), -112, n.a(20));
+            var5_int = dc.a(ResizableModalDialog.g((byte) 118), -112, n.a(20));
             if (var5_int != -1) {
               GzipDecompressor.a(NodeHashTableIterator.field_a, var5_int, (byte) -110, fc.field_b);
               fc.field_b = null;
@@ -143,7 +143,7 @@ abstract class rb extends GameApplet {
                   cg.field_a = false;
                   eg.field_d = 10;
                 } else {
-                  wl.a(var5_intLifetime2, -8440, NodeHashTableIterator.field_a);
+                  ContentTransitionDialog.a(var5_intLifetime2, -8440, NodeHashTableIterator.field_a);
                   NodeHashTableIterator.field_a = null;
                 }
               }
@@ -176,7 +176,7 @@ abstract class rb extends GameApplet {
             DropTargetWidgetContainer.a((byte) 99, hf.a((byte) -101));
           }
           if (var4 == 10) {
-            pg.field_fb.f(17, 950);
+            StandardContentDialog.field_fb.f(17, 950);
           }
           if (11 == var4) {
             wf.a(63, hf.a((byte) -7));
@@ -249,10 +249,10 @@ abstract class rb extends GameApplet {
         sg.a(5000, this.field_D, this.field_C, bb.field_d, DebouncedFieldValidator.field_d, param5, 96, param4, this.field_y, 5000, this.field_A, this.field_z, this.field_r, this.field_o);
         DualLinkDeque.a(69, this.field_r, bb.field_d, this.field_A, DebouncedFieldValidator.field_d, param5, this.field_C, this.field_z, this.field_D);
         bl.a((byte) -62);
-        og.field_c = ck.createMouseWheelInput(2113632);
-        nc.a(qd.field_j, (byte) 123);
+        og.field_c = ProgressMessageDialog.createMouseWheelInput(2113632);
+        StripedProgressWidget.a(qd.field_j, (byte) 123);
         nk.field_b = param1;
-        ck.field_hb = param3;
+        ProgressMessageDialog.field_hb = param3;
         ArchiveRequest.field_A = param0;
         vd.field_b = param2;
         int var10 = 11 / ((param6 - 30) / 36);
@@ -284,7 +284,7 @@ abstract class rb extends GameApplet {
           var4 = -1 + ue.field_b;
           var5 = new byte[var4];
           EditableTextField.field_N.a(var5, true, 0, var4);
-          fk.a(hf.a((byte) -113), var3 != 0, se.a(param0 - 108, var5), (byte) 103);
+          fk.a(hf.a((byte) -113), var3 != 0, GuestPlayConfirmationForm.a(param0 - 108, var5), (byte) 103);
           return;
         }
     }
@@ -350,7 +350,7 @@ abstract class rb extends GameApplet {
             this.field_p = false;
             IntrusiveDeque.c(-2290);
             pk.a(4);
-            wl.a(2, -8440, wc.field_p);
+            ContentTransitionDialog.a(2, -8440, wc.field_p);
             cm.a((byte) -117);
             BufferedRandomAccessFile.field_m = true;
             vc.field_a = ih.correctedCurrentTimeMillis((byte) -98) + 15000L;
@@ -399,19 +399,19 @@ abstract class rb extends GameApplet {
             if (eg.field_d >= 10) {
               pk.a(4);
               if (ModalDialogHost.field_F == 3) {
-                wl.a(256, -8440, al.field_a);
+                ContentTransitionDialog.a(256, -8440, al.field_a);
               } else {
                 if (ModalDialogHost.field_F == 4) {
-                  wl.a(256, -8440, KeyHandler.field_d);
+                  ContentTransitionDialog.a(256, -8440, KeyHandler.field_d);
                 } else {
                   if (2 != ModalDialogHost.field_F) {
                     if (ModalDialogHost.field_F != 5) {
-                      wl.a(256, -8440, ModalDialog.field_B);
+                      ContentTransitionDialog.a(256, -8440, ModalDialog.field_B);
                     } else {
-                      wl.a(5, -8440, DualLinkNode.field_n);
+                      ContentTransitionDialog.a(5, -8440, DualLinkNode.field_n);
                     }
                   } else {
-                    wl.a(256, -8440, MatchingFieldValidator.field_n);
+                    ContentTransitionDialog.a(256, -8440, MatchingFieldValidator.field_n);
                   }
                 }
               }
@@ -440,29 +440,29 @@ abstract class rb extends GameApplet {
         }
         if (DiskCacheWorker.field_f == 1) {
           if (bb.field_d != 0) {
-            pg.field_db = wl.a(1, ArchiveRequest.field_A);
+            StandardContentDialog.field_db = ContentTransitionDialog.a(1, ArchiveRequest.field_A);
           }
           TextFieldValidator.field_i = o.a(1, 2, nk.field_b, false, true);
-          wf.field_e = o.a(1, 2, ck.field_hb, false, true);
+          wf.field_e = o.a(1, 2, ProgressMessageDialog.field_hb, false, true);
           am.field_g = o.a(1, 2, vd.field_b, false, true);
           DiskCacheWorker.field_f = 2;
           fc.field_a = TextFieldValidator.field_i;
           SpriteState.field_u = wf.field_e;
         }
         if (DiskCacheWorker.field_f == 2) {
-          if (pg.field_db != null &&
-            pg.field_db.ensureIndexLoaded((byte) -36)) {
-            if (!pg.field_db.hasGroupName("", (byte) -116)) {
-              pg.field_db = null;
+          if (StandardContentDialog.field_db != null &&
+            StandardContentDialog.field_db.ensureIndexLoaded((byte) -36)) {
+            if (!StandardContentDialog.field_db.hasGroupName("", (byte) -116)) {
+              StandardContentDialog.field_db = null;
             } else {
-              if (pg.field_db.tryLoadGroupByName("", (byte) -109)) {
-                WidgetContainer.a(pg.field_db, 1);
-                pg.field_db = null;
+              if (StandardContentDialog.field_db.tryLoadGroupByName("", (byte) -109)) {
+                WidgetContainer.a(StandardContentDialog.field_db, 1);
+                StandardContentDialog.field_db = null;
                 RichTextWidget.g(-33);
               }
             }
           }
-          if (null == pg.field_db) {
+          if (null == StandardContentDialog.field_db) {
             DiskCacheWorker.field_f = 3;
           }
         }
@@ -485,11 +485,11 @@ abstract class rb extends GameApplet {
           if (wi.field_a) {
             PcmResampler.a(true);
           }
-          if (pg.field_cb == null) {
-            pg.field_cb = fk.d(75);
+          if (StandardContentDialog.field_cb == null) {
+            StandardContentDialog.field_cb = fk.d(75);
             AccountRegistrationPanel.field_L = qc.a(1);
           }
-          ab.a(am.field_g, true, AccountRegistrationPanel.field_L, pg.field_cb);
+          ab.a(am.field_g, true, AccountRegistrationPanel.field_L, StandardContentDialog.field_cb);
           TextFieldValidator.field_i = null;
           wf.field_e = null;
           am.field_g = null;
@@ -499,7 +499,7 @@ abstract class rb extends GameApplet {
         }
         if (DiskCacheWorker.field_f == 10) {
           if (bb.field_d != 0) {
-            ld.field_G = wl.a(1, wd.field_d);
+            ld.field_G = ContentTransitionDialog.a(1, wd.field_d);
           }
           DiskCacheWorker.field_f = 11;
         }
@@ -534,7 +534,7 @@ abstract class rb extends GameApplet {
           ProxyAuthenticationRequiredException.field_d) {
           nd.a(-26621, qd.field_j);
           this.c(31178);
-          nc.a(qd.field_j, (byte) 118);
+          StripedProgressWidget.a(qd.field_j, (byte) 118);
         }
         if (wc.field_x[8]) {
           o.b(-10834);
@@ -793,7 +793,7 @@ abstract class rb extends GameApplet {
             TextLayout.a((byte) -128, 3);
           }
           if (wc.field_x[3]) {
-            se.a(4, -91);
+            GuestPlayConfirmationForm.a(4, -91);
           }
           if (wc.field_x[4]) {
             DebouncedFieldValidator.a(5, 55);
@@ -838,7 +838,7 @@ abstract class rb extends GameApplet {
             this.a(1, "reconnect");
           }
           pk.a(4);
-          wl.a(var2, -8440, NodeHashTableIterator.field_a);
+          ContentTransitionDialog.a(var2, -8440, NodeHashTableIterator.field_a);
           BufferedRandomAccessFile.field_m = true;
           vc.field_a = 15000L + ih.correctedCurrentTimeMillis((byte) -98);
           return var2;

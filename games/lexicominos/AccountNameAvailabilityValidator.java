@@ -105,7 +105,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             var5 = (String) null;
             this.getValidationStatus(9, (String) null);
           }
-          stackIn_19_0 = mh.field_D;
+          stackIn_19_0 = GuestPlayConfirmationForm.field_D;
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

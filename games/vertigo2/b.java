@@ -8,7 +8,7 @@ final class b {
     int field_j;
     static int[] field_m;
     private long field_o;
-    static ll field_d;
+    static FullscreenNoticeType field_d;
     static int field_i;
     static String field_a;
     static UiPanel field_h;
@@ -60,7 +60,7 @@ final class b {
                   this.field_n.a(Vertigo2.a(new String[]{var7}, wp.field_b, -128), 19, 0);
                 }
               }
-              this.field_n.a(Vertigo2.a(new String[]{var7}, fg.field_X, -115), 5, 0);
+              this.field_n.a(Vertigo2.a(new String[]{var7}, ProgressDialog.field_X, -115), 5, 0);
             }
             if (var6 != 0) {
               this.field_n.a(Vertigo2.a(new String[]{var7}, f.field_J, -121), 7, 0);
@@ -105,7 +105,7 @@ final class b {
                   this.field_j = 36;
                   return;
                 }
-                this.field_n.a(Vertigo2.a(new String[]{var3}, we.field_L, param0 ^ -114), 3, 0);
+                this.field_n.a(Vertigo2.a(new String[]{var3}, StripedProgressWidget.field_L, param0 ^ -114), 3, 0);
                 if (param0 != 2) {
                   this.field_j = 36;
                   return;
@@ -120,7 +120,7 @@ final class b {
                   }
                   return;
                 }
-                this.field_n.a(Vertigo2.a(new String[]{var3}, we.field_L, param0 ^ -114), 3, 0);
+                this.field_n.a(Vertigo2.a(new String[]{var3}, StripedProgressWidget.field_L, param0 ^ -114), 3, 0);
                 if (param0 != 2) {
                   this.field_j = 36;
                   return;
@@ -136,7 +136,7 @@ final class b {
                   }
                   return;
                 }
-                this.field_n.a(Vertigo2.a(new String[]{var3}, we.field_L, param0 ^ -114), 3, 0);
+                this.field_n.a(Vertigo2.a(new String[]{var3}, StripedProgressWidget.field_L, param0 ^ -114), 3, 0);
                 if (param0 != 2) {
                   this.field_j = 36;
                   return;
@@ -152,7 +152,7 @@ final class b {
                   }
                   return;
                 }
-                this.field_n.a(Vertigo2.a(new String[]{var3}, we.field_L, param0 ^ -114), 3, 0);
+                this.field_n.a(Vertigo2.a(new String[]{var3}, StripedProgressWidget.field_L, param0 ^ -114), 3, 0);
                 if (param0 != 2) {
                   this.field_j = 36;
                   return;
@@ -166,7 +166,7 @@ final class b {
                 }
                 return;
               }
-              this.field_n.a(Vertigo2.a(new String[]{var3}, we.field_L, param0 ^ -114), 3, 0);
+              this.field_n.a(Vertigo2.a(new String[]{var3}, StripedProgressWidget.field_L, param0 ^ -114), 3, 0);
               if (param0 != 2) {
                 this.field_j = 36;
                 return;
@@ -181,14 +181,14 @@ final class b {
               }
               return;
             }
-            this.field_n.a(Vertigo2.a(new String[]{var3}, we.field_L, param0 ^ -114), 3, 0);
+            this.field_n.a(Vertigo2.a(new String[]{var3}, StripedProgressWidget.field_L, param0 ^ -114), 3, 0);
             if (param0 != 2) {
               this.field_j = 36;
               return;
             }
             return;
           }
-          this.field_n.a(Vertigo2.a(new String[]{var3}, af.field_G, 87), 2, param0 - 2);
+          this.field_n.a(Vertigo2.a(new String[]{var3}, DateInputWidget.field_G, 87), 2, param0 - 2);
           this.field_n.a(Vertigo2.a(new String[]{var3}, aq.field_b, -124), 3, 0);
           if (param0 != 2) {
             this.field_j = 36;
@@ -237,7 +237,7 @@ final class b {
             if (ConfirmedEmailAvailabilityValidator.field_p == 0) {
               this.field_n.a(ng.field_b, 12, 0);
             }
-            this.field_n.a(sp.field_P, 13, 0);
+            this.field_n.a(ResizableModalDialog.field_P, 13, 0);
           }
           if (param1.field_s == 2) {
             if (mf.field_b == 0) {
@@ -310,7 +310,7 @@ final class b {
         if (param1 != 19) {
           return false;
         }
-        qm.a(this.field_g, this.field_k, (byte) 114, this.field_c, this.field_o);
+        GuestPlayConfirmationForm.a(this.field_g, this.field_k, (byte) 114, this.field_c, this.field_o);
         return true;
     }
 
@@ -603,7 +603,7 @@ final class b {
     }
 
     static {
-        field_d = new ll();
+        field_d = new FullscreenNoticeType();
         field_i = -1;
         field_a = "Collect the dynamite. This is a bomb you can carry with you and detonate where you like! Press <img=6> or <img=13> to detonate it. To complete this level, use the dynamite to destroy the last blue block. The spinning save star is a checkpoint; if you die on a level after collecting a save star, you'll start the level again from the point at which you collected it. It's usually a good idea to leave save stars until you want to attempt something tricky.";
         field_f = "Please wait...";

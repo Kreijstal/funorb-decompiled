@@ -45,7 +45,7 @@ final class qna extends k {
     }
 
     final static void b(int param0, int param1) {
-        BitPacketBuffer var2 = sja.field_fb;
+        BitPacketBuffer var2 = StandardContentDialog.field_fb;
         var2.writeCipheredByte(param0, (byte) 124);
         var2.writeByte(1, param1 ^ param1);
         var2.writeByte(0, param1 ^ 0);

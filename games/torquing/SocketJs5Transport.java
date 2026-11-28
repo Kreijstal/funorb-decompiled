@@ -199,7 +199,7 @@ final class SocketJs5Transport extends Js5Transport {
                       if (this.field_f != 0) {
                         var7 = 0;
                         while (var6 > var7) {
-                          this.field_j.field_z.payload[var7 + this.field_j.field_z.position] = (byte)i.c((int) this.field_j.field_z.payload[var7 + this.field_j.field_z.position], (int) this.field_f);
+                          this.field_j.field_z.payload[var7 + this.field_j.field_z.position] = (byte)FullscreenStatusDialog.c((int) this.field_j.field_z.payload[var7 + this.field_j.field_z.position], (int) this.field_f);
                           var7++;
                           if (var16 != 0) {
                             decompiledFrameCompleted4 = false;
@@ -238,7 +238,7 @@ final class SocketJs5Transport extends Js5Transport {
                       if (this.field_f != 0) {
                         var6Lifetime1 = 0;
                         while (var6Lifetime1 < var5Lifetime1) {
-                          this.field_c.payload[this.field_c.position + var6Lifetime1] = (byte)i.c((int) this.field_c.payload[this.field_c.position + var6Lifetime1], (int) this.field_f);
+                          this.field_c.payload[this.field_c.position + var6Lifetime1] = (byte)FullscreenStatusDialog.c((int) this.field_c.payload[this.field_c.position + var6Lifetime1], (int) this.field_f);
                           var6Lifetime1++;
                           if (var16 != 0) {
                             decompiledFrameCompleted3 = false;
@@ -538,7 +538,7 @@ final class SocketJs5Transport extends Js5Transport {
                 this.var3 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                fm.field_F = param1;
+                GuestPlayConfirmationForm.field_F = param1;
                 var2 = se.a((byte) -33, "loginm3");
                 if (var2 != null) {
                   eb.field_h = SecondaryNodeDeque.a(var2, false);
@@ -2366,7 +2366,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "unpacking_levels");
                 if (null != var2) {
-                  kf.field_D = SecondaryNodeDeque.a(var2, false);
+                  StripedProgressWidget.field_D = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "unpacking_languages");
                 if (var2 != null) {
@@ -3160,7 +3160,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "fs_button_cancel");
                 if (var2 != null) {
-                  fo.field_E = SecondaryNodeDeque.a(var2, false);
+                  DialogMessagePane.field_E = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "fs_accept_aftercancel");
                 if (null != var2) {
@@ -3340,7 +3340,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "DEFAULT_PLAYER_NAME");
                 if (var2 != null) {
-                  kf.field_B = SecondaryNodeDeque.a(var2, false);
+                  StripedProgressWidget.field_B = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "mustlogin1");
                 if (null != var2) {
@@ -3524,7 +3524,7 @@ final class SocketJs5Transport extends Js5Transport {
                 if (null != var2) {
                   cl.field_b = SecondaryNodeDeque.a(var2, false);
                 }
-                fm.field_F = null;
+                GuestPlayConfirmationForm.field_F = null;
             }
             void run() {
                 var3 = Torquing.field_u;
@@ -3747,7 +3747,7 @@ final class SocketJs5Transport extends Js5Transport {
                 decompiledFrameCompleted0 = false;
                 break;
               }
-              stackIn_26_0[var7Lifetime1] = (short)(var6 + param0.e(var5, i.c(param1, -110)));
+              stackIn_26_0[var7Lifetime1] = (short)(var6 + param0.e(var5, FullscreenStatusDialog.c(param1, -110)));
               var7Lifetime1++;
             }
           }
@@ -3783,10 +3783,10 @@ final class SocketJs5Transport extends Js5Transport {
         RuntimeException var4 = null;
         try {
           if (d.field_r == null) {
-            d.field_r = new sp(dc.field_a, LevelRun.field_u);
+            d.field_r = new ProgressDialog(dc.field_a, LevelRun.field_u);
             dc.field_a.showDialog(d.field_r, (byte) 97);
           }
-          d.field_r.a(param2, 116, param3, param0);
+          d.field_r.setProgress(param2, 116, param3, param0);
           SoftwareRasterizer.clearRaster();
           if (param1 != -98) {
             field_u = 78;

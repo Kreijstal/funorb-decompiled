@@ -95,21 +95,21 @@ final class ik {
           }
           if (-1 != var2_int) {
             boolean decompiledFrameRemainder0 = true;
-            if (eh.field_m > ll.field_d) {
-              ll.field_d = ll.field_d + 1;
-              if (ll.field_d > eh.field_k && (null == gi.field_f ||
+            if (eh.field_m > FullscreenNoticeType.field_d) {
+              FullscreenNoticeType.field_d = FullscreenNoticeType.field_d + 1;
+              if (FullscreenNoticeType.field_d > eh.field_k && (null == gi.field_f ||
                 gi.field_f[DirectByteStorage.field_j] == null)) {
-                ll.field_d = ll.field_d - 1;
+                FullscreenNoticeType.field_d = FullscreenNoticeType.field_d - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (ll.field_d >= eh.field_m &&
+                if (FullscreenNoticeType.field_d >= eh.field_m &&
                   null == gi.field_f[(DirectByteStorage.field_j + 1) % var2_int]) {
-                  ll.field_d = ll.field_d - 1;
+                  FullscreenNoticeType.field_d = FullscreenNoticeType.field_d - 1;
                 }
               }
             }
-            if (ll.field_d >= eh.field_m) {
+            if (FullscreenNoticeType.field_d >= eh.field_m) {
               p.field_b = DirectByteStorage.field_j;
               if (PasswordValidator.field_r) {
                 DirectByteStorage.field_j = DirectByteStorage.field_j + 1;
@@ -122,9 +122,9 @@ final class ik {
                   DirectByteStorage.field_j = DirectByteStorage.field_j + var2_int;
                 }
               }
-              ll.field_d = ll.field_d - eh.field_m;
+              FullscreenNoticeType.field_d = FullscreenNoticeType.field_d - eh.field_m;
             }
-            if (ll.field_d > eh.field_k) {
+            if (FullscreenNoticeType.field_d > eh.field_k) {
               PasswordValidator.field_r = true;
             }
           }
@@ -138,26 +138,26 @@ final class ik {
                 field_a < 269) {
                 PasswordValidator.field_r = false;
                 var4 = 1;
-                ll.field_d = eh.field_m;
+                FullscreenNoticeType.field_d = eh.field_m;
               }
               if (586 < field_a &&
                 586 + le.field_e.storedWidth > field_a) {
                 var4 = 1;
                 PasswordValidator.field_r = true;
-                ll.field_d = eh.field_m;
+                FullscreenNoticeType.field_d = eh.field_m;
               }
             }
             if (var4 == 0 &&
-              ll.field_d > eh.field_k &&
+              FullscreenNoticeType.field_d > eh.field_k &&
               ph.field_d > var3 &&
               ph.field_d < var3 + le.field_e.storedHeight) {
               if (-le.field_e.storedWidth + 269 < ConfirmedEmailAvailabilityValidator.field_u &&
                 269 > ConfirmedEmailAvailabilityValidator.field_u) {
-                ll.field_d = eh.field_k;
+                FullscreenNoticeType.field_d = eh.field_k;
               }
               if (ConfirmedEmailAvailabilityValidator.field_u > 586 &&
                 586 + le.field_e.storedWidth > ConfirmedEmailAvailabilityValidator.field_u) {
-                ll.field_d = eh.field_k;
+                FullscreenNoticeType.field_d = eh.field_k;
               }
             }
           }
@@ -242,21 +242,21 @@ final class ik {
           }
           if (-1 != var2_int) {
             boolean decompiledFrameRemainder0 = true;
-            if (eh.field_m > ll.field_d) {
-              ll.field_d = ll.field_d + 1;
-              if (ll.field_d > eh.field_k && (null == gi.field_f ||
+            if (eh.field_m > FullscreenNoticeType.field_d) {
+              FullscreenNoticeType.field_d = FullscreenNoticeType.field_d + 1;
+              if (FullscreenNoticeType.field_d > eh.field_k && (null == gi.field_f ||
                 gi.field_f[DirectByteStorage.field_j] == null)) {
-                ll.field_d = ll.field_d - 1;
+                FullscreenNoticeType.field_d = FullscreenNoticeType.field_d - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (ll.field_d >= eh.field_m &&
+                if (FullscreenNoticeType.field_d >= eh.field_m &&
                   null == gi.field_f[(DirectByteStorage.field_j + 1) % var2_int]) {
-                  ll.field_d = ll.field_d - 1;
+                  FullscreenNoticeType.field_d = FullscreenNoticeType.field_d - 1;
                 }
               }
             }
-            if (ll.field_d >= eh.field_m) {
+            if (FullscreenNoticeType.field_d >= eh.field_m) {
               p.field_b = DirectByteStorage.field_j;
               if (PasswordValidator.field_r) {
                 DirectByteStorage.field_j = DirectByteStorage.field_j + 1;
@@ -269,9 +269,9 @@ final class ik {
                   DirectByteStorage.field_j = DirectByteStorage.field_j + var2_int;
                 }
               }
-              ll.field_d = ll.field_d - eh.field_m;
+              FullscreenNoticeType.field_d = FullscreenNoticeType.field_d - eh.field_m;
             }
-            if (ll.field_d > eh.field_k) {
+            if (FullscreenNoticeType.field_d > eh.field_k) {
               PasswordValidator.field_r = true;
             }
           }
@@ -285,26 +285,26 @@ final class ik {
                 field_a < 269) {
                 PasswordValidator.field_r = false;
                 var4 = 1;
-                ll.field_d = eh.field_m;
+                FullscreenNoticeType.field_d = eh.field_m;
               }
               if (586 < field_a &&
                 586 + le.field_e.storedWidth > field_a) {
                 var4 = 1;
                 PasswordValidator.field_r = true;
-                ll.field_d = eh.field_m;
+                FullscreenNoticeType.field_d = eh.field_m;
               }
             }
             if (var4 == 0 &&
-              ll.field_d > eh.field_k &&
+              FullscreenNoticeType.field_d > eh.field_k &&
               ph.field_d > var3 &&
               ph.field_d < var3 + le.field_e.storedHeight) {
               if (-le.field_e.storedWidth + 269 < ConfirmedEmailAvailabilityValidator.field_u &&
                 269 > ConfirmedEmailAvailabilityValidator.field_u) {
-                ll.field_d = eh.field_k;
+                FullscreenNoticeType.field_d = eh.field_k;
               }
               if (ConfirmedEmailAvailabilityValidator.field_u > 586 &&
                 586 + le.field_e.storedWidth > ConfirmedEmailAvailabilityValidator.field_u) {
-                ll.field_d = eh.field_k;
+                FullscreenNoticeType.field_d = eh.field_k;
               }
             }
           }

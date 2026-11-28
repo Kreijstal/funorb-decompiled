@@ -2996,7 +2996,7 @@ final class LevelMap {
                               SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
                               k.field_f.a(0);
                             } else {
-                              var16 = oi.field_J;
+                              var16 = DialogMessagePane.field_J;
                               ((Sprite) (var16)).bindAsRenderTarget();
                               SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
                             }
@@ -3139,7 +3139,7 @@ final class LevelMap {
                               SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
                               k.field_f.a(0);
                             } else {
-                              var16Lifetime2 = oi.field_J;
+                              var16Lifetime2 = DialogMessagePane.field_J;
                               ((Sprite) (var16Lifetime2)).bindAsRenderTarget();
                               SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
                             }
@@ -3239,7 +3239,7 @@ final class LevelMap {
                             SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
                             k.field_f.a(0);
                           } else {
-                            var16Lifetime1 = oi.field_J;
+                            var16Lifetime1 = DialogMessagePane.field_J;
                             ((Sprite) (var16Lifetime1)).bindAsRenderTarget();
                             SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
                           }
@@ -3397,7 +3397,7 @@ final class LevelMap {
             AccountRequestState.field_f.drawString(NameSuggestionsPanel.field_H, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
             SoftwareRasterizer.fillRectangle(var6, -11 + var7, 12, 12, var13);
-            AccountRequestState.field_f.drawString(cg.field_I, var6, var7, 16777215, -1);
+            AccountRequestState.field_f.drawString(GuestPlayConfirmationForm.field_I, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
             SoftwareRasterizer.fillRectangle(var6, var7 - 11, 12, 12, var15);
             AccountRequestState.field_f.drawString(DualLinkNode.field_h, var6, var7, 16777215, -1);
@@ -3409,7 +3409,7 @@ final class LevelMap {
             AccountRequestState.field_f.drawString(rj.field_b, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
             rh.field_b[0].drawHalfSize(-2 + var6, -13 + var7);
-            AccountRequestState.field_f.drawString(hm.field_H, var6, var7, 16777215, -1);
+            AccountRequestState.field_f.drawString(StripedProgressWidget.field_H, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
             rh.field_b[6].drawHalfSize(-2 + var6, -13 + var7);
             AccountRequestState.field_f.drawString(f.field_h, var6, var7, 16777215, -1);

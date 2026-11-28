@@ -6,7 +6,7 @@ final class sf {
     static int field_b;
     static int[] field_d;
     static String field_e;
-    static pg field_f;
+    static StandardContentDialog field_f;
     static MouseHandler field_c;
 
     public static void clearStaticReferences(boolean param0) {
@@ -18,7 +18,7 @@ final class sf {
           field_a = null;
           return;
         }
-        field_f = (pg) null;
+        field_f = (StandardContentDialog) null;
         field_c = null;
         field_f = null;
         field_d = null;

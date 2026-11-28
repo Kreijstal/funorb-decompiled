@@ -34,8 +34,8 @@ final class fs {
           dj.field_c.field_h.read(-2, RaiseEvent.field_t);
           this.c(15467);
         } else {
-          sja.field_fb.writeCipheredByte(68, (byte) 108);
-          sja.field_fb.writeByte(param1, 0);
+          StandardContentDialog.field_fb.writeCipheredByte(68, (byte) 108);
+          StandardContentDialog.field_fb.writeByte(param1, 0);
         }
         if (param0 != 0) {
           fs.releaseStatics((byte) 97);
@@ -53,7 +53,7 @@ final class fs {
         if (!this.field_a) {
           return;
         }
-        sja.field_fb.writeCipheredByte(param0, (byte) 125);
+        StandardContentDialog.field_fb.writeCipheredByte(param0, (byte) 125);
     }
 
     private final void c(int param0) {
@@ -115,7 +115,7 @@ final class fs {
           return;
         }
         this.field_b.field_h.field_v = this.field_b.field_h.field_v | 1 << this.field_b.field_n;
-        sja.field_fb.writeCipheredByte(60, (byte) 102);
+        StandardContentDialog.field_fb.writeCipheredByte(60, (byte) 102);
         int var2 = -10 / ((param0 + 61) / 49);
     }
 
@@ -126,7 +126,7 @@ final class fs {
         if (!this.field_a) {
           return;
         }
-        sja.field_fb.writeCipheredByte(61, (byte) 127);
+        StandardContentDialog.field_fb.writeCipheredByte(61, (byte) 127);
     }
 
     final void d(byte param0) {
@@ -140,12 +140,12 @@ final class fs {
           if (this.field_c) {
             return;
           }
-          sja.field_fb.writeCipheredByte(96, (byte) 102);
+          StandardContentDialog.field_fb.writeCipheredByte(96, (byte) 102);
           this.field_c = true;
           var2 = this.field_b.field_h.computeChecksum((byte) -81);
           if (this.field_b.field_h.field_A > 3 &&
             this.field_b.field_g != var2) {
-            var3 = sja.field_fb;
+            var3 = StandardContentDialog.field_fb;
             var3.writeCipheredByte(97, (byte) 97);
             var3.position = var3.position + 2;
             var4 = var3.position;
@@ -177,16 +177,16 @@ final class fs {
         var6 = BachelorFridge.field_y;
         try {
           if (this.field_a) {
-            sja.field_fb.writeCipheredByte(58, (byte) 107);
-            fieldTemp$1 = sja.field_fb.position + 1;
-            sja.field_fb.position = sja.field_fb.position + 1;
+            StandardContentDialog.field_fb.writeCipheredByte(58, (byte) 107);
+            fieldTemp$1 = StandardContentDialog.field_fb.position + 1;
+            StandardContentDialog.field_fb.position = StandardContentDialog.field_fb.position + 1;
             var4_int = fieldTemp$1;
-            sja.field_fb.writeByte(param2, 0);
+            StandardContentDialog.field_fb.writeByte(param2, 0);
             for (var5 = 0; 7 > var5; var5++) {
-              sd.a((byte) 124, sja.field_fb, param1[var5]);
+              sd.a((byte) 124, StandardContentDialog.field_fb, param1[var5]);
             }
-            var5Lifetime1 = -var4_int + sja.field_fb.position;
-            sja.field_fb.writeLengthByte((byte) 83, var5Lifetime1);
+            var5Lifetime1 = -var4_int + StandardContentDialog.field_fb.position;
+            StandardContentDialog.field_fb.writeLengthByte((byte) 83, var5Lifetime1);
           } else {
             this.field_d.submitPlayerOrders(param1, 0, (byte) -31);
             this.c(15467);

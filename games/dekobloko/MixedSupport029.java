@@ -58,7 +58,7 @@ final class MixedSupport029 {
     final static void performAction0405(byte byteArgument1, boolean booleanArgument2) {
         int integerLocal1 = -33 / ((byteArgument1 - 79) / 41);
         RichTextLayout.sceneWidgetState0021.performAction1767(1141039778, booleanArgument2);
-        UiComponentPart019 uiComponentPart019Local2 = MixedSupport009.uiComponentPart019State0001;
+        BirthDateChatEnableForm uiComponentPart019Local2 = MixedSupport009.uiComponentPart019State0001;
         if (uiComponentPart019Local2 == null) {
           return;
         }

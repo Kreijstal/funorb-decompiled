@@ -5,7 +5,7 @@ final class fb {
     static String[] field_d;
     static mf field_a;
     static int[] field_e;
-    static fc field_g;
+    static FullscreenNoticeType field_g;
     static volatile int field_b;
     static int field_c;
     static String field_f;
@@ -38,7 +38,7 @@ final class fb {
             stackIn_10_0 = 3;
             return stackIn_10_0;
           }
-          if (wi.field_f == ui.field_kb) {
+          if (wi.field_f == StandardContentDialog.field_kb) {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }
@@ -146,7 +146,7 @@ final class fb {
 
     static {
         field_b = 0;
-        field_g = new fc();
+        field_g = new FullscreenNoticeType();
         field_f = "Fleas: <%0>/<%1>";
     }
 }

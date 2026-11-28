@@ -1603,7 +1603,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("priest", false);
                 if (null != var2) {
-                  jk.field_Cb = dj.a(var2, false);
+                  StandardContentDialog.field_Cb = dj.a(var2, false);
                 }
                 var2 = gm.a("orc_blademaster", false);
                 if (null != var2) {
@@ -1717,11 +1717,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("hoard", false);
                 if (null != var2) {
-                  cm.field_S = dj.a(var2, false);
+                  RegistrationAgreementPane.field_S = dj.a(var2, false);
                 }
                 var2 = gm.a("entrance", param1);
                 if (null != var2) {
-                  wi.field_mb = dj.a(var2, param1);
+                  ProgressDialog.field_mb = dj.a(var2, param1);
                 }
                 var2 = gm.a("pit", false);
                 if (var2 != null) {
@@ -1745,7 +1745,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("hidden_nails", param1);
                 if (null != var2) {
-                  nm.field_mb = dj.a(var2, false);
+                  FullscreenStatusDialog.field_mb = dj.a(var2, false);
                 }
                 var2 = gm.a("bottomless_pit", false);
                 if (null != var2) {
@@ -1781,7 +1781,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("giant_snake", false);
                 if (var2 != null) {
-                  wi.field_rb = dj.a(var2, false);
+                  ProgressDialog.field_rb = dj.a(var2, false);
                 }
                 var2 = gm.a("giant_spider", false);
                 if (null != var2) {
@@ -1861,7 +1861,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("desc_goblin_runt", false);
                 if (var2 != null) {
-                  nm.field_lb = dj.a(var2, false);
+                  FullscreenStatusDialog.field_lb = dj.a(var2, false);
                 }
                 var2 = gm.a("desc_saurus_spawn", false);
                 if (var2 != null) {
@@ -1901,7 +1901,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("desc_goblin_scout", false);
                 if (null != var2) {
-                  uc.field_Q = dj.a(var2, param1);
+                  StripedProgressWidget.field_Q = dj.a(var2, param1);
                 }
                 var2 = gm.a("desc_necromancer", false);
                 if (var2 != null) {
@@ -2093,7 +2093,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("desc_stone_golem", false);
                 if (var2 != null) {
-                  wi.field_lb = dj.a(var2, false);
+                  ProgressDialog.field_lb = dj.a(var2, false);
                 }
                 var2 = gm.a("desc_spectre", param1);
                 if (var2 != null) {
@@ -2113,7 +2113,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("desc_pit_demon", false);
                 if (var2 != null) {
-                  sj.field_eb = dj.a(var2, false);
+                  ResizableModalDialog.field_eb = dj.a(var2, false);
                 }
                 var2 = gm.a("desc_vampire_lord", false);
                 if (null != var2) {
@@ -2595,7 +2595,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("ability_ferocity_message", false);
                 if (var2 != null) {
-                  ia.field_N = dj.a(var2, false);
+                  GuestPlayConfirmationForm.field_N = dj.a(var2, false);
                 }
                 var2 = gm.a("ability_armoured_message", false);
                 if (null != var2) {
@@ -3111,11 +3111,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_my_profile", false);
                 if (null != var2) {
-                  sj.field_W = dj.a(var2, false);
+                  ResizableModalDialog.field_W = dj.a(var2, false);
                 }
                 var2 = gm.a("text_construction", false);
                 if (null != var2) {
-                  uc.field_C = dj.a(var2, false);
+                  StripedProgressWidget.field_C = dj.a(var2, false);
                 }
                 var2 = gm.a("text_stable", false);
                 if (null != var2) {
@@ -3187,11 +3187,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_exit", false);
                 if (null != var2) {
-                  r.field_a = dj.a(var2, param1);
+                  FullscreenNoticeType.field_a = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_raid", param1);
                 if (var2 != null) {
-                  ia.field_Y = dj.a(var2, false);
+                  GuestPlayConfirmationForm.field_Y = dj.a(var2, false);
                 }
                 var2 = gm.a("text_search", param1);
                 if (var2 != null) {
@@ -3219,7 +3219,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_raid_fatal", false);
                 if (null != var2) {
-                  kc.field_P = dj.a(var2, param1);
+                  DialogMessagePane.field_P = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_recruit", false);
                 if (null != var2) {
@@ -3283,7 +3283,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_spendable_renown", param1);
                 if (var2 != null) {
-                  nm.field_jb = dj.a(var2, false);
+                  FullscreenStatusDialog.field_jb = dj.a(var2, false);
                 }
                 var2 = gm.a("text_renown_gained", false);
                 if (var2 != null) {
@@ -3391,7 +3391,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_stole_gold", param1);
                 if (var2 != null) {
-                  wi.field_qb = dj.a(var2, false);
+                  ProgressDialog.field_qb = dj.a(var2, false);
                 }
                 var2 = gm.a("text_woke_dragon", false);
                 if (var2 != null) {
@@ -3525,7 +3525,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_raider_escapes", param1);
                 if (null != var2) {
-                  cm.field_K = dj.a(var2, param1);
+                  RegistrationAgreementPane.field_K = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_raider_attacks", false);
                 if (var2 != null) {
@@ -3657,7 +3657,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_ability_used", false);
                 if (null != var2) {
-                  wi.field_nb = dj.a(var2, param1);
+                  ProgressDialog.field_nb = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_disarmed", false);
                 if (var2 != null) {
@@ -3785,7 +3785,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_exit_without_saving_brief", false);
                 if (var2 != null) {
-                  nk.field_Lb = dj.a(var2, false);
+                  ProgressMessageDialog.field_Lb = dj.a(var2, false);
                 }
                 var2 = gm.a("text_warning_activate_dungeon", false);
                 if (var2 != null) {

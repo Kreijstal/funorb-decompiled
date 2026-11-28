@@ -111,7 +111,7 @@ final class tf extends pd {
             null != param2.field_D) {
             se.clearModelFaceGroupCounts((byte) 124);
           }
-          ol.field_X = 0;
+          FullscreenStatusDialog.field_X = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var8 < param2.field_M)))) {
@@ -168,7 +168,7 @@ final class tf extends pd {
                           dupTemp$0 = param2.field_D[var8];
                           tb.field_h[dupTemp$0] = tb.field_h[dupTemp$0] + 1;
                         }
-                        ol.field_X = ol.field_X + 1;
+                        FullscreenStatusDialog.field_X = FullscreenStatusDialog.field_X + 1;
                         break;
                       }
                     }

@@ -36,14 +36,14 @@ final class db extends DungeonAssaultScreen {
         regionExit1: {
           var11 = (int[]) null;
           if (o.a(FrameTimer.field_c, (int[]) null, var3, gm.field_d, true)) {
-            var12 = jk.a(new String[]{CombatState.formatPlayerNameWithTitle((byte) 66, gm.field_d.field_w, CrossfadingMidiPcmStream.field_u)}, DungeonAssault.field_G, 30496);
+            var12 = StandardContentDialog.a(new String[]{CombatState.formatPlayerNameWithTitle((byte) 66, gm.field_d.field_w, CrossfadingMidiPcmStream.field_u)}, DungeonAssault.field_G, 30496);
             la.field_b.drawParagraph(var12, 70, 338, 270, 180, 16760960, -1, 1, 0, la.field_b.field_H + la.field_b.field_E);
             if (var10 == 0) {
               break regionExit1;
             }
           }
           var4 = ib.a((byte) -15, 16760960, CombatState.formatPlayerNameWithTitle((byte) 66, var3, CrossfadingMidiPcmStream.field_u));
-          var5 = jk.a(new String[]{var4}, dk.field_e, 30496);
+          var5 = StandardContentDialog.a(new String[]{var4}, dk.field_e, 30496);
           var6 = 127 & var3;
           if (wh.field_a > var6) {
             regionExit2: {
@@ -53,7 +53,7 @@ final class db extends DungeonAssaultScreen {
                   if (bl.field_n.length > var7) {
                     var8_int = bl.field_n[var7];
                     var9 = ib.a((byte) 6, 16760960, ce.field_o[var8_int]);
-                    var5 = jk.a(new String[]{var9, var4}, TextLayout.field_c, 30496);
+                    var5 = StandardContentDialog.a(new String[]{var9, var4}, TextLayout.field_c, 30496);
                   }
                   if (var10 == 0) {
                     break regionExit2;
@@ -66,12 +66,12 @@ final class db extends DungeonAssaultScreen {
                       var8_intLifetime1 = Raider.field_m[var7];
                       var9 = ib.a((byte) -128, 16760960, Integer.toString(var8_intLifetime1));
                       if (1 != var8_intLifetime1) {
-                        var5 = jk.a(new String[]{var9, var4}, wf.field_y, 30496);
+                        var5 = StandardContentDialog.a(new String[]{var9, var4}, wf.field_y, 30496);
                         if (var10 != 0) {
-                          var5 = jk.a(new String[]{var9, var4}, tl.field_c, 30496);
+                          var5 = StandardContentDialog.a(new String[]{var9, var4}, tl.field_c, 30496);
                         }
                       } else {
-                        var5 = jk.a(new String[]{var9, var4}, tl.field_c, 30496);
+                        var5 = StandardContentDialog.a(new String[]{var9, var4}, tl.field_c, 30496);
                       }
                     }
                     if (var10 == 0) {
@@ -84,12 +84,12 @@ final class db extends DungeonAssaultScreen {
                       var8_intLifetime1 = Bzip2State.field_p[var7];
                       var9 = ib.a((byte) -125, 16760960, Integer.toString(var8_intLifetime1));
                       if (var8_intLifetime1 == 1) {
-                        var5 = jk.a(new String[]{var9, var4}, MatchingFieldValidator.field_m, 30496);
+                        var5 = StandardContentDialog.a(new String[]{var9, var4}, MatchingFieldValidator.field_m, 30496);
                         if (var10 != 0) {
-                          var5 = jk.a(new String[]{var9, var4}, vj.field_i, 30496);
+                          var5 = StandardContentDialog.a(new String[]{var9, var4}, vj.field_i, 30496);
                         }
                       } else {
-                        var5 = jk.a(new String[]{var9, var4}, vj.field_i, 30496);
+                        var5 = StandardContentDialog.a(new String[]{var9, var4}, vj.field_i, 30496);
                       }
                     }
                     if (var10 != 0) {
@@ -97,13 +97,13 @@ final class db extends DungeonAssaultScreen {
                       if (var7 < TextHotspotBounds.field_s.length) {
                         var8_intLifetime1 = TextHotspotBounds.field_s[var7];
                         var9 = ib.a((byte) 91, 16760960, Integer.toString(var8_intLifetime1));
-                        var5 = jk.a(new String[]{var9, var4}, ac.field_f, 30496);
+                        var5 = StandardContentDialog.a(new String[]{var9, var4}, ac.field_f, 30496);
                       }
                       var7 = -cp.field_R + var6;
                       if (var7 < SecondaryNodeDequeIterator.field_j.length) {
                         var8 = ib.a((byte) 115, 16760960, ab.field_d[var7]);
                         var9 = ib.a((byte) 115, 16760960, ka.field_b[var7]);
-                        var5 = jk.a(new String[]{var9, var8, var4}, GzipDecompressor.field_b, 30496);
+                        var5 = StandardContentDialog.a(new String[]{var9, var8, var4}, GzipDecompressor.field_b, 30496);
                       }
                     }
                   }
@@ -112,14 +112,14 @@ final class db extends DungeonAssaultScreen {
                   if (var7 < TextHotspotBounds.field_s.length) {
                     var8_intLifetime1 = TextHotspotBounds.field_s[var7];
                     var9 = ib.a((byte) 91, 16760960, Integer.toString(var8_intLifetime1));
-                    var5 = jk.a(new String[]{var9, var4}, ac.field_f, 30496);
+                    var5 = StandardContentDialog.a(new String[]{var9, var4}, ac.field_f, 30496);
                   }
                   if (var10 != 0) {
                     var7 = -cp.field_R + var6;
                     if (var7 < SecondaryNodeDequeIterator.field_j.length) {
                       var8 = ib.a((byte) 115, 16760960, ab.field_d[var7]);
                       var9 = ib.a((byte) 115, 16760960, ka.field_b[var7]);
-                      var5 = jk.a(new String[]{var9, var8, var4}, GzipDecompressor.field_b, 30496);
+                      var5 = StandardContentDialog.a(new String[]{var9, var8, var4}, GzipDecompressor.field_b, 30496);
                     }
                   }
                 }
@@ -128,7 +128,7 @@ final class db extends DungeonAssaultScreen {
                 if (var7 < SecondaryNodeDequeIterator.field_j.length) {
                   var8 = ib.a((byte) 115, 16760960, ab.field_d[var7]);
                   var9 = ib.a((byte) 115, 16760960, ka.field_b[var7]);
-                  var5 = jk.a(new String[]{var9, var8, var4}, GzipDecompressor.field_b, 30496);
+                  var5 = StandardContentDialog.a(new String[]{var9, var8, var4}, GzipDecompressor.field_b, 30496);
                 }
               }
             }
@@ -325,16 +325,16 @@ final class db extends DungeonAssaultScreen {
             stackIn_35_0 = 0;
           }
           var5 = stackIn_35_0;
-          hf.field_mb.field_D = KeyboardInput.field_e.field_N;
-          stackIn_39_0 = hf.field_mb;
-          stackIn_40_1 = (hf.field_mb.field_D) && (var5 == 0) && (var4 <= gm.field_d.field_s);
+          ContentTransitionDialog.field_mb.field_D = KeyboardInput.field_e.field_N;
+          stackIn_39_0 = ContentTransitionDialog.field_mb;
+          stackIn_40_1 = (ContentTransitionDialog.field_mb.field_D) && (var5 == 0) && (var4 <= gm.field_d.field_s);
           stackIn_39_0.field_w = stackIn_40_1;
           if (var6 == 0) {
             return;
           }
         }
-        hf.field_mb.field_w = false;
-        var2_ref = hf.field_mb;
+        ContentTransitionDialog.field_mb.field_w = false;
+        var2_ref = ContentTransitionDialog.field_mb;
         var2_ref.field_D = false;
         return;
     }
@@ -373,7 +373,7 @@ final class db extends DungeonAssaultScreen {
         if (ke.a(76, var3)) {
           SoftwareRasterizer.drawRectangleOutline(-4 + var4, -6 + var6, 8 + var5 - var4, var7 + 8, 0);
           db.b(var4, var6 - 2, var5 - var4, var7, 8421504, 128, 128);
-          rp.a(4, var5 - var4, (byte) 108, var4, var7, kc.field_S, var6 - 2);
+          rp.a(4, var5 - var4, (byte) 108, var4, var7, DialogMessagePane.field_S, var6 - 2);
           db.a(var4, -2 + var6, var5 - var4, var7, 224, 64, 3, 128);
           if (DungeonAssault.field_K != 0) {
             of.field_j.draw(-of.field_j.field_y + (var4 + var5) >> 1, var6);
@@ -587,12 +587,12 @@ final class db extends DungeonAssaultScreen {
         KeyboardInput.field_e.field_N = false;
         var5.field_w = false;
         this.field_p.addFirst(KeyboardInput.field_e, false);
-        hf.field_mb = tn.a(-(GameAppletShell.field_a.field_y / 2) + (363 + (200 - ao.field_n.field_E >> 1)) + ao.field_n.field_E / 2, 337, field_v, GameAppletShell.field_a, -81, bg.field_x.toUpperCase());
-        var6 = hf.field_mb;
-        hf.field_mb.field_D = false;
+        ContentTransitionDialog.field_mb = tn.a(-(GameAppletShell.field_a.field_y / 2) + (363 + (200 - ao.field_n.field_E >> 1)) + ao.field_n.field_E / 2, 337, field_v, GameAppletShell.field_a, -81, bg.field_x.toUpperCase());
+        var6 = ContentTransitionDialog.field_mb;
+        ContentTransitionDialog.field_mb.field_D = false;
         var6.field_w = false;
         var3Lifetime1 = 0;
-        this.field_p.addFirst(hf.field_mb, false);
+        this.field_p.addFirst(ContentTransitionDialog.field_mb, false);
         var7Lifetime5 = 1;
         var8 = 0;
         while (var8 < 6) {
@@ -629,7 +629,7 @@ final class db extends DungeonAssaultScreen {
         if (this.field_w.field_b != -1) {
           this.a(this.field_w.field_b, -1, true);
         }
-        if (DefaultTextWidgetRenderer.field_s == hf.field_mb) {
+        if (DefaultTextWidgetRenderer.field_s == ContentTransitionDialog.field_mb) {
           var2 = ((lk) (mk.field_j.field_l)).field_O;
           if (0 == gm.field_d.field_e) {
             this.field_b = (kl) ((Object) new pk(ag.field_b, oj.field_c, var2));
@@ -693,15 +693,15 @@ final class db extends DungeonAssaultScreen {
         var5 = kk.field_l.field_E + kk.field_l.field_H;
         var6 = 40;
         SoftwareRasterizer.fillRectangleAlpha(var3 - 3, var4 - 16, 186, 70, 16777215, var6);
-        field_v.drawString(jk.a(new String[]{gh.a(var19.field_N, (byte) -118)}, kk.field_s, 30496), var3, var4, 0, -1);
+        field_v.drawString(StandardContentDialog.a(new String[]{gh.a(var19.field_N, (byte) -118)}, kk.field_s, 30496), var3, var4, 0, -1);
         var4 += 16;
-        field_v.drawString(jk.a(new String[]{gh.a(var19.field_m, (byte) -101)}, mm.field_j, 30496), var3, var4, 0, -1);
+        field_v.drawString(StandardContentDialog.a(new String[]{gh.a(var19.field_m, (byte) -101)}, mm.field_j, 30496), var3, var4, 0, -1);
         var4 += 16;
-        field_v.drawString(jk.a(new String[]{Integer.toString(var19.field_s / 10)}, bp.field_h, 30496), var3, var4, 0, -1);
+        field_v.drawString(StandardContentDialog.a(new String[]{Integer.toString(var19.field_s / 10)}, bp.field_h, 30496), var3, var4, 0, -1);
         var4 += 16;
         var7 = 60 * (int)(0.5 + Math.pow(2.0, (double)(-var20.field_N) / 10000.0) * 250.0) / 60;
         var7 = var7 + 10 * gm.field_d.field_J[2];
-        kk.field_l.drawString(jk.a(new String[]{gh.a(var7, (byte) -112)}, la.field_j, 30496), var3, var4, 0, -1);
+        kk.field_l.drawString(StandardContentDialog.a(new String[]{gh.a(var7, (byte) -112)}, la.field_j, 30496), var3, var4, 0, -1);
         if (param0 != 197376) {
           field_v = (BinaryBitmapFont) null;
         }
@@ -713,17 +713,17 @@ final class db extends DungeonAssaultScreen {
           decompiledSharedTail0 = (var18 != 0);
         }
         if (decompiledSharedTail0) {
-          var9 = jk.a(new String[]{Integer.toString(var19.field_B), Integer.toString(var19.field_h), Integer.toString(var19.field_D)}, TextFieldValidator.field_k, 30496);
+          var9 = StandardContentDialog.a(new String[]{Integer.toString(var19.field_B), Integer.toString(var19.field_h), Integer.toString(var19.field_D)}, TextFieldValidator.field_k, 30496);
           var10 = var9;
           var10 = var9;
         }
         if (var20.field_y <= 0) {
-          var10Lifetime1 = jk.a(new String[]{Integer.toString(var19.field_y), Integer.toString(var19.field_r), Integer.toString(var19.field_I)}, ValidatedTextField.field_V, param0 ^ 226336);
+          var10Lifetime1 = StandardContentDialog.a(new String[]{Integer.toString(var19.field_y), Integer.toString(var19.field_r), Integer.toString(var19.field_I)}, ValidatedTextField.field_V, param0 ^ 226336);
           if (var18 != 0) {
-            var10Lifetime1 = jk.a(new String[]{Integer.toString(var19.field_y), Integer.toString(var19.field_r), Integer.toString(var19.field_I)}, TextFieldValidator.field_k, param0 ^ 226336);
+            var10Lifetime1 = StandardContentDialog.a(new String[]{Integer.toString(var19.field_y), Integer.toString(var19.field_r), Integer.toString(var19.field_I)}, TextFieldValidator.field_k, param0 ^ 226336);
           }
         } else {
-          var10Lifetime1 = jk.a(new String[]{Integer.toString(var19.field_y), Integer.toString(var19.field_r), Integer.toString(var19.field_I)}, TextFieldValidator.field_k, param0 ^ 226336);
+          var10Lifetime1 = StandardContentDialog.a(new String[]{Integer.toString(var19.field_y), Integer.toString(var19.field_r), Integer.toString(var19.field_I)}, TextFieldValidator.field_k, param0 ^ 226336);
         }
         boolean decompiledFrameCompleted3 = true;
         boolean decompiledFrameCompleted2 = true;
@@ -1043,7 +1043,7 @@ final class db extends DungeonAssaultScreen {
             var7 = (10 + 1 * var5) * fj.field_g[var4_int] / 10;
             stackIn_15_0 = (var7 <= gm.field_d.field_s) ? 0 : 16711680;
             var8 = stackIn_15_0;
-            field_v.drawCentred(jk.a(new String[]{Integer.toString(var7 / 10)}, NodeHashTableIterator.field_c, 30496), var2, 105 + var3, var8, -1);
+            field_v.drawCentred(StandardContentDialog.a(new String[]{Integer.toString(var7 / 10)}, NodeHashTableIterator.field_c, 30496), var2, 105 + var3, var8, -1);
             la.field_b.drawParagraph(ByteStorage.field_a[var4_int], -80 + var2, var3 + 120, 160, 100, 0, -1, 1, 0, la.field_b.field_H);
             if (var9 != 0) {
               la.field_b.drawParagraph(bl.field_b, -80 + var2, var3 + 120, 160, 100, 0, -1, 1, 0, la.field_b.field_H);
@@ -1058,13 +1058,13 @@ final class db extends DungeonAssaultScreen {
           if (1 >= gm.field_d.field_e) {
             var4 = oc.field_v;
             if (var9 != 0) {
-              var4 = jk.a(new String[]{Integer.toString(gm.field_d.field_e)}, LabeledWidgetContainer.field_G, 30496);
+              var4 = StandardContentDialog.a(new String[]{Integer.toString(gm.field_d.field_e)}, LabeledWidgetContainer.field_G, 30496);
             }
           } else {
-            var4 = jk.a(new String[]{Integer.toString(gm.field_d.field_e)}, LabeledWidgetContainer.field_G, 30496);
+            var4 = StandardContentDialog.a(new String[]{Integer.toString(gm.field_d.field_e)}, LabeledWidgetContainer.field_G, 30496);
           }
           var5Lifetime1 = 16711680;
-          var6 = jk.a(new String[]{jk.a(120, gm.field_d.field_A)}, fl.field_n, 30496);
+          var6 = StandardContentDialog.a(new String[]{StandardContentDialog.a(120, gm.field_d.field_A)}, fl.field_n, 30496);
           la.field_b.drawParagraph(var6, 80, 338, 250, 180, var5Lifetime1, -1, 1, 0, field_v.field_H);
         }
         la.field_b.drawParagraph(var4, 80, -la.field_b.field_H + 211, 250, 45, var5Lifetime1, -1, 1, 2, field_v.field_H);

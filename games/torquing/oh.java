@@ -18,7 +18,7 @@ final class oh {
           UiWidget.c(-68);
           return;
         }
-        d.field_r.h((byte) 86);
+        d.field_r.freezeNormalProgressAnimation((byte) 86);
         UiWidget.c(-68);
     }
 

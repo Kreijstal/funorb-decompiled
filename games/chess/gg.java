@@ -259,7 +259,7 @@ final class gg {
 
     final void a(int param0) {
         int fieldTemp$0 = 0;
-        if (null != rm.field_R) {
+        if (null != StripedProgressWidget.field_R) {
           return;
         }
         if (cl.field_d <= param0) {
@@ -272,7 +272,7 @@ final class gg {
             return;
           }
           this.field_u = this.field_b;
-          if (this.field_j > jg.field_K) {
+          if (this.field_j > BirthDateChatEnableForm.field_K) {
             this.field_c = false;
           } else {
             this.d(-21187);
@@ -384,7 +384,7 @@ final class gg {
     final boolean b(int param0) {
         if (param0 != -1) {
           this.field_h = 77;
-          if (this.field_j > jg.field_K) {
+          if (this.field_j > BirthDateChatEnableForm.field_K) {
             return false;
           }
           if (0 < cl.field_d) {
@@ -392,7 +392,7 @@ final class gg {
           }
           return false;
         }
-        if (this.field_j > jg.field_K) {
+        if (this.field_j > BirthDateChatEnableForm.field_K) {
           return false;
         }
         if (0 < cl.field_d) {

@@ -15,7 +15,7 @@ final class cf extends IntrusiveNode {
         if (param0 != 41) {
           field_p = (int[]) null;
         }
-        return oe.field_b == rk.field_X ? true : false;
+        return oe.field_b == ProgressDialog.field_X ? true : false;
     }
 
     public static void clearStaticReferences(int param0) {

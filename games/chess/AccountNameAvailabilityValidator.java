@@ -36,7 +36,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (!param0.equals(this.checkedName)) {
-            var4 = sb.pollAccountNameCheck(param0, true);
+            var4 = StandardContentDialog.pollAccountNameCheck(param0, true);
             if (var4 == null) {
               return null;
             }
@@ -110,7 +110,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         }
         vh.field_e = true;
         vf.a(false, -128);
-        rm.field_Q = 0;
+        StripedProgressWidget.field_Q = 0;
     }
 
     final void invalidateCheckedName(int param0) {
@@ -153,7 +153,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             return stackIn_3_0;
           }
           if (!param1.equals(this.checkedName)) {
-            var4 = sb.pollAccountNameCheck(param1, true);
+            var4 = StandardContentDialog.pollAccountNameCheck(param1, true);
             if (var4 != null &&
               null == var4.message) {
               this.checkedName = param1;

@@ -753,7 +753,7 @@ final class AccountRequestState {
           }
           var2Lifetime108 = jk.a(1, "bb5");
           if (null != var2Lifetime108) {
-            ob.field_E = ProxyAuthenticationRequiredException.a(var2Lifetime108, -12465);
+            RegistrationAgreementPane.field_E = ProxyAuthenticationRequiredException.a(var2Lifetime108, -12465);
           }
           var2Lifetime109 = jk.a(1, "bb4");
           if (null != var2Lifetime109) {
@@ -769,7 +769,7 @@ final class AccountRequestState {
           }
           var2Lifetime112 = jk.a(1, "fb5");
           if (null != var2Lifetime112) {
-            ob.field_L = ProxyAuthenticationRequiredException.a(var2Lifetime112, -12465);
+            RegistrationAgreementPane.field_L = ProxyAuthenticationRequiredException.a(var2Lifetime112, -12465);
           }
           var2Lifetime113 = jk.a(1, "fb4");
           if (null != var2Lifetime113) {

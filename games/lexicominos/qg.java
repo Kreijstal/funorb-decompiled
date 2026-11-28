@@ -4,7 +4,7 @@
 final class qg {
     static boolean field_d;
     static int[] field_b;
-    static oc field_a;
+    static FullscreenNoticeType field_a;
     static int field_c;
 
     static long a(long param0, long param1) {
@@ -61,7 +61,7 @@ final class qg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 100) {
-            field_a = (oc) null;
+            field_a = (FullscreenNoticeType) null;
           }
           if (!param1.ensureIndexLoaded(127)) {
             stackIn_5_0 = (String) (param4);
@@ -98,6 +98,6 @@ final class qg {
     static {
         field_d = true;
         field_b = new int[1024];
-        field_a = new oc();
+        field_a = new FullscreenNoticeType();
     }
 }

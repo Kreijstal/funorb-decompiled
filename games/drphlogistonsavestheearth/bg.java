@@ -137,9 +137,9 @@ final class bg extends IntrusiveNode {
             var3Lifetime1 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(ha.field_d);
             var14 = a.a(5044, rg.field_d, new String[]{ka.field_p[gd.field_a]});
-            var5 = md.field_a.maxLineWidth(var14, ca.field_db);
-            var6Lifetime1 = md.field_a.textHeight(var14, ca.field_db, md.field_a.field_S + md.field_a.field_x);
-            var7Lifetime1 = (ca.field_db - var5) / 2 + KeyboardInput.field_a;
+            var5 = md.field_a.maxLineWidth(var14, ResizableModalDialog.field_db);
+            var6Lifetime1 = md.field_a.textHeight(var14, ResizableModalDialog.field_db, md.field_a.field_S + md.field_a.field_x);
+            var7Lifetime1 = (ResizableModalDialog.field_db - var5) / 2 + KeyboardInput.field_a;
             var5 += 6;
             var7Lifetime1 -= 3;
             var8 = ph.field_e + (-var6Lifetime1 + af.field_d) / 2;
@@ -149,7 +149,7 @@ final class bg extends IntrusiveNode {
               var7Lifetime1 = var7Lifetime1 + var9_int;
               InteractiveWidget.field_z.field_z = InteractiveWidget.field_z.field_z + var9_int * 2;
               KeyboardInput.field_a = KeyboardInput.field_a + var9_int;
-              hd.field_B = hd.field_B - var9_int;
+              StripedProgressWidget.field_B = StripedProgressWidget.field_B - var9_int;
               InteractiveWidget.field_z.field_D = InteractiveWidget.field_z.field_D + var9_int;
             }
             var8 -= 3;
@@ -161,7 +161,7 @@ final class bg extends IntrusiveNode {
               InteractiveWidget.field_z.field_z = InteractiveWidget.field_z.field_z + var9_intLifetime1 * 2;
               KeyboardInput.field_a = KeyboardInput.field_a + var9_intLifetime1;
               var5 = var5 + var9_intLifetime1 * 2;
-              hd.field_B = hd.field_B - var9_intLifetime1;
+              StripedProgressWidget.field_B = StripedProgressWidget.field_B - var9_intLifetime1;
             }
             if (var8 < 0) {
               var9_intLifetime2 = -var8;
@@ -184,13 +184,13 @@ final class bg extends IntrusiveNode {
             InteractiveWidget.field_z.normalizeCanvas();
             var9 = new RgbSprite(InteractiveWidget.field_z.field_z, InteractiveWidget.field_z.field_C);
             var9.bindAsRenderTarget();
-            md.field_a.drawParagraph(var14, KeyboardInput.field_a, ph.field_e, ca.field_db, af.field_d, 16777215, -1, 1, 1, md.field_a.field_x + md.field_a.field_S);
+            md.field_a.drawParagraph(var14, KeyboardInput.field_a, ph.field_e, ResizableModalDialog.field_db, af.field_d, 16777215, -1, 1, 1, md.field_a.field_x + md.field_a.field_S);
             p.a(var9.field_z, 3, 0, var9.field_C, 1, 0, 0, var9);
             InteractiveWidget.field_z.bindAsRenderTarget();
             var9.draw(0, 0);
             RichTextWidget.field_L = new RgbSprite(640, 480);
             RichTextWidget.field_L.bindAsRenderTarget();
-            InteractiveWidget.field_z.drawRotated(hd.field_B + (InteractiveWidget.field_z.field_z >> 1), (InteractiveWidget.field_z.field_C >> 1) + ac.field_a, ib.field_l, 4096);
+            InteractiveWidget.field_z.drawRotated(StripedProgressWidget.field_B + (InteractiveWidget.field_z.field_z >> 1), (InteractiveWidget.field_z.field_C >> 1) + ac.field_a, ib.field_l, 4096);
             InteractiveWidget.field_z = null;
             RichTextWidget.field_L.trimTransparentBorders();
             SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime1, var3Lifetime1);

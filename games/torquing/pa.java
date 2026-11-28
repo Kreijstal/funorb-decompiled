@@ -26,7 +26,7 @@ abstract class pa {
         stackIn_3_0 = ((var3 & 128) != 0);
         ArchiveIndex.field_a = stackIn_3_0;
         n.field_u = var3 & 127;
-        hh.field_a = var8.readUnsignedByte((byte) -101);
+        FullscreenNoticeType.field_a = var8.readUnsignedByte((byte) -101);
         pm.field_r = var8.readLong(9);
         if (n.field_u != 2) {
           bg.field_n = 0;

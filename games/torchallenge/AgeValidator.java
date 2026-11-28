@@ -166,7 +166,7 @@ final class AgeValidator extends TextFieldValidator {
             AgeValidator.g(119);
           }
           var5 = (CharSequence) ((Object) param1);
-          var3_int = qh.a(var5, (byte) -125);
+          var3_int = RegistrationAgreementPane.a(var5, (byte) -125);
           if (var3_int > 0 &&
             var3_int <= 130) {
             return tf.field_w;

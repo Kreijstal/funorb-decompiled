@@ -6,7 +6,7 @@ final class PetAttackSpecial extends SpecialOrder {
         BitPacketBuffer var9 = null;
         int var7 = 0;
         try {
-          var9 = sja.field_fb;
+          var9 = StandardContentDialog.field_fb;
           BitPacketBuffer var6 = var9;
           var9.writeCipheredByte(param5, (byte) 98);
           var9.position = var9.position + 1;

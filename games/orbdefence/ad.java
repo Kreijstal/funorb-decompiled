@@ -124,7 +124,7 @@ final class ad {
         if (param0 != -72) {
           return true;
         }
-        stackIn_7_0 = (pc.field_cb) || (n.b((byte) -96));
+        stackIn_7_0 = (StandardContentDialog.field_cb) || (n.b((byte) -96));
         return stackIn_7_0;
     }
 

@@ -52,8 +52,8 @@ final class wd {
         int var7 = 0;
         String var8 = null;
         try {
-          ue.field_a[0] = jj.field_R.nextInt();
-          ue.field_a[1] = jj.field_R.nextInt();
+          ue.field_a[0] = ResizableModalDialog.field_R.nextInt();
+          ue.field_a[1] = ResizableModalDialog.field_R.nextInt();
           ue.field_a[2] = (int)(ug.field_a >> 32);
           sd.field_i.position = 0;
           ue.field_a[3] = (int)ug.field_a;

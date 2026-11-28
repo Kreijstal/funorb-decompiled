@@ -12,7 +12,7 @@ final class oh {
         if (param0 != 25331) {
           return false;
         }
-        return ge.field_fb.a(false);
+        return FullscreenStatusDialog.field_fb.a(false);
     }
 
     public static void clearStaticReferences(int param0) {

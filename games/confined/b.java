@@ -353,10 +353,10 @@ final class b implements WidgetRenderer {
                     var17 = 0;
                     var13Lifetime1 = var17;
                     while (var9 > var17) {
-                      var12[var17] = pi.a((byte) 94, var10[var17]);
+                      var12[var17] = RegistrationAgreementPane.a((byte) 94, var10[var17]);
                       var17++;
                     }
-                    var18.field_q[var5] = param0.requestDeclaredMethod((byte) -107, pi.a((byte) 81, var20), var12, var21);
+                    var18.field_q[var5] = param0.requestDeclaredMethod((byte) -107, RegistrationAgreementPane.a((byte) 81, var20), var12, var21);
                     var18.field_s[var5] = var22;
                   }
                 } else {
@@ -368,7 +368,7 @@ final class b implements WidgetRenderer {
                   }
                   var18.field_o[var5] = var6_int;
                   var18.field_v[var5] = var9;
-                  var18.field_m[var5] = param0.requestDeclaredField(0, pi.a((byte) 98, var15), var16);
+                  var18.field_m[var5] = param0.requestDeclaredField(0, RegistrationAgreementPane.a((byte) 98, var15), var16);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

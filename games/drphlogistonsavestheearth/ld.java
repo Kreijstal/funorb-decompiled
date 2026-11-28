@@ -25,7 +25,7 @@ final class ld {
         this.c(200 + var2 / 2, param0 ^ -66);
         MouseWheelInput.field_f.d(0, 200 + var2 / 2);
         this.a(DropTargetWidgetContainer.field_L, 220, var2, -50);
-        dj.a(NodeHashTableIterator.field_e, 75, lf.field_b, false, 380);
+        DialogMessagePane.a(NodeHashTableIterator.field_e, 75, lf.field_b, false, 380);
         for (var3 = 0; var3 < 3; var3++) {
           for (var4 = 0; var4 < 3; var4++) {
             var5 = 40 + var4 * 70;
@@ -388,7 +388,7 @@ final class ld {
           discarded$0 = this.a((byte) 16, 0);
         }
         lg.field_f = kj.field_b[this.field_c];
-        NodeHashTableIterator.field_e = ih.field_O[this.field_c];
+        NodeHashTableIterator.field_e = RegistrationAgreementPane.field_O[this.field_c];
         var3 = this.field_c;
         switch (var3) {
           case 0:
@@ -396,7 +396,7 @@ final class ld {
             this.c(0, param0 + 8367);
             ph.field_h.a(0, 0);
             uk.field_h.d(-43, 35);
-            dj.a(NodeHashTableIterator.field_e, 311, lf.field_b, false, 155);
+            DialogMessagePane.a(NodeHashTableIterator.field_e, 311, lf.field_b, false, 155);
             qj.field_f.a(0, 0);
             break;
           case 5:
@@ -422,7 +422,7 @@ final class ld {
               }
               if (var3 == 8) {
                 this.k(-128);
-                dj.a(NodeHashTableIterator.field_e, 70, lf.field_b, false, 370);
+                DialogMessagePane.a(NodeHashTableIterator.field_e, 70, lf.field_b, false, 370);
                 break;
               }
               if (var3 == 10) {
@@ -446,7 +446,7 @@ final class ld {
             break;
           case 2:
             this.d((byte) -74);
-            dj.a(NodeHashTableIterator.field_e + 20, 80, lf.field_b, false, 375);
+            DialogMessagePane.a(NodeHashTableIterator.field_e + 20, 80, lf.field_b, false, 375);
             break;
           case 1:
             rh.field_b.draw(0, 0);
@@ -456,7 +456,7 @@ final class ld {
               !(hb.field_g > 0)) {
               var2 -= 30;
             }
-            dj.a(NodeHashTableIterator.field_e, var2, lf.field_b, false, 190);
+            DialogMessagePane.a(NodeHashTableIterator.field_e, var2, lf.field_b, false, 190);
             break;
         }
         for (var2 = 0; this.field_e.field_e > var2; var2++) {
@@ -508,7 +508,7 @@ final class ld {
         stackIn_9_3 = (sd.field_a.levelNumber == 0) ? false : true;
         var4 = nj.a(stackIn_3_0, stackIn_6_1, stackIn_8_2, stackIn_9_3);
         if (var4 == null) {
-          var4 = tf.field_nb[7];
+          var4 = ProgressDialog.field_nb[7];
         }
         var5 = ab.field_c + " " + var4 + " " + ph.field_i;
         if (param0) {
@@ -522,10 +522,10 @@ final class ld {
         if (var4Lifetime1 == null) {
           var4Lifetime1 = kk.field_d[7];
         }
-        var6 = "<br><br>" + gd.field_e + " " + ih.field_P + " " + var4Lifetime1;
+        var6 = "<br><br>" + gd.field_e + " " + RegistrationAgreementPane.field_P + " " + var4Lifetime1;
         var3.drawParagraph(var5 + " " + var6, 50, 130 + var2, 540, 480, 0, -1, 1, 0, var3.field_E);
         var7 = NodeHashTableIterator.field_e;
-        dj.a(var7, 75, lf.field_b, param0, 385);
+        DialogMessagePane.a(var7, 75, lf.field_b, param0, 385);
         return;
     }
 
@@ -883,7 +883,7 @@ final class ld {
         var5 = 198;
         var6 = (31 + cb.field_b.field_x) / 2;
         AwtRasterBuffer.field_c.a(50, var4);
-        cb.field_b.drawString(hd.field_O, var5, var4 + var6, 4210752, -1);
+        cb.field_b.drawString(StripedProgressWidget.field_O, var5, var4 + var6, 4210752, -1);
         SoftwareRasterizer.drawHorizontalLineAlpha(50, var4 + 33, 540, 0, 25);
         var4 += 40;
         ul.field_h.a(50, var4);
@@ -938,7 +938,7 @@ final class ld {
           stackIn_16_0 = 56;
         }
         var12 = stackIn_16_0;
-        dj.a(56, 80, var12, false, -10 + ul.field_e[this.field_c]);
+        DialogMessagePane.a(56, 80, var12, false, -10 + ul.field_e[this.field_c]);
     }
 
     private final void a(boolean param0, int param1) {
@@ -1284,7 +1284,7 @@ final class ld {
           }
           r.field_d = IterableNodeHashTable.field_d;
         }
-        this.field_e.a(0, this.a(ob.field_g, false, ck.field_c), this.a(ih.field_R, false, ae.field_gb));
+        this.field_e.a(0, this.a(ob.field_g, false, ck.field_c), this.a(RegistrationAgreementPane.field_R, false, FullscreenStatusDialog.field_gb));
         if (-1 != this.field_e.field_f) {
           this.a(this.field_e.field_f, 80, true);
         }
@@ -1878,7 +1878,7 @@ final class ld {
         if (!param0) {
           stackIn_8_0 = BufferedSocket.field_k;
         } else {
-          stackIn_8_0 = el.field_ub;
+          stackIn_8_0 = StandardContentDialog.field_ub;
         }
         var7 = stackIn_8_0;
         this.a(var7, var6, var4, -50);
@@ -1886,7 +1886,7 @@ final class ld {
         if (5 == this.field_c) {
           var8 += 140;
         }
-        dj.a(var8, 75, lf.field_b, false, 385);
+        DialogMessagePane.a(var8, 75, lf.field_b, false, 385);
         var9 = 34;
         var10 = 133 + var4;
         if (!param0) {

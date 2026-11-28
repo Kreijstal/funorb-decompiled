@@ -186,7 +186,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_x_lost_con", -15192);
                 if (byteArrayState0015 != null) {
-                  MixedSupport080.stringState0337 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  FullscreenNoticeType.stringState0337 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_x_cannot_join_full", -15192);
                 if (byteArrayState0015 != null) {
@@ -206,7 +206,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_x_removed", -15192);
                 if (null != byteArrayState0015) {
-                  UiComponentPart018.stringState0343 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  RegistrationAgreementPane.stringState0343 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_x_dropped_out", -15192);
                 if (null != byteArrayState0015) {
@@ -222,7 +222,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_game_has_started", -15192);
                 if (null != byteArrayState0015) {
-                  UiComponentPart026.stringState0460 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  ProgressDialog.stringState0460 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_you_declined_invite", -15192);
                 if (byteArrayState0015 != null) {
@@ -262,7 +262,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_lobby_name_add", -15192);
                 if (null != byteArrayState0015) {
-                  UiComponentPart019.stringState0349 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  BirthDateChatEnableForm.stringState0349 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_lobby_name_rm", -15192);
                 if (byteArrayState0015 != null) {
@@ -294,7 +294,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_gamelist_options", -15192);
                 if (null != byteArrayState0015) {
-                  UiComponentPart012.stringState0206 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  ProgressMessageDialog.stringState0206 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_gamelist_elapsed_time", -15192);
                 if (byteArrayState0015 != null) {
@@ -438,7 +438,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_chat_lobby_friends", -15192);
                 if (byteArrayState0015 != null) {
-                  UiComponentPart008.stringState0122 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  DialogMessagePane.stringState0122 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_chat_lobby_hide", -15192);
                 if (null != byteArrayState0015) {
@@ -446,7 +446,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_chat_game_show_all", -15192);
                 if (byteArrayState0015 != null) {
-                  UiComponentPart008.stringState0121 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  DialogMessagePane.stringState0121 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_chat_game_friends_only", -15192);
                 if (null != byteArrayState0015) {
@@ -722,7 +722,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("pressf10toquickchat", -15192);
                 if (null != byteArrayState0015) {
-                  MixedSupport080.stringState0338 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  FullscreenNoticeType.stringState0338 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("dob_chatdisabled", -15192);
                 if (byteArrayState0015 != null) {
@@ -898,7 +898,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("gameopt_pleaseselectoption2", -15192);
                 if (null != byteArrayState0015) {
-                  UiComponentPart019.stringState0348 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  BirthDateChatEnableForm.stringState0348 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("gameopt_badnumplayers", -15192);
                 if (null != byteArrayState0015) {
@@ -934,7 +934,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("ra_intro", -15192);
                 if (byteArrayState0015 != null) {
-                  UiComponentPart023.stringState0423 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  StandardContentDialog.stringState0423 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("ra_intro_no_name", -15192);
                 if (null != byteArrayState0015) {
@@ -1716,11 +1716,11 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("ignorelistfull", -15192);
                 if (null != byteArrayState0015) {
-                  UiComponentPart004.stringState0065 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  ContentTransitionDialog.stringState0065 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("ignorelistdupe", -15192);
                 if (byteArrayState0015 != null) {
-                  UiComponentPart023.stringState0422 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  StandardContentDialog.stringState0422 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("ignorenotfound", -15192);
                 if (null != byteArrayState0015) {
@@ -1928,7 +1928,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("achievements", -15192);
                 if (null != byteArrayState0015) {
-                  UiComponentPart019.stringState0350 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  BirthDateChatEnableForm.stringState0350 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("achievementsthisgame", -15192);
                 if (null != byteArrayState0015) {
@@ -1948,7 +1948,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("login_createaccount", -15192);
                 if (null != byteArrayState0015) {
-                  UiComponentPart026.stringState0461 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  ProgressDialog.stringState0461 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("tohighscores", -15192);
                 if (null != byteArrayState0015) {
@@ -2361,7 +2361,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mp_acceptrematch_unrated", -15192);
                 if (byteArrayState0015 != null) {
-                  UiComponentPart033.stringState0623 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  AccountCreationResultPanel.stringState0623 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mp_cancelrematch", -15192);
                 if (byteArrayState0015 != null) {
@@ -2481,7 +2481,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("quickchat_help", -15192);
                 if (null != byteArrayState0015) {
-                  UiComponentPart012.stringState0207 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  ProgressMessageDialog.stringState0207 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("quickchat_help_title", -15192);
                 if (null != byteArrayState0015) {
@@ -2569,7 +2569,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("benefits_noadverts", -15192);
                 if (byteArrayState0015 != null) {
-                  UiComponentPart023.stringState0426 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  StandardContentDialog.stringState0426 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("benefits_price", -15192);
                 if (byteArrayState0015 != null) {
@@ -2917,7 +2917,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("discard", -15192);
                 if (byteArrayState0015 != null) {
-                  UiComponentPart017.stringState0329 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  GuestPlayConfirmationForm.stringState0329 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mustlogin4,1", -15192);
                 if (null != byteArrayState0015) {

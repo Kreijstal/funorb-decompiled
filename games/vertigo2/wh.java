@@ -109,16 +109,16 @@ class wh extends TextureOperator {
             stackIn_7_1 = param1;
           }
           var7 = stackIn_6_0 * stackIn_7_1;
-          if (this.field_z != we.field_M) {
-            for (var8 = 0; var8 < we.field_M; var8++) {
-              var9 = var8 * this.field_z / we.field_M;
+          if (this.field_z != StripedProgressWidget.field_M) {
+            for (var8 = 0; var8 < StripedProgressWidget.field_M; var8++) {
+              var9 = var8 * this.field_z / StripedProgressWidget.field_M;
               var10 = this.field_y[var9 + var7];
               var6[var8] = b.a(var10, 255) << 4;
               var5[var8] = b.a(var10, 65280) >> 4;
               var4[var8] = b.a(16711680, var10) >> 12;
             }
           } else {
-            for (var8 = 0; var8 < we.field_M; var8++) {
+            for (var8 = 0; var8 < StripedProgressWidget.field_M; var8++) {
               incrementValue$0 = var7;
               var7++;
               var9 = this.field_y[incrementValue$0];

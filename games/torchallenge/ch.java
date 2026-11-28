@@ -269,7 +269,7 @@ final class ch {
 
     final static void a(int[] param0, int[] param1, int param2) {
         try {
-          qh.a(param2, param1, (byte) 75, param0, -1 + param0.length);
+          RegistrationAgreementPane.a(param2, param1, (byte) 75, param0, -1 + param0.length);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "ch.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

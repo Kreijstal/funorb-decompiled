@@ -117,7 +117,7 @@ class ph extends dm {
             kf.a(0, (byte) 98, param0, 0);
             return;
           }
-          if (rm.field_Q != 0) {
+          if (StripedProgressWidget.field_Q != 0) {
             cg.a(-12, param0);
             return;
           }

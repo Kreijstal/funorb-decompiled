@@ -38,7 +38,7 @@ final class sf {
         byte[] var2 = jc.field_c[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var4_int < var1; var4_int++) {
-          var3[var4_int] = ig.field_H[fi.a(255, (int) var2[var4_int])];
+          var3[var4_int] = GuestPlayConfirmationForm.field_H[fi.a(255, (int) var2[var4_int])];
         }
         Sprite var4 = new Sprite(MouseInputHandler.field_a, we.field_e, ph.field_h[param0], qf.field_d[0], sa.field_l[0], uj.field_b[0], var3);
         og.a((byte) -97);
@@ -253,7 +253,7 @@ final class sf {
           SectorCacheStore.field_e = param0;
         }
         eh.field_a[GzipDecompressor.field_c] = param5;
-        ld.field_M[GzipDecompressor.field_c] = param4;
+        ResizableModalDialog.field_M[GzipDecompressor.field_c] = param4;
         ma.field_n[GzipDecompressor.field_c] = param3;
         int var6 = param3 + (param4 + param5);
         int var7 = 0 != var6 ? param5 * 1000 / var6 : 0;

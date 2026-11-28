@@ -81,13 +81,13 @@ final class sp extends pu {
           throw new IllegalStateException();
         }
         if (oq.field_b != null) {
-          oq.field_b.p(-96);
+          oq.field_b.closeDialog(-96);
         }
         String var1 = kaa.c(97);
         FridgeScreen.field_e = new LoginPanel(var1, (String) null, true, false, false);
         gja.field_m.showDialog((UiWidget) (kka.field_l), (byte) 82);
-        kka.field_l.e(FridgeScreen.field_e, 33);
-        kka.field_l.m(param0 ^ 17311);
+        kka.field_l.replaceContent(FridgeScreen.field_e, 33);
+        kka.field_l.finishResize(param0 ^ 17311);
     }
 
     final static void a(byte[] param0, int param1) {

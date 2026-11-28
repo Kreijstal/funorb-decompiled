@@ -16,7 +16,7 @@ final class dl {
         wb.field_b = true;
         if (param0 == -75) {
           EmailFormatValidator.field_n = fa.correctedCurrentTimeMillis(110) + 15000L;
-          return mh.field_U == 11 ? true : false;
+          return ContentTransitionDialog.field_U == 11 ? true : false;
         }
         return false;
     }

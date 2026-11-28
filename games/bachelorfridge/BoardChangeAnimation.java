@@ -34,7 +34,7 @@ final class BoardChangeAnimation extends AnimationNode {
           }
           var5 = (mha) (wba.field_g.beginForward((byte) 90));
           while (var5 != null) {
-            sja.a(param0, var5, true);
+            StandardContentDialog.a(param0, var5, true);
             var5 = (mha) (wba.field_g.nextForward(param1 - 1));
           }
           return;

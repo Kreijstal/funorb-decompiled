@@ -583,7 +583,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
           if (var7 != 80) {
             return false;
           }
-          if (i.field_P[81]) {
+          if (FullscreenStatusDialog.field_P[81]) {
             stackIn_13_0 = this.focusPreviousChild((byte) -125, param1);
           } else {
             stackIn_13_0 = this.focusNextChild(param1, -9928);

@@ -43,7 +43,7 @@ final class IncomingAnimation extends EventAnimation {
           this.field_E = param1;
           this.field_w = dba.field_a;
           this.field_l = 75;
-          this.field_D = de.field_F.toRgbSprite();
+          this.field_D = StripedProgressWidget.field_F.toRgbSprite();
           var3_int = this.screen.field_h.width;
           var4 = this.screen.field_h.height;
           var5 = DiveBomberAnimation.a(4, m.field_a, -2147483648);

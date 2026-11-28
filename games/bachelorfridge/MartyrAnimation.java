@@ -61,17 +61,17 @@ final class MartyrAnimation extends EventAnimation {
           return;
         }
         try {
-          sja.field_fb.writeCipheredByte(90, (byte) 126);
-          sja.field_fb.position = sja.field_fb.position + 2;
-          var5_int = sja.field_fb.position;
-          rha.a(param3.field_g, sja.field_fb, (byte) -93);
+          StandardContentDialog.field_fb.writeCipheredByte(90, (byte) 126);
+          StandardContentDialog.field_fb.position = StandardContentDialog.field_fb.position + 2;
+          var5_int = StandardContentDialog.field_fb.position;
+          rha.a(param3.field_g, StandardContentDialog.field_fb, (byte) -93);
           if (param0 != 3909) {
             field_x = true;
           }
-          sja.field_fb.writeByte(param2, 0);
-          sja.field_fb.writeByte(param1, 0);
-          sja.field_fb.writeByte(param4, 0);
-          sja.field_fb.writeLengthShort((byte) -88, -var5_int + sja.field_fb.position);
+          StandardContentDialog.field_fb.writeByte(param2, 0);
+          StandardContentDialog.field_fb.writeByte(param1, 0);
+          StandardContentDialog.field_fb.writeByte(param4, 0);
+          StandardContentDialog.field_fb.writeLengthShort((byte) -88, -var5_int + StandardContentDialog.field_fb.position);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "wf.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

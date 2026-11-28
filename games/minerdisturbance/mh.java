@@ -73,7 +73,7 @@ final class mh implements uj {
             hb.field_b = hb.field_b + 1;
             if (cg.field_H < 0) {
               for (var2 = 0; var2 < 112; var2++) {
-                qd.field_O[var2] = false;
+                GuestPlayConfirmationForm.field_O[var2] = false;
               }
               cg.field_H = dm.field_b;
             } else {
@@ -81,10 +81,10 @@ final class mh implements uj {
                 var2 = ib.field_b[dm.field_b];
                 dm.field_b = dm.field_b + 1 & 127;
                 if (var2 < 0) {
-                  qd.field_O[~var2] = false;
+                  GuestPlayConfirmationForm.field_O[~var2] = false;
                   continue;
                 }
-                qd.field_O[var2] = true;
+                GuestPlayConfirmationForm.field_O[var2] = true;
               }
             }
             var2Lifetime1 = -126 % ((param0 + 3) / 32);

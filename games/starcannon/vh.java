@@ -397,7 +397,7 @@ final class vh extends eh {
           DelayedPcmStream.d(-121);
           if (param2.field_O > 0 &&
             param2.field_u != null) {
-            ae.a(-5607);
+            FullscreenNoticeType.a(-5607);
           }
           wj.field_e = 0;
           var8 = 0;

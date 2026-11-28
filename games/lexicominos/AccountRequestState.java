@@ -25,8 +25,8 @@ final class AccountRequestState {
           do {
             var3_int = rh.a(14817, param1, 4);
           } while (e.field_q == var3_int ||
-            qj.field_gb == var3_int);
-          qj.field_gb = e.field_q;
+            StandardContentDialog.field_gb == var3_int);
+          StandardContentDialog.field_gb = e.field_q;
           e.field_q = var3_int;
           nh.a(0, param0, var3_int, true);
           if (param2 > -96) {

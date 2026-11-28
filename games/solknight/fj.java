@@ -91,14 +91,14 @@ final class fj extends IntrusiveNode {
           throw new IllegalStateException();
         }
         if (null != ah.field_e) {
-          ah.field_e.f(true);
+          ah.field_e.closeDialog(true);
         }
-        String var1 = s.o(-74);
+        String var1 = StandardContentDialog.o(-74);
         if (param0 >= 26) {
           ClientException.field_a = new LoginPanel(var1, (String) null, true, false, false);
-          u.field_b.showDialog(gf.field_cb, 125);
-          gf.field_cb.c(-3399, ClientException.field_a);
-          gf.field_cb.e(true);
+          u.field_b.showDialog(ContentTransitionDialog.field_cb, 125);
+          ContentTransitionDialog.field_cb.replaceContent(-3399, ClientException.field_a);
+          ContentTransitionDialog.field_cb.finishResize(true);
           return;
         }
     }

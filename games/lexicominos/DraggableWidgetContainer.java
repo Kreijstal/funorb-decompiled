@@ -324,7 +324,7 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
         if (param0 >= 107) {
           if (null == SecondaryNodeDeque.field_d) {
             SecondaryNodeDeque.field_d = new fh();
-            SecondaryNodeDeque.field_d.a(ql.field_Q, 48);
+            SecondaryNodeDeque.field_d.a(ResizableModalDialog.field_Q, 48);
             SecondaryNodeDeque.field_d.field_h = 2763306;
             SecondaryNodeDeque.field_d.field_d = 6;
             SecondaryNodeDeque.field_d.field_l = 14;
@@ -339,7 +339,7 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
         field_M = (da) null;
         if (null == SecondaryNodeDeque.field_d) {
           SecondaryNodeDeque.field_d = new fh();
-          SecondaryNodeDeque.field_d.a(ql.field_Q, 48);
+          SecondaryNodeDeque.field_d.a(ResizableModalDialog.field_Q, 48);
           SecondaryNodeDeque.field_d.field_h = 2763306;
           SecondaryNodeDeque.field_d.field_d = 6;
           SecondaryNodeDeque.field_d.field_l = 14;

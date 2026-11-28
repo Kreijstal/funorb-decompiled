@@ -27,7 +27,7 @@ final class kc extends IntrusiveNode {
     int field_l;
 
     final static void a(byte param0) {
-        l.field_d.b(-56, new jk());
+        l.field_d.replaceContent(-56, new GuestPlayConfirmationForm());
         if (param0 >= -126) {
           kc.a((byte) -99);
         }

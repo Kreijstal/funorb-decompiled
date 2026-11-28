@@ -304,7 +304,7 @@ final class LevelRenderer {
             this.field_c[var6].syncPlayerPosition(false, var22[var6]);
           }
           if (!hn.field_t) {
-            ue.field_N.drawOpaque(0, 0);
+            RegistrationAgreementPane.field_N.drawOpaque(0, 0);
           } else {
             qr.field_l.a(this.field_s.field_e, 28580);
           }
@@ -754,7 +754,7 @@ final class LevelRenderer {
           if (hn.field_t) {
             qr.field_l.a(this.field_s.field_e, 28580);
           } else {
-            ue.field_N.drawOpaque(0, 0);
+            RegistrationAgreementPane.field_N.drawOpaque(0, 0);
           }
           sc.a(param3, ProxyAuthenticationRequiredException.field_f);
           var13Lifetime1 = param4.getSimulationPhase(9979);
@@ -1469,7 +1469,7 @@ final class LevelRenderer {
           }
           if (param0) {
             if (!hn.field_t) {
-              ue.field_N.drawOpaque(0, 0);
+              RegistrationAgreementPane.field_N.drawOpaque(0, 0);
             } else {
               qr.field_l.a(this.field_s.field_e, 28580);
             }

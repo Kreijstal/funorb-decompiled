@@ -212,7 +212,7 @@ class UiWidget extends IntrusiveNode {
                 var5 != 0) {
                 this.handleWheel(param2, KeyHandler.field_a, this, ni.field_e, 63, ke.field_b, param3);
                 if (gh.field_c != 0) {
-                  if (this.pointerPressed(this, di.field_b, gh.field_c, oc.field_e, param3, (byte) 88, param2)) {
+                  if (this.pointerPressed(this, FullscreenNoticeType.field_b, gh.field_c, oc.field_e, param3, (byte) 88, param2)) {
                     param0 = false;
                   } else {
                     this.blur(true);
@@ -287,7 +287,7 @@ class UiWidget extends IntrusiveNode {
                 return param0;
               }
               if (gh.field_c != 0) {
-                if (this.pointerPressed(this, di.field_b, gh.field_c, oc.field_e, param3, (byte) 88, param2)) {
+                if (this.pointerPressed(this, FullscreenNoticeType.field_b, gh.field_c, oc.field_e, param3, (byte) 88, param2)) {
                   param0 = false;
                 } else {
                   if (var5 != 0) {
@@ -359,7 +359,7 @@ class UiWidget extends IntrusiveNode {
           if (param0) {
             if (ke.field_b == 0) {
               if (gh.field_c != 0) {
-                if (!this.pointerPressed(this, di.field_b, gh.field_c, oc.field_e, param3, (byte) 88, param2)) {
+                if (!this.pointerPressed(this, FullscreenNoticeType.field_b, gh.field_c, oc.field_e, param3, (byte) 88, param2)) {
                   if (var5 != 0) {
                     this.blur(true);
                     if (var7 != 0) {
@@ -400,7 +400,7 @@ class UiWidget extends IntrusiveNode {
             }
             if (var5 == 0) {
               if (gh.field_c != 0 &&
-                this.pointerPressed(this, di.field_b, gh.field_c, oc.field_e, param3, (byte) 88, param2)) {
+                this.pointerPressed(this, FullscreenNoticeType.field_b, gh.field_c, oc.field_e, param3, (byte) 88, param2)) {
                 param0 = false;
               }
               if (0 != fb.field_n) {
@@ -433,7 +433,7 @@ class UiWidget extends IntrusiveNode {
             }
             this.handleWheel(param2, KeyHandler.field_a, this, ni.field_e, 63, ke.field_b, param3);
             if (gh.field_c != 0) {
-              if (this.pointerPressed(this, di.field_b, gh.field_c, oc.field_e, param3, (byte) 88, param2)) {
+              if (this.pointerPressed(this, FullscreenNoticeType.field_b, gh.field_c, oc.field_e, param3, (byte) 88, param2)) {
                 param0 = false;
               } else {
                 this.blur(true);
@@ -900,8 +900,8 @@ class UiWidget extends IntrusiveNode {
     final static void a(byte param0, int param1, int param2) {
         if (AccountNameAvailabilityValidator.field_n != null &&
           AccountNameAvailabilityValidator.field_n.length >= param1) {
-          if (null == se.field_B) {
-            se.field_B = new int[2 * param1];
+          if (null == GuestPlayConfirmationForm.field_B) {
+            GuestPlayConfirmationForm.field_B = new int[2 * param1];
             if (null == PcmOutputWorker.field_g ||
               !(PcmOutputWorker.field_g.length >= param1)) {
               PcmOutputWorker.field_g = new int[2 * param1];
@@ -963,7 +963,7 @@ class UiWidget extends IntrusiveNode {
               }
             }
           } else {
-            if (param1 <= se.field_B.length) {
+            if (param1 <= GuestPlayConfirmationForm.field_B.length) {
               if (null == PcmOutputWorker.field_g ||
                 !(PcmOutputWorker.field_g.length >= param1)) {
                 PcmOutputWorker.field_g = new int[2 * param1];
@@ -989,7 +989,7 @@ class UiWidget extends IntrusiveNode {
                 vl.field_s = new boolean[param1 * 2];
               }
             } else {
-              se.field_B = new int[2 * param1];
+              GuestPlayConfirmationForm.field_B = new int[2 * param1];
               if (null == PcmOutputWorker.field_g ||
                 !(PcmOutputWorker.field_g.length >= param1)) {
                 PcmOutputWorker.field_g = new int[2 * param1];
@@ -1063,9 +1063,9 @@ class UiWidget extends IntrusiveNode {
           return;
         }
         AccountNameAvailabilityValidator.field_n = new int[param1 * 2];
-        if (null == se.field_B ||
-          !(param1 <= se.field_B.length)) {
-          se.field_B = new int[2 * param1];
+        if (null == GuestPlayConfirmationForm.field_B ||
+          !(param1 <= GuestPlayConfirmationForm.field_B.length)) {
+          GuestPlayConfirmationForm.field_B = new int[2 * param1];
         }
         if (null == PcmOutputWorker.field_g ||
           !(PcmOutputWorker.field_g.length >= param1)) {

@@ -388,7 +388,7 @@ final class je {
         int var4;
         int var5;
         int var6;
-        if (ba.field_M) {
+        if (RegistrationAgreementPane.field_M) {
           var3 = param2.field_i - 4;
           if (param2.field_a ||
             !param2.field_V) {
@@ -898,7 +898,7 @@ final class je {
             ne.a(20, -101);
             uf.field_p[jf.b((byte) 96)] = new gf(param0, param1, 8);
             lj.field_r = lj.field_r + 10;
-            rg.field_sb = rg.field_sb - 10;
+            ProgressMessageDialog.field_sb = ProgressMessageDialog.field_sb - 10;
           }
           if (param2.field_r < 0) {
             param2.field_S = false;
@@ -1165,10 +1165,10 @@ final class je {
             } else {
               if (var10 == 0) {
                 if (!(tb.field_c >= 0) ||
-                  !(tb.field_c < rg.field_tb.length)) {
+                  !(tb.field_c < ProgressMessageDialog.field_tb.length)) {
                   tb.field_c = 0;
                 }
-                var7 = rg.field_tb[tb.field_c];
+                var7 = ProgressMessageDialog.field_tb[tb.field_c];
               } else {
                 if (!(tb.field_c >= 0) ||
                   !(tb.field_c < pc.field_f.length)) {
@@ -2063,7 +2063,7 @@ final class je {
         if (field_u == field_N[cm.field_o]) {
           BufferedRandomAccessFile.a(cm.field_o, false);
         }
-        if (rg.field_sb > 0 &&
+        if (ProgressMessageDialog.field_sb > 0 &&
           field_u == field_N[cm.field_o] &&
           ValidatedTextField.field_V) {
           fn.a(10, 245, 3);
@@ -2818,7 +2818,7 @@ final class je {
               field_I[var2][var0].field_U = -1;
               nd.field_d.a((var0 - 1) * 32, var2 * 32, false, var0 * 32, var2 * 32);
               lj.field_r = lj.field_r + 10;
-              rg.field_sb = rg.field_sb - 10;
+              ProgressMessageDialog.field_sb = ProgressMessageDialog.field_sb - 10;
               var1 = 1;
             }
           }

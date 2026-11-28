@@ -163,7 +163,7 @@ final class SceneWidgetPart012 extends SceneWidget {
           UiComponentPart011.sceneWidgetState0035 = new SceneWidget(0L, (SceneWidget) null);
           UiComponentPart011.sceneWidgetState0035.performAction1768(MixedSupport023.mixedSupport006State0001.sceneWidgetPart011State0001, -16834);
           UiComponentPart011.sceneWidgetState0035.performAction1768(IterableNodeCollection.sceneWidgetState0126, -16834);
-          UiComponentPart019.performAction1048(5);
+          BirthDateChatEnableForm.performAction1048(5);
           return;
         }
         NetworkSupport001.sceneWidgetState0003.performAction1768(DirectByteStorage.sceneWidgetState0034, -16834);
@@ -172,7 +172,7 @@ final class SceneWidgetPart012 extends SceneWidget {
         UiComponentPart011.sceneWidgetState0035 = new SceneWidget(0L, (SceneWidget) null);
         UiComponentPart011.sceneWidgetState0035.performAction1768(MixedSupport023.mixedSupport006State0001.sceneWidgetPart011State0001, -16834);
         UiComponentPart011.sceneWidgetState0035.performAction1768(IterableNodeCollection.sceneWidgetState0126, -16834);
-        UiComponentPart019.performAction1048(5);
+        BirthDateChatEnableForm.performAction1048(5);
     }
 
     SceneWidgetPart012(String stringArgument1, String stringArgument2, long longArgument3) {

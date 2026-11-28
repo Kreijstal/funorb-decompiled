@@ -15,7 +15,7 @@ final class TermsPanel extends WidgetContainer implements TextHotspotListener, W
         try {
           if (param1 == this.field_E) {
             tr.a(12);
-            this.field_F.p(-76);
+            this.field_F.closeDialog(-76);
           }
           if (param3 > 50) {
             return;
@@ -97,10 +97,10 @@ final class TermsPanel extends WidgetContainer implements TextHotspotListener, W
         }
     }
 
-    private final String a(int param0) {
+    private final String getAgreementLinkClosingTag(int param0) {
         String discarded$0 = null;
         if (param0 != -28759) {
-          discarded$0 = this.a(-99);
+          discarded$0 = this.getAgreementLinkClosingTag(-99);
           return "</col></u>";
         }
         return "</col></u>";
@@ -117,7 +117,7 @@ final class TermsPanel extends WidgetContainer implements TextHotspotListener, W
           this.field_F = param0;
           this.field_E = new InteractiveWidget(tj.field_a, (WidgetListener) null);
           this.field_E.renderer = (WidgetRenderer) ((Object) new ff());
-          var7 = lga.a(true, new String[]{this.d((byte) -121), this.a(-28759)}, aja.field_m);
+          var7 = lga.a(true, new String[]{this.getAgreementLinkOpeningTag((byte) -121), this.getAgreementLinkClosingTag(-28759)}, aja.field_m);
           var3 = 20;
           var4 = new DefaultWidgetRenderer(jca.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, jca.field_a.field_u, -1, 2147483647, true);
           this.field_D = new LinkTextWidget(var7, var4);
@@ -175,7 +175,7 @@ final class TermsPanel extends WidgetContainer implements TextHotspotListener, W
         }
     }
 
-    private final String d(byte param0) {
+    private final String getAgreementLinkOpeningTag(byte param0) {
         if (param0 > -89) {
           this.field_D = (LinkTextWidget) null;
           return "<u=2164A2><col=2164A2>";

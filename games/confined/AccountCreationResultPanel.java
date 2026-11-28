@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends dh implements WidgetActivationListener {
+final class AccountCreationResultPanel extends ProgressMessageDialog implements WidgetActivationListener {
     static ResourceArchive field_Bb;
     private boolean field_Fb;
     private AccountRegistrationPanel field_Hb;
@@ -17,7 +17,7 @@ final class AccountCreationResultPanel extends dh implements WidgetActivationLis
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        jn var5 = null;
+        DialogMessagePane var5 = null;
         int var6 = 0;
         InteractiveWidget var7 = null;
         var6 = Confined.field_J ? 1 : 0;
@@ -42,33 +42,33 @@ final class AccountCreationResultPanel extends dh implements WidgetActivationLis
               }
             }
           }
-          var5 = new jn((dh) (this), fd.field_k, var4);
+          var5 = new DialogMessagePane((ProgressMessageDialog) (this), fd.field_k, var4);
           if (!param2.success) {
             if (!this.field_Gb) {
               if (param2.statusCode != 5) {
-                var5.a(0, GameAppletShell.field_i, -1);
+                var5.addActionButton(0, GameAppletShell.field_i, -1);
               } else {
-                var5.a(0, ei.field_nb, 11);
-                var5.a(param0 + 96, al.field_c, 17);
+                var5.addActionButton(0, FullscreenStatusDialog.field_nb, 11);
+                var5.addActionButton(param0 + 96, al.field_c, 17);
               }
             } else {
-              var5.a(gi.field_fb, (WidgetEventListener) (this), false);
+              var5.addListenerButton(gi.field_fb, (WidgetEventListener) (this), false);
             }
             if (param2.statusCode == 3) {
-              var5.a(0, ui.field_d, 7);
+              var5.addActionButton(0, ui.field_d, 7);
             } else {
               if (6 == param2.statusCode) {
-                var5.a(0, NetworkArchiveRequest.field_y, 9);
+                var5.addActionButton(0, NetworkArchiveRequest.field_y, 9);
               }
             }
           } else {
             if (param2.field_i) {
-              this.a((UiWidget) (new pi(this)), (byte) -72);
+              this.replaceContent((UiWidget) (new RegistrationAgreementPane(this)), (byte) -72);
               return;
             }
-            var5.a(gi.field_fb, (WidgetEventListener) (this), false);
+            var5.addListenerButton(gi.field_fb, (WidgetEventListener) (this), false);
           }
-          this.a((UiWidget) (var5), (byte) -72);
+          this.replaceContent((UiWidget) (var5), (byte) -72);
           if (param0 == -96) {
             return;
           }
@@ -99,7 +99,7 @@ final class AccountCreationResultPanel extends dh implements WidgetActivationLis
         }
         try {
           LabeledWidgetContainer.j(31);
-          this.n(10);
+          this.closeDialog(10);
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "v.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -138,7 +138,7 @@ final class AccountCreationResultPanel extends dh implements WidgetActivationLis
         return super.advanceDialogAnimation(-6);
     }
 
-    final void o(int param0) {
+    final void showAccountCreationConnectionFailure(int param0) {
         this.showAccountCreationResult((byte) -96, true, gd.createAccountErrorResult(4, ClientException.field_a, 248));
         if (param0 < 107) {
           AccountCreationResultPanel.clearStaticReferences((byte) -117);

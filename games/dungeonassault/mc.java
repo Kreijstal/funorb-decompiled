@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class mc extends DefaultTextWidgetRenderer {
-    static r field_x;
+    static FullscreenNoticeType field_x;
     static RgbSprite[] field_w;
 
     public final void paintWidget(byte param0, UiWidget param1, int param2, int param3, boolean param4) {
@@ -111,6 +111,6 @@ class mc extends DefaultTextWidgetRenderer {
     }
 
     static {
-        field_x = new r();
+        field_x = new FullscreenNoticeType();
     }
 }

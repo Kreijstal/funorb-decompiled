@@ -57,19 +57,19 @@ final class kj implements WidgetActionListener {
           PcmResampler.field_e = null;
           DefaultTextWidgetRenderer.field_k = false;
           if (qi.field_b) {
-            nb.field_b.l(54);
+            nb.field_b.showConnectionFailure(54);
             return;
           }
           var1 = MouseInputHandler.field_b;
           if (var1 > 0) {
             if (var1 != 1) {
-              PcmResampler.field_e = MessageKeys.a(new String[]{Integer.toString(var1)}, -1, na.field_X);
+              PcmResampler.field_e = MessageKeys.a(new String[]{Integer.toString(var1)}, -1, ProgressDialog.field_X);
             } else {
               PcmResampler.field_e = ol.field_Lb;
             }
             PcmResampler.field_e = bj.a(new CharSequence[]{(CharSequence) ((Object) PcmResampler.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) mm.field_h)}, (byte) -103);
           }
-          nb.field_b.h((byte) -126);
+          nb.field_b.closeDialog((byte) -126);
           RichTextWidget.a(param0 ^ -24476);
           return;
         }
@@ -77,18 +77,18 @@ final class kj implements WidgetActionListener {
         PcmResampler.field_e = null;
         DefaultTextWidgetRenderer.field_k = false;
         if (qi.field_b) {
-          nb.field_b.l(54);
+          nb.field_b.showConnectionFailure(54);
         } else {
           var1 = MouseInputHandler.field_b;
           if (var1 > 0) {
             if (var1 != 1) {
-              PcmResampler.field_e = MessageKeys.a(new String[]{Integer.toString(var1)}, -1, na.field_X);
+              PcmResampler.field_e = MessageKeys.a(new String[]{Integer.toString(var1)}, -1, ProgressDialog.field_X);
             } else {
               PcmResampler.field_e = ol.field_Lb;
             }
             PcmResampler.field_e = bj.a(new CharSequence[]{(CharSequence) ((Object) PcmResampler.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) mm.field_h)}, (byte) -103);
           }
-          nb.field_b.h((byte) -126);
+          nb.field_b.closeDialog((byte) -126);
           RichTextWidget.a(param0 ^ -24476);
         }
     }

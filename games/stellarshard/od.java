@@ -19,7 +19,7 @@ final class od extends DualLinkNode {
         int var3 = stellarshard.field_B;
         if (this.field_y != null) {
           for (var2 = 0; var2 < this.field_y.length; var2++) {
-            this.field_y[var2] = vf.b(this.field_y[var2], 32768);
+            this.field_y[var2] = DialogMessagePane.b(this.field_y[var2], 32768);
           }
         }
         if (param0 != 20865) {

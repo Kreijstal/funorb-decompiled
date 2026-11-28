@@ -1076,7 +1076,7 @@ final class eg {
                     var34 = DiskCacheWorker.field_e[-4 + var25Lifetime2];
                   }
                 } else {
-                  var34 = ei.field_mb[-3 + var25Lifetime2];
+                  var34 = FullscreenStatusDialog.field_mb[-3 + var25Lifetime2];
                 }
               } else {
                 var34 = ImageProducerRasterBuffer.field_o[0];

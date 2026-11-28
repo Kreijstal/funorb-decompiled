@@ -97,7 +97,7 @@ final class dc {
           if (param0 != 2) {
             return 57;
           }
-          if (jg.field_gb == 2 &&
+          if (StandardContentDialog.field_gb == 2 &&
             RandomAccessCacheFile.a(true, this.field_d)) {
             return 1;
           }

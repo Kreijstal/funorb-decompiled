@@ -270,10 +270,10 @@ final class MixedSupport083 {
                     if (integerLocal36 == 0) {
                       stringLocal41 = NodeHashTableIterator.substituteIndexedPlaceholders(82, MixedSupport018.stringState0090, new String[]{(String) (objectLocal35)});
                       if (integerLocal49 != 0) {
-                        stringLocal41 = UiComponentPart019.stringState0348 + (String) (objectLocal35);
+                        stringLocal41 = BirthDateChatEnableForm.stringState0348 + (String) (objectLocal35);
                       }
                     } else {
-                      stringLocal41 = UiComponentPart019.stringState0348 + (String) (objectLocal35);
+                      stringLocal41 = BirthDateChatEnableForm.stringState0348 + (String) (objectLocal35);
                     }
                   }
                   MixedSupport117.stringState0515 = "<col=A00000>" + stringLocal39 + "<br>" + stringLocal41;
@@ -440,7 +440,7 @@ final class MixedSupport083 {
           PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.performAction1574(false);
           if (MixedSupport016.sceneWidgetPart013State0001 != null) {
             if (ComponentDecorator.sceneWidgetState0078.integerState0891 != 0) {
-              UiComponentPart018.performAction1032(integerArgument1 ^ 9, integerArgument5, MixedSupport016.sceneWidgetPart013State0001.getRoomId(-76));
+              RegistrationAgreementPane.performAction1032(integerArgument1 ^ 9, integerArgument5, MixedSupport016.sceneWidgetPart013State0001.getRoomId(-76));
             }
             if (MixedSupport087.sceneWidgetState0091.integerState0891 != 0) {
               MixedSupport050.booleanState0064 = true;

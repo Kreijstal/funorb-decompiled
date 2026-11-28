@@ -172,7 +172,7 @@ final class oa {
     final void a(boolean param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
-        if (ph.field_E != null) {
+        if (RegistrationAgreementPane.field_E != null) {
           return;
         }
         if (!param0) {

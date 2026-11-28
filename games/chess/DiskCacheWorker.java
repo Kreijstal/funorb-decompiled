@@ -68,7 +68,7 @@ final class DiskCacheWorker implements Runnable {
           if (param0 != -11307) {
             field_d = -9;
           }
-          var2_int = hg.a(sb.field_rb, false, sk.field_t);
+          var2_int = hg.a(StandardContentDialog.field_rb, false, sk.field_t);
           if (var2_int == 1) {
             param1 = "<img=0>" + param1;
           }

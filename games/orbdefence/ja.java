@@ -33,12 +33,12 @@ final class ja {
     private final void c(byte param0) {
         int var3 = 0;
         var3 = OrbDefence.field_D ? 1 : 0;
-        if (ob.field_K == 41) {
+        if (RegistrationAgreementPane.field_K == 41) {
           cj.a(110);
         }
         if (this.field_a == 2 &&
           !n.b((byte) -98)) {
-          if (ob.field_K == 96) {
+          if (RegistrationAgreementPane.field_K == 96) {
             if (0 < this.field_f.field_h) {
               if (this.field_f.field_h != 3) {
                 this.field_f.a(0, this.field_f.field_h - 1);
@@ -50,7 +50,7 @@ final class ja {
               this.field_f.a(0, 2);
             }
           }
-          if (97 == ob.field_K) {
+          if (97 == RegistrationAgreementPane.field_K) {
             if (this.field_f.field_h >= 2) {
               if (this.field_f.field_h == 2) {
                 this.field_f.a(0, 0);
@@ -62,7 +62,7 @@ final class ja {
               this.field_f.a(0, this.field_f.field_h + 1);
             }
           }
-          if (ob.field_K == 99) {
+          if (RegistrationAgreementPane.field_K == 99) {
             if (!(this.field_f.field_h >= 0) ||
               !(this.field_f.field_h <= 2)) {
               this.field_f.a(0, TextLayout.field_e);
@@ -73,7 +73,7 @@ final class ja {
               this.field_f.a(0, 3);
             }
           }
-          if (ob.field_K == 98) {
+          if (RegistrationAgreementPane.field_K == 98) {
             if (this.field_f.field_h == 3) {
               this.field_f.a(0, TextLayout.field_e);
               if (var3 != 0) {
@@ -91,8 +91,8 @@ final class ja {
         }
         if (this.field_a == 3) {
           this.field_f.d((byte) 101);
-          if (ob.field_K != 96 &&
-            97 != ob.field_K) {
+          if (RegistrationAgreementPane.field_K != 96 &&
+            97 != RegistrationAgreementPane.field_K) {
             return;
           }
           while (!this.e(this.field_f.field_h, -58)) {
@@ -109,8 +109,8 @@ final class ja {
           return;
         }
         this.field_f.e((byte) -74);
-        if (ob.field_K == 98 ||
-          ob.field_K == 99) {
+        if (RegistrationAgreementPane.field_K == 98 ||
+          RegistrationAgreementPane.field_K == 99) {
           while (!this.e(this.field_f.field_h, -30)) {
             this.field_f.e((byte) -74);
             if (var3 != 0) {
@@ -360,7 +360,7 @@ final class ja {
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (!nf.e(32722)))) {
           stackIn_37_0 = -14;
-          stackIn_37_1 = ~ob.field_K;
+          stackIn_37_1 = ~RegistrationAgreementPane.field_K;
           if (var3 == 0) {
             if (stackIn_37_0 == stackIn_37_1) {
               if (this.field_a != 1) {
@@ -1035,7 +1035,7 @@ final class ja {
             }
             if (null == PacketBuffer.field_k) {
               var6Lifetime1 = param2 ? 1 : 0;
-              ud.a(8, ProxyAuthenticationRequiredException.field_d, var6Lifetime1 != 0, ob.field_I.field_B + ob.field_I.field_E, 6, 6, ob.field_I, ob.field_I.field_E, (byte) 5, 320, 240, qc.field_f);
+              ud.a(8, ProxyAuthenticationRequiredException.field_d, var6Lifetime1 != 0, RegistrationAgreementPane.field_I.field_B + RegistrationAgreementPane.field_I.field_E, 6, 6, RegistrationAgreementPane.field_I, RegistrationAgreementPane.field_I.field_E, (byte) 5, 320, 240, qc.field_f);
               if (var9 == 0) {
                 break regionExit1;
               }
@@ -1379,7 +1379,7 @@ final class ja {
               hg.field_ab.drawAdditive(var10, var11_int - 5, 192);
               TextFieldValidator.field_g[var9_int].drawScaledAdditive(var10, var11_int, 80, 60, 255);
             }
-            ob.field_I.drawCentred(gb.field_g[var9_int], 40 + var10, var11_int + 70, 16777215, 0);
+            RegistrationAgreementPane.field_I.drawCentred(gb.field_g[var9_int], 40 + var10, var11_int + 70, 16777215, 0);
             var9_int++;
           }
         }
@@ -1395,7 +1395,7 @@ final class ja {
         }
         if (decompiledFrameRemainder2) {
           boolean decompiledFrameRemainder0 = true;
-          var10_ref_sc = ob.field_I;
+          var10_ref_sc = RegistrationAgreementPane.field_I;
           var11 = SingleChildWidgetContainer.field_x;
           if (!var11.field_h) {
             var9 = ql.field_f;
@@ -1520,18 +1520,18 @@ final class ja {
           var9 = PcmOutputWorker.field_a;
         }
         if (decompiledFrameCompleted0) {
-          stackIn_93_0 = ob.field_I.field_H;
+          stackIn_93_0 = RegistrationAgreementPane.field_I.field_H;
           stackIn_93_1 = 240;
         }
         var10Lifetime1 = stackIn_93_0 + stackIn_93_1;
-        ob.field_I.drawCentred(var9, 320, var10Lifetime1, 16777215, -1);
+        RegistrationAgreementPane.field_I.drawCentred(var9, 320, var10Lifetime1, 16777215, -1);
         if (!n.b((byte) -92)) {
           stackIn_96_0 = LabeledWidgetContainer.field_L;
         } else {
           stackIn_96_0 = qk.field_a;
         }
         var9Lifetime1 = stackIn_96_0;
-        jd.field_c.drawCentred(var9Lifetime1, 320, 220 + ob.field_I.field_H + 140, 16777215, -1);
+        jd.field_c.drawCentred(var9Lifetime1, 320, 220 + RegistrationAgreementPane.field_I.field_H + 140, 16777215, -1);
     }
 
     private final void a(byte param0, boolean param1, int param2) {
@@ -1581,7 +1581,7 @@ final class ja {
         }
         stackIn_13_0 = (param1) ? 16759807 : 16777215;
         var11 = stackIn_13_0;
-        var12 = ob.field_I;
+        var12 = RegistrationAgreementPane.field_I;
         var13 = -var12.field_B + (-ProxyAuthenticationRequiredException.field_d[0].field_t + (var10 - ProxyAuthenticationRequiredException.field_d[6].field_t)) - var12.field_H;
         var13Lifetime1 = -16;
         if (var7 != 12 &&
@@ -2107,7 +2107,7 @@ final class ja {
               }
               ((BinaryBitmapFont) (Object) stackIn_21_0).drawString(stackIn_21_1, stackIn_21_2 + stackIn_22_3, var8 * (-(var11 / 2) + var12) + var7 / 2 + var5, 16777215, 0);
             } else {
-              ob.field_I.drawString(var9[var12], var4 + 12, (var12 - var11 / 2) * var8 + (var5 + var7 / 2), 16777215, 0);
+              RegistrationAgreementPane.field_I.drawString(var9[var12], var4 + 12, (var12 - var11 / 2) * var8 + (var5 + var7 / 2), 16777215, 0);
             }
             var12++;
             continue;
@@ -2120,7 +2120,7 @@ final class ja {
         if (stackIn_26_0 > -74) {
           field_d = (String) null;
         }
-        ob.field_I.drawCentred(PcmOutputWorker.formatCurrentAndTotal(PcmOutputWorker.field_i.length, (byte) -2, na.field_a + 1), 555, 380, 16777215, -1);
+        RegistrationAgreementPane.field_I.drawCentred(PcmOutputWorker.formatCurrentAndTotal(PcmOutputWorker.field_i.length, (byte) -2, na.field_a + 1), 555, 380, 16777215, -1);
         if (na.field_a != 0) {
           if (na.field_a != 1) {
             boolean decompiledFrameRemainder1 = true;
@@ -2514,21 +2514,21 @@ final class ja {
                     discarded$0 = this.a((byte) -12);
                     wd.field_o[this.field_a] = 230;
                     il.field_f.field_i = wf.field_c.field_e[0].field_d;
-                    var2Lifetime1 = ob.field_I.field_H + 160;
-                    var3Lifetime1 = ob.field_I.field_B + (ob.field_I.field_E + 4);
-                    ob.field_I.drawCentred(RasterBuffer.field_b, 320, var2Lifetime1, 16777215, -1);
-                    stackIn_36_0 = ob.field_I;
+                    var2Lifetime1 = RegistrationAgreementPane.field_I.field_H + 160;
+                    var3Lifetime1 = RegistrationAgreementPane.field_I.field_B + (RegistrationAgreementPane.field_I.field_E + 4);
+                    RegistrationAgreementPane.field_I.drawCentred(RasterBuffer.field_b, 320, var2Lifetime1, 16777215, -1);
+                    stackIn_36_0 = RegistrationAgreementPane.field_I;
                     stackIn_36_1 = -113;
                     stackIn_36_2 = false;
                     stackIn_37_3 = (0 != il.field_f.field_i);
                     stackIn_40_4 = (TextLayout.field_f != 0);
                     ((BinaryBitmapFont) (Object) stackIn_36_0).drawCentred(sa.$cfr$intArgs$a$c7de0d339b2a(stackIn_36_1, stackIn_36_2, stackIn_37_3, stackIn_40_4), 320, var3Lifetime1 + var2Lifetime1, 16777215, -1);
-                    stackIn_42_0 = ob.field_I;
+                    stackIn_42_0 = RegistrationAgreementPane.field_I;
                     stackIn_42_1 = false;
                     stackIn_43_2 = (TextLayout.field_f != 0);
                     stackIn_46_3 = (0 != il.field_f.field_i);
                     ((BinaryBitmapFont) (Object) stackIn_42_0).drawCentred(sd.a(stackIn_42_1, stackIn_43_2, stackIn_46_3, 30775), 320, var2Lifetime1 + 5 * var3Lifetime1 + 30, 16777215, -1);
-                    stackIn_48_0 = ob.field_I;
+                    stackIn_48_0 = RegistrationAgreementPane.field_I;
                     stackIn_48_1 = -14189;
                     stackIn_49_2 = (il.field_f.field_i != 0);
                     stackIn_52_3 = (TextLayout.field_f != 0);
@@ -2746,20 +2746,20 @@ final class ja {
           var17 = this.field_h;
         }
         if (var17 == -1) {
-          ob.field_I.drawCentred(kd.field_f, 320, 264, 16777215, -1);
+          RegistrationAgreementPane.field_I.drawCentred(kd.field_f, 320, 264, 16777215, -1);
           if (!n.b((byte) 62)) {
             return;
           }
-          ob.field_I.drawCentred(qk.field_a, 320, 32 + (3 * ob.field_I.field_H + 232), 16777215, -1);
+          RegistrationAgreementPane.field_I.drawCentred(qk.field_a, 320, 32 + (3 * RegistrationAgreementPane.field_I.field_H + 232), 16777215, -1);
           if (var24 == 0) {
             return;
           }
         }
         var14Lifetime1 = 220;
         var5Lifetime2 = 470;
-        ob.field_I.drawCentred(BufferedRandomAccessFile.field_e, var5Lifetime2 - 1, var14Lifetime1, 0, 0);
-        ob.field_I.drawCentred(BufferedRandomAccessFile.field_e, var5Lifetime2, -1 + var14Lifetime1, 0, 0);
-        ob.field_I.drawCentred(BufferedRandomAccessFile.field_e, var5Lifetime2, var14Lifetime1, 11154431, -1);
+        RegistrationAgreementPane.field_I.drawCentred(BufferedRandomAccessFile.field_e, var5Lifetime2 - 1, var14Lifetime1, 0, 0);
+        RegistrationAgreementPane.field_I.drawCentred(BufferedRandomAccessFile.field_e, var5Lifetime2, -1 + var14Lifetime1, 0, 0);
+        RegistrationAgreementPane.field_I.drawCentred(BufferedRandomAccessFile.field_e, var5Lifetime2, var14Lifetime1, 11154431, -1);
         var14Lifetime1 += 24;
         var20 = Integer.toString(100 * wd.field_D[var17]);
         if (var11[var17] &&
@@ -2769,20 +2769,20 @@ final class ja {
         boolean decompiledFrameRemainder1 = true;
         boolean decompiledFrameCompleted0 = true;
         boolean decompiledFrameRemainder0 = true;
-        ob.field_I.drawCentred(var20, -1 + var5Lifetime2, var14Lifetime1, 0, 0);
-        ob.field_I.drawCentred(var20, var5Lifetime2, -1 + var14Lifetime1, 0, 0);
-        ob.field_I.drawCentred(var20, var5Lifetime2, var14Lifetime1, 16777215, -1);
+        RegistrationAgreementPane.field_I.drawCentred(var20, -1 + var5Lifetime2, var14Lifetime1, 0, 0);
+        RegistrationAgreementPane.field_I.drawCentred(var20, var5Lifetime2, -1 + var14Lifetime1, 0, 0);
+        RegistrationAgreementPane.field_I.drawCentred(var20, var5Lifetime2, var14Lifetime1, 16777215, -1);
         var5Lifetime2 = 470;
         var14Lifetime1 = 280;
-        ob.field_I.drawCentred(nf.field_n, -1 + var5Lifetime2, var14Lifetime1, 0, 0);
-        ob.field_I.drawCentred(nf.field_n, var5Lifetime2, -1 + var14Lifetime1, 0, 0);
-        ob.field_I.drawCentred(nf.field_n, var5Lifetime2, var14Lifetime1, 11154431, -1);
+        RegistrationAgreementPane.field_I.drawCentred(nf.field_n, -1 + var5Lifetime2, var14Lifetime1, 0, 0);
+        RegistrationAgreementPane.field_I.drawCentred(nf.field_n, var5Lifetime2, -1 + var14Lifetime1, 0, 0);
+        RegistrationAgreementPane.field_I.drawCentred(nf.field_n, var5Lifetime2, var14Lifetime1, 11154431, -1);
         if (var11[var17] &&
           0 == (var16 & 1 << var17)) {
           var14Lifetime1 += 32;
-          ob.field_I.drawCentred(var20, var5Lifetime2 - 1, var14Lifetime1, 0, 0);
-          ob.field_I.drawCentred(var20, var5Lifetime2, var14Lifetime1 - 1, 0, 0);
-          ob.field_I.drawCentred(var20, var5Lifetime2, var14Lifetime1, 16777215, -1);
+          RegistrationAgreementPane.field_I.drawCentred(var20, var5Lifetime2 - 1, var14Lifetime1, 0, 0);
+          RegistrationAgreementPane.field_I.drawCentred(var20, var5Lifetime2, var14Lifetime1 - 1, 0, 0);
+          RegistrationAgreementPane.field_I.drawCentred(var20, var5Lifetime2, var14Lifetime1, 16777215, -1);
           decompiledFrameRemainder0 = (var24 != 0);
         }
         if (decompiledFrameRemainder0) {
@@ -2810,15 +2810,15 @@ final class ja {
         var14Lifetime2 = 220;
         var5Lifetime3 = 170;
         if (var21 != 0) {
-          ob.field_I.drawCentred(BufferedSocket.field_g, -1 + var5Lifetime3, var14Lifetime2, 0, 0);
-          ob.field_I.drawCentred(BufferedSocket.field_g, var5Lifetime3, var14Lifetime2 - 1, 0, 0);
-          ob.field_I.drawCentred(BufferedSocket.field_g, var5Lifetime3, var14Lifetime2, 2293572, -1);
+          RegistrationAgreementPane.field_I.drawCentred(BufferedSocket.field_g, -1 + var5Lifetime3, var14Lifetime2, 0, 0);
+          RegistrationAgreementPane.field_I.drawCentred(BufferedSocket.field_g, var5Lifetime3, var14Lifetime2 - 1, 0, 0);
+          RegistrationAgreementPane.field_I.drawCentred(BufferedSocket.field_g, var5Lifetime3, var14Lifetime2, 2293572, -1);
         }
         if (var21 == 0 ||
           var24 != 0) {
-          ob.field_I.drawCentred(hc.field_k, var5Lifetime3 - 1, var14Lifetime2, 0, 0);
-          ob.field_I.drawCentred(hc.field_k, var5Lifetime3, -1 + var14Lifetime2, 0, 0);
-          ob.field_I.drawCentred(hc.field_k, var5Lifetime3, var14Lifetime2, 16720452, -1);
+          RegistrationAgreementPane.field_I.drawCentred(hc.field_k, var5Lifetime3 - 1, var14Lifetime2, 0, 0);
+          RegistrationAgreementPane.field_I.drawCentred(hc.field_k, var5Lifetime3, -1 + var14Lifetime2, 0, 0);
+          RegistrationAgreementPane.field_I.drawCentred(hc.field_k, var5Lifetime3, var14Lifetime2, 16720452, -1);
         }
         var22Lifetime1 = 160;
         var20Lifetime1 = AccountRequestState.field_b[var17];
@@ -2827,14 +2827,14 @@ final class ja {
           (1 << var17 & var16) == 0) {
           var20Lifetime1 = od.field_h;
         }
-        ob.field_I.drawParagraph(var20Lifetime1, -1 + var5Lifetime3 - var22Lifetime1 / 2, 8 + var14Lifetime2, var22Lifetime1, 480, 0, 0, 1, 0, ob.field_I.field_H);
-        ob.field_I.drawParagraph(var20Lifetime1, var5Lifetime3 - var22Lifetime1 / 2, 8 + var14Lifetime2 - 1, var22Lifetime1, 480, 0, 0, 1, 0, ob.field_I.field_H);
-        ob.field_I.drawParagraph(var20Lifetime1, var5Lifetime3 - var22Lifetime1 / 2, 8 + var14Lifetime2, var22Lifetime1, 480, 16777215, -1, 1, 0, ob.field_I.field_H);
+        RegistrationAgreementPane.field_I.drawParagraph(var20Lifetime1, -1 + var5Lifetime3 - var22Lifetime1 / 2, 8 + var14Lifetime2, var22Lifetime1, 480, 0, 0, 1, 0, RegistrationAgreementPane.field_I.field_H);
+        RegistrationAgreementPane.field_I.drawParagraph(var20Lifetime1, var5Lifetime3 - var22Lifetime1 / 2, 8 + var14Lifetime2 - 1, var22Lifetime1, 480, 0, 0, 1, 0, RegistrationAgreementPane.field_I.field_H);
+        RegistrationAgreementPane.field_I.drawParagraph(var20Lifetime1, var5Lifetime3 - var22Lifetime1 / 2, 8 + var14Lifetime2, var22Lifetime1, 480, 16777215, -1, 1, 0, RegistrationAgreementPane.field_I.field_H);
         var14Lifetime3 = 350;
         var5Lifetime4 = 320;
-        ob.field_I.drawCentred(gj.field_j[var17], var5Lifetime4 - 1, var14Lifetime3, 0, 0);
-        ob.field_I.drawCentred(gj.field_j[var17], var5Lifetime4, -1 + var14Lifetime3, 0, 0);
-        ob.field_I.drawCentred(gj.field_j[var17], var5Lifetime4, var14Lifetime3, 16777215, -1);
+        RegistrationAgreementPane.field_I.drawCentred(gj.field_j[var17], var5Lifetime4 - 1, var14Lifetime3, 0, 0);
+        RegistrationAgreementPane.field_I.drawCentred(gj.field_j[var17], var5Lifetime4, -1 + var14Lifetime3, 0, 0);
+        RegistrationAgreementPane.field_I.drawCentred(gj.field_j[var17], var5Lifetime4, var14Lifetime3, 16777215, -1);
         var23Lifetime1 = 200;
         if (var21 != 0) {
           RichTextLayout.field_o[var17].draw(256, var23Lifetime1);
@@ -2858,7 +2858,7 @@ final class ja {
             DelegatingCanvas.field_d.draw(256, var23Lifetime1);
           }
         }
-        var23Lifetime1 = var23Lifetime1 + ob.field_I.field_H;
+        var23Lifetime1 = var23Lifetime1 + RegistrationAgreementPane.field_I.field_H;
         return;
     }
 

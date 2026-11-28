@@ -18,27 +18,27 @@ final class IsaacRandom {
           return;
         }
         if (eh.totalScore <= 0) {
-          sh.field_c = null;
+          FullscreenNoticeType.field_c = null;
           return;
         }
         if (mg.field_d) {
-          sh.field_c = null;
+          FullscreenNoticeType.field_c = null;
           return;
         }
         if (dk.field_b) {
-          sh.field_c = null;
+          FullscreenNoticeType.field_c = null;
           return;
         }
         if (IntrusiveDeque.b((byte) 92)) {
-          sh.field_c = null;
+          FullscreenNoticeType.field_c = null;
           return;
         }
         if (ArchiveRequest.field_t != null) {
-          sh.field_c = null;
+          FullscreenNoticeType.field_c = null;
           return;
         }
         ArchiveRequest.field_t = tl.a(bc.field_b, 36, new int[]{(eh.totalScore << 6) + MouseInputHandler.field_c.field_o}, 3, qf.field_e, EmailFormatValidator.field_n, 65506, 29, DirectByteStorage.field_j);
-        sh.field_c = null;
+        FullscreenNoticeType.field_c = null;
     }
 
     private final void generateResults(int param0) {

@@ -102,7 +102,7 @@ final class bb {
           }
           DiskCacheWorker.field_e = 2;
           BirthDateValidator.field_g = 4;
-          jg.field_I = 11;
+          BirthDateChatEnableForm.field_I = 11;
           fe.field_g = 15;
           qc.field_e = 2;
           var7 = dm.a(0, param0, "largefont", param2, "lobby");
@@ -130,8 +130,8 @@ final class bb {
           var11.field_fb = 1;
           DequeWidgetContainer.field_G = new ci(0L, var8);
           DequeWidgetContainer.field_G.field_Ab = rh.a(ao.a(param0, "heading", 2993, "lobby"), param3 ^ 9527);
-          bj.field_eb = new ci(0L, (ci) null);
-          bj.field_eb.field_Ab = il.a(param3 + 105, 4210752, 120, false, false, 8421504);
+          ContentTransitionDialog.field_eb = new ci(0L, (ci) null);
+          ContentTransitionDialog.field_eb.field_Ab = il.a(param3 + 105, 4210752, 120, false, false, 8421504);
           ChessMatchState.field_o = new ci(0L, (ci) null);
           ChessMatchState.field_o.field_Ab = wh.a(93, 114, 3, 6316128, 6316128, 1);
           od.field_V = new ci(0L, (ci) null);
@@ -149,9 +149,9 @@ final class bb {
           bo.field_e = new ci(0L, var10);
           bo.field_e.field_z = 2;
           bo.field_e.field_Ab = il.a(0, 2039583, 30, true, false, 3815994);
-          e.field_M = new ci(0L, var10);
-          e.field_M.field_z = 2;
-          e.field_M.field_Ab = il.a(0, 2039583, 30, false, false, 3815994);
+          DialogMessagePane.field_M = new ci(0L, var10);
+          DialogMessagePane.field_M.field_z = 2;
+          DialogMessagePane.field_M.field_Ab = il.a(0, 2039583, 30, false, false, 3815994);
           DualLinkNode.field_j = new ci(0L, var10);
           DualLinkNode.field_j.field_z = 2;
           DualLinkNode.field_j.field_Ab = il.a(0, 2039583, 30, false, true, 3815994);
@@ -262,16 +262,16 @@ final class bb {
           fi.field_b.field_Z = dupTemp$3;
           var17 = ao.a(param0, "checkbox", 2993, "lobby");
           kj.field_g = new he(0L, var17[1], var17[0], 1, sj.field_k, (String) null);
-          bj.field_ob = new ci(0L, (ci) null);
-          bj.field_ob.field_Ab = aa.a(wk.a(param0, 1, "slideregion", "lobby"), 4);
-          bj.field_ob.field_Q = aa.a(wk.a(param0, 1, "slideregion_mouseover", "lobby"), 4);
-          bj.field_ob.field_Z = aa.a(wk.a(param0, 1, "slideregion_mouseheld", "lobby"), 4);
-          bj.field_ob.field_D = aa.a(wk.a(param0, 1, "slideregion_disabled", "lobby"), 4);
-          bf.field_K = new ci(0L, (ci) null);
-          bf.field_K.field_Ab = rh.a(ao.a(param0, "dragbar", 2993, "lobby"), -9568);
-          bf.field_K.field_Q = rh.a(ao.a(param0, "dragbar_mouseover", 2993, "lobby"), param3 - 9463);
-          bf.field_K.field_Z = rh.a(ao.a(param0, "dragbar_mouseheld", 2993, "lobby"), -9568);
-          bf.field_K.field_D = rh.a(ao.a(param0, "dragbar_disabled", 2993, "lobby"), -9568);
+          ContentTransitionDialog.field_ob = new ci(0L, (ci) null);
+          ContentTransitionDialog.field_ob.field_Ab = aa.a(wk.a(param0, 1, "slideregion", "lobby"), 4);
+          ContentTransitionDialog.field_ob.field_Q = aa.a(wk.a(param0, 1, "slideregion_mouseover", "lobby"), 4);
+          ContentTransitionDialog.field_ob.field_Z = aa.a(wk.a(param0, 1, "slideregion_mouseheld", "lobby"), 4);
+          ContentTransitionDialog.field_ob.field_D = aa.a(wk.a(param0, 1, "slideregion_disabled", "lobby"), 4);
+          DateInputWidget.field_K = new ci(0L, (ci) null);
+          DateInputWidget.field_K.field_Ab = rh.a(ao.a(param0, "dragbar", 2993, "lobby"), -9568);
+          DateInputWidget.field_K.field_Q = rh.a(ao.a(param0, "dragbar_mouseover", 2993, "lobby"), param3 - 9463);
+          DateInputWidget.field_K.field_Z = rh.a(ao.a(param0, "dragbar_mouseheld", 2993, "lobby"), -9568);
+          DateInputWidget.field_K.field_D = rh.a(ao.a(param0, "dragbar_disabled", 2993, "lobby"), -9568);
           wk.field_f = new ci(0L, (ci) null);
           wk.field_f.field_jb = wk.a(param0, 1, "upbutton", "lobby");
           wk.field_f.field_Bb = wk.a(param0, 1, "upbutton_mouseover", "lobby");
@@ -282,7 +282,7 @@ final class bb {
           jf.field_f.field_Bb = wk.a(param0, 1, "downbutton_mouseover", "lobby");
           jf.field_f.field_hb = wk.a(param0, 1, "downbutton_mouseheld", "lobby");
           jf.field_f.field_nb = wk.a(param0, 1, "downbutton_disabled", "lobby");
-          Bzip2State.field_o = new pd(0L, wk.field_f, jf.field_f, bj.field_ob, bf.field_K);
+          Bzip2State.field_o = new pd(0L, wk.field_f, jf.field_f, ContentTransitionDialog.field_ob, DateInputWidget.field_K);
           SecondaryNodeDeque.field_b = new ok(0L, (ci) null, FrameTimer.field_b, Bzip2State.field_o, pa.field_m, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -376,7 +376,7 @@ final class bb {
                 var2 = Runtime.getRuntime();
                 var4 = (Object[]) null;
                 var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
-                jg.field_K = (int)(var3.longValue() / 1048576L) + 1;
+                BirthDateChatEnableForm.field_K = (int)(var3.longValue() / 1048576L) + 1;
                 decompiledRegionSelector0 = 0;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

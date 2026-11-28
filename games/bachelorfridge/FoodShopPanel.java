@@ -750,7 +750,7 @@ final class FoodShopPanel {
               if (this.field_l.field_R != 1 ||
                 !MeshObject.field_a) {
                 if ((this.field_k.field_R == 1) &&
-                  (sh.field_I)) {
+                  (DateInputWidget.field_I)) {
                   if (this.field_a != 0) {
                     RasterBuffer.a(25, 7758);
                     if (var3 != 0) {

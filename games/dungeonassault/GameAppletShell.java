@@ -179,7 +179,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (sj.a((CharSequence) ((Object) var4), 10) &&
+                      if (ResizableModalDialog.a((CharSequence) ((Object) var4), 10) &&
                         !(ri.a((byte) 96, (CharSequence) ((Object) var4)) >= 10)) {
                         this.a((byte) -112, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
@@ -218,7 +218,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   if (stackIn_81_0 < stackIn_81_1) {
                     break;
                   }
-                  ia.field_O = true;
+                  GuestPlayConfirmationForm.field_O = true;
                   break;
                 }
               }
@@ -252,12 +252,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    nk.field_Kb = o.field_o.waitAndCountTicks(hk.field_e, -108);
+                    ProgressMessageDialog.field_Kb = o.field_o.waitAndCountTicks(hk.field_e, -108);
                     stackIn_100_0 = 0;
                   }
                   var3 = stackIn_100_0;
                   do {
-                    if (!(var3 < nk.field_Kb)) {
+                    if (!(var3 < ProgressMessageDialog.field_Kb)) {
                       this.renderAppletFrame((byte) -68);
                       NodeHashTableIterator.a(i.field_A, AwtRasterBuffer.field_h, (byte) -32);
                       break;
@@ -515,7 +515,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (ba.field_c == this &&
             !DiskCacheWorker.field_c) {
             im.field_d = true;
-            if (ia.field_O &&
+            if (GuestPlayConfirmationForm.field_O &&
               -CombatState.field_z + kd.correctedCurrentTimeMillis(-2456) > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {

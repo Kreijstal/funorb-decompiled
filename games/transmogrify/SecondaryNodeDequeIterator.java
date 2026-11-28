@@ -6,7 +6,7 @@ import java.util.*;
 final class SecondaryNodeDequeIterator implements Iterator {
     static IntrusiveDeque field_f;
     private DualLinkNode field_a;
-    static ik field_d;
+    static ProgressMessageDialog field_d;
     private SecondaryNodeDeque field_c;
     static String field_e;
     private DualLinkNode field_b;
@@ -44,7 +44,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
               }
               var4.unlink(5);
             } else {
-              d.a((Throwable) null, 13, "A1: " + ik.q(48));
+              d.a((Throwable) null, 13, "A1: " + ProgressMessageDialog.q(48));
               pc.a(1);
             }
           } else {
@@ -104,7 +104,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         field_e = null;
         field_f = null;
         if (param0 != 20738) {
-          field_d = (ik) null;
+          field_d = (ProgressMessageDialog) null;
         }
     }
 

@@ -380,17 +380,17 @@ final class SectorCacheStore {
             if (var15 < 0) {
               var15 += 64;
             }
-            if (null != n.field_kb[var15][param0.y]) {
-              for (var13 = 0; n.field_kb[var15][param0.y].length > var13; var13++) {
+            if (null != ContentTransitionDialog.field_kb[var15][param0.y]) {
+              for (var13 = 0; ContentTransitionDialog.field_kb[var15][param0.y].length > var13; var13++) {
                 if (var13 >= 0) {
                   var8 = var13;
-                  if (eh.a(var2_int, -30917, n.field_kb[var15][param0.y], var8, param0)) {
+                  if (eh.a(var2_int, -30917, ContentTransitionDialog.field_kb[var15][param0.y], var8, param0)) {
                     if (var11 == 0) {
                       param0.field_Q = 8 * param0.field_Q / 10;
                       var11 = 1;
                     }
-                    if (n.field_kb[var15][param0.y][var8] < ea.field_g.length) {
-                      var9 = ea.field_g[n.field_kb[var15][param0.y][var8]];
+                    if (ContentTransitionDialog.field_kb[var15][param0.y][var8] < ea.field_g.length) {
+                      var9 = ea.field_g[ContentTransitionDialog.field_kb[var15][param0.y][var8]];
                       if (var9 != null) {
                         var9.field_Q = param0.field_Q;
                       }

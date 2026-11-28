@@ -141,7 +141,7 @@ abstract class b extends DualLinkNode {
                 if (param1) {
                   wf.field_m[var23Lifetime2] = var27Lifetime1 >> uc.field_b;
                   fi.field_c[var23Lifetime2] = var28Lifetime1 >> uc.field_b;
-                  jh.field_y[var23Lifetime2] = var29Lifetime1;
+                  StripedProgressWidget.field_y[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
                 continue;

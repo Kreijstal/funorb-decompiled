@@ -86,7 +86,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             return;
           }
           if (param3 <= 105) {
-            vk.field_g = rh.createAccountSuggestionsResult(124, param1);
+            vk.field_g = StandardContentDialog.createAccountSuggestionsResult(124, param1);
             return;
           }
           vk.field_g = ij.createAccountErrorResult(param3, param0, true);
@@ -133,15 +133,15 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             return true;
           }
           var1_int = 0;
-          if (qd.field_O[86] &&
-            qd.field_O[82]) {
+          if (GuestPlayConfirmationForm.field_O[86] &&
+            GuestPlayConfirmationForm.field_O[82]) {
             var1_int = 3;
-          } else if (!qd.field_O[86] &&
-            qd.field_O[82]) {
+          } else if (!GuestPlayConfirmationForm.field_O[86] &&
+            GuestPlayConfirmationForm.field_O[82]) {
             var1_int = 1;
           } else {
-            if (qd.field_O[86] &&
-              !qd.field_O[82]) {
+            if (GuestPlayConfirmationForm.field_O[86] &&
+              !GuestPlayConfirmationForm.field_O[82]) {
               var1_int = 2;
             }
           }

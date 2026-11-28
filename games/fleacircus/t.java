@@ -105,11 +105,11 @@ final class t {
         int[] var18;
         regionExit1: {
           var14 = fleas.field_A ? 1 : 0;
-          var3 = lk.field_Q;
+          var3 = StripedProgressWidget.field_Q;
           this.b(2, nb.field_g);
           if (!DiskArchiveRequest.c((byte) 122)) {
             if (m.field_b == null) {
-              m.field_b = bm.a(false, 3, 1, 10, 40);
+              m.field_b = DialogMessagePane.a(false, 3, 1, 10, 40);
             }
             var4_ref_ll = m.field_b;
             if (!var4_ref_ll.field_l) {
@@ -227,7 +227,7 @@ final class t {
         int var2 = 150;
         MatchingFieldValidator.field_p.drawWaveText(bh.field_u[0], 320, var2 + 2 * MatchingFieldValidator.field_p.field_N, 0, -1, PacketBuffer.field_j / 3);
         MatchingFieldValidator.field_p.drawWaveText(DiskArchiveRequest.c((byte) 111) ? nc.field_b : bh.field_u[1], 320, var2 + (int)((double)MatchingFieldValidator.field_p.field_N * 3.5), 0, -1, PacketBuffer.field_j / 3);
-        jj.field_P.draw((640 - jj.field_P.field_w) / 2, var2 + MatchingFieldValidator.field_p.field_N * 4);
+        ResizableModalDialog.field_P.draw((640 - ResizableModalDialog.field_P.field_w) / 2, var2 + MatchingFieldValidator.field_p.field_N * 4);
         MatchingFieldValidator.field_p.drawCentred(hm.field_h + wi.field_b, 320, 200 + var2, 0, -1);
         AccountRegistrationPanel.field_L.a(50, 100, 0, -4575, 380);
         fb.field_a.a(50, 100, 0, -4575, 380);
@@ -279,10 +279,10 @@ final class t {
           if (var8 == null) {
             var8 = "";
           }
-          var9 = jj.field_X + " " + var8;
+          var9 = ResizableModalDialog.field_X + " " + var8;
           var10.drawParagraph(var9, 165, -100 + var3, 310, 215, 0, -1, 1, 2, var10.field_N);
           var10.drawCentred(kf.a(var6 != 0, -121, var7 != 0, var5 != 0), 320, 90 + (var3 + 3 * var4 + 10), 0, -1);
-          var10.drawParagraph(ic.a(param0 - 2634, var6 != 0, var7 != 0, var5 != 0), 160, 90 + var4 * 4 + (var3 + 10), 320, 100, 0, -1, 1, 0, var10.field_N);
+          var10.drawParagraph(FullscreenStatusDialog.a(param0 - 2634, var6 != 0, var7 != 0, var5 != 0), 160, 90 + var4 * 4 + (var3 + 10), 320, 100, 0, -1, 1, 0, var10.field_N);
         } else {
           var10.drawCentred(nc.field_b, 320, 240, 0, -1);
           AccountRegistrationPanel.field_L.a(50, 100, 0, param0 - 7333, 380);
@@ -335,7 +335,7 @@ final class t {
         var4 = 164;
         var5 = 110;
         this.b(2, AccountRequestState.field_e);
-        og.a(var5 - pd.field_k[0].field_r, pd.field_k, 91, var4 - pd.field_k[0].field_x, pd.field_k[6].field_r + (pd.field_k[0].field_r + 80) - 8, 312 - (-pd.field_k[0].field_x - pd.field_k[2].field_x));
+        RegistrationAgreementPane.a(var5 - pd.field_k[0].field_r, pd.field_k, 91, var4 - pd.field_k[0].field_x, pd.field_k[6].field_r + (pd.field_k[0].field_r + 80) - 8, 312 - (-pd.field_k[0].field_x - pd.field_k[2].field_x));
         if (!param0) {
           stackIn_5_0 = kh.field_b;
         } else {
@@ -403,14 +403,14 @@ final class t {
           var15.drawCentred(wa.field_f[var8], 320, 230, 0, -1);
           stackIn_54_0 = (0 == (var6 & 1 << var8)) ? 0 : 1;
           var10 = stackIn_54_0;
-          stackIn_56_0 = lk.field_Q;
+          stackIn_56_0 = StripedProgressWidget.field_Q;
           if (var10 != 0) {
             stackIn_57_1 = vk.field_M;
           } else {
             stackIn_57_1 = jk.field_i;
           }
           stackIn_59_2 = 320;
-          stackIn_59_3 = lk.field_Q.field_N + 225;
+          stackIn_59_3 = StripedProgressWidget.field_Q.field_N + 225;
           if (var10 == 0) {
             stackIn_60_4 = 8388608;
           } else {
@@ -419,7 +419,7 @@ final class t {
           ((BitmapFont) (Object) stackIn_56_0).drawCentred(stackIn_57_1, stackIn_59_2, stackIn_59_3, stackIn_60_4, -1);
           var11 = 200;
           var11 += 60;
-          lk.field_Q.drawParagraph(NameSuggestionsPanel.field_J[var8], 100, var11, 320, 100, 0, -1, 0, 0, lk.field_Q.field_N - 7);
+          StripedProgressWidget.field_Q.drawParagraph(NameSuggestionsPanel.field_J[var8], 100, var11, 320, 100, 0, -1, 0, 0, StripedProgressWidget.field_Q.field_N - 7);
           var12 = ii.field_a + 100 * rf.field_c[var8];
           var4Lifetime1 = 100;
           var15.drawString(var12, 100, ia.field_j[4] - (int)((double)var15.field_N * 1.5), 0, -1);
@@ -471,7 +471,7 @@ final class t {
             AccountCreationResultPanel.field_tb[var2_int].drawFlippedHorizontal(ByteStorage.field_h[var2_int], 200 + 5 * var2_int);
           }
         } else {
-          fc.c(param0 ^ 124);
+          FullscreenNoticeType.c(param0 ^ 124);
           SoftwareRasterizer.darkenRectangleHalf(0, 0, 640, 480);
         }
         var2 = null;
@@ -619,7 +619,7 @@ final class t {
         int var11;
         int var6Lifetime1;
         var11 = fleas.field_A ? 1 : 0;
-        og.a(ResourceArchive.field_c.field_a + 22, ad.field_b, 93, -4 + ResourceArchive.field_c.field_l, ResourceArchive.field_c.field_d - 17, ResourceArchive.field_c.field_n + 9);
+        RegistrationAgreementPane.a(ResourceArchive.field_c.field_a + 22, ad.field_b, 93, -4 + ResourceArchive.field_c.field_l, ResourceArchive.field_c.field_d - 17, ResourceArchive.field_c.field_n + 9);
         ResourceArchive.field_c.c(-1);
         if (ResourceArchive.field_c.field_i) {
           SoftwareRasterizer.drawRectangleOutlineAlpha(ResourceArchive.field_c.field_l, ResourceArchive.field_c.field_D.field_N + ResourceArchive.field_c.field_a, ResourceArchive.field_c.field_n + 1, ResourceArchive.field_c.field_d - ResourceArchive.field_c.field_D.field_N + 1, 32928, 256);
@@ -637,14 +637,14 @@ final class t {
         var5 = ResourceArchive.field_c.field_D.field_N + ResourceArchive.field_c.field_a;
         var6 = fl.field_b.field_w / 4;
         var7 = fl.field_b.field_t / 4;
-        og.a(var5 - 6, ad.field_b, param0 + 25267, -6 + var4, ResourceArchive.field_c.field_d - 17, pf.field_a.field_w + 12);
+        RegistrationAgreementPane.a(var5 - 6, ad.field_b, param0 + 25267, -6 + var4, ResourceArchive.field_c.field_d - 17, pf.field_a.field_w + 12);
         if (null != fl.field_b) {
           var8_int = -(mf.field_g.field_x / 4) + var6 / 2 + (var4 + 13);
           var9_int = -(mf.field_g.field_t / 4) + var5 + 14 + var7 / 2;
           if (var2 == 0) {
             SoftwareRasterizer.fillRectangle(var4 + 13, var5 + 14, var6, var7, 1);
-            MatchingFieldValidator.field_p.drawCentred(fc.field_b, 25 + var4 + 13, 30 + var5 + 14, 0, -1);
-            MatchingFieldValidator.field_p.drawCentred(fc.field_b, var6 + var4 - 12, -15 + (var5 - (-var7 - 14)), 0, -1);
+            MatchingFieldValidator.field_p.drawCentred(FullscreenNoticeType.field_b, 25 + var4 + 13, 30 + var5 + 14, 0, -1);
+            MatchingFieldValidator.field_p.drawCentred(FullscreenNoticeType.field_b, var6 + var4 - 12, -15 + (var5 - (-var7 - 14)), 0, -1);
             cb.field_u.drawHalfSize(var8_int, var9_int);
           } else {
             fl.field_b.drawQuarterSizeAveraged(var4 + 13, var5 + 14);
@@ -665,7 +665,7 @@ final class t {
         if (ResourceArchive.field_c.field_d + ResourceArchive.field_c.field_a >= 397) {
           rd.field_e.drawFlippedVertical(var6Lifetime1 / 2 + (var4 - rd.field_e.field_x / 2), -20 + (ResourceArchive.field_c.field_d + ResourceArchive.field_c.field_a));
         }
-        var9 = lk.field_Q;
+        var9 = StripedProgressWidget.field_Q;
         var5 = var5 + (20 + var9.field_N);
         var9.drawCentred(ResourceArchive.field_c.field_z[ResourceArchive.field_c.field_x], var4 + var6Lifetime1 / 2, var5, 1, -1);
         if (var2 != 0) {
@@ -747,11 +747,11 @@ final class t {
           var9 = 20 + var18.stringWidth(var8);
           var6 = var6 - var9 / 2;
         }
-        og.a(var5, var11, 86, var6, var10, var9);
+        RegistrationAgreementPane.a(var5, var11, 86, var6, var10, var9);
         stackIn_17_0 = (!param2) ? 0 : 1;
         var12 = stackIn_17_0;
         if (var7 == 19 &&
-          lk.field_D.field_k) {
+          StripedProgressWidget.field_D.field_k) {
           var12 = 2;
         }
         if (param0 != -1) {
@@ -950,7 +950,7 @@ final class t {
                                   break regionExit1;
                                 case 19:
                                   if (this.field_b.b(106)) {
-                                    if (!(lk.field_D.field_k)) {
+                                    if (!(StripedProgressWidget.field_D.field_k)) {
                                       cf.a(-25319);
                                       oa.a(-1, param0, -126);
                                       stackIn_175_0 = (wc.field_q > 0) ? 0 : 7;

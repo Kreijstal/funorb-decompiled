@@ -31,7 +31,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           }
           var4 = (CharSequence) ((Object) param0);
           if (!be.a(var4, 112)) {
-            stackIn_5_0 = qf.field_d;
+            stackIn_5_0 = FullscreenNoticeType.field_d;
             return stackIn_5_0;
           }
           if (!param0.equals(this.checkedName)) {
@@ -46,7 +46,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             }
           }
           if (!this.nameAvailable) {
-            stackIn_17_0 = qf.field_d;
+            stackIn_17_0 = FullscreenNoticeType.field_d;
           } else {
             stackIn_17_0 = dg.field_c;
           }
@@ -168,7 +168,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             ProxyAuthenticationRequiredException.b(107);
             return;
           }
-          vi.field_n.h((byte) -81);
+          vi.field_n.freezeNormalProgressAnimation((byte) -81);
           if (param0 < 29) {
             field_r = (String[]) null;
             ProxyAuthenticationRequiredException.b(107);
@@ -178,7 +178,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           return;
         }
         if (vi.field_n != null) {
-          vi.field_n.h((byte) -81);
+          vi.field_n.freezeNormalProgressAnimation((byte) -81);
           if (param0 >= 29) {
             ProxyAuthenticationRequiredException.b(107);
             return;

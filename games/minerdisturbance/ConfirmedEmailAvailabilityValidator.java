@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
-    static r field_k;
+    static FullscreenNoticeType field_k;
     static int field_n;
     static int field_o;
     private String field_l;
@@ -234,7 +234,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
     }
 
     final static void a(int param0, int param1) {
-        aa.field_f = oi.field_J[param1];
+        aa.field_f = StripedProgressWidget.field_J[param1];
         ge.field_d = kd.field_k[param1];
         ic.field_g = ra.field_e[param1];
         if (param0 < 77) {
@@ -246,6 +246,6 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
         field_n = 640;
         field_i = "       ";
         field_o = 250;
-        field_k = new r();
+        field_k = new FullscreenNoticeType();
     }
 }

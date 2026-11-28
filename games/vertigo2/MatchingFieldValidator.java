@@ -36,7 +36,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           if (this.field_r instanceof FieldValidatorProvider) {
             var3 = ((FieldValidatorProvider) ((Object) this.field_r)).getFieldValidator((byte) -5);
             if (var3 != null) {
-              if (var3.getValidationStatus(-23996) == qm.field_G &&
+              if (var3.getValidationStatus(-23996) == GuestPlayConfirmationForm.field_G &&
                 !param1.equals(this.field_r.text)) {
                 stackIn_7_0 = gl.field_a;
                 return stackIn_7_0;
@@ -83,7 +83,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           if (this.field_r instanceof FieldValidatorProvider) {
             var3 = ((FieldValidatorProvider) ((Object) this.field_r)).getFieldValidator((byte) -5);
             if (var3 != null &&
-              var3.getValidationStatus(-23996) != qm.field_G) {
+              var3.getValidationStatus(-23996) != GuestPlayConfirmationForm.field_G) {
               stackIn_6_0 = ir.field_a;
               return stackIn_6_0;
             }
@@ -93,7 +93,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
             return stackIn_9_0;
           }
           if (param1.equals(this.field_r.text)) {
-            stackIn_13_0 = qm.field_G;
+            stackIn_13_0 = GuestPlayConfirmationForm.field_G;
           } else {
             stackIn_13_0 = ir.field_a;
           }

@@ -154,7 +154,7 @@ final class rh extends IntrusiveNode {
 
     final static void d(int param0) {
         try {
-          ml.field_b = null;
+          FullscreenNoticeType.field_b = null;
           hb.field_a = null;
           NetworkArchiveRequest.field_q = null;
           EmailFormatValidator.field_k = (byte[][]) null;

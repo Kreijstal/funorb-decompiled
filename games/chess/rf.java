@@ -65,7 +65,7 @@ final class rf {
         if (param0 != 8) {
           rf.b(-16, 25);
         }
-        ch.k(4210752);
+        ProgressDialog.k(4210752);
         return var1;
     }
 

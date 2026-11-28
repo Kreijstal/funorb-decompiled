@@ -777,7 +777,7 @@ final class MidiPcmStream extends PcmStream {
           var2 = var28.readUnsignedByte(true);
           if (var2 != 0) {
             if (var2 != 1) {
-              uj.a("HS1: " + qj.h(param0 - 117), (Throwable) null, 1);
+              uj.a("HS1: " + StandardContentDialog.h(param0 - 117), (Throwable) null, 1);
               ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-70);
               if (var26 == 0) {
                 return;
@@ -894,7 +894,7 @@ final class MidiPcmStream extends PcmStream {
                         }
                       }
                       if (var21 != null &&
-                        md.a(var21, -105)) {
+                        StripedProgressWidget.a(var21, -105)) {
                         var8[1][var13] = og.field_c;
                         var9[1][var13] = null;
                         var10[1][var13] = var22;

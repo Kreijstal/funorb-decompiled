@@ -203,14 +203,14 @@ final class SecondaryNodeDeque implements Iterable {
     final static ci a(int param0) {
         if (param0 != 11520) {
           SecondaryNodeDeque.clearStaticReferences(-30);
-          return jg.k(110);
+          return BirthDateChatEnableForm.k(110);
         }
-        return jg.k(110);
+        return BirthDateChatEnableForm.k(110);
     }
 
     final static void a(int param0, boolean param1) {
         AccountNameAvailabilityValidator.field_m.a(false, param1);
-        jg var2 = AccountRegistrationPanel.field_O;
+        BirthDateChatEnableForm var2 = AccountRegistrationPanel.field_O;
         if (param0 == 16384) {
           if (var2 != null) {
             var2.drawAllLayers(true, AccountNameAvailabilityValidator.field_m.field_wb, AccountNameAvailabilityValidator.field_m.field_U);

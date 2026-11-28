@@ -81,7 +81,7 @@ final class fm {
             var11 = new RgbSprite(4 + field_b.field_o, 4 + field_b.field_k);
             var11.bindAsRenderTarget();
             field_b.drawGrayModulated(2, 2, NodeHashTableIterator.field_d);
-            ve.a(2, var11.field_k, var11, var11.field_o, 1, 0, (byte) 91, 0);
+            ProgressDialog.a(2, var11.field_k, var11, var11.field_o, 1, 0, (byte) 91, 0);
             field_b = var11;
             oh.field_a = field_b.copyMirroredHorizontally();
             var12 = new RgbSprite(195, 221);
@@ -93,13 +93,13 @@ final class fm {
             rc.field_a.drawCentred(CrossfadingMidiPcmStream.a(-415993727, new String[]{NodeHashTableIterator.field_a}, qb.field_b), var6, 130, 16777215, -1);
             MidiPcmStream.field_m.drawCentred(tg.field_d, var6, 180, 16777215, -1);
             rc.field_a.drawCentred(DropTargetWidgetContainer.field_E, var6, 200, 16777215, -1);
-            ve.a(3, var12.field_k, var12, var12.field_o, 1, 0, (byte) 98, 0);
+            ProgressDialog.a(3, var12.field_k, var12, var12.field_o, 1, 0, (byte) 98, 0);
             nl.field_e.bindAsRenderTarget();
             var12.draw(18 - nl.field_e.field_p, -nl.field_e.field_u + 241);
             for (var7 = 0; tb.field_c.length > var7; var7++) {
               il.field_e[var7].bindAsRenderTarget();
               rc.field_a.drawParagraph(tb.field_c[var7], 3, 3, il.field_e[var7].field_o - 6, il.field_e[var7].field_k - 6, NodeHashTableIterator.field_d, -1, 1, 1, rc.field_a.field_B + rc.field_a.field_H);
-              ve.a(3, il.field_e[var7].field_k, il.field_e[var7], il.field_e[var7].field_o, 1, 0, (byte) 61, 0);
+              ProgressDialog.a(3, il.field_e[var7].field_k, il.field_e[var7], il.field_e[var7].field_o, 1, 0, (byte) 61, 0);
             }
             tb.field_c = null;
             ke.field_c = rh.field_b.copy();
@@ -171,7 +171,7 @@ final class fm {
             var9 = new RgbSprite(pf.field_b.field_s, pf.field_b.field_t);
             var9.bindAsRenderTarget();
             MidiPcmStream.field_m.drawParagraph(var14, ok.field_f, pa.field_d, vg.field_l, qf.field_m, 16777215, -1, 1, 1, MidiPcmStream.field_m.field_H + MidiPcmStream.field_m.field_B);
-            ve.a(3, var9.field_t, var9, var9.field_s, 1, 0, (byte) 88, 0);
+            ProgressDialog.a(3, var9.field_t, var9, var9.field_s, 1, 0, (byte) 88, 0);
             pf.field_b.bindAsRenderTarget();
             var9.draw(0, 0);
             DualLinkDeque.field_b = new RgbSprite(640, 480);
@@ -193,7 +193,7 @@ final class fm {
             UiWidget.field_k = null;
             var16.bindAsRenderTarget();
             rc.field_a.drawParagraph(var17, 3, 3, var16.field_o - 6, -6 + var16.field_k, 16777215, -1, 0, 1, rc.field_a.field_B + rc.field_a.field_H);
-            ve.a(3, var16.field_k, var16, var16.field_o, 1, 0, (byte) 55, 0);
+            ProgressDialog.a(3, var16.field_k, var16, var16.field_o, 1, 0, (byte) 55, 0);
             hc.field_l.bindAsRenderTarget();
             var16.draw(199 - hc.field_l.field_p, 83 - hc.field_l.field_u);
             SoftwareRasterizer.setRasterBuffer(var30, var2Lifetime2, var3Lifetime2);
@@ -211,7 +211,7 @@ final class fm {
             var7Lifetime2 = lc.field_w.field_s + (var6Lifetime2 + 20);
             hc.field_l.bindAsRenderTarget();
             rc.field_a.drawString(FrameTimer.field_b, var7Lifetime2 - hc.field_l.field_p, rc.field_a.field_B + 155 - (hc.field_l.field_u - rc.field_a.field_H), 16777215, -1);
-            ve.a(3, 50, hc.field_l, var4, 1, -hc.field_l.field_p + (var7Lifetime2 - 4), (byte) 64, 155 - hc.field_l.field_u);
+            ProgressDialog.a(3, 50, hc.field_l, var4, 1, -hc.field_l.field_p + (var7Lifetime2 - 4), (byte) 64, 155 - hc.field_l.field_u);
             var8Lifetime1 = -hc.field_l.field_u + (155 - (-rc.field_a.field_B - rc.field_a.field_H - 3 + lc.field_w.field_t) / 2);
             lc.field_w.draw(-hc.field_l.field_p + var6Lifetime2, var8Lifetime1);
             SoftwareRasterizer.setRasterBuffer(var31, var2Lifetime3, var3Lifetime3);

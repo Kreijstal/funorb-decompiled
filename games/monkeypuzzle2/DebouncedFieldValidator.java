@@ -3,7 +3,7 @@
  */
 abstract class DebouncedFieldValidator implements FieldValidator {
     private long field_e;
-    static kg field_g;
+    static FullscreenNoticeType field_g;
     static ResourceArchive field_a;
     static Sprite field_d;
     static int[] field_c;
@@ -72,7 +72,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
     abstract String evaluateValidationMessage(byte param0);
 
     static {
-        field_g = new kg();
+        field_g = new FullscreenNoticeType();
         field_b = null;
     }
 }

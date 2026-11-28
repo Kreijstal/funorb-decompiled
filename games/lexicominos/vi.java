@@ -31,7 +31,7 @@ final class vi extends IntrusiveNode {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = ci.field_b[vg.a((int) var4[var6], 255)];
           }
-          var1[var2] = new RgbSprite(uc.field_fb, eh.field_b, SingleChildWidgetContainer.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var5);
+          var1[var2] = new RgbSprite(ProgressMessageDialog.field_fb, eh.field_b, SingleChildWidgetContainer.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var5);
         }
         GzipDecompressor.a(param0 ^ 27773);
         if (param0 != 23793) {

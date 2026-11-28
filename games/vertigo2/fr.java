@@ -6,7 +6,7 @@ final class fr {
 
     final static void a(int param0, int param1) {
         if (!rr.field_z[param0]) {
-          sp.a(rr.field_B[param0], -84);
+          ResizableModalDialog.a(rr.field_B[param0], -84);
           rr.field_z[param0] = true;
           if (param1 < 58) {
             fr.a(116, -22);

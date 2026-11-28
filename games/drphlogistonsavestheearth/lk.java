@@ -105,7 +105,7 @@ class lk extends u {
           gf.field_o = new int[ModalDialog.field_M];
           var17.position = -(ModalDialog.field_M * 8) + (-7 + param0.length);
           oe.field_b = var17.readUnsignedShort(-788751192);
-          ih.field_K = var17.readUnsignedShort(-788751192);
+          RegistrationAgreementPane.field_K = var17.readUnsignedShort(-788751192);
           var3 = (var17.readUnsignedByte(31760) & 255) + 1;
           for (var4 = 0; ModalDialog.field_M > var4; var4++) {
             kh.field_i[var4] = var16.readUnsignedShort(-788751192);

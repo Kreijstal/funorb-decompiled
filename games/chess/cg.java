@@ -188,10 +188,10 @@ final class cg {
 
     final static void a(int param0, java.awt.Canvas param1) {
         try {
-          if (~rm.field_Q == param0) {
+          if (~StripedProgressWidget.field_Q == param0) {
             Bzip2State.b((byte) -72);
           }
-          ag.a(param0 + 11831, gg.field_n, ka.field_o, ih.field_T);
+          ag.a(param0 + 11831, gg.field_n, ka.field_o, NumericDateInputWidget.field_T);
           kf.a(0, (byte) 98, param1, 0);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "cg.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -24,19 +24,19 @@ final class pg extends IntrusiveNode {
             }
             if (param0) {
               if (50000 <= na.field_a) {
-                ph.a(243, false, 12);
+                ProgressMessageDialog.a(243, false, 12);
               }
               if (100000 > na.field_a) {
                 if (na.field_a >= 200000) {
-                  ph.a(241, false, 14);
+                  ProgressMessageDialog.a(241, false, 14);
                 }
                 return;
               }
-              ph.a(242, false, 13);
+              ProgressMessageDialog.a(242, false, 13);
               if (na.field_a < 200000) {
                 return;
               }
-              ph.a(241, false, 14);
+              ProgressMessageDialog.a(241, false, 14);
             }
             return;
           }
@@ -48,18 +48,18 @@ final class pg extends IntrusiveNode {
           return;
         }
         if (50000 <= na.field_a) {
-          ph.a(243, false, 12);
+          ProgressMessageDialog.a(243, false, 12);
         }
         if (100000 > na.field_a) {
           if (na.field_a < 200000) {
             return;
           }
-          ph.a(241, false, 14);
+          ProgressMessageDialog.a(241, false, 14);
           return;
         }
-        ph.a(242, false, 13);
+        ProgressMessageDialog.a(242, false, 13);
         if (na.field_a >= 200000) {
-          ph.a(241, false, 14);
+          ProgressMessageDialog.a(241, false, 14);
         }
     }
 

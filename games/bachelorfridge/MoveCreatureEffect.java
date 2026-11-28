@@ -21,7 +21,7 @@ final class MoveCreatureEffect extends EventEffect {
         var6 = BachelorFridge.field_y;
         try {
           TextInputWidget.field_E = qs.a(false, new PacketBuffer(param0));
-          uma.field_P = new kga[TextInputWidget.field_E.length - 1];
+          NumericDateInputWidget.field_P = new kga[TextInputWidget.field_E.length - 1];
           if (param1 != 22) {
             field_k = (du) null;
           }

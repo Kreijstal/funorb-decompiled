@@ -131,16 +131,16 @@ final class fl {
           kk.field_e > 0) {
           fieldTemp$0 = kk.field_e - 1;
           kk.field_e = kk.field_e - 1;
-          var2_ref_byte__ = ng.field_g[fieldTemp$0];
-          ng.field_g[kk.field_e] = null;
+          var2_ref_byte__ = FullscreenNoticeType.field_g[fieldTemp$0];
+          FullscreenNoticeType.field_g[kk.field_e] = null;
           return var2_ref_byte__;
         }
         if (param0 == 5000 &&
-          0 < nf.field_V) {
-          fieldTemp$1 = nf.field_V - 1;
-          nf.field_V = nf.field_V - 1;
+          0 < FullscreenStatusDialog.field_V) {
+          fieldTemp$1 = FullscreenStatusDialog.field_V - 1;
+          FullscreenStatusDialog.field_V = FullscreenStatusDialog.field_V - 1;
           var2_ref_byte__Lifetime1 = hc.field_e[fieldTemp$1];
-          hc.field_e[nf.field_V] = null;
+          hc.field_e[FullscreenStatusDialog.field_V] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (param1 != -1) {

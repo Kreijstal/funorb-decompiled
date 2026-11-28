@@ -426,10 +426,10 @@ final class PlayerAvatarRenderer extends LevelRenderable {
                         this.field_i = vl.field_a[12][this.field_m];
                       }
                     }
-                    ll.field_e[2] = ui.field_e;
-                    ll.field_e[0] = this.field_h;
-                    ll.field_e[1] = this.field_i;
-                    this.field_h = new Model(ll.field_e, 3);
+                    FullscreenNoticeType.field_e[2] = ui.field_e;
+                    FullscreenNoticeType.field_e[0] = this.field_h;
+                    FullscreenNoticeType.field_e[1] = this.field_i;
+                    this.field_h = new Model(FullscreenNoticeType.field_e, 3);
                     decompiledFrameRemainder0 = false;
                   }
                   else {
@@ -448,16 +448,16 @@ final class PlayerAvatarRenderer extends LevelRenderable {
                     nf.field_q[0] = 0;
                     nf.field_q[2] = 0;
                     var8.a(nf.field_q);
-                    ll.field_e[0] = var8;
+                    FullscreenNoticeType.field_e[0] = var8;
                     nf.field_q[0] = var9;
                     nf.field_q[1] = var10;
                     nf.field_q[2] = var11;
-                    ll.field_e[1] = AccountServiceResult.field_d[this.field_m];
-                    ll.field_e[2] = RichTextLayout.field_u;
+                    FullscreenNoticeType.field_e[1] = AccountServiceResult.field_d[this.field_m];
+                    FullscreenNoticeType.field_e[2] = RichTextLayout.field_u;
                     if (!this.field_f) {
-                      this.field_h = new Model(ll.field_e, 3);
+                      this.field_h = new Model(FullscreenNoticeType.field_e, 3);
                     } else {
-                      this.field_h = new Model(ll.field_e, 2);
+                      this.field_h = new Model(FullscreenNoticeType.field_e, 2);
                     }
                   }
                 }
@@ -470,10 +470,10 @@ final class PlayerAvatarRenderer extends LevelRenderable {
                     break;
                   case 10:
                     this.requestAvatarAnimation(10, (byte) -36);
-                    ll.field_e[1] = qo.field_A;
-                    ll.field_e[0] = this.field_h;
+                    FullscreenNoticeType.field_e[1] = qo.field_A;
+                    FullscreenNoticeType.field_e[0] = this.field_h;
                     var5 = 1;
-                    this.field_h = new Model(ll.field_e, 2);
+                    this.field_h = new Model(FullscreenNoticeType.field_e, 2);
                     break;
                   case 8:
                     var5 = 1;

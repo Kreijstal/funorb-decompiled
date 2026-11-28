@@ -276,8 +276,8 @@ final class wj extends InteractiveWidget {
           if (le.field_gb > 0) {
             le.field_gb = le.field_gb - 1;
           }
-          if (0 < te.field_K) {
-            te.field_K = te.field_K - 1;
+          if (0 < RegistrationAgreementPane.field_K) {
+            RegistrationAgreementPane.field_K = RegistrationAgreementPane.field_K - 1;
           }
           var1_float = CrossfadingMidiPcmStream.field_v.j();
           if (var1_float != GameCanvas.field_a) {
@@ -313,7 +313,7 @@ final class wj extends InteractiveWidget {
             cm.field_c = new int[var4];
           }
           if (ImageProducerRasterBuffer.a(false)) {
-            wb.field_R = wb.field_R - 1;
+            ResizableModalDialog.field_R = ResizableModalDialog.field_R - 1;
           }
           if (0 < nl.field_d) {
             nl.field_d = nl.field_d - 1;
@@ -400,9 +400,9 @@ final class wj extends InteractiveWidget {
           var23 = ln.field_a.field_i;
           var21 = var23;
           var12 = var21;
-          if (0 == jf.field_c &&
+          if (0 == FullscreenNoticeType.field_c &&
             hg.field_e != 0) {
-            if (jf.field_d < 50) {
+            if (FullscreenNoticeType.field_d < 50) {
               pc.a(2);
               var13_intLifetime1 = -25 + var8;
               var14 = var8 + 25;
@@ -445,8 +445,8 @@ final class wj extends InteractiveWidget {
                 }
                 break;
               }
-              jf.field_d = jf.field_d + 1;
-              if (jf.field_d == 1) {
+              FullscreenNoticeType.field_d = FullscreenNoticeType.field_d + 1;
+              if (FullscreenNoticeType.field_d == 1) {
                 var18Lifetime1 = 0;
                 var19Lifetime1 = 1;
                 if (bm.field_c != 0) {
@@ -573,14 +573,14 @@ final class wj extends InteractiveWidget {
             }
             if (pj.field_e == 13 &&
               hg.field_e == 1 &&
-              0 == jf.field_c) {
+              0 == FullscreenNoticeType.field_c) {
               ClientLookupTables.field_h = new re(true);
               return;
             }
             if (pj.field_e == 84 &&
               qh.field_m[86] &&
-              !ta.p(3) &&
-              wb.field_S > 0) {
+              !StandardContentDialog.p(3) &&
+              ResizableModalDialog.field_S > 0) {
               LabeledWidgetContainer.a(false, (byte) -107);
             }
             if (pj.field_e == 80) {
@@ -589,7 +589,7 @@ final class wj extends InteractiveWidget {
               ec.$cfr$intArgs$a$7ffe4b125357(stackIn_201_0, stackIn_202_1);
             }
           }
-          stackIn_205_0Lifetime1 = ~jf.field_c;
+          stackIn_205_0Lifetime1 = ~FullscreenNoticeType.field_c;
           stackIn_205_1Lifetime1 = -1;
           if (stackIn_205_0Lifetime1 == stackIn_205_1Lifetime1 ||
             !(NameSuggestionsPanel.field_I < 4)) {
@@ -616,19 +616,19 @@ final class wj extends InteractiveWidget {
               if (pf.field_o == 1 &&
                 -1 != rl.field_c) {
                 NameSuggestionsPanel.field_I = 1;
-                jf.field_c = 1;
+                FullscreenNoticeType.field_c = 1;
               }
             }
           }
-          if (jf.field_c != 0) {
-            jf.field_c = jf.field_c + 1;
+          if (FullscreenNoticeType.field_c != 0) {
+            FullscreenNoticeType.field_c = FullscreenNoticeType.field_c + 1;
             if (4 > NameSuggestionsPanel.field_I) {
-              jf.field_c = jf.field_c + 6;
+              FullscreenNoticeType.field_c = FullscreenNoticeType.field_c + 6;
             }
             if (le.field_D == 1) {
-              jf.field_c = jf.field_c + 6;
+              FullscreenNoticeType.field_c = FullscreenNoticeType.field_c + 6;
             }
-            if (jf.field_c == 128) {
+            if (FullscreenNoticeType.field_c == 128) {
               if (NameSuggestionsPanel.field_I == 1) {
                 if (hg.field_e < 0) {
                   hg.field_e = -1;
@@ -646,7 +646,7 @@ final class wj extends InteractiveWidget {
                   stackIn_246_0[stackIn_246_1] = stackIn_247_2;
                   stackIn_255_0 = null;
                   stackIn_255_1 = null;
-                  if (ta.p(3)) {
+                  if (StandardContentDialog.p(3)) {
                     if (MidiPcmStream.field_r == 0) {
                       stackIn_255_0Lifetime1 = null;
                       stackIn_255_1Lifetime1 = null;
@@ -665,7 +665,7 @@ final class wj extends InteractiveWidget {
                       stackIn_255_1Lifetime1Lifetime1 = null;
                       stackIn_254_3 = true;
                     }
-                    if (wb.a(stackIn_251_2, stackIn_254_3, false, rg.a((byte) -54)) != null) {
+                    if (ResizableModalDialog.a(stackIn_251_2, stackIn_254_3, false, rg.a((byte) -54)) != null) {
                       stackIn_257_0 = null;
                       stackIn_257_1 = null;
                       stackIn_257_2 = 9;
@@ -678,12 +678,12 @@ final class wj extends InteractiveWidget {
                     stackIn_257_2 = 10;
                   }
                   ClientLookupTables.field_h = new re(stackIn_257_2);
-                  u.field_f[26] = jh.field_bb;
+                  u.field_f[26] = FullscreenStatusDialog.field_bb;
                   return;
                 }
                 if (hg.field_e == 1) {
                   le.field_D = 0;
-                  ta.a((byte) -95, rl.field_c);
+                  StandardContentDialog.a((byte) -95, rl.field_c);
                   ClientLookupTables.field_h = new re(8);
                   return;
                 }
@@ -691,18 +691,18 @@ final class wj extends InteractiveWidget {
               if (NameSuggestionsPanel.field_I == 2) {
                 cm.a(bm.field_c, 0, rl.field_c);
                 le.field_D = 0;
-                ta.a((byte) 127, rl.field_c + 1);
+                StandardContentDialog.a((byte) 127, rl.field_c + 1);
                 AccountNameAvailabilityValidator.b(false, (byte) -97);
                 ClientLookupTables.field_h = new re(11);
                 return;
               }
               if (NameSuggestionsPanel.field_I == 3) {
                 cm.a(bm.field_c, 0, 9);
-                u.field_f[26] = jf.field_e;
+                u.field_f[26] = FullscreenNoticeType.field_e;
                 if (1 == bm.field_c &&
                   rl.field_c > 9) {
                   rl.field_c = 0;
-                  jf.field_d = 50;
+                  FullscreenNoticeType.field_d = 50;
                   le.field_D = 0;
                   AccountNameAvailabilityValidator.b(true, (byte) -89);
                   ClientLookupTables.field_h = new re(13);
@@ -711,15 +711,15 @@ final class wj extends InteractiveWidget {
                 }
                 if (bm.field_c == 0 &&
                   rl.field_c <= 2) {
-                  jf.field_d = 50;
+                  FullscreenNoticeType.field_d = 50;
                   le.field_D = 0;
-                  ta.a((byte) -100, 3);
+                  StandardContentDialog.a((byte) -100, 3);
                   ClientLookupTables.field_h = new re(12);
                   ArchiveProvider.field_e = 0;
                   AccountNameAvailabilityValidator.b(false, (byte) -114);
                   return;
                 }
-                jf.field_d = 50;
+                FullscreenNoticeType.field_d = 50;
                 le.field_D = 0;
                 rl.field_c = 0;
                 AccountNameAvailabilityValidator.b(true, (byte) -93);
@@ -730,8 +730,8 @@ final class wj extends InteractiveWidget {
               if (NameSuggestionsPanel.field_I >= 4) {
                 le.field_D = 0;
                 hg.field_e = 0;
-                if (jh.field_ab == 1) {
-                  ja.a((byte) -127, pe.field_ab, true);
+                if (FullscreenStatusDialog.field_ab == 1) {
+                  ja.a((byte) -127, ProgressDialog.field_ab, true);
                 }
                 stackIn_285_0 = dd.field_o;
                 stackIn_285_1 = 10;
@@ -744,7 +744,7 @@ final class wj extends InteractiveWidget {
                 stackIn_285_0[stackIn_285_1] = stackIn_286_2;
                 stackIn_295_0 = null;
                 stackIn_295_1 = null;
-                if (ta.p(3)) {
+                if (StandardContentDialog.p(3)) {
                   if (MidiPcmStream.field_r == 0) {
                     stackIn_295_0Lifetime1 = null;
                     stackIn_295_1Lifetime1 = null;
@@ -765,7 +765,7 @@ final class wj extends InteractiveWidget {
                   }
                   stackIn_295_0Lifetime1Lifetime2 = null;
                   stackIn_295_1Lifetime1Lifetime2 = null;
-                  if (wb.a(stackIn_290_2, stackIn_293_3, false, rg.a((byte) 124)) != null) {
+                  if (ResizableModalDialog.a(stackIn_290_2, stackIn_293_3, false, rg.a((byte) 124)) != null) {
                     stackIn_296_0 = null;
                     stackIn_296_1 = null;
                     stackIn_296_2 = 9;
@@ -781,9 +781,9 @@ final class wj extends InteractiveWidget {
                 return;
               }
             }
-            jf.field_c = jf.field_c + 1;
-            if (256 < jf.field_c) {
-              jf.field_c = 0;
+            FullscreenNoticeType.field_c = FullscreenNoticeType.field_c + 1;
+            if (256 < FullscreenNoticeType.field_c) {
+              FullscreenNoticeType.field_c = 0;
             }
           }
           return;

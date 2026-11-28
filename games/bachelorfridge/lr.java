@@ -26,8 +26,8 @@ final class lr extends IntrusiveNode {
         int var11;
         var11 = BachelorFridge.field_y;
         if (!param6 && (FullscreenFocusCanvas.field_b != SoftwareRasterizer.field_i ||
-          StopFloodEffect.field_i != SoftwareRasterizer.field_c) && (SoftwareRasterizer.field_c == hga.field_U.field_f &&
-          SoftwareRasterizer.field_i == hga.field_U.field_b)) {
+          StopFloodEffect.field_i != SoftwareRasterizer.field_c) && (SoftwareRasterizer.field_c == ProgressDialog.field_U.field_f &&
+          SoftwareRasterizer.field_i == ProgressDialog.field_U.field_b)) {
           if (SnowAnimation.field_w != null) {
             pv.a(false, true);
           } else {

@@ -265,14 +265,14 @@ final class DiskCacheWorker implements Runnable {
     }
 
     final static void a(int param0, Archive param1) {
-        sl var2 = null;
+        VorbisSample var2 = null;
         try {
           if (param0 != 26197) {
             field_e = (java.awt.Color) null;
           }
-          sl.b(param1.getFileByName(param0 ^ 26193, "headers.packvorbis", ""));
-          var2 = sl.a(param1, "jagex logo2.packvorbis", "");
-          var2.c();
+          VorbisSample.decodeSetup(param1.getFileByName(param0 ^ 26193, "headers.packvorbis", ""));
+          var2 = VorbisSample.loadByName(param1, "jagex logo2.packvorbis", "");
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ae.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

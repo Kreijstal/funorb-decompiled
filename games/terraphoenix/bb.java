@@ -67,12 +67,12 @@ final class bb {
             } else {
               var6 = bb.$cfr$intArgs$a$62abead39cee(87, true, rb.field_d[var3_int]);
               var7 = -(var6 >> 1) + nd.field_r;
-              var4 = var4 + hi.field_ab;
+              var4 = var4 + FullscreenStatusDialog.field_ab;
               if (WidgetContainer.a(var7 - se.field_j, var4, param2, (byte) 76, param1, var6 + (se.field_j << 1), (dc.field_b << 1) + lm.field_d)) {
                 stackIn_7_0 = var5;
                 return stackIn_7_0;
               }
-              var4 = var4 + (hi.field_ab + ((dc.field_b << 1) + lm.field_d));
+              var4 = var4 + (FullscreenStatusDialog.field_ab + ((dc.field_b << 1) + lm.field_d));
             }
             var3_int++;
           }
@@ -105,7 +105,7 @@ final class bb {
             bb.a(2);
           }
           ik.a(param0, (byte) 100);
-          cg.f((byte) -75);
+          GuestPlayConfirmationForm.f((byte) -75);
           FrameTimer.a(true);
           kf.field_f = 0 - IntrusiveNode.field_e;
         } catch (RuntimeException runtimeException) {
@@ -114,12 +114,12 @@ final class bb {
     }
 
     final static void b(int param0) {
-        jg.field_kb.field_i = 0;
+        StandardContentDialog.field_kb.field_i = 0;
         if (param0 != 3287) {
           PcmStreamMixer var2 = (PcmStreamMixer) null;
           bb.a((Archive) null, 113, -67, (PcmStreamMixer) null);
         }
-        jg.field_kb.field_l = 0;
+        StandardContentDialog.field_kb.field_l = 0;
     }
 
     final static java.net.URL a(byte param0, java.net.URL param1, java.applet.Applet param2) {

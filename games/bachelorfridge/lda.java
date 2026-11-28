@@ -106,7 +106,7 @@ final class lda {
             stackIn_25_0 = lga.a(true, new String[]{param2}, bda.field_p);
             return stackIn_25_0;
           }
-          var5 = sja.field_fb;
+          var5 = StandardContentDialog.field_fb;
           var5.writeCipheredByte(param1, (byte) 116);
           var5.position = var5.position + 1;
           var4 = var5.position;

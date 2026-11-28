@@ -29,7 +29,7 @@ final class im {
           }
           mba.field_a[ut.field_l] = param5;
           sc.field_o[ut.field_l] = param4;
-          uda.field_X[ut.field_l] = param2;
+          ContentTransitionDialog.field_X[ut.field_l] = param2;
           var6 = param4 + param5 + param2;
           if (var6 != 0) {
             stackIn_34_0 = 1000 * param5 / var6;
@@ -56,7 +56,7 @@ final class im {
         }
         mba.field_a[ut.field_l] = param5;
         sc.field_o[ut.field_l] = param4;
-        uda.field_X[ut.field_l] = param2;
+        ContentTransitionDialog.field_X[ut.field_l] = param2;
         var6Lifetime1 = param4 + param5 + param2;
         if (var6Lifetime1 != 0) {
           stackIn_7_0 = 1000 * param5 / var6Lifetime1;

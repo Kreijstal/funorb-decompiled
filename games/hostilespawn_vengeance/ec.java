@@ -90,7 +90,7 @@ final class ec {
           return;
         }
         if (!hk.field_q) {
-          jh.field_fb = ResourceArchive.field_b;
+          FullscreenStatusDialog.field_fb = ResourceArchive.field_b;
           bh.field_b = 97;
           aa.field_a = be.field_i;
           fj.field_Jb = 99;
@@ -99,7 +99,7 @@ final class ec {
           ha.field_v = 96;
           fj.field_Ob = m.field_h;
         } else {
-          jh.field_fb = 99;
+          FullscreenStatusDialog.field_fb = 99;
           la.field_g = 98;
           aa.field_a = 96;
           fj.field_Ob = 97;
@@ -148,7 +148,7 @@ final class ec {
           return;
         }
         if (!hk.field_q) {
-          jh.field_fb = ResourceArchive.field_b;
+          FullscreenStatusDialog.field_fb = ResourceArchive.field_b;
           bh.field_b = 97;
           aa.field_a = be.field_i;
           fj.field_Jb = 99;
@@ -157,7 +157,7 @@ final class ec {
           ha.field_v = 96;
           fj.field_Ob = m.field_h;
         } else {
-          jh.field_fb = 99;
+          FullscreenStatusDialog.field_fb = 99;
           la.field_g = 98;
           aa.field_a = 96;
           fj.field_Ob = 97;

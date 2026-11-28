@@ -28,7 +28,7 @@ final class cf {
         RuntimeException var5 = null;
         long var6 = 0L;
         PcmSample var8 = null;
-        tk var9 = null;
+        VorbisSample var9 = null;
         PcmSample stackIn_5_0 = null;
         Object stackIn_18_0 = null;
         PcmSample stackIn_20_0 = null;
@@ -53,15 +53,15 @@ final class cf {
             0 >= param2[0]) {
             return null;
           }
-          var9 = (tk) (this.field_e.a(true, var6));
+          var9 = (VorbisSample) (this.field_e.a(true, var6));
           if (var9 == null) {
-            var9 = tk.a(this.field_h, param1, param0);
+            var9 = VorbisSample.load(this.field_h, param1, param0);
             if (var9 == null) {
               return null;
             }
             this.field_e.a(var9, var6, -1);
           }
-          var8Lifetime1 = var9.a(param2);
+          var8Lifetime1 = var9.decodeToPcm(param2);
           if (var8Lifetime1 == null) {
             stackIn_18_0 = null;
             return (PcmSample) (stackIn_18_0);

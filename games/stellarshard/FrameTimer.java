@@ -128,14 +128,14 @@ abstract class FrameTimer {
               FrameTimer.a((String) null, 'ￛ', (String) null, -48);
             }
             ce.field_e = ce.field_e + 1;
-            di.field_a = q.field_c;
-            if (se.field_H < 0) {
+            FullscreenNoticeType.field_a = q.field_c;
+            if (GuestPlayConfirmationForm.field_H < 0) {
               for (var2 = 0; var2 < 112; var2++) {
                 si.field_jb[var2] = false;
               }
-              se.field_H = vd.field_e;
+              GuestPlayConfirmationForm.field_H = vd.field_e;
             } else {
-              while (se.field_H != vd.field_e) {
+              while (GuestPlayConfirmationForm.field_H != vd.field_e) {
                 var2 = ob.field_c[vd.field_e];
                 vd.field_e = 1 + vd.field_e & 127;
                 if (var2 < 0) {

@@ -121,7 +121,7 @@ public final class Vertigo2 extends GameShell {
             } else {
               if (!kg.h(114)) {
                 if (!pq.b(0)) {
-                  if (!rh.e((byte) 99)) {
+                  if (!DialogMessagePane.e((byte) 99)) {
                     this.d(false, -97);
                   } else {
                     if (DiskCacheWorker.field_a != DiskCacheWorker.field_f) {
@@ -173,7 +173,7 @@ public final class Vertigo2 extends GameShell {
           }
           if (!ag.b(49)) {
             while (true) {
-              var16_ref = (nf) (fg.field_eb.removeLast((byte) -43));
+              var16_ref = (nf) (ProgressDialog.field_eb.removeLast((byte) -43));
               if (var16_ref != null) {
                 DebouncedFieldValidator.a(4, var16_ref, 4);
                 continue;
@@ -300,7 +300,7 @@ public final class Vertigo2 extends GameShell {
             if (lc.field_f == 67) {
               var3Lifetime1Lifetime2 = id.field_f.readInt(true);
               var3Lifetime1Lifetime2 = var3Lifetime1Lifetime2 & ~ml.field_z;
-              if (sp.field_V) {
+              if (ResizableModalDialog.field_V) {
                 for (var4Lifetime1 = 0; BlastDebrisModel.field_i.length > var4Lifetime1; var4Lifetime1++) {
                   if ((1 << var4Lifetime1 & var3Lifetime1Lifetime2) != 0) {
                     LevelRenderable.field_b.addFirst(new fa(var4Lifetime1), false);
@@ -454,8 +454,8 @@ public final class Vertigo2 extends GameShell {
         Sprite var5 = new Sprite(nn.field_y.getFileByName("", "stars.jpg", 0), (java.awt.Component) ((Object) DisplayNameSelectionPanel.field_F));
         Sprite var6 = new Sprite(nn.field_y.getFileByName("", "asteroids.jpg", 0), (java.awt.Component) ((Object) DisplayNameSelectionPanel.field_F));
         qr.field_l = new rp(true, new Sprite[]{var7, var3, var4, var5, var7.copy(), var6});
-        ue.field_N = new Sprite(640, 480);
-        ue.field_N.bindAsRenderTarget();
+        RegistrationAgreementPane.field_N = new Sprite(640, 480);
+        RegistrationAgreementPane.field_N.bindAsRenderTarget();
         var8.drawOpaque(0, 0);
         if (param0 > -89) {
           return;
@@ -483,7 +483,7 @@ public final class Vertigo2 extends GameShell {
           if (null != dc.field_L) {
             cp.a((byte) 124);
           }
-          we.i(-1733144127);
+          StripedProgressWidget.i(-1733144127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -508,9 +508,9 @@ public final class Vertigo2 extends GameShell {
           on.field_b[3] = new PcmSample[2];
           on.field_b[3][0] = hp.a(DualLinkNode.field_s, "", "v_teleport").a();
           on.field_b[3][1] = hp.a(DualLinkNode.field_s, "", "v_teleport_2").a();
-          on.field_b[5][0] = vh.a(mj.field_b, "", "whee").b();
-          on.field_b[6][0] = vh.a(mj.field_b, "", "v_fall").b();
-          on.field_b[7][0] = vh.a(mj.field_b, "", "v_extra_life").b();
+          on.field_b[5][0] = VorbisSample.loadByName(mj.field_b, "", "whee").decodeAllToPcm();
+          on.field_b[6][0] = VorbisSample.loadByName(mj.field_b, "", "v_fall").decodeAllToPcm();
+          on.field_b[7][0] = VorbisSample.loadByName(mj.field_b, "", "v_extra_life").decodeAllToPcm();
           on.field_b[8][0] = hp.a(DualLinkNode.field_s, "", "v_paint_collect").a();
           this.loadSoundEffectVariants(1, "v_brush", 4, 9);
           on.field_b[10] = new PcmSample[4];
@@ -533,14 +533,14 @@ public final class Vertigo2 extends GameShell {
           on.field_b[23][0] = hp.a(DualLinkNode.field_s, "", "v_fan_loop").a();
           on.field_b[24][0] = hp.a(DualLinkNode.field_s, "", "v_spikes").a();
           on.field_b[25] = new PcmSample[3];
-          on.field_b[25][0] = vh.a(mj.field_b, "", "v_hmm_easy").b();
-          on.field_b[25][1] = vh.a(mj.field_b, "", "v_yeah").b();
-          on.field_b[25][2] = vh.a(mj.field_b, "", "v_phew").b();
+          on.field_b[25][0] = VorbisSample.loadByName(mj.field_b, "", "v_hmm_easy").decodeAllToPcm();
+          on.field_b[25][1] = VorbisSample.loadByName(mj.field_b, "", "v_yeah").decodeAllToPcm();
+          on.field_b[25][2] = VorbisSample.loadByName(mj.field_b, "", "v_phew").decodeAllToPcm();
           on.field_b[26][0] = hp.a(DualLinkNode.field_s, "", "v_paint_runout").a();
           on.field_b[27] = new PcmSample[3];
-          on.field_b[27][0] = vh.a(mj.field_b, "", "v_near_edge_1").b();
-          on.field_b[27][1] = vh.a(mj.field_b, "", "v_near_edge_2").b();
-          on.field_b[27][2] = vh.a(mj.field_b, "", "v_near_edge_3").b();
+          on.field_b[27][0] = VorbisSample.loadByName(mj.field_b, "", "v_near_edge_1").decodeAllToPcm();
+          on.field_b[27][1] = VorbisSample.loadByName(mj.field_b, "", "v_near_edge_2").decodeAllToPcm();
+          on.field_b[27][2] = VorbisSample.loadByName(mj.field_b, "", "v_near_edge_3").decodeAllToPcm();
           on.field_b[28][0] = hp.a(DualLinkNode.field_s, "", "v_last_block").a();
           on.field_b[29][0] = hp.a(DualLinkNode.field_s, "", "v_level_select").a();
           rr.field_B[0] = SamplePlaybackStream.createForPlaybackRate(on.field_b[23][0], 100, 96);
@@ -703,7 +703,7 @@ public final class Vertigo2 extends GameShell {
           uh.a(false, IsaacCipher.field_f);
           uq.field_a = (ArgbSprite) (MusicPatchPcmStream.a(MovingLevelTile.field_u, "menu_base", "", (byte) 98));
           ie.field_Hb = (ArgbSprite) (MusicPatchPcmStream.a(MovingLevelTile.field_u, "game_complete", "", (byte) 98));
-          la.field_a = (BitmapFont) ((Object) rl.a(MovingLevelTile.field_u, 12, vi.field_n, "", "title_font"));
+          la.field_a = (BitmapFont) ((Object) ContentTransitionDialog.a(MovingLevelTile.field_u, 12, vi.field_n, "", "title_font"));
           DefaultTextWidgetRenderer.field_s = new wn(w.a(vi.field_n, MovingLevelTile.field_u, "interface_font", "", param0 + 96));
           cd.field_b = tn.a("options_brush_01", MovingLevelTile.field_u, -94, "");
           or.field_b = tn.a("options_brush_02", MovingLevelTile.field_u, -103, "");
@@ -763,9 +763,9 @@ public final class Vertigo2 extends GameShell {
           var4 = new Sprite[][]{new Sprite[]{tn.a("coop_icon", MovingLevelTile.field_u, -79, ""), tn.a("versus_icon", MovingLevelTile.field_u, -108, "")}, gk.a(MovingLevelTile.field_u, "", "start_icon", true), gk.a(MovingLevelTile.field_u, "", "end_icon", true)};
           mh.a(true, var4, fd.field_q, 3, DropTargetWidgetContainer.field_G, m.field_z, true, BlastDebrisBatch.field_e, PlayerState.field_V, IsaacCipher.field_e, var4, 2, IsaacCipher.field_e, rm.field_A, ml.field_y);
           jl.field_g = (Sprite) ((Object) NameSuggestionsPanel.field_L);
-          ll.a((byte) -111, 200);
+          FullscreenNoticeType.a((byte) -111, 200);
           DirectByteStorage.field_g = true;
-          gr.field_W = eg.field_s;
+          FullscreenStatusDialog.field_W = eg.field_s;
           dl.field_b = vg.field_c;
           be.a(-103, uk.field_r, 320, 20, 16766751, 10, 5, 16777215, (Sprite[]) null, 8, fa.field_s, 8, DefaultTextWidgetRenderer.field_s.field_f, 280, 16777215);
           var5 = tk.field_c.field_t + tk.field_c.field_M;
@@ -813,7 +813,7 @@ public final class Vertigo2 extends GameShell {
           lh.clearStaticReferences((byte) 41);
           MidiPcmStream.clearStaticReferences(97);
           mh.clearStaticReferences(-1);
-          vh.clearStaticReferences();
+          VorbisSample.clearStaticReferences();
           id.clearStaticReferences((byte) 76);
           HuffmanCodec.clearStaticReferences((byte) -125);
           n.clearStaticReferences(69);
@@ -888,11 +888,11 @@ public final class Vertigo2 extends GameShell {
           pd.clearStaticReferences(1000000);
           ModalDialogHost.clearStaticReferences(-25849);
           AccountCreationResultPanel.releaseDeclaredStaticReferences(12705);
-          fg.clearStaticReferences(-15691);
-          ga.m(11840);
-          fj.clearStaticReferences(-74);
+          ProgressDialog.clearStaticReferences(-15691);
+          StandardContentDialog.m(11840);
+          ProgressMessageDialog.clearStaticReferences(-74);
           AccountRegistrationPanel.resetStaticState(4);
-          qm.clearStaticReferences(-120);
+          GuestPlayConfirmationForm.clearStaticReferences(-120);
           LoginPanel.a((byte) -103);
           DisplayNameSelectionPanel.a((byte) -125);
           qj.clearStaticReferences((byte) 56);
@@ -949,7 +949,7 @@ public final class Vertigo2 extends GameShell {
           on.a(true);
           bo.a(103);
           hd.clearStaticReferences(1);
-          ql.releaseDeclaredStaticReferences(30560);
+          BirthDateChatEnableForm.releaseDeclaredStaticReferences(30560);
           np.clearStaticReferences((byte) 123);
           MovingLevelTile.clearStaticReferences(107);
           p.clearStaticReferences(0);
@@ -988,8 +988,8 @@ public final class Vertigo2 extends GameShell {
           TextLayout.c((byte) 76);
           LabeledWidgetContainer.h(2);
           ValidatedTextField.clearStaticReferences(-17131);
-          sp.resetStaticState(-6);
-          we.clearStaticReferences(false);
+          ResizableModalDialog.resetStaticState(-6);
+          StripedProgressWidget.clearStaticReferences(false);
           NameSuggestionsPanel.clearStaticReferences((byte) -110);
           RichTextWidget.a((byte) -53);
           lr.clearStaticReferences((byte) -45);
@@ -997,9 +997,9 @@ public final class Vertigo2 extends GameShell {
           ck.clearStaticReferences(true);
           TextFieldValidator.clearDeclaredStaticReferences((byte) -124);
           ad.resetStaticState(true);
-          ue.clearStaticReferences(1);
+          RegistrationAgreementPane.clearStaticReferences(1);
           jk.clearStaticReferences(2);
-          gr.clearStaticReferences((byte) 123);
+          FullscreenStatusDialog.clearStaticReferences((byte) 123);
           uq.clearStaticReferences(-6872);
           jp.clearStaticReferences(true);
           pb.a(16711935);
@@ -1013,7 +1013,7 @@ public final class Vertigo2 extends GameShell {
           jn.clearStaticReferences(54);
           ud.clearStaticReferences((byte) -37);
           BirthDateValidator.clearDeclaredStaticReferences(-3);
-          ko.clearDeclaredStaticReferences(false);
+          NumericDateInputWidget.clearDeclaredStaticReferences(false);
           ArrayWidgetContainer.clearStaticReferences(46);
           kl.clearDeclaredStaticReferences(true);
           un.clearStaticReferences(-67);
@@ -1048,7 +1048,7 @@ public final class Vertigo2 extends GameShell {
           pc.clearStaticReferences(0);
           ld.clearStaticReferences(1151);
           tc.clearStaticReferences(118);
-          af.clearStaticReferences(false);
+          DateInputWidget.clearStaticReferences(false);
           lp.clearStaticReferences(86);
           te.clearStaticReferences(-30443);
           lf.clearStaticReferences((byte) 107);
@@ -1134,7 +1134,7 @@ public final class Vertigo2 extends GameShell {
           kb.clearStaticReferences(96);
           AlphaWidgetContainer.clearStaticReferences(-12477);
           qp.a(-19721);
-          rh.clearStaticReferences((byte) -126);
+          DialogMessagePane.clearStaticReferences((byte) -126);
           BlastDebrisModel.resetStaticState((byte) -114);
           BlastDebrisBatch.clearBlastDebrisBatchGlobals(11579568);
           nn.clearStaticReferences(5);
@@ -1154,7 +1154,7 @@ public final class Vertigo2 extends GameShell {
           TextHotspotBounds.clearStaticReferences(-8105);
           ba.clearStaticReferences(3);
           DebouncedFieldValidator.clearStaticReferences(21283);
-          ll.clearStaticReferences(3);
+          FullscreenNoticeType.clearStaticReferences(3);
           j.clearStaticReferences(0);
           hn.clearStaticReferences((byte) 72);
           mn.clearStaticReferences(6);
@@ -1303,7 +1303,7 @@ public final class Vertigo2 extends GameShell {
               }
               hr.a(stackIn_82_0, true);
             } else {
-              if (rh.e((byte) 99)) {
+              if (DialogMessagePane.e((byte) 99)) {
                 var5Lifetime1 = 30 + IterableNodeHashTable.a((byte) -72);
                 var6Lifetime1 = f.b(false) + 30;
                 MusicPatchPcmStream.a(var6Lifetime1, var5Lifetime1, -(var6Lifetime1 / 2) + 270, 320 - var5Lifetime1 / 2, -77, 210);
@@ -1366,7 +1366,7 @@ public final class Vertigo2 extends GameShell {
             }
             var1_int = 1;
           }
-          kg.field_G.a((byte) -29, we.a(gb.field_d, true, PacketBuffer.field_n), we.a(no.field_e, true, ModalDialogHost.field_N));
+          kg.field_G.a((byte) -29, StripedProgressWidget.a(gb.field_d, true, PacketBuffer.field_n), StripedProgressWidget.a(no.field_e, true, ModalDialogHost.field_N));
           if (kg.field_G.a(84)) {
             var1_int = 1;
           }
@@ -1524,19 +1524,19 @@ public final class Vertigo2 extends GameShell {
           if (ml.field_y.ensureIndexLoaded(0) &&
             ml.field_y.tryLoadGroupByName("basic", 0)) {
             if (!ml.field_y.tryLoadGroupByName("roman20", param0 ^ 16777215)) {
-              ProxySocketConnector.a(false, 4.0f, gr.a(vc.field_a, (byte) 66, ml.field_y, vd.field_c, "roman20"));
+              ProxySocketConnector.a(false, 4.0f, FullscreenStatusDialog.a(vc.field_a, (byte) 66, ml.field_y, vd.field_c, "roman20"));
               return false;
             }
             if (DropTargetWidgetContainer.field_G.ensureIndexLoaded(0) &&
               DropTargetWidgetContainer.field_G.tryLoadGroupByName("roman20", 0)) {
               if (!ml.field_y.tryLoadGroupByName("kartika13", 0)) {
-                ProxySocketConnector.a(false, 6.0f, gr.a(vc.field_a, (byte) 103, ml.field_y, vd.field_c, "kartika13"));
+                ProxySocketConnector.a(false, 6.0f, FullscreenStatusDialog.a(vc.field_a, (byte) 103, ml.field_y, vd.field_c, "kartika13"));
                 return false;
               }
               if (DropTargetWidgetContainer.field_G.ensureIndexLoaded(param0 ^ 16777215) &&
                 DropTargetWidgetContainer.field_G.tryLoadGroupByName("kartika13", 0)) {
                 if (!ml.field_y.tryLoadGroupByName("comic20", param0 ^ 16777215)) {
-                  ProxySocketConnector.a(false, 8.0f, gr.a(vc.field_a, (byte) 47, ml.field_y, vd.field_c, "comic20"));
+                  ProxySocketConnector.a(false, 8.0f, FullscreenStatusDialog.a(vc.field_a, (byte) 47, ml.field_y, vd.field_c, "comic20"));
                   return false;
                 }
                 if (DropTargetWidgetContainer.field_G.ensureIndexLoaded(param0 ^ 16777215) &&
@@ -1587,67 +1587,67 @@ public final class Vertigo2 extends GameShell {
                                                     di.b((byte) 109);
                                                     return false;
                                                   }
-                                                  ProxySocketConnector.a(false, 73.0f, fg.a(m.field_z, EmailFormatValidator.field_n, vj.field_a, 274));
+                                                  ProxySocketConnector.a(false, 73.0f, ProgressDialog.a(m.field_z, EmailFormatValidator.field_n, vj.field_a, 274));
                                                   return false;
                                                 }
-                                                ProxySocketConnector.a(false, 72.0f, gr.a(eq.field_E, (byte) 109, nn.field_y, bm.field_D, ""));
+                                                ProxySocketConnector.a(false, 72.0f, FullscreenStatusDialog.a(eq.field_E, (byte) 109, nn.field_y, bm.field_D, ""));
                                                 return false;
                                               }
-                                              ProxySocketConnector.a(false, 68.0f, fg.a(ii.field_C, ua.field_g, AccountRequestState.field_d, 274));
+                                              ProxySocketConnector.a(false, 68.0f, ProgressDialog.a(ii.field_C, ua.field_g, AccountRequestState.field_d, 274));
                                               return false;
                                             }
-                                            ProxySocketConnector.a(false, 67.0f, fg.a(ii.field_C, ua.field_g, AccountRequestState.field_d, param0 ^ 16776941));
+                                            ProxySocketConnector.a(false, 67.0f, ProgressDialog.a(ii.field_C, ua.field_g, AccountRequestState.field_d, param0 ^ 16776941));
                                             return false;
                                           }
-                                          ProxySocketConnector.a(false, 66.0f, fg.a(ml.field_u, kq.field_Vb, bb.field_G, 274));
+                                          ProxySocketConnector.a(false, 66.0f, ProgressDialog.a(ml.field_u, kq.field_Vb, bb.field_G, 274));
                                           return false;
                                         }
-                                        ProxySocketConnector.a(false, 65.0f, fg.a(tl.field_c, kq.field_Vb, bb.field_G, param0 - 16776941));
+                                        ProxySocketConnector.a(false, 65.0f, ProgressDialog.a(tl.field_c, kq.field_Vb, bb.field_G, param0 - 16776941));
                                         return false;
                                       }
-                                      ProxySocketConnector.a(false, 60.0f, fg.a(np.field_Kb, kq.field_Vb, bb.field_G, 274));
+                                      ProxySocketConnector.a(false, 60.0f, ProgressDialog.a(np.field_Kb, kq.field_Vb, bb.field_G, 274));
                                       return false;
                                     }
-                                    ProxySocketConnector.a(false, 56.0f, gr.a(ga.field_ib, (byte) 52, pp.field_s, ec.field_D, ""));
+                                    ProxySocketConnector.a(false, 56.0f, FullscreenStatusDialog.a(StandardContentDialog.field_ib, (byte) 52, pp.field_s, ec.field_D, ""));
                                     return false;
                                   }
-                                  ProxySocketConnector.a(false, 55.0f, gr.a(vj.field_a, (byte) 114, gi.field_p, EmailFormatValidator.field_n, ""));
+                                  ProxySocketConnector.a(false, 55.0f, FullscreenStatusDialog.a(vj.field_a, (byte) 114, gi.field_p, EmailFormatValidator.field_n, ""));
                                   return false;
                                 }
-                                ProxySocketConnector.a(false, 54.0f, gr.a(vc.field_a, (byte) 54, vi.field_n, vd.field_c, ""));
+                                ProxySocketConnector.a(false, 54.0f, FullscreenStatusDialog.a(vc.field_a, (byte) 54, vi.field_n, vd.field_c, ""));
                                 return false;
                               }
-                              ProxySocketConnector.a(false, 50.0f, gr.a(ib.field_b, (byte) 112, MovingLevelTile.field_u, me.field_b, ""));
+                              ProxySocketConnector.a(false, 50.0f, FullscreenStatusDialog.a(ib.field_b, (byte) 112, MovingLevelTile.field_u, me.field_b, ""));
                               return false;
                             }
-                            ProxySocketConnector.a(false, 40.0f, gr.a(tm.field_c, (byte) 109, le.field_f, lo.field_b, ""));
+                            ProxySocketConnector.a(false, 40.0f, FullscreenStatusDialog.a(tm.field_c, (byte) 109, le.field_f, lo.field_b, ""));
                             return false;
                           }
                           ProxySocketConnector.a(false, 35.0f, en.a(false, tm.field_c, re.field_d, 0, lo.field_b));
                           return false;
                         }
-                        ProxySocketConnector.a(false, 30.0f, gr.a(lc.field_c, (byte) 35, mj.field_b, DebouncedFieldValidator.field_a, ""));
+                        ProxySocketConnector.a(false, 30.0f, FullscreenStatusDialog.a(lc.field_c, (byte) 35, mj.field_b, DebouncedFieldValidator.field_a, ""));
                         return false;
                       }
-                      ProxySocketConnector.a(false, 12.0f, gr.a(lc.field_c, (byte) 95, DualLinkNode.field_s, DebouncedFieldValidator.field_a, ""));
+                      ProxySocketConnector.a(false, 12.0f, FullscreenStatusDialog.a(lc.field_c, (byte) 95, DualLinkNode.field_s, DebouncedFieldValidator.field_a, ""));
                       return false;
                     }
-                    ProxySocketConnector.a(false, 11.0f, gr.a(vc.field_a, (byte) 119, DropTargetWidgetContainer.field_G, vd.field_c, "lobby"));
+                    ProxySocketConnector.a(false, 11.0f, FullscreenStatusDialog.a(vc.field_a, (byte) 119, DropTargetWidgetContainer.field_G, vd.field_c, "lobby"));
                     return false;
                   }
-                  ProxySocketConnector.a(false, 10.0f, gr.a(ib.field_b, (byte) 50, ml.field_y, me.field_b, "lobby"));
+                  ProxySocketConnector.a(false, 10.0f, FullscreenStatusDialog.a(ib.field_b, (byte) 50, ml.field_y, me.field_b, "lobby"));
                   return false;
                 }
-                ProxySocketConnector.a(false, 9.0f, gr.a(vc.field_a, (byte) 39, DropTargetWidgetContainer.field_G, vd.field_c, "comic20"));
+                ProxySocketConnector.a(false, 9.0f, FullscreenStatusDialog.a(vc.field_a, (byte) 39, DropTargetWidgetContainer.field_G, vd.field_c, "comic20"));
                 return false;
               }
-              ProxySocketConnector.a(false, 7.0f, gr.a(vc.field_a, (byte) 64, DropTargetWidgetContainer.field_G, vd.field_c, "kartika13"));
+              ProxySocketConnector.a(false, 7.0f, FullscreenStatusDialog.a(vc.field_a, (byte) 64, DropTargetWidgetContainer.field_G, vd.field_c, "kartika13"));
               return false;
             }
-            ProxySocketConnector.a(false, 5.0f, gr.a(vc.field_a, (byte) 37, DropTargetWidgetContainer.field_G, vd.field_c, "roman20"));
+            ProxySocketConnector.a(false, 5.0f, FullscreenStatusDialog.a(vc.field_a, (byte) 37, DropTargetWidgetContainer.field_G, vd.field_c, "roman20"));
             return false;
           }
-          ProxySocketConnector.a(false, 1.0f, gr.a(ib.field_b, (byte) 60, ml.field_y, me.field_b, "basic"));
+          ProxySocketConnector.a(false, 1.0f, FullscreenStatusDialog.a(ib.field_b, (byte) 60, ml.field_y, me.field_b, "basic"));
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

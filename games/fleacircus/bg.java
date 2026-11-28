@@ -24,7 +24,7 @@ final class bg {
             return stackIn_3_0;
           }
           var3_int = 0;
-          var4 = rb.field_H;
+          var4 = GuestPlayConfirmationForm.field_H;
           while (var3_int < fb.field_d.length) {
             var5 = m.field_c[var3_int];
             if (0 > var5) {
@@ -143,7 +143,7 @@ final class bg {
         if (cb.field_v == ql.field_l) {
           throw new IllegalStateException();
         }
-        if (ui.field_ob == cb.field_v) {
+        if (StandardContentDialog.field_ob == cb.field_v) {
           cb.field_v = ql.field_l;
           return BoundedRandomAccessFile.field_b;
         }

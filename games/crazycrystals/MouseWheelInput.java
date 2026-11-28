@@ -8,7 +8,7 @@ abstract class MouseWheelInput {
     static int field_g;
     static RgbSprite field_i;
     static String[] field_e;
-    static ck field_d;
+    static StandardContentDialog field_d;
     static int field_c;
     static int field_b;
     static String field_f;

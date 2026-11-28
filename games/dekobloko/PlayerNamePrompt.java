@@ -313,7 +313,7 @@ final class PlayerNamePrompt extends SceneWidget {
         try {
           GameDomainSupport001.performAction0096(false, resourceArchiveArgument16, indexedSpriteArrayArgument3, integerArrayArgument12, resourceArchiveArgument8);
           MixedSupport074.performAction0928(resourceArchiveArgument16, 32373);
-          UiComponentPart019.performAction1046(integerArgument7, stringArrayArgument20, byteArrayArgument1, resourceArchiveArgument16, -8894, stringArrayArrayArgument9, rgbSpriteArrayArrayArgument10, integerArgument2, stringArrayArrayArgument15, stringArrayArgument18, stringArrayArgument5, rgbSpriteArrayArrayArgument13, integerArgument17, byteArrayArgument14, integerArrayArgument19);
+          BirthDateChatEnableForm.performAction1046(integerArgument7, stringArrayArgument20, byteArrayArgument1, resourceArchiveArgument16, -8894, stringArrayArrayArgument9, rgbSpriteArrayArrayArgument10, integerArgument2, stringArrayArrayArgument15, stringArrayArgument18, stringArrayArgument5, rgbSpriteArrayArrayArgument13, integerArgument17, byteArrayArgument14, integerArrayArgument19);
           if (integerArgument6 != 3) {
             PlayerNamePrompt.discardDeclaredStaticReferences(-36);
           }

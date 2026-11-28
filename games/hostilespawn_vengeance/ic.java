@@ -17,7 +17,7 @@ final class ic extends IntrusiveNode {
 
     final static void a(int param0, int param1, p param2, byte param3) {
         try {
-          pe.field_fb[4].a(true, 128, (int)param2.field_c, param0 + 8, 8 + param1);
+          ProgressDialog.field_fb[4].a(true, 128, (int)param2.field_c, param0 + 8, 8 + param1);
           if (param3 != 107) {
             field_n = -58;
           }
@@ -59,7 +59,7 @@ final class ic extends IntrusiveNode {
               }
               var3 = var3 + param1;
             }
-            jf.a(var3, (byte) 19);
+            FullscreenNoticeType.a(var3, (byte) 19);
             var7 = re.a(var3, ":", "%3a", -125);
             var8 = re.a(var7, "@", "%40", -124);
             var9 = re.a(var8, "&", "%26", -113);

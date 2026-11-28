@@ -29,7 +29,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             return (CoverageBitmapFont) (stackIn_4_0);
           }
           var2 = new CoverageBitmapFont(param0, be.field_a, FullscreenFocusCanvas.field_c, wm.field_b, b.field_c, AccountNameAvailabilityValidator.field_r, vk.field_d);
-          ch.k(param1 + 4210625);
+          ProgressDialog.k(param1 + 4210625);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -49,7 +49,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
         b.field_d = param4;
         fd.field_n = param2;
-        rm.field_S = param1;
+        StripedProgressWidget.field_S = param1;
         int var5 = -117 % ((param0 - 0) / 54);
         vh.field_c = param3;
     }

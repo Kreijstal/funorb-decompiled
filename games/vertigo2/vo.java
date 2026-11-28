@@ -152,18 +152,18 @@ final class vo extends DefaultTextWidgetRenderer {
         }
         PacketBuffer.field_t = false;
         if (tk.field_e) {
-          BirthDateValidator.field_l.m(param0 ^ 2121781);
+          BirthDateValidator.field_l.showConnectionFailure(param0 ^ 2121781);
         } else {
           var1 = rc.field_b;
           if (0 < var1) {
             if (1 != var1) {
               eg.field_t = Vertigo2.a(new String[]{Integer.toString(var1)}, kn.field_a, param0 - 111);
             } else {
-              eg.field_t = ll.field_c;
+              eg.field_t = FullscreenNoticeType.field_c;
             }
             eg.field_t = oq.a(new CharSequence[]{(CharSequence) ((Object) eg.field_t), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) e.field_j)}, param0 - 31);
           }
-          BirthDateValidator.field_l.h((byte) 63);
+          BirthDateValidator.field_l.closeDialog((byte) 63);
           p.a(-33);
         }
     }

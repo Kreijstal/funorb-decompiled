@@ -173,12 +173,12 @@ final class MidiPcmStream extends PcmStream {
           if (var6Lifetime3 < 64) {
             this.field_q[var4Lifetime4] = dg.a(this.field_q[var4Lifetime4], -2);
           } else {
-            this.field_q[var4Lifetime4] = ei.b(this.field_q[var4Lifetime4], 1);
+            this.field_q[var4Lifetime4] = ResizableModalDialog.b(this.field_q[var4Lifetime4], 1);
           }
         }
         if (var5Lifetime4 == 65) {
           if (var6Lifetime3 >= 64) {
-            this.field_q[var4Lifetime4] = ei.b(this.field_q[var4Lifetime4], 2);
+            this.field_q[var4Lifetime4] = ResizableModalDialog.b(this.field_q[var4Lifetime4], 2);
           } else {
             this.releaseUnmappedVoices(var4Lifetime4, 122);
             this.field_q[var4Lifetime4] = dg.a(this.field_q[var4Lifetime4], -3);
@@ -228,7 +228,7 @@ final class MidiPcmStream extends PcmStream {
             this.resetChannelVoicePhases(var4Lifetime4, false);
             this.field_q[var4Lifetime4] = dg.a(this.field_q[var4Lifetime4], -5);
           } else {
-            this.field_q[var4Lifetime4] = ei.b(this.field_q[var4Lifetime4], 4);
+            this.field_q[var4Lifetime4] = ResizableModalDialog.b(this.field_q[var4Lifetime4], 4);
           }
         }
         if (var5Lifetime4 == 17) {

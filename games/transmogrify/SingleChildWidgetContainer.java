@@ -5,7 +5,7 @@ import java.util.*;
 
 abstract class SingleChildWidgetContainer extends UiWidget implements WidgetContainerMarker {
     static int field_x;
-    static sh field_w;
+    static FullscreenNoticeType field_w;
     UiWidget field_v;
     static int[] field_t;
     static rc field_u;
@@ -82,7 +82,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
         if (param0 <= -41) {
           return this.field_v != null ? this.field_v.getMaximumRenderLayer(-116) : 0;
         }
-        field_w = (sh) null;
+        field_w = (FullscreenNoticeType) null;
         return this.field_v != null ? this.field_v.getMaximumRenderLayer(-116) : 0;
     }
 
@@ -455,10 +455,10 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
           return true;
         }
         if (!IntrusiveDeque.b((byte) 74)) {
-          nh.a(jk.field_B, ud.field_b, param1, nc.field_t, param2, gh.field_l, 4, 75);
+          nh.a(GuestPlayConfirmationForm.field_B, ud.field_b, param1, nc.field_t, param2, gh.field_l, 4, 75);
           return true;
         }
-        mc.field_c.addLast(new AchievementNotice(param2, param1, nc.field_t, ud.field_b, jk.field_B, gh.field_l), -94);
+        mc.field_c.addLast(new AchievementNotice(param2, param1, nc.field_t, ud.field_b, GuestPlayConfirmationForm.field_B, gh.field_l), -94);
         return true;
     }
 
@@ -538,7 +538,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
 
     static {
         field_t = new int[4];
-        field_w = new sh();
+        field_w = new FullscreenNoticeType();
         field_u = new rc();
     }
 }

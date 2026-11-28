@@ -96,10 +96,10 @@ final class fc extends en {
           var9 = var9 + db.field_v.field_H * (1 + var13.length);
         }
         if (this.field_k.field_s != -1) {
-          var14_ref_String = jk.a(new String[]{this.field_k.field_F.toUpperCase()}, "<col=178B8B><%0></col>", 30496);
+          var14_ref_String = StandardContentDialog.a(new String[]{this.field_k.field_F.toUpperCase()}, "<col=178B8B><%0></col>", 30496);
           var22 = this.field_k.field_d;
-          var16_ref_String = jk.a(new String[]{var22[0]}, lc.field_g, 30496);
-          var17_ref_String = InteractiveWidget.field_H.a(jk.a(new String[]{var14_ref_String}, var22[1], 30496), (byte) -48);
+          var16_ref_String = StandardContentDialog.a(new String[]{var22[0]}, lc.field_g, 30496);
+          var17_ref_String = InteractiveWidget.field_H.a(StandardContentDialog.a(new String[]{var14_ref_String}, var22[1], 30496), (byte) -48);
           var24 = jn.a(var16_ref_String, new int[]{param1}, -118, la.field_b);
           var4 = var24;
           var23 = jn.a(var17_ref_String, new int[]{param1}, -75, la.field_b);
@@ -110,10 +110,10 @@ final class fc extends en {
           }
         }
         for (var14 = 0; this.field_k.field_A.length > var14; var14++) {
-          var15_ref_String = jk.a(new String[]{this.field_k.field_F.toUpperCase()}, "<col=FF8000><%0></col>", param0 ^ 16746719);
+          var15_ref_String = StandardContentDialog.a(new String[]{this.field_k.field_F.toUpperCase()}, "<col=FF8000><%0></col>", param0 ^ 16746719);
           var25 = this.field_k.field_D[var14];
-          var17_ref_StringLifetime1 = jk.a(new String[]{var25[0]}, EditableTextField.field_J, 30496);
-          var18_ref_String = InteractiveWidget.field_H.a(jk.a(new String[]{var15_ref_String}, var25[1], 30496), (byte) -48);
+          var17_ref_StringLifetime1 = StandardContentDialog.a(new String[]{var25[0]}, EditableTextField.field_J, 30496);
+          var18_ref_String = InteractiveWidget.field_H.a(StandardContentDialog.a(new String[]{var15_ref_String}, var25[1], 30496), (byte) -48);
           var6[var14] = jn.a(var17_ref_StringLifetime1, new int[]{param1}, -80, la.field_b);
           var7[var14] = jn.a(var18_ref_String, new int[]{param1}, IntrusiveDeque.b(param0, -16777100), la.field_b);
           var9 = var9 + (2 + var6[var14].length + var7[var14].length) * la.field_b.field_H;
@@ -230,19 +230,19 @@ final class fc extends en {
         int var4 = db.field_v.field_E + db.field_v.field_H;
         int var5 = db.field_v.field_H;
         if (-1 != this.field_k.field_s) {
-          var6_ref_String = jk.a(new String[]{this.field_k.field_F.toUpperCase()}, "<col=178B8B><%0></col>", 30496);
+          var6_ref_String = StandardContentDialog.a(new String[]{this.field_k.field_F.toUpperCase()}, "<col=178B8B><%0></col>", 30496);
           var13 = this.field_k.field_C;
           var14 = var13[0];
-          var15 = InteractiveWidget.field_H.a(jk.a(new String[]{var6_ref_String}, var13[1], 30496), (byte) -48);
+          var15 = InteractiveWidget.field_H.a(StandardContentDialog.a(new String[]{var6_ref_String}, var13[1], 30496), (byte) -48);
           var16 = jn.a("<col=178B8B>" + var14 + "</col> - " + var15, new int[]{200}, -94, db.field_v);
           var2 = var16;
           var4 = var4 + db.field_v.field_H * (1 + var16.length);
         }
         for (var6 = 0; var6 < this.field_k.field_A.length; var6++) {
-          var7_ref_String = jk.a(new String[]{this.field_k.field_F.toUpperCase()}, "<col=FF8000><%0></col>", 30496);
+          var7_ref_String = StandardContentDialog.a(new String[]{this.field_k.field_F.toUpperCase()}, "<col=FF8000><%0></col>", 30496);
           var17 = this.field_k.field_k[var6];
           var18 = var17[0];
-          var19 = InteractiveWidget.field_H.a(jk.a(new String[]{var7_ref_String}, var17[1], 30496), (byte) -48);
+          var19 = InteractiveWidget.field_H.a(StandardContentDialog.a(new String[]{var7_ref_String}, var17[1], 30496), (byte) -48);
           var3[var6] = jn.a("<col=FF8000>" + var18 + "</col> - " + var19, new int[]{200}, -95, db.field_v);
           var4 = var4 + db.field_v.field_H * (1 + var3[var6].length);
         }

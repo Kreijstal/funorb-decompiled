@@ -177,14 +177,14 @@ final class fb extends IntrusiveNode {
     }
 
     final static void a(int param0, ResourceArchive param1) {
-        nj var2 = null;
+        VorbisSample var2 = null;
         try {
           if (param0 != -2) {
             fb.c(-98);
           }
-          nj.b(param1.getFileByName("", 1, "headers.packvorbis"));
-          var2 = nj.a(param1, "jagex logo2.packvorbis", "");
-          var2.a();
+          VorbisSample.decodeSetup(param1.getFileByName("", 1, "headers.packvorbis"));
+          var2 = VorbisSample.loadByName(param1, "jagex logo2.packvorbis", "");
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "fb.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

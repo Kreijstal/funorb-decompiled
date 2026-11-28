@@ -151,7 +151,7 @@ final class pc extends ci {
             this.field_Ib.field_ib = 16764006;
             this.field_Eb.a((byte) 125, this.field_Ib);
             this.field_Ib.field_S = "|";
-            if (!(5 > sb.field_rb) ||
+            if (!(5 > StandardContentDialog.field_rb) ||
               !(sk.field_t < 2)) {
               regionExit1: {
                 stackIn_7_0 = this;
@@ -159,7 +159,7 @@ final class pc extends ci {
                 stackIn_7_2 = null;
                 stackIn_7_3 = 0L;
                 stackIn_7_4 = (he) (param9);
-                if (sb.field_rb < 7) {
+                if (StandardContentDialog.field_rb < 7) {
                   stackIn_7_0Lifetime1 = this;
                   stackIn_7_1Lifetime1 = null;
                   stackIn_7_2Lifetime1 = null;
@@ -594,7 +594,7 @@ final class pc extends ci {
             var7 = tn.field_j;
             var7.field_M = 0;
             if (ci.f(-12)) {
-              sc.field_f.field_db = ge.field_cb.toUpperCase();
+              sc.field_f.field_db = FullscreenStatusDialog.field_cb.toUpperCase();
               var9 = (2 + BirthDateValidator.field_k.field_M) / 2;
               uj.field_j.a(0, var9 - 2, -2147483648, 40, -40 + BirthDateValidator.field_k.field_pb);
               if (pd.field_Rb.field_Xb < pd.field_Rb.field_hc) {

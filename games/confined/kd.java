@@ -5,7 +5,7 @@ import java.io.*;
 
 final class kd extends jf {
     private BufferedSocket field_p;
-    static ci field_t;
+    static FullscreenNoticeType field_t;
     static String field_q;
     static String field_s;
     static double field_r;
@@ -456,6 +456,6 @@ final class kd extends jf {
     static {
         field_q = "<col=FFFFFF>Power shots:</col> this upgrade makes your basic weapon a lot more powerful for 30 seconds. The tunnel has never looked so bright.";
         field_s = "Rapid fire";
-        field_t = new ci();
+        field_t = new FullscreenNoticeType();
     }
 }

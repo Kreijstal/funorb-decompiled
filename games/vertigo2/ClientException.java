@@ -286,7 +286,7 @@ final class ClientException extends RuntimeException {
               } else {
                 if (!var13.field_Yb) {
                   if (var13.field_Ob) {
-                    var13.field_Sb.field_S = Vertigo2.a(new String[]{var21}, we.field_N, -114);
+                    var13.field_Sb.field_S = Vertigo2.a(new String[]{var21}, StripedProgressWidget.field_N, -114);
                     var13.field_Tb.field_S = ImageProducerRasterBuffer.field_k;
                     var13.field_Lb.field_S = bs.field_ac;
                   } else {
@@ -329,10 +329,10 @@ final class ClientException extends RuntimeException {
               var20 = var20 + Archive.field_f;
               if (var13.field_Sb.field_pb &&
                 var23 != 0) {
-                ko.field_S = var13.field_Wb;
+                NumericDateInputWidget.field_S = var13.field_Wb;
                 if (((mb.field_t != null)) &&
                   ((mb.field_t[var13.field_Ib] != null))) {
-                  ko.field_S = ko.field_S + " - " + mb.field_t[var13.field_Ib];
+                  NumericDateInputWidget.field_S = NumericDateInputWidget.field_S + " - " + mb.field_t[var13.field_Ib];
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -340,7 +340,7 @@ final class ClientException extends RuntimeException {
                 if (var13.field_Sb.field_pb &&
                   null != mb.field_t &&
                   mb.field_t[var13.field_Ib] != null) {
-                  ko.field_S = mb.field_t[var13.field_Ib];
+                  NumericDateInputWidget.field_S = mb.field_t[var13.field_Ib];
                 }
               }
             }
@@ -524,7 +524,7 @@ final class ClientException extends RuntimeException {
                   var28 = gd.field_j.field_Nb;
                   var25Lifetime2 = (String) (var25Lifetime2) + "<br>" + Vertigo2.a(new String[]{var28}, DropTargetWidgetContainer.field_J, -119);
                 }
-                ko.field_S = (String) (var25Lifetime2);
+                NumericDateInputWidget.field_S = (String) (var25Lifetime2);
               }
             }
             var13 = (bs) (var10.nextBackward(84));

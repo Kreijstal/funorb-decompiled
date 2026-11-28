@@ -124,7 +124,7 @@ class RichTextWidget extends InteractiveWidget {
         }
         qe.field_g.closeAllDialogs((byte) -119);
         if (null == td.field_b) {
-          td.field_b = new kl(qe.field_g, ValidatedTextField.field_T);
+          td.field_b = new ProgressDialog(qe.field_g, ValidatedTextField.field_T);
         }
         qe.field_g.showDialog(param0 ^ -3261, td.field_b);
     }

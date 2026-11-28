@@ -123,7 +123,7 @@ final class VorbisCodebook {
     final int decodeScalar() {
         int var1 = 0;
         while (this.field_a[var1] >= 0) {
-          var1 = jp.readBit() != 0 ? this.field_a[var1] : var1 + 1;
+          var1 = VorbisSample.readBit() != 0 ? this.field_a[var1] : var1 + 1;
         }
         return ~this.field_a[var1];
     }
@@ -153,17 +153,17 @@ final class VorbisCodebook {
         int var2Lifetime1;
         int var5Lifetime1;
         int var8Lifetime1;
-        jp.readBits(24);
-        this.field_c = jp.readBits(16);
-        this.field_e = jp.readBits(24);
+        VorbisSample.readBits(24);
+        this.field_c = VorbisSample.readBits(16);
+        this.field_e = VorbisSample.readBits(24);
         this.field_b = new int[this.field_e];
-        stackIn_3_0 = (jp.readBit() == 0) ? 0 : 1;
+        stackIn_3_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
         var1 = stackIn_3_0;
         if (var1 != 0) {
           var2 = 0;
-          var3_int = jp.readBits(5) + 1;
+          var3_int = VorbisSample.readBits(5) + 1;
           while (var2 < this.field_e) {
-            var4_int = jp.readBits(ue.bitLength(this.field_e - var2, -715));
+            var4_int = VorbisSample.readBits(ue.bitLength(this.field_e - var2, -715));
             for (var5 = 0; var5 < var4_int; var5++) {
               incrementValue$0 = var2;
               var2++;
@@ -172,27 +172,27 @@ final class VorbisCodebook {
             var3_int++;
           }
         } else {
-          stackIn_13_0 = (jp.readBit() == 0) ? 0 : 1;
+          stackIn_13_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
           var2 = stackIn_13_0;
           var14 = 0;
           var3_int = var14;
           while (var14 < this.field_e) {
             if (var2 != 0 &&
-              jp.readBit() == 0) {
+              VorbisSample.readBit() == 0) {
               this.field_b[var14] = 0;
             } else {
-              this.field_b[var14] = jp.readBits(5) + 1;
+              this.field_b[var14] = VorbisSample.readBits(5) + 1;
             }
             var14++;
           }
         }
         this.buildHuffmanTree();
-        var2Lifetime1 = jp.readBits(4);
+        var2Lifetime1 = VorbisSample.readBits(4);
         if (var2Lifetime1 > 0) {
-          var3 = jp.unpackVorbisFloat(jp.readBits(32));
-          var4 = jp.unpackVorbisFloat(jp.readBits(32));
-          var5Lifetime1 = jp.readBits(4) + 1;
-          stackIn_25_0 = (jp.readBit() == 0) ? 0 : 1;
+          var3 = VorbisSample.unpackVorbisFloat(VorbisSample.readBits(32));
+          var4 = VorbisSample.unpackVorbisFloat(VorbisSample.readBits(32));
+          var5Lifetime1 = VorbisSample.readBits(4) + 1;
+          stackIn_25_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
           var6 = stackIn_25_0;
           if (var2Lifetime1 != 1) {
             var7 = this.field_e * this.field_c;
@@ -201,7 +201,7 @@ final class VorbisCodebook {
           }
           this.field_f = new int[var7];
           for (var8 = 0; var8 < var7; var8++) {
-            this.field_f[var8] = jp.readBits(var5Lifetime1);
+            this.field_f[var8] = VorbisSample.readBits(var5Lifetime1);
           }
           this.field_d = new float[this.field_e][this.field_c];
           if (var2Lifetime1 != 1) {

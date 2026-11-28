@@ -12,7 +12,7 @@ final class kp {
         ib.a(930);
         if (null != AwtRasterBuffer.field_h) {
           pd.a(AwtRasterBuffer.field_h, -32);
-          hf.i((byte) -32);
+          ContentTransitionDialog.i((byte) -32);
           fd.a(52);
           UiWidget.b((byte) -99);
           if (ef.b(0)) {
@@ -26,7 +26,7 @@ final class kp {
           }
           return;
         }
-        hf.i((byte) -32);
+        ContentTransitionDialog.i((byte) -32);
         fd.a(52);
         UiWidget.b((byte) -99);
         if (ef.b(0)) {

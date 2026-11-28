@@ -14,8 +14,8 @@ final class DualNodeDeque {
 
     final static int computeInteger0037(int integerArgument1) {
         int integerLocal1 = 0;
-        if (!(UiComponentPart017.integerState0437 <= integerLocal1)) {
-          integerLocal1 = UiComponentPart017.integerState0437;
+        if (!(GuestPlayConfirmationForm.integerState0437 <= integerLocal1)) {
+          integerLocal1 = GuestPlayConfirmationForm.integerState0437;
         }
         if (integerLocal1 < RenderingSupport001.integerState0064) {
           integerLocal1 = RenderingSupport001.integerState0064;

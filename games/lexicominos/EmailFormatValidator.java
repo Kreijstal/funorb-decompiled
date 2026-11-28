@@ -136,23 +136,23 @@ final class EmailFormatValidator extends TextFieldValidator {
               }
             }
             if (gj.field_t == 2) {
-              re.field_X = new BufferedSocket((java.net.Socket) (lj.field_b.result), sa.field_g);
+              ContentTransitionDialog.field_X = new BufferedSocket((java.net.Socket) (lj.field_b.result), sa.field_g);
               var2 = new PacketBuffer(13);
               la.a((byte) -48, ni.field_e, var2, fc.field_q, qd.field_b);
               var2.writeByte(15, ~param0);
               var2.writeInt(wg.field_e, -32287);
-              re.field_X.queueWrite(var2.payload, 13, 111, 0);
+              ContentTransitionDialog.field_X.queueWrite(var2.payload, 13, 111, 0);
               gj.field_t = gj.field_t + 1;
               ta.field_f = rf.correctedCurrentTimeMillis(0) + 30000L;
             }
             if (3 == gj.field_t) {
-              if (0 >= re.field_X.availableBytes(-6448)) {
+              if (0 >= ContentTransitionDialog.field_X.availableBytes(-6448)) {
                 if (rf.correctedCurrentTimeMillis(0) > ta.field_f) {
                   stackIn_26_0 = DualLinkNode.a(-51, -2);
                   return stackIn_26_0;
                 }
               } else {
-                var1_int = re.field_X.readSingleByte(291208897);
+                var1_int = ContentTransitionDialog.field_X.readSingleByte(291208897);
                 if (var1_int != 0) {
                   stackIn_22_0 = DualLinkNode.a(-51, var1_int);
                   return stackIn_22_0;
@@ -164,9 +164,9 @@ final class EmailFormatValidator extends TextFieldValidator {
               stackIn_31_0 = -1;
               return stackIn_31_0;
             }
-            kb.field_b.a(Lexicominos.field_E, param0 - 110, re.field_X);
+            kb.field_b.a(Lexicominos.field_E, param0 - 110, ContentTransitionDialog.field_X);
             lj.field_b = null;
-            re.field_X = null;
+            ContentTransitionDialog.field_X = null;
             gj.field_t = 0;
             stackIn_29_0 = 0;
             return stackIn_29_0;

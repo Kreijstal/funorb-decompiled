@@ -106,7 +106,7 @@ final class WingPod extends MovingTunnelEntity {
         oj.field_B = 0;
         hc.field_u = hk.field_f;
         KeyboardInput.field_f = 0;
-        ef.field_tb = 3001;
+        StandardContentDialog.field_tb = 3001;
         qn.field_v.field_J.field_o = 1;
         qn.field_v.field_y = false;
         rm.field_f = null;
@@ -219,7 +219,7 @@ final class WingPod extends MovingTunnelEntity {
           field_R = (dd) null;
         }
         if (IntrusiveNode.field_f) {
-          ki.field_c.i((byte) 92);
+          ki.field_c.showConnectionFailure((byte) 92);
         } else {
           var1 = DynamicLight.field_q;
           if (var1 > 0) {
@@ -230,7 +230,7 @@ final class WingPod extends MovingTunnelEntity {
             }
             cb.field_b = BufferedRandomAccessFile.a(11739, new CharSequence[]{(CharSequence) ((Object) cb.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) f.field_a)});
           }
-          ki.field_c.n(10);
+          ki.field_c.closeDialog(10);
           bn.c(param0 + 31574);
         }
     }

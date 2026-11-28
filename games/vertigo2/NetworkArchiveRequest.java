@@ -185,7 +185,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           or.field_e = param0.field_i;
           pd.field_a = param0.field_D;
           kc.field_e = param0.field_X;
-          ga.field_hb = param9.field_C;
+          StandardContentDialog.field_hb = param9.field_C;
           qp.field_g = param0.field_N;
           vm.field_a = param0.field_o;
           MouseInputHandler.field_c = param0.field_A;
@@ -203,7 +203,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           lf.field_z = param9.field_k;
           AccountNameAvailabilityValidator.field_q = param0.field_C;
           GameKeyHandler.field_e = param9.field_E;
-          ga.field_jb = param9.field_N;
+          StandardContentDialog.field_jb = param9.field_N;
           DiskArchiveRequest.a(param2.field_w, param2.field_C, param6, param2.field_u, param2.field_N, (byte[]) null, param2.field_A, param2.field_bb, param2.field_D, param2.field_i, param2.field_X, param2.field_L, param2.field_E, param4, param2.field_T, param8, param7, param2.field_k, param2.field_o, -92, (Model) null, param5, param3, param2.field_a);
           param0.field_u = hm.field_C;
           param0.field_X = kc.field_e;
@@ -225,13 +225,13 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             return;
           }
           param9.field_X = hn.field_s;
-          param9.field_C = ga.field_hb;
+          param9.field_C = StandardContentDialog.field_hb;
           param9.field_bb = PcmOutputWorker.field_f;
           param9.field_A = MovingLevelTile.field_z;
           param9.field_o = b.field_m;
           param9.field_u = vj.field_f;
           param9.field_D = ln.field_g;
-          param9.field_N = ga.field_jb;
+          param9.field_N = StandardContentDialog.field_jb;
           param9.field_k = lf.field_z;
           param9.field_i = vf.field_y;
           param9.field_L = qn.field_u;

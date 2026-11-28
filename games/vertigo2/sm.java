@@ -71,19 +71,19 @@ final class sm extends UiPanel {
           throw new IllegalStateException();
         }
         if (BirthDateValidator.field_l != null) {
-          BirthDateValidator.field_l.h((byte) 93);
+          BirthDateValidator.field_l.closeDialog((byte) 93);
         }
         String var1 = mb.a(0);
         eb.field_d = new LoginPanel(var1, (String) null, true, false, false);
         AccountServiceResult.field_e.showDialog(n.field_b, 0);
         if (param0 == -14284) {
-          n.field_b.a(false, eb.field_d);
-          n.field_b.f((byte) -23);
+          n.field_b.replaceContent(false, eb.field_d);
+          n.field_b.finishResize((byte) -23);
           return;
         }
         sm.k(8);
-        n.field_b.a(false, eb.field_d);
-        n.field_b.f((byte) -23);
+        n.field_b.replaceContent(false, eb.field_d);
+        n.field_b.finishResize((byte) -23);
     }
 
     public static void clearStaticReferences(byte param0) {

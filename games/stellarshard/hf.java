@@ -109,10 +109,10 @@ final class hf extends sk {
         int var5Lifetime2;
         int var5Lifetime3;
         if (param1) {
-          if (se.field_B[param0] > se.field_B[param2]) {
+          if (GuestPlayConfirmationForm.field_B[param0] > GuestPlayConfirmationForm.field_B[param2]) {
             return true;
           }
-          if (se.field_B[param2] > se.field_B[param0]) {
+          if (GuestPlayConfirmationForm.field_B[param2] > GuestPlayConfirmationForm.field_B[param0]) {
             return false;
           }
           if (vh.field_h[param0] > vh.field_h[param2]) {
@@ -148,10 +148,10 @@ final class hf extends sk {
         if (vh.field_h[param0] < vh.field_h[param2]) {
           return false;
         }
-        if (se.field_B[param0] > se.field_B[param2]) {
+        if (GuestPlayConfirmationForm.field_B[param0] > GuestPlayConfirmationForm.field_B[param2]) {
           return true;
         }
-        if (se.field_B[param2] > se.field_B[param0]) {
+        if (GuestPlayConfirmationForm.field_B[param2] > GuestPlayConfirmationForm.field_B[param0]) {
           return false;
         }
         var4Lifetime1 = PcmOutputWorker.field_g[param2] + wb.field_e[param2] + vc.field_f[param2];

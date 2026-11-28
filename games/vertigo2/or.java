@@ -175,7 +175,7 @@ final class or {
           kh.a((byte) -32);
           AccountServiceResult.field_e.closeAllDialogs(param2 - 65536);
           eb.field_d = new LoginPanel(ff.field_u, (String) null, tk.field_e, param3, param1);
-          n.field_b = new ga(AccountServiceResult.field_e, eb.field_d);
+          n.field_b = new StandardContentDialog(AccountServiceResult.field_e, eb.field_d);
           AccountServiceResult.field_e.showDialog(n.field_b, 0);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "or.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

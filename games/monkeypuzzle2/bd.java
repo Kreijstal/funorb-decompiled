@@ -28,8 +28,8 @@ final class bd {
           cd.a(param1 ^ -99);
           wg.field_j.closeAllDialogs(param1 ^ 25);
           j.field_e = new LoginPanel(bh.field_b, (String) null, fk.field_a, param0, param2);
-          jh.field_C = new ra(wg.field_j, j.field_e);
-          wg.field_j.showDialog((byte) -101, jh.field_C);
+          StripedProgressWidget.field_C = new StandardContentDialog(wg.field_j, j.field_e);
+          wg.field_j.showDialog((byte) -101, StripedProgressWidget.field_C);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "bd.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -63,8 +63,8 @@ final class bd {
           cd.a(param1 ^ -99);
           wg.field_j.closeAllDialogs(param1 ^ 25);
           j.field_e = new LoginPanel(bh.field_b, (String) null, fk.field_a, param0, param2);
-          jh.field_C = new ra(wg.field_j, j.field_e);
-          wg.field_j.showDialog((byte) -101, jh.field_C);
+          StripedProgressWidget.field_C = new StandardContentDialog(wg.field_j, j.field_e);
+          wg.field_j.showDialog((byte) -101, StripedProgressWidget.field_C);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "bd.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

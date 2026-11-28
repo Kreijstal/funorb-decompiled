@@ -35,9 +35,9 @@ abstract class MouseWheelInput {
           }
           if (null == gh.field_a) {
             gh.field_a = new int[param1 * 2];
-            if (null == vn.field_Ab ||
-              !(param0 + param1 <= vn.field_Ab.length)) {
-              vn.field_Ab = new int[(param0 + param1) * 2];
+            if (null == ProgressMessageDialog.field_Ab ||
+              !(param0 + param1 <= ProgressMessageDialog.field_Ab.length)) {
+              ProgressMessageDialog.field_Ab = new int[(param0 + param1) * 2];
             }
             if (ok.field_Lb == null ||
               !(ok.field_Lb.length >= param1)) {
@@ -45,9 +45,9 @@ abstract class MouseWheelInput {
             }
           } else {
             if (param1 <= gh.field_a.length) {
-              if (null == vn.field_Ab ||
-                !(param0 + param1 <= vn.field_Ab.length)) {
-                vn.field_Ab = new int[(param0 + param1) * 2];
+              if (null == ProgressMessageDialog.field_Ab ||
+                !(param0 + param1 <= ProgressMessageDialog.field_Ab.length)) {
+                ProgressMessageDialog.field_Ab = new int[(param0 + param1) * 2];
               }
               if (ok.field_Lb == null ||
                 !(ok.field_Lb.length >= param1)) {
@@ -55,9 +55,9 @@ abstract class MouseWheelInput {
               }
             } else {
               gh.field_a = new int[param1 * 2];
-              if (null == vn.field_Ab ||
-                !(param0 + param1 <= vn.field_Ab.length)) {
-                vn.field_Ab = new int[(param0 + param1) * 2];
+              if (null == ProgressMessageDialog.field_Ab ||
+                !(param0 + param1 <= ProgressMessageDialog.field_Ab.length)) {
+                ProgressMessageDialog.field_Ab = new int[(param0 + param1) * 2];
               }
               if (ok.field_Lb == null ||
                 !(ok.field_Lb.length >= param1)) {
@@ -87,9 +87,9 @@ abstract class MouseWheelInput {
               !(param1 <= gh.field_a.length)) {
               gh.field_a = new int[param1 * 2];
             }
-            if (null == vn.field_Ab ||
-              !(param0 + param1 <= vn.field_Ab.length)) {
-              vn.field_Ab = new int[(param0 + param1) * 2];
+            if (null == ProgressMessageDialog.field_Ab ||
+              !(param0 + param1 <= ProgressMessageDialog.field_Ab.length)) {
+              ProgressMessageDialog.field_Ab = new int[(param0 + param1) * 2];
             }
             if (ok.field_Lb == null) {
               ok.field_Lb = new boolean[2 * param1];
@@ -114,9 +114,9 @@ abstract class MouseWheelInput {
               }
               if (null == gh.field_a) {
                 gh.field_a = new int[param1 * 2];
-                if (null == vn.field_Ab ||
-                  !(param0 + param1 <= vn.field_Ab.length)) {
-                  vn.field_Ab = new int[(param0 + param1) * 2];
+                if (null == ProgressMessageDialog.field_Ab ||
+                  !(param0 + param1 <= ProgressMessageDialog.field_Ab.length)) {
+                  ProgressMessageDialog.field_Ab = new int[(param0 + param1) * 2];
                 }
                 if (ok.field_Lb == null ||
                   !(ok.field_Lb.length >= param1)) {
@@ -124,9 +124,9 @@ abstract class MouseWheelInput {
                 }
               } else {
                 if (param1 <= gh.field_a.length) {
-                  if (null == vn.field_Ab ||
-                    !(param0 + param1 <= vn.field_Ab.length)) {
-                    vn.field_Ab = new int[(param0 + param1) * 2];
+                  if (null == ProgressMessageDialog.field_Ab ||
+                    !(param0 + param1 <= ProgressMessageDialog.field_Ab.length)) {
+                    ProgressMessageDialog.field_Ab = new int[(param0 + param1) * 2];
                   }
                   if (ok.field_Lb == null ||
                     !(ok.field_Lb.length >= param1)) {
@@ -134,9 +134,9 @@ abstract class MouseWheelInput {
                   }
                 } else {
                   gh.field_a = new int[param1 * 2];
-                  if (null == vn.field_Ab ||
-                    !(param0 + param1 <= vn.field_Ab.length)) {
-                    vn.field_Ab = new int[(param0 + param1) * 2];
+                  if (null == ProgressMessageDialog.field_Ab ||
+                    !(param0 + param1 <= ProgressMessageDialog.field_Ab.length)) {
+                    ProgressMessageDialog.field_Ab = new int[(param0 + param1) * 2];
                   }
                   if (ok.field_Lb == null ||
                     !(ok.field_Lb.length >= param1)) {
@@ -156,9 +156,9 @@ abstract class MouseWheelInput {
                 }
                 if (null == gh.field_a) {
                   gh.field_a = new int[param1 * 2];
-                  if (null == vn.field_Ab ||
-                    !(param0 + param1 <= vn.field_Ab.length)) {
-                    vn.field_Ab = new int[(param0 + param1) * 2];
+                  if (null == ProgressMessageDialog.field_Ab ||
+                    !(param0 + param1 <= ProgressMessageDialog.field_Ab.length)) {
+                    ProgressMessageDialog.field_Ab = new int[(param0 + param1) * 2];
                   }
                   if (ok.field_Lb == null ||
                     !(ok.field_Lb.length >= param1)) {
@@ -166,9 +166,9 @@ abstract class MouseWheelInput {
                   }
                 } else {
                   if (param1 <= gh.field_a.length) {
-                    if (null == vn.field_Ab ||
-                      !(param0 + param1 <= vn.field_Ab.length)) {
-                      vn.field_Ab = new int[(param0 + param1) * 2];
+                    if (null == ProgressMessageDialog.field_Ab ||
+                      !(param0 + param1 <= ProgressMessageDialog.field_Ab.length)) {
+                      ProgressMessageDialog.field_Ab = new int[(param0 + param1) * 2];
                     }
                     if (ok.field_Lb == null ||
                       !(ok.field_Lb.length >= param1)) {
@@ -176,9 +176,9 @@ abstract class MouseWheelInput {
                     }
                   } else {
                     gh.field_a = new int[param1 * 2];
-                    if (null == vn.field_Ab ||
-                      !(param0 + param1 <= vn.field_Ab.length)) {
-                      vn.field_Ab = new int[(param0 + param1) * 2];
+                    if (null == ProgressMessageDialog.field_Ab ||
+                      !(param0 + param1 <= ProgressMessageDialog.field_Ab.length)) {
+                      ProgressMessageDialog.field_Ab = new int[(param0 + param1) * 2];
                     }
                     if (ok.field_Lb == null ||
                       !(ok.field_Lb.length >= param1)) {
@@ -198,9 +198,9 @@ abstract class MouseWheelInput {
                 }
                 if (null == gh.field_a) {
                   gh.field_a = new int[param1 * 2];
-                  if (null == vn.field_Ab ||
-                    !(param0 + param1 <= vn.field_Ab.length)) {
-                    vn.field_Ab = new int[(param0 + param1) * 2];
+                  if (null == ProgressMessageDialog.field_Ab ||
+                    !(param0 + param1 <= ProgressMessageDialog.field_Ab.length)) {
+                    ProgressMessageDialog.field_Ab = new int[(param0 + param1) * 2];
                   }
                   if (ok.field_Lb == null ||
                     !(ok.field_Lb.length >= param1)) {
@@ -208,9 +208,9 @@ abstract class MouseWheelInput {
                   }
                 } else {
                   if (param1 <= gh.field_a.length) {
-                    if (null == vn.field_Ab ||
-                      !(param0 + param1 <= vn.field_Ab.length)) {
-                      vn.field_Ab = new int[(param0 + param1) * 2];
+                    if (null == ProgressMessageDialog.field_Ab ||
+                      !(param0 + param1 <= ProgressMessageDialog.field_Ab.length)) {
+                      ProgressMessageDialog.field_Ab = new int[(param0 + param1) * 2];
                     }
                     if (ok.field_Lb == null ||
                       !(ok.field_Lb.length >= param1)) {
@@ -218,9 +218,9 @@ abstract class MouseWheelInput {
                     }
                   } else {
                     gh.field_a = new int[param1 * 2];
-                    if (null == vn.field_Ab ||
-                      !(param0 + param1 <= vn.field_Ab.length)) {
-                      vn.field_Ab = new int[(param0 + param1) * 2];
+                    if (null == ProgressMessageDialog.field_Ab ||
+                      !(param0 + param1 <= ProgressMessageDialog.field_Ab.length)) {
+                      ProgressMessageDialog.field_Ab = new int[(param0 + param1) * 2];
                     }
                     if (ok.field_Lb == null ||
                       !(ok.field_Lb.length >= param1)) {
@@ -233,7 +233,7 @@ abstract class MouseWheelInput {
           }
         }
         AccountRequestState.field_b = 0;
-        bj.field_gb = -2147483648;
+        ContentTransitionDialog.field_gb = -2147483648;
         ArrayWidgetContainer.field_F = 2147483647;
         nj.field_t = 2147483647;
         eb.field_y = -2147483648;

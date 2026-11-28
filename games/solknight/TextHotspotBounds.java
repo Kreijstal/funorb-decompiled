@@ -113,7 +113,7 @@ final class TextHotspotBounds extends IntrusiveNode {
           }
           if (ok.field_a == null) {
             ok.field_a = new jh(128);
-            ng.field_c = 0;
+            FullscreenNoticeType.field_c = 0;
           }
           var3Lifetime1 = var1.readString(55);
           if (((String) (var3Lifetime1)).equals("")) {
@@ -131,8 +131,8 @@ final class TextHotspotBounds extends IntrusiveNode {
           if (null == var6) {
             var6 = new ia();
             ok.field_a.a((long)FullscreenFocusCanvas.a((CharSequence) ((Object) var4_ref_StringLifetime1), -2).hashCode(), (byte) -109, var6);
-            fieldTemp$0 = ng.field_c;
-            ng.field_c = ng.field_c + 1;
+            fieldTemp$0 = FullscreenNoticeType.field_c;
+            FullscreenNoticeType.field_c = FullscreenNoticeType.field_c + 1;
             var6.field_jb = fieldTemp$0;
             va.field_f.addFirst(var6, -7044);
           }

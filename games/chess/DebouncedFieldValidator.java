@@ -95,8 +95,8 @@ abstract class DebouncedFieldValidator implements FieldValidator {
           if (param0 != 350) {
             field_c = (String) null;
           }
-          ba.field_O = new DiskCacheWorker(param5);
-          ge.field_fb = new hj(qh.field_c, ba.field_O);
+          RegistrationAgreementPane.field_O = new DiskCacheWorker(param5);
+          FullscreenStatusDialog.field_fb = new hj(qh.field_c, RegistrationAgreementPane.field_O);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "jb.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

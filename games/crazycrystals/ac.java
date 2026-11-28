@@ -118,7 +118,7 @@ final class ac extends nf {
         if (sg.field_b == ResultScenePhase.field_b) {
           return gk.field_e.a(124);
         }
-        return jd.field_G;
+        return DialogMessagePane.field_G;
     }
 
     final void a(byte param0) {

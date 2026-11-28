@@ -174,7 +174,7 @@ class jla {
     int a(int param0, boolean param1) {
         if (6 == this.field_b) {
           if (0 == param0) {
-            return de.field_I;
+            return StripedProgressWidget.field_I;
           }
           if (param0 == 2) {
             return pd.field_d;
@@ -1682,7 +1682,7 @@ class jla {
         }
         if (this.field_b == 11) {
           stackIn_6_0 = !(RefreshingAnimation.e(-8774));
-          var2 = em.updateMembershipSlides(stackIn_6_0, param0 ^ 8456);
+          var2 = FullscreenStatusDialog.updateMembershipSlides(stackIn_6_0, param0 ^ 8456);
           if (var2 == 3) {
             if (null != kga.field_c) {
               lga.c((byte) 119);
@@ -2126,13 +2126,13 @@ class jla {
               if ((var3 != 0) &&
                 (this.field_b == 10)) {
                 var2 = LinkTextWidget.field_D.lineCount(LevitateEvent.field_s, 480);
-                hp.a(uma.field_J[0].field_n + 480 + uma.field_J[2].field_n, -uma.field_J[0].field_n + 80, (byte) 113, 30 * var2 + (uma.field_J[0].field_o + uma.field_J[6].field_o), uma.field_J, -uma.field_J[0].field_o + (200 - LinkTextWidget.field_D.field_u));
+                hp.a(NumericDateInputWidget.field_J[0].field_n + 480 + NumericDateInputWidget.field_J[2].field_n, -NumericDateInputWidget.field_J[0].field_n + 80, (byte) 113, 30 * var2 + (NumericDateInputWidget.field_J[0].field_o + NumericDateInputWidget.field_J[6].field_o), NumericDateInputWidget.field_J, -NumericDateInputWidget.field_J[0].field_o + (200 - LinkTextWidget.field_D.field_u));
                 LinkTextWidget.field_D.drawParagraph(LevitateEvent.field_s, 80, 188, 480, 1000, 3518976, -1, 0, 0, 30);
               }
             } else {
               if (this.field_b == 10) {
                 var2 = LinkTextWidget.field_D.lineCount(LevitateEvent.field_s, 480);
-                hp.a(uma.field_J[0].field_n + 480 + uma.field_J[2].field_n, -uma.field_J[0].field_n + 80, (byte) 113, 30 * var2 + (uma.field_J[0].field_o + uma.field_J[6].field_o), uma.field_J, -uma.field_J[0].field_o + (200 - LinkTextWidget.field_D.field_u));
+                hp.a(NumericDateInputWidget.field_J[0].field_n + 480 + NumericDateInputWidget.field_J[2].field_n, -NumericDateInputWidget.field_J[0].field_n + 80, (byte) 113, 30 * var2 + (NumericDateInputWidget.field_J[0].field_o + NumericDateInputWidget.field_J[6].field_o), NumericDateInputWidget.field_J, -NumericDateInputWidget.field_J[0].field_o + (200 - LinkTextWidget.field_D.field_u));
                 LinkTextWidget.field_D.drawParagraph(LevitateEvent.field_s, 80, 188, 480, 1000, 3518976, -1, 0, 0, 30);
               }
             }

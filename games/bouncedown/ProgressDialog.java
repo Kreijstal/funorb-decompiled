@@ -1,0 +1,120 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ProgressDialog extends ResizableModalDialog {
+    private boolean field_U;
+    private String field_P;
+    static String field_O;
+    static int field_S;
+    static int field_R;
+    private StripedProgressWidget field_N;
+    static String field_T;
+    private boolean field_Q;
+    static int field_V;
+    private String field_W;
+
+    final void drawDialogBackground(int param0, int param1, int param2) {
+        super.drawDialogBackground(param0, -57, param2);
+        if (param1 < -6) {
+          ne.field_v.drawCentred(this.field_W, param2 + (this.field_k >> 1), 103 + param0, 16777215, -1);
+          if (null != this.field_P) {
+            SoftwareRasterizer.drawHorizontalLine(20 + param2, -7 + param0 + 120, 260, 8421504);
+            ne.field_v.drawParagraph(this.field_P, 20 + param2, param0 + 120 + 8, 260, 100, 16777215, -1, 1, 0, ne.field_v.field_s);
+          }
+          return;
+        }
+    }
+
+    final void freezeNormalProgressAnimation(int param0) {
+        this.field_N.field_C = false;
+        if (param0 != 65536) {
+          field_O = (String) null;
+          this.field_Q = true;
+          return;
+        }
+        this.field_Q = true;
+    }
+
+    final void setProgress(boolean param0, float param1, String param2, int param3) {
+        try {
+          if (param0 != this.field_U) {
+            this.field_U = param0 ? true : false;
+            if (this.field_U) {
+              this.field_N.setColours(4210752, (byte) 126, 8405024);
+              this.field_N.field_C = true;
+            } else {
+              this.field_N.setColours(4210752, (byte) 126, 2113632);
+              if (this.field_Q) {
+                this.field_N.field_C = false;
+              }
+            }
+          }
+          this.field_W = param2;
+          this.field_N.field_F = (int)(param1 / 100.0f * (float)param3);
+        } catch (RuntimeException runtimeException) {
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "db.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+        }
+    }
+
+    ProgressDialog(ModalDialogHost param0, String param1) {
+        super(param0, 300, 120);
+        int var3_int = 0;
+        try {
+          this.field_P = param1;
+          if (null != this.field_P) {
+            var3_int = ne.field_v.textHeight(this.field_P, 260, ne.field_v.field_s);
+            this.setCenteredSize(-463076575, 300, var3_int + 150);
+          }
+          this.field_N = new StripedProgressWidget(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_N.field_C = true;
+          this.field_U = false;
+          this.field_Q = false;
+          this.addChild(this.field_N, true);
+        } catch (RuntimeException runtimeException) {
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "db.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static String a(CharSequence param0, int param1) {
+        RuntimeException var2 = null;
+        String stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 != 8351) {
+            field_O = (String) null;
+          }
+          stackIn_3_0 = vd.a((byte) 88, param0, false);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("db.B(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    public static void n(int param0) {
+        field_T = null;
+        field_O = null;
+        if (param0 != 260) {
+          CharSequence var2 = (CharSequence) null;
+          ProgressDialog.a((CharSequence) null, -82);
+        }
+    }
+
+    static {
+        field_O = "Unable to connect to the data server. Please check any firewall you are using.";
+        field_S = 56;
+        field_T = "Discard";
+        field_R = 0;
+    }
+}

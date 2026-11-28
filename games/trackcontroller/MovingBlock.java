@@ -237,7 +237,7 @@ final class MovingBlock extends IntrusiveNode {
                 ne.field_a.position = 0;
               } else {
                 uk.field_c = var9Lifetime1;
-                jc.field_a = sf.field_D;
+                jc.field_a = GuestPlayConfirmationForm.field_D;
                 ConfirmedEmailAvailabilityValidator.field_o = -1;
               }
             }
@@ -260,7 +260,7 @@ final class MovingBlock extends IntrusiveNode {
             }
           }
           var9Lifetime3 = 77 / ((param5 - 31) / 47);
-          if (jc.field_a == sf.field_D &&
+          if (jc.field_a == GuestPlayConfirmationForm.field_D &&
             ByteStorage.a(520)) {
             if (255 == uk.field_c) {
               var10_ref_String = ne.field_a.readOptionalString(19016);

@@ -494,7 +494,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           r.field_q = true;
           ii.field_a = true;
           vd.field_w = false;
-          ej.field_jb = id.correctedCurrentTimeMillis(33);
+          StandardContentDialog.field_jb = id.correctedCurrentTimeMillis(33);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -651,13 +651,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !BufferedRandomAccessFile.field_q) {
             ii.field_a = true;
             if (hi.field_a &&
-              -ej.field_jb + id.correctedCurrentTimeMillis(124) > 1000L) {
+              -StandardContentDialog.field_jb + id.correctedCurrentTimeMillis(124) > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
                 if (vk.field_b > var2.width) {
                   return;
                 }
-                if (var2.height < qe.field_I) {
+                if (var2.height < RegistrationAgreementPane.field_I) {
                   return;
                 }
               }
@@ -912,7 +912,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_31_0 = 0;
           }
           var13Lifetime1 = stackIn_31_0;
-          while (var13Lifetime1 < ol.field_X) {
+          while (var13Lifetime1 < FullscreenStatusDialog.field_X) {
             var14Lifetime1 = lf.field_a[var13Lifetime1];
             var15Lifetime1 = param6.field_a[var14Lifetime1];
             var16 = param6.field_Q[var14Lifetime1];
@@ -1038,7 +1038,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               gg.field_d = param5;
               vk.field_b = param5;
               AccountNameAvailabilityValidator.field_j = param4;
-              qe.field_I = param4;
+              RegistrationAgreementPane.field_I = param4;
               ca.field_d = param3;
               jj.field_a = this;
               sk.field_d = 0;

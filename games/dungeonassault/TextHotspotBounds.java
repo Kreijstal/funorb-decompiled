@@ -29,7 +29,7 @@ final class TextHotspotBounds extends IntrusiveNode {
             stackIn_3_0 = ha.field_k.a(param0, (byte) 126, "");
             return stackIn_3_0;
           }
-          if (ia.field_W.hasFileName(param0, "", (byte) -82)) {
+          if (GuestPlayConfirmationForm.field_W.hasFileName(param0, "", (byte) -82)) {
             stackIn_7_0 = ha.field_k.a(param0, "", param1 + 47712);
             return stackIn_7_0;
           }

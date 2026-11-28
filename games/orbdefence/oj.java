@@ -13,7 +13,7 @@ final class oj extends IntrusiveNode {
     int field_g;
     private int field_k;
     private int field_l;
-    static dh field_q;
+    static ProgressMessageDialog field_q;
     static fk field_j;
     static IntrusiveDeque field_r;
 

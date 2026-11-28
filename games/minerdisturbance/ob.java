@@ -65,7 +65,7 @@ abstract class ob extends GameAppletShell {
             nb.a((byte) -52, 3);
           }
           if (mk.field_b[3]) {
-            qd.a(4, (byte) -125);
+            GuestPlayConfirmationForm.a(4, (byte) -125);
           }
           if (mk.field_b[4]) {
             gh.a(5, 21121);
@@ -179,7 +179,7 @@ abstract class ob extends GameAppletShell {
             if (fh.field_b >= 10) {
               eb.a((byte) -110);
               if (tb.field_f == 3) {
-                da.a(true, wf.field_N, 256);
+                da.a(true, ResizableModalDialog.field_N, 256);
               } else {
                 if (tb.field_f == 4) {
                   da.a(true, kc.field_e, 256);
@@ -254,7 +254,7 @@ abstract class ob extends GameAppletShell {
               if (PacketBuffer.field_r.tryLoadGroupByName(false, "")) {
                 li.a(9259, PacketBuffer.field_r);
                 PacketBuffer.field_r = null;
-                wf.p(4462);
+                ResizableModalDialog.p(4462);
               }
             } else {
               PacketBuffer.field_r = null;
@@ -267,7 +267,7 @@ abstract class ob extends GameAppletShell {
         if (3 == af.field_u &&
           DefaultTextWidgetRenderer.a(pb.field_r, 4, hj.field_i, oh.field_C) &&
           eb.a(oh.field_C, (byte) 124)) {
-          bh.h((byte) 123);
+          FullscreenStatusDialog.h((byte) 123);
           ArchiveRequest.g(-1719110238);
           ResourceArchive.field_c = BufferedSocket.field_e;
           jb.field_q = false;
@@ -292,7 +292,7 @@ abstract class ob extends GameAppletShell {
           hj.field_i = null;
           oh.field_C = null;
           vk.a(true, (java.applet.Applet) (this));
-          wf.p(param1 ^ 22550);
+          ResizableModalDialog.p(param1 ^ 22550);
           af.field_u = 10;
         }
         if (af.field_u == 10) {
@@ -478,7 +478,7 @@ abstract class ob extends GameAppletShell {
         int var4 = rj.field_d - 1;
         byte[] var5 = new byte[var4];
         kj.field_a.a(var5, 113, var4, param0);
-        Bzip2State.a(RichTextLayout.c(-98), bh.a(var5, 88), 11050, var3 != 0);
+        Bzip2State.a(RichTextLayout.c(-98), FullscreenStatusDialog.a(var5, 88), 11050, var3 != 0);
     }
 
     final static boolean l(int param0) {
@@ -486,7 +486,7 @@ abstract class ob extends GameAppletShell {
         if (param0 != -1) {
           field_q = (ResourceArchive) null;
         }
-        stackIn_6_0 = (AwtRasterBuffer.field_i != null) && (qd.field_Q.a(param0 ^ -18545));
+        stackIn_6_0 = (AwtRasterBuffer.field_i != null) && (GuestPlayConfirmationForm.field_Q.a(param0 ^ -18545));
         return stackIn_6_0;
     }
 
@@ -658,7 +658,7 @@ abstract class ob extends GameAppletShell {
             return 19;
           }
           if (12 == var4) {
-            jk.a(RichTextLayout.c(-86), 68, DequeWidgetContainer.a(0));
+            ContentTransitionDialog.a(RichTextLayout.c(-86), 68, DequeWidgetContainer.a(0));
           }
           if (13 == var4) {
             try {
@@ -671,10 +671,10 @@ abstract class ob extends GameAppletShell {
                   var7 = ph.decodeCp1252String((byte) 31, var11.position, var11.payload, 0);
                   stackIn_63_0 = var7;
                   stackIn_64_1 = !(param0);
-                  fm.a(stackIn_63_0, stackIn_64_1);
+                  DialogMessagePane.a(stackIn_63_0, stackIn_64_1);
                 } else {
                   var9 = (String) null;
-                  fm.a((String) null, false);
+                  DialogMessagePane.a((String) null, false);
                 }
                 hf.field_u = null;
               }
@@ -684,7 +684,7 @@ abstract class ob extends GameAppletShell {
               MidiPcmStream.a((Throwable) ((Object) var5), 1, "S1");
               stackIn_69_0 = null;
               stackIn_70_1 = !(param0);
-              fm.a((String) (stackIn_69_0), stackIn_70_1);
+              DialogMessagePane.a((String) (stackIn_69_0), stackIn_70_1);
               hf.field_u = null;
             }
           }

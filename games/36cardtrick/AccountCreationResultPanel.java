@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends af implements WidgetActivationListener {
+final class AccountCreationResultPanel extends ProgressMessageDialog implements WidgetActivationListener {
     private boolean field_sb;
     static int field_rb;
     static PcmStreamMixer field_tb;
     private AccountRegistrationPanel field_vb;
     private boolean field_ub;
 
-    final void f(byte param0) {
+    final void showAccountCreationConnectionFailure(byte param0) {
         this.showAccountCreationResult(nc.createAccountErrorResult(248, 0, pa.field_N), true, (byte) 117);
         if (param0 != -42) {
           java.awt.Canvas var3 = (java.awt.Canvas) null;
@@ -50,7 +50,7 @@ final class AccountCreationResultPanel extends af implements WidgetActivationLis
         try {
           int var6_int = -69 / ((param1 + 62) / 32);
           SecondaryNodeDequeIterator.a((byte) 120);
-          this.s(116);
+          this.closeDialog(116);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "bg.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -63,7 +63,7 @@ final class AccountCreationResultPanel extends af implements WidgetActivationLis
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        ui var5 = null;
+        DialogMessagePane var5 = null;
         int var6 = 0;
         var6 = Main.field_T;
         try {
@@ -84,42 +84,42 @@ final class AccountCreationResultPanel extends af implements WidgetActivationLis
                 }
               }
             } else {
-              var4 = ui.field_K;
+              var4 = DialogMessagePane.field_K;
               if (null != this.field_vb) {
                 this.field_vb.onNameSuggestionsRefreshRequested(true);
               }
             }
           }
-          var5 = new ui((af) (this), vd.field_p, var4);
+          var5 = new DialogMessagePane((ProgressMessageDialog) (this), vd.field_p, var4);
           if (param2 != 117) {
             field_tb = (PcmStreamMixer) null;
           }
           if (param0.success) {
             if (param0.field_e) {
-              this.c(new qe(this), (byte) 33);
+              this.replaceContent(new RegistrationAgreementPane(this), (byte) 33);
               return;
             }
-            var5.a((WidgetEventListener) (this), true, bj.field_b);
+            var5.addListenerButton((WidgetEventListener) (this), true, bj.field_b);
           } else {
             if (!this.field_ub) {
               if (param0.statusCode != 5) {
-                var5.a(uc.field_r, -1, param2 ^ -121);
+                var5.addActionButton(uc.field_r, -1, param2 ^ -121);
               } else {
-                var5.a(NetworkArchiveRequest.field_p, 11, -14);
-                var5.a(pg.field_f, 17, -14);
+                var5.addActionButton(NetworkArchiveRequest.field_p, 11, -14);
+                var5.addActionButton(pg.field_f, 17, -14);
               }
             } else {
-              var5.a((WidgetEventListener) (this), true, bj.field_b);
+              var5.addListenerButton((WidgetEventListener) (this), true, bj.field_b);
             }
             if (3 != param0.statusCode) {
               if (param0.statusCode == 6) {
-                var5.a(jh.field_a, 9, -14);
+                var5.addActionButton(jh.field_a, 9, -14);
               }
             } else {
-              var5.a(sk.field_a, 7, -14);
+              var5.addActionButton(sk.field_a, 7, -14);
             }
           }
-          this.c(var5, (byte) 92);
+          this.replaceContent(var5, (byte) 92);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -136,7 +136,7 @@ final class AccountCreationResultPanel extends af implements WidgetActivationLis
     }
 
     AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
-        super(param0, vd.field_p, jc.field_R, false, false);
+        super(param0, vd.field_p, ResizableModalDialog.field_R, false, false);
         try {
           this.field_vb = param1;
         } catch (RuntimeException runtimeException) {
@@ -202,7 +202,7 @@ final class AccountCreationResultPanel extends af implements WidgetActivationLis
 
     final static de[] v(int param0) {
         int var1 = 5 / ((param0 - 40) / 58);
-        return new de[]{uh.field_n, eb.field_l, c.field_k, kg.field_b, qe.field_H, qe.field_J, nf.field_d, DraggableWidgetContainer.field_A, rc.field_g, lh.field_a, ra.field_a, vk.field_e, RichTextWidget.field_G, jl.field_g};
+        return new de[]{uh.field_n, eb.field_l, c.field_k, kg.field_b, RegistrationAgreementPane.field_H, RegistrationAgreementPane.field_J, nf.field_d, DraggableWidgetContainer.field_A, rc.field_g, lh.field_a, ra.field_a, vk.field_e, RichTextWidget.field_G, jl.field_g};
     }
 
     final static int a(int param0, int param1, IsaacRandom param2) {
@@ -219,7 +219,7 @@ final class AccountCreationResultPanel extends af implements WidgetActivationLis
           if (param0 <= 0) {
             throw new IllegalArgumentException();
           }
-          if (ng.a(param0, (byte) -128)) {
+          if (StripedProgressWidget.a(param0, (byte) -128)) {
             stackIn_6_0 = (int)((long)param0 * ((long)param2.nextInt(-1427) & 4294967295L) >> 32);
             return stackIn_6_0;
           }

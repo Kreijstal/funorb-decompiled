@@ -235,7 +235,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "mu_chat_friends");
                 if (null != var2) {
-                  de.field_K = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  StripedProgressWidget.field_K = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_off");
                 if (null != var2) {
@@ -539,7 +539,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "mu_chat_lobby_hide");
                 if (null != var2) {
-                  d.field_D = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  BirthDateChatEnableForm.field_D = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_game_show_all");
                 if (var2 != null) {
@@ -559,7 +559,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "mu_chat_pm_show_all");
                 if (var2 != null) {
-                  sh.field_H = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  DateInputWidget.field_H = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_pm_friends_only");
                 if (var2 != null) {
@@ -623,7 +623,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "waiting_to_start_hint");
                 if (null != var2) {
-                  lo.field_a = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  FullscreenNoticeType.field_a = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "your_game");
                 if (var2 != null) {
@@ -819,7 +819,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "pressf10toquickchat");
                 if (var2 != null) {
-                  uda.field_eb = ChangeCreatureStatOrHealthEffect.a(var2, param0);
+                  ContentTransitionDialog.field_eb = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "dob_chatdisabled");
                 if (var2 != null) {
@@ -859,7 +859,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "privatechat_friend_offline");
                 if (var2 != null) {
-                  uma.field_O = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  NumericDateInputWidget.field_O = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "privatechat_friend_notlisted");
                 if (var2 != null) {
@@ -1249,7 +1249,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "quittowebsite");
                 if (var2 != null) {
-                  uda.field_ab = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  ContentTransitionDialog.field_ab = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "connectionrestored");
                 if (null != var2) {
@@ -1445,51 +1445,51 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "monthnames,0");
                 if (var2 != null) {
-                  uda.field_cb[0] = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  ContentTransitionDialog.field_cb[0] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "monthnames,1");
                 if (var2 != null) {
-                  uda.field_cb[1] = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  ContentTransitionDialog.field_cb[1] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "monthnames,2");
                 if (null != var2) {
-                  uda.field_cb[2] = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  ContentTransitionDialog.field_cb[2] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "monthnames,3");
                 if (null != var2) {
-                  uda.field_cb[3] = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  ContentTransitionDialog.field_cb[3] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "monthnames,4");
                 if (null != var2) {
-                  uda.field_cb[4] = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  ContentTransitionDialog.field_cb[4] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "monthnames,5");
                 if (var2 != null) {
-                  uda.field_cb[5] = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  ContentTransitionDialog.field_cb[5] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "monthnames,6");
                 if (var2 != null) {
-                  uda.field_cb[6] = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  ContentTransitionDialog.field_cb[6] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "monthnames,7");
                 if (null != var2) {
-                  uda.field_cb[7] = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  ContentTransitionDialog.field_cb[7] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "monthnames,8");
                 if (var2 != null) {
-                  uda.field_cb[8] = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  ContentTransitionDialog.field_cb[8] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "monthnames,9");
                 if (null != var2) {
-                  uda.field_cb[9] = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  ContentTransitionDialog.field_cb[9] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "monthnames,10");
                 if (var2 != null) {
-                  uda.field_cb[10] = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  ContentTransitionDialog.field_cb[10] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "monthnames,11");
                 if (null != var2) {
-                  uda.field_cb[11] = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  ContentTransitionDialog.field_cb[11] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_welcome");
                 if (null != var2) {
@@ -1713,7 +1713,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "create_alert_passchars");
                 if (var2 != null) {
-                  sh.field_D = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  DateInputWidget.field_D = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_alert_passrepeated");
                 if (null != var2) {
@@ -2938,7 +2938,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "createtouse");
                 if (var2 != null) {
-                  d.field_E = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  BirthDateChatEnableForm.field_E = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "achievementsoffline");
                 if (null != var2) {

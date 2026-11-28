@@ -81,7 +81,7 @@ final class ij implements WidgetRenderer {
             for (var8Lifetime1 = param6; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
               var9Lifetime1 = ValidatedTextField.field_Y[var8Lifetime1];
               var10Lifetime1 = ValidatedTextField.field_Y[1 + var8Lifetime1];
-              if (rk.a(var9Lifetime1, (byte) 86, var10Lifetime1, param5)) {
+              if (ProgressDialog.a(var9Lifetime1, (byte) 86, var10Lifetime1, param5)) {
                 ValidatedTextField.field_Y[var8Lifetime1] = var10Lifetime1;
                 ValidatedTextField.field_Y[1 + var8Lifetime1] = var9Lifetime1;
               }
@@ -461,8 +461,8 @@ final class ij implements WidgetRenderer {
               }
             }
           }
-          cd.field_b = var3_intLifetime1 + (sf.field_F - (var3_intLifetime1 >> 1));
-          DisplayNameSelectionPanel.field_D = -(var3_intLifetime1 >> 1) + sf.field_F;
+          cd.field_b = var3_intLifetime1 + (GuestPlayConfirmationForm.field_F - (var3_intLifetime1 >> 1));
+          DisplayNameSelectionPanel.field_D = -(var3_intLifetime1 >> 1) + GuestPlayConfirmationForm.field_F;
           oi.field_b = GzipDecompressor.field_f.field_i * (na.field_e + of.field_f << 1);
           for (var4Lifetime2 = 0; var4Lifetime2 < LabeledWidgetContainer.field_I.length; var4Lifetime2++) {
             stackIn_110_0 = oi.field_b;
@@ -486,7 +486,7 @@ final class ij implements WidgetRenderer {
               var5Lifetime3 = var5Lifetime3 + dh.field_l;
             } else {
               var7Lifetime2 = ib.a(true, 10, LabeledWidgetContainer.field_I[var4Lifetime3]);
-              var8Lifetime1 = -(var7Lifetime2 >> 1) + sf.field_F;
+              var8Lifetime1 = -(var7Lifetime2 >> 1) + GuestPlayConfirmationForm.field_F;
               var5Lifetime3 = var5Lifetime3 + na.field_e;
               ud.field_a[var4Lifetime3] = new int[4];
               ud.field_a[var4Lifetime3][0] = -mb.field_c + var8Lifetime1;

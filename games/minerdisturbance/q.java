@@ -19,7 +19,7 @@ final class q {
     final static void a(int param0, PlatformTaskDispatcher param1, int param2, String param3, int param4, int param5, int param6, int param7, int param8) {
         try {
           MusicPatchPcmStream.field_y = param7;
-          jl.field_fb = param1;
+          ProgressDialog.field_fb = param1;
           fb.field_a = param3;
           if (param6 != 20) {
             field_a = (String) null;

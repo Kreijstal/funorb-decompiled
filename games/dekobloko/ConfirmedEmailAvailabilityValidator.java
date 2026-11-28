@@ -14,7 +14,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
 
     final static boolean computeBoolean1614(int integerArgument1, int integerArgument2, int integerArgument3) {
         if (13 == MixedSupport146.integerState0931) {
-          UiComponentPart026.performAction1393(integerArgument2 - 89);
+          ProgressDialog.performAction1393(integerArgument2 - 89);
           return true;
         }
         if (MixedSupport146.integerState0931 == integerArgument2) {

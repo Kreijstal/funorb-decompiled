@@ -51,7 +51,7 @@ class kl {
         this.field_a = param1;
         this.field_k = param2;
         this.b((byte) 37);
-        nm.field_ib = new int[this.field_i * this.field_a];
+        FullscreenStatusDialog.field_ib = new int[this.field_i * this.field_a];
         if (param3 == -23241) {
           this.field_g = new ph(new RgbSprite(this.field_a, this.field_i), new RgbSprite(this.field_a, this.field_i));
           return;

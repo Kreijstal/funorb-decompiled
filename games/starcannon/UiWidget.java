@@ -474,7 +474,7 @@ class UiWidget extends IntrusiveNode {
             this.handleWheel(param3, param2, lh.field_I, la.field_c, this, pe.field_d, -81);
           }
           if (kg.field_a != 0) {
-            if (!this.pointerPressed(this, kc.field_Q, param2, param3, (byte) -11, LoginPanel.field_B, kg.field_a)) {
+            if (!this.pointerPressed(this, ResizableModalDialog.field_Q, param2, param3, (byte) -11, LoginPanel.field_B, kg.field_a)) {
               if (var5 != 0) {
                 this.blur((byte) -93);
               }

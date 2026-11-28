@@ -164,7 +164,7 @@ abstract class MouseWheelInput {
                   cj.field_b[var23Lifetime2] = -2147483648;
                 }
                 if (param2) {
-                  tg.field_T[var23Lifetime2] = var27Lifetime1 >> DiskCacheWorker.field_h;
+                  GuestPlayConfirmationForm.field_T[var23Lifetime2] = var27Lifetime1 >> DiskCacheWorker.field_h;
                   wl.field_d[var23Lifetime2] = var28Lifetime1 >> DiskCacheWorker.field_h;
                   nm.field_C[var23Lifetime2] = var29Lifetime1;
                 }

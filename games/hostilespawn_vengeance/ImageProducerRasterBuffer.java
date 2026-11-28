@@ -141,7 +141,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
         if (param0) {
           return true;
         }
-        return wb.field_R > 0 ? true : false;
+        return ResizableModalDialog.field_R > 0 ? true : false;
     }
 
     public final synchronized boolean isConsumer(java.awt.image.ImageConsumer param0) {

@@ -245,7 +245,7 @@ final class via implements WidgetRenderer {
           var8.unlink(false);
           var8.unlinkSecondary(0);
           SuperSpeedAnimation.field_v = SuperSpeedAnimation.field_v - 1;
-          var9 = sja.field_fb;
+          var9 = StandardContentDialog.field_fb;
           var9.writeCipheredByte(param0, (byte) 114);
           var9.position = var9.position + 1;
           if (param2 > -40) {

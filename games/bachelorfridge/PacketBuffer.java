@@ -559,7 +559,7 @@ class PacketBuffer extends IntrusiveNode {
             var7.field_Cb = null;
           }
           hja.field_i = param0;
-          var4 = sja.field_fb;
+          var4 = StandardContentDialog.field_fb;
           var4.writeCipheredByte(param1, (byte) 113);
           var4.writeByte(3, 0);
           var4.writeByte(11, 0);

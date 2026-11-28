@@ -26,7 +26,7 @@ final class SectorCacheStore {
           }
           IntrusiveDeque.field_c = new String[22];
           IntrusiveDeque.field_c[3] = td.field_a;
-          IntrusiveDeque.field_c[0] = tj.field_J;
+          IntrusiveDeque.field_c[0] = GuestPlayConfirmationForm.field_J;
           IntrusiveDeque.field_c[5] = field_e;
           IntrusiveDeque.field_c[15] = bl.field_g;
           IntrusiveDeque.field_c[12] = ii.field_f;
@@ -109,7 +109,7 @@ final class SectorCacheStore {
         int var3 = Main.field_T;
         wb[] var1 = new wb[cf.field_c];
         for (var2 = 0; var2 < cf.field_c; var2++) {
-          var1[var2] = new wb(ConfirmedEmailAvailabilityValidator.field_l, FrameTimer.field_a, kb.field_c[var2], ml.field_b[var2], NetworkArchiveRequest.field_q[var2], hb.field_a[var2], EmailFormatValidator.field_k[var2], ImageProducerRasterBuffer.field_i);
+          var1[var2] = new wb(ConfirmedEmailAvailabilityValidator.field_l, FrameTimer.field_a, kb.field_c[var2], FullscreenNoticeType.field_b[var2], NetworkArchiveRequest.field_q[var2], hb.field_a[var2], EmailFormatValidator.field_k[var2], ImageProducerRasterBuffer.field_i);
         }
         rh.d(param0 ^ -3343315);
         if (param0 != 3343272) {

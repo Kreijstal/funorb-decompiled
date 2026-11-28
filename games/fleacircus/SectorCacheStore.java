@@ -403,7 +403,7 @@ final class SectorCacheStore {
           if (null != ResourceArchive.field_p &&
             ResourceArchive.field_p.focusLost) {
             IntrusiveNode.a(false);
-            GzipDecompressor.field_a.showDialog(new ic(GzipDecompressor.field_a, fb.field_g), (byte) -35);
+            GzipDecompressor.field_a.showDialog(new FullscreenStatusDialog(GzipDecompressor.field_a, fb.field_g), (byte) -35);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

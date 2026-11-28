@@ -43,7 +43,7 @@ final class TextLineMetrics {
         if (!(i.field_f <= param1)) {
           bh.field_e = param1;
         }
-        ta.field_mb[SingleChildWidgetContainer.field_z] = param5;
+        StandardContentDialog.field_mb[SingleChildWidgetContainer.field_z] = param5;
         og.field_b[SingleChildWidgetContainer.field_z] = param3;
         PasswordValidator.field_t[SingleChildWidgetContainer.field_z] = param4;
         int var6 = param3 + (param5 + param4);

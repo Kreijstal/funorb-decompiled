@@ -461,7 +461,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ae.field_ib = true;
           cf.field_c = true;
           b.field_v = param0;
-          aa.field_Q = km.correctedCurrentTimeMillis(-1);
+          ContentTransitionDialog.field_Q = km.correctedCurrentTimeMillis(-1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -893,7 +893,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !AlphaWidgetContainer.field_E) {
             cf.field_c = true;
             if (fn.field_b &&
-              km.correctedCurrentTimeMillis(-1) - aa.field_Q > 1000L) {
+              km.correctedCurrentTimeMillis(-1) - ContentTransitionDialog.field_Q > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
                 if (DisplayNameSelectionPanel.field_G > var2.width) {

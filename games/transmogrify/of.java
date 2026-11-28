@@ -45,7 +45,7 @@ final class of {
         de.field_c[param0] = i.field_e;
         de.field_c[13] = kk.field_e;
         de.field_c[4] = TextHotspotBounds.field_m;
-        de.field_c[3] = qe.field_v;
+        de.field_c[3] = StripedProgressWidget.field_v;
     }
 
     static {

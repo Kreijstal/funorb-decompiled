@@ -73,7 +73,7 @@ final class ha {
           an.field_f = param8;
           rc.field_a = param10;
           SecondaryNodeHashTable.field_c = param13;
-          sp.field_O = param0;
+          ResizableModalDialog.field_O = param0;
           eg.field_r = gk.a(param14, "lobby", "gameprivacy", true);
           DisplayNameSelectionPanel.field_I = gk.a(param14, "lobby", "ratedgame", true);
           mj.field_c = gk.a(param14, "lobby", "opentome", true);
@@ -142,12 +142,12 @@ final class ha {
             ud.field_A.b(b.field_h, 118);
           }
           ud.field_A.b(la.field_f, param9 + 123);
-          rh.field_I = new UiPanel(0L, AccountRequestState.field_b);
-          rh.field_I.field_ab = 0;
-          rh.field_I.field_O = 1;
+          DialogMessagePane.field_I = new UiPanel(0L, AccountRequestState.field_b);
+          DialogMessagePane.field_I.field_ab = 0;
+          DialogMessagePane.field_I.field_O = 1;
           gb.field_c = new UiPanel(0L, ub.field_t, bm.field_y.toUpperCase());
           oc.field_v = new UiPanel(0L, PlayerAvatarRenderer.field_D);
-          oc.field_v.b(rh.field_I, 118);
+          oc.field_v.b(DialogMessagePane.field_I, 118);
           oc.field_v.b(gb.field_c, 119);
           oi.field_a = new UiPanel(0L, ua.field_c);
           oi.field_a.a(AccountRequestState.field_b, -83);
@@ -188,12 +188,12 @@ final class ha {
           }
           IterableNodeHashTable.field_h[2] = new UiPanel(0L, fm.field_e, in.field_f);
           LabeledWidgetContainer.field_S[2] = new nk[]{new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, pp.field_r), new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, sf.field_a[0], nf.field_w), new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, sf.field_a[1], ProxyAuthenticationRequiredException.field_h)};
-          if (sp.field_O > 1) {
+          if (ResizableModalDialog.field_O > 1) {
             IterableNodeHashTable.field_h[3] = new UiPanel(0L, fm.field_e, ArrayWidgetContainer.field_H);
-            array$1 = new nk[1 + sp.field_O];
+            array$1 = new nk[1 + ResizableModalDialog.field_O];
             LabeledWidgetContainer.field_S[3] = array$1;
             LabeledWidgetContainer.field_S[3][0] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, pp.field_r);
-            for (var17_intLifetime2 = 0; var17_intLifetime2 < sp.field_O; var17_intLifetime2++) {
+            for (var17_intLifetime2 = 0; var17_intLifetime2 < ResizableModalDialog.field_O; var17_intLifetime2++) {
               LabeledWidgetContainer.field_S[3][var17_intLifetime2 + 1] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, gl.field_p[var17_intLifetime2]);
             }
           }
@@ -251,7 +251,7 @@ final class ha {
           for (var18Lifetime2 = 0; 4 + param7 > var18Lifetime2; var18Lifetime2++) {
             if ((1 != var18Lifetime2 ||
               !(rc.field_a.length < 2)) && (var18Lifetime2 != 3 ||
-              !(sp.field_O <= 1))) {
+              !(ResizableModalDialog.field_O <= 1))) {
               fd.field_s.b(IterableNodeHashTable.field_h[var18Lifetime2], param9 + 121);
               for (var19 = 0; LabeledWidgetContainer.field_S[var18Lifetime2].length > var19; var19++) {
                 if (LabeledWidgetContainer.field_S[var18Lifetime2][var19] != null) {
@@ -264,7 +264,7 @@ final class ha {
           lb.field_c.b(hd.field_g, 123);
           lb.field_c.b(kk.field_f, 118);
           he.field_x = new UiPanel(0L, TextureOperator.field_s, eh.field_g.toUpperCase());
-          Vertigo2.field_M = new UiPanel(0L, ub.field_t, af.field_I.toUpperCase());
+          Vertigo2.field_M = new UiPanel(0L, ub.field_t, DateInputWidget.field_I.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -346,8 +346,8 @@ final class ha {
         if (ArchiveRequest.field_y > 0) {
           ArchiveRequest.field_y = ArchiveRequest.field_y - 1;
         } else {
-          if (0 < ko.field_P) {
-            ko.field_P = ko.field_P - 1;
+          if (0 < NumericDateInputWidget.field_P) {
+            NumericDateInputWidget.field_P = NumericDateInputWidget.field_P - 1;
           } else {
             if (0 < mp.field_b) {
               mp.field_b = mp.field_b - 1;
@@ -357,8 +357,8 @@ final class ha {
         if (ArchiveRequest.field_y > 0) {
           km.i(202);
         }
-        if (ko.field_P > 0) {
-          hq.b(ko.field_P, -128);
+        if (NumericDateInputWidget.field_P > 0) {
+          hq.b(NumericDateInputWidget.field_P, -128);
         }
         if (param0 <= 72) {
           field_a = (UiPanel) null;

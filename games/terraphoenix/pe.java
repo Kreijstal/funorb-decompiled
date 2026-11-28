@@ -22,9 +22,9 @@ final class pe {
           if (param6 != 128) {
             field_d = (long[]) null;
           }
-          jg.field_kb = (h) ((Object) new kg());
+          StandardContentDialog.field_kb = (h) ((Object) new kg());
           GzipDecompressor.field_c = new DiskCacheWorker(param7);
-          i.field_a = new qi(jg.field_kb, GzipDecompressor.field_c);
+          i.field_a = new qi(StandardContentDialog.field_kb, GzipDecompressor.field_c);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "pe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }

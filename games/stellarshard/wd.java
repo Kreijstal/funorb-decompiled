@@ -31,7 +31,7 @@ final class wd {
             field_d = -43;
           }
           if (DualLinkNode.d(-12171)) {
-            var8.p(87);
+            var8.showAccountCreationConnectionFailure(87);
             return true;
           }
           sb.field_a = param3;

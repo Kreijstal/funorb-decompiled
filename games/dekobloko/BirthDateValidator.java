@@ -117,13 +117,13 @@ final class BirthDateValidator extends DebouncedFieldValidator implements TextFi
     final static void performAction1352(String stringArgument1, int integerArgument2, String stringArgument3) {
         try {
           if (MixedSupport020.uiComponentPart012State0001 != null) {
-            MixedSupport020.uiComponentPart012State0001.performAction0593(-120);
+            MixedSupport020.uiComponentPart012State0001.closeDialog(-120);
           }
           if (integerArgument2 >= -10) {
             stringState0445 = (String) null;
           }
           MixedSupport025.uiComponentPart013State0001 = new LoginPanel(stringArgument1, stringArgument3, false, true, true);
-          LabeledWidgetContainer.uiComponentPart023State0001.performAction0185(MixedSupport025.uiComponentPart013State0001, (byte) 91);
+          LabeledWidgetContainer.uiComponentPart023State0001.replaceContent(MixedSupport025.uiComponentPart013State0001, (byte) 91);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "qf.I(" + (stringArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + (stringArgument3 != null ? "{...}" : "null") + ')');
         }
@@ -156,7 +156,7 @@ final class BirthDateValidator extends DebouncedFieldValidator implements TextFi
     final static void performAction1350(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
-        int integerLocal3 = (UiComponentPart033.integerState0934 - 640) / 2;
+        int integerLocal3 = (AccountCreationResultPanel.integerState0934 - 640) / 2;
         int integerLocal4;
         int integerLocal5;
         if (integerArgument2 > 95) {
@@ -210,13 +210,13 @@ final class BirthDateValidator extends DebouncedFieldValidator implements TextFi
         String stringLocal1 = null;
         if (BirthDateInput.booleanState0198) {
           if (MixedSupport020.uiComponentPart012State0001 != null) {
-            MixedSupport020.uiComponentPart012State0001.performAction0593(8);
+            MixedSupport020.uiComponentPart012State0001.closeDialog(8);
           }
           stringLocal1 = RenderingSupport012.computeString1341((byte) 103);
           MixedSupport025.uiComponentPart013State0001 = new LoginPanel(stringLocal1, (String) null, booleanArgument1, false, false);
           MixedSupport005.uiComponentPart016State0001.showDialog((byte) -107, LabeledWidgetContainer.uiComponentPart023State0001);
-          LabeledWidgetContainer.uiComponentPart023State0001.performAction0185(MixedSupport025.uiComponentPart013State0001, (byte) 101);
-          LabeledWidgetContainer.uiComponentPart023State0001.performAction0187(100);
+          LabeledWidgetContainer.uiComponentPart023State0001.replaceContent(MixedSupport025.uiComponentPart013State0001, (byte) 101);
+          LabeledWidgetContainer.uiComponentPart023State0001.finishResize(100);
           return;
         }
         throw new IllegalStateException();

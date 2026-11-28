@@ -230,7 +230,7 @@ final class oc {
           if (param0) {
             field_d = (String) null;
           }
-          cb.field_v = ui.field_ob;
+          cb.field_v = StandardContentDialog.field_ob;
           if (param2 == 255) {
             stackIn_12_0 = !(13 <= ug.field_c);
             BoundedRandomAccessFile.field_b = DelegatingCanvas.createAccountSuccessResult(stackIn_12_0, (byte) 42);

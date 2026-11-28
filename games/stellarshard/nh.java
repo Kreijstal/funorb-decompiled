@@ -60,7 +60,7 @@ class nh extends sk {
 
     final static void a(le param0, byte param1, int param2) {
         int var4 = 0;
-        ha var5 = pg.field_fb;
+        ha var5 = StandardContentDialog.field_fb;
         var5.f(param2, 950);
         if (param1 != -30) {
           return;

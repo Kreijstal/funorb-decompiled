@@ -401,7 +401,7 @@ final class d {
                         if (gd.field_d < 9) {
                           break regionExit1;
                         }
-                        kj.field_y[-9 + gd.field_d].a(this.field_q, 0, -122, var4, 128);
+                        DialogMessagePane.field_y[-9 + gd.field_d].a(this.field_q, 0, -122, var4, 128);
                         break regionExit1;
                       case 5:
                         var4 = (param0 >> 4) + this.field_d;

@@ -199,7 +199,7 @@ final class IntrusiveDeque {
             for (var6 = 0; var6 < var3; var6++) {
               var10[var6] = MouseInput.field_a[rk.a(255, (int) var21[var6])];
             }
-            var1[var2] = new RgbSprite(oe.field_b, ih.field_K, kh.field_i[var2], vi.field_b[var2], gf.field_o[var2], RichTextWidget.field_J[var2], var22);
+            var1[var2] = new RgbSprite(oe.field_b, RegistrationAgreementPane.field_K, kh.field_i[var2], vi.field_b[var2], gf.field_o[var2], RichTextWidget.field_J[var2], var22);
           } else {
             var15 = ll.field_o[var2];
             var11 = var15;
@@ -211,7 +211,7 @@ final class IntrusiveDeque {
             for (var7 = 0; var3 > var7; var7++) {
               var6_ref_int__[var7] = GameAppletShell.a(rk.a(255, (int) var15[var7]) << 24, MouseInput.field_a[rk.a((int) var21[var7], 255)]);
             }
-            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(oe.field_b, ih.field_K, kh.field_i[var2], vi.field_b[var2], gf.field_o[var2], RichTextWidget.field_J[var2], var17));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(oe.field_b, RegistrationAgreementPane.field_K, kh.field_i[var2], vi.field_b[var2], gf.field_o[var2], RichTextWidget.field_J[var2], var17));
           }
         }
         Bzip2State.a((byte) -21);

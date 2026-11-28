@@ -73,7 +73,7 @@ final class Bzip2State {
         if (!param0) {
           return false;
         }
-        return gf.field_Z == PacketBuffer.field_i ? true : false;
+        return ContentTransitionDialog.field_Z == PacketBuffer.field_i ? true : false;
     }
 
     public static void clearStaticReferences(byte param0) {

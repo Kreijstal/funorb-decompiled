@@ -94,7 +94,7 @@ abstract class oh extends pb {
           var6 = null;
           if (param3.indexOf('@') == -1) {
             var7 = (CharSequence) ((Object) param3);
-            var4_long = ck.a((byte) -119, var7);
+            var4_long = StandardContentDialog.a((byte) -119, var7);
           } else {
             var6 = param3;
           }

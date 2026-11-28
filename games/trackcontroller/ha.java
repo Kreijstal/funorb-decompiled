@@ -65,14 +65,14 @@ final class ha extends IntrusiveNode {
             var8[var9] = oj.field_b.nextInt();
             var9++;
           }
-          if (null == dg.field_H ||
-            !(dg.field_H.payload.length >= var7_int)) {
-            dg.field_H = new PacketBuffer(var7_int);
+          if (null == StripedProgressWidget.field_H ||
+            !(StripedProgressWidget.field_H.payload.length >= var7_int)) {
+            StripedProgressWidget.field_H = new PacketBuffer(var7_int);
           }
-          dg.field_H.position = 0;
-          dg.field_H.writeBytes(param2, 121, param4, param3);
-          dg.field_H.padZerosTo(-3869, var7_int);
-          dg.field_H.xteaEncrypt(29715, var13);
+          StripedProgressWidget.field_H.position = 0;
+          StripedProgressWidget.field_H.writeBytes(param2, 121, param4, param3);
+          StripedProgressWidget.field_H.padZerosTo(-3869, var7_int);
+          StripedProgressWidget.field_H.xteaEncrypt(29715, var13);
           if (UiWidget.field_w == null ||
             !(UiWidget.field_w.payload.length >= 100)) {
             UiWidget.field_w = new PacketBuffer(100);
@@ -88,7 +88,7 @@ final class ha extends IntrusiveNode {
           UiWidget.field_w.writeShort(param2, (byte) -120);
           UiWidget.field_w.rsaEncrypt(param1, param0, false);
           param6.writeBytes(UiWidget.field_w.position, 79, 0, UiWidget.field_w.payload);
-          param6.writeBytes(dg.field_H.position, 83, 0, dg.field_H.payload);
+          param6.writeBytes(StripedProgressWidget.field_H.position, 83, 0, StripedProgressWidget.field_H.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -197,7 +197,7 @@ final class ha extends IntrusiveNode {
 
     final static void a(BitmapFont param0, int param1, int param2, BitmapFont param3) {
         try {
-          mk.field_b = param0;
+          FullscreenNoticeType.field_b = param0;
           r.field_k = param3;
           sc.field_f = param2;
           jk.a(SoftwareRasterizer.field_k / param1, -120, SoftwareRasterizer.stride / 2);

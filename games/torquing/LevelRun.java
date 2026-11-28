@@ -260,9 +260,9 @@ final class LevelRun {
             return;
           }
           if (wp.field_w <= 0 &&
-            qc.field_ab.length > 1 &&
-            qc.field_ab[1] + qc.field_ab[0] <= nh.field_k) {
-            nh.field_k = -1 + (qc.field_ab[0] + qc.field_ab[1]);
+            StandardContentDialog.field_ab.length > 1 &&
+            StandardContentDialog.field_ab[1] + StandardContentDialog.field_ab[0] <= nh.field_k) {
+            nh.field_k = -1 + (StandardContentDialog.field_ab[0] + StandardContentDialog.field_ab[1]);
           }
           this.field_J = true;
           return;
@@ -1260,7 +1260,7 @@ final class LevelRun {
               if (var7_int != 57) {
                 continue;
               }
-              stackIn_117_0 = !(i.field_P[81]);
+              stackIn_117_0 = !(FullscreenStatusDialog.field_P[81]);
               UrlRequest.field_h = stackIn_117_0;
               this.field_t = this.field_t | UrlRequest.field_h;
               continue;
@@ -1645,7 +1645,7 @@ final class LevelRun {
         this.field_a = new int[]{0, 0, 0, 65535, 0, 0, 0, 65535, 0, 0, 0, 65535};
         this.field_Q = new kg[1];
         this.field_c = 0;
-        this.field_b = new int[qc.field_ab.length];
+        this.field_b = new int[StandardContentDialog.field_ab.length];
         this.field_z = 0;
         this.field_J = false;
         try {

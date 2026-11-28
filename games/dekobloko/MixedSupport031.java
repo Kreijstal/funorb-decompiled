@@ -15,7 +15,7 @@ final class MixedSupport031 {
               integerArgument3 != PacketBuffer.integerState0936) {
               PacketBuffer.integerState0936 = integerArgument3;
               MixedSupport109.booleanState0162 = true;
-              UiComponentPart019.performAction1044((byte) 120, integerArgument2);
+              BirthDateChatEnableForm.performAction1044((byte) 120, integerArgument2);
             }
           } else {
             if (MixedSupport146.integerState0932 == integerArgument3) {
@@ -23,12 +23,12 @@ final class MixedSupport031 {
                 integerArgument3 != PacketBuffer.integerState0936) {
                 PacketBuffer.integerState0936 = integerArgument3;
                 MixedSupport109.booleanState0162 = true;
-                UiComponentPart019.performAction1044((byte) 120, integerArgument2);
+                BirthDateChatEnableForm.performAction1044((byte) 120, integerArgument2);
               }
             } else {
               MixedSupport109.booleanState0162 = true;
               MixedSupport146.integerState0932 = integerArgument3;
-              UiComponentPart019.performAction1044((byte) 108, integerArgument2);
+              BirthDateChatEnableForm.performAction1044((byte) 108, integerArgument2);
               if (2 == integerArgument1) {
                 if (integerArgument3 == PacketBuffer.integerState0936) {
                   if (byteArgument4 <= 67) {
@@ -38,7 +38,7 @@ final class MixedSupport031 {
                 }
                 PacketBuffer.integerState0936 = integerArgument3;
                 MixedSupport109.booleanState0162 = true;
-                UiComponentPart019.performAction1044((byte) 120, integerArgument2);
+                BirthDateChatEnableForm.performAction1044((byte) 120, integerArgument2);
               }
             }
           }
@@ -46,19 +46,19 @@ final class MixedSupport031 {
           if (BufferedSocket.integerState0667 != integerArgument3) {
             MixedSupport109.booleanState0162 = true;
             BufferedSocket.integerState0667 = integerArgument3;
-            UiComponentPart019.performAction1044((byte) 125, integerArgument2);
+            BirthDateChatEnableForm.performAction1044((byte) 125, integerArgument2);
           }
           if (1 == integerArgument1 &&
             MixedSupport146.integerState0932 != integerArgument3) {
             MixedSupport109.booleanState0162 = true;
             MixedSupport146.integerState0932 = integerArgument3;
-            UiComponentPart019.performAction1044((byte) 108, integerArgument2);
+            BirthDateChatEnableForm.performAction1044((byte) 108, integerArgument2);
           }
           if (2 == integerArgument1 &&
             integerArgument3 != PacketBuffer.integerState0936) {
             PacketBuffer.integerState0936 = integerArgument3;
             MixedSupport109.booleanState0162 = true;
-            UiComponentPart019.performAction1044((byte) 120, integerArgument2);
+            BirthDateChatEnableForm.performAction1044((byte) 120, integerArgument2);
           }
         }
         if (byteArgument4 > 67) {

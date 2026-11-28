@@ -141,7 +141,7 @@ final class fg extends IntrusiveNode {
               }
             }
           }
-          bm.e((byte) 31);
+          DialogMessagePane.e((byte) 31);
           ee.field_h = 6;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

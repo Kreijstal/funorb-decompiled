@@ -22,7 +22,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           if (param0 != 0) {
             return;
           }
-          this.a(param3 + this.field_v, param1 + this.field_q, false);
+          this.drawDialogBackground(param3 + this.field_v, param1 + this.field_q, false);
           super.drawWidget(param0, param1, param2 ^ 0, param3);
           return;
         }
@@ -33,7 +33,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         }
         UiWidget.a(np.field_F, (byte) -102);
         SoftwareRasterizer.clearRaster();
-        this.a(0, 0, false);
+        this.drawDialogBackground(0, 0, false);
         super.drawWidget(param0, -param1 - this.field_q, param2, -this.field_v - param3);
         ti.c(true);
         np.field_F.drawWithOpacity(param1 + this.field_q, param3 + this.field_v, this.field_U);
@@ -155,7 +155,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         return stackIn_6_0;
     }
 
-    abstract void a(int param0, int param1, boolean param2);
+    abstract void drawDialogBackground(int param0, int param1, boolean param2);
 
     final UiWidget getFocusedChild(int param0) {
         UiWidget var2 = super.getFocusedChild(param0 ^ 0);

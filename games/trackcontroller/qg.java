@@ -108,7 +108,7 @@ final class qg {
           }
           if (param0.field_b != 0 ||
             param0.field_f != 0) {
-            for (var2_int = 0; var2_int < rk.field_ab; var2_int++) {
+            for (var2_int = 0; var2_int < ProgressDialog.field_ab; var2_int++) {
               var3 = LoginPanel.field_C[var2_int];
               if (var3.field_e == 2 &&
                 var3.field_b == param0.field_b &&

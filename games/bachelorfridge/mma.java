@@ -47,9 +47,9 @@ final class mma {
                 var10 = (String) null;
                 uaa.field_f = ov.a(DefaultWidgetRenderer.field_a, false, (String) null, param1, (byte) 94);
               }
-              sja.field_fb.position = 0;
-              sja.field_fb.writeByte(14, 0);
-              sja.field_fb.writeByte(uaa.field_f.a((byte) -106).field_b, 0);
+              StandardContentDialog.field_fb.position = 0;
+              StandardContentDialog.field_fb.writeByte(14, 0);
+              StandardContentDialog.field_fb.writeByte(uaa.field_f.a((byte) -106).field_b, 0);
               ConfirmedEmailAvailabilityValidator.a(-1, 71);
               eia.field_a = kb.field_e;
             }
@@ -168,7 +168,7 @@ final class mma {
               if (ProxySocketConnector.field_f > 0) {
                 vs.field_c = true;
               }
-              sja.field_fb.seedCipher(ImageProducerRasterBuffer.field_i, 8829);
+              StandardContentDialog.field_fb.seedCipher(ImageProducerRasterBuffer.field_i, 8829);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 ImageProducerRasterBuffer.field_i[var8Lifetime1] = ImageProducerRasterBuffer.field_i[var8Lifetime1] + 50;
               }

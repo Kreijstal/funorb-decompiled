@@ -50,8 +50,8 @@ final class l {
             AwtRasterBuffer.field_i[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < oh.field_c; var2_intLifetime1++) {
-            if (param1.field_h == sh.field_cb[var2_intLifetime1].field_h) {
-              dupTemp$3 = sh.field_cb[var2_intLifetime1].a((byte) 78);
+            if (param1.field_h == ProgressMessageDialog.field_cb[var2_intLifetime1].field_h) {
+              dupTemp$3 = ProgressMessageDialog.field_cb[var2_intLifetime1].a((byte) 78);
               AwtRasterBuffer.field_i[dupTemp$3] = AwtRasterBuffer.field_i[dupTemp$3] + 1;
             }
           }
@@ -63,9 +63,9 @@ final class l {
           var3Lifetime1 = var6;
           while (var6 < oh.field_c) {
             boolean decompiledFrameRemainder0 = true;
-            if (param1.field_h == sh.field_cb[var6].field_h) {
-              var4 = sh.field_cb[var6].a((byte) 113);
-              if (AwtRasterBuffer.field_i[var4] > wk.field_G) {
+            if (param1.field_h == ProgressMessageDialog.field_cb[var6].field_h) {
+              var4 = ProgressMessageDialog.field_cb[var6].a((byte) 113);
+              if (AwtRasterBuffer.field_i[var4] > ResizableModalDialog.field_G) {
                 AwtRasterBuffer.field_i[var4] = AwtRasterBuffer.field_i[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
@@ -73,14 +73,14 @@ final class l {
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              sh.field_cb[incrementValue$2] = sh.field_cb[var6];
+              ProgressMessageDialog.field_cb[incrementValue$2] = ProgressMessageDialog.field_cb[var6];
             }
             var6++;
           }
           oh.field_c = var2_intLifetime2;
           fieldTemp$1 = oh.field_c;
           oh.field_c = oh.field_c + 1;
-          sh.field_cb[fieldTemp$1] = param1;
+          ProgressMessageDialog.field_cb[fieldTemp$1] = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -112,7 +112,7 @@ final class l {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          eb.a((java.awt.Component) ((Object) param1), (byte) -105);
+          RegistrationAgreementPane.a((java.awt.Component) ((Object) param1), (byte) -105);
           fb.a((java.awt.Component) ((Object) param1), (byte) -42);
           if (null != AgeValidator.field_k) {
             AgeValidator.field_k.attach((java.awt.Component) ((Object) param1), false);

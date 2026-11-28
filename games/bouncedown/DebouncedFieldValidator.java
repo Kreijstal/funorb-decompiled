@@ -219,7 +219,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
     }
 
     final static void e(byte param0) {
-        d.a(ej.field_b, true, eb.field_z, 0);
+        d.a(ej.field_b, true, RegistrationAgreementPane.field_z, 0);
         va.field_f = true;
         int var1 = -3 % ((param0 - 28) / 62);
     }

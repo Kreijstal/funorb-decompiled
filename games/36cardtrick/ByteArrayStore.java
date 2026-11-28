@@ -50,8 +50,8 @@ abstract class ByteArrayStore {
           while (GzipInflater.b((byte) -114)) {
             sd.field_c.processKeyInput(fd.field_n, 34, tb.field_d);
           }
-          if (ml.field_a != -1) {
-            var1_int = ml.field_a;
+          if (FullscreenNoticeType.field_a != -1) {
+            var1_int = FullscreenNoticeType.field_a;
             gh.a(-1, 31888);
             stackIn_7_0 = var1_int;
             return stackIn_7_0;
@@ -72,7 +72,7 @@ abstract class ByteArrayStore {
             stackIn_21_0 = 1;
             return stackIn_21_0;
           }
-          if (hh.field_g != jc.field_P) {
+          if (hh.field_g != ResizableModalDialog.field_P) {
             stackIn_26_0 = -1;
             return stackIn_26_0;
           }

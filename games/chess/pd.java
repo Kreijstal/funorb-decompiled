@@ -120,9 +120,9 @@ final class pd extends ci {
         RuntimeException var2 = null;
         var3 = Chess.field_G;
         try {
-          dc.a(nj.field_t, param0, true, (byte) -123, bj.field_gb, AccountRequestState.field_b, 0);
+          dc.a(nj.field_t, param0, true, (byte) -123, ContentTransitionDialog.field_gb, AccountRequestState.field_b, 0);
           for (var2_int = 0; var2_int < AccountRequestState.field_b; var2_int++) {
-            vn.field_Ab[var2_int + param0] = var2_int;
+            ProgressMessageDialog.field_Ab[var2_int + param0] = var2_int;
           }
           dc.a(ArrayWidgetContainer.field_F, param0 + param0, false, (byte) -118, eb.field_y, AccountRequestState.field_b + param0, param0);
           if (param1 >= -102) {

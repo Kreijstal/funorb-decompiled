@@ -128,7 +128,7 @@ final class uk {
                 var6 = (oh) null;
                 uk.a((oh) null, 104, 43, (oh) null, -71, (byte) 23);
               }
-              stackIn_14_0 = mh.field_R;
+              stackIn_14_0 = ContentTransitionDialog.field_R;
               return stackIn_14_0;
             }
             var4 = param1.charAt(var3);

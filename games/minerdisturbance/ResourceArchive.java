@@ -819,13 +819,13 @@ final class ResourceArchive {
 
     final static void showPlayerNamePrompt(int param0) {
         if (sj.field_h != null) {
-          sj.field_h.s(2121792);
+          sj.field_h.closeDialog(2121792);
         }
-        bh.field_Z = new DisplayNameSelectionPanel();
+        FullscreenStatusDialog.field_Z = new DisplayNameSelectionPanel();
         if (param0 != 0) {
           return;
         }
-        de.field_a.a((byte) -103, (UiWidget) (bh.field_Z));
+        de.field_a.replaceContent((byte) -103, (UiWidget) (FullscreenStatusDialog.field_Z));
     }
 
     final int getFileCapacity(int param0, int param1) {

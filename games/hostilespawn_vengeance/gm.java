@@ -42,7 +42,7 @@ final class gm {
             }
           } else {
             stackIn_5_0 = !(ia.field_h >= 13);
-            wj.field_H = qi.createAccountSuccessResult(stackIn_5_0, false);
+            wj.field_H = DialogMessagePane.createAccountSuccessResult(stackIn_5_0, false);
           }
           if (param0 == 26991) {
             return;

@@ -55,7 +55,7 @@ final class i {
 
     final static void a(java.awt.Canvas param0, int param1) {
         try {
-          if (mh.field_U == 11) {
+          if (ContentTransitionDialog.field_U == 11) {
             lj.clearStaticReferences((byte) -50);
           }
           NodeHashTableIterator.a(ProxyAuthenticationRequiredException.field_a, ea.field_c, DisplayNameSelectionPanel.field_I, -608757616);
@@ -78,7 +78,7 @@ final class i {
         RuntimeException var5 = null;
         long var6 = 0L;
         PcmSample var8 = null;
-        te var9 = null;
+        VorbisSample var9 = null;
         int[] var10 = null;
         PcmSample var8Lifetime1;
         try {
@@ -99,15 +99,15 @@ final class i {
             var10 = (int[]) null;
             discarded$0 = this.a((int[]) null, -26, -39, -29);
           }
-          var9 = (te) (this.field_d.a(50, var6));
+          var9 = (VorbisSample) (this.field_d.a(50, var6));
           if (var9 == null) {
-            var9 = te.a(this.field_i, param2, param1);
+            var9 = VorbisSample.load(this.field_i, param2, param1);
             if (var9 == null) {
               return null;
             }
             this.field_d.a(var6, 120, var9);
           }
-          var8Lifetime1 = var9.a(param0);
+          var8Lifetime1 = var9.decodeToPcm(param0);
           if (var8Lifetime1 == null) {
             return null;
           }

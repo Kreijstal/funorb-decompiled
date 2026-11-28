@@ -39,10 +39,10 @@ final class va {
 
     final static Archive a(int param0, int param1) {
         if (param1 < -114) {
-          return jg.a(30, 1, false, false, param0, true);
+          return StandardContentDialog.a(30, 1, false, false, param0, true);
         }
         va.a(32, 78);
-        return jg.a(30, 1, false, false, param0, true);
+        return StandardContentDialog.a(30, 1, false, false, param0, true);
     }
 
     final static void a(int param0, int param1, int param2, Sprite param3, BitmapFont param4, int param5, int param6, int param7, boolean param8, int param9, int param10) {

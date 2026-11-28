@@ -122,7 +122,7 @@ final class em {
             if (ib.field_d != null) {
               cf.a(122, true);
             } else {
-              e.g((byte) -127);
+              DialogMessagePane.g((byte) -127);
             }
           }
         }
@@ -131,7 +131,7 @@ final class em {
         } else {
           fl.field_x = (PcmOutputWorker.field_d - 640) / 2;
         }
-        ge.a(false, param2);
+        FullscreenStatusDialog.a(false, param2);
         if (param1 != 2) {
           field_m = (String[]) null;
         }

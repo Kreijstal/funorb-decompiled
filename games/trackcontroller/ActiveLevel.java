@@ -243,7 +243,7 @@ final class ActiveLevel extends LevelGrid {
           if (ArchiveIndex.field_i + 1 == this.level.levelIndex) {
             ArchiveIndex.field_i = this.level.levelIndex;
             var7_ref_dh = new dh(0, -1 + this.level.levelIndex, this.field_R, this.field_bb, this.field_cb, this.field_E);
-            if (!jj.s(param0 - 205)) {
+            if (!ProgressMessageDialog.s(param0 - 205)) {
               ij.a(var7_ref_dh, 5, -124);
             } else {
               cd.field_h.addLast((byte) -97, var7_ref_dh);
@@ -473,17 +473,17 @@ final class ActiveLevel extends LevelGrid {
           var6 = 194;
         }
         if (var2 > var4) {
-          if (null == jj.field_fb) {
-            jj.field_fb = new int[DirectByteStorage.field_f.length()];
+          if (null == ProgressMessageDialog.field_fb) {
+            ProgressMessageDialog.field_fb = new int[DirectByteStorage.field_f.length()];
           }
           var7 = var2;
-          for (var8 = 0; var8 < jj.field_fb.length; var8++) {
-            jj.field_fb[var8] = (int)(Math.sin((double)(-250 + var7) / 5.0) * 5.0);
+          for (var8 = 0; var8 < ProgressMessageDialog.field_fb.length; var8++) {
+            ProgressMessageDialog.field_fb[var8] = (int)(Math.sin((double)(-250 + var7) / 5.0) * 5.0);
             var7--;
           }
           var8Lifetime2 = DisplayNameSelectionPanel.font.stringWidth(DirectByteStorage.field_f);
           DisplayNameSelectionPanel.font.setColours(8, -1);
-          DisplayNameSelectionPanel.font.drawTextRunWithOffsets(DirectByteStorage.field_f, 466 + (-var8Lifetime2 + j.field_b[0].field_s >> 1), -20 + var6, (int[]) null, jj.field_fb);
+          DisplayNameSelectionPanel.font.drawTextRunWithOffsets(DirectByteStorage.field_f, 466 + (-var8Lifetime2 + j.field_b[0].field_s >> 1), -20 + var6, (int[]) null, ProgressMessageDialog.field_fb);
         }
         if (0 != this.field_s) {
           j.field_b[1].drawTransparent(466, var6);
@@ -609,7 +609,7 @@ final class ActiveLevel extends LevelGrid {
         if (param1 <= 110) {
           this.setPhase(27, 2);
         }
-        if (!jj.s(24)) {
+        if (!ProgressMessageDialog.s(24)) {
           this.g(18);
           if (oe.field_e != 0) {
             sc.field_g = 16;
@@ -720,14 +720,14 @@ final class ActiveLevel extends LevelGrid {
           this.field_E = this.field_E + 1;
           this.field_bb = this.field_bb ^ (fieldTemp$1 ^ fieldTemp$2);
           this.field_R = this.field_R - this.field_cb;
-          var3 = db.clickX - 467;
+          var3 = ContentTransitionDialog.clickX - 467;
           var4_int = wg.clickY - 138;
           if (0 <= var3 &&
             26 + ba.field_b.field_G > var4_int &&
             var3 < 156 &&
             var4_int >= 0) {
             si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
-            stackIn_20_0 = (!jj.s(29)) ? 12 : 13;
+            stackIn_20_0 = (!ProgressMessageDialog.s(29)) ? 12 : 13;
             sc.field_g = stackIn_20_0;
             return;
           }
@@ -1730,10 +1730,10 @@ final class ActiveLevel extends LevelGrid {
         if (this.score <= 0) {
           return;
         }
-        if (!jj.s(51) &&
-          rk.field_bb == null) {
+        if (!ProgressMessageDialog.s(51) &&
+          ProgressDialog.field_bb == null) {
           SpriteState.field_w = null;
-          rk.field_bb = DiskCacheWorker.a(this.field_cb, 3, 65525, 10, true, this.field_R, this.field_bb, new int[]{this.score}, this.field_E);
+          ProgressDialog.field_bb = DiskCacheWorker.a(this.field_cb, 3, 65525, 10, true, this.field_R, this.field_bb, new int[]{this.score}, this.field_E);
           return;
         }
     }
@@ -1892,10 +1892,10 @@ final class ActiveLevel extends LevelGrid {
             }
             AsyncRequest.field_r = TextHotspotBounds.a(116, new CharSequence[]{(CharSequence) ((Object) AsyncRequest.field_r), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) MouseInputHandler.field_e)});
           }
-          kb.field_a.t(20252);
+          kb.field_a.closeDialog(20252);
           r.f(-635);
         } else {
-          kb.field_a.r(44);
+          kb.field_a.showConnectionFailure(44);
         }
     }
 

@@ -25,7 +25,7 @@ abstract class nk extends GameAppletShell {
         DebouncedFieldValidator.field_e = this.field_u;
         jh.a(14221, DebouncedFieldValidator.field_e);
         sb.a(this.field_v, jh.field_a, this.field_q, 0, param2, param7, DebouncedFieldValidator.field_e, this.field_s, param4, this.field_D, this.field_B, 5000, this.field_r, this.field_x);
-        uk.a(this.field_D, this.field_s, DebouncedFieldValidator.field_e, jh.field_a, this.field_r, (byte) -92, param7, this.field_q, this.field_B);
+        ProgressDialog.a(this.field_D, this.field_s, DebouncedFieldValidator.field_e, jh.field_a, this.field_r, (byte) -92, param7, this.field_q, this.field_B);
         li.g(false);
         NanoFrameTimer.field_c = bl.createMouseWheelInput(115);
         ha.a(ug.field_y, (byte) 76);
@@ -39,7 +39,7 @@ abstract class nk extends GameAppletShell {
     }
 
     private final void h(int param0) {
-        String var2 = kg.g(0);
+        String var2 = RegistrationAgreementPane.g(0);
         if (param0 != 16) {
           this.field_w = true;
         }
@@ -214,7 +214,7 @@ abstract class nk extends GameAppletShell {
             if (ta.field_g >= 10) {
               AlphaWidgetContainer.a((byte) 103);
               if (nc.field_r == 3) {
-                sc.a(256, (byte) -98, mh.field_H);
+                sc.a(256, (byte) -98, GuestPlayConfirmationForm.field_H);
               } else {
                 if (nc.field_r != 4) {
                   if (nc.field_r == 2) {
@@ -351,7 +351,7 @@ abstract class nk extends GameAppletShell {
           ha.a(ug.field_y, (byte) 105);
         }
         if (ij.field_o[8]) {
-          uk.g(true);
+          ProgressDialog.g(true);
         }
     }
 
@@ -720,7 +720,7 @@ abstract class nk extends GameAppletShell {
                                 NodeHashTableIterator.a((byte) -117);
                                 return;
                               }
-                              uj.a("MGS1: " + qj.h(param0 ^ 6689), (Throwable) null, 1);
+                              uj.a("MGS1: " + StandardContentDialog.h(param0 ^ 6689), (Throwable) null, 1);
                               ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-118);
                               return;
                             }
@@ -745,7 +745,7 @@ abstract class nk extends GameAppletShell {
           }
           return;
         }
-        uj.a("MGS2: " + qj.h(param0 + 6632), (Throwable) null, param0 + 6722);
+        uj.a("MGS2: " + StandardContentDialog.h(param0 + 6632), (Throwable) null, param0 + 6722);
         ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-79);
         return;
     }

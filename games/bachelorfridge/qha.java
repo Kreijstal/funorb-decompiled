@@ -57,7 +57,7 @@ final class qha {
             ResourceArchive var3 = (ResourceArchive) null;
             qha.a(-41, (ResourceArchive) null);
           }
-          em.field_S = FullHealEvent.a("loading", param1, "minimal", (byte) -74);
+          FullscreenStatusDialog.field_S = FullHealEvent.a("loading", param1, "minimal", (byte) -74);
           ml.field_a = BagpipeSpecial.a(param1, -1, "minimal", "fridgedoor2d");
           ada.field_p = BagpipeSpecial.a(param1, -1, "minimal", "fridge_left");
         } catch (RuntimeException runtimeException) {

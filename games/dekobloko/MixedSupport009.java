@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MixedSupport009 extends DefaultTextWidgetRenderer {
-    static UiComponentPart019 uiComponentPart019State0001;
+    static BirthDateChatEnableForm uiComponentPart019State0001;
     static String stringState0039;
     private MixedSupport118 mixedSupport118State0001;
     private MixedSupport118[] mixedSupport118ArrayState0001;
@@ -104,7 +104,7 @@ final class MixedSupport009 extends DefaultTextWidgetRenderer {
 
     final MixedSupport118 computeMixedSupport1180099(int integerArgument1, int integerArgument2) {
         if (integerArgument2 <= 0) {
-          uiComponentPart019State0001 = (UiComponentPart019) null;
+          uiComponentPart019State0001 = (BirthDateChatEnableForm) null;
         }
         MixedSupport118 cachedMixedSupport118Local1 = new MixedSupport118();
         this.mixedSupport118ArrayState0001[integerArgument1] = cachedMixedSupport118Local1;

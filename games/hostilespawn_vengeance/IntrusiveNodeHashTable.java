@@ -100,13 +100,13 @@ final class IntrusiveNodeHashTable implements Iterable {
           IntrusiveNodeHashTable.a((ln) null, true);
         }
         if (null != AccountServiceResult.field_d) {
-          AccountServiceResult.field_d.g((byte) -19);
+          AccountServiceResult.field_d.closeDialog((byte) -19);
         }
         String var1 = BufferedRandomAccessFile.b(-104);
         ib.field_e = new LoginPanel(var1, (String) null, true, false, false);
         im.field_e.showDialog(ke.field_s, 86);
-        ke.field_s.b(ib.field_e, (byte) 110);
-        ke.field_s.m(param0 ^ -108);
+        ke.field_s.replaceContent(ib.field_e, (byte) 110);
+        ke.field_s.finishResize(param0 ^ -108);
     }
 
     final IntrusiveNode get(long param0, int param1) {

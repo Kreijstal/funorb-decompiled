@@ -67,7 +67,7 @@ final class nia extends lw {
           param0 == 35) {
           this.b(1);
           this.c(100);
-          sh.field_I = true;
+          DateInputWidget.field_I = true;
         } else {
           if (param0 == 11) {
             if (0 == this.field_e) {

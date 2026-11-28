@@ -36,7 +36,7 @@ final class NodeHashTableIterator implements Iterator {
             return false;
           }
           DebouncedFieldValidator.field_f = wm.field_j[MusicPatchPcmStream.field_B];
-          TextureOperator.field_r = af.field_F[MusicPatchPcmStream.field_B];
+          TextureOperator.field_r = DateInputWidget.field_F[MusicPatchPcmStream.field_B];
           MusicPatchPcmStream.field_B = 127 & MusicPatchPcmStream.field_B + 1;
           stackIn_8_0 = true;
         }
@@ -317,7 +317,7 @@ final class NodeHashTableIterator implements Iterator {
         } else {
           var40 = (CharSequence) ((Object) ea.field_b);
           var18 = Vertigo2.a(new String[]{vj.a(var40, (byte) 8)}, di.field_B, -117);
-          var8 = Vertigo2.a(new String[]{var16}, af.field_L, 15);
+          var8 = Vertigo2.a(new String[]{var16}, DateInputWidget.field_L, 15);
           var9 = GameKeyHandler.field_f.stringWidth(var18);
           var10 = GameKeyHandler.field_f.stringWidth(var8);
           if (var10 >= var9) {

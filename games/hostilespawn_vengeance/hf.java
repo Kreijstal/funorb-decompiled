@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hf {
-    static jf field_g;
+    static FullscreenNoticeType field_g;
     static RgbSprite field_b;
     static int field_i;
     static PcmStreamMixer field_c;
@@ -112,7 +112,7 @@ final class hf {
 
     static {
         field_i = -1;
-        field_g = new jf();
+        field_g = new FullscreenNoticeType();
         field_f = "Retry";
     }
 }

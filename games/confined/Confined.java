@@ -111,11 +111,11 @@ public final class Confined extends i {
           di.a(0);
           ui.a((byte) 110);
           AccountCreationResultPanel.clearStaticReferences((byte) -39);
-          jj.h((byte) -87);
-          ef.discardDeclaredStaticReferences(111);
-          dh.c(false);
+          ProgressDialog.h((byte) -87);
+          StandardContentDialog.discardDeclaredStaticReferences(111);
+          ProgressMessageDialog.c(false);
           AccountRegistrationPanel.j(-14508);
-          tg.resetStaticState((byte) 126);
+          GuestPlayConfirmationForm.resetStaticState((byte) 126);
           LoginPanel.releaseDeclaredStaticReferences(param0 - 191);
           DisplayNameSelectionPanel.clearStaticReferences(false);
           bn.clearStaticReferences((byte) 127);
@@ -144,7 +144,7 @@ public final class Confined extends i {
           qi.clearStaticReferences((byte) 46);
           qj.b(0);
           lg.clearStaticReferences();
-          ph.clearStaticReferences();
+          VorbisSample.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
           m.clearStaticReferences(27244);
           vh.clearStaticReferences(false);
@@ -178,7 +178,7 @@ public final class Confined extends i {
           Bzip2Decompressor.clearStaticReferences();
           Bzip2State.clearStaticReferences(79);
           jd.clearStaticReferences((byte) -38);
-          ei.clearStaticReferences((byte) 122);
+          FullscreenStatusDialog.clearStaticReferences((byte) 122);
           ml.clearStaticReferences(param0 ^ -193);
           DefaultTextWidgetRenderer.b(param0 - 193);
           ki.clearStaticReferences(false);
@@ -204,7 +204,7 @@ public final class Confined extends i {
           UiWidget.clearStaticReferences(296);
           InteractiveWidget.clearStaticReferences((byte) 17);
           SingleChildWidgetContainer.clearStaticReferences(true);
-          ug.clearDeclaredStaticReferences((byte) -117);
+          ResizableModalDialog.clearDeclaredStaticReferences((byte) -117);
           ModalDialog.releaseDeclaredStaticReferences(-1);
           DequeWidgetContainer.clearDeclaredStaticReferences(52);
           se.clearStaticReferences((byte) -122);
@@ -231,8 +231,8 @@ public final class Confined extends i {
           LabeledWidgetContainer.clearDeclaredStaticReferences(param0 ^ 179);
           ValidatedTextField.clearDeclaredStaticReferences(-9466);
           EditableTextField.clearStaticReferences(false);
-          sj.releaseDeclaredStaticReferences((byte) 70);
-          ib.clearStaticReferences((byte) -20);
+          ContentTransitionDialog.releaseDeclaredStaticReferences((byte) 70);
+          StripedProgressWidget.clearStaticReferences((byte) -20);
           NameSuggestionsPanel.releaseDeclaredStaticReferences(-125);
           RichTextWidget.clearDeclaredStaticReferences((byte) -127);
           ba.clearDeclaredStaticReferences((byte) -94);
@@ -240,7 +240,7 @@ public final class Confined extends i {
           fa.f(91);
           TextFieldValidator.d(96);
           ol.clearStaticReferences(0);
-          pi.clearStaticReferences((byte) -81);
+          RegistrationAgreementPane.clearStaticReferences((byte) -81);
           jh.clearStaticReferences(true);
           nj.clearDeclaredStaticReferences((byte) -93);
           SoundFilter.clearStaticReferences();
@@ -278,14 +278,14 @@ public final class Confined extends i {
           vj.clearStaticReferences((byte) 125);
           ej.a(true);
           hc.clearStaticReferences(true);
-          jn.releaseDeclaredStaticReferences(97);
+          DialogMessagePane.releaseDeclaredStaticReferences(97);
           al.clearStaticReferences((byte) 73);
           ai.a(-12875);
           mk.resetStaticState(89);
           ii.a(false);
           ca.clearStaticReferences(-1635);
           om.clearStaticReferences((byte) -50);
-          ci.b((byte) -102);
+          FullscreenNoticeType.b((byte) -102);
           ud.clearStaticReferences(98);
           pe.b(param0 - 147);
           gg.clearStaticReferences(116);
@@ -319,13 +319,13 @@ public final class Confined extends i {
         try {
           this.a((byte) 19, 20, 13, 11, false, 10, 0, 14);
           AudioOutput.configureAudio(22050, true, 10);
-          ei.field_ob = AudioOutput.createOutput(ki.field_d, (java.awt.Component) ((Object) fb.field_b), 0, 1024);
+          FullscreenStatusDialog.field_ob = AudioOutput.createOutput(ki.field_d, (java.awt.Component) ((Object) fb.field_b), 0, 1024);
           DirectByteStorage.field_h = AudioOutput.createOutput(ki.field_d, (java.awt.Component) ((Object) fb.field_b), 1, 22050);
           if (param0 != -3998) {
             field_F = -38;
           }
           cb.field_a = new PcmStreamMixer();
-          ei.field_ob.setRootStream(cb.field_a);
+          FullscreenStatusDialog.field_ob.setRootStream(cb.field_a);
           he.field_d = new PcmStreamMixer();
           DirectByteStorage.field_h.setRootStream(he.field_d);
           ti.field_n = false;
@@ -356,7 +356,7 @@ public final class Confined extends i {
             qh.c(param0 ^ -5);
             gm.i((byte) -29);
           }
-          ei.field_ob.serviceOutput();
+          FullscreenStatusDialog.field_ob.serviceOutput();
           DirectByteStorage.field_h.serviceOutput();
           stackIn_11_1 = 110;
           stackIn_12_2 = (dn.field_d != null);
@@ -395,7 +395,7 @@ public final class Confined extends i {
               } while (var3 == 0);
             }
             while (true) {
-              if (pe.a(ib.field_M, -69)) {
+              if (pe.a(StripedProgressWidget.field_M, -69)) {
                 this.i(112);
                 if (var3 == 0) {
                   continue;
@@ -553,8 +553,8 @@ public final class Confined extends i {
               ((BinaryBitmapFont) (Object) stackIn_55_0).drawCentred(b.a(stackIn_55_1, stackIn_56_2, param0 - 50023), 320, 40, 16777215, -1);
             }
           }
-          if (ef.field_tb >= 0) {
-            var4 = ef.field_tb;
+          if (StandardContentDialog.field_tb >= 0) {
+            var4 = StandardContentDialog.field_tb;
             if (var4 >= 2800 &&
               var4 < 3000) {
               var4 = 2800;
@@ -627,9 +627,9 @@ public final class Confined extends i {
             var17 = fd.field_e.field_z;
             fd.field_e.field_z = SoftwareRasterizer.field_h;
             var18Lifetime1 = 128;
-            if (ef.field_tb > 2800 &&
-              ef.field_tb < 2850) {
-              var18Lifetime1 = var18Lifetime1 + (-2800 + ef.field_tb) * (2850 - ef.field_tb) * 127 / 625;
+            if (StandardContentDialog.field_tb > 2800 &&
+              StandardContentDialog.field_tb < 2850) {
+              var18Lifetime1 = var18Lifetime1 + (-2800 + StandardContentDialog.field_tb) * (2850 - StandardContentDialog.field_tb) * 127 / 625;
             }
             TunnelEntity.b(var18Lifetime1, 3);
             fd.field_e.field_z = var17;
@@ -742,7 +742,7 @@ public final class Confined extends i {
               if (var4 > 0) {
                 pn.field_a.drawRightAligned(Integer.toString(var4), 543, 422, 16777215, -1);
               }
-              pn.field_a.drawRightAligned(jn.field_O, 521, 446, 16777215, -1);
+              pn.field_a.drawRightAligned(DialogMessagePane.field_O, 521, 446, 16777215, -1);
               var4 = (int)(qn.field_v.field_l + qn.field_v.field_B.field_D);
               if (var4 < 0) {
                 var4 = 0;
@@ -781,15 +781,15 @@ public final class Confined extends i {
           if (!decompiledSharedTail0) {
             SoftwareRasterizer.darkenRectangleHalf(0, 0, 640, 480);
             SoftwareRasterizer.fillRectangleAlpha(-30 - GameSession.getDialogContentWidth(param0 ^ 43292) / 2 + 320, 240 - IntrusiveNodeHashTable.a(true) / 2 - 20, 60 + GameSession.getDialogContentWidth(24860), IntrusiveNodeHashTable.a(true) + 40, 0, 150);
-            pi.j(-1101556575);
+            RegistrationAgreementPane.j(-1101556575);
             decompiledSharedTail0 = (var23 != 0);
           }
           if ((decompiledSharedTail0) &&
             (ka.h((byte) 92))) {
             tk.a((byte) -108, var3 != 0);
           }
-          if (0 < ci.field_e) {
-            SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, ci.field_e * 256 / 20);
+          if (0 < FullscreenNoticeType.field_e) {
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, FullscreenNoticeType.field_e * 256 / 20);
           }
           ll.a(0, 0, (java.awt.Canvas) (var2), -107);
           if (param0 != 51200) {
@@ -1015,17 +1015,17 @@ public final class Confined extends i {
             jc.a(wl.field_a, 10265, 60.0f);
             this.renderClientFrame(51200);
             db.field_w = nm.a(ih.field_d, "achievements", param0 + 96, "");
-            kn.field_g = dh.a(false, "unachieved", "basic", pb.field_e);
-            var2_ref = dh.a(false, "orbcoin", "basic", pb.field_e);
+            kn.field_g = ProgressMessageDialog.a(false, "unachieved", "basic", pb.field_e);
+            var2_ref = ProgressMessageDialog.a(false, "orbcoin", "basic", pb.field_e);
             PcmOutputWorker.field_h = new RgbSprite(20, 20);
             PcmOutputWorker.field_h.bindAsRenderTarget();
             var2_ref.drawDownscaledAreaAveraged(0, 0, 20, 20);
-            pi.field_S.setAsRasterTarget((byte) 111);
+            RegistrationAgreementPane.field_S.setAsRasterTarget((byte) 111);
             var2_ref2 = null;
             pn.field_a = bj.a("", ih.field_d, EditableTextField.field_U, "fonts_bottomheavy16", (byte) 38);
             TunnelCamera.field_I = bj.a("", ih.field_d, EditableTextField.field_U, "fonts_bottomheavy32", (byte) 38);
-            ei.field_mb = nm.a(ih.field_d, "shields_friend_small", param0 + 96, "");
-            IntrusiveNodeHashTable.field_h = f.a(8364, ei.field_mb, 96);
+            FullscreenStatusDialog.field_mb = nm.a(ih.field_d, "shields_friend_small", param0 + 96, "");
+            IntrusiveNodeHashTable.field_h = f.a(8364, FullscreenStatusDialog.field_mb, 96);
             uc.field_U = nm.a(ih.field_d, "shields_enemy_small", 1, "");
             DiskCacheWorker.field_e = nm.a(ih.field_d, "shields_enemy_large", param0 + 96, "");
             jc.a(wl.field_a, 10265, 63.0f);
@@ -1048,28 +1048,28 @@ public final class Confined extends i {
             do {
               if (14 <= var3) {
                 aa.field_b = nm.a(ih.field_d, "player_shot", 1, "");
-                rm.field_K = dh.a(false, "power_shot", "", ih.field_d);
+                rm.field_K = ProgressMessageDialog.a(false, "power_shot", "", ih.field_d);
                 DraggableWidgetContainer.field_O = nm.a(ih.field_d, "enemy_shot", 1, "");
                 jc.a(wl.field_a, 10265, 76.0f);
                 this.renderClientFrame(51200);
                 ImageProducerRasterBuffer.field_o = nm.a(ih.field_d, "charge_cannon_blast", 1, "");
-                wb.field_a = dh.a(false, "missile_flame", "", ih.field_d);
-                IntrusiveDeque.field_c = dh.a(false, "interface", "", ih.field_d);
+                wb.field_a = ProgressMessageDialog.a(false, "missile_flame", "", ih.field_d);
+                IntrusiveDeque.field_c = ProgressMessageDialog.a(false, "interface", "", ih.field_d);
                 TextHotspotBounds.field_t = nm.a(ih.field_d, "interface_icons", param0 + 96, "");
                 dn.field_c = nm.a(ih.field_d, "interface_bars", 1, "");
                 gd.field_t = nm.a(ih.field_d, "interface_confined_decoration", 1, "");
                 cj.field_a = va.a(126, nm.a(ih.field_d, "menu_frame", 1, ""));
                 AcceleratingProjectile.field_T = va.a(123, nm.a(ih.field_d, "menu_button_frame", 1, ""));
                 lh.field_c = va.a(param0 ^ -44, nm.a(ih.field_d, "menu_button_frame_raised", 1, ""));
-                ui.field_a = dh.a(false, "normal_key", "", ih.field_d);
-                DraggableWidgetContainer.field_J = dh.a(false, "wide_key", "", ih.field_d);
-                MatchingFieldValidator.field_j = dh.a(false, "arrow_keys", "", ih.field_d);
-                fa.field_U = dh.a(false, "mouse", "", ih.field_d);
+                ui.field_a = ProgressMessageDialog.a(false, "normal_key", "", ih.field_d);
+                DraggableWidgetContainer.field_J = ProgressMessageDialog.a(false, "wide_key", "", ih.field_d);
+                MatchingFieldValidator.field_j = ProgressMessageDialog.a(false, "arrow_keys", "", ih.field_d);
+                fa.field_U = ProgressMessageDialog.a(false, "mouse", "", ih.field_d);
                 jc.a(wl.field_a, 10265, 80.0f);
                 this.renderClientFrame(51200);
                 break;
               }
-              uc.field_db[var3] = dh.a(false, "explosion_" + var3, "", ih.field_d);
+              uc.field_db[var3] = ProgressMessageDialog.a(false, "explosion_" + var3, "", ih.field_d);
               var3++;
             } while (var7 == 0);
             var3 = 0;
@@ -1168,10 +1168,10 @@ public final class Confined extends i {
             TunnelEntity.field_x = fk.a(jd.field_b, "", "nuclear-missile-ambient").a();
             SpriteGeometry.field_y = fk.a(jd.field_b, "", "cluster-shell-ambient").a();
             bn.field_b = fk.a(jd.field_b, "", "concussion-homing-missile-explode").a();
-            ib.field_J = fk.a(jd.field_b, "", "cluster-missile-explode").a();
+            StripedProgressWidget.field_J = fk.a(jd.field_b, "", "cluster-missile-explode").a();
             kj.field_b = fk.a(jd.field_b, "", "cluster-shell-explode").a();
             DefaultTextWidgetRenderer.field_n = fk.a(jd.field_b, "", "nuclear-missile-explode").a();
-            jn.field_U = fk.a(jd.field_b, "", "rock-explode").a();
+            DialogMessagePane.field_U = fk.a(jd.field_b, "", "rock-explode").a();
             aj.field_a = fk.a(jd.field_b, "", "shield-lost-siren").a();
             rj.field_b = fk.a(jd.field_b, "", "interface-ambient").a();
             SingleChildWidgetContainer.g(-4258);
@@ -1181,15 +1181,15 @@ public final class Confined extends i {
             jc.a(jb.field_r, 10265, 90.0f);
             this.renderClientFrame(51200);
             ResourceArchive.field_b[0] = fk.a(jd.field_b, "", "boss-sphere-ambient").a();
-            ResourceArchive.field_b[1] = ph.a(AccountCreationResultPanel.field_Bb, "", "boss-cube-ambient").b();
+            ResourceArchive.field_b[1] = VorbisSample.loadByName(AccountCreationResultPanel.field_Bb, "", "boss-cube-ambient").decodeAllToPcm();
             ResourceArchive.field_b[2] = fk.a(jd.field_b, "", "boss-bird-ambient").a();
             ResourceArchive.field_b[3] = fk.a(jd.field_b, "", "boss-humanoid-ambient").a();
-            ja.field_b[0] = ph.a(AccountCreationResultPanel.field_Bb, "", "boss-sphere-breakdown").b();
-            ja.field_b[1] = ph.a(AccountCreationResultPanel.field_Bb, "", "boss-cube-breakdown").b();
+            ja.field_b[0] = VorbisSample.loadByName(AccountCreationResultPanel.field_Bb, "", "boss-sphere-breakdown").decodeAllToPcm();
+            ja.field_b[1] = VorbisSample.loadByName(AccountCreationResultPanel.field_Bb, "", "boss-cube-breakdown").decodeAllToPcm();
             ja.field_b[2] = fk.a(jd.field_b, "", "boss-bird-breakdown").a();
             ja.field_b[3] = fk.a(jd.field_b, "", "boss-humanoid-breakdown").a();
             lk.field_e[0] = fk.a(jd.field_b, "", "boss-sphere-explode").a();
-            lk.field_e[1] = ph.a(AccountCreationResultPanel.field_Bb, "", "boss-cube-explode").b();
+            lk.field_e[1] = VorbisSample.loadByName(AccountCreationResultPanel.field_Bb, "", "boss-cube-explode").decodeAllToPcm();
             lk.field_e[2] = fk.a(jd.field_b, "", "boss-bird-explode").a();
             lk.field_e[3] = fk.a(jd.field_b, "", "boss-humanoid-explode").a();
             jc.a(jb.field_r, 10265, 93.0f);
@@ -1197,7 +1197,7 @@ public final class Confined extends i {
             EmailFormatValidator.field_j[1] = fk.a(jd.field_b, "", "boss-cube-arm").a();
             EmailFormatValidator.field_j[2] = fk.a(jd.field_b, "", "boss-bird-arm").a();
             EmailFormatValidator.field_j[3] = fk.a(jd.field_b, "", "boss-humanoid-arm").a();
-            TextLayout.field_h[0] = ph.a(AccountCreationResultPanel.field_Bb, "", "boss-sphere-armed-ambient").b();
+            TextLayout.field_h[0] = VorbisSample.loadByName(AccountCreationResultPanel.field_Bb, "", "boss-sphere-armed-ambient").decodeAllToPcm();
             ol.field_c = fk.a(jd.field_b, "", "boss-bird-flap").a();
             gk.field_q = fk.a(jd.field_b, "", "boss-bird-antiflap").a();
             SingleChildWidgetContainer.g(param0 - 4163);
@@ -1303,8 +1303,8 @@ public final class Confined extends i {
           if (null != DirectByteStorage.field_h) {
             DirectByteStorage.field_h.dispose();
           }
-          if (null != ei.field_ob) {
-            ei.field_ob.dispose();
+          if (null != FullscreenStatusDialog.field_ob) {
+            FullscreenStatusDialog.field_ob.dispose();
           }
           if (param0 != -26129) {
             field_I = 96;
@@ -1365,10 +1365,10 @@ public final class Confined extends i {
         var3 = field_J ? 1 : 0;
         try {
           if (cj.field_d) {
-            if (20 > ci.field_e) {
-              ci.field_e = ci.field_e + 1;
+            if (20 > FullscreenNoticeType.field_e) {
+              FullscreenNoticeType.field_e = FullscreenNoticeType.field_e + 1;
             }
-            if (20 == ci.field_e) {
+            if (20 == FullscreenNoticeType.field_e) {
               if (!li.field_l) {
                 ol.a((byte) 8);
                 if (var3 != 0) {
@@ -1382,7 +1382,7 @@ public final class Confined extends i {
             return;
           }
           boolean decompiledFrameRemainder2 = true;
-          if (ci.field_e == 20 &&
+          if (FullscreenNoticeType.field_e == 20 &&
             !tj.a(true)) {
             if (null != TunnelMesh.field_J) {
               r.a(TunnelMesh.field_J, -1, 3);
@@ -1418,8 +1418,8 @@ public final class Confined extends i {
               }
             }
           }
-          if (ci.field_e > 0) {
-            ci.field_e = ci.field_e - 1;
+          if (FullscreenNoticeType.field_e > 0) {
+            FullscreenNoticeType.field_e = FullscreenNoticeType.field_e - 1;
           }
           if (ka.k(-58)) {
             var2_int = of.a(5);
@@ -1442,7 +1442,7 @@ public final class Confined extends i {
             }
             if (2 == var2_intLifetime1) {
               qh.c(4);
-              jn.a(param0, ii.b(param0));
+              DialogMessagePane.a(param0, ii.b(param0));
             }
             return;
           }
@@ -1497,8 +1497,8 @@ public final class Confined extends i {
               if (!kc.field_o) {
                 if (!bj.field_m) {
                   if (!IntrusiveNodeHashTable.field_k) {
-                    if (ef.field_tb >= 0 &&
-                      ef.field_tb < 3000) {
+                    if (StandardContentDialog.field_tb >= 0 &&
+                      StandardContentDialog.field_tb < 3000) {
                       ClientException.a((jb) null, 0);
                       while (nm.e((byte) -96)) {
                         if (83 != gk.field_r &&
@@ -1506,7 +1506,7 @@ public final class Confined extends i {
                           13 != gk.field_r) {
                           continue;
                         }
-                        ef.field_tb = 3000;
+                        StandardContentDialog.field_tb = 3000;
                         if (var3 != 0) {
                           decompiledFrameCompleted1 = false;
                           break;
@@ -1514,10 +1514,10 @@ public final class Confined extends i {
                         break;
                       }
                       if ((decompiledFrameCompleted1) &&
-                        (decompiledFrameRemainder1 = !(ef.field_tb < 0)) &&
-                        (decompiledFrameRemainder1 = !(3000 <= ef.field_tb)) &&
+                        (decompiledFrameRemainder1 = !(StandardContentDialog.field_tb < 0)) &&
+                        (decompiledFrameRemainder1 = !(3000 <= StandardContentDialog.field_tb)) &&
                         (decompiledFrameRemainder1 = (rh.field_X != 0))) {
-                        ef.field_tb = 3000;
+                        StandardContentDialog.field_tb = 3000;
                         decompiledFrameRemainder1 = (var3 != 0);
                       }
                     }
@@ -1591,8 +1591,8 @@ public final class Confined extends i {
           if (ej.field_b) {
             KeyboardInput.field_f = KeyboardInput.field_f + 1;
           }
-          if ((!(ef.field_tb >= 0) ||
-            !(ef.field_tb < 3000)) &&
+          if ((!(StandardContentDialog.field_tb >= 0) ||
+            !(StandardContentDialog.field_tb < 3000)) &&
             KeyboardInput.field_f == 320) {
             hc.field_u = null;
           }
@@ -1600,14 +1600,14 @@ public final class Confined extends i {
             we.field_a = we.field_a + 1;
           }
           if (ej.field_b &&
-            0 <= ef.field_tb &&
-            ef.field_tb != 3000) {
-            ef.field_tb = ef.field_tb + 1;
-            if (ef.field_tb == 3200) {
-              ef.field_tb = -1;
+            0 <= StandardContentDialog.field_tb &&
+            StandardContentDialog.field_tb != 3000) {
+            StandardContentDialog.field_tb = StandardContentDialog.field_tb + 1;
+            if (StandardContentDialog.field_tb == 3200) {
+              StandardContentDialog.field_tb = -1;
             }
           }
-          if (3000 == ef.field_tb) {
+          if (3000 == StandardContentDialog.field_tb) {
             hc.field_u = null;
           }
           boolean decompiledFrameRemainder0 = true;

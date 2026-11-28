@@ -92,7 +92,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
         }
         vh.field_e = true;
         vf.a(true, -125);
-        rm.field_Q = 0;
+        StripedProgressWidget.field_Q = 0;
     }
 
     final String getValidationMessage(String param0, int param1) {

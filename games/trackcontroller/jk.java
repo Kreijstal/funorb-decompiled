@@ -10,10 +10,10 @@ final class jk {
         gf.field_q = param0;
         if (param1 > -100) {
           jk.a(119, 19, 124);
-          sf.field_F = param2;
+          GuestPlayConfirmationForm.field_F = param2;
           return;
         }
-        sf.field_F = param2;
+        GuestPlayConfirmationForm.field_F = param2;
     }
 
     public static void clearStaticReferences(int param0) {

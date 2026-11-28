@@ -64,7 +64,7 @@ final class ph {
           AccountCreationResultPanel.a(tb.field_c, (byte) -76);
           r.b((byte) 123);
           kf.d(param0 ^ param0);
-          ui.d((byte) -122);
+          DialogMessagePane.d((byte) -122);
           if (BoundedRandomAccessFile.b((byte) -112)) {
             NetworkArchiveRequest.field_r.writeCipheredByte(1, 0);
             fe.a((byte) -38, 0);
@@ -76,7 +76,7 @@ final class ph {
         }
         r.b((byte) 123);
         kf.d(param0 ^ param0);
-        ui.d((byte) -122);
+        DialogMessagePane.d((byte) -122);
         if (!BoundedRandomAccessFile.b((byte) -112)) {
           mc.a((byte) -126);
           return;

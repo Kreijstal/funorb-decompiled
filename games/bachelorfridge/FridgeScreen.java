@@ -534,10 +534,10 @@ final class FridgeScreen {
           return false;
         }
         int var2 = -24 / ((param0 + 54) / 43);
-        if (d.field_H.field_kb <= mk.field_p &&
-          d.field_H.field_sb + d.field_H.field_kb >= mk.field_p &&
-          d.field_H.field_rb <= gd.field_m &&
-          gd.field_m <= d.field_H.field_p + d.field_H.field_rb) {
+        if (BirthDateChatEnableForm.field_H.field_kb <= mk.field_p &&
+          BirthDateChatEnableForm.field_H.field_sb + BirthDateChatEnableForm.field_H.field_kb >= mk.field_p &&
+          BirthDateChatEnableForm.field_H.field_rb <= gd.field_m &&
+          gd.field_m <= BirthDateChatEnableForm.field_H.field_p + BirthDateChatEnableForm.field_H.field_rb) {
           return true;
         }
         return false;
@@ -713,7 +713,7 @@ final class FridgeScreen {
           }
           qa.field_k.bindAsRenderTarget();
           SoftwareRasterizer.addRadialGlow(400, 400, 384, 77, var3);
-          hga.field_U.a((byte) 122);
+          ProgressDialog.field_U.a((byte) 122);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ola.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

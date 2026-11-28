@@ -139,7 +139,7 @@ final class td implements WidgetListener {
           for (var5_int = 0; var5_int < var1; var5_int++) {
             var8[var5_int] = in.field_c[b.a((int) var16[var5_int], 255)];
           }
-          var3 = new Sprite(ql.field_M, vj.field_c, ca.field_a[0], pc.field_a[0], mh.field_c[0], vi.field_w[0], var8);
+          var3 = new Sprite(BirthDateChatEnableForm.field_M, vj.field_c, ca.field_a[0], pc.field_a[0], mh.field_c[0], vi.field_w[0], var8);
         } else {
           var17 = ej.field_c[0];
           var13 = new int[var1];
@@ -148,7 +148,7 @@ final class td implements WidgetListener {
           for (var6 = 0; var1 > var6; var6++) {
             var5[var6] = om.a(b.a((int) var17[var6], 255) << 24, in.field_c[b.a(255, (int) var16[var6])]);
           }
-          var3 = new ArgbSprite(ql.field_M, vj.field_c, ca.field_a[0], pc.field_a[0], mh.field_c[0], vi.field_w[0], var13);
+          var3 = new ArgbSprite(BirthDateChatEnableForm.field_M, vj.field_c, ca.field_a[0], pc.field_a[0], mh.field_c[0], vi.field_w[0], var13);
         }
         la.a((byte) 37);
         return (Sprite) (var3);

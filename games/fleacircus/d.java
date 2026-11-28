@@ -312,7 +312,7 @@ final class d extends InteractiveWidget {
         try {
           bk.a(-5237, param15, param7, param8);
           hg.a(0, param17, param0, param14, param16);
-          rb.a(param6, param4, (byte) 83);
+          GuestPlayConfirmationForm.a(param6, param4, (byte) 83);
           sk.a(param11, param2, param5, 443, param3, param19);
           if (param20 != 255) {
             field_Q = false;

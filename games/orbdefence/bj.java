@@ -50,7 +50,7 @@ final class bj extends InteractiveWidget {
           if (param0 < 76) {
             return;
           }
-          ve.field_V = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
+          ProgressDialog.field_V = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
           var1_int = tc.field_a.length;
           var21 = new int[var1_int];
           var20 = var21;
@@ -62,17 +62,17 @@ final class bj extends InteractiveWidget {
             var5 = var4_ref_wd.field_P + var4_ref_wd.field_d >> 1;
             var6 = var4_ref_wd.field_F + var4_ref_wd.field_J >> 1;
             var7 = var4_ref_wd.field_z + var4_ref_wd.field_v >> 1;
-            var8 = ve.field_V[9] >> 2;
-            var9 = ve.field_V[10] >> 2;
-            var10_int = ve.field_V[11] >> 2;
+            var8 = ProgressDialog.field_V[9] >> 2;
+            var9 = ProgressDialog.field_V[10] >> 2;
+            var10_int = ProgressDialog.field_V[11] >> 2;
             var11 = var10_int * kg.field_i[5] + kg.field_i[4] * var9 + var8 * kg.field_i[3] >> 14;
             var12 = var10_int * kg.field_i[8] + var9 * kg.field_i[7] + var8 * kg.field_i[6] >> 14;
             var13 = var8 * kg.field_i[9] - (-(kg.field_i[10] * var9) - kg.field_i[11] * var10_int) >> 14;
             var2[var3] = var13 * var7 + var12 * var6 + var11 * var5 >> 16;
           }
-          var3Lifetime1 = ve.field_V[9] >> 8;
-          var4 = ve.field_V[10] >> 8;
-          var5Lifetime1 = ve.field_V[11] >> 8;
+          var3Lifetime1 = ProgressDialog.field_V[9] >> 8;
+          var4 = ProgressDialog.field_V[10] >> 8;
+          var5Lifetime1 = ProgressDialog.field_V[11] >> 8;
           var6Lifetime1 = ji.field_b << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = lm.a(var6Lifetime1, (byte) -118) >> 8;
@@ -107,7 +107,7 @@ final class bj extends InteractiveWidget {
             for (var18 = 0; 3 > var18; var18++) {
               kg.field_i[var18] = kg.field_i[var18] + ne.field_a[var15][var18];
             }
-            bg.a(kg.field_i, var17, 90, true, false, false, ve.field_V);
+            bg.a(kg.field_i, var17, 90, true, false, false, ProgressDialog.field_V);
             DequeWidgetContainer.a(var8Lifetime1, var17, var12Lifetime1, var9Lifetime1, var14, var13Lifetime1, var7Lifetime1, (byte) 23);
           }
           return;

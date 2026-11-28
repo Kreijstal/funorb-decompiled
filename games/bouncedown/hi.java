@@ -18,7 +18,7 @@ final class hi {
         if (param0 > -99) {
           return false;
         }
-        if (10 > mh.field_U) {
+        if (10 > ContentTransitionDialog.field_U) {
           return false;
         }
         if (sa.field_k >= 13) {

@@ -56,7 +56,7 @@ final class qh extends hk {
               }
             } else {
               if (SecondaryNodeDequeIterator.field_c[var4_int] != "") {
-                ValidatedTextField.field_R = bf.a(-1, "sprites_player_" + SecondaryNodeDequeIterator.field_c[var4_int], "", param3);
+                ValidatedTextField.field_R = FullscreenNoticeType.a(-1, "sprites_player_" + SecondaryNodeDequeIterator.field_c[var4_int], "", param3);
               }
               for (var5 = 0; var5 < fg.field_j[var4_int]; var5++) {
                 vj.field_a[var4_int][var5] = ValidatedTextField.field_R[KeyboardInputHandler.field_a[var4_int] + var5];

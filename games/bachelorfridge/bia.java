@@ -24,7 +24,7 @@ class bia extends IntrusiveNode {
         BitPacketBuffer var4Lifetime1;
         int var5Lifetime1;
         if (param0 >= 23) {
-          var4 = sja.field_fb;
+          var4 = StandardContentDialog.field_fb;
           var4.writeCipheredByte(param2, (byte) 116);
           var4.position = var4.position + 1;
           var5 = var4.position;
@@ -34,7 +34,7 @@ class bia extends IntrusiveNode {
           return;
         }
         field_h = (Sprite[]) null;
-        var4Lifetime1 = sja.field_fb;
+        var4Lifetime1 = StandardContentDialog.field_fb;
         var4Lifetime1.writeCipheredByte(param2, (byte) 116);
         var4Lifetime1.position = var4Lifetime1.position + 1;
         var5Lifetime1 = var4Lifetime1.position;

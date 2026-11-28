@@ -169,7 +169,7 @@ final class IntrusiveDeque {
               if (ag.field_e) {
                 param1 = rd.field_a;
               }
-              ArchiveProvider.field_d.a(param0, param1, (byte) 33);
+              ArchiveProvider.field_d.showResult(param0, param1, (byte) 33);
             }
             if (param0 != 256) {
               if (param0 == 10) {

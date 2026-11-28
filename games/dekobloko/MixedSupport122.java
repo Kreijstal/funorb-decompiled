@@ -7,7 +7,7 @@ final class MixedSupport122 {
 
     final static void performAction1604(MusicTrack musicTrackArgument1, int integerArgument2) {
         try {
-          UiComponentPart033.midiSynthesizerState0001.performAction0689(musicTrackArgument1, integerArgument2, 0, -1);
+          AccountCreationResultPanel.midiSynthesizerState0001.performAction0689(musicTrackArgument1, integerArgument2, 0, -1);
           PcmPlayerService.musicTrackState0005 = musicTrackArgument1;
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "th.B(" + (musicTrackArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ')');
@@ -28,7 +28,7 @@ final class MixedSupport122 {
         MixedSupport117.stringState0515 = null;
         UiComponent.performAction0227(116);
         booleanArgument14 = BucketBoard.computeBoolean0968(integerArgument9, -121, integerArgument2, integerArgument11, booleanArgument14, integerArgument10, integerArgument4);
-        UiComponentPart023.performAction1240(booleanArgument6, integerArgument13, integerArgument8, booleanArgument7, booleanArgument14, booleanArgument3, booleanArgument5, -1, integerArgument1, integerArgument11);
+        StandardContentDialog.performAction1240(booleanArgument6, integerArgument13, integerArgument8, booleanArgument7, booleanArgument14, booleanArgument3, booleanArgument5, -1, integerArgument1, integerArgument11);
         DefaultTextWidgetRenderer.performAction0010(integerArgument13, booleanArgument6, true);
         if (byteArgument12 <= 42) {
           stringState0530 = (String) null;

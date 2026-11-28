@@ -55,11 +55,11 @@ final class rk extends bc {
               }
               incrementValue$1 = var7;
               var7++;
-              param2 = mn.field_bb[incrementValue$1];
+              param2 = ProgressMessageDialog.field_bb[incrementValue$1];
               dupTemp$2 = param0[param2];
               dupTemp$3 = param1[dupTemp$2];
               param1[dupTemp$2] = dupTemp$3 + 1;
-              mn.field_bb[dupTemp$3] = param2;
+              ProgressMessageDialog.field_bb[dupTemp$3] = param2;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -95,7 +95,7 @@ final class rk extends bc {
           int[] var3 = (int[]) null;
           rk.a((byte[]) null, (int[]) null, -108, (byte) -100, 71);
         }
-        return im.field_J;
+        return ResizableModalDialog.field_J;
     }
 
     rk(String param0, String param1) {

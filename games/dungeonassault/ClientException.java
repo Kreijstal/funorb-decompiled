@@ -102,7 +102,7 @@ final class ClientException extends RuntimeException {
                         stackIn_41_0Lifetime1 = var17;
                         stackIn_41_1Lifetime1 = var16 << 4;
                         var18 = stackIn_41_0Lifetime1 + stackIn_41_1Lifetime1;
-                        hf.field_yb[var18] = var8;
+                        ContentTransitionDialog.field_yb[var18] = var8;
                         gg.field_a[var16] = 1 + var17;
                         if (param4.field_w > 0 &&
                           null != param4.field_y) {

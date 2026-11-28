@@ -38,7 +38,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!jj.a(200, var4)) {
+          if (!RegistrationAgreementPane.a(200, var4)) {
             stackIn_2_0 = BufferedSocket.field_n;
             return stackIn_2_0;
           }

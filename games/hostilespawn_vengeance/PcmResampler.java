@@ -182,7 +182,7 @@ final class PcmResampler {
                     ClientLookupTables.field_d[dn.field_b].a(true, 128, (int)var13_double, var10, var11);
                   }
                 } else {
-                  var12 = jf.field_c / 25;
+                  var12 = FullscreenNoticeType.field_c / 25;
                   if (var12 > 4) {
                     var12 = 4;
                   }
@@ -247,7 +247,7 @@ final class PcmResampler {
                                 var11Lifetime1 != 13 &&
                                 var11Lifetime1 != 14) {
                                 if (var11Lifetime1 == 26) {
-                                  var24 = jh.field_eb[var8.field_w][var8.field_z % jh.field_eb[var8.field_w].length];
+                                  var24 = FullscreenStatusDialog.field_eb[var8.field_w][var8.field_z % FullscreenStatusDialog.field_eb[var8.field_w].length];
                                   var24.a(true, 128, (int)var8.field_c, var3 - 12, var4 - 12);
                                 } else {
                                   if (var11Lifetime1 != 23) {

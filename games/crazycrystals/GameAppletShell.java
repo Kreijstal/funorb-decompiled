@@ -128,7 +128,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   if (stackIn_81_0 < stackIn_81_1) {
                     break;
                   }
-                  jd.field_H = true;
+                  DialogMessagePane.field_H = true;
                   break;
                 }
               }
@@ -148,7 +148,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 lc.b(24536);
                 this.b(-42);
-                dk.field_o = DraggableWidgetContainer.a(ap.field_r, 6641, (java.awt.Component) ((Object) jd.field_D), rh.field_f);
+                dk.field_o = DraggableWidgetContainer.a(ap.field_r, 6641, (java.awt.Component) ((Object) DialogMessagePane.field_D), rh.field_f);
                 this.initializeClient((byte) -82);
                 MouseWheelInput.field_h = sn.a(27801);
                 do {
@@ -169,7 +169,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   do {
                     if (!(var3 < hf.field_a)) {
                       this.renderAppletFrame((byte) 122);
-                      so.a(jd.field_D, ResultScene.field_a, true);
+                      so.a(DialogMessagePane.field_D, ResultScene.field_a, true);
                       break;
                     }
                     this.processClientTick(2648);
@@ -291,17 +291,17 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (fieldTemp$1 > 50) {
             al.field_f = true;
             wf.field_h = wf.field_h - 50;
-            jd.field_D.setSize(ap.field_r, rh.field_f);
-            jd.field_D.setVisible(true);
+            DialogMessagePane.field_D.setSize(ap.field_r, rh.field_f);
+            DialogMessagePane.field_D.setVisible(true);
             if (MenuOverlay.field_d != null &&
               null == LoginPanel.field_F) {
               var6 = MenuOverlay.field_d.getInsets();
-              jd.field_D.setLocation(ui.field_a + var6.left, wm.field_e + var6.top);
+              DialogMessagePane.field_D.setLocation(ui.field_a + var6.left, wm.field_e + var6.top);
               if (CrazyCrystals.field_B != 0) {
-                jd.field_D.setLocation(ui.field_a, wm.field_e);
+                DialogMessagePane.field_D.setLocation(ui.field_a, wm.field_e);
               }
             } else {
-              jd.field_D.setLocation(ui.field_a, wm.field_e);
+              DialogMessagePane.field_D.setLocation(ui.field_a, wm.field_e);
             }
           }
           if (param0 != 122) {
@@ -404,10 +404,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
           }
-          if (null != jd.field_D) {
+          if (null != DialogMessagePane.field_D) {
             try {
-              jd.field_D.removeFocusListener((java.awt.event.FocusListener) (this));
-              jd.field_D.getParent().remove((java.awt.Component) ((Object) jd.field_D));
+              DialogMessagePane.field_D.removeFocusListener((java.awt.event.FocusListener) (this));
+              DialogMessagePane.field_D.getParent().remove((java.awt.Component) ((Object) DialogMessagePane.field_D));
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -453,10 +453,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         var4 = CrazyCrystals.field_B;
         try {
-          if (null != jd.field_D) {
-            jd.field_D.removeFocusListener((java.awt.event.FocusListener) (this));
-            jd.field_D.getParent().setBackground(java.awt.Color.black);
-            jd.field_D.getParent().remove((java.awt.Component) ((Object) jd.field_D));
+          if (null != DialogMessagePane.field_D) {
+            DialogMessagePane.field_D.removeFocusListener((java.awt.event.FocusListener) (this));
+            DialogMessagePane.field_D.getParent().setBackground(java.awt.Color.black);
+            DialogMessagePane.field_D.getParent().remove((java.awt.Component) ((Object) DialogMessagePane.field_D));
           }
           boolean decompiledFrameRemainder0 = true;
           if (null != LoginPanel.field_F) {
@@ -482,24 +482,24 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          jd.field_D = (java.awt.Canvas) ((Object) new GameCanvas((java.awt.Component) (this)));
-          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) jd.field_D));
-          jd.field_D.setSize(ap.field_r, rh.field_f);
+          DialogMessagePane.field_D = (java.awt.Canvas) ((Object) new GameCanvas((java.awt.Component) (this)));
+          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) DialogMessagePane.field_D));
+          DialogMessagePane.field_D.setSize(ap.field_r, rh.field_f);
           if (param0 >= -38) {
             return;
           }
-          jd.field_D.setVisible(true);
+          DialogMessagePane.field_D.setVisible(true);
           if (var2 == MenuOverlay.field_d) {
             var3 = MenuOverlay.field_d.getInsets();
-            jd.field_D.setLocation(var3.left + ui.field_a, wm.field_e + var3.top);
+            DialogMessagePane.field_D.setLocation(var3.left + ui.field_a, wm.field_e + var3.top);
             if (var4 != 0) {
-              jd.field_D.setLocation(ui.field_a, wm.field_e);
+              DialogMessagePane.field_D.setLocation(ui.field_a, wm.field_e);
             }
           } else {
-            jd.field_D.setLocation(ui.field_a, wm.field_e);
+            DialogMessagePane.field_D.setLocation(ui.field_a, wm.field_e);
           }
-          jd.field_D.addFocusListener((java.awt.event.FocusListener) (this));
-          jd.field_D.requestFocus();
+          DialogMessagePane.field_D.addFocusListener((java.awt.event.FocusListener) (this));
+          DialogMessagePane.field_D.requestFocus();
           mb.field_d = true;
           sl.field_t = true;
           al.field_f = true;
@@ -542,7 +542,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (this == BoundedRandomAccessFile.field_h &&
             !kf.field_g) {
             al.field_f = true;
-            if (jd.field_H &&
+            if (DialogMessagePane.field_H &&
               -bd.field_m + lo.correctedCurrentTimeMillis((byte) -23) > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {

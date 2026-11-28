@@ -14,10 +14,10 @@ final class tg {
             field_a = (String) null;
           }
           if (td.field_b == null) {
-            td.field_b = new kl(qe.field_g, ValidatedTextField.field_T);
+            td.field_b = new ProgressDialog(qe.field_g, ValidatedTextField.field_T);
             qe.field_g.showDialog(param2 ^ 3223, td.field_b);
           }
-          td.field_b.a(8405024, param3, param0, param1);
+          td.field_b.setProgress(8405024, param3, param0, param1);
           SoftwareRasterizer.clearRaster();
           d.a((byte) -75, true);
         } catch (RuntimeException runtimeException) {
@@ -157,12 +157,12 @@ final class tg {
               stackIn_32_0 = -1;
             }
             var20 = stackIn_32_0;
-            if (ud.field_S != null &&
+            if (ContentTransitionDialog.field_S != null &&
               param6.field_B != null &&
               var14Lifetime1 < param6.field_B.length &&
               -1 != param6.field_B[var14Lifetime1] &&
-              param6.field_B[var14Lifetime1] < ud.field_S.length) {
-              stackIn_40_0 = ud.field_S[param6.field_B[var14Lifetime1]];
+              param6.field_B[var14Lifetime1] < ContentTransitionDialog.field_S.length) {
+              stackIn_40_0 = ContentTransitionDialog.field_S[param6.field_B[var14Lifetime1]];
             } else {
               stackIn_40_0 = null;
             }

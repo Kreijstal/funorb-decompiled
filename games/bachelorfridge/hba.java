@@ -91,13 +91,13 @@ final class hba extends AttackEvent {
           fe.field_j = new Sprite(16, 16);
           fe.field_j.bindAsRenderTarget();
           hh.field_b[2].drawHalfSize(0, 0);
-          hga.field_U.a((byte) -45);
+          ProgressDialog.field_U.a((byte) -45);
           ve.field_m = new Sprite[4][];
           ve.field_m[0] = pi.a(param1, -8845, "basic", "powerup_hp");
           ve.field_m[1] = pi.a(param1, -8845, "basic", "powerup_speed");
           ve.field_m[2] = pi.a(param1, -8845, "basic", "powerup_attack");
           ve.field_m[3] = pi.a(param1, -8845, "basic", "powerup_special");
-          am.field_M = pi.a(param1, -8845, "basic", "status_icons");
+          ResizableModalDialog.field_M = pi.a(param1, -8845, "basic", "status_icons");
           DefaultWidgetRenderer.field_h = RageSpecial.a(29611, "basic", "doughnut", param1)[0];
           var10 = RageSpecial.a(29611, "basic", "special_tiles_ones", param1);
           ChangeCreatureStatOrHealthEffect.field_i = new IndexedSprite[3];
@@ -125,8 +125,8 @@ final class hba extends AttackEvent {
           var11 = RageSpecial.a(29611, "basic", "special_tiles_twos", param1);
           kka.field_f = var11[0];
           ConfirmedEmailAvailabilityValidator.field_h = var11[1];
-          de.field_F = var11[2];
-          de.field_F.flipVertically();
+          StripedProgressWidget.field_F = var11[2];
+          StripedProgressWidget.field_F.flipVertically();
           DelegatingCanvas.field_c = var11[3];
           nv.field_wb = var11[5];
           BuffVendorAnimation.field_C = var11[4];
@@ -134,7 +134,7 @@ final class hba extends AttackEvent {
           aea.field_k.bindAsRenderTarget();
           var11[6].draw(0, 0);
           var11[7].draw(128, 0);
-          hga.field_U.a((byte) 119);
+          ProgressDialog.field_U.a((byte) 119);
           pfa.field_g = var11[8];
           co.field_b = new IndexedSprite[5];
           co.field_b[4] = var11[13];

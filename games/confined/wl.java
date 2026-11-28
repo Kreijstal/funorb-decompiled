@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wl {
-    static ci field_f;
+    static FullscreenNoticeType field_f;
     private int[] field_e;
     private boolean field_h;
     private int field_b;
@@ -120,7 +120,7 @@ final class wl {
           }
           var44 = 0;
           var13Lifetime1 = var44;
-          while (var44 < ei.field_jb) {
+          while (var44 < FullscreenStatusDialog.field_jb) {
             var14Lifetime1 = tl.field_i[var44];
             var15Lifetime1 = param5.field_z[var14Lifetime1];
             var16 = param5.field_m[var14Lifetime1];
@@ -223,7 +223,7 @@ final class wl {
           lj.a(this.field_e, param0 + 1, this.field_e, param0, this.field_g - param0);
         }
         if (param1 >= -83) {
-          field_f = (ci) null;
+          field_f = (FullscreenNoticeType) null;
         }
         this.field_g = this.field_g - 1;
     }
@@ -239,7 +239,7 @@ final class wl {
           }
           e.field_c.position = e.field_c.position + 24;
           if (param0 != 1607962024) {
-            field_f = (ci) null;
+            field_f = (FullscreenNoticeType) null;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -294,7 +294,7 @@ final class wl {
         String var4 = (String) null;
         gk.$cfr$intArgs$a$c13c9cd76cbe(param1, (String) null, -116, param2);
         if (param0 > -14) {
-          field_f = (ci) null;
+          field_f = (FullscreenNoticeType) null;
         }
     }
 
@@ -340,7 +340,7 @@ final class wl {
     }
 
     static {
-        field_f = new ci();
+        field_f = new FullscreenNoticeType();
         field_d = new int[8192];
         field_a = "Unpacking graphics";
         field_c = new int[]{1, 3, 15, 6, 17, 11, 1, 1, 1, 7, 1, 5, 9, 1, 1, 1, 1, 1};

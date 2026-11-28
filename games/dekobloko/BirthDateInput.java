@@ -82,7 +82,7 @@ abstract class BirthDateInput extends ComponentContainer implements FieldValidat
         SceneWidget sceneWidgetLocal24 = null;
         integerLocal22 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          UiComponentPart033.integerState0934 = SoftwareRaster.integerState0285;
+          AccountCreationResultPanel.integerState0934 = SoftwareRaster.integerState0285;
           GameplayControls.integerState0859 = SoftwareRaster.integerState0284;
           if (!booleanArgument1) {
             stackIntegerLocal3 = MixedSupport121.integerState0778;

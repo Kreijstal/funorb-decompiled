@@ -24,7 +24,7 @@ public final class StarCannon extends ag {
         RichTextLayout.field_l = b.a(false, 3);
         jg.field_F = b.a(false, 4);
         BoundedRandomAccessFile.field_c = b.a(false, 5);
-        ej.a(FrameTimer.field_f, lf.field_eb, param0 + 23396);
+        ej.a(FrameTimer.field_f, ProgressDialog.field_eb, param0 + 23396);
     }
 
     private final void b(int param0, int param1) {
@@ -1098,7 +1098,7 @@ public final class StarCannon extends ag {
                 li.a(-115, new bf(0, -128, -40, 14));
                 li.a(-126, new bf(0, -128, 40, 14));
                 if (hh.field_c == 1) {
-                  ph.a(249, false, 6);
+                  ProgressMessageDialog.a(249, false, 6);
                 }
               }
               dg.field_l = 0;
@@ -1138,7 +1138,7 @@ public final class StarCannon extends ag {
                 mj.a(96, 12, 0, 46, 100);
                 mj.a(255, param0 ^ -19045, 1200, 38, 100);
                 if (ha.field_c == 5) {
-                  ph.a(249, false, 6);
+                  ProgressMessageDialog.a(249, false, 6);
                 }
               }
             } else {
@@ -1229,11 +1229,11 @@ public final class StarCannon extends ag {
                   dg.field_l = 0;
                   ua.field_c = 2;
                   mj.a(255, 12, 0, 41, 100);
-                  ti.field_f.removeOwnedListener(kc.field_P);
-                  kc.field_P.f();
-                  kc.field_P = fl.field_h;
-                  ti.field_f.addListener(kc.field_P);
-                  kc.field_P.a(mc.field_b);
+                  ti.field_f.removeOwnedListener(ResizableModalDialog.field_P);
+                  ResizableModalDialog.field_P.f();
+                  ResizableModalDialog.field_P = fl.field_h;
+                  ti.field_f.addListener(ResizableModalDialog.field_P);
+                  ResizableModalDialog.field_P.a(mc.field_b);
                   break regionExit1;
                 }
                 if (var7 == 10) {
@@ -1243,11 +1243,11 @@ public final class StarCannon extends ag {
                   dg.field_l = 0;
                   ua.field_c = 6;
                   mj.a(255, 12, 0, 41, 100);
-                  ti.field_f.removeOwnedListener(kc.field_P);
-                  kc.field_P.f();
-                  kc.field_P = fl.field_h;
-                  ti.field_f.addListener(kc.field_P);
-                  kc.field_P.a(mc.field_b);
+                  ti.field_f.removeOwnedListener(ResizableModalDialog.field_P);
+                  ResizableModalDialog.field_P.f();
+                  ResizableModalDialog.field_P = fl.field_h;
+                  ti.field_f.addListener(ResizableModalDialog.field_P);
+                  ResizableModalDialog.field_P.a(mc.field_b);
                   break regionExit1;
                 }
                 if (7 == var7) {
@@ -1273,11 +1273,11 @@ public final class StarCannon extends ag {
                       dg.field_l = 0;
                       AccountRequestState.field_d = AccountRequestState.field_d + 1;
                       mj.a(255, param0 ^ -244, 0, 41, 100);
-                      ti.field_f.removeOwnedListener(kc.field_P);
-                      kc.field_P.f();
-                      kc.field_P = fl.field_h;
-                      ti.field_f.addListener(kc.field_P);
-                      kc.field_P.a(mc.field_b);
+                      ti.field_f.removeOwnedListener(ResizableModalDialog.field_P);
+                      ResizableModalDialog.field_P.f();
+                      ResizableModalDialog.field_P = fl.field_h;
+                      ti.field_f.addListener(ResizableModalDialog.field_P);
+                      ResizableModalDialog.field_P.a(mc.field_b);
                     }
                   } else {
                     nf.field_e = 175;
@@ -1418,11 +1418,11 @@ public final class StarCannon extends ag {
                             AccountRequestState.field_d = AccountRequestState.field_d + 1;
                             dg.field_l = 0;
                             mj.a(255, 12, 0, 41, 100);
-                            ti.field_f.removeOwnedListener(kc.field_P);
-                            kc.field_P.f();
-                            kc.field_P = fl.field_h;
-                            ti.field_f.addListener(kc.field_P);
-                            kc.field_P.a(mc.field_b);
+                            ti.field_f.removeOwnedListener(ResizableModalDialog.field_P);
+                            ResizableModalDialog.field_P.f();
+                            ResizableModalDialog.field_P = fl.field_h;
+                            ti.field_f.addListener(ResizableModalDialog.field_P);
+                            ResizableModalDialog.field_P.a(mc.field_b);
                           }
                         } else {
                           nf.field_e = 175;
@@ -1545,9 +1545,9 @@ public final class StarCannon extends ag {
         if (param0 != 320) {
           this.disposeClient(-100);
         }
-        if (fa.field_E) {
+        if (StripedProgressWidget.field_E) {
           this.t(-23523);
-          fa.field_E = false;
+          StripedProgressWidget.field_E = false;
         }
         if (ProxyAuthenticationRequiredException.c(4)) {
           this.f((byte) -90);
@@ -1567,7 +1567,7 @@ public final class StarCannon extends ag {
               eb.field_c = eb.field_c | oh.field_a.field_k;
               jg.field_H = jg.field_H & ~oh.field_a.field_k;
               oh.field_a = null;
-              jj.i(122);
+              RegistrationAgreementPane.i(122);
               ConfirmedEmailAvailabilityValidator.e((byte) -117);
               if (field_z == 5 &&
                 jg.field_H == 0) {
@@ -1697,12 +1697,12 @@ public final class StarCannon extends ag {
                     BoundedRandomAccessFile.field_c.tryLoadAllGroups(29741)) {
                     if (FrameTimer.field_f.ensureIndexLoaded((byte) 103) &&
                       FrameTimer.field_f.tryLoadGroupByName("basic", -9883)) {
-                      ma.a(fa.field_z, -13923, 70.0f);
+                      ma.a(StripedProgressWidget.field_z, -13923, 70.0f);
                       this.renderClientFrame((byte) 22);
                       if (!param0) {
                         return;
                       }
-                      jj.i(param1 ^ -1478);
+                      RegistrationAgreementPane.i(param1 ^ -1478);
                       gf.field_c = new PcmSample[48];
                       gf.field_c[0] = aj.a(lj.field_h, "", "SC_bossdamage").a();
                       gf.field_c[1] = aj.a(lj.field_h, "", "SC_bossdestroy").a();
@@ -1738,20 +1738,20 @@ public final class StarCannon extends ag {
                       gf.field_c[31] = aj.a(lj.field_h, "", "SC_sidecannons_upgrade").a();
                       gf.field_c[46] = aj.a(lj.field_h, "", "SC_xenon_operational").a();
                       gf.field_c[47] = aj.a(lj.field_h, "", "SC_xenonbeamshot").a();
-                      gf.field_c[32] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_systems malfunction").c();
-                      gf.field_c[39] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_54321").c();
-                      gf.field_c[40] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_back cannons upgraded").c();
-                      gf.field_c[41] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_hostile mothership approaching").c();
-                      gf.field_c[42] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_powerup collected").c();
-                      gf.field_c[43] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_returning to normal space").c();
-                      gf.field_c[44] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_rewind module activated").c();
-                      gf.field_c[45] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_rewind module installed").c();
-                      gf.field_c[33] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_shield discharged").c();
-                      gf.field_c[34] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_shield rearmed").c();
-                      gf.field_c[35] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_shields upgraded").c();
-                      gf.field_c[36] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_side cannons upgraded").c();
-                      gf.field_c[37] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_thrusters upgraded").c();
-                      gf.field_c[38] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_zenon beam operational").c();
+                      gf.field_c[32] = VorbisSample.loadByName(AccountNameAvailabilityValidator.field_p, "", "SC_systems malfunction").decodeAllToPcm();
+                      gf.field_c[39] = VorbisSample.loadByName(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_54321").decodeAllToPcm();
+                      gf.field_c[40] = VorbisSample.loadByName(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_back cannons upgraded").decodeAllToPcm();
+                      gf.field_c[41] = VorbisSample.loadByName(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_hostile mothership approaching").decodeAllToPcm();
+                      gf.field_c[42] = VorbisSample.loadByName(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_powerup collected").decodeAllToPcm();
+                      gf.field_c[43] = VorbisSample.loadByName(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_returning to normal space").decodeAllToPcm();
+                      gf.field_c[44] = VorbisSample.loadByName(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_rewind module activated").decodeAllToPcm();
+                      gf.field_c[45] = VorbisSample.loadByName(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_rewind module installed").decodeAllToPcm();
+                      gf.field_c[33] = VorbisSample.loadByName(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_shield discharged").decodeAllToPcm();
+                      gf.field_c[34] = VorbisSample.loadByName(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_shield rearmed").decodeAllToPcm();
+                      gf.field_c[35] = VorbisSample.loadByName(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_shields upgraded").decodeAllToPcm();
+                      gf.field_c[36] = VorbisSample.loadByName(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_side cannons upgraded").decodeAllToPcm();
+                      gf.field_c[37] = VorbisSample.loadByName(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_thrusters upgraded").decodeAllToPcm();
+                      gf.field_c[38] = VorbisSample.loadByName(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_zenon beam operational").decodeAllToPcm();
                       AccountNameAvailabilityValidator.a(272, -3763, 3278, 39);
                       AccountNameAvailabilityValidator.a(0, -3763, 300, 11);
                       AccountNameAvailabilityValidator.a(0, -3763, 300, 12);
@@ -1761,22 +1761,22 @@ public final class StarCannon extends ag {
                       ModalDialogHost.j(param1 ^ -1412);
                       return;
                     }
-                    ma.a(SecondaryNodeDeque.a(n.field_f, FrameTimer.field_f, (byte) -38, ae.field_a, "basic"), -13923, 60.0f);
+                    ma.a(SecondaryNodeDeque.a(n.field_f, FrameTimer.field_f, (byte) -38, FullscreenNoticeType.field_a, "basic"), -13923, 60.0f);
                     return;
                   }
                   ma.a(SecondaryNodeDeque.a(s.field_g, BoundedRandomAccessFile.field_c, (byte) -38, sj.field_D, ""), -13923, 50.0f);
                   return;
                 }
-                ma.a(SecondaryNodeDeque.a(n.field_f, jg.field_F, (byte) -38, ae.field_a, ""), param1 - 12479, 40.0f);
+                ma.a(SecondaryNodeDeque.a(n.field_f, jg.field_F, (byte) -38, FullscreenNoticeType.field_a, ""), param1 - 12479, 40.0f);
                 return;
               }
-              ma.a(SecondaryNodeDeque.a(kc.field_U, RichTextLayout.field_l, (byte) -38, BitPacketBuffer.field_l, ""), -13923, 30.0f);
+              ma.a(SecondaryNodeDeque.a(ResizableModalDialog.field_U, RichTextLayout.field_l, (byte) -38, BitPacketBuffer.field_l, ""), -13923, 30.0f);
               return;
             }
-            ma.a(SecondaryNodeDeque.a(lc.field_ib, AccountNameAvailabilityValidator.field_p, (byte) -38, TextLayout.field_g, ""), -13923, 20.0f);
+            ma.a(SecondaryNodeDeque.a(StandardContentDialog.field_ib, AccountNameAvailabilityValidator.field_p, (byte) -38, TextLayout.field_g, ""), -13923, 20.0f);
             return;
           }
-          ma.a(SecondaryNodeDeque.a(lc.field_ib, lj.field_h, (byte) -38, TextLayout.field_g, ""), param1 ^ 13249, 10.0f);
+          ma.a(SecondaryNodeDeque.a(StandardContentDialog.field_ib, lj.field_h, (byte) -38, TextLayout.field_g, ""), param1 ^ 13249, 10.0f);
           return;
         }
         if (null != RichTextLayout.field_l) {
@@ -1887,7 +1887,7 @@ public final class StarCannon extends ag {
           ModalDialogHost.j(param1 + 1476);
           return;
         }
-        if (null == kj.field_y[3]) {
+        if (null == DialogMessagePane.field_y[3]) {
           ma.a(sj.field_C, -13923, 90.0f);
           this.renderClientFrame((byte) 22);
           DequeWidgetContainer.a("", 93, "mainmenubar", jg.field_F);
@@ -1920,10 +1920,10 @@ public final class StarCannon extends ag {
           eb.field_b[11] = DequeWidgetContainer.a("", 21, "s11", jg.field_F);
           eb.field_b[12] = DequeWidgetContainer.a("", dg.a(param1, -1478), "s12", jg.field_F);
           eb.field_b[13] = DequeWidgetContainer.a("", param1 + 1523, "s13", jg.field_F);
-          kj.field_y[0] = DequeWidgetContainer.a("", 76, "ap0", jg.field_F);
-          kj.field_y[1] = DequeWidgetContainer.a("", 69, "ap1", jg.field_F);
-          kj.field_y[2] = DequeWidgetContainer.a("", dg.a(param1, -1497), "ap2", jg.field_F);
-          kj.field_y[3] = DequeWidgetContainer.a("", 100, "ap3", jg.field_F);
+          DialogMessagePane.field_y[0] = DequeWidgetContainer.a("", 76, "ap0", jg.field_F);
+          DialogMessagePane.field_y[1] = DequeWidgetContainer.a("", 69, "ap1", jg.field_F);
+          DialogMessagePane.field_y[2] = DequeWidgetContainer.a("", dg.a(param1, -1497), "ap2", jg.field_F);
+          DialogMessagePane.field_y[3] = DequeWidgetContainer.a("", 100, "ap3", jg.field_F);
           ModalDialogHost.j(32);
           return;
         }
@@ -1936,12 +1936,12 @@ public final class StarCannon extends ag {
         ta.a(DequeWidgetContainer.a("", param1 ^ -1510, "mb_logo", jg.field_F), param1 + 1319);
         DelayedPcmStream.a(0, 125, 123, a.field_b, 1500, -52, 9, 9, 16777215, 0, DequeWidgetContainer.a("", 60, "mbpb", jg.field_F));
         te.a(126, var20);
-        lf.field_eb = null;
+        ProgressDialog.field_eb = null;
         var4_array = new id[1];
         var4_array[0] = DropTargetWidgetContainer.field_w[16 + qb.field_e];
         DropTargetWidgetContainer.field_y.setInlineSprites(var4_array, (int[]) null);
-        lf.field_V = DequeWidgetContainer.a("basic", 111, "unachieved", FrameTimer.field_f);
-        li.a(lf.field_V, (byte) -100);
+        ProgressDialog.field_V = DequeWidgetContainer.a("basic", 111, "unachieved", FrameTimer.field_f);
+        li.a(ProgressDialog.field_V, (byte) -100);
         sc.field_a = DequeWidgetContainer.a("basic", param1 ^ -1517, "locked", FrameTimer.field_f);
         li.a(sc.field_a, (byte) -100);
         var21 = DequeWidgetContainer.a("basic", 104, "orbcoin", FrameTimer.field_f);
@@ -1987,9 +1987,9 @@ public final class StarCannon extends ag {
         eg.field_f = new wd(fb.field_t);
         gd.field_a = new wd(TextFieldValidator.field_i);
         fl.field_h = new wd(r.field_b);
-        kc.field_P = eg.field_f;
-        kc.field_P.a(mc.field_b);
-        ti.field_f.addListener(kc.field_P);
+        ResizableModalDialog.field_P = eg.field_f;
+        ResizableModalDialog.field_P.a(mc.field_b);
+        ti.field_f.addListener(ResizableModalDialog.field_P);
         ne.a(50, 39);
         ModalDialog.a(1, 50);
         fg.field_a = new jl[8];
@@ -2932,9 +2932,9 @@ public final class StarCannon extends ag {
         }
         if (0 > MouseWheelSource.field_c &&
           !bi.field_b) {
-          lc.field_gb = lc.field_gb + 1;
-          if (1280 < lc.field_gb) {
-            lc.field_gb = -640;
+          StandardContentDialog.field_gb = StandardContentDialog.field_gb + 1;
+          if (1280 < StandardContentDialog.field_gb) {
+            StandardContentDialog.field_gb = -640;
           }
         }
         pg.a(true, (byte) -104);
@@ -3080,11 +3080,11 @@ public final class StarCannon extends ag {
                               AccountRequestState.field_d = AccountRequestState.field_d + 1;
                               dg.field_l = 0;
                               mj.a(255, 12, 0, 41, 100);
-                              ti.field_f.removeOwnedListener(kc.field_P);
-                              kc.field_P.f();
-                              kc.field_P = fl.field_h;
-                              ti.field_f.addListener(kc.field_P);
-                              kc.field_P.a(mc.field_b);
+                              ti.field_f.removeOwnedListener(ResizableModalDialog.field_P);
+                              ResizableModalDialog.field_P.f();
+                              ResizableModalDialog.field_P = fl.field_h;
+                              ti.field_f.addListener(ResizableModalDialog.field_P);
+                              ResizableModalDialog.field_P.a(mc.field_b);
                               break regionExit1;
                           }
                         }
@@ -3250,11 +3250,11 @@ public final class StarCannon extends ag {
         be.clearStaticReferences(20342);
         ModalDialogHost.clearStaticReferences(-14528);
         AccountCreationResultPanel.clearStaticReferences((byte) -90);
-        lf.clearStaticReferences(false);
-        lc.m(-11147);
-        ph.clearDeclaredStaticReferences(-1);
+        ProgressDialog.clearStaticReferences(false);
+        StandardContentDialog.m(-11147);
+        ProgressMessageDialog.clearDeclaredStaticReferences(-1);
         AccountRegistrationPanel.clearStaticReferences((byte) 126);
-        db.clearStaticReferences(-117);
+        GuestPlayConfirmationForm.clearStaticReferences(-117);
         LoginPanel.clearStaticReferences(-128);
         DisplayNameSelectionPanel.clearStaticReferences(false);
         ma.clearStaticReferences((byte) 67);
@@ -3264,7 +3264,7 @@ public final class StarCannon extends ag {
         GzipDecompressor.clearStaticReferences((byte) 59);
         ti.a((byte) 13);
         je.clearStaticReferences();
-        nj.clearStaticReferences();
+        VorbisSample.clearStaticReferences();
         VorbisFloor.clearStaticReferences();
         ja.clearStaticReferences((byte) 80);
         ih.clearStaticReferences((byte) -125);
@@ -3289,7 +3289,7 @@ public final class StarCannon extends ag {
         ArchiveRequest.clearStaticReferences(0);
         IsaacRandom.clearStaticReferences(-730625660);
         pd.resetStaticState((byte) 98);
-        vj.resetStaticState(true);
+        FullscreenStatusDialog.resetStaticState(true);
         fg.clearStaticReferences((byte) 6);
         DefaultTextWidgetRenderer.resetStaticState((byte) 125);
         gl.clearStaticReferences();
@@ -3322,7 +3322,7 @@ public final class StarCannon extends ag {
         UiWidget.c((byte) -44);
         InteractiveWidget.clearStaticReferences(-115);
         SingleChildWidgetContainer.resetStaticState(0);
-        kc.releaseDeclaredStaticReferences(false);
+        ResizableModalDialog.releaseDeclaredStaticReferences(false);
         ModalDialog.clearDeclaredStaticReferences((byte) -37);
         DequeWidgetContainer.e((byte) 73);
         ba.clearStaticReferences(125);
@@ -3344,8 +3344,8 @@ public final class StarCannon extends ag {
         nf.clearStaticReferences(-109);
         LabeledWidgetContainer.clearStaticReferences((byte) -95);
         EditableTextField.clearStaticReferences((byte) 73);
-        qj.clearStaticReferences(-102);
-        fa.clearStaticReferences(1851621384);
+        ContentTransitionDialog.clearStaticReferences(-102);
+        StripedProgressWidget.clearStaticReferences(1851621384);
         NameSuggestionsPanel.clearStaticReferences(-16);
         RichTextWidget.clearDeclaredStaticReferences((byte) 119);
         jg.e(934716193);
@@ -3353,7 +3353,7 @@ public final class StarCannon extends ag {
         gh.resetStaticState(13329);
         TextFieldValidator.d((byte) 100);
         vg.clearStaticReferences(-117);
-        jj.clearStaticReferences(0);
+        RegistrationAgreementPane.clearStaticReferences(0);
         el.clearStaticReferences((byte) 115);
         sj.clearStaticReferences((byte) 126);
         SoundFilter.clearStaticReferences();
@@ -3391,12 +3391,12 @@ public final class StarCannon extends ag {
         qb.resetStaticState(-115);
         ge.a(45);
         q.clearStaticReferences((byte) 119);
-        kj.clearStaticReferences(0);
+        DialogMessagePane.clearStaticReferences(0);
         mj.clearStaticReferences(true);
         od.clearStaticReferences(83);
         cl.clearStaticReferences((byte) 121);
         vd.clearStaticReferences(32);
-        ae.clearStaticReferences((byte) 64);
+        FullscreenNoticeType.clearStaticReferences((byte) 64);
         bc.clearStaticReferences((byte) -128);
         we.b((byte) 95);
         dg.clearStaticReferences(124);
@@ -3435,7 +3435,7 @@ public final class StarCannon extends ag {
         if (n.field_a != null) {
           stackIn_3_0 = n.field_a;
         } else {
-          stackIn_3_0 = kj.field_E;
+          stackIn_3_0 = DialogMessagePane.field_E;
         }
         var2 = stackIn_3_0;
         if (ProxyAuthenticationRequiredException.c(4)) {
@@ -3543,7 +3543,7 @@ public final class StarCannon extends ag {
               this.b(0, 7306);
             }
             if (3 == field_z &&
-              lf.field_cb == 1) {
+              ProgressDialog.field_cb == 1) {
               this.b(0, 7306);
             }
             fg.field_a[field_z].a(320, 100);
@@ -3601,8 +3601,8 @@ public final class StarCannon extends ag {
         AccountServiceResult.field_b = 16777215;
         sd.field_a = 33023;
         AudioOutput.configureAudio(22050, false, 10);
-        nb.field_f = AudioOutput.createOutput(nb.field_e, (java.awt.Component) ((Object) kj.field_E), 0, 512);
-        ea.field_d = AudioOutput.createOutput(nb.field_e, (java.awt.Component) ((Object) kj.field_E), 1, 22050);
+        nb.field_f = AudioOutput.createOutput(nb.field_e, (java.awt.Component) ((Object) DialogMessagePane.field_E), 0, 512);
+        ea.field_d = AudioOutput.createOutput(nb.field_e, (java.awt.Component) ((Object) DialogMessagePane.field_E), 1, 22050);
         jk.field_k = new PcmStreamMixer();
         ti.field_f = new PcmStreamMixer();
         nb.field_f.setRootStream(jk.field_k);
@@ -3612,7 +3612,7 @@ public final class StarCannon extends ag {
         mc.field_b = 128;
         dg.field_l = 0;
         nb.field_g = 64;
-        lc.field_gb = -2048;
+        StandardContentDialog.field_gb = -2048;
         nf.field_l = 0;
         ua.field_c = -2;
         FullscreenFocusCanvas.field_d = 2;
@@ -3666,8 +3666,8 @@ public final class StarCannon extends ag {
         }
         if (wc.field_c[99]) {
           oe.field_a = oe.field_a + 3;
-          na.field_d = na.field_d - kc.field_Q;
-          fc.field_e = fc.field_e + jl.field_d * kc.field_Q;
+          na.field_d = na.field_d - ResizableModalDialog.field_Q;
+          fc.field_e = fc.field_e + jl.field_d * ResizableModalDialog.field_Q;
           ja.field_d = ja.field_d + 7;
           il.field_i = il.field_i + 10;
         }
@@ -3713,7 +3713,7 @@ public final class StarCannon extends ag {
               }
             } else {
               if (MouseInput.a(77)) {
-                field_z = vj.field_ab;
+                field_z = FullscreenStatusDialog.field_ab;
               } else {
                 oh.field_a = og.a(4, (byte) 113);
                 sa.a(nf.field_l + na.field_a * 3, 23820);
@@ -3891,11 +3891,11 @@ public final class StarCannon extends ag {
                                 AccountRequestState.field_d = AccountRequestState.field_d + 1;
                                 dg.field_l = 0;
                                 mj.a(255, 12, 0, 41, 100);
-                                ti.field_f.removeOwnedListener(kc.field_P);
-                                kc.field_P.f();
-                                kc.field_P = fl.field_h;
-                                ti.field_f.addListener(kc.field_P);
-                                kc.field_P.a(mc.field_b);
+                                ti.field_f.removeOwnedListener(ResizableModalDialog.field_P);
+                                ResizableModalDialog.field_P.f();
+                                ResizableModalDialog.field_P = fl.field_h;
+                                ti.field_f.addListener(ResizableModalDialog.field_P);
+                                ResizableModalDialog.field_P.a(mc.field_b);
                               }
                             }
                           }

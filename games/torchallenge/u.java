@@ -298,14 +298,14 @@ final class u {
           }
           var9 = (VorbisSample) (this.field_f.a((byte) 100, var6));
           if (var9 == null) {
-            var9 = VorbisSample.a(this.field_e, param3, param2);
+            var9 = VorbisSample.load(this.field_e, param3, param2);
             if (var9 == null) {
               stackIn_14_0 = null;
               return (PcmSample) (stackIn_14_0);
             }
             this.field_f.a(-101, var9, var6);
           }
-          var8Lifetime1 = var9.a(param1);
+          var8Lifetime1 = var9.decodeToPcm(param1);
           if (var8Lifetime1 == null) {
             stackIn_18_0 = null;
             return (PcmSample) (stackIn_18_0);

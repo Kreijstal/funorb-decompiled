@@ -75,7 +75,7 @@ final class InvincibleAnimation extends EventAnimation {
         if (NetworkGameClient.field_u != null) {
           return true;
         }
-        if (em.d((byte) -104)) {
+        if (FullscreenStatusDialog.d((byte) -104)) {
           return true;
         }
         if (wt.field_n != null) {

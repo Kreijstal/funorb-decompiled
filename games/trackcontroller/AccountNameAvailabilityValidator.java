@@ -145,7 +145,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
               if (ArchiveIndex.field_h) {
                 param2 = MouseInputHandler.field_a;
               }
-              kb.field_a.a(param1, param2, -10);
+              kb.field_a.showResult(param1, param2, -10);
             }
             if (param1 != 256 &&
               10 != param1 &&
@@ -241,7 +241,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           RuntimeException var2_ref2 = null;
           var7 = TrackController.field_F ? 1 : 0;
           try {
-            if (wd.field_R) {
+            if (ResizableModalDialog.field_R) {
               return true;
             }
             if (param0 != 9819) {

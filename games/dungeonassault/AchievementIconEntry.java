@@ -68,12 +68,12 @@ final class AchievementIconEntry extends IntrusiveNode {
                             if (var4 != 13 &&
                               14 != var4) {
                               if (var4 == 8) {
-                                if (null == cm.field_R) {
+                                if (null == RegistrationAgreementPane.field_R) {
                                   var4 = param2 ? 1 : 0;
                                   tl.field_d = false;
                                   a.a(320, IntrusiveNode.field_c.field_N, IntrusiveNode.field_c, true, var4 != 0, 8, 240, 2, 8, IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_N, (RgbSprite[]) null, (RgbSprite[]) null);
-                                  if (null != cm.field_R) {
-                                    i.field_A.requestCursorVisibility((java.awt.Component) ((Object) cm.field_R), (byte) 101, false);
+                                  if (null != RegistrationAgreementPane.field_R) {
+                                    i.field_A.requestCursorVisibility((java.awt.Component) ((Object) RegistrationAgreementPane.field_R), (byte) 101, false);
                                   }
                                 } else {
                                   ib.a(930);
@@ -352,7 +352,7 @@ final class AchievementIconEntry extends IntrusiveNode {
     final static void a(sa param0, int param1) {
         rj var2 = null;
         try {
-          var2 = wi.field_ob;
+          var2 = ProgressDialog.field_ob;
           if (var2 != null &&
             var2.field_n != null) {
             uj.a(var2.field_n, 95);

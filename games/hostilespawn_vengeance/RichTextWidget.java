@@ -271,7 +271,7 @@ class RichTextWidget extends InteractiveWidget {
         }
         uj var2 = new uj();
         ve.field_b.addLast(var2, 109);
-        pe.a((byte) 51, param0);
+        ProgressDialog.a((byte) 51, param0);
         return var2;
     }
 

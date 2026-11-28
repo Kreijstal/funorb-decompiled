@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends ma implements WidgetActivationListener {
+final class AccountCreationResultPanel extends ProgressMessageDialog implements WidgetActivationListener {
     static ResourceArchive field_Jb;
     static String field_Fb;
     static String field_Db;
@@ -65,7 +65,7 @@ final class AccountCreationResultPanel extends ma implements WidgetActivationLis
         }
     }
 
-    final void p(int param0) {
+    final void showAccountCreationConnectionFailure(int param0) {
         this.showAccountCreationResult((byte) -92, kj.createAccountErrorResult(param0, 4, ig.field_i), true);
     }
 
@@ -76,7 +76,7 @@ final class AccountCreationResultPanel extends ma implements WidgetActivationLis
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        dj var5 = null;
+        DialogMessagePane var5 = null;
         int var6 = 0;
         var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
@@ -106,35 +106,35 @@ final class AccountCreationResultPanel extends ma implements WidgetActivationLis
           if (param0 != -92) {
             this.advanceDialogAnimation(33);
           }
-          var5 = new dj((ma) (this), wi.field_e, var4);
+          var5 = new DialogMessagePane((ProgressMessageDialog) (this), wi.field_e, var4);
           if (!param1.success) {
             if (this.field_Hb) {
-              var5.a(cd.field_a, false, (WidgetEventListener) (this));
+              var5.addListenerButton(cd.field_a, false, (WidgetEventListener) (this));
             } else {
               if (5 == param1.statusCode) {
-                var5.a(false, jf.field_fb, 11);
-                var5.a(false, ProxyAuthenticationRequiredException.field_d, 17);
+                var5.addActionButton(false, ContentTransitionDialog.field_fb, 11);
+                var5.addActionButton(false, ProxyAuthenticationRequiredException.field_d, 17);
               } else {
-                var5.a(false, f.field_m, -1);
+                var5.addActionButton(false, f.field_m, -1);
               }
             }
             if (param1.statusCode == 3) {
-              var5.a(false, nl.field_o, 7);
+              var5.addActionButton(false, nl.field_o, 7);
             } else {
               if (param1.statusCode != 6) {
-                this.a(33, var5);
+                this.replaceContent(33, var5);
                 return;
               }
-              var5.a(false, bb.field_d, 9);
+              var5.addActionButton(false, bb.field_d, 9);
             }
           } else {
             if (param1.field_d) {
-              this.a(33, new ih(this));
+              this.replaceContent(33, new RegistrationAgreementPane(this));
               return;
             }
-            var5.a(cd.field_a, false, (WidgetEventListener) (this));
+            var5.addListenerButton(cd.field_a, false, (WidgetEventListener) (this));
           }
-          this.a(33, var5);
+          this.replaceContent(33, var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -157,7 +157,7 @@ final class AccountCreationResultPanel extends ma implements WidgetActivationLis
         }
         try {
           lk.b(1);
-          this.d(param2);
+          this.closeDialog(param2);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "qd.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

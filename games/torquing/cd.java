@@ -84,7 +84,7 @@ final class cd {
           if (GameApplet.a(true, param0)) {
             return false;
           }
-          if (fm.a((byte) -111, param0)) {
+          if (GuestPlayConfirmationForm.a((byte) -111, param0)) {
             return false;
           }
           if (va.b(param0, 25326)) {

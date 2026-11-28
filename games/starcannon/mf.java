@@ -70,10 +70,10 @@ final class mf {
           }
           FullscreenFocusCanvas.a((java.awt.Component) ((Object) param1), (byte) 69);
           TextHotspotBounds.a((java.awt.Component) ((Object) param1), 0);
-          if (null == qj.field_eb) {
+          if (null == ContentTransitionDialog.field_eb) {
             return;
           }
-          qj.field_eb.attach(205, (java.awt.Component) ((Object) param1));
+          ContentTransitionDialog.field_eb.attach(205, (java.awt.Component) ((Object) param1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

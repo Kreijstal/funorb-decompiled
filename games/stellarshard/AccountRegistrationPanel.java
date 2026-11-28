@@ -111,13 +111,13 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
     final static void a(String param0, String param1, int param2) {
         try {
           if (null != ModalDialogHost.field_G) {
-            ModalDialogHost.field_G.o(3);
+            ModalDialogHost.field_G.closeDialog(3);
           }
           af.field_r = new LoginPanel(param1, param0, false, true, true);
           if (param2 <= 30) {
             AccountRegistrationPanel.l(116);
           }
-          sf.field_f.b(af.field_r, 23143);
+          sf.field_f.replaceContent(af.field_r, 23143);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "mj.RA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

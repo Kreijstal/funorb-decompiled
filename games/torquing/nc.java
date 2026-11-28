@@ -15,7 +15,7 @@ final class nc {
           if (FramedPanelLayer.a(-22426, 0)) {
             param0 = 6;
           }
-          var2 = (ik) (qc.field_Y.beginBackward(0));
+          var2 = (ik) (StandardContentDialog.field_Y.beginBackward(0));
           while (var2 != null) {
             if (~var2.field_p != ~param0) {
               var2.a(param0, !param1 ? true : false);
@@ -28,7 +28,7 @@ final class nc {
               var3 = (var2.field_n + 480) * var2.field_r / 1920;
             }
             var2.field_j.drawWithOpacity(var2.field_l >> 2, 0, var3);
-            var2 = (ik) (qc.field_Y.nextBackward(-24059));
+            var2 = (ik) (StandardContentDialog.field_Y.nextBackward(-24059));
           }
           if (!param1) {
             nc.clearStaticReferences(-39);

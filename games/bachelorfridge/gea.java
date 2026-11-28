@@ -22,13 +22,13 @@ final class gea extends IntrusiveNode {
             field_f = (String) null;
           }
           if (null == BananarangAnimation.field_z ||
-            am.field_R == null) {
+            ResizableModalDialog.field_R == null) {
             BananarangAnimation.field_z = new int[256];
-            am.field_R = new int[256];
+            ResizableModalDialog.field_R = new int[256];
             for (var1_int = 0; 256 > var1_int; var1_int++) {
               var2 = 6.283185307179586 * ((double)var1_int / 255.0);
               BananarangAnimation.field_z[var1_int] = (int)(Math.sin(var2) * 4096.0);
-              am.field_R[var1_int] = (int)(4096.0 * Math.cos(var2));
+              ResizableModalDialog.field_R[var1_int] = (int)(4096.0 * Math.cos(var2));
             }
           }
         } catch (RuntimeException runtimeException) {

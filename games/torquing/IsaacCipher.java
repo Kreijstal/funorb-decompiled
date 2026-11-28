@@ -11,7 +11,7 @@ final class IsaacCipher {
     private int field_g;
     private int field_j;
     static qd field_b;
-    static mn field_m;
+    static ProgressMessageDialog field_m;
     static String field_i;
     static int field_d;
     static String field_f;

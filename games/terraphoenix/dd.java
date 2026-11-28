@@ -81,7 +81,7 @@ final class dd extends InteractiveWidget {
             return (q) (stackIn_7_0);
           }
           var6 = (CharSequence) ((Object) param1);
-          var2 = hm.a(param0, var6);
+          var2 = StripedProgressWidget.a(param0, var6);
           if (var2 == null) {
             stackIn_10_0 = null;
             return (q) (stackIn_10_0);
@@ -89,7 +89,7 @@ final class dd extends InteractiveWidget {
           var3 = (q) (WidgetContainer.field_z.a(71, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Lb);
-            var4 = hm.a((byte) 124, var7);
+            var4 = StripedProgressWidget.a((byte) 124, var7);
             if (var4.equals(var2)) {
               stackIn_17_0 = var3;
               return stackIn_17_0;
@@ -199,7 +199,7 @@ final class dd extends InteractiveWidget {
             return;
           }
           if (oh.field_b != var8) {
-            if (qf.field_d == var8) {
+            if (FullscreenNoticeType.field_d == var8) {
               var17 = AccountRequestState.field_c[2];
               var17.drawAdditive(var5 - (var17.field_r >> 1), var6 - (var17.field_t >> 1), 256);
               return;
@@ -258,7 +258,7 @@ final class dd extends InteractiveWidget {
           return;
         }
         if (oh.field_b != var8Lifetime1) {
-          if (qf.field_d == var8Lifetime1) {
+          if (FullscreenNoticeType.field_d == var8Lifetime1) {
             var21 = AccountRequestState.field_c[2];
             var21.drawAdditive(var5 - (var21.field_r >> 1), var6Lifetime1 - (var21.field_t >> 1), 256);
             return;

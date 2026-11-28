@@ -52,7 +52,7 @@ final class vl {
         for (var2 = 0; var2 < 1000; var2++) {
           if (a.entities[var2] != null &&
             this.a(-48, a.entities[var2], false) && (a.entities[var2].kind != -1 ||
-            nc.field_H != 2)) {
+            StripedProgressWidget.field_H != 2)) {
             var3 = a.entities[var2];
             if (var3 != this.field_g &&
               !var3.a((byte) -47)) {
@@ -236,17 +236,17 @@ final class vl {
             0 < this.field_b) {
             var6_intLifetime2 = this.field_b >> 4;
             var7Lifetime2 = 2 * this.field_b / 3 + 24;
-            pg.field_hb[var6_intLifetime2].drawScaledAdditive(-var7Lifetime2 + var3_int, var4 - var7Lifetime2, var7Lifetime2 * 2, 2 * var7Lifetime2, (255 - this.field_b) / 2);
+            StandardContentDialog.field_hb[var6_intLifetime2].drawScaledAdditive(-var7Lifetime2 + var3_int, var4 - var7Lifetime2, var7Lifetime2 * 2, 2 * var7Lifetime2, (255 - this.field_b) / 2);
             var7Lifetime2Lifetime1 = 24 + 2 * this.field_b / 9;
-            pg.field_hb[var6_intLifetime2].drawScaledAdditive(-var7Lifetime2Lifetime1 + var3_int, var4 - var7Lifetime2Lifetime1, var7Lifetime2Lifetime1 * 2, 2 * var7Lifetime2Lifetime1, 255 - this.field_b);
+            StandardContentDialog.field_hb[var6_intLifetime2].drawScaledAdditive(-var7Lifetime2Lifetime1 + var3_int, var4 - var7Lifetime2Lifetime1, var7Lifetime2Lifetime1 * 2, 2 * var7Lifetime2Lifetime1, 255 - this.field_b);
           }
           if (this.field_f == 6 &&
             this.field_b > 0) {
             var6_intLifetime3 = this.field_b >> 4;
             var7Lifetime3 = 12 + this.field_b / 3;
-            pg.field_hb[var6_intLifetime3].drawScaledAdditive(var3_int - var7Lifetime3, var4 - var7Lifetime3, 2 * var7Lifetime3, var7Lifetime3 * 2, (255 - this.field_b) / 2);
+            StandardContentDialog.field_hb[var6_intLifetime3].drawScaledAdditive(var3_int - var7Lifetime3, var4 - var7Lifetime3, 2 * var7Lifetime3, var7Lifetime3 * 2, (255 - this.field_b) / 2);
             var7Lifetime3Lifetime1 = 12 + this.field_b / 9;
-            pg.field_hb[var6_intLifetime3].drawScaledAdditive(-var7Lifetime3Lifetime1 + var3_int, var4 - var7Lifetime3Lifetime1, var7Lifetime3Lifetime1 * 2, var7Lifetime3Lifetime1 * 2, -this.field_b + 255);
+            StandardContentDialog.field_hb[var6_intLifetime3].drawScaledAdditive(-var7Lifetime3Lifetime1 + var3_int, var4 - var7Lifetime3Lifetime1, var7Lifetime3Lifetime1 * 2, var7Lifetime3Lifetime1 * 2, -this.field_b + 255);
           }
           if (3 == this.field_f) {
             SoftwareRasterizer.fillCircleAlpha(var3_int, var4, 7, 0, 128);

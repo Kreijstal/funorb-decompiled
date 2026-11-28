@@ -1,0 +1,276 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ProgressDialog extends ResizableModalDialog {
+    static int[] field_T;
+    static String field_Z;
+    private String field_db;
+    private StripedProgressWidget field_S;
+    private boolean field_W;
+    static int field_Y;
+    static AccountRequestState field_X;
+    private String field_cb;
+    private boolean field_U;
+    static int field_ab;
+    static long field_eb;
+    static aj field_bb;
+
+    final void setProgress(String param0, byte param1, boolean param2, float param3) {
+        try {
+          if (param2 != this.field_W) {
+            this.field_W = param2 ? true : false;
+            if (this.field_W) {
+              this.field_S.setColours(4210752, 8405024, (byte) -33);
+              this.field_S.field_C = true;
+            } else {
+              this.field_S.setColours(4210752, 2113632, (byte) -33);
+              if (this.field_U) {
+                this.field_S.field_C = false;
+              }
+            }
+          }
+          int var5_int = 16 / ((param1 - 14) / 60);
+          this.field_cb = param0;
+          this.field_S.field_J = (int)(param3 / 100.0f * 65536.0f);
+        } catch (RuntimeException runtimeException) {
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "rk.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+
+    final static void r(int param0) {
+        LevelView dupTemp$3 = null;
+        LevelView dupTemp$4 = null;
+        LevelView dupTemp$5 = null;
+        int var3 = 0;
+        LevelView[] var2 = null;
+        LevelView var4 = null;
+        int var5 = 0;
+        LevelData var6 = null;
+        LevelData var7 = null;
+        LevelData var8 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        var5 = TrackController.field_F ? 1 : 0;
+        try {
+          var6 = new LevelData(-1, "*gn0810a10110b101101908101101101b011090ho0p80980e80110160710a10110920890202q0r607607d01101101a0d10980620220202208990090090090008d0190h50i2022020270p280000000010002809202g0970620202804680000000010002g06q06207908602027059800000000100022086g02g070510f0280l680000000010002704101301902j020270598000000001000D10k9g02g020220202804680000000010008104v09701602202022079800000000100028062028019022020q40928000000001000270140560860gf020220769009009009000280150490710620202701101101101o01106g097067011092020280110110a101r01a01607i08101106h0f07d0110110c101101d0110110r101101d06000000000000000000000000000000000000000000000000mainMenu 0/0");
+          dupTemp$3 = new LevelView(var6, 21, 48);
+          he.field_f[1] = dupTemp$3;
+          he.field_f[0] = dupTemp$3;
+          var7 = new LevelData(-1, ModalDialogHost.field_E);
+          dupTemp$4 = new LevelView(var7, 16, 48);
+          he.field_f[param0] = dupTemp$4;
+          he.field_f[12] = dupTemp$4;
+          var8 = new LevelData(-1, "*gn08o01o01101101101101o01101101a011090qt0oe80000000000000200000080g0b90202q03p80000000000000200000080h0me020qs0rf80000000000000200000080207l0p02g0b6800000000000002000000807016020220h98000000000000020000008080980f0gl0nf80000000000000200000080207e020gk0mf80000000000000200000080208f020he0228000000000000020000008070670e0220228000000000000020000008080980p02g0c68000000000000020000008070tu060q501O8000000000000020000008080sv0907r01101101101101101r01101101r06706000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000pauseMenu 0/0");
+          dupTemp$5 = new LevelView(var8, 21, 48);
+          he.field_f[11] = dupTemp$5;
+          he.field_f[10] = dupTemp$5;
+          var2 = he.field_f;
+          for (var3 = 0; var2.length > var3; var3++) {
+            var4 = var2[var3];
+            if (var4 != null) {
+              var4.c((byte) 93);
+            }
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "rk.N(" + param0 + ')');
+        }
+    }
+
+    final static boolean a(int param0, byte param1, int param2, boolean param3) {
+        int var4;
+        int var5;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var5Lifetime1;
+        int var5Lifetime2;
+        int var4Lifetime3;
+        int var5Lifetime3;
+        if (param3) {
+          if (SpriteState.field_u[param2] > SpriteState.field_u[param0]) {
+            return true;
+          }
+          if (SpriteState.field_u[param0] > SpriteState.field_u[param2]) {
+            return false;
+          }
+          if (TextLineMetrics.field_e[param2] > TextLineMetrics.field_e[param0]) {
+            return true;
+          }
+          if (TextLineMetrics.field_e[param0] > TextLineMetrics.field_e[param2]) {
+            return false;
+          }
+          if (param1 > 60) {
+            var4 = qi.field_b[param0] + (ii.field_q[param0] + qf.field_a[param0]);
+            var5 = qi.field_b[param2] + (qf.field_a[param2] + ii.field_q[param2]);
+            if (var4 < var5) {
+              return true;
+            }
+            if (var4 > var5) {
+              return false;
+            }
+            return !(param2 <= param0);
+          }
+          ProgressDialog.s(-40);
+          var4Lifetime3 = qi.field_b[param0] + (ii.field_q[param0] + qf.field_a[param0]);
+          var5Lifetime3 = qi.field_b[param2] + (qf.field_a[param2] + ii.field_q[param2]);
+          if (var4Lifetime3 < var5Lifetime3) {
+            return true;
+          }
+          if (var4Lifetime3 > var5Lifetime3) {
+            return false;
+          }
+          return !(param2 <= param0);
+        }
+        if (TextLineMetrics.field_e[param0] < TextLineMetrics.field_e[param2]) {
+          return true;
+        }
+        if (TextLineMetrics.field_e[param2] < TextLineMetrics.field_e[param0]) {
+          return false;
+        }
+        if (SpriteState.field_u[param0] < SpriteState.field_u[param2]) {
+          return true;
+        }
+        if (SpriteState.field_u[param2] < SpriteState.field_u[param0]) {
+          return false;
+        }
+        if (param1 > 60) {
+          var4Lifetime1 = qi.field_b[param0] + (ii.field_q[param0] + qf.field_a[param0]);
+          var5Lifetime1 = qi.field_b[param2] + (qf.field_a[param2] + ii.field_q[param2]);
+          if (var4Lifetime1 < var5Lifetime1) {
+            return true;
+          }
+          if (var4Lifetime1 > var5Lifetime1) {
+            return false;
+          }
+          return !(param2 <= param0);
+        }
+        ProgressDialog.s(-40);
+        var4Lifetime2 = qi.field_b[param0] + (ii.field_q[param0] + qf.field_a[param0]);
+        var5Lifetime2 = qi.field_b[param2] + (qf.field_a[param2] + ii.field_q[param2]);
+        if (var4Lifetime2 < var5Lifetime2) {
+          return true;
+        }
+        if (var4Lifetime2 > var5Lifetime2) {
+          return false;
+        }
+        if (param2 <= param0) {
+          return false;
+        }
+        return true;
+    }
+
+    public static void discardDeclaredStaticReferences(int param0) {
+        if (param0 != 4210752) {
+          return;
+        }
+        field_bb = null;
+        field_Z = null;
+        field_T = null;
+        field_X = null;
+    }
+
+    ProgressDialog(ModalDialogHost param0, String param1) {
+        super(param0, 300, 120);
+        int var3_int = 0;
+        try {
+          this.field_db = param1;
+          if (this.field_db != null) {
+            var3_int = p.field_a.textHeight(this.field_db, 260, p.field_a.field_G);
+            this.setCenteredSize(300, (byte) -115, var3_int + 150);
+          }
+          this.field_S = new StripedProgressWidget(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_S.field_C = true;
+          this.field_U = false;
+          this.field_W = false;
+          this.addChild(false, this.field_S);
+        } catch (RuntimeException runtimeException) {
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "rk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final void drawDialogBackground(int param0, int param1, int param2) {
+        super.drawDialogBackground(param0, param1, param2);
+        p.field_a.drawCentred(this.field_cb, (this.field_x >> 1) + param0, 103 + param2, 16777215, -1);
+        if (null != this.field_db) {
+          SoftwareRasterizer.drawHorizontalLine(param0 + 20, 120 + (param2 - 7), 260, 8421504);
+          p.field_a.drawParagraph(this.field_db, 20 + param0, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, p.field_a.field_G);
+        }
+    }
+
+    final static int s(int param0) {
+        int stackIn_27_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int var1_int = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        int var3 = 0;
+        long var4 = 0L;
+        int var6 = 0;
+        int var7 = 0;
+        var7 = TrackController.field_F ? 1 : 0;
+        try {
+          var1_int = 0;
+          var2 = 0;
+          while (mh.e(param0 + 128)) {
+            GzipDecompressor.field_f.b((byte) -84);
+            if (GzipDecompressor.field_f.d(0)) {
+              var1_int = 1;
+            }
+            if (kg.field_d != 13) {
+              continue;
+            }
+            var2 = 1;
+          }
+          GzipDecompressor.field_f.a(-123, GameScreen.b(fg.mouseY, param0 ^ param0, kf.mouseX), GameScreen.b(wg.clickY, 0, ContentTransitionDialog.clickX));
+          if (GzipDecompressor.field_f.d(0)) {
+            var1_int = 1;
+          }
+          var3 = 0;
+          if (var1_int != 0 &&
+            GzipDecompressor.field_f.field_e >= 0) {
+            var3 = ac.field_c[GzipDecompressor.field_f.field_e];
+            if (var3 == 2) {
+              vh.h(-2532);
+            } else if (var3 == 5) {
+              vh.h(-2532);
+            }
+          } else {
+            if (var2 != 0 &&
+              2 != TextFieldValidator.field_h) {
+              vh.h(-2532);
+            }
+          }
+          if (var3 == 0 &&
+            TextFieldValidator.field_h == 2) {
+            var4 = qg.correctedCurrentTimeMillis(false) - fe.field_N;
+            var6 = (int)((10999L - var4) / 1000L);
+            if (var6 <= 0) {
+              var3 = 2;
+              ij.a((byte) 70, 5, true);
+            }
+          }
+          stackIn_27_0 = var3;
+          return stackIn_27_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "rk.A(" + param0 + ')');
+        }
+    }
+
+    final void freezeNormalProgressAnimation(byte param0) {
+        this.field_U = true;
+        this.field_S.field_C = false;
+        if (param0 <= 21) {
+          this.drawDialogBackground(12, 86, 30);
+        }
+    }
+
+    static {
+        field_Y = 50;
+        field_Z = "Logging in...";
+        field_bb = null;
+    }
+}

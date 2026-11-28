@@ -31,14 +31,14 @@ abstract class o {
           if (param0 != -10834) {
             field_h = (BitmapFont) null;
           }
-          var1 = pg.field_fb;
+          var1 = StandardContentDialog.field_fb;
           while (wk.b(1816)) {
             var1.f(8, param0 + 11784);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             PcmResampler.a(124, var1);
-            pg.field_fb.backpatchByteLength(var1.position - var2, (byte) -75);
+            StandardContentDialog.field_fb.backpatchByteLength(var1.position - var2, (byte) -75);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -210,12 +210,12 @@ abstract class o {
           if (param0.field_c == 8) {
             nf.field_r = false;
             if (gh.field_b >= 5 &&
-              nc.field_H != 3) {
+              StripedProgressWidget.field_H != 3) {
               gh.field_b = gh.field_b + 1;
             } else {
               gh.field_b = 5;
             }
-            nc.field_H = 1;
+            StripedProgressWidget.field_H = 1;
             stellarshard.field_U[10] = stellarshard.field_U[10] + 1;
             if (MouseWheelInput.field_e) {
               ll.field_c.playSample(sb.field_e[31], 100, pk.field_h * 2);
@@ -249,7 +249,7 @@ abstract class o {
           if (param0.field_c == 10) {
             gh.field_b = 500;
             nf.field_r = false;
-            nc.field_H = 2;
+            StripedProgressWidget.field_H = 2;
             stellarshard.field_U[11] = stellarshard.field_U[11] + 1;
             if (MouseWheelInput.field_e) {
               ll.field_c.playSample(sb.field_e[30], 100, pk.field_h * 2);
@@ -258,7 +258,7 @@ abstract class o {
           if (11 == param0.field_c) {
             nf.field_r = false;
             gh.field_b = 1500;
-            nc.field_H = 3;
+            StripedProgressWidget.field_H = 3;
             if (MouseWheelInput.field_e) {
               ll.field_c.playSample(sb.field_e[29], 100, 2 * pk.field_h);
             }
@@ -266,7 +266,7 @@ abstract class o {
           if (12 == param0.field_c) {
             gh.field_b = 500;
             nf.field_r = false;
-            nc.field_H = 4;
+            StripedProgressWidget.field_H = 4;
             stellarshard.field_U[13] = stellarshard.field_U[13] + 1;
             if (MouseWheelInput.field_e) {
               ll.field_c.playSample(sb.field_e[0], 100, pk.field_h * 2);

@@ -58,7 +58,7 @@ final class kj extends IntrusiveNode {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (rk.field_X == oe.field_b) {
+          if (ProgressDialog.field_X == oe.field_b) {
             stackIn_2_0 = null;
             return (AccountServiceResult) (stackIn_2_0);
           }
@@ -66,15 +66,15 @@ final class kj extends IntrusiveNode {
             var3 = (String) null;
             kj.pollAccountNameCheck((String) null, 50);
           }
-          if (rk.field_X == RichTextLayout.field_e &&
+          if (ProgressDialog.field_X == RichTextLayout.field_e &&
             param0.equals(vh.field_p)) {
-            rk.field_X = DiskArchiveStore.field_f;
+            ProgressDialog.field_X = DiskArchiveStore.field_f;
             stackIn_11_0 = ByteStorage.field_c;
             return stackIn_11_0;
           }
           vh.field_p = param0;
           ByteStorage.field_c = null;
-          rk.field_X = oe.field_b;
+          ProgressDialog.field_X = oe.field_b;
           stackIn_9_0 = null;
           return (AccountServiceResult) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

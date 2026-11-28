@@ -249,15 +249,15 @@ final class fc {
                 var6[var7] = (char)0;
               }
             }
-            this.field_w[0][6] = md.field_L.charAt(0);
-            this.field_w[0][7] = md.field_L.charAt(1);
-            this.field_w[0][9] = md.field_L.charAt(3);
-            this.field_w[0][10] = md.field_L.charAt(4);
-            this.field_w[0][11] = md.field_L.charAt(5);
+            this.field_w[0][6] = StripedProgressWidget.field_L.charAt(0);
+            this.field_w[0][7] = StripedProgressWidget.field_L.charAt(1);
+            this.field_w[0][9] = StripedProgressWidget.field_L.charAt(3);
+            this.field_w[0][10] = StripedProgressWidget.field_L.charAt(4);
+            this.field_w[0][11] = StripedProgressWidget.field_L.charAt(5);
             this.field_w[1][6] = (char)84;
             this.field_w[1][11] = (char)69;
             this.field_w[1][5] = (char)72;
-            this.field_g = new ha(this, 4, new char[]{(char)83, (char)80, (char)82, md.field_L.charAt(2)});
+            this.field_g = new ha(this, 4, new char[]{(char)83, (char)80, (char)82, StripedProgressWidget.field_L.charAt(2)});
           } else {
             if (param1 == 2) {
               var28 = this.field_w;
@@ -483,7 +483,7 @@ final class fc {
               this.field_y = this.field_m.a(this.field_w, 17161);
               this.field_t = this.field_t + this.field_y.size(param0 + 1);
               if (this.field_y.size(param0 + 1) != 0) {
-                mh.b(0, 100);
+                GuestPlayConfirmationForm.b(0, 100);
                 this.field_l = this.field_l + this.field_y.size(2);
                 if (BitPacketBuffer.field_l.length <= this.field_l) {
                   this.field_l = BitPacketBuffer.field_l.length - 1;
@@ -557,7 +557,7 @@ final class fc {
                   if (var10 >= 8) {
                     var10 = 7;
                   }
-                  mh.b(var10, 100);
+                  GuestPlayConfirmationForm.b(var10, 100);
                 }
                 this.field_n = 50;
                 var10Lifetime1 = 100;
@@ -713,7 +713,7 @@ final class fc {
                       if (this.field_F[var5][var6Lifetime1] == 0 &&
                         var3 == 0) {
                         var3 = 1;
-                        mh.b(1, 100);
+                        GuestPlayConfirmationForm.b(1, 100);
                       }
                     }
                   }
@@ -835,7 +835,7 @@ final class fc {
             }
             this.a((byte) stackIn_74_1, stackIn_75_2);
             this.field_g = this.field_Q;
-            mh.b(8, param0 + 99);
+            GuestPlayConfirmationForm.b(8, param0 + 99);
           }
           this.field_W = this.field_W - 1;
           this.field_R = this.field_R + this.field_g.field_i;

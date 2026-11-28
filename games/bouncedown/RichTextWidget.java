@@ -117,7 +117,7 @@ class RichTextWidget extends InteractiveWidget {
           if (param1.field_a != 0 ||
             param1.field_k != 0) {
             for (var2_int = 0; oh.field_c > var2_int; var2_int++) {
-              var3 = sh.field_cb[var2_int];
+              var3 = ProgressMessageDialog.field_cb[var2_int];
               if (var3.field_h == 2 &&
                 param1.field_a == var3.field_a &&
                 var3.field_k == param1.field_k) {
@@ -247,8 +247,8 @@ class RichTextWidget extends InteractiveWidget {
           super.updatePointer(param0, param1, param2, param3);
           this.field_E = null;
           if (this.field_g) {
-            var5_int = -param1 + uc.field_C - this.field_r;
-            var6 = -this.field_i + (-param2 + ll.field_y);
+            var5_int = -param1 + DialogMessagePane.field_C - this.field_r;
+            var6 = -this.field_i + (-param2 + StripedProgressWidget.field_y);
             this.field_E = this.findHotspotAt(1, var5_int, var6);
           }
           return;

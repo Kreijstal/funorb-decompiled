@@ -296,7 +296,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
             var5_int = 65 % ((-33 - param3) / 57);
             return false;
           }
-          if (!i.field_P[81]) {
+          if (!FullscreenStatusDialog.field_P[81]) {
             stackIn_9_0 = this.focusNextChild(119, param1);
           } else {
             stackIn_9_0 = this.focusPreviousChild((byte) -69, param1);

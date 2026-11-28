@@ -15,10 +15,10 @@ final class mk extends ai {
     final static void a(String param0, boolean param1, float param2, int param3) {
         try {
           if (ui.field_c == null) {
-            ui.field_c = new jj(TunnelCamera.field_Z, cb.field_b);
+            ui.field_c = new ProgressDialog(TunnelCamera.field_Z, cb.field_b);
             TunnelCamera.field_Z.showDialog(ui.field_c, 0);
           }
-          ui.field_c.a(-67, param1, param2, param0);
+          ui.field_c.setProgress(-67, param1, param2, param0);
           SoftwareRasterizer.clearRaster();
           if (param3 > -34) {
             mk.b(41);

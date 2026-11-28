@@ -11,7 +11,7 @@ final class vb {
     private IntrusiveNode[] field_f;
     static int field_b;
     static RgbSprite field_k;
-    static ej field_h;
+    static StandardContentDialog field_h;
     static IntrusiveDeque field_c;
 
     final IntrusiveNode b(int param0) {

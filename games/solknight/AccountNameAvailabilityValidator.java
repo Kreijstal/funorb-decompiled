@@ -81,7 +81,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
 
     final static void h(int param0) {
         kd.field_c = -1;
-        s.field_ib = null;
+        StandardContentDialog.field_ib = null;
         bf.field_a = param0;
         kk.field_d = 0;
         ab.field_u = false;

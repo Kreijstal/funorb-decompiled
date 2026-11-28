@@ -377,13 +377,13 @@ final class s {
         hg.field_ob[17] = DualLinkNode.field_q;
         hg.field_ob[3] = FullscreenFocusCanvas.field_d;
         hg.field_ob[10] = sh.field_d;
-        hg.field_ob[7] = hd.field_L;
+        hg.field_ob[7] = StripedProgressWidget.field_L;
         hg.field_ob[13] = AccountCreationResultPanel.field_Db;
         hg.field_ob[2] = bg.field_p;
         hg.field_ob[0] = gf.field_s;
         hg.field_ob[4] = ij.field_c;
         hg.field_ob[9] = rh.field_k;
-        hg.field_ob[14] = ih.field_P;
+        hg.field_ob[14] = RegistrationAgreementPane.field_P;
         hg.field_ob[5] = rk.field_c;
         hg.field_ob[12] = DraggableWidgetContainer.field_W;
         if (param0 < 69) {

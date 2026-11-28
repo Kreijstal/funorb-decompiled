@@ -31,7 +31,7 @@ final class kg {
             return false;
           }
           if (wh.field_x != 0 &&
-            im.field_E < 0) {
+            ResizableModalDialog.field_E < 0) {
             var4_ref_ai = (ai) (qe.field_c.beginBackward(param1 - 21));
             if (var4_ref_ai != null &&
               var4_ref_ai.field_n < var2_long) {
@@ -60,7 +60,7 @@ final class kg {
           }
           throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
         }
-        stackIn_20_0 = im.field_E;
+        stackIn_20_0 = ResizableModalDialog.field_E;
         try {
           while (true) {
             if (stackIn_20_0 < 0) {
@@ -68,9 +68,9 @@ final class kg {
               if (!BufferedSocket.a(1, param1 - 21)) {
                 return false;
               }
-              im.field_E = kj.field_d.a(true);
+              ResizableModalDialog.field_E = kj.field_d.a(true);
               kj.field_d.position = 0;
-              oo.field_a = param0[im.field_E];
+              oo.field_a = param0[ResizableModalDialog.field_E];
             }
             if (!ah.a(param1 ^ 23)) {
               return false;
@@ -79,8 +79,8 @@ final class kg {
               UrlRequest.field_d = eb.field_f;
               eb.field_f = wk.field_h;
               wk.field_h = fa.field_e;
-              fa.field_e = im.field_E;
-              im.field_E = -1;
+              fa.field_e = ResizableModalDialog.field_E;
+              ResizableModalDialog.field_E = -1;
               return true;
             }
             var4 = wh.field_x;
@@ -90,13 +90,13 @@ final class kg {
                 var4 = 0;
               }
             }
-            var5 = new ai((long)var4 + var2_long, im.field_E, new byte[oo.field_a]);
+            var5 = new ai((long)var4 + var2_long, ResizableModalDialog.field_E, new byte[oo.field_a]);
             for (var6 = 0; oo.field_a > var6; var6++) {
               var5.field_k[var6] = kj.field_d.payload[var6];
             }
             qe.field_c.addFirst((byte) 54, var5);
-            im.field_E = -1;
-            stackIn_20_0 = im.field_E;
+            ResizableModalDialog.field_E = -1;
+            stackIn_20_0 = ResizableModalDialog.field_E;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;

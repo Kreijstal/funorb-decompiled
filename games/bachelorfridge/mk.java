@@ -727,11 +727,11 @@ final class mk {
           this.field_u = new UiComponent("confirm", BananarangEvent.field_v, 470, 320, jha.field_g.stringWidth(di.field_l) + 40, 40, di.field_l);
           SleepAnimation.field_w = new hw[5];
           bf.field_g = new hw[15];
-          uma.n(1);
+          NumericDateInputWidget.n(1);
           var8 = new Sprite(350, 80);
           var8.bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(0, 0, 330, 30, 5667119);
-          hp.a(330, 0, (byte) -65, 30, de.field_A, 0);
+          hp.a(330, 0, (byte) -65, 30, StripedProgressWidget.field_A, 0);
           this.field_i = new Sprite(340, 60);
           this.field_i.bindAsRenderTarget();
           var8.drawRotated(180, 60, 100, 4096);
@@ -739,7 +739,7 @@ final class mk {
           var9.bindAsRenderTarget();
           SoftwareRasterizer.clear();
           SoftwareRasterizer.fillRectangle(0, 0, 112, 30, 6127926);
-          hp.a(112, 0, (byte) -42, 30, de.field_A, 0);
+          hp.a(112, 0, (byte) -42, 30, StripedProgressWidget.field_A, 0);
           this.field_j = new Sprite(120, 60);
           this.field_j.bindAsRenderTarget();
           var9.drawRotated(60, 30, 0, 4096);
@@ -750,7 +750,7 @@ final class mk {
           var10.bindAsRenderTarget();
           SoftwareRasterizer.clear();
           SoftwareRasterizer.fillRectangle(0, 0, 100, 30, 6127926);
-          hp.a(100, 0, (byte) 106, 30, de.field_A, 0);
+          hp.a(100, 0, (byte) 106, 30, StripedProgressWidget.field_A, 0);
           this.field_c = new Sprite(120, 60);
           this.field_c.bindAsRenderTarget();
           var10.drawRotated(60, 30, 200, 4096);
@@ -760,11 +760,11 @@ final class mk {
           var11 = new Sprite(180, 30);
           var11.bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(0, 0, 180, 30, 6127926);
-          hp.a(180, 0, (byte) -23, 30, de.field_A, 0);
+          hp.a(180, 0, (byte) -23, 30, StripedProgressWidget.field_A, 0);
           this.field_g = new Sprite(200, 60);
           this.field_g.bindAsRenderTarget();
           var11.drawRotated(100, 30, 200, 4096);
-          hga.field_U.a((byte) 21);
+          ProgressDialog.field_U.a((byte) 21);
           this.field_n = new int[256];
           for (var5 = 0; var5 < 256; var5++) {
             this.field_n[var5] = var5 * 65793;
@@ -782,7 +782,7 @@ final class mk {
           this.field_r = new Sprite(25, 25);
           this.field_r.bindAsRenderTarget();
           SoftwareRasterizer.addRadialGlow(208, 208, 192, 255, this.field_w);
-          hga.field_U.a((byte) 125);
+          ProgressDialog.field_U.a((byte) 125);
           this.field_s.a((byte) 65, BananarangEvent.field_s.field_g.field_o.field_b, 0);
           BananarangEvent.field_s.field_g.field_f = -1;
           RasterBuffer.a(13, 7758);

@@ -61,7 +61,7 @@ final class pl extends IntrusiveNode {
               var3_int = 1;
               al.field_f = false;
             }
-            ud.a(rn.d(-3), param2 + 60, MatchingFieldValidator.e((byte) -110), cf.field_e, var3_int != 0);
+            ContentTransitionDialog.a(rn.d(-3), param2 + 60, MatchingFieldValidator.e((byte) -110), cf.field_e, var3_int != 0);
             return;
           }
           if (!ji.f(250)) {

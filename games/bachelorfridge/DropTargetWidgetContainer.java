@@ -79,14 +79,14 @@ final class DropTargetWidgetContainer extends WidgetWrapper {
         var4 = BachelorFridge.field_y;
         try {
           var3_int = -param1.field_wb + param2.field_wb;
-          if (sja.field_gb != param2.field_vb) {
+          if (StandardContentDialog.field_gb != param2.field_vb) {
             if (null == param2.field_vb) {
               var3_int += 200;
             }
           } else {
             var3_int -= 200;
           }
-          if (sja.field_gb == param1.field_vb) {
+          if (StandardContentDialog.field_gb == param1.field_vb) {
             var3_int += 200;
           } else {
             if (param1.field_vb == null) {

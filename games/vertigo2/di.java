@@ -148,7 +148,7 @@ final class di extends TextureOperator {
           var8 = var30;
           for (var9_int = -this.field_A + param1; var9_int <= this.field_A + param1; var9_int++) {
             var46 = this.c(0, 3, CrossfadingMidiPcmStream.field_x & var9_int);
-            var50 = new int[3][we.field_M];
+            var50 = new int[3][StripedProgressWidget.field_M];
             var12 = 0;
             var13 = 0;
             var14 = 0;
@@ -165,7 +165,7 @@ final class di extends TextureOperator {
             var19 = var50[1];
             var20 = var50[2];
             var21 = 0;
-            while (we.field_M > var21) {
+            while (StripedProgressWidget.field_M > var21) {
               var18[var21] = var12 * var7 >> 16;
               var19[var21] = var13 * var7 >> 16;
               var20[var21] = var14 * var7 >> 16;
@@ -184,7 +184,7 @@ final class di extends TextureOperator {
           var9 = var37[0];
           var10 = var37[1];
           var11 = var37[2];
-          for (var12Lifetime1 = 0; var12Lifetime1 < we.field_M; var12Lifetime1++) {
+          for (var12Lifetime1 = 0; var12Lifetime1 < StripedProgressWidget.field_M; var12Lifetime1++) {
             var13Lifetime1 = 0;
             var14Lifetime1 = 0;
             var15 = 0;
@@ -283,7 +283,7 @@ final class di extends TextureOperator {
           var8 = var17;
           for (var9 = param0 - this.field_A; var9 <= this.field_A + param0; var9++) {
             var10_ref_int__ = this.a(0, -1, var9 & CrossfadingMidiPcmStream.field_x);
-            var18 = new int[we.field_M];
+            var18 = new int[StripedProgressWidget.field_M];
             var16 = var18;
             var11_ref_int__ = var16;
             var12 = 0;
@@ -292,7 +292,7 @@ final class di extends TextureOperator {
             }
             var15 = 0;
             var13Lifetime1 = var15;
-            while (var15 < we.field_M) {
+            while (var15 < StripedProgressWidget.field_M) {
               var11_ref_int__[var15] = var7 * var12 >> 16;
               var12 = var12 - var10_ref_int__[rm.field_z & -this.field_z + var15];
               var15++;
@@ -300,7 +300,7 @@ final class di extends TextureOperator {
             }
             var8[-param0 + var9 + this.field_A] = var18;
           }
-          for (var9Lifetime1 = 0; var9Lifetime1 < we.field_M; var9Lifetime1++) {
+          for (var9Lifetime1 = 0; var9Lifetime1 < StripedProgressWidget.field_M; var9Lifetime1++) {
             var10 = 0;
             for (var11 = 0; var11 < var4; var11++) {
               var10 = var10 + var19[var11][var9Lifetime1];

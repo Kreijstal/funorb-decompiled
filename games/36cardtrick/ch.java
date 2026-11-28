@@ -18,12 +18,12 @@ abstract class ch {
     abstract void c(byte param0);
 
     final static void a(int param0, ResourceArchive param1) {
-        ig var2 = null;
+        VorbisSample var2 = null;
         try {
-          ig.a(param1.getFileByName((byte) 7, "", "headers.packvorbis"));
-          var2 = ig.a(param1, "jagex logo2.packvorbis", "");
+          VorbisSample.decodeSetup(param1.getFileByName((byte) 7, "", "headers.packvorbis"));
+          var2 = VorbisSample.loadByName(param1, "jagex logo2.packvorbis", "");
           int var3 = -108 / ((param0 + 29) / 58);
-          var2.c();
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "ch.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

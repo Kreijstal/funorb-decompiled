@@ -31,8 +31,8 @@ final class df {
           }
           if (decompiledFrameRemainder0) {
             if (!ok.field_w) {
-              if (EditableTextField.field_S >= oh.field_db) {
-                stackIn_17_0 = (fj.field_b + oh.field_db > EditableTextField.field_S) ? 1 : 0;
+              if (EditableTextField.field_S >= ContentTransitionDialog.field_db) {
+                stackIn_17_0 = (fj.field_b + ContentTransitionDialog.field_db > EditableTextField.field_S) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -44,12 +44,12 @@ final class df {
               EditableTextField.field_S = 0;
             } else {
               if (ok.field_w) {
-                EditableTextField.field_S = oh.field_db;
+                EditableTextField.field_S = ContentTransitionDialog.field_db;
               } else {
                 if (var2_int == 0) {
                   EditableTextField.field_S = 0;
                 } else {
-                  EditableTextField.field_S = oh.field_db;
+                  EditableTextField.field_S = ContentTransitionDialog.field_db;
                 }
               }
             }
@@ -64,7 +64,7 @@ final class df {
             }
           }
           if (!ok.field_w &&
-            oh.field_db > EditableTextField.field_S &&
+            ContentTransitionDialog.field_db > EditableTextField.field_S &&
             pl.field_c) {
             aa.field_t = kb.field_r;
             DebouncedFieldValidator.field_f = rf.field_a;

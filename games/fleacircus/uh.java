@@ -1050,7 +1050,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime184 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_5_3");
           if (var2Lifetime184 != null) {
-            ui.field_lb = ab.a(0, var2Lifetime184);
+            StandardContentDialog.field_lb = ab.a(0, var2Lifetime184);
           }
           var2Lifetime185 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_5_4");
           if (null != var2Lifetime185) {
@@ -1066,7 +1066,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime188 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_6_1");
           if (null != var2Lifetime188) {
-            jj.field_V = ab.a(0, var2Lifetime188);
+            ResizableModalDialog.field_V = ab.a(0, var2Lifetime188);
           }
           var2Lifetime189 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_6_2");
           if (null != var2Lifetime189) {

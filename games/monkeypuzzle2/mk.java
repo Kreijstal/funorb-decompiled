@@ -27,7 +27,7 @@ final class mk extends IntrusiveNode {
           em.field_B = em.field_B - 1;
           if (-ii.field_B - 10 + 480 >= em.field_B) {
             ValidatedTextField.field_N = 1;
-            s.field_O = 0;
+            FullscreenStatusDialog.field_O = 0;
           }
           if (param0 > 125) {
             return;
@@ -36,8 +36,8 @@ final class mk extends IntrusiveNode {
           return;
         }
         if (var1 == 1) {
-          fieldTemp$0 = s.field_O;
-          s.field_O = s.field_O + 1;
+          fieldTemp$0 = FullscreenStatusDialog.field_O;
+          FullscreenStatusDialog.field_O = FullscreenStatusDialog.field_O + 1;
           if (fieldTemp$0 > 150) {
             ValidatedTextField.field_N = 2;
           }

@@ -349,10 +349,10 @@ final class kd {
         if (param0) {
           return (DefaultTextWidgetRenderer) null;
         }
-        if (null == ve.field_O) {
-          ve.field_O = new DefaultTextWidgetRenderer(pc.field_bb, 20, 0, 0, 0, 11579568, -1, 0, 0, pc.field_bb.field_H, -1, 2147483647, true);
+        if (null == ProgressDialog.field_O) {
+          ProgressDialog.field_O = new DefaultTextWidgetRenderer(StandardContentDialog.field_bb, 20, 0, 0, 0, 11579568, -1, 0, 0, StandardContentDialog.field_bb.field_H, -1, 2147483647, true);
         }
-        return ve.field_O;
+        return ProgressDialog.field_O;
     }
 
     kd(RgbSprite param0) {

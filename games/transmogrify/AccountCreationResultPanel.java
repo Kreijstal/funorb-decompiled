@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends ik implements WidgetActivationListener {
+final class AccountCreationResultPanel extends ProgressMessageDialog implements WidgetActivationListener {
     private AccountRegistrationPanel field_mb;
     private boolean field_nb;
     private boolean field_lb;
@@ -14,7 +14,7 @@ final class AccountCreationResultPanel extends ik implements WidgetActivationLis
         }
         try {
           wj.b(480);
-          this.r(77);
+          this.closeDialog(77);
           if (param1 != 17) {
             this.field_lb = true;
           }
@@ -30,7 +30,7 @@ final class AccountCreationResultPanel extends ik implements WidgetActivationLis
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        ee var5 = null;
+        DialogMessagePane var5 = null;
         int var6 = 0;
         var6 = Transmogrify.field_A ? 1 : 0;
         try {
@@ -57,33 +57,33 @@ final class AccountCreationResultPanel extends ik implements WidgetActivationLis
               }
             }
           }
-          var5 = new ee((ik) (this), ArchiveRequest.field_q, var4);
+          var5 = new DialogMessagePane((ProgressMessageDialog) (this), ArchiveRequest.field_q, var4);
           if (param2.success) {
             if (param2.field_a) {
-              this.b(param0 + 109, new ge(this));
+              this.replaceContent(param0 + 109, new RegistrationAgreementPane(this));
               return;
             }
-            var5.a((WidgetEventListener) (this), 8283, qe.field_I);
+            var5.addListenerButton((WidgetEventListener) (this), 8283, StripedProgressWidget.field_I);
           } else {
             if (!this.field_nb) {
               if (param2.statusCode != 5) {
-                var5.a(te.field_f, -1, param0 + 1);
+                var5.addActionButton(te.field_f, -1, param0 + 1);
               } else {
-                var5.a(qb.field_a, 11, 1);
-                var5.a(ta.field_b, 17, 1);
+                var5.addActionButton(qb.field_a, 11, 1);
+                var5.addActionButton(ta.field_b, 17, 1);
               }
             } else {
-              var5.a((WidgetEventListener) (this), 8283, qe.field_I);
+              var5.addListenerButton((WidgetEventListener) (this), 8283, StripedProgressWidget.field_I);
             }
             if (3 != param2.statusCode) {
               if (6 == param2.statusCode) {
-                var5.a(ee.field_C, 9, 1);
+                var5.addActionButton(DialogMessagePane.field_C, 9, 1);
               }
             } else {
-              var5.a(WordDictionary.field_f, 7, 1);
+              var5.addActionButton(WordDictionary.field_f, 7, 1);
             }
           }
-          this.b(-128, var5);
+          this.replaceContent(-128, var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -133,8 +133,8 @@ final class AccountCreationResultPanel extends ik implements WidgetActivationLis
               }
             }
           }
-          if (null != jk.field_D) {
-            stackIn_20_0 = jk.field_D.isMidiReady((byte) -54);
+          if (null != GuestPlayConfirmationForm.field_D) {
+            stackIn_20_0 = GuestPlayConfirmationForm.field_D.isMidiReady((byte) -54);
             if (stackIn_20_0) {
               return;
             }
@@ -148,7 +148,7 @@ final class AccountCreationResultPanel extends ik implements WidgetActivationLis
         }
     }
 
-    final void u(int param0) {
+    final void showAccountCreationConnectionFailure(int param0) {
         this.showAccountCreationResult(0, true, ModalDialog.createAccountErrorResult(242763393, wd.field_l, 248));
         int var2 = -109 % ((param0 - 32) / 36);
     }

@@ -456,7 +456,7 @@ final class GameSession {
         if (param0 != 24860) {
           return 50;
         }
-        return AccountCreationResultPanel.field_Eb - ef.field_sb;
+        return AccountCreationResultPanel.field_Eb - StandardContentDialog.field_sb;
     }
 
     private final void resolveProjectileCollisions(int param0) {
@@ -586,7 +586,7 @@ final class GameSession {
         if (param0 != 18042) {
           return -79;
         }
-        dh.field_vb.b((byte) 28);
+        ProgressMessageDialog.field_vb.b((byte) 28);
         if (!om.field_s.a((byte) 14)) {
           return PowerUpPickup.h((byte) -116);
         }

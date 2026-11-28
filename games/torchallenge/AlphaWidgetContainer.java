@@ -208,7 +208,7 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
           var30 = 1;
           if (var5_int >= 3) {
             if (ol.field_a) {
-              ll.a(var27, var30, var10, var7Lifetime1, var19 != 0, var18 != 0, var17 != 0, var26, var29, var28, true, var11);
+              FullscreenNoticeType.a(var27, var30, var10, var7Lifetime1, var19 != 0, var18 != 0, var17 != 0, var26, var29, var28, true, var11);
               return;
             }
             var29 = -(AccountServiceResult.field_k >> 8 << 8) + AccountServiceResult.field_k;
@@ -228,7 +228,7 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
               var29 = 255;
             }
           }
-          ll.a(var27, var30, var10, var7Lifetime1, var19 != 0, var18 != 0, var17 != 0, var26, var29, var28, true, var11);
+          FullscreenNoticeType.a(var27, var30, var10, var7Lifetime1, var19 != 0, var18 != 0, var17 != 0, var26, var29, var28, true, var11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

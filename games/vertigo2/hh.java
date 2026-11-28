@@ -13,11 +13,11 @@ final class hh {
         }
         try {
           TextureOperator.field_n = param1;
-          ql.field_L.field_M.clear(0);
+          BirthDateChatEnableForm.field_L.field_M.clear(0);
           if (param0 >= -17) {
             hh.a(76, 115, true);
           }
-          ql.field_L.b(TextureOperator.field_n, 121);
+          BirthDateChatEnableForm.field_L.b(TextureOperator.field_n, 121);
           BufferedSocket.field_a = true;
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "hh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -60,7 +60,7 @@ final class hh {
               var3_int = param1;
             }
             var4 = new byte[var3_int];
-            param2.position = param2.position + ko.field_M.decompress(25330, var4, var3_int, param2.position, 0, param2.payload);
+            param2.position = param2.position + NumericDateInputWidget.field_M.decompress(25330, var4, var3_int, param2.position, 0, param2.payload);
             var5 = mj.decodeCp1252String(-125, var4, 0, var3_int);
             stackIn_5_0 = var5;
             return stackIn_5_0;

@@ -28,13 +28,13 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
           if (10 <= NameSuggestionsPanel.field_K) {
             if (!eh.a(param1 ^ 43)) {
               SoftwareRasterizer.clearRaster();
-              v.e(240, 320, 101);
+              ResizableModalDialog.e(240, 320, 101);
               nj.a(0, 0, param0, 0);
             } else {
               if (gj.field_c != 0) {
                 EmailFormatValidator.a(-20895, param0);
               } else {
-                ll.a(0, false, param2);
+                FullscreenNoticeType.a(0, false, param2);
                 nj.a(0, 0, param0, 0);
               }
             }
@@ -359,7 +359,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(GameApplet.field_f, 0, 0, 0, 0, 16777215, -1, 3, 0, RasterBuffer.field_g.field_x, -1, 2147483647, true);
         UiComponent var2 = new UiComponent(kg.field_eb, var1, (WidgetEventListener) null);
         this.field_J = new InteractiveWidget(FrameTimer.field_g, (WidgetEventListener) null);
-        this.field_K = new InteractiveWidget(nh.field_fb, (WidgetEventListener) null);
+        this.field_K = new InteractiveWidget(FullscreenStatusDialog.field_fb, (WidgetEventListener) null);
         this.field_P.field_r = AgeValidator.field_o;
         this.field_P.setFieldValidator(-27997, new AccountNameAvailabilityValidator(this.field_P));
         this.field_J.field_F = false;
@@ -507,15 +507,15 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         int var6 = 0;
         String var7 = null;
         try {
-          wa.field_rb[0] = id.field_a.nextInt();
-          wa.field_rb[1] = id.field_a.nextInt();
-          wa.field_rb[2] = (int)(lh.field_u >> 32);
-          wa.field_rb[3] = (int)lh.field_u;
+          ProgressMessageDialog.field_rb[0] = id.field_a.nextInt();
+          ProgressMessageDialog.field_rb[1] = id.field_a.nextInt();
+          ProgressMessageDialog.field_rb[2] = (int)(lh.field_u >> 32);
+          ProgressMessageDialog.field_rb[3] = (int)lh.field_u;
           DelegatingCanvas.field_e.position = 0;
-          DelegatingCanvas.field_e.writeInt(wa.field_rb[0], param1);
-          DelegatingCanvas.field_e.writeInt(wa.field_rb[1], false);
-          DelegatingCanvas.field_e.writeInt(wa.field_rb[2], false);
-          DelegatingCanvas.field_e.writeInt(wa.field_rb[3], param1);
+          DelegatingCanvas.field_e.writeInt(ProgressMessageDialog.field_rb[0], param1);
+          DelegatingCanvas.field_e.writeInt(ProgressMessageDialog.field_rb[1], false);
+          DelegatingCanvas.field_e.writeInt(ProgressMessageDialog.field_rb[2], false);
+          DelegatingCanvas.field_e.writeInt(ProgressMessageDialog.field_rb[3], param1);
           hc.a(DelegatingCanvas.field_e, (byte) -13);
           DelegatingCanvas.field_e.writeShort(param0, (byte) 106);
           param3.a(DelegatingCanvas.field_e, -76);

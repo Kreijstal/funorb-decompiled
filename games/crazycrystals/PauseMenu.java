@@ -105,7 +105,7 @@ final class PauseMenu extends MenuOverlay {
                 ak.a((byte) 61, this.field_g, param1, gi.field_m, var5_int);
               }
             } else {
-              gj.field_m.drawCentred(jd.field_J, 240, 17 + param1, var9, -1);
+              gj.field_m.drawCentred(DialogMessagePane.field_J, 240, 17 + param1, var9, -1);
             }
           } else {
             gj.field_m.drawCentred(nc.field_k, 240, 17 + param1, var9, -1);

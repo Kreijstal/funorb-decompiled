@@ -89,7 +89,7 @@ final class bp extends TextureOperator {
           var6 = var23[0];
           var7 = var23[1];
           var8 = var23[2];
-          for (var9 = 0; we.field_M > var9; var9++) {
+          for (var9 = 0; StripedProgressWidget.field_M > var9; var9++) {
             var10 = var30[var9] * 255 >> 12 & 255;
             var11 = this.field_D * var31[var9] >> 12;
             var12 = JaggrabClient.field_b[var10] * var11 >> 12;
@@ -184,7 +184,7 @@ final class bp extends TextureOperator {
         }
         var25 = this.a(1, -1, param0);
         var26 = this.a(2, -1, param0);
-        for (var6 = 0; we.field_M > var6; var6++) {
+        for (var6 = 0; StripedProgressWidget.field_M > var6; var6++) {
           var7 = (4082 & var25[var6]) >> 4;
           var8 = this.field_D * var26[var6] >> 12;
           var9 = var8 * JaggrabClient.field_b[var7] >> 12;

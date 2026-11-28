@@ -157,7 +157,7 @@ final class GameScreen {
           }
           boolean decompiledFrameRemainder0 = true;
           if (aj.field_c == ArchiveRequest.field_t &&
-            pe.a((byte) 117, 1)) {
+            ProgressDialog.a((byte) 117, 1)) {
             var9 = id.field_b.readUnsignedByte(-89);
             id.field_b.position = 0;
             if (var9 >= 100 &&
@@ -173,7 +173,7 @@ final class GameScreen {
                   decompiledFrameRemainder0 = (var13 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  pe.a((byte) 99, ra.c(-2));
+                  ProgressDialog.a((byte) 99, ra.c(-2));
                   NanoFrameTimer.field_k = new Boolean(jh.a((byte) 58, id.field_b));
                   id.field_b.position = 0;
                 }
@@ -192,10 +192,10 @@ final class GameScreen {
           }
           if (aj.field_c == ResourceArchive.field_r) {
             var9 = 2;
-            if (pe.a((byte) 113, var9)) {
+            if (ProgressDialog.a((byte) 113, var9)) {
               var10 = id.field_b.readUnsignedShort(false);
               id.field_b.position = 0;
-              if (pe.a((byte) 111, var10)) {
+              if (ProgressDialog.a((byte) 111, var10)) {
                 var11 = ra.field_d.length;
                 var12 = 0;
                 do {
@@ -233,7 +233,7 @@ final class GameScreen {
           if (qf.field_a == null) {
             if (ck.field_b) {
               if (ProxySocketConnector.e(86) <= 30000L) {
-                SecondaryNodeDequeIterator.field_c = nh.field_ib;
+                SecondaryNodeDequeIterator.field_c = FullscreenStatusDialog.field_ib;
                 if (var13 != 0) {
                   SecondaryNodeDequeIterator.field_c = aj.field_d;
                 }
@@ -400,7 +400,7 @@ final class GameScreen {
               cd.field_o = false;
             }
             stackIn_48_0 = 76;
-            stackIn_49_1 = !(v.f((byte) -105));
+            stackIn_49_1 = !(ResizableModalDialog.f((byte) -105));
             var2_int = ik.updateMembershipSlidesWithIntGuard(stackIn_48_0, stackIn_49_1);
             if (3 == var2_int) {
               if (null != gi.field_d) {
@@ -597,13 +597,13 @@ final class GameScreen {
             var3 == 0 &&
             DirectByteStorage.field_g) {
             if (!(EditableTextField.field_Q >= 0) ||
-              ~EditableTextField.field_Q == ~n.field_jb) {
-              n.field_jb = 0;
+              ~EditableTextField.field_Q == ~ContentTransitionDialog.field_jb) {
+              ContentTransitionDialog.field_jb = 0;
               if (var4 != 0) {
-                n.field_jb = EditableTextField.field_Q;
+                ContentTransitionDialog.field_jb = EditableTextField.field_Q;
               }
             } else {
-              n.field_jb = EditableTextField.field_Q;
+              ContentTransitionDialog.field_jb = EditableTextField.field_Q;
             }
             DirectByteStorage.field_g = false;
             if (DequeWidgetContainer.field_A >= 0 &&
@@ -1870,7 +1870,7 @@ final class GameScreen {
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameRemainder0 = (!(nb.a(var20, (byte) 119)) ||
                   var3_int != 0))) {
-                  if (v.a(var20, 5)) {
+                  if (ResizableModalDialog.a(var20, 5)) {
                     je.field_b.drawQuarterSize(var15, var16);
                   } else if (0 < UiComponent.field_o) {
                     je.field_b.drawQuarterSize(var15, var16);
@@ -1972,7 +1972,7 @@ final class GameScreen {
           var16 = var21;
           var21 += 18;
           if (var23 == 0) {
-            if (!v.a(var19, 5)) {
+            if (!ResizableModalDialog.a(var19, 5)) {
               if (UiComponent.field_o > 0) {
                 je.field_b.drawTransparent(var15, var16);
                 if (var28 != 0) {
@@ -3265,9 +3265,9 @@ final class GameScreen {
             var17 != 0) {
             this.a(0, RandomAccessCacheFile.field_e, var7, param3, var6, true, param2);
           }
-          var5 = pe.field_eb[param3];
+          var5 = ProgressDialog.field_eb[param3];
           if (param3 > 1) {
-            var5 = pe.field_eb[6 + param3];
+            var5 = ProgressDialog.field_eb[6 + param3];
           }
           var16 = 0;
           var13 = GzipDecoder.field_f[param3][0];
@@ -3325,7 +3325,7 @@ final class GameScreen {
           var9 = var9 + 20;
           var5.drawTransparent(var8, var9);
           if (param3 == 1) {
-            var5Lifetime1 = pe.field_eb[param0 + 2];
+            var5Lifetime1 = ProgressDialog.field_eb[param0 + 2];
             var8 = 269 + (-PcmOutputWorker.field_j[param3] + var8);
             var5Lifetime1.drawTransparent(var8, var9);
           }
@@ -3708,7 +3708,7 @@ final class GameScreen {
                                               ConfirmedEmailAvailabilityValidator.field_v = this.screenId;
                                               DirectByteStorage.field_g = true;
                                               DequeWidgetContainer.field_A = AccountNameAvailabilityValidator.field_r;
-                                              EditableTextField.field_Q = n.field_jb;
+                                              EditableTextField.field_Q = ContentTransitionDialog.field_jb;
                                               if (var12 == 0) {
                                                 return;
                                               }
@@ -3908,7 +3908,7 @@ final class GameScreen {
                                                 return;
                                               }
                                               boolean decompiledFrameRemainder0 = true;
-                                              qh.d(true);
+                                              RegistrationAgreementPane.d(true);
                                               sd.a(125);
                                               sd.b(106);
                                               if (GameClientBase.p(param2 - 86)) {
@@ -4039,7 +4039,7 @@ final class GameScreen {
                                                   IterableNodeHashTable.field_h = null;
                                                 }
                                                 if (TextFieldValidator.field_j == 5) {
-                                                  qh.a(3, true);
+                                                  RegistrationAgreementPane.a(3, true);
                                                 }
                                                 this.d(false);
                                               }
@@ -4066,7 +4066,7 @@ final class GameScreen {
                                                   IterableNodeHashTable.field_h = null;
                                                 }
                                                 if (5 == TextFieldValidator.field_j) {
-                                                  qh.a(3, true);
+                                                  RegistrationAgreementPane.a(3, true);
                                                 }
                                                 this.d(false);
                                               }
@@ -4639,7 +4639,7 @@ final class GameScreen {
             var13 = 2 * ae.field_u[param4][var11][ResourceArchive.field_n[param4].field_kb] - 1;
             stackIn_25_0 = (var13 > -ResourceArchive.field_n[param4].field_p + AccountServiceResult.field_k) ? 0 : 1;
             var14 = stackIn_25_0;
-            var15 = ll.field_j[param4][var11][ResourceArchive.field_n[param4].field_kb] ? 1 : 0;
+            var15 = FullscreenNoticeType.field_j[param4][var11][ResourceArchive.field_n[param4].field_kb] ? 1 : 0;
             if (var14 != 0 &&
               var15 != 0) {
               if (ResourceArchive.field_n[param4].field_L != 10 ||
@@ -4770,7 +4770,7 @@ final class GameScreen {
           var4 = TextLayout.field_d[8][7];
           var5 = TextLayout.field_d[8][8];
           rj.a(2, 8, var5, ba.field_b, var4);
-          ll.field_b = -1;
+          FullscreenNoticeType.field_b = -1;
           if (aa.field_f >> 2 <= cd.field_b) {
             if (!(cd.field_b >= (aa.field_f >> 2)) ||
               !(cd.field_b < aa.field_f >> 1)) {
@@ -5208,12 +5208,12 @@ final class GameScreen {
               vb.field_q = true;
             }
           }
-          sj.field_N = sj.field_N + 1;
+          DialogMessagePane.field_N = DialogMessagePane.field_N + 1;
           if (param3) {
             eh.field_n = eh.field_n + qb.field_i;
           }
-          if (sj.field_N >= 2048) {
-            sj.field_N = 0;
+          if (DialogMessagePane.field_N >= 2048) {
+            DialogMessagePane.field_N = 0;
           }
           if (eh.field_n < 0) {
             qb.field_i = 1;
@@ -5223,7 +5223,7 @@ final class GameScreen {
             qb.field_i = -1;
             eh.field_n = var11 - 1;
           }
-          var7_intLifetime1 = sj.field_N;
+          var7_intLifetime1 = DialogMessagePane.field_N;
           var8Lifetime1 = eh.field_n;
           if (ub.field_i) {
             ub.field_i = false;
@@ -5365,7 +5365,7 @@ final class GameScreen {
             SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 25, 2048, 14022908, 10533565);
             SoftwareRasterizer.fillRectangleVerticalGradient(615, 0, 25, 2048, 14022908, 10533565);
             if (null != kd.field_m) {
-              MouseWheelInput.a(sj.field_N, eh.field_n, -15516);
+              MouseWheelInput.a(DialogMessagePane.field_N, eh.field_n, -15516);
             }
             this.a(false, true, -15318, true, true, (Sprite) null);
           }
@@ -5530,11 +5530,11 @@ final class GameScreen {
               if (TextFieldValidator.field_j == 2) {
                 var12Lifetime1 = AccountServiceResult.field_k % 800 / 200;
                 var13Lifetime1 = AccountServiceResult.field_k % 2400 / 800;
-                var14Lifetime1 = nh.field_hb[TextFieldValidator.field_j];
+                var14Lifetime1 = FullscreenStatusDialog.field_hb[TextFieldValidator.field_j];
                 var13Lifetime1 = (cj.field_j + var13Lifetime1) % var14Lifetime1;
                 var16_int = 0;
                 while (true) {
-                  if (jf.field_ob.length > var16_int) {
+                  if (StandardContentDialog.field_ob.length > var16_int) {
                     var2_intLifetime1 = 16 + DebouncedFieldValidator.field_i[0].fullWidth + 47;
                     var3 = 38 * var16_int + (40 + DebouncedFieldValidator.field_i[0].fullHeight) + (SecondaryNodeDequeIterator.field_e.field_x + 129) + 16;
                     stackIn_48_0 = var16_int;
@@ -5545,12 +5545,12 @@ final class GameScreen {
                       }
                       var11Lifetime1 = SecondaryNodeDequeIterator.field_e.textHeight(p.field_d[0][var16_int], var9, 0);
                       SecondaryNodeDequeIterator.field_e.drawParagraph(p.field_d[0][var16_int], var2_intLifetime1, var3 - SecondaryNodeDequeIterator.field_e.field_x, var9, var11Lifetime1, 0, -1, 0, 0, 0);
-                      if (1 == jf.field_ob[var16_int].length) {
-                        var15 = jf.field_ob[var16_int][0];
+                      if (1 == StandardContentDialog.field_ob[var16_int].length) {
+                        var15 = StandardContentDialog.field_ob[var16_int][0];
                       } else if (var13Lifetime1 != 2) {
-                        var15 = jf.field_ob[var16_int][0];
+                        var15 = StandardContentDialog.field_ob[var16_int][0];
                       } else {
-                        var15 = jf.field_ob[var16_int][1];
+                        var15 = StandardContentDialog.field_ob[var16_int][1];
                       }
                       var2_intLifetime1 = DebouncedFieldValidator.field_i[0].fullWidth + (47 + var9);
                       var3 = 129 + (SecondaryNodeDequeIterator.field_e.field_x + (DebouncedFieldValidator.field_i[0].fullHeight + 40)) - (-(var16_int * 38) - 14);
@@ -5673,7 +5673,7 @@ final class GameScreen {
                       ByteStorage.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, (byte) 93, false, 0);
                       SoftwareRasterizer.restoreClip(pf.field_g);
                       var12Lifetime1Lifetime1 = 16 + (var3 + af.field_f[3] + var8 - SecondaryNodeDequeIterator.field_e.field_K);
-                      var11Lifetime2Lifetime1 = -50 - nh.field_db[2] + (var13Lifetime1Lifetime1 + var2_intLifetime1);
+                      var11Lifetime2Lifetime1 = -50 - FullscreenStatusDialog.field_db[2] + (var13Lifetime1Lifetime1 + var2_intLifetime1);
                       var14Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.textHeight(IntrusiveDeque.field_d[1], 220, 0);
                       SecondaryNodeDequeIterator.field_e.drawParagraph(IntrusiveDeque.field_d[1], var11Lifetime2Lifetime1, -SecondaryNodeDequeIterator.field_e.field_x + var12Lifetime1Lifetime1, 220, var14Lifetime1Lifetime1, 0, -1, 0, 0, 0);
                       var12Lifetime1Lifetime1 = -16 + (-ob.field_b[3] + 391 - DebouncedFieldValidator.field_i[0].fullHeight);
@@ -5972,8 +5972,8 @@ final class GameScreen {
           }
           var13 = var9[this.screenId][8];
           var14 = ba.field_b;
-          if (~ll.field_b != ~this.screenId) {
-            ll.field_b = this.screenId;
+          if (~FullscreenNoticeType.field_b != ~this.screenId) {
+            FullscreenNoticeType.field_b = this.screenId;
             rj.a(2, this.screenId, var13, var14, var12);
           }
           if (param3 != null) {

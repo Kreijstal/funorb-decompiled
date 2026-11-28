@@ -313,7 +313,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = qh.a(var18, (byte) -121);
+                                    var16_int = RegistrationAgreementPane.a(var18, (byte) -121);
                                     var4 = var4 + this.field_u[var16_int].field_e;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -504,7 +504,7 @@ abstract class BitmapFont extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = qh.a(var10, (byte) -67);
+                                  var9_int = RegistrationAgreementPane.a(var10, (byte) -67);
                                   var4 = var4 + this.field_u[var9_int].field_e;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -655,7 +655,7 @@ abstract class BitmapFont extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = qh.a(var13, (byte) -87);
+                                  var10 = RegistrationAgreementPane.a(var13, (byte) -87);
                                   var11_ref_jc = this.field_u[var10];
                                   if (this.field_z == null) {
                                     stackIn_27_0 = var11_ref_jc.field_d;
@@ -818,7 +818,7 @@ abstract class BitmapFont extends DualLinkNode {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_J = qh.a(var4, (byte) -124);
+                field_J = RegistrationAgreementPane.a(var4, (byte) -124);
               }
             } else {
               field_v = field_I;

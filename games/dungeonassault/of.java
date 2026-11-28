@@ -17,7 +17,7 @@ final class of {
     byte[] field_n;
     static String field_d;
     static boolean field_k;
-    static r field_g;
+    static FullscreenNoticeType field_g;
     int field_a;
 
     final static void a(PacketBuffer param0, java.math.BigInteger param1, java.math.BigInteger param2, byte param3, PacketBuffer param4) {
@@ -38,7 +38,7 @@ final class of {
         int var4 = DungeonAssault.field_K;
         try {
           if (param0 > -74) {
-            field_g = (r) null;
+            field_g = (FullscreenNoticeType) null;
           }
           jh.c();
           if (im.field_e == null) {
@@ -76,6 +76,6 @@ final class of {
 
     static {
         field_p = new fd(0);
-        field_g = new r();
+        field_g = new FullscreenNoticeType();
     }
 }

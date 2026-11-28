@@ -40,7 +40,7 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.containsPointer(uc.field_C, 0, param2, param1, ll.field_y) ? 1 : 0;
+          var5_int = this.containsPointer(DialogMessagePane.field_C, 0, param2, param1, StripedProgressWidget.field_y) ? 1 : 0;
           if (var5_int != (this.field_g ? 1 : 0)) {
             stackIn_4_1 = (var5_int != 0);
             this.field_g = stackIn_4_1;
@@ -275,7 +275,7 @@ class UiWidget extends IntrusiveNode {
             this.blur((byte) 114);
             if (var7 != 0) {
               if (0 != va.field_a) {
-                this.handleWheel(param0, ll.field_y, va.field_a, uc.field_C, param3, this, true);
+                this.handleWheel(param0, StripedProgressWidget.field_y, va.field_a, DialogMessagePane.field_C, param3, this, true);
               }
               if (SectorCacheStore.field_e != 0) {
                 if (!this.pointerPressed(SectorCacheStore.field_e, this, param0, og.field_a, 28455, rk.field_a, param3)) {
@@ -285,7 +285,7 @@ class UiWidget extends IntrusiveNode {
               }
               if (0 == n.field_m &&
                 0 != d.field_B) {
-                this.pointerReleased(ll.field_y, param0, this, param3, 34, uc.field_C);
+                this.pointerReleased(StripedProgressWidget.field_y, param0, this, param3, 34, DialogMessagePane.field_C);
                 var8 = NameSuggestionsPanel.field_A;
                 if (var8 != null) {
                   if (var8.field_n instanceof WidgetDropListener) {
@@ -319,7 +319,7 @@ class UiWidget extends IntrusiveNode {
                 ResourceArchive.updateTooltipState(73, this.getTooltipText(0));
                 return param2;
               }
-              this.pointerReleased(ll.field_y, param0, this, param3, 34, uc.field_C);
+              this.pointerReleased(StripedProgressWidget.field_y, param0, this, param3, 34, DialogMessagePane.field_C);
               var9 = NameSuggestionsPanel.field_A;
               if (var9 != null) {
                 if (var9.field_n instanceof WidgetDropListener) {
@@ -334,7 +334,7 @@ class UiWidget extends IntrusiveNode {
               ResourceArchive.updateTooltipState(73, this.getTooltipText(0));
               return param2;
             }
-            this.handleWheel(param0, ll.field_y, va.field_a, uc.field_C, param3, this, true);
+            this.handleWheel(param0, StripedProgressWidget.field_y, va.field_a, DialogMessagePane.field_C, param3, this, true);
           }
           if (SectorCacheStore.field_e != 0) {
             if (this.pointerPressed(SectorCacheStore.field_e, this, param0, og.field_a, 28455, rk.field_a, param3)) {
@@ -346,7 +346,7 @@ class UiWidget extends IntrusiveNode {
                   param2 = false;
                   if (0 == n.field_m &&
                     0 != d.field_B) {
-                    this.pointerReleased(ll.field_y, param0, this, param3, 34, uc.field_C);
+                    this.pointerReleased(StripedProgressWidget.field_y, param0, this, param3, 34, DialogMessagePane.field_C);
                     var10 = NameSuggestionsPanel.field_A;
                     if (var10 != null) {
                       if (var10.field_n instanceof WidgetDropListener) {
@@ -373,7 +373,7 @@ class UiWidget extends IntrusiveNode {
           }
           if (0 == n.field_m &&
             0 != d.field_B) {
-            this.pointerReleased(ll.field_y, param0, this, param3, 34, uc.field_C);
+            this.pointerReleased(StripedProgressWidget.field_y, param0, this, param3, 34, DialogMessagePane.field_C);
             var11 = NameSuggestionsPanel.field_A;
             if (var11 != null) {
               if (var11.field_n instanceof WidgetDropListener) {
@@ -459,14 +459,14 @@ class UiWidget extends IntrusiveNode {
             if (param2 <= -28) {
               var11 = ag.b(-1);
               if (var11 != null) {
-                SpriteGeometry.field_m.a(ha.field_b, var11, mh.field_Z, true);
+                SpriteGeometry.field_m.a(ha.field_b, var11, ContentTransitionDialog.field_Z, true);
               }
               return;
             }
             this.appendDebugProperties(88, (StringBuilder) null, (Hashtable) null, -53);
             var10 = ag.b(-1);
             if (var10 != null) {
-              SpriteGeometry.field_m.a(ha.field_b, var10, mh.field_Z, true);
+              SpriteGeometry.field_m.a(ha.field_b, var10, ContentTransitionDialog.field_Z, true);
             }
             return;
           }
@@ -475,7 +475,7 @@ class UiWidget extends IntrusiveNode {
           if (var6 != 0) {
             var7 = ag.b(-1);
             if (var7 != null) {
-              SpriteGeometry.field_m.a(ha.field_b, var7, mh.field_Z, true);
+              SpriteGeometry.field_m.a(ha.field_b, var7, ContentTransitionDialog.field_Z, true);
             }
             return;
           }

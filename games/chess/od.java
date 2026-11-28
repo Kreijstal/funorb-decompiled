@@ -86,7 +86,7 @@ final class od extends InteractiveWidget {
           if (this.field_T * this.field_T <= var8_int * var8_int + var9 * var9) {
             return true;
           }
-          var10 = Math.atan2((double)var9, (double)var8_int) - e.field_L;
+          var10 = Math.atan2((double)var9, (double)var8_int) - DialogMessagePane.field_L;
           if (var10 < 0.0) {
             var10 = var10 - 3.141592653589793 / (double)this.field_P;
           } else {

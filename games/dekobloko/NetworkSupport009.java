@@ -438,7 +438,7 @@ final class NetworkSupport009 {
         GameDomainSupport002 gameDomainSupport002Local3 = null;
         RenderingSupport007 renderingSupport007Local4 = new RenderingSupport007(3);
         RenderingSupport007 renderingSupport007Local5 = renderingSupport007Local4;
-        if (!UiComponentPart023.computeBoolean1242(-30146)) {
+        if (!StandardContentDialog.computeBoolean1242(-30146)) {
           renderingSupport007Local4.performAction0852(new GameDomainSupport002(23, MixedSupport139.stringArrayState0054[0], DefaultTextWidgetRenderer.renderingSupport009State0001), 117);
           renderingSupport007Local4.performAction0852(new GameDomainSupport002(23, MixedSupport139.stringArrayState0054[1], DefaultTextWidgetRenderer.renderingSupport009State0001), integerArgument2 - 299);
           renderingSupport007Local4.gameDomainSupport002ArrayState0001[1].integerState0176 = 200;
@@ -451,7 +451,7 @@ final class NetworkSupport009 {
           gameDomainSupport002Local2 = renderingSupport007Local4.gameDomainSupport002ArrayState0001[0];
           gameDomainSupport002Local2.integerState0178 = 372;
         } else {
-          gameDomainSupport002Local3 = new GameDomainSupport002(20, UiComponentPart026.stringState0461, DefaultTextWidgetRenderer.renderingSupport009State0001);
+          gameDomainSupport002Local3 = new GameDomainSupport002(20, ProgressDialog.stringState0461, DefaultTextWidgetRenderer.renderingSupport009State0001);
           gameDomainSupport002Local3.integerState0174 = 320 - gameDomainSupport002Local3.integerState0176 / 2;
           gameDomainSupport002Local3.integerState0178 = 372;
           renderingSupport007Local5.performAction0852(gameDomainSupport002Local3, 112);

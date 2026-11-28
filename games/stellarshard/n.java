@@ -493,9 +493,9 @@ final class n {
           }
           var4_ref_StringLifetime1 = var1.readString((byte) 93);
           var5 = var1.readString((byte) 98);
-          var6 = ck.a(true, var4_ref_StringLifetime1);
+          var6 = ProgressMessageDialog.a(true, var4_ref_StringLifetime1);
           if (var6 == null) {
-            var6 = ck.a(true, var5);
+            var6 = ProgressMessageDialog.a(true, var5);
             if (var6 != null) {
               GameApplet.field_k.a(var6, (long)nh.a((CharSequence) ((Object) var4_ref_StringLifetime1), false).hashCode(), 1);
             }

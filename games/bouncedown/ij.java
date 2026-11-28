@@ -359,7 +359,7 @@ final class ij {
           var2Lifetime63 = AccountNameAvailabilityValidator.a((byte) 48, "keycode_player2right");
           ih.field_p = null;
           if (null != var2Lifetime63) {
-            db.field_S = 255 & var2Lifetime63[0];
+            ProgressDialog.field_S = 255 & var2Lifetime63[0];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -421,9 +421,9 @@ final class ij {
             AccountNameAvailabilityValidator.field_n = param2;
           }
           if (w.field_d < param2) {
-            uc.field_A = param2;
+            DialogMessagePane.field_A = param2;
           }
-          nh.field_S[DisplayNameSelectionPanel.field_M] = param0;
+          FullscreenStatusDialog.field_S[DisplayNameSelectionPanel.field_M] = param0;
           ResourceArchive.field_i[DisplayNameSelectionPanel.field_M] = param5;
           DelegatingCanvas.field_c[DisplayNameSelectionPanel.field_M] = param4;
           var6_int = param5 + (param0 + param4);
@@ -438,8 +438,8 @@ final class ij {
             AccountNameAvailabilityValidator.field_n = var7;
           }
           DisplayNameSelectionPanel.field_M = DisplayNameSelectionPanel.field_M + 1;
-          if (uc.field_A < var7) {
-            uc.field_A = var7;
+          if (DialogMessagePane.field_A < var7) {
+            DialogMessagePane.field_A = var7;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

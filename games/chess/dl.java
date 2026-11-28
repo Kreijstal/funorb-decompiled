@@ -27,7 +27,7 @@ final class dl {
         if (param0 != -15326) {
           dl.a(-33);
         }
-        ch.k(4210752);
+        ProgressDialog.k(4210752);
         return var1;
     }
 

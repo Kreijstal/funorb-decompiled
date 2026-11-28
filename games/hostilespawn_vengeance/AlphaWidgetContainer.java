@@ -156,7 +156,7 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
             return false;
           }
           pj.field_e = cm.field_a[BoundedRandomAccessFile.field_e];
-          SpriteBase.field_e = pe.field_db[BoundedRandomAccessFile.field_e];
+          SpriteBase.field_e = ProgressDialog.field_db[BoundedRandomAccessFile.field_e];
           var2 = 26 % ((-11 - param0) / 61);
           BoundedRandomAccessFile.field_e = 127 & BoundedRandomAccessFile.field_e + 1;
           stackIn_5_0 = true;

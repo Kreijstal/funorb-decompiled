@@ -47,7 +47,7 @@ final class om extends IntrusiveNode {
           var7.field_w = param0;
           var7.field_o = param3;
           RichTextWidget.field_T.addLast((IntrusiveNode) (var7), (byte) 105);
-          dh.a(param2, var7, 21821);
+          ProgressMessageDialog.a(param2, var7, 21821);
           return var7;
         }
         om.b(true);
@@ -64,7 +64,7 @@ final class om extends IntrusiveNode {
         var8.field_w = param0;
         var8.field_o = param3;
         RichTextWidget.field_T.addLast((IntrusiveNode) (var8), (byte) 105);
-        dh.a(param2, var8, 21821);
+        ProgressMessageDialog.a(param2, var8, 21821);
         return var8;
     }
 

@@ -661,7 +661,7 @@ final class jl {
                   if (var5 == 14) {
                     if (!(!this.field_e.h(-84))) {
                       od.a(-123, 4, param1);
-                      lf.field_cb = this.field_f;
+                      ProgressDialog.field_cb = this.field_f;
                       mj.a(255, 12, 0, 12, 50);
                     }
                     break regionExit1;
@@ -670,14 +670,14 @@ final class jl {
                     if (!(!this.field_e.h(-84))) {
                       we.field_k = 0;
                       od.a(-112, 3, param1);
-                      lf.field_cb = this.field_f;
+                      ProgressDialog.field_cb = this.field_f;
                       mj.a(255, 12, 0, 12, 50);
                     }
                     break regionExit1;
                   }
                   if (var5 == 6) {
                     if (this.field_e.h(-84)) {
-                      od.a(-103, lf.field_cb, param1);
+                      od.a(-103, ProgressDialog.field_cb, param1);
                       mj.a(255, 12, 0, 12, 50);
                     }
                   } else {
@@ -788,7 +788,7 @@ final class jl {
                               }
                             }
                             if ((var5 != mc.field_b)) {
-                              kc.field_P.a(mc.field_b);
+                              ResizableModalDialog.field_P.a(mc.field_b);
                             }
                             break regionExit1;
                           }
@@ -921,8 +921,8 @@ final class jl {
               if (this.field_e.h(-84)) {
                 od.a(-126, -1, param1);
                 stackIn_72_0 = (u.field_d > 0) ? 0 : 7;
-                lf.field_cb = stackIn_72_0;
-                if (lf.field_cb == 7) {
+                ProgressDialog.field_cb = stackIn_72_0;
+                if (ProgressDialog.field_cb == 7) {
                   DirectByteStorage.a(0, true);
                 }
                 mj.a(255, 12, 0, 12, 50);
@@ -934,8 +934,8 @@ final class jl {
               m.field_f = null;
               od.a(-98, -1, param1);
               stackIn_42_0 = (u.field_d <= 0) ? 7 : 0;
-              lf.field_cb = stackIn_42_0;
-              if (lf.field_cb == 7) {
+              ProgressDialog.field_cb = stackIn_42_0;
+              if (ProgressDialog.field_cb == 7) {
                 DirectByteStorage.a(0, true);
               }
               cg.field_e = 0;
@@ -992,20 +992,20 @@ final class jl {
               }
               RichTextLayout.field_m = 0;
               nf.field_e = 0;
-              lc.field_gb = 0;
+              StandardContentDialog.field_gb = 0;
               if (nf.field_l > 0) {
                 RichTextLayout.field_m = 1;
               }
-              if (null != kc.field_P) {
-                ti.field_f.removeOwnedListener(kc.field_P);
-                kc.field_P.f();
-                if (eg.field_f != kc.field_P) {
-                  kc.field_P = eg.field_f;
+              if (null != ResizableModalDialog.field_P) {
+                ti.field_f.removeOwnedListener(ResizableModalDialog.field_P);
+                ResizableModalDialog.field_P.f();
+                if (eg.field_f != ResizableModalDialog.field_P) {
+                  ResizableModalDialog.field_P = eg.field_f;
                 } else {
-                  kc.field_P = gd.field_a;
+                  ResizableModalDialog.field_P = gd.field_a;
                 }
-                ti.field_f.addListener(kc.field_P);
-                kc.field_P.a(mc.field_b);
+                ti.field_f.addListener(ResizableModalDialog.field_P);
+                ResizableModalDialog.field_P.a(mc.field_b);
               }
               mj.a(255, 12, 0, 12, 50);
             }
@@ -1014,7 +1014,7 @@ final class jl {
     }
 
     final static void a(gi param0, gi param1, int param2, int param3, int param4, int param5) {
-        kc.field_S = param4;
+        ResizableModalDialog.field_S = param4;
         AlphaWidgetContainer.field_y = param0;
         mc.field_h = param2;
         rh.field_i = param5;
@@ -1083,7 +1083,7 @@ final class jl {
                 (340 & 1 << var7) != 0) {
                 sc.field_a.drawQuarterSizeAveraged(var3, var4);
               } else {
-                lf.field_V.drawQuarterSizeAveraged(var3, var4);
+                ProgressDialog.field_V.drawQuarterSizeAveraged(var3, var4);
               }
             }
           } else {
@@ -1137,7 +1137,7 @@ final class jl {
               (1 << var6 & 340) != 0) {
               sc.field_a.draw(128, -18 + var10);
             } else {
-              lf.field_V.draw(128, var10 - 18);
+              ProgressDialog.field_V.draw(128, var10 - 18);
             }
           } else {
             j.field_c[var6].draw(128, var10 - 18);
@@ -1479,8 +1479,8 @@ final class jl {
           if (this.field_f == 1) {
             od.a(-107, -1, false);
             stackIn_21_0 = (u.field_d <= 0) ? 7 : 0;
-            lf.field_cb = stackIn_21_0;
-            if (lf.field_cb != 7) {
+            ProgressDialog.field_cb = stackIn_21_0;
+            if (ProgressDialog.field_cb != 7) {
               continue;
             }
             DirectByteStorage.a(param0 + 0, true);
@@ -1492,9 +1492,9 @@ final class jl {
           if (this.field_f == 7) {
             continue;
           }
-          od.a(param0 - 128, lf.field_cb, false);
+          od.a(param0 - 128, ProgressDialog.field_cb, false);
         }
-        this.field_e.a(this.a(LoginPanel.field_B, kc.field_Q, -24332), this.a(pe.field_d, la.field_c, -24332), 126);
+        this.field_e.a(this.a(LoginPanel.field_B, ResizableModalDialog.field_Q, -24332), this.a(pe.field_d, la.field_c, -24332), 126);
         stackIn_25_0Lifetime1 = 0;
         stackIn_25_1Lifetime1 = ~this.field_e.field_k;
         if (stackIn_25_0Lifetime1 != stackIn_25_1Lifetime1) {
@@ -1502,7 +1502,7 @@ final class jl {
         }
         if (kg.field_a != param0) {
           this.field_i = LoginPanel.field_B;
-          this.field_l = kc.field_Q;
+          this.field_l = ResizableModalDialog.field_Q;
         }
         return;
     }

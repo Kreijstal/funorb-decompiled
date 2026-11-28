@@ -120,7 +120,7 @@ class UiWidget extends IntrusiveNode {
     }
 
     final static void b(boolean param0) {
-        if (!ge.field_x) {
+        if (!RegistrationAgreementPane.field_x) {
           throw new IllegalStateException();
         }
         PasswordValidator.field_n = true;

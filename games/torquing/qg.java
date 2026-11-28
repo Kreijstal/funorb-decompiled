@@ -446,7 +446,7 @@ final class qg extends am {
     }
 
     final void a(byte param0) {
-        this.field_u = i.b(10758, this.field_x);
+        this.field_u = FullscreenStatusDialog.b(10758, this.field_x);
         this.b(117);
         if (param0 <= 123) {
           field_z = 44;

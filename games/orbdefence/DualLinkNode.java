@@ -11,7 +11,7 @@ class DualLinkNode extends IntrusiveNode {
     final static void d(int param0) {
         bm.field_d.closeAllDialogs(7920);
         if (na.field_c == null) {
-          na.field_c = new ve(bm.field_d, bm.field_a);
+          na.field_c = new ProgressDialog(bm.field_d, bm.field_a);
         }
         if (param0 == -1) {
           bm.field_d.showDialog((byte) 74, (UiWidget) (na.field_c));

@@ -51,14 +51,14 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         ArchiveRequest.field_m = this.field_A;
         EmailFormatValidator.a(ArchiveRequest.field_m, (byte) -108);
-        ec.a(this.field_n, 5000, this.field_t, this.field_s, param0, param7, this.field_q, 5000, this.field_p, this.field_w, ArchiveRequest.field_m, wc.field_c, this.field_y, 49);
+        DialogMessagePane.a(this.field_n, 5000, this.field_t, this.field_s, param0, param7, this.field_q, 5000, this.field_p, this.field_w, ArchiveRequest.field_m, wc.field_c, this.field_y, 49);
         nc.a(ArchiveRequest.field_m, this.field_y, param7, this.field_n, (byte) 93, this.field_q, this.field_s, wc.field_c, this.field_p);
         k.a(0);
         mj.field_i = de.createMouseWheelInput((byte) -112);
         l.a(GameAppletShell.field_f, 59);
         UiWidget.field_p = param3;
         BufferedSocket.field_e = param5;
-        ve.field_Q = param6;
+        ProgressDialog.field_Q = param6;
         ValidatedTextField.field_V = param4;
         nl.field_b = param2;
         this.f((byte) 56);
@@ -107,7 +107,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var4 == 1) {
             var5_int = ik.a(lm.c(32018), fb.b((byte) -128), ~param1);
             if (var5_int != -1) {
-              i.a(-35, kk.field_Y, vd.field_e, var5_int);
+              FullscreenNoticeType.a(-35, kk.field_Y, vd.field_e, var5_int);
               vd.field_e = null;
               kk.field_Y = null;
             }
@@ -314,7 +314,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                       }
                     }
                   } else {
-                    pc.f(false);
+                    StandardContentDialog.f(false);
                   }
                 } else {
                   hb.b(554553416);
@@ -448,7 +448,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         var5 = OrbDefence.field_D ? 1 : 0;
         if (null != ne.field_b) {
           if (PacketBuffer.field_k == null) {
-            var6 = ob.l(4);
+            var6 = RegistrationAgreementPane.l(4);
             var4_ref_java_awt_Dimension = var6.getSize();
             ne.field_b.a(14592, var4_ref_java_awt_Dimension.height, var4_ref_java_awt_Dimension.width);
           }
@@ -560,9 +560,9 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (ArchiveRequest.field_m != 0) {
             lf.field_a = qk.a(BufferedSocket.field_e, -32585);
           }
-          og.field_g = hm.a(48, true, false, ValidatedTextField.field_V, 1);
-          am.field_b = hm.a(48, true, false, ve.field_Q, 1);
-          DebouncedFieldValidator.field_b = hm.a(48, true, false, nl.field_b, 1);
+          og.field_g = GuestPlayConfirmationForm.a(48, true, false, ValidatedTextField.field_V, 1);
+          am.field_b = GuestPlayConfirmationForm.a(48, true, false, ProgressDialog.field_Q, 1);
+          DebouncedFieldValidator.field_b = GuestPlayConfirmationForm.a(48, true, false, nl.field_b, 1);
           j.field_b = og.field_g;
           vh.field_n = 2;
           GameAppletShell.field_d = am.field_b;
@@ -598,7 +598,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             stackIn_103_1 = 33;
             stackIn_104_2 = !(gj.field_k);
             stackIn_107_3 = !(gj.field_k);
-            hm.$cfr$intArgs$a$e5d4dced95c1(stackIn_103_0, stackIn_103_1, stackIn_104_2, stackIn_107_3);
+            GuestPlayConfirmationForm.$cfr$intArgs$a$e5d4dced95c1(stackIn_103_0, stackIn_103_1, stackIn_104_2, stackIn_107_3);
           }
           if (field_v) {
             SingleChildWidgetContainer.j(4);
@@ -651,7 +651,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (!param1 &&
           vc.field_a) {
-          hl.a(GameAppletShell.field_f, 118);
+          ContentTransitionDialog.a(GameAppletShell.field_f, 118);
           this.e(99);
           l.a(GameAppletShell.field_f, -123);
         }
@@ -778,7 +778,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               id.a(false);
             }
           } else {
-            if (!pc.field_Y) {
+            if (!StandardContentDialog.field_Y) {
               this.a(111, "reconnect");
             }
             md.b((byte) -111);

@@ -8,7 +8,7 @@ abstract class qc extends oh {
     static RgbSprite[] field_f;
 
     final static void a(boolean param0, int param1) {
-        if (ph.field_E == null) {
+        if (RegistrationAgreementPane.field_E == null) {
           dq.a(-32056, param0);
         } else {
           q.a(false);

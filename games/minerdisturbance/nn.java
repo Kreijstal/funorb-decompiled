@@ -15,7 +15,7 @@ final class nn {
     static Sprite field_c;
     private int field_g;
     static boolean field_n;
-    static r field_r;
+    static FullscreenNoticeType field_r;
     static ae field_m;
     static boolean field_q;
     static Sprite[] field_h;
@@ -390,17 +390,17 @@ final class nn {
         this.field_j = 0;
         this.field_g = 0;
         this.field_o = 0;
-        if (0 != jk.field_ab) {
+        if (0 != ContentTransitionDialog.field_ab) {
           this.field_b = q.field_d;
           this.field_d = true;
-          this.field_j = jk.field_ab;
-          this.field_o = jk.field_ab;
+          this.field_j = ContentTransitionDialog.field_ab;
+          this.field_o = ContentTransitionDialog.field_ab;
           this.field_e = param1;
-          this.field_p = jk.field_ab;
+          this.field_p = ContentTransitionDialog.field_ab;
         }
         if (this.field_p == 0) {
           boolean decompiledFrameRemainder0 = true;
-          if (0 == jk.field_ab) {
+          if (0 == ContentTransitionDialog.field_ab) {
             if (CipherPacketBuffer.field_B != 0) {
               if (param2 != ~this.field_p) {
                 return;
@@ -439,7 +439,7 @@ final class nn {
           }
         } else {
           if (CipherPacketBuffer.field_B == 0) {
-            if (0 == jk.field_ab &&
+            if (0 == ContentTransitionDialog.field_ab &&
               CipherPacketBuffer.field_B == 0) {
               this.field_p = 0;
             }
@@ -467,7 +467,7 @@ final class nn {
             this.field_j = this.field_p;
             this.field_b = bi.field_q;
             this.field_b = this.field_b - 1;
-            if (0 == jk.field_ab &&
+            if (0 == ContentTransitionDialog.field_ab &&
               CipherPacketBuffer.field_B == 0) {
               this.field_p = 0;
             }
@@ -492,7 +492,7 @@ final class nn {
             return;
           }
           this.field_b = this.field_b - 1;
-          if (0 == jk.field_ab &&
+          if (0 == ContentTransitionDialog.field_ab &&
             CipherPacketBuffer.field_B == 0) {
             this.field_p = 0;
           }
@@ -521,7 +521,7 @@ final class nn {
         field_l = ',';
         field_k = 5;
         field_c = new Sprite(540, 140);
-        field_r = new r();
+        field_r = new FullscreenNoticeType();
         field_m = new ae();
         field_h = new Sprite[2];
         field_a = "<%0> <times> 1,000 = <%1>";

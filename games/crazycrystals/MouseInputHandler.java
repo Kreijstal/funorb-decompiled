@@ -272,9 +272,9 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           MouseInputHandler.a(-70, (CharSequence) null);
         }
         if (ne.field_d) {
-          SectorCacheStore.field_a.l(126);
+          SectorCacheStore.field_a.showConnectionFailure(126);
         } else {
-          var1 = kl.field_V;
+          var1 = ProgressDialog.field_V;
           if (var1 > 0) {
             if (var1 != 1) {
               ValidatedTextField.field_T = AgeValidator.a(new String[]{Integer.toString(var1)}, gh.field_t, 3);
@@ -283,7 +283,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             }
             ValidatedTextField.field_T = dk.a(new CharSequence[]{(CharSequence) ((Object) ValidatedTextField.field_T), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qe.field_h)}, (byte) -55);
           }
-          SectorCacheStore.field_a.i((byte) -78);
+          SectorCacheStore.field_a.closeDialog((byte) -78);
           RichTextWidget.a(param0 - 60);
         }
     }
@@ -402,7 +402,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               if (ResultScene.field_a.privilegedTasksEnabled) {
                 var3_int = v.a(ec.field_m, ib.field_m, -27815, LoginPanel.field_L, NetworkGameClient.field_y);
               } else {
-                var3_int = v.a(ec.field_m, gn.field_U, -27815, LoginPanel.field_L, NetworkGameClient.field_y);
+                var3_int = v.a(ec.field_m, FullscreenStatusDialog.field_U, -27815, LoginPanel.field_L, NetworkGameClient.field_y);
               }
               var4 = var3_int + 2;
               ub.field_b = new int[var4];
@@ -576,7 +576,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           }
           ri.field_a = oa.field_b + (var3_intLifetime1 - (var3_intLifetime1 >> 1));
           gp.field_a = (field_a + bn.field_c << 1) * DefaultTextWidgetRenderer.field_l.field_b;
-          bf.field_c = -(var3_intLifetime1 >> 1) + oa.field_b;
+          FullscreenNoticeType.field_c = -(var3_intLifetime1 >> 1) + oa.field_b;
           for (var4Lifetime2 = 0; var4Lifetime2 < je.field_i.length; var4Lifetime2++) {
             stackIn_115_0 = gp.field_a;
             if (ub.field_b[var4Lifetime2] >= 0) {

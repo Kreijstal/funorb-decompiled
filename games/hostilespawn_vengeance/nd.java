@@ -72,7 +72,7 @@ final class nd {
         try {
           if (c.field_a.d((byte) -16) &&
             !param1.equals(c.field_a.a((byte) -34))) {
-            c.field_a = ta.a(false, param1);
+            c.field_a = StandardContentDialog.a(false, param1);
           }
           if (param0 == 3888) {
             stackIn_8_0 = c.field_a;

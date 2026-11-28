@@ -75,32 +75,32 @@ final class gi {
           var4 = vg.a(91, param1) ? 1 : 0;
           var5 = new sj();
           var5.field_e = (short)param1.f(8, 16);
-          var5.field_O = nf.a(false, param1, 16, var5.field_O);
-          var5.field_M = nf.a(false, param1, 16, var5.field_M);
-          var5.field_z = nf.a(false, param1, 16, var5.field_z);
+          var5.field_O = ResizableModalDialog.a(false, param1, 16, var5.field_O);
+          var5.field_M = ResizableModalDialog.a(false, param1, 16, var5.field_M);
+          var5.field_z = ResizableModalDialog.a(false, param1, 16, var5.field_z);
           var5.field_k = (short)param1.f(8, 16);
-          var5.field_u = nf.a(false, param1, 16, var5.field_u);
-          var5.field_L = nf.a(false, param1, 16, var5.field_L);
-          var5.field_C = nf.a(false, param1, 16, var5.field_C);
+          var5.field_u = ResizableModalDialog.a(false, param1, 16, var5.field_u);
+          var5.field_L = ResizableModalDialog.a(false, param1, 16, var5.field_L);
+          var5.field_C = ResizableModalDialog.a(false, param1, 16, var5.field_C);
           if (var3 != 0) {
             var5.field_r = (short)param1.f(8, 16);
-            var5.field_y = nf.a(false, param1, 16, var5.field_y);
-            var5.field_p = nf.a(false, param1, 16, var5.field_p);
-            var5.field_K = nf.a(false, param1, 16, var5.field_K);
-            var5.field_d = nf.a(false, param1, 16, var5.field_d);
-            var5.field_n = nf.a(false, param1, 16, var5.field_n);
-            var5.field_A = nf.a(false, param1, 16, var5.field_A);
+            var5.field_y = ResizableModalDialog.a(false, param1, 16, var5.field_y);
+            var5.field_p = ResizableModalDialog.a(false, param1, 16, var5.field_p);
+            var5.field_K = ResizableModalDialog.a(false, param1, 16, var5.field_K);
+            var5.field_d = ResizableModalDialog.a(false, param1, 16, var5.field_d);
+            var5.field_n = ResizableModalDialog.a(false, param1, 16, var5.field_n);
+            var5.field_A = ResizableModalDialog.a(false, param1, 16, var5.field_A);
           }
           if (var4 != 0) {
             param1.f(8, 16);
-            var5.field_m = nf.a(false, param1, 16, var5.field_m);
-            var5.field_h = nf.a(false, param1, 16, var5.field_h);
-            var5.field_a = nf.a(false, param1, 16, var5.field_a);
-            var5.field_I = nf.a(false, param1, 16, var5.field_I);
-            var5.field_l = nf.a(false, param1, 16, var5.field_l);
+            var5.field_m = ResizableModalDialog.a(false, param1, 16, var5.field_m);
+            var5.field_h = ResizableModalDialog.a(false, param1, 16, var5.field_h);
+            var5.field_a = ResizableModalDialog.a(false, param1, 16, var5.field_a);
+            var5.field_I = ResizableModalDialog.a(false, param1, 16, var5.field_I);
+            var5.field_l = ResizableModalDialog.a(false, param1, 16, var5.field_l);
           }
           if (vg.a(74, param1)) {
-            var5.field_c = nf.a(false, param1, 16, var5.field_c);
+            var5.field_c = ResizableModalDialog.a(false, param1, 16, var5.field_c);
           }
           if (vg.a(75, param1)) {
             var5.field_N = kk.a(16, param1, var5.field_N, (byte) 99);
@@ -320,7 +320,7 @@ final class gi {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_n[var2] = hd.a(hd.a(hd.a(sk.a((long)this.field_h[var3 + 5], 255L) << 16, hd.a(hd.a(sk.a((long)this.field_h[3 + var3] << 32, 1095216660480L), hd.a(hd.a(sk.a((long)this.field_h[1 + var3] << 48, 71776119061217280L), (long)this.field_h[var3] << 56), sk.a((long)this.field_h[var3 + 2] << 40, 280375465082880L))), sk.a((long)this.field_h[var3 + 4], 255L) << 24)), sk.a((long)this.field_h[var3 + 6], 255L) << 8), sk.a((long)this.field_h[var3 + 7], 255L));
+          this.field_n[var2] = hd.a(hd.a(hd.a(DialogMessagePane.a((long)this.field_h[var3 + 5], 255L) << 16, hd.a(hd.a(DialogMessagePane.a((long)this.field_h[3 + var3] << 32, 1095216660480L), hd.a(hd.a(DialogMessagePane.a((long)this.field_h[1 + var3] << 48, 71776119061217280L), (long)this.field_h[var3] << 56), DialogMessagePane.a((long)this.field_h[var3 + 2] << 40, 280375465082880L))), DialogMessagePane.a((long)this.field_h[var3 + 4], 255L) << 24)), DialogMessagePane.a((long)this.field_h[var3 + 6], 255L) << 8), DialogMessagePane.a((long)this.field_h[var3 + 7], 255L));
           var3 += 8;
           var2++;
         }

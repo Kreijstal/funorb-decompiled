@@ -40,7 +40,7 @@ abstract class lk {
           var10 = var8;
           var3 = var10.readUnsignedByte(255);
           var10.f((byte) 50);
-          ud.field_S = rd.a(var10, -95);
+          ContentTransitionDialog.field_S = rd.a(var10, -95);
           je.field_d = new int[var3][];
           rn.field_o = new ModelMesh[var3];
           for (var4 = 0; var3 > var4; var4++) {

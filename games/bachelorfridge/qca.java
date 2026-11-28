@@ -88,7 +88,7 @@ final class qca extends k {
             var22Lifetime5 = var19;
             var31Lifetime4 = var22Lifetime5;
             var22Lifetime6 = var19;
-            var18 = d.field_D;
+            var18 = BirthDateChatEnableForm.field_D;
             var17.field_a.a((byte) 31, var18, var19, 13);
           }
           if (param0 == 1) {
@@ -114,7 +114,7 @@ final class qca extends k {
           if (param0 == 2) {
             var29 = NetworkGameClient.field_u;
             var31Lifetime2 = ClientException.field_b[0];
-            var30 = sh.field_H;
+            var30 = DateInputWidget.field_H;
             var29.field_a.a((byte) 69, var30, var31Lifetime2, 11);
             var32 = NetworkGameClient.field_u;
             var34 = ClientException.field_b[1];
@@ -428,7 +428,7 @@ final class qca extends k {
             var8 = var8 >> 4 & 255;
             var9 = DiveBomberAnimation.a(hh.field_d, var6, -2147483648);
             var10 = DiveBomberAnimation.a(bi.field_g, var6, param1 + -2147483648);
-            var11 = var9 + (am.field_R[var8] * this.field_o >> 12);
+            var11 = var9 + (ResizableModalDialog.field_R[var8] * this.field_o >> 12);
             var12 = var10 + (this.field_o * BananarangAnimation.field_z[var8] >> 12);
             var13 = var12 - var10;
             var14 = var11 - var9;

@@ -554,7 +554,7 @@ final class ResourceArchive {
           }
           return false;
         }
-        if (!oc.field_b) {
+        if (!FullscreenNoticeType.field_b) {
           return false;
         }
         throw new IllegalArgumentException(Integer.toString(param0));
@@ -573,7 +573,7 @@ final class ResourceArchive {
           }
           return false;
         }
-        if (oc.field_b) {
+        if (FullscreenNoticeType.field_b) {
           throw new IllegalArgumentException(param1 + " " + param2);
         }
         return false;

@@ -45,11 +45,11 @@ abstract class DebouncedFieldValidator implements FieldValidator {
     final static void d(int param0) {
         k.field_d = new AccountRegistrationPanel();
         if (param0 == 350) {
-          gf.field_cb.c(-3399, k.field_d);
+          ContentTransitionDialog.field_cb.replaceContent(-3399, k.field_d);
           return;
         }
         DebouncedFieldValidator.c((byte) -49);
-        gf.field_cb.c(-3399, k.field_d);
+        ContentTransitionDialog.field_cb.replaceContent(-3399, k.field_d);
     }
 
     public final qf getValidationStatus(int param0) {

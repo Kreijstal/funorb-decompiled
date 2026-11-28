@@ -16,15 +16,15 @@ class fd extends DualLinkNode {
     }
 
     final static void a(ResourceArchive param0, int param1) {
-        te var2 = null;
+        VorbisSample var2 = null;
         try {
           if (param1 != -1) {
             ResourceArchive var3 = (ResourceArchive) null;
             fd.a((ResourceArchive) null, 94);
           }
-          te.b(param0.getFileByName("headers.packvorbis", "", param1 - 72));
-          var2 = te.a(param0, "jagex logo2.packvorbis", "");
-          var2.a();
+          VorbisSample.decodeSetup(param0.getFileByName("headers.packvorbis", "", param1 - 72));
+          var2 = VorbisSample.loadByName(param0, "jagex logo2.packvorbis", "");
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "fd.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -43,7 +43,7 @@ class fd extends DualLinkNode {
             var1 = DraggableWidgetContainer.j(44);
           }
           if (var1.length() == 0) {
-            var1 = wk.field_H;
+            var1 = ResizableModalDialog.field_H;
           }
           return var1;
         }
@@ -55,7 +55,7 @@ class fd extends DualLinkNode {
           var1 = DraggableWidgetContainer.j(44);
         }
         if (var1.length() == 0) {
-          var1 = wk.field_H;
+          var1 = ResizableModalDialog.field_H;
         }
         return var1;
     }

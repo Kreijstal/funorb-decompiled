@@ -134,7 +134,7 @@ final class bn {
         RuntimeException var5 = null;
         long var6 = 0L;
         PcmSample var8 = null;
-        bl var9 = null;
+        VorbisSample var9 = null;
         int[] var10 = null;
         PcmSample var8Lifetime1;
         try {
@@ -154,15 +154,15 @@ final class bn {
             param3[0] <= 0) {
             return null;
           }
-          var9 = (bl) (this.field_b.a(var6, 0));
+          var9 = (VorbisSample) (this.field_b.a(var6, 0));
           if (var9 == null) {
-            var9 = bl.a(this.field_e, param0, param2);
+            var9 = VorbisSample.load(this.field_e, param0, param2);
             if (var9 == null) {
               return null;
             }
             this.field_b.a(-22072, var6, var9);
           }
-          var8Lifetime1 = var9.a(param3);
+          var8Lifetime1 = var9.decodeToPcm(param3);
           if (var8Lifetime1 == null) {
             return null;
           }

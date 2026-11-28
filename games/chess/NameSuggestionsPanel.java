@@ -131,23 +131,23 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
           if (!param1) {
             for (var6 = 0; 5 > var6; var6++) {
               if (var4_int != 0 &&
-                ba.field_P[0][1 + var6].field_L != 0 &&
+                RegistrationAgreementPane.field_P[0][1 + var6].field_L != 0 &&
                 param0.field_ic != var6) {
                 var5 = 1;
                 param0.field_ic = var6;
               }
-              stackIn_23_0 = ba.field_P[0][var6 + 1];
+              stackIn_23_0 = RegistrationAgreementPane.field_P[0][var6 + 1];
               stackIn_24_1 = (var4_int != 0);
               stackIn_23_0.field_tb = stackIn_24_1;
               if (!bo.field_c &&
                 var6 == 3) {
-                ba.field_P[0][var6 + 1].field_tb = false;
+                RegistrationAgreementPane.field_P[0][var6 + 1].field_tb = false;
               }
-              stackIn_29_0 = ba.field_P[0][1 + var6];
+              stackIn_29_0 = RegistrationAgreementPane.field_P[0][1 + var6];
               stackIn_30_1 = (var6 == param0.field_ic);
               stackIn_29_0.field_gb = stackIn_30_1;
             }
-            if (ba.field_P[0][2].field_Db) {
+            if (RegistrationAgreementPane.field_P[0][2].field_Db) {
               if (ci.f(-48)) {
                 pc.field_Mb = th.field_f;
               } else {
@@ -178,7 +178,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
               }
               var8_intLifetime1 = stackIn_59_0;
               if (var4_int != 0 &&
-                0 != ba.field_P[1][1 + var7].field_L) {
+                0 != RegistrationAgreementPane.field_P[1][1 + var7].field_L) {
                 if (param1) {
                   if (var6Lifetime1 == 0) {
                     if (var7 == -1) {
@@ -199,21 +199,21 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
               }
               if (!param1) {
                 var9 = wn.field_d[var7];
-                stackIn_85_0 = ba.field_P[1][var7 + 1];
+                stackIn_85_0 = RegistrationAgreementPane.field_P[1][var7 + 1];
                 stackIn_86_1 = (param0.field_hc == var9);
                 stackIn_85_0.field_gb = stackIn_86_1;
               } else {
                 if (var7 == -1) {
-                  ba.field_P[1][var7 + 1].field_gb = true;
+                  RegistrationAgreementPane.field_P[1][var7 + 1].field_gb = true;
                   for (var9 = 0; var9 < wn.field_d.length; var9++) {
-                    dupTemp$0 = ba.field_P[1][var7 + 1];
+                    dupTemp$0 = RegistrationAgreementPane.field_P[1][var7 + 1];
                     stackIn_76_0 = dupTemp$0;
                     stackIn_76_1 = dupTemp$0.field_gb;
                     stackIn_77_2 = ((DelegatingCanvas.field_f[var9 / 8] & 1 << (7 & var9)) == 0);
                     stackIn_76_0.field_gb = stackIn_76_1 & stackIn_77_2;
                   }
                 } else {
-                  stackIn_79_0 = ba.field_P[1][var7 + 1];
+                  stackIn_79_0 = RegistrationAgreementPane.field_P[1][var7 + 1];
                   stackIn_79_1 = -1;
                   stackIn_79_2 = DelegatingCanvas.field_f[var7 / 8] & 1 << (7 & var7);
                   stackIn_79_3 = -1;
@@ -221,14 +221,14 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                   stackIn_79_0.field_gb = stackIn_82_1;
                 }
               }
-              stackIn_90_0 = ba.field_P[1][1 + var7];
+              stackIn_90_0 = RegistrationAgreementPane.field_P[1][1 + var7];
               stackIn_91_1 = (var4_int != 0) && (var8_intLifetime1 == 0);
               stackIn_90_0.field_tb = stackIn_91_1;
             }
           }
           stackIn_95_0 = (!param1) ? 1 : 0;
           for (var6Lifetime2 = stackIn_95_0; var6Lifetime2 < 3; var6Lifetime2++) {
-            var28 = ba.field_P[2][var6Lifetime2];
+            var28 = RegistrationAgreementPane.field_P[2][var6Lifetime2];
             if (var4_int != 0 &&
               var28.field_L != 0) {
               if (param1) {
@@ -269,7 +269,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
           if (param1 &&
             1 < ChessMatchSession.field_q) {
             for (var6Lifetime3 = 0; 1 + ChessMatchSession.field_q > var6Lifetime3; var6Lifetime3++) {
-              var29 = ba.field_P[3][var6Lifetime3];
+              var29 = RegistrationAgreementPane.field_P[3][var6Lifetime3];
               if (var4_int != 0 &&
                 var29.field_L != 0) {
                 qd.field_u = var6Lifetime3;
@@ -296,7 +296,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
           }
           var6Lifetime4 = 0;
           for (var7 = 0; var7 < qa.field_e; var7++) {
-            var30 = ba.field_P[var7 + 4];
+            var30 = RegistrationAgreementPane.field_P[var7 + 4];
             var8_array = var30;
             stackIn_155_0 = (!param1) ? 0 : -1;
             for (var9 = stackIn_155_0; var9 < var30.length - 1; var9++) {
@@ -485,7 +485,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                       }
                     }
                     if (var14 != 0) {
-                      var22 = vn.field_Eb;
+                      var22 = ProgressMessageDialog.field_Eb;
                       if (var15 > 0 &&
                         null != la.field_b &&
                         var15 <= la.field_b.length &&
@@ -654,7 +654,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
             for (var5 = 0; var3_int > var5; var5++) {
               this.field_R[var5] = new InteractiveWidget(this.field_O[var5], (WidgetEventListener) (this));
               this.field_R[var5].field_n = (WidgetRenderer) ((Object) var4);
-              this.field_R[var5].field_j = ih.field_Y;
+              this.field_R[var5].field_j = NumericDateInputWidget.field_Y;
               this.field_R[var5].setBounds(var5 * 16 + 20, 34, 15, 80, 0);
               this.addChild(this.field_R[var5], 95);
             }

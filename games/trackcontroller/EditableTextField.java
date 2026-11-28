@@ -500,8 +500,8 @@ class EditableTextField extends ButtonWidget {
             var4 = r.a(param0, -11133);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!sf.a(var4.charAt(0), -33) &&
-                !sf.a(var4.charAt(var4.length() - 1), -33)) {
+              if (!GuestPlayConfirmationForm.a(var4.charAt(0), -33) &&
+                !GuestPlayConfirmationForm.a(var4.charAt(var4.length() - 1), -33)) {
                 var5 = 0;
                 if (param2 != 1236) {
                   stackIn_21_0 = (String) null;
@@ -509,7 +509,7 @@ class EditableTextField extends ButtonWidget {
                 }
                 for (var6 = 0; var6 < param0.length(); var6++) {
                   var7 = param0.charAt(var6);
-                  if (!sf.a((char) var7, param2 ^ -1269)) {
+                  if (!GuestPlayConfirmationForm.a((char) var7, param2 ^ -1269)) {
                     var5 = 0;
                   } else {
                     var5++;
@@ -523,10 +523,10 @@ class EditableTextField extends ButtonWidget {
                 if (var5 <= 0) {
                   return null;
                 }
-                stackIn_36_0 = wd.field_J;
+                stackIn_36_0 = ResizableModalDialog.field_J;
                 return stackIn_36_0;
               }
-              stackIn_18_0 = wd.field_J;
+              stackIn_18_0 = ResizableModalDialog.field_J;
               return stackIn_18_0;
             }
             stackIn_13_0 = ei.field_j;
@@ -616,7 +616,7 @@ class EditableTextField extends ButtonWidget {
 
     final static void o(int param0) {
         DropTargetWidgetContainer.field_H = new AccountRegistrationPanel();
-        GameApplet.field_g.b(DropTargetWidgetContainer.field_H, -103);
+        GameApplet.field_g.replaceContent(DropTargetWidgetContainer.field_H, -103);
         if (param0 > -78) {
           CharSequence var2 = (CharSequence) null;
           EditableTextField.a((CharSequence) null, false, -68);

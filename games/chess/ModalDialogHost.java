@@ -94,7 +94,7 @@ final class ModalDialogHost extends SingleChildWidgetContainer {
     }
 
     public ModalDialogHost() {
-        super(0, 0, hk.field_I, e.field_O, (WidgetRenderer) null, (WidgetEventListener) null);
+        super(0, 0, hk.field_I, DialogMessagePane.field_O, (WidgetRenderer) null, (WidgetEventListener) null);
         this.field_N = new IntrusiveDeque();
     }
 

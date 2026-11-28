@@ -14,7 +14,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (null != FrameTimer.field_b) {
             var2_int = param0.getKeyChar();
             if (0 != var2_int && var2_int != 65535 &&
-              fm.isSupportedCp1252KeyCharacter((byte) 32, (char) var2_int)) {
+              GuestPlayConfirmationForm.isSupportedCp1252KeyCharacter((byte) 32, (char) var2_int)) {
               var3 = 127 & 1 + IsaacCipher.field_d;
               if (IntrusiveNode.field_g != var3) {
                 ol.field_c[IsaacCipher.field_d] = -1;

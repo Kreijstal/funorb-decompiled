@@ -3,7 +3,7 @@
  */
 final class dc {
     final static int a(int param0) {
-        if (4 == nc.field_H) {
+        if (4 == StripedProgressWidget.field_H) {
           return -1;
         }
         if (stellarshard.field_U[2] >= 2 &&

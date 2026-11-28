@@ -117,7 +117,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_21_0;
           }
           if (ModalDialogHost.a(128, var5, var6)) {
-            stackIn_24_0 = ll.field_J;
+            stackIn_24_0 = StripedProgressWidget.field_J;
             return stackIn_24_0;
           }
           if (ee.a(-1, var6, var5)) {
@@ -128,7 +128,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_33_0 = ve.field_b;
             return stackIn_33_0;
           }
-          stackIn_31_0 = ll.field_J;
+          stackIn_31_0 = StripedProgressWidget.field_J;
           return stackIn_31_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

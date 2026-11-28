@@ -92,13 +92,13 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
           if (param3 != 0) {
             if (param3 != 1) {
               if (param3 == 2) {
-                qd.a(5, "conduct.ws");
+                GuestPlayConfirmationForm.a(5, "conduct.ws");
               }
             } else {
-              qd.a(5, "privacy.ws");
+              GuestPlayConfirmationForm.a(5, "privacy.ws");
             }
           } else {
-            qd.a(5, "terms.ws");
+            GuestPlayConfirmationForm.a(5, "terms.ws");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -370,7 +370,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         this.field_K = new InteractiveWidget(cg.field_r, (WidgetEventListener) null);
         this.field_R = new InteractiveWidget(hk.field_c, (WidgetEventListener) null);
         this.field_I.field_n = ImageProducerRasterBuffer.field_l;
-        this.field_P.field_n = fm.field_I;
+        this.field_P.field_n = DialogMessagePane.field_I;
         this.field_M.field_n = lg.field_b;
         this.field_J.field_n = UiWidget.field_C;
         this.field_O.field_n = sl.field_v;

@@ -50,10 +50,10 @@ public final class Bounce extends GameClient {
         try {
           var8_int = od.field_f.stringWidth(param0);
           param2 = param2 - var8_int / 2;
-          if (param2 - 8 < uc.field_C &&
-            param2 + 16 + var8_int >= uc.field_C &&
-            ll.field_y > (-od.field_f.field_s + (param4 - 8)) &&
-            (param4 + 16) >= ll.field_y &&
+          if (param2 - 8 < DialogMessagePane.field_C &&
+            param2 + 16 + var8_int >= DialogMessagePane.field_C &&
+            StripedProgressWidget.field_y > (-od.field_f.field_s + (param4 - 8)) &&
+            (param4 + 16) >= StripedProgressWidget.field_y &&
             param1) {
             param6 = 16777215;
           }
@@ -153,11 +153,11 @@ public final class Bounce extends GameClient {
           l.a(3);
           ModalDialogHost.clearStaticReferences(-1);
           AccountCreationResultPanel.clearStaticReferences(false);
-          db.n(260);
-          ec.resetDeclaredStaticState(101);
-          sh.clearDeclaredStaticReferences(5);
+          ProgressDialog.n(260);
+          StandardContentDialog.resetDeclaredStaticState(101);
+          ProgressMessageDialog.clearDeclaredStaticReferences(5);
           AccountRegistrationPanel.clearStaticReferences(true);
-          k.clearStaticReferences((byte) -81);
+          GuestPlayConfirmationForm.clearStaticReferences((byte) -81);
           LoginPanel.a(false);
           DisplayNameSelectionPanel.clearStaticReferences((byte) -117);
           ve.clearStaticReferences((byte) 85);
@@ -166,7 +166,7 @@ public final class Bounce extends GameClient {
           GzipDecompressor.clearStaticReferences(-112);
           PcmResampler.clearStaticReferences(0);
           gg.clearStaticReferences();
-          te.clearStaticReferences();
+          VorbisSample.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
           wa.clearStaticReferences(-13268);
           ub.clearStaticReferences((byte) -104);
@@ -195,7 +195,7 @@ public final class Bounce extends GameClient {
           BoundedRandomAccessFile.c(114);
           wb.clearStaticReferences((byte) 65);
           cf.clearStaticReferences(1);
-          nh.releaseDeclaredStaticReferences((byte) -102);
+          FullscreenStatusDialog.releaseDeclaredStaticReferences((byte) -102);
           il.clearStaticReferences((byte) 126);
           qk.clearStaticReferences();
           ig.clearStaticReferences(1);
@@ -226,7 +226,7 @@ public final class Bounce extends GameClient {
           TextLayout.resetStaticState(19599);
           UiWidget.clearDeclaredStaticReferences((byte) 122);
           SingleChildWidgetContainer.clearDeclaredStaticReferences(127);
-          wk.clearStaticReferences((byte) 38);
+          ResizableModalDialog.clearStaticReferences((byte) 38);
           ModalDialog.a(-11673);
           DequeWidgetContainer.clearStaticReferences(36368);
           ea.b(17695);
@@ -248,15 +248,15 @@ public final class Bounce extends GameClient {
           pa.clearStaticReferences(37);
           LabeledWidgetContainer.clearStaticReferences((byte) 123);
           EditableTextField.clearStaticReferences((byte) 94);
-          mh.resetStaticState(-16167);
-          ll.clearStaticReferences((byte) -83);
+          ContentTransitionDialog.resetStaticState(-16167);
+          StripedProgressWidget.clearStaticReferences((byte) -83);
           NameSuggestionsPanel.a(true);
           RichTextWidget.clearStaticReferences((byte) -6);
           la.clearStaticReferences((byte) -59);
           ff.a(-22756);
           TextFieldValidator.clearDeclaredStaticReferences(24562);
           nb.clearStaticReferences(120);
-          eb.clearStaticReferences(true);
+          RegistrationAgreementPane.clearStaticReferences(true);
           fh.a(false);
           d.f((byte) -112);
           SoundFilter.clearStaticReferences();
@@ -294,11 +294,11 @@ public final class Bounce extends GameClient {
           qh.clearStaticReferences((byte) -101);
           uf.a(32578);
           j.clearStaticReferences((byte) -87);
-          uc.clearStaticReferences((byte) 28);
+          DialogMessagePane.clearStaticReferences((byte) 28);
           ph.clearStaticReferences(0);
           ji.clearStaticReferences((byte) 11);
           qe.clearStaticReferences((byte) -86);
-          lg.clearStaticReferences(-65);
+          FullscreenNoticeType.clearStaticReferences(-65);
           bi.clearStaticReferences(false);
           gf.clearStaticReferences(false);
           id.clearStaticReferences((byte) -72);
@@ -374,12 +374,12 @@ public final class Bounce extends GameClient {
         int var7Lifetime1;
         var10 = field_N;
         try {
-          if (~this.field_J != ~uc.field_C ||
-            ll.field_y != this.field_M ||
+          if (~this.field_J != ~DialogMessagePane.field_C ||
+            StripedProgressWidget.field_y != this.field_M ||
             0 != SectorCacheStore.field_e) {
-            this.field_J = uc.field_C;
+            this.field_J = DialogMessagePane.field_C;
             qf.field_b = -1;
-            this.field_M = ll.field_y;
+            this.field_M = StripedProgressWidget.field_y;
             this.field_L = true;
           }
           if (SectorCacheStore.field_e != 0) {
@@ -405,7 +405,7 @@ public final class Bounce extends GameClient {
           if (ng.field_a[84]) {
             this.field_L = false;
           }
-          ec.field_cb = ec.field_cb + vd.field_a;
+          StandardContentDialog.field_cb = StandardContentDialog.field_cb + vd.field_a;
           if (hi.field_c >= 2) {
             if (ng.field_a[32] &&
               fa.field_c < 6000) {
@@ -469,10 +469,10 @@ public final class Bounce extends GameClient {
                   l.field_c = l.field_c - (vd.field_a - 1);
                   DefaultTextWidgetRenderer.field_e = DefaultTextWidgetRenderer.field_e + 1;
                   if (var10 != 0) {
-                    ec.field_cb = ec.field_cb + 1;
+                    StandardContentDialog.field_cb = StandardContentDialog.field_cb + 1;
                   }
                 } else {
-                  ec.field_cb = ec.field_cb + 1;
+                  StandardContentDialog.field_cb = StandardContentDialog.field_cb + 1;
                 }
               }
               if (MusicPatchPcmStream.field_o == null) {
@@ -557,22 +557,22 @@ public final class Bounce extends GameClient {
             var5 = ResourceArchive.field_e.stringWidth(qe.field_c);
             var6 = 320 - var5 / 2;
             var7 = 3 * var4 + var3_int;
-            if ((var6 - 8) < uc.field_C &&
-              uc.field_C <= (var6 - (-16 - var5)) &&
-              (var7 - 8 - ResourceArchive.field_e.field_s) < ll.field_y &&
-              ll.field_y <= 16 + var7 &&
+            if ((var6 - 8) < DialogMessagePane.field_C &&
+              DialogMessagePane.field_C <= (var6 - (-16 - var5)) &&
+              (var7 - 8 - ResourceArchive.field_e.field_s) < StripedProgressWidget.field_y &&
+              StripedProgressWidget.field_y <= 16 + var7 &&
               this.field_L &&
               1 == SectorCacheStore.field_e) {
               ProxyAuthenticationRequiredException.d(-6144);
               rj.field_j = 2;
             }
-            var5Lifetime1 = ResourceArchive.field_e.stringWidth(db.field_T);
+            var5Lifetime1 = ResourceArchive.field_e.stringWidth(ProgressDialog.field_T);
             var6Lifetime1 = -(var5Lifetime1 / 2) + 320;
             var7Lifetime1 = var4 / 2 + 4 * var4 + var3_int + 32;
-            if ((var6Lifetime1 - 8) < uc.field_C &&
-              var5Lifetime1 + var6Lifetime1 + 16 >= uc.field_C &&
-              (-8 + var7Lifetime1 - ResourceArchive.field_e.field_s) < ll.field_y &&
-              ll.field_y <= var7Lifetime1 + 16 &&
+            if ((var6Lifetime1 - 8) < DialogMessagePane.field_C &&
+              var5Lifetime1 + var6Lifetime1 + 16 >= DialogMessagePane.field_C &&
+              (-8 + var7Lifetime1 - ResourceArchive.field_e.field_s) < StripedProgressWidget.field_y &&
+              StripedProgressWidget.field_y <= var7Lifetime1 + 16 &&
               this.field_L &&
               SectorCacheStore.field_e == 1) {
               MusicPatchPcmStream.field_o.field_l = false;
@@ -761,7 +761,7 @@ public final class Bounce extends GameClient {
                 dupTemp$9 = he.field_n[2];
                 dupTemp$9.field_c = dupTemp$9.field_c - 0.35;
               }
-              if (ng.field_a[db.field_S]) {
+              if (ng.field_a[ProgressDialog.field_S]) {
                 dupTemp$10 = he.field_n[2];
                 dupTemp$10.field_c = dupTemp$10.field_c + 0.35;
               }
@@ -893,7 +893,7 @@ public final class Bounce extends GameClient {
           if (sj.field_f != null &&
             sj.field_f.focusLost) {
             v.d((byte) 121);
-            mh.a(sj.field_f, (byte) 80);
+            ContentTransitionDialog.a(sj.field_f, (byte) 80);
             sj.field_f.exitFullscreen((byte) -121, DebouncedFieldValidator.field_e);
             sj.field_f = null;
             ch.field_h.requestFocus();
@@ -940,7 +940,7 @@ public final class Bounce extends GameClient {
                 var2_int = DiskCacheWorker.c(param0 + 88);
                 if (var2_int == 2 &&
                   sj.field_f != null) {
-                  mh.a(sj.field_f, (byte) 111);
+                  ContentTransitionDialog.a(sj.field_f, (byte) 111);
                   sj.field_f.exitFullscreen((byte) -121, DebouncedFieldValidator.field_e);
                   sj.field_f = null;
                   ch.field_h.requestFocus();
@@ -965,7 +965,7 @@ public final class Bounce extends GameClient {
                 if (1 != var2_intLifetime2) {
                   if (2 == var2_intLifetime2) {
                     if (null != sj.field_f) {
-                      mh.a(sj.field_f, (byte) 103);
+                      ContentTransitionDialog.a(sj.field_f, (byte) 103);
                       sj.field_f.exitFullscreen((byte) -115, DebouncedFieldValidator.field_e);
                       sj.field_f = null;
                       ch.field_h.requestFocus();
@@ -973,7 +973,7 @@ public final class Bounce extends GameClient {
                     tc.a(DiskCacheWorker.b(param0 ^ 37), 6091);
                     if ((var3 != 0) &&
                       (null != sj.field_f)) {
-                      mh.a(sj.field_f, (byte) 121);
+                      ContentTransitionDialog.a(sj.field_f, (byte) 121);
                       sj.field_f.exitFullscreen((byte) -127, DebouncedFieldValidator.field_e);
                       sj.field_f = null;
                       ch.field_h.requestFocus();
@@ -981,7 +981,7 @@ public final class Bounce extends GameClient {
                   }
                 } else {
                   if (null != sj.field_f) {
-                    mh.a(sj.field_f, (byte) 121);
+                    ContentTransitionDialog.a(sj.field_f, (byte) 121);
                     sj.field_f.exitFullscreen((byte) -127, DebouncedFieldValidator.field_e);
                     sj.field_f = null;
                     ch.field_h.requestFocus();
@@ -1157,7 +1157,7 @@ public final class Bounce extends GameClient {
             this.field_E = true;
           }
           if (sj.field_f != null) {
-            mh.a(sj.field_f, (byte) 101);
+            ContentTransitionDialog.a(sj.field_f, (byte) 101);
             sj.field_f.exitFullscreen((byte) -122, DebouncedFieldValidator.field_e);
             sj.field_f = null;
             ch.field_h.requestFocus();
@@ -1246,11 +1246,11 @@ public final class Bounce extends GameClient {
             il.field_a[9] = ei.a(pa.field_c, "", "squish").b().resample(var3);
             AgeValidator.a(SecondaryNodeDequeIterator.field_a, -21, 90.0f);
             this.renderClientFrame(4);
-            il.field_a[11] = te.a(IntrusiveNode.field_e, "", "slime_eek").a().resample(var3);
-            il.field_a[12] = te.a(IntrusiveNode.field_e, "", "slime_falls").a().resample(var3);
-            il.field_a[13] = te.a(IntrusiveNode.field_e, "", "slime_laughs").a().resample(var3);
-            il.field_a[14] = te.a(IntrusiveNode.field_e, "", "slime_ooh").a().resample(var3);
-            il.field_a[15] = te.a(IntrusiveNode.field_e, "", "slime_ow").a().resample(var3);
+            il.field_a[11] = VorbisSample.loadByName(IntrusiveNode.field_e, "", "slime_eek").decodeAllToPcm().resample(var3);
+            il.field_a[12] = VorbisSample.loadByName(IntrusiveNode.field_e, "", "slime_falls").decodeAllToPcm().resample(var3);
+            il.field_a[13] = VorbisSample.loadByName(IntrusiveNode.field_e, "", "slime_laughs").decodeAllToPcm().resample(var3);
+            il.field_a[14] = VorbisSample.loadByName(IntrusiveNode.field_e, "", "slime_ooh").decodeAllToPcm().resample(var3);
+            il.field_a[15] = VorbisSample.loadByName(IntrusiveNode.field_e, "", "slime_ow").decodeAllToPcm().resample(var3);
             AgeValidator.a(va.field_g, -125, 95.0f);
             var3_ref = null;
             this.renderClientFrame(4);
@@ -1388,7 +1388,7 @@ public final class Bounce extends GameClient {
           nc.a("soundoff", ub.field_a, "", param1 ^ 3134);
           nc.a("quitgame", ub.field_a, "", 0);
           nc.a("instruct", ub.field_a, "", 0);
-          ec.a(ResourceArchive.field_e, 4, 16777215, 0, od.field_f, 240, (RgbSprite[]) null, 8, 320, 20, -35, 20, (RgbSprite[]) null, 320, 16741888, 14, (RgbSprite[]) null, 8, 20, 16697912, 0);
+          StandardContentDialog.a(ResourceArchive.field_e, 4, 16777215, 0, od.field_f, 240, (RgbSprite[]) null, 8, 320, 20, -35, 20, (RgbSprite[]) null, 320, 16741888, 14, (RgbSprite[]) null, 8, 20, 16697912, 0);
           ag.field_c = 16777215;
           ub.field_a = null;
           DirectByteStorage.field_f = 16697912;
@@ -1437,7 +1437,7 @@ public final class Bounce extends GameClient {
           if (0 < param1 &&
             !jh.b(767564065)) {
             ValidatedTextField.field_O = param1;
-            qc.field_a = pb.a(new int[]{param1}, l.field_c, DefaultTextWidgetRenderer.field_e, vd.field_a, ec.field_cb, 3, 13, 65522, (byte) 98);
+            qc.field_a = pb.a(new int[]{param1}, l.field_c, DefaultTextWidgetRenderer.field_e, vd.field_a, StandardContentDialog.field_cb, 3, 13, 65522, (byte) 98);
             pe.field_f = pe.a(3, 10, 1, -16947, 13);
           }
           if (jh.b(767564065)) {
@@ -1881,7 +1881,7 @@ public final class Bounce extends GameClient {
               stackIn_337_4 = (0 != fa.field_c);
               ((BinaryBitmapFont) (Object) stackIn_332_0).drawCentred(ld.$cfr$intArgs$a$c7de0d339b2a(stackIn_332_1, stackIn_332_2, stackIn_333_3, stackIn_337_4), 320, 32 + (var7Lifetime2 + 3 * var8), 16777088, -1);
               stackIn_340_0 = this;
-              stackIn_340_1 = db.field_T;
+              stackIn_340_1 = ProgressDialog.field_T;
               stackIn_340_2 = this.field_L;
               stackIn_340_3 = 320;
               stackIn_341_4 = (qf.field_b == 1);

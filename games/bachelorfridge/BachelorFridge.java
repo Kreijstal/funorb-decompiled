@@ -22,7 +22,7 @@ public final class BachelorFridge extends NetworkGameClient {
           if (~ha.field_l == ~ha.field_k) {
             boolean decompiledFrameRemainder1 = true;
             if (!kha.field_f) {
-              lo.a(75);
+              FullscreenNoticeType.a(75);
               kha.field_f = this.i((byte) -120);
               if ((kha.field_f) &&
                 (decompiledFrameRemainder1 = (mg.field_m == null))) {
@@ -113,7 +113,7 @@ public final class BachelorFridge extends NetworkGameClient {
               }
               if (vs.field_d &&
                 dj.field_c != null) {
-                uda.b(var4 != 0, 180, 320, 110);
+                ContentTransitionDialog.b(var4 != 0, 180, 320, 110);
                 dj.field_c.a(var4 != 0, false);
               }
               while (kaa.b(127)) {
@@ -225,7 +225,7 @@ public final class BachelorFridge extends NetworkGameClient {
           if (14 != kaa.field_m) {
           }
           if (-4 == kaa.field_m) {
-            sja.field_fb.writeCipheredByte(9, (byte) 118);
+            StandardContentDialog.field_fb.writeCipheredByte(9, (byte) 118);
             bka.field_h = true;
             kaa.field_m = OhNoEvent.field_s;
             HazmatEvent.field_q = saa.field_b;
@@ -362,13 +362,13 @@ public final class BachelorFridge extends NetworkGameClient {
             }
             if (vs.a(23864)) {
               SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c);
-              DirectByteStorage.a(-101, uma.field_J[0].field_p, uma.field_J[0].field_q, uma.field_J);
+              DirectByteStorage.a(-101, NumericDateInputWidget.field_J[0].field_p, NumericDateInputWidget.field_J[0].field_q, NumericDateInputWidget.field_J);
             }
             if (nba.b((byte) -125) &&
               !vs.a(23864) &&
               !paa.a(15000)) {
               SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c);
-              RageSpecial.a(uma.field_J[0].field_q, uma.field_J, (byte) 15, uma.field_J[0].field_p);
+              RageSpecial.a(NumericDateInputWidget.field_J[0].field_q, NumericDateInputWidget.field_J, (byte) 15, NumericDateInputWidget.field_J[0].field_p);
             }
           }
           if (param0 < 1) {
@@ -434,7 +434,7 @@ public final class BachelorFridge extends NetworkGameClient {
           wb.field_l = daa.c(-127, 16);
           WidgetContainer.field_y = daa.c(80, 17);
           fw.field_j = daa.c(68, 18);
-          uda.field_U = daa.c(69, 19);
+          ContentTransitionDialog.field_U = daa.c(69, 19);
           rt.a(TBomberAnimation.field_y, (byte) 120, DiveBomberEvent.field_r);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -668,8 +668,8 @@ public final class BachelorFridge extends NetworkGameClient {
         st.releaseStatics((byte) 120);
         ModalDialogHost.releaseStatics((byte) 104);
         AccountCreationResultPanel.releaseStatics(10462);
-        hga.releaseStatics(8405024);
-        sja.releaseStatics(33);
+        ProgressDialog.releaseStatics(8405024);
+        StandardContentDialog.releaseStatics(33);
         ReportAbusePanel.a(26727);
         LoginPanel.releaseStatics(31826);
         hh.releaseStatics(-1);
@@ -727,7 +727,7 @@ public final class BachelorFridge extends NetworkGameClient {
         FridgeScreen.releaseStatics((byte) -120);
         jna.a(30862);
         uf.releaseStatics((byte) 24);
-        d.releaseStatics((byte) 7);
+        BirthDateChatEnableForm.releaseStatics((byte) 7);
         BattleState.clearStaticReferences((byte) 53);
         bia.releaseStatics(56);
         pja.releaseStatics((byte) -120);
@@ -811,7 +811,7 @@ public final class BachelorFridge extends NetworkGameClient {
         VorbisSample.releaseStatics();
         VorbisFloor.releaseStatics();
         hm.releaseStatics(-123);
-        em.releaseStatics(-22799);
+        FullscreenStatusDialog.releaseStatics(-22799);
         DefaultWidgetRenderer.releaseStatics((byte) -124);
         ai.releaseStatics(22309);
         ma.releaseStatics(0);
@@ -829,7 +829,7 @@ public final class BachelorFridge extends NetworkGameClient {
         TextLayout.releaseStatics(0);
         UiWidget.c(1023);
         WidgetWrapper.releaseStatics(-81);
-        am.resetStaticState(true);
+        ResizableModalDialog.resetStaticState(true);
         ModalDialog.releaseStatics(-99);
         WidgetContainer.releaseStatics(20742);
         IntrusiveDequeCursor.releaseStatics(7);
@@ -844,8 +844,8 @@ public final class BachelorFridge extends NetworkGameClient {
         LabeledWidgetContainer.clearStaticReferences((byte) -111);
         ValidatedTextField.k(-9063);
         TextInputWidget.releaseStatics((byte) -127);
-        uda.releaseStatics(114);
-        de.resetStaticState(1);
+        ContentTransitionDialog.releaseStatics(114);
+        StripedProgressWidget.resetStaticState(1);
         NameSuggestionsPanel.resetStaticState(0);
         LinkTextWidget.b(true);
         nf.clearStaticReferences((byte) -127);
@@ -864,9 +864,9 @@ public final class BachelorFridge extends NetworkGameClient {
         co.releaseStatics(true);
         faa.releaseStatics((byte) -113);
         BirthDateValidator.releaseStatics(-44);
-        uma.releaseStatics(-30829);
+        NumericDateInputWidget.releaseStatics(-30829);
         ArrayWidgetContainer.releaseStatics(71);
-        sh.releaseStatics((byte) -92);
+        DateInputWidget.releaseStatics((byte) -92);
         lla.clearStaticReferences((byte) 0);
         sha.releaseStatics(3);
         sa.b(0);
@@ -1132,7 +1132,7 @@ public final class BachelorFridge extends NetworkGameClient {
           uc.releaseStatics((byte) -102);
           vma.releaseStatics(-93);
           vu.releaseStatics((byte) 106);
-          lo.releaseStatics((byte) -93);
+          FullscreenNoticeType.releaseStatics((byte) -93);
           rg.a(0);
           gea.releaseStatics(4096);
           fm.releaseStatics(101);
@@ -1378,8 +1378,8 @@ public final class BachelorFridge extends NetworkGameClient {
                                 if (ria.field_i.ensureIndexLoaded(0) &&
                                   ria.field_i.tryLoadAllGroups((byte) 123)) {
                                   waa.a(0, 10);
-                                  if (uda.field_U.ensureIndexLoaded(0) &&
-                                    uda.field_U.tryLoadAllGroups((byte) 106)) {
+                                  if (ContentTransitionDialog.field_U.ensureIndexLoaded(0) &&
+                                    ContentTransitionDialog.field_U.tryLoadAllGroups((byte) 106)) {
                                     waa.a(0, 11);
                                     if (WidgetContainer.field_y.ensureIndexLoaded(0) &&
                                       WidgetContainer.field_y.tryLoadAllGroups((byte) 115)) {
@@ -1441,7 +1441,7 @@ public final class BachelorFridge extends NetworkGameClient {
                                     this.a(WidgetContainer.field_y, (byte) 109, 60.29999923706055f, 60.400001525878906f);
                                     return false;
                                   }
-                                  this.a(uda.field_U, (byte) 120, 60.0f, 60.29999923706055f);
+                                  this.a(ContentTransitionDialog.field_U, (byte) 120, 60.0f, 60.29999923706055f);
                                   return false;
                                 }
                                 this.a(ria.field_i, (byte) 127, 60.0f, 60.0f);
@@ -1593,17 +1593,17 @@ public final class BachelorFridge extends NetworkGameClient {
           b.field_t.field_M = ce.field_w;
           fu.a(vb.field_j, false);
           uq.field_zb = an.a((byte) -127, vb.field_j, "basic", "generic_frame");
-          uma.field_J = an.a((byte) -123, vb.field_j, "basic", "generic_frame");
+          NumericDateInputWidget.field_J = an.a((byte) -123, vb.field_j, "basic", "generic_frame");
           og.field_a = pi.a(vb.field_j, -8845, "basic", "achievements_large");
           ona.field_yb = hca.a("basic", ScavengerSpecial.field_p, 71, "unachieved");
           rc.field_l = hca.a("basic", ScavengerSpecial.field_p, 84, "orbcoin");
           FullHealSpecial.a((byte) -33, ona.field_yb);
           FullHealSpecial.a((byte) -33, rc.field_l);
-          TriangleRasterizer.a(new wi(WidgetContainer.field_y, fw.field_j, uda.field_U, 32, false));
+          TriangleRasterizer.a(new wi(WidgetContainer.field_y, fw.field_j, ContentTransitionDialog.field_U, 32, false));
           SleepSpecial.field_p = new Sprite(32, 32);
           SleepSpecial.field_p.bindAsRenderTarget();
           rc.field_l.drawScaledAveraged(0, 0, 32, 32);
-          hga.field_U.a((byte) -97);
+          ProgressDialog.field_U.a((byte) -97);
           rc.field_l = null;
           var4 = new Sprite[1 + ena.field_o.length][];
           var5 = new Sprite[1 + ena.field_o.length][];
@@ -1937,7 +1937,7 @@ public final class BachelorFridge extends NetworkGameClient {
                       pha.field_a = false;
                       continue;
                     }
-                    if (lo.b((byte) -102)) {
+                    if (FullscreenNoticeType.b((byte) -102)) {
                       continue;
                     }
                     if (lfa.d(-124)) {

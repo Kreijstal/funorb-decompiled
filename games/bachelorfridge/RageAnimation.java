@@ -26,7 +26,7 @@ final class RageAnimation extends EventAnimation {
         BitPacketBuffer var6 = null;
         int var4 = 0;
         try {
-          var6 = sja.field_fb;
+          var6 = StandardContentDialog.field_fb;
           var6.writeCipheredByte(param0, (byte) 116);
           var6.position = var6.position + 1;
           var4 = var6.position;

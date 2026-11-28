@@ -79,22 +79,22 @@ final class tl {
     }
 
     final static kc a(int param0) {
-        if (ci.field_b == null) {
-          ci.field_b = new kc();
-          ci.field_b.a(false, gm.field_cb);
-          ci.field_b.field_e = 0;
-          ci.field_b.field_c = 14;
-          ci.field_b.field_l = 4;
-          ci.field_b.field_i = fa.field_Q;
-          ci.field_b.field_v = 6;
-          ci.field_b.field_p = 2763306;
-          ci.field_b.field_s = 5;
-          ci.field_b.field_g = 7697781;
+        if (FullscreenNoticeType.field_b == null) {
+          FullscreenNoticeType.field_b = new kc();
+          FullscreenNoticeType.field_b.a(false, gm.field_cb);
+          FullscreenNoticeType.field_b.field_e = 0;
+          FullscreenNoticeType.field_b.field_c = 14;
+          FullscreenNoticeType.field_b.field_l = 4;
+          FullscreenNoticeType.field_b.field_i = fa.field_Q;
+          FullscreenNoticeType.field_b.field_v = 6;
+          FullscreenNoticeType.field_b.field_p = 2763306;
+          FullscreenNoticeType.field_b.field_s = 5;
+          FullscreenNoticeType.field_b.field_g = 7697781;
         }
         if (param0 != 4314) {
           field_i = (int[]) null;
         }
-        return ci.field_b;
+        return FullscreenNoticeType.field_b;
     }
 
     public static void clearStaticReferences(byte param0) {

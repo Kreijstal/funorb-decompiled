@@ -195,7 +195,7 @@ abstract class ab extends GameApplet {
             SecondaryNodeDeque.a(5, 18897);
           }
           if (AccountRequestState.field_c[5]) {
-            ci.a((byte) -77, 6);
+            ProgressMessageDialog.a((byte) -77, 6);
           }
           if (AccountRequestState.field_c[6]) {
             SpriteState.b(36951, 7);
@@ -357,7 +357,7 @@ abstract class ab extends GameApplet {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = SolKnight.field_L ? 1 : 0;
-          var4 = ig.a(vd.field_b, AgeValidator.field_n, false, param0);
+          var4 = GuestPlayConfirmationForm.a(vd.field_b, AgeValidator.field_n, false, param0);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -502,7 +502,7 @@ abstract class ab extends GameApplet {
         ff.a(this.field_z, wh.field_c, param1, (byte) 110, this.field_C, this.field_m, this.field_y, 5000, this.field_x, this.field_n, param5, 5000, vd.field_b, this.field_w);
         ArchiveRequest.a(-11400, this.field_C, this.field_y, wh.field_c, this.field_m, this.field_z, param5, vd.field_b, this.field_x);
         Archive.initializePunctuationKeyMappings(0);
-        ah.field_d = ld.createMouseWheelInput(0);
+        ah.field_d = ResizableModalDialog.createMouseWheelInput(0);
         DropTargetWidgetContainer.a((byte) -63, EmailFormatValidator.field_q);
         if (!param4) {
           this.field_m = -97;
@@ -635,7 +635,7 @@ abstract class ab extends GameApplet {
         jh.b(param0 ^ -405);
         if (!bl.a((byte) -81) &&
           11 != fj.field_i) {
-          lj.e(false);
+          DialogMessagePane.e(false);
         }
         if (null != ah.field_d) {
           AgeValidator.field_n = ah.field_d.pollRotation(9408);
@@ -751,7 +751,7 @@ abstract class ab extends GameApplet {
               DefaultTextWidgetRenderer.field_c = null;
             } else {
               if (DefaultTextWidgetRenderer.field_c.tryLoadGroupByName(2, "")) {
-                lj.a(26708, DefaultTextWidgetRenderer.field_c);
+                DialogMessagePane.a(26708, DefaultTextWidgetRenderer.field_c);
                 DefaultTextWidgetRenderer.field_c = null;
                 mh.a(8192);
               }
@@ -770,11 +770,11 @@ abstract class ab extends GameApplet {
           kk.field_c = false;
           d.a(DelegatingCanvas.field_c, AgeValidator.field_m, (byte) -110, AccountCreationResultPanel.field_ub, MusicPatchPcmStream.field_o);
           if (bl.field_p ||
-            null != s.field_hb) {
+            null != StandardContentDialog.field_hb) {
             stackIn_101_0 = !(bl.field_p);
             stackIn_103_1 = param0 + 17075;
             stackIn_104_2 = !(bl.field_p);
-            hf.a(stackIn_101_0, stackIn_103_1, stackIn_104_2, s.field_hb);
+            hf.a(stackIn_101_0, stackIn_103_1, stackIn_104_2, StandardContentDialog.field_hb);
           }
           if (ml.field_g) {
             ProxySocketConnector.f(4);
@@ -818,10 +818,10 @@ abstract class ab extends GameApplet {
         }
         if (RichTextWidget.field_R == 13) {
           var3Lifetime2 = 1;
-          if (null != ng.field_a) {
-            stackIn_138_0 = (!ng.field_a.a((byte) 125)) ? 0 : 1;
+          if (null != FullscreenNoticeType.field_a) {
+            stackIn_138_0 = (!FullscreenNoticeType.field_a.a((byte) 125)) ? 0 : 1;
             var3Lifetime2 = stackIn_138_0;
-            TextFieldValidator.a((byte) 102, ng.field_a.field_a, ng.field_a.field_c);
+            TextFieldValidator.a((byte) 102, FullscreenNoticeType.field_a.field_a, FullscreenNoticeType.field_a.field_c);
           }
           if (var3Lifetime2 != 0) {
             RichTextWidget.field_R = 20;

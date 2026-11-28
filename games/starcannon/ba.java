@@ -81,7 +81,7 @@ final class ba {
           return;
         }
         String var4 = (String) null;
-        ae.a((String) null, param1, 0, param0);
+        FullscreenNoticeType.a((String) null, param1, 0, param0);
     }
 
     final static boolean a(int param0, CharSequence param1) {

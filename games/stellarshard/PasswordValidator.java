@@ -235,7 +235,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_20_0;
           }
           if (rb.a(var6, -85, var4)) {
-            stackIn_23_0 = vf.field_D;
+            stackIn_23_0 = DialogMessagePane.field_D;
             return stackIn_23_0;
           }
           if (ji.a(var6, 95, var4)) {
@@ -246,7 +246,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_32_0 = wi.field_b;
             return stackIn_32_0;
           }
-          stackIn_30_0 = vf.field_D;
+          stackIn_30_0 = DialogMessagePane.field_D;
           return stackIn_30_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

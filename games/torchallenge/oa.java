@@ -11,7 +11,7 @@ final class oa {
     private java.math.BigInteger field_h;
     private java.math.BigInteger field_i;
     static int field_g;
-    static pe field_k;
+    static ProgressDialog field_k;
     private vb field_c;
     private NetworkArchiveRequest field_d;
     static int[] field_a;
@@ -110,7 +110,7 @@ final class oa {
         stackIn_3_0 = (0 != (128 & var3));
         o.field_m = stackIn_3_0;
         DraggableWidgetContainer.field_L = 127 & var3;
-        ih.field_K = var9.readUnsignedByte(-85);
+        GuestPlayConfirmationForm.field_K = var9.readUnsignedByte(-85);
         ik.field_b = var9.readLong(-123);
         if (DraggableWidgetContainer.field_L != 2) {
           hc.field_O = 0;
@@ -323,7 +323,7 @@ final class oa {
           do {
             var4 = param2.nextInt();
           } while (var3_int <= var4);
-          stackIn_13_0 = v.d(-110, var4, param1);
+          stackIn_13_0 = ResizableModalDialog.d(-110, var4, param1);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

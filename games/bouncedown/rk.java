@@ -41,7 +41,7 @@ final class rk {
             field_a = 22;
           }
           vk.field_c = new LoginPanel(gi.field_b, (String) null, fe.field_g, param3, param2);
-          TextLayout.field_c = new ec(DisplayNameSelectionPanel.field_N, vk.field_c);
+          TextLayout.field_c = new StandardContentDialog(DisplayNameSelectionPanel.field_N, vk.field_c);
           DisplayNameSelectionPanel.field_N.showDialog(TextLayout.field_c, false);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "rk.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

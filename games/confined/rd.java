@@ -299,7 +299,7 @@ final class rd extends id {
             this.a(false, var8, 0, mc.field_b);
             this.field_ib.field_o = ud.field_o;
             this.field_ib.field_t = rn.field_c;
-            this.field_ib.field_p = dh.field_sb;
+            this.field_ib.field_p = ProgressMessageDialog.field_sb;
             this.field_ib.field_m = -var8[6];
             this.field_ib.field_w = true;
             this.field_ib.field_v = -var8[8];
@@ -570,7 +570,7 @@ final class rd extends id {
         stackIn_2_3 = param2;
         stackIn_2_4 = param3;
         stackIn_2_5 = rf.field_a[param5];
-        stackIn_2_6 = tg.field_R[param5];
+        stackIn_2_6 = GuestPlayConfirmationForm.field_R[param5];
         stackIn_2_7 = param5;
         stackIn_2_8 = param6;
         stackIn_2_9 = param9;

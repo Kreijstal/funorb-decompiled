@@ -150,7 +150,7 @@ final class laa extends pv {
         var1 = 92 / ((0 - param0) / 52);
         AnimationNode.field_i = null;
         if (gfa.field_i) {
-          oq.field_b.o(2113632);
+          oq.field_b.showConnectionFailure(2113632);
         } else {
           var2 = rja.field_o;
           if (0 < var2) {
@@ -161,7 +161,7 @@ final class laa extends pv {
             }
             AnimationNode.field_i = rca.a(0, new CharSequence[]{(CharSequence) ((Object) AnimationNode.field_i), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) DualLinkNode.field_j)});
           }
-          oq.field_b.p(-97);
+          oq.field_b.closeDialog(-97);
           bi.o(2);
         }
     }

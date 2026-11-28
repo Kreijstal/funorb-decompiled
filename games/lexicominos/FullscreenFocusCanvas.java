@@ -222,7 +222,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             TextLayout.field_d = param2;
           }
           DropTargetWidgetContainer.field_D[pf.field_o] = param5;
-          oc.field_a[pf.field_o] = param0;
+          FullscreenNoticeType.field_a[pf.field_o] = param0;
           MidiPcmStream.field_N[pf.field_o] = param3;
           var6 = param3 + (param0 + param5);
           if (param1 == var6) {
@@ -246,7 +246,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           TextLayout.field_d = param2;
         }
         DropTargetWidgetContainer.field_D[pf.field_o] = param5;
-        oc.field_a[pf.field_o] = param0;
+        FullscreenNoticeType.field_a[pf.field_o] = param0;
         MidiPcmStream.field_N[pf.field_o] = param3;
         var6Lifetime1 = param3 + (param0 + param5);
         if (param1 == var6Lifetime1) {

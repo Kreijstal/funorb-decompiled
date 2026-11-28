@@ -572,8 +572,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(ButtonWidget.field_z, 0, 0, 0, 0, 16777215, -1, 0, 0, ButtonWidget.field_z.field_C, -1, 2147483647, true);
         this.field_C = new RichTextWidget(var2, var5);
         this.field_C.field_m = "";
-        this.field_C.a(false, 0, kg.field_a);
-        this.field_C.a(false, 1, kg.field_a);
+        this.field_C.a(false, 0, FullscreenNoticeType.field_a);
+        this.field_C.a(false, 1, FullscreenNoticeType.field_a);
         this.field_C.field_o = (WidgetEventListener) (this);
         this.field_C.c(46, var3, -90 + this.field_l, -1);
         var3 = var3 + (15 + this.field_C.field_p);

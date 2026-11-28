@@ -390,7 +390,7 @@ final class BitPacketBuffer extends PacketBuffer {
           k.field_b = true;
           ta.field_b = true;
           u.field_b.closeAllDialogs(1);
-          nf.a(false, kh.field_b, -96);
+          FullscreenStatusDialog.a(false, kh.field_b, -96);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "jd.E(" + param0 + ')');
         }

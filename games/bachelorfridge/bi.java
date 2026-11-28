@@ -152,7 +152,7 @@ abstract class bi extends jla {
         }
         gja.field_m.closeAllDialogs((byte) -66);
         if (null == hp.field_d) {
-          hp.field_d = new hga(gja.field_m, AnimationNode.field_i);
+          hp.field_d = new ProgressDialog(gja.field_m, AnimationNode.field_i);
         }
         gja.field_m.showDialog((UiWidget) (hp.field_d), (byte) 111);
     }

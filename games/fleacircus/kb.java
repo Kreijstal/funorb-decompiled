@@ -14,7 +14,7 @@ final class kb extends IntrusiveNode {
     static int field_p;
 
     final static void a(int param0, PcmStreamMixer param1, ResourceArchive param2, int param3) {
-        SecondaryNodeDeque.field_c = bm.f((byte) 73) * param3 / 1000;
+        SecondaryNodeDeque.field_c = DialogMessagePane.f((byte) 73) * param3 / 1000;
         fl.a((byte) 101, param2);
         if (param0 != -1) {
           return;

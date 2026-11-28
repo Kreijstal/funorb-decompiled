@@ -219,7 +219,7 @@ final class JaggrabDownloader implements Runnable {
     }
 
     final static void a(gea param0, int param1, int param2) {
-        BitPacketBuffer var5 = sja.field_fb;
+        BitPacketBuffer var5 = StandardContentDialog.field_fb;
         var5.writeCipheredByte(param2, (byte) 102);
         var5.position = var5.position + 1;
         int var4 = var5.position;

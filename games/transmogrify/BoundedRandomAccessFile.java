@@ -130,7 +130,7 @@ final class BoundedRandomAccessFile {
         tg.field_c = null;
         aa.field_g = false;
         if (lb.field_d) {
-          SecondaryNodeDequeIterator.field_d.t(2121792);
+          SecondaryNodeDequeIterator.field_d.showConnectionFailure(2121792);
           if (param0 == -4690) {
             return;
           }
@@ -146,7 +146,7 @@ final class BoundedRandomAccessFile {
           }
           tg.field_c = wk.a(73, new CharSequence[]{(CharSequence) ((Object) tg.field_c), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) IterableNodeHashTable.field_b)});
         }
-        SecondaryNodeDequeIterator.field_d.r(77);
+        SecondaryNodeDequeIterator.field_d.closeDialog(77);
         FullscreenFocusCanvas.b(-86);
         if (param0 == -4690) {
           return;

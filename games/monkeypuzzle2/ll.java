@@ -1138,7 +1138,7 @@ final class ll {
                 }
                 var2 = te.a("back", -85);
                 if (var2 != null) {
-                  nf.field_E = TextLineMetrics.a(var2, (byte) 98);
+                  ResizableModalDialog.field_E = TextLineMetrics.a(var2, (byte) 98);
                 }
                 var2 = te.a("exitfullscreenmode", -118);
                 if (var2 != null) {
@@ -1294,7 +1294,7 @@ final class ll {
                 }
                 var2 = te.a("openinpopupwindow", -101);
                 if (var2 != null) {
-                  kg.field_a = TextLineMetrics.a(var2, (byte) 89);
+                  FullscreenNoticeType.field_a = TextLineMetrics.a(var2, (byte) 89);
                 }
                 var2 = te.a("create", -85);
                 if (var2 != null) {
@@ -2668,7 +2668,7 @@ final class ll {
                 }
                 var2 = te.a("fs_accept_aftercancel", -98);
                 if (var2 != null) {
-                  sk.field_F = TextLineMetrics.a(var2, (byte) 99);
+                  DialogMessagePane.field_F = TextLineMetrics.a(var2, (byte) 99);
                 }
                 var2 = te.a("fs_accept_countdown_sing", -128);
                 if (null != var2) {
@@ -2680,7 +2680,7 @@ final class ll {
                 }
                 var2 = te.a("fs_nonmember", param0 ^ -47);
                 if (null != var2) {
-                  pc.field_P = TextLineMetrics.a(var2, (byte) -111);
+                  ContentTransitionDialog.field_P = TextLineMetrics.a(var2, (byte) -111);
                 }
                 var2 = te.a("fs_button_close", -11);
                 if (null != var2) {
@@ -2776,19 +2776,19 @@ final class ll {
                 }
                 var2 = te.a("rating_mode_name,0", -78);
                 if (null != var2) {
-                  s.field_Q[0] = TextLineMetrics.a(var2, (byte) 70);
+                  FullscreenStatusDialog.field_Q[0] = TextLineMetrics.a(var2, (byte) 70);
                 }
                 var2 = te.a("rating_mode_name,1", -57);
                 if (null != var2) {
-                  s.field_Q[1] = TextLineMetrics.a(var2, (byte) 97);
+                  FullscreenStatusDialog.field_Q[1] = TextLineMetrics.a(var2, (byte) 97);
                 }
                 var2 = te.a("rating_mode_long_name,0", -61);
                 if (var2 != null) {
-                  kg.field_b[0] = TextLineMetrics.a(var2, (byte) 110);
+                  FullscreenNoticeType.field_b[0] = TextLineMetrics.a(var2, (byte) 110);
                 }
                 var2 = te.a("rating_mode_long_name,1", -51);
                 if (null != var2) {
-                  kg.field_b[1] = TextLineMetrics.a(var2, (byte) -101);
+                  FullscreenNoticeType.field_b[1] = TextLineMetrics.a(var2, (byte) -101);
                 }
                 var2 = te.a("graphics_config_fixed_size", -95);
                 if (var2 != null) {

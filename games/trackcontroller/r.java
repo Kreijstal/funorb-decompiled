@@ -20,7 +20,7 @@ final class r extends IntrusiveNode {
           return;
         }
         if (ib.field_e == null) {
-          ib.field_e = new rk(AlphaWidgetContainer.field_E, AsyncRequest.field_r);
+          ib.field_e = new ProgressDialog(AlphaWidgetContainer.field_E, AsyncRequest.field_r);
         }
         AlphaWidgetContainer.field_E.showDialog((byte) -63, ib.field_e);
     }
@@ -61,7 +61,7 @@ final class r extends IntrusiveNode {
           var2_int = 0;
           var3 = param0.length();
           while (var2_int < var3) {
-            if (sf.a(param0.charAt(var2_int), -33)) {
+            if (GuestPlayConfirmationForm.a(param0.charAt(var2_int), -33)) {
               var2_int++;
               continue;
             }
@@ -72,7 +72,7 @@ final class r extends IntrusiveNode {
             return stackIn_10_0;
           }
           while (var2_int < var3) {
-            if (sf.a(param0.charAt(var3 - 1), param1 ^ 11100)) {
+            if (GuestPlayConfirmationForm.a(param0.charAt(var3 - 1), param1 ^ 11100)) {
               var3--;
               continue;
             }

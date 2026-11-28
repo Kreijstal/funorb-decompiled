@@ -322,14 +322,14 @@ final class qfa extends cga {
           if (param0 != 8) {
             field_t = (String) null;
           }
-          var1 = sja.field_fb;
+          var1 = StandardContentDialog.field_fb;
           while (SuperSpeedSpecial.c(-43)) {
             var1.writeCipheredByte(8, (byte) 119);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             sia.a(var1, 108);
-            sja.field_fb.writeLengthByte((byte) -68, var1.position - var2);
+            StandardContentDialog.field_fb.writeLengthByte((byte) -68, var1.position - var2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -341,7 +341,7 @@ final class qfa extends cga {
 
     final static void f(int param0) {
         qi.field_b = new AccountCreationPanel();
-        kka.field_l.e(qi.field_b, 33);
+        kka.field_l.replaceContent(qi.field_b, 33);
         int var1 = -78 / ((param0 - 45) / 53);
     }
 

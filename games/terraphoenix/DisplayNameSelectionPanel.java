@@ -55,7 +55,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
 
     final static void a(String param0, byte param1, String param2) {
         try {
-          na.a(false, param2, 92, param0);
+          ProgressDialog.a(false, param2, 92, param0);
           if (param1 < 52) {
             DisplayNameSelectionPanel.clearStaticReferences(-17);
           }

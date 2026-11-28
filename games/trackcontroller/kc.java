@@ -57,7 +57,7 @@ final class kc {
           var12 = ne.field_a;
           var2 = var12.readUnsignedByte(16383);
           if (var2 == 0) {
-            var10 = lc.b(false);
+            var10 = DialogMessagePane.b(false);
             var16 = var10;
             var13 = var16;
             var3 = var13;
@@ -98,7 +98,7 @@ final class kc {
             GameKeyHandler.a((byte) 125);
             return;
           }
-          var15.field_k = lc.b(false);
+          var15.field_k = DialogMessagePane.b(false);
           var15.field_m = var15.field_k[0];
           var15.field_j = true;
           var15.unlink(-54);

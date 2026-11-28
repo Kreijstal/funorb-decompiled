@@ -86,10 +86,10 @@ final class ReturnedShape {
         RuntimeException runtimeExceptionLocal5 = null;
         try {
           if (null == TextHotspotBounds.uiComponentPart026State0001) {
-            TextHotspotBounds.uiComponentPart026State0001 = new UiComponentPart026(MixedSupport005.uiComponentPart016State0001, MixedSupport029.stringState0148);
+            TextHotspotBounds.uiComponentPart026State0001 = new ProgressDialog(MixedSupport005.uiComponentPart016State0001, MixedSupport029.stringState0148);
             MixedSupport005.uiComponentPart016State0001.showDialog((byte) -107, TextHotspotBounds.uiComponentPart026State0001);
           }
-          TextHotspotBounds.uiComponentPart026State0001.performAction1391(booleanArgument2, floatArgument3, 4210752, stringArgument4);
+          TextHotspotBounds.uiComponentPart026State0001.setProgress(booleanArgument2, floatArgument3, 4210752, stringArgument4);
           SoftwareRaster.clearRaster();
           RenderingSupport002.performAction0248(true, integerArgument1 + 106);
           if (integerArgument1 != 12) {
@@ -199,7 +199,7 @@ final class ReturnedShape {
           }
           SceneWidget.integerState0909 = integerArgument3;
           MixedSupport088.integerState0546 = integerArgument5;
-          UiComponentPart026.integerState0673 = integerArgument2;
+          ProgressDialog.integerState0673 = integerArgument2;
           MixedSupport140.rgbSpriteArrayState0031 = new RgbSprite[args.length];
           for (integerLocal1 = 0; integerLocal1 < args.length; integerLocal1++) {
             MixedSupport140.rgbSpriteArrayState0031[integerLocal1] = new RgbSprite(317, 34);

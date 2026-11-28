@@ -269,8 +269,8 @@ final class am {
             mh.a(2, var4);
             return;
           }
-          if (bf.field_M == null) {
-            bf.field_M = new SecondaryNodeHashTable(128);
+          if (DateInputWidget.field_M == null) {
+            DateInputWidget.field_M = new SecondaryNodeHashTable(128);
             wg.field_w = 0;
           }
           var3Lifetime1 = var1.readString(0);
@@ -283,12 +283,12 @@ final class am {
           if (null == var6Lifetime1) {
             var6Lifetime1 = mn.a(-1, var5Lifetime1);
             if (null != var6Lifetime1) {
-              bf.field_M.put(true, var6Lifetime1, (long)ad.a((CharSequence) ((Object) var4_ref_StringLifetime1), -2).hashCode());
+              DateInputWidget.field_M.put(true, var6Lifetime1, (long)ad.a((CharSequence) ((Object) var4_ref_StringLifetime1), -2).hashCode());
             }
           }
           if (null == var6Lifetime1) {
             var6Lifetime1 = new ve();
-            bf.field_M.put(true, var6Lifetime1, (long)ad.a((CharSequence) ((Object) var4_ref_StringLifetime1), -2).hashCode());
+            DateInputWidget.field_M.put(true, var6Lifetime1, (long)ad.a((CharSequence) ((Object) var4_ref_StringLifetime1), -2).hashCode());
             fieldTemp$1 = wg.field_w;
             wg.field_w = wg.field_w + 1;
             var6Lifetime1.field_Ib = fieldTemp$1;

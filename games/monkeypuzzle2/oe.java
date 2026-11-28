@@ -71,7 +71,7 @@ final class oe {
           if (ub.field_b != this.field_p) {
             this.field_r.a(this.field_q, this.field_p, -116);
           } else {
-            if (this.field_q != lb.field_z) {
+            if (this.field_q != GuestPlayConfirmationForm.field_z) {
               this.field_r.a(this.field_q, this.field_p, -116);
             }
           }
@@ -172,7 +172,7 @@ final class oe {
           }
         }
         if (ub.field_b != var2 ||
-          var3 != lb.field_z) {
+          var3 != GuestPlayConfirmationForm.field_z) {
           this.field_r.a(var3, var2, -121);
         }
         if (this.field_j > 0) {

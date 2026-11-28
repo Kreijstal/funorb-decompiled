@@ -70,7 +70,7 @@ final class ip extends TileEffect {
           if (param1 != -80) {
             ip.releaseStatics((byte) 108);
           }
-          var5 = sja.field_fb;
+          var5 = StandardContentDialog.field_fb;
           var5.writeCipheredByte(param2, (byte) 107);
           var5.position = var5.position + 1;
           var4 = var5.position;

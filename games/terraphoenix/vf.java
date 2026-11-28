@@ -31,13 +31,13 @@ final class vf {
             return true;
           }
           if (va.b(41108)) {
-            var8.q(127);
+            var8.showAccountCreationConnectionFailure(127);
             return true;
           }
           MidiPcmStream.field_Q = null;
           oe.field_a = param1;
           ra.field_m = param5;
-          cg.field_H = param6;
+          GuestPlayConfirmationForm.field_H = param6;
           PcmPlayerPump.field_c = param2;
           IsaacCipher.field_f = SectorCacheStore.field_d;
           wf.field_q = param3;

@@ -49,7 +49,7 @@ final class SecondaryNodeDeque implements Iterable {
           if (null != gi.field_d &&
             gi.field_d.field_i) {
             ij.c((byte) -109);
-            TorChallenge.field_H.showDialog((byte) 123, (UiComponent) (new nh(TorChallenge.field_H, de.field_b)));
+            TorChallenge.field_H.showDialog((byte) 123, (UiComponent) (new FullscreenStatusDialog(TorChallenge.field_H, de.field_b)));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

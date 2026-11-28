@@ -70,7 +70,7 @@ final class qla extends TileEffect {
     }
 
     final void a(int param0, boolean param1, int param2) {
-        am.field_M[this.field_h].drawScaledAlpha(-24 + (param2 + 64), -this.field_i - 24 + param0 - 32, am.field_M[this.field_h].field_q << 1, am.field_M[this.field_h].field_p << 1, 256 - (this.field_i << 2));
+        ResizableModalDialog.field_M[this.field_h].drawScaledAlpha(-24 + (param2 + 64), -this.field_i - 24 + param0 - 32, ResizableModalDialog.field_M[this.field_h].field_q << 1, ResizableModalDialog.field_M[this.field_h].field_p << 1, 256 - (this.field_i << 2));
         if (!param1) {
           this.a(43, 82, 108);
         }

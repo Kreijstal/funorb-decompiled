@@ -35,13 +35,13 @@ final class PcmResampler {
         int var7 = MonkeyPuzzle2.field_F ? 1 : 0;
         Sprite[] var1 = new Sprite[eg.field_c];
         for (var2 = 0; var2 < eg.field_c; var2++) {
-          var3 = ra.field_ab[var2] * da.field_c[var2];
+          var3 = StandardContentDialog.field_ab[var2] * da.field_c[var2];
           var4 = cb.field_b[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = fk.field_d[BufferedRandomAccessFile.a((int) var4[var6], 255)];
           }
-          var1[var2] = new Sprite(nj.field_d, qk.field_a, ValidatedTextField.field_P[var2], mb.field_b[var2], da.field_c[var2], ra.field_ab[var2], var5);
+          var1[var2] = new Sprite(nj.field_d, qk.field_a, ValidatedTextField.field_P[var2], mb.field_b[var2], da.field_c[var2], StandardContentDialog.field_ab[var2], var5);
         }
         gb.a(-85);
         if (!param0) {

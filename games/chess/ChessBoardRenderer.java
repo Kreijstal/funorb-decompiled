@@ -505,7 +505,7 @@ final class ChessBoardRenderer extends ChessBoardState {
               if (var14 != 0) {
                 var13 = mm.field_a;
               } else {
-                var13 = rm.field_H;
+                var13 = StripedProgressWidget.field_H;
               }
             } else {
               if (var14 == 0) {

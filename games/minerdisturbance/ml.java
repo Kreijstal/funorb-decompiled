@@ -40,47 +40,47 @@ final class ml {
         }
         var3 = this.field_r[param1];
         var4 = -2;
-        var5 = (lj.field_t + rg.field_sb + (nk.field_w + GameAppletShell.field_e)) % 8;
+        var5 = (lj.field_t + ProgressMessageDialog.field_sb + (nk.field_w + GameAppletShell.field_e)) % 8;
         if (var5 != 0) {
           if (var5 == 1) {
             MidiPcmStream.field_X = MidiPcmStream.field_X + ac.field_b;
-            qd.field_M = qd.field_M - 1;
+            GuestPlayConfirmationForm.field_M = GuestPlayConfirmationForm.field_M - 1;
           } else {
             if (var5 != 2) {
               if (var5 != 3) {
                 if (var5 == 4) {
                   ac.field_b = ac.field_b + 1;
-                  vh.field_g = vh.field_g + qd.field_M;
+                  vh.field_g = vh.field_g + GuestPlayConfirmationForm.field_M;
                 } else {
                   if (var5 != 5) {
                     if (var5 == 6) {
-                      vh.field_g = vh.field_g - qd.field_M;
+                      vh.field_g = vh.field_g - GuestPlayConfirmationForm.field_M;
                       ac.field_b = ac.field_b - 1;
                     } else {
                       if (var5 == 7) {
                         vh.field_g = vh.field_g - ac.field_b;
-                        qd.field_M = qd.field_M - 1;
+                        GuestPlayConfirmationForm.field_M = GuestPlayConfirmationForm.field_M - 1;
                       }
                     }
                   } else {
-                    qd.field_M = qd.field_M + 1;
+                    GuestPlayConfirmationForm.field_M = GuestPlayConfirmationForm.field_M + 1;
                     vh.field_g = vh.field_g + ac.field_b;
                   }
                 }
               } else {
-                qd.field_M = qd.field_M + 1;
+                GuestPlayConfirmationForm.field_M = GuestPlayConfirmationForm.field_M + 1;
                 MidiPcmStream.field_X = MidiPcmStream.field_X - ac.field_b;
               }
             } else {
               ac.field_b = ac.field_b + 1;
-              MidiPcmStream.field_X = MidiPcmStream.field_X - qd.field_M;
+              MidiPcmStream.field_X = MidiPcmStream.field_X - GuestPlayConfirmationForm.field_M;
             }
           }
         } else {
-          MidiPcmStream.field_X = MidiPcmStream.field_X + qd.field_M;
+          MidiPcmStream.field_X = MidiPcmStream.field_X + GuestPlayConfirmationForm.field_M;
           ac.field_b = ac.field_b - 1;
         }
-        var5 = (lj.field_t + (rg.field_sb + (nk.field_w + GameAppletShell.field_e))) % 4;
+        var5 = (lj.field_t + (ProgressMessageDialog.field_sb + (nk.field_w + GameAppletShell.field_e))) % 4;
         if (var5 != 0) {
           if (1 == var5) {
             pn.field_b = pn.field_b - aa.field_b;
@@ -274,7 +274,7 @@ final class ml {
                                                       ah.field_f = 1;
                                                     }
                                                   } else {
-                                                    decompiledFrameRemainder0 = !(!qd.field_S);
+                                                    decompiledFrameRemainder0 = !(!GuestPlayConfirmationForm.field_S);
                                                     if (decompiledFrameRemainder0) {
                                                       ah.field_f = 0;
                                                     }
@@ -841,7 +841,7 @@ final class ml {
                           } else {
                             var5 = -gi.field_a.field_A + 480;
                             var6 = -param2 + (-gi.field_a.field_x + 640);
-                            gi.field_a.draw(var6, 10 * (qd.field_R / 20) + var5);
+                            gi.field_a.draw(var6, 10 * (GuestPlayConfirmationForm.field_R / 20) + var5);
                           }
                         }
                       }
@@ -1473,7 +1473,7 @@ final class ml {
           return;
         }
         if (var6 == 20 &&
-          !qd.field_S) {
+          !GuestPlayConfirmationForm.field_S) {
           var13 = 11184810;
           var9Lifetime2 = GameCanvas.field_c;
           var14 = 14235957;
@@ -1482,7 +1482,7 @@ final class ml {
           !AwtRasterBuffer.field_b) {
           var14 = 16755370;
           var13 = 11184810;
-          var9Lifetime2 = jk.field_lb;
+          var9Lifetime2 = ContentTransitionDialog.field_lb;
         }
         if (var6 == 18 &&
           ArchiveIndex.a(-36)) {

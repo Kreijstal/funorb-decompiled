@@ -163,33 +163,33 @@ class vb extends DualLinkNode {
           throw new IllegalStateException();
         }
         if (null != me.field_f) {
-          me.field_f.g((byte) -75);
+          me.field_f.closeDialog((byte) -75);
           var1 = DebouncedFieldValidator.b(0);
           j.field_e = new LoginPanel(var1, (String) null, true, false, false);
           if (param0 == 28) {
-            wg.field_j.showDialog((byte) -54, jh.field_C);
-            jh.field_C.c((byte) 119, j.field_e);
-            jh.field_C.p(-21);
+            wg.field_j.showDialog((byte) -54, StripedProgressWidget.field_C);
+            StripedProgressWidget.field_C.replaceContent((byte) 119, j.field_e);
+            StripedProgressWidget.field_C.finishResize(-21);
             return;
           }
           field_i = (String) null;
-          wg.field_j.showDialog((byte) -54, jh.field_C);
-          jh.field_C.c((byte) 119, j.field_e);
-          jh.field_C.p(-21);
+          wg.field_j.showDialog((byte) -54, StripedProgressWidget.field_C);
+          StripedProgressWidget.field_C.replaceContent((byte) 119, j.field_e);
+          StripedProgressWidget.field_C.finishResize(-21);
           return;
         }
         var1Lifetime1 = DebouncedFieldValidator.b(0);
         j.field_e = new LoginPanel(var1Lifetime1, (String) null, true, false, false);
         if (param0 != 28) {
           field_i = (String) null;
-          wg.field_j.showDialog((byte) -54, jh.field_C);
-          jh.field_C.c((byte) 119, j.field_e);
-          jh.field_C.p(-21);
+          wg.field_j.showDialog((byte) -54, StripedProgressWidget.field_C);
+          StripedProgressWidget.field_C.replaceContent((byte) 119, j.field_e);
+          StripedProgressWidget.field_C.finishResize(-21);
           return;
         }
-        wg.field_j.showDialog((byte) -54, jh.field_C);
-        jh.field_C.c((byte) 119, j.field_e);
-        jh.field_C.p(-21);
+        wg.field_j.showDialog((byte) -54, StripedProgressWidget.field_C);
+        StripedProgressWidget.field_C.replaceContent((byte) 119, j.field_e);
+        StripedProgressWidget.field_C.finishResize(-21);
     }
 
     final static boolean a(byte param0, char param1) {

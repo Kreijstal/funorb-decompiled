@@ -85,7 +85,7 @@ final class vd {
         }
         if (!param1) {
           ek.field_a = TextFieldValidator.a(var8, 80, false);
-          qe.field_G = null;
+          RegistrationAgreementPane.field_G = null;
         } else {
           var5 = var8.readUnsignedShort(12);
           try {
@@ -96,12 +96,12 @@ final class vd {
             } else {
               stackIn_22_0 = null;
             }
-            qe.field_G = stackIn_22_0;
+            RegistrationAgreementPane.field_G = stackIn_22_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             hi.a((Throwable) ((Object) var6), "CC1", 1);
-            qe.field_G = null;
+            RegistrationAgreementPane.field_G = null;
             ek.field_a = null;
           }
         }

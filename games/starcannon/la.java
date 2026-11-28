@@ -54,8 +54,8 @@ final class la {
 
     final static void a(int param0) {
         re.a(param0 ^ param0);
-        if (kj.field_E != null) {
-          wf.a(kj.field_E, false);
+        if (DialogMessagePane.field_E != null) {
+          wf.a(DialogMessagePane.field_E, false);
         }
         te.a((byte) 98);
         li.a(1392);

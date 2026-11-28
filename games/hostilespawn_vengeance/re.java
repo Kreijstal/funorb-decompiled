@@ -173,7 +173,7 @@ final class re {
         this.a((byte) -119, ob.field_E.toUpperCase());
         SoftwareRasterizer.setClip(0, 0, 640, 400);
         var3 = ib.a((byte) -72) ? 1 : 0;
-        if (!ta.p(3)) {
+        if (!StandardContentDialog.p(3)) {
           var4 = 0;
           while (var4 < 42) {
             stackIn_35_0 = hb.a(var4, NameSuggestionsPanel.field_E, false);
@@ -225,7 +225,7 @@ final class re {
           SoftwareRasterizer.setClip(72, 286, 568, 386);
           this.field_F.a(103, false);
           SoftwareRasterizer.resetClip();
-          stackIn_35_0 = ta.p(3);
+          stackIn_35_0 = StandardContentDialog.p(3);
         }
         boolean decompiledFrameRemainder0 = true;
         if (!stackIn_35_0) {
@@ -331,7 +331,7 @@ final class re {
             if (0 >= qg.field_p) {
               qg.field_p = 0;
             }
-            qi.b(qg.field_p, (byte) -116);
+            DialogMessagePane.b(qg.field_p, (byte) -116);
           }
         } else {
           if (this.field_f == 13) {
@@ -339,7 +339,7 @@ final class re {
             if (0 >= qg.field_p) {
               qg.field_p = 0;
             }
-            qi.b(qg.field_p, (byte) -116);
+            DialogMessagePane.b(qg.field_p, (byte) -116);
           }
         }
         if (this.field_d != 16) {
@@ -795,7 +795,7 @@ final class re {
           this.a(288, (byte) -55, 74, 57, 240);
         }
         if (rl.field_c < 0) {
-          if (!ta.p(3)) {
+          if (!StandardContentDialog.p(3)) {
             ModalDialog.field_O = false;
             if (var6 != 0) {
               this.a(138, (byte) -55, 74, 324, 235);
@@ -1168,7 +1168,7 @@ final class re {
         int var3;
         StringBuilder var4;
         String var5;
-        this.a((byte) 121, jf.field_a);
+        this.a((byte) 121, FullscreenNoticeType.field_a);
         var2 = null;
         if (om.field_b &&
           ~fg.field_c[bm.field_c] == ~rl.field_c) {
@@ -1238,7 +1238,7 @@ final class re {
         var4 = var3;
         var4Lifetime1 = var3;
         this.a((byte) -36, var3.toUpperCase());
-        if (ta.p(3)) {
+        if (StandardContentDialog.p(3)) {
           wh.field_d.drawParagraph(VolumeRampingMidiPcmStream.field_X.toUpperCase(), 64, 200, 512, 100, 16776960, -1, 1, 0, wh.field_d.field_y + wh.field_d.field_F);
           al.field_Z.drawParagraph(u.field_a.toUpperCase(), 64, 345, 512, 1000, 16776960, -1, 1, 0, wh.field_d.field_F + wh.field_d.field_y);
           hm.a(576, ModalDialog.field_J, false, 30, 353, 32);
@@ -1311,7 +1311,7 @@ final class re {
               }
               var4Lifetime2 = MouseInput.field_c;
             } else {
-              var4Lifetime2 = jf.field_h;
+              var4Lifetime2 = FullscreenNoticeType.field_h;
             }
           }
           if (var4Lifetime2 != null &&
@@ -1321,7 +1321,7 @@ final class re {
           }
           this.a(30, (byte) -55, 360, 56, 528);
           wh.field_d.drawCentred(pl.field_a.toUpperCase(), 320, 383, 16776960, -1);
-          if (ta.p(3)) {
+          if (StandardContentDialog.p(3)) {
             return;
           }
           stackIn_38_0 = var4Lifetime2;
@@ -1530,7 +1530,7 @@ final class re {
                   }
                   this.field_j = 1;
                   this.field_s = 0;
-                  if (((1 == jh.field_ab)) &&
+                  if (((1 == FullscreenStatusDialog.field_ab)) &&
                     ((this.field_d == 2))) {
                     PasswordValidator.a(true, 256, vg.field_h);
                   }
@@ -1555,7 +1555,7 @@ final class re {
                   NameSuggestionsPanel.field_I = 1;
                   ClientLookupTables.field_h = null;
                   hg.field_e = 1;
-                  jf.field_c = 128;
+                  FullscreenNoticeType.field_c = 128;
                   if (var7 == 0) {
                     break regionExit1;
                   }
@@ -1576,7 +1576,7 @@ final class re {
                   (decompiledFrameRemainder5) &&
                   (decompiledFrameRemainder4)) {
                   this.field_s = 10;
-                  u.field_f[26] = jh.field_bb;
+                  u.field_f[26] = FullscreenStatusDialog.field_bb;
                   this.field_j = 1;
                   stackIn_151_0 = dd.field_o;
                   stackIn_151_1 = 10;
@@ -1586,10 +1586,10 @@ final class re {
                     stackIn_152_2 = ja.field_h;
                   }
                   stackIn_151_0[stackIn_151_1] = stackIn_152_2;
-                  if (ta.p(3)) {
+                  if (StandardContentDialog.p(3)) {
                     stackIn_156_0 = (MidiPcmStream.field_r != 0);
                     stackIn_159_1 = !(DelayedPacket.field_q.isEmpty(-20049));
-                    if (wb.a(stackIn_156_0, stackIn_159_1, false, rg.a((byte) -51)) != null) {
+                    if (ResizableModalDialog.a(stackIn_156_0, stackIn_159_1, false, rg.a((byte) -51)) != null) {
                       this.field_s = 9;
                     }
                   }
@@ -1600,13 +1600,13 @@ final class re {
                     this.field_d == 8) {
                     this.field_s = 2;
                   }
-                  if (jh.field_ab != 1) {
+                  if (FullscreenStatusDialog.field_ab != 1) {
                     break regionExit1;
                   }
                   if (this.field_s != 10) {
                     break regionExit1;
                   }
-                  PasswordValidator.a(false, 256, pe.field_ab);
+                  PasswordValidator.a(false, 256, ProgressDialog.field_ab);
                   if (var7 == 0) {
                     break regionExit1;
                   }
@@ -1713,7 +1713,7 @@ final class re {
                   }
                   if (this.field_s != 0) {
                   }
-                  if (1 != jh.field_ab) {
+                  if (1 != FullscreenStatusDialog.field_ab) {
                     break regionExit1;
                   }
                   ja.a((byte) 103, vg.field_h, true);
@@ -1767,7 +1767,7 @@ final class re {
                     var4_int = 256;
                   }
                   qg.field_p = var4_int;
-                  qi.b(var4_int, (byte) -90);
+                  DialogMessagePane.b(var4_int, (byte) -90);
                   if (var7 == 0) {
                     break regionExit1;
                   }
@@ -1800,7 +1800,7 @@ final class re {
                     decompiledFrameRemainder23 = false;
                   }
                   else {
-                    if (ta.p(3)) {
+                    if (StandardContentDialog.p(3)) {
                       this.field_t = 1;
                       if (var7 == 0) {
                         break regionExit1;
@@ -1869,7 +1869,7 @@ final class re {
                 }
                 if ((decompiledFrameRemainder23) &&
                   (decompiledFrameRemainder21)) {
-                  if (jh.field_ab == 1) {
+                  if (FullscreenStatusDialog.field_ab == 1) {
                     PasswordValidator.a(true, 256, vg.field_h);
                   }
                   qb.field_k = qb.field_k + MidiPcmStream.field_r;
@@ -1949,7 +1949,7 @@ final class re {
               (decompiledFrameCompleted1)) {
               this.field_j = 1;
               this.field_s = 4;
-              if (ta.p(3)) {
+              if (StandardContentDialog.p(3)) {
                 this.field_t = 1;
                 if (var7 == 0) {
                   break regionExit1;
@@ -1987,7 +1987,7 @@ final class re {
                   cf.field_s = 0;
                 }
                 rg.a((byte) -21);
-                ta.a((byte) -117, rl.field_c);
+                StandardContentDialog.a((byte) -117, rl.field_c);
                 decompiledFrameRemainder0 = (var7 != 0);
               }
               if ((decompiledFrameRemainder0) &&
@@ -2011,16 +2011,16 @@ final class re {
                 u.field_f[7] = nl.field_f;
                 this.field_s = 8;
                 this.field_j = 1;
-                ta.a((byte) -126, rl.field_c);
+                StandardContentDialog.a((byte) -126, rl.field_c);
               }
               var3_ref_ic__ = p.field_m;
               p.field_m[1] = null;
-              u.field_f[7] = jh.field_bb;
+              u.field_f[7] = FullscreenStatusDialog.field_bb;
               NameSuggestionsPanel.field_I = 1;
               hg.field_e = 1;
-              if (jh.field_ab == 1) {
+              if (FullscreenStatusDialog.field_ab == 1) {
               }
-              jf.field_c = 128;
+              FullscreenNoticeType.field_c = 128;
               if (!param1) {
                 this.field_t = 0;
               }
@@ -2085,7 +2085,7 @@ final class re {
                 VolumeRampingMidiPcmStream.field_ib[1] = 0;
                 VolumeRampingMidiPcmStream.field_U[0] = 1;
                 VolumeRampingMidiPcmStream.field_U[1] = 0;
-                jf.field_g = 0;
+                FullscreenNoticeType.field_g = 0;
                 qh.field_k = 0;
               }
               if (1 == bm.field_c &&
@@ -2098,9 +2098,9 @@ final class re {
               uf.field_h = false;
               bh.field_d = 0;
               gf.field_j = 0;
-              wb.field_R = 0;
+              ResizableModalDialog.field_R = 0;
               pl.field_l = false;
-              if (jh.field_ab != 1) {
+              if (FullscreenStatusDialog.field_ab != 1) {
                 break;
               }
               PasswordValidator.a(true, 256, rb.field_s);
@@ -2389,7 +2389,7 @@ final class re {
                         dupTemp$0 = this.field_w[var6Lifetime1][var8];
                         dupTemp$0.field_T = dupTemp$0.field_T & 16742263;
                       }
-                      if (ta.p(param1 + 10102) &&
+                      if (StandardContentDialog.p(param1 + 10102) &&
                         pf.field_o == 1 &&
                         this.field_w[var6Lifetime1][var8].field_Eb) {
                         ModalDialog.field_O = true;
@@ -2667,7 +2667,7 @@ final class re {
         String var5Lifetime3;
         String var12Lifetime1;
         String var12Lifetime2;
-        u.field_f[26] = jf.field_e;
+        u.field_f[26] = FullscreenNoticeType.field_e;
         AccountRegistrationPanel.field_L.drawCentred(tc.field_d, 320, 95, 16777215, -1);
         var3 = 0;
         var4 = wl.b(25685);
@@ -2689,29 +2689,29 @@ final class re {
             var5Lifetime3 = var14;
             var5Lifetime3 = var12Lifetime2;
             var3Lifetime2 = ad.field_a / 50;
-            var13 = var12Lifetime2 + "<br>" + c.field_d + jh.a((byte) -80, var3Lifetime2);
+            var13 = var12Lifetime2 + "<br>" + c.field_d + FullscreenStatusDialog.a((byte) -80, var3Lifetime2);
             var14 = var13;
             var5Lifetime3 = var14;
             var5Lifetime3 = var13;
             var3Lifetime2 = ub.field_a[bm.field_c][rl.field_c - 1];
-            var5Lifetime3 = var13 + "<br>" + ki.field_d + jh.a((byte) -67, var3Lifetime2);
+            var5Lifetime3 = var13 + "<br>" + ki.field_d + FullscreenStatusDialog.a((byte) -67, var3Lifetime2);
             var14 = var5Lifetime3;
             var5Lifetime3 = var14;
             if (HostileSpawn.field_I) {
               var3Lifetime2 = ad.field_a / 50;
-              var14 = var5Lifetime3 + "<br>" + c.field_d + jh.a((byte) -61, var3Lifetime2);
+              var14 = var5Lifetime3 + "<br>" + c.field_d + FullscreenStatusDialog.a((byte) -61, var3Lifetime2);
               var5Lifetime3 = var14;
               var5Lifetime3 = var14;
               var3Lifetime2 = ub.field_a[bm.field_c][rl.field_c - 1];
-              var5Lifetime3 = var14 + "<br>" + ki.field_d + jh.a((byte) -73, var3Lifetime2);
+              var5Lifetime3 = var14 + "<br>" + ki.field_d + FullscreenStatusDialog.a((byte) -73, var3Lifetime2);
             }
           } else {
             var3Lifetime2 = ad.field_a / 50;
-            var14 = var5Lifetime3 + "<br>" + c.field_d + jh.a((byte) -61, var3Lifetime2);
+            var14 = var5Lifetime3 + "<br>" + c.field_d + FullscreenStatusDialog.a((byte) -61, var3Lifetime2);
             var5Lifetime3 = var14;
             var5Lifetime3 = var14;
             var3Lifetime2 = ub.field_a[bm.field_c][rl.field_c - 1];
-            var5Lifetime3 = var14 + "<br>" + ki.field_d + jh.a((byte) -73, var3Lifetime2);
+            var5Lifetime3 = var14 + "<br>" + ki.field_d + FullscreenStatusDialog.a((byte) -73, var3Lifetime2);
           }
         }
         if (MidiPcmStream.field_r > 0) {
@@ -2978,13 +2978,13 @@ final class re {
         } else {
           var3 = this.a(il.field_c[0], df.field_b, var3, df.field_e, (byte) 80, il.field_c[1]);
         }
-        var3 = this.a(pl.field_f, wl.field_a, var3, rl.field_a, (byte) 80, qi.field_H);
+        var3 = this.a(pl.field_f, wl.field_a, var3, rl.field_a, (byte) 80, DialogMessagePane.field_H);
         if (param0 != 82) {
           this.field_o = 34;
         }
         var3 = this.a(il.field_c[4], field_I, var3, tk.field_f, (byte) 80, il.field_c[3]);
         var3 = this.a(il.field_c[6], u.field_c, var3, ClientLookupTables.field_b, (byte) 80, il.field_c[5]);
-        var3 = this.a(jf.field_f, param0 + 8, var3);
+        var3 = this.a(FullscreenNoticeType.field_f, param0 + 8, var3);
         var3 = this.a((RgbSprite) null, al.field_S, var3, (String) null, (byte) 80, il.field_c[7]);
         var3 = this.a(il.field_c[10], g.field_K, var3, ln.field_p, (byte) 80, il.field_c[8]);
         var3 = this.a((RgbSprite) null, MouseWheelInput.field_a, var3, (String) null, (byte) 80, il.field_c[9]);
@@ -3333,7 +3333,7 @@ final class re {
                   break;
                 }
               case 4:
-                var8 = (!ta.p(3)) && (var19 == 0) ? (140) : (240);
+                var8 = (!StandardContentDialog.p(3)) && (var19 == 0) ? (140) : (240);
                 var11 = 1;
                 if (var19 == 0) {
                   break;
@@ -3364,7 +3364,7 @@ final class re {
                 var5 = 460;
                 var8 = 200;
                 var9 = 460;
-                if (ta.p(3)) {
+                if (StandardContentDialog.p(3)) {
                   var9 = 400;
                 }
                 if (EditableTextField.field_L != 2 &&
@@ -3611,7 +3611,7 @@ final class re {
         this.l(param0 - 33);
         this.e((byte) -29);
         SoftwareRasterizer.clearRaster();
-        te.a(true);
+        RegistrationAgreementPane.a(true);
         this.field_e = 256;
         this.a(430, 32, 32, -18, 608);
         if (param0 != 26) {
@@ -3662,7 +3662,7 @@ final class re {
         String var14;
         String var5Lifetime1;
         String var5Lifetime2;
-        u.field_f[26] = jh.field_bb;
+        u.field_f[26] = FullscreenStatusDialog.field_bb;
         AccountRegistrationPanel.field_L.drawCentred(i.field_e.toUpperCase(), 320, 95, 16724736, -1);
         var4 = wl.b(25685);
         var12 = vg.a(new String[]{Integer.toString(var4)}, 74, bi.field_f);
@@ -3672,16 +3672,16 @@ final class re {
         if (0 < MidiPcmStream.field_r) {
           if (hh.field_d >= rl.field_c) {
             var4 = sg.field_i / 50;
-            var5Lifetime2 = var12 + "<br>" + oa.field_j + jh.a((byte) -80, var4);
+            var5Lifetime2 = var12 + "<br>" + oa.field_j + FullscreenStatusDialog.a((byte) -80, var4);
             if (HostileSpawn.field_I) {
               var13 = var5Lifetime2 + "<br>" + vg.a(new String[]{Integer.toString(rl.field_c - hh.field_d)}, 50, GameCanvas.field_f);
               var4 = sg.field_i / 50;
-              var5Lifetime2 = var13 + "<br>" + oa.field_j + jh.a((byte) -128, var4);
+              var5Lifetime2 = var13 + "<br>" + oa.field_j + FullscreenStatusDialog.a((byte) -128, var4);
             }
           } else {
             var13 = var5Lifetime2 + "<br>" + vg.a(new String[]{Integer.toString(rl.field_c - hh.field_d)}, 50, GameCanvas.field_f);
             var4 = sg.field_i / 50;
-            var5Lifetime2 = var13 + "<br>" + oa.field_j + jh.a((byte) -128, var4);
+            var5Lifetime2 = var13 + "<br>" + oa.field_j + FullscreenStatusDialog.a((byte) -128, var4);
           }
         }
         if (MidiPcmStream.field_r > 0) {
@@ -3697,16 +3697,16 @@ final class re {
         if (param1 == 9) {
           stackIn_15_0 = (MidiPcmStream.field_r != 0);
           stackIn_18_1 = (DelayedPacket.field_q.isEmpty(-20049)) ? false : true;
-          if (wb.a(stackIn_15_0, stackIn_18_1, false, rg.a((byte) -117)) != null) {
+          if (ResizableModalDialog.a(stackIn_15_0, stackIn_18_1, false, rg.a((byte) -117)) != null) {
             stackIn_21_0 = new String[]{ch.field_d.toLowerCase()};
             stackIn_21_1 = 74;
             stackIn_21_2 = new StringBuilder();
             stackIn_22_3 = (MidiPcmStream.field_r == 0) ? false : true;
             stackIn_25_4 = (DelayedPacket.field_q.isEmpty(-20049)) ? false : true;
-            stackIn_27_2 = ((StringBuilder) (Object) stackIn_21_2).append(RichTextWidget.a(wb.a(stackIn_22_3, stackIn_25_4, false, rg.a((byte) 121)), -51, '#')[0]).append(" ");
+            stackIn_27_2 = ((StringBuilder) (Object) stackIn_21_2).append(RichTextWidget.a(ResizableModalDialog.a(stackIn_22_3, stackIn_25_4, false, rg.a((byte) 121)), -51, '#')[0]).append(" ");
             stackIn_28_3 = (0 == MidiPcmStream.field_r) ? false : true;
             stackIn_31_4 = (DelayedPacket.field_q.isEmpty(-20049)) ? false : true;
-            var14 = vg.a(stackIn_21_0, stackIn_21_1, ((StringBuilder) (Object) stackIn_27_2).append(RichTextWidget.a(wb.a(stackIn_28_3, stackIn_31_4, false, rg.a((byte) 122)), -119, '#')[1]).toString());
+            var14 = vg.a(stackIn_21_0, stackIn_21_1, ((StringBuilder) (Object) stackIn_27_2).append(RichTextWidget.a(ResizableModalDialog.a(stackIn_28_3, stackIn_31_4, false, rg.a((byte) 122)), -119, '#')[1]).toString());
             al.field_Z.drawParagraph(var14.toUpperCase(), 70, 165, 500, -8 + (-164 + param2), 16711680, -1, 1, 2, 12);
           }
         }
@@ -3720,7 +3720,7 @@ final class re {
         var10 = 180;
         this.a(var8 + 16, (byte) -55, -8 + var10, var9 - 8, 16 + var7);
         wh.field_d.drawParagraph(var5Lifetime2.toUpperCase(), var9, var10, var7, var8, 16776960, -1, 1, 1, var6);
-        if (!ta.p(3)) {
+        if (!StandardContentDialog.p(3)) {
           this.e(16777215, 340);
         }
         return;
@@ -3732,14 +3732,14 @@ final class re {
         var3 = HostileSpawn.field_I ? 1 : 0;
         if (12 != this.field_f) {
           if (this.field_f == 13) {
-            if (jh.field_ab == 0) {
+            if (FullscreenStatusDialog.field_ab == 0) {
               this.f((byte) 121);
             }
             qg.field_p = qg.field_p + 32;
             if (256 < qg.field_p) {
               qg.field_p = 256;
             }
-            qi.b(qg.field_p, (byte) -99);
+            DialogMessagePane.b(qg.field_p, (byte) -99);
             if (var3 != 0) {
               if (uj.field_l == 0) {
                 this.f((byte) 110);
@@ -3999,12 +3999,12 @@ final class re {
         if (param0 != 152) {
           return;
         }
-        var13 = c.field_e.toUpperCase() + jh.a((byte) -66, var8);
+        var13 = c.field_e.toUpperCase() + FullscreenStatusDialog.a((byte) -66, var8);
         wh.field_d.drawString(var13, var9, var7Lifetime1, 16776960, -1);
         if (rl.field_c >= 0 &&
           rl.field_c < ub.field_a[bm.field_c].length) {
           var8Lifetime1 = ub.field_a[bm.field_c][rl.field_c];
-          var14 = ki.field_d.toUpperCase() + jh.a((byte) -105, var8Lifetime1);
+          var14 = ki.field_d.toUpperCase() + FullscreenStatusDialog.a((byte) -105, var8Lifetime1);
           var9Lifetime1 = 348;
           wh.field_d.drawRightAligned(var14, var9Lifetime1, var7Lifetime1, 16776960, -1);
         }
@@ -4074,7 +4074,7 @@ final class re {
         String var24 = null;
         String var25 = null;
         var16 = HostileSpawn.field_I ? 1 : 0;
-        u.field_f[26] = jf.field_e;
+        u.field_f[26] = FullscreenNoticeType.field_e;
         if (bm.field_c != 0) {
           stackIn_5_0 = (ng.field_k) ? 2 : 1;
         } else {
@@ -4106,7 +4106,7 @@ final class re {
           var18 = vg.a(new String[]{Integer.toString(10 - hh.field_d)}, 28, GameCanvas.field_f).toUpperCase();
           var10 += 26;
           ((BitmapFont) ((Object) var12)).drawCentred(var18, var9, var10, var13, -1);
-          var19 = DirectByteStorage.field_m + jh.a((byte) -67, sg.field_i / 50);
+          var19 = DirectByteStorage.field_m + FullscreenStatusDialog.a((byte) -67, sg.field_i / 50);
           var10 += 26;
           var20 = var19.toUpperCase();
           var11 = var20;
@@ -4122,7 +4122,7 @@ final class re {
                 continue;
               }
             } else {
-              var21 = ki.field_d + jh.a((byte) -78, var14);
+              var21 = ki.field_d + FullscreenStatusDialog.a((byte) -78, var14);
               var22 = var21.toUpperCase();
               ((BitmapFont) ((Object) var12)).drawCentred(var22, var9, var10, var13, -1);
               var23 = vg.a(new String[]{"<col=ffffff>" + MidiPcmStream.field_r + "</col>"}, 67, o.field_j.toUpperCase());
@@ -4672,7 +4672,7 @@ final class re {
             ClientLookupTables.field_h = null;
             NameSuggestionsPanel.field_I = 1;
             hg.field_e = 1;
-            jf.field_c = 128;
+            FullscreenNoticeType.field_c = 128;
             le.field_D = 0;
             return;
           }
@@ -4724,8 +4724,8 @@ final class re {
           if (this.field_j == 257) {
             var8 = this.field_s;
             if (this.field_s == 0 &&
-              !ta.p(3) &&
-              0 >= wb.field_S) {
+              !StandardContentDialog.p(3) &&
+              0 >= ResizableModalDialog.field_S) {
             }
             this.field_s = this.field_d;
             this.field_d = var8;
@@ -4737,7 +4737,7 @@ final class re {
               if (rl.field_c < 0) {
                 rl.field_c = 0;
               }
-              ta.a((byte) 2, rl.field_c);
+              StandardContentDialog.a((byte) 2, rl.field_c);
             }
             if (this.field_d == 4) {
               hg.field_e = 0;
@@ -4878,7 +4878,7 @@ final class re {
         int stackIn_18_1 = 0;
         int[] stackIn_19_2 = null;
         int var2;
-        if (ta.p(3)) {
+        if (StandardContentDialog.p(3)) {
           return;
         }
         if (ib.a((byte) -72) &&
@@ -4960,7 +4960,7 @@ final class re {
         }
         if (this.field_d == 14) {
           this.field_d = 12;
-          if (wb.field_S <= 0) {
+          if (ResizableModalDialog.field_S <= 0) {
             this.field_d = 15;
           }
         }
@@ -4989,7 +4989,7 @@ final class re {
 
     private final void d(int param0) {
         ic var2 = null;
-        if (!ta.p(param0)) {
+        if (!StandardContentDialog.p(param0)) {
           if (null == p.field_m[bm.field_c]) {
             p.field_m[bm.field_c] = pi.a(10, 6413, 3, EmailFormatValidator.field_p[bm.field_c], 1);
           }

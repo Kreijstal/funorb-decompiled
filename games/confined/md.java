@@ -11,7 +11,7 @@ final class md {
         if (param0 >= -86) {
           field_a = 92;
         }
-        ef.field_tb = 0;
+        StandardContentDialog.field_tb = 0;
         rm.field_f = new eg(0);
         hc.field_u = PrimaryNodeDeque.field_c;
         KeyboardInput.field_f = -1;

@@ -45,7 +45,7 @@ abstract class MouseWheelInput {
               for (var5_int = 0; var5_int < AlphaWidgetContainer.field_O; var5_int++) {
                 AlphaWidgetContainer.field_N.payload[var5_int] = var4_ref_sa.field_k[var5_int];
               }
-              nf.field_U = MouseInputHandler.field_b;
+              FullscreenStatusDialog.field_U = MouseInputHandler.field_b;
               MouseInputHandler.field_b = FullscreenFocusCanvas.field_e;
               FullscreenFocusCanvas.field_e = ob.field_h;
               ob.field_h = var4_ref_sa.field_j;
@@ -80,7 +80,7 @@ abstract class MouseWheelInput {
               return false;
             }
             if (rh.field_i == 0) {
-              nf.field_U = MouseInputHandler.field_b;
+              FullscreenStatusDialog.field_U = MouseInputHandler.field_b;
               MouseInputHandler.field_b = FullscreenFocusCanvas.field_e;
               FullscreenFocusCanvas.field_e = ob.field_h;
               ob.field_h = qg.field_a;

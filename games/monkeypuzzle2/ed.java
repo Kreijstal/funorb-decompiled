@@ -40,14 +40,14 @@ final class ed {
     }
 
     final static void a(ResourceArchive param0, int param1) {
-        sf var2 = null;
+        VorbisSample var2 = null;
         try {
-          sf.a(param0.getFileByName("", "headers.packvorbis", 30));
+          VorbisSample.decodeSetup(param0.getFileByName("", "headers.packvorbis", 30));
           if (param1 < 44) {
             ed.greatestCommonDivisor(-96, -76, 44);
           }
-          var2 = sf.a(param0, "jagex logo2.packvorbis", "");
-          var2.a();
+          var2 = VorbisSample.loadByName(param0, "jagex logo2.packvorbis", "");
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "ed.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

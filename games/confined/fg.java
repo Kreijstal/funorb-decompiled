@@ -23,9 +23,9 @@ final class fg extends eh {
 
     final static void a(int param0, int param1, byte param2) {
         int var3;
-        if (null == ci.field_a ||
-          !(ci.field_a.length >= param1)) {
-          ci.field_a = new int[param1 * 2];
+        if (null == FullscreenNoticeType.field_a ||
+          !(FullscreenNoticeType.field_a.length >= param1)) {
+          FullscreenNoticeType.field_a = new int[param1 * 2];
         }
         if (null == an.field_n) {
           an.field_n = new int[2 * param1];
@@ -46,9 +46,9 @@ final class fg extends eh {
             !(ik.field_cb.length >= param1)) {
             ik.field_cb = new int[param1 * 2];
           }
-          if (sj.field_rb == null ||
-            !(param0 + param1 <= sj.field_rb.length)) {
-            sj.field_rb = new int[2 * (param1 + param0)];
+          if (ContentTransitionDialog.field_rb == null ||
+            !(param0 + param1 <= ContentTransitionDialog.field_rb.length)) {
+            ContentTransitionDialog.field_rb = new int[2 * (param1 + param0)];
           }
           if (null == ua.field_a ||
             !(param1 <= ua.field_a.length)) {
@@ -72,9 +72,9 @@ final class fg extends eh {
                 !(ik.field_cb.length >= param1)) {
                 ik.field_cb = new int[param1 * 2];
               }
-              if (sj.field_rb == null ||
-                !(param0 + param1 <= sj.field_rb.length)) {
-                sj.field_rb = new int[2 * (param1 + param0)];
+              if (ContentTransitionDialog.field_rb == null ||
+                !(param0 + param1 <= ContentTransitionDialog.field_rb.length)) {
+                ContentTransitionDialog.field_rb = new int[2 * (param1 + param0)];
               }
               if (null == ua.field_a ||
                 !(param1 <= ua.field_a.length)) {
@@ -86,9 +86,9 @@ final class fg extends eh {
                   !(ik.field_cb.length >= param1)) {
                   ik.field_cb = new int[param1 * 2];
                 }
-                if (sj.field_rb == null ||
-                  !(param0 + param1 <= sj.field_rb.length)) {
-                  sj.field_rb = new int[2 * (param1 + param0)];
+                if (ContentTransitionDialog.field_rb == null ||
+                  !(param0 + param1 <= ContentTransitionDialog.field_rb.length)) {
+                  ContentTransitionDialog.field_rb = new int[2 * (param1 + param0)];
                 }
                 if (null == ua.field_a ||
                   !(param1 <= ua.field_a.length)) {
@@ -100,9 +100,9 @@ final class fg extends eh {
                   !(ik.field_cb.length >= param1)) {
                   ik.field_cb = new int[param1 * 2];
                 }
-                if (sj.field_rb == null ||
-                  !(param0 + param1 <= sj.field_rb.length)) {
-                  sj.field_rb = new int[2 * (param1 + param0)];
+                if (ContentTransitionDialog.field_rb == null ||
+                  !(param0 + param1 <= ContentTransitionDialog.field_rb.length)) {
+                  ContentTransitionDialog.field_rb = new int[2 * (param1 + param0)];
                 }
                 if (null == ua.field_a ||
                   !(param1 <= ua.field_a.length)) {
@@ -124,9 +124,9 @@ final class fg extends eh {
                   !(ik.field_cb.length >= param1)) {
                   ik.field_cb = new int[param1 * 2];
                 }
-                if (sj.field_rb == null ||
-                  !(param0 + param1 <= sj.field_rb.length)) {
-                  sj.field_rb = new int[2 * (param1 + param0)];
+                if (ContentTransitionDialog.field_rb == null ||
+                  !(param0 + param1 <= ContentTransitionDialog.field_rb.length)) {
+                  ContentTransitionDialog.field_rb = new int[2 * (param1 + param0)];
                 }
                 if (null == ua.field_a ||
                   !(param1 <= ua.field_a.length)) {
@@ -138,9 +138,9 @@ final class fg extends eh {
                     !(ik.field_cb.length >= param1)) {
                     ik.field_cb = new int[param1 * 2];
                   }
-                  if (sj.field_rb == null ||
-                    !(param0 + param1 <= sj.field_rb.length)) {
-                    sj.field_rb = new int[2 * (param1 + param0)];
+                  if (ContentTransitionDialog.field_rb == null ||
+                    !(param0 + param1 <= ContentTransitionDialog.field_rb.length)) {
+                    ContentTransitionDialog.field_rb = new int[2 * (param1 + param0)];
                   }
                   if (null == ua.field_a ||
                     !(param1 <= ua.field_a.length)) {
@@ -152,9 +152,9 @@ final class fg extends eh {
                     !(ik.field_cb.length >= param1)) {
                     ik.field_cb = new int[param1 * 2];
                   }
-                  if (sj.field_rb == null ||
-                    !(param0 + param1 <= sj.field_rb.length)) {
-                    sj.field_rb = new int[2 * (param1 + param0)];
+                  if (ContentTransitionDialog.field_rb == null ||
+                    !(param0 + param1 <= ContentTransitionDialog.field_rb.length)) {
+                    ContentTransitionDialog.field_rb = new int[2 * (param1 + param0)];
                   }
                   if (null == ua.field_a ||
                     !(param1 <= ua.field_a.length)) {
@@ -175,9 +175,9 @@ final class fg extends eh {
                     !(ik.field_cb.length >= param1)) {
                     ik.field_cb = new int[param1 * 2];
                   }
-                  if (sj.field_rb == null ||
-                    !(param0 + param1 <= sj.field_rb.length)) {
-                    sj.field_rb = new int[2 * (param1 + param0)];
+                  if (ContentTransitionDialog.field_rb == null ||
+                    !(param0 + param1 <= ContentTransitionDialog.field_rb.length)) {
+                    ContentTransitionDialog.field_rb = new int[2 * (param1 + param0)];
                   }
                   if (null == ua.field_a ||
                     !(param1 <= ua.field_a.length)) {
@@ -189,9 +189,9 @@ final class fg extends eh {
                       !(ik.field_cb.length >= param1)) {
                       ik.field_cb = new int[param1 * 2];
                     }
-                    if (sj.field_rb == null ||
-                      !(param0 + param1 <= sj.field_rb.length)) {
-                      sj.field_rb = new int[2 * (param1 + param0)];
+                    if (ContentTransitionDialog.field_rb == null ||
+                      !(param0 + param1 <= ContentTransitionDialog.field_rb.length)) {
+                      ContentTransitionDialog.field_rb = new int[2 * (param1 + param0)];
                     }
                     if (null == ua.field_a ||
                       !(param1 <= ua.field_a.length)) {
@@ -203,9 +203,9 @@ final class fg extends eh {
                       !(ik.field_cb.length >= param1)) {
                       ik.field_cb = new int[param1 * 2];
                     }
-                    if (sj.field_rb == null ||
-                      !(param0 + param1 <= sj.field_rb.length)) {
-                      sj.field_rb = new int[2 * (param1 + param0)];
+                    if (ContentTransitionDialog.field_rb == null ||
+                      !(param0 + param1 <= ContentTransitionDialog.field_rb.length)) {
+                      ContentTransitionDialog.field_rb = new int[2 * (param1 + param0)];
                     }
                     if (null == ua.field_a ||
                       !(param1 <= ua.field_a.length)) {
@@ -226,9 +226,9 @@ final class fg extends eh {
                     !(ik.field_cb.length >= param1)) {
                     ik.field_cb = new int[param1 * 2];
                   }
-                  if (sj.field_rb == null ||
-                    !(param0 + param1 <= sj.field_rb.length)) {
-                    sj.field_rb = new int[2 * (param1 + param0)];
+                  if (ContentTransitionDialog.field_rb == null ||
+                    !(param0 + param1 <= ContentTransitionDialog.field_rb.length)) {
+                    ContentTransitionDialog.field_rb = new int[2 * (param1 + param0)];
                   }
                   if (null == ua.field_a ||
                     !(param1 <= ua.field_a.length)) {
@@ -240,9 +240,9 @@ final class fg extends eh {
                       !(ik.field_cb.length >= param1)) {
                       ik.field_cb = new int[param1 * 2];
                     }
-                    if (sj.field_rb == null ||
-                      !(param0 + param1 <= sj.field_rb.length)) {
-                      sj.field_rb = new int[2 * (param1 + param0)];
+                    if (ContentTransitionDialog.field_rb == null ||
+                      !(param0 + param1 <= ContentTransitionDialog.field_rb.length)) {
+                      ContentTransitionDialog.field_rb = new int[2 * (param1 + param0)];
                     }
                     if (null == ua.field_a ||
                       !(param1 <= ua.field_a.length)) {
@@ -254,9 +254,9 @@ final class fg extends eh {
                       !(ik.field_cb.length >= param1)) {
                       ik.field_cb = new int[param1 * 2];
                     }
-                    if (sj.field_rb == null ||
-                      !(param0 + param1 <= sj.field_rb.length)) {
-                      sj.field_rb = new int[2 * (param1 + param0)];
+                    if (ContentTransitionDialog.field_rb == null ||
+                      !(param0 + param1 <= ContentTransitionDialog.field_rb.length)) {
+                      ContentTransitionDialog.field_rb = new int[2 * (param1 + param0)];
                     }
                     if (null == ua.field_a ||
                       !(param1 <= ua.field_a.length)) {

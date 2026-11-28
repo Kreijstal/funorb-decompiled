@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class ao extends kda {
-    static d field_d;
+    static BirthDateChatEnableForm field_d;
     static String field_c;
 
     ao() {

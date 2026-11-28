@@ -22,12 +22,12 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5) {
         NetworkGameClient.field_A[AccountRequestState.field_b] = param3;
-        vn.field_Ab[AccountRequestState.field_b] = AccountRequestState.field_b;
+        ProgressMessageDialog.field_Ab[AccountRequestState.field_b] = AccountRequestState.field_b;
         hg.field_d[AccountRequestState.field_b] = param5;
         if (!(nj.field_t <= param5)) {
           ArrayWidgetContainer.field_F = param5;
         }
-        if (param5 > bj.field_gb) {
+        if (param5 > ContentTransitionDialog.field_gb) {
           eb.field_y = param5;
         }
         BufferedSocket.field_e[AccountRequestState.field_b] = param0;

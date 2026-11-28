@@ -30,7 +30,7 @@ final class ah {
           PacketBuffer.c(-7668);
         }
         if (null == pa.field_z) {
-          jf.m(115);
+          StandardContentDialog.m(115);
         }
         if (null == ResourceArchive.field_j) {
           hl.a((byte) 50);
@@ -90,7 +90,7 @@ final class ah {
             stackIn_13_0 = (byte[]) (param2);
             return stackIn_13_0;
           }
-          stackIn_11_0 = ek.copyBytes(param2, -48);
+          stackIn_11_0 = StripedProgressWidget.copyBytes(param2, -48);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

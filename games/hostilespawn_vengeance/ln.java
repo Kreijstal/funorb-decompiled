@@ -81,7 +81,7 @@ final class ln {
           if (fl.field_b != null) {
             s.field_b.a(122, fl.field_b);
           }
-          ml.a(s.field_b, nb.field_L, 0, NetworkArchiveRequest.field_z, ob.field_s);
+          ml.a(s.field_b, GuestPlayConfirmationForm.field_L, 0, NetworkArchiveRequest.field_z, ob.field_s);
           s.field_b.a(true, -var5_int + s.field_b.field_i);
           RichTextLayout.d(-1, -22370);
           return;

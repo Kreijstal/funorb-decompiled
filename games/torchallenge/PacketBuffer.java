@@ -220,7 +220,7 @@ class PacketBuffer extends IntrusiveNode {
               aj.field_c = TextLineMetrics.field_a;
             }
             if (TextLineMetrics.field_a == aj.field_c &&
-              pe.a((byte) 124, 1)) {
+              ProgressDialog.a((byte) 124, 1)) {
               var6_int = id.field_b.readUnsignedByte(-115);
               if (var6_int != 0) {
                 cb.field_g = var6_int;
@@ -236,7 +236,7 @@ class PacketBuffer extends IntrusiveNode {
               return stackIn_20_0;
             }
             if (aj.field_c == BufferedCacheFile.field_n &&
-              pe.a((byte) 105, 8)) {
+              ProgressDialog.a((byte) 105, 8)) {
               lh.field_u = id.field_b.readLong(-125);
               id.field_b.position = 0;
               DisplayNameSelectionPanel.a(param2, false, param1, TextLineMetrics.field_c, param0);
@@ -244,7 +244,7 @@ class PacketBuffer extends IntrusiveNode {
             }
             boolean decompiledFrameRemainder0 = true;
             if (cd.field_s == aj.field_c &&
-              pe.a((byte) 80, 1)) {
+              ProgressDialog.a((byte) 80, 1)) {
               var6_intLifetime1 = id.field_b.readUnsignedByte(-97);
               le.field_c = null;
               cb.field_g = var6_intLifetime1;
@@ -332,11 +332,11 @@ class PacketBuffer extends IntrusiveNode {
               if (UiComponent.field_o > 0) {
                 LoginPanel.field_S = true;
               }
-              dk.field_s.a((byte) 61, wa.field_rb);
+              dk.field_s.a((byte) 61, ProgressMessageDialog.field_rb);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
-                wa.field_rb[var8Lifetime1] = wa.field_rb[var8Lifetime1] + 50;
+                ProgressMessageDialog.field_rb[var8Lifetime1] = ProgressMessageDialog.field_rb[var8Lifetime1] + 50;
               }
-              id.field_b.a((byte) 61, wa.field_rb);
+              id.field_b.a((byte) 61, ProgressMessageDialog.field_rb);
               stackIn_79_0 = cb.field_g;
               return stackIn_79_0;
             }
@@ -362,7 +362,7 @@ class PacketBuffer extends IntrusiveNode {
                 if (ProxySocketConnector.e(92) > 30000L) {
                   SecondaryNodeDequeIterator.field_c = aj.field_d;
                 } else {
-                  SecondaryNodeDequeIterator.field_c = nh.field_ib;
+                  SecondaryNodeDequeIterator.field_c = FullscreenStatusDialog.field_ib;
                 }
                 ck.field_b = false;
                 stackIn_101_0 = 3;

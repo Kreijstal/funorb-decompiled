@@ -13,7 +13,7 @@ final class ff extends nh {
     }
 
     final static void a(int param0, int param1) {
-        ha var2 = pg.field_fb;
+        ha var2 = StandardContentDialog.field_fb;
         var2.f(param1, 950);
         var2.writeByte(false, param0);
         var2.writeByte(false, 0);

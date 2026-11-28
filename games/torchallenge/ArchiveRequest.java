@@ -16,7 +16,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         ub.field_h = 0;
         DirectByteStorage.field_j = 0;
         kk.field_i = 0;
-        ll.field_d = eh.field_k;
+        FullscreenNoticeType.field_d = eh.field_k;
         ByteStorage.field_c = new rl(2);
         ByteStorage.field_c.a((byte) -123, param1, -1, pf.a(ph.field_d, -19503, ConfirmedEmailAvailabilityValidator.field_u));
     }

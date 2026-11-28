@@ -94,7 +94,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         String var2 = fb.a(AccountNameAvailabilityValidator.field_l, -111, new String[]{this.g((byte) -73), this.j(0)});
         int var3 = 20;
         var3 = var3 + this.a(170, ff.field_q, false, var3, this.field_z);
-        var3 = var3 + (this.a((byte) 33, var3, ph.field_mb, "", 20, 170, this.field_E) + 5);
+        var3 = var3 + (this.a((byte) 33, var3, ProgressMessageDialog.field_mb, "", 20, 170, this.field_E) + 5);
         var3 = var3 + this.a(170, DraggableWidgetContainer.field_y, false, var3, this.field_L);
         var3 = var3 + (5 + this.a(this.field_G, 170, sk.field_a, 37, mc.field_d, var3));
         var3 = var3 + (this.a(this.field_J, 170, DiskArchiveRequest.field_w, 119, d.field_c, var3) + 5);

@@ -3,7 +3,7 @@
  */
 final class AccountServiceResult {
     boolean field_c;
-    static dg field_d;
+    static ProgressMessageDialog field_d;
     static String field_h;
     static String field_f;
     static int field_g;
@@ -28,10 +28,10 @@ final class AccountServiceResult {
           if (ik.field_d != null) {
             ik.field_d.field_J.setNameSuggestions(param1, (byte) -118);
           }
-          if (null == te.field_M) {
+          if (null == RegistrationAgreementPane.field_M) {
             return;
           }
-          te.field_M.field_I.setNameSuggestions(param1, (byte) 127);
+          RegistrationAgreementPane.field_M.field_I.setNameSuggestions(param1, (byte) 127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -62,7 +62,7 @@ final class AccountServiceResult {
           var3_double = (double)(-param2.field_j.field_e) + ((double)param0.field_j.field_e + param0.field_l.field_f) - param2.field_l.field_f;
           var5 = (double)(-param2.field_j.field_g) + ((double)param0.field_j.field_g + param0.field_l.field_a) - param2.field_l.field_a;
           if (param1 != 1) {
-            field_d = (dg) null;
+            field_d = (ProgressMessageDialog) null;
           }
           stackIn_3_0 = var5 * var5 + var3_double * var3_double;
           return stackIn_3_0;

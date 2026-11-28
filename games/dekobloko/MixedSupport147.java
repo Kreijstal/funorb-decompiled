@@ -13,9 +13,9 @@ final class MixedSupport147 {
         String stackStringLocal5 = null;
         RuntimeException caughtExceptionLocal6 = null;
         try {
-          VorbisSample.performAction1695(resourceArchiveArgument2.getFileByName(byteArgument1 ^ -51, "", "headers.packvorbis"));
-          vorbisSampleLocal1 = VorbisSample.computeVorbisSample1690(resourceArchiveArgument2, "jagex logo2.packvorbis", "");
-          vorbisSampleLocal1.computeRawSound1686();
+          VorbisSample.decodeSetup(resourceArchiveArgument2.getFileByName(byteArgument1 ^ -51, "", "headers.packvorbis"));
+          vorbisSampleLocal1 = VorbisSample.loadByName(resourceArchiveArgument2, "jagex logo2.packvorbis", "");
+          vorbisSampleLocal1.decodeAllToPcm();
           if (byteArgument1 == -51) {
             return;
           }
@@ -112,7 +112,7 @@ final class MixedSupport147 {
         try {
           MixedSupport023.booleanState0025 = booleanArgument1;
           SceneWidgetPart007.booleanState0113 = true;
-          MixedSupport020.uiComponentPart012State0001 = new UiComponentPart012(MixedSupport005.uiComponentPart016State0001, GameDomainSupport002.bitmapFontState0012, stringArgument3, BirthDateInput.booleanState0198, MixedSupport023.booleanState0025);
+          MixedSupport020.uiComponentPart012State0001 = new ProgressMessageDialog(MixedSupport005.uiComponentPart016State0001, GameDomainSupport002.bitmapFontState0012, stringArgument3, BirthDateInput.booleanState0198, MixedSupport023.booleanState0025);
           MixedSupport005.uiComponentPart016State0001.showDialog((byte) -115, MixedSupport020.uiComponentPart012State0001);
           if (integerArgument2 > -20) {
             integerState0933 = -117;

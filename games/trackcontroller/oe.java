@@ -113,7 +113,7 @@ final class oe {
             CharSequence var6 = (CharSequence) null;
             oe.a((CharSequence) null, (byte) 110, true);
           }
-          rk.field_X = DiskArchiveStore.field_f;
+          ProgressDialog.field_X = DiskArchiveStore.field_f;
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "oe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

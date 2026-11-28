@@ -8,7 +8,7 @@ final class le {
         try {
           param1.removeKeyListener(GzipDecompressor.field_c);
           param1.removeFocusListener(GzipDecompressor.field_c);
-          db.field_R = param0;
+          ProgressDialog.field_R = param0;
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "le.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

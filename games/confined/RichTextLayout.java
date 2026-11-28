@@ -642,7 +642,7 @@ final class RichTextLayout extends TextLayout {
           }
           var2Lifetime5 = wm.a("keycode_missile2", (byte) 55);
           if (null != var2Lifetime5) {
-            ib.field_W = 255 & var2Lifetime5[0];
+            StripedProgressWidget.field_W = 255 & var2Lifetime5[0];
           }
           var2Lifetime6 = wm.a("keycode_missile3", (byte) 62);
           if (null != var2Lifetime6) {
@@ -881,7 +881,7 @@ final class RichTextLayout extends TextLayout {
           }
           var2Lifetime64 = wm.a("distance", (byte) 51);
           if (var2Lifetime64 != null) {
-            jn.field_O = va.a(0, var2Lifetime64);
+            DialogMessagePane.field_O = va.a(0, var2Lifetime64);
           }
           var2Lifetime65 = wm.a("score", (byte) 74);
           if (var2Lifetime65 != null) {
@@ -1005,7 +1005,7 @@ final class RichTextLayout extends TextLayout {
           }
           var2Lifetime95 = wm.a("missiles", (byte) 83);
           if (var2Lifetime95 != null) {
-            ci.field_d = va.a(0, var2Lifetime95);
+            FullscreenNoticeType.field_d = va.a(0, var2Lifetime95);
           }
           var2Lifetime96 = wm.a("specialEnergyWeapons", (byte) 33);
           if (null != var2Lifetime96) {
@@ -1065,7 +1065,7 @@ final class RichTextLayout extends TextLayout {
           }
           var2Lifetime110 = wm.a("instructions_LivesIndicator", (byte) 31);
           if (var2Lifetime110 != null) {
-            ug.field_Z = va.a(0, var2Lifetime110);
+            ResizableModalDialog.field_Z = va.a(0, var2Lifetime110);
           }
           var2Lifetime111 = wm.a("lookOutForExtraLives", (byte) 73);
           if (var2Lifetime111 != null) {
@@ -1197,7 +1197,7 @@ final class RichTextLayout extends TextLayout {
           }
           var2Lifetime143 = wm.a("difficultyHard", (byte) 107);
           if (var2Lifetime143 != null) {
-            sj.field_pb = va.a(0, var2Lifetime143);
+            ContentTransitionDialog.field_pb = va.a(0, var2Lifetime143);
           }
           var2Lifetime144 = wm.a("viewInternal", (byte) 105);
           if (null != var2Lifetime144) {
@@ -1213,7 +1213,7 @@ final class RichTextLayout extends TextLayout {
           }
           var2Lifetime147 = wm.a("difficultyColon", (byte) 65);
           if (null != var2Lifetime147) {
-            ef.field_ub = va.a(0, var2Lifetime147);
+            StandardContentDialog.field_ub = va.a(0, var2Lifetime147);
           }
           var2Lifetime148 = wm.a("viewModeColon", (byte) 70);
           if (null != var2Lifetime148) {
@@ -1385,7 +1385,7 @@ final class RichTextLayout extends TextLayout {
           }
           var2Lifetime190 = wm.a("shieldRestored", (byte) 79);
           if (null != var2Lifetime190) {
-            pi.field_P = va.a(0, var2Lifetime190);
+            RegistrationAgreementPane.field_P = va.a(0, var2Lifetime190);
           }
           var2Lifetime191 = wm.a("invincibility", (byte) 53);
           if (null != var2Lifetime191) {

@@ -110,7 +110,7 @@ final class pf extends IntrusiveNode implements lm {
     }
 
     public final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
-        int var13 = fo.a(param11, (byte) -49, fo.a(param9, (byte) -20, param10));
+        int var13 = DialogMessagePane.a(param11, (byte) -49, DialogMessagePane.a(param9, (byte) -20, param10));
         param10 = param10 / var13;
         param11 = param11 / var13;
         param9 = param9 / var13;

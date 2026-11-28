@@ -102,7 +102,7 @@ final class ea extends va {
 
     final static od e(byte param0) {
         int var1 = -72 / ((param0 - 13) / 63);
-        od var2 = new od(MouseInputHandler.field_a, we.field_e, ph.field_h[0], qf.field_d[0], sa.field_l[0], uj.field_b[0], jc.field_c[0], ig.field_H);
+        od var2 = new od(MouseInputHandler.field_a, we.field_e, ph.field_h[0], qf.field_d[0], sa.field_l[0], uj.field_b[0], jc.field_c[0], GuestPlayConfirmationForm.field_H);
         og.a((byte) -97);
         return var2;
     }

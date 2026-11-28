@@ -104,7 +104,7 @@ final class eh {
           }
         }
         var4 = -62 / ((56 - param0) / 55);
-        var6 = ia.a(this.field_b, this.field_m, this.field_i, 2316, this.field_g, Integer.toString(this.field_k[param1]), this.field_d);
+        var6 = GuestPlayConfirmationForm.a(this.field_b, this.field_m, this.field_i, 2316, this.field_g, Integer.toString(this.field_k[param1]), this.field_d);
         var3Lifetime1 = var6;
         this.field_l[param1] = new il(var6);
         return var3Lifetime1;

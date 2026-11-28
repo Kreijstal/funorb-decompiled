@@ -54,7 +54,7 @@ final class OhNoEvent extends SpecialEvent {
         MatchingFieldValidator.field_k = null;
         ShieldAnimation.field_v = null;
         fe.field_j = null;
-        am.field_M = null;
+        ResizableModalDialog.field_M = null;
         ve.field_m = (Sprite[][]) null;
         bfa.field_b = null;
         StickyAnimation.field_x = null;
@@ -66,7 +66,7 @@ final class OhNoEvent extends SpecialEvent {
         lga.field_k = null;
         hp.field_b = null;
         nha.field_a = null;
-        de.field_F = null;
+        StripedProgressWidget.field_F = null;
         sia.field_g = null;
         nv.field_wb = null;
         ProxyAuthenticationRequiredException.field_a = null;

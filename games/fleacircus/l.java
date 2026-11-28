@@ -156,8 +156,8 @@ final class l {
     }
 
     final static void a(byte param0) {
-        bd.field_kb = null;
-        ic.field_bb = null;
+        ProgressMessageDialog.field_kb = null;
+        FullscreenStatusDialog.field_bb = null;
         int var1 = -5 % ((param0 - 44) / 58);
     }
 
@@ -172,13 +172,13 @@ final class l {
 
     final static void a(int param0) {
         if (ok.field_x != null) {
-          ok.field_x.n(param0 - 22645);
+          ok.field_x.closeDialog(param0 - 22645);
         }
         if (param0 != 0) {
           field_a = (String) null;
         }
         AwtRasterBuffer.field_e = new DisplayNameSelectionPanel();
-        ak.field_a.d(AwtRasterBuffer.field_e, param0 ^ 26034);
+        ak.field_a.replaceContent(AwtRasterBuffer.field_e, param0 ^ 26034);
     }
 
     static {

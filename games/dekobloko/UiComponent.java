@@ -510,12 +510,12 @@ class UiComponent extends HashNode {
             return booleanArgument2;
           }
           this.pointerReleased(MixedSupport101.integerState0590, 64, integerArgument3, this, integerArgument1, HashNode.integerState0069);
-          uiComponentPart029Local3 = UiComponentPart017.uiComponentPart029State0001;
+          uiComponentPart029Local3 = GuestPlayConfirmationForm.uiComponentPart029State0001;
           if (uiComponentPart029Local3 != null) {
             if (uiComponentPart029Local3.callbackContract006State0001 instanceof WidgetDropListener) {
               ((WidgetDropListener) (uiComponentPart029Local3.callbackContract006State0001)).widgetDropped(uiComponentPart029Local3, (DropTargetWidgetContainer) null, (byte) -128);
             }
-            UiComponentPart017.uiComponentPart029State0001 = null;
+            GuestPlayConfirmationForm.uiComponentPart029State0001 = null;
           }
           if (integerLocal2 != 0 &&
             integerLocal1 != 0 &&
@@ -553,12 +553,12 @@ class UiComponent extends HashNode {
             return booleanArgument2;
           }
           this.pointerReleased(MixedSupport101.integerState0590, 64, integerArgument3, this, integerArgument1, HashNode.integerState0069);
-          uiComponentPart029Local4 = UiComponentPart017.uiComponentPart029State0001;
+          uiComponentPart029Local4 = GuestPlayConfirmationForm.uiComponentPart029State0001;
           if (uiComponentPart029Local4 != null) {
             if (uiComponentPart029Local4.callbackContract006State0001 instanceof WidgetDropListener) {
               ((WidgetDropListener) (uiComponentPart029Local4.callbackContract006State0001)).widgetDropped(uiComponentPart029Local4, (DropTargetWidgetContainer) null, (byte) -128);
             }
-            UiComponentPart017.uiComponentPart029State0001 = null;
+            GuestPlayConfirmationForm.uiComponentPart029State0001 = null;
           }
           if (integerLocal2 != 0 &&
             integerLocal1 != 0 &&
@@ -600,12 +600,12 @@ class UiComponent extends HashNode {
           return booleanArgument2;
         }
         this.pointerReleased(MixedSupport101.integerState0590, 64, integerArgument3, this, integerArgument1, HashNode.integerState0069);
-        uiComponentPart029Local5 = UiComponentPart017.uiComponentPart029State0001;
+        uiComponentPart029Local5 = GuestPlayConfirmationForm.uiComponentPart029State0001;
         if (uiComponentPart029Local5 != null) {
           if (uiComponentPart029Local5.callbackContract006State0001 instanceof WidgetDropListener) {
             ((WidgetDropListener) (uiComponentPart029Local5.callbackContract006State0001)).widgetDropped(uiComponentPart029Local5, (DropTargetWidgetContainer) null, (byte) -128);
           }
-          UiComponentPart017.uiComponentPart029State0001 = null;
+          GuestPlayConfirmationForm.uiComponentPart029State0001 = null;
         }
         if (integerLocal2 != 0 &&
           integerLocal1 != 0 &&

@@ -108,41 +108,41 @@ class RichTextWidget extends InteractiveWidget {
             return 1;
           }
           try {
-            if (nh.field_jb == 0) {
-              n.field_cb = rc.field_t.requestSocket(BufferedSocket.field_d, mc.field_o, 431890200);
-              nh.field_jb = nh.field_jb + 1;
+            if (FullscreenStatusDialog.field_jb == 0) {
+              ContentTransitionDialog.field_cb = rc.field_t.requestSocket(BufferedSocket.field_d, mc.field_o, 431890200);
+              FullscreenStatusDialog.field_jb = FullscreenStatusDialog.field_jb + 1;
             }
-            if (nh.field_jb == 1) {
-              if (n.field_cb.status == 2) {
+            if (FullscreenStatusDialog.field_jb == 1) {
+              if (ContentTransitionDialog.field_cb.status == 2) {
                 stackIn_14_0 = je.a(-1, true);
                 return stackIn_14_0;
               }
-              if (n.field_cb.status == 1) {
-                nh.field_jb = nh.field_jb + 1;
+              if (ContentTransitionDialog.field_cb.status == 1) {
+                FullscreenStatusDialog.field_jb = FullscreenStatusDialog.field_jb + 1;
               }
             }
-            if (nh.field_jb == 2) {
-              bl.field_V = new BufferedSocket((java.net.Socket) (n.field_cb.result), rc.field_t);
+            if (FullscreenStatusDialog.field_jb == 2) {
+              bl.field_V = new BufferedSocket((java.net.Socket) (ContentTransitionDialog.field_cb.result), rc.field_t);
               var2 = new PacketBuffer(13);
               hl.a(var2, 12, vk.field_j, MouseInputHandler.field_d, vb.field_r);
               var2.writeByte(15, (byte) 122);
               var2.writeInt(mg.field_e, false);
               bl.field_V.a(13, 0, (byte) 120, var2.payload);
-              nh.field_jb = nh.field_jb + 1;
+              FullscreenStatusDialog.field_jb = FullscreenStatusDialog.field_jb + 1;
               EmailFormatValidator.field_m = 30000L + ol.correctedCurrentTimeMillis(256);
             }
             if (param0 != 35) {
               stackIn_22_0 = 21;
               return stackIn_22_0;
             }
-            if (nh.field_jb == 3) {
+            if (FullscreenStatusDialog.field_jb == 3) {
               if (bl.field_V.a(0) > 0) {
                 var1_int = bl.field_V.c(0);
                 if (var1_int != 0) {
                   stackIn_31_0 = je.a(var1_int, true);
                   return stackIn_31_0;
                 }
-                nh.field_jb = nh.field_jb + 1;
+                FullscreenStatusDialog.field_jb = FullscreenStatusDialog.field_jb + 1;
               } else {
                 if (EmailFormatValidator.field_m < ol.correctedCurrentTimeMillis(256)) {
                   stackIn_28_0 = je.a(-2, true);
@@ -150,13 +150,13 @@ class RichTextWidget extends InteractiveWidget {
                 }
               }
             }
-            if (nh.field_jb != 4) {
+            if (FullscreenStatusDialog.field_jb != 4) {
               return -1;
             }
             gb.field_d.a(NodeHashTableIterator.field_f, bl.field_V, (byte) 115);
             bl.field_V = null;
-            nh.field_jb = 0;
-            n.field_cb = null;
+            FullscreenStatusDialog.field_jb = 0;
+            ContentTransitionDialog.field_cb = null;
             stackIn_36_0 = 0;
             return stackIn_36_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {

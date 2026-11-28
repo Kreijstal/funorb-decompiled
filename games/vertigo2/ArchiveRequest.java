@@ -40,7 +40,7 @@ abstract class ArchiveRequest extends DualLinkNode {
             return stackIn_9_0;
           }
           if (7 == param2) {
-            stackIn_12_0 = sp.field_K;
+            stackIn_12_0 = ResizableModalDialog.field_K;
             return stackIn_12_0;
           }
           if (param2 == 8) {
@@ -56,7 +56,7 @@ abstract class ArchiveRequest extends DualLinkNode {
             return stackIn_22_0;
           }
           if (param2 == 11) {
-            stackIn_26_0 = fg.field_cb;
+            stackIn_26_0 = ProgressDialog.field_cb;
             return stackIn_26_0;
           }
           if (param2 != 14) {
@@ -82,7 +82,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         if (param0 > -96) {
           return;
         }
-        rh.b(-14, 17);
+        DialogMessagePane.b(-14, 17);
     }
 
     public static void resetStaticState(boolean param0) {

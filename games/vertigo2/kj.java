@@ -73,7 +73,7 @@ final class kj extends TextureOperator {
         var9 = var21[1];
         var10 = var21[2];
         if (this.field_y) {
-          for (var11 = 0; we.field_M > var11; var11++) {
+          for (var11 = 0; StripedProgressWidget.field_M > var11; var11++) {
             var8[var11] = var5[rm.field_z - var11];
             var9[var11] = var6[-var11 + rm.field_z];
             var10[var11] = var7[rm.field_z - var11];
@@ -86,7 +86,7 @@ final class kj extends TextureOperator {
         }
         var14 = 0;
         var11Lifetime1 = var14;
-        while (we.field_M > var14) {
+        while (StripedProgressWidget.field_M > var14) {
           var8[var14] = var22[var14];
           var9[var14] = var23[var14];
           var10[var14] = var24[var14];
@@ -183,9 +183,9 @@ final class kj extends TextureOperator {
         }
         var4 = this.a(stackIn_6_1, stackIn_6_2, stackIn_7_3);
         if (!this.field_y) {
-          qq.a(var4, 0, var7, 0, we.field_M);
+          qq.a(var4, 0, var7, 0, StripedProgressWidget.field_M);
         } else {
-          for (var5 = 0; we.field_M > var5; var5++) {
+          for (var5 = 0; StripedProgressWidget.field_M > var5; var5++) {
             var7[var5] = var4[-var5 + rm.field_z];
           }
         }

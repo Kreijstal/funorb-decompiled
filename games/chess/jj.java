@@ -69,10 +69,10 @@ final class jj {
 
     final static boolean d(int param0) {
         int var1 = -103 / ((75 - param0) / 42);
-        if (ch.field_gb == null) {
+        if (ProgressDialog.field_gb == null) {
           return false;
         }
-        if (ch.field_gb.b(-1)) {
+        if (ProgressDialog.field_gb.b(-1)) {
           return true;
         }
         return false;

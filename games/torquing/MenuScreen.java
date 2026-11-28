@@ -98,8 +98,8 @@ final class MenuScreen {
         var9 = var24;
         var9 = var24;
         var9 = var24;
-        var10 = i.field_Q.stringWidth(hb.field_u[2]);
-        var11 = i.field_Q.stringWidth(hb.field_u[13]);
+        var10 = FullscreenStatusDialog.field_Q.stringWidth(hb.field_u[2]);
+        var11 = FullscreenStatusDialog.field_Q.stringWidth(hb.field_u[13]);
         stackIn_3_0 = (var11 < var10) ? var10 : var11;
         var12 = stackIn_3_0;
         if (param3 != 0) {
@@ -127,7 +127,7 @@ final class MenuScreen {
               stackIn_60_0 = wi.field_a[nh.field_k];
             }
             var16 = stackIn_60_0;
-            var17 = qc.field_ab[var13];
+            var17 = StandardContentDialog.field_ab[var13];
             var18 = hg.field_d[rn.field_j];
             if (var16 > var13) {
               stackIn_63_0 = var17;
@@ -136,7 +136,7 @@ final class MenuScreen {
             }
             var19 = stackIn_63_0;
             param1 = 157;
-            stackIn_65_0 = i.field_Q;
+            stackIn_65_0 = FullscreenStatusDialog.field_Q;
             stackIn_65_1 = SecondaryNodeDeque.field_b;
             stackIn_65_2 = 104;
             stackIn_65_3 = 24 + param1;
@@ -158,18 +158,18 @@ final class MenuScreen {
                   var21 <= var19 &&
                   n.field_t >= -3 + var20 &&
                   k.field_e >= (-2 + param1) &&
-                  n.field_t < (i.field_N.charWidth((char)(49 + var21)) + (var20 + 3)) &&
-                  k.field_e < (24 + i.field_N.field_t + (param1 + 6))) {
-                  this.a(15000804, -3 + var20, 11184810, 82, 8 + (i.field_N.field_t + 24), 6 + i.field_N.charWidth((char)(var21 + 49)), 1052688, param1 - 2);
+                  n.field_t < (FullscreenStatusDialog.field_N.charWidth((char)(49 + var21)) + (var20 + 3)) &&
+                  k.field_e < (24 + FullscreenStatusDialog.field_N.field_t + (param1 + 6))) {
+                  this.a(15000804, -3 + var20, 11184810, 82, 8 + (FullscreenStatusDialog.field_N.field_t + 24), 6 + FullscreenStatusDialog.field_N.charWidth((char)(var21 + 49)), 1052688, param1 - 2);
                 } else if (~var21 != ~var18 &&
                   var21 <= var19) {
-                  this.a(14211288, -3 + var20, 8947848, 7, i.field_N.field_t + 24 + 8, 6 + i.field_N.charWidth((char)(49 + var21)), 8947848, -2 + param1);
+                  this.a(14211288, -3 + var20, 8947848, 7, FullscreenStatusDialog.field_N.field_t + 24 + 8, 6 + FullscreenStatusDialog.field_N.charWidth((char)(49 + var21)), 8947848, -2 + param1);
                 }
               } else {
-                this.a(10526880, var20 - 3, 1052688, -121, 8 + (24 + i.field_N.field_t), i.field_N.charWidth((char)(49 + var21)) + 6, 11184810, -2 + param1);
+                this.a(10526880, var20 - 3, 1052688, -121, 8 + (24 + FullscreenStatusDialog.field_N.field_t), FullscreenStatusDialog.field_N.charWidth((char)(49 + var21)) + 6, 11184810, -2 + param1);
               }
-              i.field_Q.field_O[8][1] = 16776960;
-              stackIn_85_0 = i.field_Q;
+              FullscreenStatusDialog.field_Q.field_O[8][1] = 16776960;
+              stackIn_85_0 = FullscreenStatusDialog.field_Q;
               stackIn_85_1 = Integer.toString(var21 + 1);
               stackIn_85_2 = var20;
               stackIn_85_3 = 24 + param1;
@@ -221,11 +221,11 @@ final class MenuScreen {
                 var16 = 9;
               }
               var17 = MatchingFieldValidator.field_m.stringWidth(hq.field_d[var15]);
-              i.field_Q.drawCentred(hq.field_d[var15], var13 + (var17 >> 1), param1 + MatchingFieldValidator.field_m.field_x, var16, -1);
+              FullscreenStatusDialog.field_Q.drawCentred(hq.field_d[var15], var13 + (var17 >> 1), param1 + MatchingFieldValidator.field_m.field_x, var16, -1);
               var13 = var13 + var17;
               if (2 != var15) {
                 var17 = MatchingFieldValidator.field_m.stringWidth(" / ");
-                i.field_Q.drawCentred(" / ", (var17 >> 1) + var13, MatchingFieldValidator.field_m.field_x + param1, 0, -1);
+                FullscreenStatusDialog.field_Q.drawCentred(" / ", (var17 >> 1) + var13, MatchingFieldValidator.field_m.field_x + param1, 0, -1);
                 var13 = var13 + var17;
               }
               var15++;
@@ -250,9 +250,9 @@ final class MenuScreen {
           FullscreenFocusCanvas.a(var13 + 1, (byte) -128, 6710886, 3 + param1, 6710886);
           SpriteState.a(3 + param1, 6710886, param3 ^ 36, var13 + 1 + var14, 6710886);
           if (!param0) {
-            stackIn_22_0 = i.field_Q.field_O[1][1];
+            stackIn_22_0 = FullscreenStatusDialog.field_Q.field_O[1][1];
           } else {
-            stackIn_22_0 = i.field_Q.field_O[9][1];
+            stackIn_22_0 = FullscreenStatusDialog.field_Q.field_O[9][1];
           }
           var15 = stackIn_22_0;
           FullscreenFocusCanvas.a(var13, (byte) -125, var15, param1 + 2, 0);
@@ -272,7 +272,7 @@ final class MenuScreen {
             stackIn_27_0 = 1 + wi.field_a[-1 + nh.field_k];
           }
           var14 = stackIn_27_0;
-          stackIn_29_0 = i.field_Q;
+          stackIn_29_0 = FullscreenStatusDialog.field_Q;
           stackIn_29_1 = wa.field_c;
           stackIn_29_2 = 104;
           stackIn_29_3 = 108;
@@ -314,7 +314,7 @@ final class MenuScreen {
             var15 = var15 + (var17_ref_t.field_s + 10);
             var16++;
           }
-          i.field_Q.drawCentred(Js5Transport.field_n[var13], 314, 123 + MatchingFieldValidator.field_m.field_x, 0, -1);
+          FullscreenStatusDialog.field_Q.drawCentred(Js5Transport.field_n[var13], 314, 123 + MatchingFieldValidator.field_m.field_x, 0, -1);
           return;
         }
         if (this.field_h == 9) {
@@ -339,9 +339,9 @@ final class MenuScreen {
           stackIn_130_1 = var13;
           stackIn_130_2 = param1;
           if (!param0) {
-            stackIn_131_3 = i.field_Q.field_O[1][1];
+            stackIn_131_3 = FullscreenStatusDialog.field_Q.field_O[1][1];
           } else {
-            stackIn_131_3 = i.field_Q.field_O[9][1];
+            stackIn_131_3 = FullscreenStatusDialog.field_Q.field_O[9][1];
           }
           ((Sprite) (Object) stackIn_130_0).drawGrayModulated(stackIn_130_1, stackIn_130_2, stackIn_131_3);
           decompiledSharedTail0 = (var22 != 0);
@@ -349,7 +349,7 @@ final class MenuScreen {
         if (decompiledSharedTail0) {
           stackIn_135_0 = (param0) ? 9 : 1;
           var14 = stackIn_135_0;
-          i.field_Q.drawCentred(var9, var6, param1 + 24, var14, -1);
+          FullscreenStatusDialog.field_Q.drawCentred(var9, var6, param1 + 24, var14, -1);
         }
     }
 
@@ -470,11 +470,11 @@ final class MenuScreen {
                 }
               }
               if (155 <= param2 &&
-                6 + (i.field_N.field_t + 181) > param2) {
+                6 + (FullscreenStatusDialog.field_N.field_t + 181) > param2) {
                 var8Lifetime3 = wi.field_a[rn.field_j];
-                var9Lifetime3 = qc.field_ab[var8Lifetime3];
+                var9Lifetime3 = StandardContentDialog.field_ab[var8Lifetime3];
                 var10Lifetime3 = 165;
-                var11Lifetime1 = 6 + i.field_N.charWidth((char)(var9Lifetime3 + 48)) + ((-1 + var9Lifetime3) * 40 + var10Lifetime3);
+                var11Lifetime1 = 6 + FullscreenStatusDialog.field_N.charWidth((char)(var9Lifetime3 + 48)) + ((-1 + var9Lifetime3) * 40 + var10Lifetime3);
                 if (param0 >= var10Lifetime3 &&
                   param0 < var11Lifetime1) {
                   return 1;
@@ -485,7 +485,7 @@ final class MenuScreen {
               while (rf.field_q[this.field_h].length > var9Lifetime4) {
                 var10Lifetime4 = rf.field_q[this.field_h][var9Lifetime4];
                 var16 = hb.field_u[var10Lifetime4];
-                var12 = i.field_N.stringWidth(var16);
+                var12 = FullscreenStatusDialog.field_N.stringWidth(var16);
                 var13_int = param0 - (-(var12 >> 1) + 164) - (var4 - 2);
                 var14 = -var8Lifetime4 - (-2 - param2);
                 stackIn_104_0 = ~var13_int;
@@ -496,7 +496,7 @@ final class MenuScreen {
                 if (stackIn_104_0 <= -1 &&
                   var14 >= 0 &&
                   var13_int < var12 + 6 &&
-                  24 + (i.field_N.field_t + 8) > var14) {
+                  24 + (FullscreenStatusDialog.field_N.field_t + 8) > var14) {
                   return var9Lifetime4;
                 }
                 var8Lifetime4 = var8Lifetime4 + var7;
@@ -511,11 +511,11 @@ final class MenuScreen {
         if ((decompiledFrameRemainder0) && (decompiledFrameCompleted1) && (param2 > -8 + lp.field_c &&
           param2 < MatchingFieldValidator.field_m.field_x + lp.field_c + 8)) {
           if ((ea.field_v - 8) < param0 &&
-            ea.field_v + i.field_N.charWidth('<') > param0) {
+            ea.field_v + FullscreenStatusDialog.field_N.charWidth('<') > param0) {
             return -1;
           }
           if (param0 > (vd.field_f - 8) &&
-            vd.field_f + i.field_N.charWidth('>') > param0) {
+            vd.field_f + FullscreenStatusDialog.field_N.charWidth('>') > param0) {
             return -1;
           }
         }
@@ -773,7 +773,7 @@ final class MenuScreen {
         var6 = new Sprite(160, 120);
         var6.bindAsRenderTarget();
         var7 = ol.field_f[param1];
-        var8 = im.field_L.a(-58, var7);
+        var8 = ResizableModalDialog.field_L.a(-58, var7);
         var9_ref_kh__ = MouseWheelInput.field_c;
         var10 = 0;
         while (var10 < var9_ref_kh__.length) {
@@ -792,7 +792,7 @@ final class MenuScreen {
           if (!(var8.field_y > var9)) {
             h.field_j = var7.getViewPresetIndex(false);
             ap.a(ne.field_a, AccountNameAvailabilityValidator.field_m[h.field_j]);
-            im.field_L.a(true, ne.field_a);
+            ResizableModalDialog.field_L.a(true, ne.field_a);
             var9 = vf.field_j[h.field_j][0];
             var10 = vf.field_j[h.field_j][1];
             break;
@@ -807,7 +807,7 @@ final class MenuScreen {
         ne.field_a[10] = ne.field_a[10] << 2;
         ne.field_a[11] = ne.field_a[11] << 2;
         ne.field_a[9] = ne.field_a[9] << 2;
-        im.field_L.b(1);
+        ResizableModalDialog.field_L.b(1);
         SoftwareRasterizer.setClip(0, 0, 160, 120);
         var12 = wi.field_a[param1];
         if (var7.getViewPresetIndex(false) != 1 ||
@@ -886,9 +886,9 @@ final class MenuScreen {
           (decompiledFrameRemainder0 = !(re.field_c <= -8 + lp.field_c)) &&
           (decompiledFrameRemainder0 = !((8 + (MatchingFieldValidator.field_m.field_x + lp.field_c)) <= re.field_c))) {
           if ((!((-8 + ea.field_v) < wh.field_s) ||
-            !(wh.field_s < (ea.field_v + i.field_N.charWidth('<')))) &&
+            !(wh.field_s < (ea.field_v + FullscreenStatusDialog.field_N.charWidth('<')))) &&
             (decompiledFrameRemainder0 = !(-8 + vd.field_f >= wh.field_s)) &&
-            (decompiledFrameRemainder0 = !(wh.field_s >= (vd.field_f + i.field_N.charWidth('>'))))) {
+            (decompiledFrameRemainder0 = !(wh.field_s >= (vd.field_f + FullscreenStatusDialog.field_N.charWidth('>'))))) {
             fieldTemp$0 = ld.field_k + 1;
             ld.field_k = ld.field_k + 1;
             if (fieldTemp$0 == 3) {
@@ -940,7 +940,7 @@ final class MenuScreen {
           }
           if (decompiledFrameCompleted1) {
             var4Lifetime1 = wi.field_a[rn.field_j];
-            var5 = qc.field_ab[var4Lifetime1];
+            var5 = StandardContentDialog.field_ab[var4Lifetime1];
             stackIn_39_0 = var2;
             stackIn_39_1 = var4Lifetime1;
           }
@@ -953,7 +953,7 @@ final class MenuScreen {
           var6 = stackIn_43_0;
           var3Lifetime1 = 157;
           if (re.field_c >= var3Lifetime1 &&
-            re.field_c < i.field_N.field_t + var3Lifetime1 + i.field_N.field_x + 6) {
+            re.field_c < FullscreenStatusDialog.field_N.field_t + var3Lifetime1 + FullscreenStatusDialog.field_N.field_x + 6) {
             var7 = 168;
             var8 = 0;
             while (var8 <= var6) {
@@ -964,7 +964,7 @@ final class MenuScreen {
                 break;
               }
               if (stackIn_55_0 >= stackIn_55_1 &&
-                wh.field_s < var7 + i.field_N.charWidth((char)(var8 + 49)) + 3) {
+                wh.field_s < var7 + FullscreenStatusDialog.field_N.charWidth((char)(var8 + 49)) + 3) {
                 rn.field_j = rn.field_j + (-hg.field_d[rn.field_j] + var8);
                 break;
               }
@@ -1013,13 +1013,13 @@ final class MenuScreen {
         if (this.field_h != 1 &&
           this.field_h != 5) {
           if (this.field_h == 0) {
-            kf.field_F = 0;
+            StripedProgressWidget.field_F = 0;
             if (var8 != 0) {
-              kf.field_F = -1 + ie.field_b.field_q;
+              StripedProgressWidget.field_F = -1 + ie.field_b.field_q;
             }
           }
         } else {
-          kf.field_F = -1 + ie.field_b.field_q;
+          StripedProgressWidget.field_F = -1 + ie.field_b.field_q;
         }
         ed.a(param1 ^ param1);
         if (11 == this.field_h) {
@@ -1144,9 +1144,9 @@ final class MenuScreen {
               }
               boolean decompiledFrameCompleted0 = true;
               if (stackIn_71_0 >= stackIn_71_1 &&
-                6 + (i.field_N.field_t + 157 + i.field_N.field_x) > k.field_e) {
+                6 + (FullscreenStatusDialog.field_N.field_t + 157 + FullscreenStatusDialog.field_N.field_x) > k.field_e) {
                 var4 = wi.field_a[rn.field_j];
-                var5 = qc.field_ab[var4];
+                var5 = StandardContentDialog.field_ab[var4];
                 var6 = 168;
                 var7 = 0;
                 while (var5 > var7) {
@@ -1157,7 +1157,7 @@ final class MenuScreen {
                     break;
                   }
                   if (stackIn_81_0 <= stackIn_81_1 &&
-                    n.field_t < var6 + (i.field_N.charWidth((char)(var7 + 49)) + 3)) {
+                    n.field_t < var6 + (FullscreenStatusDialog.field_N.charWidth((char)(var7 + 49)) + 3)) {
                     var3 = var7 + 10;
                   }
                   var6 += 40;
@@ -1175,9 +1175,9 @@ final class MenuScreen {
         }
         if (150 > this.field_i &&
           MouseInputHandler.field_d == 0 &&
-          !i.field_P[13] &&
-          !i.field_P[84] &&
-          !i.field_P[83]) {
+          !FullscreenStatusDialog.field_P[13] &&
+          !FullscreenStatusDialog.field_P[84] &&
+          !FullscreenStatusDialog.field_P[83]) {
           return;
         }
         stackIn_38_0 = this.field_c;
@@ -1335,18 +1335,18 @@ final class MenuScreen {
         }
         if (var7 == -1) {
           if (je.a((byte) 59)) {
-            i.field_Q.drawCentred(nh.field_p, 320, 230, 0, -1);
-            i.field_Q.drawParagraph(ti.field_m, 47, 270, 534, 1000, 0, -1, 1, 0, 3 * MatchingFieldValidator.field_m.field_x / 2);
+            FullscreenStatusDialog.field_Q.drawCentred(nh.field_p, 320, 230, 0, -1);
+            FullscreenStatusDialog.field_Q.drawParagraph(ti.field_m, 47, 270, 534, 1000, 0, -1, 1, 0, 3 * MatchingFieldValidator.field_m.field_x / 2);
             if (var19 == 0) {
               return;
             }
           }
-          i.field_Q.drawCentred(nh.field_p, 320, 275, 0, -1);
+          FullscreenStatusDialog.field_Q.drawCentred(nh.field_p, 320, 275, 0, -1);
           if (var19 == 0) {
             return;
           }
         }
-        i.field_Q.drawCentred(k.field_b[var7], 320, 202, 0, -1);
+        FullscreenStatusDialog.field_Q.drawCentred(k.field_b[var7], 320, 202, 0, -1);
         stackIn_68_0 = ((var5 & 1 << var7) == 0) ? 0 : 1;
         var12Lifetime1 = stackIn_68_0;
         var13Lifetime1 = 3 * dd.field_c.field_x / 2;
@@ -1380,7 +1380,7 @@ final class MenuScreen {
             VolumeScaledPcmStream.field_o.draw(256, 30 + var14);
           }
         }
-        var14 = var14 + (i.field_N.field_x + 46);
+        var14 = var14 + (FullscreenStatusDialog.field_N.field_x + 46);
         var15 = cn.field_a[var7];
         if (var7 == 14 &&
           (1 << var7 & var5) == 0) {
@@ -1436,7 +1436,7 @@ final class MenuScreen {
             return stackIn_2_0;
           }
           if (param0) {
-            stackIn_7_0 = sp.field_Q.stringWidth(param2);
+            stackIn_7_0 = ProgressDialog.field_Q.stringWidth(param2);
             return stackIn_7_0;
           }
           stackIn_5_0 = bo.field_e.stringWidth(param2);
@@ -1996,7 +1996,7 @@ final class MenuScreen {
                       wi.field_a.length != nh.field_k) {
                       stackIn_129_0 = hg.field_d[nh.field_k];
                     } else {
-                      stackIn_129_0 = -1 + qc.field_ab[var7_int];
+                      stackIn_129_0 = -1 + StandardContentDialog.field_ab[var7_int];
                     }
                     var10 = stackIn_129_0;
                     if (var10 > var9) {
@@ -2122,7 +2122,7 @@ final class MenuScreen {
                 }
                 if (null == TranslucentSpriteLayer.field_i) {
                   var7_intLifetime3 = param1 ? 1 : 0;
-                  hm.a(var7_intLifetime3 != 0, MatchingFieldValidator.field_m.field_x, (Sprite[]) null, 0, i.field_Q, 0, (Sprite[]) null, 3, 320, 0, 3 * MatchingFieldValidator.field_m.field_x / 2, 240);
+                  hm.a(var7_intLifetime3 != 0, MatchingFieldValidator.field_m.field_x, (Sprite[]) null, 0, FullscreenStatusDialog.field_Q, 0, (Sprite[]) null, 3, 320, 0, 3 * MatchingFieldValidator.field_m.field_x / 2, 240);
                   if (var11 == 0) {
                     break regionExit2;
                   }
@@ -2480,19 +2480,19 @@ final class MenuScreen {
         if (this.field_h != 1 &&
           5 != this.field_h) {
           if (this.field_h == 0) {
-            kf.field_F = 0;
+            StripedProgressWidget.field_F = 0;
             if (var8 != 0) {
-              kf.field_F = -1 + ie.field_b.field_q;
+              StripedProgressWidget.field_F = -1 + ie.field_b.field_q;
             }
           }
         } else {
-          kf.field_F = -1 + ie.field_b.field_q;
+          StripedProgressWidget.field_F = -1 + ie.field_b.field_q;
         }
         if (FramedPanelLayer.a(-22426, 0)) {
-          kf.field_F = 6;
+          StripedProgressWidget.field_F = 6;
         }
-        k.a(kf.field_F, 1);
-        nc.a(kf.field_F, true);
+        k.a(StripedProgressWidget.field_F, 1);
+        nc.a(StripedProgressWidget.field_F, true);
         var9 = nn.field_a[this.field_h];
         var2_ref_af__ = var9;
         var3 = 0;
@@ -2543,7 +2543,7 @@ final class MenuScreen {
                 stackIn_38_2 = 100;
                 stackIn_39_3 = (ie.field_b.field_L != 0);
                 stackIn_42_4 = (fa.field_b != 0);
-                stackIn_43_0 = ((PalettedBitmapFont) (Object) stackIn_35_0).drawParagraph(ProxyAuthenticationRequiredException.$cfr$intArgs$a$feb7e63b59d8(stackIn_36_1, stackIn_38_2, stackIn_39_3, stackIn_42_4), 135, 169 - i.field_N.field_x, 370, 1000, 0, -1, 1, 0, i.field_N.field_x);
+                stackIn_43_0 = ((PalettedBitmapFont) (Object) stackIn_35_0).drawParagraph(ProxyAuthenticationRequiredException.$cfr$intArgs$a$feb7e63b59d8(stackIn_36_1, stackIn_38_2, stackIn_39_3, stackIn_42_4), 135, 169 - FullscreenStatusDialog.field_N.field_x, 370, 1000, 0, -1, 1, 0, FullscreenStatusDialog.field_N.field_x);
                 break;
               }
               stackIn_43_0Lifetime1 = -1;
@@ -2640,7 +2640,7 @@ final class MenuScreen {
                     }
                   }
                   if (10 == this.field_h) {
-                    i.field_Q.drawParagraph(vf.field_m, 62, 250 + MatchingFieldValidator.field_m.field_x, 315, 1000, 0, -1, 0, 0, 3 * MatchingFieldValidator.field_m.field_x / 2);
+                    FullscreenStatusDialog.field_Q.drawParagraph(vf.field_m, 62, 250 + MatchingFieldValidator.field_m.field_x, 315, 1000, 0, -1, 0, 0, 3 * MatchingFieldValidator.field_m.field_x / 2);
                     if (var8 == 0) {
                       break regionExit1;
                     }
@@ -2700,7 +2700,7 @@ final class MenuScreen {
           var3 = stackIn_115_0;
           var4Lifetime1 = wi.field_a[rn.field_j];
           if (var4Lifetime1 < var3) {
-            stackIn_118_0 = qc.field_ab[var4Lifetime1];
+            stackIn_118_0 = StandardContentDialog.field_ab[var4Lifetime1];
           } else {
             stackIn_118_0 = hg.field_d[nh.field_k];
           }
@@ -2752,7 +2752,7 @@ final class MenuScreen {
           boolean decompiledFrameRemainder1 = true;
           if (ri.field_E >= 2 && (9 == this.field_h ||
             0 == this.field_h) && (48 == e.field_f &&
-            i.field_P[82])) {
+            FullscreenStatusDialog.field_P[82])) {
             nh.field_k = wi.field_a.length;
             decompiledFrameRemainder1 = !(!je.field_c);
             if (decompiledFrameRemainder1) {
@@ -3061,7 +3061,7 @@ final class MenuScreen {
           stackIn_34_1 = 90;
         }
         var5Lifetime1 = stackIn_34_0 + stackIn_34_1;
-        i.field_Q.drawCentred(var4, 320, var5Lifetime1 + MatchingFieldValidator.field_m.field_x, 4, -1);
+        FullscreenStatusDialog.field_Q.drawCentred(var4, 320, var5Lifetime1 + MatchingFieldValidator.field_m.field_x, 4, -1);
     }
 
     MenuScreen(Torquing param0, int param1) {

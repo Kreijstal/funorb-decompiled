@@ -57,7 +57,7 @@ final class qd {
             field_g = 47;
           }
           while (var3_int < wh.field_z.length) {
-            var5 = mn.field_Z[var3_int];
+            var5 = ProgressMessageDialog.field_Z[var3_int];
             if (var5 >= 0) {
               var6 = MenuScreen.measureMenuText(true, -90, wh.field_z[var3_int]);
               var4 = var4 + WidgetContainer.field_z;

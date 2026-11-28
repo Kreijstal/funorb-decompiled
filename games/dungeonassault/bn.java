@@ -41,7 +41,7 @@ final class bn {
         int fieldTemp$0 = 0;
         if (param0 != 6731) {
           this.c(-81);
-          if (cm.field_R != null) {
+          if (RegistrationAgreementPane.field_R != null) {
             return;
           }
           if (pb.field_G <= 0) {
@@ -54,7 +54,7 @@ final class bn {
               return;
             }
             this.field_c = this.field_k;
-            if (this.field_b > sj.field_bb) {
+            if (this.field_b > ResizableModalDialog.field_bb) {
               this.field_d = false;
             } else {
               this.c(103);
@@ -77,7 +77,7 @@ final class bn {
             aj.field_Gb = (-up.field_d + this.field_x) / 2;
           }
         } else {
-          if (cm.field_R != null) {
+          if (RegistrationAgreementPane.field_R != null) {
             return;
           }
           if (pb.field_G <= 0) {
@@ -90,7 +90,7 @@ final class bn {
               return;
             }
             this.field_c = this.field_k;
-            if (this.field_b > sj.field_bb) {
+            if (this.field_b > ResizableModalDialog.field_bb) {
               this.field_d = false;
             } else {
               this.c(103);
@@ -114,7 +114,7 @@ final class bn {
 
     final boolean b(int param0) {
         int var2 = -125 / ((param0 - 24) / 43);
-        if (this.field_b > sj.field_bb) {
+        if (this.field_b > ResizableModalDialog.field_bb) {
           return false;
         }
         if (pb.field_G > 0) {

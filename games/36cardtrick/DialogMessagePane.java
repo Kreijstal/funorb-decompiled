@@ -1,0 +1,210 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.io.*;
+
+final class DialogMessagePane extends DequeWidgetContainer implements WidgetActivationListener {
+    static String field_K;
+    private int[] field_G;
+    private ProgressMessageDialog field_E;
+    private InteractiveWidget[] field_I;
+    private BitmapFont field_J;
+    static byte[][][] field_H;
+    private String field_L;
+    static String field_F;
+    private int field_D;
+
+    final void drawWidget(int param0, int param1, int param2, int param3) {
+        super.drawWidget(param0, param1, param2, param3);
+        this.field_J.drawParagraph(this.field_L, this.field_o + param0 + 14, 10 + param1 + this.field_i, this.field_h - 28, this.field_q, 16777215, -1, 0, 0, this.field_J.field_s);
+    }
+
+    final InteractiveWidget addListenerButton(WidgetEventListener param0, boolean param1, String param2) {
+        InteractiveWidget var4 = null;
+        RuntimeException var4_ref = null;
+        int var5 = 0;
+        InteractiveWidget stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var4 = new InteractiveWidget(param2, param0);
+          var4.field_v = (WidgetRenderer) ((Object) new ki());
+          var5 = -2 + this.field_q;
+          this.setBounds(this.field_q + 34, 0, this.field_h, 0, param1);
+          var4.setBounds(30, var5, this.field_h - 14, 7, param1);
+          this.addChild(var4, (byte) 118);
+          if (!param1) {
+            this.drawWidget(-77, -111, 74, 6);
+          }
+          stackIn_3_0 = var4;
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4_ref = decompiledCaughtException;
+          stackIn_6_0 = var4_ref;
+          stackIn_6_1 = new StringBuilder().append("ui.J(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw ma.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+        }
+    }
+
+    public static void clearDeclaredStaticReferences(int param0) {
+        field_H = (byte[][][]) null;
+        if (param0 != -22742) {
+          DialogMessagePane.clearDeclaredStaticReferences(108);
+        }
+        field_K = null;
+        field_F = null;
+    }
+
+    final static void d(byte param0) {
+        try {
+          int var1_int = 0;
+          int var3 = Main.field_T;
+          try {
+            if (RichTextWidget.field_H != null) {
+              RichTextWidget.field_H.a(82);
+            }
+            if (param0 >= -49) {
+              DialogMessagePane.clearDeclaredStaticReferences(-66);
+            }
+            if (null != AccountRequestState.field_b) {
+              AccountRequestState.field_b.shutdown(124);
+            }
+            if (ni.field_c != null) {
+              try {
+                ni.field_c.close((byte) -120);
+              } catch (IOException iOException) {
+              }
+            }
+            if (null != ProgressDialog.field_Z) {
+              for (var1_int = 0; var1_int < ProgressDialog.field_Z.length; var1_int++) {
+                if (ProgressDialog.field_Z[var1_int] != null) {
+                  try {
+                    ProgressDialog.field_Z[var1_int].close((byte) -86);
+                  } catch (IOException var2_ref) {
+                  }
+                }
+              }
+            }
+          } catch (RuntimeException runtimeException) {
+            throw ma.wrapException((Throwable) ((Object) runtimeException), "ui.D(" + param0 + ')');
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    DialogMessagePane(ProgressMessageDialog param0, BitmapFont param1, String param2) {
+        super(0, 0, 288, 0, (WidgetRenderer) null);
+        int var4_int = 0;
+        this.field_D = 0;
+        try {
+          this.field_L = param2;
+          this.field_E = param0;
+          this.field_J = param1;
+          var4_int = this.field_L != null ? this.field_J.textHeight(this.field_L, 260, this.field_J.field_s) : 0;
+          this.setBounds(22 + var4_int, 0, 288, 0, true);
+        } catch (RuntimeException runtimeException) {
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "ui.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    private final void growActions(int param0, int param1) {
+        int var5 = 0;
+        int var6 = Main.field_T;
+        if (this.field_D >= param0) {
+          return;
+        }
+        InteractiveWidget[] var7 = new InteractiveWidget[param0];
+        InteractiveWidget[] var3 = var7;
+        if (param1 >= -26) {
+          return;
+        }
+        int[] var4 = new int[param0];
+        for (var5 = 0; var5 < this.field_D; var5++) {
+          var7[var5] = this.field_I[var5];
+          var4[var5] = this.field_G[var5];
+        }
+        this.field_I = var3;
+        this.field_D = param0;
+        this.field_G = var4;
+    }
+
+    final void addActionButton(String param0, int param1, int param2) {
+        int var4_int = 0;
+        try {
+          if (param2 != -14) {
+            String var5 = (String) null;
+            this.addListenerButton((WidgetEventListener) null, true, (String) null);
+          }
+          var4_int = this.field_D;
+          this.growActions(1 + var4_int, -44);
+          this.field_I[var4_int] = this.addListenerButton((WidgetEventListener) (this), true, param0);
+          this.field_G[var4_int] = param1;
+        } catch (RuntimeException runtimeException) {
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "ui.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+        }
+    }
+
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, int param4) {
+        int var6_int = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
+        var9 = Main.field_T;
+        try {
+          var7 = -86 % ((param1 + 62) / 32);
+          for (var6_int = 0; this.field_D > var6_int; var6_int++) {
+            if (this.field_I[var6_int] != param3) {
+              continue;
+            }
+            var8 = this.field_G[var6_int];
+            if (var8 == -1) {
+              this.field_E.closeDialog(81);
+            } else {
+              gh.a(this.field_G[var6_int], 31888);
+            }
+            break;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_11_0 = var6;
+          stackIn_11_1 = new StringBuilder().append("ui.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          throw ma.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param4).append(')').toString());
+        }
+    }
+
+    static {
+        field_K = "That name is not available";
+        field_F = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
+    }
+}

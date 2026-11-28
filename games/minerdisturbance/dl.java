@@ -91,7 +91,7 @@ final class dl {
             return (BinaryBitmapFont) (stackIn_2_0);
           }
           var5_int = 1 / ((37 - param3) / 62);
-          stackIn_4_0 = bh.a((byte) 104, param0.getFile(false, param2, param1));
+          stackIn_4_0 = FullscreenStatusDialog.a((byte) 104, param0.getFile(false, param2, param1));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -149,7 +149,7 @@ final class dl {
           var3 = 0;
           if (var1_int != 0 &&
             pn.field_a.field_e >= 0) {
-            var3 = wf.field_P[pn.field_a.field_e];
+            var3 = ResizableModalDialog.field_P[pn.field_a.field_e];
             if (var3 == 2) {
               om.a(-22126);
             } else if (var3 == 5) {
@@ -167,7 +167,7 @@ final class dl {
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
               var3 = 2;
-              qd.a(-63, true, 5);
+              GuestPlayConfirmationForm.a(-63, true, 5);
             }
           }
           stackIn_29_0 = var3;

@@ -1168,7 +1168,7 @@ final class gf {
                   var3Lifetime1 == 2 ||
                   1 == var3Lifetime1) {
                   var5Lifetime8 = var4Lifetime1Lifetime1;
-                  var6 = rg.field_sb % 3;
+                  var6 = ProgressMessageDialog.field_sb % 3;
                   if (var6 != 0) {
                     if (1 == var6) {
                       vh.field_g = vh.field_g - var5Lifetime8;
@@ -1351,7 +1351,7 @@ final class gf {
                     var12 = 1000 * var3Lifetime1;
                     a.field_c = a.field_c + var12;
                     var13 = var12;
-                    var14 = rg.field_sb % 3;
+                    var14 = ProgressMessageDialog.field_sb % 3;
                     if (0 == var14) {
                       MidiPcmStream.field_X = MidiPcmStream.field_X + var13;
                     } else {
@@ -1437,7 +1437,7 @@ final class gf {
               lj.field_r = lj.field_r + 25;
               this.field_b = 0;
               this.field_g = 1;
-              rg.field_sb = rg.field_sb - 40;
+              ProgressMessageDialog.field_sb = ProgressMessageDialog.field_sb - 40;
               for (var4Lifetime3Lifetime1 = 0; var4Lifetime3Lifetime1 < 1000; var4Lifetime3Lifetime1++) {
                 if (null != uf.field_p[var4Lifetime3Lifetime1]) {
                   if (uf.field_p[var4Lifetime3Lifetime1].a(false)) {
@@ -1570,7 +1570,7 @@ final class gf {
                     lj.field_r = lj.field_r + 25;
                     if ((3 & var9Lifetime1) == 1 &&
                       1 == (3 & var10Lifetime1)) {
-                      rg.field_sb = rg.field_sb - 15;
+                      ProgressMessageDialog.field_sb = ProgressMessageDialog.field_sb - 15;
                       var11_intLifetime1 = jf.b((byte) 114);
                       uf.field_p[var11_intLifetime1] = new gf(var9Lifetime1 / 4, var10Lifetime1 / 4, 16);
                       uf.field_p[var11_intLifetime1].field_g = 0;

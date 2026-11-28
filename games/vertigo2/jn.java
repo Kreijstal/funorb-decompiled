@@ -55,12 +55,12 @@ final class jn {
     }
 
     final static void a(int param0) {
-        ga.a(NanoFrameTimer.field_e, param0, param0 ^ 82);
-        ga.a(DiskArchiveRequest.field_G, 6, 86);
-        ga.a(ir.field_e, 8, param0 ^ 126);
-        ga.a(aa.field_Jb, 13, 80);
+        StandardContentDialog.a(NanoFrameTimer.field_e, param0, param0 ^ 82);
+        StandardContentDialog.a(DiskArchiveRequest.field_G, 6, 86);
+        StandardContentDialog.a(ir.field_e, 8, param0 ^ 126);
+        StandardContentDialog.a(aa.field_Jb, 13, 80);
         if (!mm.b(-12942)) {
-          ga.a(po.field_c, 18, 127);
+          StandardContentDialog.a(po.field_c, 18, 127);
         }
     }
 

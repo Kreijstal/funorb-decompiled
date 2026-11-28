@@ -18,7 +18,7 @@ final class ha extends um {
         kn.field_g = true;
         SecondaryNodeDequeIterator.field_l = null;
         DisplayNameSelectionPanel.field_L = null;
-        wi.field_kb = 0;
+        ProgressDialog.field_kb = 0;
         jn.field_l = null;
         hc.field_b = 0;
         RaiderDefinition.field_f = null;
@@ -26,10 +26,10 @@ final class ha extends um {
         ce.field_p = -1;
         bl.field_l = null;
         pp.field_K = new IntrusiveDeque();
-        ti.field_A = sj.a(SecondaryNodeDeque.field_a, 37);
+        ti.field_A = ResizableModalDialog.a(SecondaryNodeDeque.field_a, 37);
         ti.field_A.field_v = 1;
-        tk.field_k = sj.a(fl.field_i, 107);
-        PacketBuffer.field_n = sj.a(PackedBitSet.field_h, 59);
+        tk.field_k = ResizableModalDialog.a(fl.field_i, 107);
+        PacketBuffer.field_n = ResizableModalDialog.a(PackedBitSet.field_h, 59);
         PacketBuffer.field_n.field_v = param0;
         pp.field_K.addFirst(ti.field_A, false);
         pp.field_K.addFirst(tk.field_k, false);
@@ -331,7 +331,7 @@ final class ha extends um {
           if (je.field_i == CombatState.field_x) {
             return false;
           }
-          mm.field_t = jk.field_Db[je.field_i];
+          mm.field_t = StandardContentDialog.field_Db[je.field_i];
           ob.field_Yb = ClientException.field_a[je.field_i];
           je.field_i = 127 & je.field_i + 1;
           if (param0 != 47) {

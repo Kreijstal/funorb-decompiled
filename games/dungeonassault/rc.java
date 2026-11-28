@@ -108,7 +108,7 @@ final class rc {
           var1_int = 108 % ((0 - param0) / 52);
           en.field_c = -(fa.field_i >> 1) + wf.field_C;
           var2 = en.field_c;
-          for (var3 = 0; uc.field_K.length > var3; var3++) {
+          for (var3 = 0; StripedProgressWidget.field_K.length > var3; var3++) {
             var4 = dd.field_A[var3];
             if (var4 < 0) {
               var5 = ui.field_b;
@@ -119,7 +119,7 @@ final class rc {
                 var5 = Bzip2State.field_l;
               }
             }
-            var6 = uc.field_K[var3];
+            var6 = StripedProgressWidget.field_K[var3];
             stackIn_10_0 = 107;
             stackIn_11_1 = !(var4 < 0);
             var7 = rb.$cfr$intArgs$a$62abead39cee(stackIn_10_0, stackIn_11_1, var6);

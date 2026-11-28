@@ -13,7 +13,7 @@ final class df extends InteractiveWidget {
         RuntimeException var2 = null;
         var3 = Terraphoenix.field_V;
         try {
-          re.a(pb.field_b, (byte) -26, ok.field_j, hm.field_L, true, 0, param1);
+          re.a(pb.field_b, (byte) -26, ok.field_j, StripedProgressWidget.field_L, true, 0, param1);
           for (var2_int = param0; var2_int < pb.field_b; var2_int++) {
             pf.field_b[var2_int + param1] = var2_int;
           }

@@ -657,8 +657,8 @@ final class MapTile {
             var9 = null;
             if (param5 &&
               tg.field_l == this.field_r) {
-              var9 = oi.field_J;
-              oi.field_J.bindAsRenderTarget();
+              var9 = DialogMessagePane.field_J;
+              DialogMessagePane.field_J.bindAsRenderTarget();
               SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
               k.field_f.a(0);
             }
@@ -915,8 +915,8 @@ final class MapTile {
           var9Lifetime1 = null;
           if (param5 &&
             tg.field_l == this.field_r) {
-            var9Lifetime1 = oi.field_J;
-            oi.field_J.bindAsRenderTarget();
+            var9Lifetime1 = DialogMessagePane.field_J;
+            DialogMessagePane.field_J.bindAsRenderTarget();
             SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
             k.field_f.a(0);
           }

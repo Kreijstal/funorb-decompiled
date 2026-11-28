@@ -7,7 +7,7 @@ final class gh extends IntrusiveNode {
     static int field_l;
     static tf field_g;
     static int field_h;
-    static sd field_m;
+    static ProgressDialog field_m;
     static boolean field_i;
 
     final static void d(int param0) {

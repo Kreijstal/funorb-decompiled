@@ -15,7 +15,7 @@ final class bf {
     }
 
     final static void a(boolean param0, byte param1) {
-        ej.a(true, (byte) 55, param0);
+        StandardContentDialog.a(true, (byte) 55, param0);
         if (param1 != -8) {
           byte[] var3 = (byte[]) null;
           bf.copyBytes(116, (byte[]) null);

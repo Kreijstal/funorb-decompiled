@@ -7,7 +7,7 @@ final class ag {
     static int field_c;
 
     final static String b(int param0) {
-        if (nh.field_P) {
+        if (FullscreenStatusDialog.field_P) {
           if (param0 != -1) {
             return (String) null;
           }

@@ -126,13 +126,13 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         var3 = var3 + this.a(170, 170, sa.field_a, this.field_G, var3);
         var3 = var3 + (this.a(20, "", true, 170, var3, LoginPanel.field_C, this.field_K) + 5);
         var3 = var3 + this.a(170, 170, p.field_b, this.field_O, var3);
-        var3 = var3 + (this.a(170, sc.field_a, uc.field_nb, var3, this.field_D, 10000536) + 5);
+        var3 = var3 + (this.a(170, sc.field_a, ProgressMessageDialog.field_nb, var3, this.field_D, 10000536) + 5);
         var3 = var3 + (5 + this.a(170, hc.field_kb, nk.field_C, var3, this.field_E, 10000536));
         var3 = var3 + this.a((byte) -78, this.field_M, 170, var3, AgeValidator.field_o);
         LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, this.field_j - 90, 25, this.field_J, true, -120 + this.field_j, 5, ValidatedTextField.field_T, 11579568, IsaacRandom.field_j);
         this.addChild((byte) -74, var4);
         var3 = var3 + var4.field_v;
-        DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(ql.field_Q, 0, 0, 0, 0, 16777215, -1, 0, 0, ql.field_Q.field_E, -1, 2147483647, true);
+        DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(ResizableModalDialog.field_Q, 0, 0, 0, 0, 16777215, -1, 0, 0, ResizableModalDialog.field_Q.field_E, -1, 2147483647, true);
         this.field_F = new RichTextWidget(var2, var5);
         this.field_F.field_q = "";
         this.field_F.a(wc.field_b, 0, -27371);
@@ -247,7 +247,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new LabeledWidgetContainer(20, param4, 120 + param1, 25, param3, false, 120, 3, ql.field_Q, 16777215, param2);
+          var6 = new LabeledWidgetContainer(20, param4, 120 + param1, 25, param3, false, 120, 3, ResizableModalDialog.field_Q, 16777215, param2);
           this.addChild((byte) 75, var6);
           if (param0 != 170) {
             var7 = (InteractiveWidget) null;
@@ -415,7 +415,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new LabeledWidgetContainer(20, param4, param3 + 120, 25, param6, false, 120, 3, ql.field_Q, 16777215, param5);
+          var10 = new LabeledWidgetContainer(20, param4, param3 + 120, 25, param6, false, 120, 3, ResizableModalDialog.field_Q, 16777215, param5);
           this.addChild((byte) 113, var10);
           var9 = new li(((FieldValidatorProvider) ((Object) param6)).getFieldValidator((byte) 97), param1, 126, param4 + var10.field_v, param3 + 50, param0);
           var9.field_r = (WidgetEventListener) (this);
@@ -567,7 +567,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         RuntimeException decompiledCaughtException = null;
         try {
           var6_int = -35 / ((param0 - 63) / 36);
-          var7 = new LabeledWidgetContainer(20, param3, param2 + 120, 25, param1, false, 120, 3, ql.field_Q, 16777215, param4);
+          var7 = new LabeledWidgetContainer(20, param3, param2 + 120, 25, param1, false, 120, 3, ResizableModalDialog.field_Q, 16777215, param4);
           this.addChild((byte) 123, var7);
           var8 = new ld(((FieldValidatorProvider) ((Object) param1)).getFieldValidator((byte) 103));
           this.addChild((byte) 115, var8);

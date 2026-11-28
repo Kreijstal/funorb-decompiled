@@ -148,10 +148,10 @@ final class db {
         int var3;
         var3 = stellarshard.field_B;
         ii.field_F = null;
-        ck.field_db = false;
+        ProgressMessageDialog.field_db = false;
         var1 = -66 % ((74 - param0) / 34);
         if (gk.field_a) {
-          ModalDialogHost.field_G.h((byte) 52);
+          ModalDialogHost.field_G.showConnectionFailure((byte) 52);
         } else {
           var2 = ag.field_c;
           if (0 < var2) {
@@ -162,7 +162,7 @@ final class db {
             }
             ii.field_F = ModalDialogHost.a(new CharSequence[]{(CharSequence) ((Object) ii.field_F), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) SocketConnector.field_a)}, (byte) 127);
           }
-          ModalDialogHost.field_G.o(3);
+          ModalDialogHost.field_G.closeDialog(3);
           PcmResampler.b(-21923);
         }
     }

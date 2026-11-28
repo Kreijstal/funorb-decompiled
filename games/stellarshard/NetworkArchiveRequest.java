@@ -52,8 +52,8 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         try {
           try {
             var9 = qd.field_j.getGraphics();
-            if (null == sj.field_F) {
-              sj.field_F = new java.awt.Font("Helvetica", 1, 13);
+            if (null == RegistrationAgreementPane.field_F) {
+              RegistrationAgreementPane.field_F = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param4) {
               var9.setColor(java.awt.Color.black);
@@ -73,7 +73,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               var10.setColor(java.awt.Color.black);
               var10.drawRect(1, 1, 301, 31);
               var10.fillRect(3 * param3 + 2, param1, -(3 * param3) + 300, 30);
-              var10.setFont(sj.field_F);
+              var10.setFont(RegistrationAgreementPane.field_F);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param0, (-(6 * param0.length()) + 304) / 2, 22);
               var9.drawImage(wc.field_C, TextFieldValidator.field_j / 2 - 152, -18 + td.field_d / 2, (java.awt.image.ImageObserver) null);
@@ -88,14 +88,14 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               var9.setColor(java.awt.Color.black);
               var9.drawRect(1 + var7, var8 + 1, 301, 31);
               var9.fillRect(var7 + 2 + param3 * 3, 2 + var8, -(3 * param3) + 300, 30);
-              var9.setFont(sj.field_F);
+              var9.setFont(RegistrationAgreementPane.field_F);
               var9.setColor(java.awt.Color.white);
               var9.drawString(param0, var7 + (-(6 * param0.length()) + 304) / 2, var8 + 22);
             }
             if (hf.field_j == null) {
               return;
             }
-            var9.setFont(sj.field_F);
+            var9.setFont(RegistrationAgreementPane.field_F);
             var9.setColor(java.awt.Color.white);
             var9.drawString(hf.field_j, TextFieldValidator.field_j / 2 - hf.field_j.length() * 6 / 2, -26 + td.field_d / 2);
             return;

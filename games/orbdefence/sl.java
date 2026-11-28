@@ -93,13 +93,13 @@ final class sl extends sf {
         byte[] var22;
         int[] var23;
         var8 = OrbDefence.field_D ? 1 : 0;
-        var1 = new RgbSprite[ec.field_K];
+        var1 = new RgbSprite[DialogMessagePane.field_K];
         var2 = 0;
         if (param0 >= -82) {
           var9 = (RgbSprite) null;
           sl.a(16, (RgbSprite) null);
         }
-        while (var2 < ec.field_K) {
+        while (var2 < DialogMessagePane.field_K) {
           var3 = wh.field_b[var2] * m.field_a[var2];
           var22 = fl.field_a[var2];
           if (!ha.field_g[var2]) {

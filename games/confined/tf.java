@@ -81,7 +81,7 @@ final class tf {
           }
           ((BinaryBitmapFont) (Object) stackIn_11_0).drawString(stackIn_12_1, 80, 10 * var5 + 118 + param2, 16777215, -1);
           pn.field_a.drawRightAligned(hh.field_a, 500, 103 + param2, 4243584, -1);
-          pn.field_a.drawRightAligned(ei.field_ib, 500, 123 + param2, 4243584, -1);
+          pn.field_a.drawRightAligned(FullscreenStatusDialog.field_ib, 500, 123 + param2, 4243584, -1);
           if ((32800 & ~param3 & 1 << param1) != 0) {
             pn.field_a.drawString("???", 500, 103 + param2, 16777215, -1);
             pn.field_a.drawString("???", 500, param2 + 123, 16777215, -1);

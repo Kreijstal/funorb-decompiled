@@ -13,7 +13,7 @@ abstract class ModalDialog extends WidgetContainer {
     static String[] field_F;
     boolean field_J;
 
-    abstract void a(int param0, int param1, byte param2);
+    abstract void drawDialogBackground(int param0, int param1, byte param2);
 
     ModalDialog(ModalDialogHost param0, int param1, int param2) {
         super(-param1 + vk.field_c >> 1, -param2 + be.field_v >> 1, param1, param2, (WidgetActionListener) null);
@@ -32,7 +32,7 @@ abstract class ModalDialog extends WidgetContainer {
         }
         if (this.field_G >= 256) {
           if (0 == param2) {
-            this.a(this.x + param0, param3 + this.y, (byte) 82);
+            this.drawDialogBackground(this.x + param0, param3 + this.y, (byte) 82);
             super.drawWidget(param0, -124, param2, param3);
             return;
           }
@@ -43,7 +43,7 @@ abstract class ModalDialog extends WidgetContainer {
           if (param1 <= -106) {
             il.a(1, hf.field_y);
             SoftwareRasterizer.clearRaster();
-            this.a(0, 0, (byte) 82);
+            this.drawDialogBackground(0, 0, (byte) 82);
             super.drawWidget(-param0 - this.x, -127, param2, -param3 - this.y);
             MessageKeys.a(false);
             hf.field_y.drawWithOpacity(param0 + this.x, param3 + this.y, this.field_G);
@@ -52,7 +52,7 @@ abstract class ModalDialog extends WidgetContainer {
           this.field_G = 14;
           il.a(1, hf.field_y);
           SoftwareRasterizer.clearRaster();
-          this.a(0, 0, (byte) 82);
+          this.drawDialogBackground(0, 0, (byte) 82);
           super.drawWidget(-param0 - this.x, -127, param2, -param3 - this.y);
           MessageKeys.a(false);
           hf.field_y.drawWithOpacity(param0 + this.x, param3 + this.y, this.field_G);
@@ -63,7 +63,7 @@ abstract class ModalDialog extends WidgetContainer {
           if (param1 <= -106) {
             il.a(1, hf.field_y);
             SoftwareRasterizer.clearRaster();
-            this.a(0, 0, (byte) 82);
+            this.drawDialogBackground(0, 0, (byte) 82);
             super.drawWidget(-param0 - this.x, -127, param2, -param3 - this.y);
             MessageKeys.a(false);
             hf.field_y.drawWithOpacity(param0 + this.x, param3 + this.y, this.field_G);
@@ -72,7 +72,7 @@ abstract class ModalDialog extends WidgetContainer {
           this.field_G = 14;
           il.a(1, hf.field_y);
           SoftwareRasterizer.clearRaster();
-          this.a(0, 0, (byte) 82);
+          this.drawDialogBackground(0, 0, (byte) 82);
           super.drawWidget(-param0 - this.x, -127, param2, -param3 - this.y);
           MessageKeys.a(false);
           hf.field_y.drawWithOpacity(param0 + this.x, param3 + this.y, this.field_G);
@@ -83,7 +83,7 @@ abstract class ModalDialog extends WidgetContainer {
           if (param1 <= -106) {
             il.a(1, hf.field_y);
             SoftwareRasterizer.clearRaster();
-            this.a(0, 0, (byte) 82);
+            this.drawDialogBackground(0, 0, (byte) 82);
             super.drawWidget(-param0 - this.x, -127, param2, -param3 - this.y);
             MessageKeys.a(false);
             hf.field_y.drawWithOpacity(param0 + this.x, param3 + this.y, this.field_G);
@@ -92,7 +92,7 @@ abstract class ModalDialog extends WidgetContainer {
           this.field_G = 14;
           il.a(1, hf.field_y);
           SoftwareRasterizer.clearRaster();
-          this.a(0, 0, (byte) 82);
+          this.drawDialogBackground(0, 0, (byte) 82);
           super.drawWidget(-param0 - this.x, -127, param2, -param3 - this.y);
           MessageKeys.a(false);
           hf.field_y.drawWithOpacity(param0 + this.x, param3 + this.y, this.field_G);
@@ -101,7 +101,7 @@ abstract class ModalDialog extends WidgetContainer {
         if (param1 <= -106) {
           il.a(1, hf.field_y);
           SoftwareRasterizer.clearRaster();
-          this.a(0, 0, (byte) 82);
+          this.drawDialogBackground(0, 0, (byte) 82);
           super.drawWidget(-param0 - this.x, -127, param2, -param3 - this.y);
           MessageKeys.a(false);
           hf.field_y.drawWithOpacity(param0 + this.x, param3 + this.y, this.field_G);
@@ -110,7 +110,7 @@ abstract class ModalDialog extends WidgetContainer {
         this.field_G = 14;
         il.a(1, hf.field_y);
         SoftwareRasterizer.clearRaster();
-        this.a(0, 0, (byte) 82);
+        this.drawDialogBackground(0, 0, (byte) 82);
         super.drawWidget(-param0 - this.x, -127, param2, -param3 - this.y);
         MessageKeys.a(false);
         hf.field_y.drawWithOpacity(param0 + this.x, param3 + this.y, this.field_G);
@@ -437,7 +437,7 @@ abstract class ModalDialog extends WidgetContainer {
     final void setCenteredSize(int param0, int param1, int param2) {
         this.setBounds(be.field_v - param1 >> 1, (byte) 80, param2, vk.field_c - param2 >> 1, param1);
         if (param0 != 98) {
-          this.a(-2, -19, (byte) -5);
+          this.drawDialogBackground(-2, -19, (byte) -5);
         }
     }
 

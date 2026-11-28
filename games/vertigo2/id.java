@@ -298,7 +298,7 @@ final class id {
         RuntimeException var5 = null;
         long var6 = 0L;
         PcmSample var8 = null;
-        vh var9 = null;
+        VorbisSample var9 = null;
         PcmSample stackIn_5_0 = null;
         Object stackIn_9_0 = null;
         PcmSample stackIn_20_0 = null;
@@ -324,15 +324,15 @@ final class id {
             stackIn_9_0 = null;
             return (PcmSample) (stackIn_9_0);
           }
-          var9 = (vh) (this.field_e.a(var6, (byte) 64));
+          var9 = (VorbisSample) (this.field_e.a(var6, (byte) 64));
           if (var9 == null) {
-            var9 = vh.a(this.field_h, param1, param3);
+            var9 = VorbisSample.load(this.field_h, param1, param3);
             if (var9 == null) {
               return null;
             }
             this.field_e.a(var9, var6, false);
           }
-          var8Lifetime1 = var9.a(param0);
+          var8Lifetime1 = var9.decodeToPcm(param0);
           if (var8Lifetime1 == null) {
             return null;
           }

@@ -10,19 +10,19 @@ final class vg {
         if (!ModalDialogHost.field_x) {
           throw new IllegalStateException();
         }
-        if (null != fa.field_G) {
-          fa.field_G.n(-125);
+        if (null != StripedProgressWidget.field_G) {
+          StripedProgressWidget.field_G.closeDialog(-125);
         }
         String var1 = SecondaryNodeDequeIterator.c(param0 ^ 32013);
         wi.field_c = new LoginPanel(var1, (String) null, true, false, false);
         ti.field_b.showDialog((byte) 86, (UiWidget) (t.field_h));
-        t.field_h.c(param0 ^ 12814, wi.field_c);
+        t.field_h.replaceContent(param0 ^ 12814, wi.field_c);
         if (param0 == 32083) {
-          t.field_h.j(-125);
+          t.field_h.finishResize(-125);
           return;
         }
         vg.clearStaticReferences(-60);
-        t.field_h.j(-125);
+        t.field_h.finishResize(-125);
     }
 
     public static void clearStaticReferences(int param0) {

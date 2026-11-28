@@ -14,13 +14,13 @@ final class RandomAccessCacheFile {
         if (param0 != -1) {
           return (String) null;
         }
-        if (ma.field_o == gf.field_Z) {
+        if (ma.field_o == ContentTransitionDialog.field_Z) {
           return SocketConnector.field_d;
         }
         if (!td.field_h.a(false)) {
           return td.field_h.b(28903);
         }
-        if (gf.field_Z == PacketBuffer.field_i) {
+        if (ContentTransitionDialog.field_Z == PacketBuffer.field_i) {
           return td.field_h.b(28903);
         }
         return me.field_h;

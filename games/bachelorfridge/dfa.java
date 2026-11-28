@@ -46,12 +46,12 @@ class dfa {
           wk.field_a = -1;
           FullHealSpecial.field_q = -1;
           hja.field_i = 0;
-          hc.field_J = 0;
+          DialogMessagePane.field_J = 0;
           if (null == param7.children) {
             param7.children = new IntrusiveDeque();
           }
-          uma.field_M = param7.children;
-          uma.field_M.clear(param3 + 91);
+          NumericDateInputWidget.field_M = param7.children;
+          NumericDateInputWidget.field_M.clear(param3 + 91);
           FridgeScreen.field_g = new DualLinkNodeHashTable(param8);
           if (null == param6.children) {
             param6.children = new IntrusiveDeque();

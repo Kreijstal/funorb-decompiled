@@ -480,7 +480,7 @@ final class hm extends TextureOperator {
           var26 = this.a(0, -1, param0 - 1 & CrossfadingMidiPcmStream.field_x);
           var9 = this.a(0, -1, param0);
           var25 = this.a(0, -1, param0 + 1 & CrossfadingMidiPcmStream.field_x);
-          for (var11 = 0; we.field_M > var11; var11++) {
+          for (var11 = 0; StripedProgressWidget.field_M > var11; var11++) {
             var12 = (var25[var11] - var26[var11]) * var7 >> 12;
             var13 = (var9[-1 + var11 & rm.field_z] - var9[var11 + 1 & rm.field_z]) * var7 >> 12;
             var14 = var13 >> 4;

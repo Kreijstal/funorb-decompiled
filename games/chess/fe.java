@@ -290,7 +290,7 @@ final class fe {
         RuntimeException var5 = null;
         long var6 = 0L;
         PcmSample var8 = null;
-        hi var9 = null;
+        VorbisSample var9 = null;
         PcmSample var8Lifetime1;
         try {
           var5_int = param2 ^ ((536875007 & param3) << 4 | param3 >>> 12);
@@ -308,16 +308,16 @@ final class fe {
           if (param1 != 12) {
             field_d = (byte[]) null;
           }
-          var9 = (hi) (this.field_b.a(-115, var6));
+          var9 = (VorbisSample) (this.field_b.a(-115, var6));
           if (var9 == null) {
-            var9 = hi.a(this.field_f, param3, param2);
+            var9 = VorbisSample.load(this.field_f, param3, param2);
             if (var9 == null) {
               stackIn_13_0 = null;
               return (PcmSample) (stackIn_13_0);
             }
             this.field_b.a(param1 ^ -97, var6, var9);
           }
-          var8Lifetime1 = var9.a(param0);
+          var8Lifetime1 = var9.decodeToPcm(param0);
           if (var8Lifetime1 == null) {
             return null;
           }

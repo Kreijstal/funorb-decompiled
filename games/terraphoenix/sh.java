@@ -142,7 +142,7 @@ final class sh extends IntrusiveNode {
                 stackIn_45_0 = pj.field_q;
               }
               var9 = stackIn_45_0;
-              var1_int = var1_int + hi.field_ab;
+              var1_int = var1_int + FullscreenStatusDialog.field_ab;
               if (var9 != null) {
                 var9.a(var7Lifetime1 + (se.field_j << 1), var8Lifetime1 - se.field_j, lm.field_d + (dc.field_b << 1), 0, var1_int);
               }
@@ -153,7 +153,7 @@ final class sh extends IntrusiveNode {
               var1_int = var1_int + DelegatingCanvas.field_b;
             } else {
               qk.field_a.drawString(var6, var8Lifetime1, var1_int + fh.field_a, var5, -1);
-              var1_int = var1_int + (hi.field_ab + dc.field_b + lm.field_d);
+              var1_int = var1_int + (FullscreenStatusDialog.field_ab + dc.field_b + lm.field_d);
             }
           }
           return;

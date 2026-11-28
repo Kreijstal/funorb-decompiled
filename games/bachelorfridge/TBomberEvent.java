@@ -11,12 +11,12 @@ final class TBomberEvent extends SpecialEvent {
         int var2_int = 0;
         int var3 = 0;
         try {
-          lo.field_b = param1;
+          FullscreenNoticeType.field_b = param1;
           if (param0 != 3) {
             TBomberEvent.d(-39);
           }
           var2_int = 1000;
-          var3 = 6 + (lo.field_b.field_B + lo.field_b.field_F);
+          var3 = 6 + (FullscreenNoticeType.field_b.field_B + FullscreenNoticeType.field_b.field_F);
           if (1 == (var3 & 1)) {
             var3++;
           }

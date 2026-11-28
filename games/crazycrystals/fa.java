@@ -124,8 +124,8 @@ class fa extends mg {
           }
           pl.e(-125);
           qe.field_g.closeAllDialogs((byte) -100);
-          mk.field_b = new LoginPanel(jd.field_G, (String) null, ne.field_d, param1, param0);
-          MouseWheelInput.field_d = new ck(qe.field_g, mk.field_b);
+          mk.field_b = new LoginPanel(DialogMessagePane.field_G, (String) null, ne.field_d, param1, param0);
+          MouseWheelInput.field_d = new StandardContentDialog(qe.field_g, mk.field_b);
           qe.field_g.showDialog(-3264, MouseWheelInput.field_d);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "fa.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

@@ -44,17 +44,17 @@ final class e {
     }
 
     final static void a(int param0, ResourceArchive param1, ResourceArchive param2) {
-        hk.field_e = bl.a(param2, "initialset", "crushed").a();
+        hk.field_e = VorbisSample.loadByName(param2, "initialset", "crushed").decodeAllToPcm();
         if (param0 != 0) {
           return;
         }
         try {
           rh.field_g = ha.a(param1, "initialset", "fall-into-hole").b();
-          mo.field_i = bl.a(param2, "initialset", "got-by-spider").a();
-          pl.field_h = bl.a(param2, "initialset", "blown-up").a();
-          sj.field_d = bl.a(param2, "initialset", "electrocuted-buzz").a();
+          mo.field_i = VorbisSample.loadByName(param2, "initialset", "got-by-spider").decodeAllToPcm();
+          pl.field_h = VorbisSample.loadByName(param2, "initialset", "blown-up").decodeAllToPcm();
+          sj.field_d = VorbisSample.loadByName(param2, "initialset", "electrocuted-buzz").decodeAllToPcm();
           PasswordValidator.field_m = ha.a(param1, "initialset", "electrocuted-end").b();
-          RockTile.field_x = bl.a(param2, "initialset", "explode-into-sparks").a();
+          RockTile.field_x = VorbisSample.loadByName(param2, "initialset", "explode-into-sparks").decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "e.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -86,15 +86,15 @@ final class e {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          gk.field_d = bf.a(param0 - 5, "frame_top", "commonui", param2);
-          lm.field_g = bf.a(-1, "frame_bottom", "commonui", param2);
+          gk.field_d = FullscreenNoticeType.a(param0 - 5, "frame_top", "commonui", param2);
+          lm.field_g = FullscreenNoticeType.a(-1, "frame_bottom", "commonui", param2);
           PauseMenu.field_f = ArchiveRequest.a("jagex_logo_grey", param2, 10, "commonui");
-          sb.field_B = bf.a(-1, "button", "commonui", param2);
+          sb.field_B = FullscreenNoticeType.a(-1, "button", "commonui", param2);
           ao.field_b = LevelProgressUpdate.loadNamedSpriteSet("validation", "commonui", param2, false);
           ba.field_i = (BitmapFont) ((Object) lj.a(param2, "commonui", param3, "arezzo12", 17153));
           ai.field_h = (BitmapFont) ((Object) lj.a(param2, "commonui", param3, "arezzo14", 17153));
           mo.field_m = (BitmapFont) ((Object) lj.a(param2, "commonui", param3, "arezzo14bold", 17153));
-          var17 = new RgbSprite(param1.getFileByName(7693, "", "button.gif"), (java.awt.Component) ((Object) jd.field_D));
+          var17 = new RgbSprite(param1.getFileByName(7693, "", "button.gif"), (java.awt.Component) ((Object) DialogMessagePane.field_D));
           ee.a(param2, "commonui", (byte) -92, "dropdown");
           var5 = ep.a(param2, "screen_options", "commonui", false);
           ik.field_g = new wj[param0];

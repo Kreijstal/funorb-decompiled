@@ -389,7 +389,7 @@ final class qi {
             qi.b(-93);
           }
           WhirlpoolDigest.a((byte) -26, param0);
-          MidiPlayer.a(rk.field_Z, false, -16257);
+          MidiPlayer.a(ProgressDialog.field_Z, false, -16257);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "qi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -123,7 +123,7 @@ final class ii extends InteractiveWidget {
           if (param2 <= 11) {
             field_F = (String) null;
           }
-          var3 = pg.field_fb;
+          var3 = StandardContentDialog.field_fb;
           var3.f(param1, 950);
           var3.writeByte(false, param0.field_q);
           var3.writeShort(param0.field_n, -115);
@@ -143,13 +143,13 @@ final class ii extends InteractiveWidget {
             return;
           }
           GameApplet.field_e = GameApplet.field_e + 1;
-          ni.field_e = pg.field_gb;
+          ni.field_e = StandardContentDialog.field_gb;
           KeyHandler.field_a = ak.field_e;
           qc.field_a = DelegatingCanvas.field_a;
           DelegatingCanvas.field_a = false;
           gh.field_c = tg.field_b;
-          di.field_b = oc.field_b;
-          oc.field_e = wl.field_R;
+          FullscreenNoticeType.field_b = oc.field_b;
+          oc.field_e = ContentTransitionDialog.field_R;
           tg.field_b = 0;
         }
     }

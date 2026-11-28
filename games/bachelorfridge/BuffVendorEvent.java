@@ -83,11 +83,11 @@ final class BuffVendorEvent extends SpecialEvent {
           return;
         }
         if (param0 <= -112) {
-          sja.field_fb.writeCipheredByte(64, (byte) 123);
+          StandardContentDialog.field_fb.writeCipheredByte(64, (byte) 123);
           return;
         }
         BuffVendorEvent.d((byte) 87);
-        sja.field_fb.writeCipheredByte(64, (byte) 123);
+        StandardContentDialog.field_fb.writeCipheredByte(64, (byte) 123);
     }
 
     BuffVendorEvent(PacketBuffer param0) {

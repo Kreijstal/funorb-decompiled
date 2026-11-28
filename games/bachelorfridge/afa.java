@@ -106,7 +106,7 @@ final class afa extends k {
             var24 = this.field_o[-1 + var3];
             var35 = this.field_o[var3];
             var7 = (var4 - var24[0] << 12) / (-var24[0] + var35[0]);
-            var8 = 4096 - am.field_R[var7 >> 5 & 255] >> 1;
+            var8 = 4096 - ResizableModalDialog.field_R[var7 >> 5 & 255] >> 1;
             var9 = 4096 - var8;
             var10 = var35[1] * var8 + var24[1] * var9 >> 12;
             if (var10 <= -32768) {

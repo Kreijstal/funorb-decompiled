@@ -179,7 +179,7 @@ final class pb {
     final static void a(int param0) {
         mb.field_b.closeAllDialogs(21974);
         if (AccountRequestState.field_e == null) {
-          AccountRequestState.field_e = new jl(mb.field_b, ic.field_i);
+          AccountRequestState.field_e = new ProgressDialog(mb.field_b, ic.field_i);
         }
         int var1 = 67 / ((-18 - param0) / 56);
         mb.field_b.showDialog(1, AccountRequestState.field_e);

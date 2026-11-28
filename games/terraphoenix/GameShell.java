@@ -117,7 +117,7 @@ abstract class GameShell extends GameApplet {
         if (this.field_i) {
           return -1;
         }
-        if (!qf.a((byte) 65)) {
+        if (!FullscreenNoticeType.a((byte) 65)) {
           return -1;
         }
         if (q.field_Gb) {
@@ -223,7 +223,7 @@ abstract class GameShell extends GameApplet {
                 if (0 == var5Lifetime2) {
                   pf.field_c = SpriteState.field_y;
                   kj.a((byte) 95);
-                  ei.field_R = false;
+                  ResizableModalDialog.field_R = false;
                   q.field_Jb = 10;
                 } else {
                   k.a(var5Lifetime2, bh.field_d, false);
@@ -237,7 +237,7 @@ abstract class GameShell extends GameApplet {
               rk.a(dg.a(false), true);
             } else {
               q.field_Jb = 10;
-              ei.field_R = true;
+              ResizableModalDialog.field_R = true;
             }
           }
           if (var4 == 5) {
@@ -275,10 +275,10 @@ abstract class GameShell extends GameApplet {
                 var7 = fm.field_b.a(-76);
                 if (var7 == null) {
                   var10 = (String) null;
-                  si.a((String) null, 3);
+                  ProgressMessageDialog.a((String) null, 3);
                 } else {
                   var8 = SecondaryNodeDeque.decodeCp1252String((byte) -114, var7.payload, var7.position, 0);
-                  si.a(var8, 3);
+                  ProgressMessageDialog.a(var8, 3);
                 }
                 fm.field_b = null;
               }
@@ -287,7 +287,7 @@ abstract class GameShell extends GameApplet {
               var6 = (Exception) (Object) decompiledCaughtException;
               bd.reportClientError((Throwable) ((Object) var6), "S1", 82);
               var11 = (String) null;
-              si.a((String) null, 3);
+              ProgressMessageDialog.a((String) null, 3);
               fm.field_b = null;
             }
           }
@@ -361,7 +361,7 @@ abstract class GameShell extends GameApplet {
           if (var3Lifetime1 != 0 &&
             IntrusiveDeque.field_f == 0 &&
             q.field_Jb == 11 &&
-            !qf.a((byte) 64)) {
+            !FullscreenNoticeType.a((byte) 64)) {
             kj.a((byte) 95);
           }
           if (-1 != IntrusiveDeque.field_f &&
@@ -415,7 +415,7 @@ abstract class GameShell extends GameApplet {
         }
         if ((IntrusiveDeque.field_f != -1 &&
           IntrusiveDeque.field_f != 0 ||
-          qf.a((byte) 91)) &&
+          FullscreenNoticeType.a((byte) 91)) &&
           ah.field_z <= ll.correctedCurrentTimeMillis(1000)) {
           q.field_Gb = false;
           if (-1 != IntrusiveDeque.field_f &&
@@ -425,7 +425,7 @@ abstract class GameShell extends GameApplet {
           }
         }
         if (0 == IntrusiveDeque.field_f &&
-          !qf.a((byte) 106)) {
+          !FullscreenNoticeType.a((byte) 106)) {
           da.field_f = false;
         }
         if (0 == LoginPanel.field_H &&
@@ -500,7 +500,7 @@ abstract class GameShell extends GameApplet {
         if (LoginPanel.field_H == 11) {
           if (bi.field_b != null && (!bi.field_b.ensureIndexLoaded(0) ||
             !bi.field_b.tryLoadAllGroups((byte) -128))) {
-            DualLinkNode.a(qc.a(qb.field_e, bi.field_b, si.field_hb, (byte) 123), (byte) 66, 0.0f);
+            DualLinkNode.a(qc.a(qb.field_e, bi.field_b, ProgressMessageDialog.field_hb, (byte) 123), (byte) 66, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {

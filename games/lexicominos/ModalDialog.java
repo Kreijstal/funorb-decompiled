@@ -26,7 +26,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           if (param3 != 0) {
             return;
           }
-          this.a(param1 + this.field_o, (byte) -99, this.field_t + param2);
+          this.drawDialogBackground(param1 + this.field_o, (byte) -99, this.field_t + param2);
           super.drawWidget((byte) -115, param1, param2, param3);
           return;
         }
@@ -34,7 +34,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           AccountRequestState.field_c = new RgbSprite(this.field_j, this.field_v);
           de.a(AccountRequestState.field_c, param0 + 121);
           SoftwareRasterizer.clearRaster();
-          this.a(0, (byte) 115, 0);
+          this.drawDialogBackground(0, (byte) 115, 0);
           super.drawWidget(param0, -this.field_o - param1, -param2 - this.field_t, param3);
           pd.a(-22949);
           AccountRequestState.field_c.drawWithOpacity(param2 + this.field_t, this.field_o + param1, this.field_E);
@@ -44,7 +44,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           AccountRequestState.field_c = new RgbSprite(this.field_j, this.field_v);
           de.a(AccountRequestState.field_c, param0 + 121);
           SoftwareRasterizer.clearRaster();
-          this.a(0, (byte) 115, 0);
+          this.drawDialogBackground(0, (byte) 115, 0);
           super.drawWidget(param0, -this.field_o - param1, -param2 - this.field_t, param3);
           pd.a(-22949);
           AccountRequestState.field_c.drawWithOpacity(param2 + this.field_t, this.field_o + param1, this.field_E);
@@ -53,7 +53,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         if (this.field_v <= AccountRequestState.field_c.field_u) {
           de.a(AccountRequestState.field_c, param0 + 121);
           SoftwareRasterizer.clearRaster();
-          this.a(0, (byte) 115, 0);
+          this.drawDialogBackground(0, (byte) 115, 0);
           super.drawWidget(param0, -this.field_o - param1, -param2 - this.field_t, param3);
           pd.a(-22949);
           AccountRequestState.field_c.drawWithOpacity(param2 + this.field_t, this.field_o + param1, this.field_E);
@@ -62,7 +62,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         AccountRequestState.field_c = new RgbSprite(this.field_j, this.field_v);
         de.a(AccountRequestState.field_c, param0 + 121);
         SoftwareRasterizer.clearRaster();
-        this.a(0, (byte) 115, 0);
+        this.drawDialogBackground(0, (byte) 115, 0);
         super.drawWidget(param0, -this.field_o - param1, -param2 - this.field_t, param3);
         pd.a(-22949);
         AccountRequestState.field_c.drawWithOpacity(param2 + this.field_t, this.field_o + param1, this.field_E);
@@ -70,7 +70,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
 
     boolean snapDialogAnimation(byte param0) {
         if (param0 != 26) {
-          this.a(-114, (byte) -25, 68);
+          this.drawDialogBackground(-114, (byte) -25, 68);
           this.field_E = this.getTargetAlpha(-101);
           if (0 != this.field_E) {
             return false;
@@ -91,7 +91,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
     }
 
     ModalDialog(ModalDialogHost param0, int param1, int param2) {
-        super(-param1 + ql.field_O >> 1, kg.field_C - param2 >> 1, param1, param2, (WidgetRenderer) null);
+        super(-param1 + ResizableModalDialog.field_O >> 1, RegistrationAgreementPane.field_C - param2 >> 1, param1, param2, (WidgetRenderer) null);
         try {
           this.field_D = false;
           this.field_E = 0;
@@ -162,7 +162,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         return stackIn_36_0;
     }
 
-    abstract void a(int param0, byte param1, int param2);
+    abstract void drawDialogBackground(int param0, byte param1, int param2);
 
     final static void a(int param0, String param1, float param2) {
         try {
@@ -177,7 +177,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
     }
 
     final void setCenteredSize(int param0, int param1, int param2) {
-        this.setBounds(param2, param0, true, -param2 + kg.field_C >> 1, ql.field_O - param0 >> 1);
+        this.setBounds(param2, param0, true, -param2 + RegistrationAgreementPane.field_C >> 1, ResizableModalDialog.field_O - param0 >> 1);
         if (param1 >= -94) {
           field_H = (PlatformTask) null;
         }

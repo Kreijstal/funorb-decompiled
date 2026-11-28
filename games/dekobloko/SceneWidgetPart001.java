@@ -45,7 +45,7 @@ final class SceneWidgetPart001 extends SceneWidget {
         SceneWidget sceneWidgetLocal24 = null;
         int integerLocal25;
         try {
-          sceneWidgetLocal24 = new SceneWidget(0L, sceneWidgetArgument2, UiComponentPart012.stringState0207.toUpperCase());
+          sceneWidgetLocal24 = new SceneWidget(0L, sceneWidgetArgument2, ProgressMessageDialog.stringState0207.toUpperCase());
           sceneWidgetLocal24.integerState0916 = 1;
           this.sceneWidgetState0007 = new SceneWidget(0L, sceneWidgetArgument3);
           sceneWidgetLocal17 = new SceneWidget(0L, sceneWidgetArgument4);

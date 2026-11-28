@@ -34,13 +34,13 @@ final class wf extends IntrusiveNode {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         da.field_a = param2;
         if (param3 == 8192) {
-          nf.field_M = param1;
+          ResizableModalDialog.field_M = param1;
           hb.field_n = param0;
           gi.field_a = param4;
           return;
         }
         wf.a((byte) 47);
-        nf.field_M = param1;
+        ResizableModalDialog.field_M = param1;
         hb.field_n = param0;
         gi.field_a = param4;
     }

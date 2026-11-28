@@ -10,7 +10,7 @@ final class ad {
 
     final static ad[] b(int param0) {
         if (param0 == 65280) {
-          return new ad[]{hl.field_c, am.field_b, tp.field_y, DebouncedFieldValidator.field_d, kj.field_p, u.field_U, KeyboardInput.field_c, ib.field_h, cm.field_T, ve.field_e, pm.field_l, hf.field_wb, sj.field_hb, lg.field_n};
+          return new ad[]{hl.field_c, am.field_b, tp.field_y, DebouncedFieldValidator.field_d, kj.field_p, u.field_U, KeyboardInput.field_c, ib.field_h, RegistrationAgreementPane.field_T, ve.field_e, pm.field_l, ContentTransitionDialog.field_wb, ResizableModalDialog.field_hb, lg.field_n};
         }
         return (ad[]) null;
     }
@@ -175,7 +175,7 @@ final class ad {
             }
             var14Lifetime3 = stackIn_15_0;
             var15 = var62[var13] * param3 + param0 * var63[var13] + var64[var13] * param5 >> 8;
-            stackIn_17_0 = jk.field_Bb;
+            stackIn_17_0 = StandardContentDialog.field_Bb;
             if (0 <= var15) {
               stackIn_18_1 = var15;
             } else {
@@ -189,7 +189,7 @@ final class ad {
           var44 = 0;
           var13Lifetime1 = var44;
           while (ab.field_c > var44) {
-            var14Lifetime1 = hf.field_yb[var44];
+            var14Lifetime1 = ContentTransitionDialog.field_yb[var44];
             var15Lifetime1 = param7.field_A[var14Lifetime1];
             var16 = param7.field_x[var14Lifetime1];
             var17 = param7.field_N[var14Lifetime1];

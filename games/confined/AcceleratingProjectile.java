@@ -366,7 +366,7 @@ abstract class AcceleratingProjectile extends MovingTunnelEntity {
         if (param0 != 20253) {
           return (e[]) null;
         }
-        return new e[]{ConfirmedEmailAvailabilityValidator.field_l, rn.field_a, tl.field_e, PrimaryNodeDeque.field_f, li.field_k, Bzip2State.field_o, LabeledWidgetContainer.field_N, ch.field_a, ij.field_s, og.field_i, KeyboardInput.field_g, ei.field_lb, IntrusiveNode.field_g, ModalDialog.field_R};
+        return new e[]{ConfirmedEmailAvailabilityValidator.field_l, rn.field_a, tl.field_e, PrimaryNodeDeque.field_f, li.field_k, Bzip2State.field_o, LabeledWidgetContainer.field_N, ch.field_a, ij.field_s, og.field_i, KeyboardInput.field_g, FullscreenStatusDialog.field_lb, IntrusiveNode.field_g, ModalDialog.field_R};
     }
 
     final boolean isAlliedWithPlayer(int param0) {

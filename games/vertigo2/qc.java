@@ -115,7 +115,7 @@ abstract class qc extends DualLinkNode {
               gl.field_o = false;
             }
             hn.field_n = ek.field_E;
-            rl.field_db = or.field_c;
+            ContentTransitionDialog.field_db = or.field_c;
           }
           as.field_a = param0;
           if (!gl.field_o &&
@@ -123,7 +123,7 @@ abstract class qc extends DualLinkNode {
             PlayerState.field_s) {
             hn.field_n = ek.field_E;
             qf.field_b = 0;
-            rl.field_db = or.field_c;
+            ContentTransitionDialog.field_db = or.field_c;
           }
           if (gl.field_o &&
             qf.field_b == td.field_g) {

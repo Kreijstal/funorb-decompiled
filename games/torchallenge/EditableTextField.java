@@ -13,7 +13,7 @@ class EditableTextField extends InteractiveWidget {
     static Sprite field_O;
     static vi field_W;
     static ge[] field_V;
-    static ll field_P;
+    static FullscreenNoticeType field_P;
     static ResourceArchive field_cb;
     static int field_Q;
     static boolean field_Z;
@@ -462,7 +462,7 @@ class EditableTextField extends InteractiveWidget {
           Throwable decompiledCaughtException = null;
           try {
             if (param0 <= 66) {
-              field_P = (ll) null;
+              field_P = (FullscreenNoticeType) null;
             }
             stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
@@ -482,7 +482,7 @@ class EditableTextField extends InteractiveWidget {
         int var2 = 0;
         int var3 = 0;
         if (!param0) {
-          field_P = (ll) null;
+          field_P = (FullscreenNoticeType) null;
         }
         if (this.field_U != this.field_R) {
           var2 = this.field_R > this.field_U ? this.field_U : this.field_R;
@@ -604,6 +604,6 @@ class EditableTextField extends InteractiveWidget {
     static {
         field_W = new vi();
         field_Q = -1;
-        field_P = new ll();
+        field_P = new FullscreenNoticeType();
     }
 }

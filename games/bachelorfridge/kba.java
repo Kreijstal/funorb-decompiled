@@ -104,7 +104,7 @@ final class kba extends k {
           for (var9 = 0; hh.field_d > var9; var9++) {
             var10 = 255 * var38[var9] >> 12 & 255;
             var11 = var39[var9] * this.field_k >> 12;
-            var12 = var11 * am.field_R[var10] >> 12;
+            var12 = var11 * ResizableModalDialog.field_R[var10] >> 12;
             var13 = BananarangAnimation.field_z[var10] * var11 >> 12;
             var14 = var9 + (var12 >> 12) & wp.field_r;
             var15 = param1 + (var13 >> 12) & it.field_r;
@@ -129,7 +129,7 @@ final class kba extends k {
         for (var9Lifetime1 = 0; hh.field_d > var9Lifetime1; var9Lifetime1++) {
           var10Lifetime1 = 255 * var29[var9Lifetime1] >> 12 & 255;
           var11Lifetime1 = var30[var9Lifetime1] * this.field_k >> 12;
-          var12Lifetime1 = var11Lifetime1 * am.field_R[var10Lifetime1] >> 12;
+          var12Lifetime1 = var11Lifetime1 * ResizableModalDialog.field_R[var10Lifetime1] >> 12;
           var13Lifetime1 = BananarangAnimation.field_z[var10Lifetime1] * var11Lifetime1 >> 12;
           var14Lifetime1 = var9Lifetime1 + (var12Lifetime1 >> 12) & wp.field_r;
           var15Lifetime1 = param1 + (var13Lifetime1 >> 12) & it.field_r;
@@ -169,7 +169,7 @@ final class kba extends k {
           for (var6 = 0; hh.field_d > var6; var6++) {
             var7 = var25[var6] >> 4 & 255;
             var8 = this.field_k * var26[var6] >> 12;
-            var9 = var8 * am.field_R[var7] >> 12;
+            var9 = var8 * ResizableModalDialog.field_R[var7] >> 12;
             var10 = BananarangAnimation.field_z[var7] * var8 >> 12;
             var11 = wp.field_r & (var9 >> 12) + var6;
             var12 = param0 + (var10 >> 12) & it.field_r;
@@ -194,7 +194,7 @@ final class kba extends k {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = de.d(AgeValidator.field_i, -257, BananarangSpecial.field_r);
+          var2_int = StripedProgressWidget.d(AgeValidator.field_i, -257, BananarangSpecial.field_r);
           if (var2_int == 1) {
             param1 = "<img=0>" + param1;
           }

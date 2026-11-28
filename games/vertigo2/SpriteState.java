@@ -28,7 +28,7 @@ abstract class SpriteState extends DualLinkNode {
         if (param0 != 11) {
           return false;
         }
-        if (sp.field_V) {
+        if (ResizableModalDialog.field_V) {
           if (vj.field_h) {
             return true;
           }

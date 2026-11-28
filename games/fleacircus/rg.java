@@ -12,7 +12,7 @@ final class rg extends ef {
         if (!param0) {
           rg.b(false);
         }
-        return ui.field_nb;
+        return StandardContentDialog.field_nb;
     }
 
     rg(long param0, String param1) {

@@ -4,7 +4,7 @@
 final class af {
     static he[] field_e;
     static int[] field_f;
-    static tf field_g;
+    static ProgressDialog field_g;
     static String field_c;
     static int field_d;
     static String field_a;

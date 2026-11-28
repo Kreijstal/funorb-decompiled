@@ -190,7 +190,7 @@ final class gb {
               if (hd.field_b) {
                 param2 = GzipDecompressor.field_c;
               }
-              SecondaryNodeDequeIterator.field_d.a(param2, param0, -4);
+              SecondaryNodeDequeIterator.field_d.showResult(param2, param0, -4);
             }
             if (param0 != 256 &&
               param0 != 10 &&

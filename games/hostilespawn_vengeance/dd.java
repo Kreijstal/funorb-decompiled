@@ -549,7 +549,7 @@ final class dd extends ql {
         for (var3 = 0; this.field_h.length > var3; var3++) {
           this.field_h[var3] = new GridPoint(var6[10 + 2 * var3], var6[1 + (10 + 2 * var3)]);
         }
-        this.field_d = new v(ta.field_kb, 0, 24 * this.field_m.field_g - 168, 200);
+        this.field_d = new v(StandardContentDialog.field_kb, 0, 24 * this.field_m.field_g - 168, 200);
         this.field_d.field_l = 0;
         this.field_p = new v(PacketBuffer.field_o, 0, 0, 200);
         this.field_p.field_l = 0;

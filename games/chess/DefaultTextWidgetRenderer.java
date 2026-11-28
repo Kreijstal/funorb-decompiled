@@ -541,7 +541,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           var3[var4_int] = AccountNameAvailabilityValidator.field_r[ce.a((int) var2[var4_int], 255)];
         }
         RgbSprite var4 = new RgbSprite(cd.field_p, MouseWheelInput.field_a, be.field_a[0], FullscreenFocusCanvas.field_c[param0], wm.field_b[0], b.field_c[0], var3);
-        ch.k(4210752);
+        ProgressDialog.k(4210752);
         return var4;
     }
 

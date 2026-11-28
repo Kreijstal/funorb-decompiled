@@ -180,11 +180,11 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetActiva
             uj.field_b[var4Lifetime3] = var17.readUnsignedShort(param0 + 40);
           }
           var17.position = param1.length + (-7 - 8 * nb.field_c + 3 - 3 * var3);
-          ig.field_H = new int[var3];
+          GuestPlayConfirmationForm.field_H = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            ig.field_H[var4Lifetime4] = var17.readUnsignedMedium(false);
-            if (ig.field_H[var4Lifetime4] == 0) {
-              ig.field_H[var4Lifetime4] = 1;
+            GuestPlayConfirmationForm.field_H[var4Lifetime4] = var17.readUnsignedMedium(false);
+            if (GuestPlayConfirmationForm.field_H[var4Lifetime4] == 0) {
+              GuestPlayConfirmationForm.field_H[var4Lifetime4] = 1;
             }
           }
           var17.position = 0;
@@ -275,7 +275,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetActiva
           if (!param0) {
             field_H = -117;
           }
-          var2 = new CoverageBitmapFont(param1, ph.field_h, qf.field_d, sa.field_l, uj.field_b, ig.field_H, jc.field_c);
+          var2 = new CoverageBitmapFont(param1, ph.field_h, qf.field_d, sa.field_l, uj.field_b, GuestPlayConfirmationForm.field_H, jc.field_c);
           og.a((byte) -97);
           stackIn_6_0 = var2;
           return stackIn_6_0;

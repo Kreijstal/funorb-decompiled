@@ -129,7 +129,7 @@ final class sc {
         if (param1) {
           return;
         }
-        e.field_T = rh.field_e[param0];
+        DialogMessagePane.field_T = rh.field_e[param0];
     }
 
     final static void a(int param0, int param1) {

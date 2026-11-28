@@ -204,7 +204,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (ra.a((CharSequence) ((Object) var4), (byte) -116) &&
+                      if (StandardContentDialog.a((CharSequence) ((Object) var4), (byte) -116) &&
                         !(vi.a(63, (CharSequence) ((Object) var4)) >= 10)) {
                         this.a((byte) 123, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
@@ -263,7 +263,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 pf.a(true);
                 this.a(false);
-                ac.field_a = ub.a((byte) -85, ub.field_b, (java.awt.Component) ((Object) ie.field_e), lb.field_z);
+                ac.field_a = ub.a((byte) -85, ub.field_b, (java.awt.Component) ((Object) ie.field_e), GuestPlayConfirmationForm.field_z);
                 this.initializeClient(-17);
                 ne.field_c = il.a(-20601);
                 do {
@@ -683,7 +683,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (var4 != 0L &&
             var2_long > var4) {
             var6_int = (int)(var2_long - var4);
-            s.field_T = (32000 + (var6_int >> 1)) / var6_int;
+            FullscreenStatusDialog.field_T = (32000 + (var6_int >> 1)) / var6_int;
           }
           bh.field_f = bh.field_f + 1 & 31;
           if (param0 != 57) {
@@ -694,7 +694,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (fieldTemp$1 > 50) {
             gb.field_j = true;
             ud.field_d = ud.field_d - 50;
-            ie.field_e.setSize(ub.field_b, lb.field_z);
+            ie.field_e.setSize(ub.field_b, GuestPlayConfirmationForm.field_z);
             ie.field_e.setVisible(true);
             if (hk.field_e != null &&
               b.field_i == null) {
@@ -890,15 +890,15 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 field_g = (te) null;
               }
               if (null != m.field_f) {
-                nf.field_N = nf.field_N + 1;
-                if (nf.field_N < 3) {
+                ResizableModalDialog.field_N = ResizableModalDialog.field_N + 1;
+                if (ResizableModalDialog.field_N < 3) {
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                   return;
                 }
                 this.a((byte) 75, "alreadyloaded");
                 return;
               }
-              lb.field_z = param3;
+              GuestPlayConfirmationForm.field_z = param3;
               ih.field_b = param3;
               ub.field_b = param1;
               kk.field_b = param1;
@@ -1038,7 +1038,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           ie.field_e = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) ie.field_e));
-          ie.field_e.setSize(ub.field_b, lb.field_z);
+          ie.field_e.setSize(ub.field_b, GuestPlayConfirmationForm.field_z);
           ie.field_e.setVisible(true);
           if (var2 == hk.field_e) {
             var3 = hk.field_e.getInsets();

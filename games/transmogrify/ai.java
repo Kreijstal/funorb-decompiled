@@ -114,16 +114,16 @@ final class ai {
           var1 = lb.a(true);
           ok.field_a = new LoginPanel(var1, (String) null, true, false, false);
           ResourceArchive.field_f.showDialog((UiWidget) (l.field_d), (byte) -71);
-          l.field_d.b(-122, ok.field_a);
-          l.field_d.p(27830);
+          l.field_d.replaceContent(-122, ok.field_a);
+          l.field_d.finishResize(27830);
           return;
         }
-        SecondaryNodeDequeIterator.field_d.r(77);
+        SecondaryNodeDequeIterator.field_d.closeDialog(77);
         var1Lifetime1 = lb.a(true);
         ok.field_a = new LoginPanel(var1Lifetime1, (String) null, true, false, false);
         ResourceArchive.field_f.showDialog((UiWidget) (l.field_d), (byte) -71);
-        l.field_d.b(-122, ok.field_a);
-        l.field_d.p(27830);
+        l.field_d.replaceContent(-122, ok.field_a);
+        l.field_d.finishResize(27830);
     }
 
     static {

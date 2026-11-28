@@ -42,7 +42,7 @@ final class AgeValidator extends TextFieldValidator {
           var3_int = SecondaryNodeDequeIterator.a(107, var5);
           if (~var3_int < param0 &&
             var3_int <= 130) {
-            return qm.field_G;
+            return GuestPlayConfirmationForm.field_G;
           }
           stackIn_8_0 = ir.field_a;
           return stackIn_8_0;

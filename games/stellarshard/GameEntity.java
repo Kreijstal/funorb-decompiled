@@ -256,14 +256,14 @@ final class GameEntity {
           if (0 > this.field_j) {
             this.field_j = this.field_j + 1;
           }
-          if (nc.field_H != 0) {
+          if (StripedProgressWidget.field_H != 0) {
           }
-          if (3 != nc.field_H) {
+          if (3 != StripedProgressWidget.field_H) {
           }
           if (0 < this.field_i) {
             this.field_i = this.field_i - 1;
           }
-          if (nc.field_H == 1) {
+          if (StripedProgressWidget.field_H == 1) {
           }
         }
         if (12 == this.kind &&
@@ -589,20 +589,20 @@ final class GameEntity {
           this.field_g = 109;
         }
         if (-1 == this.kind &&
-          nc.field_H == 3) {
+          StripedProgressWidget.field_H == 3) {
           this.field_g = 1;
         }
         if (this.kind == -1 &&
-          nc.field_H == 4) {
+          StripedProgressWidget.field_H == 4) {
           this.field_g = 1;
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.field_g <= 0) {
           if ((this.kind == -1) &&
-            (decompiledFrameRemainder0 = (nc.field_H != 1)) &&
-            (decompiledFrameRemainder0 = (nc.field_H != 2)) &&
-            (decompiledFrameRemainder0 = (nc.field_H != 3))) {
-            decompiledFrameRemainder0 = (nc.field_H != 4);
+            (decompiledFrameRemainder0 = (StripedProgressWidget.field_H != 1)) &&
+            (decompiledFrameRemainder0 = (StripedProgressWidget.field_H != 2)) &&
+            (decompiledFrameRemainder0 = (StripedProgressWidget.field_H != 3))) {
+            decompiledFrameRemainder0 = (StripedProgressWidget.field_H != 4);
           }
           if (decompiledFrameRemainder0) {
             if (this.kind != -1) {
@@ -636,8 +636,8 @@ final class GameEntity {
         }
         if (this.kind != -1 &&
           this.kind != 11 ||
-          2 != nc.field_H &&
-          nc.field_H != 4) {
+          2 != StripedProgressWidget.field_H &&
+          StripedProgressWidget.field_H != 4) {
           this.d(-22);
         }
         return this;
@@ -1296,7 +1296,7 @@ final class GameEntity {
           cc.a();
           var9_ref_bj.a(var4, var5, var6, var7, 0, 0, 3000, -1L);
           RichTextLayout.field_h.a((byte) -107);
-          if (0 == nc.field_H) {
+          if (0 == StripedProgressWidget.field_H) {
             if (DiskArchiveRequest.field_I > 0 &&
               (15 & DiskArchiveRequest.field_I) >= 7) {
               this.currentSprite(640).drawSilhouette(var2, var3, 16777215);
@@ -1304,7 +1304,7 @@ final class GameEntity {
               this.currentSprite(640).draw(var2, var3);
             }
           } else {
-            if (nc.field_H == 1) {
+            if (StripedProgressWidget.field_H == 1) {
               var10 = 16777215;
               if (5 < gh.field_b) {
                 gh.field_b = 5;
@@ -1329,7 +1329,7 @@ final class GameEntity {
                 this.currentSprite(640).draw(var2, var3);
               }
             } else {
-              if (nc.field_H == 2) {
+              if (StripedProgressWidget.field_H == 2) {
                 if (gh.field_b <= 50 &&
                   gh.field_b % 10 >= 5) {
                   this.currentSprite(640).draw(var2, var3);
@@ -1349,7 +1349,7 @@ final class GameEntity {
               }
             }
           }
-          if (nc.field_H == 3) {
+          if (StripedProgressWidget.field_H == 3) {
             nd.a(128, var3 + 48, 16777215, 48 + var2, (byte) -79, 32);
             if (!(gh.field_b <= 50) ||
               !(5 <= gh.field_b % 10)) {
@@ -1391,7 +1391,7 @@ final class GameEntity {
             }
             this.currentSprite(640).drawWithOpacity(var2, var3, 128);
           }
-          if (4 == nc.field_H) {
+          if (4 == StripedProgressWidget.field_H) {
             this.currentSprite(640).draw(var2, var3);
           }
         }
@@ -1529,8 +1529,8 @@ final class GameEntity {
             a.entities[var2].kind == -1) && gj.a(a.entities[var2], 0, false, this)) {
             if ((a.entities[var2].kind == -1) &&
               (decompiledFrameRemainder0 = !(a.entities[var2].field_g <= 0)) &&
-              (decompiledFrameRemainder0 = (nc.field_H != 2))) {
-              decompiledFrameRemainder0 = (4 != nc.field_H);
+              (decompiledFrameRemainder0 = (StripedProgressWidget.field_H != 2))) {
+              decompiledFrameRemainder0 = (4 != StripedProgressWidget.field_H);
             }
             if (decompiledFrameRemainder0) {
               var3 = a.entities[var2];
@@ -1953,10 +1953,10 @@ final class GameEntity {
           var15 = dupTemp$4;
           var7_ref_sd = dupTemp$4;
           hf.field_e[ha.k(-1001)] = var15;
-          if (4 == nc.field_H &&
-            tb.field_K < 1000) {
-            tb.field_K = tb.field_K + var4;
-            if (tb.field_K >= 1000) {
+          if (4 == StripedProgressWidget.field_H &&
+            ResizableModalDialog.field_K < 1000) {
+            ResizableModalDialog.field_K = ResizableModalDialog.field_K + var4;
+            if (ResizableModalDialog.field_K >= 1000) {
               hj.a(254, 1, 1);
             }
           }
@@ -1964,7 +1964,7 @@ final class GameEntity {
         boolean decompiledFrameRemainder0 = true;
         if (this.kind != 11 &&
           this.kind != -1 &&
-          nc.field_H != 4) {
+          StripedProgressWidget.field_H != 4) {
           var7_int = dc.a(-118);
           if (var7_int <= -1) {
             if (pk.a(-12663, 0)) {

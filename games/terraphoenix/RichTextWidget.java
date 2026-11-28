@@ -141,7 +141,7 @@ class RichTextWidget extends InteractiveWidget {
         }
         AlphaWidgetContainer.field_I.closeAllDialogs(false);
         if (null == vi.field_n) {
-          vi.field_n = new na(AlphaWidgetContainer.field_I, PcmResampler.field_e);
+          vi.field_n = new ProgressDialog(AlphaWidgetContainer.field_I, PcmResampler.field_e);
         }
         AlphaWidgetContainer.field_I.showDialog((UiWidget) (vi.field_n), (byte) -1);
     }
@@ -292,7 +292,7 @@ class RichTextWidget extends InteractiveWidget {
         if (param3 != 62) {
           field_L = (String) null;
         }
-        return jg.a(30, param4, false, param0, param2, param1);
+        return StandardContentDialog.a(30, param4, false, param0, param2, param1);
     }
 
     final void activateFromInput(int param0, int param1, byte param2, int param3) {

@@ -621,7 +621,7 @@ class EditableTextField extends InteractiveWidget {
               tl.a(126);
               return;
             }
-            sm.a((Throwable) null, 1, "A1: " + sj.l(192));
+            sm.a((Throwable) null, 1, "A1: " + ResizableModalDialog.l(192));
             tl.a(-85);
           }
           return;
@@ -711,12 +711,12 @@ class EditableTextField extends InteractiveWidget {
           ConfirmedEmailAvailabilityValidator.field_o = new RgbSprite[9];
           if (1 != hc.field_d) {
             if (hc.field_d != 2) {
-              sj.field_db = dd.field_C;
+              ResizableModalDialog.field_db = dd.field_C;
             } else {
-              sj.field_db = na.field_G;
+              ResizableModalDialog.field_db = na.field_G;
             }
           } else {
-            sj.field_db = hl.field_e;
+            ResizableModalDialog.field_db = hl.field_e;
           }
           if (param0 != 22362) {
             EditableTextField.q(124);

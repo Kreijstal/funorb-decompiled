@@ -22,7 +22,7 @@ final class ki {
 
     final static void a(int param0, int param1, int param2, String param3, int param4) {
         try {
-          sj.a(param2, param1, param0, 32, param3 + "_reveal", param3 + "_defeat");
+          ResizableModalDialog.a(param2, param1, param0, 32, param3 + "_reveal", param3 + "_defeat");
           if (param4 != -1) {
             field_f = 66;
           }

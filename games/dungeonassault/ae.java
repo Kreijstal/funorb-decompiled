@@ -56,7 +56,7 @@ final class ae {
     }
 
     final static void a(int param0, int param1) {
-        to.field_g = sj.field_cb[param0];
+        to.field_g = ResizableModalDialog.field_cb[param0];
         if (param1 != -5) {
           return;
         }
@@ -190,7 +190,7 @@ final class ae {
         int var7Lifetime1Lifetime1;
         var9 = DungeonAssault.field_K;
         try {
-          nk.field_Hb = true;
+          ProgressMessageDialog.field_Hb = true;
           AccountNameAvailabilityValidator.field_t = param1;
           if (AccountNameAvailabilityValidator.field_t == 0) {
             var3_int = KeyboardInput.a(n.field_c, (byte) 96, qj.field_e, wa.field_l, DelegatingCanvas.field_k);
@@ -288,7 +288,7 @@ final class ae {
               n.field_g[1] = 5;
             }
           } else {
-            var3_int = KeyboardInput.a(n.field_c, (byte) 125, qj.field_e, wa.field_l, jk.a(new String[]{"<br><%0><br>"}, ef.field_b, param2 ^ -30497));
+            var3_int = KeyboardInput.a(n.field_c, (byte) 125, qj.field_e, wa.field_l, StandardContentDialog.a(new String[]{"<br><%0><br>"}, ef.field_b, param2 ^ -30497));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(qj.field_e[var5])) {
@@ -305,7 +305,7 @@ final class ae {
             cp.field_Q = new String[-1 + (-var4 + var3_int)];
             cj.a(qj.field_e, var4 + 1, cp.field_Q, 0, var3_int - var4 - 1);
             var4 = -1;
-            var3_int = KeyboardInput.a(n.field_c, (byte) 84, qj.field_e, wa.field_l, jk.a(new String[]{"<br><%0><br>"}, bn.field_i, param2 ^ -30497));
+            var3_int = KeyboardInput.a(n.field_c, (byte) 84, qj.field_e, wa.field_l, StandardContentDialog.a(new String[]{"<br><%0><br>"}, bn.field_i, param2 ^ -30497));
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(qj.field_e[var5])) {
                 continue;
@@ -487,7 +487,7 @@ final class ae {
         if (this.field_g != 0 &&
           la.field_g != 0) {
           if (this.field_j <= 0) {
-            this.field_j = r.field_c;
+            this.field_j = FullscreenNoticeType.field_c;
           }
           this.field_j = this.field_j - 1;
         }

@@ -319,7 +319,7 @@ final class RichTextLayout extends TextLayout {
     final static void a(int param0, hk param1, int param2) {
         ha var3 = null;
         try {
-          var3 = pg.field_fb;
+          var3 = StandardContentDialog.field_fb;
           var3.f(param0, 950);
           var3.writeByte(false, 5);
           if (param2 < 1) {

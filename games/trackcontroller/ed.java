@@ -38,7 +38,7 @@ final class ed extends ButtonWidget {
         var6 = TrackController.field_F ? 1 : 0;
         try {
           var4_int = 67 / ((param3 + 20) / 57);
-          rk.field_X = RichTextLayout.field_e;
+          ProgressDialog.field_X = RichTextLayout.field_e;
           if (param1 == 255) {
             stackIn_5_0 = !(SocketArchiveRequestConnection.field_o >= 13);
             ByteStorage.field_c = oc.createAccountSuccessResult(stackIn_5_0, -21017);

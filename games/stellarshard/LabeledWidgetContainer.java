@@ -39,7 +39,7 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
     final static void a(int param0, af param1, boolean param2) {
         ha var3 = null;
         try {
-          var3 = pg.field_fb;
+          var3 = StandardContentDialog.field_fb;
           var3.f(param0, 950);
           var3.writeByte(param2, 2);
           var3.writeByte(param2, 0);

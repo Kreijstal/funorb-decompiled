@@ -40,7 +40,7 @@ final class qe extends ng {
           while (var3_int < DropTargetWidgetContainer.field_E.length) {
             var5 = IterableNodeHashTable.field_a[var3_int];
             if (var5 < 0) {
-              var4 = var4 + k.field_D;
+              var4 = var4 + GuestPlayConfirmationForm.field_D;
             } else {
               var6 = SectorCacheStore.a(true, DropTargetWidgetContainer.field_E[var3_int], true);
               var4 = var4 + hj.field_a;
@@ -101,7 +101,7 @@ final class qe extends ng {
         try {
           var2_int = param1.length();
           if (0 == var2_int) {
-            stackIn_3_0 = uc.field_E;
+            stackIn_3_0 = DialogMessagePane.field_E;
             return stackIn_3_0;
           }
           if (var2_int > param0) {
@@ -110,7 +110,7 @@ final class qe extends ng {
           }
           var3 = SecondaryNodeDequeIterator.a(-108, '.', param1);
           if (var3.length < 2) {
-            stackIn_9_0 = uc.field_E;
+            stackIn_9_0 = DialogMessagePane.field_E;
             return stackIn_9_0;
           }
           var4 = var3;

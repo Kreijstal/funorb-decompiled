@@ -8,10 +8,10 @@ final class ih {
     final static void a(String param0, int param1, float param2, boolean param3) {
         try {
           if (na.field_c == null) {
-            na.field_c = new ve(bm.field_d, bm.field_a);
+            na.field_c = new ProgressDialog(bm.field_d, bm.field_a);
             bm.field_d.showDialog((byte) 74, (UiWidget) (na.field_c));
           }
-          na.field_c.a(param3, param0, param2, 2113632);
+          na.field_c.setProgress(param3, param0, param2, 2113632);
           SoftwareRasterizer.clearRaster();
           m.a(true, param1);
         } catch (RuntimeException runtimeException) {

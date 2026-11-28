@@ -16,7 +16,7 @@ final class e {
         if (param0 == 112) {
           sd.field_c.closeAllDialogs(119);
           if (ji.field_a == null) {
-            ji.field_a = new rk(sd.field_c, rk.field_ab);
+            ji.field_a = new ProgressDialog(sd.field_c, ProgressDialog.field_ab);
           }
           sd.field_c.showDialog(ji.field_a, (byte) 6);
           return;

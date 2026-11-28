@@ -9,7 +9,7 @@ final class kr extends UiComponent {
     static int field_vb;
 
     final static void a(int param0, rg param1, int param2) {
-        BitPacketBuffer var3 = sja.field_fb;
+        BitPacketBuffer var3 = StandardContentDialog.field_fb;
         var3.writeCipheredByte(param2, (byte) 126);
         var3.writeByte(2, 0);
         var3.writeByte(0, 0);

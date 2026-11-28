@@ -237,7 +237,7 @@ class gk extends IntrusiveNode {
         im.a((byte) -110);
         TunnelCamera.field_Z.closeAllDialogs((byte) 105);
         om.field_p = new LoginPanel(kj.field_c, (String) null, IntrusiveNode.field_f, param0, param3);
-        dn.field_b = new ef(TunnelCamera.field_Z, om.field_p);
+        dn.field_b = new StandardContentDialog(TunnelCamera.field_Z, om.field_p);
         if (param2 >= -110) {
           return;
         }
@@ -382,7 +382,7 @@ class gk extends IntrusiveNode {
         im.a((byte) -110);
         TunnelCamera.field_Z.closeAllDialogs((byte) 105);
         om.field_p = new LoginPanel(kj.field_c, (String) null, IntrusiveNode.field_f, param0, param3);
-        dn.field_b = new ef(TunnelCamera.field_Z, om.field_p);
+        dn.field_b = new StandardContentDialog(TunnelCamera.field_Z, om.field_p);
         if (param2 >= -110) {
           return;
         }

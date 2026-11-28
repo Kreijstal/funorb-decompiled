@@ -115,7 +115,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("idlemessage20min", (byte) -127);
                 if (null != var2) {
-                  jc.field_S = GzipInflater.a(var2, (byte) 113);
+                  ResizableModalDialog.field_S = GzipInflater.a(var2, (byte) 113);
                 }
                 var2 = SectorCacheStore.a("error_js5crc", (byte) -127);
                 if (null != var2) {
@@ -1369,7 +1369,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("creatingyouraccount", (byte) -127);
                 if (var2 != null) {
-                  jc.field_R = GzipInflater.a(var2, (byte) 100);
+                  ResizableModalDialog.field_R = GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = SectorCacheStore.a("create_youmustaccept", (byte) -127);
                 if (var2 != null) {
@@ -1569,7 +1569,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("login_no_displayname", (byte) -127);
                 if (var2 != null) {
-                  ui.field_F = GzipInflater.a(var2, (byte) 94);
+                  DialogMessagePane.field_F = GzipInflater.a(var2, (byte) 94);
                 }
                 var2 = SectorCacheStore.a("create_username_tooltip", (byte) -127);
                 if (null != var2) {
@@ -1641,7 +1641,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("create_username_unavailable", (byte) -127);
                 if (null != var2) {
-                  ui.field_K = GzipInflater.a(var2, (byte) 87);
+                  DialogMessagePane.field_K = GzipInflater.a(var2, (byte) 87);
                 }
                 var2 = SectorCacheStore.a("create_username_available", (byte) -127);
                 if (null != var2) {
@@ -1669,7 +1669,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("create_alert_passrepeated", (byte) -127);
                 if (null != var2) {
-                  ta.field_fb = GzipInflater.a(var2, (byte) 95);
+                  ContentTransitionDialog.field_fb = GzipInflater.a(var2, (byte) 95);
                 }
                 var2 = SectorCacheStore.a("create_alert_passlength", (byte) -127);
                 if (var2 != null) {
@@ -2044,7 +2044,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("startgame", (byte) -127);
                 if (var2 != null) {
-                  tj.field_J = GzipInflater.a(var2, (byte) 115);
+                  GuestPlayConfirmationForm.field_J = GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = SectorCacheStore.a("newgame", (byte) -127);
                 if (null != var2) {
@@ -2536,27 +2536,27 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("quickchat_shortcut_help,0", (byte) -127);
                 if (var2 != null) {
-                  jc.field_L[0] = GzipInflater.a(var2, (byte) 90);
+                  ResizableModalDialog.field_L[0] = GzipInflater.a(var2, (byte) 90);
                 }
                 var2 = SectorCacheStore.a("quickchat_shortcut_help,1", (byte) -127);
                 if (null != var2) {
-                  jc.field_L[1] = GzipInflater.a(var2, (byte) 93);
+                  ResizableModalDialog.field_L[1] = GzipInflater.a(var2, (byte) 93);
                 }
                 var2 = SectorCacheStore.a("quickchat_shortcut_help,2", (byte) -127);
                 if (null != var2) {
-                  jc.field_L[2] = GzipInflater.a(var2, (byte) 94);
+                  ResizableModalDialog.field_L[2] = GzipInflater.a(var2, (byte) 94);
                 }
                 var2 = SectorCacheStore.a("quickchat_shortcut_help,3", (byte) -127);
                 if (var2 != null) {
-                  jc.field_L[3] = GzipInflater.a(var2, (byte) 115);
+                  ResizableModalDialog.field_L[3] = GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = SectorCacheStore.a("quickchat_shortcut_help,4", (byte) -127);
                 if (null != var2) {
-                  jc.field_L[4] = GzipInflater.a(var2, (byte) 85);
+                  ResizableModalDialog.field_L[4] = GzipInflater.a(var2, (byte) 85);
                 }
                 var2 = SectorCacheStore.a("quickchat_shortcut_help,5", (byte) -127);
                 if (null != var2) {
-                  jc.field_L[5] = GzipInflater.a(var2, (byte) 80);
+                  ResizableModalDialog.field_L[5] = GzipInflater.a(var2, (byte) 80);
                 }
                 var2 = SectorCacheStore.a("quickchat_shortcut_keys,0", (byte) -127);
                 if (null != var2) {
@@ -2882,7 +2882,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("pleasewait_dotdotdot", (byte) -127);
                 if (var2 != null) {
-                  tj.field_H = GzipInflater.a(var2, (byte) 88);
+                  GuestPlayConfirmationForm.field_H = GzipInflater.a(var2, (byte) 88);
                 }
                 var2 = SectorCacheStore.a("serviceunavailable", (byte) -127);
                 if (var2 != null) {
@@ -3030,55 +3030,55 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("subscription_cost_monthly,0", (byte) -127);
                 if (var2 != null) {
-                  ta.field_ib[0] = GzipInflater.a(var2, (byte) 110);
+                  ContentTransitionDialog.field_ib[0] = GzipInflater.a(var2, (byte) 110);
                 }
                 var2 = SectorCacheStore.a("subscription_cost_monthly,1", (byte) -127);
                 if (var2 != null) {
-                  ta.field_ib[1] = GzipInflater.a(var2, (byte) 95);
+                  ContentTransitionDialog.field_ib[1] = GzipInflater.a(var2, (byte) 95);
                 }
                 var2 = SectorCacheStore.a("subscription_cost_monthly,2", (byte) -127);
                 if (null != var2) {
-                  ta.field_ib[2] = GzipInflater.a(var2, (byte) 93);
+                  ContentTransitionDialog.field_ib[2] = GzipInflater.a(var2, (byte) 93);
                 }
                 var2 = SectorCacheStore.a("subscription_cost_monthly,3", (byte) -127);
                 if (var2 != null) {
-                  ta.field_ib[3] = GzipInflater.a(var2, (byte) 80);
+                  ContentTransitionDialog.field_ib[3] = GzipInflater.a(var2, (byte) 80);
                 }
                 var2 = SectorCacheStore.a("subscription_cost_monthly,4", (byte) -127);
                 if (var2 != null) {
-                  ta.field_ib[4] = GzipInflater.a(var2, (byte) 85);
+                  ContentTransitionDialog.field_ib[4] = GzipInflater.a(var2, (byte) 85);
                 }
                 var2 = SectorCacheStore.a("subscription_cost_monthly,5", (byte) -127);
                 if (var2 != null) {
-                  ta.field_ib[5] = GzipInflater.a(var2, (byte) 125);
+                  ContentTransitionDialog.field_ib[5] = GzipInflater.a(var2, (byte) 125);
                 }
                 var2 = SectorCacheStore.a("subscription_cost_monthly,6", (byte) -127);
                 if (null != var2) {
-                  ta.field_ib[6] = GzipInflater.a(var2, (byte) 120);
+                  ContentTransitionDialog.field_ib[6] = GzipInflater.a(var2, (byte) 120);
                 }
                 var2 = SectorCacheStore.a("subscription_cost_monthly,7", (byte) -127);
                 if (var2 != null) {
-                  ta.field_ib[7] = GzipInflater.a(var2, (byte) 104);
+                  ContentTransitionDialog.field_ib[7] = GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = SectorCacheStore.a("subscription_cost_monthly,8", (byte) -127);
                 if (var2 != null) {
-                  ta.field_ib[8] = GzipInflater.a(var2, (byte) 99);
+                  ContentTransitionDialog.field_ib[8] = GzipInflater.a(var2, (byte) 99);
                 }
                 var2 = SectorCacheStore.a("subscription_cost_monthly,9", (byte) -127);
                 if (null != var2) {
-                  ta.field_ib[9] = GzipInflater.a(var2, (byte) 123);
+                  ContentTransitionDialog.field_ib[9] = GzipInflater.a(var2, (byte) 123);
                 }
                 var2 = SectorCacheStore.a("subscription_cost_monthly,10", (byte) -127);
                 if (var2 != null) {
-                  ta.field_ib[10] = GzipInflater.a(var2, (byte) 106);
+                  ContentTransitionDialog.field_ib[10] = GzipInflater.a(var2, (byte) 106);
                 }
                 var2 = SectorCacheStore.a("subscription_cost_monthly,11", (byte) -127);
                 if (var2 != null) {
-                  ta.field_ib[11] = GzipInflater.a(var2, (byte) 127);
+                  ContentTransitionDialog.field_ib[11] = GzipInflater.a(var2, (byte) 127);
                 }
                 var2 = SectorCacheStore.a("subscription_cost_monthly,12", (byte) -127);
                 if (null != var2) {
-                  ta.field_ib[12] = GzipInflater.a(var2, (byte) 110);
+                  ContentTransitionDialog.field_ib[12] = GzipInflater.a(var2, (byte) 110);
                 }
                 var2 = SectorCacheStore.a("sentence_separator", (byte) -127);
                 if (var2 != null) {
@@ -3391,7 +3391,7 @@ abstract class c extends GameApplet {
         try {
           if (DropTargetWidgetContainer.field_A != null) {
             if (null == DiskCacheWorker.field_a) {
-              var3 = af.t(3);
+              var3 = ProgressMessageDialog.t(3);
               var4_ref_java_awt_Dimension = var3.getSize();
               DropTargetWidgetContainer.field_A.a(var4_ref_java_awt_Dimension.height, (byte) 115, var4_ref_java_awt_Dimension.width);
             }
@@ -3414,7 +3414,7 @@ abstract class c extends GameApplet {
               this.field_v = false;
               mc.a((byte) -128);
               wd.a(31668);
-              AccountServiceResult.a(2, -9, jc.field_S);
+              AccountServiceResult.a(2, -9, ResizableModalDialog.field_S);
               DropTargetWidgetContainer.j(-9636);
               ve.field_a = true;
               mf.field_j = 15000L + id.correctedCurrentTimeMillis(74);
@@ -3514,7 +3514,7 @@ abstract class c extends GameApplet {
             if (BitPacketBuffer.field_n != -1 &&
               BitPacketBuffer.field_n != 0) {
               BitPacketBuffer.field_n = -1;
-              ta.c(true);
+              ContentTransitionDialog.c(true);
             }
           }
           if (BitPacketBuffer.field_n == 0 &&
@@ -3561,7 +3561,7 @@ abstract class c extends GameApplet {
             sg.a((byte) -12);
             ad.a(51);
             LabeledWidgetContainer.field_G = FrameTimer.field_c;
-            tj.field_K = false;
+            GuestPlayConfirmationForm.field_K = false;
             cj.a(aa.field_db, RichTextWidget.field_F, sg.field_a, jk.field_c, 126);
             if (PacketBuffer.field_h ||
               null != cj.field_k) {
@@ -3574,11 +3574,11 @@ abstract class c extends GameApplet {
             if (sl.field_a) {
               lc.a(4);
             }
-            if (ta.field_hb == null) {
-              ta.field_hb = af.r(77);
+            if (ContentTransitionDialog.field_hb == null) {
+              ContentTransitionDialog.field_hb = ProgressMessageDialog.r(77);
               FullscreenFocusCanvas.field_a = fd.a(-28506);
             }
-            ca.a(sg.field_a, ta.field_hb, FullscreenFocusCanvas.field_a, 0);
+            ca.a(sg.field_a, ContentTransitionDialog.field_hb, FullscreenFocusCanvas.field_a, 0);
             aa.field_db = null;
             jk.field_c = null;
             sg.field_a = null;
@@ -3953,7 +3953,7 @@ abstract class c extends GameApplet {
               if (BitPacketBuffer.field_n != -1 &&
                 BitPacketBuffer.field_n != 0) {
                 BitPacketBuffer.field_n = -1;
-                ta.c(true);
+                ContentTransitionDialog.c(true);
               }
               if (param1) {
                 ve.field_a = false;
@@ -3991,7 +3991,7 @@ abstract class c extends GameApplet {
               PacketBuffer.a((byte) -124, PasswordValidator.g(-126));
             }
             if (var4_int == 6 &&
-              tj.field_K) {
+              GuestPlayConfirmationForm.field_K) {
               cd.field_e = 10;
             }
             if (7 == var4_int) {
@@ -4001,7 +4001,7 @@ abstract class c extends GameApplet {
               PacketBuffer.a(PasswordValidator.g(-125), (byte) 76);
             }
             if (9 == var4_int) {
-              rk.a(PasswordValidator.g(-127), (byte) -85);
+              ProgressDialog.a(PasswordValidator.g(-127), (byte) -85);
             }
             if (param2 == var4_int) {
               NetworkArchiveRequest.field_r.writeCipheredByte(17, 0);

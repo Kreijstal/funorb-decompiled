@@ -438,7 +438,7 @@ final class RichTextLayout extends TextLayout {
           n.field_a = re.createFullscreenCanvas(0, nb.field_e, 0, true, 640, 480);
         } else {
           n.field_a = NameSuggestionsPanel.field_B.a(2);
-          ae.a(2, (byte) 31);
+          FullscreenNoticeType.a(2, (byte) 31);
         }
         if (n.field_a == null) {
           var2Lifetime1 = 3;

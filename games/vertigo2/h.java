@@ -45,16 +45,16 @@ final class h extends TextureOperator {
           var5 = var14[0];
           var6 = var14[1];
           var7 = var14[2];
-          if (this.field_B != we.field_M) {
-            for (var8 = 0; var8 < we.field_M; var8++) {
-              var9 = var8 * this.field_B / we.field_M;
+          if (this.field_B != StripedProgressWidget.field_M) {
+            for (var8 = 0; var8 < StripedProgressWidget.field_M; var8++) {
+              var9 = var8 * this.field_B / StripedProgressWidget.field_M;
               var10 = this.field_z[var9 + var4];
               var7[var8] = b.a(var10, 255) << 4;
               var6[var8] = b.a(var10, 65280) >> 4;
               var5[var8] = b.a(4080, var10 >> 12);
             }
           } else {
-            for (var8 = 0; var8 < we.field_M; var8++) {
+            for (var8 = 0; var8 < StripedProgressWidget.field_M; var8++) {
               incrementValue$0 = var4;
               var4++;
               var9 = this.field_z[incrementValue$0];

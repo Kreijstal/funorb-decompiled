@@ -113,7 +113,7 @@ final class cd extends ea implements Cloneable {
             this.field_w = 52;
           }
           this.field_t = mo.field_h[3 & var6_int];
-          this.field_C = kl.field_S[3 & var6_int];
+          this.field_C = ProgressDialog.field_S[3 & var6_int];
           var7 = (var6_int >> 1 & 2) - 1;
           this.field_y = var7 * -this.field_t;
           this.field_x = this.field_C * var7;
@@ -645,7 +645,7 @@ final class cd extends ea implements Cloneable {
           return vp.field_d;
         }
         if (this.field_x > 0) {
-          return na.field_eb;
+          return ProgressMessageDialog.field_eb;
         }
         if (param0 <= this.field_y) {
           return tl.field_b;
@@ -729,7 +729,7 @@ final class cd extends ea implements Cloneable {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ck.field_db.a(64, param4 * 12, param1 * 12, 60, (byte) -111);
+          StandardContentDialog.field_db.a(64, param4 * 12, param1 * 12, 60, (byte) -111);
           if (param2) {
             this.e(22, 29, (PuzzleTile[][]) null, 20);
           }
@@ -815,7 +815,7 @@ final class cd extends ea implements Cloneable {
         try {
           var5_int = 117 % ((-43 - param2) / 51);
           if ((this.field_o | this.field_s) != 0) {
-            ck.field_db.a(64, 12 * param3 + this.field_m * this.field_o, 12 * param1 + this.field_s * this.field_m, 60, (byte) -111);
+            StandardContentDialog.field_db.a(64, 12 * param3 + this.field_m * this.field_o, 12 * param1 + this.field_s * this.field_m, 60, (byte) -111);
           }
           stackIn_4_0 = super.b(param0, param1, (byte) -109, param3);
           return stackIn_4_0;

@@ -115,7 +115,7 @@ final class IterableNodeHashTable implements Iterable {
           jf.d(param1 ^ 0);
           IsaacRandom.field_d.closeAllDialogs((byte) 16);
           af.field_r = new LoginPanel(FullscreenFocusCanvas.field_a, (String) null, gk.field_a, param3, param0);
-          sf.field_f = new pg(IsaacRandom.field_d, af.field_r);
+          sf.field_f = new StandardContentDialog(IsaacRandom.field_d, af.field_r);
           IsaacRandom.field_d.showDialog((byte) -128, (UiWidget) (sf.field_f));
           if (param1 != -1) {
             IterableNodeHashTable.resetStaticState(100);

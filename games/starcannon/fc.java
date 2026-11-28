@@ -60,7 +60,7 @@ final class fc {
           nb.field_b = (BitmapFont) ((Object) ai.a(param3, "commonui", true, "arezzo12", param1));
           nb.field_c = (BitmapFont) ((Object) ai.a(param3, "commonui", true, "arezzo14", param1));
           AwtRasterBuffer.field_a = (BitmapFont) ((Object) ai.a(param3, "commonui", true, "arezzo14bold", param1));
-          var18 = new Sprite(param0.getFileByName("button.gif", (byte) -95, ""), (java.awt.Component) ((Object) kj.field_E));
+          var18 = new Sprite(param0.getFileByName("button.gif", (byte) -95, ""), (java.awt.Component) ((Object) DialogMessagePane.field_E));
           o.a(param3, "commonui", "dropdown", false);
           var5 = fg.a(param3, "screen_options", "commonui", false);
           il.field_e = new id[4];
@@ -109,7 +109,7 @@ final class fc {
 
     final static void a(PacketBuffer param0, PacketBuffer param1, java.math.BigInteger param2, java.math.BigInteger param3, int param4) {
         try {
-          vj.a(param0.payload, param4, param2, param1, param0.position, (byte) 99, param3);
+          FullscreenStatusDialog.a(param0.payload, param4, param2, param1, param0.position, (byte) 99, param3);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "fc.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

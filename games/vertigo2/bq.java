@@ -24,7 +24,7 @@ final class bq extends TextureOperator {
 
     final static void a(aa param0, int param1) {
         try {
-          ql.field_L.b(param0, param1 ^ -120);
+          BirthDateChatEnableForm.field_L.b(param0, param1 ^ -120);
           if (param1 != -1) {
             bq.clearStaticReferences(-18);
           }
@@ -78,7 +78,7 @@ final class bq extends TextureOperator {
           var42 = var29[0];
           var43 = var29[1];
           var44 = var29[2];
-          for (var10 = 0; var10 < we.field_M; var10++) {
+          for (var10 = 0; var10 < StripedProgressWidget.field_M; var10++) {
             var14 = (-var40[var10] + var41[var10]) * this.field_y;
             var15 = (var5[1 + var10 & rm.field_z] - var5[var10 - 1 & rm.field_z]) * this.field_y;
             var16 = var15 >> 12;

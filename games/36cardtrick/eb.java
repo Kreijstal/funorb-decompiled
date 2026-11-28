@@ -219,7 +219,7 @@ final class eb {
           oj.field_d = param1;
           LoginPanel.field_O = param8;
           pf.field_h = param6;
-          ej.field_kb = param7;
+          StandardContentDialog.field_kb = param7;
           if (param5 > -52) {
             eb.clearStaticReferences(true);
           }

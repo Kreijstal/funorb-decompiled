@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ki {
-    static dh field_c;
+    static ProgressMessageDialog field_c;
     static PlatformTaskDispatcher field_d;
     static PcmSample field_a;
     static AccountRegistrationPanel field_b;

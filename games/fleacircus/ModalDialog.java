@@ -56,7 +56,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           if (param3 != 0) {
             return;
           }
-          this.b(param0 + this.field_z, param1 + this.field_y, 17344);
+          this.drawDialogBackground(param0 + this.field_z, param1 + this.field_y, 17344);
           super.drawWidget(param0, param1, true, param3);
           return;
         }
@@ -67,7 +67,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         }
         TextFieldValidator.a(ok.field_y, 45);
         SoftwareRasterizer.clearRaster();
-        this.b(0, 0, 17344);
+        this.drawDialogBackground(0, 0, 17344);
         super.drawWidget(-param0 - this.field_z, -param1 - this.field_y, param2, param3);
         ia.a(-62);
         ok.field_y.drawWithOpacity(this.field_y + param1, this.field_z + param0, this.field_K);
@@ -83,7 +83,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         return stackIn_6_0;
     }
 
-    abstract void b(int param0, int param1, int param2);
+    abstract void drawDialogBackground(int param0, int param1, int param2);
 
     private final int getTargetAlpha(byte param0) {
         if (param0 >= -41) {

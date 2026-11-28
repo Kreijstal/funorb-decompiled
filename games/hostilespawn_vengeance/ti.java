@@ -64,7 +64,7 @@ final class ti implements WidgetRenderer {
         var7[var4 >> 5] = ll.a(var7[var4 >> 5], 1 << PcmOutputWorker.bitwiseAnd(var4, 31));
         int var5 = 20 / ((-70 - param1) / 40);
         ac.field_i.addLast(new AchievementNotification(param2), 90);
-        if (!ta.p(3)) {
+        if (!StandardContentDialog.p(3)) {
           ec.a(FrameTimer.field_b, fa.field_a, true, 4, NanoFrameTimer.field_m, param0, q.field_n, param2);
           sg.field_j = wk.a(4, -2178);
           return;

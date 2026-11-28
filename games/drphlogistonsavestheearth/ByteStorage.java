@@ -10,10 +10,10 @@ abstract class ByteStorage {
 
     final static void a(byte param0) {
         if (null != ol.field_a) {
-          ol.field_a.d(true);
+          ol.field_a.closeDialog(true);
         }
         dd.field_g = new DisplayNameSelectionPanel();
-        PcmOutputWorker.field_e.a(33, dd.field_g);
+        PcmOutputWorker.field_e.replaceContent(33, dd.field_g);
         if (param0 < -11) {
           return;
         }

@@ -158,7 +158,7 @@ final class hl {
             AlphaWidgetContainer.field_G[param1 + var2_int] = var2_int;
             var2_int++;
           }
-          wc.a(false, true, v.field_Z, param1, pi.field_e, param1 + param1, param1 + PcmOutputWorker.field_c);
+          wc.a(false, true, ResizableModalDialog.field_Z, param1, pi.field_e, param1 + param1, param1 + PcmOutputWorker.field_c);
           if (PcmOutputWorker.field_c > param1) {
             PcmOutputWorker.field_c = param1;
           }

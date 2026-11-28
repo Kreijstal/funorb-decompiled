@@ -4,7 +4,7 @@
 final class de {
     static String field_c;
     static wh field_b;
-    static rh field_a;
+    static StandardContentDialog field_a;
     private static String field_z;
 
     public static void clearStaticReferences(byte param0) {

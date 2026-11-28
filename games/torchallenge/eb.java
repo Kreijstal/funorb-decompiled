@@ -41,7 +41,7 @@ final class eb extends IntrusiveNode {
           var7 = var9;
           t.field_b.showDialog((byte) 125, (UiComponent) (var9));
           if (wi.a(0)) {
-            var9.h((byte) 21);
+            var9.showAccountCreationConnectionFailure((byte) 21);
             return true;
           }
           GameKeyHandler.field_d = param6;

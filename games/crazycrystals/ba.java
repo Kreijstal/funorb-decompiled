@@ -90,7 +90,7 @@ final class ba extends ScoreModifier {
     }
 
     final static void c(byte param0) {
-        MouseWheelInput.field_d.a((UiWidget) (new ae()), (byte) -50);
+        MouseWheelInput.field_d.replaceContent((UiWidget) (new GuestPlayConfirmationForm()), (byte) -50);
         if (param0 == 93) {
           return;
         }

@@ -26,7 +26,7 @@ abstract class SpriteState extends DualLinkNode {
             if (RichTextLayout.field_f != null &&
               RichTextLayout.field_f.focusLost) {
               ih.b((byte) -25);
-              SingleChildWidgetContainer.field_z.showDialog((byte) -111, (UiWidget) (new ia(SingleChildWidgetContainer.field_z, nb.field_K)));
+              SingleChildWidgetContainer.field_z.showDialog((byte) -111, (UiWidget) (new FullscreenStatusDialog(SingleChildWidgetContainer.field_z, nb.field_K)));
             }
             return;
           }

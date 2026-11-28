@@ -303,7 +303,7 @@ final class tf {
           }
           ic.field_b = wd.field_j - (var3_intLifetime1 >> 1);
           ProxyAuthenticationRequiredException.field_a = wd.field_j - (-var3_intLifetime1 + (var3_intLifetime1 >> 1));
-          mf.field_d = (ee.field_D + jl.field_o << 1) * bk.field_c.field_a;
+          mf.field_d = (DialogMessagePane.field_D + jl.field_o << 1) * bk.field_c.field_a;
           for (var4Lifetime2 = 0; var4Lifetime2 < qb.field_f.length; var4Lifetime2++) {
             stackIn_113_0 = mf.field_d;
             if (GameKeyHandler.field_a[var4Lifetime2] >= 0) {
@@ -324,13 +324,13 @@ final class tf {
             var6Lifetime1 = GameKeyHandler.field_a[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
               var7Lifetime2 = uc.a(qb.field_f[var4Lifetime3], false, true);
-              var5Lifetime3 = var5Lifetime3 + ee.field_D;
+              var5Lifetime3 = var5Lifetime3 + DialogMessagePane.field_D;
               var8Lifetime1 = -(var7Lifetime2 >> 1) + wd.field_j;
               jj.field_c[var4Lifetime3] = new int[4];
               jj.field_c[var4Lifetime3][0] = var8Lifetime1 - EmailFormatValidator.field_m;
               jj.field_c[var4Lifetime3][1] = var5Lifetime3;
               jj.field_c[var4Lifetime3][2] = (EmailFormatValidator.field_m << 1) + var7Lifetime2;
-              var5Lifetime3 = var5Lifetime3 + (ee.field_D + (jl.field_o << 1) + hi.field_c);
+              var5Lifetime3 = var5Lifetime3 + (DialogMessagePane.field_D + (jl.field_o << 1) + hi.field_c);
               jj.field_c[var4Lifetime3][3] = hi.field_c + (jl.field_o << 1);
             } else {
               var5Lifetime3 = var5Lifetime3 + SingleChildWidgetContainer.field_x;

@@ -258,7 +258,7 @@ final class ResourceArchive {
                 if (this.field_k != 0) {
                   var8[var19] = var40[var18];
                 } else {
-                  var8[var19] = ug.storeBytes(127, false, var40[var18]);
+                  var8[var19] = ResizableModalDialog.storeBytes(127, false, var40[var18]);
                 }
               }
             }
@@ -272,7 +272,7 @@ final class ResourceArchive {
               var8[var12] = var37;
               return true;
             }
-            var8[var12] = ug.storeBytes(125, false, var44);
+            var8[var12] = ResizableModalDialog.storeBytes(125, false, var44);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -451,7 +451,7 @@ final class ResourceArchive {
 
     private final synchronized void loadPackedGroup(int param0, int param1) {
         if (!this.field_e) {
-          this.field_d[param0] = ug.storeBytes(126, false, this.field_i.a(param0, 0));
+          this.field_d[param0] = ResizableModalDialog.storeBytes(126, false, this.field_i.a(param0, 0));
         } else {
           this.field_d[param0] = this.field_i.a(param0, 0);
         }

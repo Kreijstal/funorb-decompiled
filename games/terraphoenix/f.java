@@ -92,7 +92,7 @@ final class f implements WidgetActionListener {
             return true;
           }
           if (param0 != null &&
-            param0.length() >= na.field_Y) {
+            param0.length() >= ProgressDialog.field_Y) {
             if (param0.length() > sl.field_e) {
               return true;
             }

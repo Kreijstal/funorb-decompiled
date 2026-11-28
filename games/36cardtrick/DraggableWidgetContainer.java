@@ -246,7 +246,7 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
           }
           var2Lifetime34 = wf.a("misses", -19073);
           if (null != var2Lifetime34) {
-            tj.field_D = GzipInflater.a(var2Lifetime34, (byte) 122);
+            GuestPlayConfirmationForm.field_D = GzipInflater.a(var2Lifetime34, (byte) 122);
           }
           var2Lifetime35 = wf.a("score", -19073);
           if (var2Lifetime35 != null) {

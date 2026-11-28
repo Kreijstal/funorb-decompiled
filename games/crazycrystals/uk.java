@@ -39,7 +39,7 @@ final class uk extends nf {
           }
           this.field_h = this.field_h + 1;
           stackIn_6_0 = (!q.field_a[ma.field_n[param1]].a((byte) 107, param2)) ? 25 : 50;
-          ph.a(stackIn_6_0, (byte) 107, param1, param4);
+          RegistrationAgreementPane.a(stackIn_6_0, (byte) 107, param1, param4);
           stackIn_7_0 = IsaacRandom.field_g;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

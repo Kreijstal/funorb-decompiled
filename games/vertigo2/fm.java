@@ -163,7 +163,7 @@ final class fm {
             !pe.field_r) {
             return;
           }
-          TextLineMetrics.field_a = new ql(0, 0, 0, 0);
+          TextLineMetrics.field_a = new BirthDateChatEnableForm(0, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -36,7 +36,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
 
     final static void a(byte param0) {
         int var1 = 54 / ((param0 - 58) / 42);
-        ej.a((byte) -118, lh.field_c, ri.field_b, true);
+        StandardContentDialog.a((byte) -118, lh.field_c, ri.field_b, true);
         ij.field_g = true;
     }
 

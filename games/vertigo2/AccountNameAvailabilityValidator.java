@@ -46,7 +46,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           if (!this.nameAvailable) {
             stackIn_15_0 = ir.field_a;
           } else {
-            stackIn_15_0 = qm.field_G;
+            stackIn_15_0 = GuestPlayConfirmationForm.field_G;
           }
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

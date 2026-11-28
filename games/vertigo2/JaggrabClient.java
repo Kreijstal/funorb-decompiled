@@ -193,14 +193,14 @@ final class JaggrabClient implements Runnable {
         RuntimeException decompiledCaughtException = null;
         var3 = Vertigo2.field_L ? 1 : 0;
         try {
-          fj.a(BlastEffectRenderer.field_i, 811497217, param0, q.field_x, FrameTimer.field_b, 0, true);
+          ProgressMessageDialog.a(BlastEffectRenderer.field_i, 811497217, param0, q.field_x, FrameTimer.field_b, 0, true);
           if (param1 != 2) {
             field_f = (Model[]) null;
           }
           for (var2_int = 0; BlastEffectRenderer.field_i > var2_int; var2_int++) {
             DropTargetWidgetContainer.field_I[var2_int + param0] = var2_int;
           }
-          fj.a(BlastEffectRenderer.field_i + param0, 811497217, param0 + param0, f.field_y, id.field_d, param0, false);
+          ProgressMessageDialog.a(BlastEffectRenderer.field_i + param0, 811497217, param0 + param0, f.field_y, id.field_d, param0, false);
           if (BlastEffectRenderer.field_i <= param0) {
             return;
           }

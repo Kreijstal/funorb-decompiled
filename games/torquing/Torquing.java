@@ -184,11 +184,11 @@ public final class Torquing extends NetworkGameClient {
           IsaacPacketBuffer.clearStaticReferences(3);
           nn.b(-93);
           ModalDialogHost.h((byte) 111);
-          sp.clearDeclaredStaticReferences(-7361);
-          qc.resetStaticState(1269);
-          mn.clearStaticReferences((byte) 77);
+          ProgressDialog.clearDeclaredStaticReferences(-7361);
+          StandardContentDialog.resetStaticState(1269);
+          ProgressMessageDialog.clearStaticReferences((byte) 77);
           AccountRegistrationPanel.clearStaticReferences(0);
-          fm.h(-59);
+          GuestPlayConfirmationForm.h(-59);
           LoginPanel.g((byte) -122);
           DisplayNameSelectionPanel.clearStaticReferences(2147483647);
           a.clearStaticReferences(param0 ^ 4);
@@ -211,7 +211,7 @@ public final class Torquing extends NetworkGameClient {
           un.clearStaticReferences(-13524);
           wd.clearStaticReferences(0);
           ma.clearStaticReferences();
-          ho.clearStaticReferences();
+          VorbisSample.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
           lh.clearStaticReferences(param0 - 128);
           pn.clearStaticReferences(92);
@@ -228,7 +228,7 @@ public final class Torquing extends NetworkGameClient {
           pd.a(false);
           ArchiveRequest.releaseDeclaredStaticReferences(param0 + 252);
           ra.resetStaticState(376);
-          i.clearDeclaredStaticReferences(50);
+          FullscreenStatusDialog.clearDeclaredStaticReferences(50);
           ip.clearStaticReferences(108);
           DefaultTextWidgetRenderer.clearStaticReferences(4252);
           pg.a(47);
@@ -259,7 +259,7 @@ public final class Torquing extends NetworkGameClient {
           UiWidget.d(13509);
           InteractiveWidget.clearStaticReferences(52);
           SingleChildWidgetContainer.clearDeclaredStaticReferences((byte) 69);
-          im.clearStaticReferences(-126);
+          ResizableModalDialog.clearStaticReferences(-126);
           WidgetContainer.f((byte) 2);
           re.clearStaticReferences(21007);
           r.clearStaticReferences(param0 + 33423357);
@@ -284,8 +284,8 @@ public final class Torquing extends NetworkGameClient {
           ug.clearStaticReferences(false);
           LabeledWidgetContainer.clearStaticReferences(0);
           ValidatedTextField.resetStaticState((byte) 121);
-          aa.clearDeclaredStaticReferences(0);
-          kf.a(false);
+          ContentTransitionDialog.clearDeclaredStaticReferences(0);
+          StripedProgressWidget.a(false);
           NameSuggestionsPanel.clearStaticReferences(-1);
           ub.clearStaticReferences((byte) -19);
           bj.clearStaticReferences((byte) -37);
@@ -382,9 +382,9 @@ public final class Torquing extends NetworkGameClient {
           rk.clearStaticReferences(true);
           AccountRequestState.releaseStatics((byte) -119);
           AccountServiceResult.clearStaticReferences((byte) 10);
-          fo.h(-2);
+          DialogMessagePane.h(-2);
           IndexedSpriteLayer.c(param0 ^ -3);
-          hh.clearStaticReferences((byte) 84);
+          FullscreenNoticeType.clearStaticReferences((byte) 84);
           qa.a(126);
           ni.clearStaticReferences(-37);
           v.clearStaticReferences((byte) 123);
@@ -484,13 +484,13 @@ public final class Torquing extends NetworkGameClient {
         try {
           k.a(param1, 1);
           nc.a(param1, true);
-          qc.field_cb.drawFramedPanel((byte) -51, 0, 0);
+          StandardContentDialog.field_cb.drawFramedPanel((byte) -51, 0, 0);
           wh.field_t[param1].drawWithAlpha(0, 0, 76);
           pm.field_m[param1].drawOpaque(0, 0);
           MenuScreen.field_d[param1].drawWithAlpha(0, 0, 76);
           GameKeyHandler.field_a[param1].drawOpaque(0, 0);
           if (null == this.field_t) {
-            this.field_t = new TooltipPanel(i.field_Q, 0, 372, 286, GameKeyHandler.field_a[param1], -34, -159);
+            this.field_t = new TooltipPanel(FullscreenStatusDialog.field_Q, 0, 372, 286, GameKeyHandler.field_a[param1], -34, -159);
             this.field_t.addFlexibleVerticalSpace((byte) -19, 30);
             this.field_t.appendCenteredText(false, ff.a(new String[]{Integer.toString(param1 + 1)}, 0, DefaultTextWidgetRenderer.field_n));
             this.field_t.addFlexibleVerticalSpace((byte) 120, 40);
@@ -823,17 +823,17 @@ public final class Torquing extends NetworkGameClient {
           if (rp.field_d != null) {
             IsaacPacketBuffer.a(32.0f, -66, k.field_h);
             this.renderFrame((byte) 73);
-            VolumeScaledPcmStream.field_o = mn.a(rp.field_d, "basic", "unachieved", 112);
-            LoginPanel.field_J = mn.a(rp.field_d, "basic", "locked", param1 + 207);
+            VolumeScaledPcmStream.field_o = ProgressMessageDialog.a(rp.field_d, "basic", "unachieved", 112);
+            LoginPanel.field_J = ProgressMessageDialog.a(rp.field_d, "basic", "locked", param1 + 207);
             mo.a(VolumeScaledPcmStream.field_o, 4);
-            dd.field_i = mn.a(rp.field_d, "basic", "orbcoin", 124);
+            dd.field_i = ProgressMessageDialog.a(rp.field_d, "basic", "orbcoin", 124);
             this.loadInterfaceFonts(8);
             if (0 >= wp.field_w) {
               m.a(16750848, (java.applet.Applet) (this), 0, NodeHashTableIterator.field_a, 0, 16777215);
               var33 = new Sprite(640, 480);
               rj.a(-65, cp.field_i, var33);
-              MouseWheelInput.a(mn.a(rg.field_v, "", "mb_logo", 96), false);
-              var34 = mn.a(rg.field_v, "", "mb_price_bg", 97);
+              MouseWheelInput.a(ProgressMessageDialog.a(rg.field_v, "", "mb_logo", 96), false);
+              var34 = ProgressMessageDialog.a(rg.field_v, "", "mb_price_bg", 97);
               TextLineMetrics.a(var34, 10, 24, 96, 118, 37, 6, false, -2000);
               mk.field_b.a(-101);
             }
@@ -855,7 +855,7 @@ public final class Torquing extends NetworkGameClient {
             var43 = var35[1];
             var7_ref_sm = var35[3];
             var8_ref_ia = new FramedPanelLayer(18, 142, 404, 320);
-            qc.field_cb = var8_ref_ia;
+            StandardContentDialog.field_cb = var8_ref_ia;
             pa.field_e = ip.a(rg.field_v, -115, "", "world_text");
             GameKeyHandler.field_a = ip.a(rg.field_v, -109, "", "world_img");
             MenuScreen.field_d = ip.a(rg.field_v, param1 - 17, "", "world_img_shadow");
@@ -915,9 +915,9 @@ public final class Torquing extends NetworkGameClient {
             SingleChildWidgetContainer.field_B = new TranslucentSpriteLayer(var42[0], 0, 0, 76);
             jb.field_b = var8_ref_ia;
             nh.field_l = var7_ref_sm;
-            bd.field_w = mn.a(rg.field_v, "", "dashboard", 106);
-            VolumeScaledPcmStream.field_n = mn.a(rg.field_v, "", "shieldIcon", 105);
-            FramedPanelLayer.field_f = mn.a(rg.field_v, "", "gyroIcon", 104);
+            bd.field_w = ProgressMessageDialog.a(rg.field_v, "", "dashboard", 106);
+            VolumeScaledPcmStream.field_n = ProgressMessageDialog.a(rg.field_v, "", "shieldIcon", 105);
+            FramedPanelLayer.field_f = ProgressMessageDialog.a(rg.field_v, "", "gyroIcon", 104);
             hq.field_h = SectorCacheStore.a("countdown", -1, "", rg.field_v);
             hi.field_h = new IndexedSprite[8];
             UiWidget.field_r = new IndexedSprite[8];
@@ -940,7 +940,7 @@ public final class Torquing extends NetworkGameClient {
             var13 = LevelRun.createIndexedSpriteLayer(var44, param1 - 7);
             nn.field_a[0] = new MenuLayer[]{(MenuLayer) (var10_ref), (MenuLayer) ((Object) var8_ref_ia), (MenuLayer) ((Object) var11), var13, (MenuLayer) ((Object) new TranslucentSpriteLayer(var42[0], 0, 0, 76)), LevelRun.createIndexedSpriteLayer(var35[0], -115)};
             var45 = DelegatingCanvas.a("pause_title", param1 ^ -30996, rg.field_v, "");
-            nn.field_a[1] = new MenuLayer[]{(MenuLayer) (var10_ref), (MenuLayer) ((Object) var8_ref_ia), (MenuLayer) ((Object) var11), var13, (MenuLayer) ((Object) new TranslucentSpriteLayer(var45, 5, 5, 76)), LevelRun.createIndexedSpriteLayer(var45, i.c((int) param1, 55))};
+            nn.field_a[1] = new MenuLayer[]{(MenuLayer) (var10_ref), (MenuLayer) ((Object) var8_ref_ia), (MenuLayer) ((Object) var11), var13, (MenuLayer) ((Object) new TranslucentSpriteLayer(var45, 5, 5, 76)), LevelRun.createIndexedSpriteLayer(var45, FullscreenStatusDialog.c((int) param1, 55))};
             nn.field_a[3] = new MenuLayer[]{(MenuLayer) ((Object) new FramedPanelLayer(102, 14, 436, 452)), ByteStorage.a("continue", "", rg.field_v, (byte) 4)};
             nn.field_a[4] = new MenuLayer[]{(MenuLayer) (var10_ref), ByteStorage.a("help_bg_delta", "", rg.field_v, (byte) 4), (MenuLayer) ((Object) new FramedPanelLayer(27, 98, 574, 365))};
             var15_ref_sm = DelegatingCanvas.a("highscore_top", 31094, rg.field_v, "");
@@ -951,19 +951,19 @@ public final class Torquing extends NetworkGameClient {
             nn.field_a[6] = new MenuLayer[]{(MenuLayer) ((Object) var16_ref_ia), ByteStorage.a("achievetitle", "", rg.field_v, (byte) 4)};
             nn.field_a[8] = new MenuLayer[]{(MenuLayer) ((Object) var16_ref_ia), ByteStorage.a("gameachtitle", "", rg.field_v, (byte) 4)};
             nn.field_a[7] = new MenuLayer[]{(MenuLayer) ((Object) new FramedPanelLayer(35, 144, 573, 223)), (MenuLayer) ((Object) new TranslucentSpriteLayer(var42[0], 0, 0, 76)), LevelRun.createIndexedSpriteLayer(var35[0], 115)};
-            nn.field_a[10] = new MenuLayer[]{(MenuLayer) ((Object) qc.field_cb), (MenuLayer) ((Object) new TranslucentSpriteLayer(var42[0], 0, 0, 76)), LevelRun.createIndexedSpriteLayer(var35[0], param1 + 41), (MenuLayer) ((Object) new TranslucentSpriteLayer(MenuScreen.field_d[1], 0, 0, 76)), LevelRun.createIndexedSpriteLayer(GameKeyHandler.field_a[1], 108)};
+            nn.field_a[10] = new MenuLayer[]{(MenuLayer) ((Object) StandardContentDialog.field_cb), (MenuLayer) ((Object) new TranslucentSpriteLayer(var42[0], 0, 0, 76)), LevelRun.createIndexedSpriteLayer(var35[0], param1 + 41), (MenuLayer) ((Object) new TranslucentSpriteLayer(MenuScreen.field_d[1], 0, 0, 76)), LevelRun.createIndexedSpriteLayer(GameKeyHandler.field_a[1], 108)};
             nn.field_a[11] = new MenuLayer[]{(MenuLayer) ((Object) new FramedPanelLayer(11, 11, 618, 122)), (MenuLayer) ((Object) new FramedPanelLayer(11, 139, 209, 330)), (MenuLayer) ((Object) new FramedPanelLayer(226, 139, 403, 242))};
             dj.field_a = SectorCacheStore.a("menu_items_recol", -1, "", rg.field_v);
             bj.field_L = ip.a(rg.field_v, param1 ^ 31, "", "death_text");
             qd.field_c = new IndexedSprite[3];
             qd.field_c[1] = DelegatingCanvas.a("death_time", 31094, rg.field_v, "");
-            qd.field_c[0] = vo.a(-173, i.c((int) param1, 101), GameKeyHandler.field_a[2], 43);
+            qd.field_c[0] = vo.a(-173, FullscreenStatusDialog.c((int) param1, 101), GameKeyHandler.field_a[2], 43);
             qd.field_c[2] = vo.a(-194, -1, GameKeyHandler.field_a[6], -34);
-            DelayedPcmStream.field_p = mn.a(rg.field_v, "", "scrolled_instructions_keys", param1 + 186);
+            DelayedPcmStream.field_p = ProgressMessageDialog.a(rg.field_v, "", "scrolled_instructions_keys", param1 + 186);
             AccountRequestState.field_a = ip.a(rg.field_v, -116, "", "mb_screenshots");
             be.a(new op(NameSuggestionsPanel.field_D, n.field_q, rg.field_v, 6, false));
             tj.field_n = SectorCacheStore.a("achievements_lrg", param1 + 101, "", rg.field_v);
-            var46 = mn.a(rg.field_v, "", "glass", 89);
+            var46 = ProgressMessageDialog.a(rg.field_v, "", "glass", 89);
             var46.normalizeCanvas();
             var68 = var46.field_y;
             tj.field_n[11].normalizeCanvas();
@@ -1028,17 +1028,17 @@ public final class Torquing extends NetworkGameClient {
           if (vd.field_e != null) {
             IsaacPacketBuffer.a(37.0f, -88, jo.field_a);
             this.renderFrame((byte) 73);
-            DisplayNameSelectionPanel.field_F[7] = ho.a(vd.field_e, "", "torq_cuckoo_clock").c();
-            DisplayNameSelectionPanel.field_F[8] = ho.a(vd.field_e, "", "laura_uhoh").c();
-            DisplayNameSelectionPanel.field_F[21] = ho.a(vd.field_e, "", "bigben").c();
-            DisplayNameSelectionPanel.field_F[24] = ho.a(vd.field_e, "", "collide_1").c();
-            DisplayNameSelectionPanel.field_F[22] = ho.a(vd.field_e, "", "laura_aaahhh").c();
-            DisplayNameSelectionPanel.field_F[14] = ho.a(vd.field_e, "", "laura_ow").c();
-            DisplayNameSelectionPanel.field_F[18] = ho.a(vd.field_e, "", "laura_woohoo").c();
+            DisplayNameSelectionPanel.field_F[7] = VorbisSample.loadByName(vd.field_e, "", "torq_cuckoo_clock").decodeAllToPcm();
+            DisplayNameSelectionPanel.field_F[8] = VorbisSample.loadByName(vd.field_e, "", "laura_uhoh").decodeAllToPcm();
+            DisplayNameSelectionPanel.field_F[21] = VorbisSample.loadByName(vd.field_e, "", "bigben").decodeAllToPcm();
+            DisplayNameSelectionPanel.field_F[24] = VorbisSample.loadByName(vd.field_e, "", "collide_1").decodeAllToPcm();
+            DisplayNameSelectionPanel.field_F[22] = VorbisSample.loadByName(vd.field_e, "", "laura_aaahhh").decodeAllToPcm();
+            DisplayNameSelectionPanel.field_F[14] = VorbisSample.loadByName(vd.field_e, "", "laura_ow").decodeAllToPcm();
+            DisplayNameSelectionPanel.field_F[18] = VorbisSample.loadByName(vd.field_e, "", "laura_woohoo").decodeAllToPcm();
             DisplayNameSelectionPanel.field_F[17] = LoginRequestBuilder.field_a.a("laura_yeah", -114, "");
-            DisplayNameSelectionPanel.field_F[4] = ho.a(vd.field_e, "", "laura_1").c();
-            DisplayNameSelectionPanel.field_F[3] = ho.a(vd.field_e, "", "laura_2").c();
-            DisplayNameSelectionPanel.field_F[2] = ho.a(vd.field_e, "", "laura_3").c();
+            DisplayNameSelectionPanel.field_F[4] = VorbisSample.loadByName(vd.field_e, "", "laura_1").decodeAllToPcm();
+            DisplayNameSelectionPanel.field_F[3] = VorbisSample.loadByName(vd.field_e, "", "laura_2").decodeAllToPcm();
+            DisplayNameSelectionPanel.field_F[2] = VorbisSample.loadByName(vd.field_e, "", "laura_3").decodeAllToPcm();
             vd.field_e = null;
             cf.a(6639);
             return false;
@@ -1046,7 +1046,7 @@ public final class Torquing extends NetworkGameClient {
           if (DisplayNameSelectionPanel.field_C != null) {
             IsaacPacketBuffer.a(39.0f, -87, SectorCacheStore.field_c);
             this.renderFrame((byte) 73);
-            ResourceArchive.field_k[0] = new wl(ih.a(i.c((int) param1, -7922), "", LoginRequestBuilder.field_a, DisplayNameSelectionPanel.field_C, "music/Torquing_Titlescreen"));
+            ResourceArchive.field_k[0] = new wl(ih.a(FullscreenStatusDialog.c((int) param1, -7922), "", LoginRequestBuilder.field_a, DisplayNameSelectionPanel.field_C, "music/Torquing_Titlescreen"));
             ResourceArchive.field_k[1] = new wl(ih.a(7828, "", LoginRequestBuilder.field_a, DisplayNameSelectionPanel.field_C, "music/torquing_nursery_slopes"));
             ResourceArchive.field_k[2] = new wl(ih.a(7828, "", LoginRequestBuilder.field_a, DisplayNameSelectionPanel.field_C, "music/torquing_squared_away"));
             ResourceArchive.field_k[3] = new wl(ih.a(7828, "", LoginRequestBuilder.field_a, DisplayNameSelectionPanel.field_C, "music/torquing_next_steps"));
@@ -1066,7 +1066,7 @@ public final class Torquing extends NetworkGameClient {
             return false;
           }
           if (null != he.field_b) {
-            IsaacPacketBuffer.a(40.0f, 34, kf.field_D + " - 0%");
+            IsaacPacketBuffer.a(40.0f, 34, StripedProgressWidget.field_D + " - 0%");
             var52 = new PacketBuffer(he.field_b.getFileByName(param1 - 18, "levels.tql", ""));
             var53 = var52.readString((byte) 126);
             var5Lifetime1 = 0;
@@ -1082,7 +1082,7 @@ public final class Torquing extends NetworkGameClient {
                 var5Lifetime1 = 0;
               }
             }
-            qc.field_ab = new int[var6];
+            StandardContentDialog.field_ab = new int[var6];
             MenuScreen.field_k = new int[var6];
             var54 = new StringBuilder(8192);
             var8Lifetime2 = 0;
@@ -1094,7 +1094,7 @@ public final class Torquing extends NetworkGameClient {
                 if (var54.length() != 0) {
                   var55 = new Level(var8Lifetime2, var54.toString());
                   var54.setLength(0);
-                  qc.field_ab[var8Lifetime2] = qc.field_ab[var8Lifetime2] + 1;
+                  StandardContentDialog.field_ab[var8Lifetime2] = StandardContentDialog.field_ab[var8Lifetime2] + 1;
                   var9++;
                   if (var10_ref != null) {
                     ((Level) (var10_ref)).field_m = var55;
@@ -1112,11 +1112,11 @@ public final class Torquing extends NetworkGameClient {
             }
             wi.field_a = new int[var9];
             hg.field_d = new int[var9];
-            mk.field_c = new int[qc.field_ab.length];
+            mk.field_c = new int[StandardContentDialog.field_ab.length];
             var11_intLifetime1Lifetime1 = 0;
-            for (var8Lifetime3 = 0; qc.field_ab.length > var8Lifetime3; var8Lifetime3++) {
+            for (var8Lifetime3 = 0; StandardContentDialog.field_ab.length > var8Lifetime3; var8Lifetime3++) {
               mk.field_c[var8Lifetime3] = var11_intLifetime1Lifetime1;
-              for (var12_intLifetime1 = 0; var12_intLifetime1 < qc.field_ab[var8Lifetime3]; var12_intLifetime1++) {
+              for (var12_intLifetime1 = 0; var12_intLifetime1 < StandardContentDialog.field_ab[var8Lifetime3]; var12_intLifetime1++) {
                 hg.field_d[var11_intLifetime1Lifetime1] = var12_intLifetime1;
                 incrementValue$1 = var11_intLifetime1Lifetime1;
                 var11_intLifetime1Lifetime1++;
@@ -1129,7 +1129,7 @@ public final class Torquing extends NetworkGameClient {
           }
           if (wp.field_w > 0 &&
             eg.field_t != null) {
-            IsaacPacketBuffer.a(40.0f, 81, kf.field_D + " - 0%");
+            IsaacPacketBuffer.a(40.0f, 81, StripedProgressWidget.field_D + " - 0%");
             if (cc.field_d == null) {
               cc.field_d = fa.a(2, 13, 27375, 0);
             }
@@ -1146,7 +1146,7 @@ public final class Torquing extends NetworkGameClient {
             var57 = new PacketBuffer(var64);
             var58 = var57.readString((byte) 118);
             var7Lifetime1 = 0;
-            var8Lifetime1 = qc.field_ab.length + 1;
+            var8Lifetime1 = StandardContentDialog.field_ab.length + 1;
             for (var9Lifetime1 = 0; var58.length() > var9Lifetime1; var9Lifetime1++) {
               var10Lifetime1 = var58.charAt(var9Lifetime1);
               if (10 != var10Lifetime1) {
@@ -1158,11 +1158,11 @@ public final class Torquing extends NetworkGameClient {
                 var7Lifetime1 = 1;
               }
             }
-            var9Lifetime1Lifetime1 = qc.field_ab.length;
+            var9Lifetime1Lifetime1 = StandardContentDialog.field_ab.length;
             var10Lifetime1 = 1;
             var11_array = new int[var8Lifetime1];
-            dk.a(qc.field_ab, 0, var11_array, 0, qc.field_ab.length);
-            qc.field_ab = var11_array;
+            dk.a(StandardContentDialog.field_ab, 0, var11_array, 0, StandardContentDialog.field_ab.length);
+            StandardContentDialog.field_ab = var11_array;
             var12 = new int[var8Lifetime1];
             dk.a(MenuScreen.field_k, 0, var12, 0, MenuScreen.field_k.length);
             MenuScreen.field_k = var12;
@@ -1178,7 +1178,7 @@ public final class Torquing extends NetworkGameClient {
                 if (var13_ref.length() != 0) {
                   var59 = new Level(var9Lifetime1Lifetime1, var13_ref.toString());
                   var13_ref = new StringBuilder(8192);
-                  qc.field_ab[var9Lifetime1Lifetime1] = qc.field_ab[var9Lifetime1Lifetime1] + 1;
+                  StandardContentDialog.field_ab[var9Lifetime1Lifetime1] = StandardContentDialog.field_ab[var9Lifetime1Lifetime1] + 1;
                   var10Lifetime1++;
                   var14.field_m = var59;
                   var14 = var59;
@@ -1191,11 +1191,11 @@ public final class Torquing extends NetworkGameClient {
             }
             hg.field_d = new int[var10Lifetime1];
             wi.field_a = new int[var10Lifetime1];
-            mk.field_c = new int[qc.field_ab.length];
+            mk.field_c = new int[StandardContentDialog.field_ab.length];
             var15Lifetime1Lifetime1 = 0;
-            for (var9Lifetime1Lifetime2 = 0; qc.field_ab.length > var9Lifetime1Lifetime2; var9Lifetime1Lifetime2++) {
+            for (var9Lifetime1Lifetime2 = 0; StandardContentDialog.field_ab.length > var9Lifetime1Lifetime2; var9Lifetime1Lifetime2++) {
               mk.field_c[var9Lifetime1Lifetime2] = var15Lifetime1Lifetime1;
-              for (var16Lifetime1 = 0; var16Lifetime1 < qc.field_ab[var9Lifetime1Lifetime2]; var16Lifetime1++) {
+              for (var16Lifetime1 = 0; var16Lifetime1 < StandardContentDialog.field_ab[var9Lifetime1Lifetime2]; var16Lifetime1++) {
                 hg.field_d[var15Lifetime1Lifetime1] = var16Lifetime1;
                 incrementValue$3 = var15Lifetime1Lifetime1;
                 var15Lifetime1Lifetime1++;
@@ -1218,7 +1218,7 @@ public final class Torquing extends NetworkGameClient {
                 var4_ref = var4_ref.field_m;
                 continue;
               }
-              IsaacPacketBuffer.a((float)(var3_intLifetime2 * 60 / hg.field_d.length + 40), 51, kf.field_D + " - " + 100 * var3_intLifetime2 / hg.field_d.length + "%");
+              IsaacPacketBuffer.a((float)(var3_intLifetime2 * 60 / hg.field_d.length + 40), 51, StripedProgressWidget.field_D + " - " + 100 * var3_intLifetime2 / hg.field_d.length + "%");
               return false;
             }
             ol.field_f = new Level[var3_intLifetime2];
@@ -1386,7 +1386,7 @@ public final class Torquing extends NetworkGameClient {
                               } else {
                                 if (var11 == 8) {
                                   var9 = 0;
-                                  stackIn_176_0 = (-1 + qc.field_ab.length != GzipDecompressor.field_c) ? 0 : 1;
+                                  stackIn_176_0 = (-1 + StandardContentDialog.field_ab.length != GzipDecompressor.field_c) ? 0 : 1;
                                   var7 = stackIn_176_0;
                                   var10 = 0;
                                   if (wp.field_w <= 0) {
@@ -1631,7 +1631,7 @@ public final class Torquing extends NetworkGameClient {
           var2_int = GzipDecompressor.field_b;
           MouseInputHandler.field_b = new int[var2_int];
           for (var3 = 1; var3 < var2_int; var3++) {
-            MouseInputHandler.field_b[var3] = i.c(65535, vi.field_a[-var3 + var2_int]);
+            MouseInputHandler.field_b[var3] = FullscreenStatusDialog.c(65535, vi.field_a[-var3 + var2_int]);
           }
           if (param0 <= 69) {
             this.field_t = (TooltipPanel) null;
@@ -1716,7 +1716,7 @@ public final class Torquing extends NetworkGameClient {
                 }
                 tj.field_n[var3_ref_tj.field_k].drawQuarterSize(8, var4);
                 MatchingFieldValidator.field_m.drawString(k.field_b[var3_ref_tj.field_k], 48, var4 + MatchingFieldValidator.field_m.field_x, 0, -1);
-                i.field_N.drawString(k.field_b[var3_ref_tj.field_k], 48, var4 + MatchingFieldValidator.field_m.field_x, 16777215, -1);
+                FullscreenStatusDialog.field_N.drawString(k.field_b[var3_ref_tj.field_k], 48, var4 + MatchingFieldValidator.field_m.field_x, 16777215, -1);
               }
             }
             if (param0 != 73) {
@@ -1732,7 +1732,7 @@ public final class Torquing extends NetworkGameClient {
                 SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, var3);
               }
             }
-            if (hh.a(64) &&
+            if (FullscreenNoticeType.a(64) &&
               !on.b(160)) {
               stackIn_57_0 = (TranslucentSpriteLayer.field_i != null) || (ae.field_ib);
               oo.a(stackIn_57_0, -25564);
@@ -1759,7 +1759,7 @@ public final class Torquing extends NetworkGameClient {
           var3_int = wi.field_a[param0];
           k.a(var3_int, 1);
           nc.a(var3_int, true);
-          qc.field_cb.drawFramedPanel((byte) 90, 0, 0);
+          StandardContentDialog.field_cb.drawFramedPanel((byte) 90, 0, 0);
           wh.field_t[var3_int].drawWithAlpha(0, 0, 76);
           pm.field_m[var3_int].drawOpaque(0, 0);
           MenuScreen.field_d[var3_int].drawWithAlpha(0, 0, 76);
@@ -1773,7 +1773,7 @@ public final class Torquing extends NetworkGameClient {
             var4 = ie.field_b.field_d.field_m;
           }
           if (var4.field_e == null) {
-            dupTemp$0 = new TooltipPanel(i.field_Q, 0, 372, 286, GameKeyHandler.field_a[var3_int], -34, -159);
+            dupTemp$0 = new TooltipPanel(FullscreenStatusDialog.field_Q, 0, 372, 286, GameKeyHandler.field_a[var3_int], -34, -159);
             var4.field_e = dupTemp$0;
             var5 = dupTemp$0;
             var5.addFlexibleVerticalSpace((byte) -59, 30);
@@ -1850,7 +1850,7 @@ public final class Torquing extends NetworkGameClient {
                           ug.a(-114);
                         }
                       } else {
-                        hm.a(true, MatchingFieldValidator.field_m.field_x, (Sprite[]) null, 0, i.field_Q, 0, (Sprite[]) null, 3, 320, 0, MatchingFieldValidator.field_m.field_x * 3 / 2, 240);
+                        hm.a(true, MatchingFieldValidator.field_m.field_x, (Sprite[]) null, 0, FullscreenStatusDialog.field_Q, 0, (Sprite[]) null, 3, 320, 0, MatchingFieldValidator.field_m.field_x * 3 / 2, 240);
                       }
                       if (!on.b(160)) {
                         vo.field_f[fn.field_c].initializeMenuScreen((byte) 82, true);
@@ -1859,7 +1859,7 @@ public final class Torquing extends NetworkGameClient {
                       var2_int = 1;
                     }
                   } else {
-                    if (!hh.a(64)) {
+                    if (!FullscreenNoticeType.a(64)) {
                       var2_int = 1;
                     } else {
                       stackIn_57_1 = (TranslucentSpriteLayer.field_i != null);
@@ -1881,8 +1881,8 @@ public final class Torquing extends NetworkGameClient {
                       nh.field_k = kb.field_f.field_k[0];
                     }
                     if (wp.field_w <= 0) {
-                      if (qc.field_ab[1] + qc.field_ab[0] <= nh.field_k) {
-                        nh.field_k = -1 + qc.field_ab[0] + qc.field_ab[1];
+                      if (StandardContentDialog.field_ab[1] + StandardContentDialog.field_ab[0] <= nh.field_k) {
+                        nh.field_k = -1 + StandardContentDialog.field_ab[0] + StandardContentDialog.field_ab[1];
                         kb.field_f = null;
                       } else {
                         kb.field_f = null;
@@ -1981,7 +1981,7 @@ public final class Torquing extends NetworkGameClient {
                     }
                   }
                   if (var3Lifetime1 == 4) {
-                    hm.a(true, MatchingFieldValidator.field_m.field_x, (Sprite[]) null, 0, i.field_Q, 0, (Sprite[]) null, 3, 320, 0, 3 * MatchingFieldValidator.field_m.field_x / 2, 240);
+                    hm.a(true, MatchingFieldValidator.field_m.field_x, (Sprite[]) null, 0, FullscreenStatusDialog.field_Q, 0, (Sprite[]) null, 3, 320, 0, 3 * MatchingFieldValidator.field_m.field_x / 2, 240);
                   }
                   SpriteBase.field_h = -1;
                 }
@@ -2024,7 +2024,7 @@ public final class Torquing extends NetworkGameClient {
         try {
           k.a(param1, 1);
           nc.a(param1, true);
-          qc.field_cb.drawFramedPanel((byte) -40, 0, 0);
+          StandardContentDialog.field_cb.drawFramedPanel((byte) -40, 0, 0);
           wh.field_t[param1].drawWithAlpha(0, 0, 76);
           pm.field_m[param1].drawOpaque(0, 0);
           MenuScreen.field_d[param1].drawWithAlpha(0, 0, 76);
@@ -2191,7 +2191,7 @@ public final class Torquing extends NetworkGameClient {
           }
           for (var5 = 1; var5 < var10.length; var5++) {
             var6 = var10[var5];
-            param2.appendImageAndText(hh.field_e[var6.charAt(0) - 48], var6.substring(1), param0 ^ 250);
+            param2.appendImageAndText(FullscreenNoticeType.field_e[var6.charAt(0) - 48], var6.substring(1), param0 ^ 250);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2248,40 +2248,40 @@ public final class Torquing extends NetworkGameClient {
           nl.field_s = qg.a(e.field_b, rp.field_d, "kartika13", "", 255);
           var9 = ip.a(rg.field_v, -119, "", "smallfont");
           var20 = TooltipPanel.field_l.getFileByName(param0 - 116, "smallfont", "");
-          i.field_N = ok.a(var9, 256, var20);
+          FullscreenStatusDialog.field_N = ok.a(var9, 256, var20);
           MatchingFieldValidator.field_m = io.a(var9, -1, var20);
-          i.field_Q = ob.a(1579032, new int[]{4473924, 12632256, 13421772}, var20, true, var9);
-          var15 = i.field_Q.field_O[0];
+          FullscreenStatusDialog.field_Q = ob.a(1579032, new int[]{4473924, 12632256, 13421772}, var20, true, var9);
+          var15 = FullscreenStatusDialog.field_Q.field_O[0];
           var11 = var15;
           var4 = var11;
-          if (i.field_Q.field_O.length < 11) {
-            i.field_Q.field_O = new int[11][];
+          if (FullscreenStatusDialog.field_Q.field_O.length < 11) {
+            FullscreenStatusDialog.field_Q.field_O = new int[11][];
           }
-          i.field_Q.field_O[0] = var15;
+          FullscreenStatusDialog.field_Q.field_O[0] = var15;
           for (var5_int = 1; var5_int < 11; var5_int++) {
             array$1 = new int[var15.length];
-            i.field_Q.field_O[var5_int] = array$1;
-            dk.a(var4, 0, i.field_Q.field_O[var5_int], 0, var15.length);
+            FullscreenStatusDialog.field_Q.field_O[var5_int] = array$1;
+            dk.a(var4, 0, FullscreenStatusDialog.field_Q.field_O[var5_int], 0, var15.length);
           }
-          i.field_Q.field_O[0][1] = 16777215;
-          i.field_Q.field_O[1][1] = 16776960;
-          i.field_Q.field_O[2][1] = 8947848;
-          i.field_Q.field_O[3][1] = 16777215;
-          i.field_Q.field_O[4][1] = 16698162;
-          i.field_Q.field_O[5][1] = 16745242;
-          i.field_Q.field_O[7][5] = 6710886;
-          i.field_Q.field_O[6][1] = 3257116;
-          i.field_Q.field_O[7][3] = 2236962;
-          i.field_Q.field_O[7][4] = 4473924;
-          i.field_Q.field_O[8][3] = 2236962;
-          i.field_Q.field_O[8][1] = 16776960;
-          i.field_Q.field_O[8][4] = 4473924;
-          i.field_Q.field_O[param0][5] = 6710886;
-          i.field_Q.field_O[9][1] = 16750848;
-          i.field_Q.field_O[10][3] = 2236962;
-          i.field_Q.field_O[10][5] = 6710886;
-          i.field_Q.field_O[10][4] = 4473924;
-          i.field_Q.field_O[10][1] = 16750848;
+          FullscreenStatusDialog.field_Q.field_O[0][1] = 16777215;
+          FullscreenStatusDialog.field_Q.field_O[1][1] = 16776960;
+          FullscreenStatusDialog.field_Q.field_O[2][1] = 8947848;
+          FullscreenStatusDialog.field_Q.field_O[3][1] = 16777215;
+          FullscreenStatusDialog.field_Q.field_O[4][1] = 16698162;
+          FullscreenStatusDialog.field_Q.field_O[5][1] = 16745242;
+          FullscreenStatusDialog.field_Q.field_O[7][5] = 6710886;
+          FullscreenStatusDialog.field_Q.field_O[6][1] = 3257116;
+          FullscreenStatusDialog.field_Q.field_O[7][3] = 2236962;
+          FullscreenStatusDialog.field_Q.field_O[7][4] = 4473924;
+          FullscreenStatusDialog.field_Q.field_O[8][3] = 2236962;
+          FullscreenStatusDialog.field_Q.field_O[8][1] = 16776960;
+          FullscreenStatusDialog.field_Q.field_O[8][4] = 4473924;
+          FullscreenStatusDialog.field_Q.field_O[param0][5] = 6710886;
+          FullscreenStatusDialog.field_Q.field_O[9][1] = 16750848;
+          FullscreenStatusDialog.field_Q.field_O[10][3] = 2236962;
+          FullscreenStatusDialog.field_Q.field_O[10][5] = 6710886;
+          FullscreenStatusDialog.field_Q.field_O[10][4] = 4473924;
+          FullscreenStatusDialog.field_Q.field_O[10][1] = 16750848;
           var5 = ip.a(rg.field_v, -121, "", "minifont");
           var21 = TooltipPanel.field_l.getFileByName(-114, "minifont", "");
           dd.field_c = ok.a(var5, 256, var21);

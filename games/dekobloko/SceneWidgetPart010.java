@@ -123,7 +123,7 @@ final class SceneWidgetPart010 extends SceneWidget {
         MixedSupport036.performAction0503((byte) 67);
         if (MixedSupport024.computeBoolean0367(false)) {
           SocketFactory.cipherPacketBufferState0002.performAction1641(1, -4);
-          UiComponentPart033.performAction1818(4792, 0);
+          AccountCreationResultPanel.performAction1818(4792, 0);
         }
         NodeHashTable.performAction1498(80);
         if (byteArgument1 <= 69) {
@@ -176,7 +176,7 @@ final class SceneWidgetPart010 extends SceneWidget {
           MixedSupport005.uiComponentPart016State0001.snapAndPruneDialogs((byte) -66);
         }
         if (null != TextHotspotBounds.uiComponentPart026State0001) {
-          TextHotspotBounds.uiComponentPart026State0001.performAction1394((byte) 114);
+          TextHotspotBounds.uiComponentPart026State0001.freezeNormalProgressAnimation((byte) 114);
         }
         GameAssets.performAction1494(0);
         int integerLocal1 = 62 % ((-55 - byteArgument1) / 60);

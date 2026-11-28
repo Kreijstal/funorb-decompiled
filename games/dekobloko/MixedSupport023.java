@@ -59,7 +59,7 @@ final class MixedSupport023 {
         boolean stackBooleanLocal1 = false;
         boolean stackBooleanLocal2 = false;
         boolean stackBooleanLocal3 = false;
-        if (UiComponentPart023.computeBoolean1242(-30146) && (AccountRegistrationPanel.computeBoolean1586((byte) 38, MixedSupport063.integerArrayState0111) ||
+        if (StandardContentDialog.computeBoolean1242(-30146) && (AccountRegistrationPanel.computeBoolean1586((byte) 38, MixedSupport063.integerArrayState0111) ||
           MixedSupport048.mixedSupport072State0001 != null ||
           !(DropTargetWidgetContainer.integerState0319 <= 0))) {
           DebouncedFieldValidator.booleanState0006 = true;
@@ -174,12 +174,12 @@ final class MixedSupport023 {
             }
           }
           if (!MixedSupport105.booleanState0153) {
-            if (null == UiComponentPart019.mixedSupport113State0001) {
-              UiComponentPart019.mixedSupport113State0001 = MixedSupport126.computeMixedSupport1131628(1, 5, 0, 107);
+            if (null == BirthDateChatEnableForm.mixedSupport113State0001) {
+              BirthDateChatEnableForm.mixedSupport113State0001 = MixedSupport126.computeMixedSupport1131628(1, 5, 0, 107);
             }
-            if (UiComponentPart019.mixedSupport113State0001.booleanState0168) {
-              integerLocal3 = UiComponentPart019.mixedSupport113State0001.integerArrayState0202[0];
-              UiComponentPart019.mixedSupport113State0001 = null;
+            if (BirthDateChatEnableForm.mixedSupport113State0001.booleanState0168) {
+              integerLocal3 = BirthDateChatEnableForm.mixedSupport113State0001.integerArrayState0202[0];
+              BirthDateChatEnableForm.mixedSupport113State0001 = null;
               MixedSupport105.booleanState0153 = true;
               if (DropTargetWidgetContainer.integerState0319 < integerLocal3) {
                 DropTargetWidgetContainer.integerState0319 = integerLocal3;

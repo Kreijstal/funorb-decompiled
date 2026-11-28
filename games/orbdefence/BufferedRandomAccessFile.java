@@ -107,7 +107,7 @@ final class BufferedRandomAccessFile {
           DualLinkDeque.field_c = fk.a(param2, "jagex_logo_grey", 91, "commonui");
           FullscreenFocusCanvas.field_b = p.a(13863, "commonui", param2, "button");
           wd.field_C = CrossfadingMidiPcmStream.a("commonui", param2, "validation", -69);
-          pc.field_bb = (BitmapFont) ((Object) wl.a("arezzo12", (byte) -124, "commonui", param2, param3));
+          StandardContentDialog.field_bb = (BitmapFont) ((Object) wl.a("arezzo12", (byte) -124, "commonui", param2, param3));
           lm.field_f = (BitmapFont) ((Object) wl.a("arezzo14", (byte) -111, "commonui", param2, param3));
           if (param1 <= 91) {
             ResourceArchive var14 = (ResourceArchive) null;

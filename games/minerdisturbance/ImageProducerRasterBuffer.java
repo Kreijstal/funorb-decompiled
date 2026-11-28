@@ -76,7 +76,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
           }
           var7 = param3;
           en.a(var7, 18423);
-          IterableNodeHashTable.field_d = rh.createAccountSuggestionsResult(param0 + 21734, param3);
+          IterableNodeHashTable.field_d = StandardContentDialog.createAccountSuggestionsResult(param0 + 21734, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

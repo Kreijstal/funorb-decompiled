@@ -35,7 +35,7 @@ final class td {
           if (param0 >= -82) {
             field_d = -92;
           }
-          if (ck.field_db) {
+          if (ProgressMessageDialog.field_db) {
             stackIn_12_0 = 3;
             return stackIn_12_0;
           }

@@ -257,7 +257,7 @@ final class i {
           }
           var9 = (VorbisSample) (this.field_f.get(true, var6));
           if (var9 == null) {
-            var9 = VorbisSample.a(this.field_b, param1, param0);
+            var9 = VorbisSample.load(this.field_b, param1, param0);
             if (var9 == null) {
               return null;
             }

@@ -175,7 +175,7 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
             PlatformService platformServiceLocal1 = (PlatformService) null;
             this.exitFullscreen((PlatformService) null, 55);
           }
-          UiComponentPart033.exitFullscreen(true, this.frameState0003, platformServiceArgument1);
+          AccountCreationResultPanel.exitFullscreen(true, this.frameState0003, platformServiceArgument1);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ql.F(" + (platformServiceArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ')');
         }

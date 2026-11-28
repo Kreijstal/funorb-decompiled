@@ -306,7 +306,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           } else {
             this.field_a.drawParagraph(this.b(param6, -2), this.a(param3, 14525, param1, param6), this.a(param6, -34, param2, param4), var9_int, var10, param7, param0, this.field_p, this.field_k, this.field_s);
           }
-          ib.b(false);
+          StripedProgressWidget.b(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -476,7 +476,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
             TunnelMesh.pushAndIntersectRasterClip(param1.field_q + param0, param1.field_F + param1.field_q + param0, param1.field_z + param1.field_m + param2, param2 + param1.field_m, 14907);
             KeyboardInput.field_d.a(var10, var11, var12, var10, (byte) -62, this.field_m);
-            ib.b(false);
+            StripedProgressWidget.b(false);
           }
           if (param3 > -19) {
             var13 = (UiWidget) null;
@@ -584,7 +584,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
               var15 = stackIn_20_0;
               KeyboardInput.field_d.a(this.a(param0, param2 ^ 14525, var14, param1), var13.field_d + (param1.field_y + this.field_b) + param4 + param1.field_m, this.field_g >>> 24, 126, -var14 + var15, var13.field_a, this.field_g);
             }
-            ib.b(false);
+            StripedProgressWidget.b(false);
             return;
           }
           return;

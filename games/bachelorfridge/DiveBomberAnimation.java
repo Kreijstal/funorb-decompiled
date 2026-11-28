@@ -31,7 +31,7 @@ final class DiveBomberAnimation extends EventAnimation {
               da.a(0, 0, -110, param0[var3]);
             }
           }
-          hga.field_U.a((byte) 119);
+          ProgressDialog.field_U.a((byte) 119);
           stackIn_8_0 = var2;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -169,11 +169,11 @@ final class DiveBomberAnimation extends EventAnimation {
         if (!fi.field_n.tryLoadGroupByName("commonui", 20637)) {
           return jh.field_m + " - " + fi.field_n.getGroupLoadPercentByName(0, "commonui") + "%";
         }
-        if (!em.field_T.ensureIndexLoaded(0)) {
+        if (!FullscreenStatusDialog.field_T.ensureIndexLoaded(0)) {
           return AirstrikeSpecial.field_p;
         }
-        if (!em.field_T.tryLoadAllGroups((byte) 110)) {
-          return SetFriendlyEffect.field_i + " - " + em.field_T.getLoadPercent(true) + "%";
+        if (!FullscreenStatusDialog.field_T.tryLoadAllGroups((byte) 110)) {
+          return SetFriendlyEffect.field_i + " - " + FullscreenStatusDialog.field_T.getLoadPercent(true) + "%";
         }
         return fo.field_b;
     }

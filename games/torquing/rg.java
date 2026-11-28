@@ -655,7 +655,7 @@ final class rg extends am {
           var44 = 0;
           var13Lifetime1 = var44;
           while (var44 < ui.field_k) {
-            var14Lifetime1 = mn.field_bb[var44];
+            var14Lifetime1 = ProgressMessageDialog.field_bb[var44];
             var15Lifetime1 = param2.field_G[var14Lifetime1];
             var16 = param2.field_r[var14Lifetime1];
             var17 = param2.field_I[var14Lifetime1];

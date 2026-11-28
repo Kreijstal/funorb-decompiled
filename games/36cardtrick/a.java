@@ -554,7 +554,7 @@ final class a extends ch {
         if (param0 <= 28) {
           field_n = (sg) null;
         }
-        vb.field_h.c(new tj(), (byte) 35);
+        vb.field_h.replaceContent(new GuestPlayConfirmationForm(), (byte) 35);
     }
 
     final static void a(int param0, String param1, int param2, int param3, int param4, int param5) {

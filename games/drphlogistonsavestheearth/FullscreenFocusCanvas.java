@@ -660,7 +660,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           var2Lifetime117 = NodeHashTableIterator.a("INSTRUCTIONS_FIRE", param1 - 130);
           if (null != var2Lifetime117) {
-            hd.field_O = mj.a((byte) 80, var2Lifetime117);
+            StripedProgressWidget.field_O = mj.a((byte) 80, var2Lifetime117);
           }
           var2Lifetime118 = NodeHashTableIterator.a("INSTRUCTIONS_SELECT_WEAPON", 126);
           if (null != var2Lifetime118) {

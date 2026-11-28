@@ -11,14 +11,14 @@ final class od extends f {
         int var4_int = 0;
         Sprite var4 = null;
         int var5 = MonkeyPuzzle2.field_F ? 1 : 0;
-        int var1 = ra.field_ab[0] * da.field_c[0];
+        int var1 = StandardContentDialog.field_ab[0] * da.field_c[0];
         byte[] var2 = cb.field_b[0];
         int[] var3 = new int[var1];
         if (param0 >= 55) {
           for (var4_int = 0; var1 > var4_int; var4_int++) {
             var3[var4_int] = fk.field_d[BufferedRandomAccessFile.a(255, (int) var2[var4_int])];
           }
-          var4 = new Sprite(nj.field_d, qk.field_a, ValidatedTextField.field_P[0], mb.field_b[0], da.field_c[0], ra.field_ab[0], var3);
+          var4 = new Sprite(nj.field_d, qk.field_a, ValidatedTextField.field_P[0], mb.field_b[0], da.field_c[0], StandardContentDialog.field_ab[0], var3);
           gb.a(-112);
           return var4;
         }

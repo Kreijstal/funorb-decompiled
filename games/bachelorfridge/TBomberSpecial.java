@@ -38,7 +38,7 @@ final class TBomberSpecial extends SpecialOrder {
     }
 
     final static void a(int param0, int param1) {
-        BitPacketBuffer var2 = sja.field_fb;
+        BitPacketBuffer var2 = StandardContentDialog.field_fb;
         var2.writeCipheredByte(param1, (byte) 125);
         var2.writeByte(1, 0);
         if (param0 > 19) {

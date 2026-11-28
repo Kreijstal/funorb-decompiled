@@ -187,7 +187,7 @@ final class lr extends InteractiveWidget {
           var13.drawAdditive(var5 - (var13.field_y >> 1), var6 - (var13.field_t >> 1), 256);
           return;
         }
-        if (qm.field_G != var8) {
+        if (GuestPlayConfirmationForm.field_G != var8) {
           return;
         }
         Sprite var12 = jn.field_b[1];

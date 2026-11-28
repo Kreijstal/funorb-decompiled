@@ -79,7 +79,7 @@ final class GameDomainSupport004 {
           if (asyncTaskLocal14.integerState0510 != 2) {
             return frameLocal11;
           }
-          UiComponentPart033.exitFullscreen(true, frameLocal11, platformServiceArgument2);
+          AccountCreationResultPanel.exitFullscreen(true, frameLocal11, platformServiceArgument2);
           stackObjectLocal3 = null;
           return (java.awt.Frame) (stackObjectLocal3);
         } catch (java.lang.RuntimeException caughtParameterLocal15) {
@@ -126,7 +126,7 @@ final class GameDomainSupport004 {
           resourceArchiveArgument3.booleanState0088 = false;
           resourceArchiveArgument3.integerState0350 = 0;
           ReturnedShapeCache.mixedSupport032State0001 = new MixedSupport032(integerLocal8, resourceArchiveArgument3, resourceArchiveArgument3);
-          UiComponentPart033.networkSupport012State0001 = new NetworkSupport012(integerLocal8, resourceArchiveArgument3, resourceArchiveArgument3, new MixedSupport045());
+          AccountCreationResultPanel.networkSupport012State0001 = new NetworkSupport012(integerLocal8, resourceArchiveArgument3, resourceArchiveArgument3, new MixedSupport045());
           mixedSupport003Local10 = NanoFrameTimer.computeMixedSupport0030383((byte) 124);
           if (mixedSupport003Local10 == null) {
             throwableLocal15 = (Throwable) null;

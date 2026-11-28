@@ -4,7 +4,7 @@
 final class ve {
     private int field_c;
     private int field_a;
-    static lf field_f;
+    static ProgressDialog field_f;
     static String field_g;
     private int[] field_e;
     static boolean field_d;

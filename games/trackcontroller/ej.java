@@ -8,7 +8,7 @@ final class ej implements Runnable {
     static String[] field_f;
     private java.net.URL field_l;
     private PlatformTask field_h;
-    static mk field_e;
+    static FullscreenNoticeType field_e;
     private PlatformTask field_i;
     static String field_b;
     private PlatformTaskDispatcher field_c;
@@ -168,7 +168,7 @@ final class ej implements Runnable {
         int var3;
         var3 = TrackController.field_F ? 1 : 0;
         ob.field_u = null;
-        w.field_V = null;
+        FullscreenStatusDialog.field_V = null;
         rf.field_c = 0;
         var2 = IterableNodeHashTable.field_e;
         IterableNodeHashTable.field_e = DraggableWidgetContainer.field_T;
@@ -348,7 +348,7 @@ final class ej implements Runnable {
         field_f = null;
         field_d = null;
         if (param0 != 17) {
-          field_e = (mk) null;
+          field_e = (FullscreenNoticeType) null;
           field_e = null;
           return;
         }
@@ -368,7 +368,7 @@ final class ej implements Runnable {
     static {
         field_f = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
         field_b = "Use the arrow keys or mouse to move.";
-        field_e = new mk();
+        field_e = new FullscreenNoticeType();
     }
 
     @SuppressWarnings("unchecked")

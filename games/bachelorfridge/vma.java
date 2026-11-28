@@ -194,7 +194,7 @@ final class vma extends pv {
           InsanoSauceSpecial.c(false);
           gja.field_m.closeAllDialogs((byte) -66);
           FridgeScreen.field_e = new LoginPanel(IncomingSpecial.field_p, (String) null, gfa.field_i, param2, param1);
-          kka.field_l = new sja(gja.field_m, FridgeScreen.field_e);
+          kka.field_l = new StandardContentDialog(gja.field_m, FridgeScreen.field_e);
           gja.field_m.showDialog((UiWidget) (kka.field_l), (byte) 63);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "vma.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -221,7 +221,7 @@ final class vma extends pv {
           InsanoSauceSpecial.c(false);
           gja.field_m.closeAllDialogs((byte) -66);
           FridgeScreen.field_e = new LoginPanel(IncomingSpecial.field_p, (String) null, gfa.field_i, param2, param1);
-          kka.field_l = new sja(gja.field_m, FridgeScreen.field_e);
+          kka.field_l = new StandardContentDialog(gja.field_m, FridgeScreen.field_e);
           gja.field_m.showDialog((UiWidget) (kka.field_l), (byte) 63);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "vma.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

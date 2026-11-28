@@ -3,7 +3,7 @@
  */
 final class ModalDialogHost extends WidgetWrapper {
     private IntrusiveDeque field_J;
-    static ll field_I;
+    static FullscreenNoticeType field_I;
     static String[] field_M;
     static int[] field_P;
     static java.security.SecureRandom field_O;
@@ -156,7 +156,7 @@ final class ModalDialogHost extends WidgetWrapper {
     }
 
     static {
-        field_I = new ll();
+        field_I = new FullscreenNoticeType();
         field_M = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
         field_H = "To report a player, right-click on their name and select the option to report abuse.";
         field_N = 0;

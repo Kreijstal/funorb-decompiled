@@ -3,7 +3,7 @@
  */
 final class l {
     static PlatformTaskDispatcher field_b;
-    static rf field_d;
+    static StandardContentDialog field_d;
     static String field_c;
     static ResourceArchive field_a;
 

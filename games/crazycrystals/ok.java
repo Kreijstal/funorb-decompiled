@@ -73,7 +73,7 @@ final class ok implements WidgetRenderer {
           go.a(-21587);
           if (0 < param0.field_s &&
             null != param0.field_o) {
-            ck.n(48);
+            StandardContentDialog.n(48);
           }
           pi.field_o = 0;
           var9 = 0;

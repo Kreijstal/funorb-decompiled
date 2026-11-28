@@ -28,7 +28,7 @@ final class ModalDialogHost extends SingleChildWidgetContainer {
           if (null != kf.field_d &&
             kf.field_d.field_b) {
             ng.a((byte) 81);
-            BufferedSocket.field_a.showDialog(param0 ^ 23, new bh(BufferedSocket.field_a, ConfirmedEmailAvailabilityValidator.field_k));
+            BufferedSocket.field_a.showDialog(param0 ^ 23, new FullscreenStatusDialog(BufferedSocket.field_a, ConfirmedEmailAvailabilityValidator.field_k));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -222,7 +222,7 @@ final class ModalDialogHost extends SingleChildWidgetContainer {
               return stackIn_19_0;
             }
             var6 = var4[var5];
-            var7 = rg.a(var6, true);
+            var7 = ProgressMessageDialog.a(var6, true);
             if (var7 == null) {
               var5++;
               continue;

@@ -102,8 +102,8 @@ final class ii extends TextureOperator {
           if (!this.field_x.field_i) {
             return var15;
           }
-          for (var4 = 0; we.field_M > var4; var4++) {
-            var5 = (rh.field_O[var4] << 12) / this.field_y + this.field_F;
+          for (var4 = 0; StripedProgressWidget.field_M > var4; var4++) {
+            var5 = (DialogMessagePane.field_O[var4] << 12) / this.field_y + this.field_F;
             var6 = (lf.field_y[param0] << 12) / this.field_y + this.field_B;
             var7 = var5;
             var8 = var6;
@@ -140,8 +140,8 @@ final class ii extends TextureOperator {
         if (!this.field_x.field_i) {
           return var15Lifetime1;
         }
-        for (var4Lifetime1 = 0; we.field_M > var4Lifetime1; var4Lifetime1++) {
-          var5Lifetime1 = (rh.field_O[var4Lifetime1] << 12) / this.field_y + this.field_F;
+        for (var4Lifetime1 = 0; StripedProgressWidget.field_M > var4Lifetime1; var4Lifetime1++) {
+          var5Lifetime1 = (DialogMessagePane.field_O[var4Lifetime1] << 12) / this.field_y + this.field_F;
           var6Lifetime1 = (lf.field_y[param0] << 12) / this.field_y + this.field_B;
           var7Lifetime1 = var5Lifetime1;
           var8Lifetime1 = var6Lifetime1;
@@ -185,7 +185,7 @@ final class ii extends TextureOperator {
         if (param0 == -90) {
           qf.field_b = 0;
           gl.field_o = false;
-          rl.field_db = -1;
+          ContentTransitionDialog.field_db = -1;
           as.field_a = null;
           hn.field_n = -1;
           return;
@@ -193,7 +193,7 @@ final class ii extends TextureOperator {
         ii.b((byte) 1);
         qf.field_b = 0;
         gl.field_o = false;
-        rl.field_db = -1;
+        ContentTransitionDialog.field_db = -1;
         as.field_a = null;
         hn.field_n = -1;
     }

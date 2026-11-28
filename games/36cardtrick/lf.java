@@ -63,14 +63,14 @@ final class lf {
             }
             var7 = null;
             if (ni.field_c != null) {
-              if (rk.field_Z == null) {
-                rk.field_Z = new BufferedRandomAccessFile[bi.field_b.field_o.length];
+              if (ProgressDialog.field_Z == null) {
+                ProgressDialog.field_Z = new BufferedRandomAccessFile[bi.field_b.field_o.length];
               }
-              if (rk.field_Z[param3] == null) {
-                rk.field_Z[param3] = new BufferedRandomAccessFile(bi.field_b.field_o[param3], 12000, 0);
+              if (ProgressDialog.field_Z[param3] == null) {
+                ProgressDialog.field_Z[param3] = new BufferedRandomAccessFile(bi.field_b.field_o[param3], 12000, 0);
                 bi.field_b.field_o[param3] = null;
               }
-              var7 = new SectorCacheStore(param3, ni.field_c, rk.field_Z[param3], 2097152);
+              var7 = new SectorCacheStore(param3, ni.field_c, ProgressDialog.field_Z[param3], 2097152);
             }
             var8 = ja.field_b.a(param3, 72, param5, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
             if (param1) {

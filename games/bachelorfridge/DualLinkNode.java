@@ -90,7 +90,7 @@ class DualLinkNode extends IntrusiveNode {
         DualLinkNode var1Lifetime1;
         try {
           bda.field_l = 0;
-          sja.field_gb = null;
+          StandardContentDialog.field_gb = null;
           SuperSpeedAnimation.field_v = 0;
           es.field_j.clear(71);
           HazmatAnimation.field_v.clear(59);

@@ -1,0 +1,250 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class ContentTransitionDialog extends ResizableModalDialog {
+    private AlphaWidgetContainer field_Y;
+    static MouseWheelSource field_eb;
+    private int field_ab;
+    private int field_W;
+    private int field_db;
+    private og field_Z;
+    private UiWidget field_X;
+    private int field_bb;
+    static String field_V;
+    private int field_cb;
+
+    void replaceContent(int param0, UiWidget param1) {
+        RuntimeException var3 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          this.field_X = param1;
+          if (param0 != 20317) {
+            return;
+          }
+          if (this.field_Z == sk.field_c) {
+            this.resizeDialog(12 + this.field_X.field_i, this.field_db + 12 + this.field_X.field_f, (byte) 120, this.field_cb);
+            this.field_ab = 0;
+            return;
+          }
+          if (this.field_Z == na.field_e) {
+            return;
+          }
+          this.field_ab = 0;
+          this.field_Z = na.field_e;
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_10_0 = var3;
+          stackIn_10_1 = new StringBuilder().append("qj.GA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+        }
+    }
+
+    final boolean snapDialogAnimation(int param0) {
+        if (param0 < -121) {
+          this.finishResize(-128);
+          return super.snapDialogAnimation(-125);
+        }
+        this.snapDialogAnimation(-95);
+        this.finishResize(-128);
+        return super.snapDialogAnimation(-125);
+    }
+
+    boolean handleKey(UiWidget param0, char param1, byte param2, int param3) {
+        RuntimeException var5 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (super.handleKey(param0, param1, param2, param3)) {
+            return true;
+          }
+          if (null == this.field_Y) {
+            return false;
+          }
+          if (param3 == 98) {
+            this.field_Y.takeFocus(0, param0);
+          }
+          if (param3 == 99) {
+            this.field_Y.takeFocus(0, param0);
+          }
+          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_14_0 = var5;
+          stackIn_14_1 = new StringBuilder().append("qj.EA(");
+          if (param0 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    ContentTransitionDialog(ModalDialogHost param0, UiWidget param1, int param2, int param3, int param4) {
+        super(param0, 12 + param1.field_i, param2 + (12 + param1.field_f));
+        try {
+          this.field_db = param2;
+          this.field_bb = param3;
+          this.field_W = param3;
+          this.field_cb = param4;
+          this.installContent(6, param1);
+        } catch (RuntimeException runtimeException) {
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "qj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+    }
+
+    final void resizeCompleted(int param0) {
+        if (na.field_e == this.field_Z) {
+          return;
+        }
+        this.field_ab = 0;
+        this.field_Z = w.field_w;
+        if (param0 <= -74) {
+          this.installContent(6, this.field_X);
+          this.field_X = null;
+          this.field_Y.field_w = 0;
+          return;
+        }
+        this.field_X = (UiWidget) null;
+        this.installContent(6, this.field_X);
+        this.field_X = null;
+        this.field_Y.field_w = 0;
+    }
+
+    private final void installContent(int param0, UiWidget param1) {
+        try {
+          if (this.field_Y != null) {
+            this.field_Y.unlink(4);
+          }
+          if (param1 == null) {
+            this.field_Y = new AlphaWidgetContainer();
+          } else {
+            param1.setBounds(6, param1.field_i, (byte) 125, param1.field_f, this.field_db + 6);
+            this.field_Y = new AlphaWidgetContainer(param1);
+          }
+          if (param0 != 6) {
+            this.finishResize(-25);
+          }
+          this.addChild(true, this.field_Y);
+          this.field_X = null;
+        } catch (RuntimeException runtimeException) {
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "qj.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    boolean advanceDialogAnimation(byte param0) {
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int var3 = StarCannon.field_A;
+        if (null == this.field_Z) {
+          if (param0 == -124) {
+            return super.advanceDialogAnimation((byte) -124);
+          }
+          ContentTransitionDialog.clearStaticReferences(-17);
+          return super.advanceDialogAnimation((byte) -124);
+        }
+        if (na.field_e == this.field_Z) {
+          fieldTemp$0 = this.field_ab + 1;
+          this.field_ab = this.field_ab + 1;
+          if (fieldTemp$0 != this.field_W) {
+            this.field_Y.field_w = -((this.field_ab << 8) / this.field_W) + 256;
+            if (param0 != -124) {
+              ContentTransitionDialog.clearStaticReferences(-17);
+              return super.advanceDialogAnimation((byte) -124);
+            }
+            return super.advanceDialogAnimation((byte) -124);
+          }
+          this.field_Z = sk.field_c;
+          this.resizeDialog(this.field_X.field_i + 12, this.field_X.field_f + this.field_db + 12, (byte) 120, this.field_cb);
+          this.field_Y.field_w = 0;
+          this.field_ab = 0;
+          if (param0 == -124) {
+            return super.advanceDialogAnimation((byte) -124);
+          }
+          ContentTransitionDialog.clearStaticReferences(-17);
+          return super.advanceDialogAnimation((byte) -124);
+        }
+        if (this.field_Z == w.field_w) {
+          fieldTemp$1 = this.field_ab + 1;
+          this.field_ab = this.field_ab + 1;
+          if (fieldTemp$1 != this.field_bb) {
+            this.field_Y.field_w = (this.field_ab << 8) / this.field_bb;
+            if (param0 == -124) {
+              return super.advanceDialogAnimation((byte) -124);
+            }
+            ContentTransitionDialog.clearStaticReferences(-17);
+            return super.advanceDialogAnimation((byte) -124);
+          }
+          this.field_Z = null;
+          this.field_Y.field_w = 256;
+          if (param0 == -124) {
+            return super.advanceDialogAnimation((byte) -124);
+          }
+          ContentTransitionDialog.clearStaticReferences(-17);
+          return super.advanceDialogAnimation((byte) -124);
+        }
+        if (param0 == -124) {
+          return super.advanceDialogAnimation((byte) -124);
+        }
+        ContentTransitionDialog.clearStaticReferences(-17);
+        return super.advanceDialogAnimation((byte) -124);
+    }
+
+    final void finishResize(int param0) {
+        if (null == this.field_Z) {
+          super.finishResize(-119);
+          if (param0 > -104) {
+            this.snapDialogAnimation(123);
+            return;
+          }
+          return;
+        }
+        if (w.field_w != this.field_Z) {
+          this.setCenteredSize(12 + this.field_X.field_i, (byte) 57, this.field_X.field_f + (this.field_db + 12));
+          this.installContent(6, this.field_X);
+        } else {
+          this.field_Y.field_w = 256;
+          this.field_Z = null;
+          super.finishResize(-119);
+          if (param0 > -104) {
+            this.snapDialogAnimation(123);
+            return;
+          }
+          return;
+        }
+        this.field_Y.field_w = 256;
+        this.field_Z = null;
+        super.finishResize(-119);
+        if (param0 <= -104) {
+          return;
+        }
+        this.snapDialogAnimation(123);
+    }
+
+    public static void clearStaticReferences(int param0) {
+        field_V = null;
+        if (param0 > -77) {
+          field_V = (String) null;
+          field_eb = null;
+          return;
+        }
+        field_eb = null;
+    }
+
+    static {
+        field_V = "Create a free Account";
+    }
+}

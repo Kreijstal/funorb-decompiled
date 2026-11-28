@@ -23,7 +23,7 @@ final class pf {
           if (param1 != -6) {
             pf.a((byte) 9, 16);
           }
-          stackIn_6_0 = i.a(false, param2.getFile(param0, false, param4));
+          stackIn_6_0 = FullscreenNoticeType.a(false, param2.getFile(param0, false, param4));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

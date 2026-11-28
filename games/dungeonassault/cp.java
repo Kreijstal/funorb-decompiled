@@ -121,7 +121,7 @@ final class cp extends gd {
           var14 = var14 + (la.field_b.field_H + 2);
           if (var8 == 0) {
             if (var9 == 0) {
-              la.field_b.drawString(jk.a(new String[]{Integer.toString(var5 / 10)}, n.field_a, 30496), 52, var14, 12632256, -1);
+              la.field_b.drawString(StandardContentDialog.a(new String[]{Integer.toString(var5 / 10)}, n.field_a, 30496), 52, var14, 12632256, -1);
             } else {
               la.field_b.drawString(MatchingFieldValidator.field_q, 52, var14, 16711680, -1);
             }
@@ -134,15 +134,15 @@ final class cp extends gd {
           SoftwareRasterizer.clearRaster();
           var11.drawSilhouette(0, 0, 16744448);
           al.a(52, var14, false, this.field_S, 16744448);
-          rp.a(8, 40, (byte) 108, 2, 40, kc.field_S, var15Lifetime1);
+          rp.a(8, 40, (byte) 108, 2, 40, DialogMessagePane.field_S, var15Lifetime1);
           var13.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
           var11.drawSilhouette(0, 0, 12690143);
           al.a(52, var14, false, this.field_S, 10449103);
-          rp.a(8, 40, (byte) 108, 2, 40, kc.field_S, var15Lifetime1);
+          rp.a(8, 40, (byte) 108, 2, 40, DialogMessagePane.field_S, var15Lifetime1);
           var11.bindAsRenderTarget();
           al.a(52, var14, false, this.field_S, 12632256);
-          rp.a(8, 40, (byte) 108, 2, 40, kc.field_S, var15Lifetime1);
+          rp.a(8, 40, (byte) 108, 2, 40, DialogMessagePane.field_S, var15Lifetime1);
           jh.b();
           var16 = rb.a(16, var12, 255, (byte) -95);
           var17 = rb.a(16, var12, 16711680, (byte) -75);
@@ -191,7 +191,7 @@ final class cp extends gd {
           if (var6 == null) {
             wo.field_g = 2;
           } else {
-            if (!sj.a((CharSequence) ((Object) var6), 10)) {
+            if (!ResizableModalDialog.a((CharSequence) ((Object) var6), 10)) {
               wo.field_g = 2;
             } else {
               wo.field_g = ri.a((byte) 87, (CharSequence) ((Object) var6));
@@ -254,10 +254,10 @@ final class cp extends gd {
         var2 = DungeonAssault.field_K;
         try {
           if (!fm.a((byte) -123)) {
-            if (cm.field_R != null &&
-              cm.field_R.focusLost) {
+            if (RegistrationAgreementPane.field_R != null &&
+              RegistrationAgreementPane.field_R.focusLost) {
               ib.a(930);
-              na.field_D.showDialog(new nm(na.field_D, of.field_g), -1);
+              na.field_D.showDialog(new FullscreenStatusDialog(na.field_D, of.field_g), -1);
             }
             return;
           }

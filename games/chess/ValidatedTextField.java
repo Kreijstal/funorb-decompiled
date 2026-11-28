@@ -15,7 +15,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         if (null == this.field_j) {
           return null;
         }
-        sb.d(33, rf.field_b, -this.field_bb + this.field_y + BufferedSocket.field_k);
+        StandardContentDialog.d(33, rf.field_b, -this.field_bb + this.field_y + BufferedSocket.field_k);
         if (param0 == 0) {
           return this.field_j;
         }

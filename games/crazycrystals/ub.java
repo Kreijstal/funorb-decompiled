@@ -11,7 +11,7 @@ final class ub extends RuntimeException {
         if (param0 != 255) {
           return -99;
         }
-        return ri.field_a - bf.field_c;
+        return ri.field_a - FullscreenNoticeType.field_c;
     }
 
     public static void clearStaticReferences(boolean param0) {

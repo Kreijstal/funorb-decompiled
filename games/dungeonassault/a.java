@@ -9,7 +9,7 @@ final class a extends IntrusiveNode {
     static String field_l;
     static int field_i;
     int field_j;
-    static nk field_n;
+    static ProgressMessageDialog field_n;
 
     public static void clearDeclaredStaticReferences(int param0) {
         field_l = null;

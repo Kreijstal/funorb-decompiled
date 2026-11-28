@@ -30,7 +30,7 @@ final class MixedSupport021 {
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         DualNode dualNodeLocal3;
         try {
-          UiComponentPart018.integerState0502 = 0;
+          RegistrationAgreementPane.integerState0502 = 0;
           MixedSupport033.stringState0159 = null;
           MixedSupport029.integerState0182 = 0;
           RichTextWidget.nodeDequeState0027.clear(111);

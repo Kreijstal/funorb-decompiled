@@ -132,7 +132,7 @@ final class we {
             var8 = param2[var5_int] << var6 & 255 | (255 & param2[var5_int + 1]) >>> 8 - var6;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_h[this.field_b] = (byte)vf.b((int) this.field_h[this.field_b], var8 >>> var7);
+              this.field_h[this.field_b] = (byte)DialogMessagePane.b((int) this.field_h[this.field_b], var8 >>> var7);
               this.field_k = this.field_k + (-var7 + 8);
               this.field_b = this.field_b + 1;
               if (this.field_k == 512) {
@@ -152,7 +152,7 @@ final class we {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = 255 & param2[var5_int] << var6;
-            this.field_h[this.field_b] = (byte)vf.b((int) this.field_h[this.field_b], var8Lifetime1 >>> var7);
+            this.field_h[this.field_b] = (byte)DialogMessagePane.b((int) this.field_h[this.field_b], var8Lifetime1 >>> var7);
           }
           if (param0 + (long)var7 < 8L) {
             this.field_k = (int)((long)this.field_k + param0);
@@ -185,9 +185,9 @@ final class we {
 
     final static void a(boolean param0, int param1, String param2) {
         try {
-          ck.field_db = true;
+          ProgressMessageDialog.field_db = true;
           ak.field_a = param0 ? true : false;
-          ModalDialogHost.field_G = new ck(IsaacRandom.field_d, DualLinkDequeIterator.field_c, param2, gk.field_a, ak.field_a);
+          ModalDialogHost.field_G = new ProgressMessageDialog(IsaacRandom.field_d, DualLinkDequeIterator.field_c, param2, gk.field_a, ak.field_a);
           if (param1 != 12757) {
             field_e = (String) null;
           }
@@ -229,7 +229,7 @@ final class we {
         int var8 = 0;
         var8 = stellarshard.field_B;
         try {
-          this.field_h[this.field_b] = (byte)vf.b((int) this.field_h[this.field_b], 128 >>> DirectByteStorage.a(7, this.field_k));
+          this.field_h[this.field_b] = (byte)DialogMessagePane.b((int) this.field_h[this.field_b], 128 >>> DirectByteStorage.a(7, this.field_k));
           this.field_b = this.field_b + 1;
           if (this.field_b > 32) {
             while (64 > this.field_b) {
@@ -295,7 +295,7 @@ final class we {
             return (BinaryBitmapFont) (stackIn_2_0);
           }
           var2 = new BinaryBitmapFont(param0, ak.field_c, RasterBuffer.field_c, vc.field_b, ih.field_d, ih.field_b);
-          tb.f((byte) -128);
+          ResizableModalDialog.f((byte) -128);
           if (param1 != 1) {
             we.a((byte) 22);
           }

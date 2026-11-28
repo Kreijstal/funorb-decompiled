@@ -17,10 +17,10 @@ final class ak {
     final static void a(boolean param0, String param1, String param2) {
         try {
           if (null != AccountServiceResult.field_d) {
-            AccountServiceResult.field_d.g((byte) -122);
+            AccountServiceResult.field_d.closeDialog((byte) -122);
           }
           ib.field_e = new LoginPanel(param2, param1, param0, true, true);
-          ke.field_s.b(ib.field_e, (byte) 110);
+          ke.field_s.replaceContent(ib.field_e, (byte) 110);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "ak.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

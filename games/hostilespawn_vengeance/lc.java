@@ -110,7 +110,7 @@ final class lc {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          c.field_a = ta.a(false, "");
+          c.field_a = StandardContentDialog.a(false, "");
           c.field_a.a(param3 ^ 21648, false);
           ProxyAuthenticationRequiredException.a(0, param4, param1, param2);
           qm.a(false);

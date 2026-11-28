@@ -232,7 +232,7 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
             }
           }
         }
-        ae.field_F = 2147483647;
+        GuestPlayConfirmationForm.field_F = 2147483647;
         SecondaryNodeDeque.field_c = 0;
         em.field_i = -2147483648;
         uo.field_m = -2147483648;

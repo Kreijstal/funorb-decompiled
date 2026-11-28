@@ -182,12 +182,12 @@ final class nl extends am {
           var3[var4_int] = cq.field_y[ie.a(255, (int) var2[var4_int])];
         }
         if (param0 == -8791) {
-          var4 = new Sprite(fm.field_E, rh.field_d, PacketBuffer.field_o[0], LabeledWidgetContainer.field_G[0], vo.field_b[0], PasswordValidator.field_o[0], var3);
+          var4 = new Sprite(GuestPlayConfirmationForm.field_E, rh.field_d, PacketBuffer.field_o[0], LabeledWidgetContainer.field_G[0], vo.field_b[0], PasswordValidator.field_o[0], var3);
           go.b(0);
           return var4;
         }
         field_y = (boolean[]) null;
-        var4Lifetime1 = new Sprite(fm.field_E, rh.field_d, PacketBuffer.field_o[0], LabeledWidgetContainer.field_G[0], vo.field_b[0], PasswordValidator.field_o[0], var3);
+        var4Lifetime1 = new Sprite(GuestPlayConfirmationForm.field_E, rh.field_d, PacketBuffer.field_o[0], LabeledWidgetContainer.field_G[0], vo.field_b[0], PasswordValidator.field_o[0], var3);
         go.b(0);
         return var4Lifetime1;
     }

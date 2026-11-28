@@ -167,9 +167,9 @@ final class SectorCacheStore {
                 return null;
               }
               this.field_g.seek((long)(param0 * 6), (byte) -63);
-              this.field_g.readFully(0, ma.field_yb, 6, param1 - 105);
-              var4_int = (ma.field_yb[1] << 8 & 65280) + (((255 & ma.field_yb[0]) << 16) + (ma.field_yb[2] & 255));
-              var5 = (ma.field_yb[5] & 255) + ((ma.field_yb[4] & 255) << 8) + (ma.field_yb[param1] << 16 & 16711680);
+              this.field_g.readFully(0, ProgressMessageDialog.field_yb, 6, param1 - 105);
+              var4_int = (ProgressMessageDialog.field_yb[1] << 8 & 65280) + (((255 & ProgressMessageDialog.field_yb[0]) << 16) + (ProgressMessageDialog.field_yb[2] & 255));
+              var5 = (ProgressMessageDialog.field_yb[5] & 255) + ((ProgressMessageDialog.field_yb[4] & 255) << 8) + (ProgressMessageDialog.field_yb[param1] << 16 & 16711680);
               if (var4_int < 0) {
                 return null;
               }
@@ -197,21 +197,21 @@ final class SectorCacheStore {
                   if (510 < var9) {
                     var9 = 510;
                   }
-                  this.field_c.readFully(0, ma.field_yb, var14 + var9, -103);
-                  var13 = 255 & ma.field_yb[9];
-                  var10 = (ma.field_yb[3] & 255) + (ma.field_yb[0] << 24 & -16777216) + (16711680 & ma.field_yb[1] << 16) + ((255 & ma.field_yb[2]) << 8);
-                  var12 = ((255 & ma.field_yb[7]) << 8) + ((255 & ma.field_yb[6]) << 16) + (255 & ma.field_yb[8]);
-                  var11 = (65280 & ma.field_yb[4] << 8) + (ma.field_yb[5] & 255);
+                  this.field_c.readFully(0, ProgressMessageDialog.field_yb, var14 + var9, -103);
+                  var13 = 255 & ProgressMessageDialog.field_yb[9];
+                  var10 = (ProgressMessageDialog.field_yb[3] & 255) + (ProgressMessageDialog.field_yb[0] << 24 & -16777216) + (16711680 & ProgressMessageDialog.field_yb[1] << 16) + ((255 & ProgressMessageDialog.field_yb[2]) << 8);
+                  var12 = ((255 & ProgressMessageDialog.field_yb[7]) << 8) + ((255 & ProgressMessageDialog.field_yb[6]) << 16) + (255 & ProgressMessageDialog.field_yb[8]);
+                  var11 = (65280 & ProgressMessageDialog.field_yb[4] << 8) + (ProgressMessageDialog.field_yb[5] & 255);
                 } else {
                   var14 = 8;
                   if (var9 > 512) {
                     var9 = 512;
                   }
-                  this.field_c.readFully(0, ma.field_yb, var14 + var9, param1 - 114);
-                  var11 = (255 & ma.field_yb[3]) + ((255 & ma.field_yb[2]) << 8);
-                  var12 = (ma.field_yb[5] << 8 & 65280) + ((ma.field_yb[4] & 255) << 16) + (255 & ma.field_yb[6]);
-                  var13 = 255 & ma.field_yb[7];
-                  var10 = (ma.field_yb[1] & 255) + (65280 & ma.field_yb[0] << 8);
+                  this.field_c.readFully(0, ProgressMessageDialog.field_yb, var14 + var9, param1 - 114);
+                  var11 = (255 & ProgressMessageDialog.field_yb[3]) + ((255 & ProgressMessageDialog.field_yb[2]) << 8);
+                  var12 = (ProgressMessageDialog.field_yb[5] << 8 & 65280) + ((ProgressMessageDialog.field_yb[4] & 255) << 16) + (255 & ProgressMessageDialog.field_yb[6]);
+                  var13 = 255 & ProgressMessageDialog.field_yb[7];
+                  var10 = (ProgressMessageDialog.field_yb[1] & 255) + (65280 & ProgressMessageDialog.field_yb[0] << 8);
                 }
                 if (var10 != param0) {
                   return null;
@@ -233,7 +233,7 @@ final class SectorCacheStore {
                 for (var16 = var14; var16 < var15; var16++) {
                   incrementValue$2 = var7;
                   var7++;
-                  var6[incrementValue$2] = ma.field_yb[var16];
+                  var6[incrementValue$2] = ProgressMessageDialog.field_yb[var16];
                 }
                 var5 = var12;
                 var8++;
@@ -284,8 +284,8 @@ final class SectorCacheStore {
                     return false;
                   }
                   this.field_g.seek((long)(param0 * 6), (byte) -63);
-                  this.field_g.readFully(0, ma.field_yb, 6, -111);
-                  var7_int = ((255 & ma.field_yb[4]) << 8) + ((ma.field_yb[3] << 16 & 16711680) + (255 & ma.field_yb[5]));
+                  this.field_g.readFully(0, ProgressMessageDialog.field_yb, 6, -111);
+                  var7_int = ((255 & ProgressMessageDialog.field_yb[4]) << 8) + ((ProgressMessageDialog.field_yb[3] << 16 & 16711680) + (255 & ProgressMessageDialog.field_yb[5]));
                   if (var7_int <= 0 ||
                     !((long)var7_int <= (this.field_c.length(true) / 520L))) {
                     return false;
@@ -296,17 +296,17 @@ final class SectorCacheStore {
                     var7_int = 1;
                   }
                 }
-                ma.field_yb[4] = (byte)(var7_int >> 8);
-                ma.field_yb[5] = (byte)var7_int;
-                ma.field_yb[1] = (byte)(param4 >> 8);
-                ma.field_yb[0] = (byte)(param4 >> 16);
-                ma.field_yb[3] = (byte)(var7_int >> 16);
-                ma.field_yb[2] = (byte)param4;
+                ProgressMessageDialog.field_yb[4] = (byte)(var7_int >> 8);
+                ProgressMessageDialog.field_yb[5] = (byte)var7_int;
+                ProgressMessageDialog.field_yb[1] = (byte)(param4 >> 8);
+                ProgressMessageDialog.field_yb[0] = (byte)(param4 >> 16);
+                ProgressMessageDialog.field_yb[3] = (byte)(var7_int >> 16);
+                ProgressMessageDialog.field_yb[2] = (byte)param4;
                 this.field_g.seek((long)(6 * param0), (byte) -63);
                 if (param1 != -15) {
                   return true;
                 }
-                this.field_g.write(6, 0, 18017, ma.field_yb);
+                this.field_g.write(6, 0, 18017, ProgressMessageDialog.field_yb);
                 var8 = 0;
                 var9 = 0;
                 scanLoop1: while (true) {
@@ -317,7 +317,7 @@ final class SectorCacheStore {
                       this.field_c.seek((long)(520 * var7_int), (byte) -63);
                       if (param0 > 65535) {
                         try {
-                          this.field_c.readFully(0, ma.field_yb, 10, -122);
+                          this.field_c.readFully(0, ProgressMessageDialog.field_yb, 10, -122);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -327,13 +327,13 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector0 != 0) {
                           break scanLoop1;
                         }
-                        var10 = (16711680 & ma.field_yb[6] << 16) + ((ma.field_yb[7] & 255) << 8) + (255 & ma.field_yb[8]);
-                        var12 = (ma.field_yb[5] & 255) + (65280 & ma.field_yb[4] << 8);
-                        var13 = 255 & ma.field_yb[9];
-                        var11 = (ma.field_yb[3] & 255) + (ma.field_yb[2] << 8 & 65280) + (((255 & ma.field_yb[1]) << 16) + ((ma.field_yb[0] & 255) << 24));
+                        var10 = (16711680 & ProgressMessageDialog.field_yb[6] << 16) + ((ProgressMessageDialog.field_yb[7] & 255) << 8) + (255 & ProgressMessageDialog.field_yb[8]);
+                        var12 = (ProgressMessageDialog.field_yb[5] & 255) + (65280 & ProgressMessageDialog.field_yb[4] << 8);
+                        var13 = 255 & ProgressMessageDialog.field_yb[9];
+                        var11 = (ProgressMessageDialog.field_yb[3] & 255) + (ProgressMessageDialog.field_yb[2] << 8 & 65280) + (((255 & ProgressMessageDialog.field_yb[1]) << 16) + ((ProgressMessageDialog.field_yb[0] & 255) << 24));
                       } else {
                         try {
-                          this.field_c.readFully(0, ma.field_yb, 8, param1 ^ 109);
+                          this.field_c.readFully(0, ProgressMessageDialog.field_yb, 8, param1 ^ 109);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -343,10 +343,10 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector1 != 0) {
                           break scanLoop1;
                         }
-                        var10 = (ma.field_yb[6] & 255) + (((255 & ma.field_yb[4]) << 16) + ((ma.field_yb[5] & 255) << 8));
-                        var13 = 255 & ma.field_yb[7];
-                        var11 = (65280 & ma.field_yb[0] << 8) + (ma.field_yb[1] & 255);
-                        var12 = (255 & ma.field_yb[3]) + ((255 & ma.field_yb[2]) << 8);
+                        var10 = (ProgressMessageDialog.field_yb[6] & 255) + (((255 & ProgressMessageDialog.field_yb[4]) << 16) + ((ProgressMessageDialog.field_yb[5] & 255) << 8));
+                        var13 = 255 & ProgressMessageDialog.field_yb[7];
+                        var11 = (65280 & ProgressMessageDialog.field_yb[0] << 8) + (ProgressMessageDialog.field_yb[1] & 255);
+                        var12 = (255 & ProgressMessageDialog.field_yb[3]) + ((255 & ProgressMessageDialog.field_yb[2]) << 8);
                       }
                       if ((param0 == var11 &&
                         var12 == var9 &&
@@ -373,18 +373,18 @@ final class SectorCacheStore {
                       var10 = 0;
                     }
                     if (param0 > 65535) {
-                      ma.field_yb[4] = (byte)(var9 >> 8);
-                      ma.field_yb[0] = (byte)(param0 >> 24);
-                      ma.field_yb[9] = (byte)this.field_a;
-                      ma.field_yb[5] = (byte)var9;
-                      ma.field_yb[8] = (byte)var10;
-                      ma.field_yb[2] = (byte)(param0 >> 8);
-                      ma.field_yb[3] = (byte)param0;
-                      ma.field_yb[6] = (byte)(var10 >> 16);
-                      ma.field_yb[1] = (byte)(param0 >> 16);
-                      ma.field_yb[7] = (byte)(var10 >> 8);
+                      ProgressMessageDialog.field_yb[4] = (byte)(var9 >> 8);
+                      ProgressMessageDialog.field_yb[0] = (byte)(param0 >> 24);
+                      ProgressMessageDialog.field_yb[9] = (byte)this.field_a;
+                      ProgressMessageDialog.field_yb[5] = (byte)var9;
+                      ProgressMessageDialog.field_yb[8] = (byte)var10;
+                      ProgressMessageDialog.field_yb[2] = (byte)(param0 >> 8);
+                      ProgressMessageDialog.field_yb[3] = (byte)param0;
+                      ProgressMessageDialog.field_yb[6] = (byte)(var10 >> 16);
+                      ProgressMessageDialog.field_yb[1] = (byte)(param0 >> 16);
+                      ProgressMessageDialog.field_yb[7] = (byte)(var10 >> 8);
                       this.field_c.seek((long)(var7_int * 520), (byte) -63);
-                      this.field_c.write(10, 0, 18017, ma.field_yb);
+                      this.field_c.write(10, 0, 18017, ProgressMessageDialog.field_yb);
                       var11 = -var8 + param4;
                       if (var11 > 510) {
                         var11 = 510;
@@ -392,16 +392,16 @@ final class SectorCacheStore {
                       this.field_c.write(var11, var8, 18017, param2);
                       var8 = var8 + var11;
                     } else {
-                      ma.field_yb[1] = (byte)param0;
-                      ma.field_yb[0] = (byte)(param0 >> 8);
-                      ma.field_yb[2] = (byte)(var9 >> 8);
-                      ma.field_yb[6] = (byte)var10;
-                      ma.field_yb[4] = (byte)(var10 >> 16);
-                      ma.field_yb[5] = (byte)(var10 >> 8);
-                      ma.field_yb[7] = (byte)this.field_a;
-                      ma.field_yb[3] = (byte)var9;
+                      ProgressMessageDialog.field_yb[1] = (byte)param0;
+                      ProgressMessageDialog.field_yb[0] = (byte)(param0 >> 8);
+                      ProgressMessageDialog.field_yb[2] = (byte)(var9 >> 8);
+                      ProgressMessageDialog.field_yb[6] = (byte)var10;
+                      ProgressMessageDialog.field_yb[4] = (byte)(var10 >> 16);
+                      ProgressMessageDialog.field_yb[5] = (byte)(var10 >> 8);
+                      ProgressMessageDialog.field_yb[7] = (byte)this.field_a;
+                      ProgressMessageDialog.field_yb[3] = (byte)var9;
                       this.field_c.seek((long)(520 * var7_int), (byte) -63);
-                      this.field_c.write(8, 0, 18017, ma.field_yb);
+                      this.field_c.write(8, 0, 18017, ProgressMessageDialog.field_yb);
                       var11 = -var8 + param4;
                       if (var11 > 512) {
                         var11 = 512;

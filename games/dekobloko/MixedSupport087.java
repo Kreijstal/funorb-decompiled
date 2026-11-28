@@ -19,15 +19,15 @@ final class MixedSupport087 {
           }
           objectLocal1 = SceneWidgetNode.pcmPlayerState0002;
           synchronized (objectLocal1) {
-            if (null != UiComponentPart033.midiSynthesizerState0001) {
-              GameAssets.pcmStreamMixerState0004.removeOwnedListener(UiComponentPart033.midiSynthesizerState0001);
-              UiComponentPart033.midiSynthesizerState0001 = null;
+            if (null != AccountCreationResultPanel.midiSynthesizerState0001) {
+              GameAssets.pcmStreamMixerState0004.removeOwnedListener(AccountCreationResultPanel.midiSynthesizerState0001);
+              AccountCreationResultPanel.midiSynthesizerState0001 = null;
             }
             if (musicTrackArgument2 != null) {
-              UiComponentPart033.midiSynthesizerState0001 = new MidiSynthesizer(musicTrackArgument2);
-              UiComponentPart033.midiSynthesizerState0001.performAction0686(DefaultTextWidgetRenderer.integerState0011 * 50 / 128);
-              UiComponentPart033.midiSynthesizerState0001.performAction0692(integerArgument1);
-              GameAssets.pcmStreamMixerState0004.addListener(UiComponentPart033.midiSynthesizerState0001);
+              AccountCreationResultPanel.midiSynthesizerState0001 = new MidiSynthesizer(musicTrackArgument2);
+              AccountCreationResultPanel.midiSynthesizerState0001.performAction0686(DefaultTextWidgetRenderer.integerState0011 * 50 / 128);
+              AccountCreationResultPanel.midiSynthesizerState0001.performAction0692(integerArgument1);
+              GameAssets.pcmStreamMixerState0004.addListener(AccountCreationResultPanel.midiSynthesizerState0001);
             }
             SceneWidgetNode.pcmPlayerState0002.flushAndMarkDrainCheck();
             PcmPlayerService.musicTrackState0005 = musicTrackArgument2;

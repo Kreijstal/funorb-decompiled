@@ -35,11 +35,11 @@ final class ao {
                 cp.field_k[var5] = false;
                 var5++;
               }
-              bo.field_n = ud.field_Z;
+              bo.field_n = ContentTransitionDialog.field_Z;
             } else {
-              while (bo.field_n != ud.field_Z) {
-                var2 = pl.field_n[ud.field_Z];
-                ud.field_Z = 127 & ud.field_Z + 1;
+              while (bo.field_n != ContentTransitionDialog.field_Z) {
+                var2 = pl.field_n[ContentTransitionDialog.field_Z];
+                ContentTransitionDialog.field_Z = 127 & ContentTransitionDialog.field_Z + 1;
                 if (var2 < 0) {
                   cp.field_k[~var2] = false;
                   continue;

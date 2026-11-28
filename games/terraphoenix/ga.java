@@ -44,47 +44,47 @@ final class ga {
           int var1_int = 0;
           IOException var1 = null;
           PacketBuffer var2 = null;
-          if (4 <= jg.field_kb.field_i) {
-            if (jg.field_kb.field_l == -1) {
+          if (4 <= StandardContentDialog.field_kb.field_i) {
+            if (StandardContentDialog.field_kb.field_l == -1) {
               return 3;
             }
-            if (-2 != jg.field_kb.field_l) {
+            if (-2 != StandardContentDialog.field_kb.field_l) {
               return 1;
             }
             return 4;
           }
           try {
-            if (hm.field_N == 0) {
+            if (StripedProgressWidget.field_N == 0) {
               bj.field_c = mc.field_b.requestDirectSocket(lg.field_h, InteractiveWidget.field_B, (byte) 60);
-              hm.field_N = hm.field_N + 1;
+              StripedProgressWidget.field_N = StripedProgressWidget.field_N + 1;
             }
-            if (1 == hm.field_N) {
+            if (1 == StripedProgressWidget.field_N) {
               if (bj.field_c.status == 2) {
                 stackIn_14_0 = o.a(-1, (byte) -112);
                 return stackIn_14_0;
               }
               if (bj.field_c.status == 1) {
-                hm.field_N = hm.field_N + 1;
+                StripedProgressWidget.field_N = StripedProgressWidget.field_N + 1;
               }
             }
-            if (hm.field_N == 2) {
+            if (StripedProgressWidget.field_N == 2) {
               gi.field_l = new BufferedSocket((java.net.Socket) (bj.field_c.result), mc.field_b);
               var2 = new PacketBuffer(13);
               EditableTextField.a(ng.field_y, -25563, var2, AccountCreationResultPanel.field_wb, ai.field_c);
               var2.writeByte(15, -121);
               var2.writeInt(ArchiveRequest.field_v, 8959);
               gi.field_l.a(13, 0, (byte) -97, var2.payload);
-              hm.field_N = hm.field_N + 1;
+              StripedProgressWidget.field_N = StripedProgressWidget.field_N + 1;
               GzipDecompressor.field_b = 30000L + ll.correctedCurrentTimeMillis(1000);
             }
-            if (hm.field_N == 3) {
+            if (StripedProgressWidget.field_N == 3) {
               if (gi.field_l.available(0) > 0) {
                 var1_int = gi.field_l.b(0);
                 if (var1_int != 0) {
                   stackIn_30_0 = o.a(var1_int, (byte) -112);
                   return stackIn_30_0;
                 }
-                hm.field_N = hm.field_N + 1;
+                StripedProgressWidget.field_N = StripedProgressWidget.field_N + 1;
               } else {
                 if (GzipDecompressor.field_b < ll.correctedCurrentTimeMillis(1000)) {
                   stackIn_26_0 = o.a(-2, (byte) -127);
@@ -92,17 +92,17 @@ final class ga {
                 }
               }
             }
-            if (hm.field_N != 4) {
+            if (StripedProgressWidget.field_N != 4) {
               if (param0 > -104) {
                 field_l = (String) null;
               }
               stackIn_39_0 = -1;
               return stackIn_39_0;
             }
-            jg.field_kb.a(-1456343840, gi.field_l, dg.field_b);
+            StandardContentDialog.field_kb.a(-1456343840, gi.field_l, dg.field_b);
             bj.field_c = null;
             gi.field_l = null;
-            hm.field_N = 0;
+            StripedProgressWidget.field_N = 0;
             stackIn_35_0 = 0;
             return stackIn_35_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {

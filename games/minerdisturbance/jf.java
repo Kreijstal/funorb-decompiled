@@ -19,7 +19,7 @@ final class jf {
         vk.field_e = td.a("frame_top", param0, "commonui", (byte) 126);
         v.field_d = td.a("frame_bottom", param0, "commonui", (byte) 118);
         fh.field_a = jn.a("jagex_logo_grey", param2 - 29571, "commonui", param0);
-        r.field_a = td.a("button", param0, "commonui", (byte) 109);
+        FullscreenNoticeType.field_a = td.a("button", param0, "commonui", (byte) 109);
         AccountServiceResult.field_g = md.a("validation", param0, 10, "commonui");
         sl.field_q = (BitmapFont) ((Object) oc.a(param3, (byte) 125, "commonui", "arezzo12", param0));
         bn.field_d = (BitmapFont) ((Object) oc.a(param3, (byte) 125, "commonui", "arezzo14", param0));
@@ -68,7 +68,7 @@ final class jf {
           return;
         }
         try {
-          r.field_a = new Sprite[]{var15, var12, var11};
+          FullscreenNoticeType.field_a = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "jf.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends nk implements WidgetActivationListener {
+final class AccountCreationResultPanel extends ProgressMessageDialog implements WidgetActivationListener {
     static int[] field_Tb;
     static DungeonTileState field_Pb;
     private AccountRegistrationPanel field_Ob;
@@ -23,7 +23,7 @@ final class AccountCreationResultPanel extends nk implements WidgetActivationLis
     }
 
     final static void q(int param0) {
-        nk.field_Hb = false;
+        ProgressMessageDialog.field_Hb = false;
         mo.field_g = null;
         sn.field_a = null;
         if (param0 == 61270) {
@@ -160,7 +160,7 @@ final class AccountCreationResultPanel extends nk implements WidgetActivationLis
             field_Pb = (DungeonTileState) null;
           }
           up.b(-121);
-          this.j((byte) 77);
+          this.closeDialog((byte) 77);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "jb.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -174,7 +174,7 @@ final class AccountCreationResultPanel extends nk implements WidgetActivationLis
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        kc var5 = null;
+        DialogMessagePane var5 = null;
         int var6 = 0;
         var6 = DungeonAssault.field_K;
         try {
@@ -199,33 +199,33 @@ final class AccountCreationResultPanel extends nk implements WidgetActivationLis
               }
             }
           }
-          var5 = new kc((nk) (this), hc.field_f, var4);
+          var5 = new DialogMessagePane((ProgressMessageDialog) (this), hc.field_f, var4);
           if (!param0.success) {
             if (this.field_Wb) {
-              var5.a(gl.field_Jb, (WidgetEventListener) (this), (byte) -83);
+              var5.addListenerButton(gl.field_Jb, (WidgetEventListener) (this), (byte) -83);
             } else {
               if (param0.statusCode != 5) {
-                var5.a(-1, 6824, DisplayNameSelectionPanel.field_O);
+                var5.addActionButton(-1, 6824, DisplayNameSelectionPanel.field_O);
               } else {
-                var5.a(11, 6824, oh.field_b);
-                var5.a(17, 6824, db.field_u);
+                var5.addActionButton(11, 6824, oh.field_b);
+                var5.addActionButton(17, 6824, db.field_u);
               }
             }
             if (param0.statusCode != 3) {
               if (param0.statusCode == 6) {
-                var5.a(9, 6824, TextFieldValidator.field_i);
+                var5.addActionButton(9, 6824, TextFieldValidator.field_i);
               }
             } else {
-              var5.a(7, 6824, mo.field_d);
+              var5.addActionButton(7, 6824, mo.field_d);
             }
           } else {
             if (param0.field_f) {
-              this.b(1, new cm(this));
+              this.replaceContent(1, new RegistrationAgreementPane(this));
               return;
             }
-            var5.a(gl.field_Jb, (WidgetEventListener) (this), (byte) -91);
+            var5.addListenerButton(gl.field_Jb, (WidgetEventListener) (this), (byte) -91);
           }
-          this.b(1, var5);
+          this.replaceContent(1, var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -241,7 +241,7 @@ final class AccountCreationResultPanel extends nk implements WidgetActivationLis
         }
     }
 
-    final void r(int param0) {
+    final void showAccountCreationConnectionFailure(int param0) {
         int var2 = -20 / ((param0 + 37) / 34);
         this.showAccountCreationResult(DungeonBuilderScreen.createAccountErrorResult(248, im.field_l, -28323), true, true);
     }
@@ -252,7 +252,7 @@ final class AccountCreationResultPanel extends nk implements WidgetActivationLis
         }
         if (param0 < -69) {
           if (null != MusicPatchPcmStream.field_r) {
-            MusicPatchPcmStream.field_r.j((byte) -115);
+            MusicPatchPcmStream.field_r.freezeNormalProgressAnimation((byte) -115);
           }
           tb.a((byte) -81);
           return;
@@ -260,7 +260,7 @@ final class AccountCreationResultPanel extends nk implements WidgetActivationLis
         java.applet.Applet var2 = (java.applet.Applet) null;
         AccountCreationResultPanel.a(true, (String) null, (java.applet.Applet) null);
         if (null != MusicPatchPcmStream.field_r) {
-          MusicPatchPcmStream.field_r.j((byte) -115);
+          MusicPatchPcmStream.field_r.freezeNormalProgressAnimation((byte) -115);
         }
         tb.a((byte) -81);
     }

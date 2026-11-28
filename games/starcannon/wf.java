@@ -17,10 +17,10 @@ final class wf extends IntrusiveNode {
           if (param1) {
             wf.a(1);
           }
-          if (null == qj.field_eb) {
+          if (null == ContentTransitionDialog.field_eb) {
             return;
           }
-          qj.field_eb.detach((java.awt.Component) ((Object) param0), true);
+          ContentTransitionDialog.field_eb.detach((java.awt.Component) ((Object) param0), true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -86,7 +86,7 @@ final class AgeValidator extends TextFieldValidator {
           if (this.getValidationStatus((byte) -126, param0) != qk.field_b) {
             return null;
           }
-          stackIn_6_0 = rm.field_D;
+          stackIn_6_0 = StripedProgressWidget.field_D;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

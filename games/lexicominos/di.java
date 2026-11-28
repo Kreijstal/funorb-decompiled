@@ -3,10 +3,10 @@
  */
 final class di extends id {
     static String field_y;
-    static qj field_x;
+    static StandardContentDialog field_x;
 
     di(int param0) {
-        this(ql.field_Q, param0);
+        this(ResizableModalDialog.field_Q, param0);
     }
 
     public static void clearStaticReferences(boolean param0) {

@@ -149,7 +149,7 @@ public final class Chess extends NetworkGameClient {
         b.field_e.a(66, 0, 66);
         b.field_e.a(0, 1, 2, (byte) 1, (byte) -1, (short) 127, (short) -1);
         b.field_e.a(3, 2, 1, (byte) 1, (byte) -1, (short) 127, (short) -1);
-        rm.field_H = (dd) (b.field_e.a(100, 131072, 0, -10, 0));
+        StripedProgressWidget.field_H = (dd) (b.field_e.a(100, 131072, 0, -10, 0));
         bd.field_b = (dd) (b.field_e.a(8, 131072, 0, -10, 0));
         ea.field_cb = new bn(4, 2, 1);
         ea.field_cb.a(-344, 0, -344);
@@ -247,12 +247,12 @@ public final class Chess extends NetworkGameClient {
             rf.b(80, fieldTemp$1);
           }
         }
-        if (rm.field_R != null &&
-          rm.field_R.focusLost) {
+        if (StripedProgressWidget.field_R != null &&
+          StripedProgressWidget.field_R.focusLost) {
           b.a(true);
           om.a(119);
         }
-        stackIn_19_1 = (null != rm.field_R);
+        stackIn_19_1 = (null != StripedProgressWidget.field_R);
         this.b(stackIn_19_1, (byte) 31);
         if (ic.field_b) {
           this.initializeAssetArchives(111);
@@ -295,11 +295,11 @@ public final class Chess extends NetworkGameClient {
                 }
               } else {
                 stackIn_54_1 = 68;
-                stackIn_55_2 = (null != rm.field_R);
+                stackIn_55_2 = (null != StripedProgressWidget.field_R);
                 var2 = this.b((byte) stackIn_54_1, stackIn_55_2);
                 if (var2 == 1 ||
                   var2 == 2) {
-                  if (rm.field_R != null) {
+                  if (StripedProgressWidget.field_R != null) {
                     b.a(true);
                   }
                   if (var2 == 2) {
@@ -610,7 +610,7 @@ public final class Chess extends NetworkGameClient {
     final void prepareGameShutdown(byte param0) {
         tk.a(-2919);
         int var2 = -63 / ((-31 - param0) / 42);
-        if (rm.field_R != null) {
+        if (StripedProgressWidget.field_R != null) {
           b.a(true);
         }
         ao.b(-25220);
@@ -665,10 +665,10 @@ public final class Chess extends NetworkGameClient {
         int var5;
         Object var6;
         var5 = field_G;
-        if (rm.field_R == null) {
+        if (StripedProgressWidget.field_R == null) {
           stackIn_3_0 = DirectByteStorage.field_h;
         } else {
-          stackIn_3_0 = rm.field_R;
+          stackIn_3_0 = StripedProgressWidget.field_R;
         }
         var6 = stackIn_3_0;
         var2 = var6;
@@ -705,7 +705,7 @@ public final class Chess extends NetworkGameClient {
         }
         if (d.a(param0) &&
           !ga.a(param0)) {
-          if (rm.field_R != null) {
+          if (StripedProgressWidget.field_R != null) {
             stackIn_26_0 = true;
           } else {
             stackIn_26_0 = wc.field_x;
@@ -833,7 +833,7 @@ public final class Chess extends NetworkGameClient {
         }
         RichTextWidget.field_N[0] = null;
         for (var3 = 1; var3 <= 6; var3++) {
-          RichTextWidget.field_N[var3] = (dd) (kl.field_k[var3].a(NameSuggestionsPanel.field_P[qm.field_g], vn.field_sb[qm.field_g], 5, -10, 5));
+          RichTextWidget.field_N[var3] = (dd) (kl.field_k[var3].a(NameSuggestionsPanel.field_P[qm.field_g], ProgressMessageDialog.field_sb[qm.field_g], 5, -10, 5));
           n.field_b[var3] = new bn(new bn[]{kl.field_k[var3]}, 1);
           dupTemp$0 = n.field_b[var3].field_j;
           var10 = dupTemp$0;
@@ -842,7 +842,7 @@ public final class Chess extends NetworkGameClient {
             var10[var5] = (short)0;
           }
           n.field_b[var3].a(this.field_H);
-          jj.field_c[var3] = (dd) (n.field_b[var3].a(NameSuggestionsPanel.field_P[qm.field_g], vn.field_sb[qm.field_g], 5, -10, 5));
+          jj.field_c[var3] = (dd) (n.field_b[var3].a(NameSuggestionsPanel.field_P[qm.field_g], ProgressMessageDialog.field_sb[qm.field_g], 5, -10, 5));
           dl.field_c[var3] = new bn(new bn[]{kl.field_k[var3]}, 1);
           for (var5 = dl.field_c[var3].field_h - 1; var5 >= 0; var5--) {
             dl.field_c[var3].field_C[var5] = -dl.field_c[var3].field_C[var5];
@@ -850,7 +850,7 @@ public final class Chess extends NetworkGameClient {
           var5_ref_int__ = dl.field_c[var3].field_O;
           dl.field_c[var3].field_O = dl.field_c[var3].field_P;
           dl.field_c[var3].field_P = var5_ref_int__;
-          q.field_b[var3] = (dd) (dl.field_c[var3].a(NameSuggestionsPanel.field_P[qm.field_g], vn.field_sb[qm.field_g], 5, 10, 5));
+          q.field_b[var3] = (dd) (dl.field_c[var3].a(NameSuggestionsPanel.field_P[qm.field_g], ProgressMessageDialog.field_sb[qm.field_g], 5, 10, 5));
         }
         var3 = qm.field_g;
         if (var3 != 1) {
@@ -873,7 +873,7 @@ public final class Chess extends NetworkGameClient {
         var3 = -19 % ((26 - param0) / 45);
         ad.field_f[0] = null;
         var3 = NameSuggestionsPanel.field_P[qm.field_g];
-        var4 = vn.field_sb[qm.field_g];
+        var4 = ProgressMessageDialog.field_sb[qm.field_g];
         for (var5 = 1; var5 <= 6; var5++) {
           ad.field_f[var5] = (dd) (kl.field_k[var5].a(var3, var4, 5, -10, 5));
           n.field_b[var5] = new bn(new bn[]{kl.field_k[var5]}, 1);
@@ -972,14 +972,14 @@ public final class Chess extends NetworkGameClient {
         var6.rotateClockwise();
         var3.rotateClockwise();
         tb.field_c = var6.copy();
-        vn.field_rb = var3.copy();
+        ProgressMessageDialog.field_rb = var3.copy();
         ng.field_b = var6.copyMirroredHorizontally();
         me.field_d = var3.copyMirroredHorizontally();
         var6.rotateClockwise();
         var3.rotateClockwise();
         SingleChildWidgetContainer.field_G = var6.copy();
         int var5 = -41 / ((19 - param0) / 56);
-        vn.field_xb = var3.copy();
+        ProgressMessageDialog.field_xb = var3.copy();
         ValidatedTextField.field_Z = new RgbSprite(77, 20);
         ValidatedTextField.field_Z.bindAsRenderTarget();
         SoftwareRasterizer.fillRoundedRectangle(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c, -1 + SoftwareRasterizer.field_c / 2, 1449732);
@@ -1330,10 +1330,10 @@ public final class Chess extends NetworkGameClient {
               } else {
                 gf.field_d = vc.a(-127, 4);
                 if (cb.field_e != null) {
-                  ba.a(cb.field_e, -102, 3);
+                  RegistrationAgreementPane.a(cb.field_e, -102, 3);
                 }
                 ResourceArchive.dismissMessageDialog(5);
-                qk.field_h = ge.field_bb;
+                qk.field_h = FullscreenStatusDialog.field_bb;
                 if (FullscreenFocusCanvas.field_d) {
                   SpriteGeometry.a(false, 15);
                 }
@@ -1440,8 +1440,8 @@ public final class Chess extends NetworkGameClient {
             if (aa.field_f >= ug.field_b) {
               var5 = ug.field_b * ug.field_b;
               var6 = var5 - aa.field_f * aa.field_f;
-              var7 = var6 * 120 / var5 + sb.field_tb;
-              ih.a(var7, 65);
+              var7 = var6 * 120 / var5 + StandardContentDialog.field_tb;
+              NumericDateInputWidget.a(var7, 65);
             } else {
               aa.field_f = aa.field_f + 1;
               nh.c(370, 240 + ec.c((byte) -63));
@@ -1449,8 +1449,8 @@ public final class Chess extends NetworkGameClient {
               NameSuggestionsPanel.field_Q = true;
               var5 = ug.field_b * ug.field_b;
               var6 = var5 - aa.field_f * aa.field_f;
-              var7 = var6 * 120 / var5 + sb.field_tb;
-              ih.a(var7, 65);
+              var7 = var6 * 120 / var5 + StandardContentDialog.field_tb;
+              NumericDateInputWidget.a(var7, 65);
             }
           } else {
             if (aa.field_f > 0) {
@@ -1461,8 +1461,8 @@ public final class Chess extends NetworkGameClient {
             }
             var5 = ug.field_b * ug.field_b;
             var6 = var5 - aa.field_f * aa.field_f;
-            var7 = var6 * 120 / var5 + sb.field_tb;
-            ih.a(var7, 65);
+            var7 = var6 * 120 / var5 + StandardContentDialog.field_tb;
+            NumericDateInputWidget.a(var7, 65);
           }
         }
         if (-3 == qk.field_h) {
@@ -1501,10 +1501,10 @@ public final class Chess extends NetworkGameClient {
         var4 = field_G;
         nj.a(-20, mm.field_e, 95.0f);
         this.renderFrame(true);
-        vn.field_Bb = this.doubleSpriteSize(2, wk.a(mm.field_d, 1, "win_black", ""));
+        ProgressMessageDialog.field_Bb = this.doubleSpriteSize(2, wk.a(mm.field_d, 1, "win_black", ""));
         jh.field_b = this.doubleSpriteSize(2, wk.a(mm.field_d, 1, "win_white", ""));
         GameAppletShell.field_e = this.doubleSpriteSize(2, wk.a(mm.field_d, 1, "win_none", ""));
-        this.setSpriteBlueChannelLowBit(false, vn.field_Bb);
+        this.setSpriteBlueChannelLowBit(false, ProgressMessageDialog.field_Bb);
         this.setSpriteBlueChannelLowBit(false, jh.field_b);
         this.setSpriteBlueChannelLowBit(false, GameAppletShell.field_e);
         var3 = qm.field_g;
@@ -1527,7 +1527,7 @@ public final class Chess extends NetworkGameClient {
         if (param0 > -120) {
           return;
         }
-        bj.field_bb = qm.a(1, "", "slider_ends", mm.field_d);
+        ContentTransitionDialog.field_bb = qm.a(1, "", "slider_ends", mm.field_d);
         wh.field_c = jn.a("slider_body", 8221, "", mm.field_d);
         var3Lifetime2 = qm.field_g;
         if (var3Lifetime2 != 1) {
@@ -1633,10 +1633,10 @@ public final class Chess extends NetworkGameClient {
         ie.resetStaticState(-1962602524);
         ModalDialogHost.clearDeclaredStaticReferences(-9);
         AccountCreationResultPanel.discardDeclaredStaticReferences((byte) -106);
-        ch.releaseDeclaredStaticReferences(30);
-        vn.releaseDeclaredStaticReferences((byte) 5);
+        ProgressDialog.releaseDeclaredStaticReferences(30);
+        ProgressMessageDialog.releaseDeclaredStaticReferences((byte) 5);
         AccountRegistrationPanel.clearDeclaredStaticReferences(106);
-        ii.clearDeclaredStaticReferences(82);
+        GuestPlayConfirmationForm.clearDeclaredStaticReferences(82);
         LoginPanel.clearDeclaredStaticReferences(35);
         DisplayNameSelectionPanel.resetStaticState((byte) -93);
         vg.b(125);
@@ -1672,7 +1672,7 @@ public final class Chess extends NetworkGameClient {
         IsaacCipher.clearStaticReferences((byte) -105);
         gl.clearStaticReferences((byte) 67);
         ej.clearStaticReferences((byte) -30);
-        jg.clearDeclaredStaticReferences(10000536);
+        BirthDateChatEnableForm.clearDeclaredStaticReferences(10000536);
         ChessBoardState.c(-1);
         bc.a(10);
         bi.clearStaticReferences((byte) 60);
@@ -1694,9 +1694,9 @@ public final class Chess extends NetworkGameClient {
         jh.clearStaticReferences((byte) -93);
         ArchiveRequest.clearStaticReferences(-115);
         sl.clearStaticReferences((byte) 59);
-        ge.k(0);
+        FullscreenStatusDialog.k(0);
         DefaultTextWidgetRenderer.clearStaticReferences(true);
-        hi.clearStaticReferences();
+        VorbisSample.clearStaticReferences();
         am.c((byte) 119);
         fn.resetStaticState(-86);
         em.resetStaticState(3);
@@ -1720,7 +1720,7 @@ public final class Chess extends NetworkGameClient {
         UiWidget.clearStaticReferences(0);
         InteractiveWidget.clearDeclaredStaticReferences(-1);
         SingleChildWidgetContainer.e((byte) 127);
-        k.clearDeclaredStaticReferences((byte) -24);
+        ResizableModalDialog.clearDeclaredStaticReferences((byte) -24);
         ModalDialog.clearDeclaredStaticReferences(888706465);
         DequeWidgetContainer.clearStaticReferences((byte) -96);
         qj.clearStaticReferences(124);
@@ -1755,8 +1755,8 @@ public final class Chess extends NetworkGameClient {
         LabeledWidgetContainer.c(false);
         ValidatedTextField.discardDeclaredStaticReferences(2491);
         EditableTextField.releaseDeclaredStaticReferences(-14);
-        bj.releaseDeclaredStaticReferences(45);
-        rm.a(850101921);
+        ContentTransitionDialog.releaseDeclaredStaticReferences(45);
+        StripedProgressWidget.a(850101921);
         NameSuggestionsPanel.clearDeclaredStaticReferences(8);
         RichTextWidget.resetStaticState((byte) 67);
         jn.clearStaticReferences((byte) -61);
@@ -1764,15 +1764,15 @@ public final class Chess extends NetworkGameClient {
         ki.b(true);
         TextFieldValidator.c(true);
         ni.clearStaticReferences(0);
-        ba.c(false);
+        RegistrationAgreementPane.c(false);
         od.clearStaticReferences(false);
         nc.clearStaticReferences((byte) -116);
         cg.a(1);
         fc.clearStaticReferences(-29306);
         BirthDateValidator.h(1);
-        ih.clearDeclaredStaticReferences((byte) 48);
+        NumericDateInputWidget.clearDeclaredStaticReferences((byte) 48);
         ArrayWidgetContainer.j(0);
-        bf.clearStaticReferences(false);
+        DateInputWidget.clearStaticReferences(false);
         RichTextLayout.clearStaticReferences((byte) 83);
         DirectByteStorage.a((byte) -115);
         ml.clearStaticReferences((byte) -122);
@@ -1807,7 +1807,7 @@ public final class Chess extends NetworkGameClient {
         tf.clearStaticReferences(false);
         AccountRequestState.releaseStatics((byte) -31);
         AccountServiceResult.a(0);
-        e.a(99);
+        DialogMessagePane.a(99);
         h.a(1187598372);
         jd.clearStaticReferences(false);
         ph.clearStaticReferences(0);
@@ -1816,7 +1816,7 @@ public final class Chess extends NetworkGameClient {
         oj.clearStaticReferences((byte) 52);
         pa.clearStaticReferences((byte) -117);
         dc.clearStaticReferences(5);
-        ij.b(255);
+        FullscreenNoticeType.b(255);
         uj.clearStaticReferences((byte) -118);
         om.clearStaticReferences((byte) -126);
         ai.clearStaticReferences(-125);
@@ -1900,7 +1900,7 @@ public final class Chess extends NetworkGameClient {
             }
             qk.field_h = 0;
             IntrusiveDeque.field_f = 0;
-            bf.a(true, 50);
+            DateInputWidget.a(true, 50);
             if (PcmOutputWorker.a(-3)) {
               return true;
             }
@@ -1931,7 +1931,7 @@ public final class Chess extends NetworkGameClient {
             mm.field_d = null;
           }
           var6 = (RgbSprite[][]) null;
-          BoundedRandomAccessFile.a(rl.field_a, MouseWheelInput.field_f, -109, true, ByteStorage.field_b, new RgbSprite[][]{IsaacCipher.field_g}, wh.field_g, hm.field_e, ai.field_h, 2, ca.field_b, wh.field_g, ih.field_S, 1, (RgbSprite[][]) null);
+          BoundedRandomAccessFile.a(rl.field_a, MouseWheelInput.field_f, -109, true, ByteStorage.field_b, new RgbSprite[][]{IsaacCipher.field_g}, wh.field_g, hm.field_e, ai.field_h, 2, ca.field_b, wh.field_g, NumericDateInputWidget.field_S, 1, (RgbSprite[][]) null);
           ig.field_h = LoginPanel.field_Q;
           tk.b(200, 93);
           hm.field_e = null;
@@ -1989,22 +1989,22 @@ public final class Chess extends NetworkGameClient {
                                   nj.a(param0 ^ -19745, DropTargetWidgetContainer.a(HuffmanCodec.field_d, "lobby", nc.field_P, ByteStorage.field_b, (byte) 126), 17.0f);
                                   return false;
                                 }
-                                nj.a(-20, DropTargetWidgetContainer.a(NetworkGameClient.field_o, "lobby", k.field_V, hm.field_e, (byte) 30), 13.0f);
+                                nj.a(-20, DropTargetWidgetContainer.a(NetworkGameClient.field_o, "lobby", ResizableModalDialog.field_V, hm.field_e, (byte) 30), 13.0f);
                                 return false;
                               }
                               nj.a(-20, DropTargetWidgetContainer.a(HuffmanCodec.field_d, "kartika13", nc.field_P, ByteStorage.field_b, (byte) 95), 17.0f);
                               return false;
                             }
-                            nj.a(-20, DropTargetWidgetContainer.a(NetworkGameClient.field_o, "kartika13", k.field_V, hm.field_e, (byte) 78), 11.0f);
+                            nj.a(-20, DropTargetWidgetContainer.a(NetworkGameClient.field_o, "kartika13", ResizableModalDialog.field_V, hm.field_e, (byte) 78), 11.0f);
                             return false;
                           }
                           nj.a(-20, DropTargetWidgetContainer.a(HuffmanCodec.field_d, "roman12", nc.field_P, ByteStorage.field_b, (byte) 86), 17.0f);
                           return false;
                         }
-                        nj.a(-20, DropTargetWidgetContainer.a(NetworkGameClient.field_o, "roman12", k.field_V, hm.field_e, (byte) 118), 11.0f);
+                        nj.a(-20, DropTargetWidgetContainer.a(NetworkGameClient.field_o, "roman12", ResizableModalDialog.field_V, hm.field_e, (byte) 118), 11.0f);
                         return false;
                       }
-                      nj.a(-20, DropTargetWidgetContainer.a(NetworkGameClient.field_o, "basic", k.field_V, hm.field_e, (byte) 120), 65.0f);
+                      nj.a(-20, DropTargetWidgetContainer.a(NetworkGameClient.field_o, "basic", ResizableModalDialog.field_V, hm.field_e, (byte) 120), 65.0f);
                       return false;
                     }
                     nj.a(param0 - 19783, DropTargetWidgetContainer.a(HuffmanCodec.field_d, "", nc.field_P, bo.field_d, (byte) 49), 63.0f);
@@ -2013,7 +2013,7 @@ public final class Chess extends NetworkGameClient {
                   nj.a(-20, DropTargetWidgetContainer.a(ld.field_a, "", wn.field_g, wg.field_q, (byte) 31), 55.0f);
                   return false;
                 }
-                nj.a(-20, DropTargetWidgetContainer.a(NetworkGameClient.field_o, "", k.field_V, mm.field_d, (byte) 113), 35.0f);
+                nj.a(-20, DropTargetWidgetContainer.a(NetworkGameClient.field_o, "", ResizableModalDialog.field_V, mm.field_d, (byte) 113), 35.0f);
                 return false;
               }
               nj.a(-20, DropTargetWidgetContainer.a(vk.field_c, "", hh.field_k, li.field_g, (byte) 68), 30.0f);

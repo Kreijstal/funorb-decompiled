@@ -106,11 +106,11 @@ final class ej {
 
     final static void a(int param0, String param1) {
         if (param0 == 0) {
-          System.out.println("Error: " + pi.a("%0a", "\n", 22232, param1));
+          System.out.println("Error: " + RegistrationAgreementPane.a("%0a", "\n", 22232, param1));
           return;
         }
         field_d = (String) null;
-        System.out.println("Error: " + pi.a("%0a", "\n", 22232, param1));
+        System.out.println("Error: " + RegistrationAgreementPane.a("%0a", "\n", 22232, param1));
     }
 
     static {

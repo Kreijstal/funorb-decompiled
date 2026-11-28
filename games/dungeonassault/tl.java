@@ -456,8 +456,8 @@ final class tl implements Runnable {
         if (~dk.field_c > param0) {
           return to.field_g;
         }
-        if (ia.field_U != null) {
-          if (!ia.field_U.ensureIndexLoaded(-14354)) {
+        if (GuestPlayConfirmationForm.field_U != null) {
+          if (!GuestPlayConfirmationForm.field_U.ensureIndexLoaded(-14354)) {
             return PacketBuffer.field_r;
           }
           return ki.field_c;

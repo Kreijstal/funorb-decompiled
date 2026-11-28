@@ -7,7 +7,7 @@ final class BoundedRandomAccessFile {
     static int field_f;
     private long field_e;
     static byte[] field_b;
-    static ae field_d;
+    static FullscreenNoticeType field_d;
     static long field_a;
     private long field_g;
     private RandomAccessFile field_h;
@@ -166,9 +166,9 @@ final class BoundedRandomAccessFile {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               o.a(-20954, var15);
               if (var6_intLifetime1 != 0) {
-                fa.a(mc.field_f, var6_intLifetime1, og.field_f, PacketBuffer.field_i, ta.field_e, -106);
+                StripedProgressWidget.a(mc.field_f, var6_intLifetime1, og.field_f, PacketBuffer.field_i, ta.field_e, -106);
               } else {
-                fa.a(mc.field_f, var6_intLifetime1, og.field_f, PacketBuffer.field_i, ta.field_e, 12);
+                StripedProgressWidget.a(mc.field_f, var6_intLifetime1, og.field_f, PacketBuffer.field_i, ta.field_e, 12);
               }
             }
             ByteStorage.a(var5, 42);
@@ -282,6 +282,6 @@ final class BoundedRandomAccessFile {
 
     static {
         field_b = new byte[520];
-        field_d = new ae();
+        field_d = new FullscreenNoticeType();
     }
 }

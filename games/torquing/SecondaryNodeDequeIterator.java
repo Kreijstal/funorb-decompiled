@@ -12,8 +12,8 @@ final class SecondaryNodeDequeIterator implements Iterator {
     final static void a(byte param0, int param1, int[] param2) {
         int var3_int = 0;
         try {
-          var3_int = fo.a(param2[param1], (byte) -18, param2[param1 + 1]);
-          var3_int = fo.a(param2[param1 + 2], (byte) -128, var3_int);
+          var3_int = DialogMessagePane.a(param2[param1], (byte) -18, param2[param1 + 1]);
+          var3_int = DialogMessagePane.a(param2[param1 + 2], (byte) -128, var3_int);
           param2[param1] = param2[param1] / var3_int;
           param2[1 + param1] = param2[1 + param1] / var3_int;
           if (param0 != 49) {
@@ -76,18 +76,18 @@ final class SecondaryNodeDequeIterator implements Iterator {
           throw new IllegalStateException();
         }
         if (null != IsaacCipher.field_m) {
-          IsaacCipher.field_m.b(true);
+          IsaacCipher.field_m.closeDialog(true);
         }
-        String var1 = kf.a(17241);
+        String var1 = StripedProgressWidget.a(17241);
         un.field_k = new LoginPanel(var1, (String) null, true, false, false);
         dc.field_a.showDialog(hb.field_x, (byte) 82);
-        hb.field_x.c(un.field_k, 33);
+        hb.field_x.replaceContent(un.field_k, 33);
         if (param0 > 22) {
-          hb.field_x.j(0);
+          hb.field_x.finishResize(0);
           return;
         }
         field_d = (GzipDecompressor) null;
-        hb.field_x.j(0);
+        hb.field_x.finishResize(0);
     }
 
     public final Object next() {

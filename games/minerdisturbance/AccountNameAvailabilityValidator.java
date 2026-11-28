@@ -50,7 +50,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           var8 = new AccountCreationResultPanel(mb.field_b, param2);
           mb.field_b.showDialog(1, var8);
           if (cm.a(true)) {
-            var8.t(23101);
+            var8.showAccountCreationConnectionFailure(23101);
             return true;
           }
           qf.field_r = param5;

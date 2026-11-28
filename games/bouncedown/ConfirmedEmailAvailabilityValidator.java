@@ -87,7 +87,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
               if (va.field_f) {
                 param0 = ModalDialogHost.field_B;
               }
-              nk.field_a.a(param0, 4210752, param2);
+              nk.field_a.showResult(param0, 4210752, param2);
             }
             if (param2 != 256 &&
               10 != param2) {

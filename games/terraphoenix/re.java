@@ -95,7 +95,7 @@ final class re {
               if (param4) {
                 stackIn_25_0 = a.field_c[var12];
               } else {
-                stackIn_25_0 = al.field_bb[var12];
+                stackIn_25_0 = ContentTransitionDialog.field_bb[var12];
               }
               var13 = stackIn_25_0;
               if (var13 > var7_int) {

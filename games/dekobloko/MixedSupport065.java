@@ -20,17 +20,17 @@ final class MixedSupport065 {
         RuntimeException runtimeExceptionLocal7 = null;
         integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          if (UiComponentPart004.integerState0091 >= 10) {
+          if (ContentTransitionDialog.integerState0091 >= 10) {
             if (!UiComponentPart009.computeBoolean0376(480)) {
               SoftwareRaster.clearRaster();
               GameSession.performAction1300(240, 320, integerArgument3 ^ -21986);
-              UiComponentPart019.performAction1045(1, 0, 0, canvasArgument1);
+              BirthDateChatEnableForm.performAction1045(1, 0, 0, canvasArgument1);
             } else {
               if (MixedSupport052.integerState0269 != 0) {
                 DisplayNameSelectionPanel.performAction0319(true, canvasArgument1);
               } else {
                 MixedSupport127.performAction1631(false, booleanArgument2, 78);
-                UiComponentPart019.performAction1045(1, 0, 0, canvasArgument1);
+                BirthDateChatEnableForm.performAction1045(1, 0, 0, canvasArgument1);
               }
             }
           } else {

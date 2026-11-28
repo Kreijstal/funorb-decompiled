@@ -50,9 +50,9 @@ final class sc {
             field_c = (String) null;
           }
           s.field_c = true;
-          vj.field_V = param0 ? true : false;
-          fa.field_G = new ph(ti.field_b, AwtRasterBuffer.field_a, param2, ModalDialogHost.field_x, vj.field_V);
-          ti.field_b.showDialog((byte) 85, (UiWidget) (fa.field_G));
+          FullscreenStatusDialog.field_V = param0 ? true : false;
+          StripedProgressWidget.field_G = new ProgressMessageDialog(ti.field_b, AwtRasterBuffer.field_a, param2, ModalDialogHost.field_x, FullscreenStatusDialog.field_V);
+          ti.field_b.showDialog((byte) 85, (UiWidget) (StripedProgressWidget.field_G));
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "sc.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

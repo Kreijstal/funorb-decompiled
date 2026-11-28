@@ -74,7 +74,7 @@ final class jj {
         try {
           hd.field_b = param0;
           aa.field_g = true;
-          SecondaryNodeDequeIterator.field_d = new ik(ResourceArchive.field_f, ArchiveRequest.field_q, param1, lb.field_d, hd.field_b);
+          SecondaryNodeDequeIterator.field_d = new ProgressMessageDialog(ResourceArchive.field_f, ArchiveRequest.field_q, param1, lb.field_d, hd.field_b);
           ResourceArchive.field_f.showDialog((UiWidget) (SecondaryNodeDequeIterator.field_d), (byte) -71);
           if (param2 != 1702) {
             field_c = (int[][]) null;

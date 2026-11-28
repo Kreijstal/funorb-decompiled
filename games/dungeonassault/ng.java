@@ -116,7 +116,7 @@ final class ng extends InteractiveWidget {
                 }
                 var2 = rp.a("idlemessage20min", param0 + 27178);
                 if (null != var2) {
-                  sj.field_V = dj.a(var2, false);
+                  ResizableModalDialog.field_V = dj.a(var2, false);
                 }
                 var2 = rp.a("error_js5crc", param0 ^ -27057);
                 if (var2 != null) {
@@ -1541,7 +1541,7 @@ final class ng extends InteractiveWidget {
                 }
                 var2 = rp.a("login_username", 111);
                 if (var2 != null) {
-                  hf.field_ub = dj.a(var2, false);
+                  ContentTransitionDialog.field_ub = dj.a(var2, false);
                 }
                 var2 = rp.a("login_email", 76);
                 if (var2 != null) {
@@ -1653,7 +1653,7 @@ final class ng extends InteractiveWidget {
                 }
                 var2 = rp.a("create_alert_namelength", param0 + 27197);
                 if (null != var2) {
-                  hf.field_zb = dj.a(var2, false);
+                  ContentTransitionDialog.field_zb = dj.a(var2, false);
                 }
                 var2 = rp.a("create_alert_namechars", 120);
                 if (null != var2) {
@@ -1865,7 +1865,7 @@ final class ng extends InteractiveWidget {
                 }
                 var2 = rp.a("waitingfor_animations", param0 + 27165);
                 if (null != var2) {
-                  uc.field_L = dj.a(var2, false);
+                  StripedProgressWidget.field_L = dj.a(var2, false);
                 }
                 var2 = rp.a("loading_graphics", 93);
                 if (var2 != null) {

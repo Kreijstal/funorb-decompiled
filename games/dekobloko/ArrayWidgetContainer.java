@@ -599,7 +599,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements WidgetContain
           }
           if (MixedSupport081.secondaryNodeHashTableState0003 == null) {
             MixedSupport081.secondaryNodeHashTableState0003 = new SecondaryNodeHashTable(128);
-            UiComponentPart018.integerState0502 = 0;
+            RegistrationAgreementPane.integerState0502 = 0;
           }
           objectLocal21 = cipherPacketBufferLocal8.readNullTerminatedString((byte) -38);
           if (((String) (objectLocal21)).equals("")) {
@@ -617,8 +617,8 @@ abstract class ArrayWidgetContainer extends UiComponent implements WidgetContain
           if (sceneWidgetPart014Local24 == null) {
             sceneWidgetPart014Local24 = new SceneWidgetPart014();
             MixedSupport081.secondaryNodeHashTableState0003.put(sceneWidgetPart014Local24, -1, (long)ComponentContainer.computeString0894((CharSequence) ((Object) stringLocal22), (byte) 2).hashCode());
-            integerLocal2 = UiComponentPart018.integerState0502;
-            UiComponentPart018.integerState0502 = UiComponentPart018.integerState0502 + 1;
+            integerLocal2 = RegistrationAgreementPane.integerState0502;
+            RegistrationAgreementPane.integerState0502 = RegistrationAgreementPane.integerState0502 + 1;
             sceneWidgetPart014Local24.integerState0920 = integerLocal2;
             RichTextWidget.nodeDequeState0027.addFirst(sceneWidgetPart014Local24, 2777);
           }
@@ -1234,7 +1234,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements WidgetContain
         }
     }
 
-    abstract void performAction1047(int integerArgument1);
+    abstract void layoutChildren(int integerArgument1);
 
     final void setBounds(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         RuntimeException caughtExceptionLocal1 = null;
@@ -1244,7 +1244,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements WidgetContain
           if (integerArgument5 != -16555) {
             ArrayWidgetContainer.roundUpPowerOfTwo(71, 20);
           }
-          this.performAction1047(30);
+          this.layoutChildren(30);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal3) {
           caughtExceptionLocal1 = caughtParameterLocal3;

@@ -108,8 +108,8 @@ public final class DungeonAssault extends NetworkGameClient {
                   if (tl.field_d) {
                     tl.field_d = false;
                     a.a(320, IntrusiveNode.field_c.field_N, IntrusiveNode.field_c, true, false, 8, 240, 2, 8, IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_N, (RgbSprite[]) null, (RgbSprite[]) null);
-                    if (cm.field_R != null) {
-                      i.field_A.requestCursorVisibility((java.awt.Component) ((Object) cm.field_R), (byte) 51, false);
+                    if (RegistrationAgreementPane.field_R != null) {
+                      i.field_A.requestCursorVisibility((java.awt.Component) ((Object) RegistrationAgreementPane.field_R), (byte) 51, false);
                     }
                   }
                   if (fc.a(Bzip2State.field_z, (byte) -120)) {
@@ -152,7 +152,7 @@ public final class DungeonAssault extends NetworkGameClient {
             var9.field_A[3] = new Raider(3, 19);
             var9.setCombatMode(false, 4);
             ik.field_e = new DungeonRaidScreen(false, var9);
-            var5 = cm.field_Q ? 1 : 0;
+            var5 = RegistrationAgreementPane.field_Q ? 1 : 0;
             stackIn_110_0 = (!ve.a(false)) ? 0 : 12;
             gd.a(stackIn_110_0, 0, -1, var5 != 0);
           }
@@ -182,7 +182,7 @@ public final class DungeonAssault extends NetworkGameClient {
             var10.setCombatMode(false, 4);
             ha.d(1);
             ik.field_e = new DungeonRaidScreen(false, var10);
-            stackIn_127_0 = (!cm.field_Q) ? 0 : 1;
+            stackIn_127_0 = (!RegistrationAgreementPane.field_Q) ? 0 : 1;
             var4Lifetime1 = stackIn_127_0;
             stackIn_131_0 = (!ve.a(false)) ? 0 : 12;
             gd.a(stackIn_131_0, 0, -1, var4Lifetime1 != 0);
@@ -282,12 +282,12 @@ public final class DungeonAssault extends NetworkGameClient {
             }
           }
           DungeonRaidScreen.b((byte) 14);
-          if (cm.field_R != null &&
-            cm.field_R.focusLost) {
+          if (RegistrationAgreementPane.field_R != null &&
+            RegistrationAgreementPane.field_R.focusLost) {
             ib.a(930);
             DefaultTextWidgetRenderer.a((byte) -128);
           }
-          stackIn_44_1 = (cm.field_R != null);
+          stackIn_44_1 = (RegistrationAgreementPane.field_R != null);
           this.a(stackIn_44_1, (byte) -74);
           if (ld.field_i) {
             bo.h(78);
@@ -322,11 +322,11 @@ public final class DungeonAssault extends NetworkGameClient {
                   }
                 } else {
                   stackIn_101_1 = 82;
-                  stackIn_102_2 = (null != cm.field_R);
+                  stackIn_102_2 = (null != RegistrationAgreementPane.field_R);
                   var2_int = this.b((byte) stackIn_101_1, stackIn_102_2);
                   if (1 == var2_int ||
                     2 == var2_int) {
-                    if (null != cm.field_R) {
+                    if (null != RegistrationAgreementPane.field_R) {
                       ib.a(930);
                     }
                     if (var2_int == 2) {
@@ -345,8 +345,8 @@ public final class DungeonAssault extends NetworkGameClient {
                     if (var2_int == 3) {
                       tl.field_d = false;
                       a.a(320, IntrusiveNode.field_c.field_N, IntrusiveNode.field_c, true, true, 8, 240, 2, 8, IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_N, (RgbSprite[]) null, (RgbSprite[]) null);
-                      if (cm.field_R != null) {
-                        i.field_A.requestCursorVisibility((java.awt.Component) ((Object) cm.field_R), (byte) 86, false);
+                      if (RegistrationAgreementPane.field_R != null) {
+                        i.field_A.requestCursorVisibility((java.awt.Component) ((Object) RegistrationAgreementPane.field_R), (byte) 86, false);
                       }
                     } else {
                       if (4 == var2_int) {
@@ -427,7 +427,7 @@ public final class DungeonAssault extends NetworkGameClient {
                 gm.field_d = new PlayerDungeonProfile(ra.field_c, 19);
                 if (mn.field_b == 4 ||
                   Bzip2State.field_z == 4) {
-                  jk.j((byte) 59);
+                  StandardContentDialog.j((byte) 59);
                 }
                 if (5 == mn.field_b ||
                   Bzip2State.field_z == 5) {
@@ -567,7 +567,7 @@ public final class DungeonAssault extends NetworkGameClient {
           var3.field_A.c((byte) 7, 128, 9);
           var3.field_B.c((byte) -120, 128, 9);
           AccountRequestState.a(true, var3, 22050, 22050, (java.awt.Component) ((Object) AwtRasterBuffer.field_h), -126, 2048, i.field_A);
-          cm.a(1.600000023841858f, 0.9200000166893005f, -7788, 0.10000000149011612f, 25.0f);
+          RegistrationAgreementPane.a(1.600000023841858f, 0.9200000166893005f, -7788, 0.10000000149011612f, 25.0f);
           AgeValidator.field_p = 16711680;
           Bzip2State.field_l = 128;
           ui.field_b = 4473924;
@@ -738,11 +738,11 @@ public final class DungeonAssault extends NetworkGameClient {
           qd.a(true);
           ModalDialogHost.clearDeclaredStaticReferences((byte) -98);
           AccountCreationResultPanel.discardDeclaredStaticReferences(-71);
-          wi.discardDeclaredStaticReferences((byte) -97);
-          jk.releaseDeclaredStaticReferences(-18554);
-          nk.releaseDeclaredStaticReferences(2121792);
+          ProgressDialog.discardDeclaredStaticReferences((byte) -97);
+          StandardContentDialog.releaseDeclaredStaticReferences(-18554);
+          ProgressMessageDialog.releaseDeclaredStaticReferences(2121792);
           AccountRegistrationPanel.releaseDeclaredStaticReferences((byte) -53);
-          ia.resetStaticState(!param0);
+          GuestPlayConfirmationForm.resetStaticState(!param0);
           LoginPanel.releaseDeclaredStaticReferences((byte) -108);
           DisplayNameSelectionPanel.clearStaticReferences(param0);
           lh.clearStaticReferences(-107);
@@ -767,11 +767,11 @@ public final class DungeonAssault extends NetworkGameClient {
           qa.clearStaticReferences(-2544);
           ld.clearStaticReferences(false);
           hc.resetStaticState(32);
-          nm.clearDeclaredStaticReferences(38);
+          FullscreenStatusDialog.clearDeclaredStaticReferences(38);
           vd.clearStaticReferences((byte) -96);
           DefaultTextWidgetRenderer.clearStaticReferences(1);
           re.clearStaticReferences();
-          jp.clearStaticReferences();
+          VorbisSample.clearStaticReferences();
           sm.clearStaticReferences((byte) -118);
           qh.clearStaticReferences((byte) 75);
           jj.clearStaticReferences((byte) 80);
@@ -799,7 +799,7 @@ public final class DungeonAssault extends NetworkGameClient {
           UiWidget.clearStaticReferences((byte) -123);
           InteractiveWidget.b(!param0);
           SingleChildWidgetContainer.clearDeclaredStaticReferences(6);
-          sj.releaseDeclaredStaticReferences((byte) -10);
+          ResizableModalDialog.releaseDeclaredStaticReferences((byte) -10);
           ModalDialog.clearStaticReferences(param0);
           DequeWidgetContainer.clearDeclaredStaticReferences((byte) -21);
           dj.a((byte) 113);
@@ -837,8 +837,8 @@ public final class DungeonAssault extends NetworkGameClient {
           LabeledWidgetContainer.clearStaticReferences(false);
           ValidatedTextField.clearDeclaredStaticReferences((byte) -41);
           EditableTextField.resetStaticState(4);
-          hf.clearDeclaredStaticReferences(0);
-          uc.clearStaticReferences(false);
+          ContentTransitionDialog.clearDeclaredStaticReferences(0);
+          StripedProgressWidget.clearStaticReferences(false);
           NameSuggestionsPanel.releaseDeclaredStaticReferences((byte) -32);
           RichTextWidget.clearDeclaredStaticReferences((byte) -106);
           ng.f((byte) 124);
@@ -846,7 +846,7 @@ public final class DungeonAssault extends NetworkGameClient {
           rb.clearDeclaredStaticReferences(4935);
           TextFieldValidator.c((byte) 19);
           mf.clearStaticReferences(5);
-          cm.clearDeclaredStaticReferences(-119);
+          RegistrationAgreementPane.clearDeclaredStaticReferences(-119);
           mk.clearStaticReferences(false);
           wg.clearStaticReferences();
           kk.clearDeclaredStaticReferences(0);
@@ -925,11 +925,11 @@ public final class DungeonAssault extends NetworkGameClient {
           cp.resetStaticState((byte) -66);
           u.clearStaticReferences((byte) 96);
           lk.h(25161);
-          kc.clearDeclaredStaticReferences(0);
+          DialogMessagePane.clearDeclaredStaticReferences(0);
           pe.clearDeclaredStaticReferences(9);
           ak.clearDeclaredStaticReferences(-120);
           ve.clearStaticReferences(-125);
-          r.resetStaticState(-113);
+          FullscreenNoticeType.resetStaticState(-113);
           i.clearStaticReferences((byte) 122);
           kj.resetStaticState(-109);
           mm.a(127);
@@ -1036,7 +1036,7 @@ public final class DungeonAssault extends NetworkGameClient {
         RuntimeException var2 = null;
         try {
           wh.a(96);
-          if (null != cm.field_R) {
+          if (null != RegistrationAgreementPane.field_R) {
             ib.a(930);
           }
           kp.a(1);
@@ -1116,7 +1116,7 @@ public final class DungeonAssault extends NetworkGameClient {
               rc.a(-126);
             }
           } else {
-            if (cm.field_R == null) {
+            if (RegistrationAgreementPane.field_R == null) {
               stackIn_37_0 = rj.field_o;
             } else {
               stackIn_37_0 = true;

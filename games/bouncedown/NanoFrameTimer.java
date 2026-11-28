@@ -117,7 +117,7 @@ final class NanoFrameTimer extends FrameTimer {
             String var3 = (String) null;
             NanoFrameTimer.a((byte) -31, (String) null);
           }
-          AppletShell.a(false, sh.field_jb, -1);
+          AppletShell.a(false, ProgressMessageDialog.field_jb, -1);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "el.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

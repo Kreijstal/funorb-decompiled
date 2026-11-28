@@ -1126,7 +1126,7 @@ final class PlayerShip extends MovingTunnelEntity {
                     break;
                   }
                   this.a(false, var3, var18 * 3, ac.field_c);
-                  this.field_Ab[var18].a(ud.field_o, var11, this.field_bb[2 + var18 * 3], var14, var16, dh.field_sb, rn.field_c, this.field_bb[var18 * 3], false, this.field_bb[1 + 3 * var18]);
+                  this.field_Ab[var18].a(ud.field_o, var11, this.field_bb[2 + var18 * 3], var14, var16, ProgressMessageDialog.field_sb, rn.field_c, this.field_bb[var18 * 3], false, this.field_bb[1 + 3 * var18]);
                   this.field_Ab[var18].field_Q.field_m = this.field_Q * 96 >> 3;
                   this.field_A.field_b.addLast((IntrusiveNode) (this.field_Ab[var18]), (byte) -64);
                   var18++;
@@ -1141,7 +1141,7 @@ final class PlayerShip extends MovingTunnelEntity {
                   if (stackIn_527_0 != null) {
                     var19.field_Z.b(param0 ^ 11792);
                     var19.a(false, var3, 0, og.field_g);
-                    var19.field_Q.a(ud.field_o, var11, var19.field_T[2], var14, var12_double, dh.field_sb, rn.field_c, var19.field_T[0], false, var19.field_T[1]);
+                    var19.field_Q.a(ud.field_o, var11, var19.field_T[2], var14, var12_double, ProgressMessageDialog.field_sb, rn.field_c, var19.field_T[0], false, var19.field_T[1]);
                     if (null != var19.field_Q.field_Q) {
                       var19.field_Q.field_Q.field_m = this.field_Q * 96 >> 3;
                     }
@@ -1212,7 +1212,7 @@ final class PlayerShip extends MovingTunnelEntity {
                     !mc.field_e[ja.field_d]) {
                     if (0 >= this.field_tb ||
                       this.field_A.field_M ||
-                      !mc.field_e[ib.field_W]) {
+                      !mc.field_e[StripedProgressWidget.field_W]) {
                       if ((this.field_zb <= 0 ||
                         this.field_A.field_M ||
                         !mc.field_e[DefaultTextWidgetRenderer.field_l]) &&

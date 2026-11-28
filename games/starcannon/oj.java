@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oj extends IntrusiveNode {
-    static ae field_j;
+    static FullscreenNoticeType field_j;
     int field_h;
     int field_i;
     static Boolean field_g;
@@ -63,7 +63,7 @@ final class oj extends IntrusiveNode {
     }
 
     static {
-        field_j = new ae();
+        field_j = new FullscreenNoticeType();
         field_k = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
     }
 }

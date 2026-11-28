@@ -35,7 +35,7 @@ class fg extends DefaultTextWidgetRenderer {
           p.field_a = dupTemp$0;
           of.field_L = dupTemp$0;
           if (ia.field_f.status != 1) {
-            dh.field_bb = MatchingFieldValidator.field_p;
+            ProgressMessageDialog.field_bb = MatchingFieldValidator.field_p;
           } else {
             try {
               p.field_d = new BufferedSocket((java.net.Socket) (ia.field_f.result), ef.field_i);
@@ -46,14 +46,14 @@ class fg extends DefaultTextWidgetRenderer {
               lh.field_c = stackIn_13_0;
               fe.field_b = stackIn_13_0;
               ce.field_d = stackIn_13_0;
-              dh.field_bb = ModalDialogHost.field_E;
+              ProgressMessageDialog.field_bb = ModalDialogHost.field_E;
               var5.position = 0;
               nl.a(20994, gi.field_a, ti.field_eb, uk.field_b, dk.field_a);
               bh.a(-1, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
-              dh.field_bb = MatchingFieldValidator.field_p;
+              ProgressMessageDialog.field_bb = MatchingFieldValidator.field_p;
               if (param1 > -14) {
                 return true;
               }

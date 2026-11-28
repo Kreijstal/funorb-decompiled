@@ -12,7 +12,7 @@ final class uf {
     int field_l;
     String field_g;
     static boolean field_i;
-    static ia field_a;
+    static FullscreenNoticeType field_a;
     static he[] field_j;
 
     public static void clearStaticReferences(byte param0) {
@@ -24,7 +24,7 @@ final class uf {
           field_a = null;
           return;
         }
-        field_a = (ia) null;
+        field_a = (FullscreenNoticeType) null;
         field_a = null;
     }
 
@@ -37,6 +37,6 @@ final class uf {
         field_k = 0;
         field_f = new boolean[]{true, false, false, false, false, true, true, false, false, false, true, false, false, false, false, false, true, false, false, false, false, false, false, true, false, false, true, true, true, true};
         field_c = new bb();
-        field_a = new ia();
+        field_a = new FullscreenNoticeType();
     }
 }

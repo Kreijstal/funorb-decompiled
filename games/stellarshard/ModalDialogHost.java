@@ -6,7 +6,7 @@ final class ModalDialogHost extends SingleChildWidgetContainer {
     static Sprite[] field_D;
     static String field_E;
     static int[] field_I;
-    static ck field_G;
+    static ProgressMessageDialog field_G;
     static byte[][] field_H;
     static int[] field_B;
     static int field_F;
@@ -166,7 +166,7 @@ final class ModalDialogHost extends SingleChildWidgetContainer {
     }
 
     public ModalDialogHost() {
-        super(0, 0, AccountServiceResult.field_b, vf.field_F, (WidgetRenderer) null, (WidgetEventListener) null);
+        super(0, 0, AccountServiceResult.field_b, DialogMessagePane.field_F, (WidgetRenderer) null, (WidgetEventListener) null);
         this.field_C = new IntrusiveDeque();
     }
 

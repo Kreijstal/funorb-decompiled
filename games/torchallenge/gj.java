@@ -139,40 +139,40 @@ final class gj {
           gi.field_c = true;
           RandomAccessCacheFile.field_c = param1;
           if (param0 == ~RandomAccessCacheFile.field_c) {
-            var3_int = ga.a(0, pf.field_c, wf.field_e, aj.field_b, ll.field_c);
+            var3_int = ga.a(0, pf.field_c, wf.field_e, aj.field_b, FullscreenNoticeType.field_c);
             var4 = 3 + var3_int;
             dl.field_s = new int[var4];
             MatchingFieldValidator.field_s = new String[var4];
             for (var5 = 0; var4 > var5; var5++) {
               dl.field_s[var5] = -1;
             }
-            pe.field_db = new int[2];
+            ProgressDialog.field_db = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
               MatchingFieldValidator.field_s[var5] = wf.field_e[var5];
             }
             MatchingFieldValidator.field_s[-3 + var4] = "";
             MatchingFieldValidator.field_s[var4 - 2] = cb.field_d;
             dl.field_s[-2 + var4] = 0;
-            pe.field_db[0] = 4;
+            ProgressDialog.field_db[0] = 4;
             MatchingFieldValidator.field_s[-1 + var4] = ab.field_n;
             dl.field_s[-1 + var4] = 1;
-            pe.field_db[1] = 5;
+            ProgressDialog.field_db[1] = 5;
           } else if (RandomAccessCacheFile.field_c == 1) {
-            var3_int = ga.a(0, pf.field_c, wf.field_e, aj.field_b, ll.field_c);
+            var3_int = ga.a(0, pf.field_c, wf.field_e, aj.field_b, FullscreenNoticeType.field_c);
             var4 = 2 + var3_int;
             MatchingFieldValidator.field_s = new String[var4];
             dl.field_s = new int[var4];
             for (var5 = 0; var4 > var5; var5++) {
               dl.field_s[var5] = -1;
             }
-            pe.field_db = new int[1];
+            ProgressDialog.field_db = new int[1];
             for (var5 = 0; var3_int > var5; var5++) {
               MatchingFieldValidator.field_s[var5] = wf.field_e[var5];
             }
             MatchingFieldValidator.field_s[var4 - 2] = "";
             MatchingFieldValidator.field_s[-1 + var4] = ab.field_n;
             dl.field_s[var4 - 1] = 0;
-            pe.field_db[0] = 5;
+            ProgressDialog.field_db[0] = 5;
           } else if (RandomAccessCacheFile.field_c != 2) {
             if (3 == RandomAccessCacheFile.field_c) {
               if (!ArchiveRequest.field_u.privilegedTasksEnabled) {
@@ -186,14 +186,14 @@ final class gj {
               for (var5 = 0; var5 < var4; var5++) {
                 dl.field_s[var5] = -1;
               }
-              pe.field_db = new int[1];
+              ProgressDialog.field_db = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
                 MatchingFieldValidator.field_s[var5] = wf.field_e[var5];
               }
               MatchingFieldValidator.field_s[-2 + var4] = "";
               MatchingFieldValidator.field_s[-1 + var4] = ab.field_n;
               dl.field_s[-1 + var4] = 0;
-              pe.field_db[0] = 5;
+              ProgressDialog.field_db[0] = 5;
             } else if (RandomAccessCacheFile.field_c == 4) {
               var3_int = ga.a(~param0, pf.field_c, wf.field_e, aj.field_b, uc.field_T);
               var4 = 2 + var3_int;
@@ -202,14 +202,14 @@ final class gj {
               for (var5 = 0; var5 < var4; var5++) {
                 dl.field_s[var5] = -1;
               }
-              pe.field_db = new int[1];
+              ProgressDialog.field_db = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
                 MatchingFieldValidator.field_s[var5] = wf.field_e[var5];
               }
               MatchingFieldValidator.field_s[var4 - 2] = "";
               MatchingFieldValidator.field_s[-1 + var4] = ab.field_n;
               dl.field_s[var4 - 1] = 0;
-              pe.field_db[0] = 5;
+              ProgressDialog.field_db[0] = 5;
             } else {
               if (RandomAccessCacheFile.field_c != 5) {
                 throw new IllegalArgumentException();
@@ -221,17 +221,17 @@ final class gj {
               for (var5 = 0; var4 > var5; var5++) {
                 dl.field_s[var5] = -1;
               }
-              pe.field_db = new int[2];
+              ProgressDialog.field_db = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
                 MatchingFieldValidator.field_s[var5] = wf.field_e[var5];
               }
               MatchingFieldValidator.field_s[-3 + var4] = "";
               MatchingFieldValidator.field_s[-2 + var4] = SecondaryNodeDeque.field_g;
               dl.field_s[-2 + var4] = 0;
-              pe.field_db[0] = 3;
+              ProgressDialog.field_db[0] = 3;
               MatchingFieldValidator.field_s[-1 + var4] = ab.field_n;
               dl.field_s[var4 - 1] = 1;
-              pe.field_db[1] = 5;
+              ProgressDialog.field_db[1] = 5;
             }
           } else {
             var3_int = ga.a(0, pf.field_c, wf.field_e, aj.field_b, ni.a(new String[]{"<br><%0><br>"}, 0, qf.field_b));
@@ -286,13 +286,13 @@ final class gj {
             }
             dl.field_s[1] = 0;
             MatchingFieldValidator.field_s[0] = kl.field_c;
-            pe.field_db = new int[2];
+            ProgressDialog.field_db = new int[2];
             MatchingFieldValidator.field_s[1] = ua.field_a;
             MatchingFieldValidator.field_s[2] = fb.field_i;
             MatchingFieldValidator.field_s[3] = ti.field_c;
-            pe.field_db[0] = 5;
+            ProgressDialog.field_db[0] = 5;
             MatchingFieldValidator.field_s[4] = tk.field_T;
-            pe.field_db[1] = 2;
+            ProgressDialog.field_db[1] = 2;
             MatchingFieldValidator.field_s[5] = "";
             dl.field_s[3] = 1;
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
@@ -321,7 +321,7 @@ final class gj {
             }
             IterableNodeHashTable.field_e = ol.correctedCurrentTimeMillis(256);
           }
-          DebouncedFieldValidator.field_c.field_b = pe.field_db.length;
+          DebouncedFieldValidator.field_c.field_b = ProgressDialog.field_db.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < MatchingFieldValidator.field_s.length; var4Lifetime1++) {
             stackIn_88_0 = -18;

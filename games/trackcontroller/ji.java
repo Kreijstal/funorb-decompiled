@@ -39,7 +39,7 @@ final class ji {
               vh.field_q = false;
               var3_int = 1;
             }
-            fb.a(var3_int != 0, ie.a(122), dg.field_E, ei.a((byte) 116), (byte) -103);
+            fb.a(var3_int != 0, ie.a(122), StripedProgressWidget.field_E, ei.a((byte) 116), (byte) -103);
           } else {
             if (!DefaultTextWidgetRenderer.a(false)) {
               SoftwareRasterizer.clearRaster();
@@ -94,7 +94,7 @@ final class ji {
               vh.field_q = false;
               var3_int = 1;
             }
-            fb.a(var3_int != 0, ie.a(122), dg.field_E, ei.a((byte) 116), (byte) -103);
+            fb.a(var3_int != 0, ie.a(122), StripedProgressWidget.field_E, ei.a((byte) 116), (byte) -103);
           } else {
             if (!DefaultTextWidgetRenderer.a(false)) {
               SoftwareRasterizer.clearRaster();

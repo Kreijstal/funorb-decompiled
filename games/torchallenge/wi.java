@@ -146,7 +146,7 @@ final class wi {
         if (param0 != 1) {
           field_a = (int[]) null;
         }
-        if (sj.field_R) {
+        if (DialogMessagePane.field_R) {
           return null;
         }
         if (bk.field_p < cf.field_a) {

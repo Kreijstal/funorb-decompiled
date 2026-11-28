@@ -19,7 +19,7 @@ abstract class TileEffect {
 
     final static void b(byte param0) {
         if (!AttackUpAllAnimation.e(-29919)) {
-          sja.field_fb.writeCipheredByte(78, (byte) 109);
+          StandardContentDialog.field_fb.writeCipheredByte(78, (byte) 109);
           MatchingFieldValidator.field_j = true;
           if (param0 == -88) {
             Crc32Table.a(0, (byte) 101);

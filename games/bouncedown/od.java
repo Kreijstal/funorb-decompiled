@@ -94,7 +94,7 @@ final class od {
 
     final static void a(byte param0) {
         String var2 = (String) null;
-        MidiPcmStream.a((String) null, eb.field_z, -98);
+        MidiPcmStream.a((String) null, RegistrationAgreementPane.field_z, -98);
         if (param0 != 24) {
           field_c = (String) null;
         }

@@ -1,0 +1,470 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class ContentTransitionDialog extends ResizableModalDialog {
+    static int field_R;
+    private int field_Q;
+    private int field_W;
+    private sd field_O;
+    private int field_S;
+    private AlphaWidgetContainer field_Y;
+    private int field_V;
+    private UiWidget field_T;
+    static Sprite[] field_U;
+    private int field_X;
+    static String field_P;
+
+    private final void installContent(UiWidget param0, int param1) {
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        try {
+          if (this.field_Y != null) {
+            this.field_Y.unlink(param1 ^ -19820);
+          }
+          if (param0 != null) {
+            param0.setBounds(param0.field_p, 13361, 6, param0.field_l, this.field_V + 6);
+            this.field_Y = new AlphaWidgetContainer(param0);
+            if (MonkeyPuzzle2.field_F) {
+              this.field_Y = new AlphaWidgetContainer();
+            }
+          } else {
+            this.field_Y = new AlphaWidgetContainer();
+          }
+          this.addChild((byte) -114, this.field_Y);
+          this.field_T = null;
+          if (param1 != 6) {
+            this.finishResize(-125);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_12_0 = var3;
+          stackIn_12_1 = new StringBuilder().append("pc.M(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw la.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final void resizeCompleted(byte param0) {
+        if (param0 != 10) {
+          this.replaceContent((byte) 67, (UiWidget) null);
+          if (fl.field_c != this.field_O) {
+            this.field_O = ie.field_c;
+            this.field_X = 0;
+            this.installContent(this.field_T, 6);
+            this.field_T = null;
+            this.field_Y.field_F = 0;
+            return;
+          }
+          return;
+        }
+        if (fl.field_c != this.field_O) {
+          this.field_O = ie.field_c;
+          this.field_X = 0;
+          this.installContent(this.field_T, 6);
+          this.field_T = null;
+          this.field_Y.field_F = 0;
+          return;
+        }
+    }
+
+    void replaceContent(byte param0, UiWidget param1) {
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        try {
+          if (param0 < 25) {
+            this.resizeCompleted((byte) 67);
+          }
+          this.field_T = param1;
+          if (q.field_c != this.field_O) {
+            if (this.field_O == fl.field_c) {
+              return;
+            }
+            this.field_X = 0;
+            this.field_O = fl.field_c;
+            if (!MonkeyPuzzle2.field_F) {
+              return;
+            }
+          }
+          this.resizeDialog(this.field_V + (12 + this.field_T.field_p), 0, this.field_T.field_l + 12, this.field_Q);
+          this.field_X = 0;
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_10_0 = var3;
+          stackIn_10_1 = new StringBuilder().append("pc.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw la.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+        }
+    }
+
+    boolean advanceDialogAnimation(int param0) {
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int fieldTemp$7 = 0;
+        int fieldTemp$6 = 0;
+        int var3;
+        var3 = MonkeyPuzzle2.field_F ? 1 : 0;
+        if (null == this.field_O) {
+          if (param0 == -23913) {
+            return super.advanceDialogAnimation(-23913);
+          }
+          this.snapDialogAnimation(false);
+          return super.advanceDialogAnimation(-23913);
+        }
+        if (fl.field_c == this.field_O) {
+          fieldTemp$4 = this.field_X + 1;
+          this.field_X = this.field_X + 1;
+          if (fieldTemp$4 != this.field_S) {
+            this.field_Y.field_F = -((this.field_X << 8) / this.field_S) + 256;
+          } else {
+            this.field_O = q.field_c;
+            this.resizeDialog(this.field_T.field_p + (12 + this.field_V), 0, this.field_T.field_l + 12, this.field_Q);
+            this.field_X = 0;
+            this.field_Y.field_F = 0;
+            if (var3 != 0) {
+              this.field_Y.field_F = -((this.field_X << 8) / this.field_S) + 256;
+            }
+          }
+          if (param0 == -23913) {
+            return super.advanceDialogAnimation(-23913);
+          }
+          this.snapDialogAnimation(false);
+          return super.advanceDialogAnimation(-23913);
+        }
+        if (this.field_O != ie.field_c) {
+          if (param0 == -23913) {
+            return super.advanceDialogAnimation(-23913);
+          }
+          this.snapDialogAnimation(false);
+          return super.advanceDialogAnimation(-23913);
+        }
+        fieldTemp$5 = this.field_X + 1;
+        this.field_X = this.field_X + 1;
+        if (fieldTemp$5 == this.field_W) {
+          this.field_Y.field_F = 256;
+          this.field_O = null;
+          if (var3 != 0) {
+            this.field_Y.field_F = (this.field_X << 8) / this.field_W;
+            fieldTemp$7 = this.field_X + 1;
+            this.field_X = this.field_X + 1;
+            if (fieldTemp$7 == this.field_S) {
+              this.field_O = q.field_c;
+              this.resizeDialog(this.field_T.field_p + (12 + this.field_V), 0, this.field_T.field_l + 12, this.field_Q);
+              this.field_X = 0;
+              this.field_Y.field_F = 0;
+            }
+            this.field_Y.field_F = -((this.field_X << 8) / this.field_S) + 256;
+          }
+          if (param0 == -23913) {
+            return super.advanceDialogAnimation(-23913);
+          }
+          this.snapDialogAnimation(false);
+          return super.advanceDialogAnimation(-23913);
+        }
+        this.field_Y.field_F = (this.field_X << 8) / this.field_W;
+        if (var3 == 0) {
+          if (param0 == -23913) {
+            return super.advanceDialogAnimation(-23913);
+          }
+          this.snapDialogAnimation(false);
+          return super.advanceDialogAnimation(-23913);
+        }
+        fieldTemp$6 = this.field_X + 1;
+        this.field_X = this.field_X + 1;
+        if (fieldTemp$6 != this.field_S) {
+          this.field_Y.field_F = -((this.field_X << 8) / this.field_S) + 256;
+        } else {
+          this.field_O = q.field_c;
+          this.resizeDialog(this.field_T.field_p + (12 + this.field_V), 0, this.field_T.field_l + 12, this.field_Q);
+          this.field_X = 0;
+          this.field_Y.field_F = 0;
+          this.field_Y.field_F = -((this.field_X << 8) / this.field_S) + 256;
+        }
+        if (param0 == -23913) {
+          return super.advanceDialogAnimation(-23913);
+        }
+        this.snapDialogAnimation(false);
+        return super.advanceDialogAnimation(-23913);
+    }
+
+    final static String a(byte param0, boolean param1, CharSequence param2) {
+        String stackIn_3_0 = null;
+        String stackIn_8_0 = null;
+        String stackIn_13_0 = null;
+        String stackIn_18_0 = null;
+        boolean stackIn_24_0 = false;
+        String stackIn_31_0 = null;
+        int stackIn_34_0 = 0;
+        String stackIn_37_0 = null;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        String stackIn_41_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        boolean stackOut_23_0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        String var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        var8 = MonkeyPuzzle2.field_F ? 1 : 0;
+        try {
+          if (param2 == null) {
+            stackIn_3_0 = NameSuggestionsPanel.field_B;
+            return stackIn_3_0;
+          }
+          var3_int = param2.length();
+          if (var3_int >= 1 &&
+            12 >= var3_int) {
+            var4 = BoundedRandomAccessFile.a((byte) 109, param2);
+            if (var4 != null &&
+              var4.length() >= 1) {
+              if (!ok.a(-61, var4.charAt(0)) &&
+                !ok.a(-57, var4.charAt(-1 + var4.length()))) {
+                if (param0 > -92) {
+                  ContentTransitionDialog.a((byte) 28, false, (CharSequence) null);
+                }
+                var5 = 0;
+                var6 = 0;
+                boolean decompiledNaturalLoopExit0 = false;
+                while (!(decompiledNaturalLoopExit0 = (!(var6 < param2.length())))) {
+                  var7 = param2.charAt(var6);
+                  stackOut_23_0 = ok.a(-115, (char) var7);
+                  stackIn_34_0 = stackOut_23_0 ? 1 : 0;
+                  stackIn_24_0 = stackOut_23_0;
+                  if (var8 == 0) {
+                    if (stackIn_24_0) {
+                      var5++;
+                    } else {
+                      var5 = 0;
+                    }
+                    if (var5 >= 2 &&
+                      !param1) {
+                      stackIn_31_0 = ac.field_d;
+                      return stackIn_31_0;
+                    }
+                    var6++;
+                    continue;
+                  }
+                  break;
+                }
+                if (decompiledNaturalLoopExit0) {
+                  stackIn_34_0 = -1;
+                }
+                if (stackIn_34_0 <= ~var5) {
+                  return null;
+                }
+                stackIn_37_0 = n.field_c;
+                return stackIn_37_0;
+              }
+              stackIn_18_0 = n.field_c;
+              return stackIn_18_0;
+            }
+            stackIn_13_0 = NameSuggestionsPanel.field_B;
+            return stackIn_13_0;
+          }
+          stackIn_8_0 = NameSuggestionsPanel.field_B;
+          return stackIn_8_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_40_0 = var3;
+          stackIn_40_1 = new StringBuilder().append("pc.CA(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_41_2 = "null";
+          } else {
+            stackIn_41_2 = "{...}";
+          }
+          throw la.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+        }
+    }
+
+    final boolean snapDialogAnimation(boolean param0) {
+        if (!param0) {
+          this.finishResize(-21);
+          return super.snapDialogAnimation(false);
+        }
+        this.field_T = (UiWidget) null;
+        this.finishResize(-21);
+        return super.snapDialogAnimation(false);
+    }
+
+    boolean handleKey(UiWidget param0, char param1, int param2, int param3) {
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var5_int = 72 / ((param3 - 37) / 50);
+          if (super.handleKey(param0, param1, param2, -113)) {
+            return true;
+          }
+          if (this.field_Y == null) {
+            return false;
+          }
+          if (param2 == 98) {
+            this.field_Y.takeFocus(param0, false);
+          }
+          if (param2 == 99) {
+            this.field_Y.takeFocus(param0, false);
+          }
+          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_14_0 = var5;
+          stackIn_14_1 = new StringBuilder().append("pc.V(");
+          if (param0 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          throw la.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final void finishResize(int param0) {
+        if (null != this.field_O) {
+          if (ie.field_c != this.field_O) {
+            this.setCenteredSize(12 + this.field_V + this.field_T.field_p, (byte) -11, this.field_T.field_l + 12);
+            this.installContent(this.field_T, 6);
+          } else {
+            this.field_Y.field_F = 256;
+            this.field_O = null;
+            super.finishResize(param0 ^ 0);
+            if (param0 != -21) {
+              this.replaceContent((byte) -90, (UiWidget) null);
+              return;
+            }
+            return;
+          }
+          this.field_Y.field_F = 256;
+          this.field_O = null;
+          super.finishResize(param0 ^ 0);
+          if (param0 != -21) {
+            this.replaceContent((byte) -90, (UiWidget) null);
+            return;
+          }
+          return;
+        }
+        super.finishResize(param0 ^ 0);
+        if (param0 == -21) {
+          return;
+        }
+        this.replaceContent((byte) -90, (UiWidget) null);
+    }
+
+    public static void resetStaticState(boolean param0) {
+        field_U = null;
+        field_P = null;
+        if (!param0) {
+          field_R = 105;
+        }
+    }
+
+    ContentTransitionDialog(ModalDialogHost param0, UiWidget param1, int param2, int param3, int param4) {
+        super(param0, 12 + param1.field_l, param1.field_p + (param2 + 12));
+        try {
+          this.field_W = param3;
+          this.field_S = param3;
+          this.field_V = param2;
+          this.field_Q = param4;
+          this.installContent(param1, 6);
+        } catch (RuntimeException runtimeException) {
+          throw la.a((Throwable) ((Object) runtimeException), "pc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+    }
+
+    final static void a(byte param0, int param1, String param2) {
+        int var3_int = 0;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_29_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        try {
+          ah.field_h = false;
+          if (param0 != -46) {
+            field_R = 44;
+          }
+          hj.field_L = false;
+          if (null != me.field_f) {
+            if (!me.field_f.field_z) {
+              return;
+            }
+            if (param1 == 8) {
+              param1 = 2;
+              if (!fk.field_a) {
+                param2 = od.field_o;
+                if (MonkeyPuzzle2.field_F) {
+                  param2 = FullscreenFocusCanvas.field_b;
+                }
+              } else {
+                param2 = FullscreenFocusCanvas.field_b;
+              }
+              j.field_e.a(bh.field_b, (byte) -34);
+            }
+            var3_int = 1;
+            if (param1 == 10) {
+              TextFieldValidator.d((byte) 35);
+              var3_int = 0;
+            }
+            if (var3_int != 0) {
+              if (hj.field_L) {
+                param2 = gg.a(new String[]{param2}, ek.field_c, true);
+              }
+              if (RegistrationAgreementPane.field_F) {
+                param2 = DropTargetWidgetContainer.field_F;
+              }
+              me.field_f.showResult(-10, param2, param1);
+            }
+            if (256 != param1) {
+              if (param1 == 10) {
+                return;
+              }
+              if (!fk.field_a) {
+                j.field_e.k(-112);
+                return;
+              }
+            }
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_28_0 = var3;
+          stackIn_28_1 = new StringBuilder().append("pc.S(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_29_2 = "null";
+          } else {
+            stackIn_29_2 = "{...}";
+          }
+          throw la.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+        }
+    }
+
+    static {
+        field_R = 640;
+        field_P = "Fullscreen play is an option available to subscribing members only. For more details see the website.";
+    }
+}

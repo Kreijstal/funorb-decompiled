@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class AccountCreationResultPanel extends ha implements WidgetActivationListener {
+final class AccountCreationResultPanel extends ProgressMessageDialog implements WidgetActivationListener {
     private AccountRegistrationPanel field_jb;
     private boolean field_mb;
     private boolean field_nb;
@@ -26,7 +26,7 @@ final class AccountCreationResultPanel extends ha implements WidgetActivationLis
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        sk var5 = null;
+        DialogMessagePane var5 = null;
         int var6 = 0;
         var6 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
@@ -50,38 +50,38 @@ final class AccountCreationResultPanel extends ha implements WidgetActivationLis
               }
             }
           }
-          var5 = new sk((ha) (this), IntrusiveDeque.field_c, var4);
+          var5 = new DialogMessagePane((ProgressMessageDialog) (this), IntrusiveDeque.field_c, var4);
           if (param1 != 9) {
             return;
           }
           if (param0.success) {
             if (param0.field_f) {
-              this.c((byte) 54, new ja(this));
+              this.replaceContent((byte) 54, new RegistrationAgreementPane(this));
               return;
             }
-            var5.a(0, (WidgetEventListener) (this), pi.field_i);
+            var5.addListenerButton(0, (WidgetEventListener) (this), pi.field_i);
           } else {
             if (!this.field_nb) {
               if (5 == param0.statusCode) {
-                var5.a((byte) -9, 11, NodeHashTableIterator.field_g);
-                var5.a((byte) 119, 17, vh.field_L);
+                var5.addActionButton((byte) -9, 11, NodeHashTableIterator.field_g);
+                var5.addActionButton((byte) 119, 17, vh.field_L);
               } else {
-                var5.a((byte) -81, -1, nf.field_E);
+                var5.addActionButton((byte) -81, -1, ResizableModalDialog.field_E);
               }
             } else {
-              var5.a(0, (WidgetEventListener) (this), pi.field_i);
+              var5.addListenerButton(0, (WidgetEventListener) (this), pi.field_i);
             }
             if (3 != param0.statusCode) {
               if (param0.statusCode != 6) {
-                this.c((byte) 46, var5);
+                this.replaceContent((byte) 46, var5);
                 return;
               }
-              var5.a((byte) -105, 9, NanoFrameTimer.field_k);
+              var5.addActionButton((byte) -105, 9, NanoFrameTimer.field_k);
             } else {
-              var5.a((byte) 115, 7, GameApplet.field_m);
+              var5.addActionButton((byte) 115, 7, GameApplet.field_m);
             }
           }
-          this.c((byte) 46, var5);
+          this.replaceContent((byte) 46, var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -97,7 +97,7 @@ final class AccountCreationResultPanel extends ha implements WidgetActivationLis
         }
     }
 
-    final void h(byte param0) {
+    final void showAccountCreationConnectionFailure(byte param0) {
         if (param0 >= 79) {
           this.showAccountCreationResult(lh.createAccountErrorResult(true, fe.field_e, 248), 9, true);
           return;
@@ -126,7 +126,7 @@ final class AccountCreationResultPanel extends ha implements WidgetActivationLis
         }
         try {
           ud.a(49);
-          this.g((byte) -75);
+          this.closeDialog((byte) -75);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "jg.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

@@ -869,7 +869,7 @@ abstract class tl {
           }
           var2Lifetime137 = LevelProgressUpdate.loadRootArchiveFile("loadloop_playingwizardrun", 1);
           if (var2Lifetime137 != null) {
-            ae.field_D = fa.a((byte) -123, var2Lifetime137);
+            GuestPlayConfirmationForm.field_D = fa.a((byte) -123, var2Lifetime137);
           }
           var2Lifetime138 = LevelProgressUpdate.loadRootArchiveFile("oneplayerpuzzles", 1);
           if (null != var2Lifetime138) {
@@ -1189,7 +1189,7 @@ abstract class tl {
           }
           var2Lifetime217 = LevelProgressUpdate.loadRootArchiveFile("player_movemessage_helper", 1);
           if (var2Lifetime217 != null) {
-            en.field_F = fa.a((byte) -84, var2Lifetime217);
+            ResizableModalDialog.field_F = fa.a((byte) -84, var2Lifetime217);
           }
           var2Lifetime218 = LevelProgressUpdate.loadRootArchiveFile("rock_name", 1);
           if (null != var2Lifetime218) {
@@ -1221,7 +1221,7 @@ abstract class tl {
           }
           var2Lifetime225 = LevelProgressUpdate.loadRootArchiveFile("spiderweb_information", 1);
           if (null != var2Lifetime225) {
-            ae.field_C = fa.a((byte) -65, var2Lifetime225);
+            GuestPlayConfirmationForm.field_C = fa.a((byte) -65, var2Lifetime225);
           }
           var2Lifetime226 = LevelProgressUpdate.loadRootArchiveFile("stickyball_name", 1);
           if (null != var2Lifetime226) {

@@ -93,7 +93,7 @@ final class bk {
         if (param0 != -25704) {
           return true;
         }
-        return ei.field_R;
+        return ResizableModalDialog.field_R;
     }
 
     final static boolean a(byte param0, boolean param1, int param2, CharSequence param3) {

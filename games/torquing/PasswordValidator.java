@@ -53,7 +53,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_12_0 = nh.field_q;
             return stackIn_12_0;
           }
-          if (fm.a((byte) -98, var5)) {
+          if (GuestPlayConfirmationForm.a((byte) -98, var5)) {
             stackIn_15_0 = jg.field_u;
             return stackIn_15_0;
           }

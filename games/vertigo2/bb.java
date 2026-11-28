@@ -4,7 +4,7 @@
 final class bb extends TextureOperator {
     static String field_G;
     private int field_E;
-    static fg field_F;
+    static ProgressDialog field_F;
     private int field_D;
     static String field_y;
     private int field_C;
@@ -63,7 +63,7 @@ final class bb extends TextureOperator {
           var33 = var27[2];
           var25 = var33;
           var10 = var25;
-          for (var11 = 0; we.field_M > var11; var11++) {
+          for (var11 = 0; StripedProgressWidget.field_M > var11; var11++) {
             var13 = var39[var11];
             var12 = -this.field_z[0] + var13;
             if (var12 < 0) {
@@ -186,7 +186,7 @@ final class bb extends TextureOperator {
         field_F = null;
         field_y = null;
         if (param0 != 76) {
-          field_F = (fg) null;
+          field_F = (ProgressDialog) null;
         }
     }
 
@@ -212,7 +212,7 @@ final class bb extends TextureOperator {
           uo.field_d = param1.field_a;
           jo.field_b = param1.field_s;
           DelegatingCanvas.field_a = param1.field_b;
-          fj.field_lb = param1.field_f;
+          ProgressMessageDialog.field_lb = param1.field_f;
         }
         if (param0) {
           return;

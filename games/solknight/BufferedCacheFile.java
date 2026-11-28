@@ -350,15 +350,15 @@ final class BufferedCacheFile {
             ProxyAuthenticationRequiredException.field_a = 128;
           }
           if (pl.field_a > 0) {
-            ci.field_ib = 256;
+            ProgressMessageDialog.field_ib = 256;
             NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t - pl.field_a;
             lk.field_e = lk.field_e + pl.field_a;
             pl.field_a = 0;
             me.a(false);
           }
-          ci.field_ib = 15 * ci.field_ib / 16 - 1;
-          if (ci.field_ib < 0) {
-            ci.field_ib = 0;
+          ProgressMessageDialog.field_ib = 15 * ProgressMessageDialog.field_ib / 16 - 1;
+          if (ProgressMessageDialog.field_ib < 0) {
+            ProgressMessageDialog.field_ib = 0;
           }
           if (0 < fg.field_a) {
             fg.field_a = fg.field_a - 1;
@@ -369,8 +369,8 @@ final class BufferedCacheFile {
               }
             }
           }
-          if (ci.field_ib < 128) {
-            ci.field_ib = 128;
+          if (ProgressMessageDialog.field_ib < 128) {
+            ProgressMessageDialog.field_ib = 128;
           }
           if (RichTextLayout.field_p >= 25 &&
             SectorCacheStore.field_h < 2) {

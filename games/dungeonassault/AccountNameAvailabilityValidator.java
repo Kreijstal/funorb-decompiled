@@ -145,7 +145,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         if (!param0) {
           field_r = (RgbSprite) null;
         }
-        stackIn_9_0 = (null != NameSuggestionsPanel.field_S) || (uc.g(127)) || (null != MouseInput.field_e) || (InteractiveWidget.g(-1));
+        stackIn_9_0 = (null != NameSuggestionsPanel.field_S) || (StripedProgressWidget.g(127)) || (null != MouseInput.field_e) || (InteractiveWidget.g(-1));
         return stackIn_9_0;
     }
 

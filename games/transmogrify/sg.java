@@ -115,19 +115,19 @@ final class sg {
     }
 
     sg(boolean param0) {
-        this.field_g = a.field_bb;
+        this.field_g = ContentTransitionDialog.field_bb;
         this.field_i = kd.field_a;
         this.field_l = u.field_d;
         this.field_m = fd.field_i;
         if (param0) {
-          this.field_j = a.field_T;
+          this.field_j = ContentTransitionDialog.field_T;
         } else {
           this.field_j = null;
         }
         this.field_f = ProxyAuthenticationRequiredException.field_b;
         this.field_h = l.field_c;
         this.field_c = LetterTile.field_m;
-        this.field_b = sh.field_b;
+        this.field_b = FullscreenNoticeType.field_b;
     }
 
     static {

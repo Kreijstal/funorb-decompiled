@@ -6,7 +6,7 @@ final class qc {
     private RgbSprite[] field_a;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        og.a(param4, this.field_a, 96, param0, param3, param2);
+        RegistrationAgreementPane.a(param4, this.field_a, 96, param0, param3, param2);
         if (param1 != 0) {
           field_b = 91;
         }

@@ -88,9 +88,9 @@ final class hl implements de {
     final static boolean a(byte param0) {
         if (param0 != 27) {
           field_b = (String) null;
-          return tg.field_H > 250 ? true : false;
+          return GuestPlayConfirmationForm.field_H > 250 ? true : false;
         }
-        return tg.field_H > 250 ? true : false;
+        return GuestPlayConfirmationForm.field_H > 250 ? true : false;
     }
 
     public final boolean a(boolean param0, int param1) {

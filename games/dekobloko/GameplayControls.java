@@ -354,7 +354,7 @@ final class GameplayControls {
             return stackStringLocal3;
           }
           if (7 == integerArgument2) {
-            stackStringLocal4 = UiComponentPart026.stringState0460;
+            stackStringLocal4 = ProgressDialog.stringState0460;
             return stackStringLocal4;
           }
           if (integerArgument2 == 8) {
@@ -399,10 +399,10 @@ final class GameplayControls {
         boolean frameRemainderLocal4 = true;
         if (DropTargetWidgetContainer.integerState0319 < 3 && (!(PasswordValidator.integerState0776 >= 2) ||
           !MixedSupport011.booleanArrayState0002[12])) {
-          stackIntegerLocal1 = (UiComponentPart023.computeBoolean1242(-30146)) ? 0 : 1;
+          stackIntegerLocal1 = (StandardContentDialog.computeBoolean1242(-30146)) ? 0 : 1;
           integerLocal2 = stackIntegerLocal1;
           stringLocal3 = MixedSupport109.stringState0478;
-          UiComponentPart033.performAction1814(integerLocal2, -118, false, 1, booleanArgument1, stringLocal3);
+          AccountCreationResultPanel.performAction1814(integerLocal2, -118, false, 1, booleanArgument1, stringLocal3);
           frameRemainderLocal4 = false;
         }
         else {

@@ -533,7 +533,7 @@ final class hj {
           if (this.field_hb != 0) {
             var2_float = 3.1415927410125732f;
             var3 = 0.75f * var2_float + (float)(-this.field_g) / 65535.0f * var2_float * 2.0f;
-            this.field_B = this.field_B + ha.a((byte) 51, var3);
+            this.field_B = this.field_B + ProgressMessageDialog.a((byte) 51, var3);
             this.field_Z = this.field_Z + ProxySocketConnector.a(true, var3);
             this.field_V = true;
           }
@@ -946,7 +946,7 @@ final class hj {
                 if (((this.field_u == 6)) &&
                   (!(-90 + this.field_O - this.field_W <= 50))) {
                   this.field_u = 0;
-                  nf.a(TextLayout.field_a, (byte) 115, 8, 1);
+                  ResizableModalDialog.a(TextLayout.field_a, (byte) 115, 8, 1);
                 }
               }
             }
@@ -1119,10 +1119,10 @@ final class hj {
                       this.field_Y = 0;
                       TextHotspotBounds.a(50, kb.field_d);
                       this.field_R.bindAsRenderTarget();
-                      lb.a(0, 340, (byte) 24, NodeHashTableIterator.field_e, 0, 40);
+                      GuestPlayConfirmationForm.a(0, 340, (byte) 24, NodeHashTableIterator.field_e, 0, 40);
                       RichTextLayout.field_r.drawCentred(gg.a(new String[]{Integer.toString(10000)}, sc.field_d, true), 170, RichTextLayout.field_r.field_C, 1, -1);
                       this.field_f.bindAsRenderTarget();
-                      lb.a(0, 340, (byte) -14, NodeHashTableIterator.field_e, 0, 40);
+                      GuestPlayConfirmationForm.a(0, 340, (byte) -14, NodeHashTableIterator.field_e, 0, 40);
                       RichTextLayout.field_r.drawCentred(gg.a(new String[]{Integer.toString(this.field_I)}, PcmOutputWorker.field_a, true), 170, RichTextLayout.field_r.field_C, 1, -1);
                       ac.field_a.setAsRasterTarget((byte) 119);
                       if (IterableNodeHashTable.field_c == 19) {
@@ -1178,7 +1178,7 @@ final class hj {
                         if (1.0f < this.field_mb) {
                           this.field_mb = 0.0f;
                           this.field_s = this.field_s - 1;
-                          nf.n(-48);
+                          ResizableModalDialog.n(-48);
                         }
                       }
                       this.field_d = this.field_d + 2;
@@ -1289,9 +1289,9 @@ final class hj {
             }
           }
           if ((this.field_d & 15) == 0) {
-            sk.field_G = sk.field_G + 1;
-            if (sk.field_G == 6) {
-              sk.field_G = 0;
+            DialogMessagePane.field_G = DialogMessagePane.field_G + 1;
+            if (DialogMessagePane.field_G == 6) {
+              DialogMessagePane.field_G = 0;
             }
           }
           if (this.field_y == m.field_i[0].field_n) {
@@ -1301,9 +1301,9 @@ final class hj {
             this.field_W = -2;
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < 10; var4Lifetime3++) {
-            lb.field_D[var4Lifetime3] = lb.field_D[var4Lifetime3] + pf.a((byte) 23, 3);
-            if (lb.field_D[var4Lifetime3] > 100) {
-              lb.field_D[var4Lifetime3] = 0;
+            GuestPlayConfirmationForm.field_D[var4Lifetime3] = GuestPlayConfirmationForm.field_D[var4Lifetime3] + pf.a((byte) 23, 3);
+            if (GuestPlayConfirmationForm.field_D[var4Lifetime3] > 100) {
+              GuestPlayConfirmationForm.field_D[var4Lifetime3] = 0;
             }
           }
           if (this.field_J != this.field_W) {
@@ -1472,7 +1472,7 @@ final class hj {
               SoftwareRasterizer.addRadialGlow(5120, (DebouncedFieldValidator.field_d.field_m >> 1) + this.field_ib << 4, DebouncedFieldValidator.field_d.field_m << 4, -var6 + 50, cf.field_a);
             }
             if (var2_intLifetime1 != 0) {
-              SoftwareRasterizer.addRadialGlow(320 - qa.field_i.field_m << 4, var3Lifetime1 - (-(qa.field_i.field_n >> 1) + 8) << 4, qa.field_i.field_m << 4, 50, sk.field_D);
+              SoftwareRasterizer.addRadialGlow(320 - qa.field_i.field_m << 4, var3Lifetime1 - (-(qa.field_i.field_n >> 1) + 8) << 4, qa.field_i.field_m << 4, 50, DialogMessagePane.field_D);
             }
             if (var6 < 50) {
               var7_int = 145;
@@ -1541,7 +1541,7 @@ final class hj {
           }
           if (this.field_C &&
             TextLayout.field_a == 1) {
-            pc.field_U[this.field_x].draw(this.field_X, this.field_h);
+            ContentTransitionDialog.field_U[this.field_x].draw(this.field_X, this.field_h);
           }
           for (var2_intLifetime2 = 0; var2_intLifetime2 < ib.field_c; var2_intLifetime2++) {
             var3Lifetime2 = pd.field_f[var2_intLifetime2] - (dj.field_a[0].field_m >> 1);
@@ -1660,7 +1660,7 @@ final class hj {
                 var8Lifetime3 = 255;
               }
               for (var9Lifetime2 = 0; var9Lifetime2 < 10; var9Lifetime2++) {
-                SoftwareRasterizer.addRadialGlow((var9Lifetime2 * lb.field_D[var9Lifetime2] + this.field_d) % 480 + 80 << 4, -90 + this.field_k + (int)(4.0f * ProxySocketConnector.a(true, (float)(var9Lifetime2 * lb.field_D[var9Lifetime2] + this.field_d) * 0.10000000149011612f)) << 4, ll.field_c[var9Lifetime2] << 4, jf.field_f[var9Lifetime2], cf.field_a);
+                SoftwareRasterizer.addRadialGlow((var9Lifetime2 * GuestPlayConfirmationForm.field_D[var9Lifetime2] + this.field_d) % 480 + 80 << 4, -90 + this.field_k + (int)(4.0f * ProxySocketConnector.a(true, (float)(var9Lifetime2 * GuestPlayConfirmationForm.field_D[var9Lifetime2] + this.field_d) * 0.10000000149011612f)) << 4, ll.field_c[var9Lifetime2] << 4, jf.field_f[var9Lifetime2], cf.field_a);
               }
               uc.a(78, -90 + this.field_k, 558, this.field_k - 90, 3, var8Lifetime3, var7_intLifetime3, this.field_fb);
             }
@@ -1671,8 +1671,8 @@ final class hj {
           ByteStorage.b(0);
           var7 = qh.field_a[this.field_ab];
           var7.drawRotatedAboutBilinear(var7.field_m << 3, var7.field_n << 3, (int)this.field_B << 4, (int)this.field_Z << 4, this.field_g, 4096);
-          lb.field_E[0].draw(0, 0);
-          lb.field_E[1].draw(640 - lb.field_E[1].field_m, 0);
+          GuestPlayConfirmationForm.field_E[0].draw(0, 0);
+          GuestPlayConfirmationForm.field_E[1].draw(640 - GuestPlayConfirmationForm.field_E[1].field_m, 0);
           var8Lifetime4 = 0;
           var9_ref_ki = (ki) (wd.field_h.beginBackward((byte) -117));
           while (var9_ref_ki != null) {
@@ -1993,7 +1993,7 @@ final class hj {
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 10; var1_intLifetime1++) {
             jf.field_f[var1_intLifetime1] = 55 + (pf.a((byte) 119, 12) - 6);
             ll.field_c[var1_intLifetime1] = pf.a((byte) -91, 4) + 2;
-            lb.field_D[var1_intLifetime1] = pf.a((byte) -101, 20);
+            GuestPlayConfirmationForm.field_D[var1_intLifetime1] = pf.a((byte) -101, 20);
           }
           this.field_fb = new int[WidgetContainer.field_w.length];
           gl.a(WidgetContainer.field_w, 0, this.field_fb, 0, this.field_fb.length);

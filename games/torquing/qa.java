@@ -25,7 +25,7 @@ final class qa extends IntrusiveNode {
         aq.field_c = false;
         LevelRun.field_u = null;
         if (ff.field_a) {
-          IsaacCipher.field_m.n(-20041);
+          IsaacCipher.field_m.showConnectionFailure(-20041);
           if (param0 <= -43) {
             return;
           }
@@ -41,7 +41,7 @@ final class qa extends IntrusiveNode {
           }
           LevelRun.field_u = NetworkArchiveRequest.a(-115, new CharSequence[]{(CharSequence) ((Object) LevelRun.field_u), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) tf.field_b)});
         }
-        IsaacCipher.field_m.b(true);
+        IsaacCipher.field_m.closeDialog(true);
         ValidatedTextField.j((byte) -34);
         if (param0 <= -43) {
           return;

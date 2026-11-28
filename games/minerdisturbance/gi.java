@@ -108,7 +108,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
               bn.isSupportedCp1252KeyCharacter(93, (char) var2_int)) {
               var3 = 127 & 1 + qf.field_n;
               if (var3 != dn.field_w) {
-                jk.field_ib[qf.field_n] = -1;
+                ContentTransitionDialog.field_ib[qf.field_n] = -1;
                 hj.field_n[qf.field_n] = (char)var2_int;
                 qf.field_n = var3;
               }
@@ -155,7 +155,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
           if (0 <= var2_int) {
             var3 = qf.field_n + 1 & 127;
             if (var3 != dn.field_w) {
-              jk.field_ib[qf.field_n] = var2_int;
+              ContentTransitionDialog.field_ib[qf.field_n] = var2_int;
               hj.field_n[qf.field_n] = (char)0;
               qf.field_n = var3;
             }

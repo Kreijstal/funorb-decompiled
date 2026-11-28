@@ -19,10 +19,10 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             sf.correctedCurrentTimeMillis((byte) -42);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               ic.field_n = 1;
-              qd.field_J = 1;
+              GuestPlayConfirmationForm.field_J = 1;
             } else {
               ic.field_n = 2;
-              qd.field_J = 2;
+              GuestPlayConfirmationForm.field_J = 2;
             }
             var2_int = param0.getModifiers();
             kk.field_d = true;
@@ -277,7 +277,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           if (TextHotspotBounds.field_y != null) {
             DirectByteStorage.field_c = 0;
-            qd.field_J = 0;
+            GuestPlayConfirmationForm.field_J = 0;
             kk.field_d = true;
             var2_int = param0.getModifiers();
             if ((16 & var2_int) != 0) {
@@ -321,7 +321,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
           if (TextHotspotBounds.field_y != null) {
-            qd.field_J = 0;
+            GuestPlayConfirmationForm.field_J = 0;
           }
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "kh.focusLost(" + (param0 != null ? "{...}" : "null") + ')');

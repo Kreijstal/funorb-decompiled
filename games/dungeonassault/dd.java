@@ -108,7 +108,7 @@ final class dd extends rj {
         bp.a(var5, bl.field_o, var4, (byte) 99);
         bp.a(this.field_D + var5 + 10, DungeonRaidScreen.field_S, var4, (byte) 99);
         for (var6 = 0; var6 < 7; var6++) {
-          te.a(var4 + 11, var6 + var5 + 6, -2 + this.field_D, kc.field_M);
+          te.a(var4 + 11, var6 + var5 + 6, -2 + this.field_D, DialogMessagePane.field_M);
         }
         for (var6Lifetime1 = 0; var6Lifetime1 < 3; var6Lifetime1++) {
           DungeonAssaultScreen.a(11 + var4, var5 + 5 - var6Lifetime1, -2 + this.field_D, 0, 64 * (-var6Lifetime1 + 3));

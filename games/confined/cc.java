@@ -69,7 +69,7 @@ final class cc extends IntrusiveNode {
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {
-              var11 = sj.field_rb[var9];
+              var11 = ContentTransitionDialog.field_rb[var9];
               var6[0][var10] = em.field_f[var11];
               var19[0][4 * var10] = an.field_n[var11];
               var19[0][4 * var10 + 1] = SingleChildWidgetContainer.field_I[var11];
@@ -87,7 +87,7 @@ final class cc extends IntrusiveNode {
             var14 = 0;
             var10Lifetime1 = var14;
             while (var9Lifetime1 < var8) {
-              var11Lifetime1 = sj.field_rb[var5 + var9Lifetime1];
+              var11Lifetime1 = ContentTransitionDialog.field_rb[var5 + var9Lifetime1];
               var6[1][var14] = em.field_f[var11Lifetime1];
               var19[1][4 * var14] = an.field_n[var11Lifetime1];
               var19[1][var14 * 4 + 1] = SingleChildWidgetContainer.field_I[var11Lifetime1];

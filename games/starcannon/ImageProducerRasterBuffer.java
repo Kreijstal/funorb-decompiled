@@ -51,8 +51,8 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
             ImageProducerRasterBuffer.a((byte) 71, (fb) null);
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < wi.field_b; var2_intLifetime1++) {
-            if (param1.field_q == lf.field_bb[var2_intLifetime1].field_q) {
-              dupTemp$3 = lf.field_bb[var2_intLifetime1].b(-128);
+            if (param1.field_q == ProgressDialog.field_bb[var2_intLifetime1].field_q) {
+              dupTemp$3 = ProgressDialog.field_bb[var2_intLifetime1].b(-128);
               ByteStorage.field_b[dupTemp$3] = ByteStorage.field_b[dupTemp$3] + 1;
             }
           }
@@ -61,8 +61,8 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
           var2_intLifetime2 = 0;
           for (var3 = 0; var3 < wi.field_b; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (param1.field_q == lf.field_bb[var3].field_q) {
-              var4 = lf.field_bb[var3].b(-126);
+            if (param1.field_q == ProgressDialog.field_bb[var3].field_q) {
+              var4 = ProgressDialog.field_bb[var3].b(-126);
               if (vh.field_q < ByteStorage.field_b[var4]) {
                 ByteStorage.field_b[var4] = ByteStorage.field_b[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -71,13 +71,13 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              lf.field_bb[incrementValue$2] = lf.field_bb[var3];
+              ProgressDialog.field_bb[incrementValue$2] = ProgressDialog.field_bb[var3];
             }
           }
           wi.field_b = var2_intLifetime2;
           fieldTemp$1 = wi.field_b;
           wi.field_b = wi.field_b + 1;
-          lf.field_bb[fieldTemp$1] = param1;
+          ProgressDialog.field_bb[fieldTemp$1] = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

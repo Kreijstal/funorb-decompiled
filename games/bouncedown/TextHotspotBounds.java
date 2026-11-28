@@ -185,7 +185,7 @@ final class TextHotspotBounds extends IntrusiveNode {
                 var17 = param4[11];
                 var18 = 0;
                 while (!(var18 >= param6.field_d)) {
-                  stackIn_62_0 = uc.field_D.length;
+                  stackIn_62_0 = DialogMessagePane.field_D.length;
                   stackIn_62_1 = var18;
                   if (var31 != 0) {
                     break scanLoop1;
@@ -196,7 +196,7 @@ final class TextHotspotBounds extends IntrusiveNode {
                   var19 = param6.field_f[var18];
                   var20 = param6.field_i[var18];
                   var21Lifetime2 = param6.field_x[var18];
-                  uc.field_D[var18] = var9 * var19 - (-(var20 * var12) - var15 * var21Lifetime2) >> 16;
+                  DialogMessagePane.field_D[var18] = var9 * var19 - (-(var20 * var12) - var15 * var21Lifetime2) >> 16;
                   ih.field_db[var18] = var20 * var13 + (var19 * var10 + var21Lifetime2 * var16) >> 16;
                   nk.field_b[var18] = var11 * var19 + var14 * var20 + var21Lifetime2 * var17 >> 16;
                   var18++;

@@ -66,9 +66,9 @@ final class qf {
 
     final static void a(int param0) {
         if (nk.field_a != null) {
-          nk.field_a.a(true);
+          nk.field_a.closeDialog(true);
           il.field_b = new DisplayNameSelectionPanel();
-          TextLayout.field_c.a(10768, il.field_b);
+          TextLayout.field_c.replaceContent(10768, il.field_b);
           if (param0 != 0) {
             field_b = 53;
             return;
@@ -76,7 +76,7 @@ final class qf {
           return;
         }
         il.field_b = new DisplayNameSelectionPanel();
-        TextLayout.field_c.a(10768, il.field_b);
+        TextLayout.field_c.replaceContent(10768, il.field_b);
         if (param0 == 0) {
           return;
         }

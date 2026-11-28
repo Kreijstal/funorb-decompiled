@@ -366,7 +366,7 @@ abstract class TunnelEntity extends DualLinkNode {
             field_x = (PcmSample) null;
           }
           ud.field_o = param1[7] * param3[1 + param2] + (param1[4] * param3[param2] + this.field_t) + param1[10] * param3[param2 + 2];
-          dh.field_sb = param1[5] * param3[param2] + this.field_D + param1[8] * param3[param2 + 1] + param3[2 + param2] * param1[11];
+          ProgressMessageDialog.field_sb = param1[5] * param3[param2] + this.field_D + param1[8] * param3[param2 + 1] + param3[2 + param2] * param1[11];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -439,7 +439,7 @@ abstract class TunnelEntity extends DualLinkNode {
             var51 = param1.getPositionAndVelocity(3008);
             var18 = var51[0] - rn.field_c;
             var20 = -ud.field_o + var51[1];
-            var22 = -dh.field_sb + var51[2];
+            var22 = -ProgressMessageDialog.field_sb + var51[2];
             var24 = Math.sqrt(var22 * var22 + (var20 * var20 + var18 * var18));
             if (!(var24 < 0.001)) {
               var24 = 1.0 / var24;

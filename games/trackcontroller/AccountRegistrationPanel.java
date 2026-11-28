@@ -299,11 +299,11 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
             if (null != AccountCreationResultPanel.field_rb &&
               AccountCreationResultPanel.field_rb.field_b) {
               oj.a(-93);
-              GameScreen.field_b.showDialog((byte) -84, new w(GameScreen.field_b, DelegatingCanvas.field_b));
+              GameScreen.field_b.showDialog((byte) -84, new FullscreenStatusDialog(GameScreen.field_b, DelegatingCanvas.field_b));
             }
             return;
           }
-          GameScreen.field_b.processPointerInput(w.field_T, true, false, bl.field_b);
+          GameScreen.field_b.processPointerInput(FullscreenStatusDialog.field_T, true, false, bl.field_b);
           GameScreen.field_b.advanceDialogs(true);
           while (mh.e(127)) {
             GameScreen.field_b.processKeyInput(md.field_d, 3931, kg.field_d);

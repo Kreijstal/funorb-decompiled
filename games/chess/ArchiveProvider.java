@@ -3,7 +3,7 @@
  */
 abstract class ArchiveProvider {
     static int[] field_b;
-    static vn field_d;
+    static ProgressMessageDialog field_d;
     static hg field_a;
     static String field_c;
     static String field_e;

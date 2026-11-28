@@ -11,7 +11,7 @@ final class AccountRequestState {
           ub.field_n = AudioOutput.createOutput(param7, param4, 0, param3);
           AchievementIconEntry.field_n = AudioOutput.createOutput(param7, param4, 1, param6);
           wa.field_j = new PcmStreamMixer();
-          kc.field_U = param6;
+          DialogMessagePane.field_U = param6;
           AchievementIconEntry.field_n.setRootStream(wa.field_j);
           FullscreenFocusCanvas.field_b = param1;
           FullscreenFocusCanvas.field_b.a(DelegatingCanvas.field_d, 256);

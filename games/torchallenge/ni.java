@@ -64,7 +64,7 @@ final class ni {
                 continue;
               }
               var5++;
-              var8 = qh.a((CharSequence) ((Object) var7_ref_String), (byte) -68);
+              var8 = RegistrationAgreementPane.a((CharSequence) ((Object) var7_ref_String), (byte) -68);
               var4 = var4 + (args[var8].length() - (-var6_int + var5));
               continue;
             }
@@ -98,7 +98,7 @@ final class ni {
               continue;
             }
             var5Lifetime1++;
-            var10 = qh.a((CharSequence) ((Object) var9), (byte) -96);
+            var10 = RegistrationAgreementPane.a((CharSequence) ((Object) var9), (byte) -96);
             discarded$0 = var6.append(param2.substring(var7, var8Lifetime1));
             var7 = var5Lifetime1;
             discarded$1 = var6.append(args[var10]);

@@ -244,14 +244,14 @@ final class ki extends RichTextWidget {
             null != IntrusiveNode.field_f) {
             lm.field_e.draw(231, 390);
             var1 = sb.field_p;
-            if (0 == si.field_ob.field_h) {
+            if (0 == ProgressMessageDialog.field_ob.field_h) {
               var1 = Bzip2State.field_s;
             }
             var1.draw(0, 0);
             stackIn_51_0 = 40;
             stackIn_51_1 = 2;
             stackIn_51_2 = ClientException.field_e;
-            if (si.field_ob.field_h != 0) {
+            if (ProgressMessageDialog.field_ob.field_h != 0) {
               stackIn_52_3 = 3;
             } else {
               stackIn_52_3 = 4;
@@ -269,19 +269,19 @@ final class ki extends RichTextWidget {
             }
             stackIn_56_0 = sl.field_d;
             stackIn_56_1 = -106;
-            stackIn_57_2 = (si.field_ob.field_h == 0);
+            stackIn_57_2 = (ProgressMessageDialog.field_ob.field_h == 0);
             NanoFrameTimer.$cfr$intArgs$a$c79a3df4369d(stackIn_56_0, stackIn_56_1, stackIn_57_2, qk.field_i);
           }
           if (null != lm.field_e &&
             null != IntrusiveNode.field_f) {
             lm.field_e.draw(434, 390);
             pc.field_d.draw(0, 0);
-            if (1 == si.field_ob.field_h) {
+            if (1 == ProgressMessageDialog.field_ob.field_h) {
               TextHotspotBounds.a(lm.field_e.field_r - 4, (byte) 123, 7 * lm.field_e.field_t / 12, 436, 64, 392);
             }
             stackIn_65_0 = GameShell.field_C;
             stackIn_65_1 = -80;
-            stackIn_66_2 = (si.field_ob.field_h == 1);
+            stackIn_66_2 = (ProgressMessageDialog.field_ob.field_h == 1);
             NanoFrameTimer.$cfr$intArgs$a$c79a3df4369d(stackIn_65_0, stackIn_65_1, stackIn_66_2, DirectByteStorage.field_j);
           }
           if (null != ig.field_a) {
@@ -419,7 +419,7 @@ final class ki extends RichTextWidget {
         var10 = var8.getTextOriginY((UiWidget) (this), param3, (byte) -72) + (var8.getTextLayout((UiWidget) (this), -19302).getLayoutHeight(5859) >> 1);
         if (kj.field_d != var6Lifetime1 &&
           var6Lifetime1 != oh.field_b) {
-          if (qf.field_d == var6Lifetime1) {
+          if (FullscreenNoticeType.field_d == var6Lifetime1) {
             var14 = AccountRequestState.field_c[2];
             var14.drawAdditive(var9, -(var14.field_t >> 1) + var10, 256);
           } else if (var6Lifetime1 == dg.field_c) {

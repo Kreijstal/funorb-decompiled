@@ -10,7 +10,7 @@ final class cd extends RichTextWidget {
     private FieldValidator field_R;
 
     cd(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, vf.a(0));
+        super(param1, DialogMessagePane.a(0));
         try {
           this.field_R = param0;
           this.field_Q = param1;
@@ -97,17 +97,17 @@ final class cd extends RichTextWidget {
           ca.a(AccountRequestState.field_c, -23074);
           AccountRequestState.field_c.writeShort(param3, -113);
           param2.a(95, AccountRequestState.field_c);
-          pg.field_fb.position = 0;
+          StandardContentDialog.field_fb.position = 0;
           var5_int = -4 / ((param0 + 7) / 61);
           if (!param4) {
-            pg.field_fb.writeByte(false, 16);
+            StandardContentDialog.field_fb.writeByte(false, 16);
           } else {
-            pg.field_fb.writeByte(false, 18);
+            StandardContentDialog.field_fb.writeByte(false, 18);
           }
-          pg.field_fb.position = pg.field_fb.position + 2;
-          var6 = pg.field_fb.position;
-          pg.field_fb.writeInt(0, t.field_f);
-          pg.field_fb.writeLong((byte) 127, od.field_z);
+          StandardContentDialog.field_fb.position = StandardContentDialog.field_fb.position + 2;
+          var6 = StandardContentDialog.field_fb.position;
+          StandardContentDialog.field_fb.writeInt(0, t.field_f);
+          StandardContentDialog.field_fb.writeLong((byte) 127, od.field_z);
           var7 = 0;
           if (TextLineMetrics.field_f) {
             var7 = var7 | 1;
@@ -121,17 +121,17 @@ final class cd extends RichTextWidget {
           if (null != pk.field_b) {
             var7 = var7 | 16;
           }
-          pg.field_fb.writeByte(false, var7);
+          StandardContentDialog.field_fb.writeByte(false, var7);
           var8 = dd.a(0, hf.a((byte) -103));
           if (var8 == null) {
             var8 = "";
           }
-          pg.field_fb.writeString(var8, -9799);
+          StandardContentDialog.field_fb.writeString(var8, -9799);
           if (null != pk.field_b) {
-            pg.field_fb.writePrefixedString(126, pk.field_b);
+            StandardContentDialog.field_fb.writePrefixedString(126, pk.field_b);
           }
-          ha.a(fj.field_l, pg.field_fb, AccountRequestState.field_c, -104, u.field_o);
-          pg.field_fb.backpatchShortLength(-1, pg.field_fb.position - var6);
+          ha.a(fj.field_l, StandardContentDialog.field_fb, AccountRequestState.field_c, -104, u.field_o);
+          StandardContentDialog.field_fb.backpatchShortLength(-1, StandardContentDialog.field_fb.position - var6);
           ue.a((byte) -88, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -481,8 +481,8 @@ final class cd extends RichTextWidget {
         if (DiskCacheWorker.field_f < 2) {
           return IntrusiveDequeCursor.field_d;
         }
-        if (null != pg.field_db) {
-          if (!pg.field_db.ensureIndexLoaded((byte) -36)) {
+        if (null != StandardContentDialog.field_db) {
+          if (!StandardContentDialog.field_db.ensureIndexLoaded((byte) -36)) {
             return RichTextWidget.field_I;
           }
           return kf.field_d;
@@ -508,7 +508,7 @@ final class cd extends RichTextWidget {
         if (!am.field_g.tryLoadAllGroups((byte) -111)) {
           return DisplayNameSelectionPanel.field_B + " - " + am.field_g.getArchiveLoadPercent((byte) 1) + "%";
         }
-        return wl.field_W;
+        return ContentTransitionDialog.field_W;
     }
 
     final boolean takeFocus(int param0, UiWidget param1) {

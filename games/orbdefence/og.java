@@ -43,7 +43,7 @@ final class og {
           if (~FullscreenFocusCanvas.field_h == ~this.field_m) {
             return 1;
           }
-          if (ob.field_H != 2) {
+          if (RegistrationAgreementPane.field_H != 2) {
             return 0;
           }
           if (!ByteStorage.a(this.field_h, -153798488)) {
@@ -55,7 +55,7 @@ final class og {
         if (~FullscreenFocusCanvas.field_h == ~this.field_m) {
           return 1;
         }
-        if (ob.field_H != 2) {
+        if (RegistrationAgreementPane.field_H != 2) {
           return 0;
         }
         if (!ByteStorage.a(this.field_h, -153798488)) {
@@ -69,7 +69,7 @@ final class og {
         this.field_k = vj.field_a;
         this.field_e = bh.field_c;
         this.field_d = DebouncedFieldValidator.field_d;
-        this.field_c = pc.field_X;
+        this.field_c = StandardContentDialog.field_X;
         this.field_h = vk.field_v;
         this.field_m = GameAppletShell.field_l;
         if (!param0) {

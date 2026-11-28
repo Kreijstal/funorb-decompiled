@@ -362,11 +362,11 @@ abstract class dl extends DualLinkNode {
           }
           var2Lifetime62 = GzipDecompressor.a(10, "tuttext1");
           if (null != var2Lifetime62) {
-            sh.field_a = eg.a(126, var2Lifetime62);
+            FullscreenNoticeType.field_a = eg.a(126, var2Lifetime62);
           }
           var2Lifetime63 = GzipDecompressor.a(10, "tuttext2");
           if (var2Lifetime63 != null) {
-            ll.field_W = eg.a(126, var2Lifetime63);
+            FullscreenStatusDialog.field_W = eg.a(126, var2Lifetime63);
           }
           var2Lifetime64 = GzipDecompressor.a(10, "tuttext3");
           if (var2Lifetime64 != null) {

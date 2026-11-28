@@ -162,7 +162,7 @@ final class ud {
 
     final static void a(int param0) {
         PcmOutputWorker.a(true, -125, ac.field_c, v.field_b);
-        ja.field_F = true;
+        RegistrationAgreementPane.field_F = true;
         if (param0 < 42) {
           field_a = 104;
         }
@@ -179,7 +179,7 @@ final class ud {
         RuntimeException var5 = null;
         long var6 = 0L;
         PcmSample var8 = null;
-        sf var9 = null;
+        VorbisSample var9 = null;
         PcmSample var8Lifetime1;
         try {
           var5_int = (param3 << 4 & 65526 | param3 >>> 12) ^ param2;
@@ -197,15 +197,15 @@ final class ud {
           if (param1 <= 7) {
             this.field_c = (ResourceArchive) null;
           }
-          var9 = (sf) (this.field_g.a((byte) 127, var6));
+          var9 = (VorbisSample) (this.field_g.a((byte) 127, var6));
           if (var9 == null) {
-            var9 = sf.a(this.field_h, param3, param2);
+            var9 = VorbisSample.load(this.field_h, param3, param2);
             if (var9 == null) {
               return null;
             }
             this.field_g.a(var9, var6, (byte) -36);
           }
-          var8Lifetime1 = var9.a(param0);
+          var8Lifetime1 = var9.decodeToPcm(param0);
           if (var8Lifetime1 == null) {
             return null;
           }

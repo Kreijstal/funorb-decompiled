@@ -30,10 +30,10 @@ final class gm extends InteractiveWidget {
             field_J = 66;
           }
           if (af.field_g == null) {
-            af.field_g = new tf(PcmResampler.field_c, SpriteGeometry.field_u);
+            af.field_g = new ProgressDialog(PcmResampler.field_c, SpriteGeometry.field_u);
             PcmResampler.field_c.showDialog((byte) -111, (UiWidget) (af.field_g));
           }
-          af.field_g.a(param2, param3, 6, param1);
+          af.field_g.setProgress(param2, param3, 6, param1);
           SoftwareRasterizer.clearRaster();
           a.a((byte) -121, true);
         } catch (RuntimeException runtimeException) {
@@ -244,14 +244,14 @@ final class gm extends InteractiveWidget {
           var14 = 1;
           var15 = 0;
           while (var12 > 0) {
-            var13Lifetime1 = hi.a(var6_int - 2, 4, jf.field_nb) + 1;
-            var14Lifetime1 = hi.a(-2 + var7, 4, jf.field_nb) + 1;
+            var13Lifetime1 = hi.a(var6_int - 2, 4, ContentTransitionDialog.field_nb) + 1;
+            var14Lifetime1 = hi.a(-2 + var7, 4, ContentTransitionDialog.field_nb) + 1;
             var15Lifetime1 = var13Lifetime1 + var14Lifetime1 * var6_int;
             if (param3.field_m[var15Lifetime1] == 0) {
               continue;
             }
             var12--;
-            var11[var15Lifetime1] = GameAppletShell.a(param4, hi.a(255, 4, jf.field_nb) * param1);
+            var11[var15Lifetime1] = GameAppletShell.a(param4, hi.a(255, 4, ContentTransitionDialog.field_nb) * param1);
           }
           var15Lifetime2 = var6_int + 1;
           for (var16 = -var7 + 2; 0 > var16; var16++) {

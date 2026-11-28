@@ -128,7 +128,7 @@ class gd extends rj {
           gd.a(31, (cf) null);
           return;
         }
-        if (this != wi.field_ob) {
+        if (this != ProgressDialog.field_ob) {
           stackIn_32_0 = this.field_p;
         } else {
           stackIn_32_0 = mo.field_a;
@@ -139,8 +139,8 @@ class gd extends rj {
           var7Lifetime1 = 64;
         }
         var8Lifetime1 = var7Lifetime1 + (-mo.field_a + this.field_p);
-        if (this == wi.field_ob) {
-          if (this != wi.field_ob) {
+        if (this == ProgressDialog.field_ob) {
+          if (this != ProgressDialog.field_ob) {
             this.field_K.draw(var4, param2 + this.field_i);
             var10Lifetime2 = var8Lifetime1;
             this.field_z.drawWithOpacity(var4, var5, 4 * var10Lifetime2);
@@ -169,7 +169,7 @@ class gd extends rj {
           gd.a(31, (cf) null);
           return;
         }
-        if (this != wi.field_ob) {
+        if (this != ProgressDialog.field_ob) {
           this.field_K.draw(var4, param2 + this.field_i);
           var10Lifetime3 = var8Lifetime1;
           this.field_z.drawWithOpacity(var4, var5, 4 * var10Lifetime3);

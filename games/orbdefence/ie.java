@@ -25,7 +25,7 @@ class ie extends DualLinkNode {
             return false;
           }
           if (fk.a(param1 + 11144)) {
-            var8.f((byte) 121);
+            var8.showAccountCreationConnectionFailure((byte) 121);
             return true;
           }
           ae.field_a = param0;

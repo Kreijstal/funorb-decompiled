@@ -159,7 +159,7 @@ class mh {
           }
           if (DirectByteArrayStore.field_d == gg.field_b &&
             param1.equals(dj.field_e)) {
-            DirectByteArrayStore.field_d = tj.field_F;
+            DirectByteArrayStore.field_d = GuestPlayConfirmationForm.field_F;
             stackIn_8_0 = tf.field_s;
             return stackIn_8_0;
           }

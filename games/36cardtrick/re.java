@@ -26,13 +26,13 @@ final class re {
         }
         while (true) {
           if (!GzipInflater.b((byte) -114)) {
-            this.field_f.a(this.a((byte) -22, ij.field_e, eg.field_b), (byte) 115, this.a((byte) -22, jc.field_N, MouseInputHandler.field_a));
+            this.field_f.a(this.a((byte) -22, ij.field_e, eg.field_b), (byte) 115, this.a((byte) -22, ResizableModalDialog.field_N, MouseInputHandler.field_a));
             if (this.field_f.field_k != -1) {
               this.a(true, (byte) 122, this.field_f.c(-1), this.field_f.field_k);
             }
             if (dl.field_h != 0) {
               this.field_a = MouseInputHandler.field_a;
-              this.field_e = jc.field_N;
+              this.field_e = ResizableModalDialog.field_N;
             }
             return;
           }
@@ -170,7 +170,7 @@ final class re {
           }
           var3 = this.field_d.field_cb;
           if (!var3.field_o) {
-            var2 = tj.field_H;
+            var2 = GuestPlayConfirmationForm.field_H;
           } else {
             regionExit1: {
               var4 = this.field_d.field_D;
@@ -798,7 +798,7 @@ final class re {
                                 if (h.field_E[this.field_i]) {
                                   this.field_d.a(11246, this.field_i, 4, param0);
                                 } else {
-                                  this.field_d.a(11246, rk.field_X, 6, param0);
+                                  this.field_d.a(11246, ProgressDialog.field_X, 6, param0);
                                 }
                               }
                             }
@@ -862,7 +862,7 @@ final class re {
             } else {
               if (param2) {
                 this.field_d.c(126, 1);
-                rk.a(false, lc.field_a[1], false);
+                ProgressDialog.a(false, lc.field_a[1], false);
                 this.field_d.a(11246, 1, 1, param0);
               }
             }
@@ -1253,7 +1253,7 @@ final class re {
                   stackIn_84_2 = false;
                   stackIn_85_3 = (nb.field_e != 0);
                   stackIn_88_4 = (AgeValidator.field_m != 0);
-                  ((BinaryBitmapFont) (Object) stackIn_84_0).drawParagraph(af.a(stackIn_84_1, stackIn_84_2, stackIn_85_3, stackIn_88_4), 211, var4Lifetime1Lifetime1, 389, 1000, 0, -1, 1, 0, var5Lifetime1);
+                  ((BinaryBitmapFont) (Object) stackIn_84_0).drawParagraph(ProgressMessageDialog.a(stackIn_84_1, stackIn_84_2, stackIn_85_3, stackIn_88_4), 211, var4Lifetime1Lifetime1, 389, 1000, 0, -1, 1, 0, var5Lifetime1);
                 }
               } else {
                 if (this.field_i == 8) {

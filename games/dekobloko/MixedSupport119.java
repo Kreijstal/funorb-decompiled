@@ -66,8 +66,8 @@ final class MixedSupport119 {
           MixedSupport119.clearStaticReferences(false);
         }
         boolean frameRemainderLocal2 = true;
-        if (UiComponentPart004.integerState0091 >= 20 &&
-          UiComponentPart030.computeBoolean1556((byte) 124) && (!(GameDomainSupport001.integerState0052 > 0) ||
+        if (ContentTransitionDialog.integerState0091 >= 20 &&
+          ResizableModalDialog.computeBoolean1556((byte) 124) && (!(GameDomainSupport001.integerState0052 > 0) ||
           FunOrbClient.computeBoolean0115((byte) 31))) {
           stackBooleanLocal1 = false;
           frameRemainderLocal2 = false;
@@ -137,7 +137,7 @@ final class MixedSupport119 {
         if (booleanArgument1) {
           MixedSupport119.computeRgbSpriteArray1565(false, 17, -88, -29, -62);
         }
-        return UiComponentPart004.computeRgbSpriteArray0181(integerArgument4, 1, integerArgument5, 1, 1, false, integerArgument3, integerArgument2, 3);
+        return ContentTransitionDialog.computeRgbSpriteArray0181(integerArgument4, 1, integerArgument5, 1, 1, false, integerArgument3, integerArgument2, 3);
     }
 
     final void performAction1562(int integerArgument1, boolean booleanArgument2) {

@@ -51,7 +51,7 @@ final class ia extends ScoreModifier {
             decompiledFrameRemainder0 = (kf.field_f == null);
           }
           if (decompiledFrameRemainder0) {
-            if (!co.field_F) {
+            if (!StripedProgressWidget.field_F) {
               if (cl.field_o >= GzipDecompressor.field_a) {
                 stackIn_20_0 = (cl.field_o < GzipDecompressor.field_a + AccountRequestState.field_a) ? 1 : 0;
               } else {
@@ -64,7 +64,7 @@ final class ia extends ScoreModifier {
             if (param1 == null) {
               cl.field_o = 0;
             } else {
-              if (co.field_F) {
+              if (StripedProgressWidget.field_F) {
                 cl.field_o = GzipDecompressor.field_a;
               } else {
                 if (var2_int != 0) {
@@ -75,17 +75,17 @@ final class ia extends ScoreModifier {
               }
             }
             if (param1 != null) {
-              co.field_F = false;
+              StripedProgressWidget.field_F = false;
             } else {
               if (var2_int != 0) {
-                co.field_F = true;
+                StripedProgressWidget.field_F = true;
               }
             }
             RichTextWidget.field_G = ce.field_gb;
             DiskCacheWorker.field_b = pe.field_i;
           }
           kf.field_f = param1;
-          if (!co.field_F &&
+          if (!StripedProgressWidget.field_F &&
             cl.field_o < GzipDecompressor.field_a &&
             DualLinkNode.field_h) {
             RichTextWidget.field_G = ce.field_gb;
@@ -93,10 +93,10 @@ final class ia extends ScoreModifier {
             cl.field_o = 0;
           }
           pe.field_i = -1;
-          if (co.field_F &&
+          if (StripedProgressWidget.field_F &&
             cl.field_o == lc.field_e) {
             cl.field_o = 0;
-            co.field_F = false;
+            StripedProgressWidget.field_F = false;
           }
           ce.field_gb = -1;
           return;

@@ -18,7 +18,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           if (param3 != 0) {
             return;
           }
-          this.c(103, this.field_i + param0, param1 + this.field_m);
+          this.drawDialogBackground(103, this.field_i + param0, param1 + this.field_m);
           super.drawWidget(param0, param1, false, param3);
           return;
         }
@@ -29,7 +29,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           nb.field_a = new Sprite(this.field_p, this.field_l);
           FullscreenFocusCanvas.a(-15, nb.field_a);
           SoftwareRasterizer.clearRaster();
-          this.c(103, 0, 0);
+          this.drawDialogBackground(103, 0, 0);
           super.drawWidget(-param0 - this.field_i, -this.field_m - param1, param2, param3);
           ie.b((byte) -9);
           nb.field_a.drawTransparentWithOpacity(param1 + this.field_m, this.field_i + param0, this.field_P);
@@ -39,7 +39,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           nb.field_a = new Sprite(this.field_p, this.field_l);
           FullscreenFocusCanvas.a(-15, nb.field_a);
           SoftwareRasterizer.clearRaster();
-          this.c(103, 0, 0);
+          this.drawDialogBackground(103, 0, 0);
           super.drawWidget(-param0 - this.field_i, -this.field_m - param1, param2, param3);
           ie.b((byte) -9);
           nb.field_a.drawTransparentWithOpacity(param1 + this.field_m, this.field_i + param0, this.field_P);
@@ -48,7 +48,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         if (nb.field_a.storedHeight >= this.field_l) {
           FullscreenFocusCanvas.a(-15, nb.field_a);
           SoftwareRasterizer.clearRaster();
-          this.c(103, 0, 0);
+          this.drawDialogBackground(103, 0, 0);
           super.drawWidget(-param0 - this.field_i, -this.field_m - param1, param2, param3);
           ie.b((byte) -9);
           nb.field_a.drawTransparentWithOpacity(param1 + this.field_m, this.field_i + param0, this.field_P);
@@ -57,7 +57,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         nb.field_a = new Sprite(this.field_p, this.field_l);
         FullscreenFocusCanvas.a(-15, nb.field_a);
         SoftwareRasterizer.clearRaster();
-        this.c(103, 0, 0);
+        this.drawDialogBackground(103, 0, 0);
         super.drawWidget(-param0 - this.field_i, -this.field_m - param1, param2, param3);
         ie.b((byte) -9);
         nb.field_a.drawTransparentWithOpacity(param1 + this.field_m, this.field_i + param0, this.field_P);
@@ -92,7 +92,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         SoftwareRasterizer.restoreClip(ae.field_y);
     }
 
-    abstract void c(int param0, int param1, int param2);
+    abstract void drawDialogBackground(int param0, int param1, int param2);
 
     public static void clearDeclaredStaticReferences(int param0) {
         field_N = null;

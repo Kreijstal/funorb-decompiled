@@ -10,11 +10,11 @@ final class mn {
 
     final static void a(byte param0) {
         if (param0 == -126) {
-          ke.field_s.b(new nb(), (byte) 110);
+          ke.field_s.replaceContent(new GuestPlayConfirmationForm(), (byte) 110);
           return;
         }
         mn.c((byte) -27);
-        ke.field_s.b(new nb(), (byte) 110);
+        ke.field_s.replaceContent(new GuestPlayConfirmationForm(), (byte) 110);
     }
 
     final static void c(byte param0) {

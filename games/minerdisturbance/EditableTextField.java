@@ -207,7 +207,7 @@ class EditableTextField extends InteractiveWidget {
         if (param0 != 82) {
           return;
         }
-        if (!qd.field_O[81]) {
+        if (!GuestPlayConfirmationForm.field_O[81]) {
           this.field_O = this.field_J;
         }
     }
@@ -261,7 +261,7 @@ class EditableTextField extends InteractiveWidget {
               if (96 == param3) {
                 if (this.field_J > 0) {
                   stackIn_69_1 = 82;
-                  if (!qd.field_O[82]) {
+                  if (!GuestPlayConfirmationForm.field_O[82]) {
                     stackIn_70_2 = this.field_J - 1;
                   } else {
                     stackIn_70_2 = this.findPreviousWordBoundary(param2 + 191);
@@ -273,7 +273,7 @@ class EditableTextField extends InteractiveWidget {
                 if (param3 == 97) {
                   if (this.field_J < this.field_s.length()) {
                     stackIn_62_1 = 82;
-                    if (qd.field_O[82]) {
+                    if (GuestPlayConfirmationForm.field_O[82]) {
                       stackIn_63_2 = this.findNextWordBoundary(param2 - 48);
                     } else {
                       stackIn_63_2 = 1 + this.field_J;
@@ -294,17 +294,17 @@ class EditableTextField extends InteractiveWidget {
                     this.submitText((byte) 66);
                     return true;
                   }
-                  if (qd.field_O[82] &&
+                  if (GuestPlayConfirmationForm.field_O[82] &&
                     param3 == 65) {
                     this.cutSelection(-6277);
                     return true;
                   }
-                  if (qd.field_O[82] &&
+                  if (GuestPlayConfirmationForm.field_O[82] &&
                     param3 == 66) {
                     this.copySelection((byte) 122);
                     return true;
                   }
-                  if (qd.field_O[82] &&
+                  if (GuestPlayConfirmationForm.field_O[82] &&
                     param3 == 67) {
                     this.pasteClipboardText((byte) 115);
                     return true;

@@ -38,14 +38,14 @@ final class ga {
           return;
         }
         if (0 < cl.field_d) {
-          if (null != ch.field_gb) {
-            rm.field_R = ch.field_gb.a((byte) 101);
+          if (null != ProgressDialog.field_gb) {
+            StripedProgressWidget.field_R = ProgressDialog.field_gb.a((byte) 101);
             dn.a(2, (byte) -96);
           } else {
-            rm.field_R = fn.createFullscreenCanvas(0, 480, 0, 21, 640, MatchingFieldValidator.field_l);
+            StripedProgressWidget.field_R = fn.createFullscreenCanvas(0, 480, 0, 21, 640, MatchingFieldValidator.field_l);
           }
-          if (rm.field_R != null) {
-            ca.a(13369344, rm.field_R);
+          if (StripedProgressWidget.field_R != null) {
+            ca.a(13369344, StripedProgressWidget.field_R);
             var2 = 2;
           } else {
             var2 = 3;
@@ -53,7 +53,7 @@ final class ga {
         } else {
           var2 = (PcmOutputWorker.a(-3)) ? 0 : 1;
         }
-        if (null == ch.field_gb &&
+        if (null == ProgressDialog.field_gb &&
           TextHotspotBounds.field_r) {
           qh.a(false, param0, var2);
         }

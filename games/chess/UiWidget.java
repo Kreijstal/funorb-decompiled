@@ -416,7 +416,7 @@ class UiWidget extends IntrusiveNode {
           }
         }
         DiskCacheWorker.field_h = wh.field_f;
-        sb.a(this.getTooltipText(0), true);
+        StandardContentDialog.a(this.getTooltipText(0), true);
         return param3;
     }
 
@@ -699,7 +699,7 @@ class UiWidget extends IntrusiveNode {
         if (var5 == null) {
           return;
         }
-        FullscreenFocusCanvas.field_a.a(var5, ModalDialogHost.field_S, 106, vn.field_Db);
+        FullscreenFocusCanvas.field_a.a(var5, ModalDialogHost.field_S, 106, ProgressMessageDialog.field_Db);
     }
 
     protected UiWidget() {

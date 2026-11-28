@@ -204,14 +204,14 @@ final class ti {
     }
 
     final static void a(ResourceArchive param0, int param1) {
-        ho var2 = null;
+        VorbisSample var2 = null;
         try {
-          ho.a(param0.getFileByName(-125, "", "headers.packvorbis"));
+          VorbisSample.decodeSetup(param0.getFileByName(-125, "", "headers.packvorbis"));
           if (param1 != 28922) {
             ti.clearStaticReferences(true);
           }
-          var2 = ho.a(param0, "jagex logo2.packvorbis", "");
-          var2.c();
+          var2 = VorbisSample.loadByName(param0, "jagex logo2.packvorbis", "");
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "ti.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

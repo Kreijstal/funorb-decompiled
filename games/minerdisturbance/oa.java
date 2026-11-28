@@ -53,7 +53,7 @@ final class oa {
                 break;
               }
               var7_ref_String = param1.substring(var6_int + 2, var5);
-              if (!oi.a(-19804, (CharSequence) ((Object) var7_ref_String))) {
+              if (!StripedProgressWidget.a(-19804, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var3_int <= var5) {
@@ -90,7 +90,7 @@ final class oa {
               break;
             }
             var9 = param1.substring(var8Lifetime1 + 2, var5Lifetime1);
-            if (!oi.a(-19804, (CharSequence) ((Object) var9))) {
+            if (!StripedProgressWidget.a(-19804, (CharSequence) ((Object) var9))) {
               continue;
             }
             if (var5Lifetime1 >= var3_int) {

@@ -12,10 +12,10 @@ final class VorbisDecoder extends IntrusiveNode {
     private static float[] field_m;
     private int field_O;
     private static int[] field_I;
-    private static sh[] field_t;
+    private static VorbisResidue[] field_t;
     private static int field_s;
     private static int[] field_x;
-    private static pe[] field_r;
+    private static VorbisMapping[] field_r;
     private int field_n;
     static VorbisCodebook[] field_w;
     private static boolean field_A;
@@ -39,7 +39,7 @@ final class VorbisDecoder extends IntrusiveNode {
     private static int field_N;
     private static float[] field_P;
 
-    final PcmSample a() {
+    final PcmSample decodeAllToPcm() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -53,7 +53,7 @@ final class VorbisDecoder extends IntrusiveNode {
         var1 = new byte[this.field_B];
         var2 = 0;
         for (var3 = 0; var3 < this.field_o.length; var3++) {
-          var4 = this.d(var3);
+          var4 = this.decodePacket(var3);
           if (var4 != null) {
             var5 = var4.length;
             if (var5 > this.field_B - var2) {
@@ -74,7 +74,7 @@ final class VorbisDecoder extends IntrusiveNode {
         return new PcmSample(this.field_E, var1, this.field_O, this.field_C, this.field_u);
     }
 
-    final static void a(byte[] param0) {
+    final static void decodeSetup(byte[] param0) {
         int var7_int = 0;
         int var8_int = 0;
         int var9_int = 0;
@@ -105,7 +105,7 @@ final class VorbisDecoder extends IntrusiveNode {
         int var4Lifetime2;
         int var5Lifetime1;
         int var5Lifetime2;
-        VorbisDecoder.a(param0, 0);
+        VorbisDecoder.setBitStream(param0, 0);
         field_K = 1 << VorbisDecoder.readBits(4);
         field_s = 1 << VorbisDecoder.readBits(4);
         field_j = new float[field_s];
@@ -166,14 +166,14 @@ final class VorbisDecoder extends IntrusiveNode {
           field_q[var3Lifetime2] = new VorbisFloor();
         }
         var3Lifetime3 = VorbisDecoder.readBits(6) + 1;
-        field_t = new sh[var3Lifetime3];
+        field_t = new VorbisResidue[var3Lifetime3];
         for (var4Lifetime1 = 0; var4Lifetime1 < var3Lifetime3; var4Lifetime1++) {
-          field_t[var4Lifetime1] = new sh();
+          field_t[var4Lifetime1] = new VorbisResidue();
         }
         var4Lifetime2 = VorbisDecoder.readBits(6) + 1;
-        field_r = new pe[var4Lifetime2];
+        field_r = new VorbisMapping[var4Lifetime2];
         for (var5Lifetime1 = 0; var5Lifetime1 < var4Lifetime2; var5Lifetime1++) {
-          field_r[var5Lifetime1] = new pe();
+          field_r[var5Lifetime1] = new VorbisMapping();
         }
         var5Lifetime2 = VorbisDecoder.readBits(6) + 1;
         field_L = new boolean[var5Lifetime2];
@@ -190,10 +190,10 @@ final class VorbisDecoder extends IntrusiveNode {
         field_A = true;
     }
 
-    final static VorbisDecoder a(Archive param0, int param1, int param2) {
+    final static VorbisDecoder load(Archive param0, int param1, int param2) {
         try {
           VorbisDecoder var4_ref = null;
-          if (!VorbisDecoder.a(param0)) {
+          if (!VorbisDecoder.ensureSetup(param0)) {
             param0.tryLoadFile(param1, param2, -1);
             return null;
           }
@@ -234,7 +234,7 @@ final class VorbisDecoder extends IntrusiveNode {
         field_I = null;
     }
 
-    private final float[] d(int param0) {
+    private final float[] decodePacket(int param0) {
         int var32_int = 0;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
@@ -257,7 +257,7 @@ final class VorbisDecoder extends IntrusiveNode {
         int var11;
         int var12;
         int var13;
-        pe var14;
+        VorbisMapping var14;
         int var15;
         int var16;
         int var17_int;
@@ -296,7 +296,7 @@ final class VorbisDecoder extends IntrusiveNode {
         float var39;
         float[] var40;
         int var41;
-        sh var42;
+        VorbisResidue var42;
         int[] var44;
         float[] var45;
         float[] var46;
@@ -346,7 +346,7 @@ final class VorbisDecoder extends IntrusiveNode {
         float var30Lifetime1Lifetime3;
         int var18_intLifetime1;
         int var18_intLifetime2;
-        VorbisDecoder.a(this.field_o[param0], 0);
+        VorbisDecoder.setBitStream(this.field_o[param0], 0);
         VorbisDecoder.readBit();
         var2 = VorbisDecoder.readBits(LevelData.bitLength(false, field_k.length - 1));
         var3 = field_L[var2] ? 1 : 0;
@@ -394,7 +394,7 @@ final class VorbisDecoder extends IntrusiveNode {
         for (var17_intLifetime1 = 0; var17_intLifetime1 < var14.field_c; var17_intLifetime1++) {
           var42 = field_t[var14.field_d[var17_intLifetime1]];
           var52 = field_j;
-          var42.a(var52, var4 >> 1, var16Lifetime1 != 0);
+          var42.decodeResidue(var52, var4 >> 1, var16Lifetime1 != 0);
         }
         if (var15 == 0) {
           var17_intLifetime2 = var14.field_b;
@@ -617,7 +617,7 @@ final class VorbisDecoder extends IntrusiveNode {
         return var1;
     }
 
-    private final void b(byte[] param0) throws IOException {
+    private final void decodePacketContainer(byte[] param0) throws IOException {
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -658,7 +658,7 @@ final class VorbisDecoder extends IntrusiveNode {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    final PcmSample a(int[] param0) {
+    final PcmSample decodeToPcm(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -682,7 +682,7 @@ final class VorbisDecoder extends IntrusiveNode {
             param0[0] <= 0) {
             return null;
           }
-          var7 = this.d(this.field_i);
+          var7 = this.decodePacket(this.field_i);
           if (var7 != null) {
             var3 = this.field_n;
             var4 = var7.length;
@@ -711,16 +711,16 @@ final class VorbisDecoder extends IntrusiveNode {
         return new PcmSample(this.field_E, var12, this.field_O, this.field_C, this.field_u);
     }
 
-    private final static void a(byte[] param0, int param1) {
+    private final static void setBitStream(byte[] param0, int param1) {
         field_y = param0;
         field_N = param1;
         field_M = 0;
     }
 
-    final static VorbisDecoder a(Archive param0, String param1, String param2) {
+    final static VorbisDecoder loadByName(Archive param0, String param1, String param2) {
         try {
           VorbisDecoder var4_ref = null;
-          if (!VorbisDecoder.a(param0)) {
+          if (!VorbisDecoder.ensureSetup(param0)) {
             param0.tryLoadFileByName(param1, param2, (byte) -45);
             return null;
           }
@@ -742,20 +742,20 @@ final class VorbisDecoder extends IntrusiveNode {
         }
     }
 
-    private final static boolean a(Archive param0) {
+    private final static boolean ensureSetup(Archive param0) {
         byte[] var1 = null;
         if (!field_A) {
           var1 = param0.getFile(0, 0, (byte) -77);
           if (var1 == null) {
             return false;
           }
-          VorbisDecoder.a(var1);
+          VorbisDecoder.decodeSetup(var1);
         }
         return true;
     }
 
     private VorbisDecoder(byte[] param0) throws IOException {
-        this.b(param0);
+        this.decodePacketContainer(param0);
     }
 
     static {

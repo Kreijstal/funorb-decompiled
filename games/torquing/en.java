@@ -67,9 +67,9 @@ final class en extends d {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               ke.a(225225318, var14);
               if (var6_intLifetime1 == 0) {
-                hb.a(eg.field_w, qc.field_bb, false, bf.field_c, MatchingFieldValidator.field_p, var6_intLifetime1);
+                hb.a(eg.field_w, StandardContentDialog.field_bb, false, bf.field_c, MatchingFieldValidator.field_p, var6_intLifetime1);
               } else {
-                hb.a(eg.field_w, qc.field_bb, false, bf.field_c, MatchingFieldValidator.field_p, var6_intLifetime1);
+                hb.a(eg.field_w, StandardContentDialog.field_bb, false, bf.field_c, MatchingFieldValidator.field_p, var6_intLifetime1);
               }
             }
             SocketConnector.a(8191, var5);

@@ -10,7 +10,7 @@ final class bb {
           return (String) null;
         }
         if (qg.field_g == fh.field_B) {
-          return eb.field_z;
+          return RegistrationAgreementPane.field_z;
         }
         if (!pb.field_k.a(1000)) {
           return pb.field_k.a((byte) -53);

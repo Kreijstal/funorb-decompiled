@@ -59,7 +59,7 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
           var3_int = param0.length();
           if (var3_int >= 1 &&
             var3_int <= 12) {
-            var4 = hm.a((byte) -126, param0);
+            var4 = StripedProgressWidget.a((byte) -126, param0);
             if (var4 != null &&
               var4.length() >= 1) {
               if (!TutorialController.a((byte) 103, var4.charAt(0)) &&

@@ -93,7 +93,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.applet.AppletContext stackIn_10_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (al.field_W != null) {
+          if (ContentTransitionDialog.field_W != null) {
             stackIn_2_0 = null;
             return (java.applet.AppletContext) (stackIn_2_0);
           }
@@ -121,7 +121,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (al.field_W != null) {
+          if (ContentTransitionDialog.field_W != null) {
             stackIn_2_0 = null;
             return (String) (stackIn_2_0);
           }
@@ -356,7 +356,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final java.net.URL getCodeBase() {
         RuntimeException var1;
-        if (al.field_W != null) {
+        if (ContentTransitionDialog.field_W != null) {
           return null;
         }
         if (AgeValidator.field_r != null &&
@@ -480,7 +480,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
           }
           this.clearClientResources(102);
-          if (al.field_W != null) {
+          if (ContentTransitionDialog.field_W != null) {
             try {
               System.exit(0);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {
@@ -525,9 +525,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             q.field_Db = q.field_Db - 50;
             DisplayNameSelectionPanel.field_G.setSize(ja.field_j, wc.field_p);
             DisplayNameSelectionPanel.field_G.setVisible(true);
-            if (null != al.field_W &&
+            if (null != ContentTransitionDialog.field_W &&
               MouseWheelInput.field_e == null) {
-              var6 = al.field_W.getInsets();
+              var6 = ContentTransitionDialog.field_W.getInsets();
               DisplayNameSelectionPanel.field_G.setLocation(var6.left + ng.field_v, LoginPanel.field_P + var6.top);
               if (Terraphoenix.field_V != 0) {
                 DisplayNameSelectionPanel.field_G.setLocation(ng.field_v, LoginPanel.field_P);
@@ -631,8 +631,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           boolean decompiledFrameRemainder0 = true;
           if (MouseWheelInput.field_e == null) {
-            if (al.field_W != null) {
-              var2 = al.field_W;
+            if (ContentTransitionDialog.field_W != null) {
+              var2 = ContentTransitionDialog.field_W;
               decompiledFrameRemainder0 = (var4 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -660,8 +660,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) DisplayNameSelectionPanel.field_G));
           DisplayNameSelectionPanel.field_G.setSize(ja.field_j, wc.field_p);
           DisplayNameSelectionPanel.field_G.setVisible(true);
-          if (var2 == al.field_W) {
-            var3 = al.field_W.getInsets();
+          if (var2 == ContentTransitionDialog.field_W) {
+            var3 = ContentTransitionDialog.field_W.getInsets();
             DisplayNameSelectionPanel.field_G.setLocation(ng.field_v + var3.left, LoginPanel.field_P + var3.top);
             if (var4 != 0) {
               DisplayNameSelectionPanel.field_G.setLocation(ng.field_v, LoginPanel.field_P);
@@ -723,7 +723,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.net.URL stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != al.field_W) {
+          if (null != ContentTransitionDialog.field_W) {
             stackIn_2_0 = null;
             return (java.net.URL) (stackIn_2_0);
           }

@@ -365,7 +365,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -64, "INSTRUCTIONS_MULTIPLAYER_1");
                 if (null != var2) {
-                  ue.field_K = in.a(0, var2);
+                  RegistrationAgreementPane.field_K = in.a(0, var2);
                 }
                 var2 = en.a((byte) -71, "INSTRUCTIONS_MULTIPLAYER_2");
                 if (null != var2) {
@@ -1156,7 +1156,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -56, "STANDARD_GAME");
                 if (var2 != null) {
-                  rh.field_E = in.a(0, var2);
+                  DialogMessagePane.field_E = in.a(0, var2);
                 }
                 var2 = en.a((byte) -61, "SELECT_SINGLEPLAYER_MODE");
                 if (null != var2) {
@@ -1252,7 +1252,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -13, "REDWONDEATHMATCH");
                 if (null != var2) {
-                  gr.field_ab = in.a(0, var2);
+                  FullscreenStatusDialog.field_ab = in.a(0, var2);
                 }
                 var2 = en.a((byte) -63, "BLUEWONDEATHMATCH");
                 if (null != var2) {
@@ -1288,7 +1288,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -23, "STATS_ENDLEVEL");
                 if (var2 != null) {
-                  we.field_H = in.a(0, var2);
+                  StripedProgressWidget.field_H = in.a(0, var2);
                 }
                 var2 = en.a((byte) -16, "STATS_TILESPAINTED");
                 if (var2 != null) {
@@ -1316,7 +1316,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -22, "BLUEDIED");
                 if (null != var2) {
-                  rh.field_G = in.a(0, var2);
+                  DialogMessagePane.field_G = in.a(0, var2);
                 }
                 var2 = en.a((byte) -57, "REDDIED");
                 if (null != var2) {
@@ -1452,7 +1452,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -31, "keycode_right");
                 if (var2 != null) {
-                  ga.field_gb = 255 & var2[0];
+                  StandardContentDialog.field_gb = 255 & var2[0];
                 }
                 var2 = en.a((byte) -15, "keycode_left");
                 if (var2 != null) {
@@ -1512,15 +1512,15 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -42, "keycode_timetrial_restart");
                 if (var2 != null) {
-                  ga.field_fb = var2[0] & 255;
+                  StandardContentDialog.field_fb = var2[0] & 255;
                 }
                 var2 = en.a((byte) -116, "anglebrackets,0");
                 if (var2 != null) {
-                  ue.field_F[0] = in.a(0, var2);
+                  RegistrationAgreementPane.field_F[0] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -15, "anglebrackets,1");
                 if (var2 != null) {
-                  ue.field_F[1] = in.a(0, var2);
+                  RegistrationAgreementPane.field_F[1] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -83, "keycode_debughelp");
                 po.field_e = null;

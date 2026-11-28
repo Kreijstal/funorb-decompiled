@@ -81,13 +81,13 @@ final class h extends IntrusiveNode {
         try {
           var5_int = 0;
           while (true) {
-            if (var5_int >= ge.field_eb.length) {
+            if (var5_int >= FullscreenStatusDialog.field_eb.length) {
               if (param2 != 1187598372) {
                 h.a(104);
               }
               return;
             }
-            param1 = ge.field_eb[var5_int];
+            param1 = FullscreenStatusDialog.field_eb[var5_int];
             var6 = var5_int << 4;
             while (true) {
               incrementValue$0 = param1;

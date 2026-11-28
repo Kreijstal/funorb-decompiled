@@ -6,7 +6,7 @@ final class MusicPatchPcmStream extends PcmStream {
     static IntrusiveDeque field_n;
     static long field_s;
     static int[] field_t;
-    static wi field_r;
+    static ProgressDialog field_r;
     static String field_p;
     IntrusiveDeque field_q;
     PcmStreamMixer field_o;
@@ -98,8 +98,8 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (null == kc.field_Q) {
-          kc.field_Q = new int[param2 * 2];
+        if (null == DialogMessagePane.field_Q) {
+          DialogMessagePane.field_Q = new int[param2 * 2];
           if (i.field_t == null) {
             i.field_t = new int[param2 * 2];
           } else {
@@ -181,7 +181,7 @@ final class MusicPatchPcmStream extends PcmStream {
             }
           }
         } else {
-          if (kc.field_Q.length >= param2) {
+          if (DialogMessagePane.field_Q.length >= param2) {
             if (i.field_t == null) {
               i.field_t = new int[param2 * 2];
             } else {
@@ -257,7 +257,7 @@ final class MusicPatchPcmStream extends PcmStream {
               }
             }
           } else {
-            kc.field_Q = new int[param2 * 2];
+            DialogMessagePane.field_Q = new int[param2 * 2];
             if (i.field_t == null) {
               i.field_t = new int[param2 * 2];
             } else {

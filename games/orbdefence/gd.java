@@ -11,7 +11,7 @@ final class gd {
           if (TextLineMetrics.field_h == null) {
             TextLineMetrics.field_h = new bl();
             TextLineMetrics.field_h.a(lm.field_f, -2699);
-            TextLineMetrics.field_h.field_j = pc.field_bb;
+            TextLineMetrics.field_h.field_j = StandardContentDialog.field_bb;
             TextLineMetrics.field_h.field_r = 7697781;
             TextLineMetrics.field_h.field_d = 4;
             TextLineMetrics.field_h.field_a = 5;
@@ -26,7 +26,7 @@ final class gd {
         if (TextLineMetrics.field_h == null) {
           TextLineMetrics.field_h = new bl();
           TextLineMetrics.field_h.a(lm.field_f, -2699);
-          TextLineMetrics.field_h.field_j = pc.field_bb;
+          TextLineMetrics.field_h.field_j = StandardContentDialog.field_bb;
           TextLineMetrics.field_h.field_r = 7697781;
           TextLineMetrics.field_h.field_d = 4;
           TextLineMetrics.field_h.field_a = 5;

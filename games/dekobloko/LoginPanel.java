@@ -338,7 +338,7 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
             ThemeTips.integerState0351 != 1) {
             RenderingSupport003.sceneWidgetPart010State0001.booleanState0212 = false;
             RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetPart008State0005.sceneWidgetState0089.stringState0598 = SoftwareFramebuffer.stringState0616;
-            UiComponentPart012.performAction0591(RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetState0108, true);
+            ProgressMessageDialog.performAction0591(RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetState0108, true);
           } else {
             RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetPart008State0005.sceneWidgetState0089.stringState0598 = null;
             RenderingSupport003.sceneWidgetPart010State0001.booleanState0212 = true;
@@ -604,9 +604,9 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
                   RichTextWidget.performAction1367(17);
                 } else {
                   if (this.booleanState0068) {
-                    UiComponentPart030.performAction1557((byte) -73);
+                    ResizableModalDialog.performAction1557((byte) -73);
                   } else {
-                    UiComponentPart017.performAction0954(8927);
+                    GuestPlayConfirmationForm.performAction0954(8927);
                   }
                 }
               }

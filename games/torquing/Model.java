@@ -36,14 +36,14 @@ final class Model extends IntrusiveNode {
             var5.vertexX = u.a(32681, var5.vertexX, var3Lifetime1);
             var5.vertexY = u.a(32681, var5.vertexY, var3Lifetime1);
             var5.vertexZ = u.a(32681, var5.vertexZ, var3Lifetime1);
-            var5.field_j = mn.a(-6058, var5.field_j, 0, var3Lifetime1);
+            var5.field_j = ProgressMessageDialog.a(-6058, var5.field_j, 0, var3Lifetime1);
             if (null != var5.field_D) {
               var5.field_D = cc.a(var3Lifetime1, (byte) 127, var5.field_D);
             }
             var5.field_m = qi.a(var3Lifetime1, var5.field_m, (byte) 60);
             var4 = model.field_q;
             if (null != var4.field_u) {
-              var4.field_u = mn.a(-6058, var4.field_u, 255, var3Lifetime1);
+              var4.field_u = ProgressMessageDialog.a(-6058, var4.field_u, 255, var3Lifetime1);
             }
           }
           if (null != var5.field_u &&

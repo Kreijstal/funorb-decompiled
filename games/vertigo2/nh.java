@@ -24,7 +24,7 @@ final class nh extends jq {
         try {
           if (param0 != null &&
             param0.length() >= DirectByteStorage.field_h) {
-            if (param0.length() > fg.field_Y) {
+            if (param0.length() > ProgressDialog.field_Y) {
               return true;
             }
             if (param1 != -113) {

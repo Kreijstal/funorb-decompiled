@@ -85,7 +85,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
 
     final static String f(int param0) {
         if (DelegatingCanvas.field_a == ci.field_ub) {
-          return ih.field_Q;
+          return NumericDateInputWidget.field_Q;
         }
         if (param0 != 1633075718) {
           return (String) null;

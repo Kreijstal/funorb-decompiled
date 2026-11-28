@@ -42,14 +42,14 @@ final class jk {
         String var1 = null;
         if (vh.field_j) {
           if (oj.field_q != null) {
-            oj.field_q.q(4210752);
+            oj.field_q.closeDialog(4210752);
           }
           int var2 = -45 / ((26 - param0) / 52);
           var1 = fe.b((byte) -127);
           AccountCreationResultPanel.field_ib = new LoginPanel(var1, (String) null, true, false, false);
           bm.field_d.showDialog((byte) 74, (UiWidget) (kg.field_j));
-          kg.field_j.a(false, AccountCreationResultPanel.field_ib);
-          kg.field_j.m(0);
+          kg.field_j.replaceContent(false, AccountCreationResultPanel.field_ib);
+          kg.field_j.finishResize(0);
           return;
         }
         throw new IllegalStateException();
@@ -222,7 +222,7 @@ final class jk {
             stackIn_8_0 = -1;
             return stackIn_8_0;
           }
-          if (ModalDialogHost.field_E == dh.field_bb) {
+          if (ModalDialogHost.field_E == ProgressMessageDialog.field_bb) {
             uk.field_b.position = 0;
             ci.field_h = null;
             if (param3 == null) {
@@ -248,7 +248,7 @@ final class jk {
               uk.field_b.writeByte(16, -15);
               uk.field_b.position = uk.field_b.position + 1;
               var9 = uk.field_b.position;
-              cg.a(uk.field_b, pc.field_W, 0, nc.field_ab, pg.field_c);
+              cg.a(uk.field_b, StandardContentDialog.field_W, 0, nc.field_ab, pg.field_c);
               uk.field_b.backpatchByteLength((byte) 123, uk.field_b.position - var9);
             } else {
               var9 = 0;
@@ -273,24 +273,24 @@ final class jk {
                 var11_ref_StringLifetime4 = "";
               }
               uk.field_b.writeString(var11_ref_StringLifetime4, -6528);
-              cg.a(uk.field_b, pc.field_W, 0, nc.field_ab, pg.field_c);
+              cg.a(uk.field_b, StandardContentDialog.field_W, 0, nc.field_ab, pg.field_c);
               uk.field_b.backpatchShortLength(-var10 + uk.field_b.position, -2);
             }
             bh.a(-1, -1);
-            dh.field_bb = FullscreenFocusCanvas.field_f;
+            ProgressMessageDialog.field_bb = FullscreenFocusCanvas.field_f;
           }
-          if (dh.field_bb == FullscreenFocusCanvas.field_f &&
+          if (ProgressMessageDialog.field_bb == FullscreenFocusCanvas.field_f &&
             AccountRequestState.a(true, 1)) {
             var9Lifetime1 = NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
             NetworkArchiveRequest.field_t.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               vd.field_e = new String[var9Lifetime1 - 100];
-              dh.field_bb = fd.field_h;
+              ProgressMessageDialog.field_bb = fd.field_h;
             } else {
               if (var9Lifetime1 == 248) {
                 wl.a(uj.b((byte) -120), (byte) 54);
-                kk.field_Y = ob.field_C;
+                kk.field_Y = RegistrationAgreementPane.field_C;
                 th.a(param6 + 23856);
                 FullscreenFocusCanvas.field_a = false;
                 stackIn_36_0 = var9Lifetime1;
@@ -298,7 +298,7 @@ final class jk {
               }
               if (var9Lifetime1 != 99) {
                 GameAppletShell.field_c = -1;
-                dh.field_bb = nk.field_w;
+                ProgressMessageDialog.field_bb = nk.field_w;
                 ab.field_l = var9Lifetime1;
               } else {
                 AccountRequestState.a(true, ue.b((byte) 123));
@@ -307,7 +307,7 @@ final class jk {
               }
             }
           }
-          if (dh.field_bb == fd.field_h) {
+          if (ProgressMessageDialog.field_bb == fd.field_h) {
             var9Lifetime2 = 2;
             if (AccountRequestState.a(true, var9Lifetime2)) {
               var10Lifetime1 = NetworkArchiveRequest.field_t.readUnsignedShort(98203176);
@@ -324,7 +324,7 @@ final class jk {
               }
             }
           }
-          if (dh.field_bb == nk.field_w &&
+          if (ProgressMessageDialog.field_bb == nk.field_w &&
             ce.a(-68)) {
             if (ab.field_l == 255) {
               var9_ref_String = NetworkArchiveRequest.field_t.readNullableString(-1);

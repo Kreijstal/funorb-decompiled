@@ -73,7 +73,7 @@ final class ns extends BoardChange {
               if (UiComponent.field_s) {
                 param0 = kda.field_a;
               }
-              oq.field_b.a(param2, param0, true);
+              oq.field_b.showResult(param2, param0, true);
             }
             if (param2 != 256 &&
               param2 != 10 &&

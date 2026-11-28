@@ -92,10 +92,10 @@ final class hi {
             stackIn_13_2 = null;
             stackIn_13_3 = SecondaryNodeDeque.field_c.getCodeBase();
             stackIn_13_4 = new StringBuilder().append("clienterror.ws?c=").append(LabeledWidgetContainer.field_J).append("&u=");
-            if (lb.field_W != null) {
+            if (ProgressDialog.field_W != null) {
               stackIn_14_1 = null;
               stackIn_14_2 = null;
-              stackIn_14_5 = lb.field_W;
+              stackIn_14_5 = ProgressDialog.field_W;
             } else {
               stackIn_14_1 = null;
               stackIn_14_2 = null;

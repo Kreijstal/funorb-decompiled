@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ji {
-    static rk field_a;
+    static ProgressDialog field_a;
     static String field_b;
 
     final static void a(boolean param0) {
@@ -26,18 +26,18 @@ final class ji {
 
     final static void a(int param0, int param1) {
         byte dupTemp$0 = 0;
-        jc.field_O.field_l[oj.field_c] = (short)(param0 >> 1);
-        jc.field_O.field_l[eb.field_d] = (short)(param0 >> 1);
+        ResizableModalDialog.field_O.field_l[oj.field_c] = (short)(param0 >> 1);
+        ResizableModalDialog.field_O.field_l[eb.field_d] = (short)(param0 >> 1);
         if (param1 == 24355) {
-          dupTemp$0 = 0 != bc.a(param0, 1) ? ng.field_H : db.field_p;
-          jc.field_O.field_O[eb.field_d] = dupTemp$0;
-          jc.field_O.field_O[oj.field_c] = dupTemp$0;
+          dupTemp$0 = 0 != bc.a(param0, 1) ? StripedProgressWidget.field_H : db.field_p;
+          ResizableModalDialog.field_O.field_O[eb.field_d] = dupTemp$0;
+          ResizableModalDialog.field_O.field_O[oj.field_c] = dupTemp$0;
           return;
         }
         field_b = (String) null;
-        byte dupTemp$1 = 0 != bc.a(param0, 1) ? ng.field_H : db.field_p;
-        jc.field_O.field_O[eb.field_d] = dupTemp$1;
-        jc.field_O.field_O[oj.field_c] = dupTemp$1;
+        byte dupTemp$1 = 0 != bc.a(param0, 1) ? StripedProgressWidget.field_H : db.field_p;
+        ResizableModalDialog.field_O.field_O[eb.field_d] = dupTemp$1;
+        ResizableModalDialog.field_O.field_O[oj.field_c] = dupTemp$1;
     }
 
     final static void a(byte param0, RgbSprite[] param1) {
@@ -64,22 +64,22 @@ final class ji {
           jb.a(DiskArchiveRequest.field_p);
           jb.b(1.0f);
           var19 = new bb(16, 8, 4);
-          var3 = ml.a(var19, 0, 0, 0, (byte) -72);
-          var4 = ml.a(var19, 0, 1, 0, (byte) -93);
-          var5 = ml.a(var19, 0, 0, 1, (byte) -87);
-          var6 = ml.a(var19, 0, 1, 1, (byte) -122);
-          var7 = ml.a(var19, 1, 0, 0, (byte) -61);
-          var8 = ml.a(var19, 1, 1, 0, (byte) -84);
-          var9 = ml.a(var19, 1, 0, 1, (byte) -90);
-          var10 = ml.a(var19, 1, 1, 1, (byte) -122);
-          var11 = ml.a(var19, 2, 0, 0, (byte) -52);
-          var12 = ml.a(var19, 0, 0, 2, (byte) -53);
-          var13 = ml.a(var19, 0, 0, -1, (byte) -98);
-          var14 = ml.a(var19, 1, 1, -1, (byte) -60);
-          var15 = ml.a(var19, -1, 1, 0, (byte) -111);
-          var16 = ml.a(var19, 2, 0, -1, (byte) -118);
-          var17 = ml.a(var19, -1, 1, -1, (byte) -94);
-          var18 = ml.a(var19, 1, 1, 2, (byte) -82);
+          var3 = FullscreenNoticeType.a(var19, 0, 0, 0, (byte) -72);
+          var4 = FullscreenNoticeType.a(var19, 0, 1, 0, (byte) -93);
+          var5 = FullscreenNoticeType.a(var19, 0, 0, 1, (byte) -87);
+          var6 = FullscreenNoticeType.a(var19, 0, 1, 1, (byte) -122);
+          var7 = FullscreenNoticeType.a(var19, 1, 0, 0, (byte) -61);
+          var8 = FullscreenNoticeType.a(var19, 1, 1, 0, (byte) -84);
+          var9 = FullscreenNoticeType.a(var19, 1, 0, 1, (byte) -90);
+          var10 = FullscreenNoticeType.a(var19, 1, 1, 1, (byte) -122);
+          var11 = FullscreenNoticeType.a(var19, 2, 0, 0, (byte) -52);
+          var12 = FullscreenNoticeType.a(var19, 0, 0, 2, (byte) -53);
+          var13 = FullscreenNoticeType.a(var19, 0, 0, -1, (byte) -98);
+          var14 = FullscreenNoticeType.a(var19, 1, 1, -1, (byte) -60);
+          var15 = FullscreenNoticeType.a(var19, -1, 1, 0, (byte) -111);
+          var16 = FullscreenNoticeType.a(var19, 2, 0, -1, (byte) -118);
+          var17 = FullscreenNoticeType.a(var19, -1, 1, -1, (byte) -94);
+          var18 = FullscreenNoticeType.a(var19, 1, 1, 2, (byte) -82);
           var19.a(var6, var5, var4, (byte) 1, (byte) -1, (short) 63, (short) -1);
           var19.a(var4, var5, var3, (byte) 1, (byte) -1, (short) 63, (short) -1);
           var19.a(var9, var10, var7, (byte) 1, (byte) -1, (short) 63, (short) -1);
@@ -87,7 +87,7 @@ final class ji {
           cf.field_d = var19.a((short) var3, (short) var11, (short) var12);
           db.field_p = var19.a((short) var8, (short) var15, (short) var18);
           AccountRequestState.field_a = var19.a((short) var13, (short) var16, (short) var5);
-          ng.field_H = var19.a((short) var14, (short) var17, (short) var10);
+          StripedProgressWidget.field_H = var19.a((short) var14, (short) var17, (short) var10);
           ModalDialog.field_F = var19.a(var3, var5, var7, (byte) 1, cf.field_d, (short) 0, (short) 0);
           if (param0 >= -87) {
             ji.a(-42);
@@ -95,11 +95,11 @@ final class ji {
           od.field_a = var19.a(var7, var5, var9, (byte) 1, cf.field_d, (short) 0, (short) 0);
           eb.field_d = var19.a(var4, var10, var6, (byte) 1, db.field_p, (short) 1, (short) 1);
           oj.field_c = var19.a(var8, var10, var4, (byte) 1, db.field_p, (short) 1, (short) 1);
-          jc.field_O = (ik) (var19.a(127, 65535, -1, 0, 0));
-          jc.field_O.field_h = qa.a(-100, var19.field_d);
-          jc.field_O.field_u = qa.a(-36, var19.field_B);
-          jc.field_O.field_U = qa.a(-107, var19.field_z);
-          jc.field_O.field_O = var19.field_c;
+          ResizableModalDialog.field_O = (ik) (var19.a(127, 65535, -1, 0, 0));
+          ResizableModalDialog.field_O.field_h = qa.a(-100, var19.field_d);
+          ResizableModalDialog.field_O.field_u = qa.a(-36, var19.field_B);
+          ResizableModalDialog.field_O.field_U = qa.a(-107, var19.field_z);
+          ResizableModalDialog.field_O.field_O = var19.field_c;
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "ji.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

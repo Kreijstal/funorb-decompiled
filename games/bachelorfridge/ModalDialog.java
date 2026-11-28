@@ -85,7 +85,7 @@ abstract class ModalDialog extends WidgetContainer {
         }
         if (this.field_E >= 256) {
           if (param2 == 0) {
-            this.a(this.y + param1, (byte) 89, param3 + this.x);
+            this.drawDialogBackground(this.y + param1, (byte) 89, param3 + this.x);
             super.draw((byte) -85, param1, param2, param3);
             return;
           }
@@ -96,7 +96,7 @@ abstract class ModalDialog extends WidgetContainer {
           bu.a(0, lfa.field_u);
           SoftwareRasterizer.clear();
           var5 = 42 % ((-20 - param0) / 54);
-          this.a(0, (byte) -109, 0);
+          this.drawDialogBackground(0, (byte) -109, 0);
           super.draw((byte) 43, -this.y - param1, param2, -param3 - this.x);
           db.b(110);
           lfa.field_u.drawWithOpacity(param3 + this.x, param1 + this.y, this.field_E);
@@ -107,7 +107,7 @@ abstract class ModalDialog extends WidgetContainer {
           bu.a(0, lfa.field_u);
           SoftwareRasterizer.clear();
           var5Lifetime1 = 42 % ((-20 - param0) / 54);
-          this.a(0, (byte) -109, 0);
+          this.drawDialogBackground(0, (byte) -109, 0);
           super.draw((byte) 43, -this.y - param1, param2, -param3 - this.x);
           db.b(110);
           lfa.field_u.drawWithOpacity(param3 + this.x, param1 + this.y, this.field_E);
@@ -118,7 +118,7 @@ abstract class ModalDialog extends WidgetContainer {
           bu.a(0, lfa.field_u);
           SoftwareRasterizer.clear();
           var5Lifetime2 = 42 % ((-20 - param0) / 54);
-          this.a(0, (byte) -109, 0);
+          this.drawDialogBackground(0, (byte) -109, 0);
           super.draw((byte) 43, -this.y - param1, param2, -param3 - this.x);
           db.b(110);
           lfa.field_u.drawWithOpacity(param3 + this.x, param1 + this.y, this.field_E);
@@ -127,7 +127,7 @@ abstract class ModalDialog extends WidgetContainer {
         bu.a(0, lfa.field_u);
         SoftwareRasterizer.clear();
         var5Lifetime3 = 42 % ((-20 - param0) / 54);
-        this.a(0, (byte) -109, 0);
+        this.drawDialogBackground(0, (byte) -109, 0);
         super.draw((byte) 43, -this.y - param1, param2, -param3 - this.x);
         db.b(110);
         lfa.field_u.drawWithOpacity(param3 + this.x, param1 + this.y, this.field_E);
@@ -168,7 +168,7 @@ abstract class ModalDialog extends WidgetContainer {
         return var2Lifetime1;
     }
 
-    abstract void a(int param0, byte param1, int param2);
+    abstract void drawDialogBackground(int param0, byte param1, int param2);
 
     static {
         field_D = "Status effect <%0>";

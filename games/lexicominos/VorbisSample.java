@@ -33,7 +33,7 @@ final class VorbisSample extends IntrusiveNode {
     private boolean field_H;
     private static int[] field_w;
     private static boolean field_m;
-    private static qh[] field_k;
+    private static VorbisMapping[] field_k;
     private int field_i;
     private static int[] field_q;
     private int field_B;
@@ -49,10 +49,10 @@ final class VorbisSample extends IntrusiveNode {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    final static VorbisSample a(ResourceArchive param0, String param1, String param2) {
+    final static VorbisSample loadByName(ResourceArchive param0, String param1, String param2) {
         try {
           VorbisSample var4_ref = null;
-          if (!VorbisSample.a(param0)) {
+          if (!VorbisSample.ensureSetup(param0)) {
             param0.tryLoadFileByName(param2, param1, -1);
             return null;
           }
@@ -74,25 +74,25 @@ final class VorbisSample extends IntrusiveNode {
         }
     }
 
-    private final static void a(byte[] param0, int param1) {
+    private final static void setBitStream(byte[] param0, int param1) {
         field_x = param0;
         field_D = param1;
         field_J = 0;
     }
 
-    private final static boolean a(ResourceArchive param0) {
+    private final static boolean ensureSetup(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_m) {
           var1 = param0.getFile(0, -27493, 0);
           if (var1 == null) {
             return false;
           }
-          VorbisSample.b(var1);
+          VorbisSample.decodeSetup(var1);
         }
         return true;
     }
 
-    private final void a(byte[] param0) throws IOException {
+    private final void decodePacketContainer(byte[] param0) throws IOException {
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -123,7 +123,7 @@ final class VorbisSample extends IntrusiveNode {
         }
     }
 
-    private final float[] c(int param0) {
+    private final float[] decodePacket(int param0) {
         int var32_int = 0;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
@@ -146,7 +146,7 @@ final class VorbisSample extends IntrusiveNode {
         int var11;
         int var12;
         int var13;
-        qh var14;
+        VorbisMapping var14;
         int var15;
         int var16;
         int var17_int;
@@ -235,7 +235,7 @@ final class VorbisSample extends IntrusiveNode {
         float var30Lifetime1Lifetime3;
         int var18_intLifetime1;
         int var18_intLifetime2;
-        VorbisSample.a(this.field_G[param0], 0);
+        VorbisSample.setBitStream(this.field_G[param0], 0);
         VorbisSample.readBit();
         var2 = VorbisSample.readBits(kb.bitLength(field_w.length - 1, 16));
         var3 = field_M[var2] ? 1 : 0;
@@ -283,7 +283,7 @@ final class VorbisSample extends IntrusiveNode {
         for (var17_intLifetime1 = 0; var17_intLifetime1 < var14.field_b; var17_intLifetime1++) {
           var42 = field_v[var14.field_a[var17_intLifetime1]];
           var52 = field_t;
-          var42.a(var52, var4 >> 1, var16Lifetime1 != 0);
+          var42.decodeResidue(var52, var4 >> 1, var16Lifetime1 != 0);
         }
         if (var15 == 0) {
           var17_intLifetime2 = var14.field_c;
@@ -498,7 +498,7 @@ final class VorbisSample extends IntrusiveNode {
         return var1;
     }
 
-    final static void b(byte[] param0) {
+    final static void decodeSetup(byte[] param0) {
         int var7_int = 0;
         int var8_int = 0;
         int var9_int = 0;
@@ -529,7 +529,7 @@ final class VorbisSample extends IntrusiveNode {
         int var4Lifetime2;
         int var5Lifetime1;
         int var5Lifetime2;
-        VorbisSample.a(param0, 0);
+        VorbisSample.setBitStream(param0, 0);
         field_L = 1 << VorbisSample.readBits(4);
         field_F = 1 << VorbisSample.readBits(4);
         field_t = new float[field_F];
@@ -595,9 +595,9 @@ final class VorbisSample extends IntrusiveNode {
           field_v[var4Lifetime1] = new VorbisResidue();
         }
         var4Lifetime2 = VorbisSample.readBits(6) + 1;
-        field_k = new qh[var4Lifetime2];
+        field_k = new VorbisMapping[var4Lifetime2];
         for (var5Lifetime1 = 0; var5Lifetime1 < var4Lifetime2; var5Lifetime1++) {
-          field_k[var5Lifetime1] = new qh();
+          field_k[var5Lifetime1] = new VorbisMapping();
         }
         var5Lifetime2 = VorbisSample.readBits(6) + 1;
         field_M = new boolean[var5Lifetime2];
@@ -614,10 +614,10 @@ final class VorbisSample extends IntrusiveNode {
         field_m = true;
     }
 
-    final static VorbisSample a(ResourceArchive param0, int param1, int param2) {
+    final static VorbisSample load(ResourceArchive param0, int param1, int param2) {
         try {
           VorbisSample var4_ref = null;
-          if (!VorbisSample.a(param0)) {
+          if (!VorbisSample.ensureSetup(param0)) {
             param0.tryLoadFile(param1, (byte) 78, param2);
             return null;
           }
@@ -639,7 +639,7 @@ final class VorbisSample extends IntrusiveNode {
         }
     }
 
-    final PcmSample a(int[] param0) {
+    final PcmSample decodeToPcm(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -663,7 +663,7 @@ final class VorbisSample extends IntrusiveNode {
             param0[0] <= 0) {
             return null;
           }
-          var7 = this.c(this.field_B);
+          var7 = this.decodePacket(this.field_B);
           if (var7 != null) {
             var3 = this.field_u;
             var4 = var7.length;
@@ -692,7 +692,7 @@ final class VorbisSample extends IntrusiveNode {
         return new PcmSample(this.field_n, var12, this.field_r, this.field_I, this.field_y);
     }
 
-    final PcmSample c() {
+    final PcmSample decodeAllToPcm() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -706,7 +706,7 @@ final class VorbisSample extends IntrusiveNode {
         var1 = new byte[this.field_z];
         var2 = 0;
         for (var3 = 0; var3 < this.field_G.length; var3++) {
-          var4 = this.c(var3);
+          var4 = this.decodePacket(var3);
           if (var4 != null) {
             var5 = var4.length;
             if (var5 > this.field_z - var2) {
@@ -747,7 +747,7 @@ final class VorbisSample extends IntrusiveNode {
     }
 
     private VorbisSample(byte[] param0) throws IOException {
-        this.a(param0);
+        this.decodePacketContainer(param0);
     }
 
     final static int readBit() {

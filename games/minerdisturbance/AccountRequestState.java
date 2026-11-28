@@ -8,7 +8,7 @@ final class AccountRequestState {
     static PacketBuffer field_f;
     static boolean field_b;
     static AccountRequestState field_h;
-    static jl field_e;
+    static ProgressDialog field_e;
     static boolean field_d;
     static int field_g;
     static String field_i;

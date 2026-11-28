@@ -78,7 +78,7 @@ final class Slime {
             SoftwareRasterizer.fillRectangle(2, 2 + (var5 - 32), param2 - 4, 156, 0);
             ve.a(160, -32 + var5, ConfirmedEmailAvailabilityValidator.field_p, (byte) -112, param2, 0);
             ResourceArchive.field_e.drawCentred(bk.field_b, var4, var5 + 64, 16777215, -1);
-            jh.field_s.drawCentred(gd.field_b[nb.field_g] + "<lt> <gt>" + gd.field_b[db.field_S], var4, var5 + 64 + 24, 8454016, -1);
+            jh.field_s.drawCentred(gd.field_b[nb.field_g] + "<lt> <gt>" + gd.field_b[ProgressDialog.field_S], var4, var5 + 64 + 24, 8454016, -1);
           }
         }
         SoftwareRasterizer.setClip(param2, 0, 512 + param2, 446);
@@ -354,19 +354,19 @@ final class Slime {
                 }
                 if (vk.field_b == 1 &&
                   MusicPatchPcmStream.field_o == null) {
-                  if (k.field_C < 6) {
-                    k.field_C = k.field_C + 1;
+                  if (GuestPlayConfirmationForm.field_C < 6) {
+                    GuestPlayConfirmationForm.field_C = GuestPlayConfirmationForm.field_C + 1;
                     qf.field_c = qf.field_c + 100000;
                   }
-                  if (5 == k.field_C) {
+                  if (5 == GuestPlayConfirmationForm.field_C) {
                     dk.a(false, 4, 251);
                   }
                 }
               }
               if (this.field_t > -1 &&
                 param0[this.field_t].field_d != 2) {
-                qf.field_c = qf.field_c - 100000 * k.field_C;
-                k.field_C = 0;
+                qf.field_c = qf.field_c - 100000 * GuestPlayConfirmationForm.field_C;
+                GuestPlayConfirmationForm.field_C = 0;
               }
               if (this.field_t > -1 &&
                 param0[this.field_t].field_d == 2 &&

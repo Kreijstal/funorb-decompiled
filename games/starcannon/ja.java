@@ -37,11 +37,11 @@ final class ja {
               var6 = fb.$cfr$intArgs$a$1694234bddb3(DualLinkNode.field_h[var3_int], 26, true);
               var4 = var4 + mc.field_h;
               var7 = ee.field_b - (var6 >> 1);
-              if (rh.a(pk.field_c + (kc.field_S << 1), param1, (rh.field_i << 1) + var6, -rh.field_i + var7, var4, param0, -89)) {
+              if (rh.a(pk.field_c + (ResizableModalDialog.field_S << 1), param1, (rh.field_i << 1) + var6, -rh.field_i + var7, var4, param0, -89)) {
                 stackIn_7_0 = var5;
                 return stackIn_7_0;
               }
-              var4 = var4 + (pk.field_c + mc.field_h + (kc.field_S << 1));
+              var4 = var4 + (pk.field_c + mc.field_h + (ResizableModalDialog.field_S << 1));
             }
             var3_int++;
           }
@@ -133,7 +133,7 @@ final class ja {
         RuntimeException var5 = null;
         long var6 = 0L;
         PcmSample var8 = null;
-        nj var9 = null;
+        VorbisSample var9 = null;
         PcmSample stackIn_2_0 = null;
         PcmSample stackIn_15_0 = null;
         PcmSample stackIn_20_0 = null;
@@ -155,9 +155,9 @@ final class ja {
             0 >= param3[0]) {
             return null;
           }
-          var9 = (nj) (this.field_f.a(var6, (byte) 42));
+          var9 = (VorbisSample) (this.field_f.a(var6, (byte) 42));
           if (var9 == null) {
-            var9 = nj.a(this.field_b, param2, param0);
+            var9 = VorbisSample.load(this.field_b, param2, param0);
             if (var9 == null) {
               return null;
             }
@@ -167,7 +167,7 @@ final class ja {
             stackIn_15_0 = (PcmSample) null;
             return stackIn_15_0;
           }
-          var8Lifetime1 = var9.a(param3);
+          var8Lifetime1 = var9.decodeToPcm(param3);
           if (var8Lifetime1 == null) {
             return null;
           }

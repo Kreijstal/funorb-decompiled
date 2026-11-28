@@ -33,7 +33,7 @@ final class mc implements WidgetRenderer {
         }
         jh.field_a = null;
         if (eb.field_m) {
-          IntrusiveNode.field_c.m(13);
+          IntrusiveNode.field_c.showConnectionFailure(13);
         } else {
           var1 = DraggableWidgetContainer.field_H;
           if (0 < var1) {
@@ -44,7 +44,7 @@ final class mc implements WidgetRenderer {
             }
             jh.field_a = qa.a(119, new CharSequence[]{(CharSequence) ((Object) jh.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) NanoFrameTimer.field_j)});
           }
-          IntrusiveNode.field_c.o(77);
+          IntrusiveNode.field_c.closeDialog(77);
           ba.c((byte) 15);
         }
     }

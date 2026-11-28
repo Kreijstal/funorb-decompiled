@@ -168,7 +168,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param0);
-          var3 = db.a(var5, 8351);
+          var3 = ProgressDialog.a(var5, 8351);
           if (var3 != null) {
             stackIn_2_0 = var3;
             return stackIn_2_0;

@@ -199,20 +199,20 @@ final class mo extends am {
           if (param0 != -457010900) {
             field_w = (int[]) null;
           }
-          if (qc.field_db != null) {
-            var3 = 357 - qc.field_db.field_u / 2;
+          if (StandardContentDialog.field_db != null) {
+            var3 = 357 - StandardContentDialog.field_db.field_u / 2;
             var4 = 0;
             if (0 != DualLinkNode.field_o &&
               re.field_c > var3 &&
-              re.field_c < var3 + qc.field_db.field_t) {
-              if (wh.field_s > -qc.field_db.field_s + 269 &&
+              re.field_c < var3 + StandardContentDialog.field_db.field_t) {
+              if (wh.field_s > -StandardContentDialog.field_db.field_s + 269 &&
                 wh.field_s < 269) {
                 FullscreenFocusCanvas.field_c = false;
                 var4 = 1;
                 mf.field_t = op.field_q;
               }
               if (wh.field_s > 586 &&
-                wh.field_s < qc.field_db.field_s + 586) {
+                wh.field_s < StandardContentDialog.field_db.field_s + 586) {
                 FullscreenFocusCanvas.field_c = true;
                 var4 = 1;
                 mf.field_t = op.field_q;
@@ -221,13 +221,13 @@ final class mo extends am {
             if (var4 == 0 &&
               op.field_j < mf.field_t &&
               k.field_e > var3 &&
-              var3 + qc.field_db.field_t > k.field_e) {
-              if (269 - qc.field_db.field_s < n.field_t &&
+              var3 + StandardContentDialog.field_db.field_t > k.field_e) {
+              if (269 - StandardContentDialog.field_db.field_s < n.field_t &&
                 n.field_t < 269) {
                 mf.field_t = op.field_j;
               }
               if (586 < n.field_t &&
-                n.field_t < 586 + qc.field_db.field_s) {
+                n.field_t < 586 + StandardContentDialog.field_db.field_s) {
                 mf.field_t = op.field_j;
               }
             }

@@ -218,7 +218,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
             if (ab.field_j.a((byte) -1)) {
               var1_int = 1;
             }
-            if (13 != ob.field_K) {
+            if (13 != RegistrationAgreementPane.field_K) {
               continue;
             }
             var2 = 1;
@@ -230,7 +230,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
           var3 = param0;
           if (var1_int != 0 &&
             0 <= ab.field_j.field_h) {
-            var3 = gg.field_O[ab.field_j.field_h];
+            var3 = FullscreenStatusDialog.field_O[ab.field_j.field_h];
             if (2 == var3) {
               me.c(true);
             } else if (var3 == 5) {

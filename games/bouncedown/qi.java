@@ -437,7 +437,7 @@ final class qi extends DefaultTextWidgetRenderer {
           var17 = var16;
           var17.position = param0.length - 2;
           EmailFormatValidator.field_p = var17.readUnsignedShort(-1640531527);
-          lg.field_c = new boolean[EmailFormatValidator.field_p];
+          FullscreenNoticeType.field_c = new boolean[EmailFormatValidator.field_p];
           if (param1 != 11906) {
             field_r = (int[]) null;
           }
@@ -527,7 +527,7 @@ final class qi extends DefaultTextWidgetRenderer {
                 }
               }
             }
-            lg.field_c[var4Lifetime5] = var10 != 0;
+            FullscreenNoticeType.field_c[var4Lifetime5] = var10 != 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

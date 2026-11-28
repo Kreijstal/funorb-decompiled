@@ -1,0 +1,187 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class GuestPlayConfirmationForm extends WidgetContainer implements WidgetActivationListener {
+    private InteractiveWidget field_G;
+    static int[] field_H;
+    private InteractiveWidget field_E;
+    static int[] field_D;
+    private InteractiveWidget field_F;
+
+    final void drawWidget(int param0, int param1, int param2, int param3) {
+        int var5 = param2 + this.field_m;
+        int var6 = this.field_j + param0;
+        NameSuggestionsPanel.field_G.drawParagraph(CrossfadingMidiPcmStream.field_z, 20 + var5, 20 + var6, -40 + this.field_t, -50 + this.field_x, 16777215, -1, 1, param3, NameSuggestionsPanel.field_G.field_F);
+        super.drawWidget(param0, param1, param2, 0);
+    }
+
+    public static void e(byte param0) {
+        field_H = null;
+        if (param0 < -85) {
+          field_D = null;
+          return;
+        }
+        Sprite var2 = (Sprite) null;
+        GuestPlayConfirmationForm.a((Sprite) null, 0, 30, 35, 43, 70);
+        field_D = null;
+    }
+
+    public GuestPlayConfirmationForm() {
+        super(0, 0, 476, 225, (WidgetRenderer) null);
+        this.field_E = new InteractiveWidget(DelegatingCanvas.field_g, (WidgetEventListener) null);
+        this.field_F = new InteractiveWidget(MidiPcmStream.field_F, (WidgetEventListener) null);
+        this.field_G = new InteractiveWidget(pf.field_c, (WidgetEventListener) null);
+        gh var1 = new gh();
+        this.field_E.field_w = (WidgetRenderer) ((Object) var1);
+        this.field_F.field_w = (WidgetRenderer) ((Object) var1);
+        this.field_G.field_w = (WidgetRenderer) ((Object) var1);
+        int var2 = 4;
+        int var3 = 326;
+        int var4 = -var2 + var3 >> 1;
+        this.field_F.setBounds(30, var4, this.field_t - var3 >> 1, 0, -var2 + (-48 + this.field_x));
+        this.field_G.setBounds(30, var4, var2 + ((this.field_t - var3 >> 1) + var4), 0, -var2 + (-48 + this.field_x));
+        this.field_E.setBounds(30, var3, -var3 + this.field_t >> 1, 0, -(2 * var2) + (-78 + this.field_x));
+        this.field_F.field_n = (WidgetEventListener) (this);
+        this.field_E.field_n = (WidgetEventListener) (this);
+        this.field_E.field_z = id.field_b;
+        this.field_G.field_n = (WidgetEventListener) (this);
+        this.field_G.field_z = TextFieldValidator.field_g;
+        this.addChild(this.field_F, 5411);
+        this.addChild(this.field_E, 5411);
+        this.addChild(this.field_G, 5411);
+    }
+
+    final boolean handleKey(char param0, byte param1, int param2, UiWidget param3) {
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        boolean stackIn_6_0 = false;
+        boolean stackIn_10_0 = false;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (super.handleKey(param0, (byte) -106, param2, param3)) {
+            return true;
+          }
+          if (param2 == 98) {
+            stackIn_6_0 = this.focusPreviousChild((byte) -122, param3);
+            return stackIn_6_0;
+          }
+          var5_int = 67 % ((param1 - 31) / 56);
+          if (param2 != 99) {
+            return false;
+          }
+          stackIn_10_0 = this.focusNextChild(97, param3);
+          return stackIn_10_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_13_0 = var5;
+          stackIn_13_1 = new StringBuilder().append("ig.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+        }
+    }
+
+    final static void h(int param0) {
+        if (param0 > -102) {
+          GuestPlayConfirmationForm.h(102);
+        }
+    }
+
+    final static Sprite a(Sprite param0, int param1, int param2, int param3, int param4, int param5) {
+        Sprite var6 = null;
+        RuntimeException var6_ref = null;
+        Sprite stackIn_2_0 = null;
+        Sprite stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 != 30) {
+            stackIn_2_0 = (Sprite) null;
+            return stackIn_2_0;
+          }
+          var6 = new Sprite(param4, param5);
+          Sprite.copyRegion(param0, var6, param3, param2, 0, 0, param4, param5);
+          stackIn_4_0 = var6;
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6_ref = decompiledCaughtException;
+          stackIn_7_0 = var6_ref;
+          stackIn_7_1 = new StringBuilder().append("ig.D(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+        }
+    }
+
+    final static int a(int param0, int param1, boolean param2, boolean param3) {
+        if (param2) {
+          GuestPlayConfirmationForm.h(70);
+          return cj.a(-69);
+        }
+        return cj.a(-69);
+    }
+
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, boolean param4) {
+        RuntimeException var6 = null;
+        int var7 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var7 = SolKnight.field_L ? 1 : 0;
+        try {
+          if (param3 != this.field_F) {
+            if (param3 != this.field_E) {
+              if (this.field_G == param3) {
+                ProxySocketConnector.f(4);
+              }
+            } else {
+              DebouncedFieldValidator.d(350);
+            }
+          } else {
+            ok.a((byte) 96);
+          }
+          if (param4) {
+            return;
+          }
+          GuestPlayConfirmationForm.e((byte) 30);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_13_0 = var6;
+          stackIn_13_1 = new StringBuilder().append("ig.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw fc.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
+        }
+    }
+
+    final static void a(byte param0) {
+        ContentTransitionDialog.field_cb.replaceContent(-3399, new GuestPlayConfirmationForm());
+        if (param0 > -31) {
+          Sprite var2 = (Sprite) null;
+          GuestPlayConfirmationForm.a((Sprite) null, 122, 9, -53, 119, 102);
+        }
+    }
+
+    static {
+        field_D = new int[8192];
+    }
+}

@@ -38,7 +38,7 @@ final class gi {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != null &&
-            param1.length() >= nh.field_bb &&
+            param1.length() >= FullscreenStatusDialog.field_bb &&
             param1.length() <= gb.field_b) {
             if (param0 > 40) {
               return false;

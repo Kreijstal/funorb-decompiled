@@ -159,7 +159,7 @@ abstract class GameShell extends GameApplet {
             qc.field_B = BufferedSocket.a(eh.field_f, 125);
           }
           HuffmanCodec.field_b = FrameTimer.a(mp.field_d, false, true, false, 1);
-          la.field_e = FrameTimer.a(rh.field_F, false, true, false, 1);
+          la.field_e = FrameTimer.a(DialogMessagePane.field_F, false, true, false, 1);
           kb.field_b = FrameTimer.a(AccountRegistrationPanel.field_G, false, true, false, 1);
           qc.field_A = 2;
           DropTargetWidgetContainer.field_G = la.field_e;
@@ -189,7 +189,7 @@ abstract class GameShell extends GameApplet {
           vl.b(2147483647);
           LabeledWidgetContainer.field_O = false;
           IntrusiveNode.field_h = mq.field_t;
-          we.a(kb.field_b, pl.field_i, (byte) -7, HuffmanCodec.field_b, la.field_e);
+          StripedProgressWidget.a(kb.field_b, pl.field_i, (byte) -7, HuffmanCodec.field_b, la.field_e);
           if (pb.field_f ||
             null != MouseWheelInput.field_f) {
             stackIn_102_0 = MouseWheelInput.field_f;
@@ -223,7 +223,7 @@ abstract class GameShell extends GameApplet {
         if (11 == qc.field_A) {
           if (IntrusiveDequeCursor.field_c != null && (!IntrusiveDequeCursor.field_c.ensureIndexLoaded(0) ||
             !IntrusiveDequeCursor.field_c.tryLoadAllGroups((byte) -112))) {
-            ProxySocketConnector.a(false, 0.0f, fg.a(IntrusiveDequeCursor.field_c, bq.field_A, eb.field_a, 274));
+            ProxySocketConnector.a(false, 0.0f, ProgressDialog.a(IntrusiveDequeCursor.field_c, bq.field_A, eb.field_a, 274));
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -494,7 +494,7 @@ abstract class GameShell extends GameApplet {
         mq.c(1);
         th.field_g = nb.createMouseWheelInput(0);
         ap.a(DisplayNameSelectionPanel.field_F, -8228);
-        rh.field_F = param6;
+        DialogMessagePane.field_F = param6;
         AccountRegistrationPanel.field_G = param2;
         mp.field_d = param3;
         MatchingFieldValidator.field_s = param0;

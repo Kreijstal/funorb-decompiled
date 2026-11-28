@@ -56,12 +56,12 @@ final class fd extends IntrusiveNode {
     }
 
     final static void a(byte param0, ResourceArchive param1) {
-        hi var2 = null;
+        VorbisSample var2 = null;
         try {
-          hi.b(param1.getFileByName("headers.packvorbis", 30045, ""));
+          VorbisSample.decodeSetup(param1.getFileByName("headers.packvorbis", 30045, ""));
           int var3 = -89 / ((-60 - param0) / 43);
-          var2 = hi.a(param1, "jagex logo2.packvorbis", "");
-          var2.a();
+          var2 = VorbisSample.loadByName(param1, "jagex logo2.packvorbis", "");
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "fd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

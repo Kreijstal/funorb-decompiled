@@ -318,7 +318,7 @@ final class nc extends InteractiveWidget {
         }
         try {
           hl.field_b = param1;
-          ol.field_a = new ma(PcmResampler.field_c, wi.field_e, param0, sg.field_a, hl.field_b);
+          ol.field_a = new ProgressMessageDialog(PcmResampler.field_c, wi.field_e, param0, sg.field_a, hl.field_b);
           PcmResampler.field_c.showDialog((byte) -110, (UiWidget) (ol.field_a));
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "nc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

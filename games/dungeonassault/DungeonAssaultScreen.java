@@ -231,12 +231,12 @@ abstract class DungeonAssaultScreen {
 
     private final static StatusEffectIndicator a(int param0, int param1, String param2, RgbSprite param3) {
         if (param0 < param1) {
-          return new StatusEffectIndicator(jk.a(new String[]{param2, Integer.toString(param1 - param0)}, vc.field_b, 30496), param3, 16711680);
+          return new StatusEffectIndicator(StandardContentDialog.a(new String[]{param2, Integer.toString(param1 - param0)}, vc.field_b, 30496), param3, 16711680);
         }
         if (param0 <= param1) {
           return null;
         }
-        return new StatusEffectIndicator(jk.a(new String[]{param2, Integer.toString(param0 - param1)}, so.field_a, 30496), param3, 65280);
+        return new StatusEffectIndicator(StandardContentDialog.a(new String[]{param2, Integer.toString(param0 - param1)}, so.field_a, 30496), param3, 65280);
     }
 
     void releaseScreenResources() {
@@ -336,7 +336,7 @@ abstract class DungeonAssaultScreen {
         if ((param0.field_o & 1) != 0) {
           incrementValue$7 = var3;
           var3++;
-          param2[incrementValue$7] = new StatusEffectIndicator(wi.field_nb, ue.field_i[6], 8438015);
+          param2[incrementValue$7] = new StatusEffectIndicator(ProgressDialog.field_nb, ue.field_i[6], 8438015);
         }
         return var3;
     }
@@ -449,7 +449,7 @@ abstract class DungeonAssaultScreen {
             if (var13 < 64) {
               var13 = 64;
             }
-            nm.field_ib[var5] = var13;
+            FullscreenStatusDialog.field_ib[var5] = var13;
             var5 += 2;
             var9++;
             var8 = var8 + (var10 + 1 << 2);
@@ -461,7 +461,7 @@ abstract class DungeonAssaultScreen {
           var5 = var5 + param3;
         }
         var19Lifetime1 = param3 * param4;
-        DungeonAssaultScreen.a(param0.field_a.field_B, nm.field_ib, 0, 0, 0, var19Lifetime1 - 1);
+        DungeonAssaultScreen.a(param0.field_a.field_B, FullscreenStatusDialog.field_ib, 0, 0, 0, var19Lifetime1 - 1);
     }
 
     final static void drawRoomDefinitionStatBars(int param0, int param1, ac param2) {
@@ -534,7 +534,7 @@ abstract class DungeonAssaultScreen {
 
     final static void drawDungeonTilePreview(int param0, int param1, DungeonTileState param2) {
         SoftwareRasterizer.fillRectangle(param0 - 4, param1 - 4, 120, 120, 0);
-        rp.a(4, 112, (byte) 108, param0, 112, kc.field_V, param1);
+        rp.a(4, 112, (byte) 108, param0, 112, DialogMessagePane.field_V, param1);
         if (param2 != null) {
           if (param2.field_c != null) {
             param2.field_c.drawAnimation(108, param1 + 2, (byte) 102, param0 + 2, 108);
@@ -632,7 +632,7 @@ abstract class DungeonAssaultScreen {
         SoftwareRasterizer.fillRectangle(param0 - 1, param1 - 1, param2 + 2, param3 + 2, 0);
         ob.a(param0, param1, (byte) -102, param3, param2);
         DungeonAssaultScreen.a(param0 + 2, param1 + 2, param2 - 4, param3 - 4, 256, 64, 4, 128);
-        rp.a(5, param2 - 4, (byte) 108, param0 + 2, param3 - 4, kc.field_S, param1 + 2);
+        rp.a(5, param2 - 4, (byte) 108, param0 + 2, param3 - 4, DialogMessagePane.field_S, param1 + 2);
     }
 
     final static void drawFramedSpriteAnimation(int param0, int param1, SpriteAnimationPlayer param2, int[][] param3) {
@@ -764,7 +764,7 @@ abstract class DungeonAssaultScreen {
 
     final static void drawRaiderPreview(int param0, int param1, Raider param2) {
         SoftwareRasterizer.fillRectangle(param0 - 4, param1 - 4, 120, 120, 0);
-        rp.a(4, 112, (byte) 108, param0, 112, kc.field_S, param1);
+        rp.a(4, 112, (byte) 108, param0, 112, DialogMessagePane.field_S, param1);
         if (param2 == null) {
           SoftwareRasterizer.fillRectangle(param0 + 2, param1 + 2, 108, 108, 0);
         } else {

@@ -46,7 +46,7 @@ final class ao extends IntrusiveNode {
         if (!AccountServiceResult.a(22084)) {
           return true;
         }
-        if (hf.field_sb <= 0) {
+        if (ContentTransitionDialog.field_sb <= 0) {
           return false;
         }
         if (!SecondaryNodeDeque.a(false)) {

@@ -11,14 +11,14 @@ final class pd {
           throw new IllegalStateException();
         }
         if (null != nk.field_a) {
-          nk.field_a.a(true);
+          nk.field_a.closeDialog(true);
         }
         if (param0 == 11173) {
           var1 = fd.c((byte) 61);
           vk.field_c = new LoginPanel(var1, (String) null, true, false, false);
           DisplayNameSelectionPanel.field_N.showDialog(TextLayout.field_c, false);
-          TextLayout.field_c.a(param0 ^ 437, vk.field_c);
-          TextLayout.field_c.i((byte) -85);
+          TextLayout.field_c.replaceContent(param0 ^ 437, vk.field_c);
+          TextLayout.field_c.finishResize((byte) -85);
           return;
         }
     }

@@ -32,7 +32,7 @@ final class wb {
           }
           var6 = param0.getParameter("currency");
           if (var6 != null &&
-            jf.a((CharSequence) ((Object) var6), 7552)) {
+            ContentTransitionDialog.a((CharSequence) ((Object) var6), 7552)) {
             gd.field_a = hh.a(10, (CharSequence) ((Object) var6));
           } else {
             gd.field_a = 2;

@@ -15,18 +15,18 @@ final class cb {
         Object var1 = null;
         var1 = te.field_b;
         synchronized (var1) {
-          sj.field_L = sj.field_L + 1;
+          DialogMessagePane.field_L = DialogMessagePane.field_L + 1;
           wh.field_e = jc.field_h;
           ConfirmedEmailAvailabilityValidator.field_u = ProxyAuthenticationRequiredException.mouseX;
           ph.field_d = qb.mouseY;
-          ek.field_P = ua.field_c;
+          StripedProgressWidget.field_P = ua.field_c;
           ua.field_c = false;
           vb.field_n = e.field_o;
           ik.field_a = aa.pressX;
           if (param0 != 30210) {
             cb.a(71, 118, (byte) -25, 29);
           }
-          AgeValidator.field_m = ll.pressY;
+          AgeValidator.field_m = FullscreenNoticeType.pressY;
           e.field_o = 0;
         }
     }

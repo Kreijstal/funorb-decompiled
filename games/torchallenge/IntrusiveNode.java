@@ -8,7 +8,7 @@ class IntrusiveNode {
     static e[] field_g;
     IntrusiveNode previous;
     static Sprite field_b;
-    static wa field_c;
+    static ProgressMessageDialog field_c;
     IntrusiveNode next;
 
     final void unlink(boolean param0) {

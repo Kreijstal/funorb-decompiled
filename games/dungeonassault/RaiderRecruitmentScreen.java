@@ -141,7 +141,7 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
         if (var2 != null) {
           RaiderRecruitmentScreen.drawRaiderPreview(216, 275, (Raider) (var2));
         } else {
-          RaiderRecruitmentScreen.drawFramedSpriteAnimation(216, 275, this.field_F, kc.field_S);
+          RaiderRecruitmentScreen.drawFramedSpriteAnimation(216, 275, this.field_F, DialogMessagePane.field_S);
         }
         if (var2 == null) {
           RaiderRecruitmentScreen.a(339, 289, (RaiderDefinition) (var3));
@@ -186,7 +186,7 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
           var5 = ((u) (op.field_d.field_l)).field_Q;
           var6 = hj.field_S;
           var7 = eh.field_h - 40;
-          rp.a(8, 40, (byte) 108, var6, 40, kc.field_S, var7);
+          rp.a(8, 40, (byte) 108, var6, 40, DialogMessagePane.field_S, var7);
           if (null != var5.field_e) {
             stackIn_36_0 = var5.field_e.a(40, 0, 40, 0);
           } else {
@@ -447,11 +447,11 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
         RaiderRecruitmentScreen.b(this.field_e, 188, 364, 605, 378);
         RaiderRecruitmentScreen.b(this.field_e, 188, 401, 605, 407);
         jh.a(this.field_e);
-        te.a(188, 280, 423, kc.field_M);
-        te.a(188, 362, 423, kc.field_M);
-        te.a(188, 378, 423, kc.field_M);
-        te.a(188, 399, 423, kc.field_M);
-        te.a(188, 408, 423, kc.field_M);
+        te.a(188, 280, 423, DialogMessagePane.field_M);
+        te.a(188, 362, 423, DialogMessagePane.field_M);
+        te.a(188, 378, 423, DialogMessagePane.field_M);
+        te.a(188, 399, 423, DialogMessagePane.field_M);
+        te.a(188, 408, 423, DialogMessagePane.field_M);
         RaiderRecruitmentScreen.a(188, 281, 433, 80, 256, 32, 8, 128);
         RaiderRecruitmentScreen.a(188, 379, 433, 20, 256, 32, 8, 128);
         RaiderRecruitmentScreen.a(8, 8, 172, 32, 256, 64, 4, 128);
@@ -515,11 +515,11 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
         sn.field_b = tn.a(16, 12, IntrusiveNode.field_c, jm.field_i, -107, lk.field_P);
         MouseWheelInput.field_a = tn.a(472, 12, IntrusiveNode.field_c, jm.field_i, -76, MatchingFieldValidator.field_r.toUpperCase());
         NetworkGameClient.field_y = tn.a((164 - jm.field_i.field_y >> 1) + 340, 376, IntrusiveNode.field_c, jm.field_i, -100, sa.field_e);
-        hl.field_b = sj.a(22, param0 ^ 38, 65, uj.field_c, SpriteAnimationPlayer.field_f);
-        hi.field_a = sj.a(55, 109, 65, gd.field_E, SpriteAnimationPlayer.field_f);
-        kl.field_h = sj.a(86, 104, 65, jj.field_b, SpriteAnimationPlayer.field_f);
-        cd.field_d = sj.a(117, 87, 65, ProxyAuthenticationRequiredException.field_d, SpriteAnimationPlayer.field_f);
-        am.field_f = sj.a(148, param0 + 54, param0, pk.field_o, SpriteAnimationPlayer.field_f);
+        hl.field_b = ResizableModalDialog.a(22, param0 ^ 38, 65, uj.field_c, SpriteAnimationPlayer.field_f);
+        hi.field_a = ResizableModalDialog.a(55, 109, 65, gd.field_E, SpriteAnimationPlayer.field_f);
+        kl.field_h = ResizableModalDialog.a(86, 104, 65, jj.field_b, SpriteAnimationPlayer.field_f);
+        cd.field_d = ResizableModalDialog.a(117, 87, 65, ProxyAuthenticationRequiredException.field_d, SpriteAnimationPlayer.field_f);
+        am.field_f = ResizableModalDialog.a(148, param0 + 54, param0, pk.field_o, SpriteAnimationPlayer.field_f);
         this.field_p.addFirst(IntroSequenceScreen.field_t, false);
         this.field_p.addFirst(sn.field_b, false);
         this.field_p.addFirst(MouseWheelInput.field_a, false);
@@ -536,12 +536,12 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
         this.a(0, 0);
         this.field_q = new sa(262, 412, 280, 56);
         this.field_q.a(true, lg.field_h, (byte) 91, a.field_m, 16777215);
-        hl.field_b.field_n = (en) ((Object) new e(jk.a(new String[]{tn.field_U}, ib.field_c, 30496)));
-        hi.field_a.field_n = (en) ((Object) new e(jk.a(new String[]{qk.field_d}, ib.field_c, 30496)));
-        kl.field_h.field_n = (en) ((Object) new e(jk.a(new String[]{dj.field_c}, ib.field_c, param0 ^ 30561)));
-        cd.field_d.field_n = (en) ((Object) new e(jk.a(new String[]{pm.field_n}, ib.field_c, 30496)));
-        am.field_f.field_n = (en) ((Object) new e(jk.a(new String[]{nf.field_x}, ib.field_c, 30496)));
-        MouseWheelInput.field_a.field_n = (en) ((Object) new e((String) null, pm.field_o, nk.field_Lb));
+        hl.field_b.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{tn.field_U}, ib.field_c, 30496)));
+        hi.field_a.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{qk.field_d}, ib.field_c, 30496)));
+        kl.field_h.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{dj.field_c}, ib.field_c, param0 ^ 30561)));
+        cd.field_d.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{pm.field_n}, ib.field_c, 30496)));
+        am.field_f.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{nf.field_x}, ib.field_c, 30496)));
+        MouseWheelInput.field_a.field_n = (en) ((Object) new e((String) null, pm.field_o, ProgressMessageDialog.field_Lb));
         sn.field_b.field_n = (en) ((Object) new e((String) null, IntroSequenceScreen.field_u, DraggableWidgetContainer.field_M));
         this.a((byte) -112, -1);
     }
@@ -782,7 +782,7 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
             SoftwareRasterizer.drawRectangleOutline(var5, var6, 96, 96, 0);
             var7 = 0;
             SoftwareRasterizer.fillRectangle(var5 + 4, 4 + var6, 88, 88, var7);
-            rp.a(4, 88, (byte) 108, var5 + 4, 88, kc.field_S, 4 + var6);
+            rp.a(4, 88, (byte) 108, var5 + 4, 88, DialogMessagePane.field_S, 4 + var6);
             if (7 != var2) {
               var4++;
               var2++;
@@ -821,11 +821,11 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
               return;
             }
             mi.a(NetworkGameClient.field_y, ae.field_e, IntrusiveNode.field_c, 13195, jm.field_i);
-            NetworkGameClient.field_y.field_n = (en) ((Object) new e((String) null, jk.a(new String[]{var4.field_F.toUpperCase(), gh.a(FrameTimer.a(-1704798751, var4), (byte) -111)}, t.field_c, 30496), (String) null));
+            NetworkGameClient.field_y.field_n = (en) ((Object) new e((String) null, StandardContentDialog.a(new String[]{var4.field_F.toUpperCase(), gh.a(FrameTimer.a(-1704798751, var4), (byte) -111)}, t.field_c, 30496), (String) null));
             NetworkGameClient.field_y.field_w = true;
           } else {
             mi.a(NetworkGameClient.field_y, sa.field_e, IntrusiveNode.field_c, 13195, jm.field_i);
-            NetworkGameClient.field_y.field_n = (en) ((Object) new e((String) null, jk.a(new String[]{var4.field_F.toUpperCase(), gh.a(FrameTimer.a(-1704798751, var4), (byte) -102)}, e.field_g, 30496), (String) null));
+            NetworkGameClient.field_y.field_n = (en) ((Object) new e((String) null, StandardContentDialog.a(new String[]{var4.field_F.toUpperCase(), gh.a(FrameTimer.a(-1704798751, var4), (byte) -102)}, e.field_g, 30496), (String) null));
             NetworkGameClient.field_y.field_w = true;
           }
         }
@@ -912,8 +912,8 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
     }
 
     RaiderRecruitmentScreen() {
-        this.field_B = new tf(IntrusiveNode.field_c, lg.field_h, cm.field_M);
-        tf discarded$0 = new tf(db.field_v, ak.field_m.toUpperCase(), cm.field_M);
+        this.field_B = new tf(IntrusiveNode.field_c, lg.field_h, RegistrationAgreementPane.field_M);
+        tf discarded$0 = new tf(db.field_v, ak.field_m.toUpperCase(), RegistrationAgreementPane.field_M);
     }
 
     static {

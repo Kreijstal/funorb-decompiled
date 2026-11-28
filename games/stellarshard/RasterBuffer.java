@@ -117,7 +117,7 @@ abstract class RasterBuffer {
               }
               else {
                 if (stackIn_60_0 > stackIn_60_1) {
-                  wl.field_P[var24Lifetime2] = -2147483648;
+                  ContentTransitionDialog.field_P[var24Lifetime2] = -2147483648;
                 } else {
                   nh.field_d[var24Lifetime2] = var22Lifetime2 + var28Lifetime1 / var30Lifetime1;
                   od.field_s[var24Lifetime2] = var23Lifetime2 + var29Lifetime1 / var30Lifetime1;
@@ -127,7 +127,7 @@ abstract class RasterBuffer {
                   if (var8 < var30Lifetime1) {
                     var8 = var30Lifetime1;
                   }
-                  wl.field_P[var24Lifetime2] = var30Lifetime1;
+                  ContentTransitionDialog.field_P[var24Lifetime2] = var30Lifetime1;
                 }
                 if (param4) {
                   aa.field_c[var24Lifetime2] = var28Lifetime1 >> fc.field_e;
@@ -161,7 +161,7 @@ abstract class RasterBuffer {
                   var26Lifetime1Lifetime1 = param0.field_y[var24Lifetime2];
                   var27Lifetime1Lifetime1 = param0.field_j[var24Lifetime2];
                   jf.field_k[var24Lifetime2] = (var27Lifetime1Lifetime1 * var19 + var26Lifetime1Lifetime1 * var16 + var25Lifetime1Lifetime1 * var13 >> 16) + var10;
-                  se.field_C[var24Lifetime2] = var11 + (var27Lifetime1Lifetime1 * var20 + var25Lifetime1Lifetime1 * var14 + var26Lifetime1Lifetime1 * var17 >> 16);
+                  GuestPlayConfirmationForm.field_C[var24Lifetime2] = var11 + (var27Lifetime1Lifetime1 * var20 + var25Lifetime1Lifetime1 * var14 + var26Lifetime1Lifetime1 * var17 >> 16);
                   ValidatedTextField.field_S[var24Lifetime2] = var12 + (var27Lifetime1Lifetime1 * var21 + (var25Lifetime1Lifetime1 * var15 + var26Lifetime1Lifetime1 * var18) >> 16);
                   var25Lifetime1Lifetime1 = param0.field_o[var24Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_J[var24Lifetime2];
@@ -270,7 +270,7 @@ abstract class RasterBuffer {
             IsaacRandom.field_d.snapAndPruneDialogs(-21535);
           }
           if (null != PcmOutputWorker.field_d) {
-            PcmOutputWorker.field_d.k(29960);
+            PcmOutputWorker.field_d.freezeNormalProgressAnimation(29960);
           }
           ld.e((byte) -111);
           return;

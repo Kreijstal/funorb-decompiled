@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dn {
-    static lo field_b;
+    static FullscreenNoticeType field_b;
     static int field_a;
 
     public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 > -73) {
-          field_b = (lo) null;
+          field_b = (FullscreenNoticeType) null;
         }
     }
 
@@ -17,7 +17,7 @@ final class dn {
         int var7 = 0;
         int var9 = 0;
         try {
-          var6 = sja.field_fb;
+          var6 = StandardContentDialog.field_fb;
           var6.writeCipheredByte(param3, (byte) 112);
           int var8 = 112 % ((64 - param0) / 59);
           var6.position = var6.position + 1;
@@ -37,7 +37,7 @@ final class dn {
     }
 
     static {
-        field_b = new lo();
+        field_b = new FullscreenNoticeType();
         field_a = 0;
     }
 }

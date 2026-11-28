@@ -16,7 +16,7 @@ final class ib {
           if (param0 != -72) {
             return true;
           }
-          stackIn_10_0 = (!ta.p(3)) && (wb.field_S > 0);
+          stackIn_10_0 = (!StandardContentDialog.p(3)) && (ResizableModalDialog.field_S > 0);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -41,7 +41,7 @@ final class ib {
           if (param3 <= 92) {
             ib.a(-63);
           }
-          if (ta.p(3)) {
+          if (StandardContentDialog.p(3)) {
             return;
           }
           var4_int = 20 * (11 * param1 + param2) + fl.d(-78);
@@ -147,7 +147,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("menu_title_briefing", (byte) -127);
                 if (var2 != null) {
-                  jf.field_a = PcmResampler.a(126, var2);
+                  FullscreenNoticeType.field_a = PcmResampler.a(126, var2);
                 }
                 var2 = AccountRegistrationPanel.b("menu_title_console", (byte) -123);
                 if (var2 != null) {
@@ -988,7 +988,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("end_game", (byte) -120);
                 if (null != var2) {
-                  jh.field_bb = PcmResampler.a(126, var2);
+                  FullscreenStatusDialog.field_bb = PcmResampler.a(126, var2);
                 }
                 var2 = AccountRegistrationPanel.b("score_headings,0", (byte) -122);
                 if (null != var2) {
@@ -1140,7 +1140,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("V2_lift_bust", (byte) -119);
                 if (var2 != null) {
-                  ta.field_lb = PcmResampler.a(127, var2);
+                  StandardContentDialog.field_lb = PcmResampler.a(127, var2);
                 }
                 var2 = AccountRegistrationPanel.b("V2_door_locked", (byte) -119);
                 if (null != var2) {
@@ -1212,7 +1212,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("V5_notice_turrets", (byte) -124);
                 if (null != var2) {
-                  ta.field_kb = PcmResampler.a(126, var2);
+                  StandardContentDialog.field_kb = PcmResampler.a(126, var2);
                 }
                 var2 = AccountRegistrationPanel.b("oV5_reachconsole", (byte) -120);
                 if (var2 != null) {
@@ -1432,7 +1432,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("gameplaytitle", (byte) -121);
                 if (null != var2) {
-                  jf.field_f = PcmResampler.a(125, var2);
+                  FullscreenNoticeType.field_f = PcmResampler.a(125, var2);
                 }
                 var2 = AccountRegistrationPanel.b("dothingstowin", (byte) -123);
                 if (null != var2) {

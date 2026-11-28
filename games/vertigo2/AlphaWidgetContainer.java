@@ -64,10 +64,10 @@ final class AlphaWidgetContainer extends WidgetWrapper {
         p.a(param0 - 33);
         if (param0 != 0) {
           AlphaWidgetContainer.clearStaticReferences(-95);
-          rh.b(-14, 4);
+          DialogMessagePane.b(-14, 4);
           return;
         }
-        rh.b(-14, 4);
+        DialogMessagePane.b(-14, 4);
     }
 
     static {

@@ -310,18 +310,18 @@ final class PasswordValidator extends TextFieldValidator {
           var3 = this.field_p.text.toLowerCase();
           var4 = param0.toLowerCase();
           if (var4.length() == param1) {
-            stackIn_3_0 = qf.field_d;
+            stackIn_3_0 = FullscreenNoticeType.field_d;
             return stackIn_3_0;
           }
           if (!qc.a((byte) 80, var4, var3)) {
-            stackIn_7_0 = qf.field_d;
+            stackIn_7_0 = FullscreenNoticeType.field_d;
             return stackIn_7_0;
           }
           if (!this.c(param0, -1)) {
             stackIn_12_0 = dg.field_c;
             return stackIn_12_0;
           }
-          stackIn_10_0 = qf.field_d;
+          stackIn_10_0 = FullscreenNoticeType.field_d;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

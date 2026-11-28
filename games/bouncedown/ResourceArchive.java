@@ -75,7 +75,7 @@ final class ResourceArchive {
         if (this.field_b) {
           this.field_o[param1] = this.field_n.a(param1, true);
         } else {
-          this.field_o[param1] = nh.storeBytes(false, -11560, this.field_n.a(param1, true));
+          this.field_o[param1] = FullscreenStatusDialog.storeBytes(false, -11560, this.field_n.a(param1, true));
         }
         if (param0 != -19250) {
           ResourceArchive.updateTooltipState(((int[]) (this.field_o[1]))[10], (String) (this.field_o[2]));
@@ -113,8 +113,8 @@ final class ResourceArchive {
           ge.field_c = ge.field_c + 1;
           if (DebouncedFieldValidator.field_c == -1 &&
             sj.field_d == -1) {
-            DebouncedFieldValidator.field_c = uc.field_C;
-            sj.field_d = ll.field_y;
+            DebouncedFieldValidator.field_c = DialogMessagePane.field_C;
+            sj.field_d = StripedProgressWidget.field_y;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 != null) {
@@ -123,7 +123,7 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = (null == oc.field_b);
           }
           if (decompiledFrameRemainder0) {
-            if (!nh.field_P) {
+            if (!FullscreenStatusDialog.field_P) {
               if (ea.field_b <= ge.field_c) {
                 stackIn_16_0 = (ge.field_c < ea.field_b + AccountCreationResultPanel.field_lb) ? 1 : 0;
               } else {
@@ -134,7 +134,7 @@ final class ResourceArchive {
             }
             boolean decompiledFrameRemainder1 = true;
             var2_int = stackIn_16_0;
-            if (param1 != null && (nh.field_P ||
+            if (param1 != null && (FullscreenStatusDialog.field_P ||
               var2_int != 0)) {
               ge.field_c = ea.field_b;
               decompiledFrameRemainder1 = false;
@@ -142,31 +142,31 @@ final class ResourceArchive {
             else {
               ge.field_c = 0;
             }
-            mh.field_Z = DebouncedFieldValidator.field_c;
+            ContentTransitionDialog.field_Z = DebouncedFieldValidator.field_c;
             if (param1 != null) {
-              nh.field_P = false;
+              FullscreenStatusDialog.field_P = false;
             } else {
               if (var2_int != 0) {
-                nh.field_P = true;
+                FullscreenStatusDialog.field_P = true;
               }
             }
             ha.field_b = sj.field_d;
           }
           oc.field_b = param1;
-          if (!nh.field_P &&
+          if (!FullscreenStatusDialog.field_P &&
             ge.field_c < ea.field_b &&
             mi.field_j) {
             ge.field_c = 0;
-            mh.field_Z = DebouncedFieldValidator.field_c;
+            ContentTransitionDialog.field_Z = DebouncedFieldValidator.field_c;
             ha.field_b = sj.field_d;
           }
           DebouncedFieldValidator.field_c = -1;
           if (param0 <= 20) {
             ResourceArchive.clearStaticReferences(false);
           }
-          if (nh.field_P &&
+          if (FullscreenStatusDialog.field_P &&
             jk.field_K == ge.field_c) {
-            nh.field_P = false;
+            FullscreenStatusDialog.field_P = false;
             ge.field_c = 0;
           }
           sj.field_d = -1;
@@ -969,7 +969,7 @@ final class ResourceArchive {
                   var18 = var17;
                 }
                 if (0 == this.field_k) {
-                  var7[var18] = nh.storeBytes(false, -11560, var39[var17]);
+                  var7[var18] = FullscreenStatusDialog.storeBytes(false, -11560, var39[var17]);
                 } else {
                   var7[var18] = var39[var17];
                 }
@@ -985,7 +985,7 @@ final class ResourceArchive {
               var7[var11] = var36;
               return true;
             }
-            var7[var11] = nh.storeBytes(false, -11560, var43);
+            var7[var11] = FullscreenStatusDialog.storeBytes(false, -11560, var43);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

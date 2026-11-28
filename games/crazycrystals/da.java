@@ -105,7 +105,7 @@ final class da extends ue {
         this.field_o = -1;
         try {
           if (!(MouseInputHandler.field_b instanceof da)) {
-            co.field_x = 0;
+            StripedProgressWidget.field_x = 0;
           }
           this.field_m = param3;
           this.field_n = param0;
@@ -254,7 +254,7 @@ final class da extends ue {
         PuzzleTile[][] var11;
         var10 = CrazyCrystals.field_B;
         if (this.field_f &&
-          co.field_x < 20) {
+          StripedProgressWidget.field_x < 20) {
           this.field_n.e(122);
           this.g(-47);
         } else {
@@ -273,7 +273,7 @@ final class da extends ue {
             ((re) (Object) stackIn_6_0).a(stackIn_7_1, false);
           }
         }
-        var2 = co.field_x * (336 * co.field_x) / 400 - 16;
+        var2 = StripedProgressWidget.field_x * (336 * StripedProgressWidget.field_x) / 400 - 16;
         wi.a(23, PasswordValidator.field_o, 122, 336, (byte) -71, 16 + var2);
         if (var2 < 0) {
           var2 = 0;
@@ -338,7 +338,7 @@ final class da extends ue {
           }
         }
         SoftwareRasterizer.resetClip();
-        if (co.field_x == 20) {
+        if (StripedProgressWidget.field_x == 20) {
           go.field_l.drawRightAligned(b.field_b, 611, 54, 16777215, -1);
           SoftwareRasterizer.fillRectangle(383, 60, 228, 2, 12640511);
           this.b(this.field_m, 22370, this.field_d.length);
@@ -406,10 +406,10 @@ final class da extends ue {
             if (var5 > 256) {
               var5 = 256;
             }
-            SoftwareRasterizer.drawHorizontalLineAlpha(371, var2, 260, 0, var5 * co.field_x / 40);
+            SoftwareRasterizer.drawHorizontalLineAlpha(371, var2, 260, 0, var5 * StripedProgressWidget.field_x / 40);
           }
         }
-        if (co.field_x == 20) {
+        if (StripedProgressWidget.field_x == 20) {
           this.b(0, 22370, this.field_m);
         }
         var2Lifetime1 = -56 / ((32 - param0) / 59);
@@ -714,10 +714,10 @@ final class da extends ue {
         int var4Lifetime1;
         var6 = CrazyCrystals.field_B;
         if (this.field_k) {
-          if (co.field_x > 0) {
-            co.field_x = co.field_x - 1;
+          if (StripedProgressWidget.field_x > 0) {
+            StripedProgressWidget.field_x = StripedProgressWidget.field_x - 1;
           }
-          if (co.field_x == 0) {
+          if (StripedProgressWidget.field_x == 0) {
             MouseInputHandler.field_b = (ue) ((Object) this.field_n);
             this.field_n.a(this.field_b.field_i, -13880);
           }
@@ -728,17 +728,17 @@ final class da extends ue {
         this.field_n.c((byte) 111);
         this.field_n.a((byte) 20, this.field_r);
         if (this.field_f) {
-          if (co.field_x > 0) {
-            co.field_x = co.field_x - 1;
+          if (StripedProgressWidget.field_x > 0) {
+            StripedProgressWidget.field_x = StripedProgressWidget.field_x - 1;
           }
-          if (0 == co.field_x) {
+          if (0 == StripedProgressWidget.field_x) {
             rl.a((byte) 26, this.field_r, this.field_e);
           }
           return;
         }
         if (this.field_l) {
-          if (0 < co.field_x) {
-            co.field_x = co.field_x - 1;
+          if (0 < StripedProgressWidget.field_x) {
+            StripedProgressWidget.field_x = StripedProgressWidget.field_x - 1;
           }
           this.field_n.c(2, 40, 180);
           if (40 > this.field_n.field_f) {
@@ -756,8 +756,8 @@ final class da extends ue {
             this.b(false);
           }
         }
-        if (co.field_x < 20) {
-          co.field_x = co.field_x + 1;
+        if (StripedProgressWidget.field_x < 20) {
+          StripedProgressWidget.field_x = StripedProgressWidget.field_x + 1;
         }
         this.field_n.c(-1);
         if (!this.field_b.g(-1)) {
@@ -1043,14 +1043,14 @@ final class da extends ue {
 
     final static void a(String param0, int param1, String param2) {
         if (SectorCacheStore.field_a != null) {
-          SectorCacheStore.field_a.i((byte) -18);
+          SectorCacheStore.field_a.closeDialog((byte) -18);
         }
         mk.field_b = new LoginPanel(param0, param2, false, true, true);
         if (param1 <= 57) {
           return;
         }
         try {
-          MouseWheelInput.field_d.a((UiWidget) (mk.field_b), (byte) -50);
+          MouseWheelInput.field_d.replaceContent((UiWidget) (mk.field_b), (byte) -50);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "da.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

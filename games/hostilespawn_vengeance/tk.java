@@ -10,14 +10,14 @@ final class tk {
     static String field_f;
 
     final static void a(boolean param0, ResourceArchive param1) {
-        qf var2 = null;
+        VorbisSample var2 = null;
         try {
-          qf.a(param1.getFileByName("", "headers.packvorbis", 0));
-          var2 = qf.a(param1, "jagex logo2.packvorbis", "");
+          VorbisSample.decodeSetup(param1.getFileByName("", "headers.packvorbis", 0));
+          var2 = VorbisSample.loadByName(param1, "jagex logo2.packvorbis", "");
           if (!param0) {
             field_a = (ResourceArchive) null;
           }
-          var2.c();
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "tk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -64,7 +64,7 @@ final class tk {
           if (!param3) {
             field_d = 29;
           }
-          jh.a(uh.field_i, (byte) 51, param2, param1, param0);
+          FullscreenStatusDialog.a(uh.field_i, (byte) 51, param2, param1, param0);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "tk.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

@@ -51,7 +51,7 @@ class IntrusiveNode {
         try {
           wc.field_nc = nm.a(param3, "frame_top", 1, "commonui");
           fi.field_d = nm.a(param3, "frame_bottom", 1, "commonui");
-          rh.field_Z = dh.a(false, "jagex_logo_grey", "commonui", param3);
+          rh.field_Z = ProgressMessageDialog.a(false, "jagex_logo_grey", "commonui", param3);
           em.field_d = nm.a(param3, "button", 1, "commonui");
           gg.field_q = ua.a("commonui", -563, param3, "validation");
           fa.field_Q = (BitmapFont) ((Object) ej.a("arezzo12", param3, param2, "commonui", 0));
@@ -97,7 +97,7 @@ class IntrusiveNode {
           var13 = new RgbSprite(var5.field_u - 2 * var10Lifetime1, var10Lifetime1);
           var13.bindAsRenderTarget();
           var5.drawOpaque(-var10Lifetime1, 0);
-          ib.b(false);
+          StripedProgressWidget.b(false);
           em.field_d = new RgbSprite[]{var16, var13, var12};
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "rk.AD(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

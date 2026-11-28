@@ -34,7 +34,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
         try {
           if (sf.field_c != null) {
             GameApplet.field_e = 0;
-            pg.field_gb = -1;
+            StandardContentDialog.field_gb = -1;
             ak.field_e = -1;
             DelegatingCanvas.field_a = true;
           }
@@ -54,7 +54,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
           if (null != sf.field_c) {
             GameApplet.field_e = 0;
             oc.field_b = param0.getX();
-            wl.field_R = param0.getY();
+            ContentTransitionDialog.field_R = param0.getY();
             ih.correctedCurrentTimeMillis((byte) -98);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               tg.field_b = 1;
@@ -98,7 +98,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
         try {
           if (null != sf.field_c) {
             GameApplet.field_e = 0;
-            pg.field_gb = param0.getX();
+            StandardContentDialog.field_gb = param0.getX();
             ak.field_e = param0.getY();
             DelegatingCanvas.field_a = true;
           }
@@ -150,7 +150,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
         try {
           if (null != sf.field_c) {
             GameApplet.field_e = 0;
-            pg.field_gb = param0.getX();
+            StandardContentDialog.field_gb = param0.getX();
             ak.field_e = param0.getY();
             DelegatingCanvas.field_a = true;
           }
@@ -235,7 +235,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
         try {
           if (sf.field_c != null) {
             GameApplet.field_e = 0;
-            pg.field_gb = param0.getX();
+            StandardContentDialog.field_gb = param0.getX();
             ak.field_e = param0.getY();
             DelegatingCanvas.field_a = true;
           }

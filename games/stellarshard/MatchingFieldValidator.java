@@ -17,7 +17,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
         int var5 = 0;
         int var6 = stellarshard.field_B;
         try {
-          var7 = pg.field_fb;
+          var7 = StandardContentDialog.field_fb;
           var8 = var7;
           var8.f(param0, 950);
           var8.position = var8.position + 1;
@@ -126,7 +126,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           }
           gh.field_b = 0;
           e.field_e = -1;
-          nc.field_H = 0;
+          StripedProgressWidget.field_H = 0;
           DualLinkDequeIterator.field_i = false;
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ea.B(" + param0 + ')');

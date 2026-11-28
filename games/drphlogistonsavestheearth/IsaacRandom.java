@@ -102,7 +102,7 @@ final class IsaacRandom {
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = MouseInput.field_a[rk.a((int) var2[var4_int], 255)];
         }
-        RgbSprite var4 = new RgbSprite(oe.field_b, ih.field_K, kh.field_i[0], vi.field_b[0], gf.field_o[0], RichTextWidget.field_J[0], var3);
+        RgbSprite var4 = new RgbSprite(oe.field_b, RegistrationAgreementPane.field_K, kh.field_i[0], vi.field_b[0], gf.field_o[0], RichTextWidget.field_J[0], var3);
         Bzip2State.a((byte) -21);
         return var4;
     }
@@ -312,7 +312,7 @@ final class IsaacRandom {
             return false;
           }
           var3 = (CharSequence) ((Object) param1);
-          stackIn_4_0 = tf.field_pb.equals(rh.a(-85, var3));
+          stackIn_4_0 = ProgressDialog.field_pb.equals(rh.a(-85, var3));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -330,7 +330,7 @@ final class IsaacRandom {
 
     final static void b(boolean param0) {
         MidiPcmStream.field_I = new AccountRegistrationPanel();
-        PcmOutputWorker.field_e.a(33, MidiPcmStream.field_I);
+        PcmOutputWorker.field_e.replaceContent(33, MidiPcmStream.field_I);
         if (param0) {
           field_d = (he[]) null;
         }

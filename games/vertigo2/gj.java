@@ -49,7 +49,7 @@ final class gj extends TextureOperator {
           var57 = var51[1];
           var58 = var51[2];
           var16 = 0;
-          while (!(var16 >= we.field_M)) {
+          while (!(var16 >= StripedProgressWidget.field_M)) {
             var17 = var52[var16];
             if (var17 == 4096) {
               var7[var16] = var53[var16];
@@ -111,7 +111,7 @@ final class gj extends TextureOperator {
           var22 = this.a(1, -1, param0);
           var20 = this.a(2, -1, param0);
           var7 = 0;
-          while (!(we.field_M <= var7)) {
+          while (!(StripedProgressWidget.field_M <= var7)) {
             var8 = var20[var7];
             stackIn_14_0 = -4097;
             stackIn_14_1 = ~var8;
@@ -148,7 +148,7 @@ final class gj extends TextureOperator {
         int var4Lifetime1;
         LevelRenderer.field_n = param3;
         vl.field_c = 0;
-        ue.field_O = param2;
+        RegistrationAgreementPane.field_O = param2;
         if (al.a(LevelRenderer.field_n, (byte) -94)) {
           var4 = 0;
           if (LevelRenderer.field_n == 13 ||
@@ -270,11 +270,11 @@ final class gj extends TextureOperator {
                 fo.field_f.field_S = eh.field_g.toUpperCase();
                 fo.field_f.field_lb = true;
                 if (var19 != 0) {
-                  fo.field_f.field_S = fg.field_db.toUpperCase();
+                  fo.field_f.field_S = ProgressDialog.field_db.toUpperCase();
                   fo.field_f.field_lb = false;
                 }
               } else {
-                fo.field_f.field_S = fg.field_db.toUpperCase();
+                fo.field_f.field_S = ProgressDialog.field_db.toUpperCase();
                 fo.field_f.field_lb = false;
               }
               fo.field_f.field_Bb = SpriteState.field_u.field_Bb;
@@ -300,7 +300,7 @@ final class gj extends TextureOperator {
               stackIn_21_0.field_lb = stackIn_22_1;
               var8 = hd.field_g;
               var10 = 2;
-              if (gr.field_W != null) {
+              if (FullscreenStatusDialog.field_W != null) {
                 if (null == e.field_c) {
                   e.field_c = new byte[ol.field_A];
                   mn.field_t = new boolean[ol.field_A];
@@ -323,10 +323,10 @@ final class gj extends TextureOperator {
                     }
                     var12 = stackIn_69_0;
                     while (true) {
-                      stackIn_37_0 = gr.field_W.length;
+                      stackIn_37_0 = FullscreenStatusDialog.field_W.length;
                       stackIn_37_1 = var12;
                       if (stackIn_37_0 > stackIn_37_1) {
-                        var26 = gr.field_W[var12];
+                        var26 = FullscreenStatusDialog.field_W[var12];
                         var23 = var26;
                         var20 = var23;
                         var13 = var20;
@@ -532,12 +532,12 @@ final class gj extends TextureOperator {
                   hd.field_g.field_lb = false;
                   if (hd.field_g.field_G) {
                     if (IterableNodeHashTable.field_e.field_b.field_Kb != 0) {
-                      ko.field_S = Vertigo2.a(new String[]{or.field_k}, pb.field_e, param3 ^ -117);
+                      NumericDateInputWidget.field_S = Vertigo2.a(new String[]{or.field_k}, pb.field_e, param3 ^ -117);
                       if (var19 != 0) {
-                        ko.field_S = di.field_y;
+                        NumericDateInputWidget.field_S = di.field_y;
                       }
                     } else {
-                      ko.field_S = di.field_y;
+                      NumericDateInputWidget.field_S = di.field_y;
                     }
                   }
                   decompiledFrameRemainder3 = (var19 != 0);
@@ -600,7 +600,7 @@ final class gj extends TextureOperator {
                     var14 = NetworkArchiveRequest.field_H + (String) (var11);
                   }
                 }
-                ko.field_S = "<col=A00000>" + var13_ref + "<br>" + var14;
+                NumericDateInputWidget.field_S = "<col=A00000>" + var13_ref + "<br>" + var14;
               }
             }
             if (Archive.field_h != 0L) {

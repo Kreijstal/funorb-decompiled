@@ -69,8 +69,8 @@ final class wc implements uj {
             }
           } else {
             var3_int = 0;
-            if (bh.field_cb) {
-              bh.field_cb = false;
+            if (FullscreenStatusDialog.field_cb) {
+              FullscreenStatusDialog.field_cb = false;
               var3_int = 1;
             }
             MinerDisturbance.a(qm.field_j, (byte) 36, EmailFormatValidator.g(-22962), var3_int != 0, te.a(-105));

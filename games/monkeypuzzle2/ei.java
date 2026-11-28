@@ -78,7 +78,7 @@ final class ei {
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            nf.a(param0 ^ -93, var1);
+            ResizableModalDialog.a(param0 ^ -93, var1);
             SectorCacheStore.field_c.backpatchByteLength(var1.position - var2, (byte) 31);
           }
           return;

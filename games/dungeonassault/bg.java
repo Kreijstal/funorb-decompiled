@@ -248,7 +248,7 @@ final class bg extends DungeonAssaultScreen {
     private final void a(byte param0) {
         this.resetScreenWidgets();
         le.field_g = tn.a(-jm.field_i.field_y + 164 >> 1, 8 + (32 - jm.field_i.field_v >> 1), IntrusiveNode.field_c, jm.field_i, -62, TextLayout.field_d);
-        wf.field_w = tn.a(580 - jm.field_i.field_y, (-jm.field_i.field_v + 56 >> 1) + 424, IntrusiveNode.field_c, jm.field_i, -52, ia.field_Y);
+        wf.field_w = tn.a(580 - jm.field_i.field_y, (-jm.field_i.field_v + 56 >> 1) + 424, IntrusiveNode.field_c, jm.field_i, -52, GuestPlayConfirmationForm.field_Y);
         ic.field_y = tn.a(60, (-jm.field_i.field_v + 56 >> 1) + 424, IntrusiveNode.field_c, jm.field_i, -61, Raider.field_l.toUpperCase());
         wf.field_w.field_w = false;
         ic.field_y.field_w = !ed.c(true) ? true : false;
@@ -471,7 +471,7 @@ final class bg extends DungeonAssaultScreen {
           hj.field_Q = param5;
           li.field_j = param4;
           if (param0) {
-            this.field_b = (kl) ((Object) new pk(ia.field_Y, kc.field_P, 0));
+            this.field_b = (kl) ((Object) new pk(GuestPlayConfirmationForm.field_Y, DialogMessagePane.field_P, 0));
           } else {
             if (param1 == 0) {
               this.field_b = (kl) ((Object) new fk(param5, param4));
@@ -481,8 +481,8 @@ final class bg extends DungeonAssaultScreen {
                 var7_int = 100;
               }
               var8 = var7_int + "%";
-              var9 = jk.a(param2 + 127, param3);
-              this.field_b = (kl) ((Object) new pk(ia.field_Y, jk.a(new String[]{var8, var9}, no.field_e, 30496), 0));
+              var9 = StandardContentDialog.a(param2 + 127, param3);
+              this.field_b = (kl) ((Object) new pk(GuestPlayConfirmationForm.field_Y, StandardContentDialog.a(new String[]{var8, var9}, no.field_e, 30496), 0));
             }
           }
           return;
@@ -564,17 +564,17 @@ final class bg extends DungeonAssaultScreen {
           var7 = FullscreenFocusCanvas.a(0, (byte) -127, gm.field_d.field_N, ((di) (var2)).field_a);
           if (((di) (var2)).field_h > 0) {
             if (!(var7 > 0.0)) {
-              var5 = jk.a(new String[]{gh.a(((di) (var2)).field_h, (byte) -114)}, mi.field_c, 30496);
+              var5 = StandardContentDialog.a(new String[]{gh.a(((di) (var2)).field_h, (byte) -114)}, mi.field_c, 30496);
             } else {
               var12 = gh.a((int)(1000.0 * var7), (byte) -112);
-              var5 = jk.a(new String[]{gh.a(((di) (var2)).field_h, (byte) -112), var12, gh.a(var4, (byte) -109)}, ra.field_a, 30496);
+              var5 = StandardContentDialog.a(new String[]{gh.a(((di) (var2)).field_h, (byte) -112), var12, gh.a(var4, (byte) -109)}, ra.field_a, 30496);
             }
           } else {
             if (!(0.0 < var7)) {
-              var5 = jk.a(new String[]{gh.a(var4, (byte) -102)}, le.field_a, 30496);
+              var5 = StandardContentDialog.a(new String[]{gh.a(var4, (byte) -102)}, le.field_a, 30496);
             } else {
               var11 = gh.a((int)(var7 * 1000.0), (byte) -118);
-              var5 = jk.a(new String[]{var11, gh.a(var4, (byte) -108)}, vl.field_l, 30496);
+              var5 = StandardContentDialog.a(new String[]{var11, gh.a(var4, (byte) -108)}, vl.field_l, 30496);
             }
           }
         } else {

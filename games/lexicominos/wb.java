@@ -47,7 +47,7 @@ abstract class wb {
         jj.field_d = null;
         gb.field_d = false;
         if (DualLinkNode.field_k) {
-          jj.field_a.i(15);
+          jj.field_a.showConnectionFailure(15);
           if (param0 == 50) {
             return;
           }
@@ -63,7 +63,7 @@ abstract class wb {
           }
           jj.field_d = ef.a(new CharSequence[]{(CharSequence) ((Object) jj.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) gj.field_u)}, 0);
         }
-        jj.field_a.g(true);
+        jj.field_a.closeDialog(true);
         vg.a(113);
         if (param0 == 50) {
           return;

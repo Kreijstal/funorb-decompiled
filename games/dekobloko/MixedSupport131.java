@@ -54,21 +54,21 @@ final class MixedSupport131 {
           integerLocal7 = cipherPacketBufferLocal18.readUnsignedByte((byte) -125);
           if (integerLocal7 != 0) {
             integerLocal8 = mixedSupport020Local6.integerState0116;
-            UiComponentPart030.stringArrayState0046[0] = MixedSupport089.stringState0372;
+            ResizableModalDialog.stringArrayState0046[0] = MixedSupport089.stringState0372;
             for (integerLocal9 = 1; integerLocal7 > integerLocal9; integerLocal9++) {
-              UiComponentPart030.stringArrayState0046[integerLocal9] = cipherPacketBufferLocal18.readNullTerminatedString((byte) -38);
+              ResizableModalDialog.stringArrayState0046[integerLocal9] = cipherPacketBufferLocal18.readNullTerminatedString((byte) -38);
             }
             DebouncedFieldValidator.performAction0085(2147483647, integerLocal7, integerLocal8);
             for (integerLocal19 = 0; integerLocal19 < integerLocal7; integerLocal19++) {
               BirthDateTextFields.performAction1274(63, cipherPacketBufferLocal18);
               if (integerLocal19 == 0) {
                 mixedSupport020Local6.integerState0119 = MixedSupport091.integerState0549;
-                mixedSupport020Local6.integerState0120 = UiComponentPart008.integerState0144;
+                mixedSupport020Local6.integerState0120 = DialogMessagePane.integerState0144;
                 mixedSupport020Local6.integerState0118 = SceneWidgetPart012.integerState0783;
                 mixedSupport020Local6.integerState0117 = ReturnedShapeUpdate.integerState0877;
-                DisplayModeController.performAction1438(integerLocal19, UiComponentPart008.integerState0144, -1, ReturnedShapeUpdate.integerState0877, SceneWidgetPart012.integerState0783, MixedSupport091.integerState0549);
+                DisplayModeController.performAction1438(integerLocal19, DialogMessagePane.integerState0144, -1, ReturnedShapeUpdate.integerState0877, SceneWidgetPart012.integerState0783, MixedSupport091.integerState0549);
               } else {
-                DisplayModeController.performAction1438(integerLocal19, UiComponentPart008.integerState0144, -1, ReturnedShapeUpdate.integerState0877, SceneWidgetPart012.integerState0783, MixedSupport091.integerState0549);
+                DisplayModeController.performAction1438(integerLocal19, DialogMessagePane.integerState0144, -1, ReturnedShapeUpdate.integerState0877, SceneWidgetPart012.integerState0783, MixedSupport091.integerState0549);
               }
             }
             MixedSupport097.performAction1215(integerLocal8, (byte) 6);
@@ -83,13 +83,13 @@ final class MixedSupport131 {
             integerLocal14 = 0;
             while (integerLocal12 > integerLocal13) {
               integerLocal15 = MixedSupport017.integerArrayState0022[integerLocal13];
-              stringArrayArrayLocal10[0][integerLocal14] = UiComponentPart030.stringArrayState0046[integerLocal15];
+              stringArrayArrayLocal10[0][integerLocal14] = ResizableModalDialog.stringArrayState0046[integerLocal15];
               integerArrayArrayLocal11[0][integerLocal14 * 4] = ResourceSupport001.integerArrayState0012[integerLocal15];
               integerArrayArrayLocal11[0][1 + integerLocal14 * 4] = MixedSupport089.integerArrayState0173[integerLocal15];
-              integerArrayArrayLocal11[0][2 + 4 * integerLocal14] = MixedSupport080.integerArrayState0150[integerLocal15];
+              integerArrayArrayLocal11[0][2 + 4 * integerLocal14] = FullscreenNoticeType.integerArrayState0150[integerLocal15];
               integerArrayArrayLocal11[0][3 + integerLocal14 * 4] = ByteStorage.integerArrayState0157[integerLocal15];
-              if (MixedSupport066.computeBoolean0829(UiComponentPart030.stringArrayState0046[integerLocal15], true) &&
-                MixedSupport089.integerArrayState0173[integerLocal15] + (MixedSupport080.integerArrayState0150[integerLocal15] + ByteStorage.integerArrayState0157[integerLocal15]) == 0) {
+              if (MixedSupport066.computeBoolean0829(ResizableModalDialog.stringArrayState0046[integerLocal15], true) &&
+                MixedSupport089.integerArrayState0173[integerLocal15] + (FullscreenNoticeType.integerArrayState0150[integerLocal15] + ByteStorage.integerArrayState0157[integerLocal15]) == 0) {
                 stringArrayArrayLocal10[0][integerLocal14] = null;
                 integerLocal14--;
               }
@@ -101,13 +101,13 @@ final class MixedSupport131 {
             integerLocal21 = integerLocal17;
             while (integerLocal12 > integerLocal20) {
               integerLocal22 = MixedSupport017.integerArrayState0022[integerLocal20 + integerLocal8];
-              stringArrayArrayLocal10[1][integerLocal17] = UiComponentPart030.stringArrayState0046[integerLocal22];
+              stringArrayArrayLocal10[1][integerLocal17] = ResizableModalDialog.stringArrayState0046[integerLocal22];
               integerArrayArrayLocal11[1][integerLocal17 * 4] = ResourceSupport001.integerArrayState0012[integerLocal22];
               integerArrayArrayLocal11[1][1 + 4 * integerLocal17] = MixedSupport089.integerArrayState0173[integerLocal22];
-              integerArrayArrayLocal11[1][4 * integerLocal17 + 2] = MixedSupport080.integerArrayState0150[integerLocal22];
+              integerArrayArrayLocal11[1][4 * integerLocal17 + 2] = FullscreenNoticeType.integerArrayState0150[integerLocal22];
               integerArrayArrayLocal11[1][4 * integerLocal17 + 3] = ByteStorage.integerArrayState0157[integerLocal22];
-              if (MixedSupport066.computeBoolean0829(UiComponentPart030.stringArrayState0046[integerLocal22], true) &&
-                MixedSupport080.integerArrayState0150[integerLocal22] + MixedSupport089.integerArrayState0173[integerLocal22] + ByteStorage.integerArrayState0157[integerLocal22] == 0) {
+              if (MixedSupport066.computeBoolean0829(ResizableModalDialog.stringArrayState0046[integerLocal22], true) &&
+                FullscreenNoticeType.integerArrayState0150[integerLocal22] + MixedSupport089.integerArrayState0173[integerLocal22] + ByteStorage.integerArrayState0157[integerLocal22] == 0) {
                 stringArrayArrayLocal10[1][integerLocal17] = null;
                 integerLocal17--;
               }

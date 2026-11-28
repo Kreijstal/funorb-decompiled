@@ -441,7 +441,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             return true;
           }
           var4 = var3.getValidationStatus(-16323);
-          if (var4 == qf.field_d) {
+          if (var4 == FullscreenNoticeType.field_d) {
             return false;
           }
           if (var4 == kj.field_d) {

@@ -188,7 +188,7 @@ final class MixedSupport133 {
         if (0 <= integerArgument2 &&
           integerArgument2 <= 11) {
           if (integerArgument3 >= 1 &&
-            integerArgument3 <= UiComponentPart012.computeInteger0592(integerArgument1, 1, integerArgument2)) {
+            integerArgument3 <= ProgressMessageDialog.computeInteger0592(integerArgument1, 1, integerArgument2)) {
             return true;
           }
           return false;

@@ -30,7 +30,7 @@ final class se extends TextureOperator {
           var25 = this.a(0, -1, param0 - 1 & CrossfadingMidiPcmStream.field_x);
           var5 = this.a(0, -1, param0);
           var24 = this.a(0, -1, param0 + 1 & CrossfadingMidiPcmStream.field_x);
-          for (var7 = 0; var7 < we.field_M; var7++) {
+          for (var7 = 0; var7 < StripedProgressWidget.field_M; var7++) {
             var8 = this.field_z * (var24[var7] - var25[var7]);
             var9 = (-var5[rm.field_z & var7 - 1] + var5[rm.field_z & 1 + var7]) * this.field_z;
             var10 = var9 >> 12;
@@ -48,7 +48,7 @@ final class se extends TextureOperator {
     final static void a(String param0, int param1) {
         try {
           lr.field_S = param0;
-          rh.b(param1 - 26, param1);
+          DialogMessagePane.b(param1 - 26, param1);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "se.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

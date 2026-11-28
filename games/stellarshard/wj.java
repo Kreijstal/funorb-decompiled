@@ -105,9 +105,9 @@ final class wj extends fb {
                 var11 = (String) null;
                 le.field_n = wf.a(we.field_a, (String) null, -124, param0, false);
               }
-              pg.field_fb.position = 0;
-              pg.field_fb.writeByte(false, 14);
-              pg.field_fb.writeByte(false, le.field_n.a(160).field_h);
+              StandardContentDialog.field_fb.position = 0;
+              StandardContentDialog.field_fb.writeByte(false, 14);
+              StandardContentDialog.field_fb.writeByte(false, le.field_n.a(160).field_h);
               ue.a((byte) 114, -1);
               GzipDecompressor.field_d = de.field_a;
             }
@@ -221,7 +221,7 @@ final class wj extends fb {
               if (0 < mk.field_k) {
                 TextLineMetrics.field_f = true;
               }
-              pg.field_fb.a(dj.field_b, -1001);
+              StandardContentDialog.field_fb.a(dj.field_b, -1001);
               for (var9Lifetime1 = 0; 4 > var9Lifetime1; var9Lifetime1++) {
                 dj.field_b[var9Lifetime1] = dj.field_b[var9Lifetime1] + 50;
               }
@@ -714,9 +714,9 @@ final class wj extends fb {
           if (nh.field_g != null &&
             nh.field_g.ensureIndexLoaded((byte) -36) &&
             nh.field_g.tryLoadGroupByName("benefits", (byte) -109) &&
-            vf.field_E != null &&
-            vf.field_E.ensureIndexLoaded((byte) -36) &&
-            vf.field_E.tryLoadGroupByName("benefits", (byte) -109)) {
+            DialogMessagePane.field_E != null &&
+            DialogMessagePane.field_E.ensureIndexLoaded((byte) -36) &&
+            DialogMessagePane.field_E.tryLoadGroupByName("benefits", (byte) -109)) {
             tk.field_c = qd.a(nh.field_g, "headline", "benefits", (byte) 81);
             ValidatedTextField.field_T = qd.a(nh.field_g, "blurbpane", "benefits", (byte) 78);
             MouseWheelInput.field_a = qd.a(nh.field_g, "button", "benefits", (byte) 78);
@@ -724,8 +724,8 @@ final class wj extends fb {
             IsaacRandom.field_e = qd.a(nh.field_g, "menu_text", "benefits", (byte) 42);
             ModalDialog.field_F = qd.a(nh.field_g, "button_frame", "benefits", (byte) 59);
             MatchingFieldValidator.field_l = qd.a(nh.field_g, "arrow", "benefits", (byte) 118);
-            o.field_h = (BitmapFont) ((Object) EditableTextField.a("benefits", "large_font", nh.field_g, -109, vf.field_E));
-            fj.field_f = (BitmapFont) ((Object) EditableTextField.a("benefits", "small_font", nh.field_g, -116, vf.field_E));
+            o.field_h = (BitmapFont) ((Object) EditableTextField.a("benefits", "large_font", nh.field_g, -109, DialogMessagePane.field_E));
+            fj.field_f = (BitmapFont) ((Object) EditableTextField.a("benefits", "small_font", nh.field_g, -116, DialogMessagePane.field_E));
             var27 = SoftwareRasterizer.field_a;
             var2 = SoftwareRasterizer.field_i;
             var3 = SoftwareRasterizer.field_b;

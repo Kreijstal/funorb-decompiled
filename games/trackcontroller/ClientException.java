@@ -62,7 +62,7 @@ final class ClientException extends RuntimeException {
                 var5 = LevelGrid.field_n;
               }
             } else {
-              var5 = db.field_db;
+              var5 = ContentTransitionDialog.field_db;
             }
             var6 = LabeledWidgetContainer.field_I[var3];
             if (TextFieldValidator.field_h == 2 &&
@@ -102,13 +102,13 @@ final class ClientException extends RuntimeException {
               var6 = Integer.toString(var2);
             }
             var7Lifetime1 = ib.a(!(var4 < 0), 10, var6);
-            var8Lifetime1 = sf.field_F - (var7Lifetime1 >> 1);
+            var8Lifetime1 = GuestPlayConfirmationForm.field_F - (var7Lifetime1 >> 1);
             if (0 <= var4) {
               var1_int = var1_int + na.field_e;
               if (var4 == GzipDecompressor.field_f.field_e) {
                 stackIn_45_0 = nh.field_c;
               } else {
-                stackIn_45_0 = mk.field_a;
+                stackIn_45_0 = FullscreenNoticeType.field_a;
               }
               var9 = stackIn_45_0;
               if (var9 != null) {
@@ -120,7 +120,7 @@ final class ClientException extends RuntimeException {
               r.field_k.drawString(var6, var8Lifetime1, ai.field_h + var1_int, var5, -1);
               var1_int = var1_int + dh.field_l;
             } else {
-              mk.field_b.drawString(var6, var8Lifetime1, dk.field_a + var1_int, var5, -1);
+              FullscreenNoticeType.field_b.drawString(var6, var8Lifetime1, dk.field_a + var1_int, var5, -1);
               var1_int = var1_int + (na.field_e + of.field_f + ArchiveIndex.field_m);
             }
             var3++;

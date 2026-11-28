@@ -19,7 +19,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this == te.field_E &&
+          if (this == RegistrationAgreementPane.field_E &&
             !SecondaryNodeDequeIterator.field_c) {
             nf.field_n = hn.correctedCurrentTimeMillis((byte) 80);
             vj.sleepMillis(5000L, (byte) -49);
@@ -55,7 +55,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             }
             if (decompiledFrameRemainder0) {
               if (p.field_a == null) {
-                var2 = te.field_E;
+                var2 = RegistrationAgreementPane.field_E;
                 if (var4 != 0) {
                   var2 = p.field_a;
                   var2 = PasswordValidator.field_r;
@@ -135,7 +135,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this == te.field_E &&
+          if (this == RegistrationAgreementPane.field_E &&
             !SecondaryNodeDequeIterator.field_c) {
             nf.field_n = hn.correctedCurrentTimeMillis((byte) 80) + 4000L;
             return;
@@ -295,7 +295,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           var9 = HostileSpawn.field_I ? 1 : 0;
           try {
             try {
-              if (te.field_E != null) {
+              if (RegistrationAgreementPane.field_E != null) {
                 pb.field_Hb = pb.field_Hb + 1;
                 if (pb.field_Hb < 3) {
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
@@ -308,7 +308,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               he.field_x = param0;
               ql.field_a = param6;
               sg.field_a = 0;
-              te.field_E = this;
+              RegistrationAgreementPane.field_E = this;
               hf.field_h = param1;
               gm.field_m = param1;
               bb.field_d = 0;
@@ -503,7 +503,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     abstract void prepareGameShutdown(int param0);
 
     public final void start() {
-        if (this != te.field_E ||
+        if (this != RegistrationAgreementPane.field_E ||
           SecondaryNodeDequeIterator.field_c) {
           return;
         }
@@ -765,7 +765,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
               }
               if (decompiledFrameRemainder3) {
-                var1 = te.field_E;
+                var1 = RegistrationAgreementPane.field_E;
                 if (p.field_a != null) {
                   var1 = p.field_a;
                 }
@@ -918,7 +918,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         java.awt.Rectangle var2 = null;
         RuntimeException var2_ref = null;
         try {
-          if (te.field_E == this &&
+          if (RegistrationAgreementPane.field_E == this &&
             !SecondaryNodeDequeIterator.field_c) {
             pc.field_a = true;
             if (DelayedPacket.field_i &&

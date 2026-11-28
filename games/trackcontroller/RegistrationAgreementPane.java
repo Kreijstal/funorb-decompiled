@@ -1,0 +1,257 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class RegistrationAgreementPane extends DequeWidgetContainer implements TextHotspotListener, ButtonListener {
+    private AccountCreationResultPanel field_C;
+    static boolean field_D;
+    private ButtonWidget field_E;
+    static int field_G;
+    private RichTextWidget field_F;
+
+    private final String getAgreementLinkClosingTag(int param0) {
+        if (param0 != 11844) {
+          int[] var3 = (int[]) null;
+          RegistrationAgreementPane.a((int[]) null, true);
+        }
+        return "</col></u>";
+    }
+
+    public final void onTextHotspotActivated(RichTextWidget param0, int param1, int param2, int param3) {
+        int var6 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        int[] var7 = null;
+        var6 = TrackController.field_F ? 1 : 0;
+        try {
+          if (param1 == 0) {
+            IntrusiveDequeCursor.a("terms.ws", false);
+          } else {
+            if (1 != param1) {
+              if (param1 == 2) {
+                IntrusiveDequeCursor.a("conduct.ws", false);
+              }
+            } else {
+              IntrusiveDequeCursor.a("privacy.ws", false);
+            }
+          }
+          if (param3 != 1) {
+            var7 = (int[]) null;
+            RegistrationAgreementPane.a((int[]) null, false);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_13_0 = var5;
+          stackIn_13_1 = new StringBuilder().append("ge.B(");
+          if (param0 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    RegistrationAgreementPane(AccountCreationResultPanel param0) {
+        super(0, 0, 288, 0, (WidgetRenderer) null);
+        String var7 = null;
+        int var3 = 0;
+        DefaultTextWidgetRenderer var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        try {
+          this.field_C = param0;
+          this.field_E = new ButtonWidget(ConfirmedEmailAvailabilityValidator.field_m, (WidgetEventListener) null);
+          this.field_E.field_y = (WidgetRenderer) ((Object) new dc());
+          var7 = dh.a((byte) -81, new String[]{this.getAgreementLinkOpeningTag(0), this.getAgreementLinkClosingTag(11844)}, qd.field_b);
+          var3 = 20;
+          var4 = new DefaultTextWidgetRenderer(gk.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, gk.field_c.field_G, -1, 2147483647, true);
+          this.field_F = new RichTextWidget(var7, var4);
+          this.field_F.field_n = "";
+          this.field_F.a((byte) 58, bb.field_a, 0);
+          this.field_F.a((byte) 80, bb.field_a, 1);
+          this.field_F.field_l = (WidgetEventListener) (this);
+          this.field_F.field_x = -40 + this.field_x;
+          this.field_F.a(var3, (byte) -44, this.field_x - 40, 26);
+          var3 = var3 + (this.field_F.field_u + 15);
+          this.addChild(false, this.field_F);
+          var5 = 4;
+          var6 = 200;
+          this.field_E.setBounds(40, -3050, var3, var6, 300 - var6 >> 1);
+          this.field_E.field_l = (WidgetEventListener) (this);
+          this.addChild(false, this.field_E);
+          this.setBounds(55 + var3 + var5, -3050, 0, 300, 0);
+        } catch (RuntimeException runtimeException) {
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ge.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    private final String getAgreementLinkOpeningTag(int param0) {
+        if (param0 != 0) {
+          return (String) null;
+        }
+        return "<u=2164A2><col=2164A2>";
+    }
+
+    final boolean handleKey(byte param0, char param1, UiWidget param2, int param3) {
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        boolean stackIn_5_0 = false;
+        boolean stackIn_8_0 = false;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var5_int = 82 / ((param0 - 17) / 51);
+          if (super.handleKey((byte) -75, param1, param2, param3)) {
+            return true;
+          }
+          if (param3 == 98) {
+            stackIn_5_0 = this.focusPreviousChild(param2, 121);
+            return stackIn_5_0;
+          }
+          if (99 != param3) {
+            return false;
+          }
+          stackIn_8_0 = this.focusNextChild(param2, true);
+          return stackIn_8_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_13_0 = var5;
+          stackIn_13_1 = new StringBuilder().append("ge.GA(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    public final void onWidgetActivated(ButtonWidget param0, int param1, int param2, int param3, int param4) {
+        RichTextWidget var7 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
+        try {
+          if (param0 == this.field_E) {
+            nh.a((byte) -97);
+            this.field_C.closeDialog(20252);
+          }
+          if (param4 != -27322) {
+            var7 = (RichTextWidget) null;
+            this.onTextHotspotActivated((RichTextWidget) null, -97, -102, 71);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_7_0 = var6;
+          stackIn_7_1 = new StringBuilder().append("ge.A(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+        }
+    }
+
+    final static boolean a(int[] param0, boolean param1) {
+        int var5_int = 0;
+        int var6 = 0;
+        RuntimeException stackIn_37_0 = null;
+        StringBuilder stackIn_37_1 = null;
+        String stackIn_38_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        long var2_long = 0L;
+        RuntimeException var2 = null;
+        wa var4_ref_wa = null;
+        int var4 = 0;
+        wa var5 = null;
+        int var7 = 0;
+        var7 = TrackController.field_F ? 1 : 0;
+        try {
+          if (jc.field_a != ka.field_b) {
+            return false;
+          }
+          var2_long = qg.correctedCurrentTimeMillis(param1);
+          if (s.field_b != 0 &&
+            AccountRegistrationPanel.field_K < 0) {
+            var4_ref_wa = (wa) (cg.field_f.first(2));
+            if (var4_ref_wa != null &&
+              var4_ref_wa.field_l < var2_long) {
+              var4_ref_wa.unlink(-60);
+              ConfirmedEmailAvailabilityValidator.field_o = var4_ref_wa.field_m.length;
+              ne.field_a.position = 0;
+              for (var5_int = 0; ConfirmedEmailAvailabilityValidator.field_o > var5_int; var5_int++) {
+                ne.field_a.payload[var5_int] = var4_ref_wa.field_m[var5_int];
+              }
+              o.field_a = u.field_o;
+              u.field_o = DropTargetWidgetContainer.field_L;
+              DropTargetWidgetContainer.field_L = uk.field_c;
+              uk.field_c = var4_ref_wa.field_i;
+              return true;
+            }
+          }
+          while (true) {
+            if (AccountRegistrationPanel.field_K < 0) {
+              ne.field_a.position = 0;
+              if (!DiskArchiveStore.a(1, false)) {
+                return false;
+              }
+              AccountRegistrationPanel.field_K = ne.field_a.readCipheredByte(false);
+              ne.field_a.position = 0;
+              ConfirmedEmailAvailabilityValidator.field_o = param0[AccountRegistrationPanel.field_K];
+            }
+            if (!ByteStorage.a(520)) {
+              return false;
+            }
+            if (s.field_b == 0) {
+              o.field_a = u.field_o;
+              u.field_o = DropTargetWidgetContainer.field_L;
+              DropTargetWidgetContainer.field_L = uk.field_c;
+              uk.field_c = AccountRegistrationPanel.field_K;
+              AccountRegistrationPanel.field_K = -1;
+              return true;
+            }
+            var4 = s.field_b;
+            if (0.0 != FullscreenStatusDialog.field_U) {
+              var4 = (int)((double)var4 + ta.field_c.nextGaussian() * FullscreenStatusDialog.field_U);
+              if (var4 < 0) {
+                var4 = 0;
+              }
+            }
+            var5 = new wa((long)var4 + var2_long, AccountRegistrationPanel.field_K, new byte[ConfirmedEmailAvailabilityValidator.field_o]);
+            for (var6 = 0; var6 < ConfirmedEmailAvailabilityValidator.field_o; var6++) {
+              var5.field_m[var6] = ne.field_a.payload[var6];
+            }
+            cg.field_f.addLast((byte) -110, var5);
+            AccountRegistrationPanel.field_K = -1;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_37_0 = var2;
+          stackIn_37_1 = new StringBuilder().append("ge.F(");
+          if (param0 == null) {
+            stackIn_38_2 = "null";
+          } else {
+            stackIn_38_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    static {
+        field_D = true;
+    }
+}

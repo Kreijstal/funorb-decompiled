@@ -4,7 +4,7 @@
 final class na {
     static int field_b;
     static int field_a;
-    static ve field_c;
+    static ProgressDialog field_c;
 
     public static void resetStaticState(int param0) {
         if (param0 != -20008) {

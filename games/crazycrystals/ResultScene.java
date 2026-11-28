@@ -34,7 +34,7 @@ abstract class ResultScene {
                 ea.field_n = stackIn_14_0;
                 Bzip2State.field_u = stackIn_14_0;
                 gj.field_k = cf.field_a;
-                EmailFormatValidator.a(SpriteGeometry.field_r, vn.field_f, 12, (PacketBuffer) ((Object) tp.field_f), kl.field_T);
+                EmailFormatValidator.a(SpriteGeometry.field_r, vn.field_f, 12, (PacketBuffer) ((Object) tp.field_f), ProgressDialog.field_T);
                 ak.a(-1, (byte) -48);
                 decompiledRegionSelector0 = false;
               } catch (java.io.IOException decompiledCaughtParameter0) {

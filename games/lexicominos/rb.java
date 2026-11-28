@@ -198,7 +198,7 @@ final class rb {
         try {
           ug.field_A.closeAllDialogs(0);
           eb.field_b = new LoginPanel(AwtRasterBuffer.field_d, (String) null, DualLinkNode.field_k, param2, param1);
-          di.field_x = new qj(ug.field_A, eb.field_b);
+          di.field_x = new StandardContentDialog(ug.field_A, eb.field_b);
           ug.field_A.showDialog(-14579, di.field_x);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "rb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

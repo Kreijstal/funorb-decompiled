@@ -12,7 +12,7 @@ class id extends DefaultTextWidgetRenderer {
     }
 
     id(int param0) {
-        this(ql.field_Q, param0);
+        this(ResizableModalDialog.field_Q, param0);
     }
 
     public final void paintWidget(int param0, int param1, boolean param2, UiWidget param3, int param4) {
@@ -149,7 +149,7 @@ class id extends DefaultTextWidgetRenderer {
               if (ResourceArchive.field_a != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, qj.field_db, DequeWidgetContainer.field_x);
+              var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, StandardContentDialog.field_db, DequeWidgetContainer.field_x);
               var4 = 3 + var3_int;
               ni.field_a = new int[var4];
               MouseWheelInput.field_g = new String[var4];
@@ -260,7 +260,7 @@ class id extends DefaultTextWidgetRenderer {
           for (var5Lifetime1 = 0; var5Lifetime1 < MouseWheelInput.field_g.length; var5Lifetime1++) {
             stackIn_87_0 = MouseWheelInput.field_g[var5Lifetime1];
             stackIn_88_1 = !(ni.field_a[var5Lifetime1] < 0);
-            var6Lifetime1 = ii.a(stackIn_87_0, stackIn_88_1, 0);
+            var6Lifetime1 = FullscreenStatusDialog.a(stackIn_87_0, stackIn_88_1, 0);
             if (var6Lifetime1 > var3_intLifetime1) {
               var3_intLifetime1 = var6Lifetime1;
             }
@@ -270,7 +270,7 @@ class id extends DefaultTextWidgetRenderer {
             var5_ref_String__ = var11;
             for (var6Lifetime2 = 0; var11.length > var6Lifetime2; var6Lifetime2++) {
               var12 = var11[var6Lifetime2];
-              var8Lifetime1 = ii.a(var12, false, 0);
+              var8Lifetime1 = FullscreenStatusDialog.a(var12, false, 0);
               if (var8Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var8Lifetime1;
               }
@@ -278,7 +278,7 @@ class id extends DefaultTextWidgetRenderer {
             var5_ref_String__Lifetime1 = qc.field_e;
             for (var6Lifetime2Lifetime1 = 0; var5_ref_String__Lifetime1.length > var6Lifetime2Lifetime1; var6Lifetime2Lifetime1++) {
               var13 = var5_ref_String__Lifetime1[var6Lifetime2Lifetime1];
-              var8Lifetime1Lifetime1 = ii.a(var13, false, 0);
+              var8Lifetime1Lifetime1 = FullscreenStatusDialog.a(var13, false, 0);
               if (var8Lifetime1Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var8Lifetime1Lifetime1;
               }
@@ -305,7 +305,7 @@ class id extends DefaultTextWidgetRenderer {
             if (var7Lifetime1 < 0) {
               var6Lifetime3 = var6Lifetime3 + hc.field_fb;
             } else {
-              var8Lifetime2 = ii.a(MouseWheelInput.field_g[var5Lifetime3], true, 0);
+              var8Lifetime2 = FullscreenStatusDialog.a(MouseWheelInput.field_g[var5Lifetime3], true, 0);
               var9 = -(var8Lifetime2 >> 1) + CrossfadingMidiPcmStream.field_D;
               var6Lifetime3 = var6Lifetime3 + we.field_l;
               wd.field_a[var5Lifetime3] = new int[4];

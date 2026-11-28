@@ -146,7 +146,7 @@ final class SceneWidgetPart002 extends SceneWidget {
         if (SceneWidgetPart005.integerState0328 != 0 &&
           integerLocal1 == 0) {
           booleanArgument2 = false;
-          UiComponentPart026.performAction1393(13);
+          ProgressDialog.performAction1393(13);
         }
         if (booleanArgument2) {
           SceneWidgetPart007.sceneWidgetPart005State0002.performAction0710(integerArgument4, integerArgument1, -115);

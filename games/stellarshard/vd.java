@@ -32,7 +32,7 @@ final class vd {
             }
             var2 = 1;
           }
-          ua.field_i.a(KeyHandler.a(KeyHandler.field_a, ni.field_e, -94), KeyHandler.a(oc.field_e, di.field_b, -119), -1);
+          ua.field_i.a(KeyHandler.a(KeyHandler.field_a, ni.field_e, -94), KeyHandler.a(oc.field_e, FullscreenNoticeType.field_b, -119), -1);
           if (ua.field_i.c(-62)) {
             var1_int = 1;
           }
@@ -42,12 +42,12 @@ final class vd {
             var3 = pk.field_j[ua.field_i.field_f];
             if (var3 == 2 ||
               var3 == 5) {
-              wl.l(-12128);
+              ContentTransitionDialog.l(-12128);
             }
           } else {
             if (var2 != 0 &&
               2 != rb.field_s) {
-              wl.l(-12128);
+              ContentTransitionDialog.l(-12128);
             }
           }
           if (var3 == 0 &&

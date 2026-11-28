@@ -24,7 +24,7 @@ final class PcmResampler {
         RuntimeException decompiledCaughtException = null;
         var2 = Terraphoenix.field_V;
         try {
-          AlphaWidgetContainer.field_I.processPointerInput(true, qf.field_c, wd.field_a, 115);
+          AlphaWidgetContainer.field_I.processPointerInput(true, FullscreenNoticeType.field_c, wd.field_a, 115);
           AlphaWidgetContainer.field_I.advanceDialogs((byte) 126);
           if (param0 != 1) {
             stackIn_3_0 = -58;

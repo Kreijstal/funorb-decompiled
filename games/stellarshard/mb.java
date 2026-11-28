@@ -58,7 +58,7 @@ final class mb {
           sk.field_c = new boolean[sb.field_b];
           RasterBuffer.field_c = new int[sb.field_b];
           var17.position = param1.length + (-7 - sb.field_b * 8);
-          nc.field_G = var17.readUnsignedShort((byte) 86);
+          StripedProgressWidget.field_G = var17.readUnsignedShort((byte) 86);
           wd.field_b = var17.readUnsignedShort((byte) 39);
           var3 = 1 + (var17.readUnsignedByte(4) & 255);
           for (var4 = 0; sb.field_b > var4; var4++) {

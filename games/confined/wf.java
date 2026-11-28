@@ -20,7 +20,7 @@ final class wf {
               var4 = 1;
               AccountRequestState.field_f = false;
             }
-            TunnelCamera.drawLoadingProgressBar(EditableTextField.k(0), var4 != 0, ib.a((byte) 109), m.field_k, false);
+            TunnelCamera.drawLoadingProgressBar(EditableTextField.k(0), var4 != 0, StripedProgressWidget.a((byte) 109), m.field_k, false);
             return;
           }
           if (!hl.a((byte) 27)) {

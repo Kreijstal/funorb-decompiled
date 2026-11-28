@@ -132,7 +132,7 @@ final class da extends ArchiveProvider {
                 }
               } else {
                 if (!dn.field_b) {
-                  stackIn_27_0 = ij.field_e;
+                  stackIn_27_0 = FullscreenNoticeType.field_e;
                 } else {
                   stackIn_27_0 = DirectByteStorage.field_c;
                 }
@@ -158,16 +158,16 @@ final class da extends ArchiveProvider {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            bj.field_jb = new ci(0L, param7);
-            bj.field_jb.field_db = ka.field_b;
-            AccountNameAvailabilityValidator.field_m.a((byte) 127, bj.field_jb);
+            ContentTransitionDialog.field_jb = new ci(0L, param7);
+            ContentTransitionDialog.field_jb.field_db = ka.field_b;
+            AccountNameAvailabilityValidator.field_m.a((byte) 127, ContentTransitionDialog.field_jb);
             stackIn_31_0 = TextLayout.a(21549) ? 1 : 0;
           }
           if (stackIn_31_0 != 0 &&
             !qf.field_b) {
             return;
           }
-          AccountRegistrationPanel.field_O = new jg(0, 0, 0, 0);
+          AccountRegistrationPanel.field_O = new BirthDateChatEnableForm(0, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -358,8 +358,8 @@ final class da extends ArchiveProvider {
                 return stackIn_49_0;
               }
               if (var9 != 99) {
-                sb.field_sb = -1;
-                tb.field_f = ii.field_P;
+                StandardContentDialog.field_sb = -1;
+                tb.field_f = GuestPlayConfirmationForm.field_P;
                 wg.field_B = var9;
                 if (var13 != 0) {
                   tk.a(50, lg.a((byte) -122));
@@ -404,7 +404,7 @@ final class da extends ArchiveProvider {
               }
             }
           }
-          if (ii.field_P == tb.field_f &&
+          if (GuestPlayConfirmationForm.field_P == tb.field_f &&
             jl.a(false)) {
             boolean decompiledSharedTail0 = (wg.field_B == 255);
             if (!decompiledSharedTail0) {

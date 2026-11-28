@@ -14,13 +14,13 @@ final class dh {
     }
 
     final static void a(byte param0, ResourceArchive param1) {
-        nj.b(param1.getFileByName("headers.packvorbis", (byte) 45, ""));
-        nj var2 = nj.a(param1, "jagex logo2.packvorbis", "");
+        VorbisSample.decodeSetup(param1.getFileByName("headers.packvorbis", (byte) 45, ""));
+        VorbisSample var2 = VorbisSample.loadByName(param1, "jagex logo2.packvorbis", "");
         if (param0 != 115) {
           return;
         }
         try {
-          var2.c();
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "dh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

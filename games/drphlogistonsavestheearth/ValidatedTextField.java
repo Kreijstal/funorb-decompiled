@@ -59,7 +59,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
             }
             var2 = 1;
           }
-          wg.field_k.a(0, ValidatedTextField.a(ob.field_g, (byte) -112, ck.field_c), ValidatedTextField.a(ih.field_R, (byte) -112, ae.field_gb));
+          wg.field_k.a(0, ValidatedTextField.a(ob.field_g, (byte) -112, ck.field_c), ValidatedTextField.a(RegistrationAgreementPane.field_R, (byte) -112, FullscreenStatusDialog.field_gb));
           if (wg.field_k.c((byte) -82)) {
             var1_int = 1;
           }

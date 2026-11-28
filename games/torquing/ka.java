@@ -53,15 +53,15 @@ final class ka extends IntrusiveNode {
         int var7Lifetime1Lifetime1;
         var9 = Torquing.field_u;
         try {
-          i.field_R = true;
+          FullscreenStatusDialog.field_R = true;
           go.field_x = param0;
           if (go.field_x == 0) {
             var3_int = rf.a(dd.field_e, bo.field_e, field_j, 87, DefaultTextWidgetRenderer.field_i);
             var4 = var3_int + 3;
-            mn.field_Z = new int[var4];
+            ProgressMessageDialog.field_Z = new int[var4];
             wh.field_z = new String[var4];
             for (var5 = 0; var4 > var5; var5++) {
-              mn.field_Z[var5] = -1;
+              ProgressMessageDialog.field_Z[var5] = -1;
             }
             IndexedSpriteLayer.field_e = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
@@ -69,18 +69,18 @@ final class ka extends IntrusiveNode {
             }
             wh.field_z[-3 + var4] = "";
             wh.field_z[-2 + var4] = ol.field_b;
-            mn.field_Z[var4 - 2] = 0;
+            ProgressMessageDialog.field_Z[var4 - 2] = 0;
             IndexedSpriteLayer.field_e[0] = 4;
             wh.field_z[var4 - 1] = qd.field_i;
-            mn.field_Z[-1 + var4] = 1;
+            ProgressMessageDialog.field_Z[-1 + var4] = 1;
             IndexedSpriteLayer.field_e[1] = 5;
           } else if (go.field_x == 1) {
             var3_int = rf.a(dd.field_e, bo.field_e, field_j, 74, DefaultTextWidgetRenderer.field_i);
             var4 = var3_int + 2;
-            mn.field_Z = new int[var4];
+            ProgressMessageDialog.field_Z = new int[var4];
             wh.field_z = new String[var4];
             for (var5 = 0; var4 > var5; var5++) {
-              mn.field_Z[var5] = -1;
+              ProgressMessageDialog.field_Z[var5] = -1;
             }
             IndexedSpriteLayer.field_e = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -88,7 +88,7 @@ final class ka extends IntrusiveNode {
             }
             wh.field_z[-2 + var4] = "";
             wh.field_z[var4 - 1] = qd.field_i;
-            mn.field_Z[var4 - 1] = 0;
+            ProgressMessageDialog.field_Z[var4 - 1] = 0;
             IndexedSpriteLayer.field_e[0] = 5;
           } else if (go.field_x != 2) {
             if (go.field_x == 3) {
@@ -99,9 +99,9 @@ final class ka extends IntrusiveNode {
               }
               var4 = 2 + var3_int;
               wh.field_z = new String[var4];
-              mn.field_Z = new int[var4];
+              ProgressMessageDialog.field_Z = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                mn.field_Z[var5] = -1;
+                ProgressMessageDialog.field_Z[var5] = -1;
               }
               IndexedSpriteLayer.field_e = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -109,15 +109,15 @@ final class ka extends IntrusiveNode {
               }
               wh.field_z[var4 - 2] = "";
               wh.field_z[-1 + var4] = qd.field_i;
-              mn.field_Z[-1 + var4] = 0;
+              ProgressMessageDialog.field_Z[-1 + var4] = 0;
               IndexedSpriteLayer.field_e[0] = 5;
             } else if (go.field_x == 4) {
               var3_int = rf.a(dd.field_e, bo.field_e, field_j, 75, wj.field_j);
               var4 = 2 + var3_int;
-              mn.field_Z = new int[var4];
+              ProgressMessageDialog.field_Z = new int[var4];
               wh.field_z = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                mn.field_Z[var5] = -1;
+                ProgressMessageDialog.field_Z[var5] = -1;
               }
               IndexedSpriteLayer.field_e = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -125,7 +125,7 @@ final class ka extends IntrusiveNode {
               }
               wh.field_z[var4 - 2] = "";
               wh.field_z[-1 + var4] = qd.field_i;
-              mn.field_Z[var4 - 1] = 0;
+              ProgressMessageDialog.field_Z[var4 - 1] = 0;
               IndexedSpriteLayer.field_e[0] = 5;
             } else {
               if (go.field_x != 5) {
@@ -133,10 +133,10 @@ final class ka extends IntrusiveNode {
               }
               var3_int = rf.a(dd.field_e, bo.field_e, field_j, 74, AccountServiceResult.field_c);
               var4 = var3_int + 3;
-              mn.field_Z = new int[var4];
+              ProgressMessageDialog.field_Z = new int[var4];
               wh.field_z = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                mn.field_Z[var5] = -1;
+                ProgressMessageDialog.field_Z[var5] = -1;
               }
               IndexedSpriteLayer.field_e = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -144,10 +144,10 @@ final class ka extends IntrusiveNode {
               }
               wh.field_z[var4 - 3] = "";
               wh.field_z[-2 + var4] = ud.field_l;
-              mn.field_Z[-2 + var4] = 0;
+              ProgressMessageDialog.field_Z[-2 + var4] = 0;
               IndexedSpriteLayer.field_e[0] = 3;
               wh.field_z[var4 - 1] = qd.field_i;
-              mn.field_Z[-1 + var4] = 1;
+              ProgressMessageDialog.field_Z[-1 + var4] = 1;
               IndexedSpriteLayer.field_e[1] = 5;
             }
           } else {
@@ -196,21 +196,21 @@ final class ka extends IntrusiveNode {
             }
             var6 = stackIn_33_0;
             var7 = var5 + (7 + var6);
-            mn.field_Z = new int[var7];
+            ProgressMessageDialog.field_Z = new int[var7];
             wh.field_z = new String[var7];
             for (var8 = 0; var8 < var7; var8++) {
-              mn.field_Z[var8] = -1;
+              ProgressMessageDialog.field_Z[var8] = -1;
             }
             IndexedSpriteLayer.field_e = new int[2];
             wh.field_z[1] = EmailFormatValidator.field_m;
             wh.field_z[0] = vb.field_b;
-            mn.field_Z[1] = 0;
+            ProgressMessageDialog.field_Z[1] = 0;
             IndexedSpriteLayer.field_e[1] = 2;
             IndexedSpriteLayer.field_e[0] = 5;
             wh.field_z[5] = "";
             wh.field_z[2] = IsaacCipher.field_f;
-            mn.field_Z[3] = 1;
-            wh.field_z[3] = fo.field_E;
+            ProgressMessageDialog.field_Z[3] = 1;
+            wh.field_z[3] = DialogMessagePane.field_E;
             wh.field_z[4] = ValidatedTextField.field_Q;
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
               stackIn_40_0 = wh.field_z;
@@ -223,7 +223,7 @@ final class ka extends IntrusiveNode {
               stackIn_40_0[stackIn_40_1] = stackIn_41_2;
             }
             wh.field_z[6 + var5] = null;
-            mn.field_Z[var5 + 6] = -2;
+            ProgressMessageDialog.field_Z[var5 + 6] = -2;
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
               stackIn_46_0 = wh.field_z;
               stackIn_46_1 = 7 + var5 + var8Lifetime3;
@@ -239,7 +239,7 @@ final class ka extends IntrusiveNode {
           kb.field_g.field_i = IndexedSpriteLayer.field_e.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; wh.field_z.length > var4Lifetime1; var4Lifetime1++) {
-            stackIn_89_0 = !(0 > mn.field_Z[var4Lifetime1]);
+            stackIn_89_0 = !(0 > ProgressMessageDialog.field_Z[var4Lifetime1]);
             var5Lifetime1 = MenuScreen.measureMenuText(stackIn_89_0, -125, wh.field_z[var4Lifetime1]);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
@@ -272,7 +272,7 @@ final class ka extends IntrusiveNode {
           ii.field_k = (WidgetContainer.field_z + ModalDialogHost.field_D << 1) * kb.field_g.field_i;
           for (var4Lifetime2 = 0; wh.field_z.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_116_0 = ii.field_k;
-            if (0 <= mn.field_Z[var4Lifetime2]) {
+            if (0 <= ProgressMessageDialog.field_Z[var4Lifetime2]) {
               stackIn_117_1 = TextLineMetrics.field_d;
             } else {
               stackIn_117_1 = bp.field_e;
@@ -284,7 +284,7 @@ final class ka extends IntrusiveNode {
           var4Lifetime3 = 0;
           var5Lifetime3 = a.field_d;
           while (wh.field_z.length > var4Lifetime3) {
-            var6Lifetime1 = mn.field_Z[var4Lifetime3];
+            var6Lifetime1 = ProgressMessageDialog.field_Z[var4Lifetime3];
             if (var6Lifetime1 < 0) {
               var5Lifetime3 = var5Lifetime3 + bp.field_e;
             } else {

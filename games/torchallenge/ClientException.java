@@ -92,8 +92,8 @@ final class ClientException extends RuntimeException {
             var8Lifetime1 = -1;
             var9 = -1;
             for (var10 = 0; var10 < AccountRegistrationPanel.field_bb[ValidatedTextField.field_ib].length; var10++) {
-              var8Lifetime1Lifetime1 = v.field_X[0][ValidatedTextField.field_ib][var10][0];
-              var9Lifetime1 = v.field_X[1][ValidatedTextField.field_ib][var10][1];
+              var8Lifetime1Lifetime1 = ResizableModalDialog.field_X[0][ValidatedTextField.field_ib][var10][0];
+              var9Lifetime1 = ResizableModalDialog.field_X[1][ValidatedTextField.field_ib][var10][1];
               if (RandomAccessCacheFile.field_e >= var8Lifetime1Lifetime1 &&
                 var9Lifetime1 >= RandomAccessCacheFile.field_e) {
                 var7 = lc.a(var10, 1);

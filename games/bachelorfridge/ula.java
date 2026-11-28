@@ -69,17 +69,17 @@ final class ula {
     final static void a(int param0, byte param1, String param2, int param3, boolean param4, long param5) {
         int var7_int = 0;
         try {
-          sja.field_fb.writeCipheredByte(param0, (byte) 110);
-          sja.field_fb.position = sja.field_fb.position + 1;
+          StandardContentDialog.field_fb.writeCipheredByte(param0, (byte) 110);
+          StandardContentDialog.field_fb.position = StandardContentDialog.field_fb.position + 1;
           if (param1 != 75) {
             field_j = (String) null;
           }
-          var7_int = sja.field_fb.position;
-          sja.field_fb.writeLong(1686281208, param5);
-          sja.field_fb.writeString((byte) -50, param2);
-          sja.field_fb.writeByte(param3, 0);
-          sja.field_fb.writeByte(!param4 ? 0 : 1, param1 - 75);
-          sja.field_fb.writeLengthByte((byte) -127, sja.field_fb.position - var7_int);
+          var7_int = StandardContentDialog.field_fb.position;
+          StandardContentDialog.field_fb.writeLong(1686281208, param5);
+          StandardContentDialog.field_fb.writeString((byte) -50, param2);
+          StandardContentDialog.field_fb.writeByte(param3, 0);
+          StandardContentDialog.field_fb.writeByte(!param4 ? 0 : 1, param1 - 75);
+          StandardContentDialog.field_fb.writeLengthByte((byte) -127, StandardContentDialog.field_fb.position - var7_int);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ula.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

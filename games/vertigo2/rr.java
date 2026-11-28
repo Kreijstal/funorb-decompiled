@@ -75,7 +75,7 @@ final class rr extends TextureOperator {
         float var6;
         int var7;
         var7 = Vertigo2.field_L ? 1 : 0;
-        var4 = rh.field_O[param1];
+        var4 = DialogMessagePane.field_O[param1];
         var5 = lf.field_y[param2];
         var6 = (float)Math.atan2((double)(-2048 + var4), (double)(var5 - param0));
         if ((double)var6 >= -3.141592653589793 &&
@@ -88,7 +88,7 @@ final class rr extends TextureOperator {
           tn.field_j = param2;
         } else if (-0.7853981633974483 >= (double)var6 &&
           -1.5707963267948966 <= (double)var6) {
-          tn.field_j = we.field_M - param2;
+          tn.field_j = StripedProgressWidget.field_M - param2;
           LevelSimulation.field_c = param1;
         } else if (0.0f >= var6 &&
           (double)var6 >= -0.7853981633974483) {
@@ -97,10 +97,10 @@ final class rr extends TextureOperator {
         } else if (var6 >= 0.0f &&
           0.7853981633974483 >= (double)var6) {
           LevelSimulation.field_c = aa.field_Vb - param2;
-          tn.field_j = -param1 + we.field_M;
+          tn.field_j = -param1 + StripedProgressWidget.field_M;
         } else if ((double)var6 >= 0.7853981633974483 &&
           (double)var6 <= 1.5707963267948966) {
-          tn.field_j = we.field_M - param2;
+          tn.field_j = StripedProgressWidget.field_M - param2;
           LevelSimulation.field_c = -param1 + aa.field_Vb;
         } else {
           if ((double)var6 >= 1.5707963267948966) {
@@ -110,14 +110,14 @@ final class rr extends TextureOperator {
             } else {
               if (2.356194490192345 <= (double)var6 &&
                 (double)var6 <= 3.141592653589793) {
-                tn.field_j = we.field_M - param1;
+                tn.field_j = StripedProgressWidget.field_M - param1;
                 LevelSimulation.field_c = param2;
               }
             }
           } else {
             if (2.356194490192345 <= (double)var6 &&
               (double)var6 <= 3.141592653589793) {
-              tn.field_j = we.field_M - param1;
+              tn.field_j = StripedProgressWidget.field_M - param1;
               LevelSimulation.field_c = param2;
             }
           }
@@ -177,7 +177,7 @@ final class rr extends TextureOperator {
           this.b(58, 20);
         }
         if (this.field_x.field_i) {
-          for (var4 = 0; var4 < we.field_M; var4++) {
+          for (var4 = 0; var4 < StripedProgressWidget.field_M; var4++) {
             this.d(2048, var4, param0);
             var5 = this.a(0, -1, LevelSimulation.field_c);
             var7[var4] = var5[tn.field_j];
@@ -204,7 +204,7 @@ final class rr extends TextureOperator {
           var4 = var13[0];
           var5 = var13[1];
           var6 = var13[2];
-          for (var7 = 0; var7 < we.field_M; var7++) {
+          for (var7 = 0; var7 < StripedProgressWidget.field_M; var7++) {
             this.d(param0 ^ -1732, var7, param1);
             var14 = this.c(0, param0 ^ -3777, LevelSimulation.field_c);
             var4[var7] = var14[0][tn.field_j];

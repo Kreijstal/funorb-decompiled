@@ -187,7 +187,7 @@ final class DamageEffect extends EventEffect {
           }
           if (eia.field_a == rga.field_c) {
             vg.field_l = null;
-            sja.field_fb.position = 0;
+            StandardContentDialog.field_fb.position = 0;
             if (param4 != null) {
               var9 = 0;
               ProxySocketConnector.field_g.position = 0;
@@ -203,16 +203,16 @@ final class DamageEffect extends EventEffect {
               ProxySocketConnector.field_g.writeShort(param1, -119);
               ProxySocketConnector.field_g.writeByte(param2, param0 + 15);
               ProxySocketConnector.field_g.writeByte(var9, 0);
-              sja.field_fb.writeByte(18, 0);
-              sja.field_fb.position = sja.field_fb.position + 2;
-              var10 = sja.field_fb.position;
+              StandardContentDialog.field_fb.writeByte(18, 0);
+              StandardContentDialog.field_fb.position = StandardContentDialog.field_fb.position + 2;
+              var10 = StandardContentDialog.field_fb.position;
               var11_ref_String = pi.a(11713, nia.d(-31768));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              sja.field_fb.writeString((byte) -50, var11_ref_String);
-              wd.a(SlowAllEvent.field_q, (byte) -67, sja.field_fb, ProxySocketConnector.field_g, SuperSpeedSpecial.field_p);
-              sja.field_fb.writeLengthShort((byte) -88, sja.field_fb.position - var10);
+              StandardContentDialog.field_fb.writeString((byte) -50, var11_ref_String);
+              wd.a(SlowAllEvent.field_q, (byte) -67, StandardContentDialog.field_fb, ProxySocketConnector.field_g, SuperSpeedSpecial.field_p);
+              StandardContentDialog.field_fb.writeLengthShort((byte) -88, StandardContentDialog.field_fb.position - var10);
             } else {
               ProxySocketConnector.field_g.position = 0;
               ProxySocketConnector.field_g.writeInt(ia.field_k.nextInt(), -1615464796);
@@ -231,11 +231,11 @@ final class DamageEffect extends EventEffect {
                 stackIn_18_1 = "";
               }
               ((PacketBuffer) (Object) stackIn_17_0).writePrefixedString(stackIn_18_1, 74);
-              sja.field_fb.writeByte(16, param0 + 15);
-              sja.field_fb.position = sja.field_fb.position + 1;
-              var9 = sja.field_fb.position;
-              wd.a(SlowAllEvent.field_q, (byte) -89, sja.field_fb, ProxySocketConnector.field_g, SuperSpeedSpecial.field_p);
-              sja.field_fb.writeLengthByte((byte) -97, sja.field_fb.position - var9);
+              StandardContentDialog.field_fb.writeByte(16, param0 + 15);
+              StandardContentDialog.field_fb.position = StandardContentDialog.field_fb.position + 1;
+              var9 = StandardContentDialog.field_fb.position;
+              wd.a(SlowAllEvent.field_q, (byte) -89, StandardContentDialog.field_fb, ProxySocketConnector.field_g, SuperSpeedSpecial.field_p);
+              StandardContentDialog.field_fb.writeLengthByte((byte) -97, StandardContentDialog.field_fb.position - var9);
             }
             ConfirmedEmailAvailabilityValidator.a(-1, 116);
             eia.field_a = dc.field_k;

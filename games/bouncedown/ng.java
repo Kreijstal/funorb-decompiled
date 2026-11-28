@@ -49,9 +49,9 @@ abstract class ng {
           !(sj.field_j.length >= param2)) {
           sj.field_j = new int[2 * param2];
         }
-        if (null == nh.field_S ||
-          !(param2 <= nh.field_S.length)) {
-          nh.field_S = new int[param2 * 2];
+        if (null == FullscreenStatusDialog.field_S ||
+          !(param2 <= FullscreenStatusDialog.field_S.length)) {
+          FullscreenStatusDialog.field_S = new int[param2 * 2];
         }
         if (param0 != -15936) {
           ng.a((byte) -73);
@@ -80,7 +80,7 @@ abstract class ng {
         va.field_b = 2147483647;
         w.field_d = -2147483648;
         DisplayNameSelectionPanel.field_M = 0;
-        uc.field_A = -2147483648;
+        DialogMessagePane.field_A = -2147483648;
     }
 
     abstract void a(boolean param0, PacketBuffer param1);
@@ -122,7 +122,7 @@ abstract class ng {
               return true;
             }
           }
-          var2Lifetime1 = nh.field_O;
+          var2Lifetime1 = FullscreenStatusDialog.field_O;
           for (var3Lifetime1 = 0; var2Lifetime1.length > var3Lifetime1; var3Lifetime1++) {
             var4Lifetime1 = var2Lifetime1[var3Lifetime1];
             if (param1 == var4Lifetime1) {

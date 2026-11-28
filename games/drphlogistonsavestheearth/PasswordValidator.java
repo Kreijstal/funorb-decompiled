@@ -121,7 +121,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_18_0;
           }
           if (var6.length() <= 0) {
-            stackIn_33_0 = ae.field_jb;
+            stackIn_33_0 = FullscreenStatusDialog.field_jb;
             return stackIn_33_0;
           }
           if (rb.a(var6, var5, -1)) {

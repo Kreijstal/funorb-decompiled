@@ -689,7 +689,7 @@ abstract class id extends MovingTunnelEntity {
           }
           var2 = (qn) (RichTextWidget.field_T.beginForward(59));
           while (var2 != null) {
-            dh.a(param1, var2, param0 ^ -21822);
+            ProgressMessageDialog.a(param1, var2, param0 ^ -21822);
             var2 = (qn) (RichTextWidget.field_T.nextForward(2123));
           }
           return;

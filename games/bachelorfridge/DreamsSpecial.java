@@ -138,7 +138,7 @@ final class DreamsSpecial extends SpecialOrder {
           var7.unlink(false);
           var7.unlinkSecondary(0);
           bda.field_l = bda.field_l - 1;
-          var5 = sja.field_fb;
+          var5 = StandardContentDialog.field_fb;
           var5.writeCipheredByte(param3, (byte) 99);
           var5.position = var5.position + 1;
           var6 = var5.position;

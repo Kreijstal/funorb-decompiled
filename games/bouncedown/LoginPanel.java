@@ -124,7 +124,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
                   if (this.field_B) {
                     oh.b(true);
                   } else {
-                    wk.h((byte) -124);
+                    ResizableModalDialog.h((byte) -124);
                   }
                 }
               }
@@ -206,7 +206,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
           this.field_I = (EditableTextField) ((Object) new ValidatedTextField(param0, (WidgetEventListener) (this), 100));
           this.field_z = (EditableTextField) ((Object) new ValidatedTextField("", (WidgetEventListener) (this), 20));
           if (this.field_J) {
-            this.field_D = new InteractiveWidget(mh.field_W, (WidgetEventListener) null);
+            this.field_D = new InteractiveWidget(ContentTransitionDialog.field_W, (WidgetEventListener) null);
             this.field_K = new InteractiveWidget(i.field_g, (WidgetEventListener) null);
             this.field_I.field_y = false;
           } else {

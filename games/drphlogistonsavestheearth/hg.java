@@ -37,7 +37,7 @@ final class hg extends hc {
           var7 = var8;
           PcmResampler.field_c.showDialog((byte) -109, (UiWidget) (var8));
           if (wh.a(false)) {
-            var8.p(248);
+            var8.showAccountCreationConnectionFailure(248);
             return true;
           }
           ol.field_j = param0;

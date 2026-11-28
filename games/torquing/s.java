@@ -131,7 +131,7 @@ final class s extends am {
               } else {
                 if (var6 != 1) {
                   if (var6 == 2) {
-                    this.field_v[var4_int] = (kj) ((Object) c.a(i.c(param1, 40), param0));
+                    this.field_v[var4_int] = (kj) ((Object) c.a(FullscreenStatusDialog.c(param1, 40), param0));
                   } else {
                     if (var6 == 3) {
                       this.field_v[var4_int] = (kj) ((Object) LevelRun.a(param0, (byte) 13));

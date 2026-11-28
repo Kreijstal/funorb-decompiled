@@ -33,11 +33,11 @@ final class vd {
             vd.a(-51, (mp) null, 54, -38, -24, (mp) null);
           }
           var2_int = param0.readUnsignedByte(-11);
-          af.field_E = (var2_int & 7) << 18;
+          DateInputWidget.field_E = (var2_int & 7) << 18;
           ValidatedTextField.field_U = ValidatedTextField.field_U + (var2_int >> 3);
-          af.field_E = af.field_E + (param0.readUnsignedShort((byte) -11) << 2);
+          DateInputWidget.field_E = DateInputWidget.field_E + (param0.readUnsignedShort((byte) -11) << 2);
           var2_intLifetime1 = param0.readUnsignedByte(-11);
-          af.field_E = af.field_E + (var2_intLifetime1 >> 6);
+          DateInputWidget.field_E = DateInputWidget.field_E + (var2_intLifetime1 >> 6);
           bp.field_z = (var2_intLifetime1 & 63) << 15;
           bp.field_z = bp.field_z + (param0.readUnsignedByte(-11) << 7);
           var2_intLifetime2 = param0.readUnsignedByte(-11);
@@ -65,7 +65,7 @@ final class vd {
             for (var6 = 0; var3 > var6; var6++) {
               var5[var6] = in.field_c[b.a((int) var4[var6], 255)];
             }
-            var1[var2] = new Sprite(ql.field_M, vj.field_c, ca.field_a[var2], pc.field_a[var2], mh.field_c[var2], vi.field_w[var2], var5);
+            var1[var2] = new Sprite(BirthDateChatEnableForm.field_M, vj.field_c, ca.field_a[var2], pc.field_a[var2], mh.field_c[var2], vi.field_w[var2], var5);
           }
           la.a((byte) 60);
           return var1;

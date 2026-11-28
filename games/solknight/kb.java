@@ -80,27 +80,27 @@ final class kb {
         AlphaWidgetContainer.field_I[4] = og.field_d;
         AlphaWidgetContainer.field_I[5] = h.field_f;
         AlphaWidgetContainer.field_I[2] = ti.field_d;
-        AlphaWidgetContainer.field_I[1] = lb.field_T;
-        AlphaWidgetContainer.field_I[15] = c.field_L;
-        AlphaWidgetContainer.field_I[0] = ng.field_e;
+        AlphaWidgetContainer.field_I[1] = ProgressDialog.field_T;
+        AlphaWidgetContainer.field_I[15] = StripedProgressWidget.field_L;
+        AlphaWidgetContainer.field_I[0] = FullscreenNoticeType.field_e;
         AlphaWidgetContainer.field_I[11] = vh.field_a;
         AlphaWidgetContainer.field_I[13] = gd.field_a;
-        AlphaWidgetContainer.field_I[7] = qe.field_F;
+        AlphaWidgetContainer.field_I[7] = RegistrationAgreementPane.field_F;
         AlphaWidgetContainer.field_I[16] = ff.field_b;
         AlphaWidgetContainer.field_I[6] = h.field_f;
         AlphaWidgetContainer.field_I[12] = vb.field_f;
         AlphaWidgetContainer.field_I[14] = k.field_a;
         AlphaWidgetContainer.field_I[17] = UiWidget.field_s;
-        AlphaWidgetContainer.field_I[10] = gf.field_X[2];
+        AlphaWidgetContainer.field_I[10] = ContentTransitionDialog.field_X[2];
         AlphaWidgetContainer.field_I[18] = ah.field_g;
         if (param0 < -101) {
-          AlphaWidgetContainer.field_I[9] = gf.field_X[1];
-          AlphaWidgetContainer.field_I[8] = gf.field_X[0];
+          AlphaWidgetContainer.field_I[9] = ContentTransitionDialog.field_X[1];
+          AlphaWidgetContainer.field_I[8] = ContentTransitionDialog.field_X[0];
           return;
         }
         field_c = (String[]) null;
-        AlphaWidgetContainer.field_I[9] = gf.field_X[1];
-        AlphaWidgetContainer.field_I[8] = gf.field_X[0];
+        AlphaWidgetContainer.field_I[9] = ContentTransitionDialog.field_X[1];
+        AlphaWidgetContainer.field_I[8] = ContentTransitionDialog.field_X[0];
     }
 
     final boolean a(int param0) {

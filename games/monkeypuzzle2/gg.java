@@ -46,7 +46,7 @@ final class gg {
                 break;
               }
               var7_ref_String = param1.substring(var6_int + 2, var5);
-              if (!ra.a((CharSequence) ((Object) var7_ref_String), (byte) 84)) {
+              if (!StandardContentDialog.a((CharSequence) ((Object) var7_ref_String), (byte) 84)) {
                 continue;
               }
               if (var3_int <= var5) {
@@ -83,7 +83,7 @@ final class gg {
               break;
             }
             var9 = param1.substring(var8Lifetime1 + 2, var5Lifetime1);
-            if (!ra.a((CharSequence) ((Object) var9), (byte) -128)) {
+            if (!StandardContentDialog.a((CharSequence) ((Object) var9), (byte) -128)) {
               continue;
             }
             if (var5Lifetime1 >= var3_int) {
@@ -191,7 +191,7 @@ final class gg {
     }
 
     final void a(int param0, int param1, boolean param2, int param3, int param4) {
-        lb.a(param1, param0, (byte) -123, this.field_a, param3, param4);
+        GuestPlayConfirmationForm.a(param1, param0, (byte) -123, this.field_a, param3, param4);
         if (param2) {
           this.field_a = (Sprite[]) null;
         }

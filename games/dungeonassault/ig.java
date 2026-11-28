@@ -36,7 +36,7 @@ final class ig {
           for (var4 = 0; args.length > var4; var4++) {
             var5 = args[var4];
             if (var2_int != -1) {
-              args[var4] = jk.a(new String[]{Integer.toString(var2_int, 16)}, "<col=<%0>>", 30496) + var5;
+              args[var4] = StandardContentDialog.a(new String[]{Integer.toString(var2_int, 16)}, "<col=<%0>>", 30496) + var5;
             }
             var6 = en.a(var5, -8634, "<col=");
             var7 = en.a(var5, -8634, "</col>");

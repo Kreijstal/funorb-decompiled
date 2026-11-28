@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends sh implements WidgetActivationListener {
+final class AccountCreationResultPanel extends ProgressMessageDialog implements WidgetActivationListener {
     private boolean field_ob;
     private boolean field_nb;
     static int field_lb;
@@ -25,9 +25,9 @@ final class AccountCreationResultPanel extends sh implements WidgetActivationLis
           if (param0 < 6) {
             var7 = (AccountServiceResult) null;
             this.showAccountCreationResult(-84, true, (AccountServiceResult) null);
-            this.a(true);
+            this.closeDialog(true);
           } else {
-            this.a(true);
+            this.closeDialog(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -44,7 +44,7 @@ final class AccountCreationResultPanel extends sh implements WidgetActivationLis
         }
     }
 
-    final void j(byte param0) {
+    final void showAccountCreationConnectionFailure(byte param0) {
         this.showAccountCreationResult(-1, true, wb.createAccountErrorResult(248, param0 ^ -51, ih.field_P));
         if (param0 != -52) {
           AccountServiceResult var3 = (AccountServiceResult) null;
@@ -78,7 +78,7 @@ final class AccountCreationResultPanel extends sh implements WidgetActivationLis
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        uc var5 = null;
+        DialogMessagePane var5 = null;
         int var6 = 0;
         var6 = Bounce.field_N;
         try {
@@ -105,33 +105,33 @@ final class AccountCreationResultPanel extends sh implements WidgetActivationLis
               }
             }
           }
-          var5 = new uc((sh) (this), ne.field_v, var4);
+          var5 = new DialogMessagePane((ProgressMessageDialog) (this), ne.field_v, var4);
           if (param2.success) {
             if (param2.field_a) {
-              this.a(10768, new eb(this));
+              this.replaceContent(10768, new RegistrationAgreementPane(this));
               return;
             }
-            var5.a(BufferedSocket.field_i, (WidgetEventListener) (this), -4);
+            var5.addListenerButton(BufferedSocket.field_i, (WidgetEventListener) (this), -4);
           } else {
             if (this.field_nb) {
-              var5.a(BufferedSocket.field_i, (WidgetEventListener) (this), -4);
+              var5.addListenerButton(BufferedSocket.field_i, (WidgetEventListener) (this), -4);
             } else {
               if (param2.statusCode == 5) {
-                var5.a(ta.field_e, 11, (byte) 114);
-                var5.a(i.field_g, 17, (byte) 85);
+                var5.addActionButton(ta.field_e, 11, (byte) 114);
+                var5.addActionButton(i.field_g, 17, (byte) 85);
               } else {
-                var5.a(pe.field_h, -1, (byte) 124);
+                var5.addActionButton(pe.field_h, -1, (byte) 124);
               }
             }
             if (param2.statusCode == 3) {
-              var5.a(oc.field_c, 7, (byte) 80);
+              var5.addActionButton(oc.field_c, 7, (byte) 80);
             } else {
               if (param2.statusCode == 6) {
-                var5.a(da.field_c, 9, (byte) 93);
+                var5.addActionButton(da.field_c, 9, (byte) 93);
               }
             }
           }
-          this.a(10768, var5);
+          this.replaceContent(10768, var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

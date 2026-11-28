@@ -43,7 +43,7 @@ final class jm extends TextureOperator {
         int[] var6 = var14[0];
         int[] var7 = var14[1];
         int[] var8 = var14[2];
-        for (var9 = 0; we.field_M > var9; var9++) {
+        for (var9 = 0; StripedProgressWidget.field_M > var9; var9++) {
           var4 = var17[var9] >> 4;
           if (0 > var4) {
             var4 = 0;

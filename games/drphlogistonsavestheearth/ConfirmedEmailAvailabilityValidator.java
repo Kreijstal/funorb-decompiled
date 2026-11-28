@@ -19,7 +19,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             rb.a((byte) -102);
             return;
           }
-          af.field_g.h((byte) 23);
+          af.field_g.freezeNormalProgressAnimation((byte) 23);
           if (param0 != -20480) {
             field_q = 79;
             rb.a((byte) -102);
@@ -29,7 +29,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           return;
         }
         if (null != af.field_g) {
-          af.field_g.h((byte) 23);
+          af.field_g.freezeNormalProgressAnimation((byte) 23);
           if (param0 == -20480) {
             rb.a((byte) -102);
             return;

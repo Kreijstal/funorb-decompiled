@@ -13,8 +13,8 @@ final class DiskArchiveRequest extends ArchiveRequest {
     final static ek i(int param0) {
         ek var1 = null;
         if (param0 >= 88) {
-          var1 = new ek(nc.field_G, wd.field_b, ak.field_c[0], RasterBuffer.field_c[0], vc.field_b[0], ih.field_d[0], ih.field_b[0], gj.field_w);
-          tb.f((byte) -113);
+          var1 = new ek(StripedProgressWidget.field_G, wd.field_b, ak.field_c[0], RasterBuffer.field_c[0], vc.field_b[0], ih.field_d[0], ih.field_b[0], gj.field_w);
+          ResizableModalDialog.f((byte) -113);
           return var1;
         }
         return (ek) null;

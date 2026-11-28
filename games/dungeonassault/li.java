@@ -16,7 +16,7 @@ final class li {
     static String[] field_f;
 
     final static void c(int param0) {
-        ta.field_a.b(1, new ia());
+        ta.field_a.replaceContent(1, new GuestPlayConfirmationForm());
         if (param0 != 316) {
           field_j = 24;
         }

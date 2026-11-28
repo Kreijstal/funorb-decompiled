@@ -282,7 +282,7 @@ final class IntrusiveDeque {
             stackIn_5_0 = (BinaryBitmapFont) null;
             return stackIn_5_0;
           }
-          var2 = new BinaryBitmapFont(param1, ValidatedTextField.field_P, mb.field_b, da.field_c, ra.field_ab, cb.field_b);
+          var2 = new BinaryBitmapFont(param1, ValidatedTextField.field_P, mb.field_b, da.field_c, StandardContentDialog.field_ab, cb.field_b);
           gb.a(-63);
           stackIn_7_0 = var2;
           return stackIn_7_0;
@@ -522,7 +522,7 @@ final class IntrusiveDeque {
             var4 = DraggableWidgetContainer.field_F;
             var5 = 0;
             if (!param0) {
-              stackIn_8_0 = kg.field_c;
+              stackIn_8_0 = FullscreenNoticeType.field_c;
             } else {
               stackIn_8_0 = FrameTimer.field_b;
             }
@@ -571,7 +571,7 @@ final class IntrusiveDeque {
             FrameTimer.field_b = FrameTimer.field_b & ~EmailFormatValidator.field_r;
             fj.field_E = null;
             k.field_i = true;
-            kg.field_c = kg.field_c | EmailFormatValidator.field_r;
+            FullscreenNoticeType.field_c = FullscreenNoticeType.field_c | EmailFormatValidator.field_r;
           }
           if (ok.a(false)) {
             return;

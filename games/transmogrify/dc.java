@@ -38,7 +38,7 @@ final class dc {
             WordDictionary.field_e = stackIn_8_0;
             if (WordDictionary.field_e) {
               vk.a((byte) 115, FullscreenFocusCanvas.field_d[7]);
-              a.field_S.a(kk.a(param0 + 23327, PacketBuffer.field_j, bk.field_a), 1, (byte) -112, param1);
+              ContentTransitionDialog.field_S.a(kk.a(param0 + 23327, PacketBuffer.field_j, bk.field_a), 1, (byte) -112, param1);
               return;
             }
           }
@@ -58,7 +58,7 @@ final class dc {
             var13 = var16;
             var3 = var13;
             var4 = var3[(2147483647 & bc.field_b) % var16.length];
-            nc.field_t = nc.field_t + var4 * jk.field_B;
+            nc.field_t = nc.field_t + var4 * GuestPlayConfirmationForm.field_B;
             gh.field_l = gh.field_l + var4;
             vk.a((byte) 123, FullscreenFocusCanvas.field_d[1]);
             var5 = var2_int;

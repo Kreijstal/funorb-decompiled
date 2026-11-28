@@ -98,7 +98,7 @@ final class hh {
             }
             PcmOutputWorker.field_c = 0;
             TextHotspotBounds.field_q = -2147483648;
-            v.field_Z = -2147483648;
+            ResizableModalDialog.field_Z = -2147483648;
             ol.field_d = 2147483647;
             pi.field_e = 2147483647;
             return;
@@ -195,7 +195,7 @@ final class hh {
               }
               PcmOutputWorker.field_c = 0;
               TextHotspotBounds.field_q = -2147483648;
-              v.field_Z = -2147483648;
+              ResizableModalDialog.field_Z = -2147483648;
               ol.field_d = 2147483647;
               pi.field_e = 2147483647;
               return;
@@ -290,7 +290,7 @@ final class hh {
               }
               PcmOutputWorker.field_c = 0;
               TextHotspotBounds.field_q = -2147483648;
-              v.field_Z = -2147483648;
+              ResizableModalDialog.field_Z = -2147483648;
               ol.field_d = 2147483647;
               pi.field_e = 2147483647;
               return;
@@ -312,7 +312,7 @@ final class hh {
               qa.field_i.length >= param2) {
               PcmOutputWorker.field_c = 0;
               TextHotspotBounds.field_q = -2147483648;
-              v.field_Z = -2147483648;
+              ResizableModalDialog.field_Z = -2147483648;
               ol.field_d = 2147483647;
               pi.field_e = 2147483647;
               return;
@@ -322,7 +322,7 @@ final class hh {
         }
         PcmOutputWorker.field_c = 0;
         TextHotspotBounds.field_q = -2147483648;
-        v.field_Z = -2147483648;
+        ResizableModalDialog.field_Z = -2147483648;
         ol.field_d = 2147483647;
         pi.field_e = 2147483647;
     }

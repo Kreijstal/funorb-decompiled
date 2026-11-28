@@ -231,7 +231,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             stackIn_17_0 = vd.field_k;
             return stackIn_17_0;
           }
-          stackIn_15_0 = ui.field_K;
+          stackIn_15_0 = DialogMessagePane.field_K;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

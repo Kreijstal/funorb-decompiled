@@ -79,7 +79,7 @@ final class gl {
           if (param12 != 0) {
             field_b = (String) null;
           }
-          vc.a(-5094, param20, param10, param15, param2);
+          DialogMessagePane.a(-5094, param20, param10, param15, param2);
           Lexicominos.a(param7, param12 ^ 102, param18);
           tg.a(param6, param11, param16, param13, -109, param4);
           ph.a(param14, (byte) 126, param1, param9);

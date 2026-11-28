@@ -119,7 +119,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var3 > var6; var6++) {
             var7 = param0.charAt(var6);
-            if (c.a(param1 + 2, (char) var7)) {
+            if (StripedProgressWidget.a(param1 + 2, (char) var7)) {
               var8 = we.a(2, (char) var7);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);

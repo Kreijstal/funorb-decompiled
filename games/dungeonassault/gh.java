@@ -32,7 +32,7 @@ final class gh {
         try {
           cd.field_b = true;
           jd.field_l = param2 ? true : false;
-          a.field_n = new nk(lg.field_w, hc.field_f, param1, MenuScreen.field_t, jd.field_l);
+          a.field_n = new ProgressMessageDialog(lg.field_w, hc.field_f, param1, MenuScreen.field_t, jd.field_l);
           lg.field_w.showDialog(a.field_n, -1);
           if (param0 != 23321) {
             field_i = (ac[]) null;

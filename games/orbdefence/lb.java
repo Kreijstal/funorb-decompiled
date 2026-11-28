@@ -17,7 +17,7 @@ final class lb {
         if (PacketBuffer.field_k == null) {
           return;
         }
-        hl.a(PacketBuffer.field_k, 125);
+        ContentTransitionDialog.a(PacketBuffer.field_k, 125);
         PacketBuffer.field_k.a(wc.field_c, -128);
         PacketBuffer.field_k = null;
         if (!param0) {

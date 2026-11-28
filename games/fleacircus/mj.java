@@ -330,13 +330,13 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
         double var10Lifetime1;
         var19 = fleas.field_A ? 1 : 0;
         try {
-          jj.field_Z = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
+          ResizableModalDialog.field_Z = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
           var1_int = NameSuggestionsPanel.field_F.length;
           var2 = new int[var1_int];
           var3 = 0;
           do {
             if (var3 >= var1_int) {
-              var3 = jj.field_Z[9] >> 8;
+              var3 = ResizableModalDialog.field_Z[9] >> 8;
               break;
             }
             var4_ref_si = NameSuggestionsPanel.field_F[var3];
@@ -345,17 +345,17 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
             var5 = var4_ref_si.field_m + var4_ref_si.field_B >> 1;
             var6 = var4_ref_si.field_k + var4_ref_si.field_e >> 1;
             var7 = var4_ref_si.field_b + var4_ref_si.field_A >> 1;
-            var8 = jj.field_Z[9] >> 2;
-            var9 = jj.field_Z[10] >> 2;
-            var10_int = jj.field_Z[11] >> 2;
+            var8 = ResizableModalDialog.field_Z[9] >> 2;
+            var9 = ResizableModalDialog.field_Z[10] >> 2;
+            var10_int = ResizableModalDialog.field_Z[11] >> 2;
             var11 = var9 * nl.field_a[4] + (var8 * nl.field_a[3] + var10_int * nl.field_a[5]) >> 14;
             var12 = var8 * nl.field_a[6] + var9 * nl.field_a[7] + nl.field_a[8] * var10_int >> 14;
             var13 = nl.field_a[11] * var10_int + (var8 * nl.field_a[9] + var9 * nl.field_a[10]) >> 14;
             var2[var3] = var7 * var13 + (var11 * var5 + var6 * var12) >> 16;
             var3++;
           } while (var19 == 0);
-          var4 = jj.field_Z[10] >> 8;
-          var5 = jj.field_Z[11] >> 8;
+          var4 = ResizableModalDialog.field_Z[10] >> 8;
+          var5 = ResizableModalDialog.field_Z[11] >> 8;
           var6 = vg.field_z << 4;
           var7 = 0;
           var8 = jc.a(var6, 125) >> 8;
@@ -406,7 +406,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 nl.field_a[var18] = nl.field_a[var18] + gm.field_kb[var15][var18];
                 var18++;
               }
-              mj.a(nl.field_a, var17, false, jj.field_Z, false, true, 91);
+              mj.a(nl.field_a, var17, false, ResizableModalDialog.field_Z, false, true, 91);
               tc.a(var12, var9, var13, var14, param0 ^ -515994062, var8, var7, var17);
               var15++;
               continue scanLoop1;

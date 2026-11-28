@@ -671,8 +671,8 @@ final class ResourceArchive {
           if (null == qd.field_w) {
             qd.field_w = new ChessBoardRenderer();
           }
-          MusicPatchPcmStream.field_q = new wg(100, 100, 150, bj.field_bb[0], wh.field_c, bj.field_bb[1], dj.field_t, (RgbSprite) null);
-          hg.field_b = new wg(100, 100, 150, bj.field_bb[0], wh.field_c, bj.field_bb[1], dj.field_t, (RgbSprite) null);
+          MusicPatchPcmStream.field_q = new wg(100, 100, 150, ContentTransitionDialog.field_bb[0], wh.field_c, ContentTransitionDialog.field_bb[1], dj.field_t, (RgbSprite) null);
+          hg.field_b = new wg(100, 100, 150, ContentTransitionDialog.field_bb[0], wh.field_c, ContentTransitionDialog.field_bb[1], dj.field_t, (RgbSprite) null);
           MusicPatchPcmStream.field_q.field_y = 80;
           hg.field_b.field_y = 80;
           if (param0 != 640) {

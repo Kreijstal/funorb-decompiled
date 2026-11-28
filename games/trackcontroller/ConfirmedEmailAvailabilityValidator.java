@@ -58,7 +58,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (this.getValidationStatus(-108, param0) == ef.field_b) {
-            stackIn_5_0 = wd.field_H;
+            stackIn_5_0 = ResizableModalDialog.field_H;
             return stackIn_5_0;
           }
           if (param1 != 426) {

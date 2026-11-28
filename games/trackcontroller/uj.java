@@ -99,7 +99,7 @@ final class uj {
             dc.field_o = param0;
             ma.field_c = param2;
             kj.field_k = param11;
-            db.field_Z = param12;
+            ContentTransitionDialog.field_Z = param12;
             rg.field_b = param5;
             gf.field_o = param9;
             uk.field_b = param3;
@@ -107,7 +107,7 @@ final class uj {
               field_c = (rd) null;
             }
             oc.field_i = param13;
-            mk.field_c = param10;
+            FullscreenNoticeType.field_c = param10;
             sb.field_a = param1;
             if (null == gf.field_o.field_p) {
               return;

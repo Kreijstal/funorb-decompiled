@@ -47,7 +47,7 @@ final class DualLinkDeque implements Iterable {
         String var8Lifetime1;
         AccountNameAvailabilityValidator.field_n[BufferedSocket.field_b] = param5;
         fj.field_b[BufferedSocket.field_b] = BufferedSocket.field_b;
-        se.field_B[BufferedSocket.field_b] = param1;
+        GuestPlayConfirmationForm.field_B[BufferedSocket.field_b] = param1;
         if (param1 < ta.field_q) {
           af.field_k = param1;
           if (param0 >= 73) {

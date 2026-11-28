@@ -73,14 +73,14 @@ final class IterableNodeHashTable implements Iterable {
     }
 
     final static void a(int param0) {
-        nf.field_F = new AccountRegistrationPanel();
+        ResizableModalDialog.field_F = new AccountRegistrationPanel();
         if (param0 == 0) {
-          jh.field_C.c((byte) 121, nf.field_F);
+          StripedProgressWidget.field_C.replaceContent((byte) 121, ResizableModalDialog.field_F);
           return;
         }
         ResourceArchive var2 = (ResourceArchive) null;
         IterableNodeHashTable.a(54, (String) null, (String) null, (ud) null, (ResourceArchive) null);
-        jh.field_C.c((byte) 121, nf.field_F);
+        StripedProgressWidget.field_C.replaceContent((byte) 121, ResizableModalDialog.field_F);
     }
 
     private IterableNodeHashTable() throws Throwable {

@@ -9,21 +9,21 @@ final class jl {
         if (param0) {
           return true;
         }
-        if (sb.field_sb == -1) {
+        if (StandardContentDialog.field_sb == -1) {
           if (!tk.a(-121, 1)) {
             return false;
           }
-          sb.field_sb = tk.field_h.readUnsignedByte(-117);
+          StandardContentDialog.field_sb = tk.field_h.readUnsignedByte(-117);
           tk.field_h.position = 0;
         }
-        if (-2 == sb.field_sb) {
+        if (-2 == StandardContentDialog.field_sb) {
           if (!tk.a(60, 2)) {
             return false;
           }
-          sb.field_sb = tk.field_h.readUnsignedShort(674914976);
+          StandardContentDialog.field_sb = tk.field_h.readUnsignedShort(674914976);
           tk.field_h.position = 0;
         }
-        return tk.a(-121, sb.field_sb);
+        return tk.a(-121, StandardContentDialog.field_sb);
     }
 
     final static long a(CharSequence param0, boolean param1) {

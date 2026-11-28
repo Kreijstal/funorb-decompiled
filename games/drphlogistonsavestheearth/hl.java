@@ -41,7 +41,7 @@ final class hl {
         var10 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           var1_int = uk.field_e - hg.field_rb;
-          hg.field_rb = ma.field_wb - (var1_int >> 1);
+          hg.field_rb = ProgressMessageDialog.field_wb - (var1_int >> 1);
           DirectByteStorage.field_i = -(hi.field_a >> 1) + rd.field_B;
           uk.field_e = var1_int + hg.field_rb;
           var2 = DirectByteStorage.field_i;
@@ -50,7 +50,7 @@ final class hl {
             if (0 > var4) {
               var5 = bg.field_r;
             } else {
-              if (ma.field_tb.field_f != var4) {
+              if (ProgressMessageDialog.field_tb.field_f != var4) {
                 var5 = LabeledWidgetContainer.field_M;
               } else {
                 var5 = bb.field_g;
@@ -60,9 +60,9 @@ final class hl {
             stackIn_10_0 = 12286;
             stackIn_11_1 = !(var4 < 0);
             var7 = hj.a(stackIn_10_0, stackIn_11_1, var6);
-            var8 = -(var7 >> 1) + ma.field_wb;
+            var8 = -(var7 >> 1) + ProgressMessageDialog.field_wb;
             if (var4 >= 0) {
-              if (var4 == ma.field_tb.field_f) {
+              if (var4 == ProgressMessageDialog.field_tb.field_f) {
                 stackIn_15_0 = bc.field_c;
               } else {
                 stackIn_15_0 = hj.field_i;
@@ -75,7 +75,7 @@ final class hl {
               var2 = var2 + pd.field_b;
             }
             if (0 <= var4) {
-              GameClientShell.field_o.drawString(var6, var8, ae.field_kb + var2, var5, -1);
+              GameClientShell.field_o.drawString(var6, var8, FullscreenStatusDialog.field_kb + var2, var5, -1);
               var2 = var2 + (pa.field_a + (SpriteGeometry.field_F + pd.field_b));
             } else {
               ModalDialogHost.field_H.drawString(var6, var8, var2 + cd.field_b, var5, -1);

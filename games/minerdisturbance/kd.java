@@ -194,7 +194,7 @@ final class kd {
         try {
           var7 = param2.getParameter("currency");
           if (var7 != null &&
-            oi.a(-19804, (CharSequence) ((Object) var7))) {
+            StripedProgressWidget.a(-19804, (CharSequence) ((Object) var7))) {
             this.field_m = md.a((CharSequence) ((Object) var7), param3);
           } else {
             this.field_m = 2;
@@ -280,7 +280,7 @@ final class kd {
           AccountCreationResultPanel.field_xb.ensureIndexLoaded((byte) 95) &&
           AccountCreationResultPanel.field_xb.tryLoadGroupByName(false, "arialish12") &&
           AccountCreationResultPanel.field_xb.tryLoadGroupByName(false, "pump32")) {
-          ba.field_K = pb.a("members_expansion_screen", wk.field_c, "frame", (byte) -77);
+          RegistrationAgreementPane.field_K = pb.a("members_expansion_screen", wk.field_c, "frame", (byte) -77);
           ah.field_d = jn.a("arrow", -29553, "members_expansion_screen", wk.field_c);
           ql.field_m = rd.a("arialish12", -102, AccountCreationResultPanel.field_xb, wk.field_c, "");
           DualLinkNode.field_r = oc.a(AccountCreationResultPanel.field_xb, (byte) 125, "pump32", "", wk.field_c);
@@ -291,12 +291,12 @@ final class kd {
           AccountCreationResultPanel.field_xb = null;
         }
         this.a(param0 ^ -27);
-        if (null == ba.field_K) {
+        if (null == RegistrationAgreementPane.field_K) {
           return;
         }
         this.field_g.draw(376, 339);
         this.field_q.draw(9, 9);
-        ba.field_K.a(0, 0);
+        RegistrationAgreementPane.field_K.a(0, 0);
         if (null != ah.field_d) {
           ah.field_d.draw(9, 257);
           ah.field_d.drawHorizontalFlip(558, 257);
@@ -344,7 +344,7 @@ final class kd {
     }
 
     private final int a(int param0, int param1, int param2) {
-        if (ba.field_K == null) {
+        if (RegistrationAgreementPane.field_K == null) {
           return -1;
         }
         if (param0 >= 508 && param0 < 635 && param2 >= 299 &&
@@ -553,7 +553,7 @@ final class kd {
         }
         if (ah.field_d != null) {
           var4 = 0;
-          if (jk.field_ab != 0 &&
+          if (ContentTransitionDialog.field_ab != 0 &&
             257 < GameAppletShell.field_e &&
             GameAppletShell.field_e < 290) {
             if (wi.field_w > 9 &&

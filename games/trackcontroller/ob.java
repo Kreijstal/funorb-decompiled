@@ -95,7 +95,7 @@ final class ob extends DualLinkNode {
         String var3 = null;
         long var4 = 0L;
         try {
-          wd.field_R = true;
+          ResizableModalDialog.field_R = true;
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
           var4 = -1L;
@@ -169,10 +169,10 @@ final class ob extends DualLinkNode {
         }
         try {
           if (null == ib.field_e) {
-            ib.field_e = new rk(AlphaWidgetContainer.field_E, AsyncRequest.field_r);
+            ib.field_e = new ProgressDialog(AlphaWidgetContainer.field_E, AsyncRequest.field_r);
             AlphaWidgetContainer.field_E.showDialog((byte) -97, ib.field_e);
           }
-          ib.field_e.a(param3, (byte) 88, param0, param2);
+          ib.field_e.setProgress(param3, (byte) 88, param0, param2);
           SoftwareRasterizer.clearRaster();
           DiskArchiveRequest.a(true, 66);
         } catch (RuntimeException runtimeException) {
@@ -262,7 +262,7 @@ final class ob extends DualLinkNode {
           return false;
         }
         ka.field_a = true;
-        rk.field_eb = qg.correctedCurrentTimeMillis(false) + 15000L;
+        ProgressDialog.field_eb = qg.correctedCurrentTimeMillis(false) + 15000L;
         return LoginPanel.field_N == 11 ? true : false;
     }
 

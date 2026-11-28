@@ -14,12 +14,12 @@ final class cm {
         }
         if (nb.field_b == null) {
           RichTextLayout.field_s = new DisplayNameSelectionPanel();
-          bj.field_f.a(RichTextLayout.field_s, -24);
+          bj.field_f.replaceContent(RichTextLayout.field_s, -24);
           return;
         }
-        nb.field_b.h((byte) -126);
+        nb.field_b.closeDialog((byte) -126);
         RichTextLayout.field_s = new DisplayNameSelectionPanel();
-        bj.field_f.a(RichTextLayout.field_s, -24);
+        bj.field_f.replaceContent(RichTextLayout.field_s, -24);
     }
 
     public static void clearStaticReferences(byte param0) {

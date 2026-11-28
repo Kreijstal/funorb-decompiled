@@ -10,20 +10,20 @@ final class q {
     final static void a(boolean param0) {
         if (param0) {
           field_b = (RgbSprite[]) null;
-          if (ph.field_E != null) {
-            fq.a(-75, ph.field_E);
-            ph.field_E.exitFullscreen(ResultScene.field_a, (byte) -92);
-            ph.field_E = null;
+          if (RegistrationAgreementPane.field_E != null) {
+            fq.a(-75, RegistrationAgreementPane.field_E);
+            RegistrationAgreementPane.field_E.exitFullscreen(ResultScene.field_a, (byte) -92);
+            RegistrationAgreementPane.field_E = null;
             return;
           }
           return;
         }
-        if (ph.field_E == null) {
+        if (RegistrationAgreementPane.field_E == null) {
           return;
         }
-        fq.a(-75, ph.field_E);
-        ph.field_E.exitFullscreen(ResultScene.field_a, (byte) -92);
-        ph.field_E = null;
+        fq.a(-75, RegistrationAgreementPane.field_E);
+        RegistrationAgreementPane.field_E.exitFullscreen(ResultScene.field_a, (byte) -92);
+        RegistrationAgreementPane.field_E = null;
     }
 
     public static void clearStaticReferences(int param0) {

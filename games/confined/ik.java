@@ -252,7 +252,7 @@ final class ik extends AcceleratingProjectile {
     final void handleDestruction(int param0) {
         int var2 = 0;
         int var3 = Confined.field_J ? 1 : 0;
-        fl.a(this.a((byte) 108, ib.field_J, 1.5), 4);
+        fl.a(this.a((byte) 108, StripedProgressWidget.field_J, 1.5), 4);
         this.a(mg.field_b, false);
         for (var2 = 0; var2 < 5; var2++) {
           ri.a((IntrusiveNode) (this), param0 - 26402, new mm(this.field_A, (MovingTunnelEntity) (this), this.field_ab, mg.field_b[var2]));

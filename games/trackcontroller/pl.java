@@ -52,13 +52,13 @@ final class pl {
 
     final static void a(int param0) {
         if (null != kb.field_a) {
-          kb.field_a.t(20252);
+          kb.field_a.closeDialog(20252);
         }
         ne.field_d = new DisplayNameSelectionPanel();
         if (param0 != 0) {
           field_d = (String) null;
         }
-        GameApplet.field_g.b(ne.field_d, -113);
+        GameApplet.field_g.replaceContent(ne.field_d, -113);
     }
 
     final static void b(int param0) {

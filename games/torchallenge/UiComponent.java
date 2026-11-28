@@ -638,11 +638,11 @@ class UiComponent extends IntrusiveNode {
 
     final static void a(boolean param0, int param1, boolean param2) {
         if (param1 == 1) {
-          v.$cfr$intArgs$a$b1efba5c64a3(param2, -24, param0, (String) null);
+          ResizableModalDialog.$cfr$intArgs$a$b1efba5c64a3(param2, -24, param0, (String) null);
           return;
         }
         UiComponent.a((bk) null, -16, (byte) 127);
-        v.$cfr$intArgs$a$b1efba5c64a3(param2, -24, param0, (String) null);
+        ResizableModalDialog.$cfr$intArgs$a$b1efba5c64a3(param2, -24, param0, (String) null);
     }
 
     final static void a(int param0, int param1, h param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, BitmapFont param12, int param13, BitmapFont param14, int param15, int param16, h param17, int param18, h param19, int param20) {

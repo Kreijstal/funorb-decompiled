@@ -222,7 +222,7 @@ final class we implements WidgetRenderer {
             var28 = SoftwareRasterizer.field_f;
             var2 = SoftwareRasterizer.field_a;
             var3 = SoftwareRasterizer.field_d;
-            SoftwareRasterizer.saveClip(lj.field_D);
+            SoftwareRasterizer.saveClip(DialogMessagePane.field_D);
             var11 = new Sprite(RichTextWidget.field_S.field_p + 4, 4 + RichTextWidget.field_S.field_t);
             var11.bindAsRenderTarget();
             RichTextWidget.field_S.drawGrayModulated(2, 2, ea.field_o);
@@ -251,7 +251,7 @@ final class we implements WidgetRenderer {
             LabeledWidgetContainer.field_K.bindAsRenderTarget();
             IterableNodeHashTable.a(SoftwareRasterizer.field_d * 2 / 3, 0, 0, 64, SoftwareRasterizer.field_a, true);
             SoftwareRasterizer.setRasterBuffer(var28, var2, var3);
-            SoftwareRasterizer.restoreClip(lj.field_D);
+            SoftwareRasterizer.restoreClip(DialogMessagePane.field_D);
             sa.field_m = 231 + (-GameApplet.field_j.field_p + IsaacRandom.field_d.field_p) / 2;
             kc.field_Q = null;
             lk.field_c = (IsaacRandom.field_d.field_t - GameApplet.field_j.field_t) / 2 + 390;
@@ -269,7 +269,7 @@ final class we implements WidgetRenderer {
             var29 = SoftwareRasterizer.field_f;
             var2Lifetime1 = SoftwareRasterizer.field_a;
             var3Lifetime1 = SoftwareRasterizer.field_d;
-            SoftwareRasterizer.saveClip(lj.field_D);
+            SoftwareRasterizer.saveClip(DialogMessagePane.field_D);
             var14 = LoginPanel.a(tk.field_q, new String[]{eb.field_d[uf.field_q]}, -63);
             var5 = GzipDecompressor.field_a.maxLineWidth(var14, jj.field_db);
             var6Lifetime1 = GzipDecompressor.field_a.textHeight(var14, jj.field_db, GzipDecompressor.field_a.field_F + GzipDecompressor.field_a.field_s);
@@ -280,7 +280,7 @@ final class we implements WidgetRenderer {
             if (var7Lifetime1 < 0) {
               var9_int = -var7Lifetime1;
               ja.field_a.field_q = ja.field_a.field_q + 2 * var9_int;
-              gf.field_T = gf.field_T - var9_int;
+              ContentTransitionDialog.field_T = ContentTransitionDialog.field_T - var9_int;
               var7Lifetime1 = var7Lifetime1 + var9_int;
               ji.field_a = ji.field_a + var9_int;
               var5 = var5 + var9_int * 2;
@@ -292,7 +292,7 @@ final class we implements WidgetRenderer {
               var9_intLifetime1 = -ja.field_a.field_q + (var5 + var7Lifetime1);
               ji.field_a = ji.field_a + var9_intLifetime1;
               var5 = var5 + 2 * var9_intLifetime1;
-              gf.field_T = gf.field_T - var9_intLifetime1;
+              ContentTransitionDialog.field_T = ContentTransitionDialog.field_T - var9_intLifetime1;
               ja.field_a.field_s = ja.field_a.field_s + var9_intLifetime1;
               ja.field_a.field_q = ja.field_a.field_q + var9_intLifetime1 * 2;
               var7Lifetime1 = var7Lifetime1 + var9_intLifetime1;
@@ -324,18 +324,18 @@ final class we implements WidgetRenderer {
             var9.draw(0, 0);
             rh.field_g = new Sprite(640, 480);
             rh.field_g.bindAsRenderTarget();
-            ja.field_a.drawRotated((ja.field_a.field_q >> 1) + gf.field_T, LabeledWidgetContainer.field_N + (ja.field_a.field_r >> 1), aj.field_p, 4096);
+            ja.field_a.drawRotated((ja.field_a.field_q >> 1) + ContentTransitionDialog.field_T, LabeledWidgetContainer.field_N + (ja.field_a.field_r >> 1), aj.field_p, 4096);
             ja.field_a = null;
             rh.field_g.trimTransparentBorders();
             SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime1, var3Lifetime1);
-            SoftwareRasterizer.restoreClip(lj.field_D);
+            SoftwareRasterizer.restoreClip(DialogMessagePane.field_D);
           }
           if (null != ProxySocketConnector.field_n &&
             null != ArchiveRequest.field_n) {
             var30 = SoftwareRasterizer.field_f;
             var2Lifetime2 = SoftwareRasterizer.field_a;
             var3Lifetime2 = SoftwareRasterizer.field_d;
-            SoftwareRasterizer.saveClip(lj.field_D);
+            SoftwareRasterizer.saveClip(DialogMessagePane.field_D);
             var16 = new Sprite(412, 43);
             var17 = LoginPanel.a(wb.field_d, new String[]{ProxySocketConnector.field_n}, -63);
             ProxySocketConnector.field_n = null;
@@ -345,14 +345,14 @@ final class we implements WidgetRenderer {
             va.field_g.bindAsRenderTarget();
             var16.draw(199 - va.field_g.field_s, -va.field_g.field_n + 83);
             SoftwareRasterizer.setRasterBuffer(var30, var2Lifetime2, var3Lifetime2);
-            SoftwareRasterizer.restoreClip(lj.field_D);
+            SoftwareRasterizer.restoreClip(DialogMessagePane.field_D);
           }
           if (EmailFormatValidator.field_j != null &&
             null != ArchiveRequest.field_n) {
             var31 = SoftwareRasterizer.field_f;
             var2Lifetime3 = SoftwareRasterizer.field_a;
             var3Lifetime3 = SoftwareRasterizer.field_d;
-            SoftwareRasterizer.saveClip(lj.field_D);
+            SoftwareRasterizer.saveClip(DialogMessagePane.field_D);
             var4 = ArchiveRequest.field_n.maxLineWidth(EmailFormatValidator.field_p, 640) + 6;
             var5Lifetime1 = EmailFormatValidator.field_j.field_q + var4 + 20;
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
@@ -363,10 +363,10 @@ final class we implements WidgetRenderer {
             var8Lifetime1 = -va.field_g.field_n + 155 - (-ArchiveRequest.field_n.field_F - 3 + EmailFormatValidator.field_j.field_r - ArchiveRequest.field_n.field_s) / 2;
             EmailFormatValidator.field_j.draw(var6Lifetime2 - va.field_g.field_s, var8Lifetime1);
             SoftwareRasterizer.setRasterBuffer(var31, var2Lifetime3, var3Lifetime3);
-            SoftwareRasterizer.restoreClip(lj.field_D);
+            SoftwareRasterizer.restoreClip(DialogMessagePane.field_D);
             EmailFormatValidator.field_j = null;
           }
-          SoftwareRasterizer.saveClip(lj.field_D);
+          SoftwareRasterizer.saveClip(DialogMessagePane.field_D);
           SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, Asteroid.field_f, id.field_a);
           SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, Asteroid.field_f, id.field_a);
           if (of.field_f != null) {

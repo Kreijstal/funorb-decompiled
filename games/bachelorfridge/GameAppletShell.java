@@ -193,13 +193,13 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 pr.a((byte) -21);
                 this.createCanvas(50);
-                hga.field_U = GasCloudEvent.a(dda.field_j, MouseInputHandler.field_b, (java.awt.Component) ((Object) TBomberAnimation.field_y), 29548);
+                ProgressDialog.field_U = GasCloudEvent.a(dda.field_j, MouseInputHandler.field_b, (java.awt.Component) ((Object) TBomberAnimation.field_y), 29548);
                 this.initialize((byte) 91);
                 ena.field_m = us.a(-4127);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (0L != am.field_K) {
-                    stackIn_98_0 = compareLongs(am.field_K, f.correctedCurrentTimeMillis((byte) 73));
+                  if (0L != ResizableModalDialog.field_K) {
+                    stackIn_98_0 = compareLongs(ResizableModalDialog.field_K, f.correctedCurrentTimeMillis((byte) 73));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_98_0 <= 0)) {
@@ -321,7 +321,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           return;
         }
         try {
-          am.field_K = f.correctedCurrentTimeMillis((byte) 73) + 4000L;
+          ResizableModalDialog.field_K = f.correctedCurrentTimeMillis((byte) 73) + 4000L;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ck.stop()");
         }
@@ -703,7 +703,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           return;
         }
         try {
-          am.field_K = f.correctedCurrentTimeMillis((byte) 73);
+          ResizableModalDialog.field_K = f.correctedCurrentTimeMillis((byte) 73);
           DisplayNameSelectionPanel.sleepMillis(false, 5000L);
           BufferedCacheFile.field_d = null;
           this.shutdown(0, false);
@@ -718,7 +718,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           return;
         }
         try {
-          am.field_K = 0L;
+          ResizableModalDialog.field_K = 0L;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ck.start()");
         }

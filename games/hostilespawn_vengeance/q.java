@@ -82,7 +82,7 @@ final class q {
           return (String) null;
         }
         if (DropTargetWidgetContainer.field_I == ti.field_b) {
-          return qi.field_G;
+          return DialogMessagePane.field_G;
         }
         return SingleChildWidgetContainer.field_y;
     }

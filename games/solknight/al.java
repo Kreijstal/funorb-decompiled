@@ -77,7 +77,7 @@ final class al extends IntrusiveNode {
 
     final static void a(PacketBuffer param0, PacketBuffer param1, byte param2, java.math.BigInteger param3, java.math.BigInteger param4) {
         try {
-          ci.a(param0.payload, param0.position, 8, param3, 0, param4, param1);
+          ProgressMessageDialog.a(param0.payload, param0.position, 8, param3, 0, param4, param1);
           if (param2 <= 71) {
             java.math.BigInteger var6 = (java.math.BigInteger) null;
             al.a((PacketBuffer) null, (PacketBuffer) null, (byte) 9, (java.math.BigInteger) null, (java.math.BigInteger) null);

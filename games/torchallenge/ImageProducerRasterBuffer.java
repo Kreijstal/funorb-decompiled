@@ -29,7 +29,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = v.a(param5, param4, param0, 80, param1, param3);
+          var6 = ResizableModalDialog.a(param5, param4, param0, 80, param1, param3);
           if (null == var6) {
             stackIn_2_0 = null;
             return (FullscreenFocusCanvas) (stackIn_2_0);
@@ -98,7 +98,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           AlphaWidgetContainer.field_G[PcmOutputWorker.field_c] = PcmOutputWorker.field_c;
           LabeledWidgetContainer.field_Q[PcmOutputWorker.field_c] = param3;
           if (param3 > TextHotspotBounds.field_q) {
-            v.field_Z = param3;
+            ResizableModalDialog.field_Z = param3;
           }
           if (param3 < ol.field_d) {
             pi.field_e = param3;
@@ -121,8 +121,8 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             pi.field_e = var7;
           }
           PcmOutputWorker.field_c = PcmOutputWorker.field_c + 1;
-          if (v.field_Z < var7) {
-            v.field_Z = var7;
+          if (ResizableModalDialog.field_Z < var7) {
+            ResizableModalDialog.field_Z = var7;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -248,7 +248,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             }
             var1_int = stackIn_8_0;
             eb.field_n = false;
-            n.field_kb = (int[][][]) null;
+            ContentTransitionDialog.field_kb = (int[][][]) null;
             vk.field_i = null;
             hk.field_b = false;
             var3 = 124 % ((param0 - 72) / 47);
@@ -295,7 +295,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               PacketBuffer.c(-7668);
             }
             if (null == pa.field_z) {
-              jf.m(96);
+              StandardContentDialog.m(96);
             }
             if (ResourceArchive.field_j == null) {
               hl.a((byte) 50);
@@ -345,7 +345,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
                 PacketBuffer.c(-7668);
               }
               if (pa.field_z == null) {
-                jf.m(106);
+                StandardContentDialog.m(106);
               }
               if (ResourceArchive.field_j == null) {
                 hl.a((byte) 50);

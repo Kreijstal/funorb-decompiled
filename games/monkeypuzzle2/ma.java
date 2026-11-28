@@ -3,7 +3,7 @@
  */
 final class ma {
     static int[] field_c;
-    static kg field_b;
+    static FullscreenNoticeType field_b;
     static ib field_d;
     static String[] field_a;
 
@@ -128,14 +128,14 @@ final class ma {
             var20 = (var16 << param4) / param6;
             var21 = re.field_d[var20] * param10 >> 15;
             var22 = var18 + (var19 * var21 + 131072 >> 18);
-            if (var22 > pc.field_R - 1) {
-              var22 = pc.field_R - 1;
+            if (var22 > ContentTransitionDialog.field_R - 1) {
+              var22 = ContentTransitionDialog.field_R - 1;
             }
             var23 = param0 + (var14 * var21 + 131072 >> 18);
             if (var23 < 0) {
               var23 = 0;
             }
-            var24 = SoftwareRasterizer.field_i[var23 * pc.field_R + var22];
+            var24 = SoftwareRasterizer.field_i[var23 * ContentTransitionDialog.field_R + var22];
             var25 = 64;
             if (var25 < 0) {
               var25 = -var25;
@@ -172,7 +172,7 @@ final class ma {
             if (var23Lifetime1 < 0) {
               var23Lifetime1 = 0;
             }
-            var24Lifetime1 = SoftwareRasterizer.field_i[var23Lifetime1 * pc.field_R + var22Lifetime1];
+            var24Lifetime1 = SoftwareRasterizer.field_i[var23Lifetime1 * ContentTransitionDialog.field_R + var22Lifetime1];
             var25Lifetime1 = 64;
             if (var25Lifetime1 < 0) {
               var25Lifetime1 = -var25Lifetime1;
@@ -270,8 +270,8 @@ final class ma {
         if (var5 < 0) {
           var5 = 0;
         }
-        if (var7 > pc.field_R) {
-          var7 = pc.field_R;
+        if (var7 > ContentTransitionDialog.field_R) {
+          var7 = ContentTransitionDialog.field_R;
         }
         if (var8 < 0) {
           var8 = 0;
@@ -282,8 +282,8 @@ final class ma {
         if (var6 < 0) {
           var6 = 0;
         }
-        if (var6 > pc.field_R) {
-          var6 = pc.field_R;
+        if (var6 > ContentTransitionDialog.field_R) {
+          var6 = ContentTransitionDialog.field_R;
         }
         if (var9 < 0) {
           var9 = 0;
@@ -315,22 +315,22 @@ final class ma {
           var23--;
           var24 = var24 + 1 >>> 1;
         }
-        int var25 = var9 * pc.field_R + var6;
+        int var25 = var9 * ContentTransitionDialog.field_R + var6;
         int var26 = var11 + var17;
         int var27 = var20;
         for (var28 = var9; var28 < var10; var28++) {
           ma.b(var28, var26, var14, var16, var23, var4, var24, var5, var6, var7, param3, var25, param0, param1);
           var26 = var26 + var27;
           var27 = var27 + var22;
-          var25 = var25 + pc.field_R;
+          var25 = var25 + ContentTransitionDialog.field_R;
         }
-        var25 = var9 * pc.field_R + var6;
+        var25 = var9 * ContentTransitionDialog.field_R + var6;
         var26 = var11 + var17;
         var27 = var20;
         for (var28Lifetime1 = var9 - 1; var28Lifetime1 >= var8; var28Lifetime1--) {
           var27 = var27 - var22;
           var26 = var26 - var27;
-          var25 = var25 - pc.field_R;
+          var25 = var25 - ContentTransitionDialog.field_R;
           ma.a(var28Lifetime1, var26, var14, var16, var23, var4, var24, var5, var6, var7, param3, var25, param0, param1);
         }
     }
@@ -392,14 +392,14 @@ final class ma {
             var20 = (var16 << param4) / param6;
             var21 = re.field_d[var20] * param10 >> 15;
             var22 = var18 + (var19 * var21 + 131072 >> 18);
-            if (var22 > pc.field_R - 1) {
-              var22 = pc.field_R - 1;
+            if (var22 > ContentTransitionDialog.field_R - 1) {
+              var22 = ContentTransitionDialog.field_R - 1;
             }
             var23 = param0 + (var14 * var21 + 131072 >> 18);
             if (var23 > SoftwareRasterizer.field_g - 1) {
               var23 = SoftwareRasterizer.field_g - 1;
             }
-            var24 = SoftwareRasterizer.field_i[var23 * pc.field_R + var22];
+            var24 = SoftwareRasterizer.field_i[var23 * ContentTransitionDialog.field_R + var22];
             var25 = 64;
             if (var25 < 0) {
               throw new Error();
@@ -436,7 +436,7 @@ final class ma {
             if (var23Lifetime1 > SoftwareRasterizer.field_g - 1) {
               var23Lifetime1 = SoftwareRasterizer.field_g - 1;
             }
-            var24Lifetime1 = SoftwareRasterizer.field_i[var23Lifetime1 * pc.field_R + var22Lifetime1];
+            var24Lifetime1 = SoftwareRasterizer.field_i[var23Lifetime1 * ContentTransitionDialog.field_R + var22Lifetime1];
             var25Lifetime1 = 64;
             if (var25Lifetime1 < 0) {
               var25Lifetime1 = -var25Lifetime1;
@@ -503,7 +503,7 @@ final class ma {
 
     static {
         field_c = new int[12];
-        field_b = new kg();
+        field_b = new FullscreenNoticeType();
         field_d = new ib();
     }
 

@@ -29,7 +29,7 @@ final class lfa extends k {
         int var5;
         boolean stackIn_6_0 = false;
         var4 = this.field_n * (param1 - param2) >> 12;
-        var5 = am.field_R[(1047373 & var4 * 255) >> 12];
+        var5 = ResizableModalDialog.field_R[(1047373 & var4 * 255) >> 12];
         var5 = (var5 << 12) / this.field_n;
         if (param0 != 0) {
           return true;
@@ -463,7 +463,7 @@ final class lfa extends k {
         PacketBuffer var6;
         boolean stackIn_6_0 = false;
         var4 = this.field_n * (param0 + param1) >> 12;
-        var5 = am.field_R[255 & var4 * 255 >> 12];
+        var5 = ResizableModalDialog.field_R[255 & var4 * 255 >> 12];
         var5 = (var5 << 12) / this.field_n;
         if (param2 > -29) {
           var6 = (PacketBuffer) null;

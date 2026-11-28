@@ -138,11 +138,11 @@ final class ProxyAuthenticationRequiredException extends IOException {
         pa.field_e = true;
         IsaacRandom.a(true, -1402584374);
         if (param0 == -6144) {
-          mh.field_U = 0;
+          ContentTransitionDialog.field_U = 0;
           return;
         }
         field_a = false;
-        mh.field_U = 0;
+        ContentTransitionDialog.field_U = 0;
     }
 
     static {

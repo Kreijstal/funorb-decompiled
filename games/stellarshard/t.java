@@ -19,7 +19,7 @@ final class t {
         if (!param0) {
           DefaultTextWidgetRenderer.a(true);
           if (EmailFormatValidator.e((byte) 58)) {
-            pg.field_fb.f(1, 950);
+            StandardContentDialog.field_fb.f(1, 950);
             ue.a((byte) -96, 0);
           }
           IntrusiveDeque.c(-2290);
@@ -28,7 +28,7 @@ final class t {
         field_d = -85L;
         DefaultTextWidgetRenderer.a(!param0 ? true : false);
         if (EmailFormatValidator.e((byte) 58)) {
-          pg.field_fb.f(1, 950);
+          StandardContentDialog.field_fb.f(1, 950);
           ue.a((byte) -96, 0);
         }
         IntrusiveDeque.c(-2290);

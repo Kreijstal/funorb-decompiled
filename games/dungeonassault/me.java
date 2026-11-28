@@ -44,11 +44,11 @@ final class me {
         AccountCreationResultPanel.field_Sb[param1] = param0;
         al.field_o.setBit(param1, -128);
         if (param2 > 65) {
-          hf.field_ob.addFirst(new a(param1), false);
+          ContentTransitionDialog.field_ob.addFirst(new a(param1), false);
           return;
         }
         field_a = (String) null;
-        hf.field_ob.addFirst(new a(param1), false);
+        ContentTransitionDialog.field_ob.addFirst(new a(param1), false);
     }
 
     final boolean b(int param0) {

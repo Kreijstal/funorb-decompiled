@@ -435,9 +435,9 @@ class DequeWidgetContainer extends UiWidget implements WidgetContainerMarker {
               return stackIn_62_0;
             }
             var9Lifetime3 = TextFieldValidator.field_o;
-            TextFieldValidator.field_o = ia.field_c;
+            TextFieldValidator.field_o = FullscreenNoticeType.field_c;
             dk.field_b = true;
-            ia.field_c = var9Lifetime3;
+            FullscreenNoticeType.field_c = var9Lifetime3;
           }
           stackIn_64_0 = -1;
           return stackIn_64_0;

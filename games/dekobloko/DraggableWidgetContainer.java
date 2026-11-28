@@ -53,7 +53,7 @@ final class DraggableWidgetContainer extends ComponentDecorator {
             return true;
           }
           this.integerState0742 = -integerArgument6 + (integerArgument2 - this.integerState0110);
-          UiComponentPart017.uiComponentPart029State0001 = this;
+          GuestPlayConfirmationForm.uiComponentPart029State0001 = this;
           this.integerState0743 = integerArgument1 - this.integerState0104 - integerArgument5;
           return true;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
@@ -88,10 +88,10 @@ final class DraggableWidgetContainer extends ComponentDecorator {
         if (integerArgument1 != -1) {
           DraggableWidgetContainer.computeBoolean1486(107);
           if (!SceneWidgetPart008.booleanState0123) {
-            return UiComponentPart023.computeBoolean1242(integerArgument1 - 30145) ? true : false;
+            return StandardContentDialog.computeBoolean1242(integerArgument1 - 30145) ? true : false;
           }
           if (!MixedSupport105.booleanState0153) {
-            return UiComponentPart023.computeBoolean1242(integerArgument1 - 30145) ? true : false;
+            return StandardContentDialog.computeBoolean1242(integerArgument1 - 30145) ? true : false;
           }
           return true;
         }
@@ -99,9 +99,9 @@ final class DraggableWidgetContainer extends ComponentDecorator {
           if (MixedSupport105.booleanState0153) {
             return true;
           }
-          return UiComponentPart023.computeBoolean1242(integerArgument1 - 30145) ? true : false;
+          return StandardContentDialog.computeBoolean1242(integerArgument1 - 30145) ? true : false;
         }
-        if (!UiComponentPart023.computeBoolean1242(integerArgument1 - 30145)) {
+        if (!StandardContentDialog.computeBoolean1242(integerArgument1 - 30145)) {
           return false;
         }
         return true;

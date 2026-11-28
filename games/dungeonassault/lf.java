@@ -190,7 +190,7 @@ final class lf extends kl {
               return;
             }
             if (4 != var2) {
-              sm.a((Throwable) null, 1, "F1: " + sj.l(param0 + 69));
+              sm.a((Throwable) null, 1, "F1: " + ResizableModalDialog.l(param0 + 69));
               tl.a(param0 ^ -61);
               return;
             }
@@ -198,7 +198,7 @@ final class lf extends kl {
             var3 = var1.readString(param0 - 247);
             gm.field_b = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(true);
-            r.a((byte) -112, var4);
+            FullscreenNoticeType.a((byte) -112, var4);
             return;
           }
           if (fk.field_v == null) {

@@ -54,7 +54,7 @@ final class pg {
             pg.a(103);
           }
           if (PacketBuffer.e((byte) 104)) {
-            var8.j((byte) -52);
+            var8.showAccountCreationConnectionFailure((byte) -52);
             return true;
           }
           je.field_a = param2;
@@ -63,7 +63,7 @@ final class pg {
           fh.field_B = qg.field_g;
           ej.field_b = param5;
           ij.field_a = param6;
-          eb.field_z = param4;
+          RegistrationAgreementPane.field_z = param4;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

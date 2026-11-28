@@ -74,7 +74,7 @@ final class qh extends DefaultTextWidgetRenderer {
             }
           }
           this.field_v.a(param1, param4, param3, (byte) 100, this);
-          ib.b(false);
+          StripedProgressWidget.b(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

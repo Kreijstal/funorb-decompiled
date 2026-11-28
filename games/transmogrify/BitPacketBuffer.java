@@ -118,7 +118,7 @@ final class BitPacketBuffer extends PacketBuffer {
           for (var6 = var2_int; var3 > var6; var6++) {
             var7 = param1.charAt(var6);
             if (ResourceArchive.isAllowedNameCharacter((char) var7, 0)) {
-              var8 = jk.a((char) var7, false);
+              var8 = GuestPlayConfirmationForm.a((char) var7, false);
               if (0 != var8) {
                 discarded$0 = var5.append((char) var8);
               }

@@ -82,14 +82,14 @@ final class rp {
 
     final static void a(byte param0) {
         if (null != a.field_n) {
-          a.field_n.j((byte) 73);
+          a.field_n.closeDialog((byte) 73);
         }
         if (param0 > -33) {
           String var2 = (String) null;
           rp.a((String) null, -9);
         }
         CombatState.field_c = new DisplayNameSelectionPanel();
-        ta.field_a.b(1, CombatState.field_c);
+        ta.field_a.replaceContent(1, CombatState.field_c);
     }
 
     final static boolean a(int param0, int param1) {

@@ -26,10 +26,10 @@ final class wea extends AnimationNode {
           if (!fi.field_n.tryLoadGroupByName("commonui", 20637)) {
             return 60;
           }
-          if (!em.field_T.ensureIndexLoaded(0)) {
+          if (!FullscreenStatusDialog.field_T.ensureIndexLoaded(0)) {
             return 70;
           }
-          if (em.field_T.tryLoadAllGroups((byte) 114)) {
+          if (FullscreenStatusDialog.field_T.tryLoadAllGroups((byte) 114)) {
             return 100;
           }
           return 80;
@@ -57,10 +57,10 @@ final class wea extends AnimationNode {
         if (!fi.field_n.tryLoadGroupByName("commonui", 20637)) {
           return 80;
         }
-        if (!em.field_T.ensureIndexLoaded(0)) {
+        if (!FullscreenStatusDialog.field_T.ensureIndexLoaded(0)) {
           return 82;
         }
-        if (!em.field_T.tryLoadAllGroups((byte) 120)) {
+        if (!FullscreenStatusDialog.field_T.tryLoadAllGroups((byte) 120)) {
           return 86;
         }
         return 100;

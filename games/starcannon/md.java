@@ -28,7 +28,7 @@ final class md {
         var8 = StarCannon.field_A;
         try {
           if (param1 == null) {
-            stackIn_3_0 = vj.field_W;
+            stackIn_3_0 = FullscreenStatusDialog.field_W;
             return stackIn_3_0;
           }
           var3_int = param1.length();
@@ -66,10 +66,10 @@ final class md {
               stackIn_20_0 = v.field_c;
               return stackIn_20_0;
             }
-            stackIn_15_0 = vj.field_W;
+            stackIn_15_0 = FullscreenStatusDialog.field_W;
             return stackIn_15_0;
           }
-          stackIn_8_0 = vj.field_W;
+          stackIn_8_0 = FullscreenStatusDialog.field_W;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

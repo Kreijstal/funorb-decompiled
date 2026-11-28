@@ -383,10 +383,10 @@ abstract class bi extends GameApplet {
             this.field_q = false;
             PacketBuffer.a(-1);
             cf.a((byte) 108);
-            pc.a((byte) -46, 2, IterableNodeHashTable.field_b);
+            ContentTransitionDialog.a((byte) -46, 2, IterableNodeHashTable.field_b);
             ClientException.a(0);
             qj.field_J = true;
-            ha.field_ab = 15000L + pf.correctedCurrentTimeMillis(0);
+            ProgressMessageDialog.field_ab = 15000L + pf.correctedCurrentTimeMillis(0);
           }
         }
         if (TextHotspotBounds.field_m == -1 ||
@@ -402,7 +402,7 @@ abstract class bi extends GameApplet {
           }
           if (TextHotspotBounds.field_m != -1 &&
             TextHotspotBounds.field_m != 0) {
-            ha.field_ab = pf.correctedCurrentTimeMillis(param0 - 99) + 15000L;
+            ProgressMessageDialog.field_ab = pf.correctedCurrentTimeMillis(param0 - 99) + 15000L;
           }
         }
         if (TextHotspotBounds.field_m != -1 &&
@@ -429,20 +429,20 @@ abstract class bi extends GameApplet {
             if (10 <= k.field_g) {
               cf.a((byte) 92);
               if (TextHotspotBounds.field_m == 3) {
-                pc.a((byte) -46, 256, LoginPanel.field_A);
+                ContentTransitionDialog.a((byte) -46, 256, LoginPanel.field_A);
               } else {
                 if (TextHotspotBounds.field_m != 4) {
                   if (TextHotspotBounds.field_m != 2) {
                     if (5 != TextHotspotBounds.field_m) {
-                      pc.a((byte) -46, 256, me.field_h);
+                      ContentTransitionDialog.a((byte) -46, 256, me.field_h);
                     } else {
-                      pc.a((byte) -46, 5, sc.field_b);
+                      ContentTransitionDialog.a((byte) -46, 5, sc.field_b);
                     }
                   } else {
-                    pc.a((byte) -46, 256, vi.field_a);
+                    ContentTransitionDialog.a((byte) -46, 256, vi.field_a);
                   }
                 } else {
-                  pc.a((byte) -46, 256, ProxySocketConnector.field_c);
+                  ContentTransitionDialog.a((byte) -46, 256, ProxySocketConnector.field_c);
                 }
               }
               qj.field_J = true;
@@ -452,7 +452,7 @@ abstract class bi extends GameApplet {
         if ((TextHotspotBounds.field_m != -1 &&
           0 != TextHotspotBounds.field_m ||
           ld.b(true)) &&
-          pf.correctedCurrentTimeMillis(param0 - 99) >= ha.field_ab) {
+          pf.correctedCurrentTimeMillis(param0 - 99) >= ProgressMessageDialog.field_ab) {
           qj.field_J = false;
           if (-1 != TextHotspotBounds.field_m &&
             TextHotspotBounds.field_m != 0) {
@@ -505,11 +505,11 @@ abstract class bi extends GameApplet {
           TextLineMetrics.field_d = j.field_h;
           lc.a(fj.field_B, mb.field_c, DebouncedFieldValidator.field_a, param0 + 3249773, ii.field_m);
           if (sd.field_d ||
-            kg.field_d != null) {
+            FullscreenNoticeType.field_d != null) {
             stackIn_110_0 = !(sd.field_d);
             stackIn_112_1 = 98;
             stackIn_113_2 = !(sd.field_d);
-            bd.$cfr$intArgs$a$b1efba5c64a3(stackIn_110_0, stackIn_112_1, stackIn_113_2, kg.field_d);
+            bd.$cfr$intArgs$a$b1efba5c64a3(stackIn_110_0, stackIn_112_1, stackIn_113_2, FullscreenNoticeType.field_d);
           }
           if (la.field_o) {
             il.a(true);
@@ -550,10 +550,10 @@ abstract class bi extends GameApplet {
         }
         if (13 == mc.field_a) {
           var3Lifetime2 = 1;
-          if (lb.field_C != null) {
-            stackIn_143_0 = (!lb.field_C.a(28296)) ? 0 : 1;
+          if (GuestPlayConfirmationForm.field_C != null) {
+            stackIn_143_0 = (!GuestPlayConfirmationForm.field_C.a(28296)) ? 0 : 1;
             var3Lifetime2 = stackIn_143_0;
-            ResourceArchive.setLoadingStatus(lb.field_C.field_g, -24119, lb.field_C.field_b);
+            ResourceArchive.setLoadingStatus(GuestPlayConfirmationForm.field_C.field_g, -24119, GuestPlayConfirmationForm.field_C.field_b);
           }
           if (var3Lifetime2 != 0) {
             mc.field_a = 20;
@@ -735,7 +735,7 @@ abstract class bi extends GameApplet {
         if (param0 != 8213) {
           this.field_p = -31;
         }
-        int var2 = ResourceArchive.pollLoginHandshake(this.field_n, 650, this.field_y, true, mk.e(0), lb.d((byte) -56));
+        int var2 = ResourceArchive.pollLoginHandshake(this.field_n, 650, this.field_y, true, mk.e(0), GuestPlayConfirmationForm.d((byte) -56));
         if (var2 == -1) {
           return -1;
         }
@@ -751,9 +751,9 @@ abstract class bi extends GameApplet {
           this.a((byte) 77, "reconnect");
         }
         cf.a((byte) 3);
-        pc.a((byte) -46, var2, ImageProducerRasterBuffer.field_n);
+        ContentTransitionDialog.a((byte) -46, var2, ImageProducerRasterBuffer.field_n);
         qj.field_J = true;
-        ha.field_ab = pf.correctedCurrentTimeMillis(0) + 15000L;
+        ProgressMessageDialog.field_ab = pf.correctedCurrentTimeMillis(0) + 15000L;
         return var2;
     }
 
@@ -806,7 +806,7 @@ abstract class bi extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = nj.a(ci.a((byte) 78), gh.a(12035), mk.e(0), lb.d((byte) -56), true, this.field_n, BoundedRandomAccessFile.a((byte) -69));
+            var5_intLifetime1 = nj.a(ci.a((byte) 78), gh.a(12035), mk.e(0), GuestPlayConfirmationForm.d((byte) -56), true, this.field_n, BoundedRandomAccessFile.a((byte) -69));
             if (var5_intLifetime1 != -1) {
               fj.a(NameSuggestionsPanel.field_E, ImageProducerRasterBuffer.field_n, -27967, var5_intLifetime1);
               NameSuggestionsPanel.field_E = null;
@@ -820,15 +820,15 @@ abstract class bi extends GameApplet {
               PcmOutputWorker.a(95);
             }
             if (!param0) {
-              var5_intLifetime2 = ResourceArchive.pollLoginHandshake(this.field_n, 650, this.field_y, false, mk.e(0), lb.d((byte) -56));
+              var5_intLifetime2 = ResourceArchive.pollLoginHandshake(this.field_n, 650, this.field_y, false, mk.e(0), GuestPlayConfirmationForm.d((byte) -56));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
-                  pc.a((byte) -46, var5_intLifetime2, ImageProducerRasterBuffer.field_n);
+                  ContentTransitionDialog.a((byte) -46, var5_intLifetime2, ImageProducerRasterBuffer.field_n);
                   ImageProducerRasterBuffer.field_n = null;
                 } else {
                   MouseWheelInput.field_b = ProxySocketConnector.field_f;
                   db.a(false);
-                  ha.field_db = false;
+                  ProgressMessageDialog.field_db = false;
                   k.field_g = 10;
                 }
               }
@@ -840,7 +840,7 @@ abstract class bi extends GameApplet {
             if (mb.field_c) {
               ResourceArchive.clearSessionAndReloadPage(ii.a(!param1), true);
             } else {
-              ha.field_db = true;
+              ProgressMessageDialog.field_db = true;
               k.field_g = 10;
             }
           }

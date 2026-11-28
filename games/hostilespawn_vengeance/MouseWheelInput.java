@@ -72,7 +72,7 @@ abstract class MouseWheelInput {
         if (im.field_e != null) {
           im.field_e.snapAndPruneDialogs(-115);
           if (null != hj.field_t) {
-            hj.field_t.f((byte) -79);
+            hj.field_t.freezeNormalProgressAnimation((byte) -79);
           }
           if (param0 == -43) {
             ch.a((byte) 115);
@@ -81,7 +81,7 @@ abstract class MouseWheelInput {
           return;
         }
         if (null != hj.field_t) {
-          hj.field_t.f((byte) -79);
+          hj.field_t.freezeNormalProgressAnimation((byte) -79);
         }
         if (param0 == -43) {
           ch.a((byte) 115);

@@ -145,26 +145,26 @@ final class AccountServiceResult {
         var5 = TrackController.field_F ? 1 : 0;
         try {
           for (var2_int = 0; var2_int < 3; var2_int++) {
-            rk.field_T[var2_int] = 0;
+            ProgressDialog.field_T[var2_int] = 0;
           }
-          for (var2_intLifetime1 = 0; var2_intLifetime1 < rk.field_ab; var2_intLifetime1++) {
+          for (var2_intLifetime1 = 0; var2_intLifetime1 < ProgressDialog.field_ab; var2_intLifetime1++) {
             if (~LoginPanel.field_C[var2_intLifetime1].field_e == ~param0.field_e) {
               dupTemp$3 = LoginPanel.field_C[var2_intLifetime1].a((byte) -111);
-              rk.field_T[dupTemp$3] = rk.field_T[dupTemp$3] + 1;
+              ProgressDialog.field_T[dupTemp$3] = ProgressDialog.field_T[dupTemp$3] + 1;
             }
           }
           if (param1 < 16) {
             field_d = (String) null;
           }
           dupTemp$0 = param0.a((byte) -94);
-          rk.field_T[dupTemp$0] = rk.field_T[dupTemp$0] + 1;
+          ProgressDialog.field_T[dupTemp$0] = ProgressDialog.field_T[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
-          for (var3 = 0; var3 < rk.field_ab; var3++) {
+          for (var3 = 0; var3 < ProgressDialog.field_ab; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (param0.field_e == LoginPanel.field_C[var3].field_e) {
               var4 = LoginPanel.field_C[var3].a((byte) -123);
-              if (NetworkArchiveRequest.field_y < rk.field_T[var4]) {
-                rk.field_T[var4] = rk.field_T[var4] - 1;
+              if (NetworkArchiveRequest.field_y < ProgressDialog.field_T[var4]) {
+                ProgressDialog.field_T[var4] = ProgressDialog.field_T[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }
@@ -174,9 +174,9 @@ final class AccountServiceResult {
               LoginPanel.field_C[incrementValue$2] = LoginPanel.field_C[var3];
             }
           }
-          rk.field_ab = var2_intLifetime2;
-          fieldTemp$1 = rk.field_ab;
-          rk.field_ab = rk.field_ab + 1;
+          ProgressDialog.field_ab = var2_intLifetime2;
+          fieldTemp$1 = ProgressDialog.field_ab;
+          ProgressDialog.field_ab = ProgressDialog.field_ab + 1;
           LoginPanel.field_C[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

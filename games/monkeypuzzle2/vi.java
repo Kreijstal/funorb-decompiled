@@ -18,13 +18,13 @@ final class vi {
     }
 
     final static void a(String param0, int param1, boolean param2) {
-        ja.field_F = param2;
+        RegistrationAgreementPane.field_F = param2;
         ah.field_h = true;
         if (param1 != 12345) {
           return;
         }
         try {
-          me.field_f = new ha(wg.field_j, IntrusiveDeque.field_c, param0, fk.field_a, ja.field_F);
+          me.field_f = new ProgressMessageDialog(wg.field_j, IntrusiveDeque.field_c, param0, fk.field_a, RegistrationAgreementPane.field_F);
           wg.field_j.showDialog((byte) -63, me.field_f);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "vi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

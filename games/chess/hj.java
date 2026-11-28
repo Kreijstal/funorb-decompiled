@@ -170,7 +170,7 @@ final class hj {
         if (param2) {
           return;
         }
-        ge.field_bb = param1;
+        FullscreenStatusDialog.field_bb = param1;
         n.field_e = ka.field_h;
         NetworkArchiveRequest.field_z = param0;
     }

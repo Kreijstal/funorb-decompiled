@@ -69,7 +69,7 @@ final class jn {
         RuntimeException decompiledCaughtException = null;
         var4 = Torquing.field_u;
         try {
-          if (!mn.a(param0, param2, (byte) 67)) {
+          if (!ProgressMessageDialog.a(param0, param2, (byte) 67)) {
             return false;
           }
           var3_int = 0;
@@ -138,7 +138,7 @@ final class jn {
             }
           }
           for (var3 = 0; var3 < wh.field_z.length; var3++) {
-            var4 = mn.field_Z[var3];
+            var4 = ProgressMessageDialog.field_Z[var3];
             if (var4 < 0) {
               var5 = TooltipPanel.field_c;
             } else {
@@ -201,7 +201,7 @@ final class jn {
               var1_int = var1_int + ModalDialogHost.field_D;
             }
             if (0 <= var4) {
-              sp.field_Q.drawString(var6, var8Lifetime1, var1_int + LevelRun.field_p, var5, -1);
+              ProgressDialog.field_Q.drawString(var6, var8Lifetime1, var1_int + LevelRun.field_p, var5, -1);
               var1_int = var1_int + (WidgetContainer.field_z + (ModalDialogHost.field_D + TextLineMetrics.field_d));
             } else {
               bo.field_e.drawString(var6, var8Lifetime1, var1_int + bp.field_f, var5, -1);

@@ -191,7 +191,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
           }
           if (ae.field_a == null) {
             ae.field_a = new om(128);
-            r.field_c = 0;
+            FullscreenNoticeType.field_c = 0;
           }
           var3Lifetime1 = var1.readString(false);
           if (((String) (var3Lifetime1)).equals("")) {
@@ -212,8 +212,8 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
             stackIn_47_1 = (long)LoginPanel.a(-95, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode();
             stackIn_48_2 = !(param0);
             ((om) (Object) stackIn_47_0).a(stackIn_47_1, stackIn_48_2, var6);
-            fieldTemp$0 = r.field_c;
-            r.field_c = r.field_c + 1;
+            fieldTemp$0 = FullscreenNoticeType.field_c;
+            FullscreenNoticeType.field_c = FullscreenNoticeType.field_c + 1;
             var6.field_tb = fieldTemp$0;
             pe.field_qb.addLast((byte) 122, var6);
           }

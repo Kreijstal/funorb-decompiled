@@ -258,7 +258,7 @@ final class tn {
 
     tn(boolean param0) {
         this.field_k = ad.field_a;
-        this.field_l = sp.field_U;
+        this.field_l = ResizableModalDialog.field_U;
         this.field_q = tj.field_b;
         if (param0) {
           this.field_f = ModalDialogHost.field_P;

@@ -7,7 +7,7 @@ final class ak {
     static int field_c;
     static String field_g;
     static int field_f;
-    static ui field_a;
+    static StandardContentDialog field_a;
     static String[] field_b;
 
     final static void a(int param0, ll param1, int param2) {
@@ -148,8 +148,8 @@ final class ak {
             ud.field_b.position = 0;
             if (param5 == null) {
               sd.field_i.position = 0;
-              sd.field_i.writeInt(jj.field_R.nextInt(), (byte) -102);
-              sd.field_i.writeInt(jj.field_R.nextInt(), (byte) -98);
+              sd.field_i.writeInt(ResizableModalDialog.field_R.nextInt(), (byte) -102);
+              sd.field_i.writeInt(ResizableModalDialog.field_R.nextInt(), (byte) -98);
               stackIn_18_0 = sd.field_i;
               if (!param3.a(47)) {
                 stackIn_19_1 = "";
@@ -175,8 +175,8 @@ final class ak {
               if (param2) {
                 var9 = var9 | 1;
               }
-              sd.field_i.writeInt(jj.field_R.nextInt(), (byte) -63);
-              sd.field_i.writeInt(jj.field_R.nextInt(), (byte) -15);
+              sd.field_i.writeInt(ResizableModalDialog.field_R.nextInt(), (byte) -63);
+              sd.field_i.writeInt(ResizableModalDialog.field_R.nextInt(), (byte) -15);
               sd.field_i.writePrefixedString(var14, (byte) 61);
               sd.field_i.writePrefixedString(var8, (byte) -113);
               var15 = (CharSequence) ((Object) param5);
@@ -303,7 +303,7 @@ final class ak {
     }
 
     final static void a(int param0) {
-        ic.n(-125);
+        FullscreenStatusDialog.n(-125);
         cg.a((byte) -105, 4);
         if (param0 <= 37) {
           ak.a(50);

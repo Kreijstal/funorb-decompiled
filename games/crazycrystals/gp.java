@@ -14,7 +14,7 @@ final class gp {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 97) {
-            stackIn_4_0 = ud.a(param0, param2, (byte) -78, true);
+            stackIn_4_0 = ContentTransitionDialog.a(param0, param2, (byte) -78, true);
             return stackIn_4_0;
           }
           stackIn_2_0 = 125;

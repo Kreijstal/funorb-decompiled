@@ -60,7 +60,7 @@ final class kf {
         jb.a(0, SoftwareRasterizer.field_e + 640 >> 1, -640 + SoftwareRasterizer.field_e >> 1, -30486, SoftwareRasterizer.field_j);
         if (param0 == -7393) {
           if (ArchiveRequest.field_y <= 0) {
-            if (!(0 >= ko.field_P) ||
+            if (!(0 >= NumericDateInputWidget.field_P) ||
               !(0 >= mp.field_b)) {
               if (null == jl.field_g) {
                 stackIn_122_0 = AccountNameAvailabilityValidator.field_o;
@@ -89,7 +89,7 @@ final class kf {
             stackIn_89_0 = ud.field_A;
             stackIn_90_1 = (param1) && (!ce.field_c);
             ((UiPanel) (Object) stackIn_89_0).b(stackIn_90_1, 0);
-            if (0 >= ko.field_P &&
+            if (0 >= NumericDateInputWidget.field_P &&
               0 >= mp.field_b) {
               ln.d(-28558);
               return;
@@ -124,7 +124,7 @@ final class kf {
             stackIn_10_0 = ud.field_A;
             stackIn_11_1 = (param1) && (!ce.field_c);
             ((UiPanel) (Object) stackIn_10_0).b(stackIn_11_1, 0);
-            if (!(0 >= ko.field_P) ||
+            if (!(0 >= NumericDateInputWidget.field_P) ||
               !(0 >= mp.field_b)) {
               if (null != jl.field_g) {
                 jl.field_g.drawOpaque(AccountNameAvailabilityValidator.field_o.field_wb, 0);
@@ -147,7 +147,7 @@ final class kf {
           stackIn_34_1 = (param1) && (!ce.field_c);
           ((UiPanel) (Object) stackIn_33_0).b(stackIn_34_1, 0);
         }
-        if (0 < ko.field_P) {
+        if (0 < NumericDateInputWidget.field_P) {
           if (null == jl.field_g) {
             stackIn_40_0 = AccountNameAvailabilityValidator.field_o;
             stackIn_41_1 = (param1) && (!BufferedRandomAccessFile.field_g);

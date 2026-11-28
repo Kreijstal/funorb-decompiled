@@ -100,7 +100,7 @@ abstract class MixedSupport140 extends DualNode {
         int integerLocal12 = 0;
         integerLocal12 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          if (SoftwareFramebuffer.mixedSupport132State0012 != UiComponentPart023.mixedSupport132State0009) {
+          if (SoftwareFramebuffer.mixedSupport132State0012 != StandardContentDialog.mixedSupport132State0009) {
             return false;
           }
           longLocal7 = MixedSupport062.correctedCurrentTimeMillis(integerArgument2 + 4);
@@ -115,7 +115,7 @@ abstract class MixedSupport140 extends DualNode {
               for (integerLocal1 = 0; integerLocal1 < NetworkSupport012.integerState0759; integerLocal1++) {
                 LabeledWidgetContainer.cipherPacketBufferState0001.payload[integerLocal1] = renderingSupport001Local9.byteArrayState0003[integerLocal1];
               }
-              UiComponentPart017.integerState0438 = GameDomainSupport001.integerState0051;
+              GuestPlayConfirmationForm.integerState0438 = GameDomainSupport001.integerState0051;
               GameDomainSupport001.integerState0051 = ComponentContainer.integerState0378;
               ComponentContainer.integerState0378 = HashNode.integerState0070;
               HashNode.integerState0070 = renderingSupport001Local9.integerState0063;
@@ -139,7 +139,7 @@ abstract class MixedSupport140 extends DualNode {
               return false;
             }
             if (MixedSupport126.integerState0792 == 0) {
-              UiComponentPart017.integerState0438 = GameDomainSupport001.integerState0051;
+              GuestPlayConfirmationForm.integerState0438 = GameDomainSupport001.integerState0051;
               GameDomainSupport001.integerState0051 = ComponentContainer.integerState0378;
               ComponentContainer.integerState0378 = HashNode.integerState0070;
               HashNode.integerState0070 = UiComponentPart009.integerState0150;

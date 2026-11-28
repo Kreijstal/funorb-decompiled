@@ -190,7 +190,7 @@ final class hf implements WidgetRenderer {
             field_c = -88;
           }
           var7 = param1 + param0.field_i;
-          v.b(var6_int, 12105912, param0.field_p, var7, param0.field_l);
+          ResizableModalDialog.b(var6_int, 12105912, param0.field_p, var7, param0.field_l);
           var8 = ub.field_f[1];
           if (param0 instanceof InteractiveWidget &&
             ((InteractiveWidget) (param0)).field_D) {

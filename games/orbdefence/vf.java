@@ -82,7 +82,7 @@ final class vf {
           if (param0 <= 84) {
             vf.a(-58, 69, -47, (byte) 17);
           }
-          pc.a(-1, param2, param1, false);
+          StandardContentDialog.a(-1, param2, param1, false);
         } catch (RuntimeException runtimeException) {
           throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "vf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

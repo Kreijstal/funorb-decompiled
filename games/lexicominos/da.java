@@ -13,10 +13,10 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException decompiledCaughtException = null;
         try {
           if (DraggableWidgetContainer.field_M != null) {
-            uc.field_eb = 0;
+            ProgressMessageDialog.field_eb = 0;
             cj.field_i = param0.getX();
             ij.field_h = param0.getY();
-            ql.field_K = true;
+            ResizableModalDialog.field_K = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -42,9 +42,9 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException var2 = null;
         try {
           if (null != DraggableWidgetContainer.field_M) {
-            uc.field_eb = 0;
+            ProgressMessageDialog.field_eb = 0;
             NameSuggestionsPanel.field_I = 0;
-            ql.field_K = true;
+            ResizableModalDialog.field_K = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 16) != 0) {
             }
@@ -226,10 +226,10 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException var2 = null;
         try {
           if (DraggableWidgetContainer.field_M != null) {
-            uc.field_eb = 0;
+            ProgressMessageDialog.field_eb = 0;
             cj.field_i = -1;
             ij.field_h = -1;
-            ql.field_K = true;
+            ResizableModalDialog.field_K = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -254,10 +254,10 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException var2 = null;
         try {
           if (DraggableWidgetContainer.field_M != null) {
-            uc.field_eb = 0;
+            ProgressMessageDialog.field_eb = 0;
             cj.field_i = param0.getX();
             ij.field_h = param0.getY();
-            ql.field_K = true;
+            ResizableModalDialog.field_K = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -307,10 +307,10 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException decompiledCaughtException = null;
         try {
           if (DraggableWidgetContainer.field_M != null) {
-            uc.field_eb = 0;
+            ProgressMessageDialog.field_eb = 0;
             cj.field_i = param0.getX();
             ij.field_h = param0.getY();
-            ql.field_K = true;
+            ResizableModalDialog.field_K = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -361,7 +361,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException var2 = null;
         try {
           if (DraggableWidgetContainer.field_M != null) {
-            uc.field_eb = 0;
+            ProgressMessageDialog.field_eb = 0;
             GameAppletShell.field_j = param0.getX();
             GzipDecompressor.field_b = param0.getY();
             rf.correctedCurrentTimeMillis(0);
@@ -381,7 +381,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             }
             if (0 != (var2_int & 16)) {
             }
-            ql.field_K = true;
+            ResizableModalDialog.field_K = true;
             if (0 == (var2_int & 8)) {
             }
           }

@@ -94,7 +94,7 @@ final class ri {
         try {
           var20 = BoundedRandomAccessFile.field_e;
           if (!param2) {
-            stackIn_4_0 = kg.field_c;
+            stackIn_4_0 = FullscreenNoticeType.field_c;
           } else {
             stackIn_4_0 = FrameTimer.field_b;
           }
@@ -104,7 +104,7 @@ final class ri {
           var7 = var20.field_D + var20.field_C + 52;
           ke.field_f[0].bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(3, 3, var6 - 6, -6 + var7, 16249775);
-          lb.a(0, var6, (byte) -9, NodeHashTableIterator.field_e, 0, var7);
+          GuestPlayConfirmationForm.a(0, var6, (byte) -9, NodeHashTableIterator.field_e, 0, var7);
           var8 = 0;
           if (param2) {
             for (var9 = 9; var9 >= 0; var9--) {
@@ -171,10 +171,10 @@ final class ri {
           }
           ke.field_f[2].bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(3, 3, 172, 184, 16249775);
-          lb.a(0, 178, (byte) 112, NodeHashTableIterator.field_e, 0, 190);
+          GuestPlayConfirmationForm.a(0, 178, (byte) 112, NodeHashTableIterator.field_e, 0, 190);
           ke.field_f[1].bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(3, 3, 215, 184, 16249775);
-          lb.a(0, 221, (byte) -119, NodeHashTableIterator.field_e, 0, 190);
+          GuestPlayConfirmationForm.a(0, 221, (byte) -119, NodeHashTableIterator.field_e, 0, 190);
           if (DraggableWidgetContainer.field_F >= 0) {
             var5 = DraggableWidgetContainer.field_F;
           }

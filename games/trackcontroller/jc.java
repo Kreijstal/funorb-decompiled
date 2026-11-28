@@ -75,14 +75,14 @@ final class jc {
           }
           var9 = (VorbisDecoder) (this.field_d.get(8434, var6));
           if (var9 == null) {
-            var9 = VorbisDecoder.a(this.field_b, param1, param2);
+            var9 = VorbisDecoder.load(this.field_b, param1, param2);
             if (var9 == null) {
               stackIn_11_0 = null;
               return (PcmSample) (stackIn_11_0);
             }
             this.field_d.put(false, var6, var9);
           }
-          var8Lifetime1 = var9.a(param3);
+          var8Lifetime1 = var9.decodeToPcm(param3);
           if (param0 != -19020) {
             this.field_e = (Archive) null;
           }

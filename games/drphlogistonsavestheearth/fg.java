@@ -109,9 +109,9 @@ final class fg {
         this.field_i = MusicPatchPcmStream.field_m;
         this.field_f = td.field_f;
         this.field_a = EditableTextField.field_J;
-        this.field_b = tf.field_kb;
+        this.field_b = ProgressDialog.field_kb;
         this.field_c = fm.field_j;
-        this.field_g = dj.field_K;
+        this.field_g = DialogMessagePane.field_K;
         if (param0) {
           this.field_e = SpriteGeometry.field_x;
         } else {

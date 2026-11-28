@@ -207,7 +207,7 @@ final class ClamsEvent extends SpecialEvent {
           var2 = 10;
           var3 = -var1_int + 640 >> 1;
           var4 = 300;
-          em.field_S.draw(-8 + var3, -9 + var4);
+          FullscreenStatusDialog.field_S.draw(-8 + var3, -9 + var4);
           var5 = (int)(ShieldSpecial.field_r * (float)var1_int / 100.0f);
           for (var6 = 0; var5 > var6; var6++) {
             var7 = 74 + var6 * 177 / (-1 + var1_int);

@@ -54,7 +54,7 @@ final class oh extends bl {
           while (param0 != 0L) {
             var7 = param0;
             param0 = param0 / 37L;
-            var9 = bh.field_db[(int)(-(param0 * 37L) + var7)];
+            var9 = FullscreenStatusDialog.field_db[(int)(-(param0 * 37L) + var7)];
             if (var9 == 95) {
               var10 = var6.length() - 1;
               var9 = 160;

@@ -60,8 +60,8 @@ final class LevelDecoder {
           return var2_ref_byte__Lifetime2;
         }
         if (null != cg.field_i) {
-          for (var2 = 0; var2 < pe.field_gb.length; var2++) {
-            if (param0 == pe.field_gb[var2] &&
+          for (var2 = 0; var2 < ProgressDialog.field_gb.length; var2++) {
+            if (param0 == ProgressDialog.field_gb[var2] &&
               fk.field_v[var2] > 0) {
               dupTemp$6 = fk.field_v[var2] - 1;
               arrayValue$7 = cg.field_i[var2];
@@ -157,12 +157,12 @@ final class LevelDecoder {
             }
             var14 = 0;
             ea.field_g = new LevelEntity[(var8Lifetime1 << 8) + var9Lifetime1];
-            if (n.field_kb == null ||
-              !(ba.field_i.field_a < n.field_kb[0].length)) {
-              n.field_kb = new int[64][][];
+            if (ContentTransitionDialog.field_kb == null ||
+              !(ba.field_i.field_a < ContentTransitionDialog.field_kb[0].length)) {
+              ContentTransitionDialog.field_kb = new int[64][][];
               for (var5Lifetime2 = 0; var5Lifetime2 < 64; var5Lifetime2++) {
                 array$5 = new int[ba.field_i.field_a][];
-                n.field_kb[var5Lifetime2] = array$5;
+                ContentTransitionDialog.field_kb[var5Lifetime2] = array$5;
               }
             }
             var15 = ea.field_e * 5;
@@ -268,7 +268,7 @@ final class LevelDecoder {
           IntrusiveNode.a(var17[1], var17[2], var17[6] + var17[8], 118, var17[3], 1, var8);
           GameApplet.screens[1] = new GameScreen(1, be.field_e);
         }
-        ll.field_b = -1;
+        FullscreenNoticeType.field_b = -1;
     }
 
     static {

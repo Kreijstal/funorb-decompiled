@@ -68,7 +68,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         }
         if (this.field_J >= 256) {
           if (0 == param1) {
-            this.c(this.field_m + param3, 119, param0 + this.field_o);
+            this.drawDialogBackground(this.field_m + param3, 119, param0 + this.field_o);
             super.drawWidget(param0, param1, (byte) -21, param3);
             return;
           }
@@ -78,7 +78,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           uk.field_f = new RgbSprite(this.field_w, this.field_k);
           MouseInput.a(uk.field_f, (byte) 79);
           SoftwareRasterizer.clearRaster();
-          this.c(0, param2 ^ -68, 0);
+          this.drawDialogBackground(0, param2 ^ -68, 0);
           super.drawWidget(-param0 - this.field_o, param1, param2, -this.field_m - param3);
           cl.d((byte) -106);
           uk.field_f.drawWithOpacity(param0 + this.field_o, param3 + this.field_m, this.field_J);
@@ -88,7 +88,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           uk.field_f = new RgbSprite(this.field_w, this.field_k);
           MouseInput.a(uk.field_f, (byte) 79);
           SoftwareRasterizer.clearRaster();
-          this.c(0, param2 ^ -68, 0);
+          this.drawDialogBackground(0, param2 ^ -68, 0);
           super.drawWidget(-param0 - this.field_o, param1, param2, -this.field_m - param3);
           cl.d((byte) -106);
           uk.field_f.drawWithOpacity(param0 + this.field_o, param3 + this.field_m, this.field_J);
@@ -98,7 +98,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           uk.field_f = new RgbSprite(this.field_w, this.field_k);
           MouseInput.a(uk.field_f, (byte) 79);
           SoftwareRasterizer.clearRaster();
-          this.c(0, param2 ^ -68, 0);
+          this.drawDialogBackground(0, param2 ^ -68, 0);
           super.drawWidget(-param0 - this.field_o, param1, param2, -this.field_m - param3);
           cl.d((byte) -106);
           uk.field_f.drawWithOpacity(param0 + this.field_o, param3 + this.field_m, this.field_J);
@@ -106,7 +106,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         }
         MouseInput.a(uk.field_f, (byte) 79);
         SoftwareRasterizer.clearRaster();
-        this.c(0, param2 ^ -68, 0);
+        this.drawDialogBackground(0, param2 ^ -68, 0);
         super.drawWidget(-param0 - this.field_o, param1, param2, -this.field_m - param3);
         cl.d((byte) -106);
         uk.field_f.drawWithOpacity(param0 + this.field_o, param3 + this.field_m, this.field_J);
@@ -151,7 +151,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         return false;
     }
 
-    abstract void c(int param0, int param1, int param2);
+    abstract void drawDialogBackground(int param0, int param1, int param2);
 
     static {
         field_K = new char[]{(char)95, (char)97, (char)98, (char)99, (char)100, (char)101, (char)102, (char)103, (char)104, (char)105, (char)106, (char)107, (char)108, (char)109, (char)110, (char)111, (char)112, (char)113, (char)114, (char)115, (char)116, (char)117, (char)118, (char)119, (char)120, (char)121, (char)122, (char)48, (char)49, (char)50, (char)51, (char)52, (char)53, (char)54, (char)55, (char)56, (char)57};

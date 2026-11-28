@@ -36,7 +36,7 @@ final class qo extends am {
     }
 
     final static void g(byte param0) {
-        i.field_R = false;
+        FullscreenStatusDialog.field_R = false;
         ArchiveSource.field_a = null;
         ib.field_c = null;
         qh.field_b = null;

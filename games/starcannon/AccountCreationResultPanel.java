@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends ph implements WidgetActivationListener {
+final class AccountCreationResultPanel extends ProgressMessageDialog implements WidgetActivationListener {
     private AccountRegistrationPanel field_pb;
     static BufferedSocket field_sb;
     static String field_qb;
@@ -70,10 +70,10 @@ final class AccountCreationResultPanel extends ph implements WidgetActivationLis
           }
           ej.f((byte) -80);
           if (param2) {
-            this.p(108);
-            this.n(-115);
+            this.showAccountCreationConnectionFailure(108);
+            this.closeDialog(-115);
           } else {
-            this.n(-115);
+            this.closeDialog(-115);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -97,7 +97,7 @@ final class AccountCreationResultPanel extends ph implements WidgetActivationLis
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        kj var5 = null;
+        DialogMessagePane var5 = null;
         AccountServiceResult var6 = null;
         try {
           if (param2 != 10476) {
@@ -124,33 +124,33 @@ final class AccountCreationResultPanel extends ph implements WidgetActivationLis
               }
             }
           }
-          var5 = new kj((ph) (this), AwtRasterBuffer.field_a, var4);
+          var5 = new DialogMessagePane((ProgressMessageDialog) (this), AwtRasterBuffer.field_a, var4);
           if (param1.success) {
             if (param1.field_g) {
-              this.c(20317, new jj(this));
+              this.replaceContent(20317, new RegistrationAgreementPane(this));
               return;
             }
-            var5.a((byte) 110, (WidgetEventListener) (this), SpriteState.field_s);
+            var5.addListenerButton((byte) 110, (WidgetEventListener) (this), SpriteState.field_s);
           } else {
             if (!this.field_ub) {
               if (param1.statusCode == 5) {
-                var5.a(DefaultTextWidgetRenderer.field_i, 13759, 11);
-                var5.a(KeyboardInput.field_b, 13759, 17);
+                var5.addActionButton(DefaultTextWidgetRenderer.field_i, 13759, 11);
+                var5.addActionButton(KeyboardInput.field_b, 13759, 17);
               } else {
-                var5.a(InteractiveWidget.field_t, 13759, -1);
+                var5.addActionButton(InteractiveWidget.field_t, 13759, -1);
               }
             } else {
-              var5.a((byte) 110, (WidgetEventListener) (this), SpriteState.field_s);
+              var5.addListenerButton((byte) 110, (WidgetEventListener) (this), SpriteState.field_s);
             }
             if (param1.statusCode == 3) {
-              var5.a(SingleChildWidgetContainer.field_u, param2 ^ 7507, 7);
+              var5.addActionButton(SingleChildWidgetContainer.field_u, param2 ^ 7507, 7);
             } else {
               if (6 == param1.statusCode) {
-                var5.a(InteractiveWidget.field_w, 13759, 9);
+                var5.addActionButton(InteractiveWidget.field_w, 13759, 9);
               }
             }
           }
-          this.c(param2 + 9841, var5);
+          this.replaceContent(param2 + 9841, var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -175,7 +175,7 @@ final class AccountCreationResultPanel extends ph implements WidgetActivationLis
         }
     }
 
-    final void p(int param0) {
+    final void showAccountCreationConnectionFailure(int param0) {
         if (param0 != 10341) {
           field_tb = (DelayedPcmStream) null;
         }

@@ -140,10 +140,10 @@ final class BufferedSocket implements Runnable {
               var6[0][var10] = ph.field_a[var11];
               var19[0][4 * var10] = we.field_g[var11];
               var19[0][1 + 4 * var10] = DropTargetWidgetContainer.field_D[var11];
-              var19[0][2 + var10 * 4] = oc.field_a[var11];
+              var19[0][2 + var10 * 4] = FullscreenNoticeType.field_a[var11];
               var19[0][var10 * 4 + 3] = MidiPcmStream.field_N[var11];
-              if (md.a(ph.field_a[var11], -113) &&
-                oc.field_a[var11] + (DropTargetWidgetContainer.field_D[var11] + MidiPcmStream.field_N[var11]) == 0) {
+              if (StripedProgressWidget.a(ph.field_a[var11], -113) &&
+                FullscreenNoticeType.field_a[var11] + (DropTargetWidgetContainer.field_D[var11] + MidiPcmStream.field_N[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -158,10 +158,10 @@ final class BufferedSocket implements Runnable {
               var6[1][var14] = ph.field_a[var11Lifetime1];
               var19[1][var14 * 4] = we.field_g[var11Lifetime1];
               var19[1][1 + 4 * var14] = DropTargetWidgetContainer.field_D[var11Lifetime1];
-              var19[1][2 + 4 * var14] = oc.field_a[var11Lifetime1];
+              var19[1][2 + 4 * var14] = FullscreenNoticeType.field_a[var11Lifetime1];
               var19[1][var14 * 4 + 3] = MidiPcmStream.field_N[var11Lifetime1];
-              if (md.a(ph.field_a[var11Lifetime1], -101) &&
-                0 == MidiPcmStream.field_N[var11Lifetime1] + oc.field_a[var11Lifetime1] + DropTargetWidgetContainer.field_D[var11Lifetime1]) {
+              if (StripedProgressWidget.a(ph.field_a[var11Lifetime1], -101) &&
+                0 == MidiPcmStream.field_N[var11Lifetime1] + FullscreenNoticeType.field_a[var11Lifetime1] + DropTargetWidgetContainer.field_D[var11Lifetime1]) {
                 var6[1][var14] = null;
                 var14--;
               }

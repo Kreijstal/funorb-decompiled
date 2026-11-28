@@ -249,10 +249,10 @@ final class EmailFormatValidator extends TextFieldValidator {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            eb.field_E = new String[var4];
-            cb.a(ClientException.field_g, 0, eb.field_E, 0, var4);
-            ll.field_E = new String[var3_int - var4 - 1];
-            cb.a(ClientException.field_g, var4 + 1, ll.field_E, 0, -var4 + (var3_int - 1));
+            RegistrationAgreementPane.field_E = new String[var4];
+            cb.a(ClientException.field_g, 0, RegistrationAgreementPane.field_E, 0, var4);
+            StripedProgressWidget.field_E = new String[var3_int - var4 - 1];
+            cb.a(ClientException.field_g, var4 + 1, StripedProgressWidget.field_E, 0, -var4 + (var3_int - 1));
             var4 = -1;
             var3_int = r.a(EditableTextField.field_E, ClientException.field_g, BufferedRandomAccessFile.a(DropTargetWidgetContainer.field_B, new String[]{"<br><%0><br>"}, (byte) -126), param1 ^ -25697, ResourceArchive.field_a);
             for (var5 = 0; var3_int > var5; var5++) {
@@ -269,16 +269,16 @@ final class EmailFormatValidator extends TextFieldValidator {
             cb.a(ClientException.field_g, 0, t.field_r, 0, var4);
             vb.field_k = new String[-1 + (var3_int - var4)];
             cb.a(ClientException.field_g, var4 + 1, vb.field_k, 0, var3_int + (-var4 - 1));
-            if (eb.field_E.length >= t.field_r.length) {
-              stackIn_57_0 = eb.field_E.length;
+            if (RegistrationAgreementPane.field_E.length >= t.field_r.length) {
+              stackIn_57_0 = RegistrationAgreementPane.field_E.length;
             } else {
               stackIn_57_0 = t.field_r.length;
             }
             var5 = stackIn_57_0;
-            if (vb.field_k.length > ll.field_E.length) {
+            if (vb.field_k.length > StripedProgressWidget.field_E.length) {
               stackIn_60_0 = vb.field_k.length;
             } else {
-              stackIn_60_0 = ll.field_E.length;
+              stackIn_60_0 = StripedProgressWidget.field_E.length;
             }
             var6 = stackIn_60_0;
             var7 = var6 + (7 + var5);
@@ -289,7 +289,7 @@ final class EmailFormatValidator extends TextFieldValidator {
             }
             IterableNodeHashTable.field_a[1] = 0;
             DropTargetWidgetContainer.field_E[0] = AccountNameAvailabilityValidator.field_l;
-            DropTargetWidgetContainer.field_E[1] = eb.field_F;
+            DropTargetWidgetContainer.field_E[1] = RegistrationAgreementPane.field_F;
             CipherPacketBuffer.field_n = new int[2];
             CipherPacketBuffer.field_n[0] = 5;
             CipherPacketBuffer.field_n[1] = 2;
@@ -337,7 +337,7 @@ final class EmailFormatValidator extends TextFieldValidator {
             }
           }
           if (ne.field_u == 2) {
-            var10 = eb.field_E;
+            var10 = RegistrationAgreementPane.field_E;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
@@ -346,7 +346,7 @@ final class EmailFormatValidator extends TextFieldValidator {
                 var3_intLifetime1 = var7Lifetime1;
               }
             }
-            var4_ref_String__Lifetime1 = ll.field_E;
+            var4_ref_String__Lifetime1 = StripedProgressWidget.field_E;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
               var7Lifetime1Lifetime1 = SectorCacheStore.a(false, var12, true);
@@ -363,7 +363,7 @@ final class EmailFormatValidator extends TextFieldValidator {
             if (IterableNodeHashTable.field_a[var4Lifetime2] >= 0) {
               stackIn_116_1 = pb.field_j;
             } else {
-              stackIn_116_1 = k.field_D;
+              stackIn_116_1 = GuestPlayConfirmationForm.field_D;
             }
             AwtRasterBuffer.field_a = stackIn_115_0 + stackIn_116_1;
           }
@@ -384,12 +384,12 @@ final class EmailFormatValidator extends TextFieldValidator {
               NetworkArchiveRequest.field_r[var4Lifetime3][3] = pb.field_j + (ConfirmedEmailAvailabilityValidator.field_m << 1);
               var5Lifetime3 = var5Lifetime3 + (pb.field_j + (hj.field_a + (ConfirmedEmailAvailabilityValidator.field_m << 1)));
             } else {
-              var5Lifetime3 = var5Lifetime3 + k.field_D;
+              var5Lifetime3 = var5Lifetime3 + GuestPlayConfirmationForm.field_D;
             }
             var4Lifetime3++;
           }
           if (ne.field_u != 2) {
-            cf.field_f.a(param0, -125, qe.a(uc.field_C, (byte) -101, ll.field_y), 0);
+            cf.field_f.a(param0, -125, qe.a(DialogMessagePane.field_C, (byte) -101, StripedProgressWidget.field_y), 0);
           } else {
             cf.field_f.a(param0, 99, -1, -1);
           }

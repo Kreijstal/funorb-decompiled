@@ -87,7 +87,7 @@ final class sg {
           RuntimeException var15_ref = null;
           try {
             EditableTextField.field_N = new ha(param9);
-            pg.field_fb = new ha(param0);
+            StandardContentDialog.field_fb = new ha(param0);
             il.field_v = param4;
             ProxyAuthenticationRequiredException.field_b = param7;
             t.field_f = param12;

@@ -84,8 +84,8 @@ final class aj extends DualLinkNode {
         try {
           ea.a(120, (java.awt.Component) ((Object) param1));
           il.a(false, (java.awt.Component) ((Object) param1));
-          if (null != ui.field_pb) {
-            ui.field_pb.attach(0, (java.awt.Component) ((Object) param1));
+          if (null != StandardContentDialog.field_pb) {
+            StandardContentDialog.field_pb.attach(0, (java.awt.Component) ((Object) param1));
           }
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "aj.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -174,7 +174,7 @@ final class aj extends DualLinkNode {
         Object var1 = null;
         var1 = sg.field_i;
         synchronized (var1) {
-          kc.field_f = lk.field_J;
+          kc.field_f = StripedProgressWidget.field_J;
           m.field_a = m.field_a + 1;
           ag.field_f = gd.field_a;
           kc.field_b = AccountNameAvailabilityValidator.field_p;

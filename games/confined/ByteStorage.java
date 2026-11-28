@@ -47,7 +47,7 @@ abstract class ByteStorage {
           var8 = new AccountCreationResultPanel(TunnelCamera.field_Z, param3);
           TunnelCamera.field_Z.showDialog(var8, 0);
           if (TextFieldValidator.c(109)) {
-            var8.o(param0 - 30583);
+            var8.showAccountCreationConnectionFailure(param0 - 30583);
             return true;
           }
           hd.field_d = param2;

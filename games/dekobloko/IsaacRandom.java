@@ -253,8 +253,8 @@ final class IsaacRandom {
             return false;
           }
         }
-        integerLocal1 = MixedSupport080.integerArrayState0150[integerArgument4] + (MixedSupport089.integerArrayState0173[integerArgument4] + ByteStorage.integerArrayState0157[integerArgument4]);
-        integerLocal2 = ByteStorage.integerArrayState0157[integerArgument3] + MixedSupport080.integerArrayState0150[integerArgument3] + MixedSupport089.integerArrayState0173[integerArgument3];
+        integerLocal1 = FullscreenNoticeType.integerArrayState0150[integerArgument4] + (MixedSupport089.integerArrayState0173[integerArgument4] + ByteStorage.integerArrayState0157[integerArgument4]);
+        integerLocal2 = ByteStorage.integerArrayState0157[integerArgument3] + FullscreenNoticeType.integerArrayState0150[integerArgument3] + MixedSupport089.integerArrayState0173[integerArgument3];
         if (integerLocal2 > integerLocal1) {
           return true;
         }

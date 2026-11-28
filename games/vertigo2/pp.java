@@ -263,7 +263,7 @@ final class pp extends IntrusiveNode {
               DraggableWidgetContainer.a(param2, var3, 0, var4 != 0, up.field_z.l(4), up.field_z.field_Kb);
             }
             up.field_z = null;
-            ql.i(30);
+            BirthDateChatEnableForm.i(30);
           }
         }
         if (param0 <= -46) {

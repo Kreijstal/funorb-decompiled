@@ -45,13 +45,13 @@ final class EmailFormatValidator extends TextFieldValidator {
         Object var1_ref = null;
         var1_ref = TextHotspotBounds.field_y;
         synchronized (var1_ref) {
-          CipherPacketBuffer.field_B = qd.field_J;
+          CipherPacketBuffer.field_B = GuestPlayConfirmationForm.field_J;
           DirectByteStorage.field_c = DirectByteStorage.field_c + 1;
           nk.field_w = sa.field_o;
           NodeHashTableIterator.field_e = DiskCacheWorker.field_a;
           field_i = kk.field_d;
           kk.field_d = false;
-          jk.field_ab = ic.field_n;
+          ContentTransitionDialog.field_ab = ic.field_n;
           wi.field_w = DualLinkNode.field_n;
           GameAppletShell.field_e = DiskArchiveRequest.field_G;
           if (param0 != 10525) {

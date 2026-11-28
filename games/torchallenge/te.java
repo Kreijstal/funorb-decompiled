@@ -41,7 +41,7 @@ final class te {
             if (param1 == 8) {
               param1 = 2;
               if (eb.field_m) {
-                param2 = n.field_fb;
+                param2 = ContentTransitionDialog.field_fb;
               } else {
                 param2 = k.field_f;
               }
@@ -58,7 +58,7 @@ final class te {
               if (ae.field_C) {
                 param2 = re.field_z;
               }
-              IntrusiveNode.field_c.a(true, param2, param1);
+              IntrusiveNode.field_c.showResult(true, param2, param1);
             }
             if (param1 != 256 &&
               param1 != 10 &&

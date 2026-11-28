@@ -114,12 +114,12 @@ final class HailAnimation extends EventAnimation {
           return;
         }
         try {
-          sja.field_fb.writeCipheredByte(param2, (byte) 109);
-          sja.field_fb.position = sja.field_fb.position + 2;
-          var3_int = sja.field_fb.position;
-          rha.a(param1.field_g, sja.field_fb, (byte) -93);
-          oe.a(-21332, sja.field_fb, param0);
-          sja.field_fb.writeLengthShort((byte) -88, sja.field_fb.position - var3_int);
+          StandardContentDialog.field_fb.writeCipheredByte(param2, (byte) 109);
+          StandardContentDialog.field_fb.position = StandardContentDialog.field_fb.position + 2;
+          var3_int = StandardContentDialog.field_fb.position;
+          rha.a(param1.field_g, StandardContentDialog.field_fb, (byte) -93);
+          oe.a(-21332, StandardContentDialog.field_fb, param0);
+          StandardContentDialog.field_fb.writeLengthShort((byte) -88, StandardContentDialog.field_fb.position - var3_int);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "jba.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -72,7 +72,7 @@ final class BuffVendorAnimation extends EventAnimation {
 
     final static void a(long param0, int param1, int param2) {
         int var5 = 0;
-        BitPacketBuffer var4 = sja.field_fb;
+        BitPacketBuffer var4 = StandardContentDialog.field_fb;
         if (param2 == 2) {
           var4.writeCipheredByte(param1, (byte) 100);
           var4.position = var4.position + 1;

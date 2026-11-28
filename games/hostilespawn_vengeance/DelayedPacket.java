@@ -505,7 +505,7 @@ final class DelayedPacket extends IntrusiveNode {
                             param15 >= 4) {
                             var38 = var38 / 2;
                           }
-                          jh.a(var38, (byte) 49, 12, jc.field_c, 6);
+                          FullscreenStatusDialog.a(var38, (byte) 49, 12, jc.field_c, 6);
                           ClientLookupTables.field_a = 20 + (int)(50.0 * Math.random());
                         }
                       } else {
@@ -520,7 +520,7 @@ final class DelayedPacket extends IntrusiveNode {
                             4 <= param15) {
                             var38 = var38 / 2;
                           }
-                          jh.a(var38, (byte) 40, 12, jc.field_c, 6);
+                          FullscreenStatusDialog.a(var38, (byte) 40, 12, jc.field_c, 6);
                           ClientLookupTables.field_a = (int)(50.0 * Math.random()) + 20;
                         }
                       }
@@ -904,16 +904,16 @@ final class DelayedPacket extends IntrusiveNode {
         int var4;
         int var5;
         var5 = HostileSpawn.field_I ? 1 : 0;
-        if (jf.field_d < 50) {
+        if (FullscreenNoticeType.field_d < 50) {
           stackIn_4_0 = 0;
           stackIn_4_1 = 0;
           stackIn_4_2 = 640;
           stackIn_4_3 = 480;
           stackIn_4_4 = 0;
-          if (jf.field_d < 25) {
+          if (FullscreenNoticeType.field_d < 25) {
             stackIn_5_5 = 0;
           } else {
-            stackIn_5_5 = -50 + 2 * jf.field_d;
+            stackIn_5_5 = -50 + 2 * FullscreenNoticeType.field_d;
           }
           SoftwareRasterizer.fillRectangleAlpha(stackIn_4_0, stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_4_4, -(stackIn_5_5 * 5) + 250);
           var1 = -72 + TextHotspotBounds.field_m[0].field_j.field_e * 24 - uj.field_p.field_e;
@@ -945,17 +945,17 @@ final class DelayedPacket extends IntrusiveNode {
             if (var4 != 0) {
               vj.field_e[0].a(true, 128, 192, var1 + MusicPatchPcmStream.field_n.field_z / 2, MusicPatchPcmStream.field_n.field_z / 2 + var2);
               if (var3 == 0) {
-                if (jf.field_d >= 40) {
-                  MusicPatchPcmStream.field_n.drawScaledAlpha(-((50 - jf.field_d) / 2) + var1, -((-jf.field_d + 50) / 2) + var2, -jf.field_d + MusicPatchPcmStream.field_n.field_u + 50, 50 + MusicPatchPcmStream.field_n.field_r - jf.field_d, -(25 * jf.field_d) + 1250);
+                if (FullscreenNoticeType.field_d >= 40) {
+                  MusicPatchPcmStream.field_n.drawScaledAlpha(-((50 - FullscreenNoticeType.field_d) / 2) + var1, -((-FullscreenNoticeType.field_d + 50) / 2) + var2, -FullscreenNoticeType.field_d + MusicPatchPcmStream.field_n.field_u + 50, 50 + MusicPatchPcmStream.field_n.field_r - FullscreenNoticeType.field_d, -(25 * FullscreenNoticeType.field_d) + 1250);
                 } else {
-                  MusicPatchPcmStream.field_n.drawScaled(var1 - (-jf.field_d + 50) / 2, var2 - (50 - jf.field_d) / 2, 50 + (MusicPatchPcmStream.field_n.field_u - jf.field_d), 50 + (MusicPatchPcmStream.field_n.field_r - jf.field_d));
-                  SoftwareRasterizer.fillRectangleAlpha(-((-jf.field_d + 50) / 2) + var1, -((-jf.field_d + 50) / 2) + var2, MusicPatchPcmStream.field_n.field_u + 50 - jf.field_d, 50 + MusicPatchPcmStream.field_n.field_r - jf.field_d, 0, (10200 - 255 * jf.field_d) / 40);
+                  MusicPatchPcmStream.field_n.drawScaled(var1 - (-FullscreenNoticeType.field_d + 50) / 2, var2 - (50 - FullscreenNoticeType.field_d) / 2, 50 + (MusicPatchPcmStream.field_n.field_u - FullscreenNoticeType.field_d), 50 + (MusicPatchPcmStream.field_n.field_r - FullscreenNoticeType.field_d));
+                  SoftwareRasterizer.fillRectangleAlpha(-((-FullscreenNoticeType.field_d + 50) / 2) + var1, -((-FullscreenNoticeType.field_d + 50) / 2) + var2, MusicPatchPcmStream.field_n.field_u + 50 - FullscreenNoticeType.field_d, 50 + MusicPatchPcmStream.field_n.field_r - FullscreenNoticeType.field_d, 0, (10200 - 255 * FullscreenNoticeType.field_d) / 40);
                 }
               } else {
-                if (jf.field_d < 40) {
-                  MusicPatchPcmStream.field_n.drawRotated(var1 + MusicPatchPcmStream.field_n.field_z / 2, var2 + MusicPatchPcmStream.field_n.field_z / 2, 0, jf.field_d + 78 << 5);
+                if (FullscreenNoticeType.field_d < 40) {
+                  MusicPatchPcmStream.field_n.drawRotated(var1 + MusicPatchPcmStream.field_n.field_z / 2, var2 + MusicPatchPcmStream.field_n.field_z / 2, 0, FullscreenNoticeType.field_d + 78 << 5);
                 } else {
-                  MusicPatchPcmStream.field_n.drawScaledAlpha((50 - jf.field_d) / 4 + var1, var2 + (-jf.field_d + 50) / 4, -((-jf.field_d + 50) / 2) + MusicPatchPcmStream.field_n.field_u, MusicPatchPcmStream.field_n.field_r - (50 - jf.field_d) / 2, -(25 * jf.field_d) + 1250);
+                  MusicPatchPcmStream.field_n.drawScaledAlpha((50 - FullscreenNoticeType.field_d) / 4 + var1, var2 + (-FullscreenNoticeType.field_d + 50) / 4, -((-FullscreenNoticeType.field_d + 50) / 2) + MusicPatchPcmStream.field_n.field_u, MusicPatchPcmStream.field_n.field_r - (50 - FullscreenNoticeType.field_d) / 2, -(25 * FullscreenNoticeType.field_d) + 1250);
                 }
               }
             }
@@ -1006,7 +1006,7 @@ final class DelayedPacket extends IntrusiveNode {
               param0.a(param1 + 8689);
               var12 = var7.getClampedTileIndex(-4);
               if (var11 == 0 &&
-                !wb.field_Z &&
+                !ResizableModalDialog.field_Z &&
                 ln.field_a.field_r[var12]) {
                 param0.field_e = 1;
               }

@@ -423,7 +423,7 @@ final class ResourceArchive {
         if (param0 >= -92) {
           field_d = (String) null;
         }
-        return ec.k(783);
+        return DialogMessagePane.k(783);
     }
 
     final static String getAccountNameValidationError(int param0, CharSequence param1) {

@@ -34,7 +34,7 @@ abstract class ModalDialog extends ComponentContainer {
           if (integerArgument3 != 0) {
             return;
           }
-          this.performAction0165(-128, integerArgument4 + this.integerState0104, integerArgument1 + this.integerState0110);
+          this.drawDialogBackground(-128, integerArgument4 + this.integerState0104, integerArgument1 + this.integerState0110);
           super.drawWidget(integerArgument1, -122, integerArgument3, integerArgument4);
           return;
         }
@@ -45,7 +45,7 @@ abstract class ModalDialog extends ComponentContainer {
         }
         ValidationStatus.performAction1570(true, NodeHashTable.rgbSpriteState0055);
         SoftwareRaster.clearRaster();
-        this.performAction0165(-128, 0, 0);
+        this.drawDialogBackground(-128, 0, 0);
         super.drawWidget(-this.integerState0110 - integerArgument1, -116, integerArgument3, -integerArgument4 - this.integerState0104);
         ByteStorage.performAction1060((byte) -5);
         NodeHashTable.rgbSpriteState0055.drawWithOpacity(this.integerState0110 + integerArgument1, this.integerState0104 + integerArgument4, this.integerState0074);
@@ -433,7 +433,7 @@ abstract class ModalDialog extends ComponentContainer {
         return stackBooleanLocal3;
     }
 
-    abstract void performAction0165(int integerArgument1, int integerArgument2, int integerArgument3);
+    abstract void drawDialogBackground(int integerArgument1, int integerArgument2, int integerArgument3);
 
     final static void performAction0168(byte byteArgument1) {
         RenderingSupport001.networkSupport002State0001 = MixedSupport010.computeNetworkSupport0020142(true);

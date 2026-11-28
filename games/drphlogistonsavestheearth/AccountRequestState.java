@@ -102,7 +102,7 @@ final class AccountRequestState {
         field_e[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = (var0 - 1) * 8;
-            field_e[var0] = ff.a(ff.a(ff.a(ff.a(hg.a(4278190080L, field_c[4][4 + var1]), ff.a(hg.a(1095216660480L, field_c[3][var1 + 3]), ff.a(ff.a(hg.a(71776119061217280L, field_c[1][1 + var1]), hg.a(field_c[0][var1], -72057594037927936L)), hg.a(280375465082880L, field_c[2][2 + var1])))), hg.a(field_c[5][5 + var1], 16711680L)), hg.a(65280L, field_c[6][6 + var1])), hg.a(field_c[7][var1 + 7], 255L));
+            field_e[var0] = GuestPlayConfirmationForm.a(GuestPlayConfirmationForm.a(GuestPlayConfirmationForm.a(GuestPlayConfirmationForm.a(hg.a(4278190080L, field_c[4][4 + var1]), GuestPlayConfirmationForm.a(hg.a(1095216660480L, field_c[3][var1 + 3]), GuestPlayConfirmationForm.a(GuestPlayConfirmationForm.a(hg.a(71776119061217280L, field_c[1][1 + var1]), hg.a(field_c[0][var1], -72057594037927936L)), hg.a(280375465082880L, field_c[2][2 + var1])))), hg.a(field_c[5][5 + var1], 16711680L)), hg.a(65280L, field_c[6][6 + var1])), hg.a(field_c[7][var1 + 7], 255L));
         }
     }
 }

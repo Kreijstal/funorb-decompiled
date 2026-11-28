@@ -19,7 +19,7 @@ final class mm implements uj {
           if (dn.field_w == BufferedSocket.field_d) {
             return false;
           }
-          lj.field_t = jk.field_ib[dn.field_w];
+          lj.field_t = ContentTransitionDialog.field_ib[dn.field_w];
           ud.field_c = hj.field_n[dn.field_w];
           dn.field_w = 127 & 1 + dn.field_w;
           stackIn_7_0 = true;

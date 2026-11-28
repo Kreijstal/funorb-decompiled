@@ -22,12 +22,12 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
             } else {
               var2_int = -1;
             }
-            if (db.field_R >= 0 &&
+            if (ProgressDialog.field_R >= 0 &&
               var2_int >= 0) {
-              SecondaryNodeDequeIterator.field_b[db.field_R] = ~var2_int;
-              db.field_R = 127 & 1 + db.field_R;
-              if (db.field_R == rj.field_g) {
-                db.field_R = -1;
+              SecondaryNodeDequeIterator.field_b[ProgressDialog.field_R] = ~var2_int;
+              ProgressDialog.field_R = 127 & 1 + ProgressDialog.field_R;
+              if (ProgressDialog.field_R == rj.field_g) {
+                ProgressDialog.field_R = -1;
               }
             }
           }
@@ -96,12 +96,12 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             var2_int = -1;
           }
-          if (db.field_R >= 0 &&
+          if (ProgressDialog.field_R >= 0 &&
             var2_int >= 0) {
-            SecondaryNodeDequeIterator.field_b[db.field_R] = var2_int;
-            db.field_R = 127 & db.field_R + 1;
-            if (rj.field_g == db.field_R) {
-              db.field_R = -1;
+            SecondaryNodeDequeIterator.field_b[ProgressDialog.field_R] = var2_int;
+            ProgressDialog.field_R = 127 & ProgressDialog.field_R + 1;
+            if (rj.field_g == ProgressDialog.field_R) {
+              ProgressDialog.field_R = -1;
             }
           }
           if (0 <= var2_int) {
@@ -148,7 +148,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
           if (GzipDecompressor.field_c != null) {
-            db.field_R = -1;
+            ProgressDialog.field_R = -1;
           }
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "nf.focusLost(" + (param0 != null ? "{...}" : "null") + ')');

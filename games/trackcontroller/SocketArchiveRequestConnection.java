@@ -164,7 +164,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
                 if (TextHotspotBounds.field_o) {
                 }
               }
-              if (mk.field_c) {
+              if (FullscreenNoticeType.field_c) {
                 ne.field_a.readUnsignedByte(16383);
                 ne.field_a.readUnsignedByte(16383);
                 ne.field_a.readInt((byte) 113);

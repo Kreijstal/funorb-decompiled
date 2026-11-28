@@ -162,7 +162,7 @@ final class AccountRegistrationPanel extends ComponentContainer implements TextH
               discarded$1 = this.submitRegistration((byte) -35);
             }
           } else {
-            UiComponentPart030.performAction1557((byte) -73);
+            ResizableModalDialog.performAction1557((byte) -73);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
@@ -523,9 +523,9 @@ final class AccountRegistrationPanel extends ComponentContainer implements TextH
             }
           }
           if (NetworkArchiveRequestManager.sceneWidgetState0098.integerState0891 != 0) {
-            MixedSupport097.sceneWidgetPart007State0001 = new SceneWidgetPart007(NetworkArchiveRequestManager.sceneWidgetState0098.integerState0892, NetworkArchiveRequestManager.sceneWidgetState0098.integerState0886, NetworkArchiveRequestManager.sceneWidgetState0098.integerState0896, NetworkArchiveRequestManager.sceneWidgetState0098.integerState0915, integerArgument1, MusicTrack.sceneWidgetState0127, MixedSupport121.sceneWidgetState0119, UiComponentPart014.sceneWidgetState0053, MixedSupport125.sceneWidgetState0125, InputAdapter001.sceneWidgetPart003State0001, NameSuggestionsPanel.sceneWidgetState0019, (String) null, 0L);
+            MixedSupport097.sceneWidgetPart007State0001 = new SceneWidgetPart007(NetworkArchiveRequestManager.sceneWidgetState0098.integerState0892, NetworkArchiveRequestManager.sceneWidgetState0098.integerState0886, NetworkArchiveRequestManager.sceneWidgetState0098.integerState0896, NetworkArchiveRequestManager.sceneWidgetState0098.integerState0915, integerArgument1, MusicTrack.sceneWidgetState0127, MixedSupport121.sceneWidgetState0119, FullscreenStatusDialog.sceneWidgetState0053, MixedSupport125.sceneWidgetState0125, InputAdapter001.sceneWidgetPart003State0001, NameSuggestionsPanel.sceneWidgetState0019, (String) null, 0L);
           }
-          mixedSupport056Local8 = UiComponentPart033.computeMixedSupport0561813((byte) 55, ComponentContainer.integerState0377, integerArgument4, SecondaryNodeHashTable.integerState0540);
+          mixedSupport056Local8 = AccountCreationResultPanel.computeMixedSupport0561813((byte) 55, ComponentContainer.integerState0377, integerArgument4, SecondaryNodeHashTable.integerState0540);
           if (mixedSupport056Local8 != null) {
             MixedSupport014.performAction0193(mixedSupport056Local8, false);
           }

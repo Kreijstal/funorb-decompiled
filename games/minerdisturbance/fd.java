@@ -188,13 +188,13 @@ class fd extends ja {
         String var1 = null;
         if (MusicPatchPcmStream.field_B) {
           if (sj.field_h != null) {
-            sj.field_h.s(2121792);
+            sj.field_h.closeDialog(2121792);
           }
           var1 = hn.c(105);
           MidiPcmStream.field_D = new LoginPanel(var1, (String) null, param0, false, false);
           mb.field_b.showDialog(1, de.field_a);
-          de.field_a.a((byte) -127, (UiWidget) (MidiPcmStream.field_D));
-          de.field_a.o(24619);
+          de.field_a.replaceContent((byte) -127, (UiWidget) (MidiPcmStream.field_D));
+          de.field_a.finishResize(24619);
           return;
         }
         throw new IllegalStateException();

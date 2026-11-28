@@ -202,8 +202,8 @@ final class IsaacRandom {
             IsaacRandom.resetStaticState(-124);
           }
           for (var2_int = 0; 6 > var2_int; var2_int++) {
-            if (0 <= wa.field_sb[var2_int]) {
-              wa.field_sb[var2_int] = wa.field_sb[var2_int] - 1;
+            if (0 <= ProgressMessageDialog.field_sb[var2_int]) {
+              ProgressMessageDialog.field_sb[var2_int] = ProgressMessageDialog.field_sb[var2_int] - 1;
             }
           }
           var2_intLifetime1 = 0;

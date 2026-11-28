@@ -16,7 +16,7 @@ final class lg {
         }
         int var3 = -37 % ((36 - param0) / 53);
         if (param1 == 1) {
-          var2 = ii.field_Q;
+          var2 = GuestPlayConfirmationForm.field_Q;
         }
         if (param1 == 2) {
           var2 = v.field_d;

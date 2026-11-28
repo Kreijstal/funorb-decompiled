@@ -379,7 +379,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
                   if (this.field_K) {
                     IterableNodeHashTable.a(-2068);
                   } else {
-                    ek.h(1);
+                    StripedProgressWidget.h(1);
                   }
                 }
               }

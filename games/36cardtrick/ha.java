@@ -122,11 +122,11 @@ final class ha {
               r.a(8, (byte) 127)) {
               hb.field_b = EmailFormatValidator.field_j.readLong(true);
               EmailFormatValidator.field_j.position = 0;
-              jc.a(param4, (byte) -111, param3, sh.field_k, param0);
-              ra.field_b = rk.field_eb;
+              ResizableModalDialog.a(param4, (byte) -111, param3, sh.field_k, param0);
+              ra.field_b = ProgressDialog.field_eb;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (rk.field_eb == ra.field_b &&
+            if (ProgressDialog.field_eb == ra.field_b &&
               r.a(1, (byte) 121)) {
               var6_intLifetime1 = EmailFormatValidator.field_j.readUnsignedByte(34);
               pd.field_l = var6_intLifetime1;

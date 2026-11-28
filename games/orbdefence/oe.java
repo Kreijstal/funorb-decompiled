@@ -166,10 +166,10 @@ final class oe extends DualLinkNode {
         bh.field_c = var8.readUnsignedByte((byte) 90);
         GameAppletShell.field_l = var8.readLong((byte) -89);
         if (DebouncedFieldValidator.field_d == 2) {
-          pc.field_X = var8.readUnsignedShort(98203176);
+          StandardContentDialog.field_X = var8.readUnsignedShort(98203176);
           gb.field_b = var8.readUnsignedMedium((byte) -30);
         } else {
-          pc.field_X = 0;
+          StandardContentDialog.field_X = 0;
           gb.field_b = 0;
         }
         stackIn_9_0 = (var8.readUnsignedByte((byte) 90) != 1) ? 0 : 1;

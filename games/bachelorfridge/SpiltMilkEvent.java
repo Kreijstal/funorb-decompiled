@@ -160,7 +160,7 @@ final class SpiltMilkEvent extends SpecialEvent {
             if (kga.field_c != null &&
               kga.field_c.field_f) {
               lga.c((byte) 112);
-              pja.field_e.showDialog((UiWidget) (new em(pja.field_e, r.field_m)), (byte) 93);
+              pja.field_e.showDialog((UiWidget) (new FullscreenStatusDialog(pja.field_e, r.field_m)), (byte) 93);
             }
             return;
           }

@@ -36,10 +36,10 @@ final class en {
             var3 = (String[]) null;
             en.a((String[]) null, 63);
           }
-          if (bh.field_Z == null) {
+          if (FullscreenStatusDialog.field_Z == null) {
             return;
           }
-          bh.field_Z.field_K.setNameSuggestions((byte) 118, args);
+          FullscreenStatusDialog.field_Z.field_K.setNameSuggestions((byte) 118, args);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

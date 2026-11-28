@@ -242,7 +242,7 @@ final class de {
         if (null != pi.field_d) {
           pi.field_d.b(-65, param1);
         }
-        k.a(param1, param0 ^ 100);
+        ResizableModalDialog.a(param1, param0 ^ 100);
         if (GzipInflater.field_h != null) {
           GzipInflater.field_h.a(false, param1);
         }

@@ -299,7 +299,7 @@ final class e {
           if (param1) {
             e.a(true, (byte) 4);
           }
-          stackIn_3_0 = sp.a(SamplePlaybackStream.createForPlaybackRate(param0, 100, 96), -93);
+          stackIn_3_0 = ResizableModalDialog.a(SamplePlaybackStream.createForPlaybackRate(param0, 100, 96), -93);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

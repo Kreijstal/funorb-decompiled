@@ -293,7 +293,7 @@ final class lc extends ro {
           var33 = rh.a((byte) -122, var32, var4, DebouncedFieldValidator.field_c);
           var1Lifetime2 = var33;
           ModalDialogHost.a(0, dd.field_c.field_x, var33, (byte) -58);
-          hh.field_e = new Sprite[m.field_n.length];
+          FullscreenNoticeType.field_e = new Sprite[m.field_n.length];
           be.field_g = 30;
           var34 = var2;
           for (var9 = 0; var34.length > var9; var9++) {
@@ -319,7 +319,7 @@ final class lc extends ro {
               }
               var35 = new Sprite(60, -var14 + (1 + var15_int));
               var16_ref_t = var35;
-              hh.field_e[var10] = var35;
+              FullscreenNoticeType.field_e[var10] = var35;
               var35.bindAsRenderTarget();
               be.a();
               var17_ref_kh = MouseWheelInput.field_c[var10];
@@ -354,7 +354,7 @@ final class lc extends ro {
                 var16_ref_t = var37;
                 var37.bindAsRenderTarget();
                 var36.drawRotatedAbout(var36.field_s << 3, var36.field_t << 3, var37.field_s << 3, var37.field_t << 3, 0, 2048);
-                hh.field_e[var10] = var37;
+                FullscreenNoticeType.field_e[var10] = var37;
               }
               var38 = rh.a((byte) 111, var1Lifetime2, var16_ref_t, m.field_n[var10]);
               var1Lifetime2 = var38;

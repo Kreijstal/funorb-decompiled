@@ -93,7 +93,7 @@ abstract class GameClientBase extends GameApplet {
           var3 = ol.b(-118) * 1200;
           if (this.field_t ||
             !(MusicPatchPcmStream.e(-35) <= var3) &&
-            !(ll.b(-10365) <= var3)) {
+            !(FullscreenNoticeType.b(-10365) <= var3)) {
             this.field_t = false;
             ob.b(-126);
             ConfirmedEmailAvailabilityValidator.f(10);
@@ -184,10 +184,10 @@ abstract class GameClientBase extends GameApplet {
         }
         if (1 == NameSuggestionsPanel.field_K) {
           if (kf.field_b != 0) {
-            rj.field_f = pe.b(rj.field_c, -1);
+            rj.field_f = ProgressDialog.b(rj.field_c, -1);
           }
           IntrusiveDeque.field_a = ProxySocketConnector.a(false, 1, 88, a.field_a, true);
-          MatchingFieldValidator.field_p = ProxySocketConnector.a(false, 1, -116, qh.field_P, true);
+          MatchingFieldValidator.field_p = ProxySocketConnector.a(false, 1, -116, RegistrationAgreementPane.field_P, true);
           FrameTimer.field_b = ProxySocketConnector.a(false, 1, -20, gh.field_w, true);
           aj.field_f = IntrusiveDeque.field_a;
           FullscreenFocusCanvas.field_g = MatchingFieldValidator.field_p;
@@ -223,7 +223,7 @@ abstract class GameClientBase extends GameApplet {
             stackIn_102_0 = !(qc.field_j);
             stackIn_104_1 = -24;
             stackIn_105_2 = !(qc.field_j);
-            v.$cfr$intArgs$a$b1efba5c64a3(stackIn_102_0, stackIn_104_1, stackIn_105_2, LevelEntity.field_bb);
+            ResizableModalDialog.$cfr$intArgs$a$b1efba5c64a3(stackIn_102_0, stackIn_104_1, stackIn_105_2, LevelEntity.field_bb);
           }
           if (cd.field_h) {
             hf.a((byte) -116);
@@ -232,7 +232,7 @@ abstract class GameClientBase extends GameApplet {
             o.field_k = IntrusiveDeque.b(-944);
             ja.field_a = gb.b(38);
           }
-          v.a((byte) 127, o.field_k, ja.field_a, FrameTimer.field_b);
+          ResizableModalDialog.a((byte) 127, o.field_k, ja.field_a, FrameTimer.field_b);
           FrameTimer.field_b = null;
           MatchingFieldValidator.field_p = null;
           IntrusiveDeque.field_a = null;
@@ -242,7 +242,7 @@ abstract class GameClientBase extends GameApplet {
         }
         if (NameSuggestionsPanel.field_K == 10) {
           if (kf.field_b != 0) {
-            ClientException.field_e = pe.b(kk.field_j, -1);
+            ClientException.field_e = ProgressDialog.b(kk.field_j, -1);
           }
           NameSuggestionsPanel.field_K = 11;
         }
@@ -428,7 +428,7 @@ abstract class GameClientBase extends GameApplet {
         gh.field_w = param1;
         rj.field_c = param5;
         a.field_a = param6;
-        qh.field_P = param2;
+        RegistrationAgreementPane.field_P = param2;
         this.m(256);
         ja.a((byte) 123);
     }
@@ -466,7 +466,7 @@ abstract class GameClientBase extends GameApplet {
           }
           return var2;
         }
-        if (!ll.field_i) {
+        if (!FullscreenNoticeType.field_i) {
           this.redirectToErrorPage((byte) -108, "reconnect");
         }
         ConfirmedEmailAvailabilityValidator.f(10);
@@ -583,7 +583,7 @@ abstract class GameClientBase extends GameApplet {
             dk.field_s.d(25, 17);
           }
           if (11 == var4) {
-            ek.a((byte) 56, gi.b(12476));
+            StripedProgressWidget.a((byte) 56, gi.b(12476));
           }
           if (var4 == 12) {
             ob.a(t.d(84), gi.b(12476), (byte) 43);
@@ -714,7 +714,7 @@ abstract class GameClientBase extends GameApplet {
         Object stackIn_10_0;
         boolean stackIn_10_3;
         var3 = TorChallenge.field_F ? 1 : 0;
-        if (ih.f((byte) -123)) {
+        if (GuestPlayConfirmationForm.f((byte) -123)) {
           stackIn_9_1 = false;
           stackIn_9_2 = -42;
           if (gi.field_d == null) {
@@ -778,7 +778,7 @@ abstract class GameClientBase extends GameApplet {
             ah.a((byte) -86, 5);
           }
           if (ki.field_a[5]) {
-            ek.a(-26445, 6);
+            StripedProgressWidget.a(-26445, 6);
           }
           if (ki.field_a[6]) {
             e.a(param0 - 111, 7);

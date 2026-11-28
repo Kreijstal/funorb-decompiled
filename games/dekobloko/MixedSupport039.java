@@ -122,7 +122,7 @@ final class MixedSupport039 {
             if (MixedSupport020.fullscreenCanvasState0001 != null &&
               MixedSupport020.fullscreenCanvasState0001.booleanState0156) {
               MixedSupport118.performAction1548(false);
-              MixedSupport124.uiComponentPart016State0003.showDialog((byte) -105, new UiComponentPart014(MixedSupport124.uiComponentPart016State0003, MixedSupport071.mixedSupport080State0002));
+              MixedSupport124.uiComponentPart016State0003.showDialog((byte) -105, new FullscreenStatusDialog(MixedSupport124.uiComponentPart016State0003, MixedSupport071.mixedSupport080State0002));
             }
             return;
           }

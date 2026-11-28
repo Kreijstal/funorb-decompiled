@@ -165,7 +165,7 @@ final class ProxySocketConnector extends SocketConnector {
           ha.field_z = kf.mouseX;
         }
         if (GameApplet.field_k &&
-          rk.field_Y == fe.field_L) {
+          ProgressDialog.field_Y == fe.field_L) {
           fe.field_L = 0;
           GameApplet.field_k = false;
         }

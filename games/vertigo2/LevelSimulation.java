@@ -1118,7 +1118,7 @@ final class LevelSimulation {
               if (this.shouldSuppressPlayerInput(5)) {
                 var10_ref_wo.updateMovementInput((byte) 68, 0);
               } else {
-                var10_ref_wo.updateMovementInput((byte) 86, qm.a(var11Lifetime2, (byte) -115));
+                var10_ref_wo.updateMovementInput((byte) 86, GuestPlayConfirmationForm.a(var11Lifetime2, (byte) -115));
                 if (he.a((byte) -100, var11Lifetime2)) {
                   var10_ref_wo.tryUseDynamite((byte) -122);
                 }

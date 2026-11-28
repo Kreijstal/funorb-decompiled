@@ -176,7 +176,7 @@ final class ne {
               ImageProducerRasterBuffer.field_o.drawString(var6, var8Lifetime1, da.field_a + var1_int, var5, -1);
               var1_int = var1_int + (hb.field_n + vf.field_b + ud.field_a);
             } else {
-              fe.field_a.drawString(var6, var8Lifetime1, nf.field_M + var1_int, var5, -1);
+              fe.field_a.drawString(var6, var8Lifetime1, ResizableModalDialog.field_M + var1_int, var5, -1);
               var1_int = var1_int + gi.field_a;
             }
           }
@@ -211,7 +211,7 @@ final class ne {
           ne.a((byte) -120);
         }
         if (null != vl.field_f) {
-          vl.field_f.c(true);
+          vl.field_f.freezeNormalProgressAnimation(true);
         }
         vb.g(81);
     }

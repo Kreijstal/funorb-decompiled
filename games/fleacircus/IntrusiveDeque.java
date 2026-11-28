@@ -105,7 +105,7 @@ final class IntrusiveDeque {
           var10 = var9;
           var3 = var10.readUnsignedByte(false);
           var10.k(8);
-          fc.field_a = fleas.a(var10, -6383);
+          FullscreenNoticeType.field_a = fleas.a(var10, -6383);
           NameSuggestionsPanel.field_F = new si[var3];
           gm.field_kb = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {

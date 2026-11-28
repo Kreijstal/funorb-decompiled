@@ -112,11 +112,11 @@ final class hd {
 
     final static kh[] b(byte param0) {
         if (param0 == 87) {
-          return new kh[]{aa.field_d, of.field_f, qe.field_x};
+          return new kh[]{aa.field_d, of.field_f, StripedProgressWidget.field_x};
         }
         String var2 = (String) null;
         hd.a('￦', (byte) -39, (String) null, (String) null);
-        return new kh[]{aa.field_d, of.field_f, qe.field_x};
+        return new kh[]{aa.field_d, of.field_f, StripedProgressWidget.field_x};
     }
 
     final static void a(byte param0) {
@@ -217,7 +217,7 @@ final class hd {
                 stackIn_46_0 = DiskCacheWorker.field_f;
               }
               var9 = stackIn_46_0;
-              var1_int = var1_int + ee.field_D;
+              var1_int = var1_int + DialogMessagePane.field_D;
               if (var9 != null) {
                 var9.a(var7Lifetime1 + (EmailFormatValidator.field_m << 1), var1_int, -EmailFormatValidator.field_m + var8Lifetime1, (byte) -52, hi.field_c + (jl.field_o << 1));
               }
@@ -228,7 +228,7 @@ final class hd {
               var1_int = var1_int + SingleChildWidgetContainer.field_x;
             } else {
               tb.field_c.drawString(var6, var8Lifetime1, var1_int + AchievementUnlockEvent.field_k, var5, -1);
-              var1_int = var1_int + (hi.field_c + (ee.field_D + jl.field_o));
+              var1_int = var1_int + (hi.field_c + (DialogMessagePane.field_D + jl.field_o));
             }
           }
           return;

@@ -94,7 +94,7 @@ final class GameDomainSupport001 {
         int integerLocal40;
         integerLocal9 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          indexedSpriteArrayLocal11 = UiComponentPart030.computeIndexedSpriteArray1554("crowns", resourceArchiveArgument2, false, "lobby");
+          indexedSpriteArrayLocal11 = ResizableModalDialog.computeIndexedSpriteArray1554("crowns", resourceArchiveArgument2, false, "lobby");
           indexedSpriteArrayLocal5 = indexedSpriteArrayLocal11;
           KeyboardInputHandler.integerState0530 = indexedSpriteArrayLocal11.length;
           if (indexedSpriteArrayArgument3 != null) {
@@ -165,9 +165,9 @@ final class GameDomainSupport001 {
           rgbSpriteArrayLocal34 = RenderingSupport002.computeRgbSpriteArray0239((byte) 119, MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "tab_active"));
           MixedSupport121.sceneWidgetState0119 = new SceneWidget(0L, sceneWidgetLocal28);
           MixedSupport121.sceneWidgetState0119.rgbSpriteArrayState0033 = rgbSpriteArrayLocal34;
-          UiComponentPart014.sceneWidgetState0053 = new SceneWidget(0L, (SceneWidget) null);
-          UiComponentPart014.sceneWidgetState0053.rgbSpriteState0070 = DropTargetWidgetContainer.computeRgbSprite0704(resourceArchiveArgument2, "closebutton", "lobby", 8192);
-          UiComponentPart014.sceneWidgetState0053.rgbSpriteState0067 = DropTargetWidgetContainer.computeRgbSprite0704(resourceArchiveArgument2, "closebutton_mouseover", "lobby", 8192);
+          FullscreenStatusDialog.sceneWidgetState0053 = new SceneWidget(0L, (SceneWidget) null);
+          FullscreenStatusDialog.sceneWidgetState0053.rgbSpriteState0070 = DropTargetWidgetContainer.computeRgbSprite0704(resourceArchiveArgument2, "closebutton", "lobby", 8192);
+          FullscreenStatusDialog.sceneWidgetState0053.rgbSpriteState0067 = DropTargetWidgetContainer.computeRgbSprite0704(resourceArchiveArgument2, "closebutton_mouseover", "lobby", 8192);
           MixedSupport057.sceneWidgetState0051 = new SceneWidget(0L, sceneWidgetLocal28);
           MixedSupport057.sceneWidgetState0051.rgbSpriteArrayState0033 = RenderingSupport012.computeRgbSpriteArray1346(true, 40, true, 3815994, 2039583, -26198);
           MixedSupport039.sceneWidgetState0029 = new SceneWidget(0L, sceneWidgetLocal30);
@@ -240,7 +240,7 @@ final class GameDomainSupport001 {
           ComponentDecorator.sceneWidgetState0077.integerState0902 = 1;
           ComponentDecorator.sceneWidgetState0077.integerState0884 = 1;
           MixedSupport078.sceneWidgetState0076 = new SceneWidget(0L, ComponentDecorator.sceneWidgetState0077);
-          UiComponentPart012.sceneWidgetState0042 = new SceneWidget(0L, ComponentDecorator.sceneWidgetState0077);
+          ProgressMessageDialog.sceneWidgetState0042 = new SceneWidget(0L, ComponentDecorator.sceneWidgetState0077);
           MixedSupport053.sceneWidgetState0047 = new SceneWidget(0L, MixedSupport021.sceneWidgetState0015);
           NetworkSupport008.sceneWidgetState0094 = new SceneWidget(0L, ComponentDecorator.sceneWidgetState0077);
           MixedSupport108.sceneWidgetState0104 = new SceneWidget(0L, ComponentDecorator.sceneWidgetState0077);
@@ -261,9 +261,9 @@ final class GameDomainSupport001 {
           MixedSupport078.sceneWidgetState0076.rgbSpriteArrayState0033 = RenderingSupport002.computeRgbSpriteArray0239((byte) 125, MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "greenbutton"));
           MixedSupport078.sceneWidgetState0076.rgbSpriteArrayState0035 = RenderingSupport002.computeRgbSpriteArray0239((byte) 114, MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "greenbutton_mouseover"));
           MixedSupport078.sceneWidgetState0076.rgbSpriteArrayState0036 = RenderingSupport002.computeRgbSpriteArray0239((byte) 123, MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "greenbutton_mouseheld"));
-          UiComponentPart012.sceneWidgetState0042.rgbSpriteArrayState0033 = RenderingSupport002.computeRgbSpriteArray0239((byte) 113, MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "redbutton"));
-          UiComponentPart012.sceneWidgetState0042.rgbSpriteArrayState0035 = RenderingSupport002.computeRgbSpriteArray0239((byte) 113, MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "redbutton_mouseover"));
-          UiComponentPart012.sceneWidgetState0042.rgbSpriteArrayState0036 = RenderingSupport002.computeRgbSpriteArray0239((byte) 123, MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "redbutton_mouseheld"));
+          ProgressMessageDialog.sceneWidgetState0042.rgbSpriteArrayState0033 = RenderingSupport002.computeRgbSpriteArray0239((byte) 113, MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "redbutton"));
+          ProgressMessageDialog.sceneWidgetState0042.rgbSpriteArrayState0035 = RenderingSupport002.computeRgbSpriteArray0239((byte) 113, MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "redbutton_mouseover"));
+          ProgressMessageDialog.sceneWidgetState0042.rgbSpriteArrayState0036 = RenderingSupport002.computeRgbSpriteArray0239((byte) 123, MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "redbutton_mouseheld"));
           MixedSupport053.sceneWidgetState0047.rgbSpriteArrayState0033 = RenderingSupport002.computeRgbSpriteArray0239((byte) 119, MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "backbutton"));
           MixedSupport053.sceneWidgetState0047.rgbSpriteArrayState0035 = RenderingSupport002.computeRgbSpriteArray0239((byte) 117, MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "backbutton_mouseover"));
           MixedSupport053.sceneWidgetState0047.rgbSpriteArrayState0036 = RenderingSupport002.computeRgbSpriteArray0239((byte) 120, MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "backbutton_mouseheld"));

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class u {
-    static qf field_d;
+    static FullscreenNoticeType field_d;
     static Sprite[] field_e;
     static IntrusiveDeque field_c;
     static int field_g;
@@ -11,7 +11,7 @@ final class u {
     static String field_b;
 
     final static void a(String param0, int param1) {
-        System.out.println("Error: " + qf.a(param0, 0, "%0a", "\n"));
+        System.out.println("Error: " + FullscreenNoticeType.a(param0, 0, "%0a", "\n"));
         if (param1 <= 106) {
           u.clearStaticReferences(11);
         }
@@ -30,7 +30,7 @@ final class u {
     }
 
     static {
-        field_d = new qf();
+        field_d = new FullscreenNoticeType();
         field_c = new IntrusiveDeque();
         field_f = "Unpacking levels";
         field_b = "Shielding: 20";

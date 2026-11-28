@@ -18,7 +18,7 @@ final class hc {
           }
           me.field_h = param2;
           DualLinkNode.field_j = param0;
-          nf.a(param3, ab.field_p, -119);
+          FullscreenStatusDialog.a(param3, ab.field_p, -119);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "hc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

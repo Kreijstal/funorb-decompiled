@@ -34,7 +34,7 @@ final class ki {
         var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           var10 = (CharSequence) ((Object) param2);
-          var3_int = tf.a(var10, param1, 16752);
+          var3_int = ProgressDialog.a(var10, param1, 16752);
           if (param0 > -79) {
             field_b = (he) null;
           }

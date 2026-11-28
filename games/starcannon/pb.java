@@ -7,7 +7,7 @@ final class pb {
     final static void b(int param0) {
         int var1 = -66 % ((param0 + 11) / 59);
         BufferedSocket.field_g = new AccountRegistrationPanel();
-        t.field_h.c(20317, BufferedSocket.field_g);
+        t.field_h.replaceContent(20317, BufferedSocket.field_g);
     }
 
     final static fb a(int param0, boolean param1) {

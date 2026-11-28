@@ -81,22 +81,22 @@ final class PlayerNameAvailabilityValidator extends TextFieldValidator {
         if (integerArgument1 != 0) {
           String stringLocal1 = (String) null;
           PlayerNameAvailabilityValidator.replaceCharacter('_', (String) null, (String) null, -55);
-          if (!UiComponentPart023.computeBoolean1242(-30146)) {
+          if (!StandardContentDialog.computeBoolean1242(-30146)) {
             SocketFactory.cipherPacketBufferState0002.performAction1641(9, -4);
             MixedSupport083.booleanState0118 = true;
             AlphaWidgetContainer.integerState0188 = UiComponentPart009.integerState0149;
             return;
           }
-          UiComponentPart033.performAction1814(0, -80, true, 2, booleanArgument2, MixedSupport009.stringState0041);
+          AccountCreationResultPanel.performAction1814(0, -80, true, 2, booleanArgument2, MixedSupport009.stringState0041);
           return;
         }
-        if (!UiComponentPart023.computeBoolean1242(-30146)) {
+        if (!StandardContentDialog.computeBoolean1242(-30146)) {
           SocketFactory.cipherPacketBufferState0002.performAction1641(9, -4);
           MixedSupport083.booleanState0118 = true;
           AlphaWidgetContainer.integerState0188 = UiComponentPart009.integerState0149;
           return;
         }
-        UiComponentPart033.performAction1814(0, -80, true, 2, booleanArgument2, MixedSupport009.stringState0041);
+        AccountCreationResultPanel.performAction1814(0, -80, true, 2, booleanArgument2, MixedSupport009.stringState0041);
     }
 
     final String getValidationMessage(String stringArgument1, byte byteArgument2) {
@@ -294,7 +294,7 @@ final class PlayerNameAvailabilityValidator extends TextFieldValidator {
           }
           MatchingFieldValidator.writeEncryptedBuffer(AnimatedTileRegion.bigIntegerState0004, RichTextLayout.bigIntegerState0001, SocketFactory.cipherPacketBufferState0002, MixedSupport140.packetBufferState0008, 0);
           SocketFactory.cipherPacketBufferState0002.writeLengthShort(true, SocketFactory.cipherPacketBufferState0002.position - integerLocal5);
-          UiComponentPart033.performAction1818(4792, -1);
+          AccountCreationResultPanel.performAction1818(4792, -1);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal4 = caughtParameterLocal9;

@@ -68,25 +68,25 @@ final class pc {
         Object var2 = null;
         Object var2Lifetime1;
         if (BirthDateValidator.field_l != null) {
-          BirthDateValidator.field_l.h((byte) 125);
+          BirthDateValidator.field_l.closeDialog((byte) 125);
           MatchSession.field_m = new DisplayNameSelectionPanel();
           if (param0 < 50) {
             var2 = (Object) null;
             pc.extractBytes((byte) 93, true, (Object) null);
-            n.field_b.a(false, MatchSession.field_m);
+            n.field_b.replaceContent(false, MatchSession.field_m);
             return;
           }
-          n.field_b.a(false, MatchSession.field_m);
+          n.field_b.replaceContent(false, MatchSession.field_m);
           return;
         }
         MatchSession.field_m = new DisplayNameSelectionPanel();
         if (param0 >= 50) {
-          n.field_b.a(false, MatchSession.field_m);
+          n.field_b.replaceContent(false, MatchSession.field_m);
           return;
         }
         var2Lifetime1 = (Object) null;
         pc.extractBytes((byte) 93, true, (Object) null);
-        n.field_b.a(false, MatchSession.field_m);
+        n.field_b.replaceContent(false, MatchSession.field_m);
     }
 
     final static void clearStaticReferences(byte param0) {

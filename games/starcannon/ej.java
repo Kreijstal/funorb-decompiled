@@ -122,7 +122,7 @@ final class ej extends mi {
           return;
         }
         ne.a(true, lh.field_D, wj.field_c, param0 + 230);
-        vj.field_V = true;
+        FullscreenStatusDialog.field_V = true;
     }
 
     ej(Object param0, int param1) {

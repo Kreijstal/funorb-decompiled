@@ -12,13 +12,13 @@ final class hl {
     final static void a(byte param0, String param1, String param2) {
         try {
           if (nb.field_b != null) {
-            nb.field_b.h((byte) -126);
+            nb.field_b.closeDialog((byte) -126);
           }
           mb.field_s = new LoginPanel(param2, param1, false, true, true);
           if (param0 != -93) {
             field_e = (String) null;
           }
-          bj.field_f.a(mb.field_s, param0 + 12);
+          bj.field_f.replaceContent(mb.field_s, param0 + 12);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "hl.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

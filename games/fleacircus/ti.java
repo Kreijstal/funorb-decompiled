@@ -13,7 +13,7 @@ final class ti {
           return AwtRasterBuffer.field_c.c(-16955);
         }
         int var1 = 76 % ((param0 + 86) / 33);
-        if (wi.field_f != ui.field_kb) {
+        if (wi.field_f != StandardContentDialog.field_kb) {
           return aa.field_s;
         }
         return AwtRasterBuffer.field_c.c(-16955);

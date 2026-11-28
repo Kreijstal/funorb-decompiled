@@ -21,7 +21,7 @@ final class jj {
     int[][] field_g;
     int field_r;
     int[][] field_I;
-    static di field_k;
+    static FullscreenNoticeType field_k;
     int field_d;
     int[] field_H;
     int[] field_A;
@@ -330,6 +330,6 @@ final class jj {
     }
 
     static {
-        field_k = new di();
+        field_k = new FullscreenNoticeType();
     }
 }

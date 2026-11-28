@@ -686,7 +686,7 @@ class PacketBuffer extends IntrusiveNode {
           }
           var4_int = param0.getGroupIdByName(param1, (byte) -89);
           var5 = param0.getFileIdByName(param3, -27964, var4_int);
-          stackIn_4_0 = oc.a(param0, var5, var4_int, 20);
+          stackIn_4_0 = FullscreenNoticeType.a(param0, var5, var4_int, 20);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

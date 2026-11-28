@@ -9,7 +9,7 @@ final class id implements Serializable {
     int field_d;
     int field_a;
     private qg[] field_x;
-    static jf field_s;
+    static FullscreenNoticeType field_s;
     int field_n;
     int[] field_y;
     boolean[] field_r;
@@ -450,7 +450,7 @@ final class id implements Serializable {
     }
 
     static {
-        field_s = new jf();
+        field_s = new FullscreenNoticeType();
         field_l = "Connection restored.";
         field_b = "Find the rocket launcher, then use it to destroy the turrets blocking the lift.";
     }

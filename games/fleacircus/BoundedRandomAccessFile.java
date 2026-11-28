@@ -73,7 +73,7 @@ final class BoundedRandomAccessFile {
               if (ud.field_c) {
                 param0 = BufferedRandomAccessFile.field_e;
               }
-              ok.field_x.a((byte) -97, param1, param0);
+              ok.field_x.showResult((byte) -97, param1, param0);
             }
             if (param1 != 256) {
               if (param1 == 10) {

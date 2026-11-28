@@ -42,7 +42,7 @@ final class ena extends pu {
           SoftwareRasterizer.fillRectangle(0, 0, 39, 39, 16700762);
           nk.a((ArgbSprite) (dc.field_y[var2_int])).drawDownscaledAreaAveraged(0, 0, 39, 39);
         }
-        hga.field_U.a((byte) -10);
+        ProgressDialog.field_U.a((byte) -10);
         kka.field_i = new Sprite[dc.field_y.length];
         for (var2_intLifetime1 = 0; kka.field_i.length > var2_intLifetime1; var2_intLifetime1++) {
           kka.field_i[var2_intLifetime1] = new Sprite(39, 39);
@@ -50,7 +50,7 @@ final class ena extends pu {
           SoftwareRasterizer.fillRectangle(0, 0, 39, 39, 12688481);
           nk.a((ArgbSprite) (dc.field_y[var2_intLifetime1])).drawDownscaledAreaAveraged(0, 0, 39, 39);
         }
-        hga.field_U.a((byte) 114);
+        ProgressDialog.field_U.a((byte) 114);
         hk.a("basic_frame", param1, param0 + 152, "basic");
         wd.field_w = hk.a("button_frame", param1, -54, "basic");
         RageSpecial.field_p = hk.a("button_frame_hover", param1, -68, "basic");
@@ -75,7 +75,7 @@ final class ena extends pu {
           hp.field_b[var2_intLifetime2] = new Sprite(nia.field_l[var2_intLifetime2].field_q, nia.field_l[var2_intLifetime2].field_p);
           hp.field_b[var2_intLifetime2].bindAsRenderTarget();
           FlyEvent.a(5587456, nia.field_l[var2_intLifetime2], (byte) -116, 0, 0);
-          hga.field_U.a((byte) -41);
+          ProgressDialog.field_U.a((byte) -41);
         }
         ZombiesAnimation.field_y = hca.a("basic", param1, -79, "shop_cost_left");
         wja.field_l = hca.a("basic", param1, param0 ^ -76, "shop_cost_right");

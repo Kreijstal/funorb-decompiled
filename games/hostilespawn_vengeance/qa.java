@@ -345,7 +345,7 @@ final class qa {
           if (param1 > -19) {
             field_b = -46;
           }
-          AccountServiceResult.field_d = new dg(im.field_e, pe.field_eb, param2, MatchingFieldValidator.field_o, DirectByteStorage.field_i);
+          AccountServiceResult.field_d = new ProgressMessageDialog(im.field_e, ProgressDialog.field_eb, param2, MatchingFieldValidator.field_o, DirectByteStorage.field_i);
           im.field_e.showDialog(AccountServiceResult.field_d, 101);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "qa.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

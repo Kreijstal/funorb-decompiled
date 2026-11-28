@@ -82,7 +82,7 @@ final class pi {
             var9 = 0;
             var10 = 0;
             while (var8 > var9) {
-              var11 = vn.field_Ab[var9];
+              var11 = ProgressMessageDialog.field_Ab[var9];
               var6[0][var10] = ag.field_d[var11];
               var7[0][var10 * 4] = hg.field_d[var11];
               var7[0][1 + 4 * var10] = BufferedSocket.field_e[var11];
@@ -100,7 +100,7 @@ final class pi {
             var14 = 0;
             var10Lifetime1 = var14;
             while (var9Lifetime1 < var8) {
-              var11Lifetime1 = vn.field_Ab[var9Lifetime1 + var5];
+              var11Lifetime1 = ProgressMessageDialog.field_Ab[var9Lifetime1 + var5];
               var6[1][var14] = ag.field_d[var11Lifetime1];
               var7[1][4 * var14] = hg.field_d[var11Lifetime1];
               var7[1][1 + 4 * var14] = BufferedSocket.field_e[var11Lifetime1];

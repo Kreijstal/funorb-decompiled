@@ -290,7 +290,7 @@ final class BufferedSocket implements Runnable {
 
     final static void a(int param0, int param1, RgbSprite[] param2, byte param3) {
         try {
-          ia.field_a = new gk(param2);
+          FullscreenNoticeType.field_a = new gk(param2);
           if (param3 > -65) {
             BufferedSocket.clearStaticReferences(-58);
           }

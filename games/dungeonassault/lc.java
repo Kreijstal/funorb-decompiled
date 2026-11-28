@@ -427,7 +427,7 @@ final class lc {
         RuntimeException var5 = null;
         long var6 = 0L;
         PcmSample var8 = null;
-        jp var9 = null;
+        VorbisSample var9 = null;
         PcmSample var8Lifetime1;
         try {
           var5_int = param1 ^ (param2 >>> 12 | (param2 & -268431361) << 4);
@@ -442,19 +442,19 @@ final class lc {
             param3[0] <= 0) {
             return null;
           }
-          var9 = (jp) (this.field_a.a(var6, 8));
+          var9 = (VorbisSample) (this.field_a.a(var6, 8));
           if (param0 >= -101) {
             field_g = (String) null;
           }
           if (var9 == null) {
-            var9 = jp.a(this.field_b, param2, param1);
+            var9 = VorbisSample.load(this.field_b, param2, param1);
             if (var9 == null) {
               stackIn_13_0 = null;
               return (PcmSample) (stackIn_13_0);
             }
             this.field_a.a(var9, 12460, var6);
           }
-          var8Lifetime1 = var9.a(param3);
+          var8Lifetime1 = var9.decodeToPcm(param3);
           if (var8Lifetime1 == null) {
             return null;
           }

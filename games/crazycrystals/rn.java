@@ -8,7 +8,7 @@ final class rn extends rd {
     static ModelMesh[] field_o;
     private int field_m;
     static PcmSample field_p;
-    static bf field_r;
+    static FullscreenNoticeType field_r;
     static String field_q;
     static BitmapFont field_k;
 
@@ -207,6 +207,6 @@ final class rn extends rd {
           field_j[var0] = 198149 * var0;
         }
         field_q = null;
-        field_r = new bf();
+        field_r = new FullscreenNoticeType();
     }
 }

@@ -69,7 +69,7 @@ final class ri implements WidgetRenderer {
             } else {
               var10 = var10 + (-var8 + param4.field_x);
             }
-            ci.a(var7 + 4, 2 + var10, var8, var9 - 2, (byte) 125);
+            ProgressMessageDialog.a(var7 + 4, 2 + var10, var8, var9 - 2, (byte) 125);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

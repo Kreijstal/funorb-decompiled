@@ -127,7 +127,7 @@ final class nc {
         var0 = var15;
         while (10 >= var15) {
             var1 = (-1 + var15) * 8;
-            field_g[var15] = hd.a(hd.a(sk.a(field_d[6][6 + var1], 65280L), hd.a(sk.a(field_d[5][5 + var1], 16711680L), hd.a(hd.a(hd.a(sk.a(280375465082880L, field_d[2][var1 + 2]), hd.a(sk.a(71776119061217280L, field_d[1][1 + var1]), sk.a(-72057594037927936L, field_d[0][var1]))), sk.a(1095216660480L, field_d[3][var1 + 3])), sk.a(field_d[4][4 + var1], 4278190080L)))), sk.a(field_d[7][var1 + 7], 255L));
+            field_g[var15] = hd.a(hd.a(DialogMessagePane.a(field_d[6][6 + var1], 65280L), hd.a(DialogMessagePane.a(field_d[5][5 + var1], 16711680L), hd.a(hd.a(hd.a(DialogMessagePane.a(280375465082880L, field_d[2][var1 + 2]), hd.a(DialogMessagePane.a(71776119061217280L, field_d[1][1 + var1]), DialogMessagePane.a(-72057594037927936L, field_d[0][var1]))), DialogMessagePane.a(1095216660480L, field_d[3][var1 + 3])), DialogMessagePane.a(field_d[4][4 + var1], 4278190080L)))), DialogMessagePane.a(field_d[7][var1 + 7], 255L));
             var15++;
         }
         field_a = "Resume Game";

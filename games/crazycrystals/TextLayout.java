@@ -86,9 +86,9 @@ abstract class TextLayout {
           PasswordValidator.field_q = PasswordValidator.field_q + (var2_intLifetime1 >> 6);
           of.field_D = of.field_D + (param1.readUnsignedByte(255) << 7);
           var2_intLifetime2 = param1.readUnsignedByte(param0 ^ -31305);
-          jd.field_I = var2_intLifetime2 << 16 & 65536;
+          DialogMessagePane.field_I = var2_intLifetime2 << 16 & 65536;
           of.field_D = of.field_D + (var2_intLifetime2 >> 1);
-          jd.field_I = jd.field_I + param1.readUnsignedShort((byte) -7);
+          DialogMessagePane.field_I = DialogMessagePane.field_I + param1.readUnsignedShort((byte) -7);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "tb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -309,12 +309,12 @@ abstract class TextLayout {
             var3 = sn.field_a[DefaultTextWidgetRenderer.field_l.field_c];
             if (var3 == 2 ||
               var3 == 5) {
-              gn.f(false);
+              FullscreenStatusDialog.f(false);
             }
           } else {
             if (var2 != 0 &&
               am.field_g != 2) {
-              gn.f(false);
+              FullscreenStatusDialog.f(false);
             }
           }
           if (0 == var3 &&

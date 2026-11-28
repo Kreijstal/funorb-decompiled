@@ -9,14 +9,14 @@ final class aq {
         BitPacketBuffer var2 = null;
         BitPacketBuffer var2Lifetime1;
         if (param1 >= 42) {
-          var2 = sja.field_fb;
+          var2 = StandardContentDialog.field_fb;
           var2.writeCipheredByte(param0, (byte) 115);
           var2.writeByte(1, 0);
           var2.writeByte(0, 0);
           return;
         }
         aq.a(121, (byte) 73);
-        var2Lifetime1 = sja.field_fb;
+        var2Lifetime1 = StandardContentDialog.field_fb;
         var2Lifetime1.writeCipheredByte(param0, (byte) 115);
         var2Lifetime1.writeByte(1, 0);
         var2Lifetime1.writeByte(0, 0);

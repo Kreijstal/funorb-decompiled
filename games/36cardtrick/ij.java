@@ -13,7 +13,7 @@ final class ij {
     static vg field_f;
 
     final static String a(byte param0) {
-        if (jc.field_P == hh.field_g) {
+        if (ResizableModalDialog.field_P == hh.field_g) {
           return ji.field_b;
         }
         if (hh.field_g == DirectByteArrayStore.field_d) {
@@ -23,11 +23,11 @@ final class ij {
           return dj.field_e;
         }
         if (param0 > 109) {
-          return ng.field_y;
+          return StripedProgressWidget.field_y;
         }
         java.awt.Component var2 = (java.awt.Component) null;
         ij.a(-89, (java.awt.Component) null, 47, 123);
-        return ng.field_y;
+        return StripedProgressWidget.field_y;
     }
 
     final static AwtRasterBuffer a(int param0, java.awt.Component param1, int param2, int param3) {

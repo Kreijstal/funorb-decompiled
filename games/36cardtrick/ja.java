@@ -11,7 +11,7 @@ final class ja {
     private pg field_f;
 
     final static String a(int param0) {
-        if (hh.field_g == jc.field_P) {
+        if (hh.field_g == ResizableModalDialog.field_P) {
           return lh.field_c;
         }
         if (!wh.field_a.a(640)) {
@@ -21,10 +21,10 @@ final class ja {
           return wh.field_a.d(640);
         }
         if (param0 == -7705) {
-          return ng.field_y;
+          return StripedProgressWidget.field_y;
         }
         ja.clearStaticReferences((byte) -105);
-        return ng.field_y;
+        return StripedProgressWidget.field_y;
     }
 
     public static void clearStaticReferences(byte param0) {

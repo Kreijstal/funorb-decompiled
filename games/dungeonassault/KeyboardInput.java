@@ -54,7 +54,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               oh.isSupportedCp1252KeyCharacter(-161, (char) var2_int)) {
               var3 = 127 & ka.field_c + 1;
               if (var3 != je.field_i) {
-                jk.field_Db[ka.field_c] = -1;
+                StandardContentDialog.field_Db[ka.field_c] = -1;
                 ClientException.field_a[ka.field_c] = (char)var2_int;
                 ka.field_c = var3;
               }
@@ -126,7 +126,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         RuntimeException var2 = null;
         try {
           if (null != NetworkGameClient.field_C) {
-            ia.field_M = -1;
+            GuestPlayConfirmationForm.field_M = -1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -160,12 +160,12 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             } else {
               var2_int = -1;
             }
-            if (0 <= ia.field_M &&
+            if (0 <= GuestPlayConfirmationForm.field_M &&
               var2_int >= 0) {
-              RaiderRecruitmentScreen.field_r[ia.field_M] = ~var2_int;
-              ia.field_M = 127 & 1 + ia.field_M;
-              if (dl.field_b == ia.field_M) {
-                ia.field_M = -1;
+              RaiderRecruitmentScreen.field_r[GuestPlayConfirmationForm.field_M] = ~var2_int;
+              GuestPlayConfirmationForm.field_M = 127 & 1 + GuestPlayConfirmationForm.field_M;
+              if (dl.field_b == GuestPlayConfirmationForm.field_M) {
+                GuestPlayConfirmationForm.field_M = -1;
               }
             }
           }
@@ -309,18 +309,18 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             } else {
               var2_int = -1;
             }
-            if (0 <= ia.field_M &&
+            if (0 <= GuestPlayConfirmationForm.field_M &&
               var2_int >= 0) {
-              RaiderRecruitmentScreen.field_r[ia.field_M] = var2_int;
-              ia.field_M = 1 + ia.field_M & 127;
-              if (dl.field_b == ia.field_M) {
-                ia.field_M = -1;
+              RaiderRecruitmentScreen.field_r[GuestPlayConfirmationForm.field_M] = var2_int;
+              GuestPlayConfirmationForm.field_M = 1 + GuestPlayConfirmationForm.field_M & 127;
+              if (dl.field_b == GuestPlayConfirmationForm.field_M) {
+                GuestPlayConfirmationForm.field_M = -1;
               }
             }
             if (var2_int >= 0) {
               var3 = 127 & 1 + ka.field_c;
               if (var3 != je.field_i) {
-                jk.field_Db[ka.field_c] = var2_int;
+                StandardContentDialog.field_Db[ka.field_c] = var2_int;
                 ClientException.field_a[ka.field_c] = (char)0;
                 ka.field_c = var3;
               }

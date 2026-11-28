@@ -34,7 +34,7 @@ class ef extends kc {
 
     final static int a(byte param0) {
         int var1 = -20 / ((-69 - param0) / 49);
-        return bm.field_K - MidiPcmStream.field_M;
+        return DialogMessagePane.field_K - MidiPcmStream.field_M;
     }
 
     final static void a(sg param0, byte param1) {
@@ -56,16 +56,16 @@ class ef extends kc {
         var5 = fleas.field_A ? 1 : 0;
         try {
           for (var2_int = 0; 3 > var2_int; var2_int++) {
-            bd.field_ob[var2_int] = 0;
+            ProgressMessageDialog.field_ob[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < qb.field_a; var2_intLifetime1++) {
             if (~param0.field_j == ~vg.field_H[var2_intLifetime1].field_j) {
               dupTemp$3 = vg.field_H[var2_intLifetime1].b(0);
-              bd.field_ob[dupTemp$3] = bd.field_ob[dupTemp$3] + 1;
+              ProgressMessageDialog.field_ob[dupTemp$3] = ProgressMessageDialog.field_ob[dupTemp$3] + 1;
             }
           }
           dupTemp$0 = param0.b(0);
-          bd.field_ob[dupTemp$0] = bd.field_ob[dupTemp$0] + 1;
+          ProgressMessageDialog.field_ob[dupTemp$0] = ProgressMessageDialog.field_ob[dupTemp$0] + 1;
           if (param1 >= -27) {
             field_h = (ed) null;
           }
@@ -74,8 +74,8 @@ class ef extends kc {
             boolean decompiledFrameRemainder0 = true;
             if (param0.field_j == vg.field_H[var3].field_j) {
               var4 = vg.field_H[var3].b(0);
-              if (bf.field_h < bd.field_ob[var4]) {
-                bd.field_ob[var4] = bd.field_ob[var4] - 1;
+              if (bf.field_h < ProgressMessageDialog.field_ob[var4]) {
+                ProgressMessageDialog.field_ob[var4] = ProgressMessageDialog.field_ob[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }

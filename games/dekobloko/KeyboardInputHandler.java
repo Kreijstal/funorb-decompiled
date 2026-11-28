@@ -41,7 +41,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           SceneWidgetPart010.performAction1460(integerArgument7, integerArgument21, (byte) -91, integerArgument1, integerArgument17);
           ResourceSupport004.performAction1247(31004, integerArgument16, integerArgument15);
           MixedSupport018.performAction0253(mixedSupport015Argument11, integerArgument14, integerArgument5, (byte) -63, integerArgument12, mixedSupport015Argument6);
-          UiComponentPart012.performAction0590(integerArgument20, integerArgument19, (byte) -75, mixedSupport015Argument2);
+          ProgressMessageDialog.performAction0590(integerArgument20, integerArgument19, (byte) -75, mixedSupport015Argument2);
           SoftwareFramebuffer.performAction1797(integerArgument18, integerArgument4, integerArgument10, true);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal15) {
@@ -245,7 +245,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         }
         SceneWidgetPart007.booleanState0113 = false;
         if (BirthDateInput.booleanState0198) {
-          MixedSupport020.uiComponentPart012State0001.performAction0594(4210752);
+          MixedSupport020.uiComponentPart012State0001.showConnectionFailure(4210752);
         } else {
           integerLocal1 = GameDomainSupport001.integerState0052;
           if (0 < integerLocal1) {
@@ -256,7 +256,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             }
             MixedSupport029.stringState0148 = ProxyAuthenticationRequiredException.computeString0336(new CharSequence[]{(CharSequence) ((Object) MixedSupport029.stringState0148), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) BoundedRandomAccessFile.stringState0228)}, -62);
           }
-          MixedSupport020.uiComponentPart012State0001.performAction0593(-127);
+          MixedSupport020.uiComponentPart012State0001.closeDialog(-127);
           MixedSupport032.performAction0472(-1199770620);
         }
     }

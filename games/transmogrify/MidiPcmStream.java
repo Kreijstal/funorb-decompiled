@@ -445,7 +445,7 @@ final class MidiPcmStream extends PcmStream {
           }
           var2 = var12.readUnsignedByte((byte) 27);
           if (var2 == 0) {
-            var10 = rf.c(false);
+            var10 = StandardContentDialog.c(false);
             var16 = var10;
             var13 = var16;
             var3 = var13;
@@ -481,12 +481,12 @@ final class MidiPcmStream extends PcmStream {
                 pc.a(1);
                 return;
               }
-              var15.field_g = rf.c(false);
+              var15.field_g = StandardContentDialog.c(false);
               var15.field_k = var15.field_g[0];
               var15.field_i = true;
               var15.unlink(5);
             } else {
-              d.a((Throwable) null, 63, "A1: " + ik.q(48));
+              d.a((Throwable) null, 63, "A1: " + ProgressMessageDialog.q(48));
               pc.a(1);
             }
           }

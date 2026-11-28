@@ -21,7 +21,7 @@ class ue extends DualLinkNode {
         if (param4 != 243) {
           return;
         }
-        dh.field_Ab = param3;
+        ProgressMessageDialog.field_Ab = param3;
         wm.field_bb = param0;
     }
 

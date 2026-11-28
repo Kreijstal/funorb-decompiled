@@ -87,10 +87,10 @@ final class ShockwaveBlast extends ka {
               var3 = var3 + param0;
             }
             ej.a(0, var3);
-            var8 = pi.a(":", "%3a", 22232, var3);
-            var9 = pi.a("@", "%40", 22232, var8);
-            var10 = pi.a("&", "%26", 22232, var9);
-            var11 = pi.a("#", "%23", 22232, var10);
+            var8 = RegistrationAgreementPane.a(":", "%3a", 22232, var3);
+            var9 = RegistrationAgreementPane.a("@", "%40", 22232, var8);
+            var10 = RegistrationAgreementPane.a("&", "%26", 22232, var9);
+            var11 = RegistrationAgreementPane.a("#", "%23", 22232, var10);
             if (!param1) {
               var7 = (PlatformTaskDispatcher) null;
               ShockwaveBlast.a((Object) null, 13, (PlatformTaskDispatcher) null);

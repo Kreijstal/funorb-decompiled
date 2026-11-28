@@ -79,7 +79,7 @@ final class vi {
           }
           var5[4] = (Sprite) ((Object) var18);
           var4.a((byte) -103, 4).a(-13903, true).a(var5, 7392);
-          var4.a((byte) -119, 5).a(r.a((byte) 93, 0, 0, param0, 0), 7392).a(-13903, true).a(116, -1);
+          var4.a((byte) -119, 5).a(FullscreenNoticeType.a((byte) 93, 0, 0, param0, 0), 7392).a(-13903, true).a(116, -1);
           this.field_m = (WidgetRenderer) ((Object) var4);
           var6 = new on(var4, true);
           var6.field_j = 0;

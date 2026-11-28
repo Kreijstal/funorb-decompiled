@@ -1081,7 +1081,7 @@ final class LevelEntity {
             if (decompiledFrameCompleted0) {
               this.field_P = (AccountServiceResult.field_k - this.field_p) / ik.field_d[this.field_g][AccountRegistrationPanel.field_T[this.type]][this.variant];
             }
-            if (qh.field_O[this.field_g][AccountRegistrationPanel.field_T[this.type]][this.variant]) {
+            if (RegistrationAgreementPane.field_O[this.field_g][AccountRegistrationPanel.field_T[this.type]][this.variant]) {
               this.field_P = this.field_P % h.field_b[this.field_g][AccountRegistrationPanel.field_T[this.type]][this.variant];
             }
             if (this.field_P >= h.field_b[this.field_g][AccountRegistrationPanel.field_T[this.type]][this.variant]) {
@@ -3124,11 +3124,11 @@ final class LevelEntity {
               if ((AccountServiceResult.field_k - this.field_p) > PcmOutputWorker.field_k[AccountNameAvailabilityValidator.field_r][var3_int]) {
                 this.field_eb = false;
               }
-              n.field_jb = 1;
+              ContentTransitionDialog.field_jb = 1;
               decompiledFrameRemainder1 = (var7 != 0);
             }
             if (decompiledFrameRemainder1) {
-              n.field_jb = 0;
+              ContentTransitionDialog.field_jb = 0;
               this.field_v = true;
               decompiledFrameRemainder1 = (var7 != 0);
             }
@@ -3137,51 +3137,51 @@ final class LevelEntity {
             if (AccountNameAvailabilityValidator.field_r != 2) {
               if (!ja.a((byte) 104, this.field_L) && (this.field_L != 0 ||
                 AccountNameAvailabilityValidator.field_r != 17)) {
-                n.field_jb = (-this.field_p + AccountServiceResult.field_k) / PcmOutputWorker.field_k[AccountNameAvailabilityValidator.field_r][var3_int];
-                if (n.field_jb >= -1 + NetworkArchiveRequest.field_x[AccountNameAvailabilityValidator.field_r][var3_int] &&
+                ContentTransitionDialog.field_jb = (-this.field_p + AccountServiceResult.field_k) / PcmOutputWorker.field_k[AccountNameAvailabilityValidator.field_r][var3_int];
+                if (ContentTransitionDialog.field_jb >= -1 + NetworkArchiveRequest.field_x[AccountNameAvailabilityValidator.field_r][var3_int] &&
                   !ue.field_i[AccountNameAvailabilityValidator.field_r][var3_int]) {
-                  n.field_jb = NetworkArchiveRequest.field_x[AccountNameAvailabilityValidator.field_r][var3_int] - 1;
+                  ContentTransitionDialog.field_jb = NetworkArchiveRequest.field_x[AccountNameAvailabilityValidator.field_r][var3_int] - 1;
                   if (var7 != 0) {
-                    n.field_jb = n.field_jb % NetworkArchiveRequest.field_x[AccountNameAvailabilityValidator.field_r][var3_int];
+                    ContentTransitionDialog.field_jb = ContentTransitionDialog.field_jb % NetworkArchiveRequest.field_x[AccountNameAvailabilityValidator.field_r][var3_int];
                   }
                 } else {
-                  n.field_jb = n.field_jb % NetworkArchiveRequest.field_x[AccountNameAvailabilityValidator.field_r][var3_int];
+                  ContentTransitionDialog.field_jb = ContentTransitionDialog.field_jb % NetworkArchiveRequest.field_x[AccountNameAvailabilityValidator.field_r][var3_int];
                 }
                 decompiledFrameRemainder1 = (AccountNameAvailabilityValidator.field_r == 1);
                 if ((decompiledFrameRemainder1) &&
                   (decompiledFrameRemainder1 = ((AccountServiceResult.field_k - this.field_p) % PcmOutputWorker.field_k[AccountNameAvailabilityValidator.field_r][var3_int] == 0)) &&
-                  (decompiledFrameRemainder1 = !(!ja.field_e[var3_int][n.field_jb]))) {
+                  (decompiledFrameRemainder1 = !(!ja.field_e[var3_int][ContentTransitionDialog.field_jb]))) {
                   wh.a(vj.field_c, 3, -103);
                   decompiledFrameRemainder1 = (var7 != 0);
                 }
               }
               if (decompiledFrameRemainder1) {
-                n.field_jb = this.field_kb;
-                if (n.field_jb >= (-1 + NetworkArchiveRequest.field_x[AccountNameAvailabilityValidator.field_r][var3_int])) {
-                  n.field_jb = -1 + NetworkArchiveRequest.field_x[AccountNameAvailabilityValidator.field_r][var3_int];
+                ContentTransitionDialog.field_jb = this.field_kb;
+                if (ContentTransitionDialog.field_jb >= (-1 + NetworkArchiveRequest.field_x[AccountNameAvailabilityValidator.field_r][var3_int])) {
+                  ContentTransitionDialog.field_jb = -1 + NetworkArchiveRequest.field_x[AccountNameAvailabilityValidator.field_r][var3_int];
                 }
                 if ((AccountNameAvailabilityValidator.field_r == 17) &&
                   (0 == this.field_D) &&
-                  (cg.field_h[var3_int][n.field_jb])) {
+                  (cg.field_h[var3_int][ContentTransitionDialog.field_jb])) {
                   wh.a(vj.field_c, 4, -114);
                   if (var7 != 0) {
                     if (AccountServiceResult.field_k + (-this.field_p - PcmOutputWorker.field_k[AccountNameAvailabilityValidator.field_r][var3_int]) <= 0) {
-                      n.field_jb = 0;
-                      n.field_jb = 1;
+                      ContentTransitionDialog.field_jb = 0;
+                      ContentTransitionDialog.field_jb = 1;
                     } else {
-                      n.field_jb = 1;
+                      ContentTransitionDialog.field_jb = 1;
                     }
                   }
                 }
               }
             } else {
               if (AccountServiceResult.field_k + (-this.field_p - PcmOutputWorker.field_k[AccountNameAvailabilityValidator.field_r][var3_int]) <= 0) {
-                n.field_jb = 0;
+                ContentTransitionDialog.field_jb = 0;
                 if (var7 != 0) {
-                  n.field_jb = 1;
+                  ContentTransitionDialog.field_jb = 1;
                 }
               } else {
-                n.field_jb = 1;
+                ContentTransitionDialog.field_jb = 1;
               }
             }
           }
@@ -3564,7 +3564,7 @@ final class LevelEntity {
           var12 = 0;
           var13 = 0;
           var14 = AccountNameAvailabilityValidator.field_r;
-          var15 = n.field_jb;
+          var15 = ContentTransitionDialog.field_jb;
           var16 = 7;
           if (param5 != -20861) {
             this.field_N = true;
@@ -4032,7 +4032,7 @@ final class LevelEntity {
         try {
           var2 = ProxyAuthenticationRequiredException.field_d;
           var3 = ImageProducerRasterBuffer.field_q;
-          var8 = v.field_S[fh.field_e];
+          var8 = ResizableModalDialog.field_S[fh.field_e];
           var9 = r.field_a[fh.field_e];
           stackIn_5_0 = (var9 > ProxySocketConnector.field_o) ? 0 : 1;
           var10 = stackIn_5_0;
@@ -4925,10 +4925,10 @@ final class LevelEntity {
           if (this.type == 15) {
             stackIn_199_0 = !(this.field_nb);
             if (stackIn_199_0 &&
-              !wa.field_pb[-(ea.field_e * 5) + this.variant]) {
+              !ProgressMessageDialog.field_pb[-(ea.field_e * 5) + this.variant]) {
               this.field_D = this.field_D + 1;
               if (this.field_D >= 51) {
-                wa.field_pb[this.variant - 5 * ea.field_e] = true;
+                ProgressMessageDialog.field_pb[this.variant - 5 * ea.field_e] = true;
               }
             }
           }
@@ -5346,7 +5346,7 @@ final class LevelEntity {
             null != BufferedSocket.field_p) {
             this.field_K = BufferedSocket.field_p.field_K;
           }
-          this.field_M = jf.field_pb[fh.field_e];
+          this.field_M = StandardContentDialog.field_pb[fh.field_e];
           this.field_C = ClientException.field_g[fh.field_e];
           this.field_jb = param0;
           return;
@@ -6177,7 +6177,7 @@ final class LevelEntity {
           this.field_K = mh.field_c[var3_int][this.variant];
           this.field_M = ck.field_a[var3_int];
           this.field_cb = DefaultTextWidgetRenderer.field_l[var3_int];
-          this.field_C = ll.field_k[var3_int][this.variant];
+          this.field_C = FullscreenNoticeType.field_k[var3_int][this.variant];
           this.field_L = 0;
           if (param1 <= 41) {
             this.a(-49, 35, 18, 17, 35, 117, -19, 68);
@@ -7160,7 +7160,7 @@ final class LevelEntity {
                   BufferedSocket.field_p != null && (~this.x == ~BufferedSocket.field_p.field_r &&
                   ~this.y == ~BufferedSocket.field_p.field_f ||
                   !this.field_nb)) {
-                  if (!wa.field_pb[-(ea.field_e * 5) + this.variant]) {
+                  if (!ProgressMessageDialog.field_pb[-(ea.field_e * 5) + this.variant]) {
                     if (te.field_e == null) {
                       te.field_e = new Sprite(16 + ((Sprite) (var11)).fullWidth, ((Sprite) (var11)).fullHeight + 16);
                     }
@@ -8219,7 +8219,7 @@ final class LevelEntity {
         int var5Lifetime1;
         int var6Lifetime1;
         try {
-          var2_int = v.field_S[fh.field_e];
+          var2_int = ResizableModalDialog.field_S[fh.field_e];
           if (param0 != -16517) {
             return true;
           }
@@ -8602,18 +8602,18 @@ final class LevelEntity {
             break;
           }
           if (stackIn_24_0 != stackIn_24_1 ||
-            n.field_jb != RichTextLayout.field_t ||
+            ContentTransitionDialog.field_jb != RichTextLayout.field_t ||
             ul.field_m != this.field_a ||
             ul.field_m == 0) {
             dl.field_n[2] = 0;
             dl.field_n[0] = 0;
-            this.a(ea.field_h, param2, param4, new int[]{this.field_a, AccountNameAvailabilityValidator.field_r, n.field_jb, 16777215}, param0, -20861, param3, 1);
+            this.a(ea.field_h, param2, param4, new int[]{this.field_a, AccountNameAvailabilityValidator.field_r, ContentTransitionDialog.field_jb, 16777215}, param0, -20861, param3, 1);
             ea.field_h.bindAsRenderTarget();
             SoftwareRasterizer.blurRectangle(2, 2, 0, 0, ea.field_h.storedWidth, ea.field_h.storedHeight);
             SectorCacheStore.field_f.bindAsTarget(124);
             ul.field_m = this.field_a;
             ec.field_b = AccountNameAvailabilityValidator.field_r;
-            RichTextLayout.field_t = n.field_jb;
+            RichTextLayout.field_t = ContentTransitionDialog.field_jb;
           }
           boolean decompiledFrameCompleted0 = true;
           od.a(param3 - (var13 - this.field_I >> 1), -32 + param2, -1, 8, 4, ea.field_h);
@@ -8641,7 +8641,7 @@ final class LevelEntity {
               if (decompiledFrameCompleted0) {
                 ConfirmedEmailAvailabilityValidator.field_w[var16 - 1][0] = this.field_a;
                 ConfirmedEmailAvailabilityValidator.field_w[-1 + var16][1] = AccountNameAvailabilityValidator.field_r;
-                ConfirmedEmailAvailabilityValidator.field_w[var16 - 1][2] = n.field_jb;
+                ConfirmedEmailAvailabilityValidator.field_w[var16 - 1][2] = ContentTransitionDialog.field_jb;
                 id.field_d[var16 - 1][0] = this.x;
                 id.field_d[var16 - 1][1] = this.field_B;
                 id.field_d[var16 - 1][2] = this.y;
@@ -8649,7 +8649,7 @@ final class LevelEntity {
                 if (var19 != 0) {
                   ConfirmedEmailAvailabilityValidator.field_w[var15Lifetime1][0] = this.field_a;
                   ConfirmedEmailAvailabilityValidator.field_w[var15Lifetime1][1] = AccountNameAvailabilityValidator.field_r;
-                  ConfirmedEmailAvailabilityValidator.field_w[var15Lifetime1][2] = n.field_jb;
+                  ConfirmedEmailAvailabilityValidator.field_w[var15Lifetime1][2] = ContentTransitionDialog.field_jb;
                   id.field_d[var15Lifetime1][0] = this.x;
                   id.field_d[var15Lifetime1][1] = this.field_B;
                   id.field_d[var15Lifetime1][2] = this.y;
@@ -8659,7 +8659,7 @@ final class LevelEntity {
             } else {
               ConfirmedEmailAvailabilityValidator.field_w[var15Lifetime1][0] = this.field_a;
               ConfirmedEmailAvailabilityValidator.field_w[var15Lifetime1][1] = AccountNameAvailabilityValidator.field_r;
-              ConfirmedEmailAvailabilityValidator.field_w[var15Lifetime1][2] = n.field_jb;
+              ConfirmedEmailAvailabilityValidator.field_w[var15Lifetime1][2] = ContentTransitionDialog.field_jb;
               id.field_d[var15Lifetime1][0] = this.x;
               id.field_d[var15Lifetime1][1] = this.field_B;
               id.field_d[var15Lifetime1][2] = this.y;
@@ -9187,7 +9187,7 @@ final class LevelEntity {
           stackIn_65_0 = (stackIn_61_0 != this.field_kb) ? 0 : 1;
           var10Lifetime2 = stackIn_65_0;
           var11Lifetime1 = -1 + ae.field_u[var2_int][var3][this.field_kb];
-          var12 = ll.field_j[var2_int][var3][this.field_kb] ? 1 : 0;
+          var12 = FullscreenNoticeType.field_j[var2_int][var3][this.field_kb] ? 1 : 0;
           stackIn_69_0 = (this.field_D < var11Lifetime1) ? 0 : 1;
           var13 = stackIn_69_0;
           if (!ah.field_i) {
@@ -9909,7 +9909,7 @@ final class LevelEntity {
         try {
           var2_int = vj.field_c;
           var3 = pl.field_e[this.field_L];
-          var4 = n.field_db[var2_int][var3][this.field_kb];
+          var4 = ContentTransitionDialog.field_db[var2_int][var3][this.field_kb];
           var5 = ga.field_x[var2_int][var3][this.field_kb];
           var6 = lc.field_k[var2_int][var3][this.field_kb];
           stackIn_5_0 = (0 >= var4) ? 0 : 1;

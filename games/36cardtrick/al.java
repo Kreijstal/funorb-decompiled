@@ -12,39 +12,39 @@ final class al {
         var2 = Main.field_T;
         r.field_p = false;
         if (param0 < -18) {
-          rk.field_ab = null;
+          ProgressDialog.field_ab = null;
           if (DirectByteArrayStore.field_e) {
-            Crc32Table.field_a.d(false);
+            Crc32Table.field_a.showConnectionFailure(false);
             return;
           }
           var1 = IntrusiveNode.field_b;
           if (var1 > 0) {
             if (var1 == 1) {
-              rk.field_ab = dh.field_g;
+              ProgressDialog.field_ab = dh.field_g;
             } else {
-              rk.field_ab = re.a(nc.field_a, new String[]{Integer.toString(var1)}, (byte) -50);
+              ProgressDialog.field_ab = re.a(nc.field_a, new String[]{Integer.toString(var1)}, (byte) -50);
             }
-            rk.field_ab = AccountCreationResultPanel.a((byte) 92, new CharSequence[]{(CharSequence) ((Object) rk.field_ab), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) TextHotspotBounds.field_l)});
+            ProgressDialog.field_ab = AccountCreationResultPanel.a((byte) 92, new CharSequence[]{(CharSequence) ((Object) ProgressDialog.field_ab), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) TextHotspotBounds.field_l)});
           }
-          Crc32Table.field_a.s(-93);
+          Crc32Table.field_a.closeDialog(-93);
           e.a((byte) 112);
           return;
         }
         field_b = (byte[][]) null;
-        rk.field_ab = null;
+        ProgressDialog.field_ab = null;
         if (DirectByteArrayStore.field_e) {
-          Crc32Table.field_a.d(false);
+          Crc32Table.field_a.showConnectionFailure(false);
         } else {
           var1 = IntrusiveNode.field_b;
           if (var1 > 0) {
             if (var1 == 1) {
-              rk.field_ab = dh.field_g;
+              ProgressDialog.field_ab = dh.field_g;
             } else {
-              rk.field_ab = re.a(nc.field_a, new String[]{Integer.toString(var1)}, (byte) -50);
+              ProgressDialog.field_ab = re.a(nc.field_a, new String[]{Integer.toString(var1)}, (byte) -50);
             }
-            rk.field_ab = AccountCreationResultPanel.a((byte) 92, new CharSequence[]{(CharSequence) ((Object) rk.field_ab), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) TextHotspotBounds.field_l)});
+            ProgressDialog.field_ab = AccountCreationResultPanel.a((byte) 92, new CharSequence[]{(CharSequence) ((Object) ProgressDialog.field_ab), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) TextHotspotBounds.field_l)});
           }
-          Crc32Table.field_a.s(-93);
+          Crc32Table.field_a.closeDialog(-93);
           e.a((byte) 112);
         }
     }

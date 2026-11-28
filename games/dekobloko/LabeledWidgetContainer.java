@@ -3,7 +3,7 @@
  */
 final class LabeledWidgetContainer extends ComponentDecorator {
     static int integerState0133;
-    static UiComponentPart023 uiComponentPart023State0001;
+    static StandardContentDialog uiComponentPart023State0001;
     private BitmapFont bitmapFontState0009;
     private int integerState0134;
     static MixedSupport106 mixedSupport106State0001;
@@ -122,13 +122,13 @@ final class LabeledWidgetContainer extends ComponentDecorator {
         int integerLocal21;
         integerLocal16 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          UiComponentPart023.booleanState0134 = true;
+          StandardContentDialog.booleanState0134 = true;
           MixedSupport070.integerState0395 = integerArgument4;
           stringLocal17 = stringArgument3;
           if (!booleanArgument5) {
             stackStringLocal1 = NetworkSupport007.stringState0345;
           } else {
-            stackStringLocal1 = UiComponentPart026.stringState0461;
+            stackStringLocal1 = ProgressDialog.stringState0461;
           }
           stringLocal12 = stackStringLocal1;
           if (MixedSupport070.integerState0395 == 0) {
@@ -170,7 +170,7 @@ final class LabeledWidgetContainer extends ComponentDecorator {
             MixedSupport129.integerArrayState0211[-1 + integerLocal14] = 0;
             AlphaWidgetContainer.integerArrayState0039[0] = 2;
           }
-          UiComponentPart033.mixedSupport116State0004.integerState0756 = AlphaWidgetContainer.integerArrayState0039.length;
+          AccountCreationResultPanel.mixedSupport116State0004.integerState0756 = AlphaWidgetContainer.integerArrayState0039.length;
           integerLocal18 = 0;
           integerLocal20 = 0;
           if (integerArgument2 != -5540) {
@@ -189,7 +189,7 @@ final class LabeledWidgetContainer extends ComponentDecorator {
             }
             integerLocal20++;
           }
-          MixedSupport003.integerState0018 = (PcmResampler.integerState0344 + MixedSupport076.integerState0433 << 1) * UiComponentPart033.mixedSupport116State0004.integerState0756;
+          MixedSupport003.integerState0018 = (PcmResampler.integerState0344 + MixedSupport076.integerState0433 << 1) * AccountCreationResultPanel.mixedSupport116State0004.integerState0756;
           MixedSupport035.integerState0219 = -(integerLocal18 >> 1) + (MixedSupport004.integerState0029 + integerLocal18);
           ResourceSupport001.integerState0021 = MixedSupport004.integerState0029 - (integerLocal18 >> 1);
           for (integerLocal21 = 0; integerLocal21 < AlphaWidgetContainer.stringArrayState0012.length; integerLocal21++) {
@@ -202,7 +202,7 @@ final class LabeledWidgetContainer extends ComponentDecorator {
             MixedSupport003.integerState0018 = stackIntegerLocal5 + stackIntegerLocal6;
           }
           MixedSupport111.integerState0721 = MixedSupport070.integerState0402 - (MixedSupport003.integerState0018 >> 1);
-          UiComponentPart033.mixedSupport116State0004.performAction1516(0, 0, MixedSupport101.computeInteger1269(MixedSupport101.integerState0590, -2141435999, HashNode.integerState0069), booleanArgument1);
+          AccountCreationResultPanel.mixedSupport116State0004.performAction1516(0, 0, MixedSupport101.computeInteger1269(MixedSupport101.integerState0590, -2141435999, HashNode.integerState0069), booleanArgument1);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal22) {
           caughtExceptionLocal10 = caughtParameterLocal22;
@@ -251,7 +251,7 @@ final class LabeledWidgetContainer extends ComponentDecorator {
         }
         MixedSupport089.performAction1138(126);
         if (booleanArgument1) {
-          uiComponentPart023State0001 = (UiComponentPart023) null;
+          uiComponentPart023State0001 = (StandardContentDialog) null;
         }
         return rgbSpriteArrayLocal7;
     }

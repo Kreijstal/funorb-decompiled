@@ -77,14 +77,14 @@ final class fk extends kl {
             var4 = 199 + 83 * var3;
             var5 = 57 + var2 * 86;
             SoftwareRasterizer.fillRectangle(var4, var5, 72, 72, 65793);
-            rp.a(4, 64, (byte) 108, 4 + var4, 64, kc.field_V, var5 + 4);
+            rp.a(4, 64, (byte) 108, 4 + var4, 64, DialogMessagePane.field_V, var5 + 4);
           }
         }
         for (var2Lifetime1 = 0; 4 > var2Lifetime1; var2Lifetime1++) {
           var3Lifetime1 = var2Lifetime1 * 130 + 37;
           var4Lifetime1 = 227;
           SoftwareRasterizer.fillRectangle(var3Lifetime1, var4Lifetime1, 96, 96, 65793);
-          rp.a(4, 88, (byte) 108, 4 + var3Lifetime1, 88, kc.field_S, var4Lifetime1 + 4);
+          rp.a(4, 88, (byte) 108, 4 + var3Lifetime1, 88, DialogMessagePane.field_S, var4Lifetime1 + 4);
         }
     }
 
@@ -125,15 +125,15 @@ final class fk extends kl {
         var7 = DungeonAssault.field_K;
         var2 = 20;
         var3 = 1;
-        for (var4 = -hf.field_Ab.field_v + var2; -hf.field_Ab.field_v < var4; var4 = var4 - hf.field_Ab.field_v) {
+        for (var4 = -ContentTransitionDialog.field_Ab.field_v + var2; -ContentTransitionDialog.field_Ab.field_v < var4; var4 = var4 - ContentTransitionDialog.field_Ab.field_v) {
           var5_int = 70;
           var6 = 545;
           if (var3 == 0) {
-            hf.field_Ab.drawFlippedVertical(var5_int, var4);
-            hf.field_Ab.drawFlippedVertical(var6, var4);
+            ContentTransitionDialog.field_Ab.drawFlippedVertical(var5_int, var4);
+            ContentTransitionDialog.field_Ab.drawFlippedVertical(var6, var4);
           } else {
-            hf.field_Ab.draw(var5_int, var4);
-            hf.field_Ab.draw(var6, var4);
+            ContentTransitionDialog.field_Ab.draw(var5_int, var4);
+            ContentTransitionDialog.field_Ab.draw(var6, var4);
           }
           stackIn_8_0 = (var3 != 0) ? 0 : 1;
           var3 = stackIn_8_0;
@@ -441,10 +441,10 @@ final class fk extends kl {
         if (param0 != 37) {
           return;
         }
-        SingleChildWidgetContainer.a(pi.field_i, cm.field_M, this.field_a >> 1, 1917623617, (IntrusiveNode.field_c.field_H + 36 >> 1) + 7, IntrusiveNode.field_c);
+        SingleChildWidgetContainer.a(pi.field_i, RegistrationAgreementPane.field_M, this.field_a >> 1, 1917623617, (IntrusiveNode.field_c.field_H + 36 >> 1) + 7, IntrusiveNode.field_c);
         this.d((byte) -123);
         SoftwareRasterizer.fillRectangle(44, 64, 141, 53, 65793);
-        rp.a(4, 133, (byte) 108, 48, 45, kc.field_S, 68);
+        rp.a(4, 133, (byte) 108, 48, 45, DialogMessagePane.field_S, 68);
         jh.b();
     }
 

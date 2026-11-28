@@ -744,12 +744,12 @@ class UiWidget extends IntrusiveNode {
             }
             if (0 != la.field_g) {
               oe.field_i = la.field_g;
-              nk.a(this.getTooltipText((byte) 34), (byte) 23);
+              ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
               return param3;
             }
             if (oe.field_i == 0) {
               oe.field_i = la.field_g;
-              nk.a(this.getTooltipText((byte) 34), (byte) 23);
+              ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
               return param3;
             }
             this.pointerReleased(param0, true, eh.field_h, this, param2, hj.field_S);
@@ -762,23 +762,23 @@ class UiWidget extends IntrusiveNode {
               ah.field_b = null;
             }
             oe.field_i = la.field_g;
-            nk.a(this.getTooltipText((byte) 34), (byte) 23);
+            ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
             return param3;
           }
           if (var5 == 0) {
             oe.field_i = la.field_g;
-            nk.a(this.getTooltipText((byte) 34), (byte) 23);
+            ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
             return param3;
           }
           if (no.field_d == 0) {
             oe.field_i = la.field_g;
-            nk.a(this.getTooltipText((byte) 34), (byte) 23);
+            ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
             return param3;
           }
           this.blur(23);
           if (var7 == 0) {
             oe.field_i = la.field_g;
-            nk.a(this.getTooltipText((byte) 34), (byte) 23);
+            ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
             return param3;
           }
           if (0 != CombatState.field_r) {
@@ -795,12 +795,12 @@ class UiWidget extends IntrusiveNode {
               }
               if (0 != la.field_g) {
                 oe.field_i = la.field_g;
-                nk.a(this.getTooltipText((byte) 34), (byte) 23);
+                ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
                 return param3;
               }
               if (oe.field_i == 0) {
                 oe.field_i = la.field_g;
-                nk.a(this.getTooltipText((byte) 34), (byte) 23);
+                ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
                 return param3;
               }
               this.pointerReleased(param0, true, eh.field_h, this, param2, hj.field_S);
@@ -812,7 +812,7 @@ class UiWidget extends IntrusiveNode {
                 ah.field_b = null;
               }
               oe.field_i = la.field_g;
-              nk.a(this.getTooltipText((byte) 34), (byte) 23);
+              ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
               return param3;
             }
             this.handleWheel(param2, param0, hj.field_S, CombatState.field_r, eh.field_h, this, (byte) -84);
@@ -825,12 +825,12 @@ class UiWidget extends IntrusiveNode {
               param3 = false;
               if (0 != la.field_g) {
                 oe.field_i = la.field_g;
-                nk.a(this.getTooltipText((byte) 34), (byte) 23);
+                ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
                 return param3;
               }
               if (oe.field_i == 0) {
                 oe.field_i = la.field_g;
-                nk.a(this.getTooltipText((byte) 34), (byte) 23);
+                ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
                 return param3;
               }
               this.pointerReleased(param0, true, eh.field_h, this, param2, hj.field_S);
@@ -842,18 +842,18 @@ class UiWidget extends IntrusiveNode {
                 ah.field_b = null;
               }
               oe.field_i = la.field_g;
-              nk.a(this.getTooltipText((byte) 34), (byte) 23);
+              ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
               return param3;
             }
           }
           if (0 != la.field_g) {
             oe.field_i = la.field_g;
-            nk.a(this.getTooltipText((byte) 34), (byte) 23);
+            ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
             return param3;
           }
           if (oe.field_i == 0) {
             oe.field_i = la.field_g;
-            nk.a(this.getTooltipText((byte) 34), (byte) 23);
+            ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
             return param3;
           }
           this.pointerReleased(param0, true, eh.field_h, this, param2, hj.field_S);
@@ -865,7 +865,7 @@ class UiWidget extends IntrusiveNode {
             ah.field_b = null;
           }
           oe.field_i = la.field_g;
-          nk.a(this.getTooltipText((byte) 34), (byte) 23);
+          ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
           return param3;
         }
         this.updatePointer(param2, param0, this, true);
@@ -891,7 +891,7 @@ class UiWidget extends IntrusiveNode {
                 }
               }
               oe.field_i = la.field_g;
-              nk.a(this.getTooltipText((byte) 34), (byte) 23);
+              ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
               return param3;
             }
             this.handleWheel(param2, param0, hj.field_S, CombatState.field_r, eh.field_h, this, (byte) -84);
@@ -934,23 +934,23 @@ class UiWidget extends IntrusiveNode {
             }
           }
           oe.field_i = la.field_g;
-          nk.a(this.getTooltipText((byte) 34), (byte) 23);
+          ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
           return param3;
         }
         if (var5Lifetime1 == 0) {
           oe.field_i = la.field_g;
-          nk.a(this.getTooltipText((byte) 34), (byte) 23);
+          ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
           return param3;
         }
         if (no.field_d == 0) {
           oe.field_i = la.field_g;
-          nk.a(this.getTooltipText((byte) 34), (byte) 23);
+          ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
           return param3;
         }
         this.blur(23);
         if (var7 == 0) {
           oe.field_i = la.field_g;
-          nk.a(this.getTooltipText((byte) 34), (byte) 23);
+          ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
           return param3;
         }
         if (0 != CombatState.field_r) {
@@ -964,12 +964,12 @@ class UiWidget extends IntrusiveNode {
             param3 = false;
             if (0 != la.field_g) {
               oe.field_i = la.field_g;
-              nk.a(this.getTooltipText((byte) 34), (byte) 23);
+              ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
               return param3;
             }
             if (oe.field_i == 0) {
               oe.field_i = la.field_g;
-              nk.a(this.getTooltipText((byte) 34), (byte) 23);
+              ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
               return param3;
             }
             this.pointerReleased(param0, true, eh.field_h, this, param2, hj.field_S);
@@ -982,18 +982,18 @@ class UiWidget extends IntrusiveNode {
               ah.field_b = null;
             }
             oe.field_i = la.field_g;
-            nk.a(this.getTooltipText((byte) 34), (byte) 23);
+            ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
             return param3;
           }
         }
         if (0 != la.field_g) {
           oe.field_i = la.field_g;
-          nk.a(this.getTooltipText((byte) 34), (byte) 23);
+          ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
           return param3;
         }
         if (oe.field_i == 0) {
           oe.field_i = la.field_g;
-          nk.a(this.getTooltipText((byte) 34), (byte) 23);
+          ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
           return param3;
         }
         this.pointerReleased(param0, true, eh.field_h, this, param2, hj.field_S);
@@ -1005,7 +1005,7 @@ class UiWidget extends IntrusiveNode {
           ah.field_b = null;
         }
         oe.field_i = la.field_g;
-        nk.a(this.getTooltipText((byte) 34), (byte) 23);
+        ProgressMessageDialog.a(this.getTooltipText((byte) 34), (byte) 23);
         return param3;
     }
 

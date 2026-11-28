@@ -316,7 +316,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
           }
           var4 = var3.getValidationStatus(-23996);
           if (param1) {
-            stackIn_9_0 = (qm.field_G == var4);
+            stackIn_9_0 = (GuestPlayConfirmationForm.field_G == var4);
             return stackIn_9_0;
           }
           return true;

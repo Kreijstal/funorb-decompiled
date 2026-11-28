@@ -59,7 +59,7 @@ abstract class mg {
           }
           for (var2_int = 0; var2_int < 4; var2_int++) {
             if (null == le.field_g[var2_int]) {
-              le.field_g[var2_int] = bf.a(-1, oe.field_d[var2_int], "", param1);
+              le.field_g[var2_int] = FullscreenNoticeType.a(-1, oe.field_d[var2_int], "", param1);
             }
           }
           return;

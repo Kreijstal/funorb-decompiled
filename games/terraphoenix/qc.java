@@ -47,7 +47,7 @@ final class qc {
                 var14 = 16711680 & (65280 & param8) * param4;
                 incrementValue$1 = param10;
                 param10++;
-                param0[incrementValue$1] = ei.b(ei.b(var13, var14) >>> 8, 1);
+                param0[incrementValue$1] = ResizableModalDialog.b(ResizableModalDialog.b(var13, var14) >>> 8, 1);
               }
             }
             param10 = param10 + param1;

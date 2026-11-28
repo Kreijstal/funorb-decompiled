@@ -342,7 +342,7 @@ class UiWidget extends IntrusiveNode {
             var5 != 0) {
             this.handleWheel(param3, this, param1, PacketBuffer.field_j, AgeValidator.field_n, BufferedSocket.field_m, (byte) 96);
             if (hg.field_F != 0) {
-              if (this.pointerPressed(hg.field_F, param3, false, SpriteState.field_o, s.field_gb, param1, this)) {
+              if (this.pointerPressed(hg.field_F, param3, false, SpriteState.field_o, StandardContentDialog.field_gb, param1, this)) {
                 param2 = false;
                 if (var7 != 0) {
                   this.blur(0);
@@ -375,7 +375,7 @@ class UiWidget extends IntrusiveNode {
           }
           regionExit1: {
             if (hg.field_F != 0) {
-              if (this.pointerPressed(hg.field_F, param3, false, SpriteState.field_o, s.field_gb, param1, this)) {
+              if (this.pointerPressed(hg.field_F, param3, false, SpriteState.field_o, StandardContentDialog.field_gb, param1, this)) {
                 param2 = false;
                 if (var7 == 0) {
                   break regionExit1;
@@ -455,7 +455,7 @@ class UiWidget extends IntrusiveNode {
         if (0 == AgeValidator.field_n) {
           regionExit2: {
             if (hg.field_F != 0) {
-              if (this.pointerPressed(hg.field_F, param3, false, SpriteState.field_o, s.field_gb, param1, this)) {
+              if (this.pointerPressed(hg.field_F, param3, false, SpriteState.field_o, StandardContentDialog.field_gb, param1, this)) {
                 param2 = false;
                 if (var7 == 0) {
                   break regionExit2;
@@ -519,7 +519,7 @@ class UiWidget extends IntrusiveNode {
         if (var5Lifetime1 != 0) {
           this.handleWheel(param3, this, param1, PacketBuffer.field_j, AgeValidator.field_n, BufferedSocket.field_m, (byte) 96);
           if (hg.field_F != 0) {
-            if (this.pointerPressed(hg.field_F, param3, false, SpriteState.field_o, s.field_gb, param1, this)) {
+            if (this.pointerPressed(hg.field_F, param3, false, SpriteState.field_o, StandardContentDialog.field_gb, param1, this)) {
               param2 = false;
               if (var7 != 0) {
                 this.blur(0);
@@ -552,7 +552,7 @@ class UiWidget extends IntrusiveNode {
           return param2;
         }
         if (hg.field_F != 0 &&
-          this.pointerPressed(hg.field_F, param3, false, SpriteState.field_o, s.field_gb, param1, this)) {
+          this.pointerPressed(hg.field_F, param3, false, SpriteState.field_o, StandardContentDialog.field_gb, param1, this)) {
           param2 = false;
           if (var7 == 0) {
           }

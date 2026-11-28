@@ -26,10 +26,10 @@ final class MixedSupport062 {
     final static void performAction0737(int integerArgument1) {
         if (integerArgument1 < 34) {
           integerArrayArrayState0012 = (int[][]) null;
-          UiComponentPart008.performAction0372(MixedSupport145.rawSoundState0023, 22);
+          DialogMessagePane.performAction0372(MixedSupport145.rawSoundState0023, 22);
           return;
         }
-        UiComponentPart008.performAction0372(MixedSupport145.rawSoundState0023, 22);
+        DialogMessagePane.performAction0372(MixedSupport145.rawSoundState0023, 22);
     }
 
     public static void clearStaticReferences(int integerArgument1) {

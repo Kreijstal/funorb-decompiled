@@ -292,8 +292,8 @@ final class GzipDecompressor {
             var3 = -(ge.field_b.field_q / 2) + 357;
             var4 = 0;
             if (kg.field_a != 0 &&
-              var3 < kc.field_Q &&
-              ge.field_b.field_v + var3 > kc.field_Q) {
+              var3 < ResizableModalDialog.field_Q &&
+              ge.field_b.field_v + var3 > ResizableModalDialog.field_Q) {
               if (269 - ge.field_b.field_u < LoginPanel.field_B &&
                 LoginPanel.field_B < 269) {
                 PasswordValidator.field_j = false;
@@ -322,7 +322,7 @@ final class GzipDecompressor {
             }
           }
           if (param0) {
-            ea.field_a.a(BufferedRandomAccessFile.a(LoginPanel.field_B, kc.field_Q, true), BufferedRandomAccessFile.a(pe.field_d, la.field_c, true), -104);
+            ea.field_a.a(BufferedRandomAccessFile.a(LoginPanel.field_B, ResizableModalDialog.field_Q, true), BufferedRandomAccessFile.a(pe.field_d, la.field_c, true), -104);
             if (ea.field_a.g(0)) {
               if (ea.field_a.field_k == 0) {
                 stackIn_62_0 = 3;

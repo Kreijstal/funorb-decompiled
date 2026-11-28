@@ -73,21 +73,21 @@ final class bf extends IntrusiveNode {
                   if (2 == this.field_q) {
                     wg.field_e = wg.field_e + 1;
                     if (wg.field_e == 50) {
-                      ph.a(246, false, 9);
+                      ProgressMessageDialog.a(246, false, 9);
                     }
                     if (wg.field_e == 150) {
-                      ph.a(245, false, 10);
+                      ProgressMessageDialog.a(245, false, 10);
                     }
                   }
                   if (this.field_q == 12) {
                     TextFieldValidator.field_h = TextFieldValidator.field_h + 1;
                     if (TextFieldValidator.field_h == 10) {
-                      ph.a(248, false, 7);
+                      ProgressMessageDialog.a(248, false, 7);
                     }
                     if (TextFieldValidator.field_h != 30) {
                       return true;
                     }
-                    ph.a(247, false, 8);
+                    ProgressMessageDialog.a(247, false, 8);
                   }
                   return true;
                 }
@@ -1484,7 +1484,7 @@ final class bf extends IntrusiveNode {
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               r.field_c = dh.field_a;
-              ph.field_nb = new String[var9Lifetime1 - 100];
+              ProgressMessageDialog.field_nb = new String[var9Lifetime1 - 100];
             } else {
               if (var9Lifetime1 == 248) {
                 mi.a(param3 ^ 1048582, ll.b(param3 ^ 109));
@@ -1511,9 +1511,9 @@ final class bf extends IntrusiveNode {
               var10Lifetime1 = RichTextLayout.field_p.readUnsignedShort(param3 ^ -1174051986);
               RichTextLayout.field_p.position = 0;
               if (ag.a(126, var10Lifetime1)) {
-                var11 = ph.field_nb.length;
+                var11 = ProgressMessageDialog.field_nb.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  ph.field_nb[var12] = RichTextLayout.field_p.readPrefixedString(-12287);
+                  ProgressMessageDialog.field_nb[var12] = RichTextLayout.field_p.readPrefixedString(-12287);
                 }
                 ec.a((byte) 27);
                 eb.field_f = false;

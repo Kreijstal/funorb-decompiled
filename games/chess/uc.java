@@ -33,12 +33,12 @@ final class uc {
         if (param0 > -33) {
           field_g = (le) null;
         }
-        if (bj.field_cb == null) {
+        if (ContentTransitionDialog.field_cb == null) {
           return;
         }
-        var1 = bj.field_cb;
+        var1 = ContentTransitionDialog.field_cb;
         synchronized (var1) {
-          bj.field_cb = null;
+          ContentTransitionDialog.field_cb = null;
         }
     }
 

@@ -345,7 +345,7 @@ final class mc {
         wc.field_b = false;
         ic.field_i = null;
         if (MusicPatchPcmStream.field_B) {
-          sj.field_h.i((byte) -97);
+          sj.field_h.showConnectionFailure((byte) -97);
         } else {
           var1 = a.field_d;
           if (var1 > 0) {
@@ -356,7 +356,7 @@ final class mc {
             }
             ic.field_i = in.a(new CharSequence[]{(CharSequence) ((Object) ic.field_i), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) eb.field_a)}, -1);
           }
-          sj.field_h.s(2121792);
+          sj.field_h.closeDialog(2121792);
           pb.a(53);
         }
     }
@@ -463,7 +463,7 @@ final class mc {
               el.a(ah.field_f, param1 - 5624);
               fa.b(param1 + 15262);
             } else {
-              fm.f((byte) 81);
+              DialogMessagePane.f((byte) 81);
             }
           }
           return;
@@ -1087,7 +1087,7 @@ final class mc {
                                                 } else {
                                                   if (20 == var12) {
                                                     RichTextWidget.field_K[19].drawOpaque(487, 326);
-                                                    var13_ref = fm.field_K;
+                                                    var13_ref = DialogMessagePane.field_K;
                                                   } else {
                                                     var13_ref = ne.field_R[ah.field_f];
                                                   }

@@ -16,13 +16,13 @@ abstract class DebouncedFieldValidator implements FieldValidator {
             field_b = (String) null;
           }
           AudioOutput.configureAudio(param1, param2, 10);
-          el.field_sb = AudioOutput.createOutput(param0, param5, 0, 22050);
+          StandardContentDialog.field_sb = AudioOutput.createOutput(param0, param5, 0, 22050);
           ModalDialogHost.field_J = AudioOutput.createOutput(param0, param5, 1, 1024);
           ej.field_a = new PcmStreamMixer();
           ModalDialogHost.field_J.setRootStream(ej.field_a);
           s.field_a = param3;
           param3.a(SecondaryNodeDequeIterator.field_b * 128 / 80, (byte) -13);
-          el.field_sb.setRootStream(param3);
+          StandardContentDialog.field_sb.setRootStream(param3);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "dc.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

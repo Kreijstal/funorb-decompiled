@@ -35,7 +35,7 @@ final class nf extends DualLinkNode {
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             jf.field_g[var1_intLifetime1] = 0L;
           }
-          nk.field_Kb = param0;
+          ProgressMessageDialog.field_Kb = param0;
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "nf.M(" + param0 + ')');
         }
@@ -133,30 +133,30 @@ final class nf extends DualLinkNode {
             param0.isBitSet(-(param1 / 7) + (-1 + param1), (byte) 103)) {
             incrementValue$0 = var3_int;
             var3_int++;
-            ia.field_S[incrementValue$0] = -1 + param1;
+            GuestPlayConfirmationForm.field_S[incrementValue$0] = -1 + param1;
           }
           if (param1 > 6 &&
             param0.isBitSet(param1 + 35, (byte) 121)) {
             incrementValue$1 = var3_int;
             var3_int++;
-            ia.field_S[incrementValue$1] = -7 + param1;
+            GuestPlayConfirmationForm.field_S[incrementValue$1] = -7 + param1;
           }
           if (param1 % 7 != 6 &&
             param0.isBitSet(param1 - param1 / 7, (byte) 86)) {
             incrementValue$2 = var3_int;
             var3_int++;
-            ia.field_S[incrementValue$2] = 1 + param1;
+            GuestPlayConfirmationForm.field_S[incrementValue$2] = 1 + param1;
           }
           if (42 > param1 &&
             param0.isBitSet(param1 + 42, (byte) 86)) {
             incrementValue$3 = var3_int;
             var3_int++;
-            ia.field_S[incrementValue$3] = param1 + 7;
+            GuestPlayConfirmationForm.field_S[incrementValue$3] = param1 + 7;
           }
           var4 = new int[var3_int];
           var6 = 51 / ((58 - param2) / 62);
           for (var5 = 0; var3_int > var5; var5++) {
-            var4[var5] = ia.field_S[var5];
+            var4[var5] = GuestPlayConfirmationForm.field_S[var5];
           }
           stackIn_19_0 = var4;
           return stackIn_19_0;
@@ -267,12 +267,12 @@ final class nf extends DualLinkNode {
             }
             if (var3_int != 0) {
               if (AgeValidator.field_s) {
-                param2 = jk.a(new String[]{param2}, DraggableWidgetContainer.field_G, 30496);
+                param2 = StandardContentDialog.a(new String[]{param2}, DraggableWidgetContainer.field_G, 30496);
               }
               if (jd.field_l) {
                 param2 = kk.field_t;
               }
-              a.field_n.a(26889, param2, param0);
+              a.field_n.showResult(26889, param2, param0);
             }
             if (param0 != 256 &&
               param0 != 10 &&

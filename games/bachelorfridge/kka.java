@@ -4,7 +4,7 @@
 final class kka extends IntrusiveNode {
     static int field_g;
     static Sprite[] field_i;
-    static sja field_l;
+    static StandardContentDialog field_l;
     int[] field_m;
     static IndexedSprite field_f;
     static String[] field_k;

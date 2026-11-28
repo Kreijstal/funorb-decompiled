@@ -10,7 +10,7 @@ final class hg {
 
     final static void c(int param0) {
         ta.field_f = new AccountRegistrationPanel();
-        l.field_d.b(96, ta.field_f);
+        l.field_d.replaceContent(96, ta.field_f);
         if (param0 != 0) {
           hg.b(3);
         }

@@ -70,7 +70,7 @@ final class ta {
           ta.a((byte) -73, (java.applet.Applet) null);
         }
         if (fe.field_g) {
-          nk.field_a.n(1);
+          nk.field_a.showConnectionFailure(1);
         } else {
           var1 = nb.field_d;
           if (var1 > 0) {
@@ -81,7 +81,7 @@ final class ta {
             }
             ej.field_c = rk.a(true, new CharSequence[]{(CharSequence) ((Object) ej.field_c), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) NameSuggestionsPanel.field_G)});
           }
-          nk.field_a.a(true);
+          nk.field_a.closeDialog(true);
           kb.b(808);
         }
     }

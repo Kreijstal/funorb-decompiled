@@ -91,7 +91,7 @@ final class EmailFormatValidator extends TextFieldValidator {
         int var1Lifetime1;
         if (sd.field_c == null) {
           if (null != ji.field_a) {
-            ji.field_a.c(true);
+            ji.field_a.freezeNormalProgressAnimation(true);
           }
           var1 = -127 / ((param0 - 12) / 41);
           vb.a((byte) 44);
@@ -99,7 +99,7 @@ final class EmailFormatValidator extends TextFieldValidator {
         }
         sd.field_c.snapAndPruneDialogs(true);
         if (null != ji.field_a) {
-          ji.field_a.c(true);
+          ji.field_a.freezeNormalProgressAnimation(true);
         }
         var1Lifetime1 = -127 / ((param0 - 12) / 41);
         vb.a((byte) 44);

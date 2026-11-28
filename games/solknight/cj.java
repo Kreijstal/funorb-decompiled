@@ -44,7 +44,7 @@ final class cj {
             stackIn_10_0 = 3;
             return stackIn_10_0;
           }
-          if (gf.field_Z == PacketBuffer.field_i) {
+          if (ContentTransitionDialog.field_Z == PacketBuffer.field_i) {
             stackIn_13_0 = 1;
             return stackIn_13_0;
           }
@@ -52,7 +52,7 @@ final class cj {
             stackIn_17_0 = 1;
             return stackIn_17_0;
           }
-          if (ma.field_o != gf.field_Z) {
+          if (ma.field_o != ContentTransitionDialog.field_Z) {
             stackIn_22_0 = -1;
             return stackIn_22_0;
           }

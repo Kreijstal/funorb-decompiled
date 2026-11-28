@@ -218,7 +218,7 @@ final class dh {
           return true;
         }
         if (param0 == 14) {
-          jg.n(-66);
+          BirthDateChatEnableForm.n(-66);
           return true;
         }
         if (param0 == 20) {
@@ -246,7 +246,7 @@ final class dh {
           }
           int var3_int = -49 % ((param0 - 3) / 36);
           if (param1.field_k == 1) {
-            if (ii.field_Q == 0) {
+            if (GuestPlayConfirmationForm.field_Q == 0) {
               this.field_b.a((byte) -12, BitPacketBuffer.field_v, 12);
             }
             this.field_b.a((byte) -12, ChessMatchSession.field_i, 13);
@@ -678,13 +678,13 @@ final class dh {
     }
 
     final static void c(int param0) {
-        if (rm.field_Q == 10) {
+        if (StripedProgressWidget.field_Q == 10) {
           sh.a((byte) -59);
-          rm.field_Q = 11;
+          StripedProgressWidget.field_Q = 11;
         } else {
           if (!tb.a((byte) 87)) {
             sh.a((byte) -59);
-            rm.field_Q = 11;
+            StripedProgressWidget.field_Q = 11;
           }
         }
         if (param0 != 12) {

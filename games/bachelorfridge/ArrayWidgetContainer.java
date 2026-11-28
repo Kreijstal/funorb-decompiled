@@ -83,7 +83,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements WidgetContainerM
         return null;
     }
 
-    abstract void h(int param0);
+    abstract void layoutChildren(int param0);
 
     void updateMouseOver(int param0, int param1, UiWidget param2, int param3) {
         int var6 = 0;
@@ -127,7 +127,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements WidgetContainerM
 
     final void setBounds(int param0, int param1, byte param2, int param3, int param4) {
         super.setBounds(param0, param1, param2, param3, param4);
-        this.h(param2 ^ -11436);
+        this.layoutChildren(param2 ^ -11436);
     }
 
     final void pointerReleased(int param0, int param1, byte param2, UiWidget param3, int param4, int param5) {
@@ -602,7 +602,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements WidgetContainerM
           param0.drawScaled(param4, param3, param2.field_q, param2.field_p);
           SoftwareRasterizer.drawLine(0, param3, param4, param3, 16777215);
           SoftwareRasterizer.drawLine(param2.field_q + param4, param3, param2.field_q, param3, 16777215);
-          hga.field_U.a((byte) 117);
+          ProgressDialog.field_U.a((byte) 117);
           for (var6 = 0; var6 < param2.field_q; var6++) {
             var7 = 0;
             for (var8 = var6; var8 < param2.field_v.length; var8 = var8 + param2.field_q) {

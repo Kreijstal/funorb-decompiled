@@ -24,9 +24,9 @@ final class ee extends IntrusiveNode {
           field_i = false;
         }
         if (k.field_b) {
-          ah.field_e.m(125);
+          ah.field_e.showConnectionFailure(125);
         } else {
-          var1 = c.field_H;
+          var1 = StripedProgressWidget.field_H;
           if (var1 <= 0) {
           } else {
             if (1 != var1) {
@@ -34,9 +34,9 @@ final class ee extends IntrusiveNode {
             } else {
               v.field_a = bf.field_m;
             }
-            v.field_a = ci.a(new CharSequence[]{(CharSequence) ((Object) v.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) RasterBuffer.field_b)}, (byte) -93);
+            v.field_a = ProgressMessageDialog.a(new CharSequence[]{(CharSequence) ((Object) v.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) RasterBuffer.field_b)}, (byte) -93);
           }
-          ah.field_e.f(true);
+          ah.field_e.closeDialog(true);
           ql.d(18962);
         }
     }

@@ -48,8 +48,8 @@ abstract class AwtRasterBuffer {
           if (param0 != -11003) {
             AwtRasterBuffer.clearStaticReferences((byte) 109);
           }
-          if (qi.field_J < param2) {
-            qi.field_J = param2;
+          if (DialogMessagePane.field_J < param2) {
+            DialogMessagePane.field_J = param2;
           }
           var3_int = 366;
           var4 = 614;

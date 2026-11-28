@@ -123,8 +123,8 @@ class DualLinkNode extends IntrusiveNode {
           SoftwareRasterizer.drawRectangleOutline(243, 197, 369, 143, 16777215);
           SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (null == gi.field_f) {
-            if (ek.field_G != null) {
-              ek.field_G.drawParagraph(BufferedSocket.field_m, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (StripedProgressWidget.field_G != null) {
+              StripedProgressWidget.field_G.drawParagraph(BufferedSocket.field_m, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
@@ -135,14 +135,14 @@ class DualLinkNode extends IntrusiveNode {
           if (var6 != null) {
             var6.drawTransparent(245, 199);
           } else {
-            if (ek.field_G != null) {
-              ek.field_G.drawParagraph(BufferedSocket.field_m, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (StripedProgressWidget.field_G != null) {
+              StripedProgressWidget.field_G.drawParagraph(BufferedSocket.field_m, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           }
-          if (eh.field_k > ll.field_d) {
+          if (eh.field_k > FullscreenNoticeType.field_d) {
             var7Lifetime2 = gi.field_f[p.field_b];
             if (var7Lifetime2 != null) {
-              var2 = (60 + var7Lifetime2.fullWidth) * ll.field_d / eh.field_k;
+              var2 = (60 + var7Lifetime2.fullWidth) * FullscreenNoticeType.field_d / eh.field_k;
               var3 = var2 - 30;
               if (!PasswordValidator.field_r) {
                 c.a(-256 * var3 / 30, 199, 245, 256 * (var7Lifetime2.fullWidth - var3) / 30, var7Lifetime2, 107);
@@ -151,7 +151,7 @@ class DualLinkNode extends IntrusiveNode {
               }
             }
           }
-          if (null != ek.field_G) {
+          if (null != StripedProgressWidget.field_G) {
             var2_ref = null;
             var5 = 0;
             var3Lifetime1 = var5;
@@ -168,7 +168,7 @@ class DualLinkNode extends IntrusiveNode {
               var5++;
             }
             if (var2_ref != null) {
-              ek.field_G.drawParagraph("Screenshot(s) " + (String) (var2_ref) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+              StripedProgressWidget.field_G.drawParagraph("Screenshot(s) " + (String) (var2_ref) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
             }
           }
           var2Lifetime1 = 106 / ((param0 - 2) / 44);

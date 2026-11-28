@@ -32,7 +32,7 @@ final class aa {
         dg.field_n.a((byte) -6, oj.field_C, PrimaryNodeDeque.field_g, vk.field_x);
         dg.field_n.a((byte) -6, jd.field_b, TextLineMetrics.field_g, af.field_U);
         dg.field_n.a((byte) -6, AccountCreationResultPanel.field_Bb, TextLineMetrics.field_g, af.field_U);
-        dg.field_n.a((byte) -6, PrimaryNodeDeque.field_b, uc.field_cb, ug.field_bb);
+        dg.field_n.a((byte) -6, PrimaryNodeDeque.field_b, uc.field_cb, ResizableModalDialog.field_bb);
     }
 
     final static bn a(byte param0) {

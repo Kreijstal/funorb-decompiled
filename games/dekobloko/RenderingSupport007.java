@@ -266,7 +266,7 @@ final class RenderingSupport007 {
             RichTextWidget.performAction1363(false, (byte) -108);
             return;
           }
-          if (UiComponentPart023.computeBoolean1242(-30146)) {
+          if (StandardContentDialog.computeBoolean1242(-30146)) {
             this.mixedSupport116State0002.performAction1512(-38);
           } else {
             this.mixedSupport116State0002.performAction1524(0);
@@ -657,11 +657,11 @@ final class RenderingSupport007 {
             MixedSupport042.performAction0537(289, 256, 16769088, "???", integerLocal8 + 500, DraggableWidgetContainer.renderingSupport009State0005);
           }
         }
-        if (UiComponentPart023.computeBoolean1242(-30146)) {
+        if (StandardContentDialog.computeBoolean1242(-30146)) {
           MixedSupport029.performAction0407(16777215, integerLocal8 + 320, GzipDecompressor.stringState0327, 360, (byte) 75, DraggableWidgetContainer.renderingSupport009State0005);
         }
         if (MixedSupport107.computeBoolean1404(-80, 5, this.integerArrayState0121)) {
-          MixedSupport029.performAction0407(16777215, 320 + integerLocal8, UiComponentPart023.stringState0424, 360, (byte) 75, DraggableWidgetContainer.renderingSupport009State0005);
+          MixedSupport029.performAction0407(16777215, 320 + integerLocal8, StandardContentDialog.stringState0424, 360, (byte) 75, DraggableWidgetContainer.renderingSupport009State0005);
         }
     }
 
@@ -724,7 +724,7 @@ final class RenderingSupport007 {
         rgbSpriteLocal3 = MixedSupport061.rgbSpriteState0021;
         rgbSpriteLocal3.draw(320 - rgbSpriteLocal3.integerState0254 / 2, 45 - rgbSpriteLocal3.integerState0260 / 2 - (integerLocal2 >> 2));
         if (null == this.mixedSupport068State0001 &&
-          !UiComponentPart023.computeBoolean1242(-30146)) {
+          !StandardContentDialog.computeBoolean1242(-30146)) {
           this.mixedSupport068State0001 = MixedSupport007.computeMixedSupport0680070(3, false, 1, 0, 10);
         }
         integerLocal4 = RenderingSupport001.computeInteger0135((byte) 107, MixedSupport048.mixedSupport072State0001, MixedSupport036.integerState0222, this.mixedSupport068State0001);
@@ -757,7 +757,7 @@ final class RenderingSupport007 {
                   }
                   MixedSupport042.performAction0537(integerLocal10 * 20 + 130, 256, integerLocal11, stringArrayLocal7[integerLocal10], 125 + integerLocal2, DraggableWidgetContainer.renderingSupport009State0005);
                   MixedSupport072.performAction0918(DraggableWidgetContainer.renderingSupport009State0005, (byte) -39, 130 + integerLocal10 * 20, NodeHashTableIterator.substituteIndexedPlaceholders(106, MixedSupport070.stringState0315, new String[]{Integer.toString(integerLocal13 + 1)}), integerLocal11, 350 + integerLocal2);
-                  MixedSupport042.performAction0537(130 + integerLocal10 * 20, 256, integerLocal11, UiComponentPart018.stringArrayState0021[integerLocal13], integerLocal2 + 350, DraggableWidgetContainer.renderingSupport009State0005);
+                  MixedSupport042.performAction0537(130 + integerLocal10 * 20, 256, integerLocal11, RegistrationAgreementPane.stringArrayState0021[integerLocal13], integerLocal2 + 350, DraggableWidgetContainer.renderingSupport009State0005);
                   MixedSupport072.performAction0918(DraggableWidgetContainer.renderingSupport009State0005, (byte) -39, 20 * integerLocal10 + 130, Integer.toString(integerLocal14), integerLocal11, 545 + integerLocal2);
                 }
               }
@@ -772,7 +772,7 @@ final class RenderingSupport007 {
               integerLocal9 = integerLocal8 % 8;
               integerLocal18 = integerLocal8 / 8;
               MixedSupport072.performAction0918(DraggableWidgetContainer.renderingSupport009State0005, (byte) -39, 330, NodeHashTableIterator.substituteIndexedPlaceholders(81, MixedSupport070.stringState0315, new String[]{Integer.toString(1 + integerLocal9)}), 16777215, integerLocal2 + 350);
-              MixedSupport042.performAction0537(330, 256, 16777215, UiComponentPart018.stringArrayState0021[integerLocal9], 350 + integerLocal2, DraggableWidgetContainer.renderingSupport009State0005);
+              MixedSupport042.performAction0537(330, 256, 16777215, RegistrationAgreementPane.stringArrayState0021[integerLocal9], 350 + integerLocal2, DraggableWidgetContainer.renderingSupport009State0005);
               MixedSupport072.performAction0918(DraggableWidgetContainer.renderingSupport009State0005, (byte) -39, 330, Integer.toString(integerLocal18), 16777215, integerLocal2 + 545);
               integerLocal17 = 0;
             }
@@ -783,7 +783,7 @@ final class RenderingSupport007 {
         if (objectLocal5 != null) {
           MixedSupport029.performAction0407(16777215, 320 + integerLocal2, (String) (objectLocal5), 220, (byte) 75, SceneWidget.renderingSupport009State0007);
         }
-        if (UiComponentPart023.computeBoolean1242(-30146)) {
+        if (StandardContentDialog.computeBoolean1242(-30146)) {
           MixedSupport029.performAction0407(16777215, 320 + integerLocal2, GzipDecompressor.stringState0327, 330, (byte) 75, DraggableWidgetContainer.renderingSupport009State0005);
         } else {
           if (integerLocal17 != 0) {
@@ -863,7 +863,7 @@ final class RenderingSupport007 {
         rgbSpriteLocal7 = ResourceSupport001.rgbSpriteState0004;
         rgbSpriteLocal7.draw(-(rgbSpriteLocal7.integerState0254 / 2) + 320, -(rgbSpriteLocal7.integerState0260 / 2) + (45 - (integerLocal6 >> 2)));
         if (this.mixedSupport020State0001 == null &&
-          !UiComponentPart023.computeBoolean1242(-30146)) {
+          !StandardContentDialog.computeBoolean1242(-30146)) {
           this.mixedSupport020State0001 = UiComponentPart001.computeMixedSupport0200055(7, 10, (byte) -111, 0);
         }
         stackIntegerLocal2 = (AgeValidator.integerState0360 != 3) ? 310 : 305;
@@ -922,7 +922,7 @@ final class RenderingSupport007 {
         if (objectLocal13 != null) {
           MixedSupport029.performAction0407(16777215, 320 + integerLocal6, (String) (objectLocal13), 220, (byte) 75, SceneWidget.renderingSupport009State0007);
         }
-        if (UiComponentPart023.computeBoolean1242(-30146)) {
+        if (StandardContentDialog.computeBoolean1242(-30146)) {
           MixedSupport029.performAction0407(16777215, integerLocal6 + 320, GzipDecompressor.stringState0327, 330, (byte) 75, DraggableWidgetContainer.renderingSupport009State0005);
         }
     }
@@ -1028,7 +1028,7 @@ final class RenderingSupport007 {
             RichTextWidget.performAction1363(false, (byte) -112);
             return;
           }
-          if (UiComponentPart023.computeBoolean1242(-30146)) {
+          if (StandardContentDialog.computeBoolean1242(-30146)) {
             this.mixedSupport116State0002.performAction1512(-31);
           } else {
             this.mixedSupport116State0002.performAction1524(integerArgument1 ^ -8622);
@@ -1550,7 +1550,7 @@ final class RenderingSupport007 {
         rgbSpriteLocal3 = MixedSupport146.rgbSpriteState0074;
         rgbSpriteLocal3.draw(-(rgbSpriteLocal3.integerState0254 / 2) + 320, 45 + (-(rgbSpriteLocal3.integerState0260 / 2) - (integerLocal2 >> 2)));
         if (null == this.mixedSupport068State0001 &&
-          !UiComponentPart023.computeBoolean1242(-30146)) {
+          !StandardContentDialog.computeBoolean1242(-30146)) {
           this.mixedSupport068State0001 = MixedSupport007.computeMixedSupport0680070(3, false, 1, 1, 10);
         }
         integerLocal4 = -44 / ((63 - integerArgument1) / 44);
@@ -1605,7 +1605,7 @@ final class RenderingSupport007 {
         if (null != objectLocal6) {
           MixedSupport029.performAction0407(16777215, 320 + integerLocal2, (String) (objectLocal6), 220, (byte) 75, SceneWidget.renderingSupport009State0007);
         }
-        if (!UiComponentPart023.computeBoolean1242(-30146)) {
+        if (!StandardContentDialog.computeBoolean1242(-30146)) {
           if (integerLocal18 != 0) {
             MixedSupport029.performAction0407(16777215, integerLocal2 + 320, MixedSupport004.stringState0014, 330, (byte) 75, DraggableWidgetContainer.renderingSupport009State0005);
           }
@@ -1703,7 +1703,7 @@ final class RenderingSupport007 {
                     stringLocal7 = MixedSupport062.stringState0261;
                   }
                 } else {
-                  stringLocal7 = UiComponentPart033.stringState0623;
+                  stringLocal7 = AccountCreationResultPanel.stringState0623;
                   if (0 == (CipherPacketBuffer.integerState0799 & 16)) {
                     integerLocal18 = 16777215;
                   }
@@ -1798,7 +1798,7 @@ final class RenderingSupport007 {
             return;
           }
           boolean frameRemainderLocal4 = true;
-          if (UiComponentPart023.computeBoolean1242(-30146)) {
+          if (StandardContentDialog.computeBoolean1242(-30146)) {
             this.mixedSupport116State0002.performAction1512(-113);
           } else {
             this.mixedSupport116State0002.performAction1524(0);
@@ -2225,7 +2225,7 @@ final class RenderingSupport007 {
         if (integerLocal1 == 9 &&
           this.mixedSupport116State0002.computeBoolean1520((byte) 114)) {
           LobbyRoomRow.booleanState0203 = true;
-          UiComponentPart004.renderingSupport007State0002 = NetworkSupport009.computeRenderingSupport0071183(booleanArgument2, 415);
+          ContentTransitionDialog.renderingSupport007State0002 = NetworkSupport009.computeRenderingSupport0071183(booleanArgument2, 415);
           SceneWidgetPart008.performAction1129(-105);
           return true;
         }
@@ -2239,7 +2239,7 @@ final class RenderingSupport007 {
         if (19 == integerLocal1 &&
           this.mixedSupport116State0002.computeBoolean1520((byte) 114)) {
           MixedSupport043.booleanState0048 = true;
-          MixedSupport007.renderingSupport007State0001 = UiComponentPart014.computeRenderingSupport0070696((byte) -80, booleanArgument2);
+          MixedSupport007.renderingSupport007State0001 = FullscreenStatusDialog.computeRenderingSupport0070696((byte) -80, booleanArgument2);
           SceneWidgetPart008.performAction1129(-14);
           return true;
         }

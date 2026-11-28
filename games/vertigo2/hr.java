@@ -88,7 +88,7 @@ final class hr extends TextureOperator {
         }
         if (this.field_x.field_i) {
           var5 = this.a(0, -1, param0);
-          for (var6 = 0; var6 < we.field_M; var6++) {
+          for (var6 = 0; var6 < StripedProgressWidget.field_M; var6++) {
             var4 = var5[var6] >> 4;
             if (var4 < 0) {
               var4 = 0;

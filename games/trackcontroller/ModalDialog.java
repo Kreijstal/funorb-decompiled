@@ -45,11 +45,11 @@ abstract class ModalDialog extends DequeWidgetContainer {
 
     final static void m(int param0) {
         if (param0 == -1217366687) {
-          GameApplet.field_g.b(new sf(), param0 ^ 1217366722);
+          GameApplet.field_g.replaceContent(new GuestPlayConfirmationForm(), param0 ^ 1217366722);
           return;
         }
         ModalDialog.releaseDeclaredStaticReferences(-40);
-        GameApplet.field_g.b(new sf(), param0 ^ 1217366722);
+        GameApplet.field_g.replaceContent(new GuestPlayConfirmationForm(), param0 ^ 1217366722);
     }
 
     private final int getTargetAlpha(int param0) {
@@ -60,7 +60,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         return !this.field_E ? 0 : this != this.field_D.getTopOpenDialog(-6121) ? 0 : 256;
     }
 
-    abstract void b(int param0, int param1, int param2);
+    abstract void drawDialogBackground(int param0, int param1, int param2);
 
     final UiWidget getFocusedChild(byte param0) {
         if (param0 > -124) {
@@ -112,7 +112,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         }
         if (this.field_G >= 256) {
           if (param0 == 0) {
-            this.b(this.field_p + param1, param3 ^ 29233, param2 + this.field_m);
+            this.drawDialogBackground(this.field_p + param1, param3 ^ 29233, param2 + this.field_m);
             super.drawWidget(param0, param1, param2, 29221);
             return;
           }
@@ -122,7 +122,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           CachedArchiveSource.field_p = new Sprite(this.field_x, this.field_u);
           mb.a((byte) -116, CachedArchiveSource.field_p);
           SoftwareRasterizer.clearRaster();
-          this.b(0, 20, 0);
+          this.drawDialogBackground(0, 20, 0);
           super.drawWidget(param0, -param1 - this.field_p, -param2 - this.field_m, param3);
           GameShell.m(119);
           CachedArchiveSource.field_p.drawTransparentWithOpacity(param1 + this.field_p, param2 + this.field_m, this.field_G);
@@ -132,7 +132,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           CachedArchiveSource.field_p = new Sprite(this.field_x, this.field_u);
           mb.a((byte) -116, CachedArchiveSource.field_p);
           SoftwareRasterizer.clearRaster();
-          this.b(0, 20, 0);
+          this.drawDialogBackground(0, 20, 0);
           super.drawWidget(param0, -param1 - this.field_p, -param2 - this.field_m, param3);
           GameShell.m(119);
           CachedArchiveSource.field_p.drawTransparentWithOpacity(param1 + this.field_p, param2 + this.field_m, this.field_G);
@@ -142,7 +142,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           CachedArchiveSource.field_p = new Sprite(this.field_x, this.field_u);
           mb.a((byte) -116, CachedArchiveSource.field_p);
           SoftwareRasterizer.clearRaster();
-          this.b(0, 20, 0);
+          this.drawDialogBackground(0, 20, 0);
           super.drawWidget(param0, -param1 - this.field_p, -param2 - this.field_m, param3);
           GameShell.m(119);
           CachedArchiveSource.field_p.drawTransparentWithOpacity(param1 + this.field_p, param2 + this.field_m, this.field_G);
@@ -150,7 +150,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         }
         mb.a((byte) -116, CachedArchiveSource.field_p);
         SoftwareRasterizer.clearRaster();
-        this.b(0, 20, 0);
+        this.drawDialogBackground(0, 20, 0);
         super.drawWidget(param0, -param1 - this.field_p, -param2 - this.field_m, param3);
         GameShell.m(119);
         CachedArchiveSource.field_p.drawTransparentWithOpacity(param1 + this.field_p, param2 + this.field_m, this.field_G);

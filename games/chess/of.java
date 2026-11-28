@@ -237,7 +237,7 @@ final class of {
           RuntimeException var2_ref2 = null;
           var7 = Chess.field_G;
           try {
-            if (ih.field_U) {
+            if (NumericDateInputWidget.field_U) {
               return true;
             }
             try {
@@ -294,7 +294,7 @@ final class of {
         if (param0 != -103) {
           return;
         }
-        vn.field_Db = -1;
+        ProgressMessageDialog.field_Db = -1;
         ModalDialogHost.field_S = -1;
     }
 
@@ -356,11 +356,11 @@ final class of {
         java.applet.Applet var4 = null;
         try {
           if (1 == param0) {
-            stackIn_3_0 = MatchingFieldValidator.a(ch.field_eb, new String[]{param2}, (byte) -93);
+            stackIn_3_0 = MatchingFieldValidator.a(ProgressDialog.field_eb, new String[]{param2}, (byte) -93);
             return stackIn_3_0;
           }
           if (param0 == 2) {
-            stackIn_6_0 = MatchingFieldValidator.a(ii.field_S, new String[]{param2}, (byte) -83);
+            stackIn_6_0 = MatchingFieldValidator.a(GuestPlayConfirmationForm.field_S, new String[]{param2}, (byte) -83);
             return stackIn_6_0;
           }
           if (param0 == 3) {
@@ -384,7 +384,7 @@ final class of {
             return stackIn_21_0;
           }
           if (7 == param0) {
-            stackIn_25_0 = MatchingFieldValidator.a(ih.field_V, new String[]{param2}, (byte) -64);
+            stackIn_25_0 = MatchingFieldValidator.a(NumericDateInputWidget.field_V, new String[]{param2}, (byte) -64);
             return stackIn_25_0;
           }
           if (param0 == 8) {

@@ -84,7 +84,7 @@ final class SplitSpecial extends SpecialOrder {
           var5 = null;
           if (um.field_c == 2) {
             ov.field_d.field_u = true;
-            FullscreenFocusCanvas.field_d.field_Z = lga.a(true, new String[]{sja.field_gb}, qg.field_c);
+            FullscreenFocusCanvas.field_d.field_Z = lga.a(true, new String[]{StandardContentDialog.field_gb}, qg.field_c);
             rba.field_a.field_xb.field_wb.field_Z = null;
             var6 = null;
             var7 = (nea) (var4.beginForward((byte) 90));
@@ -109,7 +109,7 @@ final class SplitSpecial extends SpecialOrder {
                 var7.field_sb = rba.field_a.field_wb.field_sb;
                 var9 = 0;
                 if (var7.field_vb != null) {
-                  if (var7.field_vb == sja.field_gb) {
+                  if (var7.field_vb == StandardContentDialog.field_gb) {
                     var10 = 52224;
                     var11 = 6750054;
                   } else {

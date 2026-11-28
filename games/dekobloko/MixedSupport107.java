@@ -140,14 +140,14 @@ final class MixedSupport107 {
 
     final static void performAction1408(boolean booleanArgument1, byte byteArgument2, String stringArgument3, boolean booleanArgument4) {
         try {
-          UiComponentPart033.performAction1819(-61);
+          AccountCreationResultPanel.performAction1819(-61);
           MixedSupport005.uiComponentPart016State0001.closeAllDialogs(true);
           MixedSupport025.uiComponentPart013State0001 = new LoginPanel(PlayerNamePrompt.stringState0217, (String) null, BirthDateInput.booleanState0198, booleanArgument1, booleanArgument4);
           if (byteArgument2 > -13) {
             String stringLocal1 = (String) null;
             MixedSupport107.performAction1402(false, -65, (String) null, false);
           }
-          LabeledWidgetContainer.uiComponentPart023State0001 = new UiComponentPart023(MixedSupport005.uiComponentPart016State0001, MixedSupport025.uiComponentPart013State0001);
+          LabeledWidgetContainer.uiComponentPart023State0001 = new StandardContentDialog(MixedSupport005.uiComponentPart016State0001, MixedSupport025.uiComponentPart013State0001);
           MixedSupport005.uiComponentPart016State0001.showDialog((byte) -109, LabeledWidgetContainer.uiComponentPart023State0001);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "rb.D(" + booleanArgument1 + ',' + byteArgument2 + ',' + (stringArgument3 != null ? "{...}" : "null") + ',' + booleanArgument4 + ')');
@@ -205,12 +205,12 @@ final class MixedSupport107 {
             stackStringLocal8 = NodeHashTableIterator.substituteIndexedPlaceholders(111, MixedSupport033.stringState0162, new String[]{stringArgument3});
             return stackStringLocal8;
           }
-          if (100 <= UiComponentPart018.integerState0502 &&
+          if (100 <= RegistrationAgreementPane.integerState0502 &&
             0 >= Framebuffer.integerState0192) {
             stackStringLocal9 = HashNode.stringState0053;
             return stackStringLocal9;
           }
-          if (200 <= UiComponentPart018.integerState0502) {
+          if (200 <= RegistrationAgreementPane.integerState0502) {
             stackStringLocal10 = HashNode.stringState0053;
             return stackStringLocal10;
           }
@@ -324,14 +324,14 @@ final class MixedSupport107 {
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void performAction1402(boolean booleanArgument1, int integerArgument2, String stringArgument3, boolean booleanArgument4) {
         try {
-          UiComponentPart033.performAction1819(-61);
+          AccountCreationResultPanel.performAction1819(-61);
           MixedSupport005.uiComponentPart016State0001.closeAllDialogs(true);
           MixedSupport025.uiComponentPart013State0001 = new LoginPanel(PlayerNamePrompt.stringState0217, (String) null, BirthDateInput.booleanState0198, booleanArgument1, booleanArgument4);
           if (integerArgument2 > -13) {
             String stringLocal1 = (String) null;
             MixedSupport107.performAction1402(false, -65, (String) null, false);
           }
-          LabeledWidgetContainer.uiComponentPart023State0001 = new UiComponentPart023(MixedSupport005.uiComponentPart016State0001, MixedSupport025.uiComponentPart013State0001);
+          LabeledWidgetContainer.uiComponentPart023State0001 = new StandardContentDialog(MixedSupport005.uiComponentPart016State0001, MixedSupport025.uiComponentPart013State0001);
           MixedSupport005.uiComponentPart016State0001.showDialog((byte) -109, LabeledWidgetContainer.uiComponentPart023State0001);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "rb.D(" + booleanArgument1 + ',' + integerArgument2 + ',' + (stringArgument3 != null ? "{...}" : "null") + ',' + booleanArgument4 + ')');

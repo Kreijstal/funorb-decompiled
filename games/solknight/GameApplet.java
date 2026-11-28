@@ -25,7 +25,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (this == ib.field_l &&
             !fc.field_m) {
-            lj.field_G = je.correctedCurrentTimeMillis(1) + 4000L;
+            DialogMessagePane.field_G = je.correctedCurrentTimeMillis(1) + 4000L;
             return;
           }
           return;
@@ -131,7 +131,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (ib.field_l == this &&
             !fc.field_m) {
-            lj.field_G = je.correctedCurrentTimeMillis(1);
+            DialogMessagePane.field_G = je.correctedCurrentTimeMillis(1);
             ModalDialogHost.sleepMillis((byte) 125, 5000L);
             CachedArchiveSource.field_l = null;
             this.shutdownApplet(false, true);
@@ -152,7 +152,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          s.field_jb = param0;
+          StandardContentDialog.field_jb = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -184,8 +184,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
             fc.field_m = param1;
           }
-          if (null != s.field_jb) {
-            s.field_jb.destroy();
+          if (null != StandardContentDialog.field_jb) {
+            StandardContentDialog.field_jb.destroy();
           }
           try {
             this.disposeClient(-1);
@@ -234,7 +234,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           return;
         }
         try {
-          lj.field_G = 0L;
+          DialogMessagePane.field_G = 0L;
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "dh.start()");
         }
@@ -251,9 +251,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_4_0 = null;
             return (java.net.URL) (stackIn_4_0);
           }
-          if (s.field_jb != null &&
-            s.field_jb != this) {
-            stackIn_10_0 = s.field_jb.getDocumentBase();
+          if (StandardContentDialog.field_jb != null &&
+            StandardContentDialog.field_jb != this) {
+            stackIn_10_0 = StandardContentDialog.field_jb.getDocumentBase();
             return stackIn_10_0;
           }
           stackIn_12_0 = super.getDocumentBase();
@@ -443,8 +443,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               }
               if (decompiledFrameRemainder3) {
                 var1 = ib.field_l;
-                if (null != s.field_jb) {
-                  var1 = s.field_jb;
+                if (null != StandardContentDialog.field_jb) {
+                  var1 = StandardContentDialog.field_jb;
                 }
                 var2_ref = PlatformTaskDispatcher.field_e;
                 if (null != var2_ref) {
@@ -462,8 +462,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 fh.field_e = ee.e(-1);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (0L != lj.field_G) {
-                    stackIn_99_0 = compareLongs(lj.field_G, je.correctedCurrentTimeMillis(1));
+                  if (0L != DialogMessagePane.field_G) {
+                    stackIn_99_0 = compareLongs(DialogMessagePane.field_G, je.correctedCurrentTimeMillis(1));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_99_0 <= 0)) {
@@ -520,9 +520,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_2_0 = null;
             return (String) (stackIn_2_0);
           }
-          if (null != s.field_jb &&
-            s.field_jb != this) {
-            stackIn_10_0 = s.field_jb.getParameter(param0);
+          if (null != StandardContentDialog.field_jb &&
+            StandardContentDialog.field_jb != this) {
+            stackIn_10_0 = StandardContentDialog.field_jb.getParameter(param0);
             return stackIn_10_0;
           }
           stackIn_12_0 = super.getParameter(param0);
@@ -646,14 +646,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               decompiledFrameRemainder0 = (var4 != 0);
             }
             if (decompiledFrameRemainder0) {
-              if (s.field_jb == null) {
+              if (StandardContentDialog.field_jb == null) {
                 var2 = ib.field_l;
                 if (var4 != 0) {
-                  var2 = s.field_jb;
+                  var2 = StandardContentDialog.field_jb;
                   var2 = bg.field_w;
                 }
               } else {
-                var2 = s.field_jb;
+                var2 = StandardContentDialog.field_jb;
                 if (var4 != 0) {
                   var2 = bg.field_w;
                 }
@@ -769,9 +769,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         if (null != oc.field_a) {
           return null;
         }
-        if (s.field_jb != null &&
-          s.field_jb != this) {
-          return s.field_jb.getCodeBase();
+        if (StandardContentDialog.field_jb != null &&
+          StandardContentDialog.field_jb != this) {
+          return StandardContentDialog.field_jb.getCodeBase();
         }
         return super.getCodeBase();
     }
@@ -925,9 +925,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_2_0 = null;
             return (java.applet.AppletContext) (stackIn_2_0);
           }
-          if (null != s.field_jb &&
-            s.field_jb != this) {
-            stackIn_8_0 = s.field_jb.getAppletContext();
+          if (null != StandardContentDialog.field_jb &&
+            StandardContentDialog.field_jb != this) {
+            stackIn_8_0 = StandardContentDialog.field_jb.getAppletContext();
             return stackIn_8_0;
           }
           stackIn_10_0 = super.getAppletContext();

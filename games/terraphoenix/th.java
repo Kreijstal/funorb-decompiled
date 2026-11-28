@@ -16,7 +16,7 @@ final class th {
         lk.field_a[pb.field_b] = param0;
         pf.field_b[pb.field_b] = pb.field_b;
         a.field_c[pb.field_b] = param4;
-        if (!(param4 >= hm.field_L)) {
+        if (!(param4 >= StripedProgressWidget.field_L)) {
           bd.field_a = param4;
         }
         if (!(param4 <= ok.field_j)) {
@@ -27,7 +27,7 @@ final class th {
         dd.field_L[pb.field_b] = param2;
         int var6 = param5 + param3 + param2;
         int var7 = param1 == ~var6 ? 0 : 1000 * param3 / var6;
-        al.field_bb[pb.field_b] = var7;
+        ContentTransitionDialog.field_bb[pb.field_b] = var7;
         if (var7 < bd.field_a) {
           bd.field_a = var7;
           pb.field_b = pb.field_b + 1;

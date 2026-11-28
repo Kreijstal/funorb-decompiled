@@ -1154,7 +1154,7 @@ abstract class eh {
                 }
                 var2 = rd.a("changedisplayname", param0 - 123);
                 if (null != var2) {
-                  db.field_B = DualLinkNode.a(127, var2);
+                  GuestPlayConfirmationForm.field_B = DualLinkNode.a(127, var2);
                 }
                 var2 = rd.a("returntohomepage", param0 ^ -111);
                 if (null != var2) {
@@ -1496,7 +1496,7 @@ abstract class eh {
                 }
                 var2 = rd.a("create_createanaccount", param0 - 105);
                 if (var2 != null) {
-                  qj.field_V = DualLinkNode.a(120, var2);
+                  ContentTransitionDialog.field_V = DualLinkNode.a(120, var2);
                 }
                 var2 = rd.a("create_username", -33);
                 if (null != var2) {
@@ -1520,7 +1520,7 @@ abstract class eh {
                 }
                 var2 = rd.a("create_email_confirm", -56);
                 if (var2 != null) {
-                  ph.field_mb = DualLinkNode.a(120, var2);
+                  ProgressMessageDialog.field_mb = DualLinkNode.a(120, var2);
                 }
                 var2 = rd.a("create_age", 65);
                 if (var2 != null) {
@@ -1572,7 +1572,7 @@ abstract class eh {
                 }
                 var2 = rd.a("create_u13terms", param0 - 158);
                 if (var2 != null) {
-                  jj.field_C = DualLinkNode.a(116, var2);
+                  RegistrationAgreementPane.field_C = DualLinkNode.a(116, var2);
                 }
                 var2 = rd.a("login_username_email", -67);
                 if (var2 != null) {
@@ -1692,7 +1692,7 @@ abstract class eh {
                 }
                 var2 = rd.a("create_alert_namelength", param0 - 100);
                 if (null != var2) {
-                  vj.field_W = DualLinkNode.a(121, var2);
+                  FullscreenStatusDialog.field_W = DualLinkNode.a(121, var2);
                 }
                 var2 = rd.a("create_alert_namechars", -87);
                 if (var2 != null) {
@@ -1720,7 +1720,7 @@ abstract class eh {
                 }
                 var2 = rd.a("create_alert_passcontainsname", 66);
                 if (null != var2) {
-                  fa.field_t = DualLinkNode.a(115, var2);
+                  StripedProgressWidget.field_t = DualLinkNode.a(115, var2);
                 }
                 var2 = rd.a("create_alert_passcontainsemail", 88);
                 if (var2 != null) {
@@ -1876,11 +1876,11 @@ abstract class eh {
                 }
                 var2 = rd.a("waitingfor_soundeffects", 67);
                 if (null != var2) {
-                  lc.field_ib = DualLinkNode.a(115, var2);
+                  StandardContentDialog.field_ib = DualLinkNode.a(115, var2);
                 }
                 var2 = rd.a("waitingfor_music", 108);
                 if (null != var2) {
-                  kc.field_U = DualLinkNode.a(124, var2);
+                  ResizableModalDialog.field_U = DualLinkNode.a(124, var2);
                 }
                 var2 = rd.a("waitingfor_instruments", 88);
                 if (var2 != null) {
@@ -1908,7 +1908,7 @@ abstract class eh {
                 }
                 var2 = rd.a("loading_graphics", -110);
                 if (var2 != null) {
-                  ae.field_a = DualLinkNode.a(126, var2);
+                  FullscreenNoticeType.field_a = DualLinkNode.a(126, var2);
                 }
                 var2 = rd.a("loading_models", 98);
                 if (var2 != null) {
@@ -1960,7 +1960,7 @@ abstract class eh {
                 }
                 var2 = rd.a("unpacking_soundeffects", -56);
                 if (var2 != null) {
-                  fa.field_z = DualLinkNode.a(116, var2);
+                  StripedProgressWidget.field_z = DualLinkNode.a(116, var2);
                 }
                 var2 = rd.a("unpacking_music", -115);
                 if (var2 != null) {
@@ -2686,19 +2686,19 @@ abstract class eh {
                 }
                 var2 = rd.a("reconnect_lost_seq,0", -34);
                 if (var2 != null) {
-                  lf.field_gb[0] = DualLinkNode.a(113, var2);
+                  ProgressDialog.field_gb[0] = DualLinkNode.a(113, var2);
                 }
                 var2 = rd.a("reconnect_lost_seq,1", param0 ^ -109);
                 if (var2 != null) {
-                  lf.field_gb[1] = DualLinkNode.a(dg.a((int) param0, 77), var2);
+                  ProgressDialog.field_gb[1] = DualLinkNode.a(dg.a((int) param0, 77), var2);
                 }
                 var2 = rd.a("reconnect_lost_seq,2", 99);
                 if (var2 != null) {
-                  lf.field_gb[2] = DualLinkNode.a(114, var2);
+                  ProgressDialog.field_gb[2] = DualLinkNode.a(114, var2);
                 }
                 var2 = rd.a("reconnect_lost_seq,3", 100);
                 if (var2 != null) {
-                  lf.field_gb[3] = DualLinkNode.a(113, var2);
+                  ProgressDialog.field_gb[3] = DualLinkNode.a(113, var2);
                 }
                 var2 = rd.a("reconnect_lost", param0 - 3);
                 if (var2 != null) {
@@ -2770,7 +2770,7 @@ abstract class eh {
                 }
                 var2 = rd.a("fs_accept_countdown_sing", -80);
                 if (var2 != null) {
-                  ph.field_gb = DualLinkNode.a(param0 + 64, var2);
+                  ProgressMessageDialog.field_gb = DualLinkNode.a(param0 + 64, var2);
                 }
                 var2 = rd.a("fs_accept_countdown_pl", -76);
                 if (var2 != null) {
@@ -2790,7 +2790,7 @@ abstract class eh {
                 }
                 var2 = rd.a("fs_unavailable", 117);
                 if (var2 != null) {
-                  lc.field_fb = DualLinkNode.a(123, var2);
+                  StandardContentDialog.field_fb = DualLinkNode.a(123, var2);
                 }
                 var2 = rd.a("fs_unavailable_try_signed_applet", -45);
                 if (null != var2) {
@@ -3070,57 +3070,57 @@ abstract class eh {
                 }
                 var2 = rd.a("subscription_cost_monthly,0", 99);
                 if (var2 != null) {
-                  kc.field_N[0] = DualLinkNode.a(124, var2);
+                  ResizableModalDialog.field_N[0] = DualLinkNode.a(124, var2);
                 }
                 var2 = rd.a("subscription_cost_monthly,1", 90);
                 if (var2 != null) {
-                  kc.field_N[1] = DualLinkNode.a(123, var2);
+                  ResizableModalDialog.field_N[1] = DualLinkNode.a(123, var2);
                 }
                 var2 = rd.a("subscription_cost_monthly,2", param0 ^ -71);
                 if (null != var2) {
-                  kc.field_N[2] = DualLinkNode.a(127, var2);
+                  ResizableModalDialog.field_N[2] = DualLinkNode.a(127, var2);
                 }
                 var2 = rd.a("subscription_cost_monthly,3", 97);
                 if (var2 != null) {
-                  kc.field_N[3] = DualLinkNode.a(dg.a((int) param0, 64), var2);
+                  ResizableModalDialog.field_N[3] = DualLinkNode.a(dg.a((int) param0, 64), var2);
                 }
                 var2 = rd.a("subscription_cost_monthly,4", 115);
                 if (null != var2) {
-                  kc.field_N[4] = DualLinkNode.a(dg.a((int) param0, 76), var2);
+                  ResizableModalDialog.field_N[4] = DualLinkNode.a(dg.a((int) param0, 76), var2);
                 }
                 var2 = rd.a("subscription_cost_monthly,5", param0 ^ 99);
                 if (null != var2) {
-                  kc.field_N[5] = DualLinkNode.a(115, var2);
+                  ResizableModalDialog.field_N[5] = DualLinkNode.a(115, var2);
                 }
                 var2 = rd.a("subscription_cost_monthly,6", -49);
                 if (null != var2) {
-                  kc.field_N[6] = DualLinkNode.a(114, var2);
+                  ResizableModalDialog.field_N[6] = DualLinkNode.a(114, var2);
                 }
                 var2 = rd.a("subscription_cost_monthly,7", param0 ^ -73);
                 if (null != var2) {
-                  kc.field_N[7] = DualLinkNode.a(121, var2);
+                  ResizableModalDialog.field_N[7] = DualLinkNode.a(121, var2);
                 }
                 var2 = rd.a("subscription_cost_monthly,8", param0 - 157);
             }
             void runChunk3() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  kc.field_N[8] = DualLinkNode.a(dg.a((int) param0, 64), var2);
+                  ResizableModalDialog.field_N[8] = DualLinkNode.a(dg.a((int) param0, 64), var2);
                 }
                 var2 = rd.a("subscription_cost_monthly,9", -91);
                 if (var2 != null) {
-                  kc.field_N[9] = DualLinkNode.a(112, var2);
+                  ResizableModalDialog.field_N[9] = DualLinkNode.a(112, var2);
                 }
                 var2 = rd.a("subscription_cost_monthly,10", -90);
                 if (var2 != null) {
-                  kc.field_N[10] = DualLinkNode.a(118, var2);
+                  ResizableModalDialog.field_N[10] = DualLinkNode.a(118, var2);
                 }
                 var2 = rd.a("subscription_cost_monthly,11", -59);
                 if (null != var2) {
-                  kc.field_N[11] = DualLinkNode.a(117, var2);
+                  ResizableModalDialog.field_N[11] = DualLinkNode.a(117, var2);
                 }
                 var2 = rd.a("subscription_cost_monthly,12", -81);
                 if (null != var2) {
-                  kc.field_N[12] = DualLinkNode.a(112, var2);
+                  ResizableModalDialog.field_N[12] = DualLinkNode.a(112, var2);
                 }
                 var2 = rd.a("sentence_separator", -102);
                 if (var2 != null) {

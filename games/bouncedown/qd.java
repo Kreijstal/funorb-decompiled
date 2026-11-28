@@ -72,7 +72,7 @@ final class qd {
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_4_0 = uc.field_E;
+            stackIn_4_0 = DialogMessagePane.field_E;
             return stackIn_4_0;
           }
           if (var2_int > 64) {
@@ -81,7 +81,7 @@ final class qd {
           }
           if (param0.charAt(0) == 34) {
             if (param0.charAt(-1 + var2_int) != 34) {
-              stackIn_13_0 = mh.field_R;
+              stackIn_13_0 = ContentTransitionDialog.field_R;
               return stackIn_13_0;
             }
             var3 = 0;
@@ -93,7 +93,7 @@ final class qd {
               } else {
                 if (var5 == 34 &&
                   var3 == 0) {
-                  stackIn_26_0 = mh.field_R;
+                  stackIn_26_0 = ContentTransitionDialog.field_R;
                   return stackIn_26_0;
                 }
                 var3 = 0;
@@ -114,13 +114,13 @@ final class qd {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                stackIn_40_0 = mh.field_R;
+                stackIn_40_0 = ContentTransitionDialog.field_R;
                 return stackIn_40_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (ve.field_c.indexOf(var6) == -1) {
-                stackIn_45_0 = mh.field_R;
+                stackIn_45_0 = ContentTransitionDialog.field_R;
                 return stackIn_45_0;
               }
               var3Lifetime1 = 0;

@@ -647,7 +647,7 @@ final class bf {
     }
 
     final static void a(int param0, byte param1) {
-        ha var2 = pg.field_fb;
+        ha var2 = StandardContentDialog.field_fb;
         if (param1 < -32) {
           var2.f(param0, 950);
           var2.writeByte(false, 1);

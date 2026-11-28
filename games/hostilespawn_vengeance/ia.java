@@ -42,7 +42,7 @@ final class ia {
         vj.field_s = 0;
         uf.field_h = this.field_f;
         AccountNameAvailabilityValidator.field_s = 0;
-        eh.field_g = ba.a((byte) 113);
+        eh.field_g = StripedProgressWidget.a((byte) 113);
         MidiPcmStream.field_r = 0;
     }
 

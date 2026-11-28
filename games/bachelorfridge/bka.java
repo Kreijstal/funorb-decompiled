@@ -13,7 +13,7 @@ final class bka implements WidgetRenderer {
 
     final static void b(int param0, int param1) {
         int var4 = 0;
-        BitPacketBuffer var2 = sja.field_fb;
+        BitPacketBuffer var2 = StandardContentDialog.field_fb;
         int var4Lifetime1;
         var2.writeCipheredByte(param1, (byte) 113);
         var2.position = var2.position + 1;

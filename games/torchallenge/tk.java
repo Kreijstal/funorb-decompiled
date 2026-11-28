@@ -89,7 +89,7 @@ final class tk extends InteractiveWidget {
           if (var19Lifetime1 == 0) {
             return;
           }
-          ll.a(var17, 0, var8, var5, var14Lifetime1 != 0, var13Lifetime1 != 0, var12 != 0, var16, -1, var18, true, var9);
+          FullscreenNoticeType.a(var17, 0, var8, var5, var14Lifetime1 != 0, var13Lifetime1 != 0, var12 != 0, var16, -1, var18, true, var9);
           return;
         }
         return;

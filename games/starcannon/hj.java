@@ -14,7 +14,7 @@ final class hj {
           md.field_b = param7;
           int var9_int = 22 / ((param4 + 10) / 56);
           wj.field_b = param1;
-          kc.field_M = param6;
+          ResizableModalDialog.field_M = param6;
           va.field_s = param8;
           ac.field_e = param5;
           ld.field_fb = param0;

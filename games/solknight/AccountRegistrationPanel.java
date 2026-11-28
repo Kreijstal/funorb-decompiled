@@ -221,7 +221,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         int var3 = 20;
         var3 = var3 + this.a(MatchingFieldValidator.field_j, var3, (byte) 119, this.field_I, 170);
         var3 = var3 + (5 + this.a((byte) 91, var3, 20, 170, "", FrameTimer.field_a, this.field_M));
-        var3 = var3 + this.a(ld.field_O, var3, (byte) 44, this.field_O, 170);
+        var3 = var3 + this.a(ResizableModalDialog.field_O, var3, (byte) 44, this.field_O, 170);
         var3 = var3 + (this.a(var3, 35, this.field_K, uc.field_d, pk.field_X, 170) + 5);
         var3 = var3 + (this.a(var3, 35, this.field_P, uc.field_k, eb.field_a, 170) + 5);
         var3 = var3 + this.a(var3, this.field_S, 170, ProxyAuthenticationRequiredException.field_b, true);
@@ -286,7 +286,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           var2 = Integer.parseInt(this.field_S.field_i);
         } catch (NumberFormatException numberFormatException) {
         }
-        return nf.a(var2, this.field_L.field_F, this.field_I.field_i, this.field_P.field_i, this, this.field_O.field_i, (byte) 118);
+        return FullscreenStatusDialog.a(var2, this.field_L.field_F, this.field_I.field_i, this.field_P.field_i, this, this.field_O.field_i, (byte) 118);
     }
 
     private final int a(byte param0, int param1, int param2, int param3, String param4, String param5, UiWidget param6) {
@@ -521,7 +521,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_D == param3) {
-            ig.a((byte) -79);
+            GuestPlayConfirmationForm.a((byte) -79);
           } else {
             if (this.field_R == param3) {
               discarded$1 = this.submitRegistration(11608);

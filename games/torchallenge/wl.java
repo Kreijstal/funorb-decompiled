@@ -60,7 +60,7 @@ final class wl {
             BufferedSocket.field_p.a((byte) -126, RichTextWidget.field_R, this.field_e);
             lb.a(RichTextWidget.field_R, this.field_e, param0 ^ 119);
             if (RichTextWidget.field_O) {
-              qh.a(GameApplet.field_o, true);
+              RegistrationAgreementPane.a(GameApplet.field_o, true);
               RichTextWidget.field_O = false;
             }
             if (!gh.field_x) {
@@ -80,7 +80,7 @@ final class wl {
               var9 = (-var5 + var3) / 1024L + " kB / " + var3 / 1024L + " kB";
               tf.field_x.drawRightAligned(var9, 636, 100, 0, -1);
               if (g.a(84, 0)) {
-                tf.field_x.drawRightAligned("" + qh.field_J, 636, 120, 0, -1);
+                tf.field_x.drawRightAligned("" + RegistrationAgreementPane.field_J, 636, 120, 0, -1);
               }
             }
             stackIn_34_0 = 140;
@@ -138,7 +138,7 @@ final class wl {
           }
           var3 = var10.readUnsignedByte(-119);
           var10.l(8);
-          ll.field_h = ue.a(-8191, var10);
+          FullscreenNoticeType.field_h = ue.a(-8191, var10);
           qc.field_a = new vg[var3];
           ok.field_d = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
@@ -222,7 +222,7 @@ final class wl {
             }
             DirectByteStorage.a(true, true, true);
             rc.c((byte) -82);
-            qh.d(true);
+            RegistrationAgreementPane.d(true);
             sd.a(126);
             sd.b(-121);
             if (UiComponent.field_o <= 0) {
@@ -339,7 +339,7 @@ final class wl {
         }
         if (nj.field_c[83] ||
           nj.field_c[98] ||
-          nj.field_c[ll.field_a] &&
+          nj.field_c[FullscreenNoticeType.field_a] &&
           BufferedSocket.field_p != null) {
           BufferedSocket.field_p.field_ab = true;
           if (nj.field_c[98]) {
@@ -385,7 +385,7 @@ final class wl {
           }
           DirectByteStorage.a(false, true, true);
           rc.c((byte) -82);
-          qh.d(true);
+          RegistrationAgreementPane.d(true);
           sd.a(126);
           sd.b(121);
           o.a(5, true);
@@ -466,7 +466,7 @@ final class wl {
               this.c((byte) -62);
             }
           }
-          qh.d(true);
+          RegistrationAgreementPane.d(true);
           sd.a(124);
           sd.b(120);
           o.a(5, true);
@@ -652,7 +652,7 @@ final class wl {
           PacketBuffer.c(-7668);
         }
         if (null == pa.field_z) {
-          jf.m(104);
+          StandardContentDialog.m(104);
         }
         if (ResourceArchive.field_j == null) {
           hl.a((byte) 50);
@@ -682,7 +682,7 @@ final class wl {
         for (var7Lifetime1 = 0; var7Lifetime1 < 256; var7Lifetime1++) {
           LevelEntity.field_A[var7Lifetime1] = 65793 * var7Lifetime1;
         }
-        qh.a(0, true);
+        RegistrationAgreementPane.a(0, true);
         eh.field_l = 0;
         RichTextWidget.field_O = false;
         GameApplet.field_o = 0;
@@ -706,7 +706,7 @@ final class wl {
         while (null != NetworkArchiveRequest.field_D.first((byte) -69)) {
           NetworkArchiveRequest.field_D.pollFirst((byte) 101);
         }
-        qh.field_J = 0;
+        RegistrationAgreementPane.field_J = 0;
         fk.field_t = 0;
     }
 

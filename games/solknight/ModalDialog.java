@@ -61,7 +61,7 @@ abstract class ModalDialog extends WidgetContainer {
         }
     }
 
-    abstract void a(int param0, byte param1, int param2);
+    abstract void drawDialogBackground(int param0, byte param1, int param2);
 
     boolean advanceDialogAnimation(int param0) {
         boolean stackIn_11_0 = false;
@@ -164,7 +164,7 @@ abstract class ModalDialog extends WidgetContainer {
         }
         if (256 <= this.field_I) {
           if (param1 == 0) {
-            this.a(this.field_m + param2, (byte) 55, this.field_j + param0);
+            this.drawDialogBackground(this.field_m + param2, (byte) 55, this.field_j + param0);
             super.drawWidget(param0, param1, param2, param3 ^ 0);
             return;
           }
@@ -174,7 +174,7 @@ abstract class ModalDialog extends WidgetContainer {
           jj.field_x = new Sprite(this.field_t, this.field_x);
           AgeValidator.a(-100, jj.field_x);
           SoftwareRasterizer.clearRaster();
-          this.a(param3, (byte) 94, 0);
+          this.drawDialogBackground(param3, (byte) 94, 0);
           super.drawWidget(-this.field_j - param0, param1, -this.field_m - param2, 0);
           MidiPcmStream.e(4096);
           jj.field_x.drawWithOpacity(this.field_m + param2, this.field_j + param0, this.field_I);
@@ -184,7 +184,7 @@ abstract class ModalDialog extends WidgetContainer {
           jj.field_x = new Sprite(this.field_t, this.field_x);
           AgeValidator.a(-100, jj.field_x);
           SoftwareRasterizer.clearRaster();
-          this.a(param3, (byte) 94, 0);
+          this.drawDialogBackground(param3, (byte) 94, 0);
           super.drawWidget(-this.field_j - param0, param1, -this.field_m - param2, 0);
           MidiPcmStream.e(4096);
           jj.field_x.drawWithOpacity(this.field_m + param2, this.field_j + param0, this.field_I);
@@ -194,7 +194,7 @@ abstract class ModalDialog extends WidgetContainer {
           jj.field_x = new Sprite(this.field_t, this.field_x);
           AgeValidator.a(-100, jj.field_x);
           SoftwareRasterizer.clearRaster();
-          this.a(param3, (byte) 94, 0);
+          this.drawDialogBackground(param3, (byte) 94, 0);
           super.drawWidget(-this.field_j - param0, param1, -this.field_m - param2, 0);
           MidiPcmStream.e(4096);
           jj.field_x.drawWithOpacity(this.field_m + param2, this.field_j + param0, this.field_I);
@@ -202,7 +202,7 @@ abstract class ModalDialog extends WidgetContainer {
         }
         AgeValidator.a(-100, jj.field_x);
         SoftwareRasterizer.clearRaster();
-        this.a(param3, (byte) 94, 0);
+        this.drawDialogBackground(param3, (byte) 94, 0);
         super.drawWidget(-this.field_j - param0, param1, -this.field_m - param2, 0);
         MidiPcmStream.e(4096);
         jj.field_x.drawWithOpacity(this.field_m + param2, this.field_j + param0, this.field_I);

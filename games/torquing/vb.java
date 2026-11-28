@@ -73,11 +73,11 @@ final class vb {
               }
               if (0 == var6_intLifetime1 ||
                 var9 != 0) {
-                ef.field_a = aa.field_U;
+                ef.field_a = ContentTransitionDialog.field_U;
               }
               kj.field_d.position = 0;
             }
-            if (aa.field_U == ef.field_a &&
+            if (ContentTransitionDialog.field_U == ef.field_a &&
               BufferedSocket.a(8, 0)) {
               PasswordValidator.field_l = kj.field_d.readLong(48);
               kj.field_d.position = 0;
@@ -151,7 +151,7 @@ final class vb {
                 pa.field_c = kj.field_d.readUnsignedByte((byte) -101);
                 ef.field_a = w.field_cb;
               }
-              if (eh.field_i.a(false) != im.field_J) {
+              if (eh.field_i.a(false) != ResizableModalDialog.field_J) {
                 if (eh.field_i.a(false) == hg.field_f) {
                   h.field_l.a(ip.a(param2 ^ 18), false);
                   if (var9 != 0) {
@@ -714,7 +714,7 @@ final class vb {
           if (param3 != 4805) {
             vb.a((VertexMesh) null, (byte) 25, false, (int[]) null, (int[]) null, false, true);
           }
-          hb.field_x = new qc(dc.field_a, un.field_k);
+          hb.field_x = new StandardContentDialog(dc.field_a, un.field_k);
           dc.field_a.showDialog(hb.field_x, (byte) 113);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

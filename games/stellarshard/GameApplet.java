@@ -472,7 +472,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   if (stackIn_77_0 < stackIn_77_1) {
                     break;
                   }
-                  wl.field_ab = true;
+                  ContentTransitionDialog.field_ab = true;
                   break;
                 }
               }
@@ -733,7 +733,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (this == ProxySocketConnector.field_j &&
             !qc.field_b) {
             DropTargetWidgetContainer.field_F = true;
-            if (wl.field_ab &&
+            if (ContentTransitionDialog.field_ab &&
               ih.correctedCurrentTimeMillis((byte) -98) - AgeValidator.field_m > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {

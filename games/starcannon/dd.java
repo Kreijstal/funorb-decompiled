@@ -7,15 +7,15 @@ final class dd {
 
     final synchronized static long correctedCurrentTimeMillis(int param0) {
         long var1 = System.currentTimeMillis();
-        if (!(db.field_C <= var1)) {
-          IterableNodeHashTable.field_d = IterableNodeHashTable.field_d + (-var1 + db.field_C);
+        if (!(GuestPlayConfirmationForm.field_C <= var1)) {
+          IterableNodeHashTable.field_d = IterableNodeHashTable.field_d + (-var1 + GuestPlayConfirmationForm.field_C);
         }
         if (param0 >= 55) {
-          db.field_C = var1;
+          GuestPlayConfirmationForm.field_C = var1;
           return var1 + IterableNodeHashTable.field_d;
         }
         dd.correctedCurrentTimeMillis(1);
-        db.field_C = var1;
+        GuestPlayConfirmationForm.field_C = var1;
         return var1 + IterableNodeHashTable.field_d;
     }
 

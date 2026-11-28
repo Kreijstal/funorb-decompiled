@@ -230,7 +230,7 @@ final class gg {
                   var25Lifetime1Lifetime1 = param4.field_Q[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_p[var23Lifetime2];
                   nk.field_e[var23Lifetime2] = (var18 * var26Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var12 + var15 * var25Lifetime1Lifetime1 >> 16) + var9;
-                  qe.field_z[var23Lifetime2] = var10 + (var26Lifetime1Lifetime1 * var19 + var16 * var25Lifetime1Lifetime1 + var13 * var24Lifetime1Lifetime1 >> 16);
+                  StripedProgressWidget.field_z[var23Lifetime2] = var10 + (var26Lifetime1Lifetime1 * var19 + var16 * var25Lifetime1Lifetime1 + var13 * var24Lifetime1Lifetime1 >> 16);
                   wi.field_d[var23Lifetime2] = (var25Lifetime1Lifetime1 * var17 + var14 * var24Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var20 >> 16) + var11;
                   var24Lifetime1Lifetime1 = param4.field_D[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param4.field_E[var23Lifetime2];

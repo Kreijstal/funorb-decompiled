@@ -24,7 +24,7 @@ final class bb {
           if (var5_int + (var7 - param4) > SoftwareRasterizer.field_g) {
             var7 = -6 + (SoftwareRasterizer.field_g - var5_int);
           }
-          var8 = -param2.field_N + qd.field_P + 32;
+          var8 = -param2.field_N + GuestPlayConfirmationForm.field_P + 32;
           if (6 + (var8 + var6) > SoftwareRasterizer.field_c) {
             var8 = -var6 + (SoftwareRasterizer.field_c - 6);
           }
@@ -115,7 +115,7 @@ final class bb {
             field_a = (IntrusiveDeque) null;
           }
           MidiPcmStream.field_D = new LoginPanel(pl.field_a, (String) null, MusicPatchPcmStream.field_B, param1, param3);
-          de.field_a = new rh(mb.field_b, MidiPcmStream.field_D);
+          de.field_a = new StandardContentDialog(mb.field_b, MidiPcmStream.field_D);
           mb.field_b.showDialog(1, de.field_a);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "bb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

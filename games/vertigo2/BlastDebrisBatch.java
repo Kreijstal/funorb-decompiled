@@ -43,7 +43,7 @@ final class BlastDebrisBatch {
         if (param0 != 24285) {
           field_i = (String) null;
         }
-        ql.a(param1, -127, param2);
+        BirthDateChatEnableForm.a(param1, -127, param2);
     }
 
     final void addDebrisModel(int param0, int param1, int param2, int param3, int param4) {
@@ -90,7 +90,7 @@ final class BlastDebrisBatch {
           om.field_D = SoftwareRasterizer.field_j;
           DraggableWidgetContainer.field_G = SoftwareRasterizer.field_e;
           if (param1) {
-            stackIn_4_0 = ko.field_P;
+            stackIn_4_0 = NumericDateInputWidget.field_P;
           } else {
             stackIn_4_0 = mp.field_b;
           }
@@ -130,7 +130,7 @@ final class BlastDebrisBatch {
           for (var6 = 0; 4 + ol.field_A > var6; var6++) {
             if ((1 != var6 ||
               !(rc.field_a.length < 2)) && (var6 != 3 ||
-              !(sp.field_O <= 1))) {
+              !(ResizableModalDialog.field_O <= 1))) {
               if (!param1 &&
                 var6 == 3) {
                 dupTemp$0 = IterableNodeHashTable.field_h[var6];

@@ -343,7 +343,7 @@ class DefaultTextWidgetRenderer implements WidgetActionListener, TextWidgetRende
     }
 
     final static void c(int param0) {
-        bj.field_f.a(new cg(), -110);
+        bj.field_f.replaceContent(new GuestPlayConfirmationForm(), -110);
         if (param0 >= -16) {
           field_k = true;
         }

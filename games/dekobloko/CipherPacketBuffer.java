@@ -127,8 +127,8 @@ final class CipherPacketBuffer extends PacketBuffer {
 
     final static void performAction1648(int integerArgument1) {
         int integerLocal1 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        if (UiComponentPart017.integerState0437 > 0) {
-          UiComponentPart017.integerState0437 = UiComponentPart017.integerState0437 - 1;
+        if (GuestPlayConfirmationForm.integerState0437 > 0) {
+          GuestPlayConfirmationForm.integerState0437 = GuestPlayConfirmationForm.integerState0437 - 1;
         } else {
           if (RenderingSupport001.integerState0064 > 0) {
             RenderingSupport001.integerState0064 = RenderingSupport001.integerState0064 - 1;
@@ -138,7 +138,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             }
           }
         }
-        if (!(UiComponentPart017.integerState0437 <= 0)) {
+        if (!(GuestPlayConfirmationForm.integerState0437 <= 0)) {
           AccountFieldStatusIndicator.performAction1206((byte) -89);
         }
         if (RenderingSupport001.integerState0064 > 0) {

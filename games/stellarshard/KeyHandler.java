@@ -37,7 +37,7 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
           }
           var4 = RichTextWidget.field_F;
           while (var3_int < stellarshard.field_L.length) {
-            var5 = sj.field_J[var3_int];
+            var5 = RegistrationAgreementPane.field_J[var3_int];
             if (var5 < 0) {
               var4 = var4 + l.field_e;
             } else {
@@ -71,7 +71,7 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
               var2_int != 65535 &&
               wa.isSupportedCp1252KeyCharacter((char) var2_int, (byte) -79)) {
               var3 = 127 & 1 + l.field_h;
-              if (var3 != di.field_a) {
+              if (var3 != FullscreenNoticeType.field_a) {
                 sf.field_d[l.field_h] = -1;
                 GameApplet.field_i[l.field_h] = (char)var2_int;
                 l.field_h = var3;
@@ -106,17 +106,17 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
             } else {
               var2_int = -1;
             }
-            if (se.field_H >= 0 &&
+            if (GuestPlayConfirmationForm.field_H >= 0 &&
               var2_int >= 0) {
-              ob.field_c[se.field_H] = var2_int;
-              se.field_H = se.field_H + 1 & 127;
-              if (se.field_H == vd.field_e) {
-                se.field_H = -1;
+              ob.field_c[GuestPlayConfirmationForm.field_H] = var2_int;
+              GuestPlayConfirmationForm.field_H = GuestPlayConfirmationForm.field_H + 1 & 127;
+              if (GuestPlayConfirmationForm.field_H == vd.field_e) {
+                GuestPlayConfirmationForm.field_H = -1;
               }
             }
             if (var2_int >= 0) {
               var3 = 1 + l.field_h & 127;
-              if (var3 != di.field_a) {
+              if (var3 != FullscreenNoticeType.field_a) {
                 sf.field_d[l.field_h] = var2_int;
                 GameApplet.field_i[l.field_h] = (char)0;
                 l.field_h = var3;
@@ -162,12 +162,12 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
             } else {
               var2_int = -1;
             }
-            if (se.field_H >= 0 &&
+            if (GuestPlayConfirmationForm.field_H >= 0 &&
               var2_int >= 0) {
-              ob.field_c[se.field_H] = ~var2_int;
-              se.field_H = se.field_H + 1 & 127;
-              if (vd.field_e == se.field_H) {
-                se.field_H = -1;
+              ob.field_c[GuestPlayConfirmationForm.field_H] = ~var2_int;
+              GuestPlayConfirmationForm.field_H = GuestPlayConfirmationForm.field_H + 1 & 127;
+              if (vd.field_e == GuestPlayConfirmationForm.field_H) {
+                GuestPlayConfirmationForm.field_H = -1;
               }
             }
           }
@@ -237,7 +237,7 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
           if (pk.field_e != null) {
-            se.field_H = -1;
+            GuestPlayConfirmationForm.field_H = -1;
           }
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "eb.focusLost(" + (param0 != null ? "{...}" : "null") + ')');

@@ -418,13 +418,13 @@ final class BufferedSocket implements Runnable {
             qb.a(param0, (byte) 90, var4);
             var4 = (ql) (sd.field_d.nextForward((byte) -105));
           }
-          var5 = (fi) (lk.field_O.beginForward((byte) 47));
+          var5 = (fi) (StripedProgressWidget.field_O.beginForward((byte) 47));
           if (param1 != -1115925337) {
             BufferedSocket.g(-22);
           }
           while (var5 != null) {
             rd.a(param0, var5, (byte) -118);
-            var5 = (fi) (lk.field_O.nextForward((byte) -105));
+            var5 = (fi) (StripedProgressWidget.field_O.nextForward((byte) -105));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

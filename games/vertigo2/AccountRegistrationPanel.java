@@ -351,7 +351,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         var3 = var3 + (5 + this.a(ag.field_c, this.field_Q, var3, ln.field_a, 0, 170));
         var3 = var3 + (this.a(LevelTile.field_m, this.field_H, var3, GameShell.field_q, 0, 170) + 5);
         var3 = var3 + this.a(po.field_b, 170, this.field_T, var3, 268);
-        LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, this.width - 90, 25, this.field_R, true, -120 + this.width, 5, bl.field_N, 11579568, ll.field_d);
+        LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, this.width - 90, 25, this.field_R, true, -120 + this.width, 5, bl.field_N, 11579568, FullscreenNoticeType.field_d);
         this.addChild((byte) 88, var4);
         var3 = var3 + var4.height;
         DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(qc.field_x, 0, 0, 0, 0, 16777215, -1, 0, 0, qc.field_x.field_z, -1, 2147483647, true);

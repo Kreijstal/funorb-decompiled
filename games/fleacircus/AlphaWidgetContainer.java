@@ -130,7 +130,7 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
           nb.field_a.snapAndPruneDialogs(-110);
         }
         if (ProxyAuthenticationRequiredException.field_g != null) {
-          ProxyAuthenticationRequiredException.field_g.n(100);
+          ProxyAuthenticationRequiredException.field_g.freezeNormalProgressAnimation(100);
           if (!param0) {
             field_H = (ob) null;
             ValidatedTextField.s(-33);

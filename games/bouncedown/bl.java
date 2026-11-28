@@ -32,7 +32,7 @@ final class bl {
           if (i.field_c == this.field_g) {
             return 1;
           }
-          if (db.field_V != 2) {
+          if (ProgressDialog.field_V != 2) {
             return 0;
           }
           if (fe.a(this.field_c, (byte) 126)) {

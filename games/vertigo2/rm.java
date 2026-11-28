@@ -26,7 +26,7 @@ final class rm extends TextureOperator {
         }
         var3 = this.field_x.a(param0, (byte) 60);
         if (this.field_x.field_i) {
-          var5 = we.field_M / this.field_C;
+          var5 = StripedProgressWidget.field_M / this.field_C;
           var6 = aa.field_Vb / this.field_D;
           if (0 < var6) {
             var7 = param0 % var6;
@@ -36,10 +36,10 @@ final class rm extends TextureOperator {
           }
           var10 = 0;
           var7Lifetime1 = var10;
-          while (var10 < we.field_M) {
+          while (var10 < StripedProgressWidget.field_M) {
             if (var5 > 0) {
               var8 = var10 % var5;
-              var3[var10] = var4[we.field_M * var8 / var5];
+              var3[var10] = var4[StripedProgressWidget.field_M * var8 / var5];
             } else {
               var3[var10] = var4[0];
             }
@@ -166,7 +166,7 @@ final class rm extends TextureOperator {
         var17 = var18;
         var3 = var17;
         if (this.field_v.field_c) {
-          var5 = we.field_M / this.field_C;
+          var5 = StripedProgressWidget.field_M / this.field_C;
           var6 = aa.field_Vb / this.field_D;
           if (0 < var6) {
             var7_int = param1 % var6;
@@ -180,12 +180,12 @@ final class rm extends TextureOperator {
           var10 = var19[0];
           var11 = var19[1];
           var12 = var19[2];
-          for (var13 = 0; var13 < we.field_M; var13++) {
+          for (var13 = 0; var13 < StripedProgressWidget.field_M; var13++) {
             if (var5 <= 0) {
               var14 = 0;
             } else {
               var15 = var13 % var5;
-              var14 = var15 * we.field_M / var5;
+              var14 = var15 * StripedProgressWidget.field_M / var5;
             }
             var10[var13] = var7[var14];
             var11[var13] = var8[var14];

@@ -5,7 +5,7 @@ final class gi {
     static String field_g;
     static String field_b;
     static long field_e;
-    static ij field_a;
+    static FullscreenNoticeType field_a;
     static tk field_d;
     static RgbSprite[] field_c;
     static String field_f;
@@ -77,7 +77,7 @@ final class gi {
 
     static {
         field_b = "Please enter your date of birth to enable chat:";
-        field_a = new ij();
+        field_a = new FullscreenNoticeType();
         field_d = new tk();
         field_f = null;
     }

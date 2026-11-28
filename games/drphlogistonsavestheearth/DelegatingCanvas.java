@@ -81,7 +81,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             ci.field_W = param13;
             TextFieldValidator.field_o = param3;
             ArchiveRequest.field_v = param1;
-            ia.field_c = param10;
+            FullscreenNoticeType.field_c = param10;
             var15_int = 42 % ((param2 + 70) / 44);
             ModalDialog.field_N = param0;
             wg.field_d = param11;

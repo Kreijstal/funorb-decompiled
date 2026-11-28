@@ -12,7 +12,7 @@ final class rl {
         if (param0 <= 98) {
           return true;
         }
-        return pc.field_db;
+        return StandardContentDialog.field_db;
     }
 
     public static void clearStaticReferences(byte param0) {

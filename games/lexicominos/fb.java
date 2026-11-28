@@ -94,7 +94,7 @@ final class fb implements WidgetRenderer {
         if (param0 != 12898) {
           fb.b(-114);
         }
-        return kg.field_G;
+        return RegistrationAgreementPane.field_G;
     }
 
     final static void a(byte param0, int param1, int param2) {
@@ -110,9 +110,9 @@ final class fb implements WidgetRenderer {
           !(param2 <= DropTargetWidgetContainer.field_D.length)) {
           DropTargetWidgetContainer.field_D = new int[2 * param2];
         }
-        if (oc.field_a == null ||
-          !(oc.field_a.length >= param2)) {
-          oc.field_a = new int[2 * param2];
+        if (FullscreenNoticeType.field_a == null ||
+          !(FullscreenNoticeType.field_a.length >= param2)) {
+          FullscreenNoticeType.field_a = new int[2 * param2];
         }
         if (null == MidiPcmStream.field_N ||
           !(param2 <= MidiPcmStream.field_N.length)) {

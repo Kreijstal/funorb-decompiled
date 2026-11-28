@@ -28,7 +28,7 @@ final class HuffmanCodec {
             integerLocal1 = 2;
           }
         } else {
-          integerLocal1 = (UiComponentPart023.computeBoolean1242(-30146)) ? 0 : 1;
+          integerLocal1 = (StandardContentDialog.computeBoolean1242(-30146)) ? 0 : 1;
         }
         if (integerArgument1 != 2) {
           integerState0352 = -30;

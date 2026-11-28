@@ -104,7 +104,7 @@ final class m {
     }
 
     final static void c(int param0) {
-        fm.a(true, -78, on.field_d, ol.field_a);
+        GuestPlayConfirmationForm.a(true, -78, on.field_d, ol.field_a);
         if (param0 >= -51) {
           return;
         }
@@ -191,7 +191,7 @@ final class m {
         if (param0 != 11) {
           return;
         }
-        hb.field_x.c(ib.field_b, 33);
+        hb.field_x.replaceContent(ib.field_b, 33);
     }
 
     private final void a(boolean param0) {

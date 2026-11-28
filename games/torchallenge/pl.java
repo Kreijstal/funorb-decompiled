@@ -120,7 +120,7 @@ final class pl {
     final static void a(byte param0, java.applet.Applet param1) {
         try {
           pa.a("", 8, param1);
-          ek.a((byte) -126, param1);
+          StripedProgressWidget.a((byte) -126, param1);
           if (param0 < 112) {
             field_f = (Sprite[]) null;
           }

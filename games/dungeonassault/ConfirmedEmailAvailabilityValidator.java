@@ -131,7 +131,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             return (java.awt.Frame) (stackIn_3_0);
           }
           if (param2 == 0) {
-            var10 = kc.a(param0, 10);
+            var10 = DialogMessagePane.a(param0, 10);
             var6 = var10;
             if (var6 == null) {
               stackIn_8_0 = null;

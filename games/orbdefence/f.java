@@ -577,7 +577,7 @@ final class f {
                   f.a(20, 235, (byte) -25);
                 }
                 if (this.field_f.field_o[var4_ref_pdLifetime1.field_t] == 6) {
-                  if (!ob.field_F ||
+                  if (!RegistrationAgreementPane.field_F ||
                     !(2 <= AccountRequestState.field_d)) {
                     var5_intLifetime1 = this.field_f.field_j[var4_ref_pdLifetime1.field_t];
                     var6Lifetime1 = var5_intLifetime1 % 8;
@@ -1275,9 +1275,9 @@ final class f {
             var3 = ld.field_e;
           }
           var4 = null;
-          if (pc.field_ab != null &&
-            !pc.field_ab.equals(param0.getParameter("session"))) {
-            var4 = pc.field_ab;
+          if (StandardContentDialog.field_ab != null &&
+            !StandardContentDialog.field_ab.equals(param0.getParameter("session"))) {
+            var4 = StandardContentDialog.field_ab;
           }
           stackIn_13_0 = MidiPcmStream.a((String) (var3), param1, -1, (String) (var4), (byte) 72);
           return stackIn_13_0;

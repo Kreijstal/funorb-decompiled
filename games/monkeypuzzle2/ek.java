@@ -10,7 +10,7 @@ final class ek {
 
     final static boolean a(byte param0) {
         int var1 = -32 / ((-77 - param0) / 44);
-        return kg.a((byte) 104);
+        return FullscreenNoticeType.a((byte) 104);
     }
 
     public static void clearStaticReferences(int param0) {

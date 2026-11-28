@@ -100,7 +100,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
           if (!ai.a((byte) -76)) {
             return true;
           }
-          if (jj.field_F <= 0) {
+          if (RegistrationAgreementPane.field_F <= 0) {
             return false;
           }
           if (!PacketBuffer.alwaysTrue((byte) -72)) {
@@ -114,7 +114,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         if (!ai.a((byte) -76)) {
           return true;
         }
-        if (jj.field_F <= 0) {
+        if (RegistrationAgreementPane.field_F <= 0) {
           return false;
         }
         if (!PacketBuffer.alwaysTrue((byte) -72)) {

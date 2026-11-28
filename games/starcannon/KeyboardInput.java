@@ -259,13 +259,13 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               var9 = stackIn_45_0;
               var1_int = var1_int + mc.field_h;
               if (var9 != null) {
-                var9.a(-rh.field_i + var8Lifetime1, (rh.field_i << 1) + var7Lifetime1, param0 ^ -947, var1_int, pk.field_c + (kc.field_S << 1));
+                var9.a(-rh.field_i + var8Lifetime1, (rh.field_i << 1) + var7Lifetime1, param0 ^ -947, var1_int, pk.field_c + (ResizableModalDialog.field_S << 1));
               }
-              var1_int = var1_int + kc.field_S;
+              var1_int = var1_int + ResizableModalDialog.field_S;
             }
             if (var4 >= 0) {
               ai.field_h.drawString(var6, var8Lifetime1, var1_int + LoginPanel.field_D, var5, -1);
-              var1_int = var1_int + (pk.field_c + (kc.field_S + mc.field_h));
+              var1_int = var1_int + (pk.field_c + (ResizableModalDialog.field_S + mc.field_h));
             } else {
               rh.field_h.drawString(var6, var8Lifetime1, SingleChildWidgetContainer.field_v + var1_int, var5, -1);
               var1_int = var1_int + sg.field_e;

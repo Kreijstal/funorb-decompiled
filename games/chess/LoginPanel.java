@@ -243,7 +243,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
           return;
         }
         try {
-          bj.a(PcmSampleStream.createForPlaybackRate(param0, 100, 96), true);
+          ContentTransitionDialog.a(PcmSampleStream.createForPlaybackRate(param0, 100, 96), true);
           int var2_int = -101 % ((param1 + 24) / 39);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "wf.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -444,7 +444,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
           }
           if (0 == var3 &&
             FrameTimer.field_f == 2) {
-            var4 = -jg.field_M + ud.correctedCurrentTimeMillis(2);
+            var4 = -BirthDateChatEnableForm.field_M + ud.correctedCurrentTimeMillis(2);
             var6 = (int)((10999L - var4) / 1000L);
             if (0 >= var6) {
               qh.a(false, true, 5);

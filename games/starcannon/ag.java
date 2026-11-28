@@ -301,8 +301,8 @@ abstract class ag extends GameApplet {
           bl.field_a != 11) {
           ce.a((byte) -100);
         }
-        if (qj.field_eb != null) {
-          lh.field_I = qj.field_eb.pollRotation((byte) -107);
+        if (ContentTransitionDialog.field_eb != null) {
+          lh.field_I = ContentTransitionDialog.field_eb.pollRotation((byte) -107);
         }
         if (fc.a((byte) 57)) {
           var3 = 1200 * wc.a(-75);
@@ -406,7 +406,7 @@ abstract class ag extends GameApplet {
           li.field_b = BufferedSocket.a(1, true, false, p.field_c, (byte) 103);
           FrameTimer.field_f = bf.field_y;
           IntrusiveDeque.field_d = 2;
-          lf.field_eb = Bzip2State.field_k;
+          ProgressDialog.field_eb = Bzip2State.field_k;
         }
         if (IntrusiveDeque.field_d == 2) {
           if (kl.field_b != null &&
@@ -433,13 +433,13 @@ abstract class ag extends GameApplet {
           o.field_b = pa.field_J;
           sh.field_t = false;
           StarCannon.a(li.field_b, ah.field_i, -20169, bf.field_y, Bzip2State.field_k);
-          if (vj.field_X ||
+          if (FullscreenStatusDialog.field_X ||
             qb.field_g != null) {
             stackIn_104_0 = qb.field_g;
-            stackIn_105_1 = !(vj.field_X);
+            stackIn_105_1 = !(FullscreenStatusDialog.field_X);
             stackIn_107_2 = 0;
-            stackIn_108_3 = !(vj.field_X);
-            ae.a(stackIn_104_0, stackIn_105_1, stackIn_107_2, stackIn_108_3);
+            stackIn_108_3 = !(FullscreenStatusDialog.field_X);
+            FullscreenNoticeType.a(stackIn_104_0, stackIn_105_1, stackIn_107_2, stackIn_108_3);
           }
           if (PasswordValidator.field_l) {
             pk.a((byte) -64);
@@ -471,11 +471,11 @@ abstract class ag extends GameApplet {
           }
           else {
             IntrusiveDeque.field_d = 12;
-            fa.field_E = true;
+            StripedProgressWidget.field_E = true;
           }
         }
         if (IntrusiveDeque.field_d == 12 &&
-          !fa.field_E) {
+          !StripedProgressWidget.field_E) {
           IntrusiveDeque.field_d = 13;
         }
         if (IntrusiveDeque.field_d == 13) {
@@ -490,10 +490,10 @@ abstract class ag extends GameApplet {
           }
         }
         if (!param0 &&
-          jj.field_E) {
-          wf.a(kj.field_E, false);
+          RegistrationAgreementPane.field_E) {
+          wf.a(DialogMessagePane.field_E, false);
           this.e(-128);
-          mf.a(true, kj.field_E);
+          mf.a(true, DialogMessagePane.field_E);
         }
         if (el.field_D[8]) {
           fb.a((byte) 10);
@@ -524,8 +524,8 @@ abstract class ag extends GameApplet {
         ProxyAuthenticationRequiredException.a(this.field_u, vg.field_b, 5000, nb.field_e, param6, 22692, this.field_l, this.field_s, this.field_w, this.field_v, this.field_p, 5000, param0, this.field_q);
         hj.a(vg.field_b, this.field_p, nb.field_e, this.field_q, 78, this.field_w, param0, this.field_u, this.field_v);
         ge.b(4039);
-        qj.field_eb = wc.createMouseWheelInput(5220);
-        mf.a(true, kj.field_E);
+        ContentTransitionDialog.field_eb = wc.createMouseWheelInput(5220);
+        mf.a(true, DialogMessagePane.field_E);
         IntrusiveNode.field_c = param7;
         p.field_c = param1;
         a.field_d = param3;
@@ -555,16 +555,16 @@ abstract class ag extends GameApplet {
           PacketBuffer var10 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
-          var4 = fa.a(lh.field_I, param2, vg.field_b, (byte) 121);
+          var4 = StripedProgressWidget.a(lh.field_I, param2, vg.field_b, (byte) 121);
           if (0 == var4) {
             throw new IllegalStateException();
           }
           if (1 == var4) {
             var5_int = AccountCreationResultPanel.a((byte) -49, DiskArchiveRequest.d((byte) 10), AccountServiceResult.b(-1006263007));
             if (var5_int != -1) {
-              AlphaWidgetContainer.a(-111, UiWidget.field_r, ph.field_nb, var5_int);
+              AlphaWidgetContainer.a(-111, UiWidget.field_r, ProgressMessageDialog.field_nb, var5_int);
               UiWidget.field_r = null;
-              ph.field_nb = null;
+              ProgressMessageDialog.field_nb = null;
             }
             var9 = ByteStorage.c((byte) 95);
             if (var9 != null) {
@@ -574,8 +574,8 @@ abstract class ag extends GameApplet {
           if (var4 == 2) {
             var5_intLifetime1 = FrameTimer.a(ByteStorage.b((byte) 123), this.field_x, ff.g(111), hc.a((byte) 96), dg.b((byte) -18), we.a(29084), (byte) -3);
             if (var5_intLifetime1 != -1) {
-              qa.a(var5_intLifetime1, ph.field_nb, UiWidget.field_r, (byte) 70);
-              ph.field_nb = null;
+              qa.a(var5_intLifetime1, ProgressMessageDialog.field_nb, UiWidget.field_r, (byte) 70);
+              ProgressMessageDialog.field_nb = null;
               UiWidget.field_r = null;
             }
           }

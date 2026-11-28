@@ -10,7 +10,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     private boolean field_q;
     private long field_n;
     static int field_l;
-    static bf field_w;
+    static FullscreenNoticeType field_w;
     static String field_m;
     private int field_s;
     private int field_z;
@@ -49,7 +49,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (param0 >= -116) {
           this.a(false, true, false, false, -110);
         }
-        var2 = bf.field_b;
+        var2 = FullscreenNoticeType.field_b;
         if (var2 < 64 &&
           uf.field_i[var2]) {
           if (var2 == 0) {
@@ -189,21 +189,21 @@ abstract class NetworkGameClient extends GameAppletShell {
               BoundedRandomAccessFile.field_c = true;
               hp.field_s = 10;
             } else {
-              kl.a((byte) -1, le.b((byte) -20));
+              ProgressDialog.a((byte) -1, le.b((byte) -20));
             }
           }
           if (var4 == 5) {
             ta.a(le.b((byte) -20), 19);
           }
           if (var4 == 6 &&
-            jd.field_z) {
+            DialogMessagePane.field_z) {
             hp.field_s = 10;
           }
           if (var4 == 7) {
             gm.a(le.b((byte) -20), 2);
           }
           if (var4 == 8) {
-            kl.a((byte) -1, le.b((byte) -20));
+            ProgressDialog.a((byte) -1, le.b((byte) -20));
           }
           if (var4 == 9) {
             vn.a(le.b((byte) -20), (byte) 87);
@@ -280,7 +280,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         pb.a(this.field_A, ResultScene.field_a, param7, this.field_s, 1843275042, this.field_v, this.field_u, this.field_z, ul.field_g);
         o.b(-25281);
         ok.field_g = UiWidget.createMouseWheelInput(1);
-        mm.a(jd.field_D, true);
+        mm.a(DialogMessagePane.field_D, true);
         sl.field_q = param1;
         tp.field_b = param5;
         kj.field_b = param6;
@@ -469,7 +469,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var3Lifetime2;
         var5 = CrazyCrystals.field_B;
         if (ne.field_f != null) {
-          if (ph.field_E == null) {
+          if (RegistrationAgreementPane.field_E == null) {
             var7 = pi.d(0);
             var4 = var7.getSize();
             ne.field_f.a(var4.height, (byte) 56, var4.width);
@@ -611,7 +611,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           ModelMesh.isArchiveReady(FullscreenFocusCanvas.field_a, -38)) {
           sg.a(param1 ^ 15099);
           m.c(29537);
-          jd.field_z = false;
+          DialogMessagePane.field_z = false;
           ta.field_i = vl.field_b;
           GameCanvas.a((byte) -106, FullscreenFocusCanvas.field_a, fj.field_d, ok.field_c, rb.field_k);
           if (uk.field_j ||
@@ -674,9 +674,9 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (!param0 &&
           em.field_f) {
-          fq.a(-101, jd.field_D);
+          fq.a(-101, DialogMessagePane.field_D);
           this.b(-109);
-          mm.a(jd.field_D, true);
+          mm.a(DialogMessagePane.field_D, true);
         }
         if (uf.field_i[8]) {
           rl.d(0);
@@ -699,7 +699,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         try {
           this.a(640, 480, param1, param2, (byte) -121);
           if (param0 != -1) {
-            field_w = (bf) null;
+            field_w = (FullscreenNoticeType) null;
           }
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "eb.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -730,7 +730,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         } else {
           stackIn_3_1 = false;
           stackIn_3_2 = -94;
-          if (ph.field_E == null) {
+          if (RegistrationAgreementPane.field_E == null) {
             stackIn_4_0 = this;
             stackIn_4_3 = false;
           } else {
@@ -770,7 +770,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     static {
-        field_w = new bf();
+        field_w = new FullscreenNoticeType();
         field_y = new String[16];
         field_m = "Laser Hub";
     }

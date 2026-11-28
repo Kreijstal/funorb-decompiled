@@ -28,8 +28,8 @@ final class id {
         var3 = var8.readUnsignedByte((byte) 95);
         kd.field_a = 127 & var3;
         stackIn_3_0 = ((128 & var3) != 0);
-        a.field_bb = stackIn_3_0;
-        sh.field_b = var8.readUnsignedByte((byte) 106);
+        ContentTransitionDialog.field_bb = stackIn_3_0;
+        FullscreenNoticeType.field_b = var8.readUnsignedByte((byte) 106);
         LetterTile.field_m = var8.readLong((byte) -51);
         if (kd.field_a != 2) {
           ProxyAuthenticationRequiredException.field_b = 0;
@@ -60,7 +60,7 @@ final class id {
         }
         if (!param0) {
           l.field_c = u.a(false, 80, var8);
-          a.field_T = null;
+          ContentTransitionDialog.field_T = null;
           return new sg(param0);
         }
         var5 = var8.readUnsignedShort((byte) -110);
@@ -72,12 +72,12 @@ final class id {
           } else {
             stackIn_25_0 = null;
           }
-          a.field_T = stackIn_25_0;
+          ContentTransitionDialog.field_T = stackIn_25_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           d.a((Throwable) ((Object) var6), -120, "CC1");
-          a.field_T = null;
+          ContentTransitionDialog.field_T = null;
           l.field_c = null;
           return new sg(param0);
         }

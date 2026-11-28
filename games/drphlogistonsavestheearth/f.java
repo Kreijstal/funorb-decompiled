@@ -77,7 +77,7 @@ final class f extends IntrusiveNode {
               } else {
                 t.field_b = var7;
                 gf.field_C = -1;
-                tl.field_O = tf.field_qb;
+                tl.field_O = ProgressDialog.field_qb;
               }
               LabeledWidgetContainer.field_N.position = 0;
             }
@@ -98,7 +98,7 @@ final class f extends IntrusiveNode {
               if (0 != var7Lifetime1 &&
                 var7Lifetime1 != 1) {
                 if (var7Lifetime1 != 8) {
-                  tl.field_O = tf.field_qb;
+                  tl.field_O = ProgressDialog.field_qb;
                   gf.field_C = -1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -145,7 +145,7 @@ final class f extends IntrusiveNode {
               }
               SecondaryNodeDequeIterator.field_d = LabeledWidgetContainer.field_N.readString((byte) -64);
               var12 = (CharSequence) ((Object) SecondaryNodeDequeIterator.field_d);
-              tf.field_pb = rh.a(117, var12);
+              ProgressDialog.field_pb = rh.a(117, var12);
               rh.field_a = LabeledWidgetContainer.field_N.readUnsignedByte(31760);
               tl.field_O = SectorCacheStore.field_d;
               if (AlphaWidgetContainer.field_H.b((byte) -98) == ll.field_p) {
@@ -186,7 +186,7 @@ final class f extends IntrusiveNode {
               stackIn_75_0 = t.field_b;
               return stackIn_75_0;
             }
-            if (tl.field_O == tf.field_qb &&
+            if (tl.field_O == ProgressDialog.field_qb &&
               GameAppletShell.d(-29427)) {
               eg.a((byte) 126);
               if (t.field_b == 7 &&
@@ -215,9 +215,9 @@ final class f extends IntrusiveNode {
                 return stackIn_96_0;
               }
               var7Lifetime2 = TextFieldValidator.field_o;
-              TextFieldValidator.field_o = ia.field_c;
+              TextFieldValidator.field_o = FullscreenNoticeType.field_c;
               dk.field_b = true;
-              ia.field_c = var7Lifetime2;
+              FullscreenNoticeType.field_c = var7Lifetime2;
             }
             stackIn_98_0 = -1;
             return stackIn_98_0;

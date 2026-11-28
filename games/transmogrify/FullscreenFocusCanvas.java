@@ -45,7 +45,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     final static void b(int param0) {
         ResourceArchive.field_f.closeAllDialogs(31410);
         if (null == gh.field_m) {
-          gh.field_m = new sd(ResourceArchive.field_f, tg.field_c);
+          gh.field_m = new ProgressDialog(ResourceArchive.field_f, tg.field_c);
           if (param0 >= -9) {
             FullscreenFocusCanvas.a(54);
             ResourceArchive.field_f.showDialog((UiWidget) (gh.field_m), (byte) -71);

@@ -34,7 +34,7 @@ final class MusicPatchPcmStream extends PcmStream {
         var9 = Vertigo2.field_L ? 1 : 0;
         try {
           var3_int = np.field_Lb;
-          ql.field_L = new UiPanel(0L, (UiPanel) null);
+          BirthDateChatEnableForm.field_L = new UiPanel(0L, (UiPanel) null);
           if (param2 == null) {
             var10 = (Throwable) null;
             HuffmanCodec.a((Throwable) null, "QC1", 0);
@@ -44,7 +44,7 @@ final class MusicPatchPcmStream extends PcmStream {
           param2.field_d = 0;
           ni.field_d = new uo(var3_int, param2, param2);
           wm.field_k = new jn(var3_int, param2, param2, new qf());
-          var4 = sp.e((byte) -113);
+          var4 = ResizableModalDialog.e((byte) -113);
           if (var4 == null) {
             var11 = (Throwable) null;
             HuffmanCodec.a((Throwable) null, "QC2", 0);
@@ -63,8 +63,8 @@ final class MusicPatchPcmStream extends PcmStream {
             SoftwareRasterizer.drawVerticalLine(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
           SoftwareRasterizer.setRasterBuffer(var15, var5, var6);
-          lr.field_H = fj.a(DefaultTextWidgetRenderer.field_h, fo.field_c, var4, 10, mp.field_g);
-          ql.field_L.field_M = new IntrusiveDeque();
+          lr.field_H = ProgressMessageDialog.a(DefaultTextWidgetRenderer.field_h, fo.field_c, var4, 10, mp.field_g);
+          BirthDateChatEnableForm.field_L.field_M = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -339,7 +339,7 @@ final class MusicPatchPcmStream extends PcmStream {
           var7 = 55 / ((23 - param1) / 41);
           var12 = param4;
           if (param0) {
-            stackIn_4_0 = sp.field_Q;
+            stackIn_4_0 = ResizableModalDialog.field_Q;
           } else {
             stackIn_4_0 = dc.field_M;
           }
@@ -410,7 +410,7 @@ final class MusicPatchPcmStream extends PcmStream {
             sf.field_d = stackIn_36_0 + stackIn_37_1;
           }
           ui.field_d = -(sf.field_d >> 1) + kf.field_b;
-          kg.field_G.a(param3, we.a(gb.field_d, true, PacketBuffer.field_n), 0, (byte) 80);
+          kg.field_G.a(param3, StripedProgressWidget.a(gb.field_d, true, PacketBuffer.field_n), 0, (byte) 80);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

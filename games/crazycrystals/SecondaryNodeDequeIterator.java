@@ -34,7 +34,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
 
     final static void a(String param0, boolean param1, String param2, boolean param3) {
         try {
-          jd.field_G = param0;
+          DialogMessagePane.field_G = param0;
           ig.field_p = param2;
           FrameTimer.a(AccountNameAvailabilityValidator.field_i, param1, -13);
           if (param3) {

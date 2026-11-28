@@ -49,7 +49,7 @@ final class jb {
           if (13 == gk.field_r) {
             this.e((byte) -126);
             kc.field_o = false;
-            ei.a(param0 - 238, false);
+            FullscreenStatusDialog.a(param0 - 238, false);
             return;
           }
           this.field_p.c(param0 ^ -119);
@@ -416,7 +416,7 @@ final class jb {
           if (gk.field_r == 13) {
             this.e((byte) -126);
             bj.field_m = false;
-            ei.a(param0 ^ -3649, false);
+            FullscreenStatusDialog.a(param0 ^ -3649, false);
             return;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -570,7 +570,7 @@ final class jb {
           !param1) &&
           this.field_p.d((byte) 55)) {
           bj.field_m = false;
-          ei.a(-46, param1);
+          FullscreenStatusDialog.a(-46, param1);
           this.e((byte) -120);
           return true;
         }
@@ -655,7 +655,7 @@ final class jb {
           }
           if (var7.field_d == 4) {
             var9 = pn.field_a.stringWidth(uc.field_Z);
-            var10 = pn.field_a.stringWidth(sj.field_pb);
+            var10 = pn.field_a.stringWidth(ContentTransitionDialog.field_pb);
             if (var9 < var10) {
               var9 = var10;
             }
@@ -810,7 +810,7 @@ final class jb {
           if (var3 == 14) {
             bj.field_m = false;
           }
-          ei.a(-103, param1);
+          FullscreenStatusDialog.a(-103, param1);
           this.e((byte) -122);
           return true;
         }
@@ -890,9 +890,9 @@ final class jb {
               pn.field_a.drawParagraph(var4, 0 + var3.field_j, var5, var3.field_f, var6, var7, -1, 1, 1, 20);
             } else {
               if (4 == var3.field_d) {
-                var8 = pn.field_a.stringWidth(ef.field_ub);
+                var8 = pn.field_a.stringWidth(StandardContentDialog.field_ub);
                 var9 = pn.field_a.stringWidth(uc.field_Z);
-                var10 = pn.field_a.stringWidth(sj.field_pb);
+                var10 = pn.field_a.stringWidth(ContentTransitionDialog.field_pb);
                 if (var10 > var9) {
                   var9 = var10;
                 }
@@ -941,7 +941,7 @@ final class jb {
                 if (!pa.field_c) {
                   stackIn_37_0 = uc.field_Z;
                 } else {
-                  stackIn_37_0 = sj.field_pb;
+                  stackIn_37_0 = ContentTransitionDialog.field_pb;
                 }
                 var11_ref_String = stackIn_37_0;
               }
@@ -1389,7 +1389,7 @@ final class jb {
           this.field_p.d((byte) 55)) {
           this.e((byte) -125);
           qh.c(4);
-          jn.a(false, ii.b(false));
+          DialogMessagePane.a(false, ii.b(false));
         }
         if (var3 == 14 &&
           this.field_p.d((byte) 55)) {
@@ -1430,7 +1430,7 @@ final class jb {
           this.field_p.d((byte) 55)) {
           IntrusiveNode.d((byte) -61);
           ByteStorage.field_e = false;
-          ei.a(-54, param1);
+          FullscreenStatusDialog.a(-54, param1);
           this.e((byte) -121);
           return true;
         }

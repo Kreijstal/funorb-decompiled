@@ -107,9 +107,9 @@ final class ob {
           uc.field_U = var2_intLifetime1 << 15 & 2064384;
           uc.field_U = uc.field_U + (param1.readUnsignedByte(-126) << 7);
           var2_intLifetime2 = param1.readUnsignedByte(-123);
-          jf.field_sb = var2_intLifetime2 << 16 & 65536;
+          StandardContentDialog.field_sb = var2_intLifetime2 << 16 & 65536;
           uc.field_U = uc.field_U + (var2_intLifetime2 >> 1);
-          jf.field_sb = jf.field_sb + param1.readUnsignedShort(false);
+          StandardContentDialog.field_sb = StandardContentDialog.field_sb + param1.readUnsignedShort(false);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "ob.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -62,7 +62,7 @@ final class df {
             for (var6_int = 0; var6_int < var3; var6_int++) {
               var9[var6_int] = ci.field_b[vg.a(255, (int) var20[var6_int])];
             }
-            var1[var2] = new RgbSprite(uc.field_fb, eh.field_b, SingleChildWidgetContainer.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var21);
+            var1[var2] = new RgbSprite(ProgressMessageDialog.field_fb, eh.field_b, SingleChildWidgetContainer.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var21);
           } else {
             var22 = MidiPcmStream.field_o[var2];
             var16 = new int[var3];
@@ -71,7 +71,7 @@ final class df {
             for (var7 = 0; var3 > var7; var7++) {
               var6[var7] = FrameTimer.a(vg.a(255, (int) var22[var7]) << 24, ci.field_b[vg.a(255, (int) var20[var7])]);
             }
-            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(uc.field_fb, eh.field_b, SingleChildWidgetContainer.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var16));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(ProgressMessageDialog.field_fb, eh.field_b, SingleChildWidgetContainer.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var16));
           }
         }
         GzipDecompressor.a(12428);

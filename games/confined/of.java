@@ -142,7 +142,7 @@ final class of {
           var3Lifetime1 = qj.field_c[9] >> 8;
           var4 = qj.field_c[10] >> 8;
           var5Lifetime1 = qj.field_c[11] >> 8;
-          var6Lifetime1 = tg.field_H << 4;
+          var6Lifetime1 = GuestPlayConfirmationForm.field_H << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = vh.a(21872, var6Lifetime1) >> 8;
           var9Lifetime1 = si.a(var6Lifetime1, -125) >> 8;

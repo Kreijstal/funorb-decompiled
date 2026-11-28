@@ -113,7 +113,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
         } else {
           stackIn_4_1 = false;
-          stackIn_5_2 = (null != cm.field_R);
+          stackIn_5_2 = (null != RegistrationAgreementPane.field_R);
           discarded$1 = this.a(stackIn_4_1, stackIn_5_2, false);
         }
     }
@@ -380,7 +380,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                                 rc.c(16777215);
                                 return;
                               }
-                              sm.a((Throwable) null, 1, "MGS1: " + sj.l(192));
+                              sm.a((Throwable) null, 1, "MGS1: " + ResizableModalDialog.l(192));
                               tl.a(124);
                               return;
                             }
@@ -412,7 +412,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           return;
         }
-        sm.a((Throwable) null, 1, "MGS2: " + sj.l(192));
+        sm.a((Throwable) null, 1, "MGS2: " + ResizableModalDialog.l(192));
         tl.a(-48);
     }
 
@@ -616,7 +616,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var3Lifetime2;
         var5 = DungeonAssault.field_K;
         if (null != il.field_c) {
-          if (cm.field_R == null) {
+          if (RegistrationAgreementPane.field_R == null) {
             var6 = ua.a(0);
             var4 = var6.getSize();
             il.field_c.a(var4.height, true, var4.width);
@@ -643,7 +643,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             this.field_v = false;
             tl.a(122);
             TextLayout.a(param1 + 73);
-            nf.a(2, true, sj.field_V);
+            nf.a(2, true, ResizableModalDialog.field_V);
             DelegatingCanvas.a((byte) -105);
             DefaultTextWidgetRenderer.field_c = true;
             ab.field_a = 15000L + kd.correctedCurrentTimeMillis(-2456);
@@ -730,29 +730,29 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (dk.field_c == 1) {
           if (hc.field_d != 0) {
-            ia.field_U = mk.a(MouseInput.field_a, (byte) 34);
+            GuestPlayConfirmationForm.field_U = mk.a(MouseInput.field_a, (byte) 34);
           }
           InstructionsScreen.field_u = qd.a(false, true, s.field_a, (byte) -31, 1);
           GameAppletShell.field_b = qd.a(false, true, pm.field_m, (byte) -31, 1);
           ib.field_b = qd.a(false, true, sp.field_h, (byte) -31, 1);
           dk.field_c = 2;
           gh.field_c = GameAppletShell.field_b;
-          uc.field_I = InstructionsScreen.field_u;
+          StripedProgressWidget.field_I = InstructionsScreen.field_u;
         }
         if (dk.field_c == 2) {
-          if (null != ia.field_U &&
-            ia.field_U.ensureIndexLoaded(param1 - 14280)) {
-            if (ia.field_U.hasGroupName("", param1 ^ -74)) {
-              if (ia.field_U.tryLoadGroupByName(false, "")) {
-                ng.a(param1 ^ 27014, ia.field_U);
-                ia.field_U = null;
+          if (null != GuestPlayConfirmationForm.field_U &&
+            GuestPlayConfirmationForm.field_U.ensureIndexLoaded(param1 - 14280)) {
+            if (GuestPlayConfirmationForm.field_U.hasGroupName("", param1 ^ -74)) {
+              if (GuestPlayConfirmationForm.field_U.tryLoadGroupByName(false, "")) {
+                ng.a(param1 ^ 27014, GuestPlayConfirmationForm.field_U);
+                GuestPlayConfirmationForm.field_U = null;
                 nf.d(0);
               }
             } else {
-              ia.field_U = null;
+              GuestPlayConfirmationForm.field_U = null;
             }
           }
-          if (ia.field_U == null) {
+          if (GuestPlayConfirmationForm.field_U == null) {
             dk.field_c = 3;
           }
         }

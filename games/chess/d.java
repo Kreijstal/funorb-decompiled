@@ -15,7 +15,7 @@ final class d extends ci {
     final static boolean a(boolean param0) {
         sk.field_p = param0 ? true : false;
         DequeWidgetContainer.field_E = ud.correctedCurrentTimeMillis(2) + 15000L;
-        return rm.field_Q == 11 ? true : false;
+        return StripedProgressWidget.field_Q == 11 ? true : false;
     }
 
     final static void a(MidiPcmStream param0, int param1, MidiPcmStream param2, PlatformTaskDispatcher param3, java.awt.Component param4, boolean param5, byte param6) {
@@ -175,9 +175,9 @@ final class d extends ci {
           if (param0 != 465918340) {
             field_Ib = '\001';
           }
-          var1_int = ge.field_eb[0];
-          for (var2 = 1; var2 < ge.field_eb.length; var2++) {
-            var3 = ge.field_eb[var2];
+          var1_int = FullscreenStatusDialog.field_eb[0];
+          for (var2 = 1; var2 < FullscreenStatusDialog.field_eb.length; var2++) {
+            var3 = FullscreenStatusDialog.field_eb[var2];
             ne.a(ve.field_Hb, var2 << 4, ve.field_Hb, var1_int, var3);
             var1_int = var1_int + var3;
           }

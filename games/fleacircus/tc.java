@@ -205,12 +205,12 @@ final class tc {
               stackIn_31_0 = -1;
             }
             var20 = stackIn_31_0;
-            if (null != fc.field_a &&
+            if (null != FullscreenNoticeType.field_a &&
               null != param7.field_s &&
               var14Lifetime1 < param7.field_s.length &&
               param7.field_s[var14Lifetime1] != -1 &&
-              param7.field_s[var14Lifetime1] < fc.field_a.length) {
-              stackIn_38_0 = fc.field_a[param7.field_s[var14Lifetime1]];
+              param7.field_s[var14Lifetime1] < FullscreenNoticeType.field_a.length) {
+              stackIn_38_0 = FullscreenNoticeType.field_a[param7.field_s[var14Lifetime1]];
             } else {
               stackIn_38_0 = null;
             }
@@ -257,7 +257,7 @@ final class tc {
               var37 = var37 + 65793 * var31;
               var39 = (var35 * var30 & -16711845) >>> 8 | (16711734 & var36 * var30) >>> 8;
               var39 = var39 + 65793 * var33;
-              oh.a(var27, 255 & var39, var22, (65365 & var37) >> 8, var26, 0, 255 & var38, var38 >> 16, var23, var37 & 255, var39 >> 16, var25, (var38 & 65423) >> 8, var37 >> 16, var24, 255 & var39 >> 8);
+              ContentTransitionDialog.a(var27, 255 & var39, var22, (65365 & var37) >> 8, var26, 0, 255 & var38, var38 >> 16, var23, var37 & 255, var39 >> 16, var25, (var38 & 65423) >> 8, var37 >> 16, var24, 255 & var39 >> 8);
             }
           }
           return;

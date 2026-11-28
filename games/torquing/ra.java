@@ -52,7 +52,7 @@ final class ra {
           if (param0 < 0) {
             ra.a((byte) 101);
           }
-          if (im.l(169)) {
+          if (ResizableModalDialog.l(169)) {
             w.field_G.processPointerInput(true, FrameTimer.field_e, oe.field_a, false);
             w.field_G.advanceDialogs((byte) -107);
             while (NanoFrameTimer.a((byte) -13)) {
@@ -63,7 +63,7 @@ final class ra {
           if (TranslucentSpriteLayer.field_i != null &&
             TranslucentSpriteLayer.field_i.focusLost) {
             ug.a(-116);
-            w.field_G.showDialog(new i(w.field_G, bl.field_b), (byte) 100);
+            w.field_G.showDialog(new FullscreenStatusDialog(w.field_G, bl.field_b), (byte) 100);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -146,23 +146,23 @@ abstract class MouseWheelInput {
         if (SceneWidget.mixedSupport099State0001 != null) {
           SceneWidget.mixedSupport099State0001.performAction1222((byte) 39, booleanArgument2);
         }
-        UiComponentPart027.performAction1398(booleanArgument2, 4028);
+        StripedProgressWidget.performAction1398(booleanArgument2, 4028);
         if (integerArgument1 != -1) {
           rawSoundState0009 = (RawSound) null;
           if (null != MixedSupport097.sceneWidgetPart007State0001) {
             MixedSupport097.sceneWidgetPart007State0001.performAction1767(1141039778, booleanArgument2);
-            UiComponentPart017.performAction0956(booleanArgument2, -123);
+            GuestPlayConfirmationForm.performAction0956(booleanArgument2, -123);
             return;
           }
-          UiComponentPart017.performAction0956(booleanArgument2, -123);
+          GuestPlayConfirmationForm.performAction0956(booleanArgument2, -123);
           return;
         }
         if (null == MixedSupport097.sceneWidgetPart007State0001) {
-          UiComponentPart017.performAction0956(booleanArgument2, -123);
+          GuestPlayConfirmationForm.performAction0956(booleanArgument2, -123);
           return;
         }
         MixedSupport097.sceneWidgetPart007State0001.performAction1767(1141039778, booleanArgument2);
-        UiComponentPart017.performAction0956(booleanArgument2, -123);
+        GuestPlayConfirmationForm.performAction0956(booleanArgument2, -123);
     }
 
     static {

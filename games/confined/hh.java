@@ -107,24 +107,24 @@ final class hh {
         var6 = Confined.field_J ? 1 : 0;
         try {
           for (var2_int = 0; var2_int < 3; var2_int++) {
-            jj.field_lb[var2_int] = 0;
+            ProgressDialog.field_lb[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; en.field_a > var2_intLifetime1; var2_intLifetime1++) {
             if (~param0.field_a == ~kl.field_R[var2_intLifetime1].field_a) {
               dupTemp$3 = kl.field_R[var2_intLifetime1].a(-79);
-              jj.field_lb[dupTemp$3] = jj.field_lb[dupTemp$3] + 1;
+              ProgressDialog.field_lb[dupTemp$3] = ProgressDialog.field_lb[dupTemp$3] + 1;
             }
           }
           dupTemp$0 = param0.a(80);
-          jj.field_lb[dupTemp$0] = jj.field_lb[dupTemp$0] + 1;
+          ProgressDialog.field_lb[dupTemp$0] = ProgressDialog.field_lb[dupTemp$0] + 1;
           var3 = -16 / ((4 - param1) / 48);
           var2_intLifetime2 = 0;
           for (var4 = 0; var4 < en.field_a; var4++) {
             boolean decompiledFrameRemainder0 = true;
             if (param0.field_a == kl.field_R[var4].field_a) {
               var5 = kl.field_R[var4].a(-97);
-              if (um.field_b < jj.field_lb[var5]) {
-                jj.field_lb[var5] = jj.field_lb[var5] - 1;
+              if (um.field_b < ProgressDialog.field_lb[var5]) {
+                ProgressDialog.field_lb[var5] = ProgressDialog.field_lb[var5] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }

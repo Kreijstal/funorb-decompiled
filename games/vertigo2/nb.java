@@ -53,8 +53,8 @@ final class nb extends TextureOperator {
         var3 = var10;
         if (this.field_x.field_i) {
           var4 = lf.field_y[param0];
-          for (var5 = 0; var5 < we.field_M; var5++) {
-            var6 = rh.field_O[var5];
+          for (var5 = 0; var5 < StripedProgressWidget.field_M; var5++) {
+            var6 = DialogMessagePane.field_O[var5];
             if (var6 > this.field_C &&
               var6 < -this.field_C + 4096 &&
               2048 - this.field_C < var4 &&
@@ -152,9 +152,9 @@ final class nb extends TextureOperator {
         }
         stackIn_11_0 = (var8.readUnsignedByte(-11) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
-        sp.field_U = var8.readString(128);
+        ResizableModalDialog.field_U = var8.readString(128);
         if (var4 == 0) {
-          fd.field_p = sp.field_U;
+          fd.field_p = ResizableModalDialog.field_U;
         } else {
           fd.field_p = var8.readString(128);
         }
@@ -280,7 +280,7 @@ final class nb extends TextureOperator {
                 param0.field_m == 0) {
                 var3 = Vertigo2.a(new String[]{(String) (var2)}, di.field_B, 70);
               } else {
-                var3 = Vertigo2.a(new String[]{(String) (var2)}, af.field_L, -118);
+                var3 = Vertigo2.a(new String[]{(String) (var2)}, DateInputWidget.field_L, -118);
               }
             }
           }

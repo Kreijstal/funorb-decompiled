@@ -64,7 +64,7 @@ final class cc {
         if (param0 != 0) {
           field_b = (String) null;
         }
-        stackIn_8_0 = (this == rk.field_eb) || (vg.field_a == this) || (ad.field_q == this);
+        stackIn_8_0 = (this == ProgressDialog.field_eb) || (vg.field_a == this) || (ad.field_q == this);
         return stackIn_8_0;
     }
 

@@ -45,12 +45,12 @@ final class f {
         var19 = Transmogrify.field_A ? 1 : 0;
         try {
           rk.field_n = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var1_int = rf.field_eb.length;
+          var1_int = StandardContentDialog.field_eb.length;
           var21 = new int[var1_int];
           var20 = var21;
           var2 = var20;
           for (var3 = 0; var1_int > var3; var3++) {
-            var4_ref_e = rf.field_eb[var3];
+            var4_ref_e = StandardContentDialog.field_eb[var3];
             var17 = var4_ref_e;
             var4_ref_e.a(22856);
             l.a(var3, -87);
@@ -92,15 +92,15 @@ final class f {
           var14 = (int)((double)var14 * var10Lifetime1);
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
           var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
-          for (var15 = 0; rf.field_eb.length > var15; var15++) {
+          for (var15 = 0; StandardContentDialog.field_eb.length > var15; var15++) {
             var16 = 0;
-            for (var17_int = 1; var17_int < rf.field_eb.length; var17_int++) {
+            for (var17_int = 1; var17_int < StandardContentDialog.field_eb.length; var17_int++) {
               if (var21[var17_int] > var21[var16]) {
                 var16 = var17_int;
               }
             }
             var21[var16] = -2147483648;
-            var17Lifetime1 = rf.field_eb[var16];
+            var17Lifetime1 = StandardContentDialog.field_eb[var16];
             l.a(var16, -95);
             for (var18 = 0; 3 > var18; var18++) {
               GzipDecompressor.field_a[var18] = GzipDecompressor.field_a[var18] + ae.field_a[var15][var18];
@@ -124,7 +124,7 @@ final class f {
     }
 
     final static IndexedSprite a(int param0) {
-        IndexedSprite var1 = new IndexedSprite(NetworkArchiveRequest.field_y, ll.field_U, BufferedSocket.field_j[0], Bzip2State.field_a[0], ql.field_b[0], wk.field_b[param0], Bzip2State.field_K[0], EditableTextField.field_D);
+        IndexedSprite var1 = new IndexedSprite(NetworkArchiveRequest.field_y, FullscreenStatusDialog.field_U, BufferedSocket.field_j[0], Bzip2State.field_a[0], ql.field_b[0], wk.field_b[param0], Bzip2State.field_K[0], EditableTextField.field_D);
         wd.d(param0 ^ 9);
         return var1;
     }

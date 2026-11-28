@@ -24,10 +24,10 @@ final class na {
         }
         var2.setLoopCount(-1);
         var2.setSamplePosition(0);
-        if (oc.field_e < 0) {
+        if (FullscreenNoticeType.field_e < 0) {
           var2.setScaledVolume(0);
         } else {
-          var2.setScaledVolume(oc.field_e * 128 / 256);
+          var2.setScaledVolume(FullscreenNoticeType.field_e * 128 / 256);
         }
         wj.field_j.addChildStream(var2);
     }

@@ -44,7 +44,7 @@ final class sf extends IntrusiveNode {
             bj.field_m = true;
           }
           ByteStorage.field_e = false;
-          ei.a(-87, param0);
+          FullscreenStatusDialog.a(-87, param0);
         } else {
           if (oj.field_B != 0) {
             ByteStorage.field_e = true;
@@ -63,7 +63,7 @@ final class sf extends IntrusiveNode {
                 bj.field_m = true;
               }
               ByteStorage.field_e = false;
-              ei.a(-87, param0);
+              FullscreenStatusDialog.a(-87, param0);
             } else {
               ByteStorage.field_e = true;
               stackIn_21_0 = false;

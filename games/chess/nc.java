@@ -114,7 +114,7 @@ final class nc extends InteractiveWidget {
     final static boolean j(int param0) {
         if (param0 < 120) {
           nc.clearStaticReferences((byte) -4);
-          if (rm.field_Q < 10) {
+          if (StripedProgressWidget.field_Q < 10) {
             return false;
           }
           if (!ad.field_b) {
@@ -122,7 +122,7 @@ final class nc extends InteractiveWidget {
           }
           return false;
         }
-        if (rm.field_Q < 10) {
+        if (StripedProgressWidget.field_Q < 10) {
           return false;
         }
         if (!ad.field_b) {

@@ -74,7 +74,7 @@ final class GameplayScreen {
           jq.field_e = jq.field_e | var4_int;
           LevelRenderable.field_b.addFirst(new fa(param1), false);
           if (!this.field_c) {
-            fg.field_eb.addFirst(new nf(param1, param2, qr.field_j, sk.field_b, re.field_j, ki.field_c), false);
+            ProgressDialog.field_eb.addFirst(new nf(param1, param2, qr.field_j, sk.field_b, re.field_j, ki.field_c), false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -628,7 +628,7 @@ final class GameplayScreen {
                   UiPanel.field_eb[LevelRenderer.field_t]) {
                   var5 = var5 | lp.field_B[(var6 + 0) % 4];
                 }
-                if (UiPanel.field_eb[ga.field_gb] ||
+                if (UiPanel.field_eb[StandardContentDialog.field_gb] ||
                   UiPanel.field_eb[od.field_Mb]) {
                   var5 = var5 | lp.field_B[(var6 + 2) % 4];
                 }
@@ -647,7 +647,7 @@ final class GameplayScreen {
                 UiPanel.field_eb[LevelRenderer.field_t]) {
                 var5 = var5 | lp.field_B[(var6 + 0) % 4];
               }
-              if (UiPanel.field_eb[ga.field_gb] ||
+              if (UiPanel.field_eb[StandardContentDialog.field_gb] ||
                 UiPanel.field_eb[od.field_Mb]) {
                 var5 = var5 | lp.field_B[(var6 + 2) % 4];
               }
@@ -1429,7 +1429,7 @@ final class GameplayScreen {
                   this.field_n = -1 + this.field_D.field_l.length;
                 }
                 this.field_G.startFocusTransition((byte) -17, var2_int, this.field_n);
-                if ((var8 != 0) && ((ga.field_gb == DebouncedFieldValidator.field_f &&
+                if ((var8 != 0) && ((StandardContentDialog.field_gb == DebouncedFieldValidator.field_f &&
                   !eo.field_o ||
                   DebouncedFieldValidator.field_f == od.field_Mb) && !this.field_G.isFocusTransitionActive(true))) {
                   var2_int = this.field_n;
@@ -1441,7 +1441,7 @@ final class GameplayScreen {
                 }
               }
             } else {
-              if ((ga.field_gb == DebouncedFieldValidator.field_f &&
+              if ((StandardContentDialog.field_gb == DebouncedFieldValidator.field_f &&
                 !eo.field_o ||
                 DebouncedFieldValidator.field_f == od.field_Mb) && !this.field_G.isFocusTransitionActive(true)) {
                 var2_int = this.field_n;
@@ -1492,7 +1492,7 @@ final class GameplayScreen {
             ~om.field_B == ~DebouncedFieldValidator.field_f) {
             this.field_C = this.field_C | 1;
           }
-          if (~DebouncedFieldValidator.field_f == ~ga.field_fb) {
+          if (~DebouncedFieldValidator.field_f == ~StandardContentDialog.field_fb) {
             this.field_D.requestLevelRestore(-4);
           }
           if (this.field_A &&
@@ -1870,7 +1870,7 @@ final class GameplayScreen {
                   }
                 } else if ((1 << var7_intLifetime1 & this.field_D.field_t) != 0) {
                   if (this.field_i) {
-                    var8_ref_String = ue.field_H;
+                    var8_ref_String = RegistrationAgreementPane.field_H;
                   } else {
                     var8_ref_String = bm.field_A;
                   }

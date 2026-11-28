@@ -410,9 +410,9 @@ final class MatchingFieldValidator extends TextFieldValidator {
           sceneWidgetState0105.performAction1768(NanoFrameTimer.sceneWidgetPart008State0001, -16834);
           MixedSupport116.sceneWidgetState0111 = new SceneWidget(0L, sceneWidgetArgument1);
           sceneWidgetState0105.performAction1768(MixedSupport116.sceneWidgetState0111, -16834);
-          UiComponentPart033.sceneWidgetState0150 = new SceneWidget(0L, sceneWidgetArgument3);
-          UiComponentPart033.sceneWidgetState0150.bitmapFontState0020 = MixedSupport038.bitmapFontState0013;
-          MixedSupport116.sceneWidgetState0111.performAction1768(UiComponentPart033.sceneWidgetState0150, -16834);
+          AccountCreationResultPanel.sceneWidgetState0150 = new SceneWidget(0L, sceneWidgetArgument3);
+          AccountCreationResultPanel.sceneWidgetState0150.bitmapFontState0020 = MixedSupport038.bitmapFontState0013;
+          MixedSupport116.sceneWidgetState0111.performAction1768(AccountCreationResultPanel.sceneWidgetState0150, -16834);
           MixedSupport116.sceneWidgetState0111.performAction1774(-25);
           DiagnosticSupport002.sceneWidgetState0057 = new SceneWidget(0L, (SceneWidget) null);
           DiagnosticSupport002.sceneWidgetState0057.rgbSpriteArrayState0033 = rgbSpriteArrayLocal31;
@@ -477,7 +477,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
             !MixedSupport144.booleanState0221) {
             return;
           }
-          MixedSupport009.uiComponentPart019State0001 = new UiComponentPart019(0, 0, 0, 0);
+          MixedSupport009.uiComponentPart019State0001 = new BirthDateChatEnableForm(0, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal38) {
           caughtExceptionLocal25 = caughtParameterLocal38;

@@ -15,7 +15,7 @@ final class ca {
             PcmStreamMixer var4 = (PcmStreamMixer) null;
             ca.a((ResourceArchive) null, (PcmStreamMixer) null, -27, -28);
           }
-          Crc32Table.field_a = new af(sd.field_c, vd.field_p, param0, DirectByteArrayStore.field_e, ij.field_g);
+          Crc32Table.field_a = new ProgressMessageDialog(sd.field_c, vd.field_p, param0, DirectByteArrayStore.field_e, ij.field_g);
           sd.field_c.showDialog(Crc32Table.field_a, (byte) -98);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "ca.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

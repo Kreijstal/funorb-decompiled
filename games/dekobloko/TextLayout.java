@@ -153,7 +153,7 @@ abstract class TextLayout {
     }
 
     final static String computeString0231(int integerArgument1) {
-        if (!(UiComponentPart004.integerState0091 >= 2)) {
+        if (!(ContentTransitionDialog.integerState0091 >= 2)) {
           return AlphaWidgetContainer.stringState0150;
         }
         if (null != NodeDeque.resourceArchiveState0025) {
@@ -177,11 +177,11 @@ abstract class TextLayout {
         if (!PcmPlayerService.resourceArchiveState0020.tryLoadGroupByName("commonui", (byte) 124)) {
           return MixedSupport133.stringState0574 + " - " + PcmPlayerService.resourceArchiveState0020.getGroupLoadPercentByName(-125, "commonui") + "%";
         }
-        if (!UiComponentPart023.resourceArchiveState0016.ensureIndexLoaded((byte) 121)) {
+        if (!StandardContentDialog.resourceArchiveState0016.ensureIndexLoaded((byte) 121)) {
           return SceneWidgetPart001.stringState0058;
         }
-        if (!UiComponentPart023.resourceArchiveState0016.tryLoadAllGroups(false)) {
-          return MixedSupport010.stringState0048 + " - " + UiComponentPart023.resourceArchiveState0016.getArchiveLoadPercent((byte) -61) + "%";
+        if (!StandardContentDialog.resourceArchiveState0016.tryLoadAllGroups(false)) {
+          return MixedSupport010.stringState0048 + " - " + StandardContentDialog.resourceArchiveState0016.getArchiveLoadPercent((byte) -61) + "%";
         }
         return TextFieldValidator.stringState0633;
     }

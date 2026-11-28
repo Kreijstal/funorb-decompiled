@@ -92,9 +92,9 @@ abstract class ScoreModifier {
             ResourceArchive var3 = (ResourceArchive) null;
             ScoreModifier.loadElectrocutionSprites(46, (ResourceArchive) null);
           }
-          fm.field_s = bf.a(-1, "sprites_player_death_electrocution_player", "", param1);
-          LaserTraceCursor.field_f = bf.a(-1, "sprites_player_death_electrocution_skeleton", "", param1);
-          ro.field_u = bf.a(~param0, "sprites_player_death_electrocution_halo", "", param1);
+          fm.field_s = FullscreenNoticeType.a(-1, "sprites_player_death_electrocution_player", "", param1);
+          LaserTraceCursor.field_f = FullscreenNoticeType.a(-1, "sprites_player_death_electrocution_skeleton", "", param1);
+          ro.field_u = FullscreenNoticeType.a(~param0, "sprites_player_death_electrocution_halo", "", param1);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "ln.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

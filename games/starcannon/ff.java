@@ -21,7 +21,7 @@ final class ff extends DualLinkNode {
         if (!qa.field_a.b(false)) {
           return te.field_a;
         }
-        return lc.field_hb;
+        return StandardContentDialog.field_hb;
     }
 
     final static boolean a(int param0, ld param1, ld param2) {

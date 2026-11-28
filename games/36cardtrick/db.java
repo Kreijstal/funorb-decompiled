@@ -134,7 +134,7 @@ final class db implements WidgetRenderer {
           kb.field_c = new int[cf.field_c];
           EmailFormatValidator.field_k = new byte[cf.field_c][];
           NetworkArchiveRequest.field_q = new int[cf.field_c];
-          ml.field_b = new int[cf.field_c];
+          FullscreenNoticeType.field_b = new int[cf.field_c];
           InteractiveWidget.field_y = new boolean[cf.field_c];
           vd.field_r = new byte[cf.field_c][];
           var18.position = -(8 * cf.field_c) + param1.length - 7;
@@ -149,7 +149,7 @@ final class db implements WidgetRenderer {
             kb.field_c[var4] = var17.readUnsignedShort((byte) 72);
           }
           for (var4Lifetime1 = 0; cf.field_c > var4Lifetime1; var4Lifetime1++) {
-            ml.field_b[var4Lifetime1] = var18.readUnsignedShort((byte) 72);
+            FullscreenNoticeType.field_b[var4Lifetime1] = var18.readUnsignedShort((byte) 72);
           }
           for (var4Lifetime2 = 0; cf.field_c > var4Lifetime2; var4Lifetime2++) {
             NetworkArchiveRequest.field_q[var4Lifetime2] = var18.readUnsignedShort((byte) 72);

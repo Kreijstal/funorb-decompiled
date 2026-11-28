@@ -16,7 +16,7 @@ final class jb {
           jf.e(640);
           AlphaWidgetContainer.field_E.closeAllDialogs(24910);
           LevelView.field_y = new LoginPanel(qg.field_c, (String) null, vg.field_o, param2, param1);
-          GameApplet.field_g = new pj(AlphaWidgetContainer.field_E, LevelView.field_y);
+          GameApplet.field_g = new StandardContentDialog(AlphaWidgetContainer.field_E, LevelView.field_y);
           AlphaWidgetContainer.field_E.showDialog((byte) -70, GameApplet.field_g);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "jb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

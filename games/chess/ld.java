@@ -38,13 +38,13 @@ final class ld {
     final static void a(String param0, String param1, int param2) {
         try {
           if (null != ArchiveProvider.field_d) {
-            ArchiveProvider.field_d.k((byte) 95);
+            ArchiveProvider.field_d.closeDialog((byte) 95);
           }
           ResourceArchive.field_b = new LoginPanel(param0, param1, false, true, true);
           if (param2 != 0) {
             ld.clearStaticReferences(-20);
           }
-          nj.field_w.c(ResourceArchive.field_b, 69);
+          nj.field_w.replaceContent(ResourceArchive.field_b, 69);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ld.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

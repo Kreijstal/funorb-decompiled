@@ -260,7 +260,7 @@ final class hc {
           }
           var5[4] = (Sprite) ((Object) var18);
           var4.a((byte) 116, 4).a((byte) 126, true).a((byte) 120, var5);
-          var4.a((byte) -113, 5).a((byte) 120, di.a(0, 0, 0, 65793, (byte) -80)).a((byte) 124, true).a(-1, -1);
+          var4.a((byte) -113, 5).a((byte) 120, FullscreenNoticeType.a(0, 0, 0, 65793, (byte) -80)).a((byte) 124, true).a(-1, -1);
           this.field_b = (WidgetRenderer) ((Object) var4);
           var6 = new tc(var4, true);
           var6.field_h = 0;

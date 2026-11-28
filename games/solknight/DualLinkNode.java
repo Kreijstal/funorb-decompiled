@@ -82,8 +82,8 @@ class DualLinkNode extends IntrusiveNode {
             return false;
           }
         }
-        var4 = eh.field_a[param0] + ld.field_M[param0] + ma.field_n[param0];
-        var5 = eh.field_a[param3] + ld.field_M[param3] + ma.field_n[param3];
+        var4 = eh.field_a[param0] + ResizableModalDialog.field_M[param0] + ma.field_n[param0];
+        var5 = eh.field_a[param3] + ResizableModalDialog.field_M[param3] + ma.field_n[param3];
         if (var4 < var5) {
           return true;
         }

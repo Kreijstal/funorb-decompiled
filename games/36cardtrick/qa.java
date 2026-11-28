@@ -67,7 +67,7 @@ final class qa {
           if (param3 != 17651) {
             qa.a(-42, -119);
           }
-          var8 = ej.a(param2, -3428, param4, param5, param0, param1);
+          var8 = StandardContentDialog.a(param2, -3428, param4, param5, param0, param1);
           var6 = var8;
           if (var8 == null) {
             return null;

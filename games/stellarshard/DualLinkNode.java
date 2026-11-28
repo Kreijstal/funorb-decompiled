@@ -30,7 +30,7 @@ class DualLinkNode extends IntrusiveNode {
           return;
         }
         try {
-          se.field_H = -1;
+          GuestPlayConfirmationForm.field_H = -1;
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ah.EB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

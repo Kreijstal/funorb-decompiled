@@ -109,14 +109,14 @@ final class LabeledWidgetContainer extends WidgetWrapper {
               dma.field_b = new BufferedSocket((java.net.Socket) (SauceOfFlameAnimation.field_x.result), cc.field_e);
               var4 = ig.field_m;
               var5 = var4;
-              sja.field_fb.position = 0;
+              StandardContentDialog.field_fb.position = 0;
               stackIn_13_0 = (!param1) ? -1 : -2;
               f.field_b = stackIn_13_0;
               ef.field_l = stackIn_13_0;
               bd.field_j = stackIn_13_0;
               eia.field_a = rga.field_c;
               var5.position = 0;
-              HazmatAnimation.a(sja.field_fb, fl.field_q, (byte) -106, GameKeyHandler.field_a, kha.field_k);
+              HazmatAnimation.a(StandardContentDialog.field_fb, fl.field_q, (byte) -106, GameKeyHandler.field_a, kha.field_k);
               ConfirmedEmailAvailabilityValidator.a(-1, 117);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

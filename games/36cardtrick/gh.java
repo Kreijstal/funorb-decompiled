@@ -33,7 +33,7 @@ final class gh extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1) {
-        ml.field_a = param0;
+        FullscreenNoticeType.field_a = param0;
         if (param1 != 31888) {
           gh.a((byte) -106, false);
         }

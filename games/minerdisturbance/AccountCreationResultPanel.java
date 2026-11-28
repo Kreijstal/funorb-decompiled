@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends rg implements WidgetActivationListener {
+final class AccountCreationResultPanel extends ProgressMessageDialog implements WidgetActivationListener {
     private boolean field_yb;
     private AccountRegistrationPanel field_Ab;
     static ResourceArchive field_xb;
@@ -44,7 +44,7 @@ final class AccountCreationResultPanel extends rg implements WidgetActivationLis
         }
         try {
           pb.d(25);
-          this.s(param1 ^ 2121798);
+          this.closeDialog(param1 ^ 2121798);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "uk.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -64,7 +64,7 @@ final class AccountCreationResultPanel extends rg implements WidgetActivationLis
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        fm var5 = null;
+        DialogMessagePane var5 = null;
         int var6 = 0;
         AccountServiceResult var7 = null;
         var6 = MinerDisturbance.field_ab;
@@ -89,33 +89,33 @@ final class AccountCreationResultPanel extends rg implements WidgetActivationLis
           } else {
             var4 = he.field_d;
           }
-          var5 = new fm((rg) (this), Bzip2State.field_g, var4);
+          var5 = new DialogMessagePane((ProgressMessageDialog) (this), Bzip2State.field_g, var4);
           if (param0.success) {
             if (param0.field_i) {
-              this.a((byte) -53, (UiWidget) (new ba(this)));
+              this.replaceContent((byte) -53, (UiWidget) (new RegistrationAgreementPane(this)));
               return;
             }
-            var5.a(oh.field_A, 53, (WidgetEventListener) (this));
+            var5.addListenerButton(oh.field_A, 53, (WidgetEventListener) (this));
           } else {
             if (!this.field_zb) {
               if (5 == param0.statusCode) {
-                var5.a(11, pc.field_i, -56);
-                var5.a(17, o.field_b, -117);
+                var5.addActionButton(11, pc.field_i, -56);
+                var5.addActionButton(17, o.field_b, -117);
               } else {
-                var5.a(-1, hk.field_d, param1 ^ -107);
+                var5.addActionButton(-1, hk.field_d, param1 ^ -107);
               }
             } else {
-              var5.a(oh.field_A, 82, (WidgetEventListener) (this));
+              var5.addListenerButton(oh.field_A, 82, (WidgetEventListener) (this));
             }
             if (param0.statusCode != 3) {
               if (param0.statusCode == 6) {
-                var5.a(9, gj.field_b, param1 ^ -115);
+                var5.addActionButton(9, gj.field_b, param1 ^ -115);
               }
             } else {
-              var5.a(7, wb.field_q, -77);
+              var5.addActionButton(7, wb.field_q, -77);
             }
           }
-          this.a((byte) -99, (UiWidget) (var5));
+          this.replaceContent((byte) -99, (UiWidget) (var5));
           if (param1 == 11) {
             return;
           }
@@ -136,7 +136,7 @@ final class AccountCreationResultPanel extends rg implements WidgetActivationLis
         }
     }
 
-    final void t(int param0) {
+    final void showAccountCreationConnectionFailure(int param0) {
         this.showAccountCreationResult(ij.createAccountErrorResult(248, gn.field_c, true), 11, true);
         if (param0 != 23101) {
           this.field_yb = true;

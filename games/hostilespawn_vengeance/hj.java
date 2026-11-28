@@ -8,7 +8,7 @@ final class hj extends DualLinkNode {
     static RgbSprite field_r;
     private int[] field_q;
     private String[] field_v;
-    static pe field_t;
+    static ProgressDialog field_t;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7_int = 0;
@@ -42,7 +42,7 @@ final class hj extends DualLinkNode {
         field_t = null;
         field_s = null;
         if (param0 > -36) {
-          field_t = (pe) null;
+          field_t = (ProgressDialog) null;
         }
     }
 
@@ -210,7 +210,7 @@ final class hj extends DualLinkNode {
             nl.field_a = an.createAccountErrorResult(param3, -10, param1);
           } else {
             stackIn_7_0 = !(13 <= ia.field_h);
-            nl.field_a = qi.createAccountSuccessResult(stackIn_7_0, false);
+            nl.field_a = DialogMessagePane.createAccountSuccessResult(stackIn_7_0, false);
             var6 = (String[]) null;
             AccountServiceResult.a((byte) -112, (String[]) null);
           }

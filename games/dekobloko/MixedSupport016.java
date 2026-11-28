@@ -86,7 +86,7 @@ final class MixedSupport016 {
         MixedSupport051.renderingSupport007State0005 = null;
         MixedSupport033.renderingSupport007State0004 = null;
         MixedSupport097.renderingSupport007State0007 = null;
-        UiComponentPart004.renderingSupport007State0002 = null;
+        ContentTransitionDialog.renderingSupport007State0002 = null;
         ComponentContainer.renderingSupport007State0006 = null;
         MixedSupport020.renderingSupport007State0003 = null;
         if (!booleanArgument1) {

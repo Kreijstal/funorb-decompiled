@@ -447,7 +447,7 @@ final class FridgeCreature extends IntrusiveNode {
           var5Lifetime1 = var6;
           this.field_j.bindAsRenderTarget();
           SoftwareRasterizer.addRadialGlow(320, 320, 304, 255, var8);
-          hga.field_U.a((byte) -53);
+          ProgressDialog.field_U.a((byte) -53);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "jfa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

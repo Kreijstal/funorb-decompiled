@@ -17,7 +17,7 @@ final class fl {
         try {
           nb.field_a.closeAllDialogs(param3 ^ 22250);
           lg.field_b = new LoginPanel(aa.field_s, (String) null, MouseWheelInput.field_d, param1, param0);
-          ak.field_a = new ui(nb.field_a, lg.field_b);
+          ak.field_a = new StandardContentDialog(nb.field_a, lg.field_b);
           nb.field_a.showDialog(ak.field_a, (byte) -35);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "fl.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -25,15 +25,15 @@ final class fl {
     }
 
     final static void a(byte param0, ResourceArchive param1) {
-        hk var2 = null;
+        VorbisSample var2 = null;
         try {
           if (param0 < 90) {
             ResourceArchive var3 = (ResourceArchive) null;
             fl.a((byte) 103, (ResourceArchive) null);
           }
-          hk.b(param1.getFileByName(0, "", "headers.packvorbis"));
-          var2 = hk.a(param1, "jagex logo2.packvorbis", "");
-          var2.b();
+          VorbisSample.decodeSetup(param1.getFileByName(0, "", "headers.packvorbis"));
+          var2 = VorbisSample.loadByName(param1, "jagex logo2.packvorbis", "");
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "fl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

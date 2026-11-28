@@ -8,7 +8,7 @@ final class ProxySocketConnector extends SocketConnector {
     static int field_i;
     private java.net.ProxySelector field_j;
     static String field_f;
-    static qf field_e;
+    static FullscreenNoticeType field_e;
     static int field_g;
     static String field_h;
 
@@ -160,7 +160,7 @@ final class ProxySocketConnector extends SocketConnector {
             var4 = param1.position;
             param1.writeInt(var17.field_i, 8959);
             if (param0 > -115) {
-              field_e = (qf) null;
+              field_e = (FullscreenNoticeType) null;
             }
             for (var5 = 0; var5 < var17.field_p; var5++) {
               if (var17.field_r[var5] == 0) {
@@ -582,7 +582,7 @@ final class ProxySocketConnector extends SocketConnector {
 
     static {
         field_f = "Press 'L' to reload, cost: 14tus";
-        field_e = new qf();
+        field_e = new FullscreenNoticeType();
         field_h = "to return to the normal view.";
     }
 

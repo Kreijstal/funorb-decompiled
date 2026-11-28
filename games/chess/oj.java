@@ -18,8 +18,8 @@ final class oj {
           GzipInflater.b(-6446, param3);
         }
         if (1 == param0 &&
-          ii.field_Q != param2) {
-          ii.field_Q = param2;
+          GuestPlayConfirmationForm.field_Q != param2) {
+          GuestPlayConfirmationForm.field_Q = param2;
           EmailFormatValidator.field_l = true;
           GzipInflater.b(-6446, param3);
         }
@@ -112,10 +112,10 @@ final class oj {
 
     final static void a(int param0) {
         if (ArchiveProvider.field_d != null) {
-          ArchiveProvider.field_d.k((byte) -112);
+          ArchiveProvider.field_d.closeDialog((byte) -112);
         }
         BufferedSocket.field_u = new DisplayNameSelectionPanel();
-        nj.field_w.c(BufferedSocket.field_u, 78);
+        nj.field_w.replaceContent(BufferedSocket.field_u, 78);
         if (param0 <= 120) {
           field_a = (String) null;
         }

@@ -400,8 +400,8 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         int var2;
         int var3;
         var3 = HostileSpawn.field_I ? 1 : 0;
-        if (wb.field_S <= 0) {
-          var2 = (ta.p(3)) ? 0 : 1;
+        if (ResizableModalDialog.field_S <= 0) {
+          var2 = (StandardContentDialog.p(3)) ? 0 : 1;
         } else {
           if (null != ie.field_c) {
             ImageProducerRasterBuffer.field_q = ie.field_c.d(16776960);

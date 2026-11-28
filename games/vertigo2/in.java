@@ -28,7 +28,7 @@ final class in {
           return (String) null;
         }
         if (un.field_Hb == bf.field_b) {
-          return af.field_H;
+          return DateInputWidget.field_H;
         }
         return SecondaryNodeHashTable.field_e;
     }
@@ -63,7 +63,7 @@ final class in {
         }
         kk.field_f.field_R = RichTextWidget.field_N.field_R;
         kk.field_f.field_O = 1;
-        if (ko.field_P > 0) {
+        if (NumericDateInputWidget.field_P > 0) {
           an.a(param9, -86, param3, param5);
         }
         if (mp.field_b > 0) {
@@ -72,7 +72,7 @@ final class in {
         if (BufferedRandomAccessFile.field_g &&
           gd.field_j.field_Qb >= gd.field_j.field_uc) {
           BufferedRandomAccessFile.field_j.field_lb = false;
-          ja.field_f.field_Lb.field_S = fg.field_db;
+          ja.field_f.field_Lb.field_S = ProgressDialog.field_db;
           DelegatingCanvas.a(0, ja.field_f.field_Nb);
         } else {
           BufferedRandomAccessFile.field_j.field_lb = true;
@@ -149,7 +149,7 @@ final class in {
             boolean decompiledFrameRemainder0 = true;
             if (eo.field_l[var3].field_s == param0.field_s) {
               var4 = eo.field_l[var3].a((byte) 77);
-              if (AlphaWidgetContainer.field_I[var4] > ll.field_b) {
+              if (AlphaWidgetContainer.field_I[var4] > FullscreenNoticeType.field_b) {
                 AlphaWidgetContainer.field_I[var4] = AlphaWidgetContainer.field_I[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }

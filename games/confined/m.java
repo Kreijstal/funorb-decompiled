@@ -96,7 +96,7 @@ final class m {
         long var6 = 0L;
         int var8 = 0;
         PcmSample var9 = null;
-        ph var10 = null;
+        VorbisSample var10 = null;
         PcmSample stackIn_2_0 = null;
         Object stackIn_11_0 = null;
         Object stackIn_15_0 = null;
@@ -120,16 +120,16 @@ final class m {
             0 >= param2[0]) {
             return null;
           }
-          var10 = (ph) (this.field_f.a(1, var6));
+          var10 = (VorbisSample) (this.field_f.a(1, var6));
           if (var10 == null) {
-            var10 = ph.a(this.field_e, param0, param1);
+            var10 = VorbisSample.load(this.field_e, param0, param1);
             if (var10 == null) {
               stackIn_11_0 = null;
               return (PcmSample) (stackIn_11_0);
             }
             this.field_f.a(var10, 11, var6);
           }
-          var9Lifetime1 = var10.a(param2);
+          var9Lifetime1 = var10.decodeToPcm(param2);
           if (var9Lifetime1 == null) {
             stackIn_15_0 = null;
             return (PcmSample) (stackIn_15_0);

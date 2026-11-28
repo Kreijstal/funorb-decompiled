@@ -49,7 +49,7 @@ final class mp extends DualLinkNode {
             lc.field_c = ResultScenePhase.field_b;
             fh.field_i = param4;
           } else {
-            var8.o(106);
+            var8.showAccountCreationConnectionFailure(106);
           }
           if (param0 == 0) {
             return true;

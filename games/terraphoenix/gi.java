@@ -6,7 +6,7 @@ final class gi {
     static IndexedSprite[] field_j;
     int field_o;
     double field_t;
-    static qf field_r;
+    static FullscreenNoticeType field_r;
     double field_b;
     BattleState field_g;
     int field_m;
@@ -784,7 +784,7 @@ final class gi {
           RasterBuffer.sleepIgnoringInterrupts(1L, 0);
         }
         if (param0 >= -25) {
-          field_r = (qf) null;
+          field_r = (FullscreenNoticeType) null;
         }
     }
 
@@ -1259,7 +1259,7 @@ final class gi {
     }
 
     static {
-        field_r = new qf();
+        field_r = new FullscreenNoticeType();
         field_q = "Remove ";
         field_h = 0;
     }

@@ -207,8 +207,8 @@ final class mj {
         int var3Lifetime2;
         var4 = Bounce.field_N;
         try {
-          if (~uc.field_C != ~this.field_h ||
-            ~this.field_a != ~ll.field_y ||
+          if (~DialogMessagePane.field_C != ~this.field_h ||
+            ~this.field_a != ~StripedProgressWidget.field_y ||
             SectorCacheStore.field_e != 0) {
             this.field_o = true;
           }
@@ -360,10 +360,10 @@ final class mj {
                 var3Lifetime2++;
               }
             }
-            this.field_h = uc.field_C;
+            this.field_h = DialogMessagePane.field_C;
             break;
           }
-          this.field_a = ll.field_y;
+          this.field_a = StripedProgressWidget.field_y;
           if (var2_int != 0) {
             stackIn_140_0 = null;
             return (mj) (stackIn_140_0);
@@ -673,9 +673,9 @@ final class mj {
         this.field_g = new nk[]{new nk(0, 310, hi.field_b, 12, this), new nk(1, 347, bk.field_d, 4, this)};
         this.field_i = new nk[]{new nk(0, 347, hi.field_b, 13, this)};
         try {
-          this.field_a = ll.field_y;
+          this.field_a = StripedProgressWidget.field_y;
           this.field_b = true;
-          this.field_h = uc.field_C;
+          this.field_h = DialogMessagePane.field_C;
           var1_int = 0;
           do {
             if (var1_int >= this.field_m.length) {

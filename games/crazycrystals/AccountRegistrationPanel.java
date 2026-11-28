@@ -76,7 +76,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         this.field_M.field_t = LevelProgressUpdate.field_l;
         this.field_I.field_t = ad.field_j;
         this.field_z.field_t = tf.field_a;
-        this.field_F.field_t = na.field_fb;
+        this.field_F.field_t = ProgressMessageDialog.field_fb;
         this.field_N.setFieldValidator(true, new AccountNameAvailabilityValidator(this.field_N));
         this.field_A.setFieldValidator(true, new EmailFormatValidator(this.field_A));
         this.field_K.setFieldValidator(true, new ConfirmedEmailAvailabilityValidator(this.field_K, this.field_A));

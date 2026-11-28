@@ -17,7 +17,7 @@ final class sg {
     fc field_m;
     int field_g;
     private int field_n;
-    static oc field_i;
+    static FullscreenNoticeType field_i;
     static String field_f;
 
     private final void a(int param0) {
@@ -275,7 +275,7 @@ final class sg {
           var7 = bi.field_a.field_C;
           var8 = 58 + var7;
           if (var5 == 0) {
-            bi.field_a.drawCentred(uc.field_mb, 155, var8, 16711680, -1);
+            bi.field_a.drawCentred(ProgressMessageDialog.field_mb, 155, var8, 16711680, -1);
             this.a(e.field_u, 0, 91, var8);
           } else {
             bi.field_a.drawCentred(ni.field_c, 155, var8, 0, -1);
@@ -472,17 +472,17 @@ final class sg {
                                               }
                                             }
                                             if (this.field_c.f(98)) {
-                                              if (oc.field_e <= 32) {
+                                              if (FullscreenNoticeType.field_e <= 32) {
                                                 MatchingFieldValidator.a(0, 112);
                                               } else {
-                                                MatchingFieldValidator.a(-32 + oc.field_e, 80);
+                                                MatchingFieldValidator.a(-32 + FullscreenNoticeType.field_e, 80);
                                               }
                                             }
                                             if (this.field_c.d((byte) 85)) {
-                                              if (oc.field_e >= 224) {
+                                              if (FullscreenNoticeType.field_e >= 224) {
                                                 MatchingFieldValidator.a(256, 115);
                                               } else {
-                                                MatchingFieldValidator.a(32 + oc.field_e, 89);
+                                                MatchingFieldValidator.a(32 + FullscreenNoticeType.field_e, 89);
                                               }
                                             }
                                           } else {
@@ -788,7 +788,7 @@ final class sg {
                 stackIn_28_0 = qc.field_c[this.field_d];
                 return stackIn_28_0;
               }
-              stackIn_21_0 = param1 * uk.field_U[this.field_d] + qc.field_c[this.field_d];
+              stackIn_21_0 = param1 * ProgressDialog.field_U[this.field_d] + qc.field_c[this.field_d];
               return stackIn_21_0;
             }
             if (2 <= param1) {
@@ -893,7 +893,7 @@ final class sg {
                 var4 <= 32 + var14) {
                 this.field_e = var11;
                 if (var12 != 0) {
-                  md.field_A[var11].drawQuarterSizeAveraged(var13, var14);
+                  StripedProgressWidget.field_A[var11].drawQuarterSizeAveraged(var13, var14);
                 } else {
                   fl.field_c.drawQuarterSizeAveraged(var13, var14);
                 }
@@ -1491,7 +1491,7 @@ final class sg {
                     stackIn_55_2 = stackIn_51_2;
                     stackIn_55_5 = true;
                   }
-                  var2_intLifetime1 = stackIn_55_0 + ((BinaryBitmapFont) (Object) stackIn_55_1).drawParagraph(ii.a(stackIn_55_2 != 0, stackIn_54_3, stackIn_54_4, stackIn_55_5), 40, var2_intLifetime1 - bi.field_a.field_E, 254, 1000, 0, -1, 1, 0, var3) * var3;
+                  var2_intLifetime1 = stackIn_55_0 + ((BinaryBitmapFont) (Object) stackIn_55_1).drawParagraph(FullscreenStatusDialog.a(stackIn_55_2 != 0, stackIn_54_3, stackIn_54_4, stackIn_55_5), 40, var2_intLifetime1 - bi.field_a.field_E, 254, 1000, 0, -1, 1, 0, var3) * var3;
                   var2_intLifetime1 = var2_intLifetime1 + (gg.field_a[0].field_x * 2 + var3);
                   stackIn_58_0 = var2_intLifetime1;
                   stackIn_58_1 = bi.field_a;
@@ -1819,7 +1819,7 @@ final class sg {
               LabeledWidgetContainer.field_N.draw(var7Lifetime1 / 2 + 118, 11 + var4_int);
             }
           } else {
-            var7Lifetime1 = oc.field_e;
+            var7Lifetime1 = FullscreenNoticeType.field_e;
             if (0 > var7Lifetime1) {
               var7Lifetime1 = 0;
             }
@@ -2054,7 +2054,7 @@ final class sg {
         try {
           this.field_k = param0;
           this.field_d = param1;
-          uk.field_U[param1] = gg.field_a[0].field_x;
+          ProgressDialog.field_U[param1] = gg.field_a[0].field_x;
           this.field_c = new fi(qc.field_a[param1].length);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2074,6 +2074,6 @@ final class sg {
     static {
         field_l = new dg();
         field_f = "Waiting for languages";
-        field_i = new oc();
+        field_i = new FullscreenNoticeType();
     }
 }

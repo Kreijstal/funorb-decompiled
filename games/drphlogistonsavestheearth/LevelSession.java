@@ -166,7 +166,7 @@ final class LevelSession {
                 var11 = wi.field_f[var2];
                 var12 = LoginPanel.field_Q[var2] - var9 / md.field_c[var2];
                 var13 = we.field_e[var2];
-                var14 = jf.field_ib[var2];
+                var14 = ContentTransitionDialog.field_ib[var2];
                 var15 = hh.field_a[var2];
                 EditableTextField.field_R[var11].a(5, var13, var15, var14, var12);
                 var2++;
@@ -2248,39 +2248,39 @@ final class LevelSession {
                 continue;
               }
             } else {
-              if (el.field_tb == 0 &&
+              if (StandardContentDialog.field_tb == 0 &&
                 var2 != 0) {
-                el.field_tb = el.field_tb + 1;
+                StandardContentDialog.field_tb = StandardContentDialog.field_tb + 1;
               }
             }
-            if (el.field_tb == 1 &&
+            if (StandardContentDialog.field_tb == 1 &&
               lg.field_g) {
-              el.field_tb = el.field_tb + 1;
+              StandardContentDialog.field_tb = StandardContentDialog.field_tb + 1;
             }
-            if (2 == el.field_tb &&
+            if (2 == StandardContentDialog.field_tb &&
               s.field_e) {
-              el.field_tb = el.field_tb + 1;
+              StandardContentDialog.field_tb = StandardContentDialog.field_tb + 1;
             }
-            if (el.field_tb == 3 &&
+            if (StandardContentDialog.field_tb == 3 &&
               EmailFormatValidator.field_w) {
-              el.field_tb = el.field_tb + 1;
+              StandardContentDialog.field_tb = StandardContentDialog.field_tb + 1;
             }
-            if (el.field_tb == 4 &&
+            if (StandardContentDialog.field_tb == 4 &&
               nb.field_d) {
-              el.field_tb = el.field_tb + 1;
+              StandardContentDialog.field_tb = StandardContentDialog.field_tb + 1;
             }
-            if (5 == el.field_tb &&
+            if (5 == StandardContentDialog.field_tb &&
               ol.field_d) {
-              el.field_tb = el.field_tb + 1;
+              StandardContentDialog.field_tb = StandardContentDialog.field_tb + 1;
             }
-            if (5 == el.field_tb &&
+            if (5 == StandardContentDialog.field_tb &&
               this.levelNumber == 0) {
               we.field_f = we.field_f + 1;
               if (var4 == 0) {
                 break scanLoop1;
               }
             }
-            if (el.field_tb != 6 ||
+            if (StandardContentDialog.field_tb != 6 ||
               this.levelNumber != 3) {
               we.field_f = 0;
               if (var4 == 0) {
@@ -4118,18 +4118,18 @@ final class LevelSession {
         if (this.levelNumber != 0) {
           if ((3 == this.levelNumber) &&
             (!(gm.field_J > 0)) &&
-            (!(ol.field_i.length <= el.field_tb))) {
-            cb.field_b.drawParagraph(ol.field_i[el.field_tb], 0, 334, 544, 96, 16777215, 0, 2, 1, cb.field_b.field_x);
+            (!(ol.field_i.length <= StandardContentDialog.field_tb))) {
+            cb.field_b.drawParagraph(ol.field_i[StandardContentDialog.field_tb], 0, 334, 544, 96, 16777215, 0, 2, 1, cb.field_b.field_x);
             al.field_a[1].a(-al.field_a[1].field_h + var2 + 640, 430 - al.field_a[1].field_c);
             if ((DrPhlogistonSavesTheEarth.field_D) &&
-              ((-1 + ol.field_i.length) > el.field_tb)) {
-              cb.field_b.drawParagraph(ol.field_i[el.field_tb], 0, 334, 544, 96, 16777215, 0, 2, 1, cb.field_b.field_x);
+              ((-1 + ol.field_i.length) > StandardContentDialog.field_tb)) {
+              cb.field_b.drawParagraph(ol.field_i[StandardContentDialog.field_tb], 0, 334, 544, 96, 16777215, 0, 2, 1, cb.field_b.field_x);
               al.field_a[0].a(var2 + 640 - al.field_a[0].field_h, -al.field_a[0].field_c + 430);
             }
           }
         } else {
-          if ((-1 + ol.field_i.length) > el.field_tb) {
-            cb.field_b.drawParagraph(ol.field_i[el.field_tb], 0, 334, 544, 96, 16777215, 0, 2, 1, cb.field_b.field_x);
+          if ((-1 + ol.field_i.length) > StandardContentDialog.field_tb) {
+            cb.field_b.drawParagraph(ol.field_i[StandardContentDialog.field_tb], 0, 334, 544, 96, 16777215, 0, 2, 1, cb.field_b.field_x);
             al.field_a[0].a(var2 + 640 - al.field_a[0].field_h, -al.field_a[0].field_c + 430);
           }
         }
@@ -4303,7 +4303,7 @@ final class LevelSession {
           }
           LoginPanel.field_Q[var2] = hi.a(1280, 4, this.field_l);
           we.field_e[var2] = 107 + hi.a(215, 4, this.field_l);
-          jf.field_ib[var2] = hi.a(65535, 4, this.field_l);
+          ContentTransitionDialog.field_ib[var2] = hi.a(65535, 4, this.field_l);
           hh.field_a[var2] = hi.a(4096, 4, this.field_l) * hi.a(2048, 4, this.field_l) >> 12;
           wi.field_f[var2] = hi.a(5, 4, this.field_l);
           md.field_c[var2] = 15 + hi.a(10, 4, this.field_l);

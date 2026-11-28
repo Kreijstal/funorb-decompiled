@@ -35,9 +35,9 @@ final class ml extends hb {
     final cm c(int param0) {
         if (param0 != 0) {
           field_s = -100;
-          return si.field_nb;
+          return ProgressMessageDialog.field_nb;
         }
-        return si.field_nb;
+        return ProgressMessageDialog.field_nb;
     }
 
     ml(long param0, String param1) {

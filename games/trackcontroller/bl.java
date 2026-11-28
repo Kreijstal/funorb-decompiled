@@ -205,15 +205,15 @@ final class bl {
           }
           try {
             if (rf.field_c == 0) {
-              w.field_V = kb.field_d.requestDirectSocket(35, IterableNodeHashTable.field_e, IntrusiveNode.field_g);
+              FullscreenStatusDialog.field_V = kb.field_d.requestDirectSocket(35, IterableNodeHashTable.field_e, IntrusiveNode.field_g);
               rf.field_c = rf.field_c + 1;
             }
             if (1 == rf.field_c) {
-              if (w.field_V.status == 2) {
+              if (FullscreenStatusDialog.field_V.status == 2) {
                 stackIn_17_0 = ej.a(40, -1);
                 return stackIn_17_0;
               }
-              if (w.field_V.status == 1) {
+              if (FullscreenStatusDialog.field_V.status == 1) {
                 rf.field_c = rf.field_c + 1;
               }
             }
@@ -221,7 +221,7 @@ final class bl {
               field_a = (Sprite) null;
             }
             if (rf.field_c == 2) {
-              ob.field_u = new BufferedSocket((java.net.Socket) (w.field_V.result), kb.field_d);
+              ob.field_u = new BufferedSocket((java.net.Socket) (FullscreenStatusDialog.field_V.result), kb.field_d);
               var2 = new PacketBuffer(13);
               ModalDialog.a(kf.field_a, var2, 17, LabeledWidgetContainer.field_T, GameStringTable.field_j);
               var2.writeByte(15, (byte) -100);
@@ -251,7 +251,7 @@ final class bl {
             }
             SecondaryNodeDeque.field_d.a((byte) 121, ai.field_b, ob.field_u);
             ob.field_u = null;
-            w.field_V = null;
+            FullscreenStatusDialog.field_V = null;
             rf.field_c = 0;
             stackIn_38_0 = 0;
             return stackIn_38_0;

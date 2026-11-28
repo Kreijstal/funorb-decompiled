@@ -46,7 +46,7 @@ final class ak extends kj {
         RuntimeException var1 = null;
         var2 = Torquing.field_u;
         try {
-          if (i.field_P.length == po.field_z) {
+          if (FullscreenStatusDialog.field_P.length == po.field_z) {
             po.field_z = -1;
           }
           if (param0 != -85) {
@@ -55,8 +55,8 @@ final class ak extends kj {
           while (true) {
             fieldTemp$2 = po.field_z + 1;
             po.field_z = po.field_z + 1;
-            if (fieldTemp$2 < i.field_P.length) {
-              if (!i.field_P[po.field_z]) {
+            if (fieldTemp$2 < FullscreenStatusDialog.field_P.length) {
+              if (!FullscreenStatusDialog.field_P[po.field_z]) {
                 r.field_b[po.field_z] = nn.field_b;
                 continue;
               }
@@ -78,7 +78,7 @@ final class ak extends kj {
             }
             break;
           }
-          stackIn_22_0 = !(po.field_z >= i.field_P.length);
+          stackIn_22_0 = !(po.field_z >= FullscreenStatusDialog.field_P.length);
           return stackIn_22_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

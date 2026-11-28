@@ -113,7 +113,7 @@ final class eb {
             TextLineMetrics.field_f = (-KeyboardInput.field_c.field_u + pc.field_a.field_u) / 2 + 231;
             g.field_a = null;
             TextFieldValidator.field_e = (-KeyboardInput.field_c.field_u + pc.field_a.field_u) / 2 + 434;
-            lf.field_Z = (-KeyboardInput.field_c.field_v + pc.field_a.field_v) / 2 + 390;
+            ProgressDialog.field_Z = (-KeyboardInput.field_c.field_v + pc.field_a.field_v) / 2 + 390;
           }
           if (ba.field_c == null) {
             return;
@@ -124,7 +124,7 @@ final class eb {
             var2Lifetime1 = SoftwareRasterizer.field_j;
             var3Lifetime1 = SoftwareRasterizer.field_f;
             SoftwareRasterizer.saveClip(wc.field_b);
-            var14 = fb.a(u.field_a, 114, new String[]{kc.field_N[fc.field_c]});
+            var14 = fb.a(u.field_a, 114, new String[]{ResizableModalDialog.field_N[fc.field_c]});
             var5 = gi.field_b.maxLineWidth(var14, AccountNameAvailabilityValidator.field_k);
             var6Lifetime1 = gi.field_b.textHeight(var14, AccountNameAvailabilityValidator.field_k, gi.field_b.field_p + gi.field_b.field_q);
             var7Lifetime1 = BoundedRandomAccessFile.field_f + (AccountNameAvailabilityValidator.field_k - var5) / 2;
@@ -262,7 +262,7 @@ final class eb {
             }
             stackIn_53_0 = 112;
             stackIn_54_1 = (0 == ea.field_a.field_k);
-            m.$cfr$intArgs$a$43a9e830b5b3(stackIn_53_0, stackIn_54_1, TextLineMetrics.field_f, lf.field_Z);
+            m.$cfr$intArgs$a$43a9e830b5b3(stackIn_53_0, stackIn_54_1, TextLineMetrics.field_f, ProgressDialog.field_Z);
           }
           if (pc.field_a != null &&
             null != KeyboardInput.field_c) {

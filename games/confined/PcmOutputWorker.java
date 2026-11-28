@@ -79,7 +79,7 @@ final class PcmOutputWorker implements Runnable {
             var9 = param2;
             var10 = param1;
             for (var11 = param0; var11 < param3; var11++) {
-              var12 = sj.field_rb[var11];
+              var12 = ContentTransitionDialog.field_rb[var11];
               if (!param6) {
                 stackIn_23_0 = ik.field_cb[var12];
               } else {
@@ -87,10 +87,10 @@ final class PcmOutputWorker implements Runnable {
               }
               var13 = stackIn_23_0;
               if (var7_int < var13) {
-                sj.field_rb[var11] = sj.field_rb[var8];
+                ContentTransitionDialog.field_rb[var11] = ContentTransitionDialog.field_rb[var8];
                 incrementValue$0 = var8;
                 var8++;
-                sj.field_rb[incrementValue$0] = var12;
+                ContentTransitionDialog.field_rb[incrementValue$0] = var12;
                 if (var9 > var13) {
                   var9 = var13;
                 }
@@ -106,11 +106,11 @@ final class PcmOutputWorker implements Runnable {
           }
           for (var7_intLifetime1 = param3 - 1; param0 < var7_intLifetime1; var7_intLifetime1--) {
             for (var8Lifetime1 = param0; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
-              var9Lifetime1 = sj.field_rb[var8Lifetime1];
-              var10Lifetime1 = sj.field_rb[var8Lifetime1 + 1];
+              var9Lifetime1 = ContentTransitionDialog.field_rb[var8Lifetime1];
+              var10Lifetime1 = ContentTransitionDialog.field_rb[var8Lifetime1 + 1];
               if (ek.a(-124, var10Lifetime1, param6, var9Lifetime1)) {
-                sj.field_rb[var8Lifetime1] = var10Lifetime1;
-                sj.field_rb[1 + var8Lifetime1] = var9Lifetime1;
+                ContentTransitionDialog.field_rb[var8Lifetime1] = var10Lifetime1;
+                ContentTransitionDialog.field_rb[1 + var8Lifetime1] = var9Lifetime1;
               }
             }
           }

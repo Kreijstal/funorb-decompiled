@@ -27,12 +27,12 @@ final class so extends TextureOperator {
         int var12 = 0;
         var12 = Vertigo2.field_L ? 1 : 0;
         try {
-          gr.field_Z = param1;
+          FullscreenStatusDialog.field_Z = param1;
           kr.field_c = param5;
           ao.field_N = -1L;
           ol.field_A = param5.length;
           gd.field_j = null;
-          qc.field_w = new byte[(gr.field_Z + 7) / 8];
+          qc.field_w = new byte[(FullscreenStatusDialog.field_Z + 7) / 8];
           qn.field_q = false;
           sj.field_d = null;
           var10_int = 0;
@@ -113,7 +113,7 @@ final class so extends TextureOperator {
           return (int[]) null;
         }
         int[] var4 = this.a(0, -1, param0);
-        for (var5 = 0; we.field_M > var5; var5++) {
+        for (var5 = 0; StripedProgressWidget.field_M > var5; var5++) {
           var7[var5] = -var4[var5] + 4096;
         }
         if (param1 >= 91) {
@@ -191,7 +191,7 @@ final class so extends TextureOperator {
           var8 = var20[0];
           var9 = var20[1];
           var10 = var20[2];
-          for (var11 = 0; we.field_M > var11; var11++) {
+          for (var11 = 0; StripedProgressWidget.field_M > var11; var11++) {
             var8[var11] = -var29[var11] + 4096;
             var9[var11] = -var30[var11] + 4096;
             var10[var11] = 4096 - var31[var11];

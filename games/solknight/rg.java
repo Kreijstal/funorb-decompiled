@@ -131,10 +131,10 @@ final class rg {
         if (param0 != 0) {
           field_c = 11;
         }
-        if (gf.field_Z == ma.field_o) {
+        if (ContentTransitionDialog.field_Z == ma.field_o) {
           return AlphaWidgetContainer.field_K;
         }
-        if (PacketBuffer.field_i == gf.field_Z) {
+        if (PacketBuffer.field_i == ContentTransitionDialog.field_Z) {
           return uh.field_r;
         }
         if (!td.field_h.a(false)) {

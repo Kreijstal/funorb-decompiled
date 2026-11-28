@@ -10,7 +10,7 @@ final class g extends InteractiveWidget {
     static String field_O;
     int field_H;
     static String field_R;
-    static jf field_M;
+    static FullscreenNoticeType field_M;
     static String field_K;
     int field_L;
     int field_P;
@@ -182,6 +182,6 @@ final class g extends InteractiveWidget {
         field_R = "Passwords can only contain letters and numbers";
         field_O = "Find more ammo for the rocket launcher to destroy the turrets blocking the lift. Otherwise, find an alternative way out.";
         field_K = "Doors open when you get close to them.";
-        field_M = new jf();
+        field_M = new FullscreenNoticeType();
     }
 }

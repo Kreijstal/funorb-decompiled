@@ -211,7 +211,7 @@ final class AlphaWidgetContainer extends WidgetWrapper {
         if (param0 != 0) {
           return;
         }
-        d var2 = ao.field_d;
+        BirthDateChatEnableForm var2 = ao.field_d;
         if (var2 != null) {
           var2.drawAllLayers(i.field_a.field_D, i.field_a.field_M, 20077);
         }

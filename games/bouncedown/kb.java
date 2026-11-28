@@ -18,7 +18,7 @@ final class kb {
         if (param0 == 808) {
           DisplayNameSelectionPanel.field_N.closeAllDialogs(-20281);
           if (DisplayNameSelectionPanel.field_A == null) {
-            DisplayNameSelectionPanel.field_A = new db(DisplayNameSelectionPanel.field_N, ej.field_c);
+            DisplayNameSelectionPanel.field_A = new ProgressDialog(DisplayNameSelectionPanel.field_N, ej.field_c);
           }
           DisplayNameSelectionPanel.field_N.showDialog(DisplayNameSelectionPanel.field_A, false);
           return;
@@ -26,7 +26,7 @@ final class kb {
         kb.a(-78);
         DisplayNameSelectionPanel.field_N.closeAllDialogs(-20281);
         if (DisplayNameSelectionPanel.field_A == null) {
-          DisplayNameSelectionPanel.field_A = new db(DisplayNameSelectionPanel.field_N, ej.field_c);
+          DisplayNameSelectionPanel.field_A = new ProgressDialog(DisplayNameSelectionPanel.field_N, ej.field_c);
         }
         DisplayNameSelectionPanel.field_N.showDialog(DisplayNameSelectionPanel.field_A, false);
     }

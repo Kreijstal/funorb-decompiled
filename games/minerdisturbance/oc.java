@@ -158,7 +158,7 @@ final class oc extends hn {
             tk.field_a = true;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (jk.field_ab != 0) {
+          if (ContentTransitionDialog.field_ab != 0) {
             if (3 != AlphaWidgetContainer.field_J &&
               8 != AlphaWidgetContainer.field_J) {
               if ((5 == AlphaWidgetContainer.field_J)) {
@@ -173,8 +173,8 @@ final class oc extends hn {
           fa.field_e = false;
           if (AlphaWidgetContainer.field_J == 4 &&
             DefaultTextWidgetRenderer.b(42)) {
-            if (0 < qd.field_R) {
-              qd.field_R = qd.field_R - 1;
+            if (0 < GuestPlayConfirmationForm.field_R) {
+              GuestPlayConfirmationForm.field_R = GuestPlayConfirmationForm.field_R - 1;
             }
             var3 = 20 + (-ak.field_c.field_x + 640) - EditableTextField.field_L;
             var4 = 500 - ak.field_c.field_A;
@@ -183,10 +183,10 @@ final class oc extends hn {
               var4 <= NodeHashTableIterator.field_e &&
               NodeHashTableIterator.field_e < 480) {
               fa.field_e = true;
-              if (jk.field_ab != 0 &&
-                0 == qd.field_R) {
+              if (ContentTransitionDialog.field_ab != 0 &&
+                0 == GuestPlayConfirmationForm.field_R) {
                 try {
-                  qd.field_R = 25;
+                  GuestPlayConfirmationForm.field_R = 25;
                   Bzip2State.a(RichTextLayout.c(-125), "http://itunes.apple.com/us/app/miner-disturbance/id374275550?mt=8", 11050, true);
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;

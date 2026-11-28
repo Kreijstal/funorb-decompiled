@@ -32,9 +32,9 @@ final class wg extends IntrusiveNode {
             DiskArchiveRequest.field_v[var2] = 240 - AgeValidator.field_o[var2] / 2;
             vh.field_E[var2] = new Sprite(m.field_e[var2], AgeValidator.field_o[var2]);
             vh.field_E[var2].bindAsRenderTarget();
-            lb.a(0, m.field_e[var2], (byte) -128, NodeHashTableIterator.field_e, 0, AgeValidator.field_o[var2]);
+            GuestPlayConfirmationForm.a(0, m.field_e[var2], (byte) -128, NodeHashTableIterator.field_e, 0, AgeValidator.field_o[var2]);
             BoundedRandomAccessFile.field_e.drawParagraph(AgeValidator.field_n[var2], 57, 15, m.field_e[var2] - 72, AgeValidator.field_o[var2] - 30, 1, -1, 0, 0, BoundedRandomAccessFile.field_e.field_C + BoundedRandomAccessFile.field_e.field_D);
-            RichTextLayout.field_r.drawString(lb.field_A, 57, AgeValidator.field_o[var2] - 15, 1, 6579300);
+            RichTextLayout.field_r.drawString(GuestPlayConfirmationForm.field_A, 57, AgeValidator.field_o[var2] - 15, 1, 6579300);
             var3 = var2;
             if (0 != var3) {
               if (3 != var3) {
@@ -172,7 +172,7 @@ final class wg extends IntrusiveNode {
               var7Lifetime2 = var10;
               var7Lifetime3 = var10;
               if (param4 >= 0L) {
-                var7Lifetime4 = var10 + "; Expires=" + ha.a((byte) 126, 1000L * param4 + pf.correctedCurrentTimeMillis(0)) + "; Max-Age=" + param4;
+                var7Lifetime4 = var10 + "; Expires=" + ProgressMessageDialog.a((byte) 126, 1000L * param4 + pf.correctedCurrentTimeMillis(0)) + "; Max-Age=" + param4;
               } else {
                 var7Lifetime4 = var10 + "; Discard;";
               }
@@ -218,7 +218,7 @@ final class wg extends IntrusiveNode {
     }
 
     final static void f(int param0) {
-        jh.field_C.c((byte) 73, new lb());
+        StripedProgressWidget.field_C.replaceContent((byte) 73, new GuestPlayConfirmationForm());
         if (param0 != -1) {
           float[] var2 = (float[]) null;
           wg.a((float[]) null, (byte) -21);
@@ -250,7 +250,7 @@ final class wg extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var3 = pc.a((byte) -123, param0, param1);
+          var3 = ContentTransitionDialog.a((byte) -123, param0, param1);
           if (var3 != null) {
             stackIn_3_0 = var3;
             return stackIn_3_0;

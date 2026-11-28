@@ -81,7 +81,7 @@ final class fc extends IntrusiveNode {
               bf.c(54, 8)) {
               ModalDialogHost.field_H = AlphaWidgetContainer.field_N.readLong(10526);
               AlphaWidgetContainer.field_N.position = 0;
-              ci.a(-25776, param2, param1, MouseWheelInput.field_a, param3);
+              ProgressMessageDialog.a(-25776, param2, param1, MouseWheelInput.field_a, param3);
               AccountRequestState.field_e = UiWidget.field_o;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -142,7 +142,7 @@ final class fc extends IntrusiveNode {
               ne.field_g = AlphaWidgetContainer.field_N.readString(16);
               var13 = (CharSequence) ((Object) ne.field_g);
               ModalDialog.field_D = FullscreenFocusCanvas.a(var13, -2);
-              c.field_H = AlphaWidgetContainer.field_N.readUnsignedByte(255);
+              StripedProgressWidget.field_H = AlphaWidgetContainer.field_N.readUnsignedByte(255);
               AccountRequestState.field_e = jj.field_Y;
               if (MouseWheelInput.field_a.a(123) != EmailFormatValidator.field_k) {
                 if (MouseWheelInput.field_a.a(param5 + 70) == ValidatedTextField.field_L) {

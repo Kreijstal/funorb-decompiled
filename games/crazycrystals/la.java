@@ -89,7 +89,7 @@ final class la {
             DisplayNameSelectionPanel.field_H.drawGrayModulated(2, 2, UiWidget.field_n);
             hb.a(2, var11.field_u, 0, var11.field_l, var11, -46, 1, 0);
             DisplayNameSelectionPanel.field_H = var11;
-            bf.field_a = DisplayNameSelectionPanel.field_H.copyMirroredHorizontally();
+            FullscreenNoticeType.field_a = DisplayNameSelectionPanel.field_H.copyMirroredHorizontally();
             var12 = new RgbSprite(195, 221);
             var6 = var12.field_l / 2;
             var12.bindAsRenderTarget();
@@ -161,12 +161,12 @@ final class la {
               var8 = var8 + var9_intLifetime2;
               MouseInputHandler.field_c.field_t = MouseInputHandler.field_c.field_t + var9_intLifetime2;
               MouseInputHandler.field_c.field_o = MouseInputHandler.field_c.field_o + var9_intLifetime2 * 2;
-              kl.field_U = kl.field_U - var9_intLifetime2;
+              ProgressDialog.field_U = ProgressDialog.field_U - var9_intLifetime2;
               fk.field_u = fk.field_u + var9_intLifetime2;
             }
             if (MouseInputHandler.field_c.field_o < var8 + var6Lifetime1) {
               var9_intLifetime3 = -MouseInputHandler.field_c.field_o + var8 + var6Lifetime1;
-              kl.field_U = kl.field_U - var9_intLifetime3;
+              ProgressDialog.field_U = ProgressDialog.field_U - var9_intLifetime3;
               MouseInputHandler.field_c.field_t = MouseInputHandler.field_c.field_t + var9_intLifetime3;
               var6Lifetime1 = var6Lifetime1 + 2 * var9_intLifetime3;
               var8 = var8 + var9_intLifetime3;
@@ -182,7 +182,7 @@ final class la {
             var9.draw(0, 0);
             em.field_m = new RgbSprite(640, 480);
             em.field_m.bindAsRenderTarget();
-            MouseInputHandler.field_c.drawRotated((MouseInputHandler.field_c.field_n >> 1) + sj.field_f, (MouseInputHandler.field_c.field_o >> 1) + kl.field_U, o.field_f, 4096);
+            MouseInputHandler.field_c.drawRotated((MouseInputHandler.field_c.field_n >> 1) + sj.field_f, (MouseInputHandler.field_c.field_o >> 1) + ProgressDialog.field_U, o.field_f, 4096);
             MouseInputHandler.field_c = null;
             em.field_m.trimTransparentBorders();
             SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime1, var3Lifetime1);
@@ -288,7 +288,7 @@ final class la {
           if (null != DisplayNameSelectionPanel.field_H) {
             var1_int = 357 - DisplayNameSelectionPanel.field_H.field_o / 2;
             DisplayNameSelectionPanel.field_H.draw(-DisplayNameSelectionPanel.field_H.field_n + 269, var1_int);
-            bf.field_a.draw(586, var1_int);
+            FullscreenNoticeType.field_a.draw(586, var1_int);
             if (var1_int < IsaacRandom.field_h &&
               DisplayNameSelectionPanel.field_H.field_u + var1_int > IsaacRandom.field_h) {
               var2Lifetime5 = 40 + (40 * ProxyAuthenticationRequiredException.a(2047, LevelLostEntrancePhase.field_g << 4) >> 16);
@@ -306,10 +306,10 @@ final class la {
               } else {
                 if (586 < qh.field_i &&
                   DisplayNameSelectionPanel.field_H.field_l + 586 > qh.field_i) {
-                  bf.field_a.drawAdditive(585, -1 + var1_int, var2Lifetime5);
-                  bf.field_a.drawAdditive(587, -1 + var1_int, var2Lifetime5);
-                  bf.field_a.drawAdditive(585, 1 + var1_int, var2Lifetime5);
-                  bf.field_a.drawAdditive(587, 1 + var1_int, var2Lifetime5);
+                  FullscreenNoticeType.field_a.drawAdditive(585, -1 + var1_int, var2Lifetime5);
+                  FullscreenNoticeType.field_a.drawAdditive(587, -1 + var1_int, var2Lifetime5);
+                  FullscreenNoticeType.field_a.drawAdditive(585, 1 + var1_int, var2Lifetime5);
+                  FullscreenNoticeType.field_a.drawAdditive(587, 1 + var1_int, var2Lifetime5);
                 }
               }
             }

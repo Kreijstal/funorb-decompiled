@@ -134,7 +134,7 @@ final class qf {
     }
 
     final static void a(int param0) {
-        nj.field_w.c(new ii(), 83);
+        nj.field_w.replaceContent(new GuestPlayConfirmationForm(), 83);
         if (param0 < 90) {
           qf.a((byte) -70);
         }

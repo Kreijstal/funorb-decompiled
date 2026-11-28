@@ -136,7 +136,7 @@ final class rj {
               if (var30 != 0) {
                 if (stackIn_65_0 > stackIn_65_1) {
                   stackIn_74_0 = var18;
-                  stackIn_74_1 = sj.field_S.length;
+                  stackIn_74_1 = DialogMessagePane.field_S.length;
                   break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
@@ -158,7 +158,7 @@ final class rj {
                 if (param1) {
                   bk.field_q[var23Lifetime2] = var27Lifetime1 >> IterableNodeHashTable.field_g;
                   FullscreenFocusCanvas.field_h[var23Lifetime2] = var28Lifetime1 >> IterableNodeHashTable.field_g;
-                  ek.field_K[var23Lifetime2] = var29Lifetime1;
+                  StripedProgressWidget.field_K[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
                 continue;
@@ -182,7 +182,7 @@ final class rj {
                   var26Lifetime1Lifetime1 = param3.field_J[var23Lifetime2];
                   ba.field_h[var23Lifetime2] = var9 + (var24Lifetime1Lifetime1 * var12 + var15 * var25Lifetime1Lifetime1 + var18 * var26Lifetime1Lifetime1 >> 16);
                   DisplayNameSelectionPanel.field_O[var23Lifetime2] = (var24Lifetime1Lifetime1 * var13 + (var25Lifetime1Lifetime1 * var16 + var26Lifetime1Lifetime1 * var19) >> 16) + var10;
-                  ih.field_O[var23Lifetime2] = (var24Lifetime1Lifetime1 * var14 + var25Lifetime1Lifetime1 * var17 + var26Lifetime1Lifetime1 * var20 >> 16) + var11;
+                  GuestPlayConfirmationForm.field_O[var23Lifetime2] = (var24Lifetime1Lifetime1 * var14 + var25Lifetime1Lifetime1 * var17 + var26Lifetime1Lifetime1 * var20 >> 16) + var11;
                   var24Lifetime1Lifetime1 = param3.field_E[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param3.field_l[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param3.field_C[var23Lifetime2];
@@ -223,7 +223,7 @@ final class rj {
                     break;
                   }
                   stackIn_74_0 = var18;
-                  stackIn_74_1 = sj.field_S.length;
+                  stackIn_74_1 = DialogMessagePane.field_S.length;
                   if (var30 != 0) {
                     break scanLoop1;
                   }
@@ -233,7 +233,7 @@ final class rj {
                   var19 = param3.field_L[var18];
                   var20 = param3.field_r[var18];
                   var21Lifetime2 = param3.field_D[var18];
-                  sj.field_S[var18] = var12 * var20 + (var19 * var9 + var15 * var21Lifetime2) >> 16;
+                  DialogMessagePane.field_S[var18] = var12 * var20 + (var19 * var9 + var15 * var21Lifetime2) >> 16;
                   kl.field_b[var18] = var16 * var21Lifetime2 + var10 * var19 + var13 * var20 >> 16;
                   kd.field_o[var18] = var21Lifetime2 * var17 + var11 * var19 + var14 * var20 >> 16;
                   var18++;
@@ -288,7 +288,7 @@ final class rj {
             vl.field_a = param13;
             LoginPanel.field_S = param2;
             wh.field_c = param10;
-            ll.field_f = param8;
+            FullscreenNoticeType.field_f = param8;
             IsaacRandom.field_e = param4;
             mh.field_a = param7;
             ae.field_x = param3;

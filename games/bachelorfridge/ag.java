@@ -124,14 +124,14 @@ final class ag extends k {
           return;
         }
         try {
-          sja.field_fb.writeCipheredByte(92, (byte) 111);
-          sja.field_fb.position = sja.field_fb.position + 2;
+          StandardContentDialog.field_fb.writeCipheredByte(92, (byte) 111);
+          StandardContentDialog.field_fb.position = StandardContentDialog.field_fb.position + 2;
           if (param1 != -104) {
             field_k = (String) null;
           }
-          var2_int = sja.field_fb.position;
-          rha.a(param0.field_g, sja.field_fb, (byte) -107);
-          sja.field_fb.writeLengthShort((byte) -88, sja.field_fb.position - var2_int);
+          var2_int = StandardContentDialog.field_fb.position;
+          rha.a(param0.field_g, StandardContentDialog.field_fb, (byte) -107);
+          StandardContentDialog.field_fb.writeLengthShort((byte) -88, StandardContentDialog.field_fb.position - var2_int);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ag.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

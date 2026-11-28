@@ -45,9 +45,9 @@ abstract class FrameTimer {
 
     final static void a(String param0, boolean param1, int param2) {
         try {
-          ud.field_U = param1;
+          ContentTransitionDialog.field_U = param1;
           dj.field_t = true;
-          SectorCacheStore.field_a = new na(qe.field_g, mo.field_m, param0, ne.field_d, ud.field_U);
+          SectorCacheStore.field_a = new ProgressMessageDialog(qe.field_g, mo.field_m, param0, ne.field_d, ContentTransitionDialog.field_U);
           if (param2 != -13) {
             field_a = (String) null;
           }

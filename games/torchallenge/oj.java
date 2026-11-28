@@ -56,7 +56,7 @@ final class oj {
                 }
                 var2 = dl.a("loginm2", false);
                 if (var2 != null) {
-                  nh.field_ib = re.a(18990, var2);
+                  FullscreenStatusDialog.field_ib = re.a(18990, var2);
                 }
                 var2 = dl.a("loginm1", false);
                 if (var2 != null) {
@@ -1019,7 +1019,7 @@ final class oj {
                 }
                 var2 = dl.a("cancel", false);
                 if (null != var2) {
-                  nh.field_fb = re.a(param0 + 22788, var2);
+                  FullscreenStatusDialog.field_fb = re.a(param0 + 22788, var2);
                 }
                 var2 = dl.a("pleaselogintoplay", false);
                 if (var2 != null) {
@@ -1137,7 +1137,7 @@ final class oj {
                 }
                 var2 = dl.a("invalidpass", false);
                 if (null != var2) {
-                  n.field_fb = re.a(18990, var2);
+                  ContentTransitionDialog.field_fb = re.a(18990, var2);
                 }
                 var2 = dl.a("retry", false);
                 if (var2 != null) {
@@ -1789,7 +1789,7 @@ final class oj {
                 }
                 var2 = dl.a("waitingfor_music", false);
                 if (var2 != null) {
-                  qh.field_L = re.a(18990, var2);
+                  RegistrationAgreementPane.field_L = re.a(18990, var2);
                 }
                 var2 = dl.a("waitingfor_instruments", false);
                 if (null != var2) {
@@ -1801,7 +1801,7 @@ final class oj {
                 }
                 var2 = dl.a("waitingfor_extradata", false);
                 if (null != var2) {
-                  wa.field_qb = re.a(18990, var2);
+                  ProgressMessageDialog.field_qb = re.a(18990, var2);
                 }
                 var2 = dl.a("waitingfor_languages", false);
                 if (null != var2) {
@@ -2687,7 +2687,7 @@ final class oj {
                 }
                 var2 = dl.a("fs_nonmember", false);
                 if (var2 != null) {
-                  ll.field_c = re.a(param0 + 22788, var2);
+                  FullscreenNoticeType.field_c = re.a(param0 + 22788, var2);
                 }
                 var2 = dl.a("fs_button_close", false);
                 if (var2 != null) {
@@ -3098,7 +3098,7 @@ final class oj {
           var6 = param0.getParameter("currency");
           if (var6 != null &&
             Bzip2State.a((byte) -117, (CharSequence) ((Object) var6))) {
-            di.field_A = qh.a((CharSequence) ((Object) var6), (byte) -102);
+            di.field_A = RegistrationAgreementPane.a((CharSequence) ((Object) var6), (byte) -102);
             if (var8 != 0) {
               di.field_A = 2;
             }

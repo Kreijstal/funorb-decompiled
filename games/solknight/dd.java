@@ -118,7 +118,7 @@ final class dd {
               if (DisplayNameSelectionPanel.field_G) {
                 param1 = kc.field_L;
               }
-              ah.field_e.a(param1, param2, (byte) -77);
+              ah.field_e.showResult(param1, param2, (byte) -77);
             }
             if (256 != param2 &&
               param2 != 10) {

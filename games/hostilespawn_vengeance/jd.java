@@ -64,7 +64,7 @@ final class jd extends IntrusiveNode {
           }
           var2 = ve.field_b.beginForward(-68);
           while (var2 != null) {
-            pe.a((byte) 51, param0);
+            ProgressDialog.a((byte) 51, param0);
             var2 = ve.field_b.nextForward(param1 ^ 52851);
           }
           return;

@@ -32,7 +32,7 @@ final class kk {
         for (var2 = 0; sc.field_d > var2; var2++) {
           var3 = qk.field_b[var2] * ng.field_e[var2];
           var21 = ClientException.field_b[var2];
-          if (!jk.field_gb[var2]) {
+          if (!ContentTransitionDialog.field_gb[var2]) {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var6 < var3; var6++) {

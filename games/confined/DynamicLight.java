@@ -68,7 +68,7 @@ final class DynamicLight extends IntrusiveNode {
               lk.field_d = ModalDialog.field_U;
             }
             if (lk.field_d == ModalDialog.field_U &&
-              jj.a(1, (byte) 118)) {
+              ProgressDialog.a(1, (byte) 118)) {
               var6_int = e.field_c.readUnsignedByte(32);
               if (var6_int == 0) {
                 lk.field_d = tb.field_a;
@@ -80,7 +80,7 @@ final class DynamicLight extends IntrusiveNode {
               e.field_c.position = 0;
             }
             if (lk.field_d == tb.field_a &&
-              jj.a(8, (byte) -120)) {
+              ProgressDialog.a(8, (byte) -120)) {
               uh.field_b = e.field_c.readLong((byte) -68);
               e.field_c.position = 0;
               wb.a(param3, PacketBuffer.field_o, param0, 25444, param1);
@@ -88,7 +88,7 @@ final class DynamicLight extends IntrusiveNode {
             }
             boolean decompiledFrameRemainder0 = true;
             if (lk.field_d == rh.field_ab &&
-              jj.a(1, (byte) 8)) {
+              ProgressDialog.a(1, (byte) 8)) {
               var6_intLifetime1 = e.field_c.readUnsignedByte(32);
               ag.field_e = null;
               e.field_c.position = 0;
@@ -151,7 +151,7 @@ final class DynamicLight extends IntrusiveNode {
                   tj.field_n.a(ii.b(false), (byte) 49);
                 }
               } else {
-                pi.field_T.a(ii.b(false), (byte) 49);
+                RegistrationAgreementPane.field_T.a(ii.b(false), (byte) 49);
               }
               sg.field_y = false;
               if (var6 != null) {

@@ -1,0 +1,220 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class ResizableModalDialog extends ModalDialog {
+    static Sprite[] field_M;
+    private int field_L;
+    private int field_I;
+    static long field_K;
+    private int field_N;
+    static boolean field_O;
+    static int[] field_Q;
+    private int field_J;
+    static int[] field_R;
+    private int field_H;
+    private int field_P;
+
+    public static void resetStaticState(boolean param0) {
+        field_Q = null;
+        field_R = null;
+        if (!param0) {
+          field_K = -59L;
+        }
+        field_M = null;
+    }
+
+    void drawDialogBackground(int param0, byte param1, int param2) {
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var5Lifetime1;
+        int var5Lifetime2;
+        int var6Lifetime1;
+        int var6Lifetime2;
+        int var7Lifetime1;
+        int var7Lifetime2;
+        int var8Lifetime1;
+        int var8Lifetime2;
+        int var9Lifetime1;
+        int var9Lifetime2;
+        int var10Lifetime1;
+        int var12Lifetime1;
+        int var13Lifetime1;
+        var16 = BachelorFridge.field_y;
+        SoftwareRasterizer.fillVerticalGradient(param2 + 6, param0 + 35, -12 + this.width, -40 + this.height, 2105376, 0);
+        var4 = 35;
+        var5 = 211;
+        var6 = 194;
+        var7 = 0;
+        var8 = param0;
+        while (var4 > var7) {
+          if (SoftwareRasterizer.field_j <= var8 &&
+            var8 < SoftwareRasterizer.field_k) {
+            var9 = var7 * (-var5 + var6) / var4 + var5;
+            var10 = 0;
+            var11 = this.width;
+            if (20 >= var7) {
+              while (var10 <= 20) {
+                var12 = (20 - var10) * (-var10 + 20) + (-var7 + 20) * (-var7 + 20);
+                if (var12 <= 462) {
+                  if (var12 < 420) {
+                    break;
+                  }
+                  var13 = (462 - var12) * var9 / 42;
+                  var13 = var13 | (var13 << 8 | var13 << 16);
+                  SoftwareRasterizer.field_e[var8 * SoftwareRasterizer.field_i + param2 + var10] = var13;
+                }
+                var10++;
+              }
+            }
+            if (20 >= var7) {
+              var12Lifetime1 = var11;
+              var11 -= 21;
+              for (var13Lifetime1 = 0; var13Lifetime1 <= 20; var13Lifetime1++) {
+                var14 = var13Lifetime1 * var13Lifetime1 + (-var7 + 20) * (20 - var7);
+                if (var14 <= 462) {
+                  if (var14 < 420) {
+                    var12Lifetime1 = var11 + 1;
+                  } else {
+                    var15 = (-var14 + 462) * var9 / 42;
+                    var15 = var15 | (var15 << 8 | var15 << 16);
+                    SoftwareRasterizer.field_e[param2 + (SoftwareRasterizer.field_i * var8 + var11)] = var15;
+                  }
+                  var11++;
+                  continue;
+                }
+                break;
+              }
+              var11 = var12Lifetime1;
+            }
+            var9 = var9 | (var9 << 8 | var9 << 16);
+            SoftwareRasterizer.drawHorizontalLine(param2 + var10, var8, var11 - var10, var9);
+          }
+          var8++;
+          var7++;
+        }
+        var5Lifetime1 = 194;
+        var4Lifetime1 = 22;
+        var6Lifetime1 = 169;
+        var9Lifetime1 = 83 / ((-16 - param1) / 56);
+        var7Lifetime1 = 0;
+        var8Lifetime1 = 35 + param0;
+        while (var4Lifetime1 > var7Lifetime1) {
+          var10Lifetime1 = var7Lifetime1 * (var6Lifetime1 - var5Lifetime1) / var4Lifetime1 + var5Lifetime1;
+          var10Lifetime1 = var10Lifetime1 | (var10Lifetime1 << 16 | var10Lifetime1 << 8);
+          SoftwareRasterizer.drawHorizontalLine(param2, var8Lifetime1, 6, var10Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-6 + param2 + this.width, var8Lifetime1, 6, var10Lifetime1);
+          var8Lifetime1++;
+          var7Lifetime1++;
+        }
+        gt.field_s.draw(-90 + (param2 + this.width), 10 + param0);
+        ao.a(param2 + 5, oea.field_s, this.width - 10, (byte) -128, param0 + 35);
+        ao.a(param2, LevitateAnimation.field_v, this.width, (byte) -128, this.height + (param0 - 22));
+        var5Lifetime2 = 169;
+        var4Lifetime2 = this.height - 79;
+        var6Lifetime2 = 127;
+        var7Lifetime2 = 0;
+        var8Lifetime2 = param0 + 57;
+        while (var7Lifetime2 < var4Lifetime2) {
+          var9Lifetime2 = var5Lifetime2 + var7Lifetime2 * (-var5Lifetime2 + var6Lifetime2) / var4Lifetime2;
+          var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
+          SoftwareRasterizer.drawHorizontalLine(param2, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(this.width + (param2 - 6), var8Lifetime2, 6, var9Lifetime2);
+          var8Lifetime2++;
+          var7Lifetime2++;
+        }
+    }
+
+    final void resizeDialog(int param0, int param1, int param2, int param3) {
+        if (param0 <= 0) {
+          this.setCenteredSize(-79, param2, param3);
+          return;
+        }
+        this.field_H = param2;
+        this.field_J = param0;
+        if (param1 != 26012) {
+          return;
+        }
+        this.field_I = this.width;
+        this.field_N = this.height;
+        this.field_L = 0;
+        this.field_P = param3;
+    }
+
+    void resizeCompleted(boolean param0) {
+        if (param0) {
+          this.finishResize(-15);
+        }
+    }
+
+    ResizableModalDialog(ModalDialogHost param0, int param1, int param2) {
+        super(param0, param1, param2);
+        this.field_J = 0;
+        this.field_L = 0;
+    }
+
+    boolean advanceDialogAnimation(int param0) {
+        int var2 = 0;
+        int var3 = 0;
+        int fieldTemp$0 = 0;
+        int var5 = 0;
+        int var4 = 0;
+        if (this.field_J > 0) {
+          var2 = this.field_P;
+          var3 = this.field_H;
+          fieldTemp$0 = this.field_L + 1;
+          this.field_L = this.field_L + 1;
+          if (this.field_J > fieldTemp$0) {
+            var4 = (2 * this.field_J - this.field_L) * this.field_L;
+            var5 = this.field_J * this.field_J;
+            var2 = (this.field_P - this.field_I) * var4 / var5 + this.field_I;
+            var3 = this.field_N + (-this.field_N + this.field_H) * var4 / var5;
+          } else {
+            this.field_J = 0;
+            this.resizeCompleted(false);
+          }
+          this.setCenteredSize(-123, var3, var2);
+        }
+        if (param0 > -32) {
+          return false;
+        }
+        return super.advanceDialogAnimation(-116);
+    }
+
+    boolean snapDialogAnimation(int param0) {
+        this.finishResize(17310);
+        if (param0 >= -59) {
+          ResizableModalDialog.resetStaticState(false);
+        }
+        return super.snapDialogAnimation(-81);
+    }
+
+    void finishResize(int param0) {
+        if (this.field_J <= 0) {
+          return;
+        }
+        this.setCenteredSize(-35, this.field_H, this.field_P);
+        if (param0 != 17310) {
+          return;
+        }
+        this.field_J = 0;
+        this.resizeCompleted(false);
+    }
+
+    static {
+        field_K = 0L;
+        field_Q = new int[]{23, 23, 24, 26, 28};
+    }
+}

@@ -449,7 +449,7 @@ final class wc extends id {
             decompiledFrameRemainder0 = false;
           }
           else {
-            if (pi.field_U[this.field_Zb] <= this.field_Xb) {
+            if (RegistrationAgreementPane.field_U[this.field_Zb] <= this.field_Xb) {
               if (this.field_Jb) {
                 if (this.field_wb == 0) {
                   this.field_Bb = 1;
@@ -567,7 +567,7 @@ final class wc extends id {
         }
         super.updateForTunnelSegment(param0 ^ 0, param1);
         if (this.field_Rb &&
-          pi.field_U[this.field_Zb] == this.field_Xb) {
+          RegistrationAgreementPane.field_U[this.field_Zb] == this.field_Xb) {
           var3Lifetime1 = this.field_E - this.field_A.field_B.field_E;
           var5Lifetime2 = -this.field_A.field_B.field_t + this.field_t;
           var7Lifetime1 = -this.field_A.field_B.field_D + this.field_D;
@@ -579,9 +579,9 @@ final class wc extends id {
               this.a(false, var21, var12, vl.field_c[this.field_Zb]);
               this.field_ib.field_t = rn.field_c;
               this.field_ib.field_o = ud.field_o;
-              this.field_ib.field_p = dh.field_sb;
+              this.field_ib.field_p = ProgressMessageDialog.field_sb;
               var13 = this.field_ic[var12 / 3];
-              var13.a(ud.field_o, 16744512, this.field_bc[2 + var12], 0.5, 1.0, dh.field_sb, rn.field_c, this.field_bc[var12], false, this.field_bc[1 + var12]);
+              var13.a(ud.field_o, 16744512, this.field_bc[2 + var12], 0.5, 1.0, ProgressMessageDialog.field_sb, rn.field_c, this.field_bc[var12], false, this.field_bc[1 + var12]);
               this.field_A.field_b.addLast((IntrusiveNode) (var13), (byte) 123);
             }
           }

@@ -117,7 +117,7 @@ final class tl extends ci {
 
     final static void a(ac param0, int param1, byte param2) {
         try {
-          vn.field_vb.addFirst((IntrusiveNode) (param0), (byte) 119);
+          ProgressMessageDialog.field_vb.addFirst((IntrusiveNode) (param0), (byte) 119);
           GameAppletShell.a(param0, param2 ^ 14994, param1);
           if (param2 != 117) {
             field_Gb = (PlatformTask) null;

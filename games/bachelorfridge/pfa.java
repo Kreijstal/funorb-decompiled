@@ -108,7 +108,7 @@ final class pfa {
               var9 = stackIn_43_0;
               var1_int = var1_int + cba.field_d;
               if (var9 != null) {
-                var9.a((um.field_d << 1) + hc.field_D, 28, var8Lifetime1 - vt.field_k, var1_int, (vt.field_k << 1) + var7Lifetime1);
+                var9.a((um.field_d << 1) + DialogMessagePane.field_D, 28, var8Lifetime1 - vt.field_k, var1_int, (vt.field_k << 1) + var7Lifetime1);
               }
               var1_int = var1_int + um.field_d;
             }
@@ -117,7 +117,7 @@ final class pfa {
               var1_int = var1_int + FlyAnimation.field_z;
             } else {
               fp.field_f.drawText(var6, var8Lifetime1, var1_int + JaggrabDownloader.field_f, var5, -1);
-              var1_int = var1_int + (um.field_d + (cba.field_d + hc.field_D));
+              var1_int = var1_int + (um.field_d + (cba.field_d + DialogMessagePane.field_D));
             }
           }
           if (param0 != 1) {
@@ -189,7 +189,7 @@ final class pfa {
             this.a((Sprite) null, -51, -127, -118, 95, -32);
           }
           for (var8 = 0; param1 > var8; var8++) {
-            var7_int = var7_int + am.field_Q[var8];
+            var7_int = var7_int + ResizableModalDialog.field_Q[var8];
           }
           SoftwareRasterizer.setClip(param3, param4, param3 + var7_int, 28 + param4);
           param0.draw(param3, param4);

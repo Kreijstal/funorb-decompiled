@@ -59,7 +59,7 @@ final class MixedSupport099 {
 
     private final boolean computeBoolean1227(int integerArgument1, int integerArgument2, int integerArgument3) {
         if (integerArgument1 == ~integerArgument2) {
-          MixedSupport097.sceneWidgetPart007State0001 = new SceneWidgetPart007(this.sceneWidgetState0097.integerState0892, this.sceneWidgetState0097.integerState0886, this.sceneWidgetState0097.integerState0896, this.sceneWidgetState0097.integerState0915, integerArgument3, MusicTrack.sceneWidgetState0127, MixedSupport121.sceneWidgetState0119, UiComponentPart014.sceneWidgetState0053, MixedSupport125.sceneWidgetState0125, InputAdapter001.sceneWidgetPart003State0001, NameSuggestionsPanel.sceneWidgetState0019, this.stringState0418, this.longState0041);
+          MixedSupport097.sceneWidgetPart007State0001 = new SceneWidgetPart007(this.sceneWidgetState0097.integerState0892, this.sceneWidgetState0097.integerState0886, this.sceneWidgetState0097.integerState0896, this.sceneWidgetState0097.integerState0915, integerArgument3, MusicTrack.sceneWidgetState0127, MixedSupport121.sceneWidgetState0119, FullscreenStatusDialog.sceneWidgetState0053, MixedSupport125.sceneWidgetState0125, InputAdapter001.sceneWidgetPart003State0001, NameSuggestionsPanel.sceneWidgetState0019, this.stringState0418, this.longState0041);
           return true;
         }
         return false;
@@ -91,7 +91,7 @@ final class MixedSupport099 {
             return true;
           }
           if (integerArgument3 == 3) {
-            UiComponentPart018.performAction1032(9, integerArgument1, this.integerState0581);
+            RegistrationAgreementPane.performAction1032(9, integerArgument1, this.integerState0581);
             return true;
           }
           if (integerArgument3 == 10) {
@@ -571,7 +571,7 @@ final class MixedSupport099 {
           stringLocal1 = MixedSupport107.computeString1403(integerArgument1, 0, this.stringState0418);
           if (stringLocal1 != null) {
             stringLocal2 = (String) null;
-            UiComponentPart004.performAction0184(this.stringState0418, (String) null, stringLocal1, (byte) -79, 2, 0);
+            ContentTransitionDialog.performAction0184(this.stringState0418, (String) null, stringLocal1, (byte) -79, 2, 0);
             return true;
           }
           return true;
@@ -581,7 +581,7 @@ final class MixedSupport099 {
             stringLocal3 = NetworkSupport003.computeString0351(this.stringState0418, 127, integerArgument1);
             if (stringLocal3 != null) {
               stringLocal5 = (String) null;
-              UiComponentPart004.performAction0184(this.stringState0418, (String) null, stringLocal3, (byte) -79, 2, 0);
+              ContentTransitionDialog.performAction0184(this.stringState0418, (String) null, stringLocal3, (byte) -79, 2, 0);
               return true;
             }
             return true;
@@ -594,15 +594,15 @@ final class MixedSupport099 {
             return true;
           }
           stringLocal8 = (String) null;
-          UiComponentPart004.performAction0184(this.stringState0418, (String) null, stringLocal7, (byte) -79, 2, 0);
+          ContentTransitionDialog.performAction0184(this.stringState0418, (String) null, stringLocal7, (byte) -79, 2, 0);
           return true;
         }
-        stringLocal4 = UiComponentPart018.computeString1033(integerArgument1, this.stringState0418, false);
+        stringLocal4 = RegistrationAgreementPane.computeString1033(integerArgument1, this.stringState0418, false);
         if (stringLocal4 == null) {
           return true;
         }
         stringLocal6 = (String) null;
-        UiComponentPart004.performAction0184(this.stringState0418, (String) null, stringLocal4, (byte) -79, 2, 0);
+        ContentTransitionDialog.performAction0184(this.stringState0418, (String) null, stringLocal4, (byte) -79, 2, 0);
         return true;
     }
 

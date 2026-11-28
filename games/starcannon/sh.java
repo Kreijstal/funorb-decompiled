@@ -177,7 +177,7 @@ final class sh extends fh {
                   var24Lifetime1Lifetime1 = param4.field_i[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param4.field_j[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_f[var23Lifetime2];
-                  ae.field_b[var23Lifetime2] = (var25Lifetime1Lifetime1 * var15 + (var24Lifetime1Lifetime1 * var12 + var18 * var26Lifetime1Lifetime1) >> 16) + var9;
+                  FullscreenNoticeType.field_b[var23Lifetime2] = (var25Lifetime1Lifetime1 * var15 + (var24Lifetime1Lifetime1 * var12 + var18 * var26Lifetime1Lifetime1) >> 16) + var9;
                   cd.field_b[var23Lifetime2] = (var16 * var25Lifetime1Lifetime1 + var13 * var24Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var19 >> 16) + var10;
                   kl.field_c[var23Lifetime2] = var11 + (var25Lifetime1Lifetime1 * var17 + (var24Lifetime1Lifetime1 * var14 + var20 * var26Lifetime1Lifetime1) >> 16);
                   var24Lifetime1Lifetime1 = param4.field_E[var23Lifetime2];

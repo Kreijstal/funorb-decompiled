@@ -119,7 +119,7 @@ final class ChessMatchSession {
             break;
           }
           if (var4 == 0) {
-            var2 = ba.field_N;
+            var2 = RegistrationAgreementPane.field_N;
           }
         }
         return (String) (var2);
@@ -437,7 +437,7 @@ final class ChessMatchSession {
           }
           if (!this.field_b) {
             if (this.field_B.field_l != 0) {
-              var18 = ij.field_f;
+              var18 = FullscreenNoticeType.field_f;
             } else {
               var18 = mh.field_e;
             }
@@ -460,7 +460,7 @@ final class ChessMatchSession {
         if (this.field_B.field_l == this.field_a && (this.field_f <= 1 ||
           null != this.e(1))) {
           if (this.field_f <= 1) {
-            stackIn_80_0 = vn.field_ub[this.field_f];
+            stackIn_80_0 = ProgressMessageDialog.field_ub[this.field_f];
           } else {
             stackIn_80_0 = this.e(1);
           }
@@ -695,7 +695,7 @@ final class ChessMatchSession {
           this.field_f > 0) {
           cb.field_e = new ak(36, 65499, this.field_o, this.field_x, this.field_z, this.field_s, new int[]{this.field_f});
           if (!PcmOutputWorker.a(-3)) {
-            ba.a(cb.field_e, -124, 3);
+            RegistrationAgreementPane.a(cb.field_e, -124, 3);
           }
         }
         if (param0 <= 101) {
@@ -1197,10 +1197,10 @@ final class ChessMatchSession {
           wc.field_s = new eb(552, 10, 81, 24, vh.field_f);
           df.a(wc.field_s, 0);
           EmailFormatValidator.field_n = new ta(554, 62, ng.field_b, me.field_d, (RgbSprite) null, false, true);
-          hd.field_g = new ta(606, 62, tb.field_c, vn.field_rb, (RgbSprite) null, false, true);
+          hd.field_g = new ta(606, 62, tb.field_c, ProgressMessageDialog.field_rb, (RgbSprite) null, false, true);
           rf.field_d = new ta(580, 37, be.field_d, df.field_e, (RgbSprite) null, false, true);
-          b.field_b = new ta(580, 89, SingleChildWidgetContainer.field_G, vn.field_xb, (RgbSprite) null, false, true);
-          nb.field_Fb = new wg(100, 100, 108, bj.field_bb[0], wh.field_c, bj.field_bb[1], dj.field_t, (RgbSprite) null);
+          b.field_b = new ta(580, 89, SingleChildWidgetContainer.field_G, ProgressMessageDialog.field_xb, (RgbSprite) null, false, true);
+          nb.field_Fb = new wg(100, 100, 108, ContentTransitionDialog.field_bb[0], wh.field_c, ContentTransitionDialog.field_bb[1], dj.field_t, (RgbSprite) null);
           this.field_a = param3;
           this.field_C = param4;
           stackIn_13_1 = (param0);

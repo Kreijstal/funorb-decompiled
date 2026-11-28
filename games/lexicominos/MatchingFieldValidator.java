@@ -81,7 +81,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
             if (var3 != null) {
               if (var3.getValidationStatus((byte) 122) == rh.field_p &&
                 !param1.equals(this.field_l.field_u)) {
-                stackIn_6_0 = re.field_cb;
+                stackIn_6_0 = ContentTransitionDialog.field_cb;
                 return stackIn_6_0;
               }
               stackIn_8_0 = var3.getValidationMessage((byte) 82);
@@ -95,7 +95,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           if (param1.equals(this.field_l.field_u)) {
             return null;
           }
-          stackIn_14_0 = re.field_cb;
+          stackIn_14_0 = ContentTransitionDialog.field_cb;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -124,7 +124,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
         PcmSampleStream var2_refLifetime2;
         var5 = Lexicominos.field_L ? 1 : 0;
         try {
-          oc.field_e = param0;
+          FullscreenNoticeType.field_e = param0;
           var6 = BitPacketBuffer.field_o;
           var2 = var6;
           for (var3 = 0; var3 < var6.length; var3++) {

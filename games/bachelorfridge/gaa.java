@@ -114,7 +114,7 @@ final class gaa extends lg {
             if (!sea.field_j) {
               var5 = qg.field_a;
             } else {
-              var5 = uda.field_eb;
+              var5 = ContentTransitionDialog.field_eb;
             }
           }
           var7 = (String) null;

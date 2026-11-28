@@ -209,7 +209,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
         this.field_H = new ValidatedTextField("", (WidgetEventListener) null, 12);
-        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(sp.field_R, 0, 0, 0, 0, 16777215, -1, 3, 0, TranslucentSpriteLayer.field_e.field_x, -1, 2147483647, true);
+        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(ProgressDialog.field_R, 0, 0, 0, 0, 16777215, -1, 3, 0, TranslucentSpriteLayer.field_e.field_x, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(AudioService.field_a, var1, (WidgetEventListener) null);
         this.field_B = new InteractiveWidget(NodeHashTableIterator.field_d, (WidgetEventListener) null);
         this.field_E = new InteractiveWidget(TranslucentSpriteLayer.field_j, (WidgetEventListener) null);

@@ -36,12 +36,12 @@ final class cc {
           return FrameTimer.field_a + " - " + RichTextLayout.field_m.getGroupLoadPercentByName(119, "commonui") + "%";
         }
         if (!ll.field_b.ensureIndexLoaded(-15879)) {
-          return dg.field_qb;
+          return ProgressMessageDialog.field_qb;
         }
         if (!ll.field_b.tryLoadAllGroups(0)) {
           return qg.field_j + " - " + ll.field_b.getArchiveLoadPercent(0) + "%";
         }
-        return jf.field_h;
+        return FullscreenNoticeType.field_h;
     }
 
     static {

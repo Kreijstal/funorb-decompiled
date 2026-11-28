@@ -32,7 +32,7 @@ final class m extends IntrusiveNode {
         int var1;
         boolean stackIn_4_0 = false;
         var1 = -81 / ((param0 + 27) / 63);
-        stackIn_4_0 = (null != nb.field_F) && (null != nb.field_F.getTopOpenDialog(0));
+        stackIn_4_0 = (null != GuestPlayConfirmationForm.field_F) && (null != GuestPlayConfirmationForm.field_F.getTopOpenDialog(0));
         return stackIn_4_0;
     }
 

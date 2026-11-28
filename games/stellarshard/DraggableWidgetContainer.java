@@ -73,22 +73,22 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
             for (var6_int = 0; var3 > var6_int; var6_int++) {
               var9[var6_int] = gj.field_w[DirectByteStorage.a((int) var20[var6_int], 255)];
             }
-            var1[var2] = new Sprite(nc.field_G, wd.field_b, ak.field_c[var2], RasterBuffer.field_c[var2], vc.field_b[var2], ih.field_d[var2], var21);
+            var1[var2] = new Sprite(StripedProgressWidget.field_G, wd.field_b, ak.field_c[var2], RasterBuffer.field_c[var2], vc.field_b[var2], ih.field_d[var2], var21);
           } else {
             var22 = DisplayNameSelectionPanel.field_D[var2];
             var16 = new int[var3];
             var13 = var16;
             var6 = var13;
             for (var7 = 0; var7 < var3; var7++) {
-              var6[var7] = vf.b(gj.field_w[DirectByteStorage.a(255, (int) var20[var7])], DirectByteStorage.a((int) var22[var7], 255) << 24);
+              var6[var7] = DialogMessagePane.b(gj.field_w[DirectByteStorage.a(255, (int) var20[var7])], DirectByteStorage.a((int) var22[var7], 255) << 24);
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(nc.field_G, wd.field_b, ak.field_c[var2], RasterBuffer.field_c[var2], vc.field_b[var2], ih.field_d[var2], var16));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(StripedProgressWidget.field_G, wd.field_b, ak.field_c[var2], RasterBuffer.field_c[var2], vc.field_b[var2], ih.field_d[var2], var16));
           }
         }
         if (param0 <= 85) {
           DraggableWidgetContainer.clearDeclaredStaticReferences(-97);
         }
-        tb.f((byte) -66);
+        ResizableModalDialog.f((byte) -66);
         return var1;
     }
 

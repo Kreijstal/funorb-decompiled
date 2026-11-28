@@ -96,7 +96,7 @@ final class qj extends IntrusiveNode {
             stackIn_3_0 = MidiPcmStream.field_S;
             return stackIn_3_0;
           }
-          var3 = pe.p(274);
+          var3 = ProgressDialog.p(274);
           if (param1 > -29) {
             field_l = (RgbSprite) null;
           }
@@ -273,7 +273,7 @@ final class qj extends IntrusiveNode {
             field_m = (String) null;
           }
           var10 = var8.getClampedTileIndex(-4);
-          stackIn_5_0 = (wb.field_R > 0) ? 0 : 1;
+          stackIn_5_0 = (ResizableModalDialog.field_R > 0) ? 0 : 1;
           var11 = stackIn_5_0;
           if (var11 != 0) {
             stackIn_11_0 = (cm.field_c[var10] > 0) ? 1 : 0;

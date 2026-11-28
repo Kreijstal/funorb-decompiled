@@ -18,14 +18,14 @@ final class ne {
         int var1Lifetime1Lifetime3;
         int var1Lifetime1Lifetime4;
         int var1Lifetime1Lifetime5;
-        bi.field_J = bi.field_J + 1;
+        ResizableModalDialog.field_J = ResizableModalDialog.field_J + 1;
         PasswordValidator.field_m = PasswordValidator.field_m - 1;
-        if (bi.field_J != 10) {
+        if (ResizableModalDialog.field_J != 10) {
           var1 = 60 % ((-44 - param0) / 35);
           return;
         }
         gk.field_e = hi.field_a;
-        bi.field_J = 0;
+        ResizableModalDialog.field_J = 0;
         hi.field_a = hi.field_a + 1;
         if (hi.field_a != 1) {
           if (hi.field_a == 4) {

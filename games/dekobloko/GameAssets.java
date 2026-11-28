@@ -441,7 +441,7 @@ final class GameAssets {
           MixedSupport096.resourceArchiveState0014 = resourceArchiveArgument2;
           byteArrayLocal5 = MixedSupport067.computeByteArray0840(-24, "gamename");
           if (byteArrayLocal5 != null) {
-            UiComponentPart023.stringState0425 = MixedSupport105.computeString1370(byteArrayLocal5, 2);
+            StandardContentDialog.stringState0425 = MixedSupport105.computeString1370(byteArrayLocal5, 2);
           }
           byteArrayLocal7 = MixedSupport067.computeByteArray0840(-18, "benefits,0");
           if (null != byteArrayLocal7) {
@@ -577,7 +577,7 @@ final class GameAssets {
           }
           byteArrayLocal40 = MixedSupport067.computeByteArray0840(-44, "matching_score");
           if (byteArrayLocal40 != null) {
-            UiComponentPart030.stringState0519 = MixedSupport105.computeString1370(byteArrayLocal40, 2);
+            ResizableModalDialog.stringState0519 = MixedSupport105.computeString1370(byteArrayLocal40, 2);
           }
           if (booleanArgument1) {
             return;
@@ -616,7 +616,7 @@ final class GameAssets {
           }
           byteArrayLocal49 = MixedSupport067.computeByteArray0840(-17, "specials_enabled");
           if (byteArrayLocal49 != null) {
-            UiComponentPart018.stringState0344 = MixedSupport105.computeString1370(byteArrayLocal49, 2);
+            RegistrationAgreementPane.stringState0344 = MixedSupport105.computeString1370(byteArrayLocal49, 2);
           }
           byteArrayLocal50 = MixedSupport067.computeByteArray0840(-86, "stage_colon");
           if (null != byteArrayLocal50) {
@@ -640,7 +640,7 @@ final class GameAssets {
           }
           byteArrayLocal55 = MixedSupport067.computeByteArray0840(-90, "animals");
           if (null != byteArrayLocal55) {
-            UiComponentPart030.stringState0520 = MixedSupport105.computeString1370(byteArrayLocal55, 2);
+            ResizableModalDialog.stringState0520 = MixedSupport105.computeString1370(byteArrayLocal55, 2);
           }
           byteArrayLocal56 = MixedSupport067.computeByteArray0840(-80, "breakfast");
           if (null != byteArrayLocal56) {
@@ -1484,7 +1484,7 @@ final class GameAssets {
           }
           byteArrayLocal266 = MixedSupport067.computeByteArray0840(-101, "devquote");
           if (byteArrayLocal266 != null) {
-            UiComponentPart023.stringState0424 = MixedSupport105.computeString1370(byteArrayLocal266, 2);
+            StandardContentDialog.stringState0424 = MixedSupport105.computeString1370(byteArrayLocal266, 2);
           }
           MixedSupport096.resourceArchiveState0014 = null;
           return;

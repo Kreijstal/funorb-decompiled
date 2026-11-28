@@ -80,9 +80,9 @@ final class up extends TextureOperator {
         var12 = var13;
         var3 = var12;
         if (this.field_x.field_i) {
-          for (var4 = 0; var4 < we.field_M; var4++) {
+          for (var4 = 0; var4 < StripedProgressWidget.field_M; var4++) {
             boolean decompiledFrameRemainder0 = true;
-            var5 = rh.field_O[var4];
+            var5 = DialogMessagePane.field_O[var4];
             var6 = lf.field_y[param0];
             var7 = var5 * this.field_C >> 12;
             var8 = var6 * this.field_E >> 12;

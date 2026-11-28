@@ -66,7 +66,7 @@ final class ik {
             if (ShuffleSpecial.field_p == 0) {
               this.field_a.a(eea.field_c, true, 12);
             }
-            this.field_a.a(d.field_D, true, 13);
+            this.field_a.a(BirthDateChatEnableForm.field_D, true, 13);
           }
           if (param1.field_p == 1) {
             if (ri.field_c == 0) {
@@ -374,14 +374,14 @@ final class ik {
           return;
         }
         try {
-          var4 = sja.field_fb;
+          var4 = StandardContentDialog.field_fb;
           var4.writeCipheredByte(85, (byte) 117);
-          sja.field_fb.position = sja.field_fb.position + 2;
-          var5 = sja.field_fb.position;
+          StandardContentDialog.field_fb.position = StandardContentDialog.field_fb.position + 2;
+          var5 = StandardContentDialog.field_fb.position;
           rha.a(param1.field_g, var4, (byte) -116);
           var4.writeByte(param0, 0);
           var4.writeByte(param3, param2 ^ param2);
-          sja.field_fb.writeLengthShort((byte) -88, sja.field_fb.position - var5);
+          StandardContentDialog.field_fb.writeLengthShort((byte) -88, StandardContentDialog.field_fb.position - var5);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ik.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

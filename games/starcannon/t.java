@@ -17,7 +17,7 @@ final class t extends ti {
     private byte[] field_i;
     private ArchiveRequest field_m;
     static int field_u;
-    static lc field_h;
+    static StandardContentDialog field_h;
     private int field_A;
     private eh field_s;
     private boolean field_D;

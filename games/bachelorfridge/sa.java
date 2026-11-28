@@ -213,7 +213,7 @@ final class sa extends pu {
               }
               if (var20.field_Ob) {
                 var20.field_Ob = false;
-                hc.field_J = hc.field_J - 1;
+                DialogMessagePane.field_J = DialogMessagePane.field_J - 1;
               }
               if (var5 == 0) {
                 var20.unlink(false);
@@ -231,7 +231,7 @@ final class sa extends pu {
                 var3_ref_ema.unlinkSecondary(0);
                 var3_ref_ema = (ema) (aa.field_l.nextForward(param0 + 7));
               }
-              hc.field_J = 0;
+              DialogMessagePane.field_J = 0;
               return;
             }
             if (var2 == 8) {
@@ -261,11 +261,11 @@ final class sa extends pu {
               return;
             }
             if (var2 == 10) {
-              var15 = (uha) (uma.field_M.beginForward((byte) 90));
+              var15 = (uha) (NumericDateInputWidget.field_M.beginForward((byte) 90));
               while (var15 != null) {
                 var15.unlink(false);
                 var15.unlinkSecondary(0);
-                var15 = (uha) (uma.field_M.nextForward(0));
+                var15 = (uha) (NumericDateInputWidget.field_M.nextForward(0));
               }
               return;
             }
@@ -363,7 +363,7 @@ final class sa extends pu {
                     var23.field_wb = false;
                   } else {
                     if (var23.field_Ob) {
-                      hc.field_J = hc.field_J - 1;
+                      DialogMessagePane.field_J = DialogMessagePane.field_J - 1;
                       var23.field_Ob = false;
                     }
                   }
@@ -381,7 +381,7 @@ final class sa extends pu {
                 if (var2 != 14) {
                   if (!var22.field_Ob) {
                     var22.field_Ob = true;
-                    hc.field_J = hc.field_J + 1;
+                    DialogMessagePane.field_J = DialogMessagePane.field_J + 1;
                   }
                 } else {
                   var22.field_wb = true;
@@ -416,7 +416,7 @@ final class sa extends pu {
               var3_ref_emaLifetime2.field_Ob) {
               if (var3_ref_emaLifetime2.field_Ob) {
                 var3_ref_emaLifetime2.field_Ob = false;
-                hc.field_J = hc.field_J - 1;
+                DialogMessagePane.field_J = DialogMessagePane.field_J - 1;
               }
               var3_ref_emaLifetime2.field_wb = false;
               BattleScreen.a((byte) 38, var3_ref_emaLifetime2);

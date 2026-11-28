@@ -95,23 +95,23 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
               }
             }
             if (lc.field_r == 2) {
-              jj.field_M = new BufferedSocket((java.net.Socket) (nj.field_a.result), mh.field_x);
+              ResizableModalDialog.field_M = new BufferedSocket((java.net.Socket) (nj.field_a.result), mh.field_x);
               var2 = new PacketBuffer(13);
               ob.a(FrameTimer.field_d, of.field_b, (byte) -19, b.field_a, var2);
               var2.writeByte(-11, 15);
               var2.writeInt(tj.field_c, (byte) -28);
-              jj.field_M.a((byte) -92, 13, 0, var2.payload);
+              ResizableModalDialog.field_M.a((byte) -92, 13, 0, var2.payload);
               lc.field_r = lc.field_r + 1;
               AccountServiceResult.field_e = 30000L + lj.correctedCurrentTimeMillis((byte) -80);
             }
             if (3 == lc.field_r) {
-              if (0 >= jj.field_M.e(-110)) {
+              if (0 >= ResizableModalDialog.field_M.e(-110)) {
                 if (lj.correctedCurrentTimeMillis((byte) -25) > AccountServiceResult.field_e) {
                   stackIn_29_0 = NetworkGameClient.a(-2, 5);
                   return stackIn_29_0;
                 }
               } else {
-                var1_int = jj.field_M.f(1605772320);
+                var1_int = ResizableModalDialog.field_M.f(1605772320);
                 if (var1_int != 0) {
                   stackIn_24_0 = NetworkGameClient.a(var1_int, 5);
                   return stackIn_24_0;
@@ -126,9 +126,9 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
             if (lc.field_r != 4) {
               return -1;
             }
-            BufferedSocket.field_k.a(jj.field_M, md.field_S, (byte) 105);
+            BufferedSocket.field_k.a(ResizableModalDialog.field_M, md.field_S, (byte) 105);
             lc.field_r = 0;
-            jj.field_M = null;
+            ResizableModalDialog.field_M = null;
             nj.field_a = null;
             stackIn_36_0 = 0;
             return stackIn_36_0;
@@ -150,10 +150,10 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
             NameSuggestionsPanel.clearDeclaredStaticReferences((byte) 47);
           }
           if (ok.field_x != null) {
-            ok.field_x.n(-22645);
+            ok.field_x.closeDialog(-22645);
           }
           lg.field_b = new LoginPanel(param1, param2, false, true, true);
-          ak.field_a.d(lg.field_b, 26034);
+          ak.field_a.replaceContent(lg.field_b, 26034);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "ij.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

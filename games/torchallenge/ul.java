@@ -83,7 +83,7 @@ final class ul extends IntrusiveNode {
           var41 = var50;
           var8 = var41;
           var65 = new int[param5.field_c];
-          var63 = sj.field_S;
+          var63 = DialogMessagePane.field_S;
           var64 = kl.field_b;
           var62 = kd.field_o;
           for (var13 = 0; param5.field_c > var13; var13++) {
@@ -120,30 +120,30 @@ final class ul extends IntrusiveNode {
             var15Lifetime1 = param5.field_i[var14Lifetime1];
             var16 = param5.field_w[var14Lifetime1];
             var17 = param5.field_F[var14Lifetime1];
-            if (param5.field_f[var14Lifetime1] < sj.field_S.length) {
+            if (param5.field_f[var14Lifetime1] < DialogMessagePane.field_S.length) {
               stackIn_24_0 = param5.field_f[var14Lifetime1];
             } else {
               stackIn_24_0 = -1;
             }
             var18 = stackIn_24_0;
-            if (param5.field_k[var14Lifetime1] >= sj.field_S.length) {
+            if (param5.field_k[var14Lifetime1] >= DialogMessagePane.field_S.length) {
               stackIn_27_0 = -1;
             } else {
               stackIn_27_0 = param5.field_k[var14Lifetime1];
             }
             var19 = stackIn_27_0;
-            if (sj.field_S.length <= param5.field_G[var14Lifetime1]) {
+            if (DialogMessagePane.field_S.length <= param5.field_G[var14Lifetime1]) {
               stackIn_30_0 = -1;
             } else {
               stackIn_30_0 = param5.field_G[var14Lifetime1];
             }
             var20 = stackIn_30_0;
-            if (null != ll.field_h &&
+            if (null != FullscreenNoticeType.field_h &&
               null != param5.field_M &&
               param5.field_M.length > var14Lifetime1 &&
               -1 != param5.field_M[var14Lifetime1] &&
-              param5.field_M[var14Lifetime1] < ll.field_h.length) {
-              stackIn_38_0 = ll.field_h[param5.field_M[var14Lifetime1]];
+              param5.field_M[var14Lifetime1] < FullscreenNoticeType.field_h.length) {
+              stackIn_38_0 = FullscreenNoticeType.field_h[param5.field_M[var14Lifetime1]];
             } else {
               stackIn_38_0 = null;
             }

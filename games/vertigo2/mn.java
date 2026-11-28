@@ -34,8 +34,8 @@ final class mn extends IntrusiveNode {
         }
         if (param0) {
           if (ArchiveRequest.field_y <= 0) {
-            if (ko.field_P > 0) {
-              ko.field_P = ko.field_P - 1;
+            if (NumericDateInputWidget.field_P > 0) {
+              NumericDateInputWidget.field_P = NumericDateInputWidget.field_P - 1;
             } else {
               if (0 < mp.field_b) {
                 mp.field_b = mp.field_b - 1;
@@ -47,8 +47,8 @@ final class mn extends IntrusiveNode {
         } else {
           if (null != gd.field_j) {
             if (0 >= ArchiveRequest.field_y) {
-              if (ko.field_P > 0) {
-                ko.field_P = ko.field_P - 1;
+              if (NumericDateInputWidget.field_P > 0) {
+                NumericDateInputWidget.field_P = NumericDateInputWidget.field_P - 1;
               } else {
                 if (ld.field_b > mp.field_b) {
                   if (0 == mp.field_b) {
@@ -66,11 +66,11 @@ final class mn extends IntrusiveNode {
                 if (0 < mp.field_b) {
                   mp.field_b = mp.field_b - 1;
                 } else {
-                  if (ko.field_P < ld.field_b) {
-                    if (ko.field_P == 0) {
+                  if (NumericDateInputWidget.field_P < ld.field_b) {
+                    if (NumericDateInputWidget.field_P == 0) {
                       PacketBuffer.a(true, false);
                     }
-                    ko.field_P = ko.field_P + 1;
+                    NumericDateInputWidget.field_P = NumericDateInputWidget.field_P + 1;
                   }
                 }
               } else {
@@ -78,7 +78,7 @@ final class mn extends IntrusiveNode {
               }
             } else {
               BufferedRandomAccessFile.field_g = false;
-              if (0 >= ko.field_P) {
+              if (0 >= NumericDateInputWidget.field_P) {
                 if (0 >= mp.field_b) {
                   if (ArchiveRequest.field_y < ld.field_b) {
                     if (ArchiveRequest.field_y == 0) {
@@ -90,7 +90,7 @@ final class mn extends IntrusiveNode {
                   mp.field_b = mp.field_b - 1;
                 }
               } else {
-                ko.field_P = ko.field_P - 1;
+                NumericDateInputWidget.field_P = NumericDateInputWidget.field_P - 1;
               }
             }
           }

@@ -147,8 +147,8 @@ final class bd extends en {
         }
         var3 = null;
         if (var2 != null) {
-          var4_ref_String = jk.a(new String[]{this.field_h.field_z.toUpperCase()}, "<col=178B8B><%0></col>", 30496);
-          var11 = InteractiveWidget.field_H.a(jk.a(new String[]{var4_ref_String}, var2, 30496), (byte) -48);
+          var4_ref_String = StandardContentDialog.a(new String[]{this.field_h.field_z.toUpperCase()}, "<col=178B8B><%0></col>", 30496);
+          var11 = InteractiveWidget.field_H.a(StandardContentDialog.a(new String[]{var4_ref_String}, var2, 30496), (byte) -48);
           var2 = var11;
           var3 = jn.a(var11, new int[]{200}, -122, db.field_v);
         }

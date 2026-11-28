@@ -29,7 +29,7 @@ final class PasswordValidator extends TextFieldValidator {
           var8 = new AccountCreationResultPanel(nb.field_a, param4);
           nb.field_a.showDialog(var8, (byte) -35);
           if (ti.b(10618)) {
-            var8.h((byte) -114);
+            var8.showAccountCreationConnectionFailure((byte) -114);
             return true;
           }
           cb.field_v = wi.field_f;
@@ -184,7 +184,7 @@ final class PasswordValidator extends TextFieldValidator {
         int var9Lifetime1;
         var11 = fleas.field_A ? 1 : 0;
         try {
-          var1_int = rb.field_H;
+          var1_int = GuestPlayConfirmationForm.field_H;
           var2 = 0;
           var3 = -21 / ((param0 - 22) / 57);
           if (2 == IntrusiveDeque.field_a) {

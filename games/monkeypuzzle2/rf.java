@@ -41,7 +41,7 @@ abstract class rf {
         int var13Lifetime1;
         var19 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var5_int = nf.bitLength(3 * (-param2 + param0), true);
+          var5_int = ResizableModalDialog.bitLength(3 * (-param2 + param0), true);
           var6 = 3 * param2;
           var7 = var5_int + param1;
           IterableNodeHashTable.a((byte) 114);
@@ -49,7 +49,7 @@ abstract class rf {
             param4.field_N != null) {
             PasswordValidator.h(-22);
           }
-          s.field_R = 0;
+          FullscreenStatusDialog.field_R = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(param4.field_k > var8)))) {
@@ -105,7 +105,7 @@ abstract class rf {
                           dupTemp$0 = param4.field_N[var8];
                           cl.field_g[dupTemp$0] = cl.field_g[dupTemp$0] + 1;
                         }
-                        s.field_R = s.field_R + 1;
+                        FullscreenStatusDialog.field_R = FullscreenStatusDialog.field_R + 1;
                         break;
                       }
                     }

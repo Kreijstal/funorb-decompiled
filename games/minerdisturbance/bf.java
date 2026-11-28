@@ -100,7 +100,7 @@ final class bf {
             if (GameAppletShell.field_e < 0) {
               return;
             }
-            if (jk.field_ab == 0) {
+            if (ContentTransitionDialog.field_ab == 0) {
               return;
             }
             var2 = nk.field_w + li.field_c;
@@ -192,7 +192,7 @@ final class bf {
         if (GameAppletShell.field_e < 0) {
           return;
         }
-        if (jk.field_ab == 0) {
+        if (ContentTransitionDialog.field_ab == 0) {
           return;
         }
         var2Lifetime1 = nk.field_w + li.field_c;

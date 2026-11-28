@@ -185,7 +185,7 @@ final class BucketBoard {
             integerLocal15++;
           }
         }
-        RenderingSupport003.performAction0571(this.integerState0458, this.integerState0446 / 4, (byte) 127, UiComponentPart014.rawSoundState0010);
+        RenderingSupport003.performAction0571(this.integerState0458, this.integerState0446 / 4, (byte) 127, FullscreenStatusDialog.rawSoundState0010);
         return true;
     }
 
@@ -1866,7 +1866,7 @@ final class BucketBoard {
             integerLocal15++;
           }
         }
-        RenderingSupport003.performAction0571(this.integerState0458, this.integerState0446 / 4, (byte) 127, UiComponentPart014.rawSoundState0010);
+        RenderingSupport003.performAction0571(this.integerState0458, this.integerState0446 / 4, (byte) 127, FullscreenStatusDialog.rawSoundState0010);
         return true;
     }
 

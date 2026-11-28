@@ -199,12 +199,12 @@ final class ee {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          VorbisDecoder.a(param1.getFileByName("headers.packvorbis", "", -21653));
-          var2 = VorbisDecoder.a(param1, "jagex logo2.packvorbis", "");
+          VorbisDecoder.decodeSetup(param1.getFileByName("headers.packvorbis", "", -21653));
+          var2 = VorbisDecoder.loadByName(param1, "jagex logo2.packvorbis", "");
           if (param0 != 51) {
             return;
           }
-          var2.a();
+          var2.decodeAllToPcm();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -274,7 +274,7 @@ final class ee {
             }
             var5_ref = dm.a((byte) -85, var4_ref_String);
             var6_ref = var1.readString(-1);
-            var7_ref = hm.a((byte) 106, (CharSequence) ((Object) var4_ref_String));
+            var7_ref = StripedProgressWidget.a((byte) 106, (CharSequence) ((Object) var4_ref_String));
             if (var7_ref == null) {
               var7_ref = var4_ref_String;
             }
@@ -297,14 +297,14 @@ final class ee {
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              if (jg.field_gb == 1) {
-                jg.field_gb = 2;
+              if (StandardContentDialog.field_gb == 1) {
+                StandardContentDialog.field_gb = 2;
               }
               return;
             }
             if (3 == var2) {
-              if (2 == jg.field_gb) {
-                jg.field_gb = 1;
+              if (2 == StandardContentDialog.field_gb) {
+                StandardContentDialog.field_gb = 1;
               }
               return;
             }
@@ -316,7 +316,7 @@ final class ee {
               WidgetContainer.g(-17464);
               return;
             }
-            jg.field_gb = 1;
+            StandardContentDialog.field_gb = 1;
             var3 = var1.readString(-1);
             ml.field_t = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(-16384);
@@ -337,12 +337,12 @@ final class ee {
           if (var6 == null) {
             var6 = dd.a((byte) 104, var5);
             if (null != var6) {
-              WidgetContainer.field_z.a(false, var6, (long)hm.a((byte) 92, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+              WidgetContainer.field_z.a(false, var6, (long)StripedProgressWidget.a((byte) 92, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             }
           }
           if (var6 == null) {
             var6 = new q();
-            WidgetContainer.field_z.a(false, var6, (long)hm.a((byte) -121, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+            WidgetContainer.field_z.a(false, var6, (long)StripedProgressWidget.a((byte) -121, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             fieldTemp$0 = gj.field_a;
             gj.field_a = gj.field_a + 1;
             var6.field_Mb = fieldTemp$0;

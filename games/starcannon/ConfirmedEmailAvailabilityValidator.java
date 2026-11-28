@@ -110,8 +110,8 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             if (u.field_d <= 0) {
               return;
             }
-            if (7 == lf.field_cb) {
-              lf.field_cb = 0;
+            if (7 == ProgressDialog.field_cb) {
+              ProgressDialog.field_cb = 0;
               return;
             }
             return;
@@ -120,8 +120,8 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             if (u.field_d <= 0) {
               return;
             }
-            if (7 == lf.field_cb) {
-              lf.field_cb = 0;
+            if (7 == ProgressDialog.field_cb) {
+              ProgressDialog.field_cb = 0;
               return;
             }
             return;
@@ -131,8 +131,8 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           if (u.field_d <= 0) {
             return;
           }
-          if (7 == lf.field_cb) {
-            lf.field_cb = 0;
+          if (7 == ProgressDialog.field_cb) {
+            ProgressDialog.field_cb = 0;
             return;
           }
           return;
@@ -147,8 +147,8 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           if (u.field_d <= 0) {
             return;
           }
-          if (7 == lf.field_cb) {
-            lf.field_cb = 0;
+          if (7 == ProgressDialog.field_cb) {
+            ProgressDialog.field_cb = 0;
             return;
           }
           return;
@@ -156,8 +156,8 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
         if (u.field_d <= 0) {
           return;
         }
-        if (7 == lf.field_cb) {
-          lf.field_cb = 0;
+        if (7 == ProgressDialog.field_cb) {
+          ProgressDialog.field_cb = 0;
           return;
         }
     }

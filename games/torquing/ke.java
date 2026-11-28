@@ -86,14 +86,14 @@ final class ke {
     }
 
     final static void a(int param0, PacketBuffer param1) {
-        qc.field_bb = param1.readUnsignedShort(7088) << 5;
+        StandardContentDialog.field_bb = param1.readUnsignedShort(7088) << 5;
         int var2_int = param1.readUnsignedByte((byte) -101);
         if (param0 != 225225318) {
           return;
         }
         try {
           MatchingFieldValidator.field_p = 1835008 & var2_int << 18;
-          qc.field_bb = qc.field_bb + (var2_int >> 3);
+          StandardContentDialog.field_bb = StandardContentDialog.field_bb + (var2_int >> 3);
           MatchingFieldValidator.field_p = MatchingFieldValidator.field_p + (param1.readUnsignedShort(param0 ^ 225227222) << 2);
           var2_int = param1.readUnsignedByte((byte) -101);
           MatchingFieldValidator.field_p = MatchingFieldValidator.field_p + (var2_int >> 6);

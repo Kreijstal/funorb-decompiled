@@ -276,7 +276,7 @@ final class tb extends uj {
               if (30000L < IterableNodeHashTable.b(1)) {
                 bh.field_d = qk.field_f;
               } else {
-                bh.field_d = cl.field_I;
+                bh.field_d = RegistrationAgreementPane.field_I;
               }
               RichTextWidget.field_Q = false;
               stackIn_68_0 = 249;

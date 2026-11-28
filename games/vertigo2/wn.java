@@ -501,7 +501,7 @@ final class wn {
             } else {
               if (248 == var9Lifetime1) {
                 CrossfadingMidiPcmStream.a(LoginPanel.e((byte) -77), 11514);
-                nk.field_Kb = ql.field_K;
+                nk.field_Kb = BirthDateChatEnableForm.field_K;
                 rm.b((byte) 117);
                 gn.field_d = false;
                 stackIn_30_0 = var9Lifetime1;
@@ -509,7 +509,7 @@ final class wn {
               }
               if (99 != var9Lifetime1) {
                 lc.field_f = var9Lifetime1;
-                ProxyAuthenticationRequiredException.field_d = ko.field_O;
+                ProxyAuthenticationRequiredException.field_d = NumericDateInputWidget.field_O;
                 ca.field_b = -1;
               } else {
                 c.a(tk.c(1), (byte) -104);
@@ -535,7 +535,7 @@ final class wn {
               }
             }
           }
-          if (ProxyAuthenticationRequiredException.field_d == ko.field_O &&
+          if (ProxyAuthenticationRequiredException.field_d == NumericDateInputWidget.field_O &&
             dl.b((byte) -72)) {
             if (255 != lc.field_f) {
               nk.field_Kb = id.field_f.readString(128);

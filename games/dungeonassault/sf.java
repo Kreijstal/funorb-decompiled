@@ -26,7 +26,7 @@ final class sf implements cl {
           var2 = 1;
           while (gg.field_a.length > var2) {
             var3 = gg.field_a[var2];
-            cj.a(hf.field_yb, var2 << 4, hf.field_yb, var1_int, var3);
+            cj.a(ContentTransitionDialog.field_yb, var2 << 4, ContentTransitionDialog.field_yb, var1_int, var3);
             var1_int = var1_int + var3;
             var2++;
             if (var4 != 0) {
@@ -250,7 +250,7 @@ final class sf implements cl {
           var3 = var2_int + 32;
           var4 = var2_int + 7 * var3;
           SoftwareRasterizer.fillRectangle(this.field_a - 4, this.field_d - 4, 8 + var4, var4 + 8, 0);
-          rp.a(8, 2 + var4, (byte) 108, -1 + this.field_a, var4 + 2, kc.field_S, this.field_d - 1);
+          rp.a(8, 2 + var4, (byte) 108, -1 + this.field_a, var4 + 2, DialogMessagePane.field_S, this.field_d - 1);
           if (this.field_j == null) {
             stackIn_5_0 = this.field_f;
           } else {

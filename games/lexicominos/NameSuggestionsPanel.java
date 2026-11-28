@@ -16,7 +16,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
         if (param3 != 0) {
           return;
         }
-        BitmapFont var5 = ql.field_Q;
+        BitmapFont var5 = ResizableModalDialog.field_Q;
         if (null != this.field_D) {
           var5.drawParagraph(ka.field_a, this.field_t + param2, param1 + this.field_o, this.field_j, 20, 16777215, -1, 0, 0, var5.field_G + var5.field_E);
         }
@@ -54,7 +54,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
             if (param1) {
               field_J = (m) null;
             }
-            var4 = new uj(ql.field_Q, 0, 1);
+            var4 = new uj(ResizableModalDialog.field_Q, 0, 1);
             this.field_G = new InteractiveWidget[1 + var3_int];
             for (var5 = 0; var3_int > var5; var5++) {
               this.field_G[var5] = new InteractiveWidget(this.field_D[var5], (WidgetEventListener) (this));

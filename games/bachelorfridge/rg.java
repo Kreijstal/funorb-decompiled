@@ -48,8 +48,8 @@ final class rg extends IntrusiveNode {
         try {
           RaiseSpecial.field_q.field_Z = param0;
           eda.field_j = true;
-          var2_int = hga.field_U.field_b;
-          var3 = hga.field_U.field_f;
+          var2_int = ProgressDialog.field_U.field_b;
+          var3 = ProgressDialog.field_U.field_f;
           var4 = RaiseSpecial.field_q.field_jb.measureWrappedHeight(param0, 272, RaiseSpecial.field_q.field_B);
           var5 = 7 + (-110 + var3 / param1 - var4 / 2);
           sb.field_n.a(var3 - 120 - var5 * 2, 31407, 320, (-320 + var2_int) / 2, var5);

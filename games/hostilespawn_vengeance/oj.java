@@ -71,7 +71,7 @@ class oj extends p {
           return re.field_D[this.field_w][this.field_z % re.field_D[this.field_w].length];
         }
         if (26 == var2) {
-          return jh.field_eb[this.field_w][this.field_z % jh.field_eb[this.field_w].length];
+          return FullscreenStatusDialog.field_eb[this.field_w][this.field_z % FullscreenStatusDialog.field_eb[this.field_w].length];
         }
         if (23 == var2) {
           return Bzip2State.field_y[this.field_w][this.field_z % Bzip2State.field_y[this.field_w].length];
@@ -1341,7 +1341,7 @@ class oj extends p {
           return re.field_D;
         }
         if (var2 == 26) {
-          return jh.field_eb;
+          return FullscreenStatusDialog.field_eb;
         }
         if (var2 == 23) {
           return Bzip2State.field_y;
@@ -1400,7 +1400,7 @@ class oj extends p {
             param0.c((byte) -94);
             if (160 > al.field_Q) {
               al.field_Q = al.field_Q + 50;
-              jh.a(uh.field_i * 3 / 2, (byte) 61, 47, jc.field_c, 3);
+              FullscreenStatusDialog.a(uh.field_i * 3 / 2, (byte) 61, 47, jc.field_c, 3);
             }
             for (var9_int = 0; 3 > var9_int; var9_int++) {
               TextHotspotBounds.field_m[ProxySocketFactory.field_j] = new oj(param1, 3, rl.field_c);

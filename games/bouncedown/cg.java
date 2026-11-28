@@ -76,7 +76,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 86, "error_js5connect");
                 if (var2 != null) {
-                  db.field_O = c.a(0, var2);
+                  ProgressDialog.field_O = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 103, "login_gameupdated");
                 if (var2 != null) {
@@ -1098,7 +1098,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 86, "logging_in");
                 if (var2 != null) {
-                  sh.field_jb = c.a(0, var2);
+                  ProgressMessageDialog.field_jb = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 98, "reconnect");
                 if (null != var2) {
@@ -1134,7 +1134,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 101, "retry");
                 if (null != var2) {
-                  mh.field_W = c.a(0, var2);
+                  ContentTransitionDialog.field_W = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 123, "back");
                 if (null != var2) {
@@ -1466,7 +1466,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 97, "create_optin_news");
                 if (null != var2) {
-                  ll.field_D = c.a(0, var2);
+                  StripedProgressWidget.field_D = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 121, "create_agreeterms");
                 if (null != var2) {
@@ -1622,7 +1622,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 113, "create_alert_passcontainsname");
                 if (var2 != null) {
-                  ll.field_J = c.a(0, var2);
+                  StripedProgressWidget.field_J = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 115, "create_alert_passcontainsemail");
                 if (var2 != null) {
@@ -2656,7 +2656,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 106, "fs_button_accept");
                 if (var2 != null) {
-                  eb.field_F = c.a(param0 + 99, var2);
+                  RegistrationAgreementPane.field_F = c.a(param0 + 99, var2);
                 }
                 var2 = AgeValidator.a((byte) 108, "fs_accept_afteraccept");
                 if (null != var2) {
@@ -2704,7 +2704,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 102, "fs_focus_or_resolution");
                 if (null != var2) {
-                  k.field_E = c.a(0, var2);
+                  GuestPlayConfirmationForm.field_E = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 103, "fs_timeout");
                 if (var2 != null) {
@@ -2847,7 +2847,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 123, "DEFAULT_PLAYER_NAME");
                 if (var2 != null) {
-                  wk.field_H = c.a(0, var2);
+                  ResizableModalDialog.field_H = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 100, "mustlogin1");
                 if (var2 != null) {
@@ -2911,7 +2911,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 120, "discard");
                 if (var2 != null) {
-                  db.field_T = c.a(0, var2);
+                  ProgressDialog.field_T = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 113, "mustlogin4,1");
                 if (var2 != null) {

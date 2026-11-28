@@ -412,9 +412,9 @@ final class AccountFieldStatusIndicator extends RichTextWidget {
     }
 
     final static void performAction1206(byte byteArgument1) {
-        int integerLocal1 = (-640 + UiComponentPart033.integerState0934) / 2;
+        int integerLocal1 = (-640 + AccountCreationResultPanel.integerState0934) / 2;
         int integerLocal2 = UiComponentPart009.integerState0149 * UiComponentPart009.integerState0149;
-        int integerLocal3 = integerLocal2 - UiComponentPart017.integerState0437 * UiComponentPart017.integerState0437;
+        int integerLocal3 = integerLocal2 - GuestPlayConfirmationForm.integerState0437 * GuestPlayConfirmationForm.integerState0437;
         int integerLocal4 = 50 / ((byteArgument1 - 51) / 46);
         UiComponentPart011.sceneWidgetState0035.performAction1764(199, 0, 90, -90 + (-120 + SoftwareRaster.integerState0284) - 4, -(integerLocal3 * 199 / integerLocal2) + integerLocal1);
         TextFieldValidator.sceneWidgetState0151.performAction1764(438, 0, 0, -4 + (SoftwareRaster.integerState0284 - 120), 202 + (integerLocal1 + 438 * integerLocal3 / integerLocal2));

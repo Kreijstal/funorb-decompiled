@@ -1,0 +1,154 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ProgressDialog extends ResizableModalDialog {
+    private boolean field_cb;
+    private String field_db;
+    private String field_bb;
+    static int field_X;
+    static BufferedRandomAccessFile[] field_Z;
+    private StripedProgressWidget field_Y;
+    private boolean field_W;
+    static cc field_fb;
+    static cc field_eb;
+    static String field_ab;
+
+    final static void a(java.applet.Applet param0, byte param1) {
+        try {
+          java.net.URL var2 = null;
+          Exception var2_ref = null;
+          RuntimeException var2_ref2 = null;
+          java.applet.Applet var3 = null;
+          RuntimeException stackIn_8_0 = null;
+          StringBuilder stackIn_8_1 = null;
+          String stackIn_9_2 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            try {
+              var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
+              if (param1 > -81) {
+                var3 = (java.applet.Applet) null;
+                ProgressDialog.a((java.applet.Applet) null, (byte) 125);
+              }
+              param0.getAppletContext().showDocument(DisplayNameSelectionPanel.a(param0, var2, -1), "_top");
+              return;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2_ref = (Exception) (Object) decompiledCaughtException;
+              var2_ref.printStackTrace();
+              return;
+            }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_8_0 = var2_ref2;
+            stackIn_8_1 = new StringBuilder().append("rk.J(");
+            if (param0 == null) {
+              stackIn_9_2 = "null";
+            } else {
+              stackIn_9_2 = "{...}";
+            }
+            throw ma.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    final void drawDialogBackground(int param0, byte param1, int param2) {
+        super.drawDialogBackground(param0, param1, param2);
+        vd.field_p.drawCentred(this.field_bb, param0 + (this.field_h >> 1), param2 + 103, 16777215, -1);
+        if (this.field_db != null) {
+          SoftwareRasterizer.drawHorizontalLine(20 + param0, -7 + param2 + 120, 260, 8421504);
+          vd.field_p.drawParagraph(this.field_db, 20 + param0, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, vd.field_p.field_s);
+        }
+    }
+
+    final static void a(boolean param0, uf param1, boolean param2) {
+        if (param1 == null ||
+          ProxyAuthenticationRequiredException.field_a == param1) {
+          return;
+        }
+        param1.a(fe.field_a * 64 / 80);
+        if (param0) {
+          param1.c();
+        }
+        if (null != ProxyAuthenticationRequiredException.field_a) {
+          sh.field_e.removeOwnedListener(ProxyAuthenticationRequiredException.field_a);
+        }
+        if (param2) {
+          return;
+        }
+        try {
+          ProxyAuthenticationRequiredException.field_a = param1;
+          sh.field_e.addListener(ProxyAuthenticationRequiredException.field_a);
+        } catch (RuntimeException runtimeException) {
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "rk.HA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+        }
+    }
+
+    final void setProgress(String param0, boolean param1, float param2, byte param3) {
+        try {
+          if ((!this.field_cb ? 1 : 0) != (param1 ? 1 : 0)) {
+          } else {
+            this.field_cb = param1 ? true : false;
+            if (this.field_cb) {
+              this.field_Y.setColours(0, 4210752, 8405024);
+              this.field_Y.field_I = true;
+            } else {
+              this.field_Y.setColours(0, 4210752, 2113632);
+              if (this.field_W) {
+                this.field_Y.field_I = false;
+              }
+            }
+          }
+          this.field_bb = param0;
+          if (param3 != -63) {
+            this.field_W = false;
+          }
+          this.field_Y.field_J = (int)(65536.0f * (param2 / 100.0f));
+        } catch (RuntimeException runtimeException) {
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "rk.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+
+    final void freezeNormalProgressAnimation(boolean param0) {
+        this.field_W = param0 ? true : false;
+        this.field_Y.field_I = false;
+    }
+
+    ProgressDialog(ModalDialogHost param0, String param1) {
+        super(param0, 300, 120);
+        int var3_int = 0;
+        try {
+          this.field_db = param1;
+          if (null != this.field_db) {
+            var3_int = vd.field_p.textHeight(this.field_db, 260, vd.field_p.field_s);
+            this.setCenteredSize(var3_int + 150, 300, -1);
+          }
+          this.field_Y = new StripedProgressWidget(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_W = false;
+          this.field_Y.field_I = true;
+          this.field_cb = false;
+          this.addChild(this.field_Y, (byte) 118);
+        } catch (RuntimeException runtimeException) {
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "rk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public static void clearStaticReferences(byte param0) {
+        field_fb = null;
+        field_ab = null;
+        int var1 = -71 / ((param0 - 18) / 35);
+        field_eb = null;
+        field_Z = null;
+    }
+
+    static {
+        field_fb = new cc();
+        field_ab = null;
+        field_eb = new cc();
+    }
+}

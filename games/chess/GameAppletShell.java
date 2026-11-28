@@ -719,8 +719,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           try {
             try {
               if (null != BitPacketBuffer.field_w) {
-                ih.field_O = ih.field_O + 1;
-                if (ih.field_O >= 3) {
+                NumericDateInputWidget.field_O = NumericDateInputWidget.field_O + 1;
+                if (NumericDateInputWidget.field_O >= 3) {
                   this.a("alreadyloaded", -58);
                   return;
                 }
@@ -735,7 +735,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               cg.field_a = param3;
               em.field_O = param0;
               hk.field_H = param0;
-              ba.field_L = ArrayWidgetContainer.i(81);
+              RegistrationAgreementPane.field_L = ArrayWidgetContainer.i(81);
               dupTemp$0 = new PlatformTaskDispatcher(param4, param2, param6, true);
               MatchingFieldValidator.field_l = dupTemp$0;
               ResourceArchive.field_g = dupTemp$0;

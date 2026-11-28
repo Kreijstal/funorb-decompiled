@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PcmOutputWorker implements Runnable {
-    static el field_e;
+    static StandardContentDialog field_e;
     static int[] field_b;
     static String field_a;
     static IntrusiveDeque field_g;

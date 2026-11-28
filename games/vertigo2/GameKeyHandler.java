@@ -82,11 +82,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (null != kb.field_a) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 && 65535 != var2_int &&
-              gr.isSupportedCp1252KeyCharacter(0, (char) var2_int)) {
+              FullscreenStatusDialog.isSupportedCp1252KeyCharacter(0, (char) var2_int)) {
               var3 = 127 & TextLayout.field_e + 1;
               if (var3 != MusicPatchPcmStream.field_B) {
                 wm.field_j[TextLayout.field_e] = -1;
-                af.field_F[TextLayout.field_e] = (char)var2_int;
+                DateInputWidget.field_F[TextLayout.field_e] = (char)var2_int;
                 TextLayout.field_e = var3;
               }
             }
@@ -133,7 +133,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var3 = 1 + TextLayout.field_e & 127;
             if (var3 != MusicPatchPcmStream.field_B) {
               wm.field_j[TextLayout.field_e] = var2_int;
-              af.field_F[TextLayout.field_e] = (char)0;
+              DateInputWidget.field_F[TextLayout.field_e] = (char)0;
               TextLayout.field_e = var3;
             }
           }

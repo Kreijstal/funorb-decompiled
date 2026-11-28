@@ -103,11 +103,11 @@ final class q {
           jj.field_e = param1;
           var2 = vh.a((byte) 115, "TUTORIAL_SHARED,0");
           if (var2 != null) {
-            vn.field_ub[0] = ad.a(dm.a(param0, -29413), var2);
+            ProgressMessageDialog.field_ub[0] = ad.a(dm.a(param0, -29413), var2);
           }
           var2Lifetime1 = vh.a((byte) 113, "TUTORIAL_SHARED,1");
           if (null != var2Lifetime1) {
-            vn.field_ub[1] = ad.a(-29410, var2Lifetime1);
+            ProgressMessageDialog.field_ub[1] = ad.a(-29410, var2Lifetime1);
           }
           var2Lifetime2 = vh.a((byte) 50, "HELP_HEAD_MAIN");
           if (null != var2Lifetime2) {
@@ -370,7 +370,7 @@ final class q {
           }
           var2Lifetime66 = vh.a((byte) 99, "BLACK_TO_MOVE");
           if (var2Lifetime66 != null) {
-            ij.field_f = ad.a(-29410, var2Lifetime66);
+            FullscreenNoticeType.field_f = ad.a(-29410, var2Lifetime66);
           }
           var2Lifetime67 = vh.a((byte) 52, "PLAYER_TO_MOVE");
           if (var2Lifetime67 != null) {
@@ -378,7 +378,7 @@ final class q {
           }
           var2Lifetime68 = vh.a((byte) 85, "SEL_PIECE_CANNOT_MOVE");
           if (var2Lifetime68 != null) {
-            ba.field_N = ad.a(-29410, var2Lifetime68);
+            RegistrationAgreementPane.field_N = ad.a(-29410, var2Lifetime68);
           }
           var2Lifetime69 = vh.a((byte) 49, "YOU_ARE_PLAYING_AS");
           if (var2Lifetime69 != null) {
@@ -586,14 +586,14 @@ final class q {
         RuntimeException decompiledCaughtException = null;
         var3 = Chess.field_G;
         try {
-          var2 = (ac) (vn.field_vb.beginBackward(-18110));
+          var2 = (ac) (ProgressMessageDialog.field_vb.beginBackward(-18110));
           do {
             if (null == var2) {
               var2 = ArrayWidgetContainer.field_D.beginBackward(-18110);
               break;
             }
             GameAppletShell.a((ac) (var2), 15079, param0);
-            var2 = (ac) (vn.field_vb.nextBackward((byte) -106));
+            var2 = (ac) (ProgressMessageDialog.field_vb.nextBackward((byte) -106));
           } while (var3 == 0);
           if (param1 < 30) {
             field_c = (String) null;
@@ -670,10 +670,10 @@ final class q {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_36_0 = bj.field_jb;
+            stackIn_36_0 = ContentTransitionDialog.field_jb;
           }
           if (stackIn_36_0.field_L != 0) {
-            GzipInflater.field_h = new pc(bj.field_jb.field_U, bj.field_jb.field_wb, bj.field_jb.field_M, bj.field_jb.field_pb, param3, ki.field_P, dc.field_s, SectorCacheStore.field_b, EditableTextField.field_P, kj.field_g, sj.field_k, (String) null, 0L);
+            GzipInflater.field_h = new pc(ContentTransitionDialog.field_jb.field_U, ContentTransitionDialog.field_jb.field_wb, ContentTransitionDialog.field_jb.field_M, ContentTransitionDialog.field_jb.field_pb, param3, ki.field_P, dc.field_s, SectorCacheStore.field_b, EditableTextField.field_P, kj.field_g, sj.field_k, (String) null, 0L);
           }
           var4 = TextLineMetrics.a(BirthDateValidator.field_g, param1, fe.field_g, param0 ^ -6836);
           if (var4 != null) {

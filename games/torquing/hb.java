@@ -8,7 +8,7 @@ final class hb extends am {
     private int field_t;
     static int field_s;
     private int field_z;
-    static qc field_x;
+    static StandardContentDialog field_x;
     private int field_v;
 
     final static da a(boolean param0) {
@@ -227,7 +227,7 @@ final class hb extends am {
         var5 = Torquing.field_u;
         try {
           if (param1 != 35) {
-            field_x = (qc) null;
+            field_x = (StandardContentDialog) null;
           }
           var4_int = param2;
           if (0 == var4_int) {

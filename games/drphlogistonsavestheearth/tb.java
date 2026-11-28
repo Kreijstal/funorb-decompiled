@@ -43,7 +43,7 @@ final class tb {
           return ij.field_a + " - " + sb.field_i.getGroupLoadPercentByName(param0 + 10542, "commonui") + "%";
         }
         if (!ig.field_t.ensureIndexLoaded(0)) {
-          return ia.field_b;
+          return FullscreenNoticeType.field_b;
         }
         if (!ig.field_t.tryLoadAllGroups((byte) 68)) {
           return PcmOutputWorker.field_a + " - " + ig.field_t.getArchiveLoadPercent((byte) 95) + "%";

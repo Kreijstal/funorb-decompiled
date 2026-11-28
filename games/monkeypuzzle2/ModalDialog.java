@@ -127,7 +127,7 @@ abstract class ModalDialog extends WidgetContainer {
             if (param1 != 0) {
               return;
             }
-            this.a(false, param3 + this.field_r, param2 + this.field_e);
+            this.drawDialogBackground(false, param3 + this.field_r, param2 + this.field_e);
             super.drawWidget(30, param1, param2, param3);
             return;
           }
@@ -138,7 +138,7 @@ abstract class ModalDialog extends WidgetContainer {
           }
           mc.a(param0 ^ -8495, vg.field_M);
           SoftwareRasterizer.clearRaster();
-          this.a(false, 0, 0);
+          this.drawDialogBackground(false, 0, 0);
           super.drawWidget(param0, param1, -param2 - this.field_e, -this.field_r - param3);
           tj.b(653);
           vg.field_M.drawWithOpacity(this.field_r + param3, param2 + this.field_e, this.field_D);
@@ -150,7 +150,7 @@ abstract class ModalDialog extends WidgetContainer {
         }
     }
 
-    abstract void a(boolean param0, int param1, int param2);
+    abstract void drawDialogBackground(boolean param0, int param1, int param2);
 
     boolean snapDialogAnimation(boolean param0) {
         RuntimeException var2 = null;
@@ -267,7 +267,7 @@ abstract class ModalDialog extends WidgetContainer {
           }
           var2Lifetime12 = PcmResampler.a((byte) 76, "pressEnter");
           if (null != var2Lifetime12) {
-            lb.field_A = TextLineMetrics.a(var2Lifetime12, (byte) 77);
+            GuestPlayConfirmationForm.field_A = TextLineMetrics.a(var2Lifetime12, (byte) 77);
           }
           var2Lifetime13 = PcmResampler.a((byte) 76, "levelComplete");
           if (null != var2Lifetime13) {
@@ -467,14 +467,14 @@ abstract class ModalDialog extends WidgetContainer {
             if (var4_int != 0) {
               var1.readString(-1);
             }
-            var6_ref = ja.a(var5_ref_String, -1684349368);
+            var6_ref = RegistrationAgreementPane.a(var5_ref_String, -1684349368);
             var7_ref = var1.readString(-1);
             var8_ref = BoundedRandomAccessFile.a((byte) 115, (CharSequence) ((Object) var5_ref_String));
             if (null == var8_ref) {
               var8_ref = var5_ref_String;
             }
             if (null == var6_ref) {
-              var6_ref = ja.a(var7_ref, -1684349368);
+              var6_ref = RegistrationAgreementPane.a(var7_ref, -1684349368);
               if (var6_ref != null) {
                 ah.field_b.a(var6_ref, (long)var8_ref.hashCode(), -90);
               }
@@ -567,7 +567,7 @@ abstract class ModalDialog extends WidgetContainer {
               return;
             }
           }
-          ja.a(var8, var7, -99);
+          RegistrationAgreementPane.a(var8, var7, -99);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

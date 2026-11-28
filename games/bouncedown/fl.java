@@ -18,7 +18,7 @@ final class fl {
             field_b = (int[]) null;
           }
           ph.a("", param1, (byte) 43);
-          lg.a(0, param1);
+          FullscreenNoticeType.a(0, param1);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "fl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

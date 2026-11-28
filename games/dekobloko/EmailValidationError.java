@@ -119,11 +119,11 @@ final class EmailValidationError {
           return;
         }
         DiagnosticSupport002.sceneWidgetState0057 = MixedSupport065.sceneWidgetState0067;
-        UiComponentPart033.sceneWidgetState0150 = ComponentContainer.sceneWidgetState0069;
+        AccountCreationResultPanel.sceneWidgetState0150 = ComponentContainer.sceneWidgetState0069;
         MixedSupport065.sceneWidgetState0067 = null;
         ComponentContainer.sceneWidgetState0069 = null;
-        UiComponentPart033.sceneWidgetState0150.integerState0899 = -1;
-        UiComponentPart033.sceneWidgetState0150.integerState0889 = -1;
+        AccountCreationResultPanel.sceneWidgetState0150.integerState0899 = -1;
+        AccountCreationResultPanel.sceneWidgetState0150.integerState0889 = -1;
         MixedSupport066.sceneWidgetState0068 = null;
     }
 

@@ -100,7 +100,7 @@ public final class TrackController extends GameShell {
         } else {
           if (1 != dd.field_o) {
             if (dd.field_o == 2) {
-              if (!jj.s(106)) {
+              if (!ProgressMessageDialog.s(106)) {
                 if (null != ua.field_L) {
                   ua.field_L.g(param0 + 122);
                 }
@@ -109,12 +109,12 @@ public final class TrackController extends GameShell {
                 ib.field_a = jh.field_a;
               }
               if (ib.field_a == -4) {
-                stackIn_21_0 = (jj.s(96)) ? 0 : 1;
+                stackIn_21_0 = (ProgressMessageDialog.s(96)) ? 0 : 1;
                 ib.field_a = stackIn_21_0;
                 oi.a(26, DualLinkNode.field_l, 26, DisplayNameSelectionPanel.font, DisplayNameSelectionPanel.font, 10, 320, 20, 240, DualLinkNode.field_l, -3748, true, 18, 0, 0);
               }
               if (ib.field_a == -3) {
-                if (jj.s(123)) {
+                if (ProgressMessageDialog.s(123)) {
                   ib.field_a = 15;
                 } else {
                   if (oe.field_e != 0) {
@@ -219,7 +219,7 @@ public final class TrackController extends GameShell {
             SoftwareRasterizer.setClip(320 - var3, -var4 + 240, var3 + 320, 240 + var4);
           }
           boolean decompiledFrameRemainder0 = true;
-          db.a(480, 0, na.field_c, 640, 0, (byte) -128);
+          ContentTransitionDialog.a(480, 0, na.field_c, 640, 0, (byte) -128);
           CachedArchiveSource.field_x = false;
           if (~sc.field_g == ~ib.field_a && (!(0 < NodeHashTable.field_g) ||
             dd.field_o != 0)) {
@@ -363,10 +363,10 @@ public final class TrackController extends GameShell {
         ld.clearStaticReferences(-16723);
         ModalDialogHost.clearDeclaredStaticReferences((byte) 9);
         AccountCreationResultPanel.discardDeclaredStaticReferences(-106);
-        rk.discardDeclaredStaticReferences(4210752);
-        jj.clearStaticReferences((byte) 105);
+        ProgressDialog.discardDeclaredStaticReferences(4210752);
+        ProgressMessageDialog.clearStaticReferences((byte) 105);
         AccountRegistrationPanel.resetStaticState(false);
-        sf.b(false);
+        GuestPlayConfirmationForm.b(false);
         LoginPanel.clearStaticReferences(false);
         DisplayNameSelectionPanel.clearStaticReferences(-122);
         kh.clearStaticReferences(61);
@@ -405,7 +405,7 @@ public final class TrackController extends GameShell {
         rg.clearStaticReferences(17883);
         AsyncRequest.clearStaticReferences(48);
         pl.clearStaticReferences(-30877);
-        w.resetStaticState(true);
+        FullscreenStatusDialog.resetStaticState(true);
         bd.clearStaticReferences(44);
         DefaultTextWidgetRenderer.clearStaticReferences((byte) -56);
         ig.clearStaticReferences();
@@ -433,7 +433,7 @@ public final class TrackController extends GameShell {
         UiWidget.clearDeclaredStaticReferences(param0 ^ -59);
         ButtonWidget.i(param0 - 222);
         SingleChildWidgetContainer.clearStaticReferences((byte) -7);
-        wd.clearStaticReferences(35);
+        ResizableModalDialog.clearStaticReferences(35);
         ModalDialog.releaseDeclaredStaticReferences(param0 ^ -66);
         IntrusiveDequeCursor.clearStaticReferences(param0 ^ -18);
         ie.clearStaticReferences(82);
@@ -459,7 +459,7 @@ public final class TrackController extends GameShell {
         LabeledWidgetContainer.clearStaticReferences(true);
         ValidatedTextField.f((byte) -71);
         EditableTextField.clearStaticReferences(-85);
-        dg.clearStaticReferences((byte) 16);
+        StripedProgressWidget.clearStaticReferences((byte) 16);
         NameSuggestionsPanel.b(false);
         RichTextWidget.c(false);
         ua.clearStaticReferences(param0 - 219);
@@ -505,12 +505,12 @@ public final class TrackController extends GameShell {
         j.clearStaticReferences(-75);
         ba.a((byte) 113);
         wa.clearStaticReferences(param0 - 202);
-        lc.clearStaticReferences(112);
+        DialogMessagePane.clearStaticReferences(112);
         bl.clearStaticReferences(-113);
         ec.clearDeclaredStaticReferences((byte) -49);
         of.clearStaticReferences(false);
         sc.clearStaticReferences(param0 ^ 150);
-        mk.clearStaticReferences((byte) -3);
+        FullscreenNoticeType.clearStaticReferences((byte) -3);
         r.d(-1);
         ei.clearStaticReferences(73);
         qi.clearStaticReferences(param0 ^ param0);
@@ -571,7 +571,7 @@ public final class TrackController extends GameShell {
             discarded$0 = this.loadAssets(467, false);
             return;
           }
-          if (!jj.s(109)) {
+          if (!ProgressMessageDialog.s(109)) {
             BufferedCacheFile.field_e = LevelGrid.a(4, -124);
             AccountRegistrationPanel.field_G = dh.a(5, -1, 0, 1);
           }
@@ -602,7 +602,7 @@ public final class TrackController extends GameShell {
                 if (dd.field_o != 0) {
                   this.s(0);
                 } else {
-                  var2 = rk.s(-1);
+                  var2 = ProgressDialog.s(-1);
                   if (var2 == 3) {
                     oi.a(26, DualLinkNode.field_l, 26, DisplayNameSelectionPanel.font, DisplayNameSelectionPanel.font, 10, 320, 20, 240, DualLinkNode.field_l, -3748, true, 18, 0, 0);
                   } else {
@@ -649,7 +649,7 @@ public final class TrackController extends GameShell {
         if (param0) {
           return;
         }
-        if (!jj.s(47)) {
+        if (!ProgressMessageDialog.s(47)) {
           while (true) {
             var5 = (cf) (ka.field_d.removeFirst((byte) -105));
             if (var5 != null) {
@@ -670,7 +670,7 @@ public final class TrackController extends GameShell {
           null == GameShell.field_n) {
           fe.a(true, Model.field_P[0], 256);
         }
-        while (ge.a(kg.field_b, param0)) {
+        while (RegistrationAgreementPane.a(kg.field_b, param0)) {
           this.e((byte) 85);
         }
         MovingBlock.a(-1, 0);
@@ -712,7 +712,7 @@ public final class TrackController extends GameShell {
         this.a(-1, true, true, false, true);
         int var3 = 10 / ((param0 - 61) / 61);
         j.field_a = 1;
-        db.field_db = 5;
+        ContentTransitionDialog.field_db = 5;
         LevelGrid.field_n = 0;
     }
 
@@ -866,7 +866,7 @@ public final class TrackController extends GameShell {
                           ud.a(param0 - 339, 65.0f, wf.a("", ob.field_w, wa.field_j, sk.field_j, 4));
                           return false;
                         }
-                        ud.a(128, 50.0f, mk.a(0, wl.field_l, wa.field_j, ob.field_w, (byte) 117));
+                        ud.a(128, 50.0f, FullscreenNoticeType.a(0, wl.field_l, wa.field_j, ob.field_w, (byte) 117));
                         return false;
                       }
                       ud.a(128, 40.0f, wf.a("", IntrusiveNode.field_f, ql.field_q, j.field_h, 23));
@@ -990,7 +990,7 @@ public final class TrackController extends GameShell {
               for (var5 = 0; var5 < 17; var5++) {
                 AsyncRequest.field_p[var5] = new GameScreen(this, var5);
               }
-              if (jj.s(125)) {
+              if (ProgressMessageDialog.s(125)) {
                 ib.field_a = 0;
                 sc.field_g = 0;
               } else {
@@ -999,7 +999,7 @@ public final class TrackController extends GameShell {
               }
               ti.a(-123, 50);
               fe.a(true, Model.field_P[0], 256);
-              rk.r(13);
+              ProgressDialog.r(13);
             }
             qi.d(54);
             return true;

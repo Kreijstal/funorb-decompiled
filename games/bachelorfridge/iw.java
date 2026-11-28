@@ -38,8 +38,8 @@ final class iw {
             !(sc.field_o.length >= param2)) {
             sc.field_o = new int[2 * param2];
           }
-          if (uda.field_X == null) {
-            uda.field_X = new int[2 * param2];
+          if (ContentTransitionDialog.field_X == null) {
+            ContentTransitionDialog.field_X = new int[2 * param2];
             if (uc.field_k == null ||
               !(uc.field_k.length >= param2)) {
               uc.field_k = new int[param2 * 2];
@@ -53,8 +53,8 @@ final class iw {
               sr.field_c = new boolean[param2 * 2];
             }
           } else {
-            if (param2 > uda.field_X.length) {
-              uda.field_X = new int[2 * param2];
+            if (param2 > ContentTransitionDialog.field_X.length) {
+              ContentTransitionDialog.field_X = new int[2 * param2];
               if (uc.field_k == null ||
                 !(uc.field_k.length >= param2)) {
                 uc.field_k = new int[param2 * 2];
@@ -124,8 +124,8 @@ final class iw {
               !(sc.field_o.length >= param2)) {
               sc.field_o = new int[2 * param2];
             }
-            if (uda.field_X == null) {
-              uda.field_X = new int[2 * param2];
+            if (ContentTransitionDialog.field_X == null) {
+              ContentTransitionDialog.field_X = new int[2 * param2];
               if (uc.field_k == null ||
                 !(uc.field_k.length >= param2)) {
                 uc.field_k = new int[param2 * 2];
@@ -139,8 +139,8 @@ final class iw {
                 sr.field_c = new boolean[param2 * 2];
               }
             } else {
-              if (param2 > uda.field_X.length) {
-                uda.field_X = new int[2 * param2];
+              if (param2 > ContentTransitionDialog.field_X.length) {
+                ContentTransitionDialog.field_X = new int[2 * param2];
                 if (uc.field_k == null ||
                   !(uc.field_k.length >= param2)) {
                   uc.field_k = new int[param2 * 2];
@@ -210,8 +210,8 @@ final class iw {
               !(sc.field_o.length >= param2)) {
               sc.field_o = new int[2 * param2];
             }
-            if (uda.field_X == null) {
-              uda.field_X = new int[2 * param2];
+            if (ContentTransitionDialog.field_X == null) {
+              ContentTransitionDialog.field_X = new int[2 * param2];
               if (uc.field_k == null ||
                 !(uc.field_k.length >= param2)) {
                 uc.field_k = new int[param2 * 2];
@@ -237,8 +237,8 @@ final class iw {
                 }
               }
             } else {
-              if (param2 > uda.field_X.length) {
-                uda.field_X = new int[2 * param2];
+              if (param2 > ContentTransitionDialog.field_X.length) {
+                ContentTransitionDialog.field_X = new int[2 * param2];
                 if (uc.field_k == null ||
                   !(uc.field_k.length >= param2)) {
                   uc.field_k = new int[param2 * 2];

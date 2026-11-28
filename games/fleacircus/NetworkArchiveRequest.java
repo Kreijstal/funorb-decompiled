@@ -28,7 +28,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           if (param2) {
             return;
           }
-          ui.field_kb = ui.field_ob;
+          StandardContentDialog.field_kb = StandardContentDialog.field_ob;
           if (param1 == 255) {
             stackIn_12_0 = !(ug.field_c >= 13);
             kh.field_a = DelegatingCanvas.createAccountSuccessResult(stackIn_12_0, (byte) 42);

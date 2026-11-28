@@ -78,7 +78,7 @@ final class MixedSupport017 {
         int stackIntegerLocal59 = 0;
         boolean stackBooleanLocal60 = false;
         RenderingSupport004.performAction0579(0, 20763, 640 + SoftwareRaster.integerState0285 >> 1, SoftwareRaster.integerState0285 - 640 >> 1, SoftwareRaster.integerState0284);
-        if (UiComponentPart017.integerState0437 > 0) {
+        if (GuestPlayConfirmationForm.integerState0437 > 0) {
           if (null != LobbyRoomRow.rgbSpriteState0062) {
             LobbyRoomRow.rgbSpriteState0062.drawOpaque(UiComponentPart011.sceneWidgetState0035.integerState0890, 0);
             stackSceneWidgetLocal1 = UiComponentPart011.sceneWidgetState0035;

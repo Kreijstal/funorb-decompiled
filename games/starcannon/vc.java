@@ -18,14 +18,14 @@ final class vc extends IntrusiveNode {
           ff.field_o = param0;
           TextLineMetrics.field_e = 1;
           IsaacRandom.field_e = 0;
-          vj.field_ab = param2;
+          FullscreenStatusDialog.field_ab = param2;
           return;
         }
         vc.clearStaticReferences((byte) 96);
         ff.field_o = param0;
         TextLineMetrics.field_e = 1;
         IsaacRandom.field_e = 0;
-        vj.field_ab = param2;
+        FullscreenStatusDialog.field_ab = param2;
     }
 
     public static void clearStaticReferences(byte param0) {

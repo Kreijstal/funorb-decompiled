@@ -167,7 +167,7 @@ final class td {
     }
 
     final static String a(int param0) {
-        if (jc.field_P == hh.field_g) {
+        if (ResizableModalDialog.field_P == hh.field_g) {
           return ri.field_b;
         }
         if (param0 != -2) {

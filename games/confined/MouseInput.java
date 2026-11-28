@@ -204,13 +204,13 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           throw new IllegalStateException();
         }
         if (ki.field_c != null) {
-          ki.field_c.n(10);
+          ki.field_c.closeDialog(10);
           var1 = BufferedSocket.d(85);
           om.field_p = new LoginPanel(var1, (String) null, true, false, false);
           if (param0 == 2) {
             TunnelCamera.field_Z.showDialog(dn.field_b, 0);
-            dn.field_b.a((UiWidget) (om.field_p), (byte) -72);
-            dn.field_b.m(118);
+            dn.field_b.replaceContent((UiWidget) (om.field_p), (byte) -72);
+            dn.field_b.finishResize(118);
             return;
           }
           return;
@@ -219,8 +219,8 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         om.field_p = new LoginPanel(var1Lifetime1, (String) null, true, false, false);
         if (param0 == 2) {
           TunnelCamera.field_Z.showDialog(dn.field_b, 0);
-          dn.field_b.a((UiWidget) (om.field_p), (byte) -72);
-          dn.field_b.m(118);
+          dn.field_b.replaceContent((UiWidget) (om.field_p), (byte) -72);
+          dn.field_b.finishResize(118);
           return;
         }
     }

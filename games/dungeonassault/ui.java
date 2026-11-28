@@ -189,7 +189,7 @@ final class ui {
             tl.a(-96);
             return;
           }
-          sm.a((Throwable) null, 1, "HS1: " + sj.l(192));
+          sm.a((Throwable) null, 1, "HS1: " + ResizableModalDialog.l(192));
           tl.a(-33);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

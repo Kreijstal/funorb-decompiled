@@ -6,7 +6,7 @@ final class bl {
     int field_c;
     int field_f;
     int field_a;
-    static hh field_b;
+    static FullscreenNoticeType field_b;
     static String field_g;
     static String field_e;
     private static String field_z;
@@ -22,7 +22,7 @@ final class bl {
 
     static {
         field_z = "bl.A(";
-        field_b = new hh();
+        field_b = new FullscreenNoticeType();
         field_g = "You are unable to access this world yet.";
         field_e = "Leap of Faith";
     }

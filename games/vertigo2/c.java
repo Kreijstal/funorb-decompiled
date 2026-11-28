@@ -310,11 +310,11 @@ class c extends v {
               if (0 == var6_intLifetime1) {
                 var3.field_s = ValidatedTextField.field_U;
                 var3.field_y = EditableTextField.field_P;
-                var3.field_u = af.field_E;
+                var3.field_u = DateInputWidget.field_E;
                 var3.field_p = bp.field_z;
-                PlayerState.appendPlayerMatchStats(EditableTextField.field_P, af.field_E, true, var6_intLifetime1, ValidatedTextField.field_U, bp.field_z);
+                PlayerState.appendPlayerMatchStats(EditableTextField.field_P, DateInputWidget.field_E, true, var6_intLifetime1, ValidatedTextField.field_U, bp.field_z);
               } else {
-                PlayerState.appendPlayerMatchStats(EditableTextField.field_P, af.field_E, true, var6_intLifetime1, ValidatedTextField.field_U, bp.field_z);
+                PlayerState.appendPlayerMatchStats(EditableTextField.field_P, DateInputWidget.field_E, true, var6_intLifetime1, ValidatedTextField.field_U, bp.field_z);
               }
             }
             JaggrabClient.a(var5, 2);

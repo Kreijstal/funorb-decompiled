@@ -264,7 +264,7 @@ final class MusicPatchPcmStream extends PcmStream {
             if (null != ff.field_b &&
               ff.field_b.focusLost) {
               af.a(-98);
-              LoginPanel.field_L.showDialog(-14579, new ii(LoginPanel.field_L, qg.field_a));
+              LoginPanel.field_L.showDialog(-14579, new FullscreenStatusDialog(LoginPanel.field_L, qg.field_a));
             }
             return;
           }

@@ -301,7 +301,7 @@ final class rl {
           if (this.field_i != 0 &&
             0 != wh.field_e) {
             if (0 >= this.field_g) {
-              this.field_g = v.field_W;
+              this.field_g = ResizableModalDialog.field_W;
             }
             this.field_g = this.field_g - 1;
           }
@@ -313,7 +313,7 @@ final class rl {
             }
             if (this.field_i == 0) {
               if (!this.field_e &&
-                !ek.field_P) {
+                !StripedProgressWidget.field_P) {
                 return;
               }
               if (param1 < 0) {
@@ -337,7 +337,7 @@ final class rl {
               return;
             }
             if (!this.field_e &&
-              !ek.field_P) {
+              !StripedProgressWidget.field_P) {
               return;
             }
             if (param1 < 0) {
@@ -356,7 +356,7 @@ final class rl {
           this.field_d = 76;
           if (this.field_i == 0) {
             if (!this.field_e &&
-              !ek.field_P) {
+              !StripedProgressWidget.field_P) {
               return;
             }
             if (param1 < 0) {
@@ -389,7 +389,7 @@ final class rl {
             }
             if (this.field_i == 0) {
               if (!this.field_e &&
-                !ek.field_P) {
+                !StripedProgressWidget.field_P) {
                 return;
               }
               if (param1 < 0) {
@@ -412,7 +412,7 @@ final class rl {
             this.field_d = 76;
             if (this.field_i == 0) {
               if (!this.field_e &&
-                !ek.field_P) {
+                !StripedProgressWidget.field_P) {
                 return;
               }
               if (param1 < 0) {
@@ -434,7 +434,7 @@ final class rl {
         } else {
           if (0 != wh.field_e) {
             if (0 >= this.field_g) {
-              this.field_g = v.field_W;
+              this.field_g = ResizableModalDialog.field_W;
             }
             this.field_g = this.field_g - 1;
           }
@@ -448,7 +448,7 @@ final class rl {
               return;
             }
             if (!this.field_e &&
-              !ek.field_P) {
+              !StripedProgressWidget.field_P) {
               return;
             }
             if (param1 < 0) {
@@ -475,7 +475,7 @@ final class rl {
           return;
         }
         if (!this.field_e &&
-          !ek.field_P) {
+          !StripedProgressWidget.field_P) {
           return;
         }
         if (param1 < 0) {

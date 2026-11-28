@@ -145,16 +145,16 @@ final class re {
         int var9Lifetime1;
         var13 = Torquing.field_u;
         try {
-          hh.field_b = SectorCacheStore.a("frame_top", -1, "commonui", param3);
+          FullscreenNoticeType.field_b = SectorCacheStore.a("frame_top", -1, "commonui", param3);
           vf.field_i = SectorCacheStore.a("frame_bottom", -1, "commonui", param3);
-          rp.field_h = mn.a(param3, "commonui", "jagex_logo_grey", 114);
+          rp.field_h = ProgressMessageDialog.a(param3, "commonui", "jagex_logo_grey", 114);
           TranslucentSpriteLayer.field_g = SectorCacheStore.a("button", -1, "commonui", param3);
           wj.field_h = jb.a(0, param3, "validation", "commonui");
           stackIn_3_0 = "commonui";
           stackIn_3_1 = (ResourceArchive) (param3);
           stackIn_3_2 = (ResourceArchive) (param0);
           stackIn_4_3 = !(param1);
-          sp.field_R = (BitmapFont) ((Object) dc.a(stackIn_3_0, stackIn_3_1, stackIn_3_2, stackIn_4_3, "arezzo12"));
+          ProgressDialog.field_R = (BitmapFont) ((Object) dc.a(stackIn_3_0, stackIn_3_1, stackIn_3_2, stackIn_4_3, "arezzo12"));
           TranslucentSpriteLayer.field_e = (BitmapFont) ((Object) dc.a("commonui", param3, param0, false, "arezzo14"));
           stackIn_6_0 = "commonui";
           stackIn_6_1 = (ResourceArchive) (param3);

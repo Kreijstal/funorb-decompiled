@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class ni extends DefaultTextWidgetRenderer {
-    static sh field_o;
+    static FullscreenNoticeType field_o;
 
     final static int scoreSubmittedWord(byte param0) {
         StringBuilder discarded$1 = null;
@@ -91,7 +91,7 @@ class ni extends DefaultTextWidgetRenderer {
     public static void clearStaticReferences(int param0) {
         field_o = null;
         if (param0 != 255) {
-          field_o = (sh) null;
+          field_o = (FullscreenNoticeType) null;
         }
     }
 
@@ -104,6 +104,6 @@ class ni extends DefaultTextWidgetRenderer {
     }
 
     static {
-        field_o = new sh();
+        field_o = new FullscreenNoticeType();
     }
 }
