@@ -107,7 +107,7 @@ final class mp {
         }
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseOr(int param0, int param1) {
         return param0 | param1;
     }
 

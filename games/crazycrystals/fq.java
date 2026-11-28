@@ -527,16 +527,16 @@ final class fq extends ea implements Cloneable {
               this.field_v = 0;
             }
           } else {
-            if (cp.field_k[IsaacRandom.field_e[this.field_u][0]]) {
+            if (MusicPatchEnvelope.field_k[IsaacRandom.field_e[this.field_u][0]]) {
               var5_int--;
             }
-            if (cp.field_k[IsaacRandom.field_e[this.field_u][2]]) {
+            if (MusicPatchEnvelope.field_k[IsaacRandom.field_e[this.field_u][2]]) {
               var6--;
             }
-            if (cp.field_k[IsaacRandom.field_e[this.field_u][1]]) {
+            if (MusicPatchEnvelope.field_k[IsaacRandom.field_e[this.field_u][1]]) {
               var5_int++;
             }
-            if (cp.field_k[IsaacRandom.field_e[this.field_u][3]]) {
+            if (MusicPatchEnvelope.field_k[IsaacRandom.field_e[this.field_u][3]]) {
               var6++;
             }
           }
@@ -686,7 +686,7 @@ final class fq extends ea implements Cloneable {
           } else {
             if (2 != this.field_u) {
               var4 = q.field_c[this.field_u];
-              var5 = pl.field_s;
+              var5 = MusicPatchNode.field_s;
               var6 = ResizableModalDialog.field_F;
             } else {
               var6 = ModalDialogHost.field_E;

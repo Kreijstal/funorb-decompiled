@@ -72,7 +72,7 @@ final class bl {
           }
           var5[4] = (RgbSprite) ((Object) var19);
           var4.a(4, true).a(true, (byte) -57).a(var5, 0);
-          var4.a(5, true).a(q.a(false, 0, 0, 0, 65793), 0).a(true, (byte) -57).a((byte) 114, -1);
+          var4.a(5, true).a(ByteArrayPoolSupport.a(false, 0, 0, 0, 65793), 0).a(true, (byte) -57).a((byte) 114, -1);
           this.field_l = (WidgetRenderer) ((Object) var4);
           var6 = new sj(var4, true);
           var6.field_h = 0;
@@ -304,7 +304,7 @@ final class bl {
         MusicPatchPcmStream.field_n[5] = jl.field_a;
         MusicPatchPcmStream.field_n[12] = l.field_j;
         MusicPatchPcmStream.field_n[0] = k.field_e;
-        MusicPatchPcmStream.field_n[4] = rc.field_i;
+        MusicPatchPcmStream.field_n[4] = MusicPatchEnvelope.field_i;
         MusicPatchPcmStream.field_n[7] = dk.field_b;
         MusicPatchPcmStream.field_n[2] = BoundedRandomAccessFile.field_f;
         MusicPatchPcmStream.field_n[1] = vg.field_s;

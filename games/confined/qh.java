@@ -315,7 +315,7 @@ final class qh extends DefaultTextWidgetRenderer {
             }
             return;
           }
-          lj.a(this.field_B, 0, param1.field_B, 0, 6);
+          ArrayBlockSupport.copyObjectRange(this.field_B, 0, param1.field_B, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

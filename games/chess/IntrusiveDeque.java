@@ -152,7 +152,7 @@ final class IntrusiveDeque {
             if (param0 == 8) {
               param0 = 2;
               if (SecondaryNodeHashTable.field_g) {
-                param1 = td.field_r;
+                param1 = MidiNoteMask.field_r;
               } else {
                 param1 = DisplayNameSelectionPanel.field_R;
               }

@@ -41,7 +41,7 @@ final class AccountRequestState {
             kn.field_h[1][var2_intLifetime2] = new PacketBuffer(param1.getFileByName("", "level0" + (1 + var2_intLifetime2) + ".2pl", param0 - 11579));
           }
           for (var2_intLifetime3 = 9; var2_intLifetime3 < 30; var2_intLifetime3++) {
-            kn.field_h[1][var2_intLifetime3] = new PacketBuffer(param1.getFileByName("", "level" + (1 + var2_intLifetime3) + ".2pl", tk.a(param0, 11579)));
+            kn.field_h[1][var2_intLifetime3] = new PacketBuffer(param1.getFileByName("", "level" + (1 + var2_intLifetime3) + ".2pl", tk.bitwiseXor(param0, 11579)));
           }
           for (var2_intLifetime4 = 0; var2_intLifetime4 < 9; var2_intLifetime4++) {
             kn.field_h[2][var2_intLifetime4] = new PacketBuffer(param1.getFileByName("", "level0" + (var2_intLifetime4 + 1) + ".cmp", 0));
@@ -50,7 +50,7 @@ final class AccountRequestState {
             return;
           }
           for (var2_intLifetime5 = 9; 40 > var2_intLifetime5; var2_intLifetime5++) {
-            kn.field_h[2][var2_intLifetime5] = new PacketBuffer(param1.getFileByName("", "level" + (1 + var2_intLifetime5) + ".cmp", tk.a(param0, 11579)));
+            kn.field_h[2][var2_intLifetime5] = new PacketBuffer(param1.getFileByName("", "level" + (1 + var2_intLifetime5) + ".cmp", tk.bitwiseXor(param0, 11579)));
           }
           for (var2_intLifetime6 = 0; var2_intLifetime6 < 9; var2_intLifetime6++) {
             kn.field_h[3][var2_intLifetime6] = kn.field_h[0][var2_intLifetime6];

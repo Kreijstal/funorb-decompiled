@@ -46,7 +46,7 @@ final class BufferedCacheFile {
             if (this.field_j != -1L &&
               this.field_b >= this.field_j &&
               (long)this.field_f + this.field_j >= this.field_b + (long)param1) {
-              pd.copyByteRange(this.field_h, (int)(this.field_b - this.field_j), param0, param2, param1);
+              ArrayBlockSupport.copyByteRange(this.field_h, (int)(this.field_b - this.field_j), param0, param2, param1);
               this.field_b = this.field_b + (long)param1;
               return;
             }
@@ -59,7 +59,7 @@ final class BufferedCacheFile {
               if (param1 < var9_int) {
                 var9_int = param1;
               }
-              pd.copyByteRange(this.field_a, (int)(this.field_b - this.field_d), param0, param2, var9_int);
+              ArrayBlockSupport.copyByteRange(this.field_a, (int)(this.field_b - this.field_d), param0, param2, var9_int);
               param1 = param1 - var9_int;
               this.field_b = this.field_b + (long)var9_int;
               param2 = param2 + var9_int;
@@ -90,7 +90,7 @@ final class BufferedCacheFile {
               if (var9_intLifetime1Lifetime1 > this.field_c) {
                 var9_intLifetime1Lifetime1 = this.field_c;
               }
-              pd.copyByteRange(this.field_a, 0, param0, param2, var9_intLifetime1Lifetime1);
+              ArrayBlockSupport.copyByteRange(this.field_a, 0, param0, param2, var9_intLifetime1Lifetime1);
               param1 = param1 - var9_intLifetime1Lifetime1;
               this.field_b = this.field_b + (long)var9_intLifetime1Lifetime1;
               param2 = param2 + var9_intLifetime1Lifetime1;
@@ -133,7 +133,7 @@ final class BufferedCacheFile {
               if (var9 > -1L &&
                 var11 > var9) {
                 var13 = (int)(-var9 + var11);
-                pd.copyByteRange(this.field_h, (int)(var9 - this.field_j), param0, (int)(var9 - var5_long) + var7, var13);
+                ArrayBlockSupport.copyByteRange(this.field_h, (int)(var9 - this.field_j), param0, (int)(var9 - var5_long) + var7, var13);
                 if (this.field_b < var11) {
                   param1 = (int)((long)param1 - (var11 - this.field_b));
                   this.field_b = var11;
@@ -267,7 +267,7 @@ final class BufferedCacheFile {
           if (-1L < var2 &&
             var4 > var2) {
             var6 = (int)(-var2 + var4);
-            pd.copyByteRange(this.field_h, (int)(-this.field_j + var2), this.field_a, (int)(-this.field_d + var2), var6);
+            ArrayBlockSupport.copyByteRange(this.field_h, (int)(-this.field_j + var2), this.field_a, (int)(-this.field_d + var2), var6);
           }
           this.field_f = 0;
           this.field_j = -1L;
@@ -341,7 +341,7 @@ final class BufferedCacheFile {
             if (this.field_j != -1L &&
               ((long)this.field_h.length + this.field_j) < ((long)param0 + this.field_b)) {
               var5_int = (int)(this.field_j - (this.field_b - (long)this.field_h.length));
-              pd.copyByteRange(param2, param3, this.field_h, (int)(this.field_b - this.field_j), var5_int);
+              ArrayBlockSupport.copyByteRange(param2, param3, this.field_h, (int)(this.field_b - this.field_j), var5_int);
               param0 = param0 - var5_int;
               this.field_b = this.field_b + (long)var5_int;
               param3 = param3 + var5_int;
@@ -355,7 +355,7 @@ final class BufferedCacheFile {
               if (this.field_j == -1L) {
                 this.field_j = this.field_b;
               }
-              pd.copyByteRange(param2, param3, this.field_h, (int)(-this.field_j + this.field_b), param0);
+              ArrayBlockSupport.copyByteRange(param2, param3, this.field_h, (int)(-this.field_j + this.field_b), param0);
               this.field_b = this.field_b + (long)param0;
               if (-this.field_j + this.field_b > (long)this.field_f) {
                 this.field_f = (int)(this.field_b - this.field_j);
@@ -394,7 +394,7 @@ final class BufferedCacheFile {
             if (var5_long > -1L &&
               var7 > var5_long) {
               var9 = (int)(-var5_long + var7);
-              pd.copyByteRange(param2, (int)((long)param3 + var5_long - this.field_b), this.field_a, (int)(var5_long - this.field_d), var9);
+              ArrayBlockSupport.copyByteRange(param2, (int)((long)param3 + var5_long - this.field_b), this.field_a, (int)(var5_long - this.field_d), var9);
             }
             this.field_b = this.field_b + (long)param0;
             return;

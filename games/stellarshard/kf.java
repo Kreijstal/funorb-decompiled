@@ -169,7 +169,7 @@ final class kf implements WidgetRenderer {
             }
             var14Lifetime3 = stackIn_15_0;
             var15 = param5 * var62[var13] + param4 * var64[var13] + param2 * var63[var13] >> 8;
-            stackIn_17_0 = ol.field_g;
+            stackIn_17_0 = GrowableIntArray.field_g;
             if (0 <= var15) {
               stackIn_18_1 = var15;
             } else {

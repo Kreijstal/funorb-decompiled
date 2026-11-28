@@ -820,6 +820,14 @@
       "renamedSymbol": "C:JavaScriptBridge"
     },
     {
+      "symbol": "C:mc",
+      "originalName": "mc",
+      "to": "ByteArrayPoolSupport",
+      "evidence": "Provides reusable byte arrays in fixed-size buckets and allocates a fresh array when none is available.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:ByteArrayPoolSupport"
+    },
+    {
       "symbol": "C:me",
       "originalName": "me",
       "to": "MouseWheelInput",
@@ -1196,6 +1204,14 @@
       "renamedSymbol": "C:SectorCacheStore"
     },
     {
+      "symbol": "C:ug",
+      "originalName": "ug",
+      "to": "ArrayBlockSupport",
+      "evidence": "Implements in-place fills and overlap-safe array copies with unrolled loops.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:ArrayBlockSupport"
+    },
+    {
       "symbol": "C:uh",
       "originalName": "uh",
       "to": "DualLinkNode",
@@ -1234,6 +1250,14 @@
       "evidence": "Compares the value with the paired input field and supplies feedback when the values do not match.",
       "confidence": "reviewed",
       "renamedSymbol": "C:MatchingFieldValidator"
+    },
+    {
+      "symbol": "C:ve",
+      "originalName": "ve",
+      "to": "GrowableIntArray",
+      "evidence": "Stores an indexed sequence of integers and expands its backing array when an index exceeds the capacity.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:GrowableIntArray"
     },
     {
       "symbol": "C:vi",
@@ -1868,6 +1892,14 @@
       "renamedSymbol": "M:b.clearStaticReferences(Z)V"
     },
     {
+      "symbol": "M:ba.a(JJ)J",
+      "originalName": "a",
+      "to": "bitwiseXor",
+      "evidence": "Source-purpose review: Returns the exclusive OR of the two primitive operands.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ba.bitwiseXor(JJ)J"
+    },
+    {
       "symbol": "M:ba.c(I)V",
       "originalName": "c",
       "to": "clearStaticReferences",
@@ -2244,6 +2276,14 @@
       "renamedSymbol": "M:PcmOutputWorker.clearStaticReferences(Z)V"
     },
     {
+      "symbol": "M:cl.a(II)I",
+      "originalName": "a",
+      "to": "bitwiseOr",
+      "evidence": "Source-purpose review: Returns the bitwise disjunction of the two primitive operands.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:cl.bitwiseOr(II)I"
+    },
+    {
       "symbol": "M:cl.d(B)V",
       "originalName": "d",
       "to": "clearStaticReferences",
@@ -2450,6 +2490,14 @@
       "evidence": "Device implementation closes and clears the retained line only when nonnull;the base implementation is empty. Preserve null state,close failures and exact ordering. Original-body SHA256 9265619237dc049c9efd5c01a5c74a7e99db1a67aa7ef3e2e396e54563e1bc57. Identifier-only naming. Retain exact full argument widths/domains,guards,all constants and diagnostic strings,integer overflow,FP/cast order,aliases,partial writes,allocation/call/exception order,declared modifiers and override/native bindings. No intentional native or class-name-literal edits;existing meaningful names remain unchanged. Full owning body variants,compiler-bound field/call identities,helper/interface definitions and service consumers reviewed;no whole-runtime equivalence claim.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AudioOutput.closeDevice()V"
+    },
+    {
+      "symbol": "M:dg.a(II)I",
+      "originalName": "a",
+      "to": "bitwiseXor",
+      "evidence": "Source-purpose review: Returns the exclusive OR of the two primitive operands.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:dg.bitwiseXor(II)I"
     },
     {
       "symbol": "M:dg.d(I)V",
@@ -3900,6 +3948,22 @@
       "renamedSymbol": "M:DisplayNameSelectionPanel.onNameSuggestionsRefreshRequested(I)V"
     },
     {
+      "symbol": "M:hg.a(IBLuj;Ljava/lang/String;ILjava/lang/String;)I",
+      "originalName": "a",
+      "to": "addLabeledFieldWithDefaultValidationMessage",
+      "evidence": "Source-purpose review: Adds the display name field with the form’s default validation message height.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DisplayNameSelectionPanel.addLabeledFieldWithDefaultValidationMessage(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I"
+    },
+    {
+      "symbol": "M:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I",
+      "originalName": "a",
+      "to": "addLabeledFieldWithValidationMessage",
+      "evidence": "Source-purpose review: Adds the display name field with its label and the validator message below it, then returns their combined height.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DisplayNameSelectionPanel.addLabeledFieldWithValidationMessage(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I"
+    },
+    {
       "symbol": "M:hg.a(IILuj;I)V",
       "originalName": "a",
       "to": "updatePointer",
@@ -4530,6 +4594,14 @@
       "evidence": "Source-purpose review: Draws a single layer of the widget, using the caller’s origin and the widget’s renderer.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AlphaWidgetContainer.drawWidget(IIBI)V"
+    },
+    {
+      "symbol": "M:ie.a(JJ)J",
+      "originalName": "a",
+      "to": "bitwiseOr",
+      "evidence": "Source-purpose review: Returns the bitwise disjunction of the two primitive operands.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AlphaWidgetContainer.bitwiseOr(JJ)J"
     },
     {
       "symbol": "M:ie.g(I)V",
@@ -5996,6 +6068,14 @@
       "renamedSymbol": "M:JavaScriptBridge.callWithArguments([Ljava/lang/Object;Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;"
     },
     {
+      "symbol": "M:mc.a(II)[B",
+      "originalName": "a",
+      "to": "acquireByteArray",
+      "evidence": "Source-purpose review: Removes a reusable byte array from the matching size bucket or allocates a new array.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ByteArrayPoolSupport.acquireByteArray(II)[B"
+    },
+    {
       "symbol": "M:md.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -7380,6 +7460,14 @@
       "renamedSymbol": "M:r.sleepIgnoringInterrupts(IJ)V"
     },
     {
+      "symbol": "M:r.a(JJ)J",
+      "originalName": "a",
+      "to": "bitwiseAnd",
+      "evidence": "Source-purpose review: Returns the bitwise conjunction of the two primitive operands.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:r.bitwiseAnd(JJ)J"
+    },
+    {
       "symbol": "M:ra.d(B)V",
       "originalName": "d",
       "to": "clearDeclaredStaticReferences",
@@ -8761,7 +8849,7 @@
       "to": "copyByteRange",
       "evidence": "Complete primitive byte copy reviewed: same-array equal-index no-op, forward eight-byte blocks and tail, backward eight-byte blocks and tail for overlap. Preserve integer arithmetic, all bounds/partial-write behavior and pointer order.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ug.copyByteRange([BI[BII)V"
+      "renamedSymbol": "M:ArrayBlockSupport.copyByteRange([BI[BII)V"
     },
     {
       "symbol": "M:ug.a([III)V",
@@ -8769,7 +8857,31 @@
       "to": "clearInts",
       "evidence": "Zero an int-array segment using the original eight sequential stores per unrolled iteration and scalar tail. Retain start/count arithmetic overflow,null/index exceptions and partial writes;do not substitute a library fill. Complete original-body SHA256 b3d53399488c4b1eb25cb619da620df3b5fedda0a1a29e454ee47e028fd4bdb6. Naming only;preserve full original JVM parameter widths/domains,all operators/constants/diagnostic strings,integer overflow,FP/cast order,shared aliases,partial writes,allocation/call/exception order,and declared modifiers. No class,field,parameter,local,native or class-name-literal changes. Existing meaningful aliases remain unchanged except the one explicitly reviewed Wizard Run correction.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ug.clearInts([III)V"
+      "renamedSymbol": "M:ArrayBlockSupport.clearInts([III)V"
+    },
+    {
+      "symbol": "M:ug.a([IIII)V",
+      "originalName": "a",
+      "to": "fillInts",
+      "evidence": "Source-purpose review: Fills the requested range of an integer array with the supplied value.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArrayBlockSupport.fillInts([IIII)V"
+    },
+    {
+      "symbol": "M:ug.a([II[III)V",
+      "originalName": "a",
+      "to": "copyIntRange",
+      "evidence": "Source-purpose review: Copies an integer range between arrays, copying backward when the source and destination overlap in the same array.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArrayBlockSupport.copyIntRange([II[III)V"
+    },
+    {
+      "symbol": "M:ug.a([Ljava/lang/Object;I[Ljava/lang/Object;II)V",
+      "originalName": "a",
+      "to": "copyObjectRange",
+      "evidence": "Source-purpose review: Copies an object reference range between arrays, copying backward when the source and destination overlap in the same array.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArrayBlockSupport.copyObjectRange([Ljava/lang/Object;I[Ljava/lang/Object;II)V"
     },
     {
       "symbol": "M:uh.a(I)V",
@@ -9033,7 +9145,63 @@
       "to": "resetStaticState",
       "evidence": "Source-purpose review: Resets declared static state through 2 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ve.resetStaticState(I)V"
+      "renamedSymbol": "M:GrowableIntArray.resetStaticState(I)V"
+    },
+    {
+      "symbol": "M:ve.a(IB)I",
+      "originalName": "a",
+      "to": "computeCapacity",
+      "evidence": "Source-purpose review: Calculates the capacity needed to contain the requested index using the configured growth policy.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GrowableIntArray.computeCapacity(IB)I"
+    },
+    {
+      "symbol": "M:ve.a(II)I",
+      "originalName": "a",
+      "to": "get",
+      "evidence": "Source-purpose review: Returns the value stored at the requested index and reports an out-of-range index.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GrowableIntArray.get(II)I"
+    },
+    {
+      "symbol": "M:ve.a(IIZ)V",
+      "originalName": "a",
+      "to": "set",
+      "evidence": "Source-purpose review: Stores an integer at the index, increasing the logical size and growing the backing array when needed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GrowableIntArray.set(IIZ)V"
+    },
+    {
+      "symbol": "M:ve.a(Z)I",
+      "originalName": "a",
+      "to": "size",
+      "evidence": "Source-purpose review: Returns the number of stored entries as one more than the last occupied index.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GrowableIntArray.size(Z)I"
+    },
+    {
+      "symbol": "M:ve.b(II)V",
+      "originalName": "b",
+      "to": "append",
+      "evidence": "Source-purpose review: Inserts an integer at the next index after the current last entry.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GrowableIntArray.append(II)V"
+    },
+    {
+      "symbol": "M:ve.c(II)V",
+      "originalName": "c",
+      "to": "removeAt",
+      "evidence": "Source-purpose review: Removes the element at the index, shifts subsequent entries left, and reduces the logical size.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GrowableIntArray.removeAt(II)V"
+    },
+    {
+      "symbol": "M:ve.d(II)V",
+      "originalName": "d",
+      "to": "grow",
+      "evidence": "Source-purpose review: Allocates a larger backing array and copies the existing entries into it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GrowableIntArray.grow(II)V"
     },
     {
       "symbol": "M:vf.a(Z)V",
@@ -9378,6 +9546,14 @@
       "evidence": "Source-purpose review: Returns the child whose focus test succeeds, or null when none is focused.",
       "confidence": "reviewed",
       "renamedSymbol": "M:DequeWidgetContainer.getFocusedChild(I)LUiWidget;"
+    },
+    {
+      "symbol": "M:w.a(II)I",
+      "originalName": "a",
+      "to": "bitwiseAnd",
+      "evidence": "Source-purpose review: Returns the bitwise conjunction of the two primitive operands.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:w.bitwiseAnd(II)I"
     },
     {
       "symbol": "M:w.a(IZIILuj;)V",
@@ -11579,9 +11755,9 @@
     },
     {
       "symbol": "C:mc",
-      "renamedSymbol": "C:mc",
+      "renamedSymbol": "C:ByteArrayPoolSupport",
       "originalName": "mc",
-      "renamedName": "mc",
+      "renamedName": "ByteArrayPoolSupport",
       "declaration": {
         "file": "mc.java",
         "start": 50,
@@ -12679,9 +12855,9 @@
     },
     {
       "symbol": "C:ug",
-      "renamedSymbol": "C:ug",
+      "renamedSymbol": "C:ArrayBlockSupport",
       "originalName": "ug",
-      "renamedName": "ug",
+      "renamedName": "ArrayBlockSupport",
       "declaration": {
         "file": "ug.java",
         "start": 50,
@@ -12789,9 +12965,9 @@
     },
     {
       "symbol": "C:ve",
-      "renamedSymbol": "C:ve",
+      "renamedSymbol": "C:GrowableIntArray",
       "originalName": "ve",
-      "renamedName": "ve",
+      "renamedName": "GrowableIntArray",
       "declaration": {
         "file": "ve.java",
         "start": 50,
@@ -25923,7 +26099,7 @@
     },
     {
       "symbol": "F:mc.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:mc.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:ByteArrayPoolSupport.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -25934,7 +26110,7 @@
     },
     {
       "symbol": "F:mc.field_b:I",
-      "renamedSymbol": "F:mc.field_b:I",
+      "renamedSymbol": "F:ByteArrayPoolSupport.field_b:I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -25945,7 +26121,7 @@
     },
     {
       "symbol": "F:mc.field_c:I",
-      "renamedSymbol": "F:mc.field_c:I",
+      "renamedSymbol": "F:ByteArrayPoolSupport.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -25956,7 +26132,7 @@
     },
     {
       "symbol": "F:mc.field_d:Ljava/lang/String;",
-      "renamedSymbol": "F:mc.field_d:Ljava/lang/String;",
+      "renamedSymbol": "F:ByteArrayPoolSupport.field_d:Ljava/lang/String;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -25967,7 +26143,7 @@
     },
     {
       "symbol": "F:mc.field_e:Ljava/lang/String;",
-      "renamedSymbol": "F:mc.field_e:Ljava/lang/String;",
+      "renamedSymbol": "F:ByteArrayPoolSupport.field_e:Ljava/lang/String;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -25978,7 +26154,7 @@
     },
     {
       "symbol": "F:mc.field_f:I",
-      "renamedSymbol": "F:mc.field_f:I",
+      "renamedSymbol": "F:ByteArrayPoolSupport.field_f:I",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -25989,7 +26165,7 @@
     },
     {
       "symbol": "F:mc.field_g:[B",
-      "renamedSymbol": "F:mc.field_g:[B",
+      "renamedSymbol": "F:ByteArrayPoolSupport.field_g:[B",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -26000,7 +26176,7 @@
     },
     {
       "symbol": "F:mc.field_h:I",
-      "renamedSymbol": "F:mc.field_h:I",
+      "renamedSymbol": "F:ByteArrayPoolSupport.field_h:I",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -26011,7 +26187,7 @@
     },
     {
       "symbol": "F:mc.field_i:Ljava/lang/String;",
-      "renamedSymbol": "F:mc.field_i:Ljava/lang/String;",
+      "renamedSymbol": "F:ByteArrayPoolSupport.field_i:Ljava/lang/String;",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -26022,7 +26198,7 @@
     },
     {
       "symbol": "F:mc.field_j:[I",
-      "renamedSymbol": "F:mc.field_j:[I",
+      "renamedSymbol": "F:ByteArrayPoolSupport.field_j:[I",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -31786,7 +31962,7 @@
     },
     {
       "symbol": "F:sj.field_F:Lve;",
-      "renamedSymbol": "F:sj.field_F:Lve;",
+      "renamedSymbol": "F:sj.field_F:LGrowableIntArray;",
       "originalName": "field_F",
       "renamedName": "field_F",
       "declaration": {
@@ -34239,7 +34415,7 @@
     },
     {
       "symbol": "F:ve.field_a:I",
-      "renamedSymbol": "F:ve.field_a:I",
+      "renamedSymbol": "F:GrowableIntArray.field_a:I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -34250,7 +34426,7 @@
     },
     {
       "symbol": "F:ve.field_b:Z",
-      "renamedSymbol": "F:ve.field_b:Z",
+      "renamedSymbol": "F:GrowableIntArray.field_b:Z",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -34261,7 +34437,7 @@
     },
     {
       "symbol": "F:ve.field_c:I",
-      "renamedSymbol": "F:ve.field_c:I",
+      "renamedSymbol": "F:GrowableIntArray.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -34272,7 +34448,7 @@
     },
     {
       "symbol": "F:ve.field_d:Z",
-      "renamedSymbol": "F:ve.field_d:Z",
+      "renamedSymbol": "F:GrowableIntArray.field_d:Z",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -34283,7 +34459,7 @@
     },
     {
       "symbol": "F:ve.field_e:[I",
-      "renamedSymbol": "F:ve.field_e:[I",
+      "renamedSymbol": "F:GrowableIntArray.field_e:[I",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -34294,7 +34470,7 @@
     },
     {
       "symbol": "F:ve.field_f:Llf;",
-      "renamedSymbol": "F:ve.field_f:LProgressDialog;",
+      "renamedSymbol": "F:GrowableIntArray.field_f:LProgressDialog;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -34305,7 +34481,7 @@
     },
     {
       "symbol": "F:ve.field_g:Ljava/lang/String;",
-      "renamedSymbol": "F:ve.field_g:Ljava/lang/String;",
+      "renamedSymbol": "F:GrowableIntArray.field_g:Ljava/lang/String;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -69780,7 +69956,7 @@
     },
     {
       "symbol": "L:hg.a(IBLuj;Ljava/lang/String;ILjava/lang/String;)I#0",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#0",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithDefaultValidationMessage(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -69791,7 +69967,7 @@
     },
     {
       "symbol": "L:hg.a(IBLuj;Ljava/lang/String;ILjava/lang/String;)I#1",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#1",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithDefaultValidationMessage(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -69802,7 +69978,7 @@
     },
     {
       "symbol": "L:hg.a(IBLuj;Ljava/lang/String;ILjava/lang/String;)I#10",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#10",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithDefaultValidationMessage(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -69813,7 +69989,7 @@
     },
     {
       "symbol": "L:hg.a(IBLuj;Ljava/lang/String;ILjava/lang/String;)I#2",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#2",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithDefaultValidationMessage(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -69824,7 +70000,7 @@
     },
     {
       "symbol": "L:hg.a(IBLuj;Ljava/lang/String;ILjava/lang/String;)I#3",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#3",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithDefaultValidationMessage(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#3",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -69835,7 +70011,7 @@
     },
     {
       "symbol": "L:hg.a(IBLuj;Ljava/lang/String;ILjava/lang/String;)I#4",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#4",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithDefaultValidationMessage(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#4",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -69846,7 +70022,7 @@
     },
     {
       "symbol": "L:hg.a(IBLuj;Ljava/lang/String;ILjava/lang/String;)I#5",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#5",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithDefaultValidationMessage(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#5",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -69857,7 +70033,7 @@
     },
     {
       "symbol": "L:hg.a(IBLuj;Ljava/lang/String;ILjava/lang/String;)I#6",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#6",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithDefaultValidationMessage(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#6",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -69868,7 +70044,7 @@
     },
     {
       "symbol": "L:hg.a(IBLuj;Ljava/lang/String;ILjava/lang/String;)I#7",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#7",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithDefaultValidationMessage(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#7",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -69879,7 +70055,7 @@
     },
     {
       "symbol": "L:hg.a(IBLuj;Ljava/lang/String;ILjava/lang/String;)I#8",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#8",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithDefaultValidationMessage(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#8",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -69890,7 +70066,7 @@
     },
     {
       "symbol": "L:hg.a(IBLuj;Ljava/lang/String;ILjava/lang/String;)I#9",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#9",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithDefaultValidationMessage(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -69901,7 +70077,7 @@
     },
     {
       "symbol": "L:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I#0",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#0",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithValidationMessage(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#0",
       "originalName": "discarded$1",
       "renamedName": "discarded$1",
       "declaration": {
@@ -69912,7 +70088,7 @@
     },
     {
       "symbol": "L:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I#1",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#1",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithValidationMessage(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#1",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -69923,7 +70099,7 @@
     },
     {
       "symbol": "L:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I#10",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#10",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithValidationMessage(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#10",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -69934,7 +70110,7 @@
     },
     {
       "symbol": "L:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I#11",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#11",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithValidationMessage(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#11",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -69945,7 +70121,7 @@
     },
     {
       "symbol": "L:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I#12",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#12",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithValidationMessage(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#12",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -69956,7 +70132,7 @@
     },
     {
       "symbol": "L:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I#13",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#13",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithValidationMessage(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -69967,7 +70143,7 @@
     },
     {
       "symbol": "L:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I#2",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#2",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithValidationMessage(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#2",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -69978,7 +70154,7 @@
     },
     {
       "symbol": "L:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I#3",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#3",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithValidationMessage(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#3",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -69989,7 +70165,7 @@
     },
     {
       "symbol": "L:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I#4",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#4",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithValidationMessage(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#4",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -70000,7 +70176,7 @@
     },
     {
       "symbol": "L:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I#5",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#5",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithValidationMessage(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#5",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -70011,7 +70187,7 @@
     },
     {
       "symbol": "L:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I#6",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#6",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithValidationMessage(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#6",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -70022,7 +70198,7 @@
     },
     {
       "symbol": "L:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I#7",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#7",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithValidationMessage(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#7",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -70033,7 +70209,7 @@
     },
     {
       "symbol": "L:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I#8",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#8",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithValidationMessage(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#8",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -70044,7 +70220,7 @@
     },
     {
       "symbol": "L:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I#9",
-      "renamedSymbol": "L:DisplayNameSelectionPanel.a(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#9",
+      "renamedSymbol": "L:DisplayNameSelectionPanel.addLabeledFieldWithValidationMessage(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#9",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -99931,7 +100107,7 @@
     },
     {
       "symbol": "L:mc.a(B)V#0",
-      "renamedSymbol": "L:mc.a(B)V#0",
+      "renamedSymbol": "L:ByteArrayPoolSupport.a(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -99942,7 +100118,7 @@
     },
     {
       "symbol": "L:mc.a(II)[B#0",
-      "renamedSymbol": "L:mc.a(II)[B#0",
+      "renamedSymbol": "L:ByteArrayPoolSupport.acquireByteArray(II)[B#0",
       "originalName": "fieldTemp$3",
       "renamedName": "fieldTemp$3",
       "declaration": {
@@ -99953,7 +100129,7 @@
     },
     {
       "symbol": "L:mc.a(II)[B#1",
-      "renamedSymbol": "L:mc.a(II)[B#1",
+      "renamedSymbol": "L:ByteArrayPoolSupport.acquireByteArray(II)[B#1",
       "originalName": "fieldTemp$4",
       "renamedName": "fieldTemp$4",
       "declaration": {
@@ -99964,7 +100140,7 @@
     },
     {
       "symbol": "L:mc.a(II)[B#2",
-      "renamedSymbol": "L:mc.a(II)[B#2",
+      "renamedSymbol": "L:ByteArrayPoolSupport.acquireByteArray(II)[B#2",
       "originalName": "fieldTemp$5",
       "renamedName": "fieldTemp$5",
       "declaration": {
@@ -99975,7 +100151,7 @@
     },
     {
       "symbol": "L:mc.a(II)[B#3",
-      "renamedSymbol": "L:mc.a(II)[B#3",
+      "renamedSymbol": "L:ByteArrayPoolSupport.acquireByteArray(II)[B#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -99986,7 +100162,7 @@
     },
     {
       "symbol": "L:mc.a(II)[B#4",
-      "renamedSymbol": "L:mc.a(II)[B#4",
+      "renamedSymbol": "L:ByteArrayPoolSupport.acquireByteArray(II)[B#4",
       "originalName": "dupTemp$6",
       "renamedName": "dupTemp$6",
       "declaration": {
@@ -99997,7 +100173,7 @@
     },
     {
       "symbol": "L:mc.a(II)[B#5",
-      "renamedSymbol": "L:mc.a(II)[B#5",
+      "renamedSymbol": "L:ByteArrayPoolSupport.acquireByteArray(II)[B#5",
       "originalName": "arrayValue$7",
       "renamedName": "arrayValue$7",
       "declaration": {
@@ -100008,7 +100184,7 @@
     },
     {
       "symbol": "L:mc.a(II)[B#6",
-      "renamedSymbol": "L:mc.a(II)[B#6",
+      "renamedSymbol": "L:ByteArrayPoolSupport.acquireByteArray(II)[B#6",
       "originalName": "var2_ref_byte__",
       "renamedName": "var2_ref_byte__",
       "declaration": {
@@ -100019,7 +100195,7 @@
     },
     {
       "symbol": "L:mc.a(II)[B#7",
-      "renamedSymbol": "L:mc.a(II)[B#7",
+      "renamedSymbol": "L:ByteArrayPoolSupport.acquireByteArray(II)[B#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -100030,7 +100206,7 @@
     },
     {
       "symbol": "L:mc.a(II)[B#8",
-      "renamedSymbol": "L:mc.a(II)[B#8",
+      "renamedSymbol": "L:ByteArrayPoolSupport.acquireByteArray(II)[B#8",
       "originalName": "var2_ref_byte__Lifetime1",
       "renamedName": "var2_ref_byte__Lifetime1",
       "declaration": {
@@ -100041,7 +100217,7 @@
     },
     {
       "symbol": "L:mc.a(II)[B#9",
-      "renamedSymbol": "L:mc.a(II)[B#9",
+      "renamedSymbol": "L:ByteArrayPoolSupport.acquireByteArray(II)[B#9",
       "originalName": "var2_ref_byte__Lifetime2",
       "renamedName": "var2_ref_byte__Lifetime2",
       "declaration": {
@@ -100052,7 +100228,7 @@
     },
     {
       "symbol": "L:mc.a(I[Lhl;IIII)V#0",
-      "renamedSymbol": "L:mc.a(I[LSprite;IIII)V#0",
+      "renamedSymbol": "L:ByteArrayPoolSupport.a(I[LSprite;IIII)V#0",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -100063,7 +100239,7 @@
     },
     {
       "symbol": "L:mc.a(I[Lhl;IIII)V#1",
-      "renamedSymbol": "L:mc.a(I[LSprite;IIII)V#1",
+      "renamedSymbol": "L:ByteArrayPoolSupport.a(I[LSprite;IIII)V#1",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -100074,7 +100250,7 @@
     },
     {
       "symbol": "L:mc.a(I[Lhl;IIII)V#10",
-      "renamedSymbol": "L:mc.a(I[LSprite;IIII)V#10",
+      "renamedSymbol": "L:ByteArrayPoolSupport.a(I[LSprite;IIII)V#10",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -100085,7 +100261,7 @@
     },
     {
       "symbol": "L:mc.a(I[Lhl;IIII)V#11",
-      "renamedSymbol": "L:mc.a(I[LSprite;IIII)V#11",
+      "renamedSymbol": "L:ByteArrayPoolSupport.a(I[LSprite;IIII)V#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -100096,7 +100272,7 @@
     },
     {
       "symbol": "L:mc.a(I[Lhl;IIII)V#2",
-      "renamedSymbol": "L:mc.a(I[LSprite;IIII)V#2",
+      "renamedSymbol": "L:ByteArrayPoolSupport.a(I[LSprite;IIII)V#2",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -100107,7 +100283,7 @@
     },
     {
       "symbol": "L:mc.a(I[Lhl;IIII)V#3",
-      "renamedSymbol": "L:mc.a(I[LSprite;IIII)V#3",
+      "renamedSymbol": "L:ByteArrayPoolSupport.a(I[LSprite;IIII)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -100118,7 +100294,7 @@
     },
     {
       "symbol": "L:mc.a(I[Lhl;IIII)V#4",
-      "renamedSymbol": "L:mc.a(I[LSprite;IIII)V#4",
+      "renamedSymbol": "L:ByteArrayPoolSupport.a(I[LSprite;IIII)V#4",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -100129,7 +100305,7 @@
     },
     {
       "symbol": "L:mc.a(I[Lhl;IIII)V#5",
-      "renamedSymbol": "L:mc.a(I[LSprite;IIII)V#5",
+      "renamedSymbol": "L:ByteArrayPoolSupport.a(I[LSprite;IIII)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -100140,7 +100316,7 @@
     },
     {
       "symbol": "L:mc.a(I[Lhl;IIII)V#6",
-      "renamedSymbol": "L:mc.a(I[LSprite;IIII)V#6",
+      "renamedSymbol": "L:ByteArrayPoolSupport.a(I[LSprite;IIII)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -100151,7 +100327,7 @@
     },
     {
       "symbol": "L:mc.a(I[Lhl;IIII)V#7",
-      "renamedSymbol": "L:mc.a(I[LSprite;IIII)V#7",
+      "renamedSymbol": "L:ByteArrayPoolSupport.a(I[LSprite;IIII)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -100162,7 +100338,7 @@
     },
     {
       "symbol": "L:mc.a(I[Lhl;IIII)V#8",
-      "renamedSymbol": "L:mc.a(I[LSprite;IIII)V#8",
+      "renamedSymbol": "L:ByteArrayPoolSupport.a(I[LSprite;IIII)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -100173,7 +100349,7 @@
     },
     {
       "symbol": "L:mc.a(I[Lhl;IIII)V#9",
-      "renamedSymbol": "L:mc.a(I[LSprite;IIII)V#9",
+      "renamedSymbol": "L:ByteArrayPoolSupport.a(I[LSprite;IIII)V#9",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -100184,7 +100360,7 @@
     },
     {
       "symbol": "L:mc.a(Ljava/lang/String;I)Z#0",
-      "renamedSymbol": "L:mc.a(Ljava/lang/String;I)Z#0",
+      "renamedSymbol": "L:ByteArrayPoolSupport.a(Ljava/lang/String;I)Z#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -100195,7 +100371,7 @@
     },
     {
       "symbol": "L:mc.a(Ljava/lang/String;I)Z#1",
-      "renamedSymbol": "L:mc.a(Ljava/lang/String;I)Z#1",
+      "renamedSymbol": "L:ByteArrayPoolSupport.a(Ljava/lang/String;I)Z#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -100206,7 +100382,7 @@
     },
     {
       "symbol": "L:mc.a(Ljava/lang/String;I)Z#2",
-      "renamedSymbol": "L:mc.a(Ljava/lang/String;I)Z#2",
+      "renamedSymbol": "L:ByteArrayPoolSupport.a(Ljava/lang/String;I)Z#2",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -100217,7 +100393,7 @@
     },
     {
       "symbol": "L:mc.a(Ljava/lang/String;I)Z#3",
-      "renamedSymbol": "L:mc.a(Ljava/lang/String;I)Z#3",
+      "renamedSymbol": "L:ByteArrayPoolSupport.a(Ljava/lang/String;I)Z#3",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -100228,7 +100404,7 @@
     },
     {
       "symbol": "L:mc.a(Ljava/lang/String;I)Z#4",
-      "renamedSymbol": "L:mc.a(Ljava/lang/String;I)Z#4",
+      "renamedSymbol": "L:ByteArrayPoolSupport.a(Ljava/lang/String;I)Z#4",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -100239,7 +100415,7 @@
     },
     {
       "symbol": "L:mc.a(Ljava/lang/String;I)Z#5",
-      "renamedSymbol": "L:mc.a(Ljava/lang/String;I)Z#5",
+      "renamedSymbol": "L:ByteArrayPoolSupport.a(Ljava/lang/String;I)Z#5",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -100250,7 +100426,7 @@
     },
     {
       "symbol": "L:mc.a(Ljava/lang/String;I)Z#6",
-      "renamedSymbol": "L:mc.a(Ljava/lang/String;I)Z#6",
+      "renamedSymbol": "L:ByteArrayPoolSupport.a(Ljava/lang/String;I)Z#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -100261,7 +100437,7 @@
     },
     {
       "symbol": "L:mc.a(Ljava/lang/String;I)Z#7",
-      "renamedSymbol": "L:mc.a(Ljava/lang/String;I)Z#7",
+      "renamedSymbol": "L:ByteArrayPoolSupport.a(Ljava/lang/String;I)Z#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -137023,7 +137199,7 @@
     },
     {
       "symbol": "L:ug.a([BIIB)V#0",
-      "renamedSymbol": "L:ug.a([BIIB)V#0",
+      "renamedSymbol": "L:ArrayBlockSupport.a([BIIB)V#0",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -137034,7 +137210,7 @@
     },
     {
       "symbol": "L:ug.a([BIIB)V#1",
-      "renamedSymbol": "L:ug.a([BIIB)V#1",
+      "renamedSymbol": "L:ArrayBlockSupport.a([BIIB)V#1",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -137045,7 +137221,7 @@
     },
     {
       "symbol": "L:ug.a([BIIB)V#2",
-      "renamedSymbol": "L:ug.a([BIIB)V#2",
+      "renamedSymbol": "L:ArrayBlockSupport.a([BIIB)V#2",
       "originalName": "incrementValue$2",
       "renamedName": "incrementValue$2",
       "declaration": {
@@ -137056,7 +137232,7 @@
     },
     {
       "symbol": "L:ug.a([BIIB)V#3",
-      "renamedSymbol": "L:ug.a([BIIB)V#3",
+      "renamedSymbol": "L:ArrayBlockSupport.a([BIIB)V#3",
       "originalName": "incrementValue$3",
       "renamedName": "incrementValue$3",
       "declaration": {
@@ -137067,7 +137243,7 @@
     },
     {
       "symbol": "L:ug.a([BIIB)V#4",
-      "renamedSymbol": "L:ug.a([BIIB)V#4",
+      "renamedSymbol": "L:ArrayBlockSupport.a([BIIB)V#4",
       "originalName": "incrementValue$4",
       "renamedName": "incrementValue$4",
       "declaration": {
@@ -137078,7 +137254,7 @@
     },
     {
       "symbol": "L:ug.a([BIIB)V#5",
-      "renamedSymbol": "L:ug.a([BIIB)V#5",
+      "renamedSymbol": "L:ArrayBlockSupport.a([BIIB)V#5",
       "originalName": "incrementValue$5",
       "renamedName": "incrementValue$5",
       "declaration": {
@@ -137089,7 +137265,7 @@
     },
     {
       "symbol": "L:ug.a([BIIB)V#6",
-      "renamedSymbol": "L:ug.a([BIIB)V#6",
+      "renamedSymbol": "L:ArrayBlockSupport.a([BIIB)V#6",
       "originalName": "incrementValue$6",
       "renamedName": "incrementValue$6",
       "declaration": {
@@ -137100,7 +137276,7 @@
     },
     {
       "symbol": "L:ug.a([BIIB)V#7",
-      "renamedSymbol": "L:ug.a([BIIB)V#7",
+      "renamedSymbol": "L:ArrayBlockSupport.a([BIIB)V#7",
       "originalName": "incrementValue$7",
       "renamedName": "incrementValue$7",
       "declaration": {
@@ -137111,7 +137287,7 @@
     },
     {
       "symbol": "L:ug.a([BIIB)V#8",
-      "renamedSymbol": "L:ug.a([BIIB)V#8",
+      "renamedSymbol": "L:ArrayBlockSupport.a([BIIB)V#8",
       "originalName": "incrementValue$8",
       "renamedName": "incrementValue$8",
       "declaration": {
@@ -140752,7 +140928,7 @@
     },
     {
       "symbol": "L:ve.a(IB)I#0",
-      "renamedSymbol": "L:ve.a(IB)I#0",
+      "renamedSymbol": "L:GrowableIntArray.computeCapacity(IB)I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -140763,7 +140939,7 @@
     },
     {
       "symbol": "L:ve.a(IB)I#1",
-      "renamedSymbol": "L:ve.a(IB)I#1",
+      "renamedSymbol": "L:GrowableIntArray.computeCapacity(IB)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -140774,7 +140950,7 @@
     },
     {
       "symbol": "L:ve.c(II)V#0",
-      "renamedSymbol": "L:ve.c(II)V#0",
+      "renamedSymbol": "L:GrowableIntArray.removeAt(II)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -140785,7 +140961,7 @@
     },
     {
       "symbol": "L:ve.d(II)V#0",
-      "renamedSymbol": "L:ve.d(II)V#0",
+      "renamedSymbol": "L:GrowableIntArray.grow(II)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -140796,7 +140972,7 @@
     },
     {
       "symbol": "L:ve.d(II)V#1",
-      "renamedSymbol": "L:ve.d(II)V#1",
+      "renamedSymbol": "L:GrowableIntArray.grow(II)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -151642,9 +151818,9 @@
     },
     {
       "symbol": "M:ba.a(JJ)J",
-      "renamedSymbol": "M:ba.a(JJ)J",
+      "renamedSymbol": "M:ba.bitwiseXor(JJ)J",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "bitwiseXor",
       "declaration": {
         "file": "ba.java",
         "start": 3958,
@@ -153028,9 +153204,9 @@
     },
     {
       "symbol": "M:cl.a(II)I",
-      "renamedSymbol": "M:cl.a(II)I",
+      "renamedSymbol": "M:cl.bitwiseOr(II)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "bitwiseOr",
       "declaration": {
         "file": "cl.java",
         "start": 129,
@@ -153523,9 +153699,9 @@
     },
     {
       "symbol": "M:dg.a(II)I",
-      "renamedSymbol": "M:dg.a(II)I",
+      "renamedSymbol": "M:dg.bitwiseXor(II)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "bitwiseXor",
       "declaration": {
         "file": "dg.java",
         "start": 840,
@@ -157648,9 +157824,9 @@
     },
     {
       "symbol": "M:hg.a(IBLuj;Ljava/lang/String;ILjava/lang/String;)I",
-      "renamedSymbol": "M:DisplayNameSelectionPanel.a(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I",
+      "renamedSymbol": "M:DisplayNameSelectionPanel.addLabeledFieldWithDefaultValidationMessage(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addLabeledFieldWithDefaultValidationMessage",
       "declaration": {
         "file": "hg.java",
         "start": 11489,
@@ -157659,9 +157835,9 @@
     },
     {
       "symbol": "M:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I",
-      "renamedSymbol": "M:DisplayNameSelectionPanel.a(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I",
+      "renamedSymbol": "M:DisplayNameSelectionPanel.addLabeledFieldWithValidationMessage(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addLabeledFieldWithValidationMessage",
       "declaration": {
         "file": "hg.java",
         "start": 1145,
@@ -158847,9 +159023,9 @@
     },
     {
       "symbol": "M:ie.a(JJ)J",
-      "renamedSymbol": "M:AlphaWidgetContainer.a(JJ)J",
+      "renamedSymbol": "M:AlphaWidgetContainer.bitwiseOr(JJ)J",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "bitwiseOr",
       "declaration": {
         "file": "ie.java",
         "start": 277,
@@ -162664,7 +162840,7 @@
     },
     {
       "symbol": "M:mc.a(B)V",
-      "renamedSymbol": "M:mc.a(B)V",
+      "renamedSymbol": "M:ByteArrayPoolSupport.a(B)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -162675,9 +162851,9 @@
     },
     {
       "symbol": "M:mc.a(II)[B",
-      "renamedSymbol": "M:mc.a(II)[B",
+      "renamedSymbol": "M:ByteArrayPoolSupport.acquireByteArray(II)[B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "acquireByteArray",
       "declaration": {
         "file": "mc.java",
         "start": 1824,
@@ -162686,7 +162862,7 @@
     },
     {
       "symbol": "M:mc.a(I[Lhl;IIII)V",
-      "renamedSymbol": "M:mc.a(I[LSprite;IIII)V",
+      "renamedSymbol": "M:ByteArrayPoolSupport.a(I[LSprite;IIII)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -162697,7 +162873,7 @@
     },
     {
       "symbol": "M:mc.a(Ljava/lang/String;I)Z",
-      "renamedSymbol": "M:mc.a(Ljava/lang/String;I)Z",
+      "renamedSymbol": "M:ByteArrayPoolSupport.a(Ljava/lang/String;I)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -166778,9 +166954,9 @@
     },
     {
       "symbol": "M:r.a(JJ)J",
-      "renamedSymbol": "M:r.a(JJ)J",
+      "renamedSymbol": "M:r.bitwiseAnd(JJ)J",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "bitwiseAnd",
       "declaration": {
         "file": "r.java",
         "start": 366,
@@ -170342,7 +170518,7 @@
     },
     {
       "symbol": "M:ug.a([BIIB)V",
-      "renamedSymbol": "M:ug.a([BIIB)V",
+      "renamedSymbol": "M:ArrayBlockSupport.a([BIIB)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -170353,7 +170529,7 @@
     },
     {
       "symbol": "M:ug.a([BI[BII)V",
-      "renamedSymbol": "M:ug.copyByteRange([BI[BII)V",
+      "renamedSymbol": "M:ArrayBlockSupport.copyByteRange([BI[BII)V",
       "originalName": "a",
       "renamedName": "copyByteRange",
       "declaration": {
@@ -170364,7 +170540,7 @@
     },
     {
       "symbol": "M:ug.a([III)V",
-      "renamedSymbol": "M:ug.clearInts([III)V",
+      "renamedSymbol": "M:ArrayBlockSupport.clearInts([III)V",
       "originalName": "a",
       "renamedName": "clearInts",
       "declaration": {
@@ -170375,9 +170551,9 @@
     },
     {
       "symbol": "M:ug.a([IIII)V",
-      "renamedSymbol": "M:ug.a([IIII)V",
+      "renamedSymbol": "M:ArrayBlockSupport.fillInts([IIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "fillInts",
       "declaration": {
         "file": "ug.java",
         "start": 6347,
@@ -170386,9 +170562,9 @@
     },
     {
       "symbol": "M:ug.a([II[III)V",
-      "renamedSymbol": "M:ug.a([II[III)V",
+      "renamedSymbol": "M:ArrayBlockSupport.copyIntRange([II[III)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "copyIntRange",
       "declaration": {
         "file": "ug.java",
         "start": 8420,
@@ -170397,9 +170573,9 @@
     },
     {
       "symbol": "M:ug.a([Ljava/lang/Object;I[Ljava/lang/Object;II)V",
-      "renamedSymbol": "M:ug.a([Ljava/lang/Object;I[Ljava/lang/Object;II)V",
+      "renamedSymbol": "M:ArrayBlockSupport.copyObjectRange([Ljava/lang/Object;I[Ljava/lang/Object;II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "copyObjectRange",
       "declaration": {
         "file": "ug.java",
         "start": 77,
@@ -171101,9 +171277,9 @@
     },
     {
       "symbol": "M:ve.<init>()V",
-      "renamedSymbol": "M:ve.<init>()V",
+      "renamedSymbol": "M:GrowableIntArray.<init>()V",
       "originalName": "ve",
-      "renamedName": "ve",
+      "renamedName": "GrowableIntArray",
       "declaration": {
         "file": "ve.java",
         "start": 2771,
@@ -171112,7 +171288,7 @@
     },
     {
       "symbol": "M:ve.a(I)V",
-      "renamedSymbol": "M:ve.resetStaticState(I)V",
+      "renamedSymbol": "M:GrowableIntArray.resetStaticState(I)V",
       "originalName": "a",
       "renamedName": "resetStaticState",
       "declaration": {
@@ -171123,9 +171299,9 @@
     },
     {
       "symbol": "M:ve.a(IB)I",
-      "renamedSymbol": "M:ve.a(IB)I",
+      "renamedSymbol": "M:GrowableIntArray.computeCapacity(IB)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "computeCapacity",
       "declaration": {
         "file": "ve.java",
         "start": 1659,
@@ -171134,9 +171310,9 @@
     },
     {
       "symbol": "M:ve.a(II)I",
-      "renamedSymbol": "M:ve.a(II)I",
+      "renamedSymbol": "M:GrowableIntArray.get(II)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "get",
       "declaration": {
         "file": "ve.java",
         "start": 584,
@@ -171145,9 +171321,9 @@
     },
     {
       "symbol": "M:ve.a(IIZ)V",
-      "renamedSymbol": "M:ve.a(IIZ)V",
+      "renamedSymbol": "M:GrowableIntArray.set(IIZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "set",
       "declaration": {
         "file": "ve.java",
         "start": 886,
@@ -171156,9 +171332,9 @@
     },
     {
       "symbol": "M:ve.a(Z)I",
-      "renamedSymbol": "M:ve.a(Z)I",
+      "renamedSymbol": "M:GrowableIntArray.size(Z)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "size",
       "declaration": {
         "file": "ve.java",
         "start": 415,
@@ -171167,9 +171343,9 @@
     },
     {
       "symbol": "M:ve.b(II)V",
-      "renamedSymbol": "M:ve.b(II)V",
+      "renamedSymbol": "M:GrowableIntArray.append(II)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "append",
       "declaration": {
         "file": "ve.java",
         "start": 2671,
@@ -171178,9 +171354,9 @@
     },
     {
       "symbol": "M:ve.c(II)V",
-      "renamedSymbol": "M:ve.c(II)V",
+      "renamedSymbol": "M:GrowableIntArray.removeAt(II)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "removeAt",
       "declaration": {
         "file": "ve.java",
         "start": 2169,
@@ -171189,9 +171365,9 @@
     },
     {
       "symbol": "M:ve.d(II)V",
-      "renamedSymbol": "M:ve.d(II)V",
+      "renamedSymbol": "M:GrowableIntArray.grow(II)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "grow",
       "declaration": {
         "file": "ve.java",
         "start": 1422,
@@ -172014,9 +172190,9 @@
     },
     {
       "symbol": "M:w.a(II)I",
-      "renamedSymbol": "M:w.a(II)I",
+      "renamedSymbol": "M:w.bitwiseAnd(II)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "bitwiseAnd",
       "declaration": {
         "file": "w.java",
         "start": 10972,
@@ -175809,7 +175985,7 @@
     },
     {
       "symbol": "P:ba.a(JJ)J#0",
-      "renamedSymbol": "P:ba.a(JJ)J#0",
+      "renamedSymbol": "P:ba.bitwiseXor(JJ)J#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -175820,7 +175996,7 @@
     },
     {
       "symbol": "P:ba.a(JJ)J#1",
-      "renamedSymbol": "P:ba.a(JJ)J#1",
+      "renamedSymbol": "P:ba.bitwiseXor(JJ)J#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -178757,7 +178933,7 @@
     },
     {
       "symbol": "P:cl.a(II)I#0",
-      "renamedSymbol": "P:cl.a(II)I#0",
+      "renamedSymbol": "P:cl.bitwiseOr(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -178768,7 +178944,7 @@
     },
     {
       "symbol": "P:cl.a(II)I#1",
-      "renamedSymbol": "P:cl.a(II)I#1",
+      "renamedSymbol": "P:cl.bitwiseOr(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -179824,7 +180000,7 @@
     },
     {
       "symbol": "P:dg.a(II)I#0",
-      "renamedSymbol": "P:dg.a(II)I#0",
+      "renamedSymbol": "P:dg.bitwiseXor(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -179835,7 +180011,7 @@
     },
     {
       "symbol": "P:dg.a(II)I#1",
-      "renamedSymbol": "P:dg.a(II)I#1",
+      "renamedSymbol": "P:dg.bitwiseXor(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -190813,7 +190989,7 @@
     },
     {
       "symbol": "P:hg.a(IBLuj;Ljava/lang/String;ILjava/lang/String;)I#0",
-      "renamedSymbol": "P:DisplayNameSelectionPanel.a(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#0",
+      "renamedSymbol": "P:DisplayNameSelectionPanel.addLabeledFieldWithDefaultValidationMessage(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -190824,7 +191000,7 @@
     },
     {
       "symbol": "P:hg.a(IBLuj;Ljava/lang/String;ILjava/lang/String;)I#1",
-      "renamedSymbol": "P:DisplayNameSelectionPanel.a(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#1",
+      "renamedSymbol": "P:DisplayNameSelectionPanel.addLabeledFieldWithDefaultValidationMessage(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -190835,7 +191011,7 @@
     },
     {
       "symbol": "P:hg.a(IBLuj;Ljava/lang/String;ILjava/lang/String;)I#2",
-      "renamedSymbol": "P:DisplayNameSelectionPanel.a(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#2",
+      "renamedSymbol": "P:DisplayNameSelectionPanel.addLabeledFieldWithDefaultValidationMessage(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -190846,7 +191022,7 @@
     },
     {
       "symbol": "P:hg.a(IBLuj;Ljava/lang/String;ILjava/lang/String;)I#3",
-      "renamedSymbol": "P:DisplayNameSelectionPanel.a(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#3",
+      "renamedSymbol": "P:DisplayNameSelectionPanel.addLabeledFieldWithDefaultValidationMessage(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -190857,7 +191033,7 @@
     },
     {
       "symbol": "P:hg.a(IBLuj;Ljava/lang/String;ILjava/lang/String;)I#4",
-      "renamedSymbol": "P:DisplayNameSelectionPanel.a(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#4",
+      "renamedSymbol": "P:DisplayNameSelectionPanel.addLabeledFieldWithDefaultValidationMessage(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -190868,7 +191044,7 @@
     },
     {
       "symbol": "P:hg.a(IBLuj;Ljava/lang/String;ILjava/lang/String;)I#5",
-      "renamedSymbol": "P:DisplayNameSelectionPanel.a(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#5",
+      "renamedSymbol": "P:DisplayNameSelectionPanel.addLabeledFieldWithDefaultValidationMessage(IBLUiWidget;Ljava/lang/String;ILjava/lang/String;)I#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -190879,7 +191055,7 @@
     },
     {
       "symbol": "P:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I#0",
-      "renamedSymbol": "P:DisplayNameSelectionPanel.a(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#0",
+      "renamedSymbol": "P:DisplayNameSelectionPanel.addLabeledFieldWithValidationMessage(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -190890,7 +191066,7 @@
     },
     {
       "symbol": "P:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I#1",
-      "renamedSymbol": "P:DisplayNameSelectionPanel.a(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#1",
+      "renamedSymbol": "P:DisplayNameSelectionPanel.addLabeledFieldWithValidationMessage(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -190901,7 +191077,7 @@
     },
     {
       "symbol": "P:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I#2",
-      "renamedSymbol": "P:DisplayNameSelectionPanel.a(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#2",
+      "renamedSymbol": "P:DisplayNameSelectionPanel.addLabeledFieldWithValidationMessage(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -190912,7 +191088,7 @@
     },
     {
       "symbol": "P:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I#3",
-      "renamedSymbol": "P:DisplayNameSelectionPanel.a(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#3",
+      "renamedSymbol": "P:DisplayNameSelectionPanel.addLabeledFieldWithValidationMessage(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -190923,7 +191099,7 @@
     },
     {
       "symbol": "P:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I#4",
-      "renamedSymbol": "P:DisplayNameSelectionPanel.a(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#4",
+      "renamedSymbol": "P:DisplayNameSelectionPanel.addLabeledFieldWithValidationMessage(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -190934,7 +191110,7 @@
     },
     {
       "symbol": "P:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I#5",
-      "renamedSymbol": "P:DisplayNameSelectionPanel.a(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#5",
+      "renamedSymbol": "P:DisplayNameSelectionPanel.addLabeledFieldWithValidationMessage(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -190945,7 +191121,7 @@
     },
     {
       "symbol": "P:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I#6",
-      "renamedSymbol": "P:DisplayNameSelectionPanel.a(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#6",
+      "renamedSymbol": "P:DisplayNameSelectionPanel.addLabeledFieldWithValidationMessage(IIIILUiWidget;Ljava/lang/String;Ljava/lang/String;)I#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -195862,7 +196038,7 @@
     },
     {
       "symbol": "P:ie.a(JJ)J#0",
-      "renamedSymbol": "P:AlphaWidgetContainer.a(JJ)J#0",
+      "renamedSymbol": "P:AlphaWidgetContainer.bitwiseOr(JJ)J#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -195873,7 +196049,7 @@
     },
     {
       "symbol": "P:ie.a(JJ)J#1",
-      "renamedSymbol": "P:AlphaWidgetContainer.a(JJ)J#1",
+      "renamedSymbol": "P:AlphaWidgetContainer.bitwiseOr(JJ)J#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -206015,7 +206191,7 @@
     },
     {
       "symbol": "P:mc.a(B)V#0",
-      "renamedSymbol": "P:mc.a(B)V#0",
+      "renamedSymbol": "P:ByteArrayPoolSupport.a(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -206026,7 +206202,7 @@
     },
     {
       "symbol": "P:mc.a(II)[B#0",
-      "renamedSymbol": "P:mc.a(II)[B#0",
+      "renamedSymbol": "P:ByteArrayPoolSupport.acquireByteArray(II)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -206037,7 +206213,7 @@
     },
     {
       "symbol": "P:mc.a(II)[B#1",
-      "renamedSymbol": "P:mc.a(II)[B#1",
+      "renamedSymbol": "P:ByteArrayPoolSupport.acquireByteArray(II)[B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -206048,7 +206224,7 @@
     },
     {
       "symbol": "P:mc.a(I[Lhl;IIII)V#0",
-      "renamedSymbol": "P:mc.a(I[LSprite;IIII)V#0",
+      "renamedSymbol": "P:ByteArrayPoolSupport.a(I[LSprite;IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -206059,7 +206235,7 @@
     },
     {
       "symbol": "P:mc.a(I[Lhl;IIII)V#1",
-      "renamedSymbol": "P:mc.a(I[LSprite;IIII)V#1",
+      "renamedSymbol": "P:ByteArrayPoolSupport.a(I[LSprite;IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -206070,7 +206246,7 @@
     },
     {
       "symbol": "P:mc.a(I[Lhl;IIII)V#2",
-      "renamedSymbol": "P:mc.a(I[LSprite;IIII)V#2",
+      "renamedSymbol": "P:ByteArrayPoolSupport.a(I[LSprite;IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -206081,7 +206257,7 @@
     },
     {
       "symbol": "P:mc.a(I[Lhl;IIII)V#3",
-      "renamedSymbol": "P:mc.a(I[LSprite;IIII)V#3",
+      "renamedSymbol": "P:ByteArrayPoolSupport.a(I[LSprite;IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -206092,7 +206268,7 @@
     },
     {
       "symbol": "P:mc.a(I[Lhl;IIII)V#4",
-      "renamedSymbol": "P:mc.a(I[LSprite;IIII)V#4",
+      "renamedSymbol": "P:ByteArrayPoolSupport.a(I[LSprite;IIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -206103,7 +206279,7 @@
     },
     {
       "symbol": "P:mc.a(I[Lhl;IIII)V#5",
-      "renamedSymbol": "P:mc.a(I[LSprite;IIII)V#5",
+      "renamedSymbol": "P:ByteArrayPoolSupport.a(I[LSprite;IIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -206114,7 +206290,7 @@
     },
     {
       "symbol": "P:mc.a(Ljava/lang/String;I)Z#0",
-      "renamedSymbol": "P:mc.a(Ljava/lang/String;I)Z#0",
+      "renamedSymbol": "P:ByteArrayPoolSupport.a(Ljava/lang/String;I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -206125,7 +206301,7 @@
     },
     {
       "symbol": "P:mc.a(Ljava/lang/String;I)Z#1",
-      "renamedSymbol": "P:mc.a(Ljava/lang/String;I)Z#1",
+      "renamedSymbol": "P:ByteArrayPoolSupport.a(Ljava/lang/String;I)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -215794,7 +215970,7 @@
     },
     {
       "symbol": "P:r.a(JJ)J#0",
-      "renamedSymbol": "P:r.a(JJ)J#0",
+      "renamedSymbol": "P:r.bitwiseAnd(JJ)J#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -215805,7 +215981,7 @@
     },
     {
       "symbol": "P:r.a(JJ)J#1",
-      "renamedSymbol": "P:r.a(JJ)J#1",
+      "renamedSymbol": "P:r.bitwiseAnd(JJ)J#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -223362,7 +223538,7 @@
     },
     {
       "symbol": "P:ug.a([BIIB)V#0",
-      "renamedSymbol": "P:ug.a([BIIB)V#0",
+      "renamedSymbol": "P:ArrayBlockSupport.a([BIIB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -223373,7 +223549,7 @@
     },
     {
       "symbol": "P:ug.a([BIIB)V#1",
-      "renamedSymbol": "P:ug.a([BIIB)V#1",
+      "renamedSymbol": "P:ArrayBlockSupport.a([BIIB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -223384,7 +223560,7 @@
     },
     {
       "symbol": "P:ug.a([BIIB)V#2",
-      "renamedSymbol": "P:ug.a([BIIB)V#2",
+      "renamedSymbol": "P:ArrayBlockSupport.a([BIIB)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -223395,7 +223571,7 @@
     },
     {
       "symbol": "P:ug.a([BIIB)V#3",
-      "renamedSymbol": "P:ug.a([BIIB)V#3",
+      "renamedSymbol": "P:ArrayBlockSupport.a([BIIB)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -223406,7 +223582,7 @@
     },
     {
       "symbol": "P:ug.a([BI[BII)V#0",
-      "renamedSymbol": "P:ug.copyByteRange([BI[BII)V#0",
+      "renamedSymbol": "P:ArrayBlockSupport.copyByteRange([BI[BII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -223417,7 +223593,7 @@
     },
     {
       "symbol": "P:ug.a([BI[BII)V#1",
-      "renamedSymbol": "P:ug.copyByteRange([BI[BII)V#1",
+      "renamedSymbol": "P:ArrayBlockSupport.copyByteRange([BI[BII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -223428,7 +223604,7 @@
     },
     {
       "symbol": "P:ug.a([BI[BII)V#2",
-      "renamedSymbol": "P:ug.copyByteRange([BI[BII)V#2",
+      "renamedSymbol": "P:ArrayBlockSupport.copyByteRange([BI[BII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -223439,7 +223615,7 @@
     },
     {
       "symbol": "P:ug.a([BI[BII)V#3",
-      "renamedSymbol": "P:ug.copyByteRange([BI[BII)V#3",
+      "renamedSymbol": "P:ArrayBlockSupport.copyByteRange([BI[BII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -223450,7 +223626,7 @@
     },
     {
       "symbol": "P:ug.a([BI[BII)V#4",
-      "renamedSymbol": "P:ug.copyByteRange([BI[BII)V#4",
+      "renamedSymbol": "P:ArrayBlockSupport.copyByteRange([BI[BII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -223461,7 +223637,7 @@
     },
     {
       "symbol": "P:ug.a([III)V#0",
-      "renamedSymbol": "P:ug.clearInts([III)V#0",
+      "renamedSymbol": "P:ArrayBlockSupport.clearInts([III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -223472,7 +223648,7 @@
     },
     {
       "symbol": "P:ug.a([III)V#1",
-      "renamedSymbol": "P:ug.clearInts([III)V#1",
+      "renamedSymbol": "P:ArrayBlockSupport.clearInts([III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -223483,7 +223659,7 @@
     },
     {
       "symbol": "P:ug.a([III)V#2",
-      "renamedSymbol": "P:ug.clearInts([III)V#2",
+      "renamedSymbol": "P:ArrayBlockSupport.clearInts([III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -223494,7 +223670,7 @@
     },
     {
       "symbol": "P:ug.a([IIII)V#0",
-      "renamedSymbol": "P:ug.a([IIII)V#0",
+      "renamedSymbol": "P:ArrayBlockSupport.fillInts([IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -223505,7 +223681,7 @@
     },
     {
       "symbol": "P:ug.a([IIII)V#1",
-      "renamedSymbol": "P:ug.a([IIII)V#1",
+      "renamedSymbol": "P:ArrayBlockSupport.fillInts([IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -223516,7 +223692,7 @@
     },
     {
       "symbol": "P:ug.a([IIII)V#2",
-      "renamedSymbol": "P:ug.a([IIII)V#2",
+      "renamedSymbol": "P:ArrayBlockSupport.fillInts([IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -223527,7 +223703,7 @@
     },
     {
       "symbol": "P:ug.a([IIII)V#3",
-      "renamedSymbol": "P:ug.a([IIII)V#3",
+      "renamedSymbol": "P:ArrayBlockSupport.fillInts([IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -223538,7 +223714,7 @@
     },
     {
       "symbol": "P:ug.a([II[III)V#0",
-      "renamedSymbol": "P:ug.a([II[III)V#0",
+      "renamedSymbol": "P:ArrayBlockSupport.copyIntRange([II[III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -223549,7 +223725,7 @@
     },
     {
       "symbol": "P:ug.a([II[III)V#1",
-      "renamedSymbol": "P:ug.a([II[III)V#1",
+      "renamedSymbol": "P:ArrayBlockSupport.copyIntRange([II[III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -223560,7 +223736,7 @@
     },
     {
       "symbol": "P:ug.a([II[III)V#2",
-      "renamedSymbol": "P:ug.a([II[III)V#2",
+      "renamedSymbol": "P:ArrayBlockSupport.copyIntRange([II[III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -223571,7 +223747,7 @@
     },
     {
       "symbol": "P:ug.a([II[III)V#3",
-      "renamedSymbol": "P:ug.a([II[III)V#3",
+      "renamedSymbol": "P:ArrayBlockSupport.copyIntRange([II[III)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -223582,7 +223758,7 @@
     },
     {
       "symbol": "P:ug.a([II[III)V#4",
-      "renamedSymbol": "P:ug.a([II[III)V#4",
+      "renamedSymbol": "P:ArrayBlockSupport.copyIntRange([II[III)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -223593,7 +223769,7 @@
     },
     {
       "symbol": "P:ug.a([Ljava/lang/Object;I[Ljava/lang/Object;II)V#0",
-      "renamedSymbol": "P:ug.a([Ljava/lang/Object;I[Ljava/lang/Object;II)V#0",
+      "renamedSymbol": "P:ArrayBlockSupport.copyObjectRange([Ljava/lang/Object;I[Ljava/lang/Object;II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -223604,7 +223780,7 @@
     },
     {
       "symbol": "P:ug.a([Ljava/lang/Object;I[Ljava/lang/Object;II)V#1",
-      "renamedSymbol": "P:ug.a([Ljava/lang/Object;I[Ljava/lang/Object;II)V#1",
+      "renamedSymbol": "P:ArrayBlockSupport.copyObjectRange([Ljava/lang/Object;I[Ljava/lang/Object;II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -223615,7 +223791,7 @@
     },
     {
       "symbol": "P:ug.a([Ljava/lang/Object;I[Ljava/lang/Object;II)V#2",
-      "renamedSymbol": "P:ug.a([Ljava/lang/Object;I[Ljava/lang/Object;II)V#2",
+      "renamedSymbol": "P:ArrayBlockSupport.copyObjectRange([Ljava/lang/Object;I[Ljava/lang/Object;II)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -223626,7 +223802,7 @@
     },
     {
       "symbol": "P:ug.a([Ljava/lang/Object;I[Ljava/lang/Object;II)V#3",
-      "renamedSymbol": "P:ug.a([Ljava/lang/Object;I[Ljava/lang/Object;II)V#3",
+      "renamedSymbol": "P:ArrayBlockSupport.copyObjectRange([Ljava/lang/Object;I[Ljava/lang/Object;II)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -223637,7 +223813,7 @@
     },
     {
       "symbol": "P:ug.a([Ljava/lang/Object;I[Ljava/lang/Object;II)V#4",
-      "renamedSymbol": "P:ug.a([Ljava/lang/Object;I[Ljava/lang/Object;II)V#4",
+      "renamedSymbol": "P:ArrayBlockSupport.copyObjectRange([Ljava/lang/Object;I[Ljava/lang/Object;II)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -225386,7 +225562,7 @@
     },
     {
       "symbol": "P:ve.a(I)V#0",
-      "renamedSymbol": "P:ve.resetStaticState(I)V#0",
+      "renamedSymbol": "P:GrowableIntArray.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -225397,7 +225573,7 @@
     },
     {
       "symbol": "P:ve.a(IB)I#0",
-      "renamedSymbol": "P:ve.a(IB)I#0",
+      "renamedSymbol": "P:GrowableIntArray.computeCapacity(IB)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -225408,7 +225584,7 @@
     },
     {
       "symbol": "P:ve.a(IB)I#1",
-      "renamedSymbol": "P:ve.a(IB)I#1",
+      "renamedSymbol": "P:GrowableIntArray.computeCapacity(IB)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -225419,7 +225595,7 @@
     },
     {
       "symbol": "P:ve.a(II)I#0",
-      "renamedSymbol": "P:ve.a(II)I#0",
+      "renamedSymbol": "P:GrowableIntArray.get(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -225430,7 +225606,7 @@
     },
     {
       "symbol": "P:ve.a(II)I#1",
-      "renamedSymbol": "P:ve.a(II)I#1",
+      "renamedSymbol": "P:GrowableIntArray.get(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -225441,7 +225617,7 @@
     },
     {
       "symbol": "P:ve.a(IIZ)V#0",
-      "renamedSymbol": "P:ve.a(IIZ)V#0",
+      "renamedSymbol": "P:GrowableIntArray.set(IIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -225452,7 +225628,7 @@
     },
     {
       "symbol": "P:ve.a(IIZ)V#1",
-      "renamedSymbol": "P:ve.a(IIZ)V#1",
+      "renamedSymbol": "P:GrowableIntArray.set(IIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -225463,7 +225639,7 @@
     },
     {
       "symbol": "P:ve.a(IIZ)V#2",
-      "renamedSymbol": "P:ve.a(IIZ)V#2",
+      "renamedSymbol": "P:GrowableIntArray.set(IIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -225474,7 +225650,7 @@
     },
     {
       "symbol": "P:ve.a(Z)I#0",
-      "renamedSymbol": "P:ve.a(Z)I#0",
+      "renamedSymbol": "P:GrowableIntArray.size(Z)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -225485,7 +225661,7 @@
     },
     {
       "symbol": "P:ve.b(II)V#0",
-      "renamedSymbol": "P:ve.b(II)V#0",
+      "renamedSymbol": "P:GrowableIntArray.append(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -225496,7 +225672,7 @@
     },
     {
       "symbol": "P:ve.b(II)V#1",
-      "renamedSymbol": "P:ve.b(II)V#1",
+      "renamedSymbol": "P:GrowableIntArray.append(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -225507,7 +225683,7 @@
     },
     {
       "symbol": "P:ve.c(II)V#0",
-      "renamedSymbol": "P:ve.c(II)V#0",
+      "renamedSymbol": "P:GrowableIntArray.removeAt(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -225518,7 +225694,7 @@
     },
     {
       "symbol": "P:ve.c(II)V#1",
-      "renamedSymbol": "P:ve.c(II)V#1",
+      "renamedSymbol": "P:GrowableIntArray.removeAt(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -225529,7 +225705,7 @@
     },
     {
       "symbol": "P:ve.d(II)V#0",
-      "renamedSymbol": "P:ve.d(II)V#0",
+      "renamedSymbol": "P:GrowableIntArray.grow(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -225540,7 +225716,7 @@
     },
     {
       "symbol": "P:ve.d(II)V#1",
-      "renamedSymbol": "P:ve.d(II)V#1",
+      "renamedSymbol": "P:GrowableIntArray.grow(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -227278,7 +227454,7 @@
     },
     {
       "symbol": "P:w.a(II)I#0",
-      "renamedSymbol": "P:w.a(II)I#0",
+      "renamedSymbol": "P:w.bitwiseAnd(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -227289,7 +227465,7 @@
     },
     {
       "symbol": "P:w.a(II)I#1",
-      "renamedSymbol": "P:w.a(II)I#1",
+      "renamedSymbol": "P:w.bitwiseAnd(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -228613,7 +228789,7 @@
       "original": "StarCannon.java",
       "renamed": "StarCannon.java",
       "inputSha256": "5d7953b92a66316b6cb55430c1cf34597ffd73f1b8b9d3789659d962af38ef0a",
-      "outputSha256": "fd283756f9eb377bd86b10ae3a577af558e113d3b0b7c6ca54e0c5bac062782a",
+      "outputSha256": "23df7a0bb94f88910246110d28794c71bdf8ca9beb951e4dcaa8f9e32fd7c6b7",
       "edits": [
         {
           "start": 348,
@@ -229335,6 +229511,13 @@
           "original": "stateLoop",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 18340,
+          "end": 18342,
+          "symbol": "C:ve",
+          "original": "ve",
+          "renamed": "GrowableIntArray"
         },
         {
           "start": 18521,
@@ -230847,6 +231030,13 @@
           "renamed": "ResizableModalDialog"
         },
         {
+          "start": 51622,
+          "end": 51624,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 51659,
           "end": 51661,
           "symbol": "B:StarCannon.p(I)V#0",
@@ -230916,6 +231106,13 @@
           "symbol": "C:kc",
           "original": "kc",
           "renamed": "ResizableModalDialog"
+        },
+        {
+          "start": 52201,
+          "end": 52203,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 52238,
@@ -231037,6 +231234,13 @@
           "symbol": "C:kc",
           "original": "kc",
           "renamed": "ResizableModalDialog"
+        },
+        {
+          "start": 53475,
+          "end": 53477,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 53595,
@@ -231264,6 +231468,13 @@
           "symbol": "C:kc",
           "original": "kc",
           "renamed": "ResizableModalDialog"
+        },
+        {
+          "start": 58683,
+          "end": 58685,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 58827,
@@ -233772,6 +233983,13 @@
           "renamed": "ValidationStatusIcon"
         },
         {
+          "start": 77676,
+          "end": 77677,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
           "start": 77992,
           "end": 77994,
           "symbol": "C:tc",
@@ -234122,6 +234340,13 @@
           "renamed": "DequeWidgetContainer"
         },
         {
+          "start": 79494,
+          "end": 79495,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
           "start": 79518,
           "end": 79520,
           "symbol": "C:jg",
@@ -234136,6 +234361,13 @@
           "renamed": "DequeWidgetContainer"
         },
         {
+          "start": 79569,
+          "end": 79570,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
           "start": 79593,
           "end": 79595,
           "symbol": "C:jg",
@@ -234148,6 +234380,13 @@
           "symbol": "C:vk",
           "original": "vk",
           "renamed": "DequeWidgetContainer"
+        },
+        {
+          "start": 79644,
+          "end": 79645,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
         },
         {
           "start": 79668,
@@ -234204,6 +234443,13 @@
           "symbol": "C:vk",
           "original": "vk",
           "renamed": "DequeWidgetContainer"
+        },
+        {
+          "start": 79910,
+          "end": 79911,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
         },
         {
           "start": 79935,
@@ -234281,6 +234527,13 @@
           "symbol": "C:vk",
           "original": "vk",
           "renamed": "DequeWidgetContainer"
+        },
+        {
+          "start": 80175,
+          "end": 80176,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
         },
         {
           "start": 80200,
@@ -234708,6 +234961,13 @@
           "symbol": "C:kc",
           "original": "kc",
           "renamed": "ResizableModalDialog"
+        },
+        {
+          "start": 82633,
+          "end": 82635,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 82665,
@@ -236395,6 +236655,13 @@
           "renamed": "ResizableModalDialog"
         },
         {
+          "start": 121701,
+          "end": 121703,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 121750,
           "end": 121752,
           "symbol": "B:StarCannon.l(B)V#0",
@@ -237581,6 +237848,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 128206,
+          "end": 128208,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 128234,
           "end": 128235,
           "symbol": "M:ea.a(B)V",
@@ -237999,6 +238273,13 @@
           "symbol": "M:ij.b(I)V",
           "original": "b",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 129278,
+          "end": 129280,
+          "symbol": "C:ve",
+          "original": "ve",
+          "renamed": "GrowableIntArray"
         },
         {
           "start": 129281,
@@ -239023,6 +239304,13 @@
           "renamed": "RichTextLayout"
         },
         {
+          "start": 137046,
+          "end": 137048,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 137121,
           "end": 137123,
           "symbol": "C:lc",
@@ -239672,6 +239960,13 @@
           "symbol": "C:kc",
           "original": "kc",
           "renamed": "ResizableModalDialog"
+        },
+        {
+          "start": 147135,
+          "end": 147137,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 147341,
@@ -243896,7 +244191,7 @@
       "original": "ak.java",
       "renamed": "ak.java",
       "inputSha256": "40c2a78392300bf725fc8d3900ffc24e1302476a5c0cc5c39b603e89df2279ca",
-      "outputSha256": "08cec6f1e8a08a37762c703a9671253f4cfc5987b12691c37ffa27fce186cbeb",
+      "outputSha256": "f549635c7ca549ecb32a3cf4fd58ece1cbdc6f17deee7d5725068dd86bb0434b",
       "edits": [
         {
           "start": 338,
@@ -244219,6 +244514,13 @@
           "symbol": "M:rb.f(B)I",
           "original": "f",
           "renamed": "readInt"
+        },
+        {
+          "start": 13125,
+          "end": 13127,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 13306,
@@ -244586,7 +244888,7 @@
       "original": "ba.java",
       "renamed": "ba.java",
       "inputSha256": "821788234319a29387e71090b2427e6e7812e72ca427f2d1d89ebffd68bccd89",
-      "outputSha256": "b8c87d6837b7b6eaeb0d8b85e447a52ad3b36931a61e26158f9fe8aa3e054bf2",
+      "outputSha256": "ce19562071058d7b1ad491e3a011c01294d2288946af2b4035a8f547f0469f23",
       "edits": [
         {
           "start": 93,
@@ -244832,6 +245134,13 @@
           "symbol": "F:rf.field_d:Lrf;",
           "original": "field_d",
           "renamed": "previous"
+        },
+        {
+          "start": 3958,
+          "end": 3959,
+          "symbol": "M:ba.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseXor"
         },
         {
           "start": 4050,
@@ -248108,7 +248417,7 @@
       "original": "bg.java",
       "renamed": "KeyboardInput.java",
       "inputSha256": "b04062d987a5aaccc7b0294b0dd597c3ca282ff3992ac6be48340a3595a31e2e",
-      "outputSha256": "3c5838a583b4e73e9acb1db59618c784ef7eec9b470cc98759cd8538a2e018d4",
+      "outputSha256": "dd56b6b2b096a528a477c25ff1fa237f99a751368bd888ad12eaccab39541a95",
       "edits": [
         {
           "start": 50,
@@ -248328,6 +248637,13 @@
           "renamed": "AlphaWidgetContainer"
         },
         {
+          "start": 8866,
+          "end": 8868,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 9038,
           "end": 9040,
           "symbol": "C:kc",
@@ -248361,6 +248677,13 @@
           "symbol": "C:kc",
           "original": "kc",
           "renamed": "ResizableModalDialog"
+        },
+        {
+          "start": 9310,
+          "end": 9312,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 9370,
@@ -249089,7 +249412,7 @@
       "original": "cb.java",
       "renamed": "BoundedRandomAccessFile.java",
       "inputSha256": "5b201329c255d2d3e6b19163ceb250fd51d6184c979b0c6b4d7007942a425649",
-      "outputSha256": "82bf5a601ed680816fdd20bd04bbddb8ff418a147f8e878b067e49cea0562114",
+      "outputSha256": "7cf4a4498b97212d2eb1a8ae316a2aa15a0f6726247f1239adc9d140030e553f",
       "edits": [
         {
           "start": 69,
@@ -249302,6 +249625,13 @@
           "renamed": "StripedProgressWidget"
         },
         {
+          "start": 5640,
+          "end": 5642,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 5683,
           "end": 5685,
           "symbol": "C:rb",
@@ -249314,6 +249644,13 @@
           "symbol": "C:fa",
           "original": "fa",
           "renamed": "StripedProgressWidget"
+        },
+        {
+          "start": 5758,
+          "end": 5760,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 5801,
@@ -249365,6 +249702,13 @@
           "renamed": "RichTextWidget"
         },
         {
+          "start": 6420,
+          "end": 6422,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 6425,
           "end": 6427,
           "symbol": "C:ef",
@@ -249412,6 +249756,13 @@
           "symbol": "C:ab",
           "original": "ab",
           "renamed": "RichTextWidget"
+        },
+        {
+          "start": 7227,
+          "end": 7229,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 7232,
@@ -251142,7 +251493,7 @@
       "original": "cl.java",
       "renamed": "cl.java",
       "inputSha256": "8288792ffd4f7097c4e4a3985d2b683fd1e1e67218a7780efe17404683067fb7",
-      "outputSha256": "b3fe7d91e944f4c6efd1c14616445d039aa2bfc81fcdd1304c9fb039967d6d95",
+      "outputSha256": "dc5c06bfe42705d0656713f48ec4f430c091ea9c5d2946a9f745068ae0061410",
       "edits": [
         {
           "start": 101,
@@ -251150,6 +251501,13 @@
           "symbol": "C:pf",
           "original": "pf",
           "renamed": "AccountRequestState"
+        },
+        {
+          "start": 129,
+          "end": 130,
+          "symbol": "M:cl.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseOr"
         },
         {
           "start": 384,
@@ -252770,7 +253128,7 @@
       "original": "df.java",
       "renamed": "AudioOutput.java",
       "inputSha256": "a36af2d729a0447da7b89ca33458814f7416c89b2f4e4712937bbc40bf1a6fd0",
-      "outputSha256": "776b74464a9735136ccb7cd675b5b8a8bca6cc3927263055142ad26b50e7ef3e",
+      "outputSha256": "99ad01f19338bdae9b5860185b90a6fb54e598156f3b2594303a320947edf297",
       "edits": [
         {
           "start": 44,
@@ -252974,6 +253332,13 @@
           "symbol": "C:c",
           "original": "c",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 2997,
+          "end": 2999,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
         },
         {
           "start": 3000,
@@ -253445,7 +253810,7 @@
       "original": "dg.java",
       "renamed": "dg.java",
       "inputSha256": "3d2492409c7cb21fb301a5971280bfdbef9674131fde57b3a34b8e8a95d4dd92",
-      "outputSha256": "846e8ba364fdc7d7f080204f2e1a01a1821aec7f03ed1fa2ef04094e3b5da08f",
+      "outputSha256": "13628a463724af430ee1735520724684092465c70316cb239a8e0a847aa94f25",
       "edits": [
         {
           "start": 61,
@@ -253467,6 +253832,13 @@
           "symbol": "M:dg.d(I)V",
           "original": "d",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 840,
+          "end": 841,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
         }
       ]
     },
@@ -254417,7 +254789,7 @@
       "original": "ea.java",
       "renamed": "ea.java",
       "inputSha256": "588c5b04908a530d9ed6ada355c7362ced2f0b770f1cec49decbde631e0f1606",
-      "outputSha256": "61882324e8891b41e7987540716d86933f0c90a0c8983c9ec035aa813b2b41e3",
+      "outputSha256": "500be960c75dc1d6823b0cc82e212ce6f9356862928874a9aea87969c76d1ffb",
       "edits": [
         {
           "start": 93,
@@ -254574,6 +254946,20 @@
           "renamed": "closeAllDialogs"
         },
         {
+          "start": 2492,
+          "end": 2494,
+          "symbol": "C:ve",
+          "original": "ve",
+          "renamed": "GrowableIntArray"
+        },
+        {
+          "start": 2516,
+          "end": 2518,
+          "symbol": "C:ve",
+          "original": "ve",
+          "renamed": "GrowableIntArray"
+        },
+        {
           "start": 2533,
           "end": 2535,
           "symbol": "C:lf",
@@ -254593,6 +254979,13 @@
           "symbol": "C:uj",
           "original": "uj",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 2609,
+          "end": 2611,
+          "symbol": "C:ve",
+          "original": "ve",
+          "renamed": "GrowableIntArray"
         },
         {
           "start": 2664,
@@ -254705,7 +255098,7 @@
       "original": "eb.java",
       "renamed": "eb.java",
       "inputSha256": "b761b45135678c0ec6cfa5938063db6223ee36d40336e7a6ae517688b875b6b6",
-      "outputSha256": "9ee730148d941e0fa0b430929271c8a6a3f2c0c36575e74f11461c311ec443ad",
+      "outputSha256": "ff924f057080554eade91b801499225badc8607ed2a87196c38e9a9e1182e209",
       "edits": [
         {
           "start": 195,
@@ -254960,6 +255353,13 @@
           "renamed": "drawGrayModulated"
         },
         {
+          "start": 2868,
+          "end": 2870,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 3023,
           "end": 3024,
           "symbol": "M:hl.g()Lhl;",
@@ -255119,6 +255519,13 @@
           "symbol": "C:pa",
           "original": "pa",
           "renamed": "ValidationStatusWidget"
+        },
+        {
+          "start": 4035,
+          "end": 4037,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 4127,
@@ -257581,7 +257988,7 @@
       "original": "eh.java",
       "renamed": "eh.java",
       "inputSha256": "a2bc8f7982fccdeb11bd6bbb282f92d84a7df269db880dc7f42a5eb30423e4ba",
-      "outputSha256": "de57f520a64dfede8f21c0683ab03f1e1db52975a900f4d8702572615933149a",
+      "outputSha256": "2d12ddcaf3f3b061cec1b2514b82c12c8aece4da3cf6da7882f26e20f6930111",
       "edits": [
         {
           "start": 245,
@@ -260125,11 +260532,25 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 54780,
+          "end": 54781,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
           "start": 54944,
           "end": 54946,
           "symbol": "C:uh",
           "original": "uh",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 54952,
+          "end": 54953,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
         },
         {
           "start": 55126,
@@ -260151,6 +260572,13 @@
           "symbol": "C:uh",
           "original": "uh",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 55461,
+          "end": 55462,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
         },
         {
           "start": 55627,
@@ -260207,6 +260635,13 @@
           "symbol": "C:uh",
           "original": "uh",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 56572,
+          "end": 56574,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 56585,
@@ -262323,6 +262758,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 98153,
+          "end": 98154,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
           "start": 98331,
           "end": 98333,
           "symbol": "C:uh",
@@ -262356,6 +262798,13 @@
           "symbol": "C:uh",
           "original": "uh",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 99044,
+          "end": 99045,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
         },
         {
           "start": 99234,
@@ -262489,6 +262938,13 @@
           "symbol": "C:uh",
           "original": "uh",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 101749,
+          "end": 101750,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
         },
         {
           "start": 101906,
@@ -262673,6 +263129,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 105342,
+          "end": 105344,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 105355,
           "end": 105357,
           "symbol": "C:uh",
@@ -262741,6 +263204,13 @@
           "symbol": "C:uh",
           "original": "uh",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 106309,
+          "end": 106311,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 106322,
@@ -263072,6 +263542,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 113135,
+          "end": 113136,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
           "start": 113310,
           "end": 113312,
           "symbol": "C:uh",
@@ -263084,6 +263561,13 @@
           "symbol": "C:uh",
           "original": "uh",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 113472,
+          "end": 113473,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
         },
         {
           "start": 113638,
@@ -263296,6 +263780,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 116380,
+          "end": 116381,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
           "start": 116539,
           "end": 116541,
           "symbol": "C:td",
@@ -263380,6 +263871,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 117413,
+          "end": 117414,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
           "start": 117578,
           "end": 117580,
           "symbol": "C:kc",
@@ -263392,6 +263890,13 @@
           "symbol": "C:uh",
           "original": "uh",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 117602,
+          "end": 117603,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
         },
         {
           "start": 117775,
@@ -263448,6 +263953,13 @@
           "symbol": "C:uh",
           "original": "uh",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 118406,
+          "end": 118407,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
         },
         {
           "start": 118571,
@@ -266686,7 +267198,7 @@
       "original": "ff.java",
       "renamed": "ff.java",
       "inputSha256": "a36f0c2a927efd580fbe7489d550253d157e857044a92e1ccb22dfaad70813f7",
-      "outputSha256": "a38c909e905a4b695133bda65a90c7a5d44474d51e6339a20b10658f0a2897a0",
+      "outputSha256": "b853cb0e460a8a734df757c2ce0ebf9a8bd288a5351e660135ecff65c9fac121",
       "edits": [
         {
           "start": 61,
@@ -266813,6 +267325,13 @@
           "symbol": "M:sd.a(Ljava/lang/Throwable;Ljava/lang/String;)Lii;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 6298,
+          "end": 6299,
+          "symbol": "M:cl.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseOr"
         }
       ]
     },
@@ -268975,7 +269494,7 @@
       "original": "g.java",
       "renamed": "g.java",
       "inputSha256": "9d32f954ad2ea1fb62701860f96fa287841dc6df63f32af83352b8e5287901c8",
-      "outputSha256": "666b5cd230a54ff47fe10bd4660996d63deaf464c9d5e2fd831775c17c636287",
+      "outputSha256": "1fb68192462ba86d6195678b132f64bdee918eecbe74ac0f3a9c374750a98b37",
       "edits": [
         {
           "start": 65,
@@ -268992,11 +269511,39 @@
           "renamed": "snapAndPruneDialogs"
         },
         {
+          "start": 297,
+          "end": 299,
+          "symbol": "C:ve",
+          "original": "ve",
+          "renamed": "GrowableIntArray"
+        },
+        {
+          "start": 325,
+          "end": 327,
+          "symbol": "C:ve",
+          "original": "ve",
+          "renamed": "GrowableIntArray"
+        },
+        {
           "start": 336,
           "end": 337,
           "symbol": "M:lf.l(I)V",
           "original": "l",
           "renamed": "freezeNormalProgressAnimation"
+        },
+        {
+          "start": 437,
+          "end": 439,
+          "symbol": "C:ve",
+          "original": "ve",
+          "renamed": "GrowableIntArray"
+        },
+        {
+          "start": 463,
+          "end": 465,
+          "symbol": "C:ve",
+          "original": "ve",
+          "renamed": "GrowableIntArray"
         },
         {
           "start": 474,
@@ -269006,11 +269553,39 @@
           "renamed": "freezeNormalProgressAnimation"
         },
         {
+          "start": 598,
+          "end": 600,
+          "symbol": "C:ve",
+          "original": "ve",
+          "renamed": "GrowableIntArray"
+        },
+        {
+          "start": 624,
+          "end": 626,
+          "symbol": "C:ve",
+          "original": "ve",
+          "renamed": "GrowableIntArray"
+        },
+        {
           "start": 635,
           "end": 636,
           "symbol": "M:lf.l(I)V",
           "original": "l",
           "renamed": "freezeNormalProgressAnimation"
+        },
+        {
+          "start": 743,
+          "end": 745,
+          "symbol": "C:ve",
+          "original": "ve",
+          "renamed": "GrowableIntArray"
+        },
+        {
+          "start": 767,
+          "end": 769,
+          "symbol": "C:ve",
+          "original": "ve",
+          "renamed": "GrowableIntArray"
         },
         {
           "start": 778,
@@ -269068,7 +269643,7 @@
       "original": "gb.java",
       "renamed": "gb.java",
       "inputSha256": "fb60ded5ced544a4e4f06cc60b102727e1d97ad4fa97733c6f9098ca8026dc59",
-      "outputSha256": "89af579a24a7a6c849b3ed4fe93d1262444635eadba3b2a0082acdb52a5df176",
+      "outputSha256": "9cb270391aafb2566e8432cee96b710b6e4d09e72392e7870a58630179cfab1d",
       "edits": [
         {
           "start": 61,
@@ -269146,6 +269721,13 @@
           "symbol": "C:dk",
           "original": "dk",
           "renamed": "InteractiveWidget"
+        },
+        {
+          "start": 1591,
+          "end": 1593,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 1851,
@@ -270739,7 +271321,7 @@
       "original": "hb.java",
       "renamed": "hb.java",
       "inputSha256": "0934cf3cd6adf258a5a64240bf4f17000a57e049f6309f8584c9dfed97ce82e6",
-      "outputSha256": "83a9ea754d3f4f84337f61361a5948fc217fff724592f4a0ac826c3702936919",
+      "outputSha256": "96898de7ee023347011e85d731b260db0a31249c40651249cc00d3f5bf868f49",
       "edits": [
         {
           "start": 61,
@@ -270901,6 +271483,27 @@
           "symbol": "M:sd.a(Ljava/lang/Throwable;Ljava/lang/String;)Lii;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 4028,
+          "end": 4029,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 4058,
+          "end": 4059,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 4088,
+          "end": 4089,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
         },
         {
           "start": 4392,
@@ -272648,7 +273251,7 @@
       "original": "hg.java",
       "renamed": "DisplayNameSelectionPanel.java",
       "inputSha256": "0801773421242d5c0484eac2b180ab32741f7bef697477673ca7082fa0a10a0c",
-      "outputSha256": "84b9d554e7f94e7f1befa75417106a626f3fbeb8aa0783bd09e42e03fa875313",
+      "outputSha256": "0cd9c4142b464d1314e4ee045d4af921d3437e7255d1cf6d71ddaa40cde94d76",
       "edits": [
         {
           "start": 50,
@@ -272775,6 +273378,13 @@
           "symbol": "M:sd.a(Ljava/lang/Throwable;Ljava/lang/String;)Lii;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 1145,
+          "end": 1146,
+          "symbol": "M:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I",
+          "original": "a",
+          "renamed": "addLabeledFieldWithValidationMessage"
         },
         {
           "start": 1195,
@@ -273169,6 +273779,13 @@
           "renamed": "addChild"
         },
         {
+          "start": 9034,
+          "end": 9035,
+          "symbol": "M:hg.a(IBLuj;Ljava/lang/String;ILjava/lang/String;)I",
+          "original": "a",
+          "renamed": "addLabeledFieldWithDefaultValidationMessage"
+        },
+        {
           "start": 9083,
           "end": 9085,
           "symbol": "C:tg",
@@ -273281,6 +273898,13 @@
           "renamed": "invalidateCheckedName"
         },
         {
+          "start": 9926,
+          "end": 9927,
+          "symbol": "M:hg.a(IBLuj;Ljava/lang/String;ILjava/lang/String;)I",
+          "original": "a",
+          "renamed": "addLabeledFieldWithDefaultValidationMessage"
+        },
+        {
           "start": 9945,
           "end": 9947,
           "symbol": "C:uj",
@@ -273351,6 +273975,13 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 11489,
+          "end": 11490,
+          "symbol": "M:hg.a(IBLuj;Ljava/lang/String;ILjava/lang/String;)I",
+          "original": "a",
+          "renamed": "addLabeledFieldWithDefaultValidationMessage"
+        },
+        {
           "start": 11516,
           "end": 11518,
           "symbol": "C:uj",
@@ -273363,6 +273994,13 @@
           "symbol": "C:kd",
           "original": "kd",
           "renamed": "NameSuggestionsPanel"
+        },
+        {
+          "start": 12099,
+          "end": 12100,
+          "symbol": "M:hg.a(IIIILuj;Ljava/lang/String;Ljava/lang/String;)I",
+          "original": "a",
+          "renamed": "addLabeledFieldWithValidationMessage"
         },
         {
           "start": 13148,
@@ -277094,7 +277732,7 @@
       "original": "ia.java",
       "renamed": "BitPacketBuffer.java",
       "inputSha256": "da113d91812fcda23e241f127396d295e31a59db8938cf23f7751cb35e51edf0",
-      "outputSha256": "bb575d898fed8c5b7fba0c474d774e7df700526ac788362d1f1ebe5ba74f332e",
+      "outputSha256": "27cd48a4a1147c634625f5492e57ffd4e36b9ea0a5addf244d91fb85fd4a546d",
       "edits": [
         {
           "start": 50,
@@ -277522,6 +278160,13 @@
           "symbol": "M:jb.d(I)I",
           "original": "d",
           "renamed": "nextInt"
+        },
+        {
+          "start": 5022,
+          "end": 5023,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
         },
         {
           "start": 5580,
@@ -278225,7 +278870,7 @@
       "original": "ie.java",
       "renamed": "AlphaWidgetContainer.java",
       "inputSha256": "de743e4abb7d24e702444e5e8ace679d88032e4a20dda38abdde7b1b3c58a564",
-      "outputSha256": "14224eb5637a1dd3289837fb53cc2509b3b6907879cd985ff556cd93b382e8be",
+      "outputSha256": "4aa10dbdb2dde23e212da3f09e3498ebdbadd51685a913938a6c3f9eaa90a74e",
       "edits": [
         {
           "start": 50,
@@ -278261,6 +278906,13 @@
           "symbol": "C:hl",
           "original": "hl",
           "renamed": "Sprite"
+        },
+        {
+          "start": 277,
+          "end": 278,
+          "symbol": "M:ie.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseOr"
         },
         {
           "start": 361,
@@ -278436,7 +279088,7 @@
       "original": "ig.java",
       "renamed": "AccountServiceResult.java",
       "inputSha256": "f7fc9486d59b6c72fbdd3773f32c7997ca7667ea919eb7f791624bb316e8829e",
-      "outputSha256": "8c739c6eadf336263dff61ff52fe586d9765944b49afa89866ac6c24c37d6e57",
+      "outputSha256": "ffa8e2b96a6c17f47384b78696c47d95d54173791234a645e8f3c427e38707fa",
       "edits": [
         {
           "start": 50,
@@ -278537,6 +279189,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 2356,
+          "end": 2358,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 2463,
           "end": 2465,
           "symbol": "C:bh",
@@ -278577,6 +279236,13 @@
           "symbol": "C:uh",
           "original": "uh",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 3008,
+          "end": 3010,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 3110,
@@ -278635,6 +279301,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 3891,
+          "end": 3893,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 4000,
           "end": 4002,
           "symbol": "C:bh",
@@ -278677,11 +279350,25 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 4575,
+          "end": 4577,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 4699,
           "end": 4701,
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 4842,
+          "end": 4844,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 4922,
@@ -278719,6 +279406,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 5467,
+          "end": 5469,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 5643,
           "end": 5645,
           "symbol": "C:ph",
@@ -278733,11 +279427,67 @@
           "renamed": "RichTextLayout"
         },
         {
+          "start": 6093,
+          "end": 6095,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
+        },
+        {
+          "start": 6096,
+          "end": 6097,
+          "symbol": "M:ug.a([Ljava/lang/Object;I[Ljava/lang/Object;II)V",
+          "original": "a",
+          "renamed": "copyObjectRange"
+        },
+        {
           "start": 6113,
           "end": 6115,
           "symbol": "C:se",
           "original": "se",
           "renamed": "RichTextLayout"
+        },
+        {
+          "start": 6206,
+          "end": 6208,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
+        },
+        {
+          "start": 6209,
+          "end": 6210,
+          "symbol": "M:ug.a([Ljava/lang/Object;I[Ljava/lang/Object;II)V",
+          "original": "a",
+          "renamed": "copyObjectRange"
+        },
+        {
+          "start": 6780,
+          "end": 6782,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
+        },
+        {
+          "start": 6783,
+          "end": 6784,
+          "symbol": "M:ug.a([Ljava/lang/Object;I[Ljava/lang/Object;II)V",
+          "original": "a",
+          "renamed": "copyObjectRange"
+        },
+        {
+          "start": 6892,
+          "end": 6894,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
+        },
+        {
+          "start": 6895,
+          "end": 6896,
+          "symbol": "M:ug.a([Ljava/lang/Object;I[Ljava/lang/Object;II)V",
+          "original": "a",
+          "renamed": "copyObjectRange"
         },
         {
           "start": 6975,
@@ -278887,6 +279637,13 @@
           "renamed": "SoundCache"
         },
         {
+          "start": 10575,
+          "end": 10577,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 10588,
           "end": 10590,
           "symbol": "C:kc",
@@ -278964,11 +279721,25 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 11566,
+          "end": 11568,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 11891,
           "end": 11893,
           "symbol": "C:kc",
           "original": "kc",
           "renamed": "ResizableModalDialog"
+        },
+        {
+          "start": 11983,
+          "end": 11985,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 11997,
@@ -280011,7 +280782,7 @@
       "original": "ja.java",
       "renamed": "SoundCache.java",
       "inputSha256": "f9af9da4c757c636de2a87b3d466a56a7cb28c37f3f8ed34c6e4b30450b77fc1",
-      "outputSha256": "f201010c7c70b7810345829ac132f992a9f38d3ca337c28cb173f21c0894711d",
+      "outputSha256": "655bd38ae96de15ae0d2b1aa41d511287a4986855e78e75449b165d03b404635",
       "edits": [
         {
           "start": 50,
@@ -280070,11 +280841,25 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 1071,
+          "end": 1073,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 1167,
           "end": 1169,
           "symbol": "C:kc",
           "original": "kc",
           "renamed": "ResizableModalDialog"
+        },
+        {
+          "start": 1391,
+          "end": 1393,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 1405,
@@ -280397,7 +281182,7 @@
       "original": "jb.java",
       "renamed": "IsaacRandom.java",
       "inputSha256": "4867d5fefb8767f0de0bae5b411a66b8150fdb61d81b58fdb1ef949fe9d23f79",
-      "outputSha256": "4925770b038b6bf5a0d26df0d2cde59244d17f912fc794d5171ba7752c21aada",
+      "outputSha256": "23a15ea0a12740e53b5a146ebf6280606b9b8c01b1a88fb95156af5ebdcc6248",
       "edits": [
         {
           "start": 50,
@@ -280419,6 +281204,20 @@
           "symbol": "M:jb.a(B)V",
           "original": "a",
           "renamed": "generateResults"
+        },
+        {
+          "start": 1802,
+          "end": 1803,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 1930,
+          "end": 1931,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
         },
         {
           "start": 2061,
@@ -280722,7 +281521,7 @@
       "original": "je.java",
       "renamed": "SynthesizerVoice.java",
       "inputSha256": "8aa5e769dc04bb8f719949a9f891ffd8cc396f66c5e38d26da7ca0c003488265",
-      "outputSha256": "6a57a4dfae294b6fe83a41442f5f7db58d5a73a2fb71827cb416ea86ecbc76b0",
+      "outputSha256": "2d65f0b70df7067759a00dbeae929337bc4fa8a965613eb8a7f580d4f244f3b7",
       "edits": [
         {
           "start": 71,
@@ -281080,6 +281879,13 @@
           "symbol": "M:je.a(II)[I",
           "original": "a",
           "renamed": "synthesize"
+        },
+        {
+          "start": 4209,
+          "end": 4211,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
         },
         {
           "start": 4212,
@@ -283017,7 +283823,7 @@
       "original": "jl.java",
       "renamed": "jl.java",
       "inputSha256": "108da62551c91e2b290616fea4045f8fc06b9fd46b9e419db3ef8afbf05d66fa",
-      "outputSha256": "4460851503f558f08ba238f3f17a003722cca4d519cb30951c9daed728d6fa01",
+      "outputSha256": "34f947672cb53a89a4fddc93ca13f8cfaf77893704a176972ead40754b3af2ca",
       "edits": [
         {
           "start": 143,
@@ -283937,6 +284743,13 @@
           "renamed": "drawParagraph"
         },
         {
+          "start": 16208,
+          "end": 16210,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 16296,
           "end": 16298,
           "symbol": "C:af",
@@ -284280,6 +285093,13 @@
           "renamed": "fillRectangleAlpha"
         },
         {
+          "start": 23177,
+          "end": 23179,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 23312,
           "end": 23313,
           "symbol": "M:qe.c(Ljava/lang/String;IIII)V",
@@ -284508,11 +285328,123 @@
           "kind": "label"
         },
         {
+          "start": 28987,
+          "end": 28989,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
+          "start": 29091,
+          "end": 29093,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
+          "start": 29223,
+          "end": 29225,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
+          "start": 29649,
+          "end": 29651,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
+          "start": 29789,
+          "end": 29791,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
+          "start": 29882,
+          "end": 29884,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
+          "start": 30089,
+          "end": 30091,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
+          "start": 30102,
+          "end": 30104,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
+          "start": 30153,
+          "end": 30155,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
+          "start": 30203,
+          "end": 30205,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
+          "start": 30372,
+          "end": 30374,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
+          "start": 30385,
+          "end": 30387,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
+          "start": 30436,
+          "end": 30438,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
+          "start": 30488,
+          "end": 30490,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
+          "start": 30609,
+          "end": 30611,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 30654,
           "end": 30656,
           "symbol": "C:kc",
           "original": "kc",
           "renamed": "ResizableModalDialog"
+        },
+        {
+          "start": 30667,
+          "end": 30669,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 30744,
@@ -284957,6 +285889,13 @@
           "renamed": "ResizableModalDialog"
         },
         {
+          "start": 39576,
+          "end": 39578,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 39792,
           "end": 39794,
           "symbol": "C:kc",
@@ -284969,6 +285908,13 @@
           "symbol": "C:ie",
           "original": "ie",
           "renamed": "AlphaWidgetContainer"
+        },
+        {
+          "start": 39850,
+          "end": 39852,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 40074,
@@ -288752,7 +289698,7 @@
       "original": "kh.java",
       "renamed": "AccountRegistrationPanel.java",
       "inputSha256": "1e64617f3ec8c424fc1746b11cebcde3ab6658ffd5e05232d926d89b46e6104f",
-      "outputSha256": "0ddf6b1d74b883dc84a07c88e8c74582e0da4bd3c6ed9f13e0227adc2bf2d7ed",
+      "outputSha256": "c9389374811b0a27a334151d124f7f86593fd2efdd4342ab8f66d1be184091bf",
       "edits": [
         {
           "start": 50,
@@ -289278,6 +290224,13 @@
           "symbol": "M:kh.a(Luj;ILjava/lang/String;ILjava/lang/String;I)I",
           "original": "a",
           "renamed": "addLabeledFieldWithDefaultValidationMessage"
+        },
+        {
+          "start": 4034,
+          "end": 4036,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 4082,
@@ -290195,7 +291148,7 @@
       "original": "ki.java",
       "renamed": "SoftwareRasterizer.java",
       "inputSha256": "cdaffc53008fdd05b70dc74afb2d38e0455aac410312e6e21ade3c8b386b832f",
-      "outputSha256": "48ed13896970356c16502fcaa41522aebbc24619b028df350980b46ec30316f0",
+      "outputSha256": "47caca0e71df75ae1328a7f9b2ab63e9c158509d50b4721585b5bf2f54b839bb",
       "edits": [
         {
           "start": 50,
@@ -290618,6 +291571,13 @@
           "renamed": "blurVerticalInPlace"
         },
         {
+          "start": 37943,
+          "end": 37945,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
+        },
+        {
           "start": 37946,
           "end": 37947,
           "symbol": "M:ug.a([III)V",
@@ -290625,11 +291585,25 @@
           "renamed": "clearInts"
         },
         {
+          "start": 37975,
+          "end": 37977,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
+        },
+        {
           "start": 37978,
           "end": 37979,
           "symbol": "M:ug.a([III)V",
           "original": "a",
           "renamed": "clearInts"
+        },
+        {
+          "start": 38007,
+          "end": 38009,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
         },
         {
           "start": 38010,
@@ -292776,7 +293750,7 @@
       "original": "lh.java",
       "renamed": "lh.java",
       "inputSha256": "5dc2c37f81ff9cbfa7a076ea89f6455ea3978ea152a618316e5bda0213c4f638",
-      "outputSha256": "522416651cb49fdb700f443bd69698aa7963a3ea44c1bd62e4ef42d60d654df4",
+      "outputSha256": "23950b687e25b41a47d4dd0861dcd1487a28b10ba7adafd45f8f26b67ba25387",
       "edits": [
         {
           "start": 201,
@@ -292912,6 +293886,13 @@
           "renamed": "getMusicSampleByGroup"
         },
         {
+          "start": 3696,
+          "end": 3697,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
           "start": 5186,
           "end": 5187,
           "symbol": "M:sd.a(Ljava/lang/Throwable;Ljava/lang/String;)Lii;",
@@ -292996,6 +293977,34 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 7081,
+          "end": 7082,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 7203,
+          "end": 7205,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
+        },
+        {
+          "start": 7206,
+          "end": 7207,
+          "symbol": "M:ug.a([IIII)V",
+          "original": "a",
+          "renamed": "fillInts"
+        },
+        {
+          "start": 7351,
+          "end": 7353,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 7507,
           "end": 7508,
           "symbol": "M:rb.j(I)I",
@@ -293043,6 +294052,13 @@
           "symbol": "M:rb.j(I)I",
           "original": "j",
           "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 9456,
+          "end": 9457,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
         },
         {
           "start": 9542,
@@ -293129,6 +294145,13 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 11059,
+          "end": 11060,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
           "start": 11396,
           "end": 11397,
           "symbol": "M:rb.d(B)I",
@@ -293141,6 +294164,13 @@
           "symbol": "M:rb.j(I)I",
           "original": "j",
           "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 12070,
+          "end": 12071,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
         },
         {
           "start": 12157,
@@ -293352,7 +294382,7 @@
       "original": "lj.java",
       "renamed": "lj.java",
       "inputSha256": "5260e380fb35986627b29861fc39b964f005cd7e0facf7f331509d2380b21731",
-      "outputSha256": "231b32ae3ba74e6e29b6383aa01a8291c0e12ffea6d3485a07b0f748dcfc2064",
+      "outputSha256": "0ee1d1b44e2439f34cd73d765c7a8c948e1273e948314b640f8953bf094b9672",
       "edits": [
         {
           "start": 202,
@@ -293509,11 +294539,25 @@
           "renamed": "AlphaWidgetContainer"
         },
         {
+          "start": 10233,
+          "end": 10234,
+          "symbol": "M:ie.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseOr"
+        },
+        {
           "start": 10235,
           "end": 10237,
           "symbol": "C:ie",
           "original": "ie",
           "renamed": "AlphaWidgetContainer"
+        },
+        {
+          "start": 10238,
+          "end": 10239,
+          "symbol": "M:ie.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseOr"
         },
         {
           "start": 10251,
@@ -293523,11 +294567,25 @@
           "renamed": "AlphaWidgetContainer"
         },
         {
+          "start": 10254,
+          "end": 10255,
+          "symbol": "M:ie.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseOr"
+        },
+        {
           "start": 10268,
           "end": 10270,
           "symbol": "C:ie",
           "original": "ie",
           "renamed": "AlphaWidgetContainer"
+        },
+        {
+          "start": 10271,
+          "end": 10272,
+          "symbol": "M:ie.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseOr"
         },
         {
           "start": 10286,
@@ -293537,11 +294595,25 @@
           "renamed": "AlphaWidgetContainer"
         },
         {
+          "start": 10289,
+          "end": 10290,
+          "symbol": "M:ie.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseOr"
+        },
+        {
           "start": 10303,
           "end": 10305,
           "symbol": "C:ie",
           "original": "ie",
           "renamed": "AlphaWidgetContainer"
+        },
+        {
+          "start": 10306,
+          "end": 10307,
+          "symbol": "M:ie.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseOr"
         },
         {
           "start": 10308,
@@ -293551,11 +294623,130 @@
           "renamed": "AlphaWidgetContainer"
         },
         {
+          "start": 10311,
+          "end": 10312,
+          "symbol": "M:ie.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseOr"
+        },
+        {
           "start": 10452,
           "end": 10454,
           "symbol": "C:ie",
           "original": "ie",
           "renamed": "AlphaWidgetContainer"
+        },
+        {
+          "start": 10455,
+          "end": 10456,
+          "symbol": "M:ie.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseOr"
+        },
+        {
+          "start": 10702,
+          "end": 10703,
+          "symbol": "M:ba.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
+          "start": 10706,
+          "end": 10707,
+          "symbol": "M:r.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 10740,
+          "end": 10741,
+          "symbol": "M:ba.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
+          "start": 10744,
+          "end": 10745,
+          "symbol": "M:r.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 10780,
+          "end": 10781,
+          "symbol": "M:ba.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
+          "start": 10785,
+          "end": 10786,
+          "symbol": "M:ba.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
+          "start": 10789,
+          "end": 10790,
+          "symbol": "M:r.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 10830,
+          "end": 10831,
+          "symbol": "M:ba.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
+          "start": 10835,
+          "end": 10836,
+          "symbol": "M:ba.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
+          "start": 10840,
+          "end": 10841,
+          "symbol": "M:ba.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
+          "start": 10844,
+          "end": 10845,
+          "symbol": "M:r.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 10891,
+          "end": 10892,
+          "symbol": "M:r.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 10936,
+          "end": 10937,
+          "symbol": "M:r.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 10982,
+          "end": 10983,
+          "symbol": "M:r.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 11027,
+          "end": 11028,
+          "symbol": "M:r.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseAnd"
         }
       ]
     },
@@ -294469,16 +295660,44 @@
     },
     {
       "original": "mc.java",
-      "renamed": "mc.java",
+      "renamed": "ByteArrayPoolSupport.java",
       "inputSha256": "9c2fef5af49664cd7001217b48ba6267379b756947df6d9ad90878013742e0d7",
-      "outputSha256": "ab5db2a914d1627d0f6094d7c5b9699389badd8ae9925cad3b8c347bd2be1c4f",
+      "outputSha256": "4f82aad29c147153cbe64f52d029c90d57a74558302adc04957b6fe052781074",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
+          "start": 430,
+          "end": 432,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
         {
           "start": 1621,
           "end": 1622,
           "symbol": "M:sd.a(Ljava/lang/Throwable;Ljava/lang/String;)Lii;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 1824,
+          "end": 1825,
+          "symbol": "M:mc.a(II)[B",
+          "original": "a",
+          "renamed": "acquireByteArray"
+        },
+        {
+          "start": 2476,
+          "end": 2478,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 3111,
@@ -294507,6 +295726,13 @@
           "symbol": "C:hl",
           "original": "hl",
           "renamed": "Sprite"
+        },
+        {
+          "start": 4347,
+          "end": 4349,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 4400,
@@ -294577,6 +295803,13 @@
           "symbol": "M:sd.a(Ljava/lang/Throwable;Ljava/lang/String;)Lii;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 6108,
+          "end": 6110,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
         }
       ]
     },
@@ -295402,7 +296635,7 @@
       "original": "mi.java",
       "renamed": "mi.java",
       "inputSha256": "b949ac99b1b9317a80fab3fd25e14e49379c67dffa38066804d9cbea1831dca5",
-      "outputSha256": "06f0528c7686769c25ba1e759fd8f2190d3de0631ee4656e84438deb837fb362",
+      "outputSha256": "5c63cd3e64c7372bf3609337b5bd559f8403c3c36197efd190f112754aa04ad8",
       "edits": [
         {
           "start": 64,
@@ -295410,6 +296643,13 @@
           "symbol": "C:uh",
           "original": "uh",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 382,
+          "end": 384,
+          "symbol": "C:ve",
+          "original": "ve",
+          "renamed": "GrowableIntArray"
         },
         {
           "start": 451,
@@ -295720,7 +296960,7 @@
       "original": "n.java",
       "renamed": "n.java",
       "inputSha256": "09bf4205d4d7f0699647995a87f5ebdd9c055f5f901cd807d9cd72a34281716a",
-      "outputSha256": "98bd9844f1856b9a092d40e676100410dd22190d68f0528b8a466ebf32cd0e93",
+      "outputSha256": "36c8153b70d3a8889921d8d1ecb0834e80d7552ebf38957aa9ca9ae78294033e",
       "edits": [
         {
           "start": 90,
@@ -295863,6 +297103,27 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 3613,
+          "end": 3614,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 3617,
+          "end": 3618,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 3645,
+          "end": 3646,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
           "start": 4464,
           "end": 4465,
           "symbol": "M:sd.a(Ljava/lang/Throwable;Ljava/lang/String;)Lii;",
@@ -295967,7 +297228,7 @@
       "original": "nb.java",
       "renamed": "nb.java",
       "inputSha256": "efd936e9c76cc2bb16686bc8842d159d207a2f2b0e6bffffb94f9a0f1005fcab",
-      "outputSha256": "2d84f0f4e580d515a32f3e3414d94fc3dd8e812f97ed922636aa5e0c454d1ba2",
+      "outputSha256": "065388f3ea709b3dcc288f224e7622e625d62cbe5b0e67fd846ad064c45a6028",
       "edits": [
         {
           "start": 101,
@@ -296103,11 +297364,32 @@
           "renamed": "SpriteState"
         },
         {
+          "start": 4481,
+          "end": 4483,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 4695,
           "end": 4697,
           "symbol": "C:ui",
           "original": "ui",
           "renamed": "SpriteState"
+        },
+        {
+          "start": 4775,
+          "end": 4777,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
+          "start": 4847,
+          "end": 4849,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
         },
         {
           "start": 4850,
@@ -296117,11 +297399,25 @@
           "renamed": "clearInts"
         },
         {
+          "start": 4881,
+          "end": 4883,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
+        },
+        {
           "start": 4884,
           "end": 4885,
           "symbol": "M:ug.a([III)V",
           "original": "a",
           "renamed": "clearInts"
+        },
+        {
+          "start": 4915,
+          "end": 4917,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
         },
         {
           "start": 4918,
@@ -296159,6 +297455,27 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 5534,
+          "end": 5535,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 5609,
+          "end": 5610,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 5679,
+          "end": 5680,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
           "start": 5812,
           "end": 5814,
           "symbol": "C:ki",
@@ -296187,6 +297504,27 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 6816,
+          "end": 6817,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 6893,
+          "end": 6894,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 6965,
+          "end": 6966,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
           "start": 7109,
           "end": 7111,
           "symbol": "C:ki",
@@ -296199,6 +297537,48 @@
           "symbol": "C:ki",
           "original": "ki",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 9344,
+          "end": 9345,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 9449,
+          "end": 9450,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 9555,
+          "end": 9556,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 10778,
+          "end": 10779,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 10871,
+          "end": 10872,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 10959,
+          "end": 10960,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
         },
         {
           "start": 12825,
@@ -297264,7 +298644,7 @@
       "original": "nd.java",
       "renamed": "AccountNameAvailabilityValidator.java",
       "inputSha256": "8c6f3aa8698c163b35c1fa824e2c3ced8283f0e44afe84cf75aec3b12259af77",
-      "outputSha256": "2ce30c6ca18c00c5c252723ba8d3d4c6c6fe29ccff9ddd8aca4c8be1cb85db87",
+      "outputSha256": "961a2ff34361f8d521d1dea23e6b8d20a9ae3ff0f078de2c56dc6b9f91ed81bf",
       "edits": [
         {
           "start": 50,
@@ -297454,6 +298834,13 @@
           "symbol": "C:ud",
           "original": "ud",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 2752,
+          "end": 2754,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
         },
         {
           "start": 2755,
@@ -297847,7 +299234,7 @@
       "original": "nf.java",
       "renamed": "nf.java",
       "inputSha256": "1365d345da7de2b5f8ab726fb555fe9b1c46927aaef4f652c7c50ad4a67a05b7",
-      "outputSha256": "4b083495d77f28e0fe3747bc0a5203c38ad72db3983f82509bf751cab012b5c8",
+      "outputSha256": "51fca01b5e2248a9113d3d94853fc21e65ea2c907eb761ab5dcd92325449b200",
       "edits": [
         {
           "start": 481,
@@ -297941,6 +299328,27 @@
           "renamed": "position"
         },
         {
+          "start": 2499,
+          "end": 2500,
+          "symbol": "M:cl.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseOr"
+        },
+        {
+          "start": 2545,
+          "end": 2546,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 3187,
+          "end": 3189,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
+        },
+        {
           "start": 3190,
           "end": 3191,
           "symbol": "M:ug.a([BI[BII)V",
@@ -297955,11 +299363,179 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 5538,
+          "end": 5539,
+          "symbol": "M:ba.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
+          "start": 5542,
+          "end": 5543,
+          "symbol": "M:r.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 5584,
+          "end": 5585,
+          "symbol": "M:ba.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
+          "start": 5588,
+          "end": 5589,
+          "symbol": "M:r.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 5637,
+          "end": 5638,
+          "symbol": "M:ba.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
+          "start": 5641,
+          "end": 5642,
+          "symbol": "M:r.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 5694,
+          "end": 5695,
+          "symbol": "M:ba.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
+          "start": 5698,
+          "end": 5699,
+          "symbol": "M:r.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 5746,
+          "end": 5747,
+          "symbol": "M:ba.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
+          "start": 5750,
+          "end": 5751,
+          "symbol": "M:r.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 5808,
+          "end": 5809,
+          "symbol": "M:ba.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
+          "start": 5813,
+          "end": 5814,
+          "symbol": "M:ba.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
+          "start": 5817,
+          "end": 5818,
+          "symbol": "M:r.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 5897,
+          "end": 5898,
+          "symbol": "M:r.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 6266,
+          "end": 6267,
+          "symbol": "M:ba.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
+          "start": 6617,
+          "end": 6618,
+          "symbol": "M:ba.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
+          "start": 6667,
+          "end": 6668,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 6695,
+          "end": 6696,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 7042,
+          "end": 7043,
+          "symbol": "M:ba.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
+          "start": 7452,
+          "end": 7453,
+          "symbol": "M:ba.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
+          "start": 7511,
+          "end": 7512,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 7534,
+          "end": 7535,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
           "start": 7927,
           "end": 7928,
           "symbol": "M:nf.b(I)V",
           "original": "b",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 8058,
+          "end": 8059,
+          "symbol": "M:ba.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
+          "start": 8092,
+          "end": 8093,
+          "symbol": "M:ba.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseXor"
         },
         {
           "start": 8283,
@@ -298039,6 +299615,34 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 11897,
+          "end": 11898,
+          "symbol": "M:cl.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseOr"
+        },
+        {
+          "start": 12258,
+          "end": 12259,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 12641,
+          "end": 12642,
+          "symbol": "M:cl.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseOr"
+        },
+        {
+          "start": 13149,
+          "end": 13150,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
           "start": 13960,
           "end": 13961,
           "symbol": "M:sd.a(Ljava/lang/Throwable;Ljava/lang/String;)Lii;",
@@ -298051,7 +299655,7 @@
       "original": "ng.java",
       "renamed": "ValidatedTextField.java",
       "inputSha256": "54960ff074e84eae97155cee569995bea1eb355cb3651f89e14f8773069ceb20",
-      "outputSha256": "f7ea1237dd07e42db28a8ef3c7fd08f33a12ec63ef561dc8950529e649499556",
+      "outputSha256": "03da25c41f1bb91db6ff15896b2bc0d26f7b266c522b08cf58d6e9bac22e9a37",
       "edits": [
         {
           "start": 50,
@@ -298178,6 +299782,20 @@
           "symbol": "M:sd.a(Ljava/lang/Throwable;Ljava/lang/String;)Lii;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 2041,
+          "end": 2043,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
+        },
+        {
+          "start": 2044,
+          "end": 2045,
+          "symbol": "M:ug.a([II[III)V",
+          "original": "a",
+          "renamed": "copyIntRange"
         },
         {
           "start": 2371,
@@ -300026,7 +301644,7 @@
       "original": "o.java",
       "renamed": "o.java",
       "inputSha256": "3e8c349e7b862d9fc21fa30c891b0c4e9181be636f500b7bf336c8adfb691937",
-      "outputSha256": "e29efa69324a8f01ba42ab41b1646f56ecf8368da8ac14b4c745de72ceb6dcbf",
+      "outputSha256": "bf4064e3adf89e56b41529419a5033ac579225c3b47d4095d75609fb7bdcf42d",
       "edits": [
         {
           "start": 165,
@@ -300078,6 +301696,27 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 2082,
+          "end": 2084,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
+          "start": 2254,
+          "end": 2256,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
+          "start": 2267,
+          "end": 2269,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 2288,
           "end": 2289,
           "symbol": "M:rb.i(I)I",
@@ -300097,6 +301736,20 @@
           "symbol": "C:rb",
           "original": "rb",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 2424,
+          "end": 2426,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
+          "start": 2437,
+          "end": 2439,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 2477,
@@ -303355,7 +305008,7 @@
       "original": "pf.java",
       "renamed": "AccountRequestState.java",
       "inputSha256": "26d79551c661738952d023dbca7a31b2e91d5ce2d21fdf93bd0926fc614090f8",
-      "outputSha256": "057ff238433c0103cba3817f0397416b42762140850f5a80ecb3cac881a396d2",
+      "outputSha256": "1843dd06ac9f140941a79d3339414b8713222590936ac76706e30851cb9a8905",
       "edits": [
         {
           "start": 50,
@@ -303435,6 +305088,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 2639,
+          "end": 2640,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
           "start": 2714,
           "end": 2716,
           "symbol": "C:hl",
@@ -303454,6 +305114,27 @@
           "symbol": "C:qd",
           "original": "qd",
           "renamed": "ModalDialog"
+        },
+        {
+          "start": 3046,
+          "end": 3047,
+          "symbol": "M:cl.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseOr"
+        },
+        {
+          "start": 3050,
+          "end": 3051,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
+          "start": 3096,
+          "end": 3097,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
         },
         {
           "start": 3165,
@@ -307145,7 +308826,7 @@
       "original": "qd.java",
       "renamed": "ModalDialog.java",
       "inputSha256": "1bacf4cf180e9b286511afc5195c2491017e78410fd44b69a6251ac34df65f2f",
-      "outputSha256": "beaa34c0e98cbbb72f0605b8972583d4d0f8430fd1ac54c2750922af85aa60f2",
+      "outputSha256": "ece00f2e452f64520a86290f4c85db6b5bc7b0d46b5d351c7ebef3ea4d3e0226",
       "edits": [
         {
           "start": 53,
@@ -307580,6 +309261,13 @@
           "symbol": "M:qd.h(B)V",
           "original": "h",
           "renamed": "clearDeclaredStaticReferences"
+        },
+        {
+          "start": 4730,
+          "end": 4731,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
         },
         {
           "start": 5343,
@@ -309267,7 +310955,7 @@
       "original": "r.java",
       "renamed": "r.java",
       "inputSha256": "c4da70210966b731454bc2a4576caedde3ec7be3e1a3e1fe9294853788d1f603",
-      "outputSha256": "39d7babec87bcb88178e0b4c8185d56f62bd9f6e8cc5c7bd7589c0179f8e12db",
+      "outputSha256": "decc57d045672e41a4e7d0d9c4e6b8e4bfd16706547b5c6be3775654c9fc9f81",
       "edits": [
         {
           "start": 172,
@@ -309275,6 +310963,13 @@
           "symbol": "M:r.a(I)V",
           "original": "a",
           "renamed": "resetStaticState"
+        },
+        {
+          "start": 366,
+          "end": 367,
+          "symbol": "M:r.a(JJ)J",
+          "original": "a",
+          "renamed": "bitwiseAnd"
         },
         {
           "start": 457,
@@ -309423,7 +311118,7 @@
       "original": "rb.java",
       "renamed": "PacketBuffer.java",
       "inputSha256": "a2ea898c3b092d41384f743e0d95884b4fca7ac5acad892408e8fbbeaf432317",
-      "outputSha256": "3a35f818aac6a352d2161c45928dca1bebaf89c54accef7dc98870c9190ef3dd",
+      "outputSha256": "79cb5833b303d029a529d24c49d525aaf235fa3b3eebcdeb44a57616c0e21bb7",
       "edits": [
         {
           "start": 44,
@@ -311610,6 +313305,20 @@
           "renamed": "payload"
         },
         {
+          "start": 23083,
+          "end": 23085,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
+          "start": 23086,
+          "end": 23087,
+          "symbol": "M:mc.a(II)[B",
+          "original": "a",
+          "renamed": "acquireByteArray"
+        },
+        {
           "start": 23117,
           "end": 23124,
           "symbol": "F:rb.field_g:I",
@@ -312424,7 +314133,7 @@
       "original": "rg.java",
       "renamed": "LoginPanel.java",
       "inputSha256": "b41120c89708a13b46fbc74e6d9f8a3fabf7b48e78f8f89eceb4593b818dbc7c",
-      "outputSha256": "03618d91f3f4ec51369ace206d60e8014fc45a77a171f99b75c0c469c82e286d",
+      "outputSha256": "e051ae8f5af1b95304ecaa49d635ba14608a269f0ea48923c23485b6e3a247a6",
       "edits": [
         {
           "start": 50,
@@ -312509,6 +314218,13 @@
           "symbol": "C:hl",
           "original": "hl",
           "renamed": "Sprite"
+        },
+        {
+          "start": 1051,
+          "end": 1052,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
         },
         {
           "start": 1118,
@@ -313232,6 +314948,13 @@
           "renamed": "copyBytes"
         },
         {
+          "start": 12811,
+          "end": 12813,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
+        },
+        {
           "start": 12814,
           "end": 12815,
           "symbol": "M:ug.a([BI[BII)V",
@@ -313349,7 +315072,7 @@
       "original": "rh.java",
       "renamed": "rh.java",
       "inputSha256": "a2980212c6feda94d36517b30495514d6417d9924b74837e12ff261b84ca53e3",
-      "outputSha256": "316260680557184fe0b35e9ce37e5d52a380b22558206a55dae232254a667336",
+      "outputSha256": "6ade88c87dd0c37ac75747bd42e4007aeec6f2ec54a118e49872d51169071892",
       "edits": [
         {
           "start": 80,
@@ -313483,6 +315206,20 @@
           "symbol": "C:ki",
           "original": "ki",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 2605,
+          "end": 2606,
+          "symbol": "M:cl.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseOr"
+        },
+        {
+          "start": 2617,
+          "end": 2618,
+          "symbol": "M:cl.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseOr"
         },
         {
           "start": 3011,
@@ -315414,7 +317151,7 @@
       "original": "sc.java",
       "renamed": "sc.java",
       "inputSha256": "375116b5c770fc0e7b40dfbe220d5fa3b06f1f09d8b71bae538c8765df2cec09",
-      "outputSha256": "723f0f3f65d911794b2ea6d12f2ba159bf71045fa92e98fbc62e043357a90e85",
+      "outputSha256": "f016e9834bb9be6e26b33b416d0bf3a1e7a0d41e40e1105943f8f823f2c4a3dc",
       "edits": [
         {
           "start": 93,
@@ -315744,6 +317481,13 @@
           "symbol": "M:sd.a(Ljava/lang/Throwable;Ljava/lang/String;)Lii;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 4280,
+          "end": 4282,
+          "symbol": "C:ve",
+          "original": "ve",
+          "renamed": "GrowableIntArray"
         },
         {
           "start": 4419,
@@ -317292,7 +319036,7 @@
       "original": "sj.java",
       "renamed": "sj.java",
       "inputSha256": "2420c4ac8ab08128381ef710b79750ea072f5746ec964b8ef79f978160799348",
-      "outputSha256": "3cbd86d38549d57c4b11c33fbad30d185b59962a18cda48498b72e7a134ef764",
+      "outputSha256": "695d1b0c54f1646e8efb76d34e0319127b803825a187c1e34f79370cf83743a3",
       "edits": [
         {
           "start": 61,
@@ -317300,6 +319044,13 @@
           "symbol": "C:dk",
           "original": "dk",
           "renamed": "InteractiveWidget"
+        },
+        {
+          "start": 176,
+          "end": 178,
+          "symbol": "C:ve",
+          "original": "ve",
+          "renamed": "GrowableIntArray"
         },
         {
           "start": 226,
@@ -317316,6 +319067,20 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 761,
+          "end": 762,
+          "symbol": "M:ve.a(Z)I",
+          "original": "a",
+          "renamed": "size"
+        },
+        {
+          "start": 841,
+          "end": 842,
+          "symbol": "M:ve.a(II)I",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
           "start": 1271,
           "end": 1273,
           "symbol": "C:ka",
@@ -317328,6 +319093,13 @@
           "symbol": "M:sd.a(Ljava/lang/Throwable;Ljava/lang/String;)Lii;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 3086,
+          "end": 3087,
+          "symbol": "M:ve.a(Z)I",
+          "original": "a",
+          "renamed": "size"
         },
         {
           "start": 3120,
@@ -317349,6 +319121,34 @@
           "symbol": "M:dk.a(Luj;IIIBII)Z",
           "original": "a",
           "renamed": "pointerPressed"
+        },
+        {
+          "start": 4270,
+          "end": 4271,
+          "symbol": "M:ve.a(Z)I",
+          "original": "a",
+          "renamed": "size"
+        },
+        {
+          "start": 4325,
+          "end": 4326,
+          "symbol": "M:ve.a(II)I",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
+          "start": 4570,
+          "end": 4571,
+          "symbol": "M:ve.c(II)V",
+          "original": "c",
+          "renamed": "removeAt"
+        },
+        {
+          "start": 4652,
+          "end": 4653,
+          "symbol": "M:ve.b(II)V",
+          "original": "b",
+          "renamed": "append"
         },
         {
           "start": 5133,
@@ -318903,7 +320703,7 @@
       "original": "td.java",
       "renamed": "BufferedRandomAccessFile.java",
       "inputSha256": "65bf73b2534b8b2d82f5bcf1751a3e7686026df4737be3cfd0676f8ec4490d89",
-      "outputSha256": "28005b7f4fae51f23a30c1dac83eb183294e23b3ffa56493a229e4a0c76c5991",
+      "outputSha256": "ef01e038b8462e6ab43232b4939878f0fad64cbe8b553764e65dcc1a330eecf9",
       "edits": [
         {
           "start": 69,
@@ -318948,11 +320748,25 @@
           "renamed": "write"
         },
         {
+          "start": 2291,
+          "end": 2293,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
+        },
+        {
           "start": 2294,
           "end": 2295,
           "symbol": "M:ug.a([BI[BII)V",
           "original": "a",
           "renamed": "copyByteRange"
+        },
+        {
+          "start": 2830,
+          "end": 2832,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
         },
         {
           "start": 2833,
@@ -319060,6 +320874,13 @@
           "renamed": "flush"
         },
         {
+          "start": 4893,
+          "end": 4895,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
+        },
+        {
           "start": 4896,
           "end": 4897,
           "symbol": "M:ug.a([BI[BII)V",
@@ -319072,6 +320893,13 @@
           "symbol": "M:td.a(B)V",
           "original": "a",
           "renamed": "flush"
+        },
+        {
+          "start": 5456,
+          "end": 5458,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
         },
         {
           "start": 5459,
@@ -319093,6 +320921,13 @@
           "symbol": "M:cb.a(I[BII)V",
           "original": "a",
           "renamed": "write"
+        },
+        {
+          "start": 7166,
+          "end": 7168,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
         },
         {
           "start": 7169,
@@ -319158,11 +320993,25 @@
           "renamed": "readFully"
         },
         {
+          "start": 10566,
+          "end": 10568,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
+        },
+        {
           "start": 10569,
           "end": 10570,
           "symbol": "M:ug.a([BI[BII)V",
           "original": "a",
           "renamed": "copyByteRange"
+        },
+        {
+          "start": 11214,
+          "end": 11216,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
         },
         {
           "start": 11217,
@@ -319193,11 +321042,25 @@
           "renamed": "fillReadBuffer"
         },
         {
+          "start": 12671,
+          "end": 12673,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
+        },
+        {
           "start": 12674,
           "end": 12675,
           "symbol": "M:ug.a([BI[BII)V",
           "original": "a",
           "renamed": "copyByteRange"
+        },
+        {
+          "start": 14568,
+          "end": 14570,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
         },
         {
           "start": 14571,
@@ -320694,7 +322557,7 @@
       "original": "tj.java",
       "renamed": "DraggableWidgetContainer.java",
       "inputSha256": "4b48be79a2fa48034bb0c87474f42090a930cfd37a0a10aabac3128d3d1940f2",
-      "outputSha256": "b89189576309e55d491d5c94362cc61d34ee7035a0e4d57bdad8175cc80dc659",
+      "outputSha256": "db9f2caaaca82e477469a0436a21d7b6c942e317eb883148ef0dea1e335d2645",
       "edits": [
         {
           "start": 71,
@@ -320807,6 +322670,13 @@
           "symbol": "M:sd.a(Ljava/lang/Throwable;Ljava/lang/String;)Lii;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 4408,
+          "end": 4410,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 4986,
@@ -321506,7 +323376,7 @@
       "original": "ue.java",
       "renamed": "ResourceArchive.java",
       "inputSha256": "76621bdc11408472c424033302c075663eb87128ad121e5ff3f4eb4838c19d9c",
-      "outputSha256": "36d19fdf463341be547b699a3c1160d33bd0dfeabf27a221eb48bef74a424df5",
+      "outputSha256": "ff3b85658a81dd9de85a089fe64aea3bb89fd6daa776f34d44dcac7d2bd2a9c7",
       "edits": [
         {
           "start": 50,
@@ -322027,6 +323897,13 @@
           "renamed": "readInt"
         },
         {
+          "start": 21762,
+          "end": 21764,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
+        },
+        {
           "start": 21765,
           "end": 21766,
           "symbol": "M:ug.a([BI[BII)V",
@@ -322067,6 +323944,13 @@
           "symbol": "M:rb.f(B)I",
           "original": "f",
           "renamed": "readInt"
+        },
+        {
+          "start": 23547,
+          "end": 23549,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
         },
         {
           "start": 23550,
@@ -323252,10 +325136,24 @@
     },
     {
       "original": "ug.java",
-      "renamed": "ug.java",
+      "renamed": "ArrayBlockSupport.java",
       "inputSha256": "6e15c753be5543a198a143c5be6cdb78caf5d91acea9881f2cc481ba8b865c04",
-      "outputSha256": "159c8131420fc217edadbbd23be8b2a43c096ae763b8be38d3c8f155cd9b42fd",
+      "outputSha256": "2d751af37da10012e5714b58586a5a7c0edb60fe0109d6510b0a0a68db9f44cb",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
+        },
+        {
+          "start": 77,
+          "end": 78,
+          "symbol": "M:ug.a([Ljava/lang/Object;I[Ljava/lang/Object;II)V",
+          "original": "a",
+          "renamed": "copyObjectRange"
+        },
         {
           "start": 2961,
           "end": 2962,
@@ -323269,6 +325167,20 @@
           "symbol": "M:ug.a([III)V",
           "original": "a",
           "renamed": "clearInts"
+        },
+        {
+          "start": 6347,
+          "end": 6348,
+          "symbol": "M:ug.a([IIII)V",
+          "original": "a",
+          "renamed": "fillInts"
+        },
+        {
+          "start": 8420,
+          "end": 8421,
+          "symbol": "M:ug.a([II[III)V",
+          "original": "a",
+          "renamed": "copyIntRange"
         }
       ]
     },
@@ -323276,7 +325188,7 @@
       "original": "uh.java",
       "renamed": "DualLinkNode.java",
       "inputSha256": "179a248aaec29febb1e10ecc6de1a6e19dc6c81472a9cd98a523d479b2044a8f",
-      "outputSha256": "f275cf6881eb833238846a64439b84d9ef9e6a543c2ecf0fd4e9559c8ceb42cf",
+      "outputSha256": "ded4d27eba2a3f12d4a6b3522f38284bf3d4c4a605e879cb1747d1e98e5793ed",
       "edits": [
         {
           "start": 44,
@@ -323361,6 +325273,13 @@
           "symbol": "C:hl",
           "original": "hl",
           "renamed": "Sprite"
+        },
+        {
+          "start": 2169,
+          "end": 2170,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
         },
         {
           "start": 2218,
@@ -324535,7 +326454,7 @@
       "original": "vb.java",
       "renamed": "MatchingFieldValidator.java",
       "inputSha256": "6921338420ca82737915ab4e403cda80cd249161dd13f16fa0643d367641696b",
-      "outputSha256": "a515d7dbbbb88688e167c1ef35fde200b16b727ed1099be2bd033e4aef114895",
+      "outputSha256": "9a992ddfed71f6981b88a68335d1f1b57696ae9765b405f9d62be6f1382f1f7f",
       "edits": [
         {
           "start": 50,
@@ -324720,6 +326639,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 7323,
+          "end": 7324,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
           "start": 7395,
           "end": 7397,
           "symbol": "C:cb",
@@ -324760,6 +326686,13 @@
           "symbol": "C:uh",
           "original": "uh",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 7685,
+          "end": 7686,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
         },
         {
           "start": 7757,
@@ -325021,6 +326954,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 10011,
+          "end": 10012,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
           "start": 10085,
           "end": 10087,
           "symbol": "C:cb",
@@ -325047,6 +326987,13 @@
           "symbol": "C:uh",
           "original": "uh",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 10385,
+          "end": 10386,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
         },
         {
           "start": 10459,
@@ -325462,6 +327409,13 @@
           "renamed": "BoundedRandomAccessFile"
         },
         {
+          "start": 15125,
+          "end": 15127,
+          "symbol": "C:ve",
+          "original": "ve",
+          "renamed": "GrowableIntArray"
+        },
+        {
           "start": 15138,
           "end": 15140,
           "symbol": "C:uh",
@@ -325824,6 +327778,13 @@
           "symbol": "C:cb",
           "original": "cb",
           "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 18718,
+          "end": 18720,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 18731,
@@ -326587,10 +328548,17 @@
     },
     {
       "original": "ve.java",
-      "renamed": "ve.java",
+      "renamed": "GrowableIntArray.java",
       "inputSha256": "343b526f38f05c6ec678f284b2333b51744656251ab39799ad8e7a14ddcfd8c6",
-      "outputSha256": "19bf8e3f68ca658a49fccf4fac4e75e293865ceec1859c5d7e2304287cb74500",
+      "outputSha256": "e55bf6c7366f8017e59a46aca4ce5fa618defa26208037cbb36e5cf4ed9490b2",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ve",
+          "original": "ve",
+          "renamed": "GrowableIntArray"
+        },
         {
           "start": 116,
           "end": 118,
@@ -326604,6 +328572,132 @@
           "symbol": "M:ve.a(I)V",
           "original": "a",
           "renamed": "resetStaticState"
+        },
+        {
+          "start": 415,
+          "end": 416,
+          "symbol": "M:ve.a(Z)I",
+          "original": "a",
+          "renamed": "size"
+        },
+        {
+          "start": 473,
+          "end": 474,
+          "symbol": "M:ve.a(II)I",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
+          "start": 584,
+          "end": 585,
+          "symbol": "M:ve.a(II)I",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
+          "start": 808,
+          "end": 809,
+          "symbol": "M:ve.b(II)V",
+          "original": "b",
+          "renamed": "append"
+        },
+        {
+          "start": 886,
+          "end": 887,
+          "symbol": "M:ve.a(IIZ)V",
+          "original": "a",
+          "renamed": "set"
+        },
+        {
+          "start": 1064,
+          "end": 1065,
+          "symbol": "M:ve.d(II)V",
+          "original": "d",
+          "renamed": "grow"
+        },
+        {
+          "start": 1277,
+          "end": 1278,
+          "symbol": "M:ve.d(II)V",
+          "original": "d",
+          "renamed": "grow"
+        },
+        {
+          "start": 1422,
+          "end": 1423,
+          "symbol": "M:ve.d(II)V",
+          "original": "d",
+          "renamed": "grow"
+        },
+        {
+          "start": 1484,
+          "end": 1485,
+          "symbol": "M:ve.a(IB)I",
+          "original": "a",
+          "renamed": "computeCapacity"
+        },
+        {
+          "start": 1543,
+          "end": 1545,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
+        },
+        {
+          "start": 1546,
+          "end": 1547,
+          "symbol": "M:ug.a([II[III)V",
+          "original": "a",
+          "renamed": "copyIntRange"
+        },
+        {
+          "start": 1659,
+          "end": 1660,
+          "symbol": "M:ve.a(IB)I",
+          "original": "a",
+          "renamed": "computeCapacity"
+        },
+        {
+          "start": 2169,
+          "end": 2170,
+          "symbol": "M:ve.c(II)V",
+          "original": "c",
+          "renamed": "removeAt"
+        },
+        {
+          "start": 2383,
+          "end": 2385,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
+        },
+        {
+          "start": 2386,
+          "end": 2387,
+          "symbol": "M:ug.a([II[III)V",
+          "original": "a",
+          "renamed": "copyIntRange"
+        },
+        {
+          "start": 2671,
+          "end": 2672,
+          "symbol": "M:ve.b(II)V",
+          "original": "b",
+          "renamed": "append"
+        },
+        {
+          "start": 2712,
+          "end": 2713,
+          "symbol": "M:ve.a(IIZ)V",
+          "original": "a",
+          "renamed": "set"
+        },
+        {
+          "start": 2771,
+          "end": 2773,
+          "symbol": "M:ve.<init>()V",
+          "original": "ve",
+          "renamed": "GrowableIntArray"
         }
       ]
     },
@@ -326844,7 +328938,7 @@
       "original": "vh.java",
       "renamed": "vh.java",
       "inputSha256": "f6ea58ecb45666bd04f5f2cb381e0241624eb3959484934ce7ed74eb5e59d82e",
-      "outputSha256": "aae6cfa70491e8db7abd40b0d734e4294f67bfcc726a8ce99545f10ddd150f72",
+      "outputSha256": "bf2c54f8b37f728ca1904749d73eb3ca1d8d732e4bb8c68eee1a17dc10339ae3",
       "edits": [
         {
           "start": 172,
@@ -327613,6 +329707,13 @@
           "renamed": "position"
         },
         {
+          "start": 26234,
+          "end": 26235,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
+        },
+        {
           "start": 26255,
           "end": 26262,
           "symbol": "F:rb.field_f:[B",
@@ -327814,6 +329915,13 @@
           "symbol": "F:rb.field_g:I",
           "original": "field_g",
           "renamed": "position"
+        },
+        {
+          "start": 32717,
+          "end": 32718,
+          "symbol": "M:dg.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseXor"
         },
         {
           "start": 32746,
@@ -328697,7 +330805,7 @@
       "original": "vj.java",
       "renamed": "FullscreenStatusDialog.java",
       "inputSha256": "76fd98fdd9f11e8de1463683b6da74e79ca8fddf2910cb453260b267d6ea21ff",
-      "outputSha256": "d646ba60cacb340fcd0d6787c8a0864ca420009a188a5d309b4e0177ab56f6e5",
+      "outputSha256": "60be201fac1b7683e9cbe9bc25d19182d97db9b999c2f8e67d65f265e552afb4",
       "edits": [
         {
           "start": 50,
@@ -329085,6 +331193,13 @@
           "renamed": "MouseInput"
         },
         {
+          "start": 6093,
+          "end": 6095,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 6218,
           "end": 6220,
           "symbol": "C:uj",
@@ -329125,6 +331240,13 @@
           "symbol": "M:vj.a(Ljava/lang/String;Lqg;Z)Ldk;",
           "original": "a",
           "renamed": "createCloseButton"
+        },
+        {
+          "start": 6549,
+          "end": 6551,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
         },
         {
           "start": 6562,
@@ -330856,7 +332978,7 @@
       "original": "w.java",
       "renamed": "w.java",
       "inputSha256": "6666941643d5b02f2beefc28696a4b2bc07fc3d2aee171726aa3ea18c2f1b011",
-      "outputSha256": "13738f4f32fc012d37ac5ad2f3fb044f485f3b599554a98d9bb6f759cb8cc28a",
+      "outputSha256": "645ff5ff57eeb03739b47cebde26f4167e56dab165043fbcae9083ca07abcd64",
       "edits": [
         {
           "start": 60,
@@ -330978,6 +333100,20 @@
           "renamed": "Sprite"
         },
         {
+          "start": 5458,
+          "end": 5460,
+          "symbol": "C:ug",
+          "original": "ug",
+          "renamed": "ArrayBlockSupport"
+        },
+        {
+          "start": 5461,
+          "end": 5462,
+          "symbol": "M:ug.a([Ljava/lang/Object;I[Ljava/lang/Object;II)V",
+          "original": "a",
+          "renamed": "copyObjectRange"
+        },
+        {
           "start": 5978,
           "end": 5979,
           "symbol": "M:sd.a(Ljava/lang/Throwable;Ljava/lang/String;)Lii;",
@@ -331062,6 +333198,20 @@
           "renamed": "showConnectionFailure"
         },
         {
+          "start": 7776,
+          "end": 7778,
+          "symbol": "C:ve",
+          "original": "ve",
+          "renamed": "GrowableIntArray"
+        },
+        {
+          "start": 7810,
+          "end": 7812,
+          "symbol": "C:ve",
+          "original": "ve",
+          "renamed": "GrowableIntArray"
+        },
+        {
           "start": 7827,
           "end": 7829,
           "symbol": "C:lf",
@@ -331081,6 +333231,20 @@
           "symbol": "C:uj",
           "original": "uj",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 7897,
+          "end": 7899,
+          "symbol": "C:ve",
+          "original": "ve",
+          "renamed": "GrowableIntArray"
+        },
+        {
+          "start": 7933,
+          "end": 7935,
+          "symbol": "C:ve",
+          "original": "ve",
+          "renamed": "GrowableIntArray"
         },
         {
           "start": 7944,
@@ -331139,6 +333303,13 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 10972,
+          "end": 10973,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
+        },
+        {
           "start": 11101,
           "end": 11103,
           "symbol": "C:rk",
@@ -331158,7 +333329,7 @@
       "original": "wa.java",
       "renamed": "wa.java",
       "inputSha256": "8b956f1564c0f27c24312f77c892ecd4d5055c7b2596f0e5ce0756fe35c1f1c6",
-      "outputSha256": "94fa7d01418339990c337f24f3661b083189a6b5156417e08fed4bdc061a7614",
+      "outputSha256": "9b7b96b96eb4266d8aaa3cb66fe6c7f8c9256e3f6f90aceeebb48d4ba4132ead",
       "edits": [
         {
           "start": 64,
@@ -331252,6 +333423,13 @@
           "renamed": "ClientException"
         },
         {
+          "start": 4300,
+          "end": 4302,
+          "symbol": "C:mc",
+          "original": "mc",
+          "renamed": "ByteArrayPoolSupport"
+        },
+        {
           "start": 4331,
           "end": 4333,
           "symbol": "C:nh",
@@ -331341,6 +333519,13 @@
           "symbol": "M:rb.j(I)I",
           "original": "j",
           "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 6673,
+          "end": 6674,
+          "symbol": "M:w.a(II)I",
+          "original": "a",
+          "renamed": "bitwiseAnd"
         },
         {
           "start": 6730,
@@ -332906,10 +335091,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/starcannon"
     },
-    "rulesSha256": "2ef745c0c202bec0cfa593b566f832b10e0e49a339cab59f8d3472485b3f10b1",
+    "rulesSha256": "0ed60c153713d6fe7e774dbe94808c1c7b9545c53f868626916121b12a1edb84",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "62d58dee4b5bd30b4448218ec4c4d9343522e4b4bdf5dd76d9dedff97892ea7c",
-    "outputTreeSha256": "ab15fa214f5490c27cd0bb43cf9784fd1d530b6b21a40ed979b823018ec7f3d7",
+    "outputTreeSha256": "06c27bddf99dc05a6da6aab86f20947241841760f77615c6cab44b3b01c9b61a",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

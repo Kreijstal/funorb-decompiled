@@ -212,7 +212,7 @@ final class v implements Runnable {
               var5 = var12.length << 2;
             }
             for (var7 = 0; var7 < var5; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(4) << DirectByteStorage.a(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(4) << DirectByteStorage.bitwiseAnd(768, var7 << 8));
             }
             var4.field_m = true;
             var4.unlink(20);

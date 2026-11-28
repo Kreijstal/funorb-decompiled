@@ -50,7 +50,7 @@ final class kfa extends k {
           var4 = this.field_j.a(param0, param1 - 1);
           var3 = var4;
           if (this.field_j.field_m) {
-            ArrayOperations.a(var4, 0, hh.field_d, this.field_k);
+            ArrayOperations.fillInts(var4, 0, hh.field_d, this.field_k);
           }
           return var4;
         }
@@ -58,7 +58,7 @@ final class kfa extends k {
         var4Lifetime1 = this.field_j.a(param0, param1 - 1);
         var3Lifetime1 = var4Lifetime1;
         if (this.field_j.field_m) {
-          ArrayOperations.a(var4Lifetime1, 0, hh.field_d, this.field_k);
+          ArrayOperations.fillInts(var4Lifetime1, 0, hh.field_d, this.field_k);
         }
         return var4Lifetime1;
     }

@@ -46,7 +46,7 @@ final class ji {
           var2 = var10.readUnsignedByte(32);
           var3 = var10.readUnsignedByte(32);
           if (var2 == 0) {
-            var4_ref_ca = (ca) (dl.field_b.beginForward(-117));
+            var4_ref_ca = (ca) (ByteArrayPoolSupport.field_b.beginForward(-117));
             if (var4_ref_ca == null) {
               dc.d(107);
               return;
@@ -59,7 +59,7 @@ final class ji {
               var5 = var12.length << 2;
             }
             for (var7 = 0; var7 < var5; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(32) << va.a(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(32) << va.bitwiseAnd(768, var7 << 8));
             }
             var4_ref_ca.unlink(true);
           } else {

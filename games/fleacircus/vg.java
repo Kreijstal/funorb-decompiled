@@ -108,7 +108,7 @@ final class vg extends wi {
               this.field_o = ji.field_i;
             }
           } else {
-            this.field_o = id.field_g;
+            this.field_o = GrowableIntArray.field_g;
           }
         } else {
           this.field_o = ji.field_i;

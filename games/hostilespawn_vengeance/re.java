@@ -1008,8 +1008,8 @@ final class re {
         }
         boolean decompiledFrameCompleted1 = true;
         var15 = 48;
-        NameSuggestionsPanel.field_E = nf.a(false);
-        kf.a(e.field_y, 0, NameSuggestionsPanel.field_E, 0, NameSuggestionsPanel.field_E.length);
+        NameSuggestionsPanel.field_E = MusicPatch.a(false);
+        ArrayBlockSupport.copyIntRange(e.field_y, 0, NameSuggestionsPanel.field_E, 0, NameSuggestionsPanel.field_E.length);
         if (var14 == 0) {
           var41 = NameSuggestionsPanel.field_E;
           var35 = var41;
@@ -1021,7 +1021,7 @@ final class re {
           var17_ref_int__ = var32;
           var18 = 0;
           while (8 > var18) {
-            var31[var18] = ll.a(var41[var18], var42[var18]);
+            var31[var18] = ll.bitwiseOr(var41[var18], var42[var18]);
             var18++;
             if (var30 != 0) {
               decompiledFrameCompleted1 = false;
@@ -1320,7 +1320,7 @@ final class re {
             ValidationStatusWidget.field_Z.drawCentred(var4Lifetime2.toUpperCase(), 320, 193, 16776960, -1);
           }
           this.a(30, (byte) -55, 360, 56, 528);
-          wh.field_d.drawCentred(pl.field_a.toUpperCase(), 320, 383, 16776960, -1);
+          wh.field_d.drawCentred(MusicPatchEnvelope.field_a.toUpperCase(), 320, 383, 16776960, -1);
           if (StandardContentDialog.p(3)) {
             return;
           }
@@ -2099,7 +2099,7 @@ final class re {
               bh.field_d = 0;
               gf.field_j = 0;
               ResizableModalDialog.field_R = 0;
-              pl.field_l = false;
+              MusicPatchEnvelope.field_l = false;
               if (FullscreenStatusDialog.field_ab != 1) {
                 break;
               }
@@ -2971,14 +2971,14 @@ final class re {
         var3 += 81;
         var3 = this.a(DebouncedFieldValidator.field_g, 82, var3);
         if (!hk.field_q) {
-          var3 = this.a(il.field_c[1], df.field_b, var3, df.field_e, (byte) 80, il.field_c[0]);
+          var3 = this.a(il.field_c[1], GrowableIntArray.field_b, var3, GrowableIntArray.field_e, (byte) 80, il.field_c[0]);
           if (HostileSpawn.field_I) {
-            var3 = this.a(il.field_c[0], df.field_b, var3, df.field_e, (byte) 80, il.field_c[1]);
+            var3 = this.a(il.field_c[0], GrowableIntArray.field_b, var3, GrowableIntArray.field_e, (byte) 80, il.field_c[1]);
           }
         } else {
-          var3 = this.a(il.field_c[0], df.field_b, var3, df.field_e, (byte) 80, il.field_c[1]);
+          var3 = this.a(il.field_c[0], GrowableIntArray.field_b, var3, GrowableIntArray.field_e, (byte) 80, il.field_c[1]);
         }
-        var3 = this.a(pl.field_f, wl.field_a, var3, rl.field_a, (byte) 80, DialogMessagePane.field_H);
+        var3 = this.a(MusicPatchEnvelope.field_f, wl.field_a, var3, rl.field_a, (byte) 80, DialogMessagePane.field_H);
         if (param0 != 82) {
           this.field_o = 34;
         }

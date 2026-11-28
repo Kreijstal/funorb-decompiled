@@ -25,9 +25,9 @@ final class EmailFormatValidator extends TextFieldValidator {
         }
         dc.field_q.a((byte) 124, ArrayWidgetContainer.field_G);
         LoginPanel.field_W = new id(DirectByteStorage.field_c, dc.field_q);
-        ql.field_d = new ci(0L, (ci) null);
-        ql.field_d.a((byte) 124, LoginPanel.field_W.field_a);
-        ql.field_d.a((byte) 123, ln.field_cc);
+        ByteArrayPoolSupport.field_d = new ci(0L, (ci) null);
+        ByteArrayPoolSupport.field_d.a((byte) 124, LoginPanel.field_W.field_a);
+        ByteArrayPoolSupport.field_d.a((byte) 123, ln.field_cc);
         DialogMessagePane.g((byte) -128);
     }
 
@@ -48,7 +48,7 @@ final class EmailFormatValidator extends TextFieldValidator {
             var4 = (ResourceArchive) null;
             EmailFormatValidator.a(93, 27, (ResourceArchive) null, (byte) 6);
           }
-          ne.copyByteRange(param1, 0, var3, 0, var2_int);
+          ArrayBlockSupport.copyByteRange(param1, 0, var3, 0, var2_int);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

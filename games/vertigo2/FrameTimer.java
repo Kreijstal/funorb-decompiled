@@ -85,7 +85,7 @@ abstract class FrameTimer {
               return stackIn_20_0;
             }
             var6 = var4[var5];
-            var7 = pe.a(var6, true);
+            var7 = MusicPatchNode.a(var6, true);
             if (var7 == null) {
               var5++;
               continue;

@@ -277,7 +277,7 @@ final class gg {
                   var20 = param4.field_F[var18];
                   var21Lifetime2 = param4.field_L[var18];
                   ModalDialog.field_w[var18] = var15 * var21Lifetime2 + (var9 * var19 + var12 * var20) >> 16;
-                  nh.field_j[var18] = var19 * var10 + (var20 * var13 + var21Lifetime2 * var16) >> 16;
+                  MusicPatchEnvelope.field_j[var18] = var19 * var10 + (var20 * var13 + var21Lifetime2 * var16) >> 16;
                   d.field_b[var18] = var21Lifetime2 * var17 + (var14 * var20 + var19 * var11) >> 16;
                   var18++;
                 }

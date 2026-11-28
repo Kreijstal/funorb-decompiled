@@ -43,7 +43,7 @@ final class de extends RuntimeException {
           uj.field_f = new int[var3][];
           ae.field_J = new TriangleMesh[var3];
           for (var4 = 0; var4 < var3; var4++) {
-            ae.field_J[var4] = FrameTimer.a(var8, dg.a(param0, -114));
+            ae.field_J[var4] = FrameTimer.a(var8, dg.bitwiseXor(param0, -114));
           }
           var10.endBitAccess(8);
           var9 = param0;

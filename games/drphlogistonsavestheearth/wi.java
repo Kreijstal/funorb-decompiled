@@ -24,7 +24,7 @@ final class wi {
         RuntimeException decompiledCaughtException = null;
         var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          PcmResampler.field_c.processPointerInput(nl.field_m, ri.field_d, true, 0);
+          PcmResampler.field_c.processPointerInput(nl.field_m, MusicPatchEnvelope.field_d, true, 0);
           PcmResampler.field_c.advanceDialogs(false);
           while (th.a(param0 - 94)) {
             PcmResampler.field_c.processKeyInput(di.field_c, sj.field_g, 127);

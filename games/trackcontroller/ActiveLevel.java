@@ -73,7 +73,7 @@ final class ActiveLevel extends LevelGrid {
         try {
           if (!param3.advance(param1 - 3045)) {
             param3.unlink(-68);
-            this.tileFlags[param3.row][param3.column] = RandomAccessCacheFile.a(this.tileFlags[param3.row][param3.column], ~this.b(16384, param3.columnStep, param3.rowStep));
+            this.tileFlags[param3.row][param3.column] = RandomAccessCacheFile.bitwiseAnd(this.tileFlags[param3.row][param3.column], ~this.b(16384, param3.columnStep, param3.rowStep));
             param3.completeStep(param1 ^ 3098);
             this.tileFlags[param3.row][param3.column] = param3.tileValue;
             if (param3.tileValue == 38) {
@@ -300,7 +300,7 @@ final class ActiveLevel extends LevelGrid {
           }
           for (var7 = 0; var7 < 16; var7++) {
             for (var8 = 0; var8 < 16; var8++) {
-              this.tileFlags[var7][var8] = RandomAccessCacheFile.a(this.tileFlags[var7][var8], -32641);
+              this.tileFlags[var7][var8] = RandomAccessCacheFile.bitwiseAnd(this.tileFlags[var7][var8], -32641);
             }
           }
           this.field_u = new LevelView(this.floorKind, this.tileFlags, this.targetLayout, 16, 48, true);
@@ -355,11 +355,11 @@ final class ActiveLevel extends LevelGrid {
         this.field_bb = 16777219;
         this.field_A = new cd(1);
         this.field_z = false;
-        this.field_bb = qh.field_b.levelIndex;
+        this.field_bb = GrowableIntArray.field_b.levelIndex;
         this.field_R = -692867528;
         this.field_cb = 640022790;
         this.field_E = 0;
-        this.loadLevel(qh.field_b, 42);
+        this.loadLevel(GrowableIntArray.field_b, 42);
     }
 
     private final void a(int param0, boolean param1) {
@@ -1713,11 +1713,11 @@ final class ActiveLevel extends LevelGrid {
 
     private final void a(byte param0, MovingBlock param1) {
         try {
-          this.tileFlags[param1.row][param1.column] = RandomAccessCacheFile.a(SingleChildWidgetContainer.a(this.tileFlags[param1.row][param1.column], this.b(16384, param1.columnStep, param1.rowStep)), 32640);
+          this.tileFlags[param1.row][param1.column] = RandomAccessCacheFile.bitwiseAnd(SingleChildWidgetContainer.bitwiseOr(this.tileFlags[param1.row][param1.column], this.b(16384, param1.columnStep, param1.rowStep)), 32640);
           if (param0 > 0) {
             this.field_r = -66;
           }
-          this.tileFlags[param1.rowStep + param1.row][param1.columnStep + param1.column] = RandomAccessCacheFile.a(32640, SingleChildWidgetContainer.a(this.tileFlags[param1.row + param1.rowStep][param1.column + param1.columnStep], this.b(param1.rowStep, (byte) -86, param1.columnStep)));
+          this.tileFlags[param1.rowStep + param1.row][param1.columnStep + param1.column] = RandomAccessCacheFile.bitwiseAnd(32640, SingleChildWidgetContainer.bitwiseOr(this.tileFlags[param1.row + param1.rowStep][param1.column + param1.columnStep], this.b(param1.rowStep, (byte) -86, param1.columnStep)));
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ri.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -446,7 +446,7 @@ final class ResourceArchive {
                     var21 = var20;
                   }
                   if (param0 == var21) {
-                    ji.copyByteRange(var43, var17, var44, var14_intLifetime1, var19);
+                    ArrayBlockSupport.copyByteRange(var43, var17, var44, var14_intLifetime1, var19);
                     var14_intLifetime1 = var14_intLifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -484,7 +484,7 @@ final class ResourceArchive {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
                   var18 = var18 + var31.readInt((byte) -119);
-                  ji.copyByteRange(var43, var16, var40[var19], var39[var19], var18);
+                  ArrayBlockSupport.copyByteRange(var43, var16, var40[var19], var39[var19], var18);
                   var16 = var16 + var18;
                   var14[var19] = var14[var19] + var18;
                 }

@@ -301,7 +301,7 @@ final class Model extends sb {
           this.field_i = param0.field_i;
         }
         if (!param2) {
-          qq.a(param0.field_c, 0, this.field_c, 0, this.field_z);
+          ArrayBlockSupport.a(param0.field_c, 0, this.field_c, 0, this.field_z);
         } else {
           this.field_c = param0.field_c;
         }
@@ -319,7 +319,7 @@ final class Model extends sb {
               this.field_o[var6Lifetime2] = (byte) 0;
             }
           } else {
-            qq.copyByteRange(param0.field_o, 0, this.field_o, 0, this.field_z);
+            ArrayBlockSupport.copyByteRange(param0.field_o, 0, this.field_o, 0, this.field_z);
           }
         } else {
           this.field_o = param0.field_o;

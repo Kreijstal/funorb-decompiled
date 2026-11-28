@@ -1,0 +1,243 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ByteArrayPoolSupport {
+    static int field_d;
+    static String field_a;
+    static uf field_e;
+    static String field_b;
+    private static int field_c;
+    static String field_f;
+    static PcmSample field_g;
+
+    final synchronized static byte[] acquireByteArray(int param0, int param1) {
+        int fieldTemp$2 = 0;
+        int dupTemp$3 = 0;
+        byte[][] arrayValue$4 = null;
+        int fieldTemp$5 = 0;
+        int fieldTemp$6 = 0;
+        int dupTemp$7 = 0;
+        byte[][] arrayValue$8 = null;
+        int fieldTemp$18 = 0;
+        int fieldTemp$15 = 0;
+        int dupTemp$16 = 0;
+        byte[][] arrayValue$17 = null;
+        int fieldTemp$9 = 0;
+        int dupTemp$13 = 0;
+        byte[][] arrayValue$14 = null;
+        int fieldTemp$12 = 0;
+        int dupTemp$10 = 0;
+        byte[][] arrayValue$11 = null;
+        byte[] var2_ref_byte__;
+        int var2;
+        byte[] var3;
+        int var2Lifetime1;
+        if (100 != param1) {
+          if (param1 != 5000) {
+            if (param1 == 30000 &&
+              pg.field_a > 0) {
+              fieldTemp$2 = pg.field_a - 1;
+              pg.field_a = pg.field_a - 1;
+              var2_ref_byte__ = jk.field_n[fieldTemp$2];
+              jk.field_n[pg.field_a] = null;
+              return var2_ref_byte__;
+            }
+            if (null != IsaacRandom.field_h) {
+              for (var2 = 0; a.field_g.length > var2; var2++) {
+                if (param1 == a.field_g[var2] &&
+                  pj.field_x[var2] > 0) {
+                  dupTemp$3 = pj.field_x[var2] - 1;
+                  arrayValue$4 = IsaacRandom.field_h[var2];
+                  pj.field_x[var2] = dupTemp$3;
+                  var3 = arrayValue$4[dupTemp$3];
+                  IsaacRandom.field_h[var2][pj.field_x[var2]] = null;
+                  return var3;
+                }
+              }
+            }
+          } else {
+            if (0 < field_c) {
+              fieldTemp$5 = field_c - 1;
+              field_c = field_c - 1;
+              var2_ref_byte__ = ValidationStatusWidget.field_U[fieldTemp$5];
+              ValidationStatusWidget.field_U[field_c] = null;
+              return var2_ref_byte__;
+            }
+            if (param1 == 30000 &&
+              pg.field_a > 0) {
+              fieldTemp$6 = pg.field_a - 1;
+              pg.field_a = pg.field_a - 1;
+              var2_ref_byte__ = jk.field_n[fieldTemp$6];
+              jk.field_n[pg.field_a] = null;
+              return var2_ref_byte__;
+            }
+            if (null != IsaacRandom.field_h) {
+              for (var2 = 0; a.field_g.length > var2; var2++) {
+                if (param1 == a.field_g[var2] &&
+                  pj.field_x[var2] > 0) {
+                  dupTemp$7 = pj.field_x[var2] - 1;
+                  arrayValue$8 = IsaacRandom.field_h[var2];
+                  pj.field_x[var2] = dupTemp$7;
+                  var3 = arrayValue$8[dupTemp$7];
+                  IsaacRandom.field_h[var2][pj.field_x[var2]] = null;
+                  return var3;
+                }
+              }
+            }
+          }
+        } else {
+          if (CrossfadingMidiPcmStream.field_n > 0) {
+            fieldTemp$18 = CrossfadingMidiPcmStream.field_n - 1;
+            CrossfadingMidiPcmStream.field_n = CrossfadingMidiPcmStream.field_n - 1;
+            var2_ref_byte__ = rd.field_a[fieldTemp$18];
+            rd.field_a[CrossfadingMidiPcmStream.field_n] = null;
+            return var2_ref_byte__;
+          }
+          if (param1 != 5000) {
+            if (param1 == 30000 &&
+              pg.field_a > 0) {
+              fieldTemp$15 = pg.field_a - 1;
+              pg.field_a = pg.field_a - 1;
+              var2_ref_byte__ = jk.field_n[fieldTemp$15];
+              jk.field_n[pg.field_a] = null;
+              return var2_ref_byte__;
+            }
+            if (null != IsaacRandom.field_h) {
+              for (var2 = 0; a.field_g.length > var2; var2++) {
+                if (param1 == a.field_g[var2] &&
+                  pj.field_x[var2] > 0) {
+                  dupTemp$16 = pj.field_x[var2] - 1;
+                  arrayValue$17 = IsaacRandom.field_h[var2];
+                  pj.field_x[var2] = dupTemp$16;
+                  var3 = arrayValue$17[dupTemp$16];
+                  IsaacRandom.field_h[var2][pj.field_x[var2]] = null;
+                  return var3;
+                }
+              }
+            }
+          } else {
+            if (0 < field_c) {
+              fieldTemp$9 = field_c - 1;
+              field_c = field_c - 1;
+              var2_ref_byte__ = ValidationStatusWidget.field_U[fieldTemp$9];
+              ValidationStatusWidget.field_U[field_c] = null;
+              return var2_ref_byte__;
+            }
+            if (param1 != 30000) {
+              if (null != IsaacRandom.field_h) {
+                for (var2 = 0; a.field_g.length > var2; var2++) {
+                  if (param1 == a.field_g[var2] &&
+                    pj.field_x[var2] > 0) {
+                    dupTemp$13 = pj.field_x[var2] - 1;
+                    arrayValue$14 = IsaacRandom.field_h[var2];
+                    pj.field_x[var2] = dupTemp$13;
+                    var3 = arrayValue$14[dupTemp$13];
+                    IsaacRandom.field_h[var2][pj.field_x[var2]] = null;
+                    return var3;
+                  }
+                }
+              }
+            } else {
+              if (pg.field_a > 0) {
+                fieldTemp$12 = pg.field_a - 1;
+                pg.field_a = pg.field_a - 1;
+                var2_ref_byte__ = jk.field_n[fieldTemp$12];
+                jk.field_n[pg.field_a] = null;
+                return var2_ref_byte__;
+              }
+              if (null != IsaacRandom.field_h) {
+                for (var2 = 0; a.field_g.length > var2; var2++) {
+                  if (param1 == a.field_g[var2] &&
+                    pj.field_x[var2] > 0) {
+                    dupTemp$10 = pj.field_x[var2] - 1;
+                    arrayValue$11 = IsaacRandom.field_h[var2];
+                    pj.field_x[var2] = dupTemp$10;
+                    var3 = arrayValue$11[dupTemp$10];
+                    IsaacRandom.field_h[var2][pj.field_x[var2]] = null;
+                    return var3;
+                  }
+                }
+              }
+            }
+          }
+        }
+        var2Lifetime1 = -89 % ((-38 - param0) / 62);
+        return new byte[param1];
+    }
+
+    final static void a(int param0) {
+        ih var2 = null;
+        vh var1 = (vh) (al.field_e.beginForward((byte) 47));
+        ih var2Lifetime1;
+        if (param0 > -5) {
+          ByteArrayPoolSupport.clearStaticReferences(126);
+          if (var1 == null) {
+            BufferedRandomAccessFile.c(-28354);
+            return;
+          }
+          var2 = AccountRequestState.field_a;
+          var2.readInt((byte) -32);
+          var2.readInt((byte) 122);
+          var2.readInt((byte) 127);
+          var2.readInt((byte) 124);
+          var1.unlink(-1);
+          return;
+        }
+        if (var1 == null) {
+          BufferedRandomAccessFile.c(-28354);
+          return;
+        }
+        var2Lifetime1 = AccountRequestState.field_a;
+        var2Lifetime1.readInt((byte) -32);
+        var2Lifetime1.readInt((byte) 122);
+        var2Lifetime1.readInt((byte) 127);
+        var2Lifetime1.readInt((byte) 124);
+        var1.unlink(-1);
+    }
+
+    public static void clearStaticReferences(int param0) {
+        field_b = null;
+        field_e = null;
+        if (param0 < -40) {
+          field_g = null;
+          field_a = null;
+          field_f = null;
+          return;
+        }
+        ByteArrayPoolSupport.clearStaticReferences(95);
+        field_g = null;
+        field_a = null;
+        field_f = null;
+    }
+
+    final static boolean b(int param0) {
+        int var1 = 0;
+        int var1Lifetime1;
+        if (pd.field_l == -1) {
+          if (!gi.a(1, true)) {
+            return false;
+          }
+          pd.field_l = AccountRequestState.field_a.readUnsignedByte(false);
+          AccountRequestState.field_a.position = 0;
+        }
+        if (pd.field_l == -2) {
+          if (gi.a(2, true)) {
+            pd.field_l = AccountRequestState.field_a.readUnsignedShort((byte) -65);
+            AccountRequestState.field_a.position = 0;
+            var1 = -114 % ((param0 - 53) / 54);
+            return gi.a(pd.field_l, true);
+          }
+          return false;
+        }
+        var1Lifetime1 = -114 % ((param0 - 53) / 54);
+        return gi.a(pd.field_l, true);
+    }
+
+    static {
+        field_d = 256;
+        field_b = null;
+        field_c = 0;
+        field_f = "Updates will sent to the email address you've given";
+        field_a = "<%0>Bridge:<%1> This breaks and falls away after a single flea crosses it.";
+    }
+}

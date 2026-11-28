@@ -87,7 +87,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
           var9 = fleas.field_A ? 1 : 0;
           try {
             if (null == sg.field_h &&
-              !id.a(false, param2)) {
+              !GrowableIntArray.a(false, param2)) {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }
@@ -129,7 +129,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
               var6_intLifetime1 = AccountRequestState.field_a.readUnsignedByte(false);
               be.field_a = var6_intLifetime1;
               AccountRequestState.field_a.position = 0;
-              wc.field_p = null;
+              MusicPatch.field_p = null;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
@@ -150,11 +150,11 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
               }
             }
             if (ll.field_r == ResourceArchive.field_k &&
-              gf.b(-128)) {
+              ByteArrayPoolSupport.b(-128)) {
               aj.field_w = AccountRequestState.field_a.readLong(-109);
               DirectByteStorage.field_k = AccountRequestState.field_a.readUnsignedByte(false);
               AccountRequestState.field_a.readUnsignedByte(false);
-              wc.field_q = AccountRequestState.field_a.readUnsignedShort((byte) -116);
+              MusicPatch.field_q = AccountRequestState.field_a.readUnsignedShort((byte) -116);
               var11 = AccountRequestState.field_a.readNullableString((byte) -115);
               var7 = AccountRequestState.field_a.readUnsignedByte(false);
               if ((var7 & 1) != 0) {
@@ -194,7 +194,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
               if (var11 != null) {
                 ea.a(376, BoundedRandomAccessFile.getApplet((byte) -120), var11);
               }
-              if (0 >= wc.field_q &&
+              if (0 >= MusicPatch.field_q &&
                 !ed.field_a) {
                 try {
                   JavaScriptBridge.callWithoutArguments("unzap", BoundedRandomAccessFile.getApplet((byte) -65), -250);
@@ -210,7 +210,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               }
-              if (0 < wc.field_q) {
+              if (0 < MusicPatch.field_q) {
                 va.field_m = true;
               }
               ud.field_b.a(ue.field_a, (byte) 12);
@@ -226,7 +226,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
               return stackIn_78_0;
             }
             if (TextLineMetrics.field_g == ResourceArchive.field_k &&
-              gf.b(115)) {
+              ByteArrayPoolSupport.b(115)) {
               BufferedRandomAccessFile.c(-28354);
               if (7 == be.field_a &&
                 !aa.field_q) {

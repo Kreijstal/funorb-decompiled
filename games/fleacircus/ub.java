@@ -6,12 +6,12 @@ final class ub {
     static qc field_a;
     static long[] field_c;
 
-    final static wc a(int param0, byte param1, ResourceArchive param2) {
+    final static MusicPatch loadMusicPatch(int param0, byte param1, ResourceArchive param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
         Object stackIn_4_0 = null;
-        wc stackIn_6_0 = null;
+        MusicPatch stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -23,11 +23,11 @@ final class ub {
             ub.clearStaticReferences(82);
           }
           if (var4 != null) {
-            stackIn_6_0 = new wc(var4);
+            stackIn_6_0 = new MusicPatch(var4);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (wc) (stackIn_4_0);
+          return (MusicPatch) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

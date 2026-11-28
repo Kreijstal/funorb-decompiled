@@ -82,7 +82,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetActiva
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -256,7 +256,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetActiva
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
         }
     }
 
@@ -289,7 +289,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetActiva
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -325,7 +325,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetActiva
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -341,7 +341,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetActiva
         try {
           this.field_K = param0;
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -396,7 +396,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetActiva
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

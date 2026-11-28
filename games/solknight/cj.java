@@ -29,7 +29,7 @@ final class cj {
         var3 = SolKnight.field_L ? 1 : 0;
         try {
           var1_int = 75 / ((param0 - 8) / 49);
-          u.field_b.processPointerInput(-1, DropTargetWidgetContainer.field_K, true, ee.field_l);
+          u.field_b.processPointerInput(-1, DropTargetWidgetContainer.field_K, true, MidiNoteMask.field_l);
           u.field_b.advanceDialogs(false);
           while (DelegatingCanvas.a((byte) -56)) {
             u.field_b.processKeyInput(MatchingFieldValidator.field_n, ta.field_d, (byte) -48);
@@ -61,7 +61,7 @@ final class cj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var1), "cj.B(" + param0 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var1), "cj.B(" + param0 + ')');
         }
     }
 

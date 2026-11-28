@@ -119,11 +119,11 @@ final class an extends DefaultTextWidgetRenderer {
 
     final static void a(int param0, int param1, int param2, int param3, String param4, int param5, int param6, int param7, PlatformTaskDispatcher param8) {
         try {
-          of.field_d = param4;
+          MusicPatchEnvelope.field_d = param4;
           ri.field_b = param0;
           ValidationStatusIcon.field_I = param6;
           lk.field_T = param3;
-          kn.field_f = param8;
+          ByteArrayPoolSupport.field_f = param8;
           if (param2 >= -55) {
             field_w = -6;
           }
@@ -311,7 +311,7 @@ final class an extends DefaultTextWidgetRenderer {
             }
             return;
           }
-          cj.a(this.field_B, 0, param1.field_B, 0, 6);
+          ArrayBlockSupport.copyObjectRange(this.field_B, 0, param1.field_B, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -87,7 +87,7 @@ final class NodeHashTableIterator implements Iterator {
           SpriteGeometry.a(param1 ^ param1, param0);
           de.a(0, param0);
           vf.a(false, param0);
-          cb.b(-110);
+          MusicPatchNode.b(-110);
           dg.a(19681);
           mc.field_k = 0 - tf.field_c;
         } catch (RuntimeException runtimeException) {
@@ -147,7 +147,7 @@ final class NodeHashTableIterator implements Iterator {
           var6 = (byte)param1.readBits(8, 26527);
           if (var5 > 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param3[var7] = (byte)(param1.readBits(var5, dg.a(param0, 26527)) + var6);
+              param3[var7] = (byte)(param1.readBits(var5, dg.bitwiseXor(param0, 26527)) + var6);
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {

@@ -26,7 +26,7 @@ final class oe {
         }
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseXor(int param0, int param1) {
         return param0 ^ param1;
     }
 

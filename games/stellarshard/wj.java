@@ -389,7 +389,7 @@ final class wj extends fb {
                   this.field_s.a(this.field_a.position, (byte) -64, this.field_a.payload, var5);
                   if (0 != this.field_p) {
                     for (var6 = 0; var5 > var6; var6++) {
-                      this.field_a.payload[var6 + this.field_a.position] = (byte)ih.a((int) this.field_a.payload[var6 + this.field_a.position], (int) this.field_p);
+                      this.field_a.payload[var6 + this.field_a.position] = (byte)ih.bitwiseXor((int) this.field_a.payload[var6 + this.field_a.position], (int) this.field_p);
                     }
                   }
                   this.field_a.position = this.field_a.position + var5;
@@ -463,7 +463,7 @@ final class wj extends fb {
                   this.field_s.a(this.field_r.field_G.position, (byte) -64, this.field_r.field_G.payload, var6);
                   if (this.field_p != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.field_r.field_G.payload[this.field_r.field_G.position + var7] = (byte)ih.a((int) this.field_r.field_G.payload[this.field_r.field_G.position + var7], (int) this.field_p);
+                      this.field_r.field_G.payload[this.field_r.field_G.position + var7] = (byte)ih.bitwiseXor((int) this.field_r.field_G.payload[this.field_r.field_G.position + var7], (int) this.field_p);
                     }
                   }
                   this.field_r.field_G.position = this.field_r.field_G.position + var6;

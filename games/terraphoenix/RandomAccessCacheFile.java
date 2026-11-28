@@ -175,8 +175,8 @@ final class RandomAccessCacheFile {
           }
           if (decompiledFrameRemainder0) {
             if (!uj.field_c) {
-              if (qd.field_l <= ga.field_j) {
-                stackIn_18_0 = (qd.field_l + fh.field_h > ga.field_j) ? 1 : 0;
+              if (MusicPatch.field_l <= ga.field_j) {
+                stackIn_18_0 = (MusicPatch.field_l + fh.field_h > ga.field_j) ? 1 : 0;
               } else {
                 stackIn_18_0 = 0;
               }
@@ -187,7 +187,7 @@ final class RandomAccessCacheFile {
             var2_int = stackIn_18_0;
             if (param1 != null && (uj.field_c ||
               var2_int != 0)) {
-              ga.field_j = qd.field_l;
+              ga.field_j = MusicPatch.field_l;
               decompiledFrameRemainder1 = false;
             }
             else {
@@ -204,7 +204,7 @@ final class RandomAccessCacheFile {
             lb.field_b = ll.field_a;
           }
           if (!uj.field_c &&
-            qd.field_l > ga.field_j &&
+            MusicPatch.field_l > ga.field_j &&
             ja.field_l) {
             ga.field_j = 0;
             lb.field_b = ll.field_a;
@@ -297,7 +297,7 @@ final class RandomAccessCacheFile {
           var18.position = -2 + param0.length;
           kf.field_b = var18.readUnsignedShort(-25578);
           ug.field_c = new byte[kf.field_b][];
-          sb.field_m = new int[kf.field_b];
+          MidiNoteMask.field_m = new int[kf.field_b];
           DropTargetWidgetContainer.field_K = new int[kf.field_b];
           ConfirmedEmailAvailabilityValidator.field_s = new int[kf.field_b];
           aa.field_k = new boolean[kf.field_b];
@@ -305,7 +305,7 @@ final class RandomAccessCacheFile {
           ArchiveRequest.field_p = new int[kf.field_b];
           var18.position = param0.length + (-7 - kf.field_b * 8);
           ah.field_A = var18.readUnsignedShort(-25578);
-          sb.field_j = var18.readUnsignedShort(-25578);
+          MidiNoteMask.field_j = var18.readUnsignedShort(-25578);
           if (param1 > -58) {
             var16 = (String) null;
             RandomAccessCacheFile.a((byte) 57, (String) null);
@@ -318,7 +318,7 @@ final class RandomAccessCacheFile {
             DropTargetWidgetContainer.field_K[var4Lifetime1] = var18.readUnsignedShort(-25578);
           }
           for (var4Lifetime2 = 0; kf.field_b > var4Lifetime2; var4Lifetime2++) {
-            sb.field_m[var4Lifetime2] = var18.readUnsignedShort(-25578);
+            MidiNoteMask.field_m[var4Lifetime2] = var18.readUnsignedShort(-25578);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < kf.field_b; var4Lifetime3++) {
             ArchiveRequest.field_p[var4Lifetime3] = var18.readUnsignedShort(-25578);
@@ -333,7 +333,7 @@ final class RandomAccessCacheFile {
           }
           var18.position = 0;
           for (var4Lifetime5 = 0; kf.field_b > var4Lifetime5; var4Lifetime5++) {
-            var5 = sb.field_m[var4Lifetime5];
+            var5 = MidiNoteMask.field_m[var4Lifetime5];
             var6 = ArchiveRequest.field_p[var4Lifetime5];
             var7 = var6 * var5;
             var21 = new byte[var7];

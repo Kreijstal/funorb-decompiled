@@ -481,7 +481,7 @@ abstract class nk extends GameAppletShell {
             this.a("reconnect", 89);
           }
           AlphaWidgetContainer.a((byte) 83);
-          sc.a(var2, (byte) 99, wj.field_p);
+          sc.a(var2, (byte) 99, MusicPatch.field_p);
           MusicPatchPcmStream.field_o = true;
           mc.field_i = rf.correctedCurrentTimeMillis(0) + 15000L;
           return var2;
@@ -546,8 +546,8 @@ abstract class nk extends GameAppletShell {
           if (1 == var4) {
             var5_int = SingleChildWidgetContainer.a(0, fk.a(85), qd.a(false));
             if (var5_int != -1) {
-              AccountServiceResult.a(105, var5_int, wj.field_p, fc.field_S);
-              wj.field_p = null;
+              AccountServiceResult.a(105, var5_int, MusicPatch.field_p, fc.field_S);
+              MusicPatch.field_p = null;
               fc.field_S = null;
             }
             var11 = ModalDialog.e((byte) -117);
@@ -558,9 +558,9 @@ abstract class nk extends GameAppletShell {
           if (var4 == 2) {
             var5_intLifetime1 = il.a(this.field_A, dg.a(false), el.b(param1 ^ 1), TextLayout.b(25594), tf.a((byte) -101), 103, a.c(true));
             if (var5_intLifetime1 != -1) {
-              ByteStorage.a(var5_intLifetime1, -6258, wj.field_p, fc.field_S);
+              ByteStorage.a(var5_intLifetime1, -6258, MusicPatch.field_p, fc.field_S);
               fc.field_S = null;
-              wj.field_p = null;
+              MusicPatch.field_p = null;
             }
           }
           if (var4 == 3) {
@@ -573,10 +573,10 @@ abstract class nk extends GameAppletShell {
               var5_intLifetime2 = TextLayout.a(el.b(1), (byte) -25, this.field_y, false, dg.a(false), this.field_A);
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
-                  sc.a(var5_intLifetime2, (byte) 58, wj.field_p);
-                  wj.field_p = null;
+                  sc.a(var5_intLifetime2, (byte) 58, MusicPatch.field_p);
+                  MusicPatch.field_p = null;
                 } else {
-                  d.field_a = rc.field_f;
+                  d.field_a = MusicPatchEnvelope.field_f;
                   wb.b((byte) 50);
                   ta.field_g = 10;
                   qg.field_d = false;

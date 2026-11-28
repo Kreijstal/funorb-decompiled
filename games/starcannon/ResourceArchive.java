@@ -627,7 +627,7 @@ final class ResourceArchive {
                     var21 = var20;
                   }
                   if (var21 == param1) {
-                    ug.copyByteRange(var43, var17Lifetime4, var44, var14_intLifetime1, var19Lifetime2);
+                    ArrayBlockSupport.copyByteRange(var43, var17Lifetime4, var44, var14_intLifetime1, var19Lifetime2);
                     var14_intLifetime1 = var14_intLifetime1 + var19Lifetime2;
                   }
                   var17Lifetime4 = var17Lifetime4 + var19Lifetime2;
@@ -666,7 +666,7 @@ final class ResourceArchive {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var5_int > var19Lifetime1; var19Lifetime1++) {
                 var18Lifetime1 = var18Lifetime1 + var31.readInt((byte) -100);
-                ug.copyByteRange(var43, var16Lifetime3, var40[var19Lifetime1], var39[var19Lifetime1], var18Lifetime1);
+                ArrayBlockSupport.copyByteRange(var43, var16Lifetime3, var40[var19Lifetime1], var39[var19Lifetime1], var18Lifetime1);
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;
                 var14[var19Lifetime1] = var14[var19Lifetime1] + var18Lifetime1;
               }

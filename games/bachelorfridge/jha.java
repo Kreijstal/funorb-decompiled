@@ -48,7 +48,7 @@ final class jha extends TileEffect {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!g.a(param2, param3, param1 ^ -30740, param0)) {
+          if (!MidiNoteMask.a(param2, param3, param1 ^ -30740, param0)) {
             return null;
           }
           if (param1 != 4) {

@@ -15,7 +15,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
     }
 
-    private final synchronized void b(boolean param0) {
+    private final synchronized void publishPixelsToConsumer(boolean param0) {
         if (null == this.field_k) {
           return;
         }
@@ -63,7 +63,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               var5_int = var11.length << 2;
             }
             for (var7 = 0; var7 < var5_int; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(255) << fi.a(var7 << 8, 768));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(255) << fi.bitwiseAnd(var7 << 8, 768));
             }
             var4_ref_fj.unlink(10);
             return;
@@ -92,7 +92,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var1), "oa.F(" + param0 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var1), "oa.F(" + param0 + ')');
         }
     }
 
@@ -104,34 +104,34 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           param0.setColorModel(this.field_o);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "oa.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "oa.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static fc a(int param0, int param1, Archive param2) {
+    final static MusicPatch loadMusicPatch(int param0, int param1, Archive param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
-        fc stackIn_2_0 = null;
+        MusicPatch stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        fc stackIn_7_0 = null;
+        MusicPatch stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -1803587230) {
-            stackIn_2_0 = (fc) null;
+            stackIn_2_0 = (MusicPatch) null;
             return stackIn_2_0;
           }
           var4 = param2.getFlatFile(param1, (byte) -104);
           var3 = var4;
           if (var4 != null) {
-            stackIn_7_0 = new fc(var4);
+            stackIn_7_0 = new MusicPatch(var4);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
-          return (fc) (stackIn_5_0);
+          return (MusicPatch) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -142,7 +142,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         try {
           this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "oa.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "oa.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             this.field_k = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "oa.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "oa.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -182,14 +182,14 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
     public static void b(int param0) {
         if (param0 != 768) {
           Archive var2 = (Archive) null;
-          ImageProducerRasterBuffer.a(-87, 28, (Archive) null);
+          ImageProducerRasterBuffer.loadMusicPatch(-87, 28, (Archive) null);
         }
         field_i = null;
         field_j = null;
@@ -199,37 +199,37 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     ImageProducerRasterBuffer() {
     }
 
-    final void a(java.awt.Component param0, int param1, int param2, int param3) {
+    final void initialize(java.awt.Component param0, int param1, int param2, int param3) {
         try {
           this.field_d = param2;
           this.field_a = param3;
           this.field_h = new int[param2 * param3 + 1];
           this.field_o = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
           this.field_g = param0.createImage((java.awt.image.ImageProducer) (this));
-          this.b(true);
+          this.publishPixelsToConsumer(true);
           if (param1 != 9387) {
             field_n = false;
           }
           param0.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
-          this.b(true);
+          this.publishPixelsToConsumer(true);
           param0.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
-          this.b(true);
+          this.publishPixelsToConsumer(true);
           param0.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
-          this.a(true);
+          this.setAsRasterTarget(true);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "oa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "oa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, java.awt.Graphics param3) {
+    final void drawImage(int param0, int param1, int param2, java.awt.Graphics param3) {
         if (param1 != 0) {
           return;
         }
         try {
-          this.b(true);
+          this.publishPixelsToConsumer(true);
           param3.drawImage(this.field_g, param0, param2, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "oa.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "oa.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

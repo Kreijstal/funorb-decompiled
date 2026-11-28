@@ -165,9 +165,9 @@ final class SleepAnimation extends EventAnimation {
                 var10 = var10 ^ 285L;
             }
             var12 = var10 ^ var2;
-            field_v[0][var0] = sr.a(var12, sr.a(sr.a(sr.a(sr.a(sr.a(var6 << 40, sr.a(var2 << 48, var2 << 56)), var2 << 32), var10 << 24), var8 << 16), var4 << 8));
+            field_v[0][var0] = sr.bitwiseOr(var12, sr.bitwiseOr(sr.bitwiseOr(sr.bitwiseOr(sr.bitwiseOr(sr.bitwiseOr(var6 << 40, sr.bitwiseOr(var2 << 48, var2 << 56)), var2 << 32), var10 << 24), var8 << 16), var4 << 8));
             for (var14 = 1; var14 < 8; var14++) {
-                field_v[var14][var0] = sr.a(field_v[var14 - 1][var0] << 56, field_v[-1 + var14][var0] >>> 8);
+                field_v[var14][var0] = sr.bitwiseOr(field_v[var14 - 1][var0] << 56, field_v[-1 + var14][var0] >>> 8);
             }
             var0++;
         }
@@ -176,7 +176,7 @@ final class SleepAnimation extends EventAnimation {
         var0 = var15;
         while (var15 <= 10) {
             var1 = 8 * (var15 - 1);
-            field_z[var15] = gv.a(gv.a(gv.a(DisplayNameSelectionPanel.a(field_v[5][var1 + 5], 16711680L), gv.a(DisplayNameSelectionPanel.a(field_v[4][var1 + 4], 4278190080L), gv.a(DisplayNameSelectionPanel.a(1095216660480L, field_v[3][var1 + 3]), gv.a(gv.a(DisplayNameSelectionPanel.a(71776119061217280L, field_v[1][1 + var1]), DisplayNameSelectionPanel.a(-72057594037927936L, field_v[0][var1])), DisplayNameSelectionPanel.a(280375465082880L, field_v[2][2 + var1]))))), DisplayNameSelectionPanel.a(65280L, field_v[6][var1 + 6])), DisplayNameSelectionPanel.a(field_v[7][7 + var1], 255L));
+            field_z[var15] = gv.bitwiseXor(gv.bitwiseXor(gv.bitwiseXor(DisplayNameSelectionPanel.bitwiseAnd(field_v[5][var1 + 5], 16711680L), gv.bitwiseXor(DisplayNameSelectionPanel.bitwiseAnd(field_v[4][var1 + 4], 4278190080L), gv.bitwiseXor(DisplayNameSelectionPanel.bitwiseAnd(1095216660480L, field_v[3][var1 + 3]), gv.bitwiseXor(gv.bitwiseXor(DisplayNameSelectionPanel.bitwiseAnd(71776119061217280L, field_v[1][1 + var1]), DisplayNameSelectionPanel.bitwiseAnd(-72057594037927936L, field_v[0][var1])), DisplayNameSelectionPanel.bitwiseAnd(280375465082880L, field_v[2][2 + var1]))))), DisplayNameSelectionPanel.bitwiseAnd(65280L, field_v[6][var1 + 6])), DisplayNameSelectionPanel.bitwiseAnd(field_v[7][7 + var1], 255L));
             var15++;
         }
     }

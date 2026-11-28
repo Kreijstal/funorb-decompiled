@@ -11,7 +11,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
 
     public final sc getValidationStatus(byte param0) {
         if (this.hasMissingInput(-104)) {
-          return rc.field_a;
+          return MusicPatchEnvelope.field_a;
         }
         if (!(rf.correctedCurrentTimeMillis(0) >= this.field_a + 350L)) {
           return jj.field_e;

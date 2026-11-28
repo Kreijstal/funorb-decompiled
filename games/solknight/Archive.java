@@ -106,7 +106,7 @@ final class Archive {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class Archive {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -208,7 +208,7 @@ final class Archive {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -294,7 +294,7 @@ final class Archive {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -410,7 +410,7 @@ final class Archive {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) (stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) (stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -493,7 +493,7 @@ final class Archive {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -556,7 +556,7 @@ final class Archive {
             var13 = param6;
             var14 = param8;
             var15 = var17[var11] >> 1 & 8355711;
-            var10[var11] = (fi.a(var14, 33448895) >> 17) + fi.a(var12 >> 1, 16711680) - (-(fi.a(var13, 33423626) >> 9) - var15);
+            var10[var11] = (fi.bitwiseAnd(var14, 33448895) >> 17) + fi.bitwiseAnd(var12 >> 1, 16711680) - (-(fi.bitwiseAnd(var13, 33423626) >> 9) - var15);
             param8 = param8 + param4;
             param7++;
             param9 = param9 + param5;
@@ -572,7 +572,7 @@ final class Archive {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -625,7 +625,7 @@ final class Archive {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -753,7 +753,7 @@ final class Archive {
             stackIn_38_0 = var11_ref_RuntimeException;
             stackIn_38_1 = new StringBuilder();
             stackIn_39_2 = (param1 != null);
-            throw fc.wrapClientException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(gl.a(var9.length, var9, 125)).append(" ").append(gl.a(var9.length - 2, var9, 125)).append(" ").append(this.field_g.field_b[param2]).append(" ").append(this.field_g.field_d).toString());
+            throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(gl.a(var9.length, var9, 125)).append(" ").append(gl.a(var9.length - 2, var9, 125)).append(" ").append(this.field_g.field_b[param2]).append(" ").append(this.field_g.field_d).toString());
           }
           if (this.field_h) {
             this.field_c[param2] = null;
@@ -803,7 +803,7 @@ final class Archive {
                     var21 = var20;
                   }
                   if (param0 == var21) {
-                    fk.copyByteRange(var43, var17, var44, var14Lifetime1, var19);
+                    ArrayBlockSupport.copyByteRange(var43, var17, var44, var14Lifetime1, var19);
                     var14Lifetime1 = var14Lifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -844,7 +844,7 @@ final class Archive {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
                   var18 = var18 + var30.readInt(true);
-                  fk.copyByteRange(var43, var16, var39[var19], var38[var19], var18);
+                  ArrayBlockSupport.copyByteRange(var43, var16, var39[var19], var38[var19], var18);
                   var16 = var16 + var18;
                   var14_ref_int__[var19] = var14_ref_int__[var19] + var18;
                 }
@@ -885,7 +885,7 @@ final class Archive {
           } else {
             stackIn_114_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_113_0), ((StringBuilder) (Object) stackIn_113_1).append(stackIn_114_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_113_0), ((StringBuilder) (Object) stackIn_113_1).append(stackIn_114_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -914,7 +914,7 @@ final class Archive {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -946,7 +946,7 @@ final class Archive {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -961,7 +961,7 @@ final class Archive {
           this.field_e = param2;
           this.field_h = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "da.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "da.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

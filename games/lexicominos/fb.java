@@ -190,16 +190,16 @@ final class fb implements WidgetRenderer {
                 var10 = var10 ^ 285L;
             }
             var12 = var10 ^ var2;
-            field_j[0][var0] = te.a(var12, te.a(var4 << 8, te.a(te.a(var10 << 24, te.a(te.a(var6 << 40, te.a(var2 << 48, var2 << 56)), var2 << 32)), var8 << 16)));
+            field_j[0][var0] = te.bitwiseOr(var12, te.bitwiseOr(var4 << 8, te.bitwiseOr(te.bitwiseOr(var10 << 24, te.bitwiseOr(te.bitwiseOr(var6 << 40, te.bitwiseOr(var2 << 48, var2 << 56)), var2 << 32)), var8 << 16)));
             for (var14 = 1; var14 < 8; var14++) {
-                field_j[var14][var0] = te.a(field_j[var14 - 1][var0] << 56, field_j[-1 + var14][var0] >>> 8);
+                field_j[var14][var0] = te.bitwiseOr(field_j[var14 - 1][var0] << 56, field_j[-1 + var14][var0] >>> 8);
             }
             var0++;
         }
         field_o[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = -8 + 8 * var0;
-            field_o[var0] = qg.a(qg.a(tf.a(65280L, field_j[6][6 + var1]), qg.a(qg.a(tf.a(4278190080L, field_j[4][var1 + 4]), qg.a(qg.a(qg.a(tf.a(-72057594037927936L, field_j[0][var1]), tf.a(71776119061217280L, field_j[1][1 + var1])), tf.a(280375465082880L, field_j[2][var1 + 2])), tf.a(field_j[3][3 + var1], 1095216660480L))), tf.a(field_j[5][var1 + 5], 16711680L))), tf.a(255L, field_j[7][var1 + 7]));
+            field_o[var0] = qg.bitwiseXor(qg.bitwiseXor(tf.bitwiseAnd(65280L, field_j[6][6 + var1]), qg.bitwiseXor(qg.bitwiseXor(tf.bitwiseAnd(4278190080L, field_j[4][var1 + 4]), qg.bitwiseXor(qg.bitwiseXor(qg.bitwiseXor(tf.bitwiseAnd(-72057594037927936L, field_j[0][var1]), tf.bitwiseAnd(71776119061217280L, field_j[1][1 + var1])), tf.bitwiseAnd(280375465082880L, field_j[2][var1 + 2])), tf.bitwiseAnd(field_j[3][3 + var1], 1095216660480L))), tf.bitwiseAnd(field_j[5][var1 + 5], 16711680L))), tf.bitwiseAnd(255L, field_j[7][var1 + 7]));
         }
     }
 }

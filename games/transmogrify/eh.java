@@ -113,10 +113,10 @@ final class eh {
           if (param0 != null) {
             if (param0.carryoverFlag != 0) {
               var3_ref_j = wk.carryoverRack;
-              var4 = si.newRack;
+              var4 = MusicPatch.newRack;
             } else {
               var4 = wk.carryoverRack;
-              var3_ref_j = si.newRack;
+              var3_ref_j = MusicPatch.newRack;
             }
             for (var5 = 0; var3_ref_j.tiles.length > var5; var5++) {
               if (null != var3_ref_j.tiles[var5]) {

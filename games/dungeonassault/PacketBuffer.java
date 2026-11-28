@@ -711,7 +711,7 @@ class PacketBuffer extends IntrusiveNode {
           } while (0 != this.payload[fieldTemp$1]);
           var4 = -1 + (this.position - var3);
           if (var4 != 0) {
-            stackIn_13_0 = mk.decodeCp1252String((byte) -24, this.payload, var4, var3);
+            stackIn_13_0 = MidiNoteMask.decodeCp1252String((byte) -24, this.payload, var4, var3);
             return stackIn_13_0;
           }
           stackIn_11_0 = "";
@@ -1367,7 +1367,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tutorial_firstroom2,1", false);
                 if (var2 != null) {
-                  lp.field_q[1] = dj.a(var2, false);
+                  MusicPatchNode.field_q[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_monster1,0", param1);
                 if (var2 != null) {
@@ -1395,7 +1395,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tutorial_strategies2,1", false);
                 if (var2 != null) {
-                  lp.field_F[1] = dj.a(var2, param1);
+                  MusicPatchNode.field_F[1] = dj.a(var2, param1);
                 }
                 var2 = gm.a("tutorial_strategies3,1", false);
                 if (null != var2) {
@@ -1833,7 +1833,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("pit_demon", false);
                 if (null != var2) {
-                  kk.field_i = dj.a(var2, param1);
+                  MusicPatch.field_i = dj.a(var2, param1);
                 }
                 var2 = gm.a("vampire_lord", false);
                 if (null != var2) {
@@ -3541,7 +3541,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_failure", param1);
                 if (var2 != null) {
-                  lp.field_n = dj.a(var2, param1);
+                  MusicPatchNode.field_n = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_party_sneaks_past", false);
                 if (var2 != null) {
@@ -3565,7 +3565,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_raider_trapped_incap", false);
                 if (null != var2) {
-                  bp.field_c = dj.a(var2, false);
+                  GrowableIntArray.field_c = dj.a(var2, false);
                 }
                 var2 = gm.a("text_raider_trapped_killed", param1);
                 if (null != var2) {
@@ -3749,7 +3749,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_unspent_x", false);
                 if (null != var2) {
-                  bp.field_h = dj.a(var2, param1);
+                  GrowableIntArray.field_h = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_highest_x", false);
                 if (var2 != null) {
@@ -3757,7 +3757,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_renown_x", false);
                 if (null != var2) {
-                  kk.field_s = dj.a(var2, param1);
+                  MusicPatch.field_s = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_confirm_changes", false);
                 if (null != var2) {
@@ -4366,7 +4366,7 @@ class PacketBuffer extends IntrusiveNode {
             return stackIn_6_0;
           }
           if (var3 != 0) {
-            stackIn_11_0 = mk.decodeCp1252String((byte) -24, this.payload, var3, var2_int);
+            stackIn_11_0 = MidiNoteMask.decodeCp1252String((byte) -24, this.payload, var3, var2_int);
             return stackIn_11_0;
           }
           stackIn_9_0 = "";
@@ -4675,7 +4675,7 @@ class PacketBuffer extends IntrusiveNode {
     PacketBuffer(int param0) {
         try {
           this.position = 0;
-          this.payload = kn.a(param0, false);
+          this.payload = ByteArrayPoolSupport.acquireByteArray(param0, false);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ec.<init>(" + param0 + ')');
         }

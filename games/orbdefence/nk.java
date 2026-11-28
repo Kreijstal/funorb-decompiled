@@ -212,12 +212,12 @@ final class nk {
         var10 = 0;
         do {
           if (!(var10 < var26.field_v.length)) {
-            BufferedSocket.field_a.a(-40);
+            BufferedSocket.field_a.setAsRasterTarget(-40);
             break;
           }
           var11 = var26.field_v[var10];
           var12 = 255 & var11 | (var11 & 65280) >> 8 | var11 >> 16 & 255;
-          var26.field_v[var10] = EditableTextField.a(16711680, var12 * EditableTextField.a(var6, 16711680) / 255) + (EditableTextField.a(var12 * EditableTextField.a(65280, var6) / 255, 65280) + EditableTextField.a(255, var12 * EditableTextField.a(255, var6) / 255));
+          var26.field_v[var10] = EditableTextField.bitwiseAnd(16711680, var12 * EditableTextField.bitwiseAnd(var6, 16711680) / 255) + (EditableTextField.bitwiseAnd(var12 * EditableTextField.bitwiseAnd(65280, var6) / 255, 65280) + EditableTextField.bitwiseAnd(255, var12 * EditableTextField.bitwiseAnd(255, var6) / 255));
           var10++;
         } while (var20 == 0);
         if (16777011 != var6) {
@@ -534,7 +534,7 @@ final class nk {
         if (decompiledSharedTail3) {
           RegistrationAgreementPane.field_I.drawString(CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].field_d)}, ke.field_a), 400, 32, 16777215, -1);
         }
-        var31 = new String[][]{new String[]{MusicPatchPcmStream.field_l, MusicPatchPcmStream.field_l + " I", MusicPatchPcmStream.field_l + " II", MusicPatchPcmStream.field_l + " III", nd.field_f, RegistrationAgreementPane.field_L}, new String[]{am.field_g, am.field_g + " I", am.field_g + " II", am.field_g + " III", p.field_e, kd.field_b}, new String[]{oj.field_o, oj.field_o + " I", oj.field_o + " II", oj.field_o + " III", MatchingFieldValidator.field_o, NetworkArchiveRequest.field_r}, new String[]{fd.field_g, fd.field_g + " I", fd.field_g + " II", fd.field_g + " III", ConfirmedEmailAvailabilityValidator.field_q, ua.field_b}, new String[]{q.field_c, q.field_c + " I", q.field_c + " II", q.field_c + " III", MidiPcmStream.field_B, RegistrationAgreementPane.field_E}, new String[]{kg.field_l, kg.field_l + " I", kg.field_l + " II", kg.field_l + " III", de.field_c, ua.field_d}, new String[]{BoundedRandomAccessFile.field_c, BoundedRandomAccessFile.field_c, BoundedRandomAccessFile.field_c + " II", BoundedRandomAccessFile.field_c + " III", MidiPcmStream.field_B, RegistrationAgreementPane.field_E}};
+        var31 = new String[][]{new String[]{MusicPatchPcmStream.field_l, MusicPatchPcmStream.field_l + " I", MusicPatchPcmStream.field_l + " II", MusicPatchPcmStream.field_l + " III", nd.field_f, RegistrationAgreementPane.field_L}, new String[]{am.field_g, am.field_g + " I", am.field_g + " II", am.field_g + " III", p.field_e, kd.field_b}, new String[]{oj.field_o, oj.field_o + " I", oj.field_o + " II", oj.field_o + " III", MatchingFieldValidator.field_o, NetworkArchiveRequest.field_r}, new String[]{fd.field_g, fd.field_g + " I", fd.field_g + " II", fd.field_g + " III", ConfirmedEmailAvailabilityValidator.field_q, ua.field_b}, new String[]{ByteArrayPoolSupport.field_c, ByteArrayPoolSupport.field_c + " I", ByteArrayPoolSupport.field_c + " II", ByteArrayPoolSupport.field_c + " III", MidiPcmStream.field_B, RegistrationAgreementPane.field_E}, new String[]{kg.field_l, kg.field_l + " I", kg.field_l + " II", kg.field_l + " III", de.field_c, ua.field_d}, new String[]{BoundedRandomAccessFile.field_c, BoundedRandomAccessFile.field_c, BoundedRandomAccessFile.field_c + " II", BoundedRandomAccessFile.field_c + " III", MidiPcmStream.field_B, RegistrationAgreementPane.field_E}};
         var5 = this.field_f;
         var6 = 0;
         var7 = uh.field_b * wf.field_c.field_f.field_c + SectorCacheStore.field_a;
@@ -2442,7 +2442,7 @@ final class nk {
               this.field_p = DiskCacheWorker.field_d;
               this.field_e = ua.field_a;
             }
-            BufferedSocket.field_a.a(param0 - 28843);
+            BufferedSocket.field_a.setAsRasterTarget(param0 - 28843);
             if (this.field_h < 192) {
               this.field_h = 192;
             }
@@ -3104,8 +3104,8 @@ final class nk {
           bm.field_d.advanceDialogs(123);
           do {
             if (!nf.e(32722)) {
-              if (mc.field_g != -1) {
-                var1_int = mc.field_g;
+              if (MidiNoteMask.field_g != -1) {
+                var1_int = MidiNoteMask.field_g;
                 il.a(-1, 0);
                 stackIn_8_0 = var1_int;
                 return stackIn_8_0;

@@ -8,10 +8,10 @@ final class fg {
         FridgeCreature.field_w = param0;
         if (!param1) {
           fg.releaseStatics((byte) -12);
-          sd.field_a = param2;
+          ByteArrayPoolSupport.field_a = param2;
           return;
         }
-        sd.field_a = param2;
+        ByteArrayPoolSupport.field_a = param2;
     }
 
     public static void releaseStatics(byte param0) {

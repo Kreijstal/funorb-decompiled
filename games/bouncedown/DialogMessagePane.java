@@ -223,7 +223,7 @@ final class DialogMessagePane extends DequeWidgetContainer implements WidgetActi
           if (param1 <= 77) {
             field_E = (lj) null;
           }
-          var17 = new RgbSprite(param3.getFileByName("button.gif", "", 124), (java.awt.Component) ((Object) ch.field_h));
+          var17 = new RgbSprite(param3.getFileByName("button.gif", "", 124), (java.awt.Component) ((Object) MusicPatchEnvelope.field_h));
           ValidationStatusWidget.a(param0, "dropdown", 28576, "commonui");
           var5 = ff.a("screen_options", param0, (byte) 124, "commonui");
           FullscreenStatusDialog.field_R = new we[4];

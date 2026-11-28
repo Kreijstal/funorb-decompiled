@@ -82,7 +82,7 @@ final class pg {
             return;
           }
           if (var2 == 3) {
-            this.field_d = gm.field_a;
+            this.field_d = MusicPatchEnvelope.field_a;
             this.field_c[0] = 45;
             this.field_g[0] = 10;
             this.field_a[0] = 50;
@@ -139,7 +139,7 @@ final class pg {
             return;
           }
           if (var2 == 6) {
-            this.field_d = qd.field_j;
+            this.field_d = MusicPatch.field_j;
             this.field_c[0] = 60;
             this.field_g[0] = 30;
             this.field_a[0] = 60;

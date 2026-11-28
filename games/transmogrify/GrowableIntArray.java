@@ -1,0 +1,177 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class GrowableIntArray {
+    private int[] field_g;
+    private boolean field_d;
+    private int field_a;
+    static String field_b;
+    static int[] field_c;
+    private int field_e;
+    static String field_f;
+
+    final static void a(AchievementNotice param0, byte param1, int param2) {
+        try {
+          ArchiveRequest.field_r.addLast(param0, -101);
+          ne.a((byte) 7, param0, param2);
+          if (param1 != -10) {
+            GrowableIntArray.clearStaticReferences((byte) 61);
+          }
+        } catch (RuntimeException runtimeException) {
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "te.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+        }
+    }
+
+    private final int computeCapacity(int param0, byte param1) {
+        int var3;
+        int var4;
+        var4 = Transmogrify.field_A ? 1 : 0;
+        var3 = this.field_g.length;
+        while (var3 <= param0) {
+          if (!this.field_d) {
+            var3 = var3 + this.field_e;
+            continue;
+          }
+          if (0 != var3) {
+            var3 = var3 * this.field_e;
+            continue;
+          }
+          var3 = 1;
+        }
+        if (param1 <= -38) {
+          return var3;
+        }
+        field_b = (String) null;
+        return var3;
+    }
+
+    private final void set(int param0, int param1, int param2) {
+        if (this.field_a < param0) {
+          this.field_a = param0;
+        }
+        if (param0 >= this.field_g.length) {
+          this.grow(param0, 0);
+        }
+        this.field_g[param0] = param1;
+        if (param2 <= -111) {
+          return;
+        }
+        int discarded$0 = this.computeCapacity(-66, (byte) 61);
+    }
+
+    final int get(int param0, int param1) {
+        if (param1 != -14927) {
+          return 44;
+        }
+        if (this.field_a < param0) {
+          throw new ArrayIndexOutOfBoundsException(param0);
+        }
+        return this.field_g[param0];
+    }
+
+    final static void a(Sprite[] param0, int param1, int param2, int param3, byte param4, int param5) {
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        var11 = Transmogrify.field_A ? 1 : 0;
+        try {
+          if (param0 != null &&
+            param3 > 0) {
+            var6_int = param0[0].field_r;
+            var7 = param0[2].field_r;
+            var8 = param0[1].field_r;
+            param0[0].drawTintedGray(param5, param2, param1);
+            param0[2].drawTintedGray(-var7 + param5 + param3, param2, param1);
+            SoftwareRasterizer.saveClip(q.field_i);
+            if (param4 < 13) {
+              GrowableIntArray.clearStaticReferences((byte) 8);
+            }
+            SoftwareRasterizer.intersectClip(param5 + var6_int, param2, -var7 + (param5 + param3), param2 + param0[1].field_s);
+            var9 = param5 + var6_int;
+            var10 = param3 + param5 - var7;
+            for (param5 = var9; var10 > param5; param5 = param5 + var8) {
+              param0[1].drawTintedGray(param5, param2, param1);
+            }
+            SoftwareRasterizer.restoreClip(q.field_i);
+            return;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_14_0 = var6;
+          stackIn_14_1 = new StringBuilder().append("te.I(");
+          if (param0 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          throw ch.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+        }
+    }
+
+    final void append(int param0, byte param1) {
+        this.set(1 + this.field_a, param0, param1 - 240);
+        if (param1 != 118) {
+          this.field_a = -79;
+        }
+    }
+
+    private GrowableIntArray() throws Throwable {
+        throw new Error();
+    }
+
+    final int size(int param0) {
+        if (param0 == 1) {
+          return 1 + this.field_a;
+        }
+        AchievementNotice var3 = (AchievementNotice) null;
+        GrowableIntArray.a((AchievementNotice) null, (byte) -123, -32);
+        return 1 + this.field_a;
+    }
+
+    public static void clearStaticReferences(byte param0) {
+        field_c = null;
+        if (param0 < 8) {
+          return;
+        }
+        field_b = null;
+        field_f = null;
+    }
+
+    final void removeAt(int param0, int param1) {
+        if (param1 > param0) {
+          throw new ArrayIndexOutOfBoundsException(param0);
+        }
+        if (param0 > this.field_a) {
+          throw new ArrayIndexOutOfBoundsException(param0);
+        }
+        if (param0 == this.field_a) {
+          this.field_a = this.field_a - 1;
+          return;
+        }
+        ArrayBlockSupport.copyIntRange(this.field_g, param0 + 1, this.field_g, param0, this.field_a - param0);
+        this.field_a = this.field_a - 1;
+    }
+
+    private final void grow(int param0, int param1) {
+        int[] var4 = new int[this.computeCapacity(param0, (byte) -53)];
+        int[] var3 = var4;
+        ArrayBlockSupport.copyIntRange(this.field_g, param1, var4, 0, this.field_g.length);
+        this.field_g = var4;
+    }
+
+    static {
+        field_b = "Username: ";
+        field_c = new int[128];
+        field_f = "Back";
+    }
+}

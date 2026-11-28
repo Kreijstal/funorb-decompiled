@@ -172,7 +172,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
             var13 = param6;
             var14 = param8;
             var15 = (16711422 & var18[var11]) >> 1;
-            var10[var11] = (vg.c(var14, 33529506) >> 17) + (vg.c(16711680, var12 >> 1) + vg.c(65280, var13 >> 9) + var15);
+            var10[var11] = (vg.bitwiseAnd(var14, 33529506) >> 17) + (vg.bitwiseAnd(16711680, var12 >> 1) + vg.bitwiseAnd(65280, var13 >> 9) + var15);
             param4 = param4 + param1;
             param5++;
             param8 = param8 + param7;

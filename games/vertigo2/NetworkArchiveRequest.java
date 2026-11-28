@@ -194,7 +194,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           PcmOutputWorker.field_f = param9.field_bb;
           MovingLevelTile.field_z = param9.field_A;
           ln.field_g = param9.field_D;
-          al.field_s = param0.field_a;
+          MusicPatch.field_s = param0.field_a;
           IntrusiveDequeCursor.field_d = param0.field_bb;
           tf.field_p = param9.field_a;
           kh.field_c = param0.field_k;
@@ -218,7 +218,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           param0.field_A = MouseInputHandler.field_c;
           param0.field_bb = IntrusiveDequeCursor.field_d;
           param0.field_D = pd.field_a;
-          param0.field_a = al.field_s;
+          param0.field_a = MusicPatch.field_s;
           param0.field_o = vm.field_a;
           param0.field_k = kh.field_c;
           if (param1 >= -19) {

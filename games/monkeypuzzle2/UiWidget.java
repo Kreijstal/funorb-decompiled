@@ -357,7 +357,7 @@ class UiWidget extends IntrusiveNode {
             if (param2 >= 105) {
               var12 = SecondaryNodeDequeIterator.a((byte) -128);
               if (var12 != null) {
-                GzipDecompressor.field_b.a(nj.field_a, 68, DropTargetWidgetContainer.field_G, var12);
+                GzipDecompressor.field_b.a(ByteArrayPoolSupport.field_a, 68, DropTargetWidgetContainer.field_G, var12);
               }
               return;
             }
@@ -365,7 +365,7 @@ class UiWidget extends IntrusiveNode {
             this.pointerReleased(88, 31, (UiWidget) null, -103, 118, -124);
             var11 = SecondaryNodeDequeIterator.a((byte) -128);
             if (var11 != null) {
-              GzipDecompressor.field_b.a(nj.field_a, 68, DropTargetWidgetContainer.field_G, var11);
+              GzipDecompressor.field_b.a(ByteArrayPoolSupport.field_a, 68, DropTargetWidgetContainer.field_G, var11);
             }
             return;
           }
@@ -374,7 +374,7 @@ class UiWidget extends IntrusiveNode {
           if (var6 != 0) {
             var8 = SecondaryNodeDequeIterator.a((byte) -128);
             if (var8 != null) {
-              GzipDecompressor.field_b.a(nj.field_a, 68, DropTargetWidgetContainer.field_G, var8);
+              GzipDecompressor.field_b.a(ByteArrayPoolSupport.field_a, 68, DropTargetWidgetContainer.field_G, var8);
             }
             return;
           }

@@ -89,7 +89,7 @@ final class hj extends DualLinkNode {
               var4_int = param2.readUnsignedByte(param1 ^ 13041);
               this.field_w = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_w[var5] = param2.readUnsignedShort(bm.a(param1, 19703));
+                this.field_w[var5] = param2.readUnsignedShort(bm.bitwiseXor(param1, 19703));
               }
             } else {
               if (param0 == 3) {
@@ -298,7 +298,7 @@ final class hj extends DualLinkNode {
         int var3 = HostileSpawn.field_I ? 1 : 0;
         if (this.field_w != null) {
           for (var2 = 0; var2 < this.field_w.length; var2++) {
-            this.field_w[var2] = ll.a(this.field_w[var2], 32768);
+            this.field_w[var2] = ll.bitwiseOr(this.field_w[var2], 32768);
           }
         }
         if (param0 <= 61) {

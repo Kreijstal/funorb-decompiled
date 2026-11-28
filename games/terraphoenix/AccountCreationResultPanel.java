@@ -23,7 +23,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
             var3 = (CharSequence) null;
             AccountCreationResultPanel.a((CharSequence) null, 66);
           }
-          var2 = FullscreenStatusDialog.a(qd.a(-113, param0), -12382);
+          var2 = FullscreenStatusDialog.a(MusicPatch.a(-113, param0), -12382);
           if (var2 == null) {
             var2 = "";
           }
@@ -83,7 +83,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
         try {
           this.field_vb = true;
           if (param0.success) {
-            var4 = sh.field_q;
+            var4 = MusicPatchNode.field_q;
           } else {
             if (null == param0.suggestions) {
               var4 = param0.message;
@@ -129,7 +129,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
               var5.addActionButton(7, mi.field_i, (byte) 118);
             } else {
               if (param0.statusCode == 6) {
-                var5.addActionButton(9, fc.field_b, (byte) -117);
+                var5.addActionButton(9, GrowableIntArray.field_b, (byte) -117);
               }
             }
           }

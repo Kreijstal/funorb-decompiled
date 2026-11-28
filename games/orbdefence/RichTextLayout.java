@@ -21,12 +21,12 @@ final class RichTextLayout extends TextLayout {
         qg var1 = null;
         qg var1Lifetime1;
         if (param0) {
-          var1 = new qg(ModalDialog.field_B, he.field_r, jd.field_g[0], wc.field_a[0], wh.field_b[0], m.field_a[0], fl.field_a[0], vc.field_g);
+          var1 = new qg(ModalDialog.field_B, MusicPatchNode.field_r, jd.field_g[0], wc.field_a[0], wh.field_b[0], m.field_a[0], fl.field_a[0], vc.field_g);
           md.$cfr$intArgs$a$6121ff5511c4(-128);
           return var1;
         }
         RichTextLayout.clearDeclaredStaticReferences(-19);
-        var1Lifetime1 = new qg(ModalDialog.field_B, he.field_r, jd.field_g[0], wc.field_a[0], wh.field_b[0], m.field_a[0], fl.field_a[0], vc.field_g);
+        var1Lifetime1 = new qg(ModalDialog.field_B, MusicPatchNode.field_r, jd.field_g[0], wc.field_a[0], wh.field_b[0], m.field_a[0], fl.field_a[0], vc.field_g);
         md.$cfr$intArgs$a$6121ff5511c4(-128);
         return var1Lifetime1;
     }

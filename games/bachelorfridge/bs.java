@@ -24,7 +24,7 @@ final class bs extends IntrusiveNode {
           var2 = new Sprite(param0.field_n, param0.field_o);
           var2.bindAsRenderTarget();
           param0.drawSilhouette(0, 0, 65793);
-          ProgressDialog.field_U.a((byte) 14);
+          ProgressDialog.field_U.setAsRasterTarget((byte) 14);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -85,7 +85,7 @@ final class bs extends IntrusiveNode {
             var1 = var6;
             var17 = vla.field_x.field_m;
             for (var3 = 0; var3 < 8; var3++) {
-              var6[var3] = MassPoisonSpecial.a(var13[var3], var17[var3]);
+              var6[var3] = MassPoisonSpecial.bitwiseOr(var13[var3], var17[var3]);
             }
             var14 = nga.field_i;
             var12 = var14;
@@ -95,7 +95,7 @@ final class bs extends IntrusiveNode {
             var10 = 0;
             var3Lifetime1 = var10;
             while (var10 < 8) {
-              var8[var10] = dda.a(var14[var10], ~var18[var10]);
+              var8[var10] = dda.bitwiseAnd(var14[var10], ~var18[var10]);
               var10++;
             }
             dma.field_a = true;

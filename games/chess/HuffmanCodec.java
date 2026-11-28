@@ -262,7 +262,7 @@ final class HuffmanCodec {
             var7_int = var7_int & -var13 >> 31;
             var14 = var12 + (var13 - (-var11 + 1) >> 3);
             var13 += 24;
-            dupTemp$0 = DisplayNameSelectionPanel.a(var7_int, var10 >>> var13);
+            dupTemp$0 = DisplayNameSelectionPanel.bitwiseOr(var7_int, var10 >>> var13);
             var7_int = dupTemp$0;
             param4[var12] = (byte)dupTemp$0;
             if (var12 < var14) {
@@ -381,7 +381,7 @@ final class HuffmanCodec {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
-                  var3[var10] = DisplayNameSelectionPanel.a(var12, var11);
+                  var3[var10] = DisplayNameSelectionPanel.bitwiseOr(var12, var11);
                   var10--;
                 }
                 if (decompiledFrameCompleted1) {

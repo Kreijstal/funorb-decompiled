@@ -74,7 +74,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           LabeledWidgetContainer.field_P.addFocusListener((java.awt.event.FocusListener) (this));
           LabeledWidgetContainer.field_P.requestFocus();
           c.field_a = true;
-          m.field_d = true;
+          GrowableIntArray.field_d = true;
           je.field_f = true;
           sa.field_c = false;
           hc.field_R = ol.correctedCurrentTimeMillis(256);
@@ -605,7 +605,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           var7 = this;
           synchronized (var7) {
-            m.field_d = c.field_a;
+            GrowableIntArray.field_d = c.field_a;
           }
           this.tickGame((byte) 119);
           return;
@@ -774,7 +774,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               var13 = param0;
               var14 = param9;
               var15 = var10[var11] >> 1 & 8355711;
-              var10[var11] = var15 + jh.a(var14 >> 17, 255) + ((jh.a(var12, 33423361) >> 1) + jh.a(var13 >> 9, 65280));
+              var10[var11] = var15 + jh.bitwiseAnd(var14 >> 17, 255) + ((jh.bitwiseAnd(var12, 33423361) >> 1) + jh.bitwiseAnd(var13 >> 9, 65280));
               param8 = param8 + param3;
               param0 = param0 + param4;
               param9 = param9 + param7;

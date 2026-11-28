@@ -613,8 +613,8 @@ final class ChessMatchSession {
         this.field_x = this.field_x ^ 1 << this.field_f;
         this.field_D = this.field_D - 1;
         if (vg.field_a == 1) {
-          stackIn_4_0 = !(ql.field_c);
-          ql.field_c = stackIn_4_0;
+          stackIn_4_0 = !(ByteArrayPoolSupport.field_c);
+          ByteArrayPoolSupport.field_c = stackIn_4_0;
         }
         this.field_E = this.field_E - this.field_r;
         if (vg.field_a != 13) {
@@ -969,7 +969,7 @@ final class ChessMatchSession {
           ec.field_d.d((byte) 126);
         }
         if (sk.field_t >= 2 &&
-          ql.field_c) {
+          ByteArrayPoolSupport.field_c) {
           jj.field_b.drawString("FPS: " + ie.field_a, 0, jj.field_b.field_q, 1, -1);
         }
     }

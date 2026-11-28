@@ -227,9 +227,9 @@ final class tp {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_e[0][var0] = ee.a(ee.a(ee.a(var8 << 16, ee.a(ee.a(var2 << 32, ee.a(var6 << 40, ee.a(var2 << 56, var2 << 48))), var10 << 24)), var4 << 8), var12);
+            field_e[0][var0] = ee.bitwiseOr(ee.bitwiseOr(ee.bitwiseOr(var8 << 16, ee.bitwiseOr(ee.bitwiseOr(var2 << 32, ee.bitwiseOr(var6 << 40, ee.bitwiseOr(var2 << 56, var2 << 48))), var10 << 24)), var4 << 8), var12);
             for (var14 = 1; var14 < 8; var14++) {
-                field_e[var14][var0] = ee.a(field_e[var14 - 1][var0] << 56, field_e[var14 - 1][var0] >>> 8);
+                field_e[var14][var0] = ee.bitwiseOr(field_e[var14 - 1][var0] << 56, field_e[var14 - 1][var0] >>> 8);
             }
             var0++;
         }
@@ -238,7 +238,7 @@ final class tp {
         var0 = var15;
         while (var15 <= 10) {
             var1 = var15 * 8 - 8;
-            field_m[var15] = vb.a(on.a(field_e[7][7 + var1], 255L), vb.a(on.a(65280L, field_e[6][var1 + 6]), vb.a(on.a(field_e[5][5 + var1], 16711680L), vb.a(on.a(4278190080L, field_e[4][4 + var1]), vb.a(on.a(field_e[3][3 + var1], 1095216660480L), vb.a(vb.a(on.a(field_e[0][var1], -72057594037927936L), on.a(71776119061217280L, field_e[1][1 + var1])), on.a(280375465082880L, field_e[2][var1 + 2])))))));
+            field_m[var15] = vb.a(on.bitwiseAnd(field_e[7][7 + var1], 255L), vb.a(on.bitwiseAnd(65280L, field_e[6][var1 + 6]), vb.a(on.bitwiseAnd(field_e[5][5 + var1], 16711680L), vb.a(on.bitwiseAnd(4278190080L, field_e[4][4 + var1]), vb.a(on.bitwiseAnd(field_e[3][3 + var1], 1095216660480L), vb.a(vb.a(on.bitwiseAnd(field_e[0][var1], -72057594037927936L), on.bitwiseAnd(71776119061217280L, field_e[1][1 + var1])), on.bitwiseAnd(280375465082880L, field_e[2][var1 + 2])))))));
             var15++;
         }
     }

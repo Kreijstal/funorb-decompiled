@@ -34,7 +34,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
           var9 = var11;
           var5 = var9;
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = of.field_g[w.a(255, (int) var10[var6])];
+            var5[var6] = of.field_g[w.bitwiseAnd(255, (int) var10[var6])];
           }
           var1[var2] = new Sprite(BufferedRandomAccessFile.field_m, gb.field_w, fc.field_d[var2], ModalDialog.field_H[var2], gg.field_d[var2], gh.field_C[var2], var11);
         }
@@ -349,7 +349,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             field_D = -57;
           }
           var3 = new byte[var2_int];
-          ug.copyByteRange(param1, 0, var3, 0, var2_int);
+          ArrayBlockSupport.copyByteRange(param1, 0, var3, 0, var2_int);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

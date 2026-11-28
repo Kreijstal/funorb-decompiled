@@ -493,7 +493,7 @@ final class GameAssets {
           }
           byteArrayLocal19 = MixedSupport067.computeByteArray0840(-76, "rated_membersonly");
           if (byteArrayLocal19 != null) {
-            MixedSupport130.stringState0562 = MixedSupport105.computeString1370(byteArrayLocal19, 2);
+            ByteArrayPoolSupport.stringState0562 = MixedSupport105.computeString1370(byteArrayLocal19, 2);
           }
           byteArrayLocal20 = MixedSupport067.computeByteArray0840(-97, "staminamode");
           if (null != byteArrayLocal20) {
@@ -1144,7 +1144,7 @@ final class GameAssets {
           }
           byteArrayLocal181 = MixedSupport067.computeByteArray0840(-36, "instructions_titles_specialitems");
           if (null != byteArrayLocal181) {
-            NetworkSupport006.stringState0339 = MixedSupport105.computeString1370(byteArrayLocal181, 2);
+            GrowableIntArray.stringState0339 = MixedSupport105.computeString1370(byteArrayLocal181, 2);
           }
           byteArrayLocal182 = MixedSupport067.computeByteArray0840(-28, "instructions_titles_activatingspecialitems");
           if (byteArrayLocal182 != null) {
@@ -1356,11 +1356,11 @@ final class GameAssets {
           }
           byteArrayLocal234 = MixedSupport067.computeByteArray0840(-36, "masterchallengeintro,0");
           if (null != byteArrayLocal234) {
-            MixedSupport130.stringArrayState0050[0] = MixedSupport105.computeString1370(byteArrayLocal234, 2);
+            ByteArrayPoolSupport.stringArrayState0050[0] = MixedSupport105.computeString1370(byteArrayLocal234, 2);
           }
           byteArrayLocal235 = MixedSupport067.computeByteArray0840(-52, "masterchallengeintro,1");
           if (byteArrayLocal235 != null) {
-            MixedSupport130.stringArrayState0050[1] = MixedSupport105.computeString1370(byteArrayLocal235, 2);
+            ByteArrayPoolSupport.stringArrayState0050[1] = MixedSupport105.computeString1370(byteArrayLocal235, 2);
           }
           byteArrayLocal236 = MixedSupport067.computeByteArray0840(-78, "showtutorialagain");
           if (byteArrayLocal236 != null) {
@@ -1408,7 +1408,7 @@ final class GameAssets {
           }
           byteArrayLocal247 = MixedSupport067.computeByteArray0840(-35, "x_shapes");
           if (null != byteArrayLocal247) {
-            MixedSupport130.stringState0564 = MixedSupport105.computeString1370(byteArrayLocal247, 2);
+            ByteArrayPoolSupport.stringState0564 = MixedSupport105.computeString1370(byteArrayLocal247, 2);
           }
           byteArrayLocal248 = MixedSupport067.computeByteArray0840(-95, "start");
           if (null != byteArrayLocal248) {

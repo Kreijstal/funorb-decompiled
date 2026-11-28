@@ -270,7 +270,7 @@ final class RenderingSupport003 {
         if (byteArgument1 != 123) {
           integerState0251 = 114;
         }
-        BirthDateTextFields.stringArrayState0032[16] = MixedSupport130.stringState0563;
+        BirthDateTextFields.stringArrayState0032[16] = ByteArrayPoolSupport.stringState0563;
     }
 
     final static void performAction0570(byte byteArgument1, HuffmanCodec huffmanCodecArgument2) {

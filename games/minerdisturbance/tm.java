@@ -651,7 +651,7 @@ final class tm extends IntrusiveNode {
                 incrementValue$1 = var14Lifetime1;
                 var14Lifetime1++;
                 var27 = GameAppletShell.field_j[incrementValue$1];
-                SoftwareRasterizer.field_f[var23 + SoftwareRasterizer.field_g * var19] = c.a(16711680, var24 * c.a(var27, 65280) + c.a(var26, 65280) * var25) + c.a(-16711936, var25 * c.a(var26, 16711935) + c.a(var27, 16711935) * var24) >> 8;
+                SoftwareRasterizer.field_f[var23 + SoftwareRasterizer.field_g * var19] = c.bitwiseAnd(16711680, var24 * c.bitwiseAnd(var27, 65280) + c.bitwiseAnd(var26, 65280) * var25) + c.bitwiseAnd(-16711936, var25 * c.bitwiseAnd(var26, 16711935) + c.bitwiseAnd(var27, 16711935) * var24) >> 8;
                 var23++;
               }
               var14Lifetime1 = var14Lifetime1 + var22;

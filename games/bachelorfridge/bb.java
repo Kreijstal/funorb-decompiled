@@ -3,7 +3,7 @@
  */
 final class bb extends InteractiveWidget {
     private int field_E;
-    private mb field_G;
+    private GrowableIntArray field_G;
     static int field_F;
     int field_D;
     int field_A;
@@ -12,7 +12,7 @@ final class bb extends InteractiveWidget {
         if (param0 != 2) {
           return 30;
         }
-        return this.field_G.a((byte) -127);
+        return this.field_G.size((byte) -127);
     }
 
     final boolean pointerPressed(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
@@ -48,8 +48,8 @@ final class bb extends InteractiveWidget {
             }
             var10 = 2147483647;
             var11 = -1;
-            for (var12 = 0; this.field_G.a((byte) -125) > var12; var12++) {
-              var13 = -var8_int + this.field_G.a((byte) -24, var12);
+            for (var12 = 0; this.field_G.size((byte) -125) > var12; var12++) {
+              var13 = -var8_int + this.field_G.get((byte) -24, var12);
               var13 = var13 * var13;
               if (var10 > var13) {
                 var11 = var12;
@@ -57,10 +57,10 @@ final class bb extends InteractiveWidget {
               }
             }
             if (var11 >= 0) {
-              this.field_G.a(var11, true);
+              this.field_G.removeAt(var11, true);
             }
           } else {
-            this.field_G.c(var8_int, param1 ^ 7359);
+            this.field_G.append(var8_int, param1 ^ 7359);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -88,8 +88,8 @@ final class bb extends InteractiveWidget {
         if (param1 < ~param0) {
           return -1;
         }
-        if (this.field_G.a((byte) -126) > param0) {
-          return this.field_G.a((byte) -24, param0);
+        if (this.field_G.size((byte) -126) > param0) {
+          return this.field_G.get((byte) -24, param0);
         }
         return -1;
     }

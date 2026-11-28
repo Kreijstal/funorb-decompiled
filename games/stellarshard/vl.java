@@ -225,12 +225,12 @@ final class vl {
           if (this.field_f == 1) {
             param1.bindAsRenderTarget();
             SoftwareRasterizer.fillCircleAlpha(var3_int, var4, this.field_b / 16 + 1, 255, 128 - this.field_b / 2);
-            RichTextLayout.field_h.a((byte) -107);
+            RichTextLayout.field_h.setAsRasterTarget((byte) -107);
           }
           if (this.field_f == 4) {
             param1.bindAsRenderTarget();
             SoftwareRasterizer.fillCircleAlpha(var3_int, var4, this.field_b / 16 + 1, 255, 128 - this.field_b / 2);
-            RichTextLayout.field_h.a((byte) -107);
+            RichTextLayout.field_h.setAsRasterTarget((byte) -107);
           }
           if (this.field_f == 2 &&
             0 < this.field_b) {

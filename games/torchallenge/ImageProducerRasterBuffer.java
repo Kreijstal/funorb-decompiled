@@ -135,7 +135,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
     }
 
-    final void a(int param0, int param1, int param2, java.awt.Graphics param3) {
+    final void drawImage(int param0, int param1, int param2, java.awt.Graphics param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -143,9 +143,9 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         RuntimeException var5 = null;
         try {
           if (param0 != -19275) {
-            this.e(45);
+            this.publishPixelsToConsumer(45);
           }
-          this.e(98);
+          this.publishPixelsToConsumer(98);
           param3.drawImage(this.field_e, param1, param2, (java.awt.image.ImageObserver) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -162,7 +162,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final void a(int param0, java.awt.Component param1, int param2, int param3) {
+    final void initialize(int param0, java.awt.Component param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -174,11 +174,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           this.width = param0;
           this.field_s = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
           this.field_e = param1.createImage((java.awt.image.ImageProducer) (this));
-          this.e(91);
+          this.publishPixelsToConsumer(91);
           param1.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
-          this.e(98);
+          this.publishPixelsToConsumer(98);
           param1.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
-          this.e(94);
+          this.publishPixelsToConsumer(94);
           param1.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
           if (param3 != -23435) {
             return;
@@ -397,7 +397,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    private final synchronized void e(int param0) {
+    private final synchronized void publishPixelsToConsumer(int param0) {
         if (param0 < 80) {
           return;
         }

@@ -3009,7 +3009,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
                 }
                 var2 = ca.a(87, "quickchat_shortcut_help,3");
                 if (var2 != null) {
-                  BoundedRandomAccessFile.field_f[3] = GuestPlayConfirmationForm.a(ih.a(param1, 1), var2);
+                  BoundedRandomAccessFile.field_f[3] = GuestPlayConfirmationForm.a(ih.bitwiseXor(param1, 1), var2);
                 }
                 var2 = ca.a(97, "quickchat_shortcut_help,4");
                 if (null != var2) {
@@ -3025,7 +3025,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
                 }
                 var2 = ca.a(param1 + 84, "quickchat_shortcut_keys,1");
                 if (var2 != null) {
-                  kc.field_a[1] = GuestPlayConfirmationForm.a(ih.a(param1, 1), var2);
+                  kc.field_a[1] = GuestPlayConfirmationForm.a(ih.bitwiseXor(param1, 1), var2);
                 }
                 var2 = ca.a(97, "quickchat_shortcut_keys,2");
                 if (null != var2) {
@@ -3369,7 +3369,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
                 }
                 var2 = ca.a(93, "mustlogin2,1");
                 if (var2 != null) {
-                  td.field_c[1] = GuestPlayConfirmationForm.a(ih.a(param1, 1), var2);
+                  td.field_c[1] = GuestPlayConfirmationForm.a(ih.bitwiseXor(param1, 1), var2);
                 }
                 var2 = ca.a(93, "mustlogin2,2");
                 if (null != var2) {
@@ -3389,11 +3389,11 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
                 }
                 var2 = ca.a(104, "mustlogin2,6");
                 if (null != var2) {
-                  td.field_c[6] = GuestPlayConfirmationForm.a(ih.a(param1, 1), var2);
+                  td.field_c[6] = GuestPlayConfirmationForm.a(ih.bitwiseXor(param1, 1), var2);
                 }
                 var2 = ca.a(114, "mustlogin2,7");
                 if (var2 != null) {
-                  td.field_c[7] = GuestPlayConfirmationForm.a(ih.a(param1, 1), var2);
+                  td.field_c[7] = GuestPlayConfirmationForm.a(ih.bitwiseXor(param1, 1), var2);
                 }
                 var2 = ca.a(124, "mustlogin3,1");
                 if (var2 != null) {
@@ -3413,7 +3413,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
                 }
                 var2 = ca.a(115, "mustlogin3,5");
                 if (var2 != null) {
-                  bl.field_a[5] = GuestPlayConfirmationForm.a(ih.a(param1, 1), var2);
+                  bl.field_a[5] = GuestPlayConfirmationForm.a(ih.bitwiseXor(param1, 1), var2);
                 }
                 var2 = ca.a(param1 ^ 94, "mustlogin3,6");
                 if (var2 != null) {
@@ -3433,7 +3433,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
                 }
                 var2 = ca.a(105, "mustlogin4,2");
                 if (null != var2) {
-                  ImageProducerRasterBuffer.field_h[2] = GuestPlayConfirmationForm.a(ih.a(param1, 1), var2);
+                  ImageProducerRasterBuffer.field_h[2] = GuestPlayConfirmationForm.a(ih.bitwiseXor(param1, 1), var2);
                 }
                 var2 = ca.a(108, "mustlogin4,3");
                 if (var2 != null) {
@@ -3445,7 +3445,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
                 }
                 var2 = ca.a(100, "mustlogin4,5");
                 if (null != var2) {
-                  ImageProducerRasterBuffer.field_h[5] = GuestPlayConfirmationForm.a(ih.a(param1, 1), var2);
+                  ImageProducerRasterBuffer.field_h[5] = GuestPlayConfirmationForm.a(ih.bitwiseXor(param1, 1), var2);
                 }
                 var2 = ca.a(124, "mustlogin4,6");
                 if (null != var2) {
@@ -3481,7 +3481,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
                 }
                 var2 = ca.a(98, "mustlogin_alternate,6");
                 if (null != var2) {
-                  FrameTimer.field_a[6] = GuestPlayConfirmationForm.a(ih.a(param1, 1), var2);
+                  FrameTimer.field_a[6] = GuestPlayConfirmationForm.a(ih.bitwiseXor(param1, 1), var2);
                 }
                 var2 = ca.a(86, "mustlogin_alternate,7");
                 if (var2 != null) {
@@ -3529,7 +3529,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
                 }
                 var2 = ca.a(param1 ^ 86, "subscription_cost_monthly,10");
                 if (var2 != null) {
-                  IterableNodeHashTable.field_a[10] = GuestPlayConfirmationForm.a(ih.a(param1, 1), var2);
+                  IterableNodeHashTable.field_a[10] = GuestPlayConfirmationForm.a(ih.bitwiseXor(param1, 1), var2);
                 }
                 var2 = ca.a(102, "subscription_cost_monthly,11");
                 if (null != var2) {

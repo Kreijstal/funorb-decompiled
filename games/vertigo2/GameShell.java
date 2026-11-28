@@ -446,7 +446,7 @@ abstract class GameShell extends GameApplet {
                 discarded$6 = this.a(false, (byte) 116, false);
               }
             } else {
-              vc.c(-86);
+              ByteArrayPoolSupport.c(-86);
             }
           }
         }
@@ -832,7 +832,7 @@ abstract class GameShell extends GameApplet {
           }
           return var2;
         }
-        if (!gl.field_k) {
+        if (!MusicPatchEnvelope.field_k) {
           this.a(0, "reconnect");
         }
         if (param0 > -48) {

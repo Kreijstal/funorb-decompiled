@@ -188,10 +188,10 @@ final class IsaacCipher {
               }
             }
             this.field_g = this.field_g + this.field_a[var2 + 128 & 255];
-            dupTemp$1 = this.field_j + this.field_a[ie.a(var3 >> 2, 255)] + this.field_g;
+            dupTemp$1 = this.field_j + this.field_a[ie.bitwiseAnd(var3 >> 2, 255)] + this.field_g;
             var4 = dupTemp$1;
             this.field_a[var2] = dupTemp$1;
-            dupTemp$2 = this.field_a[ie.a(var4 >> 8 >> 2, 255)] + var3;
+            dupTemp$2 = this.field_a[ie.bitwiseAnd(var4 >> 8 >> 2, 255)] + var3;
             this.field_j = dupTemp$2;
             this.field_k[var2] = dupTemp$2;
           }
@@ -217,10 +217,10 @@ final class IsaacCipher {
             }
           }
           this.field_g = this.field_g + this.field_a[var2Lifetime1 + 128 & 255];
-          dupTemp$4 = this.field_j + this.field_a[ie.a(var3Lifetime1 >> 2, 255)] + this.field_g;
+          dupTemp$4 = this.field_j + this.field_a[ie.bitwiseAnd(var3Lifetime1 >> 2, 255)] + this.field_g;
           var4Lifetime1 = dupTemp$4;
           this.field_a[var2Lifetime1] = dupTemp$4;
-          dupTemp$5 = this.field_a[ie.a(var4Lifetime1 >> 8 >> 2, 255)] + var3Lifetime1;
+          dupTemp$5 = this.field_a[ie.bitwiseAnd(var4Lifetime1 >> 8 >> 2, 255)] + var3Lifetime1;
           this.field_j = dupTemp$5;
           this.field_k[var2Lifetime1] = dupTemp$5;
         }

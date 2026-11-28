@@ -15,15 +15,15 @@ final class oaa {
         RuntimeException var4 = null;
         var8 = BachelorFridge.field_y;
         try {
-          if (sd.field_b.length < param2) {
-            param2 = sd.field_b.length;
+          if (ByteArrayPoolSupport.field_b.length < param2) {
+            param2 = ByteArrayPoolSupport.field_b.length;
           }
           var4_int = param3;
-          var5 = sd.field_b.length - param2;
+          var5 = ByteArrayPoolSupport.field_b.length - param2;
           var6 = 255;
           var7 = -114 % ((param1 + 76) / 35);
           while (var4_int > param3 - param2) {
-            SoftwareRasterizer.addPixel(param0, var4_int, sd.field_b[var5], var6);
+            SoftwareRasterizer.addPixel(param0, var4_int, ByteArrayPoolSupport.field_b[var5], var6);
             var4_int--;
             var5++;
             var6 -= 3;

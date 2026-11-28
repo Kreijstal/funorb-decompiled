@@ -139,7 +139,7 @@ final class wc {
                 if (!ub.field_d) {
                 }
               }
-              if (kc.field_D) {
+              if (MusicPatchNode.field_D) {
                 WordLanguage.field_l.readUnsignedByte((byte) 63);
                 WordLanguage.field_l.readUnsignedByte((byte) 33);
                 WordLanguage.field_l.readInt((byte) -119);
@@ -182,7 +182,7 @@ final class wc {
                 }
               }
               if (wj.field_o > 0) {
-                wd.field_g = true;
+                MidiNoteMask.field_g = true;
               }
               LoginPanel.field_D.setCipherSeed((byte) -68, mf.field_c);
               for (var9Lifetime1 = 0; var9Lifetime1 < 4; var9Lifetime1++) {
@@ -278,14 +278,14 @@ final class wc {
                 return stackIn_2_0;
               }
               var5 = (RasterBuffer) (var4.newInstance());
-              var5.a(param3, param2, param1, (byte) -126);
+              var5.initialize(param3, param2, param1, (byte) -126);
               stackIn_4_0 = var5;
               return stackIn_4_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
               var5_ref = new ImageProducerRasterBuffer();
-              ((RasterBuffer) ((Object) var5_ref)).a(param3, param2, param1, (byte) -6);
+              ((RasterBuffer) ((Object) var5_ref)).initialize(param3, param2, param1, (byte) -6);
               stackIn_6_0 = var5_ref;
               return (RasterBuffer) ((Object) stackIn_6_0);
             }

@@ -187,13 +187,13 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
               var4 = var4 + s.field_g;
             } else {
               var6 = u.a(sg.field_f[var3_int], true, true);
-              var4 = var4 + ig.field_h;
+              var4 = var4 + MusicPatch.field_h;
               var7 = -(var6 >> 1) + ji.field_f;
               if (AgeValidator.a((SecondaryNodeDeque.field_d << 1) + var6, (byte) -108, EmailFormatValidator.field_p + (LoginPanel.field_N << 1), var4, var7 - SecondaryNodeDeque.field_d, param0, param2)) {
                 stackIn_7_0 = var5;
                 return stackIn_7_0;
               }
-              var4 = var4 + (EmailFormatValidator.field_p + ig.field_h + (LoginPanel.field_N << 1));
+              var4 = var4 + (EmailFormatValidator.field_p + MusicPatch.field_h + (LoginPanel.field_N << 1));
             }
             var3_int++;
           }

@@ -71,7 +71,7 @@ final class ad {
             fe.a(var5, true);
             var6 = new String[2][var5];
             var19 = new int[2][var5 * 4];
-            var8 = rc.field_d;
+            var8 = MusicPatchEnvelope.field_d;
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {

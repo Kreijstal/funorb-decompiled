@@ -125,7 +125,7 @@ final class oc {
             var13 = param4;
             var14 = param5;
             var15 = (16711422 & var17[var11]) >> 1;
-            var10[var11] = var15 + (va.a(var12, 33423360) >> 1) + va.a(var13 >> 9, 65280) + (va.a(33487527, var14) >> 17);
+            var10[var11] = var15 + (va.bitwiseAnd(var12, 33423360) >> 1) + va.bitwiseAnd(var13 >> 9, 65280) + (va.bitwiseAnd(33487527, var14) >> 17);
             param4 = param4 + param9;
             param3 = param3 + param7;
             param5 = param5 + param6;

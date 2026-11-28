@@ -57,7 +57,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         return true;
     }
 
-    private final int a(int param0, int param1, String param2, UiWidget param3, String param4, byte param5) {
+    private final int addLabeledFieldWithDefaultValidationMessage(int param0, int param1, String param2, UiWidget param3, String param4, byte param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -72,7 +72,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
           if (param5 > -9) {
             field_H = (String) null;
           }
-          stackIn_3_0 = this.a(param3, param4, param0, param2, param1, (byte) -126, 35);
+          stackIn_3_0 = this.addLabeledFieldWithValidationMessage(param3, param4, param0, param2, param1, (byte) -126, 35);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -111,7 +111,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         try {
           if (param1 != 17) {
             var7 = (String) null;
-            discarded$1 = this.a(21, 119, (String) null, (UiWidget) null, (String) null, (byte) 74);
+            discarded$1 = this.addLabeledFieldWithDefaultValidationMessage(21, 119, (String) null, (UiWidget) null, (String) null, (byte) 74);
           }
           if (param0 == this.field_w) {
             SoundCache.a(param1 + 841);
@@ -192,7 +192,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         var2.setBounds(53, var3, 20, 270, 50);
         var3 += 50;
         this.addChild(var2, (byte) -110);
-        var3 = var3 + (5 + this.a(var3, 170, ResizableModalDialog.field_O, this.field_D, rd.field_b, (byte) -32));
+        var3 = var3 + (5 + this.addLabeledFieldWithDefaultValidationMessage(var3, 170, ResizableModalDialog.field_O, this.field_D, rd.field_b, (byte) -32));
         this.field_x.setBounds(122, var3, -var5 + 496 >> 1, var5, 40);
         this.field_w.setBounds(-116, 15 + var3, 3 + var4, 60, 40);
         this.field_w.field_m = (WidgetEventListener) (this);
@@ -254,7 +254,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         }
     }
 
-    private final int a(UiWidget param0, String param1, int param2, String param3, int param4, byte param5, int param6) {
+    private final int addLabeledFieldWithValidationMessage(UiWidget param0, String param1, int param2, String param3, int param4, byte param5, int param6) {
         RuntimeException var8 = null;
         ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;

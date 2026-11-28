@@ -271,26 +271,26 @@ final class IntrusiveDeque {
         int var1Lifetime1;
         if (param0 > -65) {
           field_a = (String[]) null;
-          if (kc.field_g <= 32) {
+          if (MusicPatchNode.field_g <= 32) {
             SocketConnector.a(0, 9956);
           } else {
-            var1 = kc.field_g % 32;
+            var1 = MusicPatchNode.field_g % 32;
             if (var1 == 0) {
               var1 = 32;
             }
-            SocketConnector.a(-var1 + kc.field_g, 9956);
+            SocketConnector.a(-var1 + MusicPatchNode.field_g, 9956);
             return;
           }
           return;
         }
-        if (kc.field_g <= 32) {
+        if (MusicPatchNode.field_g <= 32) {
           SocketConnector.a(0, 9956);
         } else {
-          var1Lifetime1 = kc.field_g % 32;
+          var1Lifetime1 = MusicPatchNode.field_g % 32;
           if (var1Lifetime1 == 0) {
             var1Lifetime1 = 32;
           }
-          SocketConnector.a(-var1Lifetime1 + kc.field_g, 9956);
+          SocketConnector.a(-var1Lifetime1 + MusicPatchNode.field_g, 9956);
           return;
         }
     }

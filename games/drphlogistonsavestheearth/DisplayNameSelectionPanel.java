@@ -29,7 +29,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         int var5 = 200;
         var3 += 50;
         this.addChild(var2, (byte) 119);
-        var3 = var3 + (this.a(737797090, var3, hj.field_h, 170, this.field_M, vh.field_b) + 5);
+        var3 = var3 + (this.addLabeledFieldWithDefaultValidationMessage(737797090, var3, hj.field_h, 170, this.field_M, vh.field_b) + 5);
         this.field_P.setBounds(var3, 40, 496 - var5 >> 1, 16535, var5);
         this.field_N.setBounds(15 + var3, 40, var4 + 3, 16535, 60);
         this.field_N.field_u = (WidgetEventListener) (this);
@@ -227,7 +227,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
           ((EditableTextField) ((Object) var3)).setText(false, var4, -19116);
           if (param1 != 0) {
             var5 = (String) null;
-            discarded$1 = this.a(83, 123, (String) null, 44, (UiWidget) null, (String) null);
+            discarded$1 = this.addLabeledFieldWithDefaultValidationMessage(83, 123, (String) null, 44, (UiWidget) null, (String) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -278,7 +278,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         }
     }
 
-    private final int a(UiWidget param0, String param1, int param2, int param3, int param4, int param5, String param6) {
+    private final int addLabeledFieldWithValidationMessage(UiWidget param0, String param1, int param2, int param3, int param4, int param5, String param6) {
         RuntimeException var8 = null;
         ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;
@@ -392,7 +392,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         }
     }
 
-    private final int a(int param0, int param1, String param2, int param3, UiWidget param4, String param5) {
+    private final int addLabeledFieldWithDefaultValidationMessage(int param0, int param1, String param2, int param3, UiWidget param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -407,7 +407,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
           if (param0 != 737797090) {
             this.submitDisplayName(62);
           }
-          stackIn_3_0 = this.a(param4, param5, param1, param3, 35, -23940, param2);
+          stackIn_3_0 = this.addLabeledFieldWithValidationMessage(param4, param5, param1, param3, 35, -23940, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

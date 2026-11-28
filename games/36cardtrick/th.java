@@ -8,7 +8,7 @@ final class th {
     final static void a(int param0, int param1) {
         ResizableModalDialog.field_O.field_l[od.field_a] = (short)(param1 >> 1);
         ResizableModalDialog.field_O.field_l[ModalDialog.field_F] = (short)(param1 >> 1);
-        byte dupTemp$0 = bc.a(param1, 1) != 0 ? AccountRequestState.field_a : cf.field_d;
+        byte dupTemp$0 = bc.bitwiseAnd(param1, 1) != 0 ? AccountRequestState.field_a : cf.field_d;
         ResizableModalDialog.field_O.field_O[od.field_a] = dupTemp$0;
         ResizableModalDialog.field_O.field_O[ModalDialog.field_F] = dupTemp$0;
         if (param0 > 82) {

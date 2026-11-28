@@ -174,7 +174,7 @@ final class ResourceArchive {
                     var21 = var20;
                   }
                   if (param3 == var21) {
-                    dm.copyBytes(var43, var17, var44, var14Lifetime1, var19);
+                    ArrayBlockSupport.copyBytes(var43, var17, var44, var14Lifetime1, var19);
                     var14Lifetime1 = var14Lifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -212,7 +212,7 @@ final class ResourceArchive {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
                   var18 = var18 + var29.readInt((byte) -35);
-                  dm.copyBytes(var43, var16, var39[var19], var38[var19], var18);
+                  ArrayBlockSupport.copyBytes(var43, var16, var39[var19], var38[var19], var18);
                   var14_ref_int__[var19] = var14_ref_int__[var19] + var18;
                   var16 = var16 + var18;
                 }
@@ -347,7 +347,7 @@ final class ResourceArchive {
             var5 = var9;
             var6 = param2;
             var7 = param0;
-            var9[var6] = (sc.a(16711422, var9[var6]) >> 1) + var7;
+            var9[var6] = (sc.bitwiseAnd(16711422, var9[var6]) >> 1) + var7;
             param2++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -713,7 +713,7 @@ final class ResourceArchive {
           tj.field_c = param7;
           BufferedSocket.field_k = (w) ((Object) new g());
           vg.field_r = new DiskCacheWorker(param8);
-          gf.field_e = new uf(BufferedSocket.field_k, vg.field_r);
+          ByteArrayPoolSupport.field_e = new uf(BufferedSocket.field_k, vg.field_r);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "rh.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }

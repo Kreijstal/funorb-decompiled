@@ -177,11 +177,11 @@ final class CipherPacketBuffer extends PacketBuffer {
     static {
         field_v = "Destroy the spawn queen.";
         field_y = new RgbSprite(8, 13);
-        kf.a(field_y.field_D, 0, 64, 8421376);
+        ArrayBlockSupport.fillInts(field_y.field_D, 0, 64, 8421376);
         field_q = new RgbSprite(8, 13);
-        kf.a(field_q.field_D, 0, 64, 16776960);
+        ArrayBlockSupport.fillInts(field_q.field_D, 0, 64, 16776960);
         field_t = new RgbSprite(8, 13);
-        kf.a(field_t.field_D, 0, 64, 65793);
+        ArrayBlockSupport.fillInts(field_t.field_D, 0, 64, 65793);
         field_z = "Please check if address is correct";
     }
 }

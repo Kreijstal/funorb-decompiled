@@ -186,7 +186,7 @@ final class pf {
         RuntimeException decompiledCaughtException = null;
         var5 = HostileSpawn.field_I ? 1 : 0;
         try {
-          if (!pl.a(param2, 12864, param0)) {
+          if (!MusicPatchEnvelope.a(param2, 12864, param0)) {
             return false;
           }
           var3_int = 48 / ((20 - param1) / 39);

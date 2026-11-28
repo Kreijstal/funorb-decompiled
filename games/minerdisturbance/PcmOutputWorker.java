@@ -137,7 +137,7 @@ final class PcmOutputWorker implements Runnable {
               if (var9Lifetime1 != 99) {
                 rj.field_d = -1;
                 AlphaWidgetContainer.field_K = var9Lifetime1;
-                GuestPlayConfirmationForm.field_Q = aa.field_l;
+                GuestPlayConfirmationForm.field_Q = GrowableIntArray.field_l;
               } else {
                 IntrusiveDeque.a(0, hl.a(-92));
                 IsaacRandom.field_a = new Boolean(FullscreenStatusDialog.a(kj.field_a, -29320));
@@ -162,7 +162,7 @@ final class PcmOutputWorker implements Runnable {
               }
             }
           }
-          if (GuestPlayConfirmationForm.field_Q == aa.field_l &&
+          if (GuestPlayConfirmationForm.field_Q == GrowableIntArray.field_l &&
             kj.b(-9319)) {
             if (AlphaWidgetContainer.field_K != 255) {
               TextLayout.field_g = kj.field_a.readString(false);

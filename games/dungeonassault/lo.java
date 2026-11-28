@@ -108,7 +108,7 @@ abstract class lo {
             var13 = param3;
             var14 = param8;
             var15 = (var18[var11] & 16711422) >> 1;
-            var10[var11] = var15 - (-nb.a(65280, var13 >> 9) + (-nb.a(16711680, var12 >> 1) - nb.a(var14 >> 17, 255)));
+            var10[var11] = var15 - (-nb.bitwiseAnd(65280, var13 >> 9) + (-nb.bitwiseAnd(16711680, var12 >> 1) - nb.bitwiseAnd(var14 >> 17, 255)));
             param1++;
             param8 = param8 + param2;
             param5 = param5 + param7;
@@ -155,7 +155,7 @@ abstract class lo {
           stackIn_2_4 = (MusicTrack) (param2);
           stackIn_2_5 = param4;
           stackIn_3_6 = !(param1);
-          ((CrossfadingMidiPcmStream) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, stackIn_2_5, stackIn_3_6);
+          ((CrossfadingMidiPcmStream) (Object) stackIn_2_0).switchTrack(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, stackIn_2_5, stackIn_3_6);
           if (param0 >= 65) {
             return;
           }

@@ -156,7 +156,7 @@ final class tp extends bb {
                   this.field_D.readFully(this.field_m.payload, false, var5, this.field_m.position);
                   if (this.field_j != 0) {
                     for (var6 = 0; var6 < var5; var6++) {
-                      this.field_m.payload[var6 + this.field_m.position] = (byte)IntrusiveDeque.b((int) this.field_m.payload[var6 + this.field_m.position], (int) this.field_j);
+                      this.field_m.payload[var6 + this.field_m.position] = (byte)IntrusiveDeque.bitwiseXor((int) this.field_m.payload[var6 + this.field_m.position], (int) this.field_j);
                     }
                   }
                   this.field_m.position = this.field_m.position + var5;
@@ -230,7 +230,7 @@ final class tp extends bb {
                   this.field_D.readFully(this.field_i.field_D.payload, false, var6, this.field_i.field_D.position);
                   if (this.field_j != 0) {
                     for (var7 = 0; var6 > var7; var7++) {
-                      this.field_i.field_D.payload[this.field_i.field_D.position + var7] = (byte)IntrusiveDeque.b((int) this.field_i.field_D.payload[this.field_i.field_D.position + var7], (int) this.field_j);
+                      this.field_i.field_D.payload[this.field_i.field_D.position + var7] = (byte)IntrusiveDeque.bitwiseXor((int) this.field_i.field_D.payload[this.field_i.field_D.position + var7], (int) this.field_j);
                     }
                   }
                   this.field_i.field_G = this.field_i.field_G + var6;

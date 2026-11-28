@@ -20,8 +20,8 @@ final class va {
           SoftwareRasterizer.drawRectangle(243, 197, 369, 143, 16777215);
           SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (null == oja.field_f) {
-            if (null != g.field_f) {
-              g.field_f.drawParagraph(ema.field_Ab, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (null != MidiNoteMask.field_f) {
+              MidiNoteMask.field_f.drawParagraph(ema.field_Ab, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
@@ -33,8 +33,8 @@ final class va {
           if (var6 != null) {
             var6.draw(245, 199);
           } else {
-            if (null != g.field_f) {
-              g.field_f.drawParagraph(ema.field_Ab, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (null != MidiNoteMask.field_f) {
+              MidiNoteMask.field_f.drawParagraph(ema.field_Ab, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           }
           if (DreamsAnimation.field_A < LoginPanel.field_E) {
@@ -49,7 +49,7 @@ final class va {
               }
             }
           }
-          if (null == g.field_f) {
+          if (null == MidiNoteMask.field_f) {
             return;
           }
           var2 = null;
@@ -70,7 +70,7 @@ final class va {
           if (var2 == null) {
             return;
           }
-          g.field_f.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+          MidiNoteMask.field_f.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -39,7 +39,7 @@ abstract class FrameTimer {
             FrameTimer.clearStaticReferences((byte) -67);
           }
           if (Bzip2State.a(param3, param2 ^ 20581, param0, param1)) {
-            return aa.a(-113);
+            return GrowableIntArray.a(-113);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

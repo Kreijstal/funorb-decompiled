@@ -160,7 +160,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           var6 = new DialogMessagePane(this, this.field_lb, param2);
           if (param0 != 5) {
             if (param0 == 256) {
-              var6.addListenerButton((WidgetEventListener) (this), hf.field_f, 30);
+              var6.addListenerButton((WidgetEventListener) (this), ByteArrayPoolSupport.field_f, 30);
             } else {
               stackIn_14_0 = var6;
               stackIn_14_1 = param1 + 22753;
@@ -168,7 +168,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
               if (!this.field_kb) {
                 stackIn_15_3 = hg.field_d;
               } else {
-                stackIn_15_3 = hf.field_f;
+                stackIn_15_3 = ByteArrayPoolSupport.field_f;
               }
               ((DialogMessagePane) (Object) stackIn_14_0).addActionButton(stackIn_14_1, stackIn_14_2, stackIn_15_3);
             }

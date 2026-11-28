@@ -48,7 +48,7 @@ final class qi extends DefaultTextWidgetRenderer {
             }
             return;
           }
-          cb.a(this.field_q, 0, param2.field_q, 0, 6);
+          ArrayBlockSupport.copyObjectRange(this.field_q, 0, param2.field_q, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

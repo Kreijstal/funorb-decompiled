@@ -7,7 +7,7 @@ final class dq extends InteractiveWidget {
     static String field_F;
     private int field_I;
     int field_E;
-    private ch field_B;
+    private GrowableIntArray field_B;
     int field_J;
     static String field_G;
 
@@ -130,7 +130,7 @@ final class dq extends InteractiveWidget {
         if (param0 != -49) {
           return 23;
         }
-        return this.field_B.a(true);
+        return this.field_B.size(true);
     }
 
     final static CoverageBitmapFont a(int param0, byte[] param1) {
@@ -172,15 +172,15 @@ final class dq extends InteractiveWidget {
         if (param0 < 0) {
           return -1;
         }
-        if (param0 < this.field_B.a(true)) {
+        if (param0 < this.field_B.size(true)) {
           int var3 = 20 % ((-49 - param1) / 54);
-          return this.field_B.d(-32240, param0);
+          return this.field_B.get(-32240, param0);
         }
         return -1;
     }
 
     final boolean pointerPressed(int param0, int param1, UiWidget param2, boolean param3, int param4, int param5, int param6) {
-        ch stackIn_13_0 = null;
+        GrowableIntArray stackIn_13_0 = null;
         boolean stackIn_14_1 = false;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
@@ -214,7 +214,7 @@ final class dq extends InteractiveWidget {
           }
           var8_int = this.field_I * var8_int / var9;
           if (1 == param5) {
-            this.field_B.a(var8_int, (byte) 123);
+            this.field_B.append(var8_int, (byte) 123);
           } else {
             if (param5 == 2) {
               var10 = 2147483647;
@@ -223,14 +223,14 @@ final class dq extends InteractiveWidget {
               while (true) {
                 stackIn_13_0 = this.field_B;
                 stackIn_14_1 = !(param3);
-                if (((ch) (Object) stackIn_13_0).a(stackIn_14_1) <= var12) {
+                if (((GrowableIntArray) (Object) stackIn_13_0).size(stackIn_14_1) <= var12) {
                   if (var11 < 0) {
                     return true;
                   }
-                  this.field_B.c(127, var11);
+                  this.field_B.removeAt(127, var11);
                   break;
                 }
-                var13 = -var8_int + this.field_B.d(-32240, var12);
+                var13 = -var8_int + this.field_B.get(-32240, var12);
                 var13 = var13 * var13;
                 if (var10 > var13) {
                   var10 = var13;

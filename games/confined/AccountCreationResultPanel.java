@@ -94,7 +94,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
           this.field_Fb = false;
         }
         if (this.field_Gb) {
-          wl.a(-66, false, true);
+          GrowableIntArray.a(-66, false, true);
           return;
         }
         try {

@@ -136,7 +136,7 @@ final class ak {
           var11_ref_StringLifetime2 = var8;
           var11_ref_StringLifetime3 = var8;
           if (null == sg.field_h &&
-            !id.a(false, false)) {
+            !GrowableIntArray.a(false, false)) {
             stackIn_5_0 = -1;
             return stackIn_5_0;
           }
@@ -167,7 +167,7 @@ final class ak {
               ud.field_b.writeByte(-11, 16);
               ud.field_b.position = ud.field_b.position + 1;
               var9 = ud.field_b.position;
-              cg.a(fj.field_c, -120, sd.field_i, ud.field_b, de.field_k);
+              cg.a(fj.field_c, -120, sd.field_i, ud.field_b, MusicPatchEnvelope.field_k);
               ud.field_b.backpatchByteLength((byte) -31, ud.field_b.position - var9);
             } else {
               var9 = 0;
@@ -192,7 +192,7 @@ final class ak {
                 var11_ref_StringLifetime4 = "";
               }
               ud.field_b.writeString(param1 - 15147, var11_ref_StringLifetime4);
-              cg.a(fj.field_c, -126, sd.field_i, ud.field_b, de.field_k);
+              cg.a(fj.field_c, -126, sd.field_i, ud.field_b, MusicPatchEnvelope.field_k);
               ud.field_b.backpatchShortLength((byte) 121, -var10 + ud.field_b.position);
             }
             SingleChildWidgetContainer.b((byte) 41, -1);
@@ -244,7 +244,7 @@ final class ak {
             }
           }
           if (ResourceArchive.field_k == gd.field_b &&
-            gf.b(param1 - 14911)) {
+            ByteArrayPoolSupport.b(param1 - 14911)) {
             if (be.field_a != 255) {
               fh.field_a = AccountRequestState.field_a.readString(param1 - 15021);
             } else {

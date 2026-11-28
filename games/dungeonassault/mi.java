@@ -57,7 +57,7 @@ final class mi {
           var12 = dd.a((byte) -112, 4, var8);
           var13 = param4.copy();
           var13.bindAsRenderTarget();
-          bp.a(var11, var12, var10, (byte) 99);
+          GrowableIntArray.a(var11, var12, var10, (byte) 99);
           var8.draw(var10, var11);
           var13.makeTransparentPixelsOpaque();
           var14 = var13.copy();
@@ -131,7 +131,7 @@ final class mi {
           tm.field_b = dk.a(131, 1, "da_raid_lose");
           gl.field_Ib = dk.a(200, 1, "da_stressing_music");
           dd.field_B = dk.a(100, 1, "da_defeat_monster");
-          FullscreenFocusCanvas.field_b.field_A.f(-50);
+          FullscreenFocusCanvas.field_b.field_A.releasePatchSampleIds(-50);
           ha.field_k = null;
           return;
         }
@@ -140,7 +140,7 @@ final class mi {
         tm.field_b = dk.a(131, 1, "da_raid_lose");
         gl.field_Ib = dk.a(200, 1, "da_stressing_music");
         dd.field_B = dk.a(100, 1, "da_defeat_monster");
-        FullscreenFocusCanvas.field_b.field_A.f(-50);
+        FullscreenFocusCanvas.field_b.field_A.releasePatchSampleIds(-50);
         ha.field_k = null;
     }
 

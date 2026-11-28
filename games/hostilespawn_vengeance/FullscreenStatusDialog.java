@@ -150,13 +150,13 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
           GameCanvas.field_e = var18.readUnsignedShort(8);
           var3 = 1 + (255 & var18.readUnsignedByte(32270));
           for (var4 = 0; sc.field_c > var4; var4++) {
-            th.field_Jb[var4] = var17.readUnsignedShort(bm.a(param0, -26877));
+            th.field_Jb[var4] = var17.readUnsignedShort(bm.bitwiseXor(param0, -26877));
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < sc.field_c; var4Lifetime1++) {
             LabeledWidgetContainer.field_O[var4Lifetime1] = var18.readUnsignedShort(8);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < sc.field_c; var4Lifetime2++) {
-            TextInputField.field_X[var4Lifetime2] = var18.readUnsignedShort(bm.a(param0, -26877));
+            TextInputField.field_X[var4Lifetime2] = var18.readUnsignedShort(bm.bitwiseXor(param0, -26877));
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < sc.field_c; var4Lifetime3++) {
             ConfirmedEmailAvailabilityValidator.field_r[var4Lifetime3] = var18.readUnsignedShort(8);
@@ -349,7 +349,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
           if (param1 == id.field_s) {
             var3 = he.field_z;
           } else {
-            if (hf.field_g != param1) {
+            if (ByteArrayPoolSupport.field_g != param1) {
               if (param1 == g.field_M) {
                 var3 = InteractiveWidget.field_y;
                 this.field_x = this.field_x + 30;
@@ -412,7 +412,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
             return stackIn_5_0;
           }
           var3 = new RgbSprite[param2];
-          kf.a(param0, 0, var3, 0, param2);
+          ArrayBlockSupport.copyObjectRange(param0, 0, var3, 0, param2);
           stackIn_7_0 = var3;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

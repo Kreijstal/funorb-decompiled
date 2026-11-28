@@ -129,7 +129,7 @@ final class hf {
             stackIn_7_0 = tf.field_k;
             return stackIn_7_0;
           }
-          if (qd.a((byte) 13, param2)) {
+          if (MusicPatchNode.a((byte) 13, param2)) {
             stackIn_11_0 = AccountRequestState.field_a;
             return stackIn_11_0;
           }

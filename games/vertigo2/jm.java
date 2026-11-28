@@ -52,9 +52,9 @@ final class jm extends TextureOperator {
             var4 = 256;
           }
           var4 = this.field_z[var4];
-          var6[var9] = b.a(16711680, var4) >> 12;
-          var7[var9] = b.a(var4 >> 4, 4080);
-          var8[var9] = b.a(255, var4) << 4;
+          var6[var9] = b.bitwiseAnd(16711680, var4) >> 12;
+          var7[var9] = b.bitwiseAnd(var4 >> 4, 4080);
+          var8[var9] = b.bitwiseAnd(255, var4) << 4;
         }
         if (param0 == -3780) {
           return var11;
@@ -439,7 +439,7 @@ final class jm extends TextureOperator {
                 var2 = 255;
               }
             }
-            this.field_z[var6] = om.a(var4, om.a(var2 << 16, var3 << 8));
+            this.field_z[var6] = om.bitwiseOr(var4, om.bitwiseOr(var2 << 16, var3 << 8));
           }
           return;
         }
@@ -502,7 +502,7 @@ final class jm extends TextureOperator {
               var2Lifetime1 = 255;
             }
           }
-          this.field_z[var6Lifetime1] = om.a(var4Lifetime1, om.a(var2Lifetime1 << 16, var3Lifetime1 << 8));
+          this.field_z[var6Lifetime1] = om.bitwiseOr(var4Lifetime1, om.bitwiseOr(var2Lifetime1 << 16, var3Lifetime1 << 8));
         }
     }
 

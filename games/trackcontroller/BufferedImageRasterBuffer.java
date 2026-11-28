@@ -6,14 +6,14 @@ import java.util.*;
 final class BufferedImageRasterBuffer extends RasterBuffer {
     private java.awt.Component field_e;
 
-    final void a(int param0, java.awt.Graphics param1, int param2, int param3) {
+    final void drawImage(int param0, java.awt.Graphics param1, int param2, int param3) {
         param1.drawImage(this.field_d, param2, param3, (java.awt.image.ImageObserver) ((Object) this.field_e));
         if (param0 != -11) {
           this.field_e = (java.awt.Component) null;
         }
     }
 
-    final void a(int param0, int param1, java.awt.Component param2, int param3) {
+    final void initialize(int param0, int param1, java.awt.Component param2, int param3) {
         java.awt.image.DataBufferInt var5 = null;
         java.awt.image.DirectColorModel var6 = null;
         java.awt.image.WritableRaster var7 = null;
@@ -29,7 +29,7 @@ final class BufferedImageRasterBuffer extends RasterBuffer {
           var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_c, this.field_a), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
           this.field_d = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
           this.field_e = param2;
-          this.a(-91);
+          this.setAsRasterTarget(-91);
           return;
         }
         this.field_e = (java.awt.Component) null;
@@ -41,7 +41,7 @@ final class BufferedImageRasterBuffer extends RasterBuffer {
         var7Lifetime1 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6Lifetime1)).createCompatibleSampleModel(this.field_c, this.field_a), (java.awt.image.DataBuffer) ((Object) var5Lifetime1), (java.awt.Point) null);
         this.field_d = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6Lifetime1), var7Lifetime1, false, new Hashtable()));
         this.field_e = param2;
-        this.a(-91);
+        this.setAsRasterTarget(-91);
     }
 
     public BufferedImageRasterBuffer() {

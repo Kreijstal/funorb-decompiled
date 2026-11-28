@@ -106,55 +106,55 @@ abstract class FrameTimer {
               }
               var3 = 0;
               var3 = var3 | 31 & var1_int;
-              pi.field_d[var7][0] = p.a(pi.field_d[var7][0], jh.a(31, var3));
+              pi.field_d[var7][0] = p.bitwiseOr(pi.field_d[var7][0], jh.bitwiseAnd(31, var3));
               var3 = 0;
               var3 = var3 | 31 & var1_int >> 6;
-              pi.field_d[var7][1] = p.a(pi.field_d[var7][1], jh.a(var3, 31));
+              pi.field_d[var7][1] = p.bitwiseOr(pi.field_d[var7][1], jh.bitwiseAnd(var3, 31));
               var3 = 0;
               var3 = var3 | var1_int >> 12 & 31;
-              pi.field_d[var7][2] = p.a(pi.field_d[var7][2], jh.a(31, var3));
+              pi.field_d[var7][2] = p.bitwiseOr(pi.field_d[var7][2], jh.bitwiseAnd(31, var3));
               var3 = 0;
               var3 = var3 | 31 & var1_int >> 18;
-              pi.field_d[var7][3] = p.a(pi.field_d[var7][3], jh.a(31, var3));
+              pi.field_d[var7][3] = p.bitwiseOr(pi.field_d[var7][3], jh.bitwiseAnd(31, var3));
               var3 = 0;
               var3 = var3 | 31 & var1_int >> 24;
-              pi.field_d[var7][4] = p.a(pi.field_d[var7][4], jh.a(31, var3));
+              pi.field_d[var7][4] = p.bitwiseOr(pi.field_d[var7][4], jh.bitwiseAnd(31, var3));
               var3 = 0;
               var3 = var3 | (var1_int & -1073741824) >> 30;
-              pi.field_d[var7][5] = p.a(pi.field_d[var7][5], jh.a(var3, 31));
+              pi.field_d[var7][5] = p.bitwiseOr(pi.field_d[var7][5], jh.bitwiseAnd(var3, 31));
               var3 = 0;
               var3 = var3 | 28 & var2 << 2;
-              pi.field_d[var7][5] = p.a(pi.field_d[var7][5], jh.a(var3, 31));
+              pi.field_d[var7][5] = p.bitwiseOr(pi.field_d[var7][5], jh.bitwiseAnd(var3, 31));
               hk.field_c[var7] = 0;
               var3 = 0;
               var3 = var3 | var1_int >> 11 & 1;
-              hk.field_c[var7] = p.a(hk.field_c[var7], jh.a(var3, 1));
+              hk.field_c[var7] = p.bitwiseOr(hk.field_c[var7], jh.bitwiseAnd(var3, 1));
               var3 = 0;
               var3 = var3 | 2 & var1_int >> 22;
-              hk.field_c[var7] = p.a(hk.field_c[var7], jh.a(2, var3));
+              hk.field_c[var7] = p.bitwiseOr(hk.field_c[var7], jh.bitwiseAnd(2, var3));
               var3 = 0;
               var3 = var3 | var2 >> 1 & 4;
-              hk.field_c[var7] = p.a(hk.field_c[var7], jh.a(var3, 4));
+              hk.field_c[var7] = p.bitwiseOr(hk.field_c[var7], jh.bitwiseAnd(var3, 4));
               var3 = 0;
               k.field_b[var7] = 0;
               var3 = var3 | 1 & var1_int >> 5;
-              k.field_b[var7] = p.a(k.field_b[var7], jh.a(var3, 1));
+              k.field_b[var7] = p.bitwiseOr(k.field_b[var7], jh.bitwiseAnd(var3, 1));
               var3 = 0;
               var3 = var3 | (var1_int & 2048) >> 10;
-              k.field_b[var7] = p.a(k.field_b[var7], jh.a(2, var3));
+              k.field_b[var7] = p.bitwiseOr(k.field_b[var7], jh.bitwiseAnd(2, var3));
               var3 = 0;
               var3 = var3 | (131072 & var1_int) >> 15;
-              k.field_b[var7] = p.a(k.field_b[var7], jh.a(4, var3));
+              k.field_b[var7] = p.bitwiseOr(k.field_b[var7], jh.bitwiseAnd(4, var3));
               var3 = 0;
               var3 = var3 | (var1_int & 8388608) >> 20;
-              k.field_b[var7] = p.a(k.field_b[var7], jh.a(8, var3));
+              k.field_b[var7] = p.bitwiseOr(k.field_b[var7], jh.bitwiseAnd(8, var3));
               var3 = 0;
               var3 = var3 | (var1_int & 536870912) >> 25;
-              k.field_b[var7] = p.a(k.field_b[var7], jh.a(var3, 16));
+              k.field_b[var7] = p.bitwiseOr(k.field_b[var7], jh.bitwiseAnd(var3, 16));
               var3 = 0;
               var3 = var3 | (var2 & 8) << 2;
               var5 += 8;
-              k.field_b[var7] = p.a(k.field_b[var7], jh.a(var3, 32));
+              k.field_b[var7] = p.bitwiseOr(k.field_b[var7], jh.bitwiseAnd(var3, 32));
             }
             var1_int = 0;
             for (var7 = 0; 4 > var7; var7++) {
@@ -188,16 +188,16 @@ abstract class FrameTimer {
               GzipDecoder.field_c[var7] = 0;
             }
             var3 = var3 | var1_int & 31;
-            GzipDecoder.field_c[0] = p.a(GzipDecoder.field_c[0], jh.a(var3, 31));
+            GzipDecoder.field_c[0] = p.bitwiseOr(GzipDecoder.field_c[0], jh.bitwiseAnd(var3, 31));
             if (param0 <= 111) {
               field_h = 53L;
             }
             var3 = 0;
             var3 = var3 | (var1_int & 992) >> 5;
-            GzipDecoder.field_c[1] = p.a(GzipDecoder.field_c[1], jh.a(var3, 31));
+            GzipDecoder.field_c[1] = p.bitwiseOr(GzipDecoder.field_c[1], jh.bitwiseAnd(var3, 31));
             var3 = 0;
             var3 = var3 | (var1_int & 31744) >> 10;
-            GzipDecoder.field_c[2] = p.a(GzipDecoder.field_c[2], jh.a(var3, 31));
+            GzipDecoder.field_c[2] = p.bitwiseOr(GzipDecoder.field_c[2], jh.bitwiseAnd(var3, 31));
             return;
           }
           return;

@@ -14,7 +14,7 @@ final class r {
             MusicTrack var6 = (MusicTrack) null;
             r.a(-25, -74, (MusicTrack) null, -65, false);
           }
-          ha.field_w.a(param0, (byte) -4, !param4 ? true : false, param3, param2, 1000000);
+          ha.field_w.switchTrack(param0, (byte) -4, !param4 ? true : false, param3, param2, 1000000);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "r.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

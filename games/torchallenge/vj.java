@@ -41,10 +41,10 @@ final class vj {
           qa.field_e = SpriteLoader.a(-127, "frame_bottom", "commonui", param3);
           rj.field_a = qk.a("commonui", "jagex_logo_grey", param3, 0);
           ae.field_v = SpriteLoader.a(param2 ^ -23127, "button", "commonui", param3);
-          ub.field_f = s.a(param3, "commonui", 0, "validation");
+          ub.field_f = MidiNoteMask.a(param3, "commonui", 0, "validation");
           GameApplet.field_f = (BitmapFont) ((Object) TextLineMetrics.a(param0, "commonui", param3, "arezzo12", 0));
           RasterBuffer.field_g = (BitmapFont) ((Object) TextLineMetrics.a(param0, "commonui", param3, "arezzo14", param2 ^ param2));
-          dl.field_H = (BitmapFont) ((Object) TextLineMetrics.a(param0, "commonui", param3, "arezzo14bold", param2 - 23081));
+          MusicPatchNode.field_H = (BitmapFont) ((Object) TextLineMetrics.a(param0, "commonui", param3, "arezzo14bold", param2 - 23081));
           var17 = new Sprite(param1.getFileByName(-2, "", "button.gif"), (java.awt.Component) ((Object) LabeledWidgetContainer.field_P));
           DiskCacheWorker.a(param3, "commonui", (byte) -114, "dropdown");
           var5 = mh.a(32, param3, "screen_options", "commonui");

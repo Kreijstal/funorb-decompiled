@@ -389,7 +389,7 @@ final class ResourceArchive {
                     integerLocal31 = integerLocal3;
                   }
                   if (integerLocal31 == integerArgument3) {
-                    MixedSupport008.performAction0073(byteArrayLocal47, integerLocal61, byteArrayLocal48, integerLocal57, integerLocal63);
+                    ArrayBlockSupport.copyByteRange(byteArrayLocal47, integerLocal61, byteArrayLocal48, integerLocal57, integerLocal63);
                     integerLocal57 = integerLocal57 + integerLocal63;
                   }
                   integerLocal61 = integerLocal61 + integerLocal63;
@@ -428,7 +428,7 @@ final class ResourceArchive {
               integerLocal54 = 0;
               for (integerLocal56 = 0; integerLocal56 < integerLocal13; integerLocal56++) {
                 integerLocal54 = integerLocal54 + packetBufferLocal38.readInt(7553);
-                MixedSupport008.performAction0073(byteArrayLocal47, integerLocal60, byteArrayArrayLocal46[integerLocal56], integerArrayLocal45[integerLocal56], integerLocal54);
+                ArrayBlockSupport.copyByteRange(byteArrayLocal47, integerLocal60, byteArrayArrayLocal46[integerLocal56], integerArrayLocal45[integerLocal56], integerLocal54);
                 integerArrayLocal24[integerLocal56] = integerArrayLocal24[integerLocal56] + integerLocal54;
                 integerLocal60 = integerLocal60 + integerLocal54;
               }

@@ -209,7 +209,7 @@ final class hd {
             stackIn_40_1 = false;
             stackIn_41_2 = !(var4 < 0);
             var7Lifetime1 = uc.a(stackIn_40_0, stackIn_40_1, stackIn_41_2);
-            var8Lifetime1 = wd.field_j - (var7Lifetime1 >> 1);
+            var8Lifetime1 = MidiNoteMask.field_j - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               if (var4 != bk.field_c.field_d) {
                 stackIn_46_0 = AlphaWidgetContainer.field_B;

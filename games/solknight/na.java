@@ -83,7 +83,7 @@ final class na implements Runnable {
         try {
           var2_int = param1.length;
           var3 = new byte[var2_int];
-          fk.copyByteRange(param1, 0, var3, 0, var2_int);
+          ArrayBlockSupport.copyByteRange(param1, 0, var3, 0, var2_int);
           var4 = -87 / ((66 - param0) / 49);
           stackIn_1_0 = var3;
           return stackIn_1_0;
@@ -97,7 +97,7 @@ final class na implements Runnable {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -193,7 +193,7 @@ final class na implements Runnable {
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw fc.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
+            throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -208,7 +208,7 @@ final class na implements Runnable {
           this.field_e = param1;
           this.field_g = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -119,9 +119,9 @@ final class GuestPlayConfirmationForm extends WidgetContainer implements WidgetA
 
     public GuestPlayConfirmationForm() {
         super(0, 0, 476, 225, (WidgetRenderer) null);
-        this.field_G = new ButtonWidget(oi.field_g, (WidgetEventListener) null);
+        this.field_G = new ButtonWidget(GrowableIntArray.field_g, (WidgetEventListener) null);
         this.field_F = new ButtonWidget(aj.field_d, (WidgetEventListener) null);
-        this.field_B = new ButtonWidget(oi.field_d, (WidgetEventListener) null);
+        this.field_B = new ButtonWidget(GrowableIntArray.field_d, (WidgetEventListener) null);
         hd var1 = new hd();
         this.field_G.field_h = (WidgetRenderer) ((Object) var1);
         this.field_F.field_h = (WidgetRenderer) ((Object) var1);

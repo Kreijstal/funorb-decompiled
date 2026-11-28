@@ -215,7 +215,7 @@ final class wk {
           if (this.field_i.length <= this.field_e) {
             var10 = new bl[this.field_e * 2];
             bl[] var7 = var10;
-            cj.a(this.field_i, 0, var10, 0, this.field_e);
+            ArrayBlockSupport.copyObjectRange(this.field_i, 0, var10, 0, this.field_e);
             this.field_i = var10;
           }
           var9 = new bl();

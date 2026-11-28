@@ -1468,11 +1468,11 @@ abstract class eh {
                 }
                 var2 = rd.a("monthnames,7", -125);
                 if (null != var2) {
-                  g.field_b[7] = DualLinkNode.a(dg.a((int) param0, 74), var2);
+                  g.field_b[7] = DualLinkNode.a(dg.bitwiseXor((int) param0, 74), var2);
                 }
                 var2 = rd.a("monthnames,8", 98);
                 if (var2 != null) {
-                  g.field_b[8] = DualLinkNode.a(dg.a((int) param0, 64), var2);
+                  g.field_b[8] = DualLinkNode.a(dg.bitwiseXor((int) param0, 64), var2);
                 }
                 var2 = rd.a("monthnames,9", param0 - 130);
                 if (var2 != null) {
@@ -1484,7 +1484,7 @@ abstract class eh {
                 }
                 var2 = rd.a("monthnames,11", 77);
                 if (null != var2) {
-                  g.field_b[11] = DualLinkNode.a(dg.a((int) param0, 69), var2);
+                  g.field_b[11] = DualLinkNode.a(dg.bitwiseXor((int) param0, 69), var2);
                 }
                 var2 = rd.a("create_welcome", -102);
                 if (null != var2) {
@@ -1512,7 +1512,7 @@ abstract class eh {
                 }
                 var2 = rd.a("create_password_confirm", param0 ^ 123);
                 if (var2 != null) {
-                  mc.field_d = DualLinkNode.a(127, var2);
+                  ByteArrayPoolSupport.field_d = DualLinkNode.a(127, var2);
                 }
                 var2 = rd.a("create_email", -61);
                 if (null != var2) {
@@ -2602,7 +2602,7 @@ abstract class eh {
                 }
                 var2 = rd.a("quickchat_shortcut_keys,0", 117);
                 if (null != var2) {
-                  we.field_f[0] = DualLinkNode.a(dg.a((int) param0, 67), var2);
+                  we.field_f[0] = DualLinkNode.a(dg.bitwiseXor((int) param0, 67), var2);
                 }
                 var2 = rd.a("quickchat_shortcut_keys,1", 69);
                 if (var2 != null) {
@@ -2622,7 +2622,7 @@ abstract class eh {
                 }
                 var2 = rd.a("quickchat_shortcut_keys,5", param0 - 3);
                 if (null != var2) {
-                  we.field_f[5] = DualLinkNode.a(dg.a((int) param0, 70), var2);
+                  we.field_f[5] = DualLinkNode.a(dg.bitwiseXor((int) param0, 70), var2);
                 }
                 var2 = rd.a("keychar_the_character_under_questionmark", param0 - 137);
                 if (var2 != null) {
@@ -2690,7 +2690,7 @@ abstract class eh {
                 }
                 var2 = rd.a("reconnect_lost_seq,1", param0 ^ -109);
                 if (var2 != null) {
-                  ProgressDialog.field_gb[1] = DualLinkNode.a(dg.a((int) param0, 77), var2);
+                  ProgressDialog.field_gb[1] = DualLinkNode.a(dg.bitwiseXor((int) param0, 77), var2);
                 }
                 var2 = rd.a("reconnect_lost_seq,2", 99);
                 if (var2 != null) {
@@ -2782,7 +2782,7 @@ abstract class eh {
                 }
                 var2 = rd.a("fs_button_close", 102);
                 if (null != var2) {
-                  mc.field_e = DualLinkNode.a(119, var2);
+                  ByteArrayPoolSupport.field_e = DualLinkNode.a(119, var2);
                 }
                 var2 = rd.a("fs_button_members", param0 ^ 91);
                 if (var2 != null) {
@@ -2806,7 +2806,7 @@ abstract class eh {
                 }
                 var2 = rd.a("fs_timeout", 73);
                 if (var2 != null) {
-                  mc.field_a = DualLinkNode.a(124, var2);
+                  ByteArrayPoolSupport.field_a = DualLinkNode.a(124, var2);
                 }
                 var2 = rd.a("fs_button_tryagain", -128);
                 if (null != var2) {
@@ -2978,7 +2978,7 @@ abstract class eh {
                 }
                 var2 = rd.a("mustlogin3,1", -40);
                 if (var2 != null) {
-                  lb.field_d[1] = DualLinkNode.a(dg.a((int) param0, 68), var2);
+                  lb.field_d[1] = DualLinkNode.a(dg.bitwiseXor((int) param0, 68), var2);
                 }
                 var2 = rd.a("mustlogin3,2", param0 - 180);
                 if (var2 != null) {
@@ -2986,7 +2986,7 @@ abstract class eh {
                 }
                 var2 = rd.a("mustlogin3,3", 81);
                 if (null != var2) {
-                  lb.field_d[3] = DualLinkNode.a(dg.a((int) param0, 69), var2);
+                  lb.field_d[3] = DualLinkNode.a(dg.bitwiseXor((int) param0, 69), var2);
                 }
                 var2 = rd.a("mustlogin3,4", -74);
                 if (var2 != null) {
@@ -3058,7 +3058,7 @@ abstract class eh {
                 }
                 var2 = rd.a("mustlogin_alternate,5", 60);
                 if (null != var2) {
-                  BufferedRandomAccessFile.field_f[5] = DualLinkNode.a(dg.a((int) param0, 75), var2);
+                  BufferedRandomAccessFile.field_f[5] = DualLinkNode.a(dg.bitwiseXor((int) param0, 75), var2);
                 }
                 var2 = rd.a("mustlogin_alternate,6", -58);
                 if (null != var2) {
@@ -3082,11 +3082,11 @@ abstract class eh {
                 }
                 var2 = rd.a("subscription_cost_monthly,3", 97);
                 if (var2 != null) {
-                  ResizableModalDialog.field_N[3] = DualLinkNode.a(dg.a((int) param0, 64), var2);
+                  ResizableModalDialog.field_N[3] = DualLinkNode.a(dg.bitwiseXor((int) param0, 64), var2);
                 }
                 var2 = rd.a("subscription_cost_monthly,4", 115);
                 if (null != var2) {
-                  ResizableModalDialog.field_N[4] = DualLinkNode.a(dg.a((int) param0, 76), var2);
+                  ResizableModalDialog.field_N[4] = DualLinkNode.a(dg.bitwiseXor((int) param0, 76), var2);
                 }
                 var2 = rd.a("subscription_cost_monthly,5", param0 ^ 99);
                 if (null != var2) {
@@ -3104,7 +3104,7 @@ abstract class eh {
             }
             void runChunk3() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  ResizableModalDialog.field_N[8] = DualLinkNode.a(dg.a((int) param0, 64), var2);
+                  ResizableModalDialog.field_N[8] = DualLinkNode.a(dg.bitwiseXor((int) param0, 64), var2);
                 }
                 var2 = rd.a("subscription_cost_monthly,9", -91);
                 if (var2 != null) {

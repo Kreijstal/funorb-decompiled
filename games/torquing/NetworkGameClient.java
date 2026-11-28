@@ -25,7 +25,7 @@ abstract class NetworkGameClient extends GameApplet {
         ImageProducerRasterBuffer.field_i = this.field_k;
         AccountNameAvailabilityValidator.a((byte) 52, ImageProducerRasterBuffer.field_i);
         in.a(this.field_l, this.field_o, this.field_i, param0, ImageProducerRasterBuffer.field_i, 5000, this.field_r, ArchiveRequest.field_u, param2, this.field_p, 0, this.field_s, 5000, this.field_m);
-        mg.a(-1, ImageProducerRasterBuffer.field_i, this.field_r, this.field_m, ArchiveRequest.field_u, this.field_l, this.field_i, this.field_p, param0);
+        ByteArrayPoolSupport.a(-1, ImageProducerRasterBuffer.field_i, this.field_r, this.field_m, ArchiveRequest.field_u, this.field_l, this.field_i, this.field_p, param0);
         qg.d(-125);
         wb.field_u = ResourceArchive.createMouseWheelInput(26);
         Bzip2State.a(k.field_d, (byte) -125);

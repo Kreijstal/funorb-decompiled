@@ -127,7 +127,7 @@ final class fa extends InteractiveWidget {
         RuntimeException var2 = null;
         try {
           var2_int = -20 / ((-7 - param1) / 57);
-          dl.a((java.awt.Component) ((Object) param0), (byte) -112);
+          ByteArrayPoolSupport.a((java.awt.Component) ((Object) param0), (byte) -112);
           NameSuggestionsPanel.a(0, (java.awt.Component) ((Object) param0));
           if (null != jc.field_c) {
             jc.field_c.detach((java.awt.Component) ((Object) param0), (byte) -30);

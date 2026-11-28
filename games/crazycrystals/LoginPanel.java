@@ -182,14 +182,14 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
         if (FrameTimer.field_b[CrystalTile.field_o] >= uo.field_o) {
           if (var1 > 0 &&
             CrystalTile.field_o == 1) {
-            wd.a(-111, 65535, uo.field_o - 1, dk.field_h, var1, 70, 0);
-            dupTemp$0 = new m(var2, 8, cp.field_h, 0, 70, true);
+            wd.a(-111, 65535, uo.field_o - 1, MusicPatch.field_h, var1, 70, 0);
+            dupTemp$0 = new m(var2, 8, MusicPatchEnvelope.field_h, 0, 70, true);
             var3 = dupTemp$0;
             MouseInputHandler.field_b = (ue) ((Object) dupTemp$0);
           }
           if (0 < var1 &&
             4 == CrystalTile.field_o) {
-            wd.a(-77, 65534, -1 + uo.field_o, dk.field_h, var1, 25, 1);
+            wd.a(-77, 65534, -1 + uo.field_o, MusicPatch.field_h, var1, 25, 1);
             dupTemp$1 = new m(var2, 9, fq.field_G, 1, 25, true);
             var3 = dupTemp$1;
             MouseInputHandler.field_b = (ue) ((Object) dupTemp$1);
@@ -204,7 +204,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             MouseInputHandler.field_b = (ue) ((Object) new vn((m) (var3), var2, true));
           } else {
             if (mo.field_l == 0 &&
-              uo.field_o > dk.field_h) {
+              uo.field_o > MusicPatch.field_h) {
               MouseInputHandler.field_b = (ue) ((Object) new rb(var2, true));
             }
           }

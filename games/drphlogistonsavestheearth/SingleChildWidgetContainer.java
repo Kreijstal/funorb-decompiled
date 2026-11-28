@@ -305,7 +305,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
     final static void f(int param0) {
         cj.field_h = new he[8];
         cj.field_h[4] = PacketBuffer.field_k;
-        cj.field_h[2] = ri.field_b;
+        cj.field_h[2] = MusicPatchEnvelope.field_b;
         cj.field_h[1] = NodeHashTableIterator.field_d;
         cj.field_h[0] = ImageProducerRasterBuffer.field_o;
         if (param0 == 10) {

@@ -89,13 +89,13 @@ final class l {
     final static void a(int param0, int param1, int param2, int param3) {
         if (param0 == 0) {
           lf.field_e = param3;
-          he.field_C = param1;
+          MusicPatchNode.field_C = param1;
           mf.field_c = param2;
           return;
         }
         l.pollAccountCreationResult((byte) 0);
         lf.field_e = param3;
-        he.field_C = param1;
+        MusicPatchNode.field_C = param1;
         mf.field_c = param2;
     }
 

@@ -1056,7 +1056,7 @@ final class bf {
             if (!this.field_s && (this.field_Q == 62 ||
               this.field_Q == 63)) {
               var3_int = (int)sd.field_a.field_N + MusicPatchPcmStream.field_p;
-              var4 = (int)sd.field_a.field_D + ri.field_q;
+              var4 = (int)sd.field_a.field_D + MusicPatchEnvelope.field_q;
               var5 = (int)(-this.field_o - (double)this.field_I + (double)var3_int);
               var6_int = (int)((double)var4 - ((double)this.field_t + this.field_N));
               var7_double = Math.atan2((double)var5, (double)var6_int) + 3.141592653589793;
@@ -1177,19 +1177,19 @@ final class bf {
                   if (var13 != 0) {
                     if (var7Lifetime1 == 1) {
                       var8 = MouseWheelInput.field_a;
-                      var8 = cc.field_y;
+                      var8 = MusicPatchNode.field_y;
                     } else {
-                      var8 = cc.field_y;
+                      var8 = MusicPatchNode.field_y;
                     }
                   }
                 } else {
                   if (var7Lifetime1 == 1) {
                     var8 = MouseWheelInput.field_a;
                     if (var13 != 0) {
-                      var8 = cc.field_y;
+                      var8 = MusicPatchNode.field_y;
                     }
                   } else {
-                    var8 = cc.field_y;
+                    var8 = MusicPatchNode.field_y;
                   }
                 }
                 var9 = var8[this.field_V / 5 % var8.length];
@@ -1450,7 +1450,7 @@ final class bf {
             (decompiledFrameRemainder6) &&
             (decompiledFrameRemainder5)) {
             if (hc.field_G > hi.a(3, 4, this.field_T)) {
-              this.field_M = (int)sd.field_a.field_D + ri.field_q;
+              this.field_M = (int)sd.field_a.field_D + MusicPatchEnvelope.field_q;
               if (var4 == 0) {
                 return;
               }
@@ -1541,7 +1541,7 @@ final class bf {
               var16 = 18;
               var6 = -var2_double + ((double)MusicPatchPcmStream.field_p + sd.field_a.field_N);
               var4 = (double)(int)(this.field_N + 127.0);
-              var8 = -var4 + (sd.field_a.field_D + (double)ri.field_q);
+              var8 = -var4 + (sd.field_a.field_D + (double)MusicPatchEnvelope.field_q);
               var21 = Math.sqrt(var6 * var6 + var8 * var8);
               var6 = var6 / var21;
               var8 = var8 / var21;
@@ -1555,7 +1555,7 @@ final class bf {
             (decompiledFrameRemainder0)) {
             var16 = 12;
             var17 = (int)sd.field_a.field_N + MusicPatchPcmStream.field_p;
-            var18 = ri.field_q + (int)sd.field_a.field_D;
+            var18 = MusicPatchEnvelope.field_q + (int)sd.field_a.field_D;
             var8 = (double)(int)((double)var18 - ((double)this.field_t + this.field_N));
             var6 = (double)(int)((double)var17 - (this.field_o + (double)this.field_I));
             var19 = Math.sqrt(var6 * var6 + var8 * var8);
@@ -1652,7 +1652,7 @@ final class bf {
             var10 = this.field_j / 4.0;
             var12 = bb.field_h[this.field_Q];
             var13 = (int)sd.field_a.field_N + MusicPatchPcmStream.field_p;
-            var14 = (int)sd.field_a.field_D + ri.field_q;
+            var14 = (int)sd.field_a.field_D + MusicPatchEnvelope.field_q;
             var15 = Math.atan2((double)var14 - var6, (double)var13 - var4);
             var23 = this.field_Q;
             if (var23 == 47) {
@@ -1708,7 +1708,7 @@ final class bf {
                       }
                       var10 = 0.0;
                       var8 = 0.0;
-                      this.field_b = new gf(var12, var4, var6, 0.0, 0.0, (double)MusicPatchPcmStream.field_p + sd.field_a.field_N, sd.field_a.field_D + (double)ri.field_q);
+                      this.field_b = new gf(var12, var4, var6, 0.0, 0.0, (double)MusicPatchPcmStream.field_p + sd.field_a.field_N, sd.field_a.field_D + (double)MusicPatchEnvelope.field_q);
                       sd.field_a.a(24, this.field_b);
                       if (var24 == 0) {
                         break regionExit1;
@@ -1726,7 +1726,7 @@ final class bf {
                           var4 = 41.0 + this.field_o;
                         }
                       }
-                      this.field_b = new gf(var12, var4, var6, 0.0, 0.0, sd.field_a.field_N + (double)MusicPatchPcmStream.field_p, sd.field_a.field_D + (double)ri.field_q);
+                      this.field_b = new gf(var12, var4, var6, 0.0, 0.0, sd.field_a.field_N + (double)MusicPatchPcmStream.field_p, sd.field_a.field_D + (double)MusicPatchEnvelope.field_q);
                       this.field_b.field_l = this.field_V;
                       sd.field_a.a(-2 + sd.field_a.field_gb, param0 - 63);
                       sd.field_a.a(24, this.field_b);
@@ -1909,10 +1909,10 @@ final class bf {
           stackIn_19_1 = !(this.field_H >= 0);
           this.field_s = stackIn_19_1;
           if (this.field_s) {
-            if (ga.field_j[this.field_Q] != -1) {
+            if (MidiNoteMask.field_j[this.field_Q] != -1) {
               var3_int = ConfirmedEmailAvailabilityValidator.a(param1 + 104, this.field_I + (int)this.field_o);
-              if (ga.field_j[this.field_Q] != 69) {
-                th.a(-27610, 48, var3_int, nl.field_r[ga.field_j[this.field_Q]]);
+              if (MidiNoteMask.field_j[this.field_Q] != 69) {
+                th.a(-27610, 48, var3_int, nl.field_r[MidiNoteMask.field_j[this.field_Q]]);
               }
             }
             boolean decompiledFrameRemainder1 = true;

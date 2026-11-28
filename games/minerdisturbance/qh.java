@@ -68,7 +68,7 @@ final class qh implements WidgetRenderer {
           if (param0 != 12088) {
             return;
           }
-          ng.a(param2.field_q, param2.field_v, 127, var6_int, var7);
+          MusicPatchEnvelope.a(param2.field_q, param2.field_v, 127, var6_int, var7);
           var8 = AccountServiceResult.field_g[1];
           if (param2 instanceof InteractiveWidget &&
             ((InteractiveWidget) (param2)).field_H) {

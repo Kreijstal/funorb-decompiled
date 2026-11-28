@@ -79,7 +79,7 @@ final class laa extends pv {
             for (var8Lifetime1 = param6; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
               var9Lifetime1 = fn.field_k[var8Lifetime1];
               var10Lifetime1 = fn.field_k[1 + var8Lifetime1];
-              if (un.a(param3, var10Lifetime1, -17596, var9Lifetime1)) {
+              if (MusicPatchEnvelope.a(param3, var10Lifetime1, -17596, var9Lifetime1)) {
                 fn.field_k[var8Lifetime1] = var10Lifetime1;
                 fn.field_k[var8Lifetime1 + 1] = var9Lifetime1;
               }

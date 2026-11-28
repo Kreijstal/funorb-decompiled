@@ -29,7 +29,7 @@ final class cc {
           }
           var4 = new byte[param0];
           var3 = var4;
-          dk.copyByteRange(param2, 0, var4, 0, param0);
+          ArrayBlockSupport.copyByteRange(param2, 0, var4, 0, param0);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

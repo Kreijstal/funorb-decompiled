@@ -23,12 +23,12 @@ abstract class MouseWheelInput {
           var9 = (int)(param3 * 325.94932345220167);
           var10 = 1;
           while (var10 < 4) {
-            MouseInput.field_b[-1 + var10] = TriangleRasterizer.field_m[va.a(2047, (var10 * 4 + 3) * var7_int)] >> 2;
-            MouseInput.field_b[2 + var10] = TriangleRasterizer.field_m[va.a((3 + var10 * 4) * var8, 2047)] >> 2;
-            MouseInput.field_b[5 + var10] = TriangleRasterizer.field_m[va.a(2047, var9 * (3 + 4 * var10))] >> 2;
-            MouseInput.field_b[8 + var10] = TriangleRasterizer.field_j[va.a(2047, var7_int * (3 + var10 * 4))] >> 2;
-            MouseInput.field_b[var10 + 11] = TriangleRasterizer.field_j[va.a(2047, var8 * (var10 * 4 + 3))] >> 2;
-            MouseInput.field_b[var10 + 14] = TriangleRasterizer.field_j[va.a(var9 * (var10 * 4 + 3), 2047)] >> 2;
+            MouseInput.field_b[-1 + var10] = TriangleRasterizer.field_m[va.bitwiseAnd(2047, (var10 * 4 + 3) * var7_int)] >> 2;
+            MouseInput.field_b[2 + var10] = TriangleRasterizer.field_m[va.bitwiseAnd((3 + var10 * 4) * var8, 2047)] >> 2;
+            MouseInput.field_b[5 + var10] = TriangleRasterizer.field_m[va.bitwiseAnd(2047, var9 * (3 + 4 * var10))] >> 2;
+            MouseInput.field_b[8 + var10] = TriangleRasterizer.field_j[va.bitwiseAnd(2047, var7_int * (3 + var10 * 4))] >> 2;
+            MouseInput.field_b[var10 + 11] = TriangleRasterizer.field_j[va.bitwiseAnd(2047, var8 * (var10 * 4 + 3))] >> 2;
+            MouseInput.field_b[var10 + 14] = TriangleRasterizer.field_j[va.bitwiseAnd(var9 * (var10 * 4 + 3), 2047)] >> 2;
             var10++;
             if (var11 != 0) {
               return;
@@ -165,7 +165,7 @@ abstract class MouseWheelInput {
                 }
                 if (param2) {
                   GuestPlayConfirmationForm.field_T[var23Lifetime2] = var27Lifetime1 >> DiskCacheWorker.field_h;
-                  wl.field_d[var23Lifetime2] = var28Lifetime1 >> DiskCacheWorker.field_h;
+                  GrowableIntArray.field_d[var23Lifetime2] = var28Lifetime1 >> DiskCacheWorker.field_h;
                   nm.field_C[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;

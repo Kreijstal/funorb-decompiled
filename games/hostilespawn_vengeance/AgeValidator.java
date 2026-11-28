@@ -250,7 +250,7 @@ final class AgeValidator extends TextFieldValidator {
               }
             }
           }
-          hf.field_i = param1;
+          ByteArrayPoolSupport.field_i = param1;
           var10 = AlphaWidgetContainer.field_F[ib.field_c];
           var12 = var10;
           var13 = var12;

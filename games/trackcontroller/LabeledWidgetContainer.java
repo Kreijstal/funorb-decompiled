@@ -51,7 +51,7 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
           }
           for (var2 = 1; var2 < rf.field_a.length; var2++) {
             var3 = rf.field_a[var2];
-            pd.a(gk.field_b, var2 << 4, gk.field_b, var1_int, var3);
+            ArrayBlockSupport.copyIntRange(gk.field_b, var2 << 4, gk.field_b, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;

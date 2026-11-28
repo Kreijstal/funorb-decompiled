@@ -4,7 +4,7 @@
 final class nb extends InteractiveWidget {
     int field_G;
     private int field_J;
-    private ol field_L;
+    private GrowableIntArray field_L;
     static FullscreenNoticeType field_K;
     int field_I;
     static int field_H;
@@ -67,13 +67,13 @@ final class nb extends InteractiveWidget {
           }
           var8_int = var8_int * this.field_J / var9;
           if (1 == param2) {
-            this.field_L.a(var8_int, false);
+            this.field_L.append(var8_int, false);
           } else {
             if (2 == param2) {
               var10 = 2147483647;
               var11 = -1;
-              for (var12 = 0; this.field_L.a(19692) > var12; var12++) {
-                var13 = this.field_L.a((byte) -117, var12) - var8_int;
+              for (var12 = 0; this.field_L.size(19692) > var12; var12++) {
+                var13 = this.field_L.get((byte) -117, var12) - var8_int;
                 var13 = var13 * var13;
                 if (var10 > var13) {
                   var10 = var13;
@@ -83,7 +83,7 @@ final class nb extends InteractiveWidget {
               if (var11 < 0) {
                 return true;
               }
-              this.field_L.a(var11, (byte) 111);
+              this.field_L.removeAt(var11, (byte) 111);
             }
           }
           return true;
@@ -103,9 +103,9 @@ final class nb extends InteractiveWidget {
 
     final int b(byte param0, int param1) {
         if (param1 >= 0 &&
-          this.field_L.a(19692) > param1) {
+          this.field_L.size(19692) > param1) {
           if (param0 == 95) {
-            return this.field_L.a((byte) -117, param1);
+            return this.field_L.get((byte) -117, param1);
           }
           return -11;
         }
@@ -117,7 +117,7 @@ final class nb extends InteractiveWidget {
           UiWidget var3 = (UiWidget) null;
           this.pointerPressed((UiWidget) null, -89, -58, -17, 18, (byte) 87, -5);
         }
-        return this.field_L.a(19692);
+        return this.field_L.size(19692);
     }
 
     public static void clearStaticReferences(byte param0) {

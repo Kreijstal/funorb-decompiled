@@ -248,7 +248,7 @@ final class hj extends gd {
                 var13 = var10 + var12Lifetime1;
                 var10 = (16711935 & var10) + (var12Lifetime1 & 16711935);
                 var12Lifetime2 = (16777472 & var10) + (65536 & -var10 + var13);
-                SoftwareRasterizer.field_b[var6] = mp.a(var13 - var12Lifetime2, var12Lifetime2 - (var12Lifetime2 >>> 8));
+                SoftwareRasterizer.field_b[var6] = mp.bitwiseOr(var13 - var12Lifetime2, var12Lifetime2 - (var12Lifetime2 >>> 8));
               }
               var7++;
               var5_intLifetime1++;

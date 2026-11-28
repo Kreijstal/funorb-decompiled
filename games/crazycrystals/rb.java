@@ -88,7 +88,7 @@ final class rb extends ue {
               var3 = new RgbSprite(ee.field_m.field_n / 3 + 6, 6 + ee.field_m.field_o / 3);
               var3.bindAsRenderTarget();
               ee.field_m.drawDownscaledAreaAveraged(3, 3, ee.field_m.field_n / 3, ee.field_m.field_o / 3);
-              dk.field_o.setAsRasterTarget(6945);
+              MusicPatch.field_o.setAsRasterTarget(6945);
               hb.a(3, var3.field_o, 0, var3.field_n, var3, -126, 1, 0);
               TextHotspotBounds.a(param0 ^ -12, var3);
               tf.field_c = true;

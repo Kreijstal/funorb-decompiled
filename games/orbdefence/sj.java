@@ -137,7 +137,7 @@ final class sj extends DefaultTextWidgetRenderer {
             }
             return;
           }
-          mk.a(this.field_v, 0, param2.field_v, 0, 6);
+          ArrayBlockSupport.copyObjectRange(this.field_v, 0, param2.field_v, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -146,7 +146,7 @@ final class gl {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -195,7 +195,7 @@ final class gl {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -208,7 +208,7 @@ final class gl {
         this.field_p = DualLinkNode.field_h;
         this.field_i.a(param0, this.field_n, this.field_d);
         BitPacketBuffer.field_p = false;
-        FullscreenFocusCanvas var2 = g.a(this.field_d, 0, wh.field_c, this.field_n, (byte) -81, 0);
+        FullscreenFocusCanvas var2 = MusicPatchEnvelope.a(this.field_d, 0, wh.field_c, this.field_n, (byte) -81, 0);
         if (var2 == null) {
           this.a(false);
         }
@@ -226,7 +226,7 @@ final class gl {
           hk.a();
           SoftwareRasterizer.clearRaster();
           BufferedSocket.field_h = 0;
-          ee.g(101);
+          MidiNoteMask.g(101);
           var2 = var1.copy();
           var3 = 0;
           if (param0 != 28) {
@@ -242,7 +242,7 @@ final class gl {
           var1.drawHalfSize(0, 0);
           MidiPcmStream.e(4096);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "gl.H(" + param0 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "gl.H(" + param0 + ')');
         }
     }
 
@@ -286,7 +286,7 @@ final class gl {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 

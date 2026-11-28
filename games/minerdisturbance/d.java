@@ -11,8 +11,8 @@ final class d {
     final static boolean a(int param0, int param1, byte param2) {
         if (param2 != 68) {
           d.a(9, -76, (byte) 7);
-          if (null == aa.field_j) {
-            if (null != aa.field_j) {
+          if (null == GrowableIntArray.field_j) {
+            if (null != GrowableIntArray.field_j) {
               return false;
             }
             if (pj.field_c.a(param0, param1, (byte) -120)) {
@@ -20,10 +20,10 @@ final class d {
             }
             return false;
           }
-          if (aa.field_j.a(param0, param1, (byte) -66)) {
+          if (GrowableIntArray.field_j.a(param0, param1, (byte) -66)) {
             return true;
           }
-          if (null != aa.field_j) {
+          if (null != GrowableIntArray.field_j) {
             return false;
           }
           if (pj.field_c.a(param0, param1, (byte) -120)) {
@@ -31,11 +31,11 @@ final class d {
           }
           return false;
         }
-        if (null != aa.field_j) {
-          if (aa.field_j.a(param0, param1, (byte) -66)) {
+        if (null != GrowableIntArray.field_j) {
+          if (GrowableIntArray.field_j.a(param0, param1, (byte) -66)) {
             return true;
           }
-          if (null != aa.field_j) {
+          if (null != GrowableIntArray.field_j) {
             return false;
           }
           if (pj.field_c.a(param0, param1, (byte) -120)) {
@@ -43,7 +43,7 @@ final class d {
           }
           return false;
         }
-        if (null != aa.field_j) {
+        if (null != GrowableIntArray.field_j) {
           return false;
         }
         if (pj.field_c.a(param0, param1, (byte) -120)) {

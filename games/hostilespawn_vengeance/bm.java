@@ -10,7 +10,7 @@ final class bm {
     static int field_c;
     static RgbSprite field_f;
 
-    static int a(int param0, int param1) {
+    static int bitwiseXor(int param0, int param1) {
         return param0 ^ param1;
     }
 
@@ -65,7 +65,7 @@ final class bm {
         field_d = new long[32];
         field_a = new String[]{null, "Or click", "Or click", "Or click", "Or click", "Or click", "Or click", "Or click"};
         field_g = new bm();
-        field_b = nf.a(false);
+        field_b = MusicPatch.a(false);
         field_e = new String[]{"Health pack", "Big health pack", "<unused>", "Explosive charge", "Lost key", "<unused>", "<unused>", "<unused>", "<unused>", "<unused>", "<unused>", "Security pass"};
         field_c = 0;
     }

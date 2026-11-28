@@ -67,7 +67,7 @@ final class jf extends en {
             stackIn_2_0 = (RgbSprite) null;
             return stackIn_2_0;
           }
-          if (kk.a(param1, 1, param2, param0)) {
+          if (MusicPatch.a(param1, 1, param2, param0)) {
             stackIn_7_0 = IsaacRandom.a((byte) 86);
             return stackIn_7_0;
           }

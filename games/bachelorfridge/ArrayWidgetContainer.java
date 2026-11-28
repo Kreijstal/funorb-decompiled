@@ -602,7 +602,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements WidgetContainerM
           param0.drawScaled(param4, param3, param2.field_q, param2.field_p);
           SoftwareRasterizer.drawLine(0, param3, param4, param3, 16777215);
           SoftwareRasterizer.drawLine(param2.field_q + param4, param3, param2.field_q, param3, 16777215);
-          ProgressDialog.field_U.a((byte) 117);
+          ProgressDialog.field_U.setAsRasterTarget((byte) 117);
           for (var6 = 0; var6 < param2.field_q; var6++) {
             var7 = 0;
             for (var8 = var6; var8 < param2.field_v.length; var8 = var8 + param2.field_q) {

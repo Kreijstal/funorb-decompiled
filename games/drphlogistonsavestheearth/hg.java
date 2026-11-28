@@ -100,7 +100,7 @@ final class hg extends hc {
         return new a(IntrusiveDeque.f(-52), ByteStorage.b((byte) -94));
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseAnd(long param0, long param1) {
         return param0 & param1;
     }
 

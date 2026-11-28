@@ -245,7 +245,7 @@ class AudioOutput {
         if (field_h) {
           var3 = var3 << 1;
         }
-        dm.clearInts(param0, 0, var3);
+        ArrayBlockSupport.clearInts(param0, 0, var3);
         this.field_m = this.field_m - param1;
         if (this.field_o != null &&
           this.field_m <= 0) {

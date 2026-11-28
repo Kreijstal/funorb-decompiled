@@ -56,7 +56,7 @@ final class hca {
     final void a(byte param0) {
         if (param0 == 19) {
           hp.a(this.field_c.field_sb, this.field_c.field_kb, (byte) 102, this.field_c.field_p, uq.field_zb, this.field_c.field_rb);
-          g.field_g.drawParagraph(this.field_a, this.field_d, this.field_b, 300, 200, 16777215, -1, 0, 0, 14);
+          MidiNoteMask.field_g.drawParagraph(this.field_a, this.field_d, this.field_b, 300, 200, 16777215, -1, 0, 0, 14);
           return;
         }
     }
@@ -91,8 +91,8 @@ final class hca {
           this.field_c = new UiComponent();
           this.field_c.field_kb = this.field_d - 15;
           this.field_c.field_rb = -10 + this.field_b;
-          this.field_c.field_sb = 30 + g.field_g.maxLineWidth(this.field_a, 300);
-          this.field_c.field_p = g.field_g.measureWrappedHeight(this.field_a, 300, 14) + 20;
+          this.field_c.field_sb = 30 + MidiNoteMask.field_g.maxLineWidth(this.field_a, 300);
+          this.field_c.field_p = MidiNoteMask.field_g.measureWrappedHeight(this.field_a, 300, 14) + 20;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "hca.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

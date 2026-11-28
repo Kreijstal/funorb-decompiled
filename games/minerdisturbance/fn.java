@@ -295,19 +295,19 @@ final class fn extends IntrusiveNode {
         var6 = sj.field_d;
         var3 = var6;
         var4Lifetime1 = param0;
-        var3[var4Lifetime1 >> 5] = SpriteState.a(var6[var4Lifetime1 >> 5], 1 << c.a(31, var4Lifetime1));
+        var3[var4Lifetime1 >> 5] = SpriteState.bitwiseOr(var6[var4Lifetime1 >> 5], 1 << c.bitwiseAnd(31, var4Lifetime1));
         var7 = MidiPcmStream.field_x;
         var3Lifetime1 = var7;
         var4Lifetime2 = param0;
-        var3Lifetime1[var4Lifetime2 >> 5] = SpriteState.a(var7[var4Lifetime2 >> 5], 1 << c.a(var4Lifetime2, 31));
+        var3Lifetime1[var4Lifetime2 >> 5] = SpriteState.bitwiseOr(var7[var4Lifetime2 >> 5], 1 << c.bitwiseAnd(var4Lifetime2, 31));
         ce.field_a.addLast((byte) 40, new cm(param0));
         if (!kj.a(false) &&
           ResizableModalDialog.q(89)) {
-          qa.a(pn.field_b, hl.field_b, param0, pe.field_sb, (byte) 56, 4, param1, aa.field_b);
+          qa.a(pn.field_b, hl.field_b, param0, pe.field_sb, (byte) 56, 4, param1, GrowableIntArray.field_b);
           FullscreenNoticeType.field_d = gk.b(4, 1);
           return;
         }
-        ArchiveProvider.field_c.addLast((byte) -116, new sl(param0, param1, pe.field_sb, pn.field_b, aa.field_b, hl.field_b));
+        ArchiveProvider.field_c.addLast((byte) -116, new sl(param0, param1, pe.field_sb, pn.field_b, GrowableIntArray.field_b, hl.field_b));
         return;
     }
 
@@ -337,7 +337,7 @@ final class fn extends IntrusiveNode {
 
     final static void a(byte[] param0, boolean param1) {
         if (param0 == null) {
-          aa.field_j = new th();
+          GrowableIntArray.field_j = new th();
           return;
         }
         if (!param1) {
@@ -345,11 +345,11 @@ final class fn extends IntrusiveNode {
         }
         CipherPacketBuffer var2 = new CipherPacketBuffer(param0);
         if (var2.readUnsignedByte((byte) -54) != 2) {
-          aa.field_j = new th();
+          GrowableIntArray.field_j = new th();
           return;
         }
         try {
-          aa.field_j = new th(var2);
+          GrowableIntArray.field_j = new th(var2);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "fn.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

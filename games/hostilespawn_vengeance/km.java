@@ -217,7 +217,7 @@ final class km extends sd {
                     var27 = -(param3[-(param9 * var24 / param10) + param9] & 255) + 256;
                     var28 = var25 + var26 * SoftwareRasterizer.field_e;
                     var29 = SoftwareRasterizer.field_i[var28];
-                    SoftwareRasterizer.field_i[var28] = ll.a(PcmOutputWorker.bitwiseAnd(16711680, var27 * PcmOutputWorker.bitwiseAnd(var29, 65280)) >> 8, PcmOutputWorker.bitwiseAnd(16711935, var27 * PcmOutputWorker.bitwiseAnd(16711935, var29) >> 8));
+                    SoftwareRasterizer.field_i[var28] = ll.bitwiseOr(PcmOutputWorker.bitwiseAnd(16711680, var27 * PcmOutputWorker.bitwiseAnd(var29, 65280)) >> 8, PcmOutputWorker.bitwiseAnd(16711935, var27 * PcmOutputWorker.bitwiseAnd(16711935, var29) >> 8));
                   }
                 } else if (param6 != 2 &&
                   var13 < var23) {
@@ -228,7 +228,7 @@ final class km extends sd {
                     var27 = -(param3[-(var24 * param9 / param4) + param9] & 255) + 256;
                     var28 = var25 + var26 * SoftwareRasterizer.field_e;
                     var29 = SoftwareRasterizer.field_i[var28];
-                    SoftwareRasterizer.field_i[var28] = ll.a(PcmOutputWorker.bitwiseAnd(var27 * PcmOutputWorker.bitwiseAnd(var29, 65280) >> 8, 65280), PcmOutputWorker.bitwiseAnd(PcmOutputWorker.bitwiseAnd(var29, 16711935) * var27 >> 8, 16711935));
+                    SoftwareRasterizer.field_i[var28] = ll.bitwiseOr(PcmOutputWorker.bitwiseAnd(var27 * PcmOutputWorker.bitwiseAnd(var29, 65280) >> 8, 65280), PcmOutputWorker.bitwiseAnd(PcmOutputWorker.bitwiseAnd(var29, 16711935) * var27 >> 8, 16711935));
                   }
                 } else {
                   var24 = var21 * var12 - var19 >> 2;
@@ -242,7 +242,7 @@ final class km extends sd {
                     var28 = -(param3[param9 - (var24 << 2) * param9 / var25 / var14] & 255) + 256;
                     var29 = var26 + SoftwareRasterizer.field_e * var27;
                     var30 = SoftwareRasterizer.field_i[var29];
-                    SoftwareRasterizer.field_i[var29] = ll.a(PcmOutputWorker.bitwiseAnd(var28 * PcmOutputWorker.bitwiseAnd(65280, var30) >> 8, 65280), PcmOutputWorker.bitwiseAnd(var28 * PcmOutputWorker.bitwiseAnd(var30, 16711935) >> 8, 16711935));
+                    SoftwareRasterizer.field_i[var29] = ll.bitwiseOr(PcmOutputWorker.bitwiseAnd(var28 * PcmOutputWorker.bitwiseAnd(65280, var30) >> 8, 65280), PcmOutputWorker.bitwiseAnd(var28 * PcmOutputWorker.bitwiseAnd(var30, 16711935) >> 8, 16711935));
                   }
                 }
               }

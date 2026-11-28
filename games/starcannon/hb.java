@@ -111,7 +111,7 @@ final class hb extends IntrusiveNode {
             var13 = param4;
             var14 = param3;
             var15 = 8355711 & var17[var11] >> 1;
-            var10[var11] = var15 + w.a(var12 >> 1, 16711680) + ((w.a(var13, 33423790) >> 9) + (w.a(var14, 33500947) >> 17));
+            var10[var11] = var15 + w.bitwiseAnd(var12 >> 1, 16711680) + ((w.bitwiseAnd(var13, 33423790) >> 9) + (w.bitwiseAnd(var14, 33500947) >> 17));
             param3 = param3 + param0;
             param1++;
             param8 = param8 + param2;

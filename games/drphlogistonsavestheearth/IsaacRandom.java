@@ -100,7 +100,7 @@ final class IsaacRandom {
         byte[] var2 = a.field_e[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
-          var3[var4_int] = MouseInput.field_a[rk.a((int) var2[var4_int], 255)];
+          var3[var4_int] = MouseInput.field_a[rk.bitwiseAnd((int) var2[var4_int], 255)];
         }
         RgbSprite var4 = new RgbSprite(oe.field_b, RegistrationAgreementPane.field_K, kh.field_i[0], vi.field_b[0], gf.field_o[0], RichTextWidget.field_J[0], var3);
         Bzip2State.a((byte) -21);
@@ -137,10 +137,10 @@ final class IsaacRandom {
             }
           }
           this.field_k = this.field_k + this.field_e[255 & 128 + var2];
-          dupTemp$1 = this.field_l + (this.field_e[rk.a(1020, var3) >> 2] + this.field_k);
+          dupTemp$1 = this.field_l + (this.field_e[rk.bitwiseAnd(1020, var3) >> 2] + this.field_k);
           var4 = dupTemp$1;
           this.field_e[var2] = dupTemp$1;
-          dupTemp$2 = this.field_e[rk.a(var4 >> 8 >> 2, 255)] + var3;
+          dupTemp$2 = this.field_e[rk.bitwiseAnd(var4 >> 8 >> 2, 255)] + var3;
           this.field_l = dupTemp$2;
           this.field_m[var2] = dupTemp$2;
         }

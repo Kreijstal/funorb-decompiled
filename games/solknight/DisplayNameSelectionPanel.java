@@ -73,7 +73,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -96,7 +96,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         var2.setBounds(50, 270, 20, 0, var3);
         var3 += 50;
         this.addChild(var2, 5411);
-        var3 = var3 + (5 + this.a(var3, 15016, eb.field_a, this.field_K, 170, uc.field_k));
+        var3 = var3 + (5 + this.addLabeledFieldWithDefaultValidationMessage(var3, 15016, eb.field_a, this.field_K, 170, uc.field_k));
         this.field_J.setBounds(40, var5, 496 - var5 >> 1, 0, var3);
         this.field_I.setBounds(40, 60, 3 + var4, 0, 15 + var3);
         this.field_I.field_n = (WidgetEventListener) (this);
@@ -120,11 +120,11 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
           var4 = param1;
           ((EditableTextField) ((Object) var3)).setText(74, false, var4);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ga.NA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "ga.NA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final int a(int param0, int param1, String param2, UiWidget param3, int param4, String param5) {
+    private final int addLabeledFieldWithDefaultValidationMessage(int param0, int param1, String param2, UiWidget param3, int param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -139,7 +139,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
           if (param1 != 15016) {
             this.field_I = (InteractiveWidget) null;
           }
-          stackIn_3_0 = this.a((byte) -121, 35, param5, param4, param3, param0, param2);
+          stackIn_3_0 = this.addLabeledFieldWithValidationMessage((byte) -121, 35, param5, param4, param3, param0, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -163,7 +163,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -197,7 +197,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
           super.updatePointer(param0, param1, param2, param3);
           this.field_J.field_B = this.canSubmitDisplayName((byte) -119);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ga.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "ga.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -263,11 +263,11 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    private final int a(byte param0, int param1, String param2, int param3, UiWidget param4, int param5, String param6) {
+    private final int addLabeledFieldWithValidationMessage(byte param0, int param1, String param2, int param3, UiWidget param4, int param5, String param6) {
         RuntimeException var8 = null;
         ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;
@@ -313,7 +313,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

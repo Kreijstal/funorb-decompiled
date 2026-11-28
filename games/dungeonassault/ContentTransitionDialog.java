@@ -117,7 +117,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
     final void finishResize(byte param0) {
         int var2 = -105 % ((22 - param0) / 35);
         if (this.field_kb != null) {
-          if (this.field_kb != lp.field_o) {
+          if (this.field_kb != MusicPatchNode.field_o) {
             this.setCenteredSize(-30, this.field_xb.field_s + (12 + this.field_tb), this.field_xb.field_x + 12);
             this.installContent(this.field_xb, (byte) -74);
           }
@@ -132,7 +132,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
           return;
         }
         this.field_lb = 0;
-        this.field_kb = lp.field_o;
+        this.field_kb = MusicPatchNode.field_o;
         this.installContent(this.field_xb, (byte) 100);
         this.field_rb.field_H = param0;
         this.field_xb = null;
@@ -217,7 +217,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
           }
           return super.advanceDialogAnimation((byte) -90);
         }
-        if (lp.field_o != this.field_kb) {
+        if (MusicPatchNode.field_o != this.field_kb) {
           if (param0 != -90) {
             return false;
           }

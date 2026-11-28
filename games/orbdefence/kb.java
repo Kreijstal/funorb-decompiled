@@ -483,11 +483,11 @@ final class kb extends IntrusiveNode {
             }
             boolean decompiledFrameCompleted1 = true;
             if (null != this.field_p) {
-              this.field_p.field_d = this.field_p.field_d + he.field_p[param1.field_y];
-              nh.field_b = nh.field_b + he.field_p[param1.field_y];
-              var5 = he.field_p[param1.field_y];
+              this.field_p.field_d = this.field_p.field_d + MusicPatchNode.field_p[param1.field_y];
+              nh.field_b = nh.field_b + MusicPatchNode.field_p[param1.field_y];
+              var5 = MusicPatchNode.field_p[param1.field_y];
               if (param1.field_n) {
-                var5 = var5 + he.field_p[param1.field_y] * 99;
+                var5 = var5 + MusicPatchNode.field_p[param1.field_y] * 99;
               }
               var6Lifetime1 = 0;
               while (var6Lifetime1 < var5) {

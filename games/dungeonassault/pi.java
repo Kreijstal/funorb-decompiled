@@ -446,7 +446,7 @@ final class pi {
           var26 = new byte[DraggableWidgetContainer.field_J.position];
           var21 = var26;
           var11 = var21;
-          cj.copyByteRange(DraggableWidgetContainer.field_J.payload, 0, var26, 0, DraggableWidgetContainer.field_J.position);
+          ArrayBlockSupport.copyByteRange(DraggableWidgetContainer.field_J.payload, 0, var26, 0, DraggableWidgetContainer.field_J.position);
           stackIn_40_0 = var11;
           return stackIn_40_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

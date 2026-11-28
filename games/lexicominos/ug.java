@@ -342,11 +342,11 @@ final class ug extends hf {
         }
     }
 
-    final static wj a(ResourceArchive param0, int param1, boolean param2) {
+    final static MusicPatch loadMusicPatch(ResourceArchive param0, int param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
-        wj stackIn_6_0 = null;
+        MusicPatch stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -360,7 +360,7 @@ final class ug extends hf {
           if (var4 == null) {
             return null;
           }
-          stackIn_6_0 = new wj(var4);
+          stackIn_6_0 = new MusicPatch(var4);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

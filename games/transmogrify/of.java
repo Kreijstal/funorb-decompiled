@@ -32,7 +32,7 @@ final class of {
         de.field_c[6] = ia.field_i;
         de.field_c[0] = EmailFormatValidator.field_j;
         de.field_c[17] = DisplayNameSelectionPanel.field_H;
-        de.field_c[16] = nh.field_l;
+        de.field_c[16] = MusicPatchEnvelope.field_l;
         de.field_c[11] = cc.field_c;
         de.field_c[20] = ContextualRuntimeException.field_e;
         de.field_c[10] = uc.field_b;

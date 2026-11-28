@@ -978,7 +978,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("rule_1_0", -15192);
                 if (byteArrayState0015 != null) {
-                  MixedSupport130.stringState0563 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  ByteArrayPoolSupport.stringState0563 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("rule_1_1", -15192);
                 if (null != byteArrayState0015) {
@@ -2677,7 +2677,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("fs_accept_aftercancel", -15192);
                 if (null != byteArrayState0015) {
-                  MixedSupport130.stringState0565 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  ByteArrayPoolSupport.stringState0565 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("fs_accept_countdown_sing", -15192);
                 if (byteArrayState0015 != null) {

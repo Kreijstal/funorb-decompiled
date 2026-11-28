@@ -53,7 +53,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!kk.a(param2, 1, param3, param0)) {
+          if (!MusicPatch.a(param2, 1, param3, param0)) {
             return null;
           }
           if (param1 == -71) {

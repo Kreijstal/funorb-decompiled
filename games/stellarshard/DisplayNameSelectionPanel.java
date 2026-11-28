@@ -44,7 +44,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         }
     }
 
-    private final int a(int param0, byte param1, UiWidget param2, String param3, String param4, int param5) {
+    private final int addLabeledFieldWithDefaultValidationMessage(int param0, byte param1, UiWidget param2, String param3, String param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -58,7 +58,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 64) {
-            stackIn_4_0 = this.a(param3, param0, param5, 35, param4, (byte) -120, param2);
+            stackIn_4_0 = this.addLabeledFieldWithValidationMessage(param3, param0, param5, 35, param4, (byte) -120, param2);
             return stackIn_4_0;
           }
           stackIn_2_0 = 105;
@@ -113,7 +113,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         int var5 = 200;
         var3 += 50;
         this.addChild(4, var2);
-        var3 = var3 + (5 + this.a(170, (byte) 64, this.field_E, si.field_I, nk.field_h, var3));
+        var3 = var3 + (5 + this.addLabeledFieldWithDefaultValidationMessage(170, (byte) 64, this.field_E, si.field_I, nk.field_h, var3));
         this.field_H.setBounds(var5, -var5 + 496 >> 1, var3, 40, 23987);
         this.field_G.setBounds(60, 3 + var4, var3 + 15, 40, 23987);
         this.field_G.field_v = (WidgetEventListener) (this);
@@ -147,7 +147,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         }
     }
 
-    private final int a(String param0, int param1, int param2, int param3, String param4, byte param5, UiWidget param6) {
+    private final int addLabeledFieldWithValidationMessage(String param0, int param1, int param2, int param3, String param4, byte param5, UiWidget param6) {
         RuntimeException var8 = null;
         ValidationStatusWidget var9 = null;
         int var10 = 0;

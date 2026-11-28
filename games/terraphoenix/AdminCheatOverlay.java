@@ -76,26 +76,26 @@ final class AdminCheatOverlay {
         var5 = this.field_b;
         if (0 == var5) {
           param0 = 320;
-          FrameTimer.field_f.drawCentred(qd.field_h[0], 320, 468, 13881286, 0);
+          FrameTimer.field_f.drawCentred(MusicPatch.field_h[0], 320, 468, 13881286, 0);
           param2 = 76;
           param2 += 64;
           pf.field_a[0].draw(0, 0);
           param2 += 160;
           param0 -= 265;
-          AccountRequestState.field_f.drawString("<col=fcfe7f>1.</col> " + qd.field_h[1], param0, param2, 16777215, 0);
+          AccountRequestState.field_f.drawString("<col=fcfe7f>1.</col> " + MusicPatch.field_h[1], param0, param2, 16777215, 0);
           param2 += 16;
-          AccountRequestState.field_f.drawString("<col=fcfe7f>2.</col> " + qd.field_h[2], param0, param2, 16777215, 0);
+          AccountRequestState.field_f.drawString("<col=fcfe7f>2.</col> " + MusicPatch.field_h[2], param0, param2, 16777215, 0);
           param2 += 16;
-          AccountRequestState.field_f.drawString("<col=fcfe7f>3.</col> " + qd.field_h[3], param0, param2, 16777215, 0);
+          AccountRequestState.field_f.drawString("<col=fcfe7f>3.</col> " + MusicPatch.field_h[3], param0, param2, 16777215, 0);
           param0 += 330;
           param2 += 16;
           param2 -= 48;
-          AccountRequestState.field_f.drawString("<col=fcfe7f>4.</col> " + qd.field_h[4], param0, param2, 16777215, 0);
+          AccountRequestState.field_f.drawString("<col=fcfe7f>4.</col> " + MusicPatch.field_h[4], param0, param2, 16777215, 0);
           param2 += 16;
-          AccountRequestState.field_f.drawString("<col=fcfe7f>5.</col> " + qd.field_h[5], param0, param2, 16777215, 0);
+          AccountRequestState.field_f.drawString("<col=fcfe7f>5.</col> " + MusicPatch.field_h[5], param0, param2, 16777215, 0);
           param2 += 16;
           param2 += 46;
-          sj.a(65280, 20, param2, 608, 14, 32, qd.field_h[6], 0);
+          sj.a(65280, 20, param2, 608, 14, 32, MusicPatch.field_h[6], 0);
         } else {
           if (var5 == 1) {
             FrameTimer.field_f.drawCentred(nd.field_o[0], 320, 468, 13881286, -1);

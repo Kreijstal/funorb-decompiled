@@ -191,7 +191,7 @@ final class rb {
     }
 
     final static void a(String param0, boolean param1, boolean param2, int param3) {
-        wj.c(param3 ^ -8662);
+        MusicPatch.c(param3 ^ -8662);
         if (param3 != 14635) {
           return;
         }

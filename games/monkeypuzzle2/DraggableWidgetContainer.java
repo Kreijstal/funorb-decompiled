@@ -84,12 +84,12 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
         ai var1 = null;
         ai var1Lifetime1;
         if (param0 == 15090) {
-          var1 = new ai(nj.field_d, qk.field_a, ValidatedTextField.field_P[0], mb.field_b[0], da.field_c[0], StandardContentDialog.field_ab[0], cb.field_b[0], fk.field_d);
+          var1 = new ai(ByteArrayPoolSupport.field_d, qk.field_a, ValidatedTextField.field_P[0], mb.field_b[0], da.field_c[0], StandardContentDialog.field_ab[0], cb.field_b[0], fk.field_d);
           gb.a(-45);
           return var1;
         }
         DraggableWidgetContainer.j(94);
-        var1Lifetime1 = new ai(nj.field_d, qk.field_a, ValidatedTextField.field_P[0], mb.field_b[0], da.field_c[0], StandardContentDialog.field_ab[0], cb.field_b[0], fk.field_d);
+        var1Lifetime1 = new ai(ByteArrayPoolSupport.field_d, qk.field_a, ValidatedTextField.field_P[0], mb.field_b[0], da.field_c[0], StandardContentDialog.field_ab[0], cb.field_b[0], fk.field_d);
         gb.a(-45);
         return var1Lifetime1;
     }

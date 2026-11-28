@@ -24,7 +24,7 @@ final class MixedSupport014 {
           if (this.integerState0098 >= this.gameDomainSupport005ArrayState0001.length) {
             gameDomainSupport005ArrayLocal1 = new GameDomainSupport005[2 * this.integerState0098];
             GameDomainSupport005[] gameDomainSupport005ArrayLocal5 = gameDomainSupport005ArrayLocal1;
-            MixedSupport008.performAction0077(this.gameDomainSupport005ArrayState0001, 0, gameDomainSupport005ArrayLocal1, 0, this.integerState0098);
+            ArrayBlockSupport.copyObjectRange(this.gameDomainSupport005ArrayState0001, 0, gameDomainSupport005ArrayLocal1, 0, this.integerState0098);
             this.gameDomainSupport005ArrayState0001 = gameDomainSupport005ArrayLocal1;
           }
           gameDomainSupport005Local2 = new GameDomainSupport005();

@@ -108,7 +108,7 @@ final class Bzip2State {
                   param3 = param3 & 255;
                   incrementValue$2 = param4;
                   param4++;
-                  param6[incrementValue$2] = dg.a(param3 * var14, 65280) + dg.a(var13_int * param3 >> 8, 16711935);
+                  param6[incrementValue$2] = dg.bitwiseAnd(param3 * var14, 65280) + dg.bitwiseAnd(var13_int * param3 >> 8, 16711935);
                   if (param6[-1 + param4] == 0) {
                     param6[param4 - 1] = 1;
                   }

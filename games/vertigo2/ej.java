@@ -17,7 +17,7 @@ final class ej {
         byte[] var3 = se.field_y[0];
         int[] var4 = new int[var2];
         for (var5_int = 0; var5_int < var2; var5_int++) {
-          var4[var5_int] = in.field_c[b.a(255, (int) var3[var5_int])];
+          var4[var5_int] = in.field_c[b.bitwiseAnd(255, (int) var3[var5_int])];
         }
         Sprite var5 = new Sprite(BirthDateChatEnableForm.field_M, vj.field_c, ca.field_a[0], pc.field_a[0], mh.field_c[0], vi.field_w[0], var4);
         la.a((byte) 17);
@@ -35,7 +35,7 @@ final class ej {
     final void a(java.applet.Applet param0, byte param1) {
         try {
           int var3_int = 121 / ((-13 - param1) / 47);
-          gl.a(-11, 31536000L, param0, this.field_a, "jagex-last-login-method");
+          MusicPatchEnvelope.a(-11, 31536000L, param0, this.field_a, "jagex-last-login-method");
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ej.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

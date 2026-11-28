@@ -291,7 +291,7 @@ final class ResourceArchive {
                     var21 = var20;
                   }
                   if (param1 == var21) {
-                    dk.copyByteRange(var43, var17, var44, var14_intLifetime1, var19);
+                    ArrayBlockSupport.copyByteRange(var43, var17, var44, var14_intLifetime1, var19);
                     var14_intLifetime1 = var14_intLifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -329,7 +329,7 @@ final class ResourceArchive {
                 var18 = 0;
                 for (var19 = 0; var5_int > var19; var19++) {
                   var18 = var18 + var31.readInt((byte) -49);
-                  dk.copyByteRange(var43, var16, var40[var19], var39[var19], var18);
+                  ArrayBlockSupport.copyByteRange(var43, var16, var40[var19], var39[var19], var18);
                   var16 = var16 + var18;
                   var14[var19] = var14[var19] + var18;
                 }
@@ -963,7 +963,7 @@ final class ResourceArchive {
                 var16 = 65280 & var14;
                 incrementValue$1 = param7;
                 param7++;
-                param4[incrementValue$1] = UiWidget.a(ie.a(16711855, var13 * var16) >> 8, ie.a(16711935, var13 * var15 >> 8));
+                param4[incrementValue$1] = UiWidget.a(ie.bitwiseAnd(16711855, var13 * var16) >> 8, ie.bitwiseAnd(16711935, var13 * var15 >> 8));
               } else {
                 param7++;
               }

@@ -548,7 +548,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   var9 = (String) null;
                   AccountRegistrationPanel.a(15, (String) null);
                 } else {
-                  var7 = mk.decodeCp1252String((byte) -24, var12.payload, var12.position, 0);
+                  var7 = MidiNoteMask.decodeCp1252String((byte) -24, var12.payload, var12.position, 0);
                   AccountRegistrationPanel.a(15, var7);
                 }
                 hl.field_i = null;
@@ -623,7 +623,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           il.field_c.e(6731);
         }
-        bp.b(94);
+        GrowableIntArray.b(94);
         ke.b(param1 + 74);
         if (param1 != -74) {
           this.field_q = -128;
@@ -730,7 +730,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (dk.field_c == 1) {
           if (hc.field_d != 0) {
-            GuestPlayConfirmationForm.field_U = mk.a(MouseInput.field_a, (byte) 34);
+            GuestPlayConfirmationForm.field_U = MidiNoteMask.a(MouseInput.field_a, (byte) 34);
           }
           InstructionsScreen.field_u = qd.a(false, true, s.field_a, (byte) -31, 1);
           GameAppletShell.field_b = qd.a(false, true, pm.field_m, (byte) -31, 1);
@@ -789,7 +789,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (dk.field_c == 10) {
           if (hc.field_d != 0) {
-            PacketBuffer.field_k = mk.a(RichTextWidget.field_P, (byte) 34);
+            PacketBuffer.field_k = MidiNoteMask.a(RichTextWidget.field_P, (byte) 34);
           }
           dk.field_c = 11;
         }

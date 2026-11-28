@@ -83,7 +83,7 @@ final class ga extends DefaultTextWidgetRenderer {
             }
             return;
           }
-          he.a(this.field_v, 0, param0.field_v, 0, 6);
+          ArrayBlockSupport.copyObjectRange(this.field_v, 0, param0.field_v, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

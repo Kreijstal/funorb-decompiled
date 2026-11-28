@@ -135,12 +135,12 @@ final class ArchiveIndex {
                 this.field_s[var10Lifetime1] = -1;
               }
               for (var10Lifetime1Lifetime1 = 0; this.field_d > var10Lifetime1Lifetime1; var10Lifetime1Lifetime1++) {
-                this.field_s[this.field_o[var10Lifetime1Lifetime1]] = var17.readInt(lt.a(param0, 27083));
+                this.field_s[this.field_o[var10Lifetime1Lifetime1]] = var17.readInt(lt.bitwiseXor(param0, 27083));
               }
               this.field_m = new cr(this.field_s);
             }
             for (var10Lifetime2 = 0; var10Lifetime2 < this.field_d; var10Lifetime2++) {
-              this.field_p[this.field_o[var10Lifetime2]] = var17.readInt(lt.a(param0, 27103));
+              this.field_p[this.field_o[var10Lifetime2]] = var17.readInt(lt.bitwiseXor(param0, 27103));
             }
             if (var7 != 0) {
               for (var10Lifetime3 = 0; this.field_d > var10Lifetime3; var10Lifetime3++) {

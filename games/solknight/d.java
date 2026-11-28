@@ -35,7 +35,7 @@ final class d {
             EmailFormatValidator.field_n.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
             BufferedSocket.field_b.drawCentred(LoginPanel.a(ma.field_m, new String[]{Integer.toString(ob.field_j)}, -63), 128, BufferedSocket.field_b.field_F, 16777215, 8421504);
-            Bzip2State.field_e.a(true);
+            Bzip2State.field_e.setAsRasterTarget(true);
             EmailFormatValidator.field_n.a(ProxyAuthenticationRequiredException.field_a, 46, 107, 0, 125);
           }
           if (ProgressMessageDialog.field_ib > 0 &&
@@ -46,7 +46,7 @@ final class d {
             EmailFormatValidator.field_n.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
             BufferedSocket.field_b.drawCentred(LoginPanel.a(ArchiveIndex.field_p, new String[]{Integer.toString(lk.field_e)}, -63), 128, BufferedSocket.field_b.field_F, 16777215, 8421504);
-            Bzip2State.field_e.a(true);
+            Bzip2State.field_e.setAsRasterTarget(true);
             EmailFormatValidator.field_n.a(ProgressMessageDialog.field_ib, 46, 109, 0, 475);
           }
           if (fg.field_a > 0) {
@@ -129,7 +129,7 @@ final class d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var2), "d.B(" + param0 + ',' + param1 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var2), "d.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class d {
           ma.field_o = MatchingFieldValidator.field_p;
           PacketBuffer.field_i = MatchingFieldValidator.field_p;
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "d.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "d.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

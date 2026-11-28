@@ -103,7 +103,7 @@ final class pc {
           if (bf.field_B == PasswordValidator.field_l) {
             return false;
           }
-          ch.field_d = te.field_c[PasswordValidator.field_l];
+          ch.field_d = GrowableIntArray.field_c[PasswordValidator.field_l];
           var2 = -67 % ((param0 + 82) / 39);
           sg.field_n = DirectByteStorage.field_h[PasswordValidator.field_l];
           PasswordValidator.field_l = 127 & 1 + PasswordValidator.field_l;

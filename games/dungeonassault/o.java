@@ -220,7 +220,7 @@ final class o extends IntrusiveNode {
               var14 = param2[param7];
               incrementValue$1 = param7;
               param7++;
-              param2[incrementValue$1] = mp.a(nb.a(param6 * nb.a(65280, param1) + nb.a(var14, 65280) * var11_int, 16711680), nb.a(-16711936, nb.a(16711935, param1) * param6 + nb.a(16711935, var14) * var11_int)) >>> 8;
+              param2[incrementValue$1] = mp.bitwiseOr(nb.bitwiseAnd(param6 * nb.bitwiseAnd(65280, param1) + nb.bitwiseAnd(var14, 65280) * var11_int, 16711680), nb.bitwiseAnd(-16711936, nb.bitwiseAnd(16711935, param1) * param6 + nb.bitwiseAnd(16711935, var14) * var11_int)) >>> 8;
             }
             param7 = param7 + param9;
             param3 = param3 + param10;
@@ -247,7 +247,7 @@ final class o extends IntrusiveNode {
     }
 
     final static void a(int param0) {
-        kn.field_g = false;
+        ByteArrayPoolSupport.field_g = false;
         if (param0 <= 110) {
           String var2 = (String) null;
           o.a(-101, (String) null, 102);

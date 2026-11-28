@@ -15,7 +15,7 @@ final class sh {
           SecondaryNodeHashTable.field_g = true;
           bc.field_d = true;
           jh.field_e.closeAllDialogs(param0 ^ -59);
-          qd.a(-1845, AgeValidator.field_n, false);
+          MusicPatchNode.a(-1845, AgeValidator.field_n, false);
           return;
         }
     }
@@ -135,7 +135,7 @@ final class sh {
           }
           try {
             if (TextFieldValidator.field_k == 0) {
-              dm.field_b = AccountRegistrationPanel.field_N.requestDirectSocket(ml.field_h, false, of.field_g);
+              dm.field_b = AccountRegistrationPanel.field_N.requestDirectSocket(GrowableIntArray.field_h, false, of.field_g);
               TextFieldValidator.field_k = TextFieldValidator.field_k + 1;
             }
             if (TextFieldValidator.field_k == 1) {

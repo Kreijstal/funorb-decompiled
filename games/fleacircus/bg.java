@@ -32,12 +32,12 @@ final class bg {
             } else {
               var6 = se.a(3, fb.field_d[var3_int], true);
               var7 = DiskCacheWorker.field_b - (var6 >> 1);
-              var4 = var4 + id.field_c;
+              var4 = var4 + GrowableIntArray.field_c;
               if (IntrusiveNode.a(var4, hb.field_t + (ge.field_h << 1), var6 + (AccountRequestState.field_c << 1), true, var7 - AccountRequestState.field_c, param0, param1)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
-              var4 = var4 + ((ge.field_h << 1) - (-id.field_c - hb.field_t));
+              var4 = var4 + ((ge.field_h << 1) - (-GrowableIntArray.field_c - hb.field_t));
             }
             var3_int++;
           }

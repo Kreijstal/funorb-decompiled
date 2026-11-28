@@ -84,9 +84,9 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         field_A = new IntrusiveDeque();
         field_x = new int[256];
         for (var0 = 0; var0 < 256; var0++) {
-          field_x[var0] = vg.c(var0 * 143, -2063532288) << 8;
-          field_x[var0] = DiskArchiveRequest.b(field_x[var0], vg.c(65280, 191 * var0));
-          field_x[var0] = DiskArchiveRequest.b(field_x[var0], var0);
+          field_x[var0] = vg.bitwiseAnd(var0 * 143, -2063532288) << 8;
+          field_x[var0] = DiskArchiveRequest.bitwiseOr(field_x[var0], vg.bitwiseAnd(65280, 191 * var0));
+          field_x[var0] = DiskArchiveRequest.bitwiseOr(field_x[var0], var0);
         }
     }
 }

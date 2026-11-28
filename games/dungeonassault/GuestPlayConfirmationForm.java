@@ -87,7 +87,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
     final void drawWidget(int param0, int param1, int param2, int param3) {
         int var5 = param1 + this.field_q;
         int var6 = param3 + this.field_v;
-        lp.field_C.drawParagraph(AgeValidator.field_q, var5 + 20, 20 + var6, this.field_x - 40, this.field_s - 50, 16777215, -1, 1, 0, lp.field_C.field_H);
+        MusicPatchNode.field_C.drawParagraph(AgeValidator.field_q, var5 + 20, 20 + var6, this.field_x - 40, this.field_s - 50, 16777215, -1, 1, 0, MusicPatchNode.field_C.field_H);
         super.drawWidget(param0, param1, param2, param3);
     }
 
@@ -121,7 +121,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
           }
           var8 = new RgbSprite(var11, (java.awt.Component) ((Object) InstructionsScreen.getActiveCanvas(false)));
           for (var9 = 0; var8.field_B.length > var9; var9++) {
-            var8.field_B[var9] = nb.a(var8.field_B[var9], 16777215);
+            var8.field_B[var9] = nb.bitwiseAnd(var8.field_B[var9], 16777215);
           }
           stackIn_10_0 = var8;
           return stackIn_10_0;
@@ -276,8 +276,8 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
         field_X = 0;
         field_P = wa.b(-1);
         int[] var1 = field_P;
-        var1[0] = mp.a(var1[0], 131072);
+        var1[0] = mp.bitwiseOr(var1[0], 131072);
         int[] var2 = field_P;
-        var2[1] = mp.a(var2[1], 8);
+        var2[1] = mp.bitwiseOr(var2[1], 8);
     }
 }

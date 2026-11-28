@@ -145,21 +145,21 @@ final class ri {
         field_c = "Raider attacks.";
         field_a = wa.b(-1);
         int[] var1 = field_a;
-        var1[0] = mp.a(var1[0], 67108864);
+        var1[0] = mp.bitwiseOr(var1[0], 67108864);
         int[] var2 = field_a;
-        var2[0] = mp.a(var2[0], 134217728);
+        var2[0] = mp.bitwiseOr(var2[0], 134217728);
         int[] var3 = field_a;
-        var3[1] = mp.a(var3[1], 4);
+        var3[1] = mp.bitwiseOr(var3[1], 4);
         int[] var4 = field_a;
-        var4[1] = mp.a(var4[1], 16);
+        var4[1] = mp.bitwiseOr(var4[1], 16);
         int[] var5 = field_a;
-        var5[1] = mp.a(var5[1], 32);
+        var5[1] = mp.bitwiseOr(var5[1], 32);
         int[] var6 = field_a;
-        var6[1] = mp.a(var6[1], 128);
+        var6[1] = mp.bitwiseOr(var6[1], 128);
         int[] var7 = field_a;
-        var7[1] = mp.a(var7[1], 256);
+        var7[1] = mp.bitwiseOr(var7[1], 256);
         int[] var8 = field_a;
-        var8[1] = mp.a(var8[1], 512);
+        var8[1] = mp.bitwiseOr(var8[1], 512);
         field_e = new ab();
     }
 }

@@ -457,7 +457,7 @@ class PacketBuffer extends IntrusiveNode {
 
     PacketBuffer(int param0) {
         this.field_i = 0;
-        this.field_n = hf.a(true, param0);
+        this.field_n = ByteArrayPoolSupport.acquireByteArray(true, param0);
     }
 
     final void c(int param0, int param1) {

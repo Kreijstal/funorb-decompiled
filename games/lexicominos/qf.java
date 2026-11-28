@@ -92,7 +92,7 @@ final class qf extends wb {
         if (StandardContentDialog.field_fb != null) {
           StandardContentDialog.field_fb.freezeNormalProgressAnimation(param0 + 4239142);
         }
-        cb.a((byte) -52);
+        MusicPatchNode.a((byte) -52);
     }
 
     private final void a(int param0, boolean param1) {
@@ -236,7 +236,7 @@ final class qf extends wb {
                   this.field_r.readFully(this.field_h.payload, (byte) -109, var5, this.field_h.position);
                   if (this.field_a != 0) {
                     for (var6 = 0; var5 > var6; var6++) {
-                      this.field_h.payload[var6 + this.field_h.position] = (byte)dg.a((int) this.field_h.payload[var6 + this.field_h.position], (int) this.field_a);
+                      this.field_h.payload[var6 + this.field_h.position] = (byte)dg.bitwiseXor((int) this.field_h.payload[var6 + this.field_h.position], (int) this.field_a);
                     }
                   }
                   this.field_h.position = this.field_h.position + var5;
@@ -310,7 +310,7 @@ final class qf extends wb {
                   this.field_r.readFully(this.field_o.field_x.payload, (byte) -109, var6, this.field_o.field_x.position);
                   if (0 != this.field_a) {
                     for (var7 = 0; var6 > var7; var7++) {
-                      this.field_o.field_x.payload[this.field_o.field_x.position + var7] = (byte)dg.a((int) this.field_o.field_x.payload[this.field_o.field_x.position + var7], (int) this.field_a);
+                      this.field_o.field_x.payload[this.field_o.field_x.position + var7] = (byte)dg.bitwiseXor((int) this.field_o.field_x.payload[this.field_o.field_x.position + var7], (int) this.field_a);
                     }
                   }
                   this.field_o.field_w = this.field_o.field_w + var6;

@@ -118,12 +118,12 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
         }
         if (param0 == 18398) {
           NetworkArchiveRequest.field_C = (param1 & 13) >> 2;
-          oj.field_k = param1 & 3;
+          MidiNoteMask.field_k = param1 & 3;
           if (2 < NetworkArchiveRequest.field_C) {
             NetworkArchiveRequest.field_C = 2;
           }
-          if (oj.field_k > 2) {
-            oj.field_k = 2;
+          if (MidiNoteMask.field_k > 2) {
+            MidiNoteMask.field_k = 2;
           }
           return;
         }

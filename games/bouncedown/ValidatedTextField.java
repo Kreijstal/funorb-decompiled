@@ -105,7 +105,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
             if (ResourceArchive.field_j == null) {
               return;
             }
-            stackIn_15_0 = jj.field_a;
+            stackIn_15_0 = ByteArrayPoolSupport.field_a;
             stackIn_15_1 = null;
             stackIn_15_2 = null;
             stackIn_15_3 = ResourceArchive.field_j.getCodeBase();

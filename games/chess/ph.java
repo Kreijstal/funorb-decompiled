@@ -114,7 +114,7 @@ class ph extends dm {
           if (!mk.b((byte) 109)) {
             SoftwareRasterizer.clearRaster();
             IntrusiveDeque.a(240, (byte) -117, 320);
-            kf.a(0, (byte) 98, param0, 0);
+            MusicPatch.a(0, (byte) 98, param0, 0);
             return;
           }
           if (StripedProgressWidget.field_Q != 0) {
@@ -122,7 +122,7 @@ class ph extends dm {
             return;
           }
           cf.a(84, false, param2);
-          kf.a(0, (byte) 98, param0, 0);
+          MusicPatch.a(0, (byte) 98, param0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

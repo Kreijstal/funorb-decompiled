@@ -408,7 +408,7 @@ class PacketBuffer extends IntrusiveNode {
           null != dm.field_f && dm.field_f.field_q) {
           fn.a(dm.field_f.field_t, true);
           si.field_a = true;
-          aa.field_j.a(35, pj.field_c);
+          GrowableIntArray.field_j.a(35, pj.field_c);
           ck.a(param0 - 30839);
         }
     }
@@ -747,7 +747,7 @@ class PacketBuffer extends IntrusiveNode {
 
     PacketBuffer(int param0) {
         this.position = 0;
-        this.payload = lh.a((byte) 33, param0);
+        this.payload = ByteArrayPoolSupport.acquireByteArray((byte) 33, param0);
     }
 
     PacketBuffer(byte[] param0) {

@@ -15,10 +15,10 @@ final class ck {
           return;
         }
         if (0 < ob.field_l) {
-          if (null == fc.field_l) {
-            dj.field_k = g.a(480, 0, wh.field_c, 640, (byte) -81, 0);
+          if (null == MusicPatch.field_l) {
+            dj.field_k = MusicPatchEnvelope.a(480, 0, wh.field_c, 640, (byte) -81, 0);
           } else {
-            dj.field_k = fc.field_l.b(false);
+            dj.field_k = MusicPatch.field_l.b(false);
             jh.a(2, param1 + 1);
           }
           if (null == dj.field_k) {
@@ -27,7 +27,7 @@ final class ck {
             var2 = 2;
             DropTargetWidgetContainer.a((byte) -50, dj.field_k);
           }
-          if (null != fc.field_l) {
+          if (null != MusicPatch.field_l) {
             return;
           }
           if (sf.field_j) {
@@ -37,7 +37,7 @@ final class ck {
         }
         if (!il.b(507)) {
           var2Lifetime1 = 1;
-          if (null != fc.field_l) {
+          if (null != MusicPatch.field_l) {
             return;
           }
           if (!sf.field_j) {
@@ -47,7 +47,7 @@ final class ck {
           return;
         }
         var2Lifetime2 = 0;
-        if (null != fc.field_l) {
+        if (null != MusicPatch.field_l) {
           return;
         }
         if (!sf.field_j) {
@@ -92,7 +92,7 @@ final class ck {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class ck {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -219,7 +219,7 @@ final class ck {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ck.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "ck.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

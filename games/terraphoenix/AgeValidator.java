@@ -334,7 +334,7 @@ final class AgeValidator extends TextFieldValidator {
           int stackIn_12_0 = 0;
           Throwable decompiledCaughtException = null;
           if (null == bd.field_k) {
-            bd.field_k = SoundCache.field_g.requestDirectSocket(sb.field_i, wa.field_t, (byte) 60);
+            bd.field_k = SoundCache.field_g.requestDirectSocket(MidiNoteMask.field_i, wa.field_t, (byte) 60);
           }
           if (param1 <= 82) {
             AgeValidator.a(false);

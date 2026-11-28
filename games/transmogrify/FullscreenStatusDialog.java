@@ -156,7 +156,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
               }
             }
           } else {
-            var3 = nh.field_m;
+            var3 = MusicPatchEnvelope.field_m;
           }
           var4 = new UiWidget((String) (var3), (WidgetEventListener) null);
           var4.field_l = this.field_l;

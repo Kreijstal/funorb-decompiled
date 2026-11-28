@@ -1066,7 +1066,7 @@ final class ll {
                 }
                 var2 = te.a("justplay", -59);
                 if (null != var2) {
-                  oi.field_d = TextLineMetrics.a(var2, (byte) 89);
+                  GrowableIntArray.field_d = TextLineMetrics.a(var2, (byte) 89);
                 }
                 var2 = te.a("justplay_excl", -101);
                 if (null != var2) {
@@ -1398,7 +1398,7 @@ final class ll {
                 }
                 var2 = te.a("create_createanaccount", -78);
                 if (null != var2) {
-                  oi.field_g = TextLineMetrics.a(var2, (byte) -78);
+                  GrowableIntArray.field_g = TextLineMetrics.a(var2, (byte) -78);
                 }
                 var2 = te.a("create_username", param0 - 114);
                 if (null != var2) {
@@ -1474,7 +1474,7 @@ final class ll {
                 }
                 var2 = te.a("create_u13terms", param0 ^ -104);
                 if (var2 != null) {
-                  oi.field_i = TextLineMetrics.a(var2, (byte) 93);
+                  GrowableIntArray.field_i = TextLineMetrics.a(var2, (byte) 93);
                 }
                 var2 = te.a("login_username_email", -94);
                 if (var2 != null) {
@@ -2588,19 +2588,19 @@ final class ll {
                 }
                 var2 = te.a("reconnect_lost_seq,0", -50);
                 if (null != var2) {
-                  nj.field_c[0] = TextLineMetrics.a(var2, (byte) -68);
+                  ByteArrayPoolSupport.field_c[0] = TextLineMetrics.a(var2, (byte) -68);
                 }
                 var2 = te.a("reconnect_lost_seq,1", -81);
                 if (null != var2) {
-                  nj.field_c[1] = TextLineMetrics.a(var2, (byte) 123);
+                  ByteArrayPoolSupport.field_c[1] = TextLineMetrics.a(var2, (byte) 123);
                 }
                 var2 = te.a("reconnect_lost_seq,2", -108);
                 if (var2 != null) {
-                  nj.field_c[2] = TextLineMetrics.a(var2, (byte) -87);
+                  ByteArrayPoolSupport.field_c[2] = TextLineMetrics.a(var2, (byte) -87);
                 }
                 var2 = te.a("reconnect_lost_seq,3", param0 - 24);
                 if (null != var2) {
-                  nj.field_c[3] = TextLineMetrics.a(var2, (byte) -58);
+                  ByteArrayPoolSupport.field_c[3] = TextLineMetrics.a(var2, (byte) -58);
                 }
                 var2 = te.a("reconnect_lost", -59);
                 if (var2 != null) {

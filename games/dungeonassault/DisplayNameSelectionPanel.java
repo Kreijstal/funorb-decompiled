@@ -146,7 +146,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         }
     }
 
-    private final int a(String param0, int param1, UiWidget param2, String param3, int param4, int param5) {
+    private final int addLabeledFieldWithDefaultValidationMessage(String param0, int param1, UiWidget param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -161,7 +161,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
           if (param4 != 21287) {
             DisplayNameSelectionPanel.a(-63, (byte) 34);
           }
-          stackIn_3_0 = this.a(param0, 35, 50, param3, param2, param1, param5);
+          stackIn_3_0 = this.addLabeledFieldWithValidationMessage(param0, 35, 50, param3, param2, param1, param5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -264,7 +264,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         field_O = null;
     }
 
-    private final int a(String param0, int param1, int param2, String param3, UiWidget param4, int param5, int param6) {
+    private final int addLabeledFieldWithValidationMessage(String param0, int param1, int param2, String param3, UiWidget param4, int param5, int param6) {
         RuntimeException var8 = null;
         ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;
@@ -283,7 +283,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
             stackIn_2_0 = -27;
             return stackIn_2_0;
           }
-          var10 = new LabeledWidgetContainer(20, param6, param5 + 120, 25, param4, false, 120, 3, lp.field_C, 16777215, param3);
+          var10 = new LabeledWidgetContainer(20, param6, param5 + 120, 25, param4, false, 120, 3, MusicPatchNode.field_C, 16777215, param3);
           this.addChild((byte) -61, var10);
           var9 = new ValidationStatusWidget(((FieldValidatorProvider) ((Object) param4)).getFieldValidator(-120), param0, 126, param6 + var10.field_s, 25 + param5, param1);
           var9.field_n = (WidgetEventListener) (this);
@@ -319,7 +319,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
         this.field_R = new ValidatedTextField("", (WidgetEventListener) null, 12);
-        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(ta.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, lp.field_C.field_H, -1, 2147483647, true);
+        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(ta.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, MusicPatchNode.field_C.field_H, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(PasswordValidator.field_q, var1, (WidgetEventListener) null);
         this.field_M = new InteractiveWidget(DebouncedFieldValidator.field_g, (WidgetEventListener) null);
         this.field_N = new InteractiveWidget(Bzip2State.field_v, (WidgetEventListener) null);
@@ -335,7 +335,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         var2.setBounds(0, 270, var3, 20, 50);
         this.addChild((byte) -49, var2);
         var3 += 50;
-        var3 = var3 + (5 + this.a(an.field_z, 170, this.field_R, wf.field_B, 21287, var3));
+        var3 = var3 + (5 + this.addLabeledFieldWithDefaultValidationMessage(an.field_z, 170, this.field_R, wf.field_B, 21287, var3));
         this.field_M.setBounds(0, var5, var3, 496 - var5 >> 1, 40);
         this.field_N.setBounds(0, 60, var3 + 15, 3 + var4, 40);
         this.field_N.field_n = (WidgetEventListener) (this);

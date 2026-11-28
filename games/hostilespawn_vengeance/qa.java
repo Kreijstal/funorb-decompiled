@@ -48,7 +48,7 @@ final class qa {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var7 < var3; var7++) {
-              var6_ref_int__[var7] = ll.a(PcmOutputWorker.bitwiseAnd(-16777216, var15[var7] << 24), bf.field_d[PcmOutputWorker.bitwiseAnd((int) var21[var7], 255)]);
+              var6_ref_int__[var7] = ll.bitwiseOr(PcmOutputWorker.bitwiseAnd(-16777216, var15[var7] << 24), bf.field_d[PcmOutputWorker.bitwiseAnd((int) var21[var7], 255)]);
             }
             var1[var2] = (RgbSprite) ((Object) new ArgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], LabeledWidgetContainer.field_O[var2], TextInputField.field_X[var2], ConfirmedEmailAvailabilityValidator.field_r[var2], var17));
           }

@@ -262,7 +262,7 @@ final class rk extends DualLinkNode {
         int var3 = Transmogrify.field_A ? 1 : 0;
         if (this.field_m != null) {
           for (var2 = 0; var2 < this.field_m.length; var2++) {
-            this.field_m[var2] = DiskArchiveRequest.b(this.field_m[var2], 32768);
+            this.field_m[var2] = DiskArchiveRequest.bitwiseOr(this.field_m[var2], 32768);
           }
         }
         if (param0 < 44) {

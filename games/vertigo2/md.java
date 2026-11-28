@@ -135,7 +135,7 @@ final class md extends TextureOperator {
             int[] var5 = var9;
             var6 = param1;
             var7 = param4;
-            var9[var6] = (b.a(16711422, var9[var6]) >> 1) + var7;
+            var9[var6] = (b.bitwiseAnd(16711422, var9[var6]) >> 1) + var7;
             param1++;
           }
           int var5_int = 4 / ((param0 + 39) / 53);

@@ -1331,7 +1331,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 }
                 var2 = ad.a("create", 0);
                 if (null != var2) {
-                  tk.field_y = ab.a(0, var2);
+                  MusicPatchNode.field_y = ab.a(0, var2);
                 }
                 var2 = ad.a("create_pleasechooseapassword", 0);
                 if (var2 != null) {
@@ -1591,7 +1591,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 }
                 var2 = ad.a("create_optin_news_tooltip", 0);
                 if (null != var2) {
-                  gf.field_f = ab.a(0, var2);
+                  ByteArrayPoolSupport.field_f = ab.a(0, var2);
                 }
                 var2 = ad.a("create_u13_email_tooltip", 0);
                 if (null != var2) {
@@ -1619,7 +1619,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 }
                 var2 = ad.a("create_username_unavailable", 0);
                 if (null != var2) {
-                  de.field_o = ab.a(0, var2);
+                  MusicPatchEnvelope.field_o = ab.a(0, var2);
                 }
                 var2 = ad.a("create_username_available", 0);
                 if (null != var2) {
@@ -1659,7 +1659,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 }
                 var2 = ad.a("create_alert_passcontainsemail", 0);
                 if (var2 != null) {
-                  id.field_j = ab.a(0, var2);
+                  GrowableIntArray.field_j = ab.a(0, var2);
                 }
                 var2 = ad.a("create_alert_passcontainsname_partial", 0);
                 if (null != var2) {
@@ -1807,7 +1807,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 }
                 var2 = ad.a("waitingfor_fonts", 0);
                 if (null != var2) {
-                  de.field_j = ab.a(0, var2);
+                  MusicPatchEnvelope.field_j = ab.a(0, var2);
                 }
                 var2 = ad.a("waitingfor_soundeffects", 0);
                 if (null != var2) {

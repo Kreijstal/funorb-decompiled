@@ -184,7 +184,7 @@ final class ac {
                               }
                             }
                           } else {
-                            pl.field_l = true;
+                            MusicPatchEnvelope.field_l = true;
                           }
                         } else {
                           eh.field_g = StripedProgressWidget.a((byte) 114);

@@ -53,7 +53,7 @@ final class fl {
             var13 = param4;
             var14 = param6;
             var15 = 8355711 & var17[var11] >> 1;
-            var10[var11] = (dg.a(var14, 33464851) >> 17) + (dg.a(var13 >> 9, 65280) + dg.a(16711680, var12 >> 1) + var15);
+            var10[var11] = (dg.bitwiseAnd(var14, 33464851) >> 17) + (dg.bitwiseAnd(var13 >> 9, 65280) + dg.bitwiseAnd(16711680, var12 >> 1) + var15);
             param8++;
             param5 = param5 + param9;
             param4 = param4 + param7;

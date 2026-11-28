@@ -18,7 +18,7 @@ final class gka extends AnimationNode {
         if (null != uf.field_c) {
           uf.field_c.setMasterVolume(23679, param1);
           if (null != kw.field_j) {
-            kw.field_j.a(param1, true);
+            kw.field_j.setVolume(param1, true);
             return;
           }
           return;
@@ -26,7 +26,7 @@ final class gka extends AnimationNode {
         if (null == kw.field_j) {
           return;
         }
-        kw.field_j.a(param1, true);
+        kw.field_j.setVolume(param1, true);
     }
 
     public static void releaseStatics(int param0) {

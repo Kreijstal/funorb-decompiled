@@ -44,7 +44,7 @@ class EditableTextField extends InteractiveWidget {
         AgeValidator.a(-118, tg.field_J);
         hk.a();
         SoftwareRasterizer.clearRaster();
-        ee.g(95);
+        MidiNoteMask.g(95);
         if (256 > var5) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d, 0, -var5 + 256);
         }
@@ -174,7 +174,7 @@ class EditableTextField extends InteractiveWidget {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -274,7 +274,7 @@ class EditableTextField extends InteractiveWidget {
             this.field_V = je.correctedCurrentTimeMillis(param1 ^ 18875);
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "vg.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "vg.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -466,7 +466,7 @@ class EditableTextField extends InteractiveWidget {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
         }
     }
 
@@ -531,7 +531,7 @@ class EditableTextField extends InteractiveWidget {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -557,7 +557,7 @@ class EditableTextField extends InteractiveWidget {
           param1.field_i = var5.readInt(true);
           var5.backpatchByteLength(1, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "vg.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "vg.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -573,7 +573,7 @@ class EditableTextField extends InteractiveWidget {
           this.field_S = true;
           this.field_V = je.correctedCurrentTimeMillis(1);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "vg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "vg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -625,7 +625,7 @@ class EditableTextField extends InteractiveWidget {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

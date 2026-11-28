@@ -45,7 +45,7 @@ final class cc {
           var1_int = mb.field_c[0];
           for (var2 = 1; var2 < mb.field_c.length; var2++) {
             var3 = mb.field_c[var2];
-            og.a(lf.field_a, var2 << 4, lf.field_a, var1_int, var3);
+            ArrayBlockSupport.copyIntRange(lf.field_a, var2 << 4, lf.field_a, var1_int, var3);
             var1_int = var1_int + var3;
           }
           if (param0 <= 34) {

@@ -55,7 +55,7 @@ final class BitPacketBuffer extends PacketBuffer {
         int var3 = Terraphoenix.field_V;
         IndexedSprite[] var1 = new IndexedSprite[kf.field_b];
         for (var2 = 0; var2 < kf.field_b; var2++) {
-          var1[var2] = new IndexedSprite(ah.field_A, sb.field_j, ConfirmedEmailAvailabilityValidator.field_s[var2], DropTargetWidgetContainer.field_K[var2], sb.field_m[var2], ArchiveRequest.field_p[var2], qc.field_b[var2], ProxyAuthenticationRequiredException.field_a);
+          var1[var2] = new IndexedSprite(ah.field_A, MidiNoteMask.field_j, ConfirmedEmailAvailabilityValidator.field_s[var2], DropTargetWidgetContainer.field_K[var2], MidiNoteMask.field_m[var2], ArchiveRequest.field_p[var2], qc.field_b[var2], ProxyAuthenticationRequiredException.field_a);
         }
         if (param0 != -28336) {
           String var4 = (String) null;
@@ -99,15 +99,15 @@ final class BitPacketBuffer extends PacketBuffer {
         var8 = Terraphoenix.field_V;
         var1 = new Sprite[kf.field_b];
         for (var2 = param0; var2 < kf.field_b; var2++) {
-          var3 = ArchiveRequest.field_p[var2] * sb.field_m[var2];
+          var3 = ArchiveRequest.field_p[var2] * MidiNoteMask.field_m[var2];
           var21 = qc.field_b[var2];
           if (!aa.field_k[var2]) {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var3 > var6; var6++) {
-              var10[var6] = ProxyAuthenticationRequiredException.field_a[dg.a(255, (int) var21[var6])];
+              var10[var6] = ProxyAuthenticationRequiredException.field_a[dg.bitwiseAnd(255, (int) var21[var6])];
             }
-            var1[var2] = new Sprite(ah.field_A, sb.field_j, ConfirmedEmailAvailabilityValidator.field_s[var2], DropTargetWidgetContainer.field_K[var2], sb.field_m[var2], ArchiveRequest.field_p[var2], var22);
+            var1[var2] = new Sprite(ah.field_A, MidiNoteMask.field_j, ConfirmedEmailAvailabilityValidator.field_s[var2], DropTargetWidgetContainer.field_K[var2], MidiNoteMask.field_m[var2], ArchiveRequest.field_p[var2], var22);
           } else {
             var16 = ug.field_c[var2];
             var12 = var16;
@@ -117,9 +117,9 @@ final class BitPacketBuffer extends PacketBuffer {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var7 < var3; var7++) {
-              var6_ref_int__[var7] = ResizableModalDialog.b(ProxyAuthenticationRequiredException.field_a[dg.a((int) var21[var7], 255)], dg.a((int) var16[var7], 255) << 24);
+              var6_ref_int__[var7] = ResizableModalDialog.bitwiseOr(ProxyAuthenticationRequiredException.field_a[dg.bitwiseAnd((int) var21[var7], 255)], dg.bitwiseAnd((int) var16[var7], 255) << 24);
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(ah.field_A, sb.field_j, ConfirmedEmailAvailabilityValidator.field_s[var2], DropTargetWidgetContainer.field_K[var2], sb.field_m[var2], ArchiveRequest.field_p[var2], var17));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(ah.field_A, MidiNoteMask.field_j, ConfirmedEmailAvailabilityValidator.field_s[var2], DropTargetWidgetContainer.field_K[var2], MidiNoteMask.field_m[var2], ArchiveRequest.field_p[var2], var17));
           }
         }
         SocketConnector.a((byte) 95);

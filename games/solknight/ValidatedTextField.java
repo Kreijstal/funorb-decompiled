@@ -18,7 +18,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           }
           this.field_Y = param0;
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "qb.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "qb.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -49,7 +49,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -84,7 +84,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           super.updatePointer(param0, param1, param2, param3);
           this.field_Z = -this.field_m + PacketBuffer.field_j - param0;
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "qb.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "qb.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -310,7 +310,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           } else {
             stackIn_95_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_94_0), ((StringBuilder) (Object) stackIn_94_1).append(stackIn_95_2).append(',').append(param8).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_94_0), ((StringBuilder) (Object) stackIn_94_1).append(stackIn_95_2).append(',').append(param8).append(')').toString());
         }
     }
 

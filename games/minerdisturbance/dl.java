@@ -14,7 +14,7 @@ final class dl {
           return;
         }
         try {
-          nj.field_e.a(false, param1, !param0 ? true : false, 1000000, param3, param4);
+          nj.field_e.switchTrack(false, param1, !param0 ? true : false, 1000000, param3, param4);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "dl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

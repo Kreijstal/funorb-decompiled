@@ -17,14 +17,14 @@ final class s {
           uj.field_m = AudioOutput.createOutput(param1, param5, 0, param0);
           eb.field_e = AudioOutput.createOutput(param1, param5, 1, param2);
           oa.field_b = new PcmStreamMixer();
-          tm.field_v = param2;
+          MusicPatchNode.field_v = param2;
           eb.field_e.setRootStream(oa.field_b);
           ha.field_w = param4;
           if (param7 >= -84) {
             java.awt.Component var9 = (java.awt.Component) null;
             s.a(-53, (PlatformTaskDispatcher) null, 23, -48, (CrossfadingMidiPcmStream) null, (java.awt.Component) null, false, -17);
           }
-          ha.field_w.a(ga.field_b, true);
+          ha.field_w.setVolume(ga.field_b, true);
           uj.field_m.setRootStream(ha.field_w);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "s.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');

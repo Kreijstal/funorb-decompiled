@@ -182,17 +182,17 @@ final class bb {
           hg.field_f.a(sj.field_k, param3 ^ 2147483543);
           var16 = ao.a(param0, "button_mouseover", 2993, "lobby");
           bd.field_a = new cf(od.field_V, var12, EditableTextField.field_P, sj.field_k, 3, 2, qc.field_e, 3, SoundCache.field_g);
-          ml.field_f = new ci(0L, sj.field_k);
-          ml.field_f.field_G = 1;
-          ml.field_f.field_Q = var16;
-          ml.field_f.field_bb = 1;
-          ml.field_f.field_y = 1;
-          ml.field_f.field_R = 1;
-          ml.field_f.field_Ab = var13;
-          ml.field_f.field_Z = ao.a(param0, "button_mouseheld", 2993, "lobby");
-          ml.field_f.field_ab = ao.a(param0, "button_active", 2993, "lobby");
-          ml.field_f.field_D = ao.a(param0, "button_disabled", 2993, "lobby");
-          ml.field_f.field_fb = 1;
+          GrowableIntArray.field_f = new ci(0L, sj.field_k);
+          GrowableIntArray.field_f.field_G = 1;
+          GrowableIntArray.field_f.field_Q = var16;
+          GrowableIntArray.field_f.field_bb = 1;
+          GrowableIntArray.field_f.field_y = 1;
+          GrowableIntArray.field_f.field_R = 1;
+          GrowableIntArray.field_f.field_Ab = var13;
+          GrowableIntArray.field_f.field_Z = ao.a(param0, "button_mouseheld", 2993, "lobby");
+          GrowableIntArray.field_f.field_ab = ao.a(param0, "button_active", 2993, "lobby");
+          GrowableIntArray.field_f.field_D = ao.a(param0, "button_disabled", 2993, "lobby");
+          GrowableIntArray.field_f.field_fb = 1;
           ao.field_a = new ci(0L, sj.field_k);
           ao.field_a.field_fb = 1;
           ao.field_a.field_Ab = rh.a(ao.a(param0, "tab_inactive", 2993, "lobby"), -9568);
@@ -434,7 +434,7 @@ final class bb {
         int var4 = tl.field_Fb.m(-90) ? 1 : 0;
         if (th.field_d != 0 &&
           var4 == 0) {
-          kf.a(-88);
+          MusicPatch.a(-88);
           param0 = false;
         }
         if (param0) {

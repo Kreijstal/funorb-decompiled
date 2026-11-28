@@ -112,7 +112,7 @@ class RichTextWidget extends InteractiveWidget {
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             ce.field_c[var1_intLifetime1] = 0L;
           }
-          ol.field_c = 0;
+          GrowableIntArray.field_c = 0;
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "rg.I(" + param0 + ')');
         }

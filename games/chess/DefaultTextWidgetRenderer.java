@@ -338,9 +338,9 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         cf.b(SoftwareRasterizer.field_c, SoftwareRasterizer.field_h + 640 >> 1, 0, param0 ^ -416228335, -640 + SoftwareRasterizer.field_h >> 1);
         if (an.field_e > 0) {
           if (null != ig.field_h) {
-            ig.field_h.drawOpaque(ql.field_d.field_mb, 0);
+            ig.field_h.drawOpaque(ByteArrayPoolSupport.field_d.field_mb, 0);
           }
-          stackIn_9_0 = ql.field_d;
+          stackIn_9_0 = ByteArrayPoolSupport.field_d;
           stackIn_9_1 = false;
           stackIn_10_2 = (param1) && (!ModalDialogHost.field_V);
           ((ci) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_10_2);
@@ -538,7 +538,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         byte[] var2 = vk.field_d[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
-          var3[var4_int] = AccountNameAvailabilityValidator.field_r[ce.a((int) var2[var4_int], 255)];
+          var3[var4_int] = AccountNameAvailabilityValidator.field_r[ce.bitwiseAnd((int) var2[var4_int], 255)];
         }
         RgbSprite var4 = new RgbSprite(cd.field_p, MouseWheelInput.field_a, be.field_a[0], FullscreenFocusCanvas.field_c[param0], wm.field_b[0], b.field_c[0], var3);
         ProgressDialog.k(4210752);

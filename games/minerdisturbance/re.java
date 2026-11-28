@@ -364,7 +364,7 @@ final class re implements uj {
             field_c[var0] = 20 * var0 + 20 << 16;
           }
           if (2 < var0) {
-            field_c[var0] = SpriteState.a(field_c[var0], (-2 + var0) * 22 << 8);
+            field_c[var0] = SpriteState.bitwiseOr(field_c[var0], (-2 + var0) * 22 << 8);
           }
         }
         field_d = 0;

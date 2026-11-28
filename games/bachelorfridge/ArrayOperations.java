@@ -184,7 +184,7 @@ final class ArrayOperations {
         }
     }
 
-    final static void a(int[] param0, int param1, int param2, int param3) {
+    final static void fillInts(int[] param0, int param1, int param2, int param3) {
         param2 = param1 + param2 - 7;
         while (param1 < param2) {
           param0[param1++] = param3;

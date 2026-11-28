@@ -282,7 +282,7 @@ final class HuffmanDecoder {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
-                  var3[var10] = mp.a(var11, var12);
+                  var3[var10] = mp.bitwiseOr(var11, var12);
                   var10--;
                 }
                 if (decompiledFrameCompleted1) {

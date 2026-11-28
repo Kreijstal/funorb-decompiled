@@ -8,7 +8,7 @@ final class bm {
     static ModalDialogHost field_d;
     static boolean field_e;
 
-    static long a(long param0, long param1) {
+    static long bitwiseAnd(long param0, long param1) {
         return param0 & param1;
     }
 

@@ -78,7 +78,7 @@ final class to {
 
     final static void a(int param0, int param1, int param2, int param3, String param4, int param5) {
         try {
-          kn.a(param2, param4 + "_defeat", param5, param3, 124, param0, param4 + "_special", param4 + "_reveal");
+          ByteArrayPoolSupport.a(param2, param4 + "_defeat", param5, param3, 124, param0, param4 + "_special", param4 + "_reveal");
           if (param1 >= -72) {
             String var7 = (String) null;
             to.a(116, 65, -88, 52, (String) null, -97);

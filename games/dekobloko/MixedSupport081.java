@@ -244,7 +244,7 @@ final class MixedSupport081 {
                         MixedSupport070.byteArrayState0011[integerLocal67] = (byte) 0;
                       }
                     } else {
-                      MixedSupport070.byteArrayState0011[integerLocal63 / 8] = (byte)MixedSupport106.computeInteger1387((int) MixedSupport070.byteArrayState0011[integerLocal63 / 8], 1 << PlayerBoardUpdateQueue.bitwiseAnd(integerLocal63, 7));
+                      MixedSupport070.byteArrayState0011[integerLocal63 / 8] = (byte)MixedSupport106.bitwiseXor((int) MixedSupport070.byteArrayState0011[integerLocal63 / 8], 1 << PlayerBoardUpdateQueue.bitwiseAnd(integerLocal63, 7));
                     }
                   }
                 } else {
@@ -476,7 +476,7 @@ final class MixedSupport081 {
                       MixedSupport134.byteArrayState0029[integerLocal76 / 8] = (byte)PlayerBoardUpdateQueue.bitwiseAnd((int) MixedSupport134.byteArrayState0029[integerLocal76 / 8], ~(1 << PlayerBoardUpdateQueue.bitwiseAnd(integerLocal76, 7)));
                     }
                   } else {
-                    MixedSupport134.byteArrayState0029[(integerLocal99 + integerLocal67) / 8] = (byte)MixedSupport106.computeInteger1387((int) MixedSupport134.byteArrayState0029[(integerLocal99 + integerLocal67) / 8], 1 << PlayerBoardUpdateQueue.bitwiseAnd(integerLocal67 + integerLocal99, 7));
+                    MixedSupport134.byteArrayState0029[(integerLocal99 + integerLocal67) / 8] = (byte)MixedSupport106.bitwiseXor((int) MixedSupport134.byteArrayState0029[(integerLocal99 + integerLocal67) / 8], 1 << PlayerBoardUpdateQueue.bitwiseAnd(integerLocal67 + integerLocal99, 7));
                   }
                 }
               }

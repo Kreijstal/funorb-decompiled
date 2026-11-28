@@ -532,7 +532,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         int var3 = 20;
         var3 = var3 + this.addLabeledField(cf.field_a, 170, this.field_M, -74, var3);
         var3 = var3 + (5 + this.addLabeledFieldWithValidationMessage(this.field_J, 170, "", mb.field_b, var3, 25, 20));
-        var3 = var3 + this.addLabeledField(fl.field_b, 170, this.field_G, -96, var3);
+        var3 = var3 + this.addLabeledField(GrowableIntArray.field_b, 170, this.field_G, -96, var3);
         var3 = var3 + (this.addLabeledFieldWithDefaultValidationMessage(this.field_K, true, var3, hk.field_c, mc.field_a, 170) + 5);
         var3 = var3 + (this.addLabeledFieldWithDefaultValidationMessage(this.field_D, true, var3, TextLayout.field_a, pk.field_c, 170) + 5);
         var3 = var3 + this.addLabeledFieldWithValidationIcon(170, var3, th.field_b, (byte) -21, this.field_I);

@@ -30,7 +30,7 @@ final class lb {
           }
           var2 = var14.readUnsignedByte(32270);
           if (0 == var2) {
-            var11 = nf.a(false);
+            var11 = MusicPatch.a(false);
             var3 = var11;
             var10 = var11;
             var4 = var10;
@@ -56,7 +56,7 @@ final class lb {
                 le.c((byte) 66);
                 return;
               }
-              var15.field_j = nf.a(false);
+              var15.field_j = MusicPatch.a(false);
               var15.field_l = true;
               var15.unlink(param0 ^ 20777);
             } else {

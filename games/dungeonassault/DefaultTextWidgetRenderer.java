@@ -180,7 +180,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!kk.a(param1, 1, param2, param4)) {
+          if (!MusicPatch.a(param1, 1, param2, param4)) {
             stackIn_2_0 = null;
             return (BinaryBitmapFont) (stackIn_2_0);
           }

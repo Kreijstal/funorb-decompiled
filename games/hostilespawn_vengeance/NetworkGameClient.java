@@ -407,7 +407,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int discarded$1 = 0;
         int discarded$2 = 0;
         int var3 = HostileSpawn.field_I ? 1 : 0;
-        if (bc.d(-95)) {
+        if (MidiNoteMask.d(-95)) {
           discarded$1 = this.a(false, param0 ^ 12751, ImageProducerRasterBuffer.field_q != null ? true : false);
         } else {
           if (pb.field_Kb < 10) {
@@ -696,11 +696,11 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (SecondaryNodeDequeIterator.field_b) {
             MouseInput.a(-1);
           }
-          if (hf.field_c == null) {
-            hf.field_c = ValidationStatusIcon.e((byte) -98);
+          if (ByteArrayPoolSupport.field_c == null) {
+            ByteArrayPoolSupport.field_c = ValidationStatusIcon.e((byte) -98);
             GameCanvas.field_b = uj.e(1);
           }
-          PcmResampler.a(GameCanvas.field_b, ll.field_b, param1 - 9887, hf.field_c);
+          PcmResampler.a(GameCanvas.field_b, ll.field_b, param1 - 9887, ByteArrayPoolSupport.field_c);
           RichTextLayout.field_m = null;
           im.field_c = null;
           ll.field_b = null;

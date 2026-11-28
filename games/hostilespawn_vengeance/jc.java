@@ -128,7 +128,7 @@ final class jc {
           }
           while (mn.field_a.length > var2) {
             var3 = mn.field_a[var2];
-            kf.a(lh.field_d, var2 << 4, lh.field_d, var1_int, var3);
+            ArrayBlockSupport.copyIntRange(lh.field_d, var2 << 4, lh.field_d, var1_int, var3);
             var1_int = var1_int + var3;
             var2++;
           }

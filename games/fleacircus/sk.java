@@ -222,7 +222,7 @@ final class sk implements Runnable {
     }
 
     final static void a(int param0, qc param1, int param2, int param3, qc param4, int param5) {
-        id.field_c = param5;
+        GrowableIntArray.field_c = param5;
         if (param3 != 443) {
           return;
         }

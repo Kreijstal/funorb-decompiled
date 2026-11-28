@@ -61,7 +61,7 @@ final class tb {
               AccountRequestState.field_a.position = 0;
               pd.field_l = param1[il.field_h];
             }
-            if (!gf.b(-9)) {
+            if (!ByteArrayPoolSupport.b(-9)) {
               return false;
             }
             if (RichTextWidget.field_P == 0) {

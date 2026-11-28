@@ -16,14 +16,14 @@ final class ek {
           var1_int = fb.field_b[0];
           for (var2 = param0; var2 < fb.field_b.length; var2++) {
             var3 = fb.field_b[var2];
-            fk.a(he.field_a, var2 << 4, he.field_a, var1_int, var3);
+            ArrayBlockSupport.copyIntRange(he.field_a, var2 << 4, he.field_a, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var1), "ek.A(" + param0 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var1), "ek.A(" + param0 + ')');
         }
     }
 

@@ -13,7 +13,7 @@ final class AccountRequestState {
           return;
         }
         try {
-          wc.field_p = param1;
+          MusicPatch.field_p = param1;
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "ae.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

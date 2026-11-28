@@ -74,7 +74,7 @@ final class ul extends IntrusiveNode {
           if (null != var45.field_z &&
             1 < var45.field_s) {
             var61 = var45.field_z;
-            mh.a(0, var61, m.field_i, 0, false);
+            mh.a(0, var61, GrowableIntArray.field_i, 0, false);
           } else {
             NetworkArchiveRequest.j(2);
           }

@@ -56,7 +56,7 @@ final class pb {
     }
 
     final static void d(int param0) {
-        MatchingFieldValidator.a(qf.field_r, km.field_b, -115, true);
+        MatchingFieldValidator.a(MidiNoteMask.field_r, km.field_b, -115, true);
         int var1 = 108 / ((param0 + 30) / 55);
         oh.field_F = true;
     }

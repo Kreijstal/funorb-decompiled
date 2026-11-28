@@ -191,7 +191,7 @@ final class MidiPcmStream extends PcmStream {
               if (var3.field_z.hasRemainingRampFrames()) {
                 this.field_k.field_j.addChildStream(var3.field_z);
               }
-              var3.a(-91);
+              var3.releaseReferences(-91);
             }
             if (!(var3.field_p >= 0)) {
               this.field_H[var3.field_n][var3.field_h] = null;
@@ -426,7 +426,7 @@ final class MidiPcmStream extends PcmStream {
         int var6 = 0;
         var3Lifetime1 = var6;
         while (16 > var6) {
-          this.field_F[var6] = dda.a(-128, this.field_I[var6]);
+          this.field_F[var6] = dda.bitwiseAnd(-128, this.field_I[var6]);
           var6++;
         }
     }
@@ -477,7 +477,7 @@ final class MidiPcmStream extends PcmStream {
           return;
         }
         this.field_I[param0] = param2;
-        this.field_F[param0] = dda.a(param2, -128);
+        this.field_F[param0] = dda.bitwiseAnd(param2, -128);
         this.setProgram((byte) -76, param2, param0);
     }
 
@@ -490,7 +490,7 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
-        un var7 = null;
+        MusicPatchEnvelope var7 = null;
         int var8 = 0;
         double var9 = 0.0;
         int var11 = 0;
@@ -499,7 +499,7 @@ final class MidiPcmStream extends PcmStream {
           param1.field_r = AudioOutput.field_j / 100;
           if (0 <= param1.field_p && (param1.field_z == null ||
             param1.field_z.isSamplePositionOutOfRange())) {
-            param1.a(123);
+            param1.releaseReferences(123);
             param1.unlink(false);
             if (0 < param1.field_k &&
               this.field_B[param1.field_n][param1.field_k] == param1) {
@@ -583,7 +583,7 @@ final class MidiPcmStream extends PcmStream {
           if (param1.field_z.hasRemainingRampFrames()) {
             this.field_k.field_j.addChildStream(param1.field_z);
           }
-          param1.a(117);
+          param1.releaseReferences(117);
           if (0 <= param1.field_p) {
             param1.unlink(false);
             if (param1.field_k > 0 &&
@@ -631,7 +631,7 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        un var4 = null;
+        MusicPatchEnvelope var4 = null;
         int var5 = 0;
         int var6 = 0;
         double var7 = 0.0;
@@ -853,67 +853,67 @@ final class MidiPcmStream extends PcmStream {
         var5Lifetime4 = (32608 & param0) >> 8;
         var6Lifetime3 = param0 >> 16 & 127;
         if (var5Lifetime4 == 0) {
-          this.field_F[var4Lifetime4] = (var6Lifetime3 << 14) + dda.a(-2080769, this.field_F[var4Lifetime4]);
+          this.field_F[var4Lifetime4] = (var6Lifetime3 << 14) + dda.bitwiseAnd(-2080769, this.field_F[var4Lifetime4]);
         }
         if (32 == var5Lifetime4) {
-          this.field_F[var4Lifetime4] = (var6Lifetime3 << 7) + dda.a(this.field_F[var4Lifetime4], -16257);
+          this.field_F[var4Lifetime4] = (var6Lifetime3 << 7) + dda.bitwiseAnd(this.field_F[var4Lifetime4], -16257);
         }
         if (1 == var5Lifetime4) {
-          this.field_r[var4Lifetime4] = (var6Lifetime3 << 7) + dda.a(this.field_r[var4Lifetime4], -16257);
+          this.field_r[var4Lifetime4] = (var6Lifetime3 << 7) + dda.bitwiseAnd(this.field_r[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 33) {
-          this.field_r[var4Lifetime4] = var6Lifetime3 + dda.a(-128, this.field_r[var4Lifetime4]);
+          this.field_r[var4Lifetime4] = var6Lifetime3 + dda.bitwiseAnd(-128, this.field_r[var4Lifetime4]);
         }
         if (var5Lifetime4 == 5) {
-          this.field_s[var4Lifetime4] = dda.a(this.field_s[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.field_s[var4Lifetime4] = dda.bitwiseAnd(this.field_s[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 37) {
-          this.field_s[var4Lifetime4] = var6Lifetime3 + dda.a(this.field_s[var4Lifetime4], -128);
+          this.field_s[var4Lifetime4] = var6Lifetime3 + dda.bitwiseAnd(this.field_s[var4Lifetime4], -128);
         }
         if (var5Lifetime4 == 7) {
-          this.field_J[var4Lifetime4] = (var6Lifetime3 << 7) + dda.a(this.field_J[var4Lifetime4], -16257);
+          this.field_J[var4Lifetime4] = (var6Lifetime3 << 7) + dda.bitwiseAnd(this.field_J[var4Lifetime4], -16257);
         }
         if (39 == var5Lifetime4) {
-          this.field_J[var4Lifetime4] = dda.a(-128, this.field_J[var4Lifetime4]) + var6Lifetime3;
+          this.field_J[var4Lifetime4] = dda.bitwiseAnd(-128, this.field_J[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 10) {
-          this.field_D[var4Lifetime4] = (var6Lifetime3 << 7) + dda.a(-16257, this.field_D[var4Lifetime4]);
+          this.field_D[var4Lifetime4] = (var6Lifetime3 << 7) + dda.bitwiseAnd(-16257, this.field_D[var4Lifetime4]);
         }
         if (42 == var5Lifetime4) {
-          this.field_D[var4Lifetime4] = var6Lifetime3 + dda.a(this.field_D[var4Lifetime4], -128);
+          this.field_D[var4Lifetime4] = var6Lifetime3 + dda.bitwiseAnd(this.field_D[var4Lifetime4], -128);
         }
         if (11 == var5Lifetime4) {
-          this.field_N[var4Lifetime4] = (var6Lifetime3 << 7) + dda.a(-16257, this.field_N[var4Lifetime4]);
+          this.field_N[var4Lifetime4] = (var6Lifetime3 << 7) + dda.bitwiseAnd(-16257, this.field_N[var4Lifetime4]);
         }
         if (43 == var5Lifetime4) {
-          this.field_N[var4Lifetime4] = var6Lifetime3 + dda.a(this.field_N[var4Lifetime4], -128);
+          this.field_N[var4Lifetime4] = var6Lifetime3 + dda.bitwiseAnd(this.field_N[var4Lifetime4], -128);
         }
         if (var5Lifetime4 == 64) {
           if (64 > var6Lifetime3) {
-            this.field_u[var4Lifetime4] = dda.a(this.field_u[var4Lifetime4], -2);
+            this.field_u[var4Lifetime4] = dda.bitwiseAnd(this.field_u[var4Lifetime4], -2);
           } else {
-            this.field_u[var4Lifetime4] = MassPoisonSpecial.a(this.field_u[var4Lifetime4], 1);
+            this.field_u[var4Lifetime4] = MassPoisonSpecial.bitwiseOr(this.field_u[var4Lifetime4], 1);
           }
         }
         if (var5Lifetime4 == 65) {
           if (var6Lifetime3 >= 64) {
-            this.field_u[var4Lifetime4] = MassPoisonSpecial.a(this.field_u[var4Lifetime4], 2);
+            this.field_u[var4Lifetime4] = MassPoisonSpecial.bitwiseOr(this.field_u[var4Lifetime4], 2);
           } else {
             this.releaseUnmappedVoices(49, var4Lifetime4);
-            this.field_u[var4Lifetime4] = dda.a(this.field_u[var4Lifetime4], -3);
+            this.field_u[var4Lifetime4] = dda.bitwiseAnd(this.field_u[var4Lifetime4], -3);
           }
         }
         if (var5Lifetime4 == 99) {
-          this.field_w[var4Lifetime4] = dda.a(127, this.field_w[var4Lifetime4]) + (var6Lifetime3 << 7);
+          this.field_w[var4Lifetime4] = dda.bitwiseAnd(127, this.field_w[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 98) {
-          this.field_w[var4Lifetime4] = dda.a(this.field_w[var4Lifetime4], 16256) + var6Lifetime3;
+          this.field_w[var4Lifetime4] = dda.bitwiseAnd(this.field_w[var4Lifetime4], 16256) + var6Lifetime3;
         }
         if (var5Lifetime4 == 101) {
-          this.field_w[var4Lifetime4] = dda.a(this.field_w[var4Lifetime4], 127) + (16384 + (var6Lifetime3 << 7));
+          this.field_w[var4Lifetime4] = dda.bitwiseAnd(this.field_w[var4Lifetime4], 127) + (16384 + (var6Lifetime3 << 7));
         }
         if (var5Lifetime4 == 100) {
-          this.field_w[var4Lifetime4] = dda.a(16256, this.field_w[var4Lifetime4]) + (16384 + var6Lifetime3);
+          this.field_w[var4Lifetime4] = dda.bitwiseAnd(16256, this.field_w[var4Lifetime4]) + (16384 + var6Lifetime3);
         }
         if (var5Lifetime4 == 120) {
           this.removeChannelVoices((byte) 98, var4Lifetime4);
@@ -927,27 +927,27 @@ final class MidiPcmStream extends PcmStream {
         if (var5Lifetime4 == 6) {
           var7 = this.field_w[var4Lifetime4];
           if (16384 == var7) {
-            this.field_A[var4Lifetime4] = dda.a(this.field_A[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+            this.field_A[var4Lifetime4] = dda.bitwiseAnd(this.field_A[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
           }
         }
         if (var5Lifetime4 == 38) {
           var7Lifetime1 = this.field_w[var4Lifetime4];
           if (16384 == var7Lifetime1) {
-            this.field_A[var4Lifetime4] = dda.a(-128, this.field_A[var4Lifetime4]) + var6Lifetime3;
+            this.field_A[var4Lifetime4] = dda.bitwiseAnd(-128, this.field_A[var4Lifetime4]) + var6Lifetime3;
           }
         }
         if (var5Lifetime4 == 16) {
-          this.field_y[var4Lifetime4] = (var6Lifetime3 << 7) + dda.a(-16257, this.field_y[var4Lifetime4]);
+          this.field_y[var4Lifetime4] = (var6Lifetime3 << 7) + dda.bitwiseAnd(-16257, this.field_y[var4Lifetime4]);
         }
         if (var5Lifetime4 == 48) {
-          this.field_y[var4Lifetime4] = dda.a(-128, this.field_y[var4Lifetime4]) + var6Lifetime3;
+          this.field_y[var4Lifetime4] = dda.bitwiseAnd(-128, this.field_y[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 81) {
           if (var6Lifetime3 < 64) {
             this.resetChannelVoicePhases(-28068, var4Lifetime4);
-            this.field_u[var4Lifetime4] = dda.a(this.field_u[var4Lifetime4], -5);
+            this.field_u[var4Lifetime4] = dda.bitwiseAnd(this.field_u[var4Lifetime4], -5);
           } else {
-            this.field_u[var4Lifetime4] = MassPoisonSpecial.a(this.field_u[var4Lifetime4], 4);
+            this.field_u[var4Lifetime4] = MassPoisonSpecial.bitwiseOr(this.field_u[var4Lifetime4], 4);
           }
         }
         if (var5Lifetime4 == 17) {
@@ -983,14 +983,14 @@ final class MidiPcmStream extends PcmStream {
         this.resetPlaybackChannels(param0, -127);
     }
 
-    final synchronized void b(int param0) {
+    final synchronized void releasePatchSampleIds(int param0) {
         int var3 = BachelorFridge.field_y;
         if (param0 != -5359) {
           this.getSchedulingCost();
         }
         MusicPatch var4 = (MusicPatch) (this.field_m.first(param0 ^ 9776));
         while (var4 != null) {
-          var4.b(false);
+          var4.releaseSampleIds(false);
           var4 = (MusicPatch) (this.field_m.next(-21446));
         }
     }
@@ -1066,8 +1066,8 @@ final class MidiPcmStream extends PcmStream {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        un var9 = null;
-        un var10 = null;
+        MusicPatchEnvelope var9 = null;
+        MusicPatchEnvelope var10 = null;
         int stackIn_2_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_20_0 = 0;
@@ -1147,7 +1147,7 @@ final class MidiPcmStream extends PcmStream {
         MidiNote var6 = null;
         int var7 = BachelorFridge.field_y;
         if (param3 != -51) {
-          this.b(107);
+          this.releasePatchSampleIds(107);
         }
         MidiNote var8 = this.field_H[param2][param0];
         if (var8 == null) {
@@ -1199,7 +1199,7 @@ final class MidiPcmStream extends PcmStream {
         int var6_int = 0;
         RuntimeException var6 = null;
         Object var7 = null;
-        g var8 = null;
+        MidiNoteMask var8 = null;
         int var9 = 0;
         int var10 = 0;
         MusicPatch var11 = null;
@@ -1212,29 +1212,29 @@ final class MidiPcmStream extends PcmStream {
           if (param4 > 0) {
             var7 = new int[]{param4};
           }
-          var8 = (g) (param1.field_f.first(-13023));
+          var8 = (MidiNoteMask) (param1.field_f.first(-13023));
           var9 = 47 / ((57 - param3) / 37);
           while (var8 != null) {
             boolean decompiledFrameRemainder0 = true;
             var10 = (int)var8.key;
             var11 = (MusicPatch) (this.field_m.get(true, (long)var10));
             if (var11 == null) {
-              var11 = UiWidget.a(param0, false, var10);
+              var11 = UiWidget.loadMusicPatch(param0, false, var10);
               if (var11 == null) {
                 var6_int = 0;
                 decompiledFrameRemainder0 = false;
               }
               else {
                 this.field_m.put((long)var10, (byte) -89, var11);
-                decompiledFrameRemainder0 = !(var11.a(var8.field_h, 1436234146, param2, (int[]) (var7)));
+                decompiledFrameRemainder0 = !(var11.prepareSamples(var8.field_h, 1436234146, param2, (int[]) (var7)));
               }
             } else {
-              decompiledFrameRemainder0 = !(var11.a(var8.field_h, 1436234146, param2, (int[]) (var7)));
+              decompiledFrameRemainder0 = !(var11.prepareSamples(var8.field_h, 1436234146, param2, (int[]) (var7)));
             }
             if (decompiledFrameRemainder0) {
               var6_int = 0;
             }
-            var8 = (g) (param1.field_f.next(-21446));
+            var8 = (MidiNoteMask) (param1.field_f.next(-21446));
           }
           if (var6_int != 0) {
             param1.releasePatchUsage();

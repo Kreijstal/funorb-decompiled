@@ -165,7 +165,7 @@ final class wp extends am {
                     var5 = 4096;
                     break scanLoop1;
                   }
-                  dk.a(var13, 0, ci.field_c, var5);
+                  ArrayBlockSupport.fillInts(var13, 0, ci.field_c, var5);
                   return var3;
                 }
                 var6++;
@@ -173,7 +173,7 @@ final class wp extends am {
               }
               break;
             }
-            dk.a(var13, 0, ci.field_c, var5);
+            ArrayBlockSupport.fillInts(var13, 0, ci.field_c, var5);
             decompiledFrameRemainder0 = false;
           }
           else {

@@ -182,7 +182,7 @@ final class wh extends am {
               var5_int = var12.length << 2;
             }
             for (var7 = 0; var7 < var5_int; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte((byte) -101) << ie.a(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte((byte) -101) << ie.bitwiseAnd(768, var7 << 8));
             }
             var4_ref_h.field_n = true;
             var4_ref_h.unlink(0);
@@ -335,7 +335,7 @@ final class wh extends am {
                 var15 = param6[param9];
                 incrementValue$1 = param9;
                 param9++;
-                param6[incrementValue$1] = ie.a(16711680, var12_int * ie.a(var15, 65280)) + ie.a(ie.a(16711935, var15) * var12_int, -16711936) >> 8;
+                param6[incrementValue$1] = ie.bitwiseAnd(16711680, var12_int * ie.bitwiseAnd(var15, 65280)) + ie.bitwiseAnd(ie.bitwiseAnd(16711935, var15) * var12_int, -16711936) >> 8;
               }
             }
             param1 = param1 + param8;

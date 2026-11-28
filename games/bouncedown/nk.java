@@ -192,7 +192,7 @@ final class nk {
                       ContentTransitionDialog.a(sj.field_f, (byte) 122);
                       sj.field_f.exitFullscreen((byte) -124, DebouncedFieldValidator.field_e);
                       sj.field_f = null;
-                      ch.field_h.requestFocus();
+                      MusicPatchEnvelope.field_h.requestFocus();
                       break regionExit2;
                     }
                     AccountNameAvailabilityValidator.d(30432);
@@ -225,7 +225,7 @@ final class nk {
                       ContentTransitionDialog.a(sj.field_f, (byte) 84);
                       sj.field_f.exitFullscreen((byte) -127, DebouncedFieldValidator.field_e);
                       sj.field_f = null;
-                      ch.field_h.requestFocus();
+                      MusicPatchEnvelope.field_h.requestFocus();
                     }
                     tc.a(DiskCacheWorker.b(0), 6091);
                     break regionExit2;
@@ -241,7 +241,7 @@ final class nk {
                             return;
                           }
                           ProxyAuthenticationRequiredException.d(-6144);
-                          rj.field_j = 3;
+                          MusicPatch.field_j = 3;
                         }
                       } else {
                         if (param2) {

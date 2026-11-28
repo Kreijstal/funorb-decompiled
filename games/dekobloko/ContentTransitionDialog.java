@@ -290,7 +290,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
               integerArrayLocal11 = new int[integerLocal6];
               integerLocal7 = 0;
               while (integerLocal6 > integerLocal7) {
-                integerArrayLocal11[integerLocal7] = NetworkSupport006.integerArrayState0152[PlayerBoardUpdateQueue.bitwiseAnd(255, (int) byteArrayLocal14[integerLocal7])];
+                integerArrayLocal11[integerLocal7] = GrowableIntArray.integerArrayState0152[PlayerBoardUpdateQueue.bitwiseAnd(255, (int) byteArrayLocal14[integerLocal7])];
                 integerLocal7++;
               }
               rgbSpriteArrayLocal4[integerLocal5] = new RgbSprite(MixedSupport029.integerState0181, MixedSupport057.integerState0297, InputAdapter003.integerArrayState0206[integerLocal5], MixedSupport039.integerArrayState0047[integerLocal5], MixedSupport123.integerArrayState0208[integerLocal5], MixedSupport052.integerArrayState0054[integerLocal5], integerArrayLocal11);
@@ -303,7 +303,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
               integerArrayLocal8 = integerArrayLocal12;
               integerLocal9 = 0;
               while (integerLocal6 > integerLocal9) {
-                integerArrayLocal8[integerLocal9] = LabeledWidgetContainer.bitwiseOr(PlayerBoardUpdateQueue.bitwiseAnd((int) byteArrayLocal15[integerLocal9], 255) << 24, NetworkSupport006.integerArrayState0152[PlayerBoardUpdateQueue.bitwiseAnd((int) byteArrayLocal14[integerLocal9], 255)]);
+                integerArrayLocal8[integerLocal9] = LabeledWidgetContainer.bitwiseOr(PlayerBoardUpdateQueue.bitwiseAnd((int) byteArrayLocal15[integerLocal9], 255) << 24, GrowableIntArray.integerArrayState0152[PlayerBoardUpdateQueue.bitwiseAnd((int) byteArrayLocal14[integerLocal9], 255)]);
                 integerLocal9++;
               }
               rgbSpriteArrayLocal4[integerLocal5] = (RgbSprite) ((Object) new ArgbSprite(MixedSupport029.integerState0181, MixedSupport057.integerState0297, InputAdapter003.integerArrayState0206[integerLocal5], MixedSupport039.integerArrayState0047[integerLocal5], MixedSupport123.integerArrayState0208[integerLocal5], MixedSupport052.integerArrayState0054[integerLocal5], integerArrayLocal13));

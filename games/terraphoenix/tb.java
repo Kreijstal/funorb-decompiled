@@ -282,8 +282,8 @@ final class tb extends uj {
               stackIn_68_0 = 249;
               return stackIn_68_0;
             }
-            var9Lifetime3 = sb.field_i;
-            sb.field_i = pg.field_f;
+            var9Lifetime3 = MidiNoteMask.field_i;
+            MidiNoteMask.field_i = pg.field_f;
             pg.field_f = var9Lifetime3;
             RichTextWidget.field_Q = true;
           }

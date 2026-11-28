@@ -243,7 +243,7 @@ final class eh {
           jk var2 = (jk) null;
           eh.a((jk) null, 33, -117, 56, -22, 94, 101, 77);
         }
-        ch.field_h.requestFocus();
+        MusicPatchEnvelope.field_h.requestFocus();
     }
 
     public static void a(byte param0) {
@@ -296,16 +296,16 @@ final class eh {
                 var10 = var10 ^ 285L;
             }
             var12 = var10 ^ var2;
-            field_a[0][var0] = DefaultTextWidgetRenderer.a(var12, DefaultTextWidgetRenderer.a(DefaultTextWidgetRenderer.a(DefaultTextWidgetRenderer.a(DefaultTextWidgetRenderer.a(DefaultTextWidgetRenderer.a(var6 << 40, DefaultTextWidgetRenderer.a(var2 << 56, var2 << 48)), var2 << 32), var10 << 24), var8 << 16), var4 << 8));
+            field_a[0][var0] = DefaultTextWidgetRenderer.bitwiseOr(var12, DefaultTextWidgetRenderer.bitwiseOr(DefaultTextWidgetRenderer.bitwiseOr(DefaultTextWidgetRenderer.bitwiseOr(DefaultTextWidgetRenderer.bitwiseOr(DefaultTextWidgetRenderer.bitwiseOr(var6 << 40, DefaultTextWidgetRenderer.bitwiseOr(var2 << 56, var2 << 48)), var2 << 32), var10 << 24), var8 << 16), var4 << 8));
             for (var14 = 1; var14 < 8; var14++) {
-                field_a[var14][var0] = DefaultTextWidgetRenderer.a(field_a[var14 - 1][var0] << 56, field_a[-1 + var14][var0] >>> 8);
+                field_a[var14][var0] = DefaultTextWidgetRenderer.bitwiseOr(field_a[var14 - 1][var0] << 56, field_a[-1 + var14][var0] >>> 8);
             }
             var0++;
         }
         field_d[0] = 0L;
         for (var0 = 1; 10 >= var0; var0++) {
             var1 = var0 * 8 - 8;
-            field_d[var0] = hf.a(ProxyAuthenticationRequiredException.a(255L, field_a[7][7 + var1]), hf.a(ProxyAuthenticationRequiredException.a(field_a[6][6 + var1], 65280L), hf.a(ProxyAuthenticationRequiredException.a(field_a[5][5 + var1], 16711680L), hf.a(hf.a(hf.a(hf.a(ProxyAuthenticationRequiredException.a(field_a[1][var1 + 1], 71776119061217280L), ProxyAuthenticationRequiredException.a(-72057594037927936L, field_a[0][var1])), ProxyAuthenticationRequiredException.a(280375465082880L, field_a[2][var1 + 2])), ProxyAuthenticationRequiredException.a(1095216660480L, field_a[3][3 + var1])), ProxyAuthenticationRequiredException.a(field_a[4][var1 + 4], 4278190080L)))));
+            field_d[var0] = hf.bitwiseXor(ProxyAuthenticationRequiredException.bitwiseAnd(255L, field_a[7][7 + var1]), hf.bitwiseXor(ProxyAuthenticationRequiredException.bitwiseAnd(field_a[6][6 + var1], 65280L), hf.bitwiseXor(ProxyAuthenticationRequiredException.bitwiseAnd(field_a[5][5 + var1], 16711680L), hf.bitwiseXor(hf.bitwiseXor(hf.bitwiseXor(hf.bitwiseXor(ProxyAuthenticationRequiredException.bitwiseAnd(field_a[1][var1 + 1], 71776119061217280L), ProxyAuthenticationRequiredException.bitwiseAnd(-72057594037927936L, field_a[0][var1])), ProxyAuthenticationRequiredException.bitwiseAnd(280375465082880L, field_a[2][var1 + 2])), ProxyAuthenticationRequiredException.bitwiseAnd(1095216660480L, field_a[3][3 + var1])), ProxyAuthenticationRequiredException.bitwiseAnd(field_a[4][var1 + 4], 4278190080L)))));
         }
     }
 }

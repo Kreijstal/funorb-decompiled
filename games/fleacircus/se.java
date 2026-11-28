@@ -95,7 +95,7 @@ final class se {
               var5_int = var12.length << 2;
             }
             for (var7 = 0; var7 < var5_int; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(false) << sc.a(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(false) << sc.bitwiseAnd(768, var7 << 8));
             }
             var4_ref_fi.field_p = true;
             var4_ref_fi.unlink(-1);

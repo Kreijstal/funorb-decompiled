@@ -30,7 +30,7 @@ final class bd {
         int var8 = 0;
         var8 = Vertigo2.field_L ? 1 : 0;
         try {
-          this.field_a[this.field_m] = (byte)om.a((int) this.field_a[this.field_m], 128 >>> b.a(this.field_i, 7));
+          this.field_a[this.field_m] = (byte)om.bitwiseOr((int) this.field_a[this.field_m], 128 >>> b.bitwiseAnd(this.field_i, 7));
           this.field_m = this.field_m + 1;
           if (this.field_m > 32) {
             while (this.field_m < 64) {
@@ -46,7 +46,7 @@ final class bd {
             this.field_m = this.field_m + 1;
             this.field_a[fieldTemp$1] = (byte) 0;
           }
-          qq.copyByteRange(this.field_j, 0, this.field_a, 32, 32);
+          ArrayBlockSupport.copyByteRange(this.field_j, 0, this.field_a, 32, 32);
           this.b(120);
           var4_int = 0;
           var5 = param2;
@@ -144,7 +144,7 @@ final class bd {
             var8 = 255 & param0[var5_int] << var6 | (param0[1 + var5_int] & 255) >>> -var6 + 8;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_a[this.field_m] = (byte)om.a((int) this.field_a[this.field_m], var8 >>> var7);
+              this.field_a[this.field_m] = (byte)om.bitwiseOr((int) this.field_a[this.field_m], var8 >>> var7);
               this.field_i = this.field_i + (8 - var7);
               this.field_m = this.field_m + 1;
               if (this.field_i == 512) {
@@ -152,7 +152,7 @@ final class bd {
                 this.field_i = 0;
                 this.field_m = 0;
               }
-              this.field_a[this.field_m] = (byte)b.a(255, var8 << 8 - var7);
+              this.field_a[this.field_m] = (byte)b.bitwiseAnd(255, var8 << 8 - var7);
               param1 = param1 - 8L;
               this.field_i = this.field_i + var7;
               var5_int++;
@@ -164,7 +164,7 @@ final class bd {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = param0[var5_int] << var6 & 255;
-            this.field_a[this.field_m] = (byte)om.a((int) this.field_a[this.field_m], var8Lifetime1 >>> var7);
+            this.field_a[this.field_m] = (byte)om.bitwiseOr((int) this.field_a[this.field_m], var8Lifetime1 >>> var7);
           }
           if (param2 <= 93) {
             field_f = 119;
@@ -180,7 +180,7 @@ final class bd {
               this.field_i = 0;
               this.field_m = 0;
             }
-            this.field_a[this.field_m] = (byte)b.a(255, var8Lifetime1 << -var7 + 8);
+            this.field_a[this.field_m] = (byte)b.bitwiseAnd(255, var8Lifetime1 << -var7 + 8);
             this.field_i = this.field_i + (int)param1;
           }
           return;
@@ -220,7 +220,7 @@ final class bd {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_c[var2] = GameApplet.a(j.a((long)this.field_a[var3 + 7], 255L), GameApplet.a(GameApplet.a(j.a((long)this.field_a[5 + var3], 255L) << 16, GameApplet.a(j.a(4278190080L, (long)this.field_a[4 + var3] << 24), GameApplet.a(j.a((long)this.field_a[var3 + 3] << 32, 1095216660480L), GameApplet.a(GameApplet.a(j.a(71776119061217280L, (long)this.field_a[1 + var3] << 48), (long)this.field_a[var3] << 56), j.a((long)this.field_a[var3 + 2], 255L) << 40)))), j.a(255L, (long)this.field_a[var3 + 6]) << 8));
+          this.field_c[var2] = GameApplet.a(j.bitwiseAnd((long)this.field_a[var3 + 7], 255L), GameApplet.a(GameApplet.a(j.bitwiseAnd((long)this.field_a[5 + var3], 255L) << 16, GameApplet.a(j.bitwiseAnd(4278190080L, (long)this.field_a[4 + var3] << 24), GameApplet.a(j.bitwiseAnd((long)this.field_a[var3 + 3] << 32, 1095216660480L), GameApplet.a(GameApplet.a(j.bitwiseAnd(71776119061217280L, (long)this.field_a[1 + var3] << 48), (long)this.field_a[var3] << 56), j.bitwiseAnd((long)this.field_a[var3 + 2], 255L) << 40)))), j.bitwiseAnd(255L, (long)this.field_a[var3 + 6]) << 8));
           var3 += 8;
           var2++;
         }
@@ -236,7 +236,7 @@ final class bd {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_b[var3Lifetime1] = GameApplet.a(this.field_b[var3Lifetime1], TextLayout.field_h[var4][b.a(255, (int)(this.field_h[b.a(7, -var4 + var3Lifetime1)] >>> var5))]);
+              this.field_b[var3Lifetime1] = GameApplet.a(this.field_b[var3Lifetime1], TextLayout.field_h[var4][b.bitwiseAnd(255, (int)(this.field_h[b.bitwiseAnd(7, -var4 + var3Lifetime1)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -251,7 +251,7 @@ final class bd {
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_b[var3Lifetime1Lifetime2] = GameApplet.a(this.field_b[var3Lifetime1Lifetime2], TextLayout.field_h[var7][b.a(255, (int)(this.field_k[b.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
+              this.field_b[var3Lifetime1Lifetime2] = GameApplet.a(this.field_b[var3Lifetime1Lifetime2], TextLayout.field_h[var7][b.bitwiseAnd(255, (int)(this.field_k[b.bitwiseAnd(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
               var7++;
               var5Lifetime1 -= 8;
             }

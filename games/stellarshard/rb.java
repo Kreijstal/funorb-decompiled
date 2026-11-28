@@ -132,7 +132,7 @@ abstract class rb extends GameApplet {
             if (ModalDialogHost.field_F != -1 &&
               ModalDialogHost.field_F != 0) {
               ModalDialogHost.field_F = -1;
-              ee.a(112);
+              ByteArrayPoolSupport.a(112);
             }
             if (!param1) {
               var5_intLifetime2 = wj.a(wh.a((byte) 97), this.field_v, this.field_x, tc.c(-5), (byte) 74, false);
@@ -335,7 +335,7 @@ abstract class rb extends GameApplet {
         }
         FrameTimer.a(36);
         ValidationStatusIcon.g(256);
-        if (!ee.b(-117) &&
+        if (!ByteArrayPoolSupport.b(-117) &&
           eg.field_d != 11) {
           SpriteState.d((byte) -56);
         }
@@ -427,7 +427,7 @@ abstract class rb extends GameApplet {
           if (ModalDialogHost.field_F != -1 &&
             ModalDialogHost.field_F != 0) {
             ModalDialogHost.field_F = -1;
-            ee.a(88);
+            ByteArrayPoolSupport.a(88);
           }
         }
         if (ModalDialogHost.field_F == 0 &&
@@ -469,7 +469,7 @@ abstract class rb extends GameApplet {
         if (DiskCacheWorker.field_f == 3 &&
           ni.a(wf.field_e, am.field_g, TextFieldValidator.field_i, (byte) -104) &&
           dj.a(am.field_g, (byte) -126)) {
-          ol.b(-114);
+          GrowableIntArray.b(-114);
           SoundCache.a(false);
           am.field_i = fl.field_c;
           PcmResampler.field_d = false;

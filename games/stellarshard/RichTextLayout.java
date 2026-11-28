@@ -196,7 +196,7 @@ final class RichTextLayout extends TextLayout {
               return;
             }
             var4 = param0.getGraphics();
-            field_h.a(param1, var4, -22984, param2);
+            field_h.drawImage(param1, var4, -22984, param2);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -382,9 +382,9 @@ final class RichTextLayout extends TextLayout {
                 var10 = var10 ^ 285L;
             }
             var12 = var10 ^ var2;
-            field_l[0][var0] = ib.a(ib.a(ib.a(var8 << 16, ib.a(ib.a(var2 << 32, ib.a(ib.a(var2 << 56, var2 << 48), var6 << 40)), var10 << 24)), var4 << 8), var12);
+            field_l[0][var0] = ib.bitwiseOr(ib.bitwiseOr(ib.bitwiseOr(var8 << 16, ib.bitwiseOr(ib.bitwiseOr(var2 << 32, ib.bitwiseOr(ib.bitwiseOr(var2 << 56, var2 << 48), var6 << 40)), var10 << 24)), var4 << 8), var12);
             for (var14 = 1; var14 < 8; var14++) {
-                field_l[var14][var0] = ib.a(field_l[var14 - 1][var0] >>> 8, field_l[-1 + var14][var0] << 56);
+                field_l[var14][var0] = ib.bitwiseOr(field_l[var14 - 1][var0] >>> 8, field_l[-1 + var14][var0] << 56);
             }
             var0++;
         }
@@ -393,7 +393,7 @@ final class RichTextLayout extends TextLayout {
         var0 = var15;
         while (var15 <= 10) {
             var1 = 8 * (-1 + var15);
-            field_j[var15] = ue.a(ue.a(ue.a(ue.a(ue.a(ue.a(stellarshard.a(field_l[2][var1 + 2], 280375465082880L), ue.a(stellarshard.a(-72057594037927936L, field_l[0][var1]), stellarshard.a(71776119061217280L, field_l[1][1 + var1]))), stellarshard.a(field_l[3][var1 + 3], 1095216660480L)), stellarshard.a(4278190080L, field_l[4][var1 + 4])), stellarshard.a(16711680L, field_l[5][5 + var1])), stellarshard.a(field_l[6][6 + var1], 65280L)), stellarshard.a(field_l[7][7 + var1], 255L));
+            field_j[var15] = ue.bitwiseXor(ue.bitwiseXor(ue.bitwiseXor(ue.bitwiseXor(ue.bitwiseXor(ue.bitwiseXor(stellarshard.a(field_l[2][var1 + 2], 280375465082880L), ue.bitwiseXor(stellarshard.a(-72057594037927936L, field_l[0][var1]), stellarshard.a(71776119061217280L, field_l[1][1 + var1]))), stellarshard.a(field_l[3][var1 + 3], 1095216660480L)), stellarshard.a(4278190080L, field_l[4][var1 + 4])), stellarshard.a(16711680L, field_l[5][5 + var1])), stellarshard.a(field_l[6][6 + var1], 65280L)), stellarshard.a(field_l[7][7 + var1], 255L));
             var15++;
         }
         field_p = "No highscores";

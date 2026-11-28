@@ -814,7 +814,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
     }
 
     final static IndexedSprite computeIndexedSprite0019(int integerArgument1) {
-        IndexedSprite indexedSpriteLocal1 = new IndexedSprite(MixedSupport029.integerState0181, MixedSupport057.integerState0297, InputAdapter003.integerArrayState0206[0], MixedSupport039.integerArrayState0047[0], MixedSupport123.integerArrayState0208[0], MixedSupport052.integerArrayState0054[0], SceneWidgetPart011.byteArrayArrayState0008[integerArgument1], NetworkSupport006.integerArrayState0152);
+        IndexedSprite indexedSpriteLocal1 = new IndexedSprite(MixedSupport029.integerState0181, MixedSupport057.integerState0297, InputAdapter003.integerArrayState0206[0], MixedSupport039.integerArrayState0047[0], MixedSupport123.integerArrayState0208[0], MixedSupport052.integerArrayState0054[0], SceneWidgetPart011.byteArrayArrayState0008[integerArgument1], GrowableIntArray.integerArrayState0152);
         MixedSupport089.performAction1138(127);
         return indexedSpriteLocal1;
     }

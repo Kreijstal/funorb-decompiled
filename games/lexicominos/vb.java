@@ -45,7 +45,7 @@ final class vb extends IntrusiveNode {
             var13 = param1;
             var14 = param9;
             var15 = (16711422 & var17[var11]) >> 1;
-            var10[var11] = vg.a(var13 >> 9, 65280) + vg.a(var12 >> 1, 16711680) + (vg.a(var14, 33440375) >> 17) + var15;
+            var10[var11] = vg.bitwiseAnd(var13 >> 9, 65280) + vg.bitwiseAnd(var12 >> 1, 16711680) + (vg.bitwiseAnd(var14, 33440375) >> 17) + var15;
             param9 = param9 + param3;
             param4 = param4 + param0;
             param1 = param1 + param7;

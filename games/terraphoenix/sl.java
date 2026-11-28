@@ -25,7 +25,7 @@ final class sl {
               var3_int = 1;
               il.field_e = false;
             }
-            sa.a(-26, vb.b((byte) -27), fc.a(-1), DialogMessagePane.field_H, var3_int != 0);
+            sa.a(-26, vb.b((byte) -27), GrowableIntArray.a(-1), DialogMessagePane.field_H, var3_int != 0);
           } else {
             if (!sl.a((byte) -40)) {
               SoftwareRasterizer.clearRaster();
@@ -59,7 +59,7 @@ final class sl {
         }
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseXor(int param0, int param1) {
         return param0 ^ param1;
     }
 

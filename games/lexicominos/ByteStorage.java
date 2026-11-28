@@ -129,7 +129,7 @@ abstract class ByteStorage {
             for (var8Lifetime1 = param1; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
               var9Lifetime1 = ff.field_a[var8Lifetime1];
               var10Lifetime1 = ff.field_a[1 + var8Lifetime1];
-              if (cb.a((byte) 63, param2, var10Lifetime1, var9Lifetime1)) {
+              if (MusicPatchNode.a((byte) 63, param2, var10Lifetime1, var9Lifetime1)) {
                 ff.field_a[var8Lifetime1] = var10Lifetime1;
                 ff.field_a[1 + var8Lifetime1] = var9Lifetime1;
               }

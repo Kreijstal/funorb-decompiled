@@ -38,7 +38,7 @@ final class he {
           if (param3 != 16777215) {
             field_b = (ResourceArchive) null;
           }
-          var15 = ll.a(mg.field_a, vf.field_e, (byte) 121);
+          var15 = ll.a(ByteArrayPoolSupport.field_a, vf.field_e, (byte) 121);
           var14 = var15;
           var13 = var14;
           var7 = var13;
@@ -243,7 +243,7 @@ final class he {
           if (param0 != 1) {
             he.a(-116);
           }
-          if (Model.field_o == mg.field_b) {
+          if (Model.field_o == ByteArrayPoolSupport.field_b) {
             return null;
           }
           if (ag.field_c == Model.field_o &&
@@ -252,7 +252,7 @@ final class he {
             stackIn_8_0 = qi.field_d;
             return stackIn_8_0;
           }
-          Model.field_o = mg.field_b;
+          Model.field_o = ByteArrayPoolSupport.field_b;
           qi.field_d = null;
           on.field_b = param1;
           stackIn_10_0 = null;

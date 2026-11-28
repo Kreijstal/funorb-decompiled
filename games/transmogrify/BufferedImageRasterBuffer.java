@@ -6,14 +6,14 @@ import java.util.*;
 final class BufferedImageRasterBuffer extends RasterBuffer {
     private java.awt.Component field_h;
 
-    final void a(int param0, int param1, java.awt.Graphics param2, int param3) {
+    final void drawImage(int param0, int param1, java.awt.Graphics param2, int param3) {
         param2.drawImage(this.field_f, param1, param3, (java.awt.image.ImageObserver) ((Object) this.field_h));
         if (param0 != -32299) {
           this.field_h = (java.awt.Component) null;
         }
     }
 
-    final void a(int param0, int param1, java.awt.Component param2, byte param3) {
+    final void initialize(int param0, int param1, java.awt.Component param2, byte param3) {
         this.field_d = param0;
         this.field_a = new int[1 + param1 * param0];
         this.field_g = param1;
@@ -23,7 +23,7 @@ final class BufferedImageRasterBuffer extends RasterBuffer {
         java.awt.image.WritableRaster var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_d, this.field_g), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
         this.field_f = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
         this.field_h = param2;
-        this.a(113);
+        this.setAsRasterTarget(113);
     }
 
     public BufferedImageRasterBuffer() {

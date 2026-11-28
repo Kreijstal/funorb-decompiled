@@ -52,7 +52,7 @@ final class ac {
           stackIn_2_2 = 1000000;
           stackIn_2_3 = param1;
           stackIn_3_4 = !(param3);
-          ((CrossfadingMidiPcmStream) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4, param4, param2);
+          ((CrossfadingMidiPcmStream) (Object) stackIn_2_0).switchTrack(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4, param4, param2);
           if (!param0) {
             return;
           }

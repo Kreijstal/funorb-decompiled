@@ -231,7 +231,7 @@ final class vg {
           var11 = var11 + var9Lifetime1;
           IntrusiveNode.field_d.drawString(DisplayNameSelectionPanel.field_F, var4Lifetime1, var11, 0, -1);
           var4Lifetime1 = var4Lifetime1 + IntrusiveNode.field_d.stringWidth(DisplayNameSelectionPanel.field_F);
-          for (var14Lifetime1 = 0; wd.field_k[var8] > var14Lifetime1; var14Lifetime1++) {
+          for (var14Lifetime1 = 0; MidiNoteMask.field_k[var8] > var14Lifetime1; var14Lifetime1++) {
             og.field_b.draw(var4Lifetime1, -IntrusiveNode.field_d.field_y + var11);
             var4Lifetime1 = var4Lifetime1 + og.field_b.field_n / 3;
           }
@@ -331,27 +331,27 @@ final class vg {
                     if (!this.field_j.f(-9112)) {
                       break regionExit2;
                     }
-                    vk.a((byte) 127, FullscreenFocusCanvas.field_d[0]);
+                    ByteArrayPoolSupport.a((byte) 127, FullscreenFocusCanvas.field_d[0]);
                     qf.field_d = 0;
                     break regionExit1;
                   }
                   if (16 == var9) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 89, FullscreenFocusCanvas.field_d[0]);
+                      ByteArrayPoolSupport.a((byte) 89, FullscreenFocusCanvas.field_d[0]);
                       qf.field_d = 0;
                     }
                     break regionExit1;
                   }
                   if (var9 == 14) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 120, FullscreenFocusCanvas.field_d[0]);
+                      ByteArrayPoolSupport.a((byte) 120, FullscreenFocusCanvas.field_d[0]);
                       qf.field_d = 4;
                     }
                     break regionExit1;
                   }
                   if (var9 == 3) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 110, FullscreenFocusCanvas.field_d[0]);
+                      ByteArrayPoolSupport.a((byte) 110, FullscreenFocusCanvas.field_d[0]);
                       wc.field_d = this.field_i;
                       qf.field_d = 3;
                       ra.field_a = 0;
@@ -360,20 +360,20 @@ final class vg {
                   }
                   if (var9 == 6) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 125, FullscreenFocusCanvas.field_d[0]);
+                      ByteArrayPoolSupport.a((byte) 125, FullscreenFocusCanvas.field_d[0]);
                       qf.field_d = wc.field_d;
                     }
                     break regionExit1;
                   }
                   if (var9 == 2) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 91, FullscreenFocusCanvas.field_d[0]);
+                      ByteArrayPoolSupport.a((byte) 91, FullscreenFocusCanvas.field_d[0]);
                       qf.field_d = 2;
                     }
                     break regionExit1;
                   }
                   if (12 == var9) {
-                    var6 = kc.field_g;
+                    var6 = MusicPatchNode.field_g;
                     var7 = 0;
                     if (this.field_j.e(0)) {
                       SocketConnector.a(0, 9956);
@@ -401,7 +401,7 @@ final class vg {
                       lf.a((byte) -125);
                       var7 = 1;
                     }
-                    if (kc.field_g == var6 &&
+                    if (MusicPatchNode.field_g == var6 &&
                       var7 == 0) {
                       break regionExit2;
                     }
@@ -454,7 +454,7 @@ final class vg {
                     if (!this.field_j.f(-9112)) {
                       break regionExit2;
                     }
-                    vk.a((byte) 83, FullscreenFocusCanvas.field_d[0]);
+                    ByteArrayPoolSupport.a((byte) 83, FullscreenFocusCanvas.field_d[0]);
                     if (null != ub.field_c) {
                       GzipDecompressor.b(5);
                     } else {
@@ -465,7 +465,7 @@ final class vg {
                   }
                   if (var9 == 7) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 120, FullscreenFocusCanvas.field_d[0]);
+                      ByteArrayPoolSupport.a((byte) 120, FullscreenFocusCanvas.field_d[0]);
                       if (hc.field_u == 0 &&
                         SecondaryNodeDeque.field_g == 0) {
                         qf.field_d = 0;
@@ -488,7 +488,7 @@ final class vg {
                   }
                   if (var9 == 22) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 127, FullscreenFocusCanvas.field_d[0]);
+                      ByteArrayPoolSupport.a((byte) 127, FullscreenFocusCanvas.field_d[0]);
                       wc.field_d = 0;
                       qf.field_d = 0;
                     }
@@ -496,28 +496,28 @@ final class vg {
                   }
                   if (8 == var9) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 92, FullscreenFocusCanvas.field_d[0]);
+                      ByteArrayPoolSupport.a((byte) 92, FullscreenFocusCanvas.field_d[0]);
                       DisplayNameSelectionPanel.field_y = 0;
                     }
                     break regionExit1;
                   }
                   if (var9 == 9) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 88, FullscreenFocusCanvas.field_d[0]);
+                      ByteArrayPoolSupport.a((byte) 88, FullscreenFocusCanvas.field_d[0]);
                       DisplayNameSelectionPanel.field_y = 1;
                     }
                     break regionExit1;
                   }
                   if (var9 == 10) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 105, FullscreenFocusCanvas.field_d[0]);
+                      ByteArrayPoolSupport.a((byte) 105, FullscreenFocusCanvas.field_d[0]);
                       DisplayNameSelectionPanel.field_y = 2;
                     }
                     break regionExit1;
                   }
                   if (var9 == 15) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 92, FullscreenFocusCanvas.field_d[0]);
+                      ByteArrayPoolSupport.a((byte) 92, FullscreenFocusCanvas.field_d[0]);
                       if (4 != this.field_i &&
                         this.field_i != 2) {
                         if ((this.field_i == 5)) {
@@ -534,7 +534,7 @@ final class vg {
                       break regionExit2;
                     }
                     if (!(!this.a(param1, false))) {
-                      vk.a((byte) 105, FullscreenFocusCanvas.field_d[0]);
+                      ByteArrayPoolSupport.a((byte) 105, FullscreenFocusCanvas.field_d[0]);
                       ra.field_a = ra.field_a - 1;
                       if ((ra.field_a == 0)) {
                         this.field_j.field_d = 2;
@@ -547,7 +547,7 @@ final class vg {
                       break regionExit2;
                     }
                     if (!(!this.a(param1, false))) {
-                      vk.a((byte) 127, FullscreenFocusCanvas.field_d[0]);
+                      ByteArrayPoolSupport.a((byte) 127, FullscreenFocusCanvas.field_d[0]);
                       ra.field_a = ra.field_a + 1;
                       if ((-1 + db.field_b.length == ra.field_a)) {
                         if (wc.field_d != 1 &&
@@ -562,7 +562,7 @@ final class vg {
                   }
                   if (var9 == 11) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 106, FullscreenFocusCanvas.field_d[0]);
+                      ByteArrayPoolSupport.a((byte) 106, FullscreenFocusCanvas.field_d[0]);
                       DraggableWidgetContainer.a((byte) 93, ha.b(125));
                     }
                     break regionExit1;
@@ -571,7 +571,7 @@ final class vg {
                     break regionExit1;
                   }
                   if (this.field_j.d(104)) {
-                    vk.a((byte) 120, FullscreenFocusCanvas.field_d[0]);
+                    ByteArrayPoolSupport.a((byte) 120, FullscreenFocusCanvas.field_d[0]);
                     while (true) {
                       fieldTemp$0 = am.field_n + 1;
                       am.field_n = am.field_n + 1;
@@ -587,7 +587,7 @@ final class vg {
                   if (!this.field_j.a((byte) -112)) {
                     break regionExit1;
                   }
-                  vk.a((byte) 113, FullscreenFocusCanvas.field_d[0]);
+                  ByteArrayPoolSupport.a((byte) 113, FullscreenFocusCanvas.field_d[0]);
                   while (true) {
                     fieldTemp$1 = am.field_n - 1;
                     am.field_n = am.field_n - 1;
@@ -603,7 +603,7 @@ final class vg {
                 }
                 if ((!(!this.field_j.f(-9112))) &&
                   ((var4 != 0))) {
-                  vk.a((byte) 112, FullscreenFocusCanvas.field_d[0]);
+                  ByteArrayPoolSupport.a((byte) 112, FullscreenFocusCanvas.field_d[0]);
                   wc.field_d = 0;
                   qf.field_d = -1;
                 }
@@ -613,27 +613,27 @@ final class vg {
                 break regionExit1;
               }
               if (var4 != 0) {
-                vk.a((byte) 105, FullscreenFocusCanvas.field_d[0]);
+                ByteArrayPoolSupport.a((byte) 105, FullscreenFocusCanvas.field_d[0]);
                 FullscreenNoticeType.field_c = null;
                 ArchiveRequest.field_t = null;
                 rc.a(true, (byte) -13);
                 wc.field_d = 0;
                 qf.field_d = -1;
                 uc.field_d = false;
-                wd.a(17099, true, bd.field_u[1]);
+                MidiNoteMask.a(17099, true, bd.field_u[1]);
               }
             } else {
               if (!this.field_j.f(-9112)) {
                 break regionExit1;
               }
               if (var4 != 0) {
-                vk.a((byte) 91, FullscreenFocusCanvas.field_d[0]);
+                ByteArrayPoolSupport.a((byte) 91, FullscreenFocusCanvas.field_d[0]);
                 FullscreenNoticeType.field_c = null;
                 ArchiveRequest.field_t = null;
                 rc.a(false, (byte) -13);
                 wc.field_d = 0;
                 qf.field_d = -1;
-                wd.a(17099, true, bd.field_u[1]);
+                MidiNoteMask.a(17099, true, bd.field_u[1]);
               }
             }
           }
@@ -679,7 +679,7 @@ final class vg {
         if ((this.field_i == 2 ||
           this.field_i == 6) &&
           null == d.field_e) {
-          wd.a(17099, true, bd.field_u[6]);
+          MidiNoteMask.a(17099, true, bd.field_u[6]);
         }
         if (param0 != 122) {
           this.g(-27, -43);
@@ -1133,7 +1133,7 @@ final class vg {
         }
     }
 
-    static int c(int param0, int param1) {
+    static int bitwiseAnd(int param0, int param1) {
         return param0 & param1;
     }
 
@@ -1220,7 +1220,7 @@ final class vg {
           if (var8 != 12) {
             stackIn_40_0 = (lb.field_a << 8) / 128;
           } else {
-            stackIn_40_0 = kc.field_g;
+            stackIn_40_0 = MusicPatchNode.field_g;
           }
           var12 = stackIn_40_0;
           var12 = 80 * var12 / 256;

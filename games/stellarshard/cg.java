@@ -114,14 +114,14 @@ final class cg {
                 return stackIn_2_0;
               }
               var5 = (RasterBuffer) (var4.newInstance());
-              var5.a(param0, param3, param2, (byte) -122);
+              var5.initialize(param0, param3, param2, (byte) -122);
               stackIn_4_0 = var5;
               return stackIn_4_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
               var5_ref = new ImageProducerRasterBuffer();
-              ((RasterBuffer) ((Object) var5_ref)).a(param0, param3, param2, (byte) -117);
+              ((RasterBuffer) ((Object) var5_ref)).initialize(param0, param3, param2, (byte) -117);
               stackIn_6_0 = var5_ref;
               return (RasterBuffer) ((Object) stackIn_6_0);
             }

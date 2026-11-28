@@ -119,7 +119,7 @@ final class ak extends DefaultTextWidgetRenderer {
               }
             }
           } else {
-            gl.a(this.field_s, 0, param1.field_s, 0, 6);
+            ArrayBlockSupport.copyObjectRange(this.field_s, 0, param1.field_s, 0, 6);
           }
           if (param0 < 100) {
             ak.a((byte) -47);

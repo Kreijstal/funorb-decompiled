@@ -280,11 +280,11 @@ final class jk {
         KeyboardInput.field_d = tl.a(4314);
         TunnelCamera.field_Z = new ModalDialogHost();
         if (param0 <= -29) {
-          wl.a(-106, true, true);
+          GrowableIntArray.a(-106, true, true);
           return;
         }
         jk.clearStaticReferences(54);
-        wl.a(-106, true, true);
+        GrowableIntArray.a(-106, true, true);
     }
 
     final static int a(byte param0, int param1) {
@@ -305,7 +305,7 @@ final class jk {
         byte[] var2 = rj.field_f[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
-          var3[var4_int] = an.field_p[va.a(255, (int) var2[var4_int])];
+          var3[var4_int] = an.field_p[va.bitwiseAnd(255, (int) var2[var4_int])];
         }
         if (param0 == 255) {
           var4 = new RgbSprite(kb.field_a, em.field_e, DualLinkNode.field_p[0], ij.field_r[0], InteractiveWidget.field_I[0], TextLineMetrics.field_f[0], var3);

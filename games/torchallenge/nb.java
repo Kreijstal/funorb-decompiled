@@ -185,7 +185,7 @@ final class nb {
           SectorCacheStore.field_a.setMasterVolume(param0, false);
         }
         if (null != SectorCacheStore.field_d) {
-          SectorCacheStore.field_d.a(-127, param0);
+          SectorCacheStore.field_d.setVolume(-127, param0);
         }
     }
 

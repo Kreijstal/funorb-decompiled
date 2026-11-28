@@ -47,7 +47,7 @@ final class jh extends IntrusiveNode {
         try {
           var4 = (vi) (AccountServiceResult.field_g.beginBackward(9272));
           while (var4 != null) {
-            qd.a(param0, param1 ^ 24621, var4);
+            MusicPatch.a(param0, param1 ^ 24621, var4);
             var4 = (vi) (AccountServiceResult.field_g.nextBackward((byte) -119));
           }
           if (param1 != -31890) {

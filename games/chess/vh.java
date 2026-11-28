@@ -15,7 +15,7 @@ final class vh {
 
     final static boolean a(int param0, int param1, int param2) {
         if (vg.field_a == 13) {
-          kf.a(-87);
+          MusicPatch.a(-87);
           return true;
         }
         if (102 == vg.field_a) {

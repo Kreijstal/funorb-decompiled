@@ -54,16 +54,16 @@ final class o {
     final static void a(int param0, PacketBuffer param1) {
         ta.field_e = param1.readUnsignedShort(-1174051992) << 5;
         int var2_int = param1.readUnsignedByte(7909);
-        mc.field_f = (var2_int & 7) << 18;
+        ByteArrayPoolSupport.field_f = (var2_int & 7) << 18;
         if (param0 != -20954) {
           return;
         }
         try {
           ta.field_e = ta.field_e + (var2_int >> 3);
-          mc.field_f = mc.field_f + (param1.readUnsignedShort(param0 ^ 1174064462) << 2);
+          ByteArrayPoolSupport.field_f = ByteArrayPoolSupport.field_f + (param1.readUnsignedShort(param0 ^ 1174064462) << 2);
           var2_int = param1.readUnsignedByte(param0 + 28863);
           PacketBuffer.field_i = var2_int << 15 & 2064384;
-          mc.field_f = mc.field_f + (var2_int >> 6);
+          ByteArrayPoolSupport.field_f = ByteArrayPoolSupport.field_f + (var2_int >> 6);
           PacketBuffer.field_i = PacketBuffer.field_i + (param1.readUnsignedByte(7909) << 7);
           var2_int = param1.readUnsignedByte(7909);
           og.field_f = (var2_int & 1) << 16;

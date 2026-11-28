@@ -103,7 +103,7 @@ final class q {
           jj.field_e = param1;
           var2 = vh.a((byte) 115, "TUTORIAL_SHARED,0");
           if (var2 != null) {
-            ProgressMessageDialog.field_ub[0] = ad.a(dm.a(param0, -29413), var2);
+            ProgressMessageDialog.field_ub[0] = ad.a(dm.bitwiseXor(param0, -29413), var2);
           }
           var2Lifetime1 = vh.a((byte) 113, "TUTORIAL_SHARED,1");
           if (null != var2Lifetime1) {
@@ -123,7 +123,7 @@ final class q {
           }
           var2Lifetime5 = vh.a((byte) 87, "HELP_HEAD,2");
           if (null != var2Lifetime5) {
-            IntrusiveNode.field_i[2] = ad.a(dm.a(param0, -29413), var2Lifetime5);
+            IntrusiveNode.field_i[2] = ad.a(dm.bitwiseXor(param0, -29413), var2Lifetime5);
           }
           var2Lifetime6 = vh.a((byte) 53, "HELP_HEAD,3");
           if (var2Lifetime6 != null) {
@@ -211,7 +211,7 @@ final class q {
           }
           var2Lifetime27 = vh.a((byte) 61, "achievement_criteria,0");
           if (null != var2Lifetime27) {
-            ai.field_a[0] = ad.a(dm.a(param0, -29413), var2Lifetime27);
+            ai.field_a[0] = ad.a(dm.bitwiseXor(param0, -29413), var2Lifetime27);
           }
           var2Lifetime28 = vh.a((byte) 100, "achievement_criteria,1");
           if (var2Lifetime28 != null) {
@@ -223,7 +223,7 @@ final class q {
           }
           var2Lifetime30 = vh.a((byte) 97, "achievement_criteria,3");
           if (null != var2Lifetime30) {
-            ai.field_a[3] = ad.a(dm.a(param0, -29413), var2Lifetime30);
+            ai.field_a[3] = ad.a(dm.bitwiseXor(param0, -29413), var2Lifetime30);
           }
           var2Lifetime31 = vh.a((byte) 71, "achievement_criteria,4");
           if (null != var2Lifetime31) {
@@ -263,7 +263,7 @@ final class q {
           }
           var2Lifetime40 = vh.a((byte) 86, "gameoptnames,0,1");
           if (var2Lifetime40 != null) {
-            wh.field_g[0][1] = ad.a(dm.a(param0, -29413), var2Lifetime40);
+            wh.field_g[0][1] = ad.a(dm.bitwiseXor(param0, -29413), var2Lifetime40);
           }
           var2Lifetime41 = vh.a((byte) 87, "gameoptnames,0,2");
           if (var2Lifetime41 != null) {

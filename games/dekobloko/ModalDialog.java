@@ -229,9 +229,9 @@ abstract class ModalDialog extends ComponentContainer {
               throw new IllegalStateException();
             }
             MixedSupport121.stringArrayState0047 = new String[integerLocal17];
-            MixedSupport008.performAction0077(MixedSupport138.stringArrayState0053, 0, MixedSupport121.stringArrayState0047, 0, integerLocal17);
+            ArrayBlockSupport.copyObjectRange(MixedSupport138.stringArrayState0053, 0, MixedSupport121.stringArrayState0047, 0, integerLocal17);
             ClientException.stringArrayState0006 = new String[-1 + (integerLocal15 - integerLocal17)];
-            MixedSupport008.performAction0077(MixedSupport138.stringArrayState0053, 1 + integerLocal17, ClientException.stringArrayState0006, 0, -integerLocal17 + integerLocal15 - 1);
+            ArrayBlockSupport.copyObjectRange(MixedSupport138.stringArrayState0053, 1 + integerLocal17, ClientException.stringArrayState0006, 0, -integerLocal17 + integerLocal15 - 1);
             integerLocal17 = -1;
             integerLocal15 = PasswordValidator.wrapBalancedText(NodeHashTableIterator.substituteIndexedPlaceholders(86, MixedSupport045.stringState0189, new String[]{"<br><%0><br>"}), 112, MixedSupport093.integerState0568, MixedSupport138.stringArrayState0053, EditableTextField.bitmapFontState0019);
             for (integerLocal19 = 0; integerLocal19 < integerLocal15; integerLocal19++) {
@@ -245,9 +245,9 @@ abstract class ModalDialog extends ComponentContainer {
               throw new IllegalStateException();
             }
             BirthDateInput.stringArrayState0051 = new String[integerLocal17];
-            MixedSupport008.performAction0077(MixedSupport138.stringArrayState0053, 0, BirthDateInput.stringArrayState0051, 0, integerLocal17);
+            ArrayBlockSupport.copyObjectRange(MixedSupport138.stringArrayState0053, 0, BirthDateInput.stringArrayState0051, 0, integerLocal17);
             SceneWidgetPart014.stringArrayState0057 = new String[integerLocal15 - (integerLocal17 + 1)];
-            MixedSupport008.performAction0077(MixedSupport138.stringArrayState0053, integerLocal17 + 1, SceneWidgetPart014.stringArrayState0057, 0, -1 + (-integerLocal17 + integerLocal15));
+            ArrayBlockSupport.copyObjectRange(MixedSupport138.stringArrayState0053, integerLocal17 + 1, SceneWidgetPart014.stringArrayState0057, 0, -1 + (-integerLocal17 + integerLocal15));
             if (MixedSupport121.stringArrayState0047.length >= BirthDateInput.stringArrayState0051.length) {
               stackIntegerLocal1 = MixedSupport121.stringArrayState0047.length;
             } else {
@@ -274,7 +274,7 @@ abstract class ModalDialog extends ComponentContainer {
             EditableTextField.stringArrayState0039[2] = MixedSupport147.stringState0622;
             MixedSupport066.integerArrayState0119[3] = 1;
             EditableTextField.stringArrayState0039[3] = ProxySocketFactory.stringState0494;
-            EditableTextField.stringArrayState0039[4] = MixedSupport130.stringState0565;
+            EditableTextField.stringArrayState0039[4] = ByteArrayPoolSupport.stringState0565;
             BirthDateValidator.integerArrayState0192[1] = 2;
             EditableTextField.stringArrayState0039[5] = "";
             for (integerLocal39 = 0; integerLocal39 < integerLocal19; integerLocal39++) {
@@ -357,9 +357,9 @@ abstract class ModalDialog extends ComponentContainer {
               integerLocal30 = integerLocal30 + BufferedSocket.integerState0665;
               integerLocal32 = BufferedSocket.integerState0661 - (integerLocal38 >> 1);
               SceneWidgetPart012.integerArrayArrayState0020[integerLocal36] = new int[4];
-              SceneWidgetPart012.integerArrayArrayState0020[integerLocal36][0] = integerLocal32 - NetworkSupport006.integerState0499;
+              SceneWidgetPart012.integerArrayArrayState0020[integerLocal36][0] = integerLocal32 - GrowableIntArray.integerState0499;
               SceneWidgetPart012.integerArrayArrayState0020[integerLocal36][1] = integerLocal30;
-              SceneWidgetPart012.integerArrayArrayState0020[integerLocal36][2] = integerLocal38 + (NetworkSupport006.integerState0499 << 1);
+              SceneWidgetPart012.integerArrayArrayState0020[integerLocal36][2] = integerLocal38 + (GrowableIntArray.integerState0499 << 1);
               integerLocal30 = integerLocal30 + ((AccountFieldStatusIndicator.integerState0575 << 1) + BufferedSocket.integerState0665 + NineSliceSprite.integerState0100);
               SceneWidgetPart012.integerArrayArrayState0020[integerLocal36][3] = NineSliceSprite.integerState0100 + (AccountFieldStatusIndicator.integerState0575 << 1);
             } else {
@@ -382,7 +382,7 @@ abstract class ModalDialog extends ComponentContainer {
 
     final static void performAction0164(int integerArgument1, int integerArgument2) {
         int integerLocal1;
-        MixedSupport042.performAction0537(130, integerArgument2 ^ 12362, 16694016, NetworkSupport006.stringState0339, 80 + integerArgument1, SceneWidget.renderingSupport009State0007);
+        MixedSupport042.performAction0537(130, integerArgument2 ^ 12362, 16694016, GrowableIntArray.stringState0339, 80 + integerArgument1, SceneWidget.renderingSupport009State0007);
         int integerLocal2 = 145;
         AgeValidator.rgbSpriteState0026.drawScaled(integerArgument1 + 82, integerLocal2, 18, 18);
         integerLocal2 = integerLocal2 + (16 + MixedSupport045.computeInteger0552(188, 0, integerLocal2, SecondaryNodeHashTable.stringState0367, 16, 64, 16777215, DraggableWidgetContainer.renderingSupport009State0005, (byte) -127, 0, integerArgument1 + 110) * 16);

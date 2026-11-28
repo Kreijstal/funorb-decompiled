@@ -31,7 +31,7 @@ final class aj {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          gl.a(param4, param0, param1, param5, param20, param6, new wh(param17), param18, param9, new wh(param13), param14, param19, 0, param7, param2, param10, new wh(param12), param8, param16, param3, param11);
+          GrowableIntArray.a(param4, param0, param1, param5, param20, param6, new wh(param17), param18, param9, new wh(param13), param14, param19, 0, param7, param2, param10, new wh(param12), param8, param16, param3, param11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -97,8 +97,8 @@ final class aj {
           var8 = new byte[var3_int + param1.field_i.length];
           var7 = var8;
           var4 = var7;
-          o.copyByteRange(param2.field_i, 0, var8, 0, var3_int);
-          o.copyByteRange(param1.field_i, 0, var4, var3_int, param1.field_i.length);
+          ArrayBlockSupport.copyByteRange(param2.field_i, 0, var8, 0, var3_int);
+          ArrayBlockSupport.copyByteRange(param1.field_i, 0, var4, var3_int, param1.field_i.length);
           for (var5 = 0; var8.length > var5; var5++) {
             var4[var5] = (byte)(var4[var5] * 2);
           }

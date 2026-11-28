@@ -63,7 +63,7 @@ final class ha {
         var21 = Vertigo2.field_L ? 1 : 0;
         try {
           w.field_z = param2;
-          gl.field_p = param5;
+          MusicPatchEnvelope.field_p = param5;
           lh.field_c = param11;
           jq.field_c = param4;
           oq.field_G = param12;
@@ -100,10 +100,10 @@ final class ha {
           var24.field_O = 1;
           bf.field_c = new UiPanel(0L, AccountRequestState.field_b);
           bf.field_c.field_O = 1;
-          DirectByteStorage.field_j = new UiPanel(0L, vc.field_b, RichTextLayout.field_x.toUpperCase());
+          DirectByteStorage.field_j = new UiPanel(0L, ByteArrayPoolSupport.field_b, RichTextLayout.field_x.toUpperCase());
           qn.field_s = new UiPanel(0L, j.field_q, MouseWheelInput.field_j.toUpperCase());
           ja.field_b = new UiPanel(0L, dj.field_b);
-          po.field_a = new UiPanel(0L, MidiPcmStream.field_t, pe.field_u);
+          po.field_a = new UiPanel(0L, MidiPcmStream.field_t, MusicPatchNode.field_u);
           mn.field_n = new UiPanel(0L, kl.field_Ib, he.field_B);
           ve.field_f = new UiPanel(0L, kl.field_Ib, MenuSelectionCursor.field_h);
           ok.field_b = new UiPanel(0L, kl.field_Ib, SecondaryNodeHashTable.field_j);
@@ -166,7 +166,7 @@ final class ha {
             DebouncedFieldValidator.field_g.b(eq.field_z, 119);
           }
           DebouncedFieldValidator.field_g.b(vd.field_d, 124);
-          DisplayNameSelectionPanel.field_G = new UiPanel(0L, vc.field_b, pb.field_a.toUpperCase());
+          DisplayNameSelectionPanel.field_G = new UiPanel(0L, ByteArrayPoolSupport.field_b, pb.field_a.toUpperCase());
           ud.field_x = new UiPanel(0L, j.field_q);
           fd.field_s = new UiPanel(0L, dj.field_b);
           pc.field_b = new UiPanel(0L, gn.field_f, me.field_c.toUpperCase());
@@ -194,12 +194,12 @@ final class ha {
             LabeledWidgetContainer.field_S[3] = array$1;
             LabeledWidgetContainer.field_S[3][0] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, pp.field_r);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < ResizableModalDialog.field_O; var17_intLifetime2++) {
-              LabeledWidgetContainer.field_S[3][var17_intLifetime2 + 1] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, gl.field_p[var17_intLifetime2]);
+              LabeledWidgetContainer.field_S[3][var17_intLifetime2 + 1] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, MusicPatchEnvelope.field_p[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; var17_intLifetime3 < param7; var17_intLifetime3++) {
             IterableNodeHashTable.field_h[var17_intLifetime3 + 4] = new UiPanel(0L, fm.field_e, md.field_C[var17_intLifetime3]);
-            array$2 = new nk[b.a((int) oq.field_G[var17_intLifetime3], 255) + 1];
+            array$2 = new nk[b.bitwiseAnd((int) oq.field_G[var17_intLifetime3], 255) + 1];
             LabeledWidgetContainer.field_S[var17_intLifetime3 + 4] = array$2;
             LabeledWidgetContainer.field_S[4 + var17_intLifetime3][0] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, pp.field_r);
             for (var18 = 0; (255 & oq.field_G[var17_intLifetime3]) > var18; var18++) {
@@ -458,9 +458,9 @@ final class ha {
         SoftwareRasterizer.resetClip();
         pp.a(16777215, (byte) 57, param4, param0, param2, 40, param3, 3355443);
         MidiPcmStream.a(param2, param3, param0, 0, param4);
-        TextLayout.field_g.a(-60);
+        TextLayout.field_g.setAsRasterTarget(-60);
         for (var10Lifetime2 = 0; this.field_e.field_F.length > var10Lifetime2; var10Lifetime2++) {
-          this.field_e.field_F[var10Lifetime2] = b.a(this.field_e.field_F[var10Lifetime2], this.field_c.field_F[var10Lifetime2]);
+          this.field_e.field_F[var10Lifetime2] = b.bitwiseAnd(this.field_e.field_F[var10Lifetime2], this.field_c.field_F[var10Lifetime2]);
         }
         this.field_e.draw(var8, var9);
         return;

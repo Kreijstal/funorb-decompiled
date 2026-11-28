@@ -20,7 +20,7 @@ final class vm {
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
-        if (pe.field_r) {
+        if (MusicPatchNode.field_r) {
           return TextLineMetrics.field_a.processKeyInput(-88, DebouncedFieldValidator.field_f, TextureOperator.field_r);
         }
         if (BufferedSocket.field_a) {

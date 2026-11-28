@@ -352,9 +352,9 @@ final class StripedProgressWidget extends UiWidget {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_T[0][var0] = IntrusiveNode.a(IntrusiveNode.a(IntrusiveNode.a(IntrusiveNode.a(var10 << 24, IntrusiveNode.a(IntrusiveNode.a(IntrusiveNode.a(var2 << 48, var2 << 56), var6 << 40), var2 << 32)), var8 << 16), var4 << 8), var12);
+            field_T[0][var0] = IntrusiveNode.bitwiseOr(IntrusiveNode.bitwiseOr(IntrusiveNode.bitwiseOr(IntrusiveNode.bitwiseOr(var10 << 24, IntrusiveNode.bitwiseOr(IntrusiveNode.bitwiseOr(IntrusiveNode.bitwiseOr(var2 << 48, var2 << 56), var6 << 40), var2 << 32)), var8 << 16), var4 << 8), var12);
             for (var14 = 1; var14 < 8; var14++) {
-                field_T[var14][var0] = IntrusiveNode.a(field_T[-1 + var14][var0] >>> 8, field_T[var14 - 1][var0] << 56);
+                field_T[var14][var0] = IntrusiveNode.bitwiseOr(field_T[-1 + var14][var0] >>> 8, field_T[var14 - 1][var0] << 56);
             }
             var0++;
         }
@@ -363,7 +363,7 @@ final class StripedProgressWidget extends UiWidget {
         var0 = var15;
         while (var15 <= 10) {
             var1 = 8 * (-1 + var15);
-            field_V[var15] = pa.a(kd.a(field_T[7][var1 + 7], 255L), pa.a(kd.a(65280L, field_T[6][6 + var1]), pa.a(kd.a(field_T[5][5 + var1], 16711680L), pa.a(pa.a(kd.a(1095216660480L, field_T[3][var1 + 3]), pa.a(kd.a(field_T[2][var1 + 2], 280375465082880L), pa.a(kd.a(71776119061217280L, field_T[1][var1 + 1]), kd.a(field_T[0][var1], -72057594037927936L)))), kd.a(field_T[4][var1 + 4], 4278190080L)))));
+            field_V[var15] = pa.bitwiseXor(kd.bitwiseAnd(field_T[7][var1 + 7], 255L), pa.bitwiseXor(kd.bitwiseAnd(65280L, field_T[6][6 + var1]), pa.bitwiseXor(kd.bitwiseAnd(field_T[5][5 + var1], 16711680L), pa.bitwiseXor(pa.bitwiseXor(kd.bitwiseAnd(1095216660480L, field_T[3][var1 + 3]), pa.bitwiseXor(kd.bitwiseAnd(field_T[2][var1 + 2], 280375465082880L), pa.bitwiseXor(kd.bitwiseAnd(71776119061217280L, field_T[1][var1 + 1]), kd.bitwiseAnd(field_T[0][var1], -72057594037927936L)))), kd.bitwiseAnd(field_T[4][var1 + 4], 4278190080L)))));
             var15++;
         }
         field_W = 49;

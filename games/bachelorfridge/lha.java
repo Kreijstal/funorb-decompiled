@@ -106,7 +106,7 @@ final class lha {
                                             if (18 != var2) {
                                               if (var2 != 19) {
                                                 if (20 != var2) {
-                                                  uf.field_c.b(-5359);
+                                                  uf.field_c.releasePatchSampleIds(-5359);
                                                   return true;
                                                 }
                                                 stackIn_112_0 = (!uf.field_c.prepareTrackSamples(db.field_a, mu.field_d, ai.field_d, (byte) -102, 22050)) ? 0 : 1;

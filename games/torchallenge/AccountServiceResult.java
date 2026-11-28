@@ -139,7 +139,7 @@ final class AccountServiceResult {
           if (param0 != -13730) {
             AccountServiceResult.a((byte) -19);
           }
-          var5 = m.field_i;
+          var5 = GrowableIntArray.field_i;
           var1 = var5;
           var2 = 0;
           var3 = var5.length;

@@ -122,7 +122,7 @@ class fa extends mg {
             RgbSprite[] var5 = (RgbSprite[]) null;
             fa.a((BitmapFont) null, (BitmapFont) null, true, false, 27, -113, -121, 67, 2, -38, (RgbSprite[]) null, (RgbSprite[]) null, 66, -114, 40, 57, 65);
           }
-          pl.e(-125);
+          MusicPatchNode.e(-125);
           qe.field_g.closeAllDialogs((byte) -100);
           mk.field_b = new LoginPanel(DialogMessagePane.field_G, (String) null, ne.field_d, param1, param0);
           MouseWheelInput.field_d = new StandardContentDialog(qe.field_g, mk.field_b);

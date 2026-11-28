@@ -30,7 +30,7 @@ final class FullscreenNoticeType {
             var9 = new int[var3];
             var21 = var9;
             for (var6_int = 0; var6_int < var3; var6_int++) {
-              var9[var6_int] = rd.field_d[sc.a((int) var20[var6_int], 255)];
+              var9[var6_int] = rd.field_d[sc.bitwiseAnd((int) var20[var6_int], 255)];
             }
             var1[var2] = new RgbSprite(DefaultTextWidgetRenderer.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], NameSuggestionsPanel.field_H[var2], ob.field_a[var2], var21);
           } else {
@@ -39,7 +39,7 @@ final class FullscreenNoticeType {
             var13 = var16;
             var6 = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6[var7] = TextLayout.a(rd.field_d[sc.a(255, (int) var20[var7])], sc.a((int) var22[var7], 255) << 24);
+              var6[var7] = TextLayout.bitwiseOr(rd.field_d[sc.bitwiseAnd(255, (int) var20[var7])], sc.bitwiseAnd((int) var22[var7], 255) << 24);
             }
             var1[var2] = (RgbSprite) ((Object) new ArgbSprite(DefaultTextWidgetRenderer.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], NameSuggestionsPanel.field_H[var2], ob.field_a[var2], var16));
           }
@@ -197,7 +197,7 @@ final class FullscreenNoticeType {
                   lg.a(-4, var4, var2, var3);
                 }
               } else {
-                de.a((byte) 88, var3, var2, var4);
+                MusicPatchEnvelope.a((byte) 88, var3, var2, var4);
               }
               if (var7 != 0) {
                 aj.field_t[var7].draw(16 * var3 - 4, 16 * var4 - 4);
@@ -228,7 +228,7 @@ final class FullscreenNoticeType {
                   aj.field_t[var7Lifetime1 + 36].draw(16 * var3Lifetime1 - 4, -4 + 16 * var4Lifetime1);
                 }
               } else {
-                de.a((byte) 88, var3Lifetime1, var2, var4Lifetime1);
+                MusicPatchEnvelope.a((byte) 88, var3Lifetime1, var2, var4Lifetime1);
               }
             }
           }
@@ -299,7 +299,7 @@ final class FullscreenNoticeType {
           }
           RegistrationAgreementPane.a(stackIn_85_0, stackIn_86_1, 93, SingleChildWidgetContainer.field_C.field_l, SingleChildWidgetContainer.field_C.field_d, SingleChildWidgetContainer.field_C.field_n);
           aj.field_t[2].draw(132, 367);
-          oj.a(371, 0, 136, var2);
+          MidiNoteMask.a(371, 0, 136, var2);
           stackIn_88_0 = MatchingFieldValidator.field_p;
           stackIn_88_1 = ha.field_p.toLowerCase();
           stackIn_88_2 = 7 + (SingleChildWidgetContainer.field_C.field_l + 5);
@@ -332,19 +332,19 @@ final class FullscreenNoticeType {
             stackIn_101_4 = 0;
           }
           ((BitmapFont) (Object) stackIn_97_0).drawString(stackIn_97_1, stackIn_97_2, stackIn_97_3, stackIn_101_4, -1);
-          stackIn_103_0 = de.field_b.field_a;
+          stackIn_103_0 = MusicPatchEnvelope.field_b.field_a;
           if (mh.field_u == 3) {
             stackIn_104_1 = DequeWidgetContainer.field_E;
           } else {
             stackIn_104_1 = a.field_b;
           }
-          RegistrationAgreementPane.a(stackIn_103_0, stackIn_104_1, 86, de.field_b.field_l, de.field_b.field_d, de.field_b.field_n);
+          RegistrationAgreementPane.a(stackIn_103_0, stackIn_104_1, 86, MusicPatchEnvelope.field_b.field_l, MusicPatchEnvelope.field_b.field_d, MusicPatchEnvelope.field_b.field_n);
           aj.field_t[4].draw(582, 367);
           stackIn_106_0 = MatchingFieldValidator.field_p;
           stackIn_106_1 = tb.field_e.toLowerCase();
-          stackIn_106_2 = 5 + (7 + de.field_b.field_l);
+          stackIn_106_2 = 5 + (7 + MusicPatchEnvelope.field_b.field_l);
           stackIn_106_3 = var9Lifetime6;
-          stackIn_106_4 = de.field_b.a((byte) 127);
+          stackIn_106_4 = MusicPatchEnvelope.field_b.a((byte) 127);
           stackIn_107_5 = (ab.field_b != 1);
           if (stackIn_106_4 & !stackIn_107_5) {
             stackIn_110_4 = 0;
@@ -559,7 +559,7 @@ final class FullscreenNoticeType {
           0 <= var1.indexOf('@')) {
           var1 = "";
         }
-        return new ad(vi.b((byte) -55), id.a(param0 - 5999));
+        return new ad(vi.b((byte) -55), GrowableIntArray.a(param0 - 5999));
     }
 
     static {

@@ -165,7 +165,7 @@ final class cg {
             if (ec.field_l[var8Lifetime2] >= 0) {
               stackIn_39_1 = ug.field_a;
             } else {
-              stackIn_39_1 = qd.field_r;
+              stackIn_39_1 = MusicPatchNode.field_r;
             }
             bd.field_d = stackIn_38_0 + stackIn_39_1;
           }
@@ -192,7 +192,7 @@ final class cg {
             Bzip2State.b((byte) -72);
           }
           ag.a(param0 + 11831, gg.field_n, ka.field_o, NumericDateInputWidget.field_T);
-          kf.a(0, (byte) 98, param1, 0);
+          MusicPatch.a(0, (byte) 98, param1, 0);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "cg.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

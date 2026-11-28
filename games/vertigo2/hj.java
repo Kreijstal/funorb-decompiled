@@ -17,7 +17,7 @@ final class hj {
         }
         if (param1 > 121) {
           if (null != jp.field_n) {
-            jp.field_n.a(param0, (byte) -50);
+            jp.field_n.setVolume(param0, (byte) -50);
           }
           return;
         }
@@ -61,7 +61,7 @@ final class hj {
         int stackIn_48_10;
         boolean stackIn_50_11 = false;
         int var2;
-        vc.a((byte) -59);
+        ByteArrayPoolSupport.a((byte) -59);
         if (gd.field_j == null) {
           var2 = 0;
           stackIn_3_0 = 109;

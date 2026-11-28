@@ -25,7 +25,7 @@ final class cm {
         }
         boolean decompiledFrameRemainder0 = true;
         if (pb.field_Kb >= 20 &&
-          bc.d(-74) && (!(ca.field_a > 0) ||
+          MidiNoteMask.d(-74) && (!(ca.field_a > 0) ||
           ImageProducerRasterBuffer.b(0))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;

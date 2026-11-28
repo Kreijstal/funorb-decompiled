@@ -142,7 +142,7 @@ final class SynthesizerVoice {
         int var17Lifetime3;
         int var17Lifetime1Lifetime1;
         int var17Lifetime2Lifetime1;
-        eg.clearInts(field_k, 0, param0);
+        ArrayBlockSupport.clearInts(field_k, 0, param0);
         if (param1 < 10) {
           return field_k;
         }

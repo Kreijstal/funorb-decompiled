@@ -231,9 +231,9 @@ final class ja extends IntrusiveNode {
               throw new IllegalStateException();
             }
             AccountNameAvailabilityValidator.field_r = new String[var5];
-            ka.a(ModalDialog.field_F, 0, AccountNameAvailabilityValidator.field_r, 0, var5);
+            ArrayBlockSupport.copyObjectRange(ModalDialog.field_F, 0, AccountNameAvailabilityValidator.field_r, 0, var5);
             kj.field_c = new String[-1 + (var4 - var5)];
-            ka.a(ModalDialog.field_F, 1 + var5, kj.field_c, 0, -1 + var4 - var5);
+            ArrayBlockSupport.copyObjectRange(ModalDialog.field_F, 1 + var5, kj.field_c, 0, -1 + var4 - var5);
             var4 = DebouncedFieldValidator.a(MessageKeys.a(new String[]{"<br><%0><br>"}, -1, wj.field_b), SoundCache.field_h, -3, ModalDialog.field_F, ch.field_c);
             var5 = -1;
             for (var6 = 0; var4 > var6; var6++) {
@@ -247,9 +247,9 @@ final class ja extends IntrusiveNode {
               throw new IllegalStateException();
             }
             ArchiveIndex.field_c = new String[var5];
-            ka.a(ModalDialog.field_F, 0, ArchiveIndex.field_c, 0, var5);
+            ArrayBlockSupport.copyObjectRange(ModalDialog.field_F, 0, ArchiveIndex.field_c, 0, var5);
             ec.field_d = new String[-1 + var4 - var5];
-            ka.a(ModalDialog.field_F, var5 + 1, ec.field_d, 0, -var5 + (var4 - 1));
+            ArrayBlockSupport.copyObjectRange(ModalDialog.field_F, var5 + 1, ec.field_d, 0, -var5 + (var4 - 1));
             if (AccountNameAvailabilityValidator.field_r.length >= ArchiveIndex.field_c.length) {
               stackIn_58_0 = AccountNameAvailabilityValidator.field_r.length;
             } else {

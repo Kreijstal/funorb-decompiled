@@ -41,11 +41,11 @@ final class StandardContentDialog extends ContentTransitionDialog {
           if (MidiPcmStream.field_A == SingleChildWidgetContainer.field_D &&
             param0.equals(BufferedRandomAccessFile.field_e)) {
             MidiPcmStream.field_A = DropTargetWidgetContainer.field_T;
-            stackIn_8_0 = kf.field_j;
+            stackIn_8_0 = MusicPatch.field_j;
             return stackIn_8_0;
           }
           BufferedRandomAccessFile.field_e = param0;
-          kf.field_j = null;
+          MusicPatch.field_j = null;
           MidiPcmStream.field_A = ci.field_ub;
           stackIn_10_0 = null;
           return (AccountServiceResult) (stackIn_10_0);

@@ -374,7 +374,7 @@ class DequeWidgetContainer extends UiWidget implements WidgetContainerMarker {
             } else {
               if (248 == var9Lifetime1) {
                 dd.a((byte) 64, nb.a(param4 - 77));
-                cc.field_p = dd.field_n;
+                MusicPatchNode.field_p = dd.field_n;
                 eg.a((byte) 126);
                 dk.field_b = false;
                 stackIn_31_0 = var9Lifetime1;
@@ -411,7 +411,7 @@ class DequeWidgetContainer extends UiWidget implements WidgetContainerMarker {
           if (AlphaWidgetContainer.field_L == tl.field_O &&
             GameAppletShell.d(-29427)) {
             if (t.field_b != 255) {
-              cc.field_p = LabeledWidgetContainer.field_N.readString((byte) -63);
+              MusicPatchNode.field_p = LabeledWidgetContainer.field_N.readString((byte) -63);
             } else {
               var9_ref_String = LabeledWidgetContainer.field_N.readNullableString(715718304);
               if (var9_ref_String != null) {
@@ -426,9 +426,9 @@ class DequeWidgetContainer extends UiWidget implements WidgetContainerMarker {
           if (uj.field_j == null) {
             if (dk.field_b) {
               if (30000L >= of.a((byte) 122)) {
-                cc.field_p = lf.field_f;
+                MusicPatchNode.field_p = lf.field_f;
               } else {
-                cc.field_p = SecondaryNodeDeque.field_a;
+                MusicPatchNode.field_p = SecondaryNodeDeque.field_a;
               }
               dk.field_b = false;
               stackIn_62_0 = 249;

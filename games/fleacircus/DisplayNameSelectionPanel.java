@@ -21,7 +21,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         return false;
     }
 
-    private final int a(String param0, String param1, int param2, byte param3, int param4, int param5, UiComponent param6) {
+    private final int addLabeledFieldWithValidationMessage(String param0, String param1, int param2, byte param3, int param4, int param5, UiComponent param6) {
         RuntimeException var8 = null;
         ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;
@@ -127,7 +127,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         var2.setBounds(20, 270, var3, 50, 80);
         this.addChild(var2, (byte) -50);
         var3 += 50;
-        var3 = var3 + (5 + this.a(me.field_a, 98, InteractiveWidget.field_J, var3, 170, this.field_I));
+        var3 = var3 + (5 + this.addLabeledFieldWithDefaultValidationMessage(me.field_a, 98, InteractiveWidget.field_J, var3, 170, this.field_I));
         this.field_J.setBounds(-var5 + 496 >> 1, var5, var3, 40, 80);
         this.field_L.setBounds(3 + var4, 60, var3 + 15, 40, 80);
         this.field_L.field_s = (WidgetEventListener) (this);
@@ -254,7 +254,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         }
     }
 
-    private final int a(String param0, int param1, String param2, int param3, int param4, UiComponent param5) {
+    private final int addLabeledFieldWithDefaultValidationMessage(String param0, int param1, String param2, int param3, int param4, UiComponent param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -268,7 +268,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 98) {
-            stackIn_4_0 = this.a(param2, param0, param3, (byte) 109, param4, 35, param5);
+            stackIn_4_0 = this.addLabeledFieldWithValidationMessage(param2, param0, param3, (byte) 109, param4, 35, param5);
             return stackIn_4_0;
           }
           stackIn_2_0 = -126;

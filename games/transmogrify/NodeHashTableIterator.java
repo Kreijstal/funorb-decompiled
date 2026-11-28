@@ -162,17 +162,17 @@ final class NodeHashTableIterator implements Iterator {
         var7 = 0;
         var5Lifetime1 = var7;
         while (var7 < 8) {
-          if (si.newRack.tiles[var7] != null &&
-            param0 == si.newRack.tiles[var7].letter) {
-            if (si.newRack.tiles[var7].field_l > var4) {
+          if (MusicPatch.newRack.tiles[var7] != null &&
+            param0 == MusicPatch.newRack.tiles[var7].letter) {
+            if (MusicPatch.newRack.tiles[var7].field_l > var4) {
               var3 = var7;
-              var2 = si.newRack;
-              var4 = si.newRack.tiles[var7].field_l;
+              var2 = MusicPatch.newRack;
+              var4 = MusicPatch.newRack.tiles[var7].field_l;
             }
-            if (si.newRack.tiles[var7].doublesWordScore) {
+            if (MusicPatch.newRack.tiles[var7].doublesWordScore) {
               var3 = var7;
               var4 = 2147483647;
-              var2 = si.newRack;
+              var2 = MusicPatch.newRack;
             }
           }
           var7++;

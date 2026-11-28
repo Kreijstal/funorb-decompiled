@@ -113,7 +113,7 @@ final class vf {
           }
           f.a(NodeHashTableIterator.field_b, false, hh.field_p, lb.field_g, ja.field_a);
           hh.field_p.backpatchShortLength(-100, -var5_int + hh.field_p.position);
-          jj.a(-1, true);
+          ByteArrayPoolSupport.a(-1, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

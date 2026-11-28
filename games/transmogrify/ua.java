@@ -327,7 +327,7 @@ final class ua {
                   }
                   var18.field_j[var5] = var6_int;
                   var18.field_h[var5] = var9;
-                  var18.field_m[var5] = param1.requestDeclaredField(SectorCacheStore.a(param2, 22529), var15, ek.a(SectorCacheStore.a(param2, -3264187), var16));
+                  var18.field_m[var5] = param1.requestDeclaredField(SectorCacheStore.bitwiseXor(param2, 22529), var15, ek.a(SectorCacheStore.bitwiseXor(param2, -3264187), var16));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

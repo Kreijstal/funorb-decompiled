@@ -550,29 +550,29 @@ final class sg {
                                               }
                                             } else {
                                               if (this.field_c.e((byte) -60)) {
-                                                CrossfadingMidiPcmStream.field_n.a(0, 0);
+                                                CrossfadingMidiPcmStream.field_n.setVolume(0, 0);
                                               }
                                               if (this.field_c.a(-104)) {
-                                                CrossfadingMidiPcmStream.field_n.a(0, 256);
+                                                CrossfadingMidiPcmStream.field_n.setVolume(0, 256);
                                               }
                                               if (this.field_c.c(-1)) {
                                                 var4_int = this.a(bk.field_b, ResourceArchive.field_e, (byte) 95);
                                                 if (var4_int >= 0) {
-                                                  CrossfadingMidiPcmStream.field_n.a(0, var4_int);
+                                                  CrossfadingMidiPcmStream.field_n.setVolume(0, var4_int);
                                                 }
                                               }
                                               if (this.field_c.f(-50)) {
                                                 if (CrossfadingMidiPcmStream.field_n.field_u > 32) {
-                                                  CrossfadingMidiPcmStream.field_n.a(0, CrossfadingMidiPcmStream.field_n.field_u - 32);
+                                                  CrossfadingMidiPcmStream.field_n.setVolume(0, CrossfadingMidiPcmStream.field_n.field_u - 32);
                                                 } else {
-                                                  CrossfadingMidiPcmStream.field_n.a(0, 0);
+                                                  CrossfadingMidiPcmStream.field_n.setVolume(0, 0);
                                                 }
                                               }
                                               if (this.field_c.d((byte) 126)) {
                                                 if (CrossfadingMidiPcmStream.field_n.field_u < 224) {
-                                                  CrossfadingMidiPcmStream.field_n.a(0, CrossfadingMidiPcmStream.field_n.field_u + 32);
+                                                  CrossfadingMidiPcmStream.field_n.setVolume(0, CrossfadingMidiPcmStream.field_n.field_u + 32);
                                                 } else {
-                                                  CrossfadingMidiPcmStream.field_n.a(0, 256);
+                                                  CrossfadingMidiPcmStream.field_n.setVolume(0, 256);
                                                 }
                                               }
                                             }
@@ -1559,7 +1559,7 @@ final class sg {
                         var2_intLifetime1 = pa.field_d + (pa.field_d >> 1);
                         var3 = 40;
                         jh.field_d.drawParagraph(RichTextLayout.field_n, 40, -jh.field_d.field_E + var3, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
-                        mk.field_h.drawRightAligned(cb.field_D, 294, SoftwareRasterizer.field_a - 10, 0, -1);
+                        mk.field_h.drawRightAligned(MusicPatchNode.field_D, 294, SoftwareRasterizer.field_a - 10, 0, -1);
                       } else {
                         if (this.field_d == 9) {
                           var2_intLifetime1 = (pa.field_d >> 1) + pa.field_d;
@@ -1708,7 +1708,7 @@ final class sg {
                   var3Lifetime1 = var3Lifetime1 + var2_intLifetime2;
                   var10++;
                 }
-                mk.field_h.drawString(cb.field_D, 12, SoftwareRasterizer.field_a - 10, 0, -1);
+                mk.field_h.drawString(MusicPatchNode.field_D, 12, SoftwareRasterizer.field_a - 10, 0, -1);
               }
               decompiledFrameRemainder0 = false;
             }

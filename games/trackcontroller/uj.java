@@ -95,7 +95,7 @@ final class uj {
           try {
             ne.field_a = new BitPacketBuffer(param7);
             LevelView.field_C = new BitPacketBuffer(param4);
-            ke.field_c = param6;
+            ByteArrayPoolSupport.field_c = param6;
             dc.field_o = param0;
             ma.field_c = param2;
             kj.field_k = param11;

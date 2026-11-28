@@ -213,7 +213,7 @@ final class rh {
           }
           MidiPcmStream.field_M = param15;
           sj.field_d = param2;
-          ql.a(param13, param3, param5, param9, (byte) 66);
+          ByteArrayPoolSupport.a(param13, param3, param5, param9, (byte) 66);
           r.a(param19, (byte) -87, param7, param10);
           BoundedRandomAccessFile.a(param4, param12, param1, param8, param11, 4);
           AccountRequestState.a(param6, param18, (byte) -79);

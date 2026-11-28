@@ -1348,7 +1348,7 @@ final class LevelScreen extends ib {
                 var10_ref_pa.transformVertices(new int[]{0, 0, 0, var11, -var12_int, 0, var12_int, var11, 0, 0, 0, 65536});
                 var13_ref_bj = var10_ref_pa.createModel(32, 346, 50, 50, -50);
                 var13_ref_bj.drawPerspective(0, 0, 0, 0, 0, 0, 1000, -1L);
-                RichTextLayout.field_h.a((byte) -107);
+                RichTextLayout.field_h.setAsRasterTarget((byte) -107);
               }
               var4_double = (double)(var9 + 1) * 3.141592653589793 / 25.0;
               var6 = (int)(128.0 * Math.cos(var2_double));

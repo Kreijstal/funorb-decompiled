@@ -345,7 +345,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
             field_K = (Sprite) null;
           }
           if (param0 == this.field_A) {
-            kc.a((byte) -127);
+            MusicPatchNode.a((byte) -127);
             return;
           }
           if (param0 != this.field_G) {

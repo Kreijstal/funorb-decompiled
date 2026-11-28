@@ -137,7 +137,7 @@ final class BitPacketBuffer extends PacketBuffer {
           while (var5_int < param0) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param2[param3 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_m.nextInt(dg.a((int) param1, -55)));
+            param2[param3 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_m.nextInt(dg.bitwiseXor((int) param1, -55)));
             var5_int++;
           }
           return;

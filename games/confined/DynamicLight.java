@@ -121,7 +121,7 @@ final class DynamicLight extends IntrusiveNode {
               var6 = e.field_c.readNullableString((byte) 102);
               var7 = e.field_c.readUnsignedByte(32);
               if (0 != (var7 & 1)) {
-                wl.a(1607962024);
+                GrowableIntArray.a(1607962024);
               }
               if (!param0) {
                 stackIn_45_0 = (0 != (var7 & 8));

@@ -45,7 +45,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_8_0 = IntrusiveDeque.field_f;
             return stackIn_8_0;
           }
-          if (vc.a(-111, var5)) {
+          if (ByteArrayPoolSupport.a(-111, var5)) {
             stackIn_11_0 = s.field_r;
             return stackIn_11_0;
           }
@@ -244,7 +244,7 @@ final class PasswordValidator extends TextFieldValidator {
                 this.var4 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                re.field_a = param1;
+                GrowableIntArray.field_a = param1;
                 var2 = tk.a("loginm3", false);
                 if (null != var2) {
                   tf.field_m = in.a(0, var2);
@@ -419,7 +419,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("mu_you_declined_invite", false);
                 if (var2 != null) {
-                  re.field_c = in.a(param0 ^ 0, var2);
+                  GrowableIntArray.field_c = in.a(param0 ^ 0, var2);
                 }
                 var2 = tk.a("mu_invite_withdrawn", false);
                 if (null != var2) {
@@ -471,7 +471,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("mu_gamelist_status", false);
                 if (var2 != null) {
-                  pe.field_u = in.a(param0 ^ 0, var2);
+                  MusicPatchNode.field_u = in.a(param0 ^ 0, var2);
                 }
                 var2 = tk.a("mu_gamelist_owner", false);
                 if (null != var2) {
@@ -1529,7 +1529,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("day", false);
                 if (null != var2) {
-                  gl.field_m = in.a(0, var2);
+                  MusicPatchEnvelope.field_m = in.a(0, var2);
                 }
                 var2 = tk.a("month", false);
                 if (var2 != null) {
@@ -1621,7 +1621,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("create_email_confirm", false);
                 if (null != var2) {
-                  re.field_f = in.a(0, var2);
+                  GrowableIntArray.field_f = in.a(0, var2);
                 }
                 var2 = tk.a("create_age", false);
                 if (var2 != null) {
@@ -1857,7 +1857,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("create_alert_mismatch", false);
                 if (null != var2) {
-                  gl.field_a = in.a(param0 + 0, var2);
+                  MusicPatchEnvelope.field_a = in.a(param0 + 0, var2);
                 }
                 var2 = tk.a("create_passwordvalid", false);
                 if (var2 != null) {
@@ -1973,7 +1973,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("waitingfor_fonts", false);
                 if (var2 != null) {
-                  vc.field_a = in.a(0, var2);
+                  ByteArrayPoolSupport.field_a = in.a(0, var2);
                 }
                 var2 = tk.a("waitingfor_soundeffects", false);
                 if (null != var2) {
@@ -2702,7 +2702,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("quickchat_shortcut_help,5", false);
                 if (null != var2) {
-                  ModalDialogHost.field_M[5] = in.a(tk.a(param0, 0), var2);
+                  ModalDialogHost.field_M[5] = in.a(tk.bitwiseXor(param0, 0), var2);
                 }
                 var2 = tk.a("quickchat_shortcut_keys,0", false);
                 if (var2 != null) {
@@ -2710,7 +2710,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("quickchat_shortcut_keys,1", false);
                 if (null != var2) {
-                  qr.field_k[1] = in.a(tk.a(param0, 0), var2);
+                  qr.field_k[1] = in.a(tk.bitwiseXor(param0, 0), var2);
                 }
                 var2 = tk.a("quickchat_shortcut_keys,2", false);
                 if (null != var2) {
@@ -2774,7 +2774,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("members_expansion_benefits,1", false);
                 if (null != var2) {
-                  DiskArchiveRequest.field_J[1] = in.a(tk.a(param0, 0), var2);
+                  DiskArchiveRequest.field_J[1] = in.a(tk.bitwiseXor(param0, 0), var2);
                 }
                 var2 = tk.a("members_expansion_benefits,2", false);
                 if (var2 != null) {
@@ -2798,11 +2798,11 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("reconnect_lost_seq,2", false);
                 if (var2 != null) {
-                  ff.field_n[2] = in.a(tk.a(param0, 0), var2);
+                  ff.field_n[2] = in.a(tk.bitwiseXor(param0, 0), var2);
                 }
                 var2 = tk.a("reconnect_lost_seq,3", false);
                 if (var2 != null) {
-                  ff.field_n[3] = in.a(tk.a(param0, 0), var2);
+                  ff.field_n[3] = in.a(tk.bitwiseXor(param0, 0), var2);
                 }
                 var2 = tk.a("reconnect_lost", false);
                 if (var2 != null) {
@@ -2978,7 +2978,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("rating_mode_name,0", false);
                 if (null != var2) {
-                  BirthDateValidator.field_n[0] = in.a(tk.a(param0, 0), var2);
+                  BirthDateValidator.field_n[0] = in.a(tk.bitwiseXor(param0, 0), var2);
                 }
                 var2 = tk.a("rating_mode_name,1", false);
                 if (var2 != null) {
@@ -3058,11 +3058,11 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("mustlogin2,2", false);
                 if (null != var2) {
-                  m.field_y[2] = in.a(tk.a(param0, 0), var2);
+                  m.field_y[2] = in.a(tk.bitwiseXor(param0, 0), var2);
                 }
                 var2 = tk.a("mustlogin2,3", false);
                 if (var2 != null) {
-                  m.field_y[3] = in.a(tk.a(param0, 0), var2);
+                  m.field_y[3] = in.a(tk.bitwiseXor(param0, 0), var2);
                 }
                 var2 = tk.a("mustlogin2,4", false);
                 if (var2 != null) {
@@ -3074,7 +3074,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("mustlogin2,6", false);
                 if (var2 != null) {
-                  m.field_y[6] = in.a(tk.a(param0, 0), var2);
+                  m.field_y[6] = in.a(tk.bitwiseXor(param0, 0), var2);
                 }
                 var2 = tk.a("mustlogin2,7", false);
                 if (null != var2) {
@@ -3098,7 +3098,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("mustlogin3,5", false);
                 if (null != var2) {
-                  eh.field_d[5] = in.a(tk.a(param0, 0), var2);
+                  eh.field_d[5] = in.a(tk.bitwiseXor(param0, 0), var2);
                 }
                 var2 = tk.a("mustlogin3,6", false);
                 if (var2 != null) {
@@ -3230,7 +3230,7 @@ final class PasswordValidator extends TextFieldValidator {
                 if (var2 != null) {
                   in.a(param0 + 0, var2);
                 }
-                re.field_a = null;
+                GrowableIntArray.field_a = null;
             }
             void run() {
                 var3 = Vertigo2.field_L ? 1 : 0;

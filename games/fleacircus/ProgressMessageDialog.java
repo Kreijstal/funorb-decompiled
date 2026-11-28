@@ -185,17 +185,17 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
             var5 = var28.readUnsignedByte(false);
             if (0 != var5) {
               var6 = var4.field_q;
-              de.field_n[0].field_b = b.field_e;
-              de.field_n[0].field_e = null;
-              de.field_n[0].field_i = false;
+              MusicPatchEnvelope.field_n[0].field_b = b.field_e;
+              MusicPatchEnvelope.field_n[0].field_e = null;
+              MusicPatchEnvelope.field_n[0].field_i = false;
               var7 = var4.field_t;
               for (var8_int = 1; var8_int < var5; var8_int++) {
-                de.field_n[var8_int].field_b = var28.readString(0);
-                de.field_n[var8_int].field_i = false;
+                MusicPatchEnvelope.field_n[var8_int].field_b = var28.readString(0);
+                MusicPatchEnvelope.field_n[var8_int].field_i = false;
                 if (var28.readUnsignedByte(false) == 1) {
-                  de.field_n[var8_int].field_e = var28.readString(param0 + 24021);
+                  MusicPatchEnvelope.field_n[var8_int].field_e = var28.readString(param0 + 24021);
                 } else {
-                  de.field_n[var8_int].field_e = null;
+                  MusicPatchEnvelope.field_n[var8_int].field_e = null;
                 }
               }
               dupTemp$0 = new String[3][var6];
@@ -218,12 +218,12 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
               if (0 < var18) {
                 for (var19 = 0; var19 < var18; var19++) {
                   var20 = var28.readUnsignedByte(false);
-                  var21 = de.field_n[var20].field_b;
+                  var21 = MusicPatchEnvelope.field_n[var20].field_b;
                   var22 = var28.readLong(-103);
                   var24 = var28.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = de.field_n[var20].field_e;
+                    var9[0][var12] = MusicPatchEnvelope.field_n[var20].field_e;
                     var10[0][var12] = var22;
                     var12++;
                     for (var25 = 0; var7 > var25; var25++) {
@@ -246,10 +246,10 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
                     }
                   }
                   if (var14 < var6 &&
-                    !de.field_n[var20].field_i) {
-                    de.field_n[var20].field_i = true;
+                    !MusicPatchEnvelope.field_n[var20].field_i) {
+                    MusicPatchEnvelope.field_n[var20].field_i = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = de.field_n[var20].field_e;
+                    var9[2][var14] = MusicPatchEnvelope.field_n[var20].field_e;
                     var10[2][var14] = var22;
                     var14++;
                     var28.position = var24;

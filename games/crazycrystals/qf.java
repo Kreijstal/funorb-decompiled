@@ -283,7 +283,7 @@ abstract class qf extends ea {
           }
           for (var2 = 1; EditableTextField.field_J.length > var2; var2++) {
             var3 = EditableTextField.field_J[var2];
-            eg.a(gh.field_E, var2 << 4, gh.field_E, var1_int, var3);
+            ArrayBlockSupport.copyIntRange(gh.field_E, var2 << 4, gh.field_E, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;

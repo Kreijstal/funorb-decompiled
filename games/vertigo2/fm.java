@@ -160,7 +160,7 @@ final class fm {
             stackIn_34_0 = AccountCreationResultPanel.q(76) ? 1 : 0;
           }
           if (stackIn_34_0 != 0 &&
-            !pe.field_r) {
+            !MusicPatchNode.field_r) {
             return;
           }
           TextLineMetrics.field_a = new BirthDateChatEnableForm(0, 0, 0, 0);

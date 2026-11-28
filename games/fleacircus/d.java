@@ -3,7 +3,7 @@
  */
 final class d extends InteractiveWidget {
     static boolean field_L;
-    private id field_K;
+    private GrowableIntArray field_K;
     static ed field_O;
     int field_M;
     static int field_N;
@@ -95,7 +95,7 @@ final class d extends InteractiveWidget {
                     } else {
                       var18 = SoftwareRasterizer.field_a[var8];
                       var19 = (16711935 & var17) * var15 + (var18 & 16711935) * var16 >> 8 & 16711935;
-                      SoftwareRasterizer.field_a[var8] = (sc.a(16711908, sc.a(var17, 65280) * var15 + sc.a(65280, var18) * var16) >> 8) + var19;
+                      SoftwareRasterizer.field_a[var8] = (sc.bitwiseAnd(16711908, sc.bitwiseAnd(var17, 65280) * var15 + sc.bitwiseAnd(65280, var18) * var16) >> 8) + var19;
                     }
                   }
                   var8++;
@@ -209,11 +209,11 @@ final class d extends InteractiveWidget {
 
     final int a(int param0, int param1) {
         if (0 > param0 ||
-          this.field_K.b(0) <= param0) {
+          this.field_K.size(0) <= param0) {
           return -1;
         }
         int var3 = 76 % ((param1 - 14) / 59);
-        return this.field_K.b(param0, false);
+        return this.field_K.get(param0, false);
     }
 
     final boolean pointerPressed(int param0, boolean param1, int param2, UiComponent param3, int param4, int param5, int param6) {
@@ -247,8 +247,8 @@ final class d extends InteractiveWidget {
             if (param5 == 2) {
               var10 = 2147483647;
               var11 = -1;
-              for (var12 = 0; var12 < this.field_K.b(0); var12++) {
-                var13 = -var8_int + this.field_K.b(var12, false);
+              for (var12 = 0; var12 < this.field_K.size(0); var12++) {
+                var13 = -var8_int + this.field_K.get(var12, false);
                 var13 = var13 * var13;
                 if (var10 > var13) {
                   var11 = var12;
@@ -256,11 +256,11 @@ final class d extends InteractiveWidget {
                 }
               }
               if (0 <= var11) {
-                this.field_K.b(1, var11);
+                this.field_K.removeAt(1, var11);
               }
             }
           } else {
-            this.field_K.a((byte) 47, var8_int);
+            this.field_K.append((byte) 47, var8_int);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -292,7 +292,7 @@ final class d extends InteractiveWidget {
         if (param0 <= 24) {
           this.i(-5);
         }
-        return this.field_K.b(0);
+        return this.field_K.size(0);
     }
 
     final static void a(int param0, int param1, qc param2, qc param3, int param4, int param5, int param6, BitmapFont param7, BitmapFont param8, qc param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19, int param20) {
@@ -360,7 +360,7 @@ final class d extends InteractiveWidget {
 
     final int a(byte param0) {
         if (param0 != 9) {
-          this.field_K = (id) null;
+          this.field_K = (GrowableIntArray) null;
         }
         return this.field_R;
     }

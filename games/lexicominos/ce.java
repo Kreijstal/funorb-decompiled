@@ -349,7 +349,7 @@ final class ce {
           stackIn_201_1 = !(param0);
           var2Lifetime45 = e.a(stackIn_200_0, stackIn_201_1);
           if (var2Lifetime45 != null) {
-            cb.field_D = ni.a((byte) -55, var2Lifetime45);
+            MusicPatchNode.field_D = ni.a((byte) -55, var2Lifetime45);
           }
           stackIn_208_0 = "_2of4";
           stackIn_209_1 = !(param0);

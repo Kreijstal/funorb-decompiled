@@ -6,7 +6,7 @@ final class sj extends InteractiveWidget {
     int field_A;
     static String field_C;
     private int field_H;
-    private ve field_F;
+    private GrowableIntArray field_F;
     static String field_D;
     static Sprite[] field_E;
     int field_G;
@@ -32,10 +32,10 @@ final class sj extends InteractiveWidget {
           return -69;
         }
         if (param1 < 0 ||
-          this.field_F.a(true) <= param1) {
+          this.field_F.size(true) <= param1) {
           return -1;
         }
-        return this.field_F.a(0, param1);
+        return this.field_F.get(0, param1);
     }
 
     final static boolean a(String param0, byte param1) {
@@ -96,7 +96,7 @@ final class sj extends InteractiveWidget {
         if (param0 <= 103) {
           return 82;
         }
-        return this.field_F.a(true);
+        return this.field_F.size(true);
     }
 
     final boolean pointerPressed(UiWidget param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
@@ -132,8 +132,8 @@ final class sj extends InteractiveWidget {
             }
             var10 = 2147483647;
             var11 = -1;
-            for (var12 = 0; var12 < this.field_F.a(true); var12++) {
-              var13 = this.field_F.a(0, var12) - var8_int;
+            for (var12 = 0; var12 < this.field_F.size(true); var12++) {
+              var13 = this.field_F.get(0, var12) - var8_int;
               var13 = var13 * var13;
               if (var13 < var10) {
                 var11 = var12;
@@ -141,10 +141,10 @@ final class sj extends InteractiveWidget {
               }
             }
             if (var11 >= 0) {
-              this.field_F.c(param4 + 138, var11);
+              this.field_F.removeAt(param4 + 138, var11);
             }
           } else {
-            this.field_F.b(var8_int, 1);
+            this.field_F.append(var8_int, 1);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

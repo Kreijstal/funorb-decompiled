@@ -106,8 +106,8 @@ final class ld {
           array$1 = new long[var8.length + this.field_h];
           var6Lifetime1 = array$1;
           this.field_c[(int)MusicPatchPcmStream.a(param2, (long)(-1 + this.field_b))] = array$1;
-          ji.a(var7, 0, var5Lifetime1, 0, var7.length);
-          ji.a(var8, 0, var6Lifetime1, 0, var8.length);
+          ArrayBlockSupport.copyObjectRange(var7, 0, var5Lifetime1, 0, var7.length);
+          ArrayBlockSupport.a(var8, 0, var6Lifetime1, 0, var8.length);
           var5Lifetime1[var7.length] = param0;
           var6Lifetime1[var8.length] = param2;
           return;

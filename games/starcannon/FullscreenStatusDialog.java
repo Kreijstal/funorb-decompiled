@@ -168,7 +168,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
               }
             } else {
               if (param1 == MouseInput.field_b) {
-                var3 = mc.field_a;
+                var3 = ByteArrayPoolSupport.field_a;
                 this.field_f = this.field_f + 30;
               }
             }
@@ -180,7 +180,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
           var4.field_i = this.field_i;
           var4.field_o = (WidgetRenderer) ((Object) new DefaultTextWidgetRenderer(nb.field_b, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(true, var4);
-          this.field_Z = this.createCloseButton(mc.field_e, (WidgetEventListener) (this), true);
+          this.field_Z = this.createCloseButton(ByteArrayPoolSupport.field_e, (WidgetEventListener) (this), true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

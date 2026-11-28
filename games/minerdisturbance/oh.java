@@ -80,12 +80,12 @@ final class oh extends bl {
         return this.field_B;
     }
 
-    final static vc a(int param0, int param1, ResourceArchive param2) {
+    final static MusicPatch loadMusicPatch(int param0, int param1, ResourceArchive param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         ResourceArchive var4 = null;
         byte[] var5 = null;
-        vc stackIn_6_0 = null;
+        MusicPatch stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -93,14 +93,14 @@ final class oh extends bl {
         try {
           if (param0 >= -86) {
             var4 = (ResourceArchive) null;
-            oh.a(-87, 94, (ResourceArchive) null);
+            oh.loadMusicPatch(-87, 94, (ResourceArchive) null);
           }
           var5 = param2.getFlatFile(param1, 1);
           var3 = var5;
           if (var5 == null) {
             return null;
           }
-          stackIn_6_0 = new vc(var5);
+          stackIn_6_0 = new MusicPatch(var5);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

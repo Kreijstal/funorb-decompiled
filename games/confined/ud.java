@@ -32,10 +32,10 @@ final class ud extends IntrusiveNode {
             TunnelCamera.writeQueuedRecordRequest(7932, param0, var4);
             var4 = (om) (jd.field_f.nextForward(param1 + 2005));
           }
-          var5 = (ca) (dl.field_b.beginForward(param1 ^ 96));
+          var5 = (ca) (ByteArrayPoolSupport.field_b.beginForward(param1 ^ 96));
           while (var5 != null) {
             kd.a((byte) -115, param0, var5);
-            var5 = (ca) (dl.field_b.nextForward(2123));
+            var5 = (ca) (ByteArrayPoolSupport.field_b.nextForward(2123));
           }
           if (param1 == 118) {
             return;

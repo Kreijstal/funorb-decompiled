@@ -39,7 +39,7 @@ abstract class SpriteState extends DualLinkNode {
         this.rotateNearest(var6, var7, param1, param4, param3, param2);
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseOr(int param0, int param1) {
         return param0 | param1;
     }
 

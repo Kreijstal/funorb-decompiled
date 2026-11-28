@@ -13,7 +13,7 @@ final class mp extends DualLinkNode {
         int var3 = CrazyCrystals.field_B;
         if (this.field_o != null) {
           for (var2 = 0; this.field_o.length > var2; var2++) {
-            this.field_o[var2] = hm.a(this.field_o[var2], 32768);
+            this.field_o[var2] = hm.bitwiseOr(this.field_o[var2], 32768);
           }
         }
         if (param0 != -90) {

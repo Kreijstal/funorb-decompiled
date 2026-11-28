@@ -105,7 +105,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
         this.field_R.field_p = (WidgetEventListener) (this);
         this.field_R.field_j = sl.field_d;
         this.field_U.field_p = (WidgetEventListener) (this);
-        this.field_U.field_j = qd.field_I;
+        this.field_U.field_j = MusicPatchNode.field_I;
         this.addChild(this.field_M, 95);
         this.addChild(this.field_R, 95);
         this.addChild(this.field_U, 95);

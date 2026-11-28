@@ -92,7 +92,7 @@ final class uk extends nf {
                   if (var1 == null) {
                     return;
                   }
-                  ModalDialogHost.field_z[1] = b.a(oe.a(param0, -9762), (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.getFileByNameWithKeys(false, var7, "puzzle1p.ccl", ""))), ro.field_r);
+                  ModalDialogHost.field_z[1] = b.a(oe.bitwiseXor(param0, -9762), (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.getFileByNameWithKeys(false, var7, "puzzle1p.ccl", ""))), ro.field_r);
                   ModalDialogHost.field_z[2] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.getFileByNameWithKeys(false, var7, "puzzle2p.ccl", ""))), GameCanvas.field_e);
                   ModalDialogHost.field_z[3] = b.a(param0 + 9762, (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.getFileByNameWithKeys(false, var7, "puzzle3p.ccl", ""))), qg.field_c);
                   ModalDialogHost.field_z[4] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.getFileByNameWithKeys(false, var7, "arcade1p.ccl", ""))), FloatingScoreLabel.field_k);

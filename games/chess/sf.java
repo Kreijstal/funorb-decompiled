@@ -20,7 +20,7 @@ final class sf extends DefaultTextWidgetRenderer {
     final static void a(int param0, String param1) {
         try {
           StripedProgressWidget.a((byte) -122, param1);
-          qd.a(-1845, GuestPlayConfirmationForm.field_T, false);
+          MusicPatchNode.a(-1845, GuestPlayConfirmationForm.field_T, false);
           if (param0 >= -120) {
             field_u = (long[]) null;
           }

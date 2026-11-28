@@ -193,7 +193,7 @@ final class fm extends pn {
           while (var5_int < 24) {
             if (this.field_t[var5_int] > 0) {
               this.field_m = false;
-              this.field_u[var5_int] = pf.b(65535, this.field_u[var5_int] + this.field_p[var5_int] / (this.field_x[var5_int] >> 8));
+              this.field_u[var5_int] = pf.bitwiseAnd(65535, this.field_u[var5_int] + this.field_p[var5_int] / (this.field_x[var5_int] >> 8));
               this.field_x[var5_int] = this.field_x[var5_int] + this.field_n[var5_int];
               this.field_q[var5_int] = this.field_q[var5_int] + this.field_w[var5_int];
               this.field_n[var5_int] = this.field_n[var5_int] - this.field_n[var5_int] / 8;

@@ -9,7 +9,7 @@ final class rk {
     static he field_a;
     static String field_c;
 
-    static int a(int param0, int param1) {
+    static int bitwiseAnd(int param0, int param1) {
         return param0 & param1;
     }
 

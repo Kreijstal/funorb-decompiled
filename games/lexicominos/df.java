@@ -60,7 +60,7 @@ final class df {
             var9 = new int[var3];
             var21 = var9;
             for (var6_int = 0; var6_int < var3; var6_int++) {
-              var9[var6_int] = ci.field_b[vg.a(255, (int) var20[var6_int])];
+              var9[var6_int] = ci.field_b[vg.bitwiseAnd(255, (int) var20[var6_int])];
             }
             var1[var2] = new RgbSprite(ProgressMessageDialog.field_fb, eh.field_b, SingleChildWidgetContainer.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var21);
           } else {
@@ -69,7 +69,7 @@ final class df {
             var13 = var16;
             var6 = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6[var7] = FrameTimer.a(vg.a(255, (int) var22[var7]) << 24, ci.field_b[vg.a(255, (int) var20[var7])]);
+              var6[var7] = FrameTimer.bitwiseOr(vg.bitwiseAnd(255, (int) var22[var7]) << 24, ci.field_b[vg.bitwiseAnd(255, (int) var20[var7])]);
             }
             var1[var2] = (RgbSprite) ((Object) new ArgbSprite(ProgressMessageDialog.field_fb, eh.field_b, SingleChildWidgetContainer.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var16));
           }

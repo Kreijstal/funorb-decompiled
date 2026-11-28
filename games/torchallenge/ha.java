@@ -28,7 +28,7 @@ final class ha {
           var3_int = 0;
           var4 = FrameTimer.field_e;
           while (MatchingFieldValidator.field_s.length > var3_int) {
-            var5 = dl.field_s[var3_int];
+            var5 = MusicPatchNode.field_s[var3_int];
             if (var5 < 0) {
               var4 = var4 + ok.field_e;
             } else {

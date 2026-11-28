@@ -6,7 +6,7 @@ final class d extends InteractiveWidget {
     static oh field_F;
     int field_C;
     private int field_E;
-    private aj field_D;
+    private GrowableIntArray field_D;
     int field_G;
 
     public static void f(byte param0) {
@@ -32,7 +32,7 @@ final class d extends InteractiveWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < -110) {
-            stackIn_4_0 = this.field_D.a((byte) -117);
+            stackIn_4_0 = this.field_D.size((byte) -117);
             return stackIn_4_0;
           }
           stackIn_2_0 = 74;
@@ -53,8 +53,8 @@ final class d extends InteractiveWidget {
         try {
           var3_int = 59 / ((param0 - 11) / 56);
           if (0 <= param1 &&
-            param1 < this.field_D.a((byte) -110)) {
-            stackIn_9_0 = this.field_D.a((byte) 112, param1);
+            param1 < this.field_D.size((byte) -110)) {
+            stackIn_9_0 = this.field_D.get((byte) 112, param1);
             return stackIn_9_0;
           }
           stackIn_7_0 = -1;
@@ -117,8 +117,8 @@ final class d extends InteractiveWidget {
               var11 = -1;
               var12 = 0;
               while (true) {
-                if (var12 < this.field_D.a((byte) -127)) {
-                  var13 = this.field_D.a((byte) -101, var12) - var8_int;
+                if (var12 < this.field_D.size((byte) -127)) {
+                  var13 = this.field_D.get((byte) -101, var12) - var8_int;
                   var13 = var13 * var13;
                   stackIn_25_0 = var10;
                   if (var14 == 0) {
@@ -135,14 +135,14 @@ final class d extends InteractiveWidget {
                 break;
               }
               if (stackIn_25_0 >= 0) {
-                this.field_D.a(var11, true);
+                this.field_D.removeAt(var11, true);
               }
               if (var14 != 0) {
-                this.field_D.b(1, var8_int);
+                this.field_D.append(1, var8_int);
               }
             }
           } else {
-            this.field_D.b(1, var8_int);
+            this.field_D.append(1, var8_int);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

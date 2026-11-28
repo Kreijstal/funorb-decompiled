@@ -7,7 +7,7 @@ class gk extends DefaultTextWidgetRenderer {
     public final void paintWidget(int param0, int param1, UiWidget param2, int param3, boolean param4) {
         try {
           if (param4) {
-            ng.a(param2.field_q, param2.field_v, param0 - 12153, param1 + param2.field_u, param3 + param2.field_t);
+            MusicPatchEnvelope.a(param2.field_q, param2.field_v, param0 - 12153, param1 + param2.field_u, param3 + param2.field_t);
           }
           super.paintWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {

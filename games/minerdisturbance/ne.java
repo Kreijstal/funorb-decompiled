@@ -3,7 +3,7 @@
  */
 final class ne extends InteractiveWidget {
     static Sprite[] field_O;
-    private aa field_I;
+    private GrowableIntArray field_I;
     private int field_N;
     static String[] field_K;
     static String[] field_R;
@@ -98,11 +98,11 @@ final class ne extends InteractiveWidget {
 
     final int m(int param0) {
         if (param0 == 22302) {
-          return this.field_I.b(5717);
+          return this.field_I.size(5717);
         }
         java.applet.Applet var3 = (java.applet.Applet) null;
         ne.a((java.applet.Applet) null, 18);
-        return this.field_I.b(5717);
+        return this.field_I.size(5717);
     }
 
     final boolean pointerPressed(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
@@ -135,7 +135,7 @@ final class ne extends InteractiveWidget {
           }
           var8_int = var8_int * this.field_N / var9;
           if (param4 == 1) {
-            this.field_I.d(6524, var8_int);
+            this.field_I.append(6524, var8_int);
           }
           if (param4 != 1 ||
             var14 != 0) {
@@ -147,8 +147,8 @@ final class ne extends InteractiveWidget {
             var12 = 0;
             while (true) {
               boolean decompiledFrameRemainder0 = true;
-              if (this.field_I.b(5717) > var12) {
-                var13 = this.field_I.a(var12, (byte) 7) - var8_int;
+              if (this.field_I.size(5717) > var12) {
+                var13 = this.field_I.get(var12, (byte) 7) - var8_int;
                 var13 = var13 * var13;
                 stackIn_19_0 = var10;
                 stackIn_19_1 = var13;
@@ -169,7 +169,7 @@ final class ne extends InteractiveWidget {
                 (var11 < 0)) {
                 break;
               }
-              this.field_I.c(var11, 0);
+              this.field_I.removeAt(var11, 0);
               break;
             }
           }
@@ -277,11 +277,11 @@ final class ne extends InteractiveWidget {
         if (0 > param0) {
           return -1;
         }
-        if (this.field_I.b(5717) <= param0) {
+        if (this.field_I.size(5717) <= param0) {
           return -1;
         }
         if (param1) {
-          return this.field_I.a(param0, (byte) -119);
+          return this.field_I.get(param0, (byte) -119);
         }
         return -40;
     }

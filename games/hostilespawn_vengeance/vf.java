@@ -24,7 +24,7 @@ final class vf extends InteractiveWidget {
             if (null != ImageProducerRasterBuffer.field_q &&
               ImageProducerRasterBuffer.field_q.focusLost) {
               tb.f((byte) -119);
-              GuestPlayConfirmationForm.field_F.showDialog(new FullscreenStatusDialog(GuestPlayConfirmationForm.field_F, hf.field_g), param0 + 118);
+              GuestPlayConfirmationForm.field_F.showDialog(new FullscreenStatusDialog(GuestPlayConfirmationForm.field_F, ByteArrayPoolSupport.field_g), param0 + 118);
             }
             return;
           }

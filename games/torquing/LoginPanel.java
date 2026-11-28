@@ -151,7 +151,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
           if (this.field_N != null) {
             this.y = this.y + (5 + var7.textHeight(this.field_N, this.width - 40, var7.field_x));
           }
-          var8 = hq.field_c;
+          var8 = GrowableIntArray.field_c;
           var9 = go.a(false, ip.a(9));
           if (var9 != mf.field_u) {
             if (h.field_l == var9) {

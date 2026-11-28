@@ -216,7 +216,7 @@ final class GameStringTable extends IntrusiveNode {
           }
           var2Lifetime28 = DualLinkNode.a("tooltips,0", -523);
           if (null != var2Lifetime28) {
-            ag.field_c[0] = ta.a(ma.a(param0, 32203), var2Lifetime28);
+            ag.field_c[0] = ta.a(ma.bitwiseXor(param0, 32203), var2Lifetime28);
           }
           var2Lifetime29 = DualLinkNode.a("tooltips,1", -523);
           if (null != var2Lifetime29) {
@@ -228,7 +228,7 @@ final class GameStringTable extends IntrusiveNode {
           }
           var2Lifetime31 = DualLinkNode.a("tooltips,3", -523);
           if (var2Lifetime31 != null) {
-            ag.field_c[3] = ta.a(ma.a(param0, 32203), var2Lifetime31);
+            ag.field_c[3] = ta.a(ma.bitwiseXor(param0, 32203), var2Lifetime31);
           }
           var2Lifetime32 = DualLinkNode.a("tooltips,4", -523);
           if (var2Lifetime32 != null) {
@@ -244,7 +244,7 @@ final class GameStringTable extends IntrusiveNode {
           }
           var2Lifetime35 = DualLinkNode.a("tooltips,7", -523);
           if (null != var2Lifetime35) {
-            ag.field_c[7] = ta.a(ma.a(param0, 32203), var2Lifetime35);
+            ag.field_c[7] = ta.a(ma.bitwiseXor(param0, 32203), var2Lifetime35);
           }
           var2Lifetime36 = DualLinkNode.a("tooltips,8", -523);
           if (var2Lifetime36 != null) {
@@ -292,11 +292,11 @@ final class GameStringTable extends IntrusiveNode {
           }
           var2Lifetime47 = DualLinkNode.a("achievement_names,6", -523);
           if (var2Lifetime47 != null) {
-            wa.field_k[6] = ta.a(ma.a(param0, 32203), var2Lifetime47);
+            wa.field_k[6] = ta.a(ma.bitwiseXor(param0, 32203), var2Lifetime47);
           }
           var2Lifetime48 = DualLinkNode.a("achievement_names,7", -523);
           if (null != var2Lifetime48) {
-            wa.field_k[7] = ta.a(ma.a(param0, 32203), var2Lifetime48);
+            wa.field_k[7] = ta.a(ma.bitwiseXor(param0, 32203), var2Lifetime48);
           }
           var2Lifetime49 = DualLinkNode.a("achievement_names,8", param0 ^ -522);
           if (null != var2Lifetime49) {

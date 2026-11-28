@@ -494,7 +494,7 @@ final class Archive {
                     var21 = var34[var20];
                   }
                   if (var21 == param2) {
-                    qq.copyByteRange(var43, var17, var44, var14Lifetime1, var19);
+                    ArrayBlockSupport.copyByteRange(var43, var17, var44, var14Lifetime1, var19);
                     var14Lifetime1 = var14Lifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -532,7 +532,7 @@ final class Archive {
                 var18 = 0;
                 for (var19 = 0; var5_int > var19; var19++) {
                   var18 = var18 + var29.readInt(true);
-                  qq.copyByteRange(var43, var16, var39[var19], var38[var19], var18);
+                  ArrayBlockSupport.copyByteRange(var43, var16, var39[var19], var38[var19], var18);
                   var14_ref_int__[var19] = var14_ref_int__[var19] + var18;
                   var16 = var16 + var18;
                 }

@@ -77,7 +77,7 @@ final class rl {
         int var4_intLifetime1;
         if (param0) {
           for (var4_int = 0; var1 > var4_int; var4_int++) {
-            var3[var4_int] = td.field_m[jh.a((int) var7[var4_int], 255)];
+            var3[var4_int] = td.field_m[jh.bitwiseAnd((int) var7[var4_int], 255)];
           }
           var4 = new Sprite(ij.field_B, le.field_g, GameApplet.field_e[0], ImageProducerRasterBuffer.field_t[0], MusicPatchPcmStream.field_r[0], TextLayout.field_e[0], var3);
           p.a(0);
@@ -85,7 +85,7 @@ final class rl {
         }
         field_c = 104;
         for (var4_intLifetime1 = 0; var1 > var4_intLifetime1; var4_intLifetime1++) {
-          var3[var4_intLifetime1] = td.field_m[jh.a((int) var7[var4_intLifetime1], 255)];
+          var3[var4_intLifetime1] = td.field_m[jh.bitwiseAnd((int) var7[var4_intLifetime1], 255)];
         }
         var4Lifetime1 = new Sprite(ij.field_B, le.field_g, GameApplet.field_e[0], ImageProducerRasterBuffer.field_t[0], MusicPatchPcmStream.field_r[0], TextLayout.field_e[0], var3);
         p.a(0);

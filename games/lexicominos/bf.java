@@ -18,7 +18,7 @@ final class bf {
         synchronized (var1) {
           ul.field_o = NameSuggestionsPanel.field_I;
           ProgressMessageDialog.field_eb = ProgressMessageDialog.field_eb + 1;
-          bk.field_b = cj.field_i;
+          bk.field_b = MidiNoteMask.field_i;
           ResourceArchive.field_e = ij.field_h;
           ob.field_c = ResizableModalDialog.field_K;
           ResizableModalDialog.field_K = false;

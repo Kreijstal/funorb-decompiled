@@ -60,10 +60,10 @@ final class IsaacRandom {
             }
           }
           this.field_f = this.field_f + this.field_g[128 + var2 & 255];
-          dupTemp$1 = this.field_f + this.field_g[DirectByteStorage.a(var3 >> 2, 255)] + this.field_i;
+          dupTemp$1 = this.field_f + this.field_g[DirectByteStorage.bitwiseAnd(var3 >> 2, 255)] + this.field_i;
           var4 = dupTemp$1;
           this.field_g[var2] = dupTemp$1;
-          dupTemp$2 = var3 + this.field_g[DirectByteStorage.a(1020, var4 >> 8) >> 2];
+          dupTemp$2 = var3 + this.field_g[DirectByteStorage.bitwiseAnd(1020, var4 >> 8) >> 2];
           this.field_i = dupTemp$2;
           this.field_h[var2] = dupTemp$2;
           var2++;

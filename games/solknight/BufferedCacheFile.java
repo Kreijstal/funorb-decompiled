@@ -67,7 +67,7 @@ final class BufferedCacheFile {
             if (this.field_d != -1L &&
               this.field_e >= this.field_d &&
               this.field_d + (long)this.field_c >= (long)param3 + this.field_e) {
-              fk.copyByteRange(this.field_g, (int)(-this.field_d + this.field_e), param0, param2, param3);
+              ArrayBlockSupport.copyByteRange(this.field_g, (int)(-this.field_d + this.field_e), param0, param2, param3);
               this.field_e = this.field_e + (long)param3;
               return;
             }
@@ -80,7 +80,7 @@ final class BufferedCacheFile {
               if (param3 < var9_int) {
                 var9_int = param3;
               }
-              fk.copyByteRange(this.field_k, (int)(this.field_e - this.field_f), param0, param2, var9_int);
+              ArrayBlockSupport.copyByteRange(this.field_k, (int)(this.field_e - this.field_f), param0, param2, var9_int);
               param3 = param3 - var9_int;
               this.field_e = this.field_e + (long)var9_int;
               param2 = param2 + var9_int;
@@ -111,7 +111,7 @@ final class BufferedCacheFile {
               if (this.field_h < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_h;
               }
-              fk.copyByteRange(this.field_k, 0, param0, param2, var9_intLifetime1Lifetime1);
+              ArrayBlockSupport.copyByteRange(this.field_k, 0, param0, param2, var9_intLifetime1Lifetime1);
               param2 = param2 + var9_intLifetime1Lifetime1;
               this.field_e = this.field_e + (long)var9_intLifetime1Lifetime1;
               param3 = param3 - var9_intLifetime1Lifetime1;
@@ -154,7 +154,7 @@ final class BufferedCacheFile {
               if (var9 > -1L &&
                 var9 < var11) {
                 var13 = (int)(-var9 + var11);
-                fk.copyByteRange(this.field_g, (int)(-this.field_d + var9), param0, var7 + (int)(var9 - var5_long), var13);
+                ArrayBlockSupport.copyByteRange(this.field_g, (int)(-this.field_d + var9), param0, var7 + (int)(var9 - var5_long), var13);
                 if (this.field_e < var11) {
                   param3 = (int)((long)param3 - (var11 - this.field_e));
                   this.field_e = var11;
@@ -184,7 +184,7 @@ final class BufferedCacheFile {
           } else {
             stackIn_65_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -406,19 +406,19 @@ final class BufferedCacheFile {
           if (pg.field_e &&
             -1 == kd.currentScreenIndex) {
             if (ClientException.field_b < 0 &&
-              of.field_g > 50) {
+              GrowableIntArray.field_g > 50) {
               k.field_c = k.field_c + 1;
             }
-            of.field_g = of.field_g + 1;
-            if (of.field_g <= 50) {
+            GrowableIntArray.field_g = GrowableIntArray.field_g + 1;
+            if (GrowableIntArray.field_g <= 50) {
               m.a(10, -ea.field_p[kb.field_b] + (720 + bk.a(128, jb.field_g, (byte) 47)) - 64 << 4, bk.a(128, jb.field_g, (byte) -46) - 64 << 4, (byte) -6, 0, 0);
             }
-            if (50 < of.field_g && (hg.field_F == 1 ||
+            if (50 < GrowableIntArray.field_g && (MusicPatchNode.field_F == 1 ||
               fh.field_d[84] ||
               fh.field_d[83])) {
-              of.field_g = 501;
+              GrowableIntArray.field_g = 501;
             }
-            if (of.field_g > 500) {
+            if (GrowableIntArray.field_g > 500) {
               uf.field_p = uf.field_p - 1;
               if (kb.field_b == 7 ||
                 !(0 <= uf.field_p)) {
@@ -448,7 +448,7 @@ final class BufferedCacheFile {
             lk.field_b = 0;
           }
           if (!pg.field_e) {
-            of.field_g = 0;
+            GrowableIntArray.field_g = 0;
           }
           if (kd.currentScreenIndex == -1 ||
             pg.field_e ||
@@ -604,7 +604,7 @@ final class BufferedCacheFile {
                 continue;
               }
               DirectByteStorage.field_d = 0;
-              of.field_g = 500;
+              GrowableIntArray.field_g = 500;
             }
           }
           if (fh.field_d[82] &&
@@ -659,7 +659,7 @@ final class BufferedCacheFile {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var1), "hb.J(" + param0 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var1), "hb.J(" + param0 + ')');
         }
     }
 
@@ -697,7 +697,7 @@ final class BufferedCacheFile {
             if (this.field_d != -1L &&
               this.field_d + (long)this.field_g.length < (long)param2 + this.field_e) {
               var5_int = (int)((long)this.field_g.length + (this.field_d - this.field_e));
-              fk.copyByteRange(param0, param3, this.field_g, (int)(this.field_e - this.field_d), var5_int);
+              ArrayBlockSupport.copyByteRange(param0, param3, this.field_g, (int)(this.field_e - this.field_d), var5_int);
               param2 = param2 - var5_int;
               this.field_e = this.field_e + (long)var5_int;
               param3 = param3 + var5_int;
@@ -714,7 +714,7 @@ final class BufferedCacheFile {
               if (this.field_d == -1L) {
                 this.field_d = this.field_e;
               }
-              fk.copyByteRange(param0, param3, this.field_g, (int)(-this.field_d + this.field_e), param2);
+              ArrayBlockSupport.copyByteRange(param0, param3, this.field_g, (int)(-this.field_d + this.field_e), param2);
               this.field_e = this.field_e + (long)param2;
               if (-this.field_d + this.field_e > (long)this.field_c) {
                 this.field_c = (int)(this.field_e - this.field_d);
@@ -753,7 +753,7 @@ final class BufferedCacheFile {
             if (var5_long > -1L &&
               var7 > var5_long) {
               var9 = (int)(-var5_long + var7);
-              fk.copyByteRange(param0, (int)(-this.field_e + (var5_long + (long)param3)), this.field_k, (int)(-this.field_f + var5_long), var9);
+              ArrayBlockSupport.copyByteRange(param0, (int)(-this.field_e + (var5_long + (long)param3)), this.field_k, (int)(-this.field_f + var5_long), var9);
             }
             this.field_e = this.field_e + (long)param2;
             return;
@@ -773,7 +773,7 @@ final class BufferedCacheFile {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -784,7 +784,7 @@ final class BufferedCacheFile {
           }
           this.readFully(param1, -90, 0, param1.length);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "hb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "hb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -834,7 +834,7 @@ final class BufferedCacheFile {
           if (var2 > -1L &&
             var2 < var4) {
             var6 = (int)(-var2 + var4);
-            fk.copyByteRange(this.field_g, (int)(var2 - this.field_d), this.field_k, (int)(var2 - this.field_f), var6);
+            ArrayBlockSupport.copyByteRange(this.field_g, (int)(var2 - this.field_d), this.field_k, (int)(var2 - this.field_f), var6);
           }
           this.field_c = 0;
           this.field_d = -1L;
@@ -858,7 +858,7 @@ final class BufferedCacheFile {
           this.field_g = new byte[param2];
           this.field_k = new byte[param1];
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "hb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "hb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

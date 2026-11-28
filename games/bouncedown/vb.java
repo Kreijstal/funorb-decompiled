@@ -135,10 +135,10 @@ final class vb implements WidgetRenderer {
               f.a(NodeHashTableIterator.field_b, false, hh.field_p, lb.field_g, ja.field_a);
               hh.field_p.backpatchShortLength(-124, hh.field_p.position - var10);
             }
-            jj.a(-1, true);
-            pj.field_a = rj.field_q;
+            ByteArrayPoolSupport.a(-1, true);
+            pj.field_a = MusicPatch.field_q;
           }
-          if (pj.field_a == rj.field_q &&
+          if (pj.field_a == MusicPatch.field_q &&
             IsaacRandom.a(1, 3)) {
             var9Lifetime1 = jc.field_g.readUnsignedByte((byte) -84);
             jc.field_g.position = 0;

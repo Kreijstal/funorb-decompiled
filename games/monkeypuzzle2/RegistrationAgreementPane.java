@@ -164,7 +164,7 @@ final class RegistrationAgreementPane extends WidgetContainer implements TextHot
           this.field_C = param0;
           this.field_D = new ButtonWidget(pi.field_i, (WidgetEventListener) null);
           this.field_D.field_h = (WidgetRenderer) ((Object) new hd());
-          var7 = gg.a(new String[]{this.getAgreementLinkOpeningTag(1971849544), this.getAgreementLinkClosingTag((byte) 106)}, oi.field_i, true);
+          var7 = gg.a(new String[]{this.getAgreementLinkOpeningTag(1971849544), this.getAgreementLinkClosingTag((byte) 106)}, GrowableIntArray.field_i, true);
           var3 = 20;
           var4 = new DefaultTextWidgetRenderer(ButtonWidget.field_z, 0, 0, 0, 0, 16777215, -1, 3, 0, ButtonWidget.field_z.field_C, -1, 2147483647, true);
           this.field_z = new RichTextWidget(var7, var4);
@@ -408,7 +408,7 @@ final class RegistrationAgreementPane extends WidgetContainer implements TextHot
               var39 = (-16711934 & var30 * var35) >>> 8 | (16711726 & var30 * var36) >>> 8;
               var38 = var38 + var32 * 65793;
               var39 = var39 + 65793 * var33;
-              oi.a(var27, 255 & var38 >> 8, var25, 255 & var37 >> 8, (byte) 92, var23, var26, var39 & 255, var24, var22, 255 & var37, var39 >> 8 & 255, var38 >> 16, 255 & var38, var39 >> 16, var37 >> 16);
+              GrowableIntArray.a(var27, 255 & var38 >> 8, var25, 255 & var37 >> 8, (byte) 92, var23, var26, var39 & 255, var24, var22, 255 & var37, var39 >> 8 & 255, var38 >> 16, 255 & var38, var39 >> 16, var37 >> 16);
             }
             var44++;
           }

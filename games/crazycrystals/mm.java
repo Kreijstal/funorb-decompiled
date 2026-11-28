@@ -50,7 +50,7 @@ final class mm {
           var9 = var11;
           var5 = var9;
           for (var6 = 0; var3 > var6; var6++) {
-            var5[var6] = gh.field_z[pf.b((int) var10[var6], 255)];
+            var5[var6] = gh.field_z[pf.bitwiseAnd((int) var10[var6], 255)];
           }
           var1[var2] = new RgbSprite(SecondaryIntrusiveDeque.field_c, bo.field_o, uo.field_k[var2], MouseWheelInput.field_a[var2], uo.field_l[var2], je.field_c[var2], var11);
         }

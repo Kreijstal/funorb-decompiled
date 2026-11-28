@@ -157,22 +157,22 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
           }
           if (wn.field_d.length >= 2) {
             if (param1) {
-              stackIn_43_0 = (dl.field_n != -1) ? 1 : 0;
+              stackIn_43_0 = (MusicPatchEnvelope.field_n != -1) ? 1 : 0;
             } else {
               stackIn_43_0 = 0;
             }
             var6Lifetime1 = stackIn_43_0;
             if (var6Lifetime1 != 0) {
-              var7 = dl.field_n;
+              var7 = MusicPatchEnvelope.field_n;
               for (var8_int = 0; DelegatingCanvas.field_f.length > var8_int; var8_int++) {
                 DelegatingCanvas.field_f[var8_int] = (byte) 0;
               }
-              DelegatingCanvas.field_f[var7 / 8] = (byte)DisplayNameSelectionPanel.a((int) DelegatingCanvas.field_f[var7 / 8], 1 << var7 % 8);
+              DelegatingCanvas.field_f[var7 / 8] = (byte)DisplayNameSelectionPanel.bitwiseOr((int) DelegatingCanvas.field_f[var7 / 8], 1 << var7 % 8);
             }
             stackIn_51_0 = (!param1) ? 0 : -1;
             for (var7 = stackIn_51_0; wn.field_d.length > var7; var7++) {
               if (var6Lifetime1 != 0) {
-                stackIn_59_0 = (dl.field_n != var7) ? 1 : 0;
+                stackIn_59_0 = (MusicPatchEnvelope.field_n != var7) ? 1 : 0;
               } else {
                 stackIn_59_0 = 0;
               }
@@ -186,7 +186,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                         DelegatingCanvas.field_f[var9] = (byte) 0;
                       }
                     } else {
-                      DelegatingCanvas.field_f[var7 / 8] = (byte)dm.a((int) DelegatingCanvas.field_f[var7 / 8], 1 << ce.a(var7, 7));
+                      DelegatingCanvas.field_f[var7 / 8] = (byte)dm.bitwiseXor((int) DelegatingCanvas.field_f[var7 / 8], 1 << ce.bitwiseAnd(var7, 7));
                     }
                   }
                 } else {
@@ -272,7 +272,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
               var29 = RegistrationAgreementPane.field_P[3][var6Lifetime3];
               if (var4_int != 0 &&
                 var29.field_L != 0) {
-                qd.field_u = var6Lifetime3;
+                MusicPatchNode.field_u = var6Lifetime3;
               }
               if (var29.field_Db &&
                 var6Lifetime3 > 0) {
@@ -287,7 +287,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
               }
               stackIn_145_0 = var29;
-              stackIn_146_1 = (qd.field_u == var6Lifetime3);
+              stackIn_146_1 = (MusicPatchNode.field_u == var6Lifetime3);
               stackIn_145_0.field_gb = stackIn_146_1;
               stackIn_148_0 = var29;
               stackIn_149_1 = (var4_int != 0);
@@ -417,16 +417,16 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 } else {
                   if (var9 == -1) {
                     for (var18 = var6Lifetime4; var18 < var30.length + var6Lifetime4 - 1; var18++) {
-                      SoundCache.field_d[var18 / 8] = (byte)ce.a((int) SoundCache.field_d[var18 / 8], ~(1 << ce.a(var18, 7)));
+                      SoundCache.field_d[var18 / 8] = (byte)ce.bitwiseAnd((int) SoundCache.field_d[var18 / 8], ~(1 << ce.bitwiseAnd(var18, 7)));
                     }
                   } else {
-                    SoundCache.field_d[(var9 + var6Lifetime4) / 8] = (byte)dm.a((int) SoundCache.field_d[(var9 + var6Lifetime4) / 8], 1 << ce.a(var9 + var6Lifetime4, 7));
+                    SoundCache.field_d[(var9 + var6Lifetime4) / 8] = (byte)dm.bitwiseXor((int) SoundCache.field_d[(var9 + var6Lifetime4) / 8], 1 << ce.bitwiseAnd(var9 + var6Lifetime4, 7));
                   }
                 }
               }
               if (param1 &&
                 var16Lifetime1 != 0) {
-                SoundCache.field_d[(var9 + var6Lifetime4) / 8] = (byte)ce.a((int) SoundCache.field_d[(var9 + var6Lifetime4) / 8], ~(1 << ce.a(var6Lifetime4 + var9, 7)));
+                SoundCache.field_d[(var9 + var6Lifetime4) / 8] = (byte)ce.bitwiseAnd((int) SoundCache.field_d[(var9 + var6Lifetime4) / 8], ~(1 << ce.bitwiseAnd(var6Lifetime4 + var9, 7)));
               }
               if (var9 >= 0 &&
                 var17.field_Db) {
@@ -516,7 +516,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                   var23 = 0;
                   for (var24 = 0; var24 < var7; var24++) {
                     if (bi.field_d[var24]) {
-                      var25_ref = "</col>" + td.field_n[var24] + "<col=A00000>";
+                      var25_ref = "</col>" + MidiNoteMask.field_n[var24] + "<col=A00000>";
                       var22 = var25_ref;
                       var21 = var22;
                       var22 = var25_ref;

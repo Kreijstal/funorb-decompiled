@@ -77,7 +77,7 @@ final class ti {
           if (param0 >= -33) {
             ti.a((byte) -39);
           }
-          if (!gl.field_o &&
+          if (!MusicPatchEnvelope.field_o &&
             qf.field_b >= ProxySocketConnector.field_h &&
             (ea.field_g + ProxySocketConnector.field_h) > qf.field_b) {
             stackIn_13_0 = as.field_a;

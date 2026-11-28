@@ -79,10 +79,10 @@ abstract class Framebuffer {
           MixedSupport057.integerState0297 = packetBufferLocal26.readUnsignedShort(3);
           integerLocal12 = 1 + (packetBufferLocal26.readUnsignedByte((byte) -104) & 255);
           for (integerLocal13 = 0; integerLocal13 < GameDomainSupport002.integerState0177; integerLocal13++) {
-            InputAdapter003.integerArrayState0206[integerLocal13] = packetBufferLocal25.readUnsignedShort(MixedSupport106.computeInteger1387((int) byteArgument1, -69));
+            InputAdapter003.integerArrayState0206[integerLocal13] = packetBufferLocal25.readUnsignedShort(MixedSupport106.bitwiseXor((int) byteArgument1, -69));
           }
           for (integerLocal31 = 0; GameDomainSupport002.integerState0177 > integerLocal31; integerLocal31++) {
-            MixedSupport039.integerArrayState0047[integerLocal31] = packetBufferLocal26.readUnsignedShort(MixedSupport106.computeInteger1387((int) byteArgument1, -69));
+            MixedSupport039.integerArrayState0047[integerLocal31] = packetBufferLocal26.readUnsignedShort(MixedSupport106.bitwiseXor((int) byteArgument1, -69));
           }
           for (integerLocal32 = 0; integerLocal32 < GameDomainSupport002.integerState0177; integerLocal32++) {
             MixedSupport123.integerArrayState0208[integerLocal32] = packetBufferLocal26.readUnsignedShort(3);
@@ -91,11 +91,11 @@ abstract class Framebuffer {
             MixedSupport052.integerArrayState0054[integerLocal33] = packetBufferLocal26.readUnsignedShort(3);
           }
           packetBufferLocal26.position = -(3 * (integerLocal12 - 1)) + (byteArrayArgument2.length - (7 + GameDomainSupport002.integerState0177 * 8));
-          NetworkSupport006.integerArrayState0152 = new int[integerLocal12];
+          GrowableIntArray.integerArrayState0152 = new int[integerLocal12];
           for (integerLocal34 = 1; integerLocal12 > integerLocal34; integerLocal34++) {
-            NetworkSupport006.integerArrayState0152[integerLocal34] = packetBufferLocal26.readUnsignedMedium(byteArgument1 + 65352);
-            if (0 == NetworkSupport006.integerArrayState0152[integerLocal34]) {
-              NetworkSupport006.integerArrayState0152[integerLocal34] = 1;
+            GrowableIntArray.integerArrayState0152[integerLocal34] = packetBufferLocal26.readUnsignedMedium(byteArgument1 + 65352);
+            if (0 == GrowableIntArray.integerArrayState0152[integerLocal34]) {
+              GrowableIntArray.integerArrayState0152[integerLocal34] = 1;
             }
           }
           packetBufferLocal26.position = 0;

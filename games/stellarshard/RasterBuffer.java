@@ -244,20 +244,20 @@ abstract class RasterBuffer {
         }
     }
 
-    abstract void a(java.awt.Component param0, int param1, int param2, byte param3);
+    abstract void initialize(java.awt.Component param0, int param1, int param2, byte param3);
 
-    final void a(byte param0) {
+    final void setAsRasterTarget(byte param0) {
         try {
           SoftwareRasterizer.setRasterBuffer(this.field_e, this.field_g, this.field_f);
           if (param0 != -107) {
-            this.a((java.awt.Component) null, 82, 120, (byte) 92);
+            this.initialize((java.awt.Component) null, 82, 120, (byte) 92);
           }
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "vi.F(" + param0 + ')');
         }
     }
 
-    abstract void a(int param0, java.awt.Graphics param1, int param2, int param3);
+    abstract void drawImage(int param0, java.awt.Graphics param1, int param2, int param3);
 
     final static void a(boolean param0) {
         RuntimeException decompiledCaughtException = null;

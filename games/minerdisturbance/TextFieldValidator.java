@@ -370,16 +370,16 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
             var10 = var10 ^ 285L;
           }
           var12 = var10 ^ var2;
-          field_h[0][var0] = pa.a(var12, pa.a(pa.a(pa.a(pa.a(var2 << 32, pa.a(pa.a(var2 << 48, var2 << 56), var6 << 40)), var10 << 24), var8 << 16), var4 << 8));
+          field_h[0][var0] = pa.bitwiseOr(var12, pa.bitwiseOr(pa.bitwiseOr(pa.bitwiseOr(pa.bitwiseOr(var2 << 32, pa.bitwiseOr(pa.bitwiseOr(var2 << 48, var2 << 56), var6 << 40)), var10 << 24), var8 << 16), var4 << 8));
           for (var14 = 1; 8 > var14; var14++) {
-            field_h[var14][var0] = pa.a(field_h[var14 - 1][var0] >>> 8, field_h[var14 - 1][var0] << 56);
+            field_h[var14][var0] = pa.bitwiseOr(field_h[var14 - 1][var0] >>> 8, field_h[var14 - 1][var0] << 56);
           }
           var0++;
         }
         field_f[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
           var1 = -8 + 8 * var0;
-          field_f[var0] = te.a(te.a(bf.a(field_h[6][6 + var1], 65280L), te.a(te.a(bf.a(field_h[4][4 + var1], 4278190080L), te.a(te.a(te.a(bf.a(-72057594037927936L, field_h[0][var1]), bf.a(field_h[1][var1 + 1], 71776119061217280L)), bf.a(field_h[2][2 + var1], 280375465082880L)), bf.a(field_h[3][var1 + 3], 1095216660480L))), bf.a(16711680L, field_h[5][5 + var1]))), bf.a(255L, field_h[7][7 + var1]));
+          field_f[var0] = te.bitwiseXor(te.bitwiseXor(bf.bitwiseAnd(field_h[6][6 + var1], 65280L), te.bitwiseXor(te.bitwiseXor(bf.bitwiseAnd(field_h[4][4 + var1], 4278190080L), te.bitwiseXor(te.bitwiseXor(te.bitwiseXor(bf.bitwiseAnd(-72057594037927936L, field_h[0][var1]), bf.bitwiseAnd(field_h[1][var1 + 1], 71776119061217280L)), bf.bitwiseAnd(field_h[2][2 + var1], 280375465082880L)), bf.bitwiseAnd(field_h[3][var1 + 3], 1095216660480L))), bf.bitwiseAnd(16711680L, field_h[5][5 + var1]))), bf.bitwiseAnd(255L, field_h[7][7 + var1]));
         }
     }
 }

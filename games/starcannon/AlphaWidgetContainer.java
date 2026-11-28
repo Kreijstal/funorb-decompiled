@@ -11,7 +11,7 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
     static AccountRequestState field_x;
     static Sprite[] field_A;
 
-    static long a(long param0, long param1) {
+    static long bitwiseOr(long param0, long param1) {
         return param0 | param1;
     }
 

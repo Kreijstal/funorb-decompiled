@@ -86,7 +86,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             }
             while (true) {
               if (!ge.b(-45)) {
-                if (cp.field_k[KeyboardInputHandler.field_c] &&
+                if (MusicPatchEnvelope.field_k[KeyboardInputHandler.field_c] &&
                   !DefaultTextWidgetRenderer.field_k &&
                   qh.field_o.isEmpty() &&
                   ResizableModalDialog.field_O == 0 &&
@@ -351,7 +351,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                   }
                 }
                 if (ai.a(100, 0) &&
-                  uo.field_o - dk.field_h == 12) {
+                  uo.field_o - MusicPatch.field_h == 12) {
                   rc.a(1, LevelProgressUpdate.field_h, b.field_a, 239, je.field_j, 16, fp.field_a);
                 }
                 gh.j(-10935);
@@ -596,7 +596,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           LaserTraceCursor.clearLaserCursorGlobals((byte) -64);
           ea.clearStaticReferences(-1);
           IntrusiveNode.clearStaticReferences(-24894);
-          pl.clearDeclaredStaticReferences(-124);
+          MusicPatchNode.clearDeclaredStaticReferences(-124);
           MidiFileReader.clearStaticReferences();
           MusicPatchPcmStream.clearStaticReferences((byte) 120);
           to.clearStaticReferences((byte) -109);
@@ -712,7 +712,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           Bzip2Decompressor.clearStaticReferences();
           Bzip2State.clearStaticReferences(param0 + 169);
           pi.resetStaticState(102);
-          h.clearStaticReferences(0);
+          ByteArrayPoolSupport.clearStaticReferences(0);
           kf.resetStaticState(param0 ^ -90);
           fl.clearStaticReferences((byte) -121);
           fk.clearStaticReferences(param0 - 5171);
@@ -741,9 +741,9 @@ public final class CrazyCrystals extends NetworkGameClient {
           df.clearStaticReferences(-20012);
           al.a(param0 + 31664);
           ma.clearStaticReferences(125);
-          dm.clearDeclaredStaticReferences(param0 + 14137);
-          dk.a((byte) 55);
-          cp.clearStaticReferences(112);
+          MidiNoteMask.clearDeclaredStaticReferences(param0 + 14137);
+          MusicPatch.a((byte) 55);
+          MusicPatchEnvelope.clearStaticReferences(112);
           pf.clearDeclaredStaticReferences((byte) 33);
           ig.clearStaticReferences(24);
           ah.clearStaticReferences((byte) 40);
@@ -773,7 +773,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           SoundFilter.clearStaticReferences();
           kj.clearStaticReferences(-99);
           DirectByteStorage.clearStaticReferences(0);
-          ch.clearStaticReferences(855);
+          GrowableIntArray.clearStaticReferences(855);
           DraggableWidgetContainer.clearStaticReferences((byte) 0);
           DropTargetWidgetContainer.clearStaticReferences((byte) 87);
           sj.a(21732);
@@ -938,7 +938,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           }
           var2 = gd.c(128);
           if (aj.e((byte) 114)) {
-            pl.a(al.a((byte) 2), var2, (byte) -59);
+            MusicPatchNode.a(al.a((byte) 2), var2, (byte) -59);
             return;
           }
           if (!DualLinkNode.field_i) {
@@ -1201,11 +1201,11 @@ public final class CrazyCrystals extends NetworkGameClient {
             }
           }
           AccountRegistrationPanel.a(true, "menu", (byte) -106);
-          if (null == h.field_d) {
+          if (null == ByteArrayPoolSupport.field_d) {
             ba.b((byte) 126);
             td.a(28.0f, oi.field_b, false);
             this.renderClientFrame(-124);
-            h.field_d = FullscreenNoticeType.a(-1, "buttonframe", "", ResultScenePhase.field_d);
+            ByteArrayPoolSupport.field_d = FullscreenNoticeType.a(-1, "buttonframe", "", ResultScenePhase.field_d);
             DirectByteStorage.field_c = FullscreenNoticeType.a(-1, "hoverbuttonframe", "", ResultScenePhase.field_d);
             TextHotspotBounds.field_g = FullscreenNoticeType.a(-1, "smallbuttonframe", "", ResultScenePhase.field_d);
             mi.field_x = FullscreenNoticeType.a(-1, "hoversmallbuttonframe", "", ResultScenePhase.field_d);
@@ -1220,10 +1220,10 @@ public final class CrazyCrystals extends NetworkGameClient {
             var5 = gj.field_m.field_K[0].length;
             array$0 = new int[var5];
             gj.field_m.field_K[1] = array$0;
-            eg.a(gj.field_m.field_K[0], 0, gj.field_m.field_K[1], 0, var5);
+            ArrayBlockSupport.copyIntRange(gj.field_m.field_K[0], 0, gj.field_m.field_K[1], 0, var5);
             array$1 = new int[var5];
             gj.field_m.field_K[2] = array$1;
-            eg.a(gj.field_m.field_K[0], 0, gj.field_m.field_K[2], 0, var5);
+            ArrayBlockSupport.copyIntRange(gj.field_m.field_K[0], 0, gj.field_m.field_K[2], 0, var5);
             gj.field_m.field_K[0][1] = 12640511;
             gj.field_m.field_K[1][1] = 16777215;
             CipherPacketBuffer.field_p = null;
@@ -1406,7 +1406,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             ba.field_j = var3_array[6];
             ag.field_c = new RgbSprite[12];
             al.field_h = new RgbSprite[12];
-            cp.field_d = new RgbSprite[12];
+            MusicPatchEnvelope.field_d = new RgbSprite[12];
             AccountCreationResultPanel.field_qb = new RgbSprite[12];
             var3_array = FullscreenNoticeType.a(-1, "sprites_spider", "", ResultScenePhase.field_d);
             var4 = 0;
@@ -1431,7 +1431,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                 var4 = 0;
                 break;
               }
-              cp.field_d[var4] = var3_array[var4 + 24];
+              MusicPatchEnvelope.field_d[var4] = var3_array[var4 + 24];
               var4++;
             } while (var13 == 0);
             while (var4 < 12) {
@@ -1460,7 +1460,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                 var3_array = FullscreenNoticeType.a(-1, "sprites_safe_base", "", ResultScenePhase.field_d);
                 break;
               }
-              ArchiveRequest.field_p[var4 >> 2][pf.b(3, var4)] = var3_array[var4];
+              ArchiveRequest.field_p[var4 >> 2][pf.bitwiseAnd(3, var4)] = var3_array[var4];
               var4++;
             } while (var13 == 0);
             var4 = 1;
@@ -1478,7 +1478,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           if (null == ba.field_g) {
             td.a(44.0f, oi.field_b, false);
             this.renderClientFrame(-122);
-            pl.field_B = new RgbSprite[8];
+            MusicPatchNode.field_B = new RgbSprite[8];
             ba.field_g = new RgbSprite[8];
             q.field_b = new RgbSprite[8];
             hj.field_b = new RgbSprite[8];
@@ -1492,7 +1492,7 @@ public final class CrazyCrystals extends NetworkGameClient {
               ModelMesh.field_i[var4] = var3_array[7 * var4 + 1];
               hj.field_b[var4] = var3_array[var4 * 7 + 2];
               q.field_b[var4] = var3_array[7 * var4 + 3];
-              pl.field_B[var4] = var3_array[4 + var4 * 7];
+              MusicPatchNode.field_B[var4] = var3_array[4 + var4 * 7];
               cl.field_n[var4] = var3_array[7 * var4 + 5];
               bd.field_n[var4] = var3_array[6 + var4 * 7];
               var4++;
@@ -1547,7 +1547,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             ne.field_i = new RgbSprite(20, 20);
             ne.field_i.bindAsRenderTarget();
             var3_ref.drawDownscaledAreaAveraged(0, 0, 20, 20);
-            dk.field_o.setAsRasterTarget(6945);
+            MusicPatch.field_o.setAsRasterTarget(6945);
             ResultScenePhase.field_d = null;
             dj.field_ab = null;
             uf.field_e = null;
@@ -1741,10 +1741,10 @@ public final class CrazyCrystals extends NetworkGameClient {
         int var2_intLifetime1;
         var5 = field_B;
         try {
-          if (cp.field_k[8]) {
+          if (MusicPatchEnvelope.field_k[8]) {
             sg.field_a = false;
           }
-          if (cp.field_k[9]) {
+          if (MusicPatchEnvelope.field_k[9]) {
             sg.field_a = true;
           }
           if (RegistrationAgreementPane.field_E != null &&
@@ -1760,7 +1760,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             this.d(true);
             hb.field_g = false;
           }
-          if (!cp.field_k[KeyboardInputHandler.field_c]) {
+          if (!MusicPatchEnvelope.field_k[KeyboardInputHandler.field_c]) {
             DefaultTextWidgetRenderer.field_k = false;
           }
           if (!param0) {

@@ -125,7 +125,7 @@ final class mb {
               if ((2 & var11) != 0) {
                 for (var12 = 0; var12 < var5; var12++) {
                   for (var13 = 0; var13 < var6; var13++) {
-                    dupTemp$1 = var17.readByte(ih.a(param0, 102));
+                    dupTemp$1 = var17.readByte(ih.bitwiseXor(param0, 102));
                     var9[var12 + var13 * var5] = dupTemp$1;
                     var14 = dupTemp$1;
                     stackIn_37_0 = var10;

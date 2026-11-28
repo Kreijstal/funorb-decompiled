@@ -24,14 +24,14 @@ abstract class RasterBuffer {
         }
     }
 
-    abstract void a(int param0, java.awt.Component param1, int param2, int param3);
+    abstract void initialize(int param0, java.awt.Component param1, int param2, int param3);
 
     final void bindAsTarget(int param0) {
         int var2 = 109 / ((37 - param0) / 63);
         SoftwareRasterizer.setTarget(this.pixels, this.width, this.height);
     }
 
-    abstract void a(int param0, int param1, int param2, java.awt.Graphics param3);
+    abstract void drawImage(int param0, int param1, int param2, java.awt.Graphics param3);
 
     static {
         field_a = new int[]{0, 0, 0};

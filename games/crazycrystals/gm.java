@@ -76,7 +76,7 @@ final class gm {
           if (var5 == null) {
             return false;
           }
-          h.a(var5, param2);
+          ByteArrayPoolSupport.a(var5, param2);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

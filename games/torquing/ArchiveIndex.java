@@ -39,7 +39,7 @@ final class ArchiveIndex {
             try {
               var4 = Class.forName("BufferedImageRasterBuffer");
               var5 = (RasterBuffer) (var4.newInstance());
-              var5.a(param3, (byte) 24, param1, param2);
+              var5.initialize(param3, (byte) 24, param1, param2);
               if (param0 == 0) {
                 stackIn_4_0 = var5;
                 return stackIn_4_0;
@@ -50,7 +50,7 @@ final class ArchiveIndex {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
               var5_ref = new ImageProducerRasterBuffer();
-              ((RasterBuffer) ((Object) var5_ref)).a(param3, (byte) 24, param1, param2);
+              ((RasterBuffer) ((Object) var5_ref)).initialize(param3, (byte) 24, param1, param2);
               stackIn_6_0 = var5_ref;
               return (RasterBuffer) ((Object) stackIn_6_0);
             }

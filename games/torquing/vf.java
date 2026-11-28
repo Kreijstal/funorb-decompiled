@@ -344,7 +344,7 @@ final class vf {
             decompiledSharedTail0 = (Torquing.field_u != 0);
           }
           if (decompiledSharedTail0) {
-            bh.field_a = mg.field_b;
+            bh.field_a = ByteArrayPoolSupport.field_b;
             SpriteBase.field_i = param3;
             rf.field_u = param6;
             ol.field_a = param5;

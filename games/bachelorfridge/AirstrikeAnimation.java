@@ -29,7 +29,7 @@ final class AirstrikeAnimation extends EventAnimation {
             stackIn_2_0 = (PalettedBitmapFont) null;
             return stackIn_2_0;
           }
-          if (!g.a(param2, param1, param0 ^ 30847, param4)) {
+          if (!MidiNoteMask.a(param2, param1, param0 ^ 30847, param4)) {
             return null;
           }
           stackIn_7_0 = cea.a(param3.getFile(-56, param2, param1), 28450);

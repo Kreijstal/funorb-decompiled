@@ -12,7 +12,7 @@ final class CreaturePoseAnimation extends AnimationNode {
     private CreatureActor field_q;
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
-        un.field_i = param0;
+        MusicPatchEnvelope.field_i = param0;
         mha.field_g = param2;
         BoardView.field_t = param1;
         if (param3 != -64) {

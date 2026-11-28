@@ -68,7 +68,7 @@ final class jj {
                   var10 = var8 & 65280;
                   var10 = 65280 & (var10 >> 1) - (var10 >> 5);
                   var11 = 31 & var8 >> 3;
-                  SoftwareRasterizer.field_b[var6_int] = mp.a(var11, mp.a(var9 << 16, var10));
+                  SoftwareRasterizer.field_b[var6_int] = mp.bitwiseOr(var11, mp.bitwiseOr(var9 << 16, var10));
                 }
                 var6_int++;
               }

@@ -201,7 +201,7 @@ final class dd {
                 this.field_b = 0;
                 this.field_a = 0;
               }
-              this.field_k[this.field_a] = (byte)bc.a(var8 << 8 - var7, 255);
+              this.field_k[this.field_a] = (byte)bc.bitwiseAnd(var8 << 8 - var7, 255);
               var5_int++;
               param0 = param0 - 8L;
               this.field_b = this.field_b + var7;
@@ -226,7 +226,7 @@ final class dd {
               this.field_b = 0;
               this.field_a = 0;
             }
-            this.field_k[this.field_a] = (byte)bc.a(var8Lifetime1 << -var7 + 8, 255);
+            this.field_k[this.field_a] = (byte)bc.bitwiseAnd(var8Lifetime1 << -var7 + 8, 255);
             this.field_b = this.field_b + (int)param0;
           }
           return;
@@ -258,7 +258,7 @@ final class dd {
         int var8 = 0;
         var8 = Main.field_T;
         try {
-          this.field_k[this.field_a] = (byte)GameApplet.a((int) this.field_k[this.field_a], 128 >>> bc.a(this.field_b, 7));
+          this.field_k[this.field_a] = (byte)GameApplet.a((int) this.field_k[this.field_a], 128 >>> bc.bitwiseAnd(this.field_b, 7));
           this.field_a = this.field_a + 1;
           if (this.field_a > 32) {
             while (this.field_a < 64) {
@@ -277,7 +277,7 @@ final class dd {
           if (param0 != 5319) {
             this.field_a = 123;
           }
-          og.a(this.field_g, 0, this.field_k, 32, 32);
+          ArrayBlockSupport.copyByteRange(this.field_g, 0, this.field_k, 32, 32);
           this.a(-9);
           var4_int = 0;
           var5 = param2;
@@ -349,7 +349,7 @@ final class dd {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_d[var2] = ji.a(rl.a(255L, (long)this.field_k[var3 + 7]), ji.a(rl.a((long)this.field_k[6 + var3], 255L) << 8, ji.a(ji.a(rl.a(4278190080L, (long)this.field_k[var3 + 4] << 24), ji.a(ji.a(ji.a((long)this.field_k[var3] << 56, rl.a(71776119061217280L, (long)this.field_k[var3 + 1] << 48)), rl.a(255L, (long)this.field_k[var3 + 2]) << 40), rl.a(255L, (long)this.field_k[3 + var3]) << 32)), rl.a((long)this.field_k[var3 + 5] << 16, 16711680L))));
+          this.field_d[var2] = ji.bitwiseXor(rl.bitwiseAnd(255L, (long)this.field_k[var3 + 7]), ji.bitwiseXor(rl.bitwiseAnd((long)this.field_k[6 + var3], 255L) << 8, ji.bitwiseXor(ji.bitwiseXor(rl.bitwiseAnd(4278190080L, (long)this.field_k[var3 + 4] << 24), ji.bitwiseXor(ji.bitwiseXor(ji.bitwiseXor((long)this.field_k[var3] << 56, rl.bitwiseAnd(71776119061217280L, (long)this.field_k[var3 + 1] << 48)), rl.bitwiseAnd(255L, (long)this.field_k[var3 + 2]) << 40), rl.bitwiseAnd(255L, (long)this.field_k[3 + var3]) << 32)), rl.bitwiseAnd((long)this.field_k[var3 + 5] << 16, 16711680L))));
           var2++;
           var3 += 8;
         }
@@ -357,7 +357,7 @@ final class dd {
           dupTemp$0 = this.field_f[var2Lifetime1];
           arrayValue$1 = this.field_d[var2Lifetime1];
           this.field_c[var2Lifetime1] = dupTemp$0;
-          this.field_i[var2Lifetime1] = ji.a(arrayValue$1, dupTemp$0);
+          this.field_i[var2Lifetime1] = ji.bitwiseXor(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; 8 > var3Lifetime1; var3Lifetime1++) {
@@ -365,7 +365,7 @@ final class dd {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_l[var3Lifetime1] = ji.a(this.field_l[var3Lifetime1], AccountNameAvailabilityValidator.field_k[var4][bc.a((int)(this.field_c[bc.a(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
+              this.field_l[var3Lifetime1] = ji.bitwiseXor(this.field_l[var3Lifetime1], AccountNameAvailabilityValidator.field_k[var4][bc.bitwiseAnd((int)(this.field_c[bc.bitwiseAnd(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
               var4++;
               var5 -= 8;
             }
@@ -373,14 +373,14 @@ final class dd {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_c[var3Lifetime1Lifetime1] = this.field_l[var3Lifetime1Lifetime1];
           }
-          this.field_c[0] = ji.a(this.field_c[0], AccountNameAvailabilityValidator.field_o[var2Lifetime2]);
+          this.field_c[0] = ji.bitwiseXor(this.field_c[0], AccountNameAvailabilityValidator.field_o[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_l[var3Lifetime1Lifetime2] = this.field_c[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (8 > var7) {
-              this.field_l[var3Lifetime1Lifetime2] = ji.a(this.field_l[var3Lifetime1Lifetime2], AccountNameAvailabilityValidator.field_k[var7][bc.a((int)(this.field_i[bc.a(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
+              this.field_l[var3Lifetime1Lifetime2] = ji.bitwiseXor(this.field_l[var3Lifetime1Lifetime2], AccountNameAvailabilityValidator.field_k[var7][bc.bitwiseAnd((int)(this.field_i[bc.bitwiseAnd(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -393,7 +393,7 @@ final class dd {
           this.a(-54);
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_f[var2Lifetime3] = ji.a(this.field_f[var2Lifetime3], ji.a(this.field_i[var2Lifetime3], this.field_d[var2Lifetime3]));
+          this.field_f[var2Lifetime3] = ji.bitwiseXor(this.field_f[var2Lifetime3], ji.bitwiseXor(this.field_i[var2Lifetime3], this.field_d[var2Lifetime3]));
         }
     }
 

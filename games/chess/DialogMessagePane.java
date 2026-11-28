@@ -115,13 +115,13 @@ final class DialogMessagePane extends DequeWidgetContainer implements WidgetActi
         PcmOutputWorker.field_d = SoftwareRasterizer.field_h;
         fn.field_c = SoftwareRasterizer.field_c;
         tf.a(90);
-        LoginPanel.field_W.a(ql.field_d.field_M, 0, 0, -2 + (ql.field_d.field_pb - 40), true);
+        LoginPanel.field_W.a(ByteArrayPoolSupport.field_d.field_M, 0, 0, -2 + (ByteArrayPoolSupport.field_d.field_pb - 40), true);
         SoundCache.field_h.a(0, dc.field_q.field_M, -2147483648, SoundCache.field_g, 0);
         if (param0 <= -124) {
           var1 = SoundCache.field_g + 2;
           ArrayWidgetContainer.field_G.a(0, dc.field_q.field_M, -2147483648, dc.field_q.field_pb - (bo.field_c ? var1 : 0), bo.field_c ? var1 : 0);
           dj.g(2);
-          ln.field_cc.a(0, ql.field_d.field_M, -2147483648, 40, ql.field_d.field_pb - 40);
+          ln.field_cc.a(0, ByteArrayPoolSupport.field_d.field_M, -2147483648, 40, ByteArrayPoolSupport.field_d.field_pb - 40);
           he.field_Hb.a(0, rb.field_c.field_M, -2147483648, 30, 0);
           oh.field_a.a(0, rb.field_c.field_M, -2147483648, -42 + rb.field_c.field_pb - 30, 30);
           ue.field_d.a(5, 68, -2147483648, 30, 5);
@@ -144,7 +144,7 @@ final class DialogMessagePane extends DequeWidgetContainer implements WidgetActi
         var1Lifetime1 = SoundCache.field_g + 2;
         ArrayWidgetContainer.field_G.a(0, dc.field_q.field_M, -2147483648, dc.field_q.field_pb - (bo.field_c ? var1Lifetime1 : 0), bo.field_c ? var1Lifetime1 : 0);
         dj.g(2);
-        ln.field_cc.a(0, ql.field_d.field_M, -2147483648, 40, ql.field_d.field_pb - 40);
+        ln.field_cc.a(0, ByteArrayPoolSupport.field_d.field_M, -2147483648, 40, ByteArrayPoolSupport.field_d.field_pb - 40);
         he.field_Hb.a(0, rb.field_c.field_M, -2147483648, 30, 0);
         oh.field_a.a(0, rb.field_c.field_M, -2147483648, -42 + rb.field_c.field_pb - 30, 30);
         ue.field_d.a(5, 68, -2147483648, 30, 5);
@@ -212,7 +212,7 @@ final class DialogMessagePane extends DequeWidgetContainer implements WidgetActi
             return;
           }
           DropTargetWidgetContainer.field_V.advanceDialogs((byte) 64);
-          while (kf.d(18954)) {
+          while (MusicPatch.d(18954)) {
             DropTargetWidgetContainer.field_V.processKeyInput(d.field_Ib, -110, vg.field_a);
           }
           return;

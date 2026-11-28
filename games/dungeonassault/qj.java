@@ -95,7 +95,7 @@ final class qj {
                 param9 = (65536 & -param2 + param1) + (16777472 & param2);
                 incrementValue$1 = param14;
                 param14++;
-                param12[incrementValue$1] = mp.a(param9 - (param9 >>> 8), -param9 + param1);
+                param12[incrementValue$1] = mp.bitwiseOr(param9 - (param9 >>> 8), -param9 + param1);
               }
             }
             param14 = param14 + param5;

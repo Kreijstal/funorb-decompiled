@@ -13,7 +13,7 @@ final class MusicPatchPcmStream extends PcmStream {
     final void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
-        kc var6 = null;
+        MusicPatchNode var6 = null;
         int var7 = 0;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_18_0 = null;
@@ -24,7 +24,7 @@ final class MusicPatchPcmStream extends PcmStream {
         var7 = Transmogrify.field_A ? 1 : 0;
         try {
           this.field_m.mixInto(param0, param1, param2);
-          var6 = (kc) (this.field_q.beginForward((byte) -95));
+          var6 = (MusicPatchNode) (this.field_q.beginForward((byte) -95));
           while (null != var6) {
             if (var7 != 0) {
               return;
@@ -49,7 +49,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 var6.field_r = var6.field_r - var5;
               }
             }
-            var6 = (kc) (this.field_q.nextForward(true));
+            var6 = (MusicPatchNode) (this.field_q.nextForward(true));
             continue;
           }
           return;
@@ -129,14 +129,14 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     final PcmStream nextChildStream() {
-        kc var1 = null;
+        MusicPatchNode var1 = null;
         Object stackIn_4_0 = null;
         PcmSampleStream stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         try {
           do {
-            var1 = (kc) (this.field_q.nextForward(true));
+            var1 = (MusicPatchNode) (this.field_q.nextForward(true));
             if (var1 == null) {
               stackIn_4_0 = null;
               return (PcmStream) (stackIn_4_0);
@@ -178,7 +178,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    private final void skipVoiceFrames(int param0, kc param1, int param2) {
+    private final void skipVoiceFrames(int param0, MusicPatchNode param1, int param2) {
         MidiPcmStream stackIn_18_0 = null;
         boolean stackIn_18_1 = false;
         boolean stackIn_19_2 = false;
@@ -230,7 +230,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    private final void renderVoiceFrames(int param0, int[] param1, int param2, kc param3, int param4, int param5) {
+    private final void renderVoiceFrames(int param0, int[] param1, int param2, MusicPatchNode param3, int param4, int param5) {
         MidiPcmStream stackIn_23_0 = null;
         boolean stackIn_23_1 = false;
         boolean stackIn_24_2 = false;
@@ -336,7 +336,7 @@ final class MusicPatchPcmStream extends PcmStream {
 
     final void skipFrames(int param0) {
         int var2_int = 0;
-        kc var3 = null;
+        MusicPatchNode var3 = null;
         int var4 = 0;
         boolean stackIn_6_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -344,7 +344,7 @@ final class MusicPatchPcmStream extends PcmStream {
         var4 = Transmogrify.field_A ? 1 : 0;
         try {
           this.field_m.skipFrames(param0);
-          var3 = (kc) (this.field_q.beginForward((byte) -95));
+          var3 = (MusicPatchNode) (this.field_q.beginForward((byte) -95));
           while (null != var3) {
             if (var4 != 0) {
               return;
@@ -368,7 +368,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 var3.field_r = var3.field_r - var2_int;
               }
             }
-            var3 = (kc) (this.field_q.nextForward(true));
+            var3 = (MusicPatchNode) (this.field_q.nextForward(true));
             continue;
           }
           return;
@@ -617,14 +617,14 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     final PcmStream firstChildStream() {
-        kc var1 = null;
+        MusicPatchNode var1 = null;
         RuntimeException var1_ref = null;
         Object stackIn_2_0 = null;
         PcmSampleStream stackIn_7_0 = null;
         PcmStream stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var1 = (kc) (this.field_q.beginForward((byte) -95));
+          var1 = (MusicPatchNode) (this.field_q.beginForward((byte) -95));
           if (var1 == null) {
             stackIn_2_0 = null;
             return (PcmStream) (stackIn_2_0);

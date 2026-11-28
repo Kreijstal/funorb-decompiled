@@ -188,7 +188,7 @@ final class LevelView extends LevelGrid {
           }
           this.field_D = var8;
           this.field_u = var7_int;
-          this.tileFlags[var7_int][var8] = ma.a(64, param1[var7_int][var8]);
+          this.tileFlags[var7_int][var8] = ma.bitwiseXor(64, param1[var7_int][var8]);
           this.field_F = ud.a((byte) -56, this.tileFlags[var7_int][var8]);
           this.field_s = e.a(this.tileFlags[var7_int][var8], -1932340400, this.field_F);
           return;
@@ -405,7 +405,7 @@ final class LevelView extends LevelGrid {
         var9 = 1 << var8Lifetime1;
         stackIn_25_0 = ((var9 & this.field_B[param3][param1]) == 0) ? 0 : 1;
         var10 = stackIn_25_0;
-        this.field_B[param3][param1] = (short)ma.a((int) this.field_B[param3][param1], var9);
+        this.field_B[param3][param1] = (short)ma.bitwiseXor((int) this.field_B[param3][param1], var9);
         stackIn_27_0 = 1;
         if (var10 != 0) {
           stackIn_28_1 = var6Lifetime1;

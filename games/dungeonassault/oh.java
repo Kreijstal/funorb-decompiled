@@ -115,14 +115,14 @@ final class oh implements WidgetRenderer {
         if (null != DebouncedFieldValidator.field_e &&
           20 <= gn.field_h) {
           if (DebouncedFieldValidator.field_e != ByteStorage.field_e) {
-            of.field_f = DebouncedFieldValidator.field_e.b((byte) -114);
-            if (of.field_f != null) {
-              uo.field_a = dd.a((byte) -112, 8, of.field_f);
+            MusicPatchEnvelope.field_f = DebouncedFieldValidator.field_e.b((byte) -114);
+            if (MusicPatchEnvelope.field_f != null) {
+              uo.field_a = dd.a((byte) -112, 8, MusicPatchEnvelope.field_f);
             }
           }
-          if (null != of.field_f) {
-            var1 = of.field_f.field_y;
-            var2 = of.field_f.field_v;
+          if (null != MusicPatchEnvelope.field_f) {
+            var1 = MusicPatchEnvelope.field_f.field_y;
+            var2 = MusicPatchEnvelope.field_f.field_v;
             var3 = hj.field_S;
             if (var1 + var3 > 640) {
               var3 = var3 - var1;
@@ -131,10 +131,10 @@ final class oh implements WidgetRenderer {
             if (0 > var4) {
               var4 = var4 + (30 + var2);
             }
-            SoftwareRasterizer.fillRectangleAlpha(-8 + var3, -8 + var4, of.field_f.field_y + 16, of.field_f.field_v + 16, 16777215, 16);
-            SoftwareRasterizer.fillRectangleAlpha(var3 - 4, -4 + var4, 8 + of.field_f.field_y, of.field_f.field_v + 8, 0, 64);
-            bp.a(var4, uo.field_a, var3, (byte) 99);
-            of.field_f.draw(var3, var4);
+            SoftwareRasterizer.fillRectangleAlpha(-8 + var3, -8 + var4, MusicPatchEnvelope.field_f.field_y + 16, MusicPatchEnvelope.field_f.field_v + 16, 16777215, 16);
+            SoftwareRasterizer.fillRectangleAlpha(var3 - 4, -4 + var4, 8 + MusicPatchEnvelope.field_f.field_y, MusicPatchEnvelope.field_f.field_v + 8, 0, 64);
+            GrowableIntArray.a(var4, uo.field_a, var3, (byte) 99);
+            MusicPatchEnvelope.field_f.draw(var3, var4);
           }
         }
         if (param0 <= 1) {

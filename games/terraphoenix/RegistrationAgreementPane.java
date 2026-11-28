@@ -229,7 +229,7 @@ final class RegistrationAgreementPane extends WidgetContainer implements TextHot
                     } else {
                       var19 = SoftwareRasterizer.field_i[var8];
                       var20 = 16711935 & (var19 & 16711935) * var17 + (var18 & 16711935) * var16 >> 8;
-                      SoftwareRasterizer.field_i[var8] = var20 + dg.a(dg.a(65280, var19) * var17 + dg.a(65280, var18) * var16 >> 8, 65280);
+                      SoftwareRasterizer.field_i[var8] = var20 + dg.bitwiseAnd(dg.bitwiseAnd(65280, var19) * var17 + dg.bitwiseAnd(65280, var18) * var16 >> 8, 65280);
                     }
                   }
                   var8++;

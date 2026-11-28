@@ -139,7 +139,7 @@ final class nd extends IntrusiveNode {
                 if (stackIn_62_0 < stackIn_62_1) {
                   gd.field_e[var23Lifetime2] = -2147483648;
                 } else {
-                  gm.field_l[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
+                  MusicPatchEnvelope.field_l[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
                   nb.field_c[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
                   gd.field_e[var23Lifetime2] = var29Lifetime1;
                   if (var29Lifetime1 < var7_int) {

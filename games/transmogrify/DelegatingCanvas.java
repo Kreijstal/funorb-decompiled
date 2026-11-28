@@ -27,7 +27,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
               return;
             }
             var4 = param3.getGraphics();
-            DualLinkNode.field_k.a(-32299, param0, var4, param1);
+            DualLinkNode.field_k.drawImage(-32299, param0, var4, param1);
             var4.dispose();
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

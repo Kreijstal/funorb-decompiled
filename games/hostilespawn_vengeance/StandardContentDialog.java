@@ -142,7 +142,7 @@ final class StandardContentDialog extends ContentTransitionDialog {
           DebouncedFieldValidator.field_a = false;
           if (hh.field_d == rl.field_c) {
             ImageProducerRasterBuffer.field_p = 0;
-            kf.clearInts(ValidationStatusWidget.field_U, 0, 6);
+            ArrayBlockSupport.clearInts(ValidationStatusWidget.field_U, 0, 6);
             sg.field_i = 0;
           }
           ad.field_a = ng.field_u;
@@ -357,7 +357,7 @@ final class StandardContentDialog extends ContentTransitionDialog {
               q.field_g = (ql) ((Object) new uf());
             }
           }
-          bc.c(-102);
+          MidiNoteMask.c(-102);
           if (q.field_g != null) {
             q.field_g.e(0);
           }

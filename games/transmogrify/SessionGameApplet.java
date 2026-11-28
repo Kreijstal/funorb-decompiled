@@ -171,7 +171,7 @@ abstract class SessionGameApplet extends GameApplet {
         TextLineMetrics.a(this.field_p, 5000, this.field_u, this.field_v, lk.field_b, this.field_w, 5000, this.field_r, param2, this.field_q, param6, 64, NodeHashTableIterator.field_f, this.field_s);
         TextFieldValidator.a(this.field_s, this.field_u, 50, this.field_q, param2, this.field_w, this.field_p, NodeHashTableIterator.field_f, lk.field_b);
         wh.e((byte) -42);
-        ga.field_a = nh.createMouseWheelInput(1);
+        ga.field_a = MusicPatchEnvelope.createMouseWheelInput(1);
         RasterBuffer.a(AchievementNotice.field_k, 13861);
         rd.field_a = param4;
         ic.field_a = param5;
@@ -561,7 +561,7 @@ abstract class SessionGameApplet extends GameApplet {
           AccountRegistrationPanel.clearStaticReferences(121);
           PasswordValidator.field_n = false;
           ea.field_n = TileRack.field_a;
-          cf.a(DelayedPcmStream.field_n, wi.field_e, RasterBuffer.field_c, wd.field_g, (byte) 122);
+          cf.a(DelayedPcmStream.field_n, wi.field_e, RasterBuffer.field_c, MidiNoteMask.field_g, (byte) 122);
           if (BoundedRandomAccessFile.field_b ||
             null != lb.field_h) {
             stackIn_103_0 = 5;
@@ -712,7 +712,7 @@ abstract class SessionGameApplet extends GameApplet {
             }
           }
           if (4 == var4) {
-            if (!wd.field_g) {
+            if (!MidiNoteMask.field_g) {
               RegistrationAgreementPane.field_x = true;
               AlphaWidgetContainer.field_y = 10;
             } else {

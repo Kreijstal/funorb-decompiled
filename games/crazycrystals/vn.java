@@ -260,7 +260,7 @@ final class vn extends ue {
         }
         if (this.field_n &&
           mo.field_l == 0 &&
-          dk.field_h < uo.field_o) {
+          MusicPatch.field_h < uo.field_o) {
           this.field_r = true;
         } else {
           this.field_u = true;
@@ -492,7 +492,7 @@ final class vn extends ue {
           else {
             if (this.field_n &&
               mo.field_l == 0 &&
-              dk.field_h < uo.field_o) {
+              MusicPatch.field_h < uo.field_o) {
               this.field_r = true;
               return;
             }

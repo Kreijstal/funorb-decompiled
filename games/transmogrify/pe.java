@@ -70,7 +70,7 @@ final class pe {
             var5 = var9;
             var6 = param2;
             var7 = param4;
-            var9[var6] = (vg.c(var9[var6], 16711422) >> 1) + var7;
+            var9[var6] = (vg.bitwiseAnd(var9[var6], 16711422) >> 1) + var7;
             param2++;
             param0--;
           }

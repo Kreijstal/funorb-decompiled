@@ -175,11 +175,11 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
         this.field_D.d();
         if (this.field_b != null) {
           for (var5_int = 0; SoftwareRasterizer.field_b.length > var5_int; var5_int++) {
-            SoftwareRasterizer.field_b[var5_int] = nb.a(-50529028, SoftwareRasterizer.field_b[var5_int]) >>> 2;
+            SoftwareRasterizer.field_b[var5_int] = nb.bitwiseAnd(-50529028, SoftwareRasterizer.field_b[var5_int]) >>> 2;
           }
           this.field_b.b(108);
         }
-        if (kn.field_g) {
+        if (ByteArrayPoolSupport.field_g) {
           ab.a(0);
         }
         if (null != op.field_d.field_l) {
@@ -282,7 +282,7 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
         RaiderDefinition var21;
         var14 = DungeonAssault.field_K;
         this.field_t = -1;
-        if (kn.field_g &&
+        if (ByteArrayPoolSupport.field_g &&
           od.a((byte) -52)) {
           return;
         }
@@ -604,7 +604,7 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
           this.field_b = (kl) ((Object) new lf(oa.field_h, pb.field_F));
           return;
         }
-        if (kn.field_g &&
+        if (ByteArrayPoolSupport.field_g &&
           gm.field_d.field_K == 0) {
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
             if (null != gm.field_d.field_a[var3Lifetime1]) {
@@ -894,7 +894,7 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
           this.field_b = null;
           gd.a(g.field_Hb, 0, g.field_Hb, false);
         }
-        if (kn.field_g) {
+        if (ByteArrayPoolSupport.field_g) {
           bl.a(0);
         }
         var6 = um.field_i;

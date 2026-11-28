@@ -257,11 +257,11 @@ final class cp extends gd {
             if (RegistrationAgreementPane.field_R != null &&
               RegistrationAgreementPane.field_R.focusLost) {
               ib.a(930);
-              na.field_D.showDialog(new FullscreenStatusDialog(na.field_D, of.field_g), -1);
+              na.field_D.showDialog(new FullscreenStatusDialog(na.field_D, MusicPatchEnvelope.field_g), -1);
             }
             return;
           }
-          na.field_D.processPointerInput(am.field_e, (byte) 66, bp.field_d, true);
+          na.field_D.processPointerInput(am.field_e, (byte) 66, GrowableIntArray.field_d, true);
           na.field_D.advanceDialogs(true);
           while (ha.b((byte) 47)) {
             na.field_D.processKeyInput(param0 + 30335, mm.field_t, ob.field_Yb);

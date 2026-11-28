@@ -28,7 +28,7 @@ final class e {
           field_a = (String) null;
         }
         tl.field_a = new am(RawPcmStream.createForPlaybackRate(mo.field_i, 100, 0));
-        CrystalTile.field_p = new am(RawPcmStream.createForPlaybackRate(pl.field_h, 100, 0));
+        CrystalTile.field_p = new am(RawPcmStream.createForPlaybackRate(MusicPatchNode.field_h, 100, 0));
         AccountCreationResultPanel.field_mb = new am(RawPcmStream.createForPlaybackRate(sj.field_d, 100, 0));
         ValidationStatusWidget.field_M = new am(RawPcmStream.createForPlaybackRate(PasswordValidator.field_m, 100, 0));
         ec.field_k = new am(RawPcmStream.createForPlaybackRate(RockTile.field_x, 100, 0));
@@ -51,7 +51,7 @@ final class e {
         try {
           rh.field_g = SynthesizedSoundEffect.loadByName(param1, "initialset", "fall-into-hole").toPcmSample();
           mo.field_i = VorbisSample.loadByName(param2, "initialset", "got-by-spider").decodeAllToPcm();
-          pl.field_h = VorbisSample.loadByName(param2, "initialset", "blown-up").decodeAllToPcm();
+          MusicPatchNode.field_h = VorbisSample.loadByName(param2, "initialset", "blown-up").decodeAllToPcm();
           sj.field_d = VorbisSample.loadByName(param2, "initialset", "electrocuted-buzz").decodeAllToPcm();
           PasswordValidator.field_m = SynthesizedSoundEffect.loadByName(param1, "initialset", "electrocuted-end").toPcmSample();
           RockTile.field_x = VorbisSample.loadByName(param2, "initialset", "explode-into-sparks").decodeAllToPcm();

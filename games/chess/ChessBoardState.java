@@ -52,7 +52,7 @@ class ChessBoardState {
         try {
           if (this.field_h.length <= this.field_o) {
             var5 = new oj[this.field_o + 8];
-            ne.a(this.field_h, 0, var5, 0, this.field_h.length);
+            ArrayBlockSupport.copyObjectRange(this.field_h, 0, var5, 0, this.field_h.length);
             this.field_h = var5;
           }
           this.field_h[this.field_o] = new oj(param2, param0, param3);
@@ -216,7 +216,7 @@ class ChessBoardState {
             return true;
           }
           var5 = new boolean[this.field_d.length];
-          ne.a(this.field_d, 0, var5, 0, var5.length);
+          ArrayBlockSupport.a(this.field_d, 0, var5, 0, var5.length);
           var6 = this.field_f[param1];
           if (var6 != 0) {
             var7 = var6 & 16773120;
@@ -318,7 +318,7 @@ class ChessBoardState {
             return true;
           }
           var5 = new boolean[this.field_d.length];
-          ne.a(this.field_d, 0, var5, 0, var5.length);
+          ArrayBlockSupport.a(this.field_d, 0, var5, 0, var5.length);
           var6Lifetime1 = 0;
           var7Lifetime1 = 63;
           scanLoop2: while (true) {
@@ -1199,7 +1199,7 @@ class ChessBoardState {
         try {
           var3_int = this.field_m;
           var4 = new boolean[this.field_d.length];
-          ne.a(this.field_d, 0, var4, 0, var4.length);
+          ArrayBlockSupport.a(this.field_d, 0, var4, 0, var4.length);
           var5 = 63;
           if (param1 > -103) {
             ChessBoardState.c(-10);
@@ -1388,7 +1388,7 @@ class ChessBoardState {
         this.field_o = 0;
         this.field_h = new oj[]{};
         try {
-          ne.a(df.field_i, 0, this.field_f, 0, df.field_i.length);
+          ArrayBlockSupport.copyIntRange(df.field_i, 0, this.field_f, 0, df.field_i.length);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "uk.<init>()");
         }

@@ -45,7 +45,7 @@ final class ql extends DefaultTextWidgetRenderer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -125,7 +125,7 @@ final class ql extends DefaultTextWidgetRenderer {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -174,7 +174,7 @@ final class ql extends DefaultTextWidgetRenderer {
               }
             }
           } else {
-            fk.a(this.field_t, 0, param0.field_t, 0, 6);
+            ArrayBlockSupport.copyObjectRange(this.field_t, 0, param0.field_t, 0, 6);
           }
           if (param2 != 30089) {
             var8 = (Sprite[]) null;
@@ -191,7 +191,7 @@ final class ql extends DefaultTextWidgetRenderer {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -229,7 +229,7 @@ final class ql extends DefaultTextWidgetRenderer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -276,7 +276,7 @@ final class ql extends DefaultTextWidgetRenderer {
           }
           this.field_t[param1].field_j = param2;
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ql.DA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "ql.DA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -285,7 +285,7 @@ final class ql extends DefaultTextWidgetRenderer {
         try {
           param0.a(this, param1, 30089);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ql.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "ql.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -52,7 +52,7 @@ final class IterableNodeHashTable implements Iterable {
         int var2Lifetime1;
         int var2Lifetime2;
         var3 = fleas.field_A ? 1 : 0;
-        if (wc.field_q > 0) {
+        if (MusicPatch.field_q > 0) {
           if (aa.field_r == null) {
             ResourceArchive.field_p = SecondaryNodeDeque.createFullscreenCanvas(0, 640, 0, fg.field_q, 0, 480);
           } else {

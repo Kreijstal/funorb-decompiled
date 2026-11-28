@@ -192,7 +192,7 @@ abstract class TextLayout {
         td.field_l[1] = wp.field_e;
         td.field_l[5] = MenuSelectionCursor.field_e;
         td.field_l[3] = ua.field_d;
-        td.field_l[7] = pe.field_t;
+        td.field_l[7] = MusicPatchNode.field_t;
         ValidationStatusWidget.field_U[0] = gg.field_s;
         ValidationStatusWidget.field_U[5] = kf.field_a;
         ValidationStatusWidget.field_U[7] = b.field_b;
@@ -311,16 +311,16 @@ abstract class TextLayout {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_h[0][var0] = bq.a(var12, bq.a(var4 << 8, bq.a(var8 << 16, bq.a(var10 << 24, bq.a(bq.a(var6 << 40, bq.a(var2 << 56, var2 << 48)), var2 << 32)))));
+            field_h[0][var0] = bq.bitwiseOr(var12, bq.bitwiseOr(var4 << 8, bq.bitwiseOr(var8 << 16, bq.bitwiseOr(var10 << 24, bq.bitwiseOr(bq.bitwiseOr(var6 << 40, bq.bitwiseOr(var2 << 56, var2 << 48)), var2 << 32)))));
             for (var14 = 1; var14 < 8; var14++) {
-                field_h[var14][var0] = bq.a(field_h[-1 + var14][var0] << 56, field_h[var14 - 1][var0] >>> 8);
+                field_h[var14][var0] = bq.bitwiseOr(field_h[-1 + var14][var0] << 56, field_h[var14 - 1][var0] >>> 8);
             }
             var0++;
         }
         field_d[0] = 0L;
         for (var0 = 1; 10 >= var0; var0++) {
             var1 = (-1 + var0) * 8;
-            field_d[var0] = GameApplet.a(GameApplet.a(GameApplet.a(GameApplet.a(GameApplet.a(GameApplet.a(GameApplet.a(j.a(71776119061217280L, field_h[1][var1 + 1]), j.a(-72057594037927936L, field_h[0][var1])), j.a(field_h[2][var1 + 2], 280375465082880L)), j.a(field_h[3][var1 + 3], 1095216660480L)), j.a(4278190080L, field_h[4][var1 + 4])), j.a(16711680L, field_h[5][5 + var1])), j.a(65280L, field_h[6][6 + var1])), j.a(255L, field_h[7][7 + var1]));
+            field_d[var0] = GameApplet.a(GameApplet.a(GameApplet.a(GameApplet.a(GameApplet.a(GameApplet.a(GameApplet.a(j.bitwiseAnd(71776119061217280L, field_h[1][var1 + 1]), j.bitwiseAnd(-72057594037927936L, field_h[0][var1])), j.bitwiseAnd(field_h[2][var1 + 2], 280375465082880L)), j.bitwiseAnd(field_h[3][var1 + 3], 1095216660480L)), j.bitwiseAnd(4278190080L, field_h[4][var1 + 4])), j.bitwiseAnd(16711680L, field_h[5][5 + var1])), j.bitwiseAnd(65280L, field_h[6][6 + var1])), j.bitwiseAnd(255L, field_h[7][7 + var1]));
         }
         field_b = null;
     }

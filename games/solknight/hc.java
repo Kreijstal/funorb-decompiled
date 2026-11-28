@@ -20,7 +20,7 @@ final class hc {
           DualLinkNode.field_j = param0;
           FullscreenStatusDialog.a(param3, ab.field_p, -119);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "hc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "hc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -88,17 +88,17 @@ final class hc {
             for (var5 = 0; var4 > var5; var5++) {
               ImageProducerRasterBuffer.field_l[var5] = -1;
             }
-            fl.field_b = new int[2];
+            ByteArrayPoolSupport.field_b = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
               vc.field_d[var5] = w.field_c[var5];
             }
             vc.field_d[-3 + var4] = "";
             vc.field_d[-2 + var4] = be.field_J;
             ImageProducerRasterBuffer.field_l[-2 + var4] = 0;
-            fl.field_b[0] = 4;
+            ByteArrayPoolSupport.field_b[0] = 4;
             vc.field_d[var4 - 1] = TextLineMetrics.field_a;
             ImageProducerRasterBuffer.field_l[-1 + var4] = 1;
-            fl.field_b[1] = 5;
+            ByteArrayPoolSupport.field_b[1] = 5;
           } else if (AlphaWidgetContainer.field_M == 1) {
             var3_int = bk.a((byte) 3, ff.field_e, LabeledWidgetContainer.field_H, SingleChildWidgetContainer.field_A, w.field_c);
             var4 = 2 + var3_int;
@@ -107,14 +107,14 @@ final class hc {
             for (var5 = 0; var4 > var5; var5++) {
               ImageProducerRasterBuffer.field_l[var5] = -1;
             }
-            fl.field_b = new int[1];
+            ByteArrayPoolSupport.field_b = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
               vc.field_d[var5] = w.field_c[var5];
             }
             vc.field_d[-2 + var4] = "";
             vc.field_d[var4 - 1] = TextLineMetrics.field_a;
             ImageProducerRasterBuffer.field_l[-1 + var4] = 0;
-            fl.field_b[0] = 5;
+            ByteArrayPoolSupport.field_b[0] = 5;
           } else if (AlphaWidgetContainer.field_M != 2) {
             if (3 == AlphaWidgetContainer.field_M) {
               if (!wh.field_c.privilegedTasksEnabled) {
@@ -128,14 +128,14 @@ final class hc {
               for (var5 = 0; var5 < var4; var5++) {
                 ImageProducerRasterBuffer.field_l[var5] = -1;
               }
-              fl.field_b = new int[1];
+              ByteArrayPoolSupport.field_b = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
                 vc.field_d[var5] = w.field_c[var5];
               }
               vc.field_d[var4 - 2] = "";
               vc.field_d[var4 - 1] = TextLineMetrics.field_a;
               ImageProducerRasterBuffer.field_l[-1 + var4] = 0;
-              fl.field_b[0] = 5;
+              ByteArrayPoolSupport.field_b[0] = 5;
             } else if (4 == AlphaWidgetContainer.field_M) {
               var3_int = bk.a((byte) 3, ak.field_c, LabeledWidgetContainer.field_H, SingleChildWidgetContainer.field_A, w.field_c);
               var4 = 2 + var3_int;
@@ -144,14 +144,14 @@ final class hc {
               for (var5 = 0; var4 > var5; var5++) {
                 ImageProducerRasterBuffer.field_l[var5] = -1;
               }
-              fl.field_b = new int[1];
+              ByteArrayPoolSupport.field_b = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
                 vc.field_d[var5] = w.field_c[var5];
               }
               vc.field_d[var4 - 2] = "";
               vc.field_d[-1 + var4] = TextLineMetrics.field_a;
               ImageProducerRasterBuffer.field_l[var4 - 1] = 0;
-              fl.field_b[0] = 5;
+              ByteArrayPoolSupport.field_b[0] = 5;
             } else {
               if (5 != AlphaWidgetContainer.field_M) {
                 throw new IllegalArgumentException();
@@ -163,17 +163,17 @@ final class hc {
               for (var5 = 0; var4 > var5; var5++) {
                 ImageProducerRasterBuffer.field_l[var5] = -1;
               }
-              fl.field_b = new int[2];
+              ByteArrayPoolSupport.field_b = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
                 vc.field_d[var5] = w.field_c[var5];
               }
               vc.field_d[var4 - 3] = "";
               vc.field_d[var4 - 2] = fg.field_c;
               ImageProducerRasterBuffer.field_l[var4 - 2] = 0;
-              fl.field_b[0] = 3;
+              ByteArrayPoolSupport.field_b[0] = 3;
               vc.field_d[-1 + var4] = TextLineMetrics.field_a;
               ImageProducerRasterBuffer.field_l[var4 - 1] = 1;
-              fl.field_b[1] = 5;
+              ByteArrayPoolSupport.field_b[1] = 5;
             }
           } else {
             var3_int = bk.a((byte) 3, LoginPanel.a(AccountRequestState.field_f, new String[]{"<br><%0><br>"}, -63), LabeledWidgetContainer.field_H, SingleChildWidgetContainer.field_A, w.field_c);
@@ -189,9 +189,9 @@ final class hc {
               throw new IllegalStateException();
             }
             ak.field_b = new String[var4];
-            fk.a(w.field_c, 0, ak.field_b, 0, var4);
+            ArrayBlockSupport.copyObjectRange(w.field_c, 0, ak.field_b, 0, var4);
             qc.field_h = new String[-1 + (var3_int - var4)];
-            fk.a(w.field_c, var4 + 1, qc.field_h, 0, -var4 + (var3_int - 1));
+            ArrayBlockSupport.copyObjectRange(w.field_c, var4 + 1, qc.field_h, 0, -var4 + (var3_int - 1));
             var3_int = bk.a((byte) 3, LoginPanel.a(ff.field_f, new String[]{"<br><%0><br>"}, -63), LabeledWidgetContainer.field_H, SingleChildWidgetContainer.field_A, w.field_c);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -205,9 +205,9 @@ final class hc {
               throw new IllegalStateException();
             }
             ModalDialogHost.field_I = new String[var4];
-            fk.a(w.field_c, 0, ModalDialogHost.field_I, 0, var4);
+            ArrayBlockSupport.copyObjectRange(w.field_c, 0, ModalDialogHost.field_I, 0, var4);
             ConfirmedEmailAvailabilityValidator.field_o = new String[-1 - var4 + var3_int];
-            fk.a(w.field_c, var4 + 1, ConfirmedEmailAvailabilityValidator.field_o, 0, var3_int - var4 - 1);
+            ArrayBlockSupport.copyObjectRange(w.field_c, var4 + 1, ConfirmedEmailAvailabilityValidator.field_o, 0, var3_int - var4 - 1);
             if (ModalDialogHost.field_I.length <= ak.field_b.length) {
               stackIn_64_0 = ak.field_b.length;
             } else {
@@ -228,10 +228,10 @@ final class hc {
             }
             ImageProducerRasterBuffer.field_l[1] = 0;
             vc.field_d[0] = SingleChildWidgetContainer.field_D;
-            fl.field_b = new int[2];
+            ByteArrayPoolSupport.field_b = new int[2];
             vc.field_d[1] = cj.field_b;
-            fl.field_b[0] = 5;
-            fl.field_b[1] = 2;
+            ByteArrayPoolSupport.field_b[0] = 5;
+            ByteArrayPoolSupport.field_b[1] = 2;
             vc.field_d[4] = CachedArchiveSource.field_r;
             vc.field_d[2] = ArchiveIndex.field_n;
             ImageProducerRasterBuffer.field_l[3] = 1;
@@ -261,7 +261,7 @@ final class hc {
             }
             fg.field_f = je.correctedCurrentTimeMillis(1);
           }
-          DraggableWidgetContainer.field_K.field_g = fl.field_b.length;
+          DraggableWidgetContainer.field_K.field_g = ByteArrayPoolSupport.field_b.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < vc.field_d.length; var4Lifetime1++) {
             stackIn_87_0 = vc.field_d[var4Lifetime1];
@@ -292,7 +292,7 @@ final class hc {
           }
           ValidationStatusWidget.field_ab = PcmOutputWorker.field_d - (var3_intLifetime1 >> 1);
           GameApplet.field_h = PcmOutputWorker.field_d + var3_intLifetime1 - (var3_intLifetime1 >> 1);
-          v.field_d = (g.field_l + EditableTextField.field_N << 1) * DraggableWidgetContainer.field_K.field_g;
+          v.field_d = (MusicPatchEnvelope.field_l + EditableTextField.field_N << 1) * DraggableWidgetContainer.field_K.field_g;
           for (var4Lifetime2 = 0; vc.field_d.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_110_0 = v.field_d;
             if (ImageProducerRasterBuffer.field_l[var4Lifetime2] < 0) {
@@ -321,8 +321,8 @@ final class hc {
               og.field_j[var4Lifetime3][0] = var8Lifetime1 - bl.field_i;
               og.field_j[var4Lifetime3][1] = var5Lifetime3;
               og.field_j[var4Lifetime3][2] = (bl.field_i << 1) + var7Lifetime2;
-              og.field_j[var4Lifetime3][3] = (g.field_l << 1) + we.field_c;
-              var5Lifetime3 = var5Lifetime3 + (we.field_c + EditableTextField.field_N + (g.field_l << 1));
+              og.field_j[var4Lifetime3][3] = (MusicPatchEnvelope.field_l << 1) + we.field_c;
+              var5Lifetime3 = var5Lifetime3 + (we.field_c + EditableTextField.field_N + (MusicPatchEnvelope.field_l << 1));
             }
             var4Lifetime3++;
           }
@@ -335,7 +335,7 @@ final class hc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var3), "hc.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var3), "hc.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

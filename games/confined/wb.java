@@ -18,7 +18,7 @@ final class wb {
           var2 = 1;
           while (DequeCursor.field_e.length > var2) {
             var3 = DequeCursor.field_e[var2];
-            lj.a(tl.field_i, var2 << 4, tl.field_i, var1_int, var3);
+            ArrayBlockSupport.copyIntRange(tl.field_i, var2 << 4, tl.field_i, var1_int, var3);
             var1_int = var1_int + var3;
             var2++;
             if (var4 != 0) {
@@ -1912,7 +1912,7 @@ final class wb {
                 }
                 var2 = ha.a("loading_graphics", (byte) 22);
                 if (null != var2) {
-                  dl.field_a = va.a(param0 ^ 6, var2);
+                  ByteArrayPoolSupport.field_a = va.a(param0 ^ 6, var2);
                 }
                 var2 = ha.a("loading_models", (byte) 102);
                 if (null != var2) {
@@ -1956,7 +1956,7 @@ final class wb {
                 }
                 var2 = ha.a("unpacking_graphics", (byte) 101);
                 if (var2 != null) {
-                  wl.field_a = va.a(0, var2);
+                  GrowableIntArray.field_a = va.a(0, var2);
                 }
                 var2 = ha.a("unpacking_models", (byte) 112);
                 if (null != var2) {
@@ -2693,7 +2693,7 @@ final class wb {
                 }
                 var2 = ha.a("reconnect_lost_seq,0", (byte) 63);
                 if (null != var2) {
-                  ExpandingPulseProjectile.field_db[0] = va.a(km.a(param0, 6), var2);
+                  ExpandingPulseProjectile.field_db[0] = va.a(km.bitwiseXor(param0, 6), var2);
                 }
                 var2 = ha.a("reconnect_lost_seq,1", (byte) 120);
                 if (var2 != null) {
@@ -3009,7 +3009,7 @@ final class wb {
                 }
                 var2 = ha.a("mustlogin3,7", (byte) 28);
                 if (var2 != null) {
-                  hl.field_h[7] = va.a(km.a(param0, 6), var2);
+                  hl.field_h[7] = va.a(km.bitwiseXor(param0, 6), var2);
                 }
                 var2 = ha.a("discard", (byte) 96);
                 if (var2 != null) {
@@ -3075,7 +3075,7 @@ final class wb {
                 }
                 var2 = ha.a("mustlogin_alternate,7", (byte) 76);
                 if (null != var2) {
-                  ij.field_p[7] = va.a(km.a(param0, 6), var2);
+                  ij.field_p[7] = va.a(km.bitwiseXor(param0, 6), var2);
                 }
                 var2 = ha.a("subscription_cost_monthly,0", (byte) 82);
                 if (var2 != null) {
@@ -3119,7 +3119,7 @@ final class wb {
                 }
                 var2 = ha.a("subscription_cost_monthly,10", (byte) 116);
                 if (var2 != null) {
-                  oj.field_w[10] = va.a(km.a(param0, 6), var2);
+                  oj.field_w[10] = va.a(km.bitwiseXor(param0, 6), var2);
                 }
                 var2 = ha.a("subscription_cost_monthly,11", (byte) 41);
                 if (null != var2) {
@@ -3127,7 +3127,7 @@ final class wb {
                 }
                 var2 = ha.a("subscription_cost_monthly,12", (byte) 86);
                 if (null != var2) {
-                  oj.field_w[12] = va.a(km.a(param0, 6), var2);
+                  oj.field_w[12] = va.a(km.bitwiseXor(param0, 6), var2);
                 }
                 var2 = ha.a("sentence_separator", (byte) 126);
                 if (null != var2) {

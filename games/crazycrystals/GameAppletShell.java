@@ -148,7 +148,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 lc.b(24536);
                 this.b(-42);
-                dk.field_o = DraggableWidgetContainer.a(ap.field_r, 6641, (java.awt.Component) ((Object) DialogMessagePane.field_D), rh.field_f);
+                MusicPatch.field_o = DraggableWidgetContainer.a(ap.field_r, 6641, (java.awt.Component) ((Object) DialogMessagePane.field_D), rh.field_f);
                 this.initializeClient((byte) -82);
                 MouseWheelInput.field_h = sn.a(27801);
                 do {

@@ -53,7 +53,7 @@ final class BufferedRandomAccessFile {
             if (this.field_g != -1L &&
               this.field_i >= this.field_g &&
               (long)this.field_d + this.field_g >= this.field_i + (long)param3) {
-              og.a(this.field_h, (int)(-this.field_g + this.field_i), param1, param2, param3);
+              ArrayBlockSupport.copyByteRange(this.field_h, (int)(-this.field_g + this.field_i), param1, param2, param3);
               this.field_i = this.field_i + (long)param3;
               return;
             }
@@ -66,7 +66,7 @@ final class BufferedRandomAccessFile {
               if (var9_int > param3) {
                 var9_int = param3;
               }
-              og.a(this.field_e, (int)(this.field_i - this.field_p), param1, param2, var9_int);
+              ArrayBlockSupport.copyByteRange(this.field_e, (int)(this.field_i - this.field_p), param1, param2, var9_int);
               param3 = param3 - var9_int;
               param2 = param2 + var9_int;
               this.field_i = this.field_i + (long)var9_int;
@@ -97,7 +97,7 @@ final class BufferedRandomAccessFile {
               if (this.field_m < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_m;
               }
-              og.a(this.field_e, 0, param1, param2, var9_intLifetime1Lifetime1);
+              ArrayBlockSupport.copyByteRange(this.field_e, 0, param1, param2, var9_intLifetime1Lifetime1);
               this.field_i = this.field_i + (long)var9_intLifetime1Lifetime1;
               param2 = param2 + var9_intLifetime1Lifetime1;
               param3 = param3 - var9_intLifetime1Lifetime1;
@@ -140,7 +140,7 @@ final class BufferedRandomAccessFile {
               if (-1L < var9 &&
                 var11 > var9) {
                 var13 = (int)(var11 - var9);
-                og.a(this.field_h, (int)(var9 - this.field_g), param1, (int)(var9 - var5_long) + var7, var13);
+                ArrayBlockSupport.copyByteRange(this.field_h, (int)(var9 - this.field_g), param1, (int)(var9 - var5_long) + var7, var13);
                 if (this.field_i < var11) {
                   param3 = (int)((long)param3 - (-this.field_i + var11));
                   this.field_i = var11;
@@ -196,7 +196,7 @@ final class BufferedRandomAccessFile {
             if ((long)param3 != this.field_g &&
               (long)this.field_h.length + this.field_g < (long)param2 + this.field_i) {
               var5_int = (int)((long)this.field_h.length - this.field_i + this.field_g);
-              og.a(param0, param1, this.field_h, (int)(-this.field_g + this.field_i), var5_int);
+              ArrayBlockSupport.copyByteRange(param0, param1, this.field_h, (int)(-this.field_g + this.field_i), var5_int);
               param2 = param2 - var5_int;
               param1 = param1 + var5_int;
               this.field_i = this.field_i + (long)var5_int;
@@ -210,7 +210,7 @@ final class BufferedRandomAccessFile {
               if (this.field_g == -1L) {
                 this.field_g = this.field_i;
               }
-              og.a(param0, param1, this.field_h, (int)(this.field_i - this.field_g), param2);
+              ArrayBlockSupport.copyByteRange(param0, param1, this.field_h, (int)(this.field_i - this.field_g), param2);
               this.field_i = this.field_i + (long)param2;
               if ((long)this.field_d < (this.field_i - this.field_g)) {
                 this.field_d = (int)(this.field_i - this.field_g);
@@ -249,7 +249,7 @@ final class BufferedRandomAccessFile {
             if (var5_long > -1L &&
               var7 > var5_long) {
               var9 = (int)(-var5_long + var7);
-              og.a(param0, (int)((long)param1 + (var5_long - this.field_i)), this.field_e, (int)(var5_long - this.field_p), var9);
+              ArrayBlockSupport.copyByteRange(param0, (int)((long)param1 + (var5_long - this.field_i)), this.field_e, (int)(var5_long - this.field_p), var9);
             }
             this.field_i = this.field_i + (long)param2;
             return;
@@ -328,7 +328,7 @@ final class BufferedRandomAccessFile {
           if (var2_long > -1L &&
             var2_long < var4) {
             var6 = (int)(var4 - var2_long);
-            og.a(this.field_h, (int)(var2_long - this.field_g), this.field_e, (int)(-this.field_p + var2_long), var6);
+            ArrayBlockSupport.copyByteRange(this.field_h, (int)(var2_long - this.field_g), this.field_e, (int)(-this.field_p + var2_long), var6);
           }
           this.field_g = -1L;
           this.field_d = 0;

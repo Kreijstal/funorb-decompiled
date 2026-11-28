@@ -171,7 +171,7 @@ abstract class RasterBuffer {
         }
     }
 
-    abstract void a(int param0, java.awt.Component param1, int param2, int param3);
+    abstract void initialize(int param0, java.awt.Component param1, int param2, int param3);
 
     final static void a(boolean param0, boolean param1, int param2, int param3) {
         FullscreenFocusCanvas.a(param3, he.field_l, gba.field_Bb, param1, -3, param2, rg.field_h);
@@ -196,12 +196,12 @@ abstract class RasterBuffer {
         }
     }
 
-    final void a(byte param0) {
+    final void setAsRasterTarget(byte param0) {
         int var2 = -17 % ((76 - param0) / 37);
         SoftwareRasterizer.setTarget(this.field_e, this.field_b, this.field_f);
     }
 
-    abstract void a(byte param0, int param1, java.awt.Graphics param2, int param3);
+    abstract void drawImage(byte param0, int param1, java.awt.Graphics param2, int param3);
 
     static {
         field_g = new qia();

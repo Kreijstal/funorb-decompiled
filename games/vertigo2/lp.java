@@ -14,7 +14,7 @@ final class lp extends TextureOperator {
         int[] var4 = this.field_x.a(param0, (byte) 59);
         int[] var3 = var4;
         if (this.field_x.field_i) {
-          qq.a(var4, 0, StripedProgressWidget.field_M, this.field_y);
+          ArrayBlockSupport.fillInts(var4, 0, StripedProgressWidget.field_M, this.field_y);
         }
         if (param1 <= 91) {
           return (int[]) null;
@@ -55,10 +55,10 @@ final class lp extends TextureOperator {
             stackIn_9_0 = !(AlphaWidgetContainer.field_H);
             AlphaWidgetContainer.field_H = stackIn_9_0;
           }
-          for (var1_int = 0; var1_int < al.field_o.length; var1_int++) {
-            if (~al.field_o[var1_int] == ~DebouncedFieldValidator.field_f) {
+          for (var1_int = 0; var1_int < MusicPatch.field_o.length; var1_int++) {
+            if (~MusicPatch.field_o[var1_int] == ~DebouncedFieldValidator.field_f) {
               var2 = 0;
-              var3 = al.field_x[var1_int];
+              var3 = MusicPatch.field_x[var1_int];
               if (var3 != 2) {
                 if (var3 != 1) {
                   if (var3 == 3) {

@@ -77,12 +77,12 @@ final class ValidationStatusWidget extends RichTextWidget {
             dg.field_a = il.a("headline", "benefits", sj.field_f, -1);
             hb.field_m = il.a("blurbpane", "benefits", sj.field_f, -1);
             lm.field_e = il.a("button", "benefits", sj.field_f, -1);
-            sb.field_p = il.a("signup_text", "benefits", sj.field_f, -1);
+            MidiNoteMask.field_p = il.a("signup_text", "benefits", sj.field_f, -1);
             pc.field_d = il.a("menu_text", "benefits", sj.field_f, -1);
             IntrusiveNode.field_f = il.a("button_frame", "benefits", sj.field_f, -1);
             ig.field_a = il.a("arrow", "benefits", sj.field_f, -1);
-            Archive.field_i = (BitmapFont) ((Object) qg.a((byte) 94, dm.field_d, "benefits", sj.field_f, "large_font"));
-            ja.field_m = (BitmapFont) ((Object) qg.a((byte) 94, dm.field_d, "benefits", sj.field_f, "small_font"));
+            Archive.field_i = (BitmapFont) ((Object) ByteArrayPoolSupport.a((byte) 94, dm.field_d, "benefits", sj.field_f, "large_font"));
+            ja.field_m = (BitmapFont) ((Object) ByteArrayPoolSupport.a((byte) 94, dm.field_d, "benefits", sj.field_f, "small_font"));
             var27 = SoftwareRasterizer.field_i;
             var2 = SoftwareRasterizer.field_k;
             var3 = SoftwareRasterizer.field_j;
@@ -111,7 +111,7 @@ final class ValidationStatusWidget extends RichTextWidget {
               wa.a(wg.field_l[var7], 0, wg.field_l[var7].field_t, 69, 1, 0, 3, wg.field_l[var7].field_r);
             }
             vi.field_j = null;
-            Bzip2State.field_s = sb.field_p.copy();
+            Bzip2State.field_s = MidiNoteMask.field_p.copy();
             Bzip2State.field_s.bindAsRenderTarget();
             TextHotspotBounds.a(SoftwareRasterizer.field_k, (byte) -2, 2 * SoftwareRasterizer.field_j / 3, 0, 64, 0);
             SoftwareRasterizer.setRasterBuffer(var27, var2, var3);
@@ -214,12 +214,12 @@ final class ValidationStatusWidget extends RichTextWidget {
             var2Lifetime3 = SoftwareRasterizer.field_k;
             var3Lifetime3 = SoftwareRasterizer.field_j;
             SoftwareRasterizer.saveClip(rb.field_a);
-            var4 = ja.field_m.maxLineWidth(sb.field_l, 640) + 6;
+            var4 = ja.field_m.maxLineWidth(MidiNoteMask.field_l, 640) + 6;
             var5Lifetime1 = 20 + (vi.field_h.field_q + var4);
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = var6Lifetime2 - (-vi.field_h.field_q - 20);
             Archive.field_d.bindAsRenderTarget();
-            ja.field_m.drawString(sb.field_l, var7Lifetime2 - Archive.field_d.field_p, ja.field_m.field_p + 155 - (Archive.field_d.field_v - ja.field_m.field_s), 16777215, -1);
+            ja.field_m.drawString(MidiNoteMask.field_l, var7Lifetime2 - Archive.field_d.field_p, ja.field_m.field_p + 155 - (Archive.field_d.field_v - ja.field_m.field_s), 16777215, -1);
             wa.a(Archive.field_d, -4 + var7Lifetime2 - Archive.field_d.field_p, 50, 58, 1, 155 - Archive.field_d.field_v, 3, var4);
             var8Lifetime1 = -Archive.field_d.field_v + (155 - (-ja.field_m.field_p + (-ja.field_m.field_s - 3 + vi.field_h.field_u)) / 2);
             vi.field_h.draw(var6Lifetime2 - Archive.field_d.field_p, var8Lifetime1);
@@ -243,7 +243,7 @@ final class ValidationStatusWidget extends RichTextWidget {
           if (null != lm.field_e &&
             null != IntrusiveNode.field_f) {
             lm.field_e.draw(231, 390);
-            var1 = sb.field_p;
+            var1 = MidiNoteMask.field_p;
             if (0 == ProgressMessageDialog.field_ob.field_h) {
               var1 = Bzip2State.field_s;
             }

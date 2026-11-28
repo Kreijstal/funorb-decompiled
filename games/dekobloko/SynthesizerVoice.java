@@ -85,7 +85,7 @@ final class SynthesizerVoice {
         int integerLocal41;
         int integerLocal42;
         int integerLocal43;
-        MixedSupport008.clearInts(integerArrayState0124, 0, integerArgument1);
+        ArrayBlockSupport.clearInts(integerArrayState0124, 0, integerArgument1);
         if (integerArgument2 < 10) {
           return integerArrayState0124;
         }

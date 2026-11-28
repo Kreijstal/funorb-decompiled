@@ -57,7 +57,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
           return rd.field_b;
         }
         if (je.correctedCurrentTimeMillis(1) < this.field_c + 350L) {
-          return hg.field_E;
+          return MusicPatchNode.field_E;
         }
         if (param0 == -9362) {
           return this.evaluateValidationStatus((byte) -103);

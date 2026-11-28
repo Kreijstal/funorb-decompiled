@@ -279,7 +279,7 @@ final class wp extends tga {
           }
           if ((decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            LevitateEvent.field_r[var7 / 8] = (byte)MassPoisonSpecial.a((int) LevitateEvent.field_r[var7 / 8], 1 << var7 % 8);
+            LevitateEvent.field_r[var7 / 8] = (byte)MassPoisonSpecial.bitwiseOr((int) LevitateEvent.field_r[var7 / 8], 1 << var7 % 8);
           }
           if (decompiledFrameRemainder1) {
             stackIn_63_0 = (!param3) ? 0 : -1;
@@ -305,7 +305,7 @@ final class wp extends tga {
                         LevitateEvent.field_r[var9] = (byte) 0;
                       }
                     } else {
-                      LevitateEvent.field_r[var7 / 8] = (byte)lt.a((int) LevitateEvent.field_r[var7 / 8], 1 << dda.a(var7, 7));
+                      LevitateEvent.field_r[var7 / 8] = (byte)lt.bitwiseXor((int) LevitateEvent.field_r[var7 / 8], 1 << dda.bitwiseAnd(var7, 7));
                     }
                   }
                 }
@@ -517,10 +517,10 @@ final class wp extends tga {
                 if (param3) {
                   if (-1 == var9) {
                     for (var18 = var6Lifetime3; -1 + (var30.length + var6Lifetime3) > var18; var18++) {
-                      MouseWheelInput.field_c[var18 / 8] = (byte)dda.a((int) MouseWheelInput.field_c[var18 / 8], ~(1 << dda.a(7, var18)));
+                      MouseWheelInput.field_c[var18 / 8] = (byte)dda.bitwiseAnd((int) MouseWheelInput.field_c[var18 / 8], ~(1 << dda.bitwiseAnd(7, var18)));
                     }
                   } else {
-                    MouseWheelInput.field_c[(var9 + var6Lifetime3) / 8] = (byte)lt.a((int) MouseWheelInput.field_c[(var9 + var6Lifetime3) / 8], 1 << dda.a(7, var6Lifetime3 + var9));
+                    MouseWheelInput.field_c[(var9 + var6Lifetime3) / 8] = (byte)lt.bitwiseXor((int) MouseWheelInput.field_c[(var9 + var6Lifetime3) / 8], 1 << dda.bitwiseAnd(7, var6Lifetime3 + var9));
                   }
                 } else {
                   if (var16Lifetime1 == 0 &&
@@ -532,7 +532,7 @@ final class wp extends tga {
               }
               if (param3 &&
                 var16Lifetime1 != 0) {
-                MouseWheelInput.field_c[(var6Lifetime3 + var9) / 8] = (byte)dda.a((int) MouseWheelInput.field_c[(var6Lifetime3 + var9) / 8], ~(1 << dda.a(var9 + var6Lifetime3, 7)));
+                MouseWheelInput.field_c[(var6Lifetime3 + var9) / 8] = (byte)dda.bitwiseAnd((int) MouseWheelInput.field_c[(var6Lifetime3 + var9) / 8], ~(1 << dda.bitwiseAnd(var9 + var6Lifetime3, 7)));
               }
               if (var9 >= 0 &&
                 var17.field_E) {

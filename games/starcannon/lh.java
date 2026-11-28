@@ -142,7 +142,7 @@ final class lh {
               var5 = this.field_y.getMusicSampleByGroup(this.field_x[var3], this.field_t[var3], (byte) 41);
             }
             if (var5 != null) {
-              this.field_B[var3] = w.a(this.field_B[var3], 15);
+              this.field_B[var3] = w.bitwiseAnd(this.field_B[var3], 15);
               this.field_L[var3] = var5;
             } else {
               var2 = 0;
@@ -248,13 +248,13 @@ final class lh {
           for (var5 = 0; var5 < this.field_M; var5++) {
             dupTemp$0 = var4 + param0.readUnsignedByte(7909);
             var4 = dupTemp$0;
-            this.field_F[var5] = w.a(dupTemp$0, 255);
+            this.field_F[var5] = w.bitwiseAnd(dupTemp$0, 255);
           }
           this.field_c = new int[256];
           this.field_l = new byte[256][];
-          ug.a(this.field_c, 0, 256, 64);
+          ArrayBlockSupport.fillInts(this.field_c, 0, 256, 64);
           for (var5Lifetime1 = 0; var5Lifetime1 < 256; var5Lifetime1++) {
-            this.field_l[var5Lifetime1] = mc.field_g;
+            this.field_l[var5Lifetime1] = ByteArrayPoolSupport.field_g;
           }
           for (var5Lifetime2 = 0; var5Lifetime2 < this.field_h; var5Lifetime2++) {
             this.field_c[var5Lifetime2] = param0.readUnsignedByte(7909) + 1;
@@ -299,7 +299,7 @@ final class lh {
               for (var8 = 0; 96 > var8; var8++) {
                 dupTemp$1 = var4Lifetime1 + param0.readUnsignedByte(7909);
                 var4Lifetime1 = dupTemp$1;
-                this.field_j[var6Lifetime1][var8] = var5Lifetime4 + w.a(dupTemp$1, 255);
+                this.field_j[var6Lifetime1][var8] = var5Lifetime4 + w.bitwiseAnd(dupTemp$1, 255);
               }
               this.field_a[var6Lifetime1] = param0.readUnsignedByte(7909);
               var8Lifetime1 = param0.readUnsignedByte(7909);
@@ -328,7 +328,7 @@ final class lh {
               for (var11Lifetime1 = 0; var11Lifetime1 < var8Lifetime1; var11Lifetime1++) {
                 dupTemp$6 = var4Lifetime1Lifetime2 + param0.readUnsignedByte(7909);
                 var4Lifetime1Lifetime2 = dupTemp$6;
-                this.field_f[var6Lifetime1][var11Lifetime1] = w.a(dupTemp$6, 255);
+                this.field_f[var6Lifetime1][var11Lifetime1] = w.bitwiseAnd(dupTemp$6, 255);
               }
               var10Lifetime1 = 0;
               array$7 = new int[var9];
@@ -347,7 +347,7 @@ final class lh {
               for (var11Lifetime3 = 0; var11Lifetime3 < var9; var11Lifetime3++) {
                 dupTemp$11 = var4Lifetime1Lifetime4 + param0.readUnsignedByte(7909);
                 var4Lifetime1Lifetime4 = dupTemp$11;
-                this.field_H[var6Lifetime1][var11Lifetime3] = w.a(255, dupTemp$11);
+                this.field_H[var6Lifetime1][var11Lifetime3] = w.bitwiseAnd(255, dupTemp$11);
               }
               this.field_i[var6Lifetime1] = param0.readUnsignedShort(-1174051992);
               for (var11Lifetime4 = 0; var11Lifetime4 < var7; var11Lifetime4++) {

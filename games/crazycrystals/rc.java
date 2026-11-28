@@ -106,7 +106,7 @@ final class rc {
     }
 
     final static void a(int param0, int param1) {
-        pl.field_g = param1;
+        MusicPatchNode.field_g = param1;
         if (param0 != -25537) {
           field_a = (Vector) null;
         }

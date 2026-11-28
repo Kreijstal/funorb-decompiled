@@ -302,7 +302,7 @@ public final class fleas extends NetworkGameClient {
           }
           boolean decompiledFrameCompleted1 = true;
           if (fl.field_c[param3][param0] == 23) {
-            fh.$cfr$intArgs$a$cb0bc10e6b69(-120, gf.field_g, 100, 63);
+            fh.$cfr$intArgs$a$cb0bc10e6b69(-120, ByteArrayPoolSupport.field_g, 100, 63);
             if (15 == tj.field_a &&
               field_E == 0) {
               hg.a(-25389, 4, 251, tj.field_a);
@@ -355,7 +355,7 @@ public final class fleas extends NetworkGameClient {
           }
           boolean decompiledFrameCompleted0 = true;
           if (stackIn_208_0 == 24) {
-            fh.$cfr$intArgs$a$cb0bc10e6b69(117, gf.field_g, 100, 63);
+            fh.$cfr$intArgs$a$cb0bc10e6b69(117, ByteArrayPoolSupport.field_g, 100, 63);
             var6_intLifetime3 = 0;
             while (true) {
               stackIn_213_0 = 40;
@@ -492,7 +492,7 @@ public final class fleas extends NetworkGameClient {
           aj.field_t = of.a("blocks", "", hm.field_g, 89);
           el.field_s = of.a("fleas", "", hm.field_g, 67);
           var3 = -24 % ((-43 - param0) / 62);
-          IntrusiveNode.field_b = (BitmapFont) ((Object) tc.a(de.field_h, "squarish16", hm.field_g, (byte) 120, ""));
+          IntrusiveNode.field_b = (BitmapFont) ((Object) tc.a(MusicPatchEnvelope.field_h, "squarish16", hm.field_g, (byte) 120, ""));
           var2 = new int[2][];
           var2[0] = ((PalettedBitmapFont) (IntrusiveNode.field_b)).field_P[0];
           array$0 = new int[var2[0].length];
@@ -520,7 +520,7 @@ public final class fleas extends NetworkGameClient {
               }
             } else {
               ((PalettedBitmapFont) (IntrusiveNode.field_b)).field_P = var2;
-              MatchingFieldValidator.field_p = (BitmapFont) ((Object) tc.a(de.field_h, "fleafont_filled", hm.field_g, (byte) 115, ""));
+              MatchingFieldValidator.field_p = (BitmapFont) ((Object) tc.a(MusicPatchEnvelope.field_h, "fleafont_filled", hm.field_g, (byte) 115, ""));
               var2 = new int[4][];
               var2[0] = ((PalettedBitmapFont) (MatchingFieldValidator.field_p)).field_P[0];
               array$1 = new int[var2[0].length];
@@ -547,7 +547,7 @@ public final class fleas extends NetworkGameClient {
                         var6 = var2[0][var5] >> 16 & 255;
                         var7_int = (65376 & var2[0][var5]) >> 8;
                         var8_int = var2[0][var5] & 255;
-                        var2[var4_int][var5] = TextLayout.a(var8_int / 2, TextLayout.a(var6 / 2 << 16, var7_int / 2 << 8));
+                        var2[var4_int][var5] = TextLayout.bitwiseOr(var8_int / 2, TextLayout.bitwiseOr(var6 / 2 << 16, var7_int / 2 << 8));
                       }
                     } else {
                       var2[var4_int][var5] = var2[0][var5];
@@ -577,13 +577,13 @@ public final class fleas extends NetworkGameClient {
                   var4[32] = kl.a(252, hm.field_g, "", "block_water");
                   aj.field_t = var4;
                   be.field_c = kl.a(252, hm.field_g, "", "level_select_arrow");
-                  tk.field_m = kl.a(252, hm.field_g, "", "level_select_arrow_pressed");
+                  MusicPatchNode.field_m = kl.a(252, hm.field_g, "", "level_select_arrow_pressed");
                   ad.field_b = FullscreenNoticeType.a(hm.field_g, "level_select_frame", "", (byte) 61);
                   pf.field_a = kl.a(252, hm.field_g, "", "level_select_preview_frame");
                   DualLinkNode.field_n = kl.a(252, hm.field_g, "", "level_select_slider_tab");
                   rd.field_e = kl.a(252, hm.field_g, "", "level_select_bracket");
                   GuestPlayConfirmationForm.field_G = kl.a(252, hm.field_g, "", "level_select_scroll_bg");
-                  de.field_a = kl.a(252, hm.field_g, "", "main_title");
+                  MusicPatchEnvelope.field_a = kl.a(252, hm.field_g, "", "main_title");
                   fg.field_j = kl.a(252, hm.field_g, "", "achievements_title");
                   aj.field_v = kl.a(252, hm.field_g, "", "instructions_title");
                   va.field_g = kl.a(252, hm.field_g, "", "highscores_title");
@@ -593,7 +593,7 @@ public final class fleas extends NetworkGameClient {
                   ModalDialog.field_I = kl.a(252, hm.field_g, "", "level_complete_congratulations");
                   ModalDialogHost.field_E = kl.a(252, hm.field_g, "", "level_complete_1");
                   me.field_g = kl.a(252, hm.field_g, "", "level_complete_2");
-                  tk.field_s = kl.a(252, hm.field_g, "", "level_complete_3");
+                  MusicPatchNode.field_s = kl.a(252, hm.field_g, "", "level_complete_3");
                   kl.a(252, hm.field_g, "", "game_complete_backdrop");
                   this.field_C = kl.a(252, hm.field_g, "", "mb_price_background");
                   this.field_N = of.a("mb_screenshots", "", hm.field_g, 92);
@@ -729,7 +729,7 @@ public final class fleas extends NetworkGameClient {
                 var11++;
               } while (var17 == 0);
               var12 = 10 * MatchingFieldValidator.field_p.field_N;
-              ResourceArchive.field_c = new ik(45, -(var12 / 2) + 250, 340, var12, MatchingFieldValidator.field_p, be.field_c, tk.field_m, DualLinkNode.field_n, GuestPlayConfirmationForm.field_G);
+              ResourceArchive.field_c = new ik(45, -(var12 / 2) + 250, 340, var12, MatchingFieldValidator.field_p, be.field_c, MusicPatchNode.field_m, DualLinkNode.field_n, GuestPlayConfirmationForm.field_G);
               ResourceArchive.field_c.field_Q = -16777216;
               ResourceArchive.field_c.field_r = -1862275584;
               ResourceArchive.field_c.field_F = -2241536;
@@ -740,15 +740,15 @@ public final class fleas extends NetworkGameClient {
               ResourceArchive.field_c.field_O = -1593901056;
               SingleChildWidgetContainer.field_C = new vg("", 360, 20, MatchingFieldValidator.field_p);
               wd.field_a = new vg("", 360, 178, MatchingFieldValidator.field_p);
-              de.field_b = new vg("", 360, 395, MatchingFieldValidator.field_p);
-              var13 = de.field_b;
+              MusicPatchEnvelope.field_b = new vg("", 360, 395, MatchingFieldValidator.field_p);
+              var13 = MusicPatchEnvelope.field_b;
               SingleChildWidgetContainer.field_C.field_d = 36;
               var14 = wd.field_a;
               var14.field_d = 36;
               var13.field_d = 36;
               SingleChildWidgetContainer.field_C.field_n = 145;
               wd.field_a.field_n = 205;
-              de.field_b.field_n = 220;
+              MusicPatchEnvelope.field_b.field_n = 220;
               ol.field_f = new rk(wd.field_a.field_l, 420, MusicPatchPcmStream.field_m, UiComponent.field_l, InteractiveWidget.field_H, IntrusiveNode.field_b);
               ol.field_f.field_t = fl.field_f;
               var15_int = ob.field_c.length - 1;
@@ -762,7 +762,7 @@ public final class fleas extends NetworkGameClient {
               } while (var17 == 0);
               do {
                 if (var15_int < 0) {
-                  StripedProgressWidget.field_D = new vg(nj.field_d.toLowerCase(), 415, de.field_b.field_l, MatchingFieldValidator.field_p);
+                  StripedProgressWidget.field_D = new vg(nj.field_d.toLowerCase(), 415, MusicPatchEnvelope.field_b.field_l, MatchingFieldValidator.field_p);
                   StripedProgressWidget.field_D.field_w = 16711680;
                   StripedProgressWidget.field_D.field_n = 220;
                   StripedProgressWidget.field_D.field_k = false;
@@ -1003,7 +1003,7 @@ public final class fleas extends NetworkGameClient {
           bk.clearStaticReferences(param0 ^ -6565);
           IntrusiveNode.clearStaticReferences(1);
           hc.clearStaticReferences((byte) 87);
-          tk.clearDeclaredStaticReferences(param0 ^ 93);
+          MusicPatchNode.clearDeclaredStaticReferences(param0 ^ 93);
           MidiFileReader.clearStaticReferences();
           MusicPatchPcmStream.a((byte) 112);
           AudioOutput.clearStaticReferences();
@@ -1057,9 +1057,9 @@ public final class fleas extends NetworkGameClient {
           ug.resetStaticState((byte) -73);
           hh.a(true);
           IsaacRandom.clearStaticReferences(param0 - 119);
-          oj.clearDeclaredStaticReferences(param0 ^ -100);
-          wc.a(-24464);
-          de.clearStaticReferences(0);
+          MidiNoteMask.clearDeclaredStaticReferences(param0 ^ -100);
+          MusicPatch.a(-24464);
+          MusicPatchEnvelope.clearStaticReferences(0);
           g.resetStaticState(false);
           bf.a(false);
           NetworkArchiveRequest.i(105);
@@ -1092,7 +1092,7 @@ public final class fleas extends NetworkGameClient {
           Bzip2Decompressor.clearStaticReferences();
           Bzip2State.a(true);
           fg.clearDeclaredStaticReferences(-5);
-          gf.clearStaticReferences(-46);
+          ByteArrayPoolSupport.clearStaticReferences(-46);
           bg.b((byte) -120);
           hb.clearDeclaredStaticReferences((byte) 116);
           ee.clearStaticReferences(1);
@@ -1136,7 +1136,7 @@ public final class fleas extends NetworkGameClient {
           dh.resetStaticState(120);
           RichTextLayout.a(-113);
           DirectByteStorage.c(-1);
-          id.clearStaticReferences((byte) 110);
+          GrowableIntArray.clearStaticReferences((byte) 110);
           DraggableWidgetContainer.clearDeclaredStaticReferences((byte) 89);
           DropTargetWidgetContainer.resetStaticState(param0 ^ 124);
           fh.clearStaticReferences((byte) -94);
@@ -1282,8 +1282,8 @@ public final class fleas extends NetworkGameClient {
                         jc.field_e.tryLoadAllGroups(-36)) {
                         if (hm.field_g.ensureIndexLoaded((byte) -124) &&
                           hm.field_g.tryLoadAllGroups(-76)) {
-                          if (de.field_h.ensureIndexLoaded((byte) -122) &&
-                            de.field_h.tryLoadAllGroups(-54)) {
+                          if (MusicPatchEnvelope.field_h.ensureIndexLoaded((byte) -122) &&
+                            MusicPatchEnvelope.field_h.tryLoadAllGroups(-54)) {
                             if (pf.field_b.ensureIndexLoaded((byte) -106) &&
                               pf.field_b.tryLoadGroupByName("roman12", -106) &&
                               pf.field_b.tryLoadGroupByName("roman20", -118)) {
@@ -1301,10 +1301,10 @@ public final class fleas extends NetworkGameClient {
                               fleas.h((byte) -110);
                               return false;
                             }
-                            ResizableModalDialog.a(31.0f, sa.a(pf.field_b, "roman12", de.field_j, rg.field_q, (byte) 46), true);
+                            ResizableModalDialog.a(31.0f, sa.a(pf.field_b, "roman12", MusicPatchEnvelope.field_j, rg.field_q, (byte) 46), true);
                             return false;
                           }
-                          ResizableModalDialog.a(30.0f, sa.a(de.field_h, "", de.field_j, rg.field_q, (byte) 46), true);
+                          ResizableModalDialog.a(30.0f, sa.a(MusicPatchEnvelope.field_h, "", MusicPatchEnvelope.field_j, rg.field_q, (byte) 46), true);
                           return false;
                         }
                         ResizableModalDialog.a(25.0f, sa.a(hm.field_g, "", bf.field_f, IterableNodeHashTable.field_e, (byte) 46), true);
@@ -1375,7 +1375,7 @@ public final class fleas extends NetworkGameClient {
             ResizableModalDialog.a(72.0f, ModalDialogHost.field_H, true);
             this.renderClientFrame(true);
             this.g((byte) -111);
-            de.field_h = null;
+            MusicPatchEnvelope.field_h = null;
             hm.field_g = null;
             fleas.h((byte) -116);
             return false;
@@ -1707,7 +1707,7 @@ public final class fleas extends NetworkGameClient {
           if (StripedProgressWidget.i(param0 ^ 21424)) {
             var2_int = this.e(false);
             if (var2_int == 2) {
-              id.a(false);
+              GrowableIntArray.a(false);
             }
           }
           hg.a(-79);
@@ -1835,7 +1835,7 @@ public final class fleas extends NetworkGameClient {
           ib.field_f = q.a(8192, 4);
           ob.field_d = q.a(8192, 5);
           jc.field_e = q.a(8192, 6);
-          de.field_h = q.a(8192, 7);
+          MusicPatchEnvelope.field_h = q.a(8192, 7);
           if (0 == cg.field_y) {
             MidiPcmStream.b(true);
           }
@@ -1911,13 +1911,13 @@ public final class fleas extends NetworkGameClient {
           gi.field_d = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_noplace").toPcmSample().resample(var2);
           hg.field_k = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_gravity_up").toPcmSample().resample(var2);
           ha.field_o = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_gravity_down").toPcmSample().resample(var2);
-          gf.field_g = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_switch").toPcmSample().resample(var2);
+          ByteArrayPoolSupport.field_g = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_switch").toPcmSample().resample(var2);
           fg.field_l = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_crumble").toPcmSample().resample(var2);
           hf.field_g = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_bridgecollapse").toPcmSample().resample(var2);
           kc.field_e = SynthesizedSoundEffect.loadByName(pb.field_a, "", "FLEA_death").toPcmSample().resample(var2);
           pb.field_a = null;
-          oj.field_i = RawPcmStream.createForPlaybackRate(ResourceArchive.field_n, 100, 0);
-          oj.field_i.setLoopCount(-1);
+          MidiNoteMask.field_i = RawPcmStream.createForPlaybackRate(ResourceArchive.field_n, 100, 0);
+          MidiNoteMask.field_i.setLoopCount(-1);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "fleas.L(" + param0 + ')');
         }
@@ -2251,7 +2251,7 @@ public final class fleas extends NetworkGameClient {
           }
           boolean decompiledNaturalLoopExit2 = false;
           while (!(decompiledNaturalLoopExit2 = (!SecondaryNodeDeque.b(-118)))) {
-            var3 = id.field_b;
+            var3 = GrowableIntArray.field_b;
             stackIn_42_0 = -33;
             stackIn_42_1 = ~var3;
             if (var24 == 0) {
@@ -2313,7 +2313,7 @@ public final class fleas extends NetworkGameClient {
           }
           SingleChildWidgetContainer.field_C.b(true);
           wd.field_a.b(true);
-          de.field_b.b(true);
+          MusicPatchEnvelope.field_b.b(true);
           var15 = mh.field_u;
           if (SingleChildWidgetContainer.field_C.field_g ||
             MidiPcmStream.field_H[16]) {
@@ -2323,7 +2323,7 @@ public final class fleas extends NetworkGameClient {
             MidiPcmStream.field_H[17]) {
             mh.field_u = 2;
           }
-          if (de.field_b.field_g ||
+          if (MusicPatchEnvelope.field_b.field_g ||
             MidiPcmStream.field_H[18]) {
             mh.field_u = 3;
           }
@@ -2489,7 +2489,7 @@ public final class fleas extends NetworkGameClient {
           var3Lifetime2 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var3Lifetime2 < oe.field_a)))) {
-            var4 = fl.field_c[id.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]];
+            var4 = fl.field_c[GrowableIntArray.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]];
             stackIn_314_0 = var4;
             stackIn_314_1 = PcmResampler.field_c[var3Lifetime2];
             if (var24 == 0) {
@@ -2498,7 +2498,7 @@ public final class fleas extends NetworkGameClient {
                 ~fg.field_u[var3Lifetime2] == ~var4) {
                 if (0 != ok.field_s[var3Lifetime2]) {
                   if ((PcmResampler.field_c[var3Lifetime2] == 8)) {
-                    var7 = id.field_h[var3Lifetime2] * 16;
+                    var7 = GrowableIntArray.field_h[var3Lifetime2] * 16;
                     var13 = 0;
                     var8 = uf.field_e[var3Lifetime2] * 16;
                     var4 = 0;
@@ -2517,22 +2517,22 @@ public final class fleas extends NetworkGameClient {
                     stackIn_292_0Lifetime1 = 1;
                     stackIn_292_1Lifetime1 = var13;
                     if (stackIn_292_0Lifetime1 != stackIn_292_1Lifetime1) {
-                      fl.field_c[id.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]] = '\b';
+                      fl.field_c[GrowableIntArray.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]] = '\b';
                     } else {
-                      if (fl.field_c[id.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]] == 8) {
+                      if (fl.field_c[GrowableIntArray.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]] == 8) {
                         fh.$cfr$intArgs$a$cb0bc10e6b69(-91, bf.field_d, 100, 63);
                       }
-                      fl.field_c[id.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]] = '\t';
+                      fl.field_c[GrowableIntArray.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]] = '\t';
                     }
                   }
                   decompiledFrameRemainder4 = false;
                 }
                 else {
                   if (kb.field_i == 0) {
-                    fl.field_c[id.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]] = (char)PcmResampler.field_c[var3Lifetime2];
+                    fl.field_c[GrowableIntArray.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]] = (char)PcmResampler.field_c[var3Lifetime2];
                   }
                   if (kb.field_i == 4) {
-                    fl.field_c[id.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]] = (char)fg.field_u[var3Lifetime2];
+                    fl.field_c[GrowableIntArray.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]] = (char)fg.field_u[var3Lifetime2];
                   }
                 }
               }
@@ -2562,7 +2562,7 @@ public final class fleas extends NetworkGameClient {
           var3Lifetime3 = 0;
           while (true) {
             if (!(nb.field_b > var3Lifetime3)) {
-              oj.field_i.setScaledVolume((int)(32.0 * Math.log((double)(1 + var19Lifetime1))));
+              MidiNoteMask.field_i.setScaledVolume((int)(32.0 * Math.log((double)(1 + var19Lifetime1))));
               stackIn_465_0 = 0;
               break;
             }

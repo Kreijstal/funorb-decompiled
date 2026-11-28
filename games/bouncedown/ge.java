@@ -29,7 +29,7 @@ final class ge {
         field_b = null;
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseOr(int param0, int param1) {
         return param0 | param1;
     }
 

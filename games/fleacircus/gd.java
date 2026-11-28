@@ -19,9 +19,9 @@ final class gd {
     final static boolean a(byte param0) {
         if (param0 != 70) {
           gd.a((byte) 83);
-          return gf.field_e.a((byte) -128);
+          return ByteArrayPoolSupport.field_e.a((byte) -128);
         }
-        return gf.field_e.a((byte) -128);
+        return ByteArrayPoolSupport.field_e.a((byte) -128);
     }
 
     static {

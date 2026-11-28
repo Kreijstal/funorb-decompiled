@@ -35,7 +35,7 @@ final class ih {
         return IntrusiveNode.field_a + var1Lifetime1;
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseXor(int param0, int param1) {
         return param0 ^ param1;
     }
 

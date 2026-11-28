@@ -102,7 +102,7 @@ final class n {
                     } else {
                       var18 = SoftwareRasterizer.field_a[var8];
                       var19 = 16711935 & (16711935 & var18) * var16 + var15 * (16711935 & var17) >> 8;
-                      SoftwareRasterizer.field_a[var8] = w.a(w.a(var18, 65280) * var16 + w.a(var17, 65280) * var15 >> 8, 65280) + var19;
+                      SoftwareRasterizer.field_a[var8] = w.bitwiseAnd(w.bitwiseAnd(var18, 65280) * var16 + w.bitwiseAnd(var17, 65280) * var15 >> 8, 65280) + var19;
                     }
                   }
                   var8++;

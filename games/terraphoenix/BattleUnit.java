@@ -764,7 +764,7 @@ final class BattleUnit {
             NodeHashTableIterator.a((byte) -86, var12, 16384);
           }
         }
-        k.field_f.a(0);
+        k.field_f.setAsRasterTarget(0);
         return var12;
     }
 
@@ -1105,7 +1105,7 @@ final class BattleUnit {
           var6 = 1;
         }
         if (this.field_U == 5) {
-          fc.field_i[5 * this.field_nb.field_g + 4].draw(0, var4);
+          GrowableIntArray.field_i[5 * this.field_nb.field_g + 4].draw(0, var4);
         }
         regionExit1: {
           if (!this.field_S) {
@@ -1183,27 +1183,27 @@ final class BattleUnit {
           NodeHashTableIterator.a((byte) -86, GameShell.field_p, 4194304);
         }
         if (this.field_U == 0) {
-          fc.field_i[1 + 5 * this.field_nb.field_g].drawFlippedHorizontal(0, var4);
+          GrowableIntArray.field_i[1 + 5 * this.field_nb.field_g].drawFlippedHorizontal(0, var4);
         }
         if (this.field_U == 1) {
-          fc.field_i[5 * this.field_nb.field_g].draw(0, var4);
+          GrowableIntArray.field_i[5 * this.field_nb.field_g].draw(0, var4);
         }
         if (param0 == this.field_U) {
-          fc.field_i[this.field_nb.field_g * 5 + 1].draw(0, var4);
+          GrowableIntArray.field_i[this.field_nb.field_g * 5 + 1].draw(0, var4);
         }
         if (this.field_U == 3) {
-          fc.field_i[2 + this.field_nb.field_g * 5].draw(0, var4);
+          GrowableIntArray.field_i[2 + this.field_nb.field_g * 5].draw(0, var4);
         }
         if (this.field_U == 4) {
-          fc.field_i[3 + this.field_nb.field_g * 5].draw(0, var4);
+          GrowableIntArray.field_i[3 + this.field_nb.field_g * 5].draw(0, var4);
         }
         if (this.field_U == 6) {
-          fc.field_i[5 * this.field_nb.field_g + 3].drawFlippedHorizontal(0, var4);
+          GrowableIntArray.field_i[5 * this.field_nb.field_g + 3].drawFlippedHorizontal(0, var4);
         }
         if (7 == this.field_U) {
-          fc.field_i[5 * this.field_nb.field_g + 2].drawFlippedHorizontal(0, var4);
+          GrowableIntArray.field_i[5 * this.field_nb.field_g + 2].drawFlippedHorizontal(0, var4);
         }
-        k.field_f.a(param0 - 2);
+        k.field_f.setAsRasterTarget(param0 - 2);
         return var2;
     }
 
@@ -1396,7 +1396,7 @@ final class BattleUnit {
           NodeHashTableIterator.a((byte) -86, GameShell.field_p, 4194304);
         }
         this.a(var3, 0, param0 + 25285, GameShell.field_p, 0);
-        k.field_f.a(0);
+        k.field_f.setAsRasterTarget(0);
         return var2;
     }
 
@@ -1438,7 +1438,7 @@ final class BattleUnit {
         if (param0 != 6) {
           this.field_q = -127;
         }
-        qd.$cfr$intArgs$a$e9dea5688aa5(59, od.field_c[this.field_b.field_g].field_a);
+        MusicPatch.$cfr$intArgs$a$e9dea5688aa5(59, od.field_c[this.field_b.field_g].field_a);
         if (this.field_b.field_d <= 0) {
           this.field_b = null;
         }
@@ -1863,7 +1863,7 @@ final class BattleUnit {
         if (7 == var6) {
           me.field_l[2 + 5 * this.field_nb.field_g].copyFlippedHorizontal().draw(0, var4);
         }
-        k.field_f.a(0);
+        k.field_f.setAsRasterTarget(0);
         return var2;
     }
 
@@ -2014,7 +2014,7 @@ final class BattleUnit {
             }
             if (!this.field_k &&
               this.field_C == 1) {
-              fc.a(144 * this.field_E + var4, (Sprite) (var6), var2 - ((Sprite) (var6)).field_r / 2, var3, 0);
+              GrowableIntArray.a(144 * this.field_E + var4, (Sprite) (var6), var2 - ((Sprite) (var6)).field_r / 2, var3, 0);
               if (var10 != 0) {
                 ve.a((Sprite) (var6), -5353, -this.field_G + 144 * this.field_E + var4, this.field_L + (var3 + this.field_G), -(((Sprite) (var6)).field_r / 2) + (var2 + this.field_hb));
               }
@@ -2022,7 +2022,7 @@ final class BattleUnit {
               ve.a((Sprite) (var6), -5353, -this.field_G + 144 * this.field_E + var4, this.field_L + (var3 + this.field_G), -(((Sprite) (var6)).field_r / 2) + (var2 + this.field_hb));
             }
             if (this.field_cb > 0) {
-              qg.a(s.field_b, this.field_hb + (-(s.field_b.field_r / 2) + var2), (byte) 0, this.field_cb, this.field_G + this.field_L + var3, -this.field_G + (var4 + this.field_E * 144));
+              ByteArrayPoolSupport.a(s.field_b, this.field_hb + (-(s.field_b.field_r / 2) + var2), (byte) 0, this.field_cb, this.field_G + this.field_L + var3, -this.field_G + (var4 + this.field_E * 144));
             }
           }
           if (this.field_C != 1) {
@@ -2193,7 +2193,7 @@ final class BattleUnit {
         this.field_cb = 128;
         param1 = param1 - var5;
         if (this.field_m > 0) {
-          qd.$cfr$intArgs$a$e9dea5688aa5(28, 38);
+          MusicPatch.$cfr$intArgs$a$e9dea5688aa5(28, 38);
         }
         this.field_m = this.field_m - (int)(Math.random() * (double)var5);
         if (0 > this.field_m) {
@@ -2201,44 +2201,44 @@ final class BattleUnit {
           if (this.field_u > 0) {
             if (this.field_Z != null) {
               if (this.field_Z.field_m.field_f == 0) {
-                qd.$cfr$intArgs$a$e9dea5688aa5(54, 37);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(54, 37);
               }
               if (this.field_Z.field_m.field_f == 1) {
-                qd.$cfr$intArgs$a$e9dea5688aa5(56, 36);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(56, 36);
               }
               if (this.field_Z.field_m.field_f == 2) {
-                qd.$cfr$intArgs$a$e9dea5688aa5(51, 35);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(51, 35);
               }
               decompiledFrameRemainder0 = (this.field_Z.field_m.field_f == 3);
               if (decompiledFrameRemainder0) {
-                qd.$cfr$intArgs$a$e9dea5688aa5(80, 39);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(80, 39);
                 decompiledFrameRemainder0 = (var7 != 0);
               }
             }
             if (decompiledFrameRemainder0) {
               if (this.field_t == 0 ||
                 7 == this.field_t) {
-                qd.$cfr$intArgs$a$e9dea5688aa5(52, 37);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(52, 37);
                 if (var7 != 0) {
                   if (this.field_t != 4 &&
                     this.field_t != 5 &&
                     6 != this.field_t) {
-                    qd.$cfr$intArgs$a$e9dea5688aa5(72, 35);
-                    qd.$cfr$intArgs$a$e9dea5688aa5(68, 39);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(72, 35);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(68, 39);
                   } else {
-                    qd.$cfr$intArgs$a$e9dea5688aa5(68, 39);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(68, 39);
                   }
                 }
               } else {
                 if (this.field_t != 4 &&
                   this.field_t != 5 &&
                   6 != this.field_t) {
-                  qd.$cfr$intArgs$a$e9dea5688aa5(72, 35);
+                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(72, 35);
                   if (var7 != 0) {
-                    qd.$cfr$intArgs$a$e9dea5688aa5(68, 39);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(68, 39);
                   }
                 } else {
-                  qd.$cfr$intArgs$a$e9dea5688aa5(68, 39);
+                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(68, 39);
                 }
               }
             }
@@ -2312,21 +2312,21 @@ final class BattleUnit {
         if (0 >= this.field_P) {
           if (this.field_Z != null) {
             var8 = new int[]{8, 9, 4, 18, 19, 16};
-            qd.$cfr$intArgs$a$e9dea5688aa5(18, var8[(int)(Math.random() * (double)var8.length)]);
+            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(18, var8[(int)(Math.random() * (double)var8.length)]);
           }
           if (this.field_t != 0 &&
             this.field_t != 7 &&
             this.field_Z == null) {
             if (this.tile.field_z) {
               var9 = new int[]{6, 17};
-              qd.$cfr$intArgs$a$e9dea5688aa5(122, var9[(int)(Math.random() * (double)var9.length)]);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(122, var9[(int)(Math.random() * (double)var9.length)]);
             }
-            qd.$cfr$intArgs$a$e9dea5688aa5(54, 83);
+            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(54, 83);
             if (var7 != 0) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(32, 0);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(32, 0);
             }
           } else {
-            qd.$cfr$intArgs$a$e9dea5688aa5(32, 0);
+            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(32, 0);
           }
           this.field_A = 0;
           this.field_S = true;
@@ -2391,10 +2391,10 @@ final class BattleUnit {
               if (null == this.field_Z &&
                 this.field_t != 0 &&
                 7 != this.field_t) {
-                qd.$cfr$intArgs$a$e9dea5688aa5(107, 82);
-                qd.$cfr$intArgs$a$e9dea5688aa5(101, 1);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(107, 82);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(101, 1);
               } else {
-                qd.$cfr$intArgs$a$e9dea5688aa5(101, 1);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(101, 1);
               }
             }
           }
@@ -2402,12 +2402,12 @@ final class BattleUnit {
           if (null == this.field_Z &&
             this.field_t != 0 &&
             7 != this.field_t) {
-            qd.$cfr$intArgs$a$e9dea5688aa5(107, 82);
+            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(107, 82);
             if (var7 != 0) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(101, 1);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(101, 1);
             }
           } else {
-            qd.$cfr$intArgs$a$e9dea5688aa5(101, 1);
+            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(101, 1);
           }
         }
         if (this.field_u < 0) {
@@ -2530,7 +2530,7 @@ final class BattleUnit {
           }
         }
         if (decompiledFrameCompleted0) {
-          qd.$cfr$intArgs$a$e9dea5688aa5(84, od.field_c[this.field_nb.field_g].field_a);
+          MusicPatch.$cfr$intArgs$a$e9dea5688aa5(84, od.field_c[this.field_nb.field_g].field_a);
         }
 
     }
@@ -2671,19 +2671,19 @@ final class BattleUnit {
               this.field_Z == null) {
               if (2 == this.field_t ||
                 this.field_t == 4) {
-                qd.$cfr$intArgs$a$e9dea5688aa5(78, 85);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(78, 85);
                 if (var7 != 0) {
-                  qd.$cfr$intArgs$a$e9dea5688aa5(91, 84);
-                  qd.$cfr$intArgs$a$e9dea5688aa5(82, 88);
+                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(91, 84);
+                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(82, 88);
                 }
               } else {
-                qd.$cfr$intArgs$a$e9dea5688aa5(91, 84);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(91, 84);
                 if (var7 != 0) {
-                  qd.$cfr$intArgs$a$e9dea5688aa5(82, 88);
+                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(82, 88);
                 }
               }
             } else {
-              qd.$cfr$intArgs$a$e9dea5688aa5(82, 88);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(82, 88);
             }
           }
         }

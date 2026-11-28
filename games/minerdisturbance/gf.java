@@ -132,9 +132,9 @@ final class gf {
               var6 = pk.field_h[var7];
             } else {
               if (var4Lifetime1 != 0) {
-                stackIn_27_0 = vc.field_o[var5 + 4];
+                stackIn_27_0 = MusicPatch.field_o[var5 + 4];
               } else {
-                stackIn_27_0 = vc.field_o[var5 + 0];
+                stackIn_27_0 = MusicPatch.field_o[var5 + 0];
               }
               var16 = stackIn_27_0;
               var6 = var16;
@@ -1091,9 +1091,9 @@ final class gf {
               hf.field_t == this.field_p) {
               LoginPanel.field_I = 0;
               if (!this.a((byte) 125)) {
-                qf.field_p = qf.field_p + 1;
+                MidiNoteMask.field_p = MidiNoteMask.field_p + 1;
                 if (ValidatedTextField.field_V &&
-                  qf.field_p == 5) {
+                  MidiNoteMask.field_p == 5) {
                   fn.a(9, 246, 3);
                 }
                 this.field_h = 4;
@@ -1967,10 +1967,10 @@ final class gf {
             return;
           }
           if (param0 % 10L == 0L) {
-            ng.sleepIgnoringInterrupts(-1L + param0, 1855635080);
-            ng.sleepIgnoringInterrupts(1L, param1 + 1855645389);
+            MusicPatchEnvelope.sleepIgnoringInterrupts(-1L + param0, 1855635080);
+            MusicPatchEnvelope.sleepIgnoringInterrupts(1L, param1 + 1855645389);
           } else {
-            ng.sleepIgnoringInterrupts(param0, 1855635080);
+            MusicPatchEnvelope.sleepIgnoringInterrupts(param0, 1855635080);
           }
           if (param1 != -10309) {
             field_a = (String[]) null;

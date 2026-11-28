@@ -49,7 +49,7 @@ final class mj {
             var3++;
             stackIn_5_0 = mb.field_d;
           }
-          ia.field_b.a(-91);
+          ia.field_b.setAsRasterTarget(-91);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;

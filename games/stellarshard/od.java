@@ -19,7 +19,7 @@ final class od extends DualLinkNode {
         int var3 = stellarshard.field_B;
         if (this.field_y != null) {
           for (var2 = 0; var2 < this.field_y.length; var2++) {
-            this.field_y[var2] = DialogMessagePane.b(this.field_y[var2], 32768);
+            this.field_y[var2] = DialogMessagePane.bitwiseOr(this.field_y[var2], 32768);
           }
         }
         if (param0 != 20865) {
@@ -149,7 +149,7 @@ final class od extends DualLinkNode {
                 this.field_x = new int[var4_int][];
                 for (var5 = 0; var5 < var4_int; var5++) {
                   var6 = param0.readUnsignedShort((byte) 54);
-                  var7 = ee.a(var6, (byte) 8);
+                  var7 = ByteArrayPoolSupport.a(var6, (byte) 8);
                   if (var7 != null) {
                     this.field_t[var5] = var6;
                     array$0 = new int[var7.field_c];

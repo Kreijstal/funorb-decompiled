@@ -24,7 +24,7 @@ final class PcmOutputWorker implements Runnable {
           if (param0 != -125) {
             PcmOutputWorker.a((byte) 102);
           }
-          IntrusiveNode.field_f = ee.a(5, 0, (byte) -124, 1);
+          IntrusiveNode.field_f = ByteArrayPoolSupport.a(5, 0, (byte) -124, 1);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "qf.B(" + param0 + ')');
         }

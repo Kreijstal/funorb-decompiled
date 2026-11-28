@@ -1615,7 +1615,7 @@ final class ja {
           if (var7 < 19 ||
             var7 > 24) {
             if (16777215 == var11) {
-              BufferedSocket.field_a.a(param0 - 56);
+              BufferedSocket.field_a.setAsRasterTarget(param0 - 56);
               TextHotspotBounds.field_t.drawCentred(var8.toLowerCase(), (var9 >> 1) + var5, ProxyAuthenticationRequiredException.field_d[0].field_t + (var4 + (TextHotspotBounds.field_t.field_H + (var13Lifetime1 >> 1))), 0, -1);
               vj.field_b.bindAsRenderTarget();
               decompiledFrameRemainder1 = (var19 != 0);
@@ -1629,7 +1629,7 @@ final class ja {
                 var19 != 0) {
                 SoftwareRasterizer.blurRectangle(10, 2, var5 + 10, var4 - 1, -20 - var5 + var6, var15);
               }
-              BufferedSocket.field_a.a(param0 - 56);
+              BufferedSocket.field_a.setAsRasterTarget(param0 - 56);
               TextHotspotBounds.field_t.drawCentred(var8.toLowerCase(), (var9 >> 1) + var5, ProxyAuthenticationRequiredException.field_d[0].field_t + (var4 + (TextHotspotBounds.field_t.field_H + (var13Lifetime1 >> 1))), 0, -1);
               vj.field_b.bindAsRenderTarget();
             }
@@ -1638,7 +1638,7 @@ final class ja {
             !(var7 > 24) || var19 != 0)) {
             var5 = 150;
             if (var11 == 16777215) {
-              BufferedSocket.field_a.a(param0 ^ -56);
+              BufferedSocket.field_a.setAsRasterTarget(param0 ^ -56);
               TextHotspotBounds.field_t.drawString(var8.toLowerCase(), var5, (var13Lifetime1 >> 1) + ProxyAuthenticationRequiredException.field_d[0].field_t + (var4 + TextHotspotBounds.field_t.field_H), 0, -1);
               vj.field_b.bindAsRenderTarget();
               if (var19 != 0) {
@@ -1647,7 +1647,7 @@ final class ja {
                   SoftwareRasterizer.blurRectangle(10, 2, -10 + var5, -1 + var4, -20 + (var6 - var5), var15);
                 }
                 SoftwareRasterizer.blurRectangle(2, 2, -10 + var5, var4 - 1, -20 + (-var5 + var6), var15);
-                BufferedSocket.field_a.a(-40);
+                BufferedSocket.field_a.setAsRasterTarget(-40);
                 TextHotspotBounds.field_t.drawString(var8.toLowerCase(), var5, var4 + TextHotspotBounds.field_t.field_H - (-ProxyAuthenticationRequiredException.field_d[0].field_t - (var13Lifetime1 >> 1)), 0, -1);
                 vj.field_b.bindAsRenderTarget();
               }
@@ -1658,7 +1658,7 @@ final class ja {
                 var19 != 0) {
                 SoftwareRasterizer.blurRectangle(2, 2, -10 + var5, var4 - 1, -20 + (-var5 + var6), var15);
               }
-              BufferedSocket.field_a.a(-40);
+              BufferedSocket.field_a.setAsRasterTarget(-40);
               TextHotspotBounds.field_t.drawString(var8.toLowerCase(), var5, var4 + TextHotspotBounds.field_t.field_H - (-ProxyAuthenticationRequiredException.field_d[0].field_t - (var13Lifetime1 >> 1)), 0, -1);
               vj.field_b.bindAsRenderTarget();
             }
@@ -1704,13 +1704,13 @@ final class ja {
           if (var11 != 16777215) {
             TextHotspotBounds.field_t.drawRightAligned(var8.toLowerCase(), var5 + (var9 >> 1), (var13Lifetime1 >> 1) + (var4 + TextHotspotBounds.field_t.field_H + ProxyAuthenticationRequiredException.field_d[0].field_t), 1, -1);
             SoftwareRasterizer.blurRectangle(10, 2, 10 + var5, -1 + var4, -20 + var6 - var5, var16);
-            BufferedSocket.field_a.a(-40);
+            BufferedSocket.field_a.setAsRasterTarget(-40);
             TextHotspotBounds.field_t.drawRightAligned(var8.toLowerCase(), (var9 >> 1) + var5, ProxyAuthenticationRequiredException.field_d[0].field_t + TextHotspotBounds.field_t.field_H + (var4 + (var13Lifetime1 >> 1)), 0, -1);
             vj.field_b.bindAsRenderTarget();
           }
           if (var11 == 16777215 ||
             var19 != 0) {
-            BufferedSocket.field_a.a(param0 ^ -56);
+            BufferedSocket.field_a.setAsRasterTarget(param0 ^ -56);
             TextHotspotBounds.field_t.drawRightAligned(var8.toLowerCase(), (var9 >> 1) + var5, ProxyAuthenticationRequiredException.field_d[0].field_t + TextHotspotBounds.field_t.field_H + (var4 + (var13Lifetime1 >> 1)), 0, -1);
             vj.field_b.bindAsRenderTarget();
           }
@@ -2416,7 +2416,7 @@ final class ja {
             fk.field_b.drawSilhouette(0, 0, 16711935);
             SoftwareRasterizer.blurRectangle(5, 5, 0, 0, 640, 128);
             fk.field_b.draw(0, 0);
-            BufferedSocket.field_a.a(-40);
+            BufferedSocket.field_a.setAsRasterTarget(-40);
             fk.field_b = var3_ref_hj;
           }
           var3 = this.a((byte) -12);
@@ -2483,7 +2483,7 @@ final class ja {
         boolean decompiledFrameRemainder0 = true;
         vj.field_b.bindAsRenderTarget();
         SoftwareRasterizer.clearRaster();
-        BufferedSocket.field_a.a(-40);
+        BufferedSocket.field_a.setAsRasterTarget(-40);
         if (this.field_a == 8) {
           this.a(false);
           decompiledFrameRemainder0 = (var10 != 0);
@@ -2532,7 +2532,7 @@ final class ja {
                     stackIn_48_1 = -14189;
                     stackIn_49_2 = (il.field_f.field_i != 0);
                     stackIn_52_3 = (TextLayout.field_f != 0);
-                    ((BinaryBitmapFont) (Object) stackIn_48_0).drawCentred(tj.a(stackIn_48_1, stackIn_49_2, stackIn_52_3, false), 320, 60 + 8 * var3Lifetime1 + var2Lifetime1, 16777215, -1);
+                    ((BinaryBitmapFont) (Object) stackIn_48_0).drawCentred(GrowableIntArray.a(stackIn_48_1, stackIn_49_2, stackIn_52_3, false), 320, 60 + 8 * var3Lifetime1 + var2Lifetime1, 16777215, -1);
                     if (var10 != 0) {
                       this.a((byte) 125, false);
                     }
@@ -2563,7 +2563,7 @@ final class ja {
           break;
         }
         if (decompiledNaturalLoopExit0) {
-          BufferedSocket.field_a.a(-40);
+          BufferedSocket.field_a.setAsRasterTarget(-40);
           stackIn_64_0 = -91 % ((-83 - param0) / 34);
         }
         var2Lifetime3 = stackIn_64_0;
@@ -2874,7 +2874,7 @@ final class ja {
           TextHotspotBounds.field_t.drawCentred(param1, 320, 96, 1, -1);
           SoftwareRasterizer.blurRectangle(5, 5, -(var3_int / 2) + 315, 59, 10 + var3_int, 42);
           TextHotspotBounds.field_t.drawCentred(param1, 320, 96, 0, -1);
-          BufferedSocket.field_a.a(-40);
+          BufferedSocket.field_a.setAsRasterTarget(-40);
         } catch (RuntimeException runtimeException) {
           throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "ja.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

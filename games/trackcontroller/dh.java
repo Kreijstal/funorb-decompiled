@@ -17,7 +17,7 @@ final class dh extends IntrusiveNode {
         nk var4 = new nk();
         var4.field_i = param2;
         var4.field_m = new int[param3];
-        qh.field_e.addLast((byte) -93, var4);
+        GrowableIntArray.field_e.addLast((byte) -93, var4);
         gj.a(2, var4, param0);
         if (param1 != -1) {
           field_i = (String) null;
@@ -131,7 +131,7 @@ final class dh extends IntrusiveNode {
             var9 = new int[var3];
             var21 = var9;
             for (var6_int = 0; var3 > var6_int; var6_int++) {
-              var9[var6_int] = CrossfadingMidiPcmStream.field_z[RandomAccessCacheFile.a((int) var20[var6_int], 255)];
+              var9[var6_int] = CrossfadingMidiPcmStream.field_z[RandomAccessCacheFile.bitwiseAnd((int) var20[var6_int], 255)];
             }
             var1[var2] = new Sprite(ab.field_a, CrossfadingMidiPcmStream.field_p, ka.field_f[var2], vb.field_a[var2], cf.field_p[var2], j.field_f[var2], var21);
           } else {
@@ -140,7 +140,7 @@ final class dh extends IntrusiveNode {
             var13 = var16;
             var6 = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6[var7] = SingleChildWidgetContainer.a(RandomAccessCacheFile.a(var22[var7] << 24, -16777216), CrossfadingMidiPcmStream.field_z[RandomAccessCacheFile.a(255, (int) var20[var7])]);
+              var6[var7] = SingleChildWidgetContainer.bitwiseOr(RandomAccessCacheFile.bitwiseAnd(var22[var7] << 24, -16777216), CrossfadingMidiPcmStream.field_z[RandomAccessCacheFile.bitwiseAnd(255, (int) var20[var7])]);
             }
             var1[var2] = (Sprite) ((Object) new ArgbSprite(ab.field_a, CrossfadingMidiPcmStream.field_p, ka.field_f[var2], vb.field_a[var2], cf.field_p[var2], j.field_f[var2], var16));
           }

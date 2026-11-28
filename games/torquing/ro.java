@@ -45,18 +45,18 @@ class ro extends am {
             for (var8 = 0; var8 < ci.field_c; var8++) {
               var9 = var8 * this.field_x / ci.field_c;
               var10 = this.field_s[var7 + var9];
-              var6[var8] = ie.a(255, var10) << 4;
-              var5[var8] = ie.a(65280, var10) >> 4;
-              var4[var8] = ie.a(16711680, var10) >> 12;
+              var6[var8] = ie.bitwiseAnd(255, var10) << 4;
+              var5[var8] = ie.bitwiseAnd(65280, var10) >> 4;
+              var4[var8] = ie.bitwiseAnd(16711680, var10) >> 12;
             }
           } else {
             for (var8 = 0; var8 < ci.field_c; var8++) {
               incrementValue$0 = var7;
               var7++;
               var9 = this.field_s[incrementValue$0];
-              var6[var8] = ie.a(255, var9) << 4;
-              var5[var8] = ie.a(65280, var9) >> 4;
-              var4[var8] = ie.a(16711680, var9) >> 12;
+              var6[var8] = ie.bitwiseAnd(255, var9) << 4;
+              var5[var8] = ie.bitwiseAnd(65280, var9) >> 4;
+              var4[var8] = ie.bitwiseAnd(16711680, var9) >> 12;
             }
           }
         }

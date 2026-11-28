@@ -14,7 +14,7 @@ final class od extends IntrusiveNode {
           this.field_j = param0;
           this.field_k = param0.getTargetVolume();
           this.field_i = param1;
-          this.field_j.setVolume(128 + kc.field_g * this.field_k >> 8);
+          this.field_j.setVolume(128 + MusicPatchNode.field_g * this.field_k >> 8);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "od.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

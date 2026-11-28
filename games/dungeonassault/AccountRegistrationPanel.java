@@ -124,7 +124,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new LabeledWidgetContainer(20, param3, 120 + param4, 25, param2, false, 120, param0, lp.field_C, 16777215, param1);
+          var6 = new LabeledWidgetContainer(20, param3, 120 + param4, 25, param2, false, 120, param0, MusicPatchNode.field_C, 16777215, param1);
           this.addChild((byte) -54, var6);
           stackIn_1_0 = var6.field_s;
           return stackIn_1_0;
@@ -232,7 +232,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = new LabeledWidgetContainer(20, param2, param1 + 120, 25, param3, false, 120, 3, lp.field_C, 16777215, param0);
+          var8 = new LabeledWidgetContainer(20, param2, param1 + 120, 25, param3, false, 120, 3, MusicPatchNode.field_C, 16777215, param0);
           this.addChild((byte) -117, var8);
           var7 = new ValidationStatusIcon(((FieldValidatorProvider) ((Object) param3)).getFieldValidator(-87));
           this.addChild((byte) -126, var7);
@@ -274,7 +274,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var11 = new LabeledWidgetContainer(20, param1, param4 + 120, 25, param5, false, 120, 3, lp.field_C, 16777215, param2);
+          var11 = new LabeledWidgetContainer(20, param1, param4 + 120, 25, param5, false, 120, 3, MusicPatchNode.field_C, 16777215, param2);
           this.addChild((byte) -119, var11);
           var10 = -18 % ((param0 + 13) / 54);
           var9 = new ValidationStatusWidget(((FieldValidatorProvider) ((Object) param5)).getFieldValidator(-83), param3, 126, param1 + var11.field_s, 50 + param4, param6);
@@ -478,11 +478,11 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, -90 + this.field_x, 25, this.field_T, true, this.field_x - 120, 5, ta.field_e, 11579568, lf.field_q);
         this.addChild((byte) -117, var4);
         var3 = var3 + var4.field_s;
-        DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(lp.field_C, 0, 0, 0, 0, 16777215, -1, 0, 0, lp.field_C.field_H, -1, 2147483647, true);
+        DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(MusicPatchNode.field_C, 0, 0, 0, 0, 16777215, -1, 0, 0, MusicPatchNode.field_C.field_H, -1, 2147483647, true);
         this.field_Q = new RichTextWidget(var2, var5);
         this.field_Q.field_i = "";
-        this.field_Q.setHotspotTooltip(8, 0, kn.field_d);
-        this.field_Q.setHotspotTooltip(8, 1, kn.field_d);
+        this.field_Q.setHotspotTooltip(8, 0, ByteArrayPoolSupport.field_d);
+        this.field_Q.setHotspotTooltip(8, 1, ByteArrayPoolSupport.field_d);
         this.field_Q.field_n = (WidgetEventListener) (this);
         this.field_Q.setTextBounds(46, (byte) -70, -90 + this.field_x, var3);
         var3 = var3 + (15 + this.field_Q.field_s);

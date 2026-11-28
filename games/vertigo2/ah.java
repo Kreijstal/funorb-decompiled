@@ -1232,7 +1232,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -8, "YOUWON");
                 if (null != var2) {
-                  pe.field_L = in.a(0, var2);
+                  MusicPatchNode.field_L = in.a(0, var2);
                 }
                 var2 = en.a((byte) -59, "YOULOST");
                 if (null != var2) {
@@ -1320,7 +1320,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -57, "REDDIED");
                 if (null != var2) {
-                  pe.field_t = in.a(0, var2);
+                  MusicPatchNode.field_t = in.a(0, var2);
                 }
                 var2 = en.a((byte) -120, "SPECTATOREND");
                 if (null != var2) {

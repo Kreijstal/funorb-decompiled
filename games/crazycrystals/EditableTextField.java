@@ -329,7 +329,7 @@ class EditableTextField extends InteractiveWidget {
                 }
                 if (param0 == 96) {
                   if (this.field_N > 0) {
-                    if (!cp.field_k[82]) {
+                    if (!MusicPatchEnvelope.field_k[82]) {
                       stackIn_61_1 = -1 + this.field_N;
                     } else {
                       stackIn_61_1 = this.findPreviousWordBoundary(-26622);
@@ -351,24 +351,24 @@ class EditableTextField extends InteractiveWidget {
                       this.submitText((byte) 23);
                       return true;
                     }
-                    if (cp.field_k[82] &&
+                    if (MusicPatchEnvelope.field_k[82] &&
                       param0 == 65) {
                       this.cutSelection((byte) -75);
                       return true;
                     }
-                    if (cp.field_k[82] &&
+                    if (MusicPatchEnvelope.field_k[82] &&
                       param0 == 66) {
                       this.copySelection((byte) 68);
                       return true;
                     }
-                    if (cp.field_k[82] &&
+                    if (MusicPatchEnvelope.field_k[82] &&
                       67 == param0) {
                       this.pasteClipboardText(param1 ^ 19254);
                       return true;
                     }
                   } else {
                     if (this.field_N < this.field_o.length()) {
-                      if (!cp.field_k[82]) {
+                      if (!MusicPatchEnvelope.field_k[82]) {
                         stackIn_32_1 = this.field_N + 1;
                       } else {
                         stackIn_32_1 = this.findNextWordBoundary(612);
@@ -519,8 +519,8 @@ class EditableTextField extends InteractiveWidget {
           while (ge.b(-31)) {
             qe.field_g.processKeyInput(WallTile.field_q, false, LaserHubTile.field_p);
           }
-          if (pl.field_g != -1) {
-            var1_int = pl.field_g;
+          if (MusicPatchNode.field_g != -1) {
+            var1_int = MusicPatchNode.field_g;
             rc.a(-25537, -1);
             stackIn_7_0 = var1_int;
             return stackIn_7_0;
@@ -695,7 +695,7 @@ class EditableTextField extends InteractiveWidget {
 
     private final void moveCaret(int param0, boolean param1) {
         this.field_N = param0;
-        if (!cp.field_k[81]) {
+        if (!MusicPatchEnvelope.field_k[81]) {
           this.field_D = this.field_N;
         }
         if (param1) {

@@ -183,10 +183,10 @@ final class IsaacRandom {
             }
           }
           this.field_d = this.field_d + this.field_g[var2 + 128 & 255];
-          dupTemp$1 = this.field_g[nb.a(var3 >> 2, 255)] + (this.field_d + this.field_c);
+          dupTemp$1 = this.field_g[nb.bitwiseAnd(var3 >> 2, 255)] + (this.field_d + this.field_c);
           var4 = dupTemp$1;
           this.field_g[var2] = dupTemp$1;
-          dupTemp$2 = this.field_g[nb.a(255, var4 >> 8 >> 2)] + var3;
+          dupTemp$2 = this.field_g[nb.bitwiseAnd(255, var4 >> 8 >> 2)] + var3;
           this.field_c = dupTemp$2;
           this.field_b[var2] = dupTemp$2;
         }
@@ -203,7 +203,7 @@ final class IsaacRandom {
           return (RgbSprite) null;
         }
         for (var4_int = 0; var4_int < var1; var4_int++) {
-          var3[var4_int] = uo.field_b[nb.a(255, (int) var2[var4_int])];
+          var3[var4_int] = uo.field_b[nb.bitwiseAnd(255, (int) var2[var4_int])];
         }
         RgbSprite var4 = new RgbSprite(ce.field_x, tb.field_i, MusicPatchPcmStream.field_t[0], RichTextLayout.field_g[0], jc.field_f[0], jn.field_k[0], var3);
         sb.a(500);

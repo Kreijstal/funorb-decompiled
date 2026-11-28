@@ -222,14 +222,14 @@ final class vl {
               SoftwareRasterizer.drawRectangleOutline(5 + this.field_f, var4, qc.field_f[0].field_r, qc.field_f[0].field_t, 16777215);
               if (var6 != this.field_d) {
                 this.field_d = var6;
-                qd.$cfr$intArgs$a$e9dea5688aa5(67, 28);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(67, 28);
               }
               if (oh.field_f == 1 &&
                 param1.field_wb == null) {
                 if (param1.field_hb != var6) {
                   param1.field_G = 0;
                   this.field_g = -1;
-                  qd.$cfr$intArgs$a$e9dea5688aa5(119, 30);
+                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(119, 30);
                 }
                 param1.field_hb = var6;
               }
@@ -336,7 +336,7 @@ final class vl {
                     param1.field_gb = 1 + var6;
                     if ((this.field_g != param1.field_gb)) {
                       this.field_g = param1.field_gb;
-                      qd.$cfr$intArgs$a$e9dea5688aa5(101, 29);
+                      MusicPatch.$cfr$intArgs$a$e9dea5688aa5(101, 29);
                     }
                     decompiledFrameRemainder3 = false;
                   }
@@ -516,7 +516,7 @@ final class vl {
                   param1.field_gb = -1 - var6;
                   if ((this.field_g != -param1.field_gb)) {
                     this.field_g = -param1.field_gb;
-                    qd.$cfr$intArgs$a$e9dea5688aa5(77, 29);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(77, 29);
                   }
                   decompiledFrameRemainder2 = false;
                 }
@@ -824,7 +824,7 @@ final class vl {
     vl() {
         this.field_d = -1;
         this.field_g = -1;
-        qd.$cfr$intArgs$a$e9dea5688aa5(94, 26);
+        MusicPatch.$cfr$intArgs$a$e9dea5688aa5(94, 26);
         this.field_b = false;
         this.field_f = -356;
     }

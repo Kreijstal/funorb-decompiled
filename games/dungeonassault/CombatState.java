@@ -333,8 +333,8 @@ final class CombatState {
           param0.field_f[0] = param1.readUnsignedMedium(param2 + 22957);
           param0.field_f[1] = param1.readUnsignedShort(0);
           var4_int = param1.readUnsignedByte(true);
-          param0.field_f[1] = mp.a(param0.field_f[1], nb.a(var4_int << 16, 65536));
-          param0.field_f[0] = mp.a(param0.field_f[0], nb.a(254, var4_int) << 24);
+          param0.field_f[1] = mp.bitwiseOr(param0.field_f[1], nb.bitwiseAnd(var4_int << 16, 65536));
+          param0.field_f[0] = mp.bitwiseOr(param0.field_f[0], nb.bitwiseAnd(254, var4_int) << 24);
           if (param2 != -23082) {
             this.field_t = -3;
           }

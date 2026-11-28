@@ -1427,7 +1427,7 @@ final class fc {
             var5 = var4.field_q;
             var6_ref_bd = (bd) (var4.field_s.beginForward(true));
             while (var6_ref_bd != null) {
-              param2[(var6_ref_bd.field_h >> 16) - var5][vg.a(65535, var6_ref_bd.field_h)] = var5 * 24;
+              param2[(var6_ref_bd.field_h >> 16) - var5][vg.bitwiseAnd(65535, var6_ref_bd.field_h)] = var5 * 24;
               var6_ref_bd = (bd) (var4.field_s.nextForward(param3 ^ 11880));
             }
             var4 = (ij) (param0.nextForward(2));
@@ -1526,7 +1526,7 @@ final class fc {
                   !AccountRequestState.a((byte) -115) &&
                   this.field_b == -1 &&
                   !this.field_h) {
-                  AccountRequestState.field_d = gl.a(65526, 9, this.field_i, 3, this.field_f, (byte) 56, this.field_R, new int[]{64 * this.field_J + this.field_m.field_i}, this.field_a);
+                  AccountRequestState.field_d = GrowableIntArray.a(65526, 9, this.field_i, 3, this.field_f, (byte) 56, this.field_R, new int[]{64 * this.field_J + this.field_m.field_i}, this.field_a);
                 }
                 nh.a(0, 1000000, 7, true);
               }

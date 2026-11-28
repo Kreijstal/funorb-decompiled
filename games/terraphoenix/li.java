@@ -80,7 +80,7 @@ final class li {
         try {
           var2_int = param1.length;
           var3 = new byte[var2_int];
-          ka.copyByteRange(param1, param0, var3, 0, var2_int);
+          ArrayBlockSupport.copyByteRange(param1, param0, var3, 0, var2_int);
           stackIn_1_0 = var3;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

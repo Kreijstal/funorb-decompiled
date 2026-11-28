@@ -117,7 +117,7 @@ final class StageDirector {
         int var5;
         int var3Lifetime1;
         var5 = Confined.field_J ? 1 : 0;
-        if (this.field_o < wl.field_c[param1]) {
+        if (this.field_o < GrowableIntArray.field_c[param1]) {
           return false;
         }
         if (param1 == 0) {
@@ -339,7 +339,7 @@ final class StageDirector {
         this.field_r = 500.0;
         stackIn_83_0 = this.field_a;
         stackIn_83_1 = 2;
-        if (va.a(this.field_q, 4) != 0) {
+        if (va.bitwiseAnd(this.field_q, 4) != 0) {
           stackIn_84_2 = var3 >> 3;
         } else {
           stackIn_84_2 = 0;
@@ -347,7 +347,7 @@ final class StageDirector {
         stackIn_83_0[stackIn_83_1] = stackIn_84_2;
         stackIn_86_0 = this.field_a;
         stackIn_86_1 = 1;
-        if (va.a(this.field_q, 2) != 0) {
+        if (va.bitwiseAnd(this.field_q, 2) != 0) {
           stackIn_87_2 = var3;
         } else {
           stackIn_87_2 = 0;
@@ -355,7 +355,7 @@ final class StageDirector {
         stackIn_86_0[stackIn_86_1] = stackIn_87_2;
         stackIn_89_0 = this.field_a;
         stackIn_89_1 = 0;
-        if (0 != va.a(1, this.field_q)) {
+        if (0 != va.bitwiseAnd(1, this.field_q)) {
           stackIn_90_2 = var3;
         } else {
           stackIn_90_2 = 0;
@@ -363,13 +363,13 @@ final class StageDirector {
         stackIn_89_0[stackIn_89_1] = stackIn_90_2;
         stackIn_92_0 = this.field_a;
         stackIn_92_1 = 3;
-        if (va.a(this.field_q, 8) == 0) {
+        if (va.bitwiseAnd(this.field_q, 8) == 0) {
           stackIn_93_2 = 0;
         } else {
           stackIn_93_2 = var3 << 1;
         }
         stackIn_92_0[stackIn_92_1] = stackIn_93_2;
-        if (this.field_o < wl.field_c[4] + 1) {
+        if (this.field_o < GrowableIntArray.field_c[4] + 1) {
           for (var5_int = 0; var5_int < 4; var5_int++) {
             if (0 != (IntrusiveNodeHashTable.field_c[var5_int] & this.field_q)) {
               this.field_a[var5_int] = this.field_a[var5_int] >> 1;

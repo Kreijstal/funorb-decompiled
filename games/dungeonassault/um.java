@@ -29,24 +29,24 @@ abstract class um {
           if (null != ob.field_Xb) {
             ob.field_Xb.setMasterVolume(param0, 24509);
             if (FullscreenFocusCanvas.field_b != null) {
-              FullscreenFocusCanvas.field_b.a(param0, 256);
+              FullscreenFocusCanvas.field_b.setVolume(param0, 256);
             }
             return;
           }
           if (FullscreenFocusCanvas.field_b != null) {
-            FullscreenFocusCanvas.field_b.a(param0, 256);
+            FullscreenFocusCanvas.field_b.setVolume(param0, 256);
           }
           return;
         }
         if (null == ob.field_Xb) {
           if (FullscreenFocusCanvas.field_b != null) {
-            FullscreenFocusCanvas.field_b.a(param0, 256);
+            FullscreenFocusCanvas.field_b.setVolume(param0, 256);
           }
           return;
         }
         ob.field_Xb.setMasterVolume(param0, 24509);
         if (FullscreenFocusCanvas.field_b != null) {
-          FullscreenFocusCanvas.field_b.a(param0, 256);
+          FullscreenFocusCanvas.field_b.setVolume(param0, 256);
         }
     }
 

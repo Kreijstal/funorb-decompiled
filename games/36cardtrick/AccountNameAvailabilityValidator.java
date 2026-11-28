@@ -286,9 +286,9 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
                 var10 = var10 ^ 285L;
             }
             var12 = var10 ^ var2;
-            field_k[0][var0] = ValidatedTextField.a(ValidatedTextField.a(var4 << 8, ValidatedTextField.a(ValidatedTextField.a(ValidatedTextField.a(var2 << 32, ValidatedTextField.a(ValidatedTextField.a(var2 << 48, var2 << 56), var6 << 40)), var10 << 24), var8 << 16)), var12);
+            field_k[0][var0] = ValidatedTextField.bitwiseOr(ValidatedTextField.bitwiseOr(var4 << 8, ValidatedTextField.bitwiseOr(ValidatedTextField.bitwiseOr(ValidatedTextField.bitwiseOr(var2 << 32, ValidatedTextField.bitwiseOr(ValidatedTextField.bitwiseOr(var2 << 48, var2 << 56), var6 << 40)), var10 << 24), var8 << 16)), var12);
             for (var14 = 1; var14 < 8; var14++) {
-                field_k[var14][var0] = ValidatedTextField.a(field_k[var14 - 1][var0] << 56, field_k[-1 + var14][var0] >>> 8);
+                field_k[var14][var0] = ValidatedTextField.bitwiseOr(field_k[var14 - 1][var0] << 56, field_k[-1 + var14][var0] >>> 8);
             }
             var0++;
         }
@@ -297,7 +297,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         var0 = var15;
         while (var15 <= 10) {
             var1 = (var15 - 1) * 8;
-            field_o[var15] = ji.a(ji.a(ji.a(rl.a(field_k[5][5 + var1], 16711680L), ji.a(ji.a(ji.a(ji.a(rl.a(71776119061217280L, field_k[1][1 + var1]), rl.a(-72057594037927936L, field_k[0][var1])), rl.a(field_k[2][2 + var1], 280375465082880L)), rl.a(field_k[3][3 + var1], 1095216660480L)), rl.a(field_k[4][var1 + 4], 4278190080L))), rl.a(field_k[6][6 + var1], 65280L)), rl.a(255L, field_k[7][7 + var1]));
+            field_o[var15] = ji.bitwiseXor(ji.bitwiseXor(ji.bitwiseXor(rl.bitwiseAnd(field_k[5][5 + var1], 16711680L), ji.bitwiseXor(ji.bitwiseXor(ji.bitwiseXor(ji.bitwiseXor(rl.bitwiseAnd(71776119061217280L, field_k[1][1 + var1]), rl.bitwiseAnd(-72057594037927936L, field_k[0][var1])), rl.bitwiseAnd(field_k[2][2 + var1], 280375465082880L)), rl.bitwiseAnd(field_k[3][3 + var1], 1095216660480L)), rl.bitwiseAnd(field_k[4][var1 + 4], 4278190080L))), rl.bitwiseAnd(field_k[6][6 + var1], 65280L)), rl.bitwiseAnd(255L, field_k[7][7 + var1]));
             var15++;
         }
     }

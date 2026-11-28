@@ -16,10 +16,10 @@ final class MusicPatchPcmStream extends PcmStream {
     static int field_r;
     static int[] field_s;
 
-    private final void skipVoiceFrames(int param0, int param1, qd param2) {
+    private final void skipVoiceFrames(int param0, int param1, MusicPatchNode param2) {
         MidiPcmStream stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        qd stackIn_7_2 = null;
+        MusicPatchNode stackIn_7_2 = null;
         boolean stackIn_8_3;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -41,7 +41,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 param2.field_j = PcmSampleStream.createForSampleStep(param2.field_H, param2.field_j.getSampleStepMagnitude(), 0, param2.field_j.getPan());
                 stackIn_7_0 = this.field_w;
                 stackIn_7_1 = -76;
-                stackIn_7_2 = (qd) (param2);
+                stackIn_7_2 = (MusicPatchNode) (param2);
                 stackIn_8_3 = !(param2.field_q.field_p[param2.field_C] >= 0);
                 ((MidiPcmStream) (Object) stackIn_7_0).applySampleOffset((byte) stackIn_7_1, stackIn_7_2, stackIn_8_3);
               }
@@ -71,10 +71,10 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    private final void renderVoiceFrames(qd param0, int param1, int param2, int param3, int param4, int[] param5) {
+    private final void renderVoiceFrames(MusicPatchNode param0, int param1, int param2, int param3, int param4, int[] param5) {
         MidiPcmStream stackIn_13_0 = null;
         int stackIn_13_1 = 0;
-        qd stackIn_13_2 = null;
+        MusicPatchNode stackIn_13_2 = null;
         boolean stackIn_14_3;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -116,7 +116,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 param0.field_j = PcmSampleStream.createForSampleStep(param0.field_H, var11.getSampleStepMagnitude(), 0, var11.getPan());
                 stackIn_13_0 = this.field_w;
                 stackIn_13_1 = -71;
-                stackIn_13_2 = (qd) (param0);
+                stackIn_13_2 = (MusicPatchNode) (param0);
                 stackIn_14_3 = !(0 <= param0.field_q.field_p[param0.field_C]);
                 ((MidiPcmStream) (Object) stackIn_13_0).applySampleOffset((byte) stackIn_13_1, stackIn_13_2, stackIn_14_3);
                 param0.field_j.rampVolume(var9, var11.getTargetVolume());
@@ -166,12 +166,12 @@ final class MusicPatchPcmStream extends PcmStream {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        qd var6 = null;
+        MusicPatchNode var6 = null;
         int var7 = 0;
         var7 = Chess.field_G;
         try {
           this.field_p.mixInto(param0, param1, param2);
-          var6 = (qd) (this.field_x.beginBackward(-18110));
+          var6 = (MusicPatchNode) (this.field_x.beginBackward(-18110));
           while (var6 != null) {
             stackIn_4_0 = this.field_w.isVoiceInactive((byte) -25, var6);
             boolean decompiledFrameCompleted0 = true;
@@ -192,7 +192,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 var6.field_B = var6.field_B - var5;
               }
             }
-            var6 = (qd) (this.field_x.nextBackward((byte) -112));
+            var6 = (MusicPatchNode) (this.field_x.nextBackward((byte) -112));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -345,7 +345,7 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     final PcmStream firstChildStream() {
-        qd var1 = (qd) (this.field_x.beginBackward(-18110));
+        MusicPatchNode var1 = (MusicPatchNode) (this.field_x.beginBackward(-18110));
         if (var1 == null) {
           return null;
         }
@@ -356,10 +356,10 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     final PcmStream nextChildStream() {
-        qd var1_ref = null;
+        MusicPatchNode var1_ref = null;
         int var2 = Chess.field_G;
         do {
-          var1_ref = (qd) (this.field_x.nextBackward((byte) -125));
+          var1_ref = (MusicPatchNode) (this.field_x.nextBackward((byte) -125));
           if (var1_ref == null) {
             return null;
           }
@@ -369,11 +369,11 @@ final class MusicPatchPcmStream extends PcmStream {
 
     final void skip(int sampleCount) {
         int var2;
-        qd var3;
+        MusicPatchNode var3;
         int var4;
         var4 = Chess.field_G;
         this.field_p.skip(sampleCount);
-        var3 = (qd) (this.field_x.beginBackward(-18110));
+        var3 = (MusicPatchNode) (this.field_x.beginBackward(-18110));
         while (var3 != null) {
           if (!this.field_w.isVoiceInactive((byte) -25, var3)) {
             var2 = sampleCount;
@@ -387,7 +387,7 @@ final class MusicPatchPcmStream extends PcmStream {
               var2 = var2 - var3.field_B;
             } while (!this.field_w.updateVoice(35, var2, (int[]) null, 0, var3));
           }
-          var3 = (qd) (this.field_x.nextBackward((byte) -127));
+          var3 = (MusicPatchNode) (this.field_x.nextBackward((byte) -127));
         }
     }
 

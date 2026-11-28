@@ -220,7 +220,7 @@ final class re extends ue {
           }
           if (var2_int == 8 &&
             this.field_b.a(true)) {
-            MouseInputHandler.field_b = (ue) ((Object) new m(this, 8, cp.field_h, 0, 70, false));
+            MouseInputHandler.field_b = (ue) ((Object) new m(this, 8, MusicPatchEnvelope.field_h, 0, 70, false));
             return true;
           }
           if (var2_int == 9 &&
@@ -514,7 +514,7 @@ final class re extends ue {
           this.f(-114);
           this.d(14);
           if (rb.field_h >= 2 &&
-            cp.field_k[12]) {
+            MusicPatchEnvelope.field_k[12]) {
             for (var2_int = 0; var2_int < 5; var2_int++) {
               FrameTimer.field_b[var2_int] = jl.field_c[var2_int];
             }
@@ -630,7 +630,7 @@ final class re extends ue {
           var2 += 10;
           incrementValue$17 = var1_int;
           var1_int++;
-          this.field_d[incrementValue$17] = (ik) ((Object) new mh(690, var2, 180, cp.field_h, 2));
+          this.field_d[incrementValue$17] = (ik) ((Object) new mh(690, var2, 180, MusicPatchEnvelope.field_h, 2));
           var2 += 26;
           incrementValue$18 = var1_int;
           var1_int++;

@@ -30,10 +30,10 @@ final class PcmOutputWorker implements Runnable {
         if (ti.field_f) {
           return null;
         }
-        if (no.field_a < lp.field_z) {
+        if (no.field_a < MusicPatchNode.field_z) {
           return null;
         }
-        if (!(lp.field_z + ConfirmedEmailAvailabilityValidator.field_p <= no.field_a)) {
+        if (!(MusicPatchNode.field_z + ConfirmedEmailAvailabilityValidator.field_p <= no.field_a)) {
           return vj.field_c;
         }
         return null;
@@ -61,7 +61,7 @@ final class PcmOutputWorker implements Runnable {
           }
           try {
             if (ba.field_f == 0) {
-              IterableNodeHashTable.field_e = kn.field_f.requestDirectSocket(param0 ^ -119, lk.field_T, of.field_d);
+              IterableNodeHashTable.field_e = ByteArrayPoolSupport.field_f.requestDirectSocket(param0 ^ -119, lk.field_T, MusicPatchEnvelope.field_d);
               ba.field_f = ba.field_f + 1;
             }
             if (ba.field_f == 1) {
@@ -74,7 +74,7 @@ final class PcmOutputWorker implements Runnable {
               }
             }
             if (ba.field_f == 2) {
-              pe.field_l = new BufferedSocket((java.net.Socket) (IterableNodeHashTable.field_e.result), kn.field_f);
+              pe.field_l = new BufferedSocket((java.net.Socket) (IterableNodeHashTable.field_e.result), ByteArrayPoolSupport.field_f);
               var2 = new PacketBuffer(13);
               AccountRegistrationPanel.a(ri.field_b, var2, CombatState.field_a, param0 + 127, j.field_J);
               var2.writeByte(6, 15);
@@ -105,7 +105,7 @@ final class PcmOutputWorker implements Runnable {
               stackIn_36_0 = -1;
               return stackIn_36_0;
             }
-            Raider.field_a.a(pe.field_l, kn.field_c, (byte) 118);
+            Raider.field_a.a(pe.field_l, ByteArrayPoolSupport.field_c, (byte) 118);
             pe.field_l = null;
             ba.field_f = 0;
             IterableNodeHashTable.field_e = null;

@@ -98,7 +98,7 @@ final class b {
             for (var14Lifetime1 = 1; 1 + var11 > var14Lifetime1; var14Lifetime1++) {
               var12[var14Lifetime1][0] = var13;
               for (var15 = 1; var10 + 1 > var15; var15++) {
-                var12[var14Lifetime1][var15] = AnimatedResultScene.decodePuzzleTile(var4, var15, oe.a(param0, 1), var14Lifetime1, var17);
+                var12[var14Lifetime1][var15] = AnimatedResultScene.decodePuzzleTile(var4, var15, oe.bitwiseXor(param0, 1), var14Lifetime1, var17);
               }
               var12[var14Lifetime1][var10 + 1] = var13;
             }

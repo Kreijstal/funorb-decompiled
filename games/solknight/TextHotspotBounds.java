@@ -19,7 +19,7 @@ final class TextHotspotBounds extends IntrusiveNode {
             TextHotspotBounds.a(-110);
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "li.A(" + param0 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "li.A(" + param0 + ')');
         }
     }
 
@@ -168,7 +168,7 @@ final class TextHotspotBounds extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var1_ref), "li.B(" + param0 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var1_ref), "li.B(" + param0 + ')');
         }
     }
 
@@ -180,7 +180,7 @@ final class TextHotspotBounds extends IntrusiveNode {
           this.field_l = param0;
           this.field_n = param2;
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "li.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "li.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

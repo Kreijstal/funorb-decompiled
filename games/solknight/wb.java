@@ -23,7 +23,7 @@ final class wb {
         try {
           BitPacketBuffer.setBrowserCookie(var2, var4, param0, 1000, var3);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "wb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "wb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -157,7 +157,7 @@ final class wb {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
         }
     }
 

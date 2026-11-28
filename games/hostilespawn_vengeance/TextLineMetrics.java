@@ -94,7 +94,7 @@ final class TextLineMetrics {
         while (0L != param0) {
           var8 = param0;
           param0 = param0 / 37L;
-          var10 = nf.field_h[(int)(-(37L * param0) + var8)];
+          var10 = MusicPatch.field_h[(int)(-(37L * param0) + var8)];
           if (var10 == 95) {
             var11 = -1 + var7.length();
             var7.setCharAt(var11, Character.toUpperCase(var7.charAt(var11)));

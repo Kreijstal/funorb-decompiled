@@ -269,7 +269,7 @@ final class PlayerState {
             DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 109, -1, -var12 + 620, var11, -2 + DefaultTextWidgetRenderer.field_s.field_k + 16);
           }
           if (0 < this.field_H) {
-            var21 = Vertigo2.a(new String[]{gl.a(-126, true, false, this.field_H)}, mc.field_f, -114);
+            var21 = Vertigo2.a(new String[]{MusicPatchEnvelope.a(-126, true, false, this.field_H)}, mc.field_f, -114);
             var13Lifetime1 = DefaultTextWidgetRenderer.field_s.a(1, var21);
             FullscreenFocusCanvas.a(false, -var13Lifetime1 + 620, var13Lifetime1, 10);
             DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 61, -1, -var13Lifetime1 + 620, var21, DefaultTextWidgetRenderer.field_s.field_k + 16 - 2);

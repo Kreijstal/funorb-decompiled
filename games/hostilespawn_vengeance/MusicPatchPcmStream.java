@@ -13,14 +13,14 @@ final class MusicPatchPcmStream extends PcmStream {
     PcmStreamMixer field_q;
 
     final PcmStream firstChildStream() {
-        tm var1 = null;
+        MusicPatchNode var1 = null;
         RuntimeException var1_ref = null;
         Object stackIn_2_0 = null;
         RawPcmStream stackIn_7_0 = null;
         PcmStream stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var1 = (tm) (this.field_t.beginForward(-56));
+          var1 = (MusicPatchNode) (this.field_t.beginForward(-56));
           if (var1 == null) {
             stackIn_2_0 = null;
             return (PcmStream) (stackIn_2_0);
@@ -52,7 +52,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    private final void skipVoiceFrames(int param0, tm param1, int param2) {
+    private final void skipVoiceFrames(int param0, MusicPatchNode param1, int param2) {
         MidiPcmStream stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
         RuntimeException stackIn_31_0 = null;
@@ -106,7 +106,7 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     final PcmStream nextChildStream() {
-        tm var1 = null;
+        MusicPatchNode var1 = null;
         int var2 = 0;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
@@ -124,7 +124,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 case 1: {
                     try {
-                        var1 = (tm) (this.field_t.nextForward(12684));
+                        var1 = (MusicPatchNode) (this.field_t.nextForward(12684));
                         if (null != var1) {
                             /* Inlined CFG state: 5. */
                             {
@@ -1322,7 +1322,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("retry", 24);
                 if (var2 != null) {
-                  hf.field_f = PcmResampler.a(127, var2);
+                  ByteArrayPoolSupport.field_f = PcmResampler.a(127, var2);
                 }
                 var2 = vj.a("back", 24);
                 if (null != var2) {
@@ -2944,7 +2944,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("hs_friend_tip", 24);
                 if (null != var2) {
-                  pl.field_a = PcmResampler.a(125, var2);
+                  MusicPatchEnvelope.field_a = PcmResampler.a(125, var2);
                 }
                 var2 = vj.a("hs_friend_tip_multi", 24);
                 if (var2 != null) {
@@ -3247,7 +3247,7 @@ final class MusicPatchPcmStream extends PcmStream {
         decompiledBody.run();
     }
 
-    private final void renderVoiceFrames(int param0, int[] param1, tm param2, int param3, int param4, int param5) {
+    private final void renderVoiceFrames(int param0, int[] param1, MusicPatchNode param2, int param3, int param4, int param5) {
         MidiPcmStream stackIn_24_0 = null;
         boolean stackIn_25_1 = false;
         RuntimeException stackIn_46_0 = null;
@@ -3340,7 +3340,7 @@ final class MusicPatchPcmStream extends PcmStream {
 
     final void skipFrames(int param0) {
         int var2_int = 0;
-        tm var3 = null;
+        MusicPatchNode var3 = null;
         int var4 = 0;
         boolean stackIn_6_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -3348,7 +3348,7 @@ final class MusicPatchPcmStream extends PcmStream {
         var4 = HostileSpawn.field_I ? 1 : 0;
         try {
           this.field_q.skipFrames(param0);
-          var3 = (tm) (this.field_t.beginForward(-91));
+          var3 = (MusicPatchNode) (this.field_t.beginForward(-91));
           while (var3 != null) {
             if (var4 != 0) {
               return;
@@ -3371,7 +3371,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 var3.field_u = var3.field_u - var2_int;
               }
             }
-            var3 = (tm) (this.field_t.nextForward(12684));
+            var3 = (MusicPatchNode) (this.field_t.nextForward(12684));
             continue;
           }
           return;
@@ -3410,12 +3410,12 @@ final class MusicPatchPcmStream extends PcmStream {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        tm var6 = null;
+        MusicPatchNode var6 = null;
         int var7 = 0;
         var7 = HostileSpawn.field_I ? 1 : 0;
         try {
           this.field_q.mixInto(param0, param1, param2);
-          var6 = (tm) (this.field_t.beginForward(-62));
+          var6 = (MusicPatchNode) (this.field_t.beginForward(-62));
           while (null != var6) {
             if (var7 != 0) {
               return;
@@ -3439,7 +3439,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 break;
               }
             }
-            var6 = (tm) (this.field_t.nextForward(12684));
+            var6 = (MusicPatchNode) (this.field_t.nextForward(12684));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -18,7 +18,7 @@ final class MixedSupport089 {
         MixedSupport052.integerArrayState0054 = null;
         MixedSupport123.integerArrayState0208 = null;
         MixedSupport039.integerArrayState0047 = null;
-        NetworkSupport006.integerArrayState0152 = null;
+        GrowableIntArray.integerArrayState0152 = null;
     }
 
     final static void performAction1139(java.applet.Applet appletArgument1, int integerArgument2, String stringArgument3) {

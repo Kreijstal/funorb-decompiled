@@ -108,7 +108,7 @@ abstract class TextLayout {
             }
             if (AgeValidator.field_m == ae.field_E) {
               if (param3) {
-                fa.field_b = ef.a(rc.field_f, param1 ^ 27988, (String) null, false, param0);
+                fa.field_b = ef.a(MusicPatchEnvelope.field_f, param1 ^ 27988, (String) null, false, param0);
               } else {
                 fa.field_b = DiskArchiveRequest.a(param0, param4, false, param1 ^ 118);
               }
@@ -169,7 +169,7 @@ abstract class TextLayout {
             }
             if (AgeValidator.field_m == ug.field_q &&
               NetworkArchiveRequest.d(param1 ^ -27)) {
-              rc.field_f = ig.field_a.readLong((byte) -110);
+              MusicPatchEnvelope.field_f = ig.field_a.readLong((byte) -110);
               vb.field_i = ig.field_a.readUnsignedByte(true);
               ig.field_a.readUnsignedByte(true);
               jd.field_c = ig.field_a.readUnsignedShort(param1 - 1698573631);
@@ -198,7 +198,7 @@ abstract class TextLayout {
               }
               og.field_c = ig.field_a.readString(false);
               var11 = (CharSequence) ((Object) og.field_c);
-              cb.field_t = ProxyAuthenticationRequiredException.a(var11, (byte) -48);
+              MusicPatchNode.field_t = ProxyAuthenticationRequiredException.a(var11, (byte) -48);
               BufferedRandomAccessFile.field_l = ig.field_a.readUnsignedByte(true);
               AgeValidator.field_m = gg.field_b;
               if (fa.field_b.a((byte) 45) == LabeledWidgetContainer.field_M) {
@@ -222,7 +222,7 @@ abstract class TextLayout {
                 }
               } else {
                 try {
-                  JavaScriptBridge.callWithArguments(RichTextLayout.c(-14047), 22347, "zap", new Object[]{jd.a(rc.field_f, param1 + 62)});
+                  JavaScriptBridge.callWithArguments(RichTextLayout.c(-14047), 22347, "zap", new Object[]{jd.a(MusicPatchEnvelope.field_f, param1 + 62)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -251,7 +251,7 @@ abstract class TextLayout {
               if (pg.field_d == 7) {
                 pg.field_d = 3;
               }
-              wj.field_p = ig.field_a.readString(false);
+              MusicPatch.field_p = ig.field_a.readString(false);
               fb.field_p = false;
               stackIn_84_0 = pg.field_d;
               return stackIn_84_0;
@@ -259,9 +259,9 @@ abstract class TextLayout {
             if (DelegatingCanvas.field_b == null) {
               if (fb.field_p) {
                 if (vl.b(-92) <= 30000L) {
-                  wj.field_p = sa.field_h;
+                  MusicPatch.field_p = sa.field_h;
                 } else {
-                  wj.field_p = nk.field_t;
+                  MusicPatch.field_p = nk.field_t;
                 }
                 fb.field_p = false;
                 stackIn_93_0 = 3;

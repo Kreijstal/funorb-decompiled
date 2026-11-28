@@ -27,17 +27,17 @@ final class ub {
         int var6Lifetime1;
         int var7Lifetime1;
         var8 = Transmogrify.field_A ? 1 : 0;
-        if (si.field_l < 0) {
+        if (MusicPatch.field_l < 0) {
           return;
         }
         var3 = -135 + param0;
         var4 = param1 - 35;
         var5 = 256;
-        if (75 > si.field_l) {
-          var5 = (si.field_l << 8) / 75;
+        if (75 > MusicPatch.field_l) {
+          var5 = (MusicPatch.field_l << 8) / 75;
         }
-        if (200 < si.field_l) {
-          var5 = (-si.field_l + 250 << 8) / 50;
+        if (200 < MusicPatch.field_l) {
+          var5 = (-MusicPatch.field_l + 250 << 8) / 50;
         }
         CrossfadingMidiPcmStream.a(IsaacRandom.field_f, 256);
         if (param2 != 116) {
@@ -49,12 +49,12 @@ final class ub {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_c, SoftwareRasterizer.field_g, 0, 256 - var5);
           }
           SingleChildWidgetContainer.c(true);
-          if (150 > si.field_l) {
+          if (150 > MusicPatch.field_l) {
             IsaacRandom.field_f.drawHalfSize(var3, var4);
           } else {
             ch.field_c.drawWithOpacity(var3 + 15, var4 + 10, var5);
           }
-          var6 = si.field_l - 125;
+          var6 = MusicPatch.field_l - 125;
           if (var6 > 0 &&
             var6 < 50) {
             if (20 <= var6) {
@@ -76,18 +76,18 @@ final class ub {
           if (256 > var5) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_c, SoftwareRasterizer.field_g, 0, 256 - var5);
             SingleChildWidgetContainer.c(true);
-            if (150 > si.field_l) {
+            if (150 > MusicPatch.field_l) {
               IsaacRandom.field_f.drawHalfSize(var3, var4);
             } else {
               ch.field_c.drawWithOpacity(var3 + 15, var4 + 10, var5);
             }
           } else {
             SingleChildWidgetContainer.c(true);
-            if (150 > si.field_l) {
+            if (150 > MusicPatch.field_l) {
               IsaacRandom.field_f.drawHalfSize(var3, var4);
-              var6 = si.field_l - 125;
+              var6 = MusicPatch.field_l - 125;
               if (var6 <= 0) {
-                var6 = -140 + si.field_l;
+                var6 = -140 + MusicPatch.field_l;
                 if (var6 > 0) {
                   var7 = 256;
                   if (var6 < 20) {
@@ -97,7 +97,7 @@ final class ub {
                 }
               } else {
                 if (var6 >= 50) {
-                  var6 = -140 + si.field_l;
+                  var6 = -140 + MusicPatch.field_l;
                   if (var6 > 0) {
                     var7 = 256;
                     if (var6 < 20) {
@@ -109,7 +109,7 @@ final class ub {
                   if (20 > var6) {
                     var7 = var6 * 256 / 20;
                     ac.field_m.drawAdditive(var3, var4, var7);
-                    var6 = -140 + si.field_l;
+                    var6 = -140 + MusicPatch.field_l;
                     if (var6 > 0) {
                       var7 = 256;
                       if (var6 < 20) {
@@ -120,7 +120,7 @@ final class ub {
                   } else {
                     if (var6 < 30) {
                       ac.field_m.drawAdditive(var3, var4, 256);
-                      var6 = -140 + si.field_l;
+                      var6 = -140 + MusicPatch.field_l;
                       if (var6 > 0) {
                         var7 = 256;
                         if (var6 < 20) {
@@ -131,7 +131,7 @@ final class ub {
                     } else {
                       var7 = 256 * (50 - var6) / 20;
                       ac.field_m.drawAdditive(var3, var4, var7);
-                      var6 = -140 + si.field_l;
+                      var6 = -140 + MusicPatch.field_l;
                       if (var6 > 0) {
                         var7 = 256;
                         if (var6 < 20) {
@@ -147,7 +147,7 @@ final class ub {
             }
             ch.field_c.drawWithOpacity(var3 + 15, var4 + 10, var5);
           }
-          var6 = si.field_l - 125;
+          var6 = MusicPatch.field_l - 125;
           if (var6 > 0 &&
             var6 < 50) {
             if (20 > var6) {
@@ -163,7 +163,7 @@ final class ub {
             }
           }
         }
-        var6Lifetime1 = -140 + si.field_l;
+        var6Lifetime1 = -140 + MusicPatch.field_l;
         if (var6Lifetime1 > 0) {
           var7Lifetime1 = 256;
           if (var6Lifetime1 < 20) {

@@ -70,7 +70,7 @@ class AudioOutput {
         if (field_s) {
           var3 = var3 << 1;
         }
-        cb.clearInts(param0, 0, var3);
+        ArrayBlockSupport.clearInts(param0, 0, var3);
         this.field_b = this.field_b - param1;
         if (this.field_t != null &&
           this.field_b <= 0) {

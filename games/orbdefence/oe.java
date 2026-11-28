@@ -253,7 +253,7 @@ final class oe extends DualLinkNode {
         int var2Lifetime1;
         if (this.field_o != null) {
           for (var2 = 0; var2 < this.field_o.length; var2++) {
-            this.field_o[var2] = ge.a(this.field_o[var2], 32768);
+            this.field_o[var2] = ge.bitwiseOr(this.field_o[var2], 32768);
           }
         }
         var2Lifetime1 = 73 / ((64 - param0) / 47);

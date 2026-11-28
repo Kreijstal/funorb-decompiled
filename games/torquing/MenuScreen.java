@@ -199,7 +199,7 @@ final class MenuScreen {
             var14 = stackIn_97_0;
             var15 = 0;
             do {
-              if (hq.field_d.length <= var15) {
+              if (GrowableIntArray.field_d.length <= var15) {
                 return;
               }
               var16 = 1;
@@ -217,11 +217,11 @@ final class MenuScreen {
                 n.field_t >= var13 &&
                 param1 <= k.field_e &&
                 k.field_e < (var14 + param1) &&
-                n.field_t < (MatchingFieldValidator.field_m.stringWidth(hq.field_d[var15]) + var13)) {
+                n.field_t < (MatchingFieldValidator.field_m.stringWidth(GrowableIntArray.field_d[var15]) + var13)) {
                 var16 = 9;
               }
-              var17 = MatchingFieldValidator.field_m.stringWidth(hq.field_d[var15]);
-              FullscreenStatusDialog.field_Q.drawCentred(hq.field_d[var15], var13 + (var17 >> 1), param1 + MatchingFieldValidator.field_m.field_x, var16, -1);
+              var17 = MatchingFieldValidator.field_m.stringWidth(GrowableIntArray.field_d[var15]);
+              FullscreenStatusDialog.field_Q.drawCentred(GrowableIntArray.field_d[var15], var13 + (var17 >> 1), param1 + MatchingFieldValidator.field_m.field_x, var16, -1);
               var13 = var13 + var17;
               if (2 != var15) {
                 var17 = MatchingFieldValidator.field_m.stringWidth(" / ");
@@ -2366,16 +2366,16 @@ final class MenuScreen {
               var8Lifetime1 = n.field_t;
               var9Lifetime1 = -(MatchingFieldValidator.field_m.stringWidth(var7) >> 1) + 320;
               var10Lifetime1 = 0;
-              while (var10Lifetime1 < hq.field_d.length) {
+              while (var10Lifetime1 < GrowableIntArray.field_d.length) {
                 if (var11 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
                 }
                 if (var9Lifetime1 <= var8Lifetime1 &&
-                  var8Lifetime1 < MatchingFieldValidator.field_m.stringWidth(hq.field_d[var10Lifetime1]) + var9Lifetime1) {
+                  var8Lifetime1 < MatchingFieldValidator.field_m.stringWidth(GrowableIntArray.field_d[var10Lifetime1]) + var9Lifetime1) {
                   ld.field_k = var10Lifetime1;
                 }
-                var9Lifetime1 = var9Lifetime1 + (MatchingFieldValidator.field_m.stringWidth(hq.field_d[var10Lifetime1]) + MatchingFieldValidator.field_m.stringWidth(" / "));
+                var9Lifetime1 = var9Lifetime1 + (MatchingFieldValidator.field_m.stringWidth(GrowableIntArray.field_d[var10Lifetime1]) + MatchingFieldValidator.field_m.stringWidth(" / "));
                 var10Lifetime1++;
               }
               if ((decompiledFrameCompleted0) &&

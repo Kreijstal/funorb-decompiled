@@ -157,7 +157,7 @@ final class vma extends pv {
           var4 = BananarangAnimation.field_P[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = hk.field_f[dda.a(255, (int) var4[var6])];
+            var5[var6] = hk.field_f[dda.bitwiseAnd(255, (int) var4[var6])];
           }
           var1[var2] = new Sprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[var2], AirstrikeAnimation.field_D[var2], ArrayWidgetContainer.field_A[var2], InsanoSauceSpecial.field_s[var2], var5);
         }

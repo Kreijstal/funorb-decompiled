@@ -95,7 +95,7 @@ final class bl {
         int var14Lifetime2;
         int var14Lifetime3;
         try {
-          kk.field_l = ah.a(np.field_A, 200, "smallfont", "", hj.field_Z);
+          MusicPatch.field_l = ah.a(np.field_A, 200, "smallfont", "", hj.field_Z);
           db.field_v = ah.a(np.field_A, 200, "roman12bold", "", hj.field_Z);
           df.field_c = rc.a("", sb.field_a, "main_center", (byte) 71);
           dm.field_d = new RgbSprite[3];
@@ -107,7 +107,7 @@ final class bl {
             IterableNodeHashTable.field_f[var1_intLifetime1] = rc.a("", sb.field_a, "main_right_0" + (var1_intLifetime1 + 1), (byte) 71);
           }
           tm.field_p = oh.a(hj.field_Z, "", 11091, "menu_block");
-          of.field_j = oh.a(hj.field_Z, "", 11091, "menu_button");
+          MusicPatchEnvelope.field_j = oh.a(hj.field_Z, "", 11091, "menu_button");
           le.field_f = oh.a(hj.field_Z, "", 11091, "menu_moss_top_left");
           e.field_j = oh.a(hj.field_Z, "", 11091, "menu_moss_top_right");
           CipherPacketBuffer.field_w = oh.a(hj.field_Z, "", 11091, "menu_moss_1");
@@ -117,7 +117,7 @@ final class bl {
           lf.field_x = oh.a(hj.field_Z, "", 11091, "menu_chain_ext");
           lf.field_n = oh.a(hj.field_Z, "", 11091, "menu_chain_line");
           ContentTransitionDialog.field_Ab = oh.a(hj.field_Z, "", 11091, "menu_chain");
-          AccountNameAvailabilityValidator.field_m = kn.a(hj.field_Z, "", "cursor", -49);
+          AccountNameAvailabilityValidator.field_m = ByteArrayPoolSupport.a(hj.field_Z, "", "cursor", -49);
           jg.field_c = new RgbSprite[AccountNameAvailabilityValidator.field_m.length];
           for (var1_intLifetime2 = 0; AccountNameAvailabilityValidator.field_m.length > var1_intLifetime2; var1_intLifetime2++) {
             jg.field_c[var1_intLifetime2] = rb.a(8, AccountNameAvailabilityValidator.field_m[var1_intLifetime2], 16711680, (byte) 124);
@@ -149,12 +149,12 @@ final class bl {
           pi.field_b = oh.a(hj.field_Z, "", 11091, "interface_lattice");
           jm.field_i = oh.a(hj.field_Z, "", 11091, "button_152");
           oh.a(hj.field_Z, "", 11091, "button_252");
-          gh.field_g = kn.a(hj.field_Z, "", "strategy_buttons", -98);
+          gh.field_g = ByteArrayPoolSupport.a(hj.field_Z, "", "strategy_buttons", -98);
           jh.c();
           var5 = var19.field_y;
           var6 = var19.field_v;
           for (var7_int = 0; var5 * var6 > var7_int; var7_int++) {
-            var19.field_B[var7_int] = mp.a(var19.field_B[var7_int], -2147483648);
+            var19.field_B[var7_int] = mp.bitwiseOr(var19.field_B[var7_int], -2147483648);
           }
           var7 = new RgbSprite(var5, var6);
           var7.bindAsRenderTarget();
@@ -165,7 +165,7 @@ final class bl {
           var5Lifetime1 = var2.field_y;
           var6Lifetime1 = var2.field_v;
           for (var8_int = 0; var8_int < var5Lifetime1 * var6Lifetime1; var8_int++) {
-            var2.field_B[var8_int] = mp.a(var2.field_B[var8_int], -2147483648);
+            var2.field_B[var8_int] = mp.bitwiseOr(var2.field_B[var8_int], -2147483648);
           }
           var8 = new RgbSprite(var5Lifetime1, var6Lifetime1);
           var8.bindAsRenderTarget();
@@ -176,7 +176,7 @@ final class bl {
           var6Lifetime2 = var3.field_v;
           var5Lifetime2 = var3.field_y;
           for (var9_int = 0; var6Lifetime2 * var5Lifetime2 > var9_int; var9_int++) {
-            var3.field_B[var9_int] = mp.a(var3.field_B[var9_int], -2147483648);
+            var3.field_B[var9_int] = mp.bitwiseOr(var3.field_B[var9_int], -2147483648);
           }
           var9 = new RgbSprite(var5Lifetime2, var6Lifetime2);
           var9.bindAsRenderTarget();
@@ -193,7 +193,7 @@ final class bl {
           var6Lifetime3 = var4.field_v;
           var5Lifetime3 = var4.field_y;
           for (var10_intLifetime1 = 0; var10_intLifetime1 < var6Lifetime3 * var5Lifetime3; var10_intLifetime1++) {
-            var4.field_B[var10_intLifetime1] = mp.a(var4.field_B[var10_intLifetime1], -2147483648);
+            var4.field_B[var10_intLifetime1] = mp.bitwiseOr(var4.field_B[var10_intLifetime1], -2147483648);
           }
           var10 = new RgbSprite(var5Lifetime3, var6Lifetime3);
           var10.bindAsRenderTarget();
@@ -216,11 +216,11 @@ final class bl {
           jh.b();
           PlayerDungeonProfile.field_o = null;
           nb.field_d = oh.a(hj.field_Z, "", 11091, "base");
-          var11 = kn.a(hj.field_Z, "", "room_icons", -66);
-          HuffmanDecoder.field_b = kn.a(hj.field_Z, "", "room_icons_2d", -105);
-          field_d = kn.a(hj.field_Z, "", "wall_icons_2d", -84);
-          ri.field_d = kn.a(hj.field_Z, "", "walls", -127);
-          mc.field_w = kn.a(hj.field_Z, "", "room_floors", -78);
+          var11 = ByteArrayPoolSupport.a(hj.field_Z, "", "room_icons", -66);
+          HuffmanDecoder.field_b = ByteArrayPoolSupport.a(hj.field_Z, "", "room_icons_2d", -105);
+          field_d = ByteArrayPoolSupport.a(hj.field_Z, "", "wall_icons_2d", -84);
+          ri.field_d = ByteArrayPoolSupport.a(hj.field_Z, "", "walls", -127);
+          mc.field_w = ByteArrayPoolSupport.a(hj.field_Z, "", "room_floors", -78);
           var20 = mc.field_w;
           for (var13_int = 0; var13_int < var20.length; var13_int++) {
             var14_ref_cn = var20[var13_int];
@@ -249,16 +249,16 @@ final class bl {
           i.field_r[12] = oh.a(hj.field_Z, "", 11091, "room_crossbow");
           i.field_r[14] = oh.a(hj.field_Z, "", 11091, "room_gas");
           i.field_r[36] = oh.a(hj.field_Z, "", 11091, "room_hallofglass");
-          sn.field_c = kn.a(hj.field_Z, "", "torches", -86);
+          sn.field_c = ByteArrayPoolSupport.a(hj.field_Z, "", "torches", -86);
           AccountRegistrationPanel.i(112);
-          mf.field_b = kn.a(hj.field_Z, "", "doormasks", -49);
+          mf.field_b = ByteArrayPoolSupport.a(hj.field_Z, "", "doormasks", -49);
           jh.c();
           ua.field_b = new ph[6];
           for (var13_intLifetime2 = 0; var13_intLifetime2 < 6; var13_intLifetime2++) {
             var22Lifetime1 = ri.field_d[var13_intLifetime2];
             for (var15 = 0; var22Lifetime1.field_B.length > var15; var15++) {
               if (var22Lifetime1.field_B[var15] != 0) {
-                var22Lifetime1.field_B[var15] = mp.a(var22Lifetime1.field_B[var15], -2147483648);
+                var22Lifetime1.field_B[var15] = mp.bitwiseOr(var22Lifetime1.field_B[var15], -2147483648);
               }
             }
             var15_ref_cn = new RgbSprite(var22Lifetime1.field_y, var22Lifetime1.field_v);
@@ -319,11 +319,11 @@ final class bl {
           tb.field_c = oh.a(hj.field_Z, "", 11091, "stat_snare");
           kd.field_f = oh.a(hj.field_Z, "", 11091, "stat_detect");
           uj.field_c = oh.a(hj.field_Z, "", 11091, "stat_renown");
-          ue.field_i = kn.a(hj.field_Z, "", "modifier_icons", -80);
+          ue.field_i = ByteArrayPoolSupport.a(hj.field_Z, "", "modifier_icons", -80);
           oh.a(hj.field_Z, "", 11091, "dead_icon");
           rj.field_k = oh.a(hj.field_Z, "", 11091, "youarehere");
-          fj.field_d = kn.a(hj.field_Z, "", "spy_icon", -70);
-          bf.field_e = kn.a(hj.field_Z, "", "sac_icon", -44);
+          fj.field_d = ByteArrayPoolSupport.a(hj.field_Z, "", "spy_icon", -70);
+          bf.field_e = ByteArrayPoolSupport.a(hj.field_Z, "", "sac_icon", -44);
           AccountNameAvailabilityValidator.field_r = oh.a(hj.field_Z, "", 11091, "revive_icon");
           hj.field_T = oh.a(hj.field_Z, "", 11091, "menu_locked");
           n.field_e = pa.a((byte) -103, hj.field_Z, "", "ingot");

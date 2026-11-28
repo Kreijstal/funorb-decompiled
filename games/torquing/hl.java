@@ -43,7 +43,7 @@ final class hl {
           var19 = new int[]{6, 3, 3, 6};
           var14 = var19;
           var15 = new int[]{2, 2, 1, 1};
-          dk.a(param9, 0, mf.field_z, 0, param9.length);
+          ArrayBlockSupport.a(param9, 0, mf.field_z, 0, param9.length);
           if (param3 != -6076) {
             stackIn_3_0 = (double[]) null;
             return stackIn_3_0;
@@ -51,7 +51,7 @@ final class hl {
           var21 = new double[13];
           var20 = var21;
           var16 = var20;
-          dk.a(param9, 0, var16, 0, param9.length);
+          ArrayBlockSupport.a(param9, 0, var16, 0, param9.length);
           bd.c(0);
           for (var17 = 0; 4 > var17; var17++) {
             TextLineMetrics.a(param7, 72, param6, mf.field_z, param8);

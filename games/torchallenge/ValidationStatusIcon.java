@@ -158,7 +158,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
           for (var5 = 1; var5 < 2; var5++) {
             array$1 = new int[var11.length];
             var3.field_O[var5] = array$1;
-            he.a(var4, 0, var3.field_O[var5], 0, var11.length);
+            ArrayBlockSupport.copyIntRange(var4, 0, var3.field_O[var5], 0, var11.length);
           }
           var3.field_O[1][2] = 8015912;
           var3.field_O[1][1] = 16301089;

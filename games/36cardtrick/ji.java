@@ -20,7 +20,7 @@ final class ji {
         AgeValidator.field_k.addLast(var1, 27362);
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseXor(long param0, long param1) {
         return param0 ^ param1;
     }
 
@@ -29,13 +29,13 @@ final class ji {
         ResizableModalDialog.field_O.field_l[oj.field_c] = (short)(param0 >> 1);
         ResizableModalDialog.field_O.field_l[eb.field_d] = (short)(param0 >> 1);
         if (param1 == 24355) {
-          dupTemp$0 = 0 != bc.a(param0, 1) ? StripedProgressWidget.field_H : db.field_p;
+          dupTemp$0 = 0 != bc.bitwiseAnd(param0, 1) ? StripedProgressWidget.field_H : db.field_p;
           ResizableModalDialog.field_O.field_O[eb.field_d] = dupTemp$0;
           ResizableModalDialog.field_O.field_O[oj.field_c] = dupTemp$0;
           return;
         }
         field_b = (String) null;
-        byte dupTemp$1 = 0 != bc.a(param0, 1) ? StripedProgressWidget.field_H : db.field_p;
+        byte dupTemp$1 = 0 != bc.bitwiseAnd(param0, 1) ? StripedProgressWidget.field_H : db.field_p;
         ResizableModalDialog.field_O.field_O[eb.field_d] = dupTemp$1;
         ResizableModalDialog.field_O.field_O[oj.field_c] = dupTemp$1;
     }

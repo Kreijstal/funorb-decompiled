@@ -12,7 +12,7 @@ abstract class RasterBuffer {
     static String field_h;
     static UiPanel field_a;
 
-    abstract void a(java.awt.Graphics param0, int param1, int param2, int param3);
+    abstract void drawImage(java.awt.Graphics param0, int param1, int param2, int param3);
 
     final static String a(byte param0, int param1, String param2) {
         String stackIn_3_0 = null;
@@ -83,7 +83,7 @@ abstract class RasterBuffer {
         }
     }
 
-    abstract void a(java.awt.Component param0, int param1, int param2, int param3);
+    abstract void initialize(java.awt.Component param0, int param1, int param2, int param3);
 
     public static void clearStaticReferences(int param0) {
         field_h = null;
@@ -106,7 +106,7 @@ abstract class RasterBuffer {
         }
     }
 
-    final void a(int param0) {
+    final void setAsRasterTarget(int param0) {
         SoftwareRasterizer.setRasterBuffer(this.field_e, this.field_i, this.field_d);
         int var2 = -99 / ((param0 + 92) / 32);
     }

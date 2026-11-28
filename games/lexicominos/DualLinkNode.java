@@ -169,8 +169,8 @@ class DualLinkNode extends IntrusiveNode {
         lj.field_b = null;
         ContentTransitionDialog.field_X = null;
         gj.field_t = 0;
-        var2 = rc.field_i;
-        rc.field_i = DelegatingCanvas.field_c;
+        var2 = MusicPatchEnvelope.field_i;
+        MusicPatchEnvelope.field_i = DelegatingCanvas.field_c;
         if (param1 == 51) {
           kb.field_b.field_j = 2;
         } else {

@@ -129,7 +129,7 @@ final class sm extends ResultScenePhase {
           var2_int = -35 / ((-86 - param0) / 36);
           var3 = param1.length;
           var4 = new byte[var3];
-          eg.copyByteRange(param1, 0, var4, 0, var3);
+          ArrayBlockSupport.copyByteRange(param1, 0, var4, 0, var3);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -435,7 +435,7 @@ final class NanoFrameTimer extends FrameTimer {
           for (var3Lifetime2 = 0; DelegatingCanvas.field_f.length > var3Lifetime2; var3Lifetime2++) {
             DelegatingCanvas.field_f[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte(0);
           }
-          qd.field_u = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 ^ -105);
+          MusicPatchNode.field_u = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 ^ -105);
           PacketBuffer.field_n = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-107);
           for (var3Lifetime3 = 0; var3Lifetime3 < SoundCache.field_d.length; var3Lifetime3++) {
             SoundCache.field_d[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).readByte(0);
@@ -493,7 +493,7 @@ final class NanoFrameTimer extends FrameTimer {
 
     final static void a(byte param0, PcmStreamMixer param1, int param2, ResourceArchive param3) {
         try {
-          BoundedRandomAccessFile.field_i = param2 * qd.d(-31137) / 1000;
+          BoundedRandomAccessFile.field_i = param2 * MusicPatchNode.d(-31137) / 1000;
           fd.a((byte) -103, param3);
           aa.a(-8428, param3);
           cd.a((byte) 127, param3);

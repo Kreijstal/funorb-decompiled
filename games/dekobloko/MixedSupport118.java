@@ -226,7 +226,7 @@ final class MixedSupport118 {
           integerLocal25 = DekoBlokoClient.obfuscationControl ? 1 : 0;
           try {
             if (GameSession.bufferedSocketState0002 == null &&
-              !NetworkSupport006.computeBoolean1025(booleanArgument6, byteArgument4 - 129)) {
+              !GrowableIntArray.computeBoolean1025(booleanArgument6, byteArgument4 - 129)) {
               stackIntegerLocal1 = -1;
               return stackIntegerLocal1;
             }
@@ -321,9 +321,9 @@ final class MixedSupport118 {
                 LabeledWidgetContainer.cipherPacketBufferState0001.readUnsignedByte((byte) -25);
                 LabeledWidgetContainer.cipherPacketBufferState0001.readUnsignedByte((byte) -71);
                 LabeledWidgetContainer.cipherPacketBufferState0001.readInt(byteArgument4 ^ 7606);
-                MixedSupport130.integerState0810 = LabeledWidgetContainer.cipherPacketBufferState0001.readUnsignedShort(3);
-                UiComponentPart001.byteArrayState0002 = new byte[MixedSupport130.integerState0810];
-                for (integerLocal23 = 0; integerLocal23 < MixedSupport130.integerState0810; integerLocal23++) {
+                ByteArrayPoolSupport.integerState0810 = LabeledWidgetContainer.cipherPacketBufferState0001.readUnsignedShort(3);
+                UiComponentPart001.byteArrayState0002 = new byte[ByteArrayPoolSupport.integerState0810];
+                for (integerLocal23 = 0; integerLocal23 < ByteArrayPoolSupport.integerState0810; integerLocal23++) {
                   UiComponentPart001.byteArrayState0002[integerLocal23] = LabeledWidgetContainer.cipherPacketBufferState0001.readByte((byte) -99);
                 }
               }

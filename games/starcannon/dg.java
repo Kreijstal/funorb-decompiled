@@ -40,7 +40,7 @@ final class dg extends IntrusiveNode {
         throw new Error();
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseXor(int param0, int param1) {
         return param0 ^ param1;
     }
 

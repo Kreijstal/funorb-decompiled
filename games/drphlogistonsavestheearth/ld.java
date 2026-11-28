@@ -301,7 +301,7 @@ final class ld {
         var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var2 = -122 / ((param0 + 76) / 50);
         if (8 == sd.field_a.levelNumber) {
-          sc.a(-1, true, ml.field_l);
+          ByteArrayPoolSupport.a(-1, true, ml.field_l);
         }
         var3 = 0;
         if (r.field_d != this.field_c) {
@@ -913,7 +913,7 @@ final class ld {
         var8 = 480 + (30 + var2);
         var9 = 50;
         var10 = 60 + var8;
-        ri.field_b.a(var9, var10);
+        MusicPatchEnvelope.field_b.a(var9, var10);
         var9 += 34;
         of.field_x.a(var9, var10);
         var9 += 34;
@@ -1897,7 +1897,7 @@ final class ld {
         var11 = stackIn_13_0;
         var12 = 0;
         var13 = -1;
-        for (var14 = 0; sc.field_b.length > var14; var14++) {
+        for (var14 = 0; ByteArrayPoolSupport.field_b.length > var14; var14++) {
           regionExit1: {
             if ((1 << var14 & var11) != 0) {
               di.field_b[var14].b(var9, var10);
@@ -1959,7 +1959,7 @@ final class ld {
             EmailFormatValidator.field_q.drawCentred(ClientException.field_f, 320, 116 + (var4 + var6), 1, -1);
           }
           SoftwareRasterizer.drawRectangleOutline(166, 163 + (var25.field_E + var4), 128, 128, 0);
-          var25.drawString("<u>" + sc.field_b[var14Lifetime1] + "</u>", 166, var4 + 150, 0, -1);
+          var25.drawString("<u>" + ByteArrayPoolSupport.field_b[var14Lifetime1] + "</u>", 166, var4 + 150, 0, -1);
           stackIn_60_0 = ((var11 & 1 << var14Lifetime1) == 0) ? 0 : 1;
           var15 = stackIn_60_0;
           var16 = null;

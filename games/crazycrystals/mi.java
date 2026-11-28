@@ -105,7 +105,7 @@ final class mi extends ea implements Cloneable {
           if (param0 != 23525) {
             this.e(115, 40, (PuzzleTile[][]) null, -25);
           }
-          stackIn_3_0 = PacketBuffer.a(ec.field_n, param1, new mi(new kp(-1), true), (byte) -83, ch.field_c);
+          stackIn_3_0 = PacketBuffer.a(ec.field_n, param1, new mi(new kp(-1), true), (byte) -83, GrowableIntArray.field_c);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -341,7 +341,7 @@ final class mi extends ea implements Cloneable {
               }
             }
           } else {
-            this.field_y = cp.field_d;
+            this.field_y = MusicPatchEnvelope.field_d;
           }
           if (param2) {
             this.field_C = (fq) null;

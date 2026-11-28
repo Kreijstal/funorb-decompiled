@@ -100,12 +100,12 @@ abstract class LevelGrid {
             this.tileFlags = new int[0][0];
           }
           for (var5_int = 0; var5_int < param3.length; var5_int++) {
-            pd.copyByteRange(param3[var5_int], 0, this.floorKind[var5_int], 0, param3[var5_int].length);
-            pd.a(param0[var5_int], 0, this.tileFlags[var5_int], 0, param0[var5_int].length);
+            ArrayBlockSupport.copyByteRange(param3[var5_int], 0, this.floorKind[var5_int], 0, param3[var5_int].length);
+            ArrayBlockSupport.copyIntRange(param0[var5_int], 0, this.tileFlags[var5_int], 0, param0[var5_int].length);
           }
           this.targetLayout = new int[param2.length][param2[0].length];
           for (var5_intLifetime1 = 0; var5_intLifetime1 < param2.length; var5_intLifetime1++) {
-            pd.a(param2[var5_intLifetime1], 0, this.targetLayout[var5_intLifetime1], 0, param2[0].length);
+            ArrayBlockSupport.copyIntRange(param2[var5_intLifetime1], 0, this.targetLayout[var5_intLifetime1], 0, param2[0].length);
           }
           if (this.field_g) {
             var5_intLifetime2 = 6;

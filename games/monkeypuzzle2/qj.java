@@ -8,7 +8,7 @@ final class qj extends ButtonWidget {
     static int field_D;
     static Sprite[] field_C;
     int field_B;
-    private oi field_I;
+    private GrowableIntArray field_I;
     int field_F;
 
     final static boolean a(String param0, boolean param1, String param2) {
@@ -61,7 +61,7 @@ final class qj extends ButtonWidget {
         if (!param0) {
           return -126;
         }
-        return this.field_I.b(-1);
+        return this.field_I.size(-1);
     }
 
     final int k(int param0) {
@@ -105,8 +105,8 @@ final class qj extends ButtonWidget {
             }
             var10 = 2147483647;
             var11 = -1;
-            for (var12 = 0; var12 < this.field_I.b(param3 ^ 1624); var12++) {
-              var13 = this.field_I.d(-22544, var12) - var8_int;
+            for (var12 = 0; var12 < this.field_I.size(param3 ^ 1624); var12++) {
+              var13 = this.field_I.get(-22544, var12) - var8_int;
               var13 = var13 * var13;
               if (var13 < var10) {
                 var11 = var12;
@@ -114,10 +114,10 @@ final class qj extends ButtonWidget {
               }
             }
             if (0 <= var11) {
-              this.field_I.a((byte) 107, var11);
+              this.field_I.removeAt((byte) 107, var11);
             }
           } else {
-            this.field_I.b(var8_int, -105);
+            this.field_I.append(var8_int, -105);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -145,12 +145,12 @@ final class qj extends ButtonWidget {
     final int a(boolean param0, int param1) {
         String var4;
         if (param1 >= 0 &&
-          this.field_I.b(-1) > param1) {
+          this.field_I.size(-1) > param1) {
           if (param0) {
             var4 = (String) null;
             qj.a((String) null, false, (String) null);
           }
-          return this.field_I.d(-22544, param1);
+          return this.field_I.get(-22544, param1);
         }
         return -1;
     }

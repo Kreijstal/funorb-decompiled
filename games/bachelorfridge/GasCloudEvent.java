@@ -80,14 +80,14 @@ final class GasCloudEvent extends SpecialEvent {
                 GasCloudEvent.a(-117, 32, (java.awt.Component) null, -59);
               }
               var5 = (RasterBuffer) (var4.newInstance());
-              var5.a(param1, param2, param0, 256);
+              var5.initialize(param1, param2, param0, 256);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
               var5_ref = new ImageProducerRasterBuffer();
-              ((RasterBuffer) ((Object) var5_ref)).a(param1, param2, param0, param3 ^ 29292);
+              ((RasterBuffer) ((Object) var5_ref)).initialize(param1, param2, param0, param3 ^ 29292);
               stackIn_5_0 = var5_ref;
               return (RasterBuffer) ((Object) stackIn_5_0);
             }

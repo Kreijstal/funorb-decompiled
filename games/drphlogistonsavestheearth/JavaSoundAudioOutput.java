@@ -118,7 +118,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
           this.field_x.start();
           this.field_v = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-          if (ig.countSetBits(param0, (byte) -121) != 1) {
+          if (MusicPatch.countSetBits(param0, (byte) -121) != 1) {
             this.openDevice(lg.roundUpPowerOfTwo(2, param0));
             return;
           }

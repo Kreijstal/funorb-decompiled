@@ -263,9 +263,9 @@ final class pf {
               throw new IllegalStateException();
             }
             RichTextLayout.field_o = new String[var4];
-            dm.a(sc.field_d, 0, RichTextLayout.field_o, 0, var4);
+            ArrayBlockSupport.copyObjectRange(sc.field_d, 0, RichTextLayout.field_o, 0, var4);
             oe.field_c = new String[var3_int - (var4 + 1)];
-            dm.a(sc.field_d, var4 + 1, oe.field_c, 0, -var4 + (var3_int - 1));
+            ArrayBlockSupport.copyObjectRange(sc.field_d, var4 + 1, oe.field_c, 0, -var4 + (var3_int - 1));
             var4 = -1;
             var3_int = nb.a(ModalDialog.a(GameAppletShell.field_g, new String[]{"<br><%0><br>"}, true), vh.field_l, pb.field_e, sc.field_d, 1);
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -279,9 +279,9 @@ final class pf {
               throw new IllegalStateException();
             }
             uk.field_a = new String[var4];
-            dm.a(sc.field_d, 0, uk.field_a, 0, var4);
+            ArrayBlockSupport.copyObjectRange(sc.field_d, 0, uk.field_a, 0, var4);
             SecondaryNodeDequeIterator.field_g = new String[-1 - var4 + var3_int];
-            dm.a(sc.field_d, 1 + var4, SecondaryNodeDequeIterator.field_g, 0, -1 - var4 + var3_int);
+            ArrayBlockSupport.copyObjectRange(sc.field_d, 1 + var4, SecondaryNodeDequeIterator.field_g, 0, -1 - var4 + var3_int);
             if (RichTextLayout.field_o.length >= uk.field_a.length) {
               stackIn_29_0 = RichTextLayout.field_o.length;
             } else {
@@ -370,7 +370,7 @@ final class pf {
               }
             }
           }
-          ProxyAuthenticationRequiredException.field_d = bk.field_a.field_m * (id.field_c + ge.field_h << 1);
+          ProxyAuthenticationRequiredException.field_d = bk.field_a.field_m * (GrowableIntArray.field_c + ge.field_h << 1);
           DialogMessagePane.field_K = DiskCacheWorker.field_b + (var3_intLifetime1 - (var3_intLifetime1 >> 1));
           MidiPcmStream.field_M = -(var3_intLifetime1 >> 1) + DiskCacheWorker.field_b;
           for (var4Lifetime2 = 0; var4Lifetime2 < fb.field_d.length; var4Lifetime2++) {
@@ -390,13 +390,13 @@ final class pf {
             var6Lifetime1 = m.field_c[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
               var7Lifetime2 = se.a(3, fb.field_d[var4Lifetime3], true);
-              var5Lifetime3 = var5Lifetime3 + id.field_c;
+              var5Lifetime3 = var5Lifetime3 + GrowableIntArray.field_c;
               var8Lifetime1 = DiskCacheWorker.field_b - (var7Lifetime2 >> 1);
               vh.field_j[var4Lifetime3] = new int[4];
               vh.field_j[var4Lifetime3][0] = -AccountRequestState.field_c + var8Lifetime1;
               vh.field_j[var4Lifetime3][1] = var5Lifetime3;
               vh.field_j[var4Lifetime3][2] = (AccountRequestState.field_c << 1) + var7Lifetime2;
-              var5Lifetime3 = var5Lifetime3 + ((ge.field_h << 1) + (id.field_c + hb.field_t));
+              var5Lifetime3 = var5Lifetime3 + ((ge.field_h << 1) + (GrowableIntArray.field_c + hb.field_t));
               vh.field_j[var4Lifetime3][3] = hb.field_t + (ge.field_h << 1);
             } else {
               var5Lifetime3 = var5Lifetime3 + cm.field_f;

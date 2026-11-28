@@ -28,7 +28,7 @@ final class qm extends oj {
             return stackIn_2_0;
           }
           var5 = param3.getFileIdByName(var4_int, param2, -1);
-          stackIn_4_0 = hf.a((byte) 119, param3, var4_int, var5);
+          stackIn_4_0 = ByteArrayPoolSupport.a((byte) 119, param3, var4_int, var5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

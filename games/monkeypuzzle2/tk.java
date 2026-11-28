@@ -14,7 +14,7 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
               ak.isSupportedCp1252KeyCharacter(-1, (char) var2_int)) {
               var3 = 1 + SingleChildWidgetContainer.field_w & 127;
               if (PcmResampler.field_b != var3) {
-                oi.field_e[SingleChildWidgetContainer.field_w] = -1;
+                GrowableIntArray.field_e[SingleChildWidgetContainer.field_w] = -1;
                 ProxySocketConnector.field_d[SingleChildWidgetContainer.field_w] = (char)var2_int;
                 SingleChildWidgetContainer.field_w = var3;
               }
@@ -64,7 +64,7 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
           if (0 <= var2_int) {
             var3 = SingleChildWidgetContainer.field_w + 1 & 127;
             if (PcmResampler.field_b != var3) {
-              oi.field_e[SingleChildWidgetContainer.field_w] = var2_int;
+              GrowableIntArray.field_e[SingleChildWidgetContainer.field_w] = var2_int;
               ProxySocketConnector.field_d[SingleChildWidgetContainer.field_w] = (char)0;
               SingleChildWidgetContainer.field_w = var3;
             }

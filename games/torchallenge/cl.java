@@ -133,7 +133,7 @@ final class cl extends DefaultTextWidgetRenderer {
         this.field_x = param1;
         this.field_B = param2;
         this.field_v = param0;
-        this.field_g = dl.field_H;
+        this.field_g = MusicPatchNode.field_H;
     }
 
     static {

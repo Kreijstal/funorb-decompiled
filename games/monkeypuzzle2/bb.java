@@ -27,7 +27,7 @@ final class bb {
           var2 = 32 % ((param0 + 17) / 41);
           for (var3 = 1; hb.field_l.length > var3; var3++) {
             var4 = hb.field_l[var3];
-            gl.a(dj.field_c, var3 << 4, dj.field_c, var1_int, var4);
+            ArrayBlockSupport.copyIntRange(dj.field_c, var3 << 4, dj.field_c, var1_int, var4);
             var1_int = var1_int + var4;
           }
           return;

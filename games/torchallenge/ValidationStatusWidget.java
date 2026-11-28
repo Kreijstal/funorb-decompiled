@@ -11,12 +11,12 @@ final class ValidationStatusWidget extends RichTextWidget {
     private int field_X;
     static Sprite field_ab;
 
-    final static fb a(int param0, ResourceArchive param1, boolean param2) {
+    final static MusicPatch loadMusicPatch(int param0, ResourceArchive param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
         Object stackIn_4_0 = null;
-        fb stackIn_6_0 = null;
+        MusicPatch stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -28,11 +28,11 @@ final class ValidationStatusWidget extends RichTextWidget {
           var4 = param1.getFlatFile(param0, -103);
           var3 = var4;
           if (var4 != null) {
-            stackIn_6_0 = new fb(var4);
+            stackIn_6_0 = new MusicPatch(var4);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (fb) (stackIn_4_0);
+          return (MusicPatch) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

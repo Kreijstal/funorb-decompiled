@@ -1,0 +1,145 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class GrowableIntArray {
+    static int field_g;
+    private boolean field_e;
+    static int field_j;
+    private int[] field_i;
+    static int field_k;
+    static Archive field_d;
+    private int field_h;
+    static String field_c;
+    private int field_b;
+    static String field_f;
+    static Archive field_a;
+
+    final int get(int param0, int param1) {
+        if (param0 != 0) {
+          return 37;
+        }
+        if (param1 > this.field_h) {
+          throw new ArrayIndexOutOfBoundsException(param1);
+        }
+        return this.field_i[param1];
+    }
+
+    private final void grow(int param0, byte param1) {
+        int[] var4 = null;
+        if (param1 > 59) {
+          var4 = new int[this.computeCapacity(param0, (byte) 120)];
+          int[] var3 = var4;
+          ArrayBlockSupport.copyIntRange(this.field_i, 0, var4, 0, this.field_i.length);
+          this.field_i = var4;
+          return;
+        }
+    }
+
+    private final int computeCapacity(int param0, byte param1) {
+        int var3;
+        int var4;
+        var4 = Vertigo2.field_L ? 1 : 0;
+        var3 = this.field_i.length;
+        if (param1 != 120) {
+          this.set((byte) -28, -51, -53);
+        }
+        while (var3 <= param0) {
+          if (!this.field_e) {
+            var3 = var3 + this.field_b;
+            continue;
+          }
+          if (var3 == 0) {
+            var3 = 1;
+            continue;
+          }
+          var3 = var3 * this.field_b;
+        }
+        return var3;
+    }
+
+    final int size(int param0) {
+        if (param0 < 115) {
+          field_j = 104;
+          return this.field_h + 1;
+        }
+        return this.field_h + 1;
+    }
+
+    public static void resetStaticState(int param0) {
+        field_d = null;
+        field_a = null;
+        field_f = null;
+        field_c = null;
+        if (param0 < -41) {
+          return;
+        }
+        field_j = 39;
+    }
+
+    private final void set(byte param0, int param1, int param2) {
+        int discarded$0 = 0;
+        if (this.field_h < param2) {
+          this.field_h = param2;
+          if (param2 >= this.field_i.length) {
+            this.grow(param2, (byte) 94);
+          }
+          if (param0 >= -20) {
+            discarded$0 = this.computeCapacity(110, (byte) -93);
+            this.field_i[param2] = param1;
+            return;
+          }
+          this.field_i[param2] = param1;
+          return;
+        }
+        if (param2 >= this.field_i.length) {
+          this.grow(param2, (byte) 94);
+        }
+        if (param0 < -20) {
+          this.field_i[param2] = param1;
+          return;
+        }
+        int discarded$1 = this.computeCapacity(110, (byte) -93);
+        this.field_i[param2] = param1;
+    }
+
+    final static UiPanel c(int param0) {
+        if (param0 != -1087) {
+          return (UiPanel) null;
+        }
+        return tf.b((byte) 98);
+    }
+
+    final void removeAt(int param0, int param1) {
+        if (param0 < 0) {
+          throw new ArrayIndexOutOfBoundsException(param0);
+        }
+        if (this.field_h < param0) {
+          throw new ArrayIndexOutOfBoundsException(param0);
+        }
+        if (this.field_h != param0) {
+          ArrayBlockSupport.copyIntRange(this.field_i, 1 + param0, this.field_i, param0, -param0 + this.field_h);
+        }
+        this.field_h = this.field_h - 1;
+        if (param1 != 7810) {
+          this.append((byte) 89, -75);
+          return;
+        }
+    }
+
+    final void append(byte param0, int param1) {
+        if (param0 <= 89) {
+          return;
+        }
+        this.set((byte) -87, param1, this.field_h + 1);
+    }
+
+    private GrowableIntArray() throws Throwable {
+        throw new Error();
+    }
+
+    static {
+        field_k = 15;
+        field_c = "You have declined the invitation.";
+        field_f = "Confirm Email:";
+    }
+}

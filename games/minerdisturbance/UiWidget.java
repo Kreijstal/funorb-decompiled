@@ -499,7 +499,7 @@ class UiWidget extends IntrusiveNode {
         }
         var6 = a.a(true);
         if (var6 != null) {
-          AccountRequestState.field_c.a(ng.field_l, lj.field_q, var6, (byte) 49);
+          AccountRequestState.field_c.a(MusicPatchEnvelope.field_l, lj.field_q, var6, (byte) 49);
         }
     }
 

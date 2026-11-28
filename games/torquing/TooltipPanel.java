@@ -80,18 +80,18 @@ final class TooltipPanel {
               this.field_i[fieldTemp$0] = new String[]{var11};
               if (this.field_u.length == this.field_f) {
                 var13 = new Sprite[this.field_f + 4];
-                dk.a(this.field_a, 0, var13, 0, this.field_f);
+                ArrayBlockSupport.copyObjectRange(this.field_a, 0, var13, 0, this.field_f);
                 this.field_a = var13;
                 var14 = new String[this.field_f + 4][];
-                dk.a(this.field_i, 0, var14, 0, this.field_f);
+                ArrayBlockSupport.copyObjectRange(this.field_i, 0, var14, 0, this.field_f);
                 this.field_i = var14;
                 var15 = new String[this.field_f + 4];
-                dk.a(this.field_h, 0, var15, 0, this.field_f);
+                ArrayBlockSupport.copyObjectRange(this.field_h, 0, var15, 0, this.field_f);
                 this.field_h = var15;
                 var19 = new int[this.field_f + 4];
                 var18 = var19;
                 var16 = var18;
-                dk.a(this.field_u, 0, var19, 0, this.field_f);
+                ArrayBlockSupport.copyIntRange(this.field_u, 0, var19, 0, this.field_f);
                 this.field_u = var16;
               }
               this.field_u[this.field_f] = this.field_s + var3_int;
@@ -397,18 +397,18 @@ final class TooltipPanel {
             this.field_h[fieldTemp$0] = param1;
             if (this.field_f == this.field_u.length) {
               var11 = new Sprite[4 + this.field_f];
-              dk.a(this.field_a, 0, var11, 0, this.field_f);
+              ArrayBlockSupport.copyObjectRange(this.field_a, 0, var11, 0, this.field_f);
               this.field_a = var11;
               var12 = new String[this.field_f + 4][];
-              dk.a(this.field_i, 0, var12, 0, this.field_f);
+              ArrayBlockSupport.copyObjectRange(this.field_i, 0, var12, 0, this.field_f);
               this.field_i = var12;
               var13 = new String[this.field_f + 4];
-              dk.a(this.field_h, 0, var13, 0, this.field_f);
+              ArrayBlockSupport.copyObjectRange(this.field_h, 0, var13, 0, this.field_f);
               this.field_h = var13;
               var16 = new int[this.field_f + 4];
               var15 = var16;
               var14 = var15;
-              dk.a(this.field_u, 0, var16, 0, this.field_f);
+              ArrayBlockSupport.copyIntRange(this.field_u, 0, var16, 0, this.field_f);
               this.field_u = var14;
             }
             this.field_u[this.field_f] = var5 + var4_int;

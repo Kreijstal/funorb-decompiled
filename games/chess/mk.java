@@ -505,9 +505,9 @@ final class mk {
                   }
                 }
                 if (var35 == null) {
-                  pc.field_Mb = td.field_n[var34_intLifetime2];
+                  pc.field_Mb = MidiNoteMask.field_n[var34_intLifetime2];
                 } else {
-                  pc.field_Mb = td.field_n[var34_intLifetime2] + " - " + (String) (var35);
+                  pc.field_Mb = MidiNoteMask.field_n[var34_intLifetime2] + " - " + (String) (var35);
                 }
               }
             }
@@ -565,7 +565,7 @@ final class mk {
                   TextLineMetrics.a(param0, 3, var12.g((byte) -125));
                 }
               } else {
-                ml.a(var32, var12, (byte) 94, param6);
+                GrowableIntArray.a(var32, var12, (byte) 94, param6);
               }
             }
             var12 = (ln) (var8.nextBackward((byte) -126));

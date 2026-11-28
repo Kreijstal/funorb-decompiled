@@ -250,7 +250,7 @@ final class ga {
         if (param0 != -6513) {
           field_p = (String) null;
         }
-        sh.a(param0 ^ 6512);
+        MusicPatchNode.a(param0 ^ 6512);
     }
 
     private final void a(byte param0) {

@@ -76,7 +76,7 @@ final class gd {
               var5_int = var12.length << 2;
             }
             for (var7 = 0; var5_int > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte((byte) 114) << BufferedRandomAccessFile.a(var7 << 8, 768));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte((byte) 114) << BufferedRandomAccessFile.bitwiseAnd(var7 << 8, 768));
             }
             var4_ref_bk.unlink(-19822);
             return;

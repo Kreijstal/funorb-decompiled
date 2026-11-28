@@ -85,14 +85,14 @@ final class gn {
           }
           return;
         }
-        if (hf.field_h >= this.field_c) {
+        if (ByteArrayPoolSupport.field_h >= this.field_c) {
           if (0 < this.field_c) {
             sg.field_a = 0;
           }
         } else {
-          sg.field_a = (this.field_c - hf.field_h) / 2;
+          sg.field_a = (this.field_c - ByteArrayPoolSupport.field_h) / 2;
         }
-        if (hf.field_h != this.field_i ||
+        if (ByteArrayPoolSupport.field_h != this.field_i ||
           SpriteGeometry.field_s != this.field_u) {
           this.field_h.a((byte) -123, this.field_u, this.field_i);
         }
@@ -132,7 +132,7 @@ final class gn {
     }
 
     final FullscreenFocusCanvas d(int param0) {
-        this.field_d = hf.field_h;
+        this.field_d = ByteArrayPoolSupport.field_h;
         this.field_f = SpriteGeometry.field_s;
         if (param0 != 16776960) {
           this.d(47);
@@ -387,12 +387,12 @@ final class gn {
             }
           }
         }
-        if (var2 != hf.field_h ||
+        if (var2 != ByteArrayPoolSupport.field_h ||
           SpriteGeometry.field_s != var3) {
           this.field_h.a((byte) -120, var3, var2);
         }
         if (this.field_c > 0) {
-          sg.field_a = (-hf.field_h + this.field_c) / 2;
+          sg.field_a = (-ByteArrayPoolSupport.field_h + this.field_c) / 2;
         }
     }
 

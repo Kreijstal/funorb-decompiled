@@ -155,7 +155,7 @@ final class w extends DefaultTextWidgetRenderer {
             }
             return;
           }
-          ug.a(this.field_s, 0, param1.field_s, 0, 6);
+          ArrayBlockSupport.copyObjectRange(this.field_s, 0, param1.field_s, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -228,11 +228,11 @@ final class w extends DefaultTextWidgetRenderer {
           return;
         }
         try {
-          if (ve.field_f == null) {
-            ve.field_f = new ProgressDialog(ti.field_b, sg.field_n);
-            ti.field_b.showDialog((byte) 93, (UiWidget) (ve.field_f));
+          if (GrowableIntArray.field_f == null) {
+            GrowableIntArray.field_f = new ProgressDialog(ti.field_b, sg.field_n);
+            ti.field_b.showDialog((byte) 93, (UiWidget) (GrowableIntArray.field_f));
           }
-          ve.field_f.setProgress(param0, param2, param3, true);
+          GrowableIntArray.field_f.setProgress(param0, param2, param3, true);
           SoftwareRasterizer.clearRaster();
           wa.a(true, true);
         } catch (RuntimeException runtimeException) {
@@ -318,7 +318,7 @@ final class w extends DefaultTextWidgetRenderer {
         }
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseAnd(int param0, int param1) {
         return param0 & param1;
     }
 

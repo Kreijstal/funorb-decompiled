@@ -779,11 +779,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             var6_int = (int)(-var4 + var2_long);
             TextFieldValidator.field_i = (32000 + (var6_int >> 1)) / var6_int;
           }
-          fieldTemp$1 = wj.field_o;
-          wj.field_o = wj.field_o + 1;
+          fieldTemp$1 = MusicPatch.field_o;
+          MusicPatch.field_o = MusicPatch.field_o + 1;
           if (fieldTemp$1 > 50) {
             SectorCacheStore.field_b = true;
-            wj.field_o = wj.field_o - 50;
+            MusicPatch.field_o = MusicPatch.field_o - 50;
             ug.field_y.setSize(AccountCreationResultPanel.field_sb, bk.field_d);
             ug.field_y.setVisible(true);
             boolean decompiledSharedTail0 = (null != ProxyAuthenticationRequiredException.field_d &&

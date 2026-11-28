@@ -131,7 +131,7 @@ final class s extends am {
               } else {
                 if (var6 != 1) {
                   if (var6 == 2) {
-                    this.field_v[var4_int] = (kj) ((Object) c.a(FullscreenStatusDialog.c(param1, 40), param0));
+                    this.field_v[var4_int] = (kj) ((Object) c.a(FullscreenStatusDialog.bitwiseXor(param1, 40), param0));
                   } else {
                     if (var6 == 3) {
                       this.field_v[var4_int] = (kj) ((Object) LevelRun.a(param0, (byte) 13));
@@ -196,9 +196,9 @@ final class s extends am {
             var13 = var31[2];
             for (var14 = 0; ci.field_c > var14; var14++) {
               var15 = var32[var14];
-              var13[var14] = ie.a(var15 << 4, 4080);
-              var12[var14] = ie.a(65280, var15) >> 4;
-              var11[var14] = ie.a(var15 >> 12, 4080);
+              var13[var14] = ie.bitwiseAnd(var15 << 4, 4080);
+              var12[var14] = ie.bitwiseAnd(65280, var15) >> 4;
+              var11[var14] = ie.bitwiseAnd(var15 >> 12, 4080);
             }
           }
         }

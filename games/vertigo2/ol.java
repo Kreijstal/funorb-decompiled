@@ -289,7 +289,7 @@ final class ol extends TextureOperator {
             }
           } else {
             var19Lifetime1 = var18;
-            qq.a(var19Lifetime1, 0, StripedProgressWidget.field_M, 0);
+            ArrayBlockSupport.fillInts(var19Lifetime1, 0, StripedProgressWidget.field_M, 0);
           }
         }
         return var3;

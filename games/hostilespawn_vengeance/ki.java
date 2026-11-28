@@ -39,7 +39,7 @@ final class ki {
             }
             if (param0) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, hf.field_h, SpriteGeometry.field_s);
+              var9.fillRect(0, 0, ByteArrayPoolSupport.field_h, SpriteGeometry.field_s);
             }
             if (param3 == null) {
               param3 = new java.awt.Color(140, 17, 17);
@@ -58,11 +58,11 @@ final class ki {
               var10.setFont(vh.field_d);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param2, (-(6 * param2.length()) + 304) / 2, 22);
-              var9.drawImage(he.field_y, -152 + hf.field_h / 2, SpriteGeometry.field_s / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(he.field_y, -152 + ByteArrayPoolSupport.field_h / 2, SpriteGeometry.field_s / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6_ref_Exception = (Exception) (Object) decompiledCaughtException;
-              var7 = -152 + hf.field_h / 2;
+              var7 = -152 + ByteArrayPoolSupport.field_h / 2;
               var8 = -18 + SpriteGeometry.field_s / 2;
               var9.setColor(param3);
               var9.drawRect(var7, var8, 303, 33);
@@ -78,7 +78,7 @@ final class ki {
             if (IntrusiveNodeHashTable.field_e != null) {
               var9.setFont(vh.field_d);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(IntrusiveNodeHashTable.field_e, hf.field_h / 2 - IntrusiveNodeHashTable.field_e.length() * 6 / 2, SpriteGeometry.field_s / 2 - 26);
+              var9.drawString(IntrusiveNodeHashTable.field_e, ByteArrayPoolSupport.field_h / 2 - IntrusiveNodeHashTable.field_e.length() * 6 / 2, SpriteGeometry.field_s / 2 - 26);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -367,7 +367,7 @@ final class ki {
                       var14 = (var46 & 16777472) + (-var46 + var13 & 65536);
                       incrementValue$6 = var42;
                       var42++;
-                      SoftwareRasterizer.field_i[incrementValue$6] = ll.a(var13 - var14, -(var14 >>> 8) + var14);
+                      SoftwareRasterizer.field_i[incrementValue$6] = ll.bitwiseOr(var13 - var14, -(var14 >>> 8) + var14);
                     }
                     var45++;
                   }
@@ -405,7 +405,7 @@ final class ki {
                       var14Lifetime5 = (var46Lifetime5 & 16777472) + (var13Lifetime5 - var46Lifetime5 & 65536);
                       incrementValue$7 = var42Lifetime5;
                       var42Lifetime5++;
-                      SoftwareRasterizer.field_i[incrementValue$7] = ll.a(-(var14Lifetime5 >>> 8) + var14Lifetime5, -var14Lifetime5 + var13Lifetime5);
+                      SoftwareRasterizer.field_i[incrementValue$7] = ll.bitwiseOr(-(var14Lifetime5 >>> 8) + var14Lifetime5, -var14Lifetime5 + var13Lifetime5);
                     } else {
                       var42Lifetime5++;
                     }
@@ -448,7 +448,7 @@ final class ki {
                     var14Lifetime6 = (var13Lifetime6 - var46Lifetime6 & 65536) + (var46Lifetime6 & 16777472);
                     incrementValue$8 = var42Lifetime6;
                     var42Lifetime6++;
-                    SoftwareRasterizer.field_i[incrementValue$8] = ll.a(-var14Lifetime6 + var13Lifetime6, var14Lifetime6 - (var14Lifetime6 >>> 8));
+                    SoftwareRasterizer.field_i[incrementValue$8] = ll.bitwiseOr(-var14Lifetime6 + var13Lifetime6, var14Lifetime6 - (var14Lifetime6 >>> 8));
                   } else {
                     var42Lifetime6++;
                   }
@@ -493,7 +493,7 @@ final class ki {
                       var14Lifetime1 = (var13Lifetime1 - var46Lifetime1 & 65536) + (var46Lifetime1 & 16777472);
                       incrementValue$0 = var42Lifetime1;
                       var42Lifetime1++;
-                      SoftwareRasterizer.field_i[incrementValue$0] = ll.a(-(var14Lifetime1 >>> 8) + var14Lifetime1, -var14Lifetime1 + var13Lifetime1);
+                      SoftwareRasterizer.field_i[incrementValue$0] = ll.bitwiseOr(-(var14Lifetime1 >>> 8) + var14Lifetime1, -var14Lifetime1 + var13Lifetime1);
                     }
                     var45Lifetime1++;
                   }
@@ -544,7 +544,7 @@ final class ki {
                     var14Lifetime1Lifetime1 = (65536 & -var46Lifetime1Lifetime1 + var13Lifetime1Lifetime1) + (var46Lifetime1Lifetime1 & 16777472);
                     incrementValue$2 = var42Lifetime1Lifetime1;
                     var42Lifetime1Lifetime1++;
-                    SoftwareRasterizer.field_i[incrementValue$2] = ll.a(var13Lifetime1Lifetime1 - var14Lifetime1Lifetime1, var14Lifetime1Lifetime1 - (var14Lifetime1Lifetime1 >>> 8));
+                    SoftwareRasterizer.field_i[incrementValue$2] = ll.bitwiseOr(var13Lifetime1Lifetime1 - var14Lifetime1Lifetime1, var14Lifetime1Lifetime1 - (var14Lifetime1Lifetime1 >>> 8));
                   } else {
                     var42Lifetime1Lifetime1++;
                   }
@@ -597,7 +597,7 @@ final class ki {
                   var14Lifetime1Lifetime2 = (16777472 & var46Lifetime1Lifetime2) + (65536 & -var46Lifetime1Lifetime2 + var13Lifetime1Lifetime2);
                   incrementValue$1 = var42Lifetime1Lifetime2;
                   var42Lifetime1Lifetime2++;
-                  SoftwareRasterizer.field_i[incrementValue$1] = ll.a(var14Lifetime1Lifetime2 - (var14Lifetime1Lifetime2 >>> 8), -var14Lifetime1Lifetime2 + var13Lifetime1Lifetime2);
+                  SoftwareRasterizer.field_i[incrementValue$1] = ll.bitwiseOr(var14Lifetime1Lifetime2 - (var14Lifetime1Lifetime2 >>> 8), -var14Lifetime1Lifetime2 + var13Lifetime1Lifetime2);
                 } else {
                   var42Lifetime1Lifetime2++;
                 }
@@ -639,7 +639,7 @@ final class ki {
                     var14Lifetime2Lifetime1 = (16777472 & var46Lifetime2) + (65536 & var13Lifetime2 - var46Lifetime2);
                     incrementValue$3 = var42Lifetime2;
                     var42Lifetime2++;
-                    SoftwareRasterizer.field_i[incrementValue$3] = ll.a(-var14Lifetime2Lifetime1 + var13Lifetime2, -(var14Lifetime2Lifetime1 >>> 8) + var14Lifetime2Lifetime1);
+                    SoftwareRasterizer.field_i[incrementValue$3] = ll.bitwiseOr(-var14Lifetime2Lifetime1 + var13Lifetime2, -(var14Lifetime2Lifetime1 >>> 8) + var14Lifetime2Lifetime1);
                   } else {
                     var42Lifetime2++;
                   }
@@ -693,7 +693,7 @@ final class ki {
                   var14Lifetime3Lifetime1 = (var13Lifetime3 - var46Lifetime3 & 65536) + (var46Lifetime3 & 16777472);
                   incrementValue$5 = var42Lifetime3;
                   var42Lifetime3++;
-                  SoftwareRasterizer.field_i[incrementValue$5] = ll.a(var14Lifetime3Lifetime1 - (var14Lifetime3Lifetime1 >>> 8), var13Lifetime3 - var14Lifetime3Lifetime1);
+                  SoftwareRasterizer.field_i[incrementValue$5] = ll.bitwiseOr(var14Lifetime3Lifetime1 - (var14Lifetime3Lifetime1 >>> 8), var13Lifetime3 - var14Lifetime3Lifetime1);
                 } else {
                   var42Lifetime3++;
                 }
@@ -746,7 +746,7 @@ final class ki {
                 var14Lifetime4Lifetime1 = (16777472 & var46Lifetime4) + (var13Lifetime4 - var46Lifetime4 & 65536);
                 incrementValue$4 = var42Lifetime4;
                 var42Lifetime4++;
-                SoftwareRasterizer.field_i[incrementValue$4] = ll.a(var14Lifetime4Lifetime1 - (var14Lifetime4Lifetime1 >>> 8), var13Lifetime4 - var14Lifetime4Lifetime1);
+                SoftwareRasterizer.field_i[incrementValue$4] = ll.bitwiseOr(var14Lifetime4Lifetime1 - (var14Lifetime4Lifetime1 >>> 8), var13Lifetime4 - var14Lifetime4Lifetime1);
               } else {
                 var42Lifetime4++;
               }

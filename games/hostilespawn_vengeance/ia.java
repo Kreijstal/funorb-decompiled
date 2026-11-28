@@ -32,9 +32,9 @@ final class ia {
     }
 
     final void d(int param0) {
-        kf.a(this.field_c, 0, VolumeRampingMidiPcmStream.field_ib, 0, VolumeRampingMidiPcmStream.field_ib.length);
-        kf.a(this.field_d, 0, VolumeRampingMidiPcmStream.field_U, 0, VolumeRampingMidiPcmStream.field_U.length);
-        kf.a(this.field_b, 0, VolumeRampingMidiPcmStream.field_Q, 0, VolumeRampingMidiPcmStream.field_Q.length);
+        ArrayBlockSupport.copyIntRange(this.field_c, 0, VolumeRampingMidiPcmStream.field_ib, 0, VolumeRampingMidiPcmStream.field_ib.length);
+        ArrayBlockSupport.copyIntRange(this.field_d, 0, VolumeRampingMidiPcmStream.field_U, 0, VolumeRampingMidiPcmStream.field_U.length);
+        ArrayBlockSupport.a(this.field_b, 0, VolumeRampingMidiPcmStream.field_Q, 0, VolumeRampingMidiPcmStream.field_Q.length);
         if (param0 != 64) {
           field_k = (String) null;
         }
@@ -225,12 +225,12 @@ final class ia {
     final void c(int param0) {
         this.field_a = bm.field_c;
         this.field_g = rl.field_c;
-        kf.a(VolumeRampingMidiPcmStream.field_ib, 0, this.field_c, 0, VolumeRampingMidiPcmStream.field_ib.length);
-        kf.a(VolumeRampingMidiPcmStream.field_U, 0, this.field_d, 0, VolumeRampingMidiPcmStream.field_U.length);
+        ArrayBlockSupport.copyIntRange(VolumeRampingMidiPcmStream.field_ib, 0, this.field_c, 0, VolumeRampingMidiPcmStream.field_ib.length);
+        ArrayBlockSupport.copyIntRange(VolumeRampingMidiPcmStream.field_U, 0, this.field_d, 0, VolumeRampingMidiPcmStream.field_U.length);
         if (param0 != -32238) {
           return;
         }
-        kf.a(VolumeRampingMidiPcmStream.field_Q, 0, this.field_b, 0, VolumeRampingMidiPcmStream.field_Q.length);
+        ArrayBlockSupport.a(VolumeRampingMidiPcmStream.field_Q, 0, this.field_b, 0, VolumeRampingMidiPcmStream.field_Q.length);
         this.field_f = uf.field_h;
         this.field_j = ImageProducerRasterBuffer.field_p;
     }

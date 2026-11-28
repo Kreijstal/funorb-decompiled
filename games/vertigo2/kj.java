@@ -183,7 +183,7 @@ final class kj extends TextureOperator {
         }
         var4 = this.a(stackIn_6_1, stackIn_6_2, stackIn_7_3);
         if (!this.field_y) {
-          qq.a(var4, 0, var7, 0, StripedProgressWidget.field_M);
+          ArrayBlockSupport.copyIntRange(var4, 0, var7, 0, StripedProgressWidget.field_M);
         } else {
           for (var5 = 0; StripedProgressWidget.field_M > var5; var5++) {
             var7[var5] = var4[-var5 + rm.field_z];

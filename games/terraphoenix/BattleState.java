@@ -375,48 +375,48 @@ final class BattleState {
         try {
           boolean decompiledFrameRemainder0 = true;
           if (this.client.field_db) {
-            qd.$cfr$intArgs$a$e9dea5688aa5(69, 11);
+            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(69, 11);
             decompiledFrameRemainder0 = (var3 != 0);
           }
           if (decompiledFrameRemainder0) {
             if (1 == this.client.field_Bb) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(26, 13);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(26, 13);
             }
             if (this.client.field_Bb == 2) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(113, 11);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(113, 11);
             }
             if (this.client.field_Bb == 3) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(104, 11);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(104, 11);
             }
             if (4 == this.client.field_Bb) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(122, 11);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(122, 11);
             }
             if (this.client.field_Bb == 5) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(76, 5);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(76, 5);
             }
             if (this.client.field_Bb == 6) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(58, 11);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(58, 11);
             }
             if (7 == this.client.field_Bb) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(32, 5);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(32, 5);
             }
             if (this.client.field_Bb == 8) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(44, 11);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(44, 11);
             }
             if (this.client.field_Bb == 9) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(24, 5);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(24, 5);
             }
             if (this.client.field_Bb == 10) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(52, 11);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(52, 11);
             }
             if (this.client.field_Bb == 11) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(53, 4);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(53, 4);
             }
             if (this.client.field_Bb == 12) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(29, 11);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(29, 11);
             }
             if (13 == this.client.field_Bb) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(70, 11);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(70, 11);
             }
           }
           if (param0 > -74) {
@@ -727,7 +727,7 @@ final class BattleState {
               if (2 == this.field_N && (!ConfirmedEmailAvailabilityValidator.field_o ||
                 5 <= this.field_B)) {
                 this.b((byte) -3);
-                qd.$cfr$intArgs$a$e9dea5688aa5(39, 34);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(39, 34);
                 if (this.field_B == 5) {
                   this.field_B = 6;
                 }
@@ -769,7 +769,7 @@ final class BattleState {
                 if ((decompiledFrameRemainder1) &&
                   (decompiledFrameRemainder1 = (this.field_L == 0))) {
                   regionExit2: {
-                    qd.$cfr$intArgs$a$e9dea5688aa5(45, 22);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(45, 22);
                     ok.field_i = true;
                     var5Lifetime1 = this.map.a(117, vf.field_a, cm.field_d, IntrusiveNode.field_c);
                     this.field_m = false;
@@ -879,10 +879,10 @@ final class BattleState {
                               var6_ref_int__ = new int[]{2, 10, 11};
                               var7_ref_int__ = new int[]{15, 20, 21};
                               if (this.field_q.field_Z.field_y) {
-                                qd.$cfr$intArgs$a$e9dea5688aa5(54, var6_ref_int__[(int)(Math.random() * (double)var6_ref_int__.length)]);
+                                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(54, var6_ref_int__[(int)(Math.random() * (double)var6_ref_int__.length)]);
                               }
                               if (!this.field_q.field_Z.field_y) {
-                                qd.$cfr$intArgs$a$e9dea5688aa5(125, var7_ref_int__[(int)(Math.random() * (double)var7_ref_int__.length)]);
+                                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(125, var7_ref_int__[(int)(Math.random() * (double)var7_ref_int__.length)]);
                               }
                             }
                             this.b((byte) -3);
@@ -1022,7 +1022,7 @@ final class BattleState {
                 param0.field_Eb = new String[1];
                 param0.field_Eb[0] = Archive.field_e;
                 if (this.field_N == 1) {
-                  qd.$cfr$intArgs$a$e9dea5688aa5(16, 33);
+                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(16, 33);
                   var5_intLifetime2 = this.field_q.g(12384);
                   this.field_q.field_B = 1;
                   this.field_q.field_jb = this.field_q.field_jb - var5_intLifetime2;
@@ -1047,7 +1047,7 @@ final class BattleState {
                 }
                 decompiledFrameRemainder2 = (this.field_N == 1);
                 if (decompiledFrameRemainder2) {
-                  qd.$cfr$intArgs$a$e9dea5688aa5(47, 33);
+                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(47, 33);
                   this.field_q.field_B = 0;
                   stackIn_538_0 = this.field_q;
                   stackIn_538_1 = this.field_q;
@@ -1073,7 +1073,7 @@ final class BattleState {
                 } else {
                   stackIn_558_1 = 33;
                 }
-                qd.$cfr$intArgs$a$e9dea5688aa5(stackIn_557_0, stackIn_558_1);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(stackIn_557_0, stackIn_558_1);
                 stackIn_562_0 = !(ModalDialogHost.field_H);
                 ModalDialogHost.field_H = stackIn_562_0;
               }
@@ -1093,7 +1093,7 @@ final class BattleState {
                 param0.field_Eb[0] = PasswordValidator.field_u;
               }
               if (this.field_N == 1) {
-                qd.$cfr$intArgs$a$e9dea5688aa5(80, 25);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(80, 25);
                 if (this.field_B == 12) {
                   this.field_B = 13;
                 }
@@ -1109,7 +1109,7 @@ final class BattleState {
               param0.field_Eb = new String[1];
               param0.field_Eb[0] = TextFieldValidator.field_g + (eg.field_p + 1);
               if (this.field_N == 1) {
-                qd.$cfr$intArgs$a$e9dea5688aa5(107, 24);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(107, 24);
                 if (this.field_B == 12) {
                   this.field_B = 13;
                 }
@@ -1124,7 +1124,7 @@ final class BattleState {
               param0.field_Eb = new String[1];
               param0.field_Eb[0] = QuickChatMenu.field_f;
               if (this.field_N == 1) {
-                qd.$cfr$intArgs$a$e9dea5688aa5(109, 24);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(109, 24);
                 var5_intLifetime1 = 0;
                 var6Lifetime1 = 0;
                 while (true) {
@@ -1211,7 +1211,7 @@ final class BattleState {
               param0.field_Eb = new String[1];
               param0.field_Eb[0] = ab.field_f;
               if (this.field_N == 1) {
-                qd.$cfr$intArgs$a$e9dea5688aa5(18, 33);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(18, 33);
                 lg.field_c = -(48 * this.field_q.field_E) + (this.field_q.field_F + this.field_q.field_H) * 16;
                 eg.field_p = this.field_q.field_E;
                 sj.field_b = 32 * (this.field_q.field_F - this.field_q.field_H);
@@ -1251,7 +1251,7 @@ final class BattleState {
                     var6Lifetime2 = 14;
                     if (var6Lifetime2 <= this.field_q.field_jb) {
                       var5_ref.a(0);
-                      qd.$cfr$intArgs$a$e9dea5688aa5(120, od.field_c[var5_ref.field_g].field_n);
+                      MusicPatch.$cfr$intArgs$a$e9dea5688aa5(120, od.field_c[var5_ref.field_g].field_n);
                       this.field_q.field_jb = this.field_q.field_jb - var6Lifetime2;
                       this.field_q.b(var6Lifetime2, (byte) -116);
                       this.field_q.field_ab = 0;
@@ -1300,7 +1300,7 @@ final class BattleState {
                   } else {
                     stackIn_827_1 = 33;
                   }
-                  qd.$cfr$intArgs$a$e9dea5688aa5(stackIn_826_0, stackIn_827_1);
+                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(stackIn_826_0, stackIn_827_1);
                 }
               }
             }
@@ -1375,7 +1375,7 @@ final class BattleState {
                     } else {
                       stackIn_928_1 = 33;
                     }
-                    qd.$cfr$intArgs$a$e9dea5688aa5(stackIn_927_0, stackIn_928_1);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(stackIn_927_0, stackIn_928_1);
                     if (var9 != 0) {
                       param0.field_Eb = new String[1];
                       param0.field_Eb[0] = ArchiveRequest.field_q + od.field_c[var5_refLifetime1.field_g].field_j + FullscreenStatusDialog.field_Y;
@@ -1383,7 +1383,7 @@ final class BattleState {
                         var6Lifetime3 = 14;
                         if (this.field_q.field_jb >= var6Lifetime3) {
                           var5_refLifetime1.a(0);
-                          qd.$cfr$intArgs$a$e9dea5688aa5(25, od.field_c[var5_refLifetime1.field_g].field_n);
+                          MusicPatch.$cfr$intArgs$a$e9dea5688aa5(25, od.field_c[var5_refLifetime1.field_g].field_n);
                           this.field_q.field_jb = this.field_q.field_jb - var6Lifetime3;
                           this.field_q.b(var6Lifetime3, (byte) -117);
                           this.field_q.field_ab = 0;
@@ -1398,7 +1398,7 @@ final class BattleState {
                     var6Lifetime3 = 14;
                     if (this.field_q.field_jb >= var6Lifetime3) {
                       var5_refLifetime1.a(0);
-                      qd.$cfr$intArgs$a$e9dea5688aa5(25, od.field_c[var5_refLifetime1.field_g].field_n);
+                      MusicPatch.$cfr$intArgs$a$e9dea5688aa5(25, od.field_c[var5_refLifetime1.field_g].field_n);
                       this.field_q.field_jb = this.field_q.field_jb - var6Lifetime3;
                       this.field_q.b(var6Lifetime3, (byte) -117);
                       this.field_q.field_ab = 0;
@@ -1420,18 +1420,18 @@ final class BattleState {
               if (1 == this.field_N) {
                 if (0 != this.field_L &&
                   this.field_m) {
-                  qd.$cfr$intArgs$a$e9dea5688aa5(108, 34);
+                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(108, 34);
                   this.field_m = false;
                   this.field_L = 0;
                   if (var9 != 0) {
                     this.field_L = 1;
                     this.field_m = true;
-                    qd.$cfr$intArgs$a$e9dea5688aa5(102, 33);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(102, 33);
                   }
                 } else {
                   this.field_L = 1;
                   this.field_m = true;
-                  qd.$cfr$intArgs$a$e9dea5688aa5(102, 33);
+                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(102, 33);
                 }
               }
             }
@@ -1447,7 +1447,7 @@ final class BattleState {
                   this.field_B = 11;
                 }
                 this.a(param0, (byte) 69);
-                qd.$cfr$intArgs$a$e9dea5688aa5(59, 32);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(59, 32);
               }
             }
           }
@@ -1557,7 +1557,7 @@ final class BattleState {
             if (od.field_c[var4_ref_oh.field_g].field_o > var4_ref_oh.field_c &&
               this.field_q.field_jb >= var3_intLifetime1) {
               var4_ref_oh.a(0);
-              qd.$cfr$intArgs$a$e9dea5688aa5(73, od.field_c[var4_ref_oh.field_g].field_n);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(73, od.field_c[var4_ref_oh.field_g].field_n);
               this.field_q.field_jb = this.field_q.field_jb - var3_intLifetime1;
               this.field_q.b(var3_intLifetime1, (byte) -111);
               this.field_q.field_ab = 0;
@@ -3155,7 +3155,7 @@ final class BattleState {
           ProxyAuthenticationRequiredException.field_g = 20;
           TextHotspotBounds.field_m.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
-          k.field_f.a(0);
+          k.field_f.setAsRasterTarget(0);
           var4 = -88 % ((-66 - param0) / 59);
           var3_int = 0;
           var5 = 0;
@@ -5524,14 +5524,14 @@ final class BattleState {
               this.field_z = this.field_z - 1;
               if (this.field_z > 0) {
                 if (!(this.field_z > 3)) {
-                  qd.$cfr$intArgs$a$e9dea5688aa5(91, 89);
+                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(91, 89);
                   if (var7 != 0) {
-                    qd.$cfr$intArgs$a$e9dea5688aa5(57, 90);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(57, 90);
                     this.a(0, param0);
                   }
                 }
               } else {
-                qd.$cfr$intArgs$a$e9dea5688aa5(57, 90);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(57, 90);
                 this.a(0, param0);
               }
             }
@@ -6450,7 +6450,7 @@ final class BattleState {
                 }
                 case 100: {
                     try {
-                        qd.$cfr$intArgs$a$e9dea5688aa5(114, od.field_c[this.units[var4_int].field_nb.field_g].field_n);
+                        MusicPatch.$cfr$intArgs$a$e9dea5688aa5(114, od.field_c[this.units[var4_int].field_nb.field_g].field_n);
                         if (var12 == 0) {
                             statePc = 105;
                             continue scanLoop1;
@@ -6472,7 +6472,7 @@ final class BattleState {
                 }
                 case 103: {
                     try {
-                        qd.$cfr$intArgs$a$e9dea5688aa5(127, od.field_c[this.units[var4_int].field_eb.field_g].field_n);
+                        MusicPatch.$cfr$intArgs$a$e9dea5688aa5(127, od.field_c[this.units[var4_int].field_eb.field_g].field_n);
                         statePc = 105;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_103) {
@@ -9271,10 +9271,10 @@ final class BattleState {
                         } else {
                             /* Inlined CFG state: 520. */
                             {
-                                if (fc.field_h != var4.field_b) {
+                                if (GrowableIntArray.field_h != var4.field_b) {
                                     /* Inlined CFG state: 525. */
                                     {
-                                        var4.field_b = fc.field_h;
+                                        var4.field_b = GrowableIntArray.field_h;
                                         var4.field_d = 0;
                                         statePc = 526;
                                         continue scanLoop1;
@@ -10038,7 +10038,7 @@ final class BattleState {
                 case 644: {
                     try {
                         this.units[var5].field_ib = true;
-                        qd.$cfr$intArgs$a$e9dea5688aa5(26, 3);
+                        MusicPatch.$cfr$intArgs$a$e9dea5688aa5(26, 3);
                         if (var12 == 0) {
                             statePc = 668;
                         } else {
@@ -10150,7 +10150,7 @@ final class BattleState {
                 case 659: {
                     try {
                         this.units[var5].field_ib = true;
-                        qd.$cfr$intArgs$a$e9dea5688aa5(126, 3);
+                        MusicPatch.$cfr$intArgs$a$e9dea5688aa5(126, 3);
                         if (var12 == 0) {
                             statePc = 668;
                         } else {
@@ -10374,7 +10374,7 @@ final class BattleState {
                 }
                 case 696: {
                     try {
-                        qd.$cfr$intArgs$a$e9dea5688aa5(125, 87);
+                        MusicPatch.$cfr$intArgs$a$e9dea5688aa5(125, 87);
                         if (var12 == 0) {
                             statePc = 701;
                             continue scanLoop1;
@@ -10396,7 +10396,7 @@ final class BattleState {
                 }
                 case 699: {
                     try {
-                        qd.$cfr$intArgs$a$e9dea5688aa5(84, 86);
+                        MusicPatch.$cfr$intArgs$a$e9dea5688aa5(84, 86);
                         statePc = 701;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_699) {
@@ -10455,7 +10455,7 @@ final class BattleState {
                         {
                         }
                         {
-                            qd.$cfr$intArgs$a$e9dea5688aa5(70, 87);
+                            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(70, 87);
                             if (var12 == 0) {
                                 statePc = 713;
                                 continue scanLoop1;
@@ -10478,7 +10478,7 @@ final class BattleState {
                 }
                 case 711: {
                     try {
-                        qd.$cfr$intArgs$a$e9dea5688aa5(54, 86);
+                        MusicPatch.$cfr$intArgs$a$e9dea5688aa5(54, 86);
                         statePc = 713;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_711) {
@@ -10536,7 +10536,7 @@ final class BattleState {
                 }
                 case 720: {
                     try {
-                        qd.$cfr$intArgs$a$e9dea5688aa5(101, 86);
+                        MusicPatch.$cfr$intArgs$a$e9dea5688aa5(101, 86);
                         if (var12 == 0) {
                             statePc = 725;
                             continue scanLoop1;
@@ -10558,7 +10558,7 @@ final class BattleState {
                 }
                 case 723: {
                     try {
-                        qd.$cfr$intArgs$a$e9dea5688aa5(82, 87);
+                        MusicPatch.$cfr$intArgs$a$e9dea5688aa5(82, 87);
                         statePc = 725;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_723) {
@@ -10616,7 +10616,7 @@ final class BattleState {
                 }
                 case 732: {
                     try {
-                        qd.$cfr$intArgs$a$e9dea5688aa5(36, 87);
+                        MusicPatch.$cfr$intArgs$a$e9dea5688aa5(36, 87);
                         if (var12 == 0) {
                             statePc = 737;
                             continue scanLoop1;
@@ -10638,7 +10638,7 @@ final class BattleState {
                 }
                 case 735: {
                     try {
-                        qd.$cfr$intArgs$a$e9dea5688aa5(116, 86);
+                        MusicPatch.$cfr$intArgs$a$e9dea5688aa5(116, 86);
                         statePc = 737;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_735) {

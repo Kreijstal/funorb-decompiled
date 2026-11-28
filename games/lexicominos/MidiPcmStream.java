@@ -17,10 +17,10 @@ final class MidiPcmStream extends PcmStream {
     private int[] field_x;
     static boolean field_F;
     private na field_A;
-    private cb[][] field_R;
+    private MusicPatchNode[][] field_R;
     private int field_K;
     private int[] field_r;
-    private cb[][] field_L;
+    private MusicPatchNode[][] field_L;
     static int field_B;
     private int[] field_S;
     private int[] field_G;
@@ -41,7 +41,7 @@ final class MidiPcmStream extends PcmStream {
 
     private final void a(int param0, byte param1, int param2) {
         this.field_G[param2] = param0;
-        this.field_t[param2] = vg.a(param0, -128);
+        this.field_t[param2] = vg.bitwiseAnd(param0, -128);
         if (param1 <= 30) {
           return;
         }
@@ -56,7 +56,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_O[param2] = (int)(Math.pow(2.0, 0.00054931640625 * (double)param1) * 2097152.0 + 0.5);
     }
 
-    final boolean isVoiceInactive(cb param0, int param1) {
+    final boolean isVoiceInactive(MusicPatchNode param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -136,13 +136,13 @@ final class MidiPcmStream extends PcmStream {
     }
 
     private final void e(int param0, int param1) {
-        cb var3;
+        MusicPatchNode var3;
         int var4;
         var4 = Lexicominos.field_L ? 1 : 0;
         if (param0 <= 39) {
           this.field_I = false;
         }
-        var3 = (cb) (this.field_y.field_n.beginForward(true));
+        var3 = (MusicPatchNode) (this.field_y.field_n.beginForward(true));
         while (var3 != null) {
           if (var4 == 0) {
             if (param1 < 0 ||
@@ -152,14 +152,14 @@ final class MidiPcmStream extends PcmStream {
                 if (var3.field_C.hasRemainingRampFrames()) {
                   this.field_y.field_m.addChildStream(var3.field_C);
                 }
-                var3.c(0);
+                var3.releaseReferences(0);
               }
               if (var3.field_h < 0) {
                 this.field_R[var3.field_z][var3.field_q] = null;
               }
               var3.unlink((byte) -116);
             }
-            var3 = (cb) (this.field_y.field_n.nextForward(2));
+            var3 = (MusicPatchNode) (this.field_y.field_n.nextForward(2));
             continue;
           }
           break;
@@ -179,9 +179,9 @@ final class MidiPcmStream extends PcmStream {
         int var6_int = 0;
         RuntimeException var6 = null;
         Object var7 = null;
-        cj var8 = null;
+        MidiNoteMask var8 = null;
         int var9 = 0;
-        wj var10 = null;
+        MusicPatch var10 = null;
         int var11 = 0;
         var11 = Lexicominos.field_L ? 1 : 0;
         try {
@@ -194,15 +194,15 @@ final class MidiPcmStream extends PcmStream {
           if (0 < param0) {
             var7 = new int[]{param0};
           }
-          var8 = (cj) (param1.field_i.c((byte) -111));
+          var8 = (MidiNoteMask) (param1.field_i.c((byte) -111));
           scanLoop1: while (true) {
             if (var8 != null) {
               var9 = (int)var8.key;
-              var10 = (wj) (this.field_A.a((long)var9, (byte) 120));
+              var10 = (MusicPatch) (this.field_A.a((long)var9, (byte) 120));
               if (var11 == 0) {
                 boolean decompiledFrameRemainder0 = true;
                 if (var10 == null) {
-                  var10 = ug.a(param4, var9, true);
+                  var10 = ug.loadMusicPatch(param4, var9, true);
                   if (var10 == null) {
                     var6_int = 0;
                     decompiledFrameRemainder0 = false;
@@ -212,10 +212,10 @@ final class MidiPcmStream extends PcmStream {
                   }
                 }
                 if ((decompiledFrameRemainder0) &&
-                  (!var10.a(var8.field_h, param3, (byte) 116, (int[]) (var7)))) {
+                  (!var10.prepareSamples(var8.field_h, param3, (byte) 116, (int[]) (var7)))) {
                   var6_int = 0;
                 }
-                var8 = (cj) (param1.field_i.a((byte) -91));
+                var8 = (MidiNoteMask) (param1.field_i.a((byte) -91));
                 continue;
               }
             } else {
@@ -254,7 +254,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final void a(byte param0, cb param1, boolean param2) {
+    final void a(byte param0, MusicPatchNode param1, boolean param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5 = 0;
@@ -401,74 +401,74 @@ final class MidiPcmStream extends PcmStream {
           var5Lifetime1Lifetime3 = param1 >> 8 & 127;
           var6Lifetime1Lifetime2 = (8388315 & param1) >> 16;
           if (0 == var5Lifetime1Lifetime3) {
-            this.field_t[var4Lifetime1Lifetime3] = (var6Lifetime1Lifetime2 << 14) + vg.a(this.field_t[var4Lifetime1Lifetime3], -2080769);
+            this.field_t[var4Lifetime1Lifetime3] = (var6Lifetime1Lifetime2 << 14) + vg.bitwiseAnd(this.field_t[var4Lifetime1Lifetime3], -2080769);
           }
           if (32 == var5Lifetime1Lifetime3) {
-            this.field_t[var4Lifetime1Lifetime3] = vg.a(-16257, this.field_t[var4Lifetime1Lifetime3]) + (var6Lifetime1Lifetime2 << 7);
+            this.field_t[var4Lifetime1Lifetime3] = vg.bitwiseAnd(-16257, this.field_t[var4Lifetime1Lifetime3]) + (var6Lifetime1Lifetime2 << 7);
           }
           if (var5Lifetime1Lifetime3 == 1) {
-            this.field_x[var4Lifetime1Lifetime3] = vg.a(-16257, this.field_x[var4Lifetime1Lifetime3]) + (var6Lifetime1Lifetime2 << 7);
+            this.field_x[var4Lifetime1Lifetime3] = vg.bitwiseAnd(-16257, this.field_x[var4Lifetime1Lifetime3]) + (var6Lifetime1Lifetime2 << 7);
           }
           if (var5Lifetime1Lifetime3 == 33) {
-            this.field_x[var4Lifetime1Lifetime3] = var6Lifetime1Lifetime2 + vg.a(-128, this.field_x[var4Lifetime1Lifetime3]);
+            this.field_x[var4Lifetime1Lifetime3] = var6Lifetime1Lifetime2 + vg.bitwiseAnd(-128, this.field_x[var4Lifetime1Lifetime3]);
           }
           if (5 == var5Lifetime1Lifetime3) {
-            this.field_S[var4Lifetime1Lifetime3] = vg.a(this.field_S[var4Lifetime1Lifetime3], -16257) + (var6Lifetime1Lifetime2 << 7);
+            this.field_S[var4Lifetime1Lifetime3] = vg.bitwiseAnd(this.field_S[var4Lifetime1Lifetime3], -16257) + (var6Lifetime1Lifetime2 << 7);
           }
           if (var5Lifetime1Lifetime3 == 37) {
-            this.field_S[var4Lifetime1Lifetime3] = vg.a(this.field_S[var4Lifetime1Lifetime3], -128) + var6Lifetime1Lifetime2;
+            this.field_S[var4Lifetime1Lifetime3] = vg.bitwiseAnd(this.field_S[var4Lifetime1Lifetime3], -128) + var6Lifetime1Lifetime2;
           }
           if (7 == var5Lifetime1Lifetime3) {
-            this.field_J[var4Lifetime1Lifetime3] = vg.a(-16257, this.field_J[var4Lifetime1Lifetime3]) + (var6Lifetime1Lifetime2 << 7);
+            this.field_J[var4Lifetime1Lifetime3] = vg.bitwiseAnd(-16257, this.field_J[var4Lifetime1Lifetime3]) + (var6Lifetime1Lifetime2 << 7);
           }
           if (39 == var5Lifetime1Lifetime3) {
-            this.field_J[var4Lifetime1Lifetime3] = vg.a(this.field_J[var4Lifetime1Lifetime3], -128) + var6Lifetime1Lifetime2;
+            this.field_J[var4Lifetime1Lifetime3] = vg.bitwiseAnd(this.field_J[var4Lifetime1Lifetime3], -128) + var6Lifetime1Lifetime2;
           }
           if (var5Lifetime1Lifetime3 == 10) {
-            this.field_C[var4Lifetime1Lifetime3] = vg.a(this.field_C[var4Lifetime1Lifetime3], -16257) + (var6Lifetime1Lifetime2 << 7);
+            this.field_C[var4Lifetime1Lifetime3] = vg.bitwiseAnd(this.field_C[var4Lifetime1Lifetime3], -16257) + (var6Lifetime1Lifetime2 << 7);
           }
           if (var5Lifetime1Lifetime3 == 42) {
-            this.field_C[var4Lifetime1Lifetime3] = var6Lifetime1Lifetime2 + vg.a(-128, this.field_C[var4Lifetime1Lifetime3]);
+            this.field_C[var4Lifetime1Lifetime3] = var6Lifetime1Lifetime2 + vg.bitwiseAnd(-128, this.field_C[var4Lifetime1Lifetime3]);
           }
           if (11 == var5Lifetime1Lifetime3) {
-            this.field_l[var4Lifetime1Lifetime3] = (var6Lifetime1Lifetime2 << 7) + vg.a(-16257, this.field_l[var4Lifetime1Lifetime3]);
+            this.field_l[var4Lifetime1Lifetime3] = (var6Lifetime1Lifetime2 << 7) + vg.bitwiseAnd(-16257, this.field_l[var4Lifetime1Lifetime3]);
           }
           if (43 == var5Lifetime1Lifetime3) {
-            this.field_l[var4Lifetime1Lifetime3] = vg.a(-128, this.field_l[var4Lifetime1Lifetime3]) + var6Lifetime1Lifetime2;
+            this.field_l[var4Lifetime1Lifetime3] = vg.bitwiseAnd(-128, this.field_l[var4Lifetime1Lifetime3]) + var6Lifetime1Lifetime2;
           }
           switch (var5Lifetime1Lifetime3) {
             case 64:
               if (var6Lifetime1Lifetime2 >= 64) {
-                this.field_q[var4Lifetime1Lifetime3] = FrameTimer.a(this.field_q[var4Lifetime1Lifetime3], 1);
+                this.field_q[var4Lifetime1Lifetime3] = FrameTimer.bitwiseOr(this.field_q[var4Lifetime1Lifetime3], 1);
                 if (var8 != 0) {
-                  this.field_q[var4Lifetime1Lifetime3] = vg.a(this.field_q[var4Lifetime1Lifetime3], -2);
+                  this.field_q[var4Lifetime1Lifetime3] = vg.bitwiseAnd(this.field_q[var4Lifetime1Lifetime3], -2);
                 }
               } else {
-                this.field_q[var4Lifetime1Lifetime3] = vg.a(this.field_q[var4Lifetime1Lifetime3], -2);
+                this.field_q[var4Lifetime1Lifetime3] = vg.bitwiseAnd(this.field_q[var4Lifetime1Lifetime3], -2);
               }
               break;
             case 65:
               if (64 > var6Lifetime1Lifetime2) {
                 this.a(var4Lifetime1Lifetime3, 16384);
-                this.field_q[var4Lifetime1Lifetime3] = vg.a(this.field_q[var4Lifetime1Lifetime3], -3);
+                this.field_q[var4Lifetime1Lifetime3] = vg.bitwiseAnd(this.field_q[var4Lifetime1Lifetime3], -3);
                 if (var8 != 0) {
-                  this.field_q[var4Lifetime1Lifetime3] = FrameTimer.a(this.field_q[var4Lifetime1Lifetime3], 2);
+                  this.field_q[var4Lifetime1Lifetime3] = FrameTimer.bitwiseOr(this.field_q[var4Lifetime1Lifetime3], 2);
                 }
               } else {
-                this.field_q[var4Lifetime1Lifetime3] = FrameTimer.a(this.field_q[var4Lifetime1Lifetime3], 2);
+                this.field_q[var4Lifetime1Lifetime3] = FrameTimer.bitwiseOr(this.field_q[var4Lifetime1Lifetime3], 2);
               }
               break;
             case 99:
-              this.field_v[var4Lifetime1Lifetime3] = (var6Lifetime1Lifetime2 << 7) + vg.a(127, this.field_v[var4Lifetime1Lifetime3]);
+              this.field_v[var4Lifetime1Lifetime3] = (var6Lifetime1Lifetime2 << 7) + vg.bitwiseAnd(127, this.field_v[var4Lifetime1Lifetime3]);
               break;
             case 98:
-              this.field_v[var4Lifetime1Lifetime3] = var6Lifetime1Lifetime2 + vg.a(16256, this.field_v[var4Lifetime1Lifetime3]);
+              this.field_v[var4Lifetime1Lifetime3] = var6Lifetime1Lifetime2 + vg.bitwiseAnd(16256, this.field_v[var4Lifetime1Lifetime3]);
               break;
             case 101:
-              this.field_v[var4Lifetime1Lifetime3] = (var6Lifetime1Lifetime2 << 7) + vg.a(this.field_v[var4Lifetime1Lifetime3], 127) + 16384;
+              this.field_v[var4Lifetime1Lifetime3] = (var6Lifetime1Lifetime2 << 7) + vg.bitwiseAnd(this.field_v[var4Lifetime1Lifetime3], 127) + 16384;
               break;
             case 100:
-              this.field_v[var4Lifetime1Lifetime3] = vg.a(16256, this.field_v[var4Lifetime1Lifetime3]) + 16384 + var6Lifetime1Lifetime2;
+              this.field_v[var4Lifetime1Lifetime3] = vg.bitwiseAnd(16256, this.field_v[var4Lifetime1Lifetime3]) + 16384 + var6Lifetime1Lifetime2;
               break;
             case 120:
               this.e(99, var4Lifetime1Lifetime3);
@@ -482,31 +482,31 @@ final class MidiPcmStream extends PcmStream {
             case 6:
               var7 = this.field_v[var4Lifetime1Lifetime3];
               if (var7 == 16384) {
-                this.field_r[var4Lifetime1Lifetime3] = vg.a(this.field_r[var4Lifetime1Lifetime3], -16257) + (var6Lifetime1Lifetime2 << 7);
+                this.field_r[var4Lifetime1Lifetime3] = vg.bitwiseAnd(this.field_r[var4Lifetime1Lifetime3], -16257) + (var6Lifetime1Lifetime2 << 7);
               }
               break;
             case 38:
               var7Lifetime1 = this.field_v[var4Lifetime1Lifetime3];
               if (16384 == var7Lifetime1) {
-                this.field_r[var4Lifetime1Lifetime3] = var6Lifetime1Lifetime2 + vg.a(this.field_r[var4Lifetime1Lifetime3], -128);
+                this.field_r[var4Lifetime1Lifetime3] = var6Lifetime1Lifetime2 + vg.bitwiseAnd(this.field_r[var4Lifetime1Lifetime3], -128);
               }
               break;
             case 16:
-              this.field_u[var4Lifetime1Lifetime3] = vg.a(-16257, this.field_u[var4Lifetime1Lifetime3]) + (var6Lifetime1Lifetime2 << 7);
+              this.field_u[var4Lifetime1Lifetime3] = vg.bitwiseAnd(-16257, this.field_u[var4Lifetime1Lifetime3]) + (var6Lifetime1Lifetime2 << 7);
               break;
             case 48:
-              this.field_u[var4Lifetime1Lifetime3] = var6Lifetime1Lifetime2 + vg.a(this.field_u[var4Lifetime1Lifetime3], -128);
+              this.field_u[var4Lifetime1Lifetime3] = var6Lifetime1Lifetime2 + vg.bitwiseAnd(this.field_u[var4Lifetime1Lifetime3], -128);
               break;
             case 81:
               if (var6Lifetime1Lifetime2 >= 64) {
-                this.field_q[var4Lifetime1Lifetime3] = FrameTimer.a(this.field_q[var4Lifetime1Lifetime3], 4);
+                this.field_q[var4Lifetime1Lifetime3] = FrameTimer.bitwiseOr(this.field_q[var4Lifetime1Lifetime3], 4);
                 if (var8 != 0) {
                   this.c(-785046068, var4Lifetime1Lifetime3);
-                  this.field_q[var4Lifetime1Lifetime3] = vg.a(this.field_q[var4Lifetime1Lifetime3], -5);
+                  this.field_q[var4Lifetime1Lifetime3] = vg.bitwiseAnd(this.field_q[var4Lifetime1Lifetime3], -5);
                 }
               } else {
                 this.c(-785046068, var4Lifetime1Lifetime3);
-                this.field_q[var4Lifetime1Lifetime3] = vg.a(this.field_q[var4Lifetime1Lifetime3], -5);
+                this.field_q[var4Lifetime1Lifetime3] = vg.bitwiseAnd(this.field_q[var4Lifetime1Lifetime3], -5);
               }
               break;
             case 17:
@@ -539,9 +539,9 @@ final class MidiPcmStream extends PcmStream {
     }
 
     private final void noteOff(int param0, int param1, int param2, int param3) {
-        cb var6 = null;
+        MusicPatchNode var6 = null;
         int var7 = 0;
-        cb var8 = null;
+        MusicPatchNode var8 = null;
         var7 = Lexicominos.field_L ? 1 : 0;
         if (param3 != 0) {
           this.field_q = (int[]) null;
@@ -557,7 +557,7 @@ final class MidiPcmStream extends PcmStream {
           decompiledFrameRemainder0 = (var7 != 0);
         }
         if (decompiledFrameRemainder0) {
-          var6 = (cb) (this.field_y.field_n.beginForward(true));
+          var6 = (MusicPatchNode) (this.field_y.field_n.beginForward(true));
           while (var6 != null) {
             if (var7 != 0) {
               break;
@@ -567,7 +567,7 @@ final class MidiPcmStream extends PcmStream {
               var6 != var8) {
               var8.field_h = 0;
             } else {
-              var6 = (cb) (this.field_y.field_n.nextForward(param3 ^ 2));
+              var6 = (MusicPatchNode) (this.field_y.field_n.nextForward(param3 ^ 2));
               continue;
             }
             break;
@@ -576,7 +576,7 @@ final class MidiPcmStream extends PcmStream {
 
     }
 
-    private final int computeNotePan(cb param0, int param1) {
+    private final int computeNotePan(MusicPatchNode param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -973,7 +973,7 @@ final class MidiPcmStream extends PcmStream {
           var3++;
         } while (var4 == 0);
         while (16 > var3) {
-          this.field_t[var3] = vg.a(this.field_G[var3], -128);
+          this.field_t[var3] = vg.bitwiseAnd(this.field_G[var3], -128);
           var3++;
           if (var4 == 0) {
             continue;
@@ -984,12 +984,12 @@ final class MidiPcmStream extends PcmStream {
     }
 
     private final void d(int param0, int param1) {
-        cb var3;
+        MusicPatchNode var3;
         int var4;
         int var5;
         int stackIn_11_0 = 0;
         var5 = Lexicominos.field_L ? 1 : 0;
-        var3 = (cb) (this.field_y.field_n.beginForward(true));
+        var3 = (MusicPatchNode) (this.field_y.field_n.beginForward(true));
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (var3 == null))) {
           stackIn_11_0 = param1;
@@ -1000,7 +1000,7 @@ final class MidiPcmStream extends PcmStream {
               this.field_R[var3.field_z][var3.field_q] = null;
               var3.field_h = 0;
             }
-            var3 = (cb) (this.field_y.field_n.nextForward(2));
+            var3 = (MusicPatchNode) (this.field_y.field_n.nextForward(2));
             continue;
           }
           break;
@@ -1018,7 +1018,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final boolean updateVoice(int[] param0, int param1, cb param2, int param3, int param4) {
+    final boolean updateVoice(int[] param0, int param1, MusicPatchNode param2, int param3, int param4) {
         int stackIn_37_0 = 0;
         int stackIn_37_1 = 0;
         int stackIn_56_0 = 0;
@@ -1031,7 +1031,7 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
-        rc var7 = null;
+        MusicPatchEnvelope var7 = null;
         int var8 = 0;
         double var9 = 0.0;
         int var11 = 0;
@@ -1040,7 +1040,7 @@ final class MidiPcmStream extends PcmStream {
           param2.field_m = AudioOutput.field_r / 100;
           if (param2.field_h >= 0 && (param2.field_C == null ||
             param2.field_C.isSamplePositionOutOfRange())) {
-            param2.c(0);
+            param2.releaseReferences(0);
             param2.unlink((byte) -123);
             if (param2.field_u > 0 &&
               this.field_L[param2.field_z][param2.field_u] == param2) {
@@ -1165,7 +1165,7 @@ final class MidiPcmStream extends PcmStream {
           if (param2.field_C.hasRemainingRampFrames()) {
             this.field_y.field_m.addChildStream(param2.field_C);
           }
-          param2.c(0);
+          param2.releaseReferences(0);
           if (param2.field_h >= 0) {
             param2.unlink((byte) -118);
             if (param2.field_u > 0 &&
@@ -1194,15 +1194,15 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final int computeNoteVolume(cb param0, int param1) {
+    private final int computeNoteVolume(MusicPatchNode param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        rc var9 = null;
-        rc var10 = null;
+        MusicPatchEnvelope var9 = null;
+        MusicPatchEnvelope var10 = null;
         int stackIn_2_0 = 0;
         int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -1269,14 +1269,14 @@ final class MidiPcmStream extends PcmStream {
     }
 
     private final void c(int param0, int param1) {
-        cb var3;
+        MusicPatchNode var3;
         int var4;
         var4 = Lexicominos.field_L ? 1 : 0;
         if (param0 != -785046068) {
           return;
         }
         if (0 != (4 & this.field_q[param1])) {
-          var3 = (cb) (this.field_y.field_n.beginForward(true));
+          var3 = (MusicPatchNode) (this.field_y.field_n.beginForward(true));
           while (var3 != null) {
             if (var4 != 0) {
               break;
@@ -1284,20 +1284,20 @@ final class MidiPcmStream extends PcmStream {
             if (~var3.field_z == ~param1) {
               var3.field_E = 0;
             }
-            var3 = (cb) (this.field_y.field_n.nextForward(2));
+            var3 = (MusicPatchNode) (this.field_y.field_n.nextForward(2));
           }
         }
     }
 
     private final void a(int param0, int param1) {
-        cb var3;
+        MusicPatchNode var3;
         int var4;
         var4 = Lexicominos.field_L ? 1 : 0;
         if (param1 != 16384) {
           return;
         }
         if ((this.field_q[param0] & 2) != 0) {
-          var3 = (cb) (this.field_y.field_n.beginForward(true));
+          var3 = (MusicPatchNode) (this.field_y.field_n.beginForward(true));
           while (var3 != null) {
             if (var4 != 0) {
               break;
@@ -1307,7 +1307,7 @@ final class MidiPcmStream extends PcmStream {
               var3.field_h < 0) {
               var3.field_h = 0;
             }
-            var3 = (cb) (this.field_y.field_n.nextForward(param1 - 16382));
+            var3 = (MusicPatchNode) (this.field_y.field_n.nextForward(param1 - 16382));
           }
         }
     }
@@ -1444,7 +1444,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_S[param0] = 8192;
         this.a(param0, 16384);
         if (param1 != 16645) {
-          this.field_L = (cb[][]) null;
+          this.field_L = (MusicPatchNode[][]) null;
         }
         this.c(param1 - 785062713, param0);
         this.field_q[param0] = 0;
@@ -1462,25 +1462,25 @@ final class MidiPcmStream extends PcmStream {
     }
 
     private final void noteOn(int param0, int param1, byte param2, int param3) {
-        cb stackIn_4_0 = null;
+        MusicPatchNode stackIn_4_0 = null;
         Object stackIn_9_0 = null;
         int stackIn_20_1 = 0;
-        cb stackIn_20_2 = null;
+        MusicPatchNode stackIn_20_2 = null;
         boolean stackIn_21_3 = false;
-        cb stackOut_3_0;
-        cb var5;
+        MusicPatchNode stackOut_3_0;
+        MusicPatchNode var5;
         int var6_int;
         PcmSample var6;
-        cb var7;
-        cb var8;
+        MusicPatchNode var7;
+        MusicPatchNode var8;
         int var9;
-        wj var10;
-        wj var11;
+        MusicPatch var10;
+        MusicPatch var11;
         regionExit1: {
           var9 = Lexicominos.field_L ? 1 : 0;
           this.noteOff(64, param3, param0, 0);
           if ((this.field_q[param0] & 2) != 0) {
-            var5 = (cb) (this.field_y.field_n.beginBackward(2));
+            var5 = (MusicPatchNode) (this.field_y.field_n.beginBackward(2));
             while (var5 != null) {
               stackOut_3_0 = var5;
               stackIn_9_0 = stackOut_3_0;
@@ -1499,12 +1499,12 @@ final class MidiPcmStream extends PcmStream {
                 var5.field_l = var6_int - var5.field_o;
                 return;
               }
-              var5 = (cb) (this.field_y.field_n.nextBackward(0));
+              var5 = (MusicPatchNode) (this.field_y.field_n.nextBackward(0));
             }
           }
           stackIn_9_0 = this.field_A.a((long)this.field_E[param0], (byte) 118);
         }
-        var10 = (wj) (stackIn_9_0);
+        var10 = (MusicPatch) (stackIn_9_0);
         var11 = var10;
         if (var11 == null) {
           return;
@@ -1513,7 +1513,7 @@ final class MidiPcmStream extends PcmStream {
         if (var6 == null) {
           return;
         }
-        var7 = new cb();
+        var7 = new MusicPatchNode();
         var7.field_w = var6;
         var7.field_z = param0;
         var7.field_p = var10;
@@ -1580,17 +1580,17 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void c(int param0) {
+    final synchronized void releasePatchSampleIds(int param0) {
         int var3 = 0;
-        wj var4 = null;
+        MusicPatch var4 = null;
         var3 = Lexicominos.field_L ? 1 : 0;
         if (param0 > -73) {
           return;
         }
-        var4 = (wj) (this.field_A.c((byte) -95));
+        var4 = (MusicPatch) (this.field_A.c((byte) -95));
         while (var4 != null) {
-          var4.a(-122);
-          var4 = (wj) (this.field_A.a((byte) -91));
+          var4.releaseSampleIds(-122);
+          var4 = (MusicPatch) (this.field_A.a((byte) -91));
           if (var3 == 0) {
             continue;
           }
@@ -1602,11 +1602,11 @@ final class MidiPcmStream extends PcmStream {
         int discarded$0 = 0;
         this.a(param0, (byte) 90, param2);
         if (!param1) {
-          discarded$0 = this.computeNoteVolume((cb) null, -91);
+          discarded$0 = this.computeNoteVolume((MusicPatchNode) null, -91);
         }
     }
 
-    private final int computeNoteSampleStep(byte param0, cb param1) {
+    private final int computeNoteSampleStep(byte param0, MusicPatchNode param1) {
         int stackIn_12_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -1614,7 +1614,7 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        rc var4 = null;
+        MusicPatchEnvelope var4 = null;
         int var5 = 0;
         int var6 = 0;
         double var7 = 0.0;
@@ -1756,7 +1756,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_l = new int[16];
         this.field_M = new int[16];
         this.field_T = new int[16];
-        this.field_L = new cb[16][128];
+        this.field_L = new MusicPatchNode[16][128];
         this.field_S = new int[16];
         this.field_w = new int[16];
         this.field_G = new int[16];
@@ -1766,7 +1766,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_r = new int[16];
         this.field_x = new int[16];
         this.field_t = new int[16];
-        this.field_R = new cb[16][128];
+        this.field_R = new MusicPatchNode[16][128];
         this.field_K = 1000000;
         this.field_n = new MidiTrackReader();
         this.field_y = new MusicPatchPcmStream(this);
@@ -1784,7 +1784,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_l = new int[16];
         this.field_M = new int[16];
         this.field_T = new int[16];
-        this.field_L = new cb[16][128];
+        this.field_L = new MusicPatchNode[16][128];
         this.field_S = new int[16];
         this.field_w = new int[16];
         this.field_G = new int[16];
@@ -1794,7 +1794,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_r = new int[16];
         this.field_x = new int[16];
         this.field_t = new int[16];
-        this.field_R = new cb[16][128];
+        this.field_R = new MusicPatchNode[16][128];
         this.field_K = 1000000;
         this.field_n = new MidiTrackReader();
         this.field_y = new MusicPatchPcmStream(this);

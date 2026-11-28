@@ -147,14 +147,14 @@ final class ud extends DualLinkNode {
         }
         if (this.field_z != null) {
           for (var2 = 0; this.field_z.length > var2; var2++) {
-            this.field_z[var2] = om.a(this.field_z[var2], 32768);
+            this.field_z[var2] = om.bitwiseOr(this.field_z[var2], 32768);
           }
         }
         if (this.field_C != null) {
           var4 = 0;
           var2Lifetime1 = var4;
           while (this.field_C.length > var4) {
-            this.field_C[var4] = om.a(this.field_C[var4], 32768);
+            this.field_C[var4] = om.bitwiseOr(this.field_C[var4], 32768);
             var4++;
           }
         }

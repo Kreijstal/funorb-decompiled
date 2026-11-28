@@ -202,9 +202,9 @@ final class LevelSession {
               SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 640, 430, 7091712, 131328);
               var3 = vi.field_g.field_d;
               vi.field_g.a((int)((double)(-var9 * (var3 - 640)) / var7), 0, 128);
-              var3 = cc.field_w.field_d * 2;
-              cc.field_w.d((int)((double)((-640 + var3) * -var9) / var7), 0);
-              cc.field_w.d((int)(-((double)((-640 + var3) * var9) / var7) + (double)(var3 / 2)), 0);
+              var3 = MusicPatchNode.field_w.field_d * 2;
+              MusicPatchNode.field_w.d((int)((double)((-640 + var3) * -var9) / var7), 0);
+              MusicPatchNode.field_w.d((int)(-((double)((-640 + var3) * var9) / var7) + (double)(var3 / 2)), 0);
               if (var16 == 0) {
                 return;
               }
@@ -316,9 +316,9 @@ final class LevelSession {
             this.field_j = 0.0;
             this.field_D = 0.0;
           }
-          if ((double)ri.field_e + this.field_D > 430.0) {
+          if ((double)MusicPatchEnvelope.field_e + this.field_D > 430.0) {
             this.field_j = 0.0;
-            this.field_D = (double)(430 - ri.field_e);
+            this.field_D = (double)(430 - MusicPatchEnvelope.field_e);
           }
           if (0.0 > this.field_N) {
             this.field_N = 0.0;
@@ -688,7 +688,7 @@ final class LevelSession {
         this.field_fb = 225;
         scanLoop1: while (true) {
           if (this.field_L > 1) {
-            this.field_d[this.f(ProxyAuthenticationRequiredException.a(param0, -6111))] = new ib(this.field_N, this.field_D, 7, true, false);
+            this.field_d[this.f(ProxyAuthenticationRequiredException.bitwiseXor(param0, -6111))] = new ib(this.field_N, this.field_D, 7, true, false);
             this.field_L = this.field_L - 1;
             if (var5 != 0) {
               break scanLoop1;
@@ -736,7 +736,7 @@ final class LevelSession {
                 continue;
               }
             }
-            sc.a(param0 + 6110, false, dm.field_x);
+            ByteArrayPoolSupport.a(param0 + 6110, false, dm.field_x);
             this.field_eb = true;
             th.a(-27610, 64, var2, nl.field_r[9]);
             this.o(param0 ^ -6049);
@@ -747,7 +747,7 @@ final class LevelSession {
             return;
           }
         }
-        this.a(9, ri.field_q + (int)this.field_D, -1, (int)this.field_N + MusicPatchPcmStream.field_p, param0 ^ -31963);
+        this.a(9, MusicPatchEnvelope.field_q + (int)this.field_D, -1, (int)this.field_N + MusicPatchPcmStream.field_p, param0 ^ -31963);
         this.field_z.setScaledVolume(64);
         PacketBuffer.a(param0 ^ 1630761897, this.field_z);
         return;
@@ -950,7 +950,7 @@ final class LevelSession {
           break;
         }
         if (this.field_a) {
-          var2 = new gg((int)((double)MusicPatchPcmStream.field_p + this.field_N), (int)((double)ri.field_q + this.field_D), 15, 0.0, 6.283185307179586, 1.5707963267948966, 3, 1.9, 0.92, this.field_J >> 1);
+          var2 = new gg((int)((double)MusicPatchPcmStream.field_p + this.field_N), (int)((double)MusicPatchEnvelope.field_q + this.field_D), 15, 0.0, 6.283185307179586, 1.5707963267948966, 3, 1.9, 0.92, this.field_J >> 1);
           stackIn_13_0 = var2;
           stackIn_13_1 = -1093327740;
           stackIn_13_2 = 16777215;
@@ -1028,7 +1028,7 @@ final class LevelSession {
             }
             if (stackIn_36_0 < stackIn_36_1) {
               stackIn_16_0 = (int)((double)MusicPatchPcmStream.field_l + this.field_N) << 4;
-              stackIn_16_1 = (int)(this.field_D + (double)ri.field_q) << 4;
+              stackIn_16_1 = (int)(this.field_D + (double)MusicPatchEnvelope.field_q) << 4;
               stackIn_16_2 = 256;
               stackIn_16_3 = this.field_u;
               if (50 < this.field_u) {
@@ -1195,7 +1195,7 @@ final class LevelSession {
               }
               if (null != rh.field_b) {
                 var6 = rh.field_b;
-                kg.a(SoftwareRasterizer.field_l, 0, var6.field_B, 0, var6.field_B.length);
+                ArrayBlockSupport.copyIntRange(SoftwareRasterizer.field_l, 0, var6.field_B, 0, var6.field_B.length);
               } else {
                 rh.field_b = be.b();
               }
@@ -1230,7 +1230,7 @@ final class LevelSession {
             this.F(-125);
             this.field_fb = this.field_fb - 1;
             if (this.field_fb > 0) {
-              this.a(11, (int)this.field_D + hi.a(ri.field_e, 4, this.field_l), -1, (int)this.field_N + hi.a(MusicPatchPcmStream.field_l, 4, this.field_l), 27396);
+              this.a(11, (int)this.field_D + hi.a(MusicPatchEnvelope.field_e, 4, this.field_l), -1, (int)this.field_N + hi.a(MusicPatchPcmStream.field_l, 4, this.field_l), 27396);
             }
             this.field_Z = this.field_Z - 1;
             if (this.n(115)) {
@@ -1537,7 +1537,7 @@ final class LevelSession {
               var3 = 0;
             }
             while (var3 < this.field_k.length) {
-              this.field_k[var3].a((int)this.field_D + hi.a(ri.field_e, 4, this.field_l), var2 / 4, 1049600, -104, 1, (int)this.field_N + hi.a(MusicPatchPcmStream.field_l, 4, this.field_l));
+              this.field_k[var3].a((int)this.field_D + hi.a(MusicPatchEnvelope.field_e, 4, this.field_l), var2 / 4, 1049600, -104, 1, (int)this.field_N + hi.a(MusicPatchPcmStream.field_l, 4, this.field_l));
               var3++;
               if (var4 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -1904,7 +1904,7 @@ final class LevelSession {
                     this.field_d[this.f(0)] = new ib(640.0, 215.0, 2, false, false);
                   }
                   if (ck.field_f[18]) {
-                    this.field_d[this.f(ProxyAuthenticationRequiredException.a(param0, 215))] = new ib(640.0, 215.0, 3, false, false);
+                    this.field_d[this.f(ProxyAuthenticationRequiredException.bitwiseXor(param0, 215))] = new ib(640.0, 215.0, 3, false, false);
                   }
                   if (ck.field_f[19]) {
                     this.field_d[this.f(0)] = new ib(640.0, 215.0, 4, false, false);
@@ -1913,7 +1913,7 @@ final class LevelSession {
                     this.field_d[this.f(0)] = new ib(640.0, 215.0, 5, false, false);
                   }
                   if (ck.field_f[21]) {
-                    this.field_d[this.f(ProxyAuthenticationRequiredException.a(param0, 215))] = new ib(640.0, 215.0, 6, false, false);
+                    this.field_d[this.f(ProxyAuthenticationRequiredException.bitwiseXor(param0, 215))] = new ib(640.0, 215.0, 6, false, false);
                   }
                   decompiledFrameRemainder0 = !(!ck.field_f[22]);
                   if (decompiledFrameRemainder0) {
@@ -2352,7 +2352,7 @@ final class LevelSession {
                 decompiledSharedTail0 = (var5 != 0);
               }
               if (decompiledSharedTail0) {
-                stackIn_21_0 = (!var3_ref_gf.a(var3_ref_gf.field_d, this.field_D + (double)ri.field_q, this.field_N + (double)MusicPatchPcmStream.field_p, var3_ref_gf.field_F, param0)) ? 0 : 1;
+                stackIn_21_0 = (!var3_ref_gf.a(var3_ref_gf.field_d, this.field_D + (double)MusicPatchEnvelope.field_q, this.field_N + (double)MusicPatchPcmStream.field_p, var3_ref_gf.field_F, param0)) ? 0 : 1;
                 var4 = stackIn_21_0;
               }
               if (var3_ref_gf.field_I == 20 &&
@@ -2400,7 +2400,7 @@ final class LevelSession {
             } else {
               var4Lifetime1 = 65793 * (this.field_u >> 4);
             }
-            this.field_h[var3].a((int)(this.field_D + (double)hi.a((int)(1.5 * (double)ri.field_e), 4, this.field_l) - (double)(ri.field_e / 3)), 15, var4Lifetime1, -5, 1, (int)(this.field_N + (double)hi.a((int)((double)MusicPatchPcmStream.field_l * 1.5), 4, this.field_l) - (double)(MusicPatchPcmStream.field_l / 3)));
+            this.field_h[var3].a((int)(this.field_D + (double)hi.a((int)(1.5 * (double)MusicPatchEnvelope.field_e), 4, this.field_l) - (double)(MusicPatchEnvelope.field_e / 3)), 15, var4Lifetime1, -5, 1, (int)(this.field_N + (double)hi.a((int)((double)MusicPatchPcmStream.field_l * 1.5), 4, this.field_l) - (double)(MusicPatchPcmStream.field_l / 3)));
             var3++;
             continue;
           }
@@ -2574,7 +2574,7 @@ final class LevelSession {
         }
         if (decompiledFrameRemainder0) {
           if (150 < ValidationStatusIcon.field_J) {
-            if (this.field_D > (double)ri.field_e) {
+            if (this.field_D > (double)MusicPatchEnvelope.field_e) {
               this.field_j = this.field_j - 0.5;
               if (var6 != 0) {
                 this.field_j = 0.0;
@@ -2694,7 +2694,7 @@ final class LevelSession {
             var4 = var5 / 2 - 32;
           }
           di.field_b[var7.field_h].b(8, var4);
-          a.field_g.drawString(sc.field_b[var7.field_h], 48, a.field_g.field_x + var4, 16777215, -1);
+          a.field_g.drawString(ByteArrayPoolSupport.field_b[var7.field_h], 48, a.field_g.field_x + var4, 16777215, -1);
         }
     }
 
@@ -2886,7 +2886,7 @@ final class LevelSession {
         boolean decompiledFrameRemainder4 = true;
         boolean decompiledFrameRemainder3 = true;
         boolean decompiledFrameRemainder2 = true;
-        var5 = (double)ri.field_q + this.field_D;
+        var5 = (double)MusicPatchEnvelope.field_q + this.field_D;
         BitPacketBuffer.field_m = BitPacketBuffer.field_m | 1 << this.levelNumber;
         var3 = this.field_N + (double)MusicPatchPcmStream.field_p;
         var13_int = param0;
@@ -3047,7 +3047,7 @@ final class LevelSession {
                 var20 = 0;
                 var29 = 0;
                 var28 = null;
-                var19 = (int)(this.field_D + (double)ri.field_q);
+                var19 = (int)(this.field_D + (double)MusicPatchEnvelope.field_q);
                 while (var29 == 0) {
                   stackIn_111_0 = 0;
                   var32 = stackIn_111_0;
@@ -3284,7 +3284,7 @@ final class LevelSession {
           this.field_d = (ib[]) null;
         }
         if (var8.h(49)) {
-          sc.a(-1, true, BitPacketBuffer.field_l);
+          ByteArrayPoolSupport.a(-1, true, BitPacketBuffer.field_l);
           this.field_U = true;
         }
         if (!var8.a(false) &&
@@ -3846,7 +3846,7 @@ final class LevelSession {
                 if (pe.field_e.field_j) {
                   ck.field_j[var2] = null;
                 }
-                ck.field_j[var2] = new td(hi.a(6, ProxyAuthenticationRequiredException.a(param0, 4), this.field_l), lc.field_m + hi.a(cj.field_e.field_h, 4, this.field_l), ti.field_a + hi.a(cj.field_e.field_c, ProxyAuthenticationRequiredException.a(param0, 4), this.field_l), -1);
+                ck.field_j[var2] = new td(hi.a(6, ProxyAuthenticationRequiredException.bitwiseXor(param0, 4), this.field_l), lc.field_m + hi.a(cj.field_e.field_h, 4, this.field_l), ti.field_a + hi.a(cj.field_e.field_c, ProxyAuthenticationRequiredException.bitwiseXor(param0, 4), this.field_l), -1);
               }
               var2++;
               return;
@@ -3880,7 +3880,7 @@ final class LevelSession {
             if (pe.field_e.field_j) {
               ck.field_j[var2Lifetime1] = null;
             } else {
-              ck.field_j[var2Lifetime1] = new td(hi.a(6, ProxyAuthenticationRequiredException.a(param0, 4), this.field_l), lc.field_m + hi.a(cj.field_e.field_h, 4, this.field_l), ti.field_a + hi.a(cj.field_e.field_c, ProxyAuthenticationRequiredException.a(param0, 4), this.field_l), -1);
+              ck.field_j[var2Lifetime1] = new td(hi.a(6, ProxyAuthenticationRequiredException.bitwiseXor(param0, 4), this.field_l), lc.field_m + hi.a(cj.field_e.field_h, 4, this.field_l), ti.field_a + hi.a(cj.field_e.field_c, ProxyAuthenticationRequiredException.bitwiseXor(param0, 4), this.field_l), -1);
             }
           }
           var2Lifetime1++;

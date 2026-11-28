@@ -188,7 +188,7 @@ final class ob extends DualLinkNode {
         }
         if (null != this.field_r) {
           for (var2 = 0; var2 < this.field_r.length; var2++) {
-            this.field_r[var2] = SingleChildWidgetContainer.a(this.field_r[var2], 32768);
+            this.field_r[var2] = SingleChildWidgetContainer.bitwiseOr(this.field_r[var2], 32768);
           }
         }
     }

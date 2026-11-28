@@ -51,9 +51,9 @@ final class Bzip2State {
     final static String a(int param0) {
         if (param0 > -79) {
           Bzip2State.a(-50);
-          return tj.field_a;
+          return GrowableIntArray.field_a;
         }
-        return tj.field_a;
+        return GrowableIntArray.field_a;
     }
 
     Bzip2State() {

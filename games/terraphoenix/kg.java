@@ -299,7 +299,7 @@ final class kg extends h {
                   this.field_p.a(this.field_k.field_H.payload, var6, this.field_k.field_H.position, (byte) 117);
                   if (this.field_n != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.field_k.field_H.payload[var7 + this.field_k.field_H.position] = (byte)sl.a((int) this.field_k.field_H.payload[var7 + this.field_k.field_H.position], (int) this.field_n);
+                      this.field_k.field_H.payload[var7 + this.field_k.field_H.position] = (byte)sl.bitwiseXor((int) this.field_k.field_H.payload[var7 + this.field_k.field_H.position], (int) this.field_n);
                     }
                   }
                   this.field_k.field_F = this.field_k.field_F + var6;
@@ -321,7 +321,7 @@ final class kg extends h {
                   this.field_p.a(this.field_o.payload, var5, this.field_o.position, (byte) 101);
                   if (this.field_n != 0) {
                     for (var6 = 0; var5 > var6; var6++) {
-                      this.field_o.payload[this.field_o.position + var6] = (byte)sl.a((int) this.field_o.payload[this.field_o.position + var6], (int) this.field_n);
+                      this.field_o.payload[this.field_o.position + var6] = (byte)sl.bitwiseXor((int) this.field_o.payload[this.field_o.position + var6], (int) this.field_n);
                     }
                   }
                   this.field_o.position = this.field_o.position + var5;

@@ -91,7 +91,7 @@ final class ea extends va {
             } else {
               stackIn_29_2 = "{...}";
             }
-            throw fc.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+            throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -268,7 +268,7 @@ final class ea extends va {
                   var17 = 0;
                   var7 = var17;
                   while (var6 > var17) {
-                    this.field_a.field_v.payload[this.field_a.field_v.position + var17] = (byte)wa.a((int) this.field_a.field_v.payload[this.field_a.field_v.position + var17], (int) this.field_n);
+                    this.field_a.field_v.payload[this.field_a.field_v.position + var17] = (byte)wa.bitwiseXor((int) this.field_a.field_v.payload[this.field_a.field_v.position + var17], (int) this.field_n);
                     var17++;
                   }
                 }
@@ -291,7 +291,7 @@ final class ea extends va {
                 this.field_r.a((byte) 39, this.field_h.position, var5, this.field_h.payload);
                 if (this.field_n != 0) {
                   for (var6 = 0; var6 < var5; var6++) {
-                    this.field_h.payload[var6 + this.field_h.position] = (byte)wa.a((int) this.field_h.payload[var6 + this.field_h.position], (int) this.field_n);
+                    this.field_h.payload[var6 + this.field_h.position] = (byte)wa.bitwiseXor((int) this.field_h.payload[var6 + this.field_h.position], (int) this.field_n);
                   }
                 }
                 this.field_h.position = this.field_h.position + var5;

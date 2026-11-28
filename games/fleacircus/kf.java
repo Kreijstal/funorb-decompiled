@@ -90,7 +90,7 @@ final class kf extends IntrusiveNode {
                     var9 = param0.readUnsignedByte(false);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
-                      var10[var11_int] = param0.readString(df.a(param1, -3));
+                      var10[var11_int] = param0.readString(df.bitwiseXor(param1, -3));
                     }
                     var21 = new byte[var9][];
                     var19 = var21;

@@ -9,9 +9,9 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     private java.awt.image.ImageConsumer field_l;
     static int field_m;
 
-    private final synchronized void a(byte param0) {
+    private final synchronized void publishPixelsToConsumer(byte param0) {
         if (param0 != -8) {
-          this.a((byte) 5);
+          this.publishPixelsToConsumer((byte) 5);
           if (this.field_l == null) {
             return;
           }
@@ -85,36 +85,36 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final void a(java.awt.Graphics param0, int param1, int param2, int param3) {
+    final void drawImage(java.awt.Graphics param0, int param1, int param2, int param3) {
         try {
           if (param2 != 15698) {
             java.awt.Component var6 = (java.awt.Component) null;
-            this.a((java.awt.Component) null, -69, -63, 49);
+            this.initialize((java.awt.Component) null, -69, -63, 49);
           }
-          this.a((byte) -8);
+          this.publishPixelsToConsumer((byte) -8);
           param0.drawImage(this.field_b, param3, param1, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ma.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final void a(java.awt.Component param0, int param1, int param2, int param3) {
+    final void initialize(java.awt.Component param0, int param1, int param2, int param3) {
         this.field_d = param3;
         this.field_e = new int[1 + param3 * param2];
         this.field_i = param2;
         this.field_j = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
         this.field_b = param0.createImage((java.awt.image.ImageProducer) (this));
-        this.a((byte) -8);
+        this.publishPixelsToConsumer((byte) -8);
         param0.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
         if (param1 != -3) {
           return;
         }
         try {
-          this.a((byte) -8);
+          this.publishPixelsToConsumer((byte) -8);
           param0.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
-          this.a((byte) -8);
+          this.publishPixelsToConsumer((byte) -8);
           param0.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
-          this.a(44);
+          this.setAsRasterTarget(44);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ma.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

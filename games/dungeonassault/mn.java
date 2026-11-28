@@ -5,7 +5,7 @@ final class mn {
     static String field_a;
     static int field_b;
 
-    static long a(long param0, long param1) {
+    static long bitwiseXor(long param0, long param1) {
         return param0 ^ param1;
     }
 

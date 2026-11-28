@@ -81,7 +81,7 @@ final class da {
         }
     }
 
-    static int b(int param0, int param1) {
+    static int bitwiseAnd(int param0, int param1) {
         return param0 & param1;
     }
 

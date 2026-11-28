@@ -112,7 +112,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           if (0 == param1.length()) {
             return true;
           }
-          if (ml.a(param1, param2, 0)) {
+          if (GrowableIntArray.a(param1, param2, 0)) {
             return false;
           }
           if (DequeWidgetContainer.a(param1, -123, param2)) {

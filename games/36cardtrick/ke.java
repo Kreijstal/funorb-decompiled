@@ -48,7 +48,7 @@ final class ke {
               if (~incrementValue$1 != ~param10) {
                 var17 = param8[param6];
                 if (param5 != var17) {
-                  param8[param6] = bc.a(param3 * bc.a(var17, 65280) >> 8, 65280) + bc.a(bc.a(16711935, var17) * param3 >> 8, 16711935) + param11;
+                  param8[param6] = bc.bitwiseAnd(param3 * bc.bitwiseAnd(var17, 65280) >> 8, 65280) + bc.bitwiseAnd(bc.bitwiseAnd(16711935, var17) * param3 >> 8, 16711935) + param11;
                 }
                 var16++;
                 param6++;

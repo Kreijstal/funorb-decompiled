@@ -36,7 +36,7 @@ final class EmailFormatValidator extends TextFieldValidator {
           }
           while (true) {
             if (6 <= var5) {
-              TextLayout.field_g.a(89);
+              TextLayout.field_g.setAsRasterTarget(89);
               stackIn_20_0 = var3;
               return stackIn_20_0;
             }

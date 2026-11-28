@@ -7,7 +7,7 @@ final class sc {
     static String field_b;
     static String[] field_d;
 
-    static int a(int param0, int param1) {
+    static int bitwiseAnd(int param0, int param1) {
         return param0 & param1;
     }
 

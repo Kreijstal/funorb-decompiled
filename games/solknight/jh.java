@@ -45,7 +45,7 @@ final class jh {
           ah.field_i[8] = BufferedSocket.field_b.field_s + dd.field_b - (-BufferedSocket.field_b.field_F - var3);
           SingleChildWidgetContainer.field_F[8] = 37 + var3 * 2;
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "jh.H(" + param0 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "jh.H(" + param0 + ')');
         }
     }
 
@@ -92,9 +92,9 @@ final class jh {
               var11 = var13;
               var6 = var11;
               if (var3 != 1) {
-                var7 = g.field_k;
+                var7 = MusicPatchEnvelope.field_k;
                 synchronized (var7) {
-                  g.field_k.decompress((byte) 97, var9, var13);
+                  MusicPatchEnvelope.field_k.decompress((byte) 97, var9, var13);
                 }
               } else {
                 Bzip2Decompressor.decompress(var13, var5, param0, var4, 9);
@@ -115,7 +115,7 @@ final class jh {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -236,14 +236,14 @@ final class jh {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     final static void b(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = ee.field_j;
+        var1 = MidiNoteMask.field_j;
         synchronized (var1) {
           wb.field_c = u.field_d;
           if (param0 != 406) {
@@ -254,7 +254,7 @@ final class jh {
           BufferedSocket.field_m = StripedProgressWidget.field_J;
           ne.field_d = pe.field_n;
           pe.field_n = false;
-          hg.field_F = SolKnight.field_G;
+          MusicPatchNode.field_F = SolKnight.field_G;
           SpriteState.field_o = SocketConnector.field_a;
           StandardContentDialog.field_gb = ArchiveSource.field_d;
           SolKnight.field_G = 0;

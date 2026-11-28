@@ -30,7 +30,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
         if (BagpipeSpecial.b(68) ||
           !(this.field_Q.text.length() <= 0) &&
           !(this.field_H.text.length() <= 0)) {
-          g.a(this.field_H.text, this.field_Q.text, (byte) 81);
+          MidiNoteMask.a(this.field_H.text, this.field_Q.text, (byte) 81);
         }
         if (param0 > -2) {
           this.submitLogin(78);

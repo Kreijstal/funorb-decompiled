@@ -65,9 +65,9 @@ final class el extends wi {
           if (null == TextLineMetrics.field_e) {
             TextLineMetrics.field_e = "0";
           }
-          id.field_i = param0.getParameter("overxachievements");
-          if (id.field_i == null) {
-            id.field_i = "0";
+          GrowableIntArray.field_i = param0.getParameter("overxachievements");
+          if (GrowableIntArray.field_i == null) {
+            GrowableIntArray.field_i = "0";
           }
           var6 = param0.getParameter("currency");
           if (var6 == null) {

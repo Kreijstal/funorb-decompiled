@@ -114,7 +114,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
             } else {
               stackIn_12_0 = var6;
               if (!this.field_eb) {
-                stackIn_13_1 = te.field_f;
+                stackIn_13_1 = GrowableIntArray.field_f;
               } else {
                 stackIn_13_1 = rc.field_b;
               }

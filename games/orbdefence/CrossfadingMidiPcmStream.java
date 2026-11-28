@@ -228,7 +228,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         return null;
     }
 
-    final synchronized void a(int param0, int param1) {
+    final synchronized void setVolume(int param0, int param1) {
         if (param0 != 0) {
           this.field_u = (int[]) null;
         }
@@ -379,8 +379,8 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               if (var5 != 256) {
                 if (null != this.field_y &&
                   var6 <= this.field_y.length) {
-                  mk.clearInts(this.field_y, 0, var6);
-                  mk.clearInts(this.field_u, 0, var6);
+                  ArrayBlockSupport.clearInts(this.field_y, 0, var6);
+                  ArrayBlockSupport.clearInts(this.field_u, 0, var6);
                 } else {
                   this.field_u = new int[var6];
                   this.field_y = new int[var6];
@@ -411,7 +411,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             }
             if (this.field_y != null &&
               this.field_y.length >= var6) {
-              mk.clearInts(this.field_y, 0, var6);
+              ArrayBlockSupport.clearInts(this.field_y, 0, var6);
             } else {
               this.field_y = new int[var6];
               this.field_u = new int[var6];

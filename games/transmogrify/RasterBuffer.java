@@ -10,7 +10,7 @@ abstract class RasterBuffer {
     java.awt.Image field_f;
     int field_g;
 
-    abstract void a(int param0, int param1, java.awt.Component param2, byte param3);
+    abstract void initialize(int param0, int param1, java.awt.Component param2, byte param3);
 
     final static void a(boolean param0, int param1) {
         if (param1 != 793) {
@@ -26,13 +26,13 @@ abstract class RasterBuffer {
         field_b = null;
     }
 
-    abstract void a(int param0, int param1, java.awt.Graphics param2, int param3);
+    abstract void drawImage(int param0, int param1, java.awt.Graphics param2, int param3);
 
-    final void a(int param0) {
+    final void setAsRasterTarget(int param0) {
         SoftwareRasterizer.setRasterBuffer(this.field_a, this.field_d, this.field_g);
         if (param0 <= 102) {
           java.awt.Graphics var3 = (java.awt.Graphics) null;
-          this.a(-68, -104, (java.awt.Graphics) null, 18);
+          this.drawImage(-68, -104, (java.awt.Graphics) null, 18);
         }
     }
 

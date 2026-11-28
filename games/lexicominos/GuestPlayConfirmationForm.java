@@ -13,7 +13,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
         if (!(FullscreenNoticeType.field_e >= 0)) {
           return;
         }
-        wj.field_j.playSample(kc.field_m[param0], param1, FullscreenNoticeType.field_e * 128 / 256);
+        MusicPatch.field_j.playSample(kc.field_m[param0], param1, FullscreenNoticeType.field_e * 128 / 256);
     }
 
     public static void clearStaticReferences(byte param0) {

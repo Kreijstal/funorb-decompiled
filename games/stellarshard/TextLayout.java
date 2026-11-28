@@ -38,7 +38,7 @@ abstract class TextLayout {
             var13 = param0;
             var14 = param2;
             var15 = (var17[var11] & 16711422) >> 1;
-            var10[var11] = var15 + ((DirectByteStorage.a(var13, 33423701) >> 9) + (DirectByteStorage.a(var12, 33423361) >> 1) + (DirectByteStorage.a(33520910, var14) >> 17));
+            var10[var11] = var15 + ((DirectByteStorage.bitwiseAnd(var13, 33423701) >> 9) + (DirectByteStorage.bitwiseAnd(var12, 33423361) >> 1) + (DirectByteStorage.bitwiseAnd(33520910, var14) >> 17));
             param2 = param2 + param1;
             param7 = param7 + param9;
             param0 = param0 + param3;

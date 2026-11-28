@@ -749,9 +749,9 @@ final class SoftwareRaster {
         integerArrayLocal34 = integerArrayState0058;
         integerArrayLocal31 = integerArrayLocal34;
         integerArrayLocal16 = integerArrayLocal31;
-        MixedSupport008.clearInts(integerArrayLocal32, 0, integerArgument9);
-        MixedSupport008.clearInts(integerArrayLocal33, 0, integerArgument9);
-        MixedSupport008.clearInts(integerArrayLocal34, 0, integerArgument9);
+        ArrayBlockSupport.clearInts(integerArrayLocal32, 0, integerArgument9);
+        ArrayBlockSupport.clearInts(integerArrayLocal33, 0, integerArgument9);
+        ArrayBlockSupport.clearInts(integerArrayLocal34, 0, integerArgument9);
         integerLocal17 = 16384 / (2 * integerArgument4 + 1);
         integerLocal18 = integerArgument5 - integerArgument4;
         if (integerLocal18 < 0) {

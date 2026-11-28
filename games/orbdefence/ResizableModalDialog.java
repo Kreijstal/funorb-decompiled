@@ -187,7 +187,7 @@ abstract class ResizableModalDialog extends ModalDialog {
         }
         DualLinkDeque.field_c.draw(-90 + param0 + this.field_m, param1 + 10);
         sa.a(param2 ^ param2, sd.field_f, param0 + 5, this.field_m - 10, 35 + param1);
-        sa.a(param2 ^ -9111, he.field_y, param0, this.field_m, -22 + (param1 + this.field_r));
+        sa.a(param2 ^ -9111, MusicPatchNode.field_y, param0, this.field_m, -22 + (param1 + this.field_r));
         var6Lifetime2 = 127;
         var4Lifetime2 = -79 + this.field_r;
         var5Lifetime2 = 169;

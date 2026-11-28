@@ -90,7 +90,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         }
     }
 
-    private final int a(int param0, int param1, String param2, int param3, int param4, String param5, UiWidget param6) {
+    private final int addLabeledFieldWithValidationMessage(int param0, int param1, String param2, int param3, int param4, String param5, UiWidget param6) {
         RuntimeException var8 = null;
         ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;
@@ -168,7 +168,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         }
     }
 
-    private final int a(String param0, String param1, UiWidget param2, int param3, int param4, boolean param5) {
+    private final int addLabeledFieldWithDefaultValidationMessage(String param0, String param1, UiWidget param2, int param3, int param4, boolean param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -183,7 +183,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
           if (param5) {
             field_O = (int[]) null;
           }
-          stackIn_3_0 = this.a(param4, param3, param0, -25, 35, param1, param2);
+          stackIn_3_0 = this.addLabeledFieldWithValidationMessage(param4, param3, param0, -25, 35, param1, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -246,7 +246,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         var2.setBounds(false, 20, var3, 50, 270);
         var3 += 50;
         this.addChild((byte) -117, var2);
-        var3 = var3 + (this.a(GameShell.field_q, LevelTile.field_m, this.field_H, 170, var3, false) + 5);
+        var3 = var3 + (this.addLabeledFieldWithDefaultValidationMessage(GameShell.field_q, LevelTile.field_m, this.field_H, 170, var3, false) + 5);
         this.field_L.setBounds(false, -var5 + 496 >> 1, var3, 40, var5);
         this.field_M.setBounds(false, 3 + var4, var3 + 15, 40, 60);
         this.field_M.field_v = (WidgetEventListener) (this);
@@ -272,7 +272,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         try {
           if (param1 != 13) {
             var6 = (UiWidget) null;
-            discarded$1 = this.a((String) null, (String) null, (UiWidget) null, -104, -105, false);
+            discarded$1 = this.addLabeledFieldWithDefaultValidationMessage((String) null, (String) null, (UiWidget) null, -104, -105, false);
           }
           if (super.handleKey(param0, param1 + 0, param2, param3)) {
             return true;

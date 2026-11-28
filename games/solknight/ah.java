@@ -50,7 +50,7 @@ final class ah {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var2_ref), "ah.F(" + param0 + ',' + param1 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var2_ref), "ah.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -61,7 +61,7 @@ final class ah {
           }
           EmailFormatValidator.field_j = param0;
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ah.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "ah.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -104,7 +104,7 @@ final class ah {
           if (4 == kb.field_b) {
             var4 = 2 * var4 / 4;
           }
-          of.field_d.drawScaled(-var4 + var2, var3 - var4 + k.field_c, 2 * var4, var4 * 2);
+          GrowableIntArray.field_d.drawScaled(-var4 + var2, var3 - var4 + k.field_c, 2 * var4, var4 * 2);
           if (k.field_c > 10) {
             BufferedSocket.field_b.drawCentred(rg.field_a, 320, 240, 16711680, -1);
           }
@@ -290,7 +290,7 @@ final class ah {
           var8.appendCrc32(true, var4);
           var8.backpatchByteLength(1, -var4 + var8.position);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ah.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "ah.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

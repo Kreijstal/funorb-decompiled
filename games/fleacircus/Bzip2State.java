@@ -59,7 +59,7 @@ final class Bzip2State {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        id.field_h[oe.field_a] = param3;
+        GrowableIntArray.field_h[oe.field_a] = param3;
         uf.field_e[oe.field_a] = param0;
         PcmResampler.field_c[oe.field_a] = param4;
         fg.field_u[oe.field_a] = param2;
@@ -90,7 +90,7 @@ final class Bzip2State {
           return (String) null;
         }
         if (!oa.field_l.ensureIndexLoaded((byte) -100)) {
-          return de.field_j;
+          return MusicPatchEnvelope.field_j;
         }
         if (!oa.field_l.tryLoadGroupByName("commonui", param0 + 1793)) {
           return rg.field_q + " - " + oa.field_l.getGroupLoadPercentByName(param0 ^ 1851, "commonui") + "%";

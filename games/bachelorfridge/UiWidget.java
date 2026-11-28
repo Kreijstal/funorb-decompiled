@@ -340,7 +340,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final static MusicPatch a(ResourceArchive param0, boolean param1, int param2) {
+    final static MusicPatch loadMusicPatch(ResourceArchive param0, boolean param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -356,7 +356,7 @@ class UiWidget extends IntrusiveNode {
             return null;
           }
           if (param1) {
-            UiWidget.a((ResourceArchive) null, false, -62);
+            UiWidget.loadMusicPatch((ResourceArchive) null, false, -62);
           }
           stackIn_6_0 = new MusicPatch(var4);
           return stackIn_6_0;
@@ -612,7 +612,7 @@ class UiWidget extends IntrusiveNode {
         field_x = null;
         field_i = null;
         if (param0 != 1023) {
-          UiWidget.a((ResourceArchive) null, true, -12);
+          UiWidget.loadMusicPatch((ResourceArchive) null, true, -12);
         }
     }
 

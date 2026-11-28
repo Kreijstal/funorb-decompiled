@@ -11,7 +11,7 @@ final class VorbisCodebook {
 
     private final static int lookup1Values(int param0, int param1) {
         int var2 = 0;
-        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; nh.integerPower(var2, param1, 26186) > param0; var2--) {
+        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; MusicPatchEnvelope.integerPower(var2, param1, 26186) > param0; var2--) {
         }
         return var2;
     }

@@ -73,7 +73,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           var1_int = jf.field_a[0];
           for (var2 = param0; var2 < jf.field_a.length; var2++) {
             var3 = jf.field_a[var2];
-            ug.a(ih.field_d, var2 << 4, ih.field_d, var1_int, var3);
+            ArrayBlockSupport.copyIntRange(ih.field_d, var2 << 4, ih.field_d, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;

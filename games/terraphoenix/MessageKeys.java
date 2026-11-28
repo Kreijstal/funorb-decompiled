@@ -237,7 +237,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("login_gameupdated", false);
                 if (null != var2) {
-                  sh.field_x = ll.a(param0 ^ 3, var2);
+                  MusicPatchNode.field_x = ll.a(param0 ^ 3, var2);
                 }
                 var2 = bc.a("create_unable", false);
                 if (var2 != null) {
@@ -1209,7 +1209,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("tocustomersupport", false);
                 if (null != var2) {
-                  fc.field_b = ll.a(0, var2);
+                  GrowableIntArray.field_b = ll.a(0, var2);
                 }
                 var2 = bc.a("changedisplayname", false);
                 if (var2 != null) {
@@ -1506,7 +1506,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("monthnames,1", false);
                 if (var2 != null) {
-                  DefaultTextWidgetRenderer.field_i[1] = ll.a(sl.a(param0, 3), var2);
+                  DefaultTextWidgetRenderer.field_i[1] = ll.a(sl.bitwiseXor(param0, 3), var2);
                 }
                 var2 = bc.a("monthnames,2", false);
                 if (var2 != null) {
@@ -1526,11 +1526,11 @@ final class MessageKeys {
                 }
                 var2 = bc.a("monthnames,6", false);
                 if (var2 != null) {
-                  DefaultTextWidgetRenderer.field_i[6] = ll.a(sl.a(param0, 3), var2);
+                  DefaultTextWidgetRenderer.field_i[6] = ll.a(sl.bitwiseXor(param0, 3), var2);
                 }
                 var2 = bc.a("monthnames,7", false);
                 if (null != var2) {
-                  DefaultTextWidgetRenderer.field_i[7] = ll.a(sl.a(param0, 3), var2);
+                  DefaultTextWidgetRenderer.field_i[7] = ll.a(sl.bitwiseXor(param0, 3), var2);
                 }
                 var2 = bc.a("monthnames,8", false);
                 if (var2 != null) {
@@ -1546,7 +1546,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("monthnames,11", false);
                 if (null != var2) {
-                  DefaultTextWidgetRenderer.field_i[11] = ll.a(sl.a(param0, 3), var2);
+                  DefaultTextWidgetRenderer.field_i[11] = ll.a(sl.bitwiseXor(param0, 3), var2);
                 }
                 var2 = bc.a("create_welcome", false);
                 if (null != var2) {
@@ -1830,7 +1830,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("create_account_success", false);
                 if (null != var2) {
-                  sh.field_q = ll.a(param0 - 3, var2);
+                  MusicPatchNode.field_q = ll.a(param0 - 3, var2);
                 }
                 var2 = bc.a("invalid_name", false);
                 if (var2 != null) {
@@ -2644,7 +2644,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("quickchat_shortcut_help,1", false);
                 if (null != var2) {
-                  QuickChatMenu.field_d[1] = ll.a(sl.a(param0, 3), var2);
+                  QuickChatMenu.field_d[1] = ll.a(sl.bitwiseXor(param0, 3), var2);
                 }
                 var2 = bc.a("quickchat_shortcut_help,2", false);
                 if (var2 != null) {
@@ -2652,11 +2652,11 @@ final class MessageKeys {
                 }
                 var2 = bc.a("quickchat_shortcut_help,3", false);
                 if (null != var2) {
-                  QuickChatMenu.field_d[3] = ll.a(sl.a(param0, 3), var2);
+                  QuickChatMenu.field_d[3] = ll.a(sl.bitwiseXor(param0, 3), var2);
                 }
                 var2 = bc.a("quickchat_shortcut_help,4", false);
                 if (null != var2) {
-                  QuickChatMenu.field_d[4] = ll.a(sl.a(param0, 3), var2);
+                  QuickChatMenu.field_d[4] = ll.a(sl.bitwiseXor(param0, 3), var2);
                 }
                 var2 = bc.a("quickchat_shortcut_help,5", false);
                 if (var2 != null) {
@@ -2676,7 +2676,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("quickchat_shortcut_keys,3", false);
                 if (var2 != null) {
-                  LoginPanel.field_J[3] = ll.a(sl.a(param0, 3), var2);
+                  LoginPanel.field_J[3] = ll.a(sl.bitwiseXor(param0, 3), var2);
                 }
                 var2 = bc.a("quickchat_shortcut_keys,4", false);
                 if (var2 != null) {
@@ -2756,7 +2756,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("reconnect_lost_seq,2", false);
                 if (var2 != null) {
-                  ProgressDialog.field_db[2] = ll.a(sl.a(param0, 3), var2);
+                  ProgressDialog.field_db[2] = ll.a(sl.bitwiseXor(param0, 3), var2);
                 }
                 var2 = bc.a("reconnect_lost_seq,3", false);
                 if (var2 != null) {
@@ -2880,7 +2880,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("mb_caption_title", false);
                 if (null != var2) {
-                  sb.field_l = ll.a(0, var2);
+                  MidiNoteMask.field_l = ll.a(0, var2);
                 }
                 var2 = bc.a("mb_including_gamename", false);
                 if (var2 != null) {
@@ -3020,7 +3020,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("mustlogin2,3", false);
                 if (null != var2) {
-                  kf.field_e[3] = ll.a(sl.a(param0, 3), var2);
+                  kf.field_e[3] = ll.a(sl.bitwiseXor(param0, 3), var2);
                 }
                 var2 = bc.a("mustlogin2,4", false);
                 if (var2 != null) {
@@ -3044,7 +3044,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("mustlogin3,2", false);
                 if (var2 != null) {
-                  ai.field_d[2] = ll.a(sl.a(param0, 3), var2);
+                  ai.field_d[2] = ll.a(sl.bitwiseXor(param0, 3), var2);
                 }
                 var2 = bc.a("mustlogin3,3", false);
                 if (null != var2) {
@@ -3060,11 +3060,11 @@ final class MessageKeys {
                 }
                 var2 = bc.a("mustlogin3,6", false);
                 if (null != var2) {
-                  ai.field_d[6] = ll.a(sl.a(param0, 3), var2);
+                  ai.field_d[6] = ll.a(sl.bitwiseXor(param0, 3), var2);
                 }
                 var2 = bc.a("mustlogin3,7", false);
                 if (null != var2) {
-                  ai.field_d[7] = ll.a(sl.a(param0, 3), var2);
+                  ai.field_d[7] = ll.a(sl.bitwiseXor(param0, 3), var2);
                 }
                 var2 = bc.a("discard", false);
                 if (null != var2) {
@@ -3104,31 +3104,31 @@ final class MessageKeys {
                 }
                 var2 = bc.a("mustlogin_alternate,1", false);
                 if (null != var2) {
-                  fc.field_k[1] = ll.a(0, var2);
+                  GrowableIntArray.field_k[1] = ll.a(0, var2);
                 }
                 var2 = bc.a("mustlogin_alternate,2", false);
                 if (var2 != null) {
-                  fc.field_k[2] = ll.a(0, var2);
+                  GrowableIntArray.field_k[2] = ll.a(0, var2);
                 }
                 var2 = bc.a("mustlogin_alternate,3", false);
                 if (var2 != null) {
-                  fc.field_k[3] = ll.a(0, var2);
+                  GrowableIntArray.field_k[3] = ll.a(0, var2);
                 }
                 var2 = bc.a("mustlogin_alternate,4", false);
                 if (null != var2) {
-                  fc.field_k[4] = ll.a(sl.a(param0, 3), var2);
+                  GrowableIntArray.field_k[4] = ll.a(sl.bitwiseXor(param0, 3), var2);
                 }
                 var2 = bc.a("mustlogin_alternate,5", false);
                 if (var2 != null) {
-                  fc.field_k[5] = ll.a(0, var2);
+                  GrowableIntArray.field_k[5] = ll.a(0, var2);
                 }
                 var2 = bc.a("mustlogin_alternate,6", false);
                 if (null != var2) {
-                  fc.field_k[6] = ll.a(0, var2);
+                  GrowableIntArray.field_k[6] = ll.a(0, var2);
                 }
                 var2 = bc.a("mustlogin_alternate,7", false);
                 if (null != var2) {
-                  fc.field_k[7] = ll.a(0, var2);
+                  GrowableIntArray.field_k[7] = ll.a(0, var2);
                 }
                 var2 = bc.a("subscription_cost_monthly,0", false);
                 if (null != var2) {
@@ -3156,7 +3156,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("subscription_cost_monthly,6", false);
                 if (var2 != null) {
-                  oe.field_b[6] = ll.a(sl.a(param0, 3), var2);
+                  oe.field_b[6] = ll.a(sl.bitwiseXor(param0, 3), var2);
                 }
                 var2 = bc.a("subscription_cost_monthly,7", false);
                 if (null != var2) {
@@ -3168,7 +3168,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("subscription_cost_monthly,9", false);
                 if (var2 != null) {
-                  oe.field_b[9] = ll.a(sl.a(param0, 3), var2);
+                  oe.field_b[9] = ll.a(sl.bitwiseXor(param0, 3), var2);
                 }
                 var2 = bc.a("subscription_cost_monthly,10", false);
                 if (null != var2) {

@@ -92,7 +92,7 @@ final class dp extends TextureOperator {
               }
               break;
             }
-            qq.a(var13, 0, StripedProgressWidget.field_M, var5);
+            ArrayBlockSupport.fillInts(var13, 0, StripedProgressWidget.field_M, var5);
             decompiledFrameRemainder0 = false;
           }
           else {

@@ -81,7 +81,7 @@ final class DamageEffect extends EventEffect {
             this.field_k != 0) {
             var7.applyStatusAndRefreshTile((byte) 116, this.field_k);
             var7.recalculateCreatureStats(15);
-            var11.field_T.field_t[var6.ownerIndex] = sr.a(var10.field_T.field_t[var6.ownerIndex], 1L << aj.a((byte) -20, this.field_k));
+            var11.field_T.field_t[var6.ownerIndex] = sr.bitwiseOr(var10.field_T.field_t[var6.ownerIndex], 1L << aj.a((byte) -20, this.field_k));
           }
           if (!var7.hasStatus(32, (byte) -117)) {
             if (this.field_k == 15) {
@@ -422,7 +422,7 @@ final class DamageEffect extends EventEffect {
             }
             var8.applyStatusAndRefreshTile((byte) 115, this.field_k);
             var8.recalculateCreatureStats(67);
-            param2.field_T.field_t[param1.ownerIndex] = sr.a(param2.field_T.field_t[param1.ownerIndex], 1L << aj.a((byte) -20, this.field_k));
+            param2.field_T.field_t[param1.ownerIndex] = sr.bitwiseOr(param2.field_T.field_t[param1.ownerIndex], 1L << aj.a((byte) -20, this.field_k));
           }
           if (var8.statusId != 32) {
             if (15 == this.field_k) {

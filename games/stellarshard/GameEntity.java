@@ -1155,7 +1155,7 @@ final class GameEntity {
                     var20Lifetime1 = (256 - var15) * var20Lifetime1 + var15 * 255 >> 9;
                     var18 = (-var15 + 256) * var18 >> 9;
                     var19 = var19 * (256 - var15) + var15 * 255 >> 9;
-                    var13[var7] = var20Lifetime1 + ((var19 << 8) + (var18 << 16)) + DirectByteStorage.a(var16 >> 1, 8355711);
+                    var13[var7] = var20Lifetime1 + ((var19 << 8) + (var18 << 16)) + DirectByteStorage.bitwiseAnd(var16 >> 1, 8355711);
                   }
                   var7++;
                 }
@@ -1295,7 +1295,7 @@ final class GameEntity {
           SoftwareRasterizer.fillRectangle(0, 0, 96, 96, 0);
           TriangleRasterizer.useRasterClip();
           var9_ref_bj.drawPerspective(var4, var5, var6, var7, 0, 0, 3000, -1L);
-          RichTextLayout.field_h.a((byte) -107);
+          RichTextLayout.field_h.setAsRasterTarget((byte) -107);
           if (0 == StripedProgressWidget.field_H) {
             if (DiskArchiveRequest.field_I > 0 &&
               (15 & DiskArchiveRequest.field_I) >= 7) {
@@ -1339,7 +1339,7 @@ final class GameEntity {
                   for (var11 = -(3 & gh.field_b); var11 < var35.field_x; var11 += 3) {
                     SoftwareRasterizer.drawHorizontalLine(0, var11, var35.field_w, 0);
                   }
-                  RichTextLayout.field_h.a((byte) -107);
+                  RichTextLayout.field_h.setAsRasterTarget((byte) -107);
                   if ((gh.field_b & 48) <= 0) {
                     var35.draw(var2, var3);
                   } else {

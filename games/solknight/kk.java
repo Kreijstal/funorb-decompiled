@@ -56,7 +56,7 @@ final class kk {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

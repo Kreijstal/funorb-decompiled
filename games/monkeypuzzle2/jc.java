@@ -87,7 +87,7 @@ final class jc {
               param0.field_o.length == param0.field_m) {
               var5 = new ki[param0.field_m + 6];
               var3 = var5;
-              gl.a(param0.field_o, 0, var5, 0, param0.field_m);
+              ArrayBlockSupport.copyObjectRange(param0.field_o, 0, var5, 0, param0.field_m);
               param0.field_o = var3;
             }
             if (param2.field_w == 5) {

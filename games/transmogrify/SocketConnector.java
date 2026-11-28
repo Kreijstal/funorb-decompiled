@@ -18,13 +18,13 @@ abstract class SocketConnector {
         od var2Lifetime1;
         var3 = Transmogrify.field_A ? 1 : 0;
         try {
-          kc.field_g = param0;
+          MusicPatchNode.field_g = param0;
           var2 = (od) (lb.field_f.beginForward((byte) -95));
           while (var2 != null) {
             if (!var2.field_i.isLinked(param1 - 9948)) {
               var2.unlink(param1 - 9951);
             } else {
-              var2.field_j.setVolume(128 + var2.field_k * kc.field_g >> 8);
+              var2.field_j.setVolume(128 + var2.field_k * MusicPatchNode.field_g >> 8);
             }
             var2 = (od) (lb.field_f.nextForward(true));
           }
@@ -35,7 +35,7 @@ abstract class SocketConnector {
             var2Lifetime1 = (od) (nc.field_q.beginForward((byte) -95));
             while (var2Lifetime1 != null) {
               if (var2Lifetime1.field_i.isLinked(8)) {
-                var2Lifetime1.field_j.setVolume(128 + var2Lifetime1.field_k * kc.field_g >> 8);
+                var2Lifetime1.field_j.setVolume(128 + var2Lifetime1.field_k * MusicPatchNode.field_g >> 8);
               } else {
                 var2Lifetime1.unlink(5);
               }
@@ -86,7 +86,7 @@ abstract class SocketConnector {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new PcmSample(param3.field_h, -param2 + param0);
-          ji.copyByteRange(param3.field_l, param2, var4.field_l, param1, var4.field_l.length);
+          ArrayBlockSupport.copyByteRange(param3.field_l, param2, var4.field_l, param1, var4.field_l.length);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

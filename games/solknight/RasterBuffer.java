@@ -13,7 +13,7 @@ abstract class RasterBuffer {
     static boolean field_c;
     int field_d;
 
-    abstract void a(java.awt.Component param0, int param1, int param2, int param3);
+    abstract void initialize(java.awt.Component param0, int param1, int param2, int param3);
 
     public static void clearStaticReferences(int param0) {
         field_e = null;
@@ -24,14 +24,14 @@ abstract class RasterBuffer {
         }
     }
 
-    final void a(boolean param0) {
+    final void setAsRasterTarget(boolean param0) {
         if (!param0) {
           return;
         }
         SoftwareRasterizer.setRasterBuffer(this.field_h, this.field_a, this.field_d);
     }
 
-    abstract void a(int param0, int param1, int param2, java.awt.Graphics param3);
+    abstract void drawImage(int param0, int param1, int param2, java.awt.Graphics param3);
 
     final static void a(int param0, String param1) {
         int stackIn_17_0 = 0;
@@ -121,7 +121,7 @@ abstract class RasterBuffer {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
     }
 

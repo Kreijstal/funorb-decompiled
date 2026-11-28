@@ -86,10 +86,10 @@ final class ea {
 
     final static void a(int param0) {
         ti.field_b.closeAllDialogs(26756);
-        if (null == ve.field_f) {
-          ve.field_f = new ProgressDialog(ti.field_b, sg.field_n);
+        if (null == GrowableIntArray.field_f) {
+          GrowableIntArray.field_f = new ProgressDialog(ti.field_b, sg.field_n);
         }
-        ti.field_b.showDialog((byte) 81, (UiWidget) (ve.field_f));
+        ti.field_b.showDialog((byte) 81, (UiWidget) (GrowableIntArray.field_f));
         if (param0 > -19) {
           ea.clearStaticReferences((byte) -78);
         }

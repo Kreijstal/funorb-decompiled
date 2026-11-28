@@ -18,11 +18,11 @@ final class oh {
         if (param2 <= 50) {
           field_a = (String) null;
           PacketBuffer.field_e = param1;
-          oi.field_f = param0;
+          GrowableIntArray.field_f = param0;
           return;
         }
         PacketBuffer.field_e = param1;
-        oi.field_f = param0;
+        GrowableIntArray.field_f = param0;
     }
 
     final static void a(int param0, byte param1, int param2, java.awt.Canvas param3) {

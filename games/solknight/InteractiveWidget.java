@@ -59,7 +59,7 @@ class InteractiveWidget extends UiWidget {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -88,7 +88,7 @@ class InteractiveWidget extends UiWidget {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -145,7 +145,7 @@ class InteractiveWidget extends UiWidget {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ class InteractiveWidget extends UiWidget {
           }
           this.field_u = param1;
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "pj.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "pj.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -239,7 +239,7 @@ class InteractiveWidget extends UiWidget {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -273,7 +273,7 @@ class InteractiveWidget extends UiWidget {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -332,7 +332,7 @@ class InteractiveWidget extends UiWidget {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -349,7 +349,7 @@ class InteractiveWidget extends UiWidget {
           var2 = new Sprite(param1.getFileByName(4, "final_frame.jpg", ""), (java.awt.Component) ((Object) EmailFormatValidator.field_q));
           var3 = var2.field_p;
           var4 = var2.field_t;
-          fl.b((byte) 91);
+          ByteArrayPoolSupport.b((byte) 91);
           IntrusiveNode.field_e = new Sprite(var3, var4 * param0 / 4);
           IntrusiveNode.field_e.bindAsRenderTarget();
           var2.drawOpaque(0, 0);
@@ -359,7 +359,7 @@ class InteractiveWidget extends UiWidget {
           ql.field_p.field_n = IntrusiveNode.field_e.field_t;
           MidiPcmStream.e(4096);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "pj.KA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "pj.KA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -375,7 +375,7 @@ class InteractiveWidget extends UiWidget {
             this.pointerReleased(BufferedSocket.field_m, 0, param3, param2, PacketBuffer.field_j, param0);
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "pj.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "pj.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

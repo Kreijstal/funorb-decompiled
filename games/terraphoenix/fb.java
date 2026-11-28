@@ -15,7 +15,7 @@ final class fb extends IntrusiveNode {
     int field_k;
     int field_j;
 
-    static long a(long param0, long param1) {
+    static long bitwiseXor(long param0, long param1) {
         return param0 ^ param1;
     }
 
@@ -151,9 +151,9 @@ final class fb extends IntrusiveNode {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_n[0][var0] = TutorialController.a(TutorialController.a(TutorialController.a(var8 << 16, TutorialController.a(var10 << 24, TutorialController.a(TutorialController.a(TutorialController.a(var2 << 56, var2 << 48), var6 << 40), var2 << 32))), var4 << 8), var12);
+            field_n[0][var0] = TutorialController.bitwiseOr(TutorialController.bitwiseOr(TutorialController.bitwiseOr(var8 << 16, TutorialController.bitwiseOr(var10 << 24, TutorialController.bitwiseOr(TutorialController.bitwiseOr(TutorialController.bitwiseOr(var2 << 56, var2 << 48), var6 << 40), var2 << 32))), var4 << 8), var12);
             for (var14 = 1; 8 > var14; var14++) {
-                field_n[var14][var0] = TutorialController.a(field_n[-1 + var14][var0] >>> 8, field_n[var14 - 1][var0] << 56);
+                field_n[var14][var0] = TutorialController.bitwiseOr(field_n[-1 + var14][var0] >>> 8, field_n[var14 - 1][var0] << 56);
             }
             var0++;
         }
@@ -162,7 +162,7 @@ final class fb extends IntrusiveNode {
         var0 = var15;
         while (var15 <= 10) {
             var1 = 8 * var15 - 8;
-            field_m[var15] = fb.a(fb.a(wj.a(field_n[6][6 + var1], 65280L), fb.a(wj.a(16711680L, field_n[5][5 + var1]), fb.a(wj.a(4278190080L, field_n[4][4 + var1]), fb.a(fb.a(fb.a(wj.a(field_n[1][1 + var1], 71776119061217280L), wj.a(-72057594037927936L, field_n[0][var1])), wj.a(280375465082880L, field_n[2][var1 + 2])), wj.a(field_n[3][var1 + 3], 1095216660480L))))), wj.a(field_n[7][var1 + 7], 255L));
+            field_m[var15] = fb.bitwiseXor(fb.bitwiseXor(wj.bitwiseAnd(field_n[6][6 + var1], 65280L), fb.bitwiseXor(wj.bitwiseAnd(16711680L, field_n[5][5 + var1]), fb.bitwiseXor(wj.bitwiseAnd(4278190080L, field_n[4][4 + var1]), fb.bitwiseXor(fb.bitwiseXor(fb.bitwiseXor(wj.bitwiseAnd(field_n[1][1 + var1], 71776119061217280L), wj.bitwiseAnd(-72057594037927936L, field_n[0][var1])), wj.bitwiseAnd(280375465082880L, field_n[2][var1 + 2])), wj.bitwiseAnd(field_n[3][var1 + 3], 1095216660480L))))), wj.bitwiseAnd(field_n[7][var1 + 7], 255L));
             var15++;
         }
     }

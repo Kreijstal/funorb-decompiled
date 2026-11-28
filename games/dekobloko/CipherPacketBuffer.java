@@ -90,7 +90,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           if (integerArgument2 != -2093) {
             rgbSpriteState0061 = (RgbSprite) null;
           }
-          MixedSupport042.performAction0537(130, 256, 16694016, NetworkSupport006.stringState0339, integerArgument1 + 80, SceneWidget.renderingSupport009State0007);
+          MixedSupport042.performAction0537(130, 256, 16694016, GrowableIntArray.stringState0339, integerArgument1 + 80, SceneWidget.renderingSupport009State0007);
           integerLocal3 = 140;
           integerLocal5 = 0;
           for (integerLocal1 = 0; integerLocal1 < 6; integerLocal1++) {

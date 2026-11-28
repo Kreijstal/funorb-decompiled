@@ -15,7 +15,7 @@ final class MusicPatchPcmStream extends PcmStream {
     static String field_A;
     PcmStreamMixer field_r;
 
-    private final void renderVoiceFrames(int param0, int param1, int param2, cg param3, int[] param4, boolean param5) {
+    private final void renderVoiceFrames(int param0, int param1, int param2, MusicPatchNode param3, int[] param4, boolean param5) {
         MidiPcmStream stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         boolean stackIn_15_2 = false;
@@ -101,11 +101,11 @@ final class MusicPatchPcmStream extends PcmStream {
 
     final void skipFrames(int param0) {
         int var2;
-        cg var3;
+        MusicPatchNode var3;
         int var4;
         var4 = MinerDisturbance.field_ab;
         this.field_r.skipFrames(param0);
-        var3 = (cg) (this.field_v.beginForward(73));
+        var3 = (MusicPatchNode) (this.field_v.beginForward(73));
         while (var3 != null) {
           if (!this.field_u.isVoiceInactive(var3, -24)) {
             var2 = param0;
@@ -119,7 +119,7 @@ final class MusicPatchPcmStream extends PcmStream {
               var2 = var2 - var3.field_M;
             } while (!this.field_u.updateVoice(var2, var3, 1387831944, (int[]) null, 0));
           }
-          var3 = (cg) (this.field_v.nextForward((byte) 56));
+          var3 = (MusicPatchNode) (this.field_v.nextForward((byte) 56));
         }
     }
 
@@ -127,7 +127,7 @@ final class MusicPatchPcmStream extends PcmStream {
         return 0;
     }
 
-    private final void skipVoiceFrames(byte param0, int param1, cg param2) {
+    private final void skipVoiceFrames(byte param0, int param1, MusicPatchNode param2) {
         MidiPcmStream stackIn_6_0 = null;
         int stackIn_6_1 = 0;
         boolean stackIn_7_2 = false;
@@ -182,9 +182,9 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     final PcmStream nextChildStream() {
-        cg var1_ref = null;
+        MusicPatchNode var1_ref = null;
         do {
-          var1_ref = (cg) (this.field_v.nextForward((byte) 56));
+          var1_ref = (MusicPatchNode) (this.field_v.nextForward((byte) 56));
           if (var1_ref == null) {
             return null;
           }
@@ -274,7 +274,7 @@ final class MusicPatchPcmStream extends PcmStream {
     final void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
-        cg var6 = null;
+        MusicPatchNode var6 = null;
         int var7 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -284,7 +284,7 @@ final class MusicPatchPcmStream extends PcmStream {
         var7 = MinerDisturbance.field_ab;
         try {
           this.field_r.mixInto(param0, param1, param2);
-          var6 = (cg) (this.field_v.beginForward(90));
+          var6 = (MusicPatchNode) (this.field_v.beginForward(90));
           while (var6 != null) {
             if (!this.field_u.isVoiceInactive(var6, -75)) {
               var5 = param2;
@@ -300,7 +300,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 var5 = var5 - var6.field_M;
               } while (!this.field_u.updateVoice(var5, var6, 1387831944, param0, var4_int));
             }
-            var6 = (cg) (this.field_v.nextForward((byte) 56));
+            var6 = (MusicPatchNode) (this.field_v.nextForward((byte) 56));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -344,7 +344,7 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     final PcmStream firstChildStream() {
-        cg var1 = (cg) (this.field_v.beginForward(97));
+        MusicPatchNode var1 = (MusicPatchNode) (this.field_v.beginForward(97));
         if (var1 == null) {
           return null;
         }

@@ -44,7 +44,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
               je.field_f = false;
               var3_int = 1;
             }
-            o.a(ra.a(param1 ^ 24), param1 + 278, var3_int != 0, dl.field_l, sa.a(true));
+            o.a(ra.a(param1 ^ 24), param1 + 278, var3_int != 0, MusicPatchNode.field_l, sa.a(true));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -61,7 +61,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         }
     }
 
-    private final int a(String param0, int param1, int param2, int param3, String param4, UiComponent param5) {
+    private final int addLabeledFieldWithDefaultValidationMessage(String param0, int param1, int param2, int param3, String param4, UiComponent param5) {
         RuntimeException var7 = null;
         java.applet.Applet var8 = null;
         int stackIn_3_0 = 0;
@@ -78,7 +78,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
             var8 = (java.applet.Applet) null;
             DisplayNameSelectionPanel.a(-106, (java.applet.Applet) null);
           }
-          stackIn_3_0 = this.a(param1, param4, param5, param2, param0, 83, 35);
+          stackIn_3_0 = this.addLabeledFieldWithValidationMessage(param1, param4, param5, param2, param0, 83, 35);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -269,7 +269,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
               }
               var9 = "tuhstatbut";
               var3 = (String) (JavaScriptBridge.callWithoutArguments("getcookies", param1, 20511));
-              var4 = dl.a(var3, ';', -26);
+              var4 = MusicPatchNode.a(var3, ';', -26);
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
@@ -372,7 +372,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         var2.setBounds((byte) 119, 20, 50, 270, var3);
         this.addChild(0, var2);
         var3 += 50;
-        var3 = var3 + (5 + this.a(pa.field_t, 170, var3, -114, te.field_a, this.field_P));
+        var3 = var3 + (5 + this.addLabeledFieldWithDefaultValidationMessage(pa.field_t, 170, var3, -114, te.field_a, this.field_P));
         this.field_J.setBounds((byte) 120, 496 - var5 >> 1, 40, var5, var3);
         this.field_K.setBounds((byte) 118, 3 + var4, 40, 60, var3 + 15);
         this.field_K.field_k = (WidgetEventListener) (this);
@@ -409,7 +409,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         }
     }
 
-    private final int a(int param0, String param1, UiComponent param2, int param3, String param4, int param5, int param6) {
+    private final int addLabeledFieldWithValidationMessage(int param0, String param1, UiComponent param2, int param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
         ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;

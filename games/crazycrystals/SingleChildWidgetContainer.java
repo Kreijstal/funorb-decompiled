@@ -127,7 +127,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
           }
           var5_int = param0;
           if (var5_int == 80) {
-            if (cp.field_k[81]) {
+            if (MusicPatchEnvelope.field_k[81]) {
               stackIn_11_0 = this.focusPreviousChild(param2, false);
             } else {
               stackIn_11_0 = this.focusNextChild(4, param2);

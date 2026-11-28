@@ -83,21 +83,21 @@ final class ml {
         var5 = (lj.field_t + (ProgressMessageDialog.field_sb + (nk.field_w + GameAppletShell.field_e))) % 4;
         if (var5 != 0) {
           if (1 == var5) {
-            pn.field_b = pn.field_b - aa.field_b;
+            pn.field_b = pn.field_b - GrowableIntArray.field_b;
             hl.field_b = hl.field_b - 1;
           } else {
             if (var5 != 2) {
               if (var5 == 3) {
-                aa.field_b = aa.field_b - 1;
+                GrowableIntArray.field_b = GrowableIntArray.field_b - 1;
                 pn.field_b = pn.field_b - hl.field_b;
               }
             } else {
-              aa.field_b = aa.field_b + 1;
+              GrowableIntArray.field_b = GrowableIntArray.field_b + 1;
               pn.field_b = pn.field_b + hl.field_b;
             }
           }
         } else {
-          pn.field_b = pn.field_b + aa.field_b;
+          pn.field_b = pn.field_b + GrowableIntArray.field_b;
           hl.field_b = hl.field_b + 1;
         }
         boolean decompiledFrameRemainder0 = true;
@@ -209,7 +209,7 @@ final class ml {
                                                     var5 != 20) {
                                                     if (var5 == 4) {
                                                       if (!(!this.field_o.a((byte) -45))) {
-                                                        ng.a((byte) 73);
+                                                        MusicPatchEnvelope.a((byte) 73);
                                                         try {
                                                           uf.a(13, RichTextLayout.c(param0 - 555));
                                                         } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -404,7 +404,7 @@ final class ml {
               } else {
                 if (this.field_o.a((byte) 10)) {
                   if (null != kf.field_d) {
-                    ng.a((byte) -122);
+                    MusicPatchEnvelope.a((byte) -122);
                   } else {
                     LoginPanel.q(-64);
                   }
@@ -1775,7 +1775,7 @@ final class ml {
         if (sn.field_b[var5] == null) {
           stackIn_17_0 = (0 == var5) ? 6 : 7;
           var6 = stackIn_17_0;
-          sn.field_b[var5] = gk.a(3, 1, var6, DefaultTextWidgetRenderer.a((int) param3, -18), 10);
+          sn.field_b[var5] = gk.a(3, 1, var6, DefaultTextWidgetRenderer.bitwiseXor((int) param3, -18), 10);
         }
         if (!this.field_p) {
           stackIn_26_0 = (param1) ? 0 : 640;

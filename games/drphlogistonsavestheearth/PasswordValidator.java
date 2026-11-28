@@ -124,7 +124,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_33_0 = FullscreenStatusDialog.field_jb;
             return stackIn_33_0;
           }
-          if (rb.a(var6, var5, -1)) {
+          if (GrowableIntArray.a(var6, var5, -1)) {
             stackIn_22_0 = nj.field_c;
             return stackIn_22_0;
           }

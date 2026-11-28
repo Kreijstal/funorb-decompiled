@@ -141,8 +141,8 @@ final class pd extends rj {
         var7 = DungeonAssault.field_K;
         var4 = param0 + this.field_t;
         var5 = this.field_i + param2;
-        bp.a(var5, AchievementIconEntry.field_q, var4, (byte) 99);
-        bp.a(this.field_F + var5 + 10, qf.field_f, var4, (byte) 99);
+        GrowableIntArray.a(var5, AchievementIconEntry.field_q, var4, (byte) 99);
+        GrowableIntArray.a(this.field_F + var5 + 10, qf.field_f, var4, (byte) 99);
         for (var6 = 0; var6 < 7; var6++) {
           te.b(var6 + (6 + var4), var5 + 11, this.field_F - 2, DialogMessagePane.field_M);
         }
@@ -166,8 +166,8 @@ final class pd extends rj {
           }
           var6Lifetime3 = stackIn_19_0;
           SoftwareRasterizer.setClip(var4 + 4, var6Lifetime3 + var5 + 5, qh.field_q.field_y + (4 + var4), qh.field_q.field_v / 2 + (var6Lifetime3 + 10) + (var5 + 5));
-          bp.a(10 + var5 + var6Lifetime3, ModalDialogHost.field_G, var4 + 4, (byte) 99);
-          bp.a(var5 - (-10 - var6Lifetime3) - 23, ModalDialogHost.field_G, 4 + var4, (byte) 99);
+          GrowableIntArray.a(10 + var5 + var6Lifetime3, ModalDialogHost.field_G, var4 + 4, (byte) 99);
+          GrowableIntArray.a(var5 - (-10 - var6Lifetime3) - 23, ModalDialogHost.field_G, 4 + var4, (byte) 99);
           SoftwareRasterizer.resetClip();
           qh.field_q.drawScaled(var4 + 4, var6Lifetime3 + var5 + 10, qh.field_q.field_y, qh.field_q.field_v / 2);
         } else {
@@ -177,7 +177,7 @@ final class pd extends rj {
             stackIn_15_0 = this.field_z * (this.field_F - 46) / this.field_C;
           }
           var6Lifetime3 = stackIn_15_0;
-          bp.a(var6Lifetime3 + (10 + var5), ModalDialogHost.field_G, 4 + var4, (byte) 99);
+          GrowableIntArray.a(var6Lifetime3 + (10 + var5), ModalDialogHost.field_G, 4 + var4, (byte) 99);
           qh.field_q.draw(var4 + 4, var6Lifetime3 + 10 + var5);
         }
     }

@@ -25,7 +25,7 @@ final class mk implements WidgetRenderer {
     final static ln a(int param0) {
         ln var1 = null;
         if (param0 > 76) {
-          var1 = new ln(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], ng.field_e[0], ClientException.field_b[0], af.field_p);
+          var1 = new ln(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], MusicPatchEnvelope.field_e[0], ClientException.field_b[0], af.field_p);
           ec.a((byte) 24);
           return var1;
         }

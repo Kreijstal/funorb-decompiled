@@ -38,11 +38,11 @@ final class ContextualRuntimeException extends RuntimeException {
 
     final static void a(int param0) {
         int var1 = 0;
-        if (224 <= gf.field_d) {
+        if (224 <= ByteArrayPoolSupport.field_d) {
           ia.a(true, 256);
         } else {
-          var1 = gf.field_d % 32;
-          ia.a(true, -var1 + (gf.field_d + 32));
+          var1 = ByteArrayPoolSupport.field_d % 32;
+          ia.a(true, -var1 + (ByteArrayPoolSupport.field_d + 32));
         }
         if (param0 == -32) {
           return;

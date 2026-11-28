@@ -252,7 +252,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
         }
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseOr(int param0, int param1) {
         return param0 | param1;
     }
 

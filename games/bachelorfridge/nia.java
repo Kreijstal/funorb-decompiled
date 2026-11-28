@@ -134,7 +134,7 @@ final class nia extends lw {
         RuntimeException var1 = null;
         var5 = BachelorFridge.field_y;
         try {
-          sd.field_b = new int[50];
+          ByteArrayPoolSupport.field_b = new int[50];
           var1_int = (SetFriendlyEffect.a(false, 16777088) - SetFriendlyEffect.a(false, 16711680)) / 50;
           var2 = (UiNode.a(-6, 16777088) - UiNode.a(-127, 16711680)) / 50;
           if (param0 < 16) {
@@ -142,7 +142,7 @@ final class nia extends lw {
           }
           var3 = (lda.a(16777088, (byte) -36) - lda.a(16711680, (byte) -45)) / 50;
           for (var4 = 0; var4 < 50; var4++) {
-            sd.field_b[var4] = gna.a(SetFriendlyEffect.a(false, 16711680) + var4 * var1_int, (byte) -64, var4 * var3 + lda.a(16711680, (byte) -21), UiNode.a(-127, 16711680) + var4 * var2);
+            ByteArrayPoolSupport.field_b[var4] = gna.a(SetFriendlyEffect.a(false, 16711680) + var4 * var1_int, (byte) -64, var4 * var3 + lda.a(16711680, (byte) -21), UiNode.a(-127, 16711680) + var4 * var2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

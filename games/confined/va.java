@@ -198,7 +198,7 @@ final class va {
         int var1 = -21 % ((-51 - param0) / 45);
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseAnd(int param0, int param1) {
         return param0 & param1;
     }
 

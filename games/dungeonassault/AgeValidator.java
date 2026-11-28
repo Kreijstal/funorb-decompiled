@@ -762,7 +762,7 @@ final class AgeValidator extends TextFieldValidator {
             gh.field_i[30].field_z = var3_ref_StringLifetime64;
             gh.field_i[30].field_o = var5Lifetime30;
           }
-          var3_ref_StringLifetime65 = kk.field_i;
+          var3_ref_StringLifetime65 = MusicPatch.field_i;
           var4Lifetime65 = ResizableModalDialog.field_eb;
           var5Lifetime31 = (String) null;
           if (gh.field_i[31] != null) {
@@ -900,7 +900,7 @@ final class AgeValidator extends TextFieldValidator {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, RgbSprite[] param7, int param8, int param9, RgbSprite[] param10, BitmapFont param11, BitmapFont param12, int param13, boolean param14) {
         try {
           RgbSprite[] var16 = (RgbSprite[]) null;
-          lp.a(param2, param8, param0, 87, param4, param10, om.field_a, param11, 0, field_p, param1, param5, (RgbSprite[]) null, param13, param6, param3, param7, 480, param12, sm.field_c, param9);
+          MusicPatchNode.a(param2, param8, param0, 87, param4, param10, om.field_a, param11, 0, field_p, param1, param5, (RgbSprite[]) null, param13, param6, param3, param7, 480, param12, sm.field_c, param9);
           ic.a(param14, -31425);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "he.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + (param11 != null ? "{...}" : "null") + ',' + (param12 != null ? "{...}" : "null") + ',' + param13 + ',' + param14 + ')');
@@ -1308,7 +1308,7 @@ final class AgeValidator extends TextFieldValidator {
                 param6 = (param12 & 16777472) + (65536 & -param12 + param11);
                 incrementValue$1 = param8;
                 param8++;
-                param0[incrementValue$1] = mp.a(-(param6 >>> 8) + param6, -param6 + param11);
+                param0[incrementValue$1] = mp.bitwiseOr(-(param6 >>> 8) + param6, -param6 + param11);
               } else {
                 param8++;
               }

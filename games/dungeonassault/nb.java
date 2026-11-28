@@ -8,7 +8,7 @@ final class nb {
     static int[] field_e;
     static String field_b;
 
-    static int a(int param0, int param1) {
+    static int bitwiseAnd(int param0, int param1) {
         return param0 & param1;
     }
 

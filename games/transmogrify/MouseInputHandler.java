@@ -250,10 +250,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               var2 = (-161 + PacketBuffer.field_j) / AccountRegistrationPanel.field_K.field_n;
               if (var2 >= 0 &&
                 var2 < 8 &&
-                null == si.newRack.tiles[var2] &&
+                null == MusicPatch.newRack.tiles[var2] &&
                 bk.field_a >= 247 &&
                 AccountRegistrationPanel.field_K.field_m + 247 > bk.field_a) {
-                var1 = si.newRack;
+                var1 = MusicPatch.newRack;
               } else {
                 var2 = -1;
               }

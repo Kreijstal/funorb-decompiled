@@ -74,7 +74,7 @@ final class on extends DefaultTextWidgetRenderer {
             return;
           }
           if (!param0) {
-            ai.a(this.field_w, 0, param2.field_w, 0, 6);
+            ArrayBlockSupport.copyObjectRange(this.field_w, 0, param2.field_w, 0, 6);
             return;
           }
           for (var4_int = 0; var4_int < 6; var4_int++) {

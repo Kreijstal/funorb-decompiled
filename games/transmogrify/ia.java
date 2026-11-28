@@ -222,12 +222,12 @@ final class ia extends IntrusiveNode {
             }
           }
           if (var2 == null) {
-            wd.a(17099, true, var3);
+            MidiNoteMask.a(17099, true, var3);
           } else {
             if (var2 != var3 &&
               var3 != bd.field_u[6] &&
               var2 != bd.field_u[5]) {
-              wd.a(17099, false, bd.field_u[5]);
+              MidiNoteMask.a(17099, false, bd.field_u[5]);
             }
           }
           if (Bzip2State.field_A < 6) {
@@ -250,7 +250,7 @@ final class ia extends IntrusiveNode {
             }
             if (Bzip2State.field_A == 0) {
               var4 = 1;
-              var23 = si.newRack.tiles;
+              var23 = MusicPatch.newRack.tiles;
               var6 = 0;
               scanLoop1: while (true) {
                 if (var23.length > var6) {
@@ -398,7 +398,7 @@ final class ia extends IntrusiveNode {
             if (3 != Bzip2State.field_A) {
               if (4 == Bzip2State.field_A) {
                 var4Lifetime4 = 1;
-                var21 = si.newRack.tiles;
+                var21 = MusicPatch.newRack.tiles;
                 var6Lifetime4 = 0;
                 scanLoop4: while (true) {
                   if (var21.length > var6Lifetime4) {
@@ -450,7 +450,7 @@ final class ia extends IntrusiveNode {
               }
             } else {
               wk.carryoverRack.clear(true);
-              si.newRack.clear(true);
+              MusicPatch.newRack.clear(true);
               if (n.submittedWordCount != 10 && (!mg.field_d ||
                 2 != n.submittedWordCount)) {
                 var18 = od.submissionRack.tiles;
@@ -469,25 +469,25 @@ final class ia extends IntrusiveNode {
                   n.submittedWordCount == 1 &&
                   null != MouseInputHandler.field_c.field_n) {
                   for (var5Lifetime2 = 0; var5Lifetime2 < MouseInputHandler.field_c.field_n.length(); var5Lifetime2++) {
-                    si.newRack.tiles[var5Lifetime2] = NodeHashTableIterator.a(si.newRack, var5Lifetime2, MouseInputHandler.field_c, (byte) 105, MouseInputHandler.field_c.field_n.charAt(var5Lifetime2));
-                    stackIn_157_0 = si.newRack.tiles[var5Lifetime2];
+                    MusicPatch.newRack.tiles[var5Lifetime2] = NodeHashTableIterator.a(MusicPatch.newRack, var5Lifetime2, MouseInputHandler.field_c, (byte) 105, MouseInputHandler.field_c.field_n.charAt(var5Lifetime2));
+                    stackIn_157_0 = MusicPatch.newRack.tiles[var5Lifetime2];
                     stackIn_158_1 = (var5Lifetime2 == 1);
                     stackIn_157_0.doublesWordScore = stackIn_158_1;
-                    dupTemp$1 = si.newRack.tiles[var5Lifetime2];
+                    dupTemp$1 = MusicPatch.newRack.tiles[var5Lifetime2];
                     dupTemp$1.destinationY = 247 - AccountRegistrationPanel.field_K.field_m;
-                    si.newRack.tiles[var5Lifetime2].y = 247 - AccountRegistrationPanel.field_K.field_m;
+                    MusicPatch.newRack.tiles[var5Lifetime2].y = 247 - AccountRegistrationPanel.field_K.field_m;
                   }
                 } else {
                   MouseInputHandler.field_c.a((byte) 92, var31);
                   var5Lifetime2 = AccountNameAvailabilityValidator.a(8, o.field_o, false);
                   for (var6Lifetime4 = 0; var31.length > var6Lifetime4; var6Lifetime4++) {
-                    si.newRack.tiles[var6Lifetime4] = NodeHashTableIterator.a(si.newRack, var6Lifetime4, MouseInputHandler.field_c, (byte) 30, var31[var6Lifetime4]);
-                    stackIn_151_0 = si.newRack.tiles[var6Lifetime4];
+                    MusicPatch.newRack.tiles[var6Lifetime4] = NodeHashTableIterator.a(MusicPatch.newRack, var6Lifetime4, MouseInputHandler.field_c, (byte) 30, var31[var6Lifetime4]);
+                    stackIn_151_0 = MusicPatch.newRack.tiles[var6Lifetime4];
                     stackIn_152_1 = (var5Lifetime2 == var6Lifetime4);
                     stackIn_151_0.doublesWordScore = stackIn_152_1;
-                    dupTemp$2 = si.newRack.tiles[var6Lifetime4];
+                    dupTemp$2 = MusicPatch.newRack.tiles[var6Lifetime4];
                     dupTemp$2.destinationY = 247 - AccountRegistrationPanel.field_K.field_m;
-                    si.newRack.tiles[var6Lifetime4].y = 247 - AccountRegistrationPanel.field_K.field_m;
+                    MusicPatch.newRack.tiles[var6Lifetime4].y = 247 - AccountRegistrationPanel.field_K.field_m;
                   }
                 }
                 wk.carryoverRack.originY = 114;
@@ -543,9 +543,9 @@ final class ia extends IntrusiveNode {
                   PacketBuffer.field_j < 242 &&
                   bk.field_a >= 376 &&
                   407 > bk.field_a) {
-                  vk.a((byte) 85, FullscreenFocusCanvas.field_d[0]);
+                  ByteArrayPoolSupport.a((byte) 85, FullscreenFocusCanvas.field_d[0]);
                   wk.carryoverRack.shuffle(-10874);
-                  si.newRack.shuffle(-10874);
+                  MusicPatch.newRack.shuffle(-10874);
                   return;
                 }
                 if (bk.field_a >= 114 &&
@@ -571,9 +571,9 @@ final class ia extends IntrusiveNode {
                     247 + AccountRegistrationPanel.field_K.field_m > bk.field_a &&
                     161 <= PacketBuffer.field_j) {
                     var4Lifetime1 = (-161 + PacketBuffer.field_j) / AccountRegistrationPanel.field_K.field_n;
-                    if (var4Lifetime1 < si.newRack.tiles.length) {
+                    if (var4Lifetime1 < MusicPatch.newRack.tiles.length) {
                       rk.field_p = -(-(var4Lifetime1 * AccountRegistrationPanel.field_K.field_n) + (PacketBuffer.field_j - 161));
-                      sg.field_d = si.newRack.tiles[var4Lifetime1];
+                      sg.field_d = MusicPatch.newRack.tiles[var4Lifetime1];
                       ek.field_e = 247 - bk.field_a;
                     }
                   }
@@ -680,9 +680,9 @@ final class ia extends IntrusiveNode {
               continue;
             }
             if (ch.field_d == 83) {
-              vk.a((byte) 78, FullscreenFocusCanvas.field_d[0]);
+              ByteArrayPoolSupport.a((byte) 78, FullscreenFocusCanvas.field_d[0]);
               wk.carryoverRack.shuffle(-10874);
-              si.newRack.shuffle(-10874);
+              MusicPatch.newRack.shuffle(-10874);
               continue;
             }
             if (85 == ch.field_d &&
@@ -699,7 +699,7 @@ final class ia extends IntrusiveNode {
               }
               var28 = NodeHashTableIterator.a((byte)sg.field_n, false);
               if (var28 == null) {
-                vk.a((byte) 91, FullscreenFocusCanvas.field_d[6]);
+                ByteArrayPoolSupport.a((byte) 91, FullscreenFocusCanvas.field_d[6]);
                 continue;
               }
               var5Lifetime1 = 0;
@@ -740,10 +740,10 @@ final class ia extends IntrusiveNode {
               var5_refLifetime1 = var26Lifetime1;
               if (var26Lifetime1 != null) {
                 if (var26Lifetime1.carryoverFlag != 0) {
-                  var7 = si.newRack;
+                  var7 = MusicPatch.newRack;
                   var6_ref_j = wk.carryoverRack;
                 } else {
-                  var6_ref_j = si.newRack;
+                  var6_ref_j = MusicPatch.newRack;
                   var7 = wk.carryoverRack;
                 }
                 for (var8 = 0; var6_ref_j.tiles.length > var8; var8++) {
@@ -785,11 +785,11 @@ final class ia extends IntrusiveNode {
               var12 = 0;
               var10Lifetime1 = var12;
               while (var12 < 8) {
-                if (si.newRack.tiles[var12] != null &&
-                  var6Lifetime1 == si.newRack.tiles[var12].letter &&
-                  var9 < si.newRack.tiles[var12].field_l) {
-                  var7Lifetime1 = si.newRack;
-                  var9 = si.newRack.tiles[var12].field_l;
+                if (MusicPatch.newRack.tiles[var12] != null &&
+                  var6Lifetime1 == MusicPatch.newRack.tiles[var12].letter &&
+                  var9 < MusicPatch.newRack.tiles[var12].field_l) {
+                  var7Lifetime1 = MusicPatch.newRack;
+                  var9 = MusicPatch.newRack.tiles[var12].field_l;
                   var8Lifetime1 = var12;
                 }
                 var12++;

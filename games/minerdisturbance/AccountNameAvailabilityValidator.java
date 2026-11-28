@@ -53,7 +53,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             var8.showAccountCreationConnectionFailure(23101);
             return true;
           }
-          qf.field_r = param5;
+          MidiNoteMask.field_r = param5;
           km.field_b = param6;
           PcmResampler.field_d = param0;
           ic.field_l = AwtRasterBuffer.field_e;

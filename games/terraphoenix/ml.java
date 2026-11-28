@@ -12,10 +12,10 @@ final class ml extends hb {
           if (uj.field_c) {
             return null;
           }
-          if (qd.field_l > ga.field_j) {
+          if (MusicPatch.field_l > ga.field_j) {
             return null;
           }
-          if (!(ga.field_j >= qd.field_l + fh.field_h)) {
+          if (!(ga.field_j >= MusicPatch.field_l + fh.field_h)) {
             return cc.field_j;
           }
           return null;
@@ -23,10 +23,10 @@ final class ml extends hb {
         if (uj.field_c) {
           return null;
         }
-        if (qd.field_l > ga.field_j) {
+        if (MusicPatch.field_l > ga.field_j) {
           return null;
         }
-        if (!(ga.field_j >= qd.field_l + fh.field_h)) {
+        if (!(ga.field_j >= MusicPatch.field_l + fh.field_h)) {
           return cc.field_j;
         }
         return null;

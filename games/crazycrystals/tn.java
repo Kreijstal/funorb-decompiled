@@ -297,7 +297,7 @@ final class tn extends pn {
         int var4_intLifetime1;
         if (param0) {
           for (var4_int = 0; var1 > var4_int; var4_int++) {
-            var3[var4_int] = gh.field_z[pf.b(255, (int) var7[var4_int])];
+            var3[var4_int] = gh.field_z[pf.bitwiseAnd(255, (int) var7[var4_int])];
           }
           var4 = new RgbSprite(SecondaryIntrusiveDeque.field_c, bo.field_o, uo.field_k[0], MouseWheelInput.field_a[0], uo.field_l[0], je.field_c[0], var3);
           ok.a(2188450);
@@ -305,7 +305,7 @@ final class tn extends pn {
         }
         tn.clearStaticReferences(87);
         for (var4_intLifetime1 = 0; var1 > var4_intLifetime1; var4_intLifetime1++) {
-          var3[var4_intLifetime1] = gh.field_z[pf.b(255, (int) var7[var4_intLifetime1])];
+          var3[var4_intLifetime1] = gh.field_z[pf.bitwiseAnd(255, (int) var7[var4_intLifetime1])];
         }
         var4Lifetime1 = new RgbSprite(SecondaryIntrusiveDeque.field_c, bo.field_o, uo.field_k[0], MouseWheelInput.field_a[0], uo.field_l[0], je.field_c[0], var3);
         ok.a(2188450);

@@ -78,7 +78,7 @@ final class lh {
             if (var4 == null) {
               var2 = 0;
             } else {
-              this.field_y[var3] = ie.a(this.field_y[var3], 15);
+              this.field_y[var3] = ie.bitwiseAnd(this.field_y[var3], 15);
               this.field_o[var3] = var4;
             }
           }
@@ -145,11 +145,11 @@ final class lh {
           for (var5 = 0; var5 < this.field_k; var5++) {
             dupTemp$0 = var4 + param0.readUnsignedByte((byte) -101);
             var4 = dupTemp$0;
-            this.field_K[var5] = ie.a(dupTemp$0, 255);
+            this.field_K[var5] = ie.bitwiseAnd(dupTemp$0, 255);
           }
           this.field_j = new int[256];
           this.field_m = new byte[256][];
-          dk.a(this.field_j, 0, 256, 64);
+          ArrayBlockSupport.fillInts(this.field_j, 0, 256, 64);
           for (var5Lifetime1 = 0; 256 > var5Lifetime1; var5Lifetime1++) {
             this.field_m[var5Lifetime1] = ob.field_a;
           }
@@ -196,7 +196,7 @@ final class lh {
               for (var8 = 0; 96 > var8; var8++) {
                 dupTemp$1 = var4Lifetime1 + param0.readUnsignedByte((byte) -101);
                 var4Lifetime1 = dupTemp$1;
-                this.field_l[var6Lifetime1][var8] = ie.a(dupTemp$1, 255) + var5Lifetime4;
+                this.field_l[var6Lifetime1][var8] = ie.bitwiseAnd(dupTemp$1, 255) + var5Lifetime4;
               }
               this.field_I[var6Lifetime1] = param0.readUnsignedByte((byte) -101);
               var8Lifetime1 = param0.readUnsignedByte((byte) -101);
@@ -225,7 +225,7 @@ final class lh {
               for (var11Lifetime1 = 0; var11Lifetime1 < var8Lifetime1; var11Lifetime1++) {
                 dupTemp$6 = var4Lifetime1Lifetime2 + param0.readUnsignedByte((byte) -101);
                 var4Lifetime1Lifetime2 = dupTemp$6;
-                this.field_D[var6Lifetime1][var11Lifetime1] = ie.a(dupTemp$6, 255);
+                this.field_D[var6Lifetime1][var11Lifetime1] = ie.bitwiseAnd(dupTemp$6, 255);
               }
               var4Lifetime1Lifetime3 = 0;
               var10Lifetime1 = 0;
@@ -244,7 +244,7 @@ final class lh {
               for (var11Lifetime3 = 0; var9 > var11Lifetime3; var11Lifetime3++) {
                 dupTemp$11 = var4Lifetime1Lifetime4 + param0.readUnsignedByte((byte) -101);
                 var4Lifetime1Lifetime4 = dupTemp$11;
-                this.field_f[var6Lifetime1][var11Lifetime3] = ie.a(dupTemp$11, 255);
+                this.field_f[var6Lifetime1][var11Lifetime3] = ie.bitwiseAnd(dupTemp$11, 255);
               }
               this.field_i[var6Lifetime1] = param0.readUnsignedShort(7088);
               for (var11Lifetime4 = 0; var11Lifetime4 < var7; var11Lifetime4++) {

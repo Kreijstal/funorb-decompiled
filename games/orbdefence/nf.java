@@ -89,9 +89,9 @@ abstract class nf extends DualLinkNode {
               var11 = var13;
               var6 = var11;
               if (var3 != 1) {
-                var7 = tj.field_e;
+                var7 = GrowableIntArray.field_e;
                 synchronized (var7) {
-                  tj.field_e.decompress(var13, 693, var9);
+                  GrowableIntArray.field_e.decompress(var13, 693, var9);
                 }
               } else {
                 Bzip2Decompressor.decompress(var13, var5, param0, var4, 9);

@@ -140,9 +140,9 @@ abstract class TextLayout {
             }
           }
           for (var1_intLifetime2 = 0; var1_intLifetime2 < 8; var1_intLifetime2++) {
-            var10 = si.newRack.tiles[var1_intLifetime2];
+            var10 = MusicPatch.newRack.tiles[var1_intLifetime2];
             if (var10 != null) {
-              if (si.newRack == var10.rack &&
+              if (MusicPatch.newRack == var10.rack &&
                 var10.slot == var1_intLifetime2) {
                 stackIn_34_0 = "";
               } else {
@@ -178,8 +178,8 @@ abstract class TextLayout {
               var5 = 0;
               var3_intLifetime1 = var5;
               while (var5 < 8) {
-                if (null == si.newRack.tiles[var5]) {
-                  var1.moveToRack(var5, 28, si.newRack);
+                if (null == MusicPatch.newRack.tiles[var5]) {
+                  var1.moveToRack(var5, 28, MusicPatch.newRack);
                   break;
                 }
                 var5++;
@@ -203,9 +203,9 @@ abstract class TextLayout {
             }
           }
           for (var2_intLifetime3 = 0; var2_intLifetime3 < 8; var2_intLifetime3++) {
-            var3Lifetime1 = si.newRack.tiles[var2_intLifetime3];
+            var3Lifetime1 = MusicPatch.newRack.tiles[var2_intLifetime3];
             if (null != var3Lifetime1) {
-              var3Lifetime1.moveToRack(var2_intLifetime3, 28, si.newRack);
+              var3Lifetime1.moveToRack(var2_intLifetime3, 28, MusicPatch.newRack);
             }
           }
           var2 = (LetterTile) (ch.field_e.beginForward((byte) -95));

@@ -37,7 +37,7 @@ final class rba {
           var9 = SoftwareRasterizer.field_e[var7];
           incrementValue$0 = var7;
           var7++;
-          SoftwareRasterizer.field_e[incrementValue$0] = dda.a(dda.a(var9, 16711935) * var6 + dda.a(16711935, var8) * var5, -16711936) + dda.a(16711680, var5 * dda.a(var8, 65280) + dda.a(65280, var9) * var6) >>> 8;
+          SoftwareRasterizer.field_e[incrementValue$0] = dda.bitwiseAnd(dda.bitwiseAnd(var9, 16711935) * var6 + dda.bitwiseAnd(16711935, var8) * var5, -16711936) + dda.bitwiseAnd(16711680, var5 * dda.bitwiseAnd(var8, 65280) + dda.bitwiseAnd(65280, var9) * var6) >>> 8;
           return;
         }
     }

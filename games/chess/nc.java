@@ -7,7 +7,7 @@ final class nc extends InteractiveWidget {
     static GzipInflater field_N;
     int field_U;
     static IntrusiveDeque field_O;
-    private ml field_S;
+    private GrowableIntArray field_S;
     static String field_Q;
     static String field_P;
     static int field_T;
@@ -19,8 +19,8 @@ final class nc extends InteractiveWidget {
         if (0 > param0) {
           return -1;
         }
-        if (param0 < this.field_S.a(true)) {
-          return this.field_S.c(param0, 1);
+        if (param0 < this.field_S.size(true)) {
+          return this.field_S.get(param0, 1);
         }
         return -1;
     }
@@ -35,7 +35,7 @@ final class nc extends InteractiveWidget {
 
     final int f(byte param0) {
         if (param0 < 51) {
-          this.field_S = (ml) null;
+          this.field_S = (GrowableIntArray) null;
           return this.field_R;
         }
         return this.field_R;
@@ -69,13 +69,13 @@ final class nc extends InteractiveWidget {
           }
           var8_int = var8_int * this.field_R / var9;
           if (param0 == 1) {
-            this.field_S.a(var8_int, (byte) 43);
+            this.field_S.append(var8_int, (byte) 43);
           } else {
             if (2 == param0) {
               var10 = 2147483647;
               var11 = -1;
-              for (var12 = 0; this.field_S.a(true) > var12; var12++) {
-                var13 = -var8_int + this.field_S.c(var12, 1);
+              for (var12 = 0; this.field_S.size(true) > var12; var12++) {
+                var13 = -var8_int + this.field_S.get(var12, 1);
                 var13 = var13 * var13;
                 if (var13 < var10) {
                   var10 = var13;
@@ -85,7 +85,7 @@ final class nc extends InteractiveWidget {
               if (var11 < 0) {
                 return true;
               }
-              this.field_S.a(-1, var11);
+              this.field_S.removeAt(-1, var11);
             }
           }
           return true;
@@ -106,9 +106,9 @@ final class nc extends InteractiveWidget {
     final int a(int param0) {
         if (param0 != -1) {
           field_P = (String) null;
-          return this.field_S.a(true);
+          return this.field_S.size(true);
         }
-        return this.field_S.a(true);
+        return this.field_S.size(true);
     }
 
     final static boolean j(int param0) {

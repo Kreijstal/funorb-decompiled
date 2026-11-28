@@ -302,7 +302,7 @@ final class ui {
               }
               var8 = stackIn_59_0;
               var4 = var4 + var3 + var8;
-              if (!pe.field_r) {
+              if (!MusicPatchNode.field_r) {
                 if (hj.field_b) {
                   var4 = "<col=999999>" + var4 + pb.field_c + "</col>";
                   var5 = "";
@@ -319,7 +319,7 @@ final class ui {
               if (!tb.a((byte) 122)) {
                 if (dj.field_d.field_pb &&
                   var9 > (-dj.field_d.field_ob + PacketBuffer.field_n)) {
-                  if (!pe.field_r) {
+                  if (!MusicPatchNode.field_r) {
                     var1 = pb.field_c;
                   } else {
                     var1 = "Broken!";
@@ -327,7 +327,7 @@ final class ui {
                 }
                 if (dj.field_d.field_tb != 0 &&
                   dj.field_d.field_ub < var9 &&
-                  !pe.field_r) {
+                  !MusicPatchNode.field_r) {
                   g.a((byte) -10);
                 }
               }

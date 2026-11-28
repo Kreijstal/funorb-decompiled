@@ -167,7 +167,7 @@ final class EmailFormatValidator extends TextFieldValidator {
           if (LoginPanel.field_N == 11) {
             rg.clearStaticReferences(false);
           }
-          ob.a(qh.field_i, 209, pb.field_a, qi.field_k);
+          ob.a(GrowableIntArray.field_i, 209, pb.field_a, qi.field_k);
           if (param0 <= 52) {
             java.awt.Canvas var3 = (java.awt.Canvas) null;
             EmailFormatValidator.a((byte) 125, (java.awt.Canvas) null);

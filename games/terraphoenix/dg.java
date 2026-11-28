@@ -8,7 +8,7 @@ final class dg {
     static im field_c;
     static boolean field_b;
 
-    static int a(int param0, int param1) {
+    static int bitwiseAnd(int param0, int param1) {
         return param0 & param1;
     }
 
@@ -18,9 +18,9 @@ final class dg {
         }
         if (param0) {
           dg.b(false);
-          return (java.applet.Applet) ((Object) gm.field_f);
+          return (java.applet.Applet) ((Object) MusicPatchEnvelope.field_f);
         }
-        return (java.applet.Applet) ((Object) gm.field_f);
+        return (java.applet.Applet) ((Object) MusicPatchEnvelope.field_f);
     }
 
     public static void b(boolean param0) {

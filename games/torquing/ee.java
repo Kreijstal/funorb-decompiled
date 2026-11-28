@@ -247,7 +247,7 @@ final class ee extends am {
         }
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseOr(long param0, long param1) {
         return param0 | param1;
     }
 
@@ -915,26 +915,26 @@ final class ee extends am {
           for (var8_intLifetime1 = 0; FramedPanelLayer.field_i > var8_intLifetime1; var8_intLifetime1++) {
             for (var9 = 0; FramedPanelLayer.field_i > var9; var9++) {
               jl.field_O[var8_intLifetime1][var9] = ap.a(ie.field_a[var8_intLifetime1], 0, ie.field_a[var9], 0);
-              mg.field_a[var8_intLifetime1][var9] = ap.a(SpriteBase.field_f[var8_intLifetime1], 6, SpriteBase.field_f[var9], 6);
+              ByteArrayPoolSupport.field_a[var8_intLifetime1][var9] = ap.a(SpriteBase.field_f[var8_intLifetime1], 6, SpriteBase.field_f[var9], 6);
             }
             var12 = jl.field_O[var8_intLifetime1];
             var10 = var8_intLifetime1;
-            mg.field_a[var8_intLifetime1][var8_intLifetime1] = 1.0;
+            ByteArrayPoolSupport.field_a[var8_intLifetime1][var8_intLifetime1] = 1.0;
             var12[var10] = 1.0;
           }
           for (var8_intLifetime2 = 0; var8_intLifetime2 < FramedPanelLayer.field_i; var8_intLifetime2++) {
-            dupTemp$0 = mg.field_a[8];
+            dupTemp$0 = ByteArrayPoolSupport.field_a[8];
             dupTemp$1 = mc.field_m * SpriteBase.field_f[var8_intLifetime2][7] + tf.field_c * SpriteBase.field_f[var8_intLifetime2][6] + SpriteBase.field_f[var8_intLifetime2][8] * FramedPanelLayer.field_d;
-            arrayValue$2 = mg.field_a[var8_intLifetime2];
+            arrayValue$2 = ByteArrayPoolSupport.field_a[var8_intLifetime2];
             dupTemp$0[var8_intLifetime2] = dupTemp$1;
             arrayValue$2[8] = dupTemp$1;
           }
           for (var8_intLifetime3 = FramedPanelLayer.field_i; var8_intLifetime3 < 8; var8_intLifetime3++) {
-            var13 = mg.field_a[var8_intLifetime3];
-            mg.field_a[8][var8_intLifetime3] = 0.0;
+            var13 = ByteArrayPoolSupport.field_a[var8_intLifetime3];
+            ByteArrayPoolSupport.field_a[8][var8_intLifetime3] = 0.0;
             var13[8] = 0.0;
           }
-          mg.field_a[8][8] = 1.0;
+          ByteArrayPoolSupport.field_a[8][8] = 1.0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

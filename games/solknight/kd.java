@@ -30,7 +30,7 @@ final class kd {
           stackIn_2_1 = param3;
           stackIn_2_2 = 0;
           stackIn_3_3 = !(param4);
-          ((CrossfadingMidiPcmStream) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_3_3, param2, 1000000, param0);
+          ((CrossfadingMidiPcmStream) (Object) stackIn_2_0).switchTrack(stackIn_2_1, stackIn_2_2, stackIn_3_3, param2, 1000000, param0);
           if (param1 == 101) {
             return;
           }
@@ -46,7 +46,7 @@ final class kd {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

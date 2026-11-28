@@ -403,7 +403,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     PacketBuffer(int param0) {
-        this.payload = mg.a(-95, param0);
+        this.payload = ByteArrayPoolSupport.acquireByteArray(-95, param0);
         this.position = 0;
     }
 

@@ -23,13 +23,13 @@ final class SoundCache {
         }
         if (param0 == 12604) {
           var2 = cj.field_h[param1];
-          var3 = ab.field_g[param1];
+          var3 = MusicPatchEnvelope.field_g[param1];
           ol.a(param0 - 12732, var2, var3);
           return;
         }
         field_c = (int[]) null;
         var2Lifetime1 = cj.field_h[param1];
-        var3Lifetime1 = ab.field_g[param1];
+        var3Lifetime1 = MusicPatchEnvelope.field_g[param1];
         ol.a(param0 - 12732, var2Lifetime1, var3Lifetime1);
     }
 

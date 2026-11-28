@@ -280,7 +280,7 @@ final class oc extends hn {
           ResourceArchive var2 = (ResourceArchive) null;
           oc.a((ResourceArchive) null, (byte) -68, (String) null, (String) null, (ResourceArchive) null);
         }
-        return cg.field_C;
+        return MusicPatchNode.field_C;
     }
 
     oc(String param0, String param1) {

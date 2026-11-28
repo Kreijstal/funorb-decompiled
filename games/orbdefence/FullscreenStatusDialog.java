@@ -101,7 +101,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
             if (hh.field_d == param1) {
               this.field_r = this.field_r + 10;
               var3 = fi.field_a;
-              if (rc.b(-38)) {
+              if (MusicPatchEnvelope.b(-38)) {
                 var3 = AccountRequestState.field_a;
                 this.field_r = this.field_r + 20;
               }

@@ -62,7 +62,7 @@ final class nj {
                 this.field_g = 0;
                 this.field_b = 0;
               }
-              this.field_k[this.field_g] = (byte)rk.a(255, var8 << 8 - var7);
+              this.field_k[this.field_g] = (byte)rk.bitwiseAnd(255, var8 << 8 - var7);
               this.field_b = this.field_b + var7;
               param2 = param2 - 8L;
               var5_int++;
@@ -90,7 +90,7 @@ final class nj {
               this.field_g = 0;
               this.field_b = 0;
             }
-            this.field_k[this.field_g] = (byte)rk.a(var8Lifetime1 << 8 - var7, 255);
+            this.field_k[this.field_g] = (byte)rk.bitwiseAnd(var8Lifetime1 << 8 - var7, 255);
             this.field_b = this.field_b + (int)param2;
           }
           return;
@@ -181,7 +181,7 @@ final class nj {
         int var8 = 0;
         var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          this.field_k[this.field_g] = (byte)GameAppletShell.a((int) this.field_k[this.field_g], 128 >>> rk.a(7, this.field_b));
+          this.field_k[this.field_g] = (byte)GameAppletShell.a((int) this.field_k[this.field_g], 128 >>> rk.bitwiseAnd(7, this.field_b));
           this.field_g = this.field_g + 1;
           if (param1 > -94) {
             return;
@@ -200,7 +200,7 @@ final class nj {
             this.field_g = this.field_g + 1;
             this.field_k[fieldTemp$1] = (byte) 0;
           }
-          kg.copyByteRange(this.field_m, 0, this.field_k, 32, 32);
+          ArrayBlockSupport.copyByteRange(this.field_m, 0, this.field_k, 32, 32);
           this.a(8);
           var4_int = 0;
           var5 = param0;
@@ -379,7 +379,7 @@ final class nj {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_l[var2] = GuestPlayConfirmationForm.a(hg.a(255L, (long)this.field_k[7 + var3]), GuestPlayConfirmationForm.a(hg.a(65280L, (long)this.field_k[6 + var3] << 8), GuestPlayConfirmationForm.a(hg.a(16711680L, (long)this.field_k[var3 + 5] << 16), GuestPlayConfirmationForm.a(GuestPlayConfirmationForm.a(GuestPlayConfirmationForm.a(GuestPlayConfirmationForm.a((long)this.field_k[var3] << 56, hg.a((long)this.field_k[var3 + 1], 255L) << 48), hg.a(255L, (long)this.field_k[2 + var3]) << 40), hg.a((long)this.field_k[3 + var3] << 32, 1095216660480L)), hg.a((long)this.field_k[var3 + 4] << 24, 4278190080L)))));
+          this.field_l[var2] = GuestPlayConfirmationForm.bitwiseXor(hg.bitwiseAnd(255L, (long)this.field_k[7 + var3]), GuestPlayConfirmationForm.bitwiseXor(hg.bitwiseAnd(65280L, (long)this.field_k[6 + var3] << 8), GuestPlayConfirmationForm.bitwiseXor(hg.bitwiseAnd(16711680L, (long)this.field_k[var3 + 5] << 16), GuestPlayConfirmationForm.bitwiseXor(GuestPlayConfirmationForm.bitwiseXor(GuestPlayConfirmationForm.bitwiseXor(GuestPlayConfirmationForm.bitwiseXor((long)this.field_k[var3] << 56, hg.bitwiseAnd((long)this.field_k[var3 + 1], 255L) << 48), hg.bitwiseAnd(255L, (long)this.field_k[2 + var3]) << 40), hg.bitwiseAnd((long)this.field_k[3 + var3] << 32, 1095216660480L)), hg.bitwiseAnd((long)this.field_k[var3 + 4] << 24, 4278190080L)))));
           var2++;
           var3 += 8;
         }
@@ -387,7 +387,7 @@ final class nj {
           dupTemp$0 = this.field_n[var2Lifetime1];
           arrayValue$1 = this.field_l[var2Lifetime1];
           this.field_q[var2Lifetime1] = dupTemp$0;
-          this.field_h[var2Lifetime1] = GuestPlayConfirmationForm.a(arrayValue$1, dupTemp$0);
+          this.field_h[var2Lifetime1] = GuestPlayConfirmationForm.bitwiseXor(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
@@ -395,7 +395,7 @@ final class nj {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_i[var3Lifetime1] = GuestPlayConfirmationForm.a(this.field_i[var3Lifetime1], AccountRequestState.field_c[var4][rk.a((int)(this.field_q[rk.a(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
+              this.field_i[var3Lifetime1] = GuestPlayConfirmationForm.bitwiseXor(this.field_i[var3Lifetime1], AccountRequestState.field_c[var4][rk.bitwiseAnd((int)(this.field_q[rk.bitwiseAnd(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
               var5 -= 8;
               var4++;
             }
@@ -403,14 +403,14 @@ final class nj {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_q[var3Lifetime1Lifetime1] = this.field_i[var3Lifetime1Lifetime1];
           }
-          this.field_q[0] = GuestPlayConfirmationForm.a(this.field_q[0], AccountRequestState.field_e[var2Lifetime2]);
+          this.field_q[0] = GuestPlayConfirmationForm.bitwiseXor(this.field_q[0], AccountRequestState.field_e[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; 8 > var3Lifetime1Lifetime2; var3Lifetime1Lifetime2++) {
             this.field_i[var3Lifetime1Lifetime2] = this.field_q[var3Lifetime1Lifetime2];
             var8 = 0;
             var4Lifetime1 = var8;
             var5Lifetime1 = 56;
             while (var8 < 8) {
-              this.field_i[var3Lifetime1Lifetime2] = GuestPlayConfirmationForm.a(this.field_i[var3Lifetime1Lifetime2], AccountRequestState.field_c[var8][rk.a(255, (int)(this.field_h[rk.a(7, var3Lifetime1Lifetime2 - var8)] >>> var5Lifetime1))]);
+              this.field_i[var3Lifetime1Lifetime2] = GuestPlayConfirmationForm.bitwiseXor(this.field_i[var3Lifetime1Lifetime2], AccountRequestState.field_c[var8][rk.bitwiseAnd(255, (int)(this.field_h[rk.bitwiseAnd(7, var3Lifetime1Lifetime2 - var8)] >>> var5Lifetime1))]);
               var5Lifetime1 -= 8;
               var8++;
             }
@@ -424,7 +424,7 @@ final class nj {
           nj.a(118, 34, (PlatformTaskDispatcher) null, false, -72, 58);
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_n[var2Lifetime3] = GuestPlayConfirmationForm.a(this.field_n[var2Lifetime3], GuestPlayConfirmationForm.a(this.field_l[var2Lifetime3], this.field_h[var2Lifetime3]));
+          this.field_n[var2Lifetime3] = GuestPlayConfirmationForm.bitwiseXor(this.field_n[var2Lifetime3], GuestPlayConfirmationForm.bitwiseXor(this.field_l[var2Lifetime3], this.field_h[var2Lifetime3]));
         }
     }
 

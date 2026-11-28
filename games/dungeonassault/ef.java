@@ -48,7 +48,7 @@ final class ef {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = -125 % ((param0 + 63) / 57);
-          if (kk.a(param2, 1, param1, param3)) {
+          if (MusicPatch.a(param2, 1, param1, param3)) {
             stackIn_4_0 = rj.a(param4.getFile(5, param1, param3), 18118);
             return stackIn_4_0;
           }

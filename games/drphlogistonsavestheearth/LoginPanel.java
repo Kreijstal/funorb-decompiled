@@ -446,28 +446,28 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             if (rd.field_D > la.field_b) {
               la.field_b = la.field_b + 1;
               if (rd.field_F < la.field_b && (null == ClientException.field_e ||
-                null == ClientException.field_e[ig.field_k])) {
+                null == ClientException.field_e[MusicPatch.field_k])) {
                 la.field_b = la.field_b - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (rd.field_D <= la.field_b &&
-                  ClientException.field_e[(1 + ig.field_k) % var2_int] == null) {
+                  ClientException.field_e[(1 + MusicPatch.field_k) % var2_int] == null) {
                   la.field_b = la.field_b - 1;
                 }
               }
             }
             if (rd.field_D <= la.field_b) {
-              ModalDialog.field_L = ig.field_k;
+              ModalDialog.field_L = MusicPatch.field_k;
               if (!ie.field_B) {
-                ig.field_k = ig.field_k - 1;
-                if (ig.field_k < 0) {
-                  ig.field_k = ig.field_k + var2_int;
+                MusicPatch.field_k = MusicPatch.field_k - 1;
+                if (MusicPatch.field_k < 0) {
+                  MusicPatch.field_k = MusicPatch.field_k + var2_int;
                 }
               } else {
-                ig.field_k = ig.field_k + 1;
-                if (ig.field_k >= var2_int) {
-                  ig.field_k = ig.field_k - var2_int;
+                MusicPatch.field_k = MusicPatch.field_k + 1;
+                if (MusicPatch.field_k >= var2_int) {
+                  MusicPatch.field_k = MusicPatch.field_k - var2_int;
                 }
               }
               la.field_b = la.field_b - rd.field_D;
@@ -476,20 +476,20 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
               ie.field_B = true;
             }
           }
-          if (sc.field_c != null) {
-            var4 = 357 - sc.field_c.field_C / 2;
+          if (ByteArrayPoolSupport.field_c != null) {
+            var4 = 357 - ByteArrayPoolSupport.field_c.field_C / 2;
             var5 = 0;
             if (mh.field_f != 0 &&
               var4 < RegistrationAgreementPane.field_R &&
-              RegistrationAgreementPane.field_R < var4 + sc.field_c.field_w) {
-              if (FullscreenStatusDialog.field_gb > -sc.field_c.field_y + 269 &&
+              RegistrationAgreementPane.field_R < var4 + ByteArrayPoolSupport.field_c.field_w) {
+              if (FullscreenStatusDialog.field_gb > -ByteArrayPoolSupport.field_c.field_y + 269 &&
                 FullscreenStatusDialog.field_gb < 269) {
                 ie.field_B = false;
                 var5 = 1;
                 la.field_b = rd.field_D;
               }
               if (FullscreenStatusDialog.field_gb > 586 &&
-                FullscreenStatusDialog.field_gb < sc.field_c.field_y + 586) {
+                FullscreenStatusDialog.field_gb < ByteArrayPoolSupport.field_c.field_y + 586) {
                 var5 = 1;
                 la.field_b = rd.field_D;
                 ie.field_B = true;
@@ -498,13 +498,13 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             if (var5 == 0 &&
               rd.field_F < la.field_b &&
               ob.field_g > var4 &&
-              ob.field_g < var4 + sc.field_c.field_w) {
-              if (-sc.field_c.field_y + 269 < ck.field_c &&
+              ob.field_g < var4 + ByteArrayPoolSupport.field_c.field_w) {
+              if (-ByteArrayPoolSupport.field_c.field_y + 269 < ck.field_c &&
                 ck.field_c < 269) {
                 la.field_b = rd.field_F;
               }
               if (ck.field_c > 586 &&
-                sc.field_c.field_y + 586 > ck.field_c) {
+                ByteArrayPoolSupport.field_c.field_y + 586 > ck.field_c) {
                 la.field_b = rd.field_F;
               }
             }
@@ -605,28 +605,28 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             if (rd.field_D > la.field_b) {
               la.field_b = la.field_b + 1;
               if (rd.field_F < la.field_b && (null == ClientException.field_e ||
-                null == ClientException.field_e[ig.field_k])) {
+                null == ClientException.field_e[MusicPatch.field_k])) {
                 la.field_b = la.field_b - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (rd.field_D <= la.field_b &&
-                  ClientException.field_e[(1 + ig.field_k) % var2_int] == null) {
+                  ClientException.field_e[(1 + MusicPatch.field_k) % var2_int] == null) {
                   la.field_b = la.field_b - 1;
                 }
               }
             }
             if (rd.field_D <= la.field_b) {
-              ModalDialog.field_L = ig.field_k;
+              ModalDialog.field_L = MusicPatch.field_k;
               if (!ie.field_B) {
-                ig.field_k = ig.field_k - 1;
-                if (ig.field_k < 0) {
-                  ig.field_k = ig.field_k + var2_int;
+                MusicPatch.field_k = MusicPatch.field_k - 1;
+                if (MusicPatch.field_k < 0) {
+                  MusicPatch.field_k = MusicPatch.field_k + var2_int;
                 }
               } else {
-                ig.field_k = ig.field_k + 1;
-                if (ig.field_k >= var2_int) {
-                  ig.field_k = ig.field_k - var2_int;
+                MusicPatch.field_k = MusicPatch.field_k + 1;
+                if (MusicPatch.field_k >= var2_int) {
+                  MusicPatch.field_k = MusicPatch.field_k - var2_int;
                 }
               }
               la.field_b = la.field_b - rd.field_D;
@@ -635,20 +635,20 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
               ie.field_B = true;
             }
           }
-          if (sc.field_c != null) {
-            var4 = 357 - sc.field_c.field_C / 2;
+          if (ByteArrayPoolSupport.field_c != null) {
+            var4 = 357 - ByteArrayPoolSupport.field_c.field_C / 2;
             var5 = 0;
             if (mh.field_f != 0 &&
               var4 < RegistrationAgreementPane.field_R &&
-              RegistrationAgreementPane.field_R < var4 + sc.field_c.field_w) {
-              if (FullscreenStatusDialog.field_gb > -sc.field_c.field_y + 269 &&
+              RegistrationAgreementPane.field_R < var4 + ByteArrayPoolSupport.field_c.field_w) {
+              if (FullscreenStatusDialog.field_gb > -ByteArrayPoolSupport.field_c.field_y + 269 &&
                 FullscreenStatusDialog.field_gb < 269) {
                 ie.field_B = false;
                 var5 = 1;
                 la.field_b = rd.field_D;
               }
               if (FullscreenStatusDialog.field_gb > 586 &&
-                FullscreenStatusDialog.field_gb < sc.field_c.field_y + 586) {
+                FullscreenStatusDialog.field_gb < ByteArrayPoolSupport.field_c.field_y + 586) {
                 var5 = 1;
                 la.field_b = rd.field_D;
                 ie.field_B = true;
@@ -657,13 +657,13 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             if (var5 == 0 &&
               rd.field_F < la.field_b &&
               ob.field_g > var4 &&
-              ob.field_g < var4 + sc.field_c.field_w) {
-              if (-sc.field_c.field_y + 269 < ck.field_c &&
+              ob.field_g < var4 + ByteArrayPoolSupport.field_c.field_w) {
+              if (-ByteArrayPoolSupport.field_c.field_y + 269 < ck.field_c &&
                 ck.field_c < 269) {
                 la.field_b = rd.field_F;
               }
               if (ck.field_c > 586 &&
-                sc.field_c.field_y + 586 > ck.field_c) {
+                ByteArrayPoolSupport.field_c.field_y + 586 > ck.field_c) {
                 la.field_b = rd.field_F;
               }
             }

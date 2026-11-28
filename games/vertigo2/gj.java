@@ -149,7 +149,7 @@ final class gj extends TextureOperator {
         LevelRenderer.field_n = param3;
         vl.field_c = 0;
         RegistrationAgreementPane.field_O = param2;
-        if (al.a(LevelRenderer.field_n, (byte) -94)) {
+        if (MusicPatch.a(LevelRenderer.field_n, (byte) -94)) {
           var4 = 0;
           if (LevelRenderer.field_n == 13 ||
             LevelRenderer.field_n == 19) {

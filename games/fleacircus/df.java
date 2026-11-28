@@ -25,9 +25,9 @@ final class df {
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 == null) {
-            decompiledFrameRemainder0 = (gf.field_b == null);
+            decompiledFrameRemainder0 = (ByteArrayPoolSupport.field_b == null);
           } else {
-            decompiledFrameRemainder0 = !(param1.equals(gf.field_b));
+            decompiledFrameRemainder0 = !(param1.equals(ByteArrayPoolSupport.field_b));
           }
           if (decompiledFrameRemainder0) {
             if (!ok.field_w) {
@@ -70,7 +70,7 @@ final class df {
             DebouncedFieldValidator.field_f = rf.field_a;
             EditableTextField.field_S = 0;
           }
-          gf.field_b = param1;
+          ByteArrayPoolSupport.field_b = param1;
           kb.field_r = -1;
           if (ok.field_w &&
             NetworkGameClient.field_y == EditableTextField.field_S) {
@@ -113,7 +113,7 @@ final class df {
         field_c = null;
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseXor(int param0, int param1) {
         return param0 ^ param1;
     }
 

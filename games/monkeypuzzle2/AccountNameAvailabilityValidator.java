@@ -16,7 +16,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         lc.field_f = false;
         ImageProducerRasterBuffer.b(true);
         DropTargetWidgetContainer.j(-118);
-        oi.c(106);
+        GrowableIntArray.c(106);
         if (param0 == 8500) {
           DisplayNameSelectionPanel.m(param0 - 8377);
           return;

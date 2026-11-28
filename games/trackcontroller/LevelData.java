@@ -76,7 +76,7 @@ final class LevelData extends LevelGrid {
               var5++;
               var23[var8][var9_int] = ByteStorage.a(0, (int) param1.charAt(incrementValue$7));
               if (var4 > (1 + var9_int)) {
-                var22[var8][var9_int + 1] = (byte)RandomAccessCacheFile.a(7, var10);
+                var22[var8][var9_int + 1] = (byte)RandomAccessCacheFile.bitwiseAnd(7, var10);
                 incrementValue$8 = var5;
                 var5++;
                 var23[var8][var9_int + 1] = ByteStorage.a(0, (int) param1.charAt(incrementValue$8));

@@ -5,7 +5,7 @@ import java.util.*;
 
 final class h extends InteractiveWidget {
     int field_J;
-    private fl field_H;
+    private GrowableIntArray field_H;
     private int field_G;
     int field_K;
     static fe field_I;
@@ -93,20 +93,20 @@ final class h extends InteractiveWidget {
 
     final int a(byte param0, int param1) {
         if (param1 < 0 ||
-          this.field_H.a((byte) 109) <= param1) {
+          this.field_H.size((byte) 109) <= param1) {
           return -1;
         }
         if (param0 != -63) {
           field_F = 122;
         }
-        return this.field_H.c(param1, 102);
+        return this.field_H.get(param1, 102);
     }
 
     final int a(boolean param0) {
         if (!param0) {
           field_F = -122;
         }
-        return this.field_H.a((byte) 123);
+        return this.field_H.size((byte) 123);
     }
 
     final static RgbSprite[] b(int param0, int param1, int param2, int param3, int param4) {
@@ -167,8 +167,8 @@ final class h extends InteractiveWidget {
             }
             var10 = 2147483647;
             var11 = -1;
-            for (var12 = 0; var12 < this.field_H.a((byte) 99); var12++) {
-              var13 = this.field_H.c(var12, -94) - var8_int;
+            for (var12 = 0; var12 < this.field_H.size((byte) 99); var12++) {
+              var13 = this.field_H.get(var12, -94) - var8_int;
               var13 = var13 * var13;
               if (var10 > var13) {
                 var10 = var13;
@@ -176,10 +176,10 @@ final class h extends InteractiveWidget {
               }
             }
             if (var11 >= 0) {
-              this.field_H.e(0, var11);
+              this.field_H.removeAt(0, var11);
             }
           } else {
-            this.field_H.a(var8_int, 1);
+            this.field_H.append(var8_int, 1);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

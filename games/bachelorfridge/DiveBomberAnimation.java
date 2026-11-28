@@ -31,7 +31,7 @@ final class DiveBomberAnimation extends EventAnimation {
               da.a(0, 0, -110, param0[var3]);
             }
           }
-          ProgressDialog.field_U.a((byte) 119);
+          ProgressDialog.field_U.setAsRasterTarget((byte) 119);
           stackIn_8_0 = var2;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

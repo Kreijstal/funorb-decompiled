@@ -113,18 +113,18 @@ class wh extends TextureOperator {
             for (var8 = 0; var8 < StripedProgressWidget.field_M; var8++) {
               var9 = var8 * this.field_z / StripedProgressWidget.field_M;
               var10 = this.field_y[var9 + var7];
-              var6[var8] = b.a(var10, 255) << 4;
-              var5[var8] = b.a(var10, 65280) >> 4;
-              var4[var8] = b.a(16711680, var10) >> 12;
+              var6[var8] = b.bitwiseAnd(var10, 255) << 4;
+              var5[var8] = b.bitwiseAnd(var10, 65280) >> 4;
+              var4[var8] = b.bitwiseAnd(16711680, var10) >> 12;
             }
           } else {
             for (var8 = 0; var8 < StripedProgressWidget.field_M; var8++) {
               incrementValue$0 = var7;
               var7++;
               var9 = this.field_y[incrementValue$0];
-              var6[var8] = b.a(4080, var9 << 4);
-              var5[var8] = b.a(4080, var9 >> 4);
-              var4[var8] = b.a(var9, 16711680) >> 12;
+              var6[var8] = b.bitwiseAnd(4080, var9 << 4);
+              var5[var8] = b.bitwiseAnd(4080, var9 >> 4);
+              var4[var8] = b.bitwiseAnd(var9, 16711680) >> 12;
             }
           }
         }

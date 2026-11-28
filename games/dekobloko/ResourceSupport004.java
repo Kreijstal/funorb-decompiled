@@ -21,7 +21,7 @@ final class ResourceSupport004 extends MixedSupport115 {
         return 100 * this.packetBufferState0007.position / (-this.byteState0003 + this.packetBufferState0007.payload.length);
     }
 
-    static long computeLong1248(long longArgument1, long longArgument2) {
+    static long bitwiseXor(long longArgument1, long longArgument2) {
         return longArgument1 ^ longArgument2;
     }
 

@@ -125,7 +125,7 @@ final class DisableAnimation extends EventAnimation {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!g.a(param0, param3, -30744, param1)) {
+          if (!MidiNoteMask.a(param0, param3, -30744, param1)) {
             return null;
           }
           if (param2 >= -20) {

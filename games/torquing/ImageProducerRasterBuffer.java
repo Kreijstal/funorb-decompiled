@@ -8,23 +8,23 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     private java.awt.image.ImageConsumer field_k;
     static int field_i;
 
-    final void a(java.awt.Component param0, byte param1, int param2, int param3) {
+    final void initialize(java.awt.Component param0, byte param1, int param2, int param3) {
         try {
           this.field_d = new int[1 + param3 * param2];
           this.field_a = param2;
           this.field_g = param3;
           this.field_j = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
           this.field_c = param0.createImage((java.awt.image.ImageProducer) (this));
-          this.b(0);
+          this.publishPixelsToConsumer(0);
           param0.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
-          this.b(param1 ^ 24);
+          this.publishPixelsToConsumer(param1 ^ 24);
           if (param1 != 24) {
             this.field_j = (java.awt.image.ColorModel) null;
           }
           param0.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
-          this.b(0);
+          this.publishPixelsToConsumer(0);
           param0.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
-          this.a(-104);
+          this.setAsRasterTarget(-104);
         } catch (RuntimeException runtimeException) {
           throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "sn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -59,9 +59,9 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final void a(int param0, int param1, int param2, java.awt.Graphics param3) {
+    final void drawImage(int param0, int param1, int param2, java.awt.Graphics param3) {
         try {
-          this.b(0);
+          this.publishPixelsToConsumer(0);
           if (param0 <= 70) {
             field_i = -86;
           }
@@ -111,7 +111,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     ImageProducerRasterBuffer() {
     }
 
-    private final synchronized void b(int param0) {
+    private final synchronized void publishPixelsToConsumer(int param0) {
         if (this.field_k == null) {
           return;
         }

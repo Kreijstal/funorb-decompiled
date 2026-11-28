@@ -56,7 +56,7 @@ abstract class gb {
         return this.a(111) >= 20 ? true : false;
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseOr(long param0, long param1) {
         return param0 | param1;
     }
 

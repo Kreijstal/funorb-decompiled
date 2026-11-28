@@ -93,7 +93,7 @@ final class uf extends ql {
         CrossfadingMidiPcmStream.a(6, 1);
         LabeledWidgetContainer.field_E.copyCoordinatesFrom((byte) 46, ih.field_y[0]);
         vg.field_e = new v[4];
-        vg.field_e[0] = new v(tm.field_s, -120 + (ti.field_f.field_e * 24 + 50), 24 * (-7 + ti.field_f.field_g) - 20, 200, false);
+        vg.field_e[0] = new v(MusicPatchNode.field_s, -120 + (ti.field_f.field_e * 24 + 50), 24 * (-7 + ti.field_f.field_g) - 20, 200, false);
         vg.field_e[1] = new v(ProxySocketFactory.field_g, 24 * ih.field_y[0].field_e - 140, ih.field_y[0].field_g * 24, 200, false);
         vg.field_e[2] = new v(im.field_d, 24 + (24 * ih.field_y[1].field_e - 100), -90 + ih.field_y[1].field_g * 24, 200, false);
         vg.field_e[3] = new v(ih.field_z, ih.field_y[2].field_e * 24 + 24 + 40, 40 + 24 * ih.field_y[2].field_g, 200, false);

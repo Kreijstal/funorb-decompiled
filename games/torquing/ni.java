@@ -284,7 +284,7 @@ final class ni extends IntrusiveNode {
         try {
           try {
             var4 = param0.getGraphics();
-            mk.field_b.a(86, param2, param1, var4);
+            mk.field_b.drawImage(86, param2, param1, var4);
             var4.dispose();
             var5 = -27 / ((69 - param3) / 50);
           } catch (java.lang.Exception decompiledCaughtParameter0) {

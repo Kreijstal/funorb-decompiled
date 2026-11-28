@@ -62,7 +62,7 @@ final class ej {
           RichTextLayout.field_f = wi.field_p.field_b;
           if (fleas.field_E == 0 &&
             tj.field_a >= 15 && (DiskArchiveRequest.c((byte) 55) ||
-            !(wc.field_q > 0))) {
+            !(MusicPatch.field_q > 0))) {
             ImageProducerRasterBuffer.field_m = ValidatedTextField.field_V;
             oa.a(7, false, -72);
             return;

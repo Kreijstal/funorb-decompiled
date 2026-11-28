@@ -122,7 +122,7 @@ final class Model extends IntrusiveNode {
     static {
         field_m = new int[8192];
         field_p = new int[25];
-        dk.a(field_p, 0, 25, -1);
+        ArrayBlockSupport.fillInts(field_p, 0, 25, -1);
         field_p[9] = 1;
         field_p[8] = 0;
         field_j = "Connection restored.";

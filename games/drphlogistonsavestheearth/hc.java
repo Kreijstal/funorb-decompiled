@@ -202,13 +202,13 @@ class hc extends of {
         int var1 = 0;
         if (!oh.a(param0 ^ -51)) {
           if (!MouseInput.field_e) {
-            if (ri.field_f == null) {
-              ri.field_f = BufferedRandomAccessFile.a(4, (byte) -109);
+            if (MusicPatchEnvelope.field_f == null) {
+              MusicPatchEnvelope.field_f = BufferedRandomAccessFile.a(4, (byte) -109);
             }
-            if (ri.field_f.field_l) {
-              ej.field_h = ej.field_h & ~ri.field_f.field_j;
-              hi.field_j = hi.field_j | ri.field_f.field_j;
-              ri.field_f = null;
+            if (MusicPatchEnvelope.field_f.field_l) {
+              ej.field_h = ej.field_h & ~MusicPatchEnvelope.field_f.field_j;
+              hi.field_j = hi.field_j | MusicPatchEnvelope.field_f.field_j;
+              MusicPatchEnvelope.field_f = null;
               MouseInput.field_e = true;
             }
           }

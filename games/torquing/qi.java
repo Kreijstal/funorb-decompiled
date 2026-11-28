@@ -34,7 +34,7 @@ final class qi {
           }
           var4 = new short[param0];
           var3 = var4;
-          dk.a(param1, 0, var4, 0, param0);
+          ArrayBlockSupport.a(param1, 0, var4, 0, param0);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

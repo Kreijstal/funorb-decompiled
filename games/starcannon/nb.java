@@ -134,7 +134,7 @@ final class nb {
             !(param9 <= w.field_r.length)) {
             SpriteState.field_r = new int[param9];
             w.field_r = new int[param9];
-            mc.field_j = new int[param9];
+            ByteArrayPoolSupport.field_j = new int[param9];
           }
           var31 = w.field_r;
           var27 = var31;
@@ -145,12 +145,12 @@ final class nb {
           var32 = SpriteState.field_r;
           var28 = var32;
           var11 = var28;
-          var33 = mc.field_j;
+          var33 = ByteArrayPoolSupport.field_j;
           var29 = var33;
           var12 = var29;
-          ug.clearInts(var31, 0, param9);
-          ug.clearInts(var32, 0, param9);
-          ug.clearInts(var33, 0, param9);
+          ArrayBlockSupport.clearInts(var31, 0, param9);
+          ArrayBlockSupport.clearInts(var32, 0, param9);
+          ArrayBlockSupport.clearInts(var33, 0, param9);
           var13 = param5 / (1 + param7 * 2);
           var14 = param0 - param7;
           if (var14 < 0) {
@@ -167,9 +167,9 @@ final class nb {
           while (var14 <= var16) {
             for (var19 = 0; param9 > var19; var19++) {
               param4 = param3[var15++];
-              var10[var19] = var10[var19] + (w.a(param4, 16764195) >> 16);
-              var11[var19] = var11[var19] + (w.a(65308, param4) >> 8);
-              var12[var19] = var12[var19] + w.a(param4, 255);
+              var10[var19] = var10[var19] + (w.bitwiseAnd(param4, 16764195) >> 16);
+              var11[var19] = var11[var19] + (w.bitwiseAnd(65308, param4) >> 8);
+              var12[var19] = var12[var19] + w.bitwiseAnd(param4, 255);
             }
             var15 = var15 + param1;
             var14++;
@@ -194,9 +194,9 @@ final class nb {
             if (param0 + (var14Lifetime1 + param8) + param7 < SoftwareRasterizer.field_i) {
               for (var21 = 0; param9 > var21; var21++) {
                 param4 = param3[var15++];
-                var10[var21] = var10[var21] + (w.a(16763401, param4) >> 16);
-                var11[var21] = var11[var21] + (w.a(param4, 65395) >> 8);
-                var12[var21] = var12[var21] + w.a(255, param4);
+                var10[var21] = var10[var21] + (w.bitwiseAnd(16763401, param4) >> 16);
+                var11[var21] = var11[var21] + (w.bitwiseAnd(param4, 65395) >> 8);
+                var12[var21] = var12[var21] + w.bitwiseAnd(255, param4);
               }
               var15 = var15 + param1;
               var18++;
@@ -252,9 +252,9 @@ final class nb {
             var20 = var20 + param1;
             for (var21Lifetime1Lifetime1 = 0; var21Lifetime1Lifetime1 < param9; var21Lifetime1Lifetime1++) {
               param4 = param3[var15++];
-              var10[var21Lifetime1Lifetime1] = var10[var21Lifetime1Lifetime1] + w.a(255, param4 >> 16);
-              var11[var21Lifetime1Lifetime1] = var11[var21Lifetime1Lifetime1] + (w.a(65511, param4) >> 8);
-              var12[var21Lifetime1Lifetime1] = var12[var21Lifetime1Lifetime1] + w.a(param4, 255);
+              var10[var21Lifetime1Lifetime1] = var10[var21Lifetime1Lifetime1] + w.bitwiseAnd(255, param4 >> 16);
+              var11[var21Lifetime1Lifetime1] = var11[var21Lifetime1Lifetime1] + (w.bitwiseAnd(65511, param4) >> 8);
+              var12[var21Lifetime1Lifetime1] = var12[var21Lifetime1Lifetime1] + w.bitwiseAnd(param4, 255);
             }
             var15 = var15 + param1;
             for (var21Lifetime1Lifetime2 = 0; param9 > var21Lifetime1Lifetime2; var21Lifetime1Lifetime2++) {
@@ -280,9 +280,9 @@ final class nb {
           while (0 > var14Lifetime1) {
             for (var21Lifetime2 = 0; param9 > var21Lifetime2; var21Lifetime2++) {
               param4 = param3[var20++];
-              var10[var21Lifetime2] = var10[var21Lifetime2] - (w.a(param4, 16753086) >> 16);
-              var11[var21Lifetime2] = var11[var21Lifetime2] - (w.a(65505, param4) >> 8);
-              var12[var21Lifetime2] = var12[var21Lifetime2] - w.a(255, param4);
+              var10[var21Lifetime2] = var10[var21Lifetime2] - (w.bitwiseAnd(param4, 16753086) >> 16);
+              var11[var21Lifetime2] = var11[var21Lifetime2] - (w.bitwiseAnd(65505, param4) >> 8);
+              var12[var21Lifetime2] = var12[var21Lifetime2] - w.bitwiseAnd(255, param4);
             }
             var18--;
             var20 = var20 + param1;

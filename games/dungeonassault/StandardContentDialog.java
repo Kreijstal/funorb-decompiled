@@ -36,7 +36,7 @@ final class StandardContentDialog extends ContentTransitionDialog {
             ra.c(8);
           } else {
             li.b(-107);
-            of.a(param0 ^ -98);
+            MusicPatchEnvelope.a(param0 ^ -98);
           }
           df.b(16);
         } catch (RuntimeException runtimeException) {

@@ -154,12 +154,12 @@ final class ne extends IntrusiveNode {
         field_j = null;
     }
 
-    final static nf a(ResourceArchive param0, int param1, int param2) {
+    final static MusicPatch loadMusicPatch(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         byte[] var5 = null;
-        nf stackIn_4_0 = null;
+        MusicPatch stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -171,7 +171,7 @@ final class ne extends IntrusiveNode {
             return null;
           }
           var4 = -14 / ((81 - param1) / 38);
-          stackIn_4_0 = new nf(var5);
+          stackIn_4_0 = new MusicPatch(var5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -71,21 +71,21 @@ class jla {
         var3 = 0;
         LinkTextWidget.field_D.drawText(EventAnimation.field_o[0], 25, 30, FullHealAnimation.field_v, -1);
         var3++;
-        var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_o[1], 25, 30 + g.field_g.field_u * var3, var2, 430, 3518976, -1, 0, 0, g.field_g.field_u);
+        var3 = var3 + MidiNoteMask.field_g.drawParagraph(EventAnimation.field_o[1], 25, 30 + MidiNoteMask.field_g.field_u * var3, var2, 430, 3518976, -1, 0, 0, MidiNoteMask.field_g.field_u);
         var3 += 2;
-        LinkTextWidget.field_D.drawText(EventAnimation.field_o[2], 25, var3 * g.field_g.field_u + 40, FullHealAnimation.field_v, -1);
+        LinkTextWidget.field_D.drawText(EventAnimation.field_o[2], 25, var3 * MidiNoteMask.field_g.field_u + 40, FullHealAnimation.field_v, -1);
         var3 += 2;
         if (param0 != -56) {
           field_d = (IndexedSprite) null;
         }
-        g.field_g.drawText(EventAnimation.field_o[3], 25, 40 + g.field_g.field_u * var3, 3518976, -1);
+        MidiNoteMask.field_g.drawText(EventAnimation.field_o[3], 25, 40 + MidiNoteMask.field_g.field_u * var3, 3518976, -1);
         var3 += 2;
-        g.field_g.drawText(EventAnimation.field_o[4], 25, 40 + g.field_g.field_u * var3, 3518976, -1);
+        MidiNoteMask.field_g.drawText(EventAnimation.field_o[4], 25, 40 + MidiNoteMask.field_g.field_u * var3, 3518976, -1);
         var3++;
         var2 -= 90;
-        var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_o[5], 25, (var3 + 1) * g.field_g.field_u + 40, var2, 430, 3518976, -1, 0, 0, g.field_g.field_u);
+        var3 = var3 + MidiNoteMask.field_g.drawParagraph(EventAnimation.field_o[5], 25, (var3 + 1) * MidiNoteMask.field_g.field_u + 40, var2, 430, 3518976, -1, 0, 0, MidiNoteMask.field_g.field_u);
         var4 = 570;
-        var5 = 20 + var3 * g.field_g.field_u;
+        var5 = 20 + var3 * MidiNoteMask.field_g.field_u;
         vw.field_a[2].field_b[102].draw(-(vw.field_a[0].field_b[0].field_d / 2) + var4, 16 + var5);
         var6 = ResourceArchive.field_b;
         var7 = (int)(Math.sin(0.5 * ((double)((var5 * var4 << 2) + var6) / 40.0)) * 30.0);
@@ -100,8 +100,8 @@ class jla {
         }
         boolean decompiledFrameRemainder1 = true;
         boolean decompiledFrameRemainder0 = true;
-        var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_o[6], 25, g.field_g.field_u * var3 + 40, var2, 430, 3518976, -1, 0, 0, g.field_g.field_u);
-        var5Lifetime1 = g.field_g.field_u * (-2 + var3) + 40;
+        var3 = var3 + MidiNoteMask.field_g.drawParagraph(EventAnimation.field_o[6], 25, MidiNoteMask.field_g.field_u * var3 + 40, var2, 430, 3518976, -1, 0, 0, MidiNoteMask.field_g.field_u);
+        var5Lifetime1 = MidiNoteMask.field_g.field_u * (-2 + var3) + 40;
         vw.field_a[1].field_b[102].draw(-(vw.field_a[0].field_b[0].field_d / 2) + var4, var5Lifetime1 - 14);
         var7Lifetime1 = (int)(32.0 * Math.sin((double)(var6 + (var4 * var5Lifetime1 << 2)) / 80.0 * 0.5));
         var8Lifetime1 = (int)(Math.cos(0.5 * ((double)((var5Lifetime1 * var4 << 2) + var6) / 80.0)) * 15.0);
@@ -161,14 +161,14 @@ class jla {
         int var3 = 0;
         LinkTextWidget.field_D.drawText(EventAnimation.field_u[0], 25, 30, FullHealAnimation.field_v, -1);
         var3++;
-        var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_u[1], 25, g.field_g.field_u * var3 + 30, var2, 430, 3518976, -1, 0, 0, g.field_g.field_u);
+        var3 = var3 + MidiNoteMask.field_g.drawParagraph(EventAnimation.field_u[1], 25, MidiNoteMask.field_g.field_u * var3 + 30, var2, 430, 3518976, -1, 0, 0, MidiNoteMask.field_g.field_u);
         var3++;
         if (param0 <= 103) {
           return;
         }
-        var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_u[2], 25, 30 + g.field_g.field_u * var3, var2, 430, 3518976, -1, 0, 0, g.field_g.field_u);
+        var3 = var3 + MidiNoteMask.field_g.drawParagraph(EventAnimation.field_u[2], 25, 30 + MidiNoteMask.field_g.field_u * var3, var2, 430, 3518976, -1, 0, 0, MidiNoteMask.field_g.field_u);
         var3++;
-        var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_u[3], 25, var3 * g.field_g.field_u + 30, var2, 430, 3518976, -1, 0, 0, g.field_g.field_u);
+        var3 = var3 + MidiNoteMask.field_g.drawParagraph(EventAnimation.field_u[3], 25, var3 * MidiNoteMask.field_g.field_u + 30, var2, 430, 3518976, -1, 0, 0, MidiNoteMask.field_g.field_u);
     }
 
     int a(int param0, boolean param1) {
@@ -426,27 +426,27 @@ class jla {
         LinkTextWidget.field_D.drawText(EventAnimation.field_s[0], 25, 30, FullHealAnimation.field_v, -1);
         var3 = 0;
         var3++;
-        var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_s[1], 25, g.field_g.field_u * var3 + 30, var2, 430, 3518976, -1, 0, 0, g.field_g.field_u);
+        var3 = var3 + MidiNoteMask.field_g.drawParagraph(EventAnimation.field_s[1], 25, MidiNoteMask.field_g.field_u * var3 + 30, var2, 430, 3518976, -1, 0, 0, MidiNoteMask.field_g.field_u);
         var3 += 2;
-        LinkTextWidget.field_D.drawText(EventAnimation.field_s[2], 25, 40 + var3 * g.field_g.field_u, FullHealAnimation.field_v, -1);
+        LinkTextWidget.field_D.drawText(EventAnimation.field_s[2], 25, 40 + var3 * MidiNoteMask.field_g.field_u, FullHealAnimation.field_v, -1);
         var3++;
-        var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_s[3], 25, 40 + var3 * g.field_g.field_u, var2, 430, 3518976, -1, 0, 0, g.field_g.field_u);
+        var3 = var3 + MidiNoteMask.field_g.drawParagraph(EventAnimation.field_s[3], 25, 40 + var3 * MidiNoteMask.field_g.field_u, var2, 430, 3518976, -1, 0, 0, MidiNoteMask.field_g.field_u);
         var3++;
         var4 = ResourceArchive.field_b % (wl.field_yb[0].length * 4);
-        wl.field_yb[2][var4 / 4].draw(25, 40 + g.field_g.field_u * var3);
-        g.field_g.drawText(EventAnimation.field_s[4], wl.field_yb[0][0].field_q + 35, wl.field_yb[0][0].field_p / 2 + g.field_g.field_u * var3 + (40 + g.field_g.field_u / 4), 3518976, -1);
+        wl.field_yb[2][var4 / 4].draw(25, 40 + MidiNoteMask.field_g.field_u * var3);
+        MidiNoteMask.field_g.drawText(EventAnimation.field_s[4], wl.field_yb[0][0].field_q + 35, wl.field_yb[0][0].field_p / 2 + MidiNoteMask.field_g.field_u * var3 + (40 + MidiNoteMask.field_g.field_u / 4), 3518976, -1);
         var3 += 3;
-        wl.field_yb[3][var4 / 4].draw(25, g.field_g.field_u * var3 + 40);
-        g.field_g.drawText(EventAnimation.field_s[5], 10 + (25 + wl.field_yb[0][0].field_q), wl.field_yb[0][0].field_p / 2 + (g.field_g.field_u * var3 + 40) + g.field_g.field_u / 4, 3518976, -1);
+        wl.field_yb[3][var4 / 4].draw(25, MidiNoteMask.field_g.field_u * var3 + 40);
+        MidiNoteMask.field_g.drawText(EventAnimation.field_s[5], 10 + (25 + wl.field_yb[0][0].field_q), wl.field_yb[0][0].field_p / 2 + (MidiNoteMask.field_g.field_u * var3 + 40) + MidiNoteMask.field_g.field_u / 4, 3518976, -1);
         if (param0 != 295) {
           this.field_b = -24;
         }
         var3 += 3;
-        wl.field_yb[0][var4 / 4].draw(25, 40 + var3 * g.field_g.field_u);
-        g.field_g.drawText(EventAnimation.field_s[6], wl.field_yb[0][0].field_q + 25 + 10, wl.field_yb[0][0].field_p / 2 + g.field_g.field_u * var3 + 40 + g.field_g.field_u / 4, 3518976, -1);
+        wl.field_yb[0][var4 / 4].draw(25, 40 + var3 * MidiNoteMask.field_g.field_u);
+        MidiNoteMask.field_g.drawText(EventAnimation.field_s[6], wl.field_yb[0][0].field_q + 25 + 10, wl.field_yb[0][0].field_p / 2 + MidiNoteMask.field_g.field_u * var3 + 40 + MidiNoteMask.field_g.field_u / 4, 3518976, -1);
         var3 += 3;
-        wl.field_yb[1][var4 / 4].draw(25, 40 + var3 * g.field_g.field_u);
-        g.field_g.drawParagraph(EventAnimation.field_s[7], 25 - (-wl.field_yb[0][0].field_q - 10), -(g.field_g.field_u * 5 / 4) + wl.field_yb[0][0].field_p / 2 + (var3 * g.field_g.field_u + 40), -10 + (var2 - wl.field_yb[0][0].field_q), 430, 3518976, -1, 0, 0, g.field_g.field_u);
+        wl.field_yb[1][var4 / 4].draw(25, 40 + var3 * MidiNoteMask.field_g.field_u);
+        MidiNoteMask.field_g.drawParagraph(EventAnimation.field_s[7], 25 - (-wl.field_yb[0][0].field_q - 10), -(MidiNoteMask.field_g.field_u * 5 / 4) + wl.field_yb[0][0].field_p / 2 + (var3 * MidiNoteMask.field_g.field_u + 40), -10 + (var2 - wl.field_yb[0][0].field_q), 430, 3518976, -1, 0, 0, MidiNoteMask.field_g.field_u);
     }
 
     private final void a(int param0) {
@@ -1428,8 +1428,8 @@ class jla {
         LinkTextWidget.field_D.drawText(EventAnimation.field_k[0], 25, 30, FullHealAnimation.field_v, -1);
         var3 = 0;
         var3++;
-        var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_k[1], 25, 30 + var3 * g.field_g.field_u, var2, 430, 3518976, -1, 0, 0, g.field_g.field_u);
-        var4 = 35 + g.field_g.field_u * var3 + eea.field_a.field_p / 4;
+        var3 = var3 + MidiNoteMask.field_g.drawParagraph(EventAnimation.field_k[1], 25, 30 + var3 * MidiNoteMask.field_g.field_u, var2, 430, 3518976, -1, 0, 0, MidiNoteMask.field_g.field_u);
+        var4 = 35 + MidiNoteMask.field_g.field_u * var3 + eea.field_a.field_p / 4;
         bh.field_r.draw(25, var4 - bh.field_r.field_p / 2);
         BoardChange.field_i.c(11);
         SoundCache.field_d.c(11);
@@ -1442,9 +1442,9 @@ class jla {
         SoftwareRasterizer.fillRectangle(bh.field_r.field_q + 163, var4 - 2, 20, 4, 3518976);
         var5 = -116 % ((-51 - param0) / 57);
         var3 += 16;
-        LinkTextWidget.field_D.drawText(EventAnimation.field_k[2], 25, 40 + g.field_g.field_u * var3, FullHealAnimation.field_v, -1);
+        LinkTextWidget.field_D.drawText(EventAnimation.field_k[2], 25, 40 + MidiNoteMask.field_g.field_u * var3, FullHealAnimation.field_v, -1);
         var3++;
-        var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_k[3], 25, 40 + g.field_g.field_u * var3, var2, 430, 3518976, -1, 0, 0, g.field_g.field_u);
+        var3 = var3 + MidiNoteMask.field_g.drawParagraph(EventAnimation.field_k[3], 25, 40 + MidiNoteMask.field_g.field_u * var3, var2, 430, 3518976, -1, 0, 0, MidiNoteMask.field_g.field_u);
     }
 
     private final void k(int param0) {
@@ -1573,7 +1573,7 @@ class jla {
           break;
         }
         var2Lifetime1 = stackIn_11_0;
-        g.field_g.drawRightAligned(BoardChange.a((byte) -117, ie.field_a), 600, 460, FullHealAnimation.field_v, -1);
+        MidiNoteMask.field_g.drawRightAligned(BoardChange.a((byte) -117, ie.field_a), 600, 460, FullHealAnimation.field_v, -1);
         return;
     }
 
@@ -2033,50 +2033,50 @@ class jla {
         LinkTextWidget.field_D.drawText(EventAnimation.field_t[0], 25, 30, FullHealAnimation.field_v, -1);
         int var3 = 0;
         var3 += 2;
-        g.field_g.drawText(EventAnimation.field_t[1], 25, 30 + g.field_g.field_u * var3, 3518976, -1);
+        MidiNoteMask.field_g.drawText(EventAnimation.field_t[1], 25, 30 + MidiNoteMask.field_g.field_u * var3, 3518976, -1);
         var3++;
-        vw.field_a[0].field_b[80].drawScaled(25, 30 + var3 * g.field_g.field_u, 64, 32);
-        var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_t[2], 99, var3 * g.field_g.field_u + 30, -64 + (var2 - 10), 430, 3518976, -1, 0, 0, g.field_g.field_u);
+        vw.field_a[0].field_b[80].drawScaled(25, 30 + var3 * MidiNoteMask.field_g.field_u, 64, 32);
+        var3 = var3 + MidiNoteMask.field_g.drawParagraph(EventAnimation.field_t[2], 99, var3 * MidiNoteMask.field_g.field_u + 30, -64 + (var2 - 10), 430, 3518976, -1, 0, 0, MidiNoteMask.field_g.field_u);
         var3++;
-        vw.field_a[2].field_b[80].drawScaled(25, 30 + var3 * g.field_g.field_u, 64, 32);
-        var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_t[3], 99, 30 + g.field_g.field_u * var3, -10 + var2 - 64, 430, 3518976, -1, 0, 0, g.field_g.field_u);
+        vw.field_a[2].field_b[80].drawScaled(25, 30 + var3 * MidiNoteMask.field_g.field_u, 64, 32);
+        var3 = var3 + MidiNoteMask.field_g.drawParagraph(EventAnimation.field_t[3], 99, 30 + MidiNoteMask.field_g.field_u * var3, -10 + var2 - 64, 430, 3518976, -1, 0, 0, MidiNoteMask.field_g.field_u);
         var3++;
-        vw.field_a[1].field_b[80].drawScaled(25, var3 * g.field_g.field_u + 30, 64, 32);
-        var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_t[4], 99, g.field_g.field_u * var3 + 30, var2 - 64 - 10, 430, 3518976, -1, 0, 0, g.field_g.field_u);
+        vw.field_a[1].field_b[80].drawScaled(25, var3 * MidiNoteMask.field_g.field_u + 30, 64, 32);
+        var3 = var3 + MidiNoteMask.field_g.drawParagraph(EventAnimation.field_t[4], 99, MidiNoteMask.field_g.field_u * var3 + 30, var2 - 64 - 10, 430, 3518976, -1, 0, 0, MidiNoteMask.field_g.field_u);
         var3 += 4;
         if (param0 > -20) {
           this.c((byte) 26);
         }
-        LinkTextWidget.field_D.drawText(EventAnimation.field_t[5], 25, 30 + g.field_g.field_u * var3, FullHealAnimation.field_v, -1);
+        LinkTextWidget.field_D.drawText(EventAnimation.field_t[5], 25, 30 + MidiNoteMask.field_g.field_u * var3, FullHealAnimation.field_v, -1);
         var3++;
-        vw.field_a[0].field_b[120].drawScaled(25, 30 + var3 * g.field_g.field_u, 64, 32);
-        vw.field_a[2].field_b[120].drawScaled(89, g.field_g.field_u * var3 + 30, 64, 32);
-        vw.field_a[1].field_b[120].drawScaled(153, 30 + g.field_g.field_u * var3, 64, 32);
-        g.field_g.drawText(EventAnimation.field_t[6], 227, 30 + (g.field_g.field_u * (var3 + 1) + 3 * g.field_g.field_u / 8), 3518976, -1);
+        vw.field_a[0].field_b[120].drawScaled(25, 30 + var3 * MidiNoteMask.field_g.field_u, 64, 32);
+        vw.field_a[2].field_b[120].drawScaled(89, MidiNoteMask.field_g.field_u * var3 + 30, 64, 32);
+        vw.field_a[1].field_b[120].drawScaled(153, 30 + MidiNoteMask.field_g.field_u * var3, 64, 32);
+        MidiNoteMask.field_g.drawText(EventAnimation.field_t[6], 227, 30 + (MidiNoteMask.field_g.field_u * (var3 + 1) + 3 * MidiNoteMask.field_g.field_u / 8), 3518976, -1);
         var3 += 3;
-        vw.field_a[0].field_b[88].drawScaled(25, 30 + g.field_g.field_u * var3, 64, 32);
-        vw.field_a[2].field_b[88].drawScaled(89, g.field_g.field_u * var3 + 30, 64, 32);
-        vw.field_a[1].field_b[88].drawScaled(153, 30 + g.field_g.field_u * var3, 64, 32);
-        var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_t[7], 227, 30 + g.field_g.field_u * var3, -10 + (-192 + var2), 430, 3518976, -1, 0, 0, g.field_g.field_u);
+        vw.field_a[0].field_b[88].drawScaled(25, 30 + MidiNoteMask.field_g.field_u * var3, 64, 32);
+        vw.field_a[2].field_b[88].drawScaled(89, MidiNoteMask.field_g.field_u * var3 + 30, 64, 32);
+        vw.field_a[1].field_b[88].drawScaled(153, 30 + MidiNoteMask.field_g.field_u * var3, 64, 32);
+        var3 = var3 + MidiNoteMask.field_g.drawParagraph(EventAnimation.field_t[7], 227, 30 + MidiNoteMask.field_g.field_u * var3, -10 + (-192 + var2), 430, 3518976, -1, 0, 0, MidiNoteMask.field_g.field_u);
         var3 += 2;
-        vw.field_a[0].field_b[80].drawScaled(25, 30 + g.field_g.field_u * var3, 64, 32);
-        vw.field_a[0].field_b[103].drawScaled(25, 30 + g.field_g.field_u * var3, 64, 32);
-        vw.field_a[0].field_b[95].drawScaled(25, -32 + (30 + var3 * g.field_g.field_u), 64, 32);
-        vw.field_a[2].field_b[80].drawScaled(89, 30 + var3 * g.field_g.field_u, 64, 32);
-        vw.field_a[2].field_b[103].drawScaled(89, var3 * g.field_g.field_u + 30, 64, 32);
-        vw.field_a[2].field_b[95].drawScaled(89, var3 * g.field_g.field_u + 30 - 32, 64, 32);
-        vw.field_a[1].field_b[80].drawScaled(153, g.field_g.field_u * var3 + 30, 64, 32);
-        vw.field_a[1].field_b[103].drawScaled(153, 30 + g.field_g.field_u * var3, 64, 32);
-        vw.field_a[1].field_b[95].drawScaled(153, 30 + var3 * g.field_g.field_u - 32, 64, 32);
-        var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_t[8], 227, 30 + (var3 * g.field_g.field_u - g.field_g.field_u / 2), -192 + var2 - 10, 430, 3518976, -1, 0, 0, g.field_g.field_u);
+        vw.field_a[0].field_b[80].drawScaled(25, 30 + MidiNoteMask.field_g.field_u * var3, 64, 32);
+        vw.field_a[0].field_b[103].drawScaled(25, 30 + MidiNoteMask.field_g.field_u * var3, 64, 32);
+        vw.field_a[0].field_b[95].drawScaled(25, -32 + (30 + var3 * MidiNoteMask.field_g.field_u), 64, 32);
+        vw.field_a[2].field_b[80].drawScaled(89, 30 + var3 * MidiNoteMask.field_g.field_u, 64, 32);
+        vw.field_a[2].field_b[103].drawScaled(89, var3 * MidiNoteMask.field_g.field_u + 30, 64, 32);
+        vw.field_a[2].field_b[95].drawScaled(89, var3 * MidiNoteMask.field_g.field_u + 30 - 32, 64, 32);
+        vw.field_a[1].field_b[80].drawScaled(153, MidiNoteMask.field_g.field_u * var3 + 30, 64, 32);
+        vw.field_a[1].field_b[103].drawScaled(153, 30 + MidiNoteMask.field_g.field_u * var3, 64, 32);
+        vw.field_a[1].field_b[95].drawScaled(153, 30 + var3 * MidiNoteMask.field_g.field_u - 32, 64, 32);
+        var3 = var3 + MidiNoteMask.field_g.drawParagraph(EventAnimation.field_t[8], 227, 30 + (var3 * MidiNoteMask.field_g.field_u - MidiNoteMask.field_g.field_u / 2), -192 + var2 - 10, 430, 3518976, -1, 0, 0, MidiNoteMask.field_g.field_u);
         var3++;
-        vw.field_a[0].field_b[80].drawScaled(25, 30 + g.field_g.field_u * var3, 64, 32);
-        vw.field_a[0].field_b[109].drawScaled(25, 30 + var3 * g.field_g.field_u, 64, 32);
-        vw.field_a[2].field_b[80].drawScaled(89, g.field_g.field_u * var3 + 30, 64, 32);
-        vw.field_a[2].field_b[109].drawScaled(89, 30 + var3 * g.field_g.field_u, 64, 32);
-        vw.field_a[1].field_b[80].drawScaled(153, 30 + var3 * g.field_g.field_u, 64, 32);
-        vw.field_a[1].field_b[109].drawScaled(153, 30 + var3 * g.field_g.field_u, 64, 32);
-        g.field_g.drawText(EventAnimation.field_t[9], 227, (1 + var3) * g.field_g.field_u + 30 + 3 * g.field_g.field_u / 8, 3518976, -1);
+        vw.field_a[0].field_b[80].drawScaled(25, 30 + MidiNoteMask.field_g.field_u * var3, 64, 32);
+        vw.field_a[0].field_b[109].drawScaled(25, 30 + var3 * MidiNoteMask.field_g.field_u, 64, 32);
+        vw.field_a[2].field_b[80].drawScaled(89, MidiNoteMask.field_g.field_u * var3 + 30, 64, 32);
+        vw.field_a[2].field_b[109].drawScaled(89, 30 + var3 * MidiNoteMask.field_g.field_u, 64, 32);
+        vw.field_a[1].field_b[80].drawScaled(153, 30 + var3 * MidiNoteMask.field_g.field_u, 64, 32);
+        vw.field_a[1].field_b[109].drawScaled(153, 30 + var3 * MidiNoteMask.field_g.field_u, 64, 32);
+        MidiNoteMask.field_g.drawText(EventAnimation.field_t[9], 227, (1 + var3) * MidiNoteMask.field_g.field_u + 30 + 3 * MidiNoteMask.field_g.field_u / 8, 3518976, -1);
     }
 
     void l(int param0) {
@@ -2159,32 +2159,32 @@ class jla {
         int var2 = 0;
         LinkTextWidget.field_D.drawText(EventAnimation.field_j[0], 25, 30, FullHealAnimation.field_v, -1);
         var2++;
-        var2 = var2 + g.field_g.drawParagraph(EventAnimation.field_j[1], 25, -10 + (g.field_g.field_u * var2 + 40), 590, 430, 3518976, -1, 0, 0, g.field_g.field_u);
+        var2 = var2 + MidiNoteMask.field_g.drawParagraph(EventAnimation.field_j[1], 25, -10 + (MidiNoteMask.field_g.field_u * var2 + 40), 590, 430, 3518976, -1, 0, 0, MidiNoteMask.field_g.field_u);
         var2 += 2;
-        g.field_g.drawText(EventAnimation.field_j[2], 25, 40 - (-(var2 * g.field_g.field_u) + 10), 3518976, -1);
-        r.field_n.draw(25, 40 + var2 * g.field_g.field_u);
+        MidiNoteMask.field_g.drawText(EventAnimation.field_j[2], 25, 40 - (-(var2 * MidiNoteMask.field_g.field_u) + 10), 3518976, -1);
+        r.field_n.draw(25, 40 + var2 * MidiNoteMask.field_g.field_u);
         int var4 = 10 + (25 + r.field_n.field_q);
         int var3 = -r.field_n.field_q + 590;
-        var2 = var2 + g.field_g.drawParagraph(EventAnimation.field_j[4], var4, 40 + g.field_g.field_u * var2, var3, 430, 3518976, -1, 0, 0, g.field_g.field_u);
-        pt.a(315, 3518976, 145, true, var2 * g.field_g.field_u + 40 - g.field_g.field_u / 2, 180, 5, (byte) 111, 350);
+        var2 = var2 + MidiNoteMask.field_g.drawParagraph(EventAnimation.field_j[4], var4, 40 + MidiNoteMask.field_g.field_u * var2, var3, 430, 3518976, -1, 0, 0, MidiNoteMask.field_g.field_u);
+        pt.a(315, 3518976, 145, true, var2 * MidiNoteMask.field_g.field_u + 40 - MidiNoteMask.field_g.field_u / 2, 180, 5, (byte) 111, 350);
         var2++;
-        WidgetTheme.a(180, 270, -1271, 234, g.field_g.field_u * (1 + var2) + 40, 350, 5, 3518976);
-        var2 = var2 + g.field_g.drawParagraph(EventAnimation.field_j[5], var4, 40 + g.field_g.field_u * var2, var3, 430, 3518976, -1, 0, 0, g.field_g.field_u);
+        WidgetTheme.a(180, 270, -1271, 234, MidiNoteMask.field_g.field_u * (1 + var2) + 40, 350, 5, 3518976);
+        var2 = var2 + MidiNoteMask.field_g.drawParagraph(EventAnimation.field_j[5], var4, 40 + MidiNoteMask.field_g.field_u * var2, var3, 430, 3518976, -1, 0, 0, MidiNoteMask.field_g.field_u);
         var2++;
-        pt.a(283, 3518976, 215, true, (var2 + 1) * g.field_g.field_u + 40, 280, 5, (byte) 53, 350);
-        var2 = var2 + g.field_g.drawParagraph(EventAnimation.field_j[6], var4, 40 + g.field_g.field_u * var2, var3, 430, 3518976, -1, 0, 0, g.field_g.field_u);
+        pt.a(283, 3518976, 215, true, (var2 + 1) * MidiNoteMask.field_g.field_u + 40, 280, 5, (byte) 53, 350);
+        var2 = var2 + MidiNoteMask.field_g.drawParagraph(EventAnimation.field_j[6], var4, 40 + MidiNoteMask.field_g.field_u * var2, var3, 430, 3518976, -1, 0, 0, MidiNoteMask.field_g.field_u);
         var2++;
-        pt.a(322, 3518976, 295, true, 40 + g.field_g.field_u * (var2 + 1), 360, 10, (byte) 64, 350);
-        var2 = var2 + g.field_g.drawParagraph(EventAnimation.field_j[7], var4, var2 * g.field_g.field_u + 40, var3, 430, 3518976, -1, 0, 0, g.field_g.field_u);
+        pt.a(322, 3518976, 295, true, 40 + MidiNoteMask.field_g.field_u * (var2 + 1), 360, 10, (byte) 64, 350);
+        var2 = var2 + MidiNoteMask.field_g.drawParagraph(EventAnimation.field_j[7], var4, var2 * MidiNoteMask.field_g.field_u + 40, var3, 430, 3518976, -1, 0, 0, MidiNoteMask.field_g.field_u);
         var3 = r.field_n.field_q;
         int var5 = 1;
         if (SetMoveSlotCooldownEffect.field_k == 0) {
           var5 = 0;
         }
-        g.field_g.drawParagraph(EventAnimation.field_j[3], 125, -((var5 + 11) * g.field_g.field_u / param0) + 470, var3, 2 * g.field_g.field_u, 3518976, -1, 0, 0, g.field_g.field_u);
-        WidgetTheme.a(180, 198, -1271, 32, (-var5 + 3) * g.field_g.field_u / 2 + 385, 120, 10, 3518976);
-        var3 = g.field_g.stringWidth(EventAnimation.field_j[8]);
-        g.field_g.drawText(EventAnimation.field_j[8], 25, 470 - 3 * g.field_g.field_u / 2, 3518976, -1);
+        MidiNoteMask.field_g.drawParagraph(EventAnimation.field_j[3], 125, -((var5 + 11) * MidiNoteMask.field_g.field_u / param0) + 470, var3, 2 * MidiNoteMask.field_g.field_u, 3518976, -1, 0, 0, MidiNoteMask.field_g.field_u);
+        WidgetTheme.a(180, 198, -1271, 32, (-var5 + 3) * MidiNoteMask.field_g.field_u / 2 + 385, 120, 10, 3518976);
+        var3 = MidiNoteMask.field_g.stringWidth(EventAnimation.field_j[8]);
+        MidiNoteMask.field_g.drawText(EventAnimation.field_j[8], 25, 470 - 3 * MidiNoteMask.field_g.field_u / 2, 3518976, -1);
         WidgetTheme.a(362, 91, -1271, 45, 435, 68, 5, 3518976);
     }
 

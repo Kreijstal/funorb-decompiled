@@ -23,7 +23,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             PcmSample var4 = (PcmSample) null;
             FullscreenFocusCanvas.a(7, (PcmSample) null, 115);
           }
-          tj.a(param0, this.field_c, -23144);
+          GrowableIntArray.a(param0, this.field_c, -23144);
         } catch (RuntimeException runtimeException) {
           throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "ea.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -42,7 +42,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > 8) {
-            stackIn_4_0 = ik.a(RawPcmStream.createForPlaybackRate(param1, 100, param2), -129);
+            stackIn_4_0 = MusicPatch.a(RawPcmStream.createForPlaybackRate(param1, 100, param2), -129);
             return stackIn_4_0;
           }
           stackIn_2_0 = (hf) null;

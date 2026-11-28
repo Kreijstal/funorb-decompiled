@@ -125,7 +125,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("create_ineligible", (byte) 121);
                 if (null != var2) {
-                  wd.field_l = eg.a(109, var2);
+                  MidiNoteMask.field_l = eg.a(109, var2);
                 }
                 var2 = kb.a("usernameprompt", (byte) 108);
                 if (null != var2) {
@@ -1175,7 +1175,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("back", (byte) 109);
                 if (var2 != null) {
-                  te.field_f = eg.a(96, var2);
+                  GrowableIntArray.field_f = eg.a(96, var2);
                 }
                 var2 = kb.a("exitfullscreenmode", (byte) 106);
                 if (null != var2) {
@@ -1522,7 +1522,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("login_username", (byte) 127);
                 if (var2 != null) {
-                  te.field_b = eg.a(96, var2);
+                  GrowableIntArray.field_b = eg.a(96, var2);
                 }
                 var2 = kb.a("login_email", (byte) 117);
                 if (var2 != null) {
@@ -2524,7 +2524,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("quickchat_shortcut_help,1", (byte) 120);
                 if (null != var2) {
-                  qf.field_a[1] = eg.a(SectorCacheStore.a(param0, 115), var2);
+                  qf.field_a[1] = eg.a(SectorCacheStore.bitwiseXor(param0, 115), var2);
                 }
                 var2 = kb.a("quickchat_shortcut_help,2", (byte) 117);
                 if (null != var2) {
@@ -2540,7 +2540,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("quickchat_shortcut_help,5", (byte) 127);
                 if (null != var2) {
-                  qf.field_a[5] = eg.a(SectorCacheStore.a(param0, 102), var2);
+                  qf.field_a[5] = eg.a(SectorCacheStore.bitwiseXor(param0, 102), var2);
                 }
                 var2 = kb.a("quickchat_shortcut_keys,0", (byte) 119);
                 if (null != var2) {
@@ -2552,7 +2552,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("quickchat_shortcut_keys,2", (byte) 107);
                 if (var2 != null) {
-                  TextHotspotBounds.field_k[2] = eg.a(SectorCacheStore.a(param0, 120), var2);
+                  TextHotspotBounds.field_k[2] = eg.a(SectorCacheStore.bitwiseXor(param0, 120), var2);
                 }
                 var2 = kb.a("quickchat_shortcut_keys,3", (byte) 117);
                 if (var2 != null) {
@@ -2608,7 +2608,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("members_expansion_benefits,0", (byte) 118);
                 if (var2 != null) {
-                  ng.field_l[0] = eg.a(SectorCacheStore.a(param0, 122), var2);
+                  ng.field_l[0] = eg.a(SectorCacheStore.bitwiseXor(param0, 122), var2);
                 }
                 var2 = kb.a("members_expansion_benefits,1", (byte) 118);
                 if (var2 != null) {
@@ -2696,7 +2696,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("fs_button_accept", (byte) 120);
                 if (null != var2) {
-                  wd.field_i = eg.a(95, var2);
+                  MidiNoteMask.field_i = eg.a(95, var2);
                 }
                 var2 = kb.a("fs_accept_afteraccept", (byte) 112);
                 if (null != var2) {
@@ -2736,7 +2736,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("fs_unavailable_try_signed_applet", (byte) 115);
                 if (var2 != null) {
-                  nh.field_m = eg.a(param0 ^ 121, var2);
+                  MusicPatchEnvelope.field_m = eg.a(param0 ^ 121, var2);
                 }
                 var2 = kb.a("fs_focus", (byte) 113);
                 if (var2 != null) {
@@ -2900,11 +2900,11 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("mustlogin2,3", (byte) 127);
                 if (var2 != null) {
-                  StandardContentDialog.field_cb[3] = eg.a(SectorCacheStore.a(param0, 124), var2);
+                  StandardContentDialog.field_cb[3] = eg.a(SectorCacheStore.bitwiseXor(param0, 124), var2);
                 }
                 var2 = kb.a("mustlogin2,4", (byte) 106);
                 if (var2 != null) {
-                  StandardContentDialog.field_cb[4] = eg.a(SectorCacheStore.a(param0, 126), var2);
+                  StandardContentDialog.field_cb[4] = eg.a(SectorCacheStore.bitwiseXor(param0, 126), var2);
                 }
                 var2 = kb.a("mustlogin2,5", (byte) 106);
                 if (null != var2) {
@@ -2934,15 +2934,15 @@ final class ContextualRuntimeException extends RuntimeException {
             void runChunk3() throws java.lang.RuntimeException {
                 var2 = kb.a("mustlogin3,4", (byte) 116);
                 if (var2 != null) {
-                  ba.field_l[4] = eg.a(SectorCacheStore.a(param0, 113), var2);
+                  ba.field_l[4] = eg.a(SectorCacheStore.bitwiseXor(param0, 113), var2);
                 }
                 var2 = kb.a("mustlogin3,5", (byte) 109);
                 if (var2 != null) {
-                  ba.field_l[5] = eg.a(SectorCacheStore.a(param0, 119), var2);
+                  ba.field_l[5] = eg.a(SectorCacheStore.bitwiseXor(param0, 119), var2);
                 }
                 var2 = kb.a("mustlogin3,6", (byte) 126);
                 if (var2 != null) {
-                  ba.field_l[6] = eg.a(SectorCacheStore.a(param0, 125), var2);
+                  ba.field_l[6] = eg.a(SectorCacheStore.bitwiseXor(param0, 125), var2);
                 }
                 var2 = kb.a("mustlogin3,7", (byte) 107);
                 if (null != var2) {
@@ -2950,7 +2950,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("discard", (byte) 112);
                 if (null != var2) {
-                  nh.field_l = eg.a(param0 ^ 80, var2);
+                  MusicPatchEnvelope.field_l = eg.a(param0 ^ 80, var2);
                 }
                 var2 = kb.a("mustlogin4,1", (byte) 118);
                 if (null != var2) {
@@ -2994,7 +2994,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("mustlogin_alternate,3", (byte) 108);
                 if (null != var2) {
-                  qf.field_c[3] = eg.a(SectorCacheStore.a(param0, 103), var2);
+                  qf.field_c[3] = eg.a(SectorCacheStore.bitwiseXor(param0, 103), var2);
                 }
                 var2 = kb.a("mustlogin_alternate,4", (byte) 116);
                 if (null != var2) {
@@ -3030,7 +3030,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("subscription_cost_monthly,4", (byte) 118);
                 if (var2 != null) {
-                  LetterTile.field_w[4] = eg.a(SectorCacheStore.a(param0, 83), var2);
+                  LetterTile.field_w[4] = eg.a(SectorCacheStore.bitwiseXor(param0, 83), var2);
                 }
                 var2 = kb.a("subscription_cost_monthly,5", (byte) 107);
                 if (var2 != null) {
@@ -3058,7 +3058,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("subscription_cost_monthly,11", (byte) 116);
                 if (var2 != null) {
-                  LetterTile.field_w[11] = eg.a(SectorCacheStore.a(param0, 83), var2);
+                  LetterTile.field_w[11] = eg.a(SectorCacheStore.bitwiseXor(param0, 83), var2);
                 }
                 var2 = kb.a("subscription_cost_monthly,12", (byte) 110);
                 if (var2 != null) {

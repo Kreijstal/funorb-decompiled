@@ -91,7 +91,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetActiva
           if (param0 != -3) {
             field_K = (nb) null;
           }
-          var5 = fc.field_e;
+          var5 = GrowableIntArray.field_e;
           var1 = var5;
           var2 = 0;
           var3 = var5.length;
@@ -161,7 +161,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetActiva
             var3_int = param1.length;
             this.field_I = new String[var3_int];
             for (var4_int = 0; var4_int < var3_int; var4_int++) {
-              this.field_I[var4_int] = AccountCreationResultPanel.a((CharSequence) ((Object) param1[var4_int]), sl.a(param0, -11664)).replace(' ', ' ');
+              this.field_I[var4_int] = AccountCreationResultPanel.a((CharSequence) ((Object) param1[var4_int]), sl.bitwiseXor(param0, -11664)).replace(' ', ' ');
             }
             if (param0 != -11678) {
               field_F = (IntrusiveDeque) null;

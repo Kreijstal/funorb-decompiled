@@ -28,7 +28,7 @@ final class l {
         if (param1 > -72) {
           l.a((byte) 92);
           var2 = 0;
-          var3 = si.field_l;
+          var3 = MusicPatch.field_l;
           regionExit1: {
             if (var3 < 5) {
               var2 = var3 * var3 * 8192 / 1100;
@@ -121,7 +121,7 @@ final class l {
           return;
         }
         var2Lifetime1 = 0;
-        var3Lifetime1 = si.field_l;
+        var3Lifetime1 = MusicPatch.field_l;
         if (var3Lifetime1 < 5) {
           var2Lifetime1 = var3Lifetime1 * var3Lifetime1 * 8192 / 1100;
           var4Lifetime1 = 1;

@@ -246,7 +246,7 @@ class wc extends DefaultTextWidgetRenderer {
                     }
                   }
                   if (var21 != null &&
-                    qd.a((byte) 13, var21)) {
+                    MusicPatchNode.a((byte) 13, var21)) {
                     var8[1][var13] = ci.field_J;
                     var9[1][var13] = null;
                     var34[1][var13] = var22;

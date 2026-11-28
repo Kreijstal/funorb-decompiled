@@ -69,7 +69,7 @@ final class nh {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -95,12 +95,12 @@ final class nh {
         Throwable var3 = null;
         Throwable decompiledCaughtException = null;
         var1 = -58 / ((0 - param0) / 57);
-        if (null == ee.field_j) {
+        if (null == MidiNoteMask.field_j) {
           return;
         }
-        var2 = ee.field_j;
+        var2 = MidiNoteMask.field_j;
         synchronized (var2) {
-          ee.field_j = null;
+          MidiNoteMask.field_j = null;
         }
     }
 

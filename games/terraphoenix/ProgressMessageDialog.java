@@ -69,7 +69,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           if (param2 != 3) {
             if (param2 != 4) {
               if (param2 == 6) {
-                var6.addActionButton(9, fc.field_b, (byte) -111);
+                var6.addActionButton(9, GrowableIntArray.field_b, (byte) -111);
               } else {
                 if (param2 == 9) {
                   var6.addListenerButton((byte) 23, (WidgetEventListener) (this), ec.field_c);

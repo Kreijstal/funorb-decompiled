@@ -71,13 +71,13 @@ final class mh implements uj {
           synchronized (var1) {
             dn.field_w = BufferedSocket.field_d;
             hb.field_b = hb.field_b + 1;
-            if (cg.field_H < 0) {
+            if (MusicPatchNode.field_H < 0) {
               for (var2 = 0; var2 < 112; var2++) {
                 GuestPlayConfirmationForm.field_O[var2] = false;
               }
-              cg.field_H = dm.field_b;
+              MusicPatchNode.field_H = dm.field_b;
             } else {
-              while (dm.field_b != cg.field_H) {
+              while (dm.field_b != MusicPatchNode.field_H) {
                 var2 = ib.field_b[dm.field_b];
                 dm.field_b = dm.field_b + 1 & 127;
                 if (var2 < 0) {
@@ -88,7 +88,7 @@ final class mh implements uj {
               }
             }
             var2Lifetime1 = -126 % ((param0 + 3) / 32);
-            BufferedSocket.field_d = qf.field_n;
+            BufferedSocket.field_d = MidiNoteMask.field_n;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

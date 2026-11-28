@@ -145,7 +145,7 @@ abstract class ArchiveProvider {
     }
 
     static {
-        field_c = nf.a(false);
+        field_c = MusicPatch.a(false);
         field_a = new bl(3);
         field_e = 0;
         field_b = "Use this alternative as your account name";

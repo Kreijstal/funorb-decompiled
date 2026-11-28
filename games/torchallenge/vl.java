@@ -53,7 +53,7 @@ final class vl {
               }
               var3 = hf.field_d.length;
               for (var4 = 0; var4 < var3; var4++) {
-                hf.field_d[var4] = (byte)p.a((int) hf.field_d[var4], (int) param0[var4]);
+                hf.field_d[var4] = (byte)p.bitwiseOr((int) hf.field_d[var4], (int) param0[var4]);
               }
               return;
             }

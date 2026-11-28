@@ -608,7 +608,7 @@ final class MixedSupport020 extends HashNode {
               }
               mixedSupport015Local20 = stackMixedSupport015Local8;
               if (mixedSupport015Local20 != null) {
-                mixedSupport015Local20.drawNineSlice(integerLocal22 + (NetworkSupport006.integerState0499 << 1), 102, integerLocal23 - NetworkSupport006.integerState0499, integerLocal10, (AccountFieldStatusIndicator.integerState0575 << 1) + NineSliceSprite.integerState0100);
+                mixedSupport015Local20.drawNineSlice(integerLocal22 + (GrowableIntArray.integerState0499 << 1), 102, integerLocal23 - GrowableIntArray.integerState0499, integerLocal10, (AccountFieldStatusIndicator.integerState0575 << 1) + NineSliceSprite.integerState0100);
               }
               integerLocal10 = integerLocal10 + AccountFieldStatusIndicator.integerState0575;
             }

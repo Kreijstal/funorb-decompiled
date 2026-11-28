@@ -36,7 +36,7 @@ final class nj {
             var13 = param7;
             var14 = param0;
             var15 = var17[var11] >> 1 & 8355711;
-            var10[var11] = var15 + (c.a(16711680, var12 >> 1) + (c.a(65280, var13 >> 9) + c.a(var14 >> 17, 255)));
+            var10[var11] = var15 + (c.bitwiseAnd(16711680, var12 >> 1) + (c.bitwiseAnd(65280, var13 >> 9) + c.bitwiseAnd(var14 >> 17, 255)));
             param3++;
             param0 = param0 + param4;
             param8 = param8 + param2;
@@ -120,7 +120,7 @@ final class nj {
             }
           } else {
             if (!el.field_c) {
-              ai.a(ResourceArchive.field_e.field_f, 0, IsaacRandom.field_c.field_D, 0, 307200);
+              ArrayBlockSupport.copyIntRange(ResourceArchive.field_e.field_f, 0, IsaacRandom.field_c.field_D, 0, 307200);
               IsaacRandom.field_c.bindAsRenderTarget();
               SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 640, 480);
               IsaacRandom.field_c.drawAdditive(0, 0, 50);
@@ -208,7 +208,7 @@ final class nj {
               IsaacRandom.field_c.drawOpaque(0, 0);
             }
           } else {
-            ai.a(ResourceArchive.field_e.field_f, 0, IsaacRandom.field_c.field_D, 0, 307200);
+            ArrayBlockSupport.copyIntRange(ResourceArchive.field_e.field_f, 0, IsaacRandom.field_c.field_D, 0, 307200);
             IsaacRandom.field_c.bindAsRenderTarget();
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 640, 480);
             IsaacRandom.field_c.drawAdditive(0, 0, 50);

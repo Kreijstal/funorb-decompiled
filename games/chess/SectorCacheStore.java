@@ -199,7 +199,7 @@ final class SectorCacheStore {
           }
           long dupTemp$0 = ud.correctedCurrentTimeMillis(param0 ^ 70);
           ta.field_t = dupTemp$0;
-          ml.field_d = dupTemp$0;
+          GrowableIntArray.field_d = dupTemp$0;
           if (tl.field_Gb.status != 1) {
             tb.field_f = gh.field_c;
           } else {

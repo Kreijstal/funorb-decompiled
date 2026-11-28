@@ -36,7 +36,7 @@ abstract class FrameTimer {
           if (la.a(0, param0)) {
             return true;
           }
-          var2 = td.field_l;
+          var2 = MidiNoteMask.field_l;
           var3 = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
@@ -263,7 +263,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("mu_x_lost_con", -118);
                 if (var2 != null) {
-                  dl.field_h = ad.a(-29410, var2);
+                  MusicPatchEnvelope.field_h = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_x_cannot_join_full", -80);
                 if (null != var2) {
@@ -355,7 +355,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("mu_gamelist_status", -95);
                 if (var2 != null) {
-                  ql.field_b = ad.a(-29410, var2);
+                  ByteArrayPoolSupport.field_b = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_gamelist_owner", -87);
                 if (null != var2) {
@@ -511,7 +511,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("mu_chat_lobby_friends_only", -113);
                 if (null != var2) {
-                  dl.field_m = ad.a(-29410, var2);
+                  MusicPatchEnvelope.field_m = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_chat_lobby_friends", -75);
                 if (var2 != null) {
@@ -575,7 +575,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("rated_game_tips", -122);
                 if (var2 != null) {
-                  qd.field_G = ad.a(-29410, var2);
+                  MusicPatchNode.field_G = ad.a(-29410, var2);
                 }
                 var2 = cd.a("searching_for_opponent_singular", -108);
                 if (var2 != null) {
@@ -587,7 +587,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("find_opponent_singular", -76);
                 if (var2 != null) {
-                  kf.field_m = ad.a(-29410, var2);
+                  MusicPatch.field_m = ad.a(-29410, var2);
                 }
                 var2 = cd.a("find_opponents_plural", -109);
                 if (null != var2) {
@@ -927,7 +927,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("gameopt_youneed1ratedgame", -113);
                 if (null != var2) {
-                  qd.field_l = ad.a(-29410, var2);
+                  MusicPatchNode.field_l = ad.a(-29410, var2);
                 }
                 var2 = cd.a("gameopt_playerhasntunlocked", -115);
                 if (null != var2) {
@@ -1019,7 +1019,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("ra_explanation", -109);
                 if (null != var2) {
-                  td.field_m = ad.a(-29410, var2);
+                  MidiNoteMask.field_m = ad.a(-29410, var2);
                 }
                 var2 = cd.a("rule_pillar_0", -101);
                 if (null != var2) {
@@ -1213,7 +1213,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("invalidpass", -126);
                 if (var2 != null) {
-                  td.field_r = ad.a(-29410, var2);
+                  MidiNoteMask.field_r = ad.a(-29410, var2);
                 }
                 var2 = cd.a("retry", -103);
                 if (null != var2) {
@@ -1589,7 +1589,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("login_justplay_tooltip", -113);
                 if (var2 != null) {
-                  qd.field_I = ad.a(-29410, var2);
+                  MusicPatchNode.field_I = ad.a(-29410, var2);
                 }
                 var2 = cd.a("login_back_tooltip", -121);
                 if (null != var2) {
@@ -1769,7 +1769,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("unable_to_add_ignore", -111);
                 if (var2 != null) {
-                  td.field_j = ad.a(-29410, var2);
+                  MidiNoteMask.field_j = ad.a(-29410, var2);
                 }
                 var2 = cd.a("unable_to_delete_friend", -95);
                 if (null != var2) {
@@ -2614,7 +2614,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("keychar_the_character_under_questionmark", -124);
                 if (var2 != null) {
-                  ql.field_f = TextFieldValidator.decodeCp1252Byte(103, var2[0]);
+                  ByteArrayPoolSupport.field_f = TextFieldValidator.decodeCp1252Byte(103, var2[0]);
                 }
                 var2 = cd.a("rating_noratings", -94);
                 if (null != var2) {
@@ -2930,7 +2930,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("DEFAULT_PLAYER_NAME", -81);
                 if (var2 != null) {
-                  ql.field_e = ad.a(-29410, var2);
+                  ByteArrayPoolSupport.field_e = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mustlogin1", -126);
                 if (null != var2) {

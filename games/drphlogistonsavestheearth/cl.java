@@ -270,7 +270,7 @@ final class cl extends gb {
                   this.field_r.readFully((byte) -14, this.field_g.payload, this.field_g.position, var5);
                   if (this.field_a != 0) {
                     for (var6 = 0; var5 > var6; var6++) {
-                      this.field_g.payload[this.field_g.position + var6] = (byte)ProxyAuthenticationRequiredException.a((int) this.field_g.payload[this.field_g.position + var6], (int) this.field_a);
+                      this.field_g.payload[this.field_g.position + var6] = (byte)ProxyAuthenticationRequiredException.bitwiseXor((int) this.field_g.payload[this.field_g.position + var6], (int) this.field_a);
                     }
                   }
                   this.field_g.position = this.field_g.position + var5;
@@ -346,7 +346,7 @@ final class cl extends gb {
                   this.field_r.readFully((byte) -14, this.field_d.field_K.payload, this.field_d.field_K.position, var6);
                   if (this.field_a != 0) {
                     for (var7 = 0; var6 > var7; var7++) {
-                      this.field_d.field_K.payload[this.field_d.field_K.position + var7] = (byte)ProxyAuthenticationRequiredException.a((int) this.field_d.field_K.payload[this.field_d.field_K.position + var7], (int) this.field_a);
+                      this.field_d.field_K.payload[this.field_d.field_K.position + var7] = (byte)ProxyAuthenticationRequiredException.bitwiseXor((int) this.field_d.field_K.payload[this.field_d.field_K.position + var7], (int) this.field_a);
                     }
                   }
                   this.field_d.field_K.position = this.field_d.field_K.position + var6;

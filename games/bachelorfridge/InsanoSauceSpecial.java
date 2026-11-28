@@ -45,7 +45,7 @@ final class InsanoSauceSpecial extends SpecialOrder {
               var6 = var13.length << 2;
             }
             for (var8 = 0; var6 > var8; var8++) {
-              var7[var8 >> 2] = var7[var8 >> 2] + (var11.readUnsignedByte(16711935) << (dda.a(var8, 3) << 8));
+              var7[var8 >> 2] = var7[var8 >> 2] + (var11.readUnsignedByte(16711935) << (dda.bitwiseAnd(var8, 3) << 8));
             }
             var5.unlink(false);
             return;

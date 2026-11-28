@@ -129,7 +129,7 @@ final class RandomAccessCacheFile {
         return this.field_d.length();
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseAnd(int param0, int param1) {
         return param0 & param1;
     }
 

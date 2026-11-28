@@ -21,14 +21,14 @@ final class ba {
         } else {
           var1 = new qg[DialogMessagePane.field_K];
           for (var2 = 0; DialogMessagePane.field_K > var2; var2++) {
-            var1[var2] = new qg(ModalDialog.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], fl.field_a[var2], vc.field_g);
+            var1[var2] = new qg(ModalDialog.field_B, MusicPatchNode.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], fl.field_a[var2], vc.field_g);
           }
           md.$cfr$intArgs$a$6121ff5511c4(-127);
           return var1;
         }
         var1Lifetime1 = new qg[DialogMessagePane.field_K];
         for (var2Lifetime1 = 0; DialogMessagePane.field_K > var2Lifetime1; var2Lifetime1++) {
-          var1Lifetime1[var2Lifetime1] = new qg(ModalDialog.field_B, he.field_r, jd.field_g[var2Lifetime1], wc.field_a[var2Lifetime1], wh.field_b[var2Lifetime1], m.field_a[var2Lifetime1], fl.field_a[var2Lifetime1], vc.field_g);
+          var1Lifetime1[var2Lifetime1] = new qg(ModalDialog.field_B, MusicPatchNode.field_r, jd.field_g[var2Lifetime1], wc.field_a[var2Lifetime1], wh.field_b[var2Lifetime1], m.field_a[var2Lifetime1], fl.field_a[var2Lifetime1], vc.field_g);
         }
         md.$cfr$intArgs$a$6121ff5511c4(-127);
         return var1Lifetime1;
@@ -74,7 +74,7 @@ final class ba {
           RegistrationAgreementPane.field_I.drawRightAligned(nh.field_a, 339, 30, 16777215, -1);
           SoftwareRasterizer.setClip(0, 0, 640, 2);
           SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 640, 480, 11184810, 4605510);
-          BufferedSocket.field_a.a(-40);
+          BufferedSocket.field_a.setAsRasterTarget(-40);
           hc.field_i.bindAsRenderTarget();
           SoftwareRasterizer.fillRectangleVerticalGradient(3, 2, 634, 117, 0, 10359);
           SoftwareRasterizer.setClip(0, 120, 640, 480);
@@ -85,7 +85,7 @@ final class ba {
           MatchingFieldValidator.a(42, 0, 462, 120, 176);
           SoftwareRasterizer.fillRectangleVerticalGradient(468, 6, 164, 24, 5132630, 1644825);
           SoftwareRasterizer.drawRectangleOutline(468, 6, 164, 24, 8947848);
-          BufferedSocket.field_a.a(-40);
+          BufferedSocket.field_a.setAsRasterTarget(-40);
         } catch (RuntimeException runtimeException) {
           throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "ba.A(" + param0 + ')');
         }

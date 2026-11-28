@@ -102,7 +102,7 @@ final class lg {
           DebouncedFieldValidator.field_h.b(-114, param1);
         }
         if (null != hh.field_b) {
-          hh.field_b.a(param1, (byte) 63);
+          hh.field_b.setVolume(param1, (byte) 63);
         }
         if (param0 >= -82) {
           lg.clearStaticReferences(-113);

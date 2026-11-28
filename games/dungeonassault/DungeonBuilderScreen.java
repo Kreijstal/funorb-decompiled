@@ -487,7 +487,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
                   var13 = var18;
                   var14 = 0;
                   while (var14 < var19.length) {
-                    var13[var14] = nb.a(var19[var14], 255);
+                    var13[var14] = nb.bitwiseAnd(var19[var14], 255);
                     stackIn_60_0 = -1;
                     stackIn_60_1 = ~var19[var14];
                     if (var15 != 0) {
@@ -509,7 +509,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
                 }
                 var10 = stackIn_60_0 - stackIn_60_1;
                 var11Lifetime1 = -jn.field_a.field_v + var9;
-                bp.a(var11Lifetime1, dm.field_f, var10, (byte) 99);
+                GrowableIntArray.a(var11Lifetime1, dm.field_f, var10, (byte) 99);
                 jn.field_a.draw(var10, var11Lifetime1);
               }
             }
@@ -522,7 +522,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
         if (null != this.field_b) {
           var5Lifetime2 = 0;
           while (var5Lifetime2 < SoftwareRasterizer.field_b.length) {
-            SoftwareRasterizer.field_b[var5Lifetime2] = nb.a(SoftwareRasterizer.field_b[var5Lifetime2] >>> 2, 1061109567);
+            SoftwareRasterizer.field_b[var5Lifetime2] = nb.bitwiseAnd(SoftwareRasterizer.field_b[var5Lifetime2] >>> 2, 1061109567);
             var5Lifetime2++;
             if (var15 != 0) {
               decompiledFrameCompleted0 = false;
@@ -533,7 +533,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
             this.field_b.b(112);
           }
         }
-        if (kn.field_g) {
+        if (ByteArrayPoolSupport.field_g) {
           ab.a(0);
         }
         oh.a((byte) 54);
@@ -569,14 +569,14 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
         int[][] var19 = null;
         var13 = DungeonAssault.field_K;
         try {
-          gn.field_i = kn.a(param3, "commonui", "frame_top", -62);
-          di.field_l = kn.a(param3, "commonui", "frame_bottom", -91);
+          gn.field_i = ByteArrayPoolSupport.a(param3, "commonui", "frame_top", -62);
+          di.field_l = ByteArrayPoolSupport.a(param3, "commonui", "frame_bottom", -91);
           bl.field_e = oh.a(param3, "commonui", 11091, "jagex_logo_grey");
-          na.field_C = kn.a(param3, "commonui", "button", -94);
+          na.field_C = ByteArrayPoolSupport.a(param3, "commonui", "button", -94);
           sl.field_c = SingleChildWidgetContainer.a("commonui", "validation", 0, param3);
-          ta.field_e = (BitmapFont) ((Object) kk.a(param2, param3, "arezzo12", 0, "commonui"));
-          lp.field_C = (BitmapFont) ((Object) kk.a(param2, param3, "arezzo14", 0, "commonui"));
-          hc.field_f = (BitmapFont) ((Object) kk.a(param2, param3, "arezzo14bold", 0, "commonui"));
+          ta.field_e = (BitmapFont) ((Object) MusicPatch.a(param2, param3, "arezzo12", 0, "commonui"));
+          MusicPatchNode.field_C = (BitmapFont) ((Object) MusicPatch.a(param2, param3, "arezzo14", 0, "commonui"));
+          hc.field_f = (BitmapFont) ((Object) MusicPatch.a(param2, param3, "arezzo14bold", 0, "commonui"));
           var17 = new RgbSprite(param0.getFileByName("button.gif", "", (byte) -116), (java.awt.Component) ((Object) AwtRasterBuffer.field_h));
           pa.a((byte) -94, param3, "commonui", "dropdown");
           var5 = qa.a(15322, "screen_options", "commonui", param3);
@@ -721,7 +721,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
         ac var5;
         var4 = DungeonAssault.field_K;
         this.field_F = -1;
-        if (kn.field_g &&
+        if (ByteArrayPoolSupport.field_g &&
           od.a((byte) -91)) {
           return;
         }
@@ -1109,7 +1109,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
               this.a(true, (byte) -11);
             }
             this.d(-1380862175);
-            stackIn_18_0 = kn.field_g ? 1 : 0;
+            stackIn_18_0 = ByteArrayPoolSupport.field_g ? 1 : 0;
             break;
           }
           stackIn_18_0 = mm.field_t;
@@ -1248,7 +1248,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
               !gm.field_d.field_H) {
               ac.field_B.d((byte) -106, 58);
             }
-            if (kn.field_g) {
+            if (ByteArrayPoolSupport.field_g) {
               gd.a(g.field_Hb, 0, 5, param0);
               return;
             }
@@ -1342,7 +1342,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
         ol.field_a = new RgbSprite[4];
         ol.field_a[0] = me.a(32, param0, 14, 0, 14);
         ol.field_a[1] = me.a(32, 14, 0, 14, 14);
-        ol.field_a[2] = me.a(IntrusiveDeque.b(param0, 46), 0, 14, 14, 14);
+        ol.field_a[2] = me.a(IntrusiveDeque.bitwiseXor(param0, 46), 0, 14, 14, 14);
         ol.field_a[3] = me.a(32, 14, 14, 14, 0);
         if (!gl.field_Lb) {
           ol.field_a = DungeonBuilderScreen.a(wk.a(ol.field_a, param0 - 14), 400);

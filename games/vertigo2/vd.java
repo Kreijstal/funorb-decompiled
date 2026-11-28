@@ -10,9 +10,9 @@ final class vd {
     final static void a(int param0, mp param1, int param2, int param3, int param4, mp param5) {
         try {
           qc.field_z = param3;
-          al.field_z = param4;
-          gl.field_l = param0;
-          gl.field_i = param5;
+          MusicPatch.field_z = param4;
+          MusicPatchEnvelope.field_l = param0;
+          MusicPatchEnvelope.field_i = param5;
           mq.field_v = param1;
           if (param2 != 1516482162) {
             field_a = -77;
@@ -63,7 +63,7 @@ final class vd {
             var4 = se.field_y[var2];
             var5 = new int[var3];
             for (var6 = 0; var3 > var6; var6++) {
-              var5[var6] = in.field_c[b.a((int) var4[var6], 255)];
+              var5[var6] = in.field_c[b.bitwiseAnd((int) var4[var6], 255)];
             }
             var1[var2] = new Sprite(BirthDateChatEnableForm.field_M, vj.field_c, ca.field_a[var2], pc.field_a[var2], mh.field_c[var2], vi.field_w[var2], var5);
           }

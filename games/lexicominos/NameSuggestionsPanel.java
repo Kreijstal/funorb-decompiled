@@ -59,7 +59,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
             for (var5 = 0; var3_int > var5; var5++) {
               this.field_G[var5] = new InteractiveWidget(this.field_D[var5], (WidgetEventListener) (this));
               this.field_G[var5].field_i = (WidgetRenderer) ((Object) var4);
-              this.field_G[var5].field_q = cb.field_A;
+              this.field_G[var5].field_q = MusicPatchNode.field_A;
               stackIn_15_0 = this.field_G[var5];
               stackIn_15_1 = 15;
               stackIn_15_2 = 80;

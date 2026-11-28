@@ -93,7 +93,7 @@ final class tg {
               }
             }
             lj.field_q = CrossfadingMidiPcmStream.field_y;
-            ng.field_l = h.field_b;
+            MusicPatchEnvelope.field_l = h.field_b;
             if (param1 != null) {
               il.field_n = false;
             } else {
@@ -107,7 +107,7 @@ final class tg {
             EmailFormatValidator.field_i) {
             lj.field_q = CrossfadingMidiPcmStream.field_y;
             pe.field_pb = 0;
-            ng.field_l = h.field_b;
+            MusicPatchEnvelope.field_l = h.field_b;
           }
           fa.field_c = param1;
           CrossfadingMidiPcmStream.field_y = -1;

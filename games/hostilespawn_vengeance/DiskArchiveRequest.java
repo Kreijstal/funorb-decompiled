@@ -86,18 +86,18 @@ final class DiskArchiveRequest extends ArchiveRequest {
             }
           }
           var3 = -94 / ((-2 - param0) / 60);
-          for (var4 = 0; var4 < hf.field_d.length; var4++) {
+          for (var4 = 0; var4 < ByteArrayPoolSupport.field_d.length; var4++) {
             var5 = FullscreenNoticeType.field_b[var4];
             if (0 > var5) {
               var6 = TextLayout.field_c;
             } else {
               if (NameSuggestionsPanel.field_F.field_f != var5) {
-                var6 = nf.field_m;
+                var6 = MusicPatch.field_m;
               } else {
                 var6 = hh.field_e;
               }
             }
-            var7 = hf.field_d[var4];
+            var7 = ByteArrayPoolSupport.field_d[var4];
             if (2 == be.field_e &&
               var2 == 1) {
               if (ModalDialogHost.field_D.length <= EmailFormatValidator.field_o.length) {

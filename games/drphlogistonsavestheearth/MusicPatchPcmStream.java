@@ -16,11 +16,11 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     final PcmStream nextChildStream() {
-        cc var1;
+        MusicPatchNode var1;
         int var2;
         var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         while (true) {
-          var1 = (cc) (this.field_q.nextForward(0));
+          var1 = (MusicPatchNode) (this.field_q.nextForward(0));
           if (var1 == null) {
             return null;
           }
@@ -31,7 +31,7 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     final PcmStream firstChildStream() {
-        cc var1 = (cc) (this.field_q.beginForward(-11151));
+        MusicPatchNode var1 = (MusicPatchNode) (this.field_q.beginForward(-11151));
         if (var1 == null) {
           return null;
         }
@@ -225,9 +225,9 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    private final void renderVoiceFrames(int param0, int param1, cc param2, byte param3, int[] param4, int param5) {
+    private final void renderVoiceFrames(int param0, int param1, MusicPatchNode param2, byte param3, int[] param4, int param5) {
         MidiPcmStream stackIn_13_0 = null;
-        cc stackIn_13_1 = null;
+        MusicPatchNode stackIn_13_1 = null;
         boolean stackIn_14_2 = false;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -271,7 +271,7 @@ final class MusicPatchPcmStream extends PcmStream {
               } else {
                 param2.field_D = PcmSampleStream.createForSampleStep(param2.field_C, var11.getSampleStepMagnitude(), 0, var11.getPan());
                 stackIn_13_0 = this.field_s;
-                stackIn_13_1 = (cc) (param2);
+                stackIn_13_1 = (MusicPatchNode) (param2);
                 stackIn_14_2 = !(param2.field_o.field_p[param2.field_F] >= 0);
                 ((MidiPcmStream) (Object) stackIn_13_0).applySampleOffset(stackIn_13_1, stackIn_14_2, (byte) -88);
                 param2.field_D.rampVolume(var9, var11.getTargetVolume());
@@ -309,9 +309,9 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    private final void skipVoiceFrames(int param0, cc param1, int param2) {
+    private final void skipVoiceFrames(int param0, MusicPatchNode param1, int param2) {
         MidiPcmStream stackIn_9_0 = null;
-        cc stackIn_9_1 = null;
+        MusicPatchNode stackIn_9_1 = null;
         boolean stackIn_10_2 = false;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -330,7 +330,7 @@ final class MusicPatchPcmStream extends PcmStream {
               if (this.field_s.field_E[param1.field_u] != 0) {
                 param1.field_D = PcmSampleStream.createForSampleStep(param1.field_C, param1.field_D.getSampleStepMagnitude(), 0, param1.field_D.getPan());
                 stackIn_9_0 = this.field_s;
-                stackIn_9_1 = (cc) (param1);
+                stackIn_9_1 = (MusicPatchNode) (param1);
                 stackIn_10_2 = !(0 <= param1.field_o.field_p[param1.field_F]);
                 ((MidiPcmStream) (Object) stackIn_9_0).applySampleOffset(stackIn_9_1, stackIn_10_2, (byte) -102);
               } else {
@@ -364,7 +364,7 @@ final class MusicPatchPcmStream extends PcmStream {
     final void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
-        cc var6 = null;
+        MusicPatchNode var6 = null;
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -374,7 +374,7 @@ final class MusicPatchPcmStream extends PcmStream {
         var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           this.field_r.mixInto(param0, param1, param2);
-          var6 = (cc) (this.field_q.beginForward(-11151));
+          var6 = (MusicPatchNode) (this.field_q.beginForward(-11151));
           while (var6 != null) {
             if (!this.field_s.isVoiceInactive(-128, var6)) {
               var4_int = param1;
@@ -390,7 +390,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 var4_int = var4_int + var6.field_l;
               } while (!this.field_s.updateVoice(var4_int, param0, -128, var6, var5));
             }
-            var6 = (cc) (this.field_q.nextForward(0));
+            var6 = (MusicPatchNode) (this.field_q.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -418,12 +418,12 @@ final class MusicPatchPcmStream extends PcmStream {
 
     final void skipFrames(int param0) {
         int var2;
-        cc var3;
+        MusicPatchNode var3;
         int var4;
         boolean stackIn_3_0 = false;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         this.field_r.skipFrames(param0);
-        var3 = (cc) (this.field_q.beginForward(-11151));
+        var3 = (MusicPatchNode) (this.field_q.beginForward(-11151));
         while (var3 != null) {
           stackIn_3_0 = this.field_s.isVoiceInactive(-124, var3);
           boolean decompiledFrameCompleted0 = true;
@@ -442,7 +442,7 @@ final class MusicPatchPcmStream extends PcmStream {
               var3.field_l = var3.field_l - var2;
             }
           }
-          var3 = (cc) (this.field_q.nextForward(0));
+          var3 = (MusicPatchNode) (this.field_q.nextForward(0));
         }
     }
 

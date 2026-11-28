@@ -358,9 +358,9 @@ abstract class GameClient extends AppletShell {
         }
         if (!param0 &&
           AwtRasterBuffer.field_f) {
-          ContentTransitionDialog.a(ch.field_h, (byte) 110);
+          ContentTransitionDialog.a(MusicPatchEnvelope.field_h, (byte) 110);
           this.d(12955);
-          l.a(0, ch.field_h);
+          l.a(0, MusicPatchEnvelope.field_h);
         }
         if (ImageProducerRasterBuffer.field_m[8]) {
           vg.a((byte) -17);
@@ -440,7 +440,7 @@ abstract class GameClient extends AppletShell {
         rk.a(param3, this.field_q, this.field_r, 0, this.field_v, Slime.field_a, DebouncedFieldValidator.field_e, this.field_u, this.field_x);
         PacketBuffer.g(param5 - 8717);
         AgeValidator.field_k = ek.createMouseWheelInput(0);
-        l.a(0, ch.field_h);
+        l.a(0, MusicPatchEnvelope.field_h);
         FullscreenNoticeType.field_a = param0;
         ne.field_n = param1;
         ContentTransitionDialog.field_Y = param4;
@@ -715,7 +715,7 @@ abstract class GameClient extends AppletShell {
     }
 
     private final void h(byte param0) {
-        String var2 = jj.a((byte) -54);
+        String var2 = ByteArrayPoolSupport.a((byte) -54);
         ph.a(var2, DiskCacheWorker.b(0), (byte) 51);
         if (param0 <= 99) {
           this.a(-59, true);

@@ -293,7 +293,7 @@ final class ig extends k {
             }
           } else {
             var19Lifetime1 = var18;
-            ArrayOperations.a(var19Lifetime1, 0, hh.field_d, 0);
+            ArrayOperations.fillInts(var19Lifetime1, 0, hh.field_d, 0);
           }
         }
         return var3;

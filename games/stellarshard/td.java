@@ -26,8 +26,8 @@ final class td {
           while (PcmResampler.c(123)) {
             IsaacRandom.field_d.processKeyInput(SectorCacheStore.field_f, AccountRequestState.field_b, true);
           }
-          if (-1 != ee.field_a) {
-            var1_int = ee.field_a;
+          if (-1 != ByteArrayPoolSupport.field_a) {
+            var1_int = ByteArrayPoolSupport.field_a;
             rh.a(-1, (byte) -72);
             stackIn_7_0 = var1_int;
             return stackIn_7_0;

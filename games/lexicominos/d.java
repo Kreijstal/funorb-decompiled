@@ -85,7 +85,7 @@ final class d {
                 }
                 incrementValue$1 = param10;
                 param10++;
-                param8[incrementValue$1] = FrameTimer.a(vg.a(16711935, param0 * vg.a(param9, 16711935) + var11_int * vg.a(var17, 16711935) >> 8), vg.a(param0 * vg.a(65280, param9) + var11_int * vg.a(var17, 65280), 16711696) >> 8);
+                param8[incrementValue$1] = FrameTimer.bitwiseOr(vg.bitwiseAnd(16711935, param0 * vg.bitwiseAnd(param9, 16711935) + var11_int * vg.bitwiseAnd(var17, 16711935) >> 8), vg.bitwiseAnd(param0 * vg.bitwiseAnd(65280, param9) + var11_int * vg.bitwiseAnd(var17, 65280), 16711696) >> 8);
               }
             }
             param10 = param10 + param2;

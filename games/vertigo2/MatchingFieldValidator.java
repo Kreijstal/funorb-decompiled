@@ -38,7 +38,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
             if (var3 != null) {
               if (var3.getValidationStatus(-23996) == GuestPlayConfirmationForm.field_G &&
                 !param1.equals(this.field_r.text)) {
-                stackIn_7_0 = gl.field_a;
+                stackIn_7_0 = MusicPatchEnvelope.field_a;
                 return stackIn_7_0;
               }
               stackIn_9_0 = var3.getValidationMessage(param0 - 30797);
@@ -46,7 +46,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
             }
           }
           if (!param1.equals(this.field_r.text)) {
-            stackIn_13_0 = gl.field_a;
+            stackIn_13_0 = MusicPatchEnvelope.field_a;
             return stackIn_13_0;
           }
           if (param0 == 3614) {

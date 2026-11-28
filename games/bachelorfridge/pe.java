@@ -23,7 +23,7 @@ final class pe extends k {
         if (param1 != 0) {
           field_n = (String) null;
           if (this.field_j.field_m) {
-            ArrayOperations.a(var4, 0, hh.field_d, tj.field_f[param0]);
+            ArrayOperations.fillInts(var4, 0, hh.field_d, tj.field_f[param0]);
             return var4;
           }
           return var4;
@@ -31,7 +31,7 @@ final class pe extends k {
         if (!this.field_j.field_m) {
           return var4;
         }
-        ArrayOperations.a(var4, 0, hh.field_d, tj.field_f[param0]);
+        ArrayOperations.fillInts(var4, 0, hh.field_d, tj.field_f[param0]);
         return var4;
     }
 

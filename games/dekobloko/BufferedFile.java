@@ -81,7 +81,7 @@ final class BufferedFile {
           if (-1L < longLocal2 &&
             longLocal2 < longLocal3) {
             integerLocal4 = (int)(longLocal3 - longLocal2);
-            MixedSupport008.performAction0073(this.byteArrayState0019, (int)(-this.longState0037 + longLocal2), this.byteArrayState0018, (int)(-this.longState0038 + longLocal2), integerLocal4);
+            ArrayBlockSupport.copyByteRange(this.byteArrayState0019, (int)(-this.longState0037 + longLocal2), this.byteArrayState0018, (int)(-this.longState0038 + longLocal2), integerLocal4);
           }
           this.longState0037 = -1L;
           this.integerState0539 = 0;
@@ -148,7 +148,7 @@ final class BufferedFile {
             if (this.longState0037 != -1L &&
               this.longState0036 >= this.longState0037 &&
               this.longState0036 + (long)integerArgument4 <= (long)this.integerState0539 + this.longState0037) {
-              MixedSupport008.performAction0073(this.byteArrayState0019, (int)(-this.longState0037 + this.longState0036), byteArrayArgument2, integerArgument1, integerArgument4);
+              ArrayBlockSupport.copyByteRange(this.byteArrayState0019, (int)(-this.longState0037 + this.longState0036), byteArrayArgument2, integerArgument1, integerArgument4);
               this.longState0036 = this.longState0036 + (long)integerArgument4;
               return;
             }
@@ -161,7 +161,7 @@ final class BufferedFile {
               if (integerArgument4 < integerLocal11) {
                 integerLocal11 = integerArgument4;
               }
-              MixedSupport008.performAction0073(this.byteArrayState0018, (int)(this.longState0036 - this.longState0038), byteArrayArgument2, integerArgument1, integerLocal11);
+              ArrayBlockSupport.copyByteRange(this.byteArrayState0018, (int)(this.longState0036 - this.longState0038), byteArrayArgument2, integerArgument1, integerLocal11);
               this.longState0036 = this.longState0036 + (long)integerLocal11;
               integerArgument4 = integerArgument4 - integerLocal11;
               integerArgument1 = integerArgument1 + integerLocal11;
@@ -192,7 +192,7 @@ final class BufferedFile {
               if (this.integerState0538 < integerLocal18) {
                 integerLocal18 = this.integerState0538;
               }
-              MixedSupport008.performAction0073(this.byteArrayState0018, 0, byteArrayArgument2, integerArgument1, integerLocal18);
+              ArrayBlockSupport.copyByteRange(this.byteArrayState0018, 0, byteArrayArgument2, integerArgument1, integerLocal18);
               integerArgument1 = integerArgument1 + integerLocal18;
               integerArgument4 = integerArgument4 - integerLocal18;
               this.longState0036 = this.longState0036 + (long)integerLocal18;
@@ -235,7 +235,7 @@ final class BufferedFile {
               if (longLocal12 > -1L &&
                 longLocal13 > longLocal12) {
                 integerLocal14 = (int)(longLocal13 - longLocal12);
-                MixedSupport008.performAction0073(this.byteArrayState0019, (int)(-this.longState0037 + longLocal12), byteArrayArgument2, integerLocal9 + (int)(-longLocal6 + longLocal12), integerLocal14);
+                ArrayBlockSupport.copyByteRange(this.byteArrayState0019, (int)(-this.longState0037 + longLocal12), byteArrayArgument2, integerLocal9 + (int)(-longLocal6 + longLocal12), integerLocal14);
                 if (longLocal13 > this.longState0036) {
                   integerArgument4 = (int)((long)integerArgument4 - (-this.longState0036 + longLocal13));
                   this.longState0036 = longLocal13;
@@ -299,7 +299,7 @@ final class BufferedFile {
             if (this.longState0037 != -1L &&
               this.longState0036 + (long)integerArgument4 > this.longState0037 + (long)this.byteArrayState0019.length) {
               integerLocal5 = (int)((long)this.byteArrayState0019.length + (this.longState0037 - this.longState0036));
-              MixedSupport008.performAction0073(byteArrayArgument1, integerArgument3, this.byteArrayState0019, (int)(this.longState0036 - this.longState0037), integerLocal5);
+              ArrayBlockSupport.copyByteRange(byteArrayArgument1, integerArgument3, this.byteArrayState0019, (int)(this.longState0036 - this.longState0037), integerLocal5);
               integerArgument3 = integerArgument3 + integerLocal5;
               integerArgument4 = integerArgument4 - integerLocal5;
               this.longState0036 = this.longState0036 + (long)integerLocal5;
@@ -316,7 +316,7 @@ final class BufferedFile {
               if (this.longState0037 == -1L) {
                 this.longState0037 = this.longState0036;
               }
-              MixedSupport008.performAction0073(byteArrayArgument1, integerArgument3, this.byteArrayState0019, (int)(this.longState0036 - this.longState0037), integerArgument4);
+              ArrayBlockSupport.copyByteRange(byteArrayArgument1, integerArgument3, this.byteArrayState0019, (int)(this.longState0036 - this.longState0037), integerArgument4);
               this.longState0036 = this.longState0036 + (long)integerArgument4;
               if ((this.longState0036 - this.longState0037) > (long)this.integerState0539) {
                 this.integerState0539 = (int)(-this.longState0037 + this.longState0036);
@@ -355,7 +355,7 @@ final class BufferedFile {
             if (longLocal6 > -1L &&
               longLocal9 > longLocal6) {
               integerLocal10 = (int)(-longLocal6 + longLocal9);
-              MixedSupport008.performAction0073(byteArrayArgument1, (int)(longLocal6 + ((long)integerArgument3 - this.longState0036)), this.byteArrayState0018, (int)(-this.longState0038 + longLocal6), integerLocal10);
+              ArrayBlockSupport.copyByteRange(byteArrayArgument1, (int)(longLocal6 + ((long)integerArgument3 - this.longState0036)), this.byteArrayState0018, (int)(-this.longState0038 + longLocal6), integerLocal10);
             }
             this.longState0036 = this.longState0036 + (long)integerArgument4;
             return;

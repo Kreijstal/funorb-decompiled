@@ -92,7 +92,7 @@ final class wh {
         if (param0 > -31) {
           return;
         }
-        IntrusiveNode.field_f = ee.a(5, 0, (byte) -119, 1);
+        IntrusiveNode.field_f = ByteArrayPoolSupport.a(5, 0, (byte) -119, 1);
     }
 
     static {

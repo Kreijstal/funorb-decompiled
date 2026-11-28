@@ -17,7 +17,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
           this.field_N = this.field_N + 1;
           super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "kc.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "kc.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -42,7 +42,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -72,7 +72,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
         int var5 = this.field_m + param2 + (this.field_t >> 1);
         int var6 = (this.field_x >> 1) + param0 + this.field_j;
         qf var8 = this.field_J.getValidationStatus(param3 ^ -9362);
-        if (hg.field_E == var8) {
+        if (MusicPatchNode.field_E == var8) {
           var15 = PacketBuffer.field_k[0];
           var9 = var15.field_q << 1;
           var10 = var15.field_r << 1;
@@ -169,7 +169,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
         try {
           this.field_J = param0;
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "kc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "kc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

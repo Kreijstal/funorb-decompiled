@@ -24,7 +24,7 @@ final class LevelDecoder {
         field_b = null;
     }
 
-    final synchronized static byte[] a(int param0, int param1) {
+    final synchronized static byte[] acquireByteArray(int param0, int param1) {
         int fieldTemp$3 = 0;
         int fieldTemp$4 = 0;
         int fieldTemp$5 = 0;

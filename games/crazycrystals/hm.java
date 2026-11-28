@@ -6,7 +6,7 @@ final class hm {
     static String field_a;
     int field_b;
 
-    static int a(int param0, int param1) {
+    static int bitwiseOr(int param0, int param1) {
         return param0 | param1;
     }
 

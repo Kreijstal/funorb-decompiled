@@ -29,7 +29,7 @@ abstract class lb extends DualLinkNode {
           var9 = var11;
           var5 = var9;
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = td.field_m[jh.a((int) var10[var6], 255)];
+            var5[var6] = td.field_m[jh.bitwiseAnd((int) var10[var6], 255)];
           }
           var1[var2] = new Sprite(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], MusicPatchPcmStream.field_r[var2], TextLayout.field_e[var2], var11);
         }
@@ -92,8 +92,8 @@ abstract class lb extends DualLinkNode {
                   var6 = var6 % 256;
                   qb.a(var4, var5, param1, param0, var3_int, var6, -2140919664);
                   var14 = SecondaryNodeDeque.field_a[vj.field_c][var12];
-                  var7 = dl.field_n[0];
-                  var8 = dl.field_n[2];
+                  var7 = MusicPatchNode.field_n[0];
+                  var8 = MusicPatchNode.field_n[2];
                   var14.drawTransparentWithOpacity(var7, var8, 160);
                 }
               }

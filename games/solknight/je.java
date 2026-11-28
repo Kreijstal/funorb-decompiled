@@ -59,7 +59,7 @@ final class je {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -71,22 +71,22 @@ final class je {
     final synchronized static long correctedCurrentTimeMillis(int param0) {
         long var1 = System.currentTimeMillis();
         if (qf.field_b > var1) {
-          of.field_e = of.field_e + (qf.field_b - var1);
+          GrowableIntArray.field_e = GrowableIntArray.field_e + (qf.field_b - var1);
           if (param0 != 1) {
             je.resetStaticState((byte) 110);
             qf.field_b = var1;
-            return var1 + of.field_e;
+            return var1 + GrowableIntArray.field_e;
           }
           qf.field_b = var1;
-          return var1 + of.field_e;
+          return var1 + GrowableIntArray.field_e;
         }
         if (param0 == 1) {
           qf.field_b = var1;
-          return var1 + of.field_e;
+          return var1 + GrowableIntArray.field_e;
         }
         je.resetStaticState((byte) 110);
         qf.field_b = var1;
-        return var1 + of.field_e;
+        return var1 + GrowableIntArray.field_e;
     }
 
     final static boolean a(ia param0, ia param1, boolean param2) {
@@ -136,7 +136,7 @@ final class je {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class je {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var3), "je.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var3), "je.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

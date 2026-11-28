@@ -47,7 +47,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         var2.setBounds(20, 50, (byte) 59, 270, var3);
         var3 += 50;
         this.addChild(var2, -123);
-        var3 = var3 + (5 + this.a(var3, this.field_G, DreamsAnimation.field_v, 170, saa.field_u, false));
+        var3 = var3 + (5 + this.addLabeledFieldWithDefaultValidationMessage(var3, this.field_G, DreamsAnimation.field_v, 170, saa.field_u, false));
         this.field_F.setBounds(-var5 + 496 >> 1, 40, (byte) 59, var5, var3);
         this.field_C.setBounds(var4 + 3, 40, (byte) 59, 60, var3 + 15);
         this.field_C.listener = (WidgetListener) (this);
@@ -67,7 +67,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         }
     }
 
-    private final int a(int param0, UiWidget param1, String param2, int param3, String param4, boolean param5) {
+    private final int addLabeledFieldWithDefaultValidationMessage(int param0, UiWidget param1, String param2, int param3, String param4, boolean param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -81,7 +81,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param5) {
-            stackIn_4_0 = this.a(param2, param4, param3, (byte) 124, param1, param0, 35);
+            stackIn_4_0 = this.addLabeledFieldWithValidationMessage(param2, param4, param3, (byte) 124, param1, param0, 35);
             return stackIn_4_0;
           }
           stackIn_2_0 = -6;
@@ -195,7 +195,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         }
     }
 
-    private final int a(String param0, String param1, int param2, byte param3, UiWidget param4, int param5, int param6) {
+    private final int addLabeledFieldWithValidationMessage(String param0, String param1, int param2, byte param3, UiWidget param4, int param5, int param6) {
         RuntimeException var8 = null;
         int var9 = 0;
         ValidationStatusWidget var10 = null;
@@ -244,7 +244,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         }
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseAnd(long param0, long param1) {
         return param0 & param1;
     }
 
@@ -283,7 +283,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
             return;
           }
           var7 = (String) null;
-          discarded$1 = this.a(7, (UiWidget) null, (String) null, 77, (String) null, true);
+          discarded$1 = this.addLabeledFieldWithDefaultValidationMessage(7, (UiWidget) null, (String) null, 77, (String) null, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

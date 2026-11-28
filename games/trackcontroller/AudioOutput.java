@@ -323,7 +323,7 @@ class AudioOutput {
         if (field_k) {
           var3 = var3 << 1;
         }
-        pd.clearInts(param0, 0, var3);
+        ArrayBlockSupport.clearInts(param0, 0, var3);
         this.field_m = this.field_m - param1;
         if (this.field_i != null &&
           this.field_m <= 0) {

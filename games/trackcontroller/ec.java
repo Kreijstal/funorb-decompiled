@@ -25,7 +25,7 @@ class ec extends kd {
         byte[] var2 = qk.field_M[0];
         int[] var3 = new int[var1];
         for (var4_int = param0; var4_int < var1; var4_int++) {
-          var3[var4_int] = CrossfadingMidiPcmStream.field_z[RandomAccessCacheFile.a((int) var2[var4_int], 255)];
+          var3[var4_int] = CrossfadingMidiPcmStream.field_z[RandomAccessCacheFile.bitwiseAnd((int) var2[var4_int], 255)];
         }
         Sprite var4 = new Sprite(ab.field_a, CrossfadingMidiPcmStream.field_p, ka.field_f[0], vb.field_a[0], cf.field_p[0], j.field_f[0], var3);
         ff.b(76);

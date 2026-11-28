@@ -172,7 +172,7 @@ final class hj {
           while (this.field_fb.length > var5) {
             var7 = WidgetContainer.field_w[var5];
             var8 = ResourceArchive.field_g[var5];
-            this.field_fb[var5] = BufferedRandomAccessFile.a(BufferedRandomAccessFile.a(65280, var8) * var4 + var3 * BufferedRandomAccessFile.a(var7, 65280), 16711680) + BufferedRandomAccessFile.a(var4 * BufferedRandomAccessFile.a(var8, 16711935) + BufferedRandomAccessFile.a(var7, 16711935) * var3, -16711936) >> 8;
+            this.field_fb[var5] = BufferedRandomAccessFile.bitwiseAnd(BufferedRandomAccessFile.bitwiseAnd(65280, var8) * var4 + var3 * BufferedRandomAccessFile.bitwiseAnd(var7, 65280), 16711680) + BufferedRandomAccessFile.bitwiseAnd(var4 * BufferedRandomAccessFile.bitwiseAnd(var8, 16711935) + BufferedRandomAccessFile.bitwiseAnd(var7, 16711935) * var3, -16711936) >> 8;
             var5++;
           }
           return;
@@ -301,7 +301,7 @@ final class hj {
           if (this.field_A > 0 &&
             !this.field_o &&
             null == ProxyAuthenticationRequiredException.field_b) {
-            ProxyAuthenticationRequiredException.field_b = di.a(rk.field_d, 65494, h.field_a, nj.field_b, new int[]{this.field_A}, 41, cl.field_d, 3, (byte) 100);
+            ProxyAuthenticationRequiredException.field_b = di.a(rk.field_d, 65494, h.field_a, ByteArrayPoolSupport.field_b, new int[]{this.field_A}, 41, cl.field_d, 3, (byte) 100);
           }
           int var2_int = -67 / ((param0 + 63) / 42);
         } catch (RuntimeException runtimeException) {
@@ -658,18 +658,18 @@ final class hj {
                     } else {
                       if (var4 == 4) {
                         h.field_a = h.field_a + 1;
-                        nj.field_b = nj.field_b + rk.field_d;
+                        ByteArrayPoolSupport.field_b = ByteArrayPoolSupport.field_b + rk.field_d;
                       } else {
                         if (var4 == 5) {
                           rk.field_d = rk.field_d + 1;
-                          nj.field_b = nj.field_b + h.field_a;
+                          ByteArrayPoolSupport.field_b = ByteArrayPoolSupport.field_b + h.field_a;
                         } else {
                           if (6 == var4) {
-                            nj.field_b = nj.field_b - rk.field_d;
+                            ByteArrayPoolSupport.field_b = ByteArrayPoolSupport.field_b - rk.field_d;
                             h.field_a = h.field_a - 1;
                           } else {
                             if (var4 == 7) {
-                              nj.field_b = nj.field_b - h.field_a;
+                              ByteArrayPoolSupport.field_b = ByteArrayPoolSupport.field_b - h.field_a;
                               rk.field_d = rk.field_d - 1;
                             }
                           }
@@ -1034,9 +1034,9 @@ final class hj {
                             if (var8Lifetime2 != 1) {
                               var9 = var7 / 3;
                               cl.field_d = cl.field_d + var9;
-                              nj.field_b = nj.field_b - (var7 - var9);
+                              ByteArrayPoolSupport.field_b = ByteArrayPoolSupport.field_b - (var7 - var9);
                             } else {
-                              nj.field_b = nj.field_b - var7;
+                              ByteArrayPoolSupport.field_b = ByteArrayPoolSupport.field_b - var7;
                             }
                           } else {
                             cl.field_d = cl.field_d + var7;
@@ -1955,7 +1955,7 @@ final class hj {
           bh.field_g = 0;
           cl.field_d = 8768;
           jc.field_e = 9419;
-          nj.field_b = 617;
+          ByteArrayPoolSupport.field_b = 617;
           this.field_M = 320;
           this.field_jb = 6;
           this.field_k = 480;
@@ -1996,7 +1996,7 @@ final class hj {
             GuestPlayConfirmationForm.field_D[var1_intLifetime1] = pf.a((byte) -101, 20);
           }
           this.field_fb = new int[WidgetContainer.field_w.length];
-          gl.a(WidgetContainer.field_w, 0, this.field_fb, 0, this.field_fb.length);
+          ArrayBlockSupport.copyIntRange(WidgetContainer.field_w, 0, this.field_fb, 0, this.field_fb.length);
           BufferedRandomAccessFile.b(-112);
           ProxyAuthenticationRequiredException.field_b = null;
           dupTemp$0 = jf.a(-2147483648);

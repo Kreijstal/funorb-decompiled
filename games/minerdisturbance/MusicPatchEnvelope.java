@@ -1,0 +1,106 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class MusicPatchEnvelope {
+    static int field_l;
+    int field_d;
+    int field_h;
+    int field_j;
+    static int[] field_e;
+    int field_m;
+    int field_a;
+    byte[] field_b;
+    int field_c;
+    byte[] field_g;
+    static String field_i;
+    int field_f;
+    static String field_k;
+
+    public static void a(int param0) {
+        field_i = null;
+        field_e = null;
+        if (param0 != -1) {
+          MusicPatchEnvelope.sleepIgnoringInterrupts(-11L, -116);
+          field_k = null;
+          return;
+        }
+        field_k = null;
+    }
+
+    final static void a(byte param0) {
+        if (kf.field_d == null) {
+          return;
+        }
+        AwtRasterBuffer.a(kf.field_d, 0);
+        kf.field_d.a(false, qa.field_a);
+        kf.field_d = null;
+        if (ij.field_o != null) {
+          ij.field_o.b(-86);
+        }
+        ef.field_c.requestFocus();
+        int var1 = 24 % ((-32 - param0) / 49);
+    }
+
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
+        int var8 = 0;
+        int var5_int = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        var11 = MinerDisturbance.field_ab;
+        try {
+          SoftwareRasterizer.drawHorizontalLine(param3, param4, 1 + param1, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param3, param0 + param4, param1 + 1, 12105912);
+          var5_int = 1;
+          if (var5_int + param4 < SoftwareRasterizer.field_d) {
+            var5_int = -param4 + SoftwareRasterizer.field_d;
+          }
+          var6 = param0;
+          if (SoftwareRasterizer.field_e < var6 + param4) {
+            var6 = -param4 + SoftwareRasterizer.field_e;
+          }
+          var7 = 122 / ((80 - param2) / 46);
+          for (var8 = var5_int; var6 > var8; var8++) {
+            var9 = 152 + var8 * 48 / param0;
+            var10 = var9 | (var9 << 8 | var9 << 16);
+            SoftwareRasterizer.field_f[param3 + SoftwareRasterizer.field_g * (var8 + param4)] = var10;
+            SoftwareRasterizer.field_f[param1 + param3 + (param4 + var8) * SoftwareRasterizer.field_g] = var10;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          throw lj.wrapClientException((Throwable) ((Object) var5), "ng.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+    }
+
+    final static void sleepIgnoringInterrupts(long param0, int param1) {
+        try {
+          Throwable decompiledCaughtException = null;
+          InterruptedException var3 = null;
+          if (param1 != 1855635080) {
+            return;
+          }
+          try {
+            Thread.sleep(param0);
+          } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = (InterruptedException) (Object) decompiledCaughtException;
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    static {
+        field_l = -1;
+        field_i = "Sound: ";
+        field_k = "Data server full or too many connections from your address. Please try again in a few minutes.";
+    }
+}

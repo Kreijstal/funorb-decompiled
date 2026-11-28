@@ -99,7 +99,7 @@ final class ne extends DualLinkNode {
         byte[] var2 = ph.field_c[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var4_int < var1; var4_int++) {
-          var3[var4_int] = he.field_k[da.b(255, (int) var2[var4_int])];
+          var3[var4_int] = he.field_k[da.bitwiseAnd(255, (int) var2[var4_int])];
         }
         RgbSprite var4 = new RgbSprite(DropTargetWidgetContainer.field_C, fk.field_e, ConfirmedEmailAvailabilityValidator.field_n[0], ae.field_c[0], ih.field_V[0], qh.field_i[0], var3);
         vb.a((byte) 122);
@@ -147,7 +147,7 @@ final class ne extends DualLinkNode {
         int var3 = Bounce.field_N;
         if (null != this.field_s) {
           for (var2 = 0; var2 < this.field_s.length; var2++) {
-            this.field_s[var2] = ge.a(this.field_s[var2], 32768);
+            this.field_s[var2] = ge.bitwiseOr(this.field_s[var2], 32768);
           }
         }
         if (param0 != 31680) {

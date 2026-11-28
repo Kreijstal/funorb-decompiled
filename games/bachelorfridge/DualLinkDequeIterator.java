@@ -57,7 +57,7 @@ final class DualLinkDequeIterator implements Iterator {
             stackIn_2_0 = (AntialiasedBitmapFont) null;
             return stackIn_2_0;
           }
-          if (!g.a(param4, param1, -30744, param2)) {
+          if (!MidiNoteMask.a(param4, param1, -30744, param2)) {
             return null;
           }
           stackIn_7_0 = wa.a(param0 - 21359, param3.getFile(-38, param4, param1));

@@ -42,8 +42,8 @@ final class gja extends tia {
         String var6Lifetime2;
         String var6Lifetime1Lifetime1;
         if (this.field_o == 3) {
-          SoftwareRasterizer.setClip(-128 + (param2 - 8), param0 - 32, 1024 - ((this.field_g << 3) + 16) + (param2 - 128), un.field_m.field_p + (param0 - 32));
-          un.field_m.drawWithOpacity(param2 - 128 - 8, -32 + param0, this.field_g << 1);
+          SoftwareRasterizer.setClip(-128 + (param2 - 8), param0 - 32, 1024 - ((this.field_g << 3) + 16) + (param2 - 128), MusicPatchEnvelope.field_m.field_p + (param0 - 32));
+          MusicPatchEnvelope.field_m.drawWithOpacity(param2 - 128 - 8, -32 + param0, this.field_g << 1);
           SoftwareRasterizer.resetClip();
           if (param1 != 25415) {
             var6 = (String) null;
@@ -82,8 +82,8 @@ final class gja extends tia {
           gja.a(false, (java.applet.Applet) null, (String) null, 115);
           return;
         }
-        SoftwareRasterizer.setClip(-8 + param2, -96 + param0, -(this.field_g << 3) - (-1024 - param2) - 16, un.field_m.field_p + param0 - 96);
-        un.field_m.drawWithOpacity(param2 - 8, -32 + param0 - 64, this.field_g << 1);
+        SoftwareRasterizer.setClip(-8 + param2, -96 + param0, -(this.field_g << 3) - (-1024 - param2) - 16, MusicPatchEnvelope.field_m.field_p + param0 - 96);
+        MusicPatchEnvelope.field_m.drawWithOpacity(param2 - 8, -32 + param0 - 64, this.field_g << 1);
         SoftwareRasterizer.resetClip();
         if (param1 == 25415) {
           return;

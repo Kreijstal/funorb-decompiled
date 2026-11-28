@@ -202,16 +202,16 @@ final class i {
                 var10 = var10 ^ 285L;
             }
             var12 = var10 ^ var2;
-            field_a[0][var0] = qg.a(var12, qg.a(var4 << 8, qg.a(qg.a(qg.a(qg.a(var6 << 40, qg.a(var2 << 56, var2 << 48)), var2 << 32), var10 << 24), var8 << 16)));
+            field_a[0][var0] = qg.bitwiseOr(var12, qg.bitwiseOr(var4 << 8, qg.bitwiseOr(qg.bitwiseOr(qg.bitwiseOr(qg.bitwiseOr(var6 << 40, qg.bitwiseOr(var2 << 56, var2 << 48)), var2 << 32), var10 << 24), var8 << 16)));
             for (var14 = 1; 8 > var14; var14++) {
-                field_a[var14][var0] = qg.a(field_a[var14 - 1][var0] >>> 8, field_a[var14 - 1][var0] << 56);
+                field_a[var14][var0] = qg.bitwiseOr(field_a[var14 - 1][var0] >>> 8, field_a[var14 - 1][var0] << 56);
             }
             var0++;
         }
         field_c[0] = 0L;
         for (var0 = 1; 10 >= var0; var0++) {
             var1 = (-1 + var0) * 8;
-            field_c[var0] = ga.a(ga.a(DualLinkNode.a(65280L, field_a[6][6 + var1]), ga.a(DualLinkNode.a(16711680L, field_a[5][5 + var1]), ga.a(ga.a(ga.a(ga.a(DualLinkNode.a(-72057594037927936L, field_a[0][var1]), DualLinkNode.a(field_a[1][1 + var1], 71776119061217280L)), DualLinkNode.a(280375465082880L, field_a[2][var1 + 2])), DualLinkNode.a(field_a[3][3 + var1], 1095216660480L)), DualLinkNode.a(4278190080L, field_a[4][var1 + 4])))), DualLinkNode.a(field_a[7][7 + var1], 255L));
+            field_c[var0] = ga.bitwiseXor(ga.bitwiseXor(DualLinkNode.bitwiseAnd(65280L, field_a[6][6 + var1]), ga.bitwiseXor(DualLinkNode.bitwiseAnd(16711680L, field_a[5][5 + var1]), ga.bitwiseXor(ga.bitwiseXor(ga.bitwiseXor(ga.bitwiseXor(DualLinkNode.bitwiseAnd(-72057594037927936L, field_a[0][var1]), DualLinkNode.bitwiseAnd(field_a[1][1 + var1], 71776119061217280L)), DualLinkNode.bitwiseAnd(280375465082880L, field_a[2][var1 + 2])), DualLinkNode.bitwiseAnd(field_a[3][3 + var1], 1095216660480L)), DualLinkNode.bitwiseAnd(4278190080L, field_a[4][var1 + 4])))), DualLinkNode.bitwiseAnd(field_a[7][7 + var1], 255L));
         }
         field_e = "MISSION FAILED";
         field_i = true;

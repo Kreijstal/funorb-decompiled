@@ -39,7 +39,7 @@ final class eh {
           }
           var4_int = param2.getGroupIdByName(param0, (byte) -104);
           var5 = param2.getFileIdByName((byte) -109, param3, var4_int);
-          stackIn_3_0 = cc.a(var4_int, -9671, param2, var5);
+          stackIn_3_0 = MusicPatchNode.a(var4_int, -9671, param2, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

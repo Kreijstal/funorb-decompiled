@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nj extends InteractiveWidget {
-    private wl field_P;
+    private GrowableIntArray field_P;
     int field_Q;
     int field_S;
     static ji field_T;
@@ -70,8 +70,8 @@ final class nj extends InteractiveWidget {
             }
             var10 = 2147483647;
             var11 = -1;
-            for (var12 = 0; var12 < this.field_P.a((byte) 127); var12++) {
-              var13 = -var8_int + this.field_P.a(var12, 27656);
+            for (var12 = 0; var12 < this.field_P.size((byte) 127); var12++) {
+              var13 = -var8_int + this.field_P.get(var12, 27656);
               var13 = var13 * var13;
               if (var13 < var10) {
                 var10 = var13;
@@ -79,10 +79,10 @@ final class nj extends InteractiveWidget {
               }
             }
             if (0 <= var11) {
-              this.field_P.a(var11, (byte) -111);
+              this.field_P.removeAt(var11, (byte) -111);
             }
           } else {
-            this.field_P.a((byte) -116, var8_int);
+            this.field_P.append((byte) -116, var8_int);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -103,18 +103,18 @@ final class nj extends InteractiveWidget {
         if (param0 <= 97) {
           field_T = (ji) null;
         }
-        return this.field_P.a((byte) 111);
+        return this.field_P.size((byte) 111);
     }
 
     final int a(byte param0, int param1) {
         if (param1 < 0 ||
-          param1 >= this.field_P.a((byte) 111)) {
+          param1 >= this.field_P.size((byte) 111)) {
           return -1;
         }
         if (param0 < 14) {
           nj.clearDeclaredStaticReferences((byte) 123);
         }
-        return this.field_P.a(param1, 27656);
+        return this.field_P.get(param1, 27656);
     }
 
     public static void clearDeclaredStaticReferences(byte param0) {

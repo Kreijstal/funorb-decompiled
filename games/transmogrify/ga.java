@@ -104,33 +104,33 @@ final class ga {
         java.applet.Applet var2 = null;
         java.applet.Applet var2Lifetime1;
         java.applet.Applet var2Lifetime2;
-        if (si.field_l == 0 - tf.field_a) {
+        if (MusicPatch.field_l == 0 - tf.field_a) {
           if (param0 == 94) {
-            si.field_l = si.field_l + 1;
+            MusicPatch.field_l = MusicPatch.field_l + 1;
             return;
           }
           var2 = (java.applet.Applet) null;
           ga.a(49, (java.applet.Applet) null);
-          si.field_l = si.field_l + 1;
+          MusicPatch.field_l = MusicPatch.field_l + 1;
           return;
         }
-        if (si.field_l == 250 - tf.field_a) {
+        if (MusicPatch.field_l == 250 - tf.field_a) {
           if (param0 == 94) {
-            si.field_l = si.field_l + 1;
+            MusicPatch.field_l = MusicPatch.field_l + 1;
             return;
           }
           var2Lifetime1 = (java.applet.Applet) null;
           ga.a(49, (java.applet.Applet) null);
-          si.field_l = si.field_l + 1;
+          MusicPatch.field_l = MusicPatch.field_l + 1;
           return;
         }
         if (param0 == 94) {
-          si.field_l = si.field_l + 1;
+          MusicPatch.field_l = MusicPatch.field_l + 1;
           return;
         }
         var2Lifetime2 = (java.applet.Applet) null;
         ga.a(49, (java.applet.Applet) null);
-        si.field_l = si.field_l + 1;
+        MusicPatch.field_l = MusicPatch.field_l + 1;
     }
 
     final static int a(int param0, byte param1) {

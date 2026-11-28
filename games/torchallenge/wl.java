@@ -623,7 +623,7 @@ final class wl {
         AccountServiceResult.field_k = 0;
         GameScreen.field_c = -1089027477;
         vj.field_c = param1;
-        ab.field_d = 1;
+        MusicPatchEnvelope.field_d = 1;
         this.field_i = param0;
         pa.field_x = 32;
         gh.field_x = false;

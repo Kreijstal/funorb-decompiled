@@ -47,21 +47,21 @@ final class rc {
           jl.field_j = stackIn_7_0;
           if (DirectByteStorage.field_f == null) {
             il.field_c = new int[][]{new int[]{34, 190, wk.carryoverRack.tiles.length * AccountRegistrationPanel.field_K.field_n + 34, AccountRegistrationPanel.field_K.field_m + 190}};
-            wc.field_a = new int[][]{new int[]{161, 247, 161 + si.newRack.tiles.length * AccountRegistrationPanel.field_K.field_n, AccountRegistrationPanel.field_K.field_m + 247}};
+            wc.field_a = new int[][]{new int[]{161, 247, 161 + MusicPatch.newRack.tiles.length * AccountRegistrationPanel.field_K.field_n, AccountRegistrationPanel.field_K.field_m + 247}};
             DirectByteStorage.field_f = new int[][]{new int[]{34, 114, AccountRegistrationPanel.field_K.field_n * od.submissionRack.tiles.length + 34, AccountRegistrationPanel.field_K.field_m + 114}, il.field_c[0], wc.field_a[0]};
             hd.field_c = new int[][]{DirectByteStorage.field_f[0], il.field_c[0]};
           }
           wk.carryoverRack.clear(true);
-          si.newRack.clear(true);
+          MusicPatch.newRack.clear(true);
           od.submissionRack.originX = 34;
           wk.carryoverRack.originX = 34;
-          si.newRack.originX = 161;
+          MusicPatch.newRack.originX = 161;
           if (param1 != -13) {
             field_b = (String) null;
           }
           od.submissionRack.originY = 114;
           wk.carryoverRack.originY = 190;
-          si.newRack.originY = 247;
+          MusicPatch.newRack.originY = 247;
           ac.field_n = new ld(1024, 8, 8);
           stackIn_15_0 = (!param0) ? 1 : 6;
           Bzip2State.field_A = stackIn_15_0;
@@ -85,8 +85,8 @@ final class rc {
           if (mg.field_d &&
             null != MouseInputHandler.field_c.field_b) {
             for (var2_int = 0; var2_int < MouseInputHandler.field_c.field_b.length(); var2_int++) {
-              si.newRack.tiles[var2_int] = NodeHashTableIterator.a(si.newRack, var2_int, MouseInputHandler.field_c, (byte) 42, MouseInputHandler.field_c.field_b.charAt(var2_int));
-              si.newRack.tiles[var2_int].doublesWordScore = false;
+              MusicPatch.newRack.tiles[var2_int] = NodeHashTableIterator.a(MusicPatch.newRack, var2_int, MouseInputHandler.field_c, (byte) 42, MouseInputHandler.field_c.field_b.charAt(var2_int));
+              MusicPatch.newRack.tiles[var2_int].doublesWordScore = false;
             }
           }
           if (mg.field_d &&

@@ -169,7 +169,7 @@ public final class OrbDefence extends NetworkGameClient {
         int var2 = 13 / ((-73 - param0) / 49);
         ContentTransitionDialog.field_N = qk.a(8, -32585);
         lg.field_c = qk.a(9, -32585);
-        mc.a(j.field_b, -29608, GameAppletShell.field_d);
+        MidiNoteMask.a(j.field_b, -29608, GameAppletShell.field_d);
     }
 
     final static void a(byte[] param0, byte param1) {
@@ -238,7 +238,7 @@ public final class OrbDefence extends NetworkGameClient {
           var18.position = param0.length - (7 + 8 * DialogMessagePane.field_K);
           ModalDialog.field_B = var18.readUnsignedShort(98203176);
           var3 = -1 % ((-4 - param1) / 62);
-          he.field_r = var18.readUnsignedShort(98203176);
+          MusicPatchNode.field_r = var18.readUnsignedShort(98203176);
           var4 = (var18.readUnsignedByte((byte) 90) & 255) + 1;
           for (var5 = 0; DialogMessagePane.field_K > var5; var5++) {
             jd.field_g[var5] = var17.readUnsignedShort(98203176);
@@ -418,7 +418,7 @@ public final class OrbDefence extends NetworkGameClient {
         IntrusiveNode.clearStaticReferences(40);
         MidiPcmStream.resetStaticState(116);
         mh.clearStaticReferences(1);
-        he.resetStaticState(22);
+        MusicPatchNode.resetStaticState(22);
         MidiFileReader.clearStaticReferences();
         MusicPatchPcmStream.clearDeclaredStaticReferences(79);
         AudioOutput.clearStaticReferences();
@@ -503,7 +503,7 @@ public final class OrbDefence extends NetworkGameClient {
         Bzip2Decompressor.clearStaticReferences();
         Bzip2State.clearStaticReferences(16);
         ud.clearStaticReferences(true);
-        q.a(109);
+        ByteArrayPoolSupport.a(109);
         qk.clearStaticReferences((byte) -122);
         ci.clearStaticReferences(1);
         sj.clearStaticReferences((byte) 64);
@@ -530,7 +530,7 @@ public final class OrbDefence extends NetworkGameClient {
         NanoFrameTimer.clearDeclaredStaticReferences((byte) -22);
         ImageProducerRasterBuffer.b((byte) 68);
         db.clearStaticReferences(-101);
-        mc.c(12);
+        MidiNoteMask.c(12);
         od.b((byte) -87);
         ok.clearStaticReferences((byte) 104);
         cg.clearStaticReferences(0);
@@ -538,7 +538,7 @@ public final class OrbDefence extends NetworkGameClient {
         sl.c((byte) 126);
         me.clearDeclaredStaticReferences(5);
         vc.a((byte) 116);
-        rc.a(-127);
+        MusicPatchEnvelope.a(-127);
         LabeledWidgetContainer.releaseDeclaredStaticReferences(-115);
         ValidatedTextField.q(119);
         EditableTextField.n(1);
@@ -560,7 +560,7 @@ public final class OrbDefence extends NetworkGameClient {
         hg.c(false);
         vf.clearStaticReferences(1);
         RichTextLayout.clearDeclaredStaticReferences(0);
-        tj.a((byte) -58);
+        GrowableIntArray.a((byte) -58);
         DraggableWidgetContainer.clearDeclaredStaticReferences((byte) -119);
         DropTargetWidgetContainer.releaseDeclaredStaticReferences(21006);
         ba.clearStaticReferences(50);
@@ -735,7 +735,7 @@ public final class OrbDefence extends NetworkGameClient {
         MidiPcmStream var2 = new MidiPcmStream();
         var2.setChannelProgram(128, 9, (byte) 125);
         gj.a(22050, var2, true, 1024, (java.awt.Component) ((Object) GameAppletShell.field_f), wc.field_c);
-        he.field_C = 16777215;
+        MusicPatchNode.field_C = 16777215;
         lf.field_e = 15632639;
         mf.field_c = 16777215;
         this.a(false, true, true, false, false);
@@ -854,7 +854,7 @@ public final class OrbDefence extends NetworkGameClient {
                       j.a(40.0f, TextLineMetrics.a(ha.field_l, lg.field_c, -14416, qd.field_a, ""), (byte) 112);
                       return false;
                     }
-                    j.a(30.0f, mc.a(ContentTransitionDialog.field_N, ii.field_d, ld.field_c, 0, -93), (byte) 113);
+                    j.a(30.0f, MidiNoteMask.a(ContentTransitionDialog.field_N, ii.field_d, ld.field_c, 0, -93), (byte) 113);
                     return false;
                   }
                   j.a(20.0f, TextLineMetrics.a(hb.field_b, AccountCreationResultPanel.field_hb, -14416, vg.field_u, ""), (byte) 111);
@@ -922,7 +922,7 @@ public final class OrbDefence extends NetworkGameClient {
               return false;
             }
           }
-          ml.field_c.b((byte) 27);
+          ml.field_c.releasePatchSampleIds((byte) 27);
           ContentTransitionDialog.field_N = null;
           cj.field_b = null;
           SoundCache.resetFrameTiming(64);
@@ -972,7 +972,7 @@ public final class OrbDefence extends NetworkGameClient {
         array$1 = new int[var14.length];
         TextHotspotBounds.field_t.field_J[1] = array$1;
         for (var4_int = 0; var14.length > var4_int; var4_int++) {
-          TextHotspotBounds.field_t.field_J[1][var4_int] = EditableTextField.a(var14[var4_int], 16711935);
+          TextHotspotBounds.field_t.field_J[1][var4_int] = EditableTextField.bitwiseAnd(var14[var4_int], 16711935);
         }
         var4 = fl.a(-9945, bh.field_d, "", "keys");
         var5 = new int[]{14, 14, 14, 15, 15};
@@ -986,8 +986,8 @@ public final class OrbDefence extends NetworkGameClient {
         am.field_d = new RgbSprite[6];
         am.field_d[0] = fk.a(bh.field_d, "baseimage", -83, "");
         am.field_d[1] = fk.a(bh.field_d, "baseimage2", 79, "");
-        am.field_d[2] = fk.a(bh.field_d, "baseimage3", gi.a((int) param1, -84), "");
-        am.field_d[3] = fk.a(bh.field_d, "baseimage4", gi.a((int) param1, -95), "");
+        am.field_d[2] = fk.a(bh.field_d, "baseimage3", gi.bitwiseXor((int) param1, -84), "");
+        am.field_d[3] = fk.a(bh.field_d, "baseimage4", gi.bitwiseXor((int) param1, -95), "");
         am.field_d[4] = fk.a(bh.field_d, "baseimage5", -72, "");
         am.field_d[5] = fk.a(bh.field_d, "baseimage6", -58, "");
         TextFieldValidator.field_g = new RgbSprite[6];
@@ -1027,7 +1027,7 @@ public final class OrbDefence extends NetworkGameClient {
         RichTextLayout.field_o[3] = fk.a(bh.field_d, "achievements_icon_4", 92, "");
         RichTextLayout.field_o[4] = fk.a(bh.field_d, "achievements_icon_5", -100, "");
         RichTextLayout.field_o[5] = fk.a(bh.field_d, "achievements_icon_6", -115, "");
-        RichTextLayout.field_o[6] = fk.a(bh.field_d, "achievements_icon_7", gi.a((int) param1, 55), "");
+        RichTextLayout.field_o[6] = fk.a(bh.field_d, "achievements_icon_7", gi.bitwiseXor((int) param1, 55), "");
         RichTextLayout.field_o[7] = fk.a(bh.field_d, "achievements_icon_8", 72, "");
         RichTextLayout.field_o[8] = fk.a(bh.field_d, "achievements_icon_9", 58, "");
         RichTextLayout.field_o[9] = fk.a(bh.field_d, "achievements_icon_10", -116, "");
@@ -1036,9 +1036,9 @@ public final class OrbDefence extends NetworkGameClient {
         RichTextLayout.field_o[12] = fk.a(bh.field_d, "achievements_icon_13", 38, "");
         RichTextLayout.field_o[13] = fk.a(bh.field_d, "achievements_icon_14", 87, "");
         RichTextLayout.field_o[14] = fk.a(bh.field_d, "achievements_icon_15", 98, "");
-        RichTextLayout.field_o[15] = fk.a(bh.field_d, "achievements_icon_16", gi.a((int) param1, 62), "");
+        RichTextLayout.field_o[15] = fk.a(bh.field_d, "achievements_icon_16", gi.bitwiseXor((int) param1, 62), "");
         RichTextLayout.field_o[16] = fk.a(bh.field_d, "achievements_icon_17", 51, "");
-        RichTextLayout.field_o[17] = fk.a(bh.field_d, "achievements_icon_18", gi.a((int) param1, -29), "");
+        RichTextLayout.field_o[17] = fk.a(bh.field_d, "achievements_icon_18", gi.bitwiseXor((int) param1, -29), "");
         RichTextLayout.field_o[18] = fk.a(bh.field_d, "achievements_icon_19", param1 - 202, "");
         RichTextLayout.field_o[19] = fk.a(bh.field_d, "achievements_icon_20", 87, "");
         RichTextLayout.field_o[20] = fk.a(bh.field_d, "achievements_icon_21", -70, "");
@@ -1056,7 +1056,7 @@ public final class OrbDefence extends NetworkGameClient {
         ba.field_e.bindAsRenderTarget();
         jm.field_b.drawDownscaledAreaAveraged(0, 0, var6Lifetime2, var6Lifetime2);
         jm.field_b = null;
-        BufferedSocket.field_a.a(-40);
+        BufferedSocket.field_a.setAsRasterTarget(-40);
         DualLinkNode.a(80, (byte) -38, (java.applet.Applet) (this), SpriteGeometry.field_r, 0, 255);
         var7 = fk.a(bh.field_d, "mb_frames", param1 ^ 38, "");
         ImageProducerRasterBuffer.a(-63, ui.field_e, var7);

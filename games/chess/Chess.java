@@ -621,15 +621,15 @@ public final class Chess extends NetworkGameClient {
         this.renderFrame(true);
         cm.field_s = ValidationStatusIcon.a("logo", 8221, "", mm.field_d);
         IntrusiveNode.field_g = ValidationStatusIcon.a("achievements", 8221, "", mm.field_d);
-        ml.field_g = ValidationStatusIcon.a("instructions", 8221, "", mm.field_d);
+        GrowableIntArray.field_g = ValidationStatusIcon.a("instructions", 8221, "", mm.field_d);
         DelegatingCanvas.field_g = ValidationStatusIcon.a("rankings", 8221, "", mm.field_d);
         cm.field_s.field_a = -(cm.field_s.field_k / 2) + 320;
         cm.field_s.field_m = cm.field_s.field_h / 4;
         IntrusiveNode.field_g.field_m = cm.field_s.field_m;
-        ml.field_g.field_m = cm.field_s.field_m;
+        GrowableIntArray.field_g.field_m = cm.field_s.field_m;
         DelegatingCanvas.field_g.field_m = cm.field_s.field_m;
         IntrusiveNode.field_g.field_a = 320 - IntrusiveNode.field_g.field_k / 2;
-        ml.field_g.field_a = -(ml.field_g.field_k / 2) + 320;
+        GrowableIntArray.field_g.field_a = -(GrowableIntArray.field_g.field_k / 2) + 320;
         DelegatingCanvas.field_g.field_a = 320 - DelegatingCanvas.field_g.field_k / 2;
         dc.field_n = new rk[12];
         if (param0 != 16) {
@@ -638,7 +638,7 @@ public final class Chess extends NetworkGameClient {
         dc.field_n[7] = null;
         dc.field_n[8] = cm.field_s;
         dc.field_n[4] = DelegatingCanvas.field_g;
-        dc.field_n[5] = ml.field_g;
+        dc.field_n[5] = GrowableIntArray.field_g;
         dc.field_n[1] = cm.field_s;
         dc.field_n[9] = null;
         dc.field_n[2] = cm.field_s;
@@ -688,7 +688,7 @@ public final class Chess extends NetworkGameClient {
         if (qk.field_h == IntrusiveDeque.field_f) {
           DualLinkNode.a(wn.field_e, IntrusiveDeque.field_f, (byte) -86, true);
         } else {
-          qd.field_w.setCameraOrbit(-0.1, (double)r.field_Eb / 300.0, true);
+          MusicPatchNode.field_w.setCameraOrbit(-0.1, (double)r.field_Eb / 300.0, true);
           if (nc.field_T < 16) {
             DualLinkNode.a(wn.field_e, IntrusiveDeque.field_f, (byte) -86, false);
           } else {
@@ -730,7 +730,7 @@ public final class Chess extends NetworkGameClient {
           v.field_j.drawString(ie.field_a + " fps; " + var4 + "MiB", 30, 70, 267386880, -1);
         }
         sf.b(16777215);
-        kf.a(0, (byte) 98, (java.awt.Canvas) (var6), 0);
+        MusicPatch.a(0, (byte) 98, (java.awt.Canvas) (var6), 0);
     }
 
     private final void loadChessBoardAndPieceModels(int param0) {
@@ -843,14 +843,14 @@ public final class Chess extends NetworkGameClient {
           }
           n.field_b[var3].transformVertices(this.field_H);
           jj.field_c[var3] = (SoftwareModelMesh) (n.field_b[var3].createModel(NameSuggestionsPanel.field_P[qm.field_g], ProgressMessageDialog.field_sb[qm.field_g], 5, -10, 5));
-          dl.field_c[var3] = new MeshData(new MeshData[]{kl.field_k[var3]}, 1);
-          for (var5 = dl.field_c[var3].field_h - 1; var5 >= 0; var5--) {
-            dl.field_c[var3].field_C[var5] = -dl.field_c[var3].field_C[var5];
+          MusicPatchEnvelope.field_c[var3] = new MeshData(new MeshData[]{kl.field_k[var3]}, 1);
+          for (var5 = MusicPatchEnvelope.field_c[var3].field_h - 1; var5 >= 0; var5--) {
+            MusicPatchEnvelope.field_c[var3].field_C[var5] = -MusicPatchEnvelope.field_c[var3].field_C[var5];
           }
-          var5_ref_int__ = dl.field_c[var3].field_O;
-          dl.field_c[var3].field_O = dl.field_c[var3].field_P;
-          dl.field_c[var3].field_P = var5_ref_int__;
-          q.field_b[var3] = (SoftwareModelMesh) (dl.field_c[var3].createModel(NameSuggestionsPanel.field_P[qm.field_g], ProgressMessageDialog.field_sb[qm.field_g], 5, 10, 5));
+          var5_ref_int__ = MusicPatchEnvelope.field_c[var3].field_O;
+          MusicPatchEnvelope.field_c[var3].field_O = MusicPatchEnvelope.field_c[var3].field_P;
+          MusicPatchEnvelope.field_c[var3].field_P = var5_ref_int__;
+          q.field_b[var3] = (SoftwareModelMesh) (MusicPatchEnvelope.field_c[var3].createModel(NameSuggestionsPanel.field_P[qm.field_g], ProgressMessageDialog.field_sb[qm.field_g], 5, 10, 5));
         }
         var3 = qm.field_g;
         if (var3 != 1) {
@@ -883,17 +883,17 @@ public final class Chess extends NetworkGameClient {
           }
           n.field_b[var5].transformVertices(this.field_H);
           ig.field_f[var5] = (SoftwareModelMesh) (n.field_b[var5].createModel(var3, var4, 5, -10, 5));
-          dl.field_c[var5] = new MeshData(new MeshData[]{kl.field_k[var5]}, 1);
-          var11 = -1 + dl.field_c[var5].field_h;
+          MusicPatchEnvelope.field_c[var5] = new MeshData(new MeshData[]{kl.field_k[var5]}, 1);
+          var11 = -1 + MusicPatchEnvelope.field_c[var5].field_h;
           var7_intLifetime1 = var11;
           while (var11 >= 0) {
-            dl.field_c[var5].field_C[var11] = -dl.field_c[var5].field_C[var11];
+            MusicPatchEnvelope.field_c[var5].field_C[var11] = -MusicPatchEnvelope.field_c[var5].field_C[var11];
             var11--;
           }
-          var7 = dl.field_c[var5].field_O;
-          dl.field_c[var5].field_O = dl.field_c[var5].field_P;
-          dl.field_c[var5].field_P = var7;
-          GzipInflater.field_c[var5] = (SoftwareModelMesh) (dl.field_c[var5].createModel(var3 * 4, var4 / 4, 5, 10, 5));
+          var7 = MusicPatchEnvelope.field_c[var5].field_O;
+          MusicPatchEnvelope.field_c[var5].field_O = MusicPatchEnvelope.field_c[var5].field_P;
+          MusicPatchEnvelope.field_c[var5].field_P = var7;
+          GzipInflater.field_c[var5] = (SoftwareModelMesh) (MusicPatchEnvelope.field_c[var5].createModel(var3 * 4, var4 / 4, 5, 10, 5));
         }
         for (var5 = -1 + kl.field_k.length; 0 <= var5; var5--) {
           kl.field_k[var5] = null;
@@ -937,7 +937,7 @@ public final class Chess extends NetworkGameClient {
             this.renderFrame(true);
           }
           while (var4 >= 0) {
-            var3[var4] = DisplayNameSelectionPanel.a(var3[var4], 1);
+            var3[var4] = DisplayNameSelectionPanel.bitwiseOr(var3[var4], 1);
             var4--;
           }
           return;
@@ -989,9 +989,9 @@ public final class Chess extends NetworkGameClient {
     }
 
     private final void initializeAssetArchives(int param0) {
-        if (td.field_o != null) {
-          q.a(5, td.field_o);
-          td.field_o = null;
+        if (MidiNoteMask.field_o != null) {
+          q.a(5, MidiNoteMask.field_o);
+          MidiNoteMask.field_o = null;
           ob.f(0);
         }
         if (param0 < 43) {
@@ -1206,7 +1206,7 @@ public final class Chess extends NetworkGameClient {
             stackIn_20_11 = (hj.field_i) || (DefaultTextWidgetRenderer.field_h);
             ArrayWidgetContainer.a(stackIn_14_0, stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_14_4 != 0, stackIn_14_5, stackIn_14_6, stackIn_14_7, stackIn_15_8, stackIn_18_9 != 0, stackIn_18_10, stackIn_20_11);
           }
-          while (kf.d(18954)) {
+          while (MusicPatch.d(18954)) {
             if (wn.field_f) {
               tl.a(12, 13, param0 + 17, 15);
             }
@@ -1378,7 +1378,7 @@ public final class Chess extends NetworkGameClient {
               if (IntrusiveDeque.field_f == -1) {
                 if (!pk.field_j) {
                   MatchingFieldValidator.field_p.a((byte) -39, true);
-                  while (kf.d(18954)) {
+                  while (MusicPatch.d(18954)) {
                     if (MatchingFieldValidator.field_p.f(-111)) {
                       continue;
                     }
@@ -1420,7 +1420,7 @@ public final class Chess extends NetworkGameClient {
             if (hj.field_i) {
               MatchingFieldValidator.field_p.a((byte) -65, var4 != 0);
             }
-            while (kf.d(18954)) {
+            while (MusicPatch.d(18954)) {
               if (wn.field_f) {
                 tl.a(12, 13, 94, 15);
               }
@@ -1613,7 +1613,7 @@ public final class Chess extends NetworkGameClient {
         pc.clearDeclaredStaticReferences(0);
         r.clearDeclaredStaticReferences(92);
         kl.a((byte) -66);
-        qd.a(27265);
+        MusicPatchNode.a(27265);
         MidiFileReader.clearStaticReferences();
         MusicPatchPcmStream.c((byte) 124);
         sh.c(-119);
@@ -1710,7 +1710,7 @@ public final class Chess extends NetworkGameClient {
         ByteStorage.clearStaticReferences(-24420);
         Bzip2Decompressor.clearStaticReferences();
         Bzip2State.clearStaticReferences(256);
-        ql.clearStaticReferences((byte) 109);
+        ByteArrayPoolSupport.clearStaticReferences((byte) 109);
         vh.a(102);
         nd.clearStaticReferences(84);
         nj.clearStaticReferences(-10406);
@@ -1743,12 +1743,12 @@ public final class Chess extends NetworkGameClient {
         de.clearStaticReferences((byte) -120);
         tm.resetStaticState((byte) 76);
         SynthesizerVoice.clearStaticReferences();
-        td.resetStaticState(5239);
+        MidiNoteMask.resetStaticState(5239);
         cl.clearStaticReferences(12);
         df.clearStaticReferences(-6);
         PcmOutputWorker.clearStaticReferences((byte) 116);
-        kf.c((byte) -101);
-        dl.clearStaticReferences(7);
+        MusicPatch.c((byte) -101);
+        MusicPatchEnvelope.clearStaticReferences(7);
         d.clearDeclaredStaticReferences(-110);
         kd.clearDeclaredStaticReferences(-4403);
         qa.clearStaticReferences(-1);
@@ -1775,7 +1775,7 @@ public final class Chess extends NetworkGameClient {
         DateInputWidget.clearStaticReferences(false);
         RichTextLayout.clearStaticReferences((byte) 83);
         DirectByteStorage.a((byte) -115);
-        ml.clearStaticReferences((byte) -122);
+        GrowableIntArray.clearStaticReferences((byte) -122);
         DraggableWidgetContainer.clearDeclaredStaticReferences(-15237);
         DropTargetWidgetContainer.i(5849);
         IterableNodeHashTable.clearStaticReferences(0);
@@ -1870,8 +1870,8 @@ public final class Chess extends NetworkGameClient {
             if (null != gl.field_b) {
               ka.field_a.prepareTrackSamples(pg.field_o, param0 - 19887, 0, gl.field_b, DisplayNameSelectionPanel.field_S);
             }
-            SpriteGeometry.field_q.c((byte) -61);
-            ka.field_a.c((byte) -61);
+            SpriteGeometry.field_q.releasePatchSampleIds((byte) -61);
+            ka.field_a.releasePatchSampleIds((byte) -61);
             ug.a(86);
             DisplayNameSelectionPanel.field_S = null;
             li.field_g = null;

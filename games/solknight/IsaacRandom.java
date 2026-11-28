@@ -59,10 +59,10 @@ final class IsaacRandom {
             }
           }
           this.field_c = this.field_c + this.field_h[var2 + 128 & 255];
-          dupTemp$1 = this.field_j + this.field_c + this.field_h[fi.a(1020, var3) >> 2];
+          dupTemp$1 = this.field_j + this.field_c + this.field_h[fi.bitwiseAnd(1020, var3) >> 2];
           var4 = dupTemp$1;
           this.field_h[var2] = dupTemp$1;
-          dupTemp$2 = this.field_h[fi.a(var4 >> 8, 1020) >> 2] + var3;
+          dupTemp$2 = this.field_h[fi.bitwiseAnd(var4 >> 8, 1020) >> 2] + var3;
           this.field_j = dupTemp$2;
           this.field_f[var2] = dupTemp$2;
         }
@@ -89,7 +89,7 @@ final class IsaacRandom {
           }
           this.initializeState(93);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "r.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "r.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -251,7 +251,7 @@ final class IsaacRandom {
           gl.a((byte) 28);
           BufferedSocket.field_h = 0 - TextFieldValidator.field_i;
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "r.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "r.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

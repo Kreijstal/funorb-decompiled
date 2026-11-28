@@ -89,7 +89,7 @@ final class la extends IntrusiveNode {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -132,7 +132,7 @@ final class la extends IntrusiveNode {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw fc.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -145,7 +145,7 @@ final class la extends IntrusiveNode {
         int var1 = bf.b((byte) -37);
         int var2 = vb.a((byte) -76);
         he.field_c.a(false, var1 + (pg.field_b << 1), -fh.field_b + DropTargetWidgetContainer.field_J, (fh.field_b << 1) + var2, ValidationStatusWidget.field_ab - pg.field_b);
-        ee.d(-4537);
+        MidiNoteMask.d(-4537);
         if (param0 >= 14) {
           return;
         }
@@ -244,7 +244,7 @@ final class la extends IntrusiveNode {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -267,7 +267,7 @@ final class la extends IntrusiveNode {
           var5.appendCrc32(true, var4);
           var5.backpatchByteLength(1, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "la.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "la.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -347,7 +347,7 @@ final class la extends IntrusiveNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param19).append(',').append(param20).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param19).append(',').append(param20).append(')').toString());
         }
     }
 

@@ -49,7 +49,7 @@ final class MixedSupport009 extends DefaultTextWidgetRenderer {
               }
             }
           } else {
-            MixedSupport008.performAction0077(this.mixedSupport118ArrayState0001, 0, mixedSupport009Argument2.mixedSupport118ArrayState0001, 0, 6);
+            ArrayBlockSupport.copyObjectRange(this.mixedSupport118ArrayState0001, 0, mixedSupport009Argument2.mixedSupport118ArrayState0001, 0, 6);
           }
           integerLocal13 = -82 % ((-68 - byteArgument1) / 44);
           return;

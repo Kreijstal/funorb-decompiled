@@ -270,7 +270,7 @@ class PcmPlayer {
         if (booleanState0038) {
           integerLocal1 = integerLocal1 << 1;
         }
-        MixedSupport008.clearInts(integerArrayArgument1, 0, integerLocal1);
+        ArrayBlockSupport.clearInts(integerArrayArgument1, 0, integerLocal1);
         this.integerState0210 = this.integerState0210 - integerArgument2;
         if (this.pcmStreamState0001 != null &&
           this.integerState0210 <= 0) {

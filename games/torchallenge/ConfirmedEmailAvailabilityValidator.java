@@ -253,7 +253,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           EditableTextField.field_cb = param0;
           var2 = MouseInputHandler.a(95, "gamename");
           if (null != var2) {
-            dl.field_E = re.a(18990, var2);
+            MusicPatchNode.field_E = re.a(18990, var2);
           }
           var2Lifetime1 = MouseInputHandler.a(95, "achievement_names,0");
           if (null != var2Lifetime1) {
@@ -1142,7 +1142,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
               var5 = param1;
               var6 = param3;
               var7 = param0;
-              var5[var6] = var7 + (jh.a(16711422, var5[var6]) >> 1);
+              var5[var6] = var7 + (jh.bitwiseAnd(16711422, var5[var6]) >> 1);
               param3++;
               if (var8 != 0) {
                 return;

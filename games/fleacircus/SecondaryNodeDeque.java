@@ -47,7 +47,7 @@ final class SecondaryNodeDeque implements Iterable {
             return false;
           }
           ji.field_a = hj.field_b[MatchingFieldValidator.field_o];
-          id.field_b = pf.field_d[MatchingFieldValidator.field_o];
+          GrowableIntArray.field_b = pf.field_d[MatchingFieldValidator.field_o];
           MatchingFieldValidator.field_o = 1 + MatchingFieldValidator.field_o & 127;
           stackIn_8_0 = true;
         }

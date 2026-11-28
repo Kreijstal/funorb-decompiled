@@ -12,38 +12,38 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           PcmResampler.field_c.snapAndPruneDialogs((byte) -20);
           if (null == af.field_g) {
             if (param0 == -20480) {
-              rb.a((byte) -102);
+              GrowableIntArray.a((byte) -102);
               return;
             }
             field_q = 79;
-            rb.a((byte) -102);
+            GrowableIntArray.a((byte) -102);
             return;
           }
           af.field_g.freezeNormalProgressAnimation((byte) 23);
           if (param0 != -20480) {
             field_q = 79;
-            rb.a((byte) -102);
+            GrowableIntArray.a((byte) -102);
             return;
           }
-          rb.a((byte) -102);
+          GrowableIntArray.a((byte) -102);
           return;
         }
         if (null != af.field_g) {
           af.field_g.freezeNormalProgressAnimation((byte) 23);
           if (param0 == -20480) {
-            rb.a((byte) -102);
+            GrowableIntArray.a((byte) -102);
             return;
           }
           field_q = 79;
-          rb.a((byte) -102);
+          GrowableIntArray.a((byte) -102);
           return;
         }
         if (param0 == -20480) {
-          rb.a((byte) -102);
+          GrowableIntArray.a((byte) -102);
           return;
         }
         field_q = 79;
-        rb.a((byte) -102);
+        GrowableIntArray.a((byte) -102);
     }
 
     ConfirmedEmailAvailabilityValidator(EditableTextField param0, EditableTextField param1) {

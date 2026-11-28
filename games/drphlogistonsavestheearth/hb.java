@@ -186,8 +186,8 @@ final class hb implements WidgetRenderer {
           return;
         }
         try {
-          if (sc.field_e != null) {
-            sc.field_e.detach((java.awt.Component) ((Object) param1), (byte) 12);
+          if (ByteArrayPoolSupport.field_e != null) {
+            ByteArrayPoolSupport.field_e.detach((java.awt.Component) ((Object) param1), (byte) 12);
           }
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "hb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

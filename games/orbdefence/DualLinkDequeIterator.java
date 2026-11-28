@@ -59,7 +59,7 @@ final class DualLinkDequeIterator implements Iterator {
 
     final static void a(String param0, int param1) {
         try {
-          tj.field_a = param0;
+          GrowableIntArray.field_a = param0;
           il.a(12, param1 ^ param1);
         } catch (RuntimeException runtimeException) {
           throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "ol.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

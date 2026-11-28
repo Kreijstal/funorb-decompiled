@@ -68,15 +68,15 @@ final class fe {
         RuntimeException decompiledCaughtException = null;
         var3 = OrbDefence.field_D ? 1 : 0;
         try {
-          TextLayout.a(param0, am.field_e, param1, hc.field_j, rc.field_d, 0, -128);
-          for (var2_int = 0; rc.field_d > var2_int; var2_int++) {
+          TextLayout.a(param0, am.field_e, param1, hc.field_j, MusicPatchEnvelope.field_d, 0, -128);
+          for (var2_int = 0; MusicPatchEnvelope.field_d > var2_int; var2_int++) {
             AccountNameAvailabilityValidator.field_o[var2_int + param0] = var2_int;
           }
-          TextLayout.a(param0 + param0, KeyboardListener.field_a, false, jl.field_d, param0 + rc.field_d, param0, -116);
-          if (rc.field_d <= param0) {
+          TextLayout.a(param0 + param0, KeyboardListener.field_a, false, jl.field_d, param0 + MusicPatchEnvelope.field_d, param0, -116);
+          if (MusicPatchEnvelope.field_d <= param0) {
             return;
           }
-          rc.field_d = param0;
+          MusicPatchEnvelope.field_d = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

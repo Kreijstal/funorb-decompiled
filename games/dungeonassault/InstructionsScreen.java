@@ -23,7 +23,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         }
         int var4 = ProgressMessageDialog.field_Fb[param0];
         if (var4 == 27) {
-          var3 = of.field_j.field_y;
+          var3 = MusicPatchEnvelope.field_j.field_y;
         }
         return var3 + this.a((byte) -4, param0);
     }
@@ -107,7 +107,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
           this.field_w[param1].field_h != var11) {
           this.field_w[param1] = new tf(IntrusiveNode.field_c, var5, var14);
         }
-        of.field_j.draw(640 - of.field_j.field_y >> 1, var9 - 4);
+        MusicPatchEnvelope.field_j.draw(640 - MusicPatchEnvelope.field_j.field_y >> 1, var9 - 4);
         this.field_w[param1].b(var9, 32, var10);
         if (param0) {
           if (param1 != this.field_y) {
@@ -169,7 +169,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         this.field_z = new kl();
         jh.a(this.field_e);
         bf.a(false, -128);
-        kn.field_e = false;
+        ByteArrayPoolSupport.field_e = false;
         AwtRasterBuffer.a(0, 640, 0, (byte) 44);
         AwtRasterBuffer.a(0, 640, 40, (byte) 44);
         ArchiveRequest.a(432, true, 33, 125, 48);
@@ -217,13 +217,13 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         am.field_a.draw(320 - am.field_a.field_E / 2, 48);
         for (var2 = 0; var2 < -1 + ProgressMessageDialog.field_Jb.field_i; var2++) {
           if (MouseWheelInput.a(var2, (byte) -124)) {
-            stackIn_9_1 = (var2 == ProgressMessageDialog.field_Jb.field_b) && (!kn.field_e);
+            stackIn_9_1 = (var2 == ProgressMessageDialog.field_Jb.field_b) && (!ByteArrayPoolSupport.field_e);
             this.c(stackIn_9_1, -33, var2);
           }
         }
         oe.field_m.h(24, 383);
         oe.field_m.j(560, 383);
-        if (!kn.field_e) {
+        if (!ByteArrayPoolSupport.field_e) {
           InstructionsScreen.applyScreenLighting();
         }
         for (var2Lifetime1 = 0; var2Lifetime1 < -1 + ProgressMessageDialog.field_Jb.field_i; var2Lifetime1++) {
@@ -231,7 +231,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
             stackIn_22_1 = 1;
             stackIn_22_2 = var2Lifetime1;
             if (ProgressMessageDialog.field_Jb.field_b == var2Lifetime1 &&
-              !kn.field_e) {
+              !ByteArrayPoolSupport.field_e) {
               stackIn_23_0 = this;
               stackIn_23_3 = true;
             } else {
@@ -249,7 +249,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         this.field_A.b(90, 32, 87);
         this.a(87, 3740, 200, en.field_a[mo.field_e], 446, 125);
         wk.a(552, DropTargetWidgetContainer.a(mo.field_e, 77), IntrusiveNode.field_c, 366, ag.field_c, 31139);
-        if (kn.field_e) {
+        if (ByteArrayPoolSupport.field_e) {
           this.field_z.a((byte) -64);
           var2Lifetime2 = ProgressMessageDialog.field_Jb.field_i - 1;
           InstructionsScreen.applyScreenLighting();
@@ -367,7 +367,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         }
         int var3 = ProgressMessageDialog.field_Fb[param1];
         if (var3 == 27) {
-          return 640 - of.field_j.field_y >> 1;
+          return 640 - MusicPatchEnvelope.field_j.field_y >> 1;
         }
         if (var3 == 25 ||
           24 == var3 ||
@@ -385,7 +385,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         int var1Lifetime2Lifetime1;
         var2 = DungeonAssault.field_K;
         if (!ProgressMessageDialog.field_Jb.b((byte) -84) &&
-          !kn.field_e) {
+          !ByteArrayPoolSupport.field_e) {
           if (96 == mm.field_t) {
             var1 = ProgressMessageDialog.field_Jb.field_b;
             while (true) {
@@ -522,9 +522,9 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         if (ProgressMessageDialog.field_Jb.c(param1 ^ 176) &&
           MouseWheelInput.a(param2, (byte) -124)) {
           if (var4 == 27) {
-            kn.field_e = false;
+            ByteArrayPoolSupport.field_e = false;
           }
-          if (!kn.field_e) {
+          if (!ByteArrayPoolSupport.field_e) {
             if (var4 != 25 &&
               var4 != 24 &&
               26 != var4) {
@@ -541,7 +541,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
               } else {
                 this.field_B = 2;
               }
-              kn.field_e = true;
+              ByteArrayPoolSupport.field_e = true;
               if (!param0) {
                 ProgressMessageDialog.field_Jb.field_b = 6;
               }

@@ -78,7 +78,7 @@ final class ra {
           CrossfadingMidiPcmStream.a(var1, 256);
           ka.c();
           SoftwareRasterizer.clearRaster();
-          si.field_l = 0;
+          MusicPatch.field_l = 0;
           f.a((byte) 16);
           var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {

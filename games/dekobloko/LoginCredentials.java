@@ -117,7 +117,7 @@ final class LoginCredentials {
         return MixedSupport047.sceneWidgetPart008State0003.sceneWidgetState0090;
     }
 
-    static long computeLong0789(long longArgument1, long longArgument2) {
+    static long bitwiseAnd(long longArgument1, long longArgument2) {
         return longArgument1 & longArgument2;
     }
 

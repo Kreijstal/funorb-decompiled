@@ -65,7 +65,7 @@ final class jb {
           var9[1] = 0.0;
           var10 = null;
           scanLoop1: while (null == var10) {
-            var10 = ll.a(mg.field_a, vf.field_e, (byte) 123);
+            var10 = ll.a(ByteArrayPoolSupport.field_a, vf.field_e, (byte) 123);
             if (null != var10) {
               var11_int = 0;
               var12_int = 0;
@@ -97,8 +97,8 @@ final class jb {
               vf.field_e[8] = 0.0;
               var11_intLifetime2 = 0;
               while (var11_intLifetime2 < 8) {
-                var12_ref_double__ = mg.field_a[var11_intLifetime2];
-                mg.field_a[8][var11_intLifetime2] = 0.0;
+                var12_ref_double__ = ByteArrayPoolSupport.field_a[var11_intLifetime2];
+                ByteArrayPoolSupport.field_a[8][var11_intLifetime2] = 0.0;
                 var12_ref_double__[8] = 0.0;
                 var11_intLifetime2++;
                 if (var17 != 0) {
@@ -132,8 +132,8 @@ final class jb {
             }
             var14Lifetime1 = stackIn_48_0;
             while (8 > var14Lifetime1) {
-              var15 = mg.field_a[var14Lifetime1];
-              mg.field_a[var11_intLifetime3][var14Lifetime1] = 0.0;
+              var15 = ByteArrayPoolSupport.field_a[var14Lifetime1];
+              ByteArrayPoolSupport.field_a[var11_intLifetime3][var14Lifetime1] = 0.0;
               var16 = var11_intLifetime3;
               var15[var16] = 0.0;
               var14Lifetime1++;

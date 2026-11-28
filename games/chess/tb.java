@@ -70,7 +70,7 @@ final class tb {
         tf.a(90);
         if (0 > ModalDialogHost.field_W) {
           SoundCache.field_h.field_db = null;
-          stackIn_7_0 = ql.field_d;
+          stackIn_7_0 = ByteArrayPoolSupport.field_d;
           stackIn_8_1 = (param2) && (!param1) && (!ModalDialogHost.field_V) && (pd.field_Rb == null) && (ib.field_d == null);
           ((ci) (Object) stackIn_7_0).a(stackIn_8_1, (byte) 88);
           stackIn_14_0 = rb.field_c;
@@ -102,7 +102,7 @@ final class tb {
           return;
         }
         SoundCache.field_h.field_db = MatchingFieldValidator.a(hh.field_m, new String[]{Integer.toString(ModalDialogHost.field_W)}, (byte) -108);
-        stackIn_46_0 = ql.field_d;
+        stackIn_46_0 = ByteArrayPoolSupport.field_d;
         stackIn_47_1 = (param2) && (!param1) && (!ModalDialogHost.field_V) && (pd.field_Rb == null) && (ib.field_d == null);
         ((ci) (Object) stackIn_46_0).a(stackIn_47_1, (byte) 88);
         stackIn_53_0 = rb.field_c;

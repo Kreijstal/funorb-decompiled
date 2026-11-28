@@ -233,7 +233,7 @@ final class kd extends jf {
         }
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseAnd(long param0, long param1) {
         return param0 & param1;
     }
 
@@ -337,7 +337,7 @@ final class kd extends jf {
                 this.field_p.readFully(this.field_m.payload, 49, var5, this.field_m.position);
                 if (this.field_d != 0) {
                   for (var6 = 0; var5 > var6; var6++) {
-                    this.field_m.payload[this.field_m.position + var6] = (byte)km.a((int) this.field_m.payload[this.field_m.position + var6], (int) this.field_d);
+                    this.field_m.payload[this.field_m.position + var6] = (byte)km.bitwiseXor((int) this.field_m.payload[this.field_m.position + var6], (int) this.field_d);
                   }
                 }
                 this.field_m.position = this.field_m.position + var5;
@@ -411,7 +411,7 @@ final class kd extends jf {
                 this.field_p.readFully(this.field_f.field_A.payload, -99, var6, this.field_f.field_A.position);
                 if (this.field_d != 0) {
                   for (var7 = 0; var7 < var6; var7++) {
-                    this.field_f.field_A.payload[this.field_f.field_A.position + var7] = (byte)km.a((int) this.field_f.field_A.payload[this.field_f.field_A.position + var7], (int) this.field_d);
+                    this.field_f.field_A.payload[this.field_f.field_A.position + var7] = (byte)km.bitwiseXor((int) this.field_f.field_A.payload[this.field_f.field_A.position + var7], (int) this.field_d);
                   }
                 }
                 this.field_f.field_B = this.field_f.field_B + var6;

@@ -425,7 +425,7 @@ public final class StarCannon extends ag {
                     if (qb.field_e == 2) {
                         /* Inlined CFG state: 59. */
                         {
-                            var4_ref_String = ve.field_g;
+                            var4_ref_String = GrowableIntArray.field_g;
                             var5 = 16776960;
                             var6 = 16711680;
                             statePc = 60;
@@ -1233,7 +1233,7 @@ public final class StarCannon extends ag {
                   ResizableModalDialog.field_P.f();
                   ResizableModalDialog.field_P = fl.field_h;
                   ti.field_f.addListener(ResizableModalDialog.field_P);
-                  ResizableModalDialog.field_P.a(mc.field_b);
+                  ResizableModalDialog.field_P.a(ByteArrayPoolSupport.field_b);
                   break regionExit1;
                 }
                 if (var7 == 10) {
@@ -1247,7 +1247,7 @@ public final class StarCannon extends ag {
                   ResizableModalDialog.field_P.f();
                   ResizableModalDialog.field_P = fl.field_h;
                   ti.field_f.addListener(ResizableModalDialog.field_P);
-                  ResizableModalDialog.field_P.a(mc.field_b);
+                  ResizableModalDialog.field_P.a(ByteArrayPoolSupport.field_b);
                   break regionExit1;
                 }
                 if (7 == var7) {
@@ -1277,7 +1277,7 @@ public final class StarCannon extends ag {
                       ResizableModalDialog.field_P.f();
                       ResizableModalDialog.field_P = fl.field_h;
                       ti.field_f.addListener(ResizableModalDialog.field_P);
-                      ResizableModalDialog.field_P.a(mc.field_b);
+                      ResizableModalDialog.field_P.a(ByteArrayPoolSupport.field_b);
                     }
                   } else {
                     nf.field_e = 175;
@@ -1422,7 +1422,7 @@ public final class StarCannon extends ag {
                             ResizableModalDialog.field_P.f();
                             ResizableModalDialog.field_P = fl.field_h;
                             ti.field_f.addListener(ResizableModalDialog.field_P);
-                            ResizableModalDialog.field_P.a(mc.field_b);
+                            ResizableModalDialog.field_P.a(ByteArrayPoolSupport.field_b);
                           }
                         } else {
                           nf.field_e = 175;
@@ -1874,7 +1874,7 @@ public final class StarCannon extends ag {
           var19 = var24;
           var10 = var19;
           for (var11 = 0; 256 > var11; var11++) {
-            var10[var11] = w.a(var11 << 7, 65303) + var11;
+            var10[var11] = w.bitwiseAnd(var11 << 7, 65303) + var11;
           }
           var14 = 0;
           var11Lifetime1 = var14;
@@ -1912,17 +1912,17 @@ public final class StarCannon extends ag {
           eb.field_b[3] = DequeWidgetContainer.a("", 23, "s3", ValidationStatusIcon.field_F);
           eb.field_b[4] = DequeWidgetContainer.a("", 20, "s4", ValidationStatusIcon.field_F);
           eb.field_b[5] = DequeWidgetContainer.a("", 82, "s5", ValidationStatusIcon.field_F);
-          eb.field_b[6] = DequeWidgetContainer.a("", dg.a(param1, -1506), "s6", ValidationStatusIcon.field_F);
-          eb.field_b[7] = DequeWidgetContainer.a("", dg.a(param1, -1419), "s7", ValidationStatusIcon.field_F);
-          eb.field_b[8] = DequeWidgetContainer.a("", dg.a(param1, -1423), "s8", ValidationStatusIcon.field_F);
+          eb.field_b[6] = DequeWidgetContainer.a("", dg.bitwiseXor(param1, -1506), "s6", ValidationStatusIcon.field_F);
+          eb.field_b[7] = DequeWidgetContainer.a("", dg.bitwiseXor(param1, -1419), "s7", ValidationStatusIcon.field_F);
+          eb.field_b[8] = DequeWidgetContainer.a("", dg.bitwiseXor(param1, -1423), "s8", ValidationStatusIcon.field_F);
           eb.field_b[9] = DequeWidgetContainer.a("", 124, "s9", ValidationStatusIcon.field_F);
           eb.field_b[10] = DequeWidgetContainer.a("", param1 + 1532, "s10", ValidationStatusIcon.field_F);
           eb.field_b[11] = DequeWidgetContainer.a("", 21, "s11", ValidationStatusIcon.field_F);
-          eb.field_b[12] = DequeWidgetContainer.a("", dg.a(param1, -1478), "s12", ValidationStatusIcon.field_F);
+          eb.field_b[12] = DequeWidgetContainer.a("", dg.bitwiseXor(param1, -1478), "s12", ValidationStatusIcon.field_F);
           eb.field_b[13] = DequeWidgetContainer.a("", param1 + 1523, "s13", ValidationStatusIcon.field_F);
           DialogMessagePane.field_y[0] = DequeWidgetContainer.a("", 76, "ap0", ValidationStatusIcon.field_F);
           DialogMessagePane.field_y[1] = DequeWidgetContainer.a("", 69, "ap1", ValidationStatusIcon.field_F);
-          DialogMessagePane.field_y[2] = DequeWidgetContainer.a("", dg.a(param1, -1497), "ap2", ValidationStatusIcon.field_F);
+          DialogMessagePane.field_y[2] = DequeWidgetContainer.a("", dg.bitwiseXor(param1, -1497), "ap2", ValidationStatusIcon.field_F);
           DialogMessagePane.field_y[3] = DequeWidgetContainer.a("", 100, "ap3", ValidationStatusIcon.field_F);
           ModalDialogHost.j(32);
           return;
@@ -1988,7 +1988,7 @@ public final class StarCannon extends ag {
         gd.field_a = new wd(TextFieldValidator.field_i);
         fl.field_h = new wd(r.field_b);
         ResizableModalDialog.field_P = eg.field_f;
-        ResizableModalDialog.field_P.a(mc.field_b);
+        ResizableModalDialog.field_P.a(ByteArrayPoolSupport.field_b);
         ti.field_f.addListener(ResizableModalDialog.field_P);
         ne.a(50, 39);
         ModalDialog.a(1, 50);
@@ -3084,7 +3084,7 @@ public final class StarCannon extends ag {
                               ResizableModalDialog.field_P.f();
                               ResizableModalDialog.field_P = fl.field_h;
                               ti.field_f.addListener(ResizableModalDialog.field_P);
-                              ResizableModalDialog.field_P.a(mc.field_b);
+                              ResizableModalDialog.field_P.a(ByteArrayPoolSupport.field_b);
                               break regionExit1;
                           }
                         }
@@ -3312,7 +3312,7 @@ public final class StarCannon extends ag {
         Bzip2Decompressor.clearStaticReferences();
         Bzip2State.clearStaticReferences(-4918);
         va.clearStaticReferences((byte) 80);
-        mc.a((byte) 40);
+        ByteArrayPoolSupport.a((byte) 40);
         ea.clearStaticReferences((byte) 48);
         ni.clearStaticReferences(-81);
         w.clearStaticReferences(3);
@@ -3360,7 +3360,7 @@ public final class StarCannon extends ag {
         li.clearStaticReferences(-23);
         RichTextLayout.clearDeclaredStaticReferences((byte) -2);
         DirectByteStorage.clearStaticReferences(20756);
-        ve.resetStaticState(32729);
+        GrowableIntArray.resetStaticState(32729);
         DraggableWidgetContainer.clearStaticReferences(-123);
         DropTargetWidgetContainer.resetDeclaredStaticState(9392);
         o.clearStaticReferences(4432);
@@ -3609,7 +3609,7 @@ public final class StarCannon extends ag {
         ea.field_d.setRootStream(ti.field_f);
         RichTextLayout.field_m = 0;
         bi.field_b = false;
-        mc.field_b = 128;
+        ByteArrayPoolSupport.field_b = 128;
         dg.field_l = 0;
         nb.field_g = 64;
         StandardContentDialog.field_gb = -2048;
@@ -3895,7 +3895,7 @@ public final class StarCannon extends ag {
                                 ResizableModalDialog.field_P.f();
                                 ResizableModalDialog.field_P = fl.field_h;
                                 ti.field_f.addListener(ResizableModalDialog.field_P);
-                                ResizableModalDialog.field_P.a(mc.field_b);
+                                ResizableModalDialog.field_P.a(ByteArrayPoolSupport.field_b);
                               }
                             }
                           }

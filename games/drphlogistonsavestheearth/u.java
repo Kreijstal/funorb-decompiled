@@ -43,12 +43,12 @@ abstract class u {
           }
           if (param1) {
             var4 = (ResourceArchive) null;
-            u.a((ResourceArchive) null, 120, -66);
+            u.loadMusicPatch((ResourceArchive) null, 120, -66);
           }
           if (param2.length() == 0) {
             return true;
           }
-          if (rb.a(param2, param0, -1)) {
+          if (GrowableIntArray.a(param2, param0, -1)) {
             return false;
           }
           if (gk.a(-1, param2, param0)) {
@@ -80,11 +80,11 @@ abstract class u {
 
     abstract void a(PacketBuffer param0, int param1);
 
-    final static ig a(ResourceArchive param0, int param1, int param2) {
+    final static MusicPatch loadMusicPatch(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
-        ig stackIn_6_0 = null;
+        MusicPatch stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -98,7 +98,7 @@ abstract class u {
           if (param1 != 0) {
             field_d = (BitmapFont) null;
           }
-          stackIn_6_0 = new ig(var4);
+          stackIn_6_0 = new MusicPatch(var4);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

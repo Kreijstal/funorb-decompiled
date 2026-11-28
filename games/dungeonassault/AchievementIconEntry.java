@@ -226,8 +226,8 @@ final class AchievementIconEntry extends IntrusiveNode {
             bl.field_c = bl.field_c - am.field_d;
           }
           var2_int = -1;
-          if (null != of.field_q) {
-            var2_int = of.field_q.length;
+          if (null != MusicPatchEnvelope.field_q) {
+            var2_int = MusicPatchEnvelope.field_q.length;
           } else {
             if (en.field_b != null) {
               var2_int = en.field_b.length;
@@ -241,14 +241,14 @@ final class AchievementIconEntry extends IntrusiveNode {
             boolean decompiledFrameRemainder0 = true;
             if (am.field_c > wf.field_x) {
               wf.field_x = wf.field_x + 1;
-              if (wf.field_x > am.field_g && (of.field_q == null ||
-                null == of.field_q[me.field_f])) {
+              if (wf.field_x > am.field_g && (MusicPatchEnvelope.field_q == null ||
+                null == MusicPatchEnvelope.field_q[me.field_f])) {
                 wf.field_x = wf.field_x - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (wf.field_x >= am.field_c &&
-                  null == of.field_q[(me.field_f + 1) % var2_int]) {
+                  null == MusicPatchEnvelope.field_q[(me.field_f + 1) % var2_int]) {
                   wf.field_x = wf.field_x - 1;
                 }
               }

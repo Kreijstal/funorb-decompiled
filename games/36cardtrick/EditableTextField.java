@@ -75,7 +75,7 @@ class EditableTextField extends InteractiveWidget {
                 var14 = 256 - param3;
                 incrementValue$1 = param6;
                 param6++;
-                param9[incrementValue$1] = bc.a(-16711936, bc.a(param2, 16711935) * param3 + bc.a(16711935, var13) * var14) + bc.a(var14 * bc.a(var13, 65280) + param3 * bc.a(param2, 65280), 16711680) >> 8;
+                param9[incrementValue$1] = bc.bitwiseAnd(-16711936, bc.bitwiseAnd(param2, 16711935) * param3 + bc.bitwiseAnd(16711935, var13) * var14) + bc.bitwiseAnd(var14 * bc.bitwiseAnd(var13, 65280) + param3 * bc.bitwiseAnd(param2, 65280), 16711680) >> 8;
               }
             }
             param6 = param6 + param7;

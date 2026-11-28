@@ -75,7 +75,7 @@ abstract class ca {
     final static void a(double param0, int param1, double param2, boolean param3, int param4) {
         if (param3) {
           dn.field_b = 0;
-          bc.field_i = param2;
+          MidiNoteMask.field_i = param2;
           ClientLookupTables.field_d = dn.field_i;
           PacketBuffer.field_h = param0;
           DialogMessagePane.field_N = param4;
@@ -85,7 +85,7 @@ abstract class ca {
         }
         ca.a(-0.43438423387122027, 123, -0.7999001328488745, true, -39);
         dn.field_b = 0;
-        bc.field_i = param2;
+        MidiNoteMask.field_i = param2;
         ClientLookupTables.field_d = dn.field_i;
         PacketBuffer.field_h = param0;
         DialogMessagePane.field_N = param4;

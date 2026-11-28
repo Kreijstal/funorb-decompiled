@@ -132,7 +132,7 @@ final class ada extends k {
             } else {
               var4 = 0;
             }
-            this.field_o[var6] = MassPoisonSpecial.a(MassPoisonSpecial.a(var2 << 16, var3 << 8), var4);
+            this.field_o[var6] = MassPoisonSpecial.bitwiseOr(MassPoisonSpecial.bitwiseOr(var2 << 16, var3 << 8), var4);
           }
         }
     }
@@ -223,9 +223,9 @@ final class ada extends k {
               var4 = 256;
             }
             var4 = this.field_o[var4];
-            var6[var9] = dda.a(var4, 16711680) >> 12;
-            var7[var9] = dda.a(4080, var4 >> 4);
-            var8[var9] = dda.a(var4 << 4, 4080);
+            var6[var9] = dda.bitwiseAnd(var4, 16711680) >> 12;
+            var7[var9] = dda.bitwiseAnd(4080, var4 >> 4);
+            var8[var9] = dda.bitwiseAnd(var4 << 4, 4080);
           }
         }
         if (param0) {

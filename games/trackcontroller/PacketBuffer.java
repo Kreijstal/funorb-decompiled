@@ -618,7 +618,7 @@ class PacketBuffer extends IntrusiveNode {
         int var13Lifetime1;
         var19 = TrackController.field_F ? 1 : 0;
         try {
-          ke.field_a = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
+          ByteArrayPoolSupport.field_a = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
           var1_int = ef.field_a.length;
           var21 = new int[var1_int];
           var20 = var21;
@@ -630,17 +630,17 @@ class PacketBuffer extends IntrusiveNode {
             var5 = var4_ref_pf.field_i + var4_ref_pf.field_u >> 1;
             var6 = var4_ref_pf.field_n + var4_ref_pf.field_p >> 1;
             var7 = var4_ref_pf.field_k + var4_ref_pf.field_w >> 1;
-            var8 = ke.field_a[9] >> 2;
-            var9 = ke.field_a[10] >> 2;
-            var10_int = ke.field_a[11] >> 2;
+            var8 = ByteArrayPoolSupport.field_a[9] >> 2;
+            var9 = ByteArrayPoolSupport.field_a[10] >> 2;
+            var10_int = ByteArrayPoolSupport.field_a[11] >> 2;
             var11 = var10_int * ba.field_a[5] + (ba.field_a[4] * var9 + ba.field_a[3] * var8) >> 14;
             var12 = var10_int * ba.field_a[8] + (ba.field_a[7] * var9 + var8 * ba.field_a[6]) >> 14;
             var13 = ba.field_a[10] * var9 + ba.field_a[9] * var8 + var10_int * ba.field_a[11] >> 14;
             var2[var3] = var7 * var13 + (var12 * var6 + var11 * var5) >> 16;
           }
-          var3Lifetime1 = ke.field_a[9] >> 8;
-          var4 = ke.field_a[10] >> 8;
-          var5Lifetime1 = ke.field_a[11] >> 8;
+          var3Lifetime1 = ByteArrayPoolSupport.field_a[9] >> 8;
+          var4 = ByteArrayPoolSupport.field_a[10] >> 8;
+          var5Lifetime1 = ByteArrayPoolSupport.field_a[11] >> 8;
           var6Lifetime1 = fb.field_a << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = TextLineMetrics.a(var6Lifetime1, (byte) -47) >> 8;
@@ -678,7 +678,7 @@ class PacketBuffer extends IntrusiveNode {
             for (var18 = 0; var18 < 3; var18++) {
               ba.field_a[var18] = ba.field_a[var18] + kc.field_c[var15][var18];
             }
-            oj.a(9, true, false, var17, ba.field_a, ke.field_a, false);
+            oj.a(9, true, false, var17, ba.field_a, ByteArrayPoolSupport.field_a, false);
             qi.a(var13Lifetime1, var7Lifetime1, (byte) 3, var9Lifetime1, var14, var8Lifetime1, var12Lifetime1, var17);
           }
           return;
@@ -898,7 +898,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     PacketBuffer(int param0) {
-        this.payload = ke.b(param0, -30001);
+        this.payload = ByteArrayPoolSupport.acquireByteArray(param0, -30001);
         this.position = 0;
     }
 

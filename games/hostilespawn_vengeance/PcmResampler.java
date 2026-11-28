@@ -201,7 +201,7 @@ final class PcmResampler {
                   var16_double = 2.1561944901923447;
                   var12Lifetime2 = (int)((double)var12Lifetime2 + 28.0 * (Math.sin(var16_double + var14_double) + Math.cos(var16_double + var14_double)));
                   var13 = (int)((double)var13 + 28.0 * (Math.cos(var14_double + var16_double) - Math.sin(var16_double + var14_double)));
-                  df.field_g[1 & pj.field_v].a(true, 128, (int)var8.field_c, var12Lifetime2, var13);
+                  GrowableIntArray.field_g[1 & pj.field_v].a(true, 128, (int)var8.field_c, var12Lifetime2, var13);
                 }
                 if (4 <= pj.field_v &&
                   pj.field_v <= 5) {
@@ -211,7 +211,7 @@ final class PcmResampler {
                   var16_doubleLifetime1 = 2.1561944901923447;
                   var12Lifetime3 = (int)((double)var12Lifetime3 + (Math.sin(var14_doubleLifetime1 + var16_doubleLifetime1) + Math.cos(var16_doubleLifetime1 + var14_doubleLifetime1)) * 28.0);
                   var13Lifetime2 = (int)((double)var13Lifetime2 + (Math.cos(var16_doubleLifetime1 + var14_doubleLifetime1) - Math.sin(var14_doubleLifetime1 + var16_doubleLifetime1)) * 28.0);
-                  df.field_g[0].a(true, 128, (int)var8.field_c, var12Lifetime3, var13Lifetime2);
+                  GrowableIntArray.field_g[0].a(true, 128, (int)var8.field_c, var12Lifetime3, var13Lifetime2);
                 }
                 if (pj.field_v >= 10 &&
                   12 > pj.field_v) {
@@ -221,7 +221,7 @@ final class PcmResampler {
                   var16_doubleLifetime2 = 2.1761944901923447;
                   var12Lifetime4 = (int)((double)var12Lifetime4 + (Math.sin(var16_doubleLifetime2 + var14_doubleLifetime2) + Math.cos(var14_doubleLifetime2 + var16_doubleLifetime2)) * 28.0);
                   var13Lifetime3 = (int)((double)var13Lifetime3 + (Math.cos(var14_doubleLifetime2 + var16_doubleLifetime2) - Math.sin(var16_doubleLifetime2 + var14_doubleLifetime2)) * 28.0);
-                  df.field_g[3 - (1 & pj.field_v)].a(true, 128, (int)var8.field_c, var12Lifetime4, var13Lifetime3);
+                  GrowableIntArray.field_g[3 - (1 & pj.field_v)].a(true, 128, (int)var8.field_c, var12Lifetime4, var13Lifetime3);
                 }
               }
               if (FullscreenFocusCanvas.field_d == 0) {
@@ -378,7 +378,7 @@ final class PcmResampler {
           ConfirmedEmailAvailabilityValidator.a(param1, false);
           ResourceArchive.loadFinalFrameSprites(param1, -11310);
           ha.b(255);
-          pl.a(-16183);
+          MusicPatchEnvelope.a(-16183);
           tk.field_e = -tk.field_d + 0;
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "nm.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

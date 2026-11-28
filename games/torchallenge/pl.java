@@ -41,7 +41,7 @@ final class pl {
             stackIn_7_0 = DraggableWidgetContainer.field_I;
             return stackIn_7_0;
           }
-          var3 = dl.a(param0, '.', -60);
+          var3 = MusicPatchNode.a(param0, '.', -60);
           if (var3.length < 2) {
             stackIn_11_0 = EditableTextField.field_W;
             return stackIn_11_0;

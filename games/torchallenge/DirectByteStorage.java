@@ -37,16 +37,16 @@ final class DirectByteStorage extends ByteStorage {
         var15 = TorChallenge.field_F ? 1 : 0;
         try {
           if (!gh.field_x) {
-            pi.field_d[vj.field_c][ea.field_e] = p.a(pi.field_d[vj.field_c][ea.field_e], vi.field_a);
+            pi.field_d[vj.field_c][ea.field_e] = p.bitwiseOr(pi.field_d[vj.field_c][ea.field_e], vi.field_a);
           }
           if (!gh.field_x &&
             !param0) {
-            k.field_b[vj.field_c] = p.a(k.field_b[vj.field_c], 1 << ea.field_e);
+            k.field_b[vj.field_c] = p.bitwiseOr(k.field_b[vj.field_c], 1 << ea.field_e);
             TextLineMetrics.a(false);
           }
           if (gh.field_x &&
             !param0) {
-            hk.field_c[vj.field_c] = p.a(hk.field_c[vj.field_c], 1 << -6 + ea.field_e);
+            hk.field_c[vj.field_c] = p.bitwiseOr(hk.field_c[vj.field_c], 1 << -6 + ea.field_e);
             TextLineMetrics.a(false);
           }
           var3_int = 28;
@@ -128,10 +128,10 @@ final class DirectByteStorage extends ByteStorage {
               }
               if (var11 != 0) {
                 var5 = var4 * 8 + 4 * lc.field_p[ea.field_e][var14];
-                hf.field_d[var5 + 0] = (byte)p.a((int) hf.field_d[var5 + 0], jh.a(var12, 255));
-                hf.field_d[var5 + 1] = (byte)p.a((int) hf.field_d[var5 + 1], jh.a(jh.a(65280, var12) >> 8, 255));
-                hf.field_d[2 + var5] = (byte)p.a((int) hf.field_d[2 + var5], jh.a(16741916, jh.a(16711680, var12)) >> 16);
-                hf.field_d[3 + var5] = (byte)p.a((int) hf.field_d[3 + var5], jh.a(255, jh.a(var12 >> 24, -1)));
+                hf.field_d[var5 + 0] = (byte)p.bitwiseOr((int) hf.field_d[var5 + 0], jh.bitwiseAnd(var12, 255));
+                hf.field_d[var5 + 1] = (byte)p.bitwiseOr((int) hf.field_d[var5 + 1], jh.bitwiseAnd(jh.bitwiseAnd(65280, var12) >> 8, 255));
+                hf.field_d[2 + var5] = (byte)p.bitwiseOr((int) hf.field_d[2 + var5], jh.bitwiseAnd(16741916, jh.bitwiseAnd(16711680, var12)) >> 16);
+                hf.field_d[3 + var5] = (byte)p.bitwiseOr((int) hf.field_d[3 + var5], jh.bitwiseAnd(255, jh.bitwiseAnd(var12 >> 24, -1)));
               }
               var11 = 0;
             }
@@ -154,10 +154,10 @@ final class DirectByteStorage extends ByteStorage {
               }
               if (var11 != 0) {
                 var5 = 8 * var4 + ModalDialog.field_N[ea.field_e] * 4;
-                hf.field_d[0 + var5] = (byte)p.a((int) hf.field_d[0 + var5], jh.a(var12, 255));
-                hf.field_d[1 + var5] = (byte)p.a((int) hf.field_d[1 + var5], jh.a(255, jh.a(65280, var12) >> 8));
-                hf.field_d[2 + var5] = (byte)p.a((int) hf.field_d[2 + var5], jh.a(jh.a(16711680, var12), 16759179) >> 16);
-                hf.field_d[var5 + 3] = (byte)p.a((int) hf.field_d[var5 + 3], jh.a(255, jh.a(-16777216, var12) >> 24));
+                hf.field_d[0 + var5] = (byte)p.bitwiseOr((int) hf.field_d[0 + var5], jh.bitwiseAnd(var12, 255));
+                hf.field_d[1 + var5] = (byte)p.bitwiseOr((int) hf.field_d[1 + var5], jh.bitwiseAnd(255, jh.bitwiseAnd(65280, var12) >> 8));
+                hf.field_d[2 + var5] = (byte)p.bitwiseOr((int) hf.field_d[2 + var5], jh.bitwiseAnd(jh.bitwiseAnd(16711680, var12), 16759179) >> 16);
+                hf.field_d[var5 + 3] = (byte)p.bitwiseOr((int) hf.field_d[var5 + 3], jh.bitwiseAnd(255, jh.bitwiseAnd(-16777216, var12) >> 24));
               }
               var11 = 0;
             }
@@ -179,10 +179,10 @@ final class DirectByteStorage extends ByteStorage {
             }
             if (var11 != 0) {
               var5 = GameScreen.field_f[var13] * 4 + 8 * var4;
-              hf.field_d[var5 + 0] = (byte)p.a((int) hf.field_d[var5 + 0], jh.a(255, var12));
-              hf.field_d[var5 + 1] = (byte)p.a((int) hf.field_d[var5 + 1], jh.a(jh.a(var12, 65280), 65479) >> 8);
-              hf.field_d[var5 + 2] = (byte)p.a((int) hf.field_d[var5 + 2], jh.a(16744105, jh.a(16711680, var12)) >> 16);
-              hf.field_d[3 + var5] = (byte)p.a((int) hf.field_d[3 + var5], jh.a(jh.a(-16777216, var12) >> 24, 255));
+              hf.field_d[var5 + 0] = (byte)p.bitwiseOr((int) hf.field_d[var5 + 0], jh.bitwiseAnd(255, var12));
+              hf.field_d[var5 + 1] = (byte)p.bitwiseOr((int) hf.field_d[var5 + 1], jh.bitwiseAnd(jh.bitwiseAnd(var12, 65280), 65479) >> 8);
+              hf.field_d[var5 + 2] = (byte)p.bitwiseOr((int) hf.field_d[var5 + 2], jh.bitwiseAnd(16744105, jh.bitwiseAnd(16711680, var12)) >> 16);
+              hf.field_d[3 + var5] = (byte)p.bitwiseOr((int) hf.field_d[3 + var5], jh.bitwiseAnd(jh.bitwiseAnd(-16777216, var12) >> 24, 255));
             }
             var11 = 0;
           }
@@ -204,10 +204,10 @@ final class DirectByteStorage extends ByteStorage {
             }
             if (var11 != 0) {
               var5 = 4 * RasterBuffer.field_a[var4] + 24;
-              hf.field_d[0 + var5] = (byte)p.a((int) hf.field_d[0 + var5], jh.a(var12, 255));
-              hf.field_d[1 + var5] = (byte)p.a((int) hf.field_d[1 + var5], jh.a(65506, jh.a(65280, var12)) >> 8);
-              hf.field_d[2 + var5] = (byte)p.a((int) hf.field_d[2 + var5], jh.a(jh.a(var12 >> 16, 255), 255));
-              hf.field_d[var5 + 3] = (byte)p.a((int) hf.field_d[var5 + 3], jh.a(255, jh.a(-16777216, var12) >> 24));
+              hf.field_d[0 + var5] = (byte)p.bitwiseOr((int) hf.field_d[0 + var5], jh.bitwiseAnd(var12, 255));
+              hf.field_d[1 + var5] = (byte)p.bitwiseOr((int) hf.field_d[1 + var5], jh.bitwiseAnd(65506, jh.bitwiseAnd(65280, var12)) >> 8);
+              hf.field_d[2 + var5] = (byte)p.bitwiseOr((int) hf.field_d[2 + var5], jh.bitwiseAnd(jh.bitwiseAnd(var12 >> 16, 255), 255));
+              hf.field_d[var5 + 3] = (byte)p.bitwiseOr((int) hf.field_d[var5 + 3], jh.bitwiseAnd(255, jh.bitwiseAnd(-16777216, var12) >> 24));
             }
             var11 = 0;
           }

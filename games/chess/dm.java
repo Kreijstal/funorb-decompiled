@@ -8,7 +8,7 @@ abstract class dm {
 
     abstract ug b(byte param0);
 
-    static int a(int param0, int param1) {
+    static int bitwiseXor(int param0, int param1) {
         return param0 ^ param1;
     }
 

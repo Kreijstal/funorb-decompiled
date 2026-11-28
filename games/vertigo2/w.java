@@ -59,13 +59,13 @@ final class w extends TextureOperator {
           if (!this.field_x.field_i) {
             return var4;
           }
-          qq.a(var4, 0, StripedProgressWidget.field_M, lf.field_y[param0]);
+          ArrayBlockSupport.fillInts(var4, 0, StripedProgressWidget.field_M, lf.field_y[param0]);
           return var4;
         }
         var4Lifetime1 = this.field_x.a(param0, (byte) -54);
         var3Lifetime1 = var4Lifetime1;
         if (this.field_x.field_i) {
-          qq.a(var4Lifetime1, 0, StripedProgressWidget.field_M, lf.field_y[param0]);
+          ArrayBlockSupport.fillInts(var4Lifetime1, 0, StripedProgressWidget.field_M, lf.field_y[param0]);
           return var4Lifetime1;
         }
         return var4Lifetime1;
@@ -255,7 +255,7 @@ final class w extends TextureOperator {
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (vc.a(-121, param0)) {
+          if (ByteArrayPoolSupport.a(-121, param0)) {
             return false;
           }
           if (DialogMessagePane.a(param2 ^ 288, param0)) {

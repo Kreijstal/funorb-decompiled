@@ -1609,7 +1609,7 @@ public final class Main extends c {
                         ve.field_c = RawPcmStream.createForPlaybackRate(var3, 100, 30);
                         ve.field_c.setLoopCount(-1);
                         var4_ref_ib = new PcmSample(BufferedSocket.field_c[15].field_l, BufferedSocket.field_c[15].field_h.length + 1000);
-                        og.a(BufferedSocket.field_c[15].field_h, 0, var4_ref_ib.field_h, 0, BufferedSocket.field_c[15].field_h.length);
+                        ArrayBlockSupport.copyByteRange(BufferedSocket.field_c[15].field_h, 0, var4_ref_ib.field_h, 0, BufferedSocket.field_c[15].field_h.length);
                         lh.field_d = RawPcmStream.createForPlaybackRate(var4_ref_ib, 100, 96);
                         lh.field_d.setLoopBounds(0, var4_ref_ib.field_h.length);
                         lh.field_d.setLoopCount(0);
@@ -2230,7 +2230,7 @@ public final class Main extends c {
           bf.clearStaticReferences((byte) -121);
           DirectByteArrayStore.clearDeclaredStaticReferences(0);
           RichTextLayout.d(-126);
-          fl.clearStaticReferences(param0 ^ 31237);
+          GrowableIntArray.clearStaticReferences(param0 ^ 31237);
           DraggableWidgetContainer.d((byte) 77);
           DropTargetWidgetContainer.releaseDeclaredStaticReferences(param0 - 21693);
           de.resetStaticState(false);
@@ -2617,7 +2617,7 @@ public final class Main extends c {
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            fl.a(var1, false);
+            GrowableIntArray.a(var1, false);
             NetworkArchiveRequest.field_r.backpatchByteLength(-var2 + var1.position, 8049);
             if (var3 != 0) {
               return;

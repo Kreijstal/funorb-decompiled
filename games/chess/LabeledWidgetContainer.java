@@ -36,7 +36,7 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
         var3 = Chess.field_G;
         try {
           var1_int = 0;
-          while (kf.d(18954)) {
+          while (MusicPatch.d(18954)) {
             nj.field_u.c((byte) 123);
             if (!nj.field_u.d((byte) 66)) {
               continue;

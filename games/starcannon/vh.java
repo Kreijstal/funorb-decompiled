@@ -682,7 +682,7 @@ final class vh extends eh {
                       if (0 != this.field_b) {
                         var6 = 0;
                         while (var6 < var5) {
-                          this.field_f.payload[var6 + this.field_f.position] = (byte)dg.a((int) this.field_f.payload[var6 + this.field_f.position], (int) this.field_b);
+                          this.field_f.payload[var6 + this.field_f.position] = (byte)dg.bitwiseXor((int) this.field_f.payload[var6 + this.field_f.position], (int) this.field_b);
                           var6++;
                           if (var16 != 0) {
                             decompiledFrameCompleted4 = false;
@@ -803,7 +803,7 @@ final class vh extends eh {
                       if (0 != this.field_b) {
                         var7Lifetime1 = 0;
                         while (var6Lifetime1 > var7Lifetime1) {
-                          this.field_a.field_u.payload[var7Lifetime1 + this.field_a.field_u.position] = (byte)dg.a((int) this.field_a.field_u.payload[var7Lifetime1 + this.field_a.field_u.position], (int) this.field_b);
+                          this.field_a.field_u.payload[var7Lifetime1 + this.field_a.field_u.position] = (byte)dg.bitwiseXor((int) this.field_a.field_u.payload[var7Lifetime1 + this.field_a.field_u.position], (int) this.field_b);
                           var7Lifetime1++;
                           if (var16 != 0) {
                             decompiledFrameCompleted0 = false;

@@ -10,11 +10,11 @@ final class MusicPatchPcmStream extends PcmStream {
     PcmStreamMixer field_l;
 
     final PcmStream nextChildStream() {
-        pl var1;
+        MusicPatchNode var1;
         int var2;
         var2 = CrazyCrystals.field_B;
         while (true) {
-          var1 = (pl) (this.field_k.nextForward(false));
+          var1 = (MusicPatchNode) (this.field_k.nextForward(false));
           if (var1 == null) {
             return null;
           }
@@ -24,10 +24,10 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    private final void skipVoiceFrames(pl param0, int param1, byte param2) {
+    private final void skipVoiceFrames(MusicPatchNode param0, int param1, byte param2) {
         MidiPcmStream stackIn_8_0 = null;
         int stackIn_8_1 = 0;
-        pl stackIn_8_2 = null;
+        MusicPatchNode stackIn_8_2 = null;
         boolean stackIn_9_3;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -52,7 +52,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 param0.field_v = RawPcmStream.createForSampleStep(param0.field_t, param0.field_v.getSampleStepMagnitude(), 0, param0.field_v.getPan());
                 stackIn_8_0 = this.field_o;
                 stackIn_8_1 = 2;
-                stackIn_8_2 = (pl) (param0);
+                stackIn_8_2 = (MusicPatchNode) (param0);
                 stackIn_9_3 = !(param0.field_A.field_n[param0.field_y] >= 0);
                 ((MidiPcmStream) (Object) stackIn_8_0).applySampleOffset((byte) stackIn_8_1, stackIn_8_2, stackIn_9_3);
               }
@@ -83,7 +83,7 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     final PcmStream firstChildStream() {
-        pl var1 = (pl) (this.field_k.beginForward(32073));
+        MusicPatchNode var1 = (MusicPatchNode) (this.field_k.beginForward(32073));
         if (var1 == null) {
           return null;
         }
@@ -101,18 +101,18 @@ final class MusicPatchPcmStream extends PcmStream {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        pl var6 = null;
+        MusicPatchNode var6 = null;
         int var7 = 0;
         var7 = CrazyCrystals.field_B;
         try {
           this.field_l.mixInto(param0, param1, param2);
-          var6 = (pl) (this.field_k.beginForward(32073));
+          var6 = (MusicPatchNode) (this.field_k.beginForward(32073));
           scanLoop1: while (true) {
             if (var6 == null) {
               return;
             }
             if (this.field_o.isVoiceInactive(var6, (byte) 100)) {
-              var6 = (pl) (this.field_k.nextForward(false));
+              var6 = (MusicPatchNode) (this.field_k.nextForward(false));
               continue;
             }
             var4_int = param1;
@@ -121,14 +121,14 @@ final class MusicPatchPcmStream extends PcmStream {
               if (var5 <= var6.field_k) {
                 this.renderVoiceFrames(param0, var6, var4_int, -1048576, var5, var5 + var4_int);
                 var6.field_k = var6.field_k - var5;
-                var6 = (pl) (this.field_k.nextForward(false));
+                var6 = (MusicPatchNode) (this.field_k.nextForward(false));
                 continue scanLoop1;
               }
               this.renderVoiceFrames(param0, var6, var4_int, -1048576, var6.field_k, var5 + var4_int);
               var5 = var5 - var6.field_k;
               var4_int = var4_int + var6.field_k;
             } while (!this.field_o.updateVoice(var5, var4_int, param0, var6, (byte) 98));
-            var6 = (pl) (this.field_k.nextForward(false));
+            var6 = (MusicPatchNode) (this.field_k.nextForward(false));
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -149,10 +149,10 @@ final class MusicPatchPcmStream extends PcmStream {
         field_m = null;
     }
 
-    private final void renderVoiceFrames(int[] param0, pl param1, int param2, int param3, int param4, int param5) {
+    private final void renderVoiceFrames(int[] param0, MusicPatchNode param1, int param2, int param3, int param4, int param5) {
         MidiPcmStream stackIn_14_0 = null;
         int stackIn_14_1 = 0;
-        pl stackIn_14_2 = null;
+        MusicPatchNode stackIn_14_2 = null;
         boolean stackIn_15_3;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -195,7 +195,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 param1.field_v = RawPcmStream.createForSampleStep(param1.field_t, var11.getSampleStepMagnitude(), 0, var11.getPan());
                 stackIn_14_0 = this.field_o;
                 stackIn_14_1 = 2;
-                stackIn_14_2 = (pl) (param1);
+                stackIn_14_2 = (MusicPatchNode) (param1);
                 stackIn_15_3 = !(param1.field_A.field_n[param1.field_y] >= 0);
                 ((MidiPcmStream) (Object) stackIn_14_0).applySampleOffset((byte) stackIn_14_1, stackIn_14_2, stackIn_15_3);
                 param1.field_v.rampVolume(var9, var11.getTargetVolume());
@@ -236,18 +236,18 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     final void skipFrames(int param0) {
-        pl var3;
+        MusicPatchNode var3;
         int var4;
         int var2;
         var4 = CrazyCrystals.field_B;
         this.field_l.skipFrames(param0);
-        var3 = (pl) (this.field_k.beginForward(32073));
+        var3 = (MusicPatchNode) (this.field_k.beginForward(32073));
         scanLoop1: while (true) {
           if (var3 == null) {
             return;
           }
           if (this.field_o.isVoiceInactive(var3, (byte) 113)) {
-            var3 = (pl) (this.field_k.nextForward(false));
+            var3 = (MusicPatchNode) (this.field_k.nextForward(false));
             continue;
           }
           var2 = param0;
@@ -255,13 +255,13 @@ final class MusicPatchPcmStream extends PcmStream {
             if (var3.field_k >= var2) {
               this.skipVoiceFrames(var3, var2, (byte) -101);
               var3.field_k = var3.field_k - var2;
-              var3 = (pl) (this.field_k.nextForward(false));
+              var3 = (MusicPatchNode) (this.field_k.nextForward(false));
               continue scanLoop1;
             }
             this.skipVoiceFrames(var3, var3.field_k, (byte) -116);
             var2 = var2 - var3.field_k;
           } while (!this.field_o.updateVoice(var2, 0, (int[]) null, var3, (byte) 94));
-          var3 = (pl) (this.field_k.nextForward(false));
+          var3 = (MusicPatchNode) (this.field_k.nextForward(false));
         }
     }
 

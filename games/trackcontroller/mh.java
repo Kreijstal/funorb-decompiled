@@ -385,7 +385,7 @@ final class mh extends IntrusiveNode {
               }
               var22 = var38.readVarInt(127);
             }
-            this.field_q[var23] = (short)(this.field_q[var23] + RandomAccessCacheFile.a(-1 + var22 << 14, 32768));
+            this.field_q[var23] = (short)(this.field_q[var23] + RandomAccessCacheFile.bitwiseAnd(-1 + var22 << 14, 32768));
             this.field_n[var23] = var22;
             var20Lifetime2--;
           }

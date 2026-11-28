@@ -83,10 +83,10 @@ final class rh {
           if (param0) {
             field_f = -64;
           }
-          if (h.field_b > mb.field_f) {
+          if (ByteArrayPoolSupport.field_b > mb.field_f) {
             var7 = nl.field_f[rd.field_f];
             if (var7 != null) {
-              var2_int = mb.field_f * (var7.field_n + 60) / h.field_b;
+              var2_int = mb.field_f * (var7.field_n + 60) / ByteArrayPoolSupport.field_b;
               var3 = var2_int - 30;
               if (!ve.field_t) {
                 InteractiveWidget.a(199, 617553576, 256 * (-var3 + var7.field_n) / 30, var7, -256 * var3 / 30, 245);

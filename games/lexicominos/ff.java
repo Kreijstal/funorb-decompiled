@@ -109,7 +109,7 @@ final class ff {
             }
             var14Lifetime2 = stackIn_17_0;
             var15 = param0 * var62[var13] + param3 * var63[var13] + param4 * var64[var13] >> 8;
-            stackIn_19_0 = gl.field_e;
+            stackIn_19_0 = GrowableIntArray.field_e;
             if (var15 >= 0) {
               stackIn_20_1 = var15;
             } else {

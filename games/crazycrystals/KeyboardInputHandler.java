@@ -60,7 +60,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             }
             if (bo.field_n >= 0 &&
               0 <= var2_int) {
-              pl.field_n[bo.field_n] = ~var2_int;
+              MusicPatchNode.field_n[bo.field_n] = ~var2_int;
               bo.field_n = 127 & bo.field_n + 1;
               if (bo.field_n == ContentTransitionDialog.field_Z) {
                 bo.field_n = -1;
@@ -124,7 +124,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           }
           if (0 <= bo.field_n &&
             var2_int >= 0) {
-            pl.field_n[bo.field_n] = var2_int;
+            MusicPatchNode.field_n[bo.field_n] = var2_int;
             bo.field_n = 127 & bo.field_n + 1;
             if (ContentTransitionDialog.field_Z == bo.field_n) {
               bo.field_n = -1;

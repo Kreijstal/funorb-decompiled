@@ -1,0 +1,27 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class MidiNoteMask extends IntrusiveNode {
+    byte[] field_h;
+    static String field_g;
+    static int field_i;
+
+    public static void clearStaticReferences(boolean param0) {
+        if (param0) {
+          return;
+        }
+        field_g = null;
+    }
+
+    MidiNoteMask(byte[] param0) {
+        try {
+          this.field_h = param0;
+        } catch (RuntimeException runtimeException) {
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_g = "More suggestions";
+    }
+}

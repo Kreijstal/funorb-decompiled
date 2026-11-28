@@ -74,7 +74,7 @@ abstract class ArchiveRequest extends DualLinkNode {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) -54) << c.a(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) -54) << c.bitwiseAnd(768, var7 << 8));
             }
             var4.unlink(34);
           } else {

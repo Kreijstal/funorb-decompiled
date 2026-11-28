@@ -1095,7 +1095,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "login");
                 if (null != var2) {
-                  q.field_a = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  ByteArrayPoolSupport.field_a = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "goback");
                 if (null != var2) {
@@ -1390,7 +1390,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "monthnames,6");
                 if (null != var2) {
-                  ProxyAuthenticationRequiredException.field_f[6] = ProxyAuthenticationRequiredException.a(var2, gi.a((int) param0, -12485));
+                  ProxyAuthenticationRequiredException.field_f[6] = ProxyAuthenticationRequiredException.a(var2, gi.bitwiseXor((int) param0, -12485));
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "monthnames,7");
                 if (var2 != null) {
@@ -1402,7 +1402,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "monthnames,9");
                 if (var2 != null) {
-                  ProxyAuthenticationRequiredException.field_f[9] = ProxyAuthenticationRequiredException.a(var2, gi.a((int) param0, -12485));
+                  ProxyAuthenticationRequiredException.field_f[9] = ProxyAuthenticationRequiredException.a(var2, gi.bitwiseXor((int) param0, -12485));
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "monthnames,10");
                 if (var2 != null) {
@@ -1930,7 +1930,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "fullscreen");
                 if (null != var2) {
-                  rc.field_i = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  MusicPatchEnvelope.field_i = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "screensize");
                 if (var2 != null) {
@@ -2524,7 +2524,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "quickchat_shortcut_help,5");
                 if (null != var2) {
-                  LoginPanel.field_B[5] = ProxyAuthenticationRequiredException.a(var2, gi.a((int) param0, -12485));
+                  LoginPanel.field_B[5] = ProxyAuthenticationRequiredException.a(var2, gi.bitwiseXor((int) param0, -12485));
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "quickchat_shortcut_keys,0");
                 if (var2 != null) {
@@ -2696,7 +2696,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "fs_accept_countdown_sing");
                 if (null != var2) {
-                  mc.field_f = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  MidiNoteMask.field_f = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "fs_accept_countdown_pl");
                 if (var2 != null) {
@@ -2876,7 +2876,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "mustlogin2,1");
                 if (var2 != null) {
-                  pf.field_a[1] = ProxyAuthenticationRequiredException.a(var2, gi.a((int) param0, -12485));
+                  pf.field_a[1] = ProxyAuthenticationRequiredException.a(var2, gi.bitwiseXor((int) param0, -12485));
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "mustlogin2,2");
                 if (null != var2) {
@@ -2908,7 +2908,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 + 15020, "mustlogin3,2");
                 if (null != var2) {
-                  InteractiveWidget.field_E[2] = ProxyAuthenticationRequiredException.a(var2, gi.a((int) param0, -12485));
+                  InteractiveWidget.field_E[2] = ProxyAuthenticationRequiredException.a(var2, gi.bitwiseXor((int) param0, -12485));
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "mustlogin3,3");
                 if (null != var2) {
@@ -2916,11 +2916,11 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "mustlogin3,4");
                 if (var2 != null) {
-                  InteractiveWidget.field_E[4] = ProxyAuthenticationRequiredException.a(var2, gi.a((int) param0, -12485));
+                  InteractiveWidget.field_E[4] = ProxyAuthenticationRequiredException.a(var2, gi.bitwiseXor((int) param0, -12485));
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "mustlogin3,5");
                 if (var2 != null) {
-                  InteractiveWidget.field_E[5] = ProxyAuthenticationRequiredException.a(var2, gi.a((int) param0, -12485));
+                  InteractiveWidget.field_E[5] = ProxyAuthenticationRequiredException.a(var2, gi.bitwiseXor((int) param0, -12485));
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 ^ 15188, "mustlogin3,6");
                 if (null != var2) {
@@ -2954,7 +2954,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "mustlogin4,5");
                 if (null != var2) {
-                  ee.field_d[5] = ProxyAuthenticationRequiredException.a(var2, gi.a((int) param0, -12485));
+                  ee.field_d[5] = ProxyAuthenticationRequiredException.a(var2, gi.bitwiseXor((int) param0, -12485));
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "mustlogin4,6");
                 if (var2 != null) {
@@ -3042,7 +3042,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "subscription_cost_monthly,11");
                 if (null != var2) {
-                  li.field_b[11] = ProxyAuthenticationRequiredException.a(var2, gi.a((int) param0, -12485));
+                  li.field_b[11] = ProxyAuthenticationRequiredException.a(var2, gi.bitwiseXor((int) param0, -12485));
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 ^ 15188, "subscription_cost_monthly,12");
                 if (null != var2) {
@@ -3117,10 +3117,10 @@ final class lm {
               }
               var6 = stackIn_15_0;
               while (var3 > var6) {
-                var5[var6] = vc.field_g[EditableTextField.a(255, (int) var4[var6])];
+                var5[var6] = vc.field_g[EditableTextField.bitwiseAnd(255, (int) var4[var6])];
                 var6++;
               }
-              var1[var2] = new RgbSprite(ModalDialog.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], var5);
+              var1[var2] = new RgbSprite(ModalDialog.field_B, MusicPatchNode.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], var5);
               var2++;
               continue scanLoop1;
             }

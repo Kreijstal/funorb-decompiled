@@ -60,7 +60,7 @@ final class OhNoEvent extends SpecialEvent {
         StickyAnimation.field_x = null;
         wd.field_w = null;
         IncomingAnimation.field_v = null;
-        un.field_m = null;
+        MusicPatchEnvelope.field_m = null;
         GasCloudEvent.field_q = null;
         aea.field_k = null;
         lga.field_k = null;

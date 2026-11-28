@@ -56,9 +56,9 @@ final class ama extends k {
             var13 = var31[2];
             for (var14 = 0; hh.field_d > var14; var14++) {
               var15 = var32[var14];
-              var13[var14] = dda.a(var15, 255) << 4;
-              var12[var14] = dda.a(65280, var15) >> 4;
-              var11[var14] = dda.a(var15 >> 12, 4080);
+              var13[var14] = dda.bitwiseAnd(var15, 255) << 4;
+              var12[var14] = dda.bitwiseAnd(65280, var15) >> 4;
+              var11[var14] = dda.bitwiseAnd(var15 >> 12, 4080);
             }
           }
         }

@@ -6,17 +6,17 @@ import java.util.*;
 final class BufferedImageRasterBuffer extends RasterBuffer {
     private java.awt.Component field_h;
 
-    final void a(byte param0, int param1, java.awt.Graphics param2, int param3) {
+    final void drawImage(byte param0, int param1, java.awt.Graphics param2, int param3) {
         if (param0 > 27) {
           param2.drawImage(this.field_c, param3, param1, (java.awt.image.ImageObserver) ((Object) this.field_h));
           return;
         }
         java.awt.Component var6 = (java.awt.Component) null;
-        this.a(-86, (java.awt.Component) null, 95, -74);
+        this.initialize(-86, (java.awt.Component) null, 95, -74);
         param2.drawImage(this.field_c, param3, param1, (java.awt.image.ImageObserver) ((Object) this.field_h));
     }
 
-    final void a(int param0, java.awt.Component param1, int param2, int param3) {
+    final void initialize(int param0, java.awt.Component param1, int param2, int param3) {
         this.field_b = param2;
         this.field_e = new int[param0 * param2 + 1];
         this.field_f = param0;
@@ -26,7 +26,7 @@ final class BufferedImageRasterBuffer extends RasterBuffer {
         this.field_c = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
         if (param3 == 256) {
           this.field_h = param1;
-          this.a((byte) -28);
+          this.setAsRasterTarget((byte) -28);
           return;
         }
     }

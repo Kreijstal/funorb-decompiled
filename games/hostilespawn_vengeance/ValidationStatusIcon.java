@@ -607,7 +607,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
               if ((j.field_c != -1 ||
                 rb.field_m != -1 ||
                 rc.field_e == 0) && var17Lifetime2 == 0) {
-                bc.a(var5, var2, var4, var7, (byte) 15, var9, var8, var24, var15, var13, var23, var3);
+                MidiNoteMask.a(var5, var2, var4, var7, (byte) 15, var9, var8, var24, var15, var13, var23, var3);
               }
             } else {
               if (0 == hg.field_e) {

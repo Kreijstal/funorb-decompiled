@@ -7,13 +7,13 @@ final class gd {
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
-          g.a(param1, "", -3603);
+          MusicPatchEnvelope.a(param1, "", -3603);
           di.a(param1, 63);
           if (param0 != -1) {
             field_b = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "gd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "gd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -50,7 +50,7 @@ final class gd {
           param1.drawAdditive(1 + param0, param5 + 1, param8);
           SoftwareRasterizer.restoreClip(DialogMessagePane.field_D);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "gd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "gd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

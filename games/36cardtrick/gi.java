@@ -45,7 +45,7 @@ final class gi extends IntrusiveNode {
             var13 = param1;
             var14 = param4;
             var15 = 8355711 & var17[var11] >> 1;
-            var10[var11] = var15 + (bc.a(var12, 33423360) >> 1) + ((bc.a(var13, 33423391) >> 9) + bc.a(var14 >> 17, 255));
+            var10[var11] = var15 + (bc.bitwiseAnd(var12, 33423360) >> 1) + ((bc.bitwiseAnd(var13, 33423391) >> 9) + bc.bitwiseAnd(var14 >> 17, 255));
             param2 = param2 + param8;
             param4 = param4 + param9;
             param0++;

@@ -38,7 +38,7 @@ final class oj extends k {
             var13 = param6;
             var14 = param5;
             var15 = (var17[var11] & 16711422) >> 1;
-            var10[var11] = (dda.a(33493156, var14) >> 17) + dda.a(65280, var13 >> 9) + dda.a(var12 >> 1, 16711680) + var15;
+            var10[var11] = (dda.bitwiseAnd(33493156, var14) >> 17) + dda.bitwiseAnd(65280, var13 >> 9) + dda.bitwiseAnd(var12 >> 1, 16711680) + var15;
             param5 = param5 + param9;
             param6 = param6 + param8;
             param0 = param0 + param1;

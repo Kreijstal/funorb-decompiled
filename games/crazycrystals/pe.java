@@ -97,11 +97,11 @@ final class pe extends IntrusiveNode {
               var11 = wp.field_d[var9];
               var6[0][var10] = AlphaWidgetContainer.field_A[var11];
               var18[0][var10 * 4] = mh.field_l[var11];
-              var18[0][1 + var10 * 4] = dk.field_l[var11];
+              var18[0][1 + var10 * 4] = MusicPatch.field_l[var11];
               var18[0][2 + var10 * 4] = BufferedSocket.field_i[var11];
               var18[0][3 + var10 * 4] = cd.field_u[var11];
               if (ai.a((byte) 82, AlphaWidgetContainer.field_A[var11]) &&
-                0 == BufferedSocket.field_i[var11] + dk.field_l[var11] + cd.field_u[var11]) {
+                0 == BufferedSocket.field_i[var11] + MusicPatch.field_l[var11] + cd.field_u[var11]) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -115,11 +115,11 @@ final class pe extends IntrusiveNode {
               var11Lifetime1 = wp.field_d[var9Lifetime1 + var5];
               var6[1][var13] = AlphaWidgetContainer.field_A[var11Lifetime1];
               var18[1][4 * var13] = mh.field_l[var11Lifetime1];
-              var18[1][var13 * 4 + 1] = dk.field_l[var11Lifetime1];
+              var18[1][var13 * 4 + 1] = MusicPatch.field_l[var11Lifetime1];
               var18[1][var13 * 4 + 2] = BufferedSocket.field_i[var11Lifetime1];
               var18[1][4 * var13 + 3] = cd.field_u[var11Lifetime1];
               if (ai.a((byte) 82, AlphaWidgetContainer.field_A[var11Lifetime1]) &&
-                BufferedSocket.field_i[var11Lifetime1] + (dk.field_l[var11Lifetime1] + cd.field_u[var11Lifetime1]) == 0) {
+                BufferedSocket.field_i[var11Lifetime1] + (MusicPatch.field_l[var11Lifetime1] + cd.field_u[var11Lifetime1]) == 0) {
                 var6[1][var13] = null;
                 var13--;
               }

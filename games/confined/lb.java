@@ -171,7 +171,7 @@ final class lb extends DualLinkNode {
         int var3 = Confined.field_J ? 1 : 0;
         if (null != this.field_s) {
           for (var2 = 0; this.field_s.length > var2; var2++) {
-            this.field_s[var2] = nl.a(this.field_s[var2], 32768);
+            this.field_s[var2] = nl.bitwiseOr(this.field_s[var2], 32768);
           }
         }
         if (param0 != 0) {

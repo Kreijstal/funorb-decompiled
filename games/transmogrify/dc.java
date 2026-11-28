@@ -37,7 +37,7 @@ final class dc {
             stackIn_8_0 = !(WordDictionary.field_e);
             WordDictionary.field_e = stackIn_8_0;
             if (WordDictionary.field_e) {
-              vk.a((byte) 115, FullscreenFocusCanvas.field_d[7]);
+              ByteArrayPoolSupport.a((byte) 115, FullscreenFocusCanvas.field_d[7]);
               ContentTransitionDialog.field_S.a(kk.a(param0 + 23327, PacketBuffer.field_j, bk.field_a), 1, (byte) -112, param1);
               return;
             }
@@ -60,7 +60,7 @@ final class dc {
             var4 = var3[(2147483647 & bc.field_b) % var16.length];
             nc.field_t = nc.field_t + var4 * GuestPlayConfirmationForm.field_B;
             gh.field_l = gh.field_l + var4;
-            vk.a((byte) 123, FullscreenFocusCanvas.field_d[1]);
+            ByteArrayPoolSupport.a((byte) 123, FullscreenFocusCanvas.field_d[1]);
             var5 = var2_int;
             if (var2_int > 0) {
               var6 = 0;
@@ -149,12 +149,12 @@ final class dc {
                   }
                   if (800 > eh.totalScore) {
                     if (400 > eh.totalScore) {
-                      wd.a(17099, false, bd.field_u[9]);
+                      MidiNoteMask.a(17099, false, bd.field_u[9]);
                     } else {
-                      wd.a(17099, false, bd.field_u[8]);
+                      MidiNoteMask.a(17099, false, bd.field_u[8]);
                     }
                   } else {
-                    wd.a(17099, false, bd.field_u[7]);
+                    MidiNoteMask.a(17099, false, bd.field_u[7]);
                   }
                   if ((var6Lifetime1 == 0)) {
                     var6Lifetime1++;
@@ -167,12 +167,12 @@ final class dc {
                   }
                   if (800 > eh.totalScore) {
                     if (400 > eh.totalScore) {
-                      wd.a(17099, false, bd.field_u[9]);
+                      MidiNoteMask.a(17099, false, bd.field_u[9]);
                     } else {
-                      wd.a(17099, false, bd.field_u[8]);
+                      MidiNoteMask.a(17099, false, bd.field_u[8]);
                     }
                   } else {
-                    wd.a(17099, false, bd.field_u[7]);
+                    MidiNoteMask.a(17099, false, bd.field_u[7]);
                   }
                   if (var6Lifetime1 == 0) {
                     var6Lifetime1++;
@@ -348,7 +348,7 @@ final class dc {
               hi.field_a = 28;
             }
           } else {
-            vk.a((byte) 98, FullscreenFocusCanvas.field_d[2]);
+            ByteArrayPoolSupport.a((byte) 98, FullscreenFocusCanvas.field_d[2]);
           }
           if (param0 != -22991) {
             field_a = -122;

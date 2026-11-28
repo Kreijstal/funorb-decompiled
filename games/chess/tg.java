@@ -95,8 +95,8 @@ final class tg {
           var6.field_l = 0;
           var7 = new nj(var4, true);
           var7.field_l = 0;
-          var7.a((byte) -6, td.a(-31056, 8947848));
-          var7.a(81, 1).a((byte) 86, td.a(-31056, 11184810)).a(2236962, false);
+          var7.a((byte) -6, MidiNoteMask.a(-31056, 8947848));
+          var7.a(81, 1).a((byte) 86, MidiNoteMask.a(-31056, 11184810)).a(2236962, false);
           this.field_k = (WidgetRenderer) ((Object) new nd(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new ka(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new sj(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);

@@ -66,11 +66,11 @@ final class il {
             var6 = null;
             var7 = null;
             if (sa.field_g.field_t != null) {
-              wj.field_s = new BufferedRandomAccessFile(sa.field_g.field_t, 5200, 0);
+              MusicPatch.field_s = new BufferedRandomAccessFile(sa.field_g.field_t, 5200, 0);
               sa.field_g.field_t = null;
-              var6 = new SectorCacheStore(255, wj.field_s, new BufferedRandomAccessFile(sa.field_g.field_o, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, MusicPatch.field_s, new BufferedRandomAccessFile(sa.field_g.field_o, 12000, 0), 2097152);
             }
-            if (null != wj.field_s) {
+            if (null != MusicPatch.field_s) {
               if (bd.field_i == null) {
                 bd.field_i = new BufferedRandomAccessFile[sa.field_g.field_c.length];
               }
@@ -78,7 +78,7 @@ final class il {
                 bd.field_i[param3] = new BufferedRandomAccessFile(sa.field_g.field_c[param3], 12000, 0);
                 sa.field_g.field_c[param3] = null;
               }
-              var7 = new SectorCacheStore(param3, wj.field_s, bd.field_i[param3], 2097152);
+              var7 = new SectorCacheStore(param3, MusicPatch.field_s, bd.field_i[param3], 2097152);
             }
             var8 = nh.field_a.a(param3, 3510, (SectorCacheStore) (var7), (SectorCacheStore) (var6), param2);
             if (param1 != 12317) {

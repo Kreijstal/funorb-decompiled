@@ -1,0 +1,148 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class GrowableIntArray {
+    static ae field_l;
+    static th field_j;
+    static Sprite field_i;
+    private int field_a;
+    private boolean field_k;
+    private int field_g;
+    static MusicTrack field_e;
+    static String field_f;
+    static BufferedRandomAccessFile[] field_h;
+    private int[] field_c;
+    static int field_b;
+    static int field_d;
+
+    final static void a(int param0, ac param1, int param2, int param3, ac param4, int param5) {
+        try {
+          s.field_O = param1;
+          sn.field_d = param5;
+          IsaacRandom.field_j = param4;
+          if (param2 != -1) {
+            ac var7 = (ac) null;
+            GrowableIntArray.a(-42, (ac) null, -120, -123, (ac) null, -33);
+          }
+          ka.field_a = param3;
+          SpriteState.field_z = param0;
+        } catch (RuntimeException runtimeException) {
+          throw lj.wrapClientException((Throwable) ((Object) runtimeException), "aa.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+        }
+    }
+
+    private final int computeCapacity(int param0, int param1) {
+        int var3;
+        int var4;
+        var4 = MinerDisturbance.field_ab;
+        if (param0 != -32676) {
+          this.field_c = (int[]) null;
+        }
+        var3 = this.field_c.length;
+        while (var3 <= param1) {
+          if (!this.field_k) {
+            var3 = var3 + this.field_a;
+            continue;
+          }
+          if (0 == var3) {
+            var3 = 1;
+            continue;
+          }
+          var3 = var3 * this.field_a;
+        }
+        return var3;
+    }
+
+    final static ln[] a(int param0) {
+        int var2 = 0;
+        int var3 = MinerDisturbance.field_ab;
+        ln[] var1 = new ln[sc.field_d];
+        if (param0 >= -104) {
+          return (ln[]) null;
+        }
+        for (var2 = 0; var2 < sc.field_d; var2++) {
+          var1[var2] = new ln(pf.field_c, wd.field_a, bg.field_d[var2], oc.field_e[var2], qk.field_b[var2], MusicPatchEnvelope.field_e[var2], ClientException.field_b[var2], af.field_p);
+        }
+        ec.a((byte) -76);
+        return var1;
+    }
+
+    private final void grow(int param0, int param1) {
+        int[] var4 = new int[this.computeCapacity(-32676, param1)];
+        int[] var3 = var4;
+        ArrayBlockSupport.copyIntRange(this.field_c, 0, var4, 0, this.field_c.length);
+        if (param0 > -27) {
+          this.field_k = false;
+        }
+        this.field_c = var4;
+    }
+
+    final void removeAt(int param0, int param1) {
+        if (param1 != 0) {
+          this.get(121, (byte) 110);
+        }
+        if (param0 < 0 ||
+          param0 > this.field_g) {
+          throw new ArrayIndexOutOfBoundsException(param0);
+        }
+        if (this.field_g != param0) {
+          ArrayBlockSupport.copyIntRange(this.field_c, param0 + 1, this.field_c, param0, -param0 + this.field_g);
+        }
+        this.field_g = this.field_g - 1;
+    }
+
+    final void append(int param0, int param1) {
+        if (param0 != 6524) {
+          return;
+        }
+        this.set(1 + this.field_g, param1, param0 - 6632);
+    }
+
+    public static void clearStaticReferences(byte param0) {
+        if (param0 > -117) {
+          return;
+        }
+        field_h = null;
+        field_l = null;
+        field_e = null;
+        field_f = null;
+        field_i = null;
+        field_j = null;
+    }
+
+    private final void set(int param0, int param1, int param2) {
+        if (this.field_g < param0) {
+          this.field_g = param0;
+        }
+        if (param0 >= this.field_c.length) {
+          this.grow(-121, param0);
+        }
+        if (param2 >= 0) {
+          return;
+        }
+        this.field_c[param0] = param1;
+    }
+
+    final int get(int param0, byte param1) {
+        if (this.field_g < param0) {
+          throw new ArrayIndexOutOfBoundsException(param0);
+        }
+        int var3 = 17 % ((param1 + 65) / 47);
+        return this.field_c[param0];
+    }
+
+    final int size(int param0) {
+        if (param0 != 5717) {
+          field_l = (ae) null;
+        }
+        return this.field_g + 1;
+    }
+
+    private GrowableIntArray() throws Throwable {
+        throw new Error();
+    }
+
+    static {
+        field_l = new ae();
+    }
+}

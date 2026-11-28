@@ -61,7 +61,7 @@ final class SceneWidgetPart006 extends SceneWidget {
         try {
           integerLocal1 = byteArrayArgument2.length;
           byteArrayLocal3 = new byte[integerLocal1];
-          MixedSupport008.performAction0073(byteArrayArgument2, 0, byteArrayLocal3, integerArgument1, integerLocal1);
+          ArrayBlockSupport.copyByteRange(byteArrayArgument2, 0, byteArrayLocal3, integerArgument1, integerLocal1);
           stackByteArrayLocal4 = byteArrayLocal3;
           return stackByteArrayLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {

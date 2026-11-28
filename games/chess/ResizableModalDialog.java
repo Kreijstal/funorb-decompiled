@@ -154,8 +154,8 @@ abstract class ResizableModalDialog extends ModalDialog {
           var7Lifetime1++;
         }
         vk.field_a.draw(-90 + this.field_y + param2, param1 + 10);
-        ml.a(35 + param1, IntrusiveDeque.field_d, 5 + param2, -128, this.field_y - 10);
-        ml.a(-22 + (this.field_C + param1), ej.field_e, param2, -127, this.field_y);
+        GrowableIntArray.a(35 + param1, IntrusiveDeque.field_d, 5 + param2, -128, this.field_y - 10);
+        GrowableIntArray.a(-22 + (this.field_C + param1), ej.field_e, param2, -127, this.field_y);
         var4Lifetime2 = this.field_C - 79;
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;

@@ -102,12 +102,12 @@ final class up {
 
     final static void b(int param0) {
         if (param0 < -78) {
-          lp.a(td.field_d, -40, true, AgeValidator.field_m);
+          MusicPatchNode.a(td.field_d, -40, true, AgeValidator.field_m);
           jd.field_l = true;
           return;
         }
         up.a(true);
-        lp.a(td.field_d, -40, true, AgeValidator.field_m);
+        MusicPatchNode.a(td.field_d, -40, true, AgeValidator.field_m);
         jd.field_l = true;
     }
 

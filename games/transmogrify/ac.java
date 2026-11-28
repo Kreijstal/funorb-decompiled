@@ -36,11 +36,11 @@ final class ac extends kk {
         }
     }
 
-    final static si a(int param0, int param1, ResourceArchive param2) {
+    final static MusicPatch loadMusicPatch(int param0, int param1, ResourceArchive param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
-        si stackIn_6_0 = null;
+        MusicPatch stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -54,7 +54,7 @@ final class ac extends kk {
           if (param1 != 270) {
             field_j = -92L;
           }
-          stackIn_6_0 = new si(var4);
+          stackIn_6_0 = new MusicPatch(var4);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -73,7 +73,7 @@ final class ac extends kk {
     final nk a(int param0) {
         if (param0 != -184) {
           ResourceArchive var3 = (ResourceArchive) null;
-          ac.a(31, -57, (ResourceArchive) null);
+          ac.loadMusicPatch(31, -57, (ResourceArchive) null);
           return wh.field_I;
         }
         return wh.field_I;
@@ -103,7 +103,7 @@ final class ac extends kk {
             stackIn_12_0 = "carryover_rack";
             return stackIn_12_0;
           }
-          if (param1 == si.newRack) {
+          if (param1 == MusicPatch.newRack) {
             stackIn_10_0 = "new_rack";
             return stackIn_10_0;
           }

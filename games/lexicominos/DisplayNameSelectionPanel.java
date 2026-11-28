@@ -39,7 +39,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         }
     }
 
-    private final int a(String param0, String param1, UiWidget param2, int param3, int param4, int param5) {
+    private final int addLabeledFieldWithDefaultValidationMessage(String param0, String param1, UiWidget param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -54,7 +54,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
           if (param3 != 11271) {
             this.field_F = (NameSuggestionsPanel) null;
           }
-          stackIn_3_0 = this.a(param1, 35, 93, param5, param0, param4, param2);
+          stackIn_3_0 = this.addLabeledFieldWithValidationMessage(param1, 35, 93, param5, param0, param4, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -139,7 +139,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         }
     }
 
-    private final int a(String param0, int param1, int param2, int param3, String param4, int param5, UiWidget param6) {
+    private final int addLabeledFieldWithValidationMessage(String param0, int param1, int param2, int param3, String param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         ValidationStatusWidget var9 = null;
         int var10 = 0;
@@ -319,7 +319,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         var2.setBounds(50, 270, true, var3, 20);
         var3 += 50;
         this.addChild((byte) 106, var2);
-        var3 = var3 + (5 + this.a(nk.field_C, hc.field_kb, this.field_E, 11271, 170, var3));
+        var3 = var3 + (5 + this.addLabeledFieldWithDefaultValidationMessage(nk.field_C, hc.field_kb, this.field_E, 11271, 170, var3));
         this.field_G.setBounds(40, var5, true, var3, 496 - var5 >> 1);
         this.field_B.setBounds(40, 60, true, 15 + var3, var4 + 3);
         this.field_B.field_r = (WidgetEventListener) (this);

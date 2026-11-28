@@ -485,7 +485,7 @@ final class ResourceArchive {
                     var21 = var34[var20];
                   }
                   if (param2 == var21) {
-                    gl.copyByteRange(var43, var17, var44, var14Lifetime1, var19);
+                    ArrayBlockSupport.copyByteRange(var43, var17, var44, var14Lifetime1, var19);
                     var14Lifetime1 = var14Lifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -523,7 +523,7 @@ final class ResourceArchive {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
                   var18 = var18 + var29.readInt(-95);
-                  gl.copyByteRange(var43, var16, var39[var19], var38[var19], var18);
+                  ArrayBlockSupport.copyByteRange(var43, var16, var39[var19], var38[var19], var18);
                   var14_ref_int__[var19] = var14_ref_int__[var19] + var18;
                   var16 = var16 + var18;
                 }
@@ -1080,7 +1080,7 @@ final class ResourceArchive {
             field_g[var0] = var0 * 51 + 51 << 16;
           }
           if (2 < var0) {
-            field_g[var0] = bd.a(field_g[var0], (-2 + var0) * 22 << 8);
+            field_g[var0] = bd.bitwiseOr(field_g[var0], (-2 + var0) * 22 << 8);
           }
         }
         field_f = "Your email address is used to identify this account";

@@ -81,7 +81,7 @@ final class q extends DualLinkNode {
         int var3 = Vertigo2.field_L ? 1 : 0;
         if (this.field_w != null) {
           for (var2 = 0; this.field_w.length > var2; var2++) {
-            this.field_w[var2] = om.a(this.field_w[var2], 32768);
+            this.field_w[var2] = om.bitwiseOr(this.field_w[var2], 32768);
           }
         }
         if (param0 != 93) {

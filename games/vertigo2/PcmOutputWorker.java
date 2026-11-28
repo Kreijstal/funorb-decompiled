@@ -145,7 +145,7 @@ final class PcmOutputWorker implements Runnable {
         int var3 = !MidiPcmStream.field_S ? 200 : 250;
         tp.field_Nb.a(98, 363 - var3, 30, 5, var3 + 5);
         MouseInputHandler.field_b.a(72, -365 + (-5 + (ud.field_A.field_Fb - 5)), 30, 5, 370);
-        uk.field_v.a(37, 2, re.field_k, -5 + (ja.field_b.field_db - 5 - 32), 5, ja.field_b.field_Fb - 10, 3124);
+        uk.field_v.a(37, 2, GrowableIntArray.field_k, -5 + (ja.field_b.field_db - 5 - 32), 5, ja.field_b.field_Fb - 10, 3124);
         int var4 = (ud.field_A.field_Fb + 2) / 2;
         b.field_h.a(125, -2 + var4, 40, -40 + ud.field_A.field_db, 0);
         if (!MidiPcmStream.field_S) {

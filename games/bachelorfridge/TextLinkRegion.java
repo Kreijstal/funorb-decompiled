@@ -85,7 +85,7 @@ final class TextLinkRegion extends IntrusiveNode {
             ug.field_o = hca.a("benefits", sha.field_l, -115, "button_frame");
             PizzaArenaTheme.field_h = hca.a("benefits", sha.field_l, 113, "arrow");
             ShuffleEvent.field_q = (BitmapFont) ((Object) ClamsSpecial.a("large_font", sha.field_l, -58, "benefits", TBomberEvent.field_s));
-            g.field_f = (BitmapFont) ((Object) ClamsSpecial.a("small_font", sha.field_l, 117, "benefits", TBomberEvent.field_s));
+            MidiNoteMask.field_f = (BitmapFont) ((Object) ClamsSpecial.a("small_font", sha.field_l, 117, "benefits", TBomberEvent.field_s));
             var27 = SoftwareRasterizer.field_e;
             var2 = SoftwareRasterizer.field_i;
             var3 = SoftwareRasterizer.field_c;
@@ -100,17 +100,17 @@ final class TextLinkRegion extends IntrusiveNode {
             var6 = var12.field_q / 2;
             var12.bindAsRenderTarget();
             ShuffleEvent.field_q.drawCentred(lga.a(true, new String[]{RageEvent.field_q}, LevitateAnimation.field_x), var6, 40, 16777215, -1);
-            g.field_f.drawCentred(lga.a(true, new String[]{RageEvent.field_q}, ni.field_k), var6, 60, 16777215, -1);
+            MidiNoteMask.field_f.drawCentred(lga.a(true, new String[]{RageEvent.field_q}, ni.field_k), var6, 60, 16777215, -1);
             ShuffleEvent.field_q.drawCentred(lga.a(true, new String[]{SpecialOrder.field_l}, ra.field_p), var6, 110, 16777215, -1);
-            g.field_f.drawCentred(lga.a(true, new String[]{SpecialOrder.field_l}, vca.field_i), var6, 130, 16777215, -1);
+            MidiNoteMask.field_f.drawCentred(lga.a(true, new String[]{SpecialOrder.field_l}, vca.field_i), var6, 130, 16777215, -1);
             ShuffleEvent.field_q.drawCentred(MatchingFieldValidator.field_g, var6, 180, 16777215, -1);
-            g.field_f.drawCentred(ema.field_Lb, var6, 200, 16777215, -1);
+            MidiNoteMask.field_f.drawCentred(ema.field_Lb, var6, 200, 16777215, -1);
             sb.a(0, 3, var12, var12.field_p, 0, var12.field_q, 1, 117);
             uea.field_j.bindAsRenderTarget();
             var12.draw(18 - uea.field_j.field_t, -uea.field_j.field_u + 241);
             for (var7 = 0; var7 < MeshObject.field_b.length; var7++) {
               ActorAnimation.field_m[var7].bindAsRenderTarget();
-              g.field_f.drawParagraph(MeshObject.field_b[var7], 3, 3, ActorAnimation.field_m[var7].field_q - 6, -6 + ActorAnimation.field_m[var7].field_p, bha.field_o, -1, 1, 1, g.field_f.field_B + g.field_f.field_u);
+              MidiNoteMask.field_f.drawParagraph(MeshObject.field_b[var7], 3, 3, ActorAnimation.field_m[var7].field_q - 6, -6 + ActorAnimation.field_m[var7].field_p, bha.field_o, -1, 1, 1, MidiNoteMask.field_f.field_B + MidiNoteMask.field_f.field_u);
               sb.a(0, 3, ActorAnimation.field_m[var7], ActorAnimation.field_m[var7].field_p, 0, ActorAnimation.field_m[var7].field_q, 1, 88);
             }
             MeshObject.field_b = null;
@@ -195,7 +195,7 @@ final class TextLinkRegion extends IntrusiveNode {
             SoftwareRasterizer.restoreClip(ie.field_b);
           }
           if (null != rr.field_r &&
-            g.field_f != null) {
+            MidiNoteMask.field_f != null) {
             var29 = SoftwareRasterizer.field_e;
             var2Lifetime2 = SoftwareRasterizer.field_i;
             var3Lifetime2 = SoftwareRasterizer.field_c;
@@ -204,7 +204,7 @@ final class TextLinkRegion extends IntrusiveNode {
             var5_ref_String = lga.a(true, new String[]{rr.field_r}, kr.field_wb);
             rr.field_r = null;
             var16.bindAsRenderTarget();
-            g.field_f.drawParagraph(var5_ref_String, 3, 3, -6 + var16.field_q, var16.field_p - 6, 16777215, -1, 0, 1, g.field_f.field_u + g.field_f.field_B);
+            MidiNoteMask.field_f.drawParagraph(var5_ref_String, 3, 3, -6 + var16.field_q, var16.field_p - 6, 16777215, -1, 0, 1, MidiNoteMask.field_f.field_u + MidiNoteMask.field_f.field_B);
             sb.a(0, 3, var16, var16.field_p, 0, var16.field_q, 1, 120);
             BagpipeAnimation.field_x.bindAsRenderTarget();
             var16.draw(-BagpipeAnimation.field_x.field_t + 199, 83 - BagpipeAnimation.field_x.field_u);
@@ -212,19 +212,19 @@ final class TextLinkRegion extends IntrusiveNode {
             SoftwareRasterizer.restoreClip(ie.field_b);
           }
           if (kka.field_h != null &&
-            g.field_f != null) {
+            MidiNoteMask.field_f != null) {
             var30 = SoftwareRasterizer.field_e;
             var2Lifetime3 = SoftwareRasterizer.field_i;
             var3Lifetime3 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(ie.field_b);
-            var4 = 6 + g.field_f.maxLineWidth(fja.field_c, 640);
+            var4 = 6 + MidiNoteMask.field_f.maxLineWidth(fja.field_c, 640);
             var5Lifetime1 = 20 + kka.field_h.field_n + var4;
             var6Lifetime2 = 427 - var5Lifetime1 / 2;
             var7Lifetime2 = 20 + kka.field_h.field_n + var6Lifetime2;
             BagpipeAnimation.field_x.bindAsRenderTarget();
-            g.field_f.drawText(fja.field_c, -BagpipeAnimation.field_x.field_t + var7Lifetime2, g.field_f.field_B + (g.field_f.field_u - BagpipeAnimation.field_x.field_u) + 155, 16777215, -1);
+            MidiNoteMask.field_f.drawText(fja.field_c, -BagpipeAnimation.field_x.field_t + var7Lifetime2, MidiNoteMask.field_f.field_B + (MidiNoteMask.field_f.field_u - BagpipeAnimation.field_x.field_u) + 155, 16777215, -1);
             sb.a(-4 - BagpipeAnimation.field_x.field_t + var7Lifetime2, 3, BagpipeAnimation.field_x, 50, -BagpipeAnimation.field_x.field_u + 155, var4, 1, 117);
-            var8Lifetime1 = -((-g.field_f.field_B + (-g.field_f.field_u - 3 + kka.field_h.field_o)) / 2) + 155 - BagpipeAnimation.field_x.field_u;
+            var8Lifetime1 = -((-MidiNoteMask.field_f.field_B + (-MidiNoteMask.field_f.field_u - 3 + kka.field_h.field_o)) / 2) + 155 - BagpipeAnimation.field_x.field_u;
             kka.field_h.draw(-BagpipeAnimation.field_x.field_t + var6Lifetime2, var8Lifetime1);
             SoftwareRasterizer.setTarget(var30, var2Lifetime3, var3Lifetime3);
             SoftwareRasterizer.restoreClip(ie.field_b);

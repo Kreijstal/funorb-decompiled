@@ -158,13 +158,13 @@ final class DialogMessagePane extends DequeWidgetContainer implements WidgetActi
         }
         if (param1 < -80) {
           if (null != ha.field_w) {
-            ha.field_w.a(param0, true);
+            ha.field_w.setVolume(param0, true);
           }
           return;
         }
         field_J = -51;
         if (null != ha.field_w) {
-          ha.field_w.a(param0, true);
+          ha.field_w.setVolume(param0, true);
         }
     }
 

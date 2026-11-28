@@ -164,7 +164,7 @@ class DequeWidgetContainer extends UiWidget implements WidgetContainerMarker {
           if (80 != var6) {
             return false;
           }
-          if (cp.field_k[81]) {
+          if (MusicPatchEnvelope.field_k[81]) {
             stackIn_16_0 = this.focusPreviousChild((byte) -57, param2);
           } else {
             stackIn_16_0 = this.focusNextChild(param2, -25911);

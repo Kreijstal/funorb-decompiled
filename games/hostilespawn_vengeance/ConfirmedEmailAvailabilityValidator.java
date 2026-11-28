@@ -162,8 +162,8 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           if (param0 != 61) {
             field_q = (String) null;
           }
-          if (tm.field_q > 0) {
-            tm.field_q = tm.field_q - 1;
+          if (MusicPatchNode.field_q > 0) {
+            MusicPatchNode.field_q = MusicPatchNode.field_q - 1;
           }
           var12 = 0;
           for (var13 = 0; var3 > var13; var13++) {
@@ -224,7 +224,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
                     }
                     boolean decompiledFrameRemainder1 = true;
                     var36 = Math.abs(var36);
-                    if (dn.field_i != ClientLookupTables.field_d && (!(hf.field_i < 0) ||
+                    if (dn.field_i != ClientLookupTables.field_d && (!(ByteArrayPoolSupport.field_i < 0) ||
                       j.field_c != GameCanvas.field_g ||
                       DiskArchiveRequest.field_A != rb.field_m ||
                       32.0 < Math.abs(var36))) {
@@ -329,7 +329,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
                               if (23 != var26 &&
                                 var26 != 28) {
                                 if (var26 == 24) {
-                                  pl.a((byte) 126, var39Lifetime2, var16);
+                                  MusicPatchEnvelope.a((byte) 126, var39Lifetime2, var16);
                                 } else {
                                   if (var26 == 2) {
                                     he.a(var23, var15_ref_oc, var10, var21, var39Lifetime2, param0 ^ -5, var11);
@@ -483,7 +483,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
                                         rl.field_c == -1) {
                                         qj.a(-97, var13Lifetime1, param1, var40);
                                       } else {
-                                        df.a(3, var39Lifetime2, var40, var6, var11, var10, var21, var5, var15_ref_oc, var23);
+                                        GrowableIntArray.a(3, var39Lifetime2, var40, var6, var11, var10, var21, var5, var15_ref_oc, var23);
                                       }
                                     }
                                   }
@@ -514,7 +514,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
                         AlphaWidgetContainer.field_F[ib.field_c].field_i = 6;
                         ib.field_c = ib.field_c + 1;
                       }
-                      ln.field_a.field_c[var39Lifetime2.field_j.getClampedTileIndex(bm.a((int) param0, -63))] = 4;
+                      ln.field_a.field_c[var39Lifetime2.field_j.getClampedTileIndex(bm.bitwiseXor((int) param0, -63))] = 4;
                       if (0 == (em.field_c & 7)) {
                         var27 = (int)((-var39Lifetime2.field_l.field_f + (var21 + (double)var10 - (double)var15_ref_oc.field_e)) * 24.0);
                         var28 = (int)(24.0 * (var23 + (double)var11 - (double)var15_ref_oc.field_g - var39Lifetime2.field_l.field_a));
@@ -986,7 +986,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
               var6Lifetime4 = 0;
               var7_double = (double)param2.field_j.field_e + param2.field_l.field_f - PacketBuffer.field_h;
               param2.field_c = (double)DialogMessagePane.field_N;
-              var9_double = -bc.field_i + ((double)param2.field_j.field_g + param2.field_l.field_a);
+              var9_double = -MidiNoteMask.field_i + ((double)param2.field_j.field_g + param2.field_l.field_a);
               if (0.1 < var7_double) {
                 param2.field_l.field_f = param2.field_l.field_f - 0.1;
               } else {
@@ -1254,11 +1254,11 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           }
           var6Lifetime3 = -1;
           if (ClientLookupTables.field_d == dn.field_i) {
-            hf.field_i = -1;
+            ByteArrayPoolSupport.field_i = -1;
           } else {
             if (MouseInput.field_a[0] <= 0 &&
               0 >= MouseInput.field_a[1]) {
-              hf.field_i = -1;
+              ByteArrayPoolSupport.field_i = -1;
             }
             if (0 < NetworkGameClient.field_u) {
               NetworkGameClient.field_u = NetworkGameClient.field_u - 1;
@@ -1268,7 +1268,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
                 VolumeRampingMidiPcmStream.field_ib[dupTemp$0] = VolumeRampingMidiPcmStream.field_ib[dupTemp$0] - 1;
                 MouseInput.field_a[0] = AgeValidator.a(-44, VolumeRampingMidiPcmStream.field_U[0]);
                 var6Lifetime3 = VolumeRampingMidiPcmStream.field_U[0];
-                hf.field_i = var6Lifetime3;
+                ByteArrayPoolSupport.field_i = var6Lifetime3;
               }
               if (VolumeRampingMidiPcmStream.field_U[1] == 3 &&
                 VolumeRampingMidiPcmStream.field_ib[an.field_r[VolumeRampingMidiPcmStream.field_U[1]]] > 0) {
@@ -1276,7 +1276,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
                 VolumeRampingMidiPcmStream.field_ib[dupTemp$1] = VolumeRampingMidiPcmStream.field_ib[dupTemp$1] - 1;
                 MouseInput.field_a[1] = AgeValidator.a(-11, VolumeRampingMidiPcmStream.field_U[1]);
                 var6Lifetime3 = VolumeRampingMidiPcmStream.field_U[1];
-                hf.field_i = var6Lifetime3;
+                ByteArrayPoolSupport.field_i = var6Lifetime3;
               }
             }
             if (MouseInput.field_a[0] <= 0) {
@@ -1298,7 +1298,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
                 } else {
                   if (GzipDecompressor.field_c[0] &&
                     dn.field_j < 2) {
-                    MouseInput.field_a[0] = AgeValidator.a(bm.a(param4, -39), 0);
+                    MouseInput.field_a[0] = AgeValidator.a(bm.bitwiseXor(param4, -39), 0);
                     if (VolumeRampingMidiPcmStream.field_U[1] == 0) {
                       MouseInput.field_a[1] = MouseInput.field_a[0];
                     }
@@ -1375,7 +1375,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           if (LabeledWidgetContainer.field_H != 0) {
             var7 = cf.field_q;
           }
-          if (0 <= hf.field_i) {
+          if (0 <= ByteArrayPoolSupport.field_i) {
             var7 = DropTargetWidgetContainer.field_G;
           }
           if (ClientLookupTables.field_d != var7) {

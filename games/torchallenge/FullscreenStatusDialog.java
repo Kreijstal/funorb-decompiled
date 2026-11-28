@@ -212,7 +212,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
           var4.field_l = 80;
           var4.field_q = (WidgetRenderer) ((Object) new DefaultTextWidgetRenderer(GameApplet.field_f, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(0, var4);
-          this.field_gb = this.createCloseButton(ab.field_n, 2, (WidgetEventListener) (this));
+          this.field_gb = this.createCloseButton(MusicPatchEnvelope.field_n, 2, (WidgetEventListener) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

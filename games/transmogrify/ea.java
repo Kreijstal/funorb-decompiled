@@ -382,7 +382,7 @@ final class ea {
             return stackIn_5_0;
           }
           var2 = new BinaryBitmapFont(param0, BufferedSocket.field_j, Bzip2State.field_a, ql.field_b, wk.field_b, Bzip2State.field_K);
-          wd.d(-109);
+          MidiNoteMask.d(-109);
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

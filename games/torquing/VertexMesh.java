@@ -101,13 +101,13 @@ final class VertexMesh {
     }
 
     final static String d(byte param0) {
-        if (bh.field_a == mg.field_b) {
+        if (bh.field_a == ByteArrayPoolSupport.field_b) {
           return ol.field_a;
         }
         if (!LevelCompletionUpdate.field_q.c(484)) {
           return LevelCompletionUpdate.field_q.a((byte) -96);
         }
-        if (mg.field_b == Model.field_o) {
+        if (ByteArrayPoolSupport.field_b == Model.field_o) {
           return LevelCompletionUpdate.field_q.a((byte) -97);
         }
         if (param0 >= -58) {

@@ -123,10 +123,10 @@ final class lk {
           return (Sprite) null;
         }
         for (var4_int = 0; var4_int < var1; var4_int++) {
-          var3[var4_int] = EditableTextField.field_D[vg.c(255, (int) var2[var4_int])];
+          var3[var4_int] = EditableTextField.field_D[vg.bitwiseAnd(255, (int) var2[var4_int])];
         }
         Sprite var4 = new Sprite(NetworkArchiveRequest.field_y, FullscreenStatusDialog.field_U, BufferedSocket.field_j[0], Bzip2State.field_a[0], ql.field_b[0], wk.field_b[0], var3);
-        wd.d(126);
+        MidiNoteMask.d(126);
         return var4;
     }
 

@@ -57,10 +57,10 @@ final class IsaacRandom {
             }
           }
           this.field_i = this.field_i + this.field_a[255 & var3 + 128];
-          dupTemp$1 = this.field_f + this.field_i + this.field_a[w.a(var4, 1020) >> 2];
+          dupTemp$1 = this.field_f + this.field_i + this.field_a[w.bitwiseAnd(var4, 1020) >> 2];
           var5 = dupTemp$1;
           this.field_a[var3] = dupTemp$1;
-          dupTemp$2 = this.field_a[w.a(255, var5 >> 8 >> 2)] + var4;
+          dupTemp$2 = this.field_a[w.bitwiseAnd(255, var5 >> 8 >> 2)] + var4;
           this.field_f = dupTemp$2;
           this.field_d[var3] = dupTemp$2;
         }

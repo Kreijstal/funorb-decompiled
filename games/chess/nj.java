@@ -367,7 +367,7 @@ final class nj extends DefaultTextWidgetRenderer {
             return;
           }
           if (!param0) {
-            ne.a(this.field_y, 0, param2.field_y, 0, 6);
+            ArrayBlockSupport.copyObjectRange(this.field_y, 0, param2.field_y, 0, 6);
             return;
           }
           for (var4_int = 0; var4_int < 6; var4_int++) {

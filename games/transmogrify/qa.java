@@ -41,7 +41,7 @@ final class qa extends DefaultTextWidgetRenderer {
           }
           for (var2 = 1; mh.field_b.length > var2; var2++) {
             var3 = mh.field_b[var2];
-            ji.a(i.field_b, var2 << 4, i.field_b, var1_int, var3);
+            ArrayBlockSupport.copyIntRange(i.field_b, var2 << 4, i.field_b, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;
@@ -98,7 +98,7 @@ final class qa extends DefaultTextWidgetRenderer {
             }
           }
           var8 = stackIn_13_0;
-          te.a(this.field_q, var8, (param4.field_h - this.field_q[0].field_s >> 1) + (param1 + param4.field_n), param4.field_l, (byte) 15, param4.field_p + param0);
+          GrowableIntArray.a(this.field_q, var8, (param4.field_h - this.field_q[0].field_s >> 1) + (param1 + param4.field_n), param4.field_l, (byte) 15, param4.field_p + param0);
           stackIn_16_0 = (!param2) ? 7105644 : 16777215;
           var9 = stackIn_16_0;
           this.field_i.drawParagraph(param4.field_k, param0 + param4.field_p, param4.field_n + (param1 - 2), param4.field_l, param4.field_h, var9, -1, 1, 1, this.field_i.field_y);

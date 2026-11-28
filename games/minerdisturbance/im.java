@@ -212,7 +212,7 @@ final class im {
           ContentTransitionDialog.field_gb = new boolean[sc.field_d];
           oc.field_e = new int[sc.field_d];
           bg.field_d = new int[sc.field_d];
-          ng.field_e = new int[sc.field_d];
+          MusicPatchEnvelope.field_e = new int[sc.field_d];
           qk.field_b = new int[sc.field_d];
           AwtRasterBuffer.field_a = new byte[sc.field_d][];
           var17.position = -(8 * sc.field_d) + param1.length - 7;
@@ -232,7 +232,7 @@ final class im {
             qk.field_b[var4Lifetime2] = var17.readUnsignedShort(-120);
           }
           for (var4Lifetime3 = 0; sc.field_d > var4Lifetime3; var4Lifetime3++) {
-            ng.field_e[var4Lifetime3] = var17.readUnsignedShort(-118);
+            MusicPatchEnvelope.field_e[var4Lifetime3] = var17.readUnsignedShort(-118);
           }
           var17.position = -(var3 * 3) + (3 + (-(sc.field_d * 8) + param1.length) - 7);
           af.field_p = new int[var3];
@@ -245,7 +245,7 @@ final class im {
           var17.position = 0;
           for (var4Lifetime5 = 0; sc.field_d > var4Lifetime5; var4Lifetime5++) {
             var5 = qk.field_b[var4Lifetime5];
-            var6 = ng.field_e[var4Lifetime5];
+            var6 = MusicPatchEnvelope.field_e[var4Lifetime5];
             var7 = var5 * var6;
             var20 = new byte[var7];
             var18 = var20;

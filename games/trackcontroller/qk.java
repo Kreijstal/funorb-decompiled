@@ -5,7 +5,7 @@ final class qk extends ButtonWidget {
     int field_P;
     static int field_N;
     static byte[][] field_M;
-    private qh field_J;
+    private GrowableIntArray field_J;
     static String field_O;
     private int field_L;
     static String field_K;
@@ -154,8 +154,8 @@ final class qk extends ButtonWidget {
             if (2 == param3) {
               var10 = 2147483647;
               var11 = -1;
-              for (var12 = 0; this.field_J.b(-1) > var12; var12++) {
-                var13 = this.field_J.c((byte) -82, var12) - var8_int;
+              for (var12 = 0; this.field_J.size(-1) > var12; var12++) {
+                var13 = this.field_J.get((byte) -82, var12) - var8_int;
                 var13 = var13 * var13;
                 if (var13 < var10) {
                   var10 = var13;
@@ -165,10 +165,10 @@ final class qk extends ButtonWidget {
               if (var11 < 0) {
                 return true;
               }
-              this.field_J.a(var11, -12759);
+              this.field_J.removeAt(var11, -12759);
             }
           } else {
-            this.field_J.a((byte) -120, var8_int);
+            this.field_J.append((byte) -120, var8_int);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -191,16 +191,16 @@ final class qk extends ButtonWidget {
           if (param1 < 0) {
             return -1;
           }
-          if (this.field_J.b(param0 + 0) > param1) {
-            return this.field_J.c((byte) 70, param1);
+          if (this.field_J.size(param0 + 0) > param1) {
+            return this.field_J.get((byte) 70, param1);
           }
           return -1;
         }
         if (param1 < 0) {
           return -1;
         }
-        if (this.field_J.b(param0 + 0) > param1) {
-          return this.field_J.c((byte) 70, param1);
+        if (this.field_J.size(param0 + 0) > param1) {
+          return this.field_J.get((byte) 70, param1);
         }
         return -1;
     }
@@ -216,9 +216,9 @@ final class qk extends ButtonWidget {
     final int c(boolean param0) {
         if (!param0) {
           qk.b(true);
-          return this.field_J.b(-1);
+          return this.field_J.size(-1);
         }
-        return this.field_J.b(-1);
+        return this.field_J.size(-1);
     }
 
     final int k(int param0) {

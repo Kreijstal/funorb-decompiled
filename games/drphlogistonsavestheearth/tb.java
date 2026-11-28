@@ -42,11 +42,11 @@ final class tb {
         if (!sb.field_i.tryLoadGroupByName(255, "commonui")) {
           return ij.field_a + " - " + sb.field_i.getGroupLoadPercentByName(param0 + 10542, "commonui") + "%";
         }
-        if (!ig.field_t.ensureIndexLoaded(0)) {
+        if (!MusicPatch.field_t.ensureIndexLoaded(0)) {
           return FullscreenNoticeType.field_b;
         }
-        if (!ig.field_t.tryLoadAllGroups((byte) 68)) {
-          return PcmOutputWorker.field_a + " - " + ig.field_t.getArchiveLoadPercent((byte) 95) + "%";
+        if (!MusicPatch.field_t.tryLoadAllGroups((byte) 68)) {
+          return PcmOutputWorker.field_a + " - " + MusicPatch.field_t.getArchiveLoadPercent((byte) 95) + "%";
         }
         return tl.field_J;
     }

@@ -208,7 +208,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements ButtonL
             for (var5 = 0; var3_int > var5; var5++) {
               this.field_K[var5] = new ButtonWidget(this.field_D[var5], (WidgetEventListener) (this));
               this.field_K[var5].field_y = (WidgetRenderer) ((Object) var4);
-              this.field_K[var5].field_n = ke.field_b;
+              this.field_K[var5].field_n = ByteArrayPoolSupport.field_b;
               this.field_K[var5].setBounds(15, -3050, 16 * var5 + 20, 80, 0);
               this.addChild(false, this.field_K[var5]);
             }

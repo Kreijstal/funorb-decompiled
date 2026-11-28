@@ -32,7 +32,7 @@ final class ch {
             param3.field_gb = param0 + 1;
             if (this.field_e != param3.field_gb) {
               this.field_e = param3.field_gb;
-              qd.$cfr$intArgs$a$e9dea5688aa5(43, 29);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(43, 29);
             }
             SoftwareRasterizer.drawRectangleOutline(this.field_i + 57, param5, 266, 92, 16777215);
           }
@@ -178,7 +178,7 @@ final class ch {
             var5 = var9;
             var6 = param0;
             var7 = param4;
-            var9[var6] = var7 + (dg.a(16711422, var9[var6]) >> 1);
+            var9[var6] = var7 + (dg.bitwiseAnd(16711422, var9[var6]) >> 1);
             param0++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -269,7 +269,7 @@ final class ch {
               SoftwareRasterizer.drawRectangleOutline(this.field_i + 5, var3_int, qc.field_f[0].field_r, qc.field_f[0].field_t, 16777215);
               if (var5 != this.field_f) {
                 this.field_f = var5;
-                qd.$cfr$intArgs$a$e9dea5688aa5(42, 28);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(42, 28);
               }
               param1.field_Eb = new String[1];
               param1.field_Eb[0] = lb.field_c[0];
@@ -293,7 +293,7 @@ final class ch {
                 if (param1.field_hb != var5) {
                   this.field_e = -1;
                   param1.field_G = 0;
-                  qd.$cfr$intArgs$a$e9dea5688aa5(112, 30);
+                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(112, 30);
                 }
                 param1.field_hb = var5;
               }
@@ -861,7 +861,7 @@ final class ch {
         this.field_e = -1;
         this.field_f = -1;
         this.field_i = -356;
-        qd.$cfr$intArgs$a$e9dea5688aa5(37, 26);
+        MusicPatch.$cfr$intArgs$a$e9dea5688aa5(37, 26);
         this.field_a = false;
     }
 
@@ -922,7 +922,7 @@ final class ch {
             param4.field_gb = -param2 - 1;
             if (-param4.field_gb != this.field_e) {
               this.field_e = -param4.field_gb;
-              qd.$cfr$intArgs$a$e9dea5688aa5(54, 29);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(54, 29);
             }
             SoftwareRasterizer.drawRectangleOutline(this.field_i + 57, param3, 266, 92, 16777215);
           }

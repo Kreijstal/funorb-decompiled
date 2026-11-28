@@ -136,7 +136,7 @@ final class km {
             var11 = (16711680 & var10 * param2) + (16711680 & (-var10 + 256) * var11);
             incrementValue$2 = var7_int;
             var7_int++;
-            SoftwareRasterizer.field_b[incrementValue$2] = ge.a(var12, var11) >>> 8;
+            SoftwareRasterizer.field_b[incrementValue$2] = ge.bitwiseOr(var12, var11) >>> 8;
             var9++;
           }
           return;

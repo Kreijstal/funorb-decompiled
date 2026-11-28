@@ -46,13 +46,13 @@ final class MovingBlock extends IntrusiveNode {
               return;
             }
             if (LevelView.field_C.position == 0 &&
-              qg.correctedCurrentTimeMillis(false) > qh.field_f + 10000L) {
+              qg.correctedCurrentTimeMillis(false) > GrowableIntArray.field_f + 10000L) {
               LevelView.field_C.writeCipheredByte(param1, param0 + 8);
             }
             if (0 < LevelView.field_C.position) {
               try {
                 r.field_i.a(param0 - 124, LevelView.field_C.payload, LevelView.field_C.position, 0);
-                qh.field_f = qg.correctedCurrentTimeMillis(false);
+                GrowableIntArray.field_f = qg.correctedCurrentTimeMillis(false);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -286,8 +286,8 @@ final class MovingBlock extends IntrusiveNode {
               stackIn_63_0 = 249;
               return stackIn_63_0;
             }
-            var10Lifetime2 = ke.field_c;
-            ke.field_c = ma.field_c;
+            var10Lifetime2 = ByteArrayPoolSupport.field_c;
+            ByteArrayPoolSupport.field_c = ma.field_c;
             ma.field_c = var10Lifetime2;
             kg.field_f = true;
           }

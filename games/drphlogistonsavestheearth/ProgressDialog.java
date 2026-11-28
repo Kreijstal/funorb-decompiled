@@ -120,10 +120,10 @@ final class ProgressDialog extends ResizableModalDialog {
                 }
                 var6 = stackIn_26_0;
               }
-              if (ga.field_i.length <= wg.field_h.length) {
+              if (MidiNoteMask.field_i.length <= wg.field_h.length) {
                 stackIn_30_0 = wg.field_h.length;
               } else {
-                stackIn_30_0 = ga.field_i.length;
+                stackIn_30_0 = MidiNoteMask.field_i.length;
               }
               var8 = stackIn_30_0;
               if (7 + var7 <= var3 &&
@@ -150,7 +150,7 @@ final class ProgressDialog extends ResizableModalDialog {
                 stackIn_47_0 = ue.field_a;
               }
               var9 = stackIn_47_0;
-              var1_int = var1_int + ig.field_h;
+              var1_int = var1_int + MusicPatch.field_h;
               if (var9 != null) {
                 var9.a(EmailFormatValidator.field_p + (LoginPanel.field_N << 1), var8Lifetime1 - SecondaryNodeDeque.field_d, var7Lifetime1 + (SecondaryNodeDeque.field_d << 1), var1_int, 7453);
               }
@@ -158,7 +158,7 @@ final class ProgressDialog extends ResizableModalDialog {
             }
             if (var4 >= 0) {
               cj.field_a.drawString(var6, var8Lifetime1, var1_int + hi.field_g, var5, -1);
-              var1_int = var1_int + (LoginPanel.field_N + ig.field_h + EmailFormatValidator.field_p);
+              var1_int = var1_int + (LoginPanel.field_N + MusicPatch.field_h + EmailFormatValidator.field_p);
             } else {
               uj.field_i.drawString(var6, var8Lifetime1, ha.field_a + var1_int, var5, -1);
               var1_int = var1_int + s.field_g;

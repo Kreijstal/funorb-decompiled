@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tb extends InteractiveWidget {
-    private df field_O;
+    private GrowableIntArray field_O;
     int field_G;
     static int field_N;
     static PacketBuffer field_M;
@@ -17,7 +17,7 @@ final class tb extends InteractiveWidget {
         if (param0 != 65) {
           return 117;
         }
-        return this.field_O.b(-25);
+        return this.field_O.size(-25);
     }
 
     final int j(int param0) {
@@ -174,8 +174,8 @@ final class tb extends InteractiveWidget {
             if (param6 == 2) {
               var10 = 2147483647;
               var11 = -1;
-              for (var12 = 0; this.field_O.b(-25) > var12; var12++) {
-                var13 = this.field_O.a(var12, -2262) - var8_int;
+              for (var12 = 0; this.field_O.size(-25) > var12; var12++) {
+                var13 = this.field_O.get(var12, -2262) - var8_int;
                 var13 = var13 * var13;
                 if (var10 > var13) {
                   var11 = var12;
@@ -183,11 +183,11 @@ final class tb extends InteractiveWidget {
                 }
               }
               if (var11 >= 0) {
-                this.field_O.a(var11, (byte) 35);
+                this.field_O.removeAt(var11, (byte) 35);
               }
             }
           } else {
-            this.field_O.b(true, var8_int);
+            this.field_O.append(true, var8_int);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -208,14 +208,14 @@ final class tb extends InteractiveWidget {
         if (0 > param0) {
           return -1;
         }
-        if (this.field_O.b(param1 + 24559) <= param0) {
+        if (this.field_O.size(param1 + 24559) <= param0) {
           return -1;
         }
         if (param1 == -24584) {
-          return this.field_O.a(param0, param1 ^ 26834);
+          return this.field_O.get(param0, param1 ^ 26834);
         }
         field_L = (RgbSprite) null;
-        return this.field_O.a(param0, param1 ^ 26834);
+        return this.field_O.get(param0, param1 ^ 26834);
     }
 
     static {

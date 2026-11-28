@@ -96,7 +96,7 @@ final class ch extends am {
           }
           var2_int = param0.length;
           var3 = new byte[var2_int];
-          dk.copyByteRange(param0, 0, var3, 0, var2_int);
+          ArrayBlockSupport.copyByteRange(param0, 0, var3, 0, var2_int);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

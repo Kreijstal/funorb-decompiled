@@ -248,7 +248,7 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
               if (lc.h((byte) -76) > 30000L) {
                 pl.field_u = eb.field_h;
               } else {
-                pl.field_u = hq.field_e;
+                pl.field_u = GrowableIntArray.field_e;
               }
               lh.field_J = false;
               stackIn_65_0 = 249;

@@ -376,7 +376,7 @@ final class of {
             return stackIn_14_0;
           }
           if (5 == param0) {
-            stackIn_18_0 = MatchingFieldValidator.a(dl.field_h, new String[]{param2}, (byte) -56);
+            stackIn_18_0 = MatchingFieldValidator.a(MusicPatchEnvelope.field_h, new String[]{param2}, (byte) -56);
             return stackIn_18_0;
           }
           if (param0 == 6) {

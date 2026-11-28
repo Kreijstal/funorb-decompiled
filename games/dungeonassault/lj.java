@@ -762,7 +762,7 @@ final class lj implements cl {
                 var16Lifetime1 = var16Lifetime1 * var6_int;
                 var18 = var18 * var8;
                 var15Lifetime1 = 65280 & var18 | (16711680 & var17 | var16Lifetime1 & -16777216);
-                SoftwareRasterizer.field_b[var11Lifetime1] = mp.a(var15Lifetime1 >>> 8, -16777216);
+                SoftwareRasterizer.field_b[var11Lifetime1] = mp.bitwiseOr(var15Lifetime1 >>> 8, -16777216);
               }
               var11Lifetime1++;
               var13Lifetime1++;

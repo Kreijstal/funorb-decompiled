@@ -421,7 +421,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           fl.field_p = GuestPlayConfirmationForm.field_L.pollRotation((byte) -91);
         }
         if (TextLayout.a(21549)) {
-          var3 = qd.d(-31137) * 1200;
+          var3 = MusicPatchNode.d(-31137) * 1200;
           if (this.field_n ||
             !(ValidationStatusWidget.h((byte) -16) <= var3) &&
             !(var3 >= ib.a(true))) {
@@ -520,7 +520,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           fl.field_m = sh.a(1, BitPacketBuffer.field_q, true, 935, false);
           Chess.field_B = sh.a(1, m.field_b, true, 935, false);
-          bi.field_a = sh.a(1, kf.field_u, true, 935, false);
+          bi.field_a = sh.a(1, MusicPatch.field_u, true, 935, false);
           hm.field_e = fl.field_m;
           ByteStorage.field_b = Chess.field_B;
           il.field_a = 2;
@@ -544,7 +544,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (il.field_a == 3 &&
           PcmOutputWorker.areCommonUiAssetsReady(fl.field_m, 99, Chess.field_B, bi.field_a) &&
-          ml.a(0, bi.field_a)) {
+          GrowableIntArray.a(0, bi.field_a)) {
           NetworkGameClient.e(-5);
           ag.a((byte) -119);
           vh.field_e = false;
@@ -569,21 +569,21 @@ abstract class NetworkGameClient extends GameAppletShell {
           bi.field_a = null;
           Chess.field_B = null;
           fl.field_m = null;
-          ml.a((java.applet.Applet) (this), (byte) -43);
+          GrowableIntArray.a((java.applet.Applet) (this), (byte) -43);
           ob.f(0);
           il.field_a = 10;
         }
         if (10 == il.field_a) {
           if (RichTextWidget.field_V != 0) {
-            td.field_o = BirthDateValidator.a(StripedProgressWidget.field_U, (byte) 127);
+            MidiNoteMask.field_o = BirthDateValidator.a(StripedProgressWidget.field_U, (byte) 127);
           }
           il.field_a = 11;
         }
         boolean decompiledFrameRemainder0 = true;
         if (il.field_a == 11) {
-          if (null != td.field_o && (!td.field_o.ensureIndexLoaded((byte) 123) ||
-            !td.field_o.tryLoadAllGroups((byte) -40))) {
-            nj.a(-20, da.a(ChessBoardState.field_a, DialogMessagePane.field_T, td.field_o, -123), 0.0f);
+          if (null != MidiNoteMask.field_o && (!MidiNoteMask.field_o.ensureIndexLoaded((byte) 123) ||
+            !MidiNoteMask.field_o.tryLoadAllGroups((byte) -40))) {
+            nj.a(-20, da.a(ChessBoardState.field_a, DialogMessagePane.field_T, MidiNoteMask.field_o, -123), 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -641,7 +641,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         GuestPlayConfirmationForm.field_L = sa.createMouseWheelInput(param6 + 28);
         ca.a(13369344, DirectByteStorage.field_h);
         BitPacketBuffer.field_q = param2;
-        kf.field_u = param0;
+        MusicPatch.field_u = param0;
         dh.field_c = param3;
         m.field_b = param7;
         StripedProgressWidget.field_U = param1;

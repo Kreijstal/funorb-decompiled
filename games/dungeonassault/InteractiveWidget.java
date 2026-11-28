@@ -285,7 +285,7 @@ class InteractiveWidget extends UiWidget {
           if (param1 != 11) {
             field_D = (String) null;
           }
-          lp.a(param0, -74, false, param2);
+          MusicPatchNode.a(param0, -74, false, param2);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ck.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

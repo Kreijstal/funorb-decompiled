@@ -183,7 +183,7 @@ final class MixedSupport106 {
         }
     }
 
-    static int computeInteger1387(int integerArgument1, int integerArgument2) {
+    static int bitwiseXor(int integerArgument1, int integerArgument2) {
         return integerArgument1 ^ integerArgument2;
     }
 

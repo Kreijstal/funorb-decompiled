@@ -315,7 +315,7 @@ final class jk {
               if (AccountRequestState.a(true, var10Lifetime1)) {
                 var11 = SoundCache.field_e.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  SoundCache.field_e[var12] = NetworkArchiveRequest.field_t.readPrefixedString(gi.a(param6, -23760));
+                  SoundCache.field_e[var12] = NetworkArchiveRequest.field_t.readPrefixedString(gi.bitwiseXor(param6, -23760));
                 }
                 th.a(108);
                 FullscreenFocusCanvas.field_a = false;

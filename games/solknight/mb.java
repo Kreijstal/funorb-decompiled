@@ -50,7 +50,7 @@ final class mb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var5_ref), "mb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var5_ref), "mb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -61,7 +61,7 @@ final class mb {
             field_b = (ff) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "mb.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "mb.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -210,7 +210,7 @@ final class mb {
                   var25Lifetime1Lifetime1 = param0.field_x[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_h[var23Lifetime2];
                   FullscreenNoticeType.field_b[var23Lifetime2] = var9 + (var12 * var24Lifetime1Lifetime1 + var15 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var18 >> 16);
-                  hg.field_B[var23Lifetime2] = (var19 * var26Lifetime1Lifetime1 + (var24Lifetime1Lifetime1 * var13 + var16 * var25Lifetime1Lifetime1) >> 16) + var10;
+                  MusicPatchNode.field_B[var23Lifetime2] = (var19 * var26Lifetime1Lifetime1 + (var24Lifetime1Lifetime1 * var13 + var16 * var25Lifetime1Lifetime1) >> 16) + var10;
                   cd.field_b[var23Lifetime2] = (var25Lifetime1Lifetime1 * var17 + (var24Lifetime1Lifetime1 * var14 + var20 * var26Lifetime1Lifetime1) >> 16) + var11;
                   var24Lifetime1Lifetime1 = param0.field_i[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param0.field_O[var23Lifetime2];
@@ -297,7 +297,7 @@ final class mb {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -314,7 +314,7 @@ final class mb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var4), "mb.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var4), "mb.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -331,7 +331,7 @@ final class mb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var2), "mb.B(" + param0 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var2), "mb.B(" + param0 + ')');
         }
     }
 
@@ -348,7 +348,7 @@ final class mb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var2), "mb.C(" + param0 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var2), "mb.C(" + param0 + ')');
         }
     }
 
@@ -363,7 +363,7 @@ final class mb {
             mb.a(-113, -50, (byte) 55, 27, -105);
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "mb.G(" + param0 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "mb.G(" + param0 + ')');
         }
     }
 
@@ -393,7 +393,7 @@ final class mb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 

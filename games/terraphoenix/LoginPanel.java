@@ -316,7 +316,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
           var2 = param1.getParameter("username");
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
-            if (0L != qd.a(-82, var3)) {
+            if (0L != MusicPatch.a(-82, var3)) {
               return;
             }
           }

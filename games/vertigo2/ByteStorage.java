@@ -55,7 +55,7 @@ abstract class ByteStorage {
             if (param1 >= -2) {
               field_d = (int[]) null;
             }
-            TextLayout.field_g.a(var4, param3, 15698, param0);
+            TextLayout.field_g.drawImage(var4, param3, 15698, param0);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -203,12 +203,12 @@ abstract class ByteStorage {
               lo.field_i = stackIn_41_0;
               if (!param5) {
                 stackIn_46_0 = ((var7 & 8) != 0);
-                pe.field_r = stackIn_46_0;
+                MusicPatchNode.field_r = stackIn_46_0;
                 stackIn_49_0 = ((var7 & 4) != 0);
                 BirthDateValidator.field_m = stackIn_49_0;
                 stackIn_52_0 = ((2 & var7) != 0);
                 hj.field_b = stackIn_52_0;
-                if (pe.field_r) {
+                if (MusicPatchNode.field_r) {
                   hj.field_b = true;
                 }
               }

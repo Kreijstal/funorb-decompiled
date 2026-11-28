@@ -69,21 +69,21 @@ class IntrusiveNode {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var10 = ch.field_h.getGraphics();
+            var10 = MusicPatchEnvelope.field_h.getGraphics();
             var6 = -107 / ((param2 - 63) / 50);
             if (pa.field_a == null) {
               pa.field_a = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param0) {
               var10.setColor(java.awt.Color.black);
-              var10.fillRect(0, 0, kj.field_i, jc.field_i);
+              var10.fillRect(0, 0, MidiNoteMask.field_i, jc.field_i);
             }
             if (param1 == null) {
               param1 = new java.awt.Color(140, 17, 17);
             }
             try {
               if (nb.field_b == null) {
-                nb.field_b = ch.field_h.createImage(304, 34);
+                nb.field_b = MusicPatchEnvelope.field_h.createImage(304, 34);
               }
               var11 = nb.field_b.getGraphics();
               var11.setColor(param1);
@@ -95,11 +95,11 @@ class IntrusiveNode {
               var11.setFont(pa.field_a);
               var11.setColor(java.awt.Color.white);
               var11.drawString(param3, (-(param3.length() * 6) + 304) / 2, 22);
-              var10.drawImage(nb.field_b, -152 + kj.field_i / 2, jc.field_i / 2 - 18, (java.awt.image.ImageObserver) null);
+              var10.drawImage(nb.field_b, -152 + MidiNoteMask.field_i / 2, jc.field_i / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               exception = (Exception) (Object) decompiledCaughtException;
-              var8 = -152 + kj.field_i / 2;
+              var8 = -152 + MidiNoteMask.field_i / 2;
               var9 = jc.field_i / 2 - 18;
               var10.setColor(param1);
               var10.drawRect(var8, var9, 303, 33);
@@ -116,12 +116,12 @@ class IntrusiveNode {
             }
             var10.setFont(pa.field_a);
             var10.setColor(java.awt.Color.white);
-            var10.drawString(RegistrationAgreementPane.field_D, kj.field_i / 2 - 6 * RegistrationAgreementPane.field_D.length() / 2, -26 + jc.field_i / 2);
+            var10.drawString(RegistrationAgreementPane.field_D, MidiNoteMask.field_i / 2 - 6 * RegistrationAgreementPane.field_D.length() / 2, -26 + jc.field_i / 2);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            ch.field_h.repaint();
+            MusicPatchEnvelope.field_h.repaint();
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

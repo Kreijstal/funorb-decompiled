@@ -53,32 +53,32 @@ final class ac extends IntrusiveNode {
           var4 = r.a(true, param0) ? 1 : 0;
           var5 = new em();
           var5.field_d = (short)param0.readBits(-58, 16);
-          var5.field_z = ml.a(var5.field_z, 16, param0, 119);
-          var5.field_a = ml.a(var5.field_a, 16, param0, 78);
-          var5.field_H = ml.a(var5.field_H, 16, param0, 50);
+          var5.field_z = GrowableIntArray.a(var5.field_z, 16, param0, 119);
+          var5.field_a = GrowableIntArray.a(var5.field_a, 16, param0, 78);
+          var5.field_H = GrowableIntArray.a(var5.field_H, 16, param0, 50);
           var5.field_e = (short)param0.readBits(119, 16);
-          var5.field_g = ml.a(var5.field_g, 16, param0, 63);
-          var5.field_A = ml.a(var5.field_A, 16, param0, 118);
-          var5.field_J = ml.a(var5.field_J, 16, param0, 62);
+          var5.field_g = GrowableIntArray.a(var5.field_g, 16, param0, 63);
+          var5.field_A = GrowableIntArray.a(var5.field_A, 16, param0, 118);
+          var5.field_J = GrowableIntArray.a(var5.field_J, 16, param0, 62);
           if (var3 != 0) {
             var5.field_t = (short)param0.readBits(-88, 16);
-            var5.field_b = ml.a(var5.field_b, 16, param0, 106);
-            var5.field_f = ml.a(var5.field_f, 16, param0, 42);
-            var5.field_F = ml.a(var5.field_F, 16, param0, 83);
-            var5.field_l = ml.a(var5.field_l, 16, param0, 54);
-            var5.field_C = ml.a(var5.field_C, 16, param0, 52);
-            var5.field_E = ml.a(var5.field_E, 16, param0, 64);
+            var5.field_b = GrowableIntArray.a(var5.field_b, 16, param0, 106);
+            var5.field_f = GrowableIntArray.a(var5.field_f, 16, param0, 42);
+            var5.field_F = GrowableIntArray.a(var5.field_F, 16, param0, 83);
+            var5.field_l = GrowableIntArray.a(var5.field_l, 16, param0, 54);
+            var5.field_C = GrowableIntArray.a(var5.field_C, 16, param0, 52);
+            var5.field_E = GrowableIntArray.a(var5.field_E, 16, param0, 64);
           }
           if (var4 != 0) {
             param0.readBits(-32, 16);
-            var5.field_B = ml.a(var5.field_B, 16, param0, 70);
-            var5.field_N = ml.a(var5.field_N, 16, param0, 89);
-            var5.field_o = ml.a(var5.field_o, 16, param0, 74);
-            var5.field_i = ml.a(var5.field_i, 16, param0, 99);
-            var5.field_R = ml.a(var5.field_R, 16, param0, 116);
+            var5.field_B = GrowableIntArray.a(var5.field_B, 16, param0, 70);
+            var5.field_N = GrowableIntArray.a(var5.field_N, 16, param0, 89);
+            var5.field_o = GrowableIntArray.a(var5.field_o, 16, param0, 74);
+            var5.field_i = GrowableIntArray.a(var5.field_i, 16, param0, 99);
+            var5.field_R = GrowableIntArray.a(var5.field_R, 16, param0, 116);
           }
           if (r.a(true, param0)) {
-            var5.field_G = ml.a(var5.field_G, 16, param0, 107);
+            var5.field_G = GrowableIntArray.a(var5.field_G, 16, param0, 107);
           }
           if (r.a(param1, param0)) {
             var5.field_y = rb.a(var5.field_y, (byte) -105, param0, 16);

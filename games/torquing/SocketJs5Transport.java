@@ -37,7 +37,7 @@ final class SocketJs5Transport extends Js5Transport {
               var13 = param4;
               var14 = param3;
               var15 = (var10[var11] & 16711422) >> 1;
-              var10[var11] = var15 + ie.a(var12 >> 1, 16711680) + (ie.a(33423600, var13) >> 9) + (ie.a(var14, 33511660) >> 17);
+              var10[var11] = var15 + ie.bitwiseAnd(var12 >> 1, 16711680) + (ie.bitwiseAnd(33423600, var13) >> 9) + (ie.bitwiseAnd(var14, 33511660) >> 17);
               param3 = param3 + param6;
               param4 = param4 + param5;
               param1 = param1 + param8;
@@ -199,7 +199,7 @@ final class SocketJs5Transport extends Js5Transport {
                       if (this.field_f != 0) {
                         var7 = 0;
                         while (var6 > var7) {
-                          this.field_j.field_z.payload[var7 + this.field_j.field_z.position] = (byte)FullscreenStatusDialog.c((int) this.field_j.field_z.payload[var7 + this.field_j.field_z.position], (int) this.field_f);
+                          this.field_j.field_z.payload[var7 + this.field_j.field_z.position] = (byte)FullscreenStatusDialog.bitwiseXor((int) this.field_j.field_z.payload[var7 + this.field_j.field_z.position], (int) this.field_f);
                           var7++;
                           if (var16 != 0) {
                             decompiledFrameCompleted4 = false;
@@ -238,7 +238,7 @@ final class SocketJs5Transport extends Js5Transport {
                       if (this.field_f != 0) {
                         var6Lifetime1 = 0;
                         while (var6Lifetime1 < var5Lifetime1) {
-                          this.field_c.payload[this.field_c.position + var6Lifetime1] = (byte)FullscreenStatusDialog.c((int) this.field_c.payload[this.field_c.position + var6Lifetime1], (int) this.field_f);
+                          this.field_c.payload[this.field_c.position + var6Lifetime1] = (byte)FullscreenStatusDialog.bitwiseXor((int) this.field_c.payload[this.field_c.position + var6Lifetime1], (int) this.field_f);
                           var6Lifetime1++;
                           if (var16 != 0) {
                             decompiledFrameCompleted3 = false;
@@ -545,7 +545,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "loginm2");
                 if (var2 != null) {
-                  hq.field_e = SecondaryNodeDeque.a(var2, false);
+                  GrowableIntArray.field_e = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "loginm1");
                 if (var2 != null) {
@@ -1974,7 +1974,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "login_username_email");
                 if (var2 != null) {
-                  hq.field_c = SecondaryNodeDeque.a(var2, false);
+                  GrowableIntArray.field_c = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "login_username");
                 if (var2 != null) {
@@ -3747,7 +3747,7 @@ final class SocketJs5Transport extends Js5Transport {
                 decompiledFrameCompleted0 = false;
                 break;
               }
-              stackIn_26_0[var7Lifetime1] = (short)(var6 + param0.e(var5, FullscreenStatusDialog.c(param1, -110)));
+              stackIn_26_0[var7Lifetime1] = (short)(var6 + param0.e(var5, FullscreenStatusDialog.bitwiseXor(param1, -110)));
               var7Lifetime1++;
             }
           }

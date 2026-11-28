@@ -218,7 +218,7 @@ final class DirectByteStorage extends ByteStorage {
                     } else {
                       var18 = SoftwareRasterizer.field_l[var8];
                       var19 = var16 * (16711935 & var18) + var15 * (var17 & 16711935) >> 8 & 16711935;
-                      SoftwareRasterizer.field_l[var8] = (rk.a(rk.a(65280, var18) * var16 + var15 * rk.a(65280, var17), 16711720) >> 8) + var19;
+                      SoftwareRasterizer.field_l[var8] = (rk.bitwiseAnd(rk.bitwiseAnd(65280, var18) * var16 + var15 * rk.bitwiseAnd(65280, var17), 16711720) >> 8) + var19;
                     }
                   }
                   var8++;

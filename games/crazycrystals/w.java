@@ -42,7 +42,7 @@ final class w extends IntrusiveNode {
             var13 = param4;
             var14 = param7;
             var15 = var17[var11] >> 1 & 8355711;
-            var10[var11] = var15 + (pf.b(33474619, var14) >> 17) - (-pf.b(16711680, var12 >> 1) - (pf.b(var13, 33423575) >> 9));
+            var10[var11] = var15 + (pf.bitwiseAnd(33474619, var14) >> 17) - (-pf.bitwiseAnd(16711680, var12 >> 1) - (pf.bitwiseAnd(var13, 33423575) >> 9));
             param7 = param7 + param5;
             param9++;
             param4 = param4 + param3;

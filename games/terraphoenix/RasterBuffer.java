@@ -302,14 +302,14 @@ abstract class RasterBuffer {
         }
     }
 
-    final void a(int param0) {
+    final void setAsRasterTarget(int param0) {
         if (param0 != 0) {
           return;
         }
         SoftwareRasterizer.setRasterBuffer(this.pixels, this.field_b, this.field_f);
     }
 
-    abstract void a(int param0, int param1, byte param2, java.awt.Component param3);
+    abstract void initialize(int param0, int param1, byte param2, java.awt.Component param3);
 
     public static void clearStaticReferences(byte param0) {
         field_a = null;
@@ -320,7 +320,7 @@ abstract class RasterBuffer {
         field_g = null;
     }
 
-    abstract void a(int param0, int param1, java.awt.Graphics param2, int param3);
+    abstract void drawImage(int param0, int param1, java.awt.Graphics param2, int param3);
 
     static {
         field_e = "Close";

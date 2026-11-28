@@ -34,7 +34,7 @@ final class pa {
         int var8 = 0;
         var8 = Bounce.field_N;
         try {
-          this.field_l[this.field_j] = (byte)ge.a((int) this.field_l[this.field_j], 128 >>> da.b(7, this.field_g));
+          this.field_l[this.field_j] = (byte)ge.bitwiseOr((int) this.field_l[this.field_j], 128 >>> da.bitwiseAnd(7, this.field_g));
           this.field_j = this.field_j + 1;
           if (this.field_j > 32) {
             while (this.field_j < 64) {
@@ -50,7 +50,7 @@ final class pa {
             this.field_j = this.field_j + 1;
             this.field_l[fieldTemp$1] = (byte) 0;
           }
-          cb.copyByteRange(this.field_m, 0, this.field_l, 32, 32);
+          ArrayBlockSupport.copyByteRange(this.field_m, 0, this.field_l, 32, 32);
           this.c(-26394);
           if (param1 != 27892) {
             return;
@@ -175,7 +175,7 @@ final class pa {
           if (param0 != -65) {
             pa.clearStaticReferences(110);
           }
-          MouseWheelInput.field_b.processPointerInput(aj.field_f, true, true, kl.field_t);
+          MouseWheelInput.field_b.processPointerInput(GrowableIntArray.field_f, true, true, MusicPatchNode.field_t);
           MouseWheelInput.field_b.advanceDialogs((byte) 120);
           while (DisplayNameSelectionPanel.g((byte) -15)) {
             MouseWheelInput.field_b.processKeyInput((byte) -90, lh.field_f, ResourceArchive.field_d);
@@ -210,7 +210,7 @@ final class pa {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_f[var2] = hf.a(ProxyAuthenticationRequiredException.a((long)this.field_l[7 + var3], 255L), hf.a(hf.a(ProxyAuthenticationRequiredException.a(255L, (long)this.field_l[var3 + 5]) << 16, hf.a(hf.a(ProxyAuthenticationRequiredException.a(1095216660480L, (long)this.field_l[var3 + 3] << 32), hf.a(hf.a((long)this.field_l[var3] << 56, ProxyAuthenticationRequiredException.a((long)this.field_l[1 + var3], 255L) << 48), ProxyAuthenticationRequiredException.a(255L, (long)this.field_l[var3 + 2]) << 40)), ProxyAuthenticationRequiredException.a(4278190080L, (long)this.field_l[4 + var3] << 24))), ProxyAuthenticationRequiredException.a((long)this.field_l[6 + var3], 255L) << 8));
+          this.field_f[var2] = hf.bitwiseXor(ProxyAuthenticationRequiredException.bitwiseAnd((long)this.field_l[7 + var3], 255L), hf.bitwiseXor(hf.bitwiseXor(ProxyAuthenticationRequiredException.bitwiseAnd(255L, (long)this.field_l[var3 + 5]) << 16, hf.bitwiseXor(hf.bitwiseXor(ProxyAuthenticationRequiredException.bitwiseAnd(1095216660480L, (long)this.field_l[var3 + 3] << 32), hf.bitwiseXor(hf.bitwiseXor((long)this.field_l[var3] << 56, ProxyAuthenticationRequiredException.bitwiseAnd((long)this.field_l[1 + var3], 255L) << 48), ProxyAuthenticationRequiredException.bitwiseAnd(255L, (long)this.field_l[var3 + 2]) << 40)), ProxyAuthenticationRequiredException.bitwiseAnd(4278190080L, (long)this.field_l[4 + var3] << 24))), ProxyAuthenticationRequiredException.bitwiseAnd((long)this.field_l[6 + var3], 255L) << 8));
           var2++;
           var3 += 8;
         }
@@ -218,7 +218,7 @@ final class pa {
           dupTemp$0 = this.field_n[var2Lifetime1];
           arrayValue$1 = this.field_f[var2Lifetime1];
           this.field_o[var2Lifetime1] = dupTemp$0;
-          this.field_k[var2Lifetime1] = hf.a(arrayValue$1, dupTemp$0);
+          this.field_k[var2Lifetime1] = hf.bitwiseXor(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
@@ -226,7 +226,7 @@ final class pa {
             var4 = 0;
             var5 = 56;
             while (8 > var4) {
-              this.field_h[var3Lifetime1] = hf.a(this.field_h[var3Lifetime1], eh.field_a[var4][da.b((int)(this.field_o[da.b(-var4 + var3Lifetime1, 7)] >>> var5), 255)]);
+              this.field_h[var3Lifetime1] = hf.bitwiseXor(this.field_h[var3Lifetime1], eh.field_a[var4][da.bitwiseAnd((int)(this.field_o[da.bitwiseAnd(-var4 + var3Lifetime1, 7)] >>> var5), 255)]);
               var4++;
               var5 -= 8;
             }
@@ -234,14 +234,14 @@ final class pa {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_o[var3Lifetime1Lifetime1] = this.field_h[var3Lifetime1Lifetime1];
           }
-          this.field_o[0] = hf.a(this.field_o[0], eh.field_d[var2Lifetime2]);
+          this.field_o[0] = hf.bitwiseXor(this.field_o[0], eh.field_d[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_h[var3Lifetime1Lifetime2] = this.field_o[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (8 > var7) {
-              this.field_h[var3Lifetime1Lifetime2] = hf.a(this.field_h[var3Lifetime1Lifetime2], eh.field_a[var7][da.b((int)(this.field_k[da.b(-var7 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1), 255)]);
+              this.field_h[var3Lifetime1Lifetime2] = hf.bitwiseXor(this.field_h[var3Lifetime1Lifetime2], eh.field_a[var7][da.bitwiseAnd((int)(this.field_k[da.bitwiseAnd(-var7 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1), 255)]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -255,7 +255,7 @@ final class pa {
           this.field_f = (long[]) null;
         }
         while (var2Lifetime3 < 8) {
-          this.field_n[var2Lifetime3] = hf.a(this.field_n[var2Lifetime3], hf.a(this.field_f[var2Lifetime3], this.field_k[var2Lifetime3]));
+          this.field_n[var2Lifetime3] = hf.bitwiseXor(this.field_n[var2Lifetime3], hf.bitwiseXor(this.field_f[var2Lifetime3], this.field_k[var2Lifetime3]));
           var2Lifetime3++;
         }
     }
@@ -359,7 +359,7 @@ final class pa {
             var8 = 255 & param1[var5_int] << var6 | (255 & param1[1 + var5_int]) >>> -var6 + 8;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_l[this.field_j] = (byte)ge.a((int) this.field_l[this.field_j], var8 >>> var7);
+              this.field_l[this.field_j] = (byte)ge.bitwiseOr((int) this.field_l[this.field_j], var8 >>> var7);
               this.field_g = this.field_g + (8 - var7);
               this.field_j = this.field_j + 1;
               if (512 == this.field_g) {
@@ -367,7 +367,7 @@ final class pa {
                 this.field_j = 0;
                 this.field_g = 0;
               }
-              this.field_l[this.field_j] = (byte)da.b(var8 << -var7 + 8, 255);
+              this.field_l[this.field_j] = (byte)da.bitwiseAnd(var8 << -var7 + 8, 255);
               var5_int++;
               param0 = param0 - 8L;
               this.field_g = this.field_g + var7;
@@ -379,7 +379,7 @@ final class pa {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = 255 & param1[var5_int] << var6;
-            this.field_l[this.field_j] = (byte)ge.a((int) this.field_l[this.field_j], var8Lifetime1 >>> var7);
+            this.field_l[this.field_j] = (byte)ge.bitwiseOr((int) this.field_l[this.field_j], var8Lifetime1 >>> var7);
           }
           if (8L > (long)var7 + param0) {
             this.field_g = (int)((long)this.field_g + param0);
@@ -392,7 +392,7 @@ final class pa {
               this.field_g = 0;
               this.field_j = 0;
             }
-            this.field_l[this.field_j] = (byte)da.b(var8Lifetime1 << 8 - var7, 255);
+            this.field_l[this.field_j] = (byte)da.bitwiseAnd(var8Lifetime1 << 8 - var7, 255);
             this.field_g = this.field_g + (int)param0;
           }
           return;

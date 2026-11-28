@@ -77,7 +77,7 @@ final class il {
         if (param1 != 0) {
           return;
         }
-        mc.field_g = param0;
+        MidiNoteMask.field_g = param0;
     }
 
     public static void resetStaticState(int param0) {

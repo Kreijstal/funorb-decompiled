@@ -56,7 +56,7 @@ final class pb {
           }
           for (var2 = 1; ed.field_c.length > var2; var2++) {
             var3 = ed.field_c[var2];
-            dm.a(DraggableWidgetContainer.field_J, var2 << 4, DraggableWidgetContainer.field_J, var1_int, var3);
+            ArrayBlockSupport.copyIntRange(DraggableWidgetContainer.field_J, var2 << 4, DraggableWidgetContainer.field_J, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;

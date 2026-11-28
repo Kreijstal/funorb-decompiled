@@ -117,10 +117,10 @@ final class sd extends am {
           var15 = new short[var3_int];
           var11 = var15;
           var7 = var11;
-          dk.copyByteRange(param0.field_s, 0, var12, 0, param0.field_k);
-          dk.a(param0.field_u, 0, var13, 0, param0.field_k);
-          dk.a(param0.field_n, 0, var14, 0, param0.field_k);
-          dk.a(param0.field_x, 0, var15, 0, param0.field_k);
+          ArrayBlockSupport.copyByteRange(param0.field_s, 0, var12, 0, param0.field_k);
+          ArrayBlockSupport.a(param0.field_u, 0, var13, 0, param0.field_k);
+          ArrayBlockSupport.a(param0.field_n, 0, var14, 0, param0.field_k);
+          ArrayBlockSupport.a(param0.field_x, 0, var15, 0, param0.field_k);
           param0.field_s = var4;
           param0.field_n = var6;
           param0.field_u = var5;

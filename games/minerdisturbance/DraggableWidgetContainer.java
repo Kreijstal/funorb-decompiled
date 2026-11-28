@@ -114,7 +114,7 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
         if (param0 != -14933) {
           return 50;
         }
-        return -cg.field_o + si.field_d;
+        return -MusicPatchNode.field_o + si.field_d;
     }
 
     final boolean pointerPressed(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {

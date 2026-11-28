@@ -646,11 +646,11 @@ final class Level {
               var2++;
               var16Lifetime1 = lk.a(this.field_i.charAt(incrementValue$18), 97);
               var6_ref_int__[var9Lifetime1] = (var10Lifetime1 << 7) + ((var11 << 1) + (var12 >> 5));
-              var7_ref_int__[var9Lifetime1] = -((ie.a(31, var12) << 8) + ((var13 << 2) + (var14Lifetime1 >> 4)));
+              var7_ref_int__[var9Lifetime1] = -((ie.bitwiseAnd(31, var12) << 8) + ((var13 << 2) + (var14Lifetime1 >> 4)));
               if (-8172 == var22[var9Lifetime1]) {
                 var22[var9Lifetime1] = 20;
               }
-              var8_ref_int__[var9Lifetime1] = (var16Lifetime1 >> 3) + (var15Lifetime1 << 3) + (ie.a(var14Lifetime1, 15) << 9);
+              var8_ref_int__[var9Lifetime1] = (var16Lifetime1 >> 3) + (var15Lifetime1 << 3) + (ie.bitwiseAnd(var14Lifetime1, 15) << 9);
             }
             this.field_a.addFirst((byte) 54, new pf(var23, var22, var24));
           }
@@ -858,7 +858,7 @@ final class Level {
           var8 = var6.field_x;
           var37 = new int[var7][32];
           for (var10_int = 0; var7 > var10_int; var10_int++) {
-            dk.a(var37[var10_int], 0, 32, -1);
+            ArrayBlockSupport.fillInts(var37[var10_int], 0, 32, -1);
           }
           var34 = new int[var7];
           var31 = var34;
@@ -903,7 +903,7 @@ final class Level {
           }
           this.field_w = this.field_w + 20;
           for (var11Lifetime1 = 0; var7 > var11Lifetime1; var11Lifetime1++) {
-            dk.clearInts(var34, 0, var7);
+            ArrayBlockSupport.clearInts(var34, 0, var7);
             var35 = var37[var11Lifetime1];
             var32 = var35;
             var28 = var32;
@@ -1058,19 +1058,19 @@ final class Level {
               field_c = (PacketBuffer) null;
             }
             var6 = null;
-            if (hq.field_a.field_t != null) {
-              DropTargetWidgetContainer.field_F = new BufferedRandomAccessFile(hq.field_a.field_t, 5200, 0);
-              hq.field_a.field_t = null;
-              var6 = new SectorCacheStore(255, DropTargetWidgetContainer.field_F, new BufferedRandomAccessFile(hq.field_a.field_n, 12000, 0), 2097152);
+            if (GrowableIntArray.field_a.field_t != null) {
+              DropTargetWidgetContainer.field_F = new BufferedRandomAccessFile(GrowableIntArray.field_a.field_t, 5200, 0);
+              GrowableIntArray.field_a.field_t = null;
+              var6 = new SectorCacheStore(255, DropTargetWidgetContainer.field_F, new BufferedRandomAccessFile(GrowableIntArray.field_a.field_n, 12000, 0), 2097152);
             }
             var7 = null;
             if (DropTargetWidgetContainer.field_F != null) {
               if (TextLayout.field_b == null) {
-                TextLayout.field_b = new BufferedRandomAccessFile[hq.field_a.field_w.length];
+                TextLayout.field_b = new BufferedRandomAccessFile[GrowableIntArray.field_a.field_w.length];
               }
               if (TextLayout.field_b[param2] == null) {
-                TextLayout.field_b[param2] = new BufferedRandomAccessFile(hq.field_a.field_w[param2], 12000, 0);
-                hq.field_a.field_w[param2] = null;
+                TextLayout.field_b[param2] = new BufferedRandomAccessFile(GrowableIntArray.field_a.field_w[param2], 12000, 0);
+                GrowableIntArray.field_a.field_w[param2] = null;
               }
               var7 = new SectorCacheStore(param2, DropTargetWidgetContainer.field_F, TextLayout.field_b[param2], 2097152);
             }
@@ -1172,9 +1172,9 @@ final class Level {
           this.field_y.field_k.field_m = var16.field_k;
           this.field_y.field_k.field_h = new int[var16.field_k];
           for (var6Lifetime1 = 0; var16.field_k > var6Lifetime1; var6Lifetime1++) {
-            this.field_y.field_k.field_h[var6Lifetime1] = ie.a(65535, (int) var16.field_u[var6Lifetime1]);
-            this.field_y.field_k.field_g[var6Lifetime1] = ie.a((int) var16.field_n[var6Lifetime1], 65535);
-            this.field_y.field_k.field_i[var6Lifetime1] = ie.a((int) var16.field_x[var6Lifetime1], 65535);
+            this.field_y.field_k.field_h[var6Lifetime1] = ie.bitwiseAnd(65535, (int) var16.field_u[var6Lifetime1]);
+            this.field_y.field_k.field_g[var6Lifetime1] = ie.bitwiseAnd((int) var16.field_n[var6Lifetime1], 65535);
+            this.field_y.field_k.field_i[var6Lifetime1] = ie.bitwiseAnd((int) var16.field_x[var6Lifetime1], 65535);
           }
           this.field_y.field_k.field_F = null;
           this.field_y.field_l.field_D = null;

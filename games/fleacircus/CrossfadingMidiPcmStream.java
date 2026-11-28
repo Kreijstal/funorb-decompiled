@@ -23,7 +23,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
     static RgbSprite[] field_v;
     private boolean field_w;
 
-    private final void a(byte param0, int param1, int param2, MidiPcmStream param3) {
+    private final void configureSynthesizer(byte param0, int param1, int param2, MidiPcmStream param3) {
         param3.setChannelGain(param2, true, -1);
         if (param0 < 16) {
           return;
@@ -35,7 +35,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void a(MusicTrack param0, int param1, int param2, boolean param3, int param4, int param5) {
+    final synchronized void switchTrack(MusicTrack param0, int param1, int param2, boolean param3, int param4, int param5) {
         boolean stackIn_19_1 = false;
         int stackIn_33_0 = 0;
         MidiPcmStream stackIn_42_0 = null;
@@ -60,7 +60,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               this.field_F = param0;
               if (param0 != null) {
                 this.field_C.playTrack(false, param2 + 524395, param0);
-                this.a((byte) 87, param1, param5, this.field_C);
+                this.configureSynthesizer((byte) 87, param1, param5, this.field_C);
               }
             } else {
               if (this.field_r != null) {
@@ -69,7 +69,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               this.field_r = param0;
               if (param0 != null) {
                 this.field_o.playTrack(false, 64, param0);
-                this.a((byte) 64, param1, param5, this.field_o);
+                this.configureSynthesizer((byte) 64, param1, param5, this.field_o);
               }
             }
             return;
@@ -78,12 +78,12 @@ final class CrossfadingMidiPcmStream extends PcmStream {
           this.field_B = stackIn_19_1;
           if (param0 == this.field_F) {
             this.field_u = param4;
-            this.a((byte) 72, param1, param5, this.field_C);
+            this.configureSynthesizer((byte) 72, param1, param5, this.field_C);
             return;
           }
           if (param0 == this.field_r) {
             this.field_u = -param4;
-            this.a((byte) 57, param1, param5, this.field_o);
+            this.configureSynthesizer((byte) 57, param1, param5, this.field_o);
             return;
           }
           if (param2 != -524289) {
@@ -108,7 +108,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               stackIn_51_0 = this.field_C;
               stackIn_52_1 = !(param3);
               ((MidiPcmStream) (Object) stackIn_51_0).playTrack(stackIn_52_1, 101, param0);
-              this.a((byte) 79, param1, param5, this.field_C);
+              this.configureSynthesizer((byte) 79, param1, param5, this.field_C);
             }
             this.field_u = param4;
           } else {
@@ -120,7 +120,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               stackIn_42_0 = this.field_o;
               stackIn_43_1 = !(param3);
               ((MidiPcmStream) (Object) stackIn_42_0).playTrack(stackIn_43_1, param2 + 524353, param0);
-              this.a((byte) 104, param1, param5, this.field_o);
+              this.configureSynthesizer((byte) 104, param1, param5, this.field_o);
             }
             this.field_u = -param4;
           }
@@ -240,8 +240,8 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               if (var5 != 256) {
                 if (this.field_q != null &&
                   var6 <= this.field_q.length) {
-                  dm.clearInts(this.field_q, 0, var6);
-                  dm.clearInts(this.field_p, 0, var6);
+                  ArrayBlockSupport.clearInts(this.field_q, 0, var6);
+                  ArrayBlockSupport.clearInts(this.field_p, 0, var6);
                 } else {
                   this.field_p = new int[var6];
                   this.field_q = new int[var6];
@@ -272,7 +272,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             }
             if (null != this.field_q &&
               this.field_q.length >= var6) {
-              dm.clearInts(this.field_q, 0, var6);
+              ArrayBlockSupport.clearInts(this.field_q, 0, var6);
             } else {
               this.field_q = new int[var6];
               this.field_p = new int[var6];
@@ -307,7 +307,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0, byte param1) {
+    final synchronized void setVolume(int param0, byte param1) {
         this.field_x = param0;
         if (param1 <= 2) {
           this.field_E = -91;

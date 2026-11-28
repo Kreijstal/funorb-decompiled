@@ -250,11 +250,11 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           this.field_N.field_o = (WidgetRenderer) ((Object) new na());
           var7 = StandardContentDialog.a(new String[]{this.getAgreementLinkOpeningTag(120), this.getAgreementLinkClosingTag(115)}, nj.field_a, 30496);
           var3 = 20;
-          var4 = new DefaultTextWidgetRenderer(lp.field_C, 0, 0, 0, 0, 16777215, -1, 3, 0, lp.field_C.field_H, -1, 2147483647, true);
+          var4 = new DefaultTextWidgetRenderer(MusicPatchNode.field_C, 0, 0, 0, 0, 16777215, -1, 3, 0, MusicPatchNode.field_C.field_H, -1, 2147483647, true);
           this.field_L = new RichTextWidget(var7, var4);
           this.field_L.field_i = "";
-          this.field_L.setHotspotTooltip(8, 0, kn.field_d);
-          this.field_L.setHotspotTooltip(8, 1, kn.field_d);
+          this.field_L.setHotspotTooltip(8, 0, ByteArrayPoolSupport.field_d);
+          this.field_L.setHotspotTooltip(8, 1, ByteArrayPoolSupport.field_d);
           this.field_L.field_n = (WidgetEventListener) (this);
           this.field_L.field_x = this.field_x - 40;
           this.field_L.setTextBounds(26, (byte) -71, -40 + this.field_x, var3);

@@ -677,7 +677,7 @@ final class ResourceArchive {
                     var22 = var21;
                   }
                   if (param3 == var22) {
-                    kf.copyByteRange(var44, var18, var45, var15_intLifetime1, var20);
+                    ArrayBlockSupport.copyByteRange(var44, var18, var45, var15_intLifetime1, var20);
                     var15_intLifetime1 = var15_intLifetime1 + var20;
                   }
                   var18 = var18 + var20;
@@ -715,7 +715,7 @@ final class ResourceArchive {
                 var19 = 0;
                 for (var20 = 0; var20 < var5_int; var20++) {
                   var19 = var19 + var32.d(8195);
-                  kf.copyByteRange(var44, var17, var41[var20], var40[var20], var19);
+                  ArrayBlockSupport.copyByteRange(var44, var17, var41[var20], var40[var20], var19);
                   var15[var20] = var15[var20] + var19;
                   var17 = var17 + var19;
                 }

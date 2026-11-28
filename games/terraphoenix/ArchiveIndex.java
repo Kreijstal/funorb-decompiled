@@ -36,7 +36,7 @@ final class ArchiveIndex {
         if (param0 < 111) {
           ArchiveIndex.resetStaticState((byte) 11);
         }
-        IndexedSprite var1 = new IndexedSprite(ah.field_A, sb.field_j, ConfirmedEmailAvailabilityValidator.field_s[0], DropTargetWidgetContainer.field_K[0], sb.field_m[0], ArchiveRequest.field_p[0], qc.field_b[0], ProxyAuthenticationRequiredException.field_a);
+        IndexedSprite var1 = new IndexedSprite(ah.field_A, MidiNoteMask.field_j, ConfirmedEmailAvailabilityValidator.field_s[0], DropTargetWidgetContainer.field_K[0], MidiNoteMask.field_m[0], ArchiveRequest.field_p[0], qc.field_b[0], ProxyAuthenticationRequiredException.field_a);
         SocketConnector.a((byte) 79);
         return var1;
     }
@@ -89,7 +89,7 @@ final class ArchiveIndex {
         int var13Lifetime1Lifetime1;
         var16 = Terraphoenix.field_V;
         try {
-          var18 = new PacketBuffer(qg.a(-1, param1));
+          var18 = new PacketBuffer(ByteArrayPoolSupport.a(-1, param1));
           var4 = var18.readUnsignedByte(-16384);
           if (5 <= var4 &&
             var4 <= 7) {

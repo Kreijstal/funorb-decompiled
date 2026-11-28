@@ -146,7 +146,7 @@ final class PlayerDungeonProfile {
             param0.readUnsignedByte(true);
           }
           for (var5 = 0; var5 < this.field_k.field_f.length; var5++) {
-            this.field_k.field_f[var5] = param0.readInt(IntrusiveDeque.b(param1, 13096));
+            this.field_k.field_f[var5] = param0.readInt(IntrusiveDeque.bitwiseXor(param1, 13096));
           }
           this.field_L = new DungeonTileState[49];
           this.field_L[24] = new DungeonTileState(2);

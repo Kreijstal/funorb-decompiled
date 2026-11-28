@@ -1795,7 +1795,7 @@ final class BattleState {
           while (var7 < 7) {
             var9 = this.rosters[var3Lifetime1].field_b[var7];
             if (var9 != null) {
-              this.field_T.field_C[var3Lifetime1] = sr.a(this.field_T.field_C[var3Lifetime1], 1L << var9.field_o.field_b);
+              this.field_T.field_C[var3Lifetime1] = sr.bitwiseOr(this.field_T.field_C[var3Lifetime1], 1L << var9.field_o.field_b);
             }
             var7++;
           }
@@ -2387,7 +2387,7 @@ final class BattleState {
           for (var5 = 0; this.height > var5; var5++) {
             for (var6 = 0; this.width > var6; var6++) {
               var7 = param1.readUnsignedByte(16711935);
-              this.tiles[var6][var5] = new BoardTile(dda.a(var7, 127));
+              this.tiles[var6][var5] = new BoardTile(dda.bitwiseAnd(var7, 127));
               stackIn_15_0 = this.tiles[var6][var5];
               stackIn_16_1 = ((var7 & 128) != 0);
               stackIn_15_0.field_i = stackIn_16_1;

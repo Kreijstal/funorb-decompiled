@@ -394,7 +394,7 @@ final class bf {
 
     final static void a(int param0, int param1, int param2, int param3, String param4) {
         try {
-          kn.a(param2, param4 + "_defeat", param1, param0, 125, 96, param4 + "_special", param4 + "_reveal");
+          ByteArrayPoolSupport.a(param2, param4 + "_defeat", param1, param0, 125, 96, param4 + "_special", param4 + "_reveal");
           if (param3 != -18228) {
             bf.clearStaticReferences((byte) -43);
           }

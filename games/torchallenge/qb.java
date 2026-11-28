@@ -72,12 +72,12 @@ final class qb {
         if (2048 > var9) {
           var12 = 320 + (CrossfadingMidiPcmStream.a(1870096848, wi.field_a[var9], var10 << 16) >> 16) * var11;
           var13 = param5 * 64 / 256 + (param1 * 64 - param2);
-          dl.field_n[1] = var12;
-          dl.field_n[0] = var12;
+          MusicPatchNode.field_n[1] = var12;
+          MusicPatchNode.field_n[0] = var12;
           if (param6 != -2140919664) {
             field_d = -116;
           }
-          dl.field_n[2] = var13;
+          MusicPatchNode.field_n[2] = var13;
           return;
         }
         var9 -= 2048;
@@ -86,12 +86,12 @@ final class qb {
         }
         var12Lifetime1 = 320 + (CrossfadingMidiPcmStream.a(1870096848, wi.field_a[var9], var10 << 16) >> 16) * var11;
         var13Lifetime1 = param5 * 64 / 256 + (param1 * 64 - param2);
-        dl.field_n[1] = var12Lifetime1;
-        dl.field_n[0] = var12Lifetime1;
+        MusicPatchNode.field_n[1] = var12Lifetime1;
+        MusicPatchNode.field_n[0] = var12Lifetime1;
         if (param6 != -2140919664) {
           field_d = -116;
         }
-        dl.field_n[2] = var13Lifetime1;
+        MusicPatchNode.field_n[2] = var13Lifetime1;
         return;
     }
 

@@ -5,7 +5,7 @@ final class jf extends InteractiveWidget {
     static ArgbSprite field_M;
     int field_K;
     static int[] field_N;
-    private re field_I;
+    private GrowableIntArray field_I;
     private int field_H;
     static String field_J;
     int field_L;
@@ -21,11 +21,11 @@ final class jf extends InteractiveWidget {
 
     final int a(int param0, byte param1) {
         if (0 <= param0 &&
-          this.field_I.b(125) > param0) {
+          this.field_I.size(125) > param0) {
           if (param1 <= 121) {
             this.a(112, (byte) -62);
           }
-          return this.field_I.a(0, param0);
+          return this.field_I.get(0, param0);
         }
         return -1;
     }
@@ -41,7 +41,7 @@ final class jf extends InteractiveWidget {
         if (param0 > -44) {
           this.a(-3, (byte) 2);
         }
-        return this.field_I.b(117);
+        return this.field_I.size(117);
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
@@ -99,13 +99,13 @@ final class jf extends InteractiveWidget {
           }
           var8_int = this.field_H * var8_int / var9;
           if (param4 == 1) {
-            this.field_I.a((byte) 103, var8_int);
+            this.field_I.append((byte) 103, var8_int);
           } else {
             if (2 == param4) {
               var10 = 2147483647;
               var11 = -1;
-              for (var12 = 0; var12 < this.field_I.b(127); var12++) {
-                var13 = -var8_int + this.field_I.a(0, var12);
+              for (var12 = 0; var12 < this.field_I.size(127); var12++) {
+                var13 = -var8_int + this.field_I.get(0, var12);
                 var13 = var13 * var13;
                 if (var10 > var13) {
                   var10 = var13;
@@ -115,7 +115,7 @@ final class jf extends InteractiveWidget {
               if (var11 < 0) {
                 return true;
               }
-              this.field_I.b(var11, 7810);
+              this.field_I.removeAt(var11, 7810);
             }
           }
           return true;

@@ -29,10 +29,10 @@ final class ek extends IntrusiveNode {
           th.field_a[r.field_d].a(param1, (byte) 89);
         }
         if (0 == r.field_d) {
-          sc.a(-1, true, PasswordValidator.field_q);
+          ByteArrayPoolSupport.a(-1, true, PasswordValidator.field_q);
         } else {
           if (r.field_d == -2) {
-            sc.a(-1, true, PasswordValidator.field_q);
+            ByteArrayPoolSupport.a(-1, true, PasswordValidator.field_q);
           }
         }
         if (r.field_d != 11) {

@@ -78,7 +78,7 @@ final class g extends ok {
                   if (0 < var10) {
                     if (var9 >= 31) {
                       var15 = var3 * 64 + var4;
-                      var22.field_B[var15] = mp.a(var14, var13);
+                      var22.field_B[var15] = mp.bitwiseOr(var14, var13);
                       decompiledFrameRemainder0 = false;
                     }
                     else {
@@ -112,7 +112,7 @@ final class g extends ok {
                 }
                 if (decompiledFrameRemainder0) {
                   var15Lifetime1 = var3 * 64 + var4;
-                  var22.field_B[var15Lifetime1] = mp.a(var14, var13);
+                  var22.field_B[var15Lifetime1] = mp.bitwiseOr(var14, var13);
                 }
               }
             }

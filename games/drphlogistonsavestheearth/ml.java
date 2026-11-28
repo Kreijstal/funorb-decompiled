@@ -106,7 +106,7 @@ final class ml extends IntrusiveNode {
             var13 = param3;
             var14 = param7;
             var15 = (16711422 & var17[var11]) >> 1;
-            var10[var11] = (rk.a(33423494, var13) >> 9) + (rk.a(33423360, var12) >> 1) - (-rk.a(255, var14 >> 17) - var15);
+            var10[var11] = (rk.bitwiseAnd(33423494, var13) >> 9) + (rk.bitwiseAnd(33423360, var12) >> 1) - (-rk.bitwiseAnd(255, var14 >> 17) - var15);
             param1++;
             param8 = param8 + param0;
             param3 = param3 + param5;

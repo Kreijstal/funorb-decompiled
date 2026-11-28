@@ -215,7 +215,7 @@ final class ek {
                 ((RgbSprite) (Object) stackIn_7_0).drawScaledAdditive(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_8_5);
               }
               if (var4 > 0) {
-                dl.field_d[(30 & this.field_m) >> 1].drawScaledAdditive(0, 0, 640, 376, var4);
+                ByteArrayPoolSupport.field_d[(30 & this.field_m) >> 1].drawScaledAdditive(0, 0, 640, 376, var4);
               }
               if (var3 > 0) {
                 stackIn_14_0 = ue.field_u[this.field_m >> 1 & 3];
@@ -267,7 +267,7 @@ final class ek {
             }
             return;
           }
-          dl.field_d[(30 & this.field_m) >> 1].drawScaledAdditive(0, 0, 640, 376, var4Lifetime3);
+          ByteArrayPoolSupport.field_d[(30 & this.field_m) >> 1].drawScaledAdditive(0, 0, 640, 376, var4Lifetime3);
           if (var3 <= 0) {
             return;
           }
@@ -322,7 +322,7 @@ final class ek {
                 ((RgbSprite) (Object) stackIn_55_0).drawScaledAdditive(stackIn_55_1, stackIn_55_2, stackIn_55_3, stackIn_55_4, stackIn_56_5);
               }
             } else {
-              dl.field_d[(30 & this.field_m) >> 1].drawScaledAdditive(0, 0, 640, 376, var4Lifetime1);
+              ByteArrayPoolSupport.field_d[(30 & this.field_m) >> 1].drawScaledAdditive(0, 0, 640, 376, var4Lifetime1);
               if (var3Lifetime1 > 0) {
                 stackIn_61_0 = ue.field_u[this.field_m >> 1 & 3];
                 stackIn_61_1 = 0;
@@ -373,7 +373,7 @@ final class ek {
             ((RgbSprite) (Object) stackIn_78_0).drawScaledAdditive(stackIn_78_1, stackIn_78_2, stackIn_78_3, stackIn_78_4, stackIn_79_5);
           }
         } else {
-          dl.field_d[(30 & this.field_m) >> 1].drawScaledAdditive(0, 0, 640, 376, var4Lifetime2);
+          ByteArrayPoolSupport.field_d[(30 & this.field_m) >> 1].drawScaledAdditive(0, 0, 640, 376, var4Lifetime2);
           if (var3Lifetime1 > 0) {
             stackIn_84_0 = ue.field_u[this.field_m >> 1 & 3];
             stackIn_84_1 = 0;

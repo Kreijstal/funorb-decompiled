@@ -9,7 +9,7 @@ final class el {
 
     final static void a(int param0, int param1) {
         if (DualLinkNode.field_s != de.field_b &&
-          aa.field_e != de.field_b) {
+          GrowableIntArray.field_e != de.field_b) {
           if (param1 != -5629) {
             el.a(53, -55);
           }

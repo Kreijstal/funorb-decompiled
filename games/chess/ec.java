@@ -24,7 +24,7 @@ final class ec extends dm {
             var1 = am.b((byte) -84);
           }
           if (var1.length() == 0) {
-            var1 = ql.field_e;
+            var1 = ByteArrayPoolSupport.field_e;
           }
           return var1;
         }
@@ -37,7 +37,7 @@ final class ec extends dm {
           var1Lifetime1 = am.b((byte) -84);
         }
         if (var1Lifetime1.length() == 0) {
-          var1Lifetime1 = ql.field_e;
+          var1Lifetime1 = ByteArrayPoolSupport.field_e;
         }
         return var1Lifetime1;
     }

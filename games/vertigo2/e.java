@@ -100,7 +100,7 @@ final class e {
             return;
           }
           MouseWheelInput.field_a = false;
-          if (pe.field_r) {
+          if (MusicPatchNode.field_r) {
             var5 = ah.field_k;
           } else {
             if (hj.field_b) {

@@ -127,7 +127,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var5), "ci.MB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var5), "ci.MB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -180,7 +180,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           this.field_kb.field_B = true;
           this.addChild(this.field_kb, 5411);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ci.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "ci.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -211,7 +211,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -255,21 +255,21 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           lc.field_k.writeBytes(param2, param1, param0, param4);
           lc.field_k.padZerosTo((byte) -65, var7_int);
           lc.field_k.encryptXtea((byte) 97, var13);
-          if (null == ee.field_h ||
-            !(ee.field_h.payload.length >= 100)) {
-            ee.field_h = new PacketBuffer(100);
+          if (null == MidiNoteMask.field_h ||
+            !(MidiNoteMask.field_h.payload.length >= 100)) {
+            MidiNoteMask.field_h = new PacketBuffer(100);
           }
-          ee.field_h.position = 0;
-          ee.field_h.writeByte(19, 10);
+          MidiNoteMask.field_h.position = 0;
+          MidiNoteMask.field_h.writeByte(19, 10);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            ee.field_h.writeInt(var13[var11], false);
+            MidiNoteMask.field_h.writeInt(var13[var11], false);
             var11++;
           }
-          ee.field_h.writeShort(true, param1);
-          ee.field_h.applyRsa(param5, 59769888, param3);
-          param6.writeBytes(8, ee.field_h.position, ee.field_h.payload, 0);
+          MidiNoteMask.field_h.writeShort(true, param1);
+          MidiNoteMask.field_h.applyRsa(param5, 59769888, param3);
+          param6.writeBytes(8, MidiNoteMask.field_h.position, MidiNoteMask.field_h.payload, 0);
           param6.writeBytes(param2 ^ 0, lc.field_k.position, lc.field_k.payload, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -300,7 +300,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -385,7 +385,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
             ProgressMessageDialog.a((Archive) null, false, (Archive) null, (Archive) null);
           }
           var9Lifetime1 = var18.field_t;
-          fl.b((byte) 91);
+          ByteArrayPoolSupport.b((byte) 91);
           var18.bindAsRenderTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d);
           var16 = new Sprite(var9Lifetime1, var9Lifetime1);
@@ -423,7 +423,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -453,7 +453,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -482,7 +482,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var2_ref), "ci.GB(" + param0 + ',' + param1 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var2_ref), "ci.GB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -511,7 +511,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -586,7 +586,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -661,7 +661,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

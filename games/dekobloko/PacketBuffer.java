@@ -607,7 +607,7 @@ class PacketBuffer extends HashNode {
 
     PacketBuffer(int integerArgument1) {
         this.position = 0;
-        this.payload = MixedSupport130.computeByteArray1664(5, integerArgument1);
+        this.payload = ByteArrayPoolSupport.acquireByteArray(5, integerArgument1);
     }
 
     final int readUnsignedShortOrInt(int integerArgument1) {

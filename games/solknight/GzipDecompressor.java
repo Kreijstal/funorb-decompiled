@@ -58,7 +58,7 @@ final class GzipDecompressor {
             }
             this.field_d.reset();
           } catch (RuntimeException runtimeException) {
-            throw fc.wrapClientException((Throwable) ((Object) runtimeException), "kg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "kg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -148,7 +148,7 @@ final class a extends ch {
                   this.field_m.readFully((byte) 66, this.field_j.field_s.payload, var6, this.field_j.field_s.position);
                   if (this.field_f != 0) {
                     for (var7 = 0; var6 > var7; var7++) {
-                      this.field_j.field_s.payload[var7 + this.field_j.field_s.position] = (byte)hi.a((int) this.field_j.field_s.payload[var7 + this.field_j.field_s.position], (int) this.field_f);
+                      this.field_j.field_s.payload[var7 + this.field_j.field_s.position] = (byte)hi.bitwiseXor((int) this.field_j.field_s.payload[var7 + this.field_j.field_s.position], (int) this.field_f);
                     }
                   }
                   this.field_j.field_t = this.field_j.field_t + var6;
@@ -170,7 +170,7 @@ final class a extends ch {
                   this.field_m.readFully((byte) 66, this.field_i.payload, var5, this.field_i.position);
                   if (this.field_f != 0) {
                     for (var6 = 0; var6 < var5; var6++) {
-                      this.field_i.payload[var6 + this.field_i.position] = (byte)hi.a((int) this.field_i.payload[var6 + this.field_i.position], (int) this.field_f);
+                      this.field_i.payload[var6 + this.field_i.position] = (byte)hi.bitwiseXor((int) this.field_i.payload[var6 + this.field_i.position], (int) this.field_f);
                     }
                   }
                   this.field_i.position = this.field_i.position + var5;
@@ -407,7 +407,7 @@ final class a extends ch {
             var5 = var9;
             var6 = param0;
             var7 = param1;
-            var9[var6] = bc.a(8355711, var9[var6] >> 1) + var7;
+            var9[var6] = bc.bitwiseAnd(8355711, var9[var6] >> 1) + var7;
             param0++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

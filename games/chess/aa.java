@@ -132,7 +132,7 @@ final class aa {
           (0 == qk.field_h ||
           pg.field_s == 0) ||
           var3 == 8) {
-          qd.field_w.h(param0 ^ -113);
+          MusicPatchNode.field_w.h(param0 ^ -113);
           var4 = 32;
           this.a(var4, -var2, 13551);
           decompiledFrameRemainder1 = (var10 != 0);
@@ -773,7 +773,7 @@ final class aa {
           var9.beginBitAccess(param0 ^ 18713);
           m.field_e = cl.a(param0 ^ 13190, var9);
           ei.field_v = new em[var3];
-          ql.field_a = new int[var3][];
+          ByteArrayPoolSupport.field_a = new int[var3][];
           var4 = 0;
           do {
             if (var4 >= var3) {
@@ -789,7 +789,7 @@ final class aa {
             var5.a(6, 6, (byte) -70, 6, 1);
             var5.a(param0 ^ -24341);
             var6 = new int[]{var5.field_K + var5.field_P >> 1, var5.field_I + var5.field_v >> 1, var5.field_x + var5.field_n >> 1};
-            ql.field_a[var4] = var6;
+            ByteArrayPoolSupport.field_a[var4] = var6;
             var5.a(-var6[1], -var6[0], -var6[2], (byte) -81);
             var4++;
             if (var7 != 0) {
@@ -1743,7 +1743,7 @@ final class aa {
         if (!r.field_bc &&
           !fi.field_a) {
           while (true) {
-            if (kf.d(18954)) {
+            if (MusicPatch.d(18954)) {
               this.b((byte) 101);
               if (var3 == 0) {
                 continue;
@@ -1758,7 +1758,7 @@ final class aa {
             break;
           }
         }
-        qd.field_w.setCameraOrbit(-0.1, (double)r.field_Eb / 300.0, true);
+        MusicPatchNode.field_w.setCameraOrbit(-0.1, (double)r.field_Eb / 300.0, true);
     }
 
     final void a(byte param0, boolean param1, int param2) {
@@ -2165,7 +2165,7 @@ final class aa {
                     var22_int = var13[4 * var17];
                     var23_int = var19 - (-var20 - var21);
                     var32 = var12_ref_String__[var17];
-                    if (qd.a((byte) 13, var32)) {
+                    if (MusicPatchNode.a((byte) 13, var32)) {
                       var16 = 1;
                       var18 = 13732679;
                     }

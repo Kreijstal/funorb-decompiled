@@ -35,7 +35,7 @@ final class t {
         if ((fleas.field_E != 0 ||
           !(ResourceArchive.field_c.field_x >= 15) ||
           !DiskArchiveRequest.c((byte) 62) &&
-          !(0 >= wc.field_q)) && ResourceArchive.field_c.a(ResourceArchive.field_c.field_x, 98)) {
+          !(0 >= MusicPatch.field_q)) && ResourceArchive.field_c.a(ResourceArchive.field_c.field_x, 98)) {
           return true;
         }
         return false;
@@ -197,7 +197,7 @@ final class t {
           ByteStorage.field_h[var2] = dupTemp$2;
           if (dupTemp$2 < -400) {
             ByteStorage.field_h[var2] = 1040;
-            AccountCreationResultPanel.field_tb[var2] = ValidationStatusIcon.field_O[this.b(df.a(param0, 399))];
+            AccountCreationResultPanel.field_tb[var2] = ValidationStatusIcon.field_O[this.b(df.bitwiseXor(param0, 399))];
           }
         }
         if (param0 != -400) {
@@ -352,7 +352,7 @@ final class t {
               if (param0) {
                 break regionExit1;
               }
-              if (wc.field_q <= 0 &&
+              if (MusicPatch.field_q <= 0 &&
                 ResourceArchive.field_j[var9]) {
                 stackIn_16_0 = mf.field_g;
               } else {
@@ -432,7 +432,7 @@ final class t {
           }
           if (var10 != 0) {
             il.field_d[var8].draw(420, 252);
-          } else if (0 < wc.field_q) {
+          } else if (0 < MusicPatch.field_q) {
             cb.field_u.draw(420, 252);
           } else {
             if (!ResourceArchive.field_j[var8]) {
@@ -487,7 +487,7 @@ final class t {
               if (tj.field_a < pl.field_l[fleas.field_E] * 2 / 3) {
                 var3 = me.field_g;
               } else {
-                var3 = tk.field_s;
+                var3 = MusicPatchNode.field_s;
               }
             }
             var2Lifetime1 = ModalDialog.field_I;
@@ -503,7 +503,7 @@ final class t {
             var4 != 5) {
             if (var4 == 6) {
               var3 = uh.field_k;
-              var2Lifetime1 = de.field_a;
+              var2Lifetime1 = MusicPatchEnvelope.field_a;
             } else if (9 != var4) {
               var3 = null;
               var2Lifetime1 = null;
@@ -516,7 +516,7 @@ final class t {
             var3 = ek.field_c;
           }
         } else {
-          var2Lifetime1 = de.field_a;
+          var2Lifetime1 = MusicPatchEnvelope.field_a;
         }
         if (var3 != null) {
           ((RgbSprite) (var3)).draw((-((RgbSprite) (var3)).field_x + 640) / 2, 45);
@@ -629,7 +629,7 @@ final class t {
         var3 = 0;
         if (fleas.field_E == 0 &&
           ResourceArchive.field_c.field_x >= 15 && (DiskArchiveRequest.c((byte) 36) ||
-          !(wc.field_q > 0))) {
+          !(MusicPatch.field_q > 0))) {
           var2 = 0;
           var3 = 1;
         }
@@ -818,7 +818,7 @@ final class t {
             if (1 == var6) {
               if (!(!this.field_b.b(-17))) {
                 oa.a(-1, param0, -86);
-                stackIn_54_0 = (0 < wc.field_q) ? 0 : 7;
+                stackIn_54_0 = (0 < MusicPatch.field_q) ? 0 : 7;
                 ImageProducerRasterBuffer.field_m = stackIn_54_0;
               }
             } else {
@@ -953,7 +953,7 @@ final class t {
                                     if (!(StripedProgressWidget.field_D.field_k)) {
                                       cf.a(-25319);
                                       oa.a(-1, param0, -126);
-                                      stackIn_175_0 = (wc.field_q > 0) ? 0 : 7;
+                                      stackIn_175_0 = (MusicPatch.field_q > 0) ? 0 : 7;
                                       ImageProducerRasterBuffer.field_m = stackIn_175_0;
                                     }
                                     break regionExit1;
@@ -973,7 +973,7 @@ final class t {
                                     stackIn_187_0 = (tj.field_a == 0);
                                     tg.field_g = stackIn_187_0;
                                     oa.a(-1, param0, 45);
-                                    stackIn_190_0 = (wc.field_q > 0) ? 0 : 7;
+                                    stackIn_190_0 = (MusicPatch.field_q > 0) ? 0 : 7;
                                     ImageProducerRasterBuffer.field_m = stackIn_190_0;
                                     break regionExit1;
                                   }
@@ -990,7 +990,7 @@ final class t {
                                     if (this.field_i != 9 &&
                                       6 != this.field_i) {
                                       if (tj.field_a + 1 < ia.field_m[fleas.field_E].length && (fleas.field_E != 0 ||
-                                        !(wc.field_q <= 0) ||
+                                        !(MusicPatch.field_q <= 0) ||
                                         !(tj.field_a + 1 >= 15))) {
                                         oa.a(-1, param0, 101);
                                         break regionExit1;
@@ -1046,7 +1046,7 @@ final class t {
                                   if (this.field_b.b(-80)) {
                                     if (DiskArchiveRequest.c((byte) 68)) {
                                       if ((DiskArchiveRequest.c((byte) 72) ||
-                                        !(wc.field_q > 0)) &&
+                                        !(MusicPatch.field_q > 0)) &&
                                         IsaacRandom.a(true)) {
                                         stackIn_124_0 = 6;
                                       } else {
@@ -1062,7 +1062,7 @@ final class t {
                                         oa.a(5, param0, 57);
                                       }
                                     }
-                                    if (wc.field_q > 0) {
+                                    if (MusicPatch.field_q > 0) {
                                       ImageProducerRasterBuffer.field_m = 0;
                                     } else {
                                       if (!IsaacRandom.a(true)) {
@@ -1079,7 +1079,7 @@ final class t {
                             }
                           }
                         } else {
-                          var4 = gf.field_d;
+                          var4 = ByteArrayPoolSupport.field_d;
                           if (this.field_b.g(-63)) {
                             ia.a(true, 0);
                           }
@@ -1104,8 +1104,8 @@ final class t {
                               }
                             }
                           }
-                          if (gf.field_d != var4) {
-                            ModalDialogHost.field_G.field_A = gf.field_d;
+                          if (ByteArrayPoolSupport.field_d != var4) {
+                            ModalDialogHost.field_G.field_A = ByteArrayPoolSupport.field_d;
                             ik.a(FrameTimer.field_b[1], (byte) -84);
                             break regionExit1;
                           }
@@ -1217,7 +1217,7 @@ final class t {
           }
           if (1 == this.field_i) {
             oa.a(-1, false, -96);
-            stackIn_42_0 = (wc.field_q <= 0) ? 7 : 0;
+            stackIn_42_0 = (MusicPatch.field_q <= 0) ? 7 : 0;
             ImageProducerRasterBuffer.field_m = stackIn_42_0;
             continue;
           }
@@ -1384,7 +1384,7 @@ final class t {
           boolean decompiledFrameRemainder0 = true;
           if (g.field_s == 1) {
             aj.field_t[2].draw(105, AgeValidator.field_s[g.field_s][1] - 2);
-            oj.a(AgeValidator.field_s[g.field_s][1] + 2, 0, 109, var4);
+            MidiNoteMask.a(AgeValidator.field_s[g.field_s][1] + 2, 0, 109, var4);
             aj.field_t[3].draw(95, AgeValidator.field_s[g.field_s][2] + 1);
             aj.field_t[4].draw(116, 1 + AgeValidator.field_s[g.field_s][2]);
             for (var5 = 4; var5 <= 6; var5++) {
@@ -1396,7 +1396,7 @@ final class t {
             if (2 == g.field_s) {
               aj.field_t[1].draw(95, AgeValidator.field_s[g.field_s][1] + 3);
               aj.field_t[2].draw(95, AgeValidator.field_s[g.field_s][2] + 3);
-              oj.a(AgeValidator.field_s[g.field_s][2] + 7, 0, 99, var4);
+              MidiNoteMask.a(AgeValidator.field_s[g.field_s][2] + 7, 0, 99, var4);
               aj.field_t[3].draw(95, AgeValidator.field_s[g.field_s][3] + 3);
               aj.field_t[11].draw(95, AgeValidator.field_s[g.field_s][4] + 12);
               aj.field_t[5].draw(95, 3 + AgeValidator.field_s[g.field_s][4]);

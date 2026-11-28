@@ -17,7 +17,7 @@ final class u extends am {
           var4 = this.field_l.a(param1, 25657);
           var3 = var4;
           if (this.field_l.field_b) {
-            dk.a(var4, 0, ci.field_c, this.field_u);
+            ArrayBlockSupport.fillInts(var4, 0, ci.field_c, this.field_u);
           }
           return var4;
         }
@@ -25,7 +25,7 @@ final class u extends am {
         var4Lifetime1 = this.field_l.a(param1, 25657);
         var3Lifetime1 = var4Lifetime1;
         if (this.field_l.field_b) {
-          dk.a(var4Lifetime1, 0, ci.field_c, this.field_u);
+          ArrayBlockSupport.fillInts(var4Lifetime1, 0, ci.field_c, this.field_u);
         }
         return var4Lifetime1;
     }
@@ -47,7 +47,7 @@ final class u extends am {
           }
           var4 = new int[param2];
           var3 = var4;
-          dk.a(param1, 0, var4, 0, param2);
+          ArrayBlockSupport.copyIntRange(param1, 0, var4, 0, param2);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

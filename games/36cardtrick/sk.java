@@ -63,7 +63,7 @@ final class sk {
         if (param1 == 125) {
           var2 = new rc();
           ue.field_b.addLast(var2, param1 + 27237);
-          fl.b(1, param0);
+          GrowableIntArray.b(1, param0);
           return var2;
         }
         return (rc) null;

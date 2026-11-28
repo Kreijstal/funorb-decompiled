@@ -62,12 +62,12 @@ final class bg extends DungeonAssaultScreen {
           var6 = 0;
           var3Lifetime1 = var6;
           while (SoftwareRasterizer.field_b.length > var6) {
-            SoftwareRasterizer.field_b[var6] = nb.a(SoftwareRasterizer.field_b[var6], -50529028) >>> 2;
+            SoftwareRasterizer.field_b[var6] = nb.bitwiseAnd(SoftwareRasterizer.field_b[var6], -50529028) >>> 2;
             var6++;
           }
           this.field_b.b(111);
         }
-        if (kn.field_g) {
+        if (ByteArrayPoolSupport.field_g) {
           ab.a(0);
         }
         oh.a((byte) 125);
@@ -94,7 +94,7 @@ final class bg extends DungeonAssaultScreen {
           }
           super.handleScreenKeyPress();
         }
-        if (kn.field_g) {
+        if (ByteArrayPoolSupport.field_g) {
           bl.a(0);
         }
         if (this.field_b != null &&
@@ -791,7 +791,7 @@ final class bg extends DungeonAssaultScreen {
         String var7;
         di var8;
         var4 = DungeonAssault.field_K;
-        if (kn.field_g &&
+        if (ByteArrayPoolSupport.field_g &&
           od.a((byte) -116)) {
           return;
         }

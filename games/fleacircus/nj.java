@@ -223,7 +223,7 @@ final class nj {
                   var10 = 65280 & var8;
                   var10 = (var10 >> 1) - (var10 >> 5) & 65280;
                   var11 = (255 & var8) >> 3;
-                  SoftwareRasterizer.field_a[var6_int] = TextLayout.a(TextLayout.a(var9 << 16, var10), var11);
+                  SoftwareRasterizer.field_a[var6_int] = TextLayout.bitwiseOr(TextLayout.bitwiseOr(var9 << 16, var10), var11);
                 }
                 var6_int++;
               }
@@ -258,26 +258,26 @@ final class nj {
         int var1 = 0;
         int var1Lifetime1;
         if (param0 == -9340) {
-          if (gf.field_d <= 32) {
+          if (ByteArrayPoolSupport.field_d <= 32) {
             ia.a(true, 0);
           } else {
-            var1 = gf.field_d % 32;
+            var1 = ByteArrayPoolSupport.field_d % 32;
             if (0 == var1) {
               var1 = 32;
             }
-            ia.a(true, gf.field_d - var1);
+            ia.a(true, ByteArrayPoolSupport.field_d - var1);
           }
           return;
         }
         nj.a(-16);
-        if (gf.field_d <= 32) {
+        if (ByteArrayPoolSupport.field_d <= 32) {
           ia.a(true, 0);
         } else {
-          var1Lifetime1 = gf.field_d % 32;
+          var1Lifetime1 = ByteArrayPoolSupport.field_d % 32;
           if (0 == var1Lifetime1) {
             var1Lifetime1 = 32;
           }
-          ia.a(true, gf.field_d - var1Lifetime1);
+          ia.a(true, ByteArrayPoolSupport.field_d - var1Lifetime1);
         }
     }
 

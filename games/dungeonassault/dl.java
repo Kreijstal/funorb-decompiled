@@ -6,11 +6,11 @@ final class dl {
     static int field_b;
     static String field_a;
 
-    final static kk a(byte param0, int param1, ResourceArchive param2) {
+    final static MusicPatch loadMusicPatch(byte param0, int param1, ResourceArchive param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
-        kk stackIn_6_0 = null;
+        MusicPatch stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -24,7 +24,7 @@ final class dl {
           if (var4 == null) {
             return null;
           }
-          stackIn_6_0 = new kk(var4);
+          stackIn_6_0 = new MusicPatch(var4);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -47,7 +47,7 @@ final class dl {
           return;
         }
         ResourceArchive var2 = (ResourceArchive) null;
-        dl.a((byte) -53, -32, (ResourceArchive) null);
+        dl.loadMusicPatch((byte) -53, -32, (ResourceArchive) null);
         field_c = null;
     }
 

@@ -281,7 +281,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             } else {
               ValidatedTextField.field_T = ProxyAuthenticationRequiredException.field_a;
             }
-            ValidatedTextField.field_T = dk.a(new CharSequence[]{(CharSequence) ((Object) ValidatedTextField.field_T), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qe.field_h)}, (byte) -55);
+            ValidatedTextField.field_T = MusicPatch.a(new CharSequence[]{(CharSequence) ((Object) ValidatedTextField.field_T), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qe.field_h)}, (byte) -55);
           }
           SectorCacheStore.field_a.closeDialog((byte) -78);
           RichTextWidget.a(param0 - 60);
@@ -471,9 +471,9 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               throw new IllegalStateException();
             }
             jl.field_a = new String[var4];
-            eg.a(NetworkGameClient.field_y, 0, jl.field_a, 0, var4);
+            ArrayBlockSupport.copyObjectRange(NetworkGameClient.field_y, 0, jl.field_a, 0, var4);
             lo.field_c = new String[-1 + var3_int - var4];
-            eg.a(NetworkGameClient.field_y, 1 + var4, lo.field_c, 0, -1 + (-var4 + var3_int));
+            ArrayBlockSupport.copyObjectRange(NetworkGameClient.field_y, 1 + var4, lo.field_c, 0, -1 + (-var4 + var3_int));
             var3_int = v.a(ec.field_m, AgeValidator.a(new String[]{"<br><%0><br>"}, ModelMesh.field_t, 3), -27815, LoginPanel.field_L, NetworkGameClient.field_y);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
@@ -487,9 +487,9 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               throw new IllegalStateException();
             }
             sl.field_r = new String[var4];
-            eg.a(NetworkGameClient.field_y, 0, sl.field_r, 0, var4);
+            ArrayBlockSupport.copyObjectRange(NetworkGameClient.field_y, 0, sl.field_r, 0, var4);
             ne.field_a = new String[-var4 + (var3_int - 1)];
-            eg.a(NetworkGameClient.field_y, 1 + var4, ne.field_a, 0, -1 + (-var4 + var3_int));
+            ArrayBlockSupport.copyObjectRange(NetworkGameClient.field_y, 1 + var4, ne.field_a, 0, -1 + (-var4 + var3_int));
             if (jl.field_a.length < sl.field_r.length) {
               stackIn_59_0 = sl.field_r.length;
             } else {

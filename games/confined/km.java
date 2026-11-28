@@ -5,7 +5,7 @@ final class km {
     static String field_a;
     static String field_b;
 
-    static int a(int param0, int param1) {
+    static int bitwiseXor(int param0, int param1) {
         return param0 ^ param1;
     }
 

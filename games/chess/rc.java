@@ -185,7 +185,7 @@ final class rc {
         if (null != tl.field_Fb) {
           tl.field_Fb.n(-116);
           if (param0 != vk.field_g) {
-            ml.a(0);
+            GrowableIntArray.a(0);
             hf.field_g = 0;
             return;
           }
@@ -196,7 +196,7 @@ final class rc {
           hf.field_g = 0;
           return;
         }
-        ml.a(0);
+        GrowableIntArray.a(0);
         hf.field_g = 0;
     }
 

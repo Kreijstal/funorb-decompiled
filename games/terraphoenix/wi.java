@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wi extends InteractiveWidget {
-    private fc field_N;
+    private GrowableIntArray field_N;
     int field_K;
     private int field_L;
     int field_M;
@@ -28,8 +28,8 @@ final class wi extends InteractiveWidget {
 
     final int b(int param0, int param1) {
         if (param1 <= param0 &&
-          param0 < this.field_N.c(-16952)) {
-          return this.field_N.a((byte) -68, param0);
+          param0 < this.field_N.size(-16952)) {
+          return this.field_N.get((byte) -68, param0);
         }
         return -1;
     }
@@ -38,7 +38,7 @@ final class wi extends InteractiveWidget {
         if (param0 != 1) {
           this.field_K = 39;
         }
-        return this.field_N.c(-16952);
+        return this.field_N.size(-16952);
     }
 
     final boolean pointerPressed(boolean param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
@@ -74,8 +74,8 @@ final class wi extends InteractiveWidget {
             }
             var10 = 2147483647;
             var11 = -1;
-            for (var12 = 0; var12 < this.field_N.c(-16952); var12++) {
-              var13 = this.field_N.a((byte) -68, var12) - var8_int;
+            for (var12 = 0; var12 < this.field_N.size(-16952); var12++) {
+              var13 = this.field_N.get((byte) -68, var12) - var8_int;
               var13 = var13 * var13;
               if (var13 < var10) {
                 var10 = var13;
@@ -83,10 +83,10 @@ final class wi extends InteractiveWidget {
               }
             }
             if (0 <= var11) {
-              this.field_N.b(var11, 122);
+              this.field_N.removeAt(var11, 122);
             }
           } else {
-            this.field_N.c(0, var8_int);
+            this.field_N.append(0, var8_int);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

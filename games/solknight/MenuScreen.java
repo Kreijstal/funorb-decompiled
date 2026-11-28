@@ -550,7 +550,7 @@ final class MenuScreen {
         int var3;
         var3 = SolKnight.field_L ? 1 : 0;
         if (ClientException.field_b > 240) {
-          if (hg.field_F == 0 &&
+          if (MusicPatchNode.field_F == 0 &&
             !fh.field_d[83] &&
             !fh.field_d[84]) {
             return;
@@ -596,7 +596,7 @@ final class MenuScreen {
         if (-1 != this.field_f.field_f) {
           this.a(true, 2647, this.field_f.field_f);
         }
-        if (param0 != hg.field_F) {
+        if (param0 != MusicPatchNode.field_F) {
           this.field_b = StandardContentDialog.field_gb;
           this.field_a = SpriteState.field_o;
         }
@@ -915,8 +915,8 @@ final class MenuScreen {
                       if (var8 == 1) {
                         var14 = 8;
                       }
-                      td.field_e[var14 + hg.field_y].draw(83, 248 + var13 - 103);
-                      td.field_e[hg.field_y + var14].draw(526, var13 + 145);
+                      td.field_e[var14 + MusicPatchNode.field_y].draw(83, 248 + var13 - 103);
+                      td.field_e[MusicPatchNode.field_y + var14].draw(526, var13 + 145);
                       BufferedSocket.field_b.drawCentred(MidiPcmStream.field_y[var8], 320, -103 + (var13 + 277), 16727871, -1);
                       BufferedSocket.field_b.drawParagraph(AccountRegistrationPanel.field_N[var8], 38, var13 + 193, 564, 480, 16777215, -1, 1, 0, 28);
                       ah.field_i[this.field_d] = var13 + var10Lifetime1Lifetime1;
@@ -1193,12 +1193,12 @@ final class MenuScreen {
             var10 = var10 + var9;
           }
           var10 += 5;
-          BufferedSocket.field_b.drawString(ff.field_d + 100 * fc.field_n[var7], 190, var10, 16777215, -1);
+          BufferedSocket.field_b.drawString(ff.field_d + 100 * MusicPatch.field_n[var7], 190, var10, 16777215, -1);
           var10 = var10 + var9;
           var3Lifetime1 = 190;
           BufferedSocket.field_b.drawString(cf.field_b, var3Lifetime1, var10, 16777215, -1);
           var3Lifetime1 = var3Lifetime1 + BufferedSocket.field_b.stringWidth(cf.field_b);
-          for (var14Lifetime1 = 0; var14Lifetime1 < fc.field_n[var7]; var14Lifetime1++) {
+          for (var14Lifetime1 = 0; var14Lifetime1 < MusicPatch.field_n[var7]; var14Lifetime1++) {
             pg.field_a.draw(var3Lifetime1, -BufferedSocket.field_b.field_m + var10);
             var3Lifetime1 = var3Lifetime1 + pg.field_a.field_p / 3;
           }
@@ -1256,9 +1256,9 @@ final class MenuScreen {
                 var10 = var10 ^ 285L;
             }
             var12 = var10 ^ var2;
-            field_c[0][var0] = td.a(td.a(var4 << 8, td.a(var8 << 16, td.a(td.a(td.a(var6 << 40, td.a(var2 << 56, var2 << 48)), var2 << 32), var10 << 24))), var12);
+            field_c[0][var0] = td.bitwiseOr(td.bitwiseOr(var4 << 8, td.bitwiseOr(var8 << 16, td.bitwiseOr(td.bitwiseOr(td.bitwiseOr(var6 << 40, td.bitwiseOr(var2 << 56, var2 << 48)), var2 << 32), var10 << 24))), var12);
             for (var14 = 1; 8 > var14; var14++) {
-                field_c[var14][var0] = td.a(field_c[var14 - 1][var0] << 56, field_c[-1 + var14][var0] >>> 8);
+                field_c[var14][var0] = td.bitwiseOr(field_c[var14 - 1][var0] << 56, field_c[-1 + var14][var0] >>> 8);
             }
             var0++;
         }
@@ -1267,7 +1267,7 @@ final class MenuScreen {
         var0 = var15;
         while (var15 <= 10) {
             var1 = 8 * (-1 + var15);
-            field_g[var15] = LabeledWidgetContainer.a(LabeledWidgetContainer.a(tk.a(field_c[6][6 + var1], 65280L), LabeledWidgetContainer.a(LabeledWidgetContainer.a(LabeledWidgetContainer.a(tk.a(1095216660480L, field_c[3][3 + var1]), LabeledWidgetContainer.a(LabeledWidgetContainer.a(tk.a(-72057594037927936L, field_c[0][var1]), tk.a(71776119061217280L, field_c[1][1 + var1])), tk.a(280375465082880L, field_c[2][var1 + 2]))), tk.a(field_c[4][4 + var1], 4278190080L)), tk.a(field_c[5][5 + var1], 16711680L))), tk.a(255L, field_c[7][var1 + 7]));
+            field_g[var15] = LabeledWidgetContainer.bitwiseXor(LabeledWidgetContainer.bitwiseXor(tk.bitwiseAnd(field_c[6][6 + var1], 65280L), LabeledWidgetContainer.bitwiseXor(LabeledWidgetContainer.bitwiseXor(LabeledWidgetContainer.bitwiseXor(tk.bitwiseAnd(1095216660480L, field_c[3][3 + var1]), LabeledWidgetContainer.bitwiseXor(LabeledWidgetContainer.bitwiseXor(tk.bitwiseAnd(-72057594037927936L, field_c[0][var1]), tk.bitwiseAnd(71776119061217280L, field_c[1][1 + var1])), tk.bitwiseAnd(280375465082880L, field_c[2][var1 + 2]))), tk.bitwiseAnd(field_c[4][4 + var1], 4278190080L)), tk.bitwiseAnd(field_c[5][5 + var1], 16711680L))), tk.bitwiseAnd(255L, field_c[7][var1 + 7]));
             var15++;
         }
     }

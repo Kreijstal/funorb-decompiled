@@ -92,8 +92,8 @@ final class ed {
             var12.bindAsRenderTarget();
             ql.field_k.drawCentred(ModalDialog.a(IterableNodeHashTable.field_b, new String[]{TextLineMetrics.field_e}, true), var6, 40, 16777215, -1);
             DropTargetWidgetContainer.field_H.drawCentred(ModalDialog.a(ResizableModalDialog.field_Y, new String[]{TextLineMetrics.field_e}, true), var6, 60, 16777215, -1);
-            ql.field_k.drawCentred(ModalDialog.a(NetworkGameClient.field_w, new String[]{id.field_i}, true), var6, 110, 16777215, -1);
-            DropTargetWidgetContainer.field_H.drawCentred(ModalDialog.a(lj.field_i, new String[]{id.field_i}, true), var6, 130, 16777215, -1);
+            ql.field_k.drawCentred(ModalDialog.a(NetworkGameClient.field_w, new String[]{GrowableIntArray.field_i}, true), var6, 110, 16777215, -1);
+            DropTargetWidgetContainer.field_H.drawCentred(ModalDialog.a(lj.field_i, new String[]{GrowableIntArray.field_i}, true), var6, 130, 16777215, -1);
             ql.field_k.drawCentred(MidiPcmStream.field_N, var6, 180, 16777215, -1);
             DropTargetWidgetContainer.field_H.drawCentred(pg.field_b, var6, 200, 16777215, -1);
             rg.a(0, var12, var12.field_w, var12.field_t, 1, -68, 3, 0);

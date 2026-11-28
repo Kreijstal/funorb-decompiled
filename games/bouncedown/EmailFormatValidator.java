@@ -250,9 +250,9 @@ final class EmailFormatValidator extends TextFieldValidator {
               throw new IllegalStateException();
             }
             RegistrationAgreementPane.field_E = new String[var4];
-            cb.a(ClientException.field_g, 0, RegistrationAgreementPane.field_E, 0, var4);
+            ArrayBlockSupport.copyObjectRange(ClientException.field_g, 0, RegistrationAgreementPane.field_E, 0, var4);
             StripedProgressWidget.field_E = new String[var3_int - var4 - 1];
-            cb.a(ClientException.field_g, var4 + 1, StripedProgressWidget.field_E, 0, -var4 + (var3_int - 1));
+            ArrayBlockSupport.copyObjectRange(ClientException.field_g, var4 + 1, StripedProgressWidget.field_E, 0, -var4 + (var3_int - 1));
             var4 = -1;
             var3_int = r.a(EditableTextField.field_E, ClientException.field_g, BufferedRandomAccessFile.a(DropTargetWidgetContainer.field_B, new String[]{"<br><%0><br>"}, (byte) -126), param1 ^ -25697, ResourceArchive.field_a);
             for (var5 = 0; var3_int > var5; var5++) {
@@ -266,9 +266,9 @@ final class EmailFormatValidator extends TextFieldValidator {
               throw new IllegalStateException();
             }
             t.field_r = new String[var4];
-            cb.a(ClientException.field_g, 0, t.field_r, 0, var4);
+            ArrayBlockSupport.copyObjectRange(ClientException.field_g, 0, t.field_r, 0, var4);
             vb.field_k = new String[-1 + (var3_int - var4)];
-            cb.a(ClientException.field_g, var4 + 1, vb.field_k, 0, var3_int + (-var4 - 1));
+            ArrayBlockSupport.copyObjectRange(ClientException.field_g, var4 + 1, vb.field_k, 0, var3_int + (-var4 - 1));
             if (RegistrationAgreementPane.field_E.length >= t.field_r.length) {
               stackIn_57_0 = RegistrationAgreementPane.field_E.length;
             } else {

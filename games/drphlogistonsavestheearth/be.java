@@ -951,7 +951,7 @@ final class be {
 
     final static RgbSprite b() {
         RgbSprite var0 = new RgbSprite(SoftwareRasterizer.field_k, SoftwareRasterizer.field_c);
-        kg.a(SoftwareRasterizer.field_l, 0, var0.field_B, 0, var0.field_B.length);
+        ArrayBlockSupport.copyIntRange(SoftwareRasterizer.field_l, 0, var0.field_B, 0, var0.field_B.length);
         return var0;
     }
 

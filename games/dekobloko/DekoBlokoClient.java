@@ -1466,7 +1466,7 @@ public final class DekoBlokoClient extends FunOrbClient {
           Bzip2Decompressor.clearStaticReferences();
           Bzip2State.clearStaticReferences(true);
           MixedSupport071.clearStaticReferences(true);
-          MixedSupport130.clearStaticReferences((byte) 111);
+          ByteArrayPoolSupport.clearStaticReferences((byte) 111);
           MixedSupport083.clearStaticReferences(-117);
           MixedSupport070.clearStaticReferences((byte) -117);
           MixedSupport009.clearStaticReferences((byte) -102);
@@ -1529,7 +1529,7 @@ public final class DekoBlokoClient extends FunOrbClient {
           BirthDateInput.clearStaticReferences(-20);
           RichTextLayout.clearDeclaredStaticReferences((byte) -37);
           DirectByteStorage.performAction0550(0);
-          NetworkSupport006.clearStaticReferences(false);
+          GrowableIntArray.clearStaticReferences(false);
           DraggableWidgetContainer.performAction1484(11344);
           DropTargetWidgetContainer.performAction0705(true);
           NodeHashTable.clearStaticReferences(0);
@@ -2624,8 +2624,8 @@ public final class DekoBlokoClient extends FunOrbClient {
             MixedSupport112.rawSoundState0020 = ModalDialogHost.networkSupport011State0001.getSoundEffectByName("", "db_solid_tiles_pop2", 0);
             PlayerNameAvailabilityValidator.rawSoundArrayState0002[0] = ModalDialogHost.networkSupport011State0001.getSoundEffectByName("", "db_combo_1", 0);
             PlayerNameAvailabilityValidator.rawSoundArrayState0002[1] = ModalDialogHost.networkSupport011State0001.getSoundEffectByName("", "db_combo_2", integerArgument1 + 0);
-            PlayerNameAvailabilityValidator.rawSoundArrayState0002[2] = ModalDialogHost.networkSupport011State0001.getSoundEffectByName("", "db_combo_3", MixedSupport106.computeInteger1387(integerArgument1, 0));
-            PlayerNameAvailabilityValidator.rawSoundArrayState0002[3] = ModalDialogHost.networkSupport011State0001.getSoundEffectByName("", "db_combo_4", MixedSupport106.computeInteger1387(integerArgument1, 0));
+            PlayerNameAvailabilityValidator.rawSoundArrayState0002[2] = ModalDialogHost.networkSupport011State0001.getSoundEffectByName("", "db_combo_3", MixedSupport106.bitwiseXor(integerArgument1, 0));
+            PlayerNameAvailabilityValidator.rawSoundArrayState0002[3] = ModalDialogHost.networkSupport011State0001.getSoundEffectByName("", "db_combo_4", MixedSupport106.bitwiseXor(integerArgument1, 0));
             RenderingSupport001.rawSoundState0002 = ModalDialogHost.networkSupport011State0001.getSoundEffectByName("", "db_simultaneous_bonus2", 0);
             MixedSupport090.rawSoundState0015 = ModalDialogHost.networkSupport011State0001.getMusicSampleByName((byte) 101, "", "db_loose_drill");
             MixedSupport040.rawSoundState0008 = ModalDialogHost.networkSupport011State0001.getMusicSampleByName((byte) 101, "", "db_bucket_water_capsule2");
@@ -3004,11 +3004,11 @@ public final class DekoBlokoClient extends FunOrbClient {
                     MixedSupport073.rgbSpriteState0029 = SceneWidgetPart007.computeRgbSprite1049(16776192, 16743168, CacheWorkQueue.stringState0265, RenderingSupport006.renderingSupport009State0003, 6, 0, (byte) 99);
                     ResourceSupport001.rgbSpriteState0004 = SceneWidgetPart007.computeRgbSprite1049(16776192, 16743168, MixedSupport124.stringState0542, RenderingSupport006.renderingSupport009State0003, 6, 0, (byte) 88);
                     LobbyRoomRow.rgbSpriteArrayArrayState0013[0] = MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "fruit_buckettop");
-                    MixedSupport130.rgbSpriteArrayArrayState0012[0] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "fruit_lefttex"), true);
+                    ByteArrayPoolSupport.rgbSpriteArrayArrayState0012[0] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "fruit_lefttex"), true);
                     GameDomainSupport001.rgbSpriteArrayArrayState0002[0] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "fruit_leftsidetex"), true);
                     NineSliceSprite.indexedSpriteArrayArrayState0001[0] = ResizableModalDialog.computeIndexedSpriteArray1554("fruit_leftmask", EmailFormatValidator.resourceArchiveState0008, false, "");
                     MixedSupport107.rgbSpriteArrayArrayState0009[0] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "fruit_righttex"), true);
-                    SecondaryNodeDequeIterator.rgbSpriteArrayArrayState0005[0] = NodeHashTable.computeRgbSpriteArray1501(MixedSupport106.computeInteger1387(integerArgument1, 25972), true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "fruit_rightsidetex"), true);
+                    SecondaryNodeDequeIterator.rgbSpriteArrayArrayState0005[0] = NodeHashTable.computeRgbSpriteArray1501(MixedSupport106.bitwiseXor(integerArgument1, 25972), true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "fruit_rightsidetex"), true);
                     ProxySocketFactory.indexedSpriteArrayArrayState0003[0] = ResizableModalDialog.computeIndexedSpriteArray1554("fruit_rightmask", EmailFormatValidator.resourceArchiveState0008, false, "");
                     ResourceSupport001.rgbSpriteArrayArrayState0001[0] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "fruit_bottomtex"), true);
                     MixedSupport041.indexedSpriteArrayArrayState0002[0] = ResizableModalDialog.computeIndexedSpriteArray1554("fruit_bottommask", EmailFormatValidator.resourceArchiveState0008, false, "");
@@ -3019,11 +3019,11 @@ public final class DekoBlokoClient extends FunOrbClient {
                     HashNode.rgbSpriteArrayArrayState0004[1] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(integerArgument1 + 112, EmailFormatValidator.resourceArchiveState0008, "", "animals_bottomspecial"), false);
                     MixedSupport041.indexedSpriteArrayArrayState0002[1] = ResizableModalDialog.computeIndexedSpriteArray1554("animals_bottommask", EmailFormatValidator.resourceArchiveState0008, false, "");
                     LobbyRoomRow.rgbSpriteArrayArrayState0013[2] = MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "breakfast_buckettop");
-                    MixedSupport130.rgbSpriteArrayArrayState0012[2] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "breakfast_lefttex"), true);
+                    ByteArrayPoolSupport.rgbSpriteArrayArrayState0012[2] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "breakfast_lefttex"), true);
                     GameDomainSupport001.rgbSpriteArrayArrayState0002[2] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "breakfast_leftsidetex"), true);
                     NineSliceSprite.indexedSpriteArrayArrayState0001[2] = ResizableModalDialog.computeIndexedSpriteArray1554("breakfast_leftmask", EmailFormatValidator.resourceArchiveState0008, false, "");
                     MixedSupport107.rgbSpriteArrayArrayState0009[2] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "breakfast_righttex"), true);
-                    SecondaryNodeDequeIterator.rgbSpriteArrayArrayState0005[2] = NodeHashTable.computeRgbSpriteArray1501(MixedSupport106.computeInteger1387(integerArgument1, 25972), true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "breakfast_rightsidetex"), true);
+                    SecondaryNodeDequeIterator.rgbSpriteArrayArrayState0005[2] = NodeHashTable.computeRgbSpriteArray1501(MixedSupport106.bitwiseXor(integerArgument1, 25972), true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "breakfast_rightsidetex"), true);
                     ProxySocketFactory.indexedSpriteArrayArrayState0003[2] = ResizableModalDialog.computeIndexedSpriteArray1554("breakfast_rightmask", EmailFormatValidator.resourceArchiveState0008, false, "");
                     ResourceSupport001.rgbSpriteArrayArrayState0001[2] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "breakfast_bottomtex"), true);
                     MixedSupport041.indexedSpriteArrayArrayState0002[2] = ResizableModalDialog.computeIndexedSpriteArray1554("breakfast_bottommask", EmailFormatValidator.resourceArchiveState0008, false, "");
@@ -3031,13 +3031,13 @@ public final class DekoBlokoClient extends FunOrbClient {
                     cachedRgbSpriteArrayLocal2 = NodeHashTable.computeRgbSpriteArray1501(25972, false, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "bugs_sidespr"), true);
                     MixedSupport107.rgbSpriteArrayArrayState0010[3] = cachedRgbSpriteArrayLocal2;
                     BoundedRandomAccessFile.rgbSpriteArrayArrayState0007[3] = cachedRgbSpriteArrayLocal2;
-                    HashNode.rgbSpriteArrayArrayState0004[3] = NodeHashTable.computeRgbSpriteArray1501(MixedSupport106.computeInteger1387(integerArgument1, 25972), true, MixedSupport011.computeRgbSpriteArray0154(integerArgument1 + 112, EmailFormatValidator.resourceArchiveState0008, "", "bugs_bottomspecial"), false);
+                    HashNode.rgbSpriteArrayArrayState0004[3] = NodeHashTable.computeRgbSpriteArray1501(MixedSupport106.bitwiseXor(integerArgument1, 25972), true, MixedSupport011.computeRgbSpriteArray0154(integerArgument1 + 112, EmailFormatValidator.resourceArchiveState0008, "", "bugs_bottomspecial"), false);
                     MixedSupport041.indexedSpriteArrayArrayState0002[3] = ResizableModalDialog.computeIndexedSpriteArray1554("bugs_bottommask", EmailFormatValidator.resourceArchiveState0008, false, "");
-                    LobbyRoomRow.rgbSpriteArrayArrayState0013[4] = MixedSupport011.computeRgbSpriteArray0154(MixedSupport106.computeInteger1387(integerArgument1, 112), EmailFormatValidator.resourceArchiveState0008, "", "flowers_buckettop");
-                    MixedSupport130.rgbSpriteArrayArrayState0012[4] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "flowers_lefttex"), true);
-                    GameDomainSupport001.rgbSpriteArrayArrayState0002[4] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(MixedSupport106.computeInteger1387(integerArgument1, 112), EmailFormatValidator.resourceArchiveState0008, "", "flowers_leftsidetex"), true);
+                    LobbyRoomRow.rgbSpriteArrayArrayState0013[4] = MixedSupport011.computeRgbSpriteArray0154(MixedSupport106.bitwiseXor(integerArgument1, 112), EmailFormatValidator.resourceArchiveState0008, "", "flowers_buckettop");
+                    ByteArrayPoolSupport.rgbSpriteArrayArrayState0012[4] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "flowers_lefttex"), true);
+                    GameDomainSupport001.rgbSpriteArrayArrayState0002[4] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(MixedSupport106.bitwiseXor(integerArgument1, 112), EmailFormatValidator.resourceArchiveState0008, "", "flowers_leftsidetex"), true);
                     NineSliceSprite.indexedSpriteArrayArrayState0001[4] = ResizableModalDialog.computeIndexedSpriteArray1554("flowers_leftmask", EmailFormatValidator.resourceArchiveState0008, false, "");
-                    MixedSupport107.rgbSpriteArrayArrayState0009[4] = NodeHashTable.computeRgbSpriteArray1501(MixedSupport106.computeInteger1387(integerArgument1, 25972), true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "flowers_righttex"), true);
+                    MixedSupport107.rgbSpriteArrayArrayState0009[4] = NodeHashTable.computeRgbSpriteArray1501(MixedSupport106.bitwiseXor(integerArgument1, 25972), true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "flowers_righttex"), true);
                     SecondaryNodeDequeIterator.rgbSpriteArrayArrayState0005[4] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "flowers_rightsidetex"), true);
                     ProxySocketFactory.indexedSpriteArrayArrayState0003[4] = ResizableModalDialog.computeIndexedSpriteArray1554("flowers_rightmask", EmailFormatValidator.resourceArchiveState0008, false, "");
                     ResourceSupport001.rgbSpriteArrayArrayState0001[4] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "flowers_bottomtex"), true);
@@ -3046,25 +3046,25 @@ public final class DekoBlokoClient extends FunOrbClient {
                     cachedRgbSpriteArrayLocal3 = NodeHashTable.computeRgbSpriteArray1501(25972, false, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "undersea_sidespr"), true);
                     MixedSupport107.rgbSpriteArrayArrayState0010[5] = cachedRgbSpriteArrayLocal3;
                     BoundedRandomAccessFile.rgbSpriteArrayArrayState0007[5] = cachedRgbSpriteArrayLocal3;
-                    HashNode.rgbSpriteArrayArrayState0004[5] = NodeHashTable.computeRgbSpriteArray1501(MixedSupport106.computeInteger1387(integerArgument1, 25972), true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "undersea_bottomspecial"), false);
+                    HashNode.rgbSpriteArrayArrayState0004[5] = NodeHashTable.computeRgbSpriteArray1501(MixedSupport106.bitwiseXor(integerArgument1, 25972), true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "undersea_bottomspecial"), false);
                     MixedSupport041.indexedSpriteArrayArrayState0002[5] = ResizableModalDialog.computeIndexedSpriteArray1554("undersea_bottommask", EmailFormatValidator.resourceArchiveState0008, false, "");
                     LobbyRoomRow.rgbSpriteArrayArrayState0013[6] = MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "city_buckettop");
-                    MixedSupport130.rgbSpriteArrayArrayState0012[6] = NodeHashTable.computeRgbSpriteArray1501(integerArgument1 + 25972, true, MixedSupport011.computeRgbSpriteArray0154(integerArgument1 + 112, EmailFormatValidator.resourceArchiveState0008, "", "city_lefttex"), true);
+                    ByteArrayPoolSupport.rgbSpriteArrayArrayState0012[6] = NodeHashTable.computeRgbSpriteArray1501(integerArgument1 + 25972, true, MixedSupport011.computeRgbSpriteArray0154(integerArgument1 + 112, EmailFormatValidator.resourceArchiveState0008, "", "city_lefttex"), true);
                     GameDomainSupport001.rgbSpriteArrayArrayState0002[6] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "city_leftsidetex"), true);
                     NineSliceSprite.indexedSpriteArrayArrayState0001[6] = ResizableModalDialog.computeIndexedSpriteArray1554("city_leftmask", EmailFormatValidator.resourceArchiveState0008, false, "");
                     MixedSupport107.rgbSpriteArrayArrayState0009[6] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "city_righttex"), true);
-                    SecondaryNodeDequeIterator.rgbSpriteArrayArrayState0005[6] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(MixedSupport106.computeInteger1387(integerArgument1, 112), EmailFormatValidator.resourceArchiveState0008, "", "city_rightsidetex"), true);
+                    SecondaryNodeDequeIterator.rgbSpriteArrayArrayState0005[6] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(MixedSupport106.bitwiseXor(integerArgument1, 112), EmailFormatValidator.resourceArchiveState0008, "", "city_rightsidetex"), true);
                     ProxySocketFactory.indexedSpriteArrayArrayState0003[6] = ResizableModalDialog.computeIndexedSpriteArray1554("city_rightmask", EmailFormatValidator.resourceArchiveState0008, false, "");
                     ResourceSupport001.rgbSpriteArrayArrayState0001[6] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "city_bottomtex"), true);
                     MixedSupport041.indexedSpriteArrayArrayState0002[6] = ResizableModalDialog.computeIndexedSpriteArray1554("city_bottommask", EmailFormatValidator.resourceArchiveState0008, false, "");
                     LobbyRoomRow.rgbSpriteArrayArrayState0013[7] = MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "eightbit_buckettop");
-                    MixedSupport130.rgbSpriteArrayArrayState0012[7] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "eightbit_lefttex"), true);
+                    ByteArrayPoolSupport.rgbSpriteArrayArrayState0012[7] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "eightbit_lefttex"), true);
                     GameDomainSupport001.rgbSpriteArrayArrayState0002[7] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(integerArgument1 + 112, EmailFormatValidator.resourceArchiveState0008, "", "eightbit_leftsidetex"), true);
                     NineSliceSprite.indexedSpriteArrayArrayState0001[7] = ResizableModalDialog.computeIndexedSpriteArray1554("eightbit_leftmask", EmailFormatValidator.resourceArchiveState0008, false, "");
                     MixedSupport107.rgbSpriteArrayArrayState0009[7] = NodeHashTable.computeRgbSpriteArray1501(25972, true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "eightbit_righttex"), true);
-                    SecondaryNodeDequeIterator.rgbSpriteArrayArrayState0005[7] = NodeHashTable.computeRgbSpriteArray1501(MixedSupport106.computeInteger1387(integerArgument1, 25972), true, MixedSupport011.computeRgbSpriteArray0154(MixedSupport106.computeInteger1387(integerArgument1, 112), EmailFormatValidator.resourceArchiveState0008, "", "eightbit_rightsidetex"), true);
+                    SecondaryNodeDequeIterator.rgbSpriteArrayArrayState0005[7] = NodeHashTable.computeRgbSpriteArray1501(MixedSupport106.bitwiseXor(integerArgument1, 25972), true, MixedSupport011.computeRgbSpriteArray0154(MixedSupport106.bitwiseXor(integerArgument1, 112), EmailFormatValidator.resourceArchiveState0008, "", "eightbit_rightsidetex"), true);
                     ProxySocketFactory.indexedSpriteArrayArrayState0003[7] = ResizableModalDialog.computeIndexedSpriteArray1554("eightbit_rightmask", EmailFormatValidator.resourceArchiveState0008, false, "");
-                    ResourceSupport001.rgbSpriteArrayArrayState0001[7] = NodeHashTable.computeRgbSpriteArray1501(MixedSupport106.computeInteger1387(integerArgument1, 25972), true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "eightbit_bottomtex"), true);
+                    ResourceSupport001.rgbSpriteArrayArrayState0001[7] = NodeHashTable.computeRgbSpriteArray1501(MixedSupport106.bitwiseXor(integerArgument1, 25972), true, MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "eightbit_bottomtex"), true);
                     MixedSupport041.indexedSpriteArrayArrayState0002[7] = ResizableModalDialog.computeIndexedSpriteArray1554("eightbit_bottommask", EmailFormatValidator.resourceArchiveState0008, false, "");
                     break;
                   }
@@ -3076,7 +3076,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                 integerLocal41 = 0;
                 scanLoop4: while (true) {
                   if (integerLocal41 < 8) {
-                    MixedSupport094.performAction1202(MixedSupport130.rgbSpriteArrayArrayState0012[integerLocal41], 19264);
+                    MixedSupport094.performAction1202(ByteArrayPoolSupport.rgbSpriteArrayArrayState0012[integerLocal41], 19264);
                     MixedSupport094.performAction1202(MixedSupport107.rgbSpriteArrayArrayState0009[integerLocal41], integerArgument1 + 19264);
                     MixedSupport094.performAction1202(ResourceSupport001.rgbSpriteArrayArrayState0001[integerLocal41], 19264);
                     IterableNodeCollection.performAction1658(NineSliceSprite.indexedSpriteArrayArrayState0001[integerLocal41], (byte) 115);
@@ -3193,7 +3193,7 @@ public final class DekoBlokoClient extends FunOrbClient {
 
     static {
         byteArrayState0004 = new byte[65536];
-        MixedSupport008.performAction0072(byteArrayState0004, 0, 65536, (byte) -128);
+        ArrayBlockSupport.performAction0072(byteArrayState0004, 0, 65536, (byte) -128);
         stringState0095 = "Theme <%0> strategy";
         stringState0096 = "Show all private chat";
         rgbSpriteArrayState0007 = new RgbSprite[3];

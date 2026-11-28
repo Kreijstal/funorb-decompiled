@@ -81,18 +81,18 @@ class qb extends k {
             for (var8 = 0; hh.field_d > var8; var8++) {
               var9 = var8 * this.field_o / hh.field_d;
               var10 = this.field_n[var9 + var7];
-              var6[var8] = dda.a(255, var10) << 4;
-              var5[var8] = dda.a(var10, 65280) >> 4;
-              var4[var8] = dda.a(16711680, var10) >> 12;
+              var6[var8] = dda.bitwiseAnd(255, var10) << 4;
+              var5[var8] = dda.bitwiseAnd(var10, 65280) >> 4;
+              var4[var8] = dda.bitwiseAnd(16711680, var10) >> 12;
             }
           } else {
             for (var8 = 0; var8 < hh.field_d; var8++) {
               incrementValue$0 = var7;
               var7++;
               var9 = this.field_n[incrementValue$0];
-              var6[var8] = dda.a(255, var9) << 4;
-              var5[var8] = dda.a(var9 >> 4, 4080);
-              var4[var8] = dda.a(16711680, var9) >> 12;
+              var6[var8] = dda.bitwiseAnd(255, var9) << 4;
+              var5[var8] = dda.bitwiseAnd(var9 >> 4, 4080);
+              var4[var8] = dda.bitwiseAnd(16711680, var9) >> 12;
             }
           }
         }
@@ -195,15 +195,15 @@ class qb extends k {
               var7Lifetime1 = var9Lifetime1;
             }
           }
-          dfa.field_b = -(var7Lifetime1 >> 1) + (var7Lifetime1 + sd.field_a);
+          dfa.field_b = -(var7Lifetime1 >> 1) + (var7Lifetime1 + ByteArrayPoolSupport.field_a);
           ula.field_f = (ShieldEvent.field_r + DraggableWidgetContainer.field_J << 1) * fw.field_i.field_e;
-          StatusEffectInfo.field_a = sd.field_a - (var7Lifetime1 >> 1);
+          StatusEffectInfo.field_a = ByteArrayPoolSupport.field_a - (var7Lifetime1 >> 1);
           for (var8Lifetime2 = 0; var8Lifetime2 < pt.field_a.length; var8Lifetime2++) {
             stackIn_37_0 = ula.field_f;
             if (gn.field_l[var8Lifetime2] >= 0) {
               stackIn_38_1 = BoardView.field_t;
             } else {
-              stackIn_38_1 = un.field_i;
+              stackIn_38_1 = MusicPatchEnvelope.field_i;
             }
             ula.field_f = stackIn_37_0 + stackIn_38_1;
           }

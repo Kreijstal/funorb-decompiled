@@ -49,7 +49,7 @@ final class BufferedSocket implements Runnable {
         boolean decompiledFrameRemainder0 = true;
         var2 = fleas.field_A ? 1 : 0;
         tj.field_a = tj.field_a + 1;
-        if ((!(wc.field_q > 0) ||
+        if ((!(MusicPatch.field_q > 0) ||
           DiskArchiveRequest.c((byte) 68)) && (fleas.field_E == 0 &&
           tj.field_a >= 15)) {
           oa.a(9, true, 15);
@@ -500,7 +500,7 @@ final class BufferedSocket implements Runnable {
         var0 = var15;
         while (var15 <= 10) {
             var1 = -8 + var15 * 8;
-            field_c[var15] = ik.a(re.a(field_f[7][var1 + 7], 255L), ik.a(re.a(65280L, field_f[6][var1 + 6]), ik.a(ik.a(ik.a(re.a(field_f[3][var1 + 3], 1095216660480L), ik.a(ik.a(re.a(-72057594037927936L, field_f[0][var1]), re.a(71776119061217280L, field_f[1][var1 + 1])), re.a(field_f[2][2 + var1], 280375465082880L))), re.a(field_f[4][4 + var1], 4278190080L)), re.a(field_f[5][var1 + 5], 16711680L))));
+            field_c[var15] = ik.bitwiseXor(re.bitwiseAnd(field_f[7][var1 + 7], 255L), ik.bitwiseXor(re.bitwiseAnd(65280L, field_f[6][var1 + 6]), ik.bitwiseXor(ik.bitwiseXor(ik.bitwiseXor(re.bitwiseAnd(field_f[3][var1 + 3], 1095216660480L), ik.bitwiseXor(ik.bitwiseXor(re.bitwiseAnd(-72057594037927936L, field_f[0][var1]), re.bitwiseAnd(71776119061217280L, field_f[1][var1 + 1])), re.bitwiseAnd(field_f[2][2 + var1], 280375465082880L))), re.bitwiseAnd(field_f[4][4 + var1], 4278190080L)), re.bitwiseAnd(field_f[5][var1 + 5], 16711680L))));
             var15++;
         }
     }

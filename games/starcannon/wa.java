@@ -116,7 +116,7 @@ final class wa implements WidgetRenderer {
             }
           }
           jk.field_l = param3;
-          mc.field_c = param2;
+          ByteArrayPoolSupport.field_c = param2;
           TextLineMetrics.field_i = param0;
           ValidationStatusWidget.field_I = new Sprite[param4.length];
           for (var8 = 0; param4.length > var8; var8++) {
@@ -179,7 +179,7 @@ final class wa implements WidgetRenderer {
               var5_int = var11.length << 2;
             }
             for (var7 = 0; var5_int > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(7909) << (w.a(var7, 3) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(7909) << (w.bitwiseAnd(var7, 3) << 8));
             }
             var4_ref_we.unlink(4);
           } else {

@@ -353,9 +353,9 @@ public final class MinerDisturbance extends ob {
             if (sa.field_t[1][0] == null) {
               sa.field_t[1][0] = pb.a("supervolcano", fl.field_f, "rankings1", (byte) -77);
               var2 = tb.a("rankings2", "supervolcano", fl.field_f, 1);
-              ai.a(var2, 0, sa.field_t[1], 1, var2.length);
+              ArrayBlockSupport.copyObjectRange(var2, 0, sa.field_t[1], 1, var2.length);
               var2Lifetime1 = tb.a("rankings3", "supervolcano", fl.field_f, 1);
-              ai.a(var2Lifetime1, 0, sa.field_t[1], 6, var2Lifetime1.length);
+              ArrayBlockSupport.copyObjectRange(var2Lifetime1, 0, sa.field_t[1], 6, var2Lifetime1.length);
               sa.field_t[1][8] = pb.a("supervolcano", fl.field_f, "rankings4", (byte) -77);
               sa.field_t[1][9] = pb.a("supervolcano", fl.field_f, "rankings5", (byte) -77);
               var3_int = 0;
@@ -369,25 +369,25 @@ public final class MinerDisturbance extends ob {
               }
               return false;
             }
-            if (null == qf.field_o[1][8]) {
+            if (null == MidiNoteMask.field_o[1][8]) {
               nn.field_h[1] = jn.a("gravestone", -29553, "supervolcano", fl.field_f);
               dl.field_d[1] = jn.a("certificate_pattern", -29553, "supervolcano", fl.field_f);
-              qf.field_o[1][0] = jn.a("certificate_topleft", -29553, "supervolcano", fl.field_f);
-              qf.field_o[1][1] = jn.a("certificate_top", -29553, "supervolcano", fl.field_f);
-              qf.field_o[1][2] = jn.a("certificate_topright", -29553, "supervolcano", fl.field_f);
-              qf.field_o[1][3] = jn.a("certificate_left", -29553, "supervolcano", fl.field_f);
-              qf.field_o[1][4] = jn.a("certificate_centre", -29553, "supervolcano", fl.field_f);
-              qf.field_o[1][5] = jn.a("certificate_right", -29553, "supervolcano", fl.field_f);
-              qf.field_o[1][6] = jn.a("certificate_bottomleft", -29553, "supervolcano", fl.field_f);
-              qf.field_o[1][7] = jn.a("certificate_bottom", -29553, "supervolcano", fl.field_f);
-              qf.field_o[1][8] = jn.a("certificate_bottomright", -29553, "supervolcano", fl.field_f);
+              MidiNoteMask.field_o[1][0] = jn.a("certificate_topleft", -29553, "supervolcano", fl.field_f);
+              MidiNoteMask.field_o[1][1] = jn.a("certificate_top", -29553, "supervolcano", fl.field_f);
+              MidiNoteMask.field_o[1][2] = jn.a("certificate_topright", -29553, "supervolcano", fl.field_f);
+              MidiNoteMask.field_o[1][3] = jn.a("certificate_left", -29553, "supervolcano", fl.field_f);
+              MidiNoteMask.field_o[1][4] = jn.a("certificate_centre", -29553, "supervolcano", fl.field_f);
+              MidiNoteMask.field_o[1][5] = jn.a("certificate_right", -29553, "supervolcano", fl.field_f);
+              MidiNoteMask.field_o[1][6] = jn.a("certificate_bottomleft", -29553, "supervolcano", fl.field_f);
+              MidiNoteMask.field_o[1][7] = jn.a("certificate_bottom", -29553, "supervolcano", fl.field_f);
+              MidiNoteMask.field_o[1][8] = jn.a("certificate_bottomright", -29553, "supervolcano", fl.field_f);
               return false;
             }
             if (pl.field_k == null) {
               pl.field_k = jn.a("sub", -29553, "supervolcano", fl.field_f);
               il.field_s = jn.a("theking", -29553, "supervolcano", fl.field_f);
               SecondaryNodeDequeIterator.field_b = jn.a("obylisk", -29553, "supervolcano", fl.field_f);
-              aa.field_i = jn.a("mammoth", -29553, "supervolcano", fl.field_f);
+              GrowableIntArray.field_i = jn.a("mammoth", -29553, "supervolcano", fl.field_f);
               gh.field_a = jn.a("skeleton", -29553, "supervolcano", fl.field_f);
               rd.field_b = td.a("miner2oily", fl.field_f, "supervolcano", (byte) 109);
               fg.field_c = td.a("miner_stash_oily", fl.field_f, "supervolcano", (byte) 122);
@@ -434,15 +434,15 @@ public final class MinerDisturbance extends ob {
               pn.field_c = pb.a("supervolcano", fl.field_f, "thermometer_mask", (byte) -77);
               kc.field_a = rf.field_d.copy();
               pf.field_a = td.a("oildrips", fl.field_f, "supervolcano", (byte) 123);
-              vc.field_o = new Sprite[ph.field_e.length];
+              MusicPatch.field_o = new Sprite[ph.field_e.length];
               var2_int = 0;
               while (true) {
                 stackIn_66_0 = ~var2_int;
-                stackIn_66_1 = ~vc.field_o.length;
+                stackIn_66_1 = ~MusicPatch.field_o.length;
                 if (stackIn_66_0 > stackIn_66_1) {
-                  vc.field_o[var2_int] = ph.field_e[var2_int].copy();
-                  ml.a((byte) 93, 16777215, vc.field_o[var2_int], ph.field_e[var2_int]);
-                  var3 = vc.field_o[var2_int].field_D;
+                  MusicPatch.field_o[var2_int] = ph.field_e[var2_int].copy();
+                  ml.a((byte) 93, 16777215, MusicPatch.field_o[var2_int], ph.field_e[var2_int]);
+                  var3 = MusicPatch.field_o[var2_int].field_D;
                   stackIn_81_0 = var3.length - 1;
                   if (var5 == 0) {
                     var4 = stackIn_81_0;
@@ -4020,10 +4020,10 @@ public final class MinerDisturbance extends ob {
           NodeHashTableIterator.field_a = jn.a("sold", -29553, "shop", fl.field_f);
           kd.field_r = jn.a("green_frame", -29553, "shop", fl.field_f);
           ib.field_a = jn.a("controls", -29553, "", fl.field_f);
-          vc.field_p = new Sprite[9];
+          MusicPatch.field_p = new Sprite[9];
           var2_int = 0;
           while (var2_int < 9) {
-            vc.field_p[var2_int] = jn.a("fs_button" + var2_int, -29553, "", fl.field_f);
+            MusicPatch.field_p[var2_int] = jn.a("fs_button" + var2_int, -29553, "", fl.field_f);
             var2_int++;
             if (var13 == 0) {
               continue;
@@ -4258,9 +4258,9 @@ public final class MinerDisturbance extends ob {
             var9_array[12] = pb.a("", fl.field_f, "keys_s", (byte) -77);
             var9_array[13] = pb.a("", fl.field_f, "keys_alt", (byte) -77);
             var10 = new ln[var8.length + fl.field_j.length + var9_array.length];
-            ai.a(fl.field_j, 0, var10, 0, fl.field_j.length);
-            ai.a(var9_array, 0, var10, fl.field_j.length - var8.length, var9_array.length);
-            ai.a(var8, 0, var10, -var8.length + fl.field_j.length + var9_array.length, var8.length);
+            ArrayBlockSupport.copyObjectRange(fl.field_j, 0, var10, 0, fl.field_j.length);
+            ArrayBlockSupport.copyObjectRange(var9_array, 0, var10, fl.field_j.length - var8.length, var9_array.length);
+            ArrayBlockSupport.copyObjectRange(var8, 0, var10, -var8.length + fl.field_j.length + var9_array.length, var8.length);
             var11 = new int[var10.length];
             var12 = fl.field_j.length - var8.length;
             while (var12 < var10.length) {
@@ -4751,7 +4751,7 @@ public final class MinerDisturbance extends ob {
           rb.clearStaticReferences(-2004317953);
           ak.clearStaticReferences(false);
           q.a(20);
-          cg.clearDeclaredStaticReferences(param0 ^ 1);
+          MusicPatchNode.clearDeclaredStaticReferences(param0 ^ 1);
           MidiFileReader.clearStaticReferences();
           MusicPatchPcmStream.clearStaticReferences((byte) -114);
           SoundCache.clearStaticReferences((byte) -25);
@@ -4819,9 +4819,9 @@ public final class MinerDisturbance extends ob {
           ByteStorage.clearStaticReferences((byte) -112);
           Bzip2Decompressor.clearStaticReferences();
           Bzip2State.resetStaticState(param0 - 129);
-          qf.clearDeclaredStaticReferences(param0 - 28582);
-          vc.clearDeclaredStaticReferences(param0 + 105);
-          ng.a(-1);
+          MidiNoteMask.clearDeclaredStaticReferences(param0 - 28582);
+          MusicPatch.clearDeclaredStaticReferences(param0 + 105);
+          MusicPatchEnvelope.a(-1);
           PcmOutputWorker.clearStaticReferences(90);
           rf.clearStaticReferences((byte) -56);
           DefaultTextWidgetRenderer.clearStaticReferences(-7709);
@@ -4891,7 +4891,7 @@ public final class MinerDisturbance extends ob {
           lj.resetStaticState((byte) -69);
           DirectByteStorage.clearStaticReferences(param0 - 1);
           RichTextLayout.clearStaticReferences(0);
-          aa.clearStaticReferences((byte) -123);
+          GrowableIntArray.clearStaticReferences((byte) -123);
           DraggableWidgetContainer.clearDeclaredStaticReferences(27934);
           DropTargetWidgetContainer.clearDeclaredStaticReferences(-13673);
           ph.a(0);
@@ -5425,7 +5425,7 @@ public final class MinerDisturbance extends ob {
             decompiledFrameRemainder12 = (var15 != 0);
           }
           if (decompiledFrameRemainder12) {
-            ArchiveIndex.a(30, 420, 15, 360, (byte) 113, qf.field_o[cm.field_o]);
+            ArchiveIndex.a(30, 420, 15, 360, (byte) 113, MidiNoteMask.field_o[cm.field_o]);
             var8 = 75;
             dl.field_d[cm.field_o].draw(60, var8);
             dl.field_d[cm.field_o].drawVerticalFlip(60, 285);
@@ -5445,7 +5445,7 @@ public final class MinerDisturbance extends ob {
             PacketBuffer.field_n.field_T[0][re.field_b] = 12892208;
             var10 = ti.field_J;
             if (var10 == null) {
-              var10 = qf.field_q;
+              var10 = MidiNoteMask.field_q;
             }
             stackIn_134_0 = (a.field_c < 1000000) ? 0 : 30;
             var11 = stackIn_134_0;
@@ -5812,9 +5812,9 @@ public final class MinerDisturbance extends ob {
               ff.field_c = td.a("interface_items", fl.field_f, "volcano", (byte) 119);
               sa.field_t[0][0] = pb.a("volcano", fl.field_f, "rankings1", (byte) -77);
               var2_array = tb.a("rankings2", "volcano", fl.field_f, 1);
-              ai.a(var2_array, 0, sa.field_t[0], 1, var2_array.length);
+              ArrayBlockSupport.copyObjectRange(var2_array, 0, sa.field_t[0], 1, var2_array.length);
               var2_arrayLifetime1 = tb.a("rankings3", "volcano", fl.field_f, 1);
-              ai.a(var2_arrayLifetime1, 0, sa.field_t[0], 6, var2_arrayLifetime1.length);
+              ArrayBlockSupport.copyObjectRange(var2_arrayLifetime1, 0, sa.field_t[0], 6, var2_arrayLifetime1.length);
               sa.field_t[0][8] = pb.a("volcano", fl.field_f, "rankings4", (byte) -77);
               sa.field_t[0][9] = pb.a("volcano", fl.field_f, "rankings5", (byte) -77);
               var3 = 0;
@@ -5829,7 +5829,7 @@ public final class MinerDisturbance extends ob {
               return false;
             }
             var2_int = 13 % ((param0 + 15) / 50);
-            if (null != qf.field_o[0][8]) {
+            if (null != MidiNoteMask.field_o[0][8]) {
               if (null == mc.field_u) {
                 mc.field_u = jn.a("screen_box_left", -29553, "volcano", fl.field_f);
                 mh.field_d = jn.a("screen_box_right", -29553, "volcano", fl.field_f);
@@ -5848,15 +5848,15 @@ public final class MinerDisturbance extends ob {
             sn.field_a = jn.a("certificate_gold", -29553, "volcano", fl.field_f);
             MidiPcmStream.field_ab = jn.a("certificate_efluvium", -29553, "volcano", fl.field_f);
             vh.field_c = jn.a("certificate_diamond", -29553, "volcano", fl.field_f);
-            qf.field_o[0][0] = jn.a("certificate_topleft", -29553, "volcano", fl.field_f);
-            qf.field_o[0][1] = jn.a("certificate_top", -29553, "volcano", fl.field_f);
-            qf.field_o[0][2] = jn.a("certificate_topright", -29553, "volcano", fl.field_f);
-            qf.field_o[0][3] = jn.a("certificate_left", -29553, "volcano", fl.field_f);
-            qf.field_o[0][4] = jn.a("certificate_centre", -29553, "volcano", fl.field_f);
-            qf.field_o[0][5] = jn.a("certificate_right", -29553, "volcano", fl.field_f);
-            qf.field_o[0][6] = jn.a("certificate_bottomleft", -29553, "volcano", fl.field_f);
-            qf.field_o[0][7] = jn.a("certificate_bottom", -29553, "volcano", fl.field_f);
-            qf.field_o[0][8] = jn.a("certificate_bottomright", -29553, "volcano", fl.field_f);
+            MidiNoteMask.field_o[0][0] = jn.a("certificate_topleft", -29553, "volcano", fl.field_f);
+            MidiNoteMask.field_o[0][1] = jn.a("certificate_top", -29553, "volcano", fl.field_f);
+            MidiNoteMask.field_o[0][2] = jn.a("certificate_topright", -29553, "volcano", fl.field_f);
+            MidiNoteMask.field_o[0][3] = jn.a("certificate_left", -29553, "volcano", fl.field_f);
+            MidiNoteMask.field_o[0][4] = jn.a("certificate_centre", -29553, "volcano", fl.field_f);
+            MidiNoteMask.field_o[0][5] = jn.a("certificate_right", -29553, "volcano", fl.field_f);
+            MidiNoteMask.field_o[0][6] = jn.a("certificate_bottomleft", -29553, "volcano", fl.field_f);
+            MidiNoteMask.field_o[0][7] = jn.a("certificate_bottom", -29553, "volcano", fl.field_f);
+            MidiNoteMask.field_o[0][8] = jn.a("certificate_bottomright", -29553, "volcano", fl.field_f);
             return false;
           }
           return false;
@@ -6135,7 +6135,7 @@ public final class MinerDisturbance extends ob {
                     incrementValue$1 = var11Lifetime1;
                     var11Lifetime1++;
                     var24 = this.field_L[incrementValue$1];
-                    SoftwareRasterizer.field_f[var16Lifetime1 * SoftwareRasterizer.field_g + var20] = c.a(-16711936, var22 * c.a(var23, 16711935) + var21 * c.a(var24, 16711935)) + c.a(16711680, var22 * c.a(var23, 65280) + c.a(65280, var24) * var21) >> 8;
+                    SoftwareRasterizer.field_f[var16Lifetime1 * SoftwareRasterizer.field_g + var20] = c.bitwiseAnd(-16711936, var22 * c.bitwiseAnd(var23, 16711935) + var21 * c.bitwiseAnd(var24, 16711935)) + c.bitwiseAnd(16711680, var22 * c.bitwiseAnd(var23, 65280) + c.bitwiseAnd(65280, var24) * var21) >> 8;
                     var20++;
                   }
                   var11Lifetime1 = var11Lifetime1 + var19;
@@ -6223,7 +6223,7 @@ public final class MinerDisturbance extends ob {
                             StripedProgressWidget.a(mm.field_a, ce.field_d, 97, 300);
                             ud.a(new ac(hd.field_d), 30, 30, 88);
                             ic.a(113, 4473924, 15885602, 16502531);
-                            aa.a(6, new ac(vc.field_p), -1, 6, new ac(vc.field_p), 6);
+                            GrowableIntArray.a(6, new ac(MusicPatch.field_p), -1, 6, new ac(MusicPatch.field_p), 6);
                             ResourceArchive.field_e.setAsRasterTarget((byte) -45);
                             GuestPlayConfirmationForm.n(21);
                             nn.field_n = true;
@@ -6328,7 +6328,7 @@ public final class MinerDisturbance extends ob {
             ac.field_b = 2439;
             GuestPlayConfirmationForm.field_M = 4533;
             pe.field_sb = 1633100126;
-            aa.field_b = 32424;
+            GrowableIntArray.field_b = 32424;
             vh.field_g = 1235;
           }
           ic.field_k = 1500;
@@ -6353,7 +6353,7 @@ public final class MinerDisturbance extends ob {
           hn.field_c = false;
           field_J = -1;
           DiskCacheWorker.field_g[2] = 0;
-          qf.field_p = 0;
+          MidiNoteMask.field_p = 0;
           vi.field_q = 0;
           re.field_d = 0;
           DiskCacheWorker.field_g[5] = 0;
@@ -6437,7 +6437,7 @@ public final class MinerDisturbance extends ob {
           }
           if (kf.field_d != null &&
             kf.field_d.field_b) {
-            ng.a((byte) -122);
+            MusicPatchEnvelope.a((byte) -122);
             h.a(4);
           }
           if (!hl.b((byte) -61)) {
@@ -6462,7 +6462,7 @@ public final class MinerDisturbance extends ob {
                   oc.d(75)) {
                   boolean decompiledFrameRemainder0 = true;
                   if (ge.field_c &&
-                    vc.a(true)) {
+                    MusicPatch.a(true)) {
                     if (tm.field_v != 4 ||
                       !oc.d(63)) {
                       AccountServiceResult.a(true);
@@ -6511,7 +6511,7 @@ public final class MinerDisturbance extends ob {
                               break;
                             }
                           case 2:
-                            ng.a((byte) -128);
+                            MusicPatchEnvelope.a((byte) -128);
                             break;
                         }
                         if (!oc.d(83)) {
@@ -6806,17 +6806,17 @@ public final class MinerDisturbance extends ob {
             var6Lifetime1Lifetime1 = (nk.field_w + GameAppletShell.field_e + (ProgressMessageDialog.field_sb + lj.field_t)) % 4;
             if (var6Lifetime1Lifetime1 == 0) {
               hl.field_b = hl.field_b + 1;
-              pn.field_b = pn.field_b + aa.field_b;
+              pn.field_b = pn.field_b + GrowableIntArray.field_b;
             } else if (var6Lifetime1Lifetime1 == 1) {
-              pn.field_b = pn.field_b - aa.field_b;
+              pn.field_b = pn.field_b - GrowableIntArray.field_b;
               hl.field_b = hl.field_b - 1;
             } else if (var6Lifetime1Lifetime1 != 2) {
               if (var6Lifetime1Lifetime1 == 3) {
-                aa.field_b = aa.field_b - 1;
+                GrowableIntArray.field_b = GrowableIntArray.field_b - 1;
                 pn.field_b = pn.field_b - hl.field_b;
               }
             } else {
-              aa.field_b = aa.field_b + 1;
+              GrowableIntArray.field_b = GrowableIntArray.field_b + 1;
               pn.field_b = pn.field_b + hl.field_b;
             }
             if (AgeValidator.field_j >= 2 &&

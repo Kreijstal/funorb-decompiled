@@ -203,7 +203,7 @@ final class il extends ResultScenePhase {
         if (param5) {
           field_h = (am[]) null;
         }
-        RgbSprite[] var6 = h.field_d;
+        RgbSprite[] var6 = ByteArrayPoolSupport.field_d;
         if (param1) {
           var6 = DirectByteStorage.field_c;
         }

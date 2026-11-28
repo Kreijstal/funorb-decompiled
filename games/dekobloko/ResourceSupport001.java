@@ -201,7 +201,7 @@ final class ResourceSupport001 {
             this.integerArrayState0008 = new int[this.integerState0020];
             if (integerLocal17 < 7) {
               for (integerLocal23 = 0; this.integerState0020 > integerLocal23; integerLocal23++) {
-                cachedIntegerLocal1 = integerLocal21 + packetBufferLocal30.readUnsignedShort(MixedSupport106.computeInteger1387(integerArgument2, 3));
+                cachedIntegerLocal1 = integerLocal21 + packetBufferLocal30.readUnsignedShort(MixedSupport106.bitwiseXor(integerArgument2, 3));
                 integerLocal21 = cachedIntegerLocal1;
                 this.integerArrayState0008[integerLocal23] = cachedIntegerLocal1;
                 if (this.integerArrayState0008[integerLocal23] > integerLocal22) {
@@ -320,7 +320,7 @@ final class ResourceSupport001 {
                   } else {
                     integerLocal40 = integerLocal44;
                   }
-                  this.integerArrayArrayState0002[integerLocal41][integerLocal40] = packetBufferLocal30.readInt(MixedSupport106.computeInteger1387(integerArgument2, 7553));
+                  this.integerArrayArrayState0002[integerLocal41][integerLocal40] = packetBufferLocal30.readInt(MixedSupport106.bitwiseXor(integerArgument2, 7553));
                 }
                 this.mixedSupport091ArrayState0001[integerLocal41] = new MixedSupport091(this.integerArrayArrayState0002[integerLocal41]);
               }

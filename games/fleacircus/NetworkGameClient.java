@@ -105,7 +105,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             !(vg.c(-127) <= var3)) {
             this.field_v = false;
             BufferedRandomAccessFile.c(-28354);
-            id.a(false);
+            GrowableIntArray.a(false);
             BoundedRandomAccessFile.a(wi.field_m, 2, 109);
             ji.a((byte) -69);
             rj.field_j = true;
@@ -132,7 +132,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           oa.field_j != 0) {
           if (ib.field_k >= 10) {
             if (bh.field_t >= 10) {
-              id.a(false);
+              GrowableIntArray.a(false);
               if (3 != oa.field_j) {
                 if (oa.field_j != 4) {
                   if (oa.field_j != 2) {
@@ -237,7 +237,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             ak.a(38);
           }
           if (null == BufferedSocket.field_g) {
-            BufferedSocket.field_g = wc.a((byte) -95);
+            BufferedSocket.field_g = MusicPatch.a((byte) -95);
             u.field_a = rk.e(24089);
           }
           kb.a(-1, BufferedSocket.field_g, kc.field_d, u.field_a);
@@ -317,7 +317,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (!lj.field_e) {
             this.a(-6469, "reconnect");
           }
-          id.a(false);
+          GrowableIntArray.a(false);
           BoundedRandomAccessFile.a(fh.field_a, var2, param0 ^ 5115);
           rj.field_j = true;
           AccountCreationResultPanel.field_sb = lj.correctedCurrentTimeMillis((byte) -53) + 15000L;
@@ -368,7 +368,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             return;
           }
           if (var2 == 1) {
-            gf.a(-45);
+            ByteArrayPoolSupport.a(-45);
           } else {
             if (var2 != 2) {
               if (3 == var2) {
@@ -578,7 +578,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         this.setBackground(java.awt.Color.black);
         cg.field_y = this.field_m;
         ek.a(10, cg.field_y);
-        wc.a(22986, param2, cg.field_y, param3, fg.field_q, this.field_p, this.field_n, this.field_o, this.field_u, 5000, this.field_r, this.field_x, 5000, this.field_l);
+        MusicPatch.a(22986, param2, cg.field_y, param3, fg.field_q, this.field_p, this.field_n, this.field_o, this.field_u, 5000, this.field_r, this.field_x, 5000, this.field_l);
         ResourceArchive.initializeArchiveNetworkServices(cg.field_y, this.field_r, 8737, param2, this.field_u, this.field_n, this.field_p, this.field_l, fg.field_q);
         vg.b((byte) 32);
         StandardContentDialog.field_pb = of.createMouseWheelInput(-21814);

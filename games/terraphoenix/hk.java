@@ -69,20 +69,20 @@ final class hk {
           }
           throw qk.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
-        stackIn_5_0 = fc.field_e;
+        stackIn_5_0 = GrowableIntArray.field_e;
         try {
           while (true) {
             if (stackIn_5_0.length <= var5_int) {
               return;
             }
-            param0 = fc.field_e[var5_int];
+            param0 = GrowableIntArray.field_e[var5_int];
             var6 = var5_int << 4;
             while (true) {
               incrementValue$0 = param0;
               param0--;
               if (incrementValue$0 == 0) {
                 var5_int++;
-                stackIn_5_0 = fc.field_e;
+                stackIn_5_0 = GrowableIntArray.field_e;
                 break;
               }
               incrementValue$1 = var6;

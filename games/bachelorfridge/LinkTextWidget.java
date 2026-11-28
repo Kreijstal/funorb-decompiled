@@ -2112,7 +2112,7 @@ class LinkTextWidget extends InteractiveWidget {
                 }
                 var2 = BuffVendorAnimation.a("TUT_FILL_SHOPPING_BAG", (byte) 114);
                 if (var2 != null) {
-                  un.field_f = ChangeCreatureStatOrHealthEffect.a(var2, false);
+                  MusicPatchEnvelope.field_f = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = BuffVendorAnimation.a("TUT_OPEN_BAG", (byte) 108);
                 if (null != var2) {

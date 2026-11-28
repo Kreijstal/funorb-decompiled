@@ -101,7 +101,7 @@ final class bn extends TileEffect {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!g.a(param3, param2, -30744, param0)) {
+          if (!MidiNoteMask.a(param3, param2, -30744, param0)) {
             stackIn_2_0 = null;
             return (Sprite) (stackIn_2_0);
           }

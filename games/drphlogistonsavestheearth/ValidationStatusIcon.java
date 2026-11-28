@@ -262,7 +262,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
               var21 = var11[-var6_int + var15Lifetime2];
               var22 = (65280 & var19) + (65280 & var21) + (var17 & 65280) + (65280 & var18) >> 2;
               var23 = (var19 & 16711935) + (var18 & 16711935) + ((var17 & 16711935) + (16711935 & var21)) >> 2;
-              var11[-var6_int + var15Lifetime2] = rk.a(var23, 16711935) + rk.a(var22, 65280);
+              var11[-var6_int + var15Lifetime2] = rk.bitwiseAnd(var23, 16711935) + rk.bitwiseAnd(var22, 65280);
               var17 = var18;
               var15Lifetime2++;
               var18 = var19;
@@ -275,7 +275,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
             var18Lifetime1 = var17Lifetime1 >> 16;
             var19Lifetime1 = var17Lifetime1 >> 8 & 255;
             var20Lifetime1 = var17Lifetime1 & 255;
-            var11[var16Lifetime1] = (var20Lifetime1 * 63627 >> 16) + (rk.a(63627 * var19Lifetime1, 16711893) >> 8) + rk.a(var18Lifetime1 * 63627, 16711680);
+            var11[var16Lifetime1] = (var20Lifetime1 * 63627 >> 16) + (rk.bitwiseAnd(63627 * var19Lifetime1, 16711893) >> 8) + rk.bitwiseAnd(var18Lifetime1 * 63627, 16711680);
           }
           if (param5) {
             stackIn_25_0 = var26;

@@ -68,7 +68,7 @@ class kl {
         int[] var7 = new int[64];
         int[] var2 = var7;
         for (var3_int = 0; 64 > var3_int; var3_int++) {
-          var7[var3_int] = mp.a(-2147483648, 65793 * (24 + var3_int));
+          var7[var3_int] = mp.bitwiseOr(-2147483648, 65793 * (24 + var3_int));
         }
         RgbSprite var3 = te.a(this.field_a, this.field_i, var7, 16, 8, 0.125);
         if (param0 == 37) {

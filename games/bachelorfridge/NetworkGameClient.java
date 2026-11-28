@@ -173,8 +173,8 @@ abstract class NetworkGameClient extends GameAppletShell {
           11 != jv.field_j) {
           SpiltMilkEvent.d(-1);
         }
-        if (null != sd.field_c) {
-          vc.field_a = sd.field_c.pollRotation((byte) -127);
+        if (null != ByteArrayPoolSupport.field_c) {
+          vc.field_a = ByteArrayPoolSupport.field_c.pollRotation((byte) -127);
         }
         if (cia.a(0)) {
           var3 = 1200 * RemoveDefeatedCreatureEffect.a(0);
@@ -747,7 +747,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         vda.a(this.field_w, this.field_v, 5000, param0, param5, this.field_n, 5000, 64, DiveBomberEvent.field_r, this.field_k, SetMoveSlotCooldownEffect.field_k, this.field_r, this.field_t, this.field_l);
         cc.a(param0, this.field_r, -1456477592, this.field_k, this.field_l, DiveBomberEvent.field_r, SetMoveSlotCooldownEffect.field_k, this.field_v, this.field_t);
         DualLinkNodeHashTable.c((byte) 69);
-        sd.field_c = ChangeCreatureStatOrHealthEffect.createMouseWheelInput(-5368);
+        ByteArrayPoolSupport.field_c = ChangeCreatureStatOrHealthEffect.createMouseWheelInput(-5368);
         nl.a(TBomberAnimation.field_y, (byte) 76);
         mj.field_j = param6;
         if (param4) {

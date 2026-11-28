@@ -19,7 +19,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
     private int field_l;
     private MusicTrack field_q;
 
-    final synchronized void a(int param0, int param1, boolean param2, MusicTrack param3, int param4, int param5) {
+    final synchronized void switchTrack(int param0, int param1, boolean param2, MusicTrack param3, int param4, int param5) {
         boolean stackIn_18_1 = false;
         int stackIn_33_0 = 0;
         MidiPcmStream stackIn_42_0 = null;
@@ -44,7 +44,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               this.field_q = param3;
               if (param3 != null) {
                 this.field_v.a(false, param3, true);
-                this.a((byte) -71, this.field_v, param4, param5);
+                this.configureSynthesizer((byte) -71, this.field_v, param4, param5);
               }
             } else {
               if (null != this.field_n) {
@@ -53,7 +53,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               this.field_n = param3;
               if (param3 != null) {
                 this.field_r.a(false, param3, true);
-                this.a((byte) -113, this.field_r, param4, param5);
+                this.configureSynthesizer((byte) -113, this.field_r, param4, param5);
               }
             }
             return;
@@ -65,12 +65,12 @@ final class CrossfadingMidiPcmStream extends PcmStream {
           }
           if (this.field_n == param3) {
             this.field_s = param0;
-            this.a((byte) -106, this.field_r, param4, param5);
+            this.configureSynthesizer((byte) -106, this.field_r, param4, param5);
             return;
           }
           if (this.field_q == param3) {
             this.field_s = -param0;
-            this.a((byte) -84, this.field_v, param4, param5);
+            this.configureSynthesizer((byte) -84, this.field_v, param4, param5);
             return;
           }
           if (null != this.field_n) {
@@ -92,7 +92,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               stackIn_50_0 = this.field_r;
               stackIn_51_1 = !(param2);
               ((MidiPcmStream) (Object) stackIn_50_0).a(stackIn_51_1, param3, true);
-              this.a((byte) -84, this.field_r, param4, param5);
+              this.configureSynthesizer((byte) -84, this.field_r, param4, param5);
             }
             this.field_s = param0;
             return;
@@ -105,7 +105,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             stackIn_42_0 = this.field_v;
             stackIn_43_1 = !(param2);
             ((MidiPcmStream) (Object) stackIn_42_0).a(stackIn_43_1, param3, true);
-            this.a((byte) -95, this.field_v, param4, param5);
+            this.configureSynthesizer((byte) -95, this.field_v, param4, param5);
           }
           this.field_s = -param0;
           return;
@@ -119,11 +119,11 @@ final class CrossfadingMidiPcmStream extends PcmStream {
           } else {
             stackIn_57_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    final synchronized void b(int param0, int param1) {
+    final synchronized void setVolume(int param0, int param1) {
         if (param0 != -15705) {
           field_z = (String) null;
           this.field_p = param1;
@@ -604,8 +604,8 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               if (var5 != 256) {
                 if (this.field_w != null &&
                   this.field_w.length >= var6) {
-                  fk.clearInts(this.field_w, 0, var6);
-                  fk.clearInts(this.field_t, 0, var6);
+                  ArrayBlockSupport.clearInts(this.field_w, 0, var6);
+                  ArrayBlockSupport.clearInts(this.field_t, 0, var6);
                 } else {
                   this.field_w = new int[var6];
                   this.field_t = new int[var6];
@@ -632,7 +632,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             0 != this.field_A) {
             if (null != this.field_w &&
               this.field_w.length >= var6) {
-              fk.clearInts(this.field_w, 0, var6);
+              ArrayBlockSupport.clearInts(this.field_w, 0, var6);
             } else {
               this.field_w = new int[var6];
               this.field_t = new int[var6];
@@ -664,11 +664,11 @@ final class CrossfadingMidiPcmStream extends PcmStream {
           } else {
             stackIn_68_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    private final void a(byte param0, MidiPcmStream param1, int param2, int param3) {
+    private final void configureSynthesizer(byte param0, MidiPcmStream param1, int param2, int param3) {
         try {
           param1.setChannelGain(param3, -1, -129);
           param1.b(param2, (byte) -110);
@@ -676,7 +676,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             this.nextChildStream();
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "se.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "se.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

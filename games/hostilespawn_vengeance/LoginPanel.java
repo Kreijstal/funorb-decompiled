@@ -348,7 +348,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
               this.field_P = new InteractiveWidget(kc.field_f, (WidgetEventListener) (this));
             }
           } else {
-            this.field_K = new InteractiveWidget(hf.field_f, (WidgetEventListener) null);
+            this.field_K = new InteractiveWidget(ByteArrayPoolSupport.field_f, (WidgetEventListener) null);
             this.field_R = new InteractiveWidget(sc.field_k, (WidgetEventListener) null);
             this.field_O.field_D = false;
           }

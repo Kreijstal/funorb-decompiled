@@ -48,37 +48,37 @@ final class d extends IntrusiveNode {
             return 1;
           }
           try {
-            if (mc.field_j == 0) {
+            if (MidiNoteMask.field_j == 0) {
               cf.field_a = lh.field_b.requestDirectSocket(DequeWidgetContainer.field_z, 0, fm.field_c);
-              mc.field_j = mc.field_j + 1;
+              MidiNoteMask.field_j = MidiNoteMask.field_j + 1;
             }
-            if (mc.field_j == 1) {
+            if (MidiNoteMask.field_j == 1) {
               if (cf.field_a.status == 2) {
                 stackIn_17_0 = ValidationStatusWidget.a(-30179, -1);
                 return stackIn_17_0;
               }
               if (1 == cf.field_a.status) {
-                mc.field_j = mc.field_j + 1;
+                MidiNoteMask.field_j = MidiNoteMask.field_j + 1;
               }
             }
-            if (2 == mc.field_j) {
+            if (2 == MidiNoteMask.field_j) {
               DraggableWidgetContainer.field_A = new BufferedSocket((java.net.Socket) (cf.field_a.result), lh.field_b);
               var2 = new PacketBuffer(13);
               nl.a(20994, hc.field_f, SpriteGeometry.field_m, var2, InteractiveWidget.field_x);
               var2.writeByte(15, -49);
               var2.writeInt(m.field_b, -1);
               DraggableWidgetContainer.field_A.queueWrite((byte) 30, var2.payload, 0, 13);
-              mc.field_j = mc.field_j + 1;
+              MidiNoteMask.field_j = MidiNoteMask.field_j + 1;
               n.field_b = 30000L + ji.correctedCurrentTimeMillis(-75);
             }
-            if (mc.field_j == 3) {
+            if (MidiNoteMask.field_j == 3) {
               if (DraggableWidgetContainer.field_A.availableBytes((byte) 101) > 0) {
                 var1_int = DraggableWidgetContainer.field_A.readSingleByte(true);
                 if (var1_int != 0) {
                   stackIn_30_0 = ValidationStatusWidget.a(-30179, var1_int);
                   return stackIn_30_0;
                 }
-                mc.field_j = mc.field_j + 1;
+                MidiNoteMask.field_j = MidiNoteMask.field_j + 1;
               } else {
                 if (ji.correctedCurrentTimeMillis(103) > n.field_b) {
                   stackIn_26_0 = ValidationStatusWidget.a(-30179, -2);
@@ -86,14 +86,14 @@ final class d extends IntrusiveNode {
                 }
               }
             }
-            if (4 != mc.field_j) {
+            if (4 != MidiNoteMask.field_j) {
               stackIn_36_0 = -1;
               return stackIn_36_0;
             }
             kg.field_h.a(DraggableWidgetContainer.field_A, 20, il.field_a);
             DraggableWidgetContainer.field_A = null;
             cf.field_a = null;
-            mc.field_j = 0;
+            MidiNoteMask.field_j = 0;
             stackIn_34_0 = 0;
             return stackIn_34_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ri extends InteractiveWidget {
-    private hq field_G;
+    private GrowableIntArray field_G;
     int field_C;
     private int field_D;
     int field_F;
@@ -15,8 +15,8 @@ final class ri extends InteractiveWidget {
         if (param0 < 0) {
           return -1;
         }
-        if (param0 < this.field_G.a(true)) {
-          return this.field_G.b(95, param0);
+        if (param0 < this.field_G.size(true)) {
+          return this.field_G.get(95, param0);
         }
         return -1;
     }
@@ -52,13 +52,13 @@ final class ri extends InteractiveWidget {
           }
           var8_int = var8_int * this.field_D / var9;
           if (param0 == 1) {
-            this.field_G.d(var8_int, -8673);
+            this.field_G.append(var8_int, -8673);
           } else {
             if (param0 == 2) {
               var10 = 2147483647;
               var11 = -1;
-              for (var12 = 0; this.field_G.a(true) > var12; var12++) {
-                var13 = -var8_int + this.field_G.b(46, var12);
+              for (var12 = 0; this.field_G.size(true) > var12; var12++) {
+                var13 = -var8_int + this.field_G.get(46, var12);
                 var13 = var13 * var13;
                 if (var10 > var13) {
                   var11 = var12;
@@ -66,7 +66,7 @@ final class ri extends InteractiveWidget {
                 }
               }
               if (var11 >= 0) {
-                this.field_G.c(var11, 17424);
+                this.field_G.removeAt(var11, 17424);
               }
             }
           }
@@ -89,7 +89,7 @@ final class ri extends InteractiveWidget {
         if (param0 != 0) {
           return -1;
         }
-        return this.field_G.a(true);
+        return this.field_G.size(true);
     }
 
     final int a(byte param0) {

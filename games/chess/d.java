@@ -178,7 +178,7 @@ final class d extends ci {
           var1_int = FullscreenStatusDialog.field_eb[0];
           for (var2 = 1; var2 < FullscreenStatusDialog.field_eb.length; var2++) {
             var3 = FullscreenStatusDialog.field_eb[var2];
-            ne.a(ve.field_Hb, var2 << 4, ve.field_Hb, var1_int, var3);
+            ArrayBlockSupport.copyIntRange(ve.field_Hb, var2 << 4, ve.field_Hb, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;
@@ -222,7 +222,7 @@ final class d extends ci {
             BufferedSocket.field_s = param1.field_k;
           }
           var2_intLifetime1 = 79 / ((92 - param0) / 33);
-          ml.a((byte) 90, param1);
+          GrowableIntArray.a((byte) 90, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

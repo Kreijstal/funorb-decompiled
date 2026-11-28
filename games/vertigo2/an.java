@@ -141,7 +141,7 @@ final class an {
               }
             }
           }
-          TextLayout.field_g.a(97);
+          TextLayout.field_g.setAsRasterTarget(97);
           stackIn_66_0 = var15;
           return stackIn_66_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

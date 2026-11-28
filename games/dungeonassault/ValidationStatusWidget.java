@@ -156,7 +156,7 @@ final class ValidationStatusWidget extends RichTextWidget {
           var13 = dd.a((byte) -112, 4, var9);
           var14 = param3.copy();
           var14.bindAsRenderTarget();
-          bp.a(var12, var13, var11, (byte) 99);
+          GrowableIntArray.a(var12, var13, var11, (byte) 99);
           var9.draw(var11, var12);
           var14.makeTransparentPixelsOpaque();
           var15 = var14.copy();

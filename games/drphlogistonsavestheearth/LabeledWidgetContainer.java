@@ -127,7 +127,7 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
             var5 = var12;
             var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(31760);
             for (var7 = 0; var7 < var6; var7++) {
-              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(ProxyAuthenticationRequiredException.a(param0, -2));
+              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(ProxyAuthenticationRequiredException.bitwiseXor(param0, -2));
             }
             var15 = (f) (ql.field_i.beginForward(param0 - 11148));
             if (var15 == null) {

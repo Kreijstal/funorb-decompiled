@@ -168,7 +168,7 @@ final class fc extends DualLinkNode {
         }
         if (null != this.field_y) {
           for (var2 = 0; this.field_y.length > var2; var2++) {
-            this.field_y[var2] = SpriteState.a(this.field_y[var2], 32768);
+            this.field_y[var2] = SpriteState.bitwiseOr(this.field_y[var2], 32768);
           }
         }
     }
@@ -182,7 +182,7 @@ final class fc extends DualLinkNode {
           km.field_a.setMasterVolume((byte) -95, param0);
         }
         if (null != nj.field_e) {
-          nj.field_e.a(81, param0);
+          nj.field_e.setVolume(81, param0);
         }
     }
 

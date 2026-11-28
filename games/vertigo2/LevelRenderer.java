@@ -1169,7 +1169,7 @@ final class LevelRenderer {
                   if (50 >= var28) {
                     if (var28 < 50) {
                       if (0 != param8) {
-                        var29_ref_String = Vertigo2.a(new String[]{Integer.toString(-var28 + 100), MusicPatchPcmStream.field_x}, pe.field_L, -13);
+                        var29_ref_String = Vertigo2.a(new String[]{Integer.toString(-var28 + 100), MusicPatchPcmStream.field_x}, MusicPatchNode.field_L, -13);
                         ea.field_d[2].draw(320 - ea.field_d[2].field_x / 2, 70);
                       } else {
                         var29_ref_String = Vertigo2.a(new String[]{Integer.toString(var28), MusicPatchPcmStream.field_A}, ad.field_b, -118);
@@ -1184,7 +1184,7 @@ final class LevelRenderer {
                       var29_ref_String = Vertigo2.a(new String[]{Integer.toString(-var28 + 100), MusicPatchPcmStream.field_x}, ad.field_b, 47);
                       ea.field_d[3].draw(-(ea.field_d[3].field_x / 2) + 320, 70);
                     } else {
-                      var29_ref_String = Vertigo2.a(new String[]{Integer.toString(var28), MusicPatchPcmStream.field_A}, pe.field_L, -126);
+                      var29_ref_String = Vertigo2.a(new String[]{Integer.toString(var28), MusicPatchPcmStream.field_A}, MusicPatchNode.field_L, -126);
                       ea.field_d[2].draw(320 - ea.field_d[2].field_x / 2, 70);
                     }
                   }
@@ -1224,7 +1224,7 @@ final class LevelRenderer {
                 }
                 DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 52, -1, 20, GameplayScreen.field_e, 35);
                 if (param4.field_I > 0) {
-                  var40 = Vertigo2.a(new String[]{gl.a(-121, true, false, param4.field_I)}, mc.field_f, -3);
+                  var40 = Vertigo2.a(new String[]{MusicPatchEnvelope.a(-121, true, false, param4.field_I)}, mc.field_f, -3);
                   var29 = DefaultTextWidgetRenderer.field_s.a(1, var40);
                   FullscreenFocusCanvas.a(false, -20 - var29 + 640, var29, 60);
                   var30 = 16777215;

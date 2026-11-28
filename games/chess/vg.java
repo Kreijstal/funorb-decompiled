@@ -112,7 +112,7 @@ final class vg {
             if (!ud.field_b) {
               stackIn_36_0 = aa.field_g;
               if (var8 == 0) {
-                stackIn_37_1 = kf.field_m;
+                stackIn_37_1 = MusicPatch.field_m;
               } else {
                 stackIn_37_1 = ResizableModalDialog.field_ab;
               }
@@ -159,7 +159,7 @@ final class vg {
                   }
                   for (var10Lifetime1 = 0; var10Lifetime1 < qa.field_e; var10Lifetime1++) {
                     if (bi.field_d[var10Lifetime1]) {
-                      var11_ref = "<col=A00000>" + td.field_n[var10Lifetime1] + "</col>";
+                      var11_ref = "<col=A00000>" + MidiNoteMask.field_n[var10Lifetime1] + "</col>";
                       var9 = var11_ref;
                       var9 = var11_ref;
                       if (var9 == null) {
@@ -173,7 +173,7 @@ final class vg {
                 }
               }
             } else {
-              ao.field_b.field_db = qd.field_G;
+              ao.field_b.field_db = MusicPatchNode.field_G;
               sc.field_d.field_tb = false;
               if (var8 == 0) {
                 stackIn_25_0 = eb.field_t;

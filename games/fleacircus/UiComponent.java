@@ -448,7 +448,7 @@ class UiComponent extends IntrusiveNode {
         var3 = new int[var1];
         var4_int = 0;
         while (var1 > var4_int) {
-          var3[var4_int] = rd.field_d[sc.a((int) var2[var4_int], 255)];
+          var3[var4_int] = rd.field_d[sc.bitwiseAnd((int) var2[var4_int], 255)];
           var4_int++;
           if (var5 == 0) {
             continue;

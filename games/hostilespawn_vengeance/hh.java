@@ -58,35 +58,35 @@ final class hh {
             var3_int = fa.a(gf.field_c, cg.field_a, 113, lj.field_u, ne.field_p);
             var4 = var3_int + 3;
             FullscreenNoticeType.field_b = new int[var4];
-            hf.field_d = new String[var4];
+            ByteArrayPoolSupport.field_d = new String[var4];
             for (var5 = 0; var5 < var4; var5++) {
               FullscreenNoticeType.field_b[var5] = -1;
             }
             FullscreenFocusCanvas.field_k = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
-              hf.field_d[var5] = gf.field_c[var5];
+              ByteArrayPoolSupport.field_d[var5] = gf.field_c[var5];
             }
-            hf.field_d[-3 + var4] = "";
-            hf.field_d[var4 - 2] = lh.field_c;
+            ByteArrayPoolSupport.field_d[-3 + var4] = "";
+            ByteArrayPoolSupport.field_d[var4 - 2] = lh.field_c;
             FullscreenNoticeType.field_b[var4 - 2] = 0;
             FullscreenFocusCanvas.field_k[0] = 4;
-            hf.field_d[var4 - 1] = IsaacGenerator.field_n;
+            ByteArrayPoolSupport.field_d[var4 - 1] = IsaacGenerator.field_n;
             FullscreenNoticeType.field_b[var4 - 1] = 1;
             FullscreenFocusCanvas.field_k[1] = 5;
           } else if (be.field_e == 1) {
             var3_int = fa.a(gf.field_c, cg.field_a, 105, lj.field_u, ne.field_p);
             var4 = var3_int + 2;
-            hf.field_d = new String[var4];
+            ByteArrayPoolSupport.field_d = new String[var4];
             FullscreenNoticeType.field_b = new int[var4];
             for (var5 = 0; var4 > var5; var5++) {
               FullscreenNoticeType.field_b[var5] = -1;
             }
             FullscreenFocusCanvas.field_k = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              hf.field_d[var5] = gf.field_c[var5];
+              ByteArrayPoolSupport.field_d[var5] = gf.field_c[var5];
             }
-            hf.field_d[-2 + var4] = "";
-            hf.field_d[var4 - 1] = IsaacGenerator.field_n;
+            ByteArrayPoolSupport.field_d[-2 + var4] = "";
+            ByteArrayPoolSupport.field_d[var4 - 1] = IsaacGenerator.field_n;
             FullscreenNoticeType.field_b[-1 + var4] = 0;
             FullscreenFocusCanvas.field_k[0] = 5;
           } else if (2 != be.field_e) {
@@ -97,33 +97,33 @@ final class hh {
                 var3_int = fa.a(gf.field_c, cg.field_a, 50, lj.field_u, he.field_z);
               }
               var4 = var3_int + 2;
-              hf.field_d = new String[var4];
+              ByteArrayPoolSupport.field_d = new String[var4];
               FullscreenNoticeType.field_b = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 FullscreenNoticeType.field_b[var5] = -1;
               }
               FullscreenFocusCanvas.field_k = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                hf.field_d[var5] = gf.field_c[var5];
+                ByteArrayPoolSupport.field_d[var5] = gf.field_c[var5];
               }
-              hf.field_d[-2 + var4] = "";
-              hf.field_d[var4 - 1] = IsaacGenerator.field_n;
+              ByteArrayPoolSupport.field_d[-2 + var4] = "";
+              ByteArrayPoolSupport.field_d[var4 - 1] = IsaacGenerator.field_n;
               FullscreenNoticeType.field_b[-1 + var4] = 0;
               FullscreenFocusCanvas.field_k[0] = 5;
             } else if (4 == be.field_e) {
               var3_int = fa.a(gf.field_c, cg.field_a, param0 ^ 119, lj.field_u, ha.field_y);
               var4 = 2 + var3_int;
               FullscreenNoticeType.field_b = new int[var4];
-              hf.field_d = new String[var4];
+              ByteArrayPoolSupport.field_d = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 FullscreenNoticeType.field_b[var5] = -1;
               }
               FullscreenFocusCanvas.field_k = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                hf.field_d[var5] = gf.field_c[var5];
+                ByteArrayPoolSupport.field_d[var5] = gf.field_c[var5];
               }
-              hf.field_d[var4 - 2] = "";
-              hf.field_d[var4 - 1] = IsaacGenerator.field_n;
+              ByteArrayPoolSupport.field_d[var4 - 2] = "";
+              ByteArrayPoolSupport.field_d[var4 - 1] = IsaacGenerator.field_n;
               FullscreenNoticeType.field_b[-1 + var4] = 0;
               FullscreenFocusCanvas.field_k[0] = 5;
             } else {
@@ -132,20 +132,20 @@ final class hh {
               }
               var3_int = fa.a(gf.field_c, cg.field_a, 62, lj.field_u, InteractiveWidget.field_y);
               var4 = 3 + var3_int;
-              hf.field_d = new String[var4];
+              ByteArrayPoolSupport.field_d = new String[var4];
               FullscreenNoticeType.field_b = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 FullscreenNoticeType.field_b[var5] = -1;
               }
               FullscreenFocusCanvas.field_k = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
-                hf.field_d[var5] = gf.field_c[var5];
+                ByteArrayPoolSupport.field_d[var5] = gf.field_c[var5];
               }
-              hf.field_d[var4 - 3] = "";
-              hf.field_d[var4 - 2] = field_c;
+              ByteArrayPoolSupport.field_d[var4 - 3] = "";
+              ByteArrayPoolSupport.field_d[var4 - 2] = field_c;
               FullscreenNoticeType.field_b[-2 + var4] = 0;
               FullscreenFocusCanvas.field_k[0] = 3;
-              hf.field_d[-1 + var4] = IsaacGenerator.field_n;
+              ByteArrayPoolSupport.field_d[-1 + var4] = IsaacGenerator.field_n;
               FullscreenNoticeType.field_b[var4 - 1] = 1;
               FullscreenFocusCanvas.field_k[1] = 5;
             }
@@ -163,9 +163,9 @@ final class hh {
               throw new IllegalStateException();
             }
             EmailFormatValidator.field_o = new String[var4];
-            kf.a(gf.field_c, 0, EmailFormatValidator.field_o, 0, var4);
+            ArrayBlockSupport.copyObjectRange(gf.field_c, 0, EmailFormatValidator.field_o, 0, var4);
             p.field_k = new String[-1 - var4 + var3_int];
-            kf.a(gf.field_c, 1 + var4, p.field_k, 0, -var4 + (var3_int - 1));
+            ArrayBlockSupport.copyObjectRange(gf.field_c, 1 + var4, p.field_k, 0, -var4 + (var3_int - 1));
             var3_int = fa.a(gf.field_c, cg.field_a, param0 ^ 102, lj.field_u, vg.a(new String[]{"<br><%0><br>"}, param0 ^ 70, jc.field_d));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
@@ -179,9 +179,9 @@ final class hh {
               throw new IllegalStateException();
             }
             ModalDialogHost.field_D = new String[var4];
-            kf.a(gf.field_c, 0, ModalDialogHost.field_D, 0, var4);
+            ArrayBlockSupport.copyObjectRange(gf.field_c, 0, ModalDialogHost.field_D, 0, var4);
             uh.field_j = new String[var3_int - var4 - 1];
-            kf.a(gf.field_c, 1 + var4, uh.field_j, 0, -var4 + var3_int - 1);
+            ArrayBlockSupport.copyObjectRange(gf.field_c, 1 + var4, uh.field_j, 0, -var4 + var3_int - 1);
             if (EmailFormatValidator.field_o.length >= ModalDialogHost.field_D.length) {
               stackIn_65_0 = EmailFormatValidator.field_o.length;
             } else {
@@ -196,23 +196,23 @@ final class hh {
             var6 = stackIn_68_0;
             var7 = var6 + (var5 + 7);
             FullscreenNoticeType.field_b = new int[var7];
-            hf.field_d = new String[var7];
+            ByteArrayPoolSupport.field_d = new String[var7];
             for (var8 = 0; var8 < var7; var8++) {
               FullscreenNoticeType.field_b[var8] = -1;
             }
-            hf.field_d[1] = ValidationStatusWidget.field_X;
+            ByteArrayPoolSupport.field_d[1] = ValidationStatusWidget.field_X;
             FullscreenNoticeType.field_b[1] = 0;
             FullscreenFocusCanvas.field_k = new int[2];
-            hf.field_d[0] = sg.field_e;
-            hf.field_d[2] = ve.field_d;
+            ByteArrayPoolSupport.field_d[0] = sg.field_e;
+            ByteArrayPoolSupport.field_d[2] = ve.field_d;
             FullscreenFocusCanvas.field_k[0] = 5;
             FullscreenFocusCanvas.field_k[1] = 2;
-            hf.field_d[4] = an.field_f;
+            ByteArrayPoolSupport.field_d[4] = an.field_f;
             FullscreenNoticeType.field_b[3] = 1;
-            hf.field_d[5] = "";
-            hf.field_d[3] = sc.field_i;
+            ByteArrayPoolSupport.field_d[5] = "";
+            ByteArrayPoolSupport.field_d[3] = sc.field_i;
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
-              stackIn_75_0 = hf.field_d;
+              stackIn_75_0 = ByteArrayPoolSupport.field_d;
               stackIn_75_1 = 6 + var8Lifetime2;
               if (ModalDialogHost.field_D.length + (var8Lifetime2 - var5) < 0) {
                 stackIn_76_2 = "";
@@ -221,10 +221,10 @@ final class hh {
               }
               stackIn_75_0[stackIn_75_1] = stackIn_76_2;
             }
-            hf.field_d[6 + var5] = null;
+            ByteArrayPoolSupport.field_d[6 + var5] = null;
             FullscreenNoticeType.field_b[6 + var5] = -2;
             for (var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
-              stackIn_81_0 = hf.field_d;
+              stackIn_81_0 = ByteArrayPoolSupport.field_d;
               stackIn_81_1 = var8Lifetime3 + 7 + var5;
               if (uh.field_j.length <= var8Lifetime3) {
                 stackIn_82_2 = "";
@@ -237,10 +237,10 @@ final class hh {
           }
           NameSuggestionsPanel.field_F.field_b = FullscreenFocusCanvas.field_k.length;
           var3_intLifetime1 = 0;
-          for (var4Lifetime1 = 0; var4Lifetime1 < hf.field_d.length; var4Lifetime1++) {
+          for (var4Lifetime1 = 0; var4Lifetime1 < ByteArrayPoolSupport.field_d.length; var4Lifetime1++) {
             stackIn_88_0 = 110;
             stackIn_89_1 = !(FullscreenNoticeType.field_b[var4Lifetime1] < 0);
-            var5Lifetime1 = ResizableModalDialog.a(stackIn_88_0, stackIn_89_1, hf.field_d[var4Lifetime1]);
+            var5Lifetime1 = ResizableModalDialog.a(stackIn_88_0, stackIn_89_1, ByteArrayPoolSupport.field_d[var4Lifetime1]);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -267,7 +267,7 @@ final class hh {
           pc.field_d = -(var3_intLifetime1 >> 1) + (wk.field_c + var3_intLifetime1);
           hg.field_f = -(var3_intLifetime1 >> 1) + wk.field_c;
           ArchiveIndex.field_m = (ProxyAuthenticationRequiredException.field_b + cl.field_l << 1) * NameSuggestionsPanel.field_F.field_b;
-          for (var4Lifetime2 = 0; var4Lifetime2 < hf.field_d.length; var4Lifetime2++) {
+          for (var4Lifetime2 = 0; var4Lifetime2 < ByteArrayPoolSupport.field_d.length; var4Lifetime2++) {
             stackIn_112_0 = ArchiveIndex.field_m;
             if (FullscreenNoticeType.field_b[var4Lifetime2] < 0) {
               stackIn_113_1 = MouseWheelInput.field_d;
@@ -280,15 +280,15 @@ final class hh {
             hh.clearStaticReferences(36);
           }
           s.field_g = -(ArchiveIndex.field_m >> 1) + qg.field_l;
-          q.field_e = new int[hf.field_d.length][];
+          q.field_e = new int[ByteArrayPoolSupport.field_d.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = s.field_g;
-          while (var4Lifetime3 < hf.field_d.length) {
+          while (var4Lifetime3 < ByteArrayPoolSupport.field_d.length) {
             var6Lifetime1 = FullscreenNoticeType.field_b[var4Lifetime3];
             if (0 > var6Lifetime1) {
               var5Lifetime3 = var5Lifetime3 + MouseWheelInput.field_d;
             } else {
-              var7Lifetime2 = ResizableModalDialog.a(103, true, hf.field_d[var4Lifetime3]);
+              var7Lifetime2 = ResizableModalDialog.a(103, true, ByteArrayPoolSupport.field_d[var4Lifetime3]);
               var5Lifetime3 = var5Lifetime3 + cl.field_l;
               var8Lifetime1 = -(var7Lifetime2 >> 1) + wk.field_c;
               q.field_e[var4Lifetime3] = new int[4];

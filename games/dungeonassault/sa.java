@@ -325,7 +325,7 @@ final class sa {
             var5 = var10;
             var6 = param2;
             var7 = param3;
-            var10[var6] = var7 + (nb.a(var10[var6], 16711422) >> 1);
+            var10[var6] = var7 + (nb.bitwiseAnd(var10[var6], 16711422) >> 1);
             param2++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

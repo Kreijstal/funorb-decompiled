@@ -159,11 +159,11 @@ public final class Terraphoenix extends GameShell {
                   lf.field_c == 13) {
                   ProxyAuthenticationRequiredException.field_g = 20;
                   TextLayout.field_b = false;
-                  qd.$cfr$intArgs$a$e9dea5688aa5(79, 34);
+                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(79, 34);
                 }
                 if (lf.field_c == 97 ||
                   lf.field_c == 99) {
-                  qd.$cfr$intArgs$a$e9dea5688aa5(53, 24);
+                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(53, 24);
                   ProxyAuthenticationRequiredException.field_g = 20;
                   ea.field_o = ea.field_o + 1;
                   if (ea.field_o >= gh.g(-118)) {
@@ -174,7 +174,7 @@ public final class Terraphoenix extends GameShell {
                   lf.field_c != 98) {
                   continue;
                 }
-                qd.$cfr$intArgs$a$e9dea5688aa5(68, 25);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(68, 25);
                 ProxyAuthenticationRequiredException.field_g = 20;
                 ea.field_o = ea.field_o - 1;
                 if (0 <= ea.field_o) {
@@ -198,7 +198,7 @@ public final class Terraphoenix extends GameShell {
               MouseWheelInput.field_b <= var4 + var6_int &&
               1 == DiskArchiveRequest.field_I &&
               ProxyAuthenticationRequiredException.field_g < 10) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(48, 24);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(48, 24);
               ProxyAuthenticationRequiredException.field_g = 20;
               ea.field_o = ea.field_o + 1;
               if (ea.field_o >= gh.g(-123)) {
@@ -216,7 +216,7 @@ public final class Terraphoenix extends GameShell {
                 (var6_intLifetime1 + var4Lifetime3) >= MouseWheelInput.field_b &&
                 1 == DiskArchiveRequest.field_I &&
                 ProxyAuthenticationRequiredException.field_g < 10) {
-                qd.$cfr$intArgs$a$e9dea5688aa5(94, 25);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(94, 25);
                 ProxyAuthenticationRequiredException.field_g = 20;
                 ea.field_o = ea.field_o - 1;
                 if (ea.field_o < 0) {
@@ -232,7 +232,7 @@ public final class Terraphoenix extends GameShell {
                 (var3Lifetime4 + var5_intLifetime1Lifetime1) >= ef.field_j &&
                 MouseWheelInput.field_b <= var6_intLifetime1Lifetime1 + var4Lifetime3 &&
                 DiskArchiveRequest.field_I == 1) {
-                qd.$cfr$intArgs$a$e9dea5688aa5(26, 34);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(26, 34);
                 ProxyAuthenticationRequiredException.field_g = 20;
                 TextLayout.field_b = false;
               }
@@ -240,7 +240,7 @@ public final class Terraphoenix extends GameShell {
             if (oh.field_f == 2) {
               TextLayout.field_b = false;
               ProxyAuthenticationRequiredException.field_g = 20;
-              qd.$cfr$intArgs$a$e9dea5688aa5(53, 34);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(53, 34);
             }
             return;
           }
@@ -351,7 +351,7 @@ public final class Terraphoenix extends GameShell {
                   if (10 == var3Lifetime1 &&
                     var8 == 0) {
                     if (bh.field_e[13]) {
-                      qd.$cfr$intArgs$a$e9dea5688aa5(25, 34);
+                      MusicPatch.$cfr$intArgs$a$e9dea5688aa5(25, 34);
                       ja.field_i = 0;
                       ProxyAuthenticationRequiredException.field_g = 20;
                       if (!se.field_h) {
@@ -366,7 +366,7 @@ public final class Terraphoenix extends GameShell {
                         ef.field_j <= var3Lifetime1 / 2 + 320 &&
                         MouseWheelInput.field_b >= 280 &&
                         (280 + FrameTimer.field_f.field_s) >= MouseWheelInput.field_b) {
-                        qd.$cfr$intArgs$a$e9dea5688aa5(86, 33);
+                        MusicPatch.$cfr$intArgs$a$e9dea5688aa5(86, 33);
                         WidgetContainer.a(10, -25786, 10);
                       }
                     }
@@ -377,7 +377,7 @@ public final class Terraphoenix extends GameShell {
                         (476 - qh.field_b.field_t) <= MouseWheelInput.field_b &&
                         MouseWheelInput.field_b <= 476 &&
                         1 == oh.field_f) {
-                        qd.$cfr$intArgs$a$e9dea5688aa5(102, 34);
+                        MusicPatch.$cfr$intArgs$a$e9dea5688aa5(102, 34);
                         ProxyAuthenticationRequiredException.field_g = 20;
                         ja.field_i = 0;
                         GameShell.field_y = null;
@@ -387,7 +387,7 @@ public final class Terraphoenix extends GameShell {
                       return;
                     }
                     if (bh.field_e[84]) {
-                      qd.$cfr$intArgs$a$e9dea5688aa5(87, 34);
+                      MusicPatch.$cfr$intArgs$a$e9dea5688aa5(87, 34);
                       ProxyAuthenticationRequiredException.field_g = 20;
                       ja.field_i = 0;
                       if (!se.field_h) {
@@ -397,7 +397,7 @@ public final class Terraphoenix extends GameShell {
                     }
                     if (bh.field_e[96] &&
                       DiskArchiveRequest.field_J > 0) {
-                      qd.$cfr$intArgs$a$e9dea5688aa5(22, 33);
+                      MusicPatch.$cfr$intArgs$a$e9dea5688aa5(22, 33);
                       DiskArchiveRequest.field_J = DiskArchiveRequest.field_J - 1;
                       ProxyAuthenticationRequiredException.field_g = 10;
                     }
@@ -407,7 +407,7 @@ public final class Terraphoenix extends GameShell {
                     if (DiskArchiveRequest.field_J >= 2) {
                       return;
                     }
-                    qd.$cfr$intArgs$a$e9dea5688aa5(114, 33);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(114, 33);
                     ProxyAuthenticationRequiredException.field_g = 10;
                     DiskArchiveRequest.field_J = DiskArchiveRequest.field_J + 1;
                     return;
@@ -433,7 +433,7 @@ public final class Terraphoenix extends GameShell {
                           (var3Lifetime1 / 2 + 320) >= ef.field_j &&
                           MouseWheelInput.field_b >= 240 &&
                           MouseWheelInput.field_b <= 240 + FrameTimer.field_f.field_s) {
-                          qd.$cfr$intArgs$a$e9dea5688aa5(98, 33);
+                          MusicPatch.$cfr$intArgs$a$e9dea5688aa5(98, 33);
                           WidgetContainer.a(11, -25786, 11);
                         }
                       }
@@ -442,7 +442,7 @@ public final class Terraphoenix extends GameShell {
                         ef.field_j <= (var3Lifetime1 + qh.field_b.field_r / 2) &&
                         MouseWheelInput.field_b >= (-qh.field_b.field_t + 476) &&
                         MouseWheelInput.field_b <= 476) {
-                        qd.$cfr$intArgs$a$e9dea5688aa5(87, 34);
+                        MusicPatch.$cfr$intArgs$a$e9dea5688aa5(87, 34);
                         ProxyAuthenticationRequiredException.field_g = 20;
                         ja.field_i = 0;
                         GameShell.field_y = null;
@@ -463,7 +463,7 @@ public final class Terraphoenix extends GameShell {
                         return;
                       }
                     }
-                    qd.$cfr$intArgs$a$e9dea5688aa5(54, 34);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(54, 34);
                     ja.field_i = 0;
                     ProxyAuthenticationRequiredException.field_g = 20;
                     if (!se.field_h) {
@@ -705,7 +705,7 @@ public final class Terraphoenix extends GameShell {
               if (DiskArchiveRequest.field_I != 1) {
                 return;
               }
-              qd.$cfr$intArgs$a$e9dea5688aa5(92, 33);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(92, 33);
               ProxyAuthenticationRequiredException.field_g = 20;
               ja.field_i = 5;
               DraggableWidgetContainer.a(false, this.field_X.field_i);
@@ -757,7 +757,7 @@ public final class Terraphoenix extends GameShell {
             if (DiskArchiveRequest.field_I != 1) {
               return;
             }
-            qd.$cfr$intArgs$a$e9dea5688aa5(63, 33);
+            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(63, 33);
             ja.field_i = 5;
             ProxyAuthenticationRequiredException.field_g = 20;
             DraggableWidgetContainer.a(false, this.field_X.field_i);
@@ -911,7 +911,7 @@ public final class Terraphoenix extends GameShell {
           }
           if (null == this.field_S &&
             ProxyAuthenticationRequiredException.field_f < PcmPlayerPump.field_h) {
-            qg.field_a = 0;
+            ByteArrayPoolSupport.field_a = 0;
             var3_ref_g = new g(0L, (g) null);
             var3_ref_g.field_X = SingleChildWidgetContainer.field_G;
             var4_ref_g = new g(0L, (g) null);
@@ -923,7 +923,7 @@ public final class Terraphoenix extends GameShell {
             var6 = sl.field_b[4];
             var7 = sj.field_e[4];
             this.field_S = new ol(0L, var3_ref_g, var6, var7, var4_ref_g, var5);
-            this.field_S.a(416, qg.field_a, 11, PcmPlayerPump.field_h, -689, 511, ProxyAuthenticationRequiredException.field_f, ProxyAuthenticationRequiredException.field_f);
+            this.field_S.a(416, ByteArrayPoolSupport.field_a, 11, PcmPlayerPump.field_h, -689, 511, ProxyAuthenticationRequiredException.field_f, ProxyAuthenticationRequiredException.field_f);
           }
           if (this.field_S != null) {
             PcmPlayerPump.field_h = 16 * AccountRequestState.field_f.lineCount(this.field_bb.substring(0, this.field_cb), 475) + 8;
@@ -931,36 +931,36 @@ public final class Terraphoenix extends GameShell {
             var3Lifetime2 = 12;
             if (this.field_S.e((byte) -96) ||
               bh.field_e[98]) {
-              qg.field_a = qg.field_a - var3Lifetime2;
+              ByteArrayPoolSupport.field_a = ByteArrayPoolSupport.field_a - var3Lifetime2;
             }
             var4Lifetime2 = 64;
             if (this.field_S.d((byte) 16) ||
               bh.field_e[99]) {
-              qg.field_a = qg.field_a + var3Lifetime2;
+              ByteArrayPoolSupport.field_a = ByteArrayPoolSupport.field_a + var3Lifetime2;
             }
             if (RichTextWidget.field_P != 0) {
-              qg.field_a = qg.field_a + var3Lifetime2 * RichTextWidget.field_P;
+              ByteArrayPoolSupport.field_a = ByteArrayPoolSupport.field_a + var3Lifetime2 * RichTextWidget.field_P;
             }
             if (this.field_S.e(-1) ||
               bh.field_e[102] ||
               bh.field_e[104]) {
-              qg.field_a = qg.field_a - var4Lifetime2;
+              ByteArrayPoolSupport.field_a = ByteArrayPoolSupport.field_a - var4Lifetime2;
             }
             if (this.field_S.f((byte) -121) ||
               bh.field_e[103] ||
               bh.field_e[105]) {
-              qg.field_a = qg.field_a + var4Lifetime2;
+              ByteArrayPoolSupport.field_a = ByteArrayPoolSupport.field_a + var4Lifetime2;
             }
-            if (qg.field_a > -ProxyAuthenticationRequiredException.field_f + PcmPlayerPump.field_h) {
-              qg.field_a = PcmPlayerPump.field_h - ProxyAuthenticationRequiredException.field_f;
+            if (ByteArrayPoolSupport.field_a > -ProxyAuthenticationRequiredException.field_f + PcmPlayerPump.field_h) {
+              ByteArrayPoolSupport.field_a = PcmPlayerPump.field_h - ProxyAuthenticationRequiredException.field_f;
             }
-            if (qg.field_a < 0) {
-              qg.field_a = 0;
+            if (ByteArrayPoolSupport.field_a < 0) {
+              ByteArrayPoolSupport.field_a = 0;
             }
             if (this.field_S.f(-1)) {
-              qg.field_a = this.field_S.a(74, PcmPlayerPump.field_h, ProxyAuthenticationRequiredException.field_f);
+              ByteArrayPoolSupport.field_a = this.field_S.a(74, PcmPlayerPump.field_h, ProxyAuthenticationRequiredException.field_f);
             }
-            this.field_S.a((byte) 79, ProxyAuthenticationRequiredException.field_f, qg.field_a, PcmPlayerPump.field_h);
+            this.field_S.a((byte) 79, ProxyAuthenticationRequiredException.field_f, ByteArrayPoolSupport.field_a, PcmPlayerPump.field_h);
           }
           if (this.field_ib < 256) {
             this.field_ib = this.field_ib + 1;
@@ -990,15 +990,15 @@ public final class Terraphoenix extends GameShell {
             if (var3Lifetime3 < this.field_mb) {
               this.field_cb = this.field_cb + 1;
               this.field_mb = 0;
-              if (PcmPlayerPump.field_h - ProxyAuthenticationRequiredException.field_f <= qg.field_a) {
+              if (PcmPlayerPump.field_h - ProxyAuthenticationRequiredException.field_f <= ByteArrayPoolSupport.field_a) {
                 PcmPlayerPump.field_h = AccountRequestState.field_f.lineCount(this.field_bb.substring(0, this.field_cb), 475) * 16 + 8;
-                qg.field_a = -ProxyAuthenticationRequiredException.field_f + PcmPlayerPump.field_h;
-                if (0 > qg.field_a) {
-                  qg.field_a = 0;
+                ByteArrayPoolSupport.field_a = -ProxyAuthenticationRequiredException.field_f + PcmPlayerPump.field_h;
+                if (0 > ByteArrayPoolSupport.field_a) {
+                  ByteArrayPoolSupport.field_a = 0;
                 }
               }
               if (this.field_bb.charAt(this.field_cb - 1) != 32) {
-                qd.$cfr$intArgs$a$e9dea5688aa5(123, 22);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(123, 22);
               }
             }
           }
@@ -1012,13 +1012,13 @@ public final class Terraphoenix extends GameShell {
                 this.field_mb = this.field_mb - (this.field_bb.length() - this.field_cb) * 5;
                 this.field_cb = this.field_bb.length();
                 this.field_ib = 256;
-                qd.$cfr$intArgs$a$e9dea5688aa5(55, 33);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(55, 33);
                 decompiledSharedTail1 = (var8 != 0);
               }
               if ((decompiledSharedTail1) &&
                 (500 > this.field_mb)) {
                 this.field_mb = 500;
-                qd.$cfr$intArgs$a$e9dea5688aa5(19, 33);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(19, 33);
               }
             }
             if (ef.field_j >= 532 &&
@@ -1027,24 +1027,24 @@ public final class Terraphoenix extends GameShell {
               (548 - PcmResampler.field_g.field_t) > MouseWheelInput.field_b) {
               this.field_mb = 500;
               gd.field_c = 10;
-              qd.$cfr$intArgs$a$e9dea5688aa5(64, 33);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(64, 33);
             }
           }
           if (500 <= this.field_mb) {
             boolean decompiledSharedTail0 = (ConfirmedEmailAvailabilityValidator.field_q == 4);
             if (!decompiledSharedTail0) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(55, 24);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(55, 24);
               decompiledSharedTail0 = (var8 != 0);
             }
             if (decompiledSharedTail0) {
               if (0 == gd.field_c) {
-                qd.$cfr$intArgs$a$e9dea5688aa5(40, 81);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(40, 81);
               }
               if (gd.field_c == 1) {
-                qd.$cfr$intArgs$a$e9dea5688aa5(23, 49);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(23, 49);
               }
               if (1 <= gd.field_c) {
-                qd.$cfr$intArgs$a$e9dea5688aa5(26, 24);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(26, 24);
               }
             }
             this.field_cb = 0;
@@ -1054,7 +1054,7 @@ public final class Terraphoenix extends GameShell {
             if (null != TextHotspotBounds.field_m) {
               TextHotspotBounds.field_m.bindAsRenderTarget();
               SoftwareRasterizer.clearRaster();
-              k.field_f.a(0);
+              k.field_f.setAsRasterTarget(0);
             }
             rk.field_c = 32;
             if (ConfirmedEmailAvailabilityValidator.field_q == 0 &&
@@ -1213,7 +1213,7 @@ public final class Terraphoenix extends GameShell {
           }
           ab.field_a = va.a(1, -117);
           var2_int = -77 / ((param0 - 56) / 62);
-          fc.field_a = va.a(2, -117);
+          GrowableIntArray.field_a = va.a(2, -117);
           ee.field_G = va.a(3, -128);
           mi.field_h = va.a(4, -118);
           h.field_j = va.a(5, -125);
@@ -1312,7 +1312,7 @@ public final class Terraphoenix extends GameShell {
             if (lf.field_c == 84) {
               var2_int = this.field_xb;
               var3 = 0;
-              qd.$cfr$intArgs$a$e9dea5688aa5(77, 33);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(77, 33);
             }
             if (97 == lf.field_c) {
               var3 = 1;
@@ -1323,7 +1323,7 @@ public final class Terraphoenix extends GameShell {
               var3 = -1;
             }
             if (98 == lf.field_c) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(68, 25);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(68, 25);
               var4 = -1;
             }
             if (99 != lf.field_c) {
@@ -1332,7 +1332,7 @@ public final class Terraphoenix extends GameShell {
             var4 = 1;
             stackIn_51_0 = 80;
             if (var6 == 0) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(stackIn_51_0, 24);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(stackIn_51_0, 24);
               continue;
             }
             break;
@@ -1387,11 +1387,11 @@ public final class Terraphoenix extends GameShell {
               }
               if (1 == var3) {
                 ConfirmedEmailAvailabilityValidator.field_q = (1 + (ConfirmedEmailAvailabilityValidator.field_q + this.field_kb)) % this.field_kb;
-                qd.$cfr$intArgs$a$e9dea5688aa5(51, 24);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(51, 24);
               }
               if (var3 == -1) {
                 ConfirmedEmailAvailabilityValidator.field_q = (-1 + this.field_kb + ConfirmedEmailAvailabilityValidator.field_q) % this.field_kb;
-                qd.$cfr$intArgs$a$e9dea5688aa5(24, 25);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(24, 25);
               }
             }
             var5++;
@@ -1404,12 +1404,12 @@ public final class Terraphoenix extends GameShell {
             if (var3 == 1 &&
               Archive.field_a < this.field_K - 1) {
               Archive.field_a = Archive.field_a + 1;
-              qd.$cfr$intArgs$a$e9dea5688aa5(113, 24);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(113, 24);
             }
             if (var3 == -1 &&
               0 < Archive.field_a) {
               Archive.field_a = Archive.field_a - 1;
-              qd.$cfr$intArgs$a$e9dea5688aa5(33, 25);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(33, 25);
             }
           }
           var5++;
@@ -1439,7 +1439,7 @@ public final class Terraphoenix extends GameShell {
               SectorCacheStore.field_e = 128;
             }
             if (ai.field_g <= 0) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(31, 70);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(31, 70);
               ai.field_g = 25;
             }
           }
@@ -1507,7 +1507,7 @@ public final class Terraphoenix extends GameShell {
               if (null != a.field_b) {
                 ga.b((byte) 60);
               }
-              fc.a(dg.a(false), 100);
+              GrowableIntArray.a(dg.a(false), 100);
             }
             var5++;
           }
@@ -1629,8 +1629,8 @@ public final class Terraphoenix extends GameShell {
                     IntrusiveDeque.field_c.tryLoadAllGroups((byte) -128)) {
                     if (ab.field_a.ensureIndexLoaded(0) &&
                       ab.field_a.tryLoadAllGroups((byte) -128)) {
-                      if (fc.field_a.ensureIndexLoaded(0) &&
-                        fc.field_a.tryLoadAllGroups((byte) -128)) {
+                      if (GrowableIntArray.field_a.ensureIndexLoaded(0) &&
+                        GrowableIntArray.field_a.tryLoadAllGroups((byte) -128)) {
                         if (ByteStorage.field_d.ensureIndexLoaded(0) &&
                           ByteStorage.field_d.tryLoadGroupByName(-3, "basic")) {
                           if (me.field_o <= 0 && (!ByteStorage.field_d.ensureIndexLoaded(param1 + 107) ||
@@ -1656,7 +1656,7 @@ public final class Terraphoenix extends GameShell {
                         DualLinkNode.a(vf.a("basic", bl.field_d, ByteStorage.field_d, be.field_w, 4650), (byte) -88, 35.0f);
                         return;
                       }
-                      DualLinkNode.a(vf.a("", TutorialText.field_b, fc.field_a, EditableTextField.field_R, 4650), (byte) -124, 30.0f);
+                      DualLinkNode.a(vf.a("", TutorialText.field_b, GrowableIntArray.field_a, EditableTextField.field_R, 4650), (byte) -124, 30.0f);
                       return;
                     }
                     DualLinkNode.a(vf.a("", q.field_Nb, ab.field_a, be.field_w, 4650), (byte) 110, 25.0f);
@@ -1677,19 +1677,19 @@ public final class Terraphoenix extends GameShell {
           if (param1 != -107) {
             this.a((String) null, -98, 101, 14, 104);
           }
-          if (fc.field_a != null) {
+          if (GrowableIntArray.field_a != null) {
             DualLinkNode.a(u.field_f, (byte) -122, 60.0f);
             this.renderClientFrame((byte) -89);
             ImageProducerRasterBuffer.field_k = new byte[PasswordValidator.field_n.length][];
             var3_int = 0;
             while (PasswordValidator.field_n.length > var3_int) {
-              ImageProducerRasterBuffer.field_k[var3_int] = fc.field_a.getFileByName("", PasswordValidator.field_n[var3_int] + ".lev", -21653);
+              ImageProducerRasterBuffer.field_k[var3_int] = GrowableIntArray.field_a.getFileByName("", PasswordValidator.field_n[var3_int] + ".lev", -21653);
               var3_int++;
               if (var6 != 0) {
                 return;
               }
             }
-            fc.field_a = null;
+            GrowableIntArray.field_a = null;
             ea.a((byte) 47);
             return;
           }
@@ -1727,7 +1727,7 @@ public final class Terraphoenix extends GameShell {
             var3_int = 0;
             do {
               if (var3_int >= 64) {
-                k.field_f.a(param1 ^ -107);
+                k.field_f.setAsRasterTarget(param1 ^ -107);
                 ja.field_i = 8;
                 fh.a(62, 50);
                 DraggableWidgetContainer.a(false, 7);
@@ -1753,7 +1753,7 @@ public final class Terraphoenix extends GameShell {
           var5 = 0;
           do {
             if (!(ca.field_a.length > var5)) {
-              uk.field_b.d(-32499);
+              uk.field_b.releasePatchSampleIds(-32499);
               IntrusiveDeque.field_c = null;
               GameApplet.field_g = new PcmSample[92];
               break;
@@ -2341,7 +2341,7 @@ public final class Terraphoenix extends GameShell {
                 this.field_xb = var11;
               }
               if (0 == ConfirmedEmailAvailabilityValidator.field_q) {
-                this.a(sb.field_n, 320, var8Lifetime2, var9, 105);
+                this.a(MidiNoteMask.field_n, 320, var8Lifetime2, var9, 105);
               }
               if (ConfirmedEmailAvailabilityValidator.field_q == 1) {
                 this.a(ah.field_D, 320, var8Lifetime2, var9, 108);
@@ -2353,7 +2353,7 @@ public final class Terraphoenix extends GameShell {
                 this.a(va.field_h, 320, var8Lifetime2, var9, param0 ^ 115);
               }
               if (ConfirmedEmailAvailabilityValidator.field_q == 4) {
-                this.a(sb.field_n, 320, var8Lifetime2, var9, param0 ^ 116);
+                this.a(MidiNoteMask.field_n, 320, var8Lifetime2, var9, param0 ^ 116);
               }
               if (ConfirmedEmailAvailabilityValidator.field_q > 0 &&
                 ConfirmedEmailAvailabilityValidator.field_q != 4) {
@@ -2522,10 +2522,10 @@ public final class Terraphoenix extends GameShell {
               var9 = var9 + var10;
             }
             if (~this.field_xb != ~var5) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(24, 22);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(24, 22);
             }
             SoftwareRasterizer.resetClip();
-            k.field_f.a(0);
+            k.field_f.setAsRasterTarget(0);
           }
           this.v(param0 ^ param0);
           this.i((byte) 108);
@@ -2677,7 +2677,7 @@ public final class Terraphoenix extends GameShell {
                 break;
               }
             }
-            k.field_f.a(0);
+            k.field_f.setAsRasterTarget(0);
           }
           this.v(0);
           this.i((byte) 58);
@@ -2711,7 +2711,7 @@ public final class Terraphoenix extends GameShell {
             stackIn_13_1 = 1 & param0;
             if (var6 == 0) {
               if (stackIn_13_0 < stackIn_13_1) {
-                param1[pj.field_t] = (byte)ResizableModalDialog.b((int) param1[pj.field_t], 1 << RandomAccessCacheFile.field_b);
+                param1[pj.field_t] = (byte)ResizableModalDialog.bitwiseOr((int) param1[pj.field_t], 1 << RandomAccessCacheFile.field_b);
               }
               param2--;
               RandomAccessCacheFile.field_b = RandomAccessCacheFile.field_b + 1;
@@ -2782,13 +2782,13 @@ public final class Terraphoenix extends GameShell {
               var4_int = 191;
               break;
             }
-            sh.field_E[var4_int] = (dg.a(var4_int * dg.a(16646399, wa.field_s), -33423668) >>> 9) + (dg.a(33423514, dg.a(65280, wa.field_s) * var4_int) >> 9);
+            MusicPatchNode.field_E[var4_int] = (dg.bitwiseAnd(var4_int * dg.bitwiseAnd(16646399, wa.field_s), -33423668) >>> 9) + (dg.bitwiseAnd(33423514, dg.bitwiseAnd(65280, wa.field_s) * var4_int) >> 9);
             var4_int++;
           } while (var6 == 0);
           if (rk.field_c > 449) {
             var4_int = 640 - rk.field_c;
           }
-          SoftwareRasterizer.addRadialGlow(param2 << 4, param1 << 4, 2900, var4_int, sh.field_E);
+          SoftwareRasterizer.addRadialGlow(param2 << 4, param1 << 4, 2900, var4_int, MusicPatchNode.field_E);
           AccountRequestState.field_f.drawParagraphAlpha(cc.field_l, -(rk.field_c / 2) + 320, -600 - (-(24 * ((0 + nd.field_k) % 50)) - 120), 12, 240, wa.field_s, 0, 64, 1, 1, 24);
           AccountRequestState.field_f.drawParagraphAlpha(cc.field_l, -(rk.field_c / 2) + 320, 120 + (-25 + (nd.field_k + 25) % 50) * 24, 12, 240, wa.field_s, 0, 64, 1, 1, 24);
           AccountRequestState.field_f.drawParagraphAlpha(cc.field_l, 320 - (-(rk.field_c / 2) + 12), 120 + (nd.field_k + 12) % 50 * 24 - 600, 12, 240, wa.field_s, 0, 64, 1, 1, 24);
@@ -3103,22 +3103,22 @@ public final class Terraphoenix extends GameShell {
           }
           boolean decompiledSharedTail0 = (null == this.field_nb[param0].field_b);
           if (!decompiledSharedTail0) {
-            qd.$cfr$intArgs$a$e9dea5688aa5(88, od.field_c[this.field_nb[param0].field_b.field_g].field_n);
+            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(88, od.field_c[this.field_nb[param0].field_b.field_g].field_n);
             decompiledSharedTail0 = (var4 != 0);
           }
           if ((decompiledSharedTail0) &&
             (this.field_nb[param0].field_A != null)) {
-            qd.$cfr$intArgs$a$e9dea5688aa5(16, od.field_c[this.field_nb[param0].field_A.field_g].field_n);
+            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(16, od.field_c[this.field_nb[param0].field_A.field_g].field_n);
           }
           if (this.field_nb[param0].field_m != null) {
             if (this.field_nb[param0].field_m.field_f == 1) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(68, 36);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(68, 36);
             }
             if (2 == this.field_nb[param0].field_m.field_f) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(110, 35);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(110, 35);
             }
             if (3 == this.field_nb[param0].field_m.field_f) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(28, 39);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(28, 39);
             }
           }
           return;
@@ -3183,7 +3183,7 @@ public final class Terraphoenix extends GameShell {
             if (DiskArchiveRequest.field_I == 1) {
               this.field_N.field_b = true;
               ja.field_i = 1;
-              qd.$cfr$intArgs$a$e9dea5688aa5(70, 27);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(70, 27);
               if (null != this.field_X) {
                 ja.field_i = 2;
               }
@@ -3225,7 +3225,7 @@ public final class Terraphoenix extends GameShell {
             if (var9 != 0) {
               while (true) {
                 if (stackIn_478_0 != null) {
-                  qd.$cfr$intArgs$a$e9dea5688aa5(62, 24);
+                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(62, 24);
                   while (true) {
                     if (lf.field_c == 96) {
                       while (true) {
@@ -3239,12 +3239,12 @@ public final class Terraphoenix extends GameShell {
                         }
                         break;
                       }
-                      qd.$cfr$intArgs$a$e9dea5688aa5(65, 25);
+                      MusicPatch.$cfr$intArgs$a$e9dea5688aa5(65, 25);
                     }
                     if (lf.field_c == 13) {
                       ja.field_i = 1;
                       this.field_N.field_b = true;
-                      qd.$cfr$intArgs$a$e9dea5688aa5(105, 27);
+                      MusicPatch.$cfr$intArgs$a$e9dea5688aa5(105, 27);
                       return;
                     }
                     if (!DefaultTextWidgetRenderer.d(1)) {
@@ -3314,7 +3314,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_Eb[0] = SecondaryNodeDequeIterator.field_b + this.field_nb[var7_int].b(1);
                 }
                 if (1 == DiskArchiveRequest.field_I) {
-                  qd.$cfr$intArgs$a$e9dea5688aa5(80, 33);
+                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(80, 33);
                   if (null != this.field_nb[var7_int]) {
                     this.field_qb = var7_int;
                   } else {
@@ -3357,7 +3357,7 @@ public final class Terraphoenix extends GameShell {
                 var2_intLifetime3 != 11) {
                 if (null == this.field_nb[this.field_qb].field_b) {
                   this.field_nb[this.field_qb].field_b = new oh(var2_intLifetime3);
-                  qd.$cfr$intArgs$a$e9dea5688aa5(31, od.field_c[var2_intLifetime3].field_n);
+                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(31, od.field_c[var2_intLifetime3].field_n);
                   var7.field_a[var2_intLifetime3] = var7.field_a[var2_intLifetime3] - 1;
                   decompiledFrameRemainder1 = (var9 != 0);
                 }
@@ -3366,7 +3366,7 @@ public final class Terraphoenix extends GameShell {
                   dupTemp$2 = this.field_nb[this.field_qb].field_b.field_g;
                   var7.field_a[dupTemp$2] = var7.field_a[dupTemp$2] + 1;
                   this.field_nb[this.field_qb].field_b = new oh(var2_intLifetime3);
-                  qd.$cfr$intArgs$a$e9dea5688aa5(99, od.field_c[var2_intLifetime3].field_n);
+                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(99, od.field_c[var2_intLifetime3].field_n);
                   var7.field_a[var2_intLifetime3] = var7.field_a[var2_intLifetime3] - 1;
                   decompiledFrameRemainder1 = (var9 != 0);
                 }
@@ -3378,7 +3378,7 @@ public final class Terraphoenix extends GameShell {
                   var2_intLifetime3 == 12) {
                   if (null == this.field_nb[this.field_qb].field_A) {
                     this.field_nb[this.field_qb].field_A = new oh(var2_intLifetime3);
-                    qd.$cfr$intArgs$a$e9dea5688aa5(61, od.field_c[var2_intLifetime3].field_n);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(61, od.field_c[var2_intLifetime3].field_n);
                     var7.field_a[var2_intLifetime3] = var7.field_a[var2_intLifetime3] - 1;
                     decompiledFrameRemainder1 = (var9 != 0);
                   }
@@ -3387,7 +3387,7 @@ public final class Terraphoenix extends GameShell {
                     dupTemp$3 = this.field_nb[this.field_qb].field_A.field_g;
                     var7.field_a[dupTemp$3] = var7.field_a[dupTemp$3] + 1;
                     this.field_nb[this.field_qb].field_A = new oh(var2_intLifetime3);
-                    qd.$cfr$intArgs$a$e9dea5688aa5(25, od.field_c[var2_intLifetime3].field_n);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(25, od.field_c[var2_intLifetime3].field_n);
                     var7.field_a[var2_intLifetime3] = var7.field_a[var2_intLifetime3] - 1;
                     decompiledFrameRemainder1 = (var9 != 0);
                   }
@@ -3397,7 +3397,7 @@ public final class Terraphoenix extends GameShell {
                   var2_intLifetime3 == 11))) {
                   if (this.field_nb[this.field_qb].field_i == null) {
                     this.field_nb[this.field_qb].field_i = new oh(var2_intLifetime3);
-                    qd.$cfr$intArgs$a$e9dea5688aa5(49, od.field_c[var2_intLifetime3].field_n);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(49, od.field_c[var2_intLifetime3].field_n);
                     this.field_nb[this.field_qb].field_i.field_d = 1;
                     var7.field_a[var2_intLifetime3] = var7.field_a[var2_intLifetime3] - 1;
                     decompiledFrameRemainder1 = (var9 != 0);
@@ -3407,14 +3407,14 @@ public final class Terraphoenix extends GameShell {
                       dupTemp$4 = this.field_nb[this.field_qb].field_i.field_g;
                       var7.field_a[dupTemp$4] = var7.field_a[dupTemp$4] + this.field_nb[this.field_qb].field_i.field_d;
                       this.field_nb[this.field_qb].field_i = new oh(var2_intLifetime3);
-                      qd.$cfr$intArgs$a$e9dea5688aa5(34, od.field_c[var2_intLifetime3].field_n);
+                      MusicPatch.$cfr$intArgs$a$e9dea5688aa5(34, od.field_c[var2_intLifetime3].field_n);
                       this.field_nb[this.field_qb].field_i.field_d = 1;
                       var7.field_a[var2_intLifetime3] = var7.field_a[var2_intLifetime3] - 1;
                       decompiledFrameRemainder1 = (var9 != 0);
                     }
                     if ((decompiledFrameRemainder1) &&
                       (decompiledFrameRemainder1 = !(this.field_nb[this.field_qb].field_i.field_d >= 8))) {
-                      qd.$cfr$intArgs$a$e9dea5688aa5(114, od.field_c[var2_intLifetime3].field_n);
+                      MusicPatch.$cfr$intArgs$a$e9dea5688aa5(114, od.field_c[var2_intLifetime3].field_n);
                       dupTemp$5 = this.field_nb[this.field_qb].field_i;
                       dupTemp$5.field_d = dupTemp$5.field_d + 1;
                       var7.field_a[var2_intLifetime3] = var7.field_a[var2_intLifetime3] - 1;
@@ -3467,7 +3467,7 @@ public final class Terraphoenix extends GameShell {
                   var8Lifetime1 = 4;
                 }
                 this.field_I.field_a[var2_intLifetime3] = this.field_I.field_a[var2_intLifetime3] + var8Lifetime1;
-                qd.$cfr$intArgs$a$e9dea5688aa5(106, 24);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(106, 24);
               }
             }
           }
@@ -3496,7 +3496,7 @@ public final class Terraphoenix extends GameShell {
                   var8Lifetime2 = 2;
                 }
                 this.field_I.field_d[var2_intLifetime4] = this.field_I.field_d[var2_intLifetime4] + var8Lifetime2;
-                qd.$cfr$intArgs$a$e9dea5688aa5(60, 24);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(60, 24);
                 decompiledFrameRemainder0 = (var9 != 0);
               }
             }
@@ -3514,13 +3514,13 @@ public final class Terraphoenix extends GameShell {
               }
               this.field_nb[this.field_qb].field_m.field_f = var2_intLifetime4;
               if (var2_intLifetime4 == 1) {
-                qd.$cfr$intArgs$a$e9dea5688aa5(78, 36);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(78, 36);
               }
               if (2 == var2_intLifetime4) {
-                qd.$cfr$intArgs$a$e9dea5688aa5(119, 35);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(119, 35);
               }
               if (var2_intLifetime4 == 3) {
-                qd.$cfr$intArgs$a$e9dea5688aa5(72, 39);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(72, 39);
               }
               var7Lifetime1.field_d[var2_intLifetime4] = var7Lifetime1.field_d[var2_intLifetime4] - 1;
             }
@@ -3538,7 +3538,7 @@ public final class Terraphoenix extends GameShell {
               dupTemp$7 = this.field_nb[this.field_qb].field_b.field_g;
               this.field_I.field_a[dupTemp$7] = this.field_I.field_a[dupTemp$7] + 1;
               this.field_nb[this.field_qb].field_b = null;
-              qd.$cfr$intArgs$a$e9dea5688aa5(120, 34);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(120, 34);
             }
           }
           if (ef.field_j >= 556 &&
@@ -3559,7 +3559,7 @@ public final class Terraphoenix extends GameShell {
                 dupTemp$9 = this.field_nb[this.field_qb].field_A.field_g;
                 this.field_I.field_a[dupTemp$9] = this.field_I.field_a[dupTemp$9] - 1;
               }
-              qd.$cfr$intArgs$a$e9dea5688aa5(37, 34);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(37, 34);
             }
           }
           if (ef.field_j >= 453 &&
@@ -3578,7 +3578,7 @@ public final class Terraphoenix extends GameShell {
               if (0 < this.field_I.field_d[0]) {
                 this.field_I.field_d[0] = this.field_I.field_d[0] - 1;
               }
-              qd.$cfr$intArgs$a$e9dea5688aa5(81, 34);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(81, 34);
             }
           }
           if (ef.field_j >= 578 &&
@@ -3594,7 +3594,7 @@ public final class Terraphoenix extends GameShell {
               dupTemp$11 = this.field_nb[this.field_qb].field_i.field_g;
               this.field_I.field_a[dupTemp$11] = this.field_I.field_a[dupTemp$11] + this.field_nb[this.field_qb].field_i.field_d;
               this.field_nb[this.field_qb].field_i = null;
-              qd.$cfr$intArgs$a$e9dea5688aa5(22, 34);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(22, 34);
             }
           }
           if (578 <= ef.field_j &&
@@ -3605,7 +3605,7 @@ public final class Terraphoenix extends GameShell {
             this.field_Eb = new String[1];
             this.field_Eb[0] = lf.field_b;
             if (0 != DiskArchiveRequest.field_I) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(65, 25);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(65, 25);
               dupTemp$12 = this.field_nb[this.field_qb].field_i.field_g;
               this.field_I.field_a[dupTemp$12] = this.field_I.field_a[dupTemp$12] + 1;
               dupTemp$13 = this.field_nb[this.field_qb].field_i;
@@ -3626,7 +3626,7 @@ public final class Terraphoenix extends GameShell {
             this.field_Eb = new String[1];
             this.field_Eb[0] = PcmResampler.field_a;
             if (DiskArchiveRequest.field_I != 0) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(23, 24);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(23, 24);
               dupTemp$15 = this.field_nb[this.field_qb].field_i.field_g;
               this.field_I.field_a[dupTemp$15] = this.field_I.field_a[dupTemp$15] - 1;
               dupTemp$16 = this.field_nb[this.field_qb].field_i;
@@ -3651,7 +3651,7 @@ public final class Terraphoenix extends GameShell {
                 }
                 break;
               }
-              qd.$cfr$intArgs$a$e9dea5688aa5(62, 24);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(62, 24);
             }
             if (lf.field_c == 96) {
               while (true) {
@@ -3665,14 +3665,14 @@ public final class Terraphoenix extends GameShell {
                 }
                 break;
               }
-              qd.$cfr$intArgs$a$e9dea5688aa5(65, 25);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(65, 25);
             }
             if (lf.field_c != 13) {
               continue;
             }
             ja.field_i = 1;
             this.field_N.field_b = true;
-            qd.$cfr$intArgs$a$e9dea5688aa5(105, 27);
+            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(105, 27);
             if (var9 != 0) {
               return;
             }
@@ -3896,7 +3896,7 @@ public final class Terraphoenix extends GameShell {
               this.field_xb = var11;
             }
             if (TutorialText.field_c != 6) {
-              this.a(fc.field_g, 320, var8Lifetime5, var9, 113);
+              this.a(GrowableIntArray.field_g, 320, var8Lifetime5, var9, 113);
               if (var13 != 0) {
                 this.a(je.field_b, 320, var8Lifetime5, var9, 111);
               }
@@ -3906,9 +3906,9 @@ public final class Terraphoenix extends GameShell {
             var11++;
             var9 = var9 + var10;
             if (~var5 != ~this.field_xb) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(86, 22);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(86, 22);
             }
-            k.field_f.a(0);
+            k.field_f.setAsRasterTarget(0);
           }
           this.v(0);
           if (param0 > -61) {
@@ -4221,7 +4221,7 @@ public final class Terraphoenix extends GameShell {
               }
               break;
             }
-            k.field_f.a(0);
+            k.field_f.setAsRasterTarget(0);
           }
           this.v(0);
           if (param0 <= 122) {
@@ -4321,7 +4321,7 @@ public final class Terraphoenix extends GameShell {
           rl.clearStaticReferences(-19959);
           PcmPlayerPump.clearStaticReferences((byte) -120);
           il.clearStaticReferences((byte) 113);
-          sh.clearStaticReferences(-96);
+          MusicPatchNode.clearStaticReferences(-96);
           MidiFileReader.clearStaticReferences();
           MusicPatchPcmStream.clearStaticReferences((byte) 41);
           p.clearStaticReferences(-24869);
@@ -4365,9 +4365,9 @@ public final class Terraphoenix extends GameShell {
           sl.clearStaticReferences((byte) -58);
           je.clearStaticReferences((byte) -123);
           g.resetStaticState(-1);
-          sb.clearStaticReferences((byte) 29);
-          qd.clearStaticReferences((byte) 103);
-          gm.clearStaticReferences(8192);
+          MidiNoteMask.clearStaticReferences((byte) 29);
+          MusicPatch.clearStaticReferences((byte) 103);
+          MusicPatchEnvelope.clearStaticReferences(8192);
           TutorialText.clearStaticReferences(true);
           RandomAccessCacheFile.clearStaticReferences(1);
           SynthesizerVoice.clearStaticReferences();
@@ -4449,7 +4449,7 @@ public final class Terraphoenix extends GameShell {
           ProxySocketConnector.b(-5);
           DirectByteStorage.clearStaticReferences(0);
           RichTextLayout.clearStaticReferences(125);
-          fc.clearStaticReferences((byte) -114);
+          GrowableIntArray.clearStaticReferences((byte) -114);
           DraggableWidgetContainer.clearStaticReferences(true);
           DropTargetWidgetContainer.clearStaticReferences((byte) -120);
           rh.clearStaticReferences(33);
@@ -4646,7 +4646,7 @@ public final class Terraphoenix extends GameShell {
           }
           if (var3 != 0) {
             ProxyAuthenticationRequiredException.field_g = 20;
-            qd.$cfr$intArgs$a$e9dea5688aa5(89, 33);
+            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(89, 33);
             ge.field_e = ge.field_e + this.field_X.field_H;
             if (0 != (1 & ef.field_j)) {
               ArchiveIndex.field_e = ArchiveIndex.field_e - this.field_X.field_H;
@@ -4991,7 +4991,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_Eb[0] = ArchiveRequest.field_t;
                   decompiledFrameRemainder0 = (DiskArchiveRequest.field_I == 1);
                   if (decompiledFrameRemainder0) {
-                    qd.$cfr$intArgs$a$e9dea5688aa5(46, 34);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(46, 34);
                     var4 = 11;
                     while (var4 >= 0) {
                       if (var5 != 0) {
@@ -5267,7 +5267,7 @@ public final class Terraphoenix extends GameShell {
             ProxyAuthenticationRequiredException.field_g = 20;
             TextFieldValidator.field_k = null;
             ja.field_i = 12;
-            qd.$cfr$intArgs$a$e9dea5688aa5(59, 33);
+            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(59, 33);
             if (var7 == 0) {
               continue;
             }
@@ -5493,7 +5493,7 @@ public final class Terraphoenix extends GameShell {
             }
             if ((decompiledFrameCompleted1) &&
               (decompiledFrameCompleted0)) {
-              k.field_f.a(param0 - 16776960);
+              k.field_f.setAsRasterTarget(param0 - 16776960);
             }
           }
           if ((decompiledFrameCompleted1) &&
@@ -5884,8 +5884,8 @@ public final class Terraphoenix extends GameShell {
                   TextFieldValidator.field_k.pixels[var2_intLifetime1Lifetime1] = k.field_f.pixels[var2_intLifetime1Lifetime1];
                   var2_intLifetime1Lifetime1++;
                 }
-                k.field_f.a(0);
-                qd.$cfr$intArgs$a$e9dea5688aa5(37, 33);
+                k.field_f.setAsRasterTarget(0);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(37, 33);
                 return;
               }
               this.field_X.a((byte) -106, lf.field_c);
@@ -5900,9 +5900,9 @@ public final class Terraphoenix extends GameShell {
                   TextLayout.field_b = true;
                   TextHotspotBounds.field_m.bindAsRenderTarget();
                   SoftwareRasterizer.clearRaster();
-                  k.field_f.a(0);
+                  k.field_f.setAsRasterTarget(0);
                   rk.field_c = 32;
-                  qd.$cfr$intArgs$a$e9dea5688aa5(22, 33);
+                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(22, 33);
                 }
               }
               if (BufferedSocket.a(70, (byte) 110, 7, 85, false, 28)) {
@@ -5920,12 +5920,12 @@ public final class Terraphoenix extends GameShell {
                   stackIn_142_1 = !(this.field_X.field_w);
                   stackIn_141_0.field_w = stackIn_142_1;
                   if (!this.field_X.field_w) {
-                    qd.$cfr$intArgs$a$e9dea5688aa5(16, 34);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(16, 34);
                     if (var6 != 0) {
-                      qd.$cfr$intArgs$a$e9dea5688aa5(115, 33);
+                      MusicPatch.$cfr$intArgs$a$e9dea5688aa5(115, 33);
                     }
                   } else {
-                    qd.$cfr$intArgs$a$e9dea5688aa5(115, 33);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(115, 33);
                   }
                 }
               }
@@ -5947,12 +5947,12 @@ public final class Terraphoenix extends GameShell {
                         continue;
                       }
                     } else {
-                      k.field_f.a(0);
+                      k.field_f.setAsRasterTarget(0);
                       rk.field_c = 32;
                     }
                     break;
                   }
-                  qd.$cfr$intArgs$a$e9dea5688aa5(82, 33);
+                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(82, 33);
                 }
               }
             }
@@ -6204,7 +6204,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_db = false;
                   this.field_Db = true;
                   if (!this.field_Db) {
-                    qd.$cfr$intArgs$a$e9dea5688aa5(69, 31);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(69, 31);
                   }
                   this.field_P = 2;
                 }
@@ -6262,7 +6262,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_db = false;
                   this.field_Db = true;
                   if (!this.field_Db) {
-                    qd.$cfr$intArgs$a$e9dea5688aa5(116, 31);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(116, 31);
                   }
                   this.field_P = 3;
                 }
@@ -6320,7 +6320,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_Db = true;
                   this.field_db = false;
                   if (!this.field_Db) {
-                    qd.$cfr$intArgs$a$e9dea5688aa5(75, 31);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(75, 31);
                   }
                   this.field_P = 4;
                 }
@@ -6354,7 +6354,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_Db = true;
                   this.field_db = false;
                   if (!this.field_Db) {
-                    qd.$cfr$intArgs$a$e9dea5688aa5(25, 31);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(25, 31);
                   }
                   this.field_P = 5;
                 }
@@ -6379,7 +6379,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_Db = true;
                   this.field_db = false;
                   if (!this.field_Db) {
-                    qd.$cfr$intArgs$a$e9dea5688aa5(76, 31);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(76, 31);
                   }
                   this.field_P = 6;
                 }
@@ -6419,7 +6419,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_Db = true;
                   this.field_db = false;
                   if (!this.field_Db) {
-                    qd.$cfr$intArgs$a$e9dea5688aa5(124, 31);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(124, 31);
                   }
                   this.field_P = 7;
                 }
@@ -6460,7 +6460,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_db = false;
                   this.field_Db = true;
                   if (!this.field_Db) {
-                    qd.$cfr$intArgs$a$e9dea5688aa5(125, 31);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(125, 31);
                   }
                   this.field_P = 9;
                 }
@@ -6486,7 +6486,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_db = false;
                   this.field_Db = true;
                   if (!this.field_Db) {
-                    qd.$cfr$intArgs$a$e9dea5688aa5(61, 31);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(61, 31);
                   }
                   this.field_P = 8;
                 }
@@ -6511,7 +6511,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_db = false;
                   this.field_Db = true;
                   if (!this.field_Db) {
-                    qd.$cfr$intArgs$a$e9dea5688aa5(77, 31);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(77, 31);
                   }
                   this.field_P = 9;
                 }
@@ -6567,7 +6567,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_db = true;
                   this.field_Db = true;
                   if (!this.field_Db) {
-                    qd.$cfr$intArgs$a$e9dea5688aa5(75, 31);
+                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(75, 31);
                   }
                   this.field_P = 11;
                 }
@@ -6667,7 +6667,7 @@ public final class Terraphoenix extends GameShell {
                     this.field_db = false;
                     this.field_P = 1;
                     if (!this.field_Db) {
-                      qd.$cfr$intArgs$a$e9dea5688aa5(20, 31);
+                      MusicPatch.$cfr$intArgs$a$e9dea5688aa5(20, 31);
                     }
                   }
                   SoftwareRasterizer.drawCircleOutline(var6, var7, (int)(15.0 + Math.sin(mm.field_f) * -5.0), 65280);
@@ -6724,7 +6724,7 @@ public final class Terraphoenix extends GameShell {
               SoftwareRasterizer.drawHorizontalLineAlpha(0, var11, 640, 65280, var10);
               var11 += 18;
             } while (var15 == 0);
-            k.field_f.a(param0 ^ -7843);
+            k.field_f.setAsRasterTarget(param0 ^ -7843);
           }
           this.v(0);
           this.i((byte) 109);
@@ -7427,7 +7427,7 @@ public final class Terraphoenix extends GameShell {
               }
             }
             FrameTimer.field_f.drawCentred(var3, 320, 468, 13881286, 0);
-            k.field_f.a(0);
+            k.field_f.setAsRasterTarget(0);
           }
           this.v(0);
           bj.field_e.drawOpaque(0, 439);
@@ -7758,7 +7758,7 @@ public final class Terraphoenix extends GameShell {
               SectorCacheStore.field_e = 128;
             }
             if (0 >= ai.field_g) {
-              qd.$cfr$intArgs$a$e9dea5688aa5(34, 70);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(34, 70);
               ai.field_g = 25;
             }
           }
@@ -8009,7 +8009,7 @@ public final class Terraphoenix extends GameShell {
                 var5 = 240;
                 this.a(-3407, var5, var4);
                 dj.b(-28186);
-                k.field_f.a(0);
+                k.field_f.setAsRasterTarget(0);
               }
               this.v(0);
               this.i((byte) 125);
@@ -8152,7 +8152,7 @@ public final class Terraphoenix extends GameShell {
               stackIn_203_1 = (0 != TutorialText.field_a);
               stackIn_207_2 = (0 != ge.field_e);
               ((BinaryBitmapFont) (Object) stackIn_202_0).drawCentred(dg.a(stackIn_203_1, stackIn_207_2, (byte) -76, false), 320, var8 - (-(var9Lifetime1 * 5) - 64), 65535, -1);
-              k.field_f.a(param0 ^ -89);
+              k.field_f.setAsRasterTarget(param0 ^ -89);
             }
             this.v(0);
             this.i((byte) 111);
@@ -8363,7 +8363,7 @@ public final class Terraphoenix extends GameShell {
                 var8Lifetime1 = 475;
               }
               SoftwareRasterizer.setClip(9, 415, 512, 472);
-              AccountRequestState.field_f.drawParagraph(var6_ref_String + "<trans=0>" + var7_ref_String, 17, -qg.field_a + 420, 12 + var8Lifetime1, 480, var5Lifetime1Lifetime1, 0, 3, 0, 16);
+              AccountRequestState.field_f.drawParagraph(var6_ref_String + "<trans=0>" + var7_ref_String, 17, -ByteArrayPoolSupport.field_a + 420, 12 + var8Lifetime1, 480, var5Lifetime1Lifetime1, 0, 3, 0, 16);
               SoftwareRasterizer.resetClip();
               if (this.field_S != null) {
                 SoftwareRasterizer.drawHorizontalLineAlpha(9, 415, 512, 0, 192);
@@ -8372,7 +8372,7 @@ public final class Terraphoenix extends GameShell {
                 SoftwareRasterizer.drawHorizontalLineAlpha(9, 470, 512, 0, 64);
                 SoftwareRasterizer.drawHorizontalLineAlpha(9, 471, 512, 0, 128);
                 SoftwareRasterizer.drawHorizontalLineAlpha(9, 472, 512, 0, 192);
-                this.field_S.a((byte) 74, ProxyAuthenticationRequiredException.field_f, qg.field_a, PcmPlayerPump.field_h);
+                this.field_S.a((byte) 74, ProxyAuthenticationRequiredException.field_f, ByteArrayPoolSupport.field_a, PcmPlayerPump.field_h);
                 this.field_S.a((byte) -36, false);
               }
             }
@@ -8636,8 +8636,8 @@ public final class Terraphoenix extends GameShell {
         int var4Lifetime1;
         var5 = field_V;
         try {
-          AccountRequestState.field_f = qg.a((byte) 94, aj.field_b, "", ab.field_a, "b12");
-          FrameTimer.field_f = qg.a((byte) 94, aj.field_b, "", ab.field_a, "b24");
+          AccountRequestState.field_f = ByteArrayPoolSupport.a((byte) 94, aj.field_b, "", ab.field_a, "b12");
+          FrameTimer.field_f = ByteArrayPoolSupport.a((byte) 94, aj.field_b, "", ab.field_a, "b24");
           var2 = ig.a(ab.field_a, 0, "screenshots", "member_benefits");
           if (me.field_o <= 0) {
             NanoFrameTimer.a(112, ByteStorage.field_d, TextFieldValidator.field_i);
@@ -8740,7 +8740,7 @@ public final class Terraphoenix extends GameShell {
           this.field_Q = il.a("icon_beginmission", "", ab.field_a, param0 ^ 2019);
           pf.field_a = new Sprite[8];
           pf.field_a[0] = il.a("instr0", "", ab.field_a, -1);
-          pf.field_a[1] = il.a("instr1", "", ab.field_a, sl.a(param0, 2019));
+          pf.field_a[1] = il.a("instr1", "", ab.field_a, sl.bitwiseXor(param0, 2019));
           pf.field_a[2] = il.a("instr2", "", ab.field_a, param0 + 2019);
           pf.field_a[3] = il.a("instr3", "", ab.field_a, -1);
           pf.field_a[7] = il.a("instr7", "", ab.field_a, -1);
@@ -8775,7 +8775,7 @@ public final class Terraphoenix extends GameShell {
           DualLinkNode.field_k = lf.a(true, "", "aimdir", ab.field_a);
           ModalDialogHost.field_N = lf.a(true, "", "menaimdir", ab.field_a);
           me.field_l = lf.a(true, "", "weaponsdir", ab.field_a);
-          fc.field_i = lf.a(true, "", "weaponsdiralien", ab.field_a);
+          GrowableIntArray.field_i = lf.a(true, "", "weaponsdiralien", ab.field_a);
           TextFieldValidator.field_f = lf.a(true, "", "aimshield", ab.field_a);
           FullscreenStatusDialog.field_W = lf.a(true, "", "alienwalk_aliens", ab.field_a);
           ba.field_e = lf.a(true, "", "alienwalk_brutes", ab.field_a);
@@ -8925,7 +8925,7 @@ public final class Terraphoenix extends GameShell {
                           if (a.field_b != null) {
                             ga.b((byte) 61);
                           }
-                          fc.a(dg.a(false), 100);
+                          GrowableIntArray.a(dg.a(false), 100);
                           if (var3 == 0) {
                             break;
                           }
@@ -9432,7 +9432,7 @@ public final class Terraphoenix extends GameShell {
               discarded$2 = this.a(true, 384, (byte) -44, 340, ba.field_c);
             }
             FrameTimer.field_f.drawCentred(var3, 320, 468, 13881286, 0);
-            k.field_f.a(0);
+            k.field_f.setAsRasterTarget(0);
           }
           this.v(param0 + 0);
           bj.field_e.drawOpaque(0, 439);
@@ -9503,7 +9503,7 @@ public final class Terraphoenix extends GameShell {
             this.field_Eb[0] = AccountNameAvailabilityValidator.field_n;
             if (DiskArchiveRequest.field_I == 1) {
               ja.field_i = 1;
-              qd.$cfr$intArgs$a$e9dea5688aa5(33, 27);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(33, 27);
               this.field_zb.field_a = true;
             }
           }
@@ -9536,14 +9536,14 @@ public final class Terraphoenix extends GameShell {
             }
             if (DiskArchiveRequest.field_I == 1) {
               this.field_D = this.field_gb;
-              qd.$cfr$intArgs$a$e9dea5688aa5(84, 33);
+              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(84, 33);
             }
           }
           var2_intLifetime1 = 31 % ((param0 - 68) / 38);
           if (this.field_zb.field_b &&
             0 < this.field_jb) {
             this.field_Eb = new String[1];
-            this.field_Eb[0] = sb.field_k;
+            this.field_Eb[0] = MidiNoteMask.field_k;
           }
           if (1 == DiskArchiveRequest.field_I &&
             this.field_zb.field_b &&
@@ -9555,7 +9555,7 @@ public final class Terraphoenix extends GameShell {
                 od.field_c[var3Lifetime1].field_t = true;
                 this.s((byte) 106);
                 this.field_jb = this.field_jb - 1;
-                qd.$cfr$intArgs$a$e9dea5688aa5(39, 32);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(39, 32);
               }
             }
             if (this.field_D < 0) {
@@ -9564,7 +9564,7 @@ public final class Terraphoenix extends GameShell {
                 sj.field_a[var3Lifetime2].field_l = true;
                 this.s((byte) -68);
                 this.field_jb = this.field_jb - 1;
-                qd.$cfr$intArgs$a$e9dea5688aa5(94, 32);
+                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(94, 32);
               }
             }
           }
@@ -9577,7 +9577,7 @@ public final class Terraphoenix extends GameShell {
             }
             ja.field_i = 1;
             this.field_zb.field_a = true;
-            qd.$cfr$intArgs$a$e9dea5688aa5(80, 27);
+            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(80, 27);
             if (var4 == 0) {
               continue;
             }
@@ -9664,9 +9664,9 @@ public final class Terraphoenix extends GameShell {
               TextFieldValidator.field_k = null;
             }
             if (decompiledFrameCompleted0) {
-              k.field_f.a(0);
+              k.field_f.setAsRasterTarget(0);
             }
-            qd.$cfr$intArgs$a$e9dea5688aa5(66, 33);
+            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(66, 33);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -99,7 +99,7 @@ final class pk {
         if (param0 != -56) {
           field_f = (String) null;
         }
-        return ch.field_d.b(true);
+        return GrowableIntArray.field_d.b(true);
     }
 
     pk(ob param0, DiskCacheWorker param1) {

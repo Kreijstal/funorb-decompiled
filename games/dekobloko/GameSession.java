@@ -1153,7 +1153,7 @@ final class GameSession {
             this.performAction1321(0, -1, this.integerState0624);
           } else {
             if (this.booleanState0147 &&
-              this.integerState0624 < -1 + MixedSupport130.stringArrayState0050.length) {
+              this.integerState0624 < -1 + ByteArrayPoolSupport.stringArrayState0050.length) {
               this.performAction1321(0, -1, 1 + this.integerState0624);
             } else {
               this.booleanState0145 = false;
@@ -1764,7 +1764,7 @@ final class GameSession {
         if (!booleanArgument1) {
           this.computeInteger1323(true);
         }
-        return NetworkSupport006.computeInteger1026(this.booleanState0143, integerLocal1, (byte) -122, this.integerState0607, integerLocal2);
+        return GrowableIntArray.computeInteger1026(this.booleanState0143, integerLocal1, (byte) -122, this.integerState0607, integerLocal2);
     }
 
     public static void resetStaticState(boolean booleanArgument1) {
@@ -2545,7 +2545,7 @@ final class GameSession {
             this.performAction1321(0, -1, this.integerState0624);
           } else {
             if (this.booleanState0147 &&
-              MixedSupport130.stringArrayState0050.length - 1 > this.integerState0624) {
+              ByteArrayPoolSupport.stringArrayState0050.length - 1 > this.integerState0624) {
               this.performAction1321(0, -1, this.integerState0624 + 1);
             } else {
               this.booleanState0145 = false;
@@ -3038,7 +3038,7 @@ final class GameSession {
               this.integerState0645 = this.integerState0617;
               this.integerState0626 = this.integerState0620;
               this.integerState0634 = this.integerState0616;
-              MixedSupport008.performAction0076(this.integerArrayState0187, 0, this.integerArrayState0190, 0, integerLocal25);
+              ArrayBlockSupport.copyIntRange(this.integerArrayState0187, 0, this.integerArrayState0190, 0, integerLocal25);
               this.integerState0627 = this.integerState0602;
             }
             if (!booleanArgument4) {
@@ -3679,7 +3679,7 @@ final class GameSession {
                     if (!this.booleanState0147) {
                       stackStringArrayLocal17 = EditableTextField.stringArrayState0040;
                     } else {
-                      stackStringArrayLocal17 = MixedSupport130.stringArrayState0050;
+                      stackStringArrayLocal17 = ByteArrayPoolSupport.stringArrayState0050;
                     }
                     stringLocal45 = stackStringArrayLocal17[this.integerState0624];
                   } else {
@@ -3792,7 +3792,7 @@ final class GameSession {
                     if (this.integerState0629 == -2) {
                       SoftwareRaster.fillRectangleAlpha(441, integerLocal177 + 4, 163, 140, 0, 150);
                       GameplayControls.performAction1749(148, (byte) 50, DefaultTextWidgetRenderer.rgbSpriteArrayState0001, 171, integerLocal177, 437);
-                      MixedSupport042.performAction0537(integerLocal177 + 26, 256, 16777215, NetworkSupport006.stringState0339, 452, SceneWidget.renderingSupport009State0007);
+                      MixedSupport042.performAction0537(integerLocal177 + 26, 256, 16777215, GrowableIntArray.stringState0339, 452, SceneWidget.renderingSupport009State0007);
                       MixedSupport045.computeInteger0552(140, 0, integerLocal177 + 32, RenderingSupport012.stringState0443, 16, 120, 16777215, DraggableWidgetContainer.renderingSupport009State0005, (byte) -126, 0, 452);
                     } else {
                       SoftwareRaster.fillRectangleAlpha(441, integerLocal177 + 4, 163, 140, 0, 150);
@@ -4139,7 +4139,7 @@ final class GameSession {
           if (integerArgument10 == -1 &&
             integerArgument11 >= integerArgument13 &&
             integerArgument11 < bucketBoardArgument2.boardHeight + 1) {
-            rgbSpriteArrayLocal85 = MixedSupport130.rgbSpriteArrayArrayState0012[integerArgument1];
+            rgbSpriteArrayLocal85 = ByteArrayPoolSupport.rgbSpriteArrayArrayState0012[integerArgument1];
             rgbSpriteArrayLocal62 = rgbSpriteArrayLocal85;
             if (rgbSpriteArrayLocal62 != null) {
               objectLocal47 = rgbSpriteArrayLocal62[rgbSpriteArrayLocal85.length - 2 - (bucketBoardArgument2.boardHeight - 1 - integerArgument11) % (rgbSpriteArrayLocal85.length - 1)];

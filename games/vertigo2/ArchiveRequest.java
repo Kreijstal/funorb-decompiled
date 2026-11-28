@@ -44,7 +44,7 @@ abstract class ArchiveRequest extends DualLinkNode {
             return stackIn_12_0;
           }
           if (param2 == 8) {
-            stackIn_15_0 = re.field_c;
+            stackIn_15_0 = GrowableIntArray.field_c;
             return stackIn_15_0;
           }
           if (param2 == 9) {

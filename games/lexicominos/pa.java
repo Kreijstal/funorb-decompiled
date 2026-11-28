@@ -73,14 +73,14 @@ final class pa {
             if (var3_int != 0) {
               var1.readString(false);
             }
-            var5_ref = cj.a((byte) 114, var4_ref_String);
+            var5_ref = MidiNoteMask.a((byte) 114, var4_ref_String);
             var6_ref = var1.readString(false);
             var7_ref = ProxyAuthenticationRequiredException.a((CharSequence) ((Object) var4_ref_String), (byte) -48);
             if (null == var7_ref) {
               var7_ref = var4_ref_String;
             }
             if (var5_ref == null) {
-              var5_ref = cj.a((byte) -109, var6_ref);
+              var5_ref = MidiNoteMask.a((byte) -109, var6_ref);
               if (var5_ref != null) {
                 ValidatedTextField.field_P.a(var5_ref, (long)var7_ref.hashCode(), (byte) 64);
               }

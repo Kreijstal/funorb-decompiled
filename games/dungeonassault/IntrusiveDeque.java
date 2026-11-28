@@ -11,7 +11,7 @@ final class IntrusiveDeque {
     static String field_a;
     private IntrusiveNode iterationCursor;
 
-    static int b(int param0, int param1) {
+    static int bitwiseXor(int param0, int param1) {
         return param0 ^ param1;
     }
 

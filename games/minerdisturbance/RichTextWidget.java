@@ -271,7 +271,7 @@ class RichTextWidget extends InteractiveWidget {
 
     final static void c(byte param0) {
         int var1 = -9 / ((param0 - 56) / 37);
-        ng.a((byte) -99);
+        MusicPatchEnvelope.a((byte) -99);
         if (ef.field_c != null) {
           AwtRasterBuffer.a(ef.field_c, 0);
         }

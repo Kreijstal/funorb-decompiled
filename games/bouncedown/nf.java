@@ -26,7 +26,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var2_int >= 0) {
               SecondaryNodeDequeIterator.field_b[ProgressDialog.field_R] = ~var2_int;
               ProgressDialog.field_R = 127 & 1 + ProgressDialog.field_R;
-              if (ProgressDialog.field_R == rj.field_g) {
+              if (ProgressDialog.field_R == MusicPatch.field_g) {
                 ProgressDialog.field_R = -1;
               }
             }
@@ -100,7 +100,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
             var2_int >= 0) {
             SecondaryNodeDequeIterator.field_b[ProgressDialog.field_R] = var2_int;
             ProgressDialog.field_R = 127 & ProgressDialog.field_R + 1;
-            if (rj.field_g == ProgressDialog.field_R) {
+            if (MusicPatch.field_g == ProgressDialog.field_R) {
               ProgressDialog.field_R = -1;
             }
           }

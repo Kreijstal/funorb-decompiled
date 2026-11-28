@@ -254,7 +254,7 @@ final class gb {
               FullscreenStatusDialog.field_O[1] = 5;
             }
           } else {
-            var3_int = th.a(jd.field_a, CrossfadingMidiPcmStream.a(-415993727, new String[]{"<br><%0><br>"}, mc.field_f), li.field_c, EditableTextField.field_I, -105);
+            var3_int = th.a(jd.field_a, CrossfadingMidiPcmStream.a(-415993727, new String[]{"<br><%0><br>"}, MidiNoteMask.field_f), li.field_c, EditableTextField.field_I, -105);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(li.field_c[var5])) {
@@ -267,9 +267,9 @@ final class gb {
               throw new IllegalStateException();
             }
             UiWidget.field_o = new String[var4];
-            mk.a(li.field_c, 0, UiWidget.field_o, 0, var4);
+            ArrayBlockSupport.copyObjectRange(li.field_c, 0, UiWidget.field_o, 0, var4);
             AccountNameAvailabilityValidator.field_t = new String[var3_int - var4 - 1];
-            mk.a(li.field_c, 1 + var4, AccountNameAvailabilityValidator.field_t, 0, var3_int + (-var4 - 1));
+            ArrayBlockSupport.copyObjectRange(li.field_c, 1 + var4, AccountNameAvailabilityValidator.field_t, 0, var3_int + (-var4 - 1));
             var4 = -1;
             var3_int = th.a(jd.field_a, CrossfadingMidiPcmStream.a(-415993727, new String[]{"<br><%0><br>"}, qk.field_c), li.field_c, EditableTextField.field_I, -108);
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -283,9 +283,9 @@ final class gb {
               throw new IllegalStateException();
             }
             fd.field_e = new String[var4];
-            mk.a(li.field_c, 0, fd.field_e, 0, var4);
+            ArrayBlockSupport.copyObjectRange(li.field_c, 0, fd.field_e, 0, var4);
             sj.field_u = new String[-1 + var3_int - var4];
-            mk.a(li.field_c, var4 + 1, sj.field_u, 0, -1 + (-var4 + var3_int));
+            ArrayBlockSupport.copyObjectRange(li.field_c, var4 + 1, sj.field_u, 0, -1 + (-var4 + var3_int));
             if (fd.field_e.length <= UiWidget.field_o.length) {
               stackIn_33_0 = UiWidget.field_o.length;
             } else {

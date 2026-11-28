@@ -294,7 +294,7 @@ final class MixedSupport033 extends HashNode {
 
     final static void performAction0499(int integerArgument1) {
         MixedSupport094.performAction1203((byte) -100);
-        MixedSupport130.performAction1665(ComponentContainer.integerState0377, MixedSupport139.integerState0855, AlphaWidgetContainer.rgbSpriteArrayState0010[0].integerState0254, GameApplet.integerState0292, SecondaryNodeHashTable.integerState0540, integerArgument1 ^ -110);
+        ByteArrayPoolSupport.performAction1665(ComponentContainer.integerState0377, MixedSupport139.integerState0855, AlphaWidgetContainer.rgbSpriteArrayState0010[0].integerState0254, GameApplet.integerState0292, SecondaryNodeHashTable.integerState0540, integerArgument1 ^ -110);
         if (integerArgument1 != 18) {
           MixedSupport033.performAction0494(79, true);
         }

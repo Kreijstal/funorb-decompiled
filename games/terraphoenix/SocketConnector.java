@@ -39,7 +39,7 @@ abstract class SocketConnector {
     final static void a(byte param0) {
         DropTargetWidgetContainer.field_K = null;
         ProxyAuthenticationRequiredException.field_a = null;
-        sb.field_m = null;
+        MidiNoteMask.field_m = null;
         ConfirmedEmailAvailabilityValidator.field_s = null;
         qc.field_b = (byte[][]) null;
         if (param0 <= 68) {

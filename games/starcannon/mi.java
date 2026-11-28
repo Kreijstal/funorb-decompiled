@@ -15,7 +15,7 @@ abstract class mi extends DualLinkNode {
         String var3 = null;
         long var4 = 0L;
         try {
-          ve.field_d = true;
+          GrowableIntArray.field_d = true;
           if (param0 != 1048576) {
             mi.clearStaticReferences(35);
           }

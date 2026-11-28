@@ -164,9 +164,9 @@ final class ka extends IntrusiveNode {
               throw new IllegalStateException();
             }
             ArchiveIndex.field_k = new String[var4];
-            dk.a(dd.field_e, 0, ArchiveIndex.field_k, 0, var4);
+            ArrayBlockSupport.copyObjectRange(dd.field_e, 0, ArchiveIndex.field_k, 0, var4);
             ib.field_c = new String[-1 - var4 + var3_int];
-            dk.a(dd.field_e, var4 + 1, ib.field_c, 0, -1 + var3_int - var4);
+            ArrayBlockSupport.copyObjectRange(dd.field_e, var4 + 1, ib.field_c, 0, -1 + var3_int - var4);
             var3_int = rf.a(dd.field_e, bo.field_e, field_j, 122, ff.a(new String[]{"<br><%0><br>"}, 0, k.field_f));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
@@ -180,9 +180,9 @@ final class ka extends IntrusiveNode {
               throw new IllegalStateException();
             }
             qh.field_b = new String[var4];
-            dk.a(dd.field_e, 0, qh.field_b, 0, var4);
+            ArrayBlockSupport.copyObjectRange(dd.field_e, 0, qh.field_b, 0, var4);
             ArchiveSource.field_a = new String[var3_int - var4 - 1];
-            dk.a(dd.field_e, 1 + var4, ArchiveSource.field_a, 0, -1 + var3_int - var4);
+            ArrayBlockSupport.copyObjectRange(dd.field_e, 1 + var4, ArchiveSource.field_a, 0, -1 + var3_int - var4);
             if (ArchiveIndex.field_k.length < qh.field_b.length) {
               stackIn_30_0 = qh.field_b.length;
             } else {

@@ -37,7 +37,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -77,7 +77,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
           super.drawWidget(param0, param1, param2, param3 ^ param3);
           this.field_J.drawParagraph(this.field_I, param2 + this.field_m + 14, this.field_j + param0 + 10, -28 + this.field_t, this.field_x, 16777215, -1, 0, 0, this.field_J.field_F);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "lj.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "lj.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -1365,7 +1365,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
                 }
                 var2 = vd.a("checking", 4);
                 if (null != var2) {
-                  g.field_e = Archive.decodeCp1252(true, var2);
+                  MusicPatchEnvelope.field_e = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("create_namealreadytaken", 4);
                 if (null != var2) {
@@ -3173,7 +3173,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
                   } else {
                     stackIn_2615_2 = "{...}";
                   }
-                  throw fc.wrapClientException((Throwable) ((Object) stackIn_2614_0), ((StringBuilder) (Object) stackIn_2614_1).append(stackIn_2615_2).append(')').toString());
+                  throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_2614_0), ((StringBuilder) (Object) stackIn_2614_1).append(stackIn_2615_2).append(')').toString());
                 }
                 if (var3 != 0) {
                   stackIn_2623_0 = (!GameApplet.field_l);
@@ -3202,7 +3202,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
           if (param0) {
             field_D = (int[]) null;
           }
-          EditableTextField.field_J.processPointerInput(-1, g.field_a, true, NameSuggestionsPanel.field_N);
+          EditableTextField.field_J.processPointerInput(-1, MusicPatchEnvelope.field_a, true, NameSuggestionsPanel.field_N);
           EditableTextField.field_J.advanceDialogs(param0);
           while (DelegatingCanvas.a((byte) -56)) {
             EditableTextField.field_J.processKeyInput(MatchingFieldValidator.field_n, ta.field_d, (byte) -108);
@@ -3214,7 +3214,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var1), "lj.K(" + param0 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var1), "lj.K(" + param0 + ')');
         }
     }
 
@@ -3225,7 +3225,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
             field_G = -117L;
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "lj.E(" + param0 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "lj.E(" + param0 + ')');
         }
     }
 
@@ -3263,7 +3263,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -3313,7 +3313,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -3340,7 +3340,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -3374,7 +3374,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "lj.B(" + param0 + ',' + param1 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "lj.B(" + param0 + ',' + param1 + ')');
         }
     }
 

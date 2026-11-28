@@ -668,7 +668,7 @@ final class mj {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = Bounce.field_N;
-        this.field_m = new nk[]{new nk(0, 22, c.field_b, 0, this), new nk(1, 54, nf.field_b, 1, this), new nk(2, 86, kl.field_m, 2, this), new nk(3, 118, qe.field_j, 3, this), new nk(4, 150, DiskArchiveRequest.field_u, 5, this), new nk(5, 182, ob.field_b, 6, this), new nk(6, 214, AppletShell.field_g, 7, this), new nk(7, 246, bk.field_d, 4, this), new nk(8, 278, kc.field_d, 8, this), new nk(9, 310, wa.field_c, 9, this)};
+        this.field_m = new nk[]{new nk(0, 22, c.field_b, 0, this), new nk(1, 54, nf.field_b, 1, this), new nk(2, 86, MusicPatchNode.field_m, 2, this), new nk(3, 118, qe.field_j, 3, this), new nk(4, 150, DiskArchiveRequest.field_u, 5, this), new nk(5, 182, ob.field_b, 6, this), new nk(6, 214, AppletShell.field_g, 7, this), new nk(7, 246, bk.field_d, 4, this), new nk(8, 278, kc.field_d, 8, this), new nk(9, 310, wa.field_c, 9, this)};
         this.field_c = new nk[]{new nk(0, -5, "", -1, this), new nk(1, 23, "", -2, this), new nk(2, 51, "", -3, this), new nk(3, 79, "", -4, this), new nk(4, 107, "", -5, this), new nk(5, 135, "", -6, this), new nk(6, 163, "", -7, this), new nk(7, 191, "", -8, this), new nk(8, 219, "", -9, this), new nk(9, 247, "", -10, this), new nk(10, 315, "", 11, this), new nk(11, 347, hi.field_b, 10, this)};
         this.field_g = new nk[]{new nk(0, 310, hi.field_b, 12, this), new nk(1, 347, bk.field_d, 4, this)};
         this.field_i = new nk[]{new nk(0, 347, hi.field_b, 13, this)};

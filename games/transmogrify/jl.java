@@ -87,7 +87,7 @@ final class jl extends IntrusiveNode {
               var5_int = var11.length << 2;
             }
             for (var7 = 0; var7 < var5_int; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) 126) << (vg.c(var7, 3) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) 126) << (vg.bitwiseAnd(var7, 3) << 8));
             }
             var4_ref_oi.unlink(5);
           } else {

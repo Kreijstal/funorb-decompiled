@@ -451,7 +451,7 @@ final class ki extends DualLinkNode {
             this.field_m = this.field_m - 1;
             if (var3_int < 5 ||
               this.field_w == 4) {
-              gl.a(this.field_o, var3_int + 1, this.field_o, var3_int, -var3_int + this.field_m);
+              ArrayBlockSupport.copyObjectRange(this.field_o, var3_int + 1, this.field_o, var3_int, -var3_int + this.field_m);
             }
             this.field_o[this.field_m] = null;
             break;

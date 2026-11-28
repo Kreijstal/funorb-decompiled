@@ -84,7 +84,7 @@ final class ad {
           if (this.field_f.length <= this.field_i) {
             var9 = new wa[2 * this.field_i];
             wa[] var7 = var9;
-            lj.a(this.field_f, 0, var9, 0, this.field_i);
+            ArrayBlockSupport.copyObjectRange(this.field_f, 0, var9, 0, this.field_i);
             this.field_f = var9;
           }
           var8 = new wa();

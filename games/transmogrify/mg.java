@@ -59,7 +59,7 @@ final class mg {
             }
           } else {
             var12 = var11 & 255;
-            var14[var10] = DiskArchiveRequest.b(vg.c(var12 * var8 >> 8, 16711935), vg.c(var9 * var12, 65280));
+            var14[var10] = DiskArchiveRequest.bitwiseOr(vg.bitwiseAnd(var12 * var8 >> 8, 16711935), vg.bitwiseAnd(var9 * var12, 65280));
           }
         }
         if (param2 == 3) {
@@ -130,7 +130,7 @@ final class mg {
         try {
           this.field_a = param0;
           this.field_b = new int[param0[0].field_j.length];
-          ji.a(param0[0].field_j, 0, this.field_b, 0, this.field_b.length);
+          ArrayBlockSupport.copyIntRange(param0[0].field_j, 0, this.field_b, 0, this.field_b.length);
           var2_int = 0;
           while (this.field_b.length > var2_int) {
             var3 = this.field_b[var2_int];

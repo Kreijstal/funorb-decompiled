@@ -164,7 +164,7 @@ final class ui {
                 for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                   incrementValue$2 = var17;
                   var17++;
-                  var35[2][incrementValue$2] = var27.readInt(IntrusiveDeque.b(param0, -30643));
+                  var35[2][incrementValue$2] = var27.readInt(IntrusiveDeque.bitwiseXor(param0, -30643));
                 }
               }
             }

@@ -94,7 +94,7 @@ abstract class wm {
           ChessMatchSession.field_q = param11;
           RegistrationAgreementPane.field_Q = param3;
           ContentTransitionDialog.field_pb = param4;
-          td.field_n = args;
+          MidiNoteMask.field_n = args;
           wn.field_d = param13;
           GzipInflater.field_e = param14;
           ae.field_b = param12;
@@ -129,7 +129,7 @@ abstract class wm {
           ln.field_cc = new ci(0L, sc.field_h, qf.field_h.toUpperCase());
           he.field_Hb = new ci((long)param2, DequeWidgetContainer.field_G, em.field_M.toUpperCase());
           oh.field_a = new ci(0L, DefaultTextWidgetRenderer.field_d);
-          ue.field_d = new ci(0L, bo.field_e, ql.field_b);
+          ue.field_d = new ci(0L, bo.field_e, ByteArrayPoolSupport.field_b);
           in.field_b = new ci(0L, DialogMessagePane.field_M, de.field_a);
           ca.field_g = new ci(0L, DialogMessagePane.field_M, qj.field_h);
           NanoFrameTimer.field_l = new ci(0L, DialogMessagePane.field_M, uj.field_l);
@@ -224,8 +224,8 @@ abstract class wm {
             }
           }
           for (var17_intLifetime3 = 0; var17_intLifetime3 < param6; var17_intLifetime3++) {
-            hm.field_c[4 + var17_intLifetime3] = new ci(0L, r.field_Tb, td.field_n[var17_intLifetime3]);
-            array$2 = new tl[ce.a((int) RegistrationAgreementPane.field_Q[var17_intLifetime3], 255) + 1];
+            hm.field_c[4 + var17_intLifetime3] = new ci(0L, r.field_Tb, MidiNoteMask.field_n[var17_intLifetime3]);
+            array$2 = new tl[ce.bitwiseAnd((int) RegistrationAgreementPane.field_Q[var17_intLifetime3], 255) + 1];
             RegistrationAgreementPane.field_P[var17_intLifetime3 + 4] = array$2;
             RegistrationAgreementPane.field_P[4 + var17_intLifetime3][0] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) null, df.field_k);
             for (var18 = 0; (255 & RegistrationAgreementPane.field_Q[var17_intLifetime3]) > var18; var18++) {

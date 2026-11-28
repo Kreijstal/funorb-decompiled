@@ -51,12 +51,12 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             stackIn_3_0 = qj.field_a;
             return stackIn_3_0;
           }
-          if (qd.a((byte) 13, param1)) {
+          if (MusicPatchNode.a((byte) 13, param1)) {
             stackIn_6_0 = AccountRequestState.field_a;
             return stackIn_6_0;
           }
           if (ld.field_g != 2) {
-            stackIn_9_0 = td.field_j;
+            stackIn_9_0 = MidiNoteMask.field_j;
             return stackIn_9_0;
           }
           if (va.a(param1, -19554)) {

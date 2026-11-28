@@ -102,7 +102,7 @@ final class le {
             }
             if (an.field_c) {
               BufferedRandomAccessFile.a((String) null, (String) null, 2, 0, (String) (var2), false);
-              kf.a(-98);
+              MusicPatch.a(-98);
             }
           }
           if (var2 == null &&
@@ -305,7 +305,7 @@ final class le {
                 var2 = var2 + (ug.field_a + (UiWidget.field_z + fh.field_e));
               } else {
                 sj.field_d.drawString(var6, var8, var2 + DebouncedFieldValidator.field_f, var5, -1);
-                var2 = var2 + qd.field_r;
+                var2 = var2 + MusicPatchNode.field_r;
               }
               var3++;
               continue;

@@ -32,7 +32,7 @@ final class ub {
           return;
         }
         try {
-          var2 = new RgbSprite(param1.getFileByName("final_frame.jpg", "", -90), (java.awt.Component) ((Object) ch.field_h));
+          var2 = new RgbSprite(param1.getFileByName("final_frame.jpg", "", -90), (java.awt.Component) ((Object) MusicPatchEnvelope.field_h));
           var3 = var2.field_s;
           var4 = var2.field_q;
           wa.a(true);

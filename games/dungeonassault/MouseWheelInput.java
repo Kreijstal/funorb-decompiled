@@ -47,7 +47,7 @@ abstract class MouseWheelInput {
           if (6 != mo.field_e) {
             return false;
           }
-          if (kn.field_e) {
+          if (ByteArrayPoolSupport.field_e) {
             return true;
           }
           return false;

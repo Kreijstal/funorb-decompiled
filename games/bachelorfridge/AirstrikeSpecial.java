@@ -256,7 +256,7 @@ final class AirstrikeSpecial extends SpecialOrder {
                   var10 = var8 & 65280;
                   var10 = (var10 >> 1) - (var10 >> 5) & 65280;
                   var11 = 31 & var8 >> 3;
-                  SoftwareRasterizer.field_e[var6_int] = MassPoisonSpecial.a(var11, MassPoisonSpecial.a(var10, var9 << 16));
+                  SoftwareRasterizer.field_e[var6_int] = MassPoisonSpecial.bitwiseOr(var11, MassPoisonSpecial.bitwiseOr(var10, var9 << 16));
                 }
                 var6_int++;
               }

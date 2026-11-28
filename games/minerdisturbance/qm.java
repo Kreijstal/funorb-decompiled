@@ -60,7 +60,7 @@ final class qm {
         int var8 = 0;
         var8 = MinerDisturbance.field_ab;
         try {
-          this.field_k[this.field_o] = (byte)SpriteState.a((int) this.field_k[this.field_o], 128 >>> c.a(7, this.field_i));
+          this.field_k[this.field_o] = (byte)SpriteState.bitwiseOr((int) this.field_k[this.field_o], 128 >>> c.bitwiseAnd(7, this.field_i));
           this.field_o = this.field_o + 1;
           if (param2 != 8) {
             return;
@@ -79,7 +79,7 @@ final class qm {
             this.field_o = this.field_o + 1;
             this.field_k[fieldTemp$1] = (byte) 0;
           }
-          ai.copyByteRange(this.field_d, 0, this.field_k, 32, 32);
+          ArrayBlockSupport.copyByteRange(this.field_d, 0, this.field_k, 32, 32);
           this.a(-63);
           var4_int = 0;
           var5 = param0;
@@ -153,7 +153,7 @@ final class qm {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_e[var2] = te.a(te.a(bf.a((long)this.field_k[6 + var3] << 8, 65280L), te.a(te.a(te.a(bf.a((long)this.field_k[3 + var3], 255L) << 32, te.a(te.a(bf.a((long)this.field_k[1 + var3], 255L) << 48, (long)this.field_k[var3] << 56), bf.a((long)this.field_k[2 + var3], 255L) << 40)), bf.a(255L, (long)this.field_k[4 + var3]) << 24), bf.a(16711680L, (long)this.field_k[var3 + 5] << 16))), bf.a(255L, (long)this.field_k[var3 + 7]));
+          this.field_e[var2] = te.bitwiseXor(te.bitwiseXor(bf.bitwiseAnd((long)this.field_k[6 + var3] << 8, 65280L), te.bitwiseXor(te.bitwiseXor(te.bitwiseXor(bf.bitwiseAnd((long)this.field_k[3 + var3], 255L) << 32, te.bitwiseXor(te.bitwiseXor(bf.bitwiseAnd((long)this.field_k[1 + var3], 255L) << 48, (long)this.field_k[var3] << 56), bf.bitwiseAnd((long)this.field_k[2 + var3], 255L) << 40)), bf.bitwiseAnd(255L, (long)this.field_k[4 + var3]) << 24), bf.bitwiseAnd(16711680L, (long)this.field_k[var3 + 5] << 16))), bf.bitwiseAnd(255L, (long)this.field_k[var3 + 7]));
           var2++;
           var3 += 8;
         }
@@ -161,7 +161,7 @@ final class qm {
           dupTemp$0 = this.field_b[var2Lifetime1];
           arrayValue$1 = this.field_e[var2Lifetime1];
           this.field_m[var2Lifetime1] = dupTemp$0;
-          this.field_c[var2Lifetime1] = te.a(arrayValue$1, dupTemp$0);
+          this.field_c[var2Lifetime1] = te.bitwiseXor(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
@@ -169,7 +169,7 @@ final class qm {
             var4 = 0;
             var5 = 56;
             while (8 > var4) {
-              this.field_l[var3Lifetime1] = te.a(this.field_l[var3Lifetime1], TextFieldValidator.field_h[var4][c.a((int)(this.field_m[c.a(-var4 + var3Lifetime1, 7)] >>> var5), 255)]);
+              this.field_l[var3Lifetime1] = te.bitwiseXor(this.field_l[var3Lifetime1], TextFieldValidator.field_h[var4][c.bitwiseAnd((int)(this.field_m[c.bitwiseAnd(-var4 + var3Lifetime1, 7)] >>> var5), 255)]);
               var5 -= 8;
               var4++;
             }
@@ -177,14 +177,14 @@ final class qm {
           for (var3Lifetime1Lifetime1 = 0; 8 > var3Lifetime1Lifetime1; var3Lifetime1Lifetime1++) {
             this.field_m[var3Lifetime1Lifetime1] = this.field_l[var3Lifetime1Lifetime1];
           }
-          this.field_m[0] = te.a(this.field_m[0], TextFieldValidator.field_f[var2Lifetime2]);
+          this.field_m[0] = te.bitwiseXor(this.field_m[0], TextFieldValidator.field_f[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_l[var3Lifetime1Lifetime2] = this.field_m[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_l[var3Lifetime1Lifetime2] = te.a(this.field_l[var3Lifetime1Lifetime2], TextFieldValidator.field_h[var7][c.a((int)(this.field_c[c.a(-var7 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1), 255)]);
+              this.field_l[var3Lifetime1Lifetime2] = te.bitwiseXor(this.field_l[var3Lifetime1Lifetime2], TextFieldValidator.field_h[var7][c.bitwiseAnd((int)(this.field_c[c.bitwiseAnd(-var7 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1), 255)]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -197,7 +197,7 @@ final class qm {
           field_n = (String) null;
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_b[var2Lifetime3] = te.a(this.field_b[var2Lifetime3], te.a(this.field_e[var2Lifetime3], this.field_c[var2Lifetime3]));
+          this.field_b[var2Lifetime3] = te.bitwiseXor(this.field_b[var2Lifetime3], te.bitwiseXor(this.field_e[var2Lifetime3], this.field_c[var2Lifetime3]));
         }
     }
 
@@ -248,7 +248,7 @@ final class qm {
             var8 = param0[var5_int] << var6 & 255 | (param0[1 + var5_int] & 255) >>> -var6 + 8;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_k[this.field_o] = (byte)SpriteState.a((int) this.field_k[this.field_o], var8 >>> var7);
+              this.field_k[this.field_o] = (byte)SpriteState.bitwiseOr((int) this.field_k[this.field_o], var8 >>> var7);
               this.field_o = this.field_o + 1;
               this.field_i = this.field_i + (8 - var7);
               if (512 == this.field_i) {
@@ -256,7 +256,7 @@ final class qm {
                 this.field_i = 0;
                 this.field_o = 0;
               }
-              this.field_k[this.field_o] = (byte)c.a(var8 << 8 - var7, 255);
+              this.field_k[this.field_o] = (byte)c.bitwiseAnd(var8 << 8 - var7, 255);
               this.field_i = this.field_i + var7;
               var5_int++;
               param2 = param2 - 8L;
@@ -268,7 +268,7 @@ final class qm {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = param0[var5_int] << var6 & 255;
-            this.field_k[this.field_o] = (byte)SpriteState.a((int) this.field_k[this.field_o], var8Lifetime1 >>> var7);
+            this.field_k[this.field_o] = (byte)SpriteState.bitwiseOr((int) this.field_k[this.field_o], var8Lifetime1 >>> var7);
           }
           if (param2 + (long)var7 < 8L) {
             this.field_i = (int)((long)this.field_i + param2);
@@ -281,7 +281,7 @@ final class qm {
               this.field_i = 0;
               this.field_o = 0;
             }
-            this.field_k[this.field_o] = (byte)c.a(255, var8Lifetime1 << -var7 + 8);
+            this.field_k[this.field_o] = (byte)c.bitwiseAnd(255, var8Lifetime1 << -var7 + 8);
             this.field_i = this.field_i + (int)param2;
           }
           return;

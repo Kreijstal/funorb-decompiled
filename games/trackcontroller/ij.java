@@ -361,9 +361,9 @@ final class ij implements WidgetRenderer {
               throw new IllegalStateException();
             }
             RichTextWidget.field_O = new String[var4];
-            pd.a(SingleChildWidgetContainer.field_C, 0, RichTextWidget.field_O, 0, var4);
+            ArrayBlockSupport.copyObjectRange(SingleChildWidgetContainer.field_C, 0, RichTextWidget.field_O, 0, var4);
             DisplayNameSelectionPanel.field_J = new String[-1 + var3_int - var4];
-            pd.a(SingleChildWidgetContainer.field_C, var4 + 1, DisplayNameSelectionPanel.field_J, 0, var3_int - var4 - 1);
+            ArrayBlockSupport.copyObjectRange(SingleChildWidgetContainer.field_C, var4 + 1, DisplayNameSelectionPanel.field_J, 0, var3_int - var4 - 1);
             var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, dh.a((byte) -61, new String[]{"<br><%0><br>"}, AccountRequestState.field_a), SingleChildWidgetContainer.field_C);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
@@ -377,9 +377,9 @@ final class ij implements WidgetRenderer {
               throw new IllegalStateException();
             }
             jf.field_i = new String[var4];
-            pd.a(SingleChildWidgetContainer.field_C, 0, jf.field_i, 0, var4);
+            ArrayBlockSupport.copyObjectRange(SingleChildWidgetContainer.field_C, 0, jf.field_i, 0, var4);
             IntrusiveDequeCursor.field_c = new String[-var4 + var3_int - 1];
-            pd.a(SingleChildWidgetContainer.field_C, 1 + var4, IntrusiveDequeCursor.field_c, 0, -1 + (var3_int - var4));
+            ArrayBlockSupport.copyObjectRange(SingleChildWidgetContainer.field_C, 1 + var4, IntrusiveDequeCursor.field_c, 0, -1 + (var3_int - var4));
             if (jf.field_i.length > RichTextWidget.field_O.length) {
               stackIn_22_0 = jf.field_i.length;
             } else {

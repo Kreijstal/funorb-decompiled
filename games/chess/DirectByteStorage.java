@@ -45,11 +45,11 @@ final class DirectByteStorage extends ByteStorage {
           oj.field_c = new ci(0L, EditableTextField.field_P);
           oj.field_c.field_fb = param1;
           le.field_e = new ci(0L, bo.field_e, ei.field_s);
-          kf.field_t = new ci(0L, DualLinkNode.field_j, hm.field_b);
+          MusicPatch.field_t = new ci(0L, DualLinkNode.field_j, hm.field_b);
           SecondaryNodeHashTable.field_h = new ci(0L, sj.field_k);
           hb.field_a.a((byte) 123, oj.field_c);
           hb.field_a.a((byte) 124, le.field_e);
-          hb.field_a.a((byte) 123, kf.field_t);
+          hb.field_a.a((byte) 123, MusicPatch.field_t);
           hb.field_a.a((byte) 125, ValidationStatusWidget.field_bb);
           hb.field_a.a((byte) 127, SecondaryNodeHashTable.field_h);
           ValidationStatusWidget.field_bb.field_Kb.field_Jb.a(EditableTextField.field_P, param1 + 2147483647);
@@ -164,7 +164,7 @@ final class DirectByteStorage extends ByteStorage {
         int var13Lifetime1;
         var19 = Chess.field_G;
         try {
-          var5_int = ql.bitLength(-116, 3 * (-param3 + param1));
+          var5_int = ByteArrayPoolSupport.bitLength(-116, 3 * (-param3 + param1));
           var6 = 3 * param3;
           ki.a(0);
           var7 = var5_int - 10;

@@ -36,7 +36,7 @@ final class AccountRequestState {
           PacketBuffer.field_n.field_T[0][re.field_b] = 14540253;
           for (var4_int = param2; var4_int < PacketBuffer.field_n.field_G; var4_int++) {
             var5 = 169 + -76 * var4_int / PacketBuffer.field_n.field_G;
-            PacketBuffer.field_n.field_T[0][wd.field_e] = SpriteState.a(SpriteState.a(var5 << 8, var5 << 16), var5);
+            PacketBuffer.field_n.field_T[0][wd.field_e] = SpriteState.bitwiseOr(SpriteState.bitwiseOr(var5 << 8, var5 << 16), var5);
             SoftwareRasterizer.setClip(0, param3 - PacketBuffer.field_n.field_G + var4_int, 640, -PacketBuffer.field_n.field_G + param3 + var4_int + 1);
             PacketBuffer.field_n.drawCentred(param0, param1, param3, 0, -1);
           }

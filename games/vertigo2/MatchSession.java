@@ -411,7 +411,7 @@ final class MatchSession {
             stackIn_8_1 = var9_int;
             stackIn_8_2 = null;
             stackIn_8_3 = null;
-            if (b.a(1, var9_int) != 0) {
+            if (b.bitwiseAnd(1, var9_int) != 0) {
               stackIn_9_2 = null;
               stackIn_9_3 = null;
               stackIn_9_4 = 1;

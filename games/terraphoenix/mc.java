@@ -24,20 +24,20 @@ final class mc {
         int var4_int = 0;
         Sprite var4 = null;
         int var5 = Terraphoenix.field_V;
-        int var1 = ArchiveRequest.field_p[0] * sb.field_m[0];
+        int var1 = ArchiveRequest.field_p[0] * MidiNoteMask.field_m[0];
         byte[] var2 = qc.field_b[0];
         int[] var3 = new int[var1];
         Sprite var4Lifetime1;
         for (var4_int = 0; var1 > var4_int; var4_int++) {
-          var3[var4_int] = ProxyAuthenticationRequiredException.field_a[dg.a(255, (int) var2[var4_int])];
+          var3[var4_int] = ProxyAuthenticationRequiredException.field_a[dg.bitwiseAnd(255, (int) var2[var4_int])];
         }
         if (param0 > 92) {
-          var4 = new Sprite(ah.field_A, sb.field_j, ConfirmedEmailAvailabilityValidator.field_s[0], DropTargetWidgetContainer.field_K[0], sb.field_m[0], ArchiveRequest.field_p[0], var3);
+          var4 = new Sprite(ah.field_A, MidiNoteMask.field_j, ConfirmedEmailAvailabilityValidator.field_s[0], DropTargetWidgetContainer.field_K[0], MidiNoteMask.field_m[0], ArchiveRequest.field_p[0], var3);
           SocketConnector.a((byte) 69);
           return var4;
         }
         mc.b((byte) -126);
-        var4Lifetime1 = new Sprite(ah.field_A, sb.field_j, ConfirmedEmailAvailabilityValidator.field_s[0], DropTargetWidgetContainer.field_K[0], sb.field_m[0], ArchiveRequest.field_p[0], var3);
+        var4Lifetime1 = new Sprite(ah.field_A, MidiNoteMask.field_j, ConfirmedEmailAvailabilityValidator.field_s[0], DropTargetWidgetContainer.field_K[0], MidiNoteMask.field_m[0], ArchiveRequest.field_p[0], var3);
         SocketConnector.a((byte) 69);
         return var4Lifetime1;
     }

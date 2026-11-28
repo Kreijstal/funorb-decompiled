@@ -20,12 +20,12 @@ final class ab {
         try {
           var3_int = param0;
           var4 = uh.field_c;
-          while (var3_int < dl.field_c.length) {
+          while (var3_int < ByteArrayPoolSupport.field_c.length) {
             var5 = LabeledWidgetContainer.field_T[var3_int];
             if (var5 < 0) {
               var4 = var4 + wm.field_bb;
             } else {
-              var6 = PowerUpPickup.a(param0 ^ -3, dl.field_c[var3_int], true);
+              var6 = PowerUpPickup.a(param0 ^ -3, ByteArrayPoolSupport.field_c[var3_int], true);
               var4 = var4 + kb.field_b;
               var7 = StandardContentDialog.field_vb - (var6 >> 1);
               if (qd.a(param1, var4, (jd.field_g << 1) + var6, param2, true, -jd.field_g + var7, (n.field_d << 1) + af.field_Z)) {

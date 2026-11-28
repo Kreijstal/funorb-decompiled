@@ -98,7 +98,7 @@ final class wn {
           this.field_h.draw(0, 0);
           this.field_h.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
-          TextLayout.field_g.a(-39);
+          TextLayout.field_g.setAsRasterTarget(-39);
           this.field_e = false;
         }
         int var2 = -117 % ((30 - param0) / 60);

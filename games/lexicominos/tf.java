@@ -19,7 +19,7 @@ final class tf {
         throw new IllegalStateException();
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseAnd(long param0, long param1) {
         return param0 & param1;
     }
 

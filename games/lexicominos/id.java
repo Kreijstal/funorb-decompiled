@@ -182,9 +182,9 @@ class id extends DefaultTextWidgetRenderer {
               throw new IllegalStateException();
             }
             SpriteGeometry.field_t = new String[var4];
-            o.a(ug.field_r, 0, SpriteGeometry.field_t, 0, var4);
+            ArrayBlockSupport.copyObjectRange(ug.field_r, 0, SpriteGeometry.field_t, 0, var4);
             qc.field_e = new String[-1 + (-var4 + var3_int)];
-            o.a(ug.field_r, 1 + var4, qc.field_e, 0, -1 + var3_int - var4);
+            ArrayBlockSupport.copyObjectRange(ug.field_r, 1 + var4, qc.field_e, 0, -1 + var3_int - var4);
             var4 = -1;
             var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, da.a(new String[]{"<br><%0><br>"}, SingleChildWidgetContainer.field_z, false), DequeWidgetContainer.field_x);
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -198,9 +198,9 @@ class id extends DefaultTextWidgetRenderer {
               throw new IllegalStateException();
             }
             hf.field_b = new String[var4];
-            o.a(ug.field_r, 0, hf.field_b, 0, var4);
+            ArrayBlockSupport.copyObjectRange(ug.field_r, 0, hf.field_b, 0, var4);
             ByteStorage.field_a = new String[-1 + (-var4 + var3_int)];
-            o.a(ug.field_r, 1 + var4, ByteStorage.field_a, 0, -1 + var3_int - var4);
+            ArrayBlockSupport.copyObjectRange(ug.field_r, 1 + var4, ByteStorage.field_a, 0, -1 + var3_int - var4);
             if (SpriteGeometry.field_t.length >= hf.field_b.length) {
               stackIn_29_0 = SpriteGeometry.field_t.length;
             } else {
@@ -286,17 +286,17 @@ class id extends DefaultTextWidgetRenderer {
           }
           me.field_v = -(var3_intLifetime1 >> 1) + CrossfadingMidiPcmStream.field_D;
           gd.field_o = -(var3_intLifetime1 >> 1) + CrossfadingMidiPcmStream.field_D + var3_intLifetime1;
-          ph.field_b = (oh.field_b + we.field_l << 1) * RichTextWidget.field_H.field_h;
+          ByteArrayPoolSupport.field_b = (oh.field_b + we.field_l << 1) * RichTextWidget.field_H.field_h;
           for (var5Lifetime2 = 0; var5Lifetime2 < MouseWheelInput.field_g.length; var5Lifetime2++) {
-            stackIn_112_0 = ph.field_b;
+            stackIn_112_0 = ByteArrayPoolSupport.field_b;
             if (ni.field_a[var5Lifetime2] < 0) {
               stackIn_113_1 = hc.field_fb;
             } else {
               stackIn_113_1 = fb.field_g;
             }
-            ph.field_b = stackIn_112_0 + stackIn_113_1;
+            ByteArrayPoolSupport.field_b = stackIn_112_0 + stackIn_113_1;
           }
-          rf.field_c = ij.field_p - (ph.field_b >> 1);
+          rf.field_c = ij.field_p - (ByteArrayPoolSupport.field_b >> 1);
           wd.field_a = new int[MouseWheelInput.field_g.length][];
           var5Lifetime3 = 0;
           var6Lifetime3 = rf.field_c;
@@ -320,7 +320,7 @@ class id extends DefaultTextWidgetRenderer {
           if (ResourceArchive.field_a == 2) {
             RichTextWidget.field_H.a(0, param1, -1, -1);
           } else {
-            RichTextWidget.field_H.a(0, param1, rc.a(bk.field_b, 29532, ResourceArchive.field_e), 0);
+            RichTextWidget.field_H.a(0, param1, MusicPatchEnvelope.a(bk.field_b, 29532, ResourceArchive.field_e), 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

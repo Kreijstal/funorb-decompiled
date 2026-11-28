@@ -21,7 +21,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           if (this == RegistrationAgreementPane.field_E &&
             !SecondaryNodeDequeIterator.field_c) {
-            nf.field_n = hn.correctedCurrentTimeMillis((byte) 80);
+            MusicPatch.field_n = hn.correctedCurrentTimeMillis((byte) 80);
             vj.sleepMillis(5000L, (byte) -49);
             lj.field_t = null;
             this.shutdownApplet(0, false);
@@ -73,7 +73,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           field_h = (java.awt.Canvas) ((Object) new GameCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) field_h));
-          field_h.setSize(hf.field_h, SpriteGeometry.field_s);
+          field_h.setSize(ByteArrayPoolSupport.field_h, SpriteGeometry.field_s);
           field_h.setVisible(true);
           boolean decompiledSharedTail0 = (DirectByteStorage.field_n == var2);
           if (!decompiledSharedTail0) {
@@ -137,7 +137,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           if (this == RegistrationAgreementPane.field_E &&
             !SecondaryNodeDequeIterator.field_c) {
-            nf.field_n = hn.correctedCurrentTimeMillis((byte) 80) + 4000L;
+            MusicPatch.field_n = hn.correctedCurrentTimeMillis((byte) 80) + 4000L;
             return;
           }
           return;
@@ -167,14 +167,14 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (var4 != 0L &&
             var4 < var2_long) {
             var6_int = (int)(var2_long - var4);
-            df.field_c = (32000 + (var6_int >> 1)) / var6_int;
+            GrowableIntArray.field_c = (32000 + (var6_int >> 1)) / var6_int;
           }
           fieldTemp$1 = ch.field_e;
           ch.field_e = ch.field_e + 1;
           if (fieldTemp$1 > 50) {
             ch.field_e = ch.field_e - 50;
             pc.field_a = true;
-            field_h.setSize(hf.field_h, SpriteGeometry.field_s);
+            field_h.setSize(ByteArrayPoolSupport.field_h, SpriteGeometry.field_s);
             field_h.setVisible(true);
             boolean decompiledSharedTail0 = (DirectByteStorage.field_n != null &&
               PasswordValidator.field_r == null);
@@ -309,7 +309,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               ql.field_a = param6;
               sg.field_a = 0;
               RegistrationAgreementPane.field_E = this;
-              hf.field_h = param1;
+              ByteArrayPoolSupport.field_h = param1;
               gm.field_m = param1;
               bb.field_d = 0;
               HostileSpawn.field_B = BufferedRandomAccessFile.c(-1);
@@ -508,7 +508,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           return;
         }
         try {
-          nf.field_n = 0L;
+          MusicPatch.field_n = 0L;
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "se.start()");
         }
@@ -534,7 +534,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           ArchiveIndex.a(param14, param19, -1);
           re.a(param15 - 3996, param6, param7, param1, param11, param3);
           MouseWheelInput.a(param20, 126, param5, param16);
-          tm.a(param8, param18, param4, true);
+          MusicPatchNode.a(param8, param18, param4, true);
           if (param15 != 4000) {
             field_c = (String) null;
           }
@@ -780,13 +780,13 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 InteractiveWidget.h(1048576);
                 this.b(-54);
-                o.field_n = rf.a(hf.field_h, (java.awt.Component) ((Object) field_h), SpriteGeometry.field_s, false);
+                o.field_n = rf.a(ByteArrayPoolSupport.field_h, (java.awt.Component) ((Object) field_h), SpriteGeometry.field_s, false);
                 this.initializeGame(-4323);
                 vj.field_v = dd.c(false);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (nf.field_n != 0L) {
-                    stackIn_102_0 = compareLongs(hn.correctedCurrentTimeMillis((byte) 80), nf.field_n);
+                  if (MusicPatch.field_n != 0L) {
+                    stackIn_102_0 = compareLongs(hn.correctedCurrentTimeMillis((byte) 80), MusicPatch.field_n);
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_102_0 >= 0)) {

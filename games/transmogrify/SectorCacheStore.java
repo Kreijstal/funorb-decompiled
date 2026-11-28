@@ -183,7 +183,7 @@ final class SectorCacheStore {
         }
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseXor(int param0, int param1) {
         return param0 ^ param1;
     }
 
@@ -397,7 +397,7 @@ final class SectorCacheStore {
             SectorCacheStore.a((byte[]) null, 124);
           }
           var2 = new CoverageBitmapFont(param0, BufferedSocket.field_j, Bzip2State.field_a, ql.field_b, wk.field_b, EditableTextField.field_D, Bzip2State.field_K);
-          wd.d(120);
+          MidiNoteMask.d(120);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

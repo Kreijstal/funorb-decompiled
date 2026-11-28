@@ -579,7 +579,7 @@ final class DiskCacheWorker implements Runnable {
           uk.field_e.field_bb = 1;
           sc.field_c = new UiPanel(0L, uk.field_e);
           gh.field_b = new UiPanel(0L, uk.field_e);
-          vc.field_b = new UiPanel(0L, SpriteState.field_u);
+          ByteArrayPoolSupport.field_b = new UiPanel(0L, SpriteState.field_u);
           ip.field_a = new UiPanel(0L, uk.field_e);
           ca.field_f = new UiPanel(0L, uk.field_e);
           GameplayScreen.field_l = new UiPanel(0L, uk.field_e);
@@ -627,10 +627,10 @@ final class DiskCacheWorker implements Runnable {
           stackIn_46_3 = "redbutton_mouseheld";
           stackIn_47_4 = !(param4);
           stackIn_46_0.field_cb = hq.a(gk.a(stackIn_46_1, stackIn_46_2, stackIn_46_3, stackIn_47_4), 202);
-          vc.field_b.field_Bb = hq.a(gk.a(param3, "lobby", "backbutton", true), 202);
-          vc.field_b.field_Q = hq.a(gk.a(param3, "lobby", "backbutton_mouseover", true), 202);
-          vc.field_b.field_cb = hq.a(gk.a(param3, "lobby", "backbutton_mouseheld", true), 202);
-          vc.field_b.field_gb = hq.a(gk.a(param3, "lobby", "backbutton_disabled", true), 202);
+          ByteArrayPoolSupport.field_b.field_Bb = hq.a(gk.a(param3, "lobby", "backbutton", true), 202);
+          ByteArrayPoolSupport.field_b.field_Q = hq.a(gk.a(param3, "lobby", "backbutton_mouseover", true), 202);
+          ByteArrayPoolSupport.field_b.field_cb = hq.a(gk.a(param3, "lobby", "backbutton_mouseheld", true), 202);
+          ByteArrayPoolSupport.field_b.field_gb = hq.a(gk.a(param3, "lobby", "backbutton_disabled", true), 202);
           GameplayScreen.field_l.field_Bb = hq.a(gk.a(param3, "lobby", "gameoptionbutton", true), 202);
           stackIn_49_0 = GameplayScreen.field_l;
           stackIn_49_1 = (Archive) (param3);

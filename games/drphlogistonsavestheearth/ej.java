@@ -23,10 +23,10 @@ final class ej {
             return;
           }
           SecondaryNodeDeque.a((byte) 50, (java.awt.Component) ((Object) param0));
-          if (null == sc.field_e) {
+          if (null == ByteArrayPoolSupport.field_e) {
             return;
           }
-          sc.field_e.attach((byte) -91, (java.awt.Component) ((Object) param0));
+          ByteArrayPoolSupport.field_e.attach((byte) -91, (java.awt.Component) ((Object) param0));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -24,9 +24,9 @@ final class iw {
         if (param1 != -10410) {
           return;
         }
-        if (un.field_a == null ||
-          !(param2 <= un.field_a.length)) {
-          un.field_a = new int[2 * param2];
+        if (MusicPatchEnvelope.field_a == null ||
+          !(param2 <= MusicPatchEnvelope.field_a.length)) {
+          MusicPatchEnvelope.field_a = new int[2 * param2];
         }
         if (gk.field_a == null) {
           gk.field_a = new int[2 * param2];

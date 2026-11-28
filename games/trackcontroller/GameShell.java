@@ -139,7 +139,7 @@ abstract class GameShell extends GameApplet {
         if (var2 == 0 ||
           1 == var2) {
           if (kb.field_f[1]) {
-            ke.a(-101, 2);
+            ByteArrayPoolSupport.a(-101, 2);
           }
           if (kb.field_f[2]) {
             rf.a(3, 0);
@@ -422,7 +422,7 @@ abstract class GameShell extends GameApplet {
             LoginPanel.field_N = 10;
           }
           if (var4 == 7) {
-            qh.a(!param0, CachedArchiveSource.b((byte) 77));
+            GrowableIntArray.a(!param0, CachedArchiveSource.b((byte) 77));
           }
           if (var4 == 8) {
             we.a(0, CachedArchiveSource.b((byte) 77));
@@ -654,7 +654,7 @@ abstract class GameShell extends GameApplet {
         }
         if (gj.field_c == 0 &&
           !IntrusiveNode.c(38)) {
-          qh.field_i = false;
+          GrowableIntArray.field_i = false;
         }
         if (AlphaWidgetContainer.field_I == 0 &&
           dd.c((byte) 55)) {

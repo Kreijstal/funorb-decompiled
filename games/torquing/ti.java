@@ -124,7 +124,7 @@ final class ti {
         if (param0 >= 54) {
           if (null != this.field_n) {
             var2.field_n = ee.b(-114);
-            dk.a(this.field_n, 0, var2.field_n, 0, this.field_n.length);
+            ArrayBlockSupport.a(this.field_n, 0, var2.field_n, 0, this.field_n.length);
           }
           var2.field_j = this.field_j;
           return var2;
@@ -132,7 +132,7 @@ final class ti {
         this.c((byte) -48);
         if (null != this.field_n) {
           var2.field_n = ee.b(-114);
-          dk.a(this.field_n, 0, var2.field_n, 0, this.field_n.length);
+          ArrayBlockSupport.a(this.field_n, 0, var2.field_n, 0, this.field_n.length);
         }
         var2.field_j = this.field_j;
         return var2;
@@ -160,11 +160,11 @@ final class ti {
               }
               if (this.field_n != null) {
                 for (var3 = 0; var3 < 64; var3++) {
-                  this.field_n[var3] = ee.a(this.field_n[var3], var2_ref.field_o[var3]);
+                  this.field_n[var3] = ee.bitwiseOr(this.field_n[var3], var2_ref.field_o[var3]);
                 }
               } else {
                 this.field_n = ee.b(-123);
-                dk.a(var2_ref.field_o, 0, this.field_n, 0, 64);
+                ArrayBlockSupport.a(var2_ref.field_o, 0, this.field_n, 0, 64);
               }
             }
             var2_ref = (ud) (this.field_o.nextBackward(-24059));
@@ -187,11 +187,11 @@ final class ti {
             if (decompiledFrameRemainder0) {
               if (this.field_n != null) {
                 for (var3 = 0; var3 < 64; var3++) {
-                  this.field_n[var3] = ee.a(this.field_n[var3], var2_ref.field_o[var3]);
+                  this.field_n[var3] = ee.bitwiseOr(this.field_n[var3], var2_ref.field_o[var3]);
                 }
               } else {
                 this.field_n = ee.b(-123);
-                dk.a(var2_ref.field_o, 0, this.field_n, 0, 64);
+                ArrayBlockSupport.a(var2_ref.field_o, 0, this.field_n, 0, 64);
               }
             }
             var2_ref = (ud) (this.field_o.nextBackward(-24059));
@@ -297,7 +297,7 @@ final class ti {
         }
         var5 = ((ud) (this.field_o.beginBackward(0))).field_o;
         var2 = var5;
-        dk.a(this.field_n, 0, var5, 0, 64);
+        ArrayBlockSupport.a(this.field_n, 0, var5, 0, 64);
         var3_ref = (ud) (this.field_o.beginBackward(0));
         while (var3_ref != null) {
           if (null != var3_ref.field_o &&

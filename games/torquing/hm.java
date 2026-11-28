@@ -40,9 +40,9 @@ final class hm extends am {
               var4 = 256;
             }
             var4 = this.field_x[var4];
-            var6[var9] = ie.a(4080, var4 >> 12);
-            var7[var9] = ie.a(var4, 65280) >> 4;
-            var8[var9] = ie.a(var4, 255) << 4;
+            var6[var9] = ie.bitwiseAnd(4080, var4 >> 12);
+            var7[var9] = ie.bitwiseAnd(var4, 65280) >> 4;
+            var8[var9] = ie.bitwiseAnd(var4, 255) << 4;
           }
         }
         return var11;
@@ -302,7 +302,7 @@ final class hm extends am {
           }
           try {
             if (pd.field_c == 0) {
-              rd.field_x = hq.field_a.requestDirectSocket(cl.field_d, tl.field_u, -59);
+              rd.field_x = GrowableIntArray.field_a.requestDirectSocket(cl.field_d, tl.field_u, -59);
               pd.field_c = pd.field_c + 1;
             }
             if (pd.field_c == 1) {
@@ -315,7 +315,7 @@ final class hm extends am {
               }
             }
             if (pd.field_c == 2) {
-              up.field_a = new BufferedSocket((java.net.Socket) (rd.field_x.result), hq.field_a);
+              up.field_a = new BufferedSocket((java.net.Socket) (rd.field_x.result), GrowableIntArray.field_a);
               var2 = new PacketBuffer(13);
               IntrusiveNode.a(MatchingFieldValidator.field_r, 123, qg.field_A, var2, eg.field_x);
               var2.writeByte(90, 15);

@@ -56,9 +56,9 @@ final class qo extends TextureOperator {
             var13 = var31[2];
             for (var14 = 0; StripedProgressWidget.field_M > var14; var14++) {
               var15 = var32[var14];
-              var13[var14] = b.a(var15, 255) << 4;
-              var12[var14] = b.a(4080, var15 >> 4);
-              var11[var14] = b.a(var15 >> 12, 4080);
+              var13[var14] = b.bitwiseAnd(var15, 255) << 4;
+              var12[var14] = b.bitwiseAnd(4080, var15 >> 4);
+              var11[var14] = b.bitwiseAnd(var15 >> 12, 4080);
             }
           }
         }

@@ -8,7 +8,7 @@ final class fi {
     static boolean field_a;
 
     final static void a(byte param0) {
-        int var1 = qd.a(false);
+        int var1 = MusicPatchNode.a(false);
         int var2 = nj.b(3);
         de.field_c.a(vh.field_g - IntrusiveNode.field_f, (IntrusiveNode.field_f << 1) + var1, var2 + (bb.field_b << 1), true, -bb.field_b + id.field_c);
         le.a((byte) -115);

@@ -90,10 +90,10 @@ class DualLinkNode extends IntrusiveNode {
         int var1 = -50 % ((30 - param0) / 40);
         le.field_b[2] = SoundCache.a(-27711, new String[][]{DungeonBuilderScreen.field_J, je.field_f, KeyboardInput.field_a, RaiderDefinition.field_y});
         le.field_b[3] = SoundCache.a(-27711, new String[][]{pp.field_E, np.field_C});
-        le.field_b[4] = SoundCache.a(-27711, new String[][]{eg.field_b, lp.field_q, PlayerDungeonProfile.field_d, le.field_c});
-        le.field_b[5] = SoundCache.a(-27711, new String[][]{bn.field_m, lp.field_q, ka.field_d});
+        le.field_b[4] = SoundCache.a(-27711, new String[][]{eg.field_b, MusicPatchNode.field_q, PlayerDungeonProfile.field_d, le.field_c});
+        le.field_b[5] = SoundCache.a(-27711, new String[][]{bn.field_m, MusicPatchNode.field_q, ka.field_d});
         le.field_b[6] = SoundCache.a(-27711, new String[][]{rl.field_i, PlayerDungeonProfile.field_d, le.field_c});
-        le.field_b[7] = SoundCache.a(-27711, new String[][]{tp.field_C, lp.field_F, MouseWheelInput.field_f, field_j});
+        le.field_b[7] = SoundCache.a(-27711, new String[][]{tp.field_C, MusicPatchNode.field_F, MouseWheelInput.field_f, field_j});
         le.field_b[8] = SoundCache.a(-27711, new String[][]{bb.field_t, ka.field_d});
         le.field_b[9] = SoundCache.a(-27711, new String[][]{eh.field_e, PcmOutputWorker.field_f});
         le.field_b[10] = SoundCache.a(-27711, new String[][]{hj.field_O});

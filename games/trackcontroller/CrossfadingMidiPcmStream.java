@@ -132,8 +132,8 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               if (var5 != 256) {
                 if (this.field_B != null &&
                   this.field_B.length >= var6) {
-                  pd.clearInts(this.field_B, 0, var6);
-                  pd.clearInts(this.field_s, 0, var6);
+                  ArrayBlockSupport.clearInts(this.field_B, 0, var6);
+                  ArrayBlockSupport.clearInts(this.field_s, 0, var6);
                 } else {
                   this.field_s = new int[var6];
                   this.field_B = new int[var6];
@@ -160,7 +160,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             0 != this.field_t) {
             if (this.field_B != null &&
               var6 <= this.field_B.length) {
-              pd.clearInts(this.field_B, 0, var6);
+              ArrayBlockSupport.clearInts(this.field_B, 0, var6);
             } else {
               this.field_s = new int[var6];
               this.field_B = new int[var6];

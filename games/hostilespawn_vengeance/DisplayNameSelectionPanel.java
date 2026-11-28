@@ -243,7 +243,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         }
     }
 
-    private final int a(String param0, String param1, byte param2, int param3, int param4, UiWidget param5, int param6) {
+    private final int addLabeledFieldWithValidationMessage(String param0, String param1, byte param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException var8 = null;
         ValidationStatusWidget var9 = null;
         int var10 = 0;
@@ -322,7 +322,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         var2.setBounds(270, var3, 0, 20, 50);
         this.addChild(51448, var2);
         var3 += 50;
-        var3 = var3 + (this.a(170, this.field_G, vg.field_f, (byte) 31, var3, PcmOutputWorker.field_a) + 5);
+        var3 = var3 + (this.addLabeledFieldWithDefaultValidationMessage(170, this.field_G, vg.field_f, (byte) 31, var3, PcmOutputWorker.field_a) + 5);
         this.field_E.setBounds(var5, var3, 0, -var5 + 496 >> 1, 40);
         this.field_H.setBounds(60, var3 + 15, 0, var4 + 3, 40);
         this.field_H.field_p = (WidgetEventListener) (this);
@@ -352,7 +352,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         ((AccountNameAvailabilityValidator) (this.field_G.getInputHandler((byte) 124))).invalidateCheckedName(-2);
     }
 
-    private final int a(int param0, UiWidget param1, String param2, byte param3, int param4, String param5) {
+    private final int addLabeledFieldWithDefaultValidationMessage(int param0, UiWidget param1, String param2, byte param3, int param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -367,7 +367,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
           if (param3 != 31) {
             this.field_G = (TextInputField) null;
           }
-          stackIn_3_0 = this.a(param2, param5, (byte) 71, param4, param0, param1, 35);
+          stackIn_3_0 = this.addLabeledFieldWithValidationMessage(param2, param5, (byte) 71, param4, param0, param1, 35);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -183,7 +183,7 @@ final class fs {
             var4_int = fieldTemp$1;
             StandardContentDialog.field_fb.writeByte(param2, 0);
             for (var5 = 0; 7 > var5; var5++) {
-              sd.a((byte) 124, StandardContentDialog.field_fb, param1[var5]);
+              ByteArrayPoolSupport.a((byte) 124, StandardContentDialog.field_fb, param1[var5]);
             }
             var5Lifetime1 = -var4_int + StandardContentDialog.field_fb.position;
             StandardContentDialog.field_fb.writeLengthByte((byte) 83, var5Lifetime1);

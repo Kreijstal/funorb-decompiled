@@ -520,63 +520,63 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           var2Lifetime82 = NodeHashTableIterator.a("achievement_names,0", 123);
           if (null != var2Lifetime82) {
-            sc.field_b[0] = mj.a((byte) 109, var2Lifetime82);
+            ByteArrayPoolSupport.field_b[0] = mj.a((byte) 109, var2Lifetime82);
           }
           var2Lifetime83 = NodeHashTableIterator.a("achievement_names,1", 122);
           if (var2Lifetime83 != null) {
-            sc.field_b[1] = mj.a((byte) -111, var2Lifetime83);
+            ByteArrayPoolSupport.field_b[1] = mj.a((byte) -111, var2Lifetime83);
           }
           var2Lifetime84 = NodeHashTableIterator.a("achievement_names,2", 123);
           if (var2Lifetime84 != null) {
-            sc.field_b[2] = mj.a((byte) -123, var2Lifetime84);
+            ByteArrayPoolSupport.field_b[2] = mj.a((byte) -123, var2Lifetime84);
           }
           var2Lifetime85 = NodeHashTableIterator.a("achievement_names,3", 122);
           if (var2Lifetime85 != null) {
-            sc.field_b[3] = mj.a((byte) 32, var2Lifetime85);
+            ByteArrayPoolSupport.field_b[3] = mj.a((byte) 32, var2Lifetime85);
           }
           var2Lifetime86 = NodeHashTableIterator.a("achievement_names,4", 127);
           if (var2Lifetime86 != null) {
-            sc.field_b[4] = mj.a((byte) -98, var2Lifetime86);
+            ByteArrayPoolSupport.field_b[4] = mj.a((byte) -98, var2Lifetime86);
           }
           var2Lifetime87 = NodeHashTableIterator.a("achievement_names,5", param1 - 129);
           if (null != var2Lifetime87) {
-            sc.field_b[5] = mj.a((byte) -123, var2Lifetime87);
+            ByteArrayPoolSupport.field_b[5] = mj.a((byte) -123, var2Lifetime87);
           }
           var2Lifetime88 = NodeHashTableIterator.a("achievement_names,6", 124);
           if (null != var2Lifetime88) {
-            sc.field_b[6] = mj.a((byte) -109, var2Lifetime88);
+            ByteArrayPoolSupport.field_b[6] = mj.a((byte) -109, var2Lifetime88);
           }
           var2Lifetime89 = NodeHashTableIterator.a("achievement_names,7", 124);
           if (null != var2Lifetime89) {
-            sc.field_b[7] = mj.a((byte) -108, var2Lifetime89);
+            ByteArrayPoolSupport.field_b[7] = mj.a((byte) -108, var2Lifetime89);
           }
           var2Lifetime90 = NodeHashTableIterator.a("achievement_names,8", 125);
           if (null != var2Lifetime90) {
-            sc.field_b[8] = mj.a((byte) -120, var2Lifetime90);
+            ByteArrayPoolSupport.field_b[8] = mj.a((byte) -120, var2Lifetime90);
           }
           var2Lifetime91 = NodeHashTableIterator.a("achievement_names,9", param1 - 128);
           if (null != var2Lifetime91) {
-            sc.field_b[9] = mj.a((byte) -1, var2Lifetime91);
+            ByteArrayPoolSupport.field_b[9] = mj.a((byte) -1, var2Lifetime91);
           }
           var2Lifetime92 = NodeHashTableIterator.a("achievement_names,10", 124);
           if (var2Lifetime92 != null) {
-            sc.field_b[10] = mj.a((byte) -97, var2Lifetime92);
+            ByteArrayPoolSupport.field_b[10] = mj.a((byte) -97, var2Lifetime92);
           }
           var2Lifetime93 = NodeHashTableIterator.a("achievement_names,11", 126);
           if (var2Lifetime93 != null) {
-            sc.field_b[11] = mj.a((byte) -119, var2Lifetime93);
+            ByteArrayPoolSupport.field_b[11] = mj.a((byte) -119, var2Lifetime93);
           }
           var2Lifetime94 = NodeHashTableIterator.a("achievement_names,12", param1 ^ 128);
           if (var2Lifetime94 != null) {
-            sc.field_b[12] = mj.a((byte) -123, var2Lifetime94);
+            ByteArrayPoolSupport.field_b[12] = mj.a((byte) -123, var2Lifetime94);
           }
           var2Lifetime95 = NodeHashTableIterator.a("achievement_names,13", 126);
           if (null != var2Lifetime95) {
-            sc.field_b[13] = mj.a((byte) 113, var2Lifetime95);
+            ByteArrayPoolSupport.field_b[13] = mj.a((byte) 113, var2Lifetime95);
           }
           var2Lifetime96 = NodeHashTableIterator.a("achievement_names,14", 126);
           if (var2Lifetime96 != null) {
-            sc.field_b[14] = mj.a((byte) -114, var2Lifetime96);
+            ByteArrayPoolSupport.field_b[14] = mj.a((byte) -114, var2Lifetime96);
           }
           var2Lifetime97 = NodeHashTableIterator.a("achievement_criteria,0", param1 - 131);
           if (var2Lifetime97 != null) {

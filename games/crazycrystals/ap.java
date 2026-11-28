@@ -525,7 +525,7 @@ final class ap extends ob {
                       if (this.field_d != 0) {
                         var7 = 0;
                         while (var6 > var7) {
-                          this.field_h.field_s.payload[var7 + this.field_h.field_s.position] = (byte)oe.a((int) this.field_h.field_s.payload[var7 + this.field_h.field_s.position], (int) this.field_d);
+                          this.field_h.field_s.payload[var7 + this.field_h.field_s.position] = (byte)oe.bitwiseXor((int) this.field_h.field_s.payload[var7 + this.field_h.field_s.position], (int) this.field_d);
                           var7++;
                           if (var16 != 0) {
                             decompiledFrameCompleted4 = false;
@@ -564,7 +564,7 @@ final class ap extends ob {
                       if (this.field_d != 0) {
                         var6Lifetime1 = 0;
                         while (var5Lifetime1 > var6Lifetime1) {
-                          this.field_i.payload[this.field_i.position + var6Lifetime1] = (byte)oe.a((int) this.field_i.payload[this.field_i.position + var6Lifetime1], (int) this.field_d);
+                          this.field_i.payload[this.field_i.position + var6Lifetime1] = (byte)oe.bitwiseXor((int) this.field_i.payload[this.field_i.position + var6Lifetime1], (int) this.field_d);
                           var6Lifetime1++;
                           if (var16 != 0) {
                             decompiledFrameCompleted3 = false;

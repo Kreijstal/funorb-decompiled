@@ -50,7 +50,7 @@ final class we {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_i[var2] = ue.a(stellarshard.a((long)this.field_h[var3 + 7], 255L), ue.a(ue.a(stellarshard.a(16711680L, (long)this.field_h[var3 + 5] << 16), ue.a(ue.a(ue.a(ue.a(stellarshard.a((long)this.field_h[1 + var3], 255L) << 48, (long)this.field_h[var3] << 56), stellarshard.a(255L, (long)this.field_h[2 + var3]) << 40), stellarshard.a(1095216660480L, (long)this.field_h[3 + var3] << 32)), stellarshard.a(255L, (long)this.field_h[var3 + 4]) << 24)), stellarshard.a(65280L, (long)this.field_h[var3 + 6] << 8)));
+          this.field_i[var2] = ue.bitwiseXor(stellarshard.a((long)this.field_h[var3 + 7], 255L), ue.bitwiseXor(ue.bitwiseXor(stellarshard.a(16711680L, (long)this.field_h[var3 + 5] << 16), ue.bitwiseXor(ue.bitwiseXor(ue.bitwiseXor(ue.bitwiseXor(stellarshard.a((long)this.field_h[1 + var3], 255L) << 48, (long)this.field_h[var3] << 56), stellarshard.a(255L, (long)this.field_h[2 + var3]) << 40), stellarshard.a(1095216660480L, (long)this.field_h[3 + var3] << 32)), stellarshard.a(255L, (long)this.field_h[var3 + 4]) << 24)), stellarshard.a(65280L, (long)this.field_h[var3 + 6] << 8)));
           var3 += 8;
           var2++;
         }
@@ -58,7 +58,7 @@ final class we {
           dupTemp$0 = this.field_c[var2Lifetime1];
           arrayValue$1 = this.field_i[var2Lifetime1];
           this.field_f[var2Lifetime1] = dupTemp$0;
-          this.field_d[var2Lifetime1] = ue.a(arrayValue$1, dupTemp$0);
+          this.field_d[var2Lifetime1] = ue.bitwiseXor(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = param0; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; 8 > var3Lifetime1; var3Lifetime1++) {
@@ -66,7 +66,7 @@ final class we {
             var4 = 0;
             var5 = 56;
             while (8 > var4) {
-              this.field_j[var3Lifetime1] = ue.a(this.field_j[var3Lifetime1], RichTextLayout.field_l[var4][DirectByteStorage.a(255, (int)(this.field_f[DirectByteStorage.a(-var4 + var3Lifetime1, 7)] >>> var5))]);
+              this.field_j[var3Lifetime1] = ue.bitwiseXor(this.field_j[var3Lifetime1], RichTextLayout.field_l[var4][DirectByteStorage.bitwiseAnd(255, (int)(this.field_f[DirectByteStorage.bitwiseAnd(-var4 + var3Lifetime1, 7)] >>> var5))]);
               var4++;
               var5 -= 8;
             }
@@ -74,14 +74,14 @@ final class we {
           for (var3Lifetime1Lifetime1 = 0; 8 > var3Lifetime1Lifetime1; var3Lifetime1Lifetime1++) {
             this.field_f[var3Lifetime1Lifetime1] = this.field_j[var3Lifetime1Lifetime1];
           }
-          this.field_f[0] = ue.a(this.field_f[0], RichTextLayout.field_j[var2Lifetime2]);
+          this.field_f[0] = ue.bitwiseXor(this.field_f[0], RichTextLayout.field_j[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; 8 > var3Lifetime1Lifetime2; var3Lifetime1Lifetime2++) {
             this.field_j[var3Lifetime1Lifetime2] = this.field_f[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_j[var3Lifetime1Lifetime2] = ue.a(this.field_j[var3Lifetime1Lifetime2], RichTextLayout.field_l[var7][DirectByteStorage.a((int)(this.field_d[DirectByteStorage.a(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
+              this.field_j[var3Lifetime1Lifetime2] = ue.bitwiseXor(this.field_j[var3Lifetime1Lifetime2], RichTextLayout.field_l[var7][DirectByteStorage.bitwiseAnd((int)(this.field_d[DirectByteStorage.bitwiseAnd(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -91,7 +91,7 @@ final class we {
           }
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_c[var2Lifetime3] = ue.a(this.field_c[var2Lifetime3], ue.a(this.field_i[var2Lifetime3], this.field_d[var2Lifetime3]));
+          this.field_c[var2Lifetime3] = ue.bitwiseXor(this.field_c[var2Lifetime3], ue.bitwiseXor(this.field_i[var2Lifetime3], this.field_d[var2Lifetime3]));
         }
     }
 
@@ -132,7 +132,7 @@ final class we {
             var8 = param2[var5_int] << var6 & 255 | (255 & param2[var5_int + 1]) >>> 8 - var6;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_h[this.field_b] = (byte)DialogMessagePane.b((int) this.field_h[this.field_b], var8 >>> var7);
+              this.field_h[this.field_b] = (byte)DialogMessagePane.bitwiseOr((int) this.field_h[this.field_b], var8 >>> var7);
               this.field_k = this.field_k + (-var7 + 8);
               this.field_b = this.field_b + 1;
               if (this.field_k == 512) {
@@ -140,7 +140,7 @@ final class we {
                 this.field_b = 0;
                 this.field_k = 0;
               }
-              this.field_h[this.field_b] = (byte)DirectByteStorage.a(var8 << -var7 + 8, 255);
+              this.field_h[this.field_b] = (byte)DirectByteStorage.bitwiseAnd(var8 << -var7 + 8, 255);
               this.field_k = this.field_k + var7;
               var5_int++;
               param0 = param0 - 8L;
@@ -152,7 +152,7 @@ final class we {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = 255 & param2[var5_int] << var6;
-            this.field_h[this.field_b] = (byte)DialogMessagePane.b((int) this.field_h[this.field_b], var8Lifetime1 >>> var7);
+            this.field_h[this.field_b] = (byte)DialogMessagePane.bitwiseOr((int) this.field_h[this.field_b], var8Lifetime1 >>> var7);
           }
           if (param0 + (long)var7 < 8L) {
             this.field_k = (int)((long)this.field_k + param0);
@@ -165,7 +165,7 @@ final class we {
               this.field_b = 0;
               this.field_k = 0;
             }
-            this.field_h[this.field_b] = (byte)DirectByteStorage.a(var8Lifetime1 << -var7 + 8, 255);
+            this.field_h[this.field_b] = (byte)DirectByteStorage.bitwiseAnd(var8Lifetime1 << -var7 + 8, 255);
             this.field_k = this.field_k + (int)param0;
           }
           return;
@@ -229,7 +229,7 @@ final class we {
         int var8 = 0;
         var8 = stellarshard.field_B;
         try {
-          this.field_h[this.field_b] = (byte)DialogMessagePane.b((int) this.field_h[this.field_b], 128 >>> DirectByteStorage.a(7, this.field_k));
+          this.field_h[this.field_b] = (byte)DialogMessagePane.bitwiseOr((int) this.field_h[this.field_b], 128 >>> DirectByteStorage.bitwiseAnd(7, this.field_k));
           this.field_b = this.field_b + 1;
           if (this.field_b > 32) {
             while (64 > this.field_b) {
@@ -245,7 +245,7 @@ final class we {
             this.field_b = this.field_b + 1;
             this.field_h[fieldTemp$1] = (byte) 0;
           }
-          ri.copyByteRange(this.field_g, 0, this.field_h, 32, 32);
+          ArrayBlockSupport.copyByteRange(this.field_g, 0, this.field_h, 32, 32);
           this.a(1);
           var4_int = 0;
           var5 = param1;

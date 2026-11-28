@@ -179,7 +179,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
         var10 = MinerDisturbance.field_ab;
         try {
           ti.field_M = param2;
-          cg.field_C = true;
+          MusicPatchNode.field_C = true;
           if (0 == ti.field_M) {
             var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, ValidationStatusWidget.field_S, IntrusiveDeque.field_a);
             var4 = 3 + var3_int;
@@ -289,9 +289,9 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
               throw new IllegalStateException();
             }
             MouseWheelInput.field_g = new String[var4];
-            ai.a(fd.field_J, 0, MouseWheelInput.field_g, 0, var4);
+            ArrayBlockSupport.copyObjectRange(fd.field_J, 0, MouseWheelInput.field_g, 0, var4);
             om.field_f = new String[-1 + (-var4 + var3_int)];
-            ai.a(fd.field_J, 1 + var4, om.field_f, 0, var3_int - var4 - 1);
+            ArrayBlockSupport.copyObjectRange(fd.field_J, 1 + var4, om.field_f, 0, var3_int - var4 - 1);
             var4 = -1;
             var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, ValidationStatusWidget.field_S, oa.a((byte) -127, ff.field_e, new String[]{"<br><%0><br>"}));
             for (var5 = 0; var3_int > var5; var5++) {
@@ -305,9 +305,9 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
               throw new IllegalStateException();
             }
             ce.field_c = new String[var4];
-            ai.a(fd.field_J, 0, ce.field_c, 0, var4);
+            ArrayBlockSupport.copyObjectRange(fd.field_J, 0, ce.field_c, 0, var4);
             AccountRegistrationPanel.field_N = new String[-1 + (var3_int - var4)];
-            ai.a(fd.field_J, 1 + var4, AccountRegistrationPanel.field_N, 0, -1 - var4 + var3_int);
+            ArrayBlockSupport.copyObjectRange(fd.field_J, 1 + var4, AccountRegistrationPanel.field_N, 0, -1 - var4 + var3_int);
             if (ce.field_c.length <= MouseWheelInput.field_g.length) {
               stackIn_23_0 = MouseWheelInput.field_g.length;
             } else {
@@ -394,7 +394,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
           }
           si.field_d = -(var3_intLifetime1 >> 1) + (rj.field_e + var3_intLifetime1);
           hn.field_b = pn.field_a.field_i * (sn.field_d + SpriteState.field_z << 1);
-          cg.field_o = -(var3_intLifetime1 >> 1) + rj.field_e;
+          MusicPatchNode.field_o = -(var3_intLifetime1 >> 1) + rj.field_e;
           for (var4Lifetime2 = 0; var4Lifetime2 < ne.field_K.length; var4Lifetime2++) {
             stackIn_115_0 = hn.field_b;
             if (0 <= IsaacRandom.field_m[var4Lifetime2]) {
@@ -405,7 +405,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
             hn.field_b = stackIn_115_0 + stackIn_116_1;
           }
           var4Lifetime3 = 86 % ((72 - param0) / 52);
-          lj.field_p = aa.field_d - (hn.field_b >> 1);
+          lj.field_p = GrowableIntArray.field_d - (hn.field_b >> 1);
           AccountServiceResult.field_a = new int[ne.field_K.length][];
           var5Lifetime3 = 0;
           var6Lifetime1 = lj.field_p;
@@ -493,11 +493,11 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
         fb.field_h = oa.a((byte) -72, fb.field_h, new String[]{"<br><shad=000001><%0></shad><br>"});
         GameAppletShell.field_g[0] = mn.field_v;
         GameAppletShell.field_g[3] = ArchiveRequest.field_u;
-        GameAppletShell.field_g[1] = vc.field_w;
+        GameAppletShell.field_g[1] = MusicPatch.field_w;
         GameAppletShell.field_g[6] = ModalDialog.field_M;
         GameAppletShell.field_g[2] = ka.field_c;
         GameAppletShell.field_g[4] = qe.field_e;
-        GameAppletShell.field_g[5] = ng.field_i;
+        GameAppletShell.field_g[5] = MusicPatchEnvelope.field_i;
         GameAppletShell.field_g[21] = md.field_a;
         GameAppletShell.field_g[19] = MusicPatchPcmStream.field_t;
         GameAppletShell.field_g[18] = NetworkArchiveRequest.field_H;
@@ -541,7 +541,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
         PasswordValidator.field_i[5] = lf.field_i;
         PasswordValidator.field_i[1] = AccountServiceResult.field_b;
         PasswordValidator.field_i[3] = vi.field_c;
-        PasswordValidator.field_i[param0] = cg.field_K;
+        PasswordValidator.field_i[param0] = MusicPatchNode.field_K;
         PasswordValidator.field_i[19] = af.field_n;
         PasswordValidator.field_i[18] = lj.field_u;
         PasswordValidator.field_i[7] = il.field_t;

@@ -192,7 +192,7 @@ public final class MonkeyPuzzle2 extends bi {
           Bzip2Decompressor.clearStaticReferences();
           Bzip2State.resetStaticState(0);
           i.clearStaticReferences(true);
-          nj.clearStaticReferences(-151);
+          ByteArrayPoolSupport.clearStaticReferences(-151);
           vi.a(0);
           pb.clearStaticReferences((byte) 88);
           ak.c(-1);
@@ -248,7 +248,7 @@ public final class MonkeyPuzzle2 extends bi {
           SynthesizerVoice.clearStaticReferences();
           bb.clearStaticReferences(true);
           RichTextLayout.clearStaticReferences(12817);
-          oi.a((byte) -90);
+          GrowableIntArray.a((byte) -90);
           DropTargetWidgetContainer.clearStaticReferences(false);
           te.clearStaticReferences((byte) -88);
           IterableNodeHashTable.b(24);
@@ -365,7 +365,7 @@ public final class MonkeyPuzzle2 extends bi {
                 ProxyAuthenticationRequiredException.field_d[Bzip2State.field_f].b((byte) 125);
               }
             }
-            gl.a(SoftwareRasterizer.field_i, 0, GuestPlayConfirmationForm.field_H.field_s, 0, 307200);
+            ArrayBlockSupport.copyIntRange(SoftwareRasterizer.field_i, 0, GuestPlayConfirmationForm.field_H.field_s, 0, 307200);
             DebouncedFieldValidator.field_f.b(-76);
             EmailFormatValidator.a(ej.field_b, (byte) 123, GuestPlayConfirmationForm.field_H);
             decompiledFrameRemainder0 = false;

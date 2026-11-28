@@ -201,7 +201,7 @@ final class lh {
               }
             } else {
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_a; var10Lifetime5++) {
-                this.field_p[this.field_k[var10Lifetime5]] = var17.readUnsignedShortOrInt(ih.a(param0, 26491));
+                this.field_p[this.field_k[var10Lifetime5]] = var17.readUnsignedShortOrInt(ih.bitwiseXor(param0, 26491));
               }
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_a; var10Lifetime5++) {
                 var11 = this.field_k[var10Lifetime5];

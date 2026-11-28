@@ -172,7 +172,7 @@ final class pf {
                   oq.a(h.field_D.field_Lb, -1, 4462, -1, (String) null, (int[]) null, var7, 0L, var16);
                   if (var7.field_Lb != null &&
                     !ak.a(76, un.field_Lb.field_k) &&
-                    !pe.field_r) {
+                    !MusicPatchNode.field_r) {
                     if (!hj.field_b) {
                       var17 = un.field_Lb;
                       var18 = Vertigo2.a(new String[]{var16}, sc.field_b, -23);

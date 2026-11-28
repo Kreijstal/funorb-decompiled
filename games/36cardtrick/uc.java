@@ -111,9 +111,9 @@ final class uc extends pe {
             try {
               if (var5 != null &&
                 var18.length > 2) {
-                fl.field_c.reset();
-                fl.field_c.update(var5, 0, -2 + var18.length);
-                var6_int = (int)fl.field_c.getValue();
+                GrowableIntArray.field_c.reset();
+                GrowableIntArray.field_c.update(var5, 0, -2 + var18.length);
+                var6_int = (int)GrowableIntArray.field_c.getValue();
                 if (this.field_l.field_i[param1] != var6_int) {
                   throw new RuntimeException();
                 }
@@ -160,9 +160,9 @@ final class uc extends pe {
           try {
             if (var5 != null &&
               var18.length > 2) {
-              fl.field_c.reset();
-              fl.field_c.update(var5, 0, -2 + var18.length);
-              var6_int = (int)fl.field_c.getValue();
+              GrowableIntArray.field_c.reset();
+              GrowableIntArray.field_c.update(var5, 0, -2 + var18.length);
+              var6_int = (int)GrowableIntArray.field_c.getValue();
               if (this.field_l.field_i[param1] != var6_int) {
                 throw new RuntimeException();
               }

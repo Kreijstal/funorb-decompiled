@@ -59,7 +59,7 @@ final class mj {
                 this.field_b = 0;
                 this.field_e = 0;
               }
-              this.field_h[this.field_e] = (byte)ie.a(255, var8 << 8 - var7);
+              this.field_h[this.field_e] = (byte)ie.bitwiseAnd(255, var8 << 8 - var7);
               var5_int++;
               this.field_b = this.field_b + var7;
               param1 = param1 - 8L;
@@ -84,7 +84,7 @@ final class mj {
               this.field_b = 0;
               this.field_e = 0;
             }
-            this.field_h[this.field_e] = (byte)ie.a(255, var8Lifetime1 << -var7 + 8);
+            this.field_h[this.field_e] = (byte)ie.bitwiseAnd(255, var8Lifetime1 << -var7 + 8);
             this.field_b = this.field_b + (int)param1;
           }
           return;
@@ -116,7 +116,7 @@ final class mj {
         int var8 = 0;
         var8 = Torquing.field_u;
         try {
-          this.field_h[this.field_e] = (byte)UiWidget.a((int) this.field_h[this.field_e], param2 >>> ie.a(7, this.field_b));
+          this.field_h[this.field_e] = (byte)UiWidget.a((int) this.field_h[this.field_e], param2 >>> ie.bitwiseAnd(7, this.field_b));
           this.field_e = this.field_e + 1;
           if (this.field_e > 32) {
             while (64 > this.field_e) {
@@ -132,7 +132,7 @@ final class mj {
             this.field_e = this.field_e + 1;
             this.field_h[fieldTemp$1] = (byte) 0;
           }
-          dk.copyByteRange(this.field_c, 0, this.field_h, 32, 32);
+          ArrayBlockSupport.copyByteRange(this.field_c, 0, this.field_h, 32, 32);
           this.b((byte) 126);
           var4_int = 0;
           var5 = param0;
@@ -187,7 +187,7 @@ final class mj {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_j[var2] = vb.a(vb.a(on.a((long)this.field_h[6 + var3], 255L) << 8, vb.a(vb.a(on.a((long)this.field_h[4 + var3], 255L) << 24, vb.a(on.a(255L, (long)this.field_h[var3 + 3]) << 32, vb.a(vb.a(on.a(255L, (long)this.field_h[var3 + 1]) << 48, (long)this.field_h[var3] << 56), on.a((long)this.field_h[var3 + 2] << 40, 280375465082880L)))), on.a((long)this.field_h[var3 + 5] << 16, 16711680L))), on.a((long)this.field_h[var3 + 7], 255L));
+          this.field_j[var2] = vb.a(vb.a(on.bitwiseAnd((long)this.field_h[6 + var3], 255L) << 8, vb.a(vb.a(on.bitwiseAnd((long)this.field_h[4 + var3], 255L) << 24, vb.a(on.bitwiseAnd(255L, (long)this.field_h[var3 + 3]) << 32, vb.a(vb.a(on.bitwiseAnd(255L, (long)this.field_h[var3 + 1]) << 48, (long)this.field_h[var3] << 56), on.bitwiseAnd((long)this.field_h[var3 + 2] << 40, 280375465082880L)))), on.bitwiseAnd((long)this.field_h[var3 + 5] << 16, 16711680L))), on.bitwiseAnd((long)this.field_h[var3 + 7], 255L));
           var2++;
           var3 += 8;
         }
@@ -207,7 +207,7 @@ final class mj {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_a[var3Lifetime1] = vb.a(this.field_a[var3Lifetime1], tp.field_e[var4][ie.a((int)(this.field_g[ie.a(7, var3Lifetime1 - var4)] >>> var5), 255)]);
+              this.field_a[var3Lifetime1] = vb.a(this.field_a[var3Lifetime1], tp.field_e[var4][ie.bitwiseAnd((int)(this.field_g[ie.bitwiseAnd(7, var3Lifetime1 - var4)] >>> var5), 255)]);
               var5 -= 8;
               var4++;
             }
@@ -222,7 +222,7 @@ final class mj {
             var4Lifetime1 = var8;
             var5Lifetime1 = 56;
             while (8 > var8) {
-              this.field_a[var3Lifetime1Lifetime2] = vb.a(this.field_a[var3Lifetime1Lifetime2], tp.field_e[var8][ie.a((int)(this.field_i[ie.a(7, -var8 + var3Lifetime1Lifetime2)] >>> var5Lifetime1), 255)]);
+              this.field_a[var3Lifetime1Lifetime2] = vb.a(this.field_a[var3Lifetime1Lifetime2], tp.field_e[var8][ie.bitwiseAnd((int)(this.field_i[ie.bitwiseAnd(7, -var8 + var3Lifetime1Lifetime2)] >>> var5Lifetime1), 255)]);
               var5Lifetime1 -= 8;
               var8++;
             }

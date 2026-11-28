@@ -33,7 +33,7 @@ final class wf {
             wb.a(param1, 0);
             return;
           }
-          dl.a(param2, true, false);
+          ByteArrayPoolSupport.a(param2, true, false);
           ll.a(0, 0, param1, -115);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

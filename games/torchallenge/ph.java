@@ -22,7 +22,7 @@ final class ph implements WidgetRenderer {
         if (param0 != -40) {
           return false;
         }
-        return gi.field_d != null ? true : m.field_d;
+        return gi.field_d != null ? true : GrowableIntArray.field_d;
     }
 
     public final void paintWidget(UiComponent param0, int param1, int param2, byte param3, boolean param4) {

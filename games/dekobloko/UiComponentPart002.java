@@ -3,7 +3,7 @@
  */
 final class UiComponentPart002 extends InteractiveComponent {
     private int integerState0047;
-    private NetworkSupport006 networkSupport006State0001;
+    private GrowableIntArray networkSupport006State0001;
     static int[] integerArrayState0013;
     static String stringState0037;
     int integerState0048;
@@ -22,13 +22,13 @@ final class UiComponentPart002 extends InteractiveComponent {
 
     final int computeInteger0080(int integerArgument1, int integerArgument2) {
         if (integerArgument2 < 0 ||
-          this.networkSupport006State0001.computeInteger1021(126) <= integerArgument2) {
+          this.networkSupport006State0001.size(126) <= integerArgument2) {
           return -1;
         }
         if (integerArgument1 != -1) {
           integerArrayState0014 = (int[]) null;
         }
-        return this.networkSupport006State0001.computeInteger1027(integerArgument2, 0);
+        return this.networkSupport006State0001.get(integerArgument2, 0);
     }
 
     final static int[] computeIntegerArray0082(int integerArgument1) {
@@ -106,8 +106,8 @@ final class UiComponentPart002 extends InteractiveComponent {
             }
             integerLocal9 = 2147483647;
             integerLocal10 = -1;
-            for (integerLocal1 = 0; integerLocal1 < this.networkSupport006State0001.computeInteger1021(114); integerLocal1++) {
-              integerLocal11 = this.networkSupport006State0001.computeInteger1027(integerLocal1, 0) - integerLocal6;
+            for (integerLocal1 = 0; integerLocal1 < this.networkSupport006State0001.size(114); integerLocal1++) {
+              integerLocal11 = this.networkSupport006State0001.get(integerLocal1, 0) - integerLocal6;
               integerLocal11 = integerLocal11 * integerLocal11;
               if (integerLocal11 < integerLocal9) {
                 integerLocal9 = integerLocal11;
@@ -115,10 +115,10 @@ final class UiComponentPart002 extends InteractiveComponent {
               }
             }
             if (integerLocal10 >= 0) {
-              this.networkSupport006State0001.performAction1028(-91, integerLocal10);
+              this.networkSupport006State0001.removeAt(-91, integerLocal10);
             }
           } else {
-            this.networkSupport006State0001.performAction1024(integerLocal6, false);
+            this.networkSupport006State0001.append(integerLocal6, false);
           }
           return true;
         } catch (java.lang.RuntimeException caughtParameterLocal13) {
@@ -147,7 +147,7 @@ final class UiComponentPart002 extends InteractiveComponent {
         if (!booleanArgument1) {
           return -57;
         }
-        return this.networkSupport006State0001.computeInteger1021(-77);
+        return this.networkSupport006State0001.size(-77);
     }
 
     private UiComponentPart002() throws Throwable {

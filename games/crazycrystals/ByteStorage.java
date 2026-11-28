@@ -363,7 +363,7 @@ abstract class ByteStorage {
               }
             }
             SoftwareRasterizer.setClip(0, 0, 640, 54);
-            ip.a(224, h.field_d, 162, 56, 2, 480, 0);
+            ip.a(224, ByteArrayPoolSupport.field_d, 162, 56, 2, 480, 0);
             SoftwareRasterizer.resetClip();
             var2 = rc.field_a.size();
             stackIn_247_0 = 1;

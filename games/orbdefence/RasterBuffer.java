@@ -9,7 +9,7 @@ abstract class RasterBuffer {
     static boolean field_c;
     int field_e;
 
-    final void a(int param0) {
+    final void setAsRasterTarget(int param0) {
         if (param0 == -40) {
           SoftwareRasterizer.setRasterBuffer(this.field_d, this.field_e, this.field_f);
           return;
@@ -63,7 +63,7 @@ abstract class RasterBuffer {
         }
     }
 
-    abstract void a(int param0, int param1, java.awt.Graphics param2, boolean param3);
+    abstract void drawImage(int param0, int param1, java.awt.Graphics param2, boolean param3);
 
     public static void resetStaticState(byte param0) {
         field_b = null;
@@ -93,7 +93,7 @@ abstract class RasterBuffer {
           var10 = var8;
           var3 = var10.readUnsignedByte((byte) 90);
           var10.beginBitAccess(9471);
-          cg.field_c = mc.a(12, var10);
+          cg.field_c = MidiNoteMask.a(12, var10);
           if (param1 != -237) {
             RasterBuffer.resetStaticState((byte) -39);
           }
@@ -129,7 +129,7 @@ abstract class RasterBuffer {
         }
     }
 
-    abstract void a(int param0, int param1, int param2, java.awt.Component param3);
+    abstract void initialize(int param0, int param1, int param2, java.awt.Component param3);
 
     final static void a(byte param0, int param1, boolean param2, int param3) {
         int var4 = 0;

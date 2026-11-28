@@ -29,7 +29,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         field_u = null;
     }
 
-    private final void a(MidiPcmStream param0, int param1, int param2, int param3) {
+    private final void configureSynthesizer(MidiPcmStream param0, int param1, int param2, int param3) {
         try {
           param0.setChannelGain(param1, param3, (byte) -82);
           param0.b(param2, 0);
@@ -132,8 +132,8 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               if (var5 != 256) {
                 if (this.field_s != null &&
                   this.field_s.length >= var6) {
-                  cj.clearInts(this.field_s, 0, var6);
-                  cj.clearInts(this.field_y, 0, var6);
+                  ArrayBlockSupport.clearInts(this.field_s, 0, var6);
+                  ArrayBlockSupport.clearInts(this.field_y, 0, var6);
                 } else {
                   this.field_s = new int[var6];
                   this.field_y = new int[var6];
@@ -162,7 +162,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             }
             if (this.field_s != null &&
               this.field_s.length >= var6) {
-              cj.clearInts(this.field_s, 0, var6);
+              ArrayBlockSupport.clearInts(this.field_s, 0, var6);
             } else {
               this.field_y = new int[var6];
               this.field_s = new int[var6];
@@ -197,7 +197,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0, int param1, int param2, MusicTrack param3, int param4, boolean param5) {
+    final synchronized void switchTrack(int param0, int param1, int param2, MusicTrack param3, int param4, boolean param5) {
         boolean stackIn_19_1 = false;
         int stackIn_30_0 = 0;
         MidiPcmStream stackIn_40_0 = null;
@@ -226,7 +226,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               this.field_o = param3;
               if (param3 != null) {
                 this.field_A.playTrack(param3, param0 ^ 1917, false);
-                this.a(this.field_A, param4, param1, param0 ^ -22200);
+                this.configureSynthesizer(this.field_A, param4, param1, param0 ^ -22200);
               }
             } else {
               if (this.field_x != null) {
@@ -235,7 +235,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               this.field_x = param3;
               if (param3 != null) {
                 this.field_B.playTrack(param3, param0 ^ 1917, false);
-                this.a(this.field_B, param4, param1, param0 ^ -22200);
+                this.configureSynthesizer(this.field_B, param4, param1, param0 ^ -22200);
               }
             }
             return;
@@ -244,12 +244,12 @@ final class CrossfadingMidiPcmStream extends PcmStream {
           this.field_n = stackIn_19_1;
           if (this.field_o == param3) {
             this.field_p = param2;
-            this.a(this.field_A, param4, param1, -1);
+            this.configureSynthesizer(this.field_A, param4, param1, -1);
             return;
           }
           if (this.field_x == param3) {
             this.field_p = -param2;
-            this.a(this.field_B, param4, param1, -1);
+            this.configureSynthesizer(this.field_B, param4, param1, -1);
             return;
           }
           if (this.field_o == null) {
@@ -273,7 +273,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               stackIn_49_2 = 20938;
               stackIn_50_3 = !(param5);
               ((MidiPcmStream) (Object) stackIn_49_0).playTrack(stackIn_49_1, stackIn_49_2, stackIn_50_3);
-              this.a(this.field_B, param4, param1, -1);
+              this.configureSynthesizer(this.field_B, param4, param1, -1);
             }
             this.field_p = -param2;
           } else {
@@ -287,7 +287,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               stackIn_40_2 = param0 - 1261;
               stackIn_41_3 = !(param5);
               ((MidiPcmStream) (Object) stackIn_40_0).playTrack(stackIn_40_1, stackIn_40_2, stackIn_41_3);
-              this.a(this.field_A, param4, param1, -1);
+              this.configureSynthesizer(this.field_A, param4, param1, -1);
             }
             this.field_p = param2;
           }
@@ -309,14 +309,14 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0, int param1) {
+    final synchronized void setVolume(int param0, int param1) {
         if (param1 != 256) {
           this.nextChildStream();
         }
         this.field_t = param0;
     }
 
-    private final void a(boolean param0, MidiPcmStream param1, MidiPcmStream param2) {
+    private final void attachSynthesizers(boolean param0, MidiPcmStream param1, MidiPcmStream param2) {
         try {
           this.field_B = param2;
           this.field_v = 1048576;
@@ -443,7 +443,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         this.field_r = 0;
         this.field_t = 256;
         MidiPcmStream var1 = new MidiPcmStream();
-        this.a(true, var1, new MidiPcmStream(var1));
+        this.attachSynthesizers(true, var1, new MidiPcmStream(var1));
     }
 
     static {

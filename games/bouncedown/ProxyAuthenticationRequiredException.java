@@ -20,7 +20,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         super(param0);
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseAnd(long param0, long param1) {
         return param0 & param1;
     }
 
@@ -91,7 +91,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
             var13 = param8;
             var14 = param7;
             var15 = 8355711 & var17[var11] >> 1;
-            var10[var11] = var15 + da.b(var14 >> 17, 255) + (da.b(var12 >> 1, 16711680) + (da.b(33423384, var13) >> 9));
+            var10[var11] = var15 + da.bitwiseAnd(var14 >> 17, 255) + (da.bitwiseAnd(var12 >> 1, 16711680) + (da.bitwiseAnd(33423384, var13) >> 9));
             param1++;
             param2 = param2 + param4;
             param7 = param7 + param6;

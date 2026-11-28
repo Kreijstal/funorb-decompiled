@@ -61,7 +61,7 @@ final class ob {
                   var10 = var8 & 65280;
                   var10 = 65280 & (var10 >> 1) - (var10 >> 5);
                   var11 = (var8 & 255) >> 3;
-                  SoftwareRasterizer.field_a[var6_int] = DialogMessagePane.b(var11, DialogMessagePane.b(var10, var9 << 16));
+                  SoftwareRasterizer.field_a[var6_int] = DialogMessagePane.bitwiseOr(var11, DialogMessagePane.bitwiseOr(var10, var9 << 16));
                 }
                 var6_int++;
               }

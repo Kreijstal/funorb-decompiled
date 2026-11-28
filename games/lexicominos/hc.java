@@ -128,7 +128,7 @@ final class hc extends ui {
             } else {
               if (var9Lifetime1 == 248) {
                 sa.a((byte) 108, RichTextLayout.c(-14047));
-                wj.field_p = el.field_d;
+                MusicPatch.field_p = el.field_d;
                 ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-88);
                 fb.field_p = false;
                 stackIn_33_0 = var9Lifetime1;
@@ -170,7 +170,7 @@ final class hc extends ui {
                 MouseWheelInput.a(var9_ref_String, -11971, RichTextLayout.c(-14047));
               }
             } else {
-              wj.field_p = ig.field_a.readString(false);
+              MusicPatch.field_p = ig.field_a.readString(false);
             }
             ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-85);
             fb.field_p = false;
@@ -180,9 +180,9 @@ final class hc extends ui {
           if (null == DelegatingCanvas.field_b) {
             if (fb.field_p) {
               if (vl.b(-116) <= 30000L) {
-                wj.field_p = sa.field_h;
+                MusicPatch.field_p = sa.field_h;
               } else {
-                wj.field_p = nk.field_t;
+                MusicPatch.field_p = nk.field_t;
               }
               fb.field_p = false;
               stackIn_65_0 = 249;

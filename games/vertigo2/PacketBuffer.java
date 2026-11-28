@@ -760,7 +760,7 @@ class PacketBuffer extends IntrusiveNode {
 
     PacketBuffer(int param0) {
         this.position = 0;
-        this.payload = vc.a(param0, (byte) -69);
+        this.payload = ByteArrayPoolSupport.acquireByteArray(param0, (byte) -69);
     }
 
     final void patchByteLength(byte param0, int param1) {

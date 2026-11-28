@@ -57,7 +57,7 @@ final class bq extends mg {
           }
           try {
             var4 = param0.getGraphics();
-            dk.field_o.drawImage(var4, param1, (byte) 126, param2);
+            MusicPatch.field_o.drawImage(var4, param1, (byte) 126, param2);
             var4.dispose();
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

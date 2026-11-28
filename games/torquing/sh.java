@@ -31,7 +31,7 @@ final class sh {
             stackIn_11_0 = 3;
             return stackIn_11_0;
           }
-          if (Model.field_o == mg.field_b) {
+          if (Model.field_o == ByteArrayPoolSupport.field_b) {
             stackIn_15_0 = 1;
             return stackIn_15_0;
           }
@@ -39,7 +39,7 @@ final class sh {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }
-          if (bh.field_a != mg.field_b) {
+          if (bh.field_a != ByteArrayPoolSupport.field_b) {
             return -1;
           }
           stackIn_22_0 = 2;

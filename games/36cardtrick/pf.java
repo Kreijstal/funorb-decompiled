@@ -55,7 +55,7 @@ final class pf extends IntrusiveNode {
           var5 = EmailFormatValidator.field_k[var2];
           var6 = new int[var4];
           for (var7 = 0; var7 < var4; var7++) {
-            var6[var7] = ImageProducerRasterBuffer.field_i[bc.a((int) var5[var7], 255)];
+            var6[var7] = ImageProducerRasterBuffer.field_i[bc.bitwiseAnd((int) var5[var7], 255)];
           }
           var1[var2] = new RgbSprite(ConfirmedEmailAvailabilityValidator.field_l, FrameTimer.field_a, kb.field_c[var2], FullscreenNoticeType.field_b[var2], NetworkArchiveRequest.field_q[var2], hb.field_a[var2], var6);
         }

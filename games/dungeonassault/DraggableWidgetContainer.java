@@ -224,7 +224,7 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
           if (param0 != 0) {
             field_F = (IntrusiveDeque) null;
           }
-          if (kk.a(param3, 1, param1, param2)) {
+          if (MusicPatch.a(param3, 1, param1, param2)) {
             return fo.a(0);
           }
           return null;

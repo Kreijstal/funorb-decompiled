@@ -6,7 +6,7 @@ final class jh {
     static String field_a;
     static boolean[][] field_b;
 
-    static int a(int param0, int param1) {
+    static int bitwiseAnd(int param0, int param1) {
         return param0 & param1;
     }
 

@@ -47,7 +47,7 @@ abstract class SpriteGeometry extends DualLinkNode {
             var5 = var9;
             var6 = param4;
             var7 = param2;
-            var9[var6] = var7 + (ce.a(var9[var6], 16711422) >> 1);
+            var9[var6] = var7 + (ce.bitwiseAnd(var9[var6], 16711422) >> 1);
             param4++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

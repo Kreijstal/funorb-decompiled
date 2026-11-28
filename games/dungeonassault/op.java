@@ -122,7 +122,7 @@ final class op {
                 var11_ref_StringLifetime4 = "";
               }
               ac.field_B.writeString(var11_ref_StringLifetime4, (byte) -20);
-              of.a(ac.field_B, kd.field_d, om.field_c, (byte) -120, ta.field_c);
+              MusicPatchEnvelope.a(ac.field_B, kd.field_d, om.field_c, (byte) -120, ta.field_c);
               ac.field_B.backpatchShortLength(-var10 + ac.field_B.position, 1);
             } else {
               ta.field_c.position = 0;
@@ -147,7 +147,7 @@ final class op {
               ac.field_B.writeByte(6, 16);
               ac.field_B.position = ac.field_B.position + 1;
               var9 = ac.field_B.position;
-              of.a(ac.field_B, kd.field_d, om.field_c, (byte) -116, ta.field_c);
+              MusicPatchEnvelope.a(ac.field_B, kd.field_d, om.field_c, (byte) -116, ta.field_c);
               ac.field_B.backpatchByteLength(ac.field_B.position - var9, -1);
             }
             op.a(0, -1);

@@ -202,7 +202,7 @@ class PacketBuffer extends IntrusiveNode {
           var9 = TorChallenge.field_F ? 1 : 0;
           try {
             if (qf.field_a == null &&
-              !s.a(param5, param1)) {
+              !MidiNoteMask.a(param5, param1)) {
               stackIn_5_0 = -1;
               return stackIn_5_0;
             }
@@ -950,7 +950,7 @@ class PacketBuffer extends IntrusiveNode {
 
     PacketBuffer(int param0) {
         this.position = 0;
-        this.payload = LevelDecoder.a(param0, -101);
+        this.payload = LevelDecoder.acquireByteArray(param0, -101);
     }
 
     final void patchShortLength(int param0, byte param1) {

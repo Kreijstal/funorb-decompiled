@@ -549,15 +549,15 @@ final class lm extends TextureOperator {
           if (var10 <= 0) {
             if (param6 + param5 <= StripedProgressWidget.field_M) {
               for (var11 = 0; var11 < param0; var11++) {
-                qq.a(param4[param3 + var11], param6, param5, var8_int);
+                ArrayBlockSupport.fillInts(param4[param3 + var11], param6, param5, var8_int);
               }
               return;
             }
             var11Lifetime2 = -param6 + StripedProgressWidget.field_M;
             for (var12 = 0; var12 < param0; var12++) {
               var13 = param4[param3 + var12];
-              qq.a(var13, param6, var11Lifetime2, var8_int);
-              qq.a(var13, 0, param5 - var11Lifetime2, var8_int);
+              ArrayBlockSupport.fillInts(var13, param6, var11Lifetime2, var8_int);
+              ArrayBlockSupport.fillInts(var13, 0, param5 - var11Lifetime2, var8_int);
             }
             return;
           }
@@ -578,16 +578,16 @@ final class lm extends TextureOperator {
                 var19 = param0 - var17 - 1;
                 if (var19 >= var14) {
                   for (var20 = 0; var20 < var13_int; var20++) {
-                    dupTemp$1 = b.a(rm.field_z, param6 + param5 - (var20 + 1));
+                    dupTemp$1 = b.bitwiseAnd(rm.field_z, param6 + param5 - (var20 + 1));
                     var18[dupTemp$1] = var8_int * var20 / var13_int;
-                    var18[b.a(rm.field_z, param6 + var20)] = var8_int * var20 / var13_int;
+                    var18[b.bitwiseAnd(rm.field_z, param6 + var20)] = var8_int * var20 / var13_int;
                   }
                   if (StripedProgressWidget.field_M >= var15 + var16) {
-                    qq.a(var18, var15, var16, var8_int);
+                    ArrayBlockSupport.fillInts(var18, var15, var16, var8_int);
                   } else {
                     var20 = StripedProgressWidget.field_M - var15;
-                    qq.a(var18, var15, var20, var8_int);
-                    qq.a(var18, 0, var16 - var20, var8_int);
+                    ArrayBlockSupport.fillInts(var18, var15, var20, var8_int);
+                    ArrayBlockSupport.fillInts(var18, 0, var16 - var20, var8_int);
                   }
                   decompiledFrameRemainder0 = false;
                 }
@@ -596,17 +596,17 @@ final class lm extends TextureOperator {
                   if (this.field_z == 0) {
                     for (var21 = 0; var21 < var13_int; var21++) {
                       var22 = var8_int * var21 / var13_int;
-                      dupTemp$0 = b.a(-1 + (-var21 + (param5 + param6)), rm.field_z);
+                      dupTemp$0 = b.bitwiseAnd(-1 + (-var21 + (param5 + param6)), rm.field_z);
                       var18[dupTemp$0] = var22 * var20 >> 12;
-                      var18[b.a(var21 + param6, rm.field_z)] = var22 * var20 >> 12;
+                      var18[b.bitwiseAnd(var21 + param6, rm.field_z)] = var22 * var20 >> 12;
                     }
                   } else {
                     for (var21 = 0; var21 < var13_int; var21++) {
                       var22 = var8_int * var21 / var13_int;
                       stackIn_46_0 = var18;
-                      stackIn_46_1 = b.a(var21 + param6, rm.field_z);
+                      stackIn_46_1 = b.bitwiseAnd(var21 + param6, rm.field_z);
                       stackIn_46_2 = var18;
-                      stackIn_46_3 = b.a(rm.field_z, -1 + (-var21 + (param5 + param6)));
+                      stackIn_46_3 = b.bitwiseAnd(rm.field_z, -1 + (-var21 + (param5 + param6)));
                       if (var22 >= var20) {
                         stackIn_47_4 = var20;
                       } else {
@@ -618,10 +618,10 @@ final class lm extends TextureOperator {
                   }
                   if (var15 + var16 > StripedProgressWidget.field_M) {
                     var21 = -var15 + StripedProgressWidget.field_M;
-                    qq.a(var18, var15, var21, var20);
-                    qq.a(var18, 0, -var21 + var16, var20);
+                    ArrayBlockSupport.fillInts(var18, var15, var21, var20);
+                    ArrayBlockSupport.fillInts(var18, 0, -var21 + var16, var20);
                   } else {
-                    qq.a(var18, var15, var16, var20);
+                    ArrayBlockSupport.fillInts(var18, var15, var16, var20);
                   }
                 }
               } else {
@@ -629,17 +629,17 @@ final class lm extends TextureOperator {
                 if (this.field_z == 0) {
                   for (var20 = 0; var13_int > var20; var20++) {
                     var21 = var8_int * var20 / var13_int;
-                    dupTemp$2 = b.a(-1 + (-var20 + (param5 + param6)), rm.field_z);
+                    dupTemp$2 = b.bitwiseAnd(-1 + (-var20 + (param5 + param6)), rm.field_z);
                     var18[dupTemp$2] = var19 * var21 >> 12;
-                    var18[b.a(param6 + var20, rm.field_z)] = var19 * var21 >> 12;
+                    var18[b.bitwiseAnd(param6 + var20, rm.field_z)] = var19 * var21 >> 12;
                   }
                 } else {
                   for (var20 = 0; var20 < var13_int; var20++) {
                     var21 = var8_int * var20 / var13_int;
                     stackIn_31_0 = var18;
-                    stackIn_31_1 = b.a(rm.field_z, param6 + var20);
+                    stackIn_31_1 = b.bitwiseAnd(rm.field_z, param6 + var20);
                     stackIn_31_2 = var18;
-                    stackIn_31_3 = b.a(-1 + (param5 + (param6 - var20)), rm.field_z);
+                    stackIn_31_3 = b.bitwiseAnd(-1 + (param5 + (param6 - var20)), rm.field_z);
                     if (var19 <= var21) {
                       stackIn_32_4 = var19;
                     } else {
@@ -650,11 +650,11 @@ final class lm extends TextureOperator {
                   }
                 }
                 if (StripedProgressWidget.field_M >= var16 + var15) {
-                  qq.a(var18, var15, var16, var19);
+                  ArrayBlockSupport.fillInts(var18, var15, var16, var19);
                 } else {
                   var20 = StripedProgressWidget.field_M - var15;
-                  qq.a(var18, var15, var20, var19);
-                  qq.a(var18, 0, -var20 + var16, var19);
+                  ArrayBlockSupport.fillInts(var18, var15, var20, var19);
+                  ArrayBlockSupport.fillInts(var18, 0, -var20 + var16, var19);
                 }
               }
             }

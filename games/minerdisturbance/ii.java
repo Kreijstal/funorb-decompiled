@@ -35,7 +35,7 @@ final class ii {
 
     final static String b(byte param0) {
         if (ic.field_l == AwtRasterBuffer.field_e) {
-          return qf.field_r;
+          return MidiNoteMask.field_r;
         }
         int var1 = -48 / ((param0 - 15) / 47);
         return ch.field_g;

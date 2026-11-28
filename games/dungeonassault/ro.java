@@ -392,7 +392,7 @@ final class ro extends kl {
         int[] var10 = new int[64];
         int[] var2 = var10;
         for (var3_int = 0; var3_int < 64; var3_int++) {
-          var10[var3_int] = mp.a(-2147483648, 1579032 + var3_int * 65793);
+          var10[var3_int] = mp.bitwiseOr(-2147483648, 1579032 + var3_int * 65793);
         }
         RgbSprite var3 = te.a(this.field_a - 32, this.field_i - 28, var10, 16, 8, 0.125);
         int[] var4 = te.b(this.field_a - 32, -28 + this.field_i, 0.125);
@@ -669,7 +669,7 @@ final class ro extends kl {
                       var11 = StandardContentDialog.a(new String[]{var10.toUpperCase()}, rp.field_a, 30496);
                       var5 = var11;
                       this.a(true, 16711680, sm.field_e + "<br><br>" + var11);
-                      this.a(lp.field_n, 8421504, -103);
+                      this.a(MusicPatchNode.field_n, 8421504, -103);
                       this.d((byte) -88);
                       return;
                     }
@@ -681,7 +681,7 @@ final class ro extends kl {
                   }
                 }
                 this.a(true, 16711680, sm.field_e + "<br><br>" + var5);
-                this.a(lp.field_n, 8421504, -103);
+                this.a(MusicPatchNode.field_n, 8421504, -103);
                 this.d((byte) -88);
                 return;
               }
@@ -743,7 +743,7 @@ final class ro extends kl {
               var16 = var12;
               var16 = var12;
               this.a(true, 16711680, sm.field_e + "<br><br>" + var12);
-              this.a(lp.field_n, 8421504, -103);
+              this.a(MusicPatchNode.field_n, 8421504, -103);
               this.d((byte) -88);
               return;
             }
@@ -752,7 +752,7 @@ final class ro extends kl {
               var16 = var13;
               var16 = var13;
               this.a(true, 16711680, sm.field_e + "<br><br>" + var13);
-              this.a(lp.field_n, 8421504, -103);
+              this.a(MusicPatchNode.field_n, 8421504, -103);
               this.d((byte) -88);
               return;
             }
@@ -762,7 +762,7 @@ final class ro extends kl {
               if (var7Lifetime1 >= 4) {
                 var15 = StandardContentDialog.a(new String[]{((String) (var14)).toUpperCase()}, rp.field_a, 30496);
                 this.a(true, 16711680, sm.field_e + "<br><br>" + var15);
-                this.a(lp.field_n, 8421504, -103);
+                this.a(MusicPatchNode.field_n, 8421504, -103);
                 this.d((byte) -88);
                 return;
               }
@@ -775,7 +775,7 @@ final class ro extends kl {
             var16 = this.field_p.field_Y.field_A[var7Lifetime1].field_n.field_F;
             var17 = StandardContentDialog.a(new String[]{var16.toUpperCase()}, rp.field_a, 30496);
             this.a(true, 16711680, sm.field_e + "<br><br>" + var17);
-            this.a(lp.field_n, 8421504, -103);
+            this.a(MusicPatchNode.field_n, 8421504, -103);
             this.d((byte) -88);
             return;
           }

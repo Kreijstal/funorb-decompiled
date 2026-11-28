@@ -44,7 +44,7 @@ final class nd {
               var3_int = 1;
               hh.field_c = false;
             }
-            hc.a((byte) -96, var3_int != 0, tj.a(-112), IntrusiveNode.a(false), ModalDialogHost.field_H);
+            hc.a((byte) -96, var3_int != 0, GrowableIntArray.a(-112), IntrusiveNode.a(false), ModalDialogHost.field_H);
           } else {
             if (AccountRegistrationPanel.l(-28)) {
               if (TextFieldValidator.field_k == 0) {
@@ -106,9 +106,9 @@ final class nd {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_c[0][var0] = ml.a(ml.a(var4 << 8, ml.a(var8 << 16, ml.a(ml.a(var2 << 32, ml.a(var6 << 40, ml.a(var2 << 48, var2 << 56))), var10 << 24))), var12);
+            field_c[0][var0] = ml.bitwiseOr(ml.bitwiseOr(var4 << 8, ml.bitwiseOr(var8 << 16, ml.bitwiseOr(ml.bitwiseOr(var2 << 32, ml.bitwiseOr(var6 << 40, ml.bitwiseOr(var2 << 48, var2 << 56))), var10 << 24))), var12);
             for (var14 = 1; var14 < 8; var14++) {
-                field_c[var14][var0] = ml.a(field_c[var14 - 1][var0] >>> 8, field_c[-1 + var14][var0] << 56);
+                field_c[var14][var0] = ml.bitwiseOr(field_c[var14 - 1][var0] >>> 8, field_c[-1 + var14][var0] << 56);
             }
             var0++;
         }
@@ -117,7 +117,7 @@ final class nd {
         var0 = var15;
         while (var15 <= 10) {
             var1 = (var15 - 1) * 8;
-            field_d[var15] = j.a(j.a(bm.a(field_c[6][6 + var1], 65280L), j.a(bm.a(field_c[5][var1 + 5], 16711680L), j.a(bm.a(field_c[4][4 + var1], 4278190080L), j.a(bm.a(1095216660480L, field_c[3][var1 + 3]), j.a(bm.a(field_c[2][var1 + 2], 280375465082880L), j.a(bm.a(field_c[0][var1], -72057594037927936L), bm.a(field_c[1][1 + var1], 71776119061217280L))))))), bm.a(field_c[7][var1 + 7], 255L));
+            field_d[var15] = j.bitwiseXor(j.bitwiseXor(bm.bitwiseAnd(field_c[6][6 + var1], 65280L), j.bitwiseXor(bm.bitwiseAnd(field_c[5][var1 + 5], 16711680L), j.bitwiseXor(bm.bitwiseAnd(field_c[4][4 + var1], 4278190080L), j.bitwiseXor(bm.bitwiseAnd(1095216660480L, field_c[3][var1 + 3]), j.bitwiseXor(bm.bitwiseAnd(field_c[2][var1 + 2], 280375465082880L), j.bitwiseXor(bm.bitwiseAnd(field_c[0][var1], -72057594037927936L), bm.bitwiseAnd(field_c[1][1 + var1], 71776119061217280L))))))), bm.bitwiseAnd(field_c[7][var1 + 7], 255L));
             var15++;
         }
         field_f = "TURBO BLAST";

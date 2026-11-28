@@ -346,7 +346,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         String var2 = Vertigo2.a(new String[]{this.getLinkOpenMarkup(23559), this.getLinkCloseMarkup(10000536)}, GzipDecompressor.field_b, -125);
         int var3 = 20;
         var3 = var3 + this.addLabeledField(le.field_c, 48, this.field_F, 170, var3);
-        var3 = var3 + (5 + this.addLabeledFieldWithValidationMessage(27557, var3, 20, this.field_L, "", 170, re.field_f));
+        var3 = var3 + (5 + this.addLabeledFieldWithValidationMessage(27557, var3, 20, this.field_L, "", 170, GrowableIntArray.field_f));
         var3 = var3 + this.addLabeledField(uc.field_c, 125, this.field_U, 170, var3);
         var3 = var3 + (5 + this.addLabeledFieldWithDefaultValidationMessage(ag.field_c, this.field_Q, var3, ln.field_a, 0, 170));
         var3 = var3 + (this.addLabeledFieldWithDefaultValidationMessage(LevelTile.field_m, this.field_H, var3, GameShell.field_q, 0, 170) + 5);

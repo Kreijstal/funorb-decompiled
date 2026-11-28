@@ -210,9 +210,9 @@ final class bl extends l {
               throw new IllegalStateException();
             }
             jo.field_g = new String[var4];
-            qq.a(MovingLevelTile.field_w, 0, jo.field_g, 0, var4);
+            ArrayBlockSupport.copyObjectRange(MovingLevelTile.field_w, 0, jo.field_g, 0, var4);
             field_z = new String[var3_int - var4 - 1];
-            qq.a(MovingLevelTile.field_w, 1 + var4, field_z, 0, -1 - var4 + var3_int);
+            ArrayBlockSupport.copyObjectRange(MovingLevelTile.field_w, 1 + var4, field_z, 0, -1 - var4 + var3_int);
             var3_int = dc.a(bc.field_c, Vertigo2.a(new String[]{"<br><%0><br>"}, TextLayout.field_f, -113), (byte) 102, MovingLevelTile.field_w, mf.field_c);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
@@ -226,9 +226,9 @@ final class bl extends l {
               throw new IllegalStateException();
             }
             rp.field_e = new String[var4];
-            qq.a(MovingLevelTile.field_w, 0, rp.field_e, 0, var4);
+            ArrayBlockSupport.copyObjectRange(MovingLevelTile.field_w, 0, rp.field_e, 0, var4);
             ba.field_b = new String[-1 - var4 + var3_int];
-            qq.a(MovingLevelTile.field_w, var4 + 1, ba.field_b, 0, -var4 + var3_int - 1);
+            ArrayBlockSupport.copyObjectRange(MovingLevelTile.field_w, var4 + 1, ba.field_b, 0, -var4 + var3_int - 1);
             if (jo.field_g.length >= rp.field_e.length) {
               stackIn_29_0 = jo.field_g.length;
             } else {
@@ -316,7 +316,7 @@ final class bl extends l {
               }
             }
           }
-          jp.field_o = ve.field_d.itemCount * (qc.field_z + al.field_z << 1);
+          jp.field_o = ve.field_d.itemCount * (qc.field_z + MusicPatch.field_z << 1);
           sg.field_d = -(var3_intLifetime1 >> 1) + vm.field_c;
           c.field_e = -(var3_intLifetime1 >> 1) + var3_intLifetime1 + vm.field_c;
           for (var4Lifetime2 = 0; var4Lifetime2 < mn.field_q.length; var4Lifetime2++) {
@@ -339,13 +339,13 @@ final class bl extends l {
             } else {
               var7Lifetime2 = uc.a(mn.field_q[var4Lifetime3], true, false);
               var8Lifetime1 = -(var7Lifetime2 >> 1) + vm.field_c;
-              var5Lifetime3 = var5Lifetime3 + al.field_z;
+              var5Lifetime3 = var5Lifetime3 + MusicPatch.field_z;
               vi.field_C[var4Lifetime3] = new int[4];
-              vi.field_C[var4Lifetime3][0] = -gl.field_l + var8Lifetime1;
+              vi.field_C[var4Lifetime3][0] = -MusicPatchEnvelope.field_l + var8Lifetime1;
               vi.field_C[var4Lifetime3][1] = var5Lifetime3;
-              vi.field_C[var4Lifetime3][2] = (gl.field_l << 1) + var7Lifetime2;
+              vi.field_C[var4Lifetime3][2] = (MusicPatchEnvelope.field_l << 1) + var7Lifetime2;
               vi.field_C[var4Lifetime3][3] = (qc.field_z << 1) + GameShell.field_z;
-              var5Lifetime3 = var5Lifetime3 + (GameShell.field_z + (qc.field_z << 1) + al.field_z);
+              var5Lifetime3 = var5Lifetime3 + (GameShell.field_z + (qc.field_z << 1) + MusicPatch.field_z);
             }
             var4Lifetime3++;
           }

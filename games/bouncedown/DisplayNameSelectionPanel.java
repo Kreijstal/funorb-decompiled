@@ -45,7 +45,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         ((AccountNameAvailabilityValidator) (this.field_E.getFieldValidator(true))).invalidateCheckedName((byte) -115);
     }
 
-    private final int a(int param0, String param1, int param2, String param3, int param4, UiWidget param5) {
+    private final int addLabeledFieldWithDefaultValidationMessage(int param0, String param1, int param2, String param3, int param4, UiWidget param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
@@ -59,7 +59,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         RuntimeException decompiledCaughtException = null;
         try {
           var7_int = -116 % ((14 - param0) / 43);
-          stackIn_1_0 = this.a(param5, param3, 3019, param2, param4, 35, param1);
+          stackIn_1_0 = this.addLabeledFieldWithValidationMessage(param5, param3, 3019, param2, param4, 35, param1);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -197,7 +197,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         var2.setBounds(50, 80, 270, 20, var3);
         var3 += 50;
         this.addChild(var2, true);
-        var3 = var3 + (5 + this.a(74, Platform.field_i, 170, pe.field_b, var3, this.field_E));
+        var3 = var3 + (5 + this.addLabeledFieldWithDefaultValidationMessage(74, Platform.field_i, 170, pe.field_b, var3, this.field_E));
         this.field_z.setBounds(40, 80, var5, 496 - var5 >> 1, var3);
         this.field_D.setBounds(40, 80, 60, 3 + var4, 15 + var3);
         this.field_D.field_n = (WidgetEventListener) (this);
@@ -244,7 +244,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         }
     }
 
-    private final int a(UiWidget param0, String param1, int param2, int param3, int param4, int param5, String param6) {
+    private final int addLabeledFieldWithValidationMessage(UiWidget param0, String param1, int param2, int param3, int param4, int param5, String param6) {
         RuntimeException var8 = null;
         ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;

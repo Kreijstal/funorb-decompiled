@@ -24,7 +24,7 @@ final class AccountRequestState {
             return stackIn_2_0;
           }
           if (LoginPanel.a(-117, param0, param2, param1)) {
-            stackIn_7_0 = tj.c(117);
+            stackIn_7_0 = GrowableIntArray.c(117);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
@@ -553,7 +553,7 @@ final class AccountRequestState {
           }
           var2Lifetime58 = jk.a(1, "beamblastname");
           if (null != var2Lifetime58) {
-            q.field_c = ProxyAuthenticationRequiredException.a(var2Lifetime58, -12465);
+            ByteArrayPoolSupport.field_c = ProxyAuthenticationRequiredException.a(var2Lifetime58, -12465);
           }
           var2Lifetime59 = jk.a(1, "iceshotname");
           if (var2Lifetime59 != null) {

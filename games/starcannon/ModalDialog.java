@@ -152,7 +152,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
             var5 = var9;
             var6 = param2;
             var7 = param3;
-            var9[var6] = w.a(var9[var6] >> 1, 8355711) + var7;
+            var9[var6] = w.bitwiseAnd(var9[var6] >> 1, 8355711) + var7;
             param2++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -22,22 +22,22 @@ final class kc extends RuntimeException {
           }
           return true;
         }
-        if (pl.field_k) {
-          pl.field_k = ln.field_a.field_r[param0];
+        if (MusicPatchEnvelope.field_k) {
+          MusicPatchEnvelope.field_k = ln.field_a.field_r[param0];
           var2 = -127 / ((param1 + 72) / 38);
           ln.field_a.field_e[param0] = true;
           ln.field_a.field_f[param0] = 2;
           return false;
         }
         if (!ln.field_a.field_r[param0]) {
-          pl.field_k = ln.field_a.field_r[param0];
+          MusicPatchEnvelope.field_k = ln.field_a.field_r[param0];
           var2Lifetime1 = -127 / ((param1 + 72) / 38);
           ln.field_a.field_e[param0] = true;
           ln.field_a.field_f[param0] = 2;
           return false;
         }
         if (ResizableModalDialog.field_Z) {
-          pl.field_k = ln.field_a.field_r[param0];
+          MusicPatchEnvelope.field_k = ln.field_a.field_r[param0];
           var2Lifetime2 = -127 / ((param1 + 72) / 38);
           ln.field_a.field_e[param0] = true;
           ln.field_a.field_f[param0] = 2;

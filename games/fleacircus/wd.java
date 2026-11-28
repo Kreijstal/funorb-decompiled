@@ -85,7 +85,7 @@ final class wd {
           if (param4) {
             var7 = var7 | 8;
           }
-          if (wc.field_p != null) {
+          if (MusicPatch.field_p != null) {
             var7 = var7 | 16;
           }
           ud.field_b.writeByte(-11, var7);
@@ -94,10 +94,10 @@ final class wd {
             var8 = "";
           }
           ud.field_b.writeString(116, var8);
-          if (null != wc.field_p) {
-            ud.field_b.writePrefixedString(wc.field_p, (byte) -87);
+          if (null != MusicPatch.field_p) {
+            ud.field_b.writePrefixedString(MusicPatch.field_p, (byte) -87);
           }
-          cg.a(fj.field_c, -111, sd.field_i, ud.field_b, de.field_k);
+          cg.a(fj.field_c, -111, sd.field_i, ud.field_b, MusicPatchEnvelope.field_k);
           ud.field_b.backpatchShortLength((byte) 119, -var6 + ud.field_b.position);
           SingleChildWidgetContainer.b((byte) 41, -1);
           return;

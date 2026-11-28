@@ -139,7 +139,7 @@ final class NetworkSupport007 extends DualNode {
                   integerArrayLocal1 = new int[mixedSupport106Local11.integerState0672];
                   this.integerArrayArrayState0016[integerLocal9] = integerArrayLocal1;
                   for (integerLocal2 = 0; integerLocal2 < mixedSupport106Local11.integerState0672; integerLocal2++) {
-                    this.integerArrayArrayState0016[integerLocal9][integerLocal2] = packetBufferArgument3.readUnsignedShort(MixedSupport106.computeInteger1387(integerArgument2, 2677));
+                    this.integerArrayArrayState0016[integerLocal9][integerLocal2] = packetBufferArgument3.readUnsignedShort(MixedSupport106.bitwiseXor(integerArgument2, 2677));
                   }
                 }
               }

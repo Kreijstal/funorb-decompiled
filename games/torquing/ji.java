@@ -143,9 +143,9 @@ final class ji {
           var20 = var30;
           var12 = var20;
           var5 = var12;
-          dk.a(param0.field_M, 0, var28, 0, param0.field_f);
-          dk.a(param0.field_B, 0, var29, 0, param0.field_f);
-          dk.a(param0.field_E, 0, var30, 0, param0.field_f);
+          ArrayBlockSupport.copyIntRange(param0.field_M, 0, var28, 0, param0.field_f);
+          ArrayBlockSupport.copyIntRange(param0.field_B, 0, var29, 0, param0.field_f);
+          ArrayBlockSupport.copyIntRange(param0.field_E, 0, var30, 0, param0.field_f);
           param0.field_B = var11;
           param0.field_E = var12;
           param0.field_f = param0.field_f + 1;
@@ -163,18 +163,18 @@ final class ji {
           var33 = new int[var3];
           var23 = var33;
           var6 = var23;
-          dk.a(param0.faceVertexA, 0, var31, 0, var2_intLifetime1);
+          ArrayBlockSupport.copyIntRange(param0.faceVertexA, 0, var31, 0, var2_intLifetime1);
           var37 = new short[var3];
           var27 = var37;
           var7 = var27;
-          dk.a(param0.faceVertexB, 0, var32, 0, var2_intLifetime1);
-          dk.a(param0.faceVertexC, 0, var33, 0, var2_intLifetime1);
+          ArrayBlockSupport.copyIntRange(param0.faceVertexB, 0, var32, 0, var2_intLifetime1);
+          ArrayBlockSupport.copyIntRange(param0.faceVertexC, 0, var33, 0, var2_intLifetime1);
           if (null != param0.field_j) {
             var34 = new byte[var3];
             var24 = var34;
             var15 = var24;
             var8 = var15;
-            dk.copyByteRange(param0.field_j, 0, var34, 0, var2_intLifetime1);
+            ArrayBlockSupport.copyByteRange(param0.field_j, 0, var34, 0, var2_intLifetime1);
             param0.field_j = var15;
           }
           if (param0.field_D != null) {
@@ -182,7 +182,7 @@ final class ji {
             var25 = var35;
             var16 = var25;
             var8Lifetime1 = var16;
-            dk.copyByteRange(param0.field_D, 0, var35, 0, var2_intLifetime1);
+            ArrayBlockSupport.copyByteRange(param0.field_D, 0, var35, 0, var2_intLifetime1);
             param0.field_D = var16;
           }
           if (param0.field_A == null) {
@@ -195,10 +195,10 @@ final class ji {
             var36 = new short[var3];
             var26 = var36;
             var17 = var26;
-            dk.a(param0.field_A, 0, var36, 0, var2_intLifetime1);
+            ArrayBlockSupport.a(param0.field_A, 0, var36, 0, var2_intLifetime1);
             param0.field_A = var17;
           }
-          dk.a(param0.field_m, 0, var37, 0, var2_intLifetime1);
+          ArrayBlockSupport.a(param0.field_m, 0, var37, 0, var2_intLifetime1);
           param0.faceVertexC = var6;
           param0.faceVertexA = var4Lifetime1;
           param0.field_m = var7;

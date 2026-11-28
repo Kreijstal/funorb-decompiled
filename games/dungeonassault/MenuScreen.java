@@ -32,7 +32,7 @@ final class MenuScreen extends DungeonAssaultScreen {
         var7 = ImageProducerRasterBuffer.a(param1, this.field_B, -96);
         if (!ke.a(105, var3) &&
           this.field_B != 3) {
-          of.field_j.draw(640 - of.field_j.field_y >> 1, var6);
+          MusicPatchEnvelope.field_j.draw(640 - MusicPatchEnvelope.field_j.field_y >> 1, var6);
           var6 += 4;
         } else {
           SoftwareRasterizer.drawRectangleOutline(var4 - 4, var6 - 6, var5 + (-var4 + 8), var7 + 8, 0);
@@ -143,7 +143,7 @@ final class MenuScreen extends DungeonAssaultScreen {
                 if (this.field_B == 0) {
                   fp.field_d.a(320, 25, 1699);
                   if (DualLinkNode.field_k) {
-                    kk.field_l.drawCentred("Press CTRL-S to start a random single player debug test game", 320, 44, 16777215, 0);
+                    MusicPatch.field_l.drawCentred("Press CTRL-S to start a random single player debug test game", 320, 44, 16777215, 0);
                   }
                 }
               }
@@ -587,7 +587,7 @@ final class MenuScreen extends DungeonAssaultScreen {
         }
         var3Lifetime1 = stackIn_31_0;
         if (param0) {
-          stackIn_34_0 = bp.field_e;
+          stackIn_34_0 = GrowableIntArray.field_e;
         } else {
           stackIn_34_0 = FrameTimer.field_c;
         }
@@ -838,7 +838,7 @@ final class MenuScreen extends DungeonAssaultScreen {
           stackIn_18_0 = (9 != this.field_B) ? 0 : 1;
           var4 = stackIn_18_0;
           if (var4 != 0) {
-            stackIn_21_0 = bp.field_e;
+            stackIn_21_0 = GrowableIntArray.field_e;
           } else {
             stackIn_21_0 = FrameTimer.field_c;
           }
@@ -880,7 +880,7 @@ final class MenuScreen extends DungeonAssaultScreen {
             dd.field_E = new dd(82, 176, 0, 476, 65536, 0);
             var9Lifetime2 = 12;
           }
-          of.field_l = 0;
+          MusicPatchEnvelope.field_l = 0;
           var10 = var9Lifetime2;
           var11 = 100;
           var12 = 0;
@@ -891,8 +891,8 @@ final class MenuScreen extends DungeonAssaultScreen {
             var14.field_p = var11;
             var13 += 40;
             var10 += 40;
-            if (var13 > of.field_l) {
-              of.field_l = var13;
+            if (var13 > MusicPatchEnvelope.field_l) {
+              MusicPatchEnvelope.field_l = var13;
             }
             var14 = (AchievementIconEntry) (nj.field_f.nextBackward(4));
             var12++;
@@ -937,7 +937,7 @@ final class MenuScreen extends DungeonAssaultScreen {
         var4 = DungeonAssault.field_K;
         super.updateScreen(param0);
         if (12 == this.field_B) {
-          stackIn_5_0 = !(kk.d(0));
+          stackIn_5_0 = !(MusicPatch.d(0));
           var2 = AchievementIconEntry.updateMembershipSlides(stackIn_5_0, (byte) -20);
           if (var2 == 3) {
             if (null != RegistrationAgreementPane.field_R) {
@@ -1007,7 +1007,7 @@ final class MenuScreen extends DungeonAssaultScreen {
 
     private final void b(byte param0) {
         int discarded$0 = 0;
-        int var2 = en.a(-1, bp.field_e) ? 1 : 0;
+        int var2 = en.a(-1, GrowableIntArray.field_e) ? 1 : 0;
         String var3 = kp.field_d;
         if (param0 <= 49) {
           discarded$0 = this.a(-114, 14);

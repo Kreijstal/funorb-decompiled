@@ -191,7 +191,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                     if (var15 <= 255) {
                       var18 = SoftwareRasterizer.field_b[var8];
                       var19 = 16711935 & var15 * (var17 & 16711935) + var16 * (16711935 & var18) >> 8;
-                      SoftwareRasterizer.field_b[var8] = var19 + (EditableTextField.a(16711715, EditableTextField.a(var17, 65280) * var15 + EditableTextField.a(var18, 65280) * var16) >> 8);
+                      SoftwareRasterizer.field_b[var8] = var19 + (EditableTextField.bitwiseAnd(16711715, EditableTextField.bitwiseAnd(var17, 65280) * var15 + EditableTextField.bitwiseAnd(var18, 65280) * var16) >> 8);
                     } else {
                       SoftwareRasterizer.field_b[var8] = var17;
                     }

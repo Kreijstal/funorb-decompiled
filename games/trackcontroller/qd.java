@@ -41,7 +41,7 @@ final class qd {
         try {
           try {
             var4 = param0.getGraphics();
-            ia.field_b.a(-11, var4, param1, param2);
+            ia.field_b.drawImage(-11, var4, param1, param2);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -80,7 +80,7 @@ final class qd {
         try {
           var2_int = param0.length;
           var3 = new byte[var2_int];
-          pd.copyByteRange(param0, 0, var3, 0, var2_int);
+          ArrayBlockSupport.copyByteRange(param0, 0, var3, 0, var2_int);
           var4 = -115 % ((param1 - 2) / 52);
           stackIn_1_0 = var3;
           return stackIn_1_0;

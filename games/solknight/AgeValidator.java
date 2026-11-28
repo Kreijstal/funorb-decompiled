@@ -51,7 +51,7 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -101,7 +101,7 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -114,13 +114,13 @@ final class AgeValidator extends TextFieldValidator {
 
     final static void a(int param0, Sprite param1) {
         try {
-          fl.b((byte) 91);
+          ByteArrayPoolSupport.b((byte) 91);
           if (param0 > -91) {
             AgeValidator.e((byte) 101);
           }
           SoftwareRasterizer.setRasterBuffer(param1.field_v, param1.field_q, param1.field_r);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "cl.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "cl.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

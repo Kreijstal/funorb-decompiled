@@ -371,7 +371,7 @@ final class fi extends BoardChange {
                           var66 = var65 >>> 24;
                           var65 = 65280 & var65;
                           if (0 != var66) {
-                            param6[param12] = MassPoisonSpecial.a(128 + (var66 >> 1) << 24, dda.a(var65 * var66, 16711680) + dda.a(-16711936, var64 * var66) >> 8);
+                            param6[param12] = MassPoisonSpecial.bitwiseOr(128 + (var66 >> 1) << 24, dda.bitwiseAnd(var65 * var66, 16711680) + dda.bitwiseAnd(-16711936, var64 * var66) >> 8);
                           }
                         }
                         param12++;
@@ -496,7 +496,7 @@ final class fi extends BoardChange {
                       var64Lifetime3 = var64Lifetime3 >> 8 & 16711935;
                       var65Lifetime3 = 65280 & var65Lifetime3;
                       if (var66Lifetime3 != 0) {
-                        param6[param12] = MassPoisonSpecial.a(128 + (var66Lifetime3 >> 1) << 24, dda.a(-16711936, var64Lifetime3 * var66Lifetime3) + dda.a(var65Lifetime3 * var66Lifetime3, 16711680) >> 8);
+                        param6[param12] = MassPoisonSpecial.bitwiseOr(128 + (var66Lifetime3 >> 1) << 24, dda.bitwiseAnd(-16711936, var64Lifetime3 * var66Lifetime3) + dda.bitwiseAnd(var65Lifetime3 * var66Lifetime3, 16711680) >> 8);
                       }
                     }
                     var51Lifetime3 = var51Lifetime3 + var22Lifetime1;
@@ -622,7 +622,7 @@ final class fi extends BoardChange {
                         var66Lifetime1 = var65Lifetime1 >>> 24;
                         var65Lifetime1 = 65280 & var65Lifetime1;
                         if (var66Lifetime1 != 0) {
-                          param6[param12] = MassPoisonSpecial.a((var66Lifetime1 >> 1) + 128 << 24, dda.a(var64Lifetime1 * var66Lifetime1, -16711936) + dda.a(16711680, var65Lifetime1 * var66Lifetime1) >> 8);
+                          param6[param12] = MassPoisonSpecial.bitwiseOr((var66Lifetime1 >> 1) + 128 << 24, dda.bitwiseAnd(var64Lifetime1 * var66Lifetime1, -16711936) + dda.bitwiseAnd(16711680, var65Lifetime1 * var66Lifetime1) >> 8);
                         }
                       }
                       var51Lifetime1 = var51Lifetime1 + var22Lifetime1;
@@ -755,7 +755,7 @@ final class fi extends BoardChange {
                         var66Lifetime2 = var65Lifetime2 >>> 24;
                         var65Lifetime2 = var65Lifetime2 & 65280;
                         if (var66Lifetime2 != 0) {
-                          param6[param12] = MassPoisonSpecial.a(dda.a(var66Lifetime2 * var64Lifetime2, -16711936) + dda.a(var66Lifetime2 * var65Lifetime2, 16711680) >> 8, (var66Lifetime2 >> 1) + 128 << 24);
+                          param6[param12] = MassPoisonSpecial.bitwiseOr(dda.bitwiseAnd(var66Lifetime2 * var64Lifetime2, -16711936) + dda.bitwiseAnd(var66Lifetime2 * var65Lifetime2, 16711680) >> 8, (var66Lifetime2 >> 1) + 128 << 24);
                         }
                       }
                       var46Lifetime2++;

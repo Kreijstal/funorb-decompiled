@@ -36,7 +36,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
         try {
           GuestPlayConfirmationForm.a(cg.field_d.field_v, 3, param0 - 67, 3);
-          BufferedSocket.field_a.a(param0 ^ -101);
+          BufferedSocket.field_a.setAsRasterTarget(param0 ^ -101);
           li.field_a.drawScaledAdditive(0, 0, 640, 480, ef.field_k);
         } catch (RuntimeException runtimeException) {
           throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "em.V(" + param0 + ')');
@@ -120,7 +120,7 @@ final class PasswordValidator extends TextFieldValidator {
           if (TextFieldValidator.field_k == 11) {
             md.c(32);
           }
-          ih.a(tl.field_e, 0, q.field_b, mf.field_d);
+          ih.a(tl.field_e, 0, ByteArrayPoolSupport.field_b, mf.field_d);
           kg.a(0, (byte) -83, param0, param1);
         } catch (RuntimeException runtimeException) {
           throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "em.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

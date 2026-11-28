@@ -353,7 +353,7 @@ final class re {
                           this.field_g[0] = 125;
                           this.field_o = 0;
                           this.field_l = 40;
-                          this.field_r = fc.field_j;
+                          this.field_r = GrowableIntArray.field_j;
                           this.field_b[0] = 35;
                           this.field_g[1] = 65;
                           this.field_g[2] = 25;

@@ -141,10 +141,10 @@ final class gj {
           if (param0 == ~RandomAccessCacheFile.field_c) {
             var3_int = ga.a(0, pf.field_c, wf.field_e, aj.field_b, FullscreenNoticeType.field_c);
             var4 = 3 + var3_int;
-            dl.field_s = new int[var4];
+            MusicPatchNode.field_s = new int[var4];
             MatchingFieldValidator.field_s = new String[var4];
             for (var5 = 0; var4 > var5; var5++) {
-              dl.field_s[var5] = -1;
+              MusicPatchNode.field_s[var5] = -1;
             }
             ProgressDialog.field_db = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -152,26 +152,26 @@ final class gj {
             }
             MatchingFieldValidator.field_s[-3 + var4] = "";
             MatchingFieldValidator.field_s[var4 - 2] = cb.field_d;
-            dl.field_s[-2 + var4] = 0;
+            MusicPatchNode.field_s[-2 + var4] = 0;
             ProgressDialog.field_db[0] = 4;
-            MatchingFieldValidator.field_s[-1 + var4] = ab.field_n;
-            dl.field_s[-1 + var4] = 1;
+            MatchingFieldValidator.field_s[-1 + var4] = MusicPatchEnvelope.field_n;
+            MusicPatchNode.field_s[-1 + var4] = 1;
             ProgressDialog.field_db[1] = 5;
           } else if (RandomAccessCacheFile.field_c == 1) {
             var3_int = ga.a(0, pf.field_c, wf.field_e, aj.field_b, FullscreenNoticeType.field_c);
             var4 = 2 + var3_int;
             MatchingFieldValidator.field_s = new String[var4];
-            dl.field_s = new int[var4];
+            MusicPatchNode.field_s = new int[var4];
             for (var5 = 0; var4 > var5; var5++) {
-              dl.field_s[var5] = -1;
+              MusicPatchNode.field_s[var5] = -1;
             }
             ProgressDialog.field_db = new int[1];
             for (var5 = 0; var3_int > var5; var5++) {
               MatchingFieldValidator.field_s[var5] = wf.field_e[var5];
             }
             MatchingFieldValidator.field_s[var4 - 2] = "";
-            MatchingFieldValidator.field_s[-1 + var4] = ab.field_n;
-            dl.field_s[var4 - 1] = 0;
+            MatchingFieldValidator.field_s[-1 + var4] = MusicPatchEnvelope.field_n;
+            MusicPatchNode.field_s[var4 - 1] = 0;
             ProgressDialog.field_db[0] = 5;
           } else if (RandomAccessCacheFile.field_c != 2) {
             if (3 == RandomAccessCacheFile.field_c) {
@@ -182,33 +182,33 @@ final class gj {
               }
               var4 = var3_int + 2;
               MatchingFieldValidator.field_s = new String[var4];
-              dl.field_s = new int[var4];
+              MusicPatchNode.field_s = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                dl.field_s[var5] = -1;
+                MusicPatchNode.field_s[var5] = -1;
               }
               ProgressDialog.field_db = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
                 MatchingFieldValidator.field_s[var5] = wf.field_e[var5];
               }
               MatchingFieldValidator.field_s[-2 + var4] = "";
-              MatchingFieldValidator.field_s[-1 + var4] = ab.field_n;
-              dl.field_s[-1 + var4] = 0;
+              MatchingFieldValidator.field_s[-1 + var4] = MusicPatchEnvelope.field_n;
+              MusicPatchNode.field_s[-1 + var4] = 0;
               ProgressDialog.field_db[0] = 5;
             } else if (RandomAccessCacheFile.field_c == 4) {
               var3_int = ga.a(~param0, pf.field_c, wf.field_e, aj.field_b, uc.field_T);
               var4 = 2 + var3_int;
               MatchingFieldValidator.field_s = new String[var4];
-              dl.field_s = new int[var4];
+              MusicPatchNode.field_s = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                dl.field_s[var5] = -1;
+                MusicPatchNode.field_s[var5] = -1;
               }
               ProgressDialog.field_db = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
                 MatchingFieldValidator.field_s[var5] = wf.field_e[var5];
               }
               MatchingFieldValidator.field_s[var4 - 2] = "";
-              MatchingFieldValidator.field_s[-1 + var4] = ab.field_n;
-              dl.field_s[var4 - 1] = 0;
+              MatchingFieldValidator.field_s[-1 + var4] = MusicPatchEnvelope.field_n;
+              MusicPatchNode.field_s[var4 - 1] = 0;
               ProgressDialog.field_db[0] = 5;
             } else {
               if (RandomAccessCacheFile.field_c != 5) {
@@ -217,9 +217,9 @@ final class gj {
               var3_int = ga.a(0, pf.field_c, wf.field_e, aj.field_b, ClientException.field_d);
               var4 = 3 + var3_int;
               MatchingFieldValidator.field_s = new String[var4];
-              dl.field_s = new int[var4];
+              MusicPatchNode.field_s = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                dl.field_s[var5] = -1;
+                MusicPatchNode.field_s[var5] = -1;
               }
               ProgressDialog.field_db = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
@@ -227,10 +227,10 @@ final class gj {
               }
               MatchingFieldValidator.field_s[-3 + var4] = "";
               MatchingFieldValidator.field_s[-2 + var4] = SecondaryNodeDeque.field_g;
-              dl.field_s[-2 + var4] = 0;
+              MusicPatchNode.field_s[-2 + var4] = 0;
               ProgressDialog.field_db[0] = 3;
-              MatchingFieldValidator.field_s[-1 + var4] = ab.field_n;
-              dl.field_s[var4 - 1] = 1;
+              MatchingFieldValidator.field_s[-1 + var4] = MusicPatchEnvelope.field_n;
+              MusicPatchNode.field_s[var4 - 1] = 1;
               ProgressDialog.field_db[1] = 5;
             }
           } else {
@@ -247,9 +247,9 @@ final class gj {
               throw new IllegalStateException();
             }
             ji.field_n = new String[var4];
-            he.a(wf.field_e, 0, ji.field_n, 0, var4);
+            ArrayBlockSupport.copyObjectRange(wf.field_e, 0, ji.field_n, 0, var4);
             FrameTimer.field_c = new String[-1 + (var3_int - var4)];
-            he.a(wf.field_e, var4 + 1, FrameTimer.field_c, 0, -var4 + var3_int - 1);
+            ArrayBlockSupport.copyObjectRange(wf.field_e, var4 + 1, FrameTimer.field_c, 0, -var4 + var3_int - 1);
             var3_int = ga.a(~param0, pf.field_c, wf.field_e, aj.field_b, ni.a(new String[]{"<br><%0><br>"}, 0, BufferedSocket.field_q));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
@@ -263,9 +263,9 @@ final class gj {
               throw new IllegalStateException();
             }
             qb.field_c = new String[var4];
-            he.a(wf.field_e, 0, qb.field_c, 0, var4);
+            ArrayBlockSupport.copyObjectRange(wf.field_e, 0, qb.field_c, 0, var4);
             TextLineMetrics.field_b = new String[-1 + (-var4 + var3_int)];
-            he.a(wf.field_e, 1 + var4, TextLineMetrics.field_b, 0, -1 + (-var4 + var3_int));
+            ArrayBlockSupport.copyObjectRange(wf.field_e, 1 + var4, TextLineMetrics.field_b, 0, -1 + (-var4 + var3_int));
             if (qb.field_c.length > ji.field_n.length) {
               stackIn_29_0 = qb.field_c.length;
             } else {
@@ -280,21 +280,21 @@ final class gj {
             var6 = stackIn_32_0;
             var7 = 7 + (var5 + var6);
             MatchingFieldValidator.field_s = new String[var7];
-            dl.field_s = new int[var7];
+            MusicPatchNode.field_s = new int[var7];
             for (var8 = 0; var7 > var8; var8++) {
-              dl.field_s[var8] = -1;
+              MusicPatchNode.field_s[var8] = -1;
             }
-            dl.field_s[1] = 0;
+            MusicPatchNode.field_s[1] = 0;
             MatchingFieldValidator.field_s[0] = kl.field_c;
             ProgressDialog.field_db = new int[2];
             MatchingFieldValidator.field_s[1] = ua.field_a;
-            MatchingFieldValidator.field_s[2] = fb.field_i;
+            MatchingFieldValidator.field_s[2] = MusicPatch.field_i;
             MatchingFieldValidator.field_s[3] = ti.field_c;
             ProgressDialog.field_db[0] = 5;
             MatchingFieldValidator.field_s[4] = ValidationStatusIcon.field_T;
             ProgressDialog.field_db[1] = 2;
             MatchingFieldValidator.field_s[5] = "";
-            dl.field_s[3] = 1;
+            MusicPatchNode.field_s[3] = 1;
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
               stackIn_39_0 = MatchingFieldValidator.field_s;
               stackIn_39_1 = 6 + var8Lifetime2;
@@ -306,7 +306,7 @@ final class gj {
               stackIn_39_0[stackIn_39_1] = stackIn_40_2;
             }
             MatchingFieldValidator.field_s[6 + var5] = null;
-            dl.field_s[var5 + 6] = -2;
+            MusicPatchNode.field_s[var5 + 6] = -2;
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
               stackIn_44_0 = MatchingFieldValidator.field_s;
               stackIn_44_1 = var8Lifetime3 + 7 + var5;
@@ -325,7 +325,7 @@ final class gj {
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < MatchingFieldValidator.field_s.length; var4Lifetime1++) {
             stackIn_88_0 = -18;
-            stackIn_89_1 = !(dl.field_s[var4Lifetime1] < 0);
+            stackIn_89_1 = !(MusicPatchNode.field_s[var4Lifetime1] < 0);
             var5Lifetime1 = ki.$cfr$intArgs$a$62abead39cee(stackIn_88_0, stackIn_89_1, MatchingFieldValidator.field_s[var4Lifetime1]);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
@@ -355,7 +355,7 @@ final class gj {
           sd.field_a = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + AccountRegistrationPanel.field_ab);
           for (var4Lifetime2 = 0; MatchingFieldValidator.field_s.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_112_0 = fh.field_c;
-            if (dl.field_s[var4Lifetime2] >= 0) {
+            if (MusicPatchNode.field_s[var4Lifetime2] >= 0) {
               stackIn_113_1 = IntrusiveDeque.field_f;
             } else {
               stackIn_113_1 = ok.field_e;
@@ -367,7 +367,7 @@ final class gj {
           var4Lifetime3 = 0;
           var5Lifetime3 = FrameTimer.field_e;
           while (MatchingFieldValidator.field_s.length > var4Lifetime3) {
-            var6Lifetime1 = dl.field_s[var4Lifetime3];
+            var6Lifetime1 = MusicPatchNode.field_s[var4Lifetime3];
             if (0 > var6Lifetime1) {
               var5Lifetime3 = var5Lifetime3 + ok.field_e;
             } else {

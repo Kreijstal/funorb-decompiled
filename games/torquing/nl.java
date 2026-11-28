@@ -179,7 +179,7 @@ final class nl extends am {
         int[] var3 = new int[var1];
         Sprite var4Lifetime1;
         for (var4_int = 0; var1 > var4_int; var4_int++) {
-          var3[var4_int] = cq.field_y[ie.a(255, (int) var2[var4_int])];
+          var3[var4_int] = cq.field_y[ie.bitwiseAnd(255, (int) var2[var4_int])];
         }
         if (param0 == -8791) {
           var4 = new Sprite(GuestPlayConfirmationForm.field_E, rh.field_d, PacketBuffer.field_o[0], LabeledWidgetContainer.field_G[0], vo.field_b[0], PasswordValidator.field_o[0], var3);

@@ -273,7 +273,7 @@ class RichTextWidget extends InteractiveWidget {
               var2 = 0;
             }
           }
-          for (var3 = param0; dl.field_c.length > var3; var3++) {
+          for (var3 = param0; ByteArrayPoolSupport.field_c.length > var3; var3++) {
             var4 = LabeledWidgetContainer.field_T[var3];
             if (var4 < 0) {
               var5 = TextLineMetrics.field_b;
@@ -284,7 +284,7 @@ class RichTextWidget extends InteractiveWidget {
                 var5 = GzipDecompressor.field_c;
               }
             }
-            var6 = dl.field_c[var3];
+            var6 = ByteArrayPoolSupport.field_c[var3];
             if (2 == ea.field_a &&
               var2 == 1) {
               if (UiWidget.field_s.length > jc.field_d.length) {

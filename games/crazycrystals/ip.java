@@ -75,7 +75,7 @@ final class ip implements WidgetRenderer {
 
     final static void a(int param0, boolean param1) {
         LevelLostEntrancePhase.field_g = 0;
-        mb.field_f = h.field_b;
+        mb.field_f = ByteArrayPoolSupport.field_b;
         ue.field_a = 0;
         wn.field_b = 0;
         AwtRasterBuffer.field_f = new jh(2);

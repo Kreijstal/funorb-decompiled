@@ -55,7 +55,7 @@ final class mf {
           var3 = var10.readUnsignedByte(16383);
           var4 = -16 / ((38 - param0) / 45);
           if (0 == var2) {
-            var5_ref_nk = (nk) (qh.field_e.first(2));
+            var5_ref_nk = (nk) (GrowableIntArray.field_e.first(2));
             if (var5_ref_nk == null) {
               GameKeyHandler.a((byte) 113);
               return;
@@ -68,7 +68,7 @@ final class mf {
               var6_int = var12.length << 2;
             }
             for (var8 = 0; var6_int > var8; var8++) {
-              var7[var8 >> 2] = var7[var8 >> 2] + (var10.readUnsignedByte(16383) << RandomAccessCacheFile.a(var8 << 8, 768));
+              var7[var8 >> 2] = var7[var8 >> 2] + (var10.readUnsignedByte(16383) << RandomAccessCacheFile.bitwiseAnd(var8 << 8, 768));
             }
             var5_ref_nk.field_k = true;
             var5_ref_nk.unlink(-71);

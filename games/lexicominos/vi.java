@@ -29,7 +29,7 @@ final class vi extends IntrusiveNode {
           var4 = BufferedRandomAccessFile.field_f[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = ci.field_b[vg.a((int) var4[var6], 255)];
+            var5[var6] = ci.field_b[vg.bitwiseAnd((int) var4[var6], 255)];
           }
           var1[var2] = new RgbSprite(ProgressMessageDialog.field_fb, eh.field_b, SingleChildWidgetContainer.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var5);
         }

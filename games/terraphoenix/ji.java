@@ -109,7 +109,7 @@ final class ji extends IntrusiveNode {
             TextFieldValidator.field_l = new BitPacketBuffer(param8);
             nd.field_i = param13;
             DelegatingCanvas.field_c = param1;
-            sb.field_i = param2;
+            MidiNoteMask.field_i = param2;
             hf.field_x = param3;
             gi.field_v = param11;
             pc.field_a = param6;
@@ -208,7 +208,7 @@ final class ji extends IntrusiveNode {
           var6 = null;
           if (param0 == param1.indexOf('@')) {
             var7 = (CharSequence) ((Object) param1);
-            var4_long = qd.a(-81, var7);
+            var4_long = MusicPatch.a(-81, var7);
           } else {
             var6 = param1;
           }

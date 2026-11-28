@@ -34,7 +34,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           var1_int = MouseInputHandler.field_b[0];
           for (var2 = 1; MouseInputHandler.field_b.length > var2; var2++) {
             var3 = MouseInputHandler.field_b[var2];
-            he.a(k.field_e, var2 << 4, k.field_e, var1_int, var3);
+            ArrayBlockSupport.copyIntRange(k.field_e, var2 << 4, k.field_e, var1_int, var3);
             var1_int = var1_int + var3;
           }
           if (param0 != 2) {

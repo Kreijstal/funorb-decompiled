@@ -255,7 +255,7 @@ final class lg {
                     if (var15 <= 255) {
                       var18 = SoftwareRasterizer.field_b[var8];
                       var19 = 16711935 & var15 * (16711935 & var17) + var16 * (var18 & 16711935) >> 8;
-                      SoftwareRasterizer.field_b[var8] = (nb.a(16711772, nb.a(var17, 65280) * var15 + nb.a(65280, var18) * var16) >> 8) + var19;
+                      SoftwareRasterizer.field_b[var8] = (nb.bitwiseAnd(16711772, nb.bitwiseAnd(var17, 65280) * var15 + nb.bitwiseAnd(65280, var18) * var16) >> 8) + var19;
                     } else {
                       SoftwareRasterizer.field_b[var8] = var17;
                     }

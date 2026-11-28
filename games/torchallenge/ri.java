@@ -95,12 +95,12 @@ final class ri extends na {
         ok.field_a = null;
         PcmSample var1 = cj.field_h[10];
         if (param0 >= 122) {
-          var2 = ab.field_g[10];
+          var2 = MusicPatchEnvelope.field_g[10];
           ol.a(-118, var1, var2);
           return;
         }
         field_j = (Sprite) null;
-        var2Lifetime1 = ab.field_g[10];
+        var2Lifetime1 = MusicPatchEnvelope.field_g[10];
         ol.a(-118, var1, var2Lifetime1);
     }
 

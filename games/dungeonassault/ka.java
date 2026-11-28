@@ -12,7 +12,7 @@ final class ka {
           ka.resetStaticState((byte) 39);
         }
         nf.field_y = -1;
-        of.field_k = true;
+        MusicPatchEnvelope.field_k = true;
         ed var4 = eh.field_o;
         ed var5 = var4;
         eh.field_o.field_N = false;

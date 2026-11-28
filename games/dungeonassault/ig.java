@@ -103,7 +103,7 @@ final class ig {
           return 0;
         }
         if (dd.field_E.field_w) {
-          var1 = of.field_l + 20;
+          var1 = MusicPatchEnvelope.field_l + 20;
           var2 = var1 - 452;
           return var2 * dd.field_E.field_F / dd.field_E.field_G;
         }

@@ -61,7 +61,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var9 = param0.getParameter("cookieprefix");
               var3 = var9 + "settings";
               var4 = (String) (JavaScriptBridge.callWithoutArguments("getcookies", param0, 20511));
-              var5 = dl.a(var4, ';', -32);
+              var5 = MusicPatchNode.a(var4, ';', -32);
               for (var6 = 0; var6 < var5.length; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (0 <= var7 &&

@@ -20,13 +20,13 @@ final class to {
         var5[5] = dupTemp$1;
         if (param2 == -25974) {
           if (param4 != 0) {
-            var5[4] = ik.b(64, param4, lt.a(param2, -25976));
+            var5[4] = ik.b(64, param4, lt.bitwiseXor(param2, -25976));
           }
           return var5;
         }
         field_a = (String) null;
         if (param4 != 0) {
-          var5[4] = ik.b(64, param4, lt.a(param2, -25976));
+          var5[4] = ik.b(64, param4, lt.bitwiseXor(param2, -25976));
         }
         return var5;
     }

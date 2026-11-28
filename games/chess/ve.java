@@ -74,7 +74,7 @@ final class ve extends ci {
         try {
           jh.field_e.processPointerInput(-120, hd.field_d, AwtRasterBuffer.field_h, true);
           jh.field_e.advanceDialogs((byte) 70);
-          while (kf.d(param0 ^ -19010)) {
+          while (MusicPatch.d(param0 ^ -19010)) {
             jh.field_e.processKeyInput(d.field_Ib, 57, vg.field_a);
           }
           if (rn.field_a != -1) {

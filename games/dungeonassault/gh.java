@@ -136,16 +136,16 @@ final class gh {
                 var10 = var10 ^ 285L;
             }
             var12 = var10 ^ var2;
-            field_h[0][var0] = SecondaryNodeDequeIterator.a(var12, SecondaryNodeDequeIterator.a(SecondaryNodeDequeIterator.a(var8 << 16, SecondaryNodeDequeIterator.a(SecondaryNodeDequeIterator.a(SecondaryNodeDequeIterator.a(var6 << 40, SecondaryNodeDequeIterator.a(var2 << 48, var2 << 56)), var2 << 32), var10 << 24)), var4 << 8));
+            field_h[0][var0] = SecondaryNodeDequeIterator.bitwiseOr(var12, SecondaryNodeDequeIterator.bitwiseOr(SecondaryNodeDequeIterator.bitwiseOr(var8 << 16, SecondaryNodeDequeIterator.bitwiseOr(SecondaryNodeDequeIterator.bitwiseOr(SecondaryNodeDequeIterator.bitwiseOr(var6 << 40, SecondaryNodeDequeIterator.bitwiseOr(var2 << 48, var2 << 56)), var2 << 32), var10 << 24)), var4 << 8));
             for (var14 = 1; var14 < 8; var14++) {
-                field_h[var14][var0] = SecondaryNodeDequeIterator.a(field_h[-1 + var14][var0] >>> 8, field_h[-1 + var14][var0] << 56);
+                field_h[var14][var0] = SecondaryNodeDequeIterator.bitwiseOr(field_h[-1 + var14][var0] >>> 8, field_h[-1 + var14][var0] << 56);
             }
             var0++;
         }
         field_a[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = var0 * 8 - 8;
-            field_a[var0] = mn.a(eg.a(255L, field_h[7][var1 + 7]), mn.a(mn.a(mn.a(eg.a(4278190080L, field_h[4][var1 + 4]), mn.a(eg.a(field_h[3][3 + var1], 1095216660480L), mn.a(mn.a(eg.a(field_h[1][1 + var1], 71776119061217280L), eg.a(-72057594037927936L, field_h[0][var1])), eg.a(field_h[2][var1 + 2], 280375465082880L)))), eg.a(16711680L, field_h[5][var1 + 5])), eg.a(field_h[6][var1 + 6], 65280L)));
+            field_a[var0] = mn.bitwiseXor(eg.bitwiseAnd(255L, field_h[7][var1 + 7]), mn.bitwiseXor(mn.bitwiseXor(mn.bitwiseXor(eg.bitwiseAnd(4278190080L, field_h[4][var1 + 4]), mn.bitwiseXor(eg.bitwiseAnd(field_h[3][3 + var1], 1095216660480L), mn.bitwiseXor(mn.bitwiseXor(eg.bitwiseAnd(field_h[1][1 + var1], 71776119061217280L), eg.bitwiseAnd(-72057594037927936L, field_h[0][var1])), eg.bitwiseAnd(field_h[2][var1 + 2], 280375465082880L)))), eg.bitwiseAnd(16711680L, field_h[5][var1 + 5])), eg.bitwiseAnd(field_h[6][var1 + 6], 65280L)));
         }
         field_j = "Horns, claws, hooves, spines and a long tongue; the beastman is formed of many animals and more dangerous than all of them put together.";
     }

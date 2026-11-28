@@ -105,7 +105,7 @@ final class nf extends DualLinkNode {
         }
         if (this.field_D != null) {
           for (var2 = 0; var2 < this.field_D.length; var2++) {
-            this.field_D[var2] = mp.a(this.field_D[var2], 32768);
+            this.field_D[var2] = mp.bitwiseOr(this.field_D[var2], 32768);
           }
         }
     }
@@ -270,7 +270,7 @@ final class nf extends DualLinkNode {
                 param2 = StandardContentDialog.a(new String[]{param2}, DraggableWidgetContainer.field_G, 30496);
               }
               if (jd.field_l) {
-                param2 = kk.field_t;
+                param2 = MusicPatch.field_t;
               }
               a.field_n.showResult(26889, param2, param0);
             }

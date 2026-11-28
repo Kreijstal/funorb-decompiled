@@ -53,7 +53,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.awt.Rectangle var2 = null;
         RuntimeException var2_ref = null;
         try {
-          if (gm.field_f == this &&
+          if (MusicPatchEnvelope.field_f == this &&
             !qi.field_f) {
             il.field_e = true;
             if (bh.field_f &&
@@ -290,7 +290,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
               }
               if (decompiledFrameRemainder3) {
-                var1 = gm.field_f;
+                var1 = MusicPatchEnvelope.field_f;
                 if (null != AgeValidator.field_r) {
                   var1 = AgeValidator.field_r;
                 }
@@ -578,7 +578,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     public abstract void init();
 
     public final void destroy() {
-        if (gm.field_f != this ||
+        if (MusicPatchEnvelope.field_f != this ||
           qi.field_f) {
           return;
         }
@@ -637,7 +637,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
             if (decompiledFrameRemainder0) {
               if (AgeValidator.field_r == null) {
-                var2 = gm.field_f;
+                var2 = MusicPatchEnvelope.field_f;
                 if (var4 != 0) {
                   var2 = AgeValidator.field_r;
                   var2 = MouseWheelInput.field_e;
@@ -685,7 +685,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     }
 
     public final void stop() {
-        if (this != gm.field_f ||
+        if (this != MusicPatchEnvelope.field_f ||
           qi.field_f) {
           return;
         }
@@ -705,7 +705,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     }
 
     public final void start() {
-        if (gm.field_f != this ||
+        if (MusicPatchEnvelope.field_f != this ||
           qi.field_f) {
           return;
         }
@@ -762,7 +762,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           var9 = Terraphoenix.field_V;
           try {
             try {
-              if (gm.field_f != null) {
+              if (MusicPatchEnvelope.field_f != null) {
                 DelegatingCanvas.field_f = DelegatingCanvas.field_f + 1;
                 if (DelegatingCanvas.field_f >= 3) {
                   this.a("alreadyloaded", true);
@@ -771,7 +771,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                 return;
               }
-              gm.field_f = this;
+              MusicPatchEnvelope.field_f = this;
               ng.field_v = 0;
               ja.field_j = param4;
               hd.field_i = param4;

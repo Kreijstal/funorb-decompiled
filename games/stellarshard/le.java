@@ -148,7 +148,7 @@ final class le extends IntrusiveNode {
           }
           var2Lifetime3 = ImageProducerRasterBuffer.a(false, "achievement_names,3");
           if (null != var2Lifetime3) {
-            NanoFrameTimer.field_e[3] = GuestPlayConfirmationForm.a(ih.a(param1, 26949), var2Lifetime3);
+            NanoFrameTimer.field_e[3] = GuestPlayConfirmationForm.a(ih.bitwiseXor(param1, 26949), var2Lifetime3);
           }
           var2Lifetime4 = ImageProducerRasterBuffer.a(false, "achievement_names,4");
           if (null != var2Lifetime4) {
@@ -203,15 +203,15 @@ final class le extends IntrusiveNode {
           }
           var2Lifetime16 = ImageProducerRasterBuffer.a(false, "achievement_criteria,2");
           if (var2Lifetime16 != null) {
-            hc.field_t[2] = GuestPlayConfirmationForm.a(ih.a(param1, 26949), var2Lifetime16);
+            hc.field_t[2] = GuestPlayConfirmationForm.a(ih.bitwiseXor(param1, 26949), var2Lifetime16);
           }
           var2Lifetime17 = ImageProducerRasterBuffer.a(false, "achievement_criteria,3");
           if (var2Lifetime17 != null) {
-            hc.field_t[3] = GuestPlayConfirmationForm.a(ih.a(param1, 26949), var2Lifetime17);
+            hc.field_t[3] = GuestPlayConfirmationForm.a(ih.bitwiseXor(param1, 26949), var2Lifetime17);
           }
           var2Lifetime18 = ImageProducerRasterBuffer.a(false, "achievement_criteria,4");
           if (var2Lifetime18 != null) {
-            hc.field_t[4] = GuestPlayConfirmationForm.a(ih.a(param1, 26949), var2Lifetime18);
+            hc.field_t[4] = GuestPlayConfirmationForm.a(ih.bitwiseXor(param1, 26949), var2Lifetime18);
           }
           var2Lifetime19 = ImageProducerRasterBuffer.a(false, "achievement_criteria,5");
           if (var2Lifetime19 != null) {
@@ -467,7 +467,7 @@ final class le extends IntrusiveNode {
           }
           var2Lifetime82 = ImageProducerRasterBuffer.a(false, "captions,0");
           if (null != var2Lifetime82) {
-            sg.field_c[0] = GuestPlayConfirmationForm.a(ih.a(param1, 26949), var2Lifetime82);
+            sg.field_c[0] = GuestPlayConfirmationForm.a(ih.bitwiseXor(param1, 26949), var2Lifetime82);
           }
           var2Lifetime83 = ImageProducerRasterBuffer.a(false, "captions,1");
           if (var2Lifetime83 != null) {

@@ -310,7 +310,7 @@ abstract class GameClientBase extends GameApplet {
         }
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseXor(long param0, long param1) {
         return param0 ^ param1;
     }
 
@@ -512,7 +512,7 @@ abstract class GameClientBase extends GameApplet {
           if (var4 == 1) {
             var5_int = SingleChildWidgetContainer.a(ConfirmedEmailAvailabilityValidator.g(2), be.a(true), (byte) -47);
             if (-1 != var5_int) {
-              m.a(var5_int, SecondaryNodeDequeIterator.field_c, false, ra.field_d);
+              GrowableIntArray.a(var5_int, SecondaryNodeDequeIterator.field_c, false, ra.field_d);
               ra.field_d = null;
               SecondaryNodeDequeIterator.field_c = null;
             }

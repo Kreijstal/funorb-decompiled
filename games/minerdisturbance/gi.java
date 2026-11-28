@@ -23,12 +23,12 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
             } else {
               var2_int = -1;
             }
-            if (cg.field_H >= 0 &&
+            if (MusicPatchNode.field_H >= 0 &&
               var2_int >= 0) {
-              ib.field_b[cg.field_H] = ~var2_int;
-              cg.field_H = 127 & 1 + cg.field_H;
-              if (dm.field_b == cg.field_H) {
-                cg.field_H = -1;
+              ib.field_b[MusicPatchNode.field_H] = ~var2_int;
+              MusicPatchNode.field_H = 127 & 1 + MusicPatchNode.field_H;
+              if (dm.field_b == MusicPatchNode.field_H) {
+                MusicPatchNode.field_H = -1;
               }
             }
           }
@@ -88,7 +88,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
           if (null != MidiPcmStream.field_O) {
-            cg.field_H = -1;
+            MusicPatchNode.field_H = -1;
           }
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "gi.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
@@ -106,11 +106,11 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
             var2_int = param0.getKeyChar();
             if (0 != var2_int && var2_int != 65535 &&
               bn.isSupportedCp1252KeyCharacter(93, (char) var2_int)) {
-              var3 = 127 & 1 + qf.field_n;
+              var3 = 127 & 1 + MidiNoteMask.field_n;
               if (var3 != dn.field_w) {
-                ContentTransitionDialog.field_ib[qf.field_n] = -1;
-                hj.field_n[qf.field_n] = (char)var2_int;
-                qf.field_n = var3;
+                ContentTransitionDialog.field_ib[MidiNoteMask.field_n] = -1;
+                hj.field_n[MidiNoteMask.field_n] = (char)var2_int;
+                MidiNoteMask.field_n = var3;
               }
             }
           }
@@ -144,20 +144,20 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             var2_int = -1;
           }
-          if (0 <= cg.field_H &&
+          if (0 <= MusicPatchNode.field_H &&
             var2_int >= 0) {
-            ib.field_b[cg.field_H] = var2_int;
-            cg.field_H = 127 & cg.field_H + 1;
-            if (cg.field_H == dm.field_b) {
-              cg.field_H = -1;
+            ib.field_b[MusicPatchNode.field_H] = var2_int;
+            MusicPatchNode.field_H = 127 & MusicPatchNode.field_H + 1;
+            if (MusicPatchNode.field_H == dm.field_b) {
+              MusicPatchNode.field_H = -1;
             }
           }
           if (0 <= var2_int) {
-            var3 = qf.field_n + 1 & 127;
+            var3 = MidiNoteMask.field_n + 1 & 127;
             if (var3 != dn.field_w) {
-              ContentTransitionDialog.field_ib[qf.field_n] = var2_int;
-              hj.field_n[qf.field_n] = (char)0;
-              qf.field_n = var3;
+              ContentTransitionDialog.field_ib[MidiNoteMask.field_n] = var2_int;
+              hj.field_n[MidiNoteMask.field_n] = (char)0;
+              MidiNoteMask.field_n = var3;
             }
           }
           var3Lifetime1 = param0.getModifiers();

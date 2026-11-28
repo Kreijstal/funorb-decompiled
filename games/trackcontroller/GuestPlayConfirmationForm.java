@@ -1609,7 +1609,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Bu
                 }
                 var2 = TextLineMetrics.a(0, "create_select_alternative");
                 if (null != var2) {
-                  ke.field_b = ta.a(32200, var2);
+                  ByteArrayPoolSupport.field_b = ta.a(32200, var2);
                 }
                 var2 = TextLineMetrics.a(0, "create_optin_news");
                 if (var2 != null) {
@@ -1697,7 +1697,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Bu
                 }
                 var2 = TextLineMetrics.a(0, "create_email_confirm_tooltip");
                 if (var2 != null) {
-                  qh.field_c = ta.a(32200, var2);
+                  GrowableIntArray.field_c = ta.a(32200, var2);
                 }
                 var2 = TextLineMetrics.a(0, "create_age_tooltip");
                 if (var2 != null) {

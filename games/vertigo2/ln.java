@@ -41,7 +41,7 @@ final class ln {
           var1_int = eb.field_g[param0];
           for (var2 = 1; eb.field_g.length > var2; var2++) {
             var3 = eb.field_g[var2];
-            qq.a(DropTargetWidgetContainer.field_K, var2 << 4, DropTargetWidgetContainer.field_K, var1_int, var3);
+            ArrayBlockSupport.copyIntRange(DropTargetWidgetContainer.field_K, var2 << 4, DropTargetWidgetContainer.field_K, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;

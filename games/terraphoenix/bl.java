@@ -68,7 +68,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 95, "achievement_names,7");
                 if (null != var2) {
-                  RandomAccessCacheFile.field_g[7] = ll.a(sl.a((int) param0, 96), var2);
+                  RandomAccessCacheFile.field_g[7] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 71, "achievement_names,8");
                 if (null != var2) {
@@ -172,7 +172,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 74, "achievement_criteria,1");
                 if (null != var2) {
-                  InteractiveWidget.field_J[1] = ll.a(sl.a((int) param0, 96), var2);
+                  InteractiveWidget.field_J[1] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 122, "achievement_criteria,2");
                 if (var2 != null) {
@@ -216,11 +216,11 @@ final class bl {
                 }
                 var2 = il.a((byte) 72, "achievement_criteria,12");
                 if (null != var2) {
-                  InteractiveWidget.field_J[12] = ll.a(sl.a((int) param0, 96), var2);
+                  InteractiveWidget.field_J[12] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 77, "achievement_criteria,13");
                 if (var2 != null) {
-                  InteractiveWidget.field_J[13] = ll.a(sl.a((int) param0, 96), var2);
+                  InteractiveWidget.field_J[13] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 90, "achievement_criteria,14");
                 if (var2 != null) {
@@ -340,7 +340,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 123, "aboutlaun");
                 if (var2 != null) {
-                  fc.field_h = ll.a(0, var2);
+                  GrowableIntArray.field_h = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 98, "launching");
                 if (null != var2) {
@@ -616,7 +616,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 74, "rateoffires,3");
                 if (null != var2) {
-                  TextFieldValidator.field_h[3] = ll.a(sl.a((int) param0, 96), var2);
+                  TextFieldValidator.field_h[3] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 114, "rateoffires,4");
                 if (var2 != null) {
@@ -640,7 +640,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 95, "armournames,1");
                 if (null != var2) {
-                  ModalDialog.field_H[1] = ll.a(sl.a((int) param0, 96), var2);
+                  ModalDialog.field_H[1] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 93, "armournames,2");
                 if (null != var2) {
@@ -680,7 +680,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 121, "armourdescriptions,3");
                 if (null != var2) {
-                  bd.field_f[3] = ll.a(sl.a((int) param0, 96), var2);
+                  bd.field_f[3] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 82, "armourresearchdescriptions,0");
                 if (var2 != null) {
@@ -720,7 +720,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 84, "weaponnames,5");
                 if (var2 != null) {
-                  LoginPanel.field_L[5] = ll.a(sl.a((int) param0, 96), var2);
+                  LoginPanel.field_L[5] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 95, "weaponnames,6");
                 if (var2 != null) {
@@ -752,7 +752,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 117, "weaponnames,13");
                 if (null != var2) {
-                  LoginPanel.field_L[13] = ll.a(sl.a((int) param0, 96), var2);
+                  LoginPanel.field_L[13] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 100, "weaponnames,14");
                 if (var2 != null) {
@@ -784,7 +784,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 104, "weaponresearchnames,0");
                 if (var2 != null) {
-                  ImageProducerRasterBuffer.field_h[0] = ll.a(sl.a((int) param0, 96), var2);
+                  ImageProducerRasterBuffer.field_h[0] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 119, "weaponresearchnames,1");
                 if (var2 != null) {
@@ -796,7 +796,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 125, "weaponresearchnames,3");
                 if (null != var2) {
-                  ImageProducerRasterBuffer.field_h[3] = ll.a(sl.a((int) param0, 96), var2);
+                  ImageProducerRasterBuffer.field_h[3] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 92, "weaponresearchnames,4");
                 if (var2 != null) {
@@ -804,7 +804,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 80, "weaponresearchnames,5");
                 if (null != var2) {
-                  ImageProducerRasterBuffer.field_h[5] = ll.a(sl.a((int) param0, 96), var2);
+                  ImageProducerRasterBuffer.field_h[5] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 127, "weaponresearchnames,6");
                 if (var2 != null) {
@@ -820,7 +820,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 88, "weaponresearchnames,9");
                 if (var2 != null) {
-                  ImageProducerRasterBuffer.field_h[9] = ll.a(sl.a((int) param0, 96), var2);
+                  ImageProducerRasterBuffer.field_h[9] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 122, "weaponresearchnames,10");
                 if (var2 != null) {
@@ -896,11 +896,11 @@ final class bl {
                 }
                 var2 = il.a((byte) 78, "weapondescriptions,7");
                 if (var2 != null) {
-                  i.field_b[7] = ll.a(sl.a((int) param0, 96), var2);
+                  i.field_b[7] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 97, "weapondescriptions,8");
                 if (var2 != null) {
-                  i.field_b[8] = ll.a(sl.a((int) param0, 96), var2);
+                  i.field_b[8] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 97, "weapondescriptions,9");
                 if (var2 != null) {
@@ -908,11 +908,11 @@ final class bl {
                 }
                 var2 = il.a((byte) 102, "weapondescriptions,10");
                 if (var2 != null) {
-                  i.field_b[10] = ll.a(sl.a((int) param0, 96), var2);
+                  i.field_b[10] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 97, "weapondescriptions,11");
                 if (null != var2) {
-                  i.field_b[11] = ll.a(sl.a((int) param0, 96), var2);
+                  i.field_b[11] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 97, "weapondescriptions,12");
             }
@@ -922,7 +922,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 122, "weapondescriptions,13");
                 if (var2 != null) {
-                  i.field_b[13] = ll.a(sl.a((int) param0, 96), var2);
+                  i.field_b[13] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 120, "weapondescriptions,14");
                 if (null != var2) {
@@ -970,7 +970,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 98, "weaponresearchdescriptions,4");
                 if (null != var2) {
-                  SoundCache.field_i[4] = ll.a(sl.a((int) param0, 96), var2);
+                  SoundCache.field_i[4] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 72, "weaponresearchdescriptions,5");
                 if (var2 != null) {
@@ -990,7 +990,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 103, "weaponresearchdescriptions,9");
                 if (null != var2) {
-                  SoundCache.field_i[9] = ll.a(sl.a((int) param0, 96), var2);
+                  SoundCache.field_i[9] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 76, "weaponresearchdescriptions,10");
                 if (var2 != null) {
@@ -998,7 +998,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 78, "weaponresearchdescriptions,11");
                 if (var2 != null) {
-                  SoundCache.field_i[11] = ll.a(sl.a((int) param0, 96), var2);
+                  SoundCache.field_i[11] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 109, "weaponresearchdescriptions,12");
                 if (var2 != null) {
@@ -1042,31 +1042,31 @@ final class bl {
                 }
                 var2 = il.a((byte) 115, "instructions0,0");
                 if (null != var2) {
-                  qd.field_h[0] = ll.a(sl.a((int) param0, 96), var2);
+                  MusicPatch.field_h[0] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 98, "instructions0,1");
                 if (var2 != null) {
-                  qd.field_h[1] = ll.a(0, var2);
+                  MusicPatch.field_h[1] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 87, "instructions0,2");
                 if (null != var2) {
-                  qd.field_h[2] = ll.a(sl.a((int) param0, 96), var2);
+                  MusicPatch.field_h[2] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 84, "instructions0,3");
                 if (var2 != null) {
-                  qd.field_h[3] = ll.a(param0 - 96, var2);
+                  MusicPatch.field_h[3] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 101, "instructions0,4");
                 if (var2 != null) {
-                  qd.field_h[4] = ll.a(0, var2);
+                  MusicPatch.field_h[4] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 72, "instructions0,5");
                 if (null != var2) {
-                  qd.field_h[5] = ll.a(0, var2);
+                  MusicPatch.field_h[5] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 109, "instructions0,6");
                 if (var2 != null) {
-                  qd.field_h[6] = ll.a(param0 - 96, var2);
+                  MusicPatch.field_h[6] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 97, "instructions1,0");
                 if (var2 != null) {
@@ -1206,7 +1206,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 77, "instructions3,11");
                 if (var2 != null) {
-                  ValidationStatusIcon.field_O[11] = ll.a(sl.a((int) param0, 96), var2);
+                  ValidationStatusIcon.field_O[11] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 125, "instructions3,12");
                 if (null != var2) {
@@ -1230,7 +1230,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 119, "instructions4,0");
                 if (null != var2) {
-                  MessageKeys.field_a[0] = ll.a(sl.a((int) param0, 96), var2);
+                  MessageKeys.field_a[0] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 105, "instructions4,1");
                 if (null != var2) {
@@ -1238,7 +1238,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 118, "instructions4,2");
                 if (var2 != null) {
-                  MessageKeys.field_a[2] = ll.a(sl.a((int) param0, 96), var2);
+                  MessageKeys.field_a[2] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 100, "instructions4,3");
                 if (null != var2) {
@@ -1262,7 +1262,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 121, "instructions5,1");
                 if (var2 != null) {
-                  DialogMessagePane.field_M[1] = ll.a(sl.a((int) param0, 96), var2);
+                  DialogMessagePane.field_M[1] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 103, "instructions5,2");
                 if (var2 != null) {
@@ -1294,11 +1294,11 @@ final class bl {
                 }
                 var2 = il.a((byte) 114, "instructions6,5");
                 if (var2 != null) {
-                  k.field_d[5] = ll.a(sl.a((int) param0, 96), var2);
+                  k.field_d[5] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 85, "instructions7,0");
                 if (null != var2) {
-                  o.field_a[0] = ll.a(sl.a((int) param0, 96), var2);
+                  o.field_a[0] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 121, "instructions7,1");
                 if (null != var2) {
@@ -1338,7 +1338,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 80, "instructions8,4");
                 if (var2 != null) {
-                  vb.field_f[4] = ll.a(sl.a((int) param0, 96), var2);
+                  vb.field_f[4] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 91, "instructions8,5");
                 if (var2 != null) {
@@ -1374,7 +1374,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 112, "instructions8,13");
                 if (null != var2) {
-                  vb.field_f[13] = ll.a(sl.a((int) param0, 96), var2);
+                  vb.field_f[13] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 97, "instructions8,14");
                 if (var2 != null) {
@@ -1418,7 +1418,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 82, "benefits_in,0");
                 if (null != var2) {
-                  dc.field_e[0] = ll.a(sl.a((int) param0, 96), var2);
+                  dc.field_e[0] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 105, "benefits_in,1");
                 if (var2 != null) {
@@ -1498,7 +1498,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 112, "Squiddy_with_shield");
                 if (var2 != null) {
-                  gm.field_a = ll.a(0, var2);
+                  MusicPatchEnvelope.field_a = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 89, "Grunt_with_shielded_armour");
                 if (var2 != null) {
@@ -1510,7 +1510,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 92, "Squiddy_Commander");
                 if (var2 != null) {
-                  qd.field_j = ll.a(0, var2);
+                  MusicPatch.field_j = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 120, "Soldier");
                 if (null != var2) {
@@ -1574,7 +1574,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 113, "MODELNAME_LASGUN");
                 if (null != var2) {
-                  fc.field_j = ll.a(0, var2);
+                  GrowableIntArray.field_j = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 114, "MODELNAME_PULPIS");
                 if (null != var2) {
@@ -1678,7 +1678,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 113, "missionnames,12");
                 if (var2 != null) {
-                  p.field_f[12] = ll.a(sl.a((int) param0, 96), var2);
+                  p.field_f[12] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 105, "missionnames,13");
                 if (var2 != null) {
@@ -1686,7 +1686,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 104, "missionnames,14");
                 if (null != var2) {
-                  p.field_f[14] = ll.a(sl.a((int) param0, 96), var2);
+                  p.field_f[14] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 110, "yaysuccess");
                 if (var2 != null) {
@@ -1718,7 +1718,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 108, "debriefstrings,5");
                 if (var2 != null) {
-                  pe.field_c[5] = ll.a(sl.a((int) param0, 96), var2);
+                  pe.field_c[5] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 86, "debriefstrings,6");
                 if (var2 != null) {
@@ -1778,7 +1778,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 114, "debriefstrings,20");
                 if (null != var2) {
-                  pe.field_c[20] = ll.a(sl.a((int) param0, 96), var2);
+                  pe.field_c[20] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 95, "debriefstrings,21");
                 if (null != var2) {
@@ -1840,7 +1840,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 95, "briefstrings,6");
                 if (var2 != null) {
-                  ic.field_x[6] = ll.a(sl.a((int) param0, 96), var2);
+                  ic.field_x[6] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 80, "briefstrings,7");
                 if (null != var2) {
@@ -1880,11 +1880,11 @@ final class bl {
                 }
                 var2 = il.a((byte) 111, "briefstrings,16");
                 if (var2 != null) {
-                  ic.field_x[16] = ll.a(sl.a((int) param0, 96), var2);
+                  ic.field_x[16] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 112, "briefstrings,17");
                 if (var2 != null) {
-                  ic.field_x[17] = ll.a(sl.a((int) param0, 96), var2);
+                  ic.field_x[17] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 90, "briefstrings,18");
                 if (var2 != null) {
@@ -1896,7 +1896,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 109, "briefstrings,20");
                 if (var2 != null) {
-                  ic.field_x[20] = ll.a(sl.a((int) param0, 96), var2);
+                  ic.field_x[20] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 97, "briefstrings,21");
                 if (var2 != null) {
@@ -1916,7 +1916,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 99, "briefstrings,25");
                 if (null != var2) {
-                  ic.field_x[25] = ll.a(sl.a((int) param0, 96), var2);
+                  ic.field_x[25] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 104, "briefstrings,26");
                 if (var2 != null) {
@@ -1940,7 +1940,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 71, "briefstrings,31");
                 if (null != var2) {
-                  ic.field_x[31] = ll.a(sl.a((int) param0, 96), var2);
+                  ic.field_x[31] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 95, "briefstrings,32");
                 if (null != var2) {
@@ -1964,11 +1964,11 @@ final class bl {
                 }
                 var2 = il.a((byte) 82, "briefstrings,37");
                 if (var2 != null) {
-                  ic.field_x[37] = ll.a(sl.a((int) param0, 96), var2);
+                  ic.field_x[37] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 89, "briefstrings,38");
                 if (null != var2) {
-                  ic.field_x[38] = ll.a(sl.a((int) param0, 96), var2);
+                  ic.field_x[38] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 73, "briefstrings,39");
                 if (null != var2) {
@@ -1976,7 +1976,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 118, "briefstrings,40");
                 if (var2 != null) {
-                  ic.field_x[40] = ll.a(sl.a((int) param0, 96), var2);
+                  ic.field_x[40] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 97, "briefstrings,41");
                 if (null != var2) {
@@ -2004,7 +2004,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 81, "briefstrings,47");
                 if (null != var2) {
-                  ic.field_x[47] = ll.a(sl.a((int) param0, 96), var2);
+                  ic.field_x[47] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 85, "briefstrings,48");
                 if (null != var2) {
@@ -2056,7 +2056,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 94, "briefstrings,60");
                 if (null != var2) {
-                  ic.field_x[60] = ll.a(sl.a((int) param0, 96), var2);
+                  ic.field_x[60] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 95, "briefstrings,61");
                 if (var2 != null) {
@@ -2112,11 +2112,11 @@ final class bl {
                 }
                 var2 = il.a((byte) 106, "briefstrings,74");
                 if (null != var2) {
-                  ic.field_x[74] = ll.a(sl.a((int) param0, 96), var2);
+                  ic.field_x[74] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 100, "briefstrings,75");
                 if (null != var2) {
-                  ic.field_x[75] = ll.a(sl.a((int) param0, 96), var2);
+                  ic.field_x[75] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 102, "briefstrings,76");
                 if (null != var2) {
@@ -2156,7 +2156,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 109, "actI");
                 if (var2 != null) {
-                  sb.field_n = ll.a(param0 - 96, var2);
+                  MidiNoteMask.field_n = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 99, "actII");
                 if (null != var2) {
@@ -2184,7 +2184,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 89, "quittomain");
                 if (var2 != null) {
-                  fc.field_g = ll.a(0, var2);
+                  GrowableIntArray.field_g = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 123, "abortmission");
                 if (var2 != null) {
@@ -2344,7 +2344,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 118, "shortmissiontext,0");
                 if (null != var2) {
-                  kk.field_b[0] = ll.a(sl.a((int) param0, 96), var2);
+                  kk.field_b[0] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 123, "shortmissiontext,1");
                 if (var2 != null) {
@@ -2360,7 +2360,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 79, "shortmissiontext,4");
                 if (null != var2) {
-                  kk.field_b[4] = ll.a(sl.a((int) param0, 96), var2);
+                  kk.field_b[4] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 71, "shortmissiontext,5");
                 if (null != var2) {
@@ -2472,7 +2472,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 91, "researchtopic");
                 if (null != var2) {
-                  sb.field_k = ll.a(0, var2);
+                  MidiNoteMask.field_k = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 102, "stepno");
                 if (null != var2) {
@@ -2556,7 +2556,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 120, "tutorialtext,19");
                 if (null != var2) {
-                  TutorialText.field_d[19] = ll.a(sl.a((int) param0, 96), var2);
+                  TutorialText.field_d[19] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 80, "tutorialtext,20");
                 if (var2 != null) {
@@ -2588,7 +2588,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 114, "tutorialtext,27");
                 if (var2 != null) {
-                  TutorialText.field_d[27] = ll.a(sl.a((int) param0, 96), var2);
+                  TutorialText.field_d[27] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 96, "tutorialtext,28");
                 if (null != var2) {
@@ -2632,11 +2632,11 @@ final class bl {
                 }
                 var2 = il.a((byte) 105, "tutorialtext,38");
                 if (null != var2) {
-                  TutorialText.field_d[38] = ll.a(sl.a((int) param0, 96), var2);
+                  TutorialText.field_d[38] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 90, "tutorialtext,39");
                 if (var2 != null) {
-                  TutorialText.field_d[39] = ll.a(sl.a((int) param0, 96), var2);
+                  TutorialText.field_d[39] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 109, "tutorialtext,40");
                 if (var2 != null) {
@@ -2702,7 +2702,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 103, "tutorialtext,55");
                 if (var2 != null) {
-                  TutorialText.field_d[55] = ll.a(sl.a((int) param0, 96), var2);
+                  TutorialText.field_d[55] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 104, "tutorialtext,56");
                 if (null != var2) {
@@ -2778,7 +2778,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 118, "tutorialtext,74");
                 if (null != var2) {
-                  TutorialText.field_d[74] = ll.a(sl.a((int) param0, 96), var2);
+                  TutorialText.field_d[74] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 82, "tutorialtext,75");
                 if (var2 != null) {
@@ -2810,7 +2810,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 76, "tutorialtext,82");
                 if (null != var2) {
-                  TutorialText.field_d[82] = ll.a(sl.a((int) param0, 96), var2);
+                  TutorialText.field_d[82] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 122, "tutorialtext,83");
                 if (null != var2) {
@@ -2822,7 +2822,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 127, "tutorialtext,85");
                 if (null != var2) {
-                  TutorialText.field_d[85] = ll.a(sl.a((int) param0, 96), var2);
+                  TutorialText.field_d[85] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 102, "tutorialtext,86");
                 if (null != var2) {
@@ -2838,7 +2838,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 84, "instructions_pages,2");
                 if (null != var2) {
-                  re.field_h[2] = ll.a(sl.a((int) param0, 96), var2);
+                  re.field_h[2] = ll.a(sl.bitwiseXor((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 101, "all");
                 if (null != var2) {

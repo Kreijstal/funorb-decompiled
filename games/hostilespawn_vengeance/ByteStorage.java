@@ -155,7 +155,7 @@ abstract class ByteStorage {
                                   BufferedRandomAccessFile.a(true, var3, var8_ref_p, var2);
                                   break regionExit1;
                                 case 6:
-                                  tm.a((byte) 88, var2, var3, var8_ref_p);
+                                  MusicPatchNode.a((byte) 88, var2, var3, var8_ref_p);
                                   break regionExit1;
                                 case 37:
                                   IntrusiveNode.a(-1, var3, var2, var8_ref_p);

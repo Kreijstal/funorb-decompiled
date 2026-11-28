@@ -314,7 +314,7 @@ class EditableTextField extends InteractiveWidget {
           while (var3_int < bd.field_e.length) {
             var5 = ec.field_l[var3_int];
             if (var5 < 0) {
-              var4 = var4 + qd.field_r;
+              var4 = var4 + MusicPatchNode.field_r;
             } else {
               var6 = in.a(bd.field_e[var3_int], 71, true);
               var4 = var4 + UiWidget.field_z;

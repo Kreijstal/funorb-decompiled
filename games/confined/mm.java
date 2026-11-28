@@ -348,8 +348,8 @@ final class mm extends AcceleratingProjectile {
         for (var0Lifetime1 = 0; var0Lifetime1 < 256; var0Lifetime1++) {
           var1 = var0Lifetime1 * var0Lifetime1 >> 8;
           var2 = var1 * var1 >> 8;
-          field_gb[var0Lifetime1] = nl.a(var1, nl.a(var2 << 16, var0Lifetime1 << 8));
-          field_cb[var0Lifetime1] = nl.a(nl.a(var0Lifetime1 << 16, var1 << 8), var2);
+          field_gb[var0Lifetime1] = nl.bitwiseOr(var1, nl.bitwiseOr(var2 << 16, var0Lifetime1 << 8));
+          field_cb[var0Lifetime1] = nl.bitwiseOr(nl.bitwiseOr(var0Lifetime1 << 16, var1 << 8), var2);
         }
     }
 }

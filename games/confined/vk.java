@@ -61,7 +61,7 @@ final class vk {
               var4 = this.field_h.getSoundEffectByGroup(this.field_m[var3], this.field_v[var3], 256);
             }
             if (var4 != null) {
-              this.field_C[var3] = va.a(this.field_C[var3], 15);
+              this.field_C[var3] = va.bitwiseAnd(this.field_C[var3], 15);
               this.field_e[var3] = var4;
             } else {
               var2 = 0;
@@ -214,11 +214,11 @@ final class vk {
           for (var5 = 0; this.field_B > var5; var5++) {
             dupTemp$0 = var4 + param0.readUnsignedByte(32);
             var4 = dupTemp$0;
-            this.field_E[var5] = va.a(255, dupTemp$0);
+            this.field_E[var5] = va.bitwiseAnd(255, dupTemp$0);
           }
           this.field_l = new byte[256][];
           this.field_p = new int[256];
-          lj.a(this.field_p, 0, 256, 64);
+          ArrayBlockSupport.fillInts(this.field_p, 0, 256, 64);
           for (var5Lifetime1 = 0; var5Lifetime1 < 256; var5Lifetime1++) {
             this.field_l[var5Lifetime1] = DampedProjectile.field_V;
           }
@@ -265,7 +265,7 @@ final class vk {
               for (var8 = 0; var8 < 96; var8++) {
                 dupTemp$1 = var4Lifetime1 + param0.readUnsignedByte(32);
                 var4Lifetime1 = dupTemp$1;
-                this.field_A[var6Lifetime1][var8] = va.a(255, dupTemp$1) + var5Lifetime4;
+                this.field_A[var6Lifetime1][var8] = va.bitwiseAnd(255, dupTemp$1) + var5Lifetime4;
               }
               this.field_H[var6Lifetime1] = param0.readUnsignedByte(32);
               var8Lifetime1 = param0.readUnsignedByte(32);
@@ -294,7 +294,7 @@ final class vk {
               for (var11Lifetime1 = 0; var8Lifetime1 > var11Lifetime1; var11Lifetime1++) {
                 dupTemp$6 = var4Lifetime1Lifetime2 + param0.readUnsignedByte(32);
                 var4Lifetime1Lifetime2 = dupTemp$6;
-                this.field_b[var6Lifetime1][var11Lifetime1] = va.a(dupTemp$6, 255);
+                this.field_b[var6Lifetime1][var11Lifetime1] = va.bitwiseAnd(dupTemp$6, 255);
               }
               array$7 = new int[var9];
               this.field_o[var6Lifetime1] = array$7;
@@ -313,7 +313,7 @@ final class vk {
               for (var11Lifetime3 = 0; var11Lifetime3 < var9; var11Lifetime3++) {
                 dupTemp$11 = var4Lifetime1Lifetime4 + param0.readUnsignedByte(32);
                 var4Lifetime1Lifetime4 = dupTemp$11;
-                this.field_a[var6Lifetime1][var11Lifetime3] = va.a(dupTemp$11, 255);
+                this.field_a[var6Lifetime1][var11Lifetime3] = va.bitwiseAnd(dupTemp$11, 255);
               }
               this.field_w[var6Lifetime1] = param0.readUnsignedShort((byte) 25);
               for (var11Lifetime4 = 0; var11Lifetime4 < var7; var11Lifetime4++) {

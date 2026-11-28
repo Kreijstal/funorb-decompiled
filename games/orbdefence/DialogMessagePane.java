@@ -134,7 +134,7 @@ final class DialogMessagePane extends DequeWidgetContainer implements WidgetActi
         try {
           var4_int = this.field_D;
           this.growActions(1 + var4_int, 11339);
-          this.field_B[var4_int] = this.addListenerButton(param0, gi.a(param2, 15824), (WidgetEventListener) (this));
+          this.field_B[var4_int] = this.addListenerButton(param0, gi.bitwiseXor(param2, 15824), (WidgetEventListener) (this));
           this.field_C[var4_int] = param1;
           if (param2 == -15858) {
             return;

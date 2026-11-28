@@ -57,7 +57,7 @@ final class nb extends am {
         } else {
           var4 = this.b(0, 0, this.field_t ? NameSuggestionsPanel.field_I - param1 : param1);
           if (!this.field_s) {
-            dk.a(var4, 0, var7, 0, ci.field_c);
+            ArrayBlockSupport.copyIntRange(var4, 0, var7, 0, ci.field_c);
           } else {
             for (var5 = 0; var5 < ci.field_c; var5++) {
               var3[var5] = var4[SingleChildWidgetContainer.field_A - var5];

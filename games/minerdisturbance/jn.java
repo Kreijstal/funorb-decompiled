@@ -12,10 +12,10 @@ final class jn extends IntrusiveNode {
 
     final static void a(int param0) {
         pj.field_c = new th();
-        if (null == aa.field_j) {
+        if (null == GrowableIntArray.field_j) {
           return;
         }
-        aa.field_j = new th();
+        GrowableIntArray.field_j = new th();
         if (param0 != 0) {
           field_p = (String) null;
         }

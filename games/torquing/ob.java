@@ -199,6 +199,6 @@ final class ob {
 
     static {
         field_a = new byte[65536];
-        dk.a(field_a, 0, 65536, (byte) -128);
+        ArrayBlockSupport.a(field_a, 0, 65536, (byte) -128);
     }
 }

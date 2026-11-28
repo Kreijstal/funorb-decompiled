@@ -206,7 +206,7 @@ class InteractiveWidget extends UiWidget {
         }
         og.field_c = ig.field_a.readString(false);
         CharSequence var2 = (CharSequence) ((Object) og.field_c);
-        cb.field_t = ProxyAuthenticationRequiredException.a(var2, (byte) -48);
+        MusicPatchNode.field_t = ProxyAuthenticationRequiredException.a(var2, (byte) -48);
     }
 
     InteractiveWidget(String param0, WidgetRenderer param1, WidgetEventListener param2) {

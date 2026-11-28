@@ -29,7 +29,7 @@ final class na {
         } else {
           var2.setScaledVolume(FullscreenNoticeType.field_e * 128 / 256);
         }
-        wj.field_j.addChildStream(var2);
+        MusicPatch.field_j.addChildStream(var2);
     }
 
     final IntrusiveNode a(long param0, byte param1) {

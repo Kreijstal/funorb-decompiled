@@ -286,7 +286,7 @@ abstract class rj extends IntrusiveNode {
               ProxyAuthenticationRequiredException.field_f = !param1 ? -1 : -2;
               oc.field_E = !param1 ? -1 : -2;
               SpriteGeometry.field_C = !param1 ? -1 : -2;
-              AccountRegistrationPanel.a(MouseInput.field_g, ac.field_B, kn.field_b, 119, SpriteGeometry.field_D);
+              AccountRegistrationPanel.a(MouseInput.field_g, ac.field_B, ByteArrayPoolSupport.field_b, 119, SpriteGeometry.field_D);
               op.a(0, -1);
             } catch (IOException iOException) {
               pd.field_A = tp.field_B;

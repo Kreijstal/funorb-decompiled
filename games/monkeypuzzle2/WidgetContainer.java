@@ -617,7 +617,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
             field_w[var0] = 51 * var0 + 51 << 8;
           }
           if (var0 > 2) {
-            field_w[var0] = bd.a(field_w[var0], 22 * (-2 + var0) << 16);
+            field_w[var0] = bd.bitwiseOr(field_w[var0], 22 * (-2 + var0) << 16);
           }
         }
         field_v = new IntrusiveDeque();

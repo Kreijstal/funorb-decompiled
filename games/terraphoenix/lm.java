@@ -159,11 +159,11 @@ final class lm {
               stackIn_38_0 = null;
             }
             var21 = stackIn_38_0;
-            var22 = gm.field_l[var15Lifetime1];
+            var22 = MusicPatchEnvelope.field_l[var15Lifetime1];
             var23 = nb.field_c[var15Lifetime1];
-            var24 = gm.field_l[var16];
+            var24 = MusicPatchEnvelope.field_l[var16];
             var25 = nb.field_c[var16];
-            var26 = gm.field_l[var17];
+            var26 = MusicPatchEnvelope.field_l[var17];
             var27 = nb.field_c[var17];
             if (var18 == var19 &&
               var20 == var19) {

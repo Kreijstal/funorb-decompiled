@@ -1467,7 +1467,7 @@ abstract class kb {
                 }
                 var2 = StandardContentDialog.a(33, "create_select_alternative");
                 if (null != var2) {
-                  cb.field_A = ni.a((byte) -55, var2);
+                  MusicPatchNode.field_A = ni.a((byte) -55, var2);
                 }
                 var2 = StandardContentDialog.a(33, "create_optin_news");
                 if (null != var2) {

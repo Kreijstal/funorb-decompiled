@@ -34,8 +34,8 @@ abstract class td {
 
     final static void a(byte param0) {
         eh.a(true);
-        if (ch.field_h != null) {
-          ContentTransitionDialog.a(ch.field_h, (byte) 86);
+        if (MusicPatchEnvelope.field_h != null) {
+          ContentTransitionDialog.a(MusicPatchEnvelope.field_h, (byte) 86);
         }
         DisplayNameSelectionPanel.l(8927);
         mc.a(-660);
@@ -45,7 +45,7 @@ abstract class td {
           return;
         }
         hh.field_p.a(true, 1);
-        jj.a(0, true);
+        ByteArrayPoolSupport.a(0, true);
         kc.a(param0);
     }
 

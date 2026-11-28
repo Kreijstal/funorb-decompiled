@@ -158,7 +158,7 @@ final class NumericDateInputWidget extends DateInputWidget {
           kg.c((byte) 77);
           td.field_c.a(0, param0);
           if (TextLineMetrics.field_a != null) {
-            if (pe.field_r) {
+            if (MusicPatchNode.field_r) {
               TextLineMetrics.field_a.processPointerInput(td.field_c.field_C, param0, (byte) 82, td.field_c.field_ob);
             } else {
               TextLineMetrics.field_a = null;
@@ -235,7 +235,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         if (param1 == 0) {
           param2 = param2 + this.x;
           param3 = param3 + this.y;
-          this.drawDateFieldLabel(param3, -626, param2, this.field_N, gl.field_m);
+          this.drawDateFieldLabel(param3, -626, param2, this.field_N, MusicPatchEnvelope.field_m);
           this.drawDateFieldLabel(param3, -626, param2, this.field_T, ff.field_v);
           this.drawDateFieldLabel(param3, -626, param2, this.field_R, ArrayWidgetContainer.field_C);
           return;

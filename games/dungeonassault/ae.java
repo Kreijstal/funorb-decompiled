@@ -301,9 +301,9 @@ final class ae {
               throw new IllegalStateException();
             }
             sn.field_a = new String[var4];
-            cj.a(qj.field_e, 0, sn.field_a, 0, var4);
+            ArrayBlockSupport.copyObjectRange(qj.field_e, 0, sn.field_a, 0, var4);
             cp.field_Q = new String[-1 + (-var4 + var3_int)];
-            cj.a(qj.field_e, var4 + 1, cp.field_Q, 0, var3_int - var4 - 1);
+            ArrayBlockSupport.copyObjectRange(qj.field_e, var4 + 1, cp.field_Q, 0, var3_int - var4 - 1);
             var4 = -1;
             var3_int = KeyboardInput.a(n.field_c, (byte) 84, qj.field_e, wa.field_l, StandardContentDialog.a(new String[]{"<br><%0><br>"}, bn.field_i, param2 ^ -30497));
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -317,9 +317,9 @@ final class ae {
               throw new IllegalStateException();
             }
             mo.field_g = new String[var4];
-            cj.a(qj.field_e, 0, mo.field_g, 0, var4);
+            ArrayBlockSupport.copyObjectRange(qj.field_e, 0, mo.field_g, 0, var4);
             fd.field_b = new String[-1 - var4 + var3_int];
-            cj.a(qj.field_e, var4 + 1, fd.field_b, 0, -1 + var3_int - var4);
+            ArrayBlockSupport.copyObjectRange(qj.field_e, var4 + 1, fd.field_b, 0, -1 + var3_int - var4);
             if (sn.field_a.length < mo.field_g.length) {
               stackIn_32_0 = mo.field_g.length;
             } else {

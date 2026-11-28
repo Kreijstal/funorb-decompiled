@@ -589,7 +589,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
           this.field_S = new ValidatedTextField("", (WidgetEventListener) null, 3);
           var1_int = 1;
           this.field_T = new vk("", (WidgetEventListener) null, var1_int != 0);
-          this.field_I = new InteractiveWidget(tk.field_y, (WidgetEventListener) null);
+          this.field_I = new InteractiveWidget(MusicPatchNode.field_y, (WidgetEventListener) null);
           this.field_R = new InteractiveWidget(DropTargetWidgetContainer.field_J, (WidgetEventListener) null);
           this.field_K.field_m = df.field_c;
           this.field_U.field_m = ImageProducerRasterBuffer.field_i;
@@ -597,7 +597,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
           this.field_F.field_m = nc.field_c;
           this.field_M.field_m = a.field_h;
           this.field_S.field_m = va.field_k;
-          this.field_T.field_m = gf.field_f;
+          this.field_T.field_m = ByteArrayPoolSupport.field_f;
           this.field_K.setFieldValidator(true, new AccountNameAvailabilityValidator(this.field_K));
           this.field_U.setFieldValidator(true, new EmailFormatValidator(this.field_U));
           this.field_H.setFieldValidator(true, new ConfirmedEmailAvailabilityValidator(this.field_H, this.field_U));

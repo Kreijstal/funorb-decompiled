@@ -64,7 +64,7 @@ final class DisplayNameSelectionPanel extends ComponentContainer implements Name
         }
     }
 
-    private final int computeInteger0316(int integerArgument1, String stringArgument2, UiComponent uiComponentArgument3, String stringArgument4, boolean booleanArgument5, int integerArgument6, int integerArgument7) {
+    private final int addLabeledFieldWithValidationMessage(int integerArgument1, String stringArgument2, UiComponent uiComponentArgument3, String stringArgument4, boolean booleanArgument5, int integerArgument6, int integerArgument7) {
         RuntimeException runtimeExceptionLocal1 = null;
         AccountFieldStatusIndicator uiComponentPart022Local2 = null;
         LabeledWidgetContainer uiComponentPart006Local3 = null;
@@ -213,7 +213,7 @@ final class DisplayNameSelectionPanel extends ComponentContainer implements Name
         return 100;
     }
 
-    private final int computeInteger0315(int integerArgument1, int integerArgument2, int integerArgument3, String stringArgument4, UiComponent uiComponentArgument5, String stringArgument6) {
+    private final int addLabeledFieldWithDefaultValidationMessage(int integerArgument1, int integerArgument2, int integerArgument3, String stringArgument4, UiComponent uiComponentArgument5, String stringArgument6) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int stackIntegerLocal3 = 0;
@@ -227,7 +227,7 @@ final class DisplayNameSelectionPanel extends ComponentContainer implements Name
         RuntimeException caughtExceptionLocal11 = null;
         try {
           integerLocal1 = -109 % ((integerArgument3 - 16) / 54);
-          stackIntegerLocal3 = this.computeInteger0316(35, stringArgument4, uiComponentArgument5, stringArgument6, false, integerArgument1, integerArgument2);
+          stackIntegerLocal3 = this.addLabeledFieldWithValidationMessage(35, stringArgument4, uiComponentArgument5, stringArgument6, false, integerArgument1, integerArgument2);
           return stackIntegerLocal3;
         } catch (java.lang.RuntimeException caughtParameterLocal12) {
           caughtExceptionLocal11 = caughtParameterLocal12;
@@ -400,7 +400,7 @@ final class DisplayNameSelectionPanel extends ComponentContainer implements Name
         int integerLocal5 = 200;
         integerLocal3 += 50;
         this.addChild(uiComponentLocal2, (byte) -55);
-        integerLocal3 = integerLocal3 + (5 + this.computeInteger0315(integerLocal3, 170, -107, MixedSupport109.stringState0476, this.uiComponentPart021State0001, MixedSupport061.stringState0260));
+        integerLocal3 = integerLocal3 + (5 + this.addLabeledFieldWithDefaultValidationMessage(integerLocal3, 170, -107, MixedSupport109.stringState0476, this.uiComponentPart021State0001, MixedSupport061.stringState0260));
         this.interactiveComponentState0002.setBounds(40, integerLocal5, -integerLocal5 + 496 >> 1, integerLocal3, -16555);
         this.interactiveComponentState0001.setBounds(40, 60, 3 + integerLocal4, integerLocal3 + 15, -16555);
         this.interactiveComponentState0001.callbackContract006State0001 = (WidgetEventListener) (this);

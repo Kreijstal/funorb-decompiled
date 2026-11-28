@@ -5,7 +5,7 @@ final class MusicPatch extends IntrusiveNode {
     PcmSample[] field_m;
     byte[] field_f;
     static String field_o;
-    un[] field_l;
+    MusicPatchEnvelope[] field_l;
     byte[] field_i;
     static IndexedSprite[][] field_g;
     int field_h;
@@ -27,7 +27,7 @@ final class MusicPatch extends IntrusiveNode {
         field_o = null;
     }
 
-    final boolean a(byte[] param0, int param1, SoundCache param2, int[] param3) {
+    final boolean prepareSamples(byte[] param0, int param1, SoundCache param2, int[] param3) {
         int var8 = 0;
         int stackIn_21_0 = 0;
         RuntimeException stackIn_24_0 = null;
@@ -118,7 +118,7 @@ final class MusicPatch extends IntrusiveNode {
     MusicPatch(byte[] param0) {
         int var11_int = 0;
         int incrementValue$0 = 0;
-        un dupTemp$8 = null;
+        MusicPatchEnvelope dupTemp$8 = null;
         int incrementValue$6 = 0;
         int var25_int = 0;
         int incrementValue$4 = 0;
@@ -140,11 +140,11 @@ final class MusicPatch extends IntrusiveNode {
         byte[] var11 = null;
         int var12 = 0;
         int var13_int = 0;
-        un[] var13 = null;
+        MusicPatchEnvelope[] var13 = null;
         int var14 = 0;
         int var15_int = 0;
         byte[] var15 = null;
-        un var15_ref = null;
+        MusicPatchEnvelope var15_ref = null;
         byte[] var16 = null;
         int var16_int = 0;
         int var17 = 0;
@@ -169,19 +169,19 @@ final class MusicPatch extends IntrusiveNode {
         int var37 = 0;
         PacketBuffer var38 = null;
         byte[] var39 = null;
-        un var40 = null;
+        MusicPatchEnvelope var40 = null;
         byte[] var41 = null;
         byte[] var42 = null;
         byte[] var43 = null;
         byte[] var44 = null;
-        un var45 = null;
+        MusicPatchEnvelope var45 = null;
         byte[] var46 = null;
         byte[] var47 = null;
-        un var48 = null;
-        un var49 = null;
-        un var50 = null;
-        un var51 = null;
-        un var52 = null;
+        MusicPatchEnvelope var48 = null;
+        MusicPatchEnvelope var49 = null;
+        MusicPatchEnvelope var50 = null;
+        MusicPatchEnvelope var51 = null;
+        MusicPatchEnvelope var52 = null;
         byte[] var53 = null;
         byte[] var54 = null;
         byte[] var55 = null;
@@ -246,7 +246,7 @@ final class MusicPatch extends IntrusiveNode {
         int var31Lifetime1Lifetime1;
         try {
           this.field_m = new PcmSample[128];
-          this.field_l = new un[128];
+          this.field_l = new MusicPatchEnvelope[128];
           this.field_i = new byte[128];
           this.field_j = new byte[128];
           this.field_k = new int[128];
@@ -311,9 +311,9 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             var12 = var9;
           }
-          var13 = new un[var12];
+          var13 = new MusicPatchEnvelope[var12];
           for (var14Lifetime1 = 0; var13.length > var14Lifetime1; var14Lifetime1++) {
-            dupTemp$8 = new un();
+            dupTemp$8 = new MusicPatchEnvelope();
             var13[var14Lifetime1] = dupTemp$8;
             var40 = dupTemp$8;
             var15_ref = var40;
@@ -376,7 +376,7 @@ final class MusicPatch extends IntrusiveNode {
               }
               var22 = var38.readVarInt(-1);
             }
-            this.field_n[var23] = (short)(this.field_n[var23] + (dda.a(2, var22 - 1) << 14));
+            this.field_n[var23] = (short)(this.field_n[var23] + (dda.bitwiseAnd(2, var22 - 1) << 14));
             var20Lifetime2--;
             this.field_k[var23] = var22;
           }
@@ -431,7 +431,7 @@ final class MusicPatch extends IntrusiveNode {
                   var20Lifetime5 = var10[var21Lifetime3++];
                 }
               }
-              this.field_l[var26] = (un) (var25);
+              this.field_l[var26] = (MusicPatchEnvelope) (var25);
               var20Lifetime5--;
             }
           }
@@ -627,7 +627,7 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final void b(boolean param0) {
+    final void releaseSampleIds(boolean param0) {
         this.field_k = null;
         if (param0) {
           MusicPatch.a(-113);

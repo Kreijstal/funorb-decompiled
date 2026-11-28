@@ -57,7 +57,7 @@ class w implements q {
             w.a(true);
           }
           var1_int = dfa.field_b - StatusEffectInfo.field_a;
-          StatusEffectInfo.field_a = sd.field_a - (var1_int >> 1);
+          StatusEffectInfo.field_a = ByteArrayPoolSupport.field_a - (var1_int >> 1);
           GasCloudSpecial.field_q = -(ula.field_f >> 1) + FridgeCreature.field_w;
           dfa.field_b = var1_int + StatusEffectInfo.field_a;
           var2 = GasCloudSpecial.field_q;
@@ -76,7 +76,7 @@ class w implements q {
             stackIn_12_0 = true;
             stackIn_13_1 = !(var4 < 0);
             var7 = AgeValidator.a(stackIn_12_0, stackIn_13_1, var6);
-            var8 = -(var7 >> 1) + sd.field_a;
+            var8 = -(var7 >> 1) + ByteArrayPoolSupport.field_a;
             if (var4 >= 0) {
               if (fw.field_i.field_g == var4) {
                 stackIn_18_0 = nj.field_j;
@@ -95,7 +95,7 @@ class w implements q {
               var2 = var2 + (ShieldEvent.field_r + (DraggableWidgetContainer.field_J + BoardView.field_t));
             } else {
               RasterBuffer.field_a.drawText(var6, var8, ah.field_l + var2, var5, -1);
-              var2 = var2 + un.field_i;
+              var2 = var2 + MusicPatchEnvelope.field_i;
             }
           }
           return;

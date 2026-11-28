@@ -141,7 +141,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           var2_refLifetime1 = BitPacketBuffer.field_o[9];
           if (!var2_refLifetime1.isLinked(false)) {
             var2_refLifetime1.setSamplePosition(0);
-            wj.field_j.addChildStream(var2_refLifetime1);
+            MusicPatch.field_j.addChildStream(var2_refLifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

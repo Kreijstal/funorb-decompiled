@@ -8,7 +8,7 @@ final class ao {
     static RgbSprite[] field_b;
     static String field_a;
 
-    static long a(long param0, long param1) {
+    static long bitwiseAnd(long param0, long param1) {
         return param0 & param1;
     }
 
@@ -32,19 +32,19 @@ final class ao {
               var5 = 0;
               var2 = var5;
               while (var5 < 112) {
-                cp.field_k[var5] = false;
+                MusicPatchEnvelope.field_k[var5] = false;
                 var5++;
               }
               bo.field_n = ContentTransitionDialog.field_Z;
             } else {
               while (bo.field_n != ContentTransitionDialog.field_Z) {
-                var2 = pl.field_n[ContentTransitionDialog.field_Z];
+                var2 = MusicPatchNode.field_n[ContentTransitionDialog.field_Z];
                 ContentTransitionDialog.field_Z = 127 & ContentTransitionDialog.field_Z + 1;
                 if (var2 < 0) {
-                  cp.field_k[~var2] = false;
+                  MusicPatchEnvelope.field_k[~var2] = false;
                   continue;
                 }
-                cp.field_k[var2] = true;
+                MusicPatchEnvelope.field_k[var2] = true;
               }
             }
             ah.field_g = LabeledWidgetContainer.field_A;

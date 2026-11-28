@@ -11,7 +11,7 @@ final class ThemeTips {
     static IndexedSprite[] indexedSpriteArrayState0004;
     static int integerState0351;
 
-    static long computeLong0822(long longArgument1, long longArgument2) {
+    static long bitwiseOr(long longArgument1, long longArgument2) {
         return longArgument1 | longArgument2;
     }
 

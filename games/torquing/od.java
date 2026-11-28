@@ -177,18 +177,18 @@ final class od extends am {
             for (var8 = 0; var8 < ci.field_c; var8++) {
               var9 = this.field_y * var8 / ci.field_c;
               var10 = this.field_w[var4 + var9];
-              var7[var8] = ie.a(var10 << 4, 4080);
-              var6[var8] = ie.a(65280, var10) >> 4;
-              var5[var8] = ie.a(16711680, var10) >> 12;
+              var7[var8] = ie.bitwiseAnd(var10 << 4, 4080);
+              var6[var8] = ie.bitwiseAnd(65280, var10) >> 4;
+              var5[var8] = ie.bitwiseAnd(16711680, var10) >> 12;
             }
           } else {
             for (var8 = 0; ci.field_c > var8; var8++) {
               incrementValue$0 = var4;
               var4++;
               var9 = this.field_w[incrementValue$0];
-              var7[var8] = ie.a(4080, var9 << 4);
-              var6[var8] = ie.a(4080, var9 >> 4);
-              var5[var8] = ie.a(var9 >> 12, 4080);
+              var7[var8] = ie.bitwiseAnd(4080, var9 << 4);
+              var6[var8] = ie.bitwiseAnd(4080, var9 >> 4);
+              var5[var8] = ie.bitwiseAnd(var9 >> 12, 4080);
             }
           }
         }

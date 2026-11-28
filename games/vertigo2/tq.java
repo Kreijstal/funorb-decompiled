@@ -226,7 +226,7 @@ final class tq {
                 var4 = new uh(ol.field_A);
                 lh.field_b.put(var4, (long)var3, 45);
               }
-              ph.a(var4, true, var1, true);
+              MidiNoteMask.a(var4, true, var1, true);
               ce.a(true, var4);
               return;
             }
@@ -319,7 +319,7 @@ final class tq {
                     return;
                   }
                   if (var2 == 20) {
-                    ph.a(gd.field_j, true, var1, false);
+                    MidiNoteMask.a(gd.field_j, true, var1, false);
                     return;
                   }
                   if (var2 == 21) {
@@ -419,7 +419,7 @@ final class tq {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -11);
             gd.field_j = new uh(ol.field_A);
             gd.field_j.setSecondaryKey(-1, (long)var3Lifetime1);
-            ph.a(gd.field_j, true, var1, false);
+            MidiNoteMask.a(gd.field_j, true, var1, false);
             Archive.field_h = 0L;
           } else {
             gd.field_j = null;

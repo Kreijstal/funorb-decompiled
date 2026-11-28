@@ -778,7 +778,7 @@ final class cj extends qf implements Cloneable {
                                         stackIn_41_4 = stackIn_39_4;
                                         stackIn_41_5 = stackIn_39_5;
                                         stackIn_41_6 = stackIn_39_6;
-                                        stackIn_41_7 = pl.field_B;
+                                        stackIn_41_7 = MusicPatchNode.field_B;
                                         statePc = 41;
                                         continue scanLoop1;
                                     }

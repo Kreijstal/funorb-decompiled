@@ -274,7 +274,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
             var5 = var9;
             var6 = param3;
             var7 = param0;
-            var9[var6] = var7 + (da.b(var9[var6], 16711422) >> 1);
+            var9[var6] = var7 + (da.bitwiseAnd(var9[var6], 16711422) >> 1);
             param3++;
             param2--;
           }

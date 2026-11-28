@@ -179,7 +179,7 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
               if (0 == var7) {
                 tb.field_f = tg.field_d;
               } else {
-                tb.field_f = qd.field_m;
+                tb.field_f = MusicPatchNode.field_m;
                 wg.field_B = var7;
                 StandardContentDialog.field_sb = -1;
               }
@@ -189,10 +189,10 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
               sj.field_h = tk.field_h.readLong((byte) 116);
               tk.field_h.position = 0;
               GzipInflater.a(param5, -27359, param1, param0, ModalDialog.field_K);
-              tb.field_f = dl.field_j;
+              tb.field_f = MusicPatchEnvelope.field_j;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (tb.field_f == dl.field_j &&
+            if (tb.field_f == MusicPatchEnvelope.field_j &&
               tk.a(81, 1)) {
               var7Lifetime1 = tk.field_h.readUnsignedByte(-106);
               wg.field_B = var7Lifetime1;
@@ -202,7 +202,7 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
                 var7Lifetime1 != 1) {
                 if (8 != var7Lifetime1) {
                   StandardContentDialog.field_sb = -1;
-                  tb.field_f = qd.field_m;
+                  tb.field_f = MusicPatchNode.field_m;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -295,7 +295,7 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
               stackIn_82_0 = wg.field_B;
               return stackIn_82_0;
             }
-            if (qd.field_m == tb.field_f &&
+            if (MusicPatchNode.field_m == tb.field_f &&
               jl.a(false)) {
               ImageProducerRasterBuffer.d(65280);
               if (wg.field_B == 7 &&

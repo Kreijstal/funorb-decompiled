@@ -283,16 +283,16 @@ final class lj {
                 var10 = var10 ^ 285L;
             }
             var12 = var10 ^ var2;
-            field_e[0][var0] = AlphaWidgetContainer.a(AlphaWidgetContainer.a(var4 << 8, AlphaWidgetContainer.a(var8 << 16, AlphaWidgetContainer.a(var10 << 24, AlphaWidgetContainer.a(var2 << 32, AlphaWidgetContainer.a(AlphaWidgetContainer.a(var2 << 48, var2 << 56), var6 << 40))))), var12);
+            field_e[0][var0] = AlphaWidgetContainer.bitwiseOr(AlphaWidgetContainer.bitwiseOr(var4 << 8, AlphaWidgetContainer.bitwiseOr(var8 << 16, AlphaWidgetContainer.bitwiseOr(var10 << 24, AlphaWidgetContainer.bitwiseOr(var2 << 32, AlphaWidgetContainer.bitwiseOr(AlphaWidgetContainer.bitwiseOr(var2 << 48, var2 << 56), var6 << 40))))), var12);
             for (var14 = 1; var14 < 8; var14++) {
-                field_e[var14][var0] = AlphaWidgetContainer.a(field_e[-1 + var14][var0] << 56, field_e[-1 + var14][var0] >>> 8);
+                field_e[var14][var0] = AlphaWidgetContainer.bitwiseOr(field_e[-1 + var14][var0] << 56, field_e[-1 + var14][var0] >>> 8);
             }
             var0++;
         }
         field_b[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = 8 * var0 - 8;
-            field_b[var0] = ba.a(r.a(255L, field_e[7][var1 + 7]), ba.a(r.a(65280L, field_e[6][var1 + 6]), ba.a(ba.a(r.a(4278190080L, field_e[4][var1 + 4]), ba.a(ba.a(ba.a(r.a(71776119061217280L, field_e[1][var1 + 1]), r.a(-72057594037927936L, field_e[0][var1])), r.a(field_e[2][2 + var1], 280375465082880L)), r.a(field_e[3][var1 + 3], 1095216660480L))), r.a(field_e[5][5 + var1], 16711680L))));
+            field_b[var0] = ba.bitwiseXor(r.bitwiseAnd(255L, field_e[7][var1 + 7]), ba.bitwiseXor(r.bitwiseAnd(65280L, field_e[6][var1 + 6]), ba.bitwiseXor(ba.bitwiseXor(r.bitwiseAnd(4278190080L, field_e[4][var1 + 4]), ba.bitwiseXor(ba.bitwiseXor(ba.bitwiseXor(r.bitwiseAnd(71776119061217280L, field_e[1][var1 + 1]), r.bitwiseAnd(-72057594037927936L, field_e[0][var1])), r.bitwiseAnd(field_e[2][2 + var1], 280375465082880L)), r.bitwiseAnd(field_e[3][var1 + 3], 1095216660480L))), r.bitwiseAnd(field_e[5][5 + var1], 16711680L))));
         }
         field_f = "Age:";
     }

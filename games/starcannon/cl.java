@@ -5,7 +5,7 @@ final class cl extends od {
     static int field_j;
     static AccountRequestState field_k;
 
-    static int a(int param0, int param1) {
+    static int bitwiseOr(int param0, int param1) {
         return param0 | param1;
     }
 

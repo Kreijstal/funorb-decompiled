@@ -354,7 +354,7 @@ final class ak {
                     }
                   }
                   if (var22 != null &&
-                    mc.a(var22, 0)) {
+                    ByteArrayPoolSupport.a(var22, 0)) {
                     var9[1][var14] = we.field_i;
                     var10[1][var14] = null;
                     var11[1][var14] = var23;

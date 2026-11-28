@@ -246,10 +246,10 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         RuntimeException decompiledCaughtException = null;
         var4 = Bounce.field_N;
         try {
-          if (null != ch.field_h) {
-            ch.field_h.removeFocusListener((java.awt.event.FocusListener) (this));
-            ch.field_h.getParent().setBackground(java.awt.Color.black);
-            ch.field_h.getParent().remove((java.awt.Component) ((Object) ch.field_h));
+          if (null != MusicPatchEnvelope.field_h) {
+            MusicPatchEnvelope.field_h.removeFocusListener((java.awt.event.FocusListener) (this));
+            MusicPatchEnvelope.field_h.getParent().setBackground(java.awt.Color.black);
+            MusicPatchEnvelope.field_h.getParent().remove((java.awt.Component) ((Object) MusicPatchEnvelope.field_h));
           }
           boolean decompiledFrameRemainder0 = true;
           if (IntrusiveNode.field_b != null) {
@@ -282,21 +282,21 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           if (param0 != 12955) {
             this.focusGained((java.awt.event.FocusEvent) null);
           }
-          ch.field_h = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
-          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) ch.field_h));
-          ch.field_h.setSize(kj.field_i, jc.field_i);
-          ch.field_h.setVisible(true);
+          MusicPatchEnvelope.field_h = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
+          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) MusicPatchEnvelope.field_h));
+          MusicPatchEnvelope.field_h.setSize(MidiNoteMask.field_i, jc.field_i);
+          MusicPatchEnvelope.field_h.setVisible(true);
           boolean decompiledSharedTail0 = (var2 == SoundCache.field_h);
           if (!decompiledSharedTail0) {
-            ch.field_h.setLocation(NanoFrameTimer.field_e, ob.field_d);
+            MusicPatchEnvelope.field_h.setLocation(NanoFrameTimer.field_e, ob.field_d);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
             var3 = SoundCache.field_h.getInsets();
-            ch.field_h.setLocation(var3.left + NanoFrameTimer.field_e, ob.field_d + var3.top);
+            MusicPatchEnvelope.field_h.setLocation(var3.left + NanoFrameTimer.field_e, ob.field_d + var3.top);
           }
-          ch.field_h.addFocusListener((java.awt.event.FocusListener) (this));
-          ch.field_h.requestFocus();
+          MusicPatchEnvelope.field_h.addFocusListener((java.awt.event.FocusListener) (this));
+          MusicPatchEnvelope.field_h.requestFocus();
           ResourceArchive.field_f = true;
           GuestPlayConfirmationForm.field_H = true;
           ae.field_b = true;
@@ -443,11 +443,11 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
     public final void windowIconified(java.awt.event.WindowEvent param0) {
     }
 
-    final static rj a(ResourceArchive param0, int param1, int param2) {
+    final static MusicPatch loadMusicPatch(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_7_0 = null;
-        rj stackIn_9_0 = null;
+        MusicPatch stackIn_9_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -459,9 +459,9 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           var3 = param0.getFlatFile(param1 ^ 121, param2);
           if (var3 == null) {
             stackIn_7_0 = null;
-            return (rj) (stackIn_7_0);
+            return (MusicPatch) (stackIn_7_0);
           }
-          stackIn_9_0 = new rj(var3);
+          stackIn_9_0 = new MusicPatch(var3);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -527,8 +527,8 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           try {
             try {
               if (og.field_c != null) {
-                kl.field_g = kl.field_g + 1;
-                if (kl.field_g >= 3) {
+                MusicPatchNode.field_g = MusicPatchNode.field_g + 1;
+                if (MusicPatchNode.field_g >= 3) {
                   this.a((byte) 110, "alreadyloaded");
                   return;
                 }
@@ -541,7 +541,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
               }
               jc.field_i = param5;
               ej.field_d = param5;
-              kj.field_i = param6;
+              MidiNoteMask.field_i = param6;
               ImageProducerRasterBuffer.field_k = param6;
               ob.field_d = 0;
               NameSuggestionsPanel.field_E = param4;
@@ -549,7 +549,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
               ResourceArchive.field_j = DiskCacheWorker.b(0);
               dupTemp$0 = new PlatformTaskDispatcher(param0, param1, param2, true);
               DebouncedFieldValidator.field_e = dupTemp$0;
-              jj.field_a = dupTemp$0;
+              ByteArrayPoolSupport.field_a = dupTemp$0;
               var8 = DebouncedFieldValidator.field_e.requestThreadStart(1, (byte) -102, (Runnable) (this));
               while (true) {
                 if (0 == var8.status) {
@@ -703,9 +703,9 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
                 }
                 oh.a(-117);
                 this.d(12955);
-                ca.field_d = w.a(kj.field_i, (java.awt.Component) ((Object) ch.field_h), jc.field_i, (byte) 41);
+                ca.field_d = w.a(MidiNoteMask.field_i, (java.awt.Component) ((Object) MusicPatchEnvelope.field_h), jc.field_i, (byte) 41);
                 this.initializeClient((byte) -6);
-                ff.field_D = jj.a(10000);
+                ff.field_D = ByteArrayPoolSupport.a(10000);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (ua.field_d != 0L) {
@@ -724,7 +724,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
                   do {
                     if (!(var3 < nl.field_c)) {
                       this.renderAppletFrame(1);
-                      pg.a((byte) -109, ch.field_h, DebouncedFieldValidator.field_e);
+                      pg.a((byte) -109, MusicPatchEnvelope.field_h, DebouncedFieldValidator.field_e);
                       break;
                     }
                     this.processClientTick(-111);
@@ -778,10 +778,10 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
             decompiledCaughtException = decompiledCaughtParameter0;
             var3_ref = (Exception) (Object) decompiledCaughtException;
           }
-          if (ch.field_h != null) {
+          if (MusicPatchEnvelope.field_h != null) {
             try {
-              ch.field_h.removeFocusListener((java.awt.event.FocusListener) (this));
-              ch.field_h.getParent().remove((java.awt.Component) ((Object) ch.field_h));
+              MusicPatchEnvelope.field_h.removeFocusListener((java.awt.event.FocusListener) (this));
+              MusicPatchEnvelope.field_h.getParent().remove((java.awt.Component) ((Object) MusicPatchEnvelope.field_h));
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3_ref = (Exception) (Object) decompiledCaughtException;
@@ -845,17 +845,17 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           if (fieldTemp$1 > 50) {
             ae.field_b = true;
             fl.field_a = fl.field_a - 50;
-            ch.field_h.setSize(kj.field_i, jc.field_i);
-            ch.field_h.setVisible(true);
+            MusicPatchEnvelope.field_h.setSize(MidiNoteMask.field_i, jc.field_i);
+            MusicPatchEnvelope.field_h.setVisible(true);
             boolean decompiledSharedTail0 = (null != SoundCache.field_h &&
               null == IntrusiveNode.field_b);
             if (!decompiledSharedTail0) {
-              ch.field_h.setLocation(NanoFrameTimer.field_e, ob.field_d);
+              MusicPatchEnvelope.field_h.setLocation(NanoFrameTimer.field_e, ob.field_d);
               decompiledSharedTail0 = (Bounce.field_N != 0);
             }
             if (decompiledSharedTail0) {
               var6 = SoundCache.field_h.getInsets();
-              ch.field_h.setLocation(var6.left + NanoFrameTimer.field_e, ob.field_d + var6.top);
+              MusicPatchEnvelope.field_h.setLocation(var6.left + NanoFrameTimer.field_e, ob.field_d + var6.top);
             }
           }
           this.renderClientFrame(4);
@@ -943,7 +943,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
             !FullscreenFocusCanvas.field_d) {
             ua.field_d = fa.correctedCurrentTimeMillis(112);
             SecondaryNodeDeque.sleepMillis(5000L, 19406);
-            jj.field_a = null;
+            ByteArrayPoolSupport.field_a = null;
             this.shutdownApplet(false, (byte) -57);
             return;
           }

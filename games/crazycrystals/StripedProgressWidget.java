@@ -126,7 +126,7 @@ final class StripedProgressWidget extends UiWidget {
             if (jh.field_e != 4) {
               return -1;
             }
-            oi.field_d.a(dm.field_h, so.field_c, false);
+            oi.field_d.a(MidiNoteMask.field_h, so.field_c, false);
             jh.field_e = 0;
             so.field_c = null;
             AgeValidator.field_k = null;

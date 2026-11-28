@@ -682,7 +682,7 @@ final class PlayerAvatarRenderer extends LevelRenderable {
           this.field_B.field_d = var2;
           this.field_B.field_q = var3;
           mj.a(this.field_w, this.field_z, this.field_E, this.field_s, nf.field_q, (byte) -81, this.field_x);
-          qq.a(nf.field_q, 3, eb.field_f, 3, 9);
+          ArrayBlockSupport.copyIntRange(nf.field_q, 3, eb.field_f, 3, 9);
           if (this.field_l == 5 ||
             this.field_l == 13) {
             eb.field_f[7] = 65535;

@@ -167,7 +167,7 @@ final class gi {
         DelegatingCanvas.a(SoftwareRasterizer.field_b, param1, param5, param2, 30979, param7, param3, param0, param6);
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseXor(int param0, int param1) {
         return param0 ^ param1;
     }
 

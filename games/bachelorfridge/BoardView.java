@@ -880,7 +880,7 @@ final class BoardView {
         if (param0 != -22048) {
           this.field_m = (Sprite) null;
         }
-        ArrayOperations.a(var11, 0, var14.length, 2147483646);
+        ArrayOperations.fillInts(var11, 0, var14.length, 2147483646);
         var3 = 0;
         var4 = this.field_i.field_o;
         for (var5 = 0; var4.length > var5; var5++) {
@@ -1209,7 +1209,7 @@ final class BoardView {
                   var11 = var11 * var10;
                   var12 = var9 & 65280;
                   var12 = var12 * var10;
-                  param4.field_v[var6_int] = MassPoisonSpecial.a(dda.a(var12, 16711680), dda.a(-16711936, var11)) >>> 8;
+                  param4.field_v[var6_int] = MassPoisonSpecial.bitwiseOr(dda.bitwiseAnd(var12, 16711680), dda.bitwiseAnd(-16711936, var11)) >>> 8;
                 }
               }
               var8++;
@@ -1409,7 +1409,7 @@ final class BoardView {
         this.a(64, -1, this.field_E, -64, 1, (byte) -127, 2, 2);
         this.field_l = this.field_A.copy();
         this.a(192, -1, this.field_l, 64, -1, (byte) -100, 2, -2);
-        ProgressDialog.field_U.a((byte) 126);
+        ProgressDialog.field_U.setAsRasterTarget((byte) 126);
     }
 
     private final int c(int param0, int param1) {
@@ -1457,7 +1457,7 @@ final class BoardView {
                   var16 = var16 * var15;
                   var17 = 65280 & var12;
                   var17 = var17 * var15;
-                  param2.field_v[var9_int] = MassPoisonSpecial.a(dda.a(var17, 16711680), dda.a(-16711936, var16)) >>> 8;
+                  param2.field_v[var9_int] = MassPoisonSpecial.bitwiseOr(dda.bitwiseAnd(var17, 16711680), dda.bitwiseAnd(-16711936, var16)) >>> 8;
                 }
               }
               var11++;
@@ -2594,7 +2594,7 @@ final class BoardView {
           this.field_i = param0;
           this.field_I = this.field_i.field_h.tiles;
           this.field_k = MovementAnimation.a(0, (ResourceArchive) null, this.field_i.field_h.field_E);
-          ProgressDialog.field_U.a((byte) 127);
+          ProgressDialog.field_U.setAsRasterTarget((byte) 127);
           this.field_z = this.field_i.field_h.height;
           this.field_a = this.field_i.field_h.width;
           this.field_j = new bq[this.field_a + 2][2 + this.field_z];

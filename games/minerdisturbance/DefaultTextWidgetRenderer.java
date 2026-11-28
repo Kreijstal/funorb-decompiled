@@ -133,14 +133,14 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
             var7 = null;
             var8 = -4 / ((param0 - 18) / 41);
             if (UiWidget.field_z != null) {
-              if (null == aa.field_h) {
-                aa.field_h = new BufferedRandomAccessFile[ProgressDialog.field_fb.field_e.length];
+              if (null == GrowableIntArray.field_h) {
+                GrowableIntArray.field_h = new BufferedRandomAccessFile[ProgressDialog.field_fb.field_e.length];
               }
-              if (null == aa.field_h[param1]) {
-                aa.field_h[param1] = new BufferedRandomAccessFile(ProgressDialog.field_fb.field_e[param1], 12000, 0);
+              if (null == GrowableIntArray.field_h[param1]) {
+                GrowableIntArray.field_h[param1] = new BufferedRandomAccessFile(ProgressDialog.field_fb.field_e[param1], 12000, 0);
                 ProgressDialog.field_fb.field_e[param1] = null;
               }
-              var7 = new SectorCacheStore(param1, UiWidget.field_z, aa.field_h[param1], 2097152);
+              var7 = new SectorCacheStore(param1, UiWidget.field_z, GrowableIntArray.field_h[param1], 2097152);
             }
             var9 = ValidatedTextField.field_U.a(param1, (SectorCacheStore) (var7), param2, 0, (SectorCacheStore) (var6));
             if (param3) {
@@ -384,7 +384,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         }
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseXor(int param0, int param1) {
         return param0 ^ param1;
     }
 

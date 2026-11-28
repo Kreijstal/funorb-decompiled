@@ -123,7 +123,7 @@ final class qa {
             qa.a(false, (String) null, (String) null, -53, (String) null, true, -83);
           }
           for (var3 = 0; var3 < param1.length; var3++) {
-            var6[var3] = bc.a(65535, (int) param1[var3]);
+            var6[var3] = bc.bitwiseAnd(65535, (int) param1[var3]);
           }
           stackIn_7_0 = var2;
           return stackIn_7_0;

@@ -55,7 +55,7 @@ final class vk {
         try {
           var2 = tb.a(-119, "jagex-last-login-method", param1);
           if (var2 == null) {
-            stackIn_4_0 = gm.field_j;
+            stackIn_4_0 = MusicPatchEnvelope.field_j;
             return stackIn_4_0;
           }
           var3 = fm.a(param0);
@@ -66,7 +66,7 @@ final class vk {
               return stackIn_10_0;
             }
           }
-          stackIn_13_0 = gm.field_j;
+          stackIn_13_0 = MusicPatchEnvelope.field_j;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

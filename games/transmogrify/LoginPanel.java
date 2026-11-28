@@ -33,7 +33,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
               if (this.field_w == param0) {
                 if (!this.field_K) {
                   if (this.field_E) {
-                    kc.a((byte) -128);
+                    MusicPatchNode.a((byte) -128);
                   } else {
                     qa.b(param1 - 13);
                   }
@@ -166,7 +166,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = te.field_f;
+              stackIn_19_3 = GrowableIntArray.field_f;
             }
             this.field_w = new InteractiveWidget(stackIn_19_3, (WidgetEventListener) null);
             if (this.field_y) {
@@ -212,7 +212,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             var8 = SecondaryNodeDeque.field_c;
           } else {
             if (of.field_f == var9) {
-              var8 = te.field_b;
+              var8 = GrowableIntArray.field_b;
             }
           }
           dupTemp$0 = new LabeledWidgetContainer(10, this.field_n, this.field_l - 20, 25, this.field_L, false, 80, 3, var7, 16777215, var8);
@@ -285,7 +285,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
           return;
         }
         try {
-          jj.field_a.a(param3, !param1 ? true : false, param2, 1000000, param0, 100);
+          jj.field_a.switchTrack(param3, !param1 ? true : false, param2, 1000000, param0, 100);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ff.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

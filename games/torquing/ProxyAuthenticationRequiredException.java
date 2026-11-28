@@ -79,7 +79,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
 
     static {
         field_c = new int[25];
-        dk.a(field_c, 0, 25, -1);
+        ArrayBlockSupport.fillInts(field_c, 0, 25, -1);
         field_c[1] = 0;
         field_c[16] = 6;
         field_c[3] = 2;

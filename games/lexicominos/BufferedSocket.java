@@ -116,9 +116,9 @@ final class BufferedSocket implements Runnable {
           var4 = var15.readUnsignedByte(true);
           if (var4 != 0) {
             var5 = var3.field_j;
-            ph.field_a[0] = og.field_c;
+            ByteArrayPoolSupport.field_a[0] = og.field_c;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              ph.field_a[var6_int] = var13.readString(false);
+              ByteArrayPoolSupport.field_a[var6_int] = var13.readString(false);
             }
             fb.a((byte) -107, var5, var4);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
@@ -137,12 +137,12 @@ final class BufferedSocket implements Runnable {
             var10 = 0;
             while (var8 > var9) {
               var11 = ff.field_a[var9];
-              var6[0][var10] = ph.field_a[var11];
+              var6[0][var10] = ByteArrayPoolSupport.field_a[var11];
               var19[0][4 * var10] = we.field_g[var11];
               var19[0][1 + 4 * var10] = DropTargetWidgetContainer.field_D[var11];
               var19[0][2 + var10 * 4] = FullscreenNoticeType.field_a[var11];
               var19[0][var10 * 4 + 3] = MidiPcmStream.field_N[var11];
-              if (StripedProgressWidget.a(ph.field_a[var11], -113) &&
+              if (StripedProgressWidget.a(ByteArrayPoolSupport.field_a[var11], -113) &&
                 FullscreenNoticeType.field_a[var11] + (DropTargetWidgetContainer.field_D[var11] + MidiPcmStream.field_N[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -155,12 +155,12 @@ final class BufferedSocket implements Runnable {
             var10Lifetime1 = var14;
             while (var8 > var9Lifetime1) {
               var11Lifetime1 = ff.field_a[var5 + var9Lifetime1];
-              var6[1][var14] = ph.field_a[var11Lifetime1];
+              var6[1][var14] = ByteArrayPoolSupport.field_a[var11Lifetime1];
               var19[1][var14 * 4] = we.field_g[var11Lifetime1];
               var19[1][1 + 4 * var14] = DropTargetWidgetContainer.field_D[var11Lifetime1];
               var19[1][2 + 4 * var14] = FullscreenNoticeType.field_a[var11Lifetime1];
               var19[1][var14 * 4 + 3] = MidiPcmStream.field_N[var11Lifetime1];
-              if (StripedProgressWidget.a(ph.field_a[var11Lifetime1], -101) &&
+              if (StripedProgressWidget.a(ByteArrayPoolSupport.field_a[var11Lifetime1], -101) &&
                 0 == MidiPcmStream.field_N[var11Lifetime1] + FullscreenNoticeType.field_a[var11Lifetime1] + DropTargetWidgetContainer.field_D[var11Lifetime1]) {
                 var6[1][var14] = null;
                 var14--;

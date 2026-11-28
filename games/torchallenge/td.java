@@ -37,7 +37,7 @@ final class td {
         int var8 = 0;
         var8 = TorChallenge.field_F ? 1 : 0;
         try {
-          this.field_b[this.field_a] = (byte)p.a((int) this.field_b[this.field_a], 128 >>> jh.a(this.field_g, 7));
+          this.field_b[this.field_a] = (byte)p.bitwiseOr((int) this.field_b[this.field_a], 128 >>> jh.bitwiseAnd(this.field_g, 7));
           this.field_a = this.field_a + 1;
           if (this.field_a > 32) {
             while (this.field_a < 64) {
@@ -56,7 +56,7 @@ final class td {
             this.field_a = this.field_a + 1;
             this.field_b[fieldTemp$1] = (byte) 0;
           }
-          he.copyByteRange(this.field_d, 0, this.field_b, 32, 32);
+          ArrayBlockSupport.copyByteRange(this.field_d, 0, this.field_b, 32, 32);
           this.b(-106);
           var4_int = 0;
           var5 = param2;
@@ -167,7 +167,7 @@ final class td {
             var8 = param2[var5_int] << var6 & 255 | (param2[var5_int + 1] & 255) >>> 8 - var6;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_b[this.field_a] = (byte)p.a((int) this.field_b[this.field_a], var8 >>> var7);
+              this.field_b[this.field_a] = (byte)p.bitwiseOr((int) this.field_b[this.field_a], var8 >>> var7);
               this.field_g = this.field_g + (-var7 + 8);
               this.field_a = this.field_a + 1;
               if (this.field_g == 512) {
@@ -175,7 +175,7 @@ final class td {
                 this.field_g = 0;
                 this.field_a = 0;
               }
-              this.field_b[this.field_a] = (byte)jh.a(255, var8 << -var7 + 8);
+              this.field_b[this.field_a] = (byte)jh.bitwiseAnd(255, var8 << -var7 + 8);
               param0 = param0 - 8L;
               var5_int++;
               this.field_g = this.field_g + var7;
@@ -187,7 +187,7 @@ final class td {
             stackIn_17_0 = 255;
             stackIn_17_1 = param2[var5_int] << var6;
             var8Lifetime1 = stackIn_17_0 & stackIn_17_1;
-            this.field_b[this.field_a] = (byte)p.a((int) this.field_b[this.field_a], var8Lifetime1 >>> var7);
+            this.field_b[this.field_a] = (byte)p.bitwiseOr((int) this.field_b[this.field_a], var8Lifetime1 >>> var7);
           } else {
             var8Lifetime1 = 0;
           }
@@ -200,7 +200,7 @@ final class td {
               this.field_g = 0;
               this.field_a = 0;
             }
-            this.field_b[this.field_a] = (byte)jh.a(var8Lifetime1 << -var7 + 8, 255);
+            this.field_b[this.field_a] = (byte)jh.bitwiseAnd(var8Lifetime1 << -var7 + 8, 255);
             this.field_g = this.field_g + (int)param0;
           } else {
             this.field_g = (int)((long)this.field_g + param0);
@@ -242,7 +242,7 @@ final class td {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_k[var2] = GameClientBase.a(ba.a((long)this.field_b[var3 + 7], 255L), GameClientBase.a(GameClientBase.a(ba.a((long)this.field_b[var3 + 5] << 16, 16711680L), GameClientBase.a(ba.a((long)this.field_b[var3 + 4] << 24, 4278190080L), GameClientBase.a(ba.a(1095216660480L, (long)this.field_b[var3 + 3] << 32), GameClientBase.a(GameClientBase.a(ba.a(255L, (long)this.field_b[1 + var3]) << 48, (long)this.field_b[var3] << 56), ba.a(255L, (long)this.field_b[var3 + 2]) << 40)))), ba.a(65280L, (long)this.field_b[var3 + 6] << 8)));
+          this.field_k[var2] = GameClientBase.bitwiseXor(ba.bitwiseAnd((long)this.field_b[var3 + 7], 255L), GameClientBase.bitwiseXor(GameClientBase.bitwiseXor(ba.bitwiseAnd((long)this.field_b[var3 + 5] << 16, 16711680L), GameClientBase.bitwiseXor(ba.bitwiseAnd((long)this.field_b[var3 + 4] << 24, 4278190080L), GameClientBase.bitwiseXor(ba.bitwiseAnd(1095216660480L, (long)this.field_b[var3 + 3] << 32), GameClientBase.bitwiseXor(GameClientBase.bitwiseXor(ba.bitwiseAnd(255L, (long)this.field_b[1 + var3]) << 48, (long)this.field_b[var3] << 56), ba.bitwiseAnd(255L, (long)this.field_b[var3 + 2]) << 40)))), ba.bitwiseAnd(65280L, (long)this.field_b[var3 + 6] << 8)));
           var3 += 8;
           var2++;
         }
@@ -253,7 +253,7 @@ final class td {
           dupTemp$0 = this.field_l[var2Lifetime1];
           arrayValue$1 = this.field_k[var2Lifetime1];
           this.field_h[var2Lifetime1] = dupTemp$0;
-          this.field_p[var2Lifetime1] = GameClientBase.a(arrayValue$1, dupTemp$0);
+          this.field_p[var2Lifetime1] = GameClientBase.bitwiseXor(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; 10 >= var2Lifetime2; var2Lifetime2++) {
           for (var3Lifetime1 = 0; 8 > var3Lifetime1; var3Lifetime1++) {
@@ -261,7 +261,7 @@ final class td {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_f[var3Lifetime1] = GameClientBase.a(this.field_f[var3Lifetime1], oh.field_b[var4][jh.a(255, (int)(this.field_h[jh.a(7, var3Lifetime1 - var4)] >>> var5))]);
+              this.field_f[var3Lifetime1] = GameClientBase.bitwiseXor(this.field_f[var3Lifetime1], oh.field_b[var4][jh.bitwiseAnd(255, (int)(this.field_h[jh.bitwiseAnd(7, var3Lifetime1 - var4)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -269,14 +269,14 @@ final class td {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_h[var3Lifetime1Lifetime1] = this.field_f[var3Lifetime1Lifetime1];
           }
-          this.field_h[0] = GameClientBase.a(this.field_h[0], oh.field_f[var2Lifetime2]);
+          this.field_h[0] = GameClientBase.bitwiseXor(this.field_h[0], oh.field_f[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_f[var3Lifetime1Lifetime2] = this.field_h[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_f[var3Lifetime1Lifetime2] = GameClientBase.a(this.field_f[var3Lifetime1Lifetime2], oh.field_b[var7][jh.a(255, (int)(this.field_p[jh.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
+              this.field_f[var3Lifetime1Lifetime2] = GameClientBase.bitwiseXor(this.field_f[var3Lifetime1Lifetime2], oh.field_b[var7][jh.bitwiseAnd(255, (int)(this.field_p[jh.bitwiseAnd(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -286,7 +286,7 @@ final class td {
           }
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_l[var2Lifetime3] = GameClientBase.a(this.field_l[var2Lifetime3], GameClientBase.a(this.field_k[var2Lifetime3], this.field_p[var2Lifetime3]));
+          this.field_l[var2Lifetime3] = GameClientBase.bitwiseXor(this.field_l[var2Lifetime3], GameClientBase.bitwiseXor(this.field_k[var2Lifetime3], this.field_p[var2Lifetime3]));
         }
     }
 

@@ -45,7 +45,7 @@ final class de {
               var9 = new int[var3];
               var27 = var9;
               for (var6_int = 0; var3 > var6_int; var6_int++) {
-                var9[var6_int] = td.field_m[jh.a((int) var26[var6_int], 255)];
+                var9[var6_int] = td.field_m[jh.bitwiseAnd((int) var26[var6_int], 255)];
               }
               var1[var2] = new Sprite(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], MusicPatchPcmStream.field_r[var2], TextLayout.field_e[var2], var27);
             } else {
@@ -54,7 +54,7 @@ final class de {
               var13 = var16;
               var6 = var13;
               for (var7 = 0; var3 > var7; var7++) {
-                var6[var7] = p.a(jh.a(255, (int) var28[var7]) << 24, td.field_m[jh.a(255, (int) var26[var7])]);
+                var6[var7] = p.bitwiseOr(jh.bitwiseAnd(255, (int) var28[var7]) << 24, td.field_m[jh.bitwiseAnd(255, (int) var26[var7])]);
               }
               var1[var2] = (Sprite) ((Object) new ArgbSprite(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], MusicPatchPcmStream.field_r[var2], TextLayout.field_e[var2], var16));
             }
@@ -69,7 +69,7 @@ final class de {
               var9 = new int[var3];
               var30 = var9;
               for (var6_int = 0; var3 > var6_int; var6_int++) {
-                var9[var6_int] = td.field_m[jh.a((int) var29[var6_int], 255)];
+                var9[var6_int] = td.field_m[jh.bitwiseAnd((int) var29[var6_int], 255)];
               }
               var1[var2] = new Sprite(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], MusicPatchPcmStream.field_r[var2], TextLayout.field_e[var2], var30);
             } else {
@@ -78,7 +78,7 @@ final class de {
               var13 = var16;
               var6 = var13;
               for (var7 = 0; var3 > var7; var7++) {
-                var6[var7] = p.a(jh.a(255, (int) var31[var7]) << 24, td.field_m[jh.a(255, (int) var29[var7])]);
+                var6[var7] = p.bitwiseOr(jh.bitwiseAnd(255, (int) var31[var7]) << 24, td.field_m[jh.bitwiseAnd(255, (int) var29[var7])]);
               }
               var1[var2] = (Sprite) ((Object) new ArgbSprite(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], MusicPatchPcmStream.field_r[var2], TextLayout.field_e[var2], var16));
             }

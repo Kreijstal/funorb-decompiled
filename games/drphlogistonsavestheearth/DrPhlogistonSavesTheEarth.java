@@ -222,7 +222,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           FullscreenNoticeType.a((byte) 9);
           if (this.field_C &&
             !s.field_a.hasMidiData(16)) {
-            sc.a(-1, true, PasswordValidator.field_q);
+            ByteArrayPoolSupport.a(-1, true, PasswordValidator.field_q);
           }
           if (df.field_l != null &&
             df.field_l.focusLost) {
@@ -404,7 +404,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           c.field_a[2] = eh.a("", (byte) -96, kf.field_d, "powerupx4");
           c.field_a[3] = eh.a("", (byte) -92, kf.field_d, "powerupx5");
           c.field_a[4] = eh.a("", (byte) -55, kf.field_d, "powerupx6");
-          ri.field_b = eh.a("", (byte) -71, kf.field_d, "powerupshield");
+          MusicPatchEnvelope.field_b = eh.a("", (byte) -71, kf.field_d, "powerupshield");
           NodeHashTableIterator.field_d = eh.a("", (byte) -110, kf.field_d, "powerupweapon");
           SingleChildWidgetContainer.f(10);
           di.field_b = ij.a("awardarray_big", (byte) 63, kf.field_d, "");
@@ -538,7 +538,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           IntrusiveNode.clearStaticReferences(10589);
           MidiPcmStream.clearDeclaredStaticReferences(-921185753);
           tg.clearStaticReferences(0);
-          cc.clearStaticReferences((byte) -8);
+          MusicPatchNode.clearStaticReferences((byte) -8);
           MidiFileReader.clearStaticReferences();
           MusicPatchPcmStream.clearDeclaredStaticReferences(-112);
           ml.clearStaticReferences(!param0);
@@ -624,7 +624,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           ByteStorage.clearStaticReferences(67);
           Bzip2Decompressor.clearStaticReferences();
           lc.resetStaticState((byte) 111);
-          sc.a(-63);
+          ByteArrayPoolSupport.a(-63);
           ki.clearStaticReferences(true);
           hb.clearStaticReferences((byte) 101);
           ch.clearStaticReferences((byte) 94);
@@ -651,12 +651,12 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           ProxyAuthenticationRequiredException.clearStaticReferences(65280);
           NanoFrameTimer.clearStaticReferences(66);
           ImageProducerRasterBuffer.clearStaticReferences(-57);
-          ga.clearStaticReferences((byte) -4);
+          MidiNoteMask.clearStaticReferences((byte) -4);
           wb.b(34);
           gg.b(-339514552);
           nj.b(0);
-          ig.clearDeclaredStaticReferences(-15877);
-          ri.clearStaticReferences(param0);
+          MusicPatch.clearDeclaredStaticReferences(-15877);
+          MusicPatchEnvelope.clearStaticReferences(param0);
           LabeledWidgetContainer.resetStaticState(3);
           ValidatedTextField.n(-1);
           EditableTextField.clearStaticReferences((byte) 78);
@@ -676,7 +676,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           hh.a(false);
           RichTextLayout.clearStaticReferences((byte) 99);
           DirectByteStorage.resetStaticState((byte) 56);
-          rb.clearStaticReferences(0);
+          GrowableIntArray.clearStaticReferences(0);
           DraggableWidgetContainer.clearDeclaredStaticReferences(2147483647);
           DropTargetWidgetContainer.clearDeclaredStaticReferences(7624);
           sa.clearStaticReferences(250);
@@ -1086,7 +1086,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             }
           }
           if (!oh.a(param0 + 8755)) {
-            ri.field_f = BufferedRandomAccessFile.a(4, (byte) -125);
+            MusicPatchEnvelope.field_f = BufferedRandomAccessFile.a(4, (byte) -125);
             if (null != sd.field_a) {
               bf.field_h = sd.field_a.j((byte) -68);
             }
@@ -1657,7 +1657,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           uk.field_h.h();
           MouseWheelInput.field_f.h();
           nj.field_o.h();
-          cc.field_w.h();
+          MusicPatchNode.field_w.h();
           b.field_k.h();
           ArchiveRequest.field_C.setAsRasterTarget(107);
           return;
@@ -1797,8 +1797,8 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           bb.field_b.g();
           la.field_a = t.field_a.e();
           la.field_a.f();
-          ri.field_o = bb.field_b.e();
-          ri.field_o.f();
+          MusicPatchEnvelope.field_o = bb.field_b.e();
+          MusicPatchEnvelope.field_o.f();
           ek.field_m = eh.a("", (byte) -115, kf.field_d, "claw_h_bar");
           cl.field_t = eh.a("", (byte) -57, kf.field_d, "claw_v_bar");
           tb.field_d = cl.field_t.e();
@@ -2012,7 +2012,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           this.a(99, ValidatedTextField.field_W);
           this.a(98, eg.field_f);
           MouseWheelInput.field_a = ij.a("human_abductee_male", (byte) 67, kf.field_d, "");
-          cc.field_y = ij.a("human_abductee_female", (byte) 87, kf.field_d, "");
+          MusicPatchNode.field_y = ij.a("human_abductee_female", (byte) 87, kf.field_d, "");
           AccountServiceResult.field_e = ij.a("human_abductee_baby", (byte) 95, kf.field_d, "");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2085,10 +2085,10 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
                 we.a(hj.a(AccountCreationResultPanel.field_Fb, ui.field_a, r.field_a, 0, 17733), -83, 10.0f);
                 return false;
               }
-              we.a(ValidatedTextField.a(wi.field_h, ig.field_o, 34, "", DelegatingCanvas.field_b), -105, 8.0f);
+              we.a(ValidatedTextField.a(wi.field_h, MusicPatch.field_o, 34, "", DelegatingCanvas.field_b), -105, 8.0f);
               return false;
             }
-            we.a(ValidatedTextField.a(wi.field_h, ig.field_o, 34, "", aa.field_b), -88, 5.0f);
+            we.a(ValidatedTextField.a(wi.field_h, MusicPatch.field_o, 34, "", aa.field_b), -88, 5.0f);
             return false;
           }
           if (null != DelegatingCanvas.field_b) {
@@ -2113,7 +2113,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             s.field_a.prepareTrackSamples(0, ui.field_a, 0, dm.field_x, SoundCache.field_c);
             ml.field_l = MusicTrack.load(df.field_a, "", "Dr_Phlogiston_GameComplete_jingle");
             s.field_a.prepareTrackSamples(0, ui.field_a, 0, ml.field_l, SoundCache.field_c);
-            s.field_a.b((byte) 47);
+            s.field_a.releasePatchSampleIds((byte) 47);
             SoundCache.field_c = null;
             df.field_a = null;
             ui.field_a = null;
@@ -2193,7 +2193,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           DisplayNameSelectionPanel.a((byte) 109, 50);
           ModalDialogHost.a(0, 50);
           if (!oh.a(0)) {
-            ri.field_f = BufferedRandomAccessFile.a(4, (byte) -79);
+            MusicPatchEnvelope.field_f = BufferedRandomAccessFile.a(4, (byte) -79);
             vi.field_c = ck.a(0, 5, 1, true);
           }
           IterableNodeHashTable.a((byte) 86);
@@ -2257,7 +2257,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               var5 = 0;
               break;
             }
-            SoftwareRasterizer.field_l[hi.a(SoftwareRasterizer.field_l.length, ProxyAuthenticationRequiredException.a(param0, -11670), pd.field_c)] = hi.a(256, 4, pd.field_c) * 65793;
+            SoftwareRasterizer.field_l[hi.a(SoftwareRasterizer.field_l.length, ProxyAuthenticationRequiredException.bitwiseXor(param0, -11670), pd.field_c)] = hi.a(256, 4, pd.field_c) * 65793;
             var5++;
           } while (var6 == 0);
           do {
@@ -2297,15 +2297,15 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           EditableTextField.field_R[3] = ProxyAuthenticationRequiredException.a("", kf.field_d, "scenery_space_background_asteroid_4", true);
           EditableTextField.field_R[4] = ProxyAuthenticationRequiredException.a("", kf.field_d, "scenery_space_background_asteroid_5", true);
           SingleChildWidgetContainer.field_F = ProxyAuthenticationRequiredException.a("", kf.field_d, "background_space_comet", true);
-          cc.field_w = eh.a("", (byte) -89, kf.field_d, "midground_alien");
+          MusicPatchNode.field_w = eh.a("", (byte) -89, kf.field_d, "midground_alien");
           b.field_k = eh.a("", (byte) -45, kf.field_d, "midground_alien_8");
           MatchingFieldValidator.field_v = eh.a("", (byte) -77, kf.field_d, "midground_alien_9");
           kh.field_e = eh.a("", (byte) -116, kf.field_d, "playership");
           kh.field_e.d(3);
-          ri.field_e = kh.field_e.field_k;
+          MusicPatchEnvelope.field_e = kh.field_e.field_k;
           MusicPatchPcmStream.field_l = kh.field_e.field_d;
           MusicPatchPcmStream.field_p = MusicPatchPcmStream.field_l / 2;
-          ri.field_q = ri.field_e / 2;
+          MusicPatchEnvelope.field_q = MusicPatchEnvelope.field_e / 2;
           df.field_f = this.a(eh.a("", (byte) -85, kf.field_d, "scenery_tile_earth_1"), (byte) 88);
           DisplayNameSelectionPanel.field_L = this.a(eh.a("", (byte) -118, kf.field_d, "scenery_tile_earth_2"), (byte) 103);
           mk.field_f = this.a(eh.a("", (byte) -120, kf.field_d, "scenery_tile_earth_3"), (byte) -60);
@@ -2328,8 +2328,8 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           dm.field_z = this.a(eh.a("", (byte) -76, kf.field_d, "scenery_tile_earth_5_rubble"), (byte) -23);
           AccountCreationResultPanel.field_Cb = this.a(eh.a("", (byte) -107, kf.field_d, "scenery_tile_earth_6_rubble"), (byte) 90);
           ValidationStatusIcon.field_L = this.a(eh.a("", (byte) -77, kf.field_d, "scenery_tile_earth_7_rubble"), (byte) -97);
-          rb.field_c = this.a(eh.a("", (byte) -57, kf.field_d, "scenery_tile_earth_8_rubble"), (byte) -40);
-          sc.field_a = this.a(eh.a("", (byte) -61, kf.field_d, "scenery_tile_earth_9_rubble"), (byte) 103);
+          GrowableIntArray.field_c = this.a(eh.a("", (byte) -57, kf.field_d, "scenery_tile_earth_8_rubble"), (byte) -40);
+          ByteArrayPoolSupport.field_a = this.a(eh.a("", (byte) -61, kf.field_d, "scenery_tile_earth_9_rubble"), (byte) 103);
           rd.field_A = this.a(eh.a("", (byte) -29, kf.field_d, "scenery_tile_earth_10_rubble"), (byte) -77);
           NodeHashTableIterator.field_i = ij.a("scenery_tile_earth_11_rubble", (byte) 84, kf.field_d, "");
           NodeHashTableIterator.field_i[0].c();
@@ -2344,7 +2344,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           tl.field_Q = this.a(eh.a("", (byte) -108, kf.field_d, "scenery_tile_earth_6_fire_mask"), (byte) -7);
           ld.field_d = this.a(eh.a("", (byte) -71, kf.field_d, "scenery_tile_earth_7_fire_mask"), (byte) 1);
           eb.field_c = this.a(eh.a("", (byte) -61, kf.field_d, "scenery_tile_earth_8_fire_mask"), (byte) -28);
-          ri.field_h = this.a(eh.a("", (byte) -53, kf.field_d, "scenery_tile_earth_9_fire_mask"), (byte) 119);
+          MusicPatchEnvelope.field_h = this.a(eh.a("", (byte) -53, kf.field_d, "scenery_tile_earth_9_fire_mask"), (byte) 119);
           StandardContentDialog.field_vb = this.a(eh.a("", (byte) -25, kf.field_d, "scenery_tile_earth_10_fire_mask"), (byte) -126);
           NanoFrameTimer.field_j = ij.a("scenery_tile_earth_11_fire_mask", (byte) 73, kf.field_d, "");
           NanoFrameTimer.field_j[0].c();
@@ -2402,8 +2402,8 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           ld.field_f[0].c();
           SoundCache.field_g = this.a(eh.a("", (byte) -48, kf.field_d, "scenery_tile_earth_bath_07_fire_mask"), (byte) 101);
           SoundCache.field_g[0].c();
-          ri.field_r = ij.a("scenery_tile_earth_bath_08_fire_mask", (byte) 62, kf.field_d, "");
-          ri.field_r[0].c();
+          MusicPatchEnvelope.field_r = ij.a("scenery_tile_earth_bath_08_fire_mask", (byte) 62, kf.field_d, "");
+          MusicPatchEnvelope.field_r[0].c();
           cl.field_n = ij.a("scenery_tile_earth_bath_09_fire_mask", (byte) 102, kf.field_d, "");
           cl.field_n[0].c();
           kj.field_g = ij.a("scenery_tile_earth_bath_10_fire_mask", (byte) 120, kf.field_d, "");

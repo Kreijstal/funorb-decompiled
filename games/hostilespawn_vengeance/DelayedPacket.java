@@ -494,7 +494,7 @@ final class DelayedPacket extends IntrusiveNode {
                   if (var33 == 0) {
                     if (1 == param9.field_i &&
                       !param9.field_J) {
-                      if (0 < tm.field_q) {
+                      if (0 < MusicPatchNode.field_q) {
                         if (-25 >= param9.field_B) {
                           param9.field_B = (int)((0.5 * Math.random() + 0.5) * 100.0);
                         }
@@ -543,7 +543,7 @@ final class DelayedPacket extends IntrusiveNode {
                   } else {
                     if (1 == param9.field_i &&
                       !param9.field_J) {
-                      if (tm.field_q > 0) {
+                      if (MusicPatchNode.field_q > 0) {
                         if (param9.field_B <= -25) {
                           param9.field_B = (int)((Math.random() + 0.5) * 100.0);
                         }
@@ -795,7 +795,7 @@ final class DelayedPacket extends IntrusiveNode {
             }
           }
           if (param9.field_I <= 0) {
-            tm.field_q = 2;
+            MusicPatchNode.field_q = 2;
             if (param9.field_i != 27 &&
               param9.field_w != 5) {
               param9.field_z = 0;

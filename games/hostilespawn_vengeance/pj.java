@@ -320,7 +320,7 @@ final class pj extends ql {
           this.field_r.field_l = var12[8] * 24 + 48;
           for (var3 = 0; var3 < 2; var3++) {
             this.field_g[var3] = new GridPoint(var9[2 * var3 + 10], var9[11 + var3 * 2]);
-            this.field_x[var3] = new v(bc.field_k, 0, this.field_g[var3].field_g * 24, 200);
+            this.field_x[var3] = new v(MidiNoteMask.field_k, 0, this.field_g[var3].field_g * 24, 200);
             this.field_x[var3].field_l = this.field_g[var3].field_e * 24 + 48;
           }
           this.field_f = new GridPoint();

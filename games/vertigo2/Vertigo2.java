@@ -267,7 +267,7 @@ public final class Vertigo2 extends GameShell {
             }
             if (lc.field_f == 14) {
               g.b(7);
-              so.a(un.b((byte) 114), 3, 150, 1024, re.c(-1087), rm.field_A, th.a(true), qp.roundUpPowerOfTwo(2000, 70), 113, qp.roundUpPowerOfTwo(8, 72));
+              so.a(un.b((byte) 114), 3, 150, 1024, GrowableIntArray.c(-1087), rm.field_A, th.a(true), qp.roundUpPowerOfTwo(2000, 70), 113, qp.roundUpPowerOfTwo(8, 72));
               wn.a(-122, SecondaryNodeDequeIterator.a(true), pp.a(12));
               ProxyAuthenticationRequiredException.field_b = false;
               NameSuggestionsPanel.field_P = true;
@@ -464,7 +464,7 @@ public final class Vertigo2 extends GameShell {
           var3.drawOpaque(var8.field_y, 0);
           var4.drawOpaque(0, var8.field_t);
           var5.drawOpaque(var8.field_y, var8.field_t);
-          TextLayout.field_g.a(-128);
+          TextLayout.field_g.setAsRasterTarget(-128);
           nn.field_y = null;
           this.renderClientFrame(-17);
         } catch (RuntimeException runtimeException) {
@@ -558,9 +558,9 @@ public final class Vertigo2 extends GameShell {
           DiskArchiveRequest.field_D = MusicTrack.load(le.field_f, "", "vertigo2_game_over_jingle");
           MusicTrack.load(le.field_f, "", "vertigo2_multiplayer_lvl_lost_jingle");
           MusicTrack.load(le.field_f, "", "vertigo2_time_running_out_jingle");
-          qc.field_v.prepareTrackSamples(0, jk.field_b, op.field_d, re.field_d, (byte) 75);
+          qc.field_v.prepareTrackSamples(0, jk.field_b, op.field_d, GrowableIntArray.field_d, (byte) 75);
           for (var2_int = 0; var2_int < up.field_B.length; var2_int++) {
-            qc.field_v.prepareTrackSamples(0, jk.field_b, up.field_B[var2_int], re.field_d, (byte) 56);
+            qc.field_v.prepareTrackSamples(0, jk.field_b, up.field_B[var2_int], GrowableIntArray.field_d, (byte) 56);
           }
           mj.field_b = null;
           DualLinkNode.field_s = null;
@@ -662,14 +662,14 @@ public final class Vertigo2 extends GameShell {
           var2 = var11;
           var11[0] = vl.a(0, "", MovingLevelTile.field_u, "keys_esc");
           var11[1] = vl.a(0, "", MovingLevelTile.field_u, "keys_right");
-          var2[2] = vl.a(tk.a((int) param0, 31), "", MovingLevelTile.field_u, "keys_left");
+          var2[2] = vl.a(tk.bitwiseXor((int) param0, 31), "", MovingLevelTile.field_u, "keys_left");
           var11[3] = vl.a(0, "", MovingLevelTile.field_u, "keys_down");
           var11[4] = vl.a(0, "", MovingLevelTile.field_u, "keys_up");
           var11[5] = vl.a(0, "", MovingLevelTile.field_u, "keys_space");
           var11[6] = vl.a(0, "", MovingLevelTile.field_u, "keys_ctrl");
           var11[7] = vl.a(0, "", MovingLevelTile.field_u, "keys_enter");
           var11[8] = vl.a(0, "", MovingLevelTile.field_u, "keys_shift");
-          var2[9] = vl.a(tk.a((int) param0, 31), "", MovingLevelTile.field_u, "keys_w");
+          var2[9] = vl.a(tk.bitwiseXor((int) param0, 31), "", MovingLevelTile.field_u, "keys_w");
           var11[10] = vl.a(0, "", MovingLevelTile.field_u, "keys_a");
           var11[11] = vl.a(0, "", MovingLevelTile.field_u, "keys_s");
           var11[12] = vl.a(0, "", MovingLevelTile.field_u, "keys_d");
@@ -678,14 +678,14 @@ public final class Vertigo2 extends GameShell {
           var11[15] = vl.a(0, "", MovingLevelTile.field_u, "keys_e");
           var11[16] = vl.a(0, "", MovingLevelTile.field_u, "keys_lt");
           var2[17] = vl.a(param0 - 31, "", MovingLevelTile.field_u, "keys_gt");
-          var2[18] = vl.a(tk.a((int) param0, 31), "", MovingLevelTile.field_u, "keys_f12");
+          var2[18] = vl.a(tk.bitwiseXor((int) param0, 31), "", MovingLevelTile.field_u, "keys_f12");
           tk.field_c.setInlineSprites(var2, (int[]) null);
           fa.field_s = lm.a("", param0 + 23078, "button_purple_frame", MovingLevelTile.field_u);
           uk.field_r = lm.a("", 23109, "button_blue_frame", MovingLevelTile.field_u);
           mn.field_o = new Sprite[3];
           mn.field_o[0] = tn.a("button_start_blue", MovingLevelTile.field_u, -117, "");
           mn.field_o[1] = tn.a("button_middle_blue", MovingLevelTile.field_u, -108, "");
-          mn.field_o[2] = tn.a("button_end_blue", MovingLevelTile.field_u, tk.a((int) param0, -102), "");
+          mn.field_o[2] = tn.a("button_end_blue", MovingLevelTile.field_u, tk.bitwiseXor((int) param0, -102), "");
           if (param0 != 31) {
             field_I = (String[]) null;
           }
@@ -695,8 +695,8 @@ public final class Vertigo2 extends GameShell {
           sq.field_a[2] = tn.a("button_end_grey", MovingLevelTile.field_u, -128, "");
           ln.field_b = new Sprite[3];
           ln.field_b[0] = tn.a("button_start_purple", MovingLevelTile.field_u, -126, "");
-          ln.field_b[1] = tn.a("button_middle_purple", MovingLevelTile.field_u, tk.a((int) param0, -83), "");
-          ln.field_b[2] = tn.a("button_end_purple", MovingLevelTile.field_u, tk.a((int) param0, -84), "");
+          ln.field_b[1] = tn.a("button_middle_purple", MovingLevelTile.field_u, tk.bitwiseXor((int) param0, -83), "");
+          ln.field_b[2] = tn.a("button_end_purple", MovingLevelTile.field_u, tk.bitwiseXor((int) param0, -84), "");
           IntrusiveDequeCursor.field_b = tn.a("unachieved", ml.field_y, -94, "basic");
           IsaacCipher.field_f = tn.a("orbcoin", ml.field_y, -83, "basic");
           uh.a(false, IntrusiveDequeCursor.field_b);
@@ -719,7 +719,7 @@ public final class Vertigo2 extends GameShell {
           GzipDecompressor.field_c.bindAsRenderTarget();
           IsaacCipher.field_f.drawDownscaledAreaAveraged(0, 0, var3, var3);
           IsaacCipher.field_f = null;
-          TextLayout.field_g.a(param0 + 77);
+          TextLayout.field_g.setAsRasterTarget(param0 + 77);
           for (var4_int = 0; var4_int < mb.field_q.length; var4_int++) {
             if (null != mb.field_q[var4_int]) {
               th.field_f[var4_int] = an.b(118, mb.field_q[var4_int]);
@@ -863,7 +863,7 @@ public final class Vertigo2 extends GameShell {
           an.a(true);
           IntrusiveNode.clearDeclaredStaticReferences(55);
           jl.clearStaticReferences(6);
-          pe.clearStaticReferences(true);
+          MusicPatchNode.clearStaticReferences(true);
           MidiFileReader.clearStaticReferences();
           MusicPatchPcmStream.resetStaticState(0);
           AudioOutput.clearStaticReferences();
@@ -971,8 +971,8 @@ public final class Vertigo2 extends GameShell {
           ByteStorage.clearStaticReferences(-1);
           Bzip2Decompressor.clearStaticReferences();
           Bzip2State.clearStaticReferences((byte) 111);
-          al.a(-1216);
-          gl.clearStaticReferences(true);
+          MusicPatch.a(-1216);
+          MusicPatchEnvelope.clearStaticReferences(true);
           PcmOutputWorker.clearStaticReferences((byte) -100);
           oc.clearStaticReferences(-27171);
           SoundFilter.clearStaticReferences();
@@ -1020,7 +1020,7 @@ public final class Vertigo2 extends GameShell {
           po.clearStaticReferences((byte) -43);
           no.clearStaticReferences((byte) -111);
           cp.clearStaticReferences((byte) -128);
-          vc.clearStaticReferences(0);
+          ByteArrayPoolSupport.clearStaticReferences(0);
           kf.clearStaticReferences(61);
           eh.clearStaticReferences((byte) -84);
           q.clearStaticReferences(0);
@@ -1090,7 +1090,7 @@ public final class Vertigo2 extends GameShell {
           md.clearStaticReferences(-101);
           DirectByteStorage.resetStaticState((byte) -54);
           RichTextLayout.clearStaticReferences((byte) 53);
-          re.resetStaticState(-124);
+          GrowableIntArray.resetStaticState(-124);
           DropTargetWidgetContainer.clearStaticReferences((byte) 101);
           ng.b(16952);
           IterableNodeHashTable.clearStaticReferences(false);
@@ -1399,7 +1399,7 @@ public final class Vertigo2 extends GameShell {
           vi.field_n = BufferedSocket.a(6, 123);
           DualLinkNode.field_s = BufferedSocket.a(7, 123);
           mj.field_b = BufferedSocket.a(8, 127);
-          re.field_d = BufferedSocket.a(9, 126);
+          GrowableIntArray.field_d = BufferedSocket.a(9, 126);
           le.field_f = BufferedSocket.a(10, 124);
           pp.field_s = BufferedSocket.a(11, 124);
           nn.field_y = BufferedSocket.a(12, 123);
@@ -1509,7 +1509,7 @@ public final class Vertigo2 extends GameShell {
               fh.field_y[var3_int] = new fo(var3_int);
             }
             lc.field_b = 0;
-            vc.a(0);
+            ByteArrayPoolSupport.a(0);
             DefaultTextWidgetRenderer.a(50, (byte) 119);
             ProxyAuthenticationRequiredException.field_a = true;
             this.o((byte) 117);
@@ -1524,19 +1524,19 @@ public final class Vertigo2 extends GameShell {
           if (ml.field_y.ensureIndexLoaded(0) &&
             ml.field_y.tryLoadGroupByName("basic", 0)) {
             if (!ml.field_y.tryLoadGroupByName("roman20", param0 ^ 16777215)) {
-              ProxySocketConnector.a(false, 4.0f, FullscreenStatusDialog.a(vc.field_a, (byte) 66, ml.field_y, vd.field_c, "roman20"));
+              ProxySocketConnector.a(false, 4.0f, FullscreenStatusDialog.a(ByteArrayPoolSupport.field_a, (byte) 66, ml.field_y, vd.field_c, "roman20"));
               return false;
             }
             if (DropTargetWidgetContainer.field_G.ensureIndexLoaded(0) &&
               DropTargetWidgetContainer.field_G.tryLoadGroupByName("roman20", 0)) {
               if (!ml.field_y.tryLoadGroupByName("kartika13", 0)) {
-                ProxySocketConnector.a(false, 6.0f, FullscreenStatusDialog.a(vc.field_a, (byte) 103, ml.field_y, vd.field_c, "kartika13"));
+                ProxySocketConnector.a(false, 6.0f, FullscreenStatusDialog.a(ByteArrayPoolSupport.field_a, (byte) 103, ml.field_y, vd.field_c, "kartika13"));
                 return false;
               }
               if (DropTargetWidgetContainer.field_G.ensureIndexLoaded(param0 ^ 16777215) &&
                 DropTargetWidgetContainer.field_G.tryLoadGroupByName("kartika13", 0)) {
                 if (!ml.field_y.tryLoadGroupByName("comic20", param0 ^ 16777215)) {
-                  ProxySocketConnector.a(false, 8.0f, FullscreenStatusDialog.a(vc.field_a, (byte) 47, ml.field_y, vd.field_c, "comic20"));
+                  ProxySocketConnector.a(false, 8.0f, FullscreenStatusDialog.a(ByteArrayPoolSupport.field_a, (byte) 47, ml.field_y, vd.field_c, "comic20"));
                   return false;
                 }
                 if (DropTargetWidgetContainer.field_G.ensureIndexLoaded(param0 ^ 16777215) &&
@@ -1549,8 +1549,8 @@ public final class Vertigo2 extends GameShell {
                         DualLinkNode.field_s.tryLoadGroupByName("", 0)) {
                         if (mj.field_b.ensureIndexLoaded(0) &&
                           mj.field_b.tryLoadGroupByName("", 0)) {
-                          if (re.field_d.ensureIndexLoaded(param0 - 16777215) &&
-                            re.field_d.tryLoadAllGroups((byte) -112)) {
+                          if (GrowableIntArray.field_d.ensureIndexLoaded(param0 - 16777215) &&
+                            GrowableIntArray.field_d.tryLoadAllGroups((byte) -112)) {
                             if (le.field_f.ensureIndexLoaded(param0 - 16777215) &&
                               le.field_f.tryLoadGroupByName("", 0)) {
                               if (MovingLevelTile.field_u.ensureIndexLoaded(param0 - 16777215) &&
@@ -1614,7 +1614,7 @@ public final class Vertigo2 extends GameShell {
                                   ProxySocketConnector.a(false, 55.0f, FullscreenStatusDialog.a(vj.field_a, (byte) 114, gi.field_p, EmailFormatValidator.field_n, ""));
                                   return false;
                                 }
-                                ProxySocketConnector.a(false, 54.0f, FullscreenStatusDialog.a(vc.field_a, (byte) 54, vi.field_n, vd.field_c, ""));
+                                ProxySocketConnector.a(false, 54.0f, FullscreenStatusDialog.a(ByteArrayPoolSupport.field_a, (byte) 54, vi.field_n, vd.field_c, ""));
                                 return false;
                               }
                               ProxySocketConnector.a(false, 50.0f, FullscreenStatusDialog.a(ib.field_b, (byte) 112, MovingLevelTile.field_u, me.field_b, ""));
@@ -1623,7 +1623,7 @@ public final class Vertigo2 extends GameShell {
                             ProxySocketConnector.a(false, 40.0f, FullscreenStatusDialog.a(tm.field_c, (byte) 109, le.field_f, lo.field_b, ""));
                             return false;
                           }
-                          ProxySocketConnector.a(false, 35.0f, en.a(false, tm.field_c, re.field_d, 0, lo.field_b));
+                          ProxySocketConnector.a(false, 35.0f, en.a(false, tm.field_c, GrowableIntArray.field_d, 0, lo.field_b));
                           return false;
                         }
                         ProxySocketConnector.a(false, 30.0f, FullscreenStatusDialog.a(lc.field_c, (byte) 35, mj.field_b, DebouncedFieldValidator.field_a, ""));
@@ -1632,19 +1632,19 @@ public final class Vertigo2 extends GameShell {
                       ProxySocketConnector.a(false, 12.0f, FullscreenStatusDialog.a(lc.field_c, (byte) 95, DualLinkNode.field_s, DebouncedFieldValidator.field_a, ""));
                       return false;
                     }
-                    ProxySocketConnector.a(false, 11.0f, FullscreenStatusDialog.a(vc.field_a, (byte) 119, DropTargetWidgetContainer.field_G, vd.field_c, "lobby"));
+                    ProxySocketConnector.a(false, 11.0f, FullscreenStatusDialog.a(ByteArrayPoolSupport.field_a, (byte) 119, DropTargetWidgetContainer.field_G, vd.field_c, "lobby"));
                     return false;
                   }
                   ProxySocketConnector.a(false, 10.0f, FullscreenStatusDialog.a(ib.field_b, (byte) 50, ml.field_y, me.field_b, "lobby"));
                   return false;
                 }
-                ProxySocketConnector.a(false, 9.0f, FullscreenStatusDialog.a(vc.field_a, (byte) 39, DropTargetWidgetContainer.field_G, vd.field_c, "comic20"));
+                ProxySocketConnector.a(false, 9.0f, FullscreenStatusDialog.a(ByteArrayPoolSupport.field_a, (byte) 39, DropTargetWidgetContainer.field_G, vd.field_c, "comic20"));
                 return false;
               }
-              ProxySocketConnector.a(false, 7.0f, FullscreenStatusDialog.a(vc.field_a, (byte) 64, DropTargetWidgetContainer.field_G, vd.field_c, "kartika13"));
+              ProxySocketConnector.a(false, 7.0f, FullscreenStatusDialog.a(ByteArrayPoolSupport.field_a, (byte) 64, DropTargetWidgetContainer.field_G, vd.field_c, "kartika13"));
               return false;
             }
-            ProxySocketConnector.a(false, 5.0f, FullscreenStatusDialog.a(vc.field_a, (byte) 37, DropTargetWidgetContainer.field_G, vd.field_c, "roman20"));
+            ProxySocketConnector.a(false, 5.0f, FullscreenStatusDialog.a(ByteArrayPoolSupport.field_a, (byte) 37, DropTargetWidgetContainer.field_G, vd.field_c, "roman20"));
             return false;
           }
           ProxySocketConnector.a(false, 1.0f, FullscreenStatusDialog.a(ib.field_b, (byte) 60, ml.field_y, me.field_b, "basic"));
@@ -1718,7 +1718,7 @@ public final class Vertigo2 extends GameShell {
                   if (ad.field_h) {
                     gj.a((byte) 61, false, LevelRenderer.field_n, -4);
                   }
-                  if (al.a(LevelRenderer.field_n, (byte) -94)) {
+                  if (MusicPatch.a(LevelRenderer.field_n, (byte) -94)) {
                     g.b(7);
                   }
                 }
@@ -1748,7 +1748,7 @@ public final class Vertigo2 extends GameShell {
                   }
                 } else {
                   if (lc.field_b != -2) {
-                    if (al.a(lc.field_b, (byte) -94)) {
+                    if (MusicPatch.a(lc.field_b, (byte) -94)) {
                       fh.field_y[lc.field_b].e((byte) -125);
                     }
                   } else {

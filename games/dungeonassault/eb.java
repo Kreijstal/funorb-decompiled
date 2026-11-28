@@ -4,7 +4,7 @@
 final class eb extends InteractiveWidget {
     static String field_P;
     int field_J;
-    private bp field_K;
+    private GrowableIntArray field_K;
     static String field_L;
     static String field_M;
     static cf[] field_O;
@@ -45,8 +45,8 @@ final class eb extends InteractiveWidget {
             if (param1 == 2) {
               var10 = 2147483647;
               var11 = -1;
-              for (var12 = 0; this.field_K.a((byte) -44) > var12; var12++) {
-                var13 = -var8_intLifetime1 + this.field_K.a(-814, var12);
+              for (var12 = 0; this.field_K.size((byte) -44) > var12; var12++) {
+                var13 = -var8_intLifetime1 + this.field_K.get(-814, var12);
                 var13 = var13 * var13;
                 if (var13 < var10) {
                   var11 = var12;
@@ -54,11 +54,11 @@ final class eb extends InteractiveWidget {
                 }
               }
               if (var11 >= 0) {
-                this.field_K.b(var11, 100);
+                this.field_K.removeAt(var11, 100);
               }
             }
           } else {
-            this.field_K.e(var8_intLifetime1, -67);
+            this.field_K.append(var8_intLifetime1, -67);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -78,17 +78,17 @@ final class eb extends InteractiveWidget {
     final int i(int param0) {
         if (param0 <= 88) {
           this.a(-112, 127);
-          return this.field_K.a((byte) -72);
+          return this.field_K.size((byte) -72);
         }
-        return this.field_K.a((byte) -72);
+        return this.field_K.size((byte) -72);
     }
 
     final int a(int param0, int param1) {
         if (~param1 > param0) {
           return -1;
         }
-        if (this.field_K.a((byte) -91) > param1) {
-          return this.field_K.a(-814, param1);
+        if (this.field_K.size((byte) -91) > param1) {
+          return this.field_K.get(-814, param1);
         }
         return -1;
     }

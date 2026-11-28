@@ -180,7 +180,7 @@ final class pg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var1), "pg.A(" + param0 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var1), "pg.A(" + param0 + ')');
         }
     }
 

@@ -121,7 +121,7 @@ class PcmPlayerService {
         if (field_u) {
           var3 = var3 << 1;
         }
-        fk.clearInts(param0, 0, var3);
+        ArrayBlockSupport.clearInts(param0, 0, var3);
         this.field_c = this.field_c - param1;
         if (this.field_f != null &&
           this.field_c <= 0) {

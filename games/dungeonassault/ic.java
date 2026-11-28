@@ -61,7 +61,7 @@ final class ic extends mc {
     }
 
     ic(int param0) {
-        this(lp.field_C, param0);
+        this(MusicPatchNode.field_C, param0);
     }
 
     public static void releaseDeclaredStaticReferences(int param0) {

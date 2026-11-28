@@ -305,7 +305,7 @@ final class pna extends UiComponent {
           }
           for (var17_intLifetime3 = 0; var17_intLifetime3 < param3; var17_intLifetime3++) {
             pka.field_b[4 + var17_intLifetime3] = new UiComponent(0L, ina.field_n, kka.field_k[var17_intLifetime3]);
-            array$2 = new gna[1 + dda.a(255, (int) dw.field_g[var17_intLifetime3])];
+            array$2 = new gna[1 + dda.bitwiseAnd(255, (int) dw.field_g[var17_intLifetime3])];
             gd.field_n[var17_intLifetime3 + 4] = array$2;
             gd.field_n[4 + var17_intLifetime3][0] = new gna(0L, HailEvent.field_r, (UiComponent) null, dla.field_k, (Sprite) null, WhirlpoolDigest.field_j);
             for (var18 = 0; var18 < (dw.field_g[var17_intLifetime3] & 255); var18++) {

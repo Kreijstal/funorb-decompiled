@@ -364,7 +364,7 @@ final class ob extends wm {
                   this.field_s.readFully(this.field_h.field_y.data, var6, (byte) -87, this.field_h.field_y.position);
                   if (this.field_k != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.field_h.field_y.data[var7 + this.field_h.field_y.position] = (byte)dm.a((int) this.field_h.field_y.data[var7 + this.field_h.field_y.position], (int) this.field_k);
+                      this.field_h.field_y.data[var7 + this.field_h.field_y.position] = (byte)dm.bitwiseXor((int) this.field_h.field_y.data[var7 + this.field_h.field_y.position], (int) this.field_k);
                     }
                   }
                   this.field_h.field_y.position = this.field_h.field_y.position + var6;
@@ -386,7 +386,7 @@ final class ob extends wm {
                   this.field_s.readFully(this.field_a.data, var5, (byte) -87, this.field_a.position);
                   if (this.field_k != 0) {
                     for (var6 = 0; var5 > var6; var6++) {
-                      this.field_a.data[var6 + this.field_a.position] = (byte)dm.a((int) this.field_a.data[var6 + this.field_a.position], (int) this.field_k);
+                      this.field_a.data[var6 + this.field_a.position] = (byte)dm.bitwiseXor((int) this.field_a.data[var6 + this.field_a.position], (int) this.field_k);
                     }
                   }
                   this.field_a.position = this.field_a.position + var5;

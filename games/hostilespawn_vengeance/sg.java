@@ -312,7 +312,7 @@ final class sg {
                                                 if (var23 != 31 &&
                                                   var23 != 35) {
                                                   if ((var23 == 36)) {
-                                                    nf.a(var19, (byte) 70);
+                                                    MusicPatch.a(var19, (byte) 70);
                                                   }
                                                 } else {
                                                   ia.a(var19, var29, -14808);

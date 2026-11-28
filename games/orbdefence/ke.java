@@ -219,14 +219,14 @@ final class ke {
                         var38 = wi.field_c - var37 - 1;
                       }
                       if (0 > var37) {
-                        ik.a(var37 + var38, var36Lifetime2, -(var40 * var37) + var25, var40, -73, var39, var21 - var37 * var39, param9, -(var41 * var37) + var29, var41);
+                        MusicPatch.a(var37 + var38, var36Lifetime2, -(var40 * var37) + var25, var40, -73, var39, var21 - var37 * var39, param9, -(var41 * var37) + var29, var41);
                       } else {
-                        ik.a(var38, var37 + var36Lifetime2, var25, var40, param16 ^ -1551567563, var39, var21, param9, var29, var41);
+                        MusicPatch.a(var38, var37 + var36Lifetime2, var25, var40, param16 ^ -1551567563, var39, var21, param9, var29, var41);
                       }
                     } else {
                       if (var37 >= 0 &&
                         wi.field_c > var37) {
-                        ik.a(var38, var36Lifetime2 + var37, var25, 0, -84, 0, var21, param9, var29, 0);
+                        MusicPatch.a(var38, var36Lifetime2 + var37, var25, 0, -84, 0, var21, param9, var29, 0);
                       }
                     }
                   }
@@ -309,14 +309,14 @@ final class ke {
                     var37Lifetime1 = -var36Lifetime1 + (wi.field_c - 1);
                   }
                   if (var36Lifetime1 >= 0) {
-                    ik.a(var37Lifetime1, var36Lifetime1 + var35Lifetime1, var25, var39Lifetime1, -62, var38Lifetime1, var21, param9, var29, var40Lifetime1);
+                    MusicPatch.a(var37Lifetime1, var36Lifetime1 + var35Lifetime1, var25, var39Lifetime1, -62, var38Lifetime1, var21, param9, var29, var40Lifetime1);
                   } else {
-                    ik.a(var36Lifetime1 + var37Lifetime1, var35Lifetime1, var25 - var39Lifetime1 * var36Lifetime1, var39Lifetime1, -73, var38Lifetime1, var21 - var36Lifetime1 * var38Lifetime1, param9, -(var40Lifetime1 * var36Lifetime1) + var29, var40Lifetime1);
+                    MusicPatch.a(var36Lifetime1 + var37Lifetime1, var35Lifetime1, var25 - var39Lifetime1 * var36Lifetime1, var39Lifetime1, -73, var38Lifetime1, var21 - var36Lifetime1 * var38Lifetime1, param9, -(var40Lifetime1 * var36Lifetime1) + var29, var40Lifetime1);
                   }
                 } else {
                   if (var36Lifetime1 >= 0 &&
                     wi.field_c > var36Lifetime1) {
-                    ik.a(var37Lifetime1, var36Lifetime1 + var35Lifetime1, var25, 0, param16 ^ -1551567530, 0, var21, param9, var29, 0);
+                    MusicPatch.a(var37Lifetime1, var36Lifetime1 + var35Lifetime1, var25, 0, param16 ^ -1551567530, 0, var21, param9, var29, 0);
                   }
                 }
               }

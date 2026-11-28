@@ -97,7 +97,7 @@ final class ia extends IntrusiveNode {
         pd var2Lifetime1;
         var3 = fleas.field_A ? 1 : 0;
         try {
-          gf.field_d = param1;
+          ByteArrayPoolSupport.field_d = param1;
           if (!param0) {
             ia.a(17, 35, -72);
           }
@@ -106,7 +106,7 @@ final class ia extends IntrusiveNode {
             if (!var2.field_n.isLinked((byte) -54)) {
               var2.unlink(-1);
             } else {
-              var2.field_m.setVolume(gf.field_d * var2.field_j + 128 >> 8);
+              var2.field_m.setVolume(ByteArrayPoolSupport.field_d * var2.field_j + 128 >> 8);
             }
             var2 = (pd) (bk.field_d.nextForward((byte) -105));
           }
@@ -117,7 +117,7 @@ final class ia extends IntrusiveNode {
           while (var2Lifetime1 != null) {
             stackIn_15_0 = var2Lifetime1.field_n.isLinked((byte) -54);
             if (stackIn_15_0) {
-              var2Lifetime1.field_m.setVolume(128 + gf.field_d * var2Lifetime1.field_j >> 8);
+              var2Lifetime1.field_m.setVolume(128 + ByteArrayPoolSupport.field_d * var2Lifetime1.field_j >> 8);
             } else {
               var2Lifetime1.unlink(-1);
             }
@@ -174,16 +174,16 @@ final class ia extends IntrusiveNode {
         field_r = new int[11];
         field_q = new int[4];
         field_p = new int[11][];
-        tk.a(34, 155, new int[]{0, 21, 3, 12, 13, 4, 2, 14, 11}, 485, -124, 0, 135);
-        tk.a(34, 155, new int[]{1, 19, 12, 13, 3, 7}, 485, -121, 1, 135);
-        tk.a(34, 140, new int[]{15, 5}, 500, -123, 2, 383);
-        tk.a(34, 85, new int[]{17, 6, 18}, 600, -128, 3, 415);
-        tk.a(34, 140, new int[]{15, 5}, 500, -119, 4, 383);
-        tk.a(34, 165, new int[]{2, 5}, 475, -118, 5, 383);
-        tk.a(70, 165, new int[]{15, 16}, 475, -118, 6, 295);
-        tk.a(32, 50, new int[]{}, 288, -119, 7, 400);
-        tk.a(34, 140, new int[]{20, 15, 5}, 500, -117, 8, 376);
-        tk.a(34, 165, new int[]{22}, 475, -118, 9, 400);
-        tk.a(34, 190, new int[]{22}, 450, -126, 10, 400);
+        MusicPatchNode.a(34, 155, new int[]{0, 21, 3, 12, 13, 4, 2, 14, 11}, 485, -124, 0, 135);
+        MusicPatchNode.a(34, 155, new int[]{1, 19, 12, 13, 3, 7}, 485, -121, 1, 135);
+        MusicPatchNode.a(34, 140, new int[]{15, 5}, 500, -123, 2, 383);
+        MusicPatchNode.a(34, 85, new int[]{17, 6, 18}, 600, -128, 3, 415);
+        MusicPatchNode.a(34, 140, new int[]{15, 5}, 500, -119, 4, 383);
+        MusicPatchNode.a(34, 165, new int[]{2, 5}, 475, -118, 5, 383);
+        MusicPatchNode.a(70, 165, new int[]{15, 16}, 475, -118, 6, 295);
+        MusicPatchNode.a(32, 50, new int[]{}, 288, -119, 7, 400);
+        MusicPatchNode.a(34, 140, new int[]{20, 15, 5}, 500, -117, 8, 376);
+        MusicPatchNode.a(34, 165, new int[]{22}, 475, -118, 9, 400);
+        MusicPatchNode.a(34, 190, new int[]{22}, 450, -126, 10, 400);
     }
 }

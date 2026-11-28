@@ -28,7 +28,7 @@ final class PasswordValidator extends TextFieldValidator {
           var6 = -param3 + SoftwareRasterizer.field_i;
           for (var7 = -param1; var7 < 0; var7++) {
             for (var8 = -param3; var8 < 0; var8++) {
-              SoftwareRasterizer.field_b[var5_int] = mp.a(SoftwareRasterizer.field_b[var5_int], -2147483648);
+              SoftwareRasterizer.field_b[var5_int] = mp.bitwiseOr(SoftwareRasterizer.field_b[var5_int], -2147483648);
               var5_int++;
             }
             var5_int = var5_int + var6;

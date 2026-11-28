@@ -58,7 +58,7 @@ final class tg {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_a[var2] = fb.a(fb.a(fb.a(fb.a(wj.a(255L, (long)this.field_b[4 + var3]) << 24, fb.a(wj.a((long)this.field_b[var3 + 3] << 32, 1095216660480L), fb.a(wj.a((long)this.field_b[2 + var3] << 40, 280375465082880L), fb.a(wj.a((long)this.field_b[1 + var3], 255L) << 48, (long)this.field_b[var3] << 56)))), wj.a((long)this.field_b[var3 + 5], 255L) << 16), wj.a(65280L, (long)this.field_b[6 + var3] << 8)), wj.a(255L, (long)this.field_b[var3 + 7]));
+          this.field_a[var2] = fb.bitwiseXor(fb.bitwiseXor(fb.bitwiseXor(fb.bitwiseXor(wj.bitwiseAnd(255L, (long)this.field_b[4 + var3]) << 24, fb.bitwiseXor(wj.bitwiseAnd((long)this.field_b[var3 + 3] << 32, 1095216660480L), fb.bitwiseXor(wj.bitwiseAnd((long)this.field_b[2 + var3] << 40, 280375465082880L), fb.bitwiseXor(wj.bitwiseAnd((long)this.field_b[1 + var3], 255L) << 48, (long)this.field_b[var3] << 56)))), wj.bitwiseAnd((long)this.field_b[var3 + 5], 255L) << 16), wj.bitwiseAnd(65280L, (long)this.field_b[6 + var3] << 8)), wj.bitwiseAnd(255L, (long)this.field_b[var3 + 7]));
           var2++;
           var3 += 8;
         }
@@ -66,7 +66,7 @@ final class tg {
           dupTemp$0 = this.field_k[var2Lifetime1];
           arrayValue$1 = this.field_a[var2Lifetime1];
           this.field_j[var2Lifetime1] = dupTemp$0;
-          this.field_g[var2Lifetime1] = fb.a(arrayValue$1, dupTemp$0);
+          this.field_g[var2Lifetime1] = fb.bitwiseXor(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
@@ -74,7 +74,7 @@ final class tg {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_d[var3Lifetime1] = fb.a(this.field_d[var3Lifetime1], fb.field_n[var4][dg.a(255, (int)(this.field_j[dg.a(var3Lifetime1 - var4, 7)] >>> var5))]);
+              this.field_d[var3Lifetime1] = fb.bitwiseXor(this.field_d[var3Lifetime1], fb.field_n[var4][dg.bitwiseAnd(255, (int)(this.field_j[dg.bitwiseAnd(var3Lifetime1 - var4, 7)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -82,14 +82,14 @@ final class tg {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_j[var3Lifetime1Lifetime1] = this.field_d[var3Lifetime1Lifetime1];
           }
-          this.field_j[0] = fb.a(this.field_j[0], fb.field_m[var2Lifetime2]);
+          this.field_j[0] = fb.bitwiseXor(this.field_j[0], fb.field_m[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_d[var3Lifetime1Lifetime2] = this.field_j[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_d[var3Lifetime1Lifetime2] = fb.a(this.field_d[var3Lifetime1Lifetime2], fb.field_n[var7][dg.a(255, (int)(this.field_g[dg.a(7, -var7 + var3Lifetime1Lifetime2)] >>> var5Lifetime1))]);
+              this.field_d[var3Lifetime1Lifetime2] = fb.bitwiseXor(this.field_d[var3Lifetime1Lifetime2], fb.field_n[var7][dg.bitwiseAnd(255, (int)(this.field_g[dg.bitwiseAnd(7, -var7 + var3Lifetime1Lifetime2)] >>> var5Lifetime1))]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -100,7 +100,7 @@ final class tg {
         }
         var3Lifetime2 = 102 / ((param0 - 85) / 38);
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_k[var2Lifetime3] = fb.a(this.field_k[var2Lifetime3], fb.a(this.field_g[var2Lifetime3], this.field_a[var2Lifetime3]));
+          this.field_k[var2Lifetime3] = fb.bitwiseXor(this.field_k[var2Lifetime3], fb.bitwiseXor(this.field_g[var2Lifetime3], this.field_a[var2Lifetime3]));
         }
     }
 
@@ -118,7 +118,7 @@ final class tg {
         int var8 = 0;
         var8 = Terraphoenix.field_V;
         try {
-          this.field_b[this.field_i] = (byte)ResizableModalDialog.b((int) this.field_b[this.field_i], 128 >>> dg.a(this.field_f, 7));
+          this.field_b[this.field_i] = (byte)ResizableModalDialog.bitwiseOr((int) this.field_b[this.field_i], 128 >>> dg.bitwiseAnd(this.field_f, 7));
           this.field_i = this.field_i + 1;
           if (this.field_i > 32) {
             while (64 > this.field_i) {
@@ -134,7 +134,7 @@ final class tg {
             this.field_i = this.field_i + 1;
             this.field_b[fieldTemp$1] = (byte) 0;
           }
-          ka.copyByteRange(this.field_m, 0, this.field_b, 32, 32);
+          ArrayBlockSupport.copyByteRange(this.field_m, 0, this.field_b, 32, 32);
           this.a((byte) -67);
           if (param1 != 4) {
             this.a((byte) -79);
@@ -214,7 +214,7 @@ final class tg {
             var8 = param2[var5_int] << var6 & 255 | (255 & param2[var5_int + 1]) >>> -var6 + 8;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_b[this.field_i] = (byte)ResizableModalDialog.b((int) this.field_b[this.field_i], var8 >>> var7);
+              this.field_b[this.field_i] = (byte)ResizableModalDialog.bitwiseOr((int) this.field_b[this.field_i], var8 >>> var7);
               this.field_i = this.field_i + 1;
               this.field_f = this.field_f + (-var7 + 8);
               if (this.field_f == 512) {
@@ -222,7 +222,7 @@ final class tg {
                 this.field_f = 0;
                 this.field_i = 0;
               }
-              this.field_b[this.field_i] = (byte)dg.a(var8 << -var7 + 8, 255);
+              this.field_b[this.field_i] = (byte)dg.bitwiseAnd(var8 << -var7 + 8, 255);
               param1 = param1 - 8L;
               this.field_f = this.field_f + var7;
               var5_int++;
@@ -234,7 +234,7 @@ final class tg {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = 255 & param2[var5_int] << var6;
-            this.field_b[this.field_i] = (byte)ResizableModalDialog.b((int) this.field_b[this.field_i], var8Lifetime1 >>> var7);
+            this.field_b[this.field_i] = (byte)ResizableModalDialog.bitwiseOr((int) this.field_b[this.field_i], var8Lifetime1 >>> var7);
           }
           if ((long)var7 + param1 >= 8L) {
             this.field_i = this.field_i + 1;
@@ -245,7 +245,7 @@ final class tg {
               this.field_i = 0;
               this.field_f = 0;
             }
-            this.field_b[this.field_i] = (byte)dg.a(255, var8Lifetime1 << -var7 + 8);
+            this.field_b[this.field_i] = (byte)dg.bitwiseAnd(255, var8Lifetime1 << -var7 + 8);
             this.field_f = this.field_f + (int)param1;
           } else {
             this.field_f = (int)((long)this.field_f + param1);

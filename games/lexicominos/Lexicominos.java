@@ -93,8 +93,8 @@ public final class Lexicominos extends nk {
                   ModalDialog.a(16, rh.a(gg.field_d, (byte) 124, "roman12", v.field_t, ValidationStatusWidget.field_P), 0.0f);
                   return false;
                 }
-                if (gl.field_a.ensureIndexLoaded(81) &&
-                  gl.field_a.tryLoadAllGroups((byte) -124)) {
+                if (GrowableIntArray.field_a.ensureIndexLoaded(81) &&
+                  GrowableIntArray.field_a.tryLoadAllGroups((byte) -124)) {
                   if (hc.field_gb.ensureIndexLoaded(79) &&
                     hc.field_gb.tryLoadAllGroups((byte) 120)) {
                     if (ga.field_a.ensureIndexLoaded(-114) &&
@@ -115,18 +115,18 @@ public final class Lexicominos extends nk {
                                   return false;
                                 }
                                 MusicPatchPcmStream.c(true);
-                                kc.field_m[0] = VorbisSample.loadByName(gl.field_a, "", "turnover_page").decodeAllToPcm();
-                                kc.field_m[1] = VorbisSample.loadByName(gl.field_a, "", "drop_book").decodeAllToPcm();
-                                kc.field_m[4] = VorbisSample.loadByName(gl.field_a, "", "x2").decodeAllToPcm();
-                                kc.field_m[5] = VorbisSample.loadByName(gl.field_a, "", "x3").decodeAllToPcm();
-                                kc.field_m[6] = VorbisSample.loadByName(gl.field_a, "", "x4").decodeAllToPcm();
-                                kc.field_m[7] = VorbisSample.loadByName(gl.field_a, "", "x5").decodeAllToPcm();
-                                var3_ref = VorbisSample.loadByName(gl.field_a, "", "score_increase_loop").decodeAllToPcm();
-                                var4_ref_ke = VorbisSample.loadByName(gl.field_a, "", "score_increase_stop").decodeAllToPcm();
+                                kc.field_m[0] = VorbisSample.loadByName(GrowableIntArray.field_a, "", "turnover_page").decodeAllToPcm();
+                                kc.field_m[1] = VorbisSample.loadByName(GrowableIntArray.field_a, "", "drop_book").decodeAllToPcm();
+                                kc.field_m[4] = VorbisSample.loadByName(GrowableIntArray.field_a, "", "x2").decodeAllToPcm();
+                                kc.field_m[5] = VorbisSample.loadByName(GrowableIntArray.field_a, "", "x3").decodeAllToPcm();
+                                kc.field_m[6] = VorbisSample.loadByName(GrowableIntArray.field_a, "", "x4").decodeAllToPcm();
+                                kc.field_m[7] = VorbisSample.loadByName(GrowableIntArray.field_a, "", "x5").decodeAllToPcm();
+                                var3_ref = VorbisSample.loadByName(GrowableIntArray.field_a, "", "score_increase_loop").decodeAllToPcm();
+                                var4_ref_ke = VorbisSample.loadByName(GrowableIntArray.field_a, "", "score_increase_stop").decodeAllToPcm();
                                 kc.field_m[2] = aj.a((byte) -42, var4_ref_ke, var3_ref);
                                 BitPacketBuffer.field_o[2] = PcmSampleStream.createForPlaybackRate(kc.field_m[2], 100, 128);
                                 kc.field_m[8] = SoundEffect.loadByName(hc.field_gb, "", "lexi_block_stop").toPcmSample();
-                                vb.field_r = new SoundCache(hc.field_gb, gl.field_a);
+                                vb.field_r = new SoundCache(hc.field_gb, GrowableIntArray.field_a);
                                 kc.field_m[9] = vb.field_r.getMusicSampleByName((byte) -80, "drum_075_claves");
                                 BitPacketBuffer.field_o[9] = PcmSampleStream.createForPlaybackRate(kc.field_m[9], 100, 128);
                                 SectorCacheStore.b(5);
@@ -153,7 +153,7 @@ public final class Lexicominos extends nk {
                   ModalDialog.a(param0 + 102, rh.a(hc.field_gb, (byte) 37, "", MusicPatchPcmStream.field_p, e.field_h), 4.0f);
                   return false;
                 }
-                ModalDialog.a(param0 + 102, rh.a(gl.field_a, (byte) 122, "", MusicPatchPcmStream.field_p, e.field_h), 1.0f);
+                ModalDialog.a(param0 + 102, rh.a(GrowableIntArray.field_a, (byte) 122, "", MusicPatchPcmStream.field_p, e.field_h), 1.0f);
                 return false;
               }
               ModalDialog.a(16, rh.a(gg.field_d, (byte) 37, "roman20", v.field_t, ValidationStatusWidget.field_P), 0.0f);
@@ -166,7 +166,7 @@ public final class Lexicominos extends nk {
             ModalDialog.a(16, pl.field_b, 91.0f);
             this.renderClientFrame(param0 + 18466);
             hc.field_gb = null;
-            gl.field_a = null;
+            GrowableIntArray.field_a = null;
             ImageProducerRasterBuffer.field_i[0] = MusicTrack.load(SecondaryNodeDequeIterator.field_b, "", "game");
             ImageProducerRasterBuffer.field_i[1] = MusicTrack.load(SecondaryNodeDequeIterator.field_b, "", "game2");
             ImageProducerRasterBuffer.field_i[2] = MusicTrack.load(SecondaryNodeDequeIterator.field_b, "", "game3");
@@ -188,7 +188,7 @@ public final class Lexicominos extends nk {
               break;
             }
             if (decompiledNaturalLoopExit4) {
-              CrossfadingMidiPcmStream.field_n.field_A.c(-94);
+              CrossfadingMidiPcmStream.field_n.field_A.releasePatchSampleIds(-94);
               ga.field_a = null;
               vb.field_r = null;
               SecondaryNodeDequeIterator.field_b = null;
@@ -314,7 +314,7 @@ public final class Lexicominos extends nk {
           }
           ModalDialog.a(param0 ^ -70, gf.field_q, 92.0f);
           this.renderClientFrame(18380);
-          cb.field_n = df.a("", "bookbg", SectorCacheStore.field_d, (byte) -69);
+          MusicPatchNode.field_n = df.a("", "bookbg", SectorCacheStore.field_d, (byte) -69);
           pa.field_a = df.a("", "leftpage", SectorCacheStore.field_d, (byte) -83);
           PasswordValidator.field_m = df.a("", "rightpage", SectorCacheStore.field_d, (byte) -64);
           var3_array = td.a("", "frame", SectorCacheStore.field_d, 22306);
@@ -403,7 +403,7 @@ public final class Lexicominos extends nk {
                 var14 = var9[var10_int];
                 var15 = var14 & 16711935;
                 var16 = 65280 & var14;
-                var9[var10_int] = FrameTimer.a(vg.a(var13 * var15 + var12 * 16711935 >> 8, 16711935), vg.a(65280, var13 * var16 + var12 * 65280 >> 8));
+                var9[var10_int] = FrameTimer.bitwiseOr(vg.bitwiseAnd(var13 * var15 + var12 * 16711935 >> 8, 16711935), vg.bitwiseAnd(65280, var13 * var16 + var12 * 65280 >> 8));
               }
               var10_int++;
               continue;
@@ -750,7 +750,7 @@ public final class Lexicominos extends nk {
                     var12 = param8[1 + param3];
                     var13 = param2 * (16711935 & var12) + (4 - param2) * (var11 & 16711935) >> 2;
                     var14 = (var11 & 65280) * (4 - param2) + param2 * (var12 & 65280) >> 2;
-                    param4[param5] = FrameTimer.a(vg.a(var14, 65280), vg.a(16711935, var13));
+                    param4[param5] = FrameTimer.bitwiseOr(vg.bitwiseAnd(var14, 65280), vg.bitwiseAnd(16711935, var13));
                   }
                   if (param2 == 0 ||
                     var17 != 0) {
@@ -761,7 +761,7 @@ public final class Lexicominos extends nk {
                         var12 = param1[1 + param3];
                         var13 = (4 - param2) * (var11 & 16711935) + (var12 & 16711935) * param2 >> 2;
                         var14 = (65280 & var12) * param2 + (4 - param2) * (var11 & 65280) >> 2;
-                        param4[param5] = FrameTimer.a(vg.a(16711935, var13), vg.a(65280, var14));
+                        param4[param5] = FrameTimer.bitwiseOr(vg.bitwiseAnd(16711935, var13), vg.bitwiseAnd(65280, var14));
                         param4[param5] = param1[param3];
                       } else {
                         param4[param5] = param1[param3];
@@ -773,7 +773,7 @@ public final class Lexicominos extends nk {
                     var12 = param1[1 + param3];
                     var13 = (4 - param2) * (var11 & 16711935) + (var12 & 16711935) * param2 >> 2;
                     var14 = (65280 & var12) * param2 + (4 - param2) * (var11 & 65280) >> 2;
-                    param4[param5] = FrameTimer.a(vg.a(16711935, var13), vg.a(65280, var14));
+                    param4[param5] = FrameTimer.bitwiseOr(vg.bitwiseAnd(16711935, var13), vg.bitwiseAnd(65280, var14));
                     if (var17 != 0) {
                       param4[param5] = param1[param3];
                     }
@@ -810,7 +810,7 @@ public final class Lexicominos extends nk {
                     var14Lifetime1 = param1[312 + param3];
                     var15 = param0 * ((16711935 & var14Lifetime1) * param2 + (-param2 + 4) * (var13Lifetime1 & 16711935)) + ((16711935 & var11Lifetime1) * (4 - param2) + param2 * (var12Lifetime1 & 16711935)) * (4 - param0) >> 4;
                     var16 = (4 - param0) * ((var11Lifetime1 & 65280) * (-param2 + 4) + param2 * (var12Lifetime1 & 65280)) + param0 * (param2 * (var14Lifetime1 & 65280) + (4 - param2) * (var13Lifetime1 & 65280)) >> 4;
-                    param4[param5] = FrameTimer.a(vg.a(65280, var16), vg.a(16711935, var15));
+                    param4[param5] = FrameTimer.bitwiseOr(vg.bitwiseAnd(65280, var16), vg.bitwiseAnd(16711935, var15));
                   } else {
                     if (param2 == 0) {
                       if (param0 == 0) {
@@ -820,14 +820,14 @@ public final class Lexicominos extends nk {
                         var12Lifetime1 = param1[param3 + 311];
                         var13Lifetime1 = (16711935 & var11Lifetime1) * (-param0 + 4) + param0 * (var12Lifetime1 & 16711935) >> 2;
                         var14Lifetime1 = param0 * (var12Lifetime1 & 65280) + (65280 & var11Lifetime1) * (-param0 + 4) >> 2;
-                        param4[param5] = FrameTimer.a(vg.a(var14Lifetime1, 65280), vg.a(var13Lifetime1, 16711935));
+                        param4[param5] = FrameTimer.bitwiseOr(vg.bitwiseAnd(var14Lifetime1, 65280), vg.bitwiseAnd(var13Lifetime1, 16711935));
                       }
                     } else {
                       var11Lifetime1 = param1[param3];
                       var12Lifetime1 = param1[param3 + 1];
                       var13Lifetime1 = (16711935 & var12Lifetime1) * param2 + (4 - param2) * (16711935 & var11Lifetime1) >> 2;
                       var14Lifetime1 = (65280 & var12Lifetime1) * param2 + (65280 & var11Lifetime1) * (4 - param2) >> 2;
-                      param4[param5] = FrameTimer.a(vg.a(var13Lifetime1, 16711935), vg.a(var14Lifetime1, 65280));
+                      param4[param5] = FrameTimer.bitwiseOr(vg.bitwiseAnd(var13Lifetime1, 16711935), vg.bitwiseAnd(var14Lifetime1, 65280));
                     }
                   }
                   decompiledFrameRemainder0 = false;
@@ -841,7 +841,7 @@ public final class Lexicominos extends nk {
                         var12Lifetime1Lifetime1 = param8[311 + param3];
                         var13Lifetime1Lifetime1 = (16711935 & var11Lifetime1Lifetime1) * (4 - param0) + (var12Lifetime1Lifetime1 & 16711935) * param0 >> 2;
                         var14Lifetime1Lifetime1 = (65280 & var11Lifetime1Lifetime1) * (-param0 + 4) + param0 * (65280 & var12Lifetime1Lifetime1) >> 2;
-                        param4[param5] = FrameTimer.a(vg.a(65280, var14Lifetime1Lifetime1), vg.a(16711935, var13Lifetime1Lifetime1));
+                        param4[param5] = FrameTimer.bitwiseOr(vg.bitwiseAnd(65280, var14Lifetime1Lifetime1), vg.bitwiseAnd(16711935, var13Lifetime1Lifetime1));
                       } else {
                         param4[param5] = param8[param3];
                       }
@@ -850,7 +850,7 @@ public final class Lexicominos extends nk {
                       var12Lifetime1Lifetime1 = param8[1 + param3];
                       var13Lifetime1Lifetime1 = param2 * (var12Lifetime1Lifetime1 & 16711935) + (16711935 & var11Lifetime1Lifetime1) * (-param2 + 4) >> 2;
                       var14Lifetime1Lifetime1 = (-param2 + 4) * (var11Lifetime1Lifetime1 & 65280) + param2 * (var12Lifetime1Lifetime1 & 65280) >> 2;
-                      param4[param5] = FrameTimer.a(vg.a(var14Lifetime1Lifetime1, 65280), vg.a(16711935, var13Lifetime1Lifetime1));
+                      param4[param5] = FrameTimer.bitwiseOr(vg.bitwiseAnd(var14Lifetime1Lifetime1, 65280), vg.bitwiseAnd(16711935, var13Lifetime1Lifetime1));
                     }
                     decompiledFrameRemainder0 = false;
                   }
@@ -861,7 +861,7 @@ public final class Lexicominos extends nk {
                     var14Lifetime1Lifetime2 = param8[311 + param3 + 1];
                     var15Lifetime1 = (4 - param0) * (param2 * (16711935 & var12Lifetime1Lifetime2) + (4 - param2) * (var11Lifetime1Lifetime2 & 16711935)) + param0 * ((16711935 & var13Lifetime1Lifetime2) * (4 - param2) + (16711935 & var14Lifetime1Lifetime2) * param2) >> 4;
                     var16Lifetime1 = ((var13Lifetime1Lifetime2 & 65280) * (4 - param2) + (65280 & var14Lifetime1Lifetime2) * param2) * param0 + ((4 - param2) * (65280 & var11Lifetime1Lifetime2) + param2 * (var12Lifetime1Lifetime2 & 65280)) * (-param0 + 4) >> 4;
-                    param4[param5] = FrameTimer.a(vg.a(var16Lifetime1, 65280), vg.a(var15Lifetime1, 16711935));
+                    param4[param5] = FrameTimer.bitwiseOr(vg.bitwiseAnd(var16Lifetime1, 65280), vg.bitwiseAnd(var15Lifetime1, 16711935));
                   }
                 }
               }
@@ -968,7 +968,7 @@ public final class Lexicominos extends nk {
           PcmOutputWorker.resetStaticState((byte) -61);
           MidiPcmStream.c(true);
           na.clearStaticReferences(true);
-          cb.clearStaticReferences(param0 + 29073);
+          MusicPatchNode.clearStaticReferences(param0 + 29073);
           MidiTrackReader.clearStaticReferences();
           MusicPatchPcmStream.clearStaticReferences((byte) 37);
           fg.clearStaticReferences(param0 - 55);
@@ -1009,7 +1009,7 @@ public final class Lexicominos extends nk {
           bj.clearStaticReferences(true);
           kb.a(false);
           q.clearStaticReferences((byte) 70);
-          ph.a(87);
+          ByteArrayPoolSupport.a(87);
           IsaacRandom.clearStaticReferences((byte) -81);
           qf.e((byte) -15);
           ci.clearStaticReferences((byte) -127);
@@ -1070,8 +1070,8 @@ public final class Lexicominos extends nk {
           vf.a((byte) -53);
           ac.a(param0 - 75);
           kc.clearStaticReferences(0);
-          wj.c(false);
-          rc.clearStaticReferences(870040769);
+          MusicPatch.c(false);
+          MusicPatchEnvelope.clearStaticReferences(870040769);
           LabeledWidgetContainer.h(-127);
           ValidatedTextField.clearDeclaredStaticReferences(-60);
           EditableTextField.clearStaticReferences((byte) 93);
@@ -1089,7 +1089,7 @@ public final class Lexicominos extends nk {
           AudioFilter.clearStaticReferences();
           hd.a(-115);
           RichTextLayout.resetStaticState(param0 - 159);
-          gl.clearStaticReferences(-116);
+          GrowableIntArray.clearStaticReferences(-116);
           DraggableWidgetContainer.clearStaticReferences(225);
           DropTargetWidgetContainer.clearStaticReferences(4);
           IterableNodeHashTable.clearStaticReferences((byte) -70);
@@ -1182,8 +1182,8 @@ public final class Lexicominos extends nk {
           AudioOutput.configureAudio(22050, true, 10);
           ce.field_b = AudioOutput.createOutput(jh.field_a, (java.awt.Component) ((Object) ug.field_y), 0, 4096);
           DefaultTextWidgetRenderer.field_h = AudioOutput.createOutput(jh.field_a, (java.awt.Component) ((Object) ug.field_y), 1, 2048);
-          wj.field_j = new PcmStreamMixer();
-          DefaultTextWidgetRenderer.field_h.setRootStream(wj.field_j);
+          MusicPatch.field_j = new PcmStreamMixer();
+          DefaultTextWidgetRenderer.field_h.setRootStream(MusicPatch.field_j);
           CrossfadingMidiPcmStream.field_n = new CrossfadingMidiPcmStream();
           CrossfadingMidiPcmStream.field_n.field_s = new MidiPcmStream(CrossfadingMidiPcmStream.field_n.field_A);
           CrossfadingMidiPcmStream.field_n.field_A.a(128, true, 9);
@@ -1273,7 +1273,7 @@ public final class Lexicominos extends nk {
           }
           SectorCacheStore.field_d = oj.a(false, 1);
           ci.field_a = oj.a(false, 2);
-          gl.field_a = oj.a(false, 3);
+          GrowableIntArray.field_a = oj.a(false, 3);
           DraggableWidgetContainer.field_L = oj.a(false, 5);
           ga.field_a = oj.a(false, 6);
           SecondaryNodeDequeIterator.field_b = oj.a(false, 7);
@@ -1362,13 +1362,13 @@ public final class Lexicominos extends nk {
           if (ImageProducerRasterBuffer.field_j != -2 &&
             BitPacketBuffer.field_r != -2) {
             SoftwareRasterizer.setClip(0, 0, 640, 20);
-            cb.field_n.drawOpaque(0, 0);
+            MusicPatchNode.field_n.drawOpaque(0, 0);
             SoftwareRasterizer.setClip(0, 460, 640, 480);
-            cb.field_n.drawOpaque(0, 0);
+            MusicPatchNode.field_n.drawOpaque(0, 0);
             SoftwareRasterizer.setClip(0, 20, 24, 460);
-            cb.field_n.drawOpaque(0, 0);
+            MusicPatchNode.field_n.drawOpaque(0, 0);
             SoftwareRasterizer.setClip(616, 20, 640, 460);
-            cb.field_n.drawOpaque(0, 0);
+            MusicPatchNode.field_n.drawOpaque(0, 0);
             SoftwareRasterizer.resetClip();
           }
           boolean decompiledFrameRemainder0 = true;
@@ -1697,7 +1697,7 @@ public final class Lexicominos extends nk {
                   if (el.field_c != null &&
                     el.field_c.field_J > 0 &&
                     !el.field_c.field_h) {
-                    AccountRequestState.field_d = gl.a(65526, 9, el.field_c.field_i, 3, el.field_c.field_f, (byte) 56, el.field_c.field_R, new int[]{el.field_c.field_J * 64 + el.field_c.field_m.field_i}, el.field_c.field_a);
+                    AccountRequestState.field_d = GrowableIntArray.a(65526, 9, el.field_c.field_i, 3, el.field_c.field_f, (byte) 56, el.field_c.field_R, new int[]{el.field_c.field_J * 64 + el.field_c.field_m.field_i}, el.field_c.field_a);
                   }
                   DraggableWidgetContainer.field_N = ud.a(1, -118, 10, 3, 9);
                   ImageProducerRasterBuffer.field_j = hf.field_a;

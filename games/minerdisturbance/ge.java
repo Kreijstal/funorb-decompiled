@@ -80,7 +80,7 @@ final class ge {
           if (param1 != -569) {
             field_d = (String) null;
           }
-          var2 = new CoverageBitmapFont(param0, bg.field_d, oc.field_e, qk.field_b, ng.field_e, af.field_p, ClientException.field_b);
+          var2 = new CoverageBitmapFont(param0, bg.field_d, oc.field_e, qk.field_b, MusicPatchEnvelope.field_e, af.field_p, ClientException.field_b);
           ec.a((byte) -111);
           stackIn_6_0 = var2;
           return stackIn_6_0;

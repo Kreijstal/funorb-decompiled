@@ -140,7 +140,7 @@ final class RenderingSupport007 {
                     for (integerLocal36 = 0; integerLocal20 > integerLocal36; integerLocal36++) {
                       previousIntegerLocal6 = integerLocal28;
                       integerLocal28++;
-                      integerArrayArrayLocal24[0][previousIntegerLocal6] = cipherPacketBufferLocal38.readInt(MixedSupport106.computeInteger1387((int) byteArgument1, 7601));
+                      integerArrayArrayLocal24[0][previousIntegerLocal6] = cipherPacketBufferLocal38.readInt(MixedSupport106.bitwiseXor((int) byteArgument1, 7601));
                     }
                     integerLocal25++;
                   }

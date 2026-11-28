@@ -206,7 +206,7 @@ final class ResourceArchive {
                     var22 = var35[var21];
                   }
                   if (param3 == var22) {
-                    lj.copyByteRange(var44, var18, var45, var15Lifetime1, var20);
+                    ArrayBlockSupport.copyByteRange(var44, var18, var45, var15Lifetime1, var20);
                     var15Lifetime1 = var15Lifetime1 + var20;
                   }
                   var18 = var18 + var20;
@@ -244,7 +244,7 @@ final class ResourceArchive {
                 var19 = 0;
                 for (var20 = 0; var5_int > var20; var20++) {
                   var19 = var19 + var30.readInt((byte) 59);
-                  lj.copyByteRange(var44, var17, var40[var20], var39[var20], var19);
+                  ArrayBlockSupport.copyByteRange(var44, var17, var40[var20], var39[var20], var19);
                   var15_ref_int__[var20] = var15_ref_int__[var20] + var19;
                   var17 = var17 + var19;
                 }

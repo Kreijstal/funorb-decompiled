@@ -215,7 +215,7 @@ final class nj {
           }
           try {
             var4 = param2.getGraphics();
-            SectorCacheStore.field_f.a(-19275, param1, param0, var4);
+            SectorCacheStore.field_f.drawImage(-19275, param1, param0, var4);
             var4.dispose();
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

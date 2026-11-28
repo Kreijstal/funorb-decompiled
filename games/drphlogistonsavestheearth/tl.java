@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tl extends InteractiveWidget {
-    private rb field_M;
+    private GrowableIntArray field_M;
     static he field_P;
     static he[] field_I;
     static bb field_O;
@@ -17,10 +17,10 @@ final class tl extends InteractiveWidget {
           return -25;
         }
         if (param0 < 0 ||
-          param0 >= this.field_M.a(false)) {
+          param0 >= this.field_M.size(false)) {
           return -1;
         }
-        return this.field_M.b(param1 - 39, param0);
+        return this.field_M.get(param1 - 39, param0);
     }
 
     final boolean pointerPressed(int param0, UiWidget param1, int param2, byte param3, int param4, int param5, int param6) {
@@ -54,13 +54,13 @@ final class tl extends InteractiveWidget {
           }
           var8_int = this.field_N * var8_int / var9;
           if (param2 == 1) {
-            this.field_M.c(var8_int, -106);
+            this.field_M.append(var8_int, -106);
           } else {
             if (param2 == 2) {
               var10 = 2147483647;
               var11 = -1;
-              for (var12 = 0; this.field_M.a(false) > var12; var12++) {
-                var13 = this.field_M.b(-126, var12) - var8_int;
+              for (var12 = 0; this.field_M.size(false) > var12; var12++) {
+                var13 = this.field_M.get(-126, var12) - var8_int;
                 var13 = var13 * var13;
                 if (var10 > var13) {
                   var11 = var12;
@@ -70,7 +70,7 @@ final class tl extends InteractiveWidget {
               if (var11 < 0) {
                 return true;
               }
-              this.field_M.d(-19, var11);
+              this.field_M.removeAt(-19, var11);
             }
           }
           return true;
@@ -104,7 +104,7 @@ final class tl extends InteractiveWidget {
           UiWidget var3 = (UiWidget) null;
           this.pointerPressed(-21, (UiWidget) null, -12, (byte) -12, -64, -54, -43);
         }
-        return this.field_M.a(false);
+        return this.field_M.size(false);
     }
 
     final int i(int param0) {

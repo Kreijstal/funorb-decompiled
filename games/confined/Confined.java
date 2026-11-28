@@ -194,7 +194,7 @@ public final class Confined extends i {
           DelegatingCanvas.clearStaticReferences(-75);
           nh.a(false);
           dg.clearStaticReferences(false);
-          dl.clearStaticReferences((byte) 101);
+          ByteArrayPoolSupport.clearStaticReferences((byte) 101);
           pa.clearStaticReferences((byte) -90);
           b.a(-110);
           qh.clearStaticReferences(109);
@@ -247,7 +247,7 @@ public final class Confined extends i {
           fb.clearStaticReferences(false);
           DirectByteStorage.clearDeclaredStaticReferences(-6348);
           RichTextLayout.a((byte) 87);
-          wl.clearStaticReferences(false);
+          GrowableIntArray.clearStaticReferences(false);
           DraggableWidgetContainer.clearDeclaredStaticReferences(44);
           DropTargetWidgetContainer.clearStaticReferences((byte) 92);
           e.clearStaticReferences(64);
@@ -986,7 +986,7 @@ public final class Confined extends i {
                 while (tf.field_b[var2_int] > var5) {
                   var6Lifetime1 = GameCanvas.field_a.getFileIdByName(0, si.field_e[var2_int] + "attack" + (var5 + 1), param0 ^ 19);
                   tf.field_n[var2_int][var5] = var6Lifetime1;
-                  tf.field_c[var2_int][var5] = va.a((int) i.field_u.getFile((byte) -2, 0, var6Lifetime1)[0], 255);
+                  tf.field_c[var2_int][var5] = va.bitwiseAnd((int) i.field_u.getFile((byte) -2, 0, var6Lifetime1)[0], 255);
                   li.field_m.a(var4Lifetime2, 61, var6Lifetime1, 192);
                   var5++;
                 }
@@ -994,7 +994,7 @@ public final class Confined extends i {
                 while (MovingTunnelEntity.field_I[var2_int] > var5Lifetime1) {
                   var6Lifetime1Lifetime1 = GameCanvas.field_a.getFileIdByName(0, si.field_e[var2_int] + "ready" + (var5Lifetime1 + 1), -114);
                   MovingTunnelEntity.field_H[var2_int][var5Lifetime1] = var6Lifetime1Lifetime1;
-                  MovingTunnelEntity.field_O[var2_int][var5Lifetime1] = va.a((int) i.field_u.getFile((byte) -2, 0, var6Lifetime1Lifetime1)[0], 255);
+                  MovingTunnelEntity.field_O[var2_int][var5Lifetime1] = va.bitwiseAnd((int) i.field_u.getFile((byte) -2, 0, var6Lifetime1Lifetime1)[0], 255);
                   li.field_m.a(var4Lifetime2, 61, var6Lifetime1Lifetime1, 192);
                   var5Lifetime1++;
                 }
@@ -1012,7 +1012,7 @@ public final class Confined extends i {
             return;
           }
           if (pn.field_a == null) {
-            jc.a(wl.field_a, 10265, 60.0f);
+            jc.a(GrowableIntArray.field_a, 10265, 60.0f);
             this.renderClientFrame(51200);
             db.field_w = nm.a(ih.field_d, "achievements", param0 + 96, "");
             kn.field_g = ProgressMessageDialog.a(false, "unachieved", "basic", pb.field_e);
@@ -1028,20 +1028,20 @@ public final class Confined extends i {
             IntrusiveNodeHashTable.field_h = f.a(8364, FullscreenStatusDialog.field_mb, 96);
             uc.field_U = nm.a(ih.field_d, "shields_enemy_small", 1, "");
             DiskCacheWorker.field_e = nm.a(ih.field_d, "shields_enemy_large", param0 + 96, "");
-            jc.a(wl.field_a, 10265, 63.0f);
+            jc.a(GrowableIntArray.field_a, 10265, 63.0f);
             this.renderClientFrame(51200);
             pn.field_l = nm.a(ih.field_d, "shields_invincible_state", 1, "");
-            dl.field_d = f.a(8364, pn.field_l, 96);
-            jc.a(wl.field_a, 10265, 66.0f);
+            ByteArrayPoolSupport.field_d = f.a(8364, pn.field_l, 96);
+            jc.a(GrowableIntArray.field_a, 10265, 66.0f);
             this.renderClientFrame(51200);
             DropTargetWidgetContainer.field_M = nm.a(ih.field_d, "shields_invincible_flash_small", 1, "");
             ue.field_u = f.a(8364, DropTargetWidgetContainer.field_M, 96);
             qd.field_c = nm.a(ih.field_d, "shields_invincible_flash_large", 1, "");
-            jc.a(wl.field_a, 10265, 70.0f);
+            jc.a(GrowableIntArray.field_a, 10265, 70.0f);
             this.renderClientFrame(51200);
             TunnelEntity.field_w = nm.a(ih.field_d, "powerup_sphere", 1, "");
             SoundCache.field_i = nm.a(ih.field_d, "powerup_icons", 1, "");
-            jc.a(wl.field_a, 10265, 73.0f);
+            jc.a(GrowableIntArray.field_a, 10265, 73.0f);
             this.renderClientFrame(51200);
             uc.field_db = new RgbSprite[14];
             var3 = 0;
@@ -1050,7 +1050,7 @@ public final class Confined extends i {
                 aa.field_b = nm.a(ih.field_d, "player_shot", 1, "");
                 rm.field_K = ProgressMessageDialog.a(false, "power_shot", "", ih.field_d);
                 DraggableWidgetContainer.field_O = nm.a(ih.field_d, "enemy_shot", 1, "");
-                jc.a(wl.field_a, 10265, 76.0f);
+                jc.a(GrowableIntArray.field_a, 10265, 76.0f);
                 this.renderClientFrame(51200);
                 ImageProducerRasterBuffer.field_o = nm.a(ih.field_d, "charge_cannon_blast", 1, "");
                 wb.field_a = ProgressMessageDialog.a(false, "missile_flame", "", ih.field_d);
@@ -1065,7 +1065,7 @@ public final class Confined extends i {
                 DraggableWidgetContainer.field_J = ProgressMessageDialog.a(false, "wide_key", "", ih.field_d);
                 MatchingFieldValidator.field_j = ProgressMessageDialog.a(false, "arrow_keys", "", ih.field_d);
                 fa.field_U = ProgressMessageDialog.a(false, "mouse", "", ih.field_d);
-                jc.a(wl.field_a, 10265, 80.0f);
+                jc.a(GrowableIntArray.field_a, 10265, 80.0f);
                 this.renderClientFrame(51200);
                 break;
               }

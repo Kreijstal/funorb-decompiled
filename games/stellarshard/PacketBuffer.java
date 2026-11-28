@@ -648,7 +648,7 @@ class PacketBuffer extends IntrusiveNode {
 
     PacketBuffer(int param0) {
         this.position = 0;
-        this.payload = ee.a(param0, true);
+        this.payload = ByteArrayPoolSupport.acquireByteArray(param0, true);
     }
 
     private final void writeLong56(int param0, long param1) {

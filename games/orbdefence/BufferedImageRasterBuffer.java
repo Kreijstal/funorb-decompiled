@@ -6,14 +6,14 @@ import java.util.*;
 final class BufferedImageRasterBuffer extends RasterBuffer {
     private java.awt.Component field_g;
 
-    final void a(int param0, int param1, java.awt.Graphics param2, boolean param3) {
+    final void drawImage(int param0, int param1, java.awt.Graphics param2, boolean param3) {
         if (!param3) {
           return;
         }
         param2.drawImage(this.field_a, param0, param1, (java.awt.image.ImageObserver) ((Object) this.field_g));
     }
 
-    final void a(int param0, int param1, int param2, java.awt.Component param3) {
+    final void initialize(int param0, int param1, int param2, java.awt.Component param3) {
         this.field_d = new int[1 + param2 * param1];
         this.field_f = param1;
         this.field_e = param2;
@@ -23,7 +23,7 @@ final class BufferedImageRasterBuffer extends RasterBuffer {
         this.field_a = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
         int var8 = -36 % ((param0 - 0) / 52);
         this.field_g = param3;
-        this.a(-40);
+        this.setAsRasterTarget(-40);
     }
 
     public BufferedImageRasterBuffer() {

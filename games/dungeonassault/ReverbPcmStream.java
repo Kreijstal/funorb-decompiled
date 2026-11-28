@@ -273,7 +273,7 @@ final class ReverbPcmStream extends PcmStream {
           if (this.field_t == null) {
             continue;
           }
-          cj.clearInts(this.field_z, 0, var4);
+          ArrayBlockSupport.clearInts(this.field_z, 0, var4);
         }
     }
 

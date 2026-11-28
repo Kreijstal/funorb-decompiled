@@ -289,7 +289,7 @@ final class hf extends DefaultTextWidgetRenderer {
               }
             }
           } else {
-            ka.a(this.field_A, 0, param1.field_A, 0, 6);
+            ArrayBlockSupport.copyObjectRange(this.field_A, 0, param1.field_A, 0, 6);
           }
           if (param2 > -113) {
             this.field_A = (bd[]) null;

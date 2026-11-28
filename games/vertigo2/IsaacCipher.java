@@ -48,7 +48,7 @@ final class IsaacCipher {
             var11 = new int[var4];
             var23 = var11;
             for (var7 = 0; var7 < var4; var7++) {
-              var11[var7] = in.field_c[b.a(255, (int) var22[var7])];
+              var11[var7] = in.field_c[b.bitwiseAnd(255, (int) var22[var7])];
             }
             var1[var2] = new Sprite(BirthDateChatEnableForm.field_M, vj.field_c, ca.field_a[var2], pc.field_a[var2], mh.field_c[var2], vi.field_w[var2], var23);
           } else {
@@ -60,7 +60,7 @@ final class IsaacCipher {
             var14 = var18;
             var7_ref_int__ = var14;
             for (var8 = 0; var8 < var4; var8++) {
-              var7_ref_int__[var8] = om.a(b.a(var16[var8] << 24, -16777216), in.field_c[b.a(255, (int) var22[var8])]);
+              var7_ref_int__[var8] = om.bitwiseOr(b.bitwiseAnd(var16[var8] << 24, -16777216), in.field_c[b.bitwiseAnd(255, (int) var22[var8])]);
             }
             var1[var2] = (Sprite) ((Object) new ArgbSprite(BirthDateChatEnableForm.field_M, vj.field_c, ca.field_a[var2], pc.field_a[var2], mh.field_c[var2], vi.field_w[var2], var18));
           }
@@ -100,10 +100,10 @@ final class IsaacCipher {
             }
           }
           this.field_k = this.field_k + this.field_b[128 + var2 & 255];
-          dupTemp$1 = this.field_k + (this.field_b[b.a(var3 >> 2, 255)] + this.field_c);
+          dupTemp$1 = this.field_k + (this.field_b[b.bitwiseAnd(var3 >> 2, 255)] + this.field_c);
           var4 = dupTemp$1;
           this.field_b[var2] = dupTemp$1;
-          dupTemp$2 = var3 + this.field_b[b.a(255, var4 >> 8 >> 2)];
+          dupTemp$2 = var3 + this.field_b[b.bitwiseAnd(255, var4 >> 8 >> 2)];
           this.field_c = dupTemp$2;
           this.field_a[var2] = dupTemp$2;
         }

@@ -24,7 +24,7 @@ final class SecondaryNodeDeque implements Iterable {
         byte[] var16;
         byte[] var17;
         var7 = MinerDisturbance.field_ab;
-        var1 = qk.field_b[0] * ng.field_e[0];
+        var1 = qk.field_b[0] * MusicPatchEnvelope.field_e[0];
         var16 = ClientException.field_b[0];
         if (param0 != 255) {
           field_c = 101;
@@ -32,18 +32,18 @@ final class SecondaryNodeDeque implements Iterable {
         if (!ContentTransitionDialog.field_gb[0]) {
           var8 = new int[var1];
           for (var5_int = 0; var1 > var5_int; var5_int++) {
-            var8[var5_int] = af.field_p[c.a(255, (int) var16[var5_int])];
+            var8[var5_int] = af.field_p[c.bitwiseAnd(255, (int) var16[var5_int])];
           }
-          var3 = new Sprite(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], ng.field_e[0], var8);
+          var3 = new Sprite(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], MusicPatchEnvelope.field_e[0], var8);
         } else {
           var17 = AwtRasterBuffer.field_a[0];
           var13 = new int[var1];
           var11 = var13;
           var5 = var11;
           for (var6 = 0; var6 < var1; var6++) {
-            var5[var6] = SpriteState.a(c.a(255, (int) var17[var6]) << 24, af.field_p[c.a((int) var16[var6], 255)]);
+            var5[var6] = SpriteState.bitwiseOr(c.bitwiseAnd(255, (int) var17[var6]) << 24, af.field_p[c.bitwiseAnd((int) var16[var6], 255)]);
           }
-          var3 = new ArgbSprite(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], ng.field_e[0], var13);
+          var3 = new ArgbSprite(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], MusicPatchEnvelope.field_e[0], var13);
         }
         ec.a((byte) 40);
         return (Sprite) (var3);

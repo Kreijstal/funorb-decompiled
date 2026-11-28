@@ -141,7 +141,7 @@ final class s extends InteractiveWidget {
             var5 = var9;
             var6 = param2;
             var7 = param3;
-            var9[var6] = (c.a(16711422, var9[var6]) >> 1) + var7;
+            var9[var6] = (c.bitwiseAnd(16711422, var9[var6]) >> 1) + var7;
             param2++;
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -184,8 +184,8 @@ final class s extends InteractiveWidget {
           if (255 < var1) {
             var1 = 255;
           }
-          field_I[var0] = c.a(var1 << 16, 16754509);
-          field_I[var0] = SpriteState.a(field_I[var0], c.a(var0 * var0 >> 5 << 8, 65366));
+          field_I[var0] = c.bitwiseAnd(var1 << 16, 16754509);
+          field_I[var0] = SpriteState.bitwiseOr(field_I[var0], c.bitwiseAnd(var0 * var0 >> 5 << 8, 65366));
         }
     }
 }

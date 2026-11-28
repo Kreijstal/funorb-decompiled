@@ -218,7 +218,7 @@ final class jb extends IntrusiveNode {
                   var25_ref = oa.a((byte) -113, en.field_a[var15], new String[]{"" + DiskCacheWorker.field_g[5]});
                 }
                 if (var15 == 9) {
-                  var25_ref = oa.a((byte) -113, en.field_a[var15], new String[]{"" + qf.field_p});
+                  var25_ref = oa.a((byte) -113, en.field_a[var15], new String[]{"" + MidiNoteMask.field_p});
                 }
                 if (var15 == 11) {
                   var25_ref = oa.a((byte) -127, en.field_a[var15], new String[]{"" + vi.field_q});
@@ -505,7 +505,7 @@ final class jb extends IntrusiveNode {
                   var25_ref = oa.a((byte) -113, en.field_a[var15], new String[]{"" + DiskCacheWorker.field_g[5]});
                 }
                 if (var15 == 9) {
-                  var25_ref = oa.a((byte) -113, en.field_a[var15], new String[]{"" + qf.field_p});
+                  var25_ref = oa.a((byte) -113, en.field_a[var15], new String[]{"" + MidiNoteMask.field_p});
                 }
                 if (var15 == 11) {
                   var25_ref = oa.a((byte) -127, en.field_a[var15], new String[]{"" + vi.field_q});

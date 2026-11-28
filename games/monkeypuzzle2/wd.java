@@ -97,7 +97,7 @@ final class wd {
             var9 = -1;
             if (7 <= var4) {
               for (var10 = 0; var10 < this.field_k; var10++) {
-                dupTemp$0 = var8 + var17.readUnsignedShortOrInt(gi.a(param0, -23687));
+                dupTemp$0 = var8 + var17.readUnsignedShortOrInt(gi.bitwiseXor(param0, -23687));
                 var8 = dupTemp$0;
                 this.field_f[var10] = dupTemp$0;
                 if (this.field_f[var10] > var9) {
@@ -106,7 +106,7 @@ final class wd {
               }
             } else {
               for (var10 = 0; var10 < this.field_k; var10++) {
-                dupTemp$1 = var8 + var17.readUnsignedShort(gi.a(param0, 32207));
+                dupTemp$1 = var8 + var17.readUnsignedShort(gi.bitwiseXor(param0, 32207));
                 var8 = dupTemp$1;
                 this.field_f[var10] = dupTemp$1;
                 if (this.field_f[var10] > var9) {

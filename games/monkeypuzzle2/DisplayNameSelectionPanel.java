@@ -240,7 +240,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         var2.setBounds(50, 13361, 20, 270, var3);
         var3 += 50;
         this.addChild((byte) -26, var2);
-        var3 = var3 + (this.a(TextFieldValidator.field_l, this.field_G, var3, ke.field_e, 35, 170) + 5);
+        var3 = var3 + (this.addLabeledFieldWithDefaultValidationMessage(TextFieldValidator.field_l, this.field_G, var3, ke.field_e, 35, 170) + 5);
         this.field_D.setBounds(40, 13361, 496 - var5 >> 1, var5, var3);
         this.field_z.setBounds(40, 13361, var4 + 3, 60, 15 + var3);
         this.field_z.field_o = (WidgetEventListener) (this);
@@ -507,7 +507,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
                             boolean decompiledFrameCompleted2 = true;
                             var13 = var11_ref.field_o[var12Lifetime1];
                             if (null == var13) {
-                              gl.a(var11_ref.field_o, var12Lifetime1 + 1, var11_ref.field_o, var12Lifetime1, -var12Lifetime1 + var11_ref.field_m);
+                              ArrayBlockSupport.copyObjectRange(var11_ref.field_o, var12Lifetime1 + 1, var11_ref.field_o, var12Lifetime1, -var12Lifetime1 + var11_ref.field_m);
                               var12Lifetime1--;
                               var11_ref.field_m = var11_ref.field_m - 1;
                             } else {
@@ -561,7 +561,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
                         var13Lifetime1 = var11_refLifetime1.field_o[var12Lifetime1Lifetime1];
                         if (null == var13Lifetime1) {
                           while (true) {
-                            gl.a(var11_refLifetime1.field_o, var12Lifetime1Lifetime1 + 1, var11_refLifetime1.field_o, var12Lifetime1Lifetime1, -var12Lifetime1Lifetime1 + var11_refLifetime1.field_m);
+                            ArrayBlockSupport.copyObjectRange(var11_refLifetime1.field_o, var12Lifetime1Lifetime1 + 1, var11_refLifetime1.field_o, var12Lifetime1Lifetime1, -var12Lifetime1Lifetime1 + var11_refLifetime1.field_m);
                             var12Lifetime1Lifetime1--;
                             var11_refLifetime1.field_m = var11_refLifetime1.field_m - 1;
                             scanLoop2: while (true) {
@@ -645,7 +645,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
                             if (null != var13Lifetime1) {
                               break;
                             }
-                            gl.a(var11_refLifetime1.field_o, var12Lifetime1Lifetime1 + 1, var11_refLifetime1.field_o, var12Lifetime1Lifetime1, -var12Lifetime1Lifetime1 + var11_refLifetime1.field_m);
+                            ArrayBlockSupport.copyObjectRange(var11_refLifetime1.field_o, var12Lifetime1Lifetime1 + 1, var11_refLifetime1.field_o, var12Lifetime1Lifetime1, -var12Lifetime1Lifetime1 + var11_refLifetime1.field_m);
                             var12Lifetime1Lifetime1--;
                             var11_refLifetime1.field_m = var11_refLifetime1.field_m - 1;
                           }
@@ -733,7 +733,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         }
     }
 
-    private final int a(String param0, UiWidget param1, int param2, String param3, int param4, int param5) {
+    private final int addLabeledFieldWithDefaultValidationMessage(String param0, UiWidget param1, int param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -748,7 +748,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
           if (param4 != 35) {
             this.field_D = (ButtonWidget) null;
           }
-          stackIn_3_0 = this.a(param1, param0, 35, param5, 120, param3, param2);
+          stackIn_3_0 = this.addLabeledFieldWithValidationMessage(param1, param0, 35, param5, 120, param3, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -776,7 +776,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         }
     }
 
-    private final int a(UiWidget param0, String param1, int param2, int param3, int param4, String param5, int param6) {
+    private final int addLabeledFieldWithValidationMessage(UiWidget param0, String param1, int param2, int param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
         ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;

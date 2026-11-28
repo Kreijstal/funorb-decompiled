@@ -420,10 +420,10 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
     }
 
     final static String i(int param0) {
-        if (bh.field_a == mg.field_b) {
+        if (bh.field_a == ByteArrayPoolSupport.field_b) {
           return rf.field_u;
         }
-        if (Model.field_o == mg.field_b) {
+        if (Model.field_o == ByteArrayPoolSupport.field_b) {
           return on.field_b;
         }
         if (param0 != 20) {

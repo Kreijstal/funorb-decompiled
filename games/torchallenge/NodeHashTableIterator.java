@@ -220,7 +220,7 @@ final class NodeHashTableIterator implements Iterator {
                         if (0 < param4.field_s &&
                           param4.field_z != null) {
                           dupTemp$0 = param4.field_z[var8];
-                          m.field_i[dupTemp$0] = m.field_i[dupTemp$0] + 1;
+                          GrowableIntArray.field_i[dupTemp$0] = GrowableIntArray.field_i[dupTemp$0] + 1;
                         }
                         ni.field_f = ni.field_f + 1;
                         break;
@@ -241,9 +241,9 @@ final class NodeHashTableIterator implements Iterator {
             null != param4.field_z) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
-            while (!(m.field_i.length <= var9Lifetime1)) {
-              var10Lifetime1 = m.field_i[var9Lifetime1];
-              m.field_i[var9Lifetime1] = var8Lifetime1;
+            while (!(GrowableIntArray.field_i.length <= var9Lifetime1)) {
+              var10Lifetime1 = GrowableIntArray.field_i[var9Lifetime1];
+              GrowableIntArray.field_i[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var20 != 0) {

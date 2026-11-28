@@ -103,14 +103,14 @@ final class jm {
             var7 = param2[1].field_E;
             param2[param3].draw(param0, param4);
             param2[2].draw(param0 + param1 - var6, param4);
-            SoftwareRasterizer.saveClip(mk.field_i);
+            SoftwareRasterizer.saveClip(MidiNoteMask.field_i);
             SoftwareRasterizer.intersectClip(param0 + var5_int, param4, param1 + (param0 - var6), param4 + param2[1].field_G);
             var8 = var5_int + param0;
             var9 = param1 + param0 - var6;
             for (param0 = var8; var9 > param0; param0 = param0 + var7) {
               param2[1].draw(param0, param4);
             }
-            SoftwareRasterizer.restoreClip(mk.field_i);
+            SoftwareRasterizer.restoreClip(MidiNoteMask.field_i);
             return;
           }
           return;

@@ -224,7 +224,7 @@ final class qp extends IntrusiveNode {
     }
 
     final static void a(byte param0) {
-        pl.e(-119);
+        MusicPatchNode.e(-119);
         qd.field_q = true;
         int var1 = 91 % ((-59 - param0) / 58);
         ne.field_d = true;

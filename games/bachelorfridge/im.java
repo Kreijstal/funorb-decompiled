@@ -20,7 +20,7 @@ final class im {
         int var7;
         int var6Lifetime1;
         int var7Lifetime1;
-        un.field_a[ut.field_l] = param0;
+        MusicPatchEnvelope.field_a[ut.field_l] = param0;
         fn.field_k[ut.field_l] = ut.field_l;
         gk.field_a[ut.field_l] = param1;
         if (param1 >= waa.field_a) {

@@ -8,7 +8,7 @@ final class pa {
     static boolean[] field_e;
     static double field_a;
 
-    static long a(long param0, long param1) {
+    static long bitwiseXor(long param0, long param1) {
         return param0 ^ param1;
     }
 

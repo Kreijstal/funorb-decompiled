@@ -38,9 +38,9 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
             !(mh.field_l.length >= param0)) {
             mh.field_l = new int[param0 * 2];
           }
-          if (dk.field_l == null ||
-            !(param0 <= dk.field_l.length)) {
-            dk.field_l = new int[2 * param0];
+          if (MusicPatch.field_l == null ||
+            !(param0 <= MusicPatch.field_l.length)) {
+            MusicPatch.field_l = new int[2 * param0];
           }
           if (null == BufferedSocket.field_i ||
             !(BufferedSocket.field_i.length >= param0)) {
@@ -99,9 +99,9 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
               !(mh.field_l.length >= param0)) {
               mh.field_l = new int[param0 * 2];
             }
-            if (dk.field_l == null ||
-              !(param0 <= dk.field_l.length)) {
-              dk.field_l = new int[2 * param0];
+            if (MusicPatch.field_l == null ||
+              !(param0 <= MusicPatch.field_l.length)) {
+              MusicPatch.field_l = new int[2 * param0];
             }
             if (null == BufferedSocket.field_i ||
               !(BufferedSocket.field_i.length >= param0)) {
@@ -160,9 +160,9 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
               !(mh.field_l.length >= param0)) {
               mh.field_l = new int[param0 * 2];
             }
-            if (dk.field_l == null ||
-              !(param0 <= dk.field_l.length)) {
-              dk.field_l = new int[2 * param0];
+            if (MusicPatch.field_l == null ||
+              !(param0 <= MusicPatch.field_l.length)) {
+              MusicPatch.field_l = new int[2 * param0];
             }
             if (null == BufferedSocket.field_i ||
               !(BufferedSocket.field_i.length >= param0)) {

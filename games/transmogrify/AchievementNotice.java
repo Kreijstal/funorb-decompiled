@@ -34,7 +34,7 @@ final class AchievementNotice extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           ContentTransitionDialog.a(37, (java.awt.Component) ((Object) param0));
-          kc.a((byte) 104, (java.awt.Component) ((Object) param0));
+          MusicPatchNode.a((byte) 104, (java.awt.Component) ((Object) param0));
           if (ga.field_a != null) {
             ga.field_a.detach((byte) -88, (java.awt.Component) ((Object) param0));
           }

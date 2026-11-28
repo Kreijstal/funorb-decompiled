@@ -49,7 +49,7 @@ final class dj {
             ac.field_B = new CipherPacketBuffer(param1);
             ld.field_g = param9;
             MouseInput.field_g = param8;
-            kn.field_b = param0;
+            ByteArrayPoolSupport.field_b = param0;
             fa.field_j = param11;
             an.field_E = param3;
             LoginPanel.field_Q = param2;
@@ -277,7 +277,7 @@ final class dj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            stackIn_4_0 = mk.decodeCp1252String((byte) -24, param0, param0.length, 0);
+            stackIn_4_0 = MidiNoteMask.decodeCp1252String((byte) -24, param0, param0.length, 0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

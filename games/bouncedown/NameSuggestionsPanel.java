@@ -188,7 +188,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
               this.field_z[var5].setBounds(15, 80, 80, 0, var5 * 16 + 20);
               this.addChild(this.field_z[var5], true);
             }
-            this.field_z[var3_int] = new InteractiveWidget(kj.field_g, (WidgetEventListener) (this));
+            this.field_z[var3_int] = new InteractiveWidget(MidiNoteMask.field_g, (WidgetEventListener) (this));
             this.field_z[var3_int].field_j = (WidgetRenderer) ((Object) var4);
             this.field_z[var3_int].setBounds(15, 80, 100, 0, var3_int * 16 + 36);
             this.addChild(this.field_z[var3_int], true);

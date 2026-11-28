@@ -27,13 +27,13 @@ final class TextLineMetrics {
             LoginPanel.field_D = new BitPacketBuffer(param6);
             NameSuggestionsPanel.field_x = param12;
             ua.field_c = param8;
-            kc.field_D = param10;
+            MusicPatchNode.field_D = param10;
             DiskArchiveRequest.field_w = param5;
             ai.field_d = param9;
             if (param11 != 64) {
               return;
             }
-            wd.field_g = param7;
+            MidiNoteMask.field_g = param7;
             AchievementUnlockEvent.field_h = param2;
             lf.field_c = param13;
             l.field_b = param4;

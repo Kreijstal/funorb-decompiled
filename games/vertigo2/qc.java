@@ -84,7 +84,7 @@ abstract class qc extends DualLinkNode {
             decompiledFrameRemainder0 = (null == as.field_a);
           }
           if (decompiledFrameRemainder0) {
-            if (!gl.field_o) {
+            if (!MusicPatchEnvelope.field_o) {
               if (qf.field_b >= ProxySocketConnector.field_h) {
                 stackIn_17_0 = (ProxySocketConnector.field_h + ea.field_g > qf.field_b) ? 1 : 0;
               } else {
@@ -97,7 +97,7 @@ abstract class qc extends DualLinkNode {
             if (param0 == null) {
               qf.field_b = 0;
             } else {
-              if (gl.field_o) {
+              if (MusicPatchEnvelope.field_o) {
                 qf.field_b = ProxySocketConnector.field_h;
               } else {
                 if (var2_int != 0) {
@@ -109,25 +109,25 @@ abstract class qc extends DualLinkNode {
             }
             if (param0 == null) {
               if (var2_int != 0) {
-                gl.field_o = true;
+                MusicPatchEnvelope.field_o = true;
               }
             } else {
-              gl.field_o = false;
+              MusicPatchEnvelope.field_o = false;
             }
             hn.field_n = ek.field_E;
             ContentTransitionDialog.field_db = or.field_c;
           }
           as.field_a = param0;
-          if (!gl.field_o &&
+          if (!MusicPatchEnvelope.field_o &&
             qf.field_b < ProxySocketConnector.field_h &&
             PlayerState.field_s) {
             hn.field_n = ek.field_E;
             qf.field_b = 0;
             ContentTransitionDialog.field_db = or.field_c;
           }
-          if (gl.field_o &&
+          if (MusicPatchEnvelope.field_o &&
             qf.field_b == td.field_g) {
-            gl.field_o = false;
+            MusicPatchEnvelope.field_o = false;
             qf.field_b = 0;
           }
           or.field_c = -1;

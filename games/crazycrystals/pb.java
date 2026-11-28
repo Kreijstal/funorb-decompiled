@@ -57,7 +57,7 @@ abstract class pb {
           }
           oi.field_d = (ob) ((Object) new ap());
           hc.field_a = new DiskCacheWorker(param1);
-          ch.field_d = new pk(oi.field_d, hc.field_a);
+          GrowableIntArray.field_d = new pk(oi.field_d, hc.field_a);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "pb.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }

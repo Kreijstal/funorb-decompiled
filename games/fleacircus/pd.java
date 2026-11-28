@@ -38,7 +38,7 @@ final class pd extends IntrusiveNode {
             var4 = param1.substring(1 + var2_int);
             var5 = jk.a(var3, (byte) 113);
             if (var5 == null) {
-              stackIn_14_0 = id.a(var4, 31592);
+              stackIn_14_0 = GrowableIntArray.a(var4, 31592);
               return stackIn_14_0;
             }
             stackIn_12_0 = var5;
@@ -118,7 +118,7 @@ final class pd extends IntrusiveNode {
           this.field_m = param0;
           this.field_j = param0.getTargetVolume();
           this.field_n = param1;
-          this.field_m.setVolume(this.field_j * gf.field_d + 128 >> 8);
+          this.field_m.setVolume(this.field_j * ByteArrayPoolSupport.field_d + 128 >> 8);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "pd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

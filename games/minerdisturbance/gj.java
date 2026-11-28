@@ -21,7 +21,7 @@ final class gj {
         try {
           param1.removeKeyListener(MidiPcmStream.field_O);
           param1.removeFocusListener(MidiPcmStream.field_O);
-          cg.field_H = -1;
+          MusicPatchNode.field_H = -1;
           if (param0 != 2670) {
             gj.a(83, 12);
           }

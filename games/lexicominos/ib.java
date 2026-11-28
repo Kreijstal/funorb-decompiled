@@ -89,7 +89,7 @@ final class ib implements WidgetRenderer {
             var5 = var9;
             var6 = param0;
             var7 = param3;
-            var9[var6] = (vg.a(var9[var6], 16711422) >> 1) + var7;
+            var9[var6] = (vg.bitwiseAnd(var9[var6], 16711422) >> 1) + var7;
             param0++;
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

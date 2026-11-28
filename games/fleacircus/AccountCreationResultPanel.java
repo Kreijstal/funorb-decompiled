@@ -51,7 +51,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
                 }
               }
             } else {
-              var4 = de.field_o;
+              var4 = MusicPatchEnvelope.field_o;
               if (null != this.field_ub) {
                 this.field_ub.onNameSuggestionsRefreshRequested(-72);
               }

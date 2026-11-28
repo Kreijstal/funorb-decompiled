@@ -10,7 +10,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
     static int field_G;
     NameSuggestionsPanel field_I;
 
-    private final int a(int param0, int param1, String param2, UiWidget param3, int param4, boolean param5, String param6) {
+    private final int addLabeledFieldWithValidationMessage(int param0, int param1, String param2, UiWidget param3, int param4, boolean param5, String param6) {
         RuntimeException var8 = null;
         ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;
@@ -225,7 +225,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         var2.setBounds((byte) -70, 20, var3, 50, 270);
         this.addChild(var2, -6938);
         var3 += 50;
-        var3 = var3 + (this.a(de.field_b, 170, this.field_H, ConfirmedEmailAvailabilityValidator.field_l, var3, 126) + 5);
+        var3 = var3 + (this.addLabeledFieldWithDefaultValidationMessage(de.field_b, 170, this.field_H, ConfirmedEmailAvailabilityValidator.field_l, var3, 126) + 5);
         this.field_B.setBounds((byte) 124, 496 - var5 >> 1, var3, 40, var5);
         this.field_E.setBounds((byte) 125, 3 + var4, 15 + var3, 40, 60);
         this.field_E.listener = (WidgetEventListener) (this);
@@ -238,7 +238,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         this.setBounds((byte) 127, 0, 0, var3 + 55 + var4, 496);
     }
 
-    private final int a(String param0, int param1, UiWidget param2, String param3, int param4, int param5) {
+    private final int addLabeledFieldWithDefaultValidationMessage(String param0, int param1, UiWidget param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -252,7 +252,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         RuntimeException decompiledCaughtException = null;
         try {
           if (param5 >= 111) {
-            stackIn_4_0 = this.a(param4, param1, param3, param2, 35, true, param0);
+            stackIn_4_0 = this.addLabeledFieldWithValidationMessage(param4, param1, param3, param2, 35, true, param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = -54;

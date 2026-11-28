@@ -6,7 +6,7 @@ final class ue extends InteractiveWidget {
     int field_L;
     static ba field_G;
     int field_I;
-    private tj field_N;
+    private GrowableIntArray field_N;
     static int[] field_H;
     static String field_J;
 
@@ -48,8 +48,8 @@ final class ue extends InteractiveWidget {
             }
             var10 = 2147483647;
             var11 = -1;
-            for (var12 = 0; var12 < this.field_N.b(1); var12++) {
-              var13 = this.field_N.a(true, var12) - var8_int;
+            for (var12 = 0; var12 < this.field_N.size(1); var12++) {
+              var13 = this.field_N.get(true, var12) - var8_int;
               var13 = var13 * var13;
               if (var13 < var10) {
                 var10 = var13;
@@ -57,10 +57,10 @@ final class ue extends InteractiveWidget {
               }
             }
             if (var11 >= 0) {
-              this.field_N.a(var11, -3344);
+              this.field_N.removeAt(var11, -3344);
             }
           } else {
-            this.field_N.b(1, var8_int);
+            this.field_N.append(1, var8_int);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -243,9 +243,9 @@ final class ue extends InteractiveWidget {
 
     final int a(byte param0) {
         if (param0 > -71) {
-          this.field_N = (tj) null;
+          this.field_N = (GrowableIntArray) null;
         }
-        return this.field_N.b(1);
+        return this.field_N.size(1);
     }
 
     private ue() throws Throwable {
@@ -254,8 +254,8 @@ final class ue extends InteractiveWidget {
 
     final int a(int param0, int param1) {
         if (param0 >= ~param1 &&
-          this.field_N.b(1) > param1) {
-          return this.field_N.a(true, param1);
+          this.field_N.size(1) > param1) {
+          return this.field_N.get(true, param1);
         }
         return -1;
     }

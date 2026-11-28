@@ -494,7 +494,7 @@ final class ResourceArchive {
                     var22 = var35[var21];
                   }
                   if (var22 == param2) {
-                    ne.copyByteRange(var44, var18, var45, var15Lifetime1, var20);
+                    ArrayBlockSupport.copyByteRange(var44, var18, var45, var15Lifetime1, var20);
                     var15Lifetime1 = var15Lifetime1 + var20;
                   }
                   var18 = var18 + var20;
@@ -532,7 +532,7 @@ final class ResourceArchive {
                 var19 = 0;
                 for (var20 = 0; var5_int > var20; var20++) {
                   var19 = var19 + var30.readInt((byte) -127);
-                  ne.copyByteRange(var44, var17, var40[var20], var39[var20], var19);
+                  ArrayBlockSupport.copyByteRange(var44, var17, var40[var20], var39[var20], var19);
                   var15_ref_int__[var20] = var15_ref_int__[var20] + var19;
                   var17 = var17 + var19;
                 }
@@ -668,8 +668,8 @@ final class ResourceArchive {
         int var1_intLifetime1;
         var2 = Chess.field_G;
         try {
-          if (null == qd.field_w) {
-            qd.field_w = new ChessBoardRenderer();
+          if (null == MusicPatchNode.field_w) {
+            MusicPatchNode.field_w = new ChessBoardRenderer();
           }
           MusicPatchPcmStream.field_q = new wg(100, 100, 150, ContentTransitionDialog.field_bb[0], wh.field_c, ContentTransitionDialog.field_bb[1], dj.field_t, (RgbSprite) null);
           hg.field_b = new wg(100, 100, 150, ContentTransitionDialog.field_bb[0], wh.field_c, ContentTransitionDialog.field_bb[1], dj.field_t, (RgbSprite) null);
@@ -727,7 +727,7 @@ final class ResourceArchive {
           this.field_m = (Object[]) (this.field_m[5]);
         }
         if (!this.field_k) {
-          this.field_m[param0] = TextFieldValidator.storeBytes(dm.a(param1, 20325), this.field_i.c(param0, 1), false);
+          this.field_m[param0] = TextFieldValidator.storeBytes(dm.bitwiseXor(param1, 20325), this.field_i.c(param0, 1), false);
         } else {
           this.field_m[param0] = this.field_i.c(param0, 1);
         }

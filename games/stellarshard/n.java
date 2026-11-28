@@ -432,14 +432,14 @@ final class n {
             if (var3_int != 0) {
               var1.readString((byte) 106);
             }
-            var5_ref = ee.a(var4_ref_String, (byte) -98);
+            var5_ref = ByteArrayPoolSupport.a(var4_ref_String, (byte) -98);
             var6_ref = var1.readString((byte) 83);
             var7_ref = nh.a((CharSequence) ((Object) var4_ref_String), false);
             if (null == var7_ref) {
               var7_ref = var4_ref_String;
             }
             if (var5_ref == null) {
-              var5_ref = ee.a(var6_ref, (byte) -98);
+              var5_ref = ByteArrayPoolSupport.a(var6_ref, (byte) -98);
               if (var5_ref != null) {
                 GameApplet.field_n.a(var5_ref, (long)var7_ref.hashCode(), 1);
               }

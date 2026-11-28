@@ -35,7 +35,7 @@ final class g implements WidgetRenderer {
             var3_int = -68 % ((param1 + 48) / 58);
             try {
               var4 = (String) (JavaScriptBridge.callWithoutArguments("getcookies", param2, 20511));
-              var5 = dl.a(var4, ';', -75);
+              var5 = MusicPatchNode.a(var4, ';', -75);
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (var7 >= 0 &&

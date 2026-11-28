@@ -15,7 +15,7 @@ final class pj implements WidgetRenderer {
           if (param2) {
             field_a = (uf) null;
           }
-          rj.a(255);
+          MusicPatch.a(255);
           ta.c(0);
           oa.field_a = -fe.field_i + 0;
         } catch (RuntimeException runtimeException) {

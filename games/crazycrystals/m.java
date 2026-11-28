@@ -151,7 +151,7 @@ final class m extends ue {
           !this.field_b.a(true));
         if (this.field_q &&
           mo.field_l == 0 &&
-          dk.field_h < uo.field_o) {
+          MusicPatch.field_h < uo.field_o) {
           this.field_p = true;
         } else {
           this.field_s = true;
@@ -194,7 +194,7 @@ final class m extends ue {
           this.field_b.a(true)) {
           if (!this.field_q ||
             mo.field_l != 0 ||
-            dk.field_h >= uo.field_o) {
+            MusicPatch.field_h >= uo.field_o) {
             this.field_s = true;
             return true;
           }
@@ -341,7 +341,7 @@ final class m extends ue {
               null != lo.field_b &&
               lo.field_b.field_k == this.field_k.field_g) {
               go.field_l.drawString(je.field_g, 100, 366, 16777215, -1);
-              go.field_l.drawRightAligned(Integer.toString(dk.field_q + 1), 340, 366, 16777215, -1);
+              go.field_l.drawRightAligned(Integer.toString(MusicPatch.field_q + 1), 340, 366, 16777215, -1);
               stackIn_46_0 = go.field_l;
               if (this.field_t - 1 == oc.field_b) {
                 stackIn_47_1 = ah.field_d;

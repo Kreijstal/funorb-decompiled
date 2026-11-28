@@ -26,7 +26,7 @@ final class sf implements cl {
           var2 = 1;
           while (gg.field_a.length > var2) {
             var3 = gg.field_a[var2];
-            cj.a(ContentTransitionDialog.field_yb, var2 << 4, ContentTransitionDialog.field_yb, var1_int, var3);
+            ArrayBlockSupport.copyIntRange(ContentTransitionDialog.field_yb, var2 << 4, ContentTransitionDialog.field_yb, var1_int, var3);
             var1_int = var1_int + var3;
             var2++;
             if (var4 != 0) {

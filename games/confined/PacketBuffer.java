@@ -1042,7 +1042,7 @@ class PacketBuffer extends IntrusiveNode {
     PacketBuffer(int param0) {
         try {
           this.position = 0;
-          this.payload = dl.a(param0, -101);
+          this.payload = ByteArrayPoolSupport.acquireByteArray(param0, -101);
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "kg.<init>(" + param0 + ')');
         }

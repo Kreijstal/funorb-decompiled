@@ -302,7 +302,7 @@ final class ina extends bi {
           var6 = new int[256];
           var3 = var6;
           for (var4_int = 0; var4_int < 256; var4_int++) {
-            var6[var4_int] = MassPoisonSpecial.a(var4_int << 7, dda.a(4128768, var4_int << 14));
+            var6[var4_int] = MassPoisonSpecial.bitwiseOr(var4_int << 7, dda.bitwiseAnd(4128768, var4_int << 14));
           }
           var4 = new Sprite(32, 32);
           bu.a(param0 ^ 18958, var4);
@@ -372,7 +372,7 @@ final class ina extends bi {
             hp.a(var5, 0, (byte) 108, var6, StripedProgressWidget.field_A, 0);
             for (var8 = 0; var7.field_v.length > var8; var8++) {
               if (0 != var7.field_v[var8]) {
-                var7.field_v[var8] = MassPoisonSpecial.a(var7.field_v[var8], -16777216);
+                var7.field_v[var8] = MassPoisonSpecial.bitwiseOr(var7.field_v[var8], -16777216);
               }
             }
             this.field_l = (Sprite) ((Object) new ArgbSprite(var5 << 1, var6 << 1));

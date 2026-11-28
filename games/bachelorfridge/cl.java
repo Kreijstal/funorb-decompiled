@@ -108,7 +108,7 @@ final class cl extends vm {
                   this.field_q.a(this.field_d.position, (byte) 108, this.field_d.payload, var5);
                   if (0 != this.field_m) {
                     for (var6 = 0; var6 < var5; var6++) {
-                      this.field_d.payload[var6 + this.field_d.position] = (byte)lt.a((int) this.field_d.payload[var6 + this.field_d.position], (int) this.field_m);
+                      this.field_d.payload[var6 + this.field_d.position] = (byte)lt.bitwiseXor((int) this.field_d.payload[var6 + this.field_d.position], (int) this.field_m);
                     }
                   }
                   this.field_d.position = this.field_d.position + var5;
@@ -182,7 +182,7 @@ final class cl extends vm {
                   this.field_q.a(this.field_h.field_v.position, (byte) 106, this.field_h.field_v.payload, var6);
                   if (this.field_m != 0) {
                     for (var7 = 0; var6 > var7; var7++) {
-                      this.field_h.field_v.payload[var7 + this.field_h.field_v.position] = (byte)lt.a((int) this.field_h.field_v.payload[var7 + this.field_h.field_v.position], (int) this.field_m);
+                      this.field_h.field_v.payload[var7 + this.field_h.field_v.position] = (byte)lt.bitwiseXor((int) this.field_h.field_v.payload[var7 + this.field_h.field_v.position], (int) this.field_m);
                     }
                   }
                   this.field_h.field_v.position = this.field_h.field_v.position + var6;
@@ -468,7 +468,7 @@ final class cl extends vm {
             var5[var3].bindAsRenderTarget();
             param0[var3].drawHalfSize(0, 0);
           }
-          ProgressDialog.field_U.a((byte) 6);
+          ProgressDialog.field_U.setAsRasterTarget((byte) 6);
           stackIn_8_0 = var2;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

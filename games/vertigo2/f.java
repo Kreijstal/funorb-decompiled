@@ -101,7 +101,7 @@ final class f extends TextureOperator {
             field_F = -27L;
           }
           if (bp.field_C.field_tb != 0 &&
-            !pe.field_r) {
+            !MusicPatchNode.field_r) {
             if (hj.field_b) {
               g.a((byte) -10);
             } else {
@@ -165,37 +165,37 @@ final class f extends TextureOperator {
             return 1;
           }
           try {
-            if (param0 == al.field_t) {
+            if (param0 == MusicPatch.field_t) {
               pq.field_f = or.field_f.requestSocket(param0 - 108, MatchingFieldValidator.field_l, lm.field_H);
-              al.field_t = al.field_t + 1;
+              MusicPatch.field_t = MusicPatch.field_t + 1;
             }
-            if (1 == al.field_t) {
+            if (1 == MusicPatch.field_t) {
               if (pq.field_f.status == 2) {
                 stackIn_14_0 = pl.a((byte) 11, -1);
                 return stackIn_14_0;
               }
               if (pq.field_f.status == 1) {
-                al.field_t = al.field_t + 1;
+                MusicPatch.field_t = MusicPatch.field_t + 1;
               }
             }
-            if (al.field_t == 2) {
+            if (MusicPatch.field_t == 2) {
               fn.field_y = new BufferedSocket((java.net.Socket) (pq.field_f.result), or.field_f);
               var2 = new PacketBuffer(13);
               jo.a(var2, od.field_Kb, FullscreenFocusCanvas.field_a, 124, MouseWheelInput.field_h);
               var2.writeByte(15, param0 - 85);
               var2.writeInt(MatchingFieldValidator.field_q, 0);
               fn.field_y.a(0, 13, 127, var2.payload);
-              al.field_t = al.field_t + 1;
+              MusicPatch.field_t = MusicPatch.field_t + 1;
               pq.field_e = 30000L + gk.correctedCurrentTimeMillis(param0 + 60);
             }
-            if (al.field_t == 3) {
+            if (MusicPatch.field_t == 3) {
               if (fn.field_y.a(15166) > 0) {
                 var1_int = fn.field_y.a((byte) -113);
                 if (0 != var1_int) {
                   stackIn_30_0 = pl.a((byte) 11, var1_int);
                   return stackIn_30_0;
                 }
-                al.field_t = al.field_t + 1;
+                MusicPatch.field_t = MusicPatch.field_t + 1;
               } else {
                 if (pq.field_e < gk.correctedCurrentTimeMillis(param0 + 75)) {
                   stackIn_26_0 = pl.a((byte) 11, -2);
@@ -203,13 +203,13 @@ final class f extends TextureOperator {
                 }
               }
             }
-            if (al.field_t != 4) {
+            if (MusicPatch.field_t != 4) {
               return -1;
             }
             kb.field_e.a(fn.field_y, ni.field_f, -128);
             pq.field_f = null;
             fn.field_y = null;
-            al.field_t = 0;
+            MusicPatch.field_t = 0;
             stackIn_35_0 = 0;
             return stackIn_35_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {

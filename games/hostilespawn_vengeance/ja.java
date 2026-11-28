@@ -82,7 +82,7 @@ final class ja {
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (nf.a(param0, param2 ^ -29205)) {
+          if (MusicPatch.a(param0, param2 ^ -29205)) {
             return false;
           }
           if (pb.a(param2 ^ 17032, param0)) {

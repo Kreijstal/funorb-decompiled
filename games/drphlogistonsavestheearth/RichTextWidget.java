@@ -168,7 +168,7 @@ class RichTextWidget extends InteractiveWidget {
             var5 = var9;
             var6 = param0;
             var7 = param2;
-            var9[var6] = (rk.a(var9[var6], 16711422) >> 1) + var7;
+            var9[var6] = (rk.bitwiseAnd(var9[var6], 16711422) >> 1) + var7;
             param0++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -35,11 +35,11 @@ abstract class bl extends DualLinkNode {
                 var1 = (IOException) (Object) decompiledCaughtException;
               }
             }
-            if (aa.field_h != null) {
-              for (var1_int = 0; aa.field_h.length > var1_int; var1_int++) {
-                if (aa.field_h[var1_int] != null) {
+            if (GrowableIntArray.field_h != null) {
+              for (var1_int = 0; GrowableIntArray.field_h.length > var1_int; var1_int++) {
+                if (GrowableIntArray.field_h[var1_int] != null) {
                   try {
-                    aa.field_h[var1_int].close(-30821);
+                    GrowableIntArray.field_h[var1_int].close(-30821);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;

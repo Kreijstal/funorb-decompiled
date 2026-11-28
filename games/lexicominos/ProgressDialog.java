@@ -22,7 +22,7 @@ final class ProgressDialog extends ResizableModalDialog {
           sa.field_g = param3;
           wg.field_e = param4;
           fl.field_d = param8;
-          rc.field_i = param0;
+          MusicPatchEnvelope.field_i = param0;
           kb.field_b = (wb) ((Object) new qf());
           AccountCreationResultPanel.field_pb = new DiskCacheWorker(param3);
           nh.field_a = new pg(kb.field_b, AccountCreationResultPanel.field_pb);

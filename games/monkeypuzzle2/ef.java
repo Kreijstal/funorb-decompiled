@@ -17,9 +17,9 @@ final class ef {
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           if (PacketBuffer.field_e == -1 &&
-            oi.field_f == -1) {
+            GrowableIntArray.field_f == -1) {
             PacketBuffer.field_e = ei.field_a;
-            oi.field_f = p.field_a;
+            GrowableIntArray.field_f = p.field_a;
           }
           boolean decompiledFrameRemainder0 = true;
           ByteStorage.field_a = ByteStorage.field_a + 1;
@@ -60,13 +60,13 @@ final class ef {
               }
             }
             DropTargetWidgetContainer.field_G = PacketBuffer.field_e;
-            nj.field_a = oi.field_f;
+            ByteArrayPoolSupport.field_a = GrowableIntArray.field_f;
           }
           if (!ac.field_b &&
             AccountServiceResult.field_e > ByteStorage.field_a &&
             oe.field_d) {
             ByteStorage.field_a = 0;
-            nj.field_a = oi.field_f;
+            ByteArrayPoolSupport.field_a = GrowableIntArray.field_f;
             DropTargetWidgetContainer.field_G = PacketBuffer.field_e;
           }
           pf.field_b = param1;
@@ -79,7 +79,7 @@ final class ef {
             ByteStorage.field_a = 0;
             ac.field_b = false;
           }
-          oi.field_f = -1;
+          GrowableIntArray.field_f = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

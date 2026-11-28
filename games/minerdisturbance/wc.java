@@ -29,13 +29,13 @@ final class wc implements uj {
         int var7 = MinerDisturbance.field_ab;
         Sprite[] var1 = new Sprite[sc.field_d];
         for (var2 = 0; sc.field_d > var2; var2++) {
-          var3 = ng.field_e[var2] * qk.field_b[var2];
+          var3 = MusicPatchEnvelope.field_e[var2] * qk.field_b[var2];
           var4 = ClientException.field_b[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
-            var5[var6] = af.field_p[c.a((int) var4[var6], 255)];
+            var5[var6] = af.field_p[c.bitwiseAnd((int) var4[var6], 255)];
           }
-          var1[var2] = new Sprite(pf.field_c, wd.field_a, bg.field_d[var2], oc.field_e[var2], qk.field_b[var2], ng.field_e[var2], var5);
+          var1[var2] = new Sprite(pf.field_c, wd.field_a, bg.field_d[var2], oc.field_e[var2], qk.field_b[var2], MusicPatchEnvelope.field_e[var2], var5);
         }
         if (param0 > -27) {
           wc.a(-122);
@@ -110,7 +110,7 @@ final class wc implements uj {
           var1_int = TextLineMetrics.field_e[0];
           for (var2 = 1; var2 < TextLineMetrics.field_e.length; var2++) {
             var3 = TextLineMetrics.field_e[var2];
-            ai.a(IntrusiveDeque.field_d, var2 << 4, IntrusiveDeque.field_d, var1_int, var3);
+            ArrayBlockSupport.copyIntRange(IntrusiveDeque.field_d, var2 << 4, IntrusiveDeque.field_d, var1_int, var3);
             var1_int = var1_int + var3;
           }
           if (param0 != -29) {

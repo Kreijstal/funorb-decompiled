@@ -63,7 +63,7 @@ final class ModalDialogHost extends SingleChildWidgetContainer {
           var4.field_J = true;
           var4.takeFocus(-1463, (UiWidget) (this));
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "i.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "i.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

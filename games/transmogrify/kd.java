@@ -231,15 +231,15 @@ final class kd implements WidgetRenderer {
             }
             od.submissionRack.a(false, dc.field_a, 3, (int[][]) (var8), param1);
             wk.carryoverRack.a(false, dc.field_a, 3, (int[][]) (var8), param1);
-            si.newRack.a(false, dc.field_a, 3, (int[][]) (var8), param1);
+            MusicPatch.newRack.a(false, dc.field_a, 3, (int[][]) (var8), param1);
             od.submissionRack.a(true, dc.field_a, 3, (int[][]) (var8), param1);
             wk.carryoverRack.a(true, dc.field_a, 3, (int[][]) (var8), param1);
-            si.newRack.a(true, dc.field_a, 3, (int[][]) (var8), param1);
+            MusicPatch.newRack.a(true, dc.field_a, 3, (int[][]) (var8), param1);
           } else {
             od.submissionRack.a(false, dc.field_a, 3, il.field_c, param1);
-            si.newRack.a(false, dc.field_a, 3, wc.field_a, param1);
+            MusicPatch.newRack.a(false, dc.field_a, 3, wc.field_a, param1);
             od.submissionRack.a(true, dc.field_a, 3, il.field_c, param1);
-            si.newRack.a(true, dc.field_a, 3, wc.field_a, param1);
+            MusicPatch.newRack.a(true, dc.field_a, 3, wc.field_a, param1);
           }
           if (0 == n.submittedWordCount) {
             var8Lifetime1 = null;
@@ -304,7 +304,7 @@ final class kd implements WidgetRenderer {
             stackIn_106_3 = 16710412;
             stackIn_106_4 = param1 + 183;
             stackIn_107_5 = (1 == ContentTransitionDialog.field_S.field_d);
-            GuestPlayConfirmationForm.a(stackIn_106_0, stackIn_106_1, stackIn_106_2, stackIn_106_3, stackIn_106_4, stackIn_107_5, nh.field_h, 336, 16711680, (byte) 111);
+            GuestPlayConfirmationForm.a(stackIn_106_0, stackIn_106_1, stackIn_106_2, stackIn_106_3, stackIn_106_4, stackIn_107_5, MusicPatchEnvelope.field_h, 336, 16711680, (byte) 111);
           }
           if (FullscreenStatusDialog.field_S) {
             IntrusiveNode.field_d.drawRightAligned("FPS: " + ub.field_a, 630, 30, 65535, -1);

@@ -184,7 +184,7 @@ final class fk extends DefaultTextWidgetRenderer {
             }
             return;
           }
-          eg.a(this.field_r, 0, param0.field_r, 0, 6);
+          ArrayBlockSupport.copyObjectRange(this.field_r, 0, param0.field_r, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

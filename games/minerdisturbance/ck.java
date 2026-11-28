@@ -68,7 +68,7 @@ final class ck {
         if (kj.a(false)) {
           return;
         }
-        if (aa.field_j == null) {
+        if (GrowableIntArray.field_j == null) {
           return;
         }
         if (param0 == -30833) {

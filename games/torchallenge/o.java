@@ -545,7 +545,7 @@ final class o extends IntrusiveNode {
           o.resetStaticState(false);
         }
         ValidatedTextField.field_ib = 0;
-        RandomAccessCacheFile.field_e = s.field_k[1 + rj.field_g];
+        RandomAccessCacheFile.field_e = MidiNoteMask.field_k[1 + rj.field_g];
         DefaultTextWidgetRenderer.field_o = 13;
         PcmOutputWorker.activeScreenId = 13;
         ch.b(!param1);

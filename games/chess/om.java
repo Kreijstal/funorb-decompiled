@@ -31,7 +31,7 @@ final class om extends IntrusiveNode {
           if (!param2) {
             om.a(-88, -113, -21, (byte) -38);
           }
-          stackIn_6_0 = dl.a(-15326);
+          stackIn_6_0 = MusicPatchEnvelope.a(-15326);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

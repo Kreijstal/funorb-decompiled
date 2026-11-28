@@ -281,7 +281,7 @@ final class ar {
     final static void a(int param0, byte param1, int param2, int param3, int param4) {
         int var5 = -101 % ((-38 - param1) / 53);
         GameShell.field_z = param0;
-        re.field_g = param3;
+        GrowableIntArray.field_g = param3;
         gd.field_k = param2;
         gj.field_y = param4;
     }

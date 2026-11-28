@@ -257,7 +257,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
         if (param0 > -102) {
           this.field_s = 112;
         }
-        if (kn.field_g) {
+        if (ByteArrayPoolSupport.field_g) {
           var5_int = 0;
           var6 = this.field_Y.field_A;
           for (var7 = 0; var6.length > var7; var7++) {
@@ -433,7 +433,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
         if (this.field_Y.field_k == 128) {
           this.e((byte) -94);
         }
-        if (kn.field_g) {
+        if (ByteArrayPoolSupport.field_g) {
           var2 = 0;
           var3_ref_hb__ = this.field_Y.field_A;
           for (var4_int = 0; var4_int < var3_ref_hb__.length; var4_int++) {
@@ -712,7 +712,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
         this.advanceRaidAnimations(-127);
         if (param0) {
           this.k(2);
-          if (kn.field_g) {
+          if (ByteArrayPoolSupport.field_g) {
             bl.a(0);
           }
         }
@@ -781,7 +781,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
         stackIn_53_0.field_w = stackIn_54_1;
         if ((this.field_Y.field_u == null ||
           (6 & this.field_Y.field_u.field_o) != 0) && (this.field_Y.field_k != 4 ||
-          !kn.field_g)) {
+          !ByteArrayPoolSupport.field_g)) {
           stackIn_62_1 = true;
           decompiledFrameRemainder1 = false;
         }
@@ -873,7 +873,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
           eg.a((IntrusiveDeque) null, true);
           return;
         }
-        if (kn.field_g &&
+        if (ByteArrayPoolSupport.field_g &&
           od.a((byte) -76)) {
           return;
         }
@@ -931,7 +931,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
             var2 = var18;
             if (this.field_y == null &&
               var18 != null && (this.field_Y.field_k != 4 ||
-              !kn.field_g) && (var18.field_o & 6) == 0 && (this.field_Y.field_k == 8 ||
+              !ByteArrayPoolSupport.field_g) && (var18.field_o & 6) == 0 && (this.field_Y.field_k == 8 ||
               this.field_Y.field_k == 4)) {
               this.b((byte) 119, var18);
               this.setRaidMessage(pi.field_g, param0 - 8965);
@@ -1600,7 +1600,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
           var5.position = 0;
           this.a((byte) -110, var5, true);
           if (this.field_Y.field_h[this.field_Y.field_B].field_a == 2) {
-            if (!kn.field_g) {
+            if (!ByteArrayPoolSupport.field_g) {
               this.i(94);
             } else {
               gh.a(17, 11);
@@ -2068,11 +2068,11 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
         }
         if (this.field_b != null) {
           for (var6Lifetime1 = 0; var6Lifetime1 < SoftwareRasterizer.field_b.length; var6Lifetime1++) {
-            SoftwareRasterizer.field_b[var6Lifetime1] = nb.a(SoftwareRasterizer.field_b[var6Lifetime1] >>> 2, 1061109567);
+            SoftwareRasterizer.field_b[var6Lifetime1] = nb.bitwiseAnd(SoftwareRasterizer.field_b[var6Lifetime1] >>> 2, 1061109567);
           }
           this.field_b.b(-61);
         }
-        if (kn.field_g) {
+        if (ByteArrayPoolSupport.field_g) {
           ab.a(0);
         }
         if (hj.field_S != -1) {
@@ -2104,11 +2104,11 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
           var5 = (DungeonTileState) null;
           this.a((DungeonTileState) null, 46);
         }
-        if (kn.field_g &&
+        if (ByteArrayPoolSupport.field_g &&
           kd.field_c == 17) {
           gd.a(0, param0 ^ 17158, 4, param1);
         } else {
-          if (en.a(param0 ^ -17159, bp.field_e)) {
+          if (en.a(param0 ^ -17159, GrowableIntArray.field_e)) {
             var3 = param1 ? 1 : 0;
             stackIn_19_0 = (ve.a(false)) ? 12 : 0;
             gd.a(stackIn_19_0, 0, 9, var3 != 0);
@@ -2760,7 +2760,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
                 if (0 != (var5_int & 2048)) {
                   var9 = new oc(var7, var6, false, vb.field_a);
                 } else {
-                  var9 = new oc(var7, var6, false, bp.field_c);
+                  var9 = new oc(var7, var6, false, GrowableIntArray.field_c);
                 }
               }
             } else {
@@ -2800,7 +2800,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
                     var9 = new oc(var7, var6, true, var10 + " " + fc.field_e);
                   } else {
                     if ((var5_int & 2048) == 0) {
-                      var9 = new oc(var7, var6, false, var10 + " " + bp.field_c);
+                      var9 = new oc(var7, var6, false, var10 + " " + GrowableIntArray.field_c);
                     } else {
                       var9 = new oc(var7, var6, false, var10 + " " + vb.field_a);
                     }
@@ -2999,7 +2999,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
         try {
           stackIn_4_1 = (param0);
           this.field_w = stackIn_4_1;
-          var15 = bp.field_e;
+          var15 = GrowableIntArray.field_e;
           var9 = var15;
           var8 = var9;
           var3 = var8;
@@ -3011,7 +3011,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
           this.buildRaidBackground(false);
           this.initializeRaidEffects(7872);
           this.buildRaidControls(18014);
-          if (kn.field_g) {
+          if (ByteArrayPoolSupport.field_g) {
             DiskCacheWorker.field_d = 0;
             qa.field_a = new int[this.field_Y.field_A.length][];
             var10 = this.field_Y.field_A;

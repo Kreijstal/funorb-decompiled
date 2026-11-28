@@ -10,10 +10,10 @@ abstract class pe extends DualLinkNode {
         if (param0 > -65) {
           return false;
         }
-        if (null == fc.field_l) {
+        if (null == MusicPatch.field_l) {
           return false;
         }
-        if (!fc.field_l.b((byte) -91)) {
+        if (!MusicPatch.field_l.b((byte) -91)) {
           return false;
         }
         return true;

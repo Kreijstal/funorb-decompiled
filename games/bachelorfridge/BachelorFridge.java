@@ -804,9 +804,9 @@ public final class BachelorFridge extends NetworkGameClient {
         jc.releaseStatics(127);
         DelegatingCanvas.releaseStatics(true);
         rda.releaseStatics(true);
-        g.releaseStatics((byte) -124);
+        MidiNoteMask.releaseStatics((byte) -124);
         MusicPatch.a(123);
-        un.releaseStatics(2);
+        MusicPatchEnvelope.releaseStatics(2);
         SynthInstrument.releaseStatics();
         VorbisSample.releaseStatics();
         VorbisFloor.releaseStatics();
@@ -821,7 +821,7 @@ public final class BachelorFridge extends NetworkGameClient {
         ls.releaseStatics(-118);
         vl.releaseStatics((byte) 91);
         fka.releaseStatics(-2779);
-        sd.releaseStatics(0);
+        ByteArrayPoolSupport.releaseStatics(0);
         nca.releaseStatics((byte) 87);
         sea.releaseStatics((byte) -78);
         wd.c(1);
@@ -1586,7 +1586,7 @@ public final class BachelorFridge extends NetworkGameClient {
           CreatureActor.field_h = AlphaWidgetContainer.a(16777215, (byte) 107, var3Lifetime1, 65793, var2Lifetime1);
           CreatureActor.field_h.field_M = ce.field_w;
           wt.field_k = RaiseEvent.a(4676, var3Lifetime1, var2Lifetime1);
-          g.field_g = ClamsSpecial.a("midfont", vb.field_j, -50, "basic", BoardTile.field_b);
+          MidiNoteMask.field_g = ClamsSpecial.a("midfont", vb.field_j, -50, "basic", BoardTile.field_b);
           var2Lifetime2 = BoardTile.field_b.getFileByName((byte) 123, "arenafont", "basic");
           var3Lifetime2 = RageSpecial.a(29611, "basic", "arenafont", vb.field_j);
           b.field_t = AlphaWidgetContainer.a(16777215, (byte) 107, var3Lifetime2, 65793, var2Lifetime2);
@@ -1603,7 +1603,7 @@ public final class BachelorFridge extends NetworkGameClient {
           SleepSpecial.field_p = new Sprite(32, 32);
           SleepSpecial.field_p.bindAsRenderTarget();
           rc.field_l.drawScaledAveraged(0, 0, 32, 32);
-          ProgressDialog.field_U.a((byte) -97);
+          ProgressDialog.field_U.setAsRasterTarget((byte) -97);
           rc.field_l = null;
           var4 = new Sprite[1 + ena.field_o.length][];
           var5 = new Sprite[1 + ena.field_o.length][];
@@ -1871,7 +1871,7 @@ public final class BachelorFridge extends NetworkGameClient {
                       var5_ref_int__ = ZombiesSpecial.field_q;
                       var6 = 0;
                       while (var6 < 8) {
-                        var4_ref_int__[var6] = dda.a(var4_ref_int__[var6], ~var5_ref_int__[var6]);
+                        var4_ref_int__[var6] = dda.bitwiseAnd(var4_ref_int__[var6], ~var5_ref_int__[var6]);
                         var6++;
                       }
                       if (dma.field_a) {
@@ -1888,14 +1888,14 @@ public final class BachelorFridge extends NetworkGameClient {
                       var5_ref_int__ = var3_ref_int__;
                       var6 = 0;
                       while (var6 < 8) {
-                        var4_ref_int__[var6] = MassPoisonSpecial.a(var4_ref_int__[var6], var5_ref_int__[var6]);
+                        var4_ref_int__[var6] = MassPoisonSpecial.bitwiseOr(var4_ref_int__[var6], var5_ref_int__[var6]);
                         var6++;
                       }
                       var4_ref_int__ = nga.field_i;
                       var5_ref_int__ = var3_ref_int__;
                       var6 = 0;
                       while (var6 < 8) {
-                        var4_ref_int__[var6] = MassPoisonSpecial.a(var4_ref_int__[var6], var5_ref_int__[var6]);
+                        var4_ref_int__[var6] = MassPoisonSpecial.bitwiseOr(var4_ref_int__[var6], var5_ref_int__[var6]);
                         var6++;
                       }
                       continue;

@@ -32,7 +32,7 @@ final class MixedSupport018 {
           return (IndexedSprite[]) null;
         }
         for (integerLocal1 = 0; integerLocal1 < GameDomainSupport002.integerState0177; integerLocal1++) {
-          indexedSpriteArrayLocal3[integerLocal1] = new IndexedSprite(MixedSupport029.integerState0181, MixedSupport057.integerState0297, InputAdapter003.integerArrayState0206[integerLocal1], MixedSupport039.integerArrayState0047[integerLocal1], MixedSupport123.integerArrayState0208[integerLocal1], MixedSupport052.integerArrayState0054[integerLocal1], SceneWidgetPart011.byteArrayArrayState0008[integerLocal1], NetworkSupport006.integerArrayState0152);
+          indexedSpriteArrayLocal3[integerLocal1] = new IndexedSprite(MixedSupport029.integerState0181, MixedSupport057.integerState0297, InputAdapter003.integerArrayState0206[integerLocal1], MixedSupport039.integerArrayState0047[integerLocal1], MixedSupport123.integerArrayState0208[integerLocal1], MixedSupport052.integerArrayState0054[integerLocal1], SceneWidgetPart011.byteArrayArrayState0008[integerLocal1], GrowableIntArray.integerArrayState0152);
         }
         MixedSupport089.performAction1138(126);
         return indexedSpriteArrayLocal3;
@@ -79,7 +79,7 @@ final class MixedSupport018 {
           }
           TextLineMetrics.mixedSupport015State0003 = mixedSupport015Argument1;
           MixedSupport022.mixedSupport015State0001 = mixedSupport015Argument6;
-          NetworkSupport006.integerState0499 = integerArgument2;
+          GrowableIntArray.integerState0499 = integerArgument2;
           BufferedSocket.integerState0665 = integerArgument5;
           AccountFieldStatusIndicator.integerState0575 = integerArgument3;
         } catch (RuntimeException runtimeException) {

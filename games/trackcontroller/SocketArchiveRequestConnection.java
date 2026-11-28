@@ -245,8 +245,8 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
                 stackIn_97_0 = 3;
                 return stackIn_97_0;
               }
-              var6_intLifetime2 = ke.field_c;
-              ke.field_c = ma.field_c;
+              var6_intLifetime2 = ByteArrayPoolSupport.field_c;
+              ByteArrayPoolSupport.field_c = ma.field_c;
               ma.field_c = var6_intLifetime2;
               kg.field_f = true;
             }
@@ -614,7 +614,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
                   this.field_q.a(this.field_a.payload, 0, var5, this.field_a.position);
                   if (this.field_i != 0) {
                     for (var6 = 0; var5 > var6; var6++) {
-                      this.field_a.payload[this.field_a.position + var6] = (byte)ma.a((int) this.field_a.payload[this.field_a.position + var6], (int) this.field_i);
+                      this.field_a.payload[this.field_a.position + var6] = (byte)ma.bitwiseXor((int) this.field_a.payload[this.field_a.position + var6], (int) this.field_i);
                     }
                   }
                   this.field_a.position = this.field_a.position + var5;
@@ -688,7 +688,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
                   this.field_q.a(this.field_l.field_x.payload, 0, var6, this.field_l.field_x.position);
                   if (this.field_i != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.field_l.field_x.payload[this.field_l.field_x.position + var7] = (byte)ma.a((int) this.field_l.field_x.payload[this.field_l.field_x.position + var7], (int) this.field_i);
+                      this.field_l.field_x.payload[this.field_l.field_x.position + var7] = (byte)ma.bitwiseXor((int) this.field_l.field_x.payload[this.field_l.field_x.position + var7], (int) this.field_i);
                     }
                   }
                   this.field_l.field_x.position = this.field_l.field_x.position + var6;

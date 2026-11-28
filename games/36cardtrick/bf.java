@@ -34,7 +34,7 @@ final class bf {
         try {
           var2_int = param1.length;
           var3 = new byte[var2_int];
-          og.a(param1, 0, var3, param0, var2_int);
+          ArrayBlockSupport.copyByteRange(param1, 0, var3, param0, var2_int);
           stackIn_1_0 = var3;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

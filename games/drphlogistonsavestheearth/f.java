@@ -198,7 +198,7 @@ final class f extends IntrusiveNode {
               if (t.field_b == 7) {
                 t.field_b = 3;
               }
-              cc.field_p = LabeledWidgetContainer.field_N.readString((byte) -107);
+              MusicPatchNode.field_p = LabeledWidgetContainer.field_N.readString((byte) -107);
               dk.field_b = false;
               stackIn_85_0 = t.field_b;
               return stackIn_85_0;
@@ -206,9 +206,9 @@ final class f extends IntrusiveNode {
             if (null == uj.field_j) {
               if (dk.field_b) {
                 if (30000L < of.a((byte) -96)) {
-                  cc.field_p = SecondaryNodeDeque.field_a;
+                  MusicPatchNode.field_p = SecondaryNodeDeque.field_a;
                 } else {
-                  cc.field_p = lf.field_f;
+                  MusicPatchNode.field_p = lf.field_f;
                 }
                 dk.field_b = false;
                 stackIn_96_0 = 3;

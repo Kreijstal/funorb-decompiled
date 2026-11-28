@@ -88,7 +88,7 @@ final class pi {
               var7[0][1 + 4 * var10] = BufferedSocket.field_e[var11];
               var7[0][2 + 4 * var10] = in.field_j[var11];
               var7[0][3 + 4 * var10] = MatchingFieldValidator.field_n[var11];
-              if (qd.a((byte) 13, ag.field_d[var11]) &&
+              if (MusicPatchNode.a((byte) 13, ag.field_d[var11]) &&
                 in.field_j[var11] + (BufferedSocket.field_e[var11] + MatchingFieldValidator.field_n[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -106,7 +106,7 @@ final class pi {
               var7[1][1 + 4 * var14] = BufferedSocket.field_e[var11Lifetime1];
               var7[1][2 + var14 * 4] = in.field_j[var11Lifetime1];
               var7[1][3 + var14 * 4] = MatchingFieldValidator.field_n[var11Lifetime1];
-              if (qd.a((byte) 13, ag.field_d[var11Lifetime1]) &&
+              if (MusicPatchNode.a((byte) 13, ag.field_d[var11Lifetime1]) &&
                 0 == BufferedSocket.field_e[var11Lifetime1] - (-in.field_j[var11Lifetime1] - MatchingFieldValidator.field_n[var11Lifetime1])) {
                 var6[1][var14] = null;
                 var14--;
@@ -147,7 +147,7 @@ final class pi {
             var13 = param2;
             var14 = param6;
             var15 = var17[var11] >> 1 & 8355711;
-            var10[var11] = (ce.a(var14, 33503610) >> 17) + (ce.a(var13, 33423475) >> 9) - (-(ce.a(33423361, var12) >> 1) - var15);
+            var10[var11] = (ce.bitwiseAnd(var14, 33503610) >> 17) + (ce.bitwiseAnd(var13, 33423475) >> 9) - (-(ce.bitwiseAnd(33423361, var12) >> 1) - var15);
             param8 = param8 + param4;
             param7++;
             param6 = param6 + param0;

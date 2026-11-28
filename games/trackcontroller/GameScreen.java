@@ -94,27 +94,27 @@ final class GameScreen {
             }
           }
           if (this.field_e.d(0)) {
-            var6 = qh.field_b.levelIndex;
+            var6 = GrowableIntArray.field_b.levelIndex;
             var7 = this.a(ContentTransitionDialog.clickX, 2600, wg.clickY);
             if (var7 != null) {
               this.field_e.field_a = true;
-              qh.field_b = var7;
+              GrowableIntArray.field_b = var7;
             }
-            var6 = var6 - qh.field_b.levelIndex;
+            var6 = var6 - GrowableIntArray.field_b.levelIndex;
             mb.field_b = mb.field_b - var6 * 26;
           }
           if (this.field_e.b(false)) {
-            var6Lifetime1 = qh.field_b.levelIndex;
+            var6Lifetime1 = GrowableIntArray.field_b.levelIndex;
             if (RandomAccessCacheFile.field_b == 0 &&
-              qh.field_b.levelIndex > 1) {
-              qh.field_b = gj.levels[-2 + qh.field_b.levelIndex];
+              GrowableIntArray.field_b.levelIndex > 1) {
+              GrowableIntArray.field_b = gj.levels[-2 + GrowableIntArray.field_b.levelIndex];
             } else {
               if (RandomAccessCacheFile.field_b == 1 &&
-                gj.levels.length > qh.field_b.levelIndex) {
-                qh.field_b = gj.levels[qh.field_b.levelIndex];
+                gj.levels.length > GrowableIntArray.field_b.levelIndex) {
+                GrowableIntArray.field_b = gj.levels[GrowableIntArray.field_b.levelIndex];
               }
             }
-            var6Lifetime1 = var6Lifetime1 - qh.field_b.levelIndex;
+            var6Lifetime1 = var6Lifetime1 - GrowableIntArray.field_b.levelIndex;
             mb.field_b = mb.field_b - var6Lifetime1 * 26;
           }
         }
@@ -135,11 +135,11 @@ final class GameScreen {
           keyQueueWrite = 111;
         }
         int var2 = 0;
-        if (8 > qh.field_b.levelIndex) {
-          var2 = -208 + qh.field_b.levelIndex * 26;
+        if (8 > GrowableIntArray.field_b.levelIndex) {
+          var2 = -208 + GrowableIntArray.field_b.levelIndex * 26;
         }
-        if (!(qh.field_b.levelIndex <= 24)) {
-          var2 = (-24 + qh.field_b.levelIndex) * 26;
+        if (!(GrowableIntArray.field_b.levelIndex <= 24)) {
+          var2 = (-24 + GrowableIntArray.field_b.levelIndex) * 26;
         }
         return var2;
     }
@@ -201,7 +201,7 @@ final class GameScreen {
           param0 < 182 &&
           param2 >= 0 &&
           param2 < 390) {
-          var4 = qh.field_b.levelIndex - (-((param2 - (mb.field_b - 2600)) / 26) + 100 + 8);
+          var4 = GrowableIntArray.field_b.levelIndex - (-((param2 - (mb.field_b - 2600)) / 26) + 100 + 8);
           if (var4 >= 0 &&
             !(gj.levels.length <= var4)) {
             return gj.levels[var4];
@@ -517,7 +517,7 @@ final class GameScreen {
         if (param1 != 1) {
           return true;
         }
-        stackIn_5_0 = (qh.field_b != null) && ((ArchiveIndex.field_i + 1) >= qh.field_b.levelIndex);
+        stackIn_5_0 = (GrowableIntArray.field_b != null) && ((ArchiveIndex.field_i + 1) >= GrowableIntArray.field_b.levelIndex);
         return stackIn_5_0;
     }
 
@@ -710,65 +710,65 @@ final class GameScreen {
                   if (this.field_e.field_e >= 0) {
                     this.field_e.b((byte) -113);
                   } else {
-                    var3 = qh.field_b.levelIndex;
+                    var3 = GrowableIntArray.field_b.levelIndex;
                     if (kg.field_d == 98) {
                       RandomAccessCacheFile.field_b = 2;
-                      if (qh.field_b.levelIndex > 1) {
-                        qh.field_b = gj.levels[-2 + qh.field_b.levelIndex];
+                      if (GrowableIntArray.field_b.levelIndex > 1) {
+                        GrowableIntArray.field_b = gj.levels[-2 + GrowableIntArray.field_b.levelIndex];
                       }
                       this.field_e.field_a = false;
                     }
                     if (99 == kg.field_d) {
                       RandomAccessCacheFile.field_b = 2;
-                      if (gj.levels.length > qh.field_b.levelIndex) {
-                        qh.field_b = gj.levels[qh.field_b.levelIndex];
+                      if (gj.levels.length > GrowableIntArray.field_b.levelIndex) {
+                        GrowableIntArray.field_b = gj.levels[GrowableIntArray.field_b.levelIndex];
                       }
                       this.field_e.field_a = false;
                     }
                     if (RandomAccessCacheFile.field_b == 0 && (kg.field_d == 83 ||
                       kg.field_d == 84)) {
-                      if (qh.field_b.levelIndex > 1) {
-                        qh.field_b = gj.levels[-2 + qh.field_b.levelIndex];
+                      if (GrowableIntArray.field_b.levelIndex > 1) {
+                        GrowableIntArray.field_b = gj.levels[-2 + GrowableIntArray.field_b.levelIndex];
                       }
                       this.field_e.field_a = false;
                     }
                     if (RandomAccessCacheFile.field_b == 1 && (kg.field_d == 83 ||
                       kg.field_d == 84)) {
-                      if (qh.field_b.levelIndex < gj.levels.length) {
-                        qh.field_b = gj.levels[qh.field_b.levelIndex];
+                      if (GrowableIntArray.field_b.levelIndex < gj.levels.length) {
+                        GrowableIntArray.field_b = gj.levels[GrowableIntArray.field_b.levelIndex];
                       }
                       this.field_e.field_a = false;
                     }
                     if (2 != RandomAccessCacheFile.field_b) {
-                      var3 = var3 - qh.field_b.levelIndex;
+                      var3 = var3 - GrowableIntArray.field_b.levelIndex;
                       mb.field_b = mb.field_b - 26 * var3;
                     } else {
                       if (kg.field_d == 104) {
-                        var4 = qh.field_b.levelIndex - 9;
+                        var4 = GrowableIntArray.field_b.levelIndex - 9;
                         if (var4 < 0) {
                           var4 = 0;
                         }
-                        qh.field_b = gj.levels[var4];
+                        GrowableIntArray.field_b = gj.levels[var4];
                         this.field_e.field_a = false;
                       }
                       if (kg.field_d == 105) {
-                        var4Lifetime1 = 7 + qh.field_b.levelIndex;
+                        var4Lifetime1 = 7 + GrowableIntArray.field_b.levelIndex;
                         if (var4Lifetime1 >= gj.levels.length) {
                           var4Lifetime1 = gj.levels.length - 1;
                         }
-                        qh.field_b = gj.levels[var4Lifetime1];
+                        GrowableIntArray.field_b = gj.levels[var4Lifetime1];
                         this.field_e.field_a = false;
                       }
                       if (kg.field_d == 102) {
                         this.field_e.field_a = false;
-                        qh.field_b = gj.levels[0];
+                        GrowableIntArray.field_b = gj.levels[0];
                       }
                       if (kg.field_d == 103) {
-                        qh.field_b = gj.levels[gj.levels.length - 1];
+                        GrowableIntArray.field_b = gj.levels[gj.levels.length - 1];
                         this.field_e.field_a = false;
                       }
                       if (84 == kg.field_d &&
-                        1 + ArchiveIndex.field_i >= qh.field_b.levelIndex) {
+                        1 + ArchiveIndex.field_i >= GrowableIntArray.field_b.levelIndex) {
                         si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
                         SpriteState.field_w = null;
                         ProgressDialog.field_bb = null;
@@ -776,7 +776,7 @@ final class GameScreen {
                         sc.field_g = -1;
                         oe.field_e = 0;
                       }
-                      var3 = var3 - qh.field_b.levelIndex;
+                      var3 = var3 - GrowableIntArray.field_b.levelIndex;
                       mb.field_b = mb.field_b - 26 * var3;
                     }
                   }
@@ -1169,7 +1169,7 @@ final class GameScreen {
                         break scanLoop1;
                       }
                       UiWidget.field_z[3].drawTransparent(-UiWidget.field_z[3].field_t + 640 >> 1, 1);
-                      if (qh.field_b.levelIndex > (1 + ArchiveIndex.field_i)) {
+                      if (GrowableIntArray.field_b.levelIndex > (1 + ArchiveIndex.field_i)) {
                         cl.a(NameSuggestionsPanel.field_L, 90, 254, 57, 176, 4);
                         if (!ProgressMessageDialog.s(param0 + 54)) {
                           var4_ref_String = Archive.field_a;
@@ -1180,7 +1180,7 @@ final class GameScreen {
                         }
                         DisplayNameSelectionPanel.font.drawParagraph(var4_ref_String, 100, 67, 156, 234, 0, -1, 1, 1, 26);
                       } else {
-                        qh.field_b.a(100, (byte) -127, 67);
+                        GrowableIntArray.field_b.a(100, (byte) -127, 67);
                         IndexedSpriteState.field_d.drawTransparent(-367, -162);
                       }
                       cl.a(NameSuggestionsPanel.field_L, 566, 46, 57, 46, param0 + 5);
@@ -1192,7 +1192,7 @@ final class GameScreen {
                       var4 = stackIn_76_0;
                       ii.tileSprites[53].drawTinted(576, 431, var4);
                       var5 = this.a(kf.mouseX, 2600, fg.mouseY);
-                      var6 = 269 - (-(26 * (1 - qh.field_b.levelIndex)) - mb.field_b);
+                      var6 = 269 - (-(26 * (1 - GrowableIntArray.field_b.levelIndex)) - mb.field_b);
                       var7 = 359;
                       var8 = 62 + DisplayNameSelectionPanel.font.field_u;
                       SoftwareRasterizer.setClip(var7, var8, var7 + 182 + 10, var8 + 390);
@@ -1204,13 +1204,13 @@ final class GameScreen {
                           var12Lifetime1 = qg.field_a;
                         }
                         var13 = 0;
-                        if (var11 == qh.field_b) {
+                        if (var11 == GrowableIntArray.field_b) {
                           var13 = 6;
                         }
                         if (!this.field_e.field_a &&
                           this.field_e.field_e == -1 &&
                           RandomAccessCacheFile.field_b == 2 &&
-                          var11 == qh.field_b) {
+                          var11 == GrowableIntArray.field_b) {
                           var13 = 1;
                         }
                         if (this.field_e.field_a &&

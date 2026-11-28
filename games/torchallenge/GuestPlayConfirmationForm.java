@@ -87,7 +87,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
         ha.field_d = 0;
         jj.field_d = false;
         cl.field_z = false;
-        s.field_m = false;
+        MidiNoteMask.field_m = false;
         NetworkArchiveRequest.field_B = 0;
         ra.field_q = false;
         dk.field_a = 0;

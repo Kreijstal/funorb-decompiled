@@ -24,7 +24,7 @@ abstract class SpriteState extends DualLinkNode {
           for (var1_int = 0; var1_int < 8; var1_int++) {
             for (var3_int = 0; var3_int < 8; var3_int++) {
               var4_ref_double__ = jl.field_O[var1_int];
-              mg.field_a[var1_int][var3_int] = 0.0;
+              ByteArrayPoolSupport.field_a[var1_int][var3_int] = 0.0;
               var5 = var3_int;
               var4_ref_double__[var5] = 0.0;
             }

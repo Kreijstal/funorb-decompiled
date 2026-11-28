@@ -331,7 +331,7 @@ final class g extends w {
                   this.field_v.a(var6, this.field_p.field_A.payload, this.field_p.field_A.position, false);
                   if (0 != this.field_g) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.field_p.field_A.payload[var7 + this.field_p.field_A.position] = (byte)df.a((int) this.field_p.field_A.payload[var7 + this.field_p.field_A.position], (int) this.field_g);
+                      this.field_p.field_A.payload[var7 + this.field_p.field_A.position] = (byte)df.bitwiseXor((int) this.field_p.field_A.payload[var7 + this.field_p.field_A.position], (int) this.field_g);
                     }
                   }
                   this.field_p.field_y = this.field_p.field_y + var6;
@@ -353,7 +353,7 @@ final class g extends w {
                   this.field_v.a(var5, this.field_f.payload, this.field_f.position, false);
                   if (this.field_g != 0) {
                     for (var6 = 0; var6 < var5; var6++) {
-                      this.field_f.payload[var6 + this.field_f.position] = (byte)df.a((int) this.field_f.payload[var6 + this.field_f.position], (int) this.field_g);
+                      this.field_f.payload[var6 + this.field_f.position] = (byte)df.bitwiseXor((int) this.field_f.payload[var6 + this.field_f.position], (int) this.field_g);
                     }
                   }
                   this.field_f.position = this.field_f.position + var5;

@@ -22,7 +22,7 @@ final class fm {
           if (param1 <= 25) {
             fm.clearStaticReferences(-84);
           }
-          var2 = new BinaryBitmapFont(param0, ConfirmedEmailAvailabilityValidator.field_s, DropTargetWidgetContainer.field_K, sb.field_m, ArchiveRequest.field_p, qc.field_b);
+          var2 = new BinaryBitmapFont(param0, ConfirmedEmailAvailabilityValidator.field_s, DropTargetWidgetContainer.field_K, MidiNoteMask.field_m, ArchiveRequest.field_p, qc.field_b);
           SocketConnector.a((byte) 101);
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -42,10 +42,10 @@ final class fm {
 
     final static kf[] a(boolean param0) {
         if (!param0) {
-          return new kf[]{RasterBuffer.field_g, GameShell.field_u, gm.field_j};
+          return new kf[]{RasterBuffer.field_g, GameShell.field_u, MusicPatchEnvelope.field_j};
         }
         fm.a(47);
-        return new kf[]{RasterBuffer.field_g, GameShell.field_u, gm.field_j};
+        return new kf[]{RasterBuffer.field_g, GameShell.field_u, MusicPatchEnvelope.field_j};
     }
 
     public static void clearStaticReferences(int param0) {

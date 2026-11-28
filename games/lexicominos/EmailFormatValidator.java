@@ -123,7 +123,7 @@ final class EmailFormatValidator extends TextFieldValidator {
           }
           try {
             if (gj.field_t == param0) {
-              lj.field_b = sa.field_g.requestDirectSocket(rc.field_i, (byte) 121, fl.field_d);
+              lj.field_b = sa.field_g.requestDirectSocket(MusicPatchEnvelope.field_i, (byte) 121, fl.field_d);
               gj.field_t = gj.field_t + 1;
             }
             if (gj.field_t == 1) {

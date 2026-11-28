@@ -1045,8 +1045,8 @@ final class ChessBoardRenderer extends ChessBoardState {
               stackIn_12_1 = var4 / 2;
               stackIn_12_2 = new StringBuilder().append(var8).append(" ");
               stackIn_12_3 = this.field_K;
-              stackIn_13_4 = (ce.a(1, var4) == 0);
-              stackIn_12_0[stackIn_12_1] = ((StringBuilder) (Object) stackIn_12_2).append(((ChessBoardRenderer) (Object) stackIn_12_3).a(stackIn_13_4, var7, var6, dm.a(param1, -33), var5)).toString();
+              stackIn_13_4 = (ce.bitwiseAnd(1, var4) == 0);
+              stackIn_12_0[stackIn_12_1] = ((StringBuilder) (Object) stackIn_12_2).append(((ChessBoardRenderer) (Object) stackIn_12_3).a(stackIn_13_4, var7, var6, dm.bitwiseXor(param1, -33), var5)).toString();
               this.field_K.applyMove((byte) 19, this.field_h[var4].field_e, this.field_h[var4].field_f, this.field_h[var4].field_d);
               stackIn_16_0 = ((1 & var4) != 0) ? 0 : 4096;
               var9 = stackIn_16_0;

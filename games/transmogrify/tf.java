@@ -126,7 +126,7 @@ final class tf {
           } else if (q.field_a != 2) {
             if (q.field_a == 3) {
               if (!lk.field_b.privilegedTasksEnabled) {
-                var3_int = vd.a(nc.field_r, AchievementNotice.field_m, nh.field_m, GameKeyHandler.field_b, (byte) -103);
+                var3_int = vd.a(nc.field_r, AchievementNotice.field_m, MusicPatchEnvelope.field_m, GameKeyHandler.field_b, (byte) -103);
               } else {
                 var3_int = vd.a(nc.field_r, AchievementNotice.field_m, e.field_x, GameKeyHandler.field_b, (byte) -118);
               }
@@ -197,9 +197,9 @@ final class tf {
               throw new IllegalStateException();
             }
             bd.field_p = new String[var4];
-            ji.a(nc.field_r, 0, bd.field_p, 0, var4);
+            ArrayBlockSupport.copyObjectRange(nc.field_r, 0, bd.field_p, 0, var4);
             ne.field_a = new String[-1 + var3_int - var4];
-            ji.a(nc.field_r, 1 + var4, ne.field_a, 0, -1 + (var3_int - var4));
+            ArrayBlockSupport.copyObjectRange(nc.field_r, 1 + var4, ne.field_a, 0, -1 + (var3_int - var4));
             var4 = -1;
             var3_int = vd.a(nc.field_r, AchievementNotice.field_m, ij.a(ModalDialog.field_C, new String[]{"<br><%0><br>"}, (byte) -46), GameKeyHandler.field_b, (byte) 112);
             for (var5 = 0; var3_int > var5; var5++) {
@@ -213,9 +213,9 @@ final class tf {
               throw new IllegalStateException();
             }
             ng.field_i = new String[var4];
-            ji.a(nc.field_r, 0, ng.field_i, 0, var4);
+            ArrayBlockSupport.copyObjectRange(nc.field_r, 0, ng.field_i, 0, var4);
             th.field_d = new String[-1 + var3_int - var4];
-            ji.a(nc.field_r, var4 + 1, th.field_d, 0, -1 - var4 + var3_int);
+            ArrayBlockSupport.copyObjectRange(nc.field_r, var4 + 1, th.field_d, 0, -1 - var4 + var3_int);
             if (ng.field_i.length <= bd.field_p.length) {
               stackIn_65_0 = bd.field_p.length;
             } else {
@@ -236,7 +236,7 @@ final class tf {
             }
             AccountServiceResult.field_d = new int[2];
             qb.field_f[0] = ab.field_a;
-            qb.field_f[1] = wd.field_i;
+            qb.field_f[1] = MidiNoteMask.field_i;
             GameKeyHandler.field_a[1] = 0;
             GameKeyHandler.field_a[3] = 1;
             qb.field_f[3] = ac.field_h;
@@ -301,8 +301,8 @@ final class tf {
               }
             }
           }
-          ic.field_b = wd.field_j - (var3_intLifetime1 >> 1);
-          ProxyAuthenticationRequiredException.field_a = wd.field_j - (-var3_intLifetime1 + (var3_intLifetime1 >> 1));
+          ic.field_b = MidiNoteMask.field_j - (var3_intLifetime1 >> 1);
+          ProxyAuthenticationRequiredException.field_a = MidiNoteMask.field_j - (-var3_intLifetime1 + (var3_intLifetime1 >> 1));
           mf.field_d = (DialogMessagePane.field_D + jl.field_o << 1) * bk.field_c.field_a;
           for (var4Lifetime2 = 0; var4Lifetime2 < qb.field_f.length; var4Lifetime2++) {
             stackIn_113_0 = mf.field_d;
@@ -325,7 +325,7 @@ final class tf {
             if (var6Lifetime1 >= 0) {
               var7Lifetime2 = uc.a(qb.field_f[var4Lifetime3], false, true);
               var5Lifetime3 = var5Lifetime3 + DialogMessagePane.field_D;
-              var8Lifetime1 = -(var7Lifetime2 >> 1) + wd.field_j;
+              var8Lifetime1 = -(var7Lifetime2 >> 1) + MidiNoteMask.field_j;
               jj.field_c[var4Lifetime3] = new int[4];
               jj.field_c[var4Lifetime3][0] = var8Lifetime1 - EmailFormatValidator.field_m;
               jj.field_c[var4Lifetime3][1] = var5Lifetime3;

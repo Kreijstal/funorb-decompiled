@@ -42,7 +42,7 @@ final class VorbisFloor {
         var2 = this.field_h.length;
         System.arraycopy(this.field_h, 0, field_f, 0, var2);
         var3 = field_j[this.field_c - 1];
-        var4 = ql.bitLength(-123, var3 - 1);
+        var4 = ByteArrayPoolSupport.bitLength(-123, var3 - 1);
         field_l[0] = VorbisSample.readBits(var4);
         field_l[1] = VorbisSample.readBits(var4);
         var5 = 2;

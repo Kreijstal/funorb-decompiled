@@ -196,7 +196,7 @@ final class db extends DungeonAssaultScreen {
         }
         regionExit1: {
           if (var11 == 0) {
-            if (of.field_k) {
+            if (MusicPatchEnvelope.field_k) {
               if (var4 != 22) {
                 break regionExit1;
               }
@@ -311,8 +311,8 @@ final class db extends DungeonAssaultScreen {
           }
           break;
         }
-        if (null != mk.field_j.field_l) {
-          var2_intLifetime1 = ((lk) (mk.field_j.field_l)).field_O;
+        if (null != MidiNoteMask.field_j.field_l) {
+          var2_intLifetime1 = ((lk) (MidiNoteMask.field_j.field_l)).field_O;
           var3Lifetime1 = gm.field_d.field_J[var2_intLifetime1] + gm.field_d.field_F[var2_intLifetime1];
           var4 = (var3Lifetime1 * 1 + 10) * fj.field_g[var2_intLifetime1] / 10;
           if (ve.a(false)) {
@@ -376,11 +376,11 @@ final class db extends DungeonAssaultScreen {
           rp.a(4, var5 - var4, (byte) 108, var4, var7, DialogMessagePane.field_S, var6 - 2);
           db.a(var4, -2 + var6, var5 - var4, var7, 224, 64, 3, 128);
           if (DungeonAssault.field_K != 0) {
-            of.field_j.draw(-of.field_j.field_y + (var4 + var5) >> 1, var6);
+            MusicPatchEnvelope.field_j.draw(-MusicPatchEnvelope.field_j.field_y + (var4 + var5) >> 1, var6);
             var6 += 4;
           }
         } else {
-          of.field_j.draw(-of.field_j.field_y + (var4 + var5) >> 1, var6);
+          MusicPatchEnvelope.field_j.draw(-MusicPatchEnvelope.field_j.field_y + (var4 + var5) >> 1, var6);
           var6 += 4;
         }
     }
@@ -580,7 +580,7 @@ final class db extends DungeonAssaultScreen {
           break;
         }
         if (decompiledNaturalLoopExit0) {
-          mk.field_j = new nn(true);
+          MidiNoteMask.field_j = new nn(true);
           KeyboardInput.field_e = new ed(90, 7 + var2, 250, -var2 + 328);
         }
         var5 = KeyboardInput.field_e;
@@ -604,10 +604,10 @@ final class db extends DungeonAssaultScreen {
             var9 = new lk(0, var3Lifetime1, 200, 40, var8);
             KeyboardInput.field_e.a(var9, (byte) -101);
             var3Lifetime1 += 40;
-            mk.field_j.a((gd) (var9), (byte) -20);
+            MidiNoteMask.field_j.a((gd) (var9), (byte) -20);
             if (var7Lifetime5 != 0) {
               var7Lifetime5 = 0;
-              mk.field_j.a(var9, -256);
+              MidiNoteMask.field_j.a(var9, -256);
             }
           }
           var8++;
@@ -630,7 +630,7 @@ final class db extends DungeonAssaultScreen {
           this.a(this.field_w.field_b, -1, true);
         }
         if (DefaultTextWidgetRenderer.field_s == ContentTransitionDialog.field_mb) {
-          var2 = ((lk) (mk.field_j.field_l)).field_O;
+          var2 = ((lk) (MidiNoteMask.field_j.field_l)).field_O;
           if (0 == gm.field_d.field_e) {
             this.field_b = (kl) ((Object) new pk(ag.field_b, oj.field_c, var2));
             if (DungeonAssault.field_K != 0) {
@@ -690,18 +690,18 @@ final class db extends DungeonAssaultScreen {
         var20 = var19;
         var3 = 370;
         var4 = 130;
-        var5 = kk.field_l.field_E + kk.field_l.field_H;
+        var5 = MusicPatch.field_l.field_E + MusicPatch.field_l.field_H;
         var6 = 40;
         SoftwareRasterizer.fillRectangleAlpha(var3 - 3, var4 - 16, 186, 70, 16777215, var6);
-        field_v.drawString(StandardContentDialog.a(new String[]{gh.a(var19.field_N, (byte) -118)}, kk.field_s, 30496), var3, var4, 0, -1);
+        field_v.drawString(StandardContentDialog.a(new String[]{gh.a(var19.field_N, (byte) -118)}, MusicPatch.field_s, 30496), var3, var4, 0, -1);
         var4 += 16;
         field_v.drawString(StandardContentDialog.a(new String[]{gh.a(var19.field_m, (byte) -101)}, mm.field_j, 30496), var3, var4, 0, -1);
         var4 += 16;
-        field_v.drawString(StandardContentDialog.a(new String[]{Integer.toString(var19.field_s / 10)}, bp.field_h, 30496), var3, var4, 0, -1);
+        field_v.drawString(StandardContentDialog.a(new String[]{Integer.toString(var19.field_s / 10)}, GrowableIntArray.field_h, 30496), var3, var4, 0, -1);
         var4 += 16;
         var7 = 60 * (int)(0.5 + Math.pow(2.0, (double)(-var20.field_N) / 10000.0) * 250.0) / 60;
         var7 = var7 + 10 * gm.field_d.field_J[2];
-        kk.field_l.drawString(StandardContentDialog.a(new String[]{gh.a(var7, (byte) -112)}, la.field_j, 30496), var3, var4, 0, -1);
+        MusicPatch.field_l.drawString(StandardContentDialog.a(new String[]{gh.a(var7, (byte) -112)}, la.field_j, 30496), var3, var4, 0, -1);
         if (param0 != 197376) {
           field_v = (BinaryBitmapFont) null;
         }
@@ -730,15 +730,15 @@ final class db extends DungeonAssaultScreen {
         boolean decompiledFrameCompleted1 = true;
         boolean decompiledFrameCompleted0 = true;
         var11 = -55 + bl.field_s.field_y;
-        var12 = 2 + kk.field_l.lineCount(var9, var11) + kk.field_l.lineCount(var10Lifetime1, var11);
+        var12 = 2 + MusicPatch.field_l.lineCount(var9, var11) + MusicPatch.field_l.lineCount(var10Lifetime1, var11);
         SoftwareRasterizer.fillRectangleAlpha(-3 + var3, -16 + var4, 186, 6 + var12 * 16, 16777215, var6);
         field_v.drawString(DungeonBuilderScreen.field_r, var3, var4, 0, -1);
         var4 += 16;
-        var12Lifetime1 = kk.field_l.drawParagraph(var9, 10 + var3, -var5 + var4, var11, 100, 0, -1, 0, 0, var5);
+        var12Lifetime1 = MusicPatch.field_l.drawParagraph(var9, 10 + var3, -var5 + var4, var11, 100, 0, -1, 0, 0, var5);
         var4 = var4 + 16 * var12Lifetime1;
         field_v.drawString(rb.field_M, var3, var4, 0, -1);
         var4 += 16;
-        var12Lifetime2 = kk.field_l.drawParagraph(var10Lifetime1, var3 + 10, -var5 + var4, var11, 100, 0, -1, 0, 0, var5);
+        var12Lifetime2 = MusicPatch.field_l.drawParagraph(var10Lifetime1, var3 + 10, -var5 + var4, var11, 100, 0, -1, 0, 0, var5);
         var4 = var4 + (16 * var12Lifetime2 + var8);
         if (var19.field_t[0] != -1L) {
           var12Lifetime3 = 0;
@@ -753,7 +753,7 @@ final class db extends DungeonAssaultScreen {
               }
               if (stackIn_21_0 != 0) {
                 var12Lifetime3++;
-                var4 = var4 + kk.field_l.field_H;
+                var4 = var4 + MusicPatch.field_l.field_H;
                 if (var4 <= 350 ||
                   var18 != 0) {
                   var14++;
@@ -762,7 +762,7 @@ final class db extends DungeonAssaultScreen {
               }
             }
             var4 = var13;
-            SoftwareRasterizer.fillRectangleAlpha(var3 - 3, var4 - 16, 186, 20 + kk.field_l.field_H * 6, 16777215, var6);
+            SoftwareRasterizer.fillRectangleAlpha(var3 - 3, var4 - 16, 186, 20 + MusicPatch.field_l.field_H * 6, 16777215, var6);
             field_v.drawString(oh.field_o, var3, var4, 0, -1);
             var4 += 16;
             stackIn_21_0 = 0;
@@ -782,8 +782,8 @@ final class db extends DungeonAssaultScreen {
               break;
             }
             var17 = uj.a(var15Lifetime1, param0 - 197377);
-            kk.field_l.drawString(var17, var3 + 10, var4, 14352640, -1);
-            var4 = var4 + kk.field_l.field_H;
+            MusicPatch.field_l.drawString(var17, var3 + 10, var4, 14352640, -1);
+            var4 = var4 + MusicPatch.field_l.field_H;
             if (var4 > 350 &&
               var18 == 0) {
               this.b(-121);
@@ -978,7 +978,7 @@ final class db extends DungeonAssaultScreen {
           break;
         }
         if (decompiledNaturalLoopExit0) {
-          stackIn_27_0 = of.field_k;
+          stackIn_27_0 = MusicPatchEnvelope.field_k;
         }
         if (stackIn_27_0) {
           this.d(true);
@@ -1023,9 +1023,9 @@ final class db extends DungeonAssaultScreen {
           this.field_t = (rh) null;
         }
         var3 = 170;
-        if (null != mk.field_j.field_l) {
+        if (null != MidiNoteMask.field_j.field_l) {
           SoftwareRasterizer.fillRectangleAlpha(370, 110, 182, 124, 0, 208);
-          var4_int = ((lk) (mk.field_j.field_l)).field_O;
+          var4_int = ((lk) (MidiNoteMask.field_j.field_l)).field_O;
           SpriteAnimationPlayer.field_l[var4_int].a(var3, var2, true, 100);
           field_v.drawCentred(li.field_b[var4_int], var2, var3 + 90, 0, -1);
           var5 = gm.field_d.field_J[var4_int] + gm.field_d.field_F[var4_int];

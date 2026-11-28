@@ -17,7 +17,7 @@ abstract class ModalDialog extends WidgetContainer {
           this.field_I = 0;
           this.field_E = param0;
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "kf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "kf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -44,7 +44,7 @@ abstract class ModalDialog extends WidgetContainer {
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
-        fl.b((byte) 91);
+        ByteArrayPoolSupport.b((byte) 91);
         if (param0 == 97) {
           SoftwareRasterizer.intersectClip(param1, param2, param3, param4);
           return;
@@ -141,7 +141,7 @@ abstract class ModalDialog extends WidgetContainer {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

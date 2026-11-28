@@ -18,11 +18,11 @@ final class AccountRequestState {
           var1[var2] = new IndexedSprite(NetworkArchiveRequest.field_y, FullscreenStatusDialog.field_U, BufferedSocket.field_j[var2], Bzip2State.field_a[var2], ql.field_b[var2], wk.field_b[var2], Bzip2State.field_K[var2], EditableTextField.field_D);
         }
         if (param0 > 96) {
-          wd.d(121);
+          MidiNoteMask.d(121);
           return var1;
         }
         field_c = (String) null;
-        wd.d(121);
+        MidiNoteMask.d(121);
         return var1;
     }
 

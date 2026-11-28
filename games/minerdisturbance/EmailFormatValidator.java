@@ -63,7 +63,7 @@ final class EmailFormatValidator extends TextFieldValidator {
 
     final static String g(int param0) {
         if (af.field_u < 2) {
-          return aa.field_f;
+          return GrowableIntArray.field_f;
         }
         if (null != PacketBuffer.field_r) {
           if (!PacketBuffer.field_r.ensureIndexLoaded((byte) 107)) {

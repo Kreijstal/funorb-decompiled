@@ -246,8 +246,8 @@ final class wj {
                 stackIn_95_0 = 3;
                 return stackIn_95_0;
               }
-              var6_intLifetime2 = sb.field_i;
-              sb.field_i = pg.field_f;
+              var6_intLifetime2 = MidiNoteMask.field_i;
+              MidiNoteMask.field_i = pg.field_f;
               pg.field_f = var6_intLifetime2;
               RichTextWidget.field_Q = true;
             }
@@ -278,7 +278,7 @@ final class wj {
         }
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseAnd(long param0, long param1) {
         return param0 & param1;
     }
 

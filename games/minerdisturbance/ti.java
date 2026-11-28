@@ -27,7 +27,7 @@ final class ti extends InteractiveWidget {
     }
 
     final static void a(byte param0, int param1, int param2) {
-        aa.field_d = param1;
+        GrowableIntArray.field_d = param1;
         rj.field_e = param2;
         if (param0 < 74) {
           ti.a((byte) 82);
@@ -91,13 +91,13 @@ final class ti extends InteractiveWidget {
     final static Sprite a(int param0) {
         int var4_int = 0;
         int var5 = MinerDisturbance.field_ab;
-        int var1 = qk.field_b[0] * ng.field_e[0];
+        int var1 = qk.field_b[0] * MusicPatchEnvelope.field_e[0];
         byte[] var2 = ClientException.field_b[0];
         int[] var3 = new int[var1];
         for (var4_int = param0; var1 > var4_int; var4_int++) {
-          var3[var4_int] = af.field_p[c.a(255, (int) var2[var4_int])];
+          var3[var4_int] = af.field_p[c.bitwiseAnd(255, (int) var2[var4_int])];
         }
-        Sprite var4 = new Sprite(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], ng.field_e[0], var3);
+        Sprite var4 = new Sprite(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], MusicPatchEnvelope.field_e[0], var3);
         ec.a((byte) -106);
         return var4;
     }

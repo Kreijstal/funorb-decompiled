@@ -245,7 +245,7 @@ final class LabeledWidgetContainer extends ComponentDecorator {
           byteArrayLocal3 = SceneWidgetPart011.byteArrayArrayState0008[integerLocal1];
           integerArrayLocal4 = new int[integerLocal2];
           for (integerLocal5 = 0; integerLocal5 < integerLocal2; integerLocal5++) {
-            integerArrayLocal4[integerLocal5] = NetworkSupport006.integerArrayState0152[PlayerBoardUpdateQueue.bitwiseAnd((int) byteArrayLocal3[integerLocal5], 255)];
+            integerArrayLocal4[integerLocal5] = GrowableIntArray.integerArrayState0152[PlayerBoardUpdateQueue.bitwiseAnd((int) byteArrayLocal3[integerLocal5], 255)];
           }
           rgbSpriteArrayLocal7[integerLocal1] = new RgbSprite(MixedSupport029.integerState0181, MixedSupport057.integerState0297, InputAdapter003.integerArrayState0206[integerLocal1], MixedSupport039.integerArrayState0047[integerLocal1], MixedSupport123.integerArrayState0208[integerLocal1], MixedSupport052.integerArrayState0054[integerLocal1], integerArrayLocal4);
         }

@@ -415,7 +415,7 @@ class PacketBuffer extends IntrusiveNode {
           if (mc.field_a >= 10) {
             if (!ub.b(true)) {
               SoftwareRasterizer.clearRaster();
-              nj.a(-21639, 320, 240);
+              ByteArrayPoolSupport.a(-21639, 320, 240);
               oh.a(0, (byte) 76, 0, param0);
             } else {
               if (k.field_g != 0) {
@@ -703,7 +703,7 @@ class PacketBuffer extends IntrusiveNode {
 
     PacketBuffer(int capacity) {
         this.position = 0;
-        this.payload = nj.a(0, capacity);
+        this.payload = ByteArrayPoolSupport.acquireByteArray(0, capacity);
     }
 
     final void padZerosTo(boolean param0, int param1) {

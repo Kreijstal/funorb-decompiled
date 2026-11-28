@@ -51,9 +51,9 @@ final class ac {
               var2_int = (var7Lifetime2.field_q + 60) * ti.field_e / uc.field_e;
               var3 = -30 + var2_int;
               if (!fh.field_g) {
-                fl.a(var3 * -256 / 30, 256 * (-var3 + var7Lifetime2.field_q) / 30, 245, 51, 199, var7Lifetime2);
+                ByteArrayPoolSupport.a(var3 * -256 / 30, 256 * (-var3 + var7Lifetime2.field_q) / 30, 245, 51, 199, var7Lifetime2);
               } else {
-                fl.a(256 * (var7Lifetime2.field_q - var3) / 30, -256 * var3 / 30, 245, -128, 199, var7Lifetime2);
+                ByteArrayPoolSupport.a(256 * (var7Lifetime2.field_q - var3) / 30, -256 * var3 / 30, 245, -128, 199, var7Lifetime2);
               }
             }
           }
@@ -84,7 +84,7 @@ final class ac {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var1), "ac.D(" + param0 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var1), "ac.D(" + param0 + ')');
         }
     }
 

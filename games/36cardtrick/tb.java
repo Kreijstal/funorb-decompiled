@@ -85,7 +85,7 @@ final class tb implements WidgetRenderer {
           var2 = ue.field_b.beginForward((byte) 74);
           var3 = -54 / ((param1 + 65) / 51);
           while (var2 != null) {
-            fl.b(1, param0);
+            GrowableIntArray.b(1, param0);
             var2 = ue.field_b.nextForward((byte) -104);
           }
           return;

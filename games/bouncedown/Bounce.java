@@ -144,7 +144,7 @@ public final class Bounce extends GameClient {
           og.clearStaticReferences((byte) 106);
           f.clearStaticReferences(-7355);
           uk.clearStaticReferences(113);
-          kl.resetStaticState(0);
+          MusicPatchNode.resetStaticState(0);
           MidiFileReader.clearStaticReferences();
           MusicPatchPcmStream.resetStaticState(0);
           nl.clearStaticReferences((byte) 94);
@@ -217,7 +217,7 @@ public final class Bounce extends GameClient {
           Bzip2Decompressor.clearStaticReferences();
           Bzip2State.resetStaticState((byte) 105);
           hh.resetStaticState(false);
-          jj.clearStaticReferences(true);
+          ByteArrayPoolSupport.clearStaticReferences(true);
           dl.clearStaticReferences((byte) 94);
           vb.clearStaticReferences(119);
           qi.clearStaticReferences(0);
@@ -242,9 +242,9 @@ public final class Bounce extends GameClient {
           ProxyAuthenticationRequiredException.resetStaticState(8191);
           ImageProducerRasterBuffer.resetStaticState(true);
           lb.resetStaticState((byte) -83);
-          kj.clearStaticReferences(false);
-          rj.clearStaticReferences(0);
-          ch.clearStaticReferences(false);
+          MidiNoteMask.clearStaticReferences(false);
+          MusicPatch.clearStaticReferences(0);
+          MusicPatchEnvelope.clearStaticReferences(false);
           pa.clearStaticReferences(37);
           LabeledWidgetContainer.clearStaticReferences((byte) 123);
           EditableTextField.clearStaticReferences((byte) 94);
@@ -263,7 +263,7 @@ public final class Bounce extends GameClient {
           kb.a(-9192);
           RichTextLayout.resetDeclaredStaticState(60);
           DirectByteStorage.clearStaticReferences(11041);
-          aj.clearStaticReferences(false);
+          GrowableIntArray.clearStaticReferences(false);
           DraggableWidgetContainer.clearStaticReferences(-119);
           DropTargetWidgetContainer.a(true);
           eh.a((byte) 106);
@@ -546,11 +546,11 @@ public final class Bounce extends GameClient {
             }
           }
           if (null != MusicPatchPcmStream.field_o &&
-            rj.field_j == -1) {
+            MusicPatch.field_j == -1) {
             MusicPatchPcmStream.field_o = MusicPatchPcmStream.field_o.a((byte) -77);
           }
-          if (rj.field_j != -1 &&
-            rj.field_j == 0) {
+          if (MusicPatch.field_j != -1 &&
+            MusicPatch.field_j == 0) {
             var2 = ResourceArchive.field_e;
             var3_int = var2.field_s + 200;
             var4 = 4 + var2.field_x + var2.field_F;
@@ -564,7 +564,7 @@ public final class Bounce extends GameClient {
               this.field_L &&
               1 == SectorCacheStore.field_e) {
               ProxyAuthenticationRequiredException.d(-6144);
-              rj.field_j = 2;
+              MusicPatch.field_j = 2;
             }
             var5Lifetime1 = ResourceArchive.field_e.stringWidth(ProgressDialog.field_T);
             var6Lifetime1 = -(var5Lifetime1 / 2) + 320;
@@ -579,7 +579,7 @@ public final class Bounce extends GameClient {
               if (!this.field_L) {
                 MusicPatchPcmStream.field_o.field_n = 0;
               }
-              rj.field_j = -1;
+              MusicPatch.field_j = -1;
               kb.field_a = 0;
               MusicPatchPcmStream.field_o.field_e = false;
             }
@@ -613,7 +613,7 @@ public final class Bounce extends GameClient {
               }
             }
             if (MusicPatchPcmStream.field_o != null &&
-              rj.field_j == -1) {
+              MusicPatch.field_j == -1) {
               if (n.field_m == 0) {
                 if (lh.field_f == 98) {
                   MusicPatchPcmStream.field_o.a(-1, 12011);
@@ -646,7 +646,7 @@ public final class Bounce extends GameClient {
             if (84 != lh.field_f) {
               continue;
             }
-            if (rj.field_j != 0) {
+            if (MusicPatch.field_j != 0) {
               continue;
             }
             stackIn_307_0 = 0;
@@ -654,7 +654,7 @@ public final class Bounce extends GameClient {
             if (var10 == 0) {
               if (stackIn_307_0 == stackIn_307_1) {
                 ProxyAuthenticationRequiredException.d(-6144);
-                rj.field_j = 2;
+                MusicPatch.field_j = 2;
               }
               if (qf.field_b != 1) {
                 continue;
@@ -662,7 +662,7 @@ public final class Bounce extends GameClient {
               MusicPatchPcmStream.field_o.field_l = false;
               kb.field_a = 0;
               MusicPatchPcmStream.field_o.field_e = false;
-              rj.field_j = -1;
+              MusicPatch.field_j = -1;
               if (this.field_L) {
                 continue;
               }
@@ -896,7 +896,7 @@ public final class Bounce extends GameClient {
             ContentTransitionDialog.a(sj.field_f, (byte) 80);
             sj.field_f.exitFullscreen((byte) -121, DebouncedFieldValidator.field_e);
             sj.field_f = null;
-            ch.field_h.requestFocus();
+            MusicPatchEnvelope.field_h.requestFocus();
           }
           if (LoginPanel.k(-31077)) {
             this.g(0);
@@ -943,7 +943,7 @@ public final class Bounce extends GameClient {
                   ContentTransitionDialog.a(sj.field_f, (byte) 111);
                   sj.field_f.exitFullscreen((byte) -121, DebouncedFieldValidator.field_e);
                   sj.field_f = null;
-                  ch.field_h.requestFocus();
+                  MusicPatchEnvelope.field_h.requestFocus();
                 }
                 if (var2_int == 3) {
                   AccountNameAvailabilityValidator.d(30432);
@@ -968,7 +968,7 @@ public final class Bounce extends GameClient {
                       ContentTransitionDialog.a(sj.field_f, (byte) 103);
                       sj.field_f.exitFullscreen((byte) -115, DebouncedFieldValidator.field_e);
                       sj.field_f = null;
-                      ch.field_h.requestFocus();
+                      MusicPatchEnvelope.field_h.requestFocus();
                     }
                     tc.a(DiskCacheWorker.b(param0 ^ 37), 6091);
                     if ((var3 != 0) &&
@@ -976,7 +976,7 @@ public final class Bounce extends GameClient {
                       ContentTransitionDialog.a(sj.field_f, (byte) 121);
                       sj.field_f.exitFullscreen((byte) -127, DebouncedFieldValidator.field_e);
                       sj.field_f = null;
-                      ch.field_h.requestFocus();
+                      MusicPatchEnvelope.field_h.requestFocus();
                     }
                   }
                 } else {
@@ -984,7 +984,7 @@ public final class Bounce extends GameClient {
                     ContentTransitionDialog.a(sj.field_f, (byte) 121);
                     sj.field_f.exitFullscreen((byte) -127, DebouncedFieldValidator.field_e);
                     sj.field_f = null;
-                    ch.field_h.requestFocus();
+                    MusicPatchEnvelope.field_h.requestFocus();
                   }
                 }
                 if (var3 != 0) {
@@ -997,7 +997,7 @@ public final class Bounce extends GameClient {
           }
           do {
             if (!ValidationStatusWidget.a(true, ce.field_n)) {
-              jj.a(0, true);
+              ByteArrayPoolSupport.a(0, true);
               break;
             }
             this.j(-4);
@@ -1160,7 +1160,7 @@ public final class Bounce extends GameClient {
             ContentTransitionDialog.a(sj.field_f, (byte) 101);
             sj.field_f.exitFullscreen((byte) -122, DebouncedFieldValidator.field_e);
             sj.field_f = null;
-            ch.field_h.requestFocus();
+            MusicPatchEnvelope.field_h.requestFocus();
           }
           td.a((byte) 18);
           return;
@@ -1270,7 +1270,7 @@ public final class Bounce extends GameClient {
             if (!ld.field_l.prepareTrackSamples((byte) -124, cf.field_d, MidiPcmStream.field_D, wj.field_c, 176400)) {
               return;
             }
-            ld.field_l.e(param1 ^ 3118);
+            ld.field_l.releasePatchSampleIds(param1 ^ 3118);
             MidiPcmStream.field_D = null;
             cf.field_d = null;
             RichTextWidget.e((byte) -44);
@@ -1405,8 +1405,8 @@ public final class Bounce extends GameClient {
     final void initializeClient(byte param0) {
         this.a(9, 0, 10, 3, 7, 8764, false, 8);
         AudioOutput.configureAudio(22050, true, 10);
-        f.field_a = AudioOutput.createOutput(DebouncedFieldValidator.field_e, (java.awt.Component) ((Object) ch.field_h), 0, 512);
-        jl.field_d = AudioOutput.createOutput(DebouncedFieldValidator.field_e, (java.awt.Component) ((Object) ch.field_h), 1, 22050);
+        f.field_a = AudioOutput.createOutput(DebouncedFieldValidator.field_e, (java.awt.Component) ((Object) MusicPatchEnvelope.field_h), 0, 512);
+        jl.field_d = AudioOutput.createOutput(DebouncedFieldValidator.field_e, (java.awt.Component) ((Object) MusicPatchEnvelope.field_h), 1, 22050);
         EmailFormatValidator.field_l = new PcmStreamMixer();
         f.field_a.setRootStream(EmailFormatValidator.field_l);
         bk.field_c = 1;
@@ -1442,7 +1442,7 @@ public final class Bounce extends GameClient {
           }
           if (jh.b(767564065)) {
             qf.field_b = 0;
-            rj.field_j = 0;
+            MusicPatch.field_j = 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1504,7 +1504,7 @@ public final class Bounce extends GameClient {
           if (sj.field_f != null) {
             stackIn_5_0 = sj.field_f;
           } else {
-            stackIn_5_0 = ch.field_h;
+            stackIn_5_0 = MusicPatchEnvelope.field_h;
           }
           var2 = stackIn_5_0;
           if (LoginPanel.k(-31077)) {
@@ -1768,7 +1768,7 @@ public final class Bounce extends GameClient {
           boolean decompiledFrameRemainder1 = true;
           if ((PcmResampler.field_g) &&
             (decompiledFrameRemainder1 = (null != MusicPatchPcmStream.field_o)) &&
-            (decompiledFrameRemainder1 = (rj.field_j == -1))) {
+            (decompiledFrameRemainder1 = (MusicPatch.field_j == -1))) {
             MusicPatchPcmStream.field_o.a(23417);
             decompiledFrameRemainder1 = (var9 != 0);
           }
@@ -1782,7 +1782,7 @@ public final class Bounce extends GameClient {
             }
             SoftwareRasterizer.resetClip();
             if (null != MusicPatchPcmStream.field_o &&
-              rj.field_j == -1) {
+              MusicPatch.field_j == -1) {
               MusicPatchPcmStream.field_o.a(23417);
             }
           }
@@ -1833,29 +1833,29 @@ public final class Bounce extends GameClient {
             od.field_f.drawString(lj.field_b[var5_ref.field_h], 48, od.field_f.field_s + var6_intLifetime1, 16746496, -1);
           }
           boolean decompiledFrameRemainder0 = true;
-          if (-1 != rj.field_j) {
-            if (rj.field_j == 2 ||
-              rj.field_j == 3) {
+          if (-1 != MusicPatch.field_j) {
+            if (MusicPatch.field_j == 2 ||
+              MusicPatch.field_j == 3) {
               if (jh.b(767564065)) {
-                if (rj.field_j == 3) {
-                  rj.field_j = -1;
+                if (MusicPatch.field_j == 3) {
+                  MusicPatch.field_j = -1;
                   decompiledFrameRemainder0 = (var9 != 0);
                 }
                 if (decompiledFrameRemainder0) {
                   this.field_K = 0;
-                  rj.field_j = 0;
+                  MusicPatch.field_j = 0;
                   decompiledFrameRemainder0 = (var9 != 0);
                 }
               }
               if (decompiledFrameRemainder0) {
                 TextLineMetrics.field_d = NetworkArchiveRequest.a(-77, 4);
-                rj.field_j = -1;
+                MusicPatch.field_j = -1;
                 this.prepareSinglePlayerScoreSubmission(false, fa.field_c);
                 decompiledFrameRemainder0 = (var9 != 0);
               }
             }
             if ((decompiledFrameRemainder0) &&
-              (rj.field_j == 0)) {
+              (MusicPatch.field_j == 0)) {
               var6 = ResourceArchive.field_e;
               var7Lifetime2 = 200 + var6.field_s;
               var8 = var6.field_F + var6.field_x + 4;

@@ -51,7 +51,7 @@ final class fd {
             var8 = 255 & param2[var5_int] << var6 | (param2[var5_int + 1] & 255) >>> 8 - var6;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_f[this.field_i] = (byte)nl.a((int) this.field_f[this.field_i], var8 >>> var7);
+              this.field_f[this.field_i] = (byte)nl.bitwiseOr((int) this.field_f[this.field_i], var8 >>> var7);
               this.field_i = this.field_i + 1;
               this.field_h = this.field_h + (-var7 + 8);
               if (this.field_h == 512) {
@@ -59,7 +59,7 @@ final class fd {
                 this.field_h = 0;
                 this.field_i = 0;
               }
-              this.field_f[this.field_i] = (byte)va.a(var8 << 8 - var7, 255);
+              this.field_f[this.field_i] = (byte)va.bitwiseAnd(var8 << 8 - var7, 255);
               var5_int++;
               this.field_h = this.field_h + var7;
               param0 = param0 - 8L;
@@ -71,7 +71,7 @@ final class fd {
             stackIn_15_0 = 255;
             stackIn_15_1 = param2[var5_int] << var6;
             var8Lifetime1 = stackIn_15_0 & stackIn_15_1;
-            this.field_f[this.field_i] = (byte)nl.a((int) this.field_f[this.field_i], var8Lifetime1 >>> var7);
+            this.field_f[this.field_i] = (byte)nl.bitwiseOr((int) this.field_f[this.field_i], var8Lifetime1 >>> var7);
           } else {
             var8Lifetime1 = 0;
           }
@@ -86,7 +86,7 @@ final class fd {
               this.field_i = 0;
               this.field_h = 0;
             }
-            this.field_f[this.field_i] = (byte)va.a(var8Lifetime1 << -var7 + 8, 255);
+            this.field_f[this.field_i] = (byte)va.bitwiseAnd(var8Lifetime1 << -var7 + 8, 255);
             this.field_h = this.field_h + (int)param0;
           }
           return;
@@ -133,7 +133,7 @@ final class fd {
         int var8 = 0;
         var8 = Confined.field_J ? 1 : 0;
         try {
-          this.field_f[this.field_i] = (byte)nl.a((int) this.field_f[this.field_i], 128 >>> va.a(this.field_h, 7));
+          this.field_f[this.field_i] = (byte)nl.bitwiseOr((int) this.field_f[this.field_i], 128 >>> va.bitwiseAnd(this.field_h, 7));
           this.field_i = this.field_i + 1;
           if (32 < this.field_i) {
             while (this.field_i < 64) {
@@ -149,7 +149,7 @@ final class fd {
             this.field_i = this.field_i + 1;
             this.field_f[fieldTemp$1] = (byte) 0;
           }
-          lj.copyByteRange(this.field_c, 0, this.field_f, 32, 32);
+          ArrayBlockSupport.copyByteRange(this.field_c, 0, this.field_f, 32, 32);
           this.a(param2 + 6701);
           var4_int = 0;
           var5 = param1;
@@ -207,7 +207,7 @@ final class fd {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_d[var2] = pa.a(kd.a((long)this.field_f[var3 + 7], 255L), pa.a(kd.a(65280L, (long)this.field_f[var3 + 6] << 8), pa.a(pa.a(kd.a((long)this.field_f[4 + var3], 255L) << 24, pa.a(pa.a(kd.a(255L, (long)this.field_f[2 + var3]) << 40, pa.a(kd.a((long)this.field_f[1 + var3], 255L) << 48, (long)this.field_f[var3] << 56)), kd.a(255L, (long)this.field_f[3 + var3]) << 32)), kd.a(16711680L, (long)this.field_f[var3 + 5] << 16))));
+          this.field_d[var2] = pa.bitwiseXor(kd.bitwiseAnd((long)this.field_f[var3 + 7], 255L), pa.bitwiseXor(kd.bitwiseAnd(65280L, (long)this.field_f[var3 + 6] << 8), pa.bitwiseXor(pa.bitwiseXor(kd.bitwiseAnd((long)this.field_f[4 + var3], 255L) << 24, pa.bitwiseXor(pa.bitwiseXor(kd.bitwiseAnd(255L, (long)this.field_f[2 + var3]) << 40, pa.bitwiseXor(kd.bitwiseAnd((long)this.field_f[1 + var3], 255L) << 48, (long)this.field_f[var3] << 56)), kd.bitwiseAnd(255L, (long)this.field_f[3 + var3]) << 32)), kd.bitwiseAnd(16711680L, (long)this.field_f[var3 + 5] << 16))));
           var2++;
           var3 += 8;
         }
@@ -215,7 +215,7 @@ final class fd {
           dupTemp$0 = this.field_g[var2Lifetime1];
           arrayValue$1 = this.field_d[var2Lifetime1];
           this.field_l[var2Lifetime1] = dupTemp$0;
-          this.field_b[var2Lifetime1] = pa.a(arrayValue$1, dupTemp$0);
+          this.field_b[var2Lifetime1] = pa.bitwiseXor(arrayValue$1, dupTemp$0);
         }
         if (param0 != 6704) {
           var7 = (byte[]) null;
@@ -227,7 +227,7 @@ final class fd {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_a[var3Lifetime1] = pa.a(this.field_a[var3Lifetime1], StripedProgressWidget.field_T[var4][va.a(255, (int)(this.field_l[va.a(-var4 + var3Lifetime1, 7)] >>> var5))]);
+              this.field_a[var3Lifetime1] = pa.bitwiseXor(this.field_a[var3Lifetime1], StripedProgressWidget.field_T[var4][va.bitwiseAnd(255, (int)(this.field_l[va.bitwiseAnd(-var4 + var3Lifetime1, 7)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -235,14 +235,14 @@ final class fd {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_l[var3Lifetime1Lifetime1] = this.field_a[var3Lifetime1Lifetime1];
           }
-          this.field_l[0] = pa.a(this.field_l[0], StripedProgressWidget.field_V[var2Lifetime2]);
+          this.field_l[0] = pa.bitwiseXor(this.field_l[0], StripedProgressWidget.field_V[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_a[var3Lifetime1Lifetime2] = this.field_l[var3Lifetime1Lifetime2];
             var8 = 0;
             var4Lifetime1 = var8;
             var5Lifetime1 = 56;
             while (8 > var8) {
-              this.field_a[var3Lifetime1Lifetime2] = pa.a(this.field_a[var3Lifetime1Lifetime2], StripedProgressWidget.field_T[var8][va.a((int)(this.field_b[va.a(-var8 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1), 255)]);
+              this.field_a[var3Lifetime1Lifetime2] = pa.bitwiseXor(this.field_a[var3Lifetime1Lifetime2], StripedProgressWidget.field_T[var8][va.bitwiseAnd((int)(this.field_b[va.bitwiseAnd(-var8 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1), 255)]);
               var8++;
               var5Lifetime1 -= 8;
             }
@@ -252,7 +252,7 @@ final class fd {
           }
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_g[var2Lifetime3] = pa.a(this.field_g[var2Lifetime3], pa.a(this.field_b[var2Lifetime3], this.field_d[var2Lifetime3]));
+          this.field_g[var2Lifetime3] = pa.bitwiseXor(this.field_g[var2Lifetime3], pa.bitwiseXor(this.field_b[var2Lifetime3], this.field_d[var2Lifetime3]));
         }
     }
 

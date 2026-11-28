@@ -183,7 +183,7 @@ final class MusicTrack {
           }
           this.byteArrayArrayState0009 = new byte[256][];
           this.integerArrayState0212 = new int[256];
-          MixedSupport008.performAction0075(this.integerArrayState0212, 0, 256, 64);
+          ArrayBlockSupport.fillInts(this.integerArrayState0212, 0, 256, 64);
           for (integerLocal29 = 0; integerLocal29 < 256; integerLocal29++) {
             this.byteArrayArrayState0009[integerLocal29] = DekoBlokoClient.byteArrayState0004;
           }

@@ -178,21 +178,21 @@ final class v {
           }
           if (param1 != 255) {
             if (100 > param1) {
-              kf.field_j = sc.createAccountErrorResult(param2, param1, (byte) 113);
+              MusicPatch.field_j = sc.createAccountErrorResult(param2, param1, (byte) 113);
               return;
             }
             if (param1 > 105) {
-              kf.field_j = sc.createAccountErrorResult(param2, param1, (byte) 113);
+              MusicPatch.field_j = sc.createAccountErrorResult(param2, param1, (byte) 113);
               return;
             }
             var7 = param3;
             IntrusiveDeque.a((byte) 111, var7);
-            kf.field_j = FullscreenFocusCanvas.createAccountSuggestionsResult(param3, -101);
+            MusicPatch.field_j = FullscreenFocusCanvas.createAccountSuggestionsResult(param3, -101);
             return;
           }
           stackIn_11_0 = param0 ^ 13172;
           stackIn_12_1 = !(SecondaryNodeDeque.field_f >= 13);
-          kf.field_j = cf.createAccountSuccessResult(stackIn_11_0, stackIn_12_1);
+          MusicPatch.field_j = cf.createAccountSuccessResult(stackIn_11_0, stackIn_12_1);
           var6 = (String[]) null;
           IntrusiveDeque.a((byte) 98, (String[]) null);
           return;

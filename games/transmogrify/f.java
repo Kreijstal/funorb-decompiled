@@ -68,7 +68,7 @@ final class f {
           var3Lifetime1 = rk.field_n[9] >> 8;
           var4 = rk.field_n[10] >> 8;
           var5Lifetime1 = rk.field_n[11] >> 8;
-          var6Lifetime1 = si.field_l << 4;
+          var6Lifetime1 = MusicPatch.field_l << 4;
           if (param0 != 16) {
             f.clearStaticReferences(true);
           }
@@ -125,7 +125,7 @@ final class f {
 
     final static IndexedSprite a(int param0) {
         IndexedSprite var1 = new IndexedSprite(NetworkArchiveRequest.field_y, FullscreenStatusDialog.field_U, BufferedSocket.field_j[0], Bzip2State.field_a[0], ql.field_b[0], wk.field_b[param0], Bzip2State.field_K[0], EditableTextField.field_D);
-        wd.d(param0 ^ 9);
+        MidiNoteMask.d(param0 ^ 9);
         return var1;
     }
 

@@ -56,7 +56,7 @@ final class ne {
                   var11 = var9 & 65280;
                   var11 = -(var11 >> 5) + (var11 >> 1) & 65280;
                   var12 = var9 >> 3 & 31;
-                  SoftwareRasterizer.field_i[var7] = hm.a(hm.a(var10 << 16, var11), var12);
+                  SoftwareRasterizer.field_i[var7] = hm.bitwiseOr(hm.bitwiseOr(var10 << 16, var11), var12);
                 }
                 var7++;
               }

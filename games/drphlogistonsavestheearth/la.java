@@ -74,7 +74,7 @@ final class la {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          ig.field_h = param0;
+          MusicPatch.field_h = param0;
           if (param1 != 2) {
             field_a = (he) null;
           }

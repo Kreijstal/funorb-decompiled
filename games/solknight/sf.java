@@ -38,7 +38,7 @@ final class sf {
         byte[] var2 = jc.field_c[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var4_int < var1; var4_int++) {
-          var3[var4_int] = GuestPlayConfirmationForm.field_H[fi.a(255, (int) var2[var4_int])];
+          var3[var4_int] = GuestPlayConfirmationForm.field_H[fi.bitwiseAnd(255, (int) var2[var4_int])];
         }
         Sprite var4 = new Sprite(MouseInputHandler.field_a, we.field_e, ph.field_h[param0], qf.field_d[0], sa.field_l[0], uj.field_b[0], var3);
         og.a((byte) -97);
@@ -148,13 +148,13 @@ final class sf {
         this.field_d = 0;
         this.field_a = 0;
         this.field_e = 0;
-        if (hg.field_F != 0) {
-          this.field_e = hg.field_F;
-          this.field_d = hg.field_F;
+        if (MusicPatchNode.field_F != 0) {
+          this.field_e = MusicPatchNode.field_F;
+          this.field_d = MusicPatchNode.field_F;
           this.field_f = param2;
           this.field_k = true;
           this.field_h = ConfirmedEmailAvailabilityValidator.field_k;
-          this.field_l = hg.field_F;
+          this.field_l = MusicPatchNode.field_F;
         }
         if (this.field_l != 0 &&
           wb.field_c != 0) {
@@ -164,7 +164,7 @@ final class sf {
           }
           this.field_h = this.field_h - 1;
         }
-        if (0 == hg.field_F &&
+        if (0 == MusicPatchNode.field_F &&
           wb.field_c == 0) {
           this.field_l = 0;
         }

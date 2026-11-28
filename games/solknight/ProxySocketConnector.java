@@ -151,7 +151,7 @@ final class ProxySocketConnector extends SocketConnector {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var1), "qk.E(" + param0 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var1), "qk.E(" + param0 + ')');
         }
     }
 
@@ -165,8 +165,8 @@ final class ProxySocketConnector extends SocketConnector {
         IntrusiveDeque.a((byte) 86, dj.field_k);
         dj.field_k.a(-3680, wh.field_c);
         dj.field_k = null;
-        if (fc.field_l != null) {
-          fc.field_l.a(false);
+        if (MusicPatch.field_l != null) {
+          MusicPatch.field_l.a(false);
         }
         EmailFormatValidator.field_q.requestFocus();
     }
@@ -231,7 +231,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -330,11 +330,11 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param3).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseOr(int param0, int param1) {
         return param0 | param1;
     }
 
@@ -430,7 +430,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 

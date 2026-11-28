@@ -64,7 +64,7 @@ final class PasswordValidator extends TextFieldValidator {
             return (String) (stackIn_4_0);
           }
           var5 = var4;
-          if (ph.a((byte) 107, var5)) {
+          if (ByteArrayPoolSupport.a((byte) 107, var5)) {
             stackIn_8_0 = IsaacRandom.field_a;
             return stackIn_8_0;
           }

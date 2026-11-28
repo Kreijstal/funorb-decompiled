@@ -179,7 +179,7 @@ final class rh {
           if (param1 != -72) {
             field_b = (MeshData) null;
           }
-          ee.field_a = param0;
+          ByteArrayPoolSupport.field_a = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

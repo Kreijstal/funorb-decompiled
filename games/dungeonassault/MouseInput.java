@@ -142,7 +142,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
     }
 
     final static void b(int param0) {
-        of.field_k = false;
+        MusicPatchEnvelope.field_k = false;
         nf.field_y = param0;
         eh.field_o.field_N = true;
         ed var4 = eh.field_o;

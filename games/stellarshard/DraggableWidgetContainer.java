@@ -71,7 +71,7 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
             var9 = new int[var3];
             var21 = var9;
             for (var6_int = 0; var3 > var6_int; var6_int++) {
-              var9[var6_int] = gj.field_w[DirectByteStorage.a((int) var20[var6_int], 255)];
+              var9[var6_int] = gj.field_w[DirectByteStorage.bitwiseAnd((int) var20[var6_int], 255)];
             }
             var1[var2] = new Sprite(StripedProgressWidget.field_G, wd.field_b, ak.field_c[var2], RasterBuffer.field_c[var2], vc.field_b[var2], ih.field_d[var2], var21);
           } else {
@@ -80,7 +80,7 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
             var13 = var16;
             var6 = var13;
             for (var7 = 0; var7 < var3; var7++) {
-              var6[var7] = DialogMessagePane.b(gj.field_w[DirectByteStorage.a(255, (int) var20[var7])], DirectByteStorage.a((int) var22[var7], 255) << 24);
+              var6[var7] = DialogMessagePane.bitwiseOr(gj.field_w[DirectByteStorage.bitwiseAnd(255, (int) var20[var7])], DirectByteStorage.bitwiseAnd((int) var22[var7], 255) << 24);
             }
             var1[var2] = (Sprite) ((Object) new ArgbSprite(StripedProgressWidget.field_G, wd.field_b, ak.field_c[var2], RasterBuffer.field_c[var2], vc.field_b[var2], ih.field_d[var2], var16));
           }

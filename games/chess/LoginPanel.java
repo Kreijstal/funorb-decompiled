@@ -128,7 +128,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             if (!this.field_K) {
               this.field_O.field_n = (WidgetRenderer) ((Object) new wj());
             } else {
-              this.field_O.field_j = qd.field_I;
+              this.field_O.field_j = MusicPatchNode.field_I;
               this.field_O.field_n = (WidgetRenderer) ((Object) new wj());
             }
           } else {
@@ -414,7 +414,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             LoginPanel.exitFullscreenFrame((java.awt.Frame) null, (PlatformTaskDispatcher) null, -94);
           }
           var2 = 0;
-          while (kf.d(18954)) {
+          while (MusicPatch.d(18954)) {
             AccountRegistrationPanel.field_R.c((byte) -42);
             if (AccountRegistrationPanel.field_R.d((byte) 101)) {
               var1_int = 1;

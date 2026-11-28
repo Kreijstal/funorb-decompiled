@@ -56,7 +56,7 @@ final class BufferedRandomAccessFile {
           if (var2 > -1L &&
             var2 < var4) {
             var6 = (int)(var4 - var2);
-            dk.copyByteRange(this.field_g, (int)(var2 - this.field_e), this.field_a, (int)(-this.field_f + var2), var6);
+            ArrayBlockSupport.copyByteRange(this.field_g, (int)(var2 - this.field_e), this.field_a, (int)(-this.field_f + var2), var6);
           }
           this.field_b = 0;
           this.field_e = -1L;
@@ -111,7 +111,7 @@ final class BufferedRandomAccessFile {
             if (this.field_e != -1L &&
               (this.field_i + (long)param1) > ((long)this.field_g.length + this.field_e)) {
               var5_int = (int)((long)this.field_g.length - (this.field_i - this.field_e));
-              dk.copyByteRange(param3, param2, this.field_g, (int)(this.field_i - this.field_e), var5_int);
+              ArrayBlockSupport.copyByteRange(param3, param2, this.field_g, (int)(this.field_i - this.field_e), var5_int);
               param1 = param1 - var5_int;
               this.field_i = this.field_i + (long)var5_int;
               param2 = param2 + var5_int;
@@ -151,7 +151,7 @@ final class BufferedRandomAccessFile {
               if (var5_long > -1L &&
                 var5_long < var7) {
                 var9 = (int)(var7 - var5_long);
-                dk.copyByteRange(param3, (int)((long)param2 + var5_long - this.field_i), this.field_a, (int)(-this.field_f + var5_long), var9);
+                ArrayBlockSupport.copyByteRange(param3, (int)((long)param2 + var5_long - this.field_i), this.field_a, (int)(-this.field_f + var5_long), var9);
               }
               this.field_i = this.field_i + (long)param1;
               return;
@@ -160,7 +160,7 @@ final class BufferedRandomAccessFile {
               if (this.field_e == -1L) {
                 this.field_e = this.field_i;
               }
-              dk.copyByteRange(param3, param2, this.field_g, (int)(-this.field_e + this.field_i), param1);
+              ArrayBlockSupport.copyByteRange(param3, param2, this.field_g, (int)(-this.field_e + this.field_i), param1);
               this.field_i = this.field_i + (long)param1;
               if ((long)this.field_b < (-this.field_e + this.field_i)) {
                 this.field_b = (int)(this.field_i - this.field_e);
@@ -254,7 +254,7 @@ final class BufferedRandomAccessFile {
             if (-1L != this.field_e &&
               this.field_i >= this.field_e &&
               this.field_e + (long)this.field_b >= this.field_i + (long)param2) {
-              dk.copyByteRange(this.field_g, (int)(-this.field_e + this.field_i), param1, param0, param2);
+              ArrayBlockSupport.copyByteRange(this.field_g, (int)(-this.field_e + this.field_i), param1, param0, param2);
               this.field_i = this.field_i + (long)param2;
               return;
             }
@@ -268,7 +268,7 @@ final class BufferedRandomAccessFile {
               if (var10_int > param2) {
                 var10_int = param2;
               }
-              dk.copyByteRange(this.field_a, (int)(-this.field_f + this.field_i), param1, param0, var10_int);
+              ArrayBlockSupport.copyByteRange(this.field_a, (int)(-this.field_f + this.field_i), param1, param0, var10_int);
               this.field_i = this.field_i + (long)var10_int;
               param2 = param2 - var10_int;
               param0 = param0 + var10_int;
@@ -299,7 +299,7 @@ final class BufferedRandomAccessFile {
               if (var10_intLifetime1Lifetime1 > this.field_j) {
                 var10_intLifetime1Lifetime1 = this.field_j;
               }
-              dk.copyByteRange(this.field_a, 0, param1, param0, var10_intLifetime1Lifetime1);
+              ArrayBlockSupport.copyByteRange(this.field_a, 0, param1, param0, var10_intLifetime1Lifetime1);
               param2 = param2 - var10_intLifetime1Lifetime1;
               this.field_i = this.field_i + (long)var10_intLifetime1Lifetime1;
               param0 = param0 + var10_intLifetime1Lifetime1;
@@ -342,7 +342,7 @@ final class BufferedRandomAccessFile {
               if (var10 > -1L &&
                 var10 < var12) {
                 var14 = (int)(-var10 + var12);
-                dk.copyByteRange(this.field_g, (int)(-this.field_e + var10), param1, var7 + (int)(var10 - var5_long), var14);
+                ArrayBlockSupport.copyByteRange(this.field_g, (int)(-this.field_e + var10), param1, var7 + (int)(var10 - var5_long), var14);
                 if (this.field_i < var12) {
                   param2 = (int)((long)param2 - (-this.field_i + var12));
                   this.field_i = var12;

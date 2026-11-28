@@ -72,7 +72,7 @@ final class qh {
         RuntimeException var3 = null;
         var4 = DungeonAssault.field_K;
         try {
-          if (!kn.field_g) {
+          if (!ByteArrayPoolSupport.field_g) {
             return;
           }
           if (param2 == 6) {
@@ -151,13 +151,13 @@ final class qh {
           if (param0 != 245) {
             field_R = (String[]) null;
           }
-          if (null == of.field_q) {
+          if (null == MusicPatchEnvelope.field_q) {
             if (null != TextLineMetrics.field_l) {
               TextLineMetrics.field_l.drawParagraph(bg.field_t, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
-          var6 = of.field_q[me.field_f];
+          var6 = MusicPatchEnvelope.field_q[me.field_f];
           var7 = var6;
           var7Lifetime1 = var6;
           if (var6 == null) {
@@ -168,7 +168,7 @@ final class qh {
             var6.draw(245, 199);
           }
           if (wf.field_x < am.field_g) {
-            var7Lifetime2 = of.field_q[DungeonTileState.field_n];
+            var7Lifetime2 = MusicPatchEnvelope.field_q[DungeonTileState.field_n];
             if (var7Lifetime2 != null) {
               var2_int = wf.field_x * (var7Lifetime2.field_E + 60) / am.field_g;
               var3 = -30 + var2_int;
@@ -183,8 +183,8 @@ final class qh {
             var2 = null;
             var5 = 0;
             var3Lifetime1 = var5;
-            while (var5 < of.field_q.length) {
-              var8 = of.field_q[var5];
+            while (var5 < MusicPatchEnvelope.field_q.length) {
+              var8 = MusicPatchEnvelope.field_q[var5];
               if (var8 != null && (365 != var8.field_E ||
                 var8.field_G != 139)) {
                 if (var2 == null) {

@@ -130,7 +130,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
               }
             }
           }
-          ml.a(0);
+          GrowableIntArray.a(0);
           return true;
         }
         if (85 == vg.field_a) {

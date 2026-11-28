@@ -39,7 +39,7 @@ final class pl extends jq {
 
     final static int a(byte param0, int param1) {
         int var3 = Vertigo2.field_L ? 1 : 0;
-        al.field_t = 0;
+        MusicPatch.field_t = 0;
         pq.field_f = null;
         fn.field_y = null;
         int var2 = MatchingFieldValidator.field_l;

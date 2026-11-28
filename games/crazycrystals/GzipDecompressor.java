@@ -77,7 +77,7 @@ final class GzipDecompressor {
             gi.field_n.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
             go.field_l.drawString(param2, 0, 20, 16760896, -1);
-            dk.field_o.setAsRasterTarget(param0 ^ -6963);
+            MusicPatch.field_o.setAsRasterTarget(param0 ^ -6963);
             gi.field_n.drawDownscaledAreaBlended(538, param3 - 20, 24576 / param1, 25);
           } else {
             go.field_l.drawString(param2, 538, param3, 16760896, -1);

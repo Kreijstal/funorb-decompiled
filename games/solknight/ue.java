@@ -518,7 +518,7 @@ final class ue {
           } else {
             stackIn_356_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_355_0), ((StringBuilder) (Object) stackIn_355_1).append(stackIn_356_2).append(',').append(param1).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_355_0), ((StringBuilder) (Object) stackIn_355_1).append(stackIn_356_2).append(',').append(param1).append(')').toString());
         }
         if (GameApplet.field_l) {
           SolKnight.field_L = (var3 == 0);
@@ -675,7 +675,7 @@ final class ue {
           } else {
             stackIn_196_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_191_0), ((StringBuilder) (Object) stackIn_195_1).append(stackIn_196_2).append(',').append(param5).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_191_0), ((StringBuilder) (Object) stackIn_195_1).append(stackIn_196_2).append(',').append(param5).append(')').toString());
         }
     }
 

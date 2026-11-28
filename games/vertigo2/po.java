@@ -10,15 +10,15 @@ final class po {
 
     final static void b(byte param0) {
         if (param0 == -52) {
-          hr.field_C.a(110, -(!MidiPcmStream.field_S ? 0 : 40 + (2 + re.field_k + 2)) + BufferedRandomAccessFile.field_j.field_Fb, 18, 0, 0);
-          ArchiveRequest.field_v.a(103, 42 + re.field_k, 18, 0, -40 + (-2 + (-re.field_k + BufferedRandomAccessFile.field_j.field_Fb)));
-          ja.field_f.a(20, 2, re.field_k, BufferedRandomAccessFile.field_j.field_db - 20, 0, BufferedRandomAccessFile.field_j.field_Fb, 3124);
+          hr.field_C.a(110, -(!MidiPcmStream.field_S ? 0 : 40 + (2 + GrowableIntArray.field_k + 2)) + BufferedRandomAccessFile.field_j.field_Fb, 18, 0, 0);
+          ArchiveRequest.field_v.a(103, 42 + GrowableIntArray.field_k, 18, 0, -40 + (-2 + (-GrowableIntArray.field_k + BufferedRandomAccessFile.field_j.field_Fb)));
+          ja.field_f.a(20, 2, GrowableIntArray.field_k, BufferedRandomAccessFile.field_j.field_db - 20, 0, BufferedRandomAccessFile.field_j.field_Fb, 3124);
           return;
         }
         field_c = (int[]) null;
-        hr.field_C.a(110, -(!MidiPcmStream.field_S ? 0 : 40 + (2 + re.field_k + 2)) + BufferedRandomAccessFile.field_j.field_Fb, 18, 0, 0);
-        ArchiveRequest.field_v.a(103, 42 + re.field_k, 18, 0, -40 + (-2 + (-re.field_k + BufferedRandomAccessFile.field_j.field_Fb)));
-        ja.field_f.a(20, 2, re.field_k, BufferedRandomAccessFile.field_j.field_db - 20, 0, BufferedRandomAccessFile.field_j.field_Fb, 3124);
+        hr.field_C.a(110, -(!MidiPcmStream.field_S ? 0 : 40 + (2 + GrowableIntArray.field_k + 2)) + BufferedRandomAccessFile.field_j.field_Fb, 18, 0, 0);
+        ArchiveRequest.field_v.a(103, 42 + GrowableIntArray.field_k, 18, 0, -40 + (-2 + (-GrowableIntArray.field_k + BufferedRandomAccessFile.field_j.field_Fb)));
+        ja.field_f.a(20, 2, GrowableIntArray.field_k, BufferedRandomAccessFile.field_j.field_db - 20, 0, BufferedRandomAccessFile.field_j.field_Fb, 3124);
     }
 
     public static void clearStaticReferences(byte param0) {

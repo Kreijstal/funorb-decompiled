@@ -219,7 +219,7 @@ class InteractiveWidget extends UiWidget {
                     if (255 >= var15) {
                       var18 = SoftwareRasterizer.field_i[var8];
                       var19 = var16 * (var18 & 16711935) + (var17 & 16711935) * var15 >> 8 & 16711935;
-                      SoftwareRasterizer.field_i[var8] = var19 + (pf.b(var15 * pf.b(65280, var17) + var16 * pf.b(65280, var18), 16711789) >> 8);
+                      SoftwareRasterizer.field_i[var8] = var19 + (pf.bitwiseAnd(var15 * pf.bitwiseAnd(65280, var17) + var16 * pf.bitwiseAnd(65280, var18), 16711789) >> 8);
                     } else {
                       SoftwareRasterizer.field_i[var8] = var17;
                     }

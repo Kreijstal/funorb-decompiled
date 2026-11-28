@@ -247,7 +247,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
 
     final void drawWidget(int param0, int param1, int param2, int param3) {
         if (this.field_S != null) {
-          lp.field_C.drawParagraph(this.field_S, 20 + this.field_q + param1, param3 + this.field_v + 15, -40 + this.field_x, this.field_s, 16777215, -1, 1, 0, lp.field_C.field_H);
+          MusicPatchNode.field_C.drawParagraph(this.field_S, 20 + this.field_q + param1, param3 + this.field_v + 15, -40 + this.field_x, this.field_s, 16777215, -1, 1, 0, MusicPatchNode.field_C.field_H);
         }
         if (null != this.field_V) {
           SoftwareRasterizer.drawHorizontalLine(10 + param1, param3 + 134, this.field_x - 20, 4210752);
@@ -312,7 +312,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
               this.field_V = new InteractiveWidget(BoundedRandomAccessFile.field_c, (WidgetEventListener) (this));
             }
           } else {
-            this.field_U = new InteractiveWidget(kn.field_a, (WidgetEventListener) null);
+            this.field_U = new InteractiveWidget(ByteArrayPoolSupport.field_a, (WidgetEventListener) null);
             this.field_K = new InteractiveWidget(db.field_u, (WidgetEventListener) null);
             this.field_O.field_B = false;
           }
@@ -341,7 +341,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             this.field_K.field_i = gd.field_D;
           }
           this.field_v = 15;
-          var7 = lp.field_C;
+          var7 = MusicPatchNode.field_C;
           if (this.field_S != null) {
             this.field_v = this.field_v + (5 + var7.textHeight(this.field_S, -40 + this.field_x, var7.field_H));
           }

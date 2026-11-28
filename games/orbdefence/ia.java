@@ -36,7 +36,7 @@ abstract class ia {
           ml.field_c.b(param0, 111);
         }
         if (gi.field_f != null) {
-          gi.field_f.a(0, param0);
+          gi.field_f.setVolume(0, param0);
         }
         if (param1 != -23235) {
           field_f = (PlatformTask) null;

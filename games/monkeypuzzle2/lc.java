@@ -148,7 +148,7 @@ final class lc implements WidgetRenderer {
           bb.field_a = ProxySocketConnector.a(-66, "");
           bb.field_a.b(16564, false);
           lh.a(param2, param0, param4, param3 - 3249767);
-          oi.a(-2);
+          GrowableIntArray.a(-2);
           ed.field_c = di.field_a;
           BufferedRandomAccessFile.field_d = di.field_a;
         } catch (RuntimeException runtimeException) {

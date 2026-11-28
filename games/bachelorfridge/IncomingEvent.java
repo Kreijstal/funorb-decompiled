@@ -80,7 +80,7 @@ final class IncomingEvent extends SpecialEvent {
               return;
             }
             var4 = param2.getGraphics();
-            ProgressDialog.field_U.a((byte) 80, param0, var4, param3);
+            ProgressDialog.field_U.drawImage((byte) 80, param0, var4, param3);
             var4.dispose();
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

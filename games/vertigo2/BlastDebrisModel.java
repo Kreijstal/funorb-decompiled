@@ -119,7 +119,7 @@ final class BlastDebrisModel extends LevelRenderable {
           return;
         }
         if (param4 <= WidgetContainer.field_D) {
-          vc.a(param2, param8, param0, param4, param6, param5, param3, (byte) 96, param7, param9);
+          ByteArrayPoolSupport.a(param2, param8, param0, param4, param6, param5, param3, (byte) 96, param7, param9);
           var10Lifetime15 = 14 / ((param1 - 11) / 40);
           return;
         }

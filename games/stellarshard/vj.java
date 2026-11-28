@@ -131,7 +131,7 @@ final class vj {
           var2 = IntrusiveNode.field_h[0];
           for (var3 = 1; IntrusiveNode.field_h.length > var3; var3++) {
             var4 = IntrusiveNode.field_h[var3];
-            ri.a(ArchiveRequest.field_z, var3 << 4, ArchiveRequest.field_z, var2, var4);
+            ArrayBlockSupport.copyIntRange(ArchiveRequest.field_z, var3 << 4, ArchiveRequest.field_z, var2, var4);
             var2 = var2 + var4;
           }
           return;

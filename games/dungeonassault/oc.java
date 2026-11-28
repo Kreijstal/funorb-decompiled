@@ -122,7 +122,7 @@ final class oc extends kl {
         int[] var10 = new int[64];
         int[] var2 = var10;
         for (var3_int = 0; var3_int < 64; var3_int++) {
-          var10[var3_int] = mp.a(-2147483648, 1579032 + 65793 * var3_int);
+          var10[var3_int] = mp.bitwiseOr(-2147483648, 1579032 + 65793 * var3_int);
         }
         RgbSprite var3 = te.a(-32 + this.field_a, this.field_i - 28, var10, 16, 8, 0.125);
         int[] var4 = te.b(-32 + this.field_a, this.field_i - 28, 0.125);
@@ -222,7 +222,7 @@ final class oc extends kl {
           this.field_m.drawSilhouette(2, 2, 12690143);
           SoftwareRasterizer.blurRectangle(2, 2, 0, 0, 4 + var5_int, 4 + var7);
           if (!this.field_x) {
-            stackIn_16_0 = lp.field_n;
+            stackIn_16_0 = MusicPatchNode.field_n;
           } else {
             stackIn_16_0 = ac.field_h;
           }
@@ -324,7 +324,7 @@ final class oc extends kl {
         }
         var8 = new int[64];
         for (var9_int = 0; var9_int < 64; var9_int++) {
-          var8[var9_int] = mp.a(65793 * (24 + var9_int), -2147483648);
+          var8[var9_int] = mp.bitwiseOr(65793 * (24 + var9_int), -2147483648);
         }
         var9 = null;
         if (this.field_C < 250) {

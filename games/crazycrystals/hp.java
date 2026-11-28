@@ -50,7 +50,7 @@ final class hp extends IntrusiveNode {
             hp.a((ResourceArchive) null, 9, (String) null, (ResourceArchive) null, (String) null);
           }
           var6 = param3.getFileIdByName(-2862, param2, var5_int);
-          stackIn_3_0 = pl.a(var5_int, var6, param1 ^ -11, param3, param0);
+          stackIn_3_0 = MusicPatchNode.a(var5_int, var6, param1 ^ -11, param3, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

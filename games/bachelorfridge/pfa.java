@@ -356,7 +356,7 @@ final class pfa {
             var6 = 480;
             var7 = 4 + mk.field_p;
             var8 = gd.field_m + 4;
-            sd.a(this.field_f.field_s.getAttackDamageMultiplier(var15, -5313), var7, var15, (byte) 74, var8, var5, var6);
+            ByteArrayPoolSupport.a(this.field_f.field_s.getAttackDamageMultiplier(var15, -5313), var7, var15, (byte) 74, var8, var5, var6);
           }
           var12++;
         }

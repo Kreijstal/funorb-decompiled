@@ -24,7 +24,7 @@ final class MidiNote extends IntrusiveNode {
     int field_o;
     int field_C;
     int field_g;
-    un field_B;
+    MusicPatchEnvelope field_B;
     int field_r;
 
     public static void resetStaticState(byte param0) {
@@ -35,7 +35,7 @@ final class MidiNote extends IntrusiveNode {
         }
     }
 
-    final void a(int param0) {
+    final void releaseReferences(int param0) {
         this.field_j = null;
         this.field_B = null;
         this.field_f = null;

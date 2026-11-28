@@ -240,7 +240,7 @@ final class dh {
           this.field_a = param1.field_k;
           if (0 == param1.field_k) {
             if (sg.field_d == 0) {
-              this.field_b.a((byte) -12, dl.field_m, 12);
+              this.field_b.a((byte) -12, MusicPatchEnvelope.field_m, 12);
             }
             this.field_b.a((byte) -12, ArchiveProvider.field_e, 13);
           }

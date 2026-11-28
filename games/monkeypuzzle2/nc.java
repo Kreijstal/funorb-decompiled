@@ -116,9 +116,9 @@ final class nc {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_d[0][var0] = gb.a(var12, gb.a(gb.a(gb.a(var10 << 24, gb.a(var2 << 32, gb.a(var6 << 40, gb.a(var2 << 56, var2 << 48)))), var8 << 16), var4 << 8));
+            field_d[0][var0] = gb.bitwiseOr(var12, gb.bitwiseOr(gb.bitwiseOr(gb.bitwiseOr(var10 << 24, gb.bitwiseOr(var2 << 32, gb.bitwiseOr(var6 << 40, gb.bitwiseOr(var2 << 56, var2 << 48)))), var8 << 16), var4 << 8));
             for (var14 = 1; var14 < 8; var14++) {
-                field_d[var14][var0] = gb.a(field_d[var14 - 1][var0] << 56, field_d[var14 - 1][var0] >>> 8);
+                field_d[var14][var0] = gb.bitwiseOr(field_d[var14 - 1][var0] << 56, field_d[var14 - 1][var0] >>> 8);
             }
             var0++;
         }
@@ -127,7 +127,7 @@ final class nc {
         var0 = var15;
         while (10 >= var15) {
             var1 = (-1 + var15) * 8;
-            field_g[var15] = hd.a(hd.a(DialogMessagePane.a(field_d[6][6 + var1], 65280L), hd.a(DialogMessagePane.a(field_d[5][5 + var1], 16711680L), hd.a(hd.a(hd.a(DialogMessagePane.a(280375465082880L, field_d[2][var1 + 2]), hd.a(DialogMessagePane.a(71776119061217280L, field_d[1][1 + var1]), DialogMessagePane.a(-72057594037927936L, field_d[0][var1]))), DialogMessagePane.a(1095216660480L, field_d[3][var1 + 3])), DialogMessagePane.a(field_d[4][4 + var1], 4278190080L)))), DialogMessagePane.a(field_d[7][var1 + 7], 255L));
+            field_g[var15] = hd.bitwiseXor(hd.bitwiseXor(DialogMessagePane.bitwiseAnd(field_d[6][6 + var1], 65280L), hd.bitwiseXor(DialogMessagePane.bitwiseAnd(field_d[5][5 + var1], 16711680L), hd.bitwiseXor(hd.bitwiseXor(hd.bitwiseXor(DialogMessagePane.bitwiseAnd(280375465082880L, field_d[2][var1 + 2]), hd.bitwiseXor(DialogMessagePane.bitwiseAnd(71776119061217280L, field_d[1][1 + var1]), DialogMessagePane.bitwiseAnd(-72057594037927936L, field_d[0][var1]))), DialogMessagePane.bitwiseAnd(1095216660480L, field_d[3][var1 + 3])), DialogMessagePane.bitwiseAnd(field_d[4][4 + var1], 4278190080L)))), DialogMessagePane.bitwiseAnd(field_d[7][var1 + 7], 255L));
             var15++;
         }
         field_a = "Resume Game";

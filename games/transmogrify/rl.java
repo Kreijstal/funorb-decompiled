@@ -39,7 +39,7 @@ final class rl {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_b[var2] = DequeWidgetContainer.a(MusicPatchPcmStream.a(255L, (long)this.field_j[7 + var3]), DequeWidgetContainer.a(DequeWidgetContainer.a(MusicPatchPcmStream.a((long)this.field_j[5 + var3], 255L) << 16, DequeWidgetContainer.a(MusicPatchPcmStream.a(4278190080L, (long)this.field_j[var3 + 4] << 24), DequeWidgetContainer.a(DequeWidgetContainer.a(MusicPatchPcmStream.a(280375465082880L, (long)this.field_j[var3 + 2] << 40), DequeWidgetContainer.a((long)this.field_j[var3] << 56, MusicPatchPcmStream.a((long)this.field_j[1 + var3] << 48, 71776119061217280L))), MusicPatchPcmStream.a(255L, (long)this.field_j[var3 + 3]) << 32))), MusicPatchPcmStream.a((long)this.field_j[6 + var3] << 8, 65280L)));
+          this.field_b[var2] = DequeWidgetContainer.bitwiseXor(MusicPatchPcmStream.a(255L, (long)this.field_j[7 + var3]), DequeWidgetContainer.bitwiseXor(DequeWidgetContainer.bitwiseXor(MusicPatchPcmStream.a((long)this.field_j[5 + var3], 255L) << 16, DequeWidgetContainer.bitwiseXor(MusicPatchPcmStream.a(4278190080L, (long)this.field_j[var3 + 4] << 24), DequeWidgetContainer.bitwiseXor(DequeWidgetContainer.bitwiseXor(MusicPatchPcmStream.a(280375465082880L, (long)this.field_j[var3 + 2] << 40), DequeWidgetContainer.bitwiseXor((long)this.field_j[var3] << 56, MusicPatchPcmStream.a((long)this.field_j[1 + var3] << 48, 71776119061217280L))), MusicPatchPcmStream.a(255L, (long)this.field_j[var3 + 3]) << 32))), MusicPatchPcmStream.a((long)this.field_j[6 + var3] << 8, 65280L)));
           var3 += 8;
           var2++;
         }
@@ -47,7 +47,7 @@ final class rl {
           dupTemp$0 = this.field_e[var2Lifetime1];
           arrayValue$1 = this.field_b[var2Lifetime1];
           this.field_f[var2Lifetime1] = dupTemp$0;
-          this.field_g[var2Lifetime1] = DequeWidgetContainer.a(arrayValue$1, dupTemp$0);
+          this.field_g[var2Lifetime1] = DequeWidgetContainer.bitwiseXor(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; 10 >= var2Lifetime2; var2Lifetime2++) {
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
@@ -55,7 +55,7 @@ final class rl {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_k[var3Lifetime1] = DequeWidgetContainer.a(this.field_k[var3Lifetime1], dl.field_n[var4][vg.c((int)(this.field_f[vg.c(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
+              this.field_k[var3Lifetime1] = DequeWidgetContainer.bitwiseXor(this.field_k[var3Lifetime1], dl.field_n[var4][vg.bitwiseAnd((int)(this.field_f[vg.bitwiseAnd(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
               var5 -= 8;
               var4++;
             }
@@ -63,14 +63,14 @@ final class rl {
           for (var3Lifetime1Lifetime1 = 0; 8 > var3Lifetime1Lifetime1; var3Lifetime1Lifetime1++) {
             this.field_f[var3Lifetime1Lifetime1] = this.field_k[var3Lifetime1Lifetime1];
           }
-          this.field_f[0] = DequeWidgetContainer.a(this.field_f[0], dl.field_q[var2Lifetime2]);
+          this.field_f[0] = DequeWidgetContainer.bitwiseXor(this.field_f[0], dl.field_q[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; 8 > var3Lifetime1Lifetime2; var3Lifetime1Lifetime2++) {
             this.field_k[var3Lifetime1Lifetime2] = this.field_f[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_k[var3Lifetime1Lifetime2] = DequeWidgetContainer.a(this.field_k[var3Lifetime1Lifetime2], dl.field_n[var7][vg.c(255, (int)(this.field_g[vg.c(-var7 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1))]);
+              this.field_k[var3Lifetime1Lifetime2] = DequeWidgetContainer.bitwiseXor(this.field_k[var3Lifetime1Lifetime2], dl.field_n[var7][vg.bitwiseAnd(255, (int)(this.field_g[vg.bitwiseAnd(-var7 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1))]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -80,7 +80,7 @@ final class rl {
           }
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_e[var2Lifetime3] = DequeWidgetContainer.a(this.field_e[var2Lifetime3], DequeWidgetContainer.a(this.field_g[var2Lifetime3], this.field_b[var2Lifetime3]));
+          this.field_e[var2Lifetime3] = DequeWidgetContainer.bitwiseXor(this.field_e[var2Lifetime3], DequeWidgetContainer.bitwiseXor(this.field_g[var2Lifetime3], this.field_b[var2Lifetime3]));
         }
         return;
     }
@@ -174,7 +174,7 @@ final class rl {
             var8 = 255 & param2[var5_int] << var6 | (255 & param2[1 + var5_int]) >>> -var6 + 8;
             if (var8 >= 0 &&
               256 > var8) {
-              this.field_j[this.field_a] = (byte)DiskArchiveRequest.b((int) this.field_j[this.field_a], var8 >>> var7);
+              this.field_j[this.field_a] = (byte)DiskArchiveRequest.bitwiseOr((int) this.field_j[this.field_a], var8 >>> var7);
               this.field_h = this.field_h + (-var7 + 8);
               this.field_a = this.field_a + 1;
               if (this.field_h == 512) {
@@ -182,7 +182,7 @@ final class rl {
                 this.field_h = 0;
                 this.field_a = 0;
               }
-              this.field_j[this.field_a] = (byte)vg.c(var8 << 8 - var7, 255);
+              this.field_j[this.field_a] = (byte)vg.bitwiseAnd(var8 << 8 - var7, 255);
               var5_int++;
               param1 = param1 - 8L;
               this.field_h = this.field_h + var7;
@@ -192,7 +192,7 @@ final class rl {
           }
           if (param1 > 0L) {
             var8Lifetime1 = param2[var5_int] << var6 & 255;
-            this.field_j[this.field_a] = (byte)DiskArchiveRequest.b((int) this.field_j[this.field_a], var8Lifetime1 >>> var7);
+            this.field_j[this.field_a] = (byte)DiskArchiveRequest.bitwiseOr((int) this.field_j[this.field_a], var8Lifetime1 >>> var7);
           } else {
             var8Lifetime1 = 0;
           }
@@ -205,7 +205,7 @@ final class rl {
               this.field_a = 0;
               this.field_h = 0;
             }
-            this.field_j[this.field_a] = (byte)vg.c(255, var8Lifetime1 << -var7 + 8);
+            this.field_j[this.field_a] = (byte)vg.bitwiseAnd(255, var8Lifetime1 << -var7 + 8);
             this.field_h = this.field_h + (int)param1;
           } else {
             this.field_h = (int)((long)this.field_h + param1);
@@ -239,7 +239,7 @@ final class rl {
         int var8 = 0;
         var8 = Transmogrify.field_A ? 1 : 0;
         try {
-          this.field_j[this.field_a] = (byte)DiskArchiveRequest.b((int) this.field_j[this.field_a], 128 >>> vg.c(this.field_h, 7));
+          this.field_j[this.field_a] = (byte)DiskArchiveRequest.bitwiseOr((int) this.field_j[this.field_a], 128 >>> vg.bitwiseAnd(this.field_h, 7));
           this.field_a = this.field_a + 1;
           if (this.field_a > 32) {
             while (this.field_a < 64) {
@@ -255,7 +255,7 @@ final class rl {
             this.field_a = this.field_a + 1;
             this.field_j[fieldTemp$1] = (byte) 0;
           }
-          ji.copyByteRange(this.field_c, 0, this.field_j, 32, 32);
+          ArrayBlockSupport.copyByteRange(this.field_c, 0, this.field_j, 32, 32);
           this.a((byte) -119);
           var4_int = 0;
           var5 = param2;

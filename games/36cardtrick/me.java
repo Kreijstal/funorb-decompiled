@@ -142,9 +142,9 @@ final class me {
                   var24Lifetime1 = param4.field_m[var23Lifetime2];
                   var25Lifetime1 = param4.field_x[var23Lifetime2];
                   var26Lifetime1 = param4.field_P[var23Lifetime2];
-                  fl.field_h[var23Lifetime2] = (var25Lifetime1 * var15 + var12 * var24Lifetime1 + var26Lifetime1 * var18 >> 16) + var9;
+                  GrowableIntArray.field_h[var23Lifetime2] = (var25Lifetime1 * var15 + var12 * var24Lifetime1 + var26Lifetime1 * var18 >> 16) + var9;
                   sd.field_b[var23Lifetime2] = var10 + (var16 * var25Lifetime1 + (var24Lifetime1 * var13 + var19 * var26Lifetime1) >> 16);
-                  fl.field_e[var23Lifetime2] = var11 + (var26Lifetime1 * var20 + var14 * var24Lifetime1 + var25Lifetime1 * var17 >> 16);
+                  GrowableIntArray.field_e[var23Lifetime2] = var11 + (var26Lifetime1 * var20 + var14 * var24Lifetime1 + var25Lifetime1 * var17 >> 16);
                   var24Lifetime1 = param4.field_o[var23Lifetime2];
                   var25Lifetime1 = param4.field_F[var23Lifetime2];
                   var26Lifetime1 = param4.field_y[var23Lifetime2];

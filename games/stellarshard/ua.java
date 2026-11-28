@@ -113,7 +113,7 @@ final class ua {
                     } else {
                       var18 = SoftwareRasterizer.field_a[var8];
                       var19 = var15 * (16711935 & var17) + var16 * (var18 & 16711935) >> 8 & 16711935;
-                      SoftwareRasterizer.field_a[var8] = (DirectByteStorage.a(16711841, var15 * DirectByteStorage.a(65280, var17) + var16 * DirectByteStorage.a(65280, var18)) >> 8) + var19;
+                      SoftwareRasterizer.field_a[var8] = (DirectByteStorage.bitwiseAnd(16711841, var15 * DirectByteStorage.bitwiseAnd(65280, var17) + var16 * DirectByteStorage.bitwiseAnd(65280, var18)) >> 8) + var19;
                     }
                   }
                   var8++;

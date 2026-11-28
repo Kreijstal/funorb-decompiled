@@ -122,14 +122,14 @@ final class nn extends IntrusiveNode {
               }
               var4 = Class.forName("BufferedImageRasterBuffer");
               var5 = (RasterBuffer) (var4.newInstance());
-              var5.a(param1, -3, param3, param0);
+              var5.initialize(param1, -3, param3, param0);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
               var5_ref = new ImageProducerRasterBuffer();
-              ((RasterBuffer) ((Object) var5_ref)).a(param1, -3, param3, param0);
+              ((RasterBuffer) ((Object) var5_ref)).initialize(param1, -3, param3, param0);
               stackIn_5_0 = var5_ref;
               return (RasterBuffer) ((Object) stackIn_5_0);
             }

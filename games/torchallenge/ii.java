@@ -175,7 +175,7 @@ final class ii {
                   var10 = var8 & 65280;
                   var10 = 65280 & -(var10 >> 5) + (var10 >> 1);
                   var11 = 31 & var8 >> 3;
-                  SoftwareRasterizer.pixels[var6_int] = p.a(p.a(var9 << 16, var10), var11);
+                  SoftwareRasterizer.pixels[var6_int] = p.bitwiseOr(p.bitwiseOr(var9 << 16, var10), var11);
                 }
                 var6_int++;
               }

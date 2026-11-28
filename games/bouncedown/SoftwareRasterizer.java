@@ -229,9 +229,9 @@ final class SoftwareRasterizer {
         var29 = field_a;
         var26 = var29;
         var11 = var26;
-        cb.clearInts(var27, 0, param8);
-        cb.clearInts(var28, 0, param8);
-        cb.clearInts(var29, 0, param8);
+        ArrayBlockSupport.clearInts(var27, 0, param8);
+        ArrayBlockSupport.clearInts(var28, 0, param8);
+        ArrayBlockSupport.clearInts(var29, 0, param8);
         var12 = 16384 / (2 * param3 + 1);
         var13 = param4 - param3;
         if (var13 < 0) {

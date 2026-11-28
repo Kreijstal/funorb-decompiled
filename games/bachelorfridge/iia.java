@@ -135,7 +135,7 @@ final class iia extends BoardChange {
                     } else {
                       var19 = SoftwareRasterizer.field_e[var8];
                       var20 = (16711935 & var18) * var16 + (16711935 & var19) * var17 >> 8 & 16711935;
-                      SoftwareRasterizer.field_e[var8] = var20 + dda.a(var17 * dda.a(65280, var19) + var16 * dda.a(var18, 65280) >> 8, 65280);
+                      SoftwareRasterizer.field_e[var8] = var20 + dda.bitwiseAnd(var17 * dda.bitwiseAnd(65280, var19) + var16 * dda.bitwiseAnd(var18, 65280) >> 8, 65280);
                     }
                   }
                   var8++;

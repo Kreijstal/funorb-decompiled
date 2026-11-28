@@ -72,16 +72,16 @@ final class pm extends IntrusiveNode {
             var31 = new short[var5];
             var22 = var31;
             var11 = var22;
-            dk.a(var16.faceVertexA, 0, var26, 0, var4);
+            ArrayBlockSupport.copyIntRange(var16.faceVertexA, 0, var26, 0, var4);
             var32 = new short[var5];
             var23 = var32;
             var12 = var23;
-            dk.a(var16.faceVertexB, 0, var27, 0, var4);
-            dk.a(var16.faceVertexC, 0, var28, 0, var4);
-            dk.copyByteRange(var16.field_j, 0, var29, 0, var4);
-            dk.copyByteRange(var16.field_D, 0, var30, 0, var4);
-            dk.a(var16.field_m, 0, var31, 0, var4);
-            dk.a(var16.field_A, 0, var32, 0, var4);
+            ArrayBlockSupport.copyIntRange(var16.faceVertexB, 0, var27, 0, var4);
+            ArrayBlockSupport.copyIntRange(var16.faceVertexC, 0, var28, 0, var4);
+            ArrayBlockSupport.copyByteRange(var16.field_j, 0, var29, 0, var4);
+            ArrayBlockSupport.copyByteRange(var16.field_D, 0, var30, 0, var4);
+            ArrayBlockSupport.a(var16.field_m, 0, var31, 0, var4);
+            ArrayBlockSupport.a(var16.field_A, 0, var32, 0, var4);
             var16.faceVertexC = var8;
             var16.faceVertexB = var7;
             var16.field_m = var11;
@@ -97,8 +97,8 @@ final class pm extends IntrusiveNode {
               var34 = new short[var5];
               var25 = var34;
               var15 = var25;
-              dk.copyByteRange(var13.field_u, 0, var33, 0, var4);
-              dk.a(var13.field_q, 0, var34, 0, var4);
+              ArrayBlockSupport.copyByteRange(var13.field_u, 0, var33, 0, var4);
+              ArrayBlockSupport.a(var13.field_q, 0, var34, 0, var4);
               var13.field_u = var14;
               var13.field_q = var15;
             }

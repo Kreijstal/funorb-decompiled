@@ -45,7 +45,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final void a(int param0, java.awt.Component param1, int param2, int param3) {
+    final void initialize(int param0, java.awt.Component param1, int param2, int param3) {
         try {
           this.field_f = param0;
           this.field_b = param2;
@@ -62,7 +62,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           param1.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
           this.pushPixels(2);
           param1.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
-          this.a((byte) 125);
+          this.setAsRasterTarget((byte) 125);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "uka.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -155,7 +155,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     ImageProducerRasterBuffer() {
     }
 
-    final void a(byte param0, int param1, java.awt.Graphics param2, int param3) {
+    final void drawImage(byte param0, int param1, java.awt.Graphics param2, int param3) {
         try {
           this.pushPixels(2);
           if (param0 <= 27) {
@@ -197,7 +197,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     final static void a(int param0, MusicTrack param1, int param2, boolean param3, byte param4) {
         try {
           int var5_int = -93 % ((param4 + 9) / 42);
-          kw.field_j.a(param1, !param3 ? true : false, 1000000, param2, param0, true);
+          kw.field_j.switchTrack(param1, !param3 ? true : false, 1000000, param2, param0, true);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "uka.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -212,7 +212,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = 17 % ((70 - param1) / 38);
-          if (g.a(param3, param0, -30744, param2)) {
+          if (MidiNoteMask.a(param3, param0, -30744, param2)) {
             return GameKeyHandler.a(10583);
           }
           return null;

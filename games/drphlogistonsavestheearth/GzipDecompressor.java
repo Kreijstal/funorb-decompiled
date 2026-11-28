@@ -27,10 +27,10 @@ final class GzipDecompressor {
           if (!sb.field_i.tryLoadGroupByName(255, "commonui")) {
             return 60;
           }
-          if (!ig.field_t.ensureIndexLoaded(0)) {
+          if (!MusicPatch.field_t.ensureIndexLoaded(0)) {
             return 70;
           }
-          if (!ig.field_t.tryLoadAllGroups((byte) 54)) {
+          if (!MusicPatch.field_t.tryLoadAllGroups((byte) 54)) {
             return 80;
           }
         } else {
@@ -57,10 +57,10 @@ final class GzipDecompressor {
           if (!sb.field_i.tryLoadGroupByName(255, "commonui")) {
             return 80;
           }
-          if (!ig.field_t.ensureIndexLoaded(0)) {
+          if (!MusicPatch.field_t.ensureIndexLoaded(0)) {
             return 82;
           }
-          if (!ig.field_t.tryLoadAllGroups((byte) 22)) {
+          if (!MusicPatch.field_t.tryLoadAllGroups((byte) 22)) {
             return 86;
           }
         }
@@ -161,7 +161,7 @@ final class GzipDecompressor {
           ha.field_c = 2147483647;
           mh.field_b = -2147483648;
           gg.field_b = 0;
-          cc.field_B = 2147483647;
+          MusicPatchNode.field_B = 2147483647;
           return;
         }
         fi.field_h = new int[param0 * 2];
@@ -221,7 +221,7 @@ final class GzipDecompressor {
               ha.field_c = 2147483647;
               mh.field_b = -2147483648;
               gg.field_b = 0;
-              cc.field_B = 2147483647;
+              MusicPatchNode.field_B = 2147483647;
               return;
             }
             cb.field_c = new boolean[param0 * 2];
@@ -231,7 +231,7 @@ final class GzipDecompressor {
         ha.field_c = 2147483647;
         mh.field_b = -2147483648;
         gg.field_b = 0;
-        cc.field_B = 2147483647;
+        MusicPatchNode.field_B = 2147483647;
     }
 
     public GzipDecompressor() {

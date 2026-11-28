@@ -49,9 +49,9 @@ final class wa extends IntrusiveNode {
             if (null != AccountCreationResultPanel.field_pb) {
               AccountCreationResultPanel.field_pb.shutdown((byte) -114);
             }
-            if (wj.field_s != null) {
+            if (MusicPatch.field_s != null) {
               try {
-                wj.field_s.close(0);
+                MusicPatch.field_s.close(0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (IOException) (Object) decompiledCaughtException;

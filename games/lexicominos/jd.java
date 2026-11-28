@@ -23,7 +23,7 @@ final class jd {
         RuntimeException decompiledCaughtException = null;
         try {
           DisplayNameSelectionPanel.a((java.awt.Component) ((Object) param0), 20);
-          ph.a((java.awt.Component) ((Object) param0), 123);
+          ByteArrayPoolSupport.a((java.awt.Component) ((Object) param0), 123);
           if (null != NanoFrameTimer.field_c) {
             NanoFrameTimer.field_c.detach(3, (java.awt.Component) ((Object) param0));
           }

@@ -43,14 +43,14 @@ final class b {
               this.field_n.a(Vertigo2.a(new String[]{var7}, BitPacketBuffer.field_x, 103), 6, 0);
               if (param0 != null &&
                 param1 != 2 &&
-                !pe.field_r) {
+                !MusicPatchNode.field_r) {
                 this.field_g = param0;
                 this.field_n.a(Vertigo2.a(new String[]{var7}, wp.field_b, -124), 19, 0);
               }
             }
             if (var5 != null) {
               if (!ak.a(-89, this.field_k) &&
-                !pe.field_r) {
+                !MusicPatchNode.field_r) {
                 if (!hj.field_b) {
                   this.field_n.a(Vertigo2.a(new String[]{var7}, sc.field_b, -116), 8, 0);
                 }
@@ -327,7 +327,7 @@ final class b {
         return var2;
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseAnd(int param0, int param1) {
         return param0 & param1;
     }
 

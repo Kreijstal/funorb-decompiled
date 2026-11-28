@@ -52,30 +52,30 @@ final class FullscreenNoticeType {
         ag.field_e = true;
     }
 
-    final static kf a(int param0, int param1, ResourceArchive param2) {
+    final static MusicPatch loadMusicPatch(int param0, int param1, ResourceArchive param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
-        kf stackIn_2_0 = null;
+        MusicPatch stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        kf stackIn_7_0 = null;
+        MusicPatch stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -23) {
-            stackIn_2_0 = (kf) null;
+            stackIn_2_0 = (MusicPatch) null;
             return stackIn_2_0;
           }
           var4 = param2.getFlatFile((byte) -74, param1);
           var3 = var4;
           if (var4 != null) {
-            stackIn_7_0 = new kf(var4);
+            stackIn_7_0 = new MusicPatch(var4);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
-          return (kf) (stackIn_5_0);
+          return (MusicPatch) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

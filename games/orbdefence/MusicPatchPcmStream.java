@@ -9,7 +9,7 @@ final class MusicPatchPcmStream extends PcmStream {
     PcmStreamMixer field_m;
 
     final PcmStream firstChildStream() {
-        he var1 = (he) (this.field_k.beginForward((byte) -75));
+        MusicPatchNode var1 = (MusicPatchNode) (this.field_k.beginForward((byte) -75));
         if (var1 == null) {
           return null;
         }
@@ -19,9 +19,9 @@ final class MusicPatchPcmStream extends PcmStream {
         return this.nextChildStream();
     }
 
-    private final void skipVoiceFrames(int param0, he param1, int param2) {
+    private final void skipVoiceFrames(int param0, MusicPatchNode param1, int param2) {
         MidiPcmStream stackIn_9_0 = null;
-        he stackIn_9_1 = null;
+        MusicPatchNode stackIn_9_1 = null;
         boolean stackIn_10_2 = false;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -40,7 +40,7 @@ final class MusicPatchPcmStream extends PcmStream {
               if (this.field_j.field_D[param1.field_F] != 0) {
                 param1.field_l = RawPcmStream.createForSampleStep(param1.field_D, param1.field_l.getSampleStepMagnitude(), 0, param1.field_l.getPan());
                 stackIn_9_0 = this.field_j;
-                stackIn_9_1 = (he) (param1);
+                stackIn_9_1 = (MusicPatchNode) (param1);
                 stackIn_10_2 = !(param1.field_g.field_m[param1.field_h] >= 0);
                 ((MidiPcmStream) (Object) stackIn_9_0).applyVoiceSampleOffset(stackIn_9_1, stackIn_10_2, param2 + 33816);
               } else {
@@ -72,9 +72,9 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     final PcmStream nextChildStream() {
-        he var1;
+        MusicPatchNode var1;
         while (true) {
-          var1 = (he) (this.field_k.nextForward(853));
+          var1 = (MusicPatchNode) (this.field_k.nextForward(853));
           if (var1 == null) {
             return null;
           }
@@ -84,9 +84,9 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    private final void renderVoiceFrames(int[] param0, int param1, int param2, boolean param3, he param4, int param5) {
+    private final void renderVoiceFrames(int[] param0, int param1, int param2, boolean param3, MusicPatchNode param4, int param5) {
         MidiPcmStream stackIn_13_0 = null;
-        he stackIn_13_1 = null;
+        MusicPatchNode stackIn_13_1 = null;
         boolean stackIn_14_2 = false;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -130,7 +130,7 @@ final class MusicPatchPcmStream extends PcmStream {
               } else {
                 param4.field_l = RawPcmStream.createForSampleStep(param4.field_D, var11.getSampleStepMagnitude(), 0, var11.getPan());
                 stackIn_13_0 = this.field_j;
-                stackIn_13_1 = (he) (param4);
+                stackIn_13_1 = (MusicPatchNode) (param4);
                 stackIn_14_2 = !(param4.field_g.field_m[param4.field_h] >= 0);
                 ((MidiPcmStream) (Object) stackIn_13_0).applyVoiceSampleOffset(stackIn_13_1, stackIn_14_2, 9929);
                 param4.field_l.rampVolume(var9, var11.getTargetVolume());
@@ -174,12 +174,12 @@ final class MusicPatchPcmStream extends PcmStream {
 
     final void skipFrames(int param0) {
         int var2;
-        he var3;
+        MusicPatchNode var3;
         int var4;
         boolean stackIn_4_0 = false;
         var4 = OrbDefence.field_D ? 1 : 0;
         this.field_m.skipFrames(param0);
-        var3 = (he) (this.field_k.beginForward((byte) 117));
+        var3 = (MusicPatchNode) (this.field_k.beginForward((byte) 117));
         while (var3 != null) {
           stackIn_4_0 = this.field_j.isVoiceInactive(var3, (byte) 90);
           boolean decompiledFrameCompleted0 = true;
@@ -198,7 +198,7 @@ final class MusicPatchPcmStream extends PcmStream {
               var3.field_w = var3.field_w - var2;
             }
           }
-          var3 = (he) (this.field_k.nextForward(853));
+          var3 = (MusicPatchNode) (this.field_k.nextForward(853));
         }
     }
 
@@ -210,12 +210,12 @@ final class MusicPatchPcmStream extends PcmStream {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        he var6 = null;
+        MusicPatchNode var6 = null;
         int var7 = 0;
         var7 = OrbDefence.field_D ? 1 : 0;
         try {
           this.field_m.mixInto(param0, param1, param2);
-          var6 = (he) (this.field_k.beginForward((byte) -96));
+          var6 = (MusicPatchNode) (this.field_k.beginForward((byte) -96));
           while (var6 != null) {
             if (!this.field_j.isVoiceInactive(var6, (byte) 98)) {
               var4_int = param1;
@@ -231,7 +231,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 var4_int = var4_int + var6.field_w;
               } while (!this.field_j.updateVoice(4160, var6, var4_int, var5, param0));
             }
-            var6 = (he) (this.field_k.nextForward(853));
+            var6 = (MusicPatchNode) (this.field_k.nextForward(853));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

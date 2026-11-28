@@ -69,7 +69,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
             var4 = (String) null;
             ValidationStatusIcon.wrapClientException((Throwable) null, (String) null);
           }
-          o.copyByteRange(param1, 0, var3, 0, var2_int);
+          ArrayBlockSupport.copyByteRange(param1, 0, var3, 0, var2_int);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

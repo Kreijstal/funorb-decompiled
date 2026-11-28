@@ -118,7 +118,7 @@ final class ih extends ej {
                     var17 = 0;
                     var7 = var17;
                     while (var17 < var6) {
-                      this.field_p.field_C.field_n[this.field_p.field_C.field_i + var17] = (byte)bm.a((int) this.field_p.field_C.field_n[this.field_p.field_C.field_i + var17], (int) this.field_r);
+                      this.field_p.field_C.field_n[this.field_p.field_C.field_i + var17] = (byte)bm.bitwiseXor((int) this.field_p.field_C.field_n[this.field_p.field_C.field_i + var17], (int) this.field_r);
                       var17++;
                     }
                   }
@@ -141,7 +141,7 @@ final class ih extends ej {
                   this.field_t.readFully(-1, this.field_i.field_n, this.field_i.field_i, var5);
                   if (this.field_r != 0) {
                     for (var6 = 0; var5 > var6; var6++) {
-                      this.field_i.field_n[var6 + this.field_i.field_i] = (byte)bm.a((int) this.field_i.field_n[var6 + this.field_i.field_i], (int) this.field_r);
+                      this.field_i.field_n[var6 + this.field_i.field_i] = (byte)bm.bitwiseXor((int) this.field_i.field_n[var6 + this.field_i.field_i], (int) this.field_r);
                     }
                   }
                   this.field_i.field_i = this.field_i.field_i + var5;

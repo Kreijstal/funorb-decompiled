@@ -32,7 +32,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           return null;
         }
         if (param0 > 70) {
-          sh.a((byte) -122, MouseWheelInput.field_b, -this.field_Z + this.width + ef.field_j);
+          MusicPatchNode.a((byte) -122, MouseWheelInput.field_b, -this.field_Z + this.width + ef.field_j);
           return this.field_x;
         }
         return (String) null;

@@ -241,7 +241,7 @@ abstract class GameShell extends GameApplet {
             }
           }
           if (var4 == 5) {
-            fc.a(dg.a(false), 100);
+            GrowableIntArray.a(dg.a(false), 100);
           }
           var5Lifetime3 = -92 / ((1 - param2) / 40);
           if (var4 == 6 &&
@@ -331,7 +331,7 @@ abstract class GameShell extends GameApplet {
           ab.field_b.a((byte) 92);
         }
         SecondaryNodeDeque.b(1);
-        fc.b(43);
+        GrowableIntArray.b(43);
         if (!NodeHashTableIterator.b(-107) &&
           q.field_Jb != 11) {
           vk.a(-8177);
@@ -378,7 +378,7 @@ abstract class GameShell extends GameApplet {
                 if (IntrusiveDeque.field_f != 4) {
                   if (IntrusiveDeque.field_f != 2) {
                     if (IntrusiveDeque.field_f == 5) {
-                      k.a(5, sh.field_x, false);
+                      k.a(5, MusicPatchNode.field_x, false);
                     } else {
                       k.a(256, BufferedRandomAccessFile.field_f, false);
                     }

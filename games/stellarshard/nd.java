@@ -77,7 +77,7 @@ final class nd extends InteractiveWidget {
                 var22 = 255 & var19;
                 if (0 < var18) {
                   if (var18 >= 256) {
-                    var11[var12] = DialogMessagePane.b(DialogMessagePane.b(var21 << 8, var20 << 16), var22);
+                    var11[var12] = DialogMessagePane.bitwiseOr(DialogMessagePane.bitwiseOr(var21 << 8, var20 << 16), var22);
                     decompiledFrameRemainder0 = false;
                   }
                   else {
@@ -115,7 +115,7 @@ final class nd extends InteractiveWidget {
                   var20 = (param2 & 16711680) >> 16;
                 }
                 if (decompiledFrameRemainder0) {
-                  var11[var12] = DialogMessagePane.b(DialogMessagePane.b(var21 << 8, var20 << 16), var22);
+                  var11[var12] = DialogMessagePane.bitwiseOr(DialogMessagePane.bitwiseOr(var21 << 8, var20 << 16), var22);
                 }
               }
             }

@@ -299,7 +299,7 @@ final class jd {
 
     final static void a(boolean param0, int param1, byte param2, MusicTrack param3, int param4) {
         try {
-          hh.field_b.a(param3, 1000000, -524289, !param0 ? true : false, param1, param4);
+          hh.field_b.switchTrack(param3, 1000000, -524289, !param0 ? true : false, param1, param4);
           int var5_int = -72 % ((param2 - 58) / 33);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "jd.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');

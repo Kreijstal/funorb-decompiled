@@ -310,9 +310,9 @@ final class qc {
               throw new IllegalStateException();
             }
             RichTextLayout.field_g = new String[var4];
-            ri.a(hc.field_m, 0, RichTextLayout.field_g, 0, var4);
+            ArrayBlockSupport.copyObjectRange(hc.field_m, 0, RichTextLayout.field_g, 0, var4);
             fb.field_e = new String[-var4 + (var3_int - 1)];
-            ri.a(hc.field_m, var4 + 1, fb.field_e, 0, var3_int + (-var4 - 1));
+            ArrayBlockSupport.copyObjectRange(hc.field_m, var4 + 1, fb.field_e, 0, var3_int + (-var4 - 1));
             var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, h.a(DraggableWidgetContainer.field_K, 0, new String[]{"<br><%0><br>"}));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
@@ -326,9 +326,9 @@ final class qc {
               throw new IllegalStateException();
             }
             bb.field_k = new String[var4];
-            ri.a(hc.field_m, 0, bb.field_k, 0, var4);
+            ArrayBlockSupport.copyObjectRange(hc.field_m, 0, bb.field_k, 0, var4);
             o.field_g = new String[-var4 + (var3_int - 1)];
-            ri.a(hc.field_m, 1 + var4, o.field_g, 0, -var4 + (var3_int - 1));
+            ArrayBlockSupport.copyObjectRange(hc.field_m, 1 + var4, o.field_g, 0, -var4 + (var3_int - 1));
             if (RichTextLayout.field_g.length < bb.field_k.length) {
               stackIn_50_0 = bb.field_k.length;
             } else {

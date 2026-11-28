@@ -44,7 +44,7 @@ final class bk {
           }
           ui.field_d = -(sf.field_d >> 1) + kf.field_b;
           var2 = ui.field_d;
-          for (var3 = 0; al.field_y.length > var3; var3++) {
+          for (var3 = 0; MusicPatch.field_y.length > var3; var3++) {
             var4 = ClientException.field_f[var3];
             if (var4 < 0) {
               var5 = DiskCacheWorker.field_c;
@@ -55,7 +55,7 @@ final class bk {
                 var5 = vg.field_d;
               }
             }
-            var6 = al.field_y[var3];
+            var6 = MusicPatch.field_y[var3];
             stackIn_12_0 = 127;
             stackIn_12_1 = var6;
             stackIn_13_2 = !(0 > var4);

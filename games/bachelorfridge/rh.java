@@ -25,11 +25,11 @@ final class rh {
           while (pt.field_a.length > var3_int) {
             var5 = gn.field_l[var3_int];
             if (var5 < 0) {
-              var4 = var4 + un.field_i;
+              var4 = var4 + MusicPatchEnvelope.field_i;
             } else {
               var6 = AgeValidator.a(true, true, pt.field_a[var3_int]);
               var4 = var4 + DraggableWidgetContainer.field_J;
-              var7 = sd.field_a - (var6 >> 1);
+              var7 = ByteArrayPoolSupport.field_a - (var6 >> 1);
               if (SleepAnimation.a(BoardView.field_t + (ShieldEvent.field_r << 1), param2, var6 + (ConfirmedEmailAvailabilityValidator.field_k << 1), 1, var7 - ConfirmedEmailAvailabilityValidator.field_k, var4, param0)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;

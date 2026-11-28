@@ -114,7 +114,7 @@ final class tj extends uh {
                   this.field_x.a(this.field_g.position, var5, this.field_g.payload, 5768);
                   if (this.field_m != 0) {
                     for (var6 = 0; var5 > var6; var6++) {
-                      this.field_g.payload[var6 + this.field_g.position] = (byte)SectorCacheStore.a((int) this.field_g.payload[var6 + this.field_g.position], (int) this.field_m);
+                      this.field_g.payload[var6 + this.field_g.position] = (byte)SectorCacheStore.bitwiseXor((int) this.field_g.payload[var6 + this.field_g.position], (int) this.field_m);
                     }
                   }
                   this.field_g.position = this.field_g.position + var5;
@@ -188,7 +188,7 @@ final class tj extends uh {
                   this.field_x.a(this.field_e.field_B.position, var6, this.field_e.field_B.payload, 5768);
                   if (this.field_m != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.field_e.field_B.payload[var7 + this.field_e.field_B.position] = (byte)SectorCacheStore.a((int) this.field_e.field_B.payload[var7 + this.field_e.field_B.position], (int) this.field_m);
+                      this.field_e.field_B.payload[var7 + this.field_e.field_B.position] = (byte)SectorCacheStore.bitwiseXor((int) this.field_e.field_B.payload[var7 + this.field_e.field_B.position], (int) this.field_m);
                     }
                   }
                   this.field_e.field_B.position = this.field_e.field_B.position + var6;

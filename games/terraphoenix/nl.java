@@ -23,7 +23,7 @@ final class nl {
             return (CoverageBitmapFont) (stackIn_2_0);
           }
           if (param2 > 12) {
-            stackIn_7_0 = sb.a(false, param0.getFile(param4, -95, param3));
+            stackIn_7_0 = MidiNoteMask.a(false, param0.getFile(param4, -95, param3));
             return stackIn_7_0;
           }
           stackIn_5_0 = (CoverageBitmapFont) null;

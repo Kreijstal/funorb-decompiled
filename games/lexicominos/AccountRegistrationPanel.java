@@ -535,7 +535,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
           if (jj.field_e == var4) {
             return false;
           }
-          if (var4 != rc.field_a) {
+          if (var4 != MusicPatchEnvelope.field_a) {
             return true;
           }
           return false;

@@ -544,7 +544,7 @@ final class BattleScreen extends dfa {
           var3 = 124 % ((-58 - param0) / 54);
           var4 = var10.field_s.tileX;
           var5 = var10.field_s.tileY;
-          var6 = un.a(126, this.field_H - var5, this.field_N - var4);
+          var6 = MusicPatchEnvelope.a(126, this.field_H - var5, this.field_N - var4);
           var7 = 0;
           if (this.field_N - var4 == 0) {
             var7Lifetime1 = Math.abs(-var5 + this.field_H);
@@ -637,7 +637,7 @@ final class BattleScreen extends dfa {
               var6 = 480;
               var7 = 4 + mk.field_p;
               var8 = gd.field_m + 4;
-              sd.a(this.field_G[var3.creature.field_f].field_s.getAttackDamageMultiplier(var4, -5313), var7, var4, (byte) 74, var8, var5, var6);
+              ByteArrayPoolSupport.a(this.field_G[var3.creature.field_f].field_s.getAttackDamageMultiplier(var4, -5313), var7, var4, (byte) 74, var8, var5, var6);
             }
           }
         }
@@ -1849,7 +1849,7 @@ final class BattleScreen extends dfa {
             this.field_K = -53;
           }
           var4 = var9.field_s.tileY;
-          var5 = un.a(param0 + 105, -var4 + this.field_H, -var3 + this.field_N);
+          var5 = MusicPatchEnvelope.a(param0 + 105, -var4 + this.field_H, -var3 + this.field_N);
           if (this.r(param0 + 19)) {
             var6 = null;
             var7 = (SpecialMoveDefinition) (WhirlpoolDigest.field_e[this.field_Z.moveId]);
@@ -2466,7 +2466,7 @@ final class BattleScreen extends dfa {
           this.field_x = new Sprite(45, 45);
           this.field_x.bindAsRenderTarget();
           SoftwareRasterizer.addRadialGlow(352, 352, 352, 255, var16);
-          ProgressDialog.field_U.a((byte) 120);
+          ProgressDialog.field_U.setAsRasterTarget((byte) 120);
           var17 = nga.field_i;
           for (var7 = 0; var7 < 8; var7++) {
             var17[var7] = 0;

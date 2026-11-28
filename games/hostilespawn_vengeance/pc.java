@@ -79,7 +79,7 @@ final class pc {
                 }
                 case 1: {
                     try {
-                        if (50 > df.field_c) {
+                        if (50 > GrowableIntArray.field_c) {
                             /* Inlined CFG state: 4. */
                             {
                                 if (ik.field_b) {
@@ -141,7 +141,7 @@ final class pc {
                         var1_int = ln.field_a.field_d;
                         var2 = ln.field_a.field_a;
                         var3 = ln.field_a.field_n;
-                        kf.clearInts(cm.field_c, 0, var3);
+                        ArrayBlockSupport.clearInts(cm.field_c, 0, var3);
                         var4 = ln.field_a.field_c;
                         var5 = ln.field_a.field_e;
                         var6 = ln.field_a.field_q;

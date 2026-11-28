@@ -496,7 +496,7 @@ final class vg extends eh {
         double[] var4 = null;
         try {
           this.field_m = false;
-          dk.a(param0, 0, this.field_g, 0, this.field_g.length);
+          ArrayBlockSupport.a(param0, 0, this.field_g, 0, this.field_g.length);
           var5 = this.field_n;
           double[] var3 = var5;
           var4 = this.field_n;

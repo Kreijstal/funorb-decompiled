@@ -239,7 +239,7 @@ final class gi extends pn implements Cloneable {
               var17 = new int[4 + var12];
               var16 = var17;
               var13 = var16;
-              eg.a(var11.field_c, 0, var17, 0, var12);
+              ArrayBlockSupport.copyIntRange(var11.field_c, 0, var17, 0, var12);
               var11.field_c = var13;
             }
             var11.field_c[var12] = var10Lifetime1;

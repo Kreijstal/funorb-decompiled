@@ -557,9 +557,9 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
               throw new IllegalStateException();
             }
             wi.field_b = new String[var4];
-            gl.a(vi.field_b, 0, wi.field_b, 0, var4);
+            ArrayBlockSupport.copyObjectRange(vi.field_b, 0, wi.field_b, 0, var4);
             SoundCache.field_e = new String[-1 + var3_int - var4];
-            gl.a(vi.field_b, 1 + var4, SoundCache.field_e, 0, var3_int - var4 - 1);
+            ArrayBlockSupport.copyObjectRange(vi.field_b, 1 + var4, SoundCache.field_e, 0, var3_int - var4 - 1);
             var3_int = TextLayout.a(fe.field_a, rk.field_h, gg.a(new String[]{"<br><%0><br>"}, wa.field_d, true), true, vi.field_b);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
@@ -573,9 +573,9 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
               throw new IllegalStateException();
             }
             DiskCacheWorker.field_c = new String[var4];
-            gl.a(vi.field_b, 0, DiskCacheWorker.field_c, 0, var4);
+            ArrayBlockSupport.copyObjectRange(vi.field_b, 0, DiskCacheWorker.field_c, 0, var4);
             re.field_a = new String[var3_int - (var4 + 1)];
-            gl.a(vi.field_b, 1 + var4, re.field_a, 0, -1 + var3_int - var4);
+            ArrayBlockSupport.copyObjectRange(vi.field_b, 1 + var4, re.field_a, 0, -1 + var3_int - var4);
             if (DiskCacheWorker.field_c.length > wi.field_b.length) {
               stackIn_67_0 = DiskCacheWorker.field_c.length;
             } else {

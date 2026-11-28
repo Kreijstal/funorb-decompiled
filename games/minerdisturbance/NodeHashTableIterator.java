@@ -130,7 +130,7 @@ final class NodeHashTableIterator implements Iterator {
     }
 
     final static void a(int param0, String param1) {
-        lh.a(-18473, param1);
+        ByteArrayPoolSupport.a(-18473, param1);
         if (param0 > -110) {
           return;
         }

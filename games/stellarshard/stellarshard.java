@@ -336,7 +336,7 @@ public final class stellarshard extends rb implements TextureProvider {
             qd.field_j.requestFocus();
             DualLinkDequeIterator.field_e = null;
           }
-          if (ee.b(122)) {
+          if (ByteArrayPoolSupport.b(122)) {
             this.k(-11);
             if (!vj.a(25424)) {
               return;
@@ -567,7 +567,7 @@ public final class stellarshard extends rb implements TextureProvider {
           } while (var12 == 0);
           do {
             if (!(var6_float <= 40.0f)) {
-              RichTextLayout.field_h.a((byte) -107);
+              RichTextLayout.field_h.setAsRasterTarget((byte) -107);
               ModalDialogHost.field_D = new Sprite[12];
               fk.field_k = new int[48];
               break;
@@ -647,7 +647,7 @@ public final class stellarshard extends rb implements TextureProvider {
                 continue;
               }
             } else {
-              RichTextLayout.field_h.a((byte) -107);
+              RichTextLayout.field_h.setAsRasterTarget((byte) -107);
               stackIn_62_0 = 22050;
               stackIn_62_1 = 0;
             }
@@ -3023,7 +3023,7 @@ public final class stellarshard extends rb implements TextureProvider {
           sg.clearStaticReferences(-29297);
           RichTextLayout.clearStaticReferences((byte) 117);
           DirectByteStorage.c(-17002);
-          ol.resetStaticState(true);
+          GrowableIntArray.resetStaticState(true);
           DraggableWidgetContainer.clearDeclaredStaticReferences(80);
           DropTargetWidgetContainer.clearStaticReferences((byte) -120);
           li.clearStaticReferences((byte) 89);
@@ -3324,7 +3324,7 @@ public final class stellarshard extends rb implements TextureProvider {
                 return;
               }
             }
-            RichTextLayout.field_h.a((byte) -107);
+            RichTextLayout.field_h.setAsRasterTarget((byte) -107);
             cg.field_c = 0;
             RichTextWidget.g(-33);
             return;
@@ -3467,7 +3467,7 @@ public final class stellarshard extends rb implements TextureProvider {
               break;
             }
             if (decompiledNaturalLoopExit2) {
-              RichTextLayout.field_h.a((byte) -107);
+              RichTextLayout.field_h.setAsRasterTarget((byte) -107);
               stackIn_177_0 = ~cg.field_c;
               stackIn_177_1 = -16;
             }
@@ -3664,7 +3664,7 @@ public final class stellarshard extends rb implements TextureProvider {
                   }
 
                 }
-                RichTextLayout.field_h.a((byte) -107);
+                RichTextLayout.field_h.setAsRasterTarget((byte) -107);
                 var5++;
                 continue;
               }
@@ -4055,7 +4055,7 @@ public final class stellarshard extends rb implements TextureProvider {
             stackIn_5_0 = qd.field_j;
           }
           var2 = stackIn_5_0;
-          if (ee.b(93)) {
+          if (ByteArrayPoolSupport.b(93)) {
             stackIn_11_0 = var2;
             stackIn_11_1 = -11;
             if (DualLinkDequeIterator.field_e != null) {
@@ -4168,7 +4168,7 @@ public final class stellarshard extends rb implements TextureProvider {
               if (this.field_G != null) {
                 this.field_G.bindAsRenderTarget();
                 SoftwareRasterizer.fillRectangle(0, 0, 640, 480, 0);
-                RichTextLayout.field_h.a((byte) -107);
+                RichTextLayout.field_h.setAsRasterTarget((byte) -107);
                 if (var20 != 0) {
                   this.field_G = new Sprite(640, 480);
                 }

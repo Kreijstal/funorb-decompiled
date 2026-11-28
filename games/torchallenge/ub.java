@@ -64,7 +64,7 @@ final class ub {
           }
           var7 = -1;
           var17 = pa.field_v[param0];
-          var9 = s.field_i[param0];
+          var9 = MidiNoteMask.field_i[param0];
           var13 = 0;
           var7Lifetime1 = var13;
           while (var9 > var13) {

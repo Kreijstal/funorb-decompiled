@@ -184,7 +184,7 @@ final class ii extends TextureOperator {
     final static void b(byte param0) {
         if (param0 == -90) {
           qf.field_b = 0;
-          gl.field_o = false;
+          MusicPatchEnvelope.field_o = false;
           ContentTransitionDialog.field_db = -1;
           as.field_a = null;
           hn.field_n = -1;
@@ -192,7 +192,7 @@ final class ii extends TextureOperator {
         }
         ii.b((byte) 1);
         qf.field_b = 0;
-        gl.field_o = false;
+        MusicPatchEnvelope.field_o = false;
         ContentTransitionDialog.field_db = -1;
         as.field_a = null;
         hn.field_n = -1;

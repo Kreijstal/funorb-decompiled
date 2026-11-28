@@ -38,7 +38,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         this.lastReturned = null;
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseOr(long param0, long param1) {
         return param0 | param1;
     }
 
@@ -243,7 +243,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
                 var11 = 255 & param1;
                 incrementValue$1 = param0;
                 param0++;
-                param8[incrementValue$1] = mp.a(nb.a(nb.a(65280, var10_int) * var11 >> 8, 65280), mp.a(nb.a(nb.a(16711935, var10_int) * var11 >> 8, 16711935), nb.a(var10_int, -16777216)));
+                param8[incrementValue$1] = mp.bitwiseOr(nb.bitwiseAnd(nb.bitwiseAnd(65280, var10_int) * var11 >> 8, 65280), mp.bitwiseOr(nb.bitwiseAnd(nb.bitwiseAnd(16711935, var10_int) * var11 >> 8, 16711935), nb.bitwiseAnd(var10_int, -16777216)));
               } else {
                 param0++;
               }

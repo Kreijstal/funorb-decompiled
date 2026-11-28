@@ -265,7 +265,7 @@ final class dk {
           if (param1 != 5408) {
             dk.a(-113);
           }
-          stackIn_3_0 = tj.a(false, param1 - 5408, param0);
+          stackIn_3_0 = GrowableIntArray.a(false, param1 - 5408, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

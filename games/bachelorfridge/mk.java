@@ -403,7 +403,7 @@ final class mk {
           var9 = field_p + 4;
           var10 = 4 + gd.field_m;
           if (param0) {
-            sd.a(BananarangEvent.field_s.field_g.getAttackDamageMultiplier(var6, -5313), var9, var6, (byte) 74, var10, var7Lifetime1, var8);
+            ByteArrayPoolSupport.a(BananarangEvent.field_s.field_g.getAttackDamageMultiplier(var6, -5313), var9, var6, (byte) 74, var10, var7Lifetime1, var8);
           }
         }
         if (this.field_m != null) {
@@ -764,7 +764,7 @@ final class mk {
           this.field_g = new Sprite(200, 60);
           this.field_g.bindAsRenderTarget();
           var11.drawRotated(100, 30, 200, 4096);
-          ProgressDialog.field_U.a((byte) 21);
+          ProgressDialog.field_U.setAsRasterTarget((byte) 21);
           this.field_n = new int[256];
           for (var5 = 0; var5 < 256; var5++) {
             this.field_n[var5] = var5 * 65793;
@@ -782,7 +782,7 @@ final class mk {
           this.field_r = new Sprite(25, 25);
           this.field_r.bindAsRenderTarget();
           SoftwareRasterizer.addRadialGlow(208, 208, 192, 255, this.field_w);
-          ProgressDialog.field_U.a((byte) 125);
+          ProgressDialog.field_U.setAsRasterTarget((byte) 125);
           this.field_s.a((byte) 65, BananarangEvent.field_s.field_g.field_o.field_b, 0);
           BananarangEvent.field_s.field_g.field_f = -1;
           RasterBuffer.a(13, 7758);

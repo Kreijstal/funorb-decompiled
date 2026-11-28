@@ -10,7 +10,7 @@ final class MusicPatchPcmStream extends PcmStream {
     PcmStreamMixer field_m;
 
     final PcmStream firstChildStream() {
-        sh var1 = (sh) (this.field_n.beginBackward(9272));
+        MusicPatchNode var1 = (MusicPatchNode) (this.field_n.beginBackward(9272));
         if (var1 == null) {
           return null;
         }
@@ -44,9 +44,9 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     final PcmStream nextChildStream() {
-        sh var1;
+        MusicPatchNode var1;
         while (true) {
-          var1 = (sh) (this.field_n.nextBackward((byte) -119));
+          var1 = (MusicPatchNode) (this.field_n.nextBackward((byte) -119));
           if (var1 == null) {
             return null;
           }
@@ -65,12 +65,12 @@ final class MusicPatchPcmStream extends PcmStream {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        sh var6 = null;
+        MusicPatchNode var6 = null;
         int var7 = 0;
         var7 = Terraphoenix.field_V;
         try {
           this.field_m.mixInto(param0, param1, param2);
-          var6 = (sh) (this.field_n.beginBackward(9272));
+          var6 = (MusicPatchNode) (this.field_n.beginBackward(9272));
           while (var6 != null) {
             stackIn_4_0 = this.field_q.isVoiceInactive(var6, 16384);
             boolean decompiledFrameCompleted0 = true;
@@ -91,7 +91,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 var6.field_y = var6.field_y - var5;
               }
             }
-            var6 = (sh) (this.field_n.nextBackward((byte) -119));
+            var6 = (MusicPatchNode) (this.field_n.nextBackward((byte) -119));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -110,11 +110,11 @@ final class MusicPatchPcmStream extends PcmStream {
 
     final void skipFrames(int param0) {
         int var2;
-        sh var3;
+        MusicPatchNode var3;
         int var4;
         var4 = Terraphoenix.field_V;
         this.field_m.skipFrames(param0);
-        var3 = (sh) (this.field_n.beginBackward(9272));
+        var3 = (MusicPatchNode) (this.field_n.beginBackward(9272));
         while (var3 != null) {
           if (!this.field_q.isVoiceInactive(var3, 16384)) {
             var2 = param0;
@@ -128,7 +128,7 @@ final class MusicPatchPcmStream extends PcmStream {
               var2 = var2 - var3.field_y;
             } while (!this.field_q.updateVoice((byte) 77, (int[]) null, var2, var3, 0));
           }
-          var3 = (sh) (this.field_n.nextBackward((byte) -119));
+          var3 = (MusicPatchNode) (this.field_n.nextBackward((byte) -119));
         }
     }
 
@@ -136,7 +136,7 @@ final class MusicPatchPcmStream extends PcmStream {
         return 0;
     }
 
-    private final void renderVoiceFrames(sh param0, int[] param1, int param2, int param3, int param4, byte param5) {
+    private final void renderVoiceFrames(MusicPatchNode param0, int[] param1, int param2, int param3, int param4, byte param5) {
         MidiPcmStream stackIn_13_0 = null;
         boolean stackIn_14_1 = false;
         RuntimeException stackIn_25_0 = null;
@@ -217,7 +217,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    private final void skipVoiceFrames(int param0, int param1, sh param2) {
+    private final void skipVoiceFrames(int param0, int param1, MusicPatchNode param2) {
         MidiPcmStream stackIn_9_0 = null;
         boolean stackIn_10_1 = false;
         RuntimeException stackIn_20_0 = null;

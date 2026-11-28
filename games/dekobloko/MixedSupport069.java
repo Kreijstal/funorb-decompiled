@@ -28,7 +28,7 @@ final class MixedSupport069 {
           }
           for (integerLocal1 = 1; DefaultTextWidgetRenderer.integerArrayState0001.length > integerLocal1; integerLocal1++) {
             integerLocal3 = DefaultTextWidgetRenderer.integerArrayState0001[integerLocal1];
-            MixedSupport008.performAction0076(PlayerNamePrompt.integerArrayState0053, integerLocal1 << 4, PlayerNamePrompt.integerArrayState0053, integerLocal2, integerLocal3);
+            ArrayBlockSupport.copyIntRange(PlayerNamePrompt.integerArrayState0053, integerLocal1 << 4, PlayerNamePrompt.integerArrayState0053, integerLocal2, integerLocal3);
             integerLocal2 = integerLocal2 + integerLocal3;
           }
           return;

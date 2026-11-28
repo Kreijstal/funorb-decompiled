@@ -64,7 +64,7 @@ final class ch extends DefaultTextWidgetRenderer {
         if (param0 != 3) {
           field_B = 33;
         }
-        ga.field_i = null;
+        MidiNoteMask.field_i = null;
         PcmResampler.field_d = null;
         lk.field_i = null;
     }
@@ -276,7 +276,7 @@ final class ch extends DefaultTextWidgetRenderer {
             }
             return;
           }
-          kg.a(this.field_v, 0, param0.field_v, 0, 6);
+          ArrayBlockSupport.copyObjectRange(this.field_v, 0, param0.field_v, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

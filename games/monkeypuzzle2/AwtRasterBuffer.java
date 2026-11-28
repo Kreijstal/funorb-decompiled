@@ -22,7 +22,7 @@ abstract class AwtRasterBuffer {
           if (PcmResampler.field_b == bh.field_e) {
             return false;
           }
-          DropTargetWidgetContainer.field_H = oi.field_e[PcmResampler.field_b];
+          DropTargetWidgetContainer.field_H = GrowableIntArray.field_e[PcmResampler.field_b];
           MatchingFieldValidator.field_p = ProxySocketConnector.field_d[PcmResampler.field_b];
           PcmResampler.field_b = PcmResampler.field_b - param0 & 127;
           stackIn_6_0 = true;

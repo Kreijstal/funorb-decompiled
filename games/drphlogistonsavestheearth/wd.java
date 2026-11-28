@@ -45,21 +45,21 @@ abstract class wd {
           SoftwareRasterizer.drawRectangleOutline(243, 197, 369, 143, 16777215);
           SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (null == ClientException.field_e) {
-            if (sc.field_f != null) {
-              sc.field_f.drawParagraph(ha.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (ByteArrayPoolSupport.field_f != null) {
+              ByteArrayPoolSupport.field_f.drawParagraph(ha.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
           if (param0 != 139) {
             return;
           }
-          var6 = ClientException.field_e[ig.field_k];
+          var6 = ClientException.field_e[MusicPatch.field_k];
           var1 = var6;
           if (var6 != null) {
             var6.draw(245, 199);
           } else {
-            if (null != sc.field_f) {
-              sc.field_f.drawParagraph(ha.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (null != ByteArrayPoolSupport.field_f) {
+              ByteArrayPoolSupport.field_f.drawParagraph(ha.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           }
           if (la.field_b < rd.field_F) {
@@ -74,7 +74,7 @@ abstract class wd {
               }
             }
           }
-          if (null != sc.field_f) {
+          if (null != ByteArrayPoolSupport.field_f) {
             var2 = null;
             var5 = 0;
             var3Lifetime1 = var5;
@@ -93,7 +93,7 @@ abstract class wd {
             if (var2 == null) {
               return;
             }
-            sc.field_f.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+            ByteArrayPoolSupport.field_f.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
             return;
           }
           return;

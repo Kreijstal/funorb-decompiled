@@ -102,11 +102,11 @@ final class rp {
           3 != param1) {
           if (22 != param1) {
             if (23 == param1) {
-              return of.field_k;
+              return MusicPatchEnvelope.field_k;
             }
             return true;
           }
-          stackIn_15_0 = (gm.field_d.field_m >= ak.field_o[0]) && (!of.field_k);
+          stackIn_15_0 = (gm.field_d.field_m >= ak.field_o[0]) && (!MusicPatchEnvelope.field_k);
           return stackIn_15_0;
         }
         stackIn_9_0 = (null != gm.field_d) && (gm.field_d.field_K != 0);

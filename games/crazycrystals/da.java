@@ -225,8 +225,8 @@ final class da extends ue {
             return false;
           }
         }
-        var4 = dk.field_l[param0] + BufferedSocket.field_i[param0] + cd.field_u[param0];
-        var5 = cd.field_u[param3] + BufferedSocket.field_i[param3] + dk.field_l[param3];
+        var4 = MusicPatch.field_l[param0] + BufferedSocket.field_i[param0] + cd.field_u[param0];
+        var5 = cd.field_u[param3] + BufferedSocket.field_i[param3] + MusicPatch.field_l[param3];
         if (var4 < var5) {
           return true;
         }
@@ -576,8 +576,8 @@ final class da extends ue {
         var5 = CrazyCrystals.field_B;
         try {
           wn.field_b = wn.field_b + 65536;
-          while (65536 <= pn.b(wn.field_b, 160, h.field_a)) {
-            wn.field_b = wn.field_b - h.field_a;
+          while (65536 <= pn.b(wn.field_b, 160, ByteArrayPoolSupport.field_a)) {
+            wn.field_b = wn.field_b - ByteArrayPoolSupport.field_a;
             LevelLostEntrancePhase.field_g = LevelLostEntrancePhase.field_g + 1;
           }
           var2_int = -1;
@@ -593,21 +593,21 @@ final class da extends ue {
           }
           if (var2_int != -1) {
             boolean decompiledFrameRemainder0 = true;
-            if (h.field_c > mb.field_f) {
+            if (ByteArrayPoolSupport.field_c > mb.field_f) {
               mb.field_f = mb.field_f + 1;
-              if (mb.field_f > h.field_b && (null == nl.field_f ||
+              if (mb.field_f > ByteArrayPoolSupport.field_b && (null == nl.field_f ||
                 null == nl.field_f[ue.field_a])) {
                 mb.field_f = mb.field_f - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (h.field_c <= mb.field_f &&
+                if (ByteArrayPoolSupport.field_c <= mb.field_f &&
                   null == nl.field_f[(1 + ue.field_a) % var2_int]) {
                   mb.field_f = mb.field_f - 1;
                 }
               }
             }
-            if (mb.field_f >= h.field_c) {
+            if (mb.field_f >= ByteArrayPoolSupport.field_c) {
               rd.field_f = ue.field_a;
               if (!ve.field_t) {
                 ue.field_a = ue.field_a - 1;
@@ -620,9 +620,9 @@ final class da extends ue {
                   ue.field_a = ue.field_a - var2_int;
                 }
               }
-              mb.field_f = mb.field_f - h.field_c;
+              mb.field_f = mb.field_f - ByteArrayPoolSupport.field_c;
             }
-            if (mb.field_f > h.field_b) {
+            if (mb.field_f > ByteArrayPoolSupport.field_b) {
               ve.field_t = true;
             }
           }
@@ -636,26 +636,26 @@ final class da extends ue {
                 269 > to.field_a) {
                 var4 = 1;
                 ve.field_t = false;
-                mb.field_f = h.field_c;
+                mb.field_f = ByteArrayPoolSupport.field_c;
               }
               if (to.field_a > 586 &&
                 DisplayNameSelectionPanel.field_H.field_l + 586 > to.field_a) {
                 var4 = 1;
                 ve.field_t = true;
-                mb.field_f = h.field_c;
+                mb.field_f = ByteArrayPoolSupport.field_c;
               }
             }
             if (var4 == 0 &&
-              h.field_b < mb.field_f &&
+              ByteArrayPoolSupport.field_b < mb.field_f &&
               var3 < IsaacRandom.field_h &&
               IsaacRandom.field_h < DisplayNameSelectionPanel.field_H.field_u + var3) {
               if (-DisplayNameSelectionPanel.field_H.field_l + 269 < qh.field_i &&
                 qh.field_i < 269) {
-                mb.field_f = h.field_b;
+                mb.field_f = ByteArrayPoolSupport.field_b;
               }
               if (qh.field_i > 586 &&
                 qh.field_i < 586 + DisplayNameSelectionPanel.field_H.field_l) {
-                mb.field_f = h.field_b;
+                mb.field_f = ByteArrayPoolSupport.field_b;
               }
             }
           }

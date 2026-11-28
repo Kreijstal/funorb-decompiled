@@ -12,7 +12,7 @@ final class sb {
     static int field_d;
 
     final static void a(int param0) {
-        wj.c(-6399);
+        MusicPatch.c(-6399);
         DualLinkNode.field_k = true;
         SectorCacheStore.field_g = true;
         ug.field_A.closeAllDialogs(0);

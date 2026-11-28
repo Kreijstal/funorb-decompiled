@@ -106,7 +106,7 @@ abstract class ByteStorage {
             }
           } else {
             ub.field_c = vg.field_b.d((byte) -18);
-            kc.a(-14226, 2);
+            MusicPatchNode.a(-14226, 2);
             if (null != ub.field_c) {
               var2 = 2;
               RasterBuffer.a(ub.field_c, 13861);
@@ -160,7 +160,7 @@ abstract class ByteStorage {
           var6 = (byte)param1.readBits(8, 1522829539);
           if (var5 > 0) {
             for (var7 = 0; var4_int > var7; var7++) {
-              param2[var7] = (byte)(param1.readBits(var5, SectorCacheStore.a(param0, -1522829510)) + var6);
+              param2[var7] = (byte)(param1.readBits(var5, SectorCacheStore.bitwiseXor(param0, -1522829510)) + var6);
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {

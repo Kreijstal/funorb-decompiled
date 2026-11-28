@@ -113,9 +113,9 @@ final class lc extends ro {
           var7 = this.field_u * (param1 % this.field_u);
           for (var8 = 0; var8 < ci.field_c; var8++) {
             var9 = this.field_s[var8 % this.field_x + var7];
-            var6[var8] = ie.a(4080, var9 << 4);
-            var5[var8] = ie.a(var9 >> 4, 4080);
-            var4[var8] = ie.a(4080, var9 >> 12);
+            var6[var8] = ie.bitwiseAnd(4080, var9 << 4);
+            var5[var8] = ie.bitwiseAnd(var9 >> 4, 4080);
+            var4[var8] = ie.bitwiseAnd(4080, var9 >> 12);
           }
         }
         if (param0 != -29116) {

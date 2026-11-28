@@ -141,7 +141,7 @@ final class jc extends DualLinkNode {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!g.a(param4, param1, -30744, param3)) {
+          if (!MidiNoteMask.a(param4, param1, -30744, param3)) {
             stackIn_2_0 = null;
             return (BinaryBitmapFont) (stackIn_2_0);
           }
@@ -185,14 +185,14 @@ final class jc extends DualLinkNode {
         int var2Lifetime1;
         if (this.field_q != null) {
           for (var2 = 0; var2 < this.field_q.length; var2++) {
-            this.field_q[var2] = MassPoisonSpecial.a(this.field_q[var2], 32768);
+            this.field_q[var2] = MassPoisonSpecial.bitwiseOr(this.field_q[var2], 32768);
           }
         }
         if (null != this.field_u) {
           var4 = 0;
           var2Lifetime1 = var4;
           while (this.field_u.length > var4) {
-            this.field_u[var4] = MassPoisonSpecial.a(this.field_u[var4], 32768);
+            this.field_u[var4] = MassPoisonSpecial.bitwiseOr(this.field_u[var4], 32768);
             var4++;
           }
         }

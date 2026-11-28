@@ -132,17 +132,17 @@ final class cf implements TextureProvider {
             var15 = param0[2 * var2_int].field_r;
             var16 = param0[1 + 2 * var2_int].field_r;
             for (var5 = 0; var5 < 64; var5++) {
-              og.a(var15, var5 << 6, this.field_e[var2_int], var5 << 7, 64);
-              og.a(var16, var5 << 6, this.field_e[var2_int], (var5 << 7) + 8192, 64);
+              ArrayBlockSupport.copyIntRange(var15, var5 << 6, this.field_e[var2_int], var5 << 7, 64);
+              ArrayBlockSupport.copyIntRange(var16, var5 << 6, this.field_e[var2_int], (var5 << 7) + 8192, 64);
             }
             var8 = 0;
             var5Lifetime1 = var8;
             while (var8 < 16384) {
-              this.field_e[var2_int][var8] = bc.a(this.field_e[var2_int][var8], 16316671);
+              this.field_e[var2_int][var8] = bc.bitwiseAnd(this.field_e[var2_int][var8], 16316671);
               var6 = this.field_e[var2_int][var8];
-              this.field_e[var2_int][16384 + var8] = bc.a(var6 - (var6 >>> 3), 16316671);
-              this.field_e[var2_int][16384 + (var8 + 16384)] = bc.a(-(var6 >>> 2) + var6, 16316671);
-              this.field_e[var2_int][32768 + (var8 + 16384)] = bc.a(16316671, -(var6 >>> 3) + (-(var6 >>> 2) + var6));
+              this.field_e[var2_int][16384 + var8] = bc.bitwiseAnd(var6 - (var6 >>> 3), 16316671);
+              this.field_e[var2_int][16384 + (var8 + 16384)] = bc.bitwiseAnd(-(var6 >>> 2) + var6, 16316671);
+              this.field_e[var2_int][32768 + (var8 + 16384)] = bc.bitwiseAnd(16316671, -(var6 >>> 3) + (-(var6 >>> 2) + var6));
               var8++;
             }
           }

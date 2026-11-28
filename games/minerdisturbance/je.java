@@ -441,7 +441,7 @@ final class je {
           return SecondaryNodeDequeIterator.field_b;
         }
         if (field_T == 3) {
-          return aa.field_i;
+          return GrowableIntArray.field_i;
         }
         if (field_T != 4) {
           return null;

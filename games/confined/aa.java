@@ -22,12 +22,12 @@ final class aa {
         AccountCreationResultPanel.field_Bb = cc.a(8, -14245);
         PrimaryNodeDeque.field_b = cc.a(9, -14245);
         dg.field_n = new ad(50);
-        dg.field_n.a(param0, fi.field_b, dl.field_a, pb.field_e, "basic");
+        dg.field_n.a(param0, fi.field_b, ByteArrayPoolSupport.field_a, pb.field_e, "basic");
         dg.field_n.a((byte) -6, ka.field_N, un.field_b, NameSuggestionsPanel.field_P);
         dg.field_n.a((byte) -6, GameCanvas.field_a, d.field_f, DualLinkNode.field_n);
         dg.field_n.a((byte) -6, i.field_u, d.field_f, DualLinkNode.field_n);
         dg.field_n.a((byte) -6, PasswordValidator.field_j, d.field_f, DualLinkNode.field_n);
-        dg.field_n.a((byte) -6, ih.field_d, fi.field_b, dl.field_a);
+        dg.field_n.a((byte) -6, ih.field_d, fi.field_b, ByteArrayPoolSupport.field_a);
         dg.field_n.a((byte) -6, EditableTextField.field_U, pb.field_a, ByteStorage.field_d);
         dg.field_n.a((byte) -6, oj.field_C, PrimaryNodeDeque.field_g, vk.field_x);
         dg.field_n.a((byte) -6, jd.field_b, TextLineMetrics.field_g, af.field_U);
@@ -51,10 +51,10 @@ final class aa {
     final static void a(byte param0, boolean param1) {
         if (param0 >= -98) {
           field_a = (String) null;
-          wl.a(-78, param1, false);
+          GrowableIntArray.a(-78, param1, false);
           return;
         }
-        wl.a(-78, param1, false);
+        GrowableIntArray.a(-78, param1, false);
     }
 
     static {

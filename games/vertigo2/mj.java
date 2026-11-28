@@ -54,7 +54,7 @@ final class mj {
           ti.a(param14, param9, 4, param2);
           sq.a((byte) 13);
           DisplayNameSelectionPanel.c(false);
-          gl.a(26780);
+          MusicPatchEnvelope.a(26780);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

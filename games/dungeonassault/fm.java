@@ -155,7 +155,7 @@ final class fm {
             param2 * param1 != StripedProgressWidget.field_E.field_c.length) {
             var4 = new int[64];
             for (var5 = 0; var5 < 64; var5++) {
-              var4[var5] = mp.a(65793 * (var5 + 24), -2147483648);
+              var4[var5] = mp.bitwiseOr(65793 * (var5 + 24), -2147483648);
             }
             var5_ref_cn = te.a(param1, param2, var4, 16, 8, 0.125);
             StripedProgressWidget.field_E = new ph(var5_ref_cn, te.b(param1, param2, 0.125));

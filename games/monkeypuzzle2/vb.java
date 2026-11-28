@@ -113,13 +113,13 @@ class vb extends DualLinkNode {
           vb.f(-26);
           pf.field_b = null;
           ByteStorage.field_a = 0;
-          nj.field_a = -1;
+          ByteArrayPoolSupport.field_a = -1;
           ac.field_b = false;
           return;
         }
         pf.field_b = null;
         ByteStorage.field_a = 0;
-        nj.field_a = -1;
+        ByteArrayPoolSupport.field_a = -1;
         ac.field_b = false;
     }
 

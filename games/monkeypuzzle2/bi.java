@@ -806,7 +806,7 @@ abstract class bi extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = nj.a(ci.a((byte) 78), gh.a(12035), mk.e(0), GuestPlayConfirmationForm.d((byte) -56), true, this.field_n, BoundedRandomAccessFile.a((byte) -69));
+            var5_intLifetime1 = ByteArrayPoolSupport.a(ci.a((byte) 78), gh.a(12035), mk.e(0), GuestPlayConfirmationForm.d((byte) -56), true, this.field_n, BoundedRandomAccessFile.a((byte) -69));
             if (var5_intLifetime1 != -1) {
               fj.a(NameSuggestionsPanel.field_E, ImageProducerRasterBuffer.field_n, -27967, var5_intLifetime1);
               NameSuggestionsPanel.field_E = null;

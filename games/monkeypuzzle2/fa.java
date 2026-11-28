@@ -173,7 +173,7 @@ final class fa extends wl {
                 this.field_o.a(var5, true, this.field_g.payload, this.field_g.position);
                 if (this.field_m != 0) {
                   for (var6 = 0; var5 > var6; var6++) {
-                    this.field_g.payload[this.field_g.position + var6] = (byte)gi.a((int) this.field_g.payload[this.field_g.position + var6], (int) this.field_m);
+                    this.field_g.payload[this.field_g.position + var6] = (byte)gi.bitwiseXor((int) this.field_g.payload[this.field_g.position + var6], (int) this.field_m);
                   }
                 }
                 this.field_g.position = this.field_g.position + var5;
@@ -247,7 +247,7 @@ final class fa extends wl {
                 this.field_o.a(var6, true, this.field_k.field_o.payload, this.field_k.field_o.position);
                 if (this.field_m != 0) {
                   for (var7 = 0; var7 < var6; var7++) {
-                    this.field_k.field_o.payload[this.field_k.field_o.position + var7] = (byte)gi.a((int) this.field_k.field_o.payload[this.field_k.field_o.position + var7], (int) this.field_m);
+                    this.field_k.field_o.payload[this.field_k.field_o.position + var7] = (byte)gi.bitwiseXor((int) this.field_k.field_o.payload[this.field_k.field_o.position + var7], (int) this.field_m);
                   }
                 }
                 this.field_k.field_p = this.field_k.field_p + var6;

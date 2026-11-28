@@ -210,7 +210,7 @@ final class we implements WidgetRenderer {
             eb.field_b != null &&
             eb.field_b.ensureIndexLoaded((byte) -121) &&
             eb.field_b.tryLoadGroupByName(2, "benefits")) {
-            of.field_f = Asteroid.a("headline", "benefits", ValidationStatusIcon.field_Q, (byte) -120);
+            GrowableIntArray.field_f = Asteroid.a("headline", "benefits", ValidationStatusIcon.field_Q, (byte) -120);
             pf.field_b = Asteroid.a("blurbpane", "benefits", ValidationStatusIcon.field_Q, (byte) -126);
             IsaacRandom.field_d = Asteroid.a("button", "benefits", ValidationStatusIcon.field_Q, (byte) -117);
             TextFieldValidator.field_e = Asteroid.a("signup_text", "benefits", ValidationStatusIcon.field_Q, (byte) -119);
@@ -369,8 +369,8 @@ final class we implements WidgetRenderer {
           SoftwareRasterizer.saveClip(DialogMessagePane.field_D);
           SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, Asteroid.field_f, id.field_a);
           SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, Asteroid.field_f, id.field_a);
-          if (of.field_f != null) {
-            of.field_f.draw(0, 0);
+          if (GrowableIntArray.field_f != null) {
+            GrowableIntArray.field_f.draw(0, 0);
           }
           if (pf.field_b != null) {
             pf.field_b.draw(0, 0);
@@ -460,7 +460,7 @@ final class we implements WidgetRenderer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var1_ref), "we.D(" + param0 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var1_ref), "we.D(" + param0 + ')');
         }
     }
 
@@ -495,7 +495,7 @@ final class we implements WidgetRenderer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var1_ref), "we.B(" + param0 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var1_ref), "we.B(" + param0 + ')');
         }
     }
 
@@ -565,7 +565,7 @@ final class we implements WidgetRenderer {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -580,7 +580,7 @@ final class we implements WidgetRenderer {
           this.field_d = param2;
           this.field_f = param7;
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "we.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "we.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

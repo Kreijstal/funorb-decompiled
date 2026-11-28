@@ -15,7 +15,7 @@ final class ha extends um {
     final static void d(int param0) {
         ArchiveRequest.field_w = 620;
         MenuScreen.field_w = 240;
-        kn.field_g = true;
+        ByteArrayPoolSupport.field_g = true;
         SecondaryNodeDequeIterator.field_l = null;
         DisplayNameSelectionPanel.field_L = null;
         ProgressDialog.field_kb = 0;

@@ -112,7 +112,7 @@ final class hda extends k {
               }
               break;
             }
-            ArrayOperations.a(var13, 0, hh.field_d, var5);
+            ArrayOperations.fillInts(var13, 0, hh.field_d, var5);
             decompiledFrameRemainder0 = false;
           }
           else {

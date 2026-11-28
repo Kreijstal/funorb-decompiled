@@ -740,7 +740,7 @@ final class pb extends le {
     }
 
     static {
-        field_Ob = nf.a(false);
+        field_Ob = MusicPatch.a(false);
         field_Hb = 0;
     }
 }

@@ -11,13 +11,13 @@ final class en {
         if (param0 == -92) {
           var1 = new CipherPacketBuffer(10);
           var1.writeByte(2, 25564);
-          aa.field_j.b(param0 + 27529, var1);
+          GrowableIntArray.field_j.b(param0 + 27529, var1);
           return var1.payload;
         }
         field_a = (String[]) null;
         var1Lifetime1 = new CipherPacketBuffer(10);
         var1Lifetime1.writeByte(2, 25564);
-        aa.field_j.b(param0 + 27529, var1Lifetime1);
+        GrowableIntArray.field_j.b(param0 + 27529, var1Lifetime1);
         return var1Lifetime1.payload;
     }
 

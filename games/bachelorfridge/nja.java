@@ -100,7 +100,7 @@ final class nja {
         if (!uf.field_b[0]) {
           var8 = new int[var1];
           for (var5_int = 0; var1 > var5_int; var5_int++) {
-            var8[var5_int] = hk.field_f[dda.a((int) var16[var5_int], 255)];
+            var8[var5_int] = hk.field_f[dda.bitwiseAnd((int) var16[var5_int], 255)];
           }
           var3 = new Sprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[0], AirstrikeAnimation.field_D[0], ArrayWidgetContainer.field_A[0], InsanoSauceSpecial.field_s[0], var8);
         } else {
@@ -109,7 +109,7 @@ final class nja {
           var11 = var13;
           var5 = var11;
           for (var6 = 0; var6 < var1; var6++) {
-            var5[var6] = MassPoisonSpecial.a(dda.a(255, (int) var17[var6]) << 24, hk.field_f[dda.a(255, (int) var16[var6])]);
+            var5[var6] = MassPoisonSpecial.bitwiseOr(dda.bitwiseAnd(255, (int) var17[var6]) << 24, hk.field_f[dda.bitwiseAnd(255, (int) var16[var6])]);
           }
           var3 = new ArgbSprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[0], AirstrikeAnimation.field_D[0], ArrayWidgetContainer.field_A[0], InsanoSauceSpecial.field_s[0], var13);
         }

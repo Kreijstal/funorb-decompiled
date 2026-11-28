@@ -265,7 +265,7 @@ final class DualLinkDeque implements Iterable {
           if (param4 != -69) {
             DualLinkDeque.a(-0.019849789144301654, (int[]) null, (p) null, 108, -25, 1.6753937786913926, true);
           }
-          pl.field_k = true;
+          MusicPatchEnvelope.field_k = true;
           if (param1 == param3) {
             var5_int = param1 + param2 * ln.field_a.field_d;
             if (param2 >= param0) {

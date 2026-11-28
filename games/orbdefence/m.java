@@ -76,7 +76,7 @@ final class m {
             stackIn_38_0 = var7;
             return stackIn_38_0;
           }
-          tj.a(param5, var7, -23144);
+          GrowableIntArray.a(param5, var7, -23144);
           stackIn_36_0 = null;
           return (java.awt.Frame) (stackIn_36_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

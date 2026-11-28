@@ -404,7 +404,7 @@ final class hm extends TextureOperator {
             var13 = param2;
             var14 = param6;
             var15 = var17[var11] >> 1 & 8355711;
-            var10[var11] = (b.a(33423531, var13) >> 9) + ((b.a(var12, 33423360) >> 1) + b.a(var14 >> 17, 255) + var15);
+            var10[var11] = (b.bitwiseAnd(33423531, var13) >> 9) + ((b.bitwiseAnd(var12, 33423360) >> 1) + b.bitwiseAnd(var14 >> 17, 255) + var15);
             param6 = param6 + param0;
             param5 = param5 + param9;
             param8++;

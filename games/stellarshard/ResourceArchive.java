@@ -836,7 +836,7 @@ final class ResourceArchive {
                     var21 = var34[var20];
                   }
                   if (var21 == param2) {
-                    ri.copyByteRange(var43, var17, var44, var14_intLifetime1, var19);
+                    ArrayBlockSupport.copyByteRange(var43, var17, var44, var14_intLifetime1, var19);
                     var14_intLifetime1 = var14_intLifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -874,7 +874,7 @@ final class ResourceArchive {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
                   var18 = var18 + var31.readInt(false);
-                  ri.copyByteRange(var43, var16, var40[var19], var39[var19], var18);
+                  ArrayBlockSupport.copyByteRange(var43, var16, var40[var19], var39[var19], var18);
                   var14[var19] = var14[var19] + var18;
                   var16 = var16 + var18;
                 }
@@ -899,7 +899,7 @@ final class ResourceArchive {
               var11 = 0;
             }
             if (this.field_g == 0) {
-              var7[var11] = ch.storeBytes(ih.a(param0, 136), false, var36);
+              var7[var11] = ch.storeBytes(ih.bitwiseXor(param0, 136), false, var36);
               return true;
             }
             var7[var11] = var43;

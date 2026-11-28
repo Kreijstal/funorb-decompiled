@@ -25,13 +25,13 @@ final class dj {
         int var7 = Terraphoenix.field_V;
         Sprite[] var1 = new Sprite[kf.field_b];
         for (var2 = 0; kf.field_b > var2; var2++) {
-          var3 = sb.field_m[var2] * ArchiveRequest.field_p[var2];
+          var3 = MidiNoteMask.field_m[var2] * ArchiveRequest.field_p[var2];
           var4 = qc.field_b[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = ProxyAuthenticationRequiredException.field_a[dg.a((int) var4[var6], 255)];
+            var5[var6] = ProxyAuthenticationRequiredException.field_a[dg.bitwiseAnd((int) var4[var6], 255)];
           }
-          var1[var2] = new Sprite(ah.field_A, sb.field_j, ConfirmedEmailAvailabilityValidator.field_s[var2], DropTargetWidgetContainer.field_K[var2], sb.field_m[var2], ArchiveRequest.field_p[var2], var5);
+          var1[var2] = new Sprite(ah.field_A, MidiNoteMask.field_j, ConfirmedEmailAvailabilityValidator.field_s[var2], DropTargetWidgetContainer.field_K[var2], MidiNoteMask.field_m[var2], ArchiveRequest.field_p[var2], var5);
         }
         if (param0 > -7) {
           field_a = 7;

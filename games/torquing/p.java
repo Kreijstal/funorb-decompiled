@@ -128,7 +128,7 @@ final class p extends DualLinkNode {
           var4 = pn.field_b[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = cq.field_y[ie.a(255, (int) var4[var6])];
+            var5[var6] = cq.field_y[ie.bitwiseAnd(255, (int) var4[var6])];
           }
           var1[var2] = new Sprite(GuestPlayConfirmationForm.field_E, rh.field_d, PacketBuffer.field_o[var2], LabeledWidgetContainer.field_G[var2], vo.field_b[var2], PasswordValidator.field_o[var2], var5);
         }

@@ -83,7 +83,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
                 var2 = wg.a("create_ineligible", param0 ^ 7);
                 if (var2 != null) {
-                  ig.field_i = mj.a((byte) -97, var2);
+                  MusicPatch.field_i = mj.a((byte) -97, var2);
                 }
                 var2 = wg.a("usernameprompt", 0);
                 if (var2 != null) {
@@ -1421,7 +1421,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
                 var2 = wg.a("create_age", 0);
                 if (null != var2) {
-                  ri.field_c = mj.a((byte) 75, var2);
+                  MusicPatchEnvelope.field_c = mj.a((byte) 75, var2);
                 }
                 var2 = wg.a("create_u13_email", param0 - 7);
                 if (var2 != null) {
@@ -1817,7 +1817,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
                 var2 = wg.a("loading_soundeffects", 0);
                 if (var2 != null) {
-                  ig.field_o = mj.a((byte) 1, var2);
+                  MusicPatch.field_o = mj.a((byte) 1, var2);
                 }
                 var2 = wg.a("loading_music", 0);
                 if (var2 != null) {

@@ -56,7 +56,7 @@ final class ti {
 
     final static void a(boolean param0, int param1) {
         MatchingFieldValidator.field_w = 0;
-        ig.field_k = param1;
+        MusicPatch.field_k = param1;
         la.field_b = rd.field_F;
         ModalDialogHost.field_L = 0;
         ArchiveRequest.field_w = new ql(2);

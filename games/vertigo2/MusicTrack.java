@@ -22,7 +22,7 @@ final class MusicTrack extends IntrusiveNode {
         int var11;
         int var12;
         int var13;
-        ph var14;
+        MidiNoteMask var14;
         int[] var15;
         int[] var17;
         int[] var18;
@@ -94,9 +94,9 @@ final class MusicTrack extends IntrusiveNode {
               var12Lifetime1 = var8 >> 16 & 127;
               if (var12Lifetime1 > 0) {
                 var13 = var18[var10Lifetime2];
-                var14 = (ph) (this.field_o.a((long)var13, (byte) 64));
+                var14 = (MidiNoteMask) (this.field_o.a((long)var13, (byte) 64));
                 if (var14 == null) {
-                  var14 = new ph(new byte[128]);
+                  var14 = new MidiNoteMask(new byte[128]);
                   this.field_o.a(var14, (long)var13, false);
                 }
                 var14.field_n[var11Lifetime2] = (byte) 1;

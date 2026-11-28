@@ -129,7 +129,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         try {
           try {
             var4 = param1.getGraphics();
-            k.field_f.a(param2, param0, var4, 101);
+            k.field_f.drawImage(param2, param0, var4, 101);
             if (param3 <= 103) {
               var5 = (byte[]) null;
               AccountNameAvailabilityValidator.a(95, (PacketBuffer) null, (byte) 67, (java.math.BigInteger) null, (java.math.BigInteger) null, 39, (byte[]) null);

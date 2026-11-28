@@ -115,7 +115,7 @@ final class fc extends en {
           var17_ref_StringLifetime1 = StandardContentDialog.a(new String[]{var25[0]}, EditableTextField.field_J, 30496);
           var18_ref_String = InteractiveWidget.field_H.a(StandardContentDialog.a(new String[]{var15_ref_String}, var25[1], 30496), (byte) -48);
           var6[var14] = jn.a(var17_ref_StringLifetime1, new int[]{param1}, -80, la.field_b);
-          var7[var14] = jn.a(var18_ref_String, new int[]{param1}, IntrusiveDeque.b(param0, -16777100), la.field_b);
+          var7[var14] = jn.a(var18_ref_String, new int[]{param1}, IntrusiveDeque.bitwiseXor(param0, -16777100), la.field_b);
           var9 = var9 + (2 + var6[var14].length + var7[var14].length) * la.field_b.field_H;
         }
         if (var12 != 0) {

@@ -37,7 +37,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
         this.addChild(this.field_J, (byte) 82);
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseXor(long param0, long param1) {
         return param0 ^ param1;
     }
 

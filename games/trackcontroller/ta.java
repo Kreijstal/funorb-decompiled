@@ -45,7 +45,7 @@ final class ta {
             var5 = var10;
             var6 = param3;
             var7 = param0;
-            var10[var6] = RandomAccessCacheFile.a(var10[var6] >> 1, 8355711) + var7;
+            var10[var6] = RandomAccessCacheFile.bitwiseAnd(var10[var6] >> 1, 8355711) + var7;
             param3++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

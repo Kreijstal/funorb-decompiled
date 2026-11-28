@@ -162,7 +162,7 @@ final class tl extends eh {
           }
           for (var5 = var9.field_l.faceCount - 1; var5 >= 0; var5--) {
             if (var7.field_l.field_m[var5] != 127) {
-              var9.field_l.field_m[var5] = (short)UiWidget.a(ie.a((int) var7.field_l.field_m[var5], var4Lifetime1), var3Lifetime1);
+              var9.field_l.field_m[var5] = (short)UiWidget.a(ie.bitwiseAnd((int) var7.field_l.field_m[var5], var4Lifetime1), var3Lifetime1);
             }
           }
           og.field_k.a(false, (long)this.field_k, var9);

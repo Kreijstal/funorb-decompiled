@@ -927,7 +927,7 @@ final class LevelSimulation {
                       } else {
                         if (var7 == 1 && (this.field_w == 0 ||
                           this.field_w == 3) && this.field_n < 10) {
-                          param3[0] = b.a(param3[0], -2);
+                          param3[0] = b.bitwiseAnd(param3[0], -2);
                         }
                       }
                     }
@@ -2291,7 +2291,7 @@ final class LevelSimulation {
 
     private final void removeLevelObject(int param0, boolean param1) {
         if (this.field_t - 1 != param0) {
-          qq.a(this.field_i, 1 + param0, this.field_i, param0, -param0 + 374);
+          ArrayBlockSupport.copyObjectRange(this.field_i, 1 + param0, this.field_i, param0, -param0 + 374);
         } else {
           this.field_i[param0] = null;
         }

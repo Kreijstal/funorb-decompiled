@@ -455,7 +455,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
           return true;
         }
         if (!IntrusiveDeque.b((byte) 74)) {
-          nh.a(GuestPlayConfirmationForm.field_B, ud.field_b, param1, nc.field_t, param2, gh.field_l, 4, 75);
+          MusicPatchEnvelope.a(GuestPlayConfirmationForm.field_B, ud.field_b, param1, nc.field_t, param2, gh.field_l, 4, 75);
           return true;
         }
         mc.field_c.addLast(new AchievementNotice(param2, param1, nc.field_t, ud.field_b, GuestPlayConfirmationForm.field_B, gh.field_l), -94);

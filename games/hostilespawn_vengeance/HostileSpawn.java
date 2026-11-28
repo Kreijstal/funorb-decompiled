@@ -92,18 +92,18 @@ public final class HostileSpawn extends NetworkGameClient {
             var5_int++;
           } while (var7 == 0);
           var2_array = sg.a(true, "", DequeWidgetContainer.field_C, "wall_hammerhead");
-          kf.a(var2_array, 0, ak.field_b, 0, 256);
-          kf.a(var4_array, 0, ak.field_b, 256, 256);
+          ArrayBlockSupport.copyObjectRange(var2_array, 0, ak.field_b, 0, 256);
+          ArrayBlockSupport.copyObjectRange(var4_array, 0, ak.field_b, 256, 256);
           var2_arrayLifetime1 = sg.a(true, "", DequeWidgetContainer.field_C, "wall_normal_kerrus");
-          kf.a(var2_arrayLifetime1, 0, ak.field_b, 512, 256);
+          ArrayBlockSupport.copyObjectRange(var2_arrayLifetime1, 0, ak.field_b, 512, 256);
           var2_arrayLifetime2 = sg.a(true, "", DequeWidgetContainer.field_C, "wall_station");
-          kf.a(var2_arrayLifetime2, 0, ak.field_b, 768, 256);
+          ArrayBlockSupport.copyObjectRange(var2_arrayLifetime2, 0, ak.field_b, 768, 256);
           var2_arrayLifetime3 = sg.a(true, "", DequeWidgetContainer.field_C, "wall_hive");
-          kf.a(var2_arrayLifetime3, 0, ak.field_b, 1024, 256);
-          kf.a(var4_array, 0, ak.field_b, 1280, 256);
-          kf.a(var4_array, 0, ak.field_b, 1536, 256);
+          ArrayBlockSupport.copyObjectRange(var2_arrayLifetime3, 0, ak.field_b, 1024, 256);
+          ArrayBlockSupport.copyObjectRange(var4_array, 0, ak.field_b, 1280, 256);
+          ArrayBlockSupport.copyObjectRange(var4_array, 0, ak.field_b, 1536, 256);
           var2_arrayLifetime4 = sg.a(true, "", DequeWidgetContainer.field_C, "wall_office");
-          kf.a(var2_arrayLifetime4, 0, ak.field_b, 1792, 256);
+          ArrayBlockSupport.copyObjectRange(var2_arrayLifetime4, 0, ak.field_b, 1792, 256);
           var4_array = null;
           ValidationStatusWidget.field_Z = th.a(DequeWidgetContainer.field_C, -124, "digitalserial_10", RegistrationAgreementPane.field_J, "");
           wh.field_d = th.a(DequeWidgetContainer.field_C, param0 + 201, "digitalserial_16", RegistrationAgreementPane.field_J, "");
@@ -133,7 +133,7 @@ public final class HostileSpawn extends NetworkGameClient {
               id.field_A.setInlineSprites(var5, (int[]) null);
               il.field_c = jd.a((byte) 33, "", DequeWidgetContainer.field_C, "infoscreen");
               DialogMessagePane.field_H = MouseInput.a("", 27, "numkeys", DequeWidgetContainer.field_C);
-              pl.field_f = MouseInput.a("", 114, "secweaponkeys", DequeWidgetContainer.field_C);
+              MusicPatchEnvelope.field_f = MouseInput.a("", 114, "secweaponkeys", DequeWidgetContainer.field_C);
               fj.field_Kb = jd.a((byte) 33, "", DequeWidgetContainer.field_C, "achievements_lrg");
               SpriteGeometry.field_v = qm.a("", 0, "hs_unachieved", DequeWidgetContainer.field_C);
               de.field_i = MouseInput.a("basic", param0 + 222, "locked", wd.field_a);
@@ -167,7 +167,7 @@ public final class HostileSpawn extends NetworkGameClient {
               ng.field_p = new RgbSprite[5][];
               ng.field_p[2] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, param0 + 228, "", "marine_legs_left");
               ng.field_p[3] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 97, "", "marine_legs_right");
-              ng.field_p[1] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, bm.a((int) param0, -10), "", "marine_legs_forward");
+              ng.field_p[1] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, bm.bitwiseXor((int) param0, -10), "", "marine_legs_forward");
               ng.field_p[4] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 116, "", "marine_legs_back");
               ng.field_p[4] = FullscreenStatusDialog.a(ng.field_p[4], 150, 27);
               ng.field_p[0] = null;
@@ -196,10 +196,10 @@ public final class HostileSpawn extends NetworkGameClient {
               ByteStorage.field_d[0][4] = qm.a("", param0 + 113, "kerrus_5_preview", DequeWidgetContainer.field_C);
               ByteStorage.field_d[0][5] = qm.a("", 0, "kerrus_6_preview", DequeWidgetContainer.field_C);
               ByteStorage.field_d[0][6] = qm.a("", param0 + 113, "kerrus_7_preview", DequeWidgetContainer.field_C);
-              ByteStorage.field_d[0][7] = qm.a("", bm.a((int) param0, -113), "kerrus_8_preview", DequeWidgetContainer.field_C);
+              ByteStorage.field_d[0][7] = qm.a("", bm.bitwiseXor((int) param0, -113), "kerrus_8_preview", DequeWidgetContainer.field_C);
               ByteStorage.field_d[0][8] = qm.a("", 0, "kerrus_9_preview", DequeWidgetContainer.field_C);
               ByteStorage.field_d[0][9] = qm.a("", 0, "kerrus_10_preview", DequeWidgetContainer.field_C);
-              ByteStorage.field_d[1][0] = qm.a("", bm.a((int) param0, -113), "vengeance_1_preview", DequeWidgetContainer.field_C);
+              ByteStorage.field_d[1][0] = qm.a("", bm.bitwiseXor((int) param0, -113), "vengeance_1_preview", DequeWidgetContainer.field_C);
               ByteStorage.field_d[1][1] = qm.a("", 0, "vengeance_2_preview", DequeWidgetContainer.field_C);
               ByteStorage.field_d[1][2] = qm.a("", 0, "vengeance_3_preview", DequeWidgetContainer.field_C);
               ByteStorage.field_d[1][3] = qm.a("", 0, "vengeance_4_preview", DequeWidgetContainer.field_C);
@@ -224,7 +224,7 @@ public final class HostileSpawn extends NetworkGameClient {
               AccountServiceResult.field_j = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 125, "", "bullet_acid");
               sj.field_e = fg.a("", "bullet_plasma", DequeWidgetContainer.field_C, false);
               FullscreenFocusCanvas.field_c = MouseInput.a("", -36, "bullet_rocket", DequeWidgetContainer.field_C);
-              df.field_g = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 125, "", "muzzleflash");
+              GrowableIntArray.field_g = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 125, "", "muzzleflash");
               id.field_p = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 89, "", "impact_gun");
               fg.a("", "impact_rail", DequeWidgetContainer.field_C, false);
               MouseInput.a("", 116, "scorchmark_alpha", DequeWidgetContainer.field_C);
@@ -257,7 +257,7 @@ public final class HostileSpawn extends NetworkGameClient {
           qg.field_q = fg.a("", "dragged_slime", DequeWidgetContainer.field_C, false);
           uf.field_g = new IndexedSprite[3];
           uf.field_g[0] = qm.a("", 0, "win_kerrus", DequeWidgetContainer.field_C);
-          uf.field_g[1] = qm.a("", bm.a((int) param0, -113), "win_vengeance", DequeWidgetContainer.field_C);
+          uf.field_g[1] = qm.a("", bm.bitwiseXor((int) param0, -113), "win_vengeance", DequeWidgetContainer.field_C);
           uf.field_g[2] = qm.a("", 0, "win_vengeance_alt", DequeWidgetContainer.field_C);
           DequeWidgetContainer.field_C = null;
           ResourceArchive.field_a = null;
@@ -323,7 +323,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[127] = hh.field_b;
           ia.field_l[186] = dc.field_b;
           ia.field_l[138] = DiskArchiveRequest.field_z;
-          ia.field_l[149] = hf.field_e;
+          ia.field_l[149] = ByteArrayPoolSupport.field_e;
           ia.field_l[217] = IntrusiveNodeHashTable.field_a;
           ia.field_l[114] = DraggableWidgetContainer.field_N;
           ia.field_l[208] = DualLinkDeque.field_c;
@@ -344,7 +344,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[123] = MouseInput.field_l;
           ia.field_l[65] = ImageProducerRasterBuffer.field_o;
           ia.field_l[66] = AwtRasterBuffer.field_h;
-          ia.field_l[97] = df.field_a;
+          ia.field_l[97] = GrowableIntArray.field_a;
           ia.field_l[203] = qh.field_g;
           ia.field_l[102] = lh.field_e;
           ia.field_l[111] = qg.field_m;
@@ -377,7 +377,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[158] = AlphaWidgetContainer.field_B;
           ia.field_l[63] = FullscreenFocusCanvas.field_h;
           ia.field_l[113] = AgeValidator.field_p;
-          ia.field_l[48] = hf.field_b;
+          ia.field_l[48] = ByteArrayPoolSupport.field_b;
           ia.field_l[94] = jc.field_a;
           ia.field_l[187] = bb.field_a;
           ia.field_l[205] = j.field_a;
@@ -401,7 +401,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[132] = MouseInput.field_g;
           ia.field_l[116] = dd.field_j;
           ia.field_l[73] = GameCanvas.field_h;
-          ia.field_l[178] = df.field_j;
+          ia.field_l[178] = GrowableIntArray.field_j;
           ia.field_l[38] = GridPoint.field_d;
           ia.field_l[64] = KeyboardInput.field_j;
           ia.field_l[88] = ea.field_e;
@@ -418,7 +418,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[36] = ih.field_v;
           ia.field_l[143] = kc.field_d;
           ia.field_l[160] = ln.field_j;
-          ia.field_l[67] = pl.field_j;
+          ia.field_l[67] = MusicPatchEnvelope.field_j;
           ia.field_l[156] = wi.field_e;
           ia.field_l[68] = ProgressDialog.field_hb;
           ia.field_l[39] = hg.field_a;
@@ -429,7 +429,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[56] = an.field_j;
           ia.field_l[100] = nd.field_a;
           ia.field_l[200] = sd.field_t;
-          ia.field_l[196] = hf.field_j;
+          ia.field_l[196] = ByteArrayPoolSupport.field_j;
           ia.field_l[98] = sj.field_g;
           ia.field_l[122] = ej.field_d;
           ia.field_l[216] = gf.field_d;
@@ -438,7 +438,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[109] = FullscreenStatusDialog.field_cb;
           ia.field_l[107] = eb.field_b;
           ia.field_l[191] = DelayedPacket.field_n;
-          ia.field_l[154] = pl.field_p;
+          ia.field_l[154] = MusicPatchEnvelope.field_p;
           ia.field_l[148] = wk.field_a;
           ia.field_l[185] = AchievementNotification.field_j;
           ia.field_l[110] = SocketFactory.field_c;
@@ -1153,7 +1153,7 @@ public final class HostileSpawn extends NetworkGameClient {
           og.resetStaticState((byte) -50);
           MidiPcmStream.a(false);
           jm.a(true);
-          tm.clearStaticReferences(true);
+          MusicPatchNode.clearStaticReferences(true);
           MidiFileReader.clearStaticReferences();
           MusicPatchPcmStream.d(-1);
           AudioOutput.clearStaticReferences();
@@ -1249,7 +1249,7 @@ public final class HostileSpawn extends NetworkGameClient {
           Bzip2Decompressor.clearStaticReferences();
           Bzip2State.clearStaticReferences(-665);
           ng.clearStaticReferences(10448);
-          hf.clearStaticReferences(false);
+          ByteArrayPoolSupport.clearStaticReferences(false);
           ve.clearStaticReferences(0);
           rf.clearStaticReferences(5592405);
           ha.clearStaticReferences(true);
@@ -1281,9 +1281,9 @@ public final class HostileSpawn extends NetworkGameClient {
           ak.clearStaticReferences(param0 - 15701);
           ea.clearStaticReferences(0);
           bf.clearStaticReferences(2107940192);
-          bc.a((byte) -52);
-          nf.c(118);
-          pl.clearStaticReferences(true);
+          MidiNoteMask.a((byte) -52);
+          MusicPatch.c(118);
+          MusicPatchEnvelope.clearStaticReferences(true);
           j.clearStaticReferences((byte) -120);
           LabeledWidgetContainer.clearStaticReferences(0);
           TextInputField.clearTextInputFieldGlobals(10);
@@ -1303,7 +1303,7 @@ public final class HostileSpawn extends NetworkGameClient {
           tf.clearStaticReferences(16976);
           RichTextLayout.c(param0 + 99);
           DirectByteStorage.c((byte) 70);
-          df.clearStaticReferences(49);
+          GrowableIntArray.clearStaticReferences(49);
           DraggableWidgetContainer.clearDeclaredStaticReferences((byte) -122);
           DropTargetWidgetContainer.clearDeclaredStaticReferences((byte) -55);
           nd.clearStaticReferences(30401);
@@ -1430,7 +1430,7 @@ public final class HostileSpawn extends NetworkGameClient {
           bf.field_f = new RgbSprite[7][];
           kl.field_b = new RgbSprite[7][];
           FullscreenStatusDialog.field_eb = new RgbSprite[7][];
-          pa.field_i[4] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, bm.a(param0, 76), "", "spawn_guard_attack");
+          pa.field_i[4] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, bm.bitwiseXor(param0, 76), "", "spawn_guard_attack");
           pa.field_i[5] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 92, "", "spawn_guard_death");
           pa.field_i[0] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 122, "", "spawn_guard_idle");
           if (param0 != 39) {
@@ -1443,20 +1443,20 @@ public final class HostileSpawn extends NetworkGameClient {
           bf.field_f[0] = bf.field_f[1];
           bf.field_f[4] = bf.field_f[1];
           re.field_D[4] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 102, "", "spawn_queen_attack");
-          re.field_D[5] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, bm.a(param0, 87), "", "spawn_queen_death");
+          re.field_D[5] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, bm.bitwiseXor(param0, 87), "", "spawn_queen_death");
           re.field_D[0] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 91, "", "spawn_queen_idle");
-          re.field_D[1] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, bm.a(param0, 67), "", "spawn_queen_walk");
+          re.field_D[1] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, bm.bitwiseXor(param0, 67), "", "spawn_queen_walk");
           kl.field_b[4] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 102, "", "spawn_runner_attack");
           kl.field_b[5] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 102, "", "spawn_runner_death");
           kl.field_b[0] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, param0 + 69, "", "spawn_runner_idle");
           kl.field_b[1] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 125, "", "spawn_runner_walk");
-          lb.field_a[4] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, bm.a(param0, 74), "", "spawn_spitter_attack");
+          lb.field_a[4] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, bm.bitwiseXor(param0, 74), "", "spawn_spitter_attack");
           lb.field_a[5] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 93, "", "spawn_spitter_death");
           lb.field_a[0] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 117, "", "spawn_spitter_idle");
           lb.field_a[1] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 126, "", "spawn_spitter_walk");
           ArchiveIndex.field_f[4] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 119, "", "spawn_praetorian_attack");
           ArchiveIndex.field_f[5] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, param0 + 74, "", "spawn_praetorian_death");
-          ArchiveIndex.field_f[0] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, bm.a(param0, 70), "", "spawn_praetorian_idle");
+          ArchiveIndex.field_f[0] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, bm.bitwiseXor(param0, 70), "", "spawn_praetorian_idle");
           ArchiveIndex.field_f[1] = DelayedPacket.loadNamedRgbSprites(DequeWidgetContainer.field_C, 93, "", "spawn_praetorian_walk");
           var2 = new RgbSprite[][][]{ClientLookupTables.field_c, pa.field_i, bf.field_f, re.field_D, kl.field_b, lb.field_a, cb.field_g, DequeWidgetContainer.field_y, ArchiveIndex.field_f};
           var3 = var2;
@@ -1480,8 +1480,8 @@ public final class HostileSpawn extends NetworkGameClient {
             stackIn_10_1 = 0;
           }
           var3_array = new RgbSprite[stackIn_10_0[stackIn_10_1].length + lb.field_a[4].length];
-          kf.a(lb.field_a[4], 0, var3_array, 0, lb.field_a[4].length);
-          kf.a(lb.field_a[0], 0, var3_array, lb.field_a[4].length, lb.field_a[0].length);
+          ArrayBlockSupport.copyObjectRange(lb.field_a[4], 0, var3_array, 0, lb.field_a[4].length);
+          ArrayBlockSupport.copyObjectRange(lb.field_a[0], 0, var3_array, lb.field_a[4].length, lb.field_a[0].length);
           lb.field_a[4] = var3_array;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1508,7 +1508,7 @@ public final class HostileSpawn extends NetworkGameClient {
           GridPoint.field_h[0][9] = bi.field_h.getFileByName("level07-new.dat", "", 0);
           GridPoint.field_h[0][0] = bi.field_h.getFileByName("levelf1-new.dat", "", param0);
           GridPoint.field_h[0][1] = bi.field_h.getFileByName("levelf2-new.dat", "", 0);
-          GridPoint.field_h[0][2] = bi.field_h.getFileByName("levelf3-new.dat", "", bm.a(param0, 0));
+          GridPoint.field_h[0][2] = bi.field_h.getFileByName("levelf3-new.dat", "", bm.bitwiseXor(param0, 0));
           var2_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var2_int >= 10))) {
@@ -1589,7 +1589,7 @@ public final class HostileSpawn extends NetworkGameClient {
                 scanLoop1: while (true) {
                   if (var2_int > var3_int) {
                     pb.field_Ob[var3_int] = sg.field_j.field_j[var3_int];
-                    ArchiveProvider.field_c[var3_int] = ll.a(ArchiveProvider.field_c[var3_int], pb.field_Ob[var3_int]);
+                    ArchiveProvider.field_c[var3_int] = ll.bitwiseOr(ArchiveProvider.field_c[var3_int], pb.field_Ob[var3_int]);
                     var3_int++;
                     if (var4 == 0) {
                       continue;
@@ -1649,7 +1649,7 @@ public final class HostileSpawn extends NetworkGameClient {
             boolean decompiledFrameCompleted0 = true;
             if (!StandardContentDialog.p(3)) {
               while (true) {
-                var2 = (m) (tm.field_o.removeFirst(18120));
+                var2 = (m) (MusicPatchNode.field_o.removeFirst(18120));
                 if (null == var2) {
                   break;
                 }
@@ -2064,11 +2064,11 @@ public final class HostileSpawn extends NetworkGameClient {
                 if (0 <= ri.field_h) {
                   var3 = 0;
                   if (var4 != 0 &&
-                    hf.field_i >= 0) {
+                    ByteArrayPoolSupport.field_i >= 0) {
                     var3 = 2;
                   }
                 } else {
-                  if (hf.field_i >= 0) {
+                  if (ByteArrayPoolSupport.field_i >= 0) {
                     var3 = 2;
                   }
                 }
@@ -2105,7 +2105,7 @@ public final class HostileSpawn extends NetworkGameClient {
           var2[0] = gl.a(new RgbSprite(he.field_t.getFileByName("floors_1.jpg", "", 0), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
           var2[1] = gl.a(new RgbSprite(he.field_t.getFileByName("floors_2.jpg", "", param0 + 4), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
           var2[2] = gl.a(new RgbSprite(he.field_t.getFileByName("floors_3.jpg", "", 0), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
-          var2[3] = gl.a(new RgbSprite(he.field_t.getFileByName("floors_4.jpg", "", bm.a(param0, param0)), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
+          var2[3] = gl.a(new RgbSprite(he.field_t.getFileByName("floors_4.jpg", "", bm.bitwiseXor(param0, param0)), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
           var2[5] = gl.a(new RgbSprite(he.field_t.getFileByName("floors_6.jpg", "", param0 + 4), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
           var2[6] = gl.a(new RgbSprite(he.field_t.getFileByName("floors_7.jpg", "", 0), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
           pk.field_d = new RgbSprite[1280];
@@ -2115,7 +2115,7 @@ public final class HostileSpawn extends NetworkGameClient {
             stackIn_11_0 = var2;
             if (var4 == 0) {
               if (stackIn_11_0[var3] != null) {
-                kf.a(var2[var3], 0, pk.field_d, var3 * 160, 160);
+                ArrayBlockSupport.copyObjectRange(var2[var3], 0, pk.field_d, var3 * 160, 160);
               }
               var3++;
               continue;
@@ -2151,9 +2151,9 @@ public final class HostileSpawn extends NetworkGameClient {
     private final void loadVengeanceCampaignLevels(int param0) {
         try {
           GridPoint.field_h[1][0] = IsaacGenerator.field_h.getFileByName("level_01.dat", "", 0);
-          GridPoint.field_h[1][1] = IsaacGenerator.field_h.getFileByName("level_02.dat", "", bm.a(param0, 28974));
-          GridPoint.field_h[1][2] = IsaacGenerator.field_h.getFileByName("level_03.dat", "", bm.a(param0, 28974));
-          GridPoint.field_h[1][3] = IsaacGenerator.field_h.getFileByName("level_04.dat", "", bm.a(param0, param0));
+          GridPoint.field_h[1][1] = IsaacGenerator.field_h.getFileByName("level_02.dat", "", bm.bitwiseXor(param0, 28974));
+          GridPoint.field_h[1][2] = IsaacGenerator.field_h.getFileByName("level_03.dat", "", bm.bitwiseXor(param0, 28974));
+          GridPoint.field_h[1][3] = IsaacGenerator.field_h.getFileByName("level_04.dat", "", bm.bitwiseXor(param0, param0));
           GridPoint.field_h[1][4] = IsaacGenerator.field_h.getFileByName("level_05.dat", "", param0 - 28974);
           GridPoint.field_h[1][5] = IsaacGenerator.field_h.getFileByName("level_06.dat", "", param0 - 28974);
           GridPoint.field_h[1][6] = IsaacGenerator.field_h.getFileByName("level_07.dat", "", 0);
@@ -2423,7 +2423,7 @@ public final class HostileSpawn extends NetworkGameClient {
           SoundCache.field_a = fg.a("", "Scenery_14", DequeWidgetContainer.field_C, false);
           ng.field_v = fg.a("", "Scenery_15", DequeWidgetContainer.field_C, false);
           re.field_q = fg.a("", "Scenery_16", DequeWidgetContainer.field_C, false);
-          hf.field_b = fg.a("", "Scenery_17", DequeWidgetContainer.field_C, false);
+          ByteArrayPoolSupport.field_b = fg.a("", "Scenery_17", DequeWidgetContainer.field_C, false);
           qj.field_l = fg.a("", "Scenery_18", DequeWidgetContainer.field_C, false);
           DebouncedFieldValidator.field_j = fg.a("", "Scenery_19", DequeWidgetContainer.field_C, false);
           eh.field_b = fg.a("", "Scenery_20", DequeWidgetContainer.field_C, false);
@@ -2442,7 +2442,7 @@ public final class HostileSpawn extends NetworkGameClient {
           KeyboardInput.field_j = fg.a("", "Scenery_25", DequeWidgetContainer.field_C, false);
           ImageProducerRasterBuffer.field_o = fg.a("", "Scenery_26", DequeWidgetContainer.field_C, false);
           AwtRasterBuffer.field_h = fg.a("", "Scenery_27", DequeWidgetContainer.field_C, false);
-          pl.field_j = fg.a("", "Scenery_28", DequeWidgetContainer.field_C, false);
+          MusicPatchEnvelope.field_j = fg.a("", "Scenery_28", DequeWidgetContainer.field_C, false);
           ProgressDialog.field_hb = fg.a("", "Scenery_29", DequeWidgetContainer.field_C, false);
           CipherPacketBuffer.field_w = fg.a("", "Scenery_30", DequeWidgetContainer.field_C, false);
           e.field_d = fg.a("", "Scenery_31", DequeWidgetContainer.field_C, false);
@@ -2471,7 +2471,7 @@ public final class HostileSpawn extends NetworkGameClient {
           jc.field_a = fg.a("", "Scenery_48", DequeWidgetContainer.field_C, false);
           hm.field_l = fg.a("", "Scenery_49", DequeWidgetContainer.field_C, false);
           q.field_c = fg.a("", "Scenery_50", DequeWidgetContainer.field_C, false);
-          df.field_a = fg.a("", "Scenery_51", DequeWidgetContainer.field_C, false);
+          GrowableIntArray.field_a = fg.a("", "Scenery_51", DequeWidgetContainer.field_C, false);
           sj.field_g = fg.a("", "Scenery_52", DequeWidgetContainer.field_C, false);
           vf.field_H = fg.a("", "Scenery_53", DequeWidgetContainer.field_C, false);
           nd.field_a = fg.a("", "Scenery_54", DequeWidgetContainer.field_C, false);
@@ -2545,7 +2545,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ml.field_a = fg.a("", "Scenery_97", DequeWidgetContainer.field_C, false);
           p.field_d = MouseInput.a("", -33, "Scenery_98", DequeWidgetContainer.field_C);
           wk.field_a = fg.a("", "Scenery_99", DequeWidgetContainer.field_C, false);
-          hf.field_e = fg.a("", "Scenery_100", DequeWidgetContainer.field_C, false);
+          ByteArrayPoolSupport.field_e = fg.a("", "Scenery_100", DequeWidgetContainer.field_C, false);
           ResourceArchive.field_l = MouseInput.a("", 110, "Scenery_101", DequeWidgetContainer.field_C);
           wh.field_e = MouseInput.a("", 120, "bend_a_1", DequeWidgetContainer.field_C);
           wi.field_e = MouseInput.a("", param0 ^ 13138, "bend_b_2", DequeWidgetContainer.field_C);
@@ -2556,7 +2556,7 @@ public final class HostileSpawn extends NetworkGameClient {
           bb.field_a = MouseInput.a("", param0 - 13007, "diagonal_d_1", DequeWidgetContainer.field_C);
           qg.field_i = MouseInput.a("", param0 - 13121, "diagonal_d_2", DequeWidgetContainer.field_C);
           oa.field_i = MouseInput.a("", -46, "diagonal_d_3", DequeWidgetContainer.field_C);
-          hf.field_j = MouseInput.a("", -112, "Scenery_103", DequeWidgetContainer.field_C);
+          ByteArrayPoolSupport.field_j = MouseInput.a("", -112, "Scenery_103", DequeWidgetContainer.field_C);
           sd.field_t = fg.a("", "Scenery_107", DequeWidgetContainer.field_C, false);
           vb.field_Lb = fg.a("", "Scenery_108", DequeWidgetContainer.field_C, false);
           uh.field_f = fg.a("", "Scenery_109", DequeWidgetContainer.field_C, false);

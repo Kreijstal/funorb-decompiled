@@ -38,9 +38,9 @@ final class cd {
           var12 = new int[var3_int];
           var9 = var12;
           var6 = var9;
-          dk.a(param0.field_M, 0, var10, 0, param0.field_f);
-          dk.a(param0.field_B, 0, var11, 0, param0.field_f);
-          dk.a(param0.field_E, 0, var12, 0, param0.field_f);
+          ArrayBlockSupport.copyIntRange(param0.field_M, 0, var10, 0, param0.field_f);
+          ArrayBlockSupport.copyIntRange(param0.field_B, 0, var11, 0, param0.field_f);
+          ArrayBlockSupport.copyIntRange(param0.field_E, 0, var12, 0, param0.field_f);
           param0.field_E = var6;
           param0.field_B = var5;
           param0.field_M = var4;

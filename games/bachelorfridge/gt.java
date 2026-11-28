@@ -342,15 +342,15 @@ final class gt extends k {
           if (var10 <= 0) {
             if (hh.field_d >= param1 + param4) {
               for (var11 = 0; var11 < param5; var11++) {
-                ArrayOperations.a(param0[param6 + var11], param1, param4, var8_int);
+                ArrayOperations.fillInts(param0[param6 + var11], param1, param4, var8_int);
               }
               return;
             }
             var11Lifetime2 = hh.field_d - param1;
             for (var12 = 0; var12 < param5; var12++) {
               var13 = param0[param6 + var12];
-              ArrayOperations.a(var13, param1, var11Lifetime2, var8_int);
-              ArrayOperations.a(var13, 0, param4 - var11Lifetime2, var8_int);
+              ArrayOperations.fillInts(var13, param1, var11Lifetime2, var8_int);
+              ArrayOperations.fillInts(var13, 0, param4 - var11Lifetime2, var8_int);
             }
             return;
           }
@@ -373,9 +373,9 @@ final class gt extends k {
                   for (var20 = 0; var13_int > var20; var20++) {
                     var21 = var8_int * var20 / var13_int;
                     stackIn_35_0 = var18;
-                    stackIn_35_1 = dda.a(wp.field_r, param1 + var20);
+                    stackIn_35_1 = dda.bitwiseAnd(wp.field_r, param1 + var20);
                     stackIn_35_2 = var18;
-                    stackIn_35_3 = dda.a(wp.field_r, -1 + param4 + (param1 - var20));
+                    stackIn_35_3 = dda.bitwiseAnd(wp.field_r, -1 + param4 + (param1 - var20));
                     stackIn_35_4 = var19 * var21 >> 12;
                     stackIn_35_2[stackIn_35_3] = stackIn_35_4;
                     stackIn_35_0[stackIn_35_1] = stackIn_35_4;
@@ -384,9 +384,9 @@ final class gt extends k {
                   for (var20 = 0; var20 < var13_int; var20++) {
                     var21 = var20 * var8_int / var13_int;
                     stackIn_29_0 = var18;
-                    stackIn_29_1 = dda.a(var20 + param1, wp.field_r);
+                    stackIn_29_1 = dda.bitwiseAnd(var20 + param1, wp.field_r);
                     stackIn_29_2 = var18;
-                    stackIn_29_3 = dda.a(-1 - var20 + (param4 + param1), wp.field_r);
+                    stackIn_29_3 = dda.bitwiseAnd(-1 - var20 + (param4 + param1), wp.field_r);
                     if (var21 >= var19) {
                       stackIn_30_4 = var19;
                     } else {
@@ -398,25 +398,25 @@ final class gt extends k {
                 }
                 if (var16 + var15 > hh.field_d) {
                   var20 = -var15 + hh.field_d;
-                  ArrayOperations.a(var18, var15, var20, var19);
-                  ArrayOperations.a(var18, 0, -var20 + var16, var19);
+                  ArrayOperations.fillInts(var18, var15, var20, var19);
+                  ArrayOperations.fillInts(var18, 0, -var20 + var16, var19);
                 } else {
-                  ArrayOperations.a(var18, var15, var16, var19);
+                  ArrayOperations.fillInts(var18, var15, var16, var19);
                 }
               } else {
                 var19 = param5 - var17 - 1;
                 if (var14 <= var19) {
                   for (var20 = 0; var13_int > var20; var20++) {
-                    dupTemp$0 = dda.a(-var20 + param1 - (-param4 + 1), wp.field_r);
+                    dupTemp$0 = dda.bitwiseAnd(-var20 + param1 - (-param4 + 1), wp.field_r);
                     var18[dupTemp$0] = var8_int * var20 / var13_int;
-                    var18[dda.a(var20 + param1, wp.field_r)] = var8_int * var20 / var13_int;
+                    var18[dda.bitwiseAnd(var20 + param1, wp.field_r)] = var8_int * var20 / var13_int;
                   }
                   if (var16 + var15 <= hh.field_d) {
-                    ArrayOperations.a(var18, var15, var16, var8_int);
+                    ArrayOperations.fillInts(var18, var15, var16, var8_int);
                   } else {
                     var20 = -var15 + hh.field_d;
-                    ArrayOperations.a(var18, var15, var20, var8_int);
-                    ArrayOperations.a(var18, 0, -var20 + var16, var8_int);
+                    ArrayOperations.fillInts(var18, var15, var20, var8_int);
+                    ArrayOperations.fillInts(var18, 0, -var20 + var16, var8_int);
                   }
                   decompiledFrameRemainder0 = false;
                 }
@@ -425,17 +425,17 @@ final class gt extends k {
                   if (this.field_v == 0) {
                     for (var21 = 0; var21 < var13_int; var21++) {
                       var22 = var21 * var8_int / var13_int;
-                      dupTemp$1 = dda.a(wp.field_r, -var21 + param1 + param4 - 1);
+                      dupTemp$1 = dda.bitwiseAnd(wp.field_r, -var21 + param1 + param4 - 1);
                       var18[dupTemp$1] = var22 * var20 >> 12;
-                      var18[dda.a(wp.field_r, param1 + var21)] = var22 * var20 >> 12;
+                      var18[dda.bitwiseAnd(wp.field_r, param1 + var21)] = var22 * var20 >> 12;
                     }
                   } else {
                     for (var21 = 0; var13_int > var21; var21++) {
                       var22 = var21 * var8_int / var13_int;
                       stackIn_45_0 = var18;
-                      stackIn_45_1 = dda.a(wp.field_r, param1 + var21);
+                      stackIn_45_1 = dda.bitwiseAnd(wp.field_r, param1 + var21);
                       stackIn_45_2 = var18;
-                      stackIn_45_3 = dda.a(wp.field_r, -1 + param4 + (param1 - var21));
+                      stackIn_45_3 = dda.bitwiseAnd(wp.field_r, -1 + param4 + (param1 - var21));
                       if (var22 >= var20) {
                         stackIn_46_4 = var20;
                       } else {
@@ -446,11 +446,11 @@ final class gt extends k {
                     }
                   }
                   if (hh.field_d >= var15 + var16) {
-                    ArrayOperations.a(var18, var15, var16, var20);
+                    ArrayOperations.fillInts(var18, var15, var16, var20);
                   } else {
                     var21 = -var15 + hh.field_d;
-                    ArrayOperations.a(var18, var15, var21, var20);
-                    ArrayOperations.a(var18, 0, -var21 + var16, var20);
+                    ArrayOperations.fillInts(var18, var15, var21, var20);
+                    ArrayOperations.fillInts(var18, 0, -var21 + var16, var20);
                   }
                 }
               }

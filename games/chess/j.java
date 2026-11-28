@@ -18,7 +18,7 @@ final class j extends DualLinkNode {
         int var2Lifetime1;
         if (this.field_t != null) {
           for (var2 = 0; var2 < this.field_t.length; var2++) {
-            this.field_t[var2] = DisplayNameSelectionPanel.a(this.field_t[var2], 32768);
+            this.field_t[var2] = DisplayNameSelectionPanel.bitwiseOr(this.field_t[var2], 32768);
           }
         }
         if (param0 != 0) {
@@ -29,7 +29,7 @@ final class j extends DualLinkNode {
           var5 = 0;
           var2Lifetime1 = var5;
           while (var5 < this.field_q.length) {
-            this.field_q[var5] = DisplayNameSelectionPanel.a(this.field_q[var5], 32768);
+            this.field_q[var5] = DisplayNameSelectionPanel.bitwiseOr(this.field_q[var5], 32768);
             var5++;
           }
         }

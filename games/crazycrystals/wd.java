@@ -16,7 +16,7 @@ final class wd extends ik {
         if (!rc.a(-53)) {
           ba.a(3, 51, lo.field_b);
         }
-        dk.field_q = param3;
+        MusicPatch.field_q = param3;
         kp.field_m = param4;
         oc.field_b = param2;
     }

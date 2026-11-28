@@ -132,6 +132,6 @@ final class sb {
 
     static {
         field_i = new byte[65536];
-        ri.a(field_i, 0, 65536, (byte) -128);
+        ArrayBlockSupport.a(field_i, 0, 65536, (byte) -128);
     }
 }

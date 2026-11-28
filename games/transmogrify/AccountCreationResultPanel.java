@@ -48,7 +48,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
                   InteractiveWidget.d((byte) 117);
                 }
                 this.field_nb = true;
-                var4 = wd.field_l;
+                var4 = MidiNoteMask.field_l;
               }
             } else {
               var4 = gb.field_e;
@@ -67,7 +67,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
           } else {
             if (!this.field_nb) {
               if (param2.statusCode != 5) {
-                var5.addActionButton(te.field_f, -1, param0 + 1);
+                var5.addActionButton(GrowableIntArray.field_f, -1, param0 + 1);
               } else {
                 var5.addActionButton(qb.field_a, 11, 1);
                 var5.addActionButton(ta.field_b, 17, 1);
@@ -149,7 +149,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
     }
 
     final void showAccountCreationConnectionFailure(int param0) {
-        this.showAccountCreationResult(0, true, ModalDialog.createAccountErrorResult(242763393, wd.field_l, 248));
+        this.showAccountCreationResult(0, true, ModalDialog.createAccountErrorResult(242763393, MidiNoteMask.field_l, 248));
         int var2 = -109 % ((param0 - 32) / 36);
     }
 

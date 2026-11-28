@@ -85,34 +85,34 @@ final class bg extends IntrusiveNode {
             eg.field_d = ProxyAuthenticationRequiredException.a("benefits", ce.field_a, "signup_text", true);
             nj.field_f = ProxyAuthenticationRequiredException.a("benefits", ce.field_a, "menu_text", true);
             DualLinkNode.field_r = ProxyAuthenticationRequiredException.a("benefits", ce.field_a, "button_frame", true);
-            sc.field_c = ProxyAuthenticationRequiredException.a("benefits", ce.field_a, "arrow", true);
+            ByteArrayPoolSupport.field_c = ProxyAuthenticationRequiredException.a("benefits", ce.field_a, "arrow", true);
             md.field_a = (BitmapFont) ((Object) kc.a(sb.field_g, ce.field_a, "benefits", 125, "large_font"));
-            sc.field_f = (BitmapFont) ((Object) kc.a(sb.field_g, ce.field_a, "benefits", 64, "small_font"));
+            ByteArrayPoolSupport.field_f = (BitmapFont) ((Object) kc.a(sb.field_g, ce.field_a, "benefits", 64, "small_font"));
             var28 = SoftwareRasterizer.field_l;
             var2 = SoftwareRasterizer.field_k;
             var3 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(ha.field_d);
-            var11 = new RgbSprite(sc.field_c.field_y + 4, 4 + sc.field_c.field_w);
+            var11 = new RgbSprite(ByteArrayPoolSupport.field_c.field_y + 4, 4 + ByteArrayPoolSupport.field_c.field_w);
             var11.bindAsRenderTarget();
-            sc.field_c.drawGrayModulated(2, 2, rh.field_e);
+            ByteArrayPoolSupport.field_c.drawGrayModulated(2, 2, rh.field_e);
             p.a(var11.field_y, 2, 0, var11.field_w, 1, 0, 0, var11);
-            sc.field_c = var11;
-            ArchiveRequest.field_x = sc.field_c.copyMirroredHorizontally();
+            ByteArrayPoolSupport.field_c = var11;
+            ArchiveRequest.field_x = ByteArrayPoolSupport.field_c.copyMirroredHorizontally();
             var12 = new RgbSprite(195, 221);
             var6 = var12.field_y / 2;
             var12.bindAsRenderTarget();
             md.field_a.drawCentred(a.a(5044, ja.field_g, new String[]{DebouncedFieldValidator.field_f}), var6, 40, 16777215, -1);
-            sc.field_f.drawCentred(a.a(5044, ek.field_p, new String[]{DebouncedFieldValidator.field_f}), var6, 60, 16777215, -1);
+            ByteArrayPoolSupport.field_f.drawCentred(a.a(5044, ek.field_p, new String[]{DebouncedFieldValidator.field_f}), var6, 60, 16777215, -1);
             md.field_a.drawCentred(a.a(param0 ^ -14537, gk.field_a, new String[]{fl.field_d}), var6, 110, 16777215, -1);
-            sc.field_f.drawCentred(a.a(param0 ^ -14537, IsaacRandom.field_g, new String[]{fl.field_d}), var6, 130, 16777215, -1);
+            ByteArrayPoolSupport.field_f.drawCentred(a.a(param0 ^ -14537, IsaacRandom.field_g, new String[]{fl.field_d}), var6, 130, 16777215, -1);
             md.field_a.drawCentred(lc.field_k, var6, 180, 16777215, -1);
-            sc.field_f.drawCentred(nb.field_c, var6, 200, 16777215, -1);
+            ByteArrayPoolSupport.field_f.drawCentred(nb.field_c, var6, 200, 16777215, -1);
             p.a(var12.field_y, 3, 0, var12.field_w, 1, 0, 0, var12);
             t.field_d.bindAsRenderTarget();
             var12.draw(18 - t.field_d.field_D, -t.field_d.field_v + 241);
             for (var7 = 0; var7 < bc.field_b.length; var7++) {
               ByteStorage.field_c[var7].bindAsRenderTarget();
-              sc.field_f.drawParagraph(bc.field_b[var7], 3, 3, -6 + ByteStorage.field_c[var7].field_y, ByteStorage.field_c[var7].field_w - 6, rh.field_e, -1, 1, 1, sc.field_f.field_x + sc.field_f.field_S);
+              ByteArrayPoolSupport.field_f.drawParagraph(bc.field_b[var7], 3, 3, -6 + ByteStorage.field_c[var7].field_y, ByteStorage.field_c[var7].field_w - 6, rh.field_e, -1, 1, 1, ByteArrayPoolSupport.field_f.field_x + ByteArrayPoolSupport.field_f.field_S);
               p.a(ByteStorage.field_c[var7].field_y, 3, 0, ByteStorage.field_c[var7].field_w, 1, 0, 0, ByteStorage.field_c[var7]);
             }
             bc.field_b = null;
@@ -200,7 +200,7 @@ final class bg extends IntrusiveNode {
             field_r = 6;
           }
           if (df.field_b != null &&
-            null != sc.field_f) {
+            null != ByteArrayPoolSupport.field_f) {
             var30 = SoftwareRasterizer.field_l;
             var2Lifetime2 = SoftwareRasterizer.field_k;
             var3Lifetime2 = SoftwareRasterizer.field_c;
@@ -209,7 +209,7 @@ final class bg extends IntrusiveNode {
             var17 = a.a(5044, jl.field_i, new String[]{df.field_b});
             df.field_b = null;
             var16.bindAsRenderTarget();
-            sc.field_f.drawParagraph(var17, 3, 3, -6 + var16.field_y, var16.field_w - 6, 16777215, -1, 0, 1, sc.field_f.field_S + sc.field_f.field_x);
+            ByteArrayPoolSupport.field_f.drawParagraph(var17, 3, 3, -6 + var16.field_y, var16.field_w - 6, 16777215, -1, 0, 1, ByteArrayPoolSupport.field_f.field_S + ByteArrayPoolSupport.field_f.field_x);
             p.a(var16.field_y, 3, 0, var16.field_w, 1, 0, 0, var16);
             InteractiveWidget.field_D.bindAsRenderTarget();
             var16.draw(-InteractiveWidget.field_D.field_D + 199, -InteractiveWidget.field_D.field_v + 83);
@@ -217,19 +217,19 @@ final class bg extends IntrusiveNode {
             SoftwareRasterizer.restoreClip(ha.field_d);
           }
           if (null != sa.field_e &&
-            null != sc.field_f) {
+            null != ByteArrayPoolSupport.field_f) {
             var31 = SoftwareRasterizer.field_l;
             var2Lifetime3 = SoftwareRasterizer.field_k;
             var3Lifetime3 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(ha.field_d);
-            var4 = sc.field_f.maxLineWidth(ej.field_b, 640) + 6;
+            var4 = ByteArrayPoolSupport.field_f.maxLineWidth(ej.field_b, 640) + 6;
             var5Lifetime1 = 20 + var4 + sa.field_e.field_z;
             var6Lifetime2 = 427 - var5Lifetime1 / 2;
             var7Lifetime2 = var6Lifetime2 - (-sa.field_e.field_z - 20);
             InteractiveWidget.field_D.bindAsRenderTarget();
-            sc.field_f.drawString(ej.field_b, -InteractiveWidget.field_D.field_D + var7Lifetime2, sc.field_f.field_S + (sc.field_f.field_x - InteractiveWidget.field_D.field_v + 155), 16777215, -1);
+            ByteArrayPoolSupport.field_f.drawString(ej.field_b, -InteractiveWidget.field_D.field_D + var7Lifetime2, ByteArrayPoolSupport.field_f.field_S + (ByteArrayPoolSupport.field_f.field_x - InteractiveWidget.field_D.field_v + 155), 16777215, -1);
             p.a(var4, 3, 0, 50, 1, -InteractiveWidget.field_D.field_v + 155, var7Lifetime2 + (-InteractiveWidget.field_D.field_D - 4), InteractiveWidget.field_D);
-            var8Lifetime1 = -((-sc.field_f.field_S - sc.field_f.field_x + (sa.field_e.field_C - 3)) / 2) - InteractiveWidget.field_D.field_v + 155;
+            var8Lifetime1 = -((-ByteArrayPoolSupport.field_f.field_S - ByteArrayPoolSupport.field_f.field_x + (sa.field_e.field_C - 3)) / 2) - InteractiveWidget.field_D.field_v + 155;
             sa.field_e.draw(var6Lifetime2 - InteractiveWidget.field_D.field_D, var8Lifetime1);
             SoftwareRasterizer.setRasterBuffer(var31, var2Lifetime3, var3Lifetime3);
             SoftwareRasterizer.restoreClip(ha.field_d);
@@ -288,27 +288,27 @@ final class bg extends IntrusiveNode {
             stackIn_67_0 = (1 == ArchiveRequest.field_w.field_f);
             qj.a(stackIn_67_0, AccountRegistrationPanel.field_N, ch.field_A, true);
           }
-          if (sc.field_c != null) {
-            var1_int = -(sc.field_c.field_C / 2) + 357;
-            sc.field_c.draw(-sc.field_c.field_z + 269, var1_int);
+          if (ByteArrayPoolSupport.field_c != null) {
+            var1_int = -(ByteArrayPoolSupport.field_c.field_C / 2) + 357;
+            ByteArrayPoolSupport.field_c.draw(-ByteArrayPoolSupport.field_c.field_z + 269, var1_int);
             ArchiveRequest.field_x.draw(586, var1_int);
             if (ob.field_g > var1_int &&
-              var1_int + sc.field_c.field_w > ob.field_g) {
+              var1_int + ByteArrayPoolSupport.field_c.field_w > ob.field_g) {
               var2Lifetime5 = 40 + (ModalDialogHost.b(0, ModalDialogHost.field_L << 4) * 40 >> 16);
               if (var2Lifetime5 <= 0) {
                 wd.b(139);
-                ByteStorage.field_c[ig.field_k].draw(269, 340);
+                ByteStorage.field_c[MusicPatch.field_k].draw(269, 340);
                 return;
               }
-              if (ck.field_c > -sc.field_c.field_y + 269 &&
+              if (ck.field_c > -ByteArrayPoolSupport.field_c.field_y + 269 &&
                 ck.field_c < 269) {
-                sc.field_c.drawAdditive(-1 + (269 - sc.field_c.field_z), -1 + var1_int, var2Lifetime5);
-                sc.field_c.drawAdditive(270 - sc.field_c.field_z, var1_int - 1, var2Lifetime5);
-                sc.field_c.drawAdditive(-1 + (269 - sc.field_c.field_z), var1_int + 1, var2Lifetime5);
-                sc.field_c.drawAdditive(-sc.field_c.field_z + 270, 1 + var1_int, var2Lifetime5);
+                ByteArrayPoolSupport.field_c.drawAdditive(-1 + (269 - ByteArrayPoolSupport.field_c.field_z), -1 + var1_int, var2Lifetime5);
+                ByteArrayPoolSupport.field_c.drawAdditive(270 - ByteArrayPoolSupport.field_c.field_z, var1_int - 1, var2Lifetime5);
+                ByteArrayPoolSupport.field_c.drawAdditive(-1 + (269 - ByteArrayPoolSupport.field_c.field_z), var1_int + 1, var2Lifetime5);
+                ByteArrayPoolSupport.field_c.drawAdditive(-ByteArrayPoolSupport.field_c.field_z + 270, 1 + var1_int, var2Lifetime5);
               } else {
                 if (ck.field_c > 586 &&
-                  sc.field_c.field_y + 586 > ck.field_c) {
+                  ByteArrayPoolSupport.field_c.field_y + 586 > ck.field_c) {
                   ArchiveRequest.field_x.drawAdditive(585, -1 + var1_int, var2Lifetime5);
                   ArchiveRequest.field_x.drawAdditive(587, var1_int - 1, var2Lifetime5);
                   ArchiveRequest.field_x.drawAdditive(585, 1 + var1_int, var2Lifetime5);
@@ -318,7 +318,7 @@ final class bg extends IntrusiveNode {
             }
           }
           wd.b(139);
-          ByteStorage.field_c[ig.field_k].draw(269, 340);
+          ByteStorage.field_c[MusicPatch.field_k].draw(269, 340);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

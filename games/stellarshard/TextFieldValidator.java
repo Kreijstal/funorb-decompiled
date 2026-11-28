@@ -133,18 +133,18 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
         try {
           TriangleRasterizer.useRasterClip();
           fc.field_e = 11;
-          ol.field_g = new int[260];
+          GrowableIntArray.field_g = new int[260];
           if (param0 != 25536) {
             field_e = (DraggableWidgetContainer) null;
           }
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var2 = 15.0;
-            ol.field_g[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
+            GrowableIntArray.field_g[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
           }
           var5 = 256;
           var1_intLifetime1 = var5;
-          while (ol.field_g.length > var5) {
-            ol.field_g[var5] = 255;
+          while (GrowableIntArray.field_g.length > var5) {
+            GrowableIntArray.field_g[var5] = 255;
             var5++;
           }
           return;

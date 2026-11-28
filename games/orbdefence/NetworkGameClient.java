@@ -105,7 +105,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = ik.a(lm.c(32018), fb.b((byte) -128), ~param1);
+            var5_int = MusicPatch.a(lm.c(32018), fb.b((byte) -128), ~param1);
             if (var5_int != -1) {
               FullscreenNoticeType.a(-35, ValidationStatusWidget.field_Y, SoundCache.field_e, var5_int);
               SoundCache.field_e = null;
@@ -194,7 +194,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   var9 = (String) null;
                   li.a(-1, (String) null);
                 } else {
-                  var7 = tj.decodeCp1252String(var12.position, 0, 0, var12.payload);
+                  var7 = GrowableIntArray.decodeCp1252String(var12.position, 0, 0, var12.payload);
                   li.a(param1 + 0, var7);
                 }
                 ml.field_e = null;
@@ -419,7 +419,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             ql.a(5, (byte) 21);
           }
           if (vk.field_w[5]) {
-            ik.a((byte) -74, 6);
+            MusicPatch.a((byte) -74, 6);
           }
           if (vk.field_w[6]) {
             nh.a(param0 + 15961, 7);

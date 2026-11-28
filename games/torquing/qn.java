@@ -261,7 +261,7 @@ final class qn extends am {
               }
             }
           } else {
-            dk.a(var19, 0, ci.field_c, 0);
+            ArrayBlockSupport.fillInts(var19, 0, ci.field_c, 0);
           }
         }
         return var3;

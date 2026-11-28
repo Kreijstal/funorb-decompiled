@@ -52,7 +52,7 @@ final class b {
               hh.field_p.position = 0;
               hh.field_p.writeByte(14, (byte) 121);
               hh.field_p.writeByte(DraggableWidgetContainer.field_E.b((byte) -101).field_a, (byte) 64);
-              jj.a(-1, true);
+              ByteArrayPoolSupport.a(-1, true);
               pj.field_a = IsaacRandom.field_h;
             }
             if (IsaacRandom.field_h == pj.field_a &&

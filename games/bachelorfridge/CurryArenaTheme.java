@@ -14,7 +14,7 @@ final class CurryArenaTheme extends ArenaTheme {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!g.a(param3, param2, param0 - 23018, param1)) {
+          if (!MidiNoteMask.a(param3, param2, param0 - 23018, param1)) {
             stackIn_2_0 = null;
             return (IndexedSprite[]) (stackIn_2_0);
           }

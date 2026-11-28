@@ -65,8 +65,8 @@ final class ei {
           SoftwareRasterizer.drawRectangleOutline(243, 197, 369, 143, 16777215);
           SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (TextLayout.field_b == null) {
-            if (rc.field_a != null) {
-              rc.field_a.drawParagraph(cj.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (MusicPatchEnvelope.field_a != null) {
+              MusicPatchEnvelope.field_a.drawParagraph(cj.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
@@ -78,8 +78,8 @@ final class ei {
           if (var7 != null) {
             var7.draw(245, 199);
           } else {
-            if (rc.field_a != null) {
-              rc.field_a.drawParagraph(cj.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (MusicPatchEnvelope.field_a != null) {
+              MusicPatchEnvelope.field_a.drawParagraph(cj.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           }
           if (og.field_b > LabeledWidgetContainer.field_A) {
@@ -94,7 +94,7 @@ final class ei {
               }
             }
           }
-          if (rc.field_a != null) {
+          if (MusicPatchEnvelope.field_a != null) {
             var2 = null;
             var6 = 0;
             var3Lifetime1 = var6;
@@ -113,7 +113,7 @@ final class ei {
             if (var2 == null) {
               return;
             }
-            rc.field_a.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+            MusicPatchEnvelope.field_a.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
             return;
           }
           return;

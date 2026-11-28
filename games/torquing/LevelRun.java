@@ -76,7 +76,7 @@ final class LevelRun {
           var10 = this.field_d.field_q;
           var2 = var10;
           this.field_D = new tl[var10.length];
-          dk.a(var2, 0, this.field_D, 0, this.field_D.length);
+          ArrayBlockSupport.copyObjectRange(var2, 0, this.field_D, 0, this.field_D.length);
           var3 = 0;
           for (var4_int = 0; var4_int < this.field_D.length; var4_int++) {
             if (this.field_D[var4_int].f(25468)) {
@@ -486,7 +486,7 @@ final class LevelRun {
           }
           var6Lifetime1 = this.field_Q.length;
           var7 = new kg[var6Lifetime1 + 1];
-          dk.a(this.field_Q, 0, var7, 0, var6Lifetime1);
+          ArrayBlockSupport.copyObjectRange(this.field_Q, 0, var7, 0, var6Lifetime1);
           if (param0 != 538) {
             this.field_L = -15;
           }
@@ -1044,7 +1044,7 @@ final class LevelRun {
           if (this.field_r > 0) {
             var3Lifetime2 = (this.field_r - 1) / 1000;
             var4Lifetime3 = -(1000 * var3Lifetime2) + this.field_r;
-            var5 = hq.field_h[var3Lifetime2];
+            var5 = GrowableIntArray.field_h[var3Lifetime2];
             var6 = var4Lifetime3 * var5.field_s / 1000;
             var7 = var5.field_t * var4Lifetime3 / 1000;
             var5.drawScaled((-var6 + 640) / 2, (480 - var7) / 2, var6, var7);
@@ -1299,7 +1299,7 @@ final class LevelRun {
             var24 = var30;
             var10_ref_short__ = var24;
             var11_int = (short)(65535 & var30[0] + 1024);
-            dk.a(var10_ref_short__, 0, var30.length, (short) var11_int);
+            ArrayBlockSupport.a(var10_ref_short__, 0, var30.length, (short) var11_int);
             this.field_M = this.field_M ^ var11_int << 3;
             this.field_o = this.field_o ^ var11_int << 3;
           }

@@ -95,7 +95,7 @@ final class fl extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!kk.a(param1, param0 + 2, param3, param2)) {
+          if (!MusicPatch.a(param1, param0 + 2, param3, param2)) {
             return null;
           }
           if (param0 != -1) {

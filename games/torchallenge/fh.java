@@ -17,7 +17,7 @@ final class fh {
         }
         DiskCacheWorker.field_b = 1;
         ResourceArchive.field_e = param2;
-        m.field_h = param0;
+        GrowableIntArray.field_h = param0;
     }
 
     public static void resetStaticState(byte param0) {

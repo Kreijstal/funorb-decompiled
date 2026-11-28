@@ -304,7 +304,7 @@ abstract class DampedProjectile extends MovingTunnelEntity {
     static {
         field_W = "Others have tried#and failed.#If you succeed, your reward#will be#immeasurable.";
         field_V = new byte[65536];
-        lj.a(field_V, 0, 65536, (byte) -128);
+        ArrayBlockSupport.a(field_V, 0, 65536, (byte) -128);
         field_R = false;
     }
 }

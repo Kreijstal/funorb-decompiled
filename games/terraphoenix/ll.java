@@ -130,22 +130,22 @@ final class ll {
 
     final synchronized static long correctedCurrentTimeMillis(int param0) {
         long var1 = System.currentTimeMillis();
-        if (var1 < sh.field_n) {
-          ba.field_i = ba.field_i + (sh.field_n - var1);
+        if (var1 < MusicPatchNode.field_n) {
+          ba.field_i = ba.field_i + (MusicPatchNode.field_n - var1);
           if (param0 != 1000) {
             ll.correctedCurrentTimeMillis(101);
-            sh.field_n = var1;
+            MusicPatchNode.field_n = var1;
             return var1 + ba.field_i;
           }
-          sh.field_n = var1;
+          MusicPatchNode.field_n = var1;
           return var1 + ba.field_i;
         }
         if (param0 == 1000) {
-          sh.field_n = var1;
+          MusicPatchNode.field_n = var1;
           return var1 + ba.field_i;
         }
         ll.correctedCurrentTimeMillis(101);
-        sh.field_n = var1;
+        MusicPatchNode.field_n = var1;
         return var1 + ba.field_i;
     }
 

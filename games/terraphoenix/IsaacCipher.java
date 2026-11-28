@@ -54,10 +54,10 @@ final class IsaacCipher {
             }
           }
           this.field_b = this.field_b + this.field_a[128 + var2 & 255];
-          dupTemp$1 = this.field_e + (this.field_a[dg.a(var3, 1020) >> 2] + this.field_b);
+          dupTemp$1 = this.field_e + (this.field_a[dg.bitwiseAnd(var3, 1020) >> 2] + this.field_b);
           var4 = dupTemp$1;
           this.field_a[var2] = dupTemp$1;
-          dupTemp$2 = this.field_a[dg.a(var4, 261306) >> 8 >> 2] + var3;
+          dupTemp$2 = this.field_a[dg.bitwiseAnd(var4, 261306) >> 8 >> 2] + var3;
           this.field_e = dupTemp$2;
           this.field_i[var2] = dupTemp$2;
         }
@@ -237,7 +237,7 @@ final class IsaacCipher {
             return;
           }
           for (var4 = 0; var3 > var4; var4++) {
-            cm.field_b[var4] = fc.a(11043, var8);
+            cm.field_b[var4] = GrowableIntArray.a(11043, var8);
           }
           var10.endBitAccess(8);
           var9 = 0;

@@ -46,7 +46,7 @@ final class DamagePopupAnimation extends AnimationNode {
             var6 = param1;
             var7 = param4;
             var8 = param2;
-            var6[var7] = var8 + dda.a(var6[var7] >> 1, 8355711);
+            var6[var7] = var8 + dda.bitwiseAnd(var6[var7] >> 1, 8355711);
             param4++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

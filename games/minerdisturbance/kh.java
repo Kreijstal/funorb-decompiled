@@ -130,7 +130,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           var2_int = param0.length;
           var3 = new byte[var2_int];
-          ai.copyByteRange(param0, 0, var3, 0, var2_int);
+          ArrayBlockSupport.copyByteRange(param0, 0, var3, 0, var2_int);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

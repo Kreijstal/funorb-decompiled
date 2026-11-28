@@ -47,7 +47,7 @@ final class aj {
             var5 = var9;
             var6 = param4;
             var7 = param3;
-            var9[var6] = var7 + (DirectByteStorage.a(var9[var6], 16711422) >> 1);
+            var9[var6] = var7 + (DirectByteStorage.bitwiseAnd(var9[var6], 16711422) >> 1);
             param4++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

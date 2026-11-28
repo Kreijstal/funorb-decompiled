@@ -39,7 +39,7 @@ final class vh {
           return;
         }
         if (param0) {
-          this.field_k[this.field_j >> 5] = hm.a(this.field_k[this.field_j >> 5], 1 << pf.b(31, this.field_j));
+          this.field_k[this.field_j >> 5] = hm.bitwiseOr(this.field_k[this.field_j >> 5], 1 << pf.bitwiseAnd(31, this.field_j));
         }
         this.field_j = this.field_j + 1;
     }

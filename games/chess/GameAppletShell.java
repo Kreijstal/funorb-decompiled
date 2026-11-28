@@ -836,10 +836,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             ie.field_a = ((var6_int >> 1) + 32000) / var6_int;
           }
           qk.field_e = qk.field_e + 1 & 31;
-          fieldTemp$1 = td.field_p;
-          td.field_p = td.field_p + 1;
+          fieldTemp$1 = MidiNoteMask.field_p;
+          MidiNoteMask.field_p = MidiNoteMask.field_p + 1;
           if (50 < fieldTemp$1) {
-            td.field_p = td.field_p - 50;
+            MidiNoteMask.field_p = MidiNoteMask.field_p - 50;
             od.field_W = true;
             DirectByteStorage.field_h.setSize(tm.field_c, em.field_O);
             DirectByteStorage.field_h.setVisible(true);

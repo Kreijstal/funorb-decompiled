@@ -41,7 +41,7 @@ final class ue {
             var13 = param6;
             var14 = param3;
             var15 = var18[var11] >> 1 & 8355711;
-            var10[var11] = (sc.a(33423528, var14) >> 17) + (sc.a(65280, var13 >> 9) + (sc.a(var12, 33423360) >> 1)) + var15;
+            var10[var11] = (sc.bitwiseAnd(33423528, var14) >> 17) + (sc.bitwiseAnd(65280, var13 >> 9) + (sc.bitwiseAnd(var12, 33423360) >> 1)) + var15;
             param2 = param2 + param8;
             param0++;
             param6 = param6 + param7;

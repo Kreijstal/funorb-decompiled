@@ -199,7 +199,7 @@ final class rh {
             var9 = var7;
             var9.appendImageAndText(param2, param3, 250);
             var6 = new TooltipPanel[1 + param1.length];
-            dk.a(param1, 0, var6, 0, param1.length);
+            ArrayBlockSupport.copyObjectRange(param1, 0, var6, 0, param1.length);
             var6[param1.length] = var7;
             param1 = var6;
           }

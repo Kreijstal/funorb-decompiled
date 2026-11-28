@@ -137,7 +137,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var9 = new int[var3];
             var21 = var9;
             for (var6_int = 0; var6_int < var3; var6_int++) {
-              var9[var6_int] = hk.field_f[dda.a(255, (int) var20[var6_int])];
+              var9[var6_int] = hk.field_f[dda.bitwiseAnd(255, (int) var20[var6_int])];
             }
             var1[var2] = new Sprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[var2], AirstrikeAnimation.field_D[var2], ArrayWidgetContainer.field_A[var2], InsanoSauceSpecial.field_s[var2], var21);
           } else {
@@ -146,7 +146,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var13 = var16;
             var6 = var13;
             for (var7 = 0; var7 < var3; var7++) {
-              var6[var7] = MassPoisonSpecial.a(dda.a(var22[var7] << 24, -16777216), hk.field_f[dda.a((int) var20[var7], 255)]);
+              var6[var7] = MassPoisonSpecial.bitwiseOr(dda.bitwiseAnd(var22[var7] << 24, -16777216), hk.field_f[dda.bitwiseAnd((int) var20[var7], 255)]);
             }
             var1[var2] = (Sprite) ((Object) new ArgbSprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[var2], AirstrikeAnimation.field_D[var2], ArrayWidgetContainer.field_A[var2], InsanoSauceSpecial.field_s[var2], var16));
           }

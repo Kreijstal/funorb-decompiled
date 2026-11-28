@@ -71,7 +71,7 @@ final class gl {
         try {
           if (param1 != null &&
             param1.length() >= ig.field_c) {
-            if (param1.length() > td.field_k) {
+            if (param1.length() > MidiNoteMask.field_k) {
               return true;
             }
             if (param0 != 0) {

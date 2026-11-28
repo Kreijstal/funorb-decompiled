@@ -41,13 +41,13 @@ final class ap {
         }
     }
 
-    final static al a(int param0, Archive param1, int param2) {
+    final static MusicPatch loadMusicPatch(int param0, Archive param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         byte[] var5 = null;
         Object stackIn_2_0 = null;
-        al stackIn_4_0 = null;
+        MusicPatch stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -57,11 +57,11 @@ final class ap {
           var5 = param1.getFlatFile(true, param0);
           var3 = var5;
           if (var5 != null) {
-            stackIn_4_0 = new al(var5);
+            stackIn_4_0 = new MusicPatch(var5);
             return stackIn_4_0;
           }
           stackIn_2_0 = null;
-          return (al) (stackIn_2_0);
+          return (MusicPatch) (stackIn_2_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

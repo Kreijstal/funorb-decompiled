@@ -713,7 +713,7 @@ final class FridgeScreen {
           }
           qa.field_k.bindAsRenderTarget();
           SoftwareRasterizer.addRadialGlow(400, 400, 384, 77, var3);
-          ProgressDialog.field_U.a((byte) 122);
+          ProgressDialog.field_U.setAsRasterTarget((byte) 122);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ola.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

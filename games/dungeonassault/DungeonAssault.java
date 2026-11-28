@@ -398,7 +398,7 @@ public final class DungeonAssault extends NetworkGameClient {
                   var12 = FrameTimer.field_c;
                   var4_ref_int__ = FrameTimer.field_c;
                   for (var5Lifetime2 = 0; 8 > var5Lifetime2; var5Lifetime2++) {
-                    var11[var5Lifetime2] = nb.a(var11[var5Lifetime2], ~var12[var5Lifetime2]);
+                    var11[var5Lifetime2] = nb.bitwiseAnd(var11[var5Lifetime2], ~var12[var5Lifetime2]);
                   }
                   for (var3 = 0; var3 < ce.field_o.length; var3++) {
                     stackIn_139_0 = vl.a(var3, -67, var22);
@@ -411,13 +411,13 @@ public final class DungeonAssault extends NetworkGameClient {
                 var14 = var2;
                 var4_ref_int__Lifetime1 = var2;
                 for (var5Lifetime3 = 0; 8 > var5Lifetime3; var5Lifetime3++) {
-                  var13[var5Lifetime3] = mp.a(var13[var5Lifetime3], var14[var5Lifetime3]);
+                  var13[var5Lifetime3] = mp.bitwiseOr(var13[var5Lifetime3], var14[var5Lifetime3]);
                 }
-                var15 = bp.field_e;
+                var15 = GrowableIntArray.field_e;
                 var16 = var2;
                 var4_ref_int__Lifetime2 = var2;
                 for (var5Lifetime4 = 0; var5Lifetime4 < 8; var5Lifetime4++) {
-                  var15[var5Lifetime4] = mp.a(var15[var5Lifetime4], var16[var5Lifetime4]);
+                  var15[var5Lifetime4] = mp.bitwiseOr(var15[var5Lifetime4], var16[var5Lifetime4]);
                 }
                 ModalDialog.field_S = true;
                 continue scanLoop1;
@@ -693,7 +693,7 @@ public final class DungeonAssault extends NetworkGameClient {
           sa.clearStaticReferences(false);
           MidiPcmStream.e(0);
           wa.c(23413);
-          lp.clearStaticReferences((byte) 16);
+          MusicPatchNode.clearStaticReferences((byte) 16);
           MidiFileReader.clearStaticReferences();
           MusicPatchPcmStream.resetStaticState(26609);
           AudioOutput.clearStaticReferences();
@@ -789,7 +789,7 @@ public final class DungeonAssault extends NetworkGameClient {
           Bzip2Decompressor.clearStaticReferences();
           Bzip2State.a((byte) 108);
           oe.clearDeclaredStaticReferences(0);
-          kn.a(0);
+          ByteArrayPoolSupport.a(0);
           nj.resetStaticState((byte) 84);
           oh.clearStaticReferences(37);
           an.clearDeclaredStaticReferences(-13023);
@@ -847,10 +847,10 @@ public final class DungeonAssault extends NetworkGameClient {
           TextFieldValidator.c((byte) 19);
           mf.clearStaticReferences(5);
           RegistrationAgreementPane.clearDeclaredStaticReferences(-119);
-          mk.clearStaticReferences(false);
+          MidiNoteMask.clearStaticReferences(false);
           SynthesizerVoice.clearStaticReferences();
-          kk.clearDeclaredStaticReferences(0);
-          of.clearStaticReferences((byte) 65);
+          MusicPatch.clearDeclaredStaticReferences(0);
+          MusicPatchEnvelope.clearStaticReferences((byte) 65);
           ah.clearStaticReferences(-37);
           np.clearStaticReferences((byte) -74);
           fk.clearStaticReferences(67);
@@ -859,7 +859,7 @@ public final class DungeonAssault extends NetworkGameClient {
           ol.clearStaticReferences((byte) -96);
           RichTextLayout.clearStaticReferences((byte) -34);
           DirectByteStorage.clearStaticReferences(124);
-          bp.a(-1);
+          GrowableIntArray.a(-1);
           DraggableWidgetContainer.releaseDeclaredStaticReferences(119);
           DropTargetWidgetContainer.h(31029);
           ad.clearStaticReferences(1);

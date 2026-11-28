@@ -193,7 +193,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) -125) << da.b(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) -125) << da.bitwiseAnd(768, var7 << 8));
             }
             var4.unlink(2);
           } else {

@@ -81,7 +81,7 @@ final class GzipDecompressor {
             var5 = var9;
             var6 = param1;
             var7 = param4;
-            var9[var6] = var7 + ie.a(8355711, var9[var6] >> 1);
+            var9[var6] = var7 + ie.bitwiseAnd(8355711, var9[var6] >> 1);
             param1++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -73,7 +73,7 @@ final class uc {
         if (null != GuestPlayConfirmationForm.field_D) {
           GuestPlayConfirmationForm.field_D.setMasterVolume((byte) 101, param0);
           if (null != jj.field_a) {
-            jj.field_a.a(param0, false);
+            jj.field_a.setVolume(param0, false);
             return;
           }
           return;
@@ -81,7 +81,7 @@ final class uc {
         if (null == jj.field_a) {
           return;
         }
-        jj.field_a.a(param0, false);
+        jj.field_a.setVolume(param0, false);
     }
 
     final static void a(int param0, java.applet.Applet param1) {

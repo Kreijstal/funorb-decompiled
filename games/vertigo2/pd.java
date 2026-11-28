@@ -23,7 +23,7 @@ final class pd {
           stackIn_2_2 = param2;
           stackIn_2_3 = 1000000;
           stackIn_3_4 = !(param3);
-          ((CrossfadingMidiPcmStream) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4, (byte) 75, param1);
+          ((CrossfadingMidiPcmStream) (Object) stackIn_2_0).switchTrack(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4, (byte) 75, param1);
           if (param0 == -1) {
             return;
           }

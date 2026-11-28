@@ -266,7 +266,7 @@ final class LabeledWidgetContainer extends WidgetWrapper {
               for (var8_int = 0; qc.field_w.length > var8_int; var8_int++) {
                 qc.field_w[var8_int] = (byte) 0;
               }
-              qc.field_w[var7 / 8] = (byte)om.a((int) qc.field_w[var7 / 8], 1 << var7 % 8);
+              qc.field_w[var7 / 8] = (byte)om.bitwiseOr((int) qc.field_w[var7 / 8], 1 << var7 % 8);
             }
             stackIn_52_0 = (!param2) ? 0 : -1;
             for (var7 = stackIn_52_0; rc.field_a.length > var7; var7++) {
@@ -285,7 +285,7 @@ final class LabeledWidgetContainer extends WidgetWrapper {
                         qc.field_w[var9] = (byte) 0;
                       }
                     } else {
-                      qc.field_w[var7 / 8] = (byte)tk.a((int) qc.field_w[var7 / 8], 1 << b.a(var7, 7));
+                      qc.field_w[var7 / 8] = (byte)tk.bitwiseXor((int) qc.field_w[var7 / 8], 1 << b.bitwiseAnd(var7, 7));
                     }
                   }
                 } else {
@@ -512,16 +512,16 @@ final class LabeledWidgetContainer extends WidgetWrapper {
                 } else {
                   if (var9 == -1) {
                     for (var18 = var6Lifetime4; var18 < var30.length + (var6Lifetime4 - 1); var18++) {
-                      dj.field_a[var18 / 8] = (byte)b.a((int) dj.field_a[var18 / 8], ~(1 << b.a(7, var18)));
+                      dj.field_a[var18 / 8] = (byte)b.bitwiseAnd((int) dj.field_a[var18 / 8], ~(1 << b.bitwiseAnd(7, var18)));
                     }
                   } else {
-                    dj.field_a[(var9 + var6Lifetime4) / 8] = (byte)tk.a((int) dj.field_a[(var9 + var6Lifetime4) / 8], 1 << b.a(7, var9 + var6Lifetime4));
+                    dj.field_a[(var9 + var6Lifetime4) / 8] = (byte)tk.bitwiseXor((int) dj.field_a[(var9 + var6Lifetime4) / 8], 1 << b.bitwiseAnd(7, var9 + var6Lifetime4));
                   }
                 }
               }
               if (param2 &&
                 var16Lifetime1 != 0) {
-                dj.field_a[(var6Lifetime4 + var9) / 8] = (byte)b.a((int) dj.field_a[(var6Lifetime4 + var9) / 8], ~(1 << b.a(7, var6Lifetime4 + var9)));
+                dj.field_a[(var6Lifetime4 + var9) / 8] = (byte)b.bitwiseAnd((int) dj.field_a[(var6Lifetime4 + var9) / 8], ~(1 << b.bitwiseAnd(7, var6Lifetime4 + var9)));
               }
               if (var9 >= 0 &&
                 var17.field_G) {

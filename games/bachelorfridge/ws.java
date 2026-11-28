@@ -13,7 +13,7 @@ final class ws {
           return (Sprite) null;
         }
         while (var1 > var4_int) {
-          var3[var4_int] = hk.field_f[dda.a(255, (int) var6[var4_int])];
+          var3[var4_int] = hk.field_f[dda.bitwiseAnd(255, (int) var6[var4_int])];
           var4_int++;
         }
         Sprite var4 = new Sprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[0], AirstrikeAnimation.field_D[0], ArrayWidgetContainer.field_A[0], InsanoSauceSpecial.field_s[0], var3);

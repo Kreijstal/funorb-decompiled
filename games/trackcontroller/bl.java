@@ -128,7 +128,7 @@ final class bl {
                   }
                   var18.field_m[var5] = var6_int;
                   var18.field_u[var5] = var9;
-                  var18.field_j[var5] = param2.requestDeclaredField(ma.a(param0, -26462), var15, ve.a((byte) 11, var16));
+                  var18.field_j[var5] = param2.requestDeclaredField(ma.bitwiseXor(param0, -26462), var15, ve.a((byte) 11, var16));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

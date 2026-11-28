@@ -889,7 +889,7 @@ abstract class tl {
           }
           var2Lifetime142 = LevelProgressUpdate.loadRootArchiveFile("puzzlehighscores", 1);
           if (null != var2Lifetime142) {
-            cp.field_h = fa.a((byte) -88, var2Lifetime142);
+            MusicPatchEnvelope.field_h = fa.a((byte) -88, var2Lifetime142);
           }
           var2Lifetime143 = LevelProgressUpdate.loadRootArchiveFile("arcadehighscores", 1);
           if (var2Lifetime143 != null) {
@@ -1177,7 +1177,7 @@ abstract class tl {
           }
           var2Lifetime214 = LevelProgressUpdate.loadRootArchiveFile("player_whomessage_helper", 1);
           if (null != var2Lifetime214) {
-            pl.field_s = fa.a((byte) -91, var2Lifetime214);
+            MusicPatchNode.field_s = fa.a((byte) -91, var2Lifetime214);
           }
           var2Lifetime215 = LevelProgressUpdate.loadRootArchiveFile("player_movemessage_normal", 1);
           if (var2Lifetime215 != null) {
@@ -1213,7 +1213,7 @@ abstract class tl {
           }
           var2Lifetime223 = LevelProgressUpdate.loadRootArchiveFile("spider_information", 1);
           if (var2Lifetime223 != null) {
-            ch.field_c = fa.a((byte) -114, var2Lifetime223);
+            GrowableIntArray.field_c = fa.a((byte) -114, var2Lifetime223);
           }
           var2Lifetime224 = LevelProgressUpdate.loadRootArchiveFile("spiderweb_name", 1);
           if (null != var2Lifetime224) {

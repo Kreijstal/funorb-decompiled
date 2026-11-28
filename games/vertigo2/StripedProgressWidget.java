@@ -125,13 +125,13 @@ final class StripedProgressWidget extends UiWidget {
           }
           var3_int = 0;
           var4 = ui.field_d;
-          while (var3_int < al.field_y.length) {
+          while (var3_int < MusicPatch.field_y.length) {
             var5 = ClientException.field_f[var3_int];
             if (var5 >= 0) {
-              var6 = ao.a(120, al.field_y[var3_int], true);
+              var6 = ao.a(120, MusicPatch.field_y[var3_int], true);
               var7 = -(var6 >> 1) + ni.field_a;
               var4 = var4 + vo.field_y;
-              if (pe.a(ml.field_v + (eb.field_h << 1), var4, param0, param2, (byte) 45, -hc.field_a + var7, (hc.field_a << 1) + var6)) {
+              if (MusicPatchNode.a(ml.field_v + (eb.field_h << 1), var4, param0, param2, (byte) 45, -hc.field_a + var7, (hc.field_a << 1) + var6)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }

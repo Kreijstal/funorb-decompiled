@@ -99,7 +99,7 @@ final class lna {
           }
         }
         var14 = 32 / ((-77 - param5) / 45);
-        ProgressDialog.field_U.a((byte) 123);
+        ProgressDialog.field_U.setAsRasterTarget((byte) 123);
         this.a(param2, param0, param3, (byte) 121, param4, param1, 0);
     }
 
@@ -143,7 +143,7 @@ final class lna {
             stackIn_11_1 = (param0);
             this.field_x = stackIn_11_1;
             this.b(9);
-            ProgressDialog.field_U.a((byte) -105);
+            ProgressDialog.field_U.setAsRasterTarget((byte) -105);
             if (this.field_x) {
               bd.field_i.flipHorizontal();
             }
@@ -202,7 +202,7 @@ final class lna {
             }
           }
         }
-        ProgressDialog.field_U.a((byte) -8);
+        ProgressDialog.field_U.setAsRasterTarget((byte) -8);
         this.field_o = true;
         this.a(param1, param4, 0, param2, param3 ^ 16624, param5, param0);
     }
@@ -682,7 +682,7 @@ final class lna {
               }
             }
           }
-          ProgressDialog.field_U.a((byte) 121);
+          ProgressDialog.field_U.setAsRasterTarget((byte) 121);
           if (this.field_x) {
             bd.field_i.flipHorizontal();
           }
@@ -822,7 +822,7 @@ final class lna {
         this.d(1);
         this.b((byte) -69);
         jha.field_g.drawText("?", 0, jha.field_g.field_u, 16777215, 65793);
-        ProgressDialog.field_U.a((byte) 121);
+        ProgressDialog.field_U.setAsRasterTarget((byte) 121);
         this.a(false, 0, 1, true, -1);
     }
 

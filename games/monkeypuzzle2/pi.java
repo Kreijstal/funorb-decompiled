@@ -257,7 +257,7 @@ final class pi extends DualLinkNode {
         int var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (this.field_q != null) {
           for (var2 = 0; var2 < this.field_q.length; var2++) {
-            this.field_q[var2] = bd.a(this.field_q[var2], 32768);
+            this.field_q[var2] = bd.bitwiseOr(this.field_q[var2], 32768);
           }
         }
         if (param0 != 0) {

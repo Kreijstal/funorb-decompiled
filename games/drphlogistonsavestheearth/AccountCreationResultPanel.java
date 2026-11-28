@@ -48,7 +48,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
           }
           var2_int = param1.length;
           var3 = new byte[var2_int];
-          kg.copyByteRange(param1, 0, var3, 0, var2_int);
+          ArrayBlockSupport.copyByteRange(param1, 0, var3, 0, var2_int);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -66,7 +66,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
     }
 
     final void showAccountCreationConnectionFailure(int param0) {
-        this.showAccountCreationResult((byte) -92, kj.createAccountErrorResult(param0, 4, ig.field_i), true);
+        this.showAccountCreationResult((byte) -92, kj.createAccountErrorResult(param0, 4, MusicPatch.field_i), true);
     }
 
     private final void showAccountCreationResult(byte param0, AccountServiceResult param1, boolean param2) {
@@ -89,11 +89,11 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
               if (248 == param1.statusCode) {
                 if (param2) {
                   this.field_Hb = true;
-                  var4 = ig.field_i;
+                  var4 = MusicPatch.field_i;
                 } else {
                   bg.a(false);
                   this.field_Hb = true;
-                  var4 = ig.field_i;
+                  var4 = MusicPatch.field_i;
                 }
               }
             } else {

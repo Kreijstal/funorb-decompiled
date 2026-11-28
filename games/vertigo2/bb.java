@@ -144,9 +144,9 @@ final class bb extends TextureOperator {
                 } else {
                   if (var5 == 4) {
                     var4_int = param2.readUnsignedMedium(0);
-                    this.field_z[2] = b.a(var4_int >> 12, 0);
-                    this.field_z[1] = b.a(var4_int >> 4, 4080);
-                    this.field_z[0] = b.a(16711680, var4_int) << 4;
+                    this.field_z[2] = b.bitwiseAnd(var4_int >> 12, 0);
+                    this.field_z[1] = b.bitwiseAnd(var4_int >> 4, 4080);
+                    this.field_z[0] = b.bitwiseAnd(16711680, var4_int) << 4;
                   }
                 }
               } else {

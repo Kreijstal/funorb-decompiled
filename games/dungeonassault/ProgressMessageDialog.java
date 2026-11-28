@@ -43,7 +43,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           var6 = new DialogMessagePane(this, this.field_Cb, param1);
           if (param2 != 5) {
             if (param2 == 256) {
-              var6.addListenerButton(kn.field_a, (WidgetEventListener) (this), (byte) -80);
+              var6.addListenerButton(ByteArrayPoolSupport.field_a, (WidgetEventListener) (this), (byte) -80);
             } else {
               stackIn_13_0 = var6;
               stackIn_13_1 = -1;
@@ -51,7 +51,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
               if (!this.field_Mb) {
                 stackIn_14_3 = DisplayNameSelectionPanel.field_O;
               } else {
-                stackIn_14_3 = kn.field_a;
+                stackIn_14_3 = ByteArrayPoolSupport.field_a;
               }
               ((DialogMessagePane) (Object) stackIn_13_0).addActionButton(stackIn_13_1, stackIn_13_2, stackIn_14_3);
             }
@@ -242,8 +242,8 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           }
           if (decompiledFrameRemainder0) {
             if (!ti.field_f) {
-              if (no.field_a >= lp.field_z) {
-                stackIn_18_0 = (no.field_a < ConfirmedEmailAvailabilityValidator.field_p + lp.field_z) ? 1 : 0;
+              if (no.field_a >= MusicPatchNode.field_z) {
+                stackIn_18_0 = (no.field_a < ConfirmedEmailAvailabilityValidator.field_p + MusicPatchNode.field_z) ? 1 : 0;
               } else {
                 stackIn_18_0 = 0;
               }
@@ -255,12 +255,12 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
               no.field_a = 0;
             } else {
               if (ti.field_f) {
-                no.field_a = lp.field_z;
+                no.field_a = MusicPatchNode.field_z;
               } else {
                 if (var2_int == 0) {
                   no.field_a = 0;
                 } else {
-                  no.field_a = lp.field_z;
+                  no.field_a = MusicPatchNode.field_z;
                 }
               }
             }
@@ -275,7 +275,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
             fl.field_l = vl.field_m;
           }
           if (!ti.field_f &&
-            no.field_a < lp.field_z &&
+            no.field_a < MusicPatchNode.field_z &&
             cp.field_U) {
             fl.field_l = vl.field_m;
             no.field_a = 0;

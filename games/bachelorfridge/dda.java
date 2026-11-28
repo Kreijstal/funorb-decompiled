@@ -15,7 +15,7 @@ final class dda extends TileEffect {
         this.field_h = true;
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseAnd(int param0, int param1) {
         return param0 & param1;
     }
 

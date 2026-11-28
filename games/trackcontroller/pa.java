@@ -29,10 +29,10 @@ final class pa {
           if (param1 != 40) {
             pa.b((byte) 41);
           }
-          var5 = (nk) (qh.field_e.first(param1 ^ 42));
+          var5 = (nk) (GrowableIntArray.field_e.first(param1 ^ 42));
           while (var5 != null) {
             gj.a(2, var5, param0);
-            var5 = (nk) (qh.field_e.next(10));
+            var5 = (nk) (GrowableIntArray.field_e.next(10));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

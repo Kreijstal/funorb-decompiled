@@ -474,7 +474,7 @@ final class di extends ci {
         if (var6 <= 0) {
           return false;
         }
-        if (var6 == ql.field_f) {
+        if (var6 == ByteArrayPoolSupport.field_f) {
           var6 = 63;
         }
         for (var7 = 0; this.field_Lb.length > var7; var7++) {
@@ -594,7 +594,7 @@ final class di extends ci {
             var17 = ei.field_v[var16];
             SecondaryNodeDeque.a((byte) 25, var16);
             for (var18 = 0; var18 < 3; var18++) {
-              ArchiveProvider.field_b[var18] = ArchiveProvider.field_b[var18] + ql.field_a[var15][var18];
+              ArchiveProvider.field_b[var18] = ArchiveProvider.field_b[var18] + ByteArrayPoolSupport.field_a[var15][var18];
             }
             hb.a(false, th.field_c, (byte) -98, ArchiveProvider.field_b, false, var17, true);
             AlphaWidgetContainer.a(var8Lifetime1, var17, var14, var9Lifetime1, 29521, var12Lifetime1, var13Lifetime1, var7Lifetime1);

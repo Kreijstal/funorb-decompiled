@@ -35,7 +35,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
             for (var5_int = 0; var5_int < var3_int; var5_int++) {
               this.field_M[var5_int] = kl.a((CharSequence) ((Object) param1[var5_int]), (byte) -49).replace(' ', ' ');
             }
-            var5 = new oa(lp.field_C, 0, 1);
+            var5 = new oa(MusicPatchNode.field_C, 0, 1);
             this.field_O = new InteractiveWidget[var3_int + 1];
             for (var6 = 0; var3_int > var6; var6++) {
               this.field_O[var6] = new InteractiveWidget(this.field_M[var6], (WidgetEventListener) (this));
@@ -83,7 +83,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
         if (param0 != 0) {
           return;
         }
-        BitmapFont var5 = lp.field_C;
+        BitmapFont var5 = MusicPatchNode.field_C;
         if (null != this.field_M) {
           var5.drawParagraph(sc.field_p, param1 + this.field_q, param3 + this.field_v, this.field_x, 20, 16777215, -1, 0, 0, var5.field_E + var5.field_H);
         }

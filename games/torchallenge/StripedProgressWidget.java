@@ -203,7 +203,7 @@ final class StripedProgressWidget extends UiComponent {
         try {
           var2_int = param0.length;
           var3 = new byte[var2_int];
-          he.copyByteRange(param0, 0, var3, 0, var2_int);
+          ArrayBlockSupport.copyByteRange(param0, 0, var3, 0, var2_int);
           if (param1 < -37) {
             stackIn_4_0 = var3;
             return stackIn_4_0;

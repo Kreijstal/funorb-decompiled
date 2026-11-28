@@ -14,7 +14,7 @@ final class aj {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!g.a(param1, param0, -30744, param3)) {
+          if (!MidiNoteMask.a(param1, param0, -30744, param3)) {
             return null;
           }
           if (param2 != 0) {

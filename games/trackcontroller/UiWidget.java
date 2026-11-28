@@ -125,7 +125,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseAnd(long param0, long param1) {
         return param0 & param1;
     }
 
@@ -423,7 +423,7 @@ class UiWidget extends IntrusiveNode {
             var13 = param9;
             var14 = param3;
             var15 = 8355711 & var18[var11] >> 1;
-            var10[var11] = var15 + ((RandomAccessCacheFile.a(var14, 33501438) >> 17) + RandomAccessCacheFile.a(65280, var13 >> 9)) + RandomAccessCacheFile.a(16711680, var12 >> 1);
+            var10[var11] = var15 + ((RandomAccessCacheFile.bitwiseAnd(var14, 33501438) >> 17) + RandomAccessCacheFile.bitwiseAnd(65280, var13 >> 9)) + RandomAccessCacheFile.bitwiseAnd(16711680, var12 >> 1);
             param8++;
             param9 = param9 + param4;
             param2 = param2 + param5;

@@ -625,7 +625,7 @@ final class ResourceArchive {
                     var21 = var34[var20];
                   }
                   if (param3 == var21) {
-                    mk.copyByteRange(var43, var17Lifetime4, var44, var14Lifetime1, var19Lifetime2);
+                    ArrayBlockSupport.copyByteRange(var43, var17Lifetime4, var44, var14Lifetime1, var19Lifetime2);
                     var14Lifetime1 = var14Lifetime1 + var19Lifetime2;
                   }
                   var17Lifetime4 = var17Lifetime4 + var19Lifetime2;
@@ -664,7 +664,7 @@ final class ResourceArchive {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var5_int > var19Lifetime1; var19Lifetime1++) {
                 var18Lifetime1 = var18Lifetime1 + var29.readInt(0);
-                mk.copyByteRange(var43, var16Lifetime3, var39[var19Lifetime1], var38[var19Lifetime1], var18Lifetime1);
+                ArrayBlockSupport.copyByteRange(var43, var16Lifetime3, var39[var19Lifetime1], var38[var19Lifetime1], var18Lifetime1);
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;
                 var14_ref_int__[var19Lifetime1] = var14_ref_int__[var19Lifetime1] + var18Lifetime1;
               }
@@ -690,7 +690,7 @@ final class ResourceArchive {
             if (this.field_b != 0) {
               var7[var11] = var43;
             } else {
-              var7[var11] = fm.storeBytes(var23, gi.a(param1, -894), false);
+              var7[var11] = fm.storeBytes(var23, gi.bitwiseXor(param1, -894), false);
             }
           }
           return true;

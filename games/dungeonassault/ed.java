@@ -265,7 +265,7 @@ final class ed extends np {
         }
         try {
           String var7 = (String) null;
-          kn.a(param5, param0, param2, param1, 125, 96, (String) null, param4);
+          ByteArrayPoolSupport.a(param5, param0, param2, param1, 125, 96, (String) null, param4);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ed.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

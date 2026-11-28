@@ -117,7 +117,7 @@ final class eg extends tk {
                     var17 = 0;
                     var7 = var17;
                     while (var17 < var6) {
-                      this.field_h.field_J.payload[this.field_h.field_J.position + var17] = (byte)tk.a((int) this.field_h.field_J.payload[this.field_h.field_J.position + var17], (int) this.field_l);
+                      this.field_h.field_J.payload[this.field_h.field_J.position + var17] = (byte)tk.bitwiseXor((int) this.field_h.field_J.payload[this.field_h.field_J.position + var17], (int) this.field_l);
                       var17++;
                     }
                   }
@@ -140,7 +140,7 @@ final class eg extends tk {
                   this.field_u.a(this.field_i.payload, false, var5, this.field_i.position);
                   if (this.field_l != 0) {
                     for (var6 = 0; var6 < var5; var6++) {
-                      this.field_i.payload[var6 + this.field_i.position] = (byte)tk.a((int) this.field_i.payload[var6 + this.field_i.position], (int) this.field_l);
+                      this.field_i.payload[var6 + this.field_i.position] = (byte)tk.bitwiseXor((int) this.field_i.payload[var6 + this.field_i.position], (int) this.field_l);
                     }
                   }
                   this.field_i.position = this.field_i.position + var5;

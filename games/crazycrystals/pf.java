@@ -458,7 +458,7 @@ final class pf extends pn implements Cloneable {
         }
     }
 
-    static int b(int param0, int param1) {
+    static int bitwiseAnd(int param0, int param1) {
         return param0 & param1;
     }
 
@@ -499,7 +499,7 @@ final class pf extends pn implements Cloneable {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(255) << pf.b(var7 << 8, 768));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(255) << pf.bitwiseAnd(var7 << 8, 768));
             }
             var4.field_h = true;
             var4.unlink(false);

@@ -191,7 +191,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           DefaultTextWidgetRenderer.field_p = MusicTrack.load(param4, "", "md_ice_music");
           hl.field_a = MusicTrack.load(param4, "", "md_ice_panic_music");
           DualLinkNode.field_s = MusicTrack.load(param4, "", "md_win");
-          aa.field_e = MusicTrack.load(param4, "", "md_lose");
+          GrowableIntArray.field_e = MusicTrack.load(param4, "", "md_lose");
           var6 = new SoundCache(param0, param1);
           km.field_a.prepareTrackSamples(false, ph.field_a, var6, 0, param2);
           if (!param3) {
@@ -204,8 +204,8 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           km.field_a.prepareTrackSamples(false, DefaultTextWidgetRenderer.field_p, var6, 0, param2);
           km.field_a.prepareTrackSamples(false, hl.field_a, var6, 0, param2);
           km.field_a.prepareTrackSamples(false, DualLinkNode.field_s, var6, 0, param2);
-          km.field_a.prepareTrackSamples(false, aa.field_e, var6, 0, param2);
-          km.field_a.e(100);
+          km.field_a.prepareTrackSamples(false, GrowableIntArray.field_e, var6, 0, param2);
+          km.field_a.releasePatchSampleIds(100);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

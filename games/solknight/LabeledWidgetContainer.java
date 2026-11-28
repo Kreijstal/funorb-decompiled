@@ -82,7 +82,7 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
             } else {
               stackIn_14_2 = "{...}";
             }
-            throw fc.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+            throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -91,7 +91,7 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
         }
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseXor(long param0, long param1) {
         return param0 ^ param1;
     }
 
@@ -164,7 +164,7 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
           if (RichTextWidget.field_S != null) {
             var3 = 357 - RichTextWidget.field_S.field_r / 2;
             var4 = 0;
-            if (hg.field_F != 0 &&
+            if (MusicPatchNode.field_F != 0 &&
               StandardContentDialog.field_gb > var3 &&
               StandardContentDialog.field_gb < RichTextWidget.field_S.field_t + var3) {
               if (SpriteState.field_o > 269 - RichTextWidget.field_S.field_p &&
@@ -234,7 +234,7 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var2), "ke.D(" + param0 + ',' + param1 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var2), "ke.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -331,7 +331,7 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

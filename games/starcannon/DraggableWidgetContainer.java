@@ -104,7 +104,7 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
             for (var6 = 0; var5 > var6; var6++) {
               boolean decompiledFrameCompleted0 = true;
               if (~param2.field_k == ~param3.field_g[param0][var6] &&
-                mc.a(param3.field_n[param0][var6], 0)) {
+                ByteArrayPoolSupport.a(param3.field_n[param0][var6], 0)) {
                 for (var7 = 0; var7 < var4_int; var7++) {
                   if (param2.field_o[var7] != param3.field_o[param0][var4_int * var6 + var7]) {
                     decompiledFrameCompleted0 = false;

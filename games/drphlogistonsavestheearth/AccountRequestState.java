@@ -42,7 +42,7 @@ final class AccountRequestState {
           var1_int = of.field_w[param0];
           for (var2 = 1; of.field_w.length > var2; var2++) {
             var3 = of.field_w[var2];
-            kg.a(p.field_c, var2 << 4, p.field_c, var1_int, var3);
+            ArrayBlockSupport.copyIntRange(p.field_c, var2 << 4, p.field_c, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;
@@ -93,16 +93,16 @@ final class AccountRequestState {
                 var10 = var10 ^ 285L;
             }
             var12 = var10 ^ var2;
-            field_c[0][var0] = gb.a(var12, gb.a(var4 << 8, gb.a(var8 << 16, gb.a(gb.a(gb.a(var6 << 40, gb.a(var2 << 48, var2 << 56)), var2 << 32), var10 << 24))));
+            field_c[0][var0] = gb.bitwiseOr(var12, gb.bitwiseOr(var4 << 8, gb.bitwiseOr(var8 << 16, gb.bitwiseOr(gb.bitwiseOr(gb.bitwiseOr(var6 << 40, gb.bitwiseOr(var2 << 48, var2 << 56)), var2 << 32), var10 << 24))));
             for (var14 = 1; var14 < 8; var14++) {
-                field_c[var14][var0] = gb.a(field_c[var14 - 1][var0] >>> 8, field_c[-1 + var14][var0] << 56);
+                field_c[var14][var0] = gb.bitwiseOr(field_c[var14 - 1][var0] >>> 8, field_c[-1 + var14][var0] << 56);
             }
             var0++;
         }
         field_e[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = (var0 - 1) * 8;
-            field_e[var0] = GuestPlayConfirmationForm.a(GuestPlayConfirmationForm.a(GuestPlayConfirmationForm.a(GuestPlayConfirmationForm.a(hg.a(4278190080L, field_c[4][4 + var1]), GuestPlayConfirmationForm.a(hg.a(1095216660480L, field_c[3][var1 + 3]), GuestPlayConfirmationForm.a(GuestPlayConfirmationForm.a(hg.a(71776119061217280L, field_c[1][1 + var1]), hg.a(field_c[0][var1], -72057594037927936L)), hg.a(280375465082880L, field_c[2][2 + var1])))), hg.a(field_c[5][5 + var1], 16711680L)), hg.a(65280L, field_c[6][6 + var1])), hg.a(field_c[7][var1 + 7], 255L));
+            field_e[var0] = GuestPlayConfirmationForm.bitwiseXor(GuestPlayConfirmationForm.bitwiseXor(GuestPlayConfirmationForm.bitwiseXor(GuestPlayConfirmationForm.bitwiseXor(hg.bitwiseAnd(4278190080L, field_c[4][4 + var1]), GuestPlayConfirmationForm.bitwiseXor(hg.bitwiseAnd(1095216660480L, field_c[3][var1 + 3]), GuestPlayConfirmationForm.bitwiseXor(GuestPlayConfirmationForm.bitwiseXor(hg.bitwiseAnd(71776119061217280L, field_c[1][1 + var1]), hg.bitwiseAnd(field_c[0][var1], -72057594037927936L)), hg.bitwiseAnd(280375465082880L, field_c[2][2 + var1])))), hg.bitwiseAnd(field_c[5][5 + var1], 16711680L)), hg.bitwiseAnd(65280L, field_c[6][6 + var1])), hg.bitwiseAnd(field_c[7][var1 + 7], 255L));
         }
     }
 }

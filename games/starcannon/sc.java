@@ -106,7 +106,7 @@ final class sc {
           Throwable var2_ref = null;
           RuntimeException var2_ref2 = null;
           try {
-            if (ve.field_d) {
+            if (GrowableIntArray.field_d) {
               return true;
             }
             try {

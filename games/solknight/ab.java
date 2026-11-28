@@ -125,7 +125,7 @@ abstract class ab extends GameApplet {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -338,7 +338,7 @@ abstract class ab extends GameApplet {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -388,20 +388,20 @@ abstract class ab extends GameApplet {
               ti.a((byte) -126);
             }
             if (!param1) {
-              var5_intLifetime2 = fc.a(rg.a(0), this.field_r, false, this.field_o, fi.a((byte) 84), 0);
+              var5_intLifetime2 = MusicPatch.a(rg.a(0), this.field_r, false, this.field_o, fi.a((byte) 84), 0);
               if (-1 != var5_intLifetime2) {
                 if (0 != var5_intLifetime2) {
                   dd.a((byte) 83, DiskArchiveRequest.field_v, var5_intLifetime2);
                   DiskArchiveRequest.field_v = null;
                 } else {
                   d.field_c = ValidationStatusIcon.field_P;
-                  ee.f(0);
+                  MidiNoteMask.f(0);
                   MusicPatchPcmStream.field_l = false;
                   fj.field_i = 10;
                 }
               }
             } else {
-              ee.field_i = false;
+              MidiNoteMask.field_i = false;
             }
           }
           if (var4 == 4) {
@@ -530,7 +530,7 @@ abstract class ab extends GameApplet {
             this.i(-48);
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ab.NA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "ab.NA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -593,7 +593,7 @@ abstract class ab extends GameApplet {
           this.i(80);
         }
         String var2 = bk.a(0);
-        g.a(ia.g(-22), var2, -3603);
+        MusicPatchEnvelope.a(ia.g(-22), var2, -3603);
     }
 
     final int b(boolean param0, boolean param1) {
@@ -623,13 +623,13 @@ abstract class ab extends GameApplet {
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = SolKnight.field_L ? 1 : 0;
-        if (null != fc.field_l) {
+        if (null != MusicPatch.field_l) {
           if (null == dj.field_k) {
             var6 = GameKeyHandler.a((byte) 60);
             var4 = var6.getSize();
-            fc.field_l.a(var4.height, var4.width, param0 ^ 25192);
+            MusicPatch.field_l.a(var4.height, var4.width, param0 ^ 25192);
           }
-          fc.field_l.a(param0 ^ -3);
+          MusicPatch.field_l.a(param0 ^ -3);
         }
         MidiPcmStream.f(-11214);
         jh.b(param0 ^ -405);
@@ -650,7 +650,7 @@ abstract class ab extends GameApplet {
             sf.b(false);
             dd.a((byte) 27, MatchingFieldValidator.field_k, 2);
             ValidationStatusWidget.d(true);
-            ee.field_i = true;
+            MidiNoteMask.field_i = true;
             RichTextWidget.field_I = 15000L + je.correctedCurrentTimeMillis(1);
           }
         }
@@ -663,7 +663,7 @@ abstract class ab extends GameApplet {
             0 == bf.field_e &&
             11 == fj.field_i &&
             !qc.a(param0 + 37)) {
-            ee.f(0);
+            MidiNoteMask.f(0);
           }
           if (bf.field_e != -1 &&
             bf.field_e != 0) {
@@ -710,7 +710,7 @@ abstract class ab extends GameApplet {
               } else {
                 dd.a((byte) 115, bl.field_m, 256);
               }
-              ee.field_i = true;
+              MidiNoteMask.field_i = true;
             }
           }
         }
@@ -718,7 +718,7 @@ abstract class ab extends GameApplet {
           0 != bf.field_e ||
           qc.a(34)) &&
           RichTextWidget.field_I <= je.correctedCurrentTimeMillis(1)) {
-          ee.field_i = false;
+          MidiNoteMask.field_i = false;
           if (bf.field_e != -1 &&
             bf.field_e != 0) {
             bf.field_e = -1;
@@ -920,7 +920,7 @@ abstract class ab extends GameApplet {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -932,10 +932,10 @@ abstract class ab extends GameApplet {
         if (!qc.a(param0 + 35)) {
           return -1;
         }
-        if (ee.field_i) {
+        if (MidiNoteMask.field_i) {
           return -1;
         }
-        var2 = fc.a(rg.a(0), this.field_r, true, this.field_o, fi.a((byte) 84), 0);
+        var2 = MusicPatch.a(rg.a(0), this.field_r, true, this.field_o, fi.a((byte) 84), 0);
         if (var2 == -1) {
           return -1;
         }
@@ -946,13 +946,13 @@ abstract class ab extends GameApplet {
           }
           sf.b(false);
           dd.a((byte) 8, DiskArchiveRequest.field_v, var2);
-          ee.field_i = true;
+          MidiNoteMask.field_i = true;
           RichTextWidget.field_I = je.correctedCurrentTimeMillis(param0 ^ -2) + 15000L;
           return var2;
         }
         if (11 == fj.field_i &&
           bf.field_e == 0) {
-          ee.f(0);
+          MidiNoteMask.f(0);
         }
         return var2;
     }

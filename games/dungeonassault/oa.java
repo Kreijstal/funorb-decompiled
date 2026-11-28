@@ -85,7 +85,7 @@ final class oa implements WidgetRenderer {
     }
 
     public oa() {
-        this.field_b = lp.field_C;
+        this.field_b = MusicPatchNode.field_C;
         this.field_a = 1;
         this.field_f = 1;
     }

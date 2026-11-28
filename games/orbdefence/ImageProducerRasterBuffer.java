@@ -44,21 +44,21 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final void a(int param0, int param1, int param2, java.awt.Component param3) {
+    final void initialize(int param0, int param1, int param2, java.awt.Component param3) {
         try {
           this.field_f = param1;
           this.field_d = new int[param1 * param2 + 1];
           this.field_e = param2;
           this.field_j = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
           this.field_a = param3.createImage((java.awt.image.ImageProducer) (this));
-          this.c(-123);
+          this.publishPixelsToConsumer(-123);
           param3.prepareImage(this.field_a, (java.awt.image.ImageObserver) (this));
-          this.c(-123);
+          this.publishPixelsToConsumer(-123);
           param3.prepareImage(this.field_a, (java.awt.image.ImageObserver) (this));
-          this.c(-126);
+          this.publishPixelsToConsumer(-126);
           param3.prepareImage(this.field_a, (java.awt.image.ImageObserver) (this));
           int var5_int = -113 / ((0 - param0) / 52);
-          this.a(-40);
+          this.setAsRasterTarget(-40);
         } catch (RuntimeException runtimeException) {
           throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "ij.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -160,7 +160,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    private final synchronized void c(int param0) {
+    private final synchronized void publishPixelsToConsumer(int param0) {
         if (param0 > -119) {
           field_h = (byte[]) null;
           if (this.field_i == null) {
@@ -191,9 +191,9 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         return param0 == this.field_i;
     }
 
-    final void a(int param0, int param1, java.awt.Graphics param2, boolean param3) {
+    final void drawImage(int param0, int param1, java.awt.Graphics param2, boolean param3) {
         try {
-          this.c(-122);
+          this.publishPixelsToConsumer(-122);
           param2.drawImage(this.field_a, param0, param1, (java.awt.image.ImageObserver) (this));
           if (!param3) {
             field_g = -68;

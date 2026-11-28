@@ -84,9 +84,9 @@ final class an extends qb {
           var7 = param1 % this.field_p * this.field_p;
           for (var8 = 0; var8 < hh.field_d; var8++) {
             var9 = this.field_n[var8 % this.field_o + var7];
-            var6[var8] = dda.a(4080, var9 << 4);
-            var5[var8] = dda.a(65280, var9) >> 4;
-            var4[var8] = dda.a(var9 >> 12, 4080);
+            var6[var8] = dda.bitwiseAnd(4080, var9 << 4);
+            var5[var8] = dda.bitwiseAnd(65280, var9) >> 4;
+            var4[var8] = dda.bitwiseAnd(var9 >> 12, 4080);
           }
         }
         return var11;

@@ -251,7 +251,7 @@ final class bg {
             }
             break;
           }
-          mc.a(stackIn_68_0, stackIn_68_1, param1, param4, var8);
+          MidiNoteMask.a(stackIn_68_0, stackIn_68_1, param1, param4, var8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

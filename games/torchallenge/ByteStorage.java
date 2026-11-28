@@ -258,9 +258,9 @@ abstract class ByteStorage {
               if ((vi.field_a & 1 << var20Lifetime1) > 0) {
                 if (var15 != 0 &&
                   var16 == var20Lifetime1) {
-                  dl.field_j.drawBlendedTowardColor(var10 + param0, param1 + var11, -(5 * var17) + 255, 16777215);
+                  MusicPatchNode.field_j.drawBlendedTowardColor(var10 + param0, param1 + var11, -(5 * var17) + 255, 16777215);
                 } else {
-                  dl.field_j.drawTransparent(param0 + var10, param1 + var11);
+                  MusicPatchNode.field_j.drawTransparent(param0 + var10, param1 + var11);
                 }
               }
               var10 = var10 + var12;
@@ -270,15 +270,15 @@ abstract class ByteStorage {
           else {
             if (!param3) {
               for (var20Lifetime1Lifetime1 = 0; var20Lifetime1Lifetime1 < var14 - 1; var20Lifetime1Lifetime1++) {
-                dl.field_j.drawTransparent(var10 + param0, var11 + param1);
+                MusicPatchNode.field_j.drawTransparent(var10 + param0, var11 + param1);
                 var10 = var10 + var12;
               }
               if (var15 != 0 &&
                 0 < var14) {
-                dl.field_j.drawBlendedTowardColor(var10 + param0, var11 + param1, 255 - 5 * var17, 16777215);
+                MusicPatchNode.field_j.drawBlendedTowardColor(var10 + param0, var11 + param1, 255 - 5 * var17, 16777215);
               } else {
                 if (var14 > 0) {
-                  dl.field_j.drawTransparent(param0 + var10, param1 + var11);
+                  MusicPatchNode.field_j.drawTransparent(param0 + var10, param1 + var11);
                 }
               }
             }
@@ -443,7 +443,7 @@ abstract class ByteStorage {
               var22Lifetime2Lifetime1 = AccountServiceResult.field_k % 500 / 200;
             } else {
               var21Lifetime2Lifetime1 = tf.field_o;
-              var22Lifetime2Lifetime1 = ab.field_d;
+              var22Lifetime2Lifetime1 = MusicPatchEnvelope.field_d;
             }
             var10Lifetime5 = af.field_f[0];
             var9 = DirectByteStorage.field_h + var21Lifetime2Lifetime1;

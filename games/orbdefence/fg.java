@@ -219,7 +219,7 @@ class fg extends DefaultTextWidgetRenderer {
           }
           for (var2 = 1; vf.field_a.length > var2; var2++) {
             var3 = vf.field_a[var2];
-            mk.a(TextLayout.field_g, var2 << 4, TextLayout.field_g, var1_int, var3);
+            ArrayBlockSupport.copyIntRange(TextLayout.field_g, var2 << 4, TextLayout.field_g, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;

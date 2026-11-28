@@ -79,7 +79,7 @@ final class ClientException extends RuntimeException {
           if (param0 != 68) {
             field_g = (int[]) null;
           }
-          for (var8 = 0; s.field_l[var1_int] > var8; var8++) {
+          for (var8 = 0; MidiNoteMask.field_l[var1_int] > var8; var8++) {
             var2 = -cg.field_e[0] + (gh.field_k[var1_int][var8][0] << 4);
             var3 = -cg.field_e[1] + (gh.field_k[var1_int][var8][1] + 59 << 4);
             AccountServiceResult.field_h[var1_int][var8].drawRotatedAbout(0, 0, var2, var3, 0, 4096);

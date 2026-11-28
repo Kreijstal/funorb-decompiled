@@ -100,13 +100,13 @@ final class BlastDebrisBatch {
           stackIn_6_0 = uc.field_a;
           stackIn_6_1 = param0 + 83;
           if (MidiPcmStream.field_S) {
-            stackIn_7_2 = 40 + re.field_k + 4;
+            stackIn_7_2 = 40 + GrowableIntArray.field_k + 4;
           } else {
             stackIn_7_2 = 0;
           }
           ((UiPanel) (Object) stackIn_6_0).a(stackIn_6_1, -stackIn_7_2 + DebouncedFieldValidator.field_g.field_Fb, 18, 2 + Archive.field_f, 0);
-          eq.field_z.a(param0 + 95, re.field_k + 42, 18, 2 + Archive.field_f, -40 + (-re.field_k + (DebouncedFieldValidator.field_g.field_Fb - 2)));
-          vd.field_d.a(2 + Archive.field_f + 20, 2, re.field_k, -22 + (DebouncedFieldValidator.field_g.field_db - Archive.field_f), 0, DebouncedFieldValidator.field_g.field_Fb, 3124);
+          eq.field_z.a(param0 + 95, GrowableIntArray.field_k + 42, 18, 2 + Archive.field_f, -40 + (-GrowableIntArray.field_k + (DebouncedFieldValidator.field_g.field_Fb - 2)));
+          vd.field_d.a(2 + Archive.field_f + 20, 2, GrowableIntArray.field_k, -22 + (DebouncedFieldValidator.field_g.field_db - Archive.field_f), 0, DebouncedFieldValidator.field_g.field_Fb, 3124);
           DisplayNameSelectionPanel.field_G.a(76, AccountNameAvailabilityValidator.field_o.field_Fb, 40, -40 + AccountNameAvailabilityValidator.field_o.field_db, param0);
           ud.field_x.a(76, lb.field_c.field_Fb, 30, 0, 0);
           fd.field_s.a(108, lb.field_c.field_Fb, -2 + (lb.field_c.field_db - 70), 30, 0);

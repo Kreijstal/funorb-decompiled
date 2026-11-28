@@ -18,7 +18,7 @@ final class ua {
         RuntimeException decompiledCaughtException = null;
         var5 = DungeonAssault.field_K;
         try {
-          if (!mk.a(param1, param2, (byte) 64)) {
+          if (!MidiNoteMask.a(param1, param2, (byte) 64)) {
             return false;
           }
           var3_int = 0;

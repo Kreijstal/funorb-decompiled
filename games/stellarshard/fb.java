@@ -215,7 +215,7 @@ abstract class fb {
                       var12[var17] = he.b(var10[var17], -61);
                       var17++;
                     }
-                    var18.field_q[var5] = param2.requestDeclaredMethod(var8, var12, param3 + 94, he.b(var7, ih.a(param3, -73)));
+                    var18.field_q[var5] = param2.requestDeclaredMethod(var8, var12, param3 + 94, he.b(var7, ih.bitwiseXor(param3, -73)));
                     var18.field_m[var5] = var20;
                   }
                 } else {

@@ -58,7 +58,7 @@ final class wj {
               var5_int = var12.length << 2;
             }
             for (var7 = 0; var5_int > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(-103) << jh.a(var7 << 8, 768));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(-103) << jh.bitwiseAnd(var7 << 8, 768));
             }
             var4_ref_tc.field_i = true;
             var4_ref_tc.unlink(true);

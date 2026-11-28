@@ -13,7 +13,7 @@ abstract class jl {
         if (param0 <= 25) {
           field_e = (String) null;
         }
-        return new ba[]{rc.field_m, fb.field_i, ia.field_a, cj.field_a, aj.field_a, tl.field_c, hd.field_q, BoundedRandomAccessFile.field_j, id.field_a, jd.field_d, DualLinkDequeIterator.field_f, ue.field_G, nd.field_e, RichTextLayout.field_q};
+        return new ba[]{MusicPatchEnvelope.field_m, fb.field_i, ia.field_a, cj.field_a, aj.field_a, tl.field_c, hd.field_q, BoundedRandomAccessFile.field_j, id.field_a, jd.field_d, DualLinkDequeIterator.field_f, ue.field_G, nd.field_e, RichTextLayout.field_q};
     }
 
     abstract int getGroupRequestProgressPercent(int param0, int param1);
@@ -103,9 +103,9 @@ abstract class jl {
           var33 = ef.field_j;
           var29 = var33;
           var12 = var29;
-          mk.clearInts(var31, 0, param1);
-          mk.clearInts(var32, 0, param1);
-          mk.clearInts(var33, 0, param1);
+          ArrayBlockSupport.clearInts(var31, 0, param1);
+          ArrayBlockSupport.clearInts(var32, 0, param1);
+          ArrayBlockSupport.clearInts(var33, 0, param1);
           var13 = 16384 / (1 + 2 * param2);
           var14 = param0 - param2;
           if (var14 < 0) {
@@ -122,9 +122,9 @@ abstract class jl {
           while (var16 >= var14) {
             for (var19 = 0; param1 > var19; var19++) {
               param7 = param8[var15++];
-              var10[var19] = var10[var19] + (EditableTextField.a(16771310, param7) >> 16);
-              var11[var19] = var11[var19] + (EditableTextField.a(65293, param7) >> 8);
-              var12[var19] = var12[var19] + EditableTextField.a(255, param7);
+              var10[var19] = var10[var19] + (EditableTextField.bitwiseAnd(16771310, param7) >> 16);
+              var11[var19] = var11[var19] + (EditableTextField.bitwiseAnd(65293, param7) >> 8);
+              var12[var19] = var12[var19] + EditableTextField.bitwiseAnd(255, param7);
             }
             var15 = var15 + param6;
             var14++;
@@ -149,9 +149,9 @@ abstract class jl {
             if (param0 + (var14Lifetime1 + param5 + param2) < SoftwareRasterizer.field_a) {
               for (var21 = 0; var21 < param1; var21++) {
                 param7 = param8[var15++];
-                var10[var21] = var10[var21] + (EditableTextField.a(16738842, param7) >> 16);
-                var11[var21] = var11[var21] + (EditableTextField.a(param7, 65525) >> 8);
-                var12[var21] = var12[var21] + EditableTextField.a(255, param7);
+                var10[var21] = var10[var21] + (EditableTextField.bitwiseAnd(16738842, param7) >> 16);
+                var11[var21] = var11[var21] + (EditableTextField.bitwiseAnd(param7, 65525) >> 8);
+                var12[var21] = var12[var21] + EditableTextField.bitwiseAnd(255, param7);
               }
               var15 = var15 + param6;
               var18++;
@@ -206,9 +206,9 @@ abstract class jl {
             }
             for (var21Lifetime1Lifetime1 = 0; param1 > var21Lifetime1Lifetime1; var21Lifetime1Lifetime1++) {
               param7 = param8[var15++];
-              var10[var21Lifetime1Lifetime1] = var10[var21Lifetime1Lifetime1] + (EditableTextField.a(16758132, param7) >> 16);
-              var11[var21Lifetime1Lifetime1] = var11[var21Lifetime1Lifetime1] + EditableTextField.a(255, param7 >> 8);
-              var12[var21Lifetime1Lifetime1] = var12[var21Lifetime1Lifetime1] + EditableTextField.a(param7, 255);
+              var10[var21Lifetime1Lifetime1] = var10[var21Lifetime1Lifetime1] + (EditableTextField.bitwiseAnd(16758132, param7) >> 16);
+              var11[var21Lifetime1Lifetime1] = var11[var21Lifetime1Lifetime1] + EditableTextField.bitwiseAnd(255, param7 >> 8);
+              var12[var21Lifetime1Lifetime1] = var12[var21Lifetime1Lifetime1] + EditableTextField.bitwiseAnd(param7, 255);
             }
             var20 = var20 + param6;
             for (var21Lifetime1Lifetime2 = 0; var21Lifetime1Lifetime2 < param1; var21Lifetime1Lifetime2++) {
@@ -235,9 +235,9 @@ abstract class jl {
           while (0 > var14Lifetime1) {
             for (var21Lifetime2 = 0; var21Lifetime2 < param1; var21Lifetime2++) {
               param7 = param8[var20++];
-              var10[var21Lifetime2] = var10[var21Lifetime2] - (EditableTextField.a(param7, 16757155) >> 16);
-              var11[var21Lifetime2] = var11[var21Lifetime2] - (EditableTextField.a(65471, param7) >> 8);
-              var12[var21Lifetime2] = var12[var21Lifetime2] - EditableTextField.a(param7, 255);
+              var10[var21Lifetime2] = var10[var21Lifetime2] - (EditableTextField.bitwiseAnd(param7, 16757155) >> 16);
+              var11[var21Lifetime2] = var11[var21Lifetime2] - (EditableTextField.bitwiseAnd(65471, param7) >> 8);
+              var12[var21Lifetime2] = var12[var21Lifetime2] - EditableTextField.bitwiseAnd(param7, 255);
             }
             var20 = var20 + param6;
             var18--;

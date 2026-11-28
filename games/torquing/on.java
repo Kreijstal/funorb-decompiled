@@ -18,7 +18,7 @@ final class on extends qf {
         field_e = null;
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseAnd(long param0, long param1) {
         return param0 & param1;
     }
 

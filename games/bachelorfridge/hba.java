@@ -91,7 +91,7 @@ final class hba extends AttackEvent {
           fe.field_j = new Sprite(16, 16);
           fe.field_j.bindAsRenderTarget();
           hh.field_b[2].drawHalfSize(0, 0);
-          ProgressDialog.field_U.a((byte) -45);
+          ProgressDialog.field_U.setAsRasterTarget((byte) -45);
           ve.field_m = new Sprite[4][];
           ve.field_m[0] = pi.a(param1, -8845, "basic", "powerup_hp");
           ve.field_m[1] = pi.a(param1, -8845, "basic", "powerup_speed");
@@ -134,7 +134,7 @@ final class hba extends AttackEvent {
           aea.field_k.bindAsRenderTarget();
           var11[6].draw(0, 0);
           var11[7].draw(128, 0);
-          ProgressDialog.field_U.a((byte) 119);
+          ProgressDialog.field_U.setAsRasterTarget((byte) 119);
           pfa.field_g = var11[8];
           co.field_b = new IndexedSprite[5];
           co.field_b[4] = var11[13];
@@ -233,8 +233,8 @@ final class hba extends AttackEvent {
           iga.field_a = pi.a(param1, -8845, "basic", "p_particles");
           lw.field_b = pi.a(param1, -8845, "basic", "goo_particles");
           qna.field_l = pi.a(param1, -8845, "basic", "heal_particles");
-          un.field_m = FullHealEvent.a("swipe", param1, "basic", (byte) 78);
-          OneSpecial.field_r = (Sprite) ((Object) ((ArgbSprite) (un.field_m)).copyArgb());
+          MusicPatchEnvelope.field_m = FullHealEvent.a("swipe", param1, "basic", (byte) 78);
+          OneSpecial.field_r = (Sprite) ((Object) ((ArgbSprite) (MusicPatchEnvelope.field_m)).copyArgb());
           OneSpecial.field_r.flipHorizontal();
           FullHealEvent.a("hit_star", param1, "basic", (byte) -23);
         } catch (RuntimeException runtimeException) {

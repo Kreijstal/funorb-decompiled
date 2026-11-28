@@ -55,23 +55,23 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
           tk.field_c.drawString("Press 'H' to close this screen", var3, var2, 16777215, -1);
           var2 = var2 + var1_int;
           var4 = var2;
-          for (var5 = 0; al.field_A.length > var5; var5++) {
-            var7_int = al.field_x[var5];
+          for (var5 = 0; MusicPatch.field_A.length > var5; var5++) {
+            var7_int = MusicPatch.field_x[var5];
             if (var7_int == 2) {
-              var6 = al.field_A[var5] + "+ALT";
+              var6 = MusicPatch.field_A[var5] + "+ALT";
             } else {
               if (var7_int != 1) {
                 if (var7_int == 3) {
-                  var6 = al.field_A[var5] + "+CTRL+ALT";
+                  var6 = MusicPatch.field_A[var5] + "+CTRL+ALT";
                 } else {
                   if (var7_int != 0) {
                     var6 = null;
                   } else {
-                    var6 = al.field_A[var5];
+                    var6 = MusicPatch.field_A[var5];
                   }
                 }
               } else {
-                var6 = al.field_A[var5] + "+CTRL";
+                var6 = MusicPatch.field_A[var5] + "+CTRL";
               }
             }
             boolean decompiledFrameRemainder0 = true;

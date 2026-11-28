@@ -27,7 +27,7 @@ final class ModalDialogHost extends SingleChildWidgetContainer {
           }
           if (null != kf.field_d &&
             kf.field_d.field_b) {
-            ng.a((byte) 81);
+            MusicPatchEnvelope.a((byte) 81);
             BufferedSocket.field_a.showDialog(param0 ^ 23, new FullscreenStatusDialog(BufferedSocket.field_a, ConfirmedEmailAvailabilityValidator.field_k));
           }
           return;

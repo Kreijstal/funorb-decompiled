@@ -806,7 +806,7 @@ class PacketBuffer extends IntrusiveNode {
 
     PacketBuffer(int param0) {
         this.position = 0;
-        this.payload = h.a((byte) 26, param0);
+        this.payload = ByteArrayPoolSupport.acquireByteArray((byte) 26, param0);
     }
 
     PacketBuffer(byte[] param0) {

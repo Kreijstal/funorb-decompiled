@@ -209,7 +209,7 @@ class AudioOutput {
         if (field_n) {
           var3 = var3 << 1;
         }
-        gl.clearInts(param0, 0, var3);
+        ArrayBlockSupport.clearInts(param0, 0, var3);
         this.field_j = this.field_j - param1;
         if (this.field_b != null &&
           this.field_j <= 0) {

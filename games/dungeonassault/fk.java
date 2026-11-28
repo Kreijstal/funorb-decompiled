@@ -432,7 +432,7 @@ final class fk extends kl {
         int[] var6 = new int[64];
         int[] var2 = var6;
         for (var3_int = 0; var3_int < 64; var3_int++) {
-          var6[var3_int] = mp.a(-2147483648, (var3_int + 24) * 65793);
+          var6[var3_int] = mp.bitwiseOr(-2147483648, (var3_int + 24) * 65793);
         }
         RgbSprite var3 = new RgbSprite(this.field_a, this.field_i);
         RgbSprite var4 = new RgbSprite(this.field_a, this.field_i);

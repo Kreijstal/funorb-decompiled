@@ -41,7 +41,7 @@ final class rc {
             return stackIn_6_0;
           }
           for (var5 = 0; var5 < var8.field_B.length; var5++) {
-            var8.field_B[var5] = nb.a(var7.field_B[var5], 16777215);
+            var8.field_B[var5] = nb.bitwiseAnd(var7.field_B[var5], 16777215);
           }
           stackIn_11_0 = var8;
           return stackIn_11_0;

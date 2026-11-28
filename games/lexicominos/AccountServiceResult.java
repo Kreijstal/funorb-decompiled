@@ -107,7 +107,7 @@ final class AccountServiceResult {
           var1_int = qg.field_b[param0];
           for (var2 = 1; qg.field_b.length > var2; var2++) {
             var3 = qg.field_b[var2];
-            o.a(bf.field_a, var2 << 4, bf.field_a, var1_int, var3);
+            ArrayBlockSupport.copyIntRange(bf.field_a, var2 << 4, bf.field_a, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;

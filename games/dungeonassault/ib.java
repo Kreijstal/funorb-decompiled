@@ -22,8 +22,8 @@ final class ib {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          of.field_q = param1;
-          if (null != of.field_q &&
+          MusicPatchEnvelope.field_q = param1;
+          if (null != MusicPatchEnvelope.field_q &&
             param1.length < 3) {
             throw new IllegalArgumentException("");
           }
@@ -114,10 +114,10 @@ final class ib {
         try {
           var3 = "<col=" + Integer.toString(param1, 16) + ">";
           param2 = var3 + param2;
-          param2 = kk.a(param2, "</col>", var3, (byte) 48);
+          param2 = MusicPatch.a(param2, "</col>", var3, (byte) 48);
           param2 = param2 + "</col>";
           var4 = 108 % ((-74 - param0) / 49);
-          param2 = kk.a(param2, var3 + "<col=", "<col=", (byte) 48);
+          param2 = MusicPatch.a(param2, var3 + "<col=", "<col=", (byte) 48);
           stackIn_1_0 = (String) (param2);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -175,7 +175,7 @@ final class ib {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var6 < var3; var6++) {
-              var10[var6] = uo.field_b[nb.a((int) var21[var6], 255)];
+              var10[var6] = uo.field_b[nb.bitwiseAnd((int) var21[var6], 255)];
             }
             var1[var2] = new RgbSprite(ce.field_x, tb.field_i, MusicPatchPcmStream.field_t[var2], RichTextLayout.field_g[var2], jc.field_f[var2], jn.field_k[var2], var22);
           } else {
@@ -187,7 +187,7 @@ final class ib {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var7 < var3; var7++) {
-              var6_ref_int__[var7] = mp.a(uo.field_b[nb.a((int) var21[var7], 255)], nb.a(var16[var7] << 24, -16777216));
+              var6_ref_int__[var7] = mp.bitwiseOr(uo.field_b[nb.bitwiseAnd((int) var21[var7], 255)], nb.bitwiseAnd(var16[var7] << 24, -16777216));
             }
             var1[var2] = (RgbSprite) ((Object) new ArgbSprite(ce.field_x, tb.field_i, MusicPatchPcmStream.field_t[var2], RichTextLayout.field_g[var2], jc.field_f[var2], jn.field_k[var2], var17));
           }

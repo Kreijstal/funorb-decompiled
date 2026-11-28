@@ -50,7 +50,7 @@ class AudioMixer {
         if (field_d) {
           var3 = var3 << 1;
         }
-        ri.clearInts(param0, 0, var3);
+        ArrayBlockSupport.clearInts(param0, 0, var3);
         this.field_k = this.field_k - param1;
         if (this.field_r != null &&
           this.field_k <= 0) {

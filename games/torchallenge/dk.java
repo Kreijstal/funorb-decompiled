@@ -280,14 +280,14 @@ final class dk {
               var6 = -74 % ((param2 + 69) / 51);
               var4 = Class.forName("BufferedImageRasterBuffer");
               var5 = (RasterBuffer) (var4.newInstance());
-              var5.a(param3, param1, param0, -23435);
+              var5.initialize(param3, param1, param0, -23435);
               stackIn_1_0 = var5;
               return stackIn_1_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
               var5_ref = new ImageProducerRasterBuffer();
-              ((RasterBuffer) ((Object) var5_ref)).a(param3, param1, param0, -23435);
+              ((RasterBuffer) ((Object) var5_ref)).initialize(param3, param1, param0, -23435);
               stackIn_3_0 = var5_ref;
               return (RasterBuffer) ((Object) stackIn_3_0);
             }

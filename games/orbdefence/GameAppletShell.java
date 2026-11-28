@@ -533,12 +533,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         Object var6 = null;
         try {
           var2_long = ji.correctedCurrentTimeMillis(-61);
-          var4 = qf.field_o[mc.field_i];
-          qf.field_o[mc.field_i] = var2_long;
+          var4 = qf.field_o[MidiNoteMask.field_i];
+          qf.field_o[MidiNoteMask.field_i] = var2_long;
           if ((long)param0 != var4 &&
             var2_long <= var4) {
           }
-          mc.field_i = mc.field_i + 1 & 31;
+          MidiNoteMask.field_i = MidiNoteMask.field_i + 1 & 31;
           var6 = this;
           synchronized (var6) {
             EmailFormatValidator.field_o = ti.field_cb;

@@ -9,7 +9,7 @@ final class ib {
     static int field_f;
     static int field_d;
 
-    static long b(long param0, long param1) {
+    static long bitwiseOr(long param0, long param1) {
         return param0 | param1;
     }
 
@@ -47,7 +47,7 @@ final class ib {
         }
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseXor(long param0, long param1) {
         return param0 ^ param1;
     }
 

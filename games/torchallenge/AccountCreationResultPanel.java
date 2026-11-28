@@ -77,7 +77,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
     }
 
     AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
-        super(param0, dl.field_H, cd.field_a, false, false);
+        super(param0, MusicPatchNode.field_H, cd.field_a, false, false);
         try {
           this.field_Bb = param1;
         } catch (RuntimeException runtimeException) {
@@ -133,7 +133,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
           } else {
             var4 = SecondaryNodeDeque.field_e;
           }
-          var5 = new DialogMessagePane((ProgressMessageDialog) (this), dl.field_H, var4);
+          var5 = new DialogMessagePane((ProgressMessageDialog) (this), MusicPatchNode.field_H, var4);
           if (param2 < 41) {
             return;
           }

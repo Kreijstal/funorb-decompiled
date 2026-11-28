@@ -129,9 +129,9 @@ final class qk extends kg {
         if (null != IntrusiveNode.field_c) {
           IntrusiveNode.field_c.closeDialog(77);
         }
-        m.field_j = new DisplayNameSelectionPanel();
+        GrowableIntArray.field_j = new DisplayNameSelectionPanel();
         if (param0 < -43) {
-          LabeledWidgetContainer.field_K.replaceContent(0, m.field_j);
+          LabeledWidgetContainer.field_K.replaceContent(0, GrowableIntArray.field_j);
           return;
         }
     }

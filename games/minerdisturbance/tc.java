@@ -24,7 +24,7 @@ final class tc extends IntrusiveNode {
     final static void a(int param0) {
         fa.field_c = null;
         pe.field_pb = 0;
-        ng.field_l = -1;
+        MusicPatchEnvelope.field_l = -1;
         if (param0 == 9358) {
           il.field_n = false;
           lj.field_q = -1;

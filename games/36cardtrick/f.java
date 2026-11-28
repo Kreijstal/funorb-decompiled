@@ -48,7 +48,7 @@ final class f {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(-126) << (bc.a(var7, 3) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(-126) << (bc.bitwiseAnd(var7, 3) << 8));
             }
             var4.unlink(106);
             return;

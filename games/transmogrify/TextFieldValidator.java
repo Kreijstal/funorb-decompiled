@@ -50,7 +50,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
     abstract rc getValidationStatus(int param0, String param1);
 
     final static void a(boolean param0, int param1, int param2) {
-        wd.field_j = param1;
+        MidiNoteMask.field_j = param1;
         if (param0) {
           TextFieldValidator.a(false, -47, 24);
           lb.field_j = param2;

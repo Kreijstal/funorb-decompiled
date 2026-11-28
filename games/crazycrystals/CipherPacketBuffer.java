@@ -196,7 +196,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     final void k(int param0) {
         if (param0 != -2321) {
           ResourceArchive var3 = (ResourceArchive) null;
-          CipherPacketBuffer.a(6, -104, (ResourceArchive) null);
+          CipherPacketBuffer.loadMusicPatch(6, -104, (ResourceArchive) null);
           this.position = (this.field_l + 7) / 8;
           return;
         }
@@ -220,12 +220,12 @@ final class CipherPacketBuffer extends PacketBuffer {
         super(param0);
     }
 
-    final static dk a(int param0, int param1, ResourceArchive param2) {
+    final static MusicPatch loadMusicPatch(int param0, int param1, ResourceArchive param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
         Object stackIn_2_0 = null;
-        dk stackIn_6_0 = null;
+        MusicPatch stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -235,12 +235,12 @@ final class CipherPacketBuffer extends PacketBuffer {
           var3 = var4;
           if (var4 == null) {
             stackIn_2_0 = null;
-            return (dk) (stackIn_2_0);
+            return (MusicPatch) (stackIn_2_0);
           }
           if (param1 < 74) {
             CipherPacketBuffer.a(-108, true, 93, 119, (PuzzleTile[][]) null);
           }
-          stackIn_6_0 = new dk(var4);
+          stackIn_6_0 = new MusicPatch(var4);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

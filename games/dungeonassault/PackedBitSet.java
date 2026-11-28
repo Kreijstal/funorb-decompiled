@@ -47,7 +47,7 @@ final class PackedBitSet {
           }
           var4 = new PackedBitSet(32 * param1.field_f.length);
           for (var5 = 0; ((PackedBitSet) (var3)).field_f.length > var5; var5++) {
-            var4.field_f[var5] = nb.a(param1.field_f[var5], ((PackedBitSet) (var3)).field_f[var5]);
+            var4.field_f[var5] = nb.bitwiseAnd(param1.field_f[var5], ((PackedBitSet) (var3)).field_f[var5]);
           }
           while (param1.field_f.length > var5) {
             var4.field_f[var5] = param1.field_f[var5];
@@ -138,7 +138,7 @@ final class PackedBitSet {
     }
 
     final void setBit(int param0, int param1) {
-        this.field_f[param0 >> 5] = mp.a(this.field_f[param0 >> 5], 1 << nb.a(31, param0));
+        this.field_f[param0 >> 5] = mp.bitwiseOr(this.field_f[param0 >> 5], 1 << nb.bitwiseAnd(31, param0));
         if (param1 < -59) {
           return;
         }
@@ -205,10 +205,10 @@ final class PackedBitSet {
     final void clearBit(int param0, int param1) {
         if (param1 != 31) {
           field_j = (String) null;
-          this.field_f[param0 >> 5] = nb.a(this.field_f[param0 >> 5], ~(1 << nb.a(31, param0)));
+          this.field_f[param0 >> 5] = nb.bitwiseAnd(this.field_f[param0 >> 5], ~(1 << nb.bitwiseAnd(31, param0)));
           return;
         }
-        this.field_f[param0 >> 5] = nb.a(this.field_f[param0 >> 5], ~(1 << nb.a(31, param0)));
+        this.field_f[param0 >> 5] = nb.bitwiseAnd(this.field_f[param0 >> 5], ~(1 << nb.bitwiseAnd(31, param0)));
     }
 
     static {

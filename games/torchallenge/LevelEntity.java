@@ -285,12 +285,12 @@ final class LevelEntity {
         int var9Lifetime1Lifetime1;
         var11 = TorChallenge.field_F ? 1 : 0;
         try {
-          if (s.field_m) {
+          if (MidiNoteMask.field_m) {
             if (0 < IsaacRandom.field_c) {
               IsaacRandom.field_c = IsaacRandom.field_c - 1;
             }
             if (IsaacRandom.field_c == 0) {
-              s.field_m = false;
+              MidiNoteMask.field_m = false;
             }
           }
           this.g((byte) -85);
@@ -455,7 +455,7 @@ final class LevelEntity {
               this.field_Q = (5 * this.field_K >> 2) * this.field_a;
               ii.field_e = false;
               IsaacRandom.field_c = 200;
-              s.field_m = true;
+              MidiNoteMask.field_m = true;
               this.k((byte) -121);
               this.field_L = 9;
             }
@@ -737,7 +737,7 @@ final class LevelEntity {
           if (param1 != -21293) {
             this.field_Q = 118;
           }
-          var12 = s.field_i[1];
+          var12 = MidiNoteMask.field_i[1];
           var16 = 0;
           var17 = -1;
           var18 = -1;
@@ -3640,8 +3640,8 @@ final class LevelEntity {
                 var20 = 160;
                 if (param7 == 1 ||
                   2 == param7) {
-                  var13 = dl.field_n[2];
-                  var11 = dl.field_n[0];
+                  var13 = MusicPatchNode.field_n[2];
+                  var11 = MusicPatchNode.field_n[0];
                 }
                 param4 = -(-this.field_I + var20 >> 1);
                 if (var14 != 9 &&
@@ -4882,8 +4882,8 @@ final class LevelEntity {
                           }
                           o.field_l = 0;
                           ii.field_k.field_f = -1;
-                          if (!(ab.field_d >= 6)) {
-                            ab.field_d = ab.field_d + 1;
+                          if (!(MusicPatchEnvelope.field_d >= 6)) {
+                            MusicPatchEnvelope.field_d = MusicPatchEnvelope.field_d + 1;
                             if (var5 != 0) {
                               if (o.field_l <= 0) {
                                 RichTextWidget.field_O = true;
@@ -5537,9 +5537,9 @@ final class LevelEntity {
               var10Lifetime1 = ki.field_e[AccountRegistrationPanel.field_T[param5]] + var9_intLifetime1;
             }
           }
-          dl.field_n[2] = var11Lifetime1;
-          dl.field_n[1] = var10Lifetime1;
-          dl.field_n[0] = var9_intLifetime1;
+          MusicPatchNode.field_n[2] = var11Lifetime1;
+          MusicPatchNode.field_n[1] = var10Lifetime1;
+          MusicPatchNode.field_n[0] = var9_intLifetime1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5611,7 +5611,7 @@ final class LevelEntity {
           this.field_fb = lb.field_q[var3_int];
           this.field_mb = ja.field_j[var3_int][this.variant];
           this.field_gb = be.field_c[var3_int];
-          this.field_jb = dl.field_r[var3_int][this.variant];
+          this.field_jb = MusicPatchNode.field_r[var3_int][this.variant];
           if (0 == this.field_a) {
             this.field_a = -1;
           }
@@ -5983,7 +5983,7 @@ final class LevelEntity {
           if (!param0) {
             this.field_ib = false;
           }
-          var3 = s.field_i[0];
+          var3 = MidiNoteMask.field_i[0];
           var5 = 0;
           while (true) {
             stackIn_6_0 = var5;
@@ -6035,7 +6035,7 @@ final class LevelEntity {
           if (this.field_Q == 0) {
             var6_int = this.field_a;
           }
-          if (s.field_m) {
+          if (MidiNoteMask.field_m) {
             param1 = 5 * param1 >> 2;
           }
           var7 = var6_int * this.field_Q;
@@ -6172,7 +6172,7 @@ final class LevelEntity {
           if (this.variant > 2) {
             return;
           }
-          this.field_db = dl.field_C[var3_int][this.variant];
+          this.field_db = MusicPatchNode.field_C[var3_int][this.variant];
           this.field_nb = de.field_c[var3_int][this.variant];
           this.field_K = mh.field_c[var3_int][this.variant];
           this.field_M = ck.field_a[var3_int];
@@ -6593,15 +6593,15 @@ final class LevelEntity {
           var4 = param0 - 8;
           if (param1 >= ~var4 &&
             var4 < 4) {
-            var3_int = ab.field_d * cd.field_d[var4];
+            var3_int = MusicPatchEnvelope.field_d * cd.field_d[var4];
             qk.field_lb = qk.field_lb + 1;
             if (param0 == 11) {
-              GzipDecoder.field_c[vj.field_c] = p.a(GzipDecoder.field_c[vj.field_c], 1 << -1 + ea.field_e);
+              GzipDecoder.field_c[vj.field_c] = p.bitwiseOr(GzipDecoder.field_c[vj.field_c], 1 << -1 + ea.field_e);
             }
           }
           if (param0 == 13 &&
             NetworkArchiveRequest.field_B >= 10) {
-            var3_int = ab.field_d * 500;
+            var3_int = MusicPatchEnvelope.field_d * 500;
           }
           tf.field_o = tf.field_o + var3_int;
           GameScreen.field_c = GameScreen.field_c - var3_int;
@@ -6717,14 +6717,14 @@ final class LevelEntity {
                         var15 != 0) {
                         this.a(param1, param0, 256 * (16 + (this.field_I - pl.field_b[AccountRegistrationPanel.field_T[22]])) / 32 + this.field_B, this.y, this.x, 22, 2657, -128 + this.field_u);
                       }
-                      ah.field_d[AccountRegistrationPanel.field_T[22]][1][this.variant][0].drawScaled(dl.field_n[0], dl.field_n[2], dl.field_n[1] - dl.field_n[0], ae.field_s[AccountRegistrationPanel.field_T[22]]);
+                      ah.field_d[AccountRegistrationPanel.field_T[22]][1][this.variant][0].drawScaled(MusicPatchNode.field_n[0], MusicPatchNode.field_n[2], MusicPatchNode.field_n[1] - MusicPatchNode.field_n[0], ae.field_s[AccountRegistrationPanel.field_T[22]]);
                       if ((var15 != 0) && (this.field_P == 1 &&
                         !this.field_T)) {
                         if (var9 != 0) {
                           this.a(param1, param0, this.field_B + (-32 + (-pl.field_b[AccountRegistrationPanel.field_T[22]] + this.field_I)) * 256 / 32, this.y, this.x, 22, 2657, -256 + this.field_u);
                         }
                         this.a(param1, param0, 256 + this.field_B, this.y, this.x, 22, 2657, this.field_u - 256);
-                        ah.field_d[AccountRegistrationPanel.field_T[22]][1][this.variant][0].drawScaled(dl.field_n[0], dl.field_n[2], -dl.field_n[0] + dl.field_n[1], ae.field_s[AccountRegistrationPanel.field_T[22]]);
+                        ah.field_d[AccountRegistrationPanel.field_T[22]][1][this.variant][0].drawScaled(MusicPatchNode.field_n[0], MusicPatchNode.field_n[2], -MusicPatchNode.field_n[0] + MusicPatchNode.field_n[1], ae.field_s[AccountRegistrationPanel.field_T[22]]);
                       }
                     } else {
                       if (this.field_P == 1 &&
@@ -6736,7 +6736,7 @@ final class LevelEntity {
                           var15 != 0) {
                           this.a(param1, param0, 256 + this.field_B, this.y, this.x, 22, 2657, this.field_u - 256);
                         }
-                        ah.field_d[AccountRegistrationPanel.field_T[22]][1][this.variant][0].drawScaled(dl.field_n[0], dl.field_n[2], -dl.field_n[0] + dl.field_n[1], ae.field_s[AccountRegistrationPanel.field_T[22]]);
+                        ah.field_d[AccountRegistrationPanel.field_T[22]][1][this.variant][0].drawScaled(MusicPatchNode.field_n[0], MusicPatchNode.field_n[2], -MusicPatchNode.field_n[0] + MusicPatchNode.field_n[1], ae.field_s[AccountRegistrationPanel.field_T[22]]);
                       }
                     }
                   }
@@ -7052,9 +7052,9 @@ final class LevelEntity {
             !DebouncedFieldValidator.field_b) {
             return;
           }
-          var4_int = dl.field_n[0];
-          var5 = dl.field_n[1];
-          var6 = dl.field_n[2];
+          var4_int = MusicPatchNode.field_n[0];
+          var5 = MusicPatchNode.field_n[1];
+          var6 = MusicPatchNode.field_n[2];
           var7 = -112 / ((-25 - param0) / 49);
           var10 = 0;
           if (var5 > var4_int) {
@@ -7214,7 +7214,7 @@ final class LevelEntity {
                 var15 = -8 + this.type;
                 if (0 <= var15 &&
                   var15 < cd.field_d.length) {
-                  var14_ref_String = Integer.toString(ab.field_d * cd.field_d[var15]);
+                  var14_ref_String = Integer.toString(MusicPatchEnvelope.field_d * cd.field_d[var15]);
                   var16 = var4_int + (((Sprite) (var11)).fullWidth >> 1);
                   var17 = 24;
                   var18 = var6 + (((Sprite) (var11)).fullHeight >> 1) - ((var17 >> 1) - 6);
@@ -7894,7 +7894,7 @@ final class LevelEntity {
             if (var8 == 0) {
               var5_int = stackIn_13_0;
               this.a(param2, param0, SecondaryNodeDeque.field_j[var6][1], SecondaryNodeDeque.field_j[var6][2], SecondaryNodeDeque.field_j[var6][0], this.type, 2657, SecondaryNodeDeque.field_j[var6][3]);
-              wh.field_f[var6].drawScaledAlpha(dl.field_n[0], dl.field_n[2], dl.field_n[1] - dl.field_n[0], this.field_w, var5_int);
+              wh.field_f[var6].drawScaledAlpha(MusicPatchNode.field_n[0], MusicPatchNode.field_n[2], MusicPatchNode.field_n[1] - MusicPatchNode.field_n[0], this.field_w, var5_int);
               var6++;
               continue;
             }
@@ -8272,7 +8272,7 @@ final class LevelEntity {
             var8 = pl.field_e[this.field_L];
             var9 = SpriteState.field_w[var7][var8][this.field_kb];
             if (param2) {
-              var9 = ab.field_e;
+              var9 = MusicPatchEnvelope.field_e;
             }
             var10 = var5 + var9[0];
             var11 = var9[1] + var6;
@@ -8605,8 +8605,8 @@ final class LevelEntity {
             ContentTransitionDialog.field_jb != RichTextLayout.field_t ||
             ul.field_m != this.field_a ||
             ul.field_m == 0) {
-            dl.field_n[2] = 0;
-            dl.field_n[0] = 0;
+            MusicPatchNode.field_n[2] = 0;
+            MusicPatchNode.field_n[0] = 0;
             this.a(ea.field_h, param2, param4, new int[]{this.field_a, AccountNameAvailabilityValidator.field_r, ContentTransitionDialog.field_jb, 16777215}, param0, -20861, param3, 1);
             ea.field_h.bindAsRenderTarget();
             SoftwareRasterizer.blurRectangle(2, 2, 0, 0, ea.field_h.storedWidth, ea.field_h.storedHeight);
@@ -8672,11 +8672,11 @@ final class LevelEntity {
           var17 = stackIn_63_0;
           while (var16 > var17) {
             this.a(param1, RichTextWidget.field_R, id.field_d[var17][1], id.field_d[var17][2], id.field_d[var17][0], this.type, 2657, id.field_d[var17][3]);
-            var9 = dl.field_n[2];
-            var7_int = dl.field_n[0];
-            var8 = dl.field_n[1];
-            dl.field_n[2] = -32 + var9;
-            dl.field_n[0] = -(-this.field_I + var13 >> 1) + var7_int;
+            var9 = MusicPatchNode.field_n[2];
+            var7_int = MusicPatchNode.field_n[0];
+            var8 = MusicPatchNode.field_n[1];
+            MusicPatchNode.field_n[2] = -32 + var9;
+            MusicPatchNode.field_n[0] = -(-this.field_I + var13 >> 1) + var7_int;
             var11 = ConfirmedEmailAvailabilityValidator.field_w[var17][1];
             var10 = ConfirmedEmailAvailabilityValidator.field_w[var17][0];
             var12 = ConfirmedEmailAvailabilityValidator.field_w[var17][2];
@@ -9631,7 +9631,7 @@ final class LevelEntity {
             rc.a(stackIn_84_0, stackIn_84_1, stackIn_85_2, this.field_I, this.field_w, this.field_e, param0.field_w, this.field_z, param0.field_e);
             if (param0.type == 28 &&
               fh.field_e == 2) {
-              if (!s.field_m) {
+              if (!MidiNoteMask.field_m) {
                 ha.field_d = ha.field_d + 1;
                 if (ha.field_d >= 4) {
                   ha.field_d = 0;

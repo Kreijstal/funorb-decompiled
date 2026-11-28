@@ -10,7 +10,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
     static int field_w;
     static int field_x;
 
-    static int b(int param0, int param1) {
+    static int bitwiseOr(int param0, int param1) {
         return param0 | param1;
     }
 

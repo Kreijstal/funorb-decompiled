@@ -287,7 +287,7 @@ abstract class FrameTimer {
                 var8_ref_String = var4[var5];
                 if (0 <= var7 &&
                   VolumeRampingMidiPcmStream.field_ib[var7] <= 0) {
-                  var8_ref_String = nf.field_p.toUpperCase();
+                  var8_ref_String = MusicPatch.field_p.toUpperCase();
                 }
                 if (var1_int != 0) {
                   if (var1_int == 1) {
@@ -367,7 +367,7 @@ abstract class FrameTimer {
                 ClientLookupTables.field_e.drawCharacter('2', var8Lifetime1, 1 + var9Lifetime1, 65793);
                 ClientLookupTables.field_e.drawCharacter('2', var8Lifetime1, var9Lifetime1, 16772608);
               }
-              if (hf.field_i == var1_intLifetime2) {
+              if (ByteArrayPoolSupport.field_i == var1_intLifetime2) {
                 var7Lifetime1 = 1;
               }
               if (var7Lifetime1 != 0) {

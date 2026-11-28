@@ -75,7 +75,7 @@ final class AirstrikeEvent extends SpecialEvent {
           var7 = SoftwareRasterizer.field_e[var6];
           var5 = var5 + (16711680 & (var7 & 65280) * (256 - param4));
           param2 = param2 + ((16711935 & var7) * (256 - param4) & -16711936);
-          SoftwareRasterizer.field_e[var6] = MassPoisonSpecial.a(param2, var5) >>> 8;
+          SoftwareRasterizer.field_e[var6] = MassPoisonSpecial.bitwiseOr(param2, var5) >>> 8;
           return;
         }
     }

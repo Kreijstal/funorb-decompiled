@@ -1091,7 +1091,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 }
                 var2 = rp.a("pleasetryagain", 61);
                 if (null != var2) {
-                  kk.field_t = dj.a(var2, false);
+                  MusicPatch.field_t = dj.a(var2, false);
                 }
                 var2 = rp.a("pleasereenterpass", 71);
                 if (null != var2) {
@@ -1193,7 +1193,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 }
                 var2 = rp.a("retry", 116);
                 if (null != var2) {
-                  kn.field_a = dj.a(var2, false);
+                  ByteArrayPoolSupport.field_a = dj.a(var2, false);
                 }
                 var2 = rp.a("back", 102);
                 if (null != var2) {
@@ -1353,7 +1353,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 }
                 var2 = rp.a("openinpopupwindow", 114);
                 if (var2 != null) {
-                  kn.field_d = dj.a(var2, false);
+                  ByteArrayPoolSupport.field_d = dj.a(var2, false);
                 }
                 var2 = rp.a("create", 65);
                 if (var2 != null) {

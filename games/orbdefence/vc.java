@@ -63,7 +63,7 @@ final class vc {
                 }
                 if (stackIn_27_0 >= 0 &&
                   var8 < 256) {
-                  this.field_h[this.field_d] = (byte)ge.a((int) this.field_h[this.field_d], var8 >>> var7);
+                  this.field_h[this.field_d] = (byte)ge.bitwiseOr((int) this.field_h[this.field_d], var8 >>> var7);
                   this.field_d = this.field_d + 1;
                   this.field_e = this.field_e + (8 - var7);
                   if (this.field_e == 512) {
@@ -71,7 +71,7 @@ final class vc {
                     this.field_e = 0;
                     this.field_d = 0;
                   }
-                  this.field_h[this.field_d] = (byte)EditableTextField.a(var8 << 8 - var7, 255);
+                  this.field_h[this.field_d] = (byte)EditableTextField.bitwiseAnd(var8 << 8 - var7, 255);
                   param2 = param2 - 8L;
                   var5_int++;
                   this.field_e = this.field_e + var7;
@@ -85,7 +85,7 @@ final class vc {
           }
           if (stackIn_27_0 > 0) {
             var8 = 255 & param1[var5_int] << var6;
-            this.field_h[this.field_d] = (byte)ge.a((int) this.field_h[this.field_d], var8 >>> var7);
+            this.field_h[this.field_d] = (byte)ge.bitwiseOr((int) this.field_h[this.field_d], var8 >>> var7);
           }
           if (stackIn_27_0 <= 0 ||
             var13 != 0) {
@@ -100,7 +100,7 @@ final class vc {
               this.field_e = 0;
               this.field_d = 0;
             }
-            this.field_h[this.field_d] = (byte)EditableTextField.a(var8 << 8 - var7, 255);
+            this.field_h[this.field_d] = (byte)EditableTextField.bitwiseAnd(var8 << 8 - var7, 255);
             this.field_e = this.field_e + (int)param2;
             if (var13 == 0) {
               return;
@@ -361,7 +361,7 @@ final class vc {
               }
               break;
             }
-            this.field_m[var2_int] = j.a(j.a(j.a(bm.a((long)this.field_h[var3 + 5], 255L) << 16, j.a(j.a(bm.a(255L, (long)this.field_h[3 + var3]) << 32, j.a(j.a(bm.a((long)this.field_h[1 + var3] << 48, 71776119061217280L), (long)this.field_h[var3] << 56), bm.a(280375465082880L, (long)this.field_h[var3 + 2] << 40))), bm.a((long)this.field_h[var3 + 4], 255L) << 24)), bm.a((long)this.field_h[6 + var3], 255L) << 8), bm.a((long)this.field_h[7 + var3], 255L));
+            this.field_m[var2_int] = j.bitwiseXor(j.bitwiseXor(j.bitwiseXor(bm.bitwiseAnd((long)this.field_h[var3 + 5], 255L) << 16, j.bitwiseXor(j.bitwiseXor(bm.bitwiseAnd(255L, (long)this.field_h[3 + var3]) << 32, j.bitwiseXor(j.bitwiseXor(bm.bitwiseAnd((long)this.field_h[1 + var3] << 48, 71776119061217280L), (long)this.field_h[var3] << 56), bm.bitwiseAnd(280375465082880L, (long)this.field_h[var3 + 2] << 40))), bm.bitwiseAnd((long)this.field_h[var3 + 4], 255L) << 24)), bm.bitwiseAnd((long)this.field_h[6 + var3], 255L) << 8), bm.bitwiseAnd((long)this.field_h[7 + var3], 255L));
             var3 += 8;
             var2_int++;
           } while (var6 == 0);
@@ -374,7 +374,7 @@ final class vc {
             dupTemp$0 = this.field_k[var2_int];
             arrayValue$1 = this.field_m[var2_int];
             this.field_o[var2_int] = dupTemp$0;
-            this.field_c[var2_int] = j.a(arrayValue$1, dupTemp$0);
+            this.field_c[var2_int] = j.bitwiseXor(arrayValue$1, dupTemp$0);
             var2_int++;
           } while (var6 == 0);
           scanLoop1: while (true) {
@@ -390,7 +390,7 @@ final class vc {
                 stackIn_33_0 = 56;
                 var5 = stackIn_33_0;
                 while (var4 < 8) {
-                  this.field_f[var3] = j.a(this.field_f[var3], nd.field_c[var4][EditableTextField.a((int)(this.field_o[EditableTextField.a(-var4 + var3, 7)] >>> var5), 255)]);
+                  this.field_f[var3] = j.bitwiseXor(this.field_f[var3], nd.field_c[var4][EditableTextField.bitwiseAnd((int)(this.field_o[EditableTextField.bitwiseAnd(-var4 + var3, 7)] >>> var5), 255)]);
                   var4++;
                   var5 -= 8;
                 }
@@ -402,7 +402,7 @@ final class vc {
                 this.field_o[var3] = this.field_f[var3];
                 var3++;
               }
-              this.field_o[0] = j.a(this.field_o[0], nd.field_d[var2_int]);
+              this.field_o[0] = j.bitwiseXor(this.field_o[0], nd.field_d[var2_int]);
               var3 = 0;
               while (var3 < 8) {
                 this.field_f[var3] = this.field_o[var3];
@@ -410,7 +410,7 @@ final class vc {
                 stackIn_52_0 = 56;
                 var5Lifetime1 = stackIn_52_0;
                 while (var4Lifetime1 < 8) {
-                  this.field_f[var3] = j.a(this.field_f[var3], nd.field_c[var4Lifetime1][EditableTextField.a((int)(this.field_c[EditableTextField.a(var3 - var4Lifetime1, 7)] >>> var5Lifetime1), 255)]);
+                  this.field_f[var3] = j.bitwiseXor(this.field_f[var3], nd.field_c[var4Lifetime1][EditableTextField.bitwiseAnd((int)(this.field_c[EditableTextField.bitwiseAnd(var3 - var4Lifetime1, 7)] >>> var5Lifetime1), 255)]);
                   var5Lifetime1 -= 8;
                   var4Lifetime1++;
                 }
@@ -430,7 +430,7 @@ final class vc {
           }
           var2_int = stackIn_61_0;
           while (8 > var2_int) {
-            this.field_k[var2_int] = j.a(this.field_k[var2_int], j.a(this.field_c[var2_int], this.field_m[var2_int]));
+            this.field_k[var2_int] = j.bitwiseXor(this.field_k[var2_int], j.bitwiseXor(this.field_c[var2_int], this.field_m[var2_int]));
             var2_int++;
             if (var6 != 0) {
               return;
@@ -720,7 +720,7 @@ final class vc {
         int var8 = 0;
         var8 = OrbDefence.field_D ? 1 : 0;
         try {
-          this.field_h[this.field_d] = (byte)ge.a((int) this.field_h[this.field_d], 128 >>> EditableTextField.a(7, this.field_e));
+          this.field_h[this.field_d] = (byte)ge.bitwiseOr((int) this.field_h[this.field_d], 128 >>> EditableTextField.bitwiseAnd(7, this.field_e));
           this.field_d = this.field_d + 1;
           if (this.field_d > 32) {
             while (true) {
@@ -740,7 +740,7 @@ final class vc {
           }
           do {
             if (this.field_d >= 32) {
-              mk.copyByteRange(this.field_l, 0, this.field_h, 32, 32);
+              ArrayBlockSupport.copyByteRange(this.field_l, 0, this.field_h, 32, 32);
               this.a(false);
               break;
             }

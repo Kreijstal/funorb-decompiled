@@ -1465,7 +1465,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("create_password", (byte) -127);
                 if (null != var2) {
-                  fl.field_b = GzipInflater.a(var2, (byte) 80);
+                  GrowableIntArray.field_b = GzipInflater.a(var2, (byte) 80);
                 }
                 var2 = SectorCacheStore.a("create_password_confirm", (byte) -127);
                 if (null != var2) {

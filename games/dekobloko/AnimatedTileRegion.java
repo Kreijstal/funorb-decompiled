@@ -158,7 +158,7 @@ final class AnimatedTileRegion extends HashNode {
                       if (indexedSpriteLocal22 == null) {
                         indexedSpriteLocal26 = new IndexedSprite(this.integerState0816, this.integerState0811, 0);
                         indexedSpriteLocal22 = indexedSpriteLocal26;
-                        MixedSupport008.performAction0072(indexedSpriteLocal26.byteArrayState0021, 0, this.integerState0816 * this.integerState0811, (byte) 1);
+                        ArrayBlockSupport.performAction0072(indexedSpriteLocal26.byteArrayState0021, 0, this.integerState0816 * this.integerState0811, (byte) 1);
                         animatedTileRegionLocal25.indexedSpriteArrayState0005[integerLocal19 + this.integerState0817 * integerLocal11] = indexedSpriteLocal26;
                       }
                       indexedSpriteLocal22.byteArrayState0021[integerLocal20 + integerLocal52 * this.integerState0816] = (byte) 0;
@@ -179,7 +179,7 @@ final class AnimatedTileRegion extends HashNode {
                     if (indexedSpriteLocal46 == null) {
                       indexedSpriteLocal27 = new IndexedSprite(this.integerState0816, this.integerState0811, 0);
                       indexedSpriteLocal46 = indexedSpriteLocal27;
-                      MixedSupport008.performAction0072(indexedSpriteLocal27.byteArrayState0021, 0, this.integerState0816 * this.integerState0811, (byte) 1);
+                      ArrayBlockSupport.performAction0072(indexedSpriteLocal27.byteArrayState0021, 0, this.integerState0816 * this.integerState0811, (byte) 1);
                       this.indexedSpriteArrayState0005[this.integerState0817 * integerLocal11 + integerLocal19] = indexedSpriteLocal27;
                     }
                     indexedSpriteLocal46.byteArrayState0021[integerLocal52 * this.integerState0816 + integerLocal20] = (byte) 0;
@@ -270,7 +270,7 @@ final class AnimatedTileRegion extends HashNode {
                       if (indexedSpriteLocal23 == null) {
                         indexedSpriteLocal28 = new IndexedSprite(this.integerState0816, this.integerState0811, 0);
                         indexedSpriteLocal23 = indexedSpriteLocal28;
-                        MixedSupport008.performAction0072(indexedSpriteLocal28.byteArrayState0021, 0, this.integerState0816 * this.integerState0811, (byte) 1);
+                        ArrayBlockSupport.performAction0072(indexedSpriteLocal28.byteArrayState0021, 0, this.integerState0816 * this.integerState0811, (byte) 1);
                         animatedTileRegionLocal25.indexedSpriteArrayState0005[this.integerState0817 * integerLocal44 + integerLocal36] = indexedSpriteLocal28;
                       }
                       indexedSpriteLocal23.byteArrayState0021[integerLocal21 * this.integerState0816 + integerLocal41] = (byte) 0;
@@ -291,7 +291,7 @@ final class AnimatedTileRegion extends HashNode {
                     if (indexedSpriteLocal47 == null) {
                       indexedSpriteLocal29 = new IndexedSprite(this.integerState0816, this.integerState0811, 0);
                       indexedSpriteLocal47 = indexedSpriteLocal29;
-                      MixedSupport008.performAction0072(indexedSpriteLocal29.byteArrayState0021, 0, this.integerState0816 * this.integerState0811, (byte) 1);
+                      ArrayBlockSupport.performAction0072(indexedSpriteLocal29.byteArrayState0021, 0, this.integerState0816 * this.integerState0811, (byte) 1);
                       this.indexedSpriteArrayState0005[integerLocal36 + integerLocal44 * this.integerState0817] = indexedSpriteLocal29;
                     }
                     indexedSpriteLocal47.byteArrayState0021[integerLocal41 + this.integerState0816 * integerLocal21] = (byte) 0;
@@ -481,16 +481,16 @@ final class AnimatedTileRegion extends HashNode {
                 longLocal6 = longLocal6 ^ 285L;
             }
             longLocal7 = longLocal6 ^ longLocal2;
-            longArrayArrayState0002[0][integerLocal9] = ThemeTips.computeLong0822(ThemeTips.computeLong0822(ThemeTips.computeLong0822(longLocal5 << 16, ThemeTips.computeLong0822(longLocal6 << 24, ThemeTips.computeLong0822(ThemeTips.computeLong0822(longLocal4 << 40, ThemeTips.computeLong0822(longLocal2 << 48, longLocal2 << 56)), longLocal2 << 32))), longLocal3 << 8), longLocal7);
+            longArrayArrayState0002[0][integerLocal9] = ThemeTips.bitwiseOr(ThemeTips.bitwiseOr(ThemeTips.bitwiseOr(longLocal5 << 16, ThemeTips.bitwiseOr(longLocal6 << 24, ThemeTips.bitwiseOr(ThemeTips.bitwiseOr(longLocal4 << 40, ThemeTips.bitwiseOr(longLocal2 << 48, longLocal2 << 56)), longLocal2 << 32))), longLocal3 << 8), longLocal7);
             for (integerLocal8 = 1; integerLocal8 < 8; integerLocal8++) {
-                longArrayArrayState0002[integerLocal8][integerLocal9] = ThemeTips.computeLong0822(longArrayArrayState0002[integerLocal8 - 1][integerLocal9] >>> 8, longArrayArrayState0002[integerLocal8 - 1][integerLocal9] << 56);
+                longArrayArrayState0002[integerLocal8][integerLocal9] = ThemeTips.bitwiseOr(longArrayArrayState0002[integerLocal8 - 1][integerLocal9] >>> 8, longArrayArrayState0002[integerLocal8 - 1][integerLocal9] << 56);
             }
             integerLocal9++;
         }
         longArrayState0010[0] = 0L;
         for (integerLocal9 = 1; 10 >= integerLocal9; integerLocal9++) {
             integerLocal1 = (-1 + integerLocal9) * 8;
-            longArrayState0010[integerLocal9] = ResourceSupport004.computeLong1248(LoginCredentials.computeLong0789(255L, longArrayArrayState0002[7][7 + integerLocal1]), ResourceSupport004.computeLong1248(ResourceSupport004.computeLong1248(ResourceSupport004.computeLong1248(ResourceSupport004.computeLong1248(ResourceSupport004.computeLong1248(ResourceSupport004.computeLong1248(LoginCredentials.computeLong0789(longArrayArrayState0002[1][integerLocal1 + 1], 71776119061217280L), LoginCredentials.computeLong0789(longArrayArrayState0002[0][integerLocal1], -72057594037927936L)), LoginCredentials.computeLong0789(longArrayArrayState0002[2][2 + integerLocal1], 280375465082880L)), LoginCredentials.computeLong0789(1095216660480L, longArrayArrayState0002[3][integerLocal1 + 3])), LoginCredentials.computeLong0789(4278190080L, longArrayArrayState0002[4][integerLocal1 + 4])), LoginCredentials.computeLong0789(16711680L, longArrayArrayState0002[5][integerLocal1 + 5])), LoginCredentials.computeLong0789(65280L, longArrayArrayState0002[6][integerLocal1 + 6])));
+            longArrayState0010[integerLocal9] = ResourceSupport004.bitwiseXor(LoginCredentials.bitwiseAnd(255L, longArrayArrayState0002[7][7 + integerLocal1]), ResourceSupport004.bitwiseXor(ResourceSupport004.bitwiseXor(ResourceSupport004.bitwiseXor(ResourceSupport004.bitwiseXor(ResourceSupport004.bitwiseXor(ResourceSupport004.bitwiseXor(LoginCredentials.bitwiseAnd(longArrayArrayState0002[1][integerLocal1 + 1], 71776119061217280L), LoginCredentials.bitwiseAnd(longArrayArrayState0002[0][integerLocal1], -72057594037927936L)), LoginCredentials.bitwiseAnd(longArrayArrayState0002[2][2 + integerLocal1], 280375465082880L)), LoginCredentials.bitwiseAnd(1095216660480L, longArrayArrayState0002[3][integerLocal1 + 3])), LoginCredentials.bitwiseAnd(4278190080L, longArrayArrayState0002[4][integerLocal1 + 4])), LoginCredentials.bitwiseAnd(16711680L, longArrayArrayState0002[5][integerLocal1 + 5])), LoginCredentials.bitwiseAnd(65280L, longArrayArrayState0002[6][integerLocal1 + 6])));
         }
         stringState0566 = "Passwords can only contain letters and numbers";
     }

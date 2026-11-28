@@ -31,7 +31,7 @@ final class bf {
         int var8 = 0;
         var8 = HostileSpawn.field_I ? 1 : 0;
         try {
-          this.field_i[this.field_e] = (byte)ll.a((int) this.field_i[this.field_e], 128 >>> PcmOutputWorker.bitwiseAnd(7, this.field_b));
+          this.field_i[this.field_e] = (byte)ll.bitwiseOr((int) this.field_i[this.field_e], 128 >>> PcmOutputWorker.bitwiseAnd(7, this.field_b));
           this.field_e = this.field_e + 1;
           if (this.field_e > 32) {
             while (this.field_e < 64) {
@@ -47,7 +47,7 @@ final class bf {
             this.field_e = this.field_e + 1;
             this.field_i[fieldTemp$1] = (byte) 0;
           }
-          kf.copyByteRange(this.field_a, 0, this.field_i, 32, 32);
+          ArrayBlockSupport.copyByteRange(this.field_a, 0, this.field_i, 32, 32);
           this.b((byte) -1);
           if (param2 != -6) {
             return;
@@ -122,7 +122,7 @@ final class bf {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_l[var2] = ga.a(ga.a(DualLinkNode.a(255L, (long)this.field_i[6 + var3]) << 8, ga.a(ga.a(DualLinkNode.a(255L, (long)this.field_i[var3 + 4]) << 24, ga.a(DualLinkNode.a(1095216660480L, (long)this.field_i[var3 + 3] << 32), ga.a(ga.a((long)this.field_i[var3] << 56, DualLinkNode.a((long)this.field_i[var3 + 1], 255L) << 48), DualLinkNode.a(255L, (long)this.field_i[2 + var3]) << 40))), DualLinkNode.a(16711680L, (long)this.field_i[var3 + 5] << 16))), DualLinkNode.a((long)this.field_i[var3 + 7], 255L));
+          this.field_l[var2] = ga.bitwiseXor(ga.bitwiseXor(DualLinkNode.bitwiseAnd(255L, (long)this.field_i[6 + var3]) << 8, ga.bitwiseXor(ga.bitwiseXor(DualLinkNode.bitwiseAnd(255L, (long)this.field_i[var3 + 4]) << 24, ga.bitwiseXor(DualLinkNode.bitwiseAnd(1095216660480L, (long)this.field_i[var3 + 3] << 32), ga.bitwiseXor(ga.bitwiseXor((long)this.field_i[var3] << 56, DualLinkNode.bitwiseAnd((long)this.field_i[var3 + 1], 255L) << 48), DualLinkNode.bitwiseAnd(255L, (long)this.field_i[2 + var3]) << 40))), DualLinkNode.bitwiseAnd(16711680L, (long)this.field_i[var3 + 5] << 16))), DualLinkNode.bitwiseAnd((long)this.field_i[var3 + 7], 255L));
           var3 += 8;
           var2++;
         }
@@ -130,7 +130,7 @@ final class bf {
           dupTemp$0 = this.field_c[var2Lifetime1];
           arrayValue$1 = this.field_l[var2Lifetime1];
           this.field_g[var2Lifetime1] = dupTemp$0;
-          this.field_h[var2Lifetime1] = ga.a(arrayValue$1, dupTemp$0);
+          this.field_h[var2Lifetime1] = ga.bitwiseXor(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
@@ -138,7 +138,7 @@ final class bf {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_k[var3Lifetime1] = ga.a(this.field_k[var3Lifetime1], i.field_a[var4][PcmOutputWorker.bitwiseAnd((int)(this.field_g[PcmOutputWorker.bitwiseAnd(7, var3Lifetime1 - var4)] >>> var5), 255)]);
+              this.field_k[var3Lifetime1] = ga.bitwiseXor(this.field_k[var3Lifetime1], i.field_a[var4][PcmOutputWorker.bitwiseAnd((int)(this.field_g[PcmOutputWorker.bitwiseAnd(7, var3Lifetime1 - var4)] >>> var5), 255)]);
               var5 -= 8;
               var4++;
             }
@@ -146,14 +146,14 @@ final class bf {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_g[var3Lifetime1Lifetime1] = this.field_k[var3Lifetime1Lifetime1];
           }
-          this.field_g[0] = ga.a(this.field_g[0], i.field_c[var2Lifetime2]);
+          this.field_g[0] = ga.bitwiseXor(this.field_g[0], i.field_c[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_k[var3Lifetime1Lifetime2] = this.field_g[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_k[var3Lifetime1Lifetime2] = ga.a(this.field_k[var3Lifetime1Lifetime2], i.field_a[var7][PcmOutputWorker.bitwiseAnd((int)(this.field_h[PcmOutputWorker.bitwiseAnd(7, -var7 + var3Lifetime1Lifetime2)] >>> var5Lifetime1), 255)]);
+              this.field_k[var3Lifetime1Lifetime2] = ga.bitwiseXor(this.field_k[var3Lifetime1Lifetime2], i.field_a[var7][PcmOutputWorker.bitwiseAnd((int)(this.field_h[PcmOutputWorker.bitwiseAnd(7, -var7 + var3Lifetime1Lifetime2)] >>> var5Lifetime1), 255)]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -166,7 +166,7 @@ final class bf {
           bf.clearStaticReferences(48);
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_c[var2Lifetime3] = ga.a(this.field_c[var2Lifetime3], ga.a(this.field_h[var2Lifetime3], this.field_l[var2Lifetime3]));
+          this.field_c[var2Lifetime3] = ga.bitwiseXor(this.field_c[var2Lifetime3], ga.bitwiseXor(this.field_h[var2Lifetime3], this.field_l[var2Lifetime3]));
         }
     }
 
@@ -263,7 +263,7 @@ final class bf {
             var8 = 255 & param1[var5_int] << var6 | (param1[var5_int + 1] & 255) >>> 8 - var6;
             if (var8 >= 0 &&
               256 > var8) {
-              this.field_i[this.field_e] = (byte)ll.a((int) this.field_i[this.field_e], var8 >>> var7);
+              this.field_i[this.field_e] = (byte)ll.bitwiseOr((int) this.field_i[this.field_e], var8 >>> var7);
               this.field_e = this.field_e + 1;
               this.field_b = this.field_b + (8 - var7);
               if (this.field_b == 512) {
@@ -283,7 +283,7 @@ final class bf {
             stackIn_17_0 = 255;
             stackIn_17_1 = param1[var5_int] << var6;
             var8Lifetime1 = stackIn_17_0 & stackIn_17_1;
-            this.field_i[this.field_e] = (byte)ll.a((int) this.field_i[this.field_e], var8Lifetime1 >>> var7);
+            this.field_i[this.field_e] = (byte)ll.bitwiseOr((int) this.field_i[this.field_e], var8Lifetime1 >>> var7);
           } else {
             var8Lifetime1 = 0;
           }

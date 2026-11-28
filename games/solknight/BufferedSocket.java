@@ -55,7 +55,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -346,7 +346,7 @@ final class BufferedSocket implements Runnable {
             return;
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ad.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "ad.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -443,7 +443,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
         }
     }
 
@@ -481,7 +481,7 @@ final class BufferedSocket implements Runnable {
           var3 = 0;
           if (var1_int != 0 &&
             DraggableWidgetContainer.field_K.field_f >= 0) {
-            var3 = fl.field_b[DraggableWidgetContainer.field_K.field_f];
+            var3 = ByteArrayPoolSupport.field_b[DraggableWidgetContainer.field_K.field_f];
             if (var3 == 2) {
               kh.a(-78);
             } else if (5 == var3) {
@@ -507,7 +507,7 @@ final class BufferedSocket implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var1), "ad.C(" + param0 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var1), "ad.C(" + param0 + ')');
         }
     }
 
@@ -565,7 +565,7 @@ final class BufferedSocket implements Runnable {
           this.field_g = this.field_e.getOutputStream();
           this.field_f = param2;
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ad.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "ad.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

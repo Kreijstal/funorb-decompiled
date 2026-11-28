@@ -14,7 +14,7 @@ final class AccountRequestState {
           DialogMessagePane.field_U = param6;
           AchievementIconEntry.field_n.setRootStream(wa.field_j);
           FullscreenFocusCanvas.field_b = param1;
-          FullscreenFocusCanvas.field_b.a(DelegatingCanvas.field_d, 256);
+          FullscreenFocusCanvas.field_b.setVolume(DelegatingCanvas.field_d, 256);
           ub.field_n.setRootStream(FullscreenFocusCanvas.field_b);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "af.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
@@ -63,7 +63,7 @@ final class AccountRequestState {
             for (var2 = 0; var2 < 8; var2++) {
               var4[var2] = 0;
             }
-            var5 = bp.field_e;
+            var5 = GrowableIntArray.field_e;
             var1Lifetime1 = var5;
             var6 = 0;
             var2Lifetime1 = var6;

@@ -452,10 +452,10 @@ abstract class TextLayout {
             stackIn_11_0 = stackOut_10_0;
             if (var19 == 0) {
               if (stackIn_11_0) {
-                var12 = gm.field_l[var9];
+                var12 = MusicPatchEnvelope.field_l[var9];
                 var13 = nb.field_c[var9];
-                var14 = gm.field_l[var10] - var12;
-                var15 = -var12 + gm.field_l[var11];
+                var14 = MusicPatchEnvelope.field_l[var10] - var12;
+                var15 = -var12 + MusicPatchEnvelope.field_l[var11];
                 var16 = nb.field_c[var10] - var13;
                 var17 = nb.field_c[var11] - var13;
               }
@@ -468,14 +468,14 @@ abstract class TextLayout {
                     var14 = gd.field_e[var11];
                     if (var14 != -2147483648) {
                       var15 = var14 + (var12Lifetime1 + var13Lifetime1) - var6;
-                      stackIn_24_0 = fc.field_e.length - 1;
+                      stackIn_24_0 = GrowableIntArray.field_e.length - 1;
                       if (var7 < 0) {
                         stackIn_25_1 = var15 << -var7;
                       } else {
                         stackIn_25_1 = var15 >> var7;
                       }
                       var16 = stackIn_24_0 - stackIn_25_1;
-                      var17 = fc.field_e[var16];
+                      var17 = GrowableIntArray.field_e[var16];
                       while (true) {
                         if (0 != var17 >> 4) {
                           var16--;
@@ -485,14 +485,14 @@ abstract class TextLayout {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var17 = fc.field_e[var16];
+                          var17 = GrowableIntArray.field_e[var16];
                           continue;
                         }
                         stackIn_35_0Lifetime1 = var17;
                         stackIn_35_1Lifetime1 = var16 << 4;
                         var18 = stackIn_35_0Lifetime1 + stackIn_35_1Lifetime1;
                         qh.field_c[var18] = var8;
-                        fc.field_e[var16] = 1 + var17;
+                        GrowableIntArray.field_e[var16] = 1 + var17;
                         if (param2.field_I > 0 &&
                           null != param2.field_f) {
                           dupTemp$0 = param2.field_f[var8];

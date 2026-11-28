@@ -31,7 +31,7 @@ final class ui {
             var5 = var9;
             var6 = param4;
             var7 = param2;
-            var9[var6] = var7 + (pf.b(16711422, var9[var6]) >> 1);
+            var9[var6] = var7 + (pf.bitwiseAnd(16711422, var9[var6]) >> 1);
             param4++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -32,7 +32,7 @@ final class MixedSupport094 implements WidgetRenderer {
             stackRenderingSupport011Local4 = (CoverageBitmapFont) null;
             return stackRenderingSupport011Local4;
           }
-          renderingSupport011Local1 = new CoverageBitmapFont(byteArrayArgument1, InputAdapter003.integerArrayState0206, MixedSupport039.integerArrayState0047, MixedSupport123.integerArrayState0208, MixedSupport052.integerArrayState0054, NetworkSupport006.integerArrayState0152, SceneWidgetPart011.byteArrayArrayState0008);
+          renderingSupport011Local1 = new CoverageBitmapFont(byteArrayArgument1, InputAdapter003.integerArrayState0206, MixedSupport039.integerArrayState0047, MixedSupport123.integerArrayState0208, MixedSupport052.integerArrayState0054, GrowableIntArray.integerArrayState0152, SceneWidgetPart011.byteArrayArrayState0008);
           MixedSupport089.performAction1138(126);
           stackRenderingSupport011Local5 = renderingSupport011Local1;
           return stackRenderingSupport011Local5;

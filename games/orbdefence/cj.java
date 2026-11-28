@@ -47,7 +47,7 @@ final class cj {
         ab.field_g[0].drawHalfSize(10, 50);
         ab.field_g[1].drawHalfSize(100, 50);
         ab.field_g[2].drawHalfSize(55, 70);
-        BufferedSocket.field_a.a(-40);
+        BufferedSocket.field_a.setAsRasterTarget(-40);
         TextFieldValidator.field_g[1].bindAsRenderTarget();
         SoftwareRasterizer.fillRectangle(0, 0, 160, 120, 0);
         ab.field_g[24].drawHalfSize(80, 0);
@@ -59,7 +59,7 @@ final class cj {
         ab.field_g[12].drawHalfSize(10, 50);
         ab.field_g[12].drawHalfSize(40, 60);
         ab.field_g[12].drawHalfSize(20, 70);
-        BufferedSocket.field_a.a(-40);
+        BufferedSocket.field_a.setAsRasterTarget(-40);
         TextFieldValidator.field_g[2].bindAsRenderTarget();
         SoftwareRasterizer.fillRectangle(0, 0, 160, 120, 0);
         ab.field_g[60].draw(30, 10);
@@ -67,7 +67,7 @@ final class cj {
         hg.field_ab.drawHalfSize(10, 45);
         SoftwareRasterizer.addRadialGlow(2080, 1040, 480, 255, ResourceArchive.field_f);
         hg.field_ab.drawHalfSize(110, 45);
-        BufferedSocket.field_a.a(-40);
+        BufferedSocket.field_a.setAsRasterTarget(-40);
         TextFieldValidator.field_g[3].bindAsRenderTarget();
         SoftwareRasterizer.fillRectangle(0, 0, 160, 120, 0);
         ab.field_g[86].draw(30, 0);
@@ -81,7 +81,7 @@ final class cj {
         hg.field_ab.drawQuarterSizeAveraged(95, 75);
         SoftwareRasterizer.addRadialGlow(1280, 1440, 240, 255, ResourceArchive.field_f);
         hg.field_ab.drawQuarterSizeAveraged(70, 80);
-        BufferedSocket.field_a.a(-40);
+        BufferedSocket.field_a.setAsRasterTarget(-40);
         TextFieldValidator.field_g[4].bindAsRenderTarget();
         SoftwareRasterizer.fillRectangle(0, 0, 160, 120, 0);
         SoftwareRasterizer.addRadialGlow(640, 1520, 240, 255, ResourceArchive.field_f);
@@ -94,7 +94,7 @@ final class cj {
         hf.field_g[0].drawHalfSize(75, 55);
         hf.field_g[2].b(2093920872, 3000, 50, 85, 62);
         hf.field_g[1].drawHalfSize(75, 55);
-        BufferedSocket.field_a.a(-40);
+        BufferedSocket.field_a.setAsRasterTarget(-40);
         TextFieldValidator.field_g[5].bindAsRenderTarget();
         SoftwareRasterizer.fillRectangle(0, 0, 160, 120, 0);
         SoftwareRasterizer.addRadialGlow(640, 640, 640, 255, ResourceArchive.field_f);
@@ -103,7 +103,7 @@ final class cj {
         hg.field_ab.draw(40, 20);
         SoftwareRasterizer.addRadialGlow(1920, 1280, 640, 255, ResourceArchive.field_f);
         hg.field_ab.drawHalfSize(100, 60);
-        BufferedSocket.field_a.a(-40);
+        BufferedSocket.field_a.setAsRasterTarget(-40);
         if (param0 <= 51) {
           field_b = (SoundCache) null;
         }

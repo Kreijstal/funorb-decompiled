@@ -84,7 +84,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         return true;
     }
 
-    private final int a(String param0, String param1, int param2, int param3, UiWidget param4, int param5) {
+    private final int addLabeledFieldWithDefaultValidationMessage(String param0, String param1, int param2, int param3, UiWidget param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -98,7 +98,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         RuntimeException decompiledCaughtException = null;
         try {
           if (param5 < -115) {
-            stackIn_4_0 = this.a(param2, -18366, param3, param0, 35, param1, param4);
+            stackIn_4_0 = this.addLabeledFieldWithValidationMessage(param2, -18366, param3, param0, 35, param1, param4);
             return stackIn_4_0;
           }
           stackIn_2_0 = -71;
@@ -181,7 +181,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         var2.setBounds(var3, (byte) 83, 270, 20, 50);
         this.addChild((byte) 95, var2);
         var3 += 50;
-        var3 = var3 + (this.a(ag.field_b, im.field_b, 170, var3, this.field_J, -117) + 5);
+        var3 = var3 + (this.addLabeledFieldWithDefaultValidationMessage(ag.field_b, im.field_b, 170, var3, this.field_J, -117) + 5);
         this.field_K.setBounds(var3, (byte) 46, var5, -var5 + 496 >> 1, 40);
         this.field_O.setBounds(var3 + 15, (byte) 73, 60, 3 + var4, 40);
         this.field_O.field_r = (WidgetEventListener) (this);
@@ -194,7 +194,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         this.setBounds(0, (byte) 94, 496, 0, var3 - (-55 - var4));
     }
 
-    private final int a(int param0, int param1, int param2, String param3, int param4, String param5, UiWidget param6) {
+    private final int addLabeledFieldWithValidationMessage(int param0, int param1, int param2, String param3, int param4, String param5, UiWidget param6) {
         RuntimeException var8 = null;
         ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;

@@ -82,7 +82,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
     }
 
     final static String i(int param0) {
-        if (bh.field_a == mg.field_b) {
+        if (bh.field_a == ByteArrayPoolSupport.field_b) {
           return on.field_d;
         }
         if (param0 != 17543) {

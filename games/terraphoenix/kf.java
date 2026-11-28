@@ -130,11 +130,11 @@ final class kf {
         }
     }
 
-    final static qd a(int param0, byte param1, Archive param2) {
+    final static MusicPatch loadMusicPatch(int param0, byte param1, Archive param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
-        qd stackIn_4_0 = null;
+        MusicPatch stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -145,7 +145,7 @@ final class kf {
           if (var4 == null) {
             return null;
           }
-          stackIn_4_0 = new qd(var4);
+          stackIn_4_0 = new MusicPatch(var4);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

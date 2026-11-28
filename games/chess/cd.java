@@ -92,7 +92,7 @@ final class cd extends pk {
         return this.field_q.b(this.field_i, this.field_k, BufferedSocket.field_k, rf.field_b);
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseAnd(long param0, long param1) {
         return param0 & param1;
     }
 

@@ -49,8 +49,8 @@ abstract class GameClientShell extends GameAppletShell {
         if (param1 < 34) {
           this.field_p = -105;
         }
-        if (sc.field_e != null) {
-          ProgressMessageDialog.field_sb = sc.field_e.pollRotation(0);
+        if (ByteArrayPoolSupport.field_e != null) {
+          ProgressMessageDialog.field_sb = ByteArrayPoolSupport.field_e.pollRotation(0);
         }
         if (DiskCacheWorker.a(64)) {
           var3 = 1200 * AccountNameAvailabilityValidator.d((byte) 9);
@@ -151,7 +151,7 @@ abstract class GameClientShell extends GameAppletShell {
           }
           AccountCreationResultPanel.field_Jb = lk.a(false, true, hb.field_q, 1, 8);
           sb.field_i = lk.a(false, true, field_q, 1, 8);
-          ig.field_t = lk.a(false, true, NameSuggestionsPanel.field_O, 1, 8);
+          MusicPatch.field_t = lk.a(false, true, NameSuggestionsPanel.field_O, 1, 8);
           SingleChildWidgetContainer.field_E = sb.field_i;
           hj.field_f = 2;
           ph.field_b = AccountCreationResultPanel.field_Jb;
@@ -174,13 +174,13 @@ abstract class GameClientShell extends GameAppletShell {
           }
         }
         if (hj.field_f == 3 &&
-          PasswordValidator.a(ig.field_t, (byte) -91, sb.field_i, AccountCreationResultPanel.field_Jb) &&
-          pa.a((byte) 64, ig.field_t)) {
+          PasswordValidator.a(MusicPatch.field_t, (byte) -91, sb.field_i, AccountCreationResultPanel.field_Jb) &&
+          pa.a((byte) 64, MusicPatch.field_t)) {
           dm.c((byte) 94);
           ue.a(false);
           rh.field_d = ha.field_e;
           ValidationStatusIcon.field_M = false;
-          wh.a(-80, sb.field_i, ig.field_t, AccountCreationResultPanel.field_Jb, ModalDialog.field_N);
+          wh.a(-80, sb.field_i, MusicPatch.field_t, AccountCreationResultPanel.field_Jb, ModalDialog.field_N);
           if (fm.field_l ||
             null != hb.field_b) {
             stackIn_101_0 = hb.field_b;
@@ -195,9 +195,9 @@ abstract class GameClientShell extends GameAppletShell {
             ac.field_b = ai.g(-29132);
             pe.field_j = ac.a(-1);
           }
-          ui.a(ac.field_b, (byte) -88, pe.field_j, ig.field_t);
+          ui.a(ac.field_b, (byte) -88, pe.field_j, MusicPatch.field_t);
           sb.field_i = null;
-          ig.field_t = null;
+          MusicPatch.field_t = null;
           AccountCreationResultPanel.field_Jb = null;
           DirectByteStorage.a(79, (java.applet.Applet) (this));
           IterableNodeHashTable.a((byte) 86);
@@ -257,7 +257,7 @@ abstract class GameClientShell extends GameAppletShell {
         DelegatingCanvas.a(this.field_t, this.field_A, (byte) 34, this.field_v, 5000, sb.field_d, ob.field_c, 5000, this.field_z, this.field_m, this.field_p, param2, this.field_w, param1);
         wi.a(this.field_v, param1, ob.field_c, this.field_m, this.field_z, this.field_p, sb.field_d, this.field_A, 111);
         rg.a(param3 ^ -11603);
-        sc.field_e = vb.createMouseWheelInput((byte) 65);
+        ByteArrayPoolSupport.field_e = vb.createMouseWheelInput((byte) 65);
         ej.a(DiskCacheWorker.field_g, (byte) 71);
         md.field_d = param7;
         p.field_f = param6;
@@ -307,7 +307,7 @@ abstract class GameClientShell extends GameAppletShell {
             this.a(-51, "reconnect");
           }
           MusicPatchPcmStream.e(11);
-          AlphaWidgetContainer.a(cc.field_p, var2, 105);
+          AlphaWidgetContainer.a(MusicPatchNode.field_p, var2, 105);
           dd.field_j = true;
           ab.field_a = 15000L + la.correctedCurrentTimeMillis(param0);
           return var2;
@@ -660,8 +660,8 @@ abstract class GameClientShell extends GameAppletShell {
           if (var4 == 1) {
             var5_int = MouseWheelInput.a(fj.f(36), hg.d((byte) -21), (byte) -85);
             if (var5_int != -1) {
-              rb.a(var5_int, td.field_m, cc.field_p, 105);
-              cc.field_p = null;
+              GrowableIntArray.a(var5_int, td.field_m, MusicPatchNode.field_p, 105);
+              MusicPatchNode.field_p = null;
               td.field_m = null;
             }
             var11 = qj.a(-11);
@@ -672,8 +672,8 @@ abstract class GameClientShell extends GameAppletShell {
           if (var4 == 2) {
             var5_intLifetime1 = hb.a(-60, fl.a(false), this.field_u, MatchingFieldValidator.e((byte) 127), MidiPcmStream.f(109), IntrusiveDeque.f(-51), ImageProducerRasterBuffer.a(true));
             if (var5_intLifetime1 != -1) {
-              wh.a(var5_intLifetime1, cc.field_p, (byte) 117, td.field_m);
-              cc.field_p = null;
+              wh.a(var5_intLifetime1, MusicPatchNode.field_p, (byte) 117, td.field_m);
+              MusicPatchNode.field_p = null;
               td.field_m = null;
             }
           }
@@ -689,8 +689,8 @@ abstract class GameClientShell extends GameAppletShell {
               var5_intLifetime2 = f.a(this.field_u, -73, false, fl.a(false), IntrusiveDeque.f(89), this.field_y);
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
-                  AlphaWidgetContainer.a(cc.field_p, var5_intLifetime2, 79);
-                  cc.field_p = null;
+                  AlphaWidgetContainer.a(MusicPatchNode.field_p, var5_intLifetime2, 79);
+                  MusicPatchNode.field_p = null;
                 } else {
                   sf.field_l = ld.field_b;
                   wh.b(true);

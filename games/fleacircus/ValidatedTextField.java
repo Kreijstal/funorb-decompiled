@@ -33,7 +33,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
     final static void s(int param0) {
         ok.field_w = false;
         EditableTextField.field_S = 0;
-        gf.field_b = null;
+        ByteArrayPoolSupport.field_b = null;
         if (param0 <= -17) {
           DebouncedFieldValidator.field_f = -1;
           aa.field_t = -1;

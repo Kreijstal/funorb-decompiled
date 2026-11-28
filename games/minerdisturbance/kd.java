@@ -147,9 +147,9 @@ final class kd {
             var3 = this.field_n * (var7.field_j + 60) / tg.field_g;
             var4 = var3 - 30;
             if (this.field_o) {
-              qf.a(-256 * var4 / 30, (var7.field_j - var4) * 256 / 30, var7, 58, param0 - 72, 9);
+              MidiNoteMask.a(-256 * var4 / 30, (var7.field_j - var4) * 256 / 30, var7, 58, param0 - 72, 9);
             } else {
-              qf.a((-var4 + var7.field_j) * 256 / 30, -256 * var4 / 30, var7, 58, param0 - 72, 9);
+              MidiNoteMask.a((-var4 + var7.field_j) * 256 / 30, -256 * var4 / 30, var7, 58, param0 - 72, 9);
             }
           }
         }

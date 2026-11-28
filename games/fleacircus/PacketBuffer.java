@@ -776,7 +776,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     PacketBuffer(int param0) {
-        this.payload = gf.a(-101, param0);
+        this.payload = ByteArrayPoolSupport.acquireByteArray(-101, param0);
         this.position = 0;
     }
 

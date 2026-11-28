@@ -414,7 +414,7 @@ class EditableTextField extends InteractiveWidget {
           return fi.field_b;
         }
         if (!wc.field_Wb.tryLoadGroupByName("commonui", 0)) {
-          return dl.field_a + " - " + wc.field_Wb.getGroupLoadPercentByName(-8087, "commonui") + "%";
+          return ByteArrayPoolSupport.field_a + " - " + wc.field_Wb.getGroupLoadPercentByName(-8087, "commonui") + "%";
         }
         if (!i.field_r.ensureIndexLoaded(0)) {
           return pb.field_a;

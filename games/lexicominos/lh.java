@@ -131,7 +131,7 @@ final class lh extends DefaultTextWidgetRenderer {
               }
             }
           } else {
-            o.a(this.field_v, 0, param1.field_v, 0, 6);
+            ArrayBlockSupport.copyObjectRange(this.field_v, 0, param1.field_v, 0, 6);
           }
           if (param2 != 6) {
             field_u = 31;

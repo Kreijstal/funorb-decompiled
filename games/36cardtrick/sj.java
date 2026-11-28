@@ -102,7 +102,7 @@ final class sj {
         int[] var3 = new int[var1];
         int var4 = -87 % ((-29 - param0) / 59);
         for (var5_int = 0; var5_int < var1; var5_int++) {
-          var3[var5_int] = ImageProducerRasterBuffer.field_i[bc.a(255, (int) var2[var5_int])];
+          var3[var5_int] = ImageProducerRasterBuffer.field_i[bc.bitwiseAnd(255, (int) var2[var5_int])];
         }
         RgbSprite var5 = new RgbSprite(ConfirmedEmailAvailabilityValidator.field_l, FrameTimer.field_a, kb.field_c[0], FullscreenNoticeType.field_b[0], NetworkArchiveRequest.field_q[0], hb.field_a[0], var3);
         rh.d(-128);

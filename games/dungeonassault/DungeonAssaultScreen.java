@@ -145,7 +145,7 @@ abstract class DungeonAssaultScreen {
           return null;
         }
         StatusEffectIndicator[] var3 = new StatusEffectIndicator[var2];
-        cj.a(field_k, 0, var3, 0, var2);
+        ArrayBlockSupport.copyObjectRange(field_k, 0, var3, 0, var2);
         return var3;
     }
 
@@ -548,7 +548,7 @@ abstract class DungeonAssaultScreen {
     final static StatusEffectIndicator[] a(DungeonTileState param0, boolean param1, boolean param2, int param3) {
         int var4 = DungeonAssaultScreen.a(param0, param1, param2, param3, field_k);
         StatusEffectIndicator[] var5 = new StatusEffectIndicator[var4];
-        cj.a(field_k, 0, var5, 0, var4);
+        ArrayBlockSupport.copyObjectRange(field_k, 0, var5, 0, var4);
         return var5;
     }
 

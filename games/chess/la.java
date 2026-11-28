@@ -59,7 +59,7 @@ final class la {
         int var1 = 48 / ((-6 - param0) / 36);
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseXor(long param0, long param1) {
         return param0 ^ param1;
     }
 

@@ -87,7 +87,7 @@ final class ag {
             if (param5 != 1) {
               ag.resetStaticState(7);
             }
-            var8 = gf.field_e.a(28742, param2, (SectorCacheStore) (var7), (SectorCacheStore) (var6), param1);
+            var8 = ByteArrayPoolSupport.field_e.a(28742, param2, (SectorCacheStore) (var7), (SectorCacheStore) (var6), param1);
             if (param0) {
               var8.c(param5 - 78);
             }

@@ -27,7 +27,7 @@ class mc extends DefaultTextWidgetRenderer {
     }
 
     mc(int param0) {
-        this(lp.field_C, param0);
+        this(MusicPatchNode.field_C, param0);
     }
 
     final static void b(int param0, int param1) {

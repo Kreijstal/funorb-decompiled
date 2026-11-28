@@ -237,11 +237,11 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
             } else {
               stackIn_18_1 = null;
               stackIn_18_2 = null;
-              stackIn_18_3 = oi.field_d;
+              stackIn_18_3 = GrowableIntArray.field_d;
             }
             this.field_C = new ButtonWidget(stackIn_18_3, (WidgetEventListener) null);
             if (this.field_G) {
-              this.field_D = new ButtonWidget(oi.field_g, (WidgetEventListener) (this));
+              this.field_D = new ButtonWidget(GrowableIntArray.field_g, (WidgetEventListener) (this));
             }
           }
           this.field_L.field_h = (WidgetRenderer) ((Object) new mg(10000536));

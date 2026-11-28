@@ -124,7 +124,7 @@ final class pk extends kl {
         int[] var10 = new int[64];
         int[] var2 = var10;
         for (var3_int = 0; 64 > var3_int; var3_int++) {
-          var10[var3_int] = mp.a((24 + var3_int) * 65793, -2147483648);
+          var10[var3_int] = mp.bitwiseOr((24 + var3_int) * 65793, -2147483648);
         }
         RgbSprite var3 = te.a(-32 + this.field_a, this.field_i - 28, var10, 16, 8, 0.125);
         int[] var4 = te.b(-32 + this.field_a, -28 + this.field_i, 0.125);

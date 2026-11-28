@@ -99,7 +99,7 @@ final class ca extends IntrusiveNode {
         mh.field_l[SecondaryNodeDeque.field_c] = param2;
         if (param2 >= GuestPlayConfirmationForm.field_F) {
           if (param2 <= uo.field_m) {
-            dk.field_l[SecondaryNodeDeque.field_c] = param0;
+            MusicPatch.field_l[SecondaryNodeDeque.field_c] = param0;
             BufferedSocket.field_i[SecondaryNodeDeque.field_c] = param1;
             cd.field_u[SecondaryNodeDeque.field_c] = param5;
             var6 = param5 + param1 + param0;
@@ -124,7 +124,7 @@ final class ca extends IntrusiveNode {
             return;
           }
           em.field_i = param2;
-          dk.field_l[SecondaryNodeDeque.field_c] = param0;
+          MusicPatch.field_l[SecondaryNodeDeque.field_c] = param0;
           BufferedSocket.field_i[SecondaryNodeDeque.field_c] = param1;
           cd.field_u[SecondaryNodeDeque.field_c] = param5;
           var6 = param5 + param1 + param0;
@@ -137,7 +137,7 @@ final class ca extends IntrusiveNode {
         } else {
           ResourceArchive.field_i = param2;
           if (param2 <= uo.field_m) {
-            dk.field_l[SecondaryNodeDeque.field_c] = param0;
+            MusicPatch.field_l[SecondaryNodeDeque.field_c] = param0;
             BufferedSocket.field_i[SecondaryNodeDeque.field_c] = param1;
             cd.field_u[SecondaryNodeDeque.field_c] = param5;
             var6 = param5 + param1 + param0;
@@ -149,7 +149,7 @@ final class ca extends IntrusiveNode {
             var7 = stackIn_5_0;
           } else {
             em.field_i = param2;
-            dk.field_l[SecondaryNodeDeque.field_c] = param0;
+            MusicPatch.field_l[SecondaryNodeDeque.field_c] = param0;
             BufferedSocket.field_i[SecondaryNodeDeque.field_c] = param1;
             cd.field_u[SecondaryNodeDeque.field_c] = param5;
             var6 = param5 + param1 + param0;

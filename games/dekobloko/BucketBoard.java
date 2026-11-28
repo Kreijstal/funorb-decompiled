@@ -1506,7 +1506,7 @@ final class BucketBoard {
                 integerLocal17 >> 3 == 1 ||
                 this.booleanState0105 &&
                 integerLocal17 >> 3 == 2)) {
-                this.settledCells[integerLocal16] = MixedSupport106.computeInteger1387(24, integerLocal17);
+                this.settledCells[integerLocal16] = MixedSupport106.bitwiseXor(24, integerLocal17);
               }
             }
             if (this.booleanState0103) {
@@ -2659,7 +2659,7 @@ final class BucketBoard {
             integerLocal10 = returnedShapeLocal9.integerState0687 + 1;
             if (returnedShapeLocal9.integerState0691 == 12 &&
               integerLocal10 >= 5) {
-              this.stringState0335 = NodeHashTableIterator.substituteIndexedPlaceholders(105, MixedSupport130.stringState0564, new String[]{Integer.toString(integerLocal10)});
+              this.stringState0335 = NodeHashTableIterator.substituteIndexedPlaceholders(105, ByteArrayPoolSupport.stringState0564, new String[]{Integer.toString(integerLocal10)});
               this.integerState0451 = ModalDialogHost.computeInteger0830((byte) 62, 7, AccountRegistrationPanel.randomState0003) - 3;
               this.integerState0457 = ModalDialogHost.computeInteger0830((byte) 126, 7, AccountRegistrationPanel.randomState0003) - 3;
               this.integerState0472 = 0;

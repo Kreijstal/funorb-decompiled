@@ -101,7 +101,7 @@ public final class TorChallenge extends GameClientBase {
               ni.field_h = SpriteLoader.a(param0 - 128, "interface_sais_energy", "", SingleChildWidgetContainer.field_C);
               ba.field_d = SpriteLoader.a(-128, "interface_glovepunch_energy", "", SingleChildWidgetContainer.field_C);
               wf.field_b = qk.a("", "interface_seals", SingleChildWidgetContainer.field_C, 0);
-              dl.field_j = qk.a("", "interface_sealscollected", SingleChildWidgetContainer.field_C, param0 ^ 1);
+              MusicPatchNode.field_j = qk.a("", "interface_sealscollected", SingleChildWidgetContainer.field_C, param0 ^ 1);
               mb.field_d = SpriteLoader.a(-128, "interface_health_icon", "", SingleChildWidgetContainer.field_C);
               rl.field_h = SpriteLoader.a(param0 - 129, "boss_heads", "", SingleChildWidgetContainer.field_C);
               SectorCacheStore.field_f.bindAsTarget(-63);
@@ -124,7 +124,7 @@ public final class TorChallenge extends GameClientBase {
           var2_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var2_int >= 5))) {
-            array$0 = new Sprite[s.field_l[var2_int]];
+            array$0 = new Sprite[MidiNoteMask.field_l[var2_int]];
             AccountServiceResult.field_h[var2_int] = array$0;
             var3_int = var2_int;
             stackIn_51_0 = var3_int;
@@ -227,8 +227,8 @@ public final class TorChallenge extends GameClientBase {
               qb.a((byte) 33, aj.field_i);
               pl.field_c = SpriteLoader.a(-127, "boss2", "", SingleChildWidgetContainer.field_C);
               qb.a((byte) 72, pl.field_c);
-              s.field_n = SpriteLoader.a(-127, "boss2_attacks", "", SingleChildWidgetContainer.field_C);
-              qb.a((byte) 109, s.field_n);
+              MidiNoteMask.field_n = SpriteLoader.a(-127, "boss2_attacks", "", SingleChildWidgetContainer.field_C);
+              qb.a((byte) 109, MidiNoteMask.field_n);
               AlphaWidgetContainer.field_F = SpriteLoader.a(-127, "boss3", "", SingleChildWidgetContainer.field_C);
               qb.a((byte) 126, AlphaWidgetContainer.field_F);
               nk.field_a = SpriteLoader.a(-128, "boss3_attacks", "", SingleChildWidgetContainer.field_C);
@@ -411,7 +411,7 @@ public final class TorChallenge extends GameClientBase {
                             } else if (var7_int < 8) {
                               g.field_i[var7_int][var6_int][var8] = pl.field_c[var8 + 8 * var7_int];
                             } else {
-                              g.field_i[var7_int][var6_int][var8] = s.field_n[8 * (-8 + var7_int) + var8];
+                              g.field_i[var7_int][var6_int][var8] = MidiNoteMask.field_n[8 * (-8 + var7_int) + var8];
                             }
                             var8++;
                           }
@@ -543,7 +543,7 @@ public final class TorChallenge extends GameClientBase {
                     }
                     oj.a(gi.b(stackIn_235_0), 0, 80, false, EmailFormatValidator.field_p, 255);
                     var10 = qk.a("", "mb_frames", SingleChildWidgetContainer.field_C, param0 ^ 1);
-                    pl.a(13267, dl.field_E, var10);
+                    pl.a(13267, MusicPatchNode.field_E, var10);
                     nj.a(qk.a("", "mb_logo", SingleChildWidgetContainer.field_C, 0), 2);
                     pa.a(-99, SpriteLoader.a(-127, "mb_sshots", "", SingleChildWidgetContainer.field_C));
                     var11 = qk.a("", "mb_pricing_bg", SingleChildWidgetContainer.field_C, 0);
@@ -605,7 +605,7 @@ public final class TorChallenge extends GameClientBase {
         int var4Lifetime1;
         var5 = field_F ? 1 : 0;
         try {
-          var2 = ab.a(102);
+          var2 = MusicPatchEnvelope.a(102);
           if (hc.c((byte) 57)) {
             DisplayNameSelectionPanel.a(var2, param0 - 7783, ph.a((byte) -40));
             return;
@@ -710,7 +710,7 @@ public final class TorChallenge extends GameClientBase {
           }
           if (lc.a(1)) {
             if (null == gi.field_d) {
-              stackIn_82_0 = m.field_d;
+              stackIn_82_0 = GrowableIntArray.field_d;
             } else {
               stackIn_82_0 = true;
             }
@@ -1444,7 +1444,7 @@ public final class TorChallenge extends GameClientBase {
               break;
             }
             if (decompiledNaturalLoopExit0) {
-              SectorCacheStore.field_a.b(true);
+              SectorCacheStore.field_a.releasePatchSampleIds(true);
               cl.field_y = null;
               stackIn_99_0 = null;
             }
@@ -1474,7 +1474,7 @@ public final class TorChallenge extends GameClientBase {
             return false;
           }
           if (param0) {
-            m.b((byte) -98);
+            GrowableIntArray.b((byte) -98);
             var3_int = 0;
             while (true) {
               if (16 > var3_int) {
@@ -1543,7 +1543,7 @@ public final class TorChallenge extends GameClientBase {
               }
               boolean decompiledFrameRemainder0 = true;
               if (GameClientBase.p(-115)) {
-                DefaultTextWidgetRenderer.field_o = m.field_h;
+                DefaultTextWidgetRenderer.field_o = GrowableIntArray.field_h;
                 decompiledFrameRemainder0 = (var3 != 0);
               }
               if (decompiledFrameRemainder0) {
@@ -1894,7 +1894,7 @@ public final class TorChallenge extends GameClientBase {
           BufferedSocket.resetStaticState(true);
           IntrusiveNode.clearStaticReferences((byte) -92);
           MidiPcmStream.c(128);
-          dl.clearStaticReferences(false);
+          MusicPatchNode.clearStaticReferences(false);
           MidiFileReader.clearStaticReferences();
           MusicPatchPcmStream.c(16);
           AudioOutput.clearStaticReferences();
@@ -2010,12 +2010,12 @@ public final class TorChallenge extends GameClientBase {
           NanoFrameTimer.clearStaticReferences((byte) 126);
           ImageProducerRasterBuffer.d(15752);
           ja.clearStaticReferences(75);
-          s.clearStaticReferences(2);
+          MidiNoteMask.clearStaticReferences(2);
           ua.clearStaticReferences(102);
           ul.resetStaticState(-31397);
           td.c(0);
-          fb.clearStaticReferences(1012);
-          ab.a(true);
+          MusicPatch.clearStaticReferences(1012);
+          MusicPatchEnvelope.a(true);
           LabeledWidgetContainer.releaseDeclaredStaticReferences(0);
           ValidatedTextField.resetStaticState((byte) 96);
           EditableTextField.clearDeclaredStaticReferences(65);
@@ -2034,7 +2034,7 @@ public final class TorChallenge extends GameClientBase {
           be.clearStaticReferences(3366);
           DirectByteStorage.resetStaticState(10166);
           RichTextLayout.clearStaticReferences(-3);
-          m.a(128);
+          GrowableIntArray.a(128);
           DraggableWidgetContainer.clearDeclaredStaticReferences((byte) 50);
           k.clearStaticReferences(true);
           IterableNodeHashTable.clearStaticReferences(0);

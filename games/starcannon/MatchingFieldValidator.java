@@ -212,7 +212,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           }
           var2Lifetime2 = BoundedRandomAccessFile.a("achievement_names,1", (byte) -124);
           if (var2Lifetime2 != null) {
-            AgeValidator.field_j[1] = DualLinkNode.a(dg.a(param1, 30856), var2Lifetime2);
+            AgeValidator.field_j[1] = DualLinkNode.a(dg.bitwiseXor(param1, 30856), var2Lifetime2);
           }
           var2Lifetime3 = BoundedRandomAccessFile.a("achievement_names,2", (byte) -124);
           if (null != var2Lifetime3) {
@@ -220,7 +220,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           }
           var2Lifetime4 = BoundedRandomAccessFile.a("achievement_names,3", (byte) -124);
           if (var2Lifetime4 != null) {
-            AgeValidator.field_j[3] = DualLinkNode.a(dg.a(param1, 30858), var2Lifetime4);
+            AgeValidator.field_j[3] = DualLinkNode.a(dg.bitwiseXor(param1, 30858), var2Lifetime4);
           }
           var2Lifetime5 = BoundedRandomAccessFile.a("achievement_names,4", (byte) -124);
           if (var2Lifetime5 != null) {
@@ -272,7 +272,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           }
           var2Lifetime17 = BoundedRandomAccessFile.a("achievement_criteria,1", (byte) -124);
           if (null != var2Lifetime17) {
-            vd.field_h[1] = DualLinkNode.a(dg.a(param1, 30850), var2Lifetime17);
+            vd.field_h[1] = DualLinkNode.a(dg.bitwiseXor(param1, 30850), var2Lifetime17);
           }
           var2Lifetime18 = BoundedRandomAccessFile.a("achievement_criteria,2", (byte) -124);
           if (null != var2Lifetime18) {
@@ -280,7 +280,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           }
           var2Lifetime19 = BoundedRandomAccessFile.a("achievement_criteria,3", (byte) -124);
           if (var2Lifetime19 != null) {
-            vd.field_h[3] = DualLinkNode.a(dg.a(param1, 30850), var2Lifetime19);
+            vd.field_h[3] = DualLinkNode.a(dg.bitwiseXor(param1, 30850), var2Lifetime19);
           }
           var2Lifetime20 = BoundedRandomAccessFile.a("achievement_criteria,4", (byte) -124);
           if (var2Lifetime20 != null) {
@@ -392,7 +392,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           }
           var2Lifetime47 = BoundedRandomAccessFile.a("lancepower", (byte) -124);
           if (var2Lifetime47 != null) {
-            ve.field_g = DualLinkNode.a(114, var2Lifetime47);
+            GrowableIntArray.field_g = DualLinkNode.a(114, var2Lifetime47);
           }
           var2Lifetime48 = BoundedRandomAccessFile.a("helixpower", (byte) -124);
           if (null != var2Lifetime48) {
@@ -480,7 +480,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           }
           var2Lifetime69 = BoundedRandomAccessFile.a("helixtext", (byte) -124);
           if (null != var2Lifetime69) {
-            mc.field_i = DualLinkNode.a(120, var2Lifetime69);
+            ByteArrayPoolSupport.field_i = DualLinkNode.a(120, var2Lifetime69);
           }
           var2Lifetime70 = BoundedRandomAccessFile.a("pulsetext", (byte) -124);
           if (var2Lifetime70 != null) {

@@ -822,7 +822,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime127 = AlphaWidgetContainer.a(0, "WEAK_PLATFORM_TIP");
           if (null != var2Lifetime127) {
-            gf.field_a = ab.a(0, var2Lifetime127);
+            ByteArrayPoolSupport.field_a = ab.a(0, var2Lifetime127);
           }
           var2Lifetime128 = AlphaWidgetContainer.a(0, "BLUE_SWITCH_TIP");
           if (var2Lifetime128 != null) {
@@ -954,7 +954,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime160 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_1_3");
           if (null != var2Lifetime160) {
-            oj.field_j = ab.a(0, var2Lifetime160);
+            MidiNoteMask.field_j = ab.a(0, var2Lifetime160);
           }
           var2Lifetime161 = AlphaWidgetContainer.a(0, "INSTRUCTIONS_BODIES_2_1");
           if (var2Lifetime161 != null) {

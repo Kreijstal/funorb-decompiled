@@ -46,7 +46,7 @@ final class j {
           for (var3 = 0; FullscreenFocusCanvas.field_d.length > var3; var3++) {
             var4 = DraggableWidgetContainer.field_B[var3];
             if (0 > var4) {
-              var5 = he.field_C;
+              var5 = MusicPatchNode.field_C;
             } else {
               if (ab.field_j.field_h == var4) {
                 var5 = lf.field_e;
@@ -122,7 +122,7 @@ final class j {
         }
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseXor(long param0, long param1) {
         return param0 ^ param1;
     }
 
@@ -136,7 +136,7 @@ final class j {
 
     final static void a(float param0, String param1, byte param2) {
         try {
-          q.field_b = param0;
+          ByteArrayPoolSupport.field_b = param0;
           tl.field_e = param1;
           if (param2 < 104) {
             j.a((byte) 124);

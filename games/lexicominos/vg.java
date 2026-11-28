@@ -87,7 +87,7 @@ final class vg {
         ug.field_A.showDialog(-14579, StandardContentDialog.field_fb);
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseAnd(int param0, int param1) {
         return param0 & param1;
     }
 

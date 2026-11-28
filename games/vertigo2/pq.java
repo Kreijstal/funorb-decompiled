@@ -424,13 +424,13 @@ final class pq {
         if (param0 != 0) {
           field_e = 43L;
         }
-        gl.field_k = true;
+        MusicPatchEnvelope.field_k = true;
         ProxySocketConnector.field_j = 15000L + gk.correctedCurrentTimeMillis(56);
         return hn.field_w == 11 ? true : false;
     }
 
     final static void a(byte param0) {
-        pe.field_r = false;
+        MusicPatchNode.field_r = false;
         if (param0 <= 92) {
           pq.b(-21);
         }

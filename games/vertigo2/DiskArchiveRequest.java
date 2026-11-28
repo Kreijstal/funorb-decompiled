@@ -200,7 +200,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
             !(vm.field_a.length >= param0)) {
             hm.field_C = new int[param0 + 100];
             vm.field_a = new int[100 + param0];
-            al.field_s = new int[100 + param0];
+            MusicPatch.field_s = new int[100 + param0];
           }
           var29 = -113 / ((-19 - param19) / 47);
           if (param9 != null && (null == or.field_e ||
@@ -296,7 +296,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                   AccountNameAvailabilityValidator.field_q[var35] = var47;
                   MouseInputHandler.field_c[var35] = var48;
                 }
-                al.field_s[var34] = var35;
+                MusicPatch.field_s[var34] = var35;
                 var35 = var24[var42];
                 if (var35 < 0) {
                   fieldTemp$3 = jd.field_d;
@@ -317,24 +317,24 @@ final class DiskArchiveRequest extends ArchiveRequest {
               } else if ((-var54 | (-var53 | -var52)) < 0) {
                 if (kh.field_c.length < (param14 + var30 + 4)) {
                   var55 = new int[param14 + var30 + 104];
-                  qq.a(kh.field_c, 0, var55, 0, jd.field_d);
+                  ArrayBlockSupport.copyIntRange(kh.field_c, 0, var55, 0, jd.field_d);
                   kh.field_c = var55;
                   var55Lifetime4 = new int[var30 + param14 + 104];
-                  qq.a(AccountNameAvailabilityValidator.field_q, 0, var55Lifetime4, 0, jd.field_d);
+                  ArrayBlockSupport.copyIntRange(AccountNameAvailabilityValidator.field_q, 0, var55Lifetime4, 0, jd.field_d);
                   AccountNameAvailabilityValidator.field_q = var55Lifetime4;
                   var55Lifetime5 = new int[104 + param14 + var30];
-                  qq.a(MouseInputHandler.field_c, 0, var55Lifetime5, 0, jd.field_d);
+                  ArrayBlockSupport.copyIntRange(MouseInputHandler.field_c, 0, var55Lifetime5, 0, jd.field_d);
                   MouseInputHandler.field_c = var55Lifetime5;
                 }
                 if (4 + param14 + var32 > lf.field_z.length) {
                   var55Lifetime1 = new int[param14 - (-var32 - 104)];
-                  qq.a(lf.field_z, 0, var55Lifetime1, 0, no.field_b);
+                  ArrayBlockSupport.copyIntRange(lf.field_z, 0, var55Lifetime1, 0, no.field_b);
                   lf.field_z = var55Lifetime1;
                   var55Lifetime1Lifetime1 = new int[var32 + param14 + 104];
-                  qq.a(StandardContentDialog.field_hb, 0, var55Lifetime1Lifetime1, 0, no.field_b);
+                  ArrayBlockSupport.copyIntRange(StandardContentDialog.field_hb, 0, var55Lifetime1Lifetime1, 0, no.field_b);
                   StandardContentDialog.field_hb = var55Lifetime1Lifetime1;
                   var55Lifetime1Lifetime2 = new int[104 + (var32 + param14)];
-                  qq.a(MovingLevelTile.field_z, 0, var55Lifetime1Lifetime2, 0, no.field_b);
+                  ArrayBlockSupport.copyIntRange(MovingLevelTile.field_z, 0, var55Lifetime1Lifetime2, 0, no.field_b);
                   MovingLevelTile.field_z = var55Lifetime1Lifetime2;
                 }
                 var56 = jd.field_d;
@@ -543,28 +543,28 @@ final class DiskArchiveRequest extends ArchiveRequest {
                 var34 = eb.field_b;
                 if ((param0 + (var31 + var58) - 2) > vm.field_a.length) {
                   var55Lifetime2 = new int[var58 + var31 + (param0 + 98)];
-                  qq.a(vm.field_a, 0, var55Lifetime2, 0, var34);
+                  ArrayBlockSupport.copyIntRange(vm.field_a, 0, var55Lifetime2, 0, var34);
                   vm.field_a = var55Lifetime2;
                   var55Lifetime2Lifetime1 = new int[98 + (var58 + var31) + param0];
-                  qq.a(al.field_s, 0, var55Lifetime2Lifetime1, 0, var34);
-                  al.field_s = var55Lifetime2Lifetime1;
+                  ArrayBlockSupport.copyIntRange(MusicPatch.field_s, 0, var55Lifetime2Lifetime1, 0, var34);
+                  MusicPatch.field_s = var55Lifetime2Lifetime1;
                   var55Lifetime2Lifetime2 = new int[98 + var31 + (param0 + var58)];
-                  qq.a(hm.field_C, 0, var55Lifetime2Lifetime2, 0, var34);
+                  ArrayBlockSupport.copyIntRange(hm.field_C, 0, var55Lifetime2Lifetime2, 0, var34);
                   hm.field_C = var55Lifetime2Lifetime2;
                   if (param9 != null) {
                     var55Lifetime2Lifetime3 = new int[98 + var58 + (var31 + param0)];
-                    qq.a(or.field_e, 0, var55Lifetime2Lifetime3, 0, var34);
+                    ArrayBlockSupport.copyIntRange(or.field_e, 0, var55Lifetime2Lifetime3, 0, var34);
                     or.field_e = var55Lifetime2Lifetime3;
                     var55Lifetime2Lifetime3 = new int[98 + param0 + var31 + var58];
-                    qq.a(kc.field_e, 0, var55Lifetime2Lifetime3, 0, var34);
+                    ArrayBlockSupport.copyIntRange(kc.field_e, 0, var55Lifetime2Lifetime3, 0, var34);
                     kc.field_e = var55Lifetime2Lifetime3;
                     var55Lifetime2Lifetime3 = new int[var58 + var31 + param0 + 98];
-                    qq.a(IntrusiveDequeCursor.field_d, 0, var55Lifetime2Lifetime3, 0, var34);
+                    ArrayBlockSupport.copyIntRange(IntrusiveDequeCursor.field_d, 0, var55Lifetime2Lifetime3, 0, var34);
                     IntrusiveDequeCursor.field_d = var55Lifetime2Lifetime3;
                   }
                 }
                 vm.field_a[var34] = var26[0];
-                al.field_s[var34] = var26[1];
+                MusicPatch.field_s[var34] = var26[1];
                 hm.field_C[var34] = var26[2];
                 if (param9 != null) {
                   if (var65 == 0) {
@@ -579,7 +579,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                 var27[var34++] = var39;
                 if (var58 == 4) {
                   vm.field_a[var34] = var26[2];
-                  al.field_s[var34] = var26[3];
+                  MusicPatch.field_s[var34] = var26[3];
                   hm.field_C[var34] = var26[0];
                   if (null != param9) {
                     if (var65 != 0) {
@@ -600,23 +600,23 @@ final class DiskArchiveRequest extends ArchiveRequest {
                 no.field_b = var57;
                 if ((var59 + (param0 + var33 - 2)) > b.field_m.length) {
                   var55Lifetime3 = new int[98 + (param0 + var33) + var59];
-                  qq.a(b.field_m, 0, var55Lifetime3, 0, var34);
+                  ArrayBlockSupport.copyIntRange(b.field_m, 0, var55Lifetime3, 0, var34);
                   b.field_m = var55Lifetime3;
                   var55Lifetime3Lifetime1 = new int[param0 + var33 + (var59 + 98)];
-                  qq.a(tf.field_p, 0, var55Lifetime3Lifetime1, 0, var34);
+                  ArrayBlockSupport.copyIntRange(tf.field_p, 0, var55Lifetime3Lifetime1, 0, var34);
                   tf.field_p = var55Lifetime3Lifetime1;
                   var55Lifetime3Lifetime2 = new int[var59 + param0 + (var33 + 98)];
-                  qq.a(vj.field_f, 0, var55Lifetime3Lifetime2, 0, var34);
+                  ArrayBlockSupport.copyIntRange(vj.field_f, 0, var55Lifetime3Lifetime2, 0, var34);
                   vj.field_f = var55Lifetime3Lifetime2;
                   if (param9 != null) {
                     var55Lifetime3Lifetime3 = new int[98 + var59 + (var33 + param0)];
-                    qq.a(vf.field_y, 0, var55Lifetime3Lifetime3, 0, var34);
+                    ArrayBlockSupport.copyIntRange(vf.field_y, 0, var55Lifetime3Lifetime3, 0, var34);
                     vf.field_y = var55Lifetime3Lifetime3;
                     var55Lifetime3Lifetime3 = new int[98 + param0 + (var33 + var59)];
-                    qq.a(hn.field_s, 0, var55Lifetime3Lifetime3, 0, var34);
+                    ArrayBlockSupport.copyIntRange(hn.field_s, 0, var55Lifetime3Lifetime3, 0, var34);
                     hn.field_s = var55Lifetime3Lifetime3;
                     var55Lifetime3Lifetime3 = new int[98 + (param0 + var33) + var59];
-                    qq.a(PcmOutputWorker.field_f, 0, var55Lifetime3Lifetime3, 0, var34);
+                    ArrayBlockSupport.copyIntRange(PcmOutputWorker.field_f, 0, var55Lifetime3Lifetime3, 0, var34);
                     PcmOutputWorker.field_f = var55Lifetime3Lifetime3;
                   }
                 }

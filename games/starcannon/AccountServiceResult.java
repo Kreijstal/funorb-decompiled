@@ -75,7 +75,7 @@ final class AccountServiceResult {
             DualLinkNode.field_h[-2 + var4] = TextHotspotBounds.field_j;
             eg.field_a[-2 + var4] = 0;
             od.field_h[0] = 4;
-            DualLinkNode.field_h[-1 + var4] = mc.field_e;
+            DualLinkNode.field_h[-1 + var4] = ByteArrayPoolSupport.field_e;
             eg.field_a[var4 - 1] = 1;
             od.field_h[1] = 5;
           } else if (1 == SecondaryNodeDeque.field_a) {
@@ -91,7 +91,7 @@ final class AccountServiceResult {
               DualLinkNode.field_h[var5] = gi.field_f[var5];
             }
             DualLinkNode.field_h[-2 + var4] = "";
-            DualLinkNode.field_h[var4 - 1] = mc.field_e;
+            DualLinkNode.field_h[var4 - 1] = ByteArrayPoolSupport.field_e;
             eg.field_a[var4 - 1] = 0;
             od.field_h[0] = 5;
           } else if (SecondaryNodeDeque.field_a != 2) {
@@ -112,7 +112,7 @@ final class AccountServiceResult {
                 DualLinkNode.field_h[var5] = gi.field_f[var5];
               }
               DualLinkNode.field_h[var4 - 2] = "";
-              DualLinkNode.field_h[-1 + var4] = mc.field_e;
+              DualLinkNode.field_h[-1 + var4] = ByteArrayPoolSupport.field_e;
               eg.field_a[-1 + var4] = 0;
               od.field_h[0] = 5;
             } else if (SecondaryNodeDeque.field_a == 4) {
@@ -128,14 +128,14 @@ final class AccountServiceResult {
                 DualLinkNode.field_h[var5] = gi.field_f[var5];
               }
               DualLinkNode.field_h[-2 + var4] = "";
-              DualLinkNode.field_h[var4 - 1] = mc.field_e;
+              DualLinkNode.field_h[var4 - 1] = ByteArrayPoolSupport.field_e;
               eg.field_a[var4 - 1] = 0;
               od.field_h[0] = 5;
             } else {
               if (SecondaryNodeDeque.field_a != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = lb.a(qa.field_c, gi.field_f, mc.field_a, rh.field_h, -105);
+              var3_int = lb.a(qa.field_c, gi.field_f, ByteArrayPoolSupport.field_a, rh.field_h, -105);
               var4 = var3_int + 3;
               DualLinkNode.field_h = new String[var4];
               eg.field_a = new int[var4];
@@ -150,7 +150,7 @@ final class AccountServiceResult {
               DualLinkNode.field_h[var4 - 2] = o.field_c;
               eg.field_a[-2 + var4] = 0;
               od.field_h[0] = 3;
-              DualLinkNode.field_h[var4 - 1] = mc.field_e;
+              DualLinkNode.field_h[var4 - 1] = ByteArrayPoolSupport.field_e;
               eg.field_a[-1 + var4] = 1;
               od.field_h[1] = 5;
             }
@@ -168,9 +168,9 @@ final class AccountServiceResult {
               throw new IllegalStateException();
             }
             RichTextLayout.field_n = new String[var4];
-            ug.a(gi.field_f, 0, RichTextLayout.field_n, 0, var4);
+            ArrayBlockSupport.copyObjectRange(gi.field_f, 0, RichTextLayout.field_n, 0, var4);
             fb.field_c = new String[-1 + var3_int - var4];
-            ug.a(gi.field_f, 1 + var4, fb.field_c, 0, -1 + (-var4 + var3_int));
+            ArrayBlockSupport.copyObjectRange(gi.field_f, 1 + var4, fb.field_c, 0, -1 + (-var4 + var3_int));
             var3_int = lb.a(qa.field_c, gi.field_f, fb.a(dg.field_j, 125, new String[]{"<br><%0><br>"}), rh.field_h, -64);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -184,9 +184,9 @@ final class AccountServiceResult {
               throw new IllegalStateException();
             }
             ri.field_b = new String[var4];
-            ug.a(gi.field_f, 0, ri.field_b, 0, var4);
+            ArrayBlockSupport.copyObjectRange(gi.field_f, 0, ri.field_b, 0, var4);
             rd.field_q = new String[var3_int - var4 - 1];
-            ug.a(gi.field_f, 1 + var4, rd.field_q, 0, var3_int + (-var4 - 1));
+            ArrayBlockSupport.copyObjectRange(gi.field_f, 1 + var4, rd.field_q, 0, var3_int + (-var4 - 1));
             if (RichTextLayout.field_n.length < ri.field_b.length) {
               stackIn_30_0 = ri.field_b.length;
             } else {
@@ -270,7 +270,7 @@ final class AccountServiceResult {
             }
           }
           kl.field_d = ee.field_b + var3_intLifetime1 - (var3_intLifetime1 >> 1);
-          DiskCacheWorker.field_b = SoundCache.field_c.field_b * (mc.field_h + ResizableModalDialog.field_S << 1);
+          DiskCacheWorker.field_b = SoundCache.field_c.field_b * (ByteArrayPoolSupport.field_h + ResizableModalDialog.field_S << 1);
           p.field_g = -(var3_intLifetime1 >> 1) + ee.field_b;
           for (var4Lifetime2 = 0; var4Lifetime2 < DualLinkNode.field_h.length; var4Lifetime2++) {
             stackIn_113_0 = DiskCacheWorker.field_b;
@@ -290,13 +290,13 @@ final class AccountServiceResult {
             if (0 <= var6Lifetime1) {
               var7Lifetime2 = fb.$cfr$intArgs$a$1694234bddb3(DualLinkNode.field_h[var4Lifetime3], 26, true);
               var8Lifetime1 = -(var7Lifetime2 >> 1) + ee.field_b;
-              var5Lifetime3 = var5Lifetime3 + mc.field_h;
+              var5Lifetime3 = var5Lifetime3 + ByteArrayPoolSupport.field_h;
               oh.field_e[var4Lifetime3] = new int[4];
               oh.field_e[var4Lifetime3][0] = var8Lifetime1 - rh.field_i;
               oh.field_e[var4Lifetime3][1] = var5Lifetime3;
               oh.field_e[var4Lifetime3][2] = var7Lifetime2 + (rh.field_i << 1);
               oh.field_e[var4Lifetime3][3] = (ResizableModalDialog.field_S << 1) + pk.field_c;
-              var5Lifetime3 = var5Lifetime3 + (pk.field_c + (mc.field_h + (ResizableModalDialog.field_S << 1)));
+              var5Lifetime3 = var5Lifetime3 + (pk.field_c + (ByteArrayPoolSupport.field_h + (ResizableModalDialog.field_S << 1)));
             } else {
               var5Lifetime3 = var5Lifetime3 + sg.field_e;
             }

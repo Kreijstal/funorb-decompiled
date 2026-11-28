@@ -22,7 +22,7 @@ class uf extends DefaultTextWidgetRenderer {
           }
           super.paintWidget((byte) 117, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "uf.T(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "uf.T(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -127,7 +127,7 @@ class uf extends DefaultTextWidgetRenderer {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -152,7 +152,7 @@ class uf extends DefaultTextWidgetRenderer {
         try {
           try {
             var4 = param3.getGraphics();
-            Bzip2State.field_e.a(param2, 0, param1, var4);
+            Bzip2State.field_e.drawImage(param2, 0, param1, var4);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -174,7 +174,7 @@ class uf extends DefaultTextWidgetRenderer {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

@@ -285,7 +285,7 @@ final class uj extends IntrusiveNode {
               var5_int = var11.length << 2;
             }
             for (var7 = 0; var5_int > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(-80) << (ce.a(3, var7) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(-80) << (ce.bitwiseAnd(3, var7) << 8));
             }
             var4_ref_pa.unlink(param0 ^ 2146);
             return;

@@ -164,9 +164,9 @@ final class AccountRequestState {
               throw new IllegalStateException();
             }
             ia.field_d = new String[var4];
-            og.a(ij.field_a, 0, ia.field_d, 0, var4);
+            ArrayBlockSupport.copyObjectRange(ij.field_a, 0, ia.field_d, 0, var4);
             SoundCache.field_c = new String[-1 + (var3_int - var4)];
-            og.a(ij.field_a, 1 + var4, SoundCache.field_c, 0, -1 + (var3_int - var4));
+            ArrayBlockSupport.copyObjectRange(ij.field_a, 1 + var4, SoundCache.field_c, 0, -1 + (var3_int - var4));
             var3_int = mh.a(false, rc.field_o, mb.field_a, re.a(bf.field_b, new String[]{"<br><%0><br>"}, (byte) -50), ij.field_a);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -180,9 +180,9 @@ final class AccountRequestState {
               throw new IllegalStateException();
             }
             tf.field_p = new String[var4];
-            og.a(ij.field_a, 0, tf.field_p, 0, var4);
+            ArrayBlockSupport.copyObjectRange(ij.field_a, 0, tf.field_p, 0, var4);
             ValidationStatusIcon.field_G = new String[var3_int + (-var4 - 1)];
-            og.a(ij.field_a, var4 + 1, ValidationStatusIcon.field_G, 0, -var4 + (var3_int - 1));
+            ArrayBlockSupport.copyObjectRange(ij.field_a, var4 + 1, ValidationStatusIcon.field_G, 0, -var4 + (var3_int - 1));
             if (ia.field_d.length >= tf.field_p.length) {
               stackIn_31_0 = ia.field_d.length;
             } else {

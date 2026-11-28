@@ -136,7 +136,7 @@ final class ModalDialogHost extends ComponentDecorator {
           return;
         }
         if (MixedSupport118.booleanState0181) {
-          DiagnosticSupport002.performAction0763((byte) 126, MixedSupport130.stringState0562);
+          DiagnosticSupport002.performAction0763((byte) 126, ByteArrayPoolSupport.stringState0562);
           MixedSupport118.booleanState0181 = false;
         }
         if (MixedSupport050.booleanState0064) {

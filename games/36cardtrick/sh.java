@@ -85,7 +85,7 @@ final class sh extends mh {
 
     static {
         field_j = new byte[65536];
-        og.a(field_j, 0, 65536, (byte) -128);
+        ArrayBlockSupport.a(field_j, 0, 65536, (byte) -128);
         field_f = "More suggestions";
         field_k = null;
         field_h = "Return to game";

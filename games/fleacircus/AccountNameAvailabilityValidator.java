@@ -50,7 +50,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             stackIn_16_0 = lf.field_c;
             return stackIn_16_0;
           }
-          stackIn_14_0 = de.field_o;
+          stackIn_14_0 = MusicPatchEnvelope.field_o;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -118,7 +118,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             var2 = hj.field_a[fleas.field_E] >= var1_int ? 1 : 0;
             ResourceArchive.field_c.field_z[var1_int] = var2 == 0 ? ik.field_C : FrameTimer.field_c[fleas.field_E][var1_int];
             if (0 == fleas.field_E && var1_int >= 15 &&
-              (DiskArchiveRequest.c((byte) 107) || 0 >= wc.field_q)) {
+              (DiskArchiveRequest.c((byte) 107) || 0 >= MusicPatch.field_q)) {
               ResourceArchive.field_c.field_z[var1_int] = nb.field_e;
               var2 = 0;
             }

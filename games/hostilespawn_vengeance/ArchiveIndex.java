@@ -240,7 +240,7 @@ final class ArchiveIndex {
               }
             } else {
               for (var10Lifetime4 = 0; this.field_j > var10Lifetime4; var10Lifetime4++) {
-                this.field_o[this.field_t[var10Lifetime4]] = var17.readUnsignedShort(bm.a(param0, 8));
+                this.field_o[this.field_t[var10Lifetime4]] = var17.readUnsignedShort(bm.bitwiseXor(param0, 8));
               }
               for (var10Lifetime4 = 0; var10Lifetime4 < this.field_j; var10Lifetime4++) {
                 var11 = this.field_t[var10Lifetime4];

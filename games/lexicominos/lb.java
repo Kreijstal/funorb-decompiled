@@ -29,7 +29,7 @@ final class lb {
             }
             var2 = 1;
           }
-          RichTextWidget.field_H.a(rc.a(ef.field_a, param0 + 59719, ProxyAuthenticationRequiredException.field_a), rc.a(bk.field_b, 29532, ResourceArchive.field_e), param0 ^ -30202);
+          RichTextWidget.field_H.a(MusicPatchEnvelope.a(ef.field_a, param0 + 59719, ProxyAuthenticationRequiredException.field_a), MusicPatchEnvelope.a(bk.field_b, 29532, ResourceArchive.field_e), param0 ^ -30202);
           if (RichTextWidget.field_H.b(true)) {
             var1_int = 1;
           }

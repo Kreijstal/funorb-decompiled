@@ -5,17 +5,17 @@ final class wi extends InteractiveWidget {
     private int field_F;
     int field_G;
     int field_H;
-    private gl field_E;
+    private GrowableIntArray field_E;
 
     final int a(int param0, byte param1) {
         if (param1 != -37) {
           return -43;
         }
         if (param0 < 0 ||
-          this.field_E.a((byte) -110) <= param0) {
+          this.field_E.size((byte) -110) <= param0) {
           return -1;
         }
-        return this.field_E.a(param0, -116);
+        return this.field_E.get(param0, -116);
     }
 
     final int i(int param0) {
@@ -29,7 +29,7 @@ final class wi extends InteractiveWidget {
         if (param0) {
           return -53;
         }
-        return this.field_E.a((byte) -110);
+        return this.field_E.size((byte) -110);
     }
 
     final static AccountServiceResult createAccountErrorResult(int param0, byte param1, String param2) {
@@ -98,8 +98,8 @@ final class wi extends InteractiveWidget {
             }
             var10 = 2147483647;
             var11 = -1;
-            for (var12 = 0; var12 < this.field_E.a((byte) -110); var12++) {
-              var13 = this.field_E.a(var12, -115) - var8_int;
+            for (var12 = 0; var12 < this.field_E.size((byte) -110); var12++) {
+              var13 = this.field_E.get(var12, -115) - var8_int;
               var13 = var13 * var13;
               if (var10 > var13) {
                 var11 = var12;
@@ -107,10 +107,10 @@ final class wi extends InteractiveWidget {
               }
             }
             if (var11 >= 0) {
-              this.field_E.a(var11, (byte) 108);
+              this.field_E.removeAt(var11, (byte) 108);
             }
           } else {
-            this.field_E.c(var8_int, 1);
+            this.field_E.append(var8_int, 1);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

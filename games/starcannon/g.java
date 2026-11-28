@@ -10,28 +10,28 @@ final class g {
           ti.field_b.snapAndPruneDialogs(param0 - 21975);
           if (param0 != 21975) {
             g.a(99);
-            if (null != ve.field_f) {
-              ve.field_f.freezeNormalProgressAnimation(260);
+            if (null != GrowableIntArray.field_f) {
+              GrowableIntArray.field_f.freezeNormalProgressAnimation(260);
             }
             dg.a(11199);
             return;
           }
-          if (null != ve.field_f) {
-            ve.field_f.freezeNormalProgressAnimation(260);
+          if (null != GrowableIntArray.field_f) {
+            GrowableIntArray.field_f.freezeNormalProgressAnimation(260);
           }
           dg.a(11199);
           return;
         }
         if (param0 == 21975) {
-          if (null != ve.field_f) {
-            ve.field_f.freezeNormalProgressAnimation(260);
+          if (null != GrowableIntArray.field_f) {
+            GrowableIntArray.field_f.freezeNormalProgressAnimation(260);
           }
           dg.a(11199);
           return;
         }
         g.a(99);
-        if (null != ve.field_f) {
-          ve.field_f.freezeNormalProgressAnimation(260);
+        if (null != GrowableIntArray.field_f) {
+          GrowableIntArray.field_f.freezeNormalProgressAnimation(260);
         }
         dg.a(11199);
     }

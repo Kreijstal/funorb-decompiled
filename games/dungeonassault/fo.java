@@ -29,7 +29,7 @@ final class fo {
           var4 = ub.field_q[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = uo.field_b[nb.a(255, (int) var4[var6])];
+            var5[var6] = uo.field_b[nb.bitwiseAnd(255, (int) var4[var6])];
           }
           var1[var2] = new RgbSprite(ce.field_x, tb.field_i, MusicPatchPcmStream.field_t[var2], RichTextLayout.field_g[var2], jc.field_f[var2], jn.field_k[var2], var5);
         }

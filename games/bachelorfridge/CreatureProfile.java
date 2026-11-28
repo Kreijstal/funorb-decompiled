@@ -365,7 +365,7 @@ class CreatureProfile extends IntrusiveNode {
           for (var6 = 0; var6 < 13; var6++) {
             stackIn_8_0 = this.field_g;
             stackIn_8_1 = var6;
-            stackIn_9_2 = (dda.a(var4Lifetime1, 1 << 1 + var6) == 1 << var6 + 1);
+            stackIn_9_2 = (dda.bitwiseAnd(var4Lifetime1, 1 << 1 + var6) == 1 << var6 + 1);
             stackIn_8_0[stackIn_8_1] = stackIn_9_2;
             if (this.field_g[var6]) {
               this.field_j[var5] = this.field_o.field_g.field_b[2 + var6];
@@ -397,7 +397,7 @@ class CreatureProfile extends IntrusiveNode {
         int[] var8 = var9;
         int[] var7 = var8;
         int[] var2 = var7;
-        ArrayOperations.a(var9, 0, 5, this.field_o.field_b);
+        ArrayOperations.fillInts(var9, 0, 5, this.field_o.field_b);
         int[] var3 = ug.field_l[this.field_h.countWithOffset(0)];
         if (param0 >= -8) {
           field_r = (String) null;
@@ -575,7 +575,7 @@ class CreatureProfile extends IntrusiveNode {
           this.field_j[1] = this.field_o.field_g.field_b[1];
           this.field_m = new int[5];
           this.field_j[0] = this.field_o.field_g.field_b[0];
-          ArrayOperations.a(this.field_m, 0, this.field_m.length, -1);
+          ArrayOperations.fillInts(this.field_m, 0, this.field_m.length, -1);
           this.field_m[0] = 0;
           this.field_m[1] = 1;
           discarded$0 = this.storeUnusedProfileValue(0);

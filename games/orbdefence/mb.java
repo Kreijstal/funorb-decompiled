@@ -37,7 +37,7 @@ final class mb {
             var5 = var9;
             var6 = param1;
             var7 = param3;
-            var9[var6] = (EditableTextField.a(16711422, var9[var6]) >> 1) + var7;
+            var9[var6] = (EditableTextField.bitwiseAnd(16711422, var9[var6]) >> 1) + var7;
             param1++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

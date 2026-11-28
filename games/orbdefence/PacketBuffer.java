@@ -176,7 +176,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (this.payload[fieldTemp$1] != 0);
         var4 = -1 + this.position - var3;
         if (var4 != 0) {
-          return tj.decodeCp1252String(var4, var3, 0, this.payload);
+          return GrowableIntArray.decodeCp1252String(var4, var3, 0, this.payload);
         }
         return "";
     }
@@ -450,7 +450,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var3 == 0) {
           return "";
         }
-        return tj.decodeCp1252String(var3, var2, param0 - 2, this.payload);
+        return GrowableIntArray.decodeCp1252String(var3, var2, param0 - 2, this.payload);
     }
 
     final void writeBase38String(byte param0, String param1) {
@@ -675,7 +675,7 @@ class PacketBuffer extends IntrusiveNode {
 
     PacketBuffer(int param0) {
         this.position = 0;
-        this.payload = q.a(param0, (byte) 121);
+        this.payload = ByteArrayPoolSupport.acquireByteArray(param0, (byte) 121);
     }
 
     final int readUnsignedShortOrInt(boolean param0) {

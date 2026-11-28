@@ -40,7 +40,7 @@ final class ValidationStatusWidget extends RichTextWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -124,8 +124,8 @@ final class ValidationStatusWidget extends RichTextWidget {
         var33 = null;
         var13 = SolKnight.field_L ? 1 : 0;
         var6 = this.field_U.getValidationStatus(param3 ^ -9362);
-        if (hg.field_E == var6) {
-          var17 = g.field_e;
+        if (MusicPatchNode.field_E == var6) {
+          var17 = MusicPatchEnvelope.field_e;
           if (!var17.equals(this.field_i)) {
             this.field_i = var17;
             this.rebuildHotspotBounds((byte) -21);
@@ -135,7 +135,7 @@ final class ValidationStatusWidget extends RichTextWidget {
           var37 = (TextWidgetRenderer) ((Object) this.field_w);
           var9 = param2 + this.field_m;
           var10 = var37.getTextOriginY((UiWidget) (this), false, param0) + (var37.getTextLayout(-21480, (UiWidget) (this)).getLayoutHeight((byte) 126) >> 1);
-          if (var6 != hg.field_E &&
+          if (var6 != MusicPatchNode.field_E &&
             SpriteState.field_u != var6) {
             if (rg.field_f == var6) {
               var20 = PacketBuffer.field_k[2];
@@ -175,7 +175,7 @@ final class ValidationStatusWidget extends RichTextWidget {
           return;
         }
         if (SpriteState.field_u == var6) {
-          var22 = g.field_e;
+          var22 = MusicPatchEnvelope.field_e;
           if (!var22.equals(this.field_i)) {
             this.field_i = var22;
             this.rebuildHotspotBounds((byte) -21);
@@ -185,7 +185,7 @@ final class ValidationStatusWidget extends RichTextWidget {
           var38 = (TextWidgetRenderer) ((Object) this.field_w);
           var9Lifetime1 = param2 + this.field_m;
           var10Lifetime1 = var38.getTextOriginY((UiWidget) (this), false, param0) + (var38.getTextLayout(-21480, (UiWidget) (this)).getLayoutHeight((byte) 126) >> 1);
-          if (var6 != hg.field_E &&
+          if (var6 != MusicPatchNode.field_E &&
             SpriteState.field_u != var6) {
             if (rg.field_f == var6) {
               var25 = PacketBuffer.field_k[2];
@@ -235,7 +235,7 @@ final class ValidationStatusWidget extends RichTextWidget {
           var39 = (TextWidgetRenderer) ((Object) this.field_w);
           var9Lifetime2 = param2 + this.field_m;
           var10Lifetime2 = var39.getTextOriginY((UiWidget) (this), false, param0) + (var39.getTextLayout(-21480, (UiWidget) (this)).getLayoutHeight((byte) 126) >> 1);
-          if (var6Lifetime1 != hg.field_E &&
+          if (var6Lifetime1 != MusicPatchNode.field_E &&
             SpriteState.field_u != var6Lifetime1) {
             if (rg.field_f == var6Lifetime1) {
               var30 = PacketBuffer.field_k[2];
@@ -285,7 +285,7 @@ final class ValidationStatusWidget extends RichTextWidget {
         var40 = (TextWidgetRenderer) ((Object) this.field_w);
         var9Lifetime3 = param2 + this.field_m;
         var10Lifetime3 = var40.getTextOriginY((UiWidget) (this), false, param0) + (var40.getTextLayout(-21480, (UiWidget) (this)).getLayoutHeight((byte) 126) >> 1);
-        if (var6Lifetime2 != hg.field_E &&
+        if (var6Lifetime2 != MusicPatchNode.field_E &&
           SpriteState.field_u != var6Lifetime2) {
           if (rg.field_f == var6Lifetime2) {
             var35 = PacketBuffer.field_k[2];
@@ -391,7 +391,7 @@ final class ValidationStatusWidget extends RichTextWidget {
               var4 = ModalDialog.field_G;
               var2 = var4;
               ModalDialog.field_G = new Asteroid[ModalDialog.field_G.length << 1];
-              fk.a(var2, 0, ModalDialog.field_G, 0, var4.length);
+              ArrayBlockSupport.copyObjectRange(var2, 0, ModalDialog.field_G, 0, var4.length);
               ModalDialog.field_G[var4.length] = param1;
               decompiledFrameCompleted0 = false;
             }
@@ -418,7 +418,7 @@ final class ValidationStatusWidget extends RichTextWidget {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -476,7 +476,7 @@ final class ValidationStatusWidget extends RichTextWidget {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -512,7 +512,7 @@ final class ValidationStatusWidget extends RichTextWidget {
         try {
           super.updatePointer(param0, param1 + 0, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "pk.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "pk.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -523,7 +523,7 @@ final class ValidationStatusWidget extends RichTextWidget {
           this.field_U = param0;
           this.setBounds(param5, param4, param2, 0, param3);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "pk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "pk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

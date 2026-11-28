@@ -1598,7 +1598,7 @@ class PacketBuffer extends IntrusiveNode {
 
     PacketBuffer(int param0) {
         this.position = 0;
-        this.payload = sd.a(param0, 5000);
+        this.payload = ByteArrayPoolSupport.acquireByteArray(param0, 5000);
     }
 
     final void writePrefixedString(String param0, int param1) {

@@ -107,18 +107,18 @@ final class eb {
               if (var4 == ve.field_d.selectedIndex) {
                 stackIn_45_0 = mq.field_v;
               } else {
-                stackIn_45_0 = gl.field_i;
+                stackIn_45_0 = MusicPatchEnvelope.field_i;
               }
               var9 = stackIn_45_0;
-              var1_int = var1_int + al.field_z;
+              var1_int = var1_int + MusicPatch.field_z;
               if (var9 != null) {
-                var9.a(GameShell.field_z + (qc.field_z << 1), var8Lifetime1 - gl.field_l, var1_int, var7Lifetime1 + (gl.field_l << 1), -114);
+                var9.a(GameShell.field_z + (qc.field_z << 1), var8Lifetime1 - MusicPatchEnvelope.field_l, var1_int, var7Lifetime1 + (MusicPatchEnvelope.field_l << 1), -114);
               }
               var1_int = var1_int + qc.field_z;
             }
             if (0 <= var4) {
-              gb.field_b.drawString(var6, var8Lifetime1, var1_int + re.field_g, var5, -1);
-              var1_int = var1_int + (GameShell.field_z + al.field_z + qc.field_z);
+              gb.field_b.drawString(var6, var8Lifetime1, var1_int + GrowableIntArray.field_g, var5, -1);
+              var1_int = var1_int + (GameShell.field_z + MusicPatch.field_z + qc.field_z);
             } else {
               mf.field_c.drawString(var6, var8Lifetime1, gj.field_y + var1_int, var5, -1);
               var1_int = var1_int + gd.field_k;

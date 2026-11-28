@@ -105,8 +105,8 @@ final class dd extends rj {
         var7 = DungeonAssault.field_K;
         var4 = param0 + this.field_t;
         var5 = this.field_i + param2;
-        bp.a(var5, bl.field_o, var4, (byte) 99);
-        bp.a(this.field_D + var5 + 10, DungeonRaidScreen.field_S, var4, (byte) 99);
+        GrowableIntArray.a(var5, bl.field_o, var4, (byte) 99);
+        GrowableIntArray.a(this.field_D + var5 + 10, DungeonRaidScreen.field_S, var4, (byte) 99);
         for (var6 = 0; var6 < 7; var6++) {
           te.a(var4 + 11, var6 + var5 + 6, -2 + this.field_D, DialogMessagePane.field_M);
         }
@@ -123,7 +123,7 @@ final class dd extends rj {
           stackIn_12_0 = 0;
         }
         var6Lifetime3 = stackIn_12_0;
-        bp.a(4 + var5, im.field_m, var6Lifetime3 + (var4 + 10), (byte) 99);
+        GrowableIntArray.a(4 + var5, im.field_m, var6Lifetime3 + (var4 + 10), (byte) 99);
         ValidationStatusWidget.field_W.draw(var4, var5);
         if (param1 != 8187) {
           field_C = (int[]) null;

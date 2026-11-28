@@ -18,7 +18,7 @@ abstract class ng {
           var4 = ph.field_c[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
-            var5[var6] = he.field_k[da.b((int) var4[var6], 255)];
+            var5[var6] = he.field_k[da.bitwiseAnd((int) var4[var6], 255)];
           }
           var1[var2] = new RgbSprite(DropTargetWidgetContainer.field_C, fk.field_e, ConfirmedEmailAvailabilityValidator.field_n[var2], ae.field_c[var2], ih.field_V[var2], qh.field_i[var2], var5);
         }

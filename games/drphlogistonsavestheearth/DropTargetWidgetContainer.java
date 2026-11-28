@@ -280,9 +280,9 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
               throw new IllegalStateException();
             }
             lk.field_i = new String[var4];
-            kg.a(DequeWidgetContainer.field_A, 0, lk.field_i, 0, var4);
+            ArrayBlockSupport.copyObjectRange(DequeWidgetContainer.field_A, 0, lk.field_i, 0, var4);
             wg.field_h = new String[var3_int + (-var4 - 1)];
-            kg.a(DequeWidgetContainer.field_A, var4 + 1, wg.field_h, 0, var3_int - var4 - 1);
+            ArrayBlockSupport.copyObjectRange(DequeWidgetContainer.field_A, var4 + 1, wg.field_h, 0, var3_int - var4 - 1);
             var4 = -1;
             var3_int = ab.a(ol.field_h, a.a(5044, AlphaWidgetContainer.field_I, new String[]{"<br><%0><br>"}), DequeWidgetContainer.field_A, uj.field_i, 14074);
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -296,19 +296,19 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
               throw new IllegalStateException();
             }
             PcmResampler.field_d = new String[var4];
-            kg.a(DequeWidgetContainer.field_A, 0, PcmResampler.field_d, 0, var4);
-            ga.field_i = new String[var3_int - var4 - 1];
-            kg.a(DequeWidgetContainer.field_A, var4 + 1, ga.field_i, 0, -var4 + var3_int - 1);
+            ArrayBlockSupport.copyObjectRange(DequeWidgetContainer.field_A, 0, PcmResampler.field_d, 0, var4);
+            MidiNoteMask.field_i = new String[var3_int - var4 - 1];
+            ArrayBlockSupport.copyObjectRange(DequeWidgetContainer.field_A, var4 + 1, MidiNoteMask.field_i, 0, -var4 + var3_int - 1);
             if (lk.field_i.length >= PcmResampler.field_d.length) {
               stackIn_58_0 = lk.field_i.length;
             } else {
               stackIn_58_0 = PcmResampler.field_d.length;
             }
             var5 = stackIn_58_0;
-            if (wg.field_h.length >= ga.field_i.length) {
+            if (wg.field_h.length >= MidiNoteMask.field_i.length) {
               stackIn_61_0 = wg.field_h.length;
             } else {
-              stackIn_61_0 = ga.field_i.length;
+              stackIn_61_0 = MidiNoteMask.field_i.length;
             }
             var6 = stackIn_61_0;
             var7 = var6 + 7 + var5;
@@ -343,10 +343,10 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
               stackIn_73_0 = sg.field_f;
               stackIn_73_1 = var5 + 7 + var8Lifetime3;
-              stackIn_73_2 = ga.field_i.length;
+              stackIn_73_2 = MidiNoteMask.field_i.length;
               stackIn_73_3 = var8Lifetime3;
               if (stackIn_73_2 > stackIn_73_3) {
-                stackIn_76_2 = ga.field_i[var8Lifetime3];
+                stackIn_76_2 = MidiNoteMask.field_i[var8Lifetime3];
               } else {
                 stackIn_76_2 = "";
               }
@@ -385,7 +385,7 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
           }
           GameAppletShell.field_k = -(var3_intLifetime1 >> 1) + var3_intLifetime1 + ji.field_f;
           SingleChildWidgetContainer.field_B = ji.field_f - (var3_intLifetime1 >> 1);
-          vi.field_e = wg.field_k.field_e * (ig.field_h + LoginPanel.field_N << 1);
+          vi.field_e = wg.field_k.field_e * (MusicPatch.field_h + LoginPanel.field_N << 1);
           for (var4Lifetime2 = 0; var4Lifetime2 < sg.field_f.length; var4Lifetime2++) {
             stackIn_113_0 = vi.field_e;
             if (0 > lg.field_a[var4Lifetime2]) {
@@ -407,12 +407,12 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
             if (var6Lifetime1 >= 0) {
               var7Lifetime2 = u.a(sg.field_f[var4Lifetime3], true, true);
               var8Lifetime1 = -(var7Lifetime2 >> 1) + ji.field_f;
-              var5Lifetime3 = var5Lifetime3 + ig.field_h;
+              var5Lifetime3 = var5Lifetime3 + MusicPatch.field_h;
               cj.field_f[var4Lifetime3] = new int[4];
               cj.field_f[var4Lifetime3][0] = -SecondaryNodeDeque.field_d + var8Lifetime1;
               cj.field_f[var4Lifetime3][1] = var5Lifetime3;
               cj.field_f[var4Lifetime3][2] = var7Lifetime2 + (SecondaryNodeDeque.field_d << 1);
-              var5Lifetime3 = var5Lifetime3 + (EmailFormatValidator.field_p + (LoginPanel.field_N << 1) + ig.field_h);
+              var5Lifetime3 = var5Lifetime3 + (EmailFormatValidator.field_p + (LoginPanel.field_N << 1) + MusicPatch.field_h);
               cj.field_f[var4Lifetime3][3] = (LoginPanel.field_N << 1) + EmailFormatValidator.field_p;
             } else {
               var5Lifetime3 = var5Lifetime3 + s.field_g;

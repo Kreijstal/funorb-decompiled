@@ -53,7 +53,7 @@ final class ld {
                   var10 = var8 & 65280;
                   var10 = 65280 & (var10 >> 1) - (var10 >> 5);
                   var11 = (255 & var8) >> 3;
-                  SoftwareRasterizer.field_b[var6_int] = ge.a(ge.a(var10, var9 << 16), var11);
+                  SoftwareRasterizer.field_b[var6_int] = ge.bitwiseOr(ge.bitwiseOr(var10, var9 << 16), var11);
                 }
                 var6_int++;
               }

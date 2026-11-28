@@ -41,10 +41,10 @@ final class oe {
               for (var6 = 20; var6 >= 0; var6--) {
                 var7 = var13[var5][var6];
                 if (var7 == 2) {
-                  de.a((byte) 88, var5, var3_int, var6);
+                  MusicPatchEnvelope.a((byte) 88, var5, var3_int, var6);
                 } else {
                   if (var7 == 7) {
-                    de.a((byte) 88, var5, var3_int, var6);
+                    MusicPatchEnvelope.a((byte) 88, var5, var3_int, var6);
                   } else {
                     if (var7 == 18) {
                       lg.a(-4, var6, var3_int, var5);
@@ -60,10 +60,10 @@ final class oe {
               for (var6Lifetime1 = 20; var6Lifetime1 >= 0; var6Lifetime1--) {
                 var7Lifetime1 = var13[var5Lifetime1][var6Lifetime1];
                 if (var7Lifetime1 == 2) {
-                  de.a((byte) 88, var5Lifetime1, var3_int, var6Lifetime1);
+                  MusicPatchEnvelope.a((byte) 88, var5Lifetime1, var3_int, var6Lifetime1);
                 } else {
                   if (var7Lifetime1 == 7) {
-                    de.a((byte) 88, var5Lifetime1, var3_int, var6Lifetime1);
+                    MusicPatchEnvelope.a((byte) 88, var5Lifetime1, var3_int, var6Lifetime1);
                   } else {
                     if (var7Lifetime1 != 0) {
                       aj.field_t[36 + var7Lifetime1].draw(var5Lifetime1 * 16 - 4, 16 * var6Lifetime1 - 4);
@@ -110,7 +110,7 @@ final class oe {
           return null;
         }
         if (EditableTextField.field_S < ContentTransitionDialog.field_db + fj.field_b) {
-          return gf.field_b;
+          return ByteArrayPoolSupport.field_b;
         }
         if (param0 != 19007) {
           oe.a(-82);

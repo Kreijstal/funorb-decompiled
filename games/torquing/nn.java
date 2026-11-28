@@ -18,9 +18,9 @@ final class nn {
         Js5Transport.field_n = new String[]{vk.field_x, to.field_r, mi.field_u, bq.field_b, w.field_gb, nc.field_b, un.field_f, bl.field_e};
         if (param0 < -21) {
           NodeHashTableIterator.field_a = new String[]{ld.field_b, hm.field_t, da.field_e, qj.field_a, qa.field_j};
-          hq.field_d[2] = ai.field_m;
-          hq.field_d[0] = ae.field_lb;
-          hq.field_d[1] = qe.field_a;
+          GrowableIntArray.field_d[2] = ai.field_m;
+          GrowableIntArray.field_d[0] = ae.field_lb;
+          GrowableIntArray.field_d[1] = qe.field_a;
           hb.field_u[0] = bm.field_l.toUpperCase();
           hb.field_u[4] = RichTextLayout.field_j.toUpperCase();
           hb.field_u[10] = l.field_a;
@@ -60,9 +60,9 @@ final class nn {
         }
         field_c = (Js5Transport) null;
         NodeHashTableIterator.field_a = new String[]{ld.field_b, hm.field_t, da.field_e, qj.field_a, qa.field_j};
-        hq.field_d[2] = ai.field_m;
-        hq.field_d[0] = ae.field_lb;
-        hq.field_d[1] = qe.field_a;
+        GrowableIntArray.field_d[2] = ai.field_m;
+        GrowableIntArray.field_d[0] = ae.field_lb;
+        GrowableIntArray.field_d[1] = qe.field_a;
         hb.field_u[0] = bm.field_l.toUpperCase();
         hb.field_u[4] = RichTextLayout.field_j.toUpperCase();
         hb.field_u[10] = l.field_a;

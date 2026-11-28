@@ -58,7 +58,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         this.field_H = new ButtonWidget(UiWidget.field_v, (WidgetEventListener) null);
         this.field_F.field_n = ak.field_c;
         this.field_M.field_n = AccountCreationResultPanel.field_nb;
-        this.field_I.field_n = qh.field_c;
+        this.field_I.field_n = GrowableIntArray.field_c;
         this.field_J.field_n = jd.field_f;
         this.field_E.field_n = hb.field_d;
         this.field_L.field_n = ti.field_p;

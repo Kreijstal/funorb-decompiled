@@ -423,7 +423,7 @@ public final class TrackController extends GameShell {
         DelegatingCanvas.clearStaticReferences(param0 ^ -18);
         sb.clearStaticReferences((byte) 123);
         kj.clearStaticReferences(false);
-        ke.clearStaticReferences(false);
+        ByteArrayPoolSupport.clearStaticReferences(false);
         s.clearStaticReferences((byte) 49);
         ij.clearStaticReferences(-18515);
         gi.clearDeclaredStaticReferences((byte) -127);
@@ -472,7 +472,7 @@ public final class TrackController extends GameShell {
         f.resetStaticState((byte) 113);
         DirectByteStorage.clearStaticReferences(param0 - 105);
         RichTextLayout.clearDeclaredStaticReferences(4);
-        qh.clearStaticReferences(-51);
+        GrowableIntArray.clearStaticReferences(-51);
         DraggableWidgetContainer.clearDeclaredStaticReferences((byte) 118);
         DropTargetWidgetContainer.clearStaticReferences(false);
         aa.clearStaticReferences((byte) -14);
@@ -844,7 +844,7 @@ public final class TrackController extends GameShell {
                             for (var7_int = 1; var7_int < 9; var7_int++) {
                               array$6 = new int[var33.length];
                               ((PalettedBitmapFont) (var5_ref_oh)).field_M[var7_int] = array$6;
-                              pd.a(var6_ref_int__, 0, ((PalettedBitmapFont) (var5_ref_oh)).field_M[var7_int], 0, var33.length);
+                              ArrayBlockSupport.copyIntRange(var6_ref_int__, 0, ((PalettedBitmapFont) (var5_ref_oh)).field_M[var7_int], 0, var33.length);
                             }
                             ((PalettedBitmapFont) (var5_ref_oh)).field_M[1][1] = 8110658;
                             ((PalettedBitmapFont) (var5_ref_oh)).field_M[2][1] = 4473924;
@@ -962,7 +962,7 @@ public final class TrackController extends GameShell {
                   SocketArchiveRequestConnection.avatarSprites[32][var6].drawRotatedAbout(var3, var3, var3, var3, var5, 4096);
                 }
               }
-              ia.field_b.a(-91);
+              ia.field_b.setAsRasterTarget(-91);
               qi.d(param0 - 438);
               return false;
             }
@@ -985,7 +985,7 @@ public final class TrackController extends GameShell {
                 throw new RuntimeException();
               }
               AsyncRequest.field_p = new GameScreen[17];
-              qh.field_b = gj.levels[0];
+              GrowableIntArray.field_b = gj.levels[0];
               LoginPanel.field_D = null;
               for (var5 = 0; var5 < 17; var5++) {
                 AsyncRequest.field_p[var5] = new GameScreen(this, var5);
@@ -1009,7 +1009,7 @@ public final class TrackController extends GameShell {
           DropTargetWidgetContainer.field_E.bindAsRenderTarget();
           dc.field_p.drawDownscaledAreaAveraged(0, 0, var3, var3);
           dc.field_p = null;
-          ia.field_b.a(-91);
+          ia.field_b.setAsRasterTarget(-91);
           bb.field_b = ib.a(10, "", sg.field_a, "achievements");
           var20 = bb.field_b;
           for (var5 = 0; var5 < var20.length; var5++) {
@@ -1029,7 +1029,7 @@ public final class TrackController extends GameShell {
           SoftwareRasterizer.fillRectangleVerticalGradient(20, 30, 600, 383, 3894145, 11980506);
           SoftwareRasterizer.drawRectangleOutline(0, 0, 640, 480, 0);
           ab.a("", -15383, "titlescreen2", sg.field_a).drawTransparent(0, 0);
-          ia.field_b.a(-91);
+          ia.field_b.setAsRasterTarget(-91);
           NameSuggestionsPanel.field_L = ib.a(10, "", sg.field_a, "frame");
           DualLinkNode.field_l = ib.a(param0 - 457, "", sg.field_a, "buttonframe");
           aa.field_a = ib.a(10, "", sg.field_a, "buttonframe38");
@@ -1080,8 +1080,8 @@ public final class TrackController extends GameShell {
           var4_ref_String = stackIn_93_0;
           var22 = ib.a(10, var4_ref_String, sg.field_a, "man");
           SocketArchiveRequestConnection.avatarSprites = new Sprite[64][4];
-          pd.a(var22, 0, SocketArchiveRequestConnection.avatarSprites[0], 0, 4);
-          pd.a(var22, 4, SocketArchiveRequestConnection.avatarSprites[32], 0, 4);
+          ArrayBlockSupport.copyObjectRange(var22, 0, SocketArchiveRequestConnection.avatarSprites[0], 0, 4);
+          ArrayBlockSupport.copyObjectRange(var22, 4, SocketArchiveRequestConnection.avatarSprites[32], 0, 4);
           j.field_b = ib.a(param0 ^ 473, var4_ref_String, sg.field_a, "man_face");
           SocketConnector.field_a = ib.a(10, "", sg.field_a, "smoke");
           kg.field_e = ib.a(10, "", sg.field_a, "tickbox");
@@ -1149,7 +1149,7 @@ public final class TrackController extends GameShell {
           cl.a(aa.field_a, 0, var8Lifetime2, 0, 156, 4);
           DisplayNameSelectionPanel.font.drawCentred(ca.field_d, 78, DisplayNameSelectionPanel.font.field_G, 1, -1);
           ba.field_b.drawCentred(th.field_i, 78, DisplayNameSelectionPanel.font.field_G + ba.field_b.field_G, 15252224, -1);
-          ia.field_b.a(-91);
+          ia.field_b.setAsRasterTarget(-91);
           sg.field_a = null;
           qi.d(param0 - 407);
           return false;

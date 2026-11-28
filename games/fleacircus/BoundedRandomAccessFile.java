@@ -216,7 +216,7 @@ final class BoundedRandomAccessFile {
             return stackIn_2_0;
           }
           var3 = new byte[var2_int];
-          dm.copyBytes(param1, 0, var3, 0, var2_int);
+          ArrayBlockSupport.copyBytes(param1, 0, var3, 0, var2_int);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

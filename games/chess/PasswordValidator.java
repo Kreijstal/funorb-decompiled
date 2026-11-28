@@ -55,7 +55,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_23_0 = ao.field_f;
             return stackIn_23_0;
           }
-          if (ml.a(var6, var5, 0)) {
+          if (GrowableIntArray.a(var6, var5, 0)) {
             stackIn_27_0 = ArchiveRequest.field_t;
             return stackIn_27_0;
           }

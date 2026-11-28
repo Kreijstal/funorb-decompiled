@@ -51,7 +51,7 @@ final class qr extends jq {
         for (var7 = no.field_d - 1; 0 <= var7; var7--) {
           var8_ref_tn = eo.field_l[var7];
           var9 = 0;
-          if (!pe.field_r &&
+          if (!MusicPatchNode.field_r &&
             FullscreenNoticeType.field_b > var5) {
             var10_int = ab.a(0, var8_ref_tn.field_s);
             if (var8_ref_tn.a((byte) 44) >= var10_int && (var8_ref_tn.field_n ||

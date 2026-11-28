@@ -90,7 +90,7 @@ final class GameScreen {
           }
           var8 = param0.a((byte) 46);
           if (null == qf.field_a) {
-            var9 = s.a(false, false) ? 1 : 0;
+            var9 = MidiNoteMask.a(false, false) ? 1 : 0;
             if (var9 == 0) {
               stackIn_9_0 = -1;
               return stackIn_9_0;
@@ -297,7 +297,7 @@ final class GameScreen {
         boolean stackOut_9_0;
         var12 = TorChallenge.field_F ? 1 : 0;
         try {
-          var5_int = s.field_q.length;
+          var5_int = MidiNoteMask.field_q.length;
           var6 = 200;
           var7 = hl.field_c;
           var8 = 0;
@@ -750,7 +750,7 @@ final class GameScreen {
               while (var11 > var28_int) {
                 stackIn_40_0 = pi.field_d[ok.field_b][var27] & 1 << var28_int;
                 if (stackIn_40_0 > 0) {
-                  od.a(dl.field_j, var28_int * var14 + (var5_int + var12), var23 + (var13 + var6));
+                  od.a(MusicPatchNode.field_j, var28_int * var14 + (var5_int + var12), var23 + (var13 + var6));
                 }
                 var28_int++;
               }
@@ -843,13 +843,13 @@ final class GameScreen {
                 boolean decompiledFrameRemainder0 = true;
                 var3 = DraggableWidgetContainer.field_J;
                 if (var3 < 6) {
-                  if ((RandomAccessCacheFile.field_e == m.field_c[1][var3]) &&
+                  if ((RandomAccessCacheFile.field_e == GrowableIntArray.field_c[1][var3]) &&
                     (decompiledFrameRemainder0 = !(6 <= var3))) {
                     h.a(8, 4);
                     decompiledFrameRemainder0 = (var5 != 0);
                   }
                   if ((decompiledFrameRemainder0) &&
-                    (~(25 + m.field_c[1][var3]) == ~RandomAccessCacheFile.field_e)) {
+                    (~(25 + GrowableIntArray.field_c[1][var3]) == ~RandomAccessCacheFile.field_e)) {
                     var4 = -1;
                     if (0 == var3) {
                       var4 = 9;
@@ -895,7 +895,7 @@ final class GameScreen {
               if (rj.field_g == 4) {
                 if (RandomAccessCacheFile.field_e <= bi.field_a[0][0] &&
                   !NodeHashTableIterator.field_a) {
-                  decompiledFrameRemainder2 = (~RandomAccessCacheFile.field_e == ~m.field_c[0][0]);
+                  decompiledFrameRemainder2 = (~RandomAccessCacheFile.field_e == ~GrowableIntArray.field_c[0][0]);
                   if (decompiledFrameRemainder2) {
                     h.a(15, 4);
                     decompiledFrameRemainder2 = (var5 != 0);
@@ -930,8 +930,8 @@ final class GameScreen {
                       var3Lifetime1 = (1 + (var3Lifetime1 - 6)) * 2;
                     }
                     if (var3Lifetime1 < 6) {
-                      if (RandomAccessCacheFile.field_e != m.field_c[1][var3Lifetime1]) {
-                        if (~RandomAccessCacheFile.field_e == ~(m.field_c[1][var3Lifetime1] + 25)) {
+                      if (RandomAccessCacheFile.field_e != GrowableIntArray.field_c[1][var3Lifetime1]) {
+                        if (~RandomAccessCacheFile.field_e == ~(GrowableIntArray.field_c[1][var3Lifetime1] + 25)) {
                           var4Lifetime1 = -1;
                           if (var3Lifetime1 == 0) {
                             var4Lifetime1 = 9;
@@ -1028,7 +1028,7 @@ final class GameScreen {
                       if (rj.field_g == 6) {
                         if (RandomAccessCacheFile.field_e <= 450 &&
                           !NodeHashTableIterator.field_a) {
-                          decompiledFrameRemainder2 = (m.field_c[4][0] == RandomAccessCacheFile.field_e);
+                          decompiledFrameRemainder2 = (GrowableIntArray.field_c[4][0] == RandomAccessCacheFile.field_e);
                           if (decompiledFrameRemainder2) {
                             h.a(16, param0 + 22314);
                             decompiledFrameRemainder2 = (var5 != 0);
@@ -2983,7 +2983,7 @@ final class GameScreen {
         boolean stackOut_10_0;
         var8 = TorChallenge.field_F ? 1 : 0;
         try {
-          var2_int = s.field_q.length;
+          var2_int = MidiNoteMask.field_q.length;
           var3 = 200;
           var4 = hl.field_c;
           var5 = 0;
@@ -3271,9 +3271,9 @@ final class GameScreen {
           }
           var16 = 0;
           var13 = GzipDecoder.field_f[param3][0];
-          var12 = m.field_c[param3][0];
+          var12 = GrowableIntArray.field_c[param3][0];
           if (param3 == 1) {
-            var12 = m.field_c[1][param0];
+            var12 = GrowableIntArray.field_c[1][param0];
             var13 = GzipDecoder.field_f[1][param0];
           }
           var15 = RandomAccessCacheFile.field_e - var12;
@@ -3286,9 +3286,9 @@ final class GameScreen {
           if (RandomAccessCacheFile.field_e >= var7) {
             return;
           }
-          var8 = m.field_g[0];
-          var9 = m.field_g[1];
-          var11 = m.field_g[3];
+          var8 = GrowableIntArray.field_g[0];
+          var9 = GrowableIntArray.field_g[1];
+          var11 = GrowableIntArray.field_g[3];
           if (var15 > 0 &&
             var6 > var15) {
             var16Lifetime1 = var15 * 256 / var6;
@@ -3310,7 +3310,7 @@ final class GameScreen {
               var16Lifetime1 = (-RandomAccessCacheFile.field_e + var13) * 256 / var6;
             }
           }
-          var10 = m.field_g[2];
+          var10 = GrowableIntArray.field_g[2];
           if (LevelEntity.field_E == null) {
             LevelEntity.field_E = new Sprite(var10, var11);
           }
@@ -3330,8 +3330,8 @@ final class GameScreen {
             var5Lifetime1.drawTransparent(var8, var9);
           }
           if (var16Lifetime1 >= 0) {
-            var9Lifetime1 = m.field_g[1];
-            var8Lifetime1 = m.field_g[0];
+            var9Lifetime1 = GrowableIntArray.field_g[1];
+            var8Lifetime1 = GrowableIntArray.field_g[0];
             SectorCacheStore.field_f.bindAsTarget(-54);
             LevelEntity.field_E.drawTransparentWithOpacity(var8Lifetime1, var9Lifetime1, var16Lifetime1);
           }
@@ -6066,7 +6066,7 @@ final class GameScreen {
         boolean stackOut_17_0;
         var9 = TorChallenge.field_F ? 1 : 0;
         try {
-          var3_int = s.field_q.length;
+          var3_int = MidiNoteMask.field_q.length;
           if (param1 != 25) {
             field_f = (int[]) null;
           }
@@ -6894,7 +6894,7 @@ final class GameScreen {
               continue scanLoop1;
             }
             ProxyAuthenticationRequiredException.a((byte) 71);
-            ab.field_d = 1;
+            MusicPatchEnvelope.field_d = 1;
             tf.field_o = 0;
             stackIn_21_0 = param0;
             break;

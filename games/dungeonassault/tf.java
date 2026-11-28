@@ -89,7 +89,7 @@ final class tf {
     }
 
     final void b(int param0, int param1, int param2) {
-        bp.a(param0, this.field_c, param2, (byte) 99);
+        GrowableIntArray.a(param0, this.field_c, param2, (byte) 99);
         this.field_b.draw(param2, param0);
         if (param1 != 32) {
           java.applet.Applet var5 = (java.applet.Applet) null;

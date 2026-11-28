@@ -32,7 +32,7 @@ abstract class ArchiveSource {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var1_ref), "wd.C(" + param0 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var1_ref), "wd.C(" + param0 + ')');
         }
     }
 
@@ -65,7 +65,7 @@ abstract class ArchiveSource {
             var5 = var9;
             var6 = param1;
             var7 = param3;
-            var9[var6] = var7 + fi.a(var9[var6] >> 1, 8355711);
+            var9[var6] = var7 + fi.bitwiseAnd(var9[var6] >> 1, 8355711);
             param1++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -78,7 +78,7 @@ abstract class ArchiveSource {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ abstract class ArchiveSource {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 

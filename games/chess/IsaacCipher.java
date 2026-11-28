@@ -85,10 +85,10 @@ final class IsaacCipher {
             }
           }
           this.field_m = this.field_m + this.field_j[255 & var2 + 128];
-          dupTemp$1 = this.field_m + this.field_j[ce.a(1020, var3) >> 2] + this.field_f;
+          dupTemp$1 = this.field_m + this.field_j[ce.bitwiseAnd(1020, var3) >> 2] + this.field_f;
           var4 = dupTemp$1;
           this.field_j[var2] = dupTemp$1;
-          dupTemp$2 = var3 + this.field_j[ce.a(var4, 261311) >> 8 >> 2];
+          dupTemp$2 = var3 + this.field_j[ce.bitwiseAnd(var4, 261311) >> 8 >> 2];
           this.field_f = dupTemp$2;
           this.field_a[var2] = dupTemp$2;
         }

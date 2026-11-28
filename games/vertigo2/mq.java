@@ -205,7 +205,7 @@ final class mq extends DefaultTextWidgetRenderer {
             }
             return;
           }
-          qq.a(this.field_w, 0, param2.field_w, 0, 6);
+          ArrayBlockSupport.copyObjectRange(this.field_w, 0, param2.field_w, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

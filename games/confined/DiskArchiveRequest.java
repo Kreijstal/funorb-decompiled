@@ -59,7 +59,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
             var5 = var9;
             var6 = param2;
             var7 = param1;
-            var9[var6] = var7 + (va.a(var9[var6], 16711422) >> 1);
+            var9[var6] = var7 + (va.bitwiseAnd(var9[var6], 16711422) >> 1);
             param2++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

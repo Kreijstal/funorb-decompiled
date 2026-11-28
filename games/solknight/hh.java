@@ -6,7 +6,7 @@ final class hh extends InteractiveWidget {
     static char[] field_N;
     private int field_K;
     static String field_J;
-    private of field_M;
+    private GrowableIntArray field_M;
     int field_L;
 
     final int b(int param0, int param1) {
@@ -14,8 +14,8 @@ final class hh extends InteractiveWidget {
         if (param0 < 0) {
           return -1;
         }
-        if (param0 < this.field_M.b(100)) {
-          return this.field_M.a((byte) 43, param0);
+        if (param0 < this.field_M.size(100)) {
+          return this.field_M.get((byte) 43, param0);
         }
         return -1;
     }
@@ -53,7 +53,7 @@ final class hh extends InteractiveWidget {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -92,13 +92,13 @@ final class hh extends InteractiveWidget {
           }
           var8_int = var8_int * this.field_K / var9;
           if (1 == param0) {
-            this.field_M.c(-120, var8_int);
+            this.field_M.append(-120, var8_int);
           } else {
             if (param0 == 2) {
               var10 = 2147483647;
               var11 = -1;
-              for (var12 = 0; this.field_M.b(120) > var12; var12++) {
-                var13 = this.field_M.a((byte) 43, var12) - var8_int;
+              for (var12 = 0; this.field_M.size(120) > var12; var12++) {
+                var13 = this.field_M.get((byte) 43, var12) - var8_int;
                 var13 = var13 * var13;
                 if (var10 > var13) {
                   var10 = var13;
@@ -108,7 +108,7 @@ final class hh extends InteractiveWidget {
               if (var11 < 0) {
                 return true;
               }
-              this.field_M.a(true, var11);
+              this.field_M.removeAt(true, var11);
             }
           }
           return true;
@@ -122,13 +122,13 @@ final class hh extends InteractiveWidget {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
     final int i(int param0) {
         int var2 = 4 / ((19 - param0) / 61);
-        return this.field_M.b(110);
+        return this.field_M.size(110);
     }
 
     final static String a(boolean param0, java.applet.Applet param1) {
@@ -193,7 +193,7 @@ final class hh extends InteractiveWidget {
             } else {
               stackIn_23_2 = "{...}";
             }
-            throw fc.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+            throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

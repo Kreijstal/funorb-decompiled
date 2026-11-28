@@ -14,12 +14,12 @@ final class MusicPatchPcmStream extends PcmStream {
 
     final void skip(int param0) {
         int var2;
-        dl var3;
+        MusicPatchNode var3;
         int var4;
         boolean stackIn_3_0 = false;
         var4 = TorChallenge.field_F ? 1 : 0;
         this.field_u.skip(param0);
-        var3 = (dl) (this.field_o.first((byte) -128));
+        var3 = (MusicPatchNode) (this.field_o.first((byte) -128));
         while (var3 != null) {
           stackIn_3_0 = this.field_t.isVoiceInactive(var3, (byte) 22);
           boolean decompiledFrameCompleted0 = true;
@@ -38,7 +38,7 @@ final class MusicPatchPcmStream extends PcmStream {
               var3.field_z = var3.field_z - var2;
             }
           }
-          var3 = (dl) (this.field_o.next(-270));
+          var3 = (MusicPatchNode) (this.field_o.next(-270));
         }
     }
 
@@ -48,9 +48,9 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     final PcmStream nextSubstream() {
-        dl var1;
+        MusicPatchNode var1;
         while (true) {
-          var1 = (dl) (this.field_o.next(-270));
+          var1 = (MusicPatchNode) (this.field_o.next(-270));
           if (var1 == null) {
             return null;
           }
@@ -63,7 +63,7 @@ final class MusicPatchPcmStream extends PcmStream {
     final void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
-        dl var6 = null;
+        MusicPatchNode var6 = null;
         int var7 = 0;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_15_0 = null;
@@ -74,7 +74,7 @@ final class MusicPatchPcmStream extends PcmStream {
         var7 = TorChallenge.field_F ? 1 : 0;
         try {
           this.field_u.mixInto(param0, param1, param2);
-          var6 = (dl) (this.field_o.first((byte) 112));
+          var6 = (MusicPatchNode) (this.field_o.first((byte) 112));
           while (var6 != null) {
             stackIn_4_0 = this.field_t.isVoiceInactive(var6, (byte) 22);
             boolean decompiledFrameCompleted0 = true;
@@ -95,7 +95,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 var6.field_z = var6.field_z - var5;
               }
             }
-            var6 = (dl) (this.field_o.next(-270));
+            var6 = (MusicPatchNode) (this.field_o.next(-270));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -186,7 +186,7 @@ final class MusicPatchPcmStream extends PcmStream {
         return 0;
     }
 
-    private final void skipVoiceFrames(int param0, byte param1, dl param2) {
+    private final void skipVoiceFrames(int param0, byte param1, MusicPatchNode param2) {
         MidiPcmStream stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         boolean stackIn_8_2 = false;
@@ -238,7 +238,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    private final void renderVoiceFrames(dl param0, int param1, int param2, byte param3, int[] param4, int param5) {
+    private final void renderVoiceFrames(MusicPatchNode param0, int param1, int param2, byte param3, int[] param4, int param5) {
         MidiPcmStream stackIn_11_0 = null;
         int stackIn_11_1 = 0;
         boolean stackIn_12_2 = false;
@@ -323,7 +323,7 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     final PcmStream firstSubstream() {
-        dl var1 = (dl) (this.field_o.first((byte) 112));
+        MusicPatchNode var1 = (MusicPatchNode) (this.field_o.first((byte) 112));
         if (var1 == null) {
           return null;
         }

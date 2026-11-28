@@ -32,7 +32,7 @@ final class gi {
         }
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseXor(int param0, int param1) {
         return param0 ^ param1;
     }
 
@@ -146,7 +146,7 @@ final class gi {
         int var8 = 0;
         var8 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          this.field_h[this.field_d] = (byte)bd.a((int) this.field_h[this.field_d], 128 >>> BufferedRandomAccessFile.a(this.field_g, 7));
+          this.field_h[this.field_d] = (byte)bd.bitwiseOr((int) this.field_h[this.field_d], 128 >>> BufferedRandomAccessFile.bitwiseAnd(this.field_g, 7));
           this.field_d = this.field_d + 1;
           if (this.field_d > 32) {
             while (this.field_d < 64) {
@@ -162,7 +162,7 @@ final class gi {
             this.field_d = this.field_d + 1;
             this.field_h[fieldTemp$1] = (byte) 0;
           }
-          gl.copyByteRange(this.field_i, 0, this.field_h, 32, 32);
+          ArrayBlockSupport.copyByteRange(this.field_i, 0, this.field_h, 32, 32);
           this.a(16);
           var4_int = 0;
           if (param1 != -70) {
@@ -246,7 +246,7 @@ final class gi {
             var8 = param2[var5_int] << var6 & 255 | (param2[var5_int + 1] & 255) >>> -var6 + 8;
             if (0 <= var8 &&
               var8 < 256) {
-              this.field_h[this.field_d] = (byte)bd.a((int) this.field_h[this.field_d], var8 >>> var7);
+              this.field_h[this.field_d] = (byte)bd.bitwiseOr((int) this.field_h[this.field_d], var8 >>> var7);
               this.field_d = this.field_d + 1;
               this.field_g = this.field_g + (8 - var7);
               if (512 == this.field_g) {
@@ -254,7 +254,7 @@ final class gi {
                 this.field_d = 0;
                 this.field_g = 0;
               }
-              this.field_h[this.field_d] = (byte)BufferedRandomAccessFile.a(var8 << -var7 + 8, 255);
+              this.field_h[this.field_d] = (byte)BufferedRandomAccessFile.bitwiseAnd(var8 << -var7 + 8, 255);
               param0 = param0 - 8L;
               var5_int++;
               this.field_g = this.field_g + var7;
@@ -266,7 +266,7 @@ final class gi {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = param2[var5_int] << var6 & 255;
-            this.field_h[this.field_d] = (byte)bd.a((int) this.field_h[this.field_d], var8Lifetime1 >>> var7);
+            this.field_h[this.field_d] = (byte)bd.bitwiseOr((int) this.field_h[this.field_d], var8Lifetime1 >>> var7);
           }
           if (param0 + (long)var7 >= 8L) {
             this.field_g = this.field_g + (-var7 + 8);
@@ -277,7 +277,7 @@ final class gi {
               this.field_g = 0;
               this.field_d = 0;
             }
-            this.field_h[this.field_d] = (byte)BufferedRandomAccessFile.a(var8Lifetime1 << 8 - var7, 255);
+            this.field_h[this.field_d] = (byte)BufferedRandomAccessFile.bitwiseAnd(var8Lifetime1 << 8 - var7, 255);
             this.field_g = this.field_g + (int)param0;
           } else {
             this.field_g = (int)((long)this.field_g + param0);
@@ -320,7 +320,7 @@ final class gi {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_n[var2] = hd.a(hd.a(hd.a(DialogMessagePane.a((long)this.field_h[var3 + 5], 255L) << 16, hd.a(hd.a(DialogMessagePane.a((long)this.field_h[3 + var3] << 32, 1095216660480L), hd.a(hd.a(DialogMessagePane.a((long)this.field_h[1 + var3] << 48, 71776119061217280L), (long)this.field_h[var3] << 56), DialogMessagePane.a((long)this.field_h[var3 + 2] << 40, 280375465082880L))), DialogMessagePane.a((long)this.field_h[var3 + 4], 255L) << 24)), DialogMessagePane.a((long)this.field_h[var3 + 6], 255L) << 8), DialogMessagePane.a((long)this.field_h[var3 + 7], 255L));
+          this.field_n[var2] = hd.bitwiseXor(hd.bitwiseXor(hd.bitwiseXor(DialogMessagePane.bitwiseAnd((long)this.field_h[var3 + 5], 255L) << 16, hd.bitwiseXor(hd.bitwiseXor(DialogMessagePane.bitwiseAnd((long)this.field_h[3 + var3] << 32, 1095216660480L), hd.bitwiseXor(hd.bitwiseXor(DialogMessagePane.bitwiseAnd((long)this.field_h[1 + var3] << 48, 71776119061217280L), (long)this.field_h[var3] << 56), DialogMessagePane.bitwiseAnd((long)this.field_h[var3 + 2] << 40, 280375465082880L))), DialogMessagePane.bitwiseAnd((long)this.field_h[var3 + 4], 255L) << 24)), DialogMessagePane.bitwiseAnd((long)this.field_h[var3 + 6], 255L) << 8), DialogMessagePane.bitwiseAnd((long)this.field_h[var3 + 7], 255L));
           var3 += 8;
           var2++;
         }
@@ -328,7 +328,7 @@ final class gi {
           dupTemp$0 = this.field_k[var2Lifetime1];
           arrayValue$1 = this.field_n[var2Lifetime1];
           this.field_f[var2Lifetime1] = dupTemp$0;
-          this.field_m[var2Lifetime1] = hd.a(arrayValue$1, dupTemp$0);
+          this.field_m[var2Lifetime1] = hd.bitwiseXor(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
@@ -336,7 +336,7 @@ final class gi {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_b[var3Lifetime1] = hd.a(this.field_b[var3Lifetime1], nc.field_d[var4][BufferedRandomAccessFile.a((int)(this.field_f[BufferedRandomAccessFile.a(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
+              this.field_b[var3Lifetime1] = hd.bitwiseXor(this.field_b[var3Lifetime1], nc.field_d[var4][BufferedRandomAccessFile.bitwiseAnd((int)(this.field_f[BufferedRandomAccessFile.bitwiseAnd(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
               var4++;
               var5 -= 8;
             }
@@ -344,14 +344,14 @@ final class gi {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_f[var3Lifetime1Lifetime1] = this.field_b[var3Lifetime1Lifetime1];
           }
-          this.field_f[0] = hd.a(this.field_f[0], nc.field_g[var2Lifetime2]);
+          this.field_f[0] = hd.bitwiseXor(this.field_f[0], nc.field_g[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_b[var3Lifetime1Lifetime2] = this.field_f[var3Lifetime1Lifetime2];
             var8 = 0;
             var4Lifetime1 = var8;
             var5Lifetime1 = 56;
             while (var8 < 8) {
-              this.field_b[var3Lifetime1Lifetime2] = hd.a(this.field_b[var3Lifetime1Lifetime2], nc.field_d[var8][BufferedRandomAccessFile.a(255, (int)(this.field_m[BufferedRandomAccessFile.a(7, var3Lifetime1Lifetime2 - var8)] >>> var5Lifetime1))]);
+              this.field_b[var3Lifetime1Lifetime2] = hd.bitwiseXor(this.field_b[var3Lifetime1Lifetime2], nc.field_d[var8][BufferedRandomAccessFile.bitwiseAnd(255, (int)(this.field_m[BufferedRandomAccessFile.bitwiseAnd(7, var3Lifetime1Lifetime2 - var8)] >>> var5Lifetime1))]);
               var8++;
               var5Lifetime1 -= 8;
             }
@@ -361,7 +361,7 @@ final class gi {
           }
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_k[var2Lifetime3] = hd.a(this.field_k[var2Lifetime3], hd.a(this.field_n[var2Lifetime3], this.field_m[var2Lifetime3]));
+          this.field_k[var2Lifetime3] = hd.bitwiseXor(this.field_k[var2Lifetime3], hd.bitwiseXor(this.field_n[var2Lifetime3], this.field_m[var2Lifetime3]));
         }
         if (param0 != 16) {
           var7 = (hb) null;

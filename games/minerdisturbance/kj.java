@@ -61,7 +61,7 @@ final class kj {
         if (param0 != -123) {
           return;
         }
-        mk.a(false, aa.field_e, 0);
+        mk.a(false, GrowableIntArray.field_e, 0);
     }
 
     final static boolean b(int param0) {

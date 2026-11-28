@@ -169,7 +169,7 @@ final class va {
         if (null != ResourceArchive.field_p) {
           return;
         }
-        if (wc.field_q <= 0) {
+        if (MusicPatch.field_q <= 0) {
           this.field_r = false;
         }
         if (this.field_r) {
@@ -246,7 +246,7 @@ final class va {
         if (kf.field_k < this.field_j) {
           return false;
         }
-        if (wc.field_q > 0) {
+        if (MusicPatch.field_q > 0) {
           return true;
         }
         return false;

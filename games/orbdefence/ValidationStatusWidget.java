@@ -54,7 +54,7 @@ final class ValidationStatusWidget extends RichTextWidget {
         int var3 = OrbDefence.field_D ? 1 : 0;
         cf.field_a = null;
         DraggableWidgetContainer.field_A = null;
-        mc.field_j = 0;
+        MidiNoteMask.field_j = 0;
         if (param0 != -30179) {
           return 72;
         }

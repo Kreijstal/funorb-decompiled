@@ -115,7 +115,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
             stackIn_5_0 = null;
             return (BinaryBitmapFont) (stackIn_5_0);
           }
-          var2 = new BinaryBitmapFont(param1, bg.field_d, oc.field_e, qk.field_b, ng.field_e, ClientException.field_b);
+          var2 = new BinaryBitmapFont(param1, bg.field_d, oc.field_e, qk.field_b, MusicPatchEnvelope.field_e, ClientException.field_b);
           ec.a((byte) 106);
           stackIn_7_0 = var2;
           return stackIn_7_0;

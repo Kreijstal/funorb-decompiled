@@ -17,7 +17,7 @@ final class ai extends DualLinkNode {
         ja.field_t[gg.field_b] = param3;
         bj.field_a[gg.field_b] = gg.field_b;
         rc.field_i[gg.field_b] = param2;
-        if (!(param2 >= cc.field_B)) {
+        if (!(param2 >= MusicPatchNode.field_B)) {
           ha.field_c = param2;
         }
         if (param2 > BoundedRandomAccessFile.field_f) {

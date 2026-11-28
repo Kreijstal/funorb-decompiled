@@ -78,16 +78,16 @@ final class DiskArchiveRequest extends AsyncRequest {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_B[0][var0] = ib.b(var12, ib.b(ib.b(var8 << 16, ib.b(var10 << 24, ib.b(var2 << 32, ib.b(var6 << 40, ib.b(var2 << 48, var2 << 56))))), var4 << 8));
+            field_B[0][var0] = ib.bitwiseOr(var12, ib.bitwiseOr(ib.bitwiseOr(var8 << 16, ib.bitwiseOr(var10 << 24, ib.bitwiseOr(var2 << 32, ib.bitwiseOr(var6 << 40, ib.bitwiseOr(var2 << 48, var2 << 56))))), var4 << 8));
             for (var14 = 1; 8 > var14; var14++) {
-                field_B[var14][var0] = ib.b(field_B[var14 - 1][var0] << 56, field_B[var14 - 1][var0] >>> 8);
+                field_B[var14][var0] = ib.bitwiseOr(field_B[var14 - 1][var0] << 56, field_B[var14 - 1][var0] >>> 8);
             }
             var0++;
         }
         field_D[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = -8 + var0 * 8;
-            field_D[var0] = ib.a(UiWidget.a(255L, field_B[7][var1 + 7]), ib.a(UiWidget.a(field_B[6][6 + var1], 65280L), ib.a(ib.a(ib.a(UiWidget.a(field_B[3][var1 + 3], 1095216660480L), ib.a(UiWidget.a(field_B[2][2 + var1], 280375465082880L), ib.a(UiWidget.a(field_B[0][var1], -72057594037927936L), UiWidget.a(71776119061217280L, field_B[1][var1 + 1])))), UiWidget.a(field_B[4][4 + var1], 4278190080L)), UiWidget.a(field_B[5][var1 + 5], 16711680L))));
+            field_D[var0] = ib.bitwiseXor(UiWidget.bitwiseAnd(255L, field_B[7][var1 + 7]), ib.bitwiseXor(UiWidget.bitwiseAnd(field_B[6][6 + var1], 65280L), ib.bitwiseXor(ib.bitwiseXor(ib.bitwiseXor(UiWidget.bitwiseAnd(field_B[3][var1 + 3], 1095216660480L), ib.bitwiseXor(UiWidget.bitwiseAnd(field_B[2][2 + var1], 280375465082880L), ib.bitwiseXor(UiWidget.bitwiseAnd(field_B[0][var1], -72057594037927936L), UiWidget.bitwiseAnd(71776119061217280L, field_B[1][var1 + 1])))), UiWidget.bitwiseAnd(field_B[4][4 + var1], 4278190080L)), UiWidget.bitwiseAnd(field_B[5][var1 + 5], 16711680L))));
         }
     }
 }

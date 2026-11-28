@@ -176,7 +176,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
           var12 = dupTemp$0;
           this.addChild(dupTemp$0, (byte) 118);
           this.field_i = this.field_i + (5 + ((UiWidget) ((Object) var12)).field_q);
-          dupTemp$1 = new LabeledWidgetContainer(10, this.field_i, this.field_h - 20, 25, this.field_K, false, 80, 3, var7, 16777215, fl.field_b);
+          dupTemp$1 = new LabeledWidgetContainer(10, this.field_i, this.field_h - 20, 25, this.field_K, false, 80, 3, var7, 16777215, GrowableIntArray.field_b);
           var13 = dupTemp$1;
           this.addChild(dupTemp$1, (byte) 118);
           this.field_i = this.field_i + (((UiWidget) ((Object) var13)).field_q + 5);

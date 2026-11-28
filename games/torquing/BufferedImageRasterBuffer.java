@@ -6,7 +6,7 @@ import java.util.*;
 final class BufferedImageRasterBuffer extends RasterBuffer {
     private java.awt.Component field_i;
 
-    final void a(java.awt.Component param0, byte param1, int param2, int param3) {
+    final void initialize(java.awt.Component param0, byte param1, int param2, int param3) {
         java.awt.image.DataBufferInt var5 = null;
         java.awt.image.DirectColorModel var6 = null;
         java.awt.image.WritableRaster var7 = null;
@@ -22,7 +22,7 @@ final class BufferedImageRasterBuffer extends RasterBuffer {
           var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_g, this.field_a), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
           this.field_c = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
           this.field_i = param0;
-          this.a(-105);
+          this.setAsRasterTarget(-105);
           return;
         }
         this.field_i = (java.awt.Component) null;
@@ -32,10 +32,10 @@ final class BufferedImageRasterBuffer extends RasterBuffer {
         var7Lifetime1 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6Lifetime1)).createCompatibleSampleModel(this.field_g, this.field_a), (java.awt.image.DataBuffer) ((Object) var5Lifetime1), (java.awt.Point) null);
         this.field_c = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6Lifetime1), var7Lifetime1, false, new Hashtable()));
         this.field_i = param0;
-        this.a(-105);
+        this.setAsRasterTarget(-105);
     }
 
-    final void a(int param0, int param1, int param2, java.awt.Graphics param3) {
+    final void drawImage(int param0, int param1, int param2, java.awt.Graphics param3) {
         param3.drawImage(this.field_c, param1, param2, (java.awt.image.ImageObserver) ((Object) this.field_i));
         if (param0 <= 70) {
           this.field_i = (java.awt.Component) null;

@@ -438,7 +438,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
             var7_int = 0;
             while (var6.length > var7_int) {
               if (0 != var5.field_D[var7_int]) {
-                var6[var7_int] = ll.a(var5.field_D[var7_int], -16777216);
+                var6[var7_int] = ll.bitwiseOr(var5.field_D[var7_int], -16777216);
                 if (var9 != 0) {
                   var6[var7_int] = 0;
                 }

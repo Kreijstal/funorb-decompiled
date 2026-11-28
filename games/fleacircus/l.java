@@ -103,7 +103,7 @@ final class l {
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var7 > var12; var12++) {
-                  dupTemp$0 = var17.readByte(df.a((int) param1, 31));
+                  dupTemp$0 = var17.readByte(df.bitwiseXor((int) param1, 31));
                   var9[var12] = dupTemp$0;
                   var13 = dupTemp$0;
                   stackIn_47_0 = var10;

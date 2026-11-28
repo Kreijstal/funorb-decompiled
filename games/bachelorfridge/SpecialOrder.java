@@ -344,7 +344,7 @@ class SpecialOrder extends CreatureOrder {
             var3 = new SnowSpecial(this.moveId, this.creature.resolveCreature(104, param0), this.field_k, this.field_n);
           }
           param0.field_T.field_v[this.creature.field_g] = param0.field_T.field_v[this.creature.field_g] + 1;
-          param0.field_T.field_r[this.creature.field_g] = sr.a(param0.field_T.field_r[this.creature.field_g], 1L << this.moveId - 88);
+          param0.field_T.field_r[this.creature.field_g] = sr.bitwiseOr(param0.field_T.field_r[this.creature.field_g], 1L << this.moveId - 88);
           dupTemp$0 = param0.field_T.field_m[this.creature.field_g];
           dupTemp$0[this.moveId - 88] = dupTemp$0[this.moveId - 88] + 1;
           if (this.field_m) {

@@ -128,14 +128,14 @@ final class pb {
             }
             return;
           }
-          if (kj.field_i < this.field_i) {
-            NanoFrameTimer.field_e = (-kj.field_i + this.field_i) / 2;
+          if (MidiNoteMask.field_i < this.field_i) {
+            NanoFrameTimer.field_e = (-MidiNoteMask.field_i + this.field_i) / 2;
           } else {
             if (this.field_i > 0) {
               NanoFrameTimer.field_e = 0;
             }
           }
-          if (kj.field_i == this.field_q &&
+          if (MidiNoteMask.field_i == this.field_q &&
             jc.field_i == this.field_n) {
             return;
           }
@@ -157,14 +157,14 @@ final class pb {
           }
           return;
         }
-        if (kj.field_i < this.field_i) {
-          NanoFrameTimer.field_e = (-kj.field_i + this.field_i) / 2;
+        if (MidiNoteMask.field_i < this.field_i) {
+          NanoFrameTimer.field_e = (-MidiNoteMask.field_i + this.field_i) / 2;
         } else {
           if (this.field_i > 0) {
             NanoFrameTimer.field_e = 0;
           }
         }
-        if (kj.field_i != this.field_q) {
+        if (MidiNoteMask.field_i != this.field_q) {
           this.field_b.a(this.field_n, this.field_q, 125);
         } else {
           if (jc.field_i != this.field_n) {
@@ -175,7 +175,7 @@ final class pb {
 
     final FullscreenFocusCanvas c(byte param0) {
         this.field_o = jc.field_i;
-        this.field_u = kj.field_i;
+        this.field_u = MidiNoteMask.field_i;
         this.field_b.a(this.field_e, this.field_d, 18);
         AwtRasterBuffer.field_f = false;
         int var3 = 4 / ((35 - param0) / 54);
@@ -227,7 +227,7 @@ final class pb {
               }
             }
           }
-          if (var2 != kj.field_i) {
+          if (var2 != MidiNoteMask.field_i) {
             this.field_b.a(var3, var2, 125);
           } else {
             if (jc.field_i != var3) {
@@ -235,7 +235,7 @@ final class pb {
             }
           }
           if (0 < this.field_i) {
-            NanoFrameTimer.field_e = (this.field_i - kj.field_i) / 2;
+            NanoFrameTimer.field_e = (this.field_i - MidiNoteMask.field_i) / 2;
           }
           return;
         }
@@ -243,7 +243,7 @@ final class pb {
           var3 = this.field_h;
         }
         if (!(0.0f < this.field_r)) {
-          if (var2 != kj.field_i) {
+          if (var2 != MidiNoteMask.field_i) {
             this.field_b.a(var3, var2, 125);
           } else {
             if (jc.field_i != var3) {
@@ -251,7 +251,7 @@ final class pb {
             }
           }
           if (0 < this.field_i) {
-            NanoFrameTimer.field_e = (this.field_i - kj.field_i) / 2;
+            NanoFrameTimer.field_e = (this.field_i - MidiNoteMask.field_i) / 2;
           }
           return;
         }
@@ -263,7 +263,7 @@ final class pb {
             var2 = var5Lifetime1;
           }
         }
-        if (var2 != kj.field_i) {
+        if (var2 != MidiNoteMask.field_i) {
           this.field_b.a(var3, var2, 125);
         } else {
           if (jc.field_i != var3) {
@@ -271,7 +271,7 @@ final class pb {
           }
         }
         if (0 < this.field_i) {
-          NanoFrameTimer.field_e = (this.field_i - kj.field_i) / 2;
+          NanoFrameTimer.field_e = (this.field_i - MidiNoteMask.field_i) / 2;
         }
         return;
     }

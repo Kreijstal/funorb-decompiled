@@ -82,7 +82,7 @@ final class eb {
             SoftwareRasterizer.saveClip(wc.field_b);
             var11 = new Sprite(4 + ge.field_b.field_u, 4 + ge.field_b.field_v);
             var11.bindAsRenderTarget();
-            ge.field_b.drawGrayModulated(2, 2, mc.field_c);
+            ge.field_b.drawGrayModulated(2, 2, ByteArrayPoolSupport.field_c);
             hh.a(0, 0, 2, var11.field_v, false, 1, var11, var11.field_u);
             ge.field_b = var11;
             ma.field_b = ge.field_b.copyMirroredHorizontally();
@@ -100,7 +100,7 @@ final class eb {
             var12.draw(18 - ConfirmedEmailAvailabilityValidator.field_q.field_w, -ConfirmedEmailAvailabilityValidator.field_q.field_y + 241);
             for (var7 = 0; var7 < va.field_t.length; var7++) {
               ValidationStatusWidget.field_I[var7].bindAsRenderTarget();
-              ah.field_d.drawParagraph(va.field_t[var7], 3, 3, ValidationStatusWidget.field_I[var7].field_u - 6, ValidationStatusWidget.field_I[var7].field_v - 6, mc.field_c, -1, 1, 1, ah.field_d.field_p + ah.field_d.field_q);
+              ah.field_d.drawParagraph(va.field_t[var7], 3, 3, ValidationStatusWidget.field_I[var7].field_u - 6, ValidationStatusWidget.field_I[var7].field_v - 6, ByteArrayPoolSupport.field_c, -1, 1, 1, ah.field_d.field_p + ah.field_d.field_q);
               hh.a(0, 0, 3, ValidationStatusWidget.field_I[var7].field_v, false, 1, ValidationStatusWidget.field_I[var7], ValidationStatusWidget.field_I[var7].field_u);
             }
             va.field_t = null;

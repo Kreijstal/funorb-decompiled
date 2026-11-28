@@ -346,7 +346,7 @@ final class ee {
             fieldTemp$0 = gj.field_a;
             gj.field_a = gj.field_a + 1;
             var6.field_Mb = fieldTemp$0;
-            sb.field_h.addFirst(var6, -16611);
+            MidiNoteMask.field_h.addFirst(var6, -16611);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -354,7 +354,7 @@ final class ee {
           var6.field_Eb = (String) (var3Lifetime1);
           var6.field_Lb = var4_ref_StringLifetime1;
           var6.unlink((byte) 12);
-          var7 = (q) (sb.field_h.beginBackward(9272));
+          var7 = (q) (MidiNoteMask.field_h.beginBackward(9272));
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var7 != null) {
@@ -364,7 +364,7 @@ final class ee {
               decompiledFrameRemainder0 = (var8 == 0);
               if ((decompiledFrameRemainder0) &&
                 (stackIn_49_0)) {
-                var7 = (q) (sb.field_h.nextBackward((byte) -119));
+                var7 = (q) (MidiNoteMask.field_h.nextBackward((byte) -119));
                 continue;
               }
             }
@@ -380,7 +380,7 @@ final class ee {
             }
             break;
           }
-          sb.field_h.addFirst(var6, -16611);
+          MidiNoteMask.field_h.addFirst(var6, -16611);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

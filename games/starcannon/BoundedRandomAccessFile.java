@@ -166,9 +166,9 @@ final class BoundedRandomAccessFile {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               o.a(-20954, var15);
               if (var6_intLifetime1 != 0) {
-                StripedProgressWidget.a(mc.field_f, var6_intLifetime1, og.field_f, PacketBuffer.field_i, ta.field_e, -106);
+                StripedProgressWidget.a(ByteArrayPoolSupport.field_f, var6_intLifetime1, og.field_f, PacketBuffer.field_i, ta.field_e, -106);
               } else {
-                StripedProgressWidget.a(mc.field_f, var6_intLifetime1, og.field_f, PacketBuffer.field_i, ta.field_e, 12);
+                StripedProgressWidget.a(ByteArrayPoolSupport.field_f, var6_intLifetime1, og.field_f, PacketBuffer.field_i, ta.field_e, 12);
               }
             }
             ByteStorage.a(var5, 42);
@@ -184,7 +184,7 @@ final class BoundedRandomAccessFile {
               var19[0][1 + var10 * 4] = nf.field_b[var11];
               var19[0][2 + 4 * var10] = MouseWheelSource.field_f[var11];
               var19[0][4 * var10 + 3] = RichTextWidget.field_G[var11];
-              if (mc.a(DiskCacheWorker.field_f[var11], 0) &&
+              if (ByteArrayPoolSupport.a(DiskCacheWorker.field_f[var11], 0) &&
                 0 == nf.field_b[var11] + (MouseWheelSource.field_f[var11] + RichTextWidget.field_G[var11])) {
                 var6[0][var10] = null;
                 var10--;
@@ -203,7 +203,7 @@ final class BoundedRandomAccessFile {
               var19[1][1 + 4 * var14] = nf.field_b[var11Lifetime1];
               var19[1][2 + 4 * var14] = MouseWheelSource.field_f[var11Lifetime1];
               var19[1][4 * var14 + 3] = RichTextWidget.field_G[var11Lifetime1];
-              if (mc.a(DiskCacheWorker.field_f[var11Lifetime1], 0) &&
+              if (ByteArrayPoolSupport.a(DiskCacheWorker.field_f[var11Lifetime1], 0) &&
                 nf.field_b[var11Lifetime1] + MouseWheelSource.field_f[var11Lifetime1] + RichTextWidget.field_G[var11Lifetime1] == 0) {
                 var6[1][var14] = null;
                 var14--;

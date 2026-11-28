@@ -71,9 +71,9 @@ abstract class t {
         we.field_c[29] = new String[]{me.field_a[1]};
         we.field_c[30] = new String[]{me.field_a[2]};
         we.field_c[28] = new String[]{me.field_a[0]};
-        we.field_c[10] = new String[]{s.field_j[2]};
-        we.field_c[9] = new String[]{s.field_j[1]};
-        we.field_c[8] = new String[]{s.field_j[0]};
+        we.field_c[10] = new String[]{MidiNoteMask.field_j[2]};
+        we.field_c[9] = new String[]{MidiNoteMask.field_j[1]};
+        we.field_c[8] = new String[]{MidiNoteMask.field_j[0]};
     }
 
     public static void clearDeclaredStaticReferences(int param0) {

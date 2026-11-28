@@ -53,7 +53,7 @@ final class BufferedRandomAccessFile {
             if (this.field_j != -1L &&
               this.field_d >= this.field_j &&
               (long)this.field_h + this.field_j >= (long)param2 + this.field_d) {
-              dm.copyBytes(this.field_b, (int)(-this.field_j + this.field_d), param0, param1, param2);
+              ArrayBlockSupport.copyBytes(this.field_b, (int)(-this.field_j + this.field_d), param0, param1, param2);
               this.field_d = this.field_d + (long)param2;
               return;
             }
@@ -66,7 +66,7 @@ final class BufferedRandomAccessFile {
               if (param2 < var9_int) {
                 var9_int = param2;
               }
-              dm.copyBytes(this.field_f, (int)(-this.field_g + this.field_d), param0, param1, var9_int);
+              ArrayBlockSupport.copyBytes(this.field_f, (int)(-this.field_g + this.field_d), param0, param1, var9_int);
               param2 = param2 - var9_int;
               param1 = param1 + var9_int;
               this.field_d = this.field_d + (long)var9_int;
@@ -97,7 +97,7 @@ final class BufferedRandomAccessFile {
               if (this.field_i < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_i;
               }
-              dm.copyBytes(this.field_f, 0, param0, param1, var9_intLifetime1Lifetime1);
+              ArrayBlockSupport.copyBytes(this.field_f, 0, param0, param1, var9_intLifetime1Lifetime1);
               param1 = param1 + var9_intLifetime1Lifetime1;
               param2 = param2 - var9_intLifetime1Lifetime1;
               this.field_d = this.field_d + (long)var9_intLifetime1Lifetime1;
@@ -143,7 +143,7 @@ final class BufferedRandomAccessFile {
               if (var9 > -1L &&
                 var11 > var9) {
                 var13 = (int)(-var9 + var11);
-                dm.copyBytes(this.field_b, (int)(var9 - this.field_j), param0, var7 + (int)(var9 - var5_long), var13);
+                ArrayBlockSupport.copyBytes(this.field_b, (int)(var9 - this.field_j), param0, var7 + (int)(var9 - var5_long), var13);
                 if (var11 > this.field_d) {
                   param2 = (int)((long)param2 - (var11 - this.field_d));
                   this.field_d = var11;
@@ -224,7 +224,7 @@ final class BufferedRandomAccessFile {
             if (this.field_j != -1L &&
               this.field_d + (long)param2 > this.field_j + (long)this.field_b.length) {
               var6_int = (int)(-this.field_d - (-this.field_j - (long)this.field_b.length));
-              dm.copyBytes(param1, param0, this.field_b, (int)(-this.field_j + this.field_d), var6_int);
+              ArrayBlockSupport.copyBytes(param1, param0, this.field_b, (int)(-this.field_j + this.field_d), var6_int);
               param0 = param0 + var6_int;
               this.field_d = this.field_d + (long)var6_int;
               param2 = param2 - var6_int;
@@ -238,7 +238,7 @@ final class BufferedRandomAccessFile {
               if (this.field_j == -1L) {
                 this.field_j = this.field_d;
               }
-              dm.copyBytes(param1, param0, this.field_b, (int)(-this.field_j + this.field_d), param2);
+              ArrayBlockSupport.copyBytes(param1, param0, this.field_b, (int)(-this.field_j + this.field_d), param2);
               this.field_d = this.field_d + (long)param2;
               if ((long)this.field_h < (this.field_d - this.field_j)) {
                 this.field_h = (int)(this.field_d - this.field_j);
@@ -277,7 +277,7 @@ final class BufferedRandomAccessFile {
             if (var6 > -1L &&
               var6 < var8) {
               var10 = (int)(-var6 + var8);
-              dm.copyBytes(param1, (int)((long)param0 - (-var6 + this.field_d)), this.field_f, (int)(-this.field_g + var6), var10);
+              ArrayBlockSupport.copyBytes(param1, (int)((long)param0 - (-var6 + this.field_d)), this.field_f, (int)(-this.field_g + var6), var10);
             }
             this.field_d = this.field_d + (long)param2;
             return;
@@ -361,7 +361,7 @@ final class BufferedRandomAccessFile {
           if (var3 > -1L &&
             var3 < var5) {
             var7 = (int)(-var3 + var5);
-            dm.copyBytes(this.field_b, (int)(var3 - this.field_j), this.field_f, (int)(-this.field_g + var3), var7);
+            ArrayBlockSupport.copyBytes(this.field_b, (int)(var3 - this.field_j), this.field_f, (int)(-this.field_g + var3), var7);
           }
           this.field_h = 0;
           this.field_j = -1L;

@@ -53,7 +53,7 @@ final class li {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!kk.a(param2, param3 - 3, param0, param1)) {
+          if (!MusicPatch.a(param2, param3 - 3, param0, param1)) {
             stackIn_2_0 = null;
             return (RgbSprite[]) (stackIn_2_0);
           }

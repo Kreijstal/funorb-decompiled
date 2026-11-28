@@ -97,7 +97,7 @@ final class gv extends TileEffect {
         this.b(-37);
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseXor(long param0, long param1) {
         return param0 ^ param1;
     }
 

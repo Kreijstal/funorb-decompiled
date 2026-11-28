@@ -210,7 +210,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
           stringLocal35 = stringLocal24;
           stringLocal36 = stringLocal24;
           if (null == GameSession.bufferedSocketState0002 &&
-            !NetworkSupport006.computeBoolean1025(false, -75)) {
+            !GrowableIntArray.computeBoolean1025(false, -75)) {
             stackIntegerLocal2 = -1;
             return stackIntegerLocal2;
           }
@@ -479,7 +479,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
                 this.bufferedSocketState0001.performAction1373(integerLocal13, this.resourceSupport004State0001.packetBufferState0007.position, (byte) 17, this.resourceSupport004State0001.packetBufferState0007.payload);
                 if (0 != this.byteState0001) {
                   for (integerLocal14 = 0; integerLocal14 < integerLocal13; integerLocal14++) {
-                    this.resourceSupport004State0001.packetBufferState0007.payload[integerLocal14 + this.resourceSupport004State0001.packetBufferState0007.position] = (byte)MixedSupport106.computeInteger1387((int) this.resourceSupport004State0001.packetBufferState0007.payload[integerLocal14 + this.resourceSupport004State0001.packetBufferState0007.position], (int) this.byteState0001);
+                    this.resourceSupport004State0001.packetBufferState0007.payload[integerLocal14 + this.resourceSupport004State0001.packetBufferState0007.position] = (byte)MixedSupport106.bitwiseXor((int) this.resourceSupport004State0001.packetBufferState0007.payload[integerLocal14 + this.resourceSupport004State0001.packetBufferState0007.position], (int) this.byteState0001);
                   }
                 }
                 this.resourceSupport004State0001.integerState0582 = this.resourceSupport004State0001.integerState0582 + integerLocal13;
@@ -501,7 +501,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
                 this.bufferedSocketState0001.performAction1373(integerLocal12, this.packetBufferState0003.position, (byte) 17, this.packetBufferState0003.payload);
                 if (this.byteState0001 != 0) {
                   for (integerLocal13 = 0; integerLocal12 > integerLocal13; integerLocal13++) {
-                    this.packetBufferState0003.payload[this.packetBufferState0003.position + integerLocal13] = (byte)MixedSupport106.computeInteger1387((int) this.packetBufferState0003.payload[this.packetBufferState0003.position + integerLocal13], (int) this.byteState0001);
+                    this.packetBufferState0003.payload[this.packetBufferState0003.position + integerLocal13] = (byte)MixedSupport106.bitwiseXor((int) this.packetBufferState0003.payload[this.packetBufferState0003.position + integerLocal13], (int) this.byteState0001);
                   }
                 }
                 this.packetBufferState0003.position = this.packetBufferState0003.position + integerLocal12;

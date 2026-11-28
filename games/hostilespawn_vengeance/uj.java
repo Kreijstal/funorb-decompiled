@@ -46,9 +46,9 @@ final class uj extends IntrusiveNode {
     final static int e(int param0) {
         if (param0 != 1) {
           field_m = (AudioOutput) null;
-          return tm.field_v;
+          return MusicPatchNode.field_v;
         }
-        return tm.field_v;
+        return MusicPatchNode.field_v;
     }
 
     final static void a(java.applet.Applet param0, byte param1) {

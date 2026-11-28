@@ -112,7 +112,7 @@ final class a extends ge {
                 this.field_q.readFully(this.field_m.position, var5, -117, this.field_m.payload);
                 if (this.field_h != 0) {
                   for (var6 = 0; var6 < var5; var6++) {
-                    this.field_m.payload[this.field_m.position + var6] = (byte)gi.a((int) this.field_m.payload[this.field_m.position + var6], (int) this.field_h);
+                    this.field_m.payload[this.field_m.position + var6] = (byte)gi.bitwiseXor((int) this.field_m.payload[this.field_m.position + var6], (int) this.field_h);
                   }
                 }
                 this.field_m.position = this.field_m.position + var5;
@@ -186,7 +186,7 @@ final class a extends ge {
                 this.field_q.readFully(this.field_a.field_u.position, var6, 87, this.field_a.field_u.payload);
                 if (this.field_h != 0) {
                   for (var7 = 0; var6 > var7; var7++) {
-                    this.field_a.field_u.payload[this.field_a.field_u.position + var7] = (byte)gi.a((int) this.field_a.field_u.payload[this.field_a.field_u.position + var7], (int) this.field_h);
+                    this.field_a.field_u.payload[this.field_a.field_u.position + var7] = (byte)gi.bitwiseXor((int) this.field_a.field_u.payload[this.field_a.field_u.position + var7], (int) this.field_h);
                   }
                 }
                 this.field_a.field_v = this.field_a.field_v + var6;
@@ -531,28 +531,28 @@ final class a extends ge {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ValidationStatusWidget.field_U[rc.field_d] = param0;
-        AccountNameAvailabilityValidator.field_o[rc.field_d] = rc.field_d;
-        tl.field_d[rc.field_d] = param3;
+        ValidationStatusWidget.field_U[MusicPatchEnvelope.field_d] = param0;
+        AccountNameAvailabilityValidator.field_o[MusicPatchEnvelope.field_d] = MusicPatchEnvelope.field_d;
+        tl.field_d[MusicPatchEnvelope.field_d] = param3;
         if (!(param3 <= hc.field_j)) {
           jl.field_d = param3;
         }
         if (am.field_e > param3) {
           KeyboardListener.field_a = param3;
         }
-        DiskCacheWorker.field_g[rc.field_d] = param5;
-        th.field_f[rc.field_d] = param1;
-        ld.field_b[rc.field_d] = param4;
+        DiskCacheWorker.field_g[MusicPatchEnvelope.field_d] = param5;
+        th.field_f[MusicPatchEnvelope.field_d] = param1;
+        ld.field_b[MusicPatchEnvelope.field_d] = param4;
         int var6 = param4 + (param5 + param1);
         int var7 = var6 == 0 ? 0 : 1000 * param5 / var6;
-        rh.field_c[rc.field_d] = var7;
+        rh.field_c[MusicPatchEnvelope.field_d] = var7;
         if (param2 != 9664) {
           field_t = (int[]) null;
         }
         if (!(var7 <= jl.field_d)) {
           jl.field_d = var7;
         }
-        rc.field_d = rc.field_d + 1;
+        MusicPatchEnvelope.field_d = MusicPatchEnvelope.field_d + 1;
         if (KeyboardListener.field_a > var7) {
           KeyboardListener.field_a = var7;
         }

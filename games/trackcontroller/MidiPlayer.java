@@ -547,67 +547,67 @@ final class MidiPlayer extends PcmStream {
         var5Lifetime4 = (32723 & param0) >> 8;
         var6Lifetime3 = (8336064 & param0) >> 16;
         if (var5Lifetime4 == 0) {
-          this.field_O[var4Lifetime4] = RandomAccessCacheFile.a(-2080769, this.field_O[var4Lifetime4]) + (var6Lifetime3 << 14);
+          this.field_O[var4Lifetime4] = RandomAccessCacheFile.bitwiseAnd(-2080769, this.field_O[var4Lifetime4]) + (var6Lifetime3 << 14);
         }
         if (var5Lifetime4 == 32) {
-          this.field_O[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.a(this.field_O[var4Lifetime4], -16257);
+          this.field_O[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.bitwiseAnd(this.field_O[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 1) {
-          this.field_T[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.a(-16257, this.field_T[var4Lifetime4]);
+          this.field_T[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.bitwiseAnd(-16257, this.field_T[var4Lifetime4]);
         }
         if (33 == var5Lifetime4) {
-          this.field_T[var4Lifetime4] = RandomAccessCacheFile.a(-128, this.field_T[var4Lifetime4]) + var6Lifetime3;
+          this.field_T[var4Lifetime4] = RandomAccessCacheFile.bitwiseAnd(-128, this.field_T[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 5) {
-          this.field_F[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.a(-16257, this.field_F[var4Lifetime4]);
+          this.field_F[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.bitwiseAnd(-16257, this.field_F[var4Lifetime4]);
         }
         if (37 == var5Lifetime4) {
-          this.field_F[var4Lifetime4] = RandomAccessCacheFile.a(this.field_F[var4Lifetime4], -128) + var6Lifetime3;
+          this.field_F[var4Lifetime4] = RandomAccessCacheFile.bitwiseAnd(this.field_F[var4Lifetime4], -128) + var6Lifetime3;
         }
         if (var5Lifetime4 == 7) {
-          this.field_J[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.a(this.field_J[var4Lifetime4], -16257);
+          this.field_J[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.bitwiseAnd(this.field_J[var4Lifetime4], -16257);
         }
         if (39 == var5Lifetime4) {
-          this.field_J[var4Lifetime4] = RandomAccessCacheFile.a(this.field_J[var4Lifetime4], -128) + var6Lifetime3;
+          this.field_J[var4Lifetime4] = RandomAccessCacheFile.bitwiseAnd(this.field_J[var4Lifetime4], -128) + var6Lifetime3;
         }
         if (var5Lifetime4 == 10) {
-          this.field_E[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.a(-16257, this.field_E[var4Lifetime4]);
+          this.field_E[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.bitwiseAnd(-16257, this.field_E[var4Lifetime4]);
         }
         if (var5Lifetime4 == 42) {
-          this.field_E[var4Lifetime4] = RandomAccessCacheFile.a(-128, this.field_E[var4Lifetime4]) + var6Lifetime3;
+          this.field_E[var4Lifetime4] = RandomAccessCacheFile.bitwiseAnd(-128, this.field_E[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 11) {
-          this.field_K[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.a(-16257, this.field_K[var4Lifetime4]);
+          this.field_K[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.bitwiseAnd(-16257, this.field_K[var4Lifetime4]);
         }
         if (var5Lifetime4 == 43) {
-          this.field_K[var4Lifetime4] = RandomAccessCacheFile.a(this.field_K[var4Lifetime4], -128) + var6Lifetime3;
+          this.field_K[var4Lifetime4] = RandomAccessCacheFile.bitwiseAnd(this.field_K[var4Lifetime4], -128) + var6Lifetime3;
         }
         if (var5Lifetime4 == 64) {
           if (var6Lifetime3 < 64) {
-            this.field_I[var4Lifetime4] = RandomAccessCacheFile.a(this.field_I[var4Lifetime4], -2);
+            this.field_I[var4Lifetime4] = RandomAccessCacheFile.bitwiseAnd(this.field_I[var4Lifetime4], -2);
           } else {
-            this.field_I[var4Lifetime4] = SingleChildWidgetContainer.a(this.field_I[var4Lifetime4], 1);
+            this.field_I[var4Lifetime4] = SingleChildWidgetContainer.bitwiseOr(this.field_I[var4Lifetime4], 1);
           }
         }
         if (var5Lifetime4 == 65) {
           if (var6Lifetime3 < 64) {
             this.releaseUnmappedVoices(-22803, var4Lifetime4);
-            this.field_I[var4Lifetime4] = RandomAccessCacheFile.a(this.field_I[var4Lifetime4], -3);
+            this.field_I[var4Lifetime4] = RandomAccessCacheFile.bitwiseAnd(this.field_I[var4Lifetime4], -3);
           } else {
-            this.field_I[var4Lifetime4] = SingleChildWidgetContainer.a(this.field_I[var4Lifetime4], 2);
+            this.field_I[var4Lifetime4] = SingleChildWidgetContainer.bitwiseOr(this.field_I[var4Lifetime4], 2);
           }
         }
         if (var5Lifetime4 == 99) {
-          this.field_x[var4Lifetime4] = RandomAccessCacheFile.a(this.field_x[var4Lifetime4], 127) + (var6Lifetime3 << 7);
+          this.field_x[var4Lifetime4] = RandomAccessCacheFile.bitwiseAnd(this.field_x[var4Lifetime4], 127) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 98) {
-          this.field_x[var4Lifetime4] = RandomAccessCacheFile.a(this.field_x[var4Lifetime4], 16256) + var6Lifetime3;
+          this.field_x[var4Lifetime4] = RandomAccessCacheFile.bitwiseAnd(this.field_x[var4Lifetime4], 16256) + var6Lifetime3;
         }
         if (var5Lifetime4 == 101) {
-          this.field_x[var4Lifetime4] = (var6Lifetime3 << 7) + (16384 + RandomAccessCacheFile.a(127, this.field_x[var4Lifetime4]));
+          this.field_x[var4Lifetime4] = (var6Lifetime3 << 7) + (16384 + RandomAccessCacheFile.bitwiseAnd(127, this.field_x[var4Lifetime4]));
         }
         if (100 == var5Lifetime4) {
-          this.field_x[var4Lifetime4] = var6Lifetime3 + 16384 + RandomAccessCacheFile.a(this.field_x[var4Lifetime4], 16256);
+          this.field_x[var4Lifetime4] = var6Lifetime3 + 16384 + RandomAccessCacheFile.bitwiseAnd(this.field_x[var4Lifetime4], 16256);
         }
         if (var5Lifetime4 == 120) {
           this.removeChannelVoices(var4Lifetime4, true);
@@ -621,27 +621,27 @@ final class MidiPlayer extends PcmStream {
         if (var5Lifetime4 == 6) {
           var7 = this.field_x[var4Lifetime4];
           if (var7 == 16384) {
-            this.field_S[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.a(-16257, this.field_S[var4Lifetime4]);
+            this.field_S[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.bitwiseAnd(-16257, this.field_S[var4Lifetime4]);
           }
         }
         if (var5Lifetime4 == 38) {
           var7Lifetime1 = this.field_x[var4Lifetime4];
           if (16384 == var7Lifetime1) {
-            this.field_S[var4Lifetime4] = RandomAccessCacheFile.a(-128, this.field_S[var4Lifetime4]) + var6Lifetime3;
+            this.field_S[var4Lifetime4] = RandomAccessCacheFile.bitwiseAnd(-128, this.field_S[var4Lifetime4]) + var6Lifetime3;
           }
         }
         if (var5Lifetime4 == 16) {
-          this.field_R[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.a(this.field_R[var4Lifetime4], -16257);
+          this.field_R[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.bitwiseAnd(this.field_R[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 48) {
-          this.field_R[var4Lifetime4] = var6Lifetime3 + RandomAccessCacheFile.a(this.field_R[var4Lifetime4], -128);
+          this.field_R[var4Lifetime4] = var6Lifetime3 + RandomAccessCacheFile.bitwiseAnd(this.field_R[var4Lifetime4], -128);
         }
         if (81 == var5Lifetime4) {
           if (var6Lifetime3 < 64) {
             this.resetChannelVoicePhases(var4Lifetime4, 0);
-            this.field_I[var4Lifetime4] = RandomAccessCacheFile.a(this.field_I[var4Lifetime4], -5);
+            this.field_I[var4Lifetime4] = RandomAccessCacheFile.bitwiseAnd(this.field_I[var4Lifetime4], -5);
           } else {
-            this.field_I[var4Lifetime4] = SingleChildWidgetContainer.a(this.field_I[var4Lifetime4], 4);
+            this.field_I[var4Lifetime4] = SingleChildWidgetContainer.bitwiseOr(this.field_I[var4Lifetime4], 4);
           }
         }
         if (var5Lifetime4 == 17) {
@@ -990,7 +990,7 @@ final class MidiPlayer extends PcmStream {
           var4 = qk.field_M[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
-            var5[var6] = CrossfadingMidiPcmStream.field_z[RandomAccessCacheFile.a((int) var4[var6], 255)];
+            var5[var6] = CrossfadingMidiPcmStream.field_z[RandomAccessCacheFile.bitwiseAnd((int) var4[var6], 255)];
           }
           var1[var2] = new Sprite(ab.field_a, CrossfadingMidiPcmStream.field_p, ka.field_f[var2], vb.field_a[var2], cf.field_p[var2], j.field_f[var2], var5);
         }
@@ -1017,7 +1017,7 @@ final class MidiPlayer extends PcmStream {
         int var5 = 0;
         var3Lifetime1 = var5;
         while (16 > var5) {
-          this.field_O[var5] = RandomAccessCacheFile.a(this.field_y[var5], -128);
+          this.field_O[var5] = RandomAccessCacheFile.bitwiseAnd(this.field_y[var5], -128);
           var5++;
         }
     }
@@ -1142,7 +1142,7 @@ final class MidiPlayer extends PcmStream {
 
     private final void setChannelProgram(int param0, int param1, int param2) {
         this.field_y[param2] = param0;
-        this.field_O[param2] = RandomAccessCacheFile.a(param0, -128);
+        this.field_O[param2] = RandomAccessCacheFile.bitwiseAnd(param0, -128);
         this.setProgram((byte) 83, param2, param0);
         if (param1 != -3) {
           this.field_O = (int[]) null;

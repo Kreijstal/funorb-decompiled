@@ -91,18 +91,18 @@ final class kma extends k {
             for (var8 = 0; hh.field_d > var8; var8++) {
               var9 = this.field_k * var8 / hh.field_d;
               var10 = this.field_n[var4 + var9];
-              var7[var8] = dda.a(4080, var10 << 4);
-              var6[var8] = dda.a(var10, 65280) >> 4;
-              var5[var8] = dda.a(4080, var10 >> 12);
+              var7[var8] = dda.bitwiseAnd(4080, var10 << 4);
+              var6[var8] = dda.bitwiseAnd(var10, 65280) >> 4;
+              var5[var8] = dda.bitwiseAnd(4080, var10 >> 12);
             }
           } else {
             for (var8 = 0; hh.field_d > var8; var8++) {
               incrementValue$1 = var4;
               var4++;
               var9 = this.field_n[incrementValue$1];
-              var7[var8] = dda.a(4080, var9 << 4);
-              var6[var8] = dda.a(var9, 65280) >> 4;
-              var5[var8] = dda.a(4080, var9 >> 12);
+              var7[var8] = dda.bitwiseAnd(4080, var9 << 4);
+              var6[var8] = dda.bitwiseAnd(var9, 65280) >> 4;
+              var5[var8] = dda.bitwiseAnd(4080, var9 >> 12);
             }
           }
           return var3;
@@ -129,18 +129,18 @@ final class kma extends k {
           for (var8Lifetime1 = 0; hh.field_d > var8Lifetime1; var8Lifetime1++) {
             var9Lifetime1 = this.field_k * var8Lifetime1 / hh.field_d;
             var10Lifetime1 = this.field_n[var4Lifetime1 + var9Lifetime1];
-            var7Lifetime1[var8Lifetime1] = dda.a(4080, var10Lifetime1 << 4);
-            var6Lifetime1[var8Lifetime1] = dda.a(var10Lifetime1, 65280) >> 4;
-            var5Lifetime1[var8Lifetime1] = dda.a(4080, var10Lifetime1 >> 12);
+            var7Lifetime1[var8Lifetime1] = dda.bitwiseAnd(4080, var10Lifetime1 << 4);
+            var6Lifetime1[var8Lifetime1] = dda.bitwiseAnd(var10Lifetime1, 65280) >> 4;
+            var5Lifetime1[var8Lifetime1] = dda.bitwiseAnd(4080, var10Lifetime1 >> 12);
           }
         } else {
           for (var8Lifetime1 = 0; hh.field_d > var8Lifetime1; var8Lifetime1++) {
             incrementValue$2 = var4Lifetime1;
             var4Lifetime1++;
             var9Lifetime1 = this.field_n[incrementValue$2];
-            var7Lifetime1[var8Lifetime1] = dda.a(4080, var9Lifetime1 << 4);
-            var6Lifetime1[var8Lifetime1] = dda.a(var9Lifetime1, 65280) >> 4;
-            var5Lifetime1[var8Lifetime1] = dda.a(4080, var9Lifetime1 >> 12);
+            var7Lifetime1[var8Lifetime1] = dda.bitwiseAnd(4080, var9Lifetime1 << 4);
+            var6Lifetime1[var8Lifetime1] = dda.bitwiseAnd(var9Lifetime1, 65280) >> 4;
+            var5Lifetime1[var8Lifetime1] = dda.bitwiseAnd(4080, var9Lifetime1 >> 12);
           }
         }
         return var3Lifetime1;

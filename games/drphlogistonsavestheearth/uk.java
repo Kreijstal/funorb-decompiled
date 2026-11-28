@@ -46,7 +46,7 @@ final class uk implements WidgetRenderer {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var7 < var5; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(31760) << (rk.a(var7, 3) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(31760) << (rk.bitwiseAnd(var7, 3) << 8));
             }
             var4.field_i = true;
             var4.unlink(param0 + 14939);

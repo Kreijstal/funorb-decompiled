@@ -165,7 +165,7 @@ final class uf extends ch {
                     var17 = 0;
                     var7 = var17;
                     while (var17 < var6) {
-                      this.field_c.field_G.payload[this.field_c.field_G.position + var17] = (byte)DefaultTextWidgetRenderer.a((int) this.field_c.field_G.payload[this.field_c.field_G.position + var17], (int) this.field_b);
+                      this.field_c.field_G.payload[this.field_c.field_G.position + var17] = (byte)DefaultTextWidgetRenderer.bitwiseXor((int) this.field_c.field_G.payload[this.field_c.field_G.position + var17], (int) this.field_b);
                       var17++;
                     }
                   }
@@ -188,7 +188,7 @@ final class uf extends ch {
                   this.field_s.readFully(false, this.field_a.payload, this.field_a.position, var5);
                   if (this.field_b != 0) {
                     for (var6 = 0; var5 > var6; var6++) {
-                      this.field_a.payload[this.field_a.position + var6] = (byte)DefaultTextWidgetRenderer.a((int) this.field_a.payload[this.field_a.position + var6], (int) this.field_b);
+                      this.field_a.payload[this.field_a.position + var6] = (byte)DefaultTextWidgetRenderer.bitwiseXor((int) this.field_a.payload[this.field_a.position + var6], (int) this.field_b);
                     }
                   }
                   this.field_a.position = this.field_a.position + var5;

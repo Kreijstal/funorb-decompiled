@@ -161,7 +161,7 @@ final class ValidationStatusWidget extends RichTextWidget {
             }
             var12.field_i[var6] = (byte)var8;
           }
-          DualLinkNode.field_k.a(104);
+          DualLinkNode.field_k.setAsRasterTarget(104);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

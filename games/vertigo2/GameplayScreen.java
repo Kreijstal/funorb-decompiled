@@ -74,7 +74,7 @@ final class GameplayScreen {
           jq.field_e = jq.field_e | var4_int;
           LevelRenderable.field_b.addFirst(new fa(param1), false);
           if (!this.field_c) {
-            ProgressDialog.field_eb.addFirst(new nf(param1, param2, qr.field_j, sk.field_b, re.field_j, ki.field_c), false);
+            ProgressDialog.field_eb.addFirst(new nf(param1, param2, qr.field_j, sk.field_b, GrowableIntArray.field_j, ki.field_c), false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -229,25 +229,25 @@ final class GameplayScreen {
                 default:
                   break;
                 case 4:
-                  re.field_j = re.field_j - 1;
+                  GrowableIntArray.field_j = GrowableIntArray.field_j - 1;
                   sk.field_b = sk.field_b - ki.field_c;
                   if (var12 == 0) {
                     break;
                   }
                 case 3:
-                  re.field_j = re.field_j + 1;
+                  GrowableIntArray.field_j = GrowableIntArray.field_j + 1;
                   sk.field_b = sk.field_b + ki.field_c;
                   if (var12 == 0) {
                     break;
                   }
                 case 2:
                   ki.field_c = ki.field_c - 1;
-                  sk.field_b = sk.field_b - re.field_j;
+                  sk.field_b = sk.field_b - GrowableIntArray.field_j;
                   if (var12 == 0) {
                     break;
                   }
                 case 1:
-                  sk.field_b = sk.field_b + re.field_j;
+                  sk.field_b = sk.field_b + GrowableIntArray.field_j;
                   ki.field_c = ki.field_c + 1;
                   if (var12 == 0) {
                     break;
@@ -504,23 +504,23 @@ final class GameplayScreen {
                     qr.field_j = qr.field_j | sk.field_b + ki.field_c << 17;
                     break;
                   case 2:
-                    sk.field_b = sk.field_b - re.field_j;
+                    sk.field_b = sk.field_b - GrowableIntArray.field_j;
                     ki.field_c = ki.field_c - 1;
                     break;
                   case 3:
                     sk.field_b = sk.field_b + ki.field_c;
-                    re.field_j = re.field_j + 1;
+                    GrowableIntArray.field_j = GrowableIntArray.field_j + 1;
                   default:
                     break;
                   case 4:
                     sk.field_b = sk.field_b - ki.field_c;
-                    re.field_j = re.field_j - 1;
+                    GrowableIntArray.field_j = GrowableIntArray.field_j - 1;
                     if (var12 == 0) {
                       break;
                     }
                   case 1:
                     ki.field_c = ki.field_c + 1;
-                    sk.field_b = sk.field_b + re.field_j;
+                    sk.field_b = sk.field_b + GrowableIntArray.field_j;
                     break;
                 }
                 var7 = (gi.field_u + DebouncedFieldValidator.field_f * ProxySocketConnector.field_e) % 8;
@@ -1190,20 +1190,20 @@ final class GameplayScreen {
               var4 = (ln.field_d.field_s ^ DebouncedFieldValidator.field_f + var3) % 5;
               switch (var4) {
                 case 1:
-                  sk.field_b = sk.field_b + re.field_j;
+                  sk.field_b = sk.field_b + GrowableIntArray.field_j;
                   ki.field_c = ki.field_c + 1;
                   break;
                 case 2:
-                  sk.field_b = sk.field_b - re.field_j;
+                  sk.field_b = sk.field_b - GrowableIntArray.field_j;
                   ki.field_c = ki.field_c - 1;
                   break;
                 case 3:
                   sk.field_b = sk.field_b + ki.field_c;
-                  re.field_j = re.field_j + 1;
+                  GrowableIntArray.field_j = GrowableIntArray.field_j + 1;
                 default:
                   break;
                 case 4:
-                  re.field_j = re.field_j - 1;
+                  GrowableIntArray.field_j = GrowableIntArray.field_j - 1;
                   sk.field_b = sk.field_b - ki.field_c;
                   if (var8 == 0) {
                     break;
@@ -1377,7 +1377,7 @@ final class GameplayScreen {
                       stackIn_235_1 = 79;
                       if (var8 != 0) {
                         if (stackIn_235_0 > stackIn_235_1) {
-                          qq.a(TriangleRasterizer.field_c, 0, Vertigo2.field_J[var3], 0, TriangleRasterizer.field_c.length);
+                          ArrayBlockSupport.copyIntRange(TriangleRasterizer.field_c, 0, Vertigo2.field_J[var3], 0, TriangleRasterizer.field_c.length);
                           var3++;
                           break regionExit1;
                         }
@@ -1386,7 +1386,7 @@ final class GameplayScreen {
                       if (stackIn_235_0 < stackIn_235_1) {
                         TriangleRasterizer.field_c[var3] = 0;
                       } else if (var7 < 90) {
-                        TriangleRasterizer.field_c[var3] = om.a(var7, om.a(var7 << 8, var7 << 16));
+                        TriangleRasterizer.field_c[var3] = om.bitwiseOr(var7, om.bitwiseOr(var7 << 8, var7 << 16));
                       } else {
                         TriangleRasterizer.field_c[var3] = 16777215;
                       }
@@ -1400,7 +1400,7 @@ final class GameplayScreen {
                       if (stackIn_235_0 <= stackIn_235_1) {
                         break;
                       }
-                      qq.a(TriangleRasterizer.field_c, 0, Vertigo2.field_J[var3], 0, TriangleRasterizer.field_c.length);
+                      ArrayBlockSupport.copyIntRange(TriangleRasterizer.field_c, 0, Vertigo2.field_J[var3], 0, TriangleRasterizer.field_c.length);
                       var3++;
                       if (var8 != 0) {
                         break regionExit1;
@@ -1826,7 +1826,7 @@ final class GameplayScreen {
               }
               this.field_b.bindAsRenderTarget();
               this.field_G.drawMatchFrame(this.field_B, -this.field_D.field_e + var5, 1 + (var6 - this.field_D.field_e), true, this.field_D.field_r, this.field_D.field_f, this.field_D.field_g, var6, this.field_n);
-              TextLayout.field_g.a(-125);
+              TextLayout.field_g.setAsRasterTarget(-125);
               this.field_b.drawAdditive(0, 0, 128);
             }
             boolean decompiledFrameRemainder2 = true;
@@ -2061,7 +2061,7 @@ final class GameplayScreen {
           hj.field_c = 2035;
           f.field_B = 43310;
           ki.field_c = 126;
-          re.field_j = 8522;
+          GrowableIntArray.field_j = 8522;
           sk.field_b = 42354;
           MatchSession.field_k = 1986;
           mc.field_e = 1951;

@@ -28,7 +28,7 @@ abstract class cb extends DualLinkNode {
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param4 != 0) {
-          var5[4] = ContentTransitionDialog.c(df.a(param2, 122), param4, 64);
+          var5[4] = ContentTransitionDialog.c(df.bitwiseXor(param2, 122), param4, 64);
         }
         return var5;
     }

@@ -85,7 +85,7 @@ final class lh extends DualLinkNode {
         int var3 = TorChallenge.field_F ? 1 : 0;
         if (null != this.field_x) {
           for (var2 = 0; this.field_x.length > var2; var2++) {
-            this.field_x[var2] = p.a(this.field_x[var2], 32768);
+            this.field_x[var2] = p.bitwiseOr(this.field_x[var2], 32768);
           }
         }
         if (param0 != 0) {
@@ -163,7 +163,7 @@ final class lh extends DualLinkNode {
               }
             }
           } else {
-            this.field_z = dl.a(param1.readString(false), '<', -33);
+            this.field_z = MusicPatchNode.a(param1.readString(false), '<', -33);
           }
           if (param2 != -817) {
             stackIn_19_0 = (k) null;

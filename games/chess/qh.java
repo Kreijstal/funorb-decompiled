@@ -176,9 +176,9 @@ final class qh {
               throw new IllegalStateException();
             }
             NodeHashTableIterator.field_a = new String[var4];
-            ne.a(n.field_d, 0, NodeHashTableIterator.field_a, 0, var4);
+            ArrayBlockSupport.copyObjectRange(n.field_d, 0, NodeHashTableIterator.field_a, 0, var4);
             EmailFormatValidator.field_p = new String[-var4 + (var3_int - 1)];
-            ne.a(n.field_d, 1 + var4, EmailFormatValidator.field_p, 0, var3_int - var4 - 1);
+            ArrayBlockSupport.copyObjectRange(n.field_d, 1 + var4, EmailFormatValidator.field_p, 0, var3_int - var4 - 1);
             var4 = -1;
             var3_int = TextFieldValidator.a(MatchingFieldValidator.a(tb.field_e, new String[]{"<br><%0><br>"}, (byte) -105), -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -192,9 +192,9 @@ final class qh {
               throw new IllegalStateException();
             }
             hj.field_l = new String[var4];
-            ne.a(n.field_d, 0, hj.field_l, 0, var4);
+            ArrayBlockSupport.copyObjectRange(n.field_d, 0, hj.field_l, 0, var4);
             em.field_m = new String[-1 - var4 + var3_int];
-            ne.a(n.field_d, 1 + var4, em.field_m, 0, -1 + (-var4 + var3_int));
+            ArrayBlockSupport.copyObjectRange(n.field_d, 1 + var4, em.field_m, 0, -1 + (-var4 + var3_int));
             if (hj.field_l.length > NodeHashTableIterator.field_a.length) {
               stackIn_66_0 = hj.field_l.length;
             } else {

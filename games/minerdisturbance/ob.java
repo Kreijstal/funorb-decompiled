@@ -185,7 +185,7 @@ abstract class ob extends GameAppletShell {
                   da.a(true, kc.field_e, 256);
                 } else {
                   if (tb.field_f == 2) {
-                    da.a(true, ng.field_k, 256);
+                    da.a(true, MusicPatchEnvelope.field_k, 256);
                   } else {
                     if (tb.field_f != 5) {
                       da.a(true, kj.field_b, 256);

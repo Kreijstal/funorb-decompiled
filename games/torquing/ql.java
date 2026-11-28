@@ -240,7 +240,7 @@ final class ql extends am {
                     if (var15 <= 255) {
                       var18 = SoftwareRasterizer.field_e[var8];
                       var19 = 16711935 & var16 * (var18 & 16711935) + (var17 & 16711935) * var15 >> 8;
-                      SoftwareRasterizer.field_e[var8] = var19 + (ie.a(var16 * ie.a(var18, 65280) + ie.a(65280, var17) * var15, 16711913) >> 8);
+                      SoftwareRasterizer.field_e[var8] = var19 + (ie.bitwiseAnd(var16 * ie.bitwiseAnd(var18, 65280) + ie.bitwiseAnd(65280, var17) * var15, 16711913) >> 8);
                     } else {
                       SoftwareRasterizer.field_e[var8] = var17;
                     }

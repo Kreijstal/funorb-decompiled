@@ -123,10 +123,10 @@ final class dc {
 
     final static boolean b(boolean param0) {
         if (param0) {
-          return Model.field_o == mg.field_b ? true : false;
+          return Model.field_o == ByteArrayPoolSupport.field_b ? true : false;
         }
         field_b = (String) null;
-        return Model.field_o == mg.field_b ? true : false;
+        return Model.field_o == ByteArrayPoolSupport.field_b ? true : false;
     }
 
     public static void clearStaticReferences(boolean param0) {

@@ -24,7 +24,7 @@ final class pd {
     }
 
     final static void a(boolean param0, int param1) {
-        qh.field_e = aj.field_e[param1];
+        qh.field_e = GrowableIntArray.field_e[param1];
         if (param0) {
           BufferedSocket.field_p = hc.field_d[param1];
           CipherPacketBuffer.field_l = nl.field_b[param1];

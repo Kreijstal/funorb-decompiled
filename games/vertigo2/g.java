@@ -98,7 +98,7 @@ final class g {
         if (lc.field_b == LevelRenderer.field_n) {
           return;
         }
-        if (al.a(lc.field_b, (byte) -94)) {
+        if (MusicPatch.a(lc.field_b, (byte) -94)) {
           fh.field_y[lc.field_b].c(20);
           SectorCacheStore.field_g = lc.field_d;
           vl.field_c = 0;

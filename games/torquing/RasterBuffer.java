@@ -21,16 +21,16 @@ abstract class RasterBuffer {
         field_f = null;
     }
 
-    final void a(int param0) {
+    final void setAsRasterTarget(int param0) {
         SoftwareRasterizer.setRasterBuffer(this.field_d, this.field_g, this.field_a);
         if (param0 > -82) {
           this.field_d = (int[]) null;
         }
     }
 
-    abstract void a(int param0, int param1, int param2, java.awt.Graphics param3);
+    abstract void drawImage(int param0, int param1, int param2, java.awt.Graphics param3);
 
-    abstract void a(java.awt.Component param0, byte param1, int param2, int param3);
+    abstract void initialize(java.awt.Component param0, byte param1, int param2, int param3);
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var24 = 0;

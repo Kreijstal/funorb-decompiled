@@ -49,11 +49,11 @@ final class uc {
               var6 = fa.a(vc.field_d[var3_int], true, (byte) 99);
               var4 = var4 + EditableTextField.field_N;
               var7 = PcmOutputWorker.field_d - (var6 >> 1);
-              if (gh.a(var4, we.field_c + (g.field_l << 1), param0, var6 + (bl.field_i << 1), 16777215, param2, -bl.field_i + var7)) {
+              if (gh.a(var4, we.field_c + (MusicPatchEnvelope.field_l << 1), param0, var6 + (bl.field_i << 1), 16777215, param2, -bl.field_i + var7)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
-              var4 = var4 + (we.field_c + EditableTextField.field_N + (g.field_l << 1));
+              var4 = var4 + (we.field_c + EditableTextField.field_N + (MusicPatchEnvelope.field_l << 1));
             } else {
               var4 = var4 + field_i;
             }
@@ -67,7 +67,7 @@ final class uc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var3), "uc.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var3), "uc.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -141,7 +141,7 @@ final class uc {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param2).append(')').toString());
         }
     }
 

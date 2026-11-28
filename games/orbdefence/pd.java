@@ -77,7 +77,7 @@ final class pd extends IntrusiveNode {
         var4 = 320 - param0 + DualLinkDequeIterator.field_e * this.field_u;
         var5 = 240 + (-param2 + this.field_z * DualLinkDequeIterator.field_e);
         this.field_v = 320.0 / (double)(Math.abs(-320 + var4) + 320);
-        var6 = he.field_u[this.field_y] + KeyboardListener.field_c[this.field_s.field_f.field_o[this.field_t]];
+        var6 = MusicPatchNode.field_u[this.field_y] + KeyboardListener.field_c[this.field_s.field_f.field_o[this.field_t]];
         if (0 < var6) {
           if (this.field_k != 0) {
             if (1 == this.field_k) {
@@ -141,7 +141,7 @@ final class pd extends IntrusiveNode {
           var28 = ab.field_g[var11].copy();
           var29 = var28;
           for (var13 = 0; var13 < var29.field_v.length; var13++) {
-            var29.field_v[var13] = ((EditableTextField.a(65280, var28.field_v[var13]) >> 8) + (EditableTextField.a(16711680, var28.field_v[var13]) >> 16)) / 8 * 65793 + EditableTextField.a(255, var28.field_v[var13]) / 2 * 257;
+            var29.field_v[var13] = ((EditableTextField.bitwiseAnd(65280, var28.field_v[var13]) >> 8) + (EditableTextField.bitwiseAnd(16711680, var28.field_v[var13]) >> 16)) / 8 * 65793 + EditableTextField.bitwiseAnd(255, var28.field_v[var13]) / 2 * 257;
           }
           var29.drawRotated(var4, var5, 0, var7);
         } else if (this.field_y == 9 &&
@@ -312,8 +312,8 @@ final class pd extends IntrusiveNode {
           }
           this.field_g = var2;
         }
-        if (he.field_u[this.field_y] + KeyboardListener.field_c[this.field_s.field_f.field_o[this.field_t]] < this.field_g) {
-          this.field_g = he.field_u[this.field_y] + KeyboardListener.field_c[this.field_s.field_f.field_o[this.field_t]];
+        if (MusicPatchNode.field_u[this.field_y] + KeyboardListener.field_c[this.field_s.field_f.field_o[this.field_t]] < this.field_g) {
+          this.field_g = MusicPatchNode.field_u[this.field_y] + KeyboardListener.field_c[this.field_s.field_f.field_o[this.field_t]];
         }
         if (0 > this.field_g) {
           var3 = this.field_u;
@@ -453,7 +453,7 @@ final class pd extends IntrusiveNode {
             this.field_s.field_f.field_m[this.field_t] = true;
           }
           if (var7 != 0) {
-            this.field_g = he.field_u[this.field_y] + KeyboardListener.field_c[this.field_s.field_f.field_o[this.field_t]];
+            this.field_g = MusicPatchNode.field_u[this.field_y] + KeyboardListener.field_c[this.field_s.field_f.field_o[this.field_t]];
           } else {
             this.field_g = 0;
           }
@@ -468,7 +468,7 @@ final class pd extends IntrusiveNode {
           this.field_g = 0;
           this.field_s = param2;
           this.field_u = param0;
-          this.field_o = param4 * he.field_o[this.field_y] >> 4;
+          this.field_o = param4 * MusicPatchNode.field_o[this.field_y] >> 4;
           this.field_l = this.field_o;
           this.field_j = 0;
           this.field_B = 0;

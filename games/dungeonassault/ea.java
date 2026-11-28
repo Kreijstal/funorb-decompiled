@@ -13,7 +13,7 @@ final class ea {
           return jm.field_h;
         }
         jm.field_h = new lh();
-        jm.field_h.a(-2, lp.field_C);
+        jm.field_h.a(-2, MusicPatchNode.field_C);
         jm.field_h.field_e = 6;
         jm.field_h.field_i = 14;
         jm.field_h.field_k = 7697781;

@@ -89,7 +89,7 @@ final class c {
                     if (255 >= var15) {
                       var18 = SoftwareRasterizer.pixels[var8];
                       var19 = var15 * (16711935 & var17) + var16 * (var18 & 16711935) >> 8 & 16711935;
-                      SoftwareRasterizer.pixels[var8] = var19 + jh.a(var16 * jh.a(65280, var18) + var15 * jh.a(65280, var17) >> 8, 65280);
+                      SoftwareRasterizer.pixels[var8] = var19 + jh.bitwiseAnd(var16 * jh.bitwiseAnd(65280, var18) + var15 * jh.bitwiseAnd(65280, var17) >> 8, 65280);
                     } else {
                       SoftwareRasterizer.pixels[var8] = var17;
                     }

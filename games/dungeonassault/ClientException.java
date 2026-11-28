@@ -242,7 +242,7 @@ final class ClientException extends RuntimeException {
           if (null != pd.field_E) {
             ac.field_B.writePrefixedString(2, pd.field_E);
           }
-          of.a(ac.field_B, kd.field_d, om.field_c, (byte) -114, ta.field_c);
+          MusicPatchEnvelope.a(ac.field_B, kd.field_d, om.field_c, (byte) -114, ta.field_c);
           ac.field_B.backpatchShortLength(-var5_int + ac.field_B.position, 1);
           op.a(0, -1);
           return;

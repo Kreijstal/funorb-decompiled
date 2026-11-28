@@ -27,7 +27,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -42,7 +42,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ee.field_j != null) {
+          if (MidiNoteMask.field_j != null) {
             cf.field_e = 0;
             SocketConnector.field_a = param0.getX();
             ArchiveSource.field_d = param0.getY();
@@ -78,7 +78,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             } else {
               stackIn_17_2 = "{...}";
             }
-            throw fc.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+            throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -158,53 +158,53 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
-          if (ee.field_j != null) {
+          if (MidiNoteMask.field_j != null) {
             cf.field_e = 0;
             TextLineMetrics.field_f = -1;
             StripedProgressWidget.field_J = -1;
             pe.field_n = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "kl.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "kl.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         try {
-          if (ee.field_j != null) {
+          if (MidiNoteMask.field_j != null) {
             cf.field_e = 0;
             TextLineMetrics.field_f = param0.getX();
             StripedProgressWidget.field_J = param0.getY();
             pe.field_n = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "kl.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "kl.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
-          if (null != ee.field_j) {
+          if (null != MidiNoteMask.field_j) {
             cf.field_e = 0;
             TextLineMetrics.field_f = param0.getX();
             StripedProgressWidget.field_J = param0.getY();
             pe.field_n = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "kl.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "kl.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
         try {
-          if (null != ee.field_j) {
+          if (null != MidiNoteMask.field_j) {
             cf.field_e = 0;
             TextLineMetrics.field_f = param0.getX();
             StripedProgressWidget.field_J = param0.getY();
             pe.field_n = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "kl.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "kl.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -216,7 +216,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ee.field_j != null) {
+          if (MidiNoteMask.field_j != null) {
             cf.field_e = 0;
             u.field_d = 0;
             pe.field_n = true;
@@ -243,17 +243,17 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-          if (ee.field_j != null) {
+          if (MidiNoteMask.field_j != null) {
             u.field_d = 0;
           }
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "kl.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "kl.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

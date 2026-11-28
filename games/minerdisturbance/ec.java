@@ -15,7 +15,7 @@ final class ec {
     }
 
     final static void a(byte param0) {
-        ng.field_e = null;
+        MusicPatchEnvelope.field_e = null;
         bg.field_d = null;
         int var1 = 25 % ((-35 - param0) / 32);
         oc.field_e = null;

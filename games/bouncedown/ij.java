@@ -201,7 +201,7 @@ final class ij {
           }
           var2Lifetime24 = AccountNameAvailabilityValidator.a((byte) 48, "threeplayer");
           if (null != var2Lifetime24) {
-            kl.field_m = c.a(0, var2Lifetime24);
+            MusicPatchNode.field_m = c.a(0, var2Lifetime24);
           }
           var2Lifetime25 = AccountNameAvailabilityValidator.a((byte) 48, "twoplayer");
           if (var2Lifetime25 != null) {

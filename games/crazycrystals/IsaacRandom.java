@@ -302,10 +302,10 @@ final class IsaacRandom {
               }
             }
             this.field_i = this.field_i + this.field_a[var2 + 128 & 255];
-            dupTemp$1 = this.field_a[pf.b(255, var3 >> 2)] + this.field_i + this.field_c;
+            dupTemp$1 = this.field_a[pf.bitwiseAnd(255, var3 >> 2)] + this.field_i + this.field_c;
             var4 = dupTemp$1;
             this.field_a[var2] = dupTemp$1;
-            dupTemp$2 = var3 + this.field_a[pf.b(1020, var4 >> 8) >> 2];
+            dupTemp$2 = var3 + this.field_a[pf.bitwiseAnd(1020, var4 >> 8) >> 2];
             this.field_c = dupTemp$2;
             this.field_f[var2] = dupTemp$2;
           }
@@ -331,10 +331,10 @@ final class IsaacRandom {
             }
           }
           this.field_i = this.field_i + this.field_a[var2Lifetime1 + 128 & 255];
-          dupTemp$4 = this.field_a[pf.b(255, var3Lifetime1 >> 2)] + this.field_i + this.field_c;
+          dupTemp$4 = this.field_a[pf.bitwiseAnd(255, var3Lifetime1 >> 2)] + this.field_i + this.field_c;
           var4Lifetime1 = dupTemp$4;
           this.field_a[var2Lifetime1] = dupTemp$4;
-          dupTemp$5 = var3Lifetime1 + this.field_a[pf.b(1020, var4Lifetime1 >> 8) >> 2];
+          dupTemp$5 = var3Lifetime1 + this.field_a[pf.bitwiseAnd(1020, var4Lifetime1 >> 8) >> 2];
           this.field_c = dupTemp$5;
           this.field_f[var2Lifetime1] = dupTemp$5;
         }

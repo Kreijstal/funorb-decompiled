@@ -231,11 +231,11 @@ final class ra extends oa {
                 ng.field_a[var5] = false;
                 var5++;
               }
-              ProgressDialog.field_R = rj.field_g;
+              ProgressDialog.field_R = MusicPatch.field_g;
             } else {
-              while (rj.field_g != ProgressDialog.field_R) {
-                var2 = SecondaryNodeDequeIterator.field_b[rj.field_g];
-                rj.field_g = 127 & 1 + rj.field_g;
+              while (MusicPatch.field_g != ProgressDialog.field_R) {
+                var2 = SecondaryNodeDequeIterator.field_b[MusicPatch.field_g];
+                MusicPatch.field_g = 127 & 1 + MusicPatch.field_g;
                 if (var2 >= 0) {
                   ng.field_a[var2] = true;
                   continue;

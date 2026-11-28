@@ -27,7 +27,7 @@ abstract class tk {
     abstract byte[] a(int param0, int param1);
 
     final static void a(byte param0, boolean param1) {
-        dl.a(param1, true, true);
+        ByteArrayPoolSupport.a(param1, true, true);
         if (param0 >= -89) {
           field_e = (String[]) null;
         }

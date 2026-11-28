@@ -106,7 +106,7 @@ abstract class rl extends oh {
           vh.field_a = true;
         }
         uo.field_o = param2;
-        dk.field_h = param2;
+        MusicPatch.field_h = param2;
         mb.field_g = 25;
         ob.field_l = 10;
         wd.field_j = 60;

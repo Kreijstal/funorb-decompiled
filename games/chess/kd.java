@@ -41,7 +41,7 @@ final class kd extends ci {
           return this.field_Gb;
         }
         while (true) {
-          if (!kf.d(18954)) {
+          if (!MusicPatch.d(18954)) {
             this.field_Fb.field_db = this.field_Jb.toString();
             if (!param1) {
               return this.field_Gb;

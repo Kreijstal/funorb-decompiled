@@ -435,15 +435,15 @@ class rc extends DualLinkNode {
             }
           }
           if (!t.a(5, var4, 123) &&
-            2 <= ab.field_d) {
+            2 <= MusicPatchEnvelope.field_d) {
             hf.a(250, 98, 5);
           }
           if (!t.a(6, var4, 126) &&
-            ab.field_d >= 4) {
+            MusicPatchEnvelope.field_d >= 4) {
             hf.a(249, 55, 6);
           }
           if (!t.a(7, var4, 113) &&
-            6 <= ab.field_d) {
+            6 <= MusicPatchEnvelope.field_d) {
             hf.a(248, 125, 7);
           }
           boolean decompiledFrameCompleted0 = true;

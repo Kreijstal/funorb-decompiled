@@ -1426,7 +1426,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 96, "create_age");
                 if (var2 != null) {
-                  rj.field_h = c.a(0, var2);
+                  MusicPatch.field_h = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 113, "create_u13_email");
                 if (var2 != null) {
@@ -1458,7 +1458,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 98, "create_more_suggestions");
                 if (null != var2) {
-                  kj.field_g = c.a(0, var2);
+                  MidiNoteMask.field_g = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 89, "create_select_alternative");
                 if (null != var2) {

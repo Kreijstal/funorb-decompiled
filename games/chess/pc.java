@@ -143,7 +143,7 @@ final class pc extends ci {
             this.field_Hb.field_ib = 11184810;
             this.field_Hb.field_fb = 1;
             this.field_Eb.a((byte) 127, this.field_Hb);
-            this.field_Ob = new ci(0L, param8, td.field_m);
+            this.field_Ob = new ci(0L, param8, MidiNoteMask.field_m);
             this.field_Ob.field_fb = 1;
             this.field_Ob.field_ib = 11184810;
             this.field_Eb.a((byte) 124, this.field_Ob);
@@ -892,7 +892,7 @@ final class pc extends ci {
                       break;
                     }
                     if (stackIn_159_0) {
-                      var23 = "<col=A00000>" + td.field_n[var13_intLifetime1] + "</col>";
+                      var23 = "<col=A00000>" + MidiNoteMask.field_n[var13_intLifetime1] + "</col>";
                       if (var11 == null) {
                         var11 = var23;
                       } else {

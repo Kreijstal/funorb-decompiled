@@ -71,7 +71,7 @@ final class WhirlpoolDigest {
             var8 = 255 & param0[var5_int] << var6 | (255 & param0[var5_int + 1]) >>> -var6 + 8;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_i[this.field_c] = (byte)MassPoisonSpecial.a((int) this.field_i[this.field_c], var8 >>> var7);
+              this.field_i[this.field_c] = (byte)MassPoisonSpecial.bitwiseOr((int) this.field_i[this.field_c], var8 >>> var7);
               this.field_l = this.field_l + (-var7 + 8);
               this.field_c = this.field_c + 1;
               if (this.field_l == 512) {
@@ -79,7 +79,7 @@ final class WhirlpoolDigest {
                 this.field_c = 0;
                 this.field_l = 0;
               }
-              this.field_i[this.field_c] = (byte)dda.a(255, var8 << 8 - var7);
+              this.field_i[this.field_c] = (byte)dda.bitwiseAnd(255, var8 << 8 - var7);
               var5_int++;
               this.field_l = this.field_l + var7;
               param1 = param1 - 8L;
@@ -91,7 +91,7 @@ final class WhirlpoolDigest {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = param0[var5_int] << var6 & 255;
-            this.field_i[this.field_c] = (byte)MassPoisonSpecial.a((int) this.field_i[this.field_c], var8Lifetime1 >>> var7);
+            this.field_i[this.field_c] = (byte)MassPoisonSpecial.bitwiseOr((int) this.field_i[this.field_c], var8Lifetime1 >>> var7);
           }
           if ((long)var7 + param1 >= 8L) {
             this.field_l = this.field_l + (8 - var7);
@@ -102,7 +102,7 @@ final class WhirlpoolDigest {
               this.field_c = 0;
               this.field_l = 0;
             }
-            this.field_i[this.field_c] = (byte)dda.a(255, var8Lifetime1 << -var7 + 8);
+            this.field_i[this.field_c] = (byte)dda.bitwiseAnd(255, var8Lifetime1 << -var7 + 8);
             this.field_l = this.field_l + (int)param1;
           } else {
             this.field_l = (int)((long)this.field_l + param1);
@@ -137,7 +137,7 @@ final class WhirlpoolDigest {
         int var9 = 0;
         var9 = BachelorFridge.field_y;
         try {
-          this.field_i[this.field_c] = (byte)MassPoisonSpecial.a((int) this.field_i[this.field_c], 128 >>> dda.a(this.field_l, 7));
+          this.field_i[this.field_c] = (byte)MassPoisonSpecial.bitwiseOr((int) this.field_i[this.field_c], 128 >>> dda.bitwiseAnd(this.field_l, 7));
           this.field_c = this.field_c + 1;
           if (this.field_c > 32) {
             while (this.field_c < 64) {
@@ -239,7 +239,7 @@ final class WhirlpoolDigest {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_o[var2] = gv.a(gv.a(gv.a(gv.a(gv.a(gv.a(gv.a((long)this.field_i[var3] << 56, DisplayNameSelectionPanel.a(255L, (long)this.field_i[var3 + 1]) << 48), DisplayNameSelectionPanel.a(280375465082880L, (long)this.field_i[var3 + 2] << 40)), DisplayNameSelectionPanel.a((long)this.field_i[var3 + 3] << 32, 1095216660480L)), DisplayNameSelectionPanel.a(4278190080L, (long)this.field_i[var3 + 4] << 24)), DisplayNameSelectionPanel.a(255L, (long)this.field_i[5 + var3]) << 16), DisplayNameSelectionPanel.a((long)this.field_i[6 + var3] << 8, 65280L)), DisplayNameSelectionPanel.a(255L, (long)this.field_i[7 + var3]));
+          this.field_o[var2] = gv.bitwiseXor(gv.bitwiseXor(gv.bitwiseXor(gv.bitwiseXor(gv.bitwiseXor(gv.bitwiseXor(gv.bitwiseXor((long)this.field_i[var3] << 56, DisplayNameSelectionPanel.bitwiseAnd(255L, (long)this.field_i[var3 + 1]) << 48), DisplayNameSelectionPanel.bitwiseAnd(280375465082880L, (long)this.field_i[var3 + 2] << 40)), DisplayNameSelectionPanel.bitwiseAnd((long)this.field_i[var3 + 3] << 32, 1095216660480L)), DisplayNameSelectionPanel.bitwiseAnd(4278190080L, (long)this.field_i[var3 + 4] << 24)), DisplayNameSelectionPanel.bitwiseAnd(255L, (long)this.field_i[5 + var3]) << 16), DisplayNameSelectionPanel.bitwiseAnd((long)this.field_i[6 + var3] << 8, 65280L)), DisplayNameSelectionPanel.bitwiseAnd(255L, (long)this.field_i[7 + var3]));
           var3 += 8;
           var2++;
         }
@@ -247,7 +247,7 @@ final class WhirlpoolDigest {
           dupTemp$0 = this.field_h[var2Lifetime1];
           arrayValue$1 = this.field_o[var2Lifetime1];
           this.field_g[var2Lifetime1] = dupTemp$0;
-          this.field_n[var2Lifetime1] = gv.a(arrayValue$1, dupTemp$0);
+          this.field_n[var2Lifetime1] = gv.bitwiseXor(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
@@ -255,7 +255,7 @@ final class WhirlpoolDigest {
             var4 = 0;
             var5 = 56;
             while (8 > var4) {
-              this.field_a[var3Lifetime1] = gv.a(this.field_a[var3Lifetime1], SleepAnimation.field_v[var4][dda.a(255, (int)(this.field_g[dda.a(var3Lifetime1 - var4, 7)] >>> var5))]);
+              this.field_a[var3Lifetime1] = gv.bitwiseXor(this.field_a[var3Lifetime1], SleepAnimation.field_v[var4][dda.bitwiseAnd(255, (int)(this.field_g[dda.bitwiseAnd(var3Lifetime1 - var4, 7)] >>> var5))]);
               var4++;
               var5 -= 8;
             }
@@ -263,14 +263,14 @@ final class WhirlpoolDigest {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_g[var3Lifetime1Lifetime1] = this.field_a[var3Lifetime1Lifetime1];
           }
-          this.field_g[0] = gv.a(this.field_g[0], SleepAnimation.field_z[var2Lifetime2]);
+          this.field_g[0] = gv.bitwiseXor(this.field_g[0], SleepAnimation.field_z[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; 8 > var3Lifetime1Lifetime2; var3Lifetime1Lifetime2++) {
             this.field_a[var3Lifetime1Lifetime2] = this.field_g[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (8 > var7) {
-              this.field_a[var3Lifetime1Lifetime2] = gv.a(this.field_a[var3Lifetime1Lifetime2], SleepAnimation.field_v[var7][dda.a(255, (int)(this.field_n[dda.a(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1))]);
+              this.field_a[var3Lifetime1Lifetime2] = gv.bitwiseXor(this.field_a[var3Lifetime1Lifetime2], SleepAnimation.field_v[var7][dda.bitwiseAnd(255, (int)(this.field_n[dda.bitwiseAnd(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1))]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -284,7 +284,7 @@ final class WhirlpoolDigest {
           this.a(true);
         }
         while (var2Lifetime3 < 8) {
-          this.field_h[var2Lifetime3] = gv.a(this.field_h[var2Lifetime3], gv.a(this.field_n[var2Lifetime3], this.field_o[var2Lifetime3]));
+          this.field_h[var2Lifetime3] = gv.bitwiseXor(this.field_h[var2Lifetime3], gv.bitwiseXor(this.field_n[var2Lifetime3], this.field_o[var2Lifetime3]));
           var2Lifetime3++;
         }
     }

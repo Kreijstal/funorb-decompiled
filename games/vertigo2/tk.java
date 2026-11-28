@@ -204,7 +204,7 @@ abstract class tk {
           if (param1) {
             field_p = (String) null;
           }
-          stackIn_3_0 = re.field_a.getFileByName("", param0, 0);
+          stackIn_3_0 = GrowableIntArray.field_a.getFileByName("", param0, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -220,7 +220,7 @@ abstract class tk {
         }
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseXor(int param0, int param1) {
         return param0 ^ param1;
     }
 

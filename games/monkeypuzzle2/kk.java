@@ -1240,13 +1240,13 @@ final class kk {
                   if (var6 != 1) {
                     var7 = var5 / 3;
                     cl.field_d = cl.field_d + var7;
-                    nj.field_b = nj.field_b - (-var7 + var5);
+                    ByteArrayPoolSupport.field_b = ByteArrayPoolSupport.field_b - (-var7 + var5);
                     if (var8 != 0) {
-                      nj.field_b = nj.field_b - var5;
+                      ByteArrayPoolSupport.field_b = ByteArrayPoolSupport.field_b - var5;
                       cl.field_d = cl.field_d + var5;
                     }
                   } else {
-                    nj.field_b = nj.field_b - var5;
+                    ByteArrayPoolSupport.field_b = ByteArrayPoolSupport.field_b - var5;
                     if (var8 != 0) {
                       cl.field_d = cl.field_d + var5;
                     }
@@ -1521,7 +1521,7 @@ final class kk {
             if (param6 < 0) {
               param6 = 0;
             }
-            SoftwareRasterizer.field_i[param4] = bd.a(param7, bd.a(param2 << 16, param6 << 8));
+            SoftwareRasterizer.field_i[param4] = bd.bitwiseOr(param7, bd.bitwiseOr(param2 << 16, param6 << 8));
             param4--;
             continue;
           }

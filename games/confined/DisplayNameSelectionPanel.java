@@ -43,7 +43,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         }
     }
 
-    private final int a(UiWidget param0, int param1, int param2, int param3, String param4, String param5, int param6) {
+    private final int addLabeledFieldWithValidationMessage(UiWidget param0, int param1, int param2, int param3, String param4, String param5, int param6) {
         RuntimeException var8 = null;
         ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;
@@ -150,7 +150,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         var2.setBounds(-125, 270, var3, 50, 20);
         this.addChild(var2, 10);
         var3 += 50;
-        var3 = var3 + (5 + this.a(this.field_O, 170, rc.field_a, 3, va.field_d, var3));
+        var3 = var3 + (5 + this.addLabeledFieldWithDefaultValidationMessage(this.field_O, 170, rc.field_a, 3, va.field_d, var3));
         this.field_Q.setBounds(-117, var5, var3, 40, 496 - var5 >> 1);
         this.field_P.setBounds(-128, 60, var3 + 15, 40, 3 + var4);
         this.field_P.field_t = (WidgetEventListener) (this);
@@ -229,7 +229,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         }
     }
 
-    private final int a(UiWidget param0, int param1, String param2, int param3, String param4, int param5) {
+    private final int addLabeledFieldWithDefaultValidationMessage(UiWidget param0, int param1, String param2, int param3, String param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -244,7 +244,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
           if (param3 != 3) {
             this.field_O = (ValidatedTextField) null;
           }
-          stackIn_3_0 = this.a(param0, param3 + 0, param5, param1, param4, param2, 35);
+          stackIn_3_0 = this.addLabeledFieldWithValidationMessage(param0, param3 + 0, param5, param1, param4, param2, 35);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

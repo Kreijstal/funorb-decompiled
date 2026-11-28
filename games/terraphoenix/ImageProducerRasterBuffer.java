@@ -33,7 +33,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    private final synchronized void a(boolean param0) {
+    private final synchronized void publishPixelsToConsumer(boolean param0) {
         if (null == this.field_j) {
           return;
         }
@@ -78,7 +78,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final void a(int param0, int param1, byte param2, java.awt.Component param3) {
+    final void initialize(int param0, int param1, byte param2, java.awt.Component param3) {
         try {
           this.pixels = new int[1 + param1 * param0];
           this.field_b = param0;
@@ -89,24 +89,24 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             this.addConsumer((java.awt.image.ImageConsumer) null);
           }
           this.field_d = param3.createImage((java.awt.image.ImageProducer) (this));
-          this.a(true);
+          this.publishPixelsToConsumer(true);
           param3.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
-          this.a(true);
+          this.publishPixelsToConsumer(true);
           param3.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
-          this.a(true);
+          this.publishPixelsToConsumer(true);
           param3.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
-          this.a(0);
+          this.setAsRasterTarget(0);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "of.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, java.awt.Graphics param2, int param3) {
+    final void drawImage(int param0, int param1, java.awt.Graphics param2, int param3) {
         try {
-          this.a(true);
+          this.publishPixelsToConsumer(true);
           if (param3 <= 34) {
             java.awt.Component var6 = (java.awt.Component) null;
-            this.a(16, 118, (byte) 14, (java.awt.Component) null);
+            this.initialize(16, 118, (byte) 14, (java.awt.Component) null);
           }
           param2.drawImage(this.field_d, param1, param0, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {

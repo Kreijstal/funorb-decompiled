@@ -842,7 +842,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("emptygun", (byte) -123);
                 if (null != var2) {
-                  nf.field_p = PcmResampler.a(125, var2);
+                  MusicPatch.field_p = PcmResampler.a(125, var2);
                 }
                 var2 = AccountRegistrationPanel.b("pistol_ammo_symbol", (byte) -121);
                 if (var2 != null) {
@@ -1108,7 +1108,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("V1_wake_up", (byte) -128);
                 if (null != var2) {
-                  tm.field_s = PcmResampler.a(126, var2);
+                  MusicPatchNode.field_s = PcmResampler.a(126, var2);
                 }
                 var2 = AccountRegistrationPanel.b("V1_lift_bust", (byte) -127);
                 if (null != var2) {
@@ -1184,7 +1184,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("V4_notice_turrets", (byte) -120);
                 if (null != var2) {
-                  bc.field_k = PcmResampler.a(125, var2);
+                  MidiNoteMask.field_k = PcmResampler.a(125, var2);
                 }
                 var2 = AccountRegistrationPanel.b("V4_notice_guard", (byte) -123);
                 if (null != var2) {
@@ -1460,11 +1460,11 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("moverelationtomouse", (byte) -120);
                 if (null != var2) {
-                  df.field_e = PcmResampler.a(127, var2);
+                  GrowableIntArray.field_e = PcmResampler.a(127, var2);
                 }
                 var2 = AccountRegistrationPanel.b("movesinrelationtomap", (byte) -124);
                 if (var2 != null) {
-                  df.field_b = PcmResampler.a(127, var2);
+                  GrowableIntArray.field_b = PcmResampler.a(127, var2);
                 }
                 var2 = AccountRegistrationPanel.b("controltitle", (byte) -126);
                 if (null != var2) {

@@ -199,7 +199,7 @@ final class BoundedRandomAccessFile {
               pj.field_a = ClientException.field_c;
               var5.position = 0;
               AppletShell.a(fi.field_b, 6, cf.field_a, hh.field_p, of.field_c);
-              jj.a(-1, true);
+              ByteArrayPoolSupport.a(-1, true);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;

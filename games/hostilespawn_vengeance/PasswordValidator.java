@@ -41,7 +41,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_6_0 = DelayedPacket.field_k;
             return stackIn_6_0;
           }
-          if (nf.a(var6, -29205)) {
+          if (MusicPatch.a(var6, -29205)) {
             stackIn_9_0 = g.field_R;
             return stackIn_9_0;
           }

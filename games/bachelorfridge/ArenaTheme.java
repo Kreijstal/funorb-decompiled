@@ -405,7 +405,7 @@ abstract class ArenaTheme {
             if (var8 == 0) {
               var6[var7] = 0;
             } else {
-              var6[var7] = MassPoisonSpecial.a(var8, param1 << 24);
+              var6[var7] = MassPoisonSpecial.bitwiseOr(var8, param1 << 24);
             }
           }
           stackIn_10_0 = var5;
@@ -539,12 +539,12 @@ abstract class ArenaTheme {
                   var13 = var13 & -16711936;
                   var14 = var14 * param3;
                   var14 = var14 & 16711680;
-                  var7[var8] = MassPoisonSpecial.a(MassPoisonSpecial.a(var11 + var13, var14 + var12) >>> 8, -16777216);
+                  var7[var8] = MassPoisonSpecial.bitwiseOr(MassPoisonSpecial.bitwiseOr(var11 + var13, var14 + var12) >>> 8, -16777216);
                 } else {
-                  var7[var8] = MassPoisonSpecial.a(-param3 + 255 << 24, var9);
+                  var7[var8] = MassPoisonSpecial.bitwiseOr(-param3 + 255 << 24, var9);
                 }
               } else {
-                var7[var8] = MassPoisonSpecial.a(var10, param3 << 24);
+                var7[var8] = MassPoisonSpecial.bitwiseOr(var10, param3 << 24);
               }
             }
           }

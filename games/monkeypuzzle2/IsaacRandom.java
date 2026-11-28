@@ -212,7 +212,7 @@ final class IsaacRandom {
           mb.field_b = new int[eg.field_c];
           RichTextWidget.field_E = new byte[eg.field_c][];
           var17.position = -7 + param0.length - 8 * eg.field_c;
-          nj.field_d = var17.readUnsignedShort(17277);
+          ByteArrayPoolSupport.field_d = var17.readUnsignedShort(17277);
           qk.field_a = var17.readUnsignedShort(17277);
           var3 = (255 & var17.readUnsignedByte((byte) 114)) + 1;
           for (var4 = 0; var4 < eg.field_c; var4++) {
@@ -340,10 +340,10 @@ final class IsaacRandom {
             }
           }
           this.field_b = this.field_b + this.field_i[var2 + 128 & 255];
-          dupTemp$1 = this.field_i[BufferedRandomAccessFile.a(1020, var3) >> 2] + (this.field_b + this.field_f);
+          dupTemp$1 = this.field_i[BufferedRandomAccessFile.bitwiseAnd(1020, var3) >> 2] + (this.field_b + this.field_f);
           var4 = dupTemp$1;
           this.field_i[var2] = dupTemp$1;
-          dupTemp$2 = var3 + this.field_i[BufferedRandomAccessFile.a(var4, 261285) >> 8 >> 2];
+          dupTemp$2 = var3 + this.field_i[BufferedRandomAccessFile.bitwiseAnd(var4, 261285) >> 8 >> 2];
           this.field_f = dupTemp$2;
           this.field_a[var2] = dupTemp$2;
         }

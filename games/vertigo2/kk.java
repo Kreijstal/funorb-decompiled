@@ -141,7 +141,7 @@ final class kk {
         try {
           var2_int = param0.length;
           var3 = new byte[var2_int];
-          qq.copyByteRange(param0, 0, var3, 0, var2_int);
+          ArrayBlockSupport.copyByteRange(param0, 0, var3, 0, var2_int);
           if (param1 != 103) {
             field_h = (String) null;
           }

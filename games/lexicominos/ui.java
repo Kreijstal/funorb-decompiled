@@ -106,7 +106,7 @@ class ui extends cf {
           if (hd.a(param1, 17)) {
             return false;
           }
-          if (ph.a((byte) 107, param1)) {
+          if (ByteArrayPoolSupport.a((byte) 107, param1)) {
             return false;
           }
           if (param0.length() == 0) {

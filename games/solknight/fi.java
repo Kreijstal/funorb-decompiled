@@ -28,13 +28,13 @@ final class fi {
           var3.writeByte(50, param0.field_k);
           var3.writeByte(param2 ^ -24018, param0.field_l);
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "fi.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "fi.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
         uj.a(param4, param5, param2, h.field_d, param6, 2);
-        uj.a(param3, param0, (param4 - param3 >> 1) + param2, of.field_b, param6 - (param0 - 18 >> 1), 2);
+        uj.a(param3, param0, (param4 - param3 >> 1) + param2, GrowableIntArray.field_b, param6 - (param0 - 18 >> 1), 2);
         DropTargetWidgetContainer.field_H.draw((param4 - param3 >> 1) + param2 - 20, -10 + param6);
         PasswordValidator.field_k.draw(-18 + param3 + ((-param3 + param4 >> 1) + param2), param6 - 10);
         if (!param1) {
@@ -42,7 +42,7 @@ final class fi {
         }
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseAnd(int param0, int param1) {
         return param0 & param1;
     }
 
@@ -68,7 +68,7 @@ final class fi {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_k[var2] = LabeledWidgetContainer.a(tk.a((long)this.field_g[var3 + 7], 255L), LabeledWidgetContainer.a(tk.a((long)this.field_g[6 + var3] << 8, 65280L), LabeledWidgetContainer.a(tk.a((long)this.field_g[5 + var3], 255L) << 16, LabeledWidgetContainer.a(LabeledWidgetContainer.a(tk.a(255L, (long)this.field_g[3 + var3]) << 32, LabeledWidgetContainer.a(LabeledWidgetContainer.a((long)this.field_g[var3] << 56, tk.a((long)this.field_g[1 + var3], 255L) << 48), tk.a((long)this.field_g[var3 + 2] << 40, 280375465082880L))), tk.a(255L, (long)this.field_g[4 + var3]) << 24))));
+          this.field_k[var2] = LabeledWidgetContainer.bitwiseXor(tk.bitwiseAnd((long)this.field_g[var3 + 7], 255L), LabeledWidgetContainer.bitwiseXor(tk.bitwiseAnd((long)this.field_g[6 + var3] << 8, 65280L), LabeledWidgetContainer.bitwiseXor(tk.bitwiseAnd((long)this.field_g[5 + var3], 255L) << 16, LabeledWidgetContainer.bitwiseXor(LabeledWidgetContainer.bitwiseXor(tk.bitwiseAnd(255L, (long)this.field_g[3 + var3]) << 32, LabeledWidgetContainer.bitwiseXor(LabeledWidgetContainer.bitwiseXor((long)this.field_g[var3] << 56, tk.bitwiseAnd((long)this.field_g[1 + var3], 255L) << 48), tk.bitwiseAnd((long)this.field_g[var3 + 2] << 40, 280375465082880L))), tk.bitwiseAnd(255L, (long)this.field_g[4 + var3]) << 24))));
           var3 += 8;
           var2++;
         }
@@ -76,7 +76,7 @@ final class fi {
           dupTemp$0 = this.field_d[var2Lifetime1];
           arrayValue$1 = this.field_k[var2Lifetime1];
           this.field_b[var2Lifetime1] = dupTemp$0;
-          this.field_i[var2Lifetime1] = LabeledWidgetContainer.a(arrayValue$1, dupTemp$0);
+          this.field_i[var2Lifetime1] = LabeledWidgetContainer.bitwiseXor(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
@@ -84,7 +84,7 @@ final class fi {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_h[var3Lifetime1] = LabeledWidgetContainer.a(this.field_h[var3Lifetime1], MenuScreen.field_c[var4][fi.a(255, (int)(this.field_b[fi.a(7, var3Lifetime1 - var4)] >>> var5))]);
+              this.field_h[var3Lifetime1] = LabeledWidgetContainer.bitwiseXor(this.field_h[var3Lifetime1], MenuScreen.field_c[var4][fi.bitwiseAnd(255, (int)(this.field_b[fi.bitwiseAnd(7, var3Lifetime1 - var4)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -92,14 +92,14 @@ final class fi {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_b[var3Lifetime1Lifetime1] = this.field_h[var3Lifetime1Lifetime1];
           }
-          this.field_b[0] = LabeledWidgetContainer.a(this.field_b[0], MenuScreen.field_g[var2Lifetime2]);
+          this.field_b[0] = LabeledWidgetContainer.bitwiseXor(this.field_b[0], MenuScreen.field_g[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_h[var3Lifetime1Lifetime2] = this.field_b[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (8 > var7) {
-              this.field_h[var3Lifetime1Lifetime2] = LabeledWidgetContainer.a(this.field_h[var3Lifetime1Lifetime2], MenuScreen.field_c[var7][fi.a(255, (int)(this.field_i[fi.a(7, -var7 + var3Lifetime1Lifetime2)] >>> var5Lifetime1))]);
+              this.field_h[var3Lifetime1Lifetime2] = LabeledWidgetContainer.bitwiseXor(this.field_h[var3Lifetime1Lifetime2], MenuScreen.field_c[var7][fi.bitwiseAnd(255, (int)(this.field_i[fi.bitwiseAnd(7, -var7 + var3Lifetime1Lifetime2)] >>> var5Lifetime1))]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -112,7 +112,7 @@ final class fi {
           field_j = (String) null;
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_d[var2Lifetime3] = LabeledWidgetContainer.a(this.field_d[var2Lifetime3], LabeledWidgetContainer.a(this.field_i[var2Lifetime3], this.field_k[var2Lifetime3]));
+          this.field_d[var2Lifetime3] = LabeledWidgetContainer.bitwiseXor(this.field_d[var2Lifetime3], LabeledWidgetContainer.bitwiseXor(this.field_i[var2Lifetime3], this.field_k[var2Lifetime3]));
         }
     }
 
@@ -186,7 +186,7 @@ final class fi {
             var8 = 255 & param1[var5_int] << var6 | (param1[var5_int + 1] & 255) >>> 8 - var6;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_g[this.field_c] = (byte)ProxySocketConnector.a((int) this.field_g[this.field_c], var8 >>> var7);
+              this.field_g[this.field_c] = (byte)ProxySocketConnector.bitwiseOr((int) this.field_g[this.field_c], var8 >>> var7);
               this.field_c = this.field_c + 1;
               this.field_f = this.field_f + (8 - var7);
               if (this.field_f == 512) {
@@ -194,7 +194,7 @@ final class fi {
                 this.field_c = 0;
                 this.field_f = 0;
               }
-              this.field_g[this.field_c] = (byte)fi.a(255, var8 << -var7 + 8);
+              this.field_g[this.field_c] = (byte)fi.bitwiseAnd(255, var8 << -var7 + 8);
               var5_int++;
               this.field_f = this.field_f + var7;
               param0 = param0 - 8L;
@@ -206,7 +206,7 @@ final class fi {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = 255 & param1[var5_int] << var6;
-            this.field_g[this.field_c] = (byte)ProxySocketConnector.a((int) this.field_g[this.field_c], var8Lifetime1 >>> var7);
+            this.field_g[this.field_c] = (byte)ProxySocketConnector.bitwiseOr((int) this.field_g[this.field_c], var8Lifetime1 >>> var7);
           }
           if (param0 + (long)var7 >= 8L) {
             this.field_f = this.field_f + (8 - var7);
@@ -217,7 +217,7 @@ final class fi {
               this.field_c = 0;
               this.field_f = 0;
             }
-            this.field_g[this.field_c] = (byte)fi.a(var8Lifetime1 << -var7 + 8, 255);
+            this.field_g[this.field_c] = (byte)fi.bitwiseAnd(var8Lifetime1 << -var7 + 8, 255);
             this.field_f = this.field_f + (int)param0;
           } else {
             this.field_f = (int)((long)this.field_f + param0);
@@ -233,7 +233,7 @@ final class fi {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -253,7 +253,7 @@ final class fi {
           var4 = jc.field_c[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
-            var5[var6] = GuestPlayConfirmationForm.field_H[fi.a((int) var4[var6], 255)];
+            var5[var6] = GuestPlayConfirmationForm.field_H[fi.bitwiseAnd((int) var4[var6], 255)];
           }
           var1[var2] = new Sprite(MouseInputHandler.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], var5);
         }
@@ -288,7 +288,7 @@ final class fi {
         byte[] var9 = null;
         var8 = SolKnight.field_L ? 1 : 0;
         try {
-          this.field_g[this.field_c] = (byte)ProxySocketConnector.a((int) this.field_g[this.field_c], 128 >>> fi.a(7, this.field_f));
+          this.field_g[this.field_c] = (byte)ProxySocketConnector.bitwiseOr((int) this.field_g[this.field_c], 128 >>> fi.bitwiseAnd(7, this.field_f));
           this.field_c = this.field_c + 1;
           if (param2 < 106) {
             var9 = (byte[]) null;
@@ -308,7 +308,7 @@ final class fi {
             this.field_c = this.field_c + 1;
             this.field_g[fieldTemp$1] = (byte) 0;
           }
-          fk.copyByteRange(this.field_e, 0, this.field_g, 32, 32);
+          ArrayBlockSupport.copyByteRange(this.field_e, 0, this.field_g, 32, 32);
           this.c(24843);
           var4_int = 0;
           var5 = param1;
@@ -336,7 +336,7 @@ final class fi {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

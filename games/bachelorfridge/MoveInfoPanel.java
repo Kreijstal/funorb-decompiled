@@ -729,7 +729,7 @@ final class MoveInfoPanel {
         int var3 = BachelorFridge.field_y;
         if (this.field_m.field_P != null) {
           for (var2 = 0; var2 < 128; var2++) {
-            this.field_o[var2] = (128 - var2) * dda.a(65793, this.field_m.c(this.field_m.field_P.field_s.ownerIndex, 2271));
+            this.field_o[var2] = (128 - var2) * dda.bitwiseAnd(65793, this.field_m.c(this.field_m.field_P.field_s.ownerIndex, 2271));
           }
         }
         this.field_d.a(19842, param0);
@@ -963,7 +963,7 @@ final class MoveInfoPanel {
           this.field_k = new Sprite(84, 84);
           this.field_k.bindAsRenderTarget();
           SoftwareRasterizer.addRadialGlow(672, 672, 672, 128, this.field_o);
-          ProgressDialog.field_U.a((byte) 114);
+          ProgressDialog.field_U.setAsRasterTarget((byte) 114);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

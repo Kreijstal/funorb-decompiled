@@ -399,7 +399,7 @@ final class jl {
               DropTargetWidgetContainer.field_w[0 + 8 * pd.field_a].c(var4, -6 + var3);
               var3 = var3 + (14 * DropTargetWidgetContainer.field_y.drawParagraph(gf.field_e, var4 + 40, var3, var5 - 40, var6, 49407, -1, 0, 0, 14) + 14);
               DropTargetWidgetContainer.field_w[1 + 8 * pd.field_a].c(var4, -6 + var3);
-              var3 = var3 + (14 * DropTargetWidgetContainer.field_y.drawParagraph(mc.field_i, var4 + 40, var3, var5 - 40, var6, 49407, -1, 0, 0, 14) + 14);
+              var3 = var3 + (14 * DropTargetWidgetContainer.field_y.drawParagraph(ByteArrayPoolSupport.field_i, var4 + 40, var3, var5 - 40, var6, 49407, -1, 0, 0, 14) + 14);
               DropTargetWidgetContainer.field_w[2 + pd.field_a * 8].c(var4, -6 + var3);
               var3 = var3 + (14 + 14 * DropTargetWidgetContainer.field_y.drawParagraph(ImageProducerRasterBuffer.field_k, var4 + 40, var3, var5 - 40, var6, 49407, -1, 0, 0, 14));
               DropTargetWidgetContainer.field_w[8 * pd.field_a + 5].c(var4, -6 + var3);
@@ -602,7 +602,7 @@ final class jl {
           SoftwareRasterizer.drawHorizontalLine(var12, var13 + 15, 64, var14);
           SoftwareRasterizer.fillRectangleAlpha(var12 + 1, 1 + var13, 63, 14, 0, 128);
           if (12 != var7) {
-            stackIn_42_0 = mc.field_b >> 1;
+            stackIn_42_0 = ByteArrayPoolSupport.field_b >> 1;
           } else {
             stackIn_42_0 = nb.field_g;
           }
@@ -754,41 +754,41 @@ final class jl {
                           }
                         } else {
                           if (13 == var5) {
-                            var5 = mc.field_b;
+                            var5 = ByteArrayPoolSupport.field_b;
                             if (this.field_e.a((byte) -92)) {
-                              mc.field_b = 0;
+                              ByteArrayPoolSupport.field_b = 0;
                             }
                             if (this.field_e.e(-104)) {
-                              mc.field_b = 128;
+                              ByteArrayPoolSupport.field_b = 128;
                             }
                             if (this.field_e.c(0)) {
                               var6 = 64 + (ak.field_e + 9);
                               var7 = 8 + ((-var6 + (this.a(true, param0) + this.c((byte) 123, param0)) >> 1) + ak.field_e);
                               var8 = -var7 + pe.field_d << 1;
                               if (var8 <= 0) {
-                                mc.field_b = 0;
+                                ByteArrayPoolSupport.field_b = 0;
                               } else {
                                 if (var8 >= 128) {
-                                  mc.field_b = 128;
+                                  ByteArrayPoolSupport.field_b = 128;
                                 } else {
-                                  mc.field_b = var8;
+                                  ByteArrayPoolSupport.field_b = var8;
                                 }
                               }
                             }
                             if (this.field_e.e((byte) -84)) {
-                              mc.field_b = mc.field_b - 16;
-                              if (mc.field_b < 0) {
-                                mc.field_b = 0;
+                              ByteArrayPoolSupport.field_b = ByteArrayPoolSupport.field_b - 16;
+                              if (ByteArrayPoolSupport.field_b < 0) {
+                                ByteArrayPoolSupport.field_b = 0;
                               }
                             }
                             if (this.field_e.d((byte) 62)) {
-                              mc.field_b = mc.field_b + 16;
-                              if (mc.field_b > 128) {
-                                mc.field_b = 128;
+                              ByteArrayPoolSupport.field_b = ByteArrayPoolSupport.field_b + 16;
+                              if (ByteArrayPoolSupport.field_b > 128) {
+                                ByteArrayPoolSupport.field_b = 128;
                               }
                             }
-                            if ((var5 != mc.field_b)) {
-                              ResizableModalDialog.field_P.a(mc.field_b);
+                            if ((var5 != ByteArrayPoolSupport.field_b)) {
+                              ResizableModalDialog.field_P.a(ByteArrayPoolSupport.field_b);
                             }
                             break regionExit1;
                           }
@@ -1005,7 +1005,7 @@ final class jl {
                   ResizableModalDialog.field_P = gd.field_a;
                 }
                 ti.field_f.addListener(ResizableModalDialog.field_P);
-                ResizableModalDialog.field_P.a(mc.field_b);
+                ResizableModalDialog.field_P.a(ByteArrayPoolSupport.field_b);
               }
               mj.a(255, 12, 0, 12, 50);
             }
@@ -1016,7 +1016,7 @@ final class jl {
     final static void a(gi param0, gi param1, int param2, int param3, int param4, int param5) {
         ResizableModalDialog.field_S = param4;
         AlphaWidgetContainer.field_y = param0;
-        mc.field_h = param2;
+        ByteArrayPoolSupport.field_h = param2;
         rh.field_i = param5;
         if (param3 >= -5) {
           return;

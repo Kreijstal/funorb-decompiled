@@ -106,7 +106,7 @@ final class IterableNodeHashTable implements Iterable {
                   var10 = var8 & 65280;
                   var10 = 65280 & (var10 >> 1) - (var10 >> 5);
                   var11 = var8 >> 3 & 31;
-                  SoftwareRasterizer.field_f[var6_int] = ProxySocketConnector.a(var11, ProxySocketConnector.a(var10, var9 << 16));
+                  SoftwareRasterizer.field_f[var6_int] = ProxySocketConnector.bitwiseOr(var11, ProxySocketConnector.bitwiseOr(var10, var9 << 16));
                 }
                 var6_int++;
               }
@@ -118,7 +118,7 @@ final class IterableNodeHashTable implements Iterable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw fc.wrapClientException((Throwable) ((Object) var6), "ii.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) var6), "ii.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -142,7 +142,7 @@ final class IterableNodeHashTable implements Iterable {
           }
           node.previous.next = node;
         } catch (RuntimeException runtimeException) {
-          throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ii.C(" + obfuscationGuard + ',' + key + ',' + (node != null ? "{...}" : "null") + ')');
+          throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "ii.C(" + obfuscationGuard + ',' + key + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -217,7 +217,7 @@ final class IterableNodeHashTable implements Iterable {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw fc.wrapClientException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MusicPatch.wrapClientException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

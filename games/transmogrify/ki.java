@@ -16,7 +16,7 @@ final class ki extends DefaultTextWidgetRenderer {
         if (!param0) {
           return true;
         }
-        return si.field_l > 250 ? true : false;
+        return MusicPatch.field_l > 250 ? true : false;
     }
 
     public final void paintWidget(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
@@ -142,7 +142,7 @@ final class ki extends DefaultTextWidgetRenderer {
             return;
           }
           if (!param0) {
-            ji.a(this.field_o, 0, param1.field_o, 0, 6);
+            ArrayBlockSupport.copyObjectRange(this.field_o, 0, param1.field_o, 0, 6);
             return;
           }
           for (var4_int = 0; var4_int < 6; var4_int++) {

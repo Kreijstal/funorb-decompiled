@@ -313,7 +313,7 @@ final class DialogMessagePane extends DequeWidgetContainer implements WidgetActi
             var8 = (var2 - var1) * var7 / 32 + var1;
             var9 = var3 + var7 * (var4 - var3) / 32;
             var10 = (-var5 + var6) * var7 / 32 + var5;
-            field_S[var0][var7] = mp.a(mp.a(var9 << 8, mp.a(-445743104, var8) << 16), var10);
+            field_S[var0][var7] = mp.bitwiseOr(mp.bitwiseOr(var9 << 8, mp.bitwiseOr(-445743104, var8) << 16), var10);
           }
           var4Lifetime1 = 4 * var0 + 223;
           var2Lifetime1 = 223 + var0 * 4;
@@ -326,13 +326,13 @@ final class DialogMessagePane extends DequeWidgetContainer implements WidgetActi
             var8Lifetime1 = var7Lifetime1 * (var2Lifetime1 - var1Lifetime2) / 32 + var1Lifetime2;
             var9Lifetime1 = (var4Lifetime1 - var3Lifetime1) * var7Lifetime1 / 32 + var3Lifetime1;
             var10Lifetime1 = var5Lifetime1 + (var6Lifetime1 - var5Lifetime1) * var7Lifetime1 / 32;
-            field_V[var0][var7Lifetime1] = mp.a(mp.a(mp.a(var8Lifetime1, 77168640) << 16, var9Lifetime1 << 8), var10Lifetime1);
+            field_V[var0][var7Lifetime1] = mp.bitwiseOr(mp.bitwiseOr(mp.bitwiseOr(var8Lifetime1, 77168640) << 16, var9Lifetime1 << 8), var10Lifetime1);
           }
         }
         field_M = new int[32];
         for (var0Lifetime1 = 0; var0Lifetime1 < 32; var0Lifetime1++) {
           var1Lifetime1 = 112 + var0Lifetime1 * 2;
-          field_M[var0Lifetime1] = mp.a(var1Lifetime1 * 65793, -2147483648);
+          field_M[var0Lifetime1] = mp.bitwiseOr(var1Lifetime1 * 65793, -2147483648);
         }
     }
 }

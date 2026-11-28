@@ -209,7 +209,7 @@ final class tl {
         jl.field_d = -2147483648;
         am.field_e = 2147483647;
         hc.field_j = -2147483648;
-        rc.field_d = 0;
+        MusicPatchEnvelope.field_d = 0;
     }
 
     final static void b(int param0) {

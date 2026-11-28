@@ -57,7 +57,7 @@ final class hk {
           var3 = (tm) (ec.field_c.beginForward(81));
           if (var3.a(param0 ^ 19)) {
             ec.field_c.removeFirst(63854);
-            vc.a(-8, cm.field_o, var3.field_s);
+            MusicPatch.a(-8, cm.field_o, var3.field_s);
             var2 = 1;
           }
           var5 = (tm) (ec.field_c.beginForward(param0 + 92));
@@ -76,7 +76,7 @@ final class hk {
           if (var4.a(param0 - 19)) {
             DebouncedFieldValidator.field_b.removeFirst(63854);
             var2 = 1;
-            vc.a(109, cm.field_o, var4.field_s);
+            MusicPatch.a(109, cm.field_o, var4.field_s);
           }
           var1 = (tm) (DebouncedFieldValidator.field_b.beginForward(96));
         }

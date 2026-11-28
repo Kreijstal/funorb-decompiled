@@ -42,10 +42,10 @@ final class tb {
           LoginPanel.field_D.writeInt(-102, DiskArchiveRequest.field_w);
           LoginPanel.field_D.writeLong(1908720528, qb.field_k);
           var6 = 0;
-          if (wd.field_g) {
+          if (MidiNoteMask.field_g) {
             var6 = var6 | 1;
           }
-          if (kc.field_D) {
+          if (MusicPatchNode.field_D) {
             var6 = var6 | 4;
           }
           if (param2) {

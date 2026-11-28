@@ -31,7 +31,7 @@ final class wj implements WidgetRenderer {
           di.a(param12, -121, param6);
           gi.a(param15, param0, param19, false, param13, param8);
           var21_int = -109 % ((param14 + 27) / 45);
-          td.a(param3, param1, param20, 200);
+          MidiNoteMask.a(param3, param1, param20, 200);
           fd.a(param7, 7, param5, param16);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

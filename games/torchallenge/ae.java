@@ -35,10 +35,10 @@ final class ae extends IntrusiveNode {
           if (null != GameApplet.field_n) {
             GameApplet.field_n.field_L.setNameSuggestions(-6620, param1);
           }
-          if (m.field_j == null) {
+          if (GrowableIntArray.field_j == null) {
             return;
           }
-          m.field_j.field_L.setNameSuggestions(-6620, param1);
+          GrowableIntArray.field_j.field_L.setNameSuggestions(-6620, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

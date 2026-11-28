@@ -43,7 +43,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
             if (null != dn.field_d &&
               dn.field_d.field_f) {
               qh.c(4);
-              DelegatingCanvas.field_b.showDialog(new FullscreenStatusDialog(DelegatingCanvas.field_b, wl.field_f), param0 - 15102);
+              DelegatingCanvas.field_b.showDialog(new FullscreenStatusDialog(DelegatingCanvas.field_b, GrowableIntArray.field_f), param0 - 15102);
             }
             return;
           }
@@ -84,7 +84,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
         try {
           var3 = null;
           if (kd.field_t != param1) {
-            if (wl.field_f == param1) {
+            if (GrowableIntArray.field_f == param1) {
               var3 = sf.field_s;
               this.field_z = this.field_z + 10;
               if (kj.a((byte) -14)) {

@@ -14,7 +14,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           if (DraggableWidgetContainer.field_M != null) {
             ProgressMessageDialog.field_eb = 0;
-            cj.field_i = param0.getX();
+            MidiNoteMask.field_i = param0.getX();
             ij.field_h = param0.getY();
             ResizableModalDialog.field_K = true;
           }
@@ -227,7 +227,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           if (DraggableWidgetContainer.field_M != null) {
             ProgressMessageDialog.field_eb = 0;
-            cj.field_i = -1;
+            MidiNoteMask.field_i = -1;
             ij.field_h = -1;
             ResizableModalDialog.field_K = true;
           }
@@ -255,7 +255,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           if (DraggableWidgetContainer.field_M != null) {
             ProgressMessageDialog.field_eb = 0;
-            cj.field_i = param0.getX();
+            MidiNoteMask.field_i = param0.getX();
             ij.field_h = param0.getY();
             ResizableModalDialog.field_K = true;
           }
@@ -308,7 +308,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           if (DraggableWidgetContainer.field_M != null) {
             ProgressMessageDialog.field_eb = 0;
-            cj.field_i = param0.getX();
+            MidiNoteMask.field_i = param0.getX();
             ij.field_h = param0.getY();
             ResizableModalDialog.field_K = true;
           }

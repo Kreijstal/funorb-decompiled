@@ -97,7 +97,7 @@ final class vd {
           var8 = var41;
           var64 = new int[param6.field_l];
           var62 = ModalDialog.field_w;
-          var63 = nh.field_j;
+          var63 = MusicPatchEnvelope.field_j;
           var61 = d.field_b;
           for (var13 = 0; var13 < param6.field_l; var13++) {
             var14 = var61[var13] * param7 + (param2 * var62[var13] + param3 * var63[var13]) >> 8;

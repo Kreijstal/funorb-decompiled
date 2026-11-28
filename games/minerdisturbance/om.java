@@ -34,7 +34,7 @@ final class om {
 
     final static void a(int param0) {
         AccountRegistrationPanel.field_N = null;
-        cg.field_C = false;
+        MusicPatchNode.field_C = false;
         ce.field_c = null;
         if (param0 == -22126) {
           MouseWheelInput.field_g = null;

@@ -506,12 +506,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    ol.field_c = rb.field_u.waitAndCountTicks(NetworkArchiveRequest.field_B, 1);
+                    GrowableIntArray.field_c = rb.field_u.waitAndCountTicks(NetworkArchiveRequest.field_B, 1);
                     stackIn_96_0 = 0;
                   }
                   var3 = stackIn_96_0;
                   do {
-                    if (!(ol.field_c > var3)) {
+                    if (!(GrowableIntArray.field_c > var3)) {
                       this.renderAppletFrame((byte) 56);
                       ni.a(DebouncedFieldValidator.field_d, qd.field_j, -127);
                       break;

@@ -13,7 +13,7 @@ final class bc {
         EmailFormatValidator.field_j.readUnsignedByte(96);
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseAnd(int param0, int param1) {
         return param0 & param1;
     }
 

@@ -19,7 +19,7 @@ final class ak extends IntrusiveNode {
     static int[] field_m;
     int field_p;
 
-    static long a(long param0, long param1) {
+    static long bitwiseOr(long param0, long param1) {
         return param0 | param1;
     }
 

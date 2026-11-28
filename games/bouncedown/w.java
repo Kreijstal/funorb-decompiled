@@ -76,7 +76,7 @@ final class w {
           var1_int = ja.field_c[0];
           for (var3 = 1; ja.field_c.length > var3; var3++) {
             var4 = ja.field_c[var3];
-            cb.a(lb.field_c, var3 << 4, lb.field_c, var1_int, var4);
+            ArrayBlockSupport.copyIntRange(lb.field_c, var3 << 4, lb.field_c, var1_int, var4);
             var1_int = var1_int + var4;
           }
           return;

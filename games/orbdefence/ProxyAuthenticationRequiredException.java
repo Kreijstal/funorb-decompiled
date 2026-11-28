@@ -65,14 +65,14 @@ final class ProxyAuthenticationRequiredException extends IOException {
               }
               var4 = Class.forName("BufferedImageRasterBuffer");
               var5 = (RasterBuffer) (var4.newInstance());
-              var5.a(88, param2, param0, param1);
+              var5.initialize(88, param2, param0, param1);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
               var5_ref = new ImageProducerRasterBuffer();
-              ((RasterBuffer) ((Object) var5_ref)).a(-73, param2, param0, param1);
+              ((RasterBuffer) ((Object) var5_ref)).initialize(-73, param2, param0, param1);
               stackIn_5_0 = var5_ref;
               return (RasterBuffer) ((Object) stackIn_5_0);
             }
@@ -214,7 +214,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
             var3 = (vg) null;
             ProxyAuthenticationRequiredException.a(true, 92, (vg) null);
           }
-          stackIn_3_0 = tj.decodeCp1252String(param0.length, 0, 0, param0);
+          stackIn_3_0 = GrowableIntArray.decodeCp1252String(param0.length, 0, 0, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

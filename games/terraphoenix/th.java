@@ -53,10 +53,10 @@ final class th {
         RuntimeException decompiledCaughtException = null;
         var4 = Terraphoenix.field_V;
         try {
-          var1_int = fc.field_e[0];
-          for (var2 = 1; fc.field_e.length > var2; var2++) {
-            var3 = fc.field_e[var2];
-            ka.a(qh.field_c, var2 << 4, qh.field_c, var1_int, var3);
+          var1_int = GrowableIntArray.field_e[0];
+          for (var2 = 1; GrowableIntArray.field_e.length > var2; var2++) {
+            var3 = GrowableIntArray.field_e[var2];
+            ArrayBlockSupport.copyIntRange(qh.field_c, var2 << 4, qh.field_c, var1_int, var3);
             var1_int = var1_int + var3;
           }
           if (param0) {

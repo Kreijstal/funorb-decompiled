@@ -62,7 +62,7 @@ class DequeWidgetContainer extends UiWidget implements WidgetContainerMarker {
         if (param0 >= -123) {
           return (PcmStreamMixer) null;
         }
-        return ch.field_j;
+        return MusicPatchEnvelope.field_j;
     }
 
     final String getTooltipText(int param0) {

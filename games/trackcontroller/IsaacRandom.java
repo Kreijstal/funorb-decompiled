@@ -194,10 +194,10 @@ final class IsaacRandom {
             }
           }
           this.field_c = this.field_c + this.field_d[var2 + 128 & 255];
-          dupTemp$1 = this.field_j + (this.field_d[RandomAccessCacheFile.a(1020, var3) >> 2] + this.field_c);
+          dupTemp$1 = this.field_j + (this.field_d[RandomAccessCacheFile.bitwiseAnd(1020, var3) >> 2] + this.field_c);
           var4 = dupTemp$1;
           this.field_d[var2] = dupTemp$1;
-          dupTemp$2 = var3 + this.field_d[RandomAccessCacheFile.a(var4, 261211) >> 8 >> 2];
+          dupTemp$2 = var3 + this.field_d[RandomAccessCacheFile.bitwiseAnd(var4, 261211) >> 8 >> 2];
           this.field_j = dupTemp$2;
           this.field_i[var2] = dupTemp$2;
         }

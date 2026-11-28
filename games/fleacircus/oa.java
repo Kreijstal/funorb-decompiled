@@ -28,7 +28,7 @@ final class oa extends IntrusiveNode {
         int var3Lifetime1;
         if (param0 == 7 &&
           !DiskArchiveRequest.c((byte) 57) &&
-          0 < wc.field_q) {
+          0 < MusicPatch.field_q) {
           param0 = 0;
         }
         if (ValidatedTextField.field_V == param0) {

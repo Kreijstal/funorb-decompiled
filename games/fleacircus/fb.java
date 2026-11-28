@@ -26,7 +26,7 @@ final class fb {
           nb.field_a.processPointerInput(PasswordValidator.field_p, 91, true, AccountServiceResult.field_h);
           nb.field_a.advanceDialogs(true);
           while (SecondaryNodeDeque.b(-111)) {
-            nb.field_a.processKeyInput(id.field_b, (byte) -37, ji.field_a);
+            nb.field_a.processKeyInput(GrowableIntArray.field_b, (byte) -37, ji.field_a);
           }
           if (-1 != cl.field_b) {
             var1_int = cl.field_b;

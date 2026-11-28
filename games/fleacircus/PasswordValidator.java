@@ -112,7 +112,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_13_0;
           }
           if (this.containsEmailComponent(0, param1)) {
-            stackIn_17_0 = id.field_j;
+            stackIn_17_0 = GrowableIntArray.field_j;
             return stackIn_17_0;
           }
           if (0 >= var7.length()) {
@@ -248,7 +248,7 @@ final class PasswordValidator extends TextFieldValidator {
             var8Lifetime1 = se.a(stackIn_39_0, stackIn_39_1, stackIn_40_2);
             var9Lifetime1 = -(var8Lifetime1 >> 1) + DiskCacheWorker.field_b;
             if (var5 >= 0) {
-              var1_int = var1_int + id.field_c;
+              var1_int = var1_int + GrowableIntArray.field_c;
               if (bk.field_a.field_k == var5) {
                 stackIn_44_0 = ub.field_a;
               } else {
@@ -262,7 +262,7 @@ final class PasswordValidator extends TextFieldValidator {
             }
             if (var5 >= 0) {
               lj.field_a.drawString(var7, var9Lifetime1, SpriteGeometry.field_y + var1_int, var6, -1);
-              var1_int = var1_int + (ge.field_h + id.field_c + hb.field_t);
+              var1_int = var1_int + (ge.field_h + GrowableIntArray.field_c + hb.field_t);
             } else {
               pb.field_e.drawString(var7, var9Lifetime1, var1_int + kh.field_g, var6, -1);
               var1_int = var1_int + cm.field_f;

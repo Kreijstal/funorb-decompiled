@@ -49,7 +49,7 @@ final class mn extends pd {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var6 < var3; var6++) {
-              var10[var6] = gh.field_z[pf.b((int) var21[var6], 255)];
+              var10[var6] = gh.field_z[pf.bitwiseAnd((int) var21[var6], 255)];
             }
             var1[var2] = new RgbSprite(SecondaryIntrusiveDeque.field_c, bo.field_o, uo.field_k[var2], MouseWheelInput.field_a[var2], uo.field_l[var2], je.field_c[var2], var22);
           } else {
@@ -61,7 +61,7 @@ final class mn extends pd {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var7 < var3; var7++) {
-              var6_ref_int__[var7] = hm.a(gh.field_z[pf.b((int) var21[var7], 255)], pf.b((int) var16[var7], 255) << 24);
+              var6_ref_int__[var7] = hm.bitwiseOr(gh.field_z[pf.bitwiseAnd((int) var21[var7], 255)], pf.bitwiseAnd((int) var16[var7], 255) << 24);
             }
             var1[var2] = (RgbSprite) ((Object) new ArgbSprite(SecondaryIntrusiveDeque.field_c, bo.field_o, uo.field_k[var2], MouseWheelInput.field_a[var2], uo.field_l[var2], je.field_c[var2], var17));
           }

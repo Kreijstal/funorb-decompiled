@@ -2897,7 +2897,7 @@ final class LevelMap {
           if (null != u.field_a) {
             u.field_a.bindAsRenderTarget();
             SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
-            k.field_f.a(0);
+            k.field_f.setAsRasterTarget(0);
           }
           IntrusiveNode.field_c = -1;
           vf.field_a = -1;
@@ -2994,7 +2994,7 @@ final class LevelMap {
                             if (!param1) {
                               u.field_a.bindAsRenderTarget();
                               SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
-                              k.field_f.a(0);
+                              k.field_f.setAsRasterTarget(0);
                             } else {
                               var16 = DialogMessagePane.field_J;
                               ((Sprite) (var16)).bindAsRenderTarget();
@@ -3006,7 +3006,7 @@ final class LevelMap {
                               SoftwareRasterizer.setPixel(64, 108, 16777215);
                               SoftwareRasterizer.setPixel(64, 139, 16777215);
                               SoftwareRasterizer.setPixel(95, 124, 16777215);
-                              k.field_f.a(0);
+                              k.field_f.setAsRasterTarget(0);
                               u.field_a.bindAsRenderTarget();
                               ((Sprite) (var16)).drawOpaque(0, 0);
                               if (this.state != null &&
@@ -3024,7 +3024,7 @@ final class LevelMap {
                                 NodeHashTableIterator.a((byte) -86, u.field_a, 16384);
                               }
                               ((Sprite) (var16)).drawSilhouette(0, 0, 0);
-                              k.field_f.a(0);
+                              k.field_f.setAsRasterTarget(0);
                               ug.field_b = -64 + var5;
                               hb.field_n = -(48 * eg.field_p) + (-124 + var6);
                               ((Sprite) (var16)).draw(-64 + var5, -124 + var6);
@@ -3137,7 +3137,7 @@ final class LevelMap {
                             if (!param1) {
                               u.field_a.bindAsRenderTarget();
                               SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
-                              k.field_f.a(0);
+                              k.field_f.setAsRasterTarget(0);
                             } else {
                               var16Lifetime2 = DialogMessagePane.field_J;
                               ((Sprite) (var16Lifetime2)).bindAsRenderTarget();
@@ -3149,7 +3149,7 @@ final class LevelMap {
                               SoftwareRasterizer.setPixel(64, 108, 16777215);
                               SoftwareRasterizer.setPixel(64, 139, 16777215);
                               SoftwareRasterizer.setPixel(95, 124, 16777215);
-                              k.field_f.a(0);
+                              k.field_f.setAsRasterTarget(0);
                               u.field_a.bindAsRenderTarget();
                               ((Sprite) (var16Lifetime2)).drawOpaque(0, 0);
                               if (this.state != null &&
@@ -3167,7 +3167,7 @@ final class LevelMap {
                                 NodeHashTableIterator.a((byte) -86, u.field_a, 16384);
                               }
                               ((Sprite) (var16Lifetime2)).drawSilhouette(0, 0, 0);
-                              k.field_f.a(0);
+                              k.field_f.setAsRasterTarget(0);
                               ug.field_b = -64 + var5;
                               hb.field_n = -(48 * eg.field_p) + (-124 + var6);
                               ((Sprite) (var16Lifetime2)).draw(-64 + var5, -124 + var6);
@@ -3237,7 +3237,7 @@ final class LevelMap {
                           if (!param1) {
                             u.field_a.bindAsRenderTarget();
                             SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
-                            k.field_f.a(0);
+                            k.field_f.setAsRasterTarget(0);
                           } else {
                             var16Lifetime1 = DialogMessagePane.field_J;
                             ((Sprite) (var16Lifetime1)).bindAsRenderTarget();
@@ -3249,7 +3249,7 @@ final class LevelMap {
                             SoftwareRasterizer.setPixel(64, 108, 16777215);
                             SoftwareRasterizer.setPixel(64, 139, 16777215);
                             SoftwareRasterizer.setPixel(95, 124, 16777215);
-                            k.field_f.a(0);
+                            k.field_f.setAsRasterTarget(0);
                             u.field_a.bindAsRenderTarget();
                             ((Sprite) (var16Lifetime1)).drawOpaque(0, 0);
                             if (this.state != null &&
@@ -3267,7 +3267,7 @@ final class LevelMap {
                               NodeHashTableIterator.a((byte) -86, u.field_a, 16384);
                             }
                             ((Sprite) (var16Lifetime1)).drawSilhouette(0, 0, 0);
-                            k.field_f.a(0);
+                            k.field_f.setAsRasterTarget(0);
                             ug.field_b = -64 + var5;
                             hb.field_n = -(48 * eg.field_p) + (-124 + var6);
                             ((Sprite) (var16Lifetime1)).draw(-64 + var5, -124 + var6);

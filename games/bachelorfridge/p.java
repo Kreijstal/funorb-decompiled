@@ -42,7 +42,7 @@ final class p extends pu {
           for (var5 = 0; var5 < 256; var5++) {
             incrementValue$1 = var3_int;
             var3_int++;
-            var4[var5] = dda.a(255, (int) param1[incrementValue$1]);
+            var4[var5] = dda.bitwiseAnd(255, (int) param1[incrementValue$1]);
           }
           var3_int += 256;
           var7 = 0;
