@@ -248,7 +248,7 @@ final class ArchiveIndex {
         try {
           try {
             java.awt.Graphics var4 = param2.getGraphics();
-            cl.field_fb.a(118, var4, param3, param0);
+            cl.field_fb.drawImage(118, var4, param3, param0);
             if (param1) {
               return;
             }

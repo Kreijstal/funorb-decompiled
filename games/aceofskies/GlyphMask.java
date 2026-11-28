@@ -27,7 +27,7 @@ abstract class GlyphMask {
 
     final static void showLoginWithStoredUsername(int param0) {
         String var2 = (String) null;
-        ub.a(rt.field_e, (String) null, -117);
+        MidiNoteMask.a(rt.field_e, (String) null, -117);
         if (param0 != 87) {
           field_d = (String) null;
         }

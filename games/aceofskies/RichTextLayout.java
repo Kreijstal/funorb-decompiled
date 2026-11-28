@@ -236,7 +236,7 @@ final class RichTextLayout extends TextLayout {
               if (param6 != 3) {
                 stackIn_44_3 = 0;
               } else {
-                stackIn_44_3 = this.a(param4, -1, var13, param1.measureTextWidth(var13));
+                stackIn_44_3 = this.computeJustificationStep(param4, -1, var13, param1.measureTextWidth(var13));
               }
               ProgressDialog.a(stackIn_43_0, stackIn_43_1, stackIn_43_2, stackIn_44_3, (byte) 30);
             }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ub extends IntrusiveNode {
+final class MidiNoteMask extends IntrusiveNode {
     static int field_g;
     static ResourceArchive vorbisSoundArchive;
     static AircraftDefinition basePlayerDefinition;
@@ -3084,7 +3084,7 @@ final class ub extends IntrusiveNode {
         decompiledBody.run();
     }
 
-    ub(byte[] param0) {
+    MidiNoteMask(byte[] param0) {
         String stackIn_7_2 = null;
         try {
           this.field_e = param0;
@@ -3108,7 +3108,7 @@ final class ub extends IntrusiveNode {
           vorbisSoundArchive = null;
           basePlayerDefinition = null;
           if (param0) {
-            ub.a(true);
+            MidiNoteMask.a(true);
           }
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "ub.B(" + param0 + ')');

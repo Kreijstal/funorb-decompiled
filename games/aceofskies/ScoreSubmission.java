@@ -38,7 +38,7 @@ final class ScoreSubmission extends IntrusiveNode {
             GameKeyHandler.upgradeSprites = new RenderSprite[qq.upgradeSpriteData.length];
             HighscoreQuery.powerBulbSprites = new RenderSprite[tt.powerBulbSpriteData.length];
             OpenGlBuffer.counterPanelSprites = new RenderSprite[eb.counterPanelSpriteData.length];
-            in.scoreDigitSprites = new RenderSprite[kb.scoreDigitSpriteData.length];
+            in.scoreDigitSprites = new RenderSprite[ValidationStatusWidget.scoreDigitSpriteData.length];
             ConfirmedEmailAvailabilityValidator.gaugeSprites = new RenderSprite[ArchiveIndex.gaugeSpriteData.length][];
             Pickup.powerchuteSprites = new RenderSprite[ol.powerchuteSpriteData.length];
             po.powerIconSprites = new RenderSprite[nu.powerIconSpriteData.length];
@@ -123,8 +123,8 @@ final class ScoreSubmission extends IntrusiveNode {
           for (int var2Lifetime18 = 0; var2Lifetime18 < eb.counterPanelSpriteData.length; var2Lifetime18++) {
             OpenGlBuffer.counterPanelSprites[var2Lifetime18] = var6.createSprite(eb.counterPanelSpriteData[var2Lifetime18], false);
           }
-          for (int var2Lifetime19 = 0; var2Lifetime19 < kb.scoreDigitSpriteData.length; var2Lifetime19++) {
-            in.scoreDigitSprites[var2Lifetime19] = var6.createSprite(kb.scoreDigitSpriteData[var2Lifetime19], false);
+          for (int var2Lifetime19 = 0; var2Lifetime19 < ValidationStatusWidget.scoreDigitSpriteData.length; var2Lifetime19++) {
+            in.scoreDigitSprites[var2Lifetime19] = var6.createSprite(ValidationStatusWidget.scoreDigitSpriteData[var2Lifetime19], false);
           }
           AccountNameAvailabilityValidator.titleImage = var6.createSprite(BoundedRandomAccessFile.titleImageData, false);
           OpenGlTextureMask.bulletSprite = var6.createSprite(RendererManager.bulletSpriteData, false);

@@ -416,17 +416,17 @@
       "inputTreeSha256": "e83d0f60847dedf785504d5703894944980b327ed81dff2305238ab5f59caf67",
       "sources": {
         "files": 545,
-        "sha256": "28273baeb8e428db88d04d52f50d86fea76ccb65c289753281bfa81cccf581f4"
+        "sha256": "044e40dd49eeb82bf8a3e87d1d7cb9d5af7a7904ac3333da7c77be3554919ebb"
       },
       "dictionary": {
         "path": "decompilation/aceofskies-naming.json",
-        "sha256": "f341f3375264735fe90ae43d5a3af87f5c618d6da093bda779f96b26225ebd84"
+        "sha256": "2b3d31e6ff1cc5de5e28b47b36dc26cb6874922e50ee859a2c3840cbab05dc0a"
       },
       "readingGuide": {
         "path": "games/aceofskies/README.md",
-        "sha256": "0b5d9d345b201325d2cfc3f2fe7c6ef6bf2ffe0f78f31f01ef705f685c47fa30"
+        "sha256": "2d0abe73bc12fddba5ba7e9828d6c61d09880fffabeea5e338e1735c00049066"
       },
-      "rulesSha256": "64bc5e92dcb2b66a55888eb3ef03f007aa67e2ed4f15576313dece711b61f2a9",
+      "rulesSha256": "726f1abf382ec62f887458ac4b097078197b48bf4aded691e9879a880440b7f2",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       },
@@ -11574,7 +11574,7 @@
         },
         "publishedSources": {
           "files": 545,
-          "sha256": "28273baeb8e428db88d04d52f50d86fea76ccb65c289753281bfa81cccf581f4"
+          "sha256": "044e40dd49eeb82bf8a3e87d1d7cb9d5af7a7904ac3333da7c77be3554919ebb"
         }
       },
       "arcanistsmulti": {

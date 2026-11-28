@@ -52,7 +52,7 @@ final class BufferedRandomAccessFile {
           if (var3 > -1L &&
             var3 < var5) {
             int var7 = (int)(-var3 + var5);
-            au.a(this.field_g, (int)(-this.field_e + var3), this.field_n, (int)(var3 - this.field_l), var7);
+            ArrayBlockSupport.copyByteRange(this.field_g, (int)(-this.field_e + var3), this.field_n, (int)(var3 - this.field_l), var7);
           }
           this.field_e = -1L;
           this.field_c = 0;
@@ -79,7 +79,7 @@ final class BufferedRandomAccessFile {
             if (this.field_e != -1L &&
               this.field_e <= this.field_k &&
               (long)this.field_c + this.field_e >= this.field_k + (long)param1) {
-              au.a(this.field_g, (int)(-this.field_e + this.field_k), param2, param3, param1);
+              ArrayBlockSupport.copyByteRange(this.field_g, (int)(-this.field_e + this.field_k), param2, param3, param1);
               this.field_k = this.field_k + (long)param1;
               return;
             }
@@ -95,7 +95,7 @@ final class BufferedRandomAccessFile {
               if (var9_int > param1) {
                 var9_int = param1;
               }
-              au.a(this.field_n, (int)(-this.field_l + this.field_k), param2, param3, var9_int);
+              ArrayBlockSupport.copyByteRange(this.field_n, (int)(-this.field_l + this.field_k), param2, param3, var9_int);
               param3 = param3 + var9_int;
               param1 = param1 - var9_int;
               this.field_k = this.field_k + (long)var9_int;
@@ -126,7 +126,7 @@ final class BufferedRandomAccessFile {
               if (var9_intLifetime1Lifetime1 > this.field_a) {
                 var9_intLifetime1Lifetime1 = this.field_a;
               }
-              au.a(this.field_n, 0, param2, param3, var9_intLifetime1Lifetime1);
+              ArrayBlockSupport.copyByteRange(this.field_n, 0, param2, param3, var9_intLifetime1Lifetime1);
               param1 = param1 - var9_intLifetime1Lifetime1;
               this.field_k = this.field_k + (long)var9_intLifetime1Lifetime1;
               param3 = param3 + var9_intLifetime1Lifetime1;
@@ -165,7 +165,7 @@ final class BufferedRandomAccessFile {
               if (var9 > -1L &&
                 var11 > var9) {
                 int var13 = (int)(-var9 + var11);
-                au.a(this.field_g, (int)(var9 - this.field_e), param2, (int)(-var5_long + var9) + var7, var13);
+                ArrayBlockSupport.copyByteRange(this.field_g, (int)(var9 - this.field_e), param2, (int)(-var5_long + var9) + var7, var13);
                 if (this.field_k < var11) {
                   param1 = (int)((long)param1 - (var11 - this.field_k));
                   this.field_k = var11;
@@ -223,7 +223,7 @@ final class BufferedRandomAccessFile {
             if (this.field_e != -1L &&
               ((long)param0 + this.field_k) > (this.field_e + (long)this.field_g.length)) {
               int var6_int = (int)(this.field_e - (this.field_k - (long)this.field_g.length));
-              au.a(param1, param2, this.field_g, (int)(this.field_k - this.field_e), var6_int);
+              ArrayBlockSupport.copyByteRange(param1, param2, this.field_g, (int)(this.field_k - this.field_e), var6_int);
               this.field_k = this.field_k + (long)var6_int;
               param2 = param2 + var6_int;
               param0 = param0 - var6_int;
@@ -237,7 +237,7 @@ final class BufferedRandomAccessFile {
               if (this.field_e == -1L) {
                 this.field_e = this.field_k;
               }
-              au.a(param1, param2, this.field_g, (int)(this.field_k - this.field_e), param0);
+              ArrayBlockSupport.copyByteRange(param1, param2, this.field_g, (int)(this.field_k - this.field_e), param0);
               this.field_k = this.field_k + (long)param0;
               if ((-this.field_e + this.field_k) > (long)this.field_c) {
                 this.field_c = (int)(-this.field_e + this.field_k);
@@ -272,7 +272,7 @@ final class BufferedRandomAccessFile {
             if (-1L < var6 &&
               var8 > var6) {
               int var10 = (int)(var8 - var6);
-              au.a(param1, (int)(-this.field_k + var6 + (long)param2), this.field_n, (int)(-this.field_l + var6), var10);
+              ArrayBlockSupport.copyByteRange(param1, (int)(-this.field_k + var6 + (long)param2), this.field_n, (int)(-this.field_l + var6), var10);
             }
             this.field_k = this.field_k + (long)param0;
             return;

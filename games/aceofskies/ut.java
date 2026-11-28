@@ -30,7 +30,7 @@ final class ut {
             int[] var5 = var9;
             int var6 = param4;
             int var7 = param3;
-            var9[var6] = var7 + (pg.a(var9[var6], 16711422) >> 1);
+            var9[var6] = var7 + (pg.bitwiseAnd(var9[var6], 16711422) >> 1);
             param4++;
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

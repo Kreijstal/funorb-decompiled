@@ -7,7 +7,7 @@ final class pf extends InteractiveWidget {
     int field_x;
     private int field_y;
     static int field_z;
-    private ot field_w;
+    private GrowableIntArray field_w;
 
     final boolean pointerPressed(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         String stackIn_27_2 = null;
@@ -31,8 +31,8 @@ final class pf extends InteractiveWidget {
             }
             int var10 = 2147483647;
             int var11 = -1;
-            for (int var12 = 0; this.field_w.a((byte) 123) > var12; var12++) {
-              int var13 = -var8_int + this.field_w.b(var12, 1);
+            for (int var12 = 0; this.field_w.size((byte) 123) > var12; var12++) {
+              int var13 = -var8_int + this.field_w.get(var12, 1);
               var13 = var13 * var13;
               if (var13 < var10) {
                 var11 = var12;
@@ -40,10 +40,10 @@ final class pf extends InteractiveWidget {
               }
             }
             if (var11 >= 0) {
-              this.field_w.a(var11, (byte) -58);
+              this.field_w.removeAt(var11, (byte) -58);
             }
           } else {
-            this.field_w.a((byte) -50, var8_int);
+            this.field_w.append((byte) -50, var8_int);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -64,7 +64,7 @@ final class pf extends InteractiveWidget {
         if (!param0) {
           return 16;
         }
-        return this.field_w.a((byte) -114);
+        return this.field_w.size((byte) -114);
     }
 
     final int a(int param0) {
@@ -78,11 +78,11 @@ final class pf extends InteractiveWidget {
         if (param1 < 0) {
           return -1;
         }
-        if (this.field_w.a((byte) -32) <= param1) {
+        if (this.field_w.size((byte) -32) <= param1) {
           return -1;
         }
         if (!param0) {
-          return this.field_w.b(param1, 1);
+          return this.field_w.get(param1, 1);
         }
         return -3;
     }

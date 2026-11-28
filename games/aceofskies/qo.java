@@ -90,7 +90,7 @@ final class qo {
               var5_int = var12.length << 2;
             }
             for (int var7 = 0; var7 < var5_int; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(-100) << pg.a(var7 << 8, 768));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(-100) << pg.bitwiseAnd(var7 << 8, 768));
             }
             var4_ref_oh.unlink(-124);
             return;

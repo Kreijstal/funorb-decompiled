@@ -118,11 +118,11 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           DefaultTextWidgetRenderer var4 = new DefaultTextWidgetRenderer(qo.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, qo.field_b.maxAscent, -1, 2147483647, true);
           this.field_A = new RichTextWidget(var7, var4);
           this.field_A.field_k = "";
-          this.field_A.a(-57, m.field_g, 0);
-          this.field_A.a(72, m.field_g, 1);
+          this.field_A.setHotspotTooltip(-57, m.field_g, 0);
+          this.field_A.setHotspotTooltip(72, m.field_g, 1);
           this.field_A.field_q = this.field_q - 40;
           this.field_A.field_o = (WidgetEventListener) (this);
-          this.field_A.a(26, var3, -40 + this.field_q, (byte) 110);
+          this.field_A.setTextBounds(26, var3, -40 + this.field_q, (byte) 110);
           var3 = var3 + (15 + this.field_A.field_n);
           this.addChild(this.field_A, 1);
           int var5 = 4;

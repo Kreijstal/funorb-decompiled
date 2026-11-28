@@ -10,13 +10,13 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
     private InteractiveWidget field_y;
     static String field_x;
 
-    private final int a(UiWidget param0, int param1, int param2, byte param3, String param4, String param5) {
+    private final int addLabeledFieldWithDefaultValidationMessage(UiWidget param0, int param1, int param2, byte param3, String param4, String param5) {
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
         String stackIn_14_2 = null;
         try {
           if (param3 > 63) {
-            int stackIn_4_0 = this.a(param4, 126, param2, param0, 35, param5, param1);
+            int stackIn_4_0 = this.addLabeledFieldWithValidationMessage(param4, 126, param2, param0, 35, param5, param1);
             return stackIn_4_0;
           }
           int stackIn_2_0 = -73;
@@ -66,7 +66,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         var2.setBounds(50, 20, var3, 270, (byte) 124);
         var3 += 50;
         this.addChild(var2, 1);
-        var3 = var3 + (5 + this.a(this.field_w, 170, var3, (byte) 107, SecondaryKeyHashTable.field_g, sc.field_b));
+        var3 = var3 + (5 + this.addLabeledFieldWithDefaultValidationMessage(this.field_w, 170, var3, (byte) 107, SecondaryKeyHashTable.field_g, sc.field_b));
         this.field_v.setBounds(40, -var5 + 496 >> 1, var3, var5, (byte) 126);
         this.field_y.setBounds(40, 3 + var4, var3 + 15, 60, (byte) 125);
         this.field_y.field_o = (WidgetEventListener) (this);
@@ -96,14 +96,14 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         GameCanvas.a(true, this.field_w.field_f);
     }
 
-    private final int a(String param0, int param1, int param2, UiWidget param3, int param4, String param5, int param6) {
+    private final int addLabeledFieldWithValidationMessage(String param0, int param1, int param2, UiWidget param3, int param4, String param5, int param6) {
         String stackIn_5_2 = null;
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
         try {
           LabeledWidgetContainer var10 = new LabeledWidgetContainer(20, param2, 120 + param6, 25, param3, false, 120, 3, qo.field_b, 16777215, param0);
           this.addChild(var10, param1 - 125);
-          kb var9 = new kb(((FieldValidatorProvider) ((Object) param3)).getFieldValidator(0), param5, param1, param2 + var10.field_n, 25 + param6, param4);
+          ValidationStatusWidget var9 = new ValidationStatusWidget(((FieldValidatorProvider) ((Object) param3)).getFieldValidator(0), param5, param1, param2 + var10.field_n, 25 + param6, param4);
           var9.field_o = (WidgetEventListener) (this);
           this.addChild(var9, 1);
           int stackIn_1_0 = var9.field_n + var10.field_n;

@@ -188,7 +188,7 @@ abstract class GraphicsRenderer {
           if (mg.field_d != null) {
             Object var5 = MusicPatchPcmStream.field_m;
             synchronized (var5) {
-              mg.field_d.a((byte) -116, param3, -1);
+              mg.field_d.setChannelGain((byte) -116, param3, -1);
               if (param0 == dt.field_c) {
                 return;
               }
@@ -196,7 +196,7 @@ abstract class GraphicsRenderer {
               MusicPatchPcmStream.field_m.flushAndMarkDrainCheck();
               dt.field_c = param0;
               if (null != dt.field_c) {
-                mg.field_d.a(param2, -2029711608, dt.field_c);
+                mg.field_d.playTrack(param2, -2029711608, dt.field_c);
               }
             }
           }

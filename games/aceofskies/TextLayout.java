@@ -71,7 +71,7 @@ abstract class TextLayout {
         return 0;
     }
 
-    final int a(int param0, int param1, String param2, int param3) {
+    final int computeJustificationStep(int param0, int param1, String param2, int param3) {
         String stackIn_26_2 = null;
         int var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {

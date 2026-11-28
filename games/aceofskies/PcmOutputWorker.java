@@ -124,7 +124,7 @@ final class PcmOutputWorker implements Runnable {
           }
           for (int var2 = 1; var2 < gi.field_i.length; var2++) {
             int var3 = gi.field_i[var2];
-            au.a(jr.field_n, var2 << 4, jr.field_n, var1_int, var3);
+            ArrayBlockSupport.copyIntRange(jr.field_n, var2 << 4, jr.field_n, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;

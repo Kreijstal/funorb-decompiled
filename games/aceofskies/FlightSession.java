@@ -509,7 +509,7 @@ final class FlightSession {
               int stackIn_19_1 = var2_int;
               int stackIn_20_2 = (sd.musicLayerPresets[this.musicLayerPresetIndex][var2_int]) ? 255 : 0;
               stackIn_19_0[stackIn_19_1] = stackIn_20_2;
-              this.gameMusic.a((byte) -120, this.musicChannelVolumes[var2_int], var2_int);
+              this.gameMusic.setChannelGain((byte) -120, this.musicChannelVolumes[var2_int], var2_int);
               var2_int++;
             }
             return;
@@ -821,7 +821,7 @@ final class FlightSession {
             return;
           }
           RenderStateStack.field_h = 0;
-          BufferedRandomAccessFile.playerDefinition.maximumSpeed = ub.basePlayerDefinition.maximumSpeed;
+          BufferedRandomAccessFile.playerDefinition.maximumSpeed = MidiNoteMask.basePlayerDefinition.maximumSpeed;
           this.fireRateUpgradeLevel = 0;
           this.targetUpgradeCredits = 0;
           this.multiplierPanelHidePhase = 200;
@@ -832,19 +832,19 @@ final class FlightSession {
           this.scoreMultiplier = 1;
           this.invulnerabilityCheat = false;
           this.targetMultiplier = 1;
-          BufferedRandomAccessFile.playerDefinition.turnRate = ub.basePlayerDefinition.turnRate;
+          BufferedRandomAccessFile.playerDefinition.turnRate = MidiNoteMask.basePlayerDefinition.turnRate;
           or.score = 0;
           se.field_b = 0;
           this.healthUpgradeLevel = 0;
           this.displayedUpgradeCredits = 0;
           NetworkGameClient.field_x = 0;
-          BufferedRandomAccessFile.playerDefinition.maximumHitPoints = ub.basePlayerDefinition.maximumHitPoints;
+          BufferedRandomAccessFile.playerDefinition.maximumHitPoints = MidiNoteMask.basePlayerDefinition.maximumHitPoints;
           this.displayedScore = 0;
-          BufferedRandomAccessFile.playerDefinition.fireInterval = ub.basePlayerDefinition.fireInterval;
+          BufferedRandomAccessFile.playerDefinition.fireInterval = MidiNoteMask.basePlayerDefinition.fireInterval;
           r.field_n = 0;
           this.speedUpgradeLevel = 0;
           this.displayedMultiplier = 1;
-          BufferedRandomAccessFile.playerDefinition.heatReduction = ub.basePlayerDefinition.heatReduction;
+          BufferedRandomAccessFile.playerDefinition.heatReduction = MidiNoteMask.basePlayerDefinition.heatReduction;
           Aircraft var3 = this.playerAircraft;
           this.playerAircraft = new Aircraft(new Vector2(), BufferedRandomAccessFile.playerDefinition);
           this.playerAircraft.engineSound = po.a(this.computeSpatialVolume(this.playerAircraft.position, 200, this.playerAircraft.position), 0, this.playerAircraft.definition.getEngineSample((byte) -88));
@@ -2019,7 +2019,7 @@ final class FlightSession {
                           lm.a(20, tg.musicTracks[2], true, (byte) -106);
                           int var10_int = 0;
                           while (var10_int < 16) {
-                            DualLinkNode.field_e.field_s.a((byte) -119, 256, var10_int);
+                            DualLinkNode.field_e.field_s.setChannelGain((byte) -119, 256, var10_int);
                             var10_int++;
                             if (obfuscationControl) {
                               decompiledFrameCompleted5 = false;
@@ -2882,7 +2882,7 @@ final class FlightSession {
           lm.a(40, tg.musicTracks[0], true, (byte) -84);
           int var4_int = 0;
           while (var4_int < 16) {
-            DualLinkNode.field_e.field_s.a((byte) -126, 256, var4_int);
+            DualLinkNode.field_e.field_s.setChannelGain((byte) -126, 256, var4_int);
             var4_int++;
             if (var5) {
               return;
@@ -3818,7 +3818,7 @@ final class FlightSession {
                     this.musicChannelVolumes[var3_int] = var4;
                   }
                 }
-                this.gameMusic.a((byte) -126, this.musicChannelVolumes[var3_int], var3_int);
+                this.gameMusic.setChannelGain((byte) -126, this.musicChannelVolumes[var3_int], var3_int);
                 var3_int++;
                 continue;
               }
@@ -3862,12 +3862,12 @@ final class FlightSession {
     private final void startAttractMode(byte obfuscationGuard) {
         try {
           AccountRegistrationPanel.hudMessages.clear(268435455);
-          BufferedRandomAccessFile.playerDefinition.fireInterval = ub.basePlayerDefinition.fireInterval;
+          BufferedRandomAccessFile.playerDefinition.fireInterval = MidiNoteMask.basePlayerDefinition.fireInterval;
           this.paused = false;
-          BufferedRandomAccessFile.playerDefinition.maximumHitPoints = ub.basePlayerDefinition.maximumHitPoints;
-          BufferedRandomAccessFile.playerDefinition.heatReduction = ub.basePlayerDefinition.heatReduction;
-          BufferedRandomAccessFile.playerDefinition.maximumSpeed = ub.basePlayerDefinition.maximumSpeed;
-          BufferedRandomAccessFile.playerDefinition.turnRate = ub.basePlayerDefinition.turnRate;
+          BufferedRandomAccessFile.playerDefinition.maximumHitPoints = MidiNoteMask.basePlayerDefinition.maximumHitPoints;
+          BufferedRandomAccessFile.playerDefinition.heatReduction = MidiNoteMask.basePlayerDefinition.heatReduction;
+          BufferedRandomAccessFile.playerDefinition.maximumSpeed = MidiNoteMask.basePlayerDefinition.maximumSpeed;
+          BufferedRandomAccessFile.playerDefinition.turnRate = MidiNoteMask.basePlayerDefinition.turnRate;
           this.invulnerabilityCheat = false;
           Aircraft var2 = this.playerAircraft;
           this.stopAircraftEngineSounds(true);

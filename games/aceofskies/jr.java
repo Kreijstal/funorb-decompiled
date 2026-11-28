@@ -96,7 +96,7 @@ final class jr extends DualLinkNode {
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var7 > var12; var12++) {
-                  byte dupTemp$0 = var18.readByte(id.a(param1, 7148));
+                  byte dupTemp$0 = var18.readByte(id.bitwiseXor(param1, 7148));
                   var9[var12] = dupTemp$0;
                   var13 = dupTemp$0;
                   boolean stackIn_48_0 = var10;
@@ -166,7 +166,7 @@ final class jr extends DualLinkNode {
         }
         if (null != this.field_t) {
           for (int var2 = 0; var2 < this.field_t.length; var2++) {
-            this.field_t[var2] = TextFieldValidator.a(this.field_t[var2], 32768);
+            this.field_t[var2] = TextFieldValidator.bitwiseOr(this.field_t[var2], 32768);
           }
         }
     }

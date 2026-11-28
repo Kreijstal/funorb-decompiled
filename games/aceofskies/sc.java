@@ -115,7 +115,7 @@ final class sc {
             }
             this.field_f.draw(var6_int, var7);
           }
-          String var6 = param3.d(param0, -91);
+          String var6 = param3.resolveDisplayText(param0, -91);
           if (!param1) {
             this.field_c = false;
           }

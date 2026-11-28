@@ -42,7 +42,7 @@ final class PasswordValidator extends TextFieldValidator {
         return null;
     }
 
-    private final boolean b(String param0, int param1) {
+    private final boolean containsEmailComponent(String param0, int param1) {
         String stackIn_20_2 = null;
         try {
           if (param1 != -1) {
@@ -118,7 +118,7 @@ final class PasswordValidator extends TextFieldValidator {
             String stackIn_16_0 = OpenGlVolumeTexture.field_j;
             return stackIn_16_0;
           }
-          if (this.b(param0, -1)) {
+          if (this.containsEmailComponent(param0, -1)) {
             String stackIn_20_0 = fj.field_b;
             return stackIn_20_0;
           }
@@ -171,7 +171,7 @@ final class PasswordValidator extends TextFieldValidator {
             pt stackIn_9_0 = bt.field_a;
             return stackIn_9_0;
           }
-          if (!this.b(param0, -1)) {
+          if (!this.containsEmailComponent(param0, -1)) {
             pt stackIn_14_0 = fd.field_a;
             return stackIn_14_0;
           }

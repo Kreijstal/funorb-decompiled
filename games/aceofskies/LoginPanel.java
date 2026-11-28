@@ -65,7 +65,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
         }
     }
 
-    final void a(String param0, int param1) {
+    final void setAccountAndClearPassword(String param0, int param1) {
         try {
           EditableTextField var3 = this.field_v;
           String var4 = param0;
@@ -80,7 +80,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
         }
     }
 
-    final void h(int param0) {
+    final void clearCredentials(int param0) {
         this.field_v.clearText((byte) -2);
         this.field_x.clearText((byte) -2);
         if (param0 != 310) {
@@ -88,7 +88,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
         }
     }
 
-    final String d(boolean param0) {
+    final String getAccountIdentifier(boolean param0) {
         if (param0) {
           return (String) null;
         }
@@ -319,7 +319,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
         try {
           if (param1 != -6525) {
             String var4 = (String) null;
-            this.a((String) null, 56);
+            this.setAccountAndClearPassword((String) null, 56);
           }
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "ce.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -16,7 +16,7 @@ final class InstrumentPatch extends IntrusiveNode {
     static float[] field_h;
     static String field_l;
 
-    final boolean a(byte[] param0, int[] param1, SoundCache param2, int param3) {
+    final boolean prepareSamples(byte[] param0, int[] param1, SoundCache param2, int param3) {
         String stackIn_25_2 = null;
         String stackIn_28_2 = null;
         String stackIn_31_2 = null;
@@ -107,7 +107,7 @@ final class InstrumentPatch extends IntrusiveNode {
         field_l = null;
     }
 
-    final void a(boolean param0) {
+    final void releaseSampleIds(boolean param0) {
         if (!param0) {
           return;
         }
@@ -259,7 +259,7 @@ final class InstrumentPatch extends IntrusiveNode {
               }
               var22 = var38.readVarInt(127);
             }
-            this.field_n[var23] = (short)(this.field_n[var23] + pg.a(32768, -1 + var22 << 14));
+            this.field_n[var23] = (short)(this.field_n[var23] + pg.bitwiseAnd(32768, -1 + var22 << 14));
             var20Lifetime2--;
             this.field_g[var23] = var22;
           }

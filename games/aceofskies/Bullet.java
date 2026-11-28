@@ -76,7 +76,7 @@ final class Bullet extends FlightBody {
           byte[] var6 = new byte[param1];
           byte[] var4 = var6;
           int var5 = -115 / ((param2 + 94) / 32);
-          au.a(param0, param3, var6, 0, param1);
+          ArrayBlockSupport.copyByteRange(param0, param3, var6, 0, param1);
           byte[] stackIn_1_0 = var6;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

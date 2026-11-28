@@ -171,10 +171,10 @@ final class IsaacRandom {
             this.field_c = this.field_c ^ this.field_c >>> 16;
           }
           this.field_c = this.field_c + this.field_e[255 & var2 + 128];
-          int dupTemp$1 = this.field_c + (this.field_e[pg.a(1020, var3) >> 2] + this.field_d);
+          int dupTemp$1 = this.field_c + (this.field_e[pg.bitwiseAnd(1020, var3) >> 2] + this.field_d);
           int var4 = dupTemp$1;
           this.field_e[var2] = dupTemp$1;
-          int dupTemp$2 = var3 + this.field_e[pg.a(261124, var4) >> 8 >> 2];
+          int dupTemp$2 = var3 + this.field_e[pg.bitwiseAnd(261124, var4) >> 8 >> 2];
           this.field_d = dupTemp$2;
           this.field_b[var2] = dupTemp$2;
         }

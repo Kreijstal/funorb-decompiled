@@ -106,7 +106,7 @@ final class HighscoreNameEntry {
           byte[] var4 = fk.field_a[var2];
           int[] var5 = new int[var3];
           for (int var6 = 0; var3 > var6; var6++) {
-            var5[var6] = ud.field_e[pg.a(255, (int) var4[var6])];
+            var5[var6] = ud.field_e[pg.bitwiseAnd(255, (int) var4[var6])];
           }
           var1[var2] = new Sprite(pu.field_a, JaggrabDownloader.field_i, FullscreenNoticeType.field_a[var2], lg.field_j[var2], ji.field_b[var2], ee.field_e[var2], var5);
         }

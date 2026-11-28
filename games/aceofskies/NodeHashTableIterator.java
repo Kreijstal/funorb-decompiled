@@ -125,7 +125,7 @@ final class NodeHashTableIterator implements Iterator {
           eb.counterPanelSpriteData = new SpriteData[2];
           eb.counterPanelSpriteData[0] = SpriteData.loadFirstFrame(gameSpriteArchive, "aceofskies", "scorecounter");
           eb.counterPanelSpriteData[1] = SpriteData.loadFirstFrame(gameSpriteArchive, "aceofskies", "multiplier");
-          kb.scoreDigitSpriteData = SpriteData.loadFrames(gameSpriteArchive, "aceofskies", "scorenumbers");
+          ValidationStatusWidget.scoreDigitSpriteData = SpriteData.loadFrames(gameSpriteArchive, "aceofskies", "scorenumbers");
           hq.levelRingSpriteData = SpriteData.loadFrames(gameSpriteArchive, "aceofskies", "levelring");
           qa.keySpriteData = SpriteData.loadFrames(gameSpriteArchive, "", "keys");
           CipherPacketBuffer.fontSpriteData = SpriteData.loadFrames(gameSpriteArchive, "", "fontalpha");

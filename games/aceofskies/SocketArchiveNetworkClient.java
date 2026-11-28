@@ -260,7 +260,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                   this.field_s.a(this.field_h.position, var5, this.field_h.payload, true);
                   if (0 != this.field_k) {
                     for (var6 = 0; var6 < var5; var6++) {
-                      this.field_h.payload[var6 + this.field_h.position] = (byte)id.a((int) this.field_h.payload[var6 + this.field_h.position], (int) this.field_k);
+                      this.field_h.payload[var6 + this.field_h.position] = (byte)id.bitwiseXor((int) this.field_h.payload[var6 + this.field_h.position], (int) this.field_k);
                     }
                   }
                   this.field_h.position = this.field_h.position + var5;
@@ -334,7 +334,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                   this.field_s.a(this.field_a.field_u.position, var6, this.field_a.field_u.payload, true);
                   if (this.field_k != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.field_a.field_u.payload[var7 + this.field_a.field_u.position] = (byte)id.a((int) this.field_a.field_u.payload[var7 + this.field_a.field_u.position], (int) this.field_k);
+                      this.field_a.field_u.payload[var7 + this.field_a.field_u.position] = (byte)id.bitwiseXor((int) this.field_a.field_u.payload[var7 + this.field_a.field_u.position], (int) this.field_k);
                     }
                   }
                   this.field_a.field_u.position = this.field_a.field_u.position + var6;

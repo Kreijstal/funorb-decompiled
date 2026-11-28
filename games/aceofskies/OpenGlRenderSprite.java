@@ -165,7 +165,7 @@ final class OpenGlRenderSprite extends RenderSprite {
           int[] var15 = var11;
           if (var11 != null) {
             for (int var9 = 0; var9 < var14.length; var9++) {
-              var11[var9] = TextFieldValidator.a(var14[var9], -16777216);
+              var11[var9] = TextFieldValidator.bitwiseOr(var14[var9], -16777216);
             }
             this.a(var15, param2, 0, param0, param0, param4, param6, 0);
           }

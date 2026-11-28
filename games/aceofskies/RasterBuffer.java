@@ -17,9 +17,9 @@ abstract class RasterBuffer {
         return qn.pcmMixer;
     }
 
-    abstract void a(int param0, java.awt.Graphics param1, int param2, int param3);
+    abstract void drawImage(int param0, java.awt.Graphics param1, int param2, int param3);
 
-    final void a(int param0) {
+    final void setAsRasterTarget(int param0) {
         SoftwareRasterizer.setRasterTarget(this.field_e, this.field_c, this.field_b);
         if (param0 != -12595) {
           field_f = (eg) null;
@@ -76,7 +76,7 @@ abstract class RasterBuffer {
         }
     }
 
-    abstract void a(byte param0, int param1, int param2, java.awt.Component param3);
+    abstract void initialize(byte param0, int param1, int param2, java.awt.Component param3);
 
     static {
         field_f = new eg();

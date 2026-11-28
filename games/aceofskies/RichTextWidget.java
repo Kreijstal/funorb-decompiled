@@ -7,7 +7,7 @@ class RichTextWidget extends InteractiveWidget {
     static int instructionPage;
     private String[] field_y;
 
-    final void a(int param0, String param1, int param2) {
+    final void setHotspotTooltip(int param0, String param1, int param2) {
         String stackIn_15_2 = null;
         int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
@@ -38,7 +38,7 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void setTextBounds(int param0, int param1, int param2, byte param3) {
         this.setBounds(((TextWidgetRenderer) ((Object) this.field_e)).getPreferredHeight(param3 + 2147483537, (UiWidget) (this)), param0, param1, param2, (byte) 124);
         if (param3 != 110) {
           this.drawWidget((byte) -98, -99, -83, 107);
@@ -166,7 +166,7 @@ class RichTextWidget extends InteractiveWidget {
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param1 != 0) {
           String var7 = (String) null;
-          this.a(-112, (String) null, -74);
+          this.setHotspotTooltip(-112, (String) null, -74);
         }
         TextHotspotBounds var4 = (TextHotspotBounds) (this.field_x.first(268435455));
         while (var4 != null) {

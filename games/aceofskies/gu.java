@@ -42,7 +42,7 @@ final class gu {
           }
           if (param0 != 4) {
             ResourceArchive var13 = (ResourceArchive) null;
-            gu.a(-24, (ResourceArchive) null, -121);
+            gu.loadMusicPatch(-24, (ResourceArchive) null, -121);
           }
           if (var3_ref == null) {
             te.b(true);
@@ -135,7 +135,7 @@ final class gu {
         }
     }
 
-    final static InstrumentPatch a(int param0, ResourceArchive param1, int param2) {
+    final static InstrumentPatch loadMusicPatch(int param0, ResourceArchive param1, int param2) {
         String stackIn_10_2 = null;
         try {
           byte[] var4 = param1.getFlatFile(param0, -2);

@@ -209,7 +209,7 @@ abstract class OpenGlBuffer implements HardwareBuffer {
           field_d = (GameKeyHandler) null;
         }
         String var2 = (String) null;
-        ub.a("", (String) null, -89);
+        MidiNoteMask.a("", (String) null, -89);
     }
 
     private final void f(int param0) {

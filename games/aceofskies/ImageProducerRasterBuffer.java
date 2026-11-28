@@ -9,7 +9,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     static BitmapFontMetrics titleFontMetrics;
     static String field_i;
 
-    private final synchronized void b(int param0) {
+    private final synchronized void publishPixelsToConsumer(int param0) {
         if (null == this.field_j) {
           return;
         }
@@ -38,24 +38,24 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final void a(byte param0, int param1, int param2, java.awt.Component param3) {
+    final void initialize(byte param0, int param1, int param2, java.awt.Component param3) {
         try {
           this.field_e = new int[param2 * param1 + 1];
           this.field_c = param2;
           this.field_b = param1;
           this.field_g = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
           this.field_d = param3.createImage((java.awt.image.ImageProducer) (this));
-          this.b(0);
+          this.publishPixelsToConsumer(0);
           param3.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
-          this.b(0);
+          this.publishPixelsToConsumer(0);
           if (param0 > -31) {
             java.awt.image.ImageConsumer var6 = (java.awt.image.ImageConsumer) null;
             this.isConsumer((java.awt.image.ImageConsumer) null);
           }
           param3.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
-          this.b(0);
+          this.publishPixelsToConsumer(0);
           param3.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
-          this.a(-12595);
+          this.setAsRasterTarget(-12595);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "dp.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -106,10 +106,10 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final void a(int param0, java.awt.Graphics param1, int param2, int param3) {
+    final void drawImage(int param0, java.awt.Graphics param1, int param2, int param3) {
         try {
           int var5_int = 62 % ((param0 + 72) / 48);
-          this.b(0);
+          this.publishPixelsToConsumer(0);
           param1.drawImage(this.field_d, param3, param2, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "dp.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

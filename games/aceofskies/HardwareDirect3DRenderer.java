@@ -971,7 +971,7 @@ public final class HardwareDirect3DRenderer extends HardwareRenderer {
           hd var3 = (hd) null;
           this.a((BufferElementType) null, 12, 69, 77, (hd) null);
         }
-        if (this.field_zb == pi.field_x) {
+        if (this.field_zb == ValidationStatusIcon.field_x) {
           this.field_Rc.SetRenderState(19, 5);
           this.field_Rc.SetRenderState(20, 6);
         } else if (this.field_zb == ne.field_i) {

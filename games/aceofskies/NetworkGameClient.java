@@ -57,7 +57,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (param2) {
               BitmapFontMetrics.field_f = false;
             } else {
-              int var5_intLifetime2 = pi.a(this.field_E, BufferElementType.a(4), 0, this.field_r, sa.b(-25752), false);
+              int var5_intLifetime2 = ValidationStatusIcon.a(this.field_E, BufferElementType.a(4), 0, this.field_r, sa.b(-25752), false);
               if (var5_intLifetime2 != -1) {
                 if (0 != var5_intLifetime2) {
                   DebouncedFieldValidator.a(param0 ^ 118, var5_intLifetime2, HardwareRenderSprite.field_m);
@@ -102,7 +102,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             DialogMessagePane.a((byte) 124, EditableTextField.m(107));
           }
           if (var4 == 12) {
-            vi.a((byte) 103, kb.a(-1903710079), EditableTextField.m(107));
+            vi.a((byte) 103, ValidationStatusWidget.a(-1903710079), EditableTextField.m(107));
           }
           if (var4 == 13) {
             try {
@@ -332,7 +332,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (BitmapFontMetrics.field_f) {
           return -1;
         }
-        int var2 = pi.a(this.field_E, BufferElementType.a(4), 0, this.field_r, sa.b(-25752), true);
+        int var2 = ValidationStatusIcon.a(this.field_E, BufferElementType.a(4), 0, this.field_r, sa.b(-25752), true);
         if (var2 == -1) {
           return -1;
         }
@@ -503,7 +503,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (SectorCacheStore.field_c == 1) {
           if (fb.field_e != 0) {
-            ij.field_h = ot.a(-86, ju.field_m);
+            ij.field_h = GrowableIntArray.a(-86, ju.field_m);
           }
           oi.field_a = sd.a(false, 1, true, false, uk.field_e);
           uj.field_b = sd.a(false, 1, true, false, ks.field_a);
@@ -518,7 +518,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (!ij.field_h.hasGroupName("", 116)) {
               ij.field_h = null;
             } else if (ij.field_h.tryLoadGroupByName("", -14012)) {
-              ub.a((byte) -125, ij.field_h);
+              MidiNoteMask.a((byte) -125, ij.field_h);
               ij.field_h = null;
               te.resetFrameTiming(62);
             }
@@ -559,7 +559,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (SectorCacheStore.field_c == 10) {
           if (fb.field_e != 0) {
-            fn.field_a = ot.a(-92, SocketArchiveNetworkClient.field_r);
+            fn.field_a = GrowableIntArray.a(-92, SocketArchiveNetworkClient.field_r);
           }
           SectorCacheStore.field_c = 11;
         }
@@ -607,7 +607,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseAnd(long param0, long param1) {
         return param0 & param1;
     }
 

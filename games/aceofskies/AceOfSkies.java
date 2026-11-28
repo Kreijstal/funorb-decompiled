@@ -39,10 +39,10 @@ public final class AceOfSkies extends NetworkGameClient {
                   CachedArchiveProvider.sharedFontMetricsArchive.tryLoadGroupByName("arial13", -14012)) {
                   if (jk.synthesizedSoundArchive.ensureIndexLoaded((byte) 100) &&
                     jk.synthesizedSoundArchive.tryLoadAllGroups(0)) {
-                    if (ub.vorbisSoundArchive.ensureIndexLoaded((byte) -73) &&
-                      ub.vorbisSoundArchive.tryLoadAllGroups(0)) {
-                      if (ot.musicPatchArchive.ensureIndexLoaded((byte) 87) &&
-                        ot.musicPatchArchive.tryLoadAllGroups(0)) {
+                    if (MidiNoteMask.vorbisSoundArchive.ensureIndexLoaded((byte) -73) &&
+                      MidiNoteMask.vorbisSoundArchive.tryLoadAllGroups(0)) {
+                      if (GrowableIntArray.musicPatchArchive.ensureIndexLoaded((byte) 87) &&
+                        GrowableIntArray.musicPatchArchive.tryLoadAllGroups(0)) {
                         if (od.musicTrackArchive.ensureIndexLoaded((byte) -57) &&
                           od.musicTrackArchive.tryLoadAllGroups(0)) {
                           if (wi.gameSpriteArchive.ensureIndexLoaded((byte) 92) &&
@@ -72,12 +72,12 @@ public final class AceOfSkies extends NetworkGameClient {
                         }
                       }
                       if (decompiledFrameRemainder0) {
-                        PasswordValidator.setLoadingProgress(-117, 30.0f, SmokeParticle.a(ff.field_a, 0, fn.field_b, ot.musicPatchArchive, 81));
+                        PasswordValidator.setLoadingProgress(-117, 30.0f, SmokeParticle.a(ff.field_a, 0, fn.field_b, GrowableIntArray.musicPatchArchive, 81));
                         return false;
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      PasswordValidator.setLoadingProgress(-99, 20.0f, qo.a(pr.field_a, "", ub.vorbisSoundArchive, 13525, ResourceArchive.field_c));
+                      PasswordValidator.setLoadingProgress(-99, 20.0f, qo.a(pr.field_a, "", MidiNoteMask.vorbisSoundArchive, 13525, ResourceArchive.field_c));
                       return false;
                     }
                   }
@@ -103,10 +103,10 @@ public final class AceOfSkies extends NetworkGameClient {
           }
           if (jk.synthesizedSoundArchive != null) {
             as.a(-110);
-            qn.loadingSoundCache = new SoundCache(jk.synthesizedSoundArchive, ub.vorbisSoundArchive);
-            jf.a(-4, ub.vorbisSoundArchive, jk.synthesizedSoundArchive);
+            qn.loadingSoundCache = new SoundCache(jk.synthesizedSoundArchive, MidiNoteMask.vorbisSoundArchive);
+            jf.a(-4, MidiNoteMask.vorbisSoundArchive, jk.synthesizedSoundArchive);
             jk.synthesizedSoundArchive = null;
-            ub.vorbisSoundArchive = null;
+            MidiNoteMask.vorbisSoundArchive = null;
             te.resetFrameTiming(34);
             return false;
           }
@@ -119,7 +119,7 @@ public final class AceOfSkies extends NetworkGameClient {
             te.resetFrameTiming(102);
             return false;
           }
-          if (null == ot.musicPatchArchive) {
+          if (null == GrowableIntArray.musicPatchArchive) {
             if (DraggableWidgetContainer.sharedSpriteArchive != null) {
               NodeHashTableIterator.decodeGameImagesAndFonts(iq.gameFontMetricsArchive, (byte) 77, DraggableWidgetContainer.sharedSpriteArchive, wi.gameSpriteArchive);
               MenuScreen.decodeMenuResources((byte) -56, wi.gameSpriteArchive, iq.gameFontMetricsArchive);
@@ -164,7 +164,7 @@ public final class AceOfSkies extends NetworkGameClient {
             }
             if (!var5) {
               if (tg.musicTracks[var4Lifetime1] != null &&
-                !DualLinkNode.field_e.field_n.a(-1, 176400, tg.musicTracks[var4Lifetime1], ot.musicPatchArchive, qn.loadingSoundCache)) {
+                !DualLinkNode.field_e.field_n.prepareTrackSamples(-1, 176400, tg.musicTracks[var4Lifetime1], GrowableIntArray.musicPatchArchive, qn.loadingSoundCache)) {
                 te.resetFrameTiming(74);
                 return false;
               }
@@ -178,7 +178,7 @@ public final class AceOfSkies extends NetworkGameClient {
             stackIn_109_0 = null;
             if (!var5) {
               if (stackIn_109_0 != tg.musicTracks[var4Lifetime1] &&
-                !DualLinkNode.field_e.field_p.a(-1, 176400, tg.musicTracks[var4Lifetime1], ot.musicPatchArchive, qn.loadingSoundCache)) {
+                !DualLinkNode.field_e.field_p.prepareTrackSamples(-1, 176400, tg.musicTracks[var4Lifetime1], GrowableIntArray.musicPatchArchive, qn.loadingSoundCache)) {
                 te.resetFrameTiming(120);
                 return false;
               }
@@ -188,12 +188,12 @@ public final class AceOfSkies extends NetworkGameClient {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            DualLinkNode.field_e.field_n.g(0);
-            DualLinkNode.field_e.field_p.g(0);
+            DualLinkNode.field_e.field_n.releasePatchSampleIds(0);
+            DualLinkNode.field_e.field_p.releasePatchSampleIds(0);
             qn.loadingSoundCache = null;
             stackIn_109_0 = null;
           }
-          ot.musicPatchArchive = (ResourceArchive) (stackIn_109_0);
+          GrowableIntArray.musicPatchArchive = (ResourceArchive) (stackIn_109_0);
           te.resetFrameTiming(77);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -231,7 +231,7 @@ public final class AceOfSkies extends NetworkGameClient {
           }
           q.outgoingPacket.position = q.outgoingPacket.position + 2;
           int var5_int = q.outgoingPacket.position;
-          q.outgoingPacket.writeInt((byte) 126, ub.field_g);
+          q.outgoingPacket.writeInt((byte) 126, MidiNoteMask.field_g);
           q.outgoingPacket.writeLong((byte) -102, BoundedRandomAccessFile.field_a);
           int var6 = 0;
           if (te.field_h) {
@@ -379,8 +379,8 @@ public final class AceOfSkies extends NetworkGameClient {
           this.a(-13, 2, 18, 10, 3, 0, 1);
           MidiPcmStream var2 = new MidiPcmStream();
           MidiPcmStream var3 = new MidiPcmStream();
-          var2.a(128, false, 9);
-          var3.a(128, false, 9);
+          var2.setChannelProgram(128, false, 9);
+          var3.setChannelProgram(128, false, 9);
           wu.a(22050, true, (java.awt.Component) ((Object) ci.field_f), pt.field_b, 32767, new CrossfadingMidiPcmStream(var2, var3));
           if (obfuscationGuard != 28060) {
             AceOfSkies.a(-33, true, (fn) null, true, 99);
@@ -561,7 +561,7 @@ public final class AceOfSkies extends NetworkGameClient {
           SocketConnector.clearStaticReferences(105);
           ImageProducerRasterBuffer.clearDeclaredStaticReferences((byte) -55);
           rm.clearStaticReferences((byte) 127);
-          ub.a(false);
+          MidiNoteMask.a(false);
           WhirlpoolHasher.clearStaticReferences(true);
           InstrumentPatch.clearStaticReferences(0);
           InstrumentEnvelope.clearStaticReferences((byte) -116);
@@ -573,8 +573,8 @@ public final class AceOfSkies extends NetworkGameClient {
           EditableTextField.d((byte) -106);
           ContentTransitionDialog.k(12);
           NameSuggestionsPanel.clearStaticReferences(false);
-          pi.clearStaticReferences(4096);
-          kb.clearStaticReferences(obfuscationGuard + 1927864887);
+          ValidationStatusIcon.clearStaticReferences(4096);
+          ValidationStatusWidget.clearStaticReferences(obfuscationGuard + 1927864887);
           TextFieldValidator.clearStaticReferences(14695);
           fk.a((byte) 28);
           RegistrationAgreementPane.clearStaticReferences((byte) 105);
@@ -617,7 +617,7 @@ public final class AceOfSkies extends NetworkGameClient {
           OpenGlVertexBuffer.clearStaticReferences(-33);
           RichTextLayout.clearStaticReferences(0);
           DirectByteStorage.clearDeclaredStaticReferences(85);
-          ot.clearStaticReferences((byte) -44);
+          GrowableIntArray.clearStaticReferences((byte) -44);
           DraggableWidgetContainer.resetDeclaredStaticState(65793);
           DropTargetWidgetContainer.clearStaticReferences((byte) -66);
           ej.clearStaticReferences(-29373);
@@ -754,12 +754,12 @@ public final class AceOfSkies extends NetworkGameClient {
             te.resetFrameTiming(38);
           }
           ClientException.field_e = true;
-          wi.gameSpriteArchive = ot.a(-28, 4);
-          iq.gameFontMetricsArchive = ot.a(-65, 5);
-          jk.synthesizedSoundArchive = ot.a(-31, 6);
-          ub.vorbisSoundArchive = ot.a(-76, 7);
-          ot.musicPatchArchive = ot.a(-62, 8);
-          od.musicTrackArchive = ot.a(-81, 9);
+          wi.gameSpriteArchive = GrowableIntArray.a(-28, 4);
+          iq.gameFontMetricsArchive = GrowableIntArray.a(-65, 5);
+          jk.synthesizedSoundArchive = GrowableIntArray.a(-31, 6);
+          MidiNoteMask.vorbisSoundArchive = GrowableIntArray.a(-76, 7);
+          GrowableIntArray.musicPatchArchive = GrowableIntArray.a(-62, 8);
+          od.musicTrackArchive = GrowableIntArray.a(-81, 9);
           if (obfuscationGuard <= 43) {
             return;
           }

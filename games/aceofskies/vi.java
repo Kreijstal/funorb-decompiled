@@ -61,7 +61,7 @@ final class vi extends DefaultTextWidgetRenderer {
           if (param2) {
             return;
           }
-          super.a(param1, 27529);
+          super.copyStyleTo(param1, 27529);
           if (param0) {
             for (int var4_int = 0; 6 > var4_int; var4_int++) {
               sc var5 = this.field_o[var4_int];
@@ -82,7 +82,7 @@ final class vi extends DefaultTextWidgetRenderer {
             }
             return;
           }
-          au.a(this.field_o, 0, param1.field_o, 0, 6);
+          ArrayBlockSupport.copyObjectRange(this.field_o, 0, param1.field_o, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

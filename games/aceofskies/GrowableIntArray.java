@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ot {
+final class GrowableIntArray {
     private int field_f;
     private int field_d;
     private boolean field_e;
@@ -9,24 +9,24 @@ final class ot {
     static ResourceArchive musicPatchArchive;
     static int field_a;
 
-    private final void c(int param0, int param1) {
+    private final void grow(int param0, int param1) {
         if (param0 == -1) {
-          int[] var4 = new int[this.b((byte) -82, param1)];
+          int[] var4 = new int[this.computeCapacity((byte) -82, param1)];
           int[] var3 = var4;
-          au.a(this.field_c, 0, var4, 0, this.field_c.length);
+          ArrayBlockSupport.copyIntRange(this.field_c, 0, var4, 0, this.field_c.length);
           this.field_c = var4;
           return;
         }
-        this.a((byte) -66);
-        int[] var4Lifetime1 = new int[this.b((byte) -82, param1)];
+        this.size((byte) -66);
+        int[] var4Lifetime1 = new int[this.computeCapacity((byte) -82, param1)];
         int[] var3Lifetime1 = var4Lifetime1;
-        au.a(this.field_c, 0, var4Lifetime1, 0, this.field_c.length);
+        ArrayBlockSupport.copyIntRange(this.field_c, 0, var4Lifetime1, 0, this.field_c.length);
         this.field_c = var4Lifetime1;
     }
 
-    final void a(int param0, byte param1) {
+    final void removeAt(int param0, byte param1) {
         if (param1 != -58) {
-          this.a((byte) 9, 30);
+          this.append((byte) 9, 30);
           if (param0 < 0) {
             throw new ArrayIndexOutOfBoundsException(param0);
           }
@@ -37,7 +37,7 @@ final class ot {
             this.field_f = this.field_f - 1;
             return;
           }
-          au.a(this.field_c, 1 + param0, this.field_c, param0, this.field_f - param0);
+          ArrayBlockSupport.copyIntRange(this.field_c, 1 + param0, this.field_c, param0, this.field_f - param0);
           this.field_f = this.field_f - 1;
           return;
         }
@@ -51,7 +51,7 @@ final class ot {
           this.field_f = this.field_f - 1;
           return;
         }
-        au.a(this.field_c, 1 + param0, this.field_c, param0, this.field_f - param0);
+        ArrayBlockSupport.copyIntRange(this.field_c, 1 + param0, this.field_c, param0, this.field_f - param0);
         this.field_f = this.field_f - 1;
     }
 
@@ -62,14 +62,14 @@ final class ot {
         return IterableNodeHashTable.a(true, false, false, (byte) -65, 1, param1);
     }
 
-    final void a(byte param0, int param1) {
-        this.a((byte) -70, this.field_f + 1, param1);
+    final void append(byte param0, int param1) {
+        this.set((byte) -70, this.field_f + 1, param1);
         if (param0 != -50) {
           this.field_d = -75;
         }
     }
 
-    private final int b(byte param0, int param1) {
+    private final int computeCapacity(byte param0, int param1) {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var3 = this.field_c.length;
         while (param1 >= var3) {
@@ -96,22 +96,22 @@ final class ot {
         musicPatchArchive = null;
     }
 
-    private ot() throws Throwable {
+    private GrowableIntArray() throws Throwable {
         throw new Error();
     }
 
-    private final void a(byte param0, int param1, int param2) {
+    private final void set(byte param0, int param1, int param2) {
         if (this.field_f < param1) {
           this.field_f = param1;
         }
         if (param1 >= this.field_c.length) {
-          this.c(-1, param1);
+          this.grow(-1, param1);
         }
         int var4 = 117 % ((param0 + 31) / 32);
         this.field_c[param1] = param2;
     }
 
-    final int b(int param0, int param1) {
+    final int get(int param0, int param1) {
         if (param1 != 1) {
           return 54;
         }
@@ -121,7 +121,7 @@ final class ot {
         return this.field_c[param0];
     }
 
-    final int a(byte param0) {
+    final int size(byte param0) {
         int var2 = -107 / ((51 - param0) / 55);
         return this.field_f + 1;
     }

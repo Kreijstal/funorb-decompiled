@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pi extends InteractiveWidget {
+final class ValidationStatusIcon extends InteractiveWidget {
     static qr field_x;
     private FieldValidator field_w;
     private int field_y;
@@ -85,7 +85,7 @@ final class pi extends InteractiveWidget {
           this.field_y = this.field_y + 1;
           super.updatePointer((byte) 67, param1, param2, param3);
           if (param0 <= 13) {
-            pi.clearStaticReferences(-28);
+            ValidationStatusIcon.clearStaticReferences(-28);
           }
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "pi.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -307,7 +307,7 @@ final class pi extends InteractiveWidget {
         }
     }
 
-    pi(FieldValidator param0) {
+    ValidationStatusIcon(FieldValidator param0) {
         try {
           this.field_w = param0;
         } catch (RuntimeException runtimeException) {

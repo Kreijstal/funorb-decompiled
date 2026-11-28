@@ -1333,9 +1333,9 @@ final class MenuScreen {
               throw new IllegalStateException();
             }
             SecondaryKeyHashTable.field_a = new String[var4];
-            au.a(st.field_b, 0, SecondaryKeyHashTable.field_a, 0, var4);
+            ArrayBlockSupport.copyObjectRange(st.field_b, 0, SecondaryKeyHashTable.field_a, 0, var4);
             JaggrabDownloader.field_b = new String[-var4 + (var3_int - 1)];
-            au.a(st.field_b, 1 + var4, JaggrabDownloader.field_b, 0, -1 - var4 + var3_int);
+            ArrayBlockSupport.copyObjectRange(st.field_b, 1 + var4, JaggrabDownloader.field_b, 0, -1 - var4 + var3_int);
             var3_int = ff.a(qk.field_g, sn.a(InstrumentEnvelope.field_d, 105, new String[]{"<br><%0><br>"}), st.field_b, -3, nh.field_c);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -1349,9 +1349,9 @@ final class MenuScreen {
               throw new IllegalStateException();
             }
             cn.field_z = new String[var4];
-            au.a(st.field_b, 0, cn.field_z, 0, var4);
+            ArrayBlockSupport.copyObjectRange(st.field_b, 0, cn.field_z, 0, var4);
             NetworkArchiveRequest.field_v = new String[-1 + var3_int - var4];
-            au.a(st.field_b, var4 + 1, NetworkArchiveRequest.field_v, 0, -1 + var3_int - var4);
+            ArrayBlockSupport.copyObjectRange(st.field_b, var4 + 1, NetworkArchiveRequest.field_v, 0, -1 + var3_int - var4);
             if (SecondaryKeyHashTable.field_a.length >= cn.field_z.length) {
               stackIn_65_0 = SecondaryKeyHashTable.field_a.length;
             } else {

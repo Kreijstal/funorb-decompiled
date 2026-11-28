@@ -9,7 +9,7 @@ final class id {
     static String field_e;
     private boolean field_c;
 
-    static int a(int param0, int param1) {
+    static int bitwiseXor(int param0, int param1) {
         return param0 ^ param1;
     }
 

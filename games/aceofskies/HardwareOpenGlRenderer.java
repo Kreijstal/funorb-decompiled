@@ -87,12 +87,12 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
         }
         jaggl.OpenGL.glFogf(2915, this.field_Xb);
         jaggl.OpenGL.glFogf(2916, this.field_y);
-        np.field_d[2] = (float)pg.a(this.field_X, 255) / 255.0f;
-        np.field_d[0] = (float)pg.a(this.field_X, 16711680) / 16711680.0f;
+        np.field_d[2] = (float)pg.bitwiseAnd(this.field_X, 255) / 255.0f;
+        np.field_d[0] = (float)pg.bitwiseAnd(this.field_X, 16711680) / 16711680.0f;
         if (param0 > -98) {
           this.field_Vc = false;
         }
-        np.field_d[1] = (float)pg.a(this.field_X, 65280) / 65280.0f;
+        np.field_d[1] = (float)pg.bitwiseAnd(this.field_X, 65280) / 65280.0f;
         jaggl.OpenGL.glFogfv(2918, np.field_d, 0);
     }
 
@@ -226,9 +226,9 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
     }
 
     final void g(int param0) {
-        np.field_d[1] = (float)pg.a(65280, this.field_cc) / 65280.0f;
-        np.field_d[2] = (float)pg.a(this.field_cc, 255) / 255.0f;
-        np.field_d[0] = (float)pg.a(this.field_cc, 16711680) / 16711680.0f;
+        np.field_d[1] = (float)pg.bitwiseAnd(65280, this.field_cc) / 65280.0f;
+        np.field_d[2] = (float)pg.bitwiseAnd(this.field_cc, 255) / 255.0f;
+        np.field_d[0] = (float)pg.bitwiseAnd(this.field_cc, 16711680) / 16711680.0f;
         np.field_d[3] = (float)(this.field_cc >>> 24) / 255.0f;
         jaggl.OpenGL.glTexEnvfv(8960, 8705, np.field_d, param0);
     }
@@ -947,7 +947,7 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
 
     final void l(byte param0) {
         int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
-        if (pi.field_x == this.field_zb) {
+        if (ValidationStatusIcon.field_x == this.field_zb) {
           jaggl.OpenGL.glBlendFunc(770, 771);
         } else if (ne.field_i == this.field_zb) {
           jaggl.OpenGL.glBlendFunc(1, 1);
@@ -1459,9 +1459,9 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
           np.field_d[2] = (float)var3.e(0);
           np.field_d[3] = 1.0f;
           jaggl.OpenGL.glLightfv(var5, 4611, np.field_d, 0);
-          np.field_d[1] = var6 * (float)pg.a(255, var4 >> 8);
-          np.field_d[0] = var6 * (float)pg.a(255, var4 >> 16);
-          np.field_d[2] = (float)pg.a(255, var4) * var6;
+          np.field_d[1] = var6 * (float)pg.bitwiseAnd(255, var4 >> 8);
+          np.field_d[0] = var6 * (float)pg.bitwiseAnd(255, var4 >> 16);
+          np.field_d[2] = (float)pg.bitwiseAnd(255, var4) * var6;
           np.field_d[3] = 1.0f;
           jaggl.OpenGL.glLightfv(var5, 4609, np.field_d, 0);
           jaggl.OpenGL.glLightf(var5, 4617, 1.0f / (float)(var3.d(0) * var3.d(0)));

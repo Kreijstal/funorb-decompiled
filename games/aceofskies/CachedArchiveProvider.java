@@ -36,7 +36,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           }
           int var2_int = param0.length;
           byte[] var3 = new byte[var2_int];
-          au.a(param0, 0, var3, 0, var2_int);
+          ArrayBlockSupport.copyByteRange(param0, 0, var3, 0, var2_int);
           byte[] stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -613,7 +613,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 var22 = var22 + (var19 & 255);
                 int incrementValue$4 = var15;
                 var15++;
-                var13[incrementValue$4] = TextFieldValidator.a(TextFieldValidator.a(pg.a(var21, 1020) << 6, TextFieldValidator.a(pg.a(var20, 1020) << 14, pg.a(-16777216, var23 << 22))), pg.a(1020, var22) >> 2);
+                var13[incrementValue$4] = TextFieldValidator.bitwiseOr(TextFieldValidator.bitwiseOr(pg.bitwiseAnd(var21, 1020) << 6, TextFieldValidator.bitwiseOr(pg.bitwiseAnd(var20, 1020) << 14, pg.bitwiseAnd(-16777216, var23 << 22))), pg.bitwiseAnd(1020, var22) >> 2);
               }
               var24 = var24 + param0;
               var25 = var25 + param0;

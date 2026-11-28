@@ -145,7 +145,7 @@ final class sa {
           var17.field_m = 16777215;
           this.field_k = (WidgetRenderer) ((Object) var17);
           vi var4 = new vi();
-          var17.a(var4, 27529);
+          var17.copyStyleTo(var4, 27529);
           this.field_a = 15658734;
           this.field_e = 3;
           this.field_f = 3;
@@ -180,7 +180,7 @@ final class sa {
           de discarded$0 = new de(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           us discarded$1 = new us(param0, 16777215, -1, 125269879, 4473924, param1, 268435455);
           vi var8 = new vi();
-          var17.a(var8, 27529);
+          var17.copyStyleTo(var8, 27529);
           var8.a(param1 - 58, 0).a(SpriteState.a(-80, 10066329, 7829367, 15658734), false).a(1118481, -2).c(-1, (byte) -79);
           var8.a(-63, 4).a((byte) -50, true).a(var5, false);
           this.field_n = (WidgetRenderer) ((Object) var8);

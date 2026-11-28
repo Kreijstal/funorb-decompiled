@@ -291,7 +291,7 @@ abstract class HardwareRenderer extends GraphicsRenderer {
           if (param1 == 1) {
             var5 = 1;
             var4 = 1;
-            var3 = pi.field_x;
+            var3 = ValidationStatusIcon.field_x;
           } else if (param1 == 2) {
             var3 = ne.field_i;
             var5 = 0;
@@ -788,7 +788,7 @@ abstract class HardwareRenderer extends GraphicsRenderer {
         this.field_Ib = 0;
         this.field_U = new float[16];
         this.field_oc = 512;
-        this.field_zb = pi.field_x;
+        this.field_zb = ValidationStatusIcon.field_x;
         this.field_E = -1;
         this.field_rb = 1.0f;
         this.field_dc = false;
@@ -1209,7 +1209,7 @@ abstract class HardwareRenderer extends GraphicsRenderer {
                 for (var8 = 0; data.width > var8; var8++) {
                   int incrementValue$2 = var6;
                   var6++;
-                  var4[incrementValue$2] = TextFieldValidator.a(data.alpha[var5] << 24, data.palette[pg.a((int) data.indices[var5], 255)]);
+                  var4[incrementValue$2] = TextFieldValidator.bitwiseOr(data.alpha[var5] << 24, data.palette[pg.bitwiseAnd((int) data.indices[var5], 255)]);
                   var5++;
                 }
               }
@@ -1226,7 +1226,7 @@ abstract class HardwareRenderer extends GraphicsRenderer {
                   if (var9 == 0) {
                     stackIn_17_2 = 0;
                   } else {
-                    stackIn_17_2 = TextFieldValidator.a(-16777216, var9);
+                    stackIn_17_2 = TextFieldValidator.bitwiseOr(-16777216, var9);
                   }
                   stackIn_16_0[stackIn_16_1] = stackIn_17_2;
                 }

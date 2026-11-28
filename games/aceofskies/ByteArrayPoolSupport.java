@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kd {
+final class ByteArrayPoolSupport {
     private static String field_z;
 
-    final synchronized static byte[] a(int param0, byte param1) {
+    final synchronized static byte[] acquireByteArray(int param0, byte param1) {
         byte[] var2_ref_byte__;
         byte[] var2_ref_byte__Lifetime5;
         if (100 != param0) {
           if (param1 < 110) {
-            kd.a(-122, (byte) 55);
+            ByteArrayPoolSupport.acquireByteArray(-122, (byte) 55);
             if (5000 == param0 &&
               fa.field_a > 0) {
               int fieldTemp$25 = fa.field_a - 1;
@@ -122,7 +122,7 @@ final class kd {
           return var2_ref_byte__Lifetime1;
         }
         if (param1 < 110) {
-          kd.a(-122, (byte) 55);
+          ByteArrayPoolSupport.acquireByteArray(-122, (byte) 55);
           if (5000 == param0 &&
             fa.field_a > 0) {
             int fieldTemp$11 = fa.field_a - 1;

@@ -64,7 +64,7 @@ final class s {
             int var13 = param9;
             int var14 = param2;
             int var15 = (var17[var11] & 16711422) >> 1;
-            var10[var11] = var15 + (pg.a(33423360, var12) >> 1) + ((pg.a(33423495, var13) >> 9) + pg.a(var14 >> 17, 255));
+            var10[var11] = var15 + (pg.bitwiseAnd(33423360, var12) >> 1) + ((pg.bitwiseAnd(33423495, var13) >> 9) + pg.bitwiseAnd(var14 >> 17, 255));
             param1 = param1 + param8;
             param9 = param9 + param5;
             param2 = param2 + param4;
@@ -105,7 +105,7 @@ final class s {
         } else {
           this.field_k = null;
         }
-        this.field_b = ot.field_a;
+        this.field_b = GrowableIntArray.field_a;
     }
 
     static {

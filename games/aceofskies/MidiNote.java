@@ -26,7 +26,7 @@ final class MidiNote extends IntrusiveNode {
     int field_w;
     PcmSampleStream field_e;
 
-    final void a(int param0) {
+    final void releaseReferences(int param0) {
         this.field_y = null;
         this.field_e = null;
         this.field_r = null;

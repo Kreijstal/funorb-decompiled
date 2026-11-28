@@ -10,7 +10,7 @@ abstract class ka {
         if (param0 <= -94) {
           String var1 = "";
           if (vr.field_b != null) {
-            var1 = vr.field_b.d(false);
+            var1 = vr.field_b.getAccountIdentifier(false);
           }
           if (var1.length() == 0) {
             var1 = ec.b((byte) -128);
@@ -23,7 +23,7 @@ abstract class ka {
         field_a = (Sprite[]) null;
         String var1Lifetime1 = "";
         if (vr.field_b != null) {
-          var1Lifetime1 = vr.field_b.d(false);
+          var1Lifetime1 = vr.field_b.getAccountIdentifier(false);
         }
         if (var1Lifetime1.length() == 0) {
           var1Lifetime1 = ec.b((byte) -128);
@@ -144,7 +144,7 @@ abstract class ka {
             }
             q.outgoingPacket = new CipherPacketBuffer(param3);
             ca.field_h = param4;
-            ub.field_g = param11;
+            MidiNoteMask.field_g = param11;
             HighscoreNameEntry.field_a = param5;
             ca.field_g = param2;
             ConfirmedEmailAvailabilityValidator.field_j = param12;

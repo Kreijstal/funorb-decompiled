@@ -242,7 +242,7 @@ final class OpenGlFramebuffer implements up {
           Vector2.field_c = param7;
           RendererBitmapFont.field_a.setRootStream(qn.pcmMixer);
           DualLinkNode.field_e = param5;
-          DualLinkNode.field_e.a((byte) 125, RendererManager.field_c);
+          DualLinkNode.field_e.setVolume((byte) 125, RendererManager.field_c);
           MusicPatchPcmStream.field_m.setRootStream(DualLinkNode.field_e);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "wj.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');

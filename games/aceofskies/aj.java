@@ -80,16 +80,16 @@ final class aj extends qd {
                 var10 = var10 ^ 285L;
             }
             var12 = var10 ^ var2;
-            field_t[0][var0] = fk.a(fk.a(fk.a(var8 << 16, fk.a(var10 << 24, fk.a(var2 << 32, fk.a(var6 << 40, fk.a(var2 << 56, var2 << 48))))), var4 << 8), var12);
+            field_t[0][var0] = fk.bitwiseOr(fk.bitwiseOr(fk.bitwiseOr(var8 << 16, fk.bitwiseOr(var10 << 24, fk.bitwiseOr(var2 << 32, fk.bitwiseOr(var6 << 40, fk.bitwiseOr(var2 << 56, var2 << 48))))), var4 << 8), var12);
             for (var14 = 1; 8 > var14; var14++) {
-                field_t[var14][var0] = fk.a(field_t[-1 + var14][var0] >>> 8, field_t[var14 - 1][var0] << 56);
+                field_t[var14][var0] = fk.bitwiseOr(field_t[-1 + var14][var0] >>> 8, field_t[var14 - 1][var0] << 56);
             }
             var0++;
         }
         field_w[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = 8 * (var0 - 1);
-            field_w[var0] = ArchiveNetworkClient.a(ArchiveNetworkClient.a(ArchiveNetworkClient.a(ArchiveNetworkClient.a(NetworkGameClient.a(4278190080L, field_t[4][var1 + 4]), ArchiveNetworkClient.a(ArchiveNetworkClient.a(ArchiveNetworkClient.a(NetworkGameClient.a(-72057594037927936L, field_t[0][var1]), NetworkGameClient.a(71776119061217280L, field_t[1][var1 + 1])), NetworkGameClient.a(field_t[2][2 + var1], 280375465082880L)), NetworkGameClient.a(1095216660480L, field_t[3][var1 + 3]))), NetworkGameClient.a(field_t[5][5 + var1], 16711680L)), NetworkGameClient.a(65280L, field_t[6][6 + var1])), NetworkGameClient.a(255L, field_t[7][var1 + 7]));
+            field_w[var0] = ArchiveNetworkClient.bitwiseXor(ArchiveNetworkClient.bitwiseXor(ArchiveNetworkClient.bitwiseXor(ArchiveNetworkClient.bitwiseXor(NetworkGameClient.bitwiseAnd(4278190080L, field_t[4][var1 + 4]), ArchiveNetworkClient.bitwiseXor(ArchiveNetworkClient.bitwiseXor(ArchiveNetworkClient.bitwiseXor(NetworkGameClient.bitwiseAnd(-72057594037927936L, field_t[0][var1]), NetworkGameClient.bitwiseAnd(71776119061217280L, field_t[1][var1 + 1])), NetworkGameClient.bitwiseAnd(field_t[2][2 + var1], 280375465082880L)), NetworkGameClient.bitwiseAnd(1095216660480L, field_t[3][var1 + 3]))), NetworkGameClient.bitwiseAnd(field_t[5][5 + var1], 16711680L)), NetworkGameClient.bitwiseAnd(65280L, field_t[6][6 + var1])), NetworkGameClient.bitwiseAnd(255L, field_t[7][var1 + 7]));
         }
     }
 }

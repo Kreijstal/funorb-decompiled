@@ -158,7 +158,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
               for (var7 = 0; data.width > var7; var7++) {
                 int incrementValue$0 = var5;
                 var5++;
-                var3[incrementValue$0] = TextFieldValidator.a(data.palette[pg.a(255, (int) data.indices[var4])], data.alpha[var4] << 24);
+                var3[incrementValue$0] = TextFieldValidator.bitwiseOr(data.palette[pg.bitwiseAnd(255, (int) data.indices[var4])], data.alpha[var4] << 24);
                 var4++;
               }
             }
@@ -175,7 +175,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
                 if (var8 == 0) {
                   stackIn_9_2 = 0;
                 } else {
-                  stackIn_9_2 = TextFieldValidator.a(var8, -16777216);
+                  stackIn_9_2 = TextFieldValidator.bitwiseOr(var8, -16777216);
                 }
                 stackIn_8_0[stackIn_8_1] = stackIn_9_2;
               }
@@ -1320,9 +1320,9 @@ final class OpenGlRenderer extends GraphicsRenderer {
     }
 
     final void c(int param0, int param1) {
-        bg.field_a[0] = (float)pg.a(16711680, param1) / 16711680.0f;
-        bg.field_a[1] = (float)pg.a(65280, param1) / 65280.0f;
-        bg.field_a[param0] = (float)pg.a(255, param1) / 255.0f;
+        bg.field_a[0] = (float)pg.bitwiseAnd(16711680, param1) / 16711680.0f;
+        bg.field_a[1] = (float)pg.bitwiseAnd(65280, param1) / 65280.0f;
+        bg.field_a[param0] = (float)pg.bitwiseAnd(255, param1) / 255.0f;
         bg.field_a[3] = (float)(param1 >>> 24) / 255.0f;
         jaggl.OpenGL.glTexEnvfv(8960, 8705, bg.field_a, 0);
     }
@@ -1711,9 +1711,9 @@ final class OpenGlRenderer extends GraphicsRenderer {
         }
         jaggl.OpenGL.glFogf(2915, this.field_Tb);
         jaggl.OpenGL.glFogf(2916, this.field_t);
-        bg.field_a[2] = (float)pg.a(255, this.field_F) / 255.0f;
-        bg.field_a[1] = (float)pg.a(this.field_F, 65280) / 65280.0f;
-        bg.field_a[0] = (float)pg.a(this.field_F, 16711680) / 16711680.0f;
+        bg.field_a[2] = (float)pg.bitwiseAnd(255, this.field_F) / 255.0f;
+        bg.field_a[1] = (float)pg.bitwiseAnd(this.field_F, 65280) / 65280.0f;
+        bg.field_a[0] = (float)pg.bitwiseAnd(this.field_F, 16711680) / 16711680.0f;
         jaggl.OpenGL.glFogfv(2918, bg.field_a, 0);
     }
 

@@ -79,7 +79,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
                 param2 = jr.field_p;
               }
               param1 = 2;
-              vr.field_b.a(se.field_a, 122);
+              vr.field_b.setAccountAndClearPassword(se.field_a, 122);
             }
             boolean var4 = true;
             if (10 == param1) {
@@ -100,7 +100,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
                 return;
               }
               if (!nf.field_a) {
-                vr.field_b.h(310);
+                vr.field_b.clearCredentials(310);
                 return;
               }
             }

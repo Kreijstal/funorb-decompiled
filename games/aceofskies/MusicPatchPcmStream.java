@@ -66,7 +66,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 MidiPcmStream stackIn_8_0 = this.field_l;
                 MidiNote stackIn_8_1 = (MidiNote) (param2);
                 boolean stackIn_9_2 = !(param2.field_y.field_n[param2.field_n] >= 0);
-                ((MidiPcmStream) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_9_2, true);
+                ((MidiPcmStream) (Object) stackIn_8_0).applySampleOffset(stackIn_8_1, stackIn_9_2, true);
               } else {
                 param2.field_e = PcmSampleStream.createForSampleStep(param2.field_x, param2.field_e.getSampleStepMagnitude(), param2.field_e.getTargetVolume(), param2.field_e.getPan());
               }
@@ -109,10 +109,10 @@ final class MusicPatchPcmStream extends PcmStream {
         NodeHashTableIterator.field_g = var8.readLong((byte) 118);
         if (2 == m.field_f) {
           CrossfadingMidiPcmStream.field_t = var8.readUnsignedShort((byte) 0);
-          ot.field_a = var8.readUnsignedMedium((byte) -92);
+          GrowableIntArray.field_a = var8.readUnsignedMedium((byte) -92);
         } else {
           CrossfadingMidiPcmStream.field_t = 0;
-          ot.field_a = 0;
+          GrowableIntArray.field_a = 0;
         }
         boolean stackIn_9_0 = !(param1 != var8.readUnsignedByte(-89));
         boolean var4 = stackIn_9_0;
@@ -284,7 +284,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 MidiPcmStream stackIn_12_0 = this.field_l;
                 MidiNote stackIn_12_1 = (MidiNote) (param0);
                 boolean stackIn_13_2 = !(0 <= param0.field_y.field_n[param0.field_n]);
-                ((MidiPcmStream) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_13_2, true);
+                ((MidiPcmStream) (Object) stackIn_12_0).applySampleOffset(stackIn_12_1, stackIn_13_2, true);
                 param0.field_e.rampVolume(var9, var11.getTargetVolume());
               } else {
                 param0.field_e = PcmSampleStream.createForSampleStep(param0.field_x, var11.getSampleStepMagnitude(), var11.getTargetVolume(), var11.getPan());

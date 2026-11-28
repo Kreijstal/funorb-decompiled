@@ -58,7 +58,7 @@ final class ol extends ai {
               var36 = var36 & var12_int;
               int incrementValue$1 = param8;
               param8++;
-              param9[incrementValue$1] = hq.a(var20, 26921, hq.a(var29, 26921, hq.a(var40, 26921, ef.a(var38, var18, -87, var27, pg.a(7, this.field_d[var37 + var33])), ef.a(var39, var18, -98, var27, pg.a(7, this.field_d[var36 + var33]))), hq.a(var40, 26921, ef.a(var38, var18, -116, var28, pg.a(7, this.field_d[var32 + var37])), ef.a(var39, var18, -115, var28, pg.a(this.field_d[var32 + var36], 7)))), hq.a(var29, 26921, hq.a(var40, 26921, ef.a(var38, var19, -47, var27, pg.a(this.field_d[var31 + var37], 7)), ef.a(var39, var19, -111, var27, pg.a(7, this.field_d[var31 + var36]))), hq.a(var40, 26921, ef.a(var38, var19, -85, var28, pg.a(this.field_d[var37 + var30], 7)), ef.a(var39, var19, -35, var28, pg.a(this.field_d[var30 + var36], 7))))) * param1;
+              param9[incrementValue$1] = hq.a(var20, 26921, hq.a(var29, 26921, hq.a(var40, 26921, ef.a(var38, var18, -87, var27, pg.bitwiseAnd(7, this.field_d[var37 + var33])), ef.a(var39, var18, -98, var27, pg.bitwiseAnd(7, this.field_d[var36 + var33]))), hq.a(var40, 26921, ef.a(var38, var18, -116, var28, pg.bitwiseAnd(7, this.field_d[var32 + var37])), ef.a(var39, var18, -115, var28, pg.bitwiseAnd(this.field_d[var32 + var36], 7)))), hq.a(var29, 26921, hq.a(var40, 26921, ef.a(var38, var19, -47, var27, pg.bitwiseAnd(this.field_d[var31 + var37], 7)), ef.a(var39, var19, -111, var27, pg.bitwiseAnd(7, this.field_d[var31 + var36]))), hq.a(var40, 26921, ef.a(var38, var19, -85, var28, pg.bitwiseAnd(this.field_d[var37 + var30], 7)), ef.a(var39, var19, -35, var28, pg.bitwiseAnd(this.field_d[var30 + var36], 7))))) * param1;
             }
             var23++;
           }

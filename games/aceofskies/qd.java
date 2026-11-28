@@ -21,14 +21,14 @@ class qd extends gg {
             try {
               Class var4 = Class.forName("BufferedImageRasterBuffer");
               RasterBuffer var5 = (RasterBuffer) (var4.newInstance());
-              var5.a((byte) -61, param2, param3, param0);
+              var5.initialize((byte) -61, param2, param3, param0);
               RasterBuffer stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Throwable var4_ref = decompiledCaughtException;
               ImageProducerRasterBuffer var5_ref = new ImageProducerRasterBuffer();
-              ((RasterBuffer) ((Object) var5_ref)).a((byte) -58, param2, param3, param0);
+              ((RasterBuffer) ((Object) var5_ref)).initialize((byte) -58, param2, param3, param0);
               ImageProducerRasterBuffer stackIn_5_0 = var5_ref;
               return (RasterBuffer) ((Object) stackIn_5_0);
             }
@@ -89,7 +89,7 @@ class qd extends gg {
     void b(int param0, int param1, byte param2) {
         int fieldTemp$0 = this.field_o;
         this.field_o = this.field_o + 1;
-        this.field_l[fieldTemp$0] = (byte)((pg.a(param0, (int) param2) >> 1) + 127);
+        this.field_l[fieldTemp$0] = (byte)((pg.bitwiseAnd(param0, (int) param2) >> 1) + 127);
     }
 
     final void c(int param0) {

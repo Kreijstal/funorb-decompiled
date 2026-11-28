@@ -38,7 +38,7 @@ final class ve {
         }
         if (param0 == 43) {
           if (null != DualLinkNode.field_e) {
-            DualLinkNode.field_e.a((byte) 125, param1);
+            DualLinkNode.field_e.setVolume((byte) 125, param1);
           }
           return;
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kb extends RichTextWidget {
+final class ValidationStatusWidget extends RichTextWidget {
     private Sprite field_F;
     static ej field_C;
     private String field_A;
@@ -38,7 +38,7 @@ final class kb extends RichTextWidget {
         return RegistrationAgreementPane.field_x;
     }
 
-    kb(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
+    ValidationStatusWidget(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, NodeHashTableIterator.a((byte) -63));
         try {
           this.field_B = param0;
@@ -267,7 +267,7 @@ final class kb extends RichTextWidget {
         if (param0 <= -41) {
           return null;
         }
-        kb.a(106);
+        ValidationStatusWidget.a(106);
         return null;
     }
 
