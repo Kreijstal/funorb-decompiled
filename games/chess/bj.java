@@ -258,7 +258,7 @@ abstract class bj extends k {
         }
         try {
           AchievementNotification.field_n.addFirst((IntrusiveNode) (new tn(param0, param0)), (byte) -57);
-          h.field_s.a(param0);
+          h.field_s.addChildStream(param0);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "bj.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

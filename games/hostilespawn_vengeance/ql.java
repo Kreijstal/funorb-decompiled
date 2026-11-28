@@ -256,7 +256,7 @@ class ql {
               var13Lifetime1 <= 1) {
               if ((param3.field_C == 0)) {
                 param3.field_C = 1;
-                eh.field_c.a(fg.field_b[24], 100, uh.field_i);
+                eh.field_c.playSample(fg.field_b[24], 100, uh.field_i);
               }
               decompiledFrameRemainder1 = false;
             }
@@ -295,7 +295,7 @@ class ql {
               }
               var14 = stackIn_78_0;
               if (var13Lifetime2 > 0) {
-                eh.field_c.a(var14, 100, uh.field_i * var13Lifetime2 / 128);
+                eh.field_c.playSample(var14, 100, uh.field_i * var13Lifetime2 / 128);
               }
             }
           }

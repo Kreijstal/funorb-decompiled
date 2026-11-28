@@ -14,7 +14,7 @@ final class am {
 
     final void b(byte param0) {
         if (this.field_h) {
-          tb.field_d.a(this.field_d);
+          tb.field_d.removeChildStream(this.field_d);
           this.field_h = false;
         }
         int var2 = -40 % ((param0 - 4) / 56);
@@ -103,7 +103,7 @@ final class am {
         var4 = stackIn_5_0;
         if (var4 <= 0) {
           if (this.field_h) {
-            tb.field_d.a(this.field_d);
+            tb.field_d.removeChildStream(this.field_d);
             this.field_h = false;
           }
         } else {
@@ -118,7 +118,7 @@ final class am {
           this.field_d.setVolumeAndPan(var4 * gi.field_m >> 6, var5);
           if (!this.field_h) {
             this.field_h = true;
-            tb.field_d.b(this.field_d);
+            tb.field_d.addChildStream(this.field_d);
           }
         }
         this.field_c = 0;

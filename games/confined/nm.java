@@ -63,7 +63,7 @@ final class nm extends gk {
     nm(TunnelEntity param0, PcmSample param1, dc param2, int param3) {
         super(param0, param1);
         try {
-          this.field_n.e(param1.field_o.length * param3 >> 8);
+          this.field_n.setSamplePosition(param1.field_o.length * param3 >> 8);
           this.field_w = 0.2;
           this.field_H = param2;
         } catch (RuntimeException runtimeException) {
@@ -159,7 +159,7 @@ final class nm extends gk {
         double var17Lifetime1;
         if (!this.field_H.isLinked((byte) 105)) {
           this.field_B = false;
-          this.field_n.h(0);
+          this.field_n.setScaledVolume(0);
           this.field_n.setSampleStepMagnitude(0);
           return;
         }
@@ -209,7 +209,7 @@ final class nm extends gk {
           stackIn_20_2 = Math.sqrt(var17Lifetime1);
         }
         var29 = (int)(stackIn_19_0 - stackIn_19_1 / stackIn_20_2);
-        this.field_n.b(16384 + eg.field_i * var21 * fa.field_S >> 15, var29);
+        this.field_n.setScaledVolumeAndPan(16384 + eg.field_i * var21 * fa.field_S >> 15, var29);
         var11Lifetime1 = -(var9 * this.field_H.field_x) + var3;
         var15Lifetime1 = -(this.field_H.field_K * var9) + var7;
         var13Lifetime1 = -(var9 * this.field_H.field_P) + var5;
@@ -252,7 +252,7 @@ final class nm extends gk {
         }
         ((RawPcmStream) (Object) stackIn_34_0).setSampleStepMagnitude(stackIn_35_1);
         if (this.field_x) {
-          cb.field_a.a(this.field_n);
+          cb.field_a.addChildStream(this.field_n);
           this.field_x = false;
         }
         return;

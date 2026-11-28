@@ -62,16 +62,16 @@ final class AccountCreationResultPanel extends na implements vd {
             q.field_a[var1_int] = new vh();
           }
           var4 = RawPcmStream.createForPlaybackRate(wm.field_a, 100, 0);
-          var4.f(-1);
+          var4.setLoopCount(-1);
           ck.field_db = new am(var4);
           var5 = RawPcmStream.createForPlaybackRate(fb.field_c, 100, 0);
-          var5.f(-1);
+          var5.setLoopCount(-1);
           LoginPanel.field_N = new am(var5);
           var6 = RawPcmStream.createForPlaybackRate(pe.field_h, 100, 0);
-          var6.f(-1);
+          var6.setLoopCount(-1);
           fp.field_c = new am(var6);
           var7 = RawPcmStream.createForPlaybackRate(nj.field_c, 100, 0);
-          var7.f(-1);
+          var7.setLoopCount(-1);
           aa.field_a = new am(var7);
           nh.field_F = je.field_j;
           sb.field_F = b.field_a;

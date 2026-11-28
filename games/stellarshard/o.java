@@ -197,7 +197,7 @@ abstract class o {
             7 >= param0.field_c ||
             !(param0.field_c < 13) &&
             !(param0.field_c >= 16)) && MouseWheelInput.field_e) {
-            ll.field_c.a(sb.field_e[32], 100, 2 * pk.field_h);
+            ll.field_c.playSample(sb.field_e[32], 100, 2 * pk.field_h);
           }
           b.a(param0.field_c, 6);
           if (0 <= e.field_e &&
@@ -218,12 +218,12 @@ abstract class o {
             nc.field_H = 1;
             stellarshard.field_U[10] = stellarshard.field_U[10] + 1;
             if (MouseWheelInput.field_e) {
-              ll.field_c.a(sb.field_e[31], 100, pk.field_h * 2);
+              ll.field_c.playSample(sb.field_e[31], 100, pk.field_h * 2);
             }
           }
           if (9 == param0.field_c) {
             if (MouseWheelInput.field_e) {
-              ll.field_c.a(sb.field_e[28], 100, 2 * pk.field_h);
+              ll.field_c.playSample(sb.field_e[28], 100, 2 * pk.field_h);
             }
             ig.field_D = 255;
             for (var4 = 0; var4 < 256; var4++) {
@@ -252,7 +252,7 @@ abstract class o {
             nc.field_H = 2;
             stellarshard.field_U[11] = stellarshard.field_U[11] + 1;
             if (MouseWheelInput.field_e) {
-              ll.field_c.a(sb.field_e[30], 100, pk.field_h * 2);
+              ll.field_c.playSample(sb.field_e[30], 100, pk.field_h * 2);
             }
           }
           if (11 == param0.field_c) {
@@ -260,7 +260,7 @@ abstract class o {
             gh.field_b = 1500;
             nc.field_H = 3;
             if (MouseWheelInput.field_e) {
-              ll.field_c.a(sb.field_e[29], 100, 2 * pk.field_h);
+              ll.field_c.playSample(sb.field_e[29], 100, 2 * pk.field_h);
             }
           }
           if (12 == param0.field_c) {
@@ -269,7 +269,7 @@ abstract class o {
             nc.field_H = 4;
             stellarshard.field_U[13] = stellarshard.field_U[13] + 1;
             if (MouseWheelInput.field_e) {
-              ll.field_c.a(sb.field_e[0], 100, pk.field_h * 2);
+              ll.field_c.playSample(sb.field_e[0], 100, pk.field_h * 2);
             }
           }
           if (param0.field_c == 13) {
@@ -291,7 +291,7 @@ abstract class o {
               hj.a(242, 13, 1);
             }
             if (MouseWheelInput.field_e) {
-              ll.field_c.a(sb.field_e[41], 100, 3 * pk.field_h);
+              ll.field_c.playSample(sb.field_e[41], 100, 3 * pk.field_h);
             }
           }
           var7 = new ScorePopup(-var2_int, param0, 16777215);

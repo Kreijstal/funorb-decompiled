@@ -604,7 +604,7 @@ final class PcmSampleStream extends PcmStream {
         return this.field_t < 0 || this.field_t >= ((PcmSample) (this.field_h)).field_i.length << 8;
     }
 
-    final synchronized void d(int param0) {
+    final synchronized void setLoopCount(int param0) {
         this.field_s = param0;
     }
 

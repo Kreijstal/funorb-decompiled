@@ -268,7 +268,7 @@ final class jh extends wb implements qk {
               param2 < 9) {
               param0 = param0 * 2;
             }
-            eh.field_c.a(param3[param2], 100, param0);
+            eh.field_c.playSample(param3[param2], 100, param0);
           }
           if (param1 <= 28) {
             field_ab = 106;

@@ -16,7 +16,7 @@ final class rf {
 
     final static void b(int param0, int param1) {
         bc.field_b = param1;
-        SpriteGeometry.field_q.a(64 * param1 / param0, (byte) -100);
+        SpriteGeometry.field_q.setMasterVolume(64 * param1 / param0, (byte) -100);
     }
 
     final static RgbSprite[] b(byte param0) {

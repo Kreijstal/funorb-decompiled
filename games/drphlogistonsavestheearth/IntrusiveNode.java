@@ -27,7 +27,7 @@ class IntrusiveNode {
             PcmSampleStream var3 = (PcmSampleStream) null;
             IntrusiveNode.a((PcmSampleStream) null, -47);
           }
-          ej.field_a.b(param0);
+          ej.field_a.removeChildStream(param0);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "gi.TB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

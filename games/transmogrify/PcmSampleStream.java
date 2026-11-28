@@ -18,7 +18,7 @@ final class PcmSampleStream extends PcmStream {
     private int field_n;
     private int field_y;
 
-    final synchronized void h(int param0) {
+    final synchronized void setLoopCount(int param0) {
         this.field_x = param0;
     }
 
@@ -156,7 +156,7 @@ final class PcmSampleStream extends PcmStream {
         this.field_w = 0;
     }
 
-    final synchronized void j(int param0) {
+    final synchronized void setSamplePosition(int param0) {
         param0 = param0 << 8;
         int var2 = ((PcmSample) (this.field_g)).field_l.length << 8;
         if (param0 < -1) {
@@ -518,7 +518,7 @@ final class PcmSampleStream extends PcmStream {
         return param5;
     }
 
-    final synchronized void k(int param0) {
+    final synchronized void setScaledVolume(int param0) {
         this.setVolumeAndPan(param0 << 6, this.getPan());
     }
 
@@ -667,7 +667,7 @@ final class PcmSampleStream extends PcmStream {
         return null;
     }
 
-    final synchronized boolean l() {
+    final synchronized boolean isSamplePositionOutOfRange() {
         return this.field_l < 0 || this.field_l >= ((PcmSample) (this.field_g)).field_l.length << 8;
     }
 
@@ -985,7 +985,7 @@ final class PcmSampleStream extends PcmStream {
         this.recomputeGains();
     }
 
-    final synchronized void g(int param0) {
+    final synchronized void setSamplePositionFixed(int param0) {
         int var2 = ((PcmSample) (this.field_g)).field_l.length << 8;
         if (param0 < -1) {
           param0 = -1;
@@ -1169,7 +1169,7 @@ final class PcmSampleStream extends PcmStream {
         return this.field_o < 0 ? -1 : this.field_o;
     }
 
-    final static PcmSampleStream b(PcmSample param0, int param1, int param2, int param3) {
+    final static PcmSampleStream createForPlaybackRateWithScaledVolumeAndPan(PcmSample param0, int param1, int param2, int param3) {
         if (param0.field_l == null) {
           return null;
         }
@@ -1255,7 +1255,7 @@ final class PcmSampleStream extends PcmStream {
         return false;
     }
 
-    final synchronized void f(int param0) {
+    final synchronized void fadeOutAndUnlink(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 == 0) {

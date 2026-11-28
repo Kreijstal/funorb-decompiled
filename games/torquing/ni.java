@@ -16,7 +16,7 @@ final class ni extends IntrusiveNode {
         try {
           var2 = Torquing.field_v;
           synchronized (var2) {
-            Torquing.field_v.field_r.b(param0);
+            Torquing.field_v.field_r.addChildStream(param0);
             if (!param1) {
               field_l = (IndexedSprite[]) null;
             }

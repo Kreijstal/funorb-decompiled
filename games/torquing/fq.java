@@ -61,7 +61,7 @@ final class fq extends jh {
           if (param0) {
             field_F = (TranslucentSpriteLayer) null;
           }
-          tb.field_l.a(param2, param1, on.field_c * param3 / 160);
+          tb.field_l.playSample(param2, param1, on.field_c * param3 / 160);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "fq.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

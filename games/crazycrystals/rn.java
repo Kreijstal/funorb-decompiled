@@ -92,7 +92,7 @@ final class rn extends rd {
     }
 
     final void a(byte param0) {
-        tb.field_d.a(ad.field_k, 100, 48 * gi.field_m * this.field_m, this.field_l / this.field_m);
+        tb.field_d.playSampleWithPan(ad.field_k, 100, 48 * gi.field_m * this.field_m, this.field_l / this.field_m);
         this.field_m = 0;
         int var2 = -42 / ((29 - param0) / 42);
         this.field_l = 0;

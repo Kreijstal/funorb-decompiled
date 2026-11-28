@@ -79,7 +79,7 @@ abstract class ca {
           ClientLookupTables.field_d = dn.field_i;
           PacketBuffer.field_h = param0;
           qi.field_N = param4;
-          eh.field_c.a(NetworkArchiveRequest.field_A[23], 100, wj.field_O);
+          eh.field_c.playSample(NetworkArchiveRequest.field_A[23], 100, wj.field_O);
           HostileSpawn.field_F = 1 == param1 ? true : false;
           return;
         }
@@ -89,7 +89,7 @@ abstract class ca {
         ClientLookupTables.field_d = dn.field_i;
         PacketBuffer.field_h = param0;
         qi.field_N = param4;
-        eh.field_c.a(NetworkArchiveRequest.field_A[23], 100, wj.field_O);
+        eh.field_c.playSample(NetworkArchiveRequest.field_A[23], 100, wj.field_O);
         HostileSpawn.field_F = 1 == param1 ? true : false;
     }
 

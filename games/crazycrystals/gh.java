@@ -563,7 +563,7 @@ final class gh extends ea implements Cloneable {
           }
           om.field_x = null;
           if (param0 != null) {
-            fq.field_x.e(-20562, param3 * param2 >> 6);
+            fq.field_x.setMasterVolume(-20562, param3 * param2 >> 6);
             om.field_x = param0;
           }
           return;

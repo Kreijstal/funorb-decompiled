@@ -182,7 +182,7 @@ final class nb {
         }
         nk.field_h = param0;
         if (null != SectorCacheStore.field_a) {
-          SectorCacheStore.field_a.c(param0, false);
+          SectorCacheStore.field_a.setMasterVolume(param0, false);
         }
         if (null != SectorCacheStore.field_d) {
           SectorCacheStore.field_d.a(-127, param0);

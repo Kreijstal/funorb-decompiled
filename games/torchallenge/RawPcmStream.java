@@ -63,7 +63,7 @@ final class RawPcmStream extends PcmStream {
         return this.field_z < 0 ? -1 : this.field_z;
     }
 
-    final synchronized void e(int param0) {
+    final synchronized void setLoopCount(int param0) {
         this.field_x = param0;
     }
 
@@ -208,7 +208,7 @@ final class RawPcmStream extends PcmStream {
         this.setVolumeAndPan(param0, this.getPan());
     }
 
-    final static RawPcmStream a(PcmSample param0, int param1, int param2, int param3) {
+    final static RawPcmStream createForPlaybackRateWithScaledVolumeAndPan(PcmSample param0, int param1, int param2, int param3) {
         if (param0.field_k == null) {
           return null;
         }
@@ -218,7 +218,7 @@ final class RawPcmStream extends PcmStream {
         return null;
     }
 
-    final synchronized void f(int param0, int param1) {
+    final synchronized void rampScaledVolume(int param0, int param1) {
         this.rampVolumeAndPan(param0, param1 << 6, this.getPan());
     }
 
@@ -279,7 +279,7 @@ final class RawPcmStream extends PcmStream {
         return 1;
     }
 
-    private final boolean g() {
+    private final boolean finishOrContinueVolumeRamp() {
         int var1;
         int var2;
         int var3;
@@ -417,7 +417,7 @@ final class RawPcmStream extends PcmStream {
         return param3;
     }
 
-    final synchronized boolean j() {
+    final synchronized boolean isSamplePositionOutOfRange() {
         return this.field_A < 0 || this.field_A >= ((PcmSample) (this.field_k)).field_k.length << 8;
     }
 
@@ -858,7 +858,7 @@ final class RawPcmStream extends PcmStream {
         return param5 >> 1;
     }
 
-    final synchronized void h(int param0) {
+    final synchronized void setScaledVolume(int param0) {
         this.setVolumeAndPan(param0 << 6, this.getPan());
     }
 
@@ -964,7 +964,7 @@ final class RawPcmStream extends PcmStream {
         return param5;
     }
 
-    final synchronized void d(int param0) {
+    final synchronized void setSamplePositionFixed(int param0) {
         int var2 = ((PcmSample) (this.field_k)).field_k.length << 8;
         if (param0 < -1) {
           param0 = -1;
@@ -1281,7 +1281,7 @@ final class RawPcmStream extends PcmStream {
         return param5;
     }
 
-    final synchronized void e(int param0, int param1) {
+    final synchronized void setLoopBounds(int param0, int param1) {
         this.field_m = param0;
         this.field_u = param1;
     }
@@ -1338,7 +1338,7 @@ final class RawPcmStream extends PcmStream {
           if (this.field_w != 0) {
             return param1;
           }
-        } while (!this.g());
+        } while (!this.finishOrContinueVolumeRamp());
         return param3;
     }
 
@@ -1546,7 +1546,7 @@ final class RawPcmStream extends PcmStream {
         return null;
     }
 
-    final synchronized void g(int param0) {
+    final synchronized void fadeOutAndUnlink(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 == 0) {
@@ -1614,7 +1614,7 @@ final class RawPcmStream extends PcmStream {
         this.unlink(true);
     }
 
-    final synchronized void b(int param0, int param1, int param2) {
+    final synchronized void rampScaledVolumeAndPan(int param0, int param1, int param2) {
         this.rampVolumeAndPan(param0, param1 << 6, param2 << 6);
     }
 
@@ -1743,7 +1743,7 @@ final class RawPcmStream extends PcmStream {
           if (this.field_w != 0) {
             return param1;
           }
-        } while (!this.g());
+        } while (!this.finishOrContinueVolumeRamp());
         return param3;
     }
 

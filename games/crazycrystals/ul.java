@@ -84,7 +84,7 @@ final class ul extends um {
     }
 
     final void a(byte param0) {
-        tb.field_d.a(jj.field_a, 100, this.field_i * (48 * gi.field_m), this.field_h / this.field_i);
+        tb.field_d.playSampleWithPan(jj.field_a, 100, this.field_i * (48 * gi.field_m), this.field_h / this.field_i);
         int var2 = -101 % ((29 - param0) / 42);
         this.field_i = 0;
         this.field_h = 0;

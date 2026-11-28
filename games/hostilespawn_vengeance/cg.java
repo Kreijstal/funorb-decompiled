@@ -36,7 +36,7 @@ final class cg {
               if (13 == pj.field_e &&
                 0 == ClientLookupTables.field_h.field_p) {
                 if (1 == uj.field_l) {
-                  eh.field_c.a(NetworkArchiveRequest.field_A[4], 100, uh.field_i);
+                  eh.field_c.playSample(NetworkArchiveRequest.field_A[4], 100, uh.field_i);
                 }
                 ClientLookupTables.field_h.d((byte) -100);
                 continue;
@@ -45,13 +45,13 @@ final class cg {
                 7 != ClientLookupTables.field_h.field_d) {
                 if (pj.field_e == 98) {
                   if (uj.field_l == 1) {
-                    eh.field_c.a(NetworkArchiveRequest.field_A[3], 100, uh.field_i);
+                    eh.field_c.playSample(NetworkArchiveRequest.field_A[3], 100, uh.field_i);
                   }
                   ClientLookupTables.field_h.i((byte) -104);
                 }
                 if (pj.field_e == 99) {
                   if (1 == uj.field_l) {
-                    eh.field_c.a(NetworkArchiveRequest.field_A[3], 100, uh.field_i);
+                    eh.field_c.playSample(NetworkArchiveRequest.field_A[3], 100, uh.field_i);
                   }
                   ClientLookupTables.field_h.c((byte) 124);
                 }
@@ -67,7 +67,7 @@ final class cg {
                       var1_int = 0;
                     }
                     if (var1_int != 0) {
-                      eh.field_c.a(NetworkArchiveRequest.field_A[4], 100, uh.field_i);
+                      eh.field_c.playSample(NetworkArchiveRequest.field_A[4], 100, uh.field_i);
                     }
                   }
                   ClientLookupTables.field_h.k(-109);
@@ -91,7 +91,7 @@ final class cg {
                       var1_intLifetime3 = 0;
                     }
                     if (var1_intLifetime3 != 0) {
-                      eh.field_c.a(NetworkArchiveRequest.field_A[4], 100, uh.field_i);
+                      eh.field_c.playSample(NetworkArchiveRequest.field_A[4], 100, uh.field_i);
                     }
                   }
                   ClientLookupTables.field_h.b(param0 ^ 27640);
@@ -118,7 +118,7 @@ final class cg {
                     var1_intLifetime1 = 0;
                   }
                   if (var1_intLifetime1 != 0) {
-                    eh.field_c.a(NetworkArchiveRequest.field_A[3], 100, uh.field_i);
+                    eh.field_c.playSample(NetworkArchiveRequest.field_A[3], 100, uh.field_i);
                   }
                 }
                 ClientLookupTables.field_h.k(param0 ^ 27620);
@@ -135,7 +135,7 @@ final class cg {
                     var1_intLifetime2 = 0;
                   }
                   if (var1_intLifetime2 != 0) {
-                    eh.field_c.a(NetworkArchiveRequest.field_A[3], 100, uh.field_i);
+                    eh.field_c.playSample(NetworkArchiveRequest.field_A[3], 100, uh.field_i);
                   }
                 }
                 ClientLookupTables.field_h.b(param0 ^ 27552);
@@ -145,7 +145,7 @@ final class cg {
                 continue;
               }
               if (uj.field_l == 1) {
-                eh.field_c.a(NetworkArchiveRequest.field_A[4], 100, uh.field_i);
+                eh.field_c.playSample(NetworkArchiveRequest.field_A[4], 100, uh.field_i);
               }
               ClientLookupTables.field_h.f((byte) 90);
             }

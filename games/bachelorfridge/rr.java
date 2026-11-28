@@ -166,7 +166,7 @@ final class rr extends AnimationNode {
         int var2 = -62 / ((param0 - 71) / 47);
         if (this.field_w == -this.field_t) {
           var3 = PcmSampleStream.createWithVolume(rt.field_a[20], 256, 128);
-          var3.d(-1);
+          var3.setLoopCount(-1);
           this.field_l = tw.a(var3, (byte) -36);
         }
         int fieldTemp$0 = this.field_w + 1;

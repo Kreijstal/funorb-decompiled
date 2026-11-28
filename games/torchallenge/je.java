@@ -100,7 +100,7 @@ final class je {
 
     final static void a(byte param0, RawPcmStream param1) {
         try {
-          GameKeyHandler.field_a.b(param1);
+          GameKeyHandler.field_a.removeChildStream(param1);
           if (param0 != 15) {
             field_h = (int[][]) null;
           }

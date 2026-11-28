@@ -438,7 +438,7 @@ final class RawPcmStream extends PcmStream {
         return this.field_t < 0 ? -this.field_t : this.field_t;
     }
 
-    final synchronized void i(int param0) {
+    final synchronized void fadeOutAndUnlink(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 == 0) {
@@ -545,7 +545,7 @@ final class RawPcmStream extends PcmStream {
           if (this.field_l != 0) {
             return param1;
           }
-        } while (!this.l());
+        } while (!this.finishOrContinueVolumeRamp());
         return param3;
     }
 
@@ -557,7 +557,7 @@ final class RawPcmStream extends PcmStream {
         return this.field_u < 0 || this.field_u >= ((PcmSample) (this.field_j)).field_h.length << 8;
     }
 
-    private final boolean l() {
+    private final boolean finishOrContinueVolumeRamp() {
         int var1;
         int var2;
         int var3;
@@ -797,7 +797,7 @@ final class RawPcmStream extends PcmStream {
           if (this.field_l != 0) {
             return param1;
           }
-        } while (!this.l());
+        } while (!this.finishOrContinueVolumeRamp());
         return param3;
     }
 
@@ -1317,7 +1317,7 @@ final class RawPcmStream extends PcmStream {
         return param3;
     }
 
-    final synchronized void f(int param0) {
+    final synchronized void setLoopCount(int param0) {
         this.field_o = param0;
     }
 
@@ -1624,7 +1624,7 @@ final class RawPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void d(int param0) {
+    final synchronized void setSamplePosition(int param0) {
         param0 = param0 << 8;
         int var2 = ((PcmSample) (this.field_j)).field_h.length << 8;
         if (param0 < -1) {
@@ -1644,7 +1644,7 @@ final class RawPcmStream extends PcmStream {
         this.field_t = -this.field_t;
     }
 
-    final synchronized void c(int param0, int param1) {
+    final synchronized void rampScaledVolume(int param0, int param1) {
         this.rampVolumeAndPan(param0, param1 << 6, this.getPan());
     }
 

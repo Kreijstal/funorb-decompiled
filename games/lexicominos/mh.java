@@ -13,7 +13,7 @@ final class mh extends nb implements jk {
         if (!(oc.field_e >= 0)) {
           return;
         }
-        wj.field_j.a(kc.field_m[param0], param1, oc.field_e * 128 / 256);
+        wj.field_j.playSample(kc.field_m[param0], param1, oc.field_e * 128 / 256);
     }
 
     public static void clearStaticReferences(byte param0) {

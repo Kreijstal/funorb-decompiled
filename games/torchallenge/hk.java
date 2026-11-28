@@ -52,8 +52,8 @@ final class hk {
                   if (decompiledFrameRemainder0) {
                     var3 = cj.field_h[var4];
                     SpriteState.field_r[var5] = RawPcmStream.createForPlaybackRate(var3, 100, var1_int);
-                    SpriteState.field_r[var5].e(-1);
-                    SpriteState.field_r[var5].e(0, var3.field_k.length);
+                    SpriteState.field_r[var5].setLoopCount(-1);
+                    SpriteState.field_r[var5].setLoopBounds(0, var3.field_k.length);
                     IntrusiveNode.field_g[var5] = we.a(SpriteState.field_r[var5], 6222);
                     wh.field_d[var5] = true;
                     fk.field_u[var5] = 25;
@@ -61,14 +61,14 @@ final class hk {
                 }
                 if (decompiledFrameRemainder0) {
                   if (!wh.field_d[var5]) {
-                    SpriteState.field_r[var5].h(var1_int);
+                    SpriteState.field_r[var5].setScaledVolume(var1_int);
                     IntrusiveNode.field_g[var5] = we.a(SpriteState.field_r[var5], 6222);
                     wh.field_d[var5] = true;
                     fk.field_u[var5] = 25;
                   }
                   if (wh.field_d[var5] &&
                     fk.field_u[var5] == 0) {
-                    SpriteState.field_r[var5].f(25, var1_int);
+                    SpriteState.field_r[var5].rampScaledVolume(25, var1_int);
                     fk.field_u[var5] = 25;
                   }
                 }

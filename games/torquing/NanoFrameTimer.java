@@ -81,14 +81,14 @@ final class NanoFrameTimer extends FrameTimer {
             param0.g();
           }
           if (null != vd.field_c) {
-            ti.field_e.c(vd.field_c);
+            ti.field_e.removeOwnedListener(vd.field_c);
           }
           vd.field_c = param0;
           qd.field_b.flushAndMarkDrainCheck();
           if (param2 <= 117) {
             NanoFrameTimer.clearDeclaredStaticReferences(61);
           }
-          ti.field_e.a(vd.field_c);
+          ti.field_e.addListener(vd.field_c);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "np.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -174,7 +174,7 @@ final class NanoFrameTimer extends FrameTimer {
         } else {
           if (ig.field_r[param0] == null) {
             ig.field_r[param0] = PcmSampleStream.createForPlaybackRate(DisplayNameSelectionPanel.field_F[param0], 100, param2);
-            ig.field_r[param0].d(-1);
+            ig.field_r[param0].setLoopCount(-1);
           }
           if (Bzip2State.field_a != ig.field_r[param0]) {
             if (null != Bzip2State.field_a) {
@@ -183,7 +183,7 @@ final class NanoFrameTimer extends FrameTimer {
             ni.a(ig.field_r[param0], true);
             Bzip2State.field_a = ig.field_r[param0];
           } else {
-            ig.field_r[param0].i(param2);
+            ig.field_r[param0].setScaledVolume(param2);
           }
         }
         if (param1 != -32596) {

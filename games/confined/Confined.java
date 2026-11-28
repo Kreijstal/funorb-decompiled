@@ -1225,18 +1225,18 @@ public final class Confined extends i {
           ti.a(0, 0, 640, 376);
           ti.b(ua.a(true));
           ni.field_a = RawPcmStream.createForPlaybackRate(rj.field_b, 100, 0);
-          ni.field_a.c(-1);
-          cb.field_a.a(ni.field_a);
+          ni.field_a.setLoopCount(-1);
+          cb.field_a.addChildStream(ni.field_a);
           SectorCacheStore.field_f = RawPcmStream.createForPlaybackRate(rj.field_b, 47, 0);
-          SectorCacheStore.field_f.c(-1);
-          cb.field_a.a(SectorCacheStore.field_f);
+          SectorCacheStore.field_f.setLoopCount(-1);
+          cb.field_a.addChildStream(SectorCacheStore.field_f);
           da.field_j = RawPcmStream.createForPlaybackRate(rj.field_b, 29, 0);
-          da.field_j.c(-1);
-          cb.field_a.a(da.field_j);
+          da.field_j.setLoopCount(-1);
+          cb.field_a.addChildStream(da.field_j);
           qn.field_v = new GameSession();
           md.d(param0 ^ 39);
           mm.a(480, 320, lh.field_c, cj.field_a, AcceleratingProjectile.field_T, 4243584, (byte) -126, 240, 9805732, 30, 5, 16777215, pn.field_a, 20, pn.field_a, 16, 50, 20, 0, 20, 16);
-          he.field_d.a(WingPod.field_R);
+          he.field_d.addListener(WingPod.field_R);
           da.field_e = og.a(false, (byte) 55);
           qa.field_a = true;
           return;
@@ -1450,7 +1450,7 @@ public final class Confined extends i {
             eg.field_i = eg.field_i - 1;
             WingPod.field_R.b(eg.field_i * hd.field_f >> 9);
             if (0 == eg.field_i) {
-              he.field_d.b(WingPod.field_R);
+              he.field_d.removeOwnedListener(WingPod.field_R);
               sg.f((byte) 105);
               md.d(-102);
               WingPod.field_R.d();
@@ -1621,7 +1621,7 @@ public final class Confined extends i {
             (decompiledFrameRemainder0 = !(qn.field_v.field_B.field_Bb.field_b <= 8)) &&
             (decompiledFrameRemainder0 = (qn.field_v.field_B.field_Bb.field_d == 0))) {
             pa.field_b = 0;
-            cb.field_a.a(aj.field_a, 100, eg.field_i * (fa.field_S * 6) >> 11);
+            cb.field_a.playSample(aj.field_a, 100, eg.field_i * (fa.field_S * 6) >> 11);
             id.field_rb = -1;
             var2_intLifetime3 = qn.field_v.field_J.field_o;
             if (qn.field_v.field_x.field_t > 0 &&
@@ -1650,7 +1650,7 @@ public final class Confined extends i {
             if (decompiledSharedTail0) {
               pa.field_b = 63 & 1 + pa.field_b;
               if (pa.field_b == 0) {
-                cb.field_a.a(aj.field_a, 100, eg.field_i * fa.field_S * 6 >> 11);
+                cb.field_a.playSample(aj.field_a, 100, eg.field_i * fa.field_S * 6 >> 11);
               }
               id.field_rb = -1;
             }

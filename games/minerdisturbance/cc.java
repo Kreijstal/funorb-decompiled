@@ -63,7 +63,7 @@ abstract class cc extends kn {
         if (25 == dk.field_e) {
           dk.field_e = 0;
         }
-        gl.field_u[dk.field_e] = RawPcmStream.a(re.field_a[17], 100, oc.field_f);
+        gl.field_u[dk.field_e] = RawPcmStream.createForPlaybackRate(re.field_a[17], 100, oc.field_f);
         mg.a(1963987425, gl.field_u[dk.field_e]);
         IterableNodeHashTable.field_c[dk.field_e] = param0;
         if (param1 == 136989569) {

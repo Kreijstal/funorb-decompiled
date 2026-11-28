@@ -70,7 +70,7 @@ final class ti extends rd {
 
     final void a(byte param0) {
         int var2 = -79 / ((param0 - 29) / 42);
-        tb.field_d.a(rd.field_i, 100, 48 * (gi.field_m * this.field_k), this.field_n / this.field_k);
+        tb.field_d.playSampleWithPan(rd.field_i, 100, 48 * (gi.field_m * this.field_k), this.field_n / this.field_k);
         this.field_k = 0;
         this.field_n = 0;
     }

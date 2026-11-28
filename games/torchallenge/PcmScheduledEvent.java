@@ -6,7 +6,7 @@ abstract class PcmScheduledEvent extends IntrusiveNode {
 
     abstract int onScheduledEvent(PcmStreamMixer param0);
 
-    abstract void a();
+    abstract void onRemovedFromMixer();
 
     private PcmScheduledEvent() throws Throwable {
         throw new Error();

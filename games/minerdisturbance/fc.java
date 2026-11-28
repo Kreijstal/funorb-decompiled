@@ -179,7 +179,7 @@ final class fc extends DualLinkNode {
         }
         NetworkArchiveRequest.field_J = param0;
         if (null != km.field_a) {
-          km.field_a.a((byte) -95, param0);
+          km.field_a.setMasterVolume((byte) -95, param0);
         }
         if (null != nj.field_e) {
           nj.field_e.a(81, param0);

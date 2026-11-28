@@ -149,7 +149,7 @@ final class AccountRegistrationPanel extends kj implements tl, sg, tb {
         if (var11 < 0) {
           var11 = 128;
         }
-        ki.field_d.b(param4, var10, var11);
+        ki.field_d.rampScaledVolumeAndPan(param4, var10, var11);
         nj.field_g = var10;
         lh.field_s = param5;
     }

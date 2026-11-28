@@ -450,7 +450,7 @@ final class RawPcmStream extends PcmStream {
           if (this.field_p != 0) {
             return param1;
           }
-        } while (!this.g());
+        } while (!this.finishOrContinueVolumeRamp());
         return param3;
     }
 
@@ -817,11 +817,11 @@ final class RawPcmStream extends PcmStream {
           if (this.field_p != 0) {
             return param1;
           }
-        } while (!this.g());
+        } while (!this.finishOrContinueVolumeRamp());
         return param3;
     }
 
-    private final boolean g() {
+    private final boolean finishOrContinueVolumeRamp() {
         int var1;
         int var2;
         int var3;
@@ -1013,7 +1013,7 @@ final class RawPcmStream extends PcmStream {
         return param5;
     }
 
-    final synchronized void e(int param0) {
+    final synchronized void fadeOutAndUnlink(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 == 0) {
@@ -1258,7 +1258,7 @@ final class RawPcmStream extends PcmStream {
         this.unlink(10);
     }
 
-    final synchronized void d(int param0) {
+    final synchronized void setLoopCount(int param0) {
         this.field_s = param0;
     }
 

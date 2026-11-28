@@ -71,7 +71,7 @@ final class uc {
           return;
         }
         if (null != jk.field_D) {
-          jk.field_D.a((byte) 101, param0);
+          jk.field_D.setMasterVolume((byte) 101, param0);
           if (null != jj.field_a) {
             jj.field_a.a(param0, false);
             return;

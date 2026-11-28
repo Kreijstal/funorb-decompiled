@@ -151,7 +151,7 @@ final class ql extends am {
           if (param0 != -1618866100) {
             field_u = (ed) null;
           }
-          tb.field_l.b(Torquing.field_v);
+          tb.field_l.addChildStream(Torquing.field_v);
           ti.field_e = param1;
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ql.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

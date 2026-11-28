@@ -29,7 +29,7 @@ final class RawPcmStream extends PcmStream {
         this.recomputeGains();
     }
 
-    final static RawPcmStream computeRawPcmStream0450(RawSound rawSoundArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static RawPcmStream createForPlaybackRateWithPan(RawSound rawSoundArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (rawSoundArgument1.byteArrayState0028 == null) {
           return null;
         }
@@ -338,7 +338,7 @@ final class RawPcmStream extends PcmStream {
         return;
     }
 
-    final synchronized void performAction0432(boolean booleanArgument1) {
+    final synchronized void setPingPongLoop(boolean booleanArgument1) {
         this.booleanState0033 = booleanArgument1 ? true : false;
     }
 
@@ -385,7 +385,7 @@ final class RawPcmStream extends PcmStream {
           if (this.integerState0200 != 0) {
             return integerArgument2;
           }
-        } while (!this.computeBoolean0460());
+        } while (!this.finishOrContinueVolumeRamp());
         return integerArgument4;
     }
 
@@ -480,7 +480,7 @@ final class RawPcmStream extends PcmStream {
         return integerArgument5 >> 1;
     }
 
-    private final boolean computeBoolean0460() {
+    private final boolean finishOrContinueVolumeRamp() {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -556,7 +556,7 @@ final class RawPcmStream extends PcmStream {
         return false;
     }
 
-    final synchronized void performAction0459(int integerArgument1, int integerArgument2) {
+    final synchronized void setLoopBounds(int integerArgument1, int integerArgument2) {
         this.integerState0193 = integerArgument1;
         this.integerState0194 = integerArgument2;
     }
@@ -735,7 +735,7 @@ final class RawPcmStream extends PcmStream {
         return integerArgument4;
     }
 
-    final synchronized void performAction0425(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final synchronized void rampScaledVolumeAndPan(int integerArgument1, int integerArgument2, int integerArgument3) {
         this.rampVolumeAndPan(integerArgument1, integerArgument2 << 6, integerArgument3 << 6);
     }
 
@@ -743,7 +743,7 @@ final class RawPcmStream extends PcmStream {
         return integerArgument2 < 0 ? -integerArgument1 : (int)((double)integerArgument1 * Math.sqrt((double)integerArgument2 * 0.0001220703125) + 0.5);
     }
 
-    final static RawPcmStream computeRawPcmStream0443(RawSound rawSoundArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static RawPcmStream createForSampleStepWithScaledVolumeAndPan(RawSound rawSoundArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (rawSoundArgument1.byteArrayState0028 == null) {
           return null;
         }
@@ -1178,11 +1178,11 @@ final class RawPcmStream extends PcmStream {
           if (this.integerState0200 != 0) {
             return integerArgument2;
           }
-        } while (!this.computeBoolean0460());
+        } while (!this.finishOrContinueVolumeRamp());
         return integerArgument4;
     }
 
-    final synchronized void performAction0461(int integerArgument1) {
+    final synchronized void fadeOutAndUnlink(int integerArgument1) {
         int integerLocal1 = 0;
         int integerLocal2;
         if (integerArgument1 == 0) {
@@ -1320,7 +1320,7 @@ final class RawPcmStream extends PcmStream {
         return null;
     }
 
-    final synchronized void performAction0458(int integerArgument1) {
+    final synchronized void setLoopCount(int integerArgument1) {
         this.integerState0201 = integerArgument1;
     }
 
@@ -1382,7 +1382,7 @@ final class RawPcmStream extends PcmStream {
         return integerArgument6;
     }
 
-    final synchronized void performAction0455(int integerArgument1) {
+    final synchronized void setSamplePosition(int integerArgument1) {
         integerArgument1 = integerArgument1 << 8;
         int integerLocal1 = ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028.length << 8;
         if (integerArgument1 < -1) {

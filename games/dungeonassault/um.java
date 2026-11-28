@@ -27,7 +27,7 @@ abstract class um {
         if (param1) {
           um.a(-85, false);
           if (null != ob.field_Xb) {
-            ob.field_Xb.c(param0, 24509);
+            ob.field_Xb.setMasterVolume(param0, 24509);
             if (FullscreenFocusCanvas.field_b != null) {
               FullscreenFocusCanvas.field_b.a(param0, 256);
             }
@@ -44,7 +44,7 @@ abstract class um {
           }
           return;
         }
-        ob.field_Xb.c(param0, 24509);
+        ob.field_Xb.setMasterVolume(param0, 24509);
         if (FullscreenFocusCanvas.field_b != null) {
           FullscreenFocusCanvas.field_b.a(param0, 256);
         }

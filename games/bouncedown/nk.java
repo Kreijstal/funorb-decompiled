@@ -163,7 +163,7 @@ final class nk {
                       if (jd.field_a > 256) {
                         jd.field_a = 256;
                       }
-                      ld.field_l.g(jd.field_a / 2, 100);
+                      ld.field_l.setMasterVolume(jd.field_a / 2, 100);
                       break regionExit2;
                     }
                     stackIn_99_0 = !(rd.field_a);

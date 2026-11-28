@@ -90,7 +90,7 @@ final class AccountServiceResult {
         try {
           if (uj.field_l == 1 &&
             ej.d((byte) 90)) {
-            eh.field_c.a(NetworkArchiveRequest.field_A[17], 100, uh.field_i / 2);
+            eh.field_c.playSample(NetworkArchiveRequest.field_A[17], 100, uh.field_i / 2);
           }
           jn.field_F[ib.field_c].field_c = (double)(int)(Math.random() * 256.0);
           jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param1.field_j);

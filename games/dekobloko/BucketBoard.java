@@ -1234,7 +1234,7 @@ final class BucketBoard {
               rawPcmStreamLocal29 = SoftwareFramebuffer.rawPcmStreamArrayState0003[this.integerState0453];
               rawPcmStreamLocal23 = rawPcmStreamLocal29;
               if (rawPcmStreamLocal23 != null) {
-                rawPcmStreamLocal29.performAction0458(-1);
+                rawPcmStreamLocal29.setLoopCount(-1);
               }
               if (rawPcmStreamLocal23 != null &&
                 rawPcmStreamLocal29.isLinked((byte) 93) &&
@@ -1242,18 +1242,18 @@ final class BucketBoard {
                 rawPcmStreamLocal23.rampVolumeAndPan(PcmPlayer.integerState0209 / 50, integerLocal43 * GameDomainSupport005.integerState0578, this.integerState0458 << 6);
               } else {
                 if (rawPcmStreamLocal23 != null) {
-                  rawPcmStreamLocal29.performAction0461(PcmPlayer.integerState0209 / 50);
+                  rawPcmStreamLocal29.fadeOutAndUnlink(PcmPlayer.integerState0209 / 50);
                 }
-                rawPcmStreamLocal30 = RawPcmStream.computeRawPcmStream0450(rawSoundLocal20, 100, integerLocal43 * GameDomainSupport005.integerState0578, this.integerState0458 << 6);
+                rawPcmStreamLocal30 = RawPcmStream.createForPlaybackRateWithPan(rawSoundLocal20, 100, integerLocal43 * GameDomainSupport005.integerState0578, this.integerState0458 << 6);
                 rawPcmStreamLocal23 = rawPcmStreamLocal30;
-                rawPcmStreamLocal30.performAction0458(-1);
+                rawPcmStreamLocal30.setLoopCount(-1);
                 SecondaryNodeDequeIterator.pcmStreamMixerState0001.addSubStream(rawPcmStreamLocal30);
                 SoftwareFramebuffer.rawPcmStreamArrayState0003[this.integerState0453] = rawPcmStreamLocal30;
               }
             } else {
               rawPcmStreamLocal22 = SoftwareFramebuffer.rawPcmStreamArrayState0003[this.integerState0453];
               if (rawPcmStreamLocal22 != null) {
-                rawPcmStreamLocal22.performAction0461(PcmPlayer.integerState0209 / 50);
+                rawPcmStreamLocal22.fadeOutAndUnlink(PcmPlayer.integerState0209 / 50);
                 SoftwareFramebuffer.rawPcmStreamArrayState0003[this.integerState0453] = null;
               }
             }
@@ -1434,8 +1434,8 @@ final class BucketBoard {
               AgeValidator.integerArrayArrayState0015[0][this.integerState0453] = integerLocal41;
               rawPcmStreamLocal27 = rawPcmStreamArrayLocal25[this.integerState0453];
               if (rawPcmStreamLocal27 == null) {
-                rawPcmStreamLocal31 = RawPcmStream.computeRawPcmStream0450(MixedSupport090.rawSoundState0015, 100, GameDomainSupport005.integerState0578 * integerLocal41, this.integerState0458 << 6);
-                rawPcmStreamLocal31.performAction0458(-1);
+                rawPcmStreamLocal31 = RawPcmStream.createForPlaybackRateWithPan(MixedSupport090.rawSoundState0015, 100, GameDomainSupport005.integerState0578 * integerLocal41, this.integerState0458 << 6);
+                rawPcmStreamLocal31.setLoopCount(-1);
                 SecondaryNodeDequeIterator.pcmStreamMixerState0001.addSubStream(rawPcmStreamLocal31);
                 rawPcmStreamArrayLocal25[this.integerState0453] = rawPcmStreamLocal31;
               } else {
@@ -1455,8 +1455,8 @@ final class BucketBoard {
               AgeValidator.integerArrayArrayState0015[1][this.integerState0453] = integerLocal42;
               rawPcmStreamLocal34 = rawPcmStreamArrayLocal33[this.integerState0453];
               if (rawPcmStreamLocal34 == null) {
-                rawPcmStreamLocal32 = RawPcmStream.computeRawPcmStream0450(MixedSupport090.rawSoundState0015, 120, integerLocal42 * GameDomainSupport005.integerState0578, this.integerState0458 << 6);
-                rawPcmStreamLocal32.performAction0458(-1);
+                rawPcmStreamLocal32 = RawPcmStream.createForPlaybackRateWithPan(MixedSupport090.rawSoundState0015, 120, integerLocal42 * GameDomainSupport005.integerState0578, this.integerState0458 << 6);
+                rawPcmStreamLocal32.setLoopCount(-1);
                 SecondaryNodeDequeIterator.pcmStreamMixerState0001.addSubStream(rawPcmStreamLocal32);
                 rawPcmStreamArrayLocal33[this.integerState0453] = rawPcmStreamLocal32;
               } else {
@@ -2718,9 +2718,9 @@ final class BucketBoard {
           rawPcmStreamLocal11 = MixedSupport062.rawPcmStreamArrayState0002[this.integerState0453];
           if (rawPcmStreamLocal11 == null) {
             integerLocal24 = 100 + MixedSupport108.reverseLowBits((byte) 16, 4, this.integerState0453);
-            rawPcmStreamLocal17 = RawPcmStream.computeRawPcmStream0450(ComponentContainer.rawSoundState0014, integerLocal24, GameDomainSupport005.integerState0578 * this.integerState0474, this.integerState0462 << 6);
+            rawPcmStreamLocal17 = RawPcmStream.createForPlaybackRateWithPan(ComponentContainer.rawSoundState0014, integerLocal24, GameDomainSupport005.integerState0578 * this.integerState0474, this.integerState0462 << 6);
             rawPcmStreamLocal18 = rawPcmStreamLocal17;
-            rawPcmStreamLocal18.performAction0458(-1);
+            rawPcmStreamLocal18.setLoopCount(-1);
             SecondaryNodeDequeIterator.pcmStreamMixerState0001.addSubStream(rawPcmStreamLocal17);
             MixedSupport062.rawPcmStreamArrayState0002[this.integerState0453] = rawPcmStreamLocal17;
           } else {

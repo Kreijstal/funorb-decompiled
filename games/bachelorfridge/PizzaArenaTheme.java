@@ -28,7 +28,7 @@ final class PizzaArenaTheme extends ArenaTheme {
     final static void a(int param0, cq param1) {
         try {
           int var2_int = -125 % ((-18 - param0) / 55);
-          saa.field_a.b(param1.field_i);
+          saa.field_a.removeChildStream(param1.field_i);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "id.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

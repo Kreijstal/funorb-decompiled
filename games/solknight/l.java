@@ -104,7 +104,7 @@ final class l {
         int var2Lifetime1;
         la.field_k = param1;
         if (null != ua.field_I) {
-          ua.field_I.d(1349013231, param1);
+          ua.field_I.setMasterVolume(1349013231, param1);
         }
         if (null == ah.field_a) {
           var2 = 103 % ((param0 - 50) / 46);

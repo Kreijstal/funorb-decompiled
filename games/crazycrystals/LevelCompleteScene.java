@@ -261,7 +261,7 @@ final class LevelCompleteScene extends AnimatedResultScene {
         int var4Lifetime1;
         this.field_g = 0;
         bp.field_b = new Vector();
-        tb.field_d.a(wc.field_q, 100, 128 * qd.field_r, 8192);
+        tb.field_d.playSampleWithPan(wc.field_q, 100, 128 * qd.field_r, 8192);
         var2 = 31;
         var3 = 11;
         if (ul.field_g != 1) {

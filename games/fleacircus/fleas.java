@@ -1917,7 +1917,7 @@ public final class fleas extends NetworkGameClient {
           kc.field_e = qf.a(pb.field_a, "", "FLEA_death").b().resample(var2);
           pb.field_a = null;
           oj.field_i = RawPcmStream.createForPlaybackRate(ResourceArchive.field_n, 100, 0);
-          oj.field_i.g(-1);
+          oj.field_i.setLoopCount(-1);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "fleas.L(" + param0 + ')');
         }
@@ -2562,7 +2562,7 @@ public final class fleas extends NetworkGameClient {
           var3Lifetime3 = 0;
           while (true) {
             if (!(nb.field_b > var3Lifetime3)) {
-              oj.field_i.i((int)(32.0 * Math.log((double)(1 + var19Lifetime1))));
+              oj.field_i.setScaledVolume((int)(32.0 * Math.log((double)(1 + var19Lifetime1))));
               stackIn_465_0 = 0;
               break;
             }

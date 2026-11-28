@@ -10,7 +10,7 @@ final class ad extends um {
 
     final void a(byte param0) {
         int var2 = 57 / ((29 - param0) / 42);
-        tb.field_d.a(ck.field_cb, 100, 48 * (gi.field_m * this.field_i), this.field_g / this.field_i);
+        tb.field_d.playSampleWithPan(ck.field_cb, 100, 48 * (gi.field_m * this.field_i), this.field_g / this.field_i);
         this.field_i = 0;
         this.field_g = 0;
     }

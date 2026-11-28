@@ -406,9 +406,9 @@ final class vg {
                       break regionExit2;
                     }
                     if ((!(lj.field_u.isLinked(8)) ||
-                      lj.field_u.l())) {
-                      lj.field_u.j(0);
-                      lj.field_u.k(255);
+                      lj.field_u.isSamplePositionOutOfRange())) {
+                      lj.field_u.setSamplePosition(0);
+                      lj.field_u.setScaledVolume(255);
                       ic.a(lj.field_u, 4);
                     }
                     break regionExit1;

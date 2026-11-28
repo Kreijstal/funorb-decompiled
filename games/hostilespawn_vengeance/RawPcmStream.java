@@ -323,7 +323,7 @@ final class RawPcmStream extends PcmStream {
           if (this.field_t != 0) {
             return param1;
           }
-        } while (!this.l());
+        } while (!this.finishOrContinueVolumeRamp());
         return param3;
     }
 
@@ -380,7 +380,7 @@ final class RawPcmStream extends PcmStream {
         return param3;
     }
 
-    final synchronized void d(int param0) {
+    final synchronized void setLoopCount(int param0) {
         this.field_s = param0;
     }
 
@@ -593,7 +593,7 @@ final class RawPcmStream extends PcmStream {
         return param3;
     }
 
-    final synchronized int k() {
+    final synchronized int getScaledTargetVolume() {
         return this.field_r == -2147483648 ? 0 : this.field_r + 32 >> 6;
     }
 
@@ -603,7 +603,7 @@ final class RawPcmStream extends PcmStream {
         this.field_w = RawPcmStream.computeRightVolume(this.field_r, this.field_o);
     }
 
-    private final boolean l() {
+    private final boolean finishOrContinueVolumeRamp() {
         int var1;
         int var2;
         int var3;
@@ -680,10 +680,10 @@ final class RawPcmStream extends PcmStream {
     }
 
     final synchronized void rampVolume(int param0, int param1) {
-        this.a(param0, param1, this.getPan());
+        this.rampVolumeAndPan(param0, param1, this.getPan());
     }
 
-    final synchronized void a(int param0, int param1, int param2) {
+    final synchronized void rampVolumeAndPan(int param0, int param1, int param2) {
         int var6 = 0;
         int var6Lifetime1;
         if (param0 == 0) {
@@ -1158,7 +1158,7 @@ final class RawPcmStream extends PcmStream {
         return this.field_r == -2147483648 ? 0 : this.field_r;
     }
 
-    final synchronized void h(int param0) {
+    final synchronized void fadeOutAndUnlink(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 == 0) {
@@ -1240,7 +1240,7 @@ final class RawPcmStream extends PcmStream {
         return null;
     }
 
-    final synchronized void g(int param0) {
+    final synchronized void setScaledVolume(int param0) {
         this.setVolumeAndPan(param0 << 6, this.getPan());
     }
 
@@ -1458,7 +1458,7 @@ final class RawPcmStream extends PcmStream {
           if (this.field_t != 0) {
             return param1;
           }
-        } while (!this.l());
+        } while (!this.finishOrContinueVolumeRamp());
         return param3;
     }
 

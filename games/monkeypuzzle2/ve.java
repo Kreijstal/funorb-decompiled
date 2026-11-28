@@ -68,7 +68,7 @@ final class ve extends mg {
             vl.field_h.a(param3, param2, 0, param1);
           } else {
             if (vl.field_h != null) {
-              i.field_p.b(vl.field_h);
+              i.field_p.removeOwnedListener(vl.field_h);
               vl.field_h = null;
             }
             if (param3 != null) {
@@ -76,17 +76,17 @@ final class ve extends mg {
               w.a(-1, IsaacRandom.field_e);
               if (param3 == kb.field_d) {
                 vl.field_h.a(false);
-                i.field_p.c(vl.field_h);
+                i.field_p.addListener(vl.field_h);
               } else {
                 if (bl.field_g == param3) {
                   vl.field_h.a(false);
-                  i.field_p.c(vl.field_h);
+                  i.field_p.addListener(vl.field_h);
                 } else {
                   if (param3 != b.field_l) {
-                    i.field_p.c(vl.field_h);
+                    i.field_p.addListener(vl.field_h);
                   } else {
                     vl.field_h.a(false);
-                    i.field_p.c(vl.field_h);
+                    i.field_p.addListener(vl.field_h);
                   }
                 }
               }

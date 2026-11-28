@@ -57,7 +57,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 ((MidiPcmStream) (Object) stackIn_8_0).a((byte) stackIn_8_1, stackIn_8_2, stackIn_9_3);
               }
               if (0 > param0.field_A.field_n[param0.field_y]) {
-                param0.field_v.f(-1);
+                param0.field_v.setLoopCount(-1);
               }
               param1 = param0.field_j / var4_int;
             }
@@ -203,14 +203,14 @@ final class MusicPatchPcmStream extends PcmStream {
                 param1.field_v = RawPcmStream.createForSampleStep(param1.field_t, var11.getSampleStepMagnitude(), var11.getTargetVolume(), var11.getPan());
               }
               if (param1.field_A.field_n[param1.field_y] < 0) {
-                param1.field_v.f(-1);
+                param1.field_v.setLoopCount(-1);
               }
               var11.fadeOutAndUnlink(var9);
               var11.mixInto(param0, param2, param5 - param2);
               if (!var11.hasRemainingRampFrames()) {
                 continue;
               }
-              this.field_l.b(var11);
+              this.field_l.addChildStream(var11);
             }
           }
           param1.field_v.mixInto(param0, param2, param4);

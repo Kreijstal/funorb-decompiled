@@ -1314,7 +1314,7 @@ public final class Bounce extends GameClient {
             MusicPatchPcmStream.field_o = new mj();
             var3_ref2 = jl.field_d;
             synchronized (var3_ref2) {
-              ld.field_l.g(jd.field_a / 2, 100);
+              ld.field_l.setMasterVolume(jd.field_a / 2, 100);
               ld.field_l.a(AccountCreationResultPanel.field_mb, true, 85);
               jl.field_d.flushAndMarkDrainCheck();
             }

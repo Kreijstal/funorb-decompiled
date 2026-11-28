@@ -25,7 +25,7 @@ final class an {
         var3 = Chess.field_G;
         try {
           lf.field_S = param0;
-          ka.field_a.a(lf.field_S * 64 / 80, (byte) -100);
+          ka.field_a.setMasterVolume(lf.field_S * 64 / 80, (byte) -100);
           var2 = (tn) (AchievementNotification.field_n.beginBackward(-18110));
           while (var2 != null) {
             if (!var2.field_n.isLinked(20478)) {

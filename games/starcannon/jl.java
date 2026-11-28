@@ -817,7 +817,7 @@ final class jl {
                                     ah.field_a = null;
                                   }
                                   if (AccountCreationResultPanel.field_tb != null) {
-                                    jk.field_k.a(AccountCreationResultPanel.field_tb);
+                                    jk.field_k.removeChildStream(AccountCreationResultPanel.field_tb);
                                     AccountCreationResultPanel.field_tb = null;
                                   }
                                   mj.a(dg.field_l, 12, 0, 12, 50);
@@ -997,14 +997,14 @@ final class jl {
                 se.field_m = 1;
               }
               if (null != kc.field_P) {
-                ti.field_f.a(kc.field_P);
+                ti.field_f.removeOwnedListener(kc.field_P);
                 kc.field_P.f();
                 if (eg.field_f != kc.field_P) {
                   kc.field_P = eg.field_f;
                 } else {
                   kc.field_P = gd.field_a;
                 }
-                ti.field_f.b(kc.field_P);
+                ti.field_f.addListener(kc.field_P);
                 kc.field_P.a(mc.field_b);
               }
               mj.a(255, 12, 0, 12, 50);

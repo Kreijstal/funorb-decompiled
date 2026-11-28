@@ -99,7 +99,7 @@ final class MoveEventAnimation extends MovementAnimation {
         if (null == this.field_u &&
           var7.field_s.statusId == 32) {
           var4_ref_je = PcmSampleStream.createWithVolume(rt.field_a[32], 256, 256);
-          var4_ref_je.d(-1);
+          var4_ref_je.setLoopCount(-1);
           this.field_u = tw.a(var4_ref_je, (byte) -36);
         }
         if (0 != this.field_n) {

@@ -227,7 +227,7 @@ final class LevelScreen extends ib {
                     decompiledFrameRemainder0 = (vf.field_L == null);
                     if (decompiledFrameRemainder0) {
                       vf.field_L = MouseWheelInput.field_c;
-                      nj.field_o.a(vf.field_L);
+                      nj.field_o.addListener(vf.field_L);
                       decompiledFrameRemainder0 = (var8 != 0);
                     }
                   }
@@ -235,16 +235,16 @@ final class LevelScreen extends ib {
                     param1 < 320 &&
                     !param5)) {
                     if (null != vf.field_L) {
-                      nj.field_o.b(vf.field_L);
+                      nj.field_o.removeOwnedListener(vf.field_L);
                       vf.field_L.c();
                       vf.field_L = null;
                       if (var8 != 0) {
                         vf.field_L = MouseWheelInput.field_c;
-                        nj.field_o.a(vf.field_L);
+                        nj.field_o.addListener(vf.field_L);
                       }
                     } else {
                       vf.field_L = MouseWheelInput.field_c;
-                      nj.field_o.a(vf.field_L);
+                      nj.field_o.addListener(vf.field_L);
                     }
                   }
                   if (vf.field_L == null) {
@@ -293,7 +293,7 @@ final class LevelScreen extends ib {
                 if (param5) {
                   return;
                 }
-                ll.field_c.a(sb.field_e[0], 50, pk.field_h * 2);
+                ll.field_c.playSample(sb.field_e[0], 50, pk.field_h * 2);
                 if (var8 == 0) {
                   return;
                 }
@@ -379,7 +379,7 @@ final class LevelScreen extends ib {
               if (IterableNodeHashTable.field_c < 10) {
                 IterableNodeHashTable.field_c = 10;
                 if (vf.field_L != null) {
-                  nj.field_o.b(vf.field_L);
+                  nj.field_o.removeOwnedListener(vf.field_L);
                   vf.field_L.c();
                   vf.field_L = null;
                 }
@@ -413,7 +413,7 @@ final class LevelScreen extends ib {
         try {
           if (pk.a(-12663, 0) &&
             MouseWheelInput.field_e) {
-            ll.field_c.a(sb.field_e[51 + (int)(Math.random() * 10.0)], (int)(Math.random() * 100.0) + 50, pk.field_h * 2);
+            ll.field_c.playSample(sb.field_e[51 + (int)(Math.random() * 10.0)], (int)(Math.random() * 100.0) + 50, pk.field_h * 2);
           }
           if (param0 != 424) {
             this.a(true, 82);
@@ -602,11 +602,11 @@ final class LevelScreen extends ib {
                         if (4 == param1) {
                           if (null == vf.field_L) {
                             vf.field_L = MouseWheelInput.field_c;
-                            nj.field_o.a(vf.field_L);
+                            nj.field_o.addListener(vf.field_L);
                             decompiledFrameRemainder0 = (var4 != 0);
                           }
                           if (decompiledFrameRemainder0) {
-                            nj.field_o.b(vf.field_L);
+                            nj.field_o.removeOwnedListener(vf.field_L);
                             vf.field_L.c();
                             vf.field_L = null;
                             decompiledFrameRemainder0 = (var4 != 0);
@@ -1022,7 +1022,7 @@ final class LevelScreen extends ib {
             }
             if (null == vf.field_L) {
               vf.field_L = MouseWheelInput.field_c;
-              nj.field_o.a(vf.field_L);
+              nj.field_o.addListener(vf.field_L);
             }
             if (vf.field_L == null) {
               return;

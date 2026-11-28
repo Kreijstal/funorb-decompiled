@@ -830,7 +830,7 @@ final class SamplePlaybackStream extends PcmStream {
         return param5;
     }
 
-    private final boolean k() {
+    private final boolean finishOrContinueVolumeRamp() {
         int var1;
         int var2;
         int var3;
@@ -1277,7 +1277,7 @@ final class SamplePlaybackStream extends PcmStream {
           if (this.field_z != 0) {
             return param1;
           }
-        } while (!this.k());
+        } while (!this.finishOrContinueVolumeRamp());
         return param3;
     }
 
@@ -1394,7 +1394,7 @@ final class SamplePlaybackStream extends PcmStream {
         this.recomputeGains();
     }
 
-    final synchronized void i(int param0) {
+    final synchronized void setLoopCount(int param0) {
         this.field_r = param0;
     }
 
@@ -1620,11 +1620,11 @@ final class SamplePlaybackStream extends PcmStream {
           if (this.field_z != 0) {
             return param1;
           }
-        } while (!this.k());
+        } while (!this.finishOrContinueVolumeRamp());
         return param3;
     }
 
-    final synchronized void h(int param0) {
+    final synchronized void fadeOutAndUnlink(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 == 0) {

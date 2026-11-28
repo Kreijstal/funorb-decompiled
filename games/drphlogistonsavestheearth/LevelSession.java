@@ -331,14 +331,14 @@ final class LevelSession {
           this.field_j = this.field_j - this.field_j / 20.0;
           this.field_c = this.field_c - this.field_c / 20.0;
         }
-        this.field_M.l(ConfirmedEmailAvailabilityValidator.a(125, (int)this.field_N));
-        this.field_z.l(ConfirmedEmailAvailabilityValidator.a(119, (int)this.field_N));
+        this.field_M.setScaledPan(ConfirmedEmailAvailabilityValidator.a(125, (int)this.field_N));
+        this.field_z.setScaledPan(ConfirmedEmailAvailabilityValidator.a(119, (int)this.field_N));
         if (param0 != -8499) {
           this.k(-18);
         }
-        if (this.field_z.m() &&
-          this.field_z.f() == ((PcmSample) (this.field_z.field_i)).field_i.length) {
-          this.field_z.i(-1);
+        if (this.field_z.isSamplePositionOutOfRange() &&
+          this.field_z.getSamplePosition() == ((PcmSample) (this.field_z.field_i)).field_i.length) {
+          this.field_z.setSamplePosition(-1);
           th.a(-27610, 32, ConfirmedEmailAvailabilityValidator.a(105, (int)this.field_N), nl.field_r[8]);
         }
     }
@@ -748,7 +748,7 @@ final class LevelSession {
           }
         }
         this.a(9, ri.field_q + (int)this.field_D, -1, (int)this.field_N + MusicPatchPcmStream.field_p, param0 ^ -31963);
-        this.field_z.j(64);
+        this.field_z.setScaledVolume(64);
         PacketBuffer.a(param0 ^ 1630761897, this.field_z);
         return;
     }
@@ -1514,7 +1514,7 @@ final class LevelSession {
         }
         boolean decompiledFrameCompleted0 = true;
         if (this.field_eb) {
-          this.field_M.j(0);
+          this.field_M.setScaledVolume(0);
           this.field_u = 0;
           var2 = -this.field_s + this.field_J;
           if (var2 <= 300) {
@@ -1752,13 +1752,13 @@ final class LevelSession {
             PacketBuffer.a(-1630758008, this.field_M);
           }
           this.field_M.setSampleStepMagnitude(this.field_u + 196);
-          this.field_M.j((int)((25.0 + (double)this.field_u / 2.0) * (double)SecondaryNodeDeque.field_e / 80.0));
+          this.field_M.setScaledVolume((int)((25.0 + (double)this.field_u / 2.0) * (double)SecondaryNodeDeque.field_e / 80.0));
           this.field_u = this.field_u + 1;
           if (this.field_u > 200) {
             this.field_u = 200;
             this.field_E = this.field_E + 1;
             var2 = (int)(Math.exp((double)(-this.field_E) / 100.0) * 125.0);
-            this.field_M.j(SecondaryNodeDeque.field_e * var2 / 80);
+            this.field_M.setScaledVolume(SecondaryNodeDeque.field_e * var2 / 80);
           }
           if (this.field_u > 50) {
             EmailFormatValidator.field_w = true;
@@ -1766,7 +1766,7 @@ final class LevelSession {
         }
         if (0 == this.field_u) {
           IntrusiveNode.a(this.field_M, 3408);
-          this.field_M.i(-1);
+          this.field_M.setSamplePosition(-1);
         }
         boolean decompiledFrameRemainder1 = true;
         if (nj.field_j >= 2) {
@@ -4295,10 +4295,10 @@ final class LevelSession {
             BufferedSocket.field_a = -150;
             this.field_f = 0;
             this.levelNumber = -1 + param0;
-            this.field_M = PcmSampleStream.a(nl.field_r[5], 256, SecondaryNodeDeque.field_e * 24 / 80);
-            this.field_M.c(0, nl.field_r[5].field_i.length);
-            this.field_M.f(-1);
-            this.field_z = PcmSampleStream.a(nl.field_r[7], 256, 48);
+            this.field_M = PcmSampleStream.createForSampleStepWithScaledVolume(nl.field_r[5], 256, SecondaryNodeDeque.field_e * 24 / 80);
+            this.field_M.setLoopBounds(0, nl.field_r[5].field_i.length);
+            this.field_M.setLoopCount(-1);
+            this.field_z = PcmSampleStream.createForSampleStepWithScaledVolume(nl.field_r[7], 256, 48);
             break;
           }
           LoginPanel.field_Q[var2] = hi.a(1280, 4, this.field_l);

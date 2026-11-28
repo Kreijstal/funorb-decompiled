@@ -100,7 +100,7 @@ final class MidiSynthesizer extends PcmMixerListener {
 
     private final void performAction0694(int integerArgument1) {
         if (this.rawPcmStreamArrayState0001[integerArgument1] != null) {
-          this.rawPcmStreamArrayState0001[integerArgument1].performAction0461(PcmPlayer.integerState0209 >> 7);
+          this.rawPcmStreamArrayState0001[integerArgument1].fadeOutAndUnlink(PcmPlayer.integerState0209 >> 7);
           this.rawPcmStreamArrayState0001[integerArgument1] = null;
         }
     }
@@ -206,7 +206,7 @@ final class MidiSynthesizer extends PcmMixerListener {
               integerArgument3 = 256;
             }
           }
-          this.rawPcmStreamArrayState0001[integerArgument1].performAction0425(PcmPlayer.integerState0209 >> 7, integerArgument2 * this.integerState0314 * this.integerState0313 >> 12, integerArgument3);
+          this.rawPcmStreamArrayState0001[integerArgument1].rampScaledVolumeAndPan(PcmPlayer.integerState0209 >> 7, integerArgument2 * this.integerState0314 * this.integerState0313 >> 12, integerArgument3);
         }
     }
 
@@ -1037,17 +1037,17 @@ final class MidiSynthesizer extends PcmMixerListener {
           } else {
             stackIntegerLocal3 = 0;
           }
-          rawPcmStreamLocal9 = RawPcmStream.computeRawPcmStream0443(stackRawSoundLocal1, stackIntegerLocal2, stackIntegerLocal3, integerArgument6);
-          rawPcmStreamLocal9.performAction0459(this.musicTrackState0002.integerArrayState0227[integerArgument2], this.musicTrackState0002.integerArrayState0223[integerArgument2]);
+          rawPcmStreamLocal9 = RawPcmStream.createForSampleStepWithScaledVolumeAndPan(stackRawSoundLocal1, stackIntegerLocal2, stackIntegerLocal3, integerArgument6);
+          rawPcmStreamLocal9.setLoopBounds(this.musicTrackState0002.integerArrayState0227[integerArgument2], this.musicTrackState0002.integerArrayState0223[integerArgument2]);
           stackRawPcmStreamLocal4 = rawPcmStreamLocal9;
           stackIntegerLocal5 = (this.musicTrackState0002.integerArrayState0213[integerArgument2] == 0) ? 0 : -1;
-          ((RawPcmStream) (Object) stackRawPcmStreamLocal4).performAction0458(stackIntegerLocal5);
+          ((RawPcmStream) (Object) stackRawPcmStreamLocal4).setLoopCount(stackIntegerLocal5);
           stackRawPcmStreamLocal6 = rawPcmStreamLocal9;
           stackBooleanLocal7 = (this.musicTrackState0002.integerArrayState0213[integerArgument2] != 2) ? false : true;
-          ((RawPcmStream) (Object) stackRawPcmStreamLocal6).performAction0432(stackBooleanLocal7);
+          ((RawPcmStream) (Object) stackRawPcmStreamLocal6).setPingPongLoop(stackBooleanLocal7);
           if (integerArgument3 != 0) {
-            rawPcmStreamLocal9.performAction0455(integerArgument3);
-            rawPcmStreamLocal9.performAction0425(PcmPlayer.integerState0209 >> 7, integerArgument5 * this.integerState0314 * this.integerState0313 >> 12, integerArgument6);
+            rawPcmStreamLocal9.setSamplePosition(integerArgument3);
+            rawPcmStreamLocal9.rampScaledVolumeAndPan(PcmPlayer.integerState0209 >> 7, integerArgument5 * this.integerState0314 * this.integerState0313 >> 12, integerArgument6);
           }
           this.rawPcmStreamArrayState0001[integerArgument1] = rawPcmStreamLocal9;
           if (this.pcmStreamMixerState0003 != null) {

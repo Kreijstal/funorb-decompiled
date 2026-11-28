@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wl extends sl {
+final class wl extends PcmMixerListener {
     private int[] field_mb;
     private int field_J;
     private int[] field_kb;
@@ -971,11 +971,11 @@ final class wl extends sl {
         field_T = null;
     }
 
-    final void b() {
+    final void onAddedToMixer() {
         int var1 = 0;
         for (var1 = 0; var1 < this.field_x.field_M; var1++) {
           if (this.field_V[var1] != null) {
-            this.field_j.b(this.field_V[var1]);
+            this.field_j.addChildStream(this.field_V[var1]);
           }
         }
     }
@@ -996,7 +996,7 @@ final class wl extends sl {
               param2 = 256;
             }
           }
-          this.field_V[param0].a(AudioOutput.field_c >> 7, param1 * this.field_R * this.field_z >> 12, param2);
+          this.field_V[param0].rampScaledVolumeAndPan(AudioOutput.field_c >> 7, param1 * this.field_R * this.field_z >> 12, param2);
         }
     }
 
@@ -1010,11 +1010,11 @@ final class wl extends sl {
         return var4 / (this.field_W * this.field_hb);
     }
 
-    final void a() {
+    final void onRemovedFromMixer() {
         int var1 = 0;
         for (var1 = 0; var1 < this.field_x.field_M; var1++) {
           if (this.field_V[var1] != null) {
-            this.field_j.a(this.field_V[var1]);
+            this.field_j.removeChildStream(this.field_V[var1]);
           }
         }
     }
@@ -1067,23 +1067,23 @@ final class wl extends sl {
           } else {
             stackIn_15_2 = 0;
           }
-          var7 = PcmSampleStream.a(stackIn_14_0, stackIn_14_1, stackIn_15_2, param5);
-          var7.d(this.field_x.field_w[param1], this.field_x.field_t[param1]);
+          var7 = PcmSampleStream.createForSampleStepWithScaledVolumeAndPan(stackIn_14_0, stackIn_14_1, stackIn_15_2, param5);
+          var7.setLoopBounds(this.field_x.field_w[param1], this.field_x.field_t[param1]);
           stackIn_17_0 = var7;
           stackIn_18_1 = (this.field_x.field_y[param1] == 0) ? 0 : -1;
-          ((PcmSampleStream) (Object) stackIn_17_0).d(stackIn_18_1);
+          ((PcmSampleStream) (Object) stackIn_17_0).setLoopCount(stackIn_18_1);
           stackIn_20_0 = var7;
           stackIn_21_1 = (this.field_x.field_y[param1] != 2) ? false : true;
-          ((PcmSampleStream) (Object) stackIn_20_0).a(stackIn_21_1);
+          ((PcmSampleStream) (Object) stackIn_20_0).setPingPongLoop(stackIn_21_1);
           if (param2 != 0) {
-            var7.c(param2);
-            var7.a(AudioOutput.field_c >> 7, param4 * this.field_R * this.field_z >> 12, param5);
+            var7.setSamplePosition(param2);
+            var7.rampScaledVolumeAndPan(AudioOutput.field_c >> 7, param4 * this.field_R * this.field_z >> 12, param5);
           }
           this.field_V[param0] = var7;
           if (this.field_j != null) {
             var8 = this.field_j;
             synchronized (var8) {
-              this.field_j.b(var7);
+              this.field_j.addChildStream(var7);
             }
           }
           return;

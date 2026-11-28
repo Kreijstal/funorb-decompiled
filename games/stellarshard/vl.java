@@ -112,7 +112,7 @@ final class vl {
                     if (var35 > 128) {
                       var35 = 128;
                     }
-                    ll.field_c.a(sb.field_e[40], 100, pk.field_h * var35 / 50);
+                    ll.field_c.playSample(sb.field_e[40], 100, pk.field_h * var35 / 50);
                   }
                   if (5 < this.field_p ||
                     this.field_l > 100) {

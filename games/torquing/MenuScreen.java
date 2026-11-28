@@ -2297,7 +2297,7 @@ final class MenuScreen {
                 if (ig.field_r[25].isLinked(17)) {
                   break regionExit1;
                 }
-                ig.field_r[25].c(0);
+                ig.field_r[25].setSamplePosition(0);
                 ni.a(ig.field_r[25], true);
                 if (var11 == 0) {
                   break regionExit2;

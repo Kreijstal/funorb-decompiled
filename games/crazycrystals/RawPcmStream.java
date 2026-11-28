@@ -57,7 +57,7 @@ final class RawPcmStream extends PcmStream {
           if (this.field_v != 0) {
             return param1;
           }
-        } while (!this.g());
+        } while (!this.finishOrContinueVolumeRamp());
         return param3;
     }
 
@@ -509,11 +509,11 @@ final class RawPcmStream extends PcmStream {
           if (this.field_v != 0) {
             return param1;
           }
-        } while (!this.g());
+        } while (!this.finishOrContinueVolumeRamp());
         return param3;
     }
 
-    final static RawPcmStream a(PcmSample param0, int param1, int param2, int param3) {
+    final static RawPcmStream createForPlaybackRateWithPan(PcmSample param0, int param1, int param2, int param3) {
         if (param0.field_k == null) {
           return null;
         }
@@ -1455,11 +1455,11 @@ final class RawPcmStream extends PcmStream {
         this.unlink(false);
     }
 
-    final synchronized void f(int param0) {
+    final synchronized void setLoopCount(int param0) {
         this.field_w = param0;
     }
 
-    private final boolean g() {
+    private final boolean finishOrContinueVolumeRamp() {
         int var1;
         int var2;
         int var3;

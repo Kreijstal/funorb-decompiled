@@ -534,7 +534,7 @@ final class hh {
               if (!ej.d((byte) 116)) {
                 return;
               }
-              eh.field_c.a(em.field_a[0], 50, uh.field_i);
+              eh.field_c.playSample(em.field_a[0], 50, uh.field_i);
             }
           }
           return;

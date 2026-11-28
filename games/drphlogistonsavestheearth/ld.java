@@ -1522,9 +1522,9 @@ final class ld {
                                                           var6 = stackIn_217_0;
                                                         }
                                                         if (var6 != 0) {
-                                                          eg.field_a.j(SecondaryNodeDeque.field_e);
-                                                          if (eg.field_a.m()) {
-                                                            eg.field_a.i(-1);
+                                                          eg.field_a.setScaledVolume(SecondaryNodeDeque.field_e);
+                                                          if (eg.field_a.isSamplePositionOutOfRange()) {
+                                                            eg.field_a.setSamplePosition(-1);
                                                             PacketBuffer.a(param1 - 1630758088, eg.field_a);
                                                           }
                                                         }
@@ -1820,8 +1820,8 @@ final class ld {
     private final boolean b(int param0, int param1) {
         int var3 = 0;
         if (SecondaryNodeDeque.field_e != param0) {
-          eg.field_a.j(SecondaryNodeDeque.field_e);
-          eg.field_a.i(-1);
+          eg.field_a.setScaledVolume(SecondaryNodeDeque.field_e);
+          eg.field_a.setSamplePosition(-1);
           PacketBuffer.a(-1630758008, eg.field_a);
         }
         if (param1 >= -21) {
@@ -2009,8 +2009,8 @@ final class ld {
         this.field_c = param0;
         this.field_e = new ql(ul.field_j[param0].length);
         if (eg.field_a == null) {
-          eg.field_a = PcmSampleStream.a(nl.field_r[0], 256, 256);
-          eg.field_a.i(-1);
+          eg.field_a = PcmSampleStream.createForSampleStepWithScaledVolume(nl.field_r[0], 256, 256);
+          eg.field_a.setSamplePosition(-1);
         }
     }
 

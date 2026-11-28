@@ -545,10 +545,10 @@ public final class Vertigo2 extends GameShell {
           on.field_b[29][0] = hp.a(DualLinkNode.field_s, "", "v_level_select").a();
           rr.field_B[0] = SamplePlaybackStream.createForPlaybackRate(on.field_b[23][0], 100, 96);
           rr.field_B[1] = SamplePlaybackStream.createForPlaybackRate(on.field_b[22][0], 100, 96);
-          rr.field_B[0].i(-1);
-          rr.field_B[1].i(-1);
+          rr.field_B[0].setLoopCount(-1);
+          rr.field_B[1].setLoopCount(-1);
           rr.field_B[2] = SamplePlaybackStream.createForPlaybackRate(on.field_b[10][3], 100, 96);
-          rr.field_B[2].i(-1);
+          rr.field_B[2].setLoopCount(-1);
           op.field_d = si.a(le.field_f, "", "vertigo2_theme");
           up.field_B[0] = si.a(le.field_f, "", "vertigo2_level_1");
           up.field_B[1] = si.a(le.field_f, "", "vertigo2_level_2");

@@ -384,7 +384,7 @@ final class rd {
               }
               if (eh.field_g <= 0) {
                 if (4 > mc.field_I) {
-                  eh.field_c.a(fg.field_b[17], 100, 2 * uh.field_i);
+                  eh.field_c.playSample(fg.field_b[17], 100, 2 * uh.field_i);
                 }
                 mf.a(false, 4);
               }

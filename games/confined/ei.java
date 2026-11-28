@@ -24,7 +24,7 @@ final class ei extends ug implements el {
             da.field_e.b(param1, (byte) -115);
             if (!ej.field_b) {
               ej.field_b = true;
-              he.field_d.a(WingPod.field_R);
+              he.field_d.addListener(WingPod.field_R);
             }
           }
         }

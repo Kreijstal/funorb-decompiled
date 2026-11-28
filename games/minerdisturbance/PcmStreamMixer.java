@@ -7,18 +7,18 @@ final class PcmStreamMixer extends PcmStream {
     private int field_s;
     private int field_t;
 
-    private final void removeListener(rl param0) {
+    private final void removeListener(PcmMixerListener param0) {
         param0.unlink(34);
-        param0.a();
+        param0.onRemovedFromMixer();
         IntrusiveNode var2 = this.field_r.sentinel.field_f;
         if (var2 == this.field_r.sentinel) {
           this.field_s = -1;
         } else {
-          this.field_s = ((rl) (var2)).field_n;
+          this.field_s = ((PcmMixerListener) (var2)).field_n;
         }
     }
 
-    final synchronized void b(PcmStream param0) {
+    final synchronized void addChildStream(PcmStream param0) {
         this.field_u.addFirst(param0, 27862);
     }
 
@@ -32,7 +32,7 @@ final class PcmStreamMixer extends PcmStream {
 
     final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4 = 0;
-        rl var5 = null;
+        PcmMixerListener var5 = null;
         int var7 = 0;
         Throwable decompiledCaughtException = null;
         Object var6 = null;
@@ -52,7 +52,7 @@ final class PcmStreamMixer extends PcmStream {
           param2 = param2 - var4;
           this.field_t = this.field_t + var4;
           this.normalizeListenerDeadlines();
-          var5 = (rl) (this.field_r.beginForward(91));
+          var5 = (PcmMixerListener) (this.field_r.beginForward(91));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.onScheduledEvent(this);
@@ -68,7 +68,7 @@ final class PcmStreamMixer extends PcmStream {
         return;
     }
 
-    final synchronized void a(PcmStream param0) {
+    final synchronized void removeChildStream(PcmStream param0) {
         param0.unlink(34);
     }
 
@@ -81,39 +81,39 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     private final void normalizeListenerDeadlines() {
-        rl var1 = null;
+        PcmMixerListener var1 = null;
         if (this.field_t > 0) {
-          var1 = (rl) (this.field_r.beginForward(96));
+          var1 = (PcmMixerListener) (this.field_r.beginForward(96));
           while (var1 != null) {
             var1.field_n = var1.field_n - this.field_t;
-            var1 = (rl) (this.field_r.nextForward((byte) 56));
+            var1 = (PcmMixerListener) (this.field_r.nextForward((byte) 56));
           }
           this.field_s = this.field_s - this.field_t;
           this.field_t = 0;
         }
     }
 
-    private final void insertListenerByDeadline(IntrusiveNode param0, rl param1) {
+    private final void insertListenerByDeadline(IntrusiveNode param0, PcmMixerListener param1) {
         while (true) {
           if (param0 == this.field_r.sentinel) {
             oj.$cfr$intArgs$a$c5042ffd0615(param1, param0, -117);
-            this.field_s = ((rl) (this.field_r.sentinel.field_f)).field_n;
+            this.field_s = ((PcmMixerListener) (this.field_r.sentinel.field_f)).field_n;
             return;
           }
-          if (((rl) (param0)).field_n <= param1.field_n) {
+          if (((PcmMixerListener) (param0)).field_n <= param1.field_n) {
             param0 = param0.field_f;
             continue;
           }
           break;
         }
         oj.$cfr$intArgs$a$c5042ffd0615(param1, param0, -117);
-        this.field_s = ((rl) (this.field_r.sentinel.field_f)).field_n;
+        this.field_s = ((PcmMixerListener) (this.field_r.sentinel.field_f)).field_n;
         return;
     }
 
     final synchronized void skipFrames(int param0) {
         int var2 = 0;
-        rl var3 = null;
+        PcmMixerListener var3 = null;
         int var5 = 0;
         Throwable decompiledCaughtException = null;
         Object var4 = null;
@@ -132,7 +132,7 @@ final class PcmStreamMixer extends PcmStream {
           param0 = param0 - var2;
           this.field_t = this.field_t + var2;
           this.normalizeListenerDeadlines();
-          var3 = (rl) (this.field_r.beginForward(125));
+          var3 = (PcmMixerListener) (this.field_r.beginForward(125));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.onScheduledEvent(this);

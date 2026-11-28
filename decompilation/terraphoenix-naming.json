@@ -1788,6 +1788,14 @@
       "renamedSymbol": "C:ProxyAuthenticationRequiredException"
     },
     {
+      "symbol": "C:we",
+      "originalName": "we",
+      "to": "PcmMixerListener",
+      "evidence": "Intrusive listener with a frame deadline and callback used by both PCM mixer fill and skip. A negative callback result removes it from the mixer.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:PcmMixerListener"
+    },
+    {
       "symbol": "C:wh",
       "originalName": "wh",
       "to": "DiskCacheWorker",
@@ -5628,6 +5636,14 @@
       "renamedSymbol": "M:PcmSampleStream.firstChildStream()LPcmStream;"
     },
     {
+      "symbol": "M:lh.c(I)V",
+      "originalName": "c",
+      "to": "fadeOutAndUnlink",
+      "evidence": "Source-purpose review: Schedules a gain ramp to silence and sets the fade-out sentinel used to unlink the stream.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.fadeOutAndUnlink(I)V"
+    },
+    {
       "symbol": "M:lh.c(II)I",
       "originalName": "c",
       "to": "computeRightVolume",
@@ -5676,6 +5692,14 @@
       "renamedSymbol": "M:PcmSampleStream.mixReverseMonoInterpolatedRamp(II[B[IIIIIIIILPcmSampleStream;II)I"
     },
     {
+      "symbol": "M:lh.e()Z",
+      "originalName": "e",
+      "to": "finishOrContinueVolumeRamp",
+      "evidence": "Source-purpose review: Completes an exact gain ramp, unlinks a finished fade-out, or schedules the remaining gain correction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.finishOrContinueVolumeRamp()Z"
+    },
+    {
       "symbol": "M:lh.e(I)V",
       "originalName": "e",
       "to": "setVolume",
@@ -5714,6 +5738,14 @@
       "evidence": "Source-purpose review: Returns the current pan and normalizes the negative phase-inversion sentinel.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PcmSampleStream.getPan()I"
+    },
+    {
+      "symbol": "M:lh.g(I)V",
+      "originalName": "g",
+      "to": "setLoopCount",
+      "evidence": "Source-purpose review: Sets the remaining loop count consumed by the mixer. Negative values select indefinite looping.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.setLoopCount(I)V"
     },
     {
       "symbol": "M:lh.h()I",
@@ -7748,12 +7780,28 @@
       "renamedSymbol": "M:PcmStreamMixer.skipFrames(I)V"
     },
     {
+      "symbol": "M:vg.a(Lgg;II)V",
+      "originalName": "a",
+      "to": "playSample",
+      "evidence": "Source-purpose review: Creates a stream from the supplied PCM sample, playback rate and volume, then adds it to this mixer.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmStreamMixer.playSample(LPcmSample;II)V"
+    },
+    {
+      "symbol": "M:vg.a(Llj;)V",
+      "originalName": "a",
+      "to": "addChildStream",
+      "evidence": "Source-purpose review: Links a PCM child into the same intrusive queue traversed by the mixer fill and skip loops.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmStreamMixer.addChildStream(LPcmStream;)V"
+    },
+    {
       "symbol": "M:vg.a(Luf;Lwe;)V",
       "originalName": "a",
       "to": "insertListenerByDeadline",
       "evidence": "Walk through listeners with deadline less than or equal to the supplied listener until sentinel/first-greater,perform the original node insertion with exact argument order/guard,and reread the head deadline. Complete original-body SHA256 ba0ac92f91e6ffc6a4ed33bfbd96a8d46aded7a41da03b58d4f4d4b62b10446e. Naming only. Entire original selected bodies and compiler-bound calls/fields were source-reviewed;support/owning PCM contracts and exact game-specific exceptional branches retained. Preserve all JVM widths/domains,original literals/operators,overflow,FP/casts,shared aliases,partial writes,allocation/call/exception order,visibility/modifiers,native and override bindings. No bodies,fields,parameters,locals or intentional native/class-name literals change. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:PcmStreamMixer.insertListenerByDeadline(LIntrusiveNode;Lwe;)V"
+      "renamedSymbol": "M:PcmStreamMixer.insertListenerByDeadline(LIntrusiveNode;LPcmMixerListener;)V"
     },
     {
       "symbol": "M:vg.a(Lwe;)V",
@@ -7761,7 +7809,7 @@
       "to": "removeListener",
       "evidence": "Unlink the supplied scheduled listener,invoke its removal callback,clear its mixer back-reference only where present,and reread the retained head deadline or store minus one in original order. Complete original-body SHA256 989a3afbc39785445cee734753acdcc87f60ef0fe2e3340bf2588886ea1e64a4. Naming only. Entire original selected bodies and compiler-bound calls/fields were source-reviewed;support/owning PCM contracts and exact game-specific exceptional branches retained. Preserve all JVM widths/domains,original literals/operators,overflow,FP/casts,shared aliases,partial writes,allocation/call/exception order,visibility/modifiers,native and override bindings. No bodies,fields,parameters,locals or intentional native/class-name literals change. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:PcmStreamMixer.removeListener(Lwe;)V"
+      "renamedSymbol": "M:PcmStreamMixer.removeListener(LPcmMixerListener;)V"
     },
     {
       "symbol": "M:vg.a([III)V",
@@ -7868,12 +7916,20 @@
       "renamedSymbol": "M:ProxyAuthenticationRequiredException.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:we.a()V",
+      "originalName": "a",
+      "to": "onRemovedFromMixer",
+      "evidence": "Source-purpose review: Notification issued after the mixer unlinks the listener. The concrete override detaches existing playback streams.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmMixerListener.onRemovedFromMixer()V"
+    },
+    {
       "symbol": "M:we.a(Lvg;)I",
       "originalName": "a",
       "to": "onScheduledEvent",
       "evidence": "Run the scheduled mixer listener callback and return the original next frame delay or negative unschedule result. Preserve the retained virtual dispatch and caller monitor. Concrete tracker callbacks first call their original state updater,conditionally return minus one,and otherwise compute ((sampleRate<<9)+(sampleRate<<7))/(tempo*scale) with original int overflow and division behavior. Original abstract declaration SHA256 84a44e0961819c333d2361e668ba545d05357b3ffaacca58b596f79b1b191bb9. Naming only. Entire original selected bodies and compiler-bound calls/fields were source-reviewed;support/owning PCM contracts and exact game-specific exceptional branches retained. Preserve all JVM widths/domains,original literals/operators,overflow,FP/casts,shared aliases,partial writes,allocation/call/exception order,visibility/modifiers,native and override bindings. No bodies,fields,parameters,locals or intentional native/class-name literals change. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:we.onScheduledEvent(LPcmStreamMixer;)I"
+      "renamedSymbol": "M:PcmMixerListener.onScheduledEvent(LPcmStreamMixer;)I"
     },
     {
       "symbol": "M:wg.a(B)V",
@@ -7940,6 +7996,22 @@
       "renamedSymbol": "M:MidiPcmStream.nextChildStream()LPcmStream;"
     },
     {
+      "symbol": "M:wl.a(BI)V",
+      "originalName": "a",
+      "to": "resetChannel",
+      "evidence": "Source-purpose review: Restores default channel controller values for reset-all-controllers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.resetChannel(BI)V"
+    },
+    {
+      "symbol": "M:wl.a(BLsh;)I",
+      "originalName": "a",
+      "to": "computeNoteSampleStep",
+      "evidence": "Source-purpose review: Computes the fixed-point sample step from base pitch, portamento, pitch bend, vibrato and sample rate.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.computeNoteSampleStep(BLsh;)I"
+    },
+    {
       "symbol": "M:wl.a(B[IILsh;I)Z",
       "originalName": "a",
       "to": "updateVoice",
@@ -7954,6 +8026,62 @@
       "evidence": "Advance the original PCM stream state without producing its normal output buffer,including raw loop/ramp position,MIDI timing/voices,scheduled listener or container traversal and effect-specific behavior. Preserve every game-specific empty/guard/global branch,original arithmetic and mutation ordering. Complete original-body SHA256 06b70dcf5f01a770e95a8949edb5c7cc59cb7a53b58baf5cf4ec53089d316a5c. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MidiPcmStream.skipFrames(I)V"
+    },
+    {
+      "symbol": "M:wl.a(IBII)V",
+      "originalName": "a",
+      "to": "noteOff",
+      "evidence": "Source-purpose review: Releases a channel note when the MIDI note-off status is received.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.noteOff(IBII)V"
+    },
+    {
+      "symbol": "M:wl.a(IIB)V",
+      "originalName": "a",
+      "to": "setProgram",
+      "evidence": "Source-purpose review: Updates the active program used to select a channel’s patch.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.setProgram(IIB)V"
+    },
+    {
+      "symbol": "M:wl.a(IIIB)V",
+      "originalName": "a",
+      "to": "noteOn",
+      "evidence": "Source-purpose review: Starts a sample-backed note for a nonzero-velocity MIDI note-on event.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.noteOn(IIIB)V"
+    },
+    {
+      "symbol": "M:wl.a(IIII)V",
+      "originalName": "a",
+      "to": "onPolyPressure",
+      "evidence": "Source-purpose review: Handles the per-note pressure status for the specified note and channel.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.onPolyPressure(IIII)V"
+    },
+    {
+      "symbol": "M:wl.a(IIZ)V",
+      "originalName": "a",
+      "to": "setPitchWheel",
+      "evidence": "Source-purpose review: Stores the pitch wheel value assembled from the two MIDI data bytes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.setPitchWheel(IIZ)V"
+    },
+    {
+      "symbol": "M:wl.a(IZ)V",
+      "originalName": "a",
+      "to": "resetChannelVoicePhases",
+      "evidence": "Source-purpose review: Resets the retrigger phase of active channel voices when the retrigger controller is turned off.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.resetChannelVoicePhases(IZ)V"
+    },
+    {
+      "symbol": "M:wl.a(Lsh;B)I",
+      "originalName": "a",
+      "to": "computeNoteVolume",
+      "evidence": "Source-purpose review: Computes note gain from channel expression, velocity, master gain and the note envelopes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.computeNoteVolume(Lsh;B)I"
     },
     {
       "symbol": "M:wl.a(Lsh;I)Z",
@@ -7972,12 +8100,52 @@
       "renamedSymbol": "M:MidiPcmStream.advanceMidiEvents(Z)V"
     },
     {
+      "symbol": "M:wl.a(ZI)V",
+      "originalName": "a",
+      "to": "resetPlaybackChannels",
+      "evidence": "Source-purpose review: Resets active notes, controllers and channel programs for the system reset message.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.resetPlaybackChannels(ZI)V"
+    },
+    {
+      "symbol": "M:wl.a(ZLsh;)I",
+      "originalName": "a",
+      "to": "computeNotePan",
+      "evidence": "Source-purpose review: Combines channel pan and note pan to produce the stereo pan value.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.computeNotePan(ZLsh;)I"
+    },
+    {
       "symbol": "M:wl.a([III)V",
       "originalName": "a",
       "to": "mixInto",
       "evidence": "Accumulate PCM output into the supplied int buffer through the complete original stream implementation. Retain raw sample loop/interpolation/ramp arithmetic,scheduled listener deadlines,child traversal,MIDI event timing and voice crossfades,envelope/effect state,all buffer offsets/counts,guards,partial writes and exception order. Complete original-body SHA256 49592c293789f9c237d459e02c90a906663a85b8b90bb3559bd96450f22d00b9. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MidiPcmStream.mixInto([III)V"
+    },
+    {
+      "symbol": "M:wl.b(BI)V",
+      "originalName": "b",
+      "to": "removeChannelVoices",
+      "evidence": "Source-purpose review: Fades and removes the channel voices for the all-sound-off controller.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.removeChannelVoices(BI)V"
+    },
+    {
+      "symbol": "M:wl.b(II)V",
+      "originalName": "b",
+      "to": "handleMidiMessage",
+      "evidence": "Source-purpose review: Dispatches packed MIDI bytes to note, pressure, program, pitch-bend, and controller handlers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.handleMidiMessage(II)V"
+    },
+    {
+      "symbol": "M:wl.b(III)V",
+      "originalName": "b",
+      "to": "onChannelPressure",
+      "evidence": "Source-purpose review: Handles the channel-wide pressure status.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.onChannelPressure(III)V"
     },
     {
       "symbol": "M:wl.c()Llj;",
@@ -7988,12 +8156,36 @@
       "renamedSymbol": "M:MidiPcmStream.firstChildStream()LPcmStream;"
     },
     {
+      "symbol": "M:wl.c(II)V",
+      "originalName": "c",
+      "to": "releaseUnmappedVoices",
+      "evidence": "Source-purpose review: Releases notes retained for portamento when the controller is disabled.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.releaseUnmappedVoices(II)V"
+    },
+    {
       "symbol": "M:wl.d()I",
       "originalName": "d",
       "to": "getSchedulingCost",
       "evidence": "Return the original PCM scheduler work-cost value:fixed container/leaf cost or state-dependent activity/effect cost as actually implemented. Retain original integer products,guards,shared/volatile reads and all special return values. Complete original-body SHA256 6f0e51fae88af5d49ca110334f2c79b1d4b778152ba5bb31672e7edf472e73be. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MidiPcmStream.getSchedulingCost()I"
+    },
+    {
+      "symbol": "M:wl.d(II)V",
+      "originalName": "d",
+      "to": "allNotesOff",
+      "evidence": "Source-purpose review: Releases active notes in the channel for the all-notes-off controller.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.allNotesOff(II)V"
+    },
+    {
+      "symbol": "M:wl.e(II)V",
+      "originalName": "e",
+      "to": "setMasterVolume",
+      "evidence": "Source-purpose review: Sets the master gain read by the note-volume calculation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.setMasterVolume(II)V"
     },
     {
       "symbol": "P:bd.a(Ljava/lang/Throwable;Ljava/lang/String;I)V#0",
@@ -13213,9 +13405,9 @@
     },
     {
       "symbol": "C:we",
-      "renamedSymbol": "C:we",
+      "renamedSymbol": "C:PcmMixerListener",
       "originalName": "we",
-      "renamedName": "we",
+      "renamedName": "PcmMixerListener",
       "declaration": {
         "file": "we.java",
         "start": 53,
@@ -41318,7 +41510,7 @@
     },
     {
       "symbol": "F:we.field_h:I",
-      "renamedSymbol": "F:we.field_h:I",
+      "renamedSymbol": "F:PcmMixerListener.field_h:I",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -140087,7 +140279,7 @@
     },
     {
       "symbol": "L:lh.c(I)V#0",
-      "renamedSymbol": "L:PcmSampleStream.c(I)V#0",
+      "renamedSymbol": "L:PcmSampleStream.fadeOutAndUnlink(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -140098,7 +140290,7 @@
     },
     {
       "symbol": "L:lh.c(I)V#1",
-      "renamedSymbol": "L:PcmSampleStream.c(I)V#1",
+      "renamedSymbol": "L:PcmSampleStream.fadeOutAndUnlink(I)V#1",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -140164,7 +140356,7 @@
     },
     {
       "symbol": "L:lh.e()Z#0",
-      "renamedSymbol": "L:PcmSampleStream.e()Z#0",
+      "renamedSymbol": "L:PcmSampleStream.finishOrContinueVolumeRamp()Z#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -140175,7 +140367,7 @@
     },
     {
       "symbol": "L:lh.e()Z#1",
-      "renamedSymbol": "L:PcmSampleStream.e()Z#1",
+      "renamedSymbol": "L:PcmSampleStream.finishOrContinueVolumeRamp()Z#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -140186,7 +140378,7 @@
     },
     {
       "symbol": "L:lh.e()Z#2",
-      "renamedSymbol": "L:PcmSampleStream.e()Z#2",
+      "renamedSymbol": "L:PcmSampleStream.finishOrContinueVolumeRamp()Z#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -187684,7 +187876,7 @@
     },
     {
       "symbol": "L:vg.a(Lwe;)V#0",
-      "renamedSymbol": "L:PcmStreamMixer.removeListener(Lwe;)V#0",
+      "renamedSymbol": "L:PcmStreamMixer.removeListener(LPcmMixerListener;)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -191743,7 +191935,7 @@
     },
     {
       "symbol": "L:wl.a(BI)V#0",
-      "renamedSymbol": "L:MidiPcmStream.a(BI)V#0",
+      "renamedSymbol": "L:MidiPcmStream.resetChannel(BI)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -191754,7 +191946,7 @@
     },
     {
       "symbol": "L:wl.a(BLsh;)I#0",
-      "renamedSymbol": "L:MidiPcmStream.a(BLsh;)I#0",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteSampleStep(BLsh;)I#0",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -191765,7 +191957,7 @@
     },
     {
       "symbol": "L:wl.a(BLsh;)I#1",
-      "renamedSymbol": "L:MidiPcmStream.a(BLsh;)I#1",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteSampleStep(BLsh;)I#1",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -191776,7 +191968,7 @@
     },
     {
       "symbol": "L:wl.a(BLsh;)I#10",
-      "renamedSymbol": "L:MidiPcmStream.a(BLsh;)I#10",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteSampleStep(BLsh;)I#10",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -191787,7 +191979,7 @@
     },
     {
       "symbol": "L:wl.a(BLsh;)I#11",
-      "renamedSymbol": "L:MidiPcmStream.a(BLsh;)I#11",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteSampleStep(BLsh;)I#11",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -191798,7 +191990,7 @@
     },
     {
       "symbol": "L:wl.a(BLsh;)I#12",
-      "renamedSymbol": "L:MidiPcmStream.a(BLsh;)I#12",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteSampleStep(BLsh;)I#12",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -191809,7 +192001,7 @@
     },
     {
       "symbol": "L:wl.a(BLsh;)I#2",
-      "renamedSymbol": "L:MidiPcmStream.a(BLsh;)I#2",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteSampleStep(BLsh;)I#2",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -191820,7 +192012,7 @@
     },
     {
       "symbol": "L:wl.a(BLsh;)I#3",
-      "renamedSymbol": "L:MidiPcmStream.a(BLsh;)I#3",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteSampleStep(BLsh;)I#3",
       "originalName": "stackIn_17_2",
       "renamedName": "stackIn_17_2",
       "declaration": {
@@ -191831,7 +192023,7 @@
     },
     {
       "symbol": "L:wl.a(BLsh;)I#4",
-      "renamedSymbol": "L:MidiPcmStream.a(BLsh;)I#4",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteSampleStep(BLsh;)I#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -191842,7 +192034,7 @@
     },
     {
       "symbol": "L:wl.a(BLsh;)I#5",
-      "renamedSymbol": "L:MidiPcmStream.a(BLsh;)I#5",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteSampleStep(BLsh;)I#5",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -191853,7 +192045,7 @@
     },
     {
       "symbol": "L:wl.a(BLsh;)I#6",
-      "renamedSymbol": "L:MidiPcmStream.a(BLsh;)I#6",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteSampleStep(BLsh;)I#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -191864,7 +192056,7 @@
     },
     {
       "symbol": "L:wl.a(BLsh;)I#7",
-      "renamedSymbol": "L:MidiPcmStream.a(BLsh;)I#7",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteSampleStep(BLsh;)I#7",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -191875,7 +192067,7 @@
     },
     {
       "symbol": "L:wl.a(BLsh;)I#8",
-      "renamedSymbol": "L:MidiPcmStream.a(BLsh;)I#8",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteSampleStep(BLsh;)I#8",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -191886,7 +192078,7 @@
     },
     {
       "symbol": "L:wl.a(BLsh;)I#9",
-      "renamedSymbol": "L:MidiPcmStream.a(BLsh;)I#9",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteSampleStep(BLsh;)I#9",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -192095,7 +192287,7 @@
     },
     {
       "symbol": "L:wl.a(IBII)V#0",
-      "renamedSymbol": "L:MidiPcmStream.a(IBII)V#0",
+      "renamedSymbol": "L:MidiPcmStream.noteOff(IBII)V#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -192106,7 +192298,7 @@
     },
     {
       "symbol": "L:wl.a(IBII)V#1",
-      "renamedSymbol": "L:MidiPcmStream.a(IBII)V#1",
+      "renamedSymbol": "L:MidiPcmStream.noteOff(IBII)V#1",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -192117,7 +192309,7 @@
     },
     {
       "symbol": "L:wl.a(IBII)V#2",
-      "renamedSymbol": "L:MidiPcmStream.a(IBII)V#2",
+      "renamedSymbol": "L:MidiPcmStream.noteOff(IBII)V#2",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -192128,7 +192320,7 @@
     },
     {
       "symbol": "L:wl.a(IBII)V#3",
-      "renamedSymbol": "L:MidiPcmStream.a(IBII)V#3",
+      "renamedSymbol": "L:MidiPcmStream.noteOff(IBII)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -192139,7 +192331,7 @@
     },
     {
       "symbol": "L:wl.a(IIB)V#0",
-      "renamedSymbol": "L:MidiPcmStream.a(IIB)V#0",
+      "renamedSymbol": "L:MidiPcmStream.setProgram(IIB)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -192150,7 +192342,7 @@
     },
     {
       "symbol": "L:wl.a(IIB)V#1",
-      "renamedSymbol": "L:MidiPcmStream.a(IIB)V#1",
+      "renamedSymbol": "L:MidiPcmStream.setProgram(IIB)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -192161,7 +192353,7 @@
     },
     {
       "symbol": "L:wl.a(IIIB)V#0",
-      "renamedSymbol": "L:MidiPcmStream.a(IIIB)V#0",
+      "renamedSymbol": "L:MidiPcmStream.noteOn(IIIB)V#0",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -192172,7 +192364,7 @@
     },
     {
       "symbol": "L:wl.a(IIIB)V#1",
-      "renamedSymbol": "L:MidiPcmStream.a(IIIB)V#1",
+      "renamedSymbol": "L:MidiPcmStream.noteOn(IIIB)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -192183,7 +192375,7 @@
     },
     {
       "symbol": "L:wl.a(IIIB)V#10",
-      "renamedSymbol": "L:MidiPcmStream.a(IIIB)V#10",
+      "renamedSymbol": "L:MidiPcmStream.noteOn(IIIB)V#10",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -192194,7 +192386,7 @@
     },
     {
       "symbol": "L:wl.a(IIIB)V#2",
-      "renamedSymbol": "L:MidiPcmStream.a(IIIB)V#2",
+      "renamedSymbol": "L:MidiPcmStream.noteOn(IIIB)V#2",
       "originalName": "var5_ref",
       "renamedName": "var5_ref",
       "declaration": {
@@ -192205,7 +192397,7 @@
     },
     {
       "symbol": "L:wl.a(IIIB)V#3",
-      "renamedSymbol": "L:MidiPcmStream.a(IIIB)V#3",
+      "renamedSymbol": "L:MidiPcmStream.noteOn(IIIB)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -192216,7 +192408,7 @@
     },
     {
       "symbol": "L:wl.a(IIIB)V#4",
-      "renamedSymbol": "L:MidiPcmStream.a(IIIB)V#4",
+      "renamedSymbol": "L:MidiPcmStream.noteOn(IIIB)V#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -192227,7 +192419,7 @@
     },
     {
       "symbol": "L:wl.a(IIIB)V#5",
-      "renamedSymbol": "L:MidiPcmStream.a(IIIB)V#5",
+      "renamedSymbol": "L:MidiPcmStream.noteOn(IIIB)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -192238,7 +192430,7 @@
     },
     {
       "symbol": "L:wl.a(IIIB)V#6",
-      "renamedSymbol": "L:MidiPcmStream.a(IIIB)V#6",
+      "renamedSymbol": "L:MidiPcmStream.noteOn(IIIB)V#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -192249,7 +192441,7 @@
     },
     {
       "symbol": "L:wl.a(IIIB)V#7",
-      "renamedSymbol": "L:MidiPcmStream.a(IIIB)V#7",
+      "renamedSymbol": "L:MidiPcmStream.noteOn(IIIB)V#7",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -192260,7 +192452,7 @@
     },
     {
       "symbol": "L:wl.a(IIIB)V#8",
-      "renamedSymbol": "L:MidiPcmStream.a(IIIB)V#8",
+      "renamedSymbol": "L:MidiPcmStream.noteOn(IIIB)V#8",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -192271,7 +192463,7 @@
     },
     {
       "symbol": "L:wl.a(IIIB)V#9",
-      "renamedSymbol": "L:MidiPcmStream.a(IIIB)V#9",
+      "renamedSymbol": "L:MidiPcmStream.noteOn(IIIB)V#9",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -192282,7 +192474,7 @@
     },
     {
       "symbol": "L:wl.a(IZ)V#0",
-      "renamedSymbol": "L:MidiPcmStream.a(IZ)V#0",
+      "renamedSymbol": "L:MidiPcmStream.resetChannelVoicePhases(IZ)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -192293,7 +192485,7 @@
     },
     {
       "symbol": "L:wl.a(IZ)V#1",
-      "renamedSymbol": "L:MidiPcmStream.a(IZ)V#1",
+      "renamedSymbol": "L:MidiPcmStream.resetChannelVoicePhases(IZ)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -192986,7 +193178,7 @@
     },
     {
       "symbol": "L:wl.a(Lsh;B)I#0",
-      "renamedSymbol": "L:MidiPcmStream.a(Lsh;B)I#0",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteVolume(Lsh;B)I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -192997,7 +193189,7 @@
     },
     {
       "symbol": "L:wl.a(Lsh;B)I#1",
-      "renamedSymbol": "L:MidiPcmStream.a(Lsh;B)I#1",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteVolume(Lsh;B)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -193008,7 +193200,7 @@
     },
     {
       "symbol": "L:wl.a(Lsh;B)I#10",
-      "renamedSymbol": "L:MidiPcmStream.a(Lsh;B)I#10",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteVolume(Lsh;B)I#10",
       "originalName": "stackIn_23_0",
       "renamedName": "stackIn_23_0",
       "declaration": {
@@ -193019,7 +193211,7 @@
     },
     {
       "symbol": "L:wl.a(Lsh;B)I#11",
-      "renamedSymbol": "L:MidiPcmStream.a(Lsh;B)I#11",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteVolume(Lsh;B)I#11",
       "originalName": "stackIn_26_0",
       "renamedName": "stackIn_26_0",
       "declaration": {
@@ -193030,7 +193222,7 @@
     },
     {
       "symbol": "L:wl.a(Lsh;B)I#12",
-      "renamedSymbol": "L:MidiPcmStream.a(Lsh;B)I#12",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteVolume(Lsh;B)I#12",
       "originalName": "stackIn_26_1",
       "renamedName": "stackIn_26_1",
       "declaration": {
@@ -193041,7 +193233,7 @@
     },
     {
       "symbol": "L:wl.a(Lsh;B)I#13",
-      "renamedSymbol": "L:MidiPcmStream.a(Lsh;B)I#13",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteVolume(Lsh;B)I#13",
       "originalName": "stackIn_27_2",
       "renamedName": "stackIn_27_2",
       "declaration": {
@@ -193052,7 +193244,7 @@
     },
     {
       "symbol": "L:wl.a(Lsh;B)I#14",
-      "renamedSymbol": "L:MidiPcmStream.a(Lsh;B)I#14",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteVolume(Lsh;B)I#14",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -193063,7 +193255,7 @@
     },
     {
       "symbol": "L:wl.a(Lsh;B)I#15",
-      "renamedSymbol": "L:MidiPcmStream.a(Lsh;B)I#15",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteVolume(Lsh;B)I#15",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -193074,7 +193266,7 @@
     },
     {
       "symbol": "L:wl.a(Lsh;B)I#16",
-      "renamedSymbol": "L:MidiPcmStream.a(Lsh;B)I#16",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteVolume(Lsh;B)I#16",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -193085,7 +193277,7 @@
     },
     {
       "symbol": "L:wl.a(Lsh;B)I#17",
-      "renamedSymbol": "L:MidiPcmStream.a(Lsh;B)I#17",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteVolume(Lsh;B)I#17",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -193096,7 +193288,7 @@
     },
     {
       "symbol": "L:wl.a(Lsh;B)I#18",
-      "renamedSymbol": "L:MidiPcmStream.a(Lsh;B)I#18",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteVolume(Lsh;B)I#18",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -193107,7 +193299,7 @@
     },
     {
       "symbol": "L:wl.a(Lsh;B)I#19",
-      "renamedSymbol": "L:MidiPcmStream.a(Lsh;B)I#19",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteVolume(Lsh;B)I#19",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -193118,7 +193310,7 @@
     },
     {
       "symbol": "L:wl.a(Lsh;B)I#2",
-      "renamedSymbol": "L:MidiPcmStream.a(Lsh;B)I#2",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteVolume(Lsh;B)I#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -193129,7 +193321,7 @@
     },
     {
       "symbol": "L:wl.a(Lsh;B)I#3",
-      "renamedSymbol": "L:MidiPcmStream.a(Lsh;B)I#3",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteVolume(Lsh;B)I#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -193140,7 +193332,7 @@
     },
     {
       "symbol": "L:wl.a(Lsh;B)I#4",
-      "renamedSymbol": "L:MidiPcmStream.a(Lsh;B)I#4",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteVolume(Lsh;B)I#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -193151,7 +193343,7 @@
     },
     {
       "symbol": "L:wl.a(Lsh;B)I#5",
-      "renamedSymbol": "L:MidiPcmStream.a(Lsh;B)I#5",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteVolume(Lsh;B)I#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -193162,7 +193354,7 @@
     },
     {
       "symbol": "L:wl.a(Lsh;B)I#6",
-      "renamedSymbol": "L:MidiPcmStream.a(Lsh;B)I#6",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteVolume(Lsh;B)I#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -193173,7 +193365,7 @@
     },
     {
       "symbol": "L:wl.a(Lsh;B)I#7",
-      "renamedSymbol": "L:MidiPcmStream.a(Lsh;B)I#7",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteVolume(Lsh;B)I#7",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -193184,7 +193376,7 @@
     },
     {
       "symbol": "L:wl.a(Lsh;B)I#8",
-      "renamedSymbol": "L:MidiPcmStream.a(Lsh;B)I#8",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteVolume(Lsh;B)I#8",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -193195,7 +193387,7 @@
     },
     {
       "symbol": "L:wl.a(Lsh;B)I#9",
-      "renamedSymbol": "L:MidiPcmStream.a(Lsh;B)I#9",
+      "renamedSymbol": "L:MidiPcmStream.computeNoteVolume(Lsh;B)I#9",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -193349,7 +193541,7 @@
     },
     {
       "symbol": "L:wl.a(ZI)V#0",
-      "renamedSymbol": "L:MidiPcmStream.a(ZI)V#0",
+      "renamedSymbol": "L:MidiPcmStream.resetPlaybackChannels(ZI)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -193360,7 +193552,7 @@
     },
     {
       "symbol": "L:wl.a(ZI)V#1",
-      "renamedSymbol": "L:MidiPcmStream.a(ZI)V#1",
+      "renamedSymbol": "L:MidiPcmStream.resetPlaybackChannels(ZI)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -193371,7 +193563,7 @@
     },
     {
       "symbol": "L:wl.a(ZI)V#2",
-      "renamedSymbol": "L:MidiPcmStream.a(ZI)V#2",
+      "renamedSymbol": "L:MidiPcmStream.resetPlaybackChannels(ZI)V#2",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -193382,7 +193574,7 @@
     },
     {
       "symbol": "L:wl.a(ZI)V#3",
-      "renamedSymbol": "L:MidiPcmStream.a(ZI)V#3",
+      "renamedSymbol": "L:MidiPcmStream.resetPlaybackChannels(ZI)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -193569,7 +193761,7 @@
     },
     {
       "symbol": "L:wl.a(ZLsh;)I#0",
-      "renamedSymbol": "L:MidiPcmStream.a(ZLsh;)I#0",
+      "renamedSymbol": "L:MidiPcmStream.computeNotePan(ZLsh;)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -193580,7 +193772,7 @@
     },
     {
       "symbol": "L:wl.a(ZLsh;)I#1",
-      "renamedSymbol": "L:MidiPcmStream.a(ZLsh;)I#1",
+      "renamedSymbol": "L:MidiPcmStream.computeNotePan(ZLsh;)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -193591,7 +193783,7 @@
     },
     {
       "symbol": "L:wl.a(ZLsh;)I#2",
-      "renamedSymbol": "L:MidiPcmStream.a(ZLsh;)I#2",
+      "renamedSymbol": "L:MidiPcmStream.computeNotePan(ZLsh;)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -193602,7 +193794,7 @@
     },
     {
       "symbol": "L:wl.a(ZLsh;)I#3",
-      "renamedSymbol": "L:MidiPcmStream.a(ZLsh;)I#3",
+      "renamedSymbol": "L:MidiPcmStream.computeNotePan(ZLsh;)I#3",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -193613,7 +193805,7 @@
     },
     {
       "symbol": "L:wl.a(ZLsh;)I#4",
-      "renamedSymbol": "L:MidiPcmStream.a(ZLsh;)I#4",
+      "renamedSymbol": "L:MidiPcmStream.computeNotePan(ZLsh;)I#4",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -193624,7 +193816,7 @@
     },
     {
       "symbol": "L:wl.a(ZLsh;)I#5",
-      "renamedSymbol": "L:MidiPcmStream.a(ZLsh;)I#5",
+      "renamedSymbol": "L:MidiPcmStream.computeNotePan(ZLsh;)I#5",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -193635,7 +193827,7 @@
     },
     {
       "symbol": "L:wl.a(ZLsh;)I#6",
-      "renamedSymbol": "L:MidiPcmStream.a(ZLsh;)I#6",
+      "renamedSymbol": "L:MidiPcmStream.computeNotePan(ZLsh;)I#6",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -193646,7 +193838,7 @@
     },
     {
       "symbol": "L:wl.a(ZLsh;)I#7",
-      "renamedSymbol": "L:MidiPcmStream.a(ZLsh;)I#7",
+      "renamedSymbol": "L:MidiPcmStream.computeNotePan(ZLsh;)I#7",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -193657,7 +193849,7 @@
     },
     {
       "symbol": "L:wl.a(ZLsh;)I#8",
-      "renamedSymbol": "L:MidiPcmStream.a(ZLsh;)I#8",
+      "renamedSymbol": "L:MidiPcmStream.computeNotePan(ZLsh;)I#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -193668,7 +193860,7 @@
     },
     {
       "symbol": "L:wl.a(ZLsh;)I#9",
-      "renamedSymbol": "L:MidiPcmStream.a(ZLsh;)I#9",
+      "renamedSymbol": "L:MidiPcmStream.computeNotePan(ZLsh;)I#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -193932,7 +194124,7 @@
     },
     {
       "symbol": "L:wl.b(BI)V#0",
-      "renamedSymbol": "L:MidiPcmStream.b(BI)V#0",
+      "renamedSymbol": "L:MidiPcmStream.removeChannelVoices(BI)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -193943,7 +194135,7 @@
     },
     {
       "symbol": "L:wl.b(BI)V#1",
-      "renamedSymbol": "L:MidiPcmStream.b(BI)V#1",
+      "renamedSymbol": "L:MidiPcmStream.removeChannelVoices(BI)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -193954,7 +194146,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#0",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#0",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -193965,7 +194157,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#1",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#1",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -193976,7 +194168,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#10",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#10",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#10",
       "originalName": "var4Lifetime3",
       "renamedName": "var4Lifetime3",
       "declaration": {
@@ -193987,7 +194179,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#11",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#11",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#11",
       "originalName": "var4Lifetime4",
       "renamedName": "var4Lifetime4",
       "declaration": {
@@ -193998,7 +194190,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#12",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#12",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#12",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -194009,7 +194201,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#13",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#13",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#13",
       "originalName": "var5Lifetime2",
       "renamedName": "var5Lifetime2",
       "declaration": {
@@ -194020,7 +194212,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#14",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#14",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#14",
       "originalName": "var5Lifetime3",
       "renamedName": "var5Lifetime3",
       "declaration": {
@@ -194031,7 +194223,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#15",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#15",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#15",
       "originalName": "var5Lifetime4",
       "renamedName": "var5Lifetime4",
       "declaration": {
@@ -194042,7 +194234,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#16",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#16",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#16",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -194053,7 +194245,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#17",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#17",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#17",
       "originalName": "var6Lifetime2",
       "renamedName": "var6Lifetime2",
       "declaration": {
@@ -194064,7 +194256,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#18",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#18",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#18",
       "originalName": "var6Lifetime3",
       "renamedName": "var6Lifetime3",
       "declaration": {
@@ -194075,7 +194267,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#19",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#19",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#19",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -194086,7 +194278,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#2",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#2",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -194097,7 +194289,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#20",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#20",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#20",
       "originalName": "var4Lifetime3Lifetime1",
       "renamedName": "var4Lifetime3Lifetime1",
       "declaration": {
@@ -194108,7 +194300,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#21",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#21",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#21",
       "originalName": "var4Lifetime3Lifetime2",
       "renamedName": "var4Lifetime3Lifetime2",
       "declaration": {
@@ -194119,7 +194311,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#22",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#22",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#22",
       "originalName": "var5Lifetime3Lifetime1",
       "renamedName": "var5Lifetime3Lifetime1",
       "declaration": {
@@ -194130,7 +194322,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#23",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#23",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#23",
       "originalName": "var5Lifetime3Lifetime2",
       "renamedName": "var5Lifetime3Lifetime2",
       "declaration": {
@@ -194141,7 +194333,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#3",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#3",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -194152,7 +194344,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#4",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#4",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -194163,7 +194355,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#5",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#5",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -194174,7 +194366,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#6",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#6",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -194185,7 +194377,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#7",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#7",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -194196,7 +194388,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#8",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#8",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#8",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -194207,7 +194399,7 @@
     },
     {
       "symbol": "L:wl.b(II)V#9",
-      "renamedSymbol": "L:MidiPcmStream.b(II)V#9",
+      "renamedSymbol": "L:MidiPcmStream.handleMidiMessage(II)V#9",
       "originalName": "var4Lifetime2",
       "renamedName": "var4Lifetime2",
       "declaration": {
@@ -194218,7 +194410,7 @@
     },
     {
       "symbol": "L:wl.b(III)V#0",
-      "renamedSymbol": "L:MidiPcmStream.b(III)V#0",
+      "renamedSymbol": "L:MidiPcmStream.onChannelPressure(III)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -194251,7 +194443,7 @@
     },
     {
       "symbol": "L:wl.c(II)V#0",
-      "renamedSymbol": "L:MidiPcmStream.c(II)V#0",
+      "renamedSymbol": "L:MidiPcmStream.releaseUnmappedVoices(II)V#0",
       "originalName": "var3_ref_sh",
       "renamedName": "var3_ref_sh",
       "declaration": {
@@ -194262,7 +194454,7 @@
     },
     {
       "symbol": "L:wl.c(II)V#1",
-      "renamedSymbol": "L:MidiPcmStream.c(II)V#1",
+      "renamedSymbol": "L:MidiPcmStream.releaseUnmappedVoices(II)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -194273,7 +194465,7 @@
     },
     {
       "symbol": "L:wl.c(II)V#2",
-      "renamedSymbol": "L:MidiPcmStream.c(II)V#2",
+      "renamedSymbol": "L:MidiPcmStream.releaseUnmappedVoices(II)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -194306,7 +194498,7 @@
     },
     {
       "symbol": "L:wl.d(II)V#0",
-      "renamedSymbol": "L:MidiPcmStream.d(II)V#0",
+      "renamedSymbol": "L:MidiPcmStream.allNotesOff(II)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -194317,7 +194509,7 @@
     },
     {
       "symbol": "L:wl.d(II)V#1",
-      "renamedSymbol": "L:MidiPcmStream.d(II)V#1",
+      "renamedSymbol": "L:MidiPcmStream.allNotesOff(II)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -209904,9 +210096,9 @@
     },
     {
       "symbol": "M:lh.c(I)V",
-      "renamedSymbol": "M:PcmSampleStream.c(I)V",
+      "renamedSymbol": "M:PcmSampleStream.fadeOutAndUnlink(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "fadeOutAndUnlink",
       "declaration": {
         "file": "lh.java",
         "start": 51161,
@@ -209981,9 +210173,9 @@
     },
     {
       "symbol": "M:lh.e()Z",
-      "renamedSymbol": "M:PcmSampleStream.e()Z",
+      "renamedSymbol": "M:PcmSampleStream.finishOrContinueVolumeRamp()Z",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "finishOrContinueVolumeRamp",
       "declaration": {
         "file": "lh.java",
         "start": 24684,
@@ -210047,9 +210239,9 @@
     },
     {
       "symbol": "M:lh.g(I)V",
-      "renamedSymbol": "M:PcmSampleStream.g(I)V",
+      "renamedSymbol": "M:PcmSampleStream.setLoopCount(I)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "setLoopCount",
       "declaration": {
         "file": "lh.java",
         "start": 31566,
@@ -218451,9 +218643,9 @@
     },
     {
       "symbol": "M:vg.a(Lgg;II)V",
-      "renamedSymbol": "M:PcmStreamMixer.a(LPcmSample;II)V",
+      "renamedSymbol": "M:PcmStreamMixer.playSample(LPcmSample;II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "playSample",
       "declaration": {
         "file": "vg.java",
         "start": 2916,
@@ -218462,9 +218654,9 @@
     },
     {
       "symbol": "M:vg.a(Llj;)V",
-      "renamedSymbol": "M:PcmStreamMixer.a(LPcmStream;)V",
+      "renamedSymbol": "M:PcmStreamMixer.addChildStream(LPcmStream;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addChildStream",
       "declaration": {
         "file": "vg.java",
         "start": 2530,
@@ -218473,7 +218665,7 @@
     },
     {
       "symbol": "M:vg.a(Luf;Lwe;)V",
-      "renamedSymbol": "M:PcmStreamMixer.insertListenerByDeadline(LIntrusiveNode;Lwe;)V",
+      "renamedSymbol": "M:PcmStreamMixer.insertListenerByDeadline(LIntrusiveNode;LPcmMixerListener;)V",
       "originalName": "a",
       "renamedName": "insertListenerByDeadline",
       "declaration": {
@@ -218484,7 +218676,7 @@
     },
     {
       "symbol": "M:vg.a(Lwe;)V",
-      "renamedSymbol": "M:PcmStreamMixer.removeListener(Lwe;)V",
+      "renamedSymbol": "M:PcmStreamMixer.removeListener(LPcmMixerListener;)V",
       "originalName": "a",
       "renamedName": "removeListener",
       "declaration": {
@@ -219188,9 +219380,9 @@
     },
     {
       "symbol": "M:we.<init>()V",
-      "renamedSymbol": "M:we.<init>()V",
+      "renamedSymbol": "M:PcmMixerListener.<init>()V",
       "originalName": "we",
-      "renamedName": "we",
+      "renamedName": "PcmMixerListener",
       "declaration": {
         "file": "we.java",
         "start": 155,
@@ -219199,9 +219391,9 @@
     },
     {
       "symbol": "M:we.a()V",
-      "renamedSymbol": "M:we.a()V",
+      "renamedSymbol": "M:PcmMixerListener.onRemovedFromMixer()V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onRemovedFromMixer",
       "declaration": {
         "file": "we.java",
         "start": 137,
@@ -219210,7 +219402,7 @@
     },
     {
       "symbol": "M:we.a(Lvg;)I",
-      "renamedSymbol": "M:we.onScheduledEvent(LPcmStreamMixer;)I",
+      "renamedSymbol": "M:PcmMixerListener.onScheduledEvent(LPcmStreamMixer;)I",
       "originalName": "a",
       "renamedName": "onScheduledEvent",
       "declaration": {
@@ -219573,9 +219765,9 @@
     },
     {
       "symbol": "M:wl.a(BI)V",
-      "renamedSymbol": "M:MidiPcmStream.a(BI)V",
+      "renamedSymbol": "M:MidiPcmStream.resetChannel(BI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetChannel",
       "declaration": {
         "file": "wl.java",
         "start": 45545,
@@ -219595,9 +219787,9 @@
     },
     {
       "symbol": "M:wl.a(BLsh;)I",
-      "renamedSymbol": "M:MidiPcmStream.a(BLsh;)I",
+      "renamedSymbol": "M:MidiPcmStream.computeNoteSampleStep(BLsh;)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "computeNoteSampleStep",
       "declaration": {
         "file": "wl.java",
         "start": 47968,
@@ -219628,9 +219820,9 @@
     },
     {
       "symbol": "M:wl.a(IBII)V",
-      "renamedSymbol": "M:MidiPcmStream.a(IBII)V",
+      "renamedSymbol": "M:MidiPcmStream.noteOff(IBII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "noteOff",
       "declaration": {
         "file": "wl.java",
         "start": 53594,
@@ -219639,9 +219831,9 @@
     },
     {
       "symbol": "M:wl.a(IIB)V",
-      "renamedSymbol": "M:MidiPcmStream.a(IIB)V",
+      "renamedSymbol": "M:MidiPcmStream.setProgram(IIB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setProgram",
       "declaration": {
         "file": "wl.java",
         "start": 22013,
@@ -219661,9 +219853,9 @@
     },
     {
       "symbol": "M:wl.a(IIIB)V",
-      "renamedSymbol": "M:MidiPcmStream.a(IIIB)V",
+      "renamedSymbol": "M:MidiPcmStream.noteOn(IIIB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "noteOn",
       "declaration": {
         "file": "wl.java",
         "start": 17677,
@@ -219672,9 +219864,9 @@
     },
     {
       "symbol": "M:wl.a(IIII)V",
-      "renamedSymbol": "M:MidiPcmStream.a(IIII)V",
+      "renamedSymbol": "M:MidiPcmStream.onPolyPressure(IIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onPolyPressure",
       "declaration": {
         "file": "wl.java",
         "start": 16711,
@@ -219683,9 +219875,9 @@
     },
     {
       "symbol": "M:wl.a(IIZ)V",
-      "renamedSymbol": "M:MidiPcmStream.a(IIZ)V",
+      "renamedSymbol": "M:MidiPcmStream.setPitchWheel(IIZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setPitchWheel",
       "declaration": {
         "file": "wl.java",
         "start": 54380,
@@ -219694,9 +219886,9 @@
     },
     {
       "symbol": "M:wl.a(IZ)V",
-      "renamedSymbol": "M:MidiPcmStream.a(IZ)V",
+      "renamedSymbol": "M:MidiPcmStream.resetChannelVoicePhases(IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetChannelVoicePhases",
       "declaration": {
         "file": "wl.java",
         "start": 13375,
@@ -219749,9 +219941,9 @@
     },
     {
       "symbol": "M:wl.a(Lsh;B)I",
-      "renamedSymbol": "M:MidiPcmStream.a(Lsh;B)I",
+      "renamedSymbol": "M:MidiPcmStream.computeNoteVolume(Lsh;B)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "computeNoteVolume",
       "declaration": {
         "file": "wl.java",
         "start": 35513,
@@ -219804,9 +219996,9 @@
     },
     {
       "symbol": "M:wl.a(ZI)V",
-      "renamedSymbol": "M:MidiPcmStream.a(ZI)V",
+      "renamedSymbol": "M:MidiPcmStream.resetPlaybackChannels(ZI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetPlaybackChannels",
       "declaration": {
         "file": "wl.java",
         "start": 44890,
@@ -219826,9 +220018,9 @@
     },
     {
       "symbol": "M:wl.a(ZLsh;)I",
-      "renamedSymbol": "M:MidiPcmStream.a(ZLsh;)I",
+      "renamedSymbol": "M:MidiPcmStream.computeNotePan(ZLsh;)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "computeNotePan",
       "declaration": {
         "file": "wl.java",
         "start": 22704,
@@ -219870,9 +220062,9 @@
     },
     {
       "symbol": "M:wl.b(BI)V",
-      "renamedSymbol": "M:MidiPcmStream.b(BI)V",
+      "renamedSymbol": "M:MidiPcmStream.removeChannelVoices(BI)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "removeChannelVoices",
       "declaration": {
         "file": "wl.java",
         "start": 16875,
@@ -219881,9 +220073,9 @@
     },
     {
       "symbol": "M:wl.b(II)V",
-      "renamedSymbol": "M:MidiPcmStream.b(II)V",
+      "renamedSymbol": "M:MidiPcmStream.handleMidiMessage(II)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "handleMidiMessage",
       "declaration": {
         "file": "wl.java",
         "start": 1258,
@@ -219892,9 +220084,9 @@
     },
     {
       "symbol": "M:wl.b(III)V",
-      "renamedSymbol": "M:MidiPcmStream.b(III)V",
+      "renamedSymbol": "M:MidiPcmStream.onChannelPressure(III)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "onChannelPressure",
       "declaration": {
         "file": "wl.java",
         "start": 34442,
@@ -219936,9 +220128,9 @@
     },
     {
       "symbol": "M:wl.c(II)V",
-      "renamedSymbol": "M:MidiPcmStream.c(II)V",
+      "renamedSymbol": "M:MidiPcmStream.releaseUnmappedVoices(II)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "releaseUnmappedVoices",
       "declaration": {
         "file": "wl.java",
         "start": 13917,
@@ -219980,9 +220172,9 @@
     },
     {
       "symbol": "M:wl.d(II)V",
-      "renamedSymbol": "M:MidiPcmStream.d(II)V",
+      "renamedSymbol": "M:MidiPcmStream.allNotesOff(II)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "allNotesOff",
       "declaration": {
         "file": "wl.java",
         "start": 8686,
@@ -219991,9 +220183,9 @@
     },
     {
       "symbol": "M:wl.e(II)V",
-      "renamedSymbol": "M:MidiPcmStream.e(II)V",
+      "renamedSymbol": "M:MidiPcmStream.setMasterVolume(II)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "setMasterVolume",
       "declaration": {
         "file": "wl.java",
         "start": 54560,
@@ -259503,7 +259695,7 @@
     },
     {
       "symbol": "P:lh.c(I)V#0",
-      "renamedSymbol": "P:PcmSampleStream.c(I)V#0",
+      "renamedSymbol": "P:PcmSampleStream.fadeOutAndUnlink(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -259921,7 +260113,7 @@
     },
     {
       "symbol": "P:lh.g(I)V#0",
-      "renamedSymbol": "P:PcmSampleStream.g(I)V#0",
+      "renamedSymbol": "P:PcmSampleStream.setLoopCount(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -278918,7 +279110,7 @@
     },
     {
       "symbol": "P:vg.a(Lgg;II)V#0",
-      "renamedSymbol": "P:PcmStreamMixer.a(LPcmSample;II)V#0",
+      "renamedSymbol": "P:PcmStreamMixer.playSample(LPcmSample;II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -278929,7 +279121,7 @@
     },
     {
       "symbol": "P:vg.a(Lgg;II)V#1",
-      "renamedSymbol": "P:PcmStreamMixer.a(LPcmSample;II)V#1",
+      "renamedSymbol": "P:PcmStreamMixer.playSample(LPcmSample;II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -278940,7 +279132,7 @@
     },
     {
       "symbol": "P:vg.a(Lgg;II)V#2",
-      "renamedSymbol": "P:PcmStreamMixer.a(LPcmSample;II)V#2",
+      "renamedSymbol": "P:PcmStreamMixer.playSample(LPcmSample;II)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -278951,7 +279143,7 @@
     },
     {
       "symbol": "P:vg.a(Llj;)V#0",
-      "renamedSymbol": "P:PcmStreamMixer.a(LPcmStream;)V#0",
+      "renamedSymbol": "P:PcmStreamMixer.addChildStream(LPcmStream;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -278962,7 +279154,7 @@
     },
     {
       "symbol": "P:vg.a(Luf;Lwe;)V#0",
-      "renamedSymbol": "P:PcmStreamMixer.insertListenerByDeadline(LIntrusiveNode;Lwe;)V#0",
+      "renamedSymbol": "P:PcmStreamMixer.insertListenerByDeadline(LIntrusiveNode;LPcmMixerListener;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -278973,7 +279165,7 @@
     },
     {
       "symbol": "P:vg.a(Luf;Lwe;)V#1",
-      "renamedSymbol": "P:PcmStreamMixer.insertListenerByDeadline(LIntrusiveNode;Lwe;)V#1",
+      "renamedSymbol": "P:PcmStreamMixer.insertListenerByDeadline(LIntrusiveNode;LPcmMixerListener;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -278984,7 +279176,7 @@
     },
     {
       "symbol": "P:vg.a(Lwe;)V#0",
-      "renamedSymbol": "P:PcmStreamMixer.removeListener(Lwe;)V#0",
+      "renamedSymbol": "P:PcmStreamMixer.removeListener(LPcmMixerListener;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -280436,7 +280628,7 @@
     },
     {
       "symbol": "P:we.a(Lvg;)I#0",
-      "renamedSymbol": "P:we.onScheduledEvent(LPcmStreamMixer;)I#0",
+      "renamedSymbol": "P:PcmMixerListener.onScheduledEvent(LPcmStreamMixer;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281052,7 +281244,7 @@
     },
     {
       "symbol": "P:wl.a(BI)V#0",
-      "renamedSymbol": "P:MidiPcmStream.a(BI)V#0",
+      "renamedSymbol": "P:MidiPcmStream.resetChannel(BI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281063,7 +281255,7 @@
     },
     {
       "symbol": "P:wl.a(BI)V#1",
-      "renamedSymbol": "P:MidiPcmStream.a(BI)V#1",
+      "renamedSymbol": "P:MidiPcmStream.resetChannel(BI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -281107,7 +281299,7 @@
     },
     {
       "symbol": "P:wl.a(BLsh;)I#0",
-      "renamedSymbol": "P:MidiPcmStream.a(BLsh;)I#0",
+      "renamedSymbol": "P:MidiPcmStream.computeNoteSampleStep(BLsh;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281118,7 +281310,7 @@
     },
     {
       "symbol": "P:wl.a(BLsh;)I#1",
-      "renamedSymbol": "P:MidiPcmStream.a(BLsh;)I#1",
+      "renamedSymbol": "P:MidiPcmStream.computeNoteSampleStep(BLsh;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -281195,7 +281387,7 @@
     },
     {
       "symbol": "P:wl.a(IBII)V#0",
-      "renamedSymbol": "P:MidiPcmStream.a(IBII)V#0",
+      "renamedSymbol": "P:MidiPcmStream.noteOff(IBII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281206,7 +281398,7 @@
     },
     {
       "symbol": "P:wl.a(IBII)V#1",
-      "renamedSymbol": "P:MidiPcmStream.a(IBII)V#1",
+      "renamedSymbol": "P:MidiPcmStream.noteOff(IBII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -281217,7 +281409,7 @@
     },
     {
       "symbol": "P:wl.a(IBII)V#2",
-      "renamedSymbol": "P:MidiPcmStream.a(IBII)V#2",
+      "renamedSymbol": "P:MidiPcmStream.noteOff(IBII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -281228,7 +281420,7 @@
     },
     {
       "symbol": "P:wl.a(IBII)V#3",
-      "renamedSymbol": "P:MidiPcmStream.a(IBII)V#3",
+      "renamedSymbol": "P:MidiPcmStream.noteOff(IBII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -281239,7 +281431,7 @@
     },
     {
       "symbol": "P:wl.a(IIB)V#0",
-      "renamedSymbol": "P:MidiPcmStream.a(IIB)V#0",
+      "renamedSymbol": "P:MidiPcmStream.setProgram(IIB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281250,7 +281442,7 @@
     },
     {
       "symbol": "P:wl.a(IIB)V#1",
-      "renamedSymbol": "P:MidiPcmStream.a(IIB)V#1",
+      "renamedSymbol": "P:MidiPcmStream.setProgram(IIB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -281261,7 +281453,7 @@
     },
     {
       "symbol": "P:wl.a(IIB)V#2",
-      "renamedSymbol": "P:MidiPcmStream.a(IIB)V#2",
+      "renamedSymbol": "P:MidiPcmStream.setProgram(IIB)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -281305,7 +281497,7 @@
     },
     {
       "symbol": "P:wl.a(IIIB)V#0",
-      "renamedSymbol": "P:MidiPcmStream.a(IIIB)V#0",
+      "renamedSymbol": "P:MidiPcmStream.noteOn(IIIB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281316,7 +281508,7 @@
     },
     {
       "symbol": "P:wl.a(IIIB)V#1",
-      "renamedSymbol": "P:MidiPcmStream.a(IIIB)V#1",
+      "renamedSymbol": "P:MidiPcmStream.noteOn(IIIB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -281327,7 +281519,7 @@
     },
     {
       "symbol": "P:wl.a(IIIB)V#2",
-      "renamedSymbol": "P:MidiPcmStream.a(IIIB)V#2",
+      "renamedSymbol": "P:MidiPcmStream.noteOn(IIIB)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -281338,7 +281530,7 @@
     },
     {
       "symbol": "P:wl.a(IIIB)V#3",
-      "renamedSymbol": "P:MidiPcmStream.a(IIIB)V#3",
+      "renamedSymbol": "P:MidiPcmStream.noteOn(IIIB)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -281349,7 +281541,7 @@
     },
     {
       "symbol": "P:wl.a(IIII)V#0",
-      "renamedSymbol": "P:MidiPcmStream.a(IIII)V#0",
+      "renamedSymbol": "P:MidiPcmStream.onPolyPressure(IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281360,7 +281552,7 @@
     },
     {
       "symbol": "P:wl.a(IIII)V#1",
-      "renamedSymbol": "P:MidiPcmStream.a(IIII)V#1",
+      "renamedSymbol": "P:MidiPcmStream.onPolyPressure(IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -281371,7 +281563,7 @@
     },
     {
       "symbol": "P:wl.a(IIII)V#2",
-      "renamedSymbol": "P:MidiPcmStream.a(IIII)V#2",
+      "renamedSymbol": "P:MidiPcmStream.onPolyPressure(IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -281382,7 +281574,7 @@
     },
     {
       "symbol": "P:wl.a(IIII)V#3",
-      "renamedSymbol": "P:MidiPcmStream.a(IIII)V#3",
+      "renamedSymbol": "P:MidiPcmStream.onPolyPressure(IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -281393,7 +281585,7 @@
     },
     {
       "symbol": "P:wl.a(IIZ)V#0",
-      "renamedSymbol": "P:MidiPcmStream.a(IIZ)V#0",
+      "renamedSymbol": "P:MidiPcmStream.setPitchWheel(IIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281404,7 +281596,7 @@
     },
     {
       "symbol": "P:wl.a(IIZ)V#1",
-      "renamedSymbol": "P:MidiPcmStream.a(IIZ)V#1",
+      "renamedSymbol": "P:MidiPcmStream.setPitchWheel(IIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -281415,7 +281607,7 @@
     },
     {
       "symbol": "P:wl.a(IIZ)V#2",
-      "renamedSymbol": "P:MidiPcmStream.a(IIZ)V#2",
+      "renamedSymbol": "P:MidiPcmStream.setPitchWheel(IIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -281426,7 +281618,7 @@
     },
     {
       "symbol": "P:wl.a(IZ)V#0",
-      "renamedSymbol": "P:MidiPcmStream.a(IZ)V#0",
+      "renamedSymbol": "P:MidiPcmStream.resetChannelVoicePhases(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281437,7 +281629,7 @@
     },
     {
       "symbol": "P:wl.a(IZ)V#1",
-      "renamedSymbol": "P:MidiPcmStream.a(IZ)V#1",
+      "renamedSymbol": "P:MidiPcmStream.resetChannelVoicePhases(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -281646,7 +281838,7 @@
     },
     {
       "symbol": "P:wl.a(Lsh;B)I#0",
-      "renamedSymbol": "P:MidiPcmStream.a(Lsh;B)I#0",
+      "renamedSymbol": "P:MidiPcmStream.computeNoteVolume(Lsh;B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281657,7 +281849,7 @@
     },
     {
       "symbol": "P:wl.a(Lsh;B)I#1",
-      "renamedSymbol": "P:MidiPcmStream.a(Lsh;B)I#1",
+      "renamedSymbol": "P:MidiPcmStream.computeNoteVolume(Lsh;B)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -281756,7 +281948,7 @@
     },
     {
       "symbol": "P:wl.a(ZI)V#0",
-      "renamedSymbol": "P:MidiPcmStream.a(ZI)V#0",
+      "renamedSymbol": "P:MidiPcmStream.resetPlaybackChannels(ZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281767,7 +281959,7 @@
     },
     {
       "symbol": "P:wl.a(ZI)V#1",
-      "renamedSymbol": "P:MidiPcmStream.a(ZI)V#1",
+      "renamedSymbol": "P:MidiPcmStream.resetPlaybackChannels(ZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -281822,7 +282014,7 @@
     },
     {
       "symbol": "P:wl.a(ZLsh;)I#0",
-      "renamedSymbol": "P:MidiPcmStream.a(ZLsh;)I#0",
+      "renamedSymbol": "P:MidiPcmStream.computeNotePan(ZLsh;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281833,7 +282025,7 @@
     },
     {
       "symbol": "P:wl.a(ZLsh;)I#1",
-      "renamedSymbol": "P:MidiPcmStream.a(ZLsh;)I#1",
+      "renamedSymbol": "P:MidiPcmStream.computeNotePan(ZLsh;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -281954,7 +282146,7 @@
     },
     {
       "symbol": "P:wl.b(BI)V#0",
-      "renamedSymbol": "P:MidiPcmStream.b(BI)V#0",
+      "renamedSymbol": "P:MidiPcmStream.removeChannelVoices(BI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281965,7 +282157,7 @@
     },
     {
       "symbol": "P:wl.b(BI)V#1",
-      "renamedSymbol": "P:MidiPcmStream.b(BI)V#1",
+      "renamedSymbol": "P:MidiPcmStream.removeChannelVoices(BI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -281976,7 +282168,7 @@
     },
     {
       "symbol": "P:wl.b(II)V#0",
-      "renamedSymbol": "P:MidiPcmStream.b(II)V#0",
+      "renamedSymbol": "P:MidiPcmStream.handleMidiMessage(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281987,7 +282179,7 @@
     },
     {
       "symbol": "P:wl.b(II)V#1",
-      "renamedSymbol": "P:MidiPcmStream.b(II)V#1",
+      "renamedSymbol": "P:MidiPcmStream.handleMidiMessage(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -281998,7 +282190,7 @@
     },
     {
       "symbol": "P:wl.b(III)V#0",
-      "renamedSymbol": "P:MidiPcmStream.b(III)V#0",
+      "renamedSymbol": "P:MidiPcmStream.onChannelPressure(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -282009,7 +282201,7 @@
     },
     {
       "symbol": "P:wl.b(III)V#1",
-      "renamedSymbol": "P:MidiPcmStream.b(III)V#1",
+      "renamedSymbol": "P:MidiPcmStream.onChannelPressure(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -282020,7 +282212,7 @@
     },
     {
       "symbol": "P:wl.b(III)V#2",
-      "renamedSymbol": "P:MidiPcmStream.b(III)V#2",
+      "renamedSymbol": "P:MidiPcmStream.onChannelPressure(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -282053,7 +282245,7 @@
     },
     {
       "symbol": "P:wl.c(II)V#0",
-      "renamedSymbol": "P:MidiPcmStream.c(II)V#0",
+      "renamedSymbol": "P:MidiPcmStream.releaseUnmappedVoices(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -282064,7 +282256,7 @@
     },
     {
       "symbol": "P:wl.c(II)V#1",
-      "renamedSymbol": "P:MidiPcmStream.c(II)V#1",
+      "renamedSymbol": "P:MidiPcmStream.releaseUnmappedVoices(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -282119,7 +282311,7 @@
     },
     {
       "symbol": "P:wl.d(II)V#0",
-      "renamedSymbol": "P:MidiPcmStream.d(II)V#0",
+      "renamedSymbol": "P:MidiPcmStream.allNotesOff(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -282130,7 +282322,7 @@
     },
     {
       "symbol": "P:wl.d(II)V#1",
-      "renamedSymbol": "P:MidiPcmStream.d(II)V#1",
+      "renamedSymbol": "P:MidiPcmStream.allNotesOff(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -282141,7 +282333,7 @@
     },
     {
       "symbol": "P:wl.e(II)V#0",
-      "renamedSymbol": "P:MidiPcmStream.e(II)V#0",
+      "renamedSymbol": "P:MidiPcmStream.setMasterVolume(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -282152,7 +282344,7 @@
     },
     {
       "symbol": "P:wl.e(II)V#1",
-      "renamedSymbol": "P:MidiPcmStream.e(II)V#1",
+      "renamedSymbol": "P:MidiPcmStream.setMasterVolume(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -282167,7 +282359,7 @@
       "original": "Terraphoenix.java",
       "renamed": "Terraphoenix.java",
       "inputSha256": "349e199da98705d0f4a247977c761e72f7c25d599cfe9cae413e517590c0e5bb",
-      "outputSha256": "a49fc3592d761c7baf95db4556dfd0bd5e34a6dbe1e22185ff7e1b85f0227813",
+      "outputSha256": "8b126a6160dd6dc409a25bb9492db0c6971dd0b8e30f55568030863ac4ba47e5",
       "edits": [
         {
           "start": 78,
@@ -284013,6 +284205,13 @@
           "renamed": "AccountCreationResultPanel"
         },
         {
+          "start": 52120,
+          "end": 52121,
+          "symbol": "M:wl.e(II)V",
+          "original": "e",
+          "renamed": "setMasterVolume"
+        },
+        {
           "start": 52126,
           "end": 52128,
           "symbol": "C:tj",
@@ -284907,6 +285106,13 @@
           "symbol": "C:gb",
           "original": "gb",
           "renamed": "WidgetContainer"
+        },
+        {
+          "start": 78968,
+          "end": 78969,
+          "symbol": "M:vg.a(Llj;)V",
+          "original": "a",
+          "renamed": "addChildStream"
         },
         {
           "start": 79251,
@@ -294150,6 +294356,13 @@
           "symbol": "C:tj",
           "original": "tj",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 294813,
+          "end": 294814,
+          "symbol": "M:wl.e(II)V",
+          "original": "e",
+          "renamed": "setMasterVolume"
         },
         {
           "start": 294815,
@@ -385213,7 +385426,7 @@
       "original": "lh.java",
       "renamed": "PcmSampleStream.java",
       "inputSha256": "89060f048f07f66a27e43fbffcb58da0f30def43b7febedee2b180469a1fa9fb",
-      "outputSha256": "1bcb684a1c4709948ee651fcd7d9ddec7c70342cbce6fae58a629353fa8acbaf",
+      "outputSha256": "46f39d6f0b611cf62774dc5dda912701b98f9d94ebe49c0af993e2aabda52980",
       "edits": [
         {
           "start": 50,
@@ -385706,6 +385919,13 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 24684,
+          "end": 24685,
+          "symbol": "M:lh.e()Z",
+          "original": "e",
+          "renamed": "finishOrContinueVolumeRamp"
+        },
+        {
           "start": 24825,
           "end": 24827,
           "symbol": "C:lh",
@@ -385823,6 +386043,13 @@
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "PcmPlayerService"
+        },
+        {
+          "start": 31566,
+          "end": 31567,
+          "symbol": "M:lh.g(I)V",
+          "original": "g",
+          "renamed": "setLoopCount"
         },
         {
           "start": 31649,
@@ -386147,6 +386374,13 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 46776,
+          "end": 46777,
+          "symbol": "M:lh.e()Z",
+          "original": "e",
+          "renamed": "finishOrContinueVolumeRamp"
+        },
+        {
           "start": 46835,
           "end": 46836,
           "symbol": "M:lh.j()V",
@@ -386250,6 +386484,13 @@
           "symbol": "M:lh.k()Z",
           "original": "k",
           "renamed": "hasRemainingRampFrames"
+        },
+        {
+          "start": 51161,
+          "end": 51162,
+          "symbol": "M:lh.c(I)V",
+          "original": "c",
+          "renamed": "fadeOutAndUnlink"
         },
         {
           "start": 51268,
@@ -386516,6 +386757,13 @@
           "symbol": "C:gg",
           "original": "gg",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 62716,
+          "end": 62717,
+          "symbol": "M:lh.e()Z",
+          "original": "e",
+          "renamed": "finishOrContinueVolumeRamp"
         },
         {
           "start": 62788,
@@ -397192,7 +397440,7 @@
       "original": "qd.java",
       "renamed": "qd.java",
       "inputSha256": "5be5d0d594cd34949afb425ae87468988a082b153e764df48f2858182b43e954",
-      "outputSha256": "a3fddc0f23883a400262485a81aaaed06c927962ab9b44927bd345e8fb058ea6",
+      "outputSha256": "5c89981c54d511ef3a93833a6ad5f325a111e1825941b824b56b54e393d7897e",
       "edits": [
         {
           "start": 61,
@@ -397347,6 +397595,13 @@
           "symbol": "C:gb",
           "original": "gb",
           "renamed": "WidgetContainer"
+        },
+        {
+          "start": 1777,
+          "end": 1778,
+          "symbol": "M:vg.a(Lgg;II)V",
+          "original": "a",
+          "renamed": "playSample"
         },
         {
           "start": 1779,
@@ -397809,6 +398064,13 @@
           "symbol": "C:gb",
           "original": "gb",
           "renamed": "WidgetContainer"
+        },
+        {
+          "start": 27192,
+          "end": 27193,
+          "symbol": "M:vg.a(Lgg;II)V",
+          "original": "a",
+          "renamed": "playSample"
         },
         {
           "start": 27194,
@@ -418169,7 +418431,7 @@
       "original": "vd.java",
       "renamed": "MusicPatchPcmStream.java",
       "inputSha256": "5383f1fb712b985ab066e925077815a424539b5100dc5ea3bcd8265ac28dc593",
-      "outputSha256": "4082497624a656bfb247580e4cf8c4c527f10f7c050f5c3056678671483f78be",
+      "outputSha256": "0a49cec811c00c5d9e0ab8ed6b51a178901428410355252526ac7dd8ec2e9925",
       "edits": [
         {
           "start": 50,
@@ -418543,6 +418805,20 @@
           "renamed": "getPan"
         },
         {
+          "start": 6382,
+          "end": 6383,
+          "symbol": "M:lh.g(I)V",
+          "original": "g",
+          "renamed": "setLoopCount"
+        },
+        {
+          "start": 6425,
+          "end": 6426,
+          "symbol": "M:lh.c(I)V",
+          "original": "c",
+          "renamed": "fadeOutAndUnlink"
+        },
+        {
           "start": 6454,
           "end": 6455,
           "symbol": "M:lh.a([III)V",
@@ -418555,6 +418831,13 @@
           "symbol": "M:lh.k()Z",
           "original": "k",
           "renamed": "hasRemainingRampFrames"
+        },
+        {
+          "start": 6591,
+          "end": 6592,
+          "symbol": "M:vg.a(Llj;)V",
+          "original": "a",
+          "renamed": "addChildStream"
         },
         {
           "start": 6710,
@@ -418674,6 +418957,13 @@
           "symbol": "C:wl",
           "original": "wl",
           "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 9207,
+          "end": 9208,
+          "symbol": "M:lh.g(I)V",
+          "original": "g",
+          "renamed": "setLoopCount"
         },
         {
           "start": 9331,
@@ -419117,7 +419407,7 @@
       "original": "vg.java",
       "renamed": "PcmStreamMixer.java",
       "inputSha256": "2d7c9d0e1bc8edda21c55f18773cee9708774904a91668b8a8e9ce856efdcc13",
-      "outputSha256": "4fdc72526392507334abdde8043953a74d80e8ae8bbeb6d1da97d82cc5fd7d95",
+      "outputSha256": "621e0a840755a803d6c212ec24ac59b79762730697ac4bcbc35b53f76f4f0f1a",
       "edits": [
         {
           "start": 50,
@@ -419183,6 +419473,13 @@
           "renamed": "skipFrames"
         },
         {
+          "start": 316,
+          "end": 318,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "PcmMixerListener"
+        },
+        {
           "start": 498,
           "end": 499,
           "symbol": "M:vg.c(I)V",
@@ -419209,6 +419506,13 @@
           "symbol": "M:vg.e()V",
           "original": "e",
           "renamed": "normalizeListenerDeadlines"
+        },
+        {
+          "start": 893,
+          "end": 895,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "PcmMixerListener"
         },
         {
           "start": 911,
@@ -419260,6 +419564,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 1312,
+          "end": 1314,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "PcmMixerListener"
+        },
+        {
           "start": 1385,
           "end": 1392,
           "symbol": "F:jj.field_a:Luf;",
@@ -419272,6 +419583,13 @@
           "symbol": "C:ha",
           "original": "ha",
           "renamed": "ConfirmedEmailAvailabilityValidator"
+        },
+        {
+          "start": 1464,
+          "end": 1466,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "PcmMixerListener"
         },
         {
           "start": 1482,
@@ -419288,6 +419606,13 @@
           "renamed": "previous"
         },
         {
+          "start": 1557,
+          "end": 1559,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "PcmMixerListener"
+        },
+        {
           "start": 1628,
           "end": 1635,
           "symbol": "F:uf.field_d:Luf;",
@@ -419300,6 +419625,13 @@
           "symbol": "C:ha",
           "original": "ha",
           "renamed": "ConfirmedEmailAvailabilityValidator"
+        },
+        {
+          "start": 1758,
+          "end": 1760,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "PcmMixerListener"
         },
         {
           "start": 1776,
@@ -419323,11 +419655,32 @@
           "renamed": "normalizeListenerDeadlines"
         },
         {
+          "start": 1863,
+          "end": 1865,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "PcmMixerListener"
+        },
+        {
+          "start": 1929,
+          "end": 1931,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "PcmMixerListener"
+        },
+        {
           "start": 1947,
           "end": 1948,
           "symbol": "M:jj.d(I)Luf;",
           "original": "d",
           "renamed": "beginBackward"
+        },
+        {
+          "start": 2066,
+          "end": 2068,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "PcmMixerListener"
         },
         {
           "start": 2084,
@@ -419344,11 +419697,25 @@
           "renamed": "removeListener"
         },
         {
+          "start": 2237,
+          "end": 2239,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "PcmMixerListener"
+        },
+        {
           "start": 2265,
           "end": 2266,
           "symbol": "M:uf.b(B)V",
           "original": "b",
           "renamed": "unlink"
+        },
+        {
+          "start": 2294,
+          "end": 2295,
+          "symbol": "M:we.a()V",
+          "original": "a",
+          "renamed": "onRemovedFromMixer"
         },
         {
           "start": 2307,
@@ -419377,6 +419744,20 @@
           "symbol": "F:jj.field_a:Luf;",
           "original": "field_a",
           "renamed": "sentinel"
+        },
+        {
+          "start": 2464,
+          "end": 2466,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "PcmMixerListener"
+        },
+        {
+          "start": 2530,
+          "end": 2531,
+          "symbol": "M:vg.a(Llj;)V",
+          "original": "a",
+          "renamed": "addChildStream"
         },
         {
           "start": 2532,
@@ -419456,11 +419837,25 @@
           "renamed": "nextBackward"
         },
         {
+          "start": 2916,
+          "end": 2917,
+          "symbol": "M:vg.a(Lgg;II)V",
+          "original": "a",
+          "renamed": "playSample"
+        },
+        {
           "start": 2918,
           "end": 2920,
           "symbol": "C:gg",
           "original": "gg",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 2968,
+          "end": 2969,
+          "symbol": "M:vg.a(Llj;)V",
+          "original": "a",
+          "renamed": "addChildStream"
         },
         {
           "start": 2970,
@@ -419482,6 +419877,13 @@
           "symbol": "M:vg.a([III)V",
           "original": "a",
           "renamed": "mixInto"
+        },
+        {
+          "start": 3108,
+          "end": 3110,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "PcmMixerListener"
         },
         {
           "start": 3290,
@@ -419510,6 +419912,13 @@
           "symbol": "M:vg.e()V",
           "original": "e",
           "renamed": "normalizeListenerDeadlines"
+        },
+        {
+          "start": 3767,
+          "end": 3769,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "PcmMixerListener"
         },
         {
           "start": 3785,
@@ -423312,10 +423721,17 @@
     },
     {
       "original": "we.java",
-      "renamed": "we.java",
+      "renamed": "PcmMixerListener.java",
       "inputSha256": "599092278b27b507c6da926c7b9d601ba4f79928ddc5f4e031f34ade2746271a",
-      "outputSha256": "2bf3f234fb5ef4e33c2986b357b84bbe0d8138de5cb4a792b0c46df0f994ccb0",
+      "outputSha256": "2b63bc8da322495958cb8f38e707261194bad1bdebbabb44bf6706632df2a0dc",
       "edits": [
+        {
+          "start": 53,
+          "end": 55,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "PcmMixerListener"
+        },
         {
           "start": 64,
           "end": 66,
@@ -423336,6 +423752,20 @@
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "PcmStreamMixer"
+        },
+        {
+          "start": 137,
+          "end": 138,
+          "symbol": "M:we.a()V",
+          "original": "a",
+          "renamed": "onRemovedFromMixer"
+        },
+        {
+          "start": 155,
+          "end": 157,
+          "symbol": "M:we.<init>()V",
+          "original": "we",
+          "renamed": "PcmMixerListener"
         }
       ]
     },
@@ -424636,7 +425066,7 @@
       "original": "wl.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "e198a9a7732108190d50347b514e40866fe4db367b6c8549d8dcb9b2b0c47ad6",
-      "outputSha256": "658ff5f7814af5d510c49d538696ae7e9c4228499259ad0c4608884d1934653a",
+      "outputSha256": "5ca79b5ec705f6b83c6e3e1eeadd03eb4c23a75eba60160e8893bc4934a477f7",
       "edits": [
         {
           "start": 50,
@@ -424672,6 +425102,118 @@
           "symbol": "M:wl.c()Llj;",
           "original": "c",
           "renamed": "firstChildStream"
+        },
+        {
+          "start": 1258,
+          "end": 1259,
+          "symbol": "M:wl.b(II)V",
+          "original": "b",
+          "renamed": "handleMidiMessage"
+        },
+        {
+          "start": 2031,
+          "end": 2032,
+          "symbol": "M:wl.a(BLsh;)I",
+          "original": "a",
+          "renamed": "computeNoteSampleStep"
+        },
+        {
+          "start": 2240,
+          "end": 2241,
+          "symbol": "M:wl.a(IBII)V",
+          "original": "a",
+          "renamed": "noteOff"
+        },
+        {
+          "start": 2510,
+          "end": 2511,
+          "symbol": "M:wl.a(IIIB)V",
+          "original": "a",
+          "renamed": "noteOn"
+        },
+        {
+          "start": 2605,
+          "end": 2606,
+          "symbol": "M:wl.a(IBII)V",
+          "original": "a",
+          "renamed": "noteOff"
+        },
+        {
+          "start": 2876,
+          "end": 2877,
+          "symbol": "M:wl.a(IIII)V",
+          "original": "a",
+          "renamed": "onPolyPressure"
+        },
+        {
+          "start": 3121,
+          "end": 3122,
+          "symbol": "M:wl.a(IIB)V",
+          "original": "a",
+          "renamed": "setProgram"
+        },
+        {
+          "start": 3382,
+          "end": 3383,
+          "symbol": "M:wl.b(III)V",
+          "original": "b",
+          "renamed": "onChannelPressure"
+        },
+        {
+          "start": 3650,
+          "end": 3651,
+          "symbol": "M:wl.a(IIZ)V",
+          "original": "a",
+          "renamed": "setPitchWheel"
+        },
+        {
+          "start": 3846,
+          "end": 3847,
+          "symbol": "M:wl.a(ZI)V",
+          "original": "a",
+          "renamed": "resetPlaybackChannels"
+        },
+        {
+          "start": 6254,
+          "end": 6255,
+          "symbol": "M:wl.c(II)V",
+          "original": "c",
+          "renamed": "releaseUnmappedVoices"
+        },
+        {
+          "start": 7035,
+          "end": 7036,
+          "symbol": "M:wl.b(BI)V",
+          "original": "b",
+          "renamed": "removeChannelVoices"
+        },
+        {
+          "start": 7127,
+          "end": 7128,
+          "symbol": "M:wl.a(BI)V",
+          "original": "a",
+          "renamed": "resetChannel"
+        },
+        {
+          "start": 7218,
+          "end": 7219,
+          "symbol": "M:wl.d(II)V",
+          "original": "d",
+          "renamed": "allNotesOff"
+        },
+        {
+          "start": 8132,
+          "end": 8133,
+          "symbol": "M:wl.a(IZ)V",
+          "original": "a",
+          "renamed": "resetChannelVoicePhases"
+        },
+        {
+          "start": 8686,
+          "end": 8687,
+          "symbol": "M:wl.d(II)V",
+          "original": "d",
+          "renamed": "allNotesOff"
         },
         {
           "start": 8882,
@@ -424786,11 +425328,32 @@
           "renamed": "advanceMidiEvents"
         },
         {
+          "start": 12519,
+          "end": 12520,
+          "symbol": "M:wl.b(II)V",
+          "original": "b",
+          "renamed": "handleMidiMessage"
+        },
+        {
           "start": 12886,
           "end": 12887,
           "symbol": "M:wl.a(Z)V",
           "original": "a",
           "renamed": "advanceMidiEvents"
+        },
+        {
+          "start": 13080,
+          "end": 13081,
+          "symbol": "M:wl.a(ZI)V",
+          "original": "a",
+          "renamed": "resetPlaybackChannels"
+        },
+        {
+          "start": 13375,
+          "end": 13376,
+          "symbol": "M:wl.a(IZ)V",
+          "original": "a",
+          "renamed": "resetChannelVoicePhases"
         },
         {
           "start": 13613,
@@ -424812,6 +425375,13 @@
           "symbol": "M:wl.d()I",
           "original": "d",
           "renamed": "getSchedulingCost"
+        },
+        {
+          "start": 13917,
+          "end": 13918,
+          "symbol": "M:wl.c(II)V",
+          "original": "c",
+          "renamed": "releaseUnmappedVoices"
         },
         {
           "start": 14140,
@@ -424898,11 +425468,39 @@
           "renamed": "wrapException"
         },
         {
+          "start": 16711,
+          "end": 16712,
+          "symbol": "M:wl.a(IIII)V",
+          "original": "a",
+          "renamed": "onPolyPressure"
+        },
+        {
+          "start": 16810,
+          "end": 16811,
+          "symbol": "M:wl.a(IIB)V",
+          "original": "a",
+          "renamed": "setProgram"
+        },
+        {
+          "start": 16875,
+          "end": 16876,
+          "symbol": "M:wl.b(BI)V",
+          "original": "b",
+          "renamed": "removeChannelVoices"
+        },
+        {
           "start": 16990,
           "end": 16991,
           "symbol": "M:jj.d(I)Luf;",
           "original": "d",
           "renamed": "beginBackward"
+        },
+        {
+          "start": 17164,
+          "end": 17165,
+          "symbol": "M:lh.c(I)V",
+          "original": "c",
+          "renamed": "fadeOutAndUnlink"
         },
         {
           "start": 17166,
@@ -424919,6 +425517,13 @@
           "renamed": "hasRemainingRampFrames"
         },
         {
+          "start": 17260,
+          "end": 17261,
+          "symbol": "M:vg.a(Llj;)V",
+          "original": "a",
+          "renamed": "addChildStream"
+        },
+        {
           "start": 17472,
           "end": 17473,
           "symbol": "M:uf.b(B)V",
@@ -424933,11 +425538,25 @@
           "renamed": "nextBackward"
         },
         {
+          "start": 17677,
+          "end": 17678,
+          "symbol": "M:wl.a(IIIB)V",
+          "original": "a",
+          "renamed": "noteOn"
+        },
+        {
           "start": 17832,
           "end": 17834,
           "symbol": "C:gg",
           "original": "gg",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 18008,
+          "end": 18009,
+          "symbol": "M:wl.a(IBII)V",
+          "original": "a",
+          "renamed": "noteOff"
         },
         {
           "start": 18134,
@@ -424968,6 +425587,27 @@
           "renamed": "createForSampleStep"
         },
         {
+          "start": 19752,
+          "end": 19753,
+          "symbol": "M:wl.a(BLsh;)I",
+          "original": "a",
+          "renamed": "computeNoteSampleStep"
+        },
+        {
+          "start": 19777,
+          "end": 19778,
+          "symbol": "M:wl.a(Lsh;B)I",
+          "original": "a",
+          "renamed": "computeNoteVolume"
+        },
+        {
+          "start": 19803,
+          "end": 19804,
+          "symbol": "M:wl.a(ZLsh;)I",
+          "original": "a",
+          "renamed": "computeNotePan"
+        },
+        {
           "start": 19861,
           "end": 19863,
           "symbol": "C:lh",
@@ -424982,11 +425622,39 @@
           "renamed": "createForSampleStep"
         },
         {
+          "start": 19877,
+          "end": 19878,
+          "symbol": "M:wl.a(BLsh;)I",
+          "original": "a",
+          "renamed": "computeNoteSampleStep"
+        },
+        {
+          "start": 19905,
+          "end": 19906,
+          "symbol": "M:wl.a(ZLsh;)I",
+          "original": "a",
+          "renamed": "computeNotePan"
+        },
+        {
+          "start": 20094,
+          "end": 20095,
+          "symbol": "M:lh.g(I)V",
+          "original": "g",
+          "renamed": "setLoopCount"
+        },
+        {
           "start": 20448,
           "end": 20449,
           "symbol": "M:jj.a(Luf;I)V",
           "original": "a",
           "renamed": "addFirst"
+        },
+        {
+          "start": 20728,
+          "end": 20729,
+          "symbol": "M:wl.a(IIZ)V",
+          "original": "a",
+          "renamed": "setPitchWheel"
         },
         {
           "start": 20984,
@@ -425045,11 +425713,25 @@
           "renamed": "skipFrames"
         },
         {
+          "start": 22013,
+          "end": 22014,
+          "symbol": "M:wl.a(IIB)V",
+          "original": "a",
+          "renamed": "setProgram"
+        },
+        {
           "start": 22655,
           "end": 22656,
           "symbol": "M:wl.a(Z)V",
           "original": "a",
           "renamed": "advanceMidiEvents"
+        },
+        {
+          "start": 22704,
+          "end": 22705,
+          "symbol": "M:wl.a(ZLsh;)I",
+          "original": "a",
+          "renamed": "computeNotePan"
         },
         {
           "start": 23152,
@@ -425108,11 +425790,39 @@
           "renamed": "setSampleStepMagnitude"
         },
         {
+          "start": 28503,
+          "end": 28504,
+          "symbol": "M:wl.a(BLsh;)I",
+          "original": "a",
+          "renamed": "computeNoteSampleStep"
+        },
+        {
           "start": 30815,
           "end": 30816,
           "symbol": "M:lh.a(III)V",
           "original": "a",
           "renamed": "rampVolumeAndPan"
+        },
+        {
+          "start": 30838,
+          "end": 30839,
+          "symbol": "M:wl.a(Lsh;B)I",
+          "original": "a",
+          "renamed": "computeNoteVolume"
+        },
+        {
+          "start": 30866,
+          "end": 30867,
+          "symbol": "M:wl.a(ZLsh;)I",
+          "original": "a",
+          "renamed": "computeNotePan"
+        },
+        {
+          "start": 30947,
+          "end": 30948,
+          "symbol": "M:lh.c(I)V",
+          "original": "c",
+          "renamed": "fadeOutAndUnlink"
         },
         {
           "start": 31025,
@@ -425134,6 +425844,13 @@
           "symbol": "M:lh.k()Z",
           "original": "k",
           "renamed": "hasRemainingRampFrames"
+        },
+        {
+          "start": 31190,
+          "end": 31191,
+          "symbol": "M:vg.a(Llj;)V",
+          "original": "a",
+          "renamed": "addChildStream"
         },
         {
           "start": 31310,
@@ -425192,11 +425909,25 @@
           "renamed": "wrapException"
         },
         {
+          "start": 34442,
+          "end": 34443,
+          "symbol": "M:wl.b(III)V",
+          "original": "b",
+          "renamed": "onChannelPressure"
+        },
+        {
           "start": 35332,
           "end": 35333,
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 35513,
+          "end": 35514,
+          "symbol": "M:wl.a(Lsh;B)I",
+          "original": "a",
+          "renamed": "computeNoteVolume"
         },
         {
           "start": 38520,
@@ -425211,6 +425942,62 @@
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 44890,
+          "end": 44891,
+          "symbol": "M:wl.a(ZI)V",
+          "original": "a",
+          "renamed": "resetPlaybackChannels"
+        },
+        {
+          "start": 45049,
+          "end": 45050,
+          "symbol": "M:wl.b(BI)V",
+          "original": "b",
+          "renamed": "removeChannelVoices"
+        },
+        {
+          "start": 45101,
+          "end": 45102,
+          "symbol": "M:wl.d(II)V",
+          "original": "d",
+          "renamed": "allNotesOff"
+        },
+        {
+          "start": 45147,
+          "end": 45148,
+          "symbol": "M:wl.a(BI)V",
+          "original": "a",
+          "renamed": "resetChannel"
+        },
+        {
+          "start": 45545,
+          "end": 45546,
+          "symbol": "M:wl.a(BI)V",
+          "original": "a",
+          "renamed": "resetChannel"
+        },
+        {
+          "start": 45802,
+          "end": 45803,
+          "symbol": "M:wl.a(BI)V",
+          "original": "a",
+          "renamed": "resetChannel"
+        },
+        {
+          "start": 46102,
+          "end": 46103,
+          "symbol": "M:wl.c(II)V",
+          "original": "c",
+          "renamed": "releaseUnmappedVoices"
+        },
+        {
+          "start": 46133,
+          "end": 46134,
+          "symbol": "M:wl.a(IZ)V",
+          "original": "a",
+          "renamed": "resetChannelVoicePhases"
         },
         {
           "start": 46380,
@@ -425232,6 +426019,20 @@
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 47853,
+          "end": 47854,
+          "symbol": "M:wl.a(ZI)V",
+          "original": "a",
+          "renamed": "resetPlaybackChannels"
+        },
+        {
+          "start": 47968,
+          "end": 47969,
+          "symbol": "M:wl.a(BLsh;)I",
+          "original": "a",
+          "renamed": "computeNoteSampleStep"
         },
         {
           "start": 48456,
@@ -425276,11 +426077,25 @@
           "renamed": "wrapException"
         },
         {
+          "start": 53332,
+          "end": 53333,
+          "symbol": "M:wl.a(IIB)V",
+          "original": "a",
+          "renamed": "setProgram"
+        },
+        {
           "start": 53559,
           "end": 53560,
           "symbol": "M:fk.e()Z",
           "original": "e",
           "renamed": "hasMidiData"
+        },
+        {
+          "start": 53594,
+          "end": 53595,
+          "symbol": "M:wl.a(IBII)V",
+          "original": "a",
+          "renamed": "noteOff"
         },
         {
           "start": 54043,
@@ -425297,6 +426112,34 @@
           "renamed": "nextBackward"
         },
         {
+          "start": 54380,
+          "end": 54381,
+          "symbol": "M:wl.a(IIZ)V",
+          "original": "a",
+          "renamed": "setPitchWheel"
+        },
+        {
+          "start": 54462,
+          "end": 54463,
+          "symbol": "M:wl.b(II)V",
+          "original": "b",
+          "renamed": "handleMidiMessage"
+        },
+        {
+          "start": 54560,
+          "end": 54561,
+          "symbol": "M:wl.e(II)V",
+          "original": "e",
+          "renamed": "setMasterVolume"
+        },
+        {
+          "start": 54832,
+          "end": 54833,
+          "symbol": "M:wl.c(II)V",
+          "original": "c",
+          "renamed": "releaseUnmappedVoices"
+        },
+        {
           "start": 54872,
           "end": 54874,
           "symbol": "M:wl.<init>()V",
@@ -425309,6 +426152,13 @@
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "MusicPatchPcmStream"
+        },
+        {
+          "start": 55745,
+          "end": 55746,
+          "symbol": "M:wl.a(ZI)V",
+          "original": "a",
+          "renamed": "resetPlaybackChannels"
         }
       ]
     }
@@ -425321,10 +426171,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/terraphoenix"
     },
-    "rulesSha256": "72816ce47545b50344dbd215cf47fb70fcdeae6ef25a85970115a496111c0bab",
+    "rulesSha256": "d44b7b87d5d2f45d063575d49a3b2d4dae654fd6dbb68eaedfa0323e09b93e5c",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c87cb76980b5660673683e3e6e734c7a7bd5e4225fdcd94f7681879dc46c9d00",
-    "outputTreeSha256": "e8ce5e0c273b29d167980e7df94528bfbc9e6f45d712d39a52b127364634070a",
+    "outputTreeSha256": "459c247a0f5017fa557a27240742e9f695f0fc1200e231e7b992cfff13800c45",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

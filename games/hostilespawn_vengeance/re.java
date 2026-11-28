@@ -2345,7 +2345,7 @@ final class re {
               }
               if (stackIn_25_0 >= stackIn_25_1 &&
                 var3 != MatchingFieldValidator.field_s) {
-                eh.field_c.a(NetworkArchiveRequest.field_A[3], 100, uh.field_i);
+                eh.field_c.playSample(NetworkArchiveRequest.field_A[3], 100, uh.field_i);
               }
               if (var9 == 0) {
                 decompiledFrameCompleted0 = false;
@@ -2421,7 +2421,7 @@ final class re {
               if (((stackIn_64_0 != stackIn_64_1 ||
                 bm.field_c != var4Lifetime1)) && (!(rl.field_c < 0))) {
                 this.i(104);
-                eh.field_c.a(NetworkArchiveRequest.field_A[4], 100, uh.field_i);
+                eh.field_c.playSample(NetworkArchiveRequest.field_A[4], 100, uh.field_i);
               }
               break;
             }
@@ -3594,7 +3594,7 @@ final class re {
         }
         if (stackIn_310_0 != stackIn_310_1 &&
           0 <= this.field_t) {
-          eh.field_c.a(NetworkArchiveRequest.field_A[3], 100, uh.field_i);
+          eh.field_c.playSample(NetworkArchiveRequest.field_A[3], 100, uh.field_i);
         }
         var8 = 35 % ((param2 - 3) / 48);
         SoftwareRasterizer.resetClip();
@@ -4224,7 +4224,7 @@ final class re {
         if (stackIn_24_0 == pf.field_o) {
           if (this.field_x >= 0 ||
             0 <= this.field_J) {
-            eh.field_c.a(NetworkArchiveRequest.field_A[4], 100, uh.field_i);
+            eh.field_c.playSample(NetworkArchiveRequest.field_A[4], 100, uh.field_i);
           }
           if (~this.field_J != ~this.field_x) {
             this.field_x = this.field_J;
@@ -4237,7 +4237,7 @@ final class re {
         }
         if (((decompiledFrameRemainder1) && (decompiledFrameRemainder0) && (this.field_J >= 0)) &&
           (decompiledFrameRemainder1 = (var3 != this.field_J))) {
-          eh.field_c.a(NetworkArchiveRequest.field_A[3], 100, uh.field_i);
+          eh.field_c.playSample(NetworkArchiveRequest.field_A[3], 100, uh.field_i);
         }
 
     }
@@ -4265,7 +4265,7 @@ final class re {
         var5 = this.field_t;
         if (this.field_t != var5 &&
           this.field_t >= 0) {
-          eh.field_c.a(NetworkArchiveRequest.field_A[3], 100, uh.field_i);
+          eh.field_c.playSample(NetworkArchiveRequest.field_A[3], 100, uh.field_i);
         }
         if (this.field_d == param0) {
           boolean decompiledFrameRemainder10 = true;
@@ -4584,15 +4584,15 @@ final class re {
           }
           f.a((byte) 119);
           if (null != ec.field_b) {
-            eh.field_c.a(ec.field_b);
+            eh.field_c.removeChildStream(ec.field_b);
             ec.field_b = null;
           }
           if (null != q.field_i) {
-            eh.field_c.a(q.field_i);
+            eh.field_c.removeChildStream(q.field_i);
             q.field_i = null;
           }
           if (null != e.field_l) {
-            eh.field_c.a(e.field_l);
+            eh.field_c.removeChildStream(e.field_l);
             e.field_l = null;
           }
         }
@@ -4761,7 +4761,7 @@ final class re {
           this.field_f > -1 &&
           this.field_u) {
           if (uj.field_l == 1) {
-            eh.field_c.a(NetworkArchiveRequest.field_A[4], 100, uh.field_i);
+            eh.field_c.playSample(NetworkArchiveRequest.field_A[4], 100, uh.field_i);
           }
           this.a((byte) 111, true);
           if (var9 == 0) {

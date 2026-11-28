@@ -23,7 +23,7 @@ final class ic {
           }
           var2 = new od(param0, param0);
           lb.field_f.addLast(var2, param1 ^ -112);
-          of.field_a.a(param0);
+          of.field_a.addChildStream(param0);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

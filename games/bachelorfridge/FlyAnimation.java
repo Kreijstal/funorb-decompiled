@@ -38,7 +38,7 @@ final class FlyAnimation extends EventAnimation {
         }
         if (null == this.field_y) {
           var5 = PcmSampleStream.createWithVolume(rt.field_a[20], 256, 192);
-          var5.d(-1);
+          var5.setLoopCount(-1);
           this.field_y = tw.a(var5, (byte) -36);
         }
         int fieldTemp$0 = this.field_F + 1;

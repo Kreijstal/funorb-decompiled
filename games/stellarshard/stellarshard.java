@@ -122,7 +122,7 @@ public final class stellarshard extends rb implements cf {
           nc.field_H = 0;
           var2_int = -73 % ((param0 - 31) / 34);
           if (MouseWheelInput.field_e) {
-            ll.field_c.a(sb.field_e[19], 100, pk.field_h * 2);
+            ll.field_c.playSample(sb.field_e[19], 100, pk.field_h * 2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -141,7 +141,7 @@ public final class stellarshard extends rb implements cf {
             0.004 > Math.random()) {
             var2_int = (int)(9.0 * Math.random()) + 42;
             if (MouseWheelInput.field_e) {
-              ll.field_c.a(sb.field_e[var2_int], 50 + (int)(Math.random() * 50.0), 2 * pk.field_h);
+              ll.field_c.playSample(sb.field_e[var2_int], 50 + (int)(Math.random() * 50.0), 2 * pk.field_h);
             }
           }
           if (param0 != 50) {
@@ -925,7 +925,7 @@ public final class stellarshard extends rb implements cf {
             if (null != gj.field_r &&
               og.field_a <= 0) {
               og.field_a = 25;
-              gj.field_r.b(25, 0);
+              gj.field_r.rampScaledVolume(25, 0);
             }
             if (ProxyAuthenticationRequiredException.field_c == 8) {
               var2_int = qc.updateMembershipSlides((byte) -115, true);
@@ -1204,7 +1204,7 @@ public final class stellarshard extends rb implements cf {
               wh.field_c = 1;
               AccountCreationResultPanel.field_pb = 0;
               if (MouseWheelInput.field_e) {
-                ll.field_c.a(sb.field_e[36], 100, pk.field_h * 2);
+                ll.field_c.playSample(sb.field_e[36], 100, pk.field_h * 2);
               }
             }
           }
@@ -1227,7 +1227,7 @@ public final class stellarshard extends rb implements cf {
             if (1 == AccountCreationResultPanel.field_pb &&
               MouseWheelInput.field_e &&
               !DualLinkDequeIterator.field_i) {
-              ll.field_c.a(sb.field_e[37], 100, pk.field_h * 2);
+              ll.field_c.playSample(sb.field_e[37], 100, pk.field_h * 2);
             }
             if (AccountCreationResultPanel.field_pb > 250) {
               AccountCreationResultPanel.field_pb = 0;
@@ -1317,7 +1317,7 @@ public final class stellarshard extends rb implements cf {
               dupTemp$4.velocityX = dupTemp$4.velocityX + 0.05 * Math.sin(2.0 * (3.141592653589793 * (double)a.entities[0].heading) / 256.0);
               if (MouseWheelInput.field_e &&
                 og.field_a <= 0) {
-                ll.field_c.a(sb.field_e[0], 100, pk.field_h / 4);
+                ll.field_c.playSample(sb.field_e[0], 100, pk.field_h / 4);
                 og.field_a = 5;
               }
               var2_int = 3;
@@ -1392,7 +1392,7 @@ public final class stellarshard extends rb implements cf {
                 dupTemp$8.velocityX = dupTemp$8.velocityX - 0.1 * Math.sin((double)a.entities[0].heading * 3.141592653589793 * 2.0 / 256.0);
                 if (MouseWheelInput.field_e &&
                   og.field_a <= 0) {
-                  ll.field_c.a(sb.field_e[35], 100, pk.field_h / 2);
+                  ll.field_c.playSample(sb.field_e[35], 100, pk.field_h / 2);
                   og.field_a = 7;
                 }
               }
@@ -1481,7 +1481,7 @@ public final class stellarshard extends rb implements cf {
               if ((decompiledFrameRemainder16) &&
                 (decompiledFrameRemainder16 = !(0 > og.field_a))) {
                 og.field_a = -1;
-                gj.field_r.b(25, 0);
+                gj.field_r.rampScaledVolume(25, 0);
                 decompiledFrameRemainder16 = (var15 != 0);
               }
             }
@@ -1496,11 +1496,11 @@ public final class stellarshard extends rb implements cf {
                   } else {
                     stackIn_485_2 = 0;
                   }
-                  ((PcmSampleStream) (Object) stackIn_484_0).b(stackIn_484_1, stackIn_485_2);
+                  ((PcmSampleStream) (Object) stackIn_484_0).rampScaledVolume(stackIn_484_1, stackIn_485_2);
                   if (var15 != 0) {
-                    gj.field_r = PcmSampleStream.a(sb.field_e[0], 100, 0);
-                    gj.field_r.e(-1);
-                    ll.field_c.a(gj.field_r);
+                    gj.field_r = PcmSampleStream.createForPlaybackRate(sb.field_e[0], 100, 0);
+                    gj.field_r.setLoopCount(-1);
+                    ll.field_c.addChildStream(gj.field_r);
                     stackIn_491_0 = gj.field_r;
                     stackIn_491_1 = 10;
                     if (MouseWheelInput.field_e) {
@@ -1508,13 +1508,13 @@ public final class stellarshard extends rb implements cf {
                     } else {
                       stackIn_492_2 = 0;
                     }
-                    ((PcmSampleStream) (Object) stackIn_491_0).b(stackIn_491_1, stackIn_492_2);
+                    ((PcmSampleStream) (Object) stackIn_491_0).rampScaledVolume(stackIn_491_1, stackIn_492_2);
                   }
                 }
               } else {
-                gj.field_r = PcmSampleStream.a(sb.field_e[0], 100, 0);
-                gj.field_r.e(-1);
-                ll.field_c.a(gj.field_r);
+                gj.field_r = PcmSampleStream.createForPlaybackRate(sb.field_e[0], 100, 0);
+                gj.field_r.setLoopCount(-1);
+                ll.field_c.addChildStream(gj.field_r);
                 stackIn_491_0 = gj.field_r;
                 stackIn_491_1 = 10;
                 if (MouseWheelInput.field_e) {
@@ -1522,7 +1522,7 @@ public final class stellarshard extends rb implements cf {
                 } else {
                   stackIn_492_2 = 0;
                 }
-                ((PcmSampleStream) (Object) stackIn_491_0).b(stackIn_491_1, stackIn_492_2);
+                ((PcmSampleStream) (Object) stackIn_491_0).rampScaledVolume(stackIn_491_1, stackIn_492_2);
               }
             }
             dupTemp$11 = a.entities[0];
@@ -1636,7 +1636,7 @@ public final class stellarshard extends rb implements cf {
                     if (a.entities[0].field_i > 0) {
                       break regionExit1;
                     }
-                    ll.field_c.a(sb.field_e[27], 100, 2 * pk.field_h);
+                    ll.field_c.playSample(sb.field_e[27], 100, 2 * pk.field_h);
                     if (var15 == 0) {
                       break regionExit1;
                     }
@@ -1657,7 +1657,7 @@ public final class stellarshard extends rb implements cf {
                     if (0 < a.entities[0].field_i) {
                       break regionExit1;
                     }
-                    ll.field_c.a(sb.field_e[38], 100, pk.field_h * 2);
+                    ll.field_c.playSample(sb.field_e[38], 100, pk.field_h * 2);
                     if (var15 == 0) {
                       break regionExit1;
                     }
@@ -1677,7 +1677,7 @@ public final class stellarshard extends rb implements cf {
                     if (a.entities[0].field_i > 0) {
                       break regionExit1;
                     }
-                    ll.field_c.a(sb.field_e[33], 100, pk.field_h * 2);
+                    ll.field_c.playSample(sb.field_e[33], 100, pk.field_h * 2);
                     if (var15 == 0) {
                       break regionExit1;
                     }
@@ -1696,7 +1696,7 @@ public final class stellarshard extends rb implements cf {
                     if (a.entities[0].field_i > 0) {
                       break regionExit1;
                     }
-                    ll.field_c.a(sb.field_e[1], 100, pk.field_h * 2);
+                    ll.field_c.playSample(sb.field_e[1], 100, pk.field_h * 2);
                     if (var15 == 0) {
                       break regionExit1;
                     }
@@ -1714,7 +1714,7 @@ public final class stellarshard extends rb implements cf {
                     if (a.entities[0].field_i > 0) {
                       break regionExit1;
                     }
-                    ll.field_c.a(sb.field_e[21], 100, 2 * pk.field_h);
+                    ll.field_c.playSample(sb.field_e[21], 100, 2 * pk.field_h);
                     if (var15 == 0) {
                       break regionExit1;
                     }
@@ -1731,7 +1731,7 @@ public final class stellarshard extends rb implements cf {
                     if (0 < af.field_o) {
                       break regionExit1;
                     }
-                    ll.field_c.a(sb.field_e[24], 100, 2 * pk.field_h);
+                    ll.field_c.playSample(sb.field_e[24], 100, 2 * pk.field_h);
                     af.field_o = 3;
                     if (var15 == 0) {
                       break regionExit1;
@@ -1748,7 +1748,7 @@ public final class stellarshard extends rb implements cf {
                     if (0 < a.entities[0].field_i) {
                       break regionExit1;
                     }
-                    ll.field_c.a(sb.field_e[39], 100, pk.field_h * 2);
+                    ll.field_c.playSample(sb.field_e[39], 100, pk.field_h * 2);
                     if (var15 == 0) {
                       break regionExit1;
                     }
@@ -1763,7 +1763,7 @@ public final class stellarshard extends rb implements cf {
                     if (a.entities[0].field_i > 0) {
                       break regionExit1;
                     }
-                    ll.field_c.a(sb.field_e[22], 100, 2 * pk.field_h);
+                    ll.field_c.playSample(sb.field_e[22], 100, 2 * pk.field_h);
                     if (var15 == 0) {
                       break regionExit1;
                     }
@@ -1777,7 +1777,7 @@ public final class stellarshard extends rb implements cf {
                     if (a.entities[0].field_i > 0) {
                       break regionExit1;
                     }
-                    ll.field_c.a(sb.field_e[34], 100, 2 * pk.field_h);
+                    ll.field_c.playSample(sb.field_e[34], 100, 2 * pk.field_h);
                     if (var15 == 0) {
                       break regionExit1;
                     }
@@ -1790,7 +1790,7 @@ public final class stellarshard extends rb implements cf {
                     if (af.field_o > 0) {
                       break regionExit1;
                     }
-                    ll.field_c.a(sb.field_e[20], 100, pk.field_h * 2);
+                    ll.field_c.playSample(sb.field_e[20], 100, pk.field_h * 2);
                     af.field_o = (int)(Math.random() * 10.0) + 15;
                     if (var15 == 0) {
                       break regionExit1;
@@ -1803,7 +1803,7 @@ public final class stellarshard extends rb implements cf {
                     if (af.field_o > 0) {
                       break regionExit1;
                     }
-                    ll.field_c.a(sb.field_e[7], 100, 2 * pk.field_h);
+                    ll.field_c.playSample(sb.field_e[7], 100, 2 * pk.field_h);
                     af.field_o = 5;
                     if (var15 == 0) {
                       break regionExit1;
@@ -1811,7 +1811,7 @@ public final class stellarshard extends rb implements cf {
                   }
                   if (MouseWheelInput.field_e &&
                     a.entities[0].field_i == -1) {
-                    ll.field_c.a(sb.field_e[25], 100, pk.field_h * 2);
+                    ll.field_c.playSample(sb.field_e[25], 100, pk.field_h * 2);
                   }
                 }
                 if (a.entities[0].field_i <= 0) {
@@ -2453,7 +2453,7 @@ public final class stellarshard extends rb implements cf {
                   var7 = 160 - var6 * 32;
                   if (var7 > 0 &&
                     MouseWheelInput.field_e) {
-                    ll.field_c.a(sb.field_e[46], var7, pk.field_h * 6);
+                    ll.field_c.playSample(sb.field_e[46], var7, pk.field_h * 6);
                   }
                 }
               }
@@ -2490,7 +2490,7 @@ public final class stellarshard extends rb implements cf {
                 ag.field_a = ag.field_a + var9Lifetime1;
                 if (!(256 >= ag.field_a)) {
                   if (MouseWheelInput.field_e) {
-                    ll.field_c.a(sb.field_e[13], var9Lifetime1, pk.field_h * 64 / 50);
+                    ll.field_c.playSample(sb.field_e[13], var9Lifetime1, pk.field_h * 64 / 50);
                   }
                   ag.field_a = 0;
                 }
@@ -3277,12 +3277,12 @@ public final class stellarshard extends rb implements cf {
             ConfirmedEmailAvailabilityValidator.a(50, (byte) 63);
             MouseWheelInput.field_c = new d(oe.field_a);
             if (vf.field_L != null) {
-              nj.field_o.b(vf.field_L);
+              nj.field_o.removeOwnedListener(vf.field_L);
               vf.field_L.c();
-              nj.field_o.a(vf.field_L);
+              nj.field_o.addListener(vf.field_L);
             }
             vf.field_L = MouseWheelInput.field_c;
-            nj.field_o.a(vf.field_L);
+            nj.field_o.addListener(vf.field_L);
             vf.field_L.d(IterableNodeHashTable.field_c / 2);
             if (!DualLinkNode.a(-1)) {
               MouseHandler.field_g = ab.a(-5094, 4);

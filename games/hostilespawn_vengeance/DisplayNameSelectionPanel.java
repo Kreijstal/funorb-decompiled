@@ -182,7 +182,7 @@ final class DisplayNameSelectionPanel extends vd implements kn, qk {
                 if (AccountNameAvailabilityValidator.field_s == 17) {
                   ti.a(251, (byte) -126, 4);
                 }
-                eh.field_c.a(fg.field_b[18], 100, uh.field_i);
+                eh.field_c.playSample(fg.field_b[18], 100, uh.field_i);
               }
             }
           }

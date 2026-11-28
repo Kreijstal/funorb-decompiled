@@ -29,7 +29,7 @@ final class qc {
           return;
         }
         try {
-          saa.field_a.b(param0);
+          saa.field_a.removeChildStream(param0);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "qc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

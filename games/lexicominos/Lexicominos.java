@@ -1855,7 +1855,7 @@ public final class Lexicominos extends nk {
                 }
                 if (ImageProducerRasterBuffer.field_j >= 0 &&
                   vg.field_d[ImageProducerRasterBuffer.field_j].field_m != null) {
-                  BitPacketBuffer.field_o[2].e(0);
+                  BitPacketBuffer.field_o[2].setLoopCount(0);
                   vg.field_d[ImageProducerRasterBuffer.field_j].field_m = null;
                 }
                 if (6 == ImageProducerRasterBuffer.field_j &&

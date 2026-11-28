@@ -85,7 +85,7 @@ final class td {
         if (param0 > -98) {
           td.clearStaticReferences(-106);
         }
-        stackIn_7_1 = (this.field_b == null) || (this.field_b.m());
+        stackIn_7_1 = (this.field_b == null) || (this.field_b.isSamplePositionOutOfRange());
         boolean decompiledFrameRemainder0 = true;
         this.field_j = stackIn_7_1;
         if ((!this.field_i ||
@@ -131,7 +131,7 @@ final class td {
           this.field_b = null;
         } else {
           var8Lifetime1 = ConfirmedEmailAvailabilityValidator.a(104, param1);
-          this.field_b = PcmSampleStream.a(nl.field_r[param3], 100, dk.field_a[this.field_n], var8Lifetime1);
+          this.field_b = PcmSampleStream.createForPlaybackRateWithScaledVolumeAndPan(nl.field_r[param3], 100, dk.field_a[this.field_n], var8Lifetime1);
           PacketBuffer.a(-1630758008, this.field_b);
         }
     }

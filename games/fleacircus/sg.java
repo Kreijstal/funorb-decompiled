@@ -32,7 +32,7 @@ final class sg {
           }
           var2 = new pd(param1, param1);
           bk.field_d.addLast(false, var2);
-          qg.field_f.a(param1);
+          qg.field_f.addChildStream(param1);
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

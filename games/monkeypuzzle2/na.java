@@ -15,7 +15,7 @@ final class na {
         }
         try {
           bd.field_c.addFirst(-8212, new hk(param1, param1));
-          qb.field_c.a(param1);
+          qb.field_c.addChildStream(param1);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "na.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

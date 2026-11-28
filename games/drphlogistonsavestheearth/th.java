@@ -16,7 +16,7 @@ final class th {
           return;
         }
         try {
-          PacketBuffer.a(-1630758008, PcmSampleStream.a(param3, 100, param1, param2));
+          PacketBuffer.a(-1630758008, PcmSampleStream.createForPlaybackRateWithScaledVolumeAndPan(param3, 100, param1, param2));
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "th.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

@@ -132,7 +132,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
             var2_ref = var4;
             var2_refLifetime2 = var4;
             if (var4 != null) {
-              var4.f(param0 * 128 / 256);
+              var4.setScaledVolume(param0 * 128 / 256);
             }
           }
           if (param1 <= 49) {
@@ -140,8 +140,8 @@ final class MatchingFieldValidator extends TextFieldValidator {
           }
           var2_refLifetime1 = BitPacketBuffer.field_o[9];
           if (!var2_refLifetime1.isLinked(false)) {
-            var2_refLifetime1.c(0);
-            wj.field_j.a(var2_refLifetime1);
+            var2_refLifetime1.setSamplePosition(0);
+            wj.field_j.addChildStream(var2_refLifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -64,14 +64,14 @@ final class ql {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = PcmSampleStream.b(param3, 100, param2, param4);
+          var5 = PcmSampleStream.createForPlaybackRateWithScaledVolumeAndPan(param3, 100, param2, param4);
           var6 = fl.a(var5, -11039, param1);
           var7 = new od(var5, var6);
           if (param0 <= 100) {
             field_b = (int[]) null;
           }
           lb.field_f.addLast(var7, -83);
-          of.field_a.a(var6);
+          of.field_a.addChildStream(var6);
           stackIn_3_0 = var7;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

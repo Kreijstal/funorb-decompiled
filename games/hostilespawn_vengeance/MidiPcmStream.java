@@ -37,12 +37,12 @@ class MidiPcmStream extends PcmStream {
     private ji field_z;
     private boolean field_J;
 
-    private final void c(int param0, byte param1) {
+    private final void resetChannel(int param0, byte param1) {
         int var4;
         var4 = HostileSpawn.field_I ? 1 : 0;
         if (param0 < 0) {
           for (param0 = 0; param0 < 16; param0++) {
-            this.c(param0, (byte) 90);
+            this.resetChannel(param0, (byte) 90);
           }
         } else {
           this.field_O[param0] = 12800;
@@ -51,8 +51,8 @@ class MidiPcmStream extends PcmStream {
           this.field_E[param0] = 8192;
           this.field_y[param0] = 0;
           this.field_L[param0] = 8192;
-          this.a(param0, false);
-          this.a(param0, 4);
+          this.releaseUnmappedVoices(param0, false);
+          this.resetChannelVoicePhases(param0, 4);
           this.field_C[param0] = 0;
           this.field_u[param0] = 32767;
           this.field_t[param0] = 256;
@@ -64,7 +64,7 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void b(int param0, byte param1) {
+    private final void allNotesOff(int param0, byte param1) {
         tm var3;
         int var4;
         var4 = HostileSpawn.field_I ? 1 : 0;
@@ -166,7 +166,7 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void b(int param0, int param1) {
+    private final void removeChannelVoices(int param0, int param1) {
         int var4 = HostileSpawn.field_I ? 1 : 0;
         if (param0 <= 16) {
           int[] var5 = (int[]) null;
@@ -177,9 +177,9 @@ class MidiPcmStream extends PcmStream {
           if (param1 < 0 ||
             param1 == var3.field_E) {
             if (var3.field_A != null) {
-              var3.field_A.h(AudioOutput.field_g / 100);
+              var3.field_A.fadeOutAndUnlink(AudioOutput.field_g / 100);
               if (var3.field_A.hasRemainingRampFrames()) {
-                this.field_B.field_q.b(var3.field_A);
+                this.field_B.field_q.addChildStream(var3.field_A);
               }
               var3.b(true);
             }
@@ -233,7 +233,7 @@ class MidiPcmStream extends PcmStream {
         return null;
     }
 
-    private final void a(byte param0, int param1, int param2) {
+    private final void onChannelPressure(byte param0, int param1, int param2) {
         if (param0 != 93) {
           this.field_P = (tm[][]) null;
         }
@@ -304,13 +304,13 @@ class MidiPcmStream extends PcmStream {
         this.field_F[param2] = param1;
         if (param0 != 22) {
           tm var5 = (tm) null;
-          discarded$0 = this.a((tm) null, true);
+          discarded$0 = this.computeNotePan((tm) null, true);
         }
         this.field_o[param2] = PcmOutputWorker.a(param1, -128);
-        this.d(-14089, param1, param2);
+        this.setProgram(-14089, param1, param2);
     }
 
-    private final int a(tm param0, boolean param1) {
+    private final int computeNotePan(tm param0, boolean param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
@@ -352,7 +352,7 @@ class MidiPcmStream extends PcmStream {
         this.field_l[param2] = (int)(2097152.0 * Math.pow(2.0, 0.00054931640625 * (double)param1) + 0.5);
     }
 
-    private final void a(int param0, int param1, int param2, byte param3) {
+    private final void noteOff(int param0, int param1, int param2, byte param3) {
         tm var6 = null;
         int var7 = HostileSpawn.field_I ? 1 : 0;
         if (param3 != 63) {
@@ -378,7 +378,7 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final int a(tm param0, byte param1) {
+    private final int computeNoteVolume(tm param0, byte param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -468,7 +468,7 @@ class MidiPcmStream extends PcmStream {
         try {
           param0.field_u = AudioOutput.field_g / 100;
           if (param3 != 31458) {
-            this.a(50, -29, 123, -115);
+            this.onPolyPressure(50, -29, 123, -115);
           }
           if (0 <= param0.field_h && (param0.field_A == null ||
             param0.field_A.isSamplePositionOutOfRange())) {
@@ -490,7 +490,7 @@ class MidiPcmStream extends PcmStream {
             }
             param0.field_t = var6_int;
           }
-          param0.field_A.setSampleStepMagnitude(this.a(1, param0));
+          param0.field_A.setSampleStepMagnitude(this.computeNoteSampleStep(1, param0));
           var7 = param0.field_x;
           var8 = 0;
           param0.field_j = param0.field_j + var7.field_e;
@@ -545,17 +545,17 @@ class MidiPcmStream extends PcmStream {
             }
           }
           if (var8 == 0) {
-            param0.field_A.a(param0.field_u, this.a(param0, (byte) 68), this.a(param0, true));
+            param0.field_A.rampVolumeAndPan(param0.field_u, this.computeNoteVolume(param0, (byte) 68), this.computeNotePan(param0, true));
             return false;
           }
-          param0.field_A.h(param0.field_u);
+          param0.field_A.fadeOutAndUnlink(param0.field_u);
           if (param4 == null) {
             param0.field_A.skipFrames(param1);
           } else {
             param0.field_A.mixInto(param4, param2, param1);
           }
           if (param0.field_A.hasRemainingRampFrames()) {
-            this.field_B.field_q.b(param0.field_A);
+            this.field_B.field_q.addChildStream(param0.field_A);
           }
           param0.b(true);
           if (param0.field_h >= 0) {
@@ -586,7 +586,7 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void releaseUnmappedVoices(int param0, boolean param1) {
         tm var3;
         int var4;
         var4 = HostileSpawn.field_I ? 1 : 0;
@@ -615,7 +615,7 @@ class MidiPcmStream extends PcmStream {
         return this.field_m;
     }
 
-    private final void a(int param0, int param1) {
+    private final void resetChannelVoicePhases(int param0, int param1) {
         tm var3 = null;
         int var4 = HostileSpawn.field_I ? 1 : 0;
         if ((param1 & this.field_C[param0]) != 0) {
@@ -663,7 +663,7 @@ class MidiPcmStream extends PcmStream {
         return this.field_G.hasMidiData();
     }
 
-    private final int a(int param0, tm param1) {
+    private final int computeNoteSampleStep(int param0, tm param1) {
         int stackIn_12_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -711,7 +711,7 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void d(int param0, int param1, int param2) {
+    private final void setProgram(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = HostileSpawn.field_I ? 1 : 0;
         if (param0 != -14089) {
@@ -736,7 +736,7 @@ class MidiPcmStream extends PcmStream {
         nf var10;
         nf var11;
         var9 = HostileSpawn.field_I ? 1 : 0;
-        this.a(64, param2, param3, (byte) 63);
+        this.noteOff(64, param2, param3, (byte) 63);
         if ((2 & this.field_C[param2]) != 0) {
           var5 = (tm) (this.field_B.field_t.beginBackward((byte) 117));
           while (var5 != null) {
@@ -782,14 +782,14 @@ class MidiPcmStream extends PcmStream {
         var7.field_w = 0;
         var7.field_C = 0;
         if (this.field_H[param2] != 0) {
-          var7.field_A = RawPcmStream.createForSampleStep(var6, this.a(1, var7), 0, this.a(var7, true));
+          var7.field_A = RawPcmStream.createForSampleStep(var6, this.computeNoteSampleStep(1, var7), 0, this.computeNotePan(var7, true));
           stackIn_20_1 = !(var11.field_r[param3] >= 0);
           this.a(stackIn_20_1, var7, -128);
         } else {
-          var7.field_A = RawPcmStream.createForSampleStep(var6, this.a(param0 ^ 34, var7), this.a(var7, (byte) -75), this.a(var7, true));
+          var7.field_A = RawPcmStream.createForSampleStep(var6, this.computeNoteSampleStep(param0 ^ 34, var7), this.computeNoteVolume(var7, (byte) -75), this.computeNotePan(var7, true));
         }
         if (var11.field_r[param3] < 0) {
-          var7.field_A.d(-1);
+          var7.field_A.setLoopCount(-1);
         }
         if (0 <= var7.field_m) {
           var8 = this.field_P[param2][var7.field_m];
@@ -821,7 +821,7 @@ class MidiPcmStream extends PcmStream {
         return 0;
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void onPolyPressure(int param0, int param1, int param2, int param3) {
         if (param1 != -16257) {
           this.field_v = (int[]) null;
         }
@@ -876,14 +876,14 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void setPitchWheel(int param0, int param1, int param2) {
         if (param1 > -65) {
           return;
         }
         this.field_E[param0] = param2;
     }
 
-    private final void a(byte param0, int param1) {
+    private final void handleMidiMessage(byte param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -914,7 +914,7 @@ class MidiPcmStream extends PcmStream {
           var5 = 15 & param1;
           var6 = (32556 & param1) >> 8;
           var7 = (8342895 & param1) >> 16;
-          this.a(var7, var5, var6, (byte) 63);
+          this.noteOff(var7, var5, var6, (byte) 63);
           return;
         }
         if (144 == var3) {
@@ -924,7 +924,7 @@ class MidiPcmStream extends PcmStream {
           if (var7Lifetime1 > 0) {
             this.noteOn((byte) 35, var7Lifetime1, var5Lifetime1, var6Lifetime1);
           } else {
-            this.a(64, var5Lifetime1, var6Lifetime1, (byte) 63);
+            this.noteOff(64, var5Lifetime1, var6Lifetime1, (byte) 63);
           }
           return;
         }
@@ -932,33 +932,33 @@ class MidiPcmStream extends PcmStream {
           var5Lifetime2 = 15 & param1;
           var6Lifetime2 = (32541 & param1) >> 8;
           var7Lifetime2 = (8342347 & param1) >> 16;
-          this.a(var6Lifetime2, -16257, var7Lifetime2, var5Lifetime2);
+          this.onPolyPressure(var6Lifetime2, -16257, var7Lifetime2, var5Lifetime2);
           return;
         }
         if (var3 != 176) {
           if (var3 == 192) {
             var5Lifetime3 = 15 & param1;
             var6Lifetime3 = param1 >> 8 & 127;
-            this.d(-14089, var6Lifetime3 + this.field_o[var5Lifetime3], var5Lifetime3);
+            this.setProgram(-14089, var6Lifetime3 + this.field_o[var5Lifetime3], var5Lifetime3);
             return;
           }
           if (var3 == 208) {
             var5Lifetime3Lifetime1 = param1 & 15;
             var6Lifetime3Lifetime1 = (param1 & 32765) >> 8;
-            this.a((byte) 93, var6Lifetime3Lifetime1, var5Lifetime3Lifetime1);
+            this.onChannelPressure((byte) 93, var6Lifetime3Lifetime1, var5Lifetime3Lifetime1);
             return;
           }
           if (var3 == 224) {
             var5Lifetime3Lifetime2 = param1 & 15;
             var6Lifetime3Lifetime2 = ((8323466 & param1) >> 9) + (param1 >> 8 & 127);
-            this.a(var5Lifetime3Lifetime2, -120, var6Lifetime3Lifetime2);
+            this.setPitchWheel(var5Lifetime3Lifetime2, -120, var6Lifetime3Lifetime2);
             return;
           }
           var3 = 255 & param1;
           if (var3 != 255) {
             return;
           }
-          this.a(true, 2065687494);
+          this.resetPlaybackChannels(true, 2065687494);
           return;
         }
         var5Lifetime4 = 15 & param1;
@@ -1011,7 +1011,7 @@ class MidiPcmStream extends PcmStream {
           if (var7Lifetime3 >= 64) {
             this.field_C[var5Lifetime4] = ll.a(this.field_C[var5Lifetime4], 2);
           } else {
-            this.a(var5Lifetime4, false);
+            this.releaseUnmappedVoices(var5Lifetime4, false);
             this.field_C[var5Lifetime4] = PcmOutputWorker.a(this.field_C[var5Lifetime4], -3);
           }
         }
@@ -1028,13 +1028,13 @@ class MidiPcmStream extends PcmStream {
           this.field_u[var5Lifetime4] = var7Lifetime3 + 16384 + PcmOutputWorker.a(this.field_u[var5Lifetime4], 16256);
         }
         if (var6Lifetime4 == 120) {
-          this.b(106, var5Lifetime4);
+          this.removeChannelVoices(106, var5Lifetime4);
         }
         if (121 == var6Lifetime4) {
-          this.c(var5Lifetime4, (byte) 15);
+          this.resetChannel(var5Lifetime4, (byte) 15);
         }
         if (123 == var6Lifetime4) {
-          this.b(var5Lifetime4, (byte) 116);
+          this.allNotesOff(var5Lifetime4, (byte) 116);
         }
         if (var6Lifetime4 == 6) {
           var8 = this.field_u[var5Lifetime4];
@@ -1056,7 +1056,7 @@ class MidiPcmStream extends PcmStream {
         }
         if (var6Lifetime4 == 81) {
           if (var7Lifetime3 < 64) {
-            this.a(var5Lifetime4, 4);
+            this.resetChannelVoicePhases(var5Lifetime4, 4);
             this.field_C[var5Lifetime4] = PcmOutputWorker.a(this.field_C[var5Lifetime4], -5);
           } else {
             this.field_C[var5Lifetime4] = ll.a(this.field_C[var5Lifetime4], 4);
@@ -1075,16 +1075,16 @@ class MidiPcmStream extends PcmStream {
         return (PcmStream) ((Object) this.field_B);
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void resetPlaybackChannels(boolean param0, int param1) {
         int var3 = 0;
         int var4 = HostileSpawn.field_I ? 1 : 0;
         int var3Lifetime1;
         if (!param0) {
-          this.b(-1, (byte) 116);
+          this.allNotesOff(-1, (byte) 116);
         } else {
-          this.b(61, -1);
+          this.removeChannelVoices(61, -1);
         }
-        this.c(-1, (byte) 106);
+        this.resetChannel(-1, (byte) 106);
         for (var3 = 0; var3 < 16; var3++) {
           this.field_n[var3] = this.field_F[var3];
         }
@@ -1105,7 +1105,7 @@ class MidiPcmStream extends PcmStream {
         }
         this.field_G.b();
         this.field_z = null;
-        this.a(param1, 2065687494);
+        this.resetPlaybackChannels(param1, 2065687494);
     }
 
     synchronized void mixInto(int[] param0, int param1, int param2) {
@@ -1206,7 +1206,7 @@ class MidiPcmStream extends PcmStream {
             var6 = this.field_G.c(var2);
             if (1 != var6) {
               if ((var6 & 128) != 0) {
-                this.a((byte) -103, var6);
+                this.handleMidiMessage((byte) -103, var6);
               }
               this.field_G.d(var2);
               this.field_G.a(var2);
@@ -1224,7 +1224,7 @@ class MidiPcmStream extends PcmStream {
                 0 != var3) {
                 this.field_G.a(var4);
               } else {
-                this.a(true, 2065687494);
+                this.resetPlaybackChannels(true, 2065687494);
                 this.field_G.b();
                 return;
               }
@@ -1278,7 +1278,7 @@ class MidiPcmStream extends PcmStream {
         this.field_B = new MusicPatchPcmStream(this);
         this.field_I = new jm(128);
         this.setChannelVolumeScale(256, -1, (byte) -76);
-        this.a(true, 2065687494);
+        this.resetPlaybackChannels(true, 2065687494);
     }
 
     MidiPcmStream(MidiPcmStream param0) {
@@ -1307,7 +1307,7 @@ class MidiPcmStream extends PcmStream {
         try {
           this.field_I = param0.field_I;
           this.setChannelVolumeScale(256, -1, (byte) -77);
-          this.a(true, 2065687494);
+          this.resetPlaybackChannels(true, 2065687494);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "w.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

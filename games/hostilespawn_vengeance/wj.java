@@ -479,7 +479,7 @@ final class wj extends ph {
                   } else {
                     stackIn_134_2 = 22;
                   }
-                  ((PcmStreamMixer) (Object) stackIn_133_0).a(stackIn_133_1[stackIn_134_2], 90, uh.field_i);
+                  ((PcmStreamMixer) (Object) stackIn_133_0).playSample(stackIn_133_1[stackIn_134_2], 90, uh.field_i);
                 }
               }
               return;
@@ -515,7 +515,7 @@ final class wj extends ph {
                 }
                 if (uj.field_l == 1 &&
                   ej.d((byte) 116)) {
-                  eh.field_c.a(em.field_a[var14Lifetime1Lifetime1], 100, uh.field_i * (128 - le.field_D / 4) / 128);
+                  eh.field_c.playSample(em.field_a[var14Lifetime1Lifetime1], 100, uh.field_i * (128 - le.field_D / 4) / 128);
                 }
               }
               for (var13_intLifetime1Lifetime1 = 0; var13_intLifetime1Lifetime1 < 5; var13_intLifetime1Lifetime1++) {
@@ -539,7 +539,7 @@ final class wj extends ph {
             if (stackIn_162_0Lifetime1 == -2) {
               if (uj.field_l == 1 &&
                 ej.d((byte) 57)) {
-                eh.field_c.a(NetworkArchiveRequest.field_A[8], 100, uh.field_i);
+                eh.field_c.playSample(NetworkArchiveRequest.field_A[8], 100, uh.field_i);
               }
               mf.a(false, 5);
             }
@@ -547,7 +547,7 @@ final class wj extends ph {
           if (le.field_D == 1 &&
             1 == uj.field_l &&
             ej.d((byte) 102)) {
-            eh.field_c.a(em.field_a[0], 100, uh.field_i * 3 / 2);
+            eh.field_c.playSample(em.field_a[0], 100, uh.field_i * 3 / 2);
           }
           var13 = var10.field_f;
           var15 = var10.field_a;

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rj extends IntrusiveNode {
+abstract class PcmMixerListener extends IntrusiveNode {
     int field_f;
 
-    abstract void a();
+    abstract void onRemovedFromMixer();
 
     abstract int onScheduledEvent(PcmStreamMixer param0);
 
-    private rj() throws Throwable {
+    private PcmMixerListener() throws Throwable {
         throw new Error();
     }
 }

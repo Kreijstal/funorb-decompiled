@@ -312,7 +312,7 @@ final class pa extends ql {
               if (uj.field_l != 1) {
                 break;
               }
-              eh.field_c.a(NetworkArchiveRequest.field_A[11], 100, uh.field_i);
+              eh.field_c.playSample(NetworkArchiveRequest.field_A[11], 100, uh.field_i);
               break;
             }
           }

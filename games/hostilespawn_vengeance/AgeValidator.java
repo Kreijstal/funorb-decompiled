@@ -207,45 +207,45 @@ final class AgeValidator extends TextFieldValidator {
               if (dn.field_j > 2) {
                 dn.field_j = 2;
               }
-              eh.field_c.a(TextInputField.field_V[12 + dn.field_j], var5_int, var6);
+              eh.field_c.playSample(TextInputField.field_V[12 + dn.field_j], var5_int, var6);
             } else {
               if (var7 != 1) {
                 if (var7 == 2) {
-                  eh.field_c.a(TextInputField.field_V[(int)(5.0 * Math.random()) + 23], var5_int, var6);
+                  eh.field_c.playSample(TextInputField.field_V[(int)(5.0 * Math.random()) + 23], var5_int, var6);
                 } else {
                   if (var7 == 3) {
                     if (var3 != 0 &&
                       null == rc.field_c) {
                       rc.field_c = RawPcmStream.createForPlaybackRate(TextInputField.field_V[35], var5_int, var6);
-                      rc.field_c.d(120);
-                      eh.field_c.b(rc.field_c);
+                      rc.field_c.setLoopCount(120);
+                      eh.field_c.addChildStream(rc.field_c);
                     }
                     if (var4 != 0) {
                       f.a((byte) 119);
-                      eh.field_c.a(TextInputField.field_V[36], var5_int, var6);
+                      eh.field_c.playSample(TextInputField.field_V[36], var5_int, var6);
                     }
                   } else {
                     if (var7 != 4) {
                       if (var7 == 5) {
-                        eh.field_c.a(TextInputField.field_V[37], var5_int, var6);
+                        eh.field_c.playSample(TextInputField.field_V[37], var5_int, var6);
                       } else {
                         if (var7 != 6) {
                           if (7 == var7) {
-                            eh.field_c.a(TextInputField.field_V[39], var5_int, var6);
+                            eh.field_c.playSample(TextInputField.field_V[39], var5_int, var6);
                           }
                         } else {
                           om.field_a = true;
-                          eh.field_c.a(TextInputField.field_V[we.field_b + 28], var5_int, var6);
+                          eh.field_c.playSample(TextInputField.field_V[we.field_b + 28], var5_int, var6);
                         }
                       }
                     } else {
                       om.field_a = true;
-                      eh.field_c.a(TextInputField.field_V[(int)(Math.random() * 4.0) + 31], var5_int, var6);
+                      eh.field_c.playSample(TextInputField.field_V[(int)(Math.random() * 4.0) + 31], var5_int, var6);
                     }
                   }
                 }
               } else {
-                eh.field_c.a(TextInputField.field_V[jm.field_e + 0], var5_int, var6);
+                eh.field_c.playSample(TextInputField.field_V[jm.field_e + 0], var5_int, var6);
                 ag.field_k = ag.field_k + 1;
               }
             }

@@ -373,7 +373,7 @@ final class bf {
             }
           }
           if (this.field_q != null) {
-            this.field_q.l(ConfirmedEmailAvailabilityValidator.a(124, (int)this.field_o));
+            this.field_q.setScaledPan(ConfirmedEmailAvailabilityValidator.a(124, (int)this.field_o));
           }
           if (this.field_o < (double)(-(100 + this.field_m))) {
             return true;
@@ -1235,7 +1235,7 @@ final class bf {
           }
           if (this.field_q != null) {
             IntrusiveNode.a(this.field_q, 3408);
-            this.field_q.i(-1);
+            this.field_q.setSamplePosition(-1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2419,9 +2419,9 @@ final class bf {
           }
           if (ac.field_j[this.field_Q] != -1 &&
             nl.field_r[ac.field_j[this.field_Q]] != null) {
-            this.field_q = PcmSampleStream.a(nl.field_r[ac.field_j[this.field_Q]], 256, 64);
-            this.field_q.f(-1);
-            this.field_q.c(0, nl.field_r[ac.field_j[this.field_Q]].field_i.length);
+            this.field_q = PcmSampleStream.createForSampleStepWithScaledVolume(nl.field_r[ac.field_j[this.field_Q]], 256, 64);
+            this.field_q.setLoopCount(-1);
+            this.field_q.setLoopBounds(0, nl.field_r[ac.field_j[this.field_Q]].field_i.length);
           }
           this.field_i[0] = new hi(IsaacRandom.field_j[this.field_Q]);
           this.field_o = 640.0;

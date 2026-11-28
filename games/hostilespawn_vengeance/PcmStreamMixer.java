@@ -16,12 +16,12 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     private final void normalizeListenerDeadlines() {
-        da var1 = null;
+        PcmMixerListener var1 = null;
         if (this.field_n > 0) {
-          var1 = (da) (this.field_o.beginForward(-27));
+          var1 = (PcmMixerListener) (this.field_o.beginForward(-27));
           while (var1 != null) {
             var1.field_h = var1.field_h - this.field_n;
-            var1 = (da) (this.field_o.nextForward(12684));
+            var1 = (PcmMixerListener) (this.field_o.nextForward(12684));
           }
           this.field_m = this.field_m - this.field_n;
           this.field_n = 0;
@@ -30,7 +30,7 @@ final class PcmStreamMixer extends PcmStream {
 
     final synchronized void skipFrames(int param0) {
         int var2 = 0;
-        da var3 = null;
+        PcmMixerListener var3 = null;
         int var5 = 0;
         Throwable decompiledCaughtException = null;
         Object var4 = null;
@@ -49,7 +49,7 @@ final class PcmStreamMixer extends PcmStream {
           param0 = param0 - var2;
           this.field_n = this.field_n + var2;
           this.normalizeListenerDeadlines();
-          var3 = (da) (this.field_o.beginForward(-76));
+          var3 = (PcmMixerListener) (this.field_o.beginForward(-76));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.onScheduledEvent(this);
@@ -67,7 +67,7 @@ final class PcmStreamMixer extends PcmStream {
 
     final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4 = 0;
-        da var5 = null;
+        PcmMixerListener var5 = null;
         int var7 = 0;
         Throwable decompiledCaughtException = null;
         Object var6 = null;
@@ -87,7 +87,7 @@ final class PcmStreamMixer extends PcmStream {
           param2 = param2 - var4;
           this.field_n = this.field_n + var4;
           this.normalizeListenerDeadlines();
-          var5 = (da) (this.field_o.beginForward(-69));
+          var5 = (PcmMixerListener) (this.field_o.beginForward(-69));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.onScheduledEvent(this);
@@ -115,48 +115,48 @@ final class PcmStreamMixer extends PcmStream {
         }
     }
 
-    final synchronized void a(PcmStream param0) {
+    final synchronized void removeChildStream(PcmStream param0) {
         param0.unlink(-104);
     }
 
-    final synchronized void b(PcmStream param0) {
+    final synchronized void addChildStream(PcmStream param0) {
         this.field_l.addFirst((byte) -64, param0);
     }
 
-    final void a(PcmSample param0, int param1, int param2) {
-        this.b(RawPcmStream.createForPlaybackRate(param0, param1, param2));
+    final void playSample(PcmSample param0, int param1, int param2) {
+        this.addChildStream(RawPcmStream.createForPlaybackRate(param0, param1, param2));
     }
 
     final PcmStream firstChildStream() {
         return (PcmStream) (this.field_l.beginForward(-26));
     }
 
-    private final void removeListener(da param0) {
+    private final void removeListener(PcmMixerListener param0) {
         param0.unlink(-62);
-        param0.a();
+        param0.onRemovedFromMixer();
         IntrusiveNode var2 = this.field_o.sentinel.field_g;
         if (var2 == this.field_o.sentinel) {
           this.field_m = -1;
         } else {
-          this.field_m = ((da) (var2)).field_h;
+          this.field_m = ((PcmMixerListener) (var2)).field_h;
         }
     }
 
-    private final void insertListenerByDeadline(IntrusiveNode param0, da param1) {
+    private final void insertListenerByDeadline(IntrusiveNode param0, PcmMixerListener param1) {
         while (true) {
           if (param0 == this.field_o.sentinel) {
             uf.a(param1, param0, (byte) -78);
-            this.field_m = ((da) (this.field_o.sentinel.field_g)).field_h;
+            this.field_m = ((PcmMixerListener) (this.field_o.sentinel.field_g)).field_h;
             return;
           }
-          if (((da) (param0)).field_h <= param1.field_h) {
+          if (((PcmMixerListener) (param0)).field_h <= param1.field_h) {
             param0 = param0.field_g;
             continue;
           }
           break;
         }
         uf.a(param1, param0, (byte) -78);
-        this.field_m = ((da) (this.field_o.sentinel.field_g)).field_h;
+        this.field_m = ((PcmMixerListener) (this.field_o.sentinel.field_g)).field_h;
         return;
     }
 

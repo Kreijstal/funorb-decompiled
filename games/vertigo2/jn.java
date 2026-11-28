@@ -130,7 +130,7 @@ final class jn {
           wp.field_a = param1 * 1000 / param0;
           mh.field_d.setRootStream(MouseWheelInput.field_g);
           qc.field_v = param6;
-          qc.field_v.c(-82, nd.field_k);
+          qc.field_v.setMasterVolume(-82, nd.field_k);
           if (param5 != 18246) {
             field_c = 51;
           }

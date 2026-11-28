@@ -74,7 +74,7 @@ final class f implements nn {
           PacketBuffer var2 = (PacketBuffer) null;
           f.a(74, (PacketBuffer) null);
         }
-        eh.field_c.a(rc.field_c);
+        eh.field_c.removeChildStream(rc.field_c);
         rc.field_c = null;
         return true;
     }

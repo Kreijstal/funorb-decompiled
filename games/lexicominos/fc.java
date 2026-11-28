@@ -1189,7 +1189,7 @@ final class fc {
           this.field_r = this.field_r + var2;
         }
         if (~this.field_r == ~this.field_J) {
-          BitPacketBuffer.field_o[2].e(0);
+          BitPacketBuffer.field_o[2].setLoopCount(0);
         } else {
           na.a(2, true);
         }

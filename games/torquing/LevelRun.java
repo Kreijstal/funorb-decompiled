@@ -1454,7 +1454,7 @@ final class LevelRun {
                   ig.field_r[13] = PcmSampleStream.createForPlaybackRate(DisplayNameSelectionPanel.field_F[13], 100, 96);
                 }
                 if (!ig.field_r[13].isLinked(17)) {
-                  ig.field_r[13].c(0);
+                  ig.field_r[13].setSamplePosition(0);
                   ni.a(ig.field_r[13], true);
                 }
                 this.field_D[var11_int] = null;

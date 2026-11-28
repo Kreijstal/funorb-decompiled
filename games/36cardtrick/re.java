@@ -684,15 +684,15 @@ final class re {
                                       if (mf.field_i == var6) {
                                         var8_ref_Object = AccountCreationResultPanel.field_tb;
                                         synchronized (var8_ref_Object) {
-                                          lh.field_d.e(0);
+                                          lh.field_d.setLoopCount(0);
                                         }
                                       } else {
                                         var8_ref_Object = AccountCreationResultPanel.field_tb;
                                         synchronized (var8_ref_Object) {
-                                          lh.field_d.e(-1);
+                                          lh.field_d.setLoopCount(-1);
                                           if (!lh.field_d.isLinked(66)) {
-                                            lh.field_d.h(0);
-                                            lh.field_d.g(96);
+                                            lh.field_d.setSamplePosition(0);
+                                            lh.field_d.setScaledVolume(96);
                                             gh.a(lh.field_d, (byte) -67);
                                           }
                                         }

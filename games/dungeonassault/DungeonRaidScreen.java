@@ -1220,10 +1220,10 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
         }
         this.field_B = new IntrusiveDeque();
         this.field_T = new IntrusiveDeque();
-        this.field_D = PcmSampleStream.a(om.field_b.field_e, 256, 0);
-        this.field_L = PcmSampleStream.a(k.field_f.field_e, 256, 0);
-        this.field_D.e(-1);
-        this.field_L.e(-1);
+        this.field_D = PcmSampleStream.createForSampleStepWithScaledVolume(om.field_b.field_e, 256, 0);
+        this.field_L = PcmSampleStream.createForSampleStepWithScaledVolume(k.field_f.field_e, 256, 0);
+        this.field_D.setLoopCount(-1);
+        this.field_L.setLoopCount(-1);
         l.a(this.field_D, 0);
         l.a(this.field_L, 0);
         t.a(64, g.field_Lb, true, true);
@@ -2209,8 +2209,8 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
           oi.b(0, 100) == 0) {
           this.field_T.addFirst(je.a(param1 - 251569954, hp.field_c), false);
         }
-        this.field_D.d(oo.field_d * (om.field_b.field_a * this.field_P[0]) / 96 >> 8);
-        this.field_L.d(this.field_P[1] * (k.field_f.field_a * oo.field_d) / 96 >> 8);
+        this.field_D.setScaledVolume(oo.field_d * (om.field_b.field_a * this.field_P[0]) / 96 >> 8);
+        this.field_L.setScaledVolume(this.field_P[1] * (k.field_f.field_a * oo.field_d) / 96 >> 8);
         var3 = (o) (this.field_B.beginBackward(param1 - 251594126));
         if (param1 != 251569954) {
           var11 = (PacketBuffer) null;

@@ -49,7 +49,7 @@ final class tw {
             field_d = (String) null;
           }
           SocketConnector.field_d.addLast(var2, true);
-          saa.field_a.a(param0);
+          saa.field_a.addChildStream(param0);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

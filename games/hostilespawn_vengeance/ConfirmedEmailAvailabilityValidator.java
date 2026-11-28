@@ -683,54 +683,54 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           if ((em.field_c & 7) == 0) {
             if (jh.field_db > 0) {
               if (null != ec.field_b) {
-                ec.field_b.g(uh.field_i * jh.field_db / 400);
+                ec.field_b.setScaledVolume(uh.field_i * jh.field_db / 400);
               } else {
                 ec.field_b = RawPcmStream.createForPlaybackRate(NetworkArchiveRequest.field_A[5], 100, uh.field_i * jh.field_db / 400);
-                ec.field_b.d(-1);
-                eh.field_c.b(ec.field_b);
+                ec.field_b.setLoopCount(-1);
+                eh.field_c.addChildStream(ec.field_b);
               }
             } else {
               if (null != ec.field_b) {
-                eh.field_c.a(ec.field_b);
+                eh.field_c.removeChildStream(ec.field_b);
                 ec.field_b = null;
               }
             }
             if (mg.field_c > 0) {
               if (null == q.field_i) {
                 q.field_i = RawPcmStream.createForPlaybackRate(fg.field_b[25], 100, uh.field_i * mg.field_c / 400);
-                q.field_i.d(-1);
-                eh.field_c.b(q.field_i);
+                q.field_i.setLoopCount(-1);
+                eh.field_c.addChildStream(q.field_i);
               } else {
-                q.field_i.g(uh.field_i * mg.field_c / 400);
+                q.field_i.setScaledVolume(uh.field_i * mg.field_c / 400);
               }
             } else {
               if (null != q.field_i) {
-                eh.field_c.a(q.field_i);
+                eh.field_c.removeChildStream(q.field_i);
                 q.field_i = null;
               }
             }
             if (tb.field_N > 0) {
               if (e.field_l == null) {
                 e.field_l = RawPcmStream.createForPlaybackRate(fg.field_b[26], 100, 10);
-                e.field_l.d(-1);
-                eh.field_c.b(e.field_l);
+                e.field_l.setLoopCount(-1);
+                eh.field_c.addChildStream(e.field_l);
               } else {
-                var14Lifetime2 = e.field_l.k();
+                var14Lifetime2 = e.field_l.getScaledTargetVolume();
                 if (var14Lifetime2 < 2 * uh.field_i) {
-                  e.field_l.g(var14Lifetime2 + 20);
+                  e.field_l.setScaledVolume(var14Lifetime2 + 20);
                 } else {
                   if (2 * uh.field_i < var14Lifetime2) {
-                    e.field_l.g(uh.field_i * 2);
+                    e.field_l.setScaledVolume(uh.field_i * 2);
                   }
                 }
               }
             } else {
               if (e.field_l != null) {
-                var14Lifetime2 = e.field_l.k();
+                var14Lifetime2 = e.field_l.getScaledTargetVolume();
                 if (var14Lifetime2 > 10) {
-                  e.field_l.g(var14Lifetime2 - 10);
+                  e.field_l.setScaledVolume(var14Lifetime2 - 10);
                 } else {
-                  eh.field_c.a(e.field_l);
+                  eh.field_c.removeChildStream(e.field_l);
                   e.field_l = null;
                 }
               }
@@ -1009,7 +1009,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
               if (HostileSpawn.field_F &&
                 0 == param2.field_p &&
                 dn.field_b == 15) {
-                eh.field_c.a(fg.field_b[22], 100, uh.field_i);
+                eh.field_c.playSample(fg.field_b[22], 100, uh.field_i);
               }
             }
             var7_int = je.field_a[1];
@@ -1185,12 +1185,12 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             if (nh.field_H != 0) {
               if (cg.field_b == 3 &&
                 param2.field_p == 0) {
-                eh.field_c.a(em.field_a[11], 100, uh.field_i);
+                eh.field_c.playSample(em.field_a[11], 100, uh.field_i);
               } else {
                 if (cg.field_b == 15 &&
                   param2.field_p == 1 &&
                   uj.field_l == 1) {
-                  eh.field_c.a(em.field_a[12], 100, uh.field_i);
+                  eh.field_c.playSample(em.field_a[12], 100, uh.field_i);
                 }
               }
             }
@@ -1356,13 +1356,13 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           if (null != rc.field_c &&
             var6Lifetime3 != 3) {
             f.a((byte) 119);
-            eh.field_c.a(TextInputField.field_V[36], 100, uh.field_i);
+            eh.field_c.playSample(TextInputField.field_V[36], 100, uh.field_i);
           }
           if (jm.field_e >= 0 &&
             var6Lifetime3 != 1) {
-            eh.field_c.a(TextInputField.field_V[5 + jm.field_e], 100, uh.field_i);
+            eh.field_c.playSample(TextInputField.field_V[5 + jm.field_e], 100, uh.field_i);
             if (ag.field_k > 4) {
-              eh.field_c.a(TextInputField.field_V[(int)(2.0 * Math.random()) + 10], 100, uh.field_i);
+              eh.field_c.playSample(TextInputField.field_V[(int)(2.0 * Math.random()) + 10], 100, uh.field_i);
             }
             ag.field_k = 0;
             jm.field_e = -1;

@@ -148,7 +148,7 @@ final class nh extends fc {
                     if (1 != uj.field_l) {
                       break regionExit1;
                     }
-                    eh.field_c.a(em.field_a[22], (int)(20.0 * Math.random() - 10.0) + 100, uh.field_i);
+                    eh.field_c.playSample(em.field_a[22], (int)(20.0 * Math.random() - 10.0) + 100, uh.field_i);
                     break regionExit1;
                   case 21:
                   default:
@@ -161,12 +161,12 @@ final class nh extends fc {
                         if (((21 == var2_int)) &&
                           ((uj.field_l == 1)) &&
                           (!(!ej.d((byte) 107)))) {
-                          eh.field_c.a(NetworkArchiveRequest.field_A[14], 100, uh.field_i / 3);
+                          eh.field_c.playSample(NetworkArchiveRequest.field_A[14], 100, uh.field_i / 3);
                         }
                       } else {
                         if (((uj.field_l == 1)) &&
                           (!(!ej.d((byte) 102)))) {
-                          eh.field_c.a(NetworkArchiveRequest.field_A[17], 100, uh.field_i);
+                          eh.field_c.playSample(NetworkArchiveRequest.field_A[17], 100, uh.field_i);
                         }
                       }
                       break regionExit1;
@@ -177,7 +177,7 @@ final class nh extends fc {
                     if (!ej.d((byte) 61)) {
                       break regionExit1;
                     }
-                    eh.field_c.a(NetworkArchiveRequest.field_A[17], 100 + (int)(20.0 * Math.random() - 10.0), uh.field_i / 3);
+                    eh.field_c.playSample(NetworkArchiveRequest.field_A[17], 100 + (int)(20.0 * Math.random() - 10.0), uh.field_i / 3);
                     break regionExit1;
                 }
               }

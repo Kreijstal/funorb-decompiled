@@ -1822,20 +1822,20 @@ public final class DekoBlokoClient extends FunOrbClient {
             }
             if (!MixedSupport100.booleanArrayState0008[integerLocal2] &&
               SoftwareFramebuffer.rawPcmStreamArrayState0003[integerLocal2] != null) {
-              SoftwareFramebuffer.rawPcmStreamArrayState0003[integerLocal2].performAction0458(0);
+              SoftwareFramebuffer.rawPcmStreamArrayState0003[integerLocal2].setLoopCount(0);
               if (!SoftwareFramebuffer.rawPcmStreamArrayState0003[integerLocal2].isLinked((byte) 78)) {
                 SoftwareFramebuffer.rawPcmStreamArrayState0003[integerLocal2] = null;
               }
             }
             if (!MixedSupport005.booleanArrayState0001[integerLocal2] &&
               null != MixedSupport062.rawPcmStreamArrayState0002[integerLocal2]) {
-              MixedSupport062.rawPcmStreamArrayState0002[integerLocal2].performAction0461(PcmPlayer.integerState0209 / 50);
+              MixedSupport062.rawPcmStreamArrayState0002[integerLocal2].fadeOutAndUnlink(PcmPlayer.integerState0209 / 50);
               MixedSupport062.rawPcmStreamArrayState0002[integerLocal2] = null;
             }
             if (MixedSupport116.rawPcmStreamArrayArrayState0001[0][integerLocal2] != null) {
               integerLocal4 = AgeValidator.integerArrayArrayState0015[0][integerLocal2];
               if (0 == integerLocal4) {
-                MixedSupport116.rawPcmStreamArrayArrayState0001[0][integerLocal2].performAction0461(PcmPlayer.integerState0209 / 50);
+                MixedSupport116.rawPcmStreamArrayArrayState0001[0][integerLocal2].fadeOutAndUnlink(PcmPlayer.integerState0209 / 50);
                 MixedSupport116.rawPcmStreamArrayArrayState0001[0][integerLocal2] = null;
               } else {
                 MixedSupport116.rawPcmStreamArrayArrayState0001[0][integerLocal2].rampVolume(PcmPlayer.integerState0209 / 50, GameDomainSupport005.integerState0578 * integerLocal4);
@@ -1844,7 +1844,7 @@ public final class DekoBlokoClient extends FunOrbClient {
             if (null != MixedSupport116.rawPcmStreamArrayArrayState0001[1][integerLocal2]) {
               integerLocal6 = AgeValidator.integerArrayArrayState0015[1][integerLocal2];
               if (0 == integerLocal6) {
-                MixedSupport116.rawPcmStreamArrayArrayState0001[1][integerLocal2].performAction0461(PcmPlayer.integerState0209 / 50);
+                MixedSupport116.rawPcmStreamArrayArrayState0001[1][integerLocal2].fadeOutAndUnlink(PcmPlayer.integerState0209 / 50);
                 MixedSupport116.rawPcmStreamArrayArrayState0001[1][integerLocal2] = null;
               } else {
                 MixedSupport116.rawPcmStreamArrayArrayState0001[1][integerLocal2].rampVolume(PcmPlayer.integerState0209 / 50, integerLocal6 * GameDomainSupport005.integerState0578);

@@ -426,7 +426,7 @@ final class eg extends tk {
           return;
         }
         try {
-          MouseWheelInput.field_g.b(param1);
+          MouseWheelInput.field_g.removeChildStream(param1);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "eg.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

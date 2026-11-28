@@ -103,7 +103,7 @@ class lf {
 
     final void a(int param0) {
         if (null != this.field_e) {
-          eh.field_c.a(this.field_e);
+          eh.field_c.removeChildStream(this.field_e);
           this.field_e = null;
         }
         if (param0 != 18421) {
@@ -133,12 +133,12 @@ class lf {
             -1 + PcmOutputWorker.field_c.length > this.field_c &&
             null != PcmOutputWorker.field_c[-1 + this.field_c]) {
             this.field_e = RawPcmStream.createForPlaybackRate(PcmOutputWorker.field_c[-1 + this.field_c], 100, this.field_d);
-            this.field_e.d(-1);
-            eh.field_c.b(this.field_e);
+            this.field_e.setLoopCount(-1);
+            eh.field_c.addChildStream(this.field_e);
           }
         } else {
           if (this.field_e != null) {
-            eh.field_c.a(this.field_e);
+            eh.field_c.removeChildStream(this.field_e);
             this.field_e = null;
           }
         }

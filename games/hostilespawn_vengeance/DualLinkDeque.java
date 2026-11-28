@@ -150,7 +150,7 @@ final class DualLinkDeque implements Iterable {
                         var27 = 128;
                       }
                       if (var27 > 0) {
-                        eh.field_c.a(TextInputField.field_V[38], 100, uh.field_i * var27 >> 9);
+                        eh.field_c.playSample(TextInputField.field_V[38], 100, uh.field_i * var27 >> 9);
                       }
                     }
                   }
@@ -176,7 +176,7 @@ final class DualLinkDeque implements Iterable {
               if (var17Lifetime1 <= 0) {
                 return;
               }
-              eh.field_c.a(TextInputField.field_V[38], 100, uh.field_i * var17Lifetime1 >> 8);
+              eh.field_c.playSample(TextInputField.field_V[38], 100, uh.field_i * var17Lifetime1 >> 8);
               return;
             }
             break;

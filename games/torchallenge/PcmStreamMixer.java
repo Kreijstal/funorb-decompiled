@@ -110,7 +110,7 @@ final class PcmStreamMixer extends PcmStream {
 
     private final void removeListener(PcmScheduledEvent param0) {
         param0.unlink(true);
-        param0.a();
+        param0.onRemovedFromMixer();
         IntrusiveNode var2 = this.field_n.sentinel.next;
         if (var2 == this.field_n.sentinel) {
           this.field_m = -1;
@@ -156,7 +156,7 @@ final class PcmStreamMixer extends PcmStream {
         return;
     }
 
-    final synchronized void b(PcmStream param0) {
+    final synchronized void removeChildStream(PcmStream param0) {
         param0.unlink(true);
     }
 

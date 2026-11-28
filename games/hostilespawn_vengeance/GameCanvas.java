@@ -180,7 +180,7 @@ final class GameCanvas extends java.awt.Canvas {
           if (param3.field_e > 4) {
             if (uj.field_l == 1 &&
               ej.d((byte) 81)) {
-              eh.field_c.a(em.field_a[0], 50, uh.field_i);
+              eh.field_c.playSample(em.field_a[0], 50, uh.field_i);
             }
             if (26 == param3.field_i) {
               u.a(-1, param3.field_j, true, 16, param3.field_l, 28);

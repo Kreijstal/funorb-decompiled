@@ -76,14 +76,14 @@ final class rk extends jc {
           param1.c();
         }
         if (null != ProxyAuthenticationRequiredException.field_a) {
-          sh.field_e.a(ProxyAuthenticationRequiredException.field_a);
+          sh.field_e.removeOwnedListener(ProxyAuthenticationRequiredException.field_a);
         }
         if (param2) {
           return;
         }
         try {
           ProxyAuthenticationRequiredException.field_a = param1;
-          sh.field_e.b(ProxyAuthenticationRequiredException.field_a);
+          sh.field_e.addListener(ProxyAuthenticationRequiredException.field_a);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "rk.HA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

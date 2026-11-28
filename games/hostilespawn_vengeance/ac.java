@@ -121,14 +121,14 @@ final class ac {
                   if (uj.field_l == 1 &&
                     var12 == 0 &&
                     TextInputField.field_V[var13 + 15] != null) {
-                    eh.field_c.a(TextInputField.field_V[15 + var13], 100, uh.field_i);
+                    eh.field_c.playSample(TextInputField.field_V[15 + var13], 100, uh.field_i);
                   }
                 } else {
                   if (var17.field_i == 1) {
                     var17.field_i = -1;
                     VolumeRampingMidiPcmStream.field_ib[var15.field_h] = VolumeRampingMidiPcmStream.field_ib[var15.field_h] + te.field_F[var15.field_h];
                     if (uj.field_l == 1) {
-                      eh.field_c.a(TextInputField.field_V[40], 100, uh.field_i);
+                      eh.field_c.playSample(TextInputField.field_V[40], 100, uh.field_i);
                     }
                   } else {
                     if (var17.field_i == 2) {
@@ -156,12 +156,12 @@ final class ac {
                                       if (var12 != 9) {
                                         if (var12 != 10) {
                                           if (var12 == 3) {
-                                            eh.field_c.a(fg.field_b[23], 100, uh.field_i);
+                                            eh.field_c.playSample(fg.field_b[23], 100, uh.field_i);
                                             q.field_g.a(127, var17);
                                           } else {
                                             if (var12 == 11) {
                                               uf.field_h = true;
-                                              eh.field_c.a(fg.field_b[21], 100, uh.field_i);
+                                              eh.field_c.playSample(fg.field_b[21], 100, uh.field_i);
                                               q.field_g.a(112, var17);
                                               var17.field_i = -1;
                                             }
@@ -188,14 +188,14 @@ final class ac {
                           }
                         } else {
                           eh.field_g = ba.a((byte) 114);
-                          eh.field_c.a(fg.field_b[20], 100, uh.field_i);
+                          eh.field_c.playSample(fg.field_b[20], 100, uh.field_i);
                         }
                       } else {
                         eh.field_g = eh.field_g + ba.a((byte) 109) / 4;
                         if (eh.field_g > ba.a((byte) 108)) {
                           eh.field_g = ba.a((byte) 100);
                         }
-                        eh.field_c.a(fg.field_b[19], 100, uh.field_i);
+                        eh.field_c.playSample(fg.field_b[19], 100, uh.field_i);
                       }
                       var17.field_i = -1;
                     }

@@ -20,7 +20,7 @@ final class AchievementNotification extends IntrusiveNode {
         }
         if (VolumeRampingMidiPcmStream.field_U[param1] == 3 &&
           f.a((byte) 119)) {
-          eh.field_c.a(TextInputField.field_V[36], 100, uh.field_i);
+          eh.field_c.playSample(TextInputField.field_V[36], 100, uh.field_i);
         }
         if (NetworkGameClient.field_u > 0) {
           MouseInput.field_a[param1] = th.field_Fb[param2];
@@ -34,7 +34,7 @@ final class AchievementNotification extends IntrusiveNode {
         VolumeRampingMidiPcmStream.field_U[param1] = param2;
         if (uj.field_l == 1 &&
           null != TextInputField.field_V[15 + param2]) {
-          eh.field_c.a(TextInputField.field_V[param2 + 15], 100, uh.field_i);
+          eh.field_c.playSample(TextInputField.field_V[param2 + 15], 100, uh.field_i);
         }
         return true;
     }

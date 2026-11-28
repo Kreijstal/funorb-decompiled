@@ -276,7 +276,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         eh.field_g = eh.field_g - param0;
         if (!(le.field_gb > 0)) {
           var2 = (int)(15.0 * Math.random());
-          eh.field_c.a(fg.field_b[1 + var2], (int)(30.0 * Math.random()) + 85, 2 * uh.field_i);
+          eh.field_c.playSample(fg.field_b[1 + var2], (int)(30.0 * Math.random()) + 85, 2 * uh.field_i);
           le.field_gb = 50 + (int)(50.0 * Math.random());
         }
         if (NanoFrameTimer.field_f < 25) {

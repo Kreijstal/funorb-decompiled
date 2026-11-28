@@ -48,7 +48,7 @@ final class PcmSampleStream extends PcmStream {
         return var1 > 255 ? 255 : var1;
     }
 
-    final synchronized int g() {
+    final synchronized int getScaledTargetVolume() {
         return this.field_p == -2147483648 ? 0 : this.field_p + 32 >> 6;
     }
 
@@ -177,11 +177,11 @@ final class PcmSampleStream extends PcmStream {
         return param4 >> 1;
     }
 
-    final synchronized void i(int param0) {
+    final synchronized void setScaledVolume(int param0) {
         this.setVolumeAndPan(param0 << 6, this.getPan());
     }
 
-    final static PcmSampleStream a(PcmSample param0, int param1, int param2, int param3) {
+    final static PcmSampleStream createForSampleStepWithScaledVolumeAndPan(PcmSample param0, int param1, int param2, int param3) {
         if (param0.data == null) {
           return null;
         }
@@ -370,7 +370,7 @@ final class PcmSampleStream extends PcmStream {
         return param5 >> 1;
     }
 
-    final synchronized void a(int param0, int param1, int param2) {
+    final synchronized void rampScaledVolumeAndPan(int param0, int param1, int param2) {
         this.rampVolumeAndPan(param0, param1 << 6, param2 << 6);
     }
 
@@ -795,7 +795,7 @@ final class PcmSampleStream extends PcmStream {
         return;
     }
 
-    final synchronized void a(boolean param0) {
+    final synchronized void setPingPongLoop(boolean param0) {
         this.field_w = param0 ? true : false;
     }
 
@@ -1453,7 +1453,7 @@ final class PcmSampleStream extends PcmStream {
         this.unlink(0);
     }
 
-    final synchronized void d(int param0) {
+    final synchronized void setLoopCount(int param0) {
         this.field_t = param0;
     }
 
@@ -1603,7 +1603,7 @@ final class PcmSampleStream extends PcmStream {
         return null;
     }
 
-    final synchronized void d(int param0, int param1) {
+    final synchronized void setLoopBounds(int param0, int param1) {
         this.field_u = param0;
         this.field_B = param1;
     }
@@ -1661,7 +1661,7 @@ final class PcmSampleStream extends PcmStream {
         return param3;
     }
 
-    final synchronized void c(int param0) {
+    final synchronized void setSamplePosition(int param0) {
         param0 = param0 << 8;
         int var2 = ((PcmSample) (this.field_m)).data.length << 8;
         if (param0 < -1) {

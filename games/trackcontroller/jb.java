@@ -35,7 +35,7 @@ final class jb {
           if (param0 >= -99) {
             field_d = -37;
           }
-          fj.field_P.d(16384, kc.field_b);
+          fj.field_P.setMasterVolume(16384, kc.field_b);
           sb.field_b.setRootStream(fj.field_P);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "jb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');

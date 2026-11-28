@@ -1229,10 +1229,10 @@ public final class StarCannon extends ag {
                   dg.field_l = 0;
                   ua.field_c = 2;
                   mj.a(255, 12, 0, 41, 100);
-                  ti.field_f.a(kc.field_P);
+                  ti.field_f.removeOwnedListener(kc.field_P);
                   kc.field_P.f();
                   kc.field_P = fl.field_h;
-                  ti.field_f.b(kc.field_P);
+                  ti.field_f.addListener(kc.field_P);
                   kc.field_P.a(mc.field_b);
                   break regionExit1;
                 }
@@ -1243,10 +1243,10 @@ public final class StarCannon extends ag {
                   dg.field_l = 0;
                   ua.field_c = 6;
                   mj.a(255, 12, 0, 41, 100);
-                  ti.field_f.a(kc.field_P);
+                  ti.field_f.removeOwnedListener(kc.field_P);
                   kc.field_P.f();
                   kc.field_P = fl.field_h;
-                  ti.field_f.b(kc.field_P);
+                  ti.field_f.addListener(kc.field_P);
                   kc.field_P.a(mc.field_b);
                   break regionExit1;
                 }
@@ -1273,10 +1273,10 @@ public final class StarCannon extends ag {
                       dg.field_l = 0;
                       AccountRequestState.field_d = AccountRequestState.field_d + 1;
                       mj.a(255, param0 ^ -244, 0, 41, 100);
-                      ti.field_f.a(kc.field_P);
+                      ti.field_f.removeOwnedListener(kc.field_P);
                       kc.field_P.f();
                       kc.field_P = fl.field_h;
-                      ti.field_f.b(kc.field_P);
+                      ti.field_f.addListener(kc.field_P);
                       kc.field_P.a(mc.field_b);
                     }
                   } else {
@@ -1418,10 +1418,10 @@ public final class StarCannon extends ag {
                             AccountRequestState.field_d = AccountRequestState.field_d + 1;
                             dg.field_l = 0;
                             mj.a(255, 12, 0, 41, 100);
-                            ti.field_f.a(kc.field_P);
+                            ti.field_f.removeOwnedListener(kc.field_P);
                             kc.field_P.f();
                             kc.field_P = fl.field_h;
-                            ti.field_f.b(kc.field_P);
+                            ti.field_f.addListener(kc.field_P);
                             kc.field_P.a(mc.field_b);
                           }
                         } else {
@@ -1989,7 +1989,7 @@ public final class StarCannon extends ag {
         fl.field_h = new wd(r.field_b);
         kc.field_P = eg.field_f;
         kc.field_P.a(mc.field_b);
-        ti.field_f.b(kc.field_P);
+        ti.field_f.addListener(kc.field_P);
         ne.a(50, 39);
         qd.a(1, 50);
         fg.field_a = new jl[8];
@@ -2235,14 +2235,14 @@ public final class StarCannon extends ag {
                 dupTemp$0 = PcmSampleStream.createForPlaybackRate(var11, 100, 255 * nb.field_g / 100);
                 var12 = dupTemp$0;
                 ah.field_a = dupTemp$0;
-                var12.d(var3);
+                var12.setSamplePosition(var3);
                 var6_int = (var2_intLifetime1 + ha.field_d - 1) / var2_intLifetime1;
                 var7 = -300 + (var6_int * 20 - (var11.field_i.length - var3) * 1000 / var11.field_j);
                 if (var7 > 0) {
                   AccountCreationResultPanel.field_tb = eg.a(29723, var7, ah.field_a);
-                  jk.field_k.b(AccountCreationResultPanel.field_tb);
+                  jk.field_k.addChildStream(AccountCreationResultPanel.field_tb);
                 } else {
-                  jk.field_k.b(ah.field_a);
+                  jk.field_k.addChildStream(ah.field_a);
                 }
               }
               if (ha.field_d <= 0) {
@@ -3080,10 +3080,10 @@ public final class StarCannon extends ag {
                               AccountRequestState.field_d = AccountRequestState.field_d + 1;
                               dg.field_l = 0;
                               mj.a(255, 12, 0, 41, 100);
-                              ti.field_f.a(kc.field_P);
+                              ti.field_f.removeOwnedListener(kc.field_P);
                               kc.field_P.f();
                               kc.field_P = fl.field_h;
-                              ti.field_f.b(kc.field_P);
+                              ti.field_f.addListener(kc.field_P);
                               kc.field_P.a(mc.field_b);
                               break regionExit1;
                           }
@@ -3891,10 +3891,10 @@ public final class StarCannon extends ag {
                                 AccountRequestState.field_d = AccountRequestState.field_d + 1;
                                 dg.field_l = 0;
                                 mj.a(255, 12, 0, 41, 100);
-                                ti.field_f.a(kc.field_P);
+                                ti.field_f.removeOwnedListener(kc.field_P);
                                 kc.field_P.f();
                                 kc.field_P = fl.field_h;
-                                ti.field_f.b(kc.field_P);
+                                ti.field_f.addListener(kc.field_P);
                                 kc.field_P.a(mc.field_b);
                               }
                             }

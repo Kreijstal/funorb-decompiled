@@ -82,8 +82,8 @@ final class ip {
             } else {
               if (var3.field_m == param1.field_m &&
                 var3.getSampleStepMagnitude() == param1.getSampleStepMagnitude() &&
-                var3.g() * 9 < param1.g() * 10 &&
-                param1.g() * 9 < var3.g() * 10) {
+                var3.getScaledTargetVolume() * 9 < param1.getScaledTargetVolume() * 10 &&
+                param1.getScaledTargetVolume() * 9 < var3.getScaledTargetVolume() * 10) {
                 return;
               }
             }

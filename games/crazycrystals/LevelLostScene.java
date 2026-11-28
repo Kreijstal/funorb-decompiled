@@ -101,7 +101,7 @@ final class LevelLostScene extends AnimatedResultScene {
         String[] var4 = null;
         String[] var5 = null;
         dg.a(false, 60);
-        tb.field_d.a(hb.field_k, 100, 128 * qd.field_r, 8192);
+        tb.field_d.playSampleWithPan(hb.field_k, 100, 128 * qd.field_r, 8192);
         if (ul.field_g == 1) {
           var3 = new String[]{"     @   @@@ @ @ @@@ @       ", "     @   @   @ @ @   @       ", "     @   @   @ @ @   @       ", "     @   @@  @ @ @@  @       ", "     @   @    @  @   @       ", "     @   @    @  @   @       ", "     @@@ @@@  @  @@@ @@@     ", "                             ", "@ @ @@ @@@ @  @@@ @@@ @@ @  @", "@ @ @  @ @ @  @ @ @ @ @  @@ @", "@ @ @  @ @ @  @ @ @ @ @  @@ @", "@ @ @@ @@  @  @ @ @@  @@ @ @@", " @  @  @ @ @  @ @ @ @ @  @ @@", " @  @  @ @ @  @ @ @ @ @  @  @", " @  @@ @ @ @@ @@@ @ @ @@ @  @"};
           this.field_g = 35;

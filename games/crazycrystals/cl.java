@@ -20,19 +20,19 @@ final class cl extends hk {
         int var2Lifetime1;
         if (this.field_h <= 0) {
           if (this.field_f > 0) {
-            tb.field_d.a(cj.field_x, 100, gi.field_m * 128, this.field_g / this.field_f);
+            tb.field_d.playSampleWithPan(cj.field_x, 100, gi.field_m * 128, this.field_g / this.field_f);
             this.field_f = 0;
             this.field_g = 0;
           }
           var2 = 63 / ((29 - param0) / 42);
           return;
         }
-        tb.field_d.a(d.field_b[this.field_k], 100, 128 * gi.field_m, this.field_l / this.field_h);
+        tb.field_d.playSampleWithPan(d.field_b[this.field_k], 100, 128 * gi.field_m, this.field_l / this.field_h);
         this.field_k = this.field_k + 1;
         this.field_l = 0;
         this.field_h = 0;
         if (this.field_f > 0) {
-          tb.field_d.a(cj.field_x, 100, gi.field_m * 128, this.field_g / this.field_f);
+          tb.field_d.playSampleWithPan(cj.field_x, 100, gi.field_m * 128, this.field_g / this.field_f);
           this.field_f = 0;
           this.field_g = 0;
         }

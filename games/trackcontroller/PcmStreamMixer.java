@@ -7,24 +7,24 @@ final class PcmStreamMixer extends PcmStream {
     private int field_n;
     private int field_m;
 
-    final synchronized void a(PcmStream param0) {
+    final synchronized void addChildStream(PcmStream param0) {
         this.field_p.addFirst(param0, (byte) 36);
     }
 
-    private final void removeListener(i param0) {
+    private final void removeListener(PcmMixerListener param0) {
         param0.unlink(-110);
-        param0.a();
+        param0.onRemovedFromMixer();
         IntrusiveNode var2 = this.field_o.field_d.next;
         if (var2 == this.field_o.field_d) {
           this.field_n = -1;
         } else {
-          this.field_n = ((i) (var2)).field_i;
+          this.field_n = ((PcmMixerListener) (var2)).field_i;
         }
     }
 
     final synchronized void mix(int[] param0, int param1, int param2) {
         int var4 = 0;
-        i var5 = null;
+        PcmMixerListener var5 = null;
         int var7 = 0;
         Throwable decompiledCaughtException = null;
         Object var6 = null;
@@ -44,7 +44,7 @@ final class PcmStreamMixer extends PcmStream {
           param2 = param2 - var4;
           this.field_m = this.field_m + var4;
           this.normalizeListenerDeadlines();
-          var5 = (i) (this.field_o.first(2));
+          var5 = (PcmMixerListener) (this.field_o.first(2));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.onScheduledEvent(this);
@@ -65,12 +65,12 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     private final void normalizeListenerDeadlines() {
-        i var1 = null;
+        PcmMixerListener var1 = null;
         if (this.field_m > 0) {
-          var1 = (i) (this.field_o.first(2));
+          var1 = (PcmMixerListener) (this.field_o.first(2));
           while (var1 != null) {
             var1.field_i = var1.field_i - this.field_m;
-            var1 = (i) (this.field_o.next(10));
+            var1 = (PcmMixerListener) (this.field_o.next(10));
           }
           this.field_n = this.field_n - this.field_m;
           this.field_m = 0;
@@ -85,27 +85,27 @@ final class PcmStreamMixer extends PcmStream {
         }
     }
 
-    private final void insertListenerByDeadline(IntrusiveNode param0, i param1) {
+    private final void insertListenerByDeadline(IntrusiveNode param0, PcmMixerListener param1) {
         while (true) {
           if (param0 == this.field_o.field_d) {
             GameKeyHandler.a(param0, param1, -126);
-            this.field_n = ((i) (this.field_o.field_d.next)).field_i;
+            this.field_n = ((PcmMixerListener) (this.field_o.field_d.next)).field_i;
             return;
           }
-          if (((i) (param0)).field_i <= param1.field_i) {
+          if (((PcmMixerListener) (param0)).field_i <= param1.field_i) {
             param0 = param0.next;
             continue;
           }
           break;
         }
         GameKeyHandler.a(param0, param1, -126);
-        this.field_n = ((i) (this.field_o.field_d.next)).field_i;
+        this.field_n = ((PcmMixerListener) (this.field_o.field_d.next)).field_i;
         return;
     }
 
     final synchronized void skip(int param0) {
         int var2 = 0;
-        i var3 = null;
+        PcmMixerListener var3 = null;
         int var5 = 0;
         Throwable decompiledCaughtException = null;
         Object var4 = null;
@@ -124,7 +124,7 @@ final class PcmStreamMixer extends PcmStream {
           param0 = param0 - var2;
           this.field_m = this.field_m + var2;
           this.normalizeListenerDeadlines();
-          var3 = (i) (this.field_o.first(2));
+          var3 = (PcmMixerListener) (this.field_o.first(2));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.onScheduledEvent(this);
@@ -140,7 +140,7 @@ final class PcmStreamMixer extends PcmStream {
         return;
     }
 
-    final synchronized void b(PcmStream param0) {
+    final synchronized void removeChildStream(PcmStream param0) {
         param0.unlink(-58);
     }
 

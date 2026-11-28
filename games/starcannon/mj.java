@@ -169,9 +169,9 @@ final class mj {
         int var5 = nb.field_g * param0 / 100;
         if (var5 > 0) {
           if (param2 == 0) {
-            jk.field_k.a(gf.field_c[param3], param4, var5);
+            jk.field_k.playSample(gf.field_c[param3], param4, var5);
           } else {
-            jk.field_k.a(gf.field_c[param3], param4, var5, param2);
+            jk.field_k.playSampleWithDelay(gf.field_c[param3], param4, var5, param2);
           }
         }
     }

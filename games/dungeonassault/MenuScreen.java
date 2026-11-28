@@ -91,8 +91,8 @@ final class MenuScreen extends DungeonAssaultScreen {
         if (param1 != -2) {
           this.field_v = (rh) null;
         }
-        var3.field_D.d(param0);
-        var3.field_L.d(param0);
+        var3.field_D.setScaledVolume(param0);
+        var3.field_L.setScaledVolume(param0);
     }
 
     final void renderScreen(boolean param0) {

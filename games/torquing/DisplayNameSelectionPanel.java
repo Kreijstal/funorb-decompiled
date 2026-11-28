@@ -104,7 +104,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements ba, ng 
 
     final static void a(int param0, PcmSample param1) {
         try {
-          tb.field_l.a(param1, param0, on.field_c * 96 / 160);
+          tb.field_l.playSample(param1, param0, on.field_c * 96 / 160);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "th.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

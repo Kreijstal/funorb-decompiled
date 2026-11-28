@@ -84,7 +84,7 @@ abstract class l {
         try {
           var2 = new fa(param0, param0);
           IntroSequenceScreen.field_v.addFirst(var2, false);
-          wa.field_j.b(param0);
+          wa.field_j.addChildStream(param0);
           if (param1 != 0) {
             var3 = (String) null;
             l.a((String) null, false, -33L, false, (String) null);

@@ -124,7 +124,7 @@ final class bg extends ic {
           ea.field_f = param2 * 1000 / param1;
           re.field_B.setRootStream(GameKeyHandler.field_a);
           SectorCacheStore.field_a = param0;
-          SectorCacheStore.field_a.c(nk.field_h, false);
+          SectorCacheStore.field_a.setMasterVolume(nk.field_h, false);
           int var8_int = -123 % ((param6 - 59) / 51);
           PasswordValidator.field_o.setRootStream(SectorCacheStore.field_a);
         } catch (RuntimeException runtimeException) {

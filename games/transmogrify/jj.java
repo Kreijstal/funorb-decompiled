@@ -26,7 +26,7 @@ final class jj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > 69) {
-            stackIn_4_0 = ic.a(PcmSampleStream.b(param2, 100, 96, param1), 4);
+            stackIn_4_0 = ic.a(PcmSampleStream.createForPlaybackRateWithScaledVolumeAndPan(param2, 100, 96, param1), 4);
             return stackIn_4_0;
           }
           stackIn_2_0 = (od) null;

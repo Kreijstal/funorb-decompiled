@@ -122,7 +122,7 @@ final class ac extends nf {
     }
 
     final void a(byte param0) {
-        tb.field_d.a(lp.field_b, 100, this.field_h * 48 * gi.field_m, this.field_i / this.field_h);
+        tb.field_d.playSampleWithPan(lp.field_b, 100, this.field_h * 48 * gi.field_m, this.field_i / this.field_h);
         this.field_i = 0;
         this.field_h = 0;
         int var2 = -33 % ((29 - param0) / 42);

@@ -195,9 +195,9 @@ final class uc extends ng {
           hc.field_Q = true;
           var12 = ia.field_i[param4][AccountRegistrationPanel.field_T[4]][0];
           var12.field_l = var12.field_k.length;
-          ki.field_d = RawPcmStream.a(var12, 100, var10, var11);
-          ki.field_d.e(-1);
-          ki.field_d.e(0, var12.field_k.length);
+          ki.field_d = RawPcmStream.createForPlaybackRateWithScaledVolumeAndPan(var12, 100, var10, var11);
+          ki.field_d.setLoopCount(-1);
+          ki.field_d.setLoopBounds(0, var12.field_k.length);
           we.a(ki.field_d, 6222);
           nj.field_g = var10;
           lh.field_s = param0;

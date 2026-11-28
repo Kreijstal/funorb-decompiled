@@ -84,7 +84,7 @@ final class PcmSampleStream extends PcmStream {
         return param3;
     }
 
-    final synchronized void e(int param0) {
+    final synchronized void setLoopCount(int param0) {
         this.field_z = param0;
     }
 
@@ -568,7 +568,7 @@ final class PcmSampleStream extends PcmStream {
         return param5;
     }
 
-    final synchronized boolean f() {
+    final synchronized boolean isSamplePositionOutOfRange() {
         return this.field_u < 0 || this.field_u >= ((PcmSample) (this.field_k)).data.length << 8;
     }
 
@@ -623,7 +623,7 @@ final class PcmSampleStream extends PcmStream {
         return param5;
     }
 
-    final synchronized void d(int param0) {
+    final synchronized void setScaledVolume(int param0) {
         this.setVolumeAndPan(param0 << 6, this.getPan());
     }
 
@@ -1288,7 +1288,7 @@ final class PcmSampleStream extends PcmStream {
         return param4 >> 1;
     }
 
-    final static PcmSampleStream a(PcmSample param0, int param1, int param2) {
+    final static PcmSampleStream createForSampleStepWithScaledVolume(PcmSample param0, int param1, int param2) {
         if (param0.data == null) {
           return null;
         }
@@ -1308,7 +1308,7 @@ final class PcmSampleStream extends PcmStream {
         return null;
     }
 
-    final synchronized void i(int param0) {
+    final synchronized void setSamplePositionFixed(int param0) {
         int var2 = ((PcmSample) (this.field_k)).data.length << 8;
         if (param0 < -1) {
           param0 = -1;

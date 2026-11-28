@@ -304,7 +304,7 @@ final class GameEntity {
               var6Lifetime6 = 128;
             }
             if (MouseWheelInput.field_e) {
-              ll.field_c.a(sb.field_e[8], 100, var6Lifetime6 * pk.field_h / 78);
+              ll.field_c.playSample(sb.field_e[8], 100, var6Lifetime6 * pk.field_h / 78);
             }
             this.field_i = 0;
             var4Lifetime7Lifetime1 = a.entities[0].y - this.y;
@@ -337,7 +337,7 @@ final class GameEntity {
               var6Lifetime1 = 128;
             }
             if (MouseWheelInput.field_e) {
-              ll.field_c.a(sb.field_e[5], 100, var6Lifetime1 * pk.field_h / 78);
+              ll.field_c.playSample(sb.field_e[5], 100, var6Lifetime1 * pk.field_h / 78);
             }
           }
         }
@@ -360,7 +360,7 @@ final class GameEntity {
               var6Lifetime2 = 128;
             }
             if (MouseWheelInput.field_e) {
-              ll.field_c.a(sb.field_e[6], 100, var6Lifetime2 * pk.field_h / 78);
+              ll.field_c.playSample(sb.field_e[6], 100, var6Lifetime2 * pk.field_h / 78);
             }
           }
         }
@@ -440,7 +440,7 @@ final class GameEntity {
           }
           if (this.field_i > 12000) {
             if (MouseWheelInput.field_e) {
-              ll.field_c.a(sb.field_e[28], 100, 2 * pk.field_h);
+              ll.field_c.playSample(sb.field_e[28], 100, 2 * pk.field_h);
             }
             for (var3_intLifetime1 = 0; var3_intLifetime1 < 256; var3_intLifetime1++) {
               var14 = new vl(3, this);
@@ -469,7 +469,7 @@ final class GameEntity {
                 var6Lifetime3 = 128;
               }
               if (MouseWheelInput.field_e) {
-                ll.field_c.a(sb.field_e[26], 100, pk.field_h * var6Lifetime3 / 78);
+                ll.field_c.playSample(sb.field_e[26], 100, pk.field_h * var6Lifetime3 / 78);
               }
             }
           } else {
@@ -484,7 +484,7 @@ final class GameEntity {
               var6Lifetime3 = 128;
             }
             if (MouseWheelInput.field_e) {
-              ll.field_c.a(sb.field_e[26], 100, pk.field_h * var6Lifetime3 / 78);
+              ll.field_c.playSample(sb.field_e[26], 100, pk.field_h * var6Lifetime3 / 78);
             }
           }
         }
@@ -504,7 +504,7 @@ final class GameEntity {
               var6Lifetime4 = 128;
             }
             if (MouseWheelInput.field_e) {
-              ll.field_c.a(sb.field_e[23], 100, pk.field_h * var6Lifetime4 / 78);
+              ll.field_c.playSample(sb.field_e[23], 100, pk.field_h * var6Lifetime4 / 78);
             }
           }
           if (this.field_i > 100) {
@@ -537,7 +537,7 @@ final class GameEntity {
                   var6Lifetime5 = 128;
                 }
                 if (MouseWheelInput.field_e) {
-                  ll.field_c.a(sb.field_e[8], 100, pk.field_h * var6Lifetime5 / 78);
+                  ll.field_c.playSample(sb.field_e[8], 100, pk.field_h * var6Lifetime5 / 78);
                 }
                 var15 = new vl(3, this);
                 var15.field_j = 4.0 * Math.cos(2.0 * (3.141592653589793 * (double)this.heading) / 256.0);
@@ -562,7 +562,7 @@ final class GameEntity {
                 var6Lifetime5Lifetime1 = 128;
               }
               if (MouseWheelInput.field_e) {
-                ll.field_c.a(sb.field_e[8], 100, var6Lifetime5Lifetime1 * pk.field_h / 78);
+                ll.field_c.playSample(sb.field_e[8], 100, var6Lifetime5Lifetime1 * pk.field_h / 78);
               }
               var16 = new vl(3, this);
               var16.field_j = 4.0 * Math.cos((double)(this.heading + 128) * 3.141592653589793 * 2.0 / 256.0);
@@ -613,7 +613,7 @@ final class GameEntity {
             this.velocityX = this.velocityX - Math.sin(2.0 * ((double)this.heading * 3.141592653589793) / 256.0) * 0.1;
             if (MouseWheelInput.field_e &&
               og.field_a <= 0) {
-              ll.field_c.a(sb.field_e[35], 100, pk.field_h);
+              ll.field_c.playSample(sb.field_e[35], 100, pk.field_h);
               og.field_a = 7;
             }
             for (var2Lifetime1 = 0; var2Lifetime1 > this.field_g; var2Lifetime1 -= 10) {
@@ -1774,14 +1774,14 @@ final class GameEntity {
         if (1 == this.kind) {
           var5 = 8947848;
           if (MouseWheelInput.field_e) {
-            ll.field_c.a(sb.field_e[9], 100, pk.field_h * 2);
+            ll.field_c.playSample(sb.field_e[9], 100, pk.field_h * 2);
           }
           var4 = 80;
           stellarshard.field_U[0] = stellarshard.field_U[0] + 1;
         }
         if (this.kind == 3) {
           if (MouseWheelInput.field_e) {
-            ll.field_c.a(sb.field_e[16], 100, 2 * pk.field_h);
+            ll.field_c.playSample(sb.field_e[16], 100, 2 * pk.field_h);
           }
           var5 = 16777215;
           var4 = 100;
@@ -1789,7 +1789,7 @@ final class GameEntity {
         }
         if (this.kind == 5) {
           if (MouseWheelInput.field_e) {
-            ll.field_c.a(sb.field_e[13], 100, pk.field_h * 2);
+            ll.field_c.playSample(sb.field_e[13], 100, pk.field_h * 2);
           }
           var4 = 150;
           var5 = 8947967;
@@ -1797,7 +1797,7 @@ final class GameEntity {
         }
         if (0 == this.kind) {
           if (MouseWheelInput.field_e) {
-            ll.field_c.a(sb.field_e[10], 100, pk.field_h * 2);
+            ll.field_c.playSample(sb.field_e[10], 100, pk.field_h * 2);
           }
           var5 = 8947848;
           var4 = 50;
@@ -1805,27 +1805,27 @@ final class GameEntity {
         if (this.kind == 2) {
           var4 = 50;
           if (MouseWheelInput.field_e) {
-            ll.field_c.a(sb.field_e[17], 100, 2 * pk.field_h);
+            ll.field_c.playSample(sb.field_e[17], 100, 2 * pk.field_h);
           }
           var5 = 16777215;
         }
         if (this.kind == 4) {
           if (MouseWheelInput.field_e) {
-            ll.field_c.a(sb.field_e[14], 100, 2 * pk.field_h);
+            ll.field_c.playSample(sb.field_e[14], 100, 2 * pk.field_h);
           }
           var5 = 8947967;
           var4 = 50;
         }
         if (this.kind == 8) {
           if (MouseWheelInput.field_e) {
-            ll.field_c.a(sb.field_e[11], 100, pk.field_h * 2);
+            ll.field_c.playSample(sb.field_e[11], 100, pk.field_h * 2);
           }
           var5 = 8947848;
           var4 = 10;
         }
         if (9 == this.kind) {
           if (MouseWheelInput.field_e) {
-            ll.field_c.a(sb.field_e[18], 100, pk.field_h * 2);
+            ll.field_c.playSample(sb.field_e[18], 100, pk.field_h * 2);
           }
           var5 = 16777215;
           var4 = 10;
@@ -1834,7 +1834,7 @@ final class GameEntity {
           var4 = 10;
           var5 = 8947967;
           if (MouseWheelInput.field_e) {
-            ll.field_c.a(sb.field_e[15], 100, pk.field_h * 2);
+            ll.field_c.playSample(sb.field_e[15], 100, pk.field_h * 2);
           }
         }
         if (this.kind == 13) {
@@ -1845,7 +1845,7 @@ final class GameEntity {
           }
           var5 = 16711680;
           if (MouseWheelInput.field_e) {
-            ll.field_c.a(sb.field_e[12], 100, 2 * pk.field_h);
+            ll.field_c.playSample(sb.field_e[12], 100, 2 * pk.field_h);
           }
           var4 = 100;
           stellarshard.field_U[4] = stellarshard.field_U[4] + 1;
@@ -1857,7 +1857,7 @@ final class GameEntity {
             hj.a(244, 11, 1);
           }
           if (MouseWheelInput.field_e) {
-            ll.field_c.a(sb.field_e[12], 100, 2 * pk.field_h);
+            ll.field_c.playSample(sb.field_e[12], 100, 2 * pk.field_h);
           }
           var4 = 100;
           var5 = 16711680;
@@ -1870,7 +1870,7 @@ final class GameEntity {
             hj.a(244, 11, 1);
           }
           if (MouseWheelInput.field_e) {
-            ll.field_c.a(sb.field_e[12], 100, 2 * pk.field_h);
+            ll.field_c.playSample(sb.field_e[12], 100, 2 * pk.field_h);
           }
           var4 = 1000;
           var5 = 16711680;
@@ -1886,20 +1886,20 @@ final class GameEntity {
           var4 = 250;
           var5 = 16711680;
           if (MouseWheelInput.field_e) {
-            ll.field_c.a(sb.field_e[12], 100, 2 * pk.field_h);
+            ll.field_c.playSample(sb.field_e[12], 100, 2 * pk.field_h);
           }
           stellarshard.field_U[9] = stellarshard.field_U[9] + 1;
         }
         if (this.kind == 7) {
           var4 = 250;
           if (MouseWheelInput.field_e) {
-            ll.field_c.a(sb.field_e[12], 100, 2 * pk.field_h);
+            ll.field_c.playSample(sb.field_e[12], 100, 2 * pk.field_h);
           }
           var5 = 16711680;
         }
         if (6 == this.kind) {
           if (MouseWheelInput.field_e) {
-            ll.field_c.a(sb.field_e[12], 100, pk.field_h * 2);
+            ll.field_c.playSample(sb.field_e[12], 100, pk.field_h * 2);
           }
           var4 = 250;
           var5 = 16711680;
@@ -2063,20 +2063,20 @@ final class GameEntity {
           if (param1 == 0 ||
             param1 == 1 ||
             param1 == 8) {
-            ll.field_c.a(sb.field_e[2], 100, var7 * pk.field_h / 50);
+            ll.field_c.playSample(sb.field_e[2], 100, var7 * pk.field_h / 50);
           }
           if (param1 == 2 ||
             param1 == 3 ||
             param1 == 9) {
-            ll.field_c.a(sb.field_e[4], 100, var7 * pk.field_h / 50);
+            ll.field_c.playSample(sb.field_e[4], 100, var7 * pk.field_h / 50);
           }
           if (param1 == 4 ||
             5 == param1 ||
             10 == param1) {
-            ll.field_c.a(sb.field_e[3], 100, pk.field_h * var7 / 50);
+            ll.field_c.playSample(sb.field_e[3], 100, pk.field_h * var7 / 50);
           }
           if (param1 == -1) {
-            ll.field_c.a(sb.field_e[40], 100, pk.field_h);
+            ll.field_c.playSample(sb.field_e[40], 100, pk.field_h);
           }
         }
     }

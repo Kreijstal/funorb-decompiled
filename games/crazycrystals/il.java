@@ -97,16 +97,16 @@ final class il extends ResultScenePhase {
           }
           var6Lifetime1 = var3 / var4;
           if (this.field_g == null) {
-            this.field_g = RawPcmStream.a(je.field_f, 150, var5_intLifetime1, var6Lifetime1);
-            this.field_g.f(-1);
-            tb.field_d.b(this.field_g);
+            this.field_g = RawPcmStream.createForPlaybackRateWithPan(je.field_f, 150, var5_intLifetime1, var6Lifetime1);
+            this.field_g.setLoopCount(-1);
+            tb.field_d.addChildStream(this.field_g);
           }
           this.field_g.setVolumeAndPan(var5_intLifetime1, var6Lifetime1);
           this.field_f = 2;
           return (ResultScenePhase) (this);
         }
-        tb.field_d.a(this.field_g);
-        tb.field_d.a(dn.field_e, 100, 128 * gi.field_m, 8192);
+        tb.field_d.removeChildStream(this.field_g);
+        tb.field_d.playSampleWithPan(dn.field_e, 100, 128 * gi.field_m, 8192);
         var5 = new WallTile(-1, 1);
         for (var6Lifetime2 = 0; var6Lifetime2 < pd.field_g.length; var6Lifetime2++) {
           var7Lifetime1 = q.field_a[ma.field_n[var6Lifetime2]].field_i;
@@ -163,7 +163,7 @@ final class il extends ResultScenePhase {
           field_h = (am[]) null;
         }
         if (null != this.field_g) {
-          tb.field_d.a(this.field_g);
+          tb.field_d.removeChildStream(this.field_g);
         }
     }
 
@@ -171,7 +171,7 @@ final class il extends ResultScenePhase {
         vh dupTemp$0 = null;
         int var3 = CrazyCrystals.field_B;
         if (null != this.field_g) {
-          tb.field_d.a(this.field_g);
+          tb.field_d.removeChildStream(this.field_g);
         }
         int var2 = 0;
         if (param0 != -90) {

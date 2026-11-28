@@ -16,7 +16,7 @@ final class gka extends AnimationNode {
         int var2 = -95 / ((12 - param0) / 62);
         bs.field_k = param1;
         if (null != uf.field_c) {
-          uf.field_c.a(23679, param1);
+          uf.field_c.setMasterVolume(23679, param1);
           if (null != kw.field_j) {
             kw.field_j.a(param1, true);
             return;

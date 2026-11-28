@@ -120,8 +120,8 @@ final class AccountRegistrationPanel extends td implements jg, ButtonListener, a
           uh.field_b[param1] = PcmSampleStream.createForPlaybackRate(va.field_d[param1], 100, nd.field_G[param1]);
         }
         if (!uh.field_b[param1].isLinked(10000536)) {
-          uh.field_b[param1].e(0);
-          uh.field_b[param1].f(param0);
+          uh.field_b[param1].setSamplePosition(0);
+          uh.field_b[param1].setLoopCount(param0);
           bd.a(-31085, uh.field_b[param1]);
         }
         if (param2 != 23636) {

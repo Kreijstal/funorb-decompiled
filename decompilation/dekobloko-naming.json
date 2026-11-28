@@ -55065,7 +55065,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:RawPcmStream.performAction0455(I)V#0"
+      "renamedSymbol": "L:RawPcmStream.setSamplePosition(I)V#0"
     },
     {
       "symbol": "L:ei.g()Z#0",
@@ -55073,7 +55073,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:RawPcmStream.computeBoolean0460()Z#0"
+      "renamedSymbol": "L:RawPcmStream.finishOrContinueVolumeRamp()Z#0"
     },
     {
       "symbol": "L:ei.g()Z#1",
@@ -55081,7 +55081,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:RawPcmStream.computeBoolean0460()Z#1"
+      "renamedSymbol": "L:RawPcmStream.finishOrContinueVolumeRamp()Z#1"
     },
     {
       "symbol": "L:ei.g()Z#2",
@@ -55089,7 +55089,7 @@
       "to": "integerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:RawPcmStream.computeBoolean0460()Z#2"
+      "renamedSymbol": "L:RawPcmStream.finishOrContinueVolumeRamp()Z#2"
     },
     {
       "symbol": "L:ei.g(I)V#0",
@@ -55097,7 +55097,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:RawPcmStream.performAction0461(I)V#0"
+      "renamedSymbol": "L:RawPcmStream.fadeOutAndUnlink(I)V#0"
     },
     {
       "symbol": "L:ei.g(I)V#1",
@@ -55105,7 +55105,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:RawPcmStream.performAction0461(I)V#1"
+      "renamedSymbol": "L:RawPcmStream.fadeOutAndUnlink(I)V#1"
     },
     {
       "symbol": "L:ek.a(IIILce;II)V#0",
@@ -151158,10 +151158,10 @@
     {
       "symbol": "M:ei.a(III)V",
       "originalName": "a",
-      "to": "performAction0425",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:RawPcmStream.performAction0425(III)V"
+      "to": "rampScaledVolumeAndPan",
+      "evidence": "Source-purpose review: Converts volume and pan to internal units before scheduling the gain ramp.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RawPcmStream.rampScaledVolumeAndPan(III)V"
     },
     {
       "symbol": "M:ei.a(II[B[IIIIIIIIIILei;II)I",
@@ -151214,10 +151214,10 @@
     {
       "symbol": "M:ei.a(Z)V",
       "originalName": "a",
-      "to": "performAction0432",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:RawPcmStream.performAction0432(Z)V"
+      "to": "setPingPongLoop",
+      "evidence": "Source-purpose review: Selects whether the loop reflects playback direction or wraps at a sample boundary.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RawPcmStream.setPingPongLoop(Z)V"
     },
     {
       "symbol": "M:ei.a([B[IIIIIIIILei;)I",
@@ -151310,10 +151310,10 @@
     {
       "symbol": "M:ei.b(Lud;III)Lei;",
       "originalName": "b",
-      "to": "computeRawPcmStream0443",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:RawPcmStream.computeRawPcmStream0443(LRawSound;III)LRawPcmStream;"
+      "to": "createForSampleStepWithScaledVolumeAndPan",
+      "evidence": "Source-purpose review: Creates a stream with an explicit fixed-point sample step and caller-supplied volume and pan. Converts volume and pan to internal units.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RawPcmStream.createForSampleStepWithScaledVolumeAndPan(LRawSound;III)LRawPcmStream;"
     },
     {
       "symbol": "M:ei.b([B[IIIIIIIILei;)I",
@@ -151382,10 +151382,10 @@
     {
       "symbol": "M:ei.c(Lud;III)Lei;",
       "originalName": "c",
-      "to": "computeRawPcmStream0450",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:RawPcmStream.computeRawPcmStream0450(LRawSound;III)LRawPcmStream;"
+      "to": "createForPlaybackRateWithPan",
+      "evidence": "Source-purpose review: Creates a stream at a sample-rate-adjusted playback rate with caller-supplied volume and pan.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RawPcmStream.createForPlaybackRateWithPan(LRawSound;III)LRawPcmStream;"
     },
     {
       "symbol": "M:ei.d()Lol;",
@@ -151430,10 +151430,10 @@
     {
       "symbol": "M:ei.e(I)V",
       "originalName": "e",
-      "to": "performAction0455",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:RawPcmStream.performAction0455(I)V"
+      "to": "setSamplePosition",
+      "evidence": "Source-purpose review: Converts a whole-sample index to fixed point, clamps it to the sample data, and stores the playback position.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RawPcmStream.setSamplePosition(I)V"
     },
     {
       "symbol": "M:ei.e(II)V",
@@ -151454,34 +151454,34 @@
     {
       "symbol": "M:ei.f(I)V",
       "originalName": "f",
-      "to": "performAction0458",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:RawPcmStream.performAction0458(I)V"
+      "to": "setLoopCount",
+      "evidence": "Source-purpose review: Sets the remaining loop count consumed by the mixer. Negative values select indefinite looping.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RawPcmStream.setLoopCount(I)V"
     },
     {
       "symbol": "M:ei.f(II)V",
       "originalName": "f",
-      "to": "performAction0459",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:RawPcmStream.performAction0459(II)V"
+      "to": "setLoopBounds",
+      "evidence": "Source-purpose review: Sets the first sample index and the exclusive ending index for looping.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RawPcmStream.setLoopBounds(II)V"
     },
     {
       "symbol": "M:ei.g()Z",
       "originalName": "g",
-      "to": "computeBoolean0460",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:RawPcmStream.computeBoolean0460()Z"
+      "to": "finishOrContinueVolumeRamp",
+      "evidence": "Source-purpose review: Completes an exact gain ramp, unlinks a finished fade-out, or schedules the remaining gain correction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RawPcmStream.finishOrContinueVolumeRamp()Z"
     },
     {
       "symbol": "M:ei.g(I)V",
       "originalName": "g",
-      "to": "performAction0461",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:RawPcmStream.performAction0461(I)V"
+      "to": "fadeOutAndUnlink",
+      "evidence": "Source-purpose review: Schedules a gain ramp to silence and sets the fade-out sentinel used to unlink the stream.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RawPcmStream.fadeOutAndUnlink(I)V"
     },
     {
       "symbol": "M:ei.h()I",
@@ -178201,7 +178201,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.performAction0425(III)V#0"
+      "renamedSymbol": "P:RawPcmStream.rampScaledVolumeAndPan(III)V#0"
     },
     {
       "symbol": "P:ei.a(III)V#1",
@@ -178209,7 +178209,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.performAction0425(III)V#1"
+      "renamedSymbol": "P:RawPcmStream.rampScaledVolumeAndPan(III)V#1"
     },
     {
       "symbol": "P:ei.a(III)V#2",
@@ -178217,7 +178217,7 @@
       "to": "integerArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.performAction0425(III)V#2"
+      "renamedSymbol": "P:RawPcmStream.rampScaledVolumeAndPan(III)V#2"
     },
     {
       "symbol": "P:ei.a(II[B[IIIIIIIIIILei;II)I#0",
@@ -178793,7 +178793,7 @@
       "to": "booleanArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.performAction0432(Z)V#0"
+      "renamedSymbol": "P:RawPcmStream.setPingPongLoop(Z)V#0"
     },
     {
       "symbol": "P:ei.a([B[IIIIIIIILei;)I#0",
@@ -179569,7 +179569,7 @@
       "to": "rawSoundArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.computeRawPcmStream0443(LRawSound;III)LRawPcmStream;#0"
+      "renamedSymbol": "P:RawPcmStream.createForSampleStepWithScaledVolumeAndPan(LRawSound;III)LRawPcmStream;#0"
     },
     {
       "symbol": "P:ei.b(Lud;III)Lei;#1",
@@ -179577,7 +179577,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.computeRawPcmStream0443(LRawSound;III)LRawPcmStream;#1"
+      "renamedSymbol": "P:RawPcmStream.createForSampleStepWithScaledVolumeAndPan(LRawSound;III)LRawPcmStream;#1"
     },
     {
       "symbol": "P:ei.b(Lud;III)Lei;#2",
@@ -179585,7 +179585,7 @@
       "to": "integerArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.computeRawPcmStream0443(LRawSound;III)LRawPcmStream;#2"
+      "renamedSymbol": "P:RawPcmStream.createForSampleStepWithScaledVolumeAndPan(LRawSound;III)LRawPcmStream;#2"
     },
     {
       "symbol": "P:ei.b(Lud;III)Lei;#3",
@@ -179593,7 +179593,7 @@
       "to": "integerArgument4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.computeRawPcmStream0443(LRawSound;III)LRawPcmStream;#3"
+      "renamedSymbol": "P:RawPcmStream.createForSampleStepWithScaledVolumeAndPan(LRawSound;III)LRawPcmStream;#3"
     },
     {
       "symbol": "P:ei.b([B[IIIIIIIILei;)I#0",
@@ -179953,7 +179953,7 @@
       "to": "rawSoundArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.computeRawPcmStream0450(LRawSound;III)LRawPcmStream;#0"
+      "renamedSymbol": "P:RawPcmStream.createForPlaybackRateWithPan(LRawSound;III)LRawPcmStream;#0"
     },
     {
       "symbol": "P:ei.c(Lud;III)Lei;#1",
@@ -179961,7 +179961,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.computeRawPcmStream0450(LRawSound;III)LRawPcmStream;#1"
+      "renamedSymbol": "P:RawPcmStream.createForPlaybackRateWithPan(LRawSound;III)LRawPcmStream;#1"
     },
     {
       "symbol": "P:ei.c(Lud;III)Lei;#2",
@@ -179969,7 +179969,7 @@
       "to": "integerArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.computeRawPcmStream0450(LRawSound;III)LRawPcmStream;#2"
+      "renamedSymbol": "P:RawPcmStream.createForPlaybackRateWithPan(LRawSound;III)LRawPcmStream;#2"
     },
     {
       "symbol": "P:ei.c(Lud;III)Lei;#3",
@@ -179977,7 +179977,7 @@
       "to": "integerArgument4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.computeRawPcmStream0450(LRawSound;III)LRawPcmStream;#3"
+      "renamedSymbol": "P:RawPcmStream.createForPlaybackRateWithPan(LRawSound;III)LRawPcmStream;#3"
     },
     {
       "symbol": "P:ei.d(I)V#0",
@@ -180121,7 +180121,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.performAction0455(I)V#0"
+      "renamedSymbol": "P:RawPcmStream.setSamplePosition(I)V#0"
     },
     {
       "symbol": "P:ei.e(II)V#0",
@@ -180145,7 +180145,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.performAction0458(I)V#0"
+      "renamedSymbol": "P:RawPcmStream.setLoopCount(I)V#0"
     },
     {
       "symbol": "P:ei.f(II)V#0",
@@ -180153,7 +180153,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.performAction0459(II)V#0"
+      "renamedSymbol": "P:RawPcmStream.setLoopBounds(II)V#0"
     },
     {
       "symbol": "P:ei.f(II)V#1",
@@ -180161,7 +180161,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.performAction0459(II)V#1"
+      "renamedSymbol": "P:RawPcmStream.setLoopBounds(II)V#1"
     },
     {
       "symbol": "P:ei.g(I)V#0",
@@ -180169,7 +180169,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:RawPcmStream.performAction0461(I)V#0"
+      "renamedSymbol": "P:RawPcmStream.fadeOutAndUnlink(I)V#0"
     },
     {
       "symbol": "P:ek.<init>(Ljava/lang/String;Lgl;Lkg;)V#0",
@@ -299430,7 +299430,7 @@
     },
     {
       "symbol": "L:ei.e(I)V#0",
-      "renamedSymbol": "L:RawPcmStream.performAction0455(I)V#0",
+      "renamedSymbol": "L:RawPcmStream.setSamplePosition(I)V#0",
       "originalName": "var2",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -299441,7 +299441,7 @@
     },
     {
       "symbol": "L:ei.g()Z#0",
-      "renamedSymbol": "L:RawPcmStream.computeBoolean0460()Z#0",
+      "renamedSymbol": "L:RawPcmStream.finishOrContinueVolumeRamp()Z#0",
       "originalName": "var1",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -299452,7 +299452,7 @@
     },
     {
       "symbol": "L:ei.g()Z#1",
-      "renamedSymbol": "L:RawPcmStream.computeBoolean0460()Z#1",
+      "renamedSymbol": "L:RawPcmStream.finishOrContinueVolumeRamp()Z#1",
       "originalName": "var2",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -299463,7 +299463,7 @@
     },
     {
       "symbol": "L:ei.g()Z#2",
-      "renamedSymbol": "L:RawPcmStream.computeBoolean0460()Z#2",
+      "renamedSymbol": "L:RawPcmStream.finishOrContinueVolumeRamp()Z#2",
       "originalName": "var3",
       "renamedName": "integerLocal3",
       "declaration": {
@@ -299474,7 +299474,7 @@
     },
     {
       "symbol": "L:ei.g(I)V#0",
-      "renamedSymbol": "L:RawPcmStream.performAction0461(I)V#0",
+      "renamedSymbol": "L:RawPcmStream.fadeOutAndUnlink(I)V#0",
       "originalName": "var2",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -299485,7 +299485,7 @@
     },
     {
       "symbol": "L:ei.g(I)V#1",
-      "renamedSymbol": "L:RawPcmStream.performAction0461(I)V#1",
+      "renamedSymbol": "L:RawPcmStream.fadeOutAndUnlink(I)V#1",
       "originalName": "var2Lifetime1",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -436017,9 +436017,9 @@
     },
     {
       "symbol": "M:ei.a(III)V",
-      "renamedSymbol": "M:RawPcmStream.performAction0425(III)V",
+      "renamedSymbol": "M:RawPcmStream.rampScaledVolumeAndPan(III)V",
       "originalName": "a",
-      "renamedName": "performAction0425",
+      "renamedName": "rampScaledVolumeAndPan",
       "declaration": {
         "file": "ei.java",
         "start": 27213,
@@ -436094,9 +436094,9 @@
     },
     {
       "symbol": "M:ei.a(Z)V",
-      "renamedSymbol": "M:RawPcmStream.performAction0432(Z)V",
+      "renamedSymbol": "M:RawPcmStream.setPingPongLoop(Z)V",
       "originalName": "a",
-      "renamedName": "performAction0432",
+      "renamedName": "setPingPongLoop",
       "declaration": {
         "file": "ei.java",
         "start": 12295,
@@ -436226,9 +436226,9 @@
     },
     {
       "symbol": "M:ei.b(Lud;III)Lei;",
-      "renamedSymbol": "M:RawPcmStream.computeRawPcmStream0443(LRawSound;III)LRawPcmStream;",
+      "renamedSymbol": "M:RawPcmStream.createForSampleStepWithScaledVolumeAndPan(LRawSound;III)LRawPcmStream;",
       "originalName": "b",
-      "renamedName": "computeRawPcmStream0443",
+      "renamedName": "createForSampleStepWithScaledVolumeAndPan",
       "declaration": {
         "file": "ei.java",
         "start": 27507,
@@ -436325,9 +436325,9 @@
     },
     {
       "symbol": "M:ei.c(Lud;III)Lei;",
-      "renamedSymbol": "M:RawPcmStream.computeRawPcmStream0450(LRawSound;III)LRawPcmStream;",
+      "renamedSymbol": "M:RawPcmStream.createForPlaybackRateWithPan(LRawSound;III)LRawPcmStream;",
       "originalName": "c",
-      "renamedName": "computeRawPcmStream0450",
+      "renamedName": "createForPlaybackRateWithPan",
       "declaration": {
         "file": "ei.java",
         "start": 744,
@@ -436391,9 +436391,9 @@
     },
     {
       "symbol": "M:ei.e(I)V",
-      "renamedSymbol": "M:RawPcmStream.performAction0455(I)V",
+      "renamedSymbol": "M:RawPcmStream.setSamplePosition(I)V",
       "originalName": "e",
-      "renamedName": "performAction0455",
+      "renamedName": "setSamplePosition",
       "declaration": {
         "file": "ei.java",
         "start": 51796,
@@ -436424,9 +436424,9 @@
     },
     {
       "symbol": "M:ei.f(I)V",
-      "renamedSymbol": "M:RawPcmStream.performAction0458(I)V",
+      "renamedSymbol": "M:RawPcmStream.setLoopCount(I)V",
       "originalName": "f",
-      "renamedName": "performAction0458",
+      "renamedName": "setLoopCount",
       "declaration": {
         "file": "ei.java",
         "start": 49283,
@@ -436435,9 +436435,9 @@
     },
     {
       "symbol": "M:ei.f(II)V",
-      "renamedSymbol": "M:RawPcmStream.performAction0459(II)V",
+      "renamedSymbol": "M:RawPcmStream.setLoopBounds(II)V",
       "originalName": "f",
-      "renamedName": "performAction0459",
+      "renamedName": "setLoopBounds",
       "declaration": {
         "file": "ei.java",
         "start": 20261,
@@ -436446,9 +436446,9 @@
     },
     {
       "symbol": "M:ei.g()Z",
-      "renamedSymbol": "M:RawPcmStream.computeBoolean0460()Z",
+      "renamedSymbol": "M:RawPcmStream.finishOrContinueVolumeRamp()Z",
       "originalName": "g",
-      "renamedName": "computeBoolean0460",
+      "renamedName": "finishOrContinueVolumeRamp",
       "declaration": {
         "file": "ei.java",
         "start": 18157,
@@ -436457,9 +436457,9 @@
     },
     {
       "symbol": "M:ei.g(I)V",
-      "renamedSymbol": "M:RawPcmStream.performAction0461(I)V",
+      "renamedSymbol": "M:RawPcmStream.fadeOutAndUnlink(I)V",
       "originalName": "g",
-      "renamedName": "performAction0461",
+      "renamedName": "fadeOutAndUnlink",
       "declaration": {
         "file": "ei.java",
         "start": 44613,
@@ -476145,7 +476145,7 @@
     },
     {
       "symbol": "P:ei.a(III)V#0",
-      "renamedSymbol": "P:RawPcmStream.performAction0425(III)V#0",
+      "renamedSymbol": "P:RawPcmStream.rampScaledVolumeAndPan(III)V#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -476156,7 +476156,7 @@
     },
     {
       "symbol": "P:ei.a(III)V#1",
-      "renamedSymbol": "P:RawPcmStream.performAction0425(III)V#1",
+      "renamedSymbol": "P:RawPcmStream.rampScaledVolumeAndPan(III)V#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -476167,7 +476167,7 @@
     },
     {
       "symbol": "P:ei.a(III)V#2",
-      "renamedSymbol": "P:RawPcmStream.performAction0425(III)V#2",
+      "renamedSymbol": "P:RawPcmStream.rampScaledVolumeAndPan(III)V#2",
       "originalName": "param2",
       "renamedName": "integerArgument3",
       "declaration": {
@@ -476959,7 +476959,7 @@
     },
     {
       "symbol": "P:ei.a(Z)V#0",
-      "renamedSymbol": "P:RawPcmStream.performAction0432(Z)V#0",
+      "renamedSymbol": "P:RawPcmStream.setPingPongLoop(Z)V#0",
       "originalName": "param0",
       "renamedName": "booleanArgument1",
       "declaration": {
@@ -478026,7 +478026,7 @@
     },
     {
       "symbol": "P:ei.b(Lud;III)Lei;#0",
-      "renamedSymbol": "P:RawPcmStream.computeRawPcmStream0443(LRawSound;III)LRawPcmStream;#0",
+      "renamedSymbol": "P:RawPcmStream.createForSampleStepWithScaledVolumeAndPan(LRawSound;III)LRawPcmStream;#0",
       "originalName": "param0",
       "renamedName": "rawSoundArgument1",
       "declaration": {
@@ -478037,7 +478037,7 @@
     },
     {
       "symbol": "P:ei.b(Lud;III)Lei;#1",
-      "renamedSymbol": "P:RawPcmStream.computeRawPcmStream0443(LRawSound;III)LRawPcmStream;#1",
+      "renamedSymbol": "P:RawPcmStream.createForSampleStepWithScaledVolumeAndPan(LRawSound;III)LRawPcmStream;#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -478048,7 +478048,7 @@
     },
     {
       "symbol": "P:ei.b(Lud;III)Lei;#2",
-      "renamedSymbol": "P:RawPcmStream.computeRawPcmStream0443(LRawSound;III)LRawPcmStream;#2",
+      "renamedSymbol": "P:RawPcmStream.createForSampleStepWithScaledVolumeAndPan(LRawSound;III)LRawPcmStream;#2",
       "originalName": "param2",
       "renamedName": "integerArgument3",
       "declaration": {
@@ -478059,7 +478059,7 @@
     },
     {
       "symbol": "P:ei.b(Lud;III)Lei;#3",
-      "renamedSymbol": "P:RawPcmStream.computeRawPcmStream0443(LRawSound;III)LRawPcmStream;#3",
+      "renamedSymbol": "P:RawPcmStream.createForSampleStepWithScaledVolumeAndPan(LRawSound;III)LRawPcmStream;#3",
       "originalName": "param3",
       "renamedName": "integerArgument4",
       "declaration": {
@@ -478554,7 +478554,7 @@
     },
     {
       "symbol": "P:ei.c(Lud;III)Lei;#0",
-      "renamedSymbol": "P:RawPcmStream.computeRawPcmStream0450(LRawSound;III)LRawPcmStream;#0",
+      "renamedSymbol": "P:RawPcmStream.createForPlaybackRateWithPan(LRawSound;III)LRawPcmStream;#0",
       "originalName": "param0",
       "renamedName": "rawSoundArgument1",
       "declaration": {
@@ -478565,7 +478565,7 @@
     },
     {
       "symbol": "P:ei.c(Lud;III)Lei;#1",
-      "renamedSymbol": "P:RawPcmStream.computeRawPcmStream0450(LRawSound;III)LRawPcmStream;#1",
+      "renamedSymbol": "P:RawPcmStream.createForPlaybackRateWithPan(LRawSound;III)LRawPcmStream;#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -478576,7 +478576,7 @@
     },
     {
       "symbol": "P:ei.c(Lud;III)Lei;#2",
-      "renamedSymbol": "P:RawPcmStream.computeRawPcmStream0450(LRawSound;III)LRawPcmStream;#2",
+      "renamedSymbol": "P:RawPcmStream.createForPlaybackRateWithPan(LRawSound;III)LRawPcmStream;#2",
       "originalName": "param2",
       "renamedName": "integerArgument3",
       "declaration": {
@@ -478587,7 +478587,7 @@
     },
     {
       "symbol": "P:ei.c(Lud;III)Lei;#3",
-      "renamedSymbol": "P:RawPcmStream.computeRawPcmStream0450(LRawSound;III)LRawPcmStream;#3",
+      "renamedSymbol": "P:RawPcmStream.createForPlaybackRateWithPan(LRawSound;III)LRawPcmStream;#3",
       "originalName": "param3",
       "renamedName": "integerArgument4",
       "declaration": {
@@ -478785,7 +478785,7 @@
     },
     {
       "symbol": "P:ei.e(I)V#0",
-      "renamedSymbol": "P:RawPcmStream.performAction0455(I)V#0",
+      "renamedSymbol": "P:RawPcmStream.setSamplePosition(I)V#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -478818,7 +478818,7 @@
     },
     {
       "symbol": "P:ei.f(I)V#0",
-      "renamedSymbol": "P:RawPcmStream.performAction0458(I)V#0",
+      "renamedSymbol": "P:RawPcmStream.setLoopCount(I)V#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -478829,7 +478829,7 @@
     },
     {
       "symbol": "P:ei.f(II)V#0",
-      "renamedSymbol": "P:RawPcmStream.performAction0459(II)V#0",
+      "renamedSymbol": "P:RawPcmStream.setLoopBounds(II)V#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -478840,7 +478840,7 @@
     },
     {
       "symbol": "P:ei.f(II)V#1",
-      "renamedSymbol": "P:RawPcmStream.performAction0459(II)V#1",
+      "renamedSymbol": "P:RawPcmStream.setLoopBounds(II)V#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -478851,7 +478851,7 @@
     },
     {
       "symbol": "P:ei.g(I)V#0",
-      "renamedSymbol": "P:RawPcmStream.performAction0461(I)V#0",
+      "renamedSymbol": "P:RawPcmStream.fadeOutAndUnlink(I)V#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -708281,7 +708281,7 @@
       "original": "client.java",
       "renamed": "DekoBlokoClient.java",
       "inputSha256": "762f5e43ad92e5c59eb72fec239e808c117daf40f5ad8dc76e6e4bdc4a4cf96f",
-      "outputSha256": "d13960651d1b211602e7b17e4bb08888680f738d484160d30db6b683f85a83fc",
+      "outputSha256": "9deb9d03cbe5c65f6d1585946fe38b38a78012b46bf9bf1dd3459826eafd598e",
       "edits": [
         {
           "start": 57,
@@ -732285,7 +732285,7 @@
           "end": 64740,
           "symbol": "M:ei.f(I)V",
           "original": "f",
-          "renamed": "performAction0458"
+          "renamed": "setLoopCount"
         },
         {
           "start": 64764,
@@ -732404,7 +732404,7 @@
           "end": 64999,
           "symbol": "M:ei.g(I)V",
           "original": "g",
-          "renamed": "performAction0461"
+          "renamed": "fadeOutAndUnlink"
         },
         {
           "start": 65000,
@@ -732523,7 +732523,7 @@
           "end": 65244,
           "symbol": "M:ei.g(I)V",
           "original": "g",
-          "renamed": "performAction0461"
+          "renamed": "fadeOutAndUnlink"
         },
         {
           "start": 65245,
@@ -732705,7 +732705,7 @@
           "end": 65630,
           "symbol": "M:ei.g(I)V",
           "original": "g",
-          "renamed": "performAction0461"
+          "renamed": "fadeOutAndUnlink"
         },
         {
           "start": 65631,
@@ -814083,7 +814083,7 @@
       "original": "ei.java",
       "renamed": "RawPcmStream.java",
       "inputSha256": "02ab6ff643e4dd5a40eaaae03c3be51f4980cbf0fbaeabdc2198883125663873",
-      "outputSha256": "c88993e91b5e53bba0e8cdb44e5d01b2b91202be5cd9104bc96cc68f2cf363fe",
+      "outputSha256": "c9210ca720cb3aeff8305acab17ad2c7528a9669b25fe8afce5f2712d96275aa",
       "edits": [
         {
           "start": 50,
@@ -814300,7 +814300,7 @@
           "end": 745,
           "symbol": "M:ei.c(Lud;III)Lei;",
           "original": "c",
-          "renamed": "computeRawPcmStream0450"
+          "renamed": "createForPlaybackRateWithPan"
         },
         {
           "start": 746,
@@ -818794,7 +818794,7 @@
           "end": 12296,
           "symbol": "M:ei.a(Z)V",
           "original": "a",
-          "renamed": "performAction0432"
+          "renamed": "setPingPongLoop"
         },
         {
           "start": 12305,
@@ -819851,7 +819851,7 @@
           "end": 14590,
           "symbol": "M:ei.g()Z",
           "original": "g",
-          "renamed": "computeBoolean0460"
+          "renamed": "finishOrContinueVolumeRamp"
         },
         {
           "start": 14610,
@@ -821447,7 +821447,7 @@
           "end": 18158,
           "symbol": "M:ei.g()Z",
           "original": "g",
-          "renamed": "computeBoolean0460"
+          "renamed": "finishOrContinueVolumeRamp"
         },
         {
           "start": 18175,
@@ -822063,7 +822063,7 @@
           "end": 20262,
           "symbol": "M:ei.f(II)V",
           "original": "f",
-          "renamed": "performAction0459"
+          "renamed": "setLoopBounds"
         },
         {
           "start": 20267,
@@ -825101,7 +825101,7 @@
           "end": 27214,
           "symbol": "M:ei.a(III)V",
           "original": "a",
-          "renamed": "performAction0425"
+          "renamed": "rampScaledVolumeAndPan"
         },
         {
           "start": 27219,
@@ -825213,7 +825213,7 @@
           "end": 27508,
           "symbol": "M:ei.b(Lud;III)Lei;",
           "original": "b",
-          "renamed": "computeRawPcmStream0443"
+          "renamed": "createForSampleStepWithScaledVolumeAndPan"
         },
         {
           "start": 27509,
@@ -832647,7 +832647,7 @@
           "end": 44550,
           "symbol": "M:ei.g()Z",
           "original": "g",
-          "renamed": "computeBoolean0460"
+          "renamed": "finishOrContinueVolumeRamp"
         },
         {
           "start": 44570,
@@ -832661,7 +832661,7 @@
           "end": 44614,
           "symbol": "M:ei.g(I)V",
           "original": "g",
-          "renamed": "performAction0461"
+          "renamed": "fadeOutAndUnlink"
         },
         {
           "start": 44619,
@@ -834418,7 +834418,7 @@
           "end": 49284,
           "symbol": "M:ei.f(I)V",
           "original": "f",
-          "renamed": "performAction0458"
+          "renamed": "setLoopCount"
         },
         {
           "start": 49289,
@@ -835587,7 +835587,7 @@
           "end": 51797,
           "symbol": "M:ei.e(I)V",
           "original": "e",
-          "renamed": "performAction0455"
+          "renamed": "setSamplePosition"
         },
         {
           "start": 51802,
@@ -954342,7 +954342,7 @@
       "original": "ia.java",
       "renamed": "MidiSynthesizer.java",
       "inputSha256": "4f557a41c6dec8c3de30c725fe3d626a497df925fd7badfa5cae885e51653183",
-      "outputSha256": "460bad7efb24d4b717bb0e63e080564781dc63d47ca8409a2b7d5e83b74e5c6c",
+      "outputSha256": "8778101dcfb0935d649536cee66835ffc3804c23411925dd2ecd2ff4fbff3d3b",
       "edits": [
         {
           "start": 50,
@@ -955560,7 +955560,7 @@
           "end": 3627,
           "symbol": "M:ei.g(I)V",
           "original": "g",
-          "renamed": "performAction0461"
+          "renamed": "fadeOutAndUnlink"
         },
         {
           "start": 3628,
@@ -956652,7 +956652,7 @@
           "end": 6669,
           "symbol": "M:ei.a(III)V",
           "original": "a",
-          "renamed": "performAction0425"
+          "renamed": "rampScaledVolumeAndPan"
         },
         {
           "start": 6670,
@@ -965882,7 +965882,7 @@
           "end": 37880,
           "symbol": "M:ei.b(Lud;III)Lei;",
           "original": "b",
-          "renamed": "computeRawPcmStream0443"
+          "renamed": "createForSampleStepWithScaledVolumeAndPan"
         },
         {
           "start": 37881,
@@ -965924,7 +965924,7 @@
           "end": 37948,
           "symbol": "M:ei.f(II)V",
           "original": "f",
-          "renamed": "performAction0459"
+          "renamed": "setLoopBounds"
         },
         {
           "start": 37954,
@@ -966029,7 +966029,7 @@
           "end": 38152,
           "symbol": "M:ei.f(I)V",
           "original": "f",
-          "renamed": "performAction0458"
+          "renamed": "setLoopCount"
         },
         {
           "start": 38153,
@@ -966099,7 +966099,7 @@
           "end": 38316,
           "symbol": "M:ei.a(Z)V",
           "original": "a",
-          "renamed": "performAction0432"
+          "renamed": "setPingPongLoop"
         },
         {
           "start": 38317,
@@ -966127,7 +966127,7 @@
           "end": 38379,
           "symbol": "M:ei.e(I)V",
           "original": "e",
-          "renamed": "performAction0455"
+          "renamed": "setSamplePosition"
         },
         {
           "start": 38380,
@@ -966148,7 +966148,7 @@
           "end": 38407,
           "symbol": "M:ei.a(III)V",
           "original": "a",
-          "renamed": "performAction0425"
+          "renamed": "rampScaledVolumeAndPan"
         },
         {
           "start": 38408,
@@ -1138977,7 +1138977,7 @@
       "original": "lk.java",
       "renamed": "BucketBoard.java",
       "inputSha256": "ed0d8f07e4545d4d7e69e57bcd155869c08f7c159d3e86c7da39066bea79d35b",
-      "outputSha256": "6318671fba4ee578d7c9a463f2e4128c7ecc354f2555f94e312d5423cbb431c5",
+      "outputSha256": "7a856bd5af8d392f6a742876e735265e19eafe75ae1d79b02d54ae7a05766d8f",
       "edits": [
         {
           "start": 71,
@@ -1151951,7 +1151951,7 @@
           "end": 41664,
           "symbol": "M:ei.f(I)V",
           "original": "f",
-          "renamed": "performAction0458"
+          "renamed": "setLoopCount"
         },
         {
           "start": 41704,
@@ -1152070,7 +1152070,7 @@
           "end": 42004,
           "symbol": "M:ei.g(I)V",
           "original": "g",
-          "renamed": "performAction0461"
+          "renamed": "fadeOutAndUnlink"
         },
         {
           "start": 42005,
@@ -1152105,7 +1152105,7 @@
           "end": 42069,
           "symbol": "M:ei.c(Lud;III)Lei;",
           "original": "c",
-          "renamed": "computeRawPcmStream0450"
+          "renamed": "createForPlaybackRateWithPan"
         },
         {
           "start": 42070,
@@ -1152168,7 +1152168,7 @@
           "end": 42199,
           "symbol": "M:ei.f(I)V",
           "original": "f",
-          "renamed": "performAction0458"
+          "renamed": "setLoopCount"
         },
         {
           "start": 42221,
@@ -1152273,7 +1152273,7 @@
           "end": 42456,
           "symbol": "M:ei.g(I)V",
           "original": "g",
-          "renamed": "performAction0461"
+          "renamed": "fadeOutAndUnlink"
         },
         {
           "start": 42457,
@@ -1154583,7 +1154583,7 @@
           "end": 50389,
           "symbol": "M:ei.c(Lud;III)Lei;",
           "original": "c",
-          "renamed": "computeRawPcmStream0450"
+          "renamed": "createForPlaybackRateWithPan"
         },
         {
           "start": 50390,
@@ -1154639,7 +1154639,7 @@
           "end": 50480,
           "symbol": "M:ei.f(I)V",
           "original": "f",
-          "renamed": "performAction0458"
+          "renamed": "setLoopCount"
         },
         {
           "start": 50502,
@@ -1154954,7 +1154954,7 @@
           "end": 51457,
           "symbol": "M:ei.c(Lud;III)Lei;",
           "original": "c",
-          "renamed": "computeRawPcmStream0450"
+          "renamed": "createForPlaybackRateWithPan"
         },
         {
           "start": 51458,
@@ -1155010,7 +1155010,7 @@
           "end": 51548,
           "symbol": "M:ei.f(I)V",
           "original": "f",
-          "renamed": "performAction0458"
+          "renamed": "setLoopCount"
         },
         {
           "start": 51570,
@@ -1168599,7 +1168599,7 @@
           "end": 94160,
           "symbol": "M:ei.c(Lud;III)Lei;",
           "original": "c",
-          "renamed": "computeRawPcmStream0450"
+          "renamed": "createForPlaybackRateWithPan"
         },
         {
           "start": 94161,
@@ -1168676,7 +1168676,7 @@
           "end": 94282,
           "symbol": "M:ei.f(I)V",
           "original": "f",
-          "renamed": "performAction0458"
+          "renamed": "setLoopCount"
         },
         {
           "start": 94300,
@@ -1763716,10 +1763716,10 @@
       "commit": "1655ca853d0d4027018f3efcdc37be76ab7895f4",
       "subdirectory": "games/dekobloko"
     },
-    "rulesSha256": "f8e39c9820eb8990092f8a790384f450082f00481e8bd4803efdb206405e5930",
+    "rulesSha256": "3cb4ffea86c66f4d4ff16eea2730ae458124702a40c0ea02d01866793766fe45",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "889d4c36cb11f8cc007dc663a1f4a375f6d1a96a9677a6a24037a9c86fb474d8",
-    "outputTreeSha256": "ce0c189b34b03798ec371777fff8be6cd1fd91a11c3deb2bf46225c998581e9a",
+    "outputTreeSha256": "5cd14f22e0c15ae05e529894ca1ef2bdc95f9950862dccb531ada9519333940f",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

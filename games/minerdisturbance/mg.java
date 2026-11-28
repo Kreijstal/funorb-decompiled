@@ -23,7 +23,7 @@ final class mg {
         try {
           var2 = new sa(param1, param1);
           hj.field_b.addLast((byte) -107, var2);
-          hj.field_f.b(param1);
+          hj.field_f.addChildStream(param1);
           if (param0 != 1963987425) {
             field_c = (String) null;
           }

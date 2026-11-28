@@ -13,7 +13,7 @@ final class hj {
     final static void a(int param0, byte param1) {
         nd.field_k = param0;
         if (null != qc.field_v) {
-          qc.field_v.c(-82, param0);
+          qc.field_v.setMasterVolume(-82, param0);
         }
         if (param1 > 121) {
           if (null != jp.field_n) {

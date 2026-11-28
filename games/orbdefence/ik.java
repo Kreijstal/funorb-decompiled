@@ -25,7 +25,7 @@ final class ik extends IntrusiveNode {
           }
           var2 = new hf(param0, param0);
           ba.field_b.addLast(-85, var2);
-          vb.field_f.a(param0);
+          vb.field_f.addChildStream(param0);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

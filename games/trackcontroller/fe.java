@@ -16,7 +16,7 @@ final class fe extends ButtonWidget {
 
     final static void a(PcmSampleStream param0, int param1) {
         try {
-          ProxySocketConnector.field_e.b(param0);
+          ProxySocketConnector.field_e.removeChildStream(param0);
           if (param1 != 2) {
             Archive var3 = (Archive) null;
             fe.a(-87, (Archive) null);

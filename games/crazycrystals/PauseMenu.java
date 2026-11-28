@@ -148,7 +148,7 @@ final class PauseMenu extends MenuOverlay {
               if (gi.field_m < 0) {
                 gi.field_m = 0;
               }
-              tb.field_d.a(fk.field_x[0], 100, 96 * gi.field_m, 8192);
+              tb.field_d.playSampleWithPan(fk.field_x[0], 100, 96 * gi.field_m, 8192);
             }
             if (this.field_e.b(125) &&
               gi.field_m < 64) {
@@ -156,17 +156,17 @@ final class PauseMenu extends MenuOverlay {
               if (64 < gi.field_m) {
                 gi.field_m = 64;
               }
-              tb.field_d.a(fk.field_x[0], 100, gi.field_m * 96, 8192);
+              tb.field_d.playSampleWithPan(fk.field_x[0], 100, gi.field_m * 96, 8192);
             }
             if (this.field_e.b(true) &&
               gi.field_m > 0) {
               gi.field_m = 0;
-              tb.field_d.a(fk.field_x[0], 100, 96 * gi.field_m, 8192);
+              tb.field_d.playSampleWithPan(fk.field_x[0], 100, 96 * gi.field_m, 8192);
             }
             if (this.field_e.e(-19741) &&
               gi.field_m < 64) {
               gi.field_m = 64;
-              tb.field_d.a(fk.field_x[0], 100, 96 * gi.field_m, 8192);
+              tb.field_d.playSampleWithPan(fk.field_x[0], 100, 96 * gi.field_m, 8192);
             }
             if (this.field_e.g(param0 ^ -70)) {
               var2_int = -6 - this.field_g + qh.field_i;
@@ -180,11 +180,11 @@ final class PauseMenu extends MenuOverlay {
               if (this.field_e.a(true) ||
                 var2_int != gi.field_m) {
                 gi.field_m = var2_int;
-                tb.field_d.a(fk.field_x[0], 100, 96 * gi.field_m, 8192);
+                tb.field_d.playSampleWithPan(fk.field_x[0], 100, 96 * gi.field_m, 8192);
               }
             } else {
               if (this.field_e.a(true)) {
-                tb.field_d.a(fk.field_x[0], 100, 96 * gi.field_m, 8192);
+                tb.field_d.playSampleWithPan(fk.field_x[0], 100, 96 * gi.field_m, 8192);
               }
             }
           }

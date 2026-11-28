@@ -18,7 +18,7 @@ final class SectorCacheStore {
             String var3 = (String) null;
             SectorCacheStore.a(-57, (String) null, -45);
           }
-          wa.field_j.a(param0);
+          wa.field_j.removeChildStream(param0);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ln.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

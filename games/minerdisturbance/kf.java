@@ -57,7 +57,7 @@ final class kf {
 
     final static void a(RawPcmStream param0, byte param1) {
         try {
-          hj.field_f.a(param0);
+          hj.field_f.removeChildStream(param0);
           if (param1 >= -36) {
             kf.clearStaticReferences(96);
           }

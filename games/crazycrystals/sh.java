@@ -16,7 +16,7 @@ final class sh extends qc {
 
     final void a(byte param0) {
         int var2 = -16 / ((param0 - 29) / 42);
-        tb.field_d.a(cb.field_p, 100, this.field_k * (gi.field_m * 48), this.field_j / this.field_k);
+        tb.field_d.playSampleWithPan(cb.field_p, 100, this.field_k * (gi.field_m * 48), this.field_j / this.field_k);
         this.field_j = 0;
         this.field_k = 0;
     }

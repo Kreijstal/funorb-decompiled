@@ -18,7 +18,7 @@ class gk extends IntrusiveNode {
 
     final void d(int param0) {
         if (!this.field_x) {
-          cb.field_a.a(this.field_n);
+          cb.field_a.addChildStream(this.field_n);
         }
         this.field_t.field_A.field_z.addLast((IntrusiveNode) (this), (byte) -66);
         if (param0 == 209) {
@@ -92,7 +92,7 @@ class gk extends IntrusiveNode {
         if (param0 != 6466) {
           return;
         }
-        this.field_n.b(eg.field_i * (fa.field_S * var13) + 16384 >> 15, var21);
+        this.field_n.setScaledVolumeAndPan(eg.field_i * (fa.field_S * var13) + 16384 >> 15, var21);
         if (var9 >= 0.01) {
           var9 = 1.0 / Math.sqrt(var9);
           var5 = var5 * var9;
@@ -131,7 +131,7 @@ class gk extends IntrusiveNode {
           }
         }
         if (this.field_x) {
-          cb.field_a.a(this.field_n);
+          cb.field_a.addChildStream(this.field_n);
           this.field_x = false;
         }
         return;
@@ -162,7 +162,7 @@ class gk extends IntrusiveNode {
           this.unlink(true);
           return;
         }
-        cb.field_a.b(this.field_n);
+        cb.field_a.removeChildStream(this.field_n);
         this.unlink(true);
     }
 
@@ -210,7 +210,7 @@ class gk extends IntrusiveNode {
         stackIn_8_0 = (var16 * var4 + var6 * var18 + var8 * var20) * 128.0;
         stackIn_9_1 = (!(var12 >= var10)) ? var10 : var12;
         var22 = (int)(-(stackIn_8_0 / stackIn_9_1) + 128.5);
-        this.field_n.b(16384 + fa.field_S * (var14 * eg.field_i) >> 15, var22);
+        this.field_n.setScaledVolumeAndPan(16384 + fa.field_S * (var14 * eg.field_i) >> 15, var22);
         if (var10 >= 0.1) {
           var10 = 1.0 / var10;
           var8 = var8 * var10;
@@ -229,7 +229,7 @@ class gk extends IntrusiveNode {
         if (!this.field_x) {
           return;
         }
-        cb.field_a.a(this.field_n);
+        cb.field_a.addChildStream(this.field_n);
         this.field_x = false;
     }
 
@@ -347,11 +347,11 @@ class gk extends IntrusiveNode {
         if (!this.field_x) {
           var2 = this.field_n;
           synchronized (var2) {
-            if (this.field_n.i()) {
+            if (this.field_n.isPlaybackReversed()) {
               this.field_p = true;
             }
             this.field_n.setSampleStepMagnitude(0);
-            this.field_n.h(0);
+            this.field_n.setScaledVolume(0);
           }
         }
         var2_int = -9 % ((-15 - param0) / 48);
@@ -364,9 +364,9 @@ class gk extends IntrusiveNode {
         try {
           this.field_s = param2;
           this.field_t = param1;
-          this.field_n = RawPcmStream.a(param2, 0, 0);
-          this.field_n.c(param3);
-          this.field_n.c(param4);
+          this.field_n = RawPcmStream.createForSampleStepWithScaledVolume(param2, 0, 0);
+          this.field_n.setLoopCount(param3);
+          this.field_n.setPingPongLoop(param4);
           param0.field_z.addLast((IntrusiveNode) (this), (byte) 106);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "gk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');

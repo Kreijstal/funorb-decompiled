@@ -29,8 +29,8 @@ final class aq {
           if (param0 == 1) {
             cr.field_c = PcmSampleStream.createWithVolume(wt.field_m[1], 256, 96);
             sla.field_a = PcmSampleStream.createWithVolume(wt.field_m[2], 256, 96);
-            cr.field_c.d(-1);
-            sla.field_a.d(-1);
+            cr.field_c.setLoopCount(-1);
+            sla.field_a.setLoopCount(-1);
             ofa.a(0, cr.field_c);
             ofa.a(0, sla.field_a);
             if (param1 != -1) {
@@ -50,9 +50,9 @@ final class aq {
             cr.field_c = PcmSampleStream.createWithVolume(wt.field_m[1], 256, 96);
             sla.field_a = PcmSampleStream.createWithVolume(wt.field_m[5], 256, 96);
             m.field_b = PcmSampleStream.createWithVolume(wt.field_m[4], 256, 96);
-            cr.field_c.d(-1);
-            sla.field_a.d(-1);
-            m.field_b.d(-1);
+            cr.field_c.setLoopCount(-1);
+            sla.field_a.setLoopCount(-1);
+            m.field_b.setLoopCount(-1);
             ofa.a(0, cr.field_c);
             ofa.a(~param1, sla.field_a);
             ofa.a(0, m.field_b);
@@ -64,8 +64,8 @@ final class aq {
           }
           cr.field_c = PcmSampleStream.createWithVolume(wt.field_m[1], 256, 96);
           sla.field_a = PcmSampleStream.createWithVolume(wt.field_m[3], 256, 96);
-          cr.field_c.d(-1);
-          sla.field_a.d(-1);
+          cr.field_c.setLoopCount(-1);
+          sla.field_a.setLoopCount(-1);
           ofa.a(param1 + 1, cr.field_c);
           ofa.a(0, sla.field_a);
           if (param1 == -1) {
@@ -75,7 +75,7 @@ final class aq {
           return;
         }
         cr.field_c = PcmSampleStream.createWithVolume(wt.field_m[0], 256, 96);
-        cr.field_c.d(-1);
+        cr.field_c.setLoopCount(-1);
         ofa.a(0, cr.field_c);
         if (param1 == -1) {
           return;

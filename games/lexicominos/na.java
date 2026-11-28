@@ -22,14 +22,14 @@ final class na {
         if (((PcmSampleStream) (Object) stackIn_4_0).isLinked(stackIn_5_1)) {
           return;
         }
-        var2.e(-1);
-        var2.c(0);
+        var2.setLoopCount(-1);
+        var2.setSamplePosition(0);
         if (oc.field_e < 0) {
-          var2.f(0);
+          var2.setScaledVolume(0);
         } else {
-          var2.f(oc.field_e * 128 / 256);
+          var2.setScaledVolume(oc.field_e * 128 / 256);
         }
-        wj.field_j.a(var2);
+        wj.field_j.addChildStream(var2);
     }
 
     final IntrusiveNode a(long param0, byte param1) {

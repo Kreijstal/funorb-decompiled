@@ -85,7 +85,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             var5 = (int)((long)this.field_y[param2.field_G] * (long)var4_int >> 6);
           }
-          param2.field_K.d(var5);
+          param2.field_K.setSamplePositionFixed(var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -106,23 +106,23 @@ final class MidiPcmStream extends PcmStream {
         int var4 = -4 / ((-76 - param1) / 43);
     }
 
-    private final void b(int param0, byte param1, int param2) {
+    private final void setPitchWheel(int param0, byte param1, int param2) {
         if (param1 != -81) {
           this.field_L = (int[]) null;
         }
         this.field_n[param2] = param0;
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void resetPlaybackChannels(int param0, boolean param1) {
         int var3 = 0;
         int var4 = TorChallenge.field_F ? 1 : 0;
         int var3Lifetime1;
         if (param1) {
-          this.a(true, -1);
+          this.removeChannelVoices(true, -1);
         } else {
-          this.a(-1, (byte) 105);
+          this.allNotesOff(-1, (byte) 105);
         }
-        this.a((byte) -97, -1);
+        this.resetChannel((byte) -97, -1);
         for (var3 = 0; 16 > var3; var3++) {
           this.field_t[var3] = this.field_q[var3];
         }
@@ -170,13 +170,13 @@ final class MidiPcmStream extends PcmStream {
     private final synchronized void clearMidiPlayback(int param0, boolean param1) {
         this.field_P.e();
         this.field_C = null;
-        this.a(param0 - 1863961209, param1);
+        this.resetPlaybackChannels(param0 - 1863961209, param1);
         if (param0 != 256) {
           this.field_q = (int[]) null;
         }
     }
 
-    private final void b(int param0, int param1) {
+    private final void handleMidiMessage(int param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -205,7 +205,7 @@ final class MidiPcmStream extends PcmStream {
           var4 = 15 & param0;
           var5 = (param0 & 32514) >> 8;
           var6 = 127 & param0 >> 16;
-          this.a(var4, var6, var5, 9208);
+          this.noteOff(var4, var6, var5, 9208);
           return;
         }
         if (var3 == 144) {
@@ -213,9 +213,9 @@ final class MidiPcmStream extends PcmStream {
           var5Lifetime1 = param0 >> 8 & 127;
           var6Lifetime1 = (8346425 & param0) >> 16;
           if (0 >= var6Lifetime1) {
-            this.a(var4Lifetime1, 64, var5Lifetime1, 9208);
+            this.noteOff(var4Lifetime1, 64, var5Lifetime1, 9208);
           } else {
-            this.b(var6Lifetime1, -10825, var4Lifetime1, var5Lifetime1);
+            this.noteOn(var6Lifetime1, -10825, var4Lifetime1, var5Lifetime1);
           }
           return;
         }
@@ -223,14 +223,14 @@ final class MidiPcmStream extends PcmStream {
           var4Lifetime2 = param0 & 15;
           var5Lifetime2 = (param0 & 32695) >> 8;
           var6Lifetime2 = 127 & param0 >> 16;
-          this.a(var4Lifetime2, (byte) -81, var6Lifetime2, var5Lifetime2);
+          this.onPolyPressure(var4Lifetime2, (byte) -81, var6Lifetime2, var5Lifetime2);
           return;
         }
         if (176 != var3) {
           if (192 == var3) {
             var4Lifetime3 = param0 & 15;
             var5Lifetime3 = (32658 & param0) >> 8;
-            this.a(this.field_F[var4Lifetime3] + var5Lifetime3, (byte) 122, var4Lifetime3);
+            this.setProgram(this.field_F[var4Lifetime3] + var5Lifetime3, (byte) 122, var4Lifetime3);
             return;
           }
           if (param1 < 16) {
@@ -239,20 +239,20 @@ final class MidiPcmStream extends PcmStream {
           if (208 == var3) {
             var4Lifetime3Lifetime1 = param0 & 15;
             var5Lifetime3Lifetime1 = (32585 & param0) >> 8;
-            this.c(var4Lifetime3Lifetime1, (byte) -15, var5Lifetime3Lifetime1);
+            this.onChannelPressure(var4Lifetime3Lifetime1, (byte) -15, var5Lifetime3Lifetime1);
             return;
           }
           if (var3 == 224) {
             var4Lifetime3Lifetime2 = param0 & 15;
             var5Lifetime3Lifetime2 = ((param0 & 32732) >> 8) + (16256 & param0 >> 9);
-            this.b(var5Lifetime3Lifetime2, (byte) -81, var4Lifetime3Lifetime2);
+            this.setPitchWheel(var5Lifetime3Lifetime2, (byte) -81, var4Lifetime3Lifetime2);
             return;
           }
           var3 = param0 & 255;
           if (var3 != 255) {
             return;
           }
-          this.a(-1863960953, true);
+          this.resetPlaybackChannels(-1863960953, true);
           return;
         }
         var4Lifetime4 = 15 & param0;
@@ -303,7 +303,7 @@ final class MidiPcmStream extends PcmStream {
         }
         if (65 == var5Lifetime4) {
           if (var6Lifetime3 < 64) {
-            this.c(var4Lifetime4, -101);
+            this.releaseUnmappedVoices(var4Lifetime4, -101);
             this.field_J[var4Lifetime4] = jh.a(this.field_J[var4Lifetime4], -3);
           } else {
             this.field_J[var4Lifetime4] = p.a(this.field_J[var4Lifetime4], 2);
@@ -322,13 +322,13 @@ final class MidiPcmStream extends PcmStream {
           this.field_D[var4Lifetime4] = var6Lifetime3 + (jh.a(this.field_D[var4Lifetime4], 16256) + 16384);
         }
         if (var5Lifetime4 == 120) {
-          this.a(true, var4Lifetime4);
+          this.removeChannelVoices(true, var4Lifetime4);
         }
         if (var5Lifetime4 == 121) {
-          this.a((byte) -97, var4Lifetime4);
+          this.resetChannel((byte) -97, var4Lifetime4);
         }
         if (123 == var5Lifetime4) {
-          this.a(var4Lifetime4, (byte) 125);
+          this.allNotesOff(var4Lifetime4, (byte) 125);
         }
         if (var5Lifetime4 == 6) {
           var7 = this.field_D[var4Lifetime4];
@@ -352,7 +352,7 @@ final class MidiPcmStream extends PcmStream {
           if (64 <= var6Lifetime3) {
             this.field_J[var4Lifetime4] = p.a(this.field_J[var4Lifetime4], 4);
           } else {
-            this.a(var4Lifetime4, -870);
+            this.resetChannelVoicePhases(var4Lifetime4, -870);
             this.field_J[var4Lifetime4] = jh.a(this.field_J[var4Lifetime4], -5);
           }
         }
@@ -374,12 +374,12 @@ final class MidiPcmStream extends PcmStream {
         return 0;
     }
 
-    private final void a(byte param0, int param1) {
+    private final void resetChannel(byte param0, int param1) {
         int var4;
         var4 = TorChallenge.field_F ? 1 : 0;
         if (param1 < 0) {
           for (param1 = 0; param1 < 16; param1++) {
-            this.a((byte) -97, param1);
+            this.resetChannel((byte) -97, param1);
           }
         } else {
           this.field_E[param1] = 12800;
@@ -388,11 +388,11 @@ final class MidiPcmStream extends PcmStream {
           this.field_n[param1] = 8192;
           this.field_o[param1] = 0;
           if (param0 != -97) {
-            this.a(-16, (byte) -76);
+            this.allNotesOff(-16, (byte) -76);
           }
           this.field_L[param1] = 8192;
-          this.c(param1, param0 ^ 15);
-          this.a(param1, -870);
+          this.releaseUnmappedVoices(param1, param0 ^ 15);
+          this.resetChannelVoicePhases(param1, -870);
           this.field_J[param1] = 0;
           this.field_D[param1] = 32767;
           this.field_p[param1] = 256;
@@ -401,7 +401,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void resetChannelVoicePhases(int param0, int param1) {
         dl var3 = null;
         int var4 = TorChallenge.field_F ? 1 : 0;
         if (0 != (4 & this.field_J[param0])) {
@@ -458,7 +458,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_I.skip(param0);
     }
 
-    private final int a(int param0, dl param1) {
+    private final int computeNotePan(int param0, dl param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -501,7 +501,7 @@ final class MidiPcmStream extends PcmStream {
           this.field_H = 0L;
           this.field_B = param1 ? true : false;
           if (param3 != 28050) {
-            this.a(true, 42);
+            this.removeChannelVoices(true, 42);
           }
           var5_int = this.field_P.f();
           for (var6 = 0; var6 < var5_int; var6++) {
@@ -517,14 +517,14 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void c(int param0, boolean param1) {
+    final synchronized void setMasterVolume(int param0, boolean param1) {
         if (param1) {
           return;
         }
         this.field_m = param0;
     }
 
-    private final void c(int param0, byte param1, int param2) {
+    private final void onChannelPressure(int param0, byte param1, int param2) {
         if (param1 != -15) {
           this.field_x = -108L;
         }
@@ -545,7 +545,7 @@ final class MidiPcmStream extends PcmStream {
         return this.field_P.hasMidiData();
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void removeChannelVoices(boolean param0, int param1) {
         int var4 = TorChallenge.field_F ? 1 : 0;
         dl var3 = (dl) (this.field_I.field_o.first((byte) -83));
         if (!param0) {
@@ -556,7 +556,7 @@ final class MidiPcmStream extends PcmStream {
           if (param1 < 0 ||
             param1 == var3.field_G) {
             if (var3.field_K != null) {
-              var3.field_K.g(AudioOutput.field_p / 100);
+              var3.field_K.fadeOutAndUnlink(AudioOutput.field_p / 100);
               if (var3.field_K.hasRemainingRampFrames()) {
                 this.field_I.field_u.addSubstream(var3.field_K);
               }
@@ -613,7 +613,7 @@ final class MidiPcmStream extends PcmStream {
             var6 = this.field_P.a(var2);
             if (var6 != 1) {
               if ((var6 & 128) != 0) {
-                this.b(var6, 109);
+                this.handleMidiMessage(var6, 109);
               }
               this.field_P.c(var2);
               this.field_P.f(var2);
@@ -631,7 +631,7 @@ final class MidiPcmStream extends PcmStream {
                 var3 != 0) {
                 this.field_P.a(var4);
               } else {
-                this.a(-1863960953, true);
+                this.resetPlaybackChannels(-1863960953, true);
                 this.field_P.e();
                 return;
               }
@@ -644,7 +644,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, byte param1, int param2) {
+    private final void setProgram(int param0, byte param1, int param2) {
         int var4 = 0;
         int var5 = TorChallenge.field_F ? 1 : 0;
         if (this.field_t[param2] != param0) {
@@ -659,7 +659,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void c(int param0, int param1) {
+    private final void releaseUnmappedVoices(int param0, int param1) {
         dl var3;
         int var4;
         int[] var5;
@@ -833,7 +833,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final int a(byte param0, dl param1) {
+    private final int computeNoteSampleStep(byte param0, dl param1) {
         int stackIn_2_0 = 0;
         int stackIn_13_0 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -889,10 +889,10 @@ final class MidiPcmStream extends PcmStream {
         }
         this.field_q[param1] = param0;
         this.field_F[param1] = jh.a(param0, -128);
-        this.a(param0, (byte) 122, param1);
+        this.setProgram(param0, (byte) 122, param1);
     }
 
-    private final void a(int param0, byte param1, int param2, int param3) {
+    private final void onPolyPressure(int param0, byte param1, int param2, int param3) {
         int var5 = 109 % ((param1 + 2) / 52);
     }
 
@@ -914,7 +914,7 @@ final class MidiPcmStream extends PcmStream {
         try {
           param4.field_z = AudioOutput.field_p / 100;
           if (param4.field_F >= 0 && (null == param4.field_K ||
-            param4.field_K.j())) {
+            param4.field_K.isSamplePositionOutOfRange())) {
             param4.a(1047574608);
             param4.unlink(true);
             if (param4.field_i > 0 &&
@@ -933,7 +933,7 @@ final class MidiPcmStream extends PcmStream {
             }
             param4.field_m = var6_int;
           }
-          param4.field_K.setSampleStepMagnitude(this.a((byte) 35, param4));
+          param4.field_K.setSampleStepMagnitude(this.computeNoteSampleStep((byte) 35, param4));
           var8 = param4.field_I;
           param4.field_A = param4.field_A + 1;
           param4.field_w = param4.field_w + var8.field_j;
@@ -988,10 +988,10 @@ final class MidiPcmStream extends PcmStream {
             }
           }
           if (var9 == 0) {
-            param4.field_K.rampVolumeAndPan(param4.field_z, this.computeVoiceVolume(param4, true), this.a(80, param4));
+            param4.field_K.rampVolumeAndPan(param4.field_z, this.computeVoiceVolume(param4, true), this.computeNotePan(80, param4));
             return false;
           }
-          param4.field_K.g(param4.field_z);
+          param4.field_K.fadeOutAndUnlink(param4.field_z);
           if (param2 != null) {
             param4.field_K.mixInto(param2, param0, param3);
           } else {
@@ -1105,7 +1105,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, byte param1) {
+    private final void allNotesOff(int param0, byte param1) {
         int var4 = TorChallenge.field_F ? 1 : 0;
         if (param1 <= 84) {
           return;
@@ -1129,7 +1129,7 @@ final class MidiPcmStream extends PcmStream {
         return (PcmStream) ((Object) this.field_I);
     }
 
-    private final void b(int param0, int param1, int param2, int param3) {
+    private final void noteOn(int param0, int param1, int param2, int param3) {
         int discarded$0 = 0;
         int stackIn_17_1 = 0;
         boolean stackIn_18_2 = false;
@@ -1143,7 +1143,7 @@ final class MidiPcmStream extends PcmStream {
         fb var11;
         fb var12;
         var9 = TorChallenge.field_F ? 1 : 0;
-        this.a(param2, 64, param3, 9208);
+        this.noteOff(param2, 64, param3, 9208);
         if (0 != (this.field_J[param2] & 2)) {
           var5 = (dl) (this.field_I.field_o.last((byte) 65));
           while (var5 != null) {
@@ -1174,7 +1174,7 @@ final class MidiPcmStream extends PcmStream {
         var7.field_G = param2;
         if (param1 != -10825) {
           var10 = (dl) null;
-          discarded$0 = this.a((byte) 114, (dl) null);
+          discarded$0 = this.computeNoteSampleStep((byte) 114, (dl) null);
         }
         var7.field_k = var6;
         var7.field_q = var11;
@@ -1190,15 +1190,15 @@ final class MidiPcmStream extends PcmStream {
         var7.field_F = -1;
         var7.field_D = 0;
         if (this.field_y[param2] != 0) {
-          var7.field_K = RawPcmStream.createForSampleStep(var6, this.a((byte) 35, var7), 0, this.a(96, var7));
+          var7.field_K = RawPcmStream.createForSampleStep(var6, this.computeNoteSampleStep((byte) 35, var7), 0, this.computeNotePan(96, var7));
           stackIn_17_1 = 256;
           stackIn_18_2 = !(var12.field_j[param3] >= 0);
           this.a(stackIn_17_1, stackIn_18_2, var7);
         } else {
-          var7.field_K = RawPcmStream.createForSampleStep(var6, this.a((byte) 35, var7), this.computeVoiceVolume(var7, true), this.a(param1 + 10713, var7));
+          var7.field_K = RawPcmStream.createForSampleStep(var6, this.computeNoteSampleStep((byte) 35, var7), this.computeVoiceVolume(var7, true), this.computeNotePan(param1 + 10713, var7));
         }
         if (var12.field_j[param3] < 0) {
-          var7.field_K.e(-1);
+          var7.field_K.setLoopCount(-1);
         }
         if (var7.field_i >= 0) {
           var8 = this.field_v[param2][var7.field_i];
@@ -1226,7 +1226,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void noteOff(int param0, int param1, int param2, int param3) {
         dl var6 = null;
         int var7 = TorChallenge.field_F ? 1 : 0;
         if (param3 != 9208) {
@@ -1322,7 +1322,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_I = new MusicPatchPcmStream(this);
         this.field_A = new ha(128);
         this.a(-3262, 256, -1);
-        this.a(-1863960953, true);
+        this.resetPlaybackChannels(-1863960953, true);
     }
 
     static {

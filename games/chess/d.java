@@ -26,14 +26,14 @@ final class d extends ci {
           h.field_s = new PcmStreamMixer();
           kn.field_F.setRootStream(h.field_s);
           SpriteGeometry.field_q = param2;
-          SpriteGeometry.field_q.a(64 * bc.field_b / 80, (byte) -100);
+          SpriteGeometry.field_q.setMasterVolume(64 * bc.field_b / 80, (byte) -100);
           mh.field_d.setRootStream(SpriteGeometry.field_q);
           if (param6 > -21) {
             field_Mb = (SecondaryNodeHashTable) null;
           }
           ka.field_a = param0;
-          ka.field_a.a(lf.field_S * 64 / 80, (byte) -100);
-          h.field_s.a(ka.field_a);
+          ka.field_a.setMasterVolume(lf.field_S * 64 / 80, (byte) -100);
+          h.field_s.addChildStream(ka.field_a);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "d.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }

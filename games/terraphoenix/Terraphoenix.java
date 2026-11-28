@@ -1472,7 +1472,7 @@ public final class Terraphoenix extends GameShell {
             if (AccountCreationResultPanel.field_sb > 128) {
               AccountCreationResultPanel.field_sb = 128;
             }
-            uk.field_b.e(2 * AccountCreationResultPanel.field_sb, -103);
+            uk.field_b.setMasterVolume(2 * AccountCreationResultPanel.field_sb, -103);
           }
           var5++;
           if (~var5 == ~var2_int &&
@@ -2169,7 +2169,7 @@ public final class Terraphoenix extends GameShell {
           d.field_I.setRootStream(WidgetContainer.field_E);
           uk.field_b = new MidiPcmStream();
           uk.field_b.a(9, 128, -51);
-          WidgetContainer.field_E.a(uk.field_b);
+          WidgetContainer.field_E.addChildStream(uk.field_b);
           this.a(true, false, 13, true, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -7791,7 +7791,7 @@ public final class Terraphoenix extends GameShell {
             if (AccountCreationResultPanel.field_sb > 128) {
               AccountCreationResultPanel.field_sb = 128;
             }
-            uk.field_b.e(AccountCreationResultPanel.field_sb * 2, -119);
+            uk.field_b.setMasterVolume(AccountCreationResultPanel.field_sb * 2, -119);
           }
           var5++;
           if (me.field_o > 0) {

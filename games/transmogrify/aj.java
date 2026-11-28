@@ -281,7 +281,7 @@ class aj extends UiWidget implements pb {
           pc.field_b = param7 * 1000 / param5;
           u.field_a.setRootStream(of.field_a);
           jk.field_D = param3;
-          jk.field_D.a((byte) 107, lb.field_a);
+          jk.field_D.setMasterVolume((byte) 107, lb.field_a);
           Bzip2State.field_h.setRootStream(jk.field_D);
           if (param2 != 22290) {
             ResourceArchive var9 = (ResourceArchive) null;

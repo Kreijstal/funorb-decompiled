@@ -118,7 +118,7 @@ final class ia extends ScoreModifier {
         if (0 > param1) {
           param1 = 0;
           if (param0 == -658435066) {
-            fq.field_x.e(-20562, param1 * lc.field_d >> 6);
+            fq.field_x.setMasterVolume(-20562, param1 * lc.field_d >> 6);
             qd.field_r = param1;
             return;
           }
@@ -128,7 +128,7 @@ final class ia extends ScoreModifier {
           param1 = 64;
         }
         if (param0 == -658435066) {
-          fq.field_x.e(-20562, param1 * lc.field_d >> 6);
+          fq.field_x.setMasterVolume(-20562, param1 * lc.field_d >> 6);
           qd.field_r = param1;
           return;
         }

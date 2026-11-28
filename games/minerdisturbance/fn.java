@@ -324,7 +324,7 @@ final class fn extends IntrusiveNode {
         if (25 == sj.field_f) {
           sj.field_f = 0;
         }
-        dn.field_t[sj.field_f] = RawPcmStream.a(re.field_a[18], param1, oc.field_f);
+        dn.field_t[sj.field_f] = RawPcmStream.createForPlaybackRate(re.field_a[18], param1, oc.field_f);
         mg.a(1963987425, dn.field_t[sj.field_f]);
         rb.field_l[sj.field_f] = param0;
     }

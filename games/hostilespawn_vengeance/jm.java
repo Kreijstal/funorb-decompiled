@@ -248,7 +248,7 @@ final class jm {
                 ((oj) (var15)).b(6) ||
                 ((oj) (var15)).field_i == 22) &&
                 1 == uj.field_l) {
-                eh.field_c.a(NetworkArchiveRequest.field_A[11], 100, uh.field_i);
+                eh.field_c.playSample(NetworkArchiveRequest.field_A[11], 100, uh.field_i);
               }
             }
           }

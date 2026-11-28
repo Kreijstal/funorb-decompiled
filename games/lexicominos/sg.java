@@ -591,7 +591,7 @@ final class sg {
                                     } else {
                                       if (this.field_c.d(0)) {
                                         el.field_c.a((byte) 99, 4);
-                                        BitPacketBuffer.field_o[2].e(0);
+                                        BitPacketBuffer.field_o[2].setLoopCount(0);
                                         if (!AccountRequestState.a((byte) -118)) {
                                           stackIn_191_0 = this.field_k;
                                           stackIn_191_1 = -52;
